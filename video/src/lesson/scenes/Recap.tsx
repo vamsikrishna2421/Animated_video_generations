@@ -11,7 +11,7 @@ export const Recap: React.FC<SceneProps> = ({ data, cue }) => {
   const next = useSpring(cue(n), 11);
   return (
     <>
-      <Heading kicker="RECAP">In 4 lines</Heading>
+      <Heading kicker="RECAP">In {n} lines</Heading>
       {data.points.map(([k, v]: [string, string], i: number) => {
         const s = useSpring(cue(i), 12);
         return (

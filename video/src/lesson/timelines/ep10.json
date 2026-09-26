@@ -1,0 +1,642 @@
+{
+  "id": "ep10",
+  "episode": 10,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Agents",
+  "fps": 30,
+  "totalFrames": 3336,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep10/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 10",
+        "title": [
+          "AI Agents"
+        ],
+        "subtitle": "AI that gets things done",
+        "buzzwords": [
+          "Autonomy",
+          "Planning",
+          "Tools",
+          "Loop",
+          "Goals",
+          "Memory",
+          "Multi-step",
+          "Actions"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 261,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_01.wav",
+      "cues": [
+        75,
+        199
+      ],
+      "captions": [
+        {
+          "text": "A chatbot answers one question.",
+          "from": 10,
+          "to": 70
+        },
+        {
+          "text": "An agent gets a goal,",
+          "from": 75,
+          "to": 115
+        },
+        {
+          "text": "and works on it by",
+          "from": 115,
+          "to": 149
+        },
+        {
+          "text": "itself, step after step.",
+          "from": 149,
+          "to": 194
+        },
+        {
+          "text": "Today, AI agents.",
+          "from": 199,
+          "to": 240
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "AI Agent",
+        "short": "Agent",
+        "definition": "An LLM with tools, running in a loop until the goal is done.",
+        "chips": [
+          [
+            "ListChecks",
+            "Plans steps"
+          ],
+          [
+            "Wrench",
+            "Uses tools"
+          ],
+          [
+            "Eye",
+            "Checks results"
+          ]
+        ]
+      },
+      "from": 261,
+      "durationInFrames": 454,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_02.wav",
+      "cues": [
+        138,
+        319,
+        349,
+        387
+      ],
+      "captions": [
+        {
+          "text": "An AI agent is an",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "L L M,",
+          "from": 50,
+          "to": 65
+        },
+        {
+          "text": "plus tools,",
+          "from": 65,
+          "to": 92
+        },
+        {
+          "text": "running in a loop.",
+          "from": 92,
+          "to": 133
+        },
+        {
+          "text": "It plans the next step,",
+          "from": 138,
+          "to": 183
+        },
+        {
+          "text": "uses a tool,",
+          "from": 183,
+          "to": 207
+        },
+        {
+          "text": "looks at the result,",
+          "from": 207,
+          "to": 246
+        },
+        {
+          "text": "and repeats,",
+          "from": 246,
+          "to": 270
+        },
+        {
+          "text": "until the goal is done.",
+          "from": 270,
+          "to": 315
+        },
+        {
+          "text": "It plans.",
+          "from": 319,
+          "to": 344
+        },
+        {
+          "text": "It uses tools.",
+          "from": 349,
+          "to": 382
+        },
+        {
+          "text": "It checks its own results.",
+          "from": 387,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "agentloop",
+      "data": {
+        "goal": "Plan a Goa weekend under ₹15,000",
+        "stages": [
+          [
+            "ListChecks",
+            "Plan"
+          ],
+          [
+            "Wrench",
+            "Act"
+          ],
+          [
+            "Eye",
+            "Observe"
+          ]
+        ],
+        "log": [
+          "search_trains(Hyderabad→Goa) → ₹2,400",
+          "search_hotels(Goa, 2 nights) → ₹9,800",
+          "total ₹16,900 > budget → swap hotel",
+          "✓ plan ready: ₹13,700 total"
+        ]
+      },
+      "from": 715,
+      "durationInFrames": 542,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_03.wav",
+      "cues": [
+        181,
+        253,
+        299,
+        350,
+        454
+      ],
+      "captions": [
+        {
+          "text": "Let's give an agent a goal.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Plan a weekend trip to",
+          "from": 62,
+          "to": 106
+        },
+        {
+          "text": "Goa, under fifteen thousand rupees.",
+          "from": 106,
+          "to": 176
+        },
+        {
+          "text": "It loops.",
+          "from": 181,
+          "to": 205
+        },
+        {
+          "text": "Plan, act, observe.",
+          "from": 209,
+          "to": 248
+        },
+        {
+          "text": "It searches for trains.",
+          "from": 253,
+          "to": 294
+        },
+        {
+          "text": "It checks hotel prices.",
+          "from": 299,
+          "to": 345
+        },
+        {
+          "text": "It adds it up.",
+          "from": 350,
+          "to": 379
+        },
+        {
+          "text": "Over budget,",
+          "from": 384,
+          "to": 407
+        },
+        {
+          "text": "so it swaps the hotel.",
+          "from": 407,
+          "to": 449
+        },
+        {
+          "text": "And it returns a full",
+          "from": 454,
+          "to": 489
+        },
+        {
+          "text": "plan, under budget.",
+          "from": 489,
+          "to": 521
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Chatbot vs Agent",
+        "left": {
+          "icon": "MessageSquare",
+          "title": "Chatbot",
+          "stat": "Answers",
+          "label": "you do the steps"
+        },
+        "right": {
+          "icon": "Bot",
+          "title": "Agent",
+          "stat": "Gets it done",
+          "label": "many steps + tools"
+        }
+      },
+      "from": 1257,
+      "durationInFrames": 303,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_04.wav",
+      "cues": [
+        59,
+        154
+      ],
+      "captions": [
+        {
+          "text": "Chatbot versus agent.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "A chatbot gives you information,",
+          "from": 59,
+          "to": 114
+        },
+        {
+          "text": "and you do the work.",
+          "from": 114,
+          "to": 149
+        },
+        {
+          "text": "An agent does the work,",
+          "from": 154,
+          "to": 197
+        },
+        {
+          "text": "across many steps and tools,",
+          "from": 197,
+          "to": 250
+        },
+        {
+          "text": "and reports back.",
+          "from": 250,
+          "to": 282
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Agents at work",
+        "items": [
+          [
+            "Code",
+            "Coding agents",
+            "Write, test and fix code"
+          ],
+          [
+            "Search",
+            "Research agents",
+            "Read 50 pages, write a report"
+          ],
+          [
+            "Receipt",
+            "Service agents",
+            "Actually process the refund"
+          ]
+        ]
+      },
+      "from": 1560,
+      "durationInFrames": 455,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_05.wav",
+      "cues": [
+        56,
+        190,
+        313
+      ],
+      "captions": [
+        {
+          "text": "Agents are already here.",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "Coding agents that write,",
+          "from": 56,
+          "to": 106
+        },
+        {
+          "text": "test and fix code across",
+          "from": 106,
+          "to": 153
+        },
+        {
+          "text": "a whole project.",
+          "from": 153,
+          "to": 185
+        },
+        {
+          "text": "Research agents that read dozens",
+          "from": 190,
+          "to": 252
+        },
+        {
+          "text": "of pages,",
+          "from": 252,
+          "to": 270
+        },
+        {
+          "text": "and write a report.",
+          "from": 270,
+          "to": 308
+        },
+        {
+          "text": "And customer service agents that",
+          "from": 313,
+          "to": 373
+        },
+        {
+          "text": "can actually process your refund.",
+          "from": 373,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Agents are fully autonomous. Just let them run.",
+        "fact": "Mistakes can snowball across steps. Good agents check with a human before important actions.",
+        "tip": "Human-in-the-loop for money & deletes"
+      },
+      "from": 2015,
+      "durationInFrames": 373,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_06.wav",
+      "cues": [
+        37,
+        133
+      ],
+      "captions": [
+        {
+          "text": "Myth!",
+          "from": 10,
+          "to": 27
+        },
+        {
+          "text": "Agents are fully autonomous.",
+          "from": 37,
+          "to": 90
+        },
+        {
+          "text": "Just let them run.",
+          "from": 95,
+          "to": 128
+        },
+        {
+          "text": "Careful.",
+          "from": 133,
+          "to": 152
+        },
+        {
+          "text": "Mistakes can snowball over many steps.",
+          "from": 156,
+          "to": 225
+        },
+        {
+          "text": "Good agents check with a",
+          "from": 230,
+          "to": 273
+        },
+        {
+          "text": "human before important actions,",
+          "from": 273,
+          "to": 327
+        },
+        {
+          "text": "like payments.",
+          "from": 327,
+          "to": 352
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "An agent is different because…",
+        "options": [
+          "It has a cute name",
+          "Loop + tools toward a goal",
+          "It types faster"
+        ],
+        "answer": 1
+      },
+      "from": 2388,
+      "durationInFrames": 431,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_07.wav",
+      "cues": [
+        141,
+        270
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "What makes something an agent,",
+          "from": 44,
+          "to": 93
+        },
+        {
+          "text": "and not just a chatbot?",
+          "from": 93,
+          "to": 132
+        },
+        {
+          "text": "Pause and think.",
+          "from": 141,
+          "to": 170
+        },
+        {
+          "text": "It works in a loop,",
+          "from": 270,
+          "to": 306
+        },
+        {
+          "text": "using tools,",
+          "from": 306,
+          "to": 329
+        },
+        {
+          "text": "toward a goal!",
+          "from": 329,
+          "to": 355
+        },
+        {
+          "text": "Comment loop if you got it!",
+          "from": 365,
+          "to": 406
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Agent",
+            "LLM + tools + a loop"
+          ],
+          [
+            "Loop",
+            "plan → act → observe"
+          ],
+          [
+            "Does",
+            "multi-step work for you"
+          ],
+          [
+            "Safety",
+            "human approves big actions"
+          ]
+        ],
+        "next": "EP 11 · MCP"
+      },
+      "from": 2819,
+      "durationInFrames": 517,
+      "voiceFrom": 10,
+      "audio": "lessons/ep10/voice_08.wav",
+      "cues": [
+        35,
+        137,
+        192,
+        252,
+        320
+      ],
+      "captions": [
+        {
+          "text": "Recap.",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "An agent is an L",
+          "from": 35,
+          "to": 72
+        },
+        {
+          "text": "L M,",
+          "from": 72,
+          "to": 83
+        },
+        {
+          "text": "with tools,",
+          "from": 83,
+          "to": 108
+        },
+        {
+          "text": "in a loop.",
+          "from": 108,
+          "to": 132
+        },
+        {
+          "text": "Plan, act,",
+          "from": 137,
+          "to": 157
+        },
+        {
+          "text": "observe, repeat.",
+          "from": 157,
+          "to": 187
+        },
+        {
+          "text": "It does multi step work",
+          "from": 192,
+          "to": 232
+        },
+        {
+          "text": "for you.",
+          "from": 232,
+          "to": 248
+        },
+        {
+          "text": "With a human approving the",
+          "from": 252,
+          "to": 295
+        },
+        {
+          "text": "big actions.",
+          "from": 295,
+          "to": 315
+        },
+        {
+          "text": "Next episode,",
+          "from": 320,
+          "to": 355
+        },
+        {
+          "text": "M C P.",
+          "from": 355,
+          "to": 372
+        },
+        {
+          "text": "The universal connector for AI tools.",
+          "from": 377,
+          "to": 443
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 448,
+          "to": 492
+        }
+      ],
+      "image": null
+    }
+  ]
+}

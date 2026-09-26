@@ -1,0 +1,230 @@
+{
+  "id": "ep05",
+  "episode": 5,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Temperature and Hallucinations",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Why does A I sometimes invent fake facts, with total confidence? [1] And why does the same question get a different answer each time? [2] Today, temperature and hallucinations.",
+      "data": {
+        "kicker": "EPISODE 05",
+        "title": [
+          "Temperature &",
+          "Hallucinations"
+        ],
+        "subtitle": "Why AI makes things up",
+        "buzzwords": [
+          "Randomness",
+          "Creativity",
+          "Fake facts",
+          "Top-p",
+          "Confidence",
+          "Sampling",
+          "Verify",
+          "Sources"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Remember, an L L M picks the next word from a list of likely options. [1] Temperature controls how adventurous that pick is. [2] Low temperature, it plays safe. [3] High temperature, it takes risks. [4] Same model, different personality.",
+      "data": {
+        "term": "Temperature",
+        "short": "Temp",
+        "definition": "A setting that controls how random or creative the AI's word choices are.",
+        "chips": [
+          [
+            "Target",
+            "Low = safe & precise"
+          ],
+          [
+            "Palette",
+            "High = creative"
+          ],
+          [
+            "SlidersHorizontal",
+            "You can tune it"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "dial",
+      "text": "Let's turn the dial. The prompt: describe the moon in one line. [1] At zero, you get a plain, factual answer. The same every time. [2] Around point seven, it gets more vivid. [3] At one, it's wild and poetic. Sometimes, too wild.",
+      "data": {
+        "heading": "Turn the dial",
+        "prompt": "Describe the Moon in one line.",
+        "settings": [
+          [
+            0,
+            "precise · repeatable",
+            "The Moon is Earth's only natural satellite."
+          ],
+          [
+            0.7,
+            "balanced",
+            "The Moon is a silver lantern hanging over a quiet sea."
+          ],
+          [
+            1,
+            "creative · risky",
+            "The Moon: a cosmic cheese-wheel humming lullabies to sleepy comets."
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "When should you use which? [1] Here's a cheat sheet. [2] Facts and maths. Keep it low. [3] Code. Low. [4] Brainstorming. Turn it up. [5] Poems and stories. High.",
+      "data": {
+        "heading": "Low or high?",
+        "cols": [
+          "Low temp",
+          "High temp"
+        ],
+        "rows": [
+          [
+            "Facts & maths",
+            "✓",
+            "✗"
+          ],
+          [
+            "Code",
+            "✓",
+            "✗"
+          ],
+          [
+            "Brainstorming",
+            "✗",
+            "✓"
+          ],
+          [
+            "Poems & stories",
+            "✗",
+            "✓"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Now, hallucinations. [1] A hallucination is when the A I confidently says something false. [2] Fake facts. [3] Made up quotes. [4] Even citations to research papers that don't exist.",
+      "data": {
+        "term": "Hallucination",
+        "short": "?!",
+        "definition": "When the AI confidently makes up something that isn't true.",
+        "chips": [
+          [
+            "FileWarning",
+            "Fake facts"
+          ],
+          [
+            "Quote",
+            "Made-up quotes"
+          ],
+          [
+            "BookX",
+            "Fake citations"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Why does it happen? [1] The model is trained to sound fluent, not to check facts. [2] If it doesn't know, it still predicts something that sounds right. [3] And a higher temperature adds more randomness, and more risk.",
+      "data": {
+        "heading": "Why it happens",
+        "steps": [
+          [
+            "MessageSquare",
+            "Built to sound fluent",
+            "Not trained to fact-check"
+          ],
+          [
+            "HelpCircle",
+            "Doesn't know? Guesses",
+            "Predicts what sounds right"
+          ],
+          [
+            "Thermometer",
+            "High temperature",
+            "More randomness, more risk"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "How to protect yourself. [1] Ask for sources, and actually check them. [2] Give it the facts yourself, right in the prompt. That's the idea behind RAG, coming soon. [3] And tell it, if you're not sure, say I don't know.",
+      "data": {
+        "heading": "How to reduce it",
+        "items": [
+          [
+            "Search",
+            "Verify sources",
+            "Click and check them"
+          ],
+          [
+            "FileText",
+            "Give it the facts",
+            "Paste the source text in"
+          ],
+          [
+            "ShieldCheck",
+            "Allow “I don't know”",
+            "Make it OK to be unsure"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! You're writing code for a banking app. Which temperature? [1] Pause and think. <pause 3.2> [2] Low! You want precise, repeatable answers. Comment low if you got it!",
+      "data": {
+        "question": "Code for a banking app needs…",
+        "options": [
+          "High temperature",
+          "Low temperature",
+          "Doesn't matter"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] Temperature is the creativity dial. [2] Low is precise. [3] High is creative. [4] Hallucinations are confident mistakes, so always verify. [5] Next episode, embeddings. How A I understands meaning, using maths. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Temperature",
+            "creativity dial"
+          ],
+          [
+            "Low",
+            "precise, repeatable"
+          ],
+          [
+            "High",
+            "creative, riskier"
+          ],
+          [
+            "Hallucination",
+            "confident but false"
+          ]
+        ],
+        "next": "EP 06 · Embeddings"
+      }
+    }
+  ]
+}

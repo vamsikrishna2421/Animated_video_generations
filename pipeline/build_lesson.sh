@@ -23,5 +23,5 @@ cd "$ROOT/video"
 BROWSER_ARGS=()
 if [ -n "${REMOTION_BROWSER:-}" ]; then BROWSER_ARGS=(--browser-executable="$REMOTION_BROWSER"); fi
 mkdir -p "$(dirname "$OUT")"
-npx remotion render src/index.ts "Lesson-$EP" "$OUT" --codec=h264 --crf=20 --audio-codec=aac --audio-bitrate=256k "${BROWSER_ARGS[@]}"
+npx remotion render src/index.ts "Lesson-$EP" "$OUT" --codec=h264 --crf=27 --x264-preset=slow --pixel-format=yuv420p --audio-codec=aac --audio-bitrate=192k "${BROWSER_ARGS[@]}"
 echo "done: $OUT"

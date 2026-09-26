@@ -1,0 +1,215 @@
+{
+  "id": "ep07",
+  "episode": 7,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "RAG Retrieval Augmented Generation",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Ask ChatGPT about your company's leave policy, and it has no idea. [1] It was never trained on your documents. [2] The fix is called RAG.",
+      "data": {
+        "kicker": "EPISODE 07",
+        "title": [
+          "RAG"
+        ],
+        "subtitle": "Retrieval-Augmented Generation",
+        "buzzwords": [
+          "Retrieve",
+          "Augment",
+          "Generate",
+          "Vector DB",
+          "Chunks",
+          "Sources",
+          "Grounding",
+          "Docs"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Think of an exam. [1] A normal L L M is a closed book exam. It answers from memory, and might guess. [2] RAG is an open book exam. It looks up the right pages first, then answers.",
+      "data": {
+        "heading": "Closed book vs open book",
+        "left": {
+          "icon": "Brain",
+          "title": "Plain LLM",
+          "stat": "From memory",
+          "label": "may guess or be outdated"
+        },
+        "right": {
+          "icon": "BookOpen",
+          "title": "LLM + RAG",
+          "stat": "Looks it up",
+          "label": "answers from your documents"
+        }
+      }
+    },
+    {
+      "type": "definition",
+      "text": "RAG stands for retrieval augmented generation. [1] It means, find the right information first, then answer. [2] Retrieve. Search your documents. [3] Augment. Add what you found to the prompt. [4] Generate. The L L M writes the answer, using it.",
+      "data": {
+        "term": "Retrieval-Augmented Generation",
+        "short": "RAG",
+        "definition": "Find the right information first, then let the AI answer using it.",
+        "chips": [
+          [
+            "Search",
+            "Retrieve"
+          ],
+          [
+            "Plus",
+            "Augment"
+          ],
+          [
+            "Sparkles",
+            "Generate"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's the flow, with an H R policy bot. [1] An employee asks, how many leave days do I get? [2] The question is turned into an embedding. [3] The vector database finds the matching paragraph in the H R policy. [4] That paragraph is added to the prompt, along with the question. [5] And the L L M answers. Twenty four days a year, and it cites the policy.",
+      "data": {
+        "heading": "RAG, step by step",
+        "nodes": [
+          [
+            "MessageCircleQuestion",
+            "Question",
+            "“How many leave days do I get?”"
+          ],
+          [
+            "Hash",
+            "Embed it",
+            "Turn it into numbers"
+          ],
+          [
+            "Database",
+            "Search documents",
+            "Finds the HR-policy paragraph"
+          ],
+          [
+            "FileText",
+            "Augment prompt",
+            "Question + that paragraph"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“24 days a year (HR policy 4.2)”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Where is RAG used? [1] Company chatbots that answer from internal documents. [2] Bank and telecom support bots that follow the latest rules. [3] And chat with your P D F tools, for notes, contracts and research papers.",
+      "data": {
+        "heading": "RAG in the real world",
+        "items": [
+          [
+            "Building2",
+            "Internal helpdesk",
+            "HR, IT, policy questions"
+          ],
+          [
+            "Headset",
+            "Customer support",
+            "Always uses the latest rules"
+          ],
+          [
+            "FileSearch",
+            "Chat with PDFs",
+            "Notes, contracts, papers"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Why is RAG so popular? [1] Fresh. Update the documents, and answers update instantly, with no retraining. [2] Private. Your data stays in your own database. [3] Trustworthy. It can show the source for every answer. [4] And cheap, compared to training a model.",
+      "data": {
+        "heading": "Why everyone uses RAG",
+        "terms": [
+          [
+            "RefreshCw",
+            "Fresh",
+            "Update docs, not the model"
+          ],
+          [
+            "Lock",
+            "Private",
+            "Your data stays yours"
+          ],
+          [
+            "BadgeCheck",
+            "Cites sources",
+            "Shows where answers come from"
+          ],
+          [
+            "PiggyBank",
+            "Cheap",
+            "No expensive retraining"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Myth! [1] With RAG, the A I never makes mistakes. [2] Not quite. If the search finds the wrong paragraph, the answer will be wrong. Good RAG needs good search, and clean documents.",
+      "data": {
+        "myth": "With RAG, the AI never makes mistakes.",
+        "fact": "If retrieval finds the wrong text, the answer is wrong. Good RAG needs good search and clean docs.",
+        "tip": "Garbage in, garbage out"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In RAG, what does the R stand for? [1] Pause and think. <pause 3.2> [2] Retrieval! Find the right information first. Comment R if you got it!",
+      "data": {
+        "question": "In RAG, the “R” stands for…",
+        "options": [
+          "Random",
+          "Retrieval",
+          "Robot"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] RAG is an open book exam for A I. [2] Retrieve the right information. [3] Augment the prompt with it. [4] Generate an answer, with sources. [5] Next episode. Prompting, RAG, or fine tuning. Which one should you use, and when? Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "RAG",
+            "look it up, then answer"
+          ],
+          [
+            "Retrieve",
+            "search your documents"
+          ],
+          [
+            "Augment",
+            "add results to the prompt"
+          ],
+          [
+            "Generate",
+            "answer with sources"
+          ]
+        ],
+        "next": "EP 08 · Prompt vs RAG vs Fine-tune"
+      }
+    }
+  ]
+}

@@ -38,17 +38,19 @@ export const Versus: React.FC<SceneProps> = ({ data, cue }) => {
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 48, color: L.amber, opacity: interpolate(f, [cue(1) - 5, cue(1)], [0, 1], clamp) }}>vs</div>
         <Side s={data.right} at={cue(1)} big={rightBig} from={L.amber} to={L.rose} />
       </div>
+      {data.bars && (
       <div style={{ position: "absolute", top: 1010, left: 70, right: 70, opacity: interpolate(f, [cue(1), cue(1) + 10], [0, 1], clamp) }}>
-        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 28, letterSpacing: 4, color: L.muted, marginBottom: 14 }}>TEXT IT LEARNED FROM</div>
-        {[["Phone", 0.02, L.muted], ["LLM", 1, L.amber]].map(([label, w, c]) => (
+        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 28, letterSpacing: 4, color: L.muted, marginBottom: 14 }}>{data.bars.label}</div>
+        {[[data.bars.left, data.bars.leftValue, L.muted], [data.bars.right, 1, L.amber]].map(([label, w, c]) => (
           <div key={label as string} style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 14 }}>
             <div style={{ width: 110, fontFamily: L.font, fontWeight: 800, fontSize: 30, color: c as string }}>{label as string}</div>
             <div style={{ flex: 1, height: 34, borderRadius: 10, background: "rgba(255,255,255,0.07)" }}>
-              <div style={{ width: `${Math.max(1.5, (w as number) * 100 * interpolate(f, [cue(1) + 8, cue(1) + 50], [0, 1], { ...clamp, easing: (x) => 1 - Math.pow(1 - x, 3) }))}%`, height: "100%", borderRadius: 10, background: c as string, boxShadow: label === "LLM" ? `0 0 24px ${L.amber}` : "none" }} />
+              <div style={{ width: `${Math.max(1.5, (w as number) * 100 * interpolate(f, [cue(1) + 8, cue(1) + 50], [0, 1], { ...clamp, easing: (x) => 1 - Math.pow(1 - x, 3) }))}%`, height: "100%", borderRadius: 10, background: c as string, boxShadow: c === L.amber ? `0 0 24px ${L.amber}` : "none" }} />
             </div>
           </div>
         ))}
       </div>
+      )}
     </>
   );
 };

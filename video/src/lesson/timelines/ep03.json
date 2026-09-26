@@ -1,0 +1,742 @@
+{
+  "id": "ep03",
+  "episode": 3,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Tokens and Context Window",
+  "fps": 30,
+  "totalFrames": 3643,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep03/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 03",
+        "title": [
+          "Tokens &",
+          "Context"
+        ],
+        "subtitle": "Why AI forgets in long chats",
+        "buzzwords": [
+          "128K",
+          "Tokens",
+          "Context",
+          "Memory",
+          "Limit",
+          "Pricing",
+          "Chunks",
+          "Words"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 321,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_01.wav",
+      "cues": [
+        161,
+        266
+      ],
+      "captions": [
+        {
+          "text": "Ever had a long chat",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "with ChatGPT,",
+          "from": 49,
+          "to": 74
+        },
+        {
+          "text": "and it forgot what you",
+          "from": 74,
+          "to": 116
+        },
+        {
+          "text": "said at the start?",
+          "from": 116,
+          "to": 151
+        },
+        {
+          "text": "That's not a bug.",
+          "from": 161,
+          "to": 191
+        },
+        {
+          "text": "It's tokens,",
+          "from": 196,
+          "to": 219
+        },
+        {
+          "text": "and the context window.",
+          "from": 219,
+          "to": 261
+        },
+        {
+          "text": "Let's break it down.",
+          "from": 266,
+          "to": 301
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Token",
+        "short": "Token",
+        "definition": "A small chunk of text, a word or a piece of a word, that the model reads.",
+        "chips": [
+          [
+            "Type",
+            "Common word = 1 token"
+          ],
+          [
+            "Scissors",
+            "Rare word = split up"
+          ],
+          [
+            "Hash",
+            "Numbers count too"
+          ]
+        ]
+      },
+      "from": 321,
+      "durationInFrames": 452,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_02.wav",
+      "cues": [
+        101,
+        244,
+        315,
+        380
+      ],
+      "captions": [
+        {
+          "text": "L L Ms don't read",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "words the way we do.",
+          "from": 50,
+          "to": 96
+        },
+        {
+          "text": "They read tokens.",
+          "from": 101,
+          "to": 136
+        },
+        {
+          "text": "Small chunks of text,",
+          "from": 141,
+          "to": 180
+        },
+        {
+          "text": "often a word,",
+          "from": 180,
+          "to": 205
+        },
+        {
+          "text": "or part of a word.",
+          "from": 205,
+          "to": 239
+        },
+        {
+          "text": "Common words are usually one token.",
+          "from": 244,
+          "to": 310
+        },
+        {
+          "text": "Rare words get split into pieces.",
+          "from": 315,
+          "to": 375
+        },
+        {
+          "text": "Numbers and symbols count too.",
+          "from": 380,
+          "to": 431
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "tokens",
+      "data": {
+        "heading": "Words → tokens",
+        "sentence": "Unbelievable! AI reads in tokens.",
+        "tokens": [
+          "Un",
+          "believ",
+          "able",
+          "!",
+          " AI",
+          " reads",
+          " in",
+          " tok",
+          "ens",
+          "."
+        ],
+        "stats": [
+          [
+            "1 token",
+            "≈ ¾ of a word"
+          ],
+          [
+            "100 tokens",
+            "≈ 75 words"
+          ],
+          [
+            "Per token",
+            "how APIs bill"
+          ]
+        ]
+      },
+      "from": 773,
+      "durationInFrames": 475,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_03.wav",
+      "cues": [
+        47,
+        194,
+        297,
+        394
+      ],
+      "captions": [
+        {
+          "text": "Here's the idea.",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "A long word like unbelievable",
+          "from": 47,
+          "to": 106
+        },
+        {
+          "text": "can become pieces,",
+          "from": 106,
+          "to": 144
+        },
+        {
+          "text": "like un,",
+          "from": 144,
+          "to": 162
+        },
+        {
+          "text": "believ, able.",
+          "from": 162,
+          "to": 189
+        },
+        {
+          "text": "Roughly, one token is about",
+          "from": 194,
+          "to": 245
+        },
+        {
+          "text": "three quarters of a word.",
+          "from": 245,
+          "to": 292
+        },
+        {
+          "text": "So a hundred tokens is",
+          "from": 297,
+          "to": 340
+        },
+        {
+          "text": "about seventy five words.",
+          "from": 340,
+          "to": 389
+        },
+        {
+          "text": "And AI companies charge per token.",
+          "from": 394,
+          "to": 454
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "window",
+      "data": {
+        "heading": "The context window",
+        "label": "WINDOW: 6 MESSAGES",
+        "capacity": 6,
+        "messages": [
+          [
+            "you",
+            "My name is Ravi."
+          ],
+          [
+            "ai",
+            "Nice to meet you, Ravi!"
+          ],
+          [
+            "you",
+            "Planning a Goa trip."
+          ],
+          [
+            "ai",
+            "Great! When are you going?"
+          ],
+          [
+            "you",
+            "December, with 4 friends."
+          ],
+          [
+            "ai",
+            "Here are 5 beach ideas…"
+          ],
+          [
+            "you",
+            "Suggest a budget hotel."
+          ],
+          [
+            "ai",
+            "Try these 3 options…"
+          ],
+          [
+            "you",
+            "What's my name?"
+          ],
+          [
+            "ai",
+            "Sorry, I don't know your name."
+          ]
+        ],
+        "note": "Too long? The oldest messages drop out."
+      },
+      "from": 1248,
+      "durationInFrames": 390,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_04.wav",
+      "cues": [
+        59,
+        269
+      ],
+      "captions": [
+        {
+          "text": "Now, the context window.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "It's the model's working memory.",
+          "from": 59,
+          "to": 111
+        },
+        {
+          "text": "Your messages and its replies",
+          "from": 116,
+          "to": 173
+        },
+        {
+          "text": "must all fit inside.",
+          "from": 173,
+          "to": 213
+        },
+        {
+          "text": "When the chat gets too",
+          "from": 218,
+          "to": 258
+        },
+        {
+          "text": "long, the oldest messages fall",
+          "from": 258,
+          "to": 312
+        },
+        {
+          "text": "out, and the model forgets them.",
+          "from": 312,
+          "to": 369
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Windows keep growing",
+        "left": {
+          "icon": "FileText",
+          "title": "Early models",
+          "stat": "A few pages",
+          "label": "about 3,000 words"
+        },
+        "right": {
+          "icon": "Library",
+          "title": "Modern models",
+          "stat": "Whole books",
+          "label": "hundreds of thousands of tokens"
+        },
+        "bars": {
+          "label": "HOW MUCH FITS",
+          "left": "Early",
+          "leftValue": 0.03,
+          "right": "Modern"
+        }
+      },
+      "from": 1638,
+      "durationInFrames": 319,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_05.wav",
+      "cues": [
+        63,
+        149
+      ],
+      "captions": [
+        {
+          "text": "And these windows keep growing.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Early chatbots could hold only",
+          "from": 63,
+          "to": 121
+        },
+        {
+          "text": "a few pages.",
+          "from": 121,
+          "to": 144
+        },
+        {
+          "text": "Modern models hold hundreds of",
+          "from": 149,
+          "to": 209
+        },
+        {
+          "text": "thousands of tokens.",
+          "from": 209,
+          "to": 250
+        },
+        {
+          "text": "Entire books,",
+          "from": 255,
+          "to": 281
+        },
+        {
+          "text": "at once.",
+          "from": 281,
+          "to": 298
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Why it matters",
+        "items": [
+          [
+            "Wallet",
+            "Cost",
+            "More tokens, bigger bill"
+          ],
+          [
+            "FileText",
+            "Long documents",
+            "Split big files into chunks"
+          ],
+          [
+            "MessagesSquare",
+            "Long chats",
+            "Start fresh or summarise"
+          ]
+        ]
+      },
+      "from": 1957,
+      "durationInFrames": 372,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_06.wav",
+      "cues": [
+        52,
+        124,
+        207
+      ],
+      "captions": [
+        {
+          "text": "Why should you care?",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "Cost.",
+          "from": 52,
+          "to": 70
+        },
+        {
+          "text": "More tokens,",
+          "from": 75,
+          "to": 97
+        },
+        {
+          "text": "bigger bill.",
+          "from": 97,
+          "to": 120
+        },
+        {
+          "text": "Long documents may need to",
+          "from": 124,
+          "to": 167
+        },
+        {
+          "text": "be split into chunks.",
+          "from": 167,
+          "to": 202
+        },
+        {
+          "text": "And in long chats,",
+          "from": 207,
+          "to": 240
+        },
+        {
+          "text": "start fresh or ask for",
+          "from": 240,
+          "to": 279
+        },
+        {
+          "text": "a summary,",
+          "from": 279,
+          "to": 298
+        },
+        {
+          "text": "when the AI starts forgetting.",
+          "from": 298,
+          "to": 351
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The AI remembers everything I ever told it.",
+        "fact": "It only sees what fits in the context window. 'Memory' features just add saved notes to your prompt.",
+        "tip": "Long chat acting weird? Start fresh."
+      },
+      "from": 2329,
+      "durationInFrames": 384,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_07.wav",
+      "cues": [
+        37,
+        121
+      ],
+      "captions": [
+        {
+          "text": "Myth!",
+          "from": 10,
+          "to": 27
+        },
+        {
+          "text": "The AI remembers everything you",
+          "from": 37,
+          "to": 92
+        },
+        {
+          "text": "ever told it.",
+          "from": 92,
+          "to": 116
+        },
+        {
+          "text": "Nope.",
+          "from": 121,
+          "to": 139
+        },
+        {
+          "text": "It only sees what fits",
+          "from": 144,
+          "to": 185
+        },
+        {
+          "text": "in the current context window.",
+          "from": 185,
+          "to": 239
+        },
+        {
+          "text": "Memory features just add saved",
+          "from": 244,
+          "to": 302
+        },
+        {
+          "text": "notes into your prompt, quietly.",
+          "from": 302,
+          "to": 363
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The AI forgot your name because…",
+        "options": [
+          "It got bored",
+          "It fell out of the context window",
+          "The company deleted it"
+        ],
+        "answer": 1
+      },
+      "from": 2713,
+      "durationInFrames": 387,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_08.wav",
+      "cues": [
+        134,
+        263
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "Why did the AI forget",
+          "from": 44,
+          "to": 80
+        },
+        {
+          "text": "your name,",
+          "from": 80,
+          "to": 98
+        },
+        {
+          "text": "in a long chat?",
+          "from": 98,
+          "to": 124
+        },
+        {
+          "text": "Pause and think.",
+          "from": 134,
+          "to": 162
+        },
+        {
+          "text": "It fell out of the",
+          "from": 263,
+          "to": 293
+        },
+        {
+          "text": "context window!",
+          "from": 293,
+          "to": 318
+        },
+        {
+          "text": "Comment your answer!",
+          "from": 328,
+          "to": 362
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Tokens",
+            "chunks of text the AI reads"
+          ],
+          [
+            "1 token",
+            "≈ ¾ of a word"
+          ],
+          [
+            "Context",
+            "the AI's working memory"
+          ],
+          [
+            "Overflow",
+            "old messages fall out"
+          ]
+        ],
+        "next": "EP 04 · Prompt Engineering"
+      },
+      "from": 3100,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/ep03/voice_09.wav",
+      "cues": [
+        35,
+        92,
+        177,
+        256,
+        327
+      ],
+      "captions": [
+        {
+          "text": "Recap.",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "AI reads text as tokens.",
+          "from": 35,
+          "to": 87
+        },
+        {
+          "text": "One token is about three",
+          "from": 92,
+          "to": 137
+        },
+        {
+          "text": "quarters of a word.",
+          "from": 137,
+          "to": 172
+        },
+        {
+          "text": "The context window is its",
+          "from": 177,
+          "to": 223
+        },
+        {
+          "text": "working memory.",
+          "from": 223,
+          "to": 252
+        },
+        {
+          "text": "Too long,",
+          "from": 256,
+          "to": 274
+        },
+        {
+          "text": "and old messages fall out.",
+          "from": 274,
+          "to": 322
+        },
+        {
+          "text": "Next episode,",
+          "from": 327,
+          "to": 351
+        },
+        {
+          "text": "prompt engineering.",
+          "from": 351,
+          "to": 386
+        },
+        {
+          "text": "How to talk to AI,",
+          "from": 391,
+          "to": 426
+        },
+        {
+          "text": "and get great answers.",
+          "from": 426,
+          "to": 469
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 474,
+          "to": 518
+        }
+      ],
+      "image": null
+    }
+  ]
+}

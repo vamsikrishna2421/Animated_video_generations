@@ -33,7 +33,11 @@ order are in [`series/PLAN.md`](series/PLAN.md). Each episode is one JSON file i
 ```bash
 ./pipeline/build_lesson.sh ep01            # -> out/ep01_<title>.mp4
 ./pipeline/build_lesson.sh ep01 --images   # also render Qwen-Image illustrations (CUDA GPU only)
+./pipeline/build_all.sh ep00 ep01 ep02     # batch build
 ```
+
+Launch-day order, captions and hashtags: [`series/POSTING.md`](series/POSTING.md). Episode 00 is
+the channel trailer.
 
 **How it works**
 - Narration is synthesised **sentence by sentence**, which gives captions and visuals accurate timing.
@@ -51,7 +55,11 @@ order are in [`series/PLAN.md`](series/PLAN.md). Each episode is one JSON file i
 `genai` (chat demo + output types) · `nested` (concentric concept rings) · `predict` (next-word
 probability bars) · `versus` (two things at different scale) · `steps` (numbered process) ·
 `terms` (2×2 glossary) · `myth` (myth busted → fact) · `quiz` (countdown + reveal) · `recap`
-(checklist + next-episode teaser + follow CTA).
+(checklist + next-episode teaser + follow CTA) · `host` (big mascot intro) · `roadmap` (course map) ·
+`cta` (follow + bell) · `tokens` (text → token chips) · `window` (context window overflow) ·
+`prompt` (prompt recipe builder) · `dial` (temperature slider) · `embedmap` (meaning map + nearest
+neighbours) · `pipeline` (flow with travelling packet) · `table` (comparison matrix) · `toolcall`
+(function-calling demo) · `agentloop` (plan → act → observe ring + log).
 
 **Images:** visuals are drawn in code (SVG plus the lucide icon set), so no image model is
 needed. `pipeline/lesson_images.py` can add Qwen-Image illustrations from each scene's `"image"`

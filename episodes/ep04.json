@@ -1,0 +1,195 @@
+{
+  "id": "ep04",
+  "episode": 4,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Prompt Engineering",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Same A I. Same question. So why do some people get amazing answers, and others get junk? [1] The secret is the prompt. [2] Today, prompt engineering.",
+      "data": {
+        "kicker": "EPISODE 04",
+        "title": [
+          "Prompt",
+          "Engineering"
+        ],
+        "subtitle": "Talk to AI like a pro",
+        "buzzwords": [
+          "Role",
+          "Context",
+          "Few-shot",
+          "Format",
+          "System prompt",
+          "Examples",
+          "Tone",
+          "Constraints"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "A prompt is simply the instruction you give an A I. [1] Prompt engineering means writing that instruction clearly, so the A I knows exactly what you want. [2] Better input. [3] Better output. [4] Fewer retries.",
+      "data": {
+        "term": "Prompt Engineering",
+        "short": "Prompt",
+        "definition": "Writing clear instructions so the AI knows exactly what you want.",
+        "chips": [
+          [
+            "ArrowDownToLine",
+            "Better input"
+          ],
+          [
+            "Sparkles",
+            "Better output"
+          ],
+          [
+            "Repeat",
+            "Fewer retries"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "prompt",
+      "text": "Look at this. [1] Write about my product. The reply is vague and generic. [2] Now let's build a better prompt. First, a role. You are an expert marketer. [3] Then context. My brand sells handmade coconut soaps from Kerala. [4] The task. Write an Instagram caption for our new jasmine soap. [5] And the format. Under forty words, friendly, three hashtags. [6] Now the reply is exactly what we wanted.",
+      "data": {
+        "heading": "Build a better prompt",
+        "bad": "Write about my product.",
+        "badReply": "Our product is great and high quality. Buy it today for the best experience!",
+        "parts": [
+          [
+            "ROLE",
+            "You are an expert marketer.",
+            "#8B5CF6"
+          ],
+          [
+            "CONTEXT",
+            "My brand sells handmade coconut soaps from Kerala.",
+            "#22D3EE"
+          ],
+          [
+            "TASK",
+            "Write an Instagram caption for our new jasmine soap.",
+            "#F59E0B"
+          ],
+          [
+            "FORMAT",
+            "Under 40 words, friendly, 3 hashtags.",
+            "#34D399"
+          ]
+        ],
+        "goodReply": "Fresh jasmine meets pure Kerala coconut oil, handmade in small batches. Your skin deserves this little ritual. #HandmadeSoap #KeralaMade #SelfCare"
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Four power moves. [1] Give examples. Show one or two samples of what you want. That's called few shot prompting. [2] Ask it to think step by step, for maths and logic. [3] Set constraints. Word limits, tone, language. [4] And iterate. Treat it like a conversation, and refine.",
+      "data": {
+        "heading": "4 power moves",
+        "terms": [
+          [
+            "Copy",
+            "Examples",
+            "Few-shot: show 1–2 samples"
+          ],
+          [
+            "ListOrdered",
+            "Step by step",
+            "Ask it to reason first"
+          ],
+          [
+            "Ruler",
+            "Constraints",
+            "Length, tone, language"
+          ],
+          [
+            "Repeat",
+            "Iterate",
+            "Refine like a chat"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Real life uses. [1] Get your resume reviewed, the way a recruiter would. [2] Draft a polite WhatsApp reply to your landlord. [3] Turn messy meeting notes into a clean summary with action items.",
+      "data": {
+        "heading": "Try these today",
+        "items": [
+          [
+            "FileText",
+            "Resume review",
+            "“Review this as a recruiter…”"
+          ],
+          [
+            "MessageCircle",
+            "Polite replies",
+            "Tricky messages, perfect tone"
+          ],
+          [
+            "ClipboardList",
+            "Meeting notes",
+            "Summary + action items"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Myth! [1] Prompt engineering needs secret magic words. [2] Not really. It's just clear communication. If a smart new intern would understand your instruction, the A I will too.",
+      "data": {
+        "myth": "You need secret magic words.",
+        "fact": "It's clear communication. If a smart new intern would understand it, so will the AI.",
+        "tip": "Role + Context + Task + Format"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Which prompt will get the better answer? [1] Pause and think. <pause 3.2> [2] B! It has a role, context, a task and a format. Comment B if you got it!",
+      "data": {
+        "question": "Which prompt gets a better answer?",
+        "options": [
+          "Write a caption.",
+          "Marketer role + brand + 40 words + 3 hashtags",
+          "Caption pls"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] A prompt is your instruction to the A I. [2] Use the recipe. Role, context, task, format. [3] Show examples. [4] And iterate. [5] Next episode, temperature and hallucinations. Why A I sometimes confidently makes things up. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Prompt",
+            "the instruction you give AI"
+          ],
+          [
+            "Recipe",
+            "role + context + task + format"
+          ],
+          [
+            "Examples",
+            "show what good looks like"
+          ],
+          [
+            "Iterate",
+            "refine like a conversation"
+          ]
+        ],
+        "next": "EP 05 · Hallucinations"
+      }
+    }
+  ]
+}

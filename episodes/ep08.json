@@ -1,0 +1,199 @@
+{
+  "id": "ep08",
+  "episode": 8,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Prompting vs RAG vs Fine Tuning",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You want an A I that knows your business. [1] Should you write a better prompt, use RAG, or fine tune a model? [2] Let's settle it.",
+      "data": {
+        "kicker": "EPISODE 08",
+        "title": [
+          "Prompt",
+          "RAG",
+          "Fine-tune"
+        ],
+        "vs": true,
+        "subtitle": "Which one, when?",
+        "buzzwords": [
+          "Cost",
+          "Knowledge",
+          "Style",
+          "Training",
+          "Data",
+          "Latency",
+          "Accuracy",
+          "Custom"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "First, what is fine tuning? [1] It means training an existing model a little more, on your own examples, so it learns a new style or skill. [2] It needs lots of examples. [3] It changes how the model behaves. [4] And it costs time and money.",
+      "data": {
+        "term": "Fine-tuning",
+        "short": "Tune",
+        "definition": "Extra training on your own examples, so the model learns a style or skill.",
+        "chips": [
+          [
+            "Files",
+            "Needs many examples"
+          ],
+          [
+            "Settings2",
+            "Changes behaviour"
+          ],
+          [
+            "Clock",
+            "Costs time + money"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Think of a new employee. [1] Prompting is giving clear instructions for today's task. [2] RAG is handing them the company handbook, to look things up. [3] Fine tuning is sending them on a months long training course.",
+      "data": {
+        "heading": "Think: a new employee",
+        "items": [
+          [
+            "MessageSquare",
+            "Prompting",
+            "Clear instructions for the task"
+          ],
+          [
+            "BookOpen",
+            "RAG",
+            "Hand them the handbook"
+          ],
+          [
+            "GraduationCap",
+            "Fine-tuning",
+            "Send them on a training course"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "Here's the cheat sheet. [1] Three options. [2] Cost to set up. Prompting is basically free. RAG is low. Fine tuning is high. [3] Fresh or private information? RAG wins. [4] A special style or format? Fine tuning wins. [5] Speed to get started? Prompting, in minutes. [6] Rule of thumb. Start with prompts, add RAG for knowledge, fine tune for behaviour.",
+      "data": {
+        "heading": "The cheat sheet",
+        "cols": [
+          "Prompt",
+          "RAG",
+          "Fine-tune"
+        ],
+        "rows": [
+          [
+            "Setup cost",
+            "Free",
+            "Low",
+            "High"
+          ],
+          [
+            "Fresh info",
+            "✗",
+            "✓",
+            "✗"
+          ],
+          [
+            "Custom style",
+            "~",
+            "✗",
+            "✓"
+          ],
+          [
+            "Time to start",
+            "Minutes",
+            "Days",
+            "Weeks"
+          ]
+        ],
+        "note": "Prompt first → RAG for knowledge → fine-tune for behaviour"
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Real examples. [1] A startup writing social media captions. Good prompts are enough. [2] A law firm answering from thousands of case files. RAG. [3] A telecom company that wants replies in its exact brand tone, every single time. Fine tuning.",
+      "data": {
+        "heading": "Which would you pick?",
+        "items": [
+          [
+            "Megaphone",
+            "Social captions",
+            "Prompting is enough"
+          ],
+          [
+            "Scale",
+            "Law firm Q&A",
+            "RAG over case files"
+          ],
+          [
+            "Headset",
+            "Brand-tone support",
+            "Fine-tuning"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Myth! [1] Fine tuning is the best way to teach a model new facts. [2] Usually not. Fine tuning is great for style and behaviour. For facts that change, RAG is cheaper, and easier to update.",
+      "data": {
+        "myth": "Fine-tuning is the best way to add new facts.",
+        "fact": "Fine-tuning shapes style and behaviour. For changing facts, RAG is cheaper and easier to update.",
+        "tip": "Facts → RAG · Behaviour → fine-tune"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Your prices change every week, and the chatbot must always know the latest. Which one? [1] Pause and think. <pause 3.2> [2] RAG! Update the documents, and answers update instantly. Comment RAG!",
+      "data": {
+        "question": "Prices change weekly. Use…",
+        "options": [
+          "Fine-tuning",
+          "RAG",
+          "Just prompting"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] Prompting is instructions. Always start there. [2] RAG adds knowledge that stays fresh. [3] Fine tuning teaches style and behaviour. [4] And real apps often combine all three. [5] Next episode, tool use. How A I can check the weather, book a cab, or send an email. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Prompting",
+            "instructions: start here"
+          ],
+          [
+            "RAG",
+            "adds fresh knowledge"
+          ],
+          [
+            "Fine-tuning",
+            "teaches style + behaviour"
+          ],
+          [
+            "Combine",
+            "most real apps mix them"
+          ]
+        ],
+        "next": "EP 09 · Tool Use"
+      }
+    }
+  ]
+}

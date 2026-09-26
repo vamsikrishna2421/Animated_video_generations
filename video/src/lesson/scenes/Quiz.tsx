@@ -49,7 +49,7 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
             <div style={{ width: 70, height: 70, borderRadius: 35, background: shown && right ? L.green : "rgba(255,255,255,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: L.font, fontWeight: 800, fontSize: 36, color: "white" }}>
               {shown && right ? <Icon name="Check" size={44} stroke={3.5} /> : "ABC"[i]}
             </div>
-            <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 46, color: L.text }}>{o}</div>
+            <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: o.length > 26 ? 36 : 46, color: L.text, lineHeight: 1.15 }}>{o}</div>
           </Panel>
         );
       })}

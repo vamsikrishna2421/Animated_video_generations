@@ -11,7 +11,7 @@ export const Definition: React.FC<SceneProps> = ({ data, cue }) => {
   return (
     <>
       <div style={{ position: "absolute", top: 280, left: 0, right: 0, textAlign: "center" }}>
-        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 260, lineHeight: 1, transform: `scale(${big})`, ...gradText(L.violet, L.teal) }}>
+        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: Math.min(260, 1500 / Math.max(data.short.length, 1)), lineHeight: 1, transform: `scale(${big})`, ...gradText(L.violet, L.teal) }}>
           {data.short}
         </div>
         <div style={{ fontFamily: L.font, fontWeight: 700, fontSize: 50, color: L.muted, opacity: big }}>{data.term}</div>

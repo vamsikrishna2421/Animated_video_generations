@@ -1,0 +1,669 @@
+{
+  "id": "ep06",
+  "episode": 6,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Embeddings and Vector Search",
+  "fps": 30,
+  "totalFrames": 3353,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep06/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 06",
+        "title": [
+          "Embeddings"
+        ],
+        "subtitle": "How AI understands meaning",
+        "buzzwords": [
+          "Vectors",
+          "Similarity",
+          "Search",
+          "Meaning",
+          "Numbers",
+          "Vector DB",
+          "Nearest",
+          "Clusters"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 280,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_01.wav",
+      "cues": [
+        130,
+        214
+      ],
+      "captions": [
+        {
+          "text": "How does Google Photos find",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "your dog,",
+          "from": 60,
+          "to": 78
+        },
+        {
+          "text": "when you just type dog?",
+          "from": 78,
+          "to": 121
+        },
+        {
+          "text": "How does Spotify know which",
+          "from": 130,
+          "to": 174
+        },
+        {
+          "text": "songs feel similar?",
+          "from": 174,
+          "to": 205
+        },
+        {
+          "text": "The answer is embeddings.",
+          "from": 214,
+          "to": 259
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Embedding",
+        "short": "Vectors",
+        "definition": "A list of numbers that captures the meaning of text, images or sound.",
+        "chips": [
+          [
+            "Hash",
+            "Meaning → numbers"
+          ],
+          [
+            "Magnet",
+            "Similar = close"
+          ],
+          [
+            "MapPin",
+            "Ideas on a map"
+          ]
+        ]
+      },
+      "from": 280,
+      "durationInFrames": 451,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_02.wav",
+      "cues": [
+        130,
+        227,
+        276,
+        344
+      ],
+      "captions": [
+        {
+          "text": "An embedding turns something,",
+          "from": 10,
+          "to": 67
+        },
+        {
+          "text": "a word,",
+          "from": 67,
+          "to": 82
+        },
+        {
+          "text": "a sentence,",
+          "from": 82,
+          "to": 104
+        },
+        {
+          "text": "or an image,",
+          "from": 104,
+          "to": 129
+        },
+        {
+          "text": "into a list of numbers",
+          "from": 129,
+          "to": 172
+        },
+        {
+          "text": "that captures its meaning.",
+          "from": 172,
+          "to": 222
+        },
+        {
+          "text": "Meaning becomes numbers.",
+          "from": 227,
+          "to": 271
+        },
+        {
+          "text": "Similar things end up close together.",
+          "from": 276,
+          "to": 339
+        },
+        {
+          "text": "It's like giving every idea",
+          "from": 344,
+          "to": 393
+        },
+        {
+          "text": "a location on a map.",
+          "from": 393,
+          "to": 430
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "embedmap",
+      "data": {
+        "heading": "A map of meaning",
+        "points": [
+          [
+            "apple",
+            0.16,
+            0.2,
+            0
+          ],
+          [
+            "banana",
+            0.32,
+            0.12,
+            0
+          ],
+          [
+            "mango",
+            0.22,
+            0.34,
+            0
+          ],
+          [
+            "dog",
+            0.62,
+            0.52,
+            1
+          ],
+          [
+            "cat",
+            0.8,
+            0.6,
+            1
+          ],
+          [
+            "lion",
+            0.84,
+            0.36,
+            1
+          ],
+          [
+            "car",
+            0.22,
+            0.72,
+            2
+          ],
+          [
+            "bus",
+            0.1,
+            0.86,
+            2
+          ],
+          [
+            "bike",
+            0.38,
+            0.88,
+            2
+          ]
+        ],
+        "query": [
+          "puppy",
+          0.7,
+          0.74
+        ],
+        "neighbors": [
+          "dog",
+          "cat"
+        ],
+        "note": "Search by meaning, not by spelling"
+      },
+      "from": 731,
+      "durationInFrames": 407,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_03.wav",
+      "cues": [
+        57,
+        183,
+        227
+      ],
+      "captions": [
+        {
+          "text": "Picture a map of meaning.",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "Fruits cluster together.",
+          "from": 57,
+          "to": 97
+        },
+        {
+          "text": "Animals over here.",
+          "from": 102,
+          "to": 136
+        },
+        {
+          "text": "Vehicles over there.",
+          "from": 141,
+          "to": 178
+        },
+        {
+          "text": "Now, search for puppy.",
+          "from": 183,
+          "to": 222
+        },
+        {
+          "text": "Its nearest neighbours are dog",
+          "from": 227,
+          "to": 274
+        },
+        {
+          "text": "and cat.",
+          "from": 274,
+          "to": 287
+        },
+        {
+          "text": "Not because the letters match,",
+          "from": 292,
+          "to": 340
+        },
+        {
+          "text": "but because the meaning does.",
+          "from": 340,
+          "to": 386
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Vector search",
+        "nodes": [
+          [
+            "FileText",
+            "Your documents",
+            "Notes, photos, FAQs"
+          ],
+          [
+            "Hash",
+            "Embed",
+            "Turn each into numbers"
+          ],
+          [
+            "Database",
+            "Vector database",
+            "Stores all the vectors"
+          ],
+          [
+            "Search",
+            "Your query",
+            "Also turned into numbers"
+          ],
+          [
+            "Target",
+            "Nearest match",
+            "Closest meaning wins"
+          ]
+        ]
+      },
+      "from": 1138,
+      "durationInFrames": 505,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_04.wav",
+      "cues": [
+        64,
+        160,
+        211,
+        274,
+        367
+      ],
+      "captions": [
+        {
+          "text": "This is called vector search.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "First, every document is turned",
+          "from": 64,
+          "to": 123
+        },
+        {
+          "text": "into an embedding,",
+          "from": 123,
+          "to": 159
+        },
+        {
+          "text": "meaning a list of numbers,",
+          "from": 159,
+          "to": 209
+        },
+        {
+          "text": "and saved in a vector database.",
+          "from": 209,
+          "to": 269
+        },
+        {
+          "text": "When you search,",
+          "from": 274,
+          "to": 306
+        },
+        {
+          "text": "your query becomes numbers too,",
+          "from": 306,
+          "to": 366
+        },
+        {
+          "text": "and the database returns the",
+          "from": 366,
+          "to": 420
+        },
+        {
+          "text": "closest matches,",
+          "from": 420,
+          "to": 452
+        },
+        {
+          "text": "in milliseconds.",
+          "from": 452,
+          "to": 484
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Embeddings in your day",
+        "items": [
+          [
+            "Image",
+            "Photo search",
+            "Find “beach” with no tags"
+          ],
+          [
+            "Music",
+            "Similar songs",
+            "Songs that feel alike"
+          ],
+          [
+            "ShoppingBag",
+            "Similar products",
+            "“You may also like”"
+          ]
+        ]
+      },
+      "from": 1643,
+      "durationInFrames": 343,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_05.wav",
+      "cues": [
+        56,
+        145,
+        241
+      ],
+      "captions": [
+        {
+          "text": "You've already used this.",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "Google Photos finding beach,",
+          "from": 56,
+          "to": 113
+        },
+        {
+          "text": "with no tags.",
+          "from": 113,
+          "to": 140
+        },
+        {
+          "text": "Spotify and YouTube suggesting similar songs.",
+          "from": 145,
+          "to": 236
+        },
+        {
+          "text": "And online stores showing,",
+          "from": 241,
+          "to": 289
+        },
+        {
+          "text": "you may also like.",
+          "from": 289,
+          "to": 322
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Search just matches exact keywords.",
+        "fact": "Embedding search matches meaning: “cheap flights” also finds “budget airfare”.",
+        "tip": "Embeddings power RAG, up next"
+      },
+      "from": 1986,
+      "durationInFrames": 370,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_06.wav",
+      "cues": [
+        37,
+        103
+      ],
+      "captions": [
+        {
+          "text": "Myth!",
+          "from": 10,
+          "to": 27
+        },
+        {
+          "text": "Search just matches exact keywords.",
+          "from": 37,
+          "to": 98
+        },
+        {
+          "text": "Not anymore.",
+          "from": 103,
+          "to": 129
+        },
+        {
+          "text": "Embedding search matches meaning.",
+          "from": 133,
+          "to": 184
+        },
+        {
+          "text": "Search cheap flights,",
+          "from": 188,
+          "to": 231
+        },
+        {
+          "text": "and it also finds budget",
+          "from": 231,
+          "to": 279
+        },
+        {
+          "text": "airfare, with zero words in common.",
+          "from": 279,
+          "to": 349
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Which word is closest to “king”?",
+        "options": [
+          "Kingfisher",
+          "Queen",
+          "Ring"
+        ],
+        "answer": 1
+      },
+      "from": 2356,
+      "durationInFrames": 431,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_07.wav",
+      "cues": [
+        149,
+        278
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "In embedding space,",
+          "from": 44,
+          "to": 80
+        },
+        {
+          "text": "which word sits closest to king?",
+          "from": 80,
+          "to": 139
+        },
+        {
+          "text": "Pause and think.",
+          "from": 149,
+          "to": 177
+        },
+        {
+          "text": "Queen!",
+          "from": 278,
+          "to": 296
+        },
+        {
+          "text": "Similar meaning,",
+          "from": 306,
+          "to": 332
+        },
+        {
+          "text": "close together.",
+          "from": 332,
+          "to": 357
+        },
+        {
+          "text": "Comment queen if you got it!",
+          "from": 362,
+          "to": 405
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Embedding",
+            "meaning as numbers"
+          ],
+          [
+            "Close",
+            "similar things sit together"
+          ],
+          [
+            "Vector DB",
+            "searches by meaning"
+          ],
+          [
+            "Used in",
+            "photo search, recs, RAG"
+          ]
+        ],
+        "next": "EP 07 · RAG"
+      },
+      "from": 2787,
+      "durationInFrames": 566,
+      "voiceFrom": 10,
+      "audio": "lessons/ep06/voice_08.wav",
+      "cues": [
+        35,
+        100,
+        161,
+        239,
+        336
+      ],
+      "captions": [
+        {
+          "text": "Recap.",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "Embeddings turn meaning into numbers.",
+          "from": 35,
+          "to": 95
+        },
+        {
+          "text": "Similar things sit close together.",
+          "from": 100,
+          "to": 156
+        },
+        {
+          "text": "Vector databases search them by meaning.",
+          "from": 161,
+          "to": 234
+        },
+        {
+          "text": "They power photo search,",
+          "from": 239,
+          "to": 283
+        },
+        {
+          "text": "recommendations, and more.",
+          "from": 283,
+          "to": 331
+        },
+        {
+          "text": "Next episode,",
+          "from": 336,
+          "to": 360
+        },
+        {
+          "text": "the big one.",
+          "from": 360,
+          "to": 383
+        },
+        {
+          "text": "RAG.",
+          "from": 388,
+          "to": 406
+        },
+        {
+          "text": "How to make AI answer",
+          "from": 411,
+          "to": 449
+        },
+        {
+          "text": "from your own documents.",
+          "from": 449,
+          "to": 492
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 497,
+          "to": 540
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "ep10",
+  "episode": 10,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Agents",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "A chatbot answers one question. [1] An agent gets a goal, and works on it by itself, step after step. [2] Today, A I agents.",
+      "data": {
+        "kicker": "EPISODE 10",
+        "title": [
+          "AI Agents"
+        ],
+        "subtitle": "AI that gets things done",
+        "buzzwords": [
+          "Autonomy",
+          "Planning",
+          "Tools",
+          "Loop",
+          "Goals",
+          "Memory",
+          "Multi-step",
+          "Actions"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "An A I agent is an L L M, plus tools, running in a loop. [1] It plans the next step, uses a tool, looks at the result, and repeats, until the goal is done. [2] It plans. [3] It uses tools. [4] It checks its own results.",
+      "data": {
+        "term": "AI Agent",
+        "short": "Agent",
+        "definition": "An LLM with tools, running in a loop until the goal is done.",
+        "chips": [
+          [
+            "ListChecks",
+            "Plans steps"
+          ],
+          [
+            "Wrench",
+            "Uses tools"
+          ],
+          [
+            "Eye",
+            "Checks results"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "agentloop",
+      "text": "Let's give an agent a goal. Plan a weekend trip to Goa, under fifteen thousand rupees. [1] It loops. Plan, act, observe. [2] It searches for trains. [3] It checks hotel prices. [4] It adds it up. Over budget, so it swaps the hotel. [5] And it returns a full plan, under budget.",
+      "data": {
+        "goal": "Plan a Goa weekend under ₹15,000",
+        "stages": [
+          [
+            "ListChecks",
+            "Plan"
+          ],
+          [
+            "Wrench",
+            "Act"
+          ],
+          [
+            "Eye",
+            "Observe"
+          ]
+        ],
+        "log": [
+          "search_trains(Hyderabad→Goa) → ₹2,400",
+          "search_hotels(Goa, 2 nights) → ₹9,800",
+          "total ₹16,900 > budget → swap hotel",
+          "✓ plan ready: ₹13,700 total"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Chatbot versus agent. [1] A chatbot gives you information, and you do the work. [2] An agent does the work, across many steps and tools, and reports back.",
+      "data": {
+        "heading": "Chatbot vs Agent",
+        "left": {
+          "icon": "MessageSquare",
+          "title": "Chatbot",
+          "stat": "Answers",
+          "label": "you do the steps"
+        },
+        "right": {
+          "icon": "Bot",
+          "title": "Agent",
+          "stat": "Gets it done",
+          "label": "many steps + tools"
+        }
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Agents are already here. [1] Coding agents that write, test and fix code across a whole project. [2] Research agents that read dozens of pages, and write a report. [3] And customer service agents that can actually process your refund.",
+      "data": {
+        "heading": "Agents at work",
+        "items": [
+          [
+            "Code",
+            "Coding agents",
+            "Write, test and fix code"
+          ],
+          [
+            "Search",
+            "Research agents",
+            "Read 50 pages, write a report"
+          ],
+          [
+            "Receipt",
+            "Service agents",
+            "Actually process the refund"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Myth! [1] Agents are fully autonomous. Just let them run. [2] Careful. Mistakes can snowball over many steps. Good agents check with a human before important actions, like payments.",
+      "data": {
+        "myth": "Agents are fully autonomous. Just let them run.",
+        "fact": "Mistakes can snowball across steps. Good agents check with a human before important actions.",
+        "tip": "Human-in-the-loop for money & deletes"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What makes something an agent, and not just a chatbot? [1] Pause and think. <pause 3.2> [2] It works in a loop, using tools, toward a goal! Comment loop if you got it!",
+      "data": {
+        "question": "An agent is different because…",
+        "options": [
+          "It has a cute name",
+          "Loop + tools toward a goal",
+          "It types faster"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] An agent is an L L M, with tools, in a loop. [2] Plan, act, observe, repeat. [3] It does multi step work for you. [4] With a human approving the big actions. [5] Next episode, M C P. The universal connector for A I tools. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Agent",
+            "LLM + tools + a loop"
+          ],
+          [
+            "Loop",
+            "plan → act → observe"
+          ],
+          [
+            "Does",
+            "multi-step work for you"
+          ],
+          [
+            "Safety",
+            "human approves big actions"
+          ]
+        ],
+        "next": "EP 11 · MCP"
+      }
+    }
+  ]
+}

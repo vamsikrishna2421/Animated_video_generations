@@ -1,0 +1,172 @@
+{
+  "id": "ep09",
+  "episode": 9,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Tool Use and Function Calling",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "An L L M on its own can only write text. [1] It can't check today's weather, or book you a cab. [2] Unless we give it tools.",
+      "data": {
+        "kicker": "EPISODE 09",
+        "title": [
+          "Tool Use"
+        ],
+        "subtitle": "How AI takes real actions",
+        "buzzwords": [
+          "Function calling",
+          "APIs",
+          "JSON",
+          "Actions",
+          "Live data",
+          "Weather",
+          "Calendar",
+          "Payments"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Tool use, also called function calling, [1] means the A I can ask your app to run a function, and then use the result. [2] Get live data. [3] Calculate exactly. [4] Take actions.",
+      "data": {
+        "term": "Tool use · Function calling",
+        "short": "Tools",
+        "definition": "The AI asks your app to run a function, then uses the result in its answer.",
+        "chips": [
+          [
+            "CloudSun",
+            "Get live data"
+          ],
+          [
+            "Calculator",
+            "Calculate exactly"
+          ],
+          [
+            "Send",
+            "Take actions"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "toolcall",
+      "text": "Watch. [1] You ask, should I carry an umbrella in Hyderabad today? [2] The model doesn't guess. It writes a tool call. Get weather, city Hyderabad. [3] Your app calls the weather service, and gets back, rain, eighty percent. [4] And the model answers. Yes, carry an umbrella, there's an eighty percent chance of rain.",
+      "data": {
+        "heading": "Function calling, live",
+        "question": "Should I carry an umbrella in Hyderabad today?",
+        "call": {
+          "tool": "get_weather",
+          "city": "Hyderabad"
+        },
+        "tool": "WEATHER API",
+        "result": "rain: 80% · 24°C",
+        "answer": "Yes! There's an 80% chance of rain in Hyderabad today. Carry an umbrella."
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Important. [1] The A I never runs the tool itself. It only asks. [2] Your app decides whether to run it, and runs it. [3] Then the result goes back to the A I. That keeps you in control.",
+      "data": {
+        "heading": "Who does what",
+        "steps": [
+          [
+            "Bot",
+            "The AI asks",
+            "Writes which tool + inputs"
+          ],
+          [
+            "AppWindow",
+            "Your app runs it",
+            "You decide what's allowed"
+          ],
+          [
+            "Undo2",
+            "Result goes back",
+            "AI turns it into an answer"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "It's already everywhere. [1] Assistants that add events to your calendar. [2] Travel apps that check flight prices live. [3] Support bots that look up your order status.",
+      "data": {
+        "heading": "Tools in action",
+        "items": [
+          [
+            "Calendar",
+            "Calendar assistant",
+            "Adds events for you"
+          ],
+          [
+            "Plane",
+            "Travel search",
+            "Live flight prices"
+          ],
+          [
+            "Package",
+            "Order tracking",
+            "Checks your order status"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Myth! [1] The A I is directly logged into your apps. [2] No. It can only request tools that a developer gave it. The app does the actual work, and should ask you before anything important.",
+      "data": {
+        "myth": "The AI is directly logged into my apps.",
+        "fact": "It can only request tools a developer gave it. The app does the work, and should confirm big actions.",
+        "tip": "Always confirm payments & deletes"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In function calling, who actually runs the function? [1] Pause and think. <pause 3.2> [2] Your app does! The A I only asks. Comment app if you got it!",
+      "data": {
+        "question": "Who actually runs the function?",
+        "options": [
+          "The AI model",
+          "Your app",
+          "The user"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] Tools let A I use live data, and take actions. [2] The A I only asks. [3] Your app runs the tool. [4] The result comes back as a helpful answer. [5] Next episode, A I agents. When A I plans and uses tools on its own, step by step. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Tools",
+            "live data + real actions"
+          ],
+          [
+            "AI asks",
+            "writes the tool + inputs"
+          ],
+          [
+            "App runs",
+            "you stay in control"
+          ],
+          [
+            "Result",
+            "becomes the answer"
+          ]
+        ],
+        "next": "EP 10 · AI Agents"
+      }
+    }
+  ]
+}

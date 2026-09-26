@@ -16,6 +16,18 @@ import { Predict } from "./scenes/Predict";
 import { Steps } from "./scenes/Steps";
 import { Terms } from "./scenes/Terms";
 import { Versus } from "./scenes/Versus";
+import { Host } from "./scenes/Host";
+import { Roadmap } from "./scenes/Roadmap";
+import { Cta } from "./scenes/Cta";
+import { Tokens } from "./scenes/Tokens";
+import { ContextWindow } from "./scenes/ContextWindow";
+import { PromptBuilder } from "./scenes/PromptBuilder";
+import { Dial } from "./scenes/Dial";
+import { EmbedMap } from "./scenes/EmbedMap";
+import { Pipeline } from "./scenes/Pipeline";
+import { Table } from "./scenes/Table";
+import { ToolCall } from "./scenes/ToolCall";
+import { AgentLoop } from "./scenes/AgentLoop";
 import { L, SceneData, SceneProps, clamp } from "./theme";
 
 const SCENES: Record<string, React.FC<SceneProps>> = {
@@ -33,6 +45,18 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   steps: Steps,
   terms: Terms,
   myth: Myth,
+  host: Host,
+  roadmap: Roadmap,
+  cta: Cta,
+  tokens: Tokens,
+  window: ContextWindow,
+  prompt: PromptBuilder,
+  dial: Dial,
+  embedmap: EmbedMap,
+  pipeline: Pipeline,
+  table: Table,
+  toolcall: ToolCall,
+  agentloop: AgentLoop,
 };
 
 export type LessonTimeline = {
@@ -74,7 +98,7 @@ const Header: React.FC<{ tl: LessonTimeline }> = ({ tl }) => {
     <>
       <div style={{ position: "absolute", top: 150, left: 70, right: 70, display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: L.font }}>
         <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: 5, color: L.text, background: "rgba(255,255,255,0.08)", border: `1.5px solid ${L.border}`, padding: "10px 20px", borderRadius: 30 }}>
-          {tl.series} <span style={{ color: L.amber }}>· EP {String(tl.episode).padStart(2, "0")}</span>
+          {tl.series} <span style={{ color: L.amber }}>· {tl.episode === 0 ? "TRAILER" : `EP ${String(tl.episode).padStart(2, "0")}`}</span>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
           {tl.scenes.map((s, i) => (
@@ -133,7 +157,7 @@ export const Lesson: React.FC<LessonTimeline> = (tl) => {
           )}
         </Sequence>
       ))}
-      <div style={{ position: "absolute", left: 40, top: 1265 }}>
+      <div style={{ position: "absolute", left: 40, top: 1265, opacity: scene?.type === "host" ? 0 : 1 }}>
         <Mascot size={195} talking={talking} />
       </div>
     </AbsoluteFill>

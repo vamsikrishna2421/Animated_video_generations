@@ -1,0 +1,240 @@
+{
+  "id": "ep06",
+  "episode": 6,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Embeddings and Vector Search",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "How does Google Photos find your dog, when you just type dog? [1] How does Spotify know which songs feel similar? [2] The answer is embeddings.",
+      "data": {
+        "kicker": "EPISODE 06",
+        "title": [
+          "Embeddings"
+        ],
+        "subtitle": "How AI understands meaning",
+        "buzzwords": [
+          "Vectors",
+          "Similarity",
+          "Search",
+          "Meaning",
+          "Numbers",
+          "Vector DB",
+          "Nearest",
+          "Clusters"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "An embedding turns something, a word, a sentence, or an image, [1] into a list of numbers that captures its meaning. [2] Meaning becomes numbers. [3] Similar things end up close together. [4] It's like giving every idea a location on a map.",
+      "data": {
+        "term": "Embedding",
+        "short": "Vectors",
+        "definition": "A list of numbers that captures the meaning of text, images or sound.",
+        "chips": [
+          [
+            "Hash",
+            "Meaning → numbers"
+          ],
+          [
+            "Magnet",
+            "Similar = close"
+          ],
+          [
+            "MapPin",
+            "Ideas on a map"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "embedmap",
+      "text": "Picture a map of meaning. [1] Fruits cluster together. Animals over here. Vehicles over there. [2] Now, search for puppy. [3] Its nearest neighbours are dog and cat. Not because the letters match, but because the meaning does.",
+      "data": {
+        "heading": "A map of meaning",
+        "points": [
+          [
+            "apple",
+            0.16,
+            0.2,
+            0
+          ],
+          [
+            "banana",
+            0.32,
+            0.12,
+            0
+          ],
+          [
+            "mango",
+            0.22,
+            0.34,
+            0
+          ],
+          [
+            "dog",
+            0.62,
+            0.52,
+            1
+          ],
+          [
+            "cat",
+            0.8,
+            0.6,
+            1
+          ],
+          [
+            "lion",
+            0.84,
+            0.36,
+            1
+          ],
+          [
+            "car",
+            0.22,
+            0.72,
+            2
+          ],
+          [
+            "bus",
+            0.1,
+            0.86,
+            2
+          ],
+          [
+            "bike",
+            0.38,
+            0.88,
+            2
+          ]
+        ],
+        "query": [
+          "puppy",
+          0.7,
+          0.74
+        ],
+        "neighbors": [
+          "dog",
+          "cat"
+        ],
+        "note": "Search by meaning, not by spelling"
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "This is called vector search. [1] First, every document is turned into an embedding, [2] meaning a list of numbers, [3] and saved in a vector database. [4] When you search, your query becomes numbers too, [5] and the database returns the closest matches, in milliseconds.",
+      "data": {
+        "heading": "Vector search",
+        "nodes": [
+          [
+            "FileText",
+            "Your documents",
+            "Notes, photos, FAQs"
+          ],
+          [
+            "Hash",
+            "Embed",
+            "Turn each into numbers"
+          ],
+          [
+            "Database",
+            "Vector database",
+            "Stores all the vectors"
+          ],
+          [
+            "Search",
+            "Your query",
+            "Also turned into numbers"
+          ],
+          [
+            "Target",
+            "Nearest match",
+            "Closest meaning wins"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "You've already used this. [1] Google Photos finding beach, with no tags. [2] Spotify and YouTube suggesting similar songs. [3] And online stores showing, you may also like.",
+      "data": {
+        "heading": "Embeddings in your day",
+        "items": [
+          [
+            "Image",
+            "Photo search",
+            "Find “beach” with no tags"
+          ],
+          [
+            "Music",
+            "Similar songs",
+            "Songs that feel alike"
+          ],
+          [
+            "ShoppingBag",
+            "Similar products",
+            "“You may also like”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Myth! [1] Search just matches exact keywords. [2] Not anymore. Embedding search matches meaning. Search cheap flights, and it also finds budget airfare, with zero words in common.",
+      "data": {
+        "myth": "Search just matches exact keywords.",
+        "fact": "Embedding search matches meaning: “cheap flights” also finds “budget airfare”.",
+        "tip": "Embeddings power RAG, up next"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In embedding space, which word sits closest to king? [1] Pause and think. <pause 3.2> [2] Queen! Similar meaning, close together. Comment queen if you got it!",
+      "data": {
+        "question": "Which word is closest to “king”?",
+        "options": [
+          "Kingfisher",
+          "Queen",
+          "Ring"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] Embeddings turn meaning into numbers. [2] Similar things sit close together. [3] Vector databases search them by meaning. [4] They power photo search, recommendations, and more. [5] Next episode, the big one. RAG. How to make A I answer from your own documents. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Embedding",
+            "meaning as numbers"
+          ],
+          [
+            "Close",
+            "similar things sit together"
+          ],
+          [
+            "Vector DB",
+            "searches by meaning"
+          ],
+          [
+            "Used in",
+            "photo search, recs, RAG"
+          ]
+        ],
+        "next": "EP 07 · RAG"
+      }
+    }
+  ]
+}

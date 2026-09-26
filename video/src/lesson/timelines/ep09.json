@@ -1,0 +1,630 @@
+{
+  "id": "ep09",
+  "episode": 9,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Tool Use and Function Calling",
+  "fps": 30,
+  "totalFrames": 3166,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep09/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 09",
+        "title": [
+          "Tool Use"
+        ],
+        "subtitle": "How AI takes real actions",
+        "buzzwords": [
+          "Function calling",
+          "APIs",
+          "JSON",
+          "Actions",
+          "Live data",
+          "Weather",
+          "Calendar",
+          "Payments"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 248,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_01.wav",
+      "cues": [
+        100,
+        186
+      ],
+      "captions": [
+        {
+          "text": "An L L M on",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "its own can only write text.",
+          "from": 35,
+          "to": 95
+        },
+        {
+          "text": "It can't check today's weather,",
+          "from": 100,
+          "to": 151
+        },
+        {
+          "text": "or book you a cab.",
+          "from": 151,
+          "to": 182
+        },
+        {
+          "text": "Unless we give it tools.",
+          "from": 186,
+          "to": 227
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Tool use · Function calling",
+        "short": "Tools",
+        "definition": "The AI asks your app to run a function, then uses the result in its answer.",
+        "chips": [
+          [
+            "CloudSun",
+            "Get live data"
+          ],
+          [
+            "Calculator",
+            "Calculate exactly"
+          ],
+          [
+            "Send",
+            "Take actions"
+          ]
+        ]
+      },
+      "from": 248,
+      "durationInFrames": 361,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_02.wav",
+      "cues": [
+        87,
+        234,
+        269,
+        311
+      ],
+      "captions": [
+        {
+          "text": "Tool use,",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "also called function calling,",
+          "from": 30,
+          "to": 87
+        },
+        {
+          "text": "means the AI can ask",
+          "from": 87,
+          "to": 128
+        },
+        {
+          "text": "your app to run a",
+          "from": 128,
+          "to": 162
+        },
+        {
+          "text": "function, and then use the result.",
+          "from": 162,
+          "to": 229
+        },
+        {
+          "text": "Get live data.",
+          "from": 234,
+          "to": 265
+        },
+        {
+          "text": "Calculate exactly.",
+          "from": 269,
+          "to": 306
+        },
+        {
+          "text": "Take actions.",
+          "from": 311,
+          "to": 340
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "toolcall",
+      "data": {
+        "heading": "Function calling, live",
+        "question": "Should I carry an umbrella in Hyderabad today?",
+        "call": {
+          "tool": "get_weather",
+          "city": "Hyderabad"
+        },
+        "tool": "WEATHER API",
+        "result": "rain: 80% · 24°C",
+        "answer": "Yes! There's an 80% chance of rain in Hyderabad today. Carry an umbrella."
+      },
+      "from": 609,
+      "durationInFrames": 569,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_03.wav",
+      "cues": [
+        35,
+        139,
+        282,
+        402
+      ],
+      "captions": [
+        {
+          "text": "Watch.",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "You ask,",
+          "from": 35,
+          "to": 50
+        },
+        {
+          "text": "should I carry an umbrella",
+          "from": 50,
+          "to": 95
+        },
+        {
+          "text": "in Hyderabad today?",
+          "from": 95,
+          "to": 129
+        },
+        {
+          "text": "The model doesn't guess.",
+          "from": 139,
+          "to": 178
+        },
+        {
+          "text": "It writes a tool call.",
+          "from": 183,
+          "to": 221
+        },
+        {
+          "text": "Get weather,",
+          "from": 225,
+          "to": 249
+        },
+        {
+          "text": "city Hyderabad.",
+          "from": 249,
+          "to": 278
+        },
+        {
+          "text": "Your app calls the weather",
+          "from": 282,
+          "to": 325
+        },
+        {
+          "text": "service, and gets back,",
+          "from": 325,
+          "to": 363
+        },
+        {
+          "text": "rain, eighty percent.",
+          "from": 363,
+          "to": 397
+        },
+        {
+          "text": "And the model answers.",
+          "from": 402,
+          "to": 439
+        },
+        {
+          "text": "Yes, carry an umbrella,",
+          "from": 443,
+          "to": 482
+        },
+        {
+          "text": "there's an eighty percent chance",
+          "from": 482,
+          "to": 534
+        },
+        {
+          "text": "of rain.",
+          "from": 534,
+          "to": 549
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Who does what",
+        "steps": [
+          [
+            "Bot",
+            "The AI asks",
+            "Writes which tool + inputs"
+          ],
+          [
+            "AppWindow",
+            "Your app runs it",
+            "You decide what's allowed"
+          ],
+          [
+            "Undo2",
+            "Result goes back",
+            "AI turns it into an answer"
+          ]
+        ]
+      },
+      "from": 1178,
+      "durationInFrames": 358,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_04.wav",
+      "cues": [
+        40,
+        147,
+        229
+      ],
+      "captions": [
+        {
+          "text": "Important.",
+          "from": 10,
+          "to": 36
+        },
+        {
+          "text": "The AI never runs the",
+          "from": 40,
+          "to": 81
+        },
+        {
+          "text": "tool itself.",
+          "from": 81,
+          "to": 105
+        },
+        {
+          "text": "It only asks.",
+          "from": 110,
+          "to": 142
+        },
+        {
+          "text": "Your app decides whether to",
+          "from": 147,
+          "to": 191
+        },
+        {
+          "text": "run it,",
+          "from": 191,
+          "to": 204
+        },
+        {
+          "text": "and runs it.",
+          "from": 204,
+          "to": 224
+        },
+        {
+          "text": "Then the result goes back",
+          "from": 229,
+          "to": 269
+        },
+        {
+          "text": "to the AI.",
+          "from": 269,
+          "to": 286
+        },
+        {
+          "text": "That keeps you in control.",
+          "from": 291,
+          "to": 337
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Tools in action",
+        "items": [
+          [
+            "Calendar",
+            "Calendar assistant",
+            "Adds events for you"
+          ],
+          [
+            "Plane",
+            "Travel search",
+            "Live flight prices"
+          ],
+          [
+            "Package",
+            "Order tracking",
+            "Checks your order status"
+          ]
+        ]
+      },
+      "from": 1536,
+      "durationInFrames": 293,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_05.wav",
+      "cues": [
+        53,
+        125,
+        200
+      ],
+      "captions": [
+        {
+          "text": "It's already everywhere.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "Assistants that add events to",
+          "from": 53,
+          "to": 98
+        },
+        {
+          "text": "your calendar.",
+          "from": 98,
+          "to": 120
+        },
+        {
+          "text": "Travel apps that check flight",
+          "from": 125,
+          "to": 174
+        },
+        {
+          "text": "prices live.",
+          "from": 174,
+          "to": 195
+        },
+        {
+          "text": "Support bots that look up",
+          "from": 200,
+          "to": 241
+        },
+        {
+          "text": "your order status.",
+          "from": 241,
+          "to": 272
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The AI is directly logged into my apps.",
+        "fact": "It can only request tools a developer gave it. The app does the work, and should confirm big actions.",
+        "tip": "Always confirm payments & deletes"
+      },
+      "from": 1829,
+      "durationInFrames": 377,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_06.wav",
+      "cues": [
+        37,
+        113
+      ],
+      "captions": [
+        {
+          "text": "Myth!",
+          "from": 10,
+          "to": 27
+        },
+        {
+          "text": "The AI is directly logged",
+          "from": 37,
+          "to": 81
+        },
+        {
+          "text": "into your apps.",
+          "from": 81,
+          "to": 109
+        },
+        {
+          "text": "No.",
+          "from": 113,
+          "to": 129
+        },
+        {
+          "text": "It can only request tools",
+          "from": 133,
+          "to": 181
+        },
+        {
+          "text": "that a developer gave it.",
+          "from": 181,
+          "to": 229
+        },
+        {
+          "text": "The app does the actual",
+          "from": 234,
+          "to": 272
+        },
+        {
+          "text": "work, and should ask you",
+          "from": 272,
+          "to": 313
+        },
+        {
+          "text": "before anything important.",
+          "from": 313,
+          "to": 356
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Who actually runs the function?",
+        "options": [
+          "The AI model",
+          "Your app",
+          "The user"
+        ],
+        "answer": 1
+      },
+      "from": 2206,
+      "durationInFrames": 420,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_07.wav",
+      "cues": [
+        145,
+        275
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "In function calling,",
+          "from": 44,
+          "to": 80
+        },
+        {
+          "text": "who actually runs the function?",
+          "from": 80,
+          "to": 136
+        },
+        {
+          "text": "Pause and think.",
+          "from": 145,
+          "to": 174
+        },
+        {
+          "text": "Your app does!",
+          "from": 275,
+          "to": 303
+        },
+        {
+          "text": "The AI only asks.",
+          "from": 312,
+          "to": 351
+        },
+        {
+          "text": "Comment app if you got it!",
+          "from": 356,
+          "to": 395
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Tools",
+            "live data + real actions"
+          ],
+          [
+            "AI asks",
+            "writes the tool + inputs"
+          ],
+          [
+            "App runs",
+            "you stay in control"
+          ],
+          [
+            "Result",
+            "becomes the answer"
+          ]
+        ],
+        "next": "EP 10 · AI Agents"
+      },
+      "from": 2626,
+      "durationInFrames": 540,
+      "voiceFrom": 10,
+      "audio": "lessons/ep09/voice_08.wav",
+      "cues": [
+        35,
+        134,
+        177,
+        222,
+        296
+      ],
+      "captions": [
+        {
+          "text": "Recap.",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "Tools let AI use live",
+          "from": 35,
+          "to": 80
+        },
+        {
+          "text": "data, and take actions.",
+          "from": 80,
+          "to": 129
+        },
+        {
+          "text": "The AI only asks.",
+          "from": 134,
+          "to": 172
+        },
+        {
+          "text": "Your app runs the tool.",
+          "from": 177,
+          "to": 217
+        },
+        {
+          "text": "The result comes back as",
+          "from": 222,
+          "to": 262
+        },
+        {
+          "text": "a helpful answer.",
+          "from": 262,
+          "to": 292
+        },
+        {
+          "text": "Next episode,",
+          "from": 296,
+          "to": 328
+        },
+        {
+          "text": "AI agents.",
+          "from": 328,
+          "to": 352
+        },
+        {
+          "text": "When AI plans and uses",
+          "from": 357,
+          "to": 403
+        },
+        {
+          "text": "tools on its own,",
+          "from": 403,
+          "to": 438
+        },
+        {
+          "text": "step by step.",
+          "from": 438,
+          "to": 466
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 471,
+          "to": 515
+        }
+      ],
+      "image": null
+    }
+  ]
+}

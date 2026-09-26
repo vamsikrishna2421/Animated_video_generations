@@ -63,7 +63,7 @@ export const Banner: React.FC<SceneProps> = ({ data, cue, image }) => {
                 style={{
                   fontFamily: L.font,
                   fontWeight: 800,
-                  fontSize: titles.length <= 2 ? 176 : t.length > 6 ? 118 : 150,
+                  fontSize: Math.min(titles.length <= 2 ? 190 : t.length > 6 ? 118 : 150, 1480 / t.length),
                   lineHeight: 1.02,
                   letterSpacing: -3,
                   transform: `translateX(${(1 - s) * (i % 2 ? 400 : -400)}px) scale(${1 + 0.04 * Math.sin(settle * Math.PI)})`,
