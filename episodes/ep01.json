@@ -1,0 +1,246 @@
+{
+  "id": "ep01",
+  "episode": 1,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI vs ML vs Deep Learning vs GenAI",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": {
+    "bpm": 88,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "A I. Machine learning. Deep learning. Generative A I. [1] Everyone is using these words. But what do they actually mean? [2] Let's fix that, in under three minutes.",
+      "data": {
+        "kicker": "EPISODE 01",
+        "title": [
+          "AI",
+          "ML",
+          "Deep Learning",
+          "GenAI"
+        ],
+        "subtitle": "What's the difference?",
+        "buzzwords": [
+          "Neural nets",
+          "ChatGPT",
+          "Algorithms",
+          "Big Data",
+          "LLM",
+          "Automation",
+          "Models",
+          "Training"
+        ],
+        "vs": true
+      },
+      "image": "Vibrant flat illustration, friendly Indian teacher with glasses pointing at a glowing chalkboard of AI buzzwords, dark navy background, neon violet and teal accents, clean vector style"
+    },
+    {
+      "type": "definition",
+      "text": "Let's start with the biggest one. [1] Artificial Intelligence is any machine doing something that normally needs human intelligence. [2] Recognising a face. [3] Understanding speech. [4] Making a decision.",
+      "data": {
+        "term": "Artificial Intelligence",
+        "short": "AI",
+        "definition": "Machines doing things that normally need human intelligence.",
+        "chips": [
+          [
+            "ScanFace",
+            "Recognise faces"
+          ],
+          [
+            "Mic",
+            "Understand speech"
+          ],
+          [
+            "Lightbulb",
+            "Make decisions"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Old school software follows rules that a programmer writes by hand. [1] If an email contains the word lottery, mark it as spam. But spammers change their words every day. [2] Machine learning flips this. Instead of writing rules, we show the machine thousands of examples, spam and not spam, [3] and it learns the rules by itself.",
+      "data": {
+        "left": {
+          "title": "Traditional code",
+          "inputs": [
+            "Rules",
+            "Data"
+          ],
+          "output": "Answers",
+          "note": "if 'lottery' in email → spam"
+        },
+        "right": {
+          "title": "Machine Learning",
+          "inputs": [
+            "Data",
+            "Answers"
+          ],
+          "output": "Rules",
+          "note": "10,000 labelled emails → learned filter"
+        }
+      }
+    },
+    {
+      "type": "examples",
+      "text": "And you use machine learning every single day. [1] Gmail's spam filter. [2] Netflix and YouTube recommending what to watch next. [3] Your bank flagging a suspicious card payment in seconds.",
+      "data": {
+        "heading": "Machine Learning in your day",
+        "items": [
+          [
+            "Mail",
+            "Spam filter",
+            "Learns what junk looks like"
+          ],
+          [
+            "Film",
+            "Recommendations",
+            "Learns what you like to watch"
+          ],
+          [
+            "CreditCard",
+            "Fraud detection",
+            "Learns your normal spending"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "neural",
+      "text": "Deep learning is a kind of machine learning inspired by the human brain. [1] It uses neural networks. Layers of tiny math units, connected together. [2] Each layer spots something a little more complex. Edges. [3] Then shapes. [4] Then, a cat. More layers means more depth, and that's why it's called deep learning.",
+      "data": {
+        "heading": "Deep Learning",
+        "layers": [
+          "Pixels",
+          "Edges",
+          "Shapes",
+          "Cat!"
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Deep learning is behind the magic moments. [1] Face unlock on your phone. [2] Voice assistants like Siri and Alexa. [3] And self driving cars reading the road.",
+      "data": {
+        "heading": "Deep Learning in action",
+        "items": [
+          [
+            "ScanFace",
+            "Face unlock",
+            "Recognises you in the dark"
+          ],
+          [
+            "Mic",
+            "Voice assistants",
+            "Turns speech into text"
+          ],
+          [
+            "Car",
+            "Self-driving",
+            "Sees lanes, signs, people"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "genai",
+      "text": "Then came generative A I. Instead of only recognising things, it creates brand new things. [1] Text. [2] Images. [3] Music. [4] Code. [5] Even voices. ChatGPT, Claude and Gemini are all generative A I. [6] Fun fact, the voice you are hearing right now was generated by A I, running on a laptop.",
+      "data": {
+        "prompt": "Write a birthday wish for my mom in 2 lines",
+        "reply": "Happy birthday, Amma! Your love is my superpower, today and always.",
+        "outputs": [
+          [
+            "FileText",
+            "Text"
+          ],
+          [
+            "Image",
+            "Images"
+          ],
+          [
+            "Music",
+            "Music"
+          ],
+          [
+            "Code",
+            "Code"
+          ],
+          [
+            "AudioLines",
+            "Voice"
+          ]
+        ],
+        "funfact": "This narration = AI voice, made locally"
+      }
+    },
+    {
+      "type": "nested",
+      "text": "So here's the whole picture. [1] A I is the big circle. [2] Machine learning sits inside it. [3] Deep learning sits inside that. [4] And generative A I is the newest, innermost circle. [5] Every generative A I is A I. But not every A I is generative.",
+      "data": {
+        "rings": [
+          [
+            "Artificial Intelligence",
+            "#8B5CF6"
+          ],
+          [
+            "Machine Learning",
+            "#3B82F6"
+          ],
+          [
+            "Deep Learning",
+            "#22D3EE"
+          ],
+          [
+            "Generative AI",
+            "#F59E0B"
+          ]
+        ],
+        "takeaway": "Every GenAI is AI. Not every AI is GenAI."
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Your phone's face unlock. Which one is it? [1] Pause and think. <pause 3.2> [2] It's deep learning! It recognises your face. It doesn't create a new one, so it's not generative. Comment how many you got right!",
+      "data": {
+        "question": "Face unlock on your phone is…",
+        "options": [
+          "Generative AI",
+          "Deep Learning",
+          "Rule-based code"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Quick recap. [1] A I is the big idea. [2] Machine learning learns from data. [3] Deep learning uses neural networks. [4] Generative A I creates new content. [5] Next episode, what is a large language model, and how does ChatGPT actually think? Follow A I Maastaaru so you don't miss it!",
+      "data": {
+        "points": [
+          [
+            "AI",
+            "the big idea: machines acting smart"
+          ],
+          [
+            "ML",
+            "learns patterns from data"
+          ],
+          [
+            "DL",
+            "neural networks with many layers"
+          ],
+          [
+            "GenAI",
+            "creates new text, images, voice"
+          ]
+        ],
+        "next": "EP 02 · What is an LLM?"
+      }
+    }
+  ]
+}

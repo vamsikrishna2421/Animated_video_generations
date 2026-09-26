@@ -24,6 +24,39 @@ fully generated. Build it with `./pipeline/build_titles.sh`, and edit the cues i
 | 8 s | Flash; MUSE revealed by light sweep | Braam impact + sub drop |
 | 9.6–15 s | Tagline, credits line, Muse opens its eyes, fade | Sparse reverb piano; VO: "Meet Muse. Your taxes... handled."; final hit |
 
+## AI From Scratch (Instagram series)
+
+Vertical 1080×1920 Reels, each under 3 minutes, for @ai_maastaaru. The series plan and episode
+order are in [`series/PLAN.md`](series/PLAN.md). Each episode is one JSON file in
+`episodes/`, built with one command:
+
+```bash
+./pipeline/build_lesson.sh ep01            # -> out/ep01_<title>.mp4
+./pipeline/build_lesson.sh ep01 --images   # also render Qwen-Image illustrations (CUDA GPU only)
+```
+
+**How it works**
+- Narration is synthesised **sentence by sentence**, which gives captions and visuals accurate timing.
+- `[n]` markers in the narration are **cue points**: scene components reveal their n-th item on
+  the exact frame that word is spoken. `<pause 3>` inserts silence (used for the quiz countdown).
+- A host character, **Maastaaru** (teacher with glasses and a moustache), talks in sync with the voice.
+  Captions are Reels-style phrase chunks with keywords highlighted.
+- Layout keeps everything inside Instagram's safe area (clear of the top bar, the right-side
+  buttons, and the bottom caption overlay).
+- The build fails if an episode runs longer than 180 s.
+
+**Scene types** (`video/src/lesson/scenes/`), mixed freely in any episode:
+`banner` (title card) · `definition` (term + typed definition + icon chips) · `compare`
+(rules vs learning) · `examples` (real-world use-case cards) · `neural` (animated neural net) ·
+`genai` (chat demo + output types) · `nested` (concentric concept rings) · `predict` (next-word
+probability bars) · `versus` (two things at different scale) · `steps` (numbered process) ·
+`terms` (2×2 glossary) · `myth` (myth busted → fact) · `quiz` (countdown + reveal) · `recap`
+(checklist + next-episode teaser + follow CTA).
+
+**Images:** visuals are drawn in code (SVG plus the lucide icon set), so no image model is
+needed. `pipeline/lesson_images.py` can add Qwen-Image illustrations from each scene's `"image"`
+prompt on a machine with a CUDA GPU; scenes pick up `img_NN.png` automatically.
+
 ## Pipeline
 
 ```
@@ -71,6 +104,9 @@ Live preview / tweak animations in the browser: `cd video && npx remotion studio
 | `pipeline/build.sh` | End-to-end build (promo) |
 | `script/titles.json`, `pipeline/titles_audio.py`, `pipeline/build_titles.sh` | Cinematic titles: cue sheet, synthesised score + VO, build |
 | `video/src/titles/Titles.tsx` | Title-sequence composition (`MuseTitles`) |
+| `series/PLAN.md`, `episodes/epNN.json` | Series plan and per-episode scripts |
+| `pipeline/lesson_voice.py`, `pipeline/lesson_images.py`, `pipeline/build_lesson.sh` | Episode narration/timeline, optional Qwen-Image, build |
+| `video/src/lesson/` | Vertical lesson engine: `Lesson.tsx`, mascot, captions, scene types |
 | `video/` | Remotion project (1920×1080, 30 fps) |
 
 Figures shown in the promo (tax, savings, refund) are illustrative.

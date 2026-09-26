@@ -3,6 +3,8 @@ import { Promo } from "./Promo";
 import timeline from "./timeline.json";
 import { Titles } from "./titles/Titles";
 import titles from "./titles_timeline.json";
+import { Lesson, LessonTimeline } from "./lesson/Lesson";
+import { timelines } from "./lesson/timelines";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -22,5 +24,17 @@ export const RemotionRoot: React.FC = () => (
       width={1920}
       height={1080}
     />
+    {(timelines as unknown as LessonTimeline[]).map((tl) => (
+      <Composition
+        key={tl.id}
+        id={`Lesson-${tl.id}`}
+        component={Lesson as unknown as React.FC<Record<string, unknown>>}
+        durationInFrames={tl.totalFrames}
+        fps={tl.fps}
+        width={1080}
+        height={1920}
+        defaultProps={tl as unknown as Record<string, unknown>}
+      />
+    ))}
   </>
 );

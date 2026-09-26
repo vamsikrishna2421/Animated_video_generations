@@ -1,0 +1,850 @@
+{
+  "id": "ep01",
+  "episode": 1,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI vs ML vs Deep Learning vs GenAI",
+  "fps": 30,
+  "totalFrames": 4855,
+  "music": {
+    "bpm": 88,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep01/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 01",
+        "title": [
+          "AI",
+          "ML",
+          "Deep Learning",
+          "GenAI"
+        ],
+        "subtitle": "What's the difference?",
+        "buzzwords": [
+          "Neural nets",
+          "ChatGPT",
+          "Algorithms",
+          "Big Data",
+          "LLM",
+          "Automation",
+          "Models",
+          "Training"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 342,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_01.wav",
+      "cues": [
+        140,
+        259
+      ],
+      "captions": [
+        {
+          "text": "AI.",
+          "from": 10,
+          "to": 29
+        },
+        {
+          "text": "Machine learning.",
+          "from": 34,
+          "to": 65
+        },
+        {
+          "text": "Deep learning.",
+          "from": 69,
+          "to": 96
+        },
+        {
+          "text": "Generative AI.",
+          "from": 101,
+          "to": 135
+        },
+        {
+          "text": "Everyone is using these words.",
+          "from": 140,
+          "to": 199
+        },
+        {
+          "text": "But what do they actually mean?",
+          "from": 204,
+          "to": 249
+        },
+        {
+          "text": "Let's fix that,",
+          "from": 259,
+          "to": 284
+        },
+        {
+          "text": "in under three minutes.",
+          "from": 284,
+          "to": 321
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Artificial Intelligence",
+        "short": "AI",
+        "definition": "Machines doing things that normally need human intelligence.",
+        "chips": [
+          [
+            "ScanFace",
+            "Recognise faces"
+          ],
+          [
+            "Mic",
+            "Understand speech"
+          ],
+          [
+            "Lightbulb",
+            "Make decisions"
+          ]
+        ]
+      },
+      "from": 342,
+      "durationInFrames": 394,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_02.wav",
+      "cues": [
+        67,
+        246,
+        293,
+        337
+      ],
+      "captions": [
+        {
+          "text": "Let's start with the biggest one.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Artificial Intelligence is any machine",
+          "from": 67,
+          "to": 138
+        },
+        {
+          "text": "doing something that normally needs",
+          "from": 138,
+          "to": 205
+        },
+        {
+          "text": "human intelligence.",
+          "from": 205,
+          "to": 241
+        },
+        {
+          "text": "Recognising a face.",
+          "from": 246,
+          "to": 288
+        },
+        {
+          "text": "Understanding speech.",
+          "from": 293,
+          "to": 332
+        },
+        {
+          "text": "Making a decision.",
+          "from": 337,
+          "to": 374
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "compare",
+      "data": {
+        "left": {
+          "title": "Traditional code",
+          "inputs": [
+            "Rules",
+            "Data"
+          ],
+          "output": "Answers",
+          "note": "if 'lottery' in email → spam"
+        },
+        "right": {
+          "title": "Machine Learning",
+          "inputs": [
+            "Data",
+            "Answers"
+          ],
+          "output": "Rules",
+          "note": "10,000 labelled emails → learned filter"
+        }
+      },
+      "from": 736,
+      "durationInFrames": 641,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_03.wav",
+      "cues": [
+        142,
+        323,
+        552
+      ],
+      "captions": [
+        {
+          "text": "Old school software follows rules",
+          "from": 10,
+          "to": 74
+        },
+        {
+          "text": "that a programmer writes by hand.",
+          "from": 74,
+          "to": 137
+        },
+        {
+          "text": "If an email contains the",
+          "from": 142,
+          "to": 188
+        },
+        {
+          "text": "word lottery,",
+          "from": 188,
+          "to": 214
+        },
+        {
+          "text": "mark it as spam.",
+          "from": 214,
+          "to": 246
+        },
+        {
+          "text": "But spammers change their words",
+          "from": 251,
+          "to": 301
+        },
+        {
+          "text": "every day.",
+          "from": 301,
+          "to": 318
+        },
+        {
+          "text": "Machine learning flips this.",
+          "from": 323,
+          "to": 370
+        },
+        {
+          "text": "Instead of writing rules,",
+          "from": 375,
+          "to": 427
+        },
+        {
+          "text": "we show the machine thousands",
+          "from": 427,
+          "to": 487
+        },
+        {
+          "text": "of examples,",
+          "from": 487,
+          "to": 513
+        },
+        {
+          "text": "spam and not spam,",
+          "from": 513,
+          "to": 551
+        },
+        {
+          "text": "and it learns the rules",
+          "from": 551,
+          "to": 599
+        },
+        {
+          "text": "by itself.",
+          "from": 599,
+          "to": 621
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Machine Learning in your day",
+        "items": [
+          [
+            "Mail",
+            "Spam filter",
+            "Learns what junk looks like"
+          ],
+          [
+            "Film",
+            "Recommendations",
+            "Learns what you like to watch"
+          ],
+          [
+            "CreditCard",
+            "Fraud detection",
+            "Learns your normal spending"
+          ]
+        ]
+      },
+      "from": 1377,
+      "durationInFrames": 358,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_04.wav",
+      "cues": [
+        91,
+        140,
+        244
+      ],
+      "captions": [
+        {
+          "text": "And you use machine learning",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "every single day.",
+          "from": 57,
+          "to": 86
+        },
+        {
+          "text": "Gmail's spam filter.",
+          "from": 91,
+          "to": 135
+        },
+        {
+          "text": "Netflix and YouTube recommending what",
+          "from": 140,
+          "to": 212
+        },
+        {
+          "text": "to watch next.",
+          "from": 212,
+          "to": 240
+        },
+        {
+          "text": "Your bank flagging a suspicious",
+          "from": 244,
+          "to": 297
+        },
+        {
+          "text": "card payment in seconds.",
+          "from": 297,
+          "to": 337
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "neural",
+      "data": {
+        "heading": "Deep Learning",
+        "layers": [
+          "Pixels",
+          "Edges",
+          "Shapes",
+          "Cat!"
+        ]
+      },
+      "from": 1735,
+      "durationInFrames": 595,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_05.wav",
+      "cues": [
+        147,
+        292,
+        398,
+        430
+      ],
+      "captions": [
+        {
+          "text": "Deep learning is a kind",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "of machine learning inspired by",
+          "from": 54,
+          "to": 112
+        },
+        {
+          "text": "the human brain.",
+          "from": 112,
+          "to": 142
+        },
+        {
+          "text": "It uses neural networks.",
+          "from": 147,
+          "to": 197
+        },
+        {
+          "text": "Layers of tiny math units,",
+          "from": 201,
+          "to": 251
+        },
+        {
+          "text": "connected together.",
+          "from": 251,
+          "to": 287
+        },
+        {
+          "text": "Each layer spots something a",
+          "from": 292,
+          "to": 337
+        },
+        {
+          "text": "little more complex.",
+          "from": 337,
+          "to": 369
+        },
+        {
+          "text": "Edges.",
+          "from": 374,
+          "to": 393
+        },
+        {
+          "text": "Then shapes.",
+          "from": 398,
+          "to": 425
+        },
+        {
+          "text": "Then, a cat.",
+          "from": 430,
+          "to": 457
+        },
+        {
+          "text": "More layers means more depth,",
+          "from": 462,
+          "to": 509
+        },
+        {
+          "text": "and that's why it's called",
+          "from": 509,
+          "to": 551
+        },
+        {
+          "text": "deep learning.",
+          "from": 551,
+          "to": 574
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Deep Learning in action",
+        "items": [
+          [
+            "ScanFace",
+            "Face unlock",
+            "Recognises you in the dark"
+          ],
+          [
+            "Mic",
+            "Voice assistants",
+            "Turns speech into text"
+          ],
+          [
+            "Car",
+            "Self-driving",
+            "Sees lanes, signs, people"
+          ]
+        ]
+      },
+      "from": 2330,
+      "durationInFrames": 310,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_06.wav",
+      "cues": [
+        93,
+        145,
+        220
+      ],
+      "captions": [
+        {
+          "text": "Deep learning is behind the",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "magic moments.",
+          "from": 61,
+          "to": 88
+        },
+        {
+          "text": "Face unlock on your phone.",
+          "from": 93,
+          "to": 140
+        },
+        {
+          "text": "Voice assistants like Siri and Alexa.",
+          "from": 145,
+          "to": 215
+        },
+        {
+          "text": "And self driving cars reading",
+          "from": 220,
+          "to": 272
+        },
+        {
+          "text": "the road.",
+          "from": 272,
+          "to": 289
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "genai",
+      "data": {
+        "prompt": "Write a birthday wish for my mom in 2 lines",
+        "reply": "Happy birthday, Amma! Your love is my superpower, today and always.",
+        "outputs": [
+          [
+            "FileText",
+            "Text"
+          ],
+          [
+            "Image",
+            "Images"
+          ],
+          [
+            "Music",
+            "Music"
+          ],
+          [
+            "Code",
+            "Code"
+          ],
+          [
+            "AudioLines",
+            "Voice"
+          ]
+        ],
+        "funfact": "This narration = AI voice, made locally"
+      },
+      "from": 2640,
+      "durationInFrames": 646,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_07.wav",
+      "cues": [
+        194,
+        218,
+        245,
+        271,
+        293,
+        455
+      ],
+      "captions": [
+        {
+          "text": "Then came generative AI.",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "Instead of only recognising things,",
+          "from": 65,
+          "to": 134
+        },
+        {
+          "text": "it creates brand new things.",
+          "from": 134,
+          "to": 189
+        },
+        {
+          "text": "Text.",
+          "from": 194,
+          "to": 213
+        },
+        {
+          "text": "Images.",
+          "from": 218,
+          "to": 240
+        },
+        {
+          "text": "Music.",
+          "from": 245,
+          "to": 266
+        },
+        {
+          "text": "Code.",
+          "from": 271,
+          "to": 289
+        },
+        {
+          "text": "Even voices.",
+          "from": 293,
+          "to": 324
+        },
+        {
+          "text": "ChatGPT, Claude and Gemini are",
+          "from": 329,
+          "to": 404
+        },
+        {
+          "text": "all generative AI.",
+          "from": 404,
+          "to": 450
+        },
+        {
+          "text": "Fun fact,",
+          "from": 455,
+          "to": 474
+        },
+        {
+          "text": "the voice you are hearing",
+          "from": 474,
+          "to": 524
+        },
+        {
+          "text": "right now was generated by",
+          "from": 524,
+          "to": 577
+        },
+        {
+          "text": "AI, running on a laptop.",
+          "from": 577,
+          "to": 625
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "nested",
+      "data": {
+        "rings": [
+          [
+            "Artificial Intelligence",
+            "#8B5CF6"
+          ],
+          [
+            "Machine Learning",
+            "#3B82F6"
+          ],
+          [
+            "Deep Learning",
+            "#22D3EE"
+          ],
+          [
+            "Generative AI",
+            "#F59E0B"
+          ]
+        ],
+        "takeaway": "Every GenAI is AI. Not every AI is GenAI."
+      },
+      "from": 3286,
+      "durationInFrames": 464,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_08.wav",
+      "cues": [
+        60,
+        108,
+        168,
+        224,
+        322
+      ],
+      "captions": [
+        {
+          "text": "So here's the whole picture.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "AI is the big circle.",
+          "from": 60,
+          "to": 103
+        },
+        {
+          "text": "Machine learning sits inside it.",
+          "from": 108,
+          "to": 163
+        },
+        {
+          "text": "Deep learning sits inside that.",
+          "from": 168,
+          "to": 219
+        },
+        {
+          "text": "And generative AI is the",
+          "from": 224,
+          "to": 270
+        },
+        {
+          "text": "newest, innermost circle.",
+          "from": 270,
+          "to": 317
+        },
+        {
+          "text": "Every generative AI is AI.",
+          "from": 322,
+          "to": 378
+        },
+        {
+          "text": "But not every AI is generative.",
+          "from": 382,
+          "to": 443
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Face unlock on your phone is…",
+        "options": [
+          "Generative AI",
+          "Deep Learning",
+          "Rule-based code"
+        ],
+        "answer": 1
+      },
+      "from": 3750,
+      "durationInFrames": 531,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_09.wav",
+      "cues": [
+        136,
+        265
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "Your phone's face unlock.",
+          "from": 44,
+          "to": 91
+        },
+        {
+          "text": "Which one is it?",
+          "from": 96,
+          "to": 126
+        },
+        {
+          "text": "Pause and think.",
+          "from": 136,
+          "to": 164
+        },
+        {
+          "text": "It's deep learning!",
+          "from": 265,
+          "to": 296
+        },
+        {
+          "text": "It recognises your face.",
+          "from": 306,
+          "to": 354
+        },
+        {
+          "text": "It doesn't create a new",
+          "from": 359,
+          "to": 400
+        },
+        {
+          "text": "one, so it's not generative.",
+          "from": 400,
+          "to": 450
+        },
+        {
+          "text": "Comment how many you got right!",
+          "from": 455,
+          "to": 505
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "AI",
+            "the big idea: machines acting smart"
+          ],
+          [
+            "ML",
+            "learns patterns from data"
+          ],
+          [
+            "DL",
+            "neural networks with many layers"
+          ],
+          [
+            "GenAI",
+            "creates new text, images, voice"
+          ]
+        ],
+        "next": "EP 02 · What is an LLM?"
+      },
+      "from": 4281,
+      "durationInFrames": 574,
+      "voiceFrom": 10,
+      "audio": "lessons/ep01/voice_10.wav",
+      "cues": [
+        40,
+        88,
+        149,
+        218,
+        290
+      ],
+      "captions": [
+        {
+          "text": "Quick recap.",
+          "from": 10,
+          "to": 36
+        },
+        {
+          "text": "AI is the big idea.",
+          "from": 40,
+          "to": 83
+        },
+        {
+          "text": "Machine learning learns from data.",
+          "from": 88,
+          "to": 144
+        },
+        {
+          "text": "Deep learning uses neural networks.",
+          "from": 149,
+          "to": 213
+        },
+        {
+          "text": "Generative AI creates new content.",
+          "from": 218,
+          "to": 285
+        },
+        {
+          "text": "Next episode,",
+          "from": 290,
+          "to": 320
+        },
+        {
+          "text": "what is a large language",
+          "from": 320,
+          "to": 374
+        },
+        {
+          "text": "model, and how does ChatGPT",
+          "from": 374,
+          "to": 434
+        },
+        {
+          "text": "actually think?",
+          "from": 434,
+          "to": 468
+        },
+        {
+          "text": "Follow AI Maastaaru so you",
+          "from": 478,
+          "to": 524
+        },
+        {
+          "text": "don't miss it!",
+          "from": 524,
+          "to": 549
+        }
+      ],
+      "image": null
+    }
+  ]
+}

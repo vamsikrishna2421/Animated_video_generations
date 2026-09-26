@@ -1,0 +1,908 @@
+{
+  "id": "ep02",
+  "episode": 2,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "What is an LLM",
+  "fps": 30,
+  "totalFrames": 4983,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep02/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 02",
+        "title": [
+          "What is",
+          "an LLM?"
+        ],
+        "subtitle": "How ChatGPT actually thinks",
+        "buzzwords": [
+          "ChatGPT",
+          "Claude",
+          "Gemini",
+          "Llama",
+          "Qwen",
+          "Parameters",
+          "Tokens",
+          "Transformer"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 380,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_01.wav",
+      "cues": [
+        100,
+        261
+      ],
+      "captions": [
+        {
+          "text": "ChatGPT.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "Claude.",
+          "from": 51,
+          "to": 69
+        },
+        {
+          "text": "Gemini.",
+          "from": 74,
+          "to": 96
+        },
+        {
+          "text": "They write essays,",
+          "from": 100,
+          "to": 136
+        },
+        {
+          "text": "code and poems in seconds.",
+          "from": 136,
+          "to": 186
+        },
+        {
+          "text": "But what is actually happening inside?",
+          "from": 191,
+          "to": 251
+        },
+        {
+          "text": "Today, large language models,",
+          "from": 261,
+          "to": 322
+        },
+        {
+          "text": "explained simply.",
+          "from": 322,
+          "to": 359
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Large Language Model",
+        "short": "LLM",
+        "definition": "An AI trained on huge amounts of text to predict the next word.",
+        "chips": [
+          [
+            "BookOpen",
+            "Reads billions of pages"
+          ],
+          [
+            "Brain",
+            "Learns patterns"
+          ],
+          [
+            "MessageSquare",
+            "Writes like a human"
+          ]
+        ]
+      },
+      "from": 380,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_02.wav",
+      "cues": [
+        99,
+        279,
+        338,
+        400
+      ],
+      "captions": [
+        {
+          "text": "L L M stands for",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "large language model.",
+          "from": 47,
+          "to": 94
+        },
+        {
+          "text": "It's an AI trained on",
+          "from": 99,
+          "to": 138
+        },
+        {
+          "text": "a huge amount of text,",
+          "from": 138,
+          "to": 179
+        },
+        {
+          "text": "to do one thing really well.",
+          "from": 179,
+          "to": 231
+        },
+        {
+          "text": "Predict the next word.",
+          "from": 236,
+          "to": 274
+        },
+        {
+          "text": "It reads billions of pages.",
+          "from": 279,
+          "to": 333
+        },
+        {
+          "text": "It learns the patterns of language.",
+          "from": 338,
+          "to": 395
+        },
+        {
+          "text": "And then it writes like",
+          "from": 400,
+          "to": 437
+        },
+        {
+          "text": "a human.",
+          "from": 437,
+          "to": 450
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "predict",
+      "data": {
+        "prompt": "The cat sat on the",
+        "options": [
+          [
+            "mat",
+            62
+          ],
+          [
+            "floor",
+            21
+          ],
+          [
+            "sofa",
+            9
+          ],
+          [
+            "moon",
+            1
+          ]
+        ],
+        "continuation": [
+          "and",
+          "purred",
+          "happily",
+          "in",
+          "the",
+          "sun."
+        ]
+      },
+      "from": 851,
+      "durationInFrames": 605,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_03.wav",
+      "cues": [
+        116,
+        359,
+        426
+      ],
+      "captions": [
+        {
+          "text": "Let's play its game.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "The cat sat on the...",
+          "from": 52,
+          "to": 86
+        },
+        {
+          "text": "what?",
+          "from": 91,
+          "to": 107
+        },
+        {
+          "text": "The model scores every possible",
+          "from": 116,
+          "to": 176
+        },
+        {
+          "text": "next word.",
+          "from": 176,
+          "to": 196
+        },
+        {
+          "text": "Mat is most likely.",
+          "from": 201,
+          "to": 239
+        },
+        {
+          "text": "Floor, sofa,",
+          "from": 244,
+          "to": 268
+        },
+        {
+          "text": "less likely.",
+          "from": 268,
+          "to": 292
+        },
+        {
+          "text": "Moon?",
+          "from": 297,
+          "to": 315
+        },
+        {
+          "text": "Almost zero.",
+          "from": 324,
+          "to": 354
+        },
+        {
+          "text": "It picks one,",
+          "from": 359,
+          "to": 383
+        },
+        {
+          "text": "adds it to the sentence,",
+          "from": 383,
+          "to": 425
+        },
+        {
+          "text": "and repeats.",
+          "from": 425,
+          "to": 446
+        },
+        {
+          "text": "Word by word,",
+          "from": 451,
+          "to": 476
+        },
+        {
+          "text": "again and again.",
+          "from": 476,
+          "to": 506
+        },
+        {
+          "text": "That's how a whole answer",
+          "from": 511,
+          "to": 549
+        },
+        {
+          "text": "appears on your screen.",
+          "from": 549,
+          "to": 584
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Same game, different scale",
+        "left": {
+          "icon": "Smartphone",
+          "title": "Phone autocomplete",
+          "stat": "Your chats",
+          "label": "suggests 1 word"
+        },
+        "right": {
+          "icon": "Globe",
+          "title": "LLM",
+          "stat": "Trillions of words",
+          "label": "writes whole answers"
+        }
+      },
+      "from": 1456,
+      "durationInFrames": 491,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_04.wav",
+      "cues": [
+        81,
+        215
+      ],
+      "captions": [
+        {
+          "text": "Wait, isn't that just autocomplete?",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "Your phone keyboard does this",
+          "from": 81,
+          "to": 133
+        },
+        {
+          "text": "too, but it only learned",
+          "from": 133,
+          "to": 176
+        },
+        {
+          "text": "from your messages.",
+          "from": 176,
+          "to": 210
+        },
+        {
+          "text": "An L L M has",
+          "from": 215,
+          "to": 238
+        },
+        {
+          "text": "read a big chunk of",
+          "from": 238,
+          "to": 273
+        },
+        {
+          "text": "the internet.",
+          "from": 273,
+          "to": 298
+        },
+        {
+          "text": "Books, Wikipedia,",
+          "from": 303,
+          "to": 338
+        },
+        {
+          "text": "code, forums.",
+          "from": 338,
+          "to": 365
+        },
+        {
+          "text": "Trillions of words.",
+          "from": 370,
+          "to": 407
+        },
+        {
+          "text": "That scale is what makes",
+          "from": 412,
+          "to": 449
+        },
+        {
+          "text": "it feel smart.",
+          "from": 449,
+          "to": 470
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How an LLM is made",
+        "steps": [
+          [
+            "BookOpen",
+            "Pre-training",
+            "Reads trillions of words. Learns language + facts"
+          ],
+          [
+            "GraduationCap",
+            "Fine-tuning",
+            "Studies good Q&A examples. Learns to follow instructions"
+          ],
+          [
+            "ThumbsUp",
+            "Human feedback",
+            "People rate answers. Gets more helpful + safe"
+          ]
+        ]
+      },
+      "from": 1947,
+      "durationInFrames": 613,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_05.wav",
+      "cues": [
+        107,
+        240,
+        443
+      ],
+      "captions": [
+        {
+          "text": "So how is an L",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "L M made?",
+          "from": 44,
+          "to": 66
+        },
+        {
+          "text": "Three steps.",
+          "from": 76,
+          "to": 102
+        },
+        {
+          "text": "Pre-training.",
+          "from": 107,
+          "to": 133
+        },
+        {
+          "text": "It reads trillions of words",
+          "from": 138,
+          "to": 184
+        },
+        {
+          "text": "and learns language and facts.",
+          "from": 184,
+          "to": 236
+        },
+        {
+          "text": "Fine-tuning.",
+          "from": 240,
+          "to": 268
+        },
+        {
+          "text": "It studies examples of good",
+          "from": 273,
+          "to": 325
+        },
+        {
+          "text": "questions and answers,",
+          "from": 325,
+          "to": 369
+        },
+        {
+          "text": "so it learns to follow instructions.",
+          "from": 369,
+          "to": 438
+        },
+        {
+          "text": "Human feedback.",
+          "from": 443,
+          "to": 474
+        },
+        {
+          "text": "People rate its answers,",
+          "from": 479,
+          "to": 521
+        },
+        {
+          "text": "and it learns to be",
+          "from": 521,
+          "to": 554
+        },
+        {
+          "text": "more helpful and safe.",
+          "from": 554,
+          "to": 593
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Jargon buster",
+        "terms": [
+          [
+            "SlidersHorizontal",
+            "Parameters",
+            "The model's internal knobs. Billions of them."
+          ],
+          [
+            "Cpu",
+            "Training",
+            "The learning phase. Months, thousands of chips."
+          ],
+          [
+            "Zap",
+            "Inference",
+            "Using the model. Every chat you send."
+          ],
+          [
+            "Keyboard",
+            "Prompt",
+            "What you type in."
+          ]
+        ]
+      },
+      "from": 2560,
+      "durationInFrames": 555,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_06.wav",
+      "cues": [
+        67,
+        239,
+        358,
+        460
+      ],
+      "captions": [
+        {
+          "text": "Four words you'll hear everywhere.",
+          "from": 10,
+          "to": 63
+        },
+        {
+          "text": "Parameters.",
+          "from": 67,
+          "to": 93
+        },
+        {
+          "text": "The internal knobs the model",
+          "from": 98,
+          "to": 146
+        },
+        {
+          "text": "tunes while learning.",
+          "from": 146,
+          "to": 183
+        },
+        {
+          "text": "Big models have billions.",
+          "from": 187,
+          "to": 234
+        },
+        {
+          "text": "Training.",
+          "from": 239,
+          "to": 259
+        },
+        {
+          "text": "The learning phase.",
+          "from": 264,
+          "to": 297
+        },
+        {
+          "text": "Months on thousands of chips.",
+          "from": 302,
+          "to": 354
+        },
+        {
+          "text": "Inference.",
+          "from": 358,
+          "to": 381
+        },
+        {
+          "text": "Using the trained model,",
+          "from": 386,
+          "to": 424
+        },
+        {
+          "text": "like when you chat.",
+          "from": 424,
+          "to": 455
+        },
+        {
+          "text": "And the prompt.",
+          "from": 460,
+          "to": 485
+        },
+        {
+          "text": "Simply, what you type in.",
+          "from": 490,
+          "to": 534
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "LLMs at work",
+        "items": [
+          [
+            "Mail",
+            "Writing help",
+            "Emails, reports, summaries"
+          ],
+          [
+            "Headset",
+            "Support bots",
+            "Banks, airlines, telecom"
+          ],
+          [
+            "Code",
+            "Coding assistants",
+            "Write, explain, fix code"
+          ]
+        ]
+      },
+      "from": 3115,
+      "durationInFrames": 340,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_07.wav",
+      "cues": [
+        75,
+        154,
+        245
+      ],
+      "captions": [
+        {
+          "text": "Where are L L Ms",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "used today?",
+          "from": 43,
+          "to": 65
+        },
+        {
+          "text": "Drafting emails and reports in seconds.",
+          "from": 75,
+          "to": 149
+        },
+        {
+          "text": "Customer support chatbots for banks",
+          "from": 154,
+          "to": 216
+        },
+        {
+          "text": "and airlines.",
+          "from": 216,
+          "to": 240
+        },
+        {
+          "text": "And helping programmers write and",
+          "from": 245,
+          "to": 303
+        },
+        {
+          "text": "fix code.",
+          "from": 303,
+          "to": 319
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "LLMs know everything and are always right.",
+        "fact": "They predict likely words, so they can be confidently wrong. That's a hallucination.",
+        "tip": "Double-check important facts"
+      },
+      "from": 3455,
+      "durationInFrames": 451,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_08.wav",
+      "cues": [
+        49,
+        136
+      ],
+      "captions": [
+        {
+          "text": "Now, a big myth.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "L L Ms know everything",
+          "from": 49,
+          "to": 91
+        },
+        {
+          "text": "and are always right.",
+          "from": 91,
+          "to": 131
+        },
+        {
+          "text": "Not true!",
+          "from": 136,
+          "to": 161
+        },
+        {
+          "text": "They predict likely words.",
+          "from": 170,
+          "to": 218
+        },
+        {
+          "text": "So sometimes they sound confident,",
+          "from": 223,
+          "to": 278
+        },
+        {
+          "text": "but they are wrong.",
+          "from": 278,
+          "to": 309
+        },
+        {
+          "text": "That's called a hallucination.",
+          "from": 314,
+          "to": 362
+        },
+        {
+          "text": "Always double check important facts.",
+          "from": 367,
+          "to": 430
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "An LLM writes its answer by…",
+        "options": [
+          "Searching Google each time",
+          "Predicting the next word",
+          "Copying from a database"
+        ],
+        "answer": 1
+      },
+      "from": 3906,
+      "durationInFrames": 453,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_09.wav",
+      "cues": [
+        115,
+        244
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "How does an L L",
+          "from": 44,
+          "to": 71
+        },
+        {
+          "text": "M write its answer?",
+          "from": 71,
+          "to": 105
+        },
+        {
+          "text": "Pause and think.",
+          "from": 115,
+          "to": 143
+        },
+        {
+          "text": "It predicts the next word,",
+          "from": 244,
+          "to": 289
+        },
+        {
+          "text": "again and again!",
+          "from": 289,
+          "to": 317
+        },
+        {
+          "text": "It's not searching Google every time.",
+          "from": 327,
+          "to": 389
+        },
+        {
+          "text": "Comment your answer!",
+          "from": 394,
+          "to": 428
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "LLM",
+            "trained on huge amounts of text"
+          ],
+          [
+            "How",
+            "predicts the next word, repeatedly"
+          ],
+          [
+            "Made by",
+            "pre-training, fine-tuning, feedback"
+          ],
+          [
+            "Careful",
+            "can be confidently wrong"
+          ]
+        ],
+        "next": "EP 03 · Tokens & Context"
+      },
+      "from": 4359,
+      "durationInFrames": 624,
+      "voiceFrom": 10,
+      "audio": "lessons/ep02/voice_10.wav",
+      "cues": [
+        35,
+        135,
+        200,
+        310,
+        394
+      ],
+      "captions": [
+        {
+          "text": "Recap.",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "An L L M is",
+          "from": 35,
+          "to": 61
+        },
+        {
+          "text": "trained on huge amounts of text.",
+          "from": 61,
+          "to": 130
+        },
+        {
+          "text": "It works by predicting the",
+          "from": 135,
+          "to": 178
+        },
+        {
+          "text": "next word.",
+          "from": 178,
+          "to": 196
+        },
+        {
+          "text": "It's built with pre-training,",
+          "from": 200,
+          "to": 251
+        },
+        {
+          "text": "fine-tuning and human feedback.",
+          "from": 251,
+          "to": 306
+        },
+        {
+          "text": "And it can be confidently",
+          "from": 310,
+          "to": 357
+        },
+        {
+          "text": "wrong, so verify.",
+          "from": 357,
+          "to": 390
+        },
+        {
+          "text": "Next episode,",
+          "from": 394,
+          "to": 422
+        },
+        {
+          "text": "tokens and the context window.",
+          "from": 422,
+          "to": 483
+        },
+        {
+          "text": "Why AI forgets things in",
+          "from": 488,
+          "to": 530
+        },
+        {
+          "text": "long chats.",
+          "from": 530,
+          "to": 550
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 555,
+          "to": 599
+        }
+      ],
+      "image": null
+    }
+  ]
+}

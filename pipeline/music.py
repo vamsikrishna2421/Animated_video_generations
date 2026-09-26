@@ -160,14 +160,40 @@ def sfx_success():
     return out / np.max(np.abs(out)) * 0.7
 
 
+def sfx_whoosh():
+    n = int(0.45 * SR)
+    t = np.arange(n) / SR
+    env = np.sin(np.pi * t / t[-1]) ** 2
+    x = rng.standard_normal(n)
+    lo = lowpass(x, 900)
+    hi = highpass(x, 2500)
+    mix = np.where(t < t[-1] / 2, lo, 0.6 * lo + 0.4 * hi)
+    return mix * env * 0.5
+
+
+def sfx_tick():
+    n = int(0.05 * SR)
+    t = np.arange(n) / SR
+    return np.sin(2 * np.pi * 1800 * t) * np.exp(-t * 120) * 0.5
+
+
 def main():
-    timeline = json.loads(TIMELINE.read_text())
+    import argparse
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--timeline", type=Path, default=TIMELINE)
+    ap.add_argument("--out", type=Path, default=OUT / "music.wav")
+    args = ap.parse_args()
+    timeline = json.loads(args.timeline.read_text())
     seconds = timeline["totalFrames"] / timeline["fps"] + 0.5
+    args.out.parent.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    sf.write(OUT / "music.wav", build_music(seconds, timeline["music"]["bpm"]), SR)
+    sf.write(args.out, build_music(seconds, timeline["music"]["bpm"]), SR)
     sf.write(OUT / "sfx_pop.wav", sfx_pop(), SR)
     sf.write(OUT / "sfx_success.wav", sfx_success(), SR)
-    print(f"music: {seconds:.2f}s @ {timeline['music']['bpm']} bpm -> {OUT.relative_to(ROOT)}")
+    sf.write(OUT / "sfx_whoosh.wav", sfx_whoosh(), SR)
+    sf.write(OUT / "sfx_tick.wav", sfx_tick(), SR)
+    print(f"music: {seconds:.2f}s @ {timeline['music']['bpm']} bpm -> {args.out}")
 
 
 if __name__ == "__main__":

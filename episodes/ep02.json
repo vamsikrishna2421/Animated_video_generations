@@ -1,0 +1,121 @@
+{
+  "id": "ep02",
+  "episode": 2,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "What is an LLM",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lang": "en-us",
+  "fps": 30,
+  "music": { "bpm": 90, "volume": 0.16, "duckedVolume": 0.07 },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "ChatGPT. Claude. Gemini. [1] They write essays, code and poems in seconds. But what is actually happening inside? [2] Today, large language models, explained simply.",
+      "data": {
+        "kicker": "EPISODE 02",
+        "title": ["What is", "an LLM?"],
+        "subtitle": "How ChatGPT actually thinks",
+        "buzzwords": ["ChatGPT", "Claude", "Gemini", "Llama", "Qwen", "Parameters", "Tokens", "Transformer"]
+      },
+      "image": "Friendly glowing robot reading a giant stack of books in a futuristic library, flat vector illustration, navy background, violet and amber accents"
+    },
+    {
+      "type": "definition",
+      "text": "L L M stands for large language model. [1] It's an A I trained on a huge amount of text, to do one thing really well. Predict the next word. [2] It reads billions of pages. [3] It learns the patterns of language. [4] And then it writes like a human.",
+      "data": {
+        "term": "Large Language Model",
+        "short": "LLM",
+        "definition": "An AI trained on huge amounts of text to predict the next word.",
+        "chips": [["BookOpen", "Reads billions of pages"], ["Brain", "Learns patterns"], ["MessageSquare", "Writes like a human"]]
+      }
+    },
+    {
+      "type": "predict",
+      "text": "Let's play its game. The cat sat on the... what? [1] The model scores every possible next word. Mat is most likely. Floor, sofa, less likely. Moon? Almost zero. [2] It picks one, adds it to the sentence, [3] and repeats. Word by word, again and again. That's how a whole answer appears on your screen.",
+      "data": {
+        "prompt": "The cat sat on the",
+        "options": [["mat", 62], ["floor", 21], ["sofa", 9], ["moon", 1]],
+        "continuation": ["and", "purred", "happily", "in", "the", "sun."]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Wait, isn't that just autocomplete? [1] Your phone keyboard does this too, but it only learned from your messages. [2] An L L M has read a big chunk of the internet. Books, Wikipedia, code, forums. Trillions of words. That scale is what makes it feel smart.",
+      "data": {
+        "heading": "Same game, different scale",
+        "left": { "icon": "Smartphone", "title": "Phone autocomplete", "stat": "Your chats", "label": "suggests 1 word" },
+        "right": { "icon": "Globe", "title": "LLM", "stat": "Trillions of words", "label": "writes whole answers" }
+      }
+    },
+    {
+      "type": "steps",
+      "text": "So how is an L L M made? Three steps. [1] Pre-training. It reads trillions of words and learns language and facts. [2] Fine-tuning. It studies examples of good questions and answers, so it learns to follow instructions. [3] Human feedback. People rate its answers, and it learns to be more helpful and safe.",
+      "data": {
+        "heading": "How an LLM is made",
+        "steps": [
+          ["BookOpen", "Pre-training", "Reads trillions of words. Learns language + facts"],
+          ["GraduationCap", "Fine-tuning", "Studies good Q&A examples. Learns to follow instructions"],
+          ["ThumbsUp", "Human feedback", "People rate answers. Gets more helpful + safe"]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Four words you'll hear everywhere. [1] Parameters. The internal knobs the model tunes while learning. Big models have billions. [2] Training. The learning phase. Months on thousands of chips. [3] Inference. Using the trained model, like when you chat. [4] And the prompt. Simply, what you type in.",
+      "data": {
+        "heading": "Jargon buster",
+        "terms": [
+          ["SlidersHorizontal", "Parameters", "The model's internal knobs. Billions of them."],
+          ["Cpu", "Training", "The learning phase. Months, thousands of chips."],
+          ["Zap", "Inference", "Using the model. Every chat you send."],
+          ["Keyboard", "Prompt", "What you type in."]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Where are L L Ms used today? [1] Drafting emails and reports in seconds. [2] Customer support chatbots for banks and airlines. [3] And helping programmers write and fix code.",
+      "data": {
+        "heading": "LLMs at work",
+        "items": [
+          ["Mail", "Writing help", "Emails, reports, summaries"],
+          ["Headset", "Support bots", "Banks, airlines, telecom"],
+          ["Code", "Coding assistants", "Write, explain, fix code"]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Now, a big myth. [1] L L Ms know everything and are always right. [2] Not true! They predict likely words. So sometimes they sound confident, but they are wrong. That's called a hallucination. Always double check important facts.",
+      "data": {
+        "myth": "LLMs know everything and are always right.",
+        "fact": "They predict likely words, so they can be confidently wrong. That's a hallucination.",
+        "tip": "Double-check important facts"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! How does an L L M write its answer? [1] Pause and think. <pause 3.2> [2] It predicts the next word, again and again! It's not searching Google every time. Comment your answer!",
+      "data": {
+        "question": "An LLM writes its answer by…",
+        "options": ["Searching Google each time", "Predicting the next word", "Copying from a database"],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Recap. [1] An L L M is trained on huge amounts of text. [2] It works by predicting the next word. [3] It's built with pre-training, fine-tuning and human feedback. [4] And it can be confidently wrong, so verify. [5] Next episode, tokens and the context window. Why A I forgets things in long chats. Follow A I Maastaaru!",
+      "data": {
+        "points": [
+          ["LLM", "trained on huge amounts of text"],
+          ["How", "predicts the next word, repeatedly"],
+          ["Made by", "pre-training, fine-tuning, feedback"],
+          ["Careful", "can be confidently wrong"]
+        ],
+        "next": "EP 03 · Tokens & Context"
+      }
+    }
+  ]
+}
