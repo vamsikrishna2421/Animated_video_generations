@@ -24,10 +24,36 @@ MARK = re.compile(r"\[(\d+)\]")
 PAUSE = re.compile(r"<pause ([\d.]+)>")
 LEAD_S, TAIL_S, GAP_S, LONG_GAP_S = 0.35, 0.55, 0.16, 0.32
 
+# Pronunciation lexicon: word -> Kokoro phonemes (IPA). Episode JSON can add/override entries
+# via a "pronunciations" object. Matching is case-sensitive on whole words.
+PRON = {
+    "Maastaaru": "mˈɑːsʈɑːɾu",   # Telugu మాస్టారు: retroflex ʈ, tapped ɾ, short final u
+    "Namaste": "nəmˈʌsteː",
+}
+
 
 def display(text: str) -> str:
     """Spoken spellings -> on-screen spellings."""
     return re.sub(r"\bA I\b", "AI", text)
+
+
+def to_phonemes(kokoro, text: str, lang: str, lex: dict) -> str:
+    """Phonemize text with espeak, but splice in lexicon phonemes for known words."""
+    if not lex:
+        return kokoro.tokenizer.phonemize(text, lang)
+    pattern = re.compile(r"\b(" + "|".join(map(re.escape, sorted(lex, key=len, reverse=True))) + r")\b")
+    out, pos = [], 0
+    for m in pattern.finditer(text):
+        before = text[pos: m.start()]
+        if before.strip():
+            out.append(kokoro.tokenizer.phonemize(before, lang).strip())
+        out.append(lex[m.group(1)])
+        pos = m.end()
+    rest = text[pos:]
+    if rest.strip():
+        out.append(kokoro.tokenizer.phonemize(rest, lang).strip())
+    # Punctuation belongs to the preceding word, with no space before it.
+    return re.sub(r"\s+([!,.?;:])", r"\1", " ".join(out))
 
 
 def sentences(text: str):
@@ -67,6 +93,7 @@ def main(spec_path: Path) -> None:
     audio_dir.mkdir(parents=True, exist_ok=True)
     tl_dir.mkdir(parents=True, exist_ok=True)
     kokoro = Kokoro(str(ROOT / "models" / "kokoro-v1.0.onnx"), str(ROOT / "models" / "voices-v1.0.bin"))
+    lex = {**PRON, **spec.get("pronunciations", {})}
 
     scenes, cursor = [], 0
     for si, scene in enumerate(spec["scenes"]):
@@ -82,7 +109,8 @@ def main(spec_path: Path) -> None:
                 continue
             clean = MARK.sub("", sent)
             clean = re.sub(r"\s+", " ", clean).strip()
-            samples, sr = kokoro.create(clean, voice=voice, speed=speed, lang=spec["lang"])
+            phon = to_phonemes(kokoro, clean, spec["lang"], lex)
+            samples, sr = kokoro.create(phon, voice=voice, speed=speed, lang=spec["lang"], is_phonemes=True)
             idx = np.where(np.abs(samples) > 0.008)[0]
             samples = samples[max(idx[0] - int(0.03 * sr), 0): idx[-1] + int(0.06 * sr)]
             samples = samples * (10 ** (-16 / 20) / (np.sqrt(np.mean(samples**2)) + 1e-9))
