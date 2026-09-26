@@ -10,7 +10,7 @@ export const Host: React.FC<SceneProps & { talking?: boolean }> = ({ data, cue, 
   return (
     <>
       <div style={{ position: "absolute", top: 300, left: 0, right: 0, display: "flex", justifyContent: "center", transform: `scale(${pop})` }}>
-        <Mascot size={500} talking={talking} />
+        <Mascot size={500} talking={talking} variant={data.host} />
       </div>
       <div style={{ position: "absolute", top: 850, left: 0, right: 0, textAlign: "center" }}>
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 104, lineHeight: 1, ...gradText(L.amber, L.rose), opacity: interpolate(f, [8, 20], [0, 1], clamp) }}>{data.name}</div>

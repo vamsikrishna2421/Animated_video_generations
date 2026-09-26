@@ -169,6 +169,7 @@ def main(spec_path: Path) -> None:
         "series": spec["series"],
         "handle": spec["handle"],
         "title": spec["title"],
+        "host": spec.get("host", "male"),
         "fps": fps,
         "totalFrames": cursor,
         "music": {**spec["music"], "audio": f"lessons/{ep}/music.wav"},

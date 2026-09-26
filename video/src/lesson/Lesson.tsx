@@ -65,6 +65,7 @@ export type LessonTimeline = {
   series: string;
   handle: string;
   title: string;
+  host?: "male" | "female";
   fps: number;
   totalFrames: number;
   music: { bpm: number; volume: number; duckedVolume: number; audio: string };
@@ -110,7 +111,7 @@ const Header: React.FC<{ tl: LessonTimeline }> = ({ tl }) => {
   );
 };
 
-const SceneWrap: React.FC<{ s: SceneData; handle: string }> = ({ s, handle }) => {
+const SceneWrap: React.FC<{ s: SceneData; handle: string; host?: "male" | "female" }> = ({ s, handle, host }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const Comp = SCENES[s.type];
@@ -120,7 +121,7 @@ const SceneWrap: React.FC<{ s: SceneData; handle: string }> = ({ s, handle }) =>
   const cue = (i: number) => s.cues[i] ?? Math.round(s.voiceFrom + ((i + 1) * (s.durationInFrames - s.voiceFrom)) / (n + 2));
   return (
     <AbsoluteFill style={{ opacity: Math.min(inS, out), transform: `translateY(${(1 - inS) * 60 - (1 - out) * 40}px)` }}>
-      {Comp ? <Comp data={{ ...s.data, handle }} cue={cue} duration={s.durationInFrames} image={s.image} /> : null}
+      {Comp ? <Comp data={{ ...s.data, handle, host }} cue={cue} duration={s.durationInFrames} image={s.image} /> : null}
     </AbsoluteFill>
   );
 };
@@ -145,7 +146,7 @@ export const Lesson: React.FC<LessonTimeline> = (tl) => {
       <Audio src={staticFile(tl.music.audio)} volume={musicVolume} />
       {tl.scenes.map((s, i) => (
         <Sequence key={i} from={s.from} durationInFrames={s.durationInFrames} name={`${i + 1}-${s.type}`}>
-          <SceneWrap s={s} handle={tl.handle} />
+          <SceneWrap s={s} handle={tl.handle} host={tl.host} />
           <Captions captions={s.captions} />
           <Sequence from={s.voiceFrom} layout="none">
             <Audio src={staticFile(s.audio)} />
@@ -158,7 +159,7 @@ export const Lesson: React.FC<LessonTimeline> = (tl) => {
         </Sequence>
       ))}
       <div style={{ position: "absolute", left: 40, top: 1265, opacity: scene?.type === "host" ? 0 : 1 }}>
-        <Mascot size={195} talking={talking} />
+        <Mascot size={195} talking={talking} variant={tl.host} />
       </div>
     </AbsoluteFill>
   );
