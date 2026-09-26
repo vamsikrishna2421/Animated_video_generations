@@ -1,0 +1,75 @@
+{
+  "fps": 30,
+  "totalFrames": 1548,
+  "music": {
+    "bpm": 96,
+    "volume": 0.35,
+    "duckedVolume": 0.13,
+    "audio": "audio/music.wav"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Tax season again. Salary slips, Form 16, bank statements, rent receipts... and a deadline that won't wait.",
+      "from": 0,
+      "durationInFrames": 247,
+      "voiceFrom": 10,
+      "voiceFrames": 216,
+      "audio": "audio/voice_hook.wav"
+    },
+    {
+      "id": "intro",
+      "caption": "Meet Muse. Your personal tax assistant, with you at every step.",
+      "from": 247,
+      "durationInFrames": 179,
+      "voiceFrom": 10,
+      "voiceFrames": 148,
+      "audio": "audio/voice_intro.wav"
+    },
+    {
+      "id": "docs",
+      "caption": "First, your personal checklist. Snap or upload, and Muse sorts everything.",
+      "from": 426,
+      "durationInFrames": 336,
+      "voiceFrom": 10,
+      "voiceFrames": 305,
+      "audio": "audio/voice_docs.wav"
+    },
+    {
+      "id": "plan",
+      "caption": "Next, we plan. Old vs new regime, every deduction, exactly how much you save.",
+      "from": 762,
+      "durationInFrames": 295,
+      "voiceFrom": 10,
+      "voiceFrames": 264,
+      "audio": "audio/voice_plan.wav"
+    },
+    {
+      "id": "refund",
+      "caption": "See your refund before you file. No guesswork. No surprises.",
+      "from": 1057,
+      "durationInFrames": 146,
+      "voiceFrom": 10,
+      "voiceFrames": 115,
+      "audio": "audio/voice_refund.wav"
+    },
+    {
+      "id": "file",
+      "caption": "One tap to file your ITR. Pre-filled, double-checked, e-verified. Done.",
+      "from": 1203,
+      "durationInFrames": 216,
+      "voiceFrom": 10,
+      "voiceFrames": 185,
+      "audio": "audio/voice_file.wav"
+    },
+    {
+      "id": "cta",
+      "caption": "Muse. From documents to done.",
+      "from": 1419,
+      "durationInFrames": 129,
+      "voiceFrom": 10,
+      "voiceFrames": 98,
+      "audio": "audio/voice_cta.wav"
+    }
+  ]
+}
