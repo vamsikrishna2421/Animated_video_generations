@@ -50,7 +50,7 @@ Already posted: `out/posted/`.
 | 043 | q04 | Quiz #4: Episodes 31–40 | ready |
 | 044 | ep41 | How to Choose the Right AI Model | ready |
 | 045 | ep42 | Bias in AI | ready |
-| 046 | ep43 | AI Safety and Alignment | rendering soon |
+| 046 | ep43 | AI Safety and Alignment | ready |
 | 047 | ep44 | AI and Your Privacy | rendering soon |
 | 048 | ep45 | Deepfakes and How to Spot Them | rendering soon |
 | 049 | ep46 | Copyright and AI | rendering soon |
