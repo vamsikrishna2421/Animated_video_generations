@@ -29,6 +29,9 @@ LEAD_S, TAIL_S, GAP_S, LONG_GAP_S = 0.35, 0.55, 0.16, 0.32
 PRON = {
     "Maastaaru": "mˈɑːsʈɑːɾu",   # Telugu మాస్టారు: retroflex ʈ, tapped ɾ, short final u
     "Namaste": "nəmˈʌsteː",
+    # Hindi voices voice a sentence-initial k ("quick quiz" -> "guig guiz"); aspirate these.
+    "Quick": "kʰwˈɪk", "quick": "kʰwˈɪk", "quiz": "kʰwˈɪz",
+    "Cost": "kʰˈɔːst", "cost": "kʰˈɔːst",
 }
 
 
@@ -54,6 +57,17 @@ def to_phonemes(kokoro, text: str, lang: str, lex: dict) -> str:
         out.append(kokoro.tokenizer.phonemize(rest, lang).strip())
     # Punctuation belongs to the preceding word, with no space before it.
     return re.sub(r"\s+([!,.?;:])", r"\1", " ".join(out))
+
+
+_VOWELS = "aeiouɑɐɔəɛɜɪʊʌæɚ"
+
+
+def indian_english(ph: str) -> str:
+    """Hindi-trained Kokoro voices produce unaspirated p/t, which English ears hear as b/d
+    ('pause' -> 'bose'). Aspirate word-initial p/t before a vowel, as Hindi does for फ/थ-style
+    aspirated stops. (k is left alone: aspirating it made 'code' sound like 'hold'.)"""
+    full = _VOWELS.replace("ə", "").replace("ɐ", "").replace("ɚ", "")  # not before schwa: 'today'
+    return re.sub(rf"(^|[\s,.!?])([pt])(?=[ˈˌ][{_VOWELS}]|[{full}]|[ɹlwj])", r"\1\2ʰ", ph)
 
 
 def sentences(text: str):
@@ -110,6 +124,8 @@ def main(spec_path: Path) -> None:
             clean = MARK.sub("", sent)
             clean = re.sub(r"\s+", " ", clean).strip()
             phon = to_phonemes(kokoro, clean, spec["lang"], lex)
+            if voice.startswith(("hf_", "hm_")):
+                phon = indian_english(phon)
             samples, sr = kokoro.create(phon, voice=voice, speed=speed, lang=spec["lang"], is_phonemes=True)
             idx = np.where(np.abs(samples) > 0.008)[0]
             samples = samples[max(idx[0] - int(0.03 * sr), 0): idx[-1] + int(0.06 * sr)]

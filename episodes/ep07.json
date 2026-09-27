@@ -138,7 +138,7 @@
     },
     {
       "type": "terms",
-      "text": "Why is RAG so popular? [1] Fresh. Update the documents, and answers update instantly, with no retraining. [2] Private. Your data stays in your own database. [3] Trustworthy. It can show the source for every answer. [4] And cheap, compared to training a model.",
+      "text": "Why is RAG so popular? [1] It stays fresh. Update the documents, and answers update instantly, with no retraining. [2] Private. Your data stays in your own database. [3] Trustworthy. It can show the source for every answer. [4] And cheap, compared to training a model.",
       "data": {
         "heading": "Why everyone uses RAG",
         "terms": [
@@ -167,7 +167,7 @@
     },
     {
       "type": "myth",
-      "text": "Myth! [1] With RAG, the AI never makes mistakes. [2] Not quite. If the search finds the wrong paragraph, the answer will be wrong. Good RAG needs good search, and clean documents.",
+      "text": "Here's a common myth. [1] With RAG, the AI never makes mistakes. [2] Not quite. If the search finds the wrong paragraph, the answer will be wrong. Good RAG needs good search, and clean documents.",
       "data": {
         "myth": "With RAG, the AI never makes mistakes.",
         "fact": "If retrieval finds the wrong text, the answer is wrong. Good RAG needs good search and clean docs.",

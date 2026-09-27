@@ -4,8 +4,9 @@
   "series": "AI FROM SCRATCH",
   "handle": "@ai_maastaaru",
   "title": "Embeddings and Vector Search",
+  "host": "female",
   "fps": 30,
-  "totalFrames": 3353,
+  "totalFrames": 3306,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -33,43 +34,43 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 280,
+      "durationInFrames": 274,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_01.wav",
       "cues": [
-        130,
-        214
+        121,
+        208
       ],
       "captions": [
         {
           "text": "How does Google Photos find",
           "from": 10,
-          "to": 60
+          "to": 56
         },
         {
           "text": "your dog,",
-          "from": 60,
-          "to": 78
+          "from": 56,
+          "to": 73
         },
         {
           "text": "when you just type dog?",
-          "from": 78,
-          "to": 121
+          "from": 73,
+          "to": 112
         },
         {
           "text": "How does Spotify know which",
-          "from": 130,
-          "to": 174
+          "from": 121,
+          "to": 166
         },
         {
           "text": "songs feel similar?",
-          "from": 174,
-          "to": 205
+          "from": 166,
+          "to": 199
         },
         {
           "text": "The answer is embeddings.",
-          "from": 214,
-          "to": 259
+          "from": 208,
+          "to": 254
         }
       ],
       "image": null
@@ -95,66 +96,66 @@
           ]
         ]
       },
-      "from": 280,
-      "durationInFrames": 451,
+      "from": 274,
+      "durationInFrames": 432,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_02.wav",
       "cues": [
-        130,
-        227,
-        276,
-        344
+        119,
+        208,
+        259,
+        328
       ],
       "captions": [
         {
           "text": "An embedding turns something,",
           "from": 10,
-          "to": 67
+          "to": 62
         },
         {
           "text": "a word,",
-          "from": 67,
-          "to": 82
+          "from": 62,
+          "to": 75
         },
         {
           "text": "a sentence,",
-          "from": 82,
-          "to": 104
+          "from": 75,
+          "to": 96
         },
         {
           "text": "or an image,",
-          "from": 104,
-          "to": 129
+          "from": 96,
+          "to": 118
         },
         {
           "text": "into a list of numbers",
-          "from": 129,
-          "to": 172
+          "from": 118,
+          "to": 157
         },
         {
           "text": "that captures its meaning.",
-          "from": 172,
-          "to": 222
+          "from": 157,
+          "to": 203
         },
         {
           "text": "Meaning becomes numbers.",
-          "from": 227,
-          "to": 271
+          "from": 208,
+          "to": 255
         },
         {
           "text": "Similar things end up close together.",
-          "from": 276,
-          "to": 339
+          "from": 259,
+          "to": 323
         },
         {
           "text": "It's like giving every idea",
-          "from": 344,
-          "to": 393
+          "from": 328,
+          "to": 375
         },
         {
           "text": "a location on a map.",
-          "from": 393,
-          "to": 430
+          "from": 375,
+          "to": 411
         }
       ],
       "image": null
@@ -230,60 +231,60 @@
         ],
         "note": "Search by meaning, not by spelling"
       },
-      "from": 731,
-      "durationInFrames": 407,
+      "from": 706,
+      "durationInFrames": 411,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_03.wav",
       "cues": [
-        57,
-        183,
-        227
+        59,
+        190,
+        236
       ],
       "captions": [
         {
           "text": "Picture a map of meaning.",
           "from": 10,
-          "to": 53
+          "to": 54
         },
         {
           "text": "Fruits cluster together.",
-          "from": 57,
-          "to": 97
+          "from": 59,
+          "to": 100
         },
         {
           "text": "Animals over here.",
-          "from": 102,
-          "to": 136
+          "from": 105,
+          "to": 141
         },
         {
           "text": "Vehicles over there.",
-          "from": 141,
-          "to": 178
+          "from": 146,
+          "to": 186
         },
         {
           "text": "Now, search for puppy.",
-          "from": 183,
-          "to": 222
+          "from": 190,
+          "to": 231
         },
         {
           "text": "Its nearest neighbours are dog",
-          "from": 227,
-          "to": 274
+          "from": 236,
+          "to": 284
         },
         {
           "text": "and cat.",
-          "from": 274,
-          "to": 287
+          "from": 284,
+          "to": 298
         },
         {
           "text": "Not because the letters match,",
-          "from": 292,
-          "to": 340
+          "from": 303,
+          "to": 347
         },
         {
           "text": "but because the meaning does.",
-          "from": 340,
-          "to": 386
+          "from": 347,
+          "to": 390
         }
       ],
       "image": null
@@ -320,67 +321,67 @@
           ]
         ]
       },
-      "from": 1138,
-      "durationInFrames": 505,
+      "from": 1117,
+      "durationInFrames": 468,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_04.wav",
       "cues": [
-        64,
-        160,
-        211,
-        274,
-        367
+        65,
+        152,
+        198,
+        256,
+        340
       ],
       "captions": [
         {
           "text": "This is called vector search.",
           "from": 10,
-          "to": 59
+          "to": 61
         },
         {
           "text": "First, every document is turned",
-          "from": 64,
-          "to": 123
+          "from": 65,
+          "to": 119
         },
         {
           "text": "into an embedding,",
-          "from": 123,
-          "to": 159
+          "from": 119,
+          "to": 151
         },
         {
           "text": "meaning a list of numbers,",
-          "from": 159,
-          "to": 209
+          "from": 151,
+          "to": 197
         },
         {
           "text": "and saved in a vector database.",
-          "from": 209,
-          "to": 269
+          "from": 197,
+          "to": 251
         },
         {
           "text": "When you search,",
-          "from": 274,
-          "to": 306
+          "from": 256,
+          "to": 285
         },
         {
           "text": "your query becomes numbers too,",
-          "from": 306,
-          "to": 366
+          "from": 285,
+          "to": 340
         },
         {
           "text": "and the database returns the",
-          "from": 366,
-          "to": 420
+          "from": 340,
+          "to": 389
         },
         {
           "text": "closest matches,",
-          "from": 420,
-          "to": 452
+          "from": 389,
+          "to": 418
         },
         {
           "text": "in milliseconds.",
-          "from": 452,
-          "to": 484
+          "from": 418,
+          "to": 447
         }
       ],
       "image": null
@@ -407,45 +408,45 @@
           ]
         ]
       },
-      "from": 1643,
-      "durationInFrames": 343,
+      "from": 1585,
+      "durationInFrames": 332,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_05.wav",
       "cues": [
-        56,
-        145,
-        241
+        58,
+        142,
+        233
       ],
       "captions": [
         {
           "text": "You've already used this.",
           "from": 10,
-          "to": 51
+          "to": 54
         },
         {
           "text": "Google Photos finding beach,",
-          "from": 56,
-          "to": 113
+          "from": 58,
+          "to": 111
         },
         {
           "text": "with no tags.",
-          "from": 113,
-          "to": 140
+          "from": 111,
+          "to": 137
         },
         {
           "text": "Spotify and YouTube suggesting similar songs.",
-          "from": 145,
-          "to": 236
+          "from": 142,
+          "to": 228
         },
         {
           "text": "And online stores showing,",
-          "from": 241,
-          "to": 289
+          "from": 233,
+          "to": 278
         },
         {
           "text": "you may also like.",
-          "from": 289,
-          "to": 322
+          "from": 278,
+          "to": 311
         }
       ],
       "image": null
@@ -457,49 +458,49 @@
         "fact": "Embedding search matches meaning: “cheap flights” also finds “budget airfare”.",
         "tip": "Embeddings power RAG, up next"
       },
-      "from": 1986,
-      "durationInFrames": 370,
+      "from": 1917,
+      "durationInFrames": 385,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_06.wav",
       "cues": [
-        37,
-        103
+        54,
+        125
       ],
       "captions": [
         {
-          "text": "Myth!",
+          "text": "Here's a common myth.",
           "from": 10,
-          "to": 27
+          "to": 50
         },
         {
           "text": "Search just matches exact keywords.",
-          "from": 37,
-          "to": 98
+          "from": 54,
+          "to": 120
         },
         {
           "text": "Not anymore.",
-          "from": 103,
-          "to": 129
+          "from": 125,
+          "to": 156
         },
         {
           "text": "Embedding search matches meaning.",
-          "from": 133,
-          "to": 184
+          "from": 161,
+          "to": 216
         },
         {
           "text": "Search cheap flights,",
-          "from": 188,
-          "to": 231
+          "from": 221,
+          "to": 259
         },
         {
           "text": "and it also finds budget",
-          "from": 231,
-          "to": 279
+          "from": 259,
+          "to": 302
         },
         {
           "text": "airfare, with zero words in common.",
-          "from": 279,
-          "to": 349
+          "from": 302,
+          "to": 365
         }
       ],
       "image": null
@@ -515,54 +516,54 @@
         ],
         "answer": 1
       },
-      "from": 2356,
-      "durationInFrames": 431,
+      "from": 2302,
+      "durationInFrames": 440,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_07.wav",
       "cues": [
-        149,
-        278
+        148,
+        283
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 35
+          "to": 39
         },
         {
           "text": "In embedding space,",
-          "from": 44,
-          "to": 80
+          "from": 48,
+          "to": 82
         },
         {
           "text": "which word sits closest to king?",
-          "from": 80,
+          "from": 82,
           "to": 139
         },
         {
           "text": "Pause and think.",
-          "from": 149,
-          "to": 177
+          "from": 148,
+          "to": 182
         },
         {
           "text": "Queen!",
-          "from": 278,
-          "to": 296
+          "from": 283,
+          "to": 302
         },
         {
           "text": "Similar meaning,",
-          "from": 306,
-          "to": 332
+          "from": 312,
+          "to": 338
         },
         {
           "text": "close together.",
-          "from": 332,
-          "to": 357
+          "from": 338,
+          "to": 362
         },
         {
           "text": "Comment queen if you got it!",
-          "from": 362,
-          "to": 405
+          "from": 367,
+          "to": 414
         }
       ],
       "image": null
@@ -590,77 +591,77 @@
         ],
         "next": "EP 07 · RAG"
       },
-      "from": 2787,
-      "durationInFrames": 566,
+      "from": 2742,
+      "durationInFrames": 564,
       "voiceFrom": 10,
       "audio": "lessons/ep06/voice_08.wav",
       "cues": [
-        35,
-        100,
-        161,
-        239,
-        336
+        37,
+        105,
+        167,
+        242,
+        330
       ],
       "captions": [
         {
           "text": "Recap.",
           "from": 10,
-          "to": 30
+          "to": 32
         },
         {
           "text": "Embeddings turn meaning into numbers.",
-          "from": 35,
-          "to": 95
+          "from": 37,
+          "to": 100
         },
         {
           "text": "Similar things sit close together.",
-          "from": 100,
-          "to": 156
+          "from": 105,
+          "to": 162
         },
         {
           "text": "Vector databases search them by meaning.",
-          "from": 161,
-          "to": 234
+          "from": 167,
+          "to": 237
         },
         {
           "text": "They power photo search,",
-          "from": 239,
-          "to": 283
+          "from": 242,
+          "to": 282
         },
         {
           "text": "recommendations, and more.",
-          "from": 283,
-          "to": 331
+          "from": 282,
+          "to": 325
         },
         {
           "text": "Next episode,",
-          "from": 336,
-          "to": 360
+          "from": 330,
+          "to": 355
         },
         {
           "text": "the big one.",
-          "from": 360,
-          "to": 383
+          "from": 355,
+          "to": 379
         },
         {
           "text": "RAG.",
-          "from": 388,
-          "to": 406
+          "from": 384,
+          "to": 401
         },
         {
           "text": "How to make AI answer",
-          "from": 411,
-          "to": 449
+          "from": 406,
+          "to": 444
         },
         {
           "text": "from your own documents.",
-          "from": 449,
-          "to": 492
+          "from": 444,
+          "to": 488
         },
         {
           "text": "Follow AI Maastaaru!",
-          "from": 497,
-          "to": 540
+          "from": 493,
+          "to": 539
         }
       ],
       "image": null

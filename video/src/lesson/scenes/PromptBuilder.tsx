@@ -10,6 +10,8 @@ export const PromptBuilder: React.FC<SceneProps> = ({ data, cue }) => {
   const weak = useSpring(cue(0), 13);
   const built = f >= cue(1);
   const good = useSpring(cue(n + 1), 12);
+  // Hooks must run unconditionally, so part springs are created up front.
+  const partSprings = parts.map((_, i) => useSpring(cue(i + 1), 12));
   return (
     <>
       <Heading kicker="PROMPT RECIPE">{data.heading}</Heading>
@@ -28,7 +30,7 @@ export const PromptBuilder: React.FC<SceneProps> = ({ data, cue }) => {
       {built && (
         <div style={{ position: "absolute", top: 470, left: 60, right: 60 }}>
           {parts.map(([label, text, color], i) => {
-            const s = useSpring(cue(i + 1), 12);
+            const s = partSprings[i];
             return (
               <div key={label} style={{ display: "flex", gap: 16, alignItems: "stretch", marginBottom: 12, opacity: s, transform: `translateX(${(1 - s) * (i % 2 ? 500 : -500)}px)` }}>
                 <div style={{ width: 170, flexShrink: 0, borderRadius: 16, background: color, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: L.font, fontWeight: 800, fontSize: 28, color: "#0A0F24" }}>{label}</div>

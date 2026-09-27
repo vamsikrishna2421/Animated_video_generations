@@ -11,6 +11,7 @@ export const Table: React.FC<SceneProps> = ({ data, cue }) => {
   const rows: string[][] = data.rows;
   const head = useSpring(cue(0) - 4, 14);
   const active = rows.reduce((a, _, i) => (f >= cue(i + 1) ? i : a), -1);
+  const noteS = useSpring(cue(rows.length + 1), 12);
   const cell = (v: string) => (v === "✓" ? L.green : v === "✗" ? L.rose : L.text);
   return (
     <>
@@ -36,7 +37,7 @@ export const Table: React.FC<SceneProps> = ({ data, cue }) => {
         })}
       </Panel>
       {data.note && (
-        <div style={{ position: "absolute", top: 1150, left: 60, right: 60, textAlign: "center", fontFamily: L.font, fontWeight: 800, fontSize: 34, color: L.amber, opacity: useSpring(cue(rows.length + 1), 12) }}>{data.note}</div>
+        <div style={{ position: "absolute", top: 1150, left: 60, right: 60, textAlign: "center", fontFamily: L.font, fontWeight: 800, fontSize: 34, color: L.amber, opacity: noteS }}>{data.note}</div>
       )}
     </>
   );
