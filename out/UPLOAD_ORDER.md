@@ -33,7 +33,7 @@ Already posted: `out/posted/`.
 | 026 | ep25 | Training Data | ready |
 | 027 | ep26 | Overfitting vs Underfitting | ready |
 | 028 | ep27 | Transformers Part 1 Attention | ready |
-| 029 | ep28 | Transformers Part 2 Inside a Transformer | rendering soon |
+| 029 | ep28 | Transformers Part 2 Inside a Transformer | ready |
 | 030 | ep29 | Computer Vision | rendering soon |
 | 031 | ep30 | RLHF: How AI Learns Good Manners | rendering soon |
 | 032 | q03 | Quiz #3: Episodes 21–30 | rendering soon |
