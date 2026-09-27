@@ -505,7 +505,14 @@ export const Story: React.FC = () => {
         })}
       </AbsoluteFill>
       <AbsoluteFill style={{ background: "white", opacity: flash, pointerEvents: "none" }} />
-      <Audio src={staticFile(tl.music)} volume={0.55} />
+      <Audio
+        src={staticFile(tl.music)}
+        volume={(fr) => {
+          // Duck the beat under the voice-over so every line stays clear.
+          const talking = tl.beats.some((b) => fr >= b.voiceFrom - 3 && fr < b.voiceFrom + b.voiceFrames + 4);
+          return talking ? 0.4 : 0.8;
+        }}
+      />
       {tl.beats.map((b) => (
         <Sequence key={`vo-${b.id}`} from={b.voiceFrom} durationInFrames={b.voiceFrames + 15}>
           <Audio src={staticFile(b.audio)} volume={1} />
