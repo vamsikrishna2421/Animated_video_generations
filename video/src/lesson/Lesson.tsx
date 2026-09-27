@@ -66,6 +66,7 @@ export type LessonTimeline = {
   handle: string;
   title: string;
   host?: "male" | "female";
+  label?: string | null;
   fps: number;
   totalFrames: number;
   music: { bpm: number; volume: number; duckedVolume: number; audio: string };
@@ -99,7 +100,7 @@ const Header: React.FC<{ tl: LessonTimeline }> = ({ tl }) => {
     <>
       <div style={{ position: "absolute", top: 150, left: 70, right: 70, display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: L.font }}>
         <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: 5, color: L.text, background: "rgba(255,255,255,0.08)", border: `1.5px solid ${L.border}`, padding: "10px 20px", borderRadius: 30 }}>
-          {tl.series} <span style={{ color: L.amber }}>· {tl.episode === 0 ? "TRAILER" : `EP ${String(tl.episode).padStart(2, "0")}`}</span>
+          {tl.series} <span style={{ color: L.amber }}>· {tl.label ?? (tl.episode === 0 ? "TRAILER" : `EP ${String(tl.episode).padStart(2, "0")}`)}</span>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
           {tl.scenes.map((s, i) => (

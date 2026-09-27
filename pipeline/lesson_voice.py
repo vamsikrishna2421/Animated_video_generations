@@ -301,6 +301,7 @@ def main(spec_path: Path) -> None:
         "handle": spec["handle"],
         "title": spec["title"],
         "host": spec.get("host", "male"),
+        "label": spec.get("label"),
         "fps": fps,
         "totalFrames": cursor,
         "music": {**spec["music"], "audio": f"lessons/{ep}/music.wav"},

@@ -1,5 +1,7 @@
 # AI From Scratch — series plan (@ai_maastaaru)
 
+> The full, current content plan (four tracks: fundamentals, real-world use cases, new tech, daily news) is in [SYLLABUS.md](SYLLABUS.md). This file keeps the original 18-episode plan and the episode formula.
+
 Format: Instagram Reels, 1080×1920, **2:00–2:45 each** (hard cap 3:00). English narration
 (Kokoro, local). One concept per episode, each explained with at least one analogy and 2–3
 real use cases. Every episode ends with a teaser for the next one, which keeps people

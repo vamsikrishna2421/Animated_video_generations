@@ -1,0 +1,211 @@
+{
+  "id": "uc01",
+  "episode": 1,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 01",
+  "handle": "@ai_maastaaru",
+  "title": "How an AI Phone Call Assistant Works",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 92,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You call a clinic, and an AI voice picks up, answers your questions, and books your appointment. [1] So how does that actually work? [2] Let's break down an AI phone assistant, step by step.",
+      "data": {
+        "kicker": "USE CASE 01",
+        "title": [
+          "AI Phone",
+          "Assistant"
+        ],
+        "subtitle": "How it works, step by step",
+        "buzzwords": [
+          "Speech to text",
+          "LLM",
+          "Text to speech",
+          "Latency",
+          "Tools",
+          "Voice AI",
+          "Whisper",
+          "Real time"
+        ]
+      }
+    },
+    {
+      "type": "agentloop",
+      "text": "At its heart, it's a simple loop, listen, think, and speak, [1] again and again, until the call ends. [2] First, the caller's voice becomes text. [3] Then an LLM reads it, and decides what to say. [4] That reply is turned back into a natural voice, [5] and the loop starts again.",
+      "data": {
+        "goalLabel": "CALLER SAYS",
+        "goal": "“Do you have a table for four at 8 PM?”",
+        "stages": [
+          [
+            "Mic",
+            "Listen"
+          ],
+          [
+            "Brain",
+            "Think"
+          ],
+          [
+            "Volume2",
+            "Speak"
+          ]
+        ],
+        "log": [
+          "voice → text: “table for four at 8 PM”",
+          "LLM → “Let me check that for you…”",
+          "text → voice, played to the caller",
+          "↻ repeat until the call ends"
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Let's look at each stage. [1] Stage one, speech to text. A speech model listens, and writes down what the caller said. [2] Stage two, the brain. An LLM understands the request, and can use tools, like checking the booking system. [3] Stage three, text to speech. A voice model, like the one you're hearing now, speaks the reply.",
+      "data": {
+        "heading": "The 3 stages",
+        "steps": [
+          [
+            "Mic",
+            "Speech to text",
+            "A speech model writes down what the caller says"
+          ],
+          [
+            "Brain",
+            "LLM + tools",
+            "Understands, checks systems, decides the reply"
+          ],
+          [
+            "Volume2",
+            "Text to speech",
+            "A voice model speaks the reply"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "toolcall",
+      "text": "Here's the brain in action. [1] The caller asks, do you have a table for four at 8 PM? [2] The LLM calls a tool, check availability, for four people at 8 PM. [3] The booking system replies, 8:15 is free, at a window table. [4] And the assistant says, we have a window table at 8:15, shall I book it for you?",
+      "data": {
+        "heading": "The brain, with tools",
+        "question": "Do you have a table for four at 8 PM?",
+        "call": {
+          "tool": "check_availability",
+          "people": 4,
+          "time": "20:00"
+        },
+        "tool": "BOOKING SYSTEM",
+        "result": "free: 8:15 PM · window table",
+        "answer": "We have a window table at 8:15. Shall I book it for you?"
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Making it feel human is the hard part. [1] Speed. The whole loop must finish in about a second, or the call feels awkward. [2] Interruptions. If the caller speaks, the AI must stop and listen. [3] Turn taking. It must know when the caller has finished. [4] And hand-off. Tricky calls go to a real person.",
+      "data": {
+        "heading": "The hard parts",
+        "terms": [
+          [
+            "Timer",
+            "Speed",
+            "Whole loop in about a second"
+          ],
+          [
+            "Hand",
+            "Interruptions",
+            "Stop talking when the caller speaks"
+          ],
+          [
+            "MessagesSquare",
+            "Turn taking",
+            "Know when the caller is done"
+          ],
+          [
+            "UserRound",
+            "Human handoff",
+            "Tricky calls go to a person"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where are these used today? [1] Clinics and hospitals use them to book and remind appointments. [2] Restaurants use them to take reservations, even at midnight. [3] And banks and delivery companies use them to answer order and account questions.",
+      "data": {
+        "heading": "Where you'll hear them",
+        "items": [
+          [
+            "Stethoscope",
+            "Clinics",
+            "Book and remind appointments"
+          ],
+          [
+            "UtensilsCrossed",
+            "Restaurants",
+            "Take reservations, day and night"
+          ],
+          [
+            "Headset",
+            "Customer support",
+            "Orders, accounts, common questions"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think one giant AI does everything on the call. [2] Usually, it's a team, a speech model, a language model and a voice model, plus tools. Some newer systems merge them into one voice model, but the loop stays the same.",
+      "data": {
+        "myth": "One giant AI does everything on the call.",
+        "fact": "Usually it's a team: a speech model, an LLM and a voice model, plus tools. The loop stays the same.",
+        "tip": "Listen → Think → Speak"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What are the three stages of an AI phone assistant, in the right order? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Speech to text, then the LLM, then text to speech!",
+      "data": {
+        "question": "The 3 stages, in order, are…",
+        "options": [
+          "Text to speech → LLM → speech to text",
+          "Speech to text → LLM → text to speech",
+          "LLM → speech to text → LLM"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] An AI phone assistant is a loop, listen, think, speak. [2] Speech to text turns voice into words. [3] An LLM with tools decides the reply. [4] Text to speech says it back, in about a second. [5] Which app should I break down next? Comment below, and follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Loop",
+            "listen, think, speak"
+          ],
+          [
+            "Stage 1",
+            "speech to text"
+          ],
+          [
+            "Stage 2",
+            "LLM + tools decide"
+          ],
+          [
+            "Stage 3",
+            "text to speech, in about a second"
+          ]
+        ],
+        "next": "You pick the next app, comment below"
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ export const AgentLoop: React.FC<SceneProps> = ({ data, cue }) => {
   return (
     <>
       <div style={{ position: "absolute", top: 280, left: 60, right: 60, opacity: goal }}>
-        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 28, letterSpacing: 5, color: L.teal }}>GOAL</div>
+        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 28, letterSpacing: 5, color: L.teal }}>{data.goalLabel ?? "GOAL"}</div>
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 46, color: L.text, lineHeight: 1.15 }}>{data.goal}</div>
       </div>
       <svg width={1080} height={1000} style={{ position: "absolute", left: 0, top: 0 }}>
