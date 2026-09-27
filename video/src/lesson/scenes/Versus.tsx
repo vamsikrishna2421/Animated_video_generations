@@ -32,7 +32,7 @@ export const Versus: React.FC<SceneProps> = ({ data, cue }) => {
   const rightBig = f >= cue(1);
   return (
     <>
-      <Heading kicker="SCALE MATTERS">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "SCALE MATTERS"}>{data.heading}</Heading>
       <div style={{ position: "absolute", top: 500, left: 60, right: 60, display: "flex", gap: 30, alignItems: "center" }}>
         <Side s={data.left} at={cue(0)} big={false} from={L.muted} to="#475569" />
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 48, color: L.amber, opacity: interpolate(f, [cue(1) - 5, cue(1)], [0, 1], clamp) }}>vs</div>

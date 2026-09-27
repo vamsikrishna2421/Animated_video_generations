@@ -7,7 +7,7 @@
   "host": "female",
   "label": "USE CASE 01",
   "fps": 30,
-  "totalFrames": 5626,
+  "totalFrames": 5056,
   "music": {
     "bpm": 92,
     "volume": 0.16,
@@ -36,18 +36,18 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 424,
+      "durationInFrames": 378,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_01.wav",
       "cues": [
-        191,
-        285
+        187,
+        247
       ],
       "captions": [
         {
           "text": "You call a clinic,",
           "from": 10,
-          "to": 40
+          "to": 38
         },
         {
           "text": "and an AI voice picks",
@@ -57,37 +57,32 @@
         {
           "text": "up, answers your questions,",
           "from": 81,
-          "to": 135
+          "to": 133
         },
         {
           "text": "and books your appointment.",
-          "from": 138,
-          "to": 188
+          "from": 136,
+          "to": 184
         },
         {
-          "text": "So how does that actually",
-          "from": 191,
-          "to": 225
-        },
-        {
-          "text": "work, behind the scenes?",
-          "from": 227,
-          "to": 282
+          "text": "So how does that actually work?",
+          "from": 187,
+          "to": 245
         },
         {
           "text": "Let's break down an AI",
-          "from": 285,
-          "to": 325
+          "from": 247,
+          "to": 289
         },
         {
-          "text": "phone call assistant,",
-          "from": 327,
-          "to": 368
+          "text": "phone assistant,",
+          "from": 291,
+          "to": 322
         },
         {
           "text": "step by step.",
-          "from": 370,
-          "to": 410
+          "from": 324,
+          "to": 364
         }
       ],
       "image": null
@@ -118,92 +113,77 @@
           "↻ repeat until the call ends"
         ]
       },
-      "from": 424,
-      "durationInFrames": 702,
+      "from": 378,
+      "durationInFrames": 562,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_02.wav",
       "cues": [
-        131,
-        230,
-        322,
-        450,
-        562
+        127,
+        217,
+        303,
+        414,
+        502
       ],
       "captions": [
         {
           "text": "At its heart,",
           "from": 10,
-          "to": 28
+          "to": 29
         },
         {
           "text": "it's a simple loop,",
-          "from": 32,
+          "from": 33,
           "to": 65
         },
         {
           "text": "listen, think,",
-          "from": 67,
-          "to": 95
+          "from": 68,
+          "to": 97
         },
         {
-          "text": "and speak.",
-          "from": 99,
-          "to": 129
+          "text": "and speak,",
+          "from": 101,
+          "to": 125
         },
         {
-          "text": "And it runs again and",
-          "from": 131,
-          "to": 161
+          "text": "again and again,",
+          "from": 127,
+          "to": 157
         },
         {
-          "text": "again, until the call ends.",
-          "from": 161,
-          "to": 226
+          "text": "until the call ends.",
+          "from": 160,
+          "to": 213
         },
         {
-          "text": "First, the caller's voice is",
-          "from": 230,
-          "to": 276
+          "text": "First, the caller's voice becomes text.",
+          "from": 217,
+          "to": 301
         },
         {
-          "text": "turned into text.",
-          "from": 279,
-          "to": 320
+          "text": "Then an LLM reads it,",
+          "from": 303,
+          "to": 356
         },
         {
-          "text": "Then an LLM reads that",
-          "from": 322,
-          "to": 373
+          "text": "and decides what to say.",
+          "from": 357,
+          "to": 411
         },
         {
-          "text": "text, and decides what to say.",
-          "from": 375,
-          "to": 447
+          "text": "That reply is turned back",
+          "from": 414,
+          "to": 456
         },
         {
-          "text": "Next, that reply is turned",
-          "from": 450,
-          "to": 501
+          "text": "into a natural voice,",
+          "from": 456,
+          "to": 498
         },
         {
-          "text": "back into a natural voice.",
-          "from": 503,
-          "to": 559
-        },
-        {
-          "text": "And then the loop starts",
-          "from": 562,
-          "to": 599
-        },
-        {
-          "text": "again, for whatever the caller",
-          "from": 600,
-          "to": 651
-        },
-        {
-          "text": "says next.",
-          "from": 654,
-          "to": 689
+          "text": "and the loop starts again.",
+          "from": 502,
+          "to": 550
         }
       ],
       "image": null
@@ -230,95 +210,95 @@
           ]
         ]
       },
-      "from": 1126,
-      "durationInFrames": 778,
+      "from": 940,
+      "durationInFrames": 674,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_03.wav",
       "cues": [
-        60,
-        277,
-        526
+        59,
+        239,
+        465
       ],
       "captions": [
         {
           "text": "Let's look at each stage.",
           "from": 10,
-          "to": 58
+          "to": 57
         },
         {
-          "text": "Stage one is speech to text.",
-          "from": 60,
+          "text": "Stage one,",
+          "from": 59,
+          "to": 83
+        },
+        {
+          "text": "speech to text.",
+          "from": 89,
           "to": 130
         },
         {
-          "text": "A speech recognition model listens,",
+          "text": "A speech model listens,",
           "from": 132,
-          "to": 189
+          "to": 170
         },
         {
-          "text": "and writes down exactly what",
-          "from": 193,
-          "to": 235
+          "text": "and writes down what the",
+          "from": 171,
+          "to": 199
         },
         {
-          "text": "the caller said.",
-          "from": 236,
-          "to": 274
+          "text": "caller said.",
+          "from": 201,
+          "to": 236
         },
         {
-          "text": "Stage two is the brain.",
-          "from": 277,
-          "to": 335
+          "text": "Stage two,",
+          "from": 239,
+          "to": 264
+        },
+        {
+          "text": "the brain.",
+          "from": 266,
+          "to": 296
         },
         {
           "text": "An LLM understands the request,",
-          "from": 337,
-          "to": 395
+          "from": 298,
+          "to": 365
         },
         {
-          "text": "and it can use tools,",
-          "from": 395,
-          "to": 435
+          "text": "and can use tools,",
+          "from": 368,
+          "to": 398
         },
         {
-          "text": "like checking free tables in",
-          "from": 435,
-          "to": 488
+          "text": "like checking the booking system.",
+          "from": 402,
+          "to": 462
         },
         {
-          "text": "the booking system.",
-          "from": 488,
-          "to": 524
+          "text": "Stage three,",
+          "from": 465,
+          "to": 491
         },
         {
-          "text": "And stage three is text",
-          "from": 526,
-          "to": 570
-        },
-        {
-          "text": "to speech.",
-          "from": 572,
-          "to": 600
+          "text": "text to speech.",
+          "from": 494,
+          "to": 533
         },
         {
           "text": "A voice model,",
-          "from": 602,
-          "to": 635
+          "from": 535,
+          "to": 563
         },
         {
-          "text": "just like the one you're",
-          "from": 638,
-          "to": 664
+          "text": "like the one you're hearing",
+          "from": 567,
+          "to": 596
         },
         {
-          "text": "hearing right now,",
-          "from": 665,
-          "to": 701
-        },
-        {
-          "text": "speaks the reply out loud.",
-          "from": 704,
-          "to": 766
+          "text": "now, speaks the reply.",
+          "from": 598,
+          "to": 662
         }
       ],
       "image": null
@@ -337,7 +317,7 @@
         "result": "free: 8:15 PM · window table",
         "answer": "We have a window table at 8:15. Shall I book it for you?"
       },
-      "from": 1904,
+      "from": 1614,
       "durationInFrames": 662,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_04.wav",
@@ -448,96 +428,91 @@
           ]
         ]
       },
-      "from": 2566,
-      "durationInFrames": 767,
+      "from": 2276,
+      "durationInFrames": 620,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_05.wav",
       "cues": [
-        98,
-        260,
-        432,
-        584
+        88,
+        236,
+        386,
+        491
       ],
       "captions": [
         {
-          "text": "Now, making it feel human",
+          "text": "Making it feel human is",
           "from": 10,
-          "to": 56
+          "to": 48
         },
         {
-          "text": "is the hard part.",
-          "from": 58,
-          "to": 95
+          "text": "the hard part.",
+          "from": 50,
+          "to": 84
         },
         {
-          "text": "First, speed.",
-          "from": 98,
-          "to": 140
+          "text": "Speed.",
+          "from": 88,
+          "to": 112
         },
         {
-          "text": "The whole loop has to",
-          "from": 142,
-          "to": 166
+          "text": "The whole loop must finish",
+          "from": 114,
+          "to": 148
         },
         {
-          "text": "finish in about a second,",
-          "from": 168,
-          "to": 201
+          "text": "in about a second,",
+          "from": 150,
+          "to": 174
         },
         {
           "text": "or the call feels awkward.",
-          "from": 206,
-          "to": 256
+          "from": 179,
+          "to": 234
         },
         {
-          "text": "Second, interruptions.",
-          "from": 260,
-          "to": 311
+          "text": "Interruptions.",
+          "from": 236,
+          "to": 270
         },
         {
-          "text": "If the caller starts talking,",
-          "from": 313,
-          "to": 353
+          "text": "If the caller speaks,",
+          "from": 273,
+          "to": 305
         },
         {
           "text": "the AI must stop and listen.",
-          "from": 354,
-          "to": 428
+          "from": 310,
+          "to": 384
         },
         {
-          "text": "Third, turn taking.",
-          "from": 432,
-          "to": 483
+          "text": "Turn taking.",
+          "from": 386,
+          "to": 421
         },
         {
-          "text": "It has to know when",
-          "from": 487,
-          "to": 511
+          "text": "It must know when the",
+          "from": 423,
+          "to": 446
         },
         {
-          "text": "the caller has really finished speaking.",
-          "from": 512,
-          "to": 582
+          "text": "caller has finished.",
+          "from": 447,
+          "to": 488
         },
         {
-          "text": "And finally, handoff.",
-          "from": 584,
-          "to": 637
+          "text": "And hand-off.",
+          "from": 491,
+          "to": 523
         },
         {
-          "text": "For anything tricky,",
-          "from": 638,
-          "to": 670
+          "text": "Tricky calls go to a",
+          "from": 525,
+          "to": 564
         },
         {
-          "text": "it transfers the call to",
-          "from": 672,
-          "to": 711
-        },
-        {
-          "text": "a real person.",
-          "from": 713,
-          "to": 755
+          "text": "real person.",
+          "from": 567,
+          "to": 607
         }
       ],
       "image": null
@@ -564,7 +539,7 @@
           ]
         ]
       },
-      "from": 3333,
+      "from": 2896,
       "durationInFrames": 492,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_06.wav",
@@ -624,74 +599,69 @@
         "fact": "Usually it's a team: a speech model, an LLM and a voice model, plus tools. The loop stays the same.",
         "tip": "Listen → Think → Speak"
       },
-      "from": 3825,
-      "durationInFrames": 612,
+      "from": 3388,
+      "durationInFrames": 540,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_07.wav",
       "cues": [
         59,
-        177
+        181
       ],
       "captions": [
         {
           "text": "Here's a common myth.",
           "from": 10,
-          "to": 56
+          "to": 57
         },
         {
           "text": "People think one giant AI",
           "from": 59,
-          "to": 113
+          "to": 115
         },
         {
           "text": "does everything on the call.",
-          "from": 113,
-          "to": 174
+          "from": 115,
+          "to": 177
         },
         {
           "text": "Usually, it's a team,",
-          "from": 177,
-          "to": 227
+          "from": 181,
+          "to": 231
         },
         {
           "text": "a speech model,",
-          "from": 229,
-          "to": 262
+          "from": 232,
+          "to": 265
         },
         {
           "text": "a language model and a",
-          "from": 268,
-          "to": 300
+          "from": 271,
+          "to": 304
         },
         {
           "text": "voice model,",
-          "from": 302,
-          "to": 327
+          "from": 305,
+          "to": 331
         },
         {
           "text": "plus tools.",
-          "from": 329,
-          "to": 370
+          "from": 332,
+          "to": 373
         },
         {
-          "text": "Some newer systems combine these",
-          "from": 374,
-          "to": 425
+          "text": "Some newer systems merge them",
+          "from": 376,
+          "to": 421
         },
         {
-          "text": "into a single voice model,",
-          "from": 426,
-          "to": 478
+          "text": "into one voice model,",
+          "from": 421,
+          "to": 465
         },
         {
-          "text": "but the idea of listen,",
-          "from": 482,
-          "to": 529
-        },
-        {
-          "text": "think and speak stays the same.",
-          "from": 531,
-          "to": 599
+          "text": "but the loop stays the same.",
+          "from": 469,
+          "to": 527
         }
       ],
       "image": null
@@ -707,7 +677,7 @@
         ],
         "answer": 1
       },
-      "from": 4437,
+      "from": 3928,
       "durationInFrames": 504,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_08.wav",
@@ -792,16 +762,16 @@
         ],
         "next": "You pick the next app, comment below"
       },
-      "from": 4941,
-      "durationInFrames": 685,
+      "from": 4432,
+      "durationInFrames": 624,
       "voiceFrom": 10,
       "audio": "lessons/uc01/voice_09.wav",
       "cues": [
-        45,
-        178,
-        262,
-        352,
-        452
+        46,
+        177,
+        261,
+        358,
+        448
       ],
       "captions": [
         {
@@ -811,78 +781,68 @@
         },
         {
           "text": "An AI phone assistant is",
-          "from": 45,
-          "to": 89
+          "from": 46,
+          "to": 91
         },
         {
           "text": "a loop,",
-          "from": 91,
-          "to": 111
+          "from": 92,
+          "to": 112
         },
         {
-          "text": "listen, think and speak.",
-          "from": 113,
-          "to": 175
+          "text": "listen, think, speak.",
+          "from": 114,
+          "to": 173
         },
         {
-          "text": "Speech to text turns the",
-          "from": 178,
-          "to": 214
+          "text": "Speech to text turns voice",
+          "from": 177,
+          "to": 225
         },
         {
-          "text": "voice into words.",
-          "from": 216,
-          "to": 260
+          "text": "into words.",
+          "from": 226,
+          "to": 259
         },
         {
           "text": "An LLM with tools decides",
-          "from": 262,
-          "to": 316
+          "from": 261,
+          "to": 321
         },
         {
           "text": "the reply.",
-          "from": 318,
-          "to": 350
+          "from": 322,
+          "to": 356
         },
         {
-          "text": "And text to speech says",
-          "from": 352,
-          "to": 384
+          "text": "Text to speech says it",
+          "from": 358,
+          "to": 392
         },
         {
-          "text": "it back,",
-          "from": 385,
-          "to": 402
+          "text": "back, in about a second.",
+          "from": 393,
+          "to": 446
         },
         {
-          "text": "all in about a second.",
-          "from": 404,
-          "to": 449
+          "text": "Which app should I break",
+          "from": 448,
+          "to": 475
         },
         {
-          "text": "Want more real world breakdowns",
-          "from": 452,
-          "to": 500
+          "text": "down next?",
+          "from": 477,
+          "to": 507
         },
         {
-          "text": "like this?",
-          "from": 501,
-          "to": 527
-        },
-        {
-          "text": "Comment the app you want",
-          "from": 530,
-          "to": 562
-        },
-        {
-          "text": "me to explain next,",
-          "from": 563,
-          "to": 604
+          "text": "Comment below,",
+          "from": 510,
+          "to": 539
         },
         {
           "text": "and follow AI Maastaaru!",
-          "from": 607,
-          "to": 673
+          "from": 543,
+          "to": 612
         }
       ],
       "image": null

@@ -241,6 +241,24 @@ Next: Multimodal AI, or how AI sees, hears and speaks.
  pinned="Quiz answer: An MCP server is a connector for one app or data source, like Gmail or GitHub. Which app would you connect your AI to first?",
  cover="'MCP' title card",
  alt="Animated lesson explaining the Model Context Protocol, the open standard that connects AI apps to tools and data."),
+"uc01": dict(
+ caption="""You call a clinic and an AI voice books your appointment. How does that actually work?
+
+Real World AI, Use Case 01: the AI phone call assistant
+- The loop: listen, think, speak, repeat
+- Stage 1: speech to text
+- Stage 2: an LLM with tools decides the reply
+- Stage 3: text to speech
+- The hard parts: speed, interruptions, turn taking, human hand-off
+
+Quiz at the end. Got it right? Comment below.
+
+Which app should I break down next? Comment it below.
+Follow @ai_maastaaru for more real world AI breakdowns.""",
+ tags="#AIMaastaaru #VoiceAI #LearnAI #AIAgents #AIForBeginners",
+ pinned="Quiz answer: Speech to text, then the LLM, then text to speech. Drop the app you want me to break down next!",
+ cover="'AI Phone Assistant' title card",
+ alt="Animated breakdown of how an AI phone call assistant works: speech to text, an LLM with tools, and text to speech in a loop."),
 }
 
 
