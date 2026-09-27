@@ -1,0 +1,817 @@
+{
+  "id": "ep17",
+  "episode": 17,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Memory and Context Engineering",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4999,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep17/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 17",
+        "title": [
+          "AI",
+          "Memory"
+        ],
+        "subtitle": "How assistants remember you",
+        "buzzwords": [
+          "Memory",
+          "Context window",
+          "System prompt",
+          "Notes",
+          "Personalisation",
+          "Context engineering",
+          "RAG",
+          "Privacy"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 498,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_01.wav",
+      "cues": [
+        219,
+        383
+      ],
+      "captions": [
+        {
+          "text": "You tell an AI assistant",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "you're vegetarian,",
+          "from": 61,
+          "to": 102
+        },
+        {
+          "text": "and weeks later,",
+          "from": 104,
+          "to": 133
+        },
+        {
+          "text": "it still suggests veg recipes.",
+          "from": 135,
+          "to": 217
+        },
+        {
+          "text": "But wait,",
+          "from": 219,
+          "to": 247
+        },
+        {
+          "text": "didn't we learn that AI",
+          "from": 249,
+          "to": 289
+        },
+        {
+          "text": "forgets everything outside its context window?",
+          "from": 290,
+          "to": 381
+        },
+        {
+          "text": "So let's understand how AI",
+          "from": 383,
+          "to": 434
+        },
+        {
+          "text": "memory really works.",
+          "from": 435,
+          "to": 484
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three kinds of memory",
+        "kicker": "HOW AI REMEMBERS",
+        "steps": [
+          [
+            "MessageSquare",
+            "Short-term",
+            "The current chat (EP 03)"
+          ],
+          [
+            "BookMarked",
+            "Long-term",
+            "Saved notes about you"
+          ],
+          [
+            "Database",
+            "Knowledge",
+            "Documents it can search (EP 07)"
+          ]
+        ]
+      },
+      "from": 498,
+      "durationInFrames": 635,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_02.wav",
+      "cues": [
+        104,
+        286,
+        480
+      ],
+      "captions": [
+        {
+          "text": "AI assistants use three kinds",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "of memory.",
+          "from": 69,
+          "to": 100
+        },
+        {
+          "text": "Short term memory is the",
+          "from": 104,
+          "to": 139
+        },
+        {
+          "text": "context window,",
+          "from": 140,
+          "to": 181
+        },
+        {
+          "text": "the current chat,",
+          "from": 182,
+          "to": 212
+        },
+        {
+          "text": "which we saw in episode three.",
+          "from": 213,
+          "to": 284
+        },
+        {
+          "text": "Long term memory is saved",
+          "from": 286,
+          "to": 331
+        },
+        {
+          "text": "notes about you,",
+          "from": 333,
+          "to": 367
+        },
+        {
+          "text": "like your name or your",
+          "from": 368,
+          "to": 406
+        },
+        {
+          "text": "diet, stored outside the model.",
+          "from": 408,
+          "to": 478
+        },
+        {
+          "text": "And knowledge memory is documents",
+          "from": 480,
+          "to": 536
+        },
+        {
+          "text": "it can search,",
+          "from": 538,
+          "to": 569
+        },
+        {
+          "text": "using RAG.",
+          "from": 571,
+          "to": 623
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Long-term memory",
+        "kicker": "UNDER THE HOOD",
+        "nodes": [
+          [
+            "MessageSquare",
+            "You mention",
+            "“I'm vegetarian”"
+          ],
+          [
+            "BookMarked",
+            "Save a note",
+            "“User is vegetarian”"
+          ],
+          [
+            "CalendarDays",
+            "Weeks later",
+            "“Any dinner ideas?”"
+          ],
+          [
+            "Search",
+            "Find notes",
+            "Added to the prompt"
+          ],
+          [
+            "Sparkles",
+            "Personal answer",
+            "“Try paneer tikka!”"
+          ]
+        ]
+      },
+      "from": 1133,
+      "durationInFrames": 645,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_03.wav",
+      "cues": [
+        82,
+        156,
+        279,
+        401,
+        526
+      ],
+      "captions": [
+        {
+          "text": "Here's how long term memory works.",
+          "from": 10,
+          "to": 80
+        },
+        {
+          "text": "You mention,",
+          "from": 82,
+          "to": 105
+        },
+        {
+          "text": "I'm vegetarian.",
+          "from": 108,
+          "to": 154
+        },
+        {
+          "text": "The app decides it's worth",
+          "from": 156,
+          "to": 195
+        },
+        {
+          "text": "remembering, and saves a short note.",
+          "from": 197,
+          "to": 277
+        },
+        {
+          "text": "Weeks later,",
+          "from": 279,
+          "to": 299
+        },
+        {
+          "text": "you start a new chat,",
+          "from": 300,
+          "to": 333
+        },
+        {
+          "text": "and ask for dinner ideas.",
+          "from": 335,
+          "to": 399
+        },
+        {
+          "text": "The app finds the relevant",
+          "from": 401,
+          "to": 438
+        },
+        {
+          "text": "notes, and quietly adds them",
+          "from": 440,
+          "to": 494
+        },
+        {
+          "text": "to the prompt.",
+          "from": 495,
+          "to": 523
+        },
+        {
+          "text": "So the model suggests paneer",
+          "from": 526,
+          "to": 573
+        },
+        {
+          "text": "tikka, not chicken.",
+          "from": 575,
+          "to": 633
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Context engineering",
+        "short": "Context",
+        "definition": "Choosing exactly what goes into the model's context window for each request.",
+        "chips": [
+          [
+            "FileText",
+            "Right instructions"
+          ],
+          [
+            "BookMarked",
+            "Right memories"
+          ],
+          [
+            "Scissors",
+            "Nothing extra"
+          ]
+        ]
+      },
+      "from": 1778,
+      "durationInFrames": 500,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_04.wav",
+      "cues": [
+        132,
+        308,
+        353,
+        414
+      ],
+      "captions": [
+        {
+          "text": "And this brings us to",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "a newer skill,",
+          "from": 39,
+          "to": 74
+        },
+        {
+          "text": "context engineering.",
+          "from": 77,
+          "to": 130
+        },
+        {
+          "text": "It means carefully choosing what",
+          "from": 132,
+          "to": 181
+        },
+        {
+          "text": "goes into the model's context",
+          "from": 182,
+          "to": 230
+        },
+        {
+          "text": "window, for every request.",
+          "from": 232,
+          "to": 305
+        },
+        {
+          "text": "The right instructions,",
+          "from": 308,
+          "to": 352
+        },
+        {
+          "text": "the right memories and documents,",
+          "from": 353,
+          "to": 410
+        },
+        {
+          "text": "and nothing extra that could",
+          "from": 414,
+          "to": 452
+        },
+        {
+          "text": "confuse it.",
+          "from": 453,
+          "to": 488
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Prompt vs context",
+        "kicker": "THE NEXT STEP",
+        "left": {
+          "icon": "Type",
+          "title": "Prompt engineering",
+          "stat": "One instruction",
+          "label": "write a good request"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Context engineering",
+          "stat": "The whole package",
+          "label": "instructions + memory + docs + tools"
+        }
+      },
+      "from": 2278,
+      "durationInFrames": 492,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_05.wav",
+      "cues": [
+        101,
+        208
+      ],
+      "captions": [
+        {
+          "text": "So how is this different",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "from prompt engineering?",
+          "from": 50,
+          "to": 99
+        },
+        {
+          "text": "Prompt engineering is about writing",
+          "from": 101,
+          "to": 152
+        },
+        {
+          "text": "one good instruction.",
+          "from": 154,
+          "to": 205
+        },
+        {
+          "text": "Context engineering is about building",
+          "from": 208,
+          "to": 269
+        },
+        {
+          "text": "the whole package,",
+          "from": 271,
+          "to": 309
+        },
+        {
+          "text": "instructions, memories,",
+          "from": 310,
+          "to": 371
+        },
+        {
+          "text": "documents and tool results,",
+          "from": 374,
+          "to": 431
+        },
+        {
+          "text": "every single time.",
+          "from": 434,
+          "to": 480
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Memory words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Settings2",
+            "System prompt",
+            "Hidden instructions sent first"
+          ],
+          [
+            "BookMarked",
+            "Memory",
+            "Saved facts about you"
+          ],
+          [
+            "Minimize2",
+            "Summarising",
+            "Squeeze old chats to fit"
+          ],
+          [
+            "Trash2",
+            "Forgetting",
+            "View and delete memories"
+          ]
+        ]
+      },
+      "from": 2770,
+      "durationInFrames": 560,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_06.wav",
+      "cues": [
+        67,
+        199,
+        281,
+        398
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms to know.",
+          "from": 10,
+          "to": 65
+        },
+        {
+          "text": "The system prompt,",
+          "from": 67,
+          "to": 101
+        },
+        {
+          "text": "hidden instructions the app always",
+          "from": 103,
+          "to": 156
+        },
+        {
+          "text": "sends first.",
+          "from": 158,
+          "to": 196
+        },
+        {
+          "text": "Memory, the saved facts about you.",
+          "from": 199,
+          "to": 278
+        },
+        {
+          "text": "Summarising, which compresses old chats,",
+          "from": 281,
+          "to": 358
+        },
+        {
+          "text": "so they fit.",
+          "from": 361,
+          "to": 396
+        },
+        {
+          "text": "And forgetting,",
+          "from": 398,
+          "to": 424
+        },
+        {
+          "text": "because you can usually view",
+          "from": 429,
+          "to": 474
+        },
+        {
+          "text": "and delete what an assistant remembers.",
+          "from": 475,
+          "to": 547
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The AI model learns and changes from every chat.",
+        "fact": "The model stays the same. The app saves notes and adds them to your prompt later.",
+        "tip": "Check your memory settings"
+      },
+      "from": 3330,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_07.wav",
+      "cues": [
+        59,
+        206
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think the AI model",
+          "from": 59,
+          "to": 107
+        },
+        {
+          "text": "itself learns and changes from",
+          "from": 109,
+          "to": 164
+        },
+        {
+          "text": "every chat.",
+          "from": 166,
+          "to": 202
+        },
+        {
+          "text": "It doesn't.",
+          "from": 206,
+          "to": 230
+        },
+        {
+          "text": "The model stays the same.",
+          "from": 233,
+          "to": 287
+        },
+        {
+          "text": "The app just saves notes",
+          "from": 288,
+          "to": 330
+        },
+        {
+          "text": "and adds them to your",
+          "from": 331,
+          "to": 357
+        },
+        {
+          "text": "prompt later.",
+          "from": 359,
+          "to": 393
+        },
+        {
+          "text": "And in most apps,",
+          "from": 396,
+          "to": 427
+        },
+        {
+          "text": "you can see and delete",
+          "from": 429,
+          "to": 466
+        },
+        {
+          "text": "those notes.",
+          "from": 468,
+          "to": 501
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Long-term memory is usually…",
+        "options": [
+          "Inside the model's brain",
+          "Saved notes outside the model",
+          "Nowhere, it remembers everything"
+        ],
+        "answer": 1
+      },
+      "from": 3844,
+      "durationInFrames": 489,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_08.wav",
+      "cues": [
+        147,
+        352
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Where is an assistant's long",
+          "from": 43,
+          "to": 80
+        },
+        {
+          "text": "term memory usually stored?",
+          "from": 81,
+          "to": 144
+        },
+        {
+          "text": "Pause and think,",
+          "from": 147,
+          "to": 183
+        },
+        {
+          "text": "and if you get it",
+          "from": 185,
+          "to": 202
+        },
+        {
+          "text": "right, comment below!",
+          "from": 204,
+          "to": 260
+        },
+        {
+          "text": "As saved notes outside the",
+          "from": 352,
+          "to": 394
+        },
+        {
+          "text": "model, added to your prompt",
+          "from": 396,
+          "to": 445
+        },
+        {
+          "text": "when needed!",
+          "from": 445,
+          "to": 476
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Short-term",
+            "the context window"
+          ],
+          [
+            "Long-term",
+            "saved notes about you"
+          ],
+          [
+            "Context eng.",
+            "choose what goes in"
+          ],
+          [
+            "Control",
+            "view and delete memories"
+          ]
+        ],
+        "next": "Use Case · Smart replies"
+      },
+      "from": 4333,
+      "durationInFrames": 666,
+      "voiceFrom": 10,
+      "audio": "lessons/ep17/voice_09.wav",
+      "cues": [
+        47,
+        130,
+        217,
+        340,
+        424
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "Short term memory is the",
+          "from": 47,
+          "to": 82
+        },
+        {
+          "text": "context window.",
+          "from": 83,
+          "to": 127
+        },
+        {
+          "text": "Long term memory is saved",
+          "from": 130,
+          "to": 175
+        },
+        {
+          "text": "notes about you.",
+          "from": 176,
+          "to": 215
+        },
+        {
+          "text": "Context engineering means choosing what",
+          "from": 217,
+          "to": 279
+        },
+        {
+          "text": "goes in,",
+          "from": 281,
+          "to": 300
+        },
+        {
+          "text": "every time.",
+          "from": 303,
+          "to": 337
+        },
+        {
+          "text": "And you can view and",
+          "from": 340,
+          "to": 365
+        },
+        {
+          "text": "delete what it remembers.",
+          "from": 367,
+          "to": 420
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 424,
+          "to": 488
+        },
+        {
+          "text": "how smart replies suggest your",
+          "from": 490,
+          "to": 541
+        },
+        {
+          "text": "next message.",
+          "from": 543,
+          "to": 580
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 583,
+          "to": 654
+        }
+      ],
+      "image": null
+    }
+  ]
+}

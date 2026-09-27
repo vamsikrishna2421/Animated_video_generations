@@ -1,0 +1,242 @@
+{
+  "id": "uc07",
+  "episode": 7,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 07",
+  "handle": "@ai_maastaaru",
+  "title": "How Smart Replies Work",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Someone texts you, are you coming tonight? [1] And your phone suggests, yes, I'll be there, before you type a single letter. [2] Let's break down how smart replies work.",
+      "data": {
+        "kicker": "USE CASE 07",
+        "title": [
+          "Smart",
+          "Replies"
+        ],
+        "subtitle": "How your phone suggests messages",
+        "buzzwords": [
+          "Smart reply",
+          "Smart compose",
+          "On-device",
+          "Keyboard",
+          "Next word",
+          "Suggestions",
+          "Small models",
+          "Privacy"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's what happens, in the blink of an eye. [1] A message arrives, are you coming tonight? [2] A small language model reads it, along with the recent chat. [3] It predicts a few likely short replies. [4] A filter removes anything odd or unsafe, [5] and you see three quick options.",
+      "data": {
+        "heading": "In the blink of an eye",
+        "nodes": [
+          [
+            "MessageSquare",
+            "Message arrives",
+            "“Are you coming tonight?”"
+          ],
+          [
+            "Cpu",
+            "Small model reads it",
+            "Plus the recent chat"
+          ],
+          [
+            "Sparkles",
+            "Predict replies",
+            "A few likely short answers"
+          ],
+          [
+            "ShieldCheck",
+            "Safety filter",
+            "Remove odd or unsafe ones"
+          ],
+          [
+            "ListChecks",
+            "3 suggestions",
+            "“Yes!”, “Running late”, “Can't today”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Many phones do this with an on-device model. [1] That means the AI runs directly on your phone, not on a server in the cloud. [2] So it's faster, [3] it can work without internet, [4] and your messages can stay on your device.",
+      "data": {
+        "term": "On-device AI",
+        "short": "Local",
+        "definition": "AI that runs directly on your phone instead of a server in the cloud.",
+        "chips": [
+          [
+            "Zap",
+            "Faster replies"
+          ],
+          [
+            "WifiOff",
+            "Works offline"
+          ],
+          [
+            "Lock",
+            "More private"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "predict",
+      "text": "Remember next word prediction, from episode two? [1] The model scores possible replies. Yes is the most likely, running late is less likely, and can't today, even less. [2] It picks the top few, [3] and when you tap one, it can even suggest how to finish your sentence.",
+      "data": {
+        "heading": "Scoring replies",
+        "kicker": "REMEMBER EP 02?",
+        "prompt": "“Are you coming tonight?” →",
+        "options": [
+          [
+            "Yes!",
+            55
+          ],
+          [
+            "Running late",
+            25
+          ],
+          [
+            "Can't today",
+            15
+          ],
+          [
+            "Banana",
+            1
+          ]
+        ],
+        "continuation": [
+          "I'll",
+          "be",
+          "there",
+          "by",
+          "8."
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "So what makes a good suggestion? [1] It's short, because it's just one tap. [2] It's relevant to the message, and your chat. [3] It matches your style, casual or formal. [4] And it's safe, never rude or embarrassing.",
+      "data": {
+        "heading": "Good suggestions",
+        "kicker": "WHAT MATTERS",
+        "terms": [
+          [
+            "Ruler",
+            "Short",
+            "One tap, a few words"
+          ],
+          [
+            "Target",
+            "Relevant",
+            "Fits the conversation"
+          ],
+          [
+            "Smile",
+            "Your style",
+            "Casual or formal"
+          ],
+          [
+            "ShieldCheck",
+            "Safe",
+            "Never rude or odd"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where will you see it? [1] Gmail's smart reply, and smart compose. [2] Keyboard suggestions on Android and iPhone. [3] And quick replies in messaging apps.",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "Mail",
+            "Email",
+            "Gmail smart reply and compose"
+          ],
+          [
+            "Keyboard",
+            "Keyboards",
+            "Android and iPhone suggestions"
+          ],
+          [
+            "MessageCircle",
+            "Messaging",
+            "Quick replies in chat apps"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think smart replies mean someone, or some giant AI, is reading every message. [2] Often, it's a small model running on your own phone, predicting a few likely words. No human is reading along.",
+      "data": {
+        "myth": "Someone is reading my messages to suggest replies.",
+        "fact": "Often it's a small model on your own phone, predicting a few likely words.",
+        "tip": "Check your app's privacy settings"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Smart replies are really an example of which idea? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Next word prediction! Just like an LLM, but short and quick.",
+      "data": {
+        "question": "Smart replies are an example of…",
+        "options": [
+          "Next word prediction",
+          "Image generation",
+          "Speech to text"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The model reads the message and the recent chat. [2] It predicts a few likely replies. [3] A filter removes anything odd. [4] And on-device models keep it fast and private. [5] Next, we'll see what happens when many AI agents work together, as a team. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Read",
+            "the message and chat"
+          ],
+          [
+            "Predict",
+            "a few likely replies"
+          ],
+          [
+            "Filter",
+            "remove odd ones"
+          ],
+          [
+            "On-device",
+            "fast and private"
+          ]
+        ],
+        "next": "EP 18 · Multi-agent systems"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Your phone suggests \"Yes, I'll be there\" before you type a letter. How?\n\nReal World AI, Use Case 07: smart replies\n- The flow: message, small model, predict, filter, 3 suggestions\n- On-device AI: faster, works offline, more private\n- It's next word prediction (EP 02), just short and quick\n- What makes a good suggestion\n- The myth: \"someone is reading my messages\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Multi-agent systems, AI agents working as a team.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #OnDeviceAI #LearnAI #SmartReply #AIForBeginners",
+    "pinned": "Quiz answer: Next word prediction, just like an LLM but short and quick. Do you actually tap smart replies?",
+    "cover": "'Smart Replies' title card",
+    "alt": "Animated breakdown of how smart reply suggestions are predicted, often by a small on-device model."
+  }
+}

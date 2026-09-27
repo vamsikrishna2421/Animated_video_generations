@@ -1,0 +1,740 @@
+{
+  "id": "uc07",
+  "episode": 7,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Smart Replies Work",
+  "host": "female",
+  "label": "USE CASE 07",
+  "fps": 30,
+  "totalFrames": 4209,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc07/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 07",
+        "title": [
+          "Smart",
+          "Replies"
+        ],
+        "subtitle": "How your phone suggests messages",
+        "buzzwords": [
+          "Smart reply",
+          "Smart compose",
+          "On-device",
+          "Keyboard",
+          "Next word",
+          "Suggestions",
+          "Small models",
+          "Privacy"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 334,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_01.wav",
+      "cues": [
+        93,
+        240
+      ],
+      "captions": [
+        {
+          "text": "Someone texts you,",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "are you coming tonight?",
+          "from": 47,
+          "to": 90
+        },
+        {
+          "text": "And your phone suggests,",
+          "from": 93,
+          "to": 131
+        },
+        {
+          "text": "yes, I'll be there,",
+          "from": 135,
+          "to": 174
+        },
+        {
+          "text": "before you type a single letter.",
+          "from": 176,
+          "to": 238
+        },
+        {
+          "text": "Let's break down how smart",
+          "from": 240,
+          "to": 283
+        },
+        {
+          "text": "replies work.",
+          "from": 284,
+          "to": 321
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "In the blink of an eye",
+        "nodes": [
+          [
+            "MessageSquare",
+            "Message arrives",
+            "“Are you coming tonight?”"
+          ],
+          [
+            "Cpu",
+            "Small model reads it",
+            "Plus the recent chat"
+          ],
+          [
+            "Sparkles",
+            "Predict replies",
+            "A few likely short answers"
+          ],
+          [
+            "ShieldCheck",
+            "Safety filter",
+            "Remove odd or unsafe ones"
+          ],
+          [
+            "ListChecks",
+            "3 suggestions",
+            "“Yes!”, “Running late”, “Can't today”"
+          ]
+        ]
+      },
+      "from": 334,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_02.wav",
+      "cues": [
+        94,
+        174,
+        291,
+        378,
+        466
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens,",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "in the blink of an eye.",
+          "from": 48,
+          "to": 92
+        },
+        {
+          "text": "A message arrives,",
+          "from": 94,
+          "to": 125
+        },
+        {
+          "text": "are you coming tonight?",
+          "from": 130,
+          "to": 172
+        },
+        {
+          "text": "A small language model reads",
+          "from": 174,
+          "to": 229
+        },
+        {
+          "text": "it, along with the recent chat.",
+          "from": 229,
+          "to": 289
+        },
+        {
+          "text": "It predicts a few likely",
+          "from": 291,
+          "to": 330
+        },
+        {
+          "text": "short replies.",
+          "from": 333,
+          "to": 376
+        },
+        {
+          "text": "A filter removes anything odd",
+          "from": 378,
+          "to": 434
+        },
+        {
+          "text": "or unsafe,",
+          "from": 435,
+          "to": 465
+        },
+        {
+          "text": "and you see three quick options.",
+          "from": 466,
+          "to": 531
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "On-device AI",
+        "short": "Local",
+        "definition": "AI that runs directly on your phone instead of a server in the cloud.",
+        "chips": [
+          [
+            "Zap",
+            "Faster replies"
+          ],
+          [
+            "WifiOff",
+            "Works offline"
+          ],
+          [
+            "Lock",
+            "More private"
+          ]
+        ]
+      },
+      "from": 877,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_03.wav",
+      "cues": [
+        100,
+        262,
+        299,
+        350
+      ],
+      "captions": [
+        {
+          "text": "Many phones do this with",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "an on-device model.",
+          "from": 50,
+          "to": 98
+        },
+        {
+          "text": "That means the AI runs",
+          "from": 100,
+          "to": 148
+        },
+        {
+          "text": "directly on your phone,",
+          "from": 148,
+          "to": 197
+        },
+        {
+          "text": "not on a server in",
+          "from": 197,
+          "to": 236
+        },
+        {
+          "text": "the cloud.",
+          "from": 236,
+          "to": 259
+        },
+        {
+          "text": "So it's faster,",
+          "from": 262,
+          "to": 298
+        },
+        {
+          "text": "it can work without internet,",
+          "from": 299,
+          "to": 348
+        },
+        {
+          "text": "and your messages can stay",
+          "from": 350,
+          "to": 391
+        },
+        {
+          "text": "on your device.",
+          "from": 392,
+          "to": 431
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "predict",
+      "data": {
+        "heading": "Scoring replies",
+        "kicker": "REMEMBER EP 02?",
+        "prompt": "“Are you coming tonight?” →",
+        "options": [
+          [
+            "Yes!",
+            55
+          ],
+          [
+            "Running late",
+            25
+          ],
+          [
+            "Can't today",
+            15
+          ],
+          [
+            "Banana",
+            1
+          ]
+        ],
+        "continuation": [
+          "I'll",
+          "be",
+          "there",
+          "by",
+          "8."
+        ]
+      },
+      "from": 1321,
+      "durationInFrames": 533,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_04.wav",
+      "cues": [
+        104,
+        357,
+        398
+      ],
+      "captions": [
+        {
+          "text": "Remember next word prediction,",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "from episode two?",
+          "from": 57,
+          "to": 102
+        },
+        {
+          "text": "The model scores possible replies.",
+          "from": 104,
+          "to": 180
+        },
+        {
+          "text": "Yes is the most likely,",
+          "from": 183,
+          "to": 229
+        },
+        {
+          "text": "running late is less likely,",
+          "from": 232,
+          "to": 284
+        },
+        {
+          "text": "and can't today,",
+          "from": 285,
+          "to": 315
+        },
+        {
+          "text": "even less.",
+          "from": 318,
+          "to": 354
+        },
+        {
+          "text": "It picks the top few,",
+          "from": 357,
+          "to": 397
+        },
+        {
+          "text": "and when you tap one,",
+          "from": 398,
+          "to": 433
+        },
+        {
+          "text": "it can even suggest how",
+          "from": 434,
+          "to": 472
+        },
+        {
+          "text": "to finish your sentence.",
+          "from": 473,
+          "to": 520
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Good suggestions",
+        "kicker": "WHAT MATTERS",
+        "terms": [
+          [
+            "Ruler",
+            "Short",
+            "One tap, a few words"
+          ],
+          [
+            "Target",
+            "Relevant",
+            "Fits the conversation"
+          ],
+          [
+            "Smile",
+            "Your style",
+            "Casual or formal"
+          ],
+          [
+            "ShieldCheck",
+            "Safe",
+            "Never rude or odd"
+          ]
+        ]
+      },
+      "from": 1854,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_05.wav",
+      "cues": [
+        70,
+        148,
+        231,
+        326
+      ],
+      "captions": [
+        {
+          "text": "So what makes a good suggestion?",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "It's short,",
+          "from": 70,
+          "to": 87
+        },
+        {
+          "text": "because it's just one tap.",
+          "from": 91,
+          "to": 146
+        },
+        {
+          "text": "It's relevant to the message,",
+          "from": 148,
+          "to": 187
+        },
+        {
+          "text": "and your chat.",
+          "from": 192,
+          "to": 229
+        },
+        {
+          "text": "It matches your style,",
+          "from": 231,
+          "to": 269
+        },
+        {
+          "text": "casual or formal.",
+          "from": 272,
+          "to": 323
+        },
+        {
+          "text": "And it's safe,",
+          "from": 326,
+          "to": 351
+        },
+        {
+          "text": "never rude or embarrassing.",
+          "from": 354,
+          "to": 421
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "Mail",
+            "Email",
+            "Gmail smart reply and compose"
+          ],
+          [
+            "Keyboard",
+            "Keyboards",
+            "Android and iPhone suggestions"
+          ],
+          [
+            "MessageCircle",
+            "Messaging",
+            "Quick replies in chat apps"
+          ]
+        ]
+      },
+      "from": 2287,
+      "durationInFrames": 340,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_06.wav",
+      "cues": [
+        54,
+        157,
+        251
+      ],
+      "captions": [
+        {
+          "text": "So where will you see it?",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "Gmail's smart reply,",
+          "from": 54,
+          "to": 103
+        },
+        {
+          "text": "and smart compose.",
+          "from": 107,
+          "to": 155
+        },
+        {
+          "text": "Keyboard suggestions on Android and iPhone.",
+          "from": 157,
+          "to": 248
+        },
+        {
+          "text": "And quick replies in messaging apps.",
+          "from": 251,
+          "to": 326
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Someone is reading my messages to suggest replies.",
+        "fact": "Often it's a small model on your own phone, predicting a few likely words.",
+        "tip": "Check your app's privacy settings"
+      },
+      "from": 2627,
+      "durationInFrames": 481,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_07.wav",
+      "cues": [
+        59,
+        244
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think smart replies mean",
+          "from": 59,
+          "to": 111
+        },
+        {
+          "text": "someone, or some giant AI,",
+          "from": 113,
+          "to": 184
+        },
+        {
+          "text": "is reading every message.",
+          "from": 186,
+          "to": 242
+        },
+        {
+          "text": "Often, it's a small model",
+          "from": 244,
+          "to": 295
+        },
+        {
+          "text": "running on your own phone,",
+          "from": 297,
+          "to": 334
+        },
+        {
+          "text": "predicting a few likely words.",
+          "from": 336,
+          "to": 404
+        },
+        {
+          "text": "No human is reading along.",
+          "from": 408,
+          "to": 468
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Smart replies are an example of…",
+        "options": [
+          "Next word prediction",
+          "Image generation",
+          "Speech to text"
+        ],
+        "answer": 0
+      },
+      "from": 3108,
+      "durationInFrames": 489,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_08.wav",
+      "cues": [
+        141,
+        344
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "Smart replies are really an",
+          "from": 45,
+          "to": 97
+        },
+        {
+          "text": "example of which idea?",
+          "from": 97,
+          "to": 139
+        },
+        {
+          "text": "Pause and think,",
+          "from": 141,
+          "to": 178
+        },
+        {
+          "text": "and if you get it",
+          "from": 179,
+          "to": 197
+        },
+        {
+          "text": "right, comment below!",
+          "from": 198,
+          "to": 253
+        },
+        {
+          "text": "Next word prediction!",
+          "from": 344,
+          "to": 387
+        },
+        {
+          "text": "Just like an LLM,",
+          "from": 389,
+          "to": 425
+        },
+        {
+          "text": "but short and quick.",
+          "from": 431,
+          "to": 477
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Read",
+            "the message and chat"
+          ],
+          [
+            "Predict",
+            "a few likely replies"
+          ],
+          [
+            "Filter",
+            "remove odd ones"
+          ],
+          [
+            "On-device",
+            "fast and private"
+          ]
+        ],
+        "next": "EP 18 · Multi-agent systems"
+      },
+      "from": 3597,
+      "durationInFrames": 612,
+      "voiceFrom": 10,
+      "audio": "lessons/uc07/voice_09.wav",
+      "cues": [
+        47,
+        133,
+        207,
+        278,
+        378
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "The model reads the message",
+          "from": 47,
+          "to": 90
+        },
+        {
+          "text": "and the recent chat.",
+          "from": 92,
+          "to": 130
+        },
+        {
+          "text": "It predicts a few likely replies.",
+          "from": 133,
+          "to": 205
+        },
+        {
+          "text": "A filter removes anything odd.",
+          "from": 207,
+          "to": 276
+        },
+        {
+          "text": "And on-device models keep it",
+          "from": 278,
+          "to": 323
+        },
+        {
+          "text": "fast and private.",
+          "from": 326,
+          "to": 375
+        },
+        {
+          "text": "Next, we'll see what happens",
+          "from": 378,
+          "to": 426
+        },
+        {
+          "text": "when many AI agents work",
+          "from": 428,
+          "to": 475
+        },
+        {
+          "text": "together, as a team.",
+          "from": 477,
+          "to": 531
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 534,
+          "to": 600
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "ep18",
+  "episode": 18,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Multi Agent Systems",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "One AI agent can plan a trip. [1] But what if you had a whole team of agents, a researcher, a writer and a checker, all working together? [2] Let's understand multi agent systems.",
+      "data": {
+        "kicker": "EPISODE 18",
+        "title": [
+          "Multi-Agent",
+          "Systems"
+        ],
+        "subtitle": "AI agents working as a team",
+        "buzzwords": [
+          "Agents",
+          "Orchestrator",
+          "Roles",
+          "Parallel",
+          "Hand-off",
+          "Reviewer",
+          "Workflow",
+          "Teamwork"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "A multi agent system is a group of AI agents, each with its own role, all working toward one goal. [1] Think of it like a small company, but made of AI. [2] Each agent has a specialty, [3] they pass work to each other, [4] and a manager agent coordinates them.",
+      "data": {
+        "term": "Multi-agent system",
+        "short": "Team",
+        "definition": "Several AI agents, each with its own role, working together toward one goal.",
+        "chips": [
+          [
+            "Users",
+            "Specialist roles"
+          ],
+          [
+            "ArrowLeftRight",
+            "Hand work over"
+          ],
+          [
+            "Crown",
+            "A manager coordinates"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Say the goal is, write a report on electric scooters in India. [1] The manager agent breaks it into tasks. [2] A research agent searches the web for data. [3] A writer agent drafts the report. [4] A reviewer agent checks the facts and suggests fixes, [5] and the manager delivers the final report to you.",
+      "data": {
+        "heading": "A team at work",
+        "kicker": "EXAMPLE: A MARKET REPORT",
+        "nodes": [
+          [
+            "Crown",
+            "Manager",
+            "Breaks the goal into tasks"
+          ],
+          [
+            "Search",
+            "Researcher",
+            "Finds data on the web"
+          ],
+          [
+            "PenLine",
+            "Writer",
+            "Drafts the report"
+          ],
+          [
+            "CheckCircle2",
+            "Reviewer",
+            "Checks facts, suggests fixes"
+          ],
+          [
+            "FileText",
+            "Final report",
+            "Delivered to you"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "So why not just use one big agent? [1] One agent doing everything can get overloaded, and lose track on long tasks. [2] A team of focused agents keeps each job small and clear, and they can even work in parallel.",
+      "data": {
+        "heading": "One agent vs a team",
+        "kicker": "WHY A TEAM?",
+        "left": {
+          "icon": "Bot",
+          "title": "One agent",
+          "stat": "Does everything",
+          "label": "can lose track on big jobs"
+        },
+        "right": {
+          "icon": "Users",
+          "title": "Agent team",
+          "stat": "Focused roles",
+          "label": "smaller jobs, can run in parallel"
+        }
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four common team patterns. [1] Manager and workers, where one boss hands out tasks. [2] Pipeline, where each agent passes work to the next, like an assembly line. [3] Debate, where agents argue different sides to reach a better answer. [4] And reviewer, where one agent checks another's work.",
+      "data": {
+        "heading": "Team patterns",
+        "kicker": "HOW TEAMS ARE SET UP",
+        "terms": [
+          [
+            "Crown",
+            "Manager-worker",
+            "A boss hands out tasks"
+          ],
+          [
+            "Workflow",
+            "Pipeline",
+            "An assembly line of agents"
+          ],
+          [
+            "MessagesSquare",
+            "Debate",
+            "Argue sides, pick the best"
+          ],
+          [
+            "CheckCircle2",
+            "Reviewer",
+            "One checks another"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where is this used? [1] In software, where one agent plans, another writes code, and another tests it. [2] In deep research tools, which send many agents to read sources at once. [3] And in customer support, where agents route, answer and escalate questions.",
+      "data": {
+        "heading": "Agent teams at work",
+        "items": [
+          [
+            "Code",
+            "Software",
+            "Plan, code and test agents"
+          ],
+          [
+            "Search",
+            "Deep research",
+            "Many readers at once"
+          ],
+          [
+            "Headset",
+            "Support",
+            "Route, answer, escalate"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think more agents always means better results. [2] Not always. Every extra agent adds cost, delay, and more chances for mistakes to be passed along. Often, one good agent with the right tools is enough.",
+      "data": {
+        "myth": "More agents always means better results.",
+        "fact": "Each agent adds cost, delay and more chances for mistakes. One good agent is often enough.",
+        "tip": "Start simple, add agents if needed"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In a multi agent system, what does the manager agent usually do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It breaks the goal into tasks, and coordinates the team!",
+      "data": {
+        "question": "The manager agent usually…",
+        "options": [
+          "Splits the goal and coordinates",
+          "Stores all the data",
+          "Generates the images"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] A multi agent system is a team of agents with different roles. [2] A manager splits the goal and coordinates. [3] Teams keep jobs focused, and can work in parallel. [4] But more agents also means more cost. [5] Next, a real world breakdown, how live translation lets two people talk in different languages. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Team",
+            "agents with different roles"
+          ],
+          [
+            "Manager",
+            "splits and coordinates"
+          ],
+          [
+            "Why",
+            "focused jobs, parallel work"
+          ],
+          [
+            "Careful",
+            "more agents, more cost"
+          ]
+        ],
+        "next": "Use Case · Live translation"
+      }
+    }
+  ],
+  "post": {
+    "caption": "One AI agent is good. A team of AI agents, a researcher, a writer and a reviewer, is something else.\n\nEpisode 18 of AI From Scratch: Multi-Agent Systems\n- What a multi-agent system is\n- A team at work: manager, researcher, writer, reviewer\n- Why a team can beat one big agent\n- Team patterns: manager-worker, pipeline, debate, reviewer\n- The myth: \"more agents always means better\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How live translation works.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #AIAgents #LearnAI #MultiAgent #AIForBeginners",
+    "pinned": "Quiz answer: The manager breaks the goal into tasks and coordinates the team. What team of AI agents would you build?",
+    "cover": "'Multi-Agent Systems' title card",
+    "alt": "Animated lesson explaining multi-agent AI systems where agents with different roles work together."
+  }
+}
