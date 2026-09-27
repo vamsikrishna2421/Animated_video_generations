@@ -1,0 +1,868 @@
+{
+  "id": "uc17",
+  "episode": 17,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Face Unlock Works",
+  "host": "female",
+  "label": "USE CASE 17",
+  "fps": 30,
+  "totalFrames": 4815,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc17/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 17",
+        "title": [
+          "Face",
+          "Unlock"
+        ],
+        "subtitle": "How your phone recognises you",
+        "buzzwords": [
+          "Face ID",
+          "Infrared",
+          "Embeddings",
+          "Liveness",
+          "Depth",
+          "Secure chip",
+          "Recognition",
+          "Biometrics"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 391,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_01.wav",
+      "cues": [
+        226,
+        290
+      ],
+      "captions": [
+        {
+          "text": "You glance at your phone,",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "and it unlocks in a",
+          "from": 60,
+          "to": 99
+        },
+        {
+          "text": "fraction of a second,",
+          "from": 99,
+          "to": 141
+        },
+        {
+          "text": "even in a dark room,",
+          "from": 141,
+          "to": 181
+        },
+        {
+          "text": "even with new glasses.",
+          "from": 181,
+          "to": 225
+        },
+        {
+          "text": "But a photo of you",
+          "from": 226,
+          "to": 253
+        },
+        {
+          "text": "won't fool it.",
+          "from": 254,
+          "to": 288
+        },
+        {
+          "text": "Let's break down how face",
+          "from": 290,
+          "to": 336
+        },
+        {
+          "text": "unlock works.",
+          "from": 339,
+          "to": 377
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "In a fraction of a second",
+        "nodes": [
+          [
+            "Camera",
+            "Capture",
+            "Infrared works in the dark"
+          ],
+          [
+            "ScanSearch",
+            "Find the face",
+            "Detection (EP 29)"
+          ],
+          [
+            "Hash",
+            "Face embedding",
+            "Numbers unique to you"
+          ],
+          [
+            "Scale",
+            "Compare",
+            "With your saved face"
+          ],
+          [
+            "Unlock",
+            "Unlock",
+            "Close enough? You're in"
+          ]
+        ]
+      },
+      "from": 391,
+      "durationInFrames": 701,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_02.wav",
+      "cues": [
+        96,
+        259,
+        350,
+        502,
+        614
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens in that",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "fraction of a second.",
+          "from": 58,
+          "to": 94
+        },
+        {
+          "text": "The camera captures your face,",
+          "from": 96,
+          "to": 156
+        },
+        {
+          "text": "often with infrared light,",
+          "from": 156,
+          "to": 208
+        },
+        {
+          "text": "so it works in the dark.",
+          "from": 208,
+          "to": 256
+        },
+        {
+          "text": "A detection model finds your",
+          "from": 259,
+          "to": 312
+        },
+        {
+          "text": "face in the frame.",
+          "from": 312,
+          "to": 347
+        },
+        {
+          "text": "A recognition model turns it",
+          "from": 350,
+          "to": 394
+        },
+        {
+          "text": "into a face embedding,",
+          "from": 394,
+          "to": 438
+        },
+        {
+          "text": "a list of numbers unique",
+          "from": 440,
+          "to": 476
+        },
+        {
+          "text": "to you.",
+          "from": 478,
+          "to": 500
+        },
+        {
+          "text": "It compares that with the",
+          "from": 502,
+          "to": 549
+        },
+        {
+          "text": "embedding saved when you set",
+          "from": 549,
+          "to": 601
+        },
+        {
+          "text": "it up,",
+          "from": 601,
+          "to": 614
+        },
+        {
+          "text": "and if they're close enough,",
+          "from": 614,
+          "to": 666
+        },
+        {
+          "text": "it unlocks.",
+          "from": 666,
+          "to": 688
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "embedmap",
+      "data": {
+        "heading": "A map of faces",
+        "kicker": "REMEMBER EP 06?",
+        "points": [
+          [
+            "You (saved)",
+            0.24,
+            0.26,
+            0
+          ],
+          [
+            "You, last week",
+            0.38,
+            0.18,
+            0
+          ],
+          [
+            "Friend",
+            0.72,
+            0.2,
+            1
+          ],
+          [
+            "Neighbour",
+            0.86,
+            0.36,
+            1
+          ],
+          [
+            "Stranger",
+            0.6,
+            0.74,
+            2
+          ],
+          [
+            "Actor",
+            0.82,
+            0.84,
+            2
+          ],
+          [
+            "Colleague",
+            0.42,
+            0.86,
+            2
+          ]
+        ],
+        "query": [
+          "You, new glasses",
+          0.32,
+          0.34
+        ],
+        "neighbors": [
+          "You (saved)",
+          "You, last week"
+        ],
+        "note": "Same person, close together"
+      },
+      "from": 1092,
+      "durationInFrames": 533,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_03.wav",
+      "cues": [
+        156,
+        298,
+        406
+      ],
+      "captions": [
+        {
+          "text": "Remember embeddings from episode six?",
+          "from": 10,
+          "to": 91
+        },
+        {
+          "text": "Faces work the same way.",
+          "from": 94,
+          "to": 154
+        },
+        {
+          "text": "Every face becomes a point",
+          "from": 156,
+          "to": 198
+        },
+        {
+          "text": "on a map,",
+          "from": 199,
+          "to": 221
+        },
+        {
+          "text": "and different people sit far apart.",
+          "from": 223,
+          "to": 296
+        },
+        {
+          "text": "Your face today,",
+          "from": 298,
+          "to": 333
+        },
+        {
+          "text": "with new glasses,",
+          "from": 333,
+          "to": 369
+        },
+        {
+          "text": "lands on the map,",
+          "from": 369,
+          "to": 406
+        },
+        {
+          "text": "and it's closest to your",
+          "from": 406,
+          "to": 457
+        },
+        {
+          "text": "own saved face,",
+          "from": 457,
+          "to": 489
+        },
+        {
+          "text": "so it unlocks.",
+          "from": 489,
+          "to": 519
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Liveness detection",
+        "short": "Live?",
+        "definition": "Checking that a real, live face is in front of the camera, not a photo or a mask.",
+        "chips": [
+          [
+            "Box",
+            "3D depth, not flat"
+          ],
+          [
+            "Eye",
+            "Natural movement"
+          ],
+          [
+            "ScanEye",
+            "Eyes on the screen"
+          ]
+        ]
+      },
+      "from": 1625,
+      "durationInFrames": 551,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_04.wav",
+      "cues": [
+        95,
+        166,
+        307,
+        413
+      ],
+      "captions": [
+        {
+          "text": "But what stops someone from",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "holding up your photo?",
+          "from": 48,
+          "to": 93
+        },
+        {
+          "text": "That's called liveness detection.",
+          "from": 95,
+          "to": 163
+        },
+        {
+          "text": "Depth sensing checks that your",
+          "from": 166,
+          "to": 208
+        },
+        {
+          "text": "face is 3D,",
+          "from": 211,
+          "to": 236
+        },
+        {
+          "text": "not a flat photo.",
+          "from": 237,
+          "to": 304
+        },
+        {
+          "text": "It looks for natural signs,",
+          "from": 307,
+          "to": 358
+        },
+        {
+          "text": "like tiny movements.",
+          "from": 360,
+          "to": 411
+        },
+        {
+          "text": "And some phones check that",
+          "from": 413,
+          "to": 454
+        },
+        {
+          "text": "your eyes are open,",
+          "from": 455,
+          "to": 492
+        },
+        {
+          "text": "and looking at the screen.",
+          "from": 494,
+          "to": 539
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Face unlock words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "UserPlus",
+            "Enrolment",
+            "First setup, face saved"
+          ],
+          [
+            "SlidersHorizontal",
+            "Threshold",
+            "How close is close enough"
+          ],
+          [
+            "DoorOpen",
+            "False accept",
+            "Wrong person gets in"
+          ],
+          [
+            "DoorClosed",
+            "False reject",
+            "Doesn't recognise you"
+          ]
+        ]
+      },
+      "from": 2176,
+      "durationInFrames": 509,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_05.wav",
+      "cues": [
+        61,
+        215,
+        318,
+        409
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "Enrolment, when you first set",
+          "from": 61,
+          "to": 106
+        },
+        {
+          "text": "up face unlock,",
+          "from": 107,
+          "to": 142
+        },
+        {
+          "text": "and it saves your face embedding.",
+          "from": 147,
+          "to": 213
+        },
+        {
+          "text": "The threshold,",
+          "from": 215,
+          "to": 237
+        },
+        {
+          "text": "how close a match must",
+          "from": 240,
+          "to": 276
+        },
+        {
+          "text": "be to unlock.",
+          "from": 277,
+          "to": 315
+        },
+        {
+          "text": "A false accept,",
+          "from": 318,
+          "to": 351
+        },
+        {
+          "text": "letting the wrong person in.",
+          "from": 353,
+          "to": 407
+        },
+        {
+          "text": "And a false reject,",
+          "from": 409,
+          "to": 443
+        },
+        {
+          "text": "not recognising you.",
+          "from": 447,
+          "to": 497
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "2D vs 3D",
+        "kicker": "NOT ALL EQUAL",
+        "left": {
+          "icon": "Image",
+          "title": "2D (camera only)",
+          "stat": "Convenient",
+          "label": "a photo may fool it"
+        },
+        "right": {
+          "icon": "Box",
+          "title": "3D (depth sensors)",
+          "stat": "Secure",
+          "label": "safe enough for payments"
+        }
+      },
+      "from": 2685,
+      "durationInFrames": 495,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_06.wav",
+      "cues": [
+        89,
+        288
+      ],
+      "captions": [
+        {
+          "text": "And not all face unlock",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "is equal.",
+          "from": 52,
+          "to": 86
+        },
+        {
+          "text": "Basic 2D face unlock uses",
+          "from": 89,
+          "to": 146
+        },
+        {
+          "text": "only the normal camera,",
+          "from": 146,
+          "to": 199
+        },
+        {
+          "text": "so a good photo can",
+          "from": 199,
+          "to": 243
+        },
+        {
+          "text": "sometimes fool it.",
+          "from": 243,
+          "to": 284
+        },
+        {
+          "text": "3D face unlock uses depth",
+          "from": 288,
+          "to": 340
+        },
+        {
+          "text": "sensors, so it's much harder",
+          "from": 340,
+          "to": 399
+        },
+        {
+          "text": "to fool,",
+          "from": 399,
+          "to": 417
+        },
+        {
+          "text": "and secure enough for payments.",
+          "from": 417,
+          "to": 482
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "My face photo is uploaded to the cloud for face unlock.",
+        "fact": "On most phones, face data stays on the device in a secure chip.",
+        "tip": "Check your phone's settings"
+      },
+      "from": 3180,
+      "durationInFrames": 485,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_07.wav",
+      "cues": [
+        58,
+        193
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think their face photo",
+          "from": 58,
+          "to": 103
+        },
+        {
+          "text": "is uploaded to the cloud",
+          "from": 104,
+          "to": 143
+        },
+        {
+          "text": "for face unlock.",
+          "from": 145,
+          "to": 192
+        },
+        {
+          "text": "On most phones,",
+          "from": 193,
+          "to": 226
+        },
+        {
+          "text": "the face data stays on",
+          "from": 226,
+          "to": 274
+        },
+        {
+          "text": "the device,",
+          "from": 274,
+          "to": 298
+        },
+        {
+          "text": "in a secure chip,",
+          "from": 298,
+          "to": 336
+        },
+        {
+          "text": "and never leaves it.",
+          "from": 336,
+          "to": 379
+        },
+        {
+          "text": "Still, it's worth checking your",
+          "from": 382,
+          "to": 433
+        },
+        {
+          "text": "phone's settings.",
+          "from": 434,
+          "to": 472
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "A photo can't unlock your phone because of…",
+        "options": [
+          "Liveness detection",
+          "A bigger screen",
+          "Dark mode"
+        ],
+        "answer": 0
+      },
+      "from": 3665,
+      "durationInFrames": 511,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_08.wav",
+      "cues": [
+        144,
+        349
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "What stops someone unlocking your",
+          "from": 44,
+          "to": 87
+        },
+        {
+          "text": "phone with a photo of you?",
+          "from": 89,
+          "to": 141
+        },
+        {
+          "text": "Pause and think,",
+          "from": 144,
+          "to": 179
+        },
+        {
+          "text": "and if you get it",
+          "from": 180,
+          "to": 198
+        },
+        {
+          "text": "right, comment below!",
+          "from": 199,
+          "to": 249
+        },
+        {
+          "text": "Liveness detection!",
+          "from": 349,
+          "to": 397
+        },
+        {
+          "text": "It checks for a real,",
+          "from": 399,
+          "to": 452
+        },
+        {
+          "text": "3D, live face.",
+          "from": 454,
+          "to": 497
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Capture",
+            "infrared, works in the dark"
+          ],
+          [
+            "Embed",
+            "your face as numbers"
+          ],
+          [
+            "Compare",
+            "close enough? unlock"
+          ],
+          [
+            "Liveness",
+            "no photos or masks"
+          ]
+        ],
+        "next": "Use Case · Self-driving cars"
+      },
+      "from": 4176,
+      "durationInFrames": 639,
+      "voiceFrom": 10,
+      "audio": "lessons/uc17/voice_09.wav",
+      "cues": [
+        45,
+        141,
+        217,
+        317,
+        418
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "The camera captures your face,",
+          "from": 45,
+          "to": 104
+        },
+        {
+          "text": "even in the dark.",
+          "from": 104,
+          "to": 139
+        },
+        {
+          "text": "A model turns it into",
+          "from": 141,
+          "to": 173
+        },
+        {
+          "text": "a face embedding.",
+          "from": 175,
+          "to": 215
+        },
+        {
+          "text": "If it's close enough to",
+          "from": 217,
+          "to": 244
+        },
+        {
+          "text": "your saved face,",
+          "from": 245,
+          "to": 275
+        },
+        {
+          "text": "it unlocks.",
+          "from": 279,
+          "to": 315
+        },
+        {
+          "text": "And liveness detection blocks photos",
+          "from": 317,
+          "to": 378
+        },
+        {
+          "text": "and masks.",
+          "from": 379,
+          "to": 415
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 418,
+          "to": 480
+        },
+        {
+          "text": "how self driving cars see",
+          "from": 482,
+          "to": 530
+        },
+        {
+          "text": "the road.",
+          "from": 531,
+          "to": 557
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 560,
+          "to": 627
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,719 @@
+{
+  "id": "ep29",
+  "episode": 29,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Computer Vision",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4658,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep29/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 29",
+        "title": [
+          "Computer",
+          "Vision"
+        ],
+        "subtitle": "How AI sees images",
+        "buzzwords": [
+          "Pixels",
+          "Detection",
+          "Segmentation",
+          "CNN",
+          "Vision transformer",
+          "Tracking",
+          "Cameras",
+          "Recognition"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 412,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_01.wav",
+      "cues": [
+        238,
+        308
+      ],
+      "captions": [
+        {
+          "text": "Your phone unlocks with your",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "face, your gallery finds every",
+          "from": 56,
+          "to": 118
+        },
+        {
+          "text": "picture of your dog,",
+          "from": 121,
+          "to": 160
+        },
+        {
+          "text": "and cars can spot pedestrians.",
+          "from": 161,
+          "to": 235
+        },
+        {
+          "text": "All of this is computer vision.",
+          "from": 238,
+          "to": 305
+        },
+        {
+          "text": "Let's understand how AI sees images.",
+          "from": 308,
+          "to": 399
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Computer vision",
+        "short": "Vision",
+        "definition": "AI that understands images and video, starting from a grid of pixel numbers.",
+        "chips": [
+          [
+            "Grid3x3",
+            "Pixels as numbers"
+          ],
+          [
+            "Shapes",
+            "Edges and shapes"
+          ],
+          [
+            "Eye",
+            "Objects and scenes"
+          ]
+        ]
+      },
+      "from": 412,
+      "durationInFrames": 531,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_02.wav",
+      "cues": [
+        161,
+        333,
+        402,
+        430
+      ],
+      "captions": [
+        {
+          "text": "Computer vision is the field",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "of AI that understands images",
+          "from": 58,
+          "to": 120
+        },
+        {
+          "text": "and videos.",
+          "from": 122,
+          "to": 159
+        },
+        {
+          "text": "To a computer,",
+          "from": 161,
+          "to": 190
+        },
+        {
+          "text": "an image is just a",
+          "from": 191,
+          "to": 224
+        },
+        {
+          "text": "grid of numbers,",
+          "from": 226,
+          "to": 264
+        },
+        {
+          "text": "one for each pixel's colour.",
+          "from": 266,
+          "to": 331
+        },
+        {
+          "text": "The model finds edges and",
+          "from": 333,
+          "to": 386
+        },
+        {
+          "text": "shapes, then objects,",
+          "from": 386,
+          "to": 430
+        },
+        {
+          "text": "and finally,",
+          "from": 430,
+          "to": 456
+        },
+        {
+          "text": "what's happening in the scene.",
+          "from": 456,
+          "to": 519
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Four classic tasks",
+        "kicker": "WHAT VISION MODELS DO",
+        "steps": [
+          [
+            "Tag",
+            "Classification",
+            "“It's a cat”"
+          ],
+          [
+            "SquareDashed",
+            "Detection",
+            "Boxes around objects"
+          ],
+          [
+            "Shapes",
+            "Segmentation",
+            "Exact pixels of each object"
+          ],
+          [
+            "Navigation",
+            "Tracking",
+            "Follow objects across frames"
+          ]
+        ]
+      },
+      "from": 943,
+      "durationInFrames": 581,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_03.wav",
+      "cues": [
+        100,
+        203,
+        333,
+        459
+      ],
+      "captions": [
+        {
+          "text": "Computer vision has four classic tasks.",
+          "from": 10,
+          "to": 98
+        },
+        {
+          "text": "Classification, what's in this image?",
+          "from": 100,
+          "to": 174
+        },
+        {
+          "text": "A cat.",
+          "from": 176,
+          "to": 200
+        },
+        {
+          "text": "Detection, where are the objects?",
+          "from": 203,
+          "to": 263
+        },
+        {
+          "text": "It draws a box around",
+          "from": 266,
+          "to": 302
+        },
+        {
+          "text": "each one.",
+          "from": 303,
+          "to": 330
+        },
+        {
+          "text": "Segmentation, which exact pixels belong",
+          "from": 333,
+          "to": 414
+        },
+        {
+          "text": "to each object.",
+          "from": 416,
+          "to": 456
+        },
+        {
+          "text": "And tracking,",
+          "from": 459,
+          "to": 484
+        },
+        {
+          "text": "following objects across video frames.",
+          "from": 489,
+          "to": 569
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "neural",
+      "data": {
+        "heading": "Layers of seeing",
+        "kicker": "REMEMBER EP 01?",
+        "layers": [
+          "Pixels",
+          "Edges",
+          "Shapes",
+          "Objects"
+        ]
+      },
+      "from": 1524,
+      "durationInFrames": 447,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_04.wav",
+      "cues": [
+        145,
+        209,
+        276,
+        351
+      ],
+      "captions": [
+        {
+          "text": "Inside, it works in layers,",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "just like we saw in",
+          "from": 74,
+          "to": 103
+        },
+        {
+          "text": "episode one.",
+          "from": 105,
+          "to": 143
+        },
+        {
+          "text": "It starts with raw pixels.",
+          "from": 145,
+          "to": 206
+        },
+        {
+          "text": "Early layers find edges.",
+          "from": 209,
+          "to": 273
+        },
+        {
+          "text": "Middle layers combine them into shapes.",
+          "from": 276,
+          "to": 344
+        },
+        {
+          "text": "And later layers recognise whole objects.",
+          "from": 351,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two designs",
+        "kicker": "CNN VS TRANSFORMER",
+        "left": {
+          "icon": "Grid3x3",
+          "title": "CNN",
+          "stat": "Sliding filters",
+          "label": "great at local patterns"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Vision transformer",
+          "stat": "Patches + attention",
+          "label": "relates the whole image"
+        }
+      },
+      "from": 1971,
+      "durationInFrames": 588,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_05.wav",
+      "cues": [
+        71,
+        325
+      ],
+      "captions": [
+        {
+          "text": "There are two main designs.",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "Convolutional networks slide small filters",
+          "from": 71,
+          "to": 154
+        },
+        {
+          "text": "across the image,",
+          "from": 155,
+          "to": 191
+        },
+        {
+          "text": "looking at nearby pixels,",
+          "from": 193,
+          "to": 247
+        },
+        {
+          "text": "and they're great at local patterns.",
+          "from": 248,
+          "to": 322
+        },
+        {
+          "text": "Vision transformers cut the image",
+          "from": 325,
+          "to": 395
+        },
+        {
+          "text": "into patches,",
+          "from": 395,
+          "to": 424
+        },
+        {
+          "text": "and use attention,",
+          "from": 424,
+          "to": 464
+        },
+        {
+          "text": "from episode 27,",
+          "from": 464,
+          "to": 499
+        },
+        {
+          "text": "to relate every patch to",
+          "from": 499,
+          "to": 551
+        },
+        {
+          "text": "every other.",
+          "from": 551,
+          "to": 578
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Vision in action",
+        "items": [
+          [
+            "ScanFace",
+            "Your phone",
+            "Face unlock, photo search"
+          ],
+          [
+            "Car",
+            "Traffic",
+            "Number plate reading"
+          ],
+          [
+            "Factory",
+            "Factories",
+            "Spotting defects"
+          ]
+        ]
+      },
+      "from": 2559,
+      "durationInFrames": 355,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_06.wav",
+      "cues": [
+        54,
+        152,
+        243
+      ],
+      "captions": [
+        {
+          "text": "And it's everywhere.",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "Face unlock,",
+          "from": 54,
+          "to": 84
+        },
+        {
+          "text": "and photo search on your phone.",
+          "from": 88,
+          "to": 149
+        },
+        {
+          "text": "Cameras that read number plates",
+          "from": 152,
+          "to": 199
+        },
+        {
+          "text": "at toll plazas.",
+          "from": 200,
+          "to": 241
+        },
+        {
+          "text": "And factories that spot defects",
+          "from": 243,
+          "to": 296
+        },
+        {
+          "text": "on production lines.",
+          "from": 297,
+          "to": 342
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Computer vision sees the world just like we do.",
+        "fact": "It can be fooled by odd lighting, angles or tiny pixel changes, so critical systems double-check.",
+        "tip": "Multiple checks for safety"
+      },
+      "from": 2914,
+      "durationInFrames": 536,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_07.wav",
+      "cues": [
+        59,
+        176
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think computer vision sees",
+          "from": 59,
+          "to": 115
+        },
+        {
+          "text": "the world just like we do.",
+          "from": 116,
+          "to": 174
+        },
+        {
+          "text": "It can be fooled by",
+          "from": 176,
+          "to": 202
+        },
+        {
+          "text": "things humans ignore,",
+          "from": 204,
+          "to": 249
+        },
+        {
+          "text": "like odd lighting,",
+          "from": 250,
+          "to": 291
+        },
+        {
+          "text": "unusual angles,",
+          "from": 293,
+          "to": 332
+        },
+        {
+          "text": "or tiny changes to pixels.",
+          "from": 334,
+          "to": 409
+        },
+        {
+          "text": "That's why safety critical systems",
+          "from": 411,
+          "to": 472
+        },
+        {
+          "text": "use multiple checks.",
+          "from": 475,
+          "to": 523
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Boxes around objects is called…",
+        "options": [
+          "Classification",
+          "Detection",
+          "Tracking"
+        ],
+        "answer": 1
+      },
+      "from": 3450,
+      "durationInFrames": 497,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_08.wav",
+      "cues": [
+        150,
+        360
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "Which task draws a box",
+          "from": 45,
+          "to": 85
+        },
+        {
+          "text": "around each object in an image?",
+          "from": 87,
+          "to": 147
+        },
+        {
+          "text": "Pause and think,",
+          "from": 150,
+          "to": 188
+        },
+        {
+          "text": "and if you get it",
+          "from": 189,
+          "to": 207
+        },
+        {
+          "text": "right, comment below!",
+          "from": 208,
+          "to": 260
+        },
+        {
+          "text": "Detection!",
+          "from": 360,
+          "to": 393
+        },
+        {
+          "text": "It finds where each object",
+          "from": 395,
+          "to": 434
+        },
+        {
+          "text": "is, with a box.",
+          "from": 437,
+          "to": 482
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Pixels",
+            "images are numbers"
+          ],
+          [
+            "Tasks",
+            "classify, detect, segment, track"
+          ],
+          [
+            "Designs",
+            "CNNs, vision transformers"
+          ],
+          [
+            "Careful",
+            "it can be fooled"
+          ]
+        ],
+        "next": "Use Case · Face unlock"
+      },
+      "from": 3947,
+      "durationInFrames": 711,
+      "voiceFrom": 10,
+      "audio": "lessons/ep29/voice_09.wav",
+      "cues": [
+        46,
+        133,
+        250,
+        346,
+        453
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "To AI,",
+          "from": 46,
+          "to": 69
+        },
+        {
+          "text": "images are grids of numbers.",
+          "from": 71,
+          "to": 130
+        },
+        {
+          "text": "Vision models classify,",
+          "from": 133,
+          "to": 178
+        },
+        {
+          "text": "detect, segment and track.",
+          "from": 183,
+          "to": 248
+        },
+        {
+          "text": "They're built with CNNs or",
+          "from": 250,
+          "to": 298
+        },
+        {
+          "text": "vision transformers.",
+          "from": 299,
+          "to": 344
+        },
+        {
+          "text": "And they can be fooled,",
+          "from": 346,
+          "to": 375
+        },
+        {
+          "text": "so critical systems double check.",
+          "from": 380,
+          "to": 450
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 453,
+          "to": 518
+        },
+        {
+          "text": "how face unlock recognises you,",
+          "from": 518,
+          "to": 587
+        },
+        {
+          "text": "even in the dark.",
+          "from": 587,
+          "to": 626
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 630,
+          "to": 698
+        }
+      ],
+      "image": null
+    }
+  ]
+}

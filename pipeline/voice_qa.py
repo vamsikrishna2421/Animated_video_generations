@@ -29,6 +29,26 @@ def us(w: str) -> str:
     return w
 
 
+def split_on_silence(a, sr, min_gap=1.5):
+    """Whisper tends to stop after a long silence (the quiz countdown), so transcribe each side."""
+    import numpy as np
+    if a.ndim > 1:
+        a = a.mean(axis=1)
+    loud = np.abs(a) > 0.01
+    win = int(0.05 * sr)
+    frames = loud[: len(loud) // win * win].reshape(-1, win).any(axis=1)
+    parts, start, quiet = [], 0, 0
+    for k, f in enumerate(frames):
+        quiet = 0 if f else quiet + 1
+        if quiet * 0.05 >= min_gap:
+            end = (k - quiet + 1) * win
+            if end > start:
+                parts.append(a[start:end])
+            start, quiet = (k + 1) * win, 0
+    parts.append(a[start:])
+    return [p for p in parts if len(p) > sr * 0.3]
+
+
 def words(t: str):
     return [us(w) for w in re.findall(r"[a-z0-9]+", t.lower().replace("’", "'"))]
 
@@ -40,7 +60,7 @@ def main() -> None:
         issues = []
         for i, sc in enumerate(spec["scenes"]):
             a, sr = sf.read(ROOT / "video" / "public" / "lessons" / ep / f"voice_{i + 1:02d}.wav")
-            heard_text = asr_check.transcribe(rec, a, sr)
+            heard_text = " ".join(asr_check.transcribe(rec, part, sr) for part in split_on_silence(a, sr))
             heard = set(words(heard_text))
             said = words(re.sub(r"\[\d+\]|<pause [\d.]+>", "", sc["text"]))
             miss = [w for w in dict.fromkeys(said) if len(w) > 3 and w not in heard and w not in IGNORE]

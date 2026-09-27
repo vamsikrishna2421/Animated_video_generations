@@ -1,0 +1,266 @@
+{
+  "id": "uc17",
+  "episode": 17,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 17",
+  "handle": "@ai_maastaaru",
+  "title": "How Face Unlock Works",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You glance at your phone, and it unlocks in a fraction of a second, even in a dark room, even with new glasses. [1] But a photo of you won't fool it. [2] Let's break down how face unlock works.",
+      "data": {
+        "kicker": "USE CASE 17",
+        "title": [
+          "Face",
+          "Unlock"
+        ],
+        "subtitle": "How your phone recognises you",
+        "buzzwords": [
+          "Face ID",
+          "Infrared",
+          "Embeddings",
+          "Liveness",
+          "Depth",
+          "Secure chip",
+          "Recognition",
+          "Biometrics"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's what happens in that fraction of a second. [1] The camera captures your face, often with infrared light, so it works in the dark. [2] A detection model finds your face in the frame. [3] A recognition model turns it into a face embedding, a list of numbers unique to you. [4] It compares that with the embedding saved when you set it up, [5] and if they're close enough, it unlocks.",
+      "data": {
+        "heading": "In a fraction of a second",
+        "nodes": [
+          [
+            "Camera",
+            "Capture",
+            "Infrared works in the dark"
+          ],
+          [
+            "ScanSearch",
+            "Find the face",
+            "Detection (EP 29)"
+          ],
+          [
+            "Hash",
+            "Face embedding",
+            "Numbers unique to you"
+          ],
+          [
+            "Scale",
+            "Compare",
+            "With your saved face"
+          ],
+          [
+            "Unlock",
+            "Unlock",
+            "Close enough? You're in"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "embedmap",
+      "text": "Remember embeddings from episode six? Faces work the same way. [1] Every face becomes a point on a map, and different people sit far apart. [2] Your face today, with new glasses, lands on the map, [3] and it's closest to your own saved face, so it unlocks.",
+      "data": {
+        "heading": "A map of faces",
+        "kicker": "REMEMBER EP 06?",
+        "points": [
+          [
+            "You (saved)",
+            0.24,
+            0.26,
+            0
+          ],
+          [
+            "You, last week",
+            0.38,
+            0.18,
+            0
+          ],
+          [
+            "Friend",
+            0.72,
+            0.2,
+            1
+          ],
+          [
+            "Neighbour",
+            0.86,
+            0.36,
+            1
+          ],
+          [
+            "Stranger",
+            0.6,
+            0.74,
+            2
+          ],
+          [
+            "Actor",
+            0.82,
+            0.84,
+            2
+          ],
+          [
+            "Colleague",
+            0.42,
+            0.86,
+            2
+          ]
+        ],
+        "query": [
+          "You, new glasses",
+          0.32,
+          0.34
+        ],
+        "neighbors": [
+          "You (saved)",
+          "You, last week"
+        ],
+        "note": "Same person, close together"
+      }
+    },
+    {
+      "type": "definition",
+      "text": "But what stops someone from holding up your photo? [1] That's called liveness detection. [2] Depth sensing checks that your face is 3D, not a flat photo. [3] It looks for natural signs, like tiny movements. [4] And some phones check that your eyes are open, and looking at the screen.",
+      "data": {
+        "term": "Liveness detection",
+        "short": "Live?",
+        "definition": "Checking that a real, live face is in front of the camera, not a photo or a mask.",
+        "chips": [
+          [
+            "Box",
+            "3D depth, not flat"
+          ],
+          [
+            "Eye",
+            "Natural movement"
+          ],
+          [
+            "ScanEye",
+            "Eyes on the screen"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Enrolment, when you first set up face unlock, and it saves your face embedding. [2] The threshold, how close a match must be to unlock. [3] A false accept, letting the wrong person in. [4] And a false reject, not recognising you.",
+      "data": {
+        "heading": "Face unlock words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "UserPlus",
+            "Enrolment",
+            "First setup, face saved"
+          ],
+          [
+            "SlidersHorizontal",
+            "Threshold",
+            "How close is close enough"
+          ],
+          [
+            "DoorOpen",
+            "False accept",
+            "Wrong person gets in"
+          ],
+          [
+            "DoorClosed",
+            "False reject",
+            "Doesn't recognise you"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "And not all face unlock is equal. [1] Basic 2D face unlock uses only the normal camera, so a good photo can sometimes fool it. [2] 3D face unlock uses depth sensors, so it's much harder to fool, and secure enough for payments.",
+      "data": {
+        "heading": "2D vs 3D",
+        "kicker": "NOT ALL EQUAL",
+        "left": {
+          "icon": "Image",
+          "title": "2D (camera only)",
+          "stat": "Convenient",
+          "label": "a photo may fool it"
+        },
+        "right": {
+          "icon": "Box",
+          "title": "3D (depth sensors)",
+          "stat": "Secure",
+          "label": "safe enough for payments"
+        }
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think their face photo is uploaded to the cloud for face unlock. [2] On most phones, the face data stays on the device, in a secure chip, and never leaves it. Still, it's worth checking your phone's settings.",
+      "data": {
+        "myth": "My face photo is uploaded to the cloud for face unlock.",
+        "fact": "On most phones, face data stays on the device in a secure chip.",
+        "tip": "Check your phone's settings"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What stops someone unlocking your phone with a photo of you? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Liveness detection! It checks for a real, 3D, live face.",
+      "data": {
+        "question": "A photo can't unlock your phone because of…",
+        "options": [
+          "Liveness detection",
+          "A bigger screen",
+          "Dark mode"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The camera captures your face, even in the dark. [2] A model turns it into a face embedding. [3] If it's close enough to your saved face, it unlocks. [4] And liveness detection blocks photos and masks. [5] Next, a real world breakdown, how self driving cars see the road. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Capture",
+            "infrared, works in the dark"
+          ],
+          [
+            "Embed",
+            "your face as numbers"
+          ],
+          [
+            "Compare",
+            "close enough? unlock"
+          ],
+          [
+            "Liveness",
+            "no photos or masks"
+          ]
+        ],
+        "next": "Use Case · Self-driving cars"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Your phone unlocks in the dark, with new glasses, but not with a photo of you. How?\n\nReal World AI, Use Case 17: face unlock\n- The flow: capture, find the face, embed, compare, unlock\n- A map of faces: same person, close together\n- Liveness detection: why a photo won't work\n- 2D vs 3D face unlock\n- Where your face data actually lives\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How self-driving cars see the road.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #FaceUnlock #LearnAI #ComputerVision #AIForBeginners",
+    "pinned": "Quiz answer: Liveness detection, it checks for a real, 3D, live face. Does your phone have 2D or 3D face unlock?",
+    "cover": "'Face Unlock' title card",
+    "alt": "Animated breakdown of how phone face unlock uses infrared capture, face embeddings and liveness detection."
+  }
+}
