@@ -32,6 +32,10 @@ PRON = {
     # Hindi voices voice a sentence-initial k ("quick quiz" -> "guig guiz"); aspirate these.
     "Quick": "kʰwˈɪk", "quick": "kʰwˈɪk", "quiz": "kʰwˈɪz",
     "Cost": "kʰˈɔːst", "cost": "kʰˈɔːst",
+    # Spelled-out plural acronym: "el-el-emz", not "el-el-em-es".
+    "L L Ms": "ˈɛl ˈɛl ˈɛmz",
+    # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.
+    "is live": "ɪz lˈaɪv", "is already live": "ɪz ɔːlɹˈɛdi lˈaɪv", "now live": "nˈaʊ lˈaɪv",
 }
 
 
