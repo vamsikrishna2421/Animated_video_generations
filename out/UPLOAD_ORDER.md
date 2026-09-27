@@ -56,7 +56,7 @@ Already posted: `out/posted/`.
 | 049 | ep46 | Copyright and AI | ready |
 | 050 | ep47 | Guardrails in Real AI Products | ready |
 | 051 | ep48 | AI Laws Around the World | ready |
-| 052 | ep49 | AI and Jobs | rendering soon |
+| 052 | ep49 | AI and Jobs | ready |
 | 053 | q05 | Quiz #5: Episodes 41–49 | rendering soon |
 | 054 | ep50 | Your First AI API Call | rendering soon |
 | 055 | ep51 | Build a Chatbot with a System Prompt | rendering soon |
