@@ -223,6 +223,24 @@ Next: MCP, the universal connector for AI tools.
  pinned="Quiz answer: An agent works in a loop, using tools, toward a goal. What's one task you'd hand over to an AI agent?",
  cover="'AI Agents' title card",
  alt="Animated lesson explaining AI agents with a plan-act-observe loop and a trip-planning example."),
+"ep11": dict(
+ caption=f"""How does one AI connect to Gmail, your calendar, GitHub and your company data?
+
+Episode 11 of AI From Scratch: MCP (Model Context Protocol)
+- Why AI needed a "USB-C port"
+- What MCP is, in plain words
+- How it flows: host, MCP client, MCP server, your data
+- MCP in 4 words: host, server, tools, resources
+- Where it's used today: assistants, coding tools, company data
+
+{QUIZ}
+
+Next: Multimodal AI, or how AI sees, hears and speaks.
+{NEXT}""",
+ tags="#AIMaastaaru #MCP #LearnAI #AIAgents #AIForBeginners",
+ pinned="Quiz answer: An MCP server is a connector for one app or data source, like Gmail or GitHub. Which app would you connect your AI to first?",
+ cover="'MCP' title card",
+ alt="Animated lesson explaining the Model Context Protocol, the open standard that connects AI apps to tools and data."),
 }
 
 

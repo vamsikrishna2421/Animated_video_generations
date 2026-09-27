@@ -1,0 +1,781 @@
+{
+  "id": "ep11",
+  "episode": 11,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "MCP Model Context Protocol",
+  "host": "female",
+  "fps": 30,
+  "totalFrames": 5032,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep11/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 11",
+        "title": [
+          "MCP"
+        ],
+        "subtitle": "The USB-C port for AI",
+        "buzzwords": [
+          "Model Context Protocol",
+          "Servers",
+          "Clients",
+          "Tools",
+          "Connectors",
+          "Open standard",
+          "Integrations",
+          "Agents"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 395,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_01.wav",
+      "cues": [
+        176,
+        274
+      ],
+      "captions": [
+        {
+          "text": "Your AI assistant can read",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "your email,",
+          "from": 60,
+          "to": 85
+        },
+        {
+          "text": "check your calendar,",
+          "from": 87,
+          "to": 118
+        },
+        {
+          "text": "even open your code.",
+          "from": 121,
+          "to": 173
+        },
+        {
+          "text": "So how does one AI",
+          "from": 176,
+          "to": 212
+        },
+        {
+          "text": "connect to so many different apps?",
+          "from": 214,
+          "to": 272
+        },
+        {
+          "text": "The answer is MCP.",
+          "from": 274,
+          "to": 337
+        },
+        {
+          "text": "Let's understand it.",
+          "from": 339,
+          "to": 382
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Before vs after MCP",
+        "left": {
+          "icon": "Cable",
+          "title": "Before MCP",
+          "stat": "Custom wiring",
+          "label": "a new integration for every app"
+        },
+        "right": {
+          "icon": "Usb",
+          "title": "With MCP",
+          "stat": "One standard",
+          "label": "plug in any tool"
+        }
+      },
+      "from": 395,
+      "durationInFrames": 534,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_02.wav",
+      "cues": [
+        99,
+        262
+      ],
+      "captions": [
+        {
+          "text": "Remember when every phone had",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "its own charger?",
+          "from": 56,
+          "to": 97
+        },
+        {
+          "text": "AI tools had the same problem.",
+          "from": 99,
+          "to": 172
+        },
+        {
+          "text": "Every app needed its own",
+          "from": 174,
+          "to": 214
+        },
+        {
+          "text": "custom connection.",
+          "from": 215,
+          "to": 260
+        },
+        {
+          "text": "MCP is like USB-C for AI.",
+          "from": 262,
+          "to": 370
+        },
+        {
+          "text": "One standard plug,",
+          "from": 374,
+          "to": 414
+        },
+        {
+          "text": "so any AI can connect",
+          "from": 416,
+          "to": 459
+        },
+        {
+          "text": "to any tool that supports it.",
+          "from": 460,
+          "to": 522
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Model Context Protocol",
+        "short": "MCP",
+        "definition": "An open standard that lets AI apps plug into outside tools and data in one common way.",
+        "chips": [
+          [
+            "Wrench",
+            "Use tools"
+          ],
+          [
+            "FolderOpen",
+            "Read data"
+          ],
+          [
+            "Blocks",
+            "Connect apps"
+          ]
+        ]
+      },
+      "from": 929,
+      "durationInFrames": 572,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_03.wav",
+      "cues": [
+        116,
+        399,
+        422,
+        477
+      ],
+      "captions": [
+        {
+          "text": "MCP stands for Model Context Protocol.",
+          "from": 10,
+          "to": 114
+        },
+        {
+          "text": "It's an open standard,",
+          "from": 116,
+          "to": 156
+        },
+        {
+          "text": "first released by Anthropic,",
+          "from": 158,
+          "to": 219
+        },
+        {
+          "text": "that lets AI apps connect",
+          "from": 220,
+          "to": 269
+        },
+        {
+          "text": "to outside tools and data",
+          "from": 271,
+          "to": 319
+        },
+        {
+          "text": "in one common way.",
+          "from": 321,
+          "to": 369
+        },
+        {
+          "text": "So an AI can use",
+          "from": 372,
+          "to": 408
+        },
+        {
+          "text": "tools, read your files and",
+          "from": 408,
+          "to": 464
+        },
+        {
+          "text": "data, and work with the",
+          "from": 464,
+          "to": 514
+        },
+        {
+          "text": "apps you already use.",
+          "from": 514,
+          "to": 560
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How MCP works",
+        "nodes": [
+          [
+            "MessageSquareText",
+            "You ask",
+            "“What's on my calendar tomorrow?”"
+          ],
+          [
+            "Laptop",
+            "MCP client",
+            "Lives inside your AI app"
+          ],
+          [
+            "Server",
+            "MCP server",
+            "Knows how to talk to the calendar"
+          ],
+          [
+            "Database",
+            "Your data",
+            "Fetches tomorrow's events"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“You have two meetings tomorrow”"
+          ]
+        ]
+      },
+      "from": 1501,
+      "durationInFrames": 665,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_04.wav",
+      "cues": [
+        58,
+        166,
+        290,
+        463,
+        517
+      ],
+      "captions": [
+        {
+          "text": "Let's see how it flows.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "You ask your AI app,",
+          "from": 58,
+          "to": 101
+        },
+        {
+          "text": "what's on my calendar tomorrow?",
+          "from": 103,
+          "to": 163
+        },
+        {
+          "text": "Inside the app,",
+          "from": 166,
+          "to": 192
+        },
+        {
+          "text": "an MCP client handles the connection.",
+          "from": 195,
+          "to": 288
+        },
+        {
+          "text": "It talks to an MCP",
+          "from": 290,
+          "to": 336
+        },
+        {
+          "text": "server, a small program that",
+          "from": 338,
+          "to": 392
+        },
+        {
+          "text": "knows how to work with",
+          "from": 393,
+          "to": 423
+        },
+        {
+          "text": "your calendar.",
+          "from": 424,
+          "to": 461
+        },
+        {
+          "text": "The server fetches your events,",
+          "from": 463,
+          "to": 516
+        },
+        {
+          "text": "and the AI reads them",
+          "from": 517,
+          "to": 558
+        },
+        {
+          "text": "and answers,",
+          "from": 559,
+          "to": 589
+        },
+        {
+          "text": "you have two meetings tomorrow.",
+          "from": 591,
+          "to": 654
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "MCP in 4 words",
+        "terms": [
+          [
+            "Laptop",
+            "Host",
+            "The AI app you use"
+          ],
+          [
+            "Server",
+            "MCP server",
+            "A connector for one app or data source"
+          ],
+          [
+            "Wrench",
+            "Tools",
+            "Actions it can take"
+          ],
+          [
+            "FileText",
+            "Resources",
+            "Data it can share"
+          ]
+        ]
+      },
+      "from": 2166,
+      "durationInFrames": 565,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_05.wav",
+      "cues": [
+        58,
+        166,
+        319,
+        436
+      ],
+      "captions": [
+        {
+          "text": "Four words to remember.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "The host is the AI",
+          "from": 58,
+          "to": 98
+        },
+        {
+          "text": "app you use,",
+          "from": 100,
+          "to": 125
+        },
+        {
+          "text": "like Claude.",
+          "from": 128,
+          "to": 163
+        },
+        {
+          "text": "An MCP server is the",
+          "from": 166,
+          "to": 214
+        },
+        {
+          "text": "connector for one app,",
+          "from": 214,
+          "to": 266
+        },
+        {
+          "text": "like Gmail or GitHub.",
+          "from": 266,
+          "to": 316
+        },
+        {
+          "text": "Tools are the actions it",
+          "from": 319,
+          "to": 358
+        },
+        {
+          "text": "offers, like sending an email.",
+          "from": 359,
+          "to": 434
+        },
+        {
+          "text": "And resources are the data",
+          "from": 436,
+          "to": 477
+        },
+        {
+          "text": "it can share,",
+          "from": 478,
+          "to": 506
+        },
+        {
+          "text": "like your documents.",
+          "from": 508,
+          "to": 552
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "MCP in action",
+        "items": [
+          [
+            "Mail",
+            "Personal assistants",
+            "Gmail, Drive, calendar, Slack"
+          ],
+          [
+            "Github",
+            "Coding assistants",
+            "Your code, GitHub, terminals"
+          ],
+          [
+            "Database",
+            "Company data",
+            "Internal tools and databases"
+          ]
+        ]
+      },
+      "from": 2731,
+      "durationInFrames": 556,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_06.wav",
+      "cues": [
+        87,
+        235,
+        353
+      ],
+      "captions": [
+        {
+          "text": "So where is MCP used today?",
+          "from": 10,
+          "to": 85
+        },
+        {
+          "text": "AI assistants that connect to",
+          "from": 87,
+          "to": 137
+        },
+        {
+          "text": "your Gmail,",
+          "from": 138,
+          "to": 164
+        },
+        {
+          "text": "Google Drive or Slack.",
+          "from": 170,
+          "to": 232
+        },
+        {
+          "text": "Coding assistants that read your",
+          "from": 235,
+          "to": 295
+        },
+        {
+          "text": "project, and work with GitHub.",
+          "from": 295,
+          "to": 351
+        },
+        {
+          "text": "And companies that connect AI",
+          "from": 353,
+          "to": 408
+        },
+        {
+          "text": "to their own internal databases,",
+          "from": 409,
+          "to": 471
+        },
+        {
+          "text": "safely, through one standard.",
+          "from": 474,
+          "to": 545
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "MCP only works with one company's AI.",
+        "fact": "It's an open standard. Build one MCP server, and many different AI apps can use it.",
+        "tip": "Build once, connect everywhere"
+      },
+      "from": 3287,
+      "durationInFrames": 553,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_07.wav",
+      "cues": [
+        59,
+        185
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think MCP only works",
+          "from": 59,
+          "to": 123
+        },
+        {
+          "text": "with one company's AI.",
+          "from": 124,
+          "to": 183
+        },
+        {
+          "text": "It doesn't.",
+          "from": 185,
+          "to": 215
+        },
+        {
+          "text": "It's an open standard,",
+          "from": 218,
+          "to": 262
+        },
+        {
+          "text": "and many major AI companies",
+          "from": 263,
+          "to": 318
+        },
+        {
+          "text": "and tools now support it.",
+          "from": 320,
+          "to": 380
+        },
+        {
+          "text": "Build one MCP server,",
+          "from": 382,
+          "to": 451
+        },
+        {
+          "text": "and lots of different AI",
+          "from": 456,
+          "to": 498
+        },
+        {
+          "text": "apps can use it.",
+          "from": 499,
+          "to": 541
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "An MCP server is…",
+        "options": [
+          "The AI model itself",
+          "A connector for one app or data source",
+          "A cloud computer you rent"
+        ],
+        "answer": 1
+      },
+      "from": 3840,
+      "durationInFrames": 480,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_08.wav",
+      "cues": [
+        139,
+        332
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 33
+        },
+        {
+          "text": "In MCP,",
+          "from": 44,
+          "to": 75
+        },
+        {
+          "text": "what is an MCP server?",
+          "from": 80,
+          "to": 137
+        },
+        {
+          "text": "Pause and think,",
+          "from": 139,
+          "to": 168
+        },
+        {
+          "text": "and if you get it",
+          "from": 170,
+          "to": 186
+        },
+        {
+          "text": "right, comment below!",
+          "from": 188,
+          "to": 240
+        },
+        {
+          "text": "It's a connector for one",
+          "from": 332,
+          "to": 382
+        },
+        {
+          "text": "app or data source,",
+          "from": 382,
+          "to": 423
+        },
+        {
+          "text": "like Gmail or GitHub!",
+          "from": 423,
+          "to": 467
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "MCP",
+            "USB-C for AI tools"
+          ],
+          [
+            "Host",
+            "your AI app, with a client inside"
+          ],
+          [
+            "Servers",
+            "connect apps and data"
+          ],
+          [
+            "Open",
+            "build once, connect everywhere"
+          ]
+        ],
+        "next": "EP 12 · Multimodal AI"
+      },
+      "from": 4320,
+      "durationInFrames": 712,
+      "voiceFrom": 10,
+      "audio": "lessons/ep11/voice_09.wav",
+      "cues": [
+        46,
+        139,
+        266,
+        360,
+        470
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "MCP is like USB-C for AI.",
+          "from": 46,
+          "to": 136
+        },
+        {
+          "text": "Your AI app is the",
+          "from": 139,
+          "to": 172
+        },
+        {
+          "text": "host, with an MCP client inside.",
+          "from": 174,
+          "to": 263
+        },
+        {
+          "text": "MCP servers connect it to",
+          "from": 266,
+          "to": 315
+        },
+        {
+          "text": "apps and data.",
+          "from": 318,
+          "to": 358
+        },
+        {
+          "text": "And because it's open,",
+          "from": 360,
+          "to": 394
+        },
+        {
+          "text": "you build once and connect everywhere.",
+          "from": 396,
+          "to": 467
+        },
+        {
+          "text": "Next, we'll see how AI",
+          "from": 470,
+          "to": 520
+        },
+        {
+          "text": "can see,",
+          "from": 522,
+          "to": 542
+        },
+        {
+          "text": "hear and speak,",
+          "from": 546,
+          "to": 572
+        },
+        {
+          "text": "with multimodal AI.",
+          "from": 575,
+          "to": 633
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 637,
+          "to": 700
+        }
+      ],
+      "image": null
+    }
+  ]
+}

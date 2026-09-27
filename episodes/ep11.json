@@ -1,0 +1,217 @@
+{
+  "id": "ep11",
+  "episode": 11,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "MCP Model Context Protocol",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Your AI assistant can read your email, check your calendar, even open your code. [1] So how does one AI connect to so many different apps? [2] The answer is MCP. Let's understand it.",
+      "data": {
+        "kicker": "EPISODE 11",
+        "title": [
+          "MCP"
+        ],
+        "subtitle": "The USB-C port for AI",
+        "buzzwords": [
+          "Model Context Protocol",
+          "Servers",
+          "Clients",
+          "Tools",
+          "Connectors",
+          "Open standard",
+          "Integrations",
+          "Agents"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Remember when every phone had its own charger? [1] AI tools had the same problem. Every app needed its own custom connection. [2] MCP is like USB-C for AI. One standard plug, so any AI can connect to any tool that supports it.",
+      "data": {
+        "heading": "Before vs after MCP",
+        "left": {
+          "icon": "Cable",
+          "title": "Before MCP",
+          "stat": "Custom wiring",
+          "label": "a new integration for every app"
+        },
+        "right": {
+          "icon": "Usb",
+          "title": "With MCP",
+          "stat": "One standard",
+          "label": "plug in any tool"
+        }
+      }
+    },
+    {
+      "type": "definition",
+      "text": "MCP stands for Model Context Protocol. [1] It's an open standard, first released by Anthropic, that lets AI apps connect to outside tools and data in one common way. So an AI can [2] use tools, [3] read your files and data, [4] and work with the apps you already use.",
+      "data": {
+        "term": "Model Context Protocol",
+        "short": "MCP",
+        "definition": "An open standard that lets AI apps plug into outside tools and data in one common way.",
+        "chips": [
+          [
+            "Wrench",
+            "Use tools"
+          ],
+          [
+            "FolderOpen",
+            "Read data"
+          ],
+          [
+            "Blocks",
+            "Connect apps"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Let's see how it flows. [1] You ask your AI app, what's on my calendar tomorrow? [2] Inside the app, an MCP client handles the connection. [3] It talks to an MCP server, a small program that knows how to work with your calendar. [4] The server fetches your events, [5] and the AI reads them and answers, you have two meetings tomorrow.",
+      "data": {
+        "heading": "How MCP works",
+        "nodes": [
+          [
+            "MessageSquareText",
+            "You ask",
+            "“What's on my calendar tomorrow?”"
+          ],
+          [
+            "Laptop",
+            "MCP client",
+            "Lives inside your AI app"
+          ],
+          [
+            "Server",
+            "MCP server",
+            "Knows how to talk to the calendar"
+          ],
+          [
+            "Database",
+            "Your data",
+            "Fetches tomorrow's events"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“You have two meetings tomorrow”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Four words to remember. [1] The host is the AI app you use, like Claude. [2] An MCP server is the connector for one app, like Gmail or GitHub. [3] Tools are the actions it offers, like sending an email. [4] And resources are the data it can share, like your documents.",
+      "data": {
+        "heading": "MCP in 4 words",
+        "terms": [
+          [
+            "Laptop",
+            "Host",
+            "The AI app you use"
+          ],
+          [
+            "Server",
+            "MCP server",
+            "A connector for one app or data source"
+          ],
+          [
+            "Wrench",
+            "Tools",
+            "Actions it can take"
+          ],
+          [
+            "FileText",
+            "Resources",
+            "Data it can share"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where is MCP used today? [1] AI assistants that connect to your Gmail, Google Drive or Slack. [2] Coding assistants that read your project, and work with GitHub. [3] And companies that connect AI to their own internal databases, safely, through one standard.",
+      "data": {
+        "heading": "MCP in action",
+        "items": [
+          [
+            "Mail",
+            "Personal assistants",
+            "Gmail, Drive, calendar, Slack"
+          ],
+          [
+            "Github",
+            "Coding assistants",
+            "Your code, GitHub, terminals"
+          ],
+          [
+            "Database",
+            "Company data",
+            "Internal tools and databases"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think MCP only works with one company's AI. [2] It doesn't. It's an open standard, and many major AI companies and tools now support it. Build one MCP server, and lots of different AI apps can use it.",
+      "data": {
+        "myth": "MCP only works with one company's AI.",
+        "fact": "It's an open standard. Build one MCP server, and many different AI apps can use it.",
+        "tip": "Build once, connect everywhere"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In MCP, what is an MCP server? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It's a connector for one app or data source, like Gmail or GitHub!",
+      "data": {
+        "question": "An MCP server is…",
+        "options": [
+          "The AI model itself",
+          "A connector for one app or data source",
+          "A cloud computer you rent"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] MCP is like USB-C for AI. [2] Your AI app is the host, with an MCP client inside. [3] MCP servers connect it to apps and data. [4] And because it's open, you build once and connect everywhere. [5] Next, we'll see how AI can see, hear and speak, with multimodal AI. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "MCP",
+            "USB-C for AI tools"
+          ],
+          [
+            "Host",
+            "your AI app, with a client inside"
+          ],
+          [
+            "Servers",
+            "connect apps and data"
+          ],
+          [
+            "Open",
+            "build once, connect everywhere"
+          ]
+        ],
+        "next": "EP 12 · Multimodal AI"
+      }
+    }
+  ]
+}
