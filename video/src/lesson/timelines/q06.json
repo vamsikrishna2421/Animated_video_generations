@@ -7,7 +7,7 @@
   "host": "female",
   "label": "QUIZ #6",
   "fps": 30,
-  "totalFrames": 3990,
+  "totalFrames": 4047,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -33,51 +33,62 @@
           "Voice",
           "Deploy",
           "Careers"
-        ]
+        ],
+        "hook": "Can you get *6/6*?"
       },
       "from": 0,
-      "durationInFrames": 317,
+      "durationInFrames": 372,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_01.wav",
       "cues": [
-        151,
-        246
+        206,
+        301
       ],
       "captions": [
         {
-          "text": "Quiz time!",
+          "text": "Can you get six out",
           "from": 10,
-          "to": 35
+          "to": 47
+        },
+        {
+          "text": "of six?",
+          "from": 47,
+          "to": 61
+        },
+        {
+          "text": "Quiz time!",
+          "from": 64,
+          "to": 94
         },
         {
           "text": "6 tricky questions,",
-          "from": 45,
-          "to": 89
+          "from": 100,
+          "to": 144
         },
         {
           "text": "from episodes 50 to 58.",
-          "from": 89,
-          "to": 142
+          "from": 144,
+          "to": 197
         },
         {
           "text": "Five seconds each.",
-          "from": 151,
-          "to": 195
+          "from": 206,
+          "to": 249
         },
         {
           "text": "Count how many you get right.",
-          "from": 197,
-          "to": 241
+          "from": 251,
+          "to": 294
         },
         {
           "text": "Ready?",
-          "from": 246,
-          "to": 266
+          "from": 301,
+          "to": 322
         },
         {
           "text": "Let's go!",
-          "from": 272,
-          "to": 305
+          "from": 327,
+          "to": 359
         }
       ],
       "image": null
@@ -96,7 +107,7 @@
         "badge": "QUESTION 1/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 317,
+      "from": 372,
       "durationInFrames": 542,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_02.wav",
@@ -167,7 +178,7 @@
         "badge": "QUESTION 2/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 859,
+      "from": 914,
       "durationInFrames": 532,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_03.wav",
@@ -248,7 +259,7 @@
         "badge": "QUESTION 3/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 1391,
+      "from": 1446,
       "durationInFrames": 566,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_04.wav",
@@ -314,13 +325,13 @@
         "badge": "QUESTION 4/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 1957,
-      "durationInFrames": 508,
+      "from": 2012,
+      "durationInFrames": 510,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_05.wav",
       "cues": [
-        167,
-        375
+        164,
+        371
       ],
       "captions": [
         {
@@ -331,37 +342,42 @@
         {
           "text": "In FastMCP,",
           "from": 48,
-          "to": 77
+          "to": 76
         },
         {
           "text": "what tells the AI what",
-          "from": 77,
-          "to": 131
+          "from": 76,
+          "to": 129
         },
         {
           "text": "a tool does?",
-          "from": 131,
-          "to": 162
+          "from": 129,
+          "to": 160
         },
         {
           "text": "Five seconds.",
-          "from": 167,
-          "to": 203
+          "from": 164,
+          "to": 199
         },
         {
           "text": "Keep score!",
-          "from": 205,
+          "from": 202,
           "to": 230
         },
         {
-          "text": "The docstring and type hints!",
-          "from": 375,
-          "to": 431
+          "text": "The docstring,",
+          "from": 371,
+          "to": 392
+        },
+        {
+          "text": "and the type hints!",
+          "from": 394,
+          "to": 432
         },
         {
           "text": "They become the tool's description.",
           "from": 433,
-          "to": 495
+          "to": 497
         }
       ],
       "image": null
@@ -380,7 +396,7 @@
         "badge": "QUESTION 5/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 2465,
+      "from": 2522,
       "durationInFrames": 577,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_06.wav",
@@ -451,7 +467,7 @@
         "badge": "QUESTION 6/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 3042,
+      "from": 3099,
       "durationInFrames": 511,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_07.wav",
@@ -526,7 +542,7 @@
         ],
         "prompt": "Comment your score /6"
       },
-      "from": 3553,
+      "from": 3610,
       "durationInFrames": 437,
       "voiceFrom": 10,
       "audio": "lessons/q06/voice_08.wav",
