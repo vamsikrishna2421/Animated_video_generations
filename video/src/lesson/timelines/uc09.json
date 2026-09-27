@@ -1,0 +1,809 @@
+{
+  "id": "uc09",
+  "episode": 9,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How an AI Coding Assistant Builds a Feature",
+  "host": "female",
+  "label": "USE CASE 09",
+  "fps": 30,
+  "totalFrames": 4696,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc09/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 09",
+        "title": [
+          "AI Builds",
+          "A Feature"
+        ],
+        "subtitle": "Step by step, like a real developer",
+        "buzzwords": [
+          "Repo",
+          "Plan",
+          "Edit",
+          "Tests",
+          "Diff",
+          "Pull request",
+          "Review",
+          "Dark mode"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 406,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_01.wav",
+      "cues": [
+        201,
+        322
+      ],
+      "captions": [
+        {
+          "text": "Let's watch an AI coding",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "assistant take a real request,",
+          "from": 59,
+          "to": 124
+        },
+        {
+          "text": "add a dark mode button",
+          "from": 126,
+          "to": 164
+        },
+        {
+          "text": "to a website,",
+          "from": 166,
+          "to": 199
+        },
+        {
+          "text": "and follow every step it",
+          "from": 201,
+          "to": 235
+        },
+        {
+          "text": "takes, from reading code to shipping.",
+          "from": 236,
+          "to": 320
+        },
+        {
+          "text": "Here's how an AI builds",
+          "from": 322,
+          "to": 364
+        },
+        {
+          "text": "a feature.",
+          "from": 364,
+          "to": 394
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The whole journey",
+        "nodes": [
+          [
+            "MessageSquare",
+            "The request",
+            "“Add a dark mode toggle”"
+          ],
+          [
+            "FileSearch",
+            "Explore the repo",
+            "Find header and style files"
+          ],
+          [
+            "ListChecks",
+            "Make a plan",
+            "Button, dark colours, remember it"
+          ],
+          [
+            "PenLine",
+            "Edit files",
+            "3 files changed"
+          ],
+          [
+            "FlaskConical",
+            "Test it",
+            "Run the app and tests"
+          ]
+        ]
+      },
+      "from": 406,
+      "durationInFrames": 620,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_02.wav",
+      "cues": [
+        56,
+        160,
+        297,
+        446,
+        492
+      ],
+      "captions": [
+        {
+          "text": "Here's the whole journey.",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "You ask,",
+          "from": 56,
+          "to": 77
+        },
+        {
+          "text": "add a dark mode toggle",
+          "from": 79,
+          "to": 118
+        },
+        {
+          "text": "to my website.",
+          "from": 119,
+          "to": 158
+        },
+        {
+          "text": "The agent explores the repo,",
+          "from": 160,
+          "to": 211
+        },
+        {
+          "text": "and finds the header and",
+          "from": 216,
+          "to": 248
+        },
+        {
+          "text": "style files.",
+          "from": 250,
+          "to": 294
+        },
+        {
+          "text": "It writes a plan,",
+          "from": 297,
+          "to": 331
+        },
+        {
+          "text": "add a button,",
+          "from": 333,
+          "to": 356
+        },
+        {
+          "text": "add dark colours,",
+          "from": 359,
+          "to": 390
+        },
+        {
+          "text": "and remember the choice.",
+          "from": 395,
+          "to": 444
+        },
+        {
+          "text": "It edits three files,",
+          "from": 446,
+          "to": 488
+        },
+        {
+          "text": "and runs the app and",
+          "from": 492,
+          "to": 521
+        },
+        {
+          "text": "the tests,",
+          "from": 522,
+          "to": 546
+        },
+        {
+          "text": "to check that everything works.",
+          "from": 548,
+          "to": 606
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "toolcall",
+      "data": {
+        "heading": "First move: explore",
+        "question": "Add a dark mode toggle to my website.",
+        "call": {
+          "tool": "search_files",
+          "query": "header theme colors"
+        },
+        "tool": "PROJECT FILES",
+        "result": "Header.tsx · theme.css · settings.ts",
+        "answer": "Found the header and theme files. My plan: add a toggle, add dark colours, and save your choice."
+      },
+      "from": 1026,
+      "durationInFrames": 475,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_03.wav",
+      "cues": [
+        80,
+        149,
+        289,
+        362
+      ],
+      "captions": [
+        {
+          "text": "Let's zoom in on its",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "first move.",
+          "from": 47,
+          "to": 78
+        },
+        {
+          "text": "You ask for the dark",
+          "from": 80,
+          "to": 121
+        },
+        {
+          "text": "mode toggle.",
+          "from": 121,
+          "to": 147
+        },
+        {
+          "text": "The agent calls a tool,",
+          "from": 149,
+          "to": 195
+        },
+        {
+          "text": "search files,",
+          "from": 195,
+          "to": 222
+        },
+        {
+          "text": "for the header and theme colours.",
+          "from": 222,
+          "to": 287
+        },
+        {
+          "text": "It finds three relevant files.",
+          "from": 289,
+          "to": 359
+        },
+        {
+          "text": "And it replies with a",
+          "from": 362,
+          "to": 389
+        },
+        {
+          "text": "plan, before touching any code.",
+          "from": 391,
+          "to": 462
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Doing the work",
+        "kicker": "THE CHANGES",
+        "steps": [
+          [
+            "ToggleRight",
+            "Add the toggle",
+            "A button in the header"
+          ],
+          [
+            "Palette",
+            "Add dark colours",
+            "A dark theme in the styles"
+          ],
+          [
+            "Save",
+            "Remember it",
+            "Saved for the next visit"
+          ]
+        ]
+      },
+      "from": 1501,
+      "durationInFrames": 378,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_04.wav",
+      "cues": [
+        104,
+        170,
+        254
+      ],
+      "captions": [
+        {
+          "text": "Then it does the work,",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "like a careful developer.",
+          "from": 50,
+          "to": 101
+        },
+        {
+          "text": "It adds a toggle button",
+          "from": 104,
+          "to": 140
+        },
+        {
+          "text": "to the header.",
+          "from": 142,
+          "to": 168
+        },
+        {
+          "text": "It adds a set of",
+          "from": 170,
+          "to": 191
+        },
+        {
+          "text": "dark colours to the styles.",
+          "from": 193,
+          "to": 252
+        },
+        {
+          "text": "And it saves your choice,",
+          "from": 254,
+          "to": 294
+        },
+        {
+          "text": "so the site remembers it",
+          "from": 296,
+          "to": 331
+        },
+        {
+          "text": "next time.",
+          "from": 333,
+          "to": 366
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "agentloop",
+      "data": {
+        "goalLabel": "CHECK",
+        "goal": "“Does everything still work?”",
+        "stages": [
+          [
+            "FlaskConical",
+            "Test"
+          ],
+          [
+            "TriangleAlert",
+            "Read error"
+          ],
+          [
+            "Wrench",
+            "Fix"
+          ]
+        ],
+        "log": [
+          "run tests → 1 failing",
+          "error: button text invisible in dark mode",
+          "fix: set the text colour for dark mode",
+          "✓ all tests pass"
+        ]
+      },
+      "from": 1879,
+      "durationInFrames": 576,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_05.wav",
+      "cues": [
+        102,
+        210,
+        362,
+        457,
+        503
+      ],
+      "captions": [
+        {
+          "text": "Then comes testing,",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "the most important part.",
+          "from": 49,
+          "to": 100
+        },
+        {
+          "text": "It loops,",
+          "from": 102,
+          "to": 121
+        },
+        {
+          "text": "test, read the error,",
+          "from": 125,
+          "to": 168
+        },
+        {
+          "text": "and fix.",
+          "from": 174,
+          "to": 208
+        },
+        {
+          "text": "The first test run fails,",
+          "from": 210,
+          "to": 258
+        },
+        {
+          "text": "because the button text is",
+          "from": 262,
+          "to": 302
+        },
+        {
+          "text": "invisible in dark mode.",
+          "from": 303,
+          "to": 359
+        },
+        {
+          "text": "It reads the error,",
+          "from": 362,
+          "to": 392
+        },
+        {
+          "text": "and fixes the text colour.",
+          "from": 397,
+          "to": 454
+        },
+        {
+          "text": "It runs the tests again,",
+          "from": 457,
+          "to": 502
+        },
+        {
+          "text": "and now everything passes.",
+          "from": 503,
+          "to": 563
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Before it ships",
+        "kicker": "GOOD PRACTICE",
+        "terms": [
+          [
+            "GitCompare",
+            "Show the diff",
+            "Every change visible"
+          ],
+          [
+            "GitCommitHorizontal",
+            "Small commits",
+            "One clear change each"
+          ],
+          [
+            "Eye",
+            "Human review",
+            "Someone approves"
+          ],
+          [
+            "GitPullRequest",
+            "Pull request",
+            "Propose the change"
+          ]
+        ]
+      },
+      "from": 2455,
+      "durationInFrames": 525,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_06.wav",
+      "cues": [
+        101,
+        203,
+        298,
+        377
+      ],
+      "captions": [
+        {
+          "text": "And before it ships,",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "a few good practices.",
+          "from": 46,
+          "to": 98
+        },
+        {
+          "text": "Show the diff,",
+          "from": 101,
+          "to": 125
+        },
+        {
+          "text": "so a human sees every change.",
+          "from": 128,
+          "to": 199
+        },
+        {
+          "text": "Small commits,",
+          "from": 203,
+          "to": 235
+        },
+        {
+          "text": "one clear change at a time.",
+          "from": 235,
+          "to": 295
+        },
+        {
+          "text": "Human review,",
+          "from": 298,
+          "to": 325
+        },
+        {
+          "text": "where someone approves it.",
+          "from": 330,
+          "to": 375
+        },
+        {
+          "text": "And a pull request,",
+          "from": 377,
+          "to": 412
+        },
+        {
+          "text": "the formal way to propose",
+          "from": 414,
+          "to": 456
+        },
+        {
+          "text": "changes to a project.",
+          "from": 458,
+          "to": 513
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The AI writes the code once, perfectly.",
+        "fact": "Agents make mistakes too. The test-and-fix loop plus human review is what makes them useful.",
+        "tip": "Trust the tests, then review"
+      },
+      "from": 2980,
+      "durationInFrames": 504,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_07.wav",
+      "cues": [
+        58,
+        180
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think the AI just",
+          "from": 58,
+          "to": 102
+        },
+        {
+          "text": "writes the code once, perfectly.",
+          "from": 104,
+          "to": 177
+        },
+        {
+          "text": "Real coding agents make mistakes too.",
+          "from": 180,
+          "to": 263
+        },
+        {
+          "text": "What makes them useful is",
+          "from": 265,
+          "to": 299
+        },
+        {
+          "text": "the loop,",
+          "from": 300,
+          "to": 322
+        },
+        {
+          "text": "running tests,",
+          "from": 324,
+          "to": 357
+        },
+        {
+          "text": "reading errors and fixing them,",
+          "from": 359,
+          "to": 417
+        },
+        {
+          "text": "plus a human reviewing the result.",
+          "from": 421,
+          "to": 491
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Before AI code is accepted, you need…",
+        "options": [
+          "Longer code",
+          "Tests and human review",
+          "Brighter colours"
+        ],
+        "answer": 1
+      },
+      "from": 3484,
+      "durationInFrames": 484,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_08.wav",
+      "cues": [
+        160,
+        365
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "What's the most important step",
+          "from": 43,
+          "to": 83
+        },
+        {
+          "text": "before an AI's code is accepted?",
+          "from": 85,
+          "to": 157
+        },
+        {
+          "text": "Pause and think,",
+          "from": 160,
+          "to": 197
+        },
+        {
+          "text": "and if you get it",
+          "from": 199,
+          "to": 215
+        },
+        {
+          "text": "right, comment below!",
+          "from": 217,
+          "to": 273
+        },
+        {
+          "text": "Tests and human review!",
+          "from": 365,
+          "to": 415
+        },
+        {
+          "text": "Every change should be checked.",
+          "from": 418,
+          "to": 471
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Explore",
+            "find the right files"
+          ],
+          [
+            "Plan",
+            "before touching code"
+          ],
+          [
+            "Test and fix",
+            "loop until it passes"
+          ],
+          [
+            "Review",
+            "a human approves"
+          ]
+        ],
+        "next": "EP 20 · AI security"
+      },
+      "from": 3968,
+      "durationInFrames": 728,
+      "voiceFrom": 10,
+      "audio": "lessons/uc09/voice_09.wav",
+      "cues": [
+        48,
+        170,
+        255,
+        365,
+        447
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "First, the agent explores the",
+          "from": 48,
+          "to": 96
+        },
+        {
+          "text": "repo, to find the right files.",
+          "from": 97,
+          "to": 167
+        },
+        {
+          "text": "It makes a plan,",
+          "from": 170,
+          "to": 197
+        },
+        {
+          "text": "before touching any code.",
+          "from": 202,
+          "to": 253
+        },
+        {
+          "text": "It tests and fixes in",
+          "from": 255,
+          "to": 293
+        },
+        {
+          "text": "a loop,",
+          "from": 294,
+          "to": 305
+        },
+        {
+          "text": "until everything passes.",
+          "from": 311,
+          "to": 362
+        },
+        {
+          "text": "And a human reviews it,",
+          "from": 365,
+          "to": 398
+        },
+        {
+          "text": "before it ships.",
+          "from": 401,
+          "to": 444
+        },
+        {
+          "text": "Next, we'll learn how people",
+          "from": 447,
+          "to": 494
+        },
+        {
+          "text": "trick AI with prompt injection",
+          "from": 496,
+          "to": 554
+        },
+        {
+          "text": "and jailbreaks,",
+          "from": 556,
+          "to": 586
+        },
+        {
+          "text": "and how to defend against it.",
+          "from": 589,
+          "to": 642
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 646,
+          "to": 716
+        }
+      ],
+      "image": null
+    }
+  ]
+}

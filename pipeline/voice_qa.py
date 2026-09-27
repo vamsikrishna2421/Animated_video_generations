@@ -21,8 +21,16 @@ IGNORE = {"maastaaru", "chatgpt", "recognising", "recognises", "behaviour", "nei
           "sixteen", "forty", "claude"}
 
 
+def us(w: str) -> str:
+    """Fold British spellings to American so 'colours' matches 'colors'."""
+    for a, b in (("our", "or"), ("isation", "ization"), ("ise", "ize"), ("ising", "izing"), ("lling", "ling"), ("practis", "practic"), ("tre", "ter")):
+        if w.endswith(a) or a in w:
+            w = w.replace(a, b)
+    return w
+
+
 def words(t: str):
-    return re.findall(r"[a-z0-9]+", t.lower().replace("’", "'"))
+    return [us(w) for w in re.findall(r"[a-z0-9]+", t.lower().replace("’", "'"))]
 
 
 def main() -> None:

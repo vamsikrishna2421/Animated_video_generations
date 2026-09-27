@@ -1,0 +1,229 @@
+{
+  "id": "uc09",
+  "episode": 9,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 09",
+  "handle": "@ai_maastaaru",
+  "title": "How an AI Coding Assistant Builds a Feature",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Let's watch an AI coding assistant take a real request, add a dark mode button to a website, [1] and follow every step it takes, from reading code to shipping. [2] Here's how an AI builds a feature.",
+      "data": {
+        "kicker": "USE CASE 09",
+        "title": [
+          "AI Builds",
+          "A Feature"
+        ],
+        "subtitle": "Step by step, like a real developer",
+        "buzzwords": [
+          "Repo",
+          "Plan",
+          "Edit",
+          "Tests",
+          "Diff",
+          "Pull request",
+          "Review",
+          "Dark mode"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's the whole journey. [1] You ask, add a dark mode toggle to my website. [2] The agent explores the repo, and finds the header and style files. [3] It writes a plan, add a button, add dark colours, and remember the choice. [4] It edits three files, [5] and runs the app and the tests, to check that everything works.",
+      "data": {
+        "heading": "The whole journey",
+        "nodes": [
+          [
+            "MessageSquare",
+            "The request",
+            "“Add a dark mode toggle”"
+          ],
+          [
+            "FileSearch",
+            "Explore the repo",
+            "Find header and style files"
+          ],
+          [
+            "ListChecks",
+            "Make a plan",
+            "Button, dark colours, remember it"
+          ],
+          [
+            "PenLine",
+            "Edit files",
+            "3 files changed"
+          ],
+          [
+            "FlaskConical",
+            "Test it",
+            "Run the app and tests"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "toolcall",
+      "text": "Let's zoom in on its first move. [1] You ask for the dark mode toggle. [2] The agent calls a tool, search files, for the header and theme colours. [3] It finds three relevant files. [4] And it replies with a plan, before touching any code.",
+      "data": {
+        "heading": "First move: explore",
+        "question": "Add a dark mode toggle to my website.",
+        "call": {
+          "tool": "search_files",
+          "query": "header theme colors"
+        },
+        "tool": "PROJECT FILES",
+        "result": "Header.tsx · theme.css · settings.ts",
+        "answer": "Found the header and theme files. My plan: add a toggle, add dark colours, and save your choice."
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Then it does the work, like a careful developer. [1] It adds a toggle button to the header. [2] It adds a set of dark colours to the styles. [3] And it saves your choice, so the site remembers it next time.",
+      "data": {
+        "heading": "Doing the work",
+        "kicker": "THE CHANGES",
+        "steps": [
+          [
+            "ToggleRight",
+            "Add the toggle",
+            "A button in the header"
+          ],
+          [
+            "Palette",
+            "Add dark colours",
+            "A dark theme in the styles"
+          ],
+          [
+            "Save",
+            "Remember it",
+            "Saved for the next visit"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "agentloop",
+      "text": "Then comes testing, the most important part. [1] It loops, test, read the error, and fix. [2] The first test run fails, because the button text is invisible in dark mode. [3] It reads the error, and fixes the text colour. [4] It runs the tests again, [5] and now everything passes.",
+      "data": {
+        "goalLabel": "CHECK",
+        "goal": "“Does everything still work?”",
+        "stages": [
+          [
+            "FlaskConical",
+            "Test"
+          ],
+          [
+            "TriangleAlert",
+            "Read error"
+          ],
+          [
+            "Wrench",
+            "Fix"
+          ]
+        ],
+        "log": [
+          "run tests → 1 failing",
+          "error: button text invisible in dark mode",
+          "fix: set the text colour for dark mode",
+          "✓ all tests pass"
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "And before it ships, a few good practices. [1] Show the diff, so a human sees every change. [2] Small commits, one clear change at a time. [3] Human review, where someone approves it. [4] And a pull request, the formal way to propose changes to a project.",
+      "data": {
+        "heading": "Before it ships",
+        "kicker": "GOOD PRACTICE",
+        "terms": [
+          [
+            "GitCompare",
+            "Show the diff",
+            "Every change visible"
+          ],
+          [
+            "GitCommitHorizontal",
+            "Small commits",
+            "One clear change each"
+          ],
+          [
+            "Eye",
+            "Human review",
+            "Someone approves"
+          ],
+          [
+            "GitPullRequest",
+            "Pull request",
+            "Propose the change"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think the AI just writes the code once, perfectly. [2] Real coding agents make mistakes too. What makes them useful is the loop, running tests, reading errors and fixing them, plus a human reviewing the result.",
+      "data": {
+        "myth": "The AI writes the code once, perfectly.",
+        "fact": "Agents make mistakes too. The test-and-fix loop plus human review is what makes them useful.",
+        "tip": "Trust the tests, then review"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What's the most important step before an AI's code is accepted? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Tests and human review! Every change should be checked.",
+      "data": {
+        "question": "Before AI code is accepted, you need…",
+        "options": [
+          "Longer code",
+          "Tests and human review",
+          "Brighter colours"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] First, the agent explores the repo, to find the right files. [2] It makes a plan, before touching any code. [3] It tests and fixes in a loop, until everything passes. [4] And a human reviews it, before it ships. [5] Next, we'll learn how people trick AI with prompt injection and jailbreaks, and how to defend against it. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Explore",
+            "find the right files"
+          ],
+          [
+            "Plan",
+            "before touching code"
+          ],
+          [
+            "Test and fix",
+            "loop until it passes"
+          ],
+          [
+            "Review",
+            "a human approves"
+          ]
+        ],
+        "next": "EP 20 · AI security"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Watch an AI coding assistant add a dark mode toggle to a website, step by step.\n\nReal World AI, Use Case 09: how an AI builds a feature\n- Explore the repo, make a plan, edit files, test\n- First move: searching the project with a tool\n- The test-and-fix loop that makes agents reliable\n- Before it ships: diff, small commits, human review, pull request\n- The myth: \"AI writes the code once, perfectly\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: AI security, prompt injection and jailbreaks.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #AICoding #LearnAI #Developers #AIForBeginners",
+    "pinned": "Quiz answer: Tests and human review. Every change should be checked. What feature would you ask an AI to build?",
+    "cover": "'AI Builds A Feature' title card",
+    "alt": "Animated breakdown of an AI coding agent exploring a codebase, planning, editing, testing and fixing a feature."
+  }
+}
