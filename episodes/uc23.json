@@ -1,0 +1,233 @@
+{
+  "id": "uc23",
+  "episode": 23,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 23",
+  "handle": "@ai_maastaaru",
+  "title": "How AI Helps Doctors Read X-rays",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "In many hospitals, there aren't enough radiologists to read every scan quickly. [1] Now, AI can look at a chest X-ray in seconds, and flag possible problems. [2] Let's see how AI helps doctors read X-rays.",
+      "data": {
+        "kicker": "USE CASE 23",
+        "title": [
+          "AI for",
+          "X-rays"
+        ],
+        "subtitle": "A second pair of eyes",
+        "buzzwords": [
+          "Radiology",
+          "Chest X-ray",
+          "Detection",
+          "Heatmaps",
+          "Triage",
+          "Tuberculosis",
+          "Second opinion",
+          "Doctors"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's the flow. [1] The X-ray machine captures the image. [2] A vision model scans it for signs like shadows, spots, or fractures. [3] It highlights suspicious areas with a heatmap. [4] Urgent cases are moved to the top of the doctor's list. [5] And the radiologist reviews, and makes the final call.",
+      "data": {
+        "heading": "From scan to diagnosis",
+        "nodes": [
+          [
+            "ScanLine",
+            "Capture",
+            "The X-ray image"
+          ],
+          [
+            "ScanSearch",
+            "Detect",
+            "Shadows, spots, fractures"
+          ],
+          [
+            "Flame",
+            "Heatmap",
+            "Highlights the area"
+          ],
+          [
+            "ListOrdered",
+            "Triage",
+            "Urgent cases first"
+          ],
+          [
+            "Stethoscope",
+            "Doctor",
+            "Makes the final call"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "The model is trained on hundreds of thousands of X-rays, [1] each labelled by expert radiologists. [2] It learns patterns linked to conditions like pneumonia, tuberculosis, or a collapsed lung. [3] This is image classification and detection, from episode 29.",
+      "data": {
+        "term": "Medical image AI",
+        "short": "Med AI",
+        "definition": "Vision models trained on expert-labelled scans to spot signs of disease and flag them for doctors.",
+        "chips": [
+          [
+            "Images",
+            "Hundreds of thousands of X-rays"
+          ],
+          [
+            "UserCheck",
+            "Labelled by experts"
+          ],
+          [
+            "ScanSearch",
+            "Classify and detect"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Where does it help most? [1] Triage, so urgent cases get seen first in a busy hospital. [2] Screening, like checking thousands of people for tuberculosis, in areas with few specialists. [3] And a second opinion, catching things a tired human eye might miss.",
+      "data": {
+        "heading": "Where it helps",
+        "kicker": "THREE ROLES",
+        "steps": [
+          [
+            "Siren",
+            "Triage",
+            "Urgent cases first"
+          ],
+          [
+            "Users",
+            "Screening",
+            "TB checks at scale"
+          ],
+          [
+            "Eye",
+            "Second opinion",
+            "Catch what's missed"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Sensitivity, how many real cases the model catches. [2] Specificity, how well it avoids false alarms. [3] Heatmap, the coloured overlay showing where it looked. [4] And regulatory approval, official clearance before a hospital can use it.",
+      "data": {
+        "heading": "Medical AI words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Target",
+            "Sensitivity",
+            "Catches real cases"
+          ],
+          [
+            "ShieldCheck",
+            "Specificity",
+            "Avoids false alarms"
+          ],
+          [
+            "Flame",
+            "Heatmap",
+            "Where it looked"
+          ],
+          [
+            "BadgeCheck",
+            "Approval",
+            "Cleared for hospitals"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think AI will replace radiologists. [2] Today, AI is a tool that helps them work faster, and catch more. Doctors combine the scan with the patient's history, symptoms, and other tests. AI sees only the image.",
+      "data": {
+        "myth": "AI will replace radiologists.",
+        "fact": "AI helps them work faster and catch more. Doctors combine the scan with history, symptoms and tests.",
+        "tip": "AI assists, doctors decide"
+      }
+    },
+    {
+      "type": "examples",
+      "text": "But there are challenges. [1] A model trained in one hospital may work worse on another hospital's machines. [2] Data must be kept private. [3] And doctors must not blindly trust the AI, a problem called automation bias.",
+      "data": {
+        "heading": "The challenges",
+        "items": [
+          [
+            "Building2",
+            "New hospitals",
+            "Different machines, worse results"
+          ],
+          [
+            "Lock",
+            "Privacy",
+            "Patient data protected"
+          ],
+          [
+            "TriangleAlert",
+            "Automation bias",
+            "Don't blindly trust it"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Who makes the final diagnosis? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The doctor! AI flags and highlights, but the radiologist decides.",
+      "data": {
+        "question": "The final diagnosis is made by…",
+        "options": [
+          "The doctor",
+          "The AI model",
+          "The X-ray machine"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] A vision model scans the X-ray, and highlights suspicious areas. [2] It's trained on expert-labelled scans. [3] It helps with triage, screening, and second opinions. [4] And the doctor always makes the final call. [5] Next, privacy, and what happens to your data. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Scan",
+            "and highlight areas"
+          ],
+          [
+            "Trained",
+            "on expert labels"
+          ],
+          [
+            "Helps",
+            "triage, screening, 2nd opinion"
+          ],
+          [
+            "Doctor",
+            "makes the final call"
+          ]
+        ],
+        "next": "EP 44 · Privacy"
+      }
+    }
+  ],
+  "post": {
+    "caption": "AI can scan a chest X-ray in seconds and flag possible problems. Here's how it works.\n\nReal World AI, Use Case 23: AI in radiology\n- The flow: capture, detect, heatmap, triage, doctor\n- Trained on expert-labelled scans\n- Where it helps: triage, TB screening, second opinions\n- Jargon: sensitivity, specificity, heatmap, approval\n- Myth: AI assists radiologists, it doesn't replace them\n\nQuiz at the end. Got it right? Comment below.\n\nNext: privacy and your data.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #HealthcareAI #Radiology #LearnAI #AIforGood",
+    "pinned": "Quiz answer: The doctor! AI flags and highlights, but the radiologist decides. Know a doctor using AI tools? Share this with them!",
+    "cover": "'AI for X-rays' title card",
+    "alt": "Animated breakdown of how AI helps doctors read chest X-rays with detection and heatmaps."
+  }
+}

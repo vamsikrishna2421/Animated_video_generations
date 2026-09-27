@@ -1,0 +1,735 @@
+{
+  "id": "uc23",
+  "episode": 23,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How AI Helps Doctors Read X-rays",
+  "host": "female",
+  "label": "USE CASE 23",
+  "fps": 30,
+  "totalFrames": 4784,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc23/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 23",
+        "title": [
+          "AI for",
+          "X-rays"
+        ],
+        "subtitle": "A second pair of eyes",
+        "buzzwords": [
+          "Radiology",
+          "Chest X-ray",
+          "Detection",
+          "Heatmaps",
+          "Triage",
+          "Tuberculosis",
+          "Second opinion",
+          "Doctors"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 460,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_01.wav",
+      "cues": [
+        167,
+        345
+      ],
+      "captions": [
+        {
+          "text": "In many hospitals,",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "there aren't enough radiologists to",
+          "from": 50,
+          "to": 101
+        },
+        {
+          "text": "read every scan quickly.",
+          "from": 103,
+          "to": 164
+        },
+        {
+          "text": "Now, AI can look at",
+          "from": 167,
+          "to": 215
+        },
+        {
+          "text": "a chest X-ray in seconds,",
+          "from": 215,
+          "to": 276
+        },
+        {
+          "text": "and flag possible problems.",
+          "from": 276,
+          "to": 343
+        },
+        {
+          "text": "Let's see how AI helps",
+          "from": 345,
+          "to": 388
+        },
+        {
+          "text": "doctors read X-rays.",
+          "from": 390,
+          "to": 446
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From scan to diagnosis",
+        "nodes": [
+          [
+            "ScanLine",
+            "Capture",
+            "The X-ray image"
+          ],
+          [
+            "ScanSearch",
+            "Detect",
+            "Shadows, spots, fractures"
+          ],
+          [
+            "Flame",
+            "Heatmap",
+            "Highlights the area"
+          ],
+          [
+            "ListOrdered",
+            "Triage",
+            "Urgent cases first"
+          ],
+          [
+            "Stethoscope",
+            "Doctor",
+            "Makes the final call"
+          ]
+        ]
+      },
+      "from": 460,
+      "durationInFrames": 597,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_02.wav",
+      "cues": [
+        48,
+        129,
+        283,
+        371,
+        472
+      ],
+      "captions": [
+        {
+          "text": "Here's the flow.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "The X-ray machine captures the image.",
+          "from": 48,
+          "to": 127
+        },
+        {
+          "text": "A vision model scans it",
+          "from": 129,
+          "to": 167
+        },
+        {
+          "text": "for signs like shadows,",
+          "from": 169,
+          "to": 219
+        },
+        {
+          "text": "spots, or fractures.",
+          "from": 222,
+          "to": 281
+        },
+        {
+          "text": "It highlights suspicious areas with",
+          "from": 283,
+          "to": 336
+        },
+        {
+          "text": "a heatmap.",
+          "from": 336,
+          "to": 369
+        },
+        {
+          "text": "Urgent cases are moved to",
+          "from": 371,
+          "to": 417
+        },
+        {
+          "text": "the top of the doctor's list.",
+          "from": 417,
+          "to": 470
+        },
+        {
+          "text": "And the radiologist reviews,",
+          "from": 472,
+          "to": 531
+        },
+        {
+          "text": "and makes the final call.",
+          "from": 532,
+          "to": 585
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Medical image AI",
+        "short": "Med AI",
+        "definition": "Vision models trained on expert-labelled scans to spot signs of disease and flag them for doctors.",
+        "chips": [
+          [
+            "Images",
+            "Hundreds of thousands of X-rays"
+          ],
+          [
+            "UserCheck",
+            "Labelled by experts"
+          ],
+          [
+            "ScanSearch",
+            "Classify and detect"
+          ]
+        ]
+      },
+      "from": 1057,
+      "durationInFrames": 560,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_03.wav",
+      "cues": [
+        121,
+        211,
+        407
+      ],
+      "captions": [
+        {
+          "text": "The model is trained on",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "hundreds of thousands of X-rays,",
+          "from": 53,
+          "to": 119
+        },
+        {
+          "text": "each labelled by expert radiologists.",
+          "from": 121,
+          "to": 208
+        },
+        {
+          "text": "It learns patterns linked to",
+          "from": 211,
+          "to": 255
+        },
+        {
+          "text": "conditions like pneumonia,",
+          "from": 256,
+          "to": 313
+        },
+        {
+          "text": "tuberculosis, or a collapsed lung.",
+          "from": 315,
+          "to": 404
+        },
+        {
+          "text": "This is image classification and",
+          "from": 407,
+          "to": 484
+        },
+        {
+          "text": "detection, from episode 29.",
+          "from": 484,
+          "to": 548
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Where it helps",
+        "kicker": "THREE ROLES",
+        "steps": [
+          [
+            "Siren",
+            "Triage",
+            "Urgent cases first"
+          ],
+          [
+            "Users",
+            "Screening",
+            "TB checks at scale"
+          ],
+          [
+            "Eye",
+            "Second opinion",
+            "Catch what's missed"
+          ]
+        ]
+      },
+      "from": 1617,
+      "durationInFrames": 526,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_04.wav",
+      "cues": [
+        54,
+        186,
+        380
+      ],
+      "captions": [
+        {
+          "text": "Where does it help most?",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "Triage, so urgent cases get",
+          "from": 54,
+          "to": 114
+        },
+        {
+          "text": "seen first in a busy hospital.",
+          "from": 116,
+          "to": 182
+        },
+        {
+          "text": "Screening, like checking thousands of",
+          "from": 186,
+          "to": 248
+        },
+        {
+          "text": "people for tuberculosis,",
+          "from": 250,
+          "to": 305
+        },
+        {
+          "text": "in areas with few specialists.",
+          "from": 306,
+          "to": 377
+        },
+        {
+          "text": "And a second opinion,",
+          "from": 380,
+          "to": 418
+        },
+        {
+          "text": "catching things a tired human",
+          "from": 420,
+          "to": 471
+        },
+        {
+          "text": "eye might miss.",
+          "from": 473,
+          "to": 512
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Medical AI words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Target",
+            "Sensitivity",
+            "Catches real cases"
+          ],
+          [
+            "ShieldCheck",
+            "Specificity",
+            "Avoids false alarms"
+          ],
+          [
+            "Flame",
+            "Heatmap",
+            "Where it looked"
+          ],
+          [
+            "BadgeCheck",
+            "Approval",
+            "Cleared for hospitals"
+          ]
+        ]
+      },
+      "from": 2143,
+      "durationInFrames": 539,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_05.wav",
+      "cues": [
+        61,
+        178,
+        286,
+        387
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "Sensitivity, how many real cases",
+          "from": 61,
+          "to": 128
+        },
+        {
+          "text": "the model catches.",
+          "from": 129,
+          "to": 175
+        },
+        {
+          "text": "Specificity, how well it avoids",
+          "from": 178,
+          "to": 238
+        },
+        {
+          "text": "false alarms.",
+          "from": 241,
+          "to": 283
+        },
+        {
+          "text": "Heatmap, the coloured overlay showing",
+          "from": 286,
+          "to": 352
+        },
+        {
+          "text": "where it looked.",
+          "from": 353,
+          "to": 385
+        },
+        {
+          "text": "And regulatory approval,",
+          "from": 387,
+          "to": 434
+        },
+        {
+          "text": "official clearance before a hospital",
+          "from": 438,
+          "to": 494
+        },
+        {
+          "text": "can use it.",
+          "from": 495,
+          "to": 527
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI will replace radiologists.",
+        "fact": "AI helps them work faster and catch more. Doctors combine the scan with history, symptoms and tests.",
+        "tip": "AI assists, doctors decide"
+      },
+      "from": 2682,
+      "durationInFrames": 537,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_06.wav",
+      "cues": [
+        56,
+        154
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "People think AI will replace radiologists.",
+          "from": 56,
+          "to": 152
+        },
+        {
+          "text": "Today, AI is a tool",
+          "from": 154,
+          "to": 211
+        },
+        {
+          "text": "that helps them work faster,",
+          "from": 212,
+          "to": 256
+        },
+        {
+          "text": "and catch more.",
+          "from": 259,
+          "to": 297
+        },
+        {
+          "text": "Doctors combine the scan with",
+          "from": 300,
+          "to": 358
+        },
+        {
+          "text": "the patient's history,",
+          "from": 358,
+          "to": 402
+        },
+        {
+          "text": "symptoms, and other tests.",
+          "from": 402,
+          "to": 453
+        },
+        {
+          "text": "AI sees only the image.",
+          "from": 456,
+          "to": 524
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "The challenges",
+        "items": [
+          [
+            "Building2",
+            "New hospitals",
+            "Different machines, worse results"
+          ],
+          [
+            "Lock",
+            "Privacy",
+            "Patient data protected"
+          ],
+          [
+            "TriangleAlert",
+            "Automation bias",
+            "Don't blindly trust it"
+          ]
+        ]
+      },
+      "from": 3219,
+      "durationInFrames": 464,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_07.wav",
+      "cues": [
+        64,
+        218,
+        279
+      ],
+      "captions": [
+        {
+          "text": "But there are challenges.",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "A model trained in one",
+          "from": 64,
+          "to": 101
+        },
+        {
+          "text": "hospital may work worse on",
+          "from": 103,
+          "to": 153
+        },
+        {
+          "text": "another hospital's machines.",
+          "from": 154,
+          "to": 214
+        },
+        {
+          "text": "Data must be kept private.",
+          "from": 218,
+          "to": 277
+        },
+        {
+          "text": "And doctors must not blindly",
+          "from": 279,
+          "to": 331
+        },
+        {
+          "text": "trust the AI,",
+          "from": 334,
+          "to": 372
+        },
+        {
+          "text": "a problem called automation bias.",
+          "from": 374,
+          "to": 451
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The final diagnosis is made by…",
+        "options": [
+          "The doctor",
+          "The AI model",
+          "The X-ray machine"
+        ],
+        "answer": 0
+      },
+      "from": 3683,
+      "durationInFrames": 469,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_08.wav",
+      "cues": [
+        100,
+        301
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 29
+        },
+        {
+          "text": "Who makes the final diagnosis?",
+          "from": 31,
+          "to": 98
+        },
+        {
+          "text": "Pause and think,",
+          "from": 100,
+          "to": 135
+        },
+        {
+          "text": "and if you get it",
+          "from": 136,
+          "to": 154
+        },
+        {
+          "text": "right, comment below!",
+          "from": 155,
+          "to": 198
+        },
+        {
+          "text": "The doctor!",
+          "from": 301,
+          "to": 334
+        },
+        {
+          "text": "AI flags and highlights,",
+          "from": 336,
+          "to": 386
+        },
+        {
+          "text": "but the radiologist decides.",
+          "from": 389,
+          "to": 455
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Scan",
+            "and highlight areas"
+          ],
+          [
+            "Trained",
+            "on expert labels"
+          ],
+          [
+            "Helps",
+            "triage, screening, 2nd opinion"
+          ],
+          [
+            "Doctor",
+            "makes the final call"
+          ]
+        ],
+        "next": "EP 44 · Privacy"
+      },
+      "from": 4152,
+      "durationInFrames": 632,
+      "voiceFrom": 10,
+      "audio": "lessons/uc23/voice_09.wav",
+      "cues": [
+        46,
+        176,
+        257,
+        365,
+        452
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "A vision model scans the",
+          "from": 46,
+          "to": 86
+        },
+        {
+          "text": "X-ray, and highlights suspicious areas.",
+          "from": 88,
+          "to": 174
+        },
+        {
+          "text": "It's trained on expert-labelled scans.",
+          "from": 176,
+          "to": 254
+        },
+        {
+          "text": "It helps with triage,",
+          "from": 257,
+          "to": 296
+        },
+        {
+          "text": "screening, and second opinions.",
+          "from": 301,
+          "to": 363
+        },
+        {
+          "text": "And the doctor always makes",
+          "from": 365,
+          "to": 405
+        },
+        {
+          "text": "the final call.",
+          "from": 406,
+          "to": 448
+        },
+        {
+          "text": "Next, privacy,",
+          "from": 452,
+          "to": 492
+        },
+        {
+          "text": "and what happens to your data.",
+          "from": 497,
+          "to": 553
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 556,
+          "to": 619
+        }
+      ],
+      "image": null
+    }
+  ]
+}

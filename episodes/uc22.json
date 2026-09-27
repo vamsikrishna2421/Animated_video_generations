@@ -1,0 +1,223 @@
+{
+  "id": "uc22",
+  "episode": 22,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 22",
+  "handle": "@ai_maastaaru",
+  "title": "How Resume Screening Software Works",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You apply for a job, and get a rejection email within minutes. [1] Did a human even read your CV? Often, software screened it first. [2] Let's break down how resume screening, or ATS, works.",
+      "data": {
+        "kicker": "USE CASE 22",
+        "title": [
+          "Resume",
+          "Screening"
+        ],
+        "subtitle": "Who reads your CV first?",
+        "buzzwords": [
+          "ATS",
+          "Parsing",
+          "Keywords",
+          "Ranking",
+          "Job match",
+          "Recruiters",
+          "Bias checks",
+          "Shortlist"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's the flow. [1] You upload your CV. [2] The system parses it, pulling out your name, skills, jobs, and education. [3] It compares them to the job description. [4] It gives each candidate a match score, [5] and recruiters see a ranked shortlist.",
+      "data": {
+        "heading": "From CV to shortlist",
+        "nodes": [
+          [
+            "Upload",
+            "Upload",
+            "Your CV"
+          ],
+          [
+            "ScanText",
+            "Parse",
+            "Skills, jobs, education"
+          ],
+          [
+            "GitCompare",
+            "Compare",
+            "With the job description"
+          ],
+          [
+            "Gauge",
+            "Score",
+            "Match percentage"
+          ],
+          [
+            "ListOrdered",
+            "Shortlist",
+            "Ranked for recruiters"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "ATS stands for applicant tracking system. [1] It's software companies use to collect and organise job applications. [2] Older systems matched exact keywords. [3] Newer ones use AI and embeddings, to match meaning, so machine learning can match M L.",
+      "data": {
+        "term": "ATS",
+        "short": "ATS",
+        "definition": "Applicant Tracking System: software that collects, parses and ranks job applications for recruiters.",
+        "chips": [
+          [
+            "Inbox",
+            "Collects applications"
+          ],
+          [
+            "Hash",
+            "Old: exact keywords"
+          ],
+          [
+            "Brain",
+            "New: matches meaning"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "There are two ways to match. [1] Keyword matching looks for exact words from the job post. It misses synonyms. [2] Semantic matching, using embeddings, understands that people describe the same skill in different ways.",
+      "data": {
+        "heading": "Two ways to match",
+        "kicker": "KEYWORDS VS MEANING",
+        "left": {
+          "icon": "Hash",
+          "title": "Keyword",
+          "stat": "Exact words",
+          "label": "misses synonyms"
+        },
+        "right": {
+          "icon": "Brain",
+          "title": "Semantic",
+          "stat": "Meaning",
+          "label": "understands different wording"
+        }
+      }
+    },
+    {
+      "type": "steps",
+      "text": "So how do you get through? [1] Use a simple layout. Fancy tables and images can confuse the parser. [2] Mirror important skills from the job description, honestly. [3] And show results with numbers, like, cut costs by 20 percent.",
+      "data": {
+        "heading": "Tips for job seekers",
+        "kicker": "BEAT THE BOT, HONESTLY",
+        "steps": [
+          [
+            "FileText",
+            "Simple layout",
+            "Easy for the parser"
+          ],
+          [
+            "Target",
+            "Match the skills",
+            "Honestly, from the job post"
+          ],
+          [
+            "TrendingUp",
+            "Show results",
+            "With numbers"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think hiding keywords in white text will trick the system. [2] Modern systems and recruiters can spot this, and it can get you rejected. Honest, clear CVs work best.",
+      "data": {
+        "myth": "Hiding keywords in white text tricks the system.",
+        "fact": "Modern systems and recruiters spot it, and it can get you rejected.",
+        "tip": "Honest and clear wins"
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Remember bias from episode 42? [1] One famous hiring tool learned to downgrade CVs mentioning women's activities, because of past data. [2] So good companies now run bias audits, [3] and keep humans making the final decisions.",
+      "data": {
+        "heading": "The fairness challenge",
+        "items": [
+          [
+            "TriangleAlert",
+            "A warning story",
+            "Learned bias from past hiring"
+          ],
+          [
+            "ClipboardCheck",
+            "Bias audits",
+            "Test for unfair results"
+          ],
+          [
+            "UserCheck",
+            "Humans decide",
+            "AI assists, people choose"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What does it mean when an ATS parses your CV? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It pulls out your skills, jobs, and education, so it can compare them to the job!",
+      "data": {
+        "question": "Parsing your CV means…",
+        "options": [
+          "Pulling out skills, jobs and education",
+          "Printing it",
+          "Emailing it to your friends"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] An ATS parses your CV, and compares it to the job. [2] Newer systems match meaning, not just keywords. [3] Use a simple layout, and honest, relevant skills. [4] And fair systems keep humans in charge. [5] Next, AI safety and alignment. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Parse",
+            "and compare to the job"
+          ],
+          [
+            "Meaning",
+            "not just keywords"
+          ],
+          [
+            "Simple CV",
+            "honest skills"
+          ],
+          [
+            "Humans",
+            "make the final call"
+          ]
+        ],
+        "next": "EP 43 · AI safety"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Rejected in minutes? A bot probably read your CV first. Here's how it works.\n\nReal World AI, Use Case 22: resume screening (ATS)\n- The flow: upload, parse, compare, score, shortlist\n- Keyword matching vs semantic matching\n- Honest tips to get through\n- Myth: white-text keyword tricks backfire\n- The fairness challenge, and why humans must decide\n\nQuiz at the end. Got it right? Comment below.\n\nNext: AI safety and alignment.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #JobSearch #ATS #LearnAI #CareerTips",
+    "pinned": "Quiz answer: Parsing means pulling out your skills, jobs and education so it can compare them to the job. Share this with a friend who's job hunting!",
+    "cover": "'Resume Screening' title card",
+    "alt": "Animated breakdown of how applicant tracking systems parse, score and rank CVs."
+  }
+}

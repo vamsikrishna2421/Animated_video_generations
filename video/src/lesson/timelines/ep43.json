@@ -1,0 +1,775 @@
+{
+  "id": "ep43",
+  "episode": 43,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Safety and Alignment",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4858,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep43/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 43",
+        "title": [
+          "AI",
+          "Safety"
+        ],
+        "subtitle": "Making AI do what we mean",
+        "buzzwords": [
+          "Alignment",
+          "Misuse",
+          "Red teaming",
+          "Evaluations",
+          "Guardrails",
+          "Oversight",
+          "Honesty",
+          "Control"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 482,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_01.wav",
+      "cues": [
+        168,
+        284
+      ],
+      "captions": [
+        {
+          "text": "Imagine telling a super capable",
+          "from": 10,
+          "to": 65
+        },
+        {
+          "text": "robot, make as many paper",
+          "from": 67,
+          "to": 119
+        },
+        {
+          "text": "clips as possible,",
+          "from": 122,
+          "to": 166
+        },
+        {
+          "text": "and it takes that so",
+          "from": 168,
+          "to": 196
+        },
+        {
+          "text": "literally, it ignores everything else.",
+          "from": 198,
+          "to": 282
+        },
+        {
+          "text": "That's the alignment problem.",
+          "from": 284,
+          "to": 340
+        },
+        {
+          "text": "Today, AI safety and alignment,",
+          "from": 342,
+          "to": 424
+        },
+        {
+          "text": "explained simply.",
+          "from": 426,
+          "to": 470
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Alignment",
+        "short": "Alignment",
+        "definition": "Making AI systems pursue what people actually intend, safely and honestly, not just the literal instruction.",
+        "chips": [
+          [
+            "Target",
+            "What we intend"
+          ],
+          [
+            "HeartHandshake",
+            "Helpful, honest, harmless"
+          ],
+          [
+            "Compass",
+            "Even in new situations"
+          ]
+        ]
+      },
+      "from": 482,
+      "durationInFrames": 396,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_02.wav",
+      "cues": [
+        146,
+        211,
+        299
+      ],
+      "captions": [
+        {
+          "text": "Alignment means making AI systems",
+          "from": 10,
+          "to": 85
+        },
+        {
+          "text": "do what we actually intend,",
+          "from": 87,
+          "to": 143
+        },
+        {
+          "text": "not just what we literally said.",
+          "from": 146,
+          "to": 208
+        },
+        {
+          "text": "Being helpful,",
+          "from": 211,
+          "to": 244
+        },
+        {
+          "text": "honest, and harmless,",
+          "from": 246,
+          "to": 297
+        },
+        {
+          "text": "even in situations nobody planned for.",
+          "from": 299,
+          "to": 384
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Said vs meant",
+        "kicker": "SPECIFICATION GAMING",
+        "left": {
+          "icon": "MessageSquare",
+          "title": "What we said",
+          "stat": "Max score",
+          "label": "win the boat race"
+        },
+        "right": {
+          "icon": "RefreshCw",
+          "title": "What it did",
+          "stat": "Loophole",
+          "label": "spun in circles for points"
+        }
+      },
+      "from": 878,
+      "durationInFrames": 491,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_03.wav",
+      "cues": [
+        60,
+        174
+      ],
+      "captions": [
+        {
+          "text": "Here's the classic trap.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "What we say:",
+          "from": 60,
+          "to": 86
+        },
+        {
+          "text": "get the highest score in",
+          "from": 87,
+          "to": 124
+        },
+        {
+          "text": "a boat racing game.",
+          "from": 124,
+          "to": 172
+        },
+        {
+          "text": "What an AI actually did",
+          "from": 174,
+          "to": 223
+        },
+        {
+          "text": "in one experiment:",
+          "from": 225,
+          "to": 263
+        },
+        {
+          "text": "spin in circles,",
+          "from": 266,
+          "to": 302
+        },
+        {
+          "text": "collecting bonus points,",
+          "from": 304,
+          "to": 344
+        },
+        {
+          "text": "and never finish the race.",
+          "from": 349,
+          "to": 403
+        },
+        {
+          "text": "It hit the target,",
+          "from": 406,
+          "to": 434
+        },
+        {
+          "text": "but missed the point.",
+          "from": 436,
+          "to": 479
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three big risks",
+        "kicker": "WHAT COULD GO WRONG",
+        "steps": [
+          [
+            "UserX",
+            "Misuse",
+            "Bad actors using AI"
+          ],
+          [
+            "TriangleAlert",
+            "Accidents",
+            "Confident mistakes"
+          ],
+          [
+            "Compass",
+            "Misalignment",
+            "Chasing the wrong goal"
+          ]
+        ]
+      },
+      "from": 1369,
+      "durationInFrames": 571,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_04.wav",
+      "cues": [
+        98,
+        252,
+        423
+      ],
+      "captions": [
+        {
+          "text": "AI safety covers three big risks.",
+          "from": 10,
+          "to": 95
+        },
+        {
+          "text": "Misuse, people using AI for",
+          "from": 98,
+          "to": 165
+        },
+        {
+          "text": "scams, weapons,",
+          "from": 167,
+          "to": 205
+        },
+        {
+          "text": "or attacks.",
+          "from": 211,
+          "to": 249
+        },
+        {
+          "text": "Accidents, AI making confident mistakes",
+          "from": 252,
+          "to": 336
+        },
+        {
+          "text": "in important places,",
+          "from": 337,
+          "to": 379
+        },
+        {
+          "text": "like medicine.",
+          "from": 380,
+          "to": 420
+        },
+        {
+          "text": "And misalignment,",
+          "from": 423,
+          "to": 457
+        },
+        {
+          "text": "powerful systems chasing goals we",
+          "from": 459,
+          "to": 521
+        },
+        {
+          "text": "didn't intend.",
+          "from": 523,
+          "to": 559
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How labs make AI safer",
+        "nodes": [
+          [
+            "ThumbsUp",
+            "Feedback",
+            "RLHF"
+          ],
+          [
+            "ScrollText",
+            "Principles",
+            "A written constitution"
+          ],
+          [
+            "Swords",
+            "Red teaming",
+            "Experts try to break it"
+          ],
+          [
+            "ClipboardCheck",
+            "Evaluations",
+            "Tests before release"
+          ],
+          [
+            "Eye",
+            "Monitoring",
+            "Watch after launch"
+          ]
+        ]
+      },
+      "from": 1940,
+      "durationInFrames": 644,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_05.wav",
+      "cues": [
+        101,
+        237,
+        342,
+        439,
+        537
+      ],
+      "captions": [
+        {
+          "text": "So how do AI labs",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "make models safer?",
+          "from": 53,
+          "to": 98
+        },
+        {
+          "text": "Train with human feedback,",
+          "from": 101,
+          "to": 168
+        },
+        {
+          "text": "like RLHF from episode 30.",
+          "from": 168,
+          "to": 235
+        },
+        {
+          "text": "Give the model clear principles,",
+          "from": 237,
+          "to": 287
+        },
+        {
+          "text": "or a constitution.",
+          "from": 289,
+          "to": 339
+        },
+        {
+          "text": "Red team it,",
+          "from": 342,
+          "to": 368
+        },
+        {
+          "text": "experts try hard to break it.",
+          "from": 370,
+          "to": 436
+        },
+        {
+          "text": "Run safety evaluations,",
+          "from": 439,
+          "to": 492
+        },
+        {
+          "text": "before release.",
+          "from": 496,
+          "to": 530
+        },
+        {
+          "text": "And monitor real world use,",
+          "from": 537,
+          "to": 592
+        },
+        {
+          "text": "after launch.",
+          "from": 596,
+          "to": 631
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Safety words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Swords",
+            "Red teaming",
+            "Attack to find flaws"
+          ],
+          [
+            "Bug",
+            "Reward hacking",
+            "Loopholes for points"
+          ],
+          [
+            "Microscope",
+            "Interpretability",
+            "Look inside the model"
+          ],
+          [
+            "UserCheck",
+            "Human oversight",
+            "People can check and stop"
+          ]
+        ]
+      },
+      "from": 2584,
+      "durationInFrames": 571,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_06.wav",
+      "cues": [
+        60,
+        188,
+        300,
+        419
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Red teaming,",
+          "from": 60,
+          "to": 86
+        },
+        {
+          "text": "attacking your own AI to",
+          "from": 88,
+          "to": 138
+        },
+        {
+          "text": "find weaknesses.",
+          "from": 139,
+          "to": 185
+        },
+        {
+          "text": "Reward hacking,",
+          "from": 188,
+          "to": 219
+        },
+        {
+          "text": "finding loopholes to get high scores.",
+          "from": 222,
+          "to": 298
+        },
+        {
+          "text": "Interpretability, research into what's happening",
+          "from": 300,
+          "to": 376
+        },
+        {
+          "text": "inside the model.",
+          "from": 377,
+          "to": 417
+        },
+        {
+          "text": "And human oversight,",
+          "from": 419,
+          "to": 458
+        },
+        {
+          "text": "keeping people able to check,",
+          "from": 460,
+          "to": 506
+        },
+        {
+          "text": "and stop the AI.",
+          "from": 509,
+          "to": 559
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI safety is only about killer robots from movies.",
+        "fact": "Most safety work is practical today: stopping scams, reducing false answers and keeping human control.",
+        "tip": "Safety is everyday work"
+      },
+      "from": 3155,
+      "durationInFrames": 523,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_07.wav",
+      "cues": [
+        59,
+        200
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think AI safety is",
+          "from": 59,
+          "to": 111
+        },
+        {
+          "text": "only about killer robots,",
+          "from": 112,
+          "to": 160
+        },
+        {
+          "text": "from movies.",
+          "from": 161,
+          "to": 197
+        },
+        {
+          "text": "Most safety work is practical, today.",
+          "from": 200,
+          "to": 286
+        },
+        {
+          "text": "Stopping scams,",
+          "from": 290,
+          "to": 327
+        },
+        {
+          "text": "reducing false answers,",
+          "from": 329,
+          "to": 375
+        },
+        {
+          "text": "protecting privacy,",
+          "from": 376,
+          "to": 417
+        },
+        {
+          "text": "and making sure systems stay",
+          "from": 421,
+          "to": 465
+        },
+        {
+          "text": "under human control.",
+          "from": 466,
+          "to": 511
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Red teaming means…",
+        "options": [
+          "Experts trying hard to break the AI",
+          "Painting servers red",
+          "Training on red images"
+        ],
+        "answer": 0
+      },
+      "from": 3678,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_08.wav",
+      "cues": [
+        86,
+        300
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "What is red teaming?",
+          "from": 43,
+          "to": 84
+        },
+        {
+          "text": "Pause and think,",
+          "from": 86,
+          "to": 123
+        },
+        {
+          "text": "and if you get it",
+          "from": 124,
+          "to": 142
+        },
+        {
+          "text": "right, comment below!",
+          "from": 143,
+          "to": 202
+        },
+        {
+          "text": "Experts trying hard to break",
+          "from": 300,
+          "to": 344
+        },
+        {
+          "text": "the AI,",
+          "from": 346,
+          "to": 373
+        },
+        {
+          "text": "to find weaknesses before bad",
+          "from": 375,
+          "to": 422
+        },
+        {
+          "text": "actors do!",
+          "from": 424,
+          "to": 459
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Alignment",
+            "do what we mean"
+          ],
+          [
+            "Risks",
+            "misuse, accidents, misalignment"
+          ],
+          [
+            "Tools",
+            "feedback, red teams, evals"
+          ],
+          [
+            "Practical",
+            "everyday safety"
+          ]
+        ],
+        "next": "USE CASE 23 · X-rays"
+      },
+      "from": 4149,
+      "durationInFrames": 709,
+      "voiceFrom": 10,
+      "audio": "lessons/ep43/voice_09.wav",
+      "cues": [
+        47,
+        157,
+        271,
+        401,
+        484
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Alignment means doing what we",
+          "from": 47,
+          "to": 86
+        },
+        {
+          "text": "intend, not just what we said.",
+          "from": 86,
+          "to": 154
+        },
+        {
+          "text": "The big risks are misuse,",
+          "from": 157,
+          "to": 201
+        },
+        {
+          "text": "accidents, and misalignment.",
+          "from": 205,
+          "to": 268
+        },
+        {
+          "text": "Labs use feedback,",
+          "from": 271,
+          "to": 306
+        },
+        {
+          "text": "principles, red teaming,",
+          "from": 309,
+          "to": 354
+        },
+        {
+          "text": "and evaluations.",
+          "from": 356,
+          "to": 398
+        },
+        {
+          "text": "And safety is practical,",
+          "from": 401,
+          "to": 443
+        },
+        {
+          "text": "everyday work.",
+          "from": 444,
+          "to": 481
+        },
+        {
+          "text": "Next, a real world use",
+          "from": 484,
+          "to": 528
+        },
+        {
+          "text": "case, how AI helps doctors",
+          "from": 529,
+          "to": 586
+        },
+        {
+          "text": "read X-rays.",
+          "from": 588,
+          "to": 627
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 630,
+          "to": 697
+        }
+      ],
+      "image": null
+    }
+  ]
+}
