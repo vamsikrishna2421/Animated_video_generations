@@ -1,0 +1,790 @@
+{
+  "id": "uc24",
+  "episode": 24,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Deepfake Detection Works",
+  "host": "female",
+  "label": "USE CASE 24",
+  "fps": 30,
+  "totalFrames": 4963,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc24/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 24",
+        "title": [
+          "Deepfake",
+          "Detection"
+        ],
+        "subtitle": "AI vs AI",
+        "buzzwords": [
+          "Detection",
+          "Artifacts",
+          "Liveness",
+          "Watermarks",
+          "Provenance",
+          "C2PA",
+          "Classifiers",
+          "Arms race"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 404,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_01.wav",
+      "cues": [
+        129,
+        304
+      ],
+      "captions": [
+        {
+          "text": "If AI can make fakes,",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "can AI also catch them?",
+          "from": 61,
+          "to": 126
+        },
+        {
+          "text": "Banks, social media platforms,",
+          "from": 129,
+          "to": 190
+        },
+        {
+          "text": "and newsrooms now use detection",
+          "from": 192,
+          "to": 249
+        },
+        {
+          "text": "tools, every day.",
+          "from": 250,
+          "to": 302
+        },
+        {
+          "text": "Let's break down how deepfake",
+          "from": 304,
+          "to": 350
+        },
+        {
+          "text": "detection works.",
+          "from": 352,
+          "to": 390
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How detection works",
+        "nodes": [
+          [
+            "Upload",
+            "Input",
+            "Video, image, audio"
+          ],
+          [
+            "Film",
+            "Split",
+            "Frames and segments"
+          ],
+          [
+            "ScanSearch",
+            "Classify",
+            "Look for AI traces"
+          ],
+          [
+            "Gauge",
+            "Score",
+            "Probability of fake"
+          ],
+          [
+            "UserCheck",
+            "Review",
+            "Humans check flags"
+          ]
+        ]
+      },
+      "from": 404,
+      "durationInFrames": 672,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_02.wav",
+      "cues": [
+        82,
+        182,
+        285,
+        454,
+        563
+      ],
+      "captions": [
+        {
+          "text": "Here's how a detection system works.",
+          "from": 10,
+          "to": 80
+        },
+        {
+          "text": "It takes in a video,",
+          "from": 82,
+          "to": 119
+        },
+        {
+          "text": "image, or audio clip.",
+          "from": 122,
+          "to": 179
+        },
+        {
+          "text": "It breaks it into frames,",
+          "from": 182,
+          "to": 231
+        },
+        {
+          "text": "and sound segments.",
+          "from": 233,
+          "to": 282
+        },
+        {
+          "text": "A classifier checks each piece",
+          "from": 285,
+          "to": 339
+        },
+        {
+          "text": "for tiny traces that AI",
+          "from": 341,
+          "to": 395
+        },
+        {
+          "text": "generators leave behind.",
+          "from": 397,
+          "to": 452
+        },
+        {
+          "text": "It combines the results into",
+          "from": 454,
+          "to": 500
+        },
+        {
+          "text": "a fake probability score.",
+          "from": 501,
+          "to": 561
+        },
+        {
+          "text": "And flags suspicious content for",
+          "from": 563,
+          "to": 620
+        },
+        {
+          "text": "human review.",
+          "from": 622,
+          "to": 660
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "What it looks for",
+        "kicker": "THE CLUES",
+        "steps": [
+          [
+            "Sparkles",
+            "Visual artifacts",
+            "Texture, light, edges"
+          ],
+          [
+            "Move",
+            "Motion",
+            "Blinking, head movement"
+          ],
+          [
+            "AudioLines",
+            "Audio",
+            "Breaths, hidden frequencies"
+          ]
+        ]
+      },
+      "from": 1076,
+      "durationInFrames": 546,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_03.wav",
+      "cues": [
+        68,
+        258,
+        378
+      ],
+      "captions": [
+        {
+          "text": "What traces does it look for?",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "Visual artifacts,",
+          "from": 68,
+          "to": 100
+        },
+        {
+          "text": "like odd skin texture,",
+          "from": 106,
+          "to": 155
+        },
+        {
+          "text": "lighting that doesn't match,",
+          "from": 157,
+          "to": 194
+        },
+        {
+          "text": "or unnatural edges.",
+          "from": 198,
+          "to": 255
+        },
+        {
+          "text": "Motion clues,",
+          "from": 258,
+          "to": 285
+        },
+        {
+          "text": "like strange blinking,",
+          "from": 290,
+          "to": 329
+        },
+        {
+          "text": "or head movement.",
+          "from": 333,
+          "to": 375
+        },
+        {
+          "text": "Audio clues,",
+          "from": 378,
+          "to": 406
+        },
+        {
+          "text": "like missing breaths,",
+          "from": 409,
+          "to": 444
+        },
+        {
+          "text": "or unnatural frequencies humans can't hear.",
+          "from": 446,
+          "to": 534
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Liveness detection",
+        "short": "Liveness",
+        "definition": "A check that confirms a real, live person is in front of the camera, not a photo, mask or deepfake.",
+        "chips": [
+          [
+            "RefreshCw",
+            "Turn your head, blink"
+          ],
+          [
+            "Layers",
+            "Checks depth and skin"
+          ],
+          [
+            "UserCheck",
+            "A real, live person"
+          ]
+        ]
+      },
+      "from": 1622,
+      "durationInFrames": 519,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_04.wav",
+      "cues": [
+        124,
+        256,
+        339
+      ],
+      "captions": [
+        {
+          "text": "Banks use a related check,",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "called liveness detection.",
+          "from": 64,
+          "to": 122
+        },
+        {
+          "text": "During video KYC,",
+          "from": 124,
+          "to": 172
+        },
+        {
+          "text": "it asks you to turn",
+          "from": 177,
+          "to": 202
+        },
+        {
+          "text": "your head,",
+          "from": 203,
+          "to": 218
+        },
+        {
+          "text": "or blink.",
+          "from": 222,
+          "to": 254
+        },
+        {
+          "text": "It checks depth,",
+          "from": 256,
+          "to": 293
+        },
+        {
+          "text": "and skin reflections,",
+          "from": 293,
+          "to": 339
+        },
+        {
+          "text": "to make sure a real,",
+          "from": 339,
+          "to": 384
+        },
+        {
+          "text": "live person is there,",
+          "from": 384,
+          "to": 430
+        },
+        {
+          "text": "not a photo,",
+          "from": 430,
+          "to": 458
+        },
+        {
+          "text": "a mask,",
+          "from": 458,
+          "to": 475
+        },
+        {
+          "text": "or a deepfake.",
+          "from": 475,
+          "to": 506
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Catch fakes, or prove real?",
+        "kicker": "TWO STRATEGIES",
+        "left": {
+          "icon": "ScanSearch",
+          "title": "Detection",
+          "stat": "Catch fakes",
+          "label": "can fall behind new tools"
+        },
+        "right": {
+          "icon": "BadgeCheck",
+          "title": "Provenance",
+          "stat": "Prove real",
+          "label": "watermarks and credentials"
+        }
+      },
+      "from": 2141,
+      "durationInFrames": 517,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_05.wav",
+      "cues": [
+        64,
+        262
+      ],
+      "captions": [
+        {
+          "text": "There are two strategies.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Detection, catching fakes after they're made.",
+          "from": 64,
+          "to": 158
+        },
+        {
+          "text": "But detectors can fall behind",
+          "from": 160,
+          "to": 212
+        },
+        {
+          "text": "newer generators.",
+          "from": 214,
+          "to": 260
+        },
+        {
+          "text": "Provenance, proving what's real from",
+          "from": 262,
+          "to": 330
+        },
+        {
+          "text": "the start,",
+          "from": 330,
+          "to": 350
+        },
+        {
+          "text": "with watermarks,",
+          "from": 350,
+          "to": 381
+        },
+        {
+          "text": "and signed content credentials that",
+          "from": 381,
+          "to": 446
+        },
+        {
+          "text": "record where a photo came from.",
+          "from": 446,
+          "to": 504
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Detection words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Sparkles",
+            "Artifacts",
+            "Traces AI leaves"
+          ],
+          [
+            "Droplet",
+            "Watermark",
+            "Hidden AI signal"
+          ],
+          [
+            "BadgeCheck",
+            "C2PA",
+            "Signed media history"
+          ],
+          [
+            "Swords",
+            "Arms race",
+            "Fakers vs detectors"
+          ]
+        ]
+      },
+      "from": 2658,
+      "durationInFrames": 675,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_06.wav",
+      "cues": [
+        59,
+        187,
+        319,
+        509
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Artifacts, tiny traces left by",
+          "from": 59,
+          "to": 130
+        },
+        {
+          "text": "AI generators.",
+          "from": 132,
+          "to": 184
+        },
+        {
+          "text": "Watermark, a hidden signal added",
+          "from": 187,
+          "to": 244
+        },
+        {
+          "text": "to AI-generated content.",
+          "from": 246,
+          "to": 316
+        },
+        {
+          "text": "Content credentials,",
+          "from": 319,
+          "to": 365
+        },
+        {
+          "text": "like the C2PA standard,",
+          "from": 365,
+          "to": 416
+        },
+        {
+          "text": "a signed record of where",
+          "from": 416,
+          "to": 470
+        },
+        {
+          "text": "media came from.",
+          "from": 470,
+          "to": 507
+        },
+        {
+          "text": "And the arms race,",
+          "from": 509,
+          "to": 546
+        },
+        {
+          "text": "generators and detectors constantly trying",
+          "from": 548,
+          "to": 622
+        },
+        {
+          "text": "to beat each other.",
+          "from": 623,
+          "to": 664
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Detection tools are 100% accurate.",
+        "fact": "They give probabilities and can be fooled, especially by new or compressed media.",
+        "tip": "One signal, not the final word"
+      },
+      "from": 3333,
+      "durationInFrames": 493,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_07.wav",
+      "cues": [
+        59,
+        174
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think detection tools are",
+          "from": 59,
+          "to": 109
+        },
+        {
+          "text": "100 percent accurate.",
+          "from": 112,
+          "to": 172
+        },
+        {
+          "text": "They're not.",
+          "from": 174,
+          "to": 204
+        },
+        {
+          "text": "They give probabilities,",
+          "from": 206,
+          "to": 247
+        },
+        {
+          "text": "and they can be fooled,",
+          "from": 250,
+          "to": 287
+        },
+        {
+          "text": "especially by new or compressed videos.",
+          "from": 289,
+          "to": 380
+        },
+        {
+          "text": "They're one signal,",
+          "from": 382,
+          "to": 417
+        },
+        {
+          "text": "alongside checking sources.",
+          "from": 419,
+          "to": 479
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Why turn your head during KYC?",
+        "options": [
+          "Liveness detection, to prove you're real",
+          "To test the camera",
+          "To take a better selfie"
+        ],
+        "answer": 0
+      },
+      "from": 3826,
+      "durationInFrames": 525,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_08.wav",
+      "cues": [
+        179,
+        385
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "During video KYC,",
+          "from": 45,
+          "to": 86
+        },
+        {
+          "text": "a bank asks you to",
+          "from": 91,
+          "to": 115
+        },
+        {
+          "text": "turn your head.",
+          "from": 116,
+          "to": 151
+        },
+        {
+          "text": "Why?",
+          "from": 155,
+          "to": 177
+        },
+        {
+          "text": "Pause and think,",
+          "from": 179,
+          "to": 209
+        },
+        {
+          "text": "and if you get it",
+          "from": 214,
+          "to": 231
+        },
+        {
+          "text": "right, comment below!",
+          "from": 232,
+          "to": 287
+        },
+        {
+          "text": "It's liveness detection,",
+          "from": 385,
+          "to": 427
+        },
+        {
+          "text": "proving a real,",
+          "from": 430,
+          "to": 459
+        },
+        {
+          "text": "live person is there!",
+          "from": 461,
+          "to": 512
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Detect",
+            "AI traces in media"
+          ],
+          [
+            "Clues",
+            "visual, motion, audio"
+          ],
+          [
+            "Liveness",
+            "for banks and KYC"
+          ],
+          [
+            "Provenance",
+            "prove what's real"
+          ]
+        ],
+        "next": "EP 46 · Copyright"
+      },
+      "from": 4351,
+      "durationInFrames": 612,
+      "voiceFrom": 10,
+      "audio": "lessons/uc24/voice_09.wav",
+      "cues": [
+        45,
+        154,
+        277,
+        342,
+        469
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "Detectors split media,",
+          "from": 45,
+          "to": 86
+        },
+        {
+          "text": "and look for AI traces.",
+          "from": 92,
+          "to": 152
+        },
+        {
+          "text": "Clues include visual artifacts,",
+          "from": 154,
+          "to": 215
+        },
+        {
+          "text": "motion, and audio.",
+          "from": 220,
+          "to": 274
+        },
+        {
+          "text": "Liveness checks protect banks.",
+          "from": 277,
+          "to": 340
+        },
+        {
+          "text": "And provenance proves what's real,",
+          "from": 342,
+          "to": 396
+        },
+        {
+          "text": "with watermarks and credentials.",
+          "from": 399,
+          "to": 465
+        },
+        {
+          "text": "Next, copyright and AI.",
+          "from": 469,
+          "to": 537
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 540,
+          "to": 600
+        }
+      ],
+      "image": null
+    }
+  ]
+}

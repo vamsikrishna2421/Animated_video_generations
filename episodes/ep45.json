@@ -1,0 +1,227 @@
+{
+  "id": "ep45",
+  "episode": 45,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Deepfakes and How to Spot Them",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "A video of a famous actor promoting a scam investment app. [1] A voice call from your cousin, begging for money urgently. [2] Both could be fake, made by AI. Let's understand deepfakes, and how to spot them.",
+      "data": {
+        "kicker": "EPISODE 45",
+        "title": [
+          "Deep-",
+          "fakes"
+        ],
+        "subtitle": "How to spot AI fakes",
+        "buzzwords": [
+          "Face swap",
+          "Voice clone",
+          "Lip sync",
+          "Scams",
+          "Misinformation",
+          "Verification",
+          "Watermarks",
+          "Stay alert"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "A deepfake is fake media made with AI, [1] that shows a real person saying or doing something they never did. [2] It can be a video, an image, or a voice. [3] The word comes from deep learning, plus fake.",
+      "data": {
+        "term": "Deepfake",
+        "short": "Deepfake",
+        "definition": "AI-generated video, image or audio that makes a real person appear to say or do something they never did.",
+        "chips": [
+          [
+            "User",
+            "A real person"
+          ],
+          [
+            "Video",
+            "Video, image or voice"
+          ],
+          [
+            "Brain",
+            "Deep learning + fake"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "There are three common types. [1] Face swap, putting one person's face on another person's body. [2] Voice cloning, copying someone's voice from just a short audio sample. [3] And lip sync, changing a real video, so the mouth matches new words.",
+      "data": {
+        "heading": "Three common types",
+        "kicker": "HOW THEY'RE MADE",
+        "steps": [
+          [
+            "Repeat",
+            "Face swap",
+            "One face on another body"
+          ],
+          [
+            "AudioLines",
+            "Voice clone",
+            "From a short sample"
+          ],
+          [
+            "Film",
+            "Lip sync",
+            "New words, real video"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Here's how deepfakes are misused. [1] Scam calls, with a cloned voice of a family member, or a boss. [2] Fake celebrity ads, promoting fraud investment apps. [3] And fake political videos, spreading misinformation before elections.",
+      "data": {
+        "heading": "How they're misused",
+        "items": [
+          [
+            "PhoneCall",
+            "Scam calls",
+            "Cloned family voices"
+          ],
+          [
+            "Megaphone",
+            "Fake ads",
+            "Celebrities 'promoting' fraud"
+          ],
+          [
+            "Vote",
+            "Misinformation",
+            "Fake political clips"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "So how can you spot one? [1] Look at the face edges, and hair, for blurring or flickering. [2] Watch the eyes, and blinking. They can look odd. [3] Check if the lips match the words exactly. [4] Listen for flat, robotic emotion, or strange breathing. [5] Most importantly, check the source. Is it from an official account?",
+      "data": {
+        "heading": "Spot the fake",
+        "nodes": [
+          [
+            "ScanFace",
+            "Edges",
+            "Blurry hair, flicker"
+          ],
+          [
+            "Eye",
+            "Eyes",
+            "Odd blinking"
+          ],
+          [
+            "MessageSquare",
+            "Lips",
+            "Out of sync"
+          ],
+          [
+            "AudioLines",
+            "Voice",
+            "Flat, odd breathing"
+          ],
+          [
+            "BadgeCheck",
+            "Source",
+            "Official account?"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think they can always spot a deepfake with their eyes. [2] The best fakes now look and sound very real. Visual clues help, but checking the source, and verifying through another channel, is far more reliable.",
+      "data": {
+        "myth": "You can always spot a deepfake with your eyes.",
+        "fact": "The best fakes look real. Checking the source and verifying another way is far more reliable.",
+        "tip": "Verify, don't just look"
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Here's your safety plan for calls. [1] Pause. Scammers create urgency, so slow down. [2] Hang up, and call the person back, on the number you already have. [3] And agree on a family code word, that only you know.",
+      "data": {
+        "heading": "Your safety plan",
+        "kicker": "FOR URGENT CALLS",
+        "steps": [
+          [
+            "Hand",
+            "Pause",
+            "Urgency is a red flag"
+          ],
+          [
+            "PhoneOutgoing",
+            "Call back",
+            "On a number you know"
+          ],
+          [
+            "KeyRound",
+            "Code word",
+            "Only your family knows"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Your 'cousin' calls, asking for urgent money. What should you do first? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Hang up, and call them back on the number you already have!",
+      "data": {
+        "question": "An urgent money call. First step?",
+        "options": [
+          "Hang up and call them back on their known number",
+          "Send the money quickly",
+          "Share your OTP"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Deepfakes are AI-made fake video, images, or voices. [2] Types include face swap, voice clone, and lip sync. [3] Look for clues, but always verify the source. [4] For urgent calls, pause, call back, and use a code word. [5] Next, a real world use case, how deepfake detection works. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Deepfakes",
+            "AI-made fakes"
+          ],
+          [
+            "Types",
+            "face, voice, lip sync"
+          ],
+          [
+            "Verify",
+            "the source"
+          ],
+          [
+            "Calls",
+            "pause, call back, code word"
+          ]
+        ],
+        "next": "USE CASE 24 · Detection"
+      }
+    }
+  ],
+  "post": {
+    "caption": "That celebrity ad or urgent call from your cousin might be AI. Here's how to protect yourself.\n\nAI From Scratch, Episode 45: deepfakes\n- What a deepfake is\n- Three types: face swap, voice clone, lip sync\n- How they're misused: scam calls, fake ads, misinformation\n- 5 clues to spot a fake\n- Your safety plan: pause, call back, family code word\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how deepfake detection works.\nFollow @ai_maastaaru to learn AI from scratch. Share this with your family!",
+    "tags": "#AIMaastaaru #Deepfake #CyberSafety #LearnAI #ScamAlert",
+    "pinned": "Quiz answer: Hang up and call them back on the number you already have. Set up a family code word today. Share this with your parents!",
+    "cover": "'Deepfakes' title card",
+    "alt": "Animated explainer of deepfakes, how they're misused and how to spot and verify them."
+  }
+}

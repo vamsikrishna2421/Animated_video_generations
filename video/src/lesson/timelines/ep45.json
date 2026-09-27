@@ -1,0 +1,794 @@
+{
+  "id": "ep45",
+  "episode": 45,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Deepfakes and How to Spot Them",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4561,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep45/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 45",
+        "title": [
+          "Deep-",
+          "fakes"
+        ],
+        "subtitle": "How to spot AI fakes",
+        "buzzwords": [
+          "Face swap",
+          "Voice clone",
+          "Lip sync",
+          "Scams",
+          "Misinformation",
+          "Verification",
+          "Watermarks",
+          "Stay alert"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 438,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_01.wav",
+      "cues": [
+        130,
+        250
+      ],
+      "captions": [
+        {
+          "text": "A video of a famous",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "actor promoting a scam investment app.",
+          "from": 50,
+          "to": 128
+        },
+        {
+          "text": "A voice call from your",
+          "from": 130,
+          "to": 160
+        },
+        {
+          "text": "cousin, begging for money urgently.",
+          "from": 161,
+          "to": 248
+        },
+        {
+          "text": "Both could be fake,",
+          "from": 250,
+          "to": 286
+        },
+        {
+          "text": "made by AI.",
+          "from": 288,
+          "to": 333
+        },
+        {
+          "text": "Let's understand deepfakes,",
+          "from": 335,
+          "to": 380
+        },
+        {
+          "text": "and how to spot them.",
+          "from": 383,
+          "to": 426
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Deepfake",
+        "short": "Deepfake",
+        "definition": "AI-generated video, image or audio that makes a real person appear to say or do something they never did.",
+        "chips": [
+          [
+            "User",
+            "A real person"
+          ],
+          [
+            "Video",
+            "Video, image or voice"
+          ],
+          [
+            "Brain",
+            "Deep learning + fake"
+          ]
+        ]
+      },
+      "from": 438,
+      "durationInFrames": 429,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_02.wav",
+      "cues": [
+        103,
+        234,
+        331
+      ],
+      "captions": [
+        {
+          "text": "A deepfake is fake media",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "made with AI,",
+          "from": 61,
+          "to": 101
+        },
+        {
+          "text": "that shows a real person",
+          "from": 103,
+          "to": 146
+        },
+        {
+          "text": "saying or doing something they",
+          "from": 148,
+          "to": 197
+        },
+        {
+          "text": "never did.",
+          "from": 199,
+          "to": 232
+        },
+        {
+          "text": "It can be a video,",
+          "from": 234,
+          "to": 265
+        },
+        {
+          "text": "an image,",
+          "from": 268,
+          "to": 289
+        },
+        {
+          "text": "or a voice.",
+          "from": 291,
+          "to": 328
+        },
+        {
+          "text": "The word comes from deep",
+          "from": 331,
+          "to": 365
+        },
+        {
+          "text": "learning, plus fake.",
+          "from": 367,
+          "to": 416
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three common types",
+        "kicker": "HOW THEY'RE MADE",
+        "steps": [
+          [
+            "Repeat",
+            "Face swap",
+            "One face on another body"
+          ],
+          [
+            "AudioLines",
+            "Voice clone",
+            "From a short sample"
+          ],
+          [
+            "Film",
+            "Lip sync",
+            "New words, real video"
+          ]
+        ]
+      },
+      "from": 867,
+      "durationInFrames": 497,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_03.wav",
+      "cues": [
+        72,
+        199,
+        342
+      ],
+      "captions": [
+        {
+          "text": "There are three common types.",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "Face swap,",
+          "from": 72,
+          "to": 97
+        },
+        {
+          "text": "putting one person's face on",
+          "from": 98,
+          "to": 139
+        },
+        {
+          "text": "another person's body.",
+          "from": 140,
+          "to": 195
+        },
+        {
+          "text": "Voice cloning,",
+          "from": 199,
+          "to": 227
+        },
+        {
+          "text": "copying someone's voice from just",
+          "from": 229,
+          "to": 283
+        },
+        {
+          "text": "a short audio sample.",
+          "from": 284,
+          "to": 339
+        },
+        {
+          "text": "And lip sync,",
+          "from": 342,
+          "to": 372
+        },
+        {
+          "text": "changing a real video,",
+          "from": 374,
+          "to": 418
+        },
+        {
+          "text": "so the mouth matches new words.",
+          "from": 421,
+          "to": 483
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "How they're misused",
+        "items": [
+          [
+            "PhoneCall",
+            "Scam calls",
+            "Cloned family voices"
+          ],
+          [
+            "Megaphone",
+            "Fake ads",
+            "Celebrities 'promoting' fraud"
+          ],
+          [
+            "Vote",
+            "Misinformation",
+            "Fake political clips"
+          ]
+        ]
+      },
+      "from": 1364,
+      "durationInFrames": 476,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_04.wav",
+      "cues": [
+        84,
+        222,
+        330
+      ],
+      "captions": [
+        {
+          "text": "Here's how deepfakes are misused.",
+          "from": 10,
+          "to": 80
+        },
+        {
+          "text": "Scam calls,",
+          "from": 84,
+          "to": 110
+        },
+        {
+          "text": "with a cloned voice of",
+          "from": 110,
+          "to": 159
+        },
+        {
+          "text": "a family member,",
+          "from": 159,
+          "to": 196
+        },
+        {
+          "text": "or a boss.",
+          "from": 196,
+          "to": 219
+        },
+        {
+          "text": "Fake celebrity ads,",
+          "from": 222,
+          "to": 260
+        },
+        {
+          "text": "promoting fraud investment apps.",
+          "from": 262,
+          "to": 327
+        },
+        {
+          "text": "And fake political videos,",
+          "from": 330,
+          "to": 378
+        },
+        {
+          "text": "spreading misinformation before elections.",
+          "from": 381,
+          "to": 464
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Spot the fake",
+        "nodes": [
+          [
+            "ScanFace",
+            "Edges",
+            "Blurry hair, flicker"
+          ],
+          [
+            "Eye",
+            "Eyes",
+            "Odd blinking"
+          ],
+          [
+            "MessageSquare",
+            "Lips",
+            "Out of sync"
+          ],
+          [
+            "AudioLines",
+            "Voice",
+            "Flat, odd breathing"
+          ],
+          [
+            "BadgeCheck",
+            "Source",
+            "Official account?"
+          ]
+        ]
+      },
+      "from": 1840,
+      "durationInFrames": 624,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_05.wav",
+      "cues": [
+        61,
+        171,
+        272,
+        355,
+        477
+      ],
+      "captions": [
+        {
+          "text": "So how can you spot one?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Look at the face edges,",
+          "from": 61,
+          "to": 96
+        },
+        {
+          "text": "and hair,",
+          "from": 98,
+          "to": 112
+        },
+        {
+          "text": "for blurring or flickering.",
+          "from": 113,
+          "to": 166
+        },
+        {
+          "text": "Watch the eyes,",
+          "from": 171,
+          "to": 201
+        },
+        {
+          "text": "and blinking.",
+          "from": 202,
+          "to": 231
+        },
+        {
+          "text": "They can look odd.",
+          "from": 233,
+          "to": 269
+        },
+        {
+          "text": "Check if the lips match",
+          "from": 272,
+          "to": 304
+        },
+        {
+          "text": "the words exactly.",
+          "from": 305,
+          "to": 352
+        },
+        {
+          "text": "Listen for flat,",
+          "from": 355,
+          "to": 386
+        },
+        {
+          "text": "robotic emotion,",
+          "from": 387,
+          "to": 421
+        },
+        {
+          "text": "or strange breathing.",
+          "from": 426,
+          "to": 474
+        },
+        {
+          "text": "Most importantly,",
+          "from": 477,
+          "to": 507
+        },
+        {
+          "text": "check the source.",
+          "from": 511,
+          "to": 547
+        },
+        {
+          "text": "Is it from an official account?",
+          "from": 550,
+          "to": 612
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "You can always spot a deepfake with your eyes.",
+        "fact": "The best fakes look real. Checking the source and verifying another way is far more reliable.",
+        "tip": "Verify, don't just look"
+      },
+      "from": 2464,
+      "durationInFrames": 472,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_06.wav",
+      "cues": [
+        58,
+        163
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think they can always",
+          "from": 58,
+          "to": 96
+        },
+        {
+          "text": "spot a deepfake with their eyes.",
+          "from": 98,
+          "to": 161
+        },
+        {
+          "text": "The best fakes now look",
+          "from": 163,
+          "to": 205
+        },
+        {
+          "text": "and sound very real.",
+          "from": 207,
+          "to": 260
+        },
+        {
+          "text": "Visual clues help,",
+          "from": 262,
+          "to": 298
+        },
+        {
+          "text": "but checking the source,",
+          "from": 298,
+          "to": 345
+        },
+        {
+          "text": "and verifying through another channel,",
+          "from": 345,
+          "to": 418
+        },
+        {
+          "text": "is far more reliable.",
+          "from": 418,
+          "to": 460
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Your safety plan",
+        "kicker": "FOR URGENT CALLS",
+        "steps": [
+          [
+            "Hand",
+            "Pause",
+            "Urgency is a red flag"
+          ],
+          [
+            "PhoneOutgoing",
+            "Call back",
+            "On a number you know"
+          ],
+          [
+            "KeyRound",
+            "Code word",
+            "Only your family knows"
+          ]
+        ]
+      },
+      "from": 2936,
+      "durationInFrames": 440,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_07.wav",
+      "cues": [
+        79,
+        214,
+        335
+      ],
+      "captions": [
+        {
+          "text": "Here's your safety plan for calls.",
+          "from": 10,
+          "to": 76
+        },
+        {
+          "text": "Pause.",
+          "from": 79,
+          "to": 110
+        },
+        {
+          "text": "Scammers create urgency,",
+          "from": 113,
+          "to": 166
+        },
+        {
+          "text": "so slow down.",
+          "from": 170,
+          "to": 206
+        },
+        {
+          "text": "Hang up,",
+          "from": 214,
+          "to": 230
+        },
+        {
+          "text": "and call the person back,",
+          "from": 230,
+          "to": 276
+        },
+        {
+          "text": "on the number you already have.",
+          "from": 276,
+          "to": 333
+        },
+        {
+          "text": "And agree on a family",
+          "from": 335,
+          "to": 363
+        },
+        {
+          "text": "code word,",
+          "from": 365,
+          "to": 383
+        },
+        {
+          "text": "that only you know.",
+          "from": 386,
+          "to": 429
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "An urgent money call. First step?",
+        "options": [
+          "Hang up and call them back on their known number",
+          "Send the money quickly",
+          "Share your OTP"
+        ],
+        "answer": 0
+      },
+      "from": 3376,
+      "durationInFrames": 497,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_08.wav",
+      "cues": [
+        181,
+        386
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "Your 'cousin' calls,",
+          "from": 42,
+          "to": 74
+        },
+        {
+          "text": "asking for urgent money.",
+          "from": 78,
+          "to": 133
+        },
+        {
+          "text": "What should you do first?",
+          "from": 135,
+          "to": 179
+        },
+        {
+          "text": "Pause and think,",
+          "from": 181,
+          "to": 213
+        },
+        {
+          "text": "and if you get it",
+          "from": 217,
+          "to": 235
+        },
+        {
+          "text": "right, comment below!",
+          "from": 236,
+          "to": 288
+        },
+        {
+          "text": "Hang up,",
+          "from": 386,
+          "to": 401
+        },
+        {
+          "text": "and call them back on",
+          "from": 401,
+          "to": 437
+        },
+        {
+          "text": "the number you already have!",
+          "from": 437,
+          "to": 484
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Deepfakes",
+            "AI-made fakes"
+          ],
+          [
+            "Types",
+            "face, voice, lip sync"
+          ],
+          [
+            "Verify",
+            "the source"
+          ],
+          [
+            "Calls",
+            "pause, call back, code word"
+          ]
+        ],
+        "next": "USE CASE 24 · Detection"
+      },
+      "from": 3873,
+      "durationInFrames": 688,
+      "voiceFrom": 10,
+      "audio": "lessons/ep45/voice_09.wav",
+      "cues": [
+        46,
+        167,
+        271,
+        361,
+        485
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Deepfakes are AI-made fake video,",
+          "from": 46,
+          "to": 110
+        },
+        {
+          "text": "images, or voices.",
+          "from": 113,
+          "to": 165
+        },
+        {
+          "text": "Types include face swap,",
+          "from": 167,
+          "to": 212
+        },
+        {
+          "text": "voice clone,",
+          "from": 217,
+          "to": 236
+        },
+        {
+          "text": "and lip sync.",
+          "from": 238,
+          "to": 269
+        },
+        {
+          "text": "Look for clues,",
+          "from": 271,
+          "to": 295
+        },
+        {
+          "text": "but always verify the source.",
+          "from": 298,
+          "to": 360
+        },
+        {
+          "text": "For urgent calls,",
+          "from": 361,
+          "to": 393
+        },
+        {
+          "text": "pause, call back,",
+          "from": 397,
+          "to": 434
+        },
+        {
+          "text": "and use a code word.",
+          "from": 439,
+          "to": 482
+        },
+        {
+          "text": "Next, a real world use",
+          "from": 485,
+          "to": 528
+        },
+        {
+          "text": "case, how deepfake detection works.",
+          "from": 530,
+          "to": 603
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 607,
+          "to": 676
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "id": "uc24",
+  "episode": 24,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 24",
+  "handle": "@ai_maastaaru",
+  "title": "How Deepfake Detection Works",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "If AI can make fakes, can AI also catch them? [1] Banks, social media platforms, and newsrooms now use detection tools, every day. [2] Let's break down how deepfake detection works.",
+      "data": {
+        "kicker": "USE CASE 24",
+        "title": [
+          "Deepfake",
+          "Detection"
+        ],
+        "subtitle": "AI vs AI",
+        "buzzwords": [
+          "Detection",
+          "Artifacts",
+          "Liveness",
+          "Watermarks",
+          "Provenance",
+          "C2PA",
+          "Classifiers",
+          "Arms race"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's how a detection system works. [1] It takes in a video, image, or audio clip. [2] It breaks it into frames, and sound segments. [3] A classifier checks each piece for tiny traces that AI generators leave behind. [4] It combines the results into a fake probability score. [5] And flags suspicious content for human review.",
+      "data": {
+        "heading": "How detection works",
+        "nodes": [
+          [
+            "Upload",
+            "Input",
+            "Video, image, audio"
+          ],
+          [
+            "Film",
+            "Split",
+            "Frames and segments"
+          ],
+          [
+            "ScanSearch",
+            "Classify",
+            "Look for AI traces"
+          ],
+          [
+            "Gauge",
+            "Score",
+            "Probability of fake"
+          ],
+          [
+            "UserCheck",
+            "Review",
+            "Humans check flags"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "What traces does it look for? [1] Visual artifacts, like odd skin texture, lighting that doesn't match, or unnatural edges. [2] Motion clues, like strange blinking, or head movement. [3] Audio clues, like missing breaths, or unnatural frequencies humans can't hear.",
+      "data": {
+        "heading": "What it looks for",
+        "kicker": "THE CLUES",
+        "steps": [
+          [
+            "Sparkles",
+            "Visual artifacts",
+            "Texture, light, edges"
+          ],
+          [
+            "Move",
+            "Motion",
+            "Blinking, head movement"
+          ],
+          [
+            "AudioLines",
+            "Audio",
+            "Breaths, hidden frequencies"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Banks use a related check, called liveness detection. [1] During video KYC, it asks you to turn your head, or blink. [2] It checks depth, and skin reflections, [3] to make sure a real, live person is there, not a photo, a mask, or a deepfake.",
+      "data": {
+        "term": "Liveness detection",
+        "short": "Liveness",
+        "definition": "A check that confirms a real, live person is in front of the camera, not a photo, mask or deepfake.",
+        "chips": [
+          [
+            "RefreshCw",
+            "Turn your head, blink"
+          ],
+          [
+            "Layers",
+            "Checks depth and skin"
+          ],
+          [
+            "UserCheck",
+            "A real, live person"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "There are two strategies. [1] Detection, catching fakes after they're made. But detectors can fall behind newer generators. [2] Provenance, proving what's real from the start, with watermarks, and signed content credentials that record where a photo came from.",
+      "data": {
+        "heading": "Catch fakes, or prove real?",
+        "kicker": "TWO STRATEGIES",
+        "left": {
+          "icon": "ScanSearch",
+          "title": "Detection",
+          "stat": "Catch fakes",
+          "label": "can fall behind new tools"
+        },
+        "right": {
+          "icon": "BadgeCheck",
+          "title": "Provenance",
+          "stat": "Prove real",
+          "label": "watermarks and credentials"
+        }
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Artifacts, tiny traces left by AI generators. [2] Watermark, a hidden signal added to AI-generated content. [3] Content credentials, like the C2PA standard, a signed record of where media came from. [4] And the arms race, generators and detectors constantly trying to beat each other.",
+      "data": {
+        "heading": "Detection words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Sparkles",
+            "Artifacts",
+            "Traces AI leaves"
+          ],
+          [
+            "Droplet",
+            "Watermark",
+            "Hidden AI signal"
+          ],
+          [
+            "BadgeCheck",
+            "C2PA",
+            "Signed media history"
+          ],
+          [
+            "Swords",
+            "Arms race",
+            "Fakers vs detectors"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think detection tools are 100 percent accurate. [2] They're not. They give probabilities, and they can be fooled, especially by new or compressed videos. They're one signal, alongside checking sources.",
+      "data": {
+        "myth": "Detection tools are 100% accurate.",
+        "fact": "They give probabilities and can be fooled, especially by new or compressed media.",
+        "tip": "One signal, not the final word"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! During video KYC, a bank asks you to turn your head. Why? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It's liveness detection, proving a real, live person is there!",
+      "data": {
+        "question": "Why turn your head during KYC?",
+        "options": [
+          "Liveness detection, to prove you're real",
+          "To test the camera",
+          "To take a better selfie"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Detectors split media, and look for AI traces. [2] Clues include visual artifacts, motion, and audio. [3] Liveness checks protect banks. [4] And provenance proves what's real, with watermarks and credentials. [5] Next, copyright and AI. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Detect",
+            "AI traces in media"
+          ],
+          [
+            "Clues",
+            "visual, motion, audio"
+          ],
+          [
+            "Liveness",
+            "for banks and KYC"
+          ],
+          [
+            "Provenance",
+            "prove what's real"
+          ]
+        ],
+        "next": "EP 46 · Copyright"
+      }
+    }
+  ],
+  "post": {
+    "caption": "If AI can make fakes, can AI catch them? Here's how deepfake detection works.\n\nReal World AI, Use Case 24: deepfake detection\n- The flow: input, split, classify, score, review\n- Clues: visual artifacts, motion, audio\n- Liveness detection in video KYC\n- Detection vs provenance (watermarks, C2PA)\n- Myth: detectors aren't 100% accurate\n\nQuiz at the end. Got it right? Comment below.\n\nNext: copyright and AI.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #Deepfake #CyberSecurity #LearnAI #AIforGood",
+    "pinned": "Quiz answer: It's liveness detection, proving a real, live person is there. Have you done a video KYC? Comment below!",
+    "cover": "'Deepfake Detection' title card",
+    "alt": "Animated breakdown of deepfake detection: artifacts, liveness checks, watermarks and provenance."
+  }
+}
