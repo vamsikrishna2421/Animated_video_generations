@@ -38,6 +38,8 @@ PRON = {
     "pretraining": "pɹˌiːtɹˈeɪnɪŋ",
     "LoRA": "lˈɔːɹə",
     "QLoRA": "kjˈuː lˈɔːɹə",
+    "reranker": "ɹiːɹˈæŋkəɹ", "Reranker": "ɹiːɹˈæŋkəɹ", "rerank": "ɹiːɹˈæŋk", "reranking": "ɹiːɹˈæŋkɪŋ", "Reranking": "ɹiːɹˈæŋkɪŋ",
+    "pgvector": "pˈiː dʒˈiː vˈɛktəɹ",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.
     "is live": "ɪz lˈaɪv", "is already live": "ɪz ɔːlɹˈɛdi lˈaɪv", "now live": "nˈaʊ lˈaɪv",
 }

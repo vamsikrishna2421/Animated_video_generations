@@ -7,7 +7,7 @@
   "host": "female",
   "label": null,
   "fps": 30,
-  "totalFrames": 4702,
+  "totalFrames": 4698,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -477,14 +477,14 @@
         ]
       },
       "from": 2545,
-      "durationInFrames": 589,
+      "durationInFrames": 585,
       "voiceFrom": 10,
       "audio": "lessons/ep31/voice_06.wav",
       "cues": [
         60,
         140,
-        289,
-        407
+        290,
+        408
       ],
       "captions": [
         {
@@ -500,42 +500,42 @@
         {
           "text": "Rank, how big the adapter is.",
           "from": 140,
-          "to": 210
+          "to": 211
         },
         {
           "text": "Smaller rank means fewer numbers.",
-          "from": 214,
-          "to": 286
+          "from": 215,
+          "to": 287
         },
         {
           "text": "Frozen weights,",
-          "from": 289,
-          "to": 317
+          "from": 290,
+          "to": 318
         },
         {
           "text": "the original model that stays unchanged.",
           "from": 320,
-          "to": 404
+          "to": 406
         },
         {
           "text": "And QLoRA,",
-          "from": 407,
+          "from": 408,
           "to": 433
         },
         {
           "text": "LoRA on a compressed model,",
           "from": 433,
-          "to": 499
+          "to": 497
         },
         {
           "text": "so it fits on even",
-          "from": 499,
-          "to": 544
+          "from": 497,
+          "to": 541
         },
         {
           "text": "smaller GPUs.",
-          "from": 544,
-          "to": 577
+          "from": 541,
+          "to": 573
         }
       ],
       "image": null
@@ -547,7 +547,7 @@
         "fact": "For many tasks it gets close to full fine-tuning at a fraction of the cost. For fresh facts, use RAG.",
         "tip": "LoRA for style and skills, RAG for facts"
       },
-      "from": 3134,
+      "from": 3130,
       "durationInFrames": 513,
       "voiceFrom": 10,
       "audio": "lessons/ep31/voice_07.wav",
@@ -625,7 +625,7 @@
         ],
         "answer": 0
       },
-      "from": 3647,
+      "from": 3643,
       "durationInFrames": 430,
       "voiceFrom": 10,
       "audio": "lessons/ep31/voice_08.wav",
@@ -695,7 +695,7 @@
         ],
         "next": "EP 32 · RAG Part 2"
       },
-      "from": 4077,
+      "from": 4073,
       "durationInFrames": 625,
       "voiceFrom": 10,
       "audio": "lessons/ep31/voice_09.wav",

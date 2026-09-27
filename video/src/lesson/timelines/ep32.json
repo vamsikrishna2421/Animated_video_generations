@@ -1,0 +1,829 @@
+{
+  "id": "ep32",
+  "episode": 32,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "RAG, Part 2: Chunking, Vector Databases and Reranking",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4769,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep32/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 32",
+        "title": [
+          "RAG",
+          "Part 2"
+        ],
+        "subtitle": "Chunking, vector databases, reranking",
+        "buzzwords": [
+          "Chunks",
+          "Embeddings",
+          "Vector database",
+          "Top K",
+          "Reranking",
+          "Retrieval",
+          "Context",
+          "Citations"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 440,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_01.wav",
+      "cues": [
+        185,
+        307
+      ],
+      "captions": [
+        {
+          "text": "In episode 7,",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "we learned that RAG lets",
+          "from": 52,
+          "to": 102
+        },
+        {
+          "text": "AI look things up before answering.",
+          "from": 104,
+          "to": 184
+        },
+        {
+          "text": "But how does it find",
+          "from": 185,
+          "to": 208
+        },
+        {
+          "text": "the right paragraph,",
+          "from": 209,
+          "to": 242
+        },
+        {
+          "text": "among thousands of pages?",
+          "from": 245,
+          "to": 305
+        },
+        {
+          "text": "Let's open the engine room",
+          "from": 307,
+          "to": 348
+        },
+        {
+          "text": "of RAG.",
+          "from": 350,
+          "to": 392
+        },
+        {
+          "text": "Part 2.",
+          "from": 394,
+          "to": 427
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The RAG engine",
+        "nodes": [
+          [
+            "Scissors",
+            "Chunk",
+            "Split documents"
+          ],
+          [
+            "Binary",
+            "Embed",
+            "Meaning as numbers"
+          ],
+          [
+            "Database",
+            "Store",
+            "Vector database"
+          ],
+          [
+            "Search",
+            "Retrieve",
+            "Closest chunks"
+          ],
+          [
+            "ListOrdered",
+            "Rerank",
+            "Best few to the AI"
+          ]
+        ]
+      },
+      "from": 440,
+      "durationInFrames": 619,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_02.wav",
+      "cues": [
+        93,
+        189,
+        339,
+        405,
+        498
+      ],
+      "captions": [
+        {
+          "text": "Here's the full RAG pipeline.",
+          "from": 10,
+          "to": 90
+        },
+        {
+          "text": "First, split your documents into",
+          "from": 93,
+          "to": 144
+        },
+        {
+          "text": "small chunks.",
+          "from": 147,
+          "to": 186
+        },
+        {
+          "text": "Turn each chunk into an",
+          "from": 189,
+          "to": 227
+        },
+        {
+          "text": "embedding, a list of numbers",
+          "from": 228,
+          "to": 278
+        },
+        {
+          "text": "that captures its meaning.",
+          "from": 279,
+          "to": 335
+        },
+        {
+          "text": "Store them in a vector database.",
+          "from": 339,
+          "to": 404
+        },
+        {
+          "text": "When a question comes in,",
+          "from": 405,
+          "to": 450
+        },
+        {
+          "text": "find the closest chunks,",
+          "from": 452,
+          "to": 496
+        },
+        {
+          "text": "then rerank them,",
+          "from": 498,
+          "to": 532
+        },
+        {
+          "text": "and send the best few",
+          "from": 534,
+          "to": 568
+        },
+        {
+          "text": "to the AI.",
+          "from": 570,
+          "to": 607
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Chunking",
+        "kicker": "STEP 1",
+        "steps": [
+          [
+            "Maximize2",
+            "Too big",
+            "Answer buried in noise"
+          ],
+          [
+            "Minimize2",
+            "Too small",
+            "Loses context"
+          ],
+          [
+            "Layers",
+            "Just right",
+            "A few hundred words + overlap"
+          ]
+        ]
+      },
+      "from": 1059,
+      "durationInFrames": 523,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_03.wav",
+      "cues": [
+        64,
+        194,
+        327
+      ],
+      "captions": [
+        {
+          "text": "Let's start with chunking.",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "If chunks are too big,",
+          "from": 64,
+          "to": 104
+        },
+        {
+          "text": "the useful sentence gets buried",
+          "from": 105,
+          "to": 157
+        },
+        {
+          "text": "in noise.",
+          "from": 158,
+          "to": 191
+        },
+        {
+          "text": "If chunks are too small,",
+          "from": 194,
+          "to": 236
+        },
+        {
+          "text": "they lose context,",
+          "from": 239,
+          "to": 274
+        },
+        {
+          "text": "like half a sentence.",
+          "from": 279,
+          "to": 324
+        },
+        {
+          "text": "A common choice is a",
+          "from": 327,
+          "to": 360
+        },
+        {
+          "text": "few hundred words per chunk,",
+          "from": 362,
+          "to": 412
+        },
+        {
+          "text": "with a little overlap,",
+          "from": 414,
+          "to": 447
+        },
+        {
+          "text": "so ideas aren't cut in half.",
+          "from": 448,
+          "to": 510
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "embedmap",
+      "data": {
+        "heading": "Chunks on a meaning map",
+        "kicker": "STEP 2",
+        "points": [
+          [
+            "Refund policy",
+            0.18,
+            0.2,
+            0
+          ],
+          [
+            "Return window",
+            0.34,
+            0.12,
+            0
+          ],
+          [
+            "Money back",
+            0.24,
+            0.34,
+            0
+          ],
+          [
+            "Delivery times",
+            0.66,
+            0.2,
+            1
+          ],
+          [
+            "Courier partners",
+            0.84,
+            0.3,
+            1
+          ],
+          [
+            "Tracking",
+            0.7,
+            0.38,
+            1
+          ],
+          [
+            "Warranty",
+            0.3,
+            0.74,
+            2
+          ],
+          [
+            "Repairs",
+            0.52,
+            0.84,
+            2
+          ],
+          [
+            "Spare parts",
+            0.18,
+            0.86,
+            2
+          ]
+        ],
+        "query": [
+          "Can I get my money back?",
+          0.3,
+          0.26
+        ],
+        "neighbors": [
+          "Money back",
+          "Refund policy"
+        ],
+        "note": "Found by meaning, not exact words"
+      },
+      "from": 1582,
+      "durationInFrames": 533,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_04.wav",
+      "cues": [
+        100,
+        184,
+        319
+      ],
+      "captions": [
+        {
+          "text": "Next, embeddings,",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "from episode 6.",
+          "from": 49,
+          "to": 97
+        },
+        {
+          "text": "Each chunk becomes a point",
+          "from": 100,
+          "to": 141
+        },
+        {
+          "text": "on a map of meaning.",
+          "from": 142,
+          "to": 182
+        },
+        {
+          "text": "Chunks about refunds cluster together,",
+          "from": 184,
+          "to": 247
+        },
+        {
+          "text": "and so do chunks about shipping.",
+          "from": 248,
+          "to": 316
+        },
+        {
+          "text": "A question like,",
+          "from": 319,
+          "to": 350
+        },
+        {
+          "text": "can I get my money",
+          "from": 352,
+          "to": 379
+        },
+        {
+          "text": "back, lands near the refund",
+          "from": 380,
+          "to": 435
+        },
+        {
+          "text": "chunks, even without the word refund.",
+          "from": 436,
+          "to": 522
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Vector database",
+        "short": "Vector DB",
+        "definition": "A database built to store embeddings and quickly find the ones closest in meaning to a query.",
+        "chips": [
+          [
+            "Gauge",
+            "Search in milliseconds"
+          ],
+          [
+            "ListOrdered",
+            "Returns the top K"
+          ],
+          [
+            "Database",
+            "Pinecone, Chroma, pgvector"
+          ]
+        ]
+      },
+      "from": 2115,
+      "durationInFrames": 482,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_05.wav",
+      "cues": [
+        105,
+        215,
+        334
+      ],
+      "captions": [
+        {
+          "text": "A vector database stores millions",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "of these points,",
+          "from": 70,
+          "to": 104
+        },
+        {
+          "text": "and finds the nearest ones",
+          "from": 105,
+          "to": 146
+        },
+        {
+          "text": "to your question in milliseconds.",
+          "from": 147,
+          "to": 212
+        },
+        {
+          "text": "It returns the top K",
+          "from": 215,
+          "to": 256
+        },
+        {
+          "text": "matches, say the top 20.",
+          "from": 258,
+          "to": 331
+        },
+        {
+          "text": "Popular ones include Pinecone,",
+          "from": 334,
+          "to": 414
+        },
+        {
+          "text": "Chroma, and pgvector.",
+          "from": 414,
+          "to": 470
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Search, then rerank",
+        "kicker": "STEP 3",
+        "left": {
+          "icon": "Zap",
+          "title": "Vector search",
+          "stat": "Fast",
+          "label": "finds similar-sounding chunks"
+        },
+        "right": {
+          "icon": "ListOrdered",
+          "title": "Reranker",
+          "stat": "Smart",
+          "label": "checks which truly answers"
+        }
+      },
+      "from": 2597,
+      "durationInFrames": 584,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_06.wav",
+      "cues": [
+        58,
+        221,
+        464
+      ],
+      "captions": [
+        {
+          "text": "Now, reranking.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "Vector search is fast,",
+          "from": 58,
+          "to": 99
+        },
+        {
+          "text": "but a bit rough.",
+          "from": 103,
+          "to": 140
+        },
+        {
+          "text": "It finds chunks that sound similar.",
+          "from": 142,
+          "to": 218
+        },
+        {
+          "text": "A reranker is slower,",
+          "from": 221,
+          "to": 265
+        },
+        {
+          "text": "but smarter.",
+          "from": 269,
+          "to": 302
+        },
+        {
+          "text": "It reads the question and",
+          "from": 305,
+          "to": 340
+        },
+        {
+          "text": "each chunk together,",
+          "from": 342,
+          "to": 375
+        },
+        {
+          "text": "and scores how well it",
+          "from": 379,
+          "to": 415
+        },
+        {
+          "text": "actually answers.",
+          "from": 417,
+          "to": 462
+        },
+        {
+          "text": "So we search wide,",
+          "from": 464,
+          "to": 499
+        },
+        {
+          "text": "then rerank,",
+          "from": 501,
+          "to": 525
+        },
+        {
+          "text": "and keep the best few.",
+          "from": 528,
+          "to": 571
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "With a giant context window, just paste everything and skip retrieval.",
+        "fact": "Huge prompts cost more, run slower, and details in the middle get missed. Good retrieval still wins.",
+        "tip": "Send the best, not the most"
+      },
+      "from": 3181,
+      "durationInFrames": 500,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_07.wav",
+      "cues": [
+        57,
+        240
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "People think,",
+          "from": 57,
+          "to": 85
+        },
+        {
+          "text": "with a giant context window,",
+          "from": 86,
+          "to": 139
+        },
+        {
+          "text": "you can skip retrieval and",
+          "from": 142,
+          "to": 183
+        },
+        {
+          "text": "just paste everything.",
+          "from": 184,
+          "to": 237
+        },
+        {
+          "text": "Long prompts cost more,",
+          "from": 240,
+          "to": 291
+        },
+        {
+          "text": "run slower,",
+          "from": 291,
+          "to": 317
+        },
+        {
+          "text": "and the AI can miss",
+          "from": 317,
+          "to": 360
+        },
+        {
+          "text": "details buried in the middle.",
+          "from": 360,
+          "to": 423
+        },
+        {
+          "text": "Good retrieval still wins.",
+          "from": 426,
+          "to": 486
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "A reranker…",
+        "options": [
+          "Re-scores retrieved chunks by how well they answer",
+          "Splits documents into chunks",
+          "Trains the language model"
+        ],
+        "answer": 0
+      },
+      "from": 3681,
+      "durationInFrames": 442,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_08.wav",
+      "cues": [
+        83,
+        295
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "What does a reranker do?",
+          "from": 32,
+          "to": 81
+        },
+        {
+          "text": "Pause and think,",
+          "from": 83,
+          "to": 120
+        },
+        {
+          "text": "and if you get it",
+          "from": 122,
+          "to": 139
+        },
+        {
+          "text": "right, comment below!",
+          "from": 140,
+          "to": 196
+        },
+        {
+          "text": "It re-scores the retrieved chunks",
+          "from": 295,
+          "to": 346
+        },
+        {
+          "text": "by how well they actually",
+          "from": 347,
+          "to": 389
+        },
+        {
+          "text": "answer the question!",
+          "from": 390,
+          "to": 430
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Chunk",
+            "right-sized, with overlap"
+          ],
+          [
+            "Embed",
+            "meaning as numbers"
+          ],
+          [
+            "Vector DB",
+            "finds closest chunks"
+          ],
+          [
+            "Rerank",
+            "keep the best few"
+          ]
+        ],
+        "next": "EP 33 · RAG Part 3"
+      },
+      "from": 4123,
+      "durationInFrames": 646,
+      "voiceFrom": 10,
+      "audio": "lessons/ep32/voice_09.wav",
+      "cues": [
+        46,
+        155,
+        231,
+        325,
+        423
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Chunk documents into right-sized pieces,",
+          "from": 46,
+          "to": 116
+        },
+        {
+          "text": "with overlap.",
+          "from": 120,
+          "to": 153
+        },
+        {
+          "text": "Embed each chunk as meaning numbers.",
+          "from": 155,
+          "to": 228
+        },
+        {
+          "text": "A vector database finds the",
+          "from": 231,
+          "to": 271
+        },
+        {
+          "text": "closest chunks fast.",
+          "from": 273,
+          "to": 323
+        },
+        {
+          "text": "And a reranker picks the",
+          "from": 325,
+          "to": 376
+        },
+        {
+          "text": "best few for the AI.",
+          "from": 376,
+          "to": 420
+        },
+        {
+          "text": "Next, RAG part three,",
+          "from": 423,
+          "to": 488
+        },
+        {
+          "text": "hybrid search,",
+          "from": 490,
+          "to": 516
+        },
+        {
+          "text": "and measuring quality.",
+          "from": 521,
+          "to": 568
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 572,
+          "to": 633
+        }
+      ],
+      "image": null
+    }
+  ]
+}
