@@ -1,0 +1,832 @@
+{
+  "id": "uc03",
+  "episode": 3,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How AI Meeting Notes Work",
+  "host": "female",
+  "label": "USE CASE 03",
+  "fps": 30,
+  "totalFrames": 4866,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc03/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 03",
+        "title": [
+          "AI Meeting",
+          "Notes"
+        ],
+        "subtitle": "From voices to action items",
+        "buzzwords": [
+          "Transcript",
+          "Speakers",
+          "Summary",
+          "Action items",
+          "Zoom",
+          "Google Meet",
+          "Teams",
+          "Diarization"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 378,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_01.wav",
+      "cues": [
+        210,
+        287
+      ],
+      "captions": [
+        {
+          "text": "You finish a one hour",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "meeting, and within seconds you",
+          "from": 46,
+          "to": 99
+        },
+        {
+          "text": "get a neat summary,",
+          "from": 100,
+          "to": 139
+        },
+        {
+          "text": "with action items for everyone.",
+          "from": 141,
+          "to": 207
+        },
+        {
+          "text": "So how does the AI",
+          "from": 210,
+          "to": 244
+        },
+        {
+          "text": "actually do that?",
+          "from": 247,
+          "to": 285
+        },
+        {
+          "text": "Let's break down AI meeting notes.",
+          "from": 287,
+          "to": 364
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From call to notes",
+        "nodes": [
+          [
+            "Mic",
+            "Record the call",
+            "Every voice captured"
+          ],
+          [
+            "FileText",
+            "Transcript",
+            "Speech to text (EP 13)"
+          ],
+          [
+            "Users",
+            "Who said what",
+            "Speaker labelling"
+          ],
+          [
+            "Brain",
+            "LLM reads it all",
+            "Understands the discussion"
+          ],
+          [
+            "ListChecks",
+            "Notes",
+            "Summary, decisions, action items"
+          ]
+        ]
+      },
+      "from": 378,
+      "durationInFrames": 605,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_02.wav",
+      "cues": [
+        86,
+        200,
+        305,
+        396,
+        477
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens after you",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "hit record.",
+          "from": 52,
+          "to": 83
+        },
+        {
+          "text": "The meeting audio is captured,",
+          "from": 86,
+          "to": 147
+        },
+        {
+          "text": "every voice in the call.",
+          "from": 147,
+          "to": 196
+        },
+        {
+          "text": "Speech to text turns everything",
+          "from": 200,
+          "to": 257
+        },
+        {
+          "text": "into a transcript.",
+          "from": 258,
+          "to": 303
+        },
+        {
+          "text": "Then speaker labelling works out",
+          "from": 305,
+          "to": 356
+        },
+        {
+          "text": "who said what.",
+          "from": 357,
+          "to": 394
+        },
+        {
+          "text": "An LLM reads the whole",
+          "from": 396,
+          "to": 448
+        },
+        {
+          "text": "transcript, and writes a summary,",
+          "from": 450,
+          "to": 514
+        },
+        {
+          "text": "the decisions,",
+          "from": 515,
+          "to": 543
+        },
+        {
+          "text": "and the action items.",
+          "from": 545,
+          "to": 592
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Speaker diarization",
+        "short": "Who?",
+        "definition": "Working out who spoke when, so every line of the transcript has a name.",
+        "chips": [
+          [
+            "AudioLines",
+            "Groups voices"
+          ],
+          [
+            "Users",
+            "Matches names"
+          ],
+          [
+            "Tag",
+            "Labels each line"
+          ]
+        ]
+      },
+      "from": 983,
+      "durationInFrames": 454,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_03.wav",
+      "cues": [
+        86,
+        222,
+        290,
+        364
+      ],
+      "captions": [
+        {
+          "text": "That middle step has a",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "fancy name.",
+          "from": 44,
+          "to": 82
+        },
+        {
+          "text": "Speaker diarization,",
+          "from": 86,
+          "to": 133
+        },
+        {
+          "text": "which simply means working out",
+          "from": 134,
+          "to": 176
+        },
+        {
+          "text": "who spoke when.",
+          "from": 177,
+          "to": 219
+        },
+        {
+          "text": "It groups voices by how",
+          "from": 222,
+          "to": 267
+        },
+        {
+          "text": "they sound,",
+          "from": 267,
+          "to": 290
+        },
+        {
+          "text": "matches them to the names",
+          "from": 290,
+          "to": 339
+        },
+        {
+          "text": "in the call,",
+          "from": 339,
+          "to": 364
+        },
+        {
+          "text": "and labels every line of",
+          "from": 364,
+          "to": 411
+        },
+        {
+          "text": "the transcript.",
+          "from": 411,
+          "to": 442
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "prompt",
+      "data": {
+        "heading": "The prompt behind the notes",
+        "kicker": "REMEMBER EP 04?",
+        "bad": "Summarise this.",
+        "badReply": "The team discussed several topics and agreed to follow up later.",
+        "parts": [
+          [
+            "ROLE",
+            "You are a meeting assistant.",
+            "#8B5CF6"
+          ],
+          [
+            "CONTEXT",
+            "Today's call transcript, with speaker names.",
+            "#22D3EE"
+          ],
+          [
+            "TASK",
+            "List decisions and action items, with owners and dates.",
+            "#F59E0B"
+          ],
+          [
+            "FORMAT",
+            "Short bullet points, under 100 words.",
+            "#34D399"
+          ]
+        ],
+        "goodReply": "Decision: launch on the 15th. Priya: final designs by Friday. Rahul: budget by Tuesday."
+      },
+      "from": 1437,
+      "durationInFrames": 793,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_04.wav",
+      "cues": [
+        116,
+        240,
+        389,
+        491,
+        618,
+        694
+      ],
+      "captions": [
+        {
+          "text": "And the LLM step is",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "really just a well written prompt.",
+          "from": 49,
+          "to": 113
+        },
+        {
+          "text": "A lazy prompt,",
+          "from": 116,
+          "to": 144
+        },
+        {
+          "text": "like summarise this,",
+          "from": 149,
+          "to": 179
+        },
+        {
+          "text": "gives you a vague paragraph.",
+          "from": 184,
+          "to": 237
+        },
+        {
+          "text": "Real tools send something more",
+          "from": 240,
+          "to": 283
+        },
+        {
+          "text": "like this.",
+          "from": 284,
+          "to": 310
+        },
+        {
+          "text": "A role,",
+          "from": 313,
+          "to": 329
+        },
+        {
+          "text": "you are a meeting assistant.",
+          "from": 334,
+          "to": 387
+        },
+        {
+          "text": "Context, here's today's transcript,",
+          "from": 389,
+          "to": 456
+        },
+        {
+          "text": "with names.",
+          "from": 460,
+          "to": 489
+        },
+        {
+          "text": "The task,",
+          "from": 491,
+          "to": 513
+        },
+        {
+          "text": "list the decisions,",
+          "from": 518,
+          "to": 551
+        },
+        {
+          "text": "and who does what,",
+          "from": 556,
+          "to": 581
+        },
+        {
+          "text": "by when.",
+          "from": 585,
+          "to": 616
+        },
+        {
+          "text": "And the format,",
+          "from": 618,
+          "to": 643
+        },
+        {
+          "text": "short bullet points.",
+          "from": 646,
+          "to": 692
+        },
+        {
+          "text": "And that's how you get",
+          "from": 694,
+          "to": 720
+        },
+        {
+          "text": "notes that are actually useful.",
+          "from": 721,
+          "to": 780
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll find it",
+        "items": [
+          [
+            "Video",
+            "Video calls",
+            "Zoom, Meet and Teams summaries"
+          ],
+          [
+            "Mic",
+            "Note taker apps",
+            "Meetings and lectures"
+          ],
+          [
+            "Stethoscope",
+            "Doctor's notes",
+            "Visit notes while they talk"
+          ]
+        ]
+      },
+      "from": 2230,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_05.wav",
+      "cues": [
+        62,
+        214,
+        345
+      ],
+      "captions": [
+        {
+          "text": "So where will you find this?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Zoom, Google Meet and Microsoft",
+          "from": 62,
+          "to": 125
+        },
+        {
+          "text": "Teams all offer AI summaries.",
+          "from": 127,
+          "to": 211
+        },
+        {
+          "text": "Note taker apps record in",
+          "from": 214,
+          "to": 258
+        },
+        {
+          "text": "person meetings,",
+          "from": 260,
+          "to": 294
+        },
+        {
+          "text": "and even lectures.",
+          "from": 296,
+          "to": 343
+        },
+        {
+          "text": "And some doctors use similar",
+          "from": 345,
+          "to": 389
+        },
+        {
+          "text": "tools to write visit notes,",
+          "from": 391,
+          "to": 447
+        },
+        {
+          "text": "while they talk to patients.",
+          "from": 449,
+          "to": 501
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The tough parts",
+        "kicker": "WHY IT'S HARD",
+        "terms": [
+          [
+            "MessagesSquare",
+            "Crosstalk",
+            "Two people at once"
+          ],
+          [
+            "Tag",
+            "Names and jargon",
+            "Product names, Indian names"
+          ],
+          [
+            "Clock",
+            "Long meetings",
+            "May not fit the context window"
+          ],
+          [
+            "Lock",
+            "Privacy",
+            "Everyone should know"
+          ]
+        ]
+      },
+      "from": 2744,
+      "durationInFrames": 585,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_06.wav",
+      "cues": [
+        60,
+        159,
+        297,
+        450
+      ],
+      "captions": [
+        {
+          "text": "So what makes this tricky?",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "Crosstalk, when two people talk",
+          "from": 60,
+          "to": 114
+        },
+        {
+          "text": "at the same time.",
+          "from": 115,
+          "to": 156
+        },
+        {
+          "text": "Names and jargon,",
+          "from": 159,
+          "to": 193
+        },
+        {
+          "text": "like product names,",
+          "from": 198,
+          "to": 233
+        },
+        {
+          "text": "or Indian names.",
+          "from": 236,
+          "to": 293
+        },
+        {
+          "text": "Long meetings,",
+          "from": 297,
+          "to": 325
+        },
+        {
+          "text": "which may not fit in",
+          "from": 325,
+          "to": 365
+        },
+        {
+          "text": "the context window,",
+          "from": 365,
+          "to": 402
+        },
+        {
+          "text": "remember episode three?",
+          "from": 402,
+          "to": 448
+        },
+        {
+          "text": "And privacy,",
+          "from": 450,
+          "to": 482
+        },
+        {
+          "text": "because everyone should know they're",
+          "from": 486,
+          "to": 532
+        },
+        {
+          "text": "being recorded.",
+          "from": 534,
+          "to": 573
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI meeting notes are always complete and correct.",
+        "fact": "Great first draft, but they can mix up speakers or invent an action item. Skim before sharing.",
+        "tip": "Review before you send"
+      },
+      "from": 3329,
+      "durationInFrames": 482,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_07.wav",
+      "cues": [
+        60,
+        188
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "People think AI meeting notes",
+          "from": 60,
+          "to": 114
+        },
+        {
+          "text": "are always complete and correct.",
+          "from": 116,
+          "to": 185
+        },
+        {
+          "text": "They're a great first draft,",
+          "from": 188,
+          "to": 232
+        },
+        {
+          "text": "but they can miss sarcasm,",
+          "from": 233,
+          "to": 284
+        },
+        {
+          "text": "mix up speakers,",
+          "from": 286,
+          "to": 323
+        },
+        {
+          "text": "or even invent an action item.",
+          "from": 325,
+          "to": 396
+        },
+        {
+          "text": "So always skim them before",
+          "from": 399,
+          "to": 439
+        },
+        {
+          "text": "you share.",
+          "from": 440,
+          "to": 470
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Who-said-what is handled by…",
+        "options": [
+          "Text to speech",
+          "Speaker diarization",
+          "Temperature"
+        ],
+        "answer": 1
+      },
+      "from": 3811,
+      "durationInFrames": 466,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_08.wav",
+      "cues": [
+        147,
+        349
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Which step works out who",
+          "from": 43,
+          "to": 74
+        },
+        {
+          "text": "said what,",
+          "from": 76,
+          "to": 90
+        },
+        {
+          "text": "in a meeting transcript?",
+          "from": 94,
+          "to": 145
+        },
+        {
+          "text": "Pause and think,",
+          "from": 147,
+          "to": 181
+        },
+        {
+          "text": "and if you get it",
+          "from": 183,
+          "to": 199
+        },
+        {
+          "text": "right, comment below!",
+          "from": 201,
+          "to": 257
+        },
+        {
+          "text": "Speaker diarization!",
+          "from": 349,
+          "to": 396
+        },
+        {
+          "text": "It works out who spoke when.",
+          "from": 400,
+          "to": 453
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Record",
+            "capture every voice"
+          ],
+          [
+            "Transcribe",
+            "speech to text"
+          ],
+          [
+            "Who spoke",
+            "speaker diarization"
+          ],
+          [
+            "Summarise",
+            "an LLM writes the notes"
+          ]
+        ],
+        "next": "EP 14 · Image generation"
+      },
+      "from": 4277,
+      "durationInFrames": 589,
+      "voiceFrom": 10,
+      "audio": "lessons/uc03/voice_09.wav",
+      "cues": [
+        47,
+        112,
+        189,
+        274,
+        378
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "First, the call is recorded.",
+          "from": 47,
+          "to": 109
+        },
+        {
+          "text": "Speech to text makes a transcript.",
+          "from": 112,
+          "to": 186
+        },
+        {
+          "text": "Speaker diarization works out who",
+          "from": 189,
+          "to": 240
+        },
+        {
+          "text": "spoke when.",
+          "from": 242,
+          "to": 272
+        },
+        {
+          "text": "And an LLM writes the",
+          "from": 274,
+          "to": 317
+        },
+        {
+          "text": "notes and action items.",
+          "from": 319,
+          "to": 375
+        },
+        {
+          "text": "Next, we'll see how AI",
+          "from": 378,
+          "to": 431
+        },
+        {
+          "text": "creates images from just a sentence.",
+          "from": 433,
+          "to": 511
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 514,
+          "to": 577
+        }
+      ],
+      "image": null
+    }
+  ]
+}

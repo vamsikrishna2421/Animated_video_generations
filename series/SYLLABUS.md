@@ -118,28 +118,28 @@ should have seen first.
 |---|---|---|---|
 | UC01 | **AI phone call assistant** | speech-to-text → LLM → text-to-speech, repeat; latency; interruptions | EP 02, 12, 13 |
 | UC02 | ChatGPT answering with web search | search tool → read pages → cite answer | EP 07, 09 |
-| UC03 | Customer support bot for a bank | RAG + tools + human handoff | EP 07, 09, 10 |
-| UC04 | AI meeting notes (Zoom, Meet) | speech-to-text → who spoke → summary → action items | EP 13, 04 |
-| UC05 | Netflix / YouTube recommendations | embeddings of you and videos, similarity, ranking | EP 06 |
-| UC06 | Instagram Reels feed ranking | signals → prediction → ranking | EP 01, 06 |
-| UC07 | UPI and card fraud detection | normal pattern → anomaly score → block or allow | EP 01, 24 |
-| UC08 | Face unlock | face embedding → match → liveness check | EP 06, 29 |
-| UC09 | Google Lens / visual search | image embedding → search → answer | EP 06, 12 |
-| UC10 | Live translation (Google Translate conversation mode) | speech-to-text → translate → text-to-speech | EP 13 |
-| UC11 | Swiggy / Zomato delivery time prediction | features → prediction model → ETA | EP 01, 24 |
-| UC12 | Uber / Ola ETA and surge pricing | demand forecast → pricing | EP 01 |
-| UC13 | Self-driving car perception | cameras → detection → planning | EP 29 |
-| UC14 | Smart replies in Gmail and WhatsApp | short LLM suggestions | EP 02 |
-| UC15 | Magic eraser in photo apps | inpainting with diffusion | EP 14 |
-| UC16 | Resume screening (ATS) | parsing → matching → ranking; bias risks | EP 06, 42 |
-| UC17 | KYC and document scanning (OCR) | image → text → checks | EP 29 |
-| UC18 | Alexa / Siri wake word | tiny on-device model → cloud AI | EP 13, 35 |
-| UC19 | AI coding assistant building a feature | read repo → plan → edit → test | EP 10, 19 |
+| UC03 | AI meeting notes (Zoom, Meet) | speech-to-text → who spoke → summary → action items | EP 13, 04 |
+| UC04 | Netflix / YouTube recommendations | embeddings of you and videos, similarity, ranking | EP 06 |
+| UC05 | Magic eraser in photo apps | inpainting with diffusion | EP 14 |
+| UC06 | Customer support bot for a bank | RAG + tools + human handoff | EP 07, 09, 10 |
+| UC07 | Smart replies in Gmail and WhatsApp | short LLM suggestions | EP 02 |
+| UC08 | Live translation (Google Translate conversation mode) | speech-to-text → translate → text-to-speech | EP 13 |
+| UC09 | AI coding assistant building a feature | read repo → plan → edit → test | EP 10, 19 |
+| UC10 | Instagram Reels feed ranking | signals → prediction → ranking | EP 01, 06 |
+| UC11 | Google Lens / visual search | image embedding → search → answer | EP 06, 12 |
+| UC12 | AI tutor apps | RAG + memory + quizzes | EP 07, 17 |
+| UC13 | AI music generation | text → music model | EP 14 |
+| UC14 | UPI and card fraud detection | normal pattern → anomaly score → block or allow | EP 01, 24 |
+| UC15 | Swiggy / Zomato delivery time prediction | features → prediction model → ETA | EP 01, 24 |
+| UC16 | Uber / Ola ETA and surge pricing | demand forecast → pricing | EP 01 |
+| UC17 | Face unlock | face embedding → match → liveness check | EP 06, 29 |
+| UC18 | Self-driving car perception | cameras → detection → planning | EP 29 |
+| UC19 | KYC and document scanning (OCR) | image → text → checks | EP 29 |
 | UC20 | Crop disease detection app for farmers | photo → vision model → advice | EP 29 |
-| UC21 | Medical X-ray screening | vision model → doctor review | EP 29, 43 |
-| UC22 | AI music generation | text → music model | EP 14 |
-| UC23 | Deepfake detection | artefact detection | EP 45 |
-| UC24 | AI tutor apps | RAG + memory + quizzes | EP 07, 17 |
+| UC21 | Alexa / Siri wake word | tiny on-device model → cloud AI | EP 13, 35 |
+| UC22 | Resume screening (ATS) | parsing → matching → ranking; bias risks | EP 06, 42 |
+| UC23 | Medical X-ray screening | vision model → doctor review | EP 29, 43 |
+| UC24 | Deepfake detection | artefact detection | EP 45 |
 
 The first use case can go out any time. The rest are released when their "Needs" episodes are
 out.

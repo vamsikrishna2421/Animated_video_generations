@@ -1,0 +1,829 @@
+{
+  "id": "ep13",
+  "episode": 13,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Speech AI",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4907,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep13/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 13",
+        "title": [
+          "Speech",
+          "AI"
+        ],
+        "subtitle": "Speech to text & text to speech",
+        "buzzwords": [
+          "Voice typing",
+          "Captions",
+          "Spectrogram",
+          "Phonemes",
+          "Accents",
+          "Voices",
+          "Audiobooks",
+          "Whisper"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 428,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_01.wav",
+      "cues": [
+        212,
+        281
+      ],
+      "captions": [
+        {
+          "text": "Every time you talk to",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "Siri, send a voice note",
+          "from": 44,
+          "to": 93
+        },
+        {
+          "text": "that gets typed out,",
+          "from": 94,
+          "to": 135
+        },
+        {
+          "text": "or hear an AI voice",
+          "from": 136,
+          "to": 178
+        },
+        {
+          "text": "read a story,",
+          "from": 180,
+          "to": 209
+        },
+        {
+          "text": "two technologies are at work.",
+          "from": 212,
+          "to": 278
+        },
+        {
+          "text": "Speech to text,",
+          "from": 281,
+          "to": 312
+        },
+        {
+          "text": "and text to speech.",
+          "from": 316,
+          "to": 358
+        },
+        {
+          "text": "So let's understand both.",
+          "from": 361,
+          "to": 415
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Listen vs speak",
+        "kicker": "TWO DIRECTIONS",
+        "left": {
+          "icon": "Mic",
+          "title": "Speech to text",
+          "stat": "Voice → words",
+          "label": "listens and types for you"
+        },
+        "right": {
+          "icon": "Volume2",
+          "title": "Text to speech",
+          "stat": "Words → voice",
+          "label": "speaks like a narrator"
+        }
+      },
+      "from": 428,
+      "durationInFrames": 410,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_02.wav",
+      "cues": [
+        78,
+        211
+      ],
+      "captions": [
+        {
+          "text": "Think of them as two directions.",
+          "from": 10,
+          "to": 75
+        },
+        {
+          "text": "Speech to text listens to",
+          "from": 78,
+          "to": 122
+        },
+        {
+          "text": "your voice,",
+          "from": 123,
+          "to": 141
+        },
+        {
+          "text": "and writes it down as words.",
+          "from": 145,
+          "to": 208
+        },
+        {
+          "text": "Text to speech does the opposite.",
+          "from": 211,
+          "to": 279
+        },
+        {
+          "text": "It takes words,",
+          "from": 282,
+          "to": 313
+        },
+        {
+          "text": "and turns them into a",
+          "from": 315,
+          "to": 342
+        },
+        {
+          "text": "natural sounding voice.",
+          "from": 343,
+          "to": 396
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Speech to text",
+        "kicker": "HOW IT LISTENS",
+        "nodes": [
+          [
+            "Mic",
+            "Your voice",
+            "Recorded as a sound wave"
+          ],
+          [
+            "AudioLines",
+            "Spectrogram",
+            "A picture of sound over time"
+          ],
+          [
+            "Brain",
+            "Speech model",
+            "Reads the sound picture"
+          ],
+          [
+            "Type",
+            "Predicts words",
+            "Most likely words, in order"
+          ],
+          [
+            "FileText",
+            "Text",
+            "“Remind me to call Amma”"
+          ]
+        ]
+      },
+      "from": 838,
+      "durationInFrames": 672,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_03.wav",
+      "cues": [
+        78,
+        167,
+        391,
+        512,
+        602
+      ],
+      "captions": [
+        {
+          "text": "Here's how speech to text works.",
+          "from": 10,
+          "to": 76
+        },
+        {
+          "text": "Your voice is recorded as",
+          "from": 78,
+          "to": 119
+        },
+        {
+          "text": "a sound wave.",
+          "from": 121,
+          "to": 165
+        },
+        {
+          "text": "That wave is turned into",
+          "from": 167,
+          "to": 207
+        },
+        {
+          "text": "a picture of sound,",
+          "from": 208,
+          "to": 248
+        },
+        {
+          "text": "called a spectrogram,",
+          "from": 250,
+          "to": 291
+        },
+        {
+          "text": "which shows which pitches are",
+          "from": 292,
+          "to": 330
+        },
+        {
+          "text": "loud at each moment.",
+          "from": 332,
+          "to": 388
+        },
+        {
+          "text": "A speech model reads that",
+          "from": 391,
+          "to": 431
+        },
+        {
+          "text": "picture, a bit like reading",
+          "from": 433,
+          "to": 484
+        },
+        {
+          "text": "an image,",
+          "from": 485,
+          "to": 511
+        },
+        {
+          "text": "and predicts the most likely",
+          "from": 512,
+          "to": 553
+        },
+        {
+          "text": "words, in order,",
+          "from": 554,
+          "to": 596
+        },
+        {
+          "text": "giving you the final text.",
+          "from": 602,
+          "to": 659
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Text to speech",
+        "kicker": "HOW IT SPEAKS",
+        "nodes": [
+          [
+            "FileText",
+            "Your text",
+            "“Your order has arrived”"
+          ],
+          [
+            "Type",
+            "Pronunciation",
+            "Words turned into sounds"
+          ],
+          [
+            "AudioLines",
+            "Rhythm and pitch",
+            "Where to pause, what to stress"
+          ],
+          [
+            "Waves",
+            "Sound wave",
+            "The model generates audio"
+          ],
+          [
+            "Volume2",
+            "Voice",
+            "Natural speech, like this one"
+          ]
+        ]
+      },
+      "from": 1510,
+      "durationInFrames": 633,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_04.wav",
+      "cues": [
+        91,
+        145,
+        280,
+        428,
+        502
+      ],
+      "captions": [
+        {
+          "text": "And text to speech works",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "in reverse.",
+          "from": 54,
+          "to": 88
+        },
+        {
+          "text": "It starts with your text.",
+          "from": 91,
+          "to": 141
+        },
+        {
+          "text": "First, the words are turned",
+          "from": 145,
+          "to": 188
+        },
+        {
+          "text": "into sounds,",
+          "from": 189,
+          "to": 217
+        },
+        {
+          "text": "the way they should be pronounced.",
+          "from": 219,
+          "to": 278
+        },
+        {
+          "text": "Then the model plans the",
+          "from": 280,
+          "to": 316
+        },
+        {
+          "text": "rhythm, pitch and pauses,",
+          "from": 319,
+          "to": 372
+        },
+        {
+          "text": "so it sounds natural.",
+          "from": 374,
+          "to": 425
+        },
+        {
+          "text": "It generates the actual sound",
+          "from": 428,
+          "to": 479
+        },
+        {
+          "text": "wave, and out comes a",
+          "from": 481,
+          "to": 523
+        },
+        {
+          "text": "voice, just like the one",
+          "from": 524,
+          "to": 569
+        },
+        {
+          "text": "you're hearing right now.",
+          "from": 571,
+          "to": 623
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Speech AI in your day",
+        "items": [
+          [
+            "Mic",
+            "Voice typing",
+            "Speak instead of typing"
+          ],
+          [
+            "Captions",
+            "Auto captions",
+            "YouTube, Instagram, meetings"
+          ],
+          [
+            "Headphones",
+            "AI voices",
+            "Audiobooks, maps, phone assistants"
+          ]
+        ]
+      },
+      "from": 2143,
+      "durationInFrames": 405,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_05.wav",
+      "cues": [
+        70,
+        177,
+        266
+      ],
+      "captions": [
+        {
+          "text": "And you use these every day.",
+          "from": 10,
+          "to": 67
+        },
+        {
+          "text": "Voice typing,",
+          "from": 70,
+          "to": 97
+        },
+        {
+          "text": "and voice notes that turn",
+          "from": 100,
+          "to": 138
+        },
+        {
+          "text": "into text.",
+          "from": 139,
+          "to": 175
+        },
+        {
+          "text": "Auto captions on YouTube and Instagram.",
+          "from": 177,
+          "to": 264
+        },
+        {
+          "text": "And audiobooks,",
+          "from": 266,
+          "to": 297
+        },
+        {
+          "text": "map directions,",
+          "from": 300,
+          "to": 331
+        },
+        {
+          "text": "and AI phone assistants.",
+          "from": 333,
+          "to": 391
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The tough parts",
+        "kicker": "WHY IT'S HARD",
+        "terms": [
+          [
+            "Globe",
+            "Accents",
+            "Same word, many sounds"
+          ],
+          [
+            "Volume1",
+            "Noise",
+            "Traffic, crowds, fans"
+          ],
+          [
+            "Languages",
+            "Mixed languages",
+            "Telugu + English in one line"
+          ],
+          [
+            "Smile",
+            "Emotion",
+            "Happy, calm or serious"
+          ]
+        ]
+      },
+      "from": 2548,
+      "durationInFrames": 658,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_06.wav",
+      "cues": [
+        82,
+        249,
+        359,
+        499
+      ],
+      "captions": [
+        {
+          "text": "So what makes speech AI hard?",
+          "from": 10,
+          "to": 79
+        },
+        {
+          "text": "Accents, because the same word",
+          "from": 82,
+          "to": 134
+        },
+        {
+          "text": "sounds different in Hyderabad,",
+          "from": 136,
+          "to": 194
+        },
+        {
+          "text": "London and Texas.",
+          "from": 196,
+          "to": 246
+        },
+        {
+          "text": "Background noise,",
+          "from": 249,
+          "to": 279
+        },
+        {
+          "text": "like traffic or a busy office.",
+          "from": 284,
+          "to": 356
+        },
+        {
+          "text": "Mixed languages,",
+          "from": 359,
+          "to": 390
+        },
+        {
+          "text": "like switching between Telugu and",
+          "from": 392,
+          "to": 441
+        },
+        {
+          "text": "English in one sentence.",
+          "from": 442,
+          "to": 496
+        },
+        {
+          "text": "And emotion,",
+          "from": 499,
+          "to": 529
+        },
+        {
+          "text": "sounding happy,",
+          "from": 531,
+          "to": 563
+        },
+        {
+          "text": "calm or serious at the",
+          "from": 566,
+          "to": 610
+        },
+        {
+          "text": "right moment.",
+          "from": 611,
+          "to": 646
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI voices are just recordings, cut and joined.",
+        "fact": "Modern AI voices are generated fresh, sound by sound, so they can say any sentence.",
+        "tip": "This narration is AI-generated"
+      },
+      "from": 3206,
+      "durationInFrames": 572,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_07.wav",
+      "cues": [
+        60,
+        238
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "People think AI voices are",
+          "from": 60,
+          "to": 112
+        },
+        {
+          "text": "just recordings of real people,",
+          "from": 113,
+          "to": 177
+        },
+        {
+          "text": "cut and joined together.",
+          "from": 179,
+          "to": 236
+        },
+        {
+          "text": "Not anymore.",
+          "from": 238,
+          "to": 276
+        },
+        {
+          "text": "Modern AI voices are generated",
+          "from": 280,
+          "to": 344
+        },
+        {
+          "text": "fresh, sound by sound,",
+          "from": 346,
+          "to": 408
+        },
+        {
+          "text": "which is why they can",
+          "from": 410,
+          "to": 434
+        },
+        {
+          "text": "say any sentence,",
+          "from": 436,
+          "to": 477
+        },
+        {
+          "text": "even one nobody has ever",
+          "from": 479,
+          "to": 523
+        },
+        {
+          "text": "said before.",
+          "from": 525,
+          "to": 561
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "To understand your voice, the model reads…",
+        "options": [
+          "The letters you type",
+          "A spectrogram, a picture of sound",
+          "Your lip movements"
+        ],
+        "answer": 1
+      },
+      "from": 3778,
+      "durationInFrames": 462,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_08.wav",
+      "cues": [
+        156,
+        359
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "What does a speech to",
+          "from": 44,
+          "to": 67
+        },
+        {
+          "text": "text model read,",
+          "from": 69,
+          "to": 99
+        },
+        {
+          "text": "to understand your voice?",
+          "from": 104,
+          "to": 154
+        },
+        {
+          "text": "Pause and think,",
+          "from": 156,
+          "to": 192
+        },
+        {
+          "text": "and if you get it",
+          "from": 193,
+          "to": 210
+        },
+        {
+          "text": "right, comment below!",
+          "from": 212,
+          "to": 267
+        },
+        {
+          "text": "A spectrogram,",
+          "from": 359,
+          "to": 389
+        },
+        {
+          "text": "a picture of sound over time!",
+          "from": 391,
+          "to": 450
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "STT",
+            "voice → words"
+          ],
+          [
+            "Spectrogram",
+            "a picture of sound"
+          ],
+          [
+            "TTS",
+            "words → natural voice"
+          ],
+          [
+            "Hard parts",
+            "accents, noise, mixed languages"
+          ]
+        ],
+        "next": "Use Case · AI meeting notes"
+      },
+      "from": 4240,
+      "durationInFrames": 667,
+      "voiceFrom": 10,
+      "audio": "lessons/ep13/voice_09.wav",
+      "cues": [
+        48,
+        135,
+        229,
+        336,
+        445
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Speech to text turns your",
+          "from": 48,
+          "to": 89
+        },
+        {
+          "text": "voice into words.",
+          "from": 91,
+          "to": 133
+        },
+        {
+          "text": "It reads a spectrogram,",
+          "from": 135,
+          "to": 175
+        },
+        {
+          "text": "a picture of sound.",
+          "from": 178,
+          "to": 226
+        },
+        {
+          "text": "Text to speech turns words",
+          "from": 229,
+          "to": 276
+        },
+        {
+          "text": "back into a natural voice.",
+          "from": 277,
+          "to": 333
+        },
+        {
+          "text": "And accents,",
+          "from": 336,
+          "to": 361
+        },
+        {
+          "text": "noise and mixed languages make",
+          "from": 365,
+          "to": 414
+        },
+        {
+          "text": "it hard.",
+          "from": 415,
+          "to": 442
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 445,
+          "to": 506
+        },
+        {
+          "text": "how AI takes notes in",
+          "from": 509,
+          "to": 551
+        },
+        {
+          "text": "your meetings.",
+          "from": 552,
+          "to": 585
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 589,
+          "to": 655
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "id": "ep13",
+  "episode": 13,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Speech AI",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Every time you talk to Siri, send a voice note that gets typed out, or hear an AI voice read a story, [1] two technologies are at work. [2] Speech to text, and text to speech. So let's understand both.",
+      "data": {
+        "kicker": "EPISODE 13",
+        "title": [
+          "Speech",
+          "AI"
+        ],
+        "subtitle": "Speech to text & text to speech",
+        "buzzwords": [
+          "Voice typing",
+          "Captions",
+          "Spectrogram",
+          "Phonemes",
+          "Accents",
+          "Voices",
+          "Audiobooks",
+          "Whisper"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Think of them as two directions. [1] Speech to text listens to your voice, and writes it down as words. [2] Text to speech does the opposite. It takes words, and turns them into a natural sounding voice.",
+      "data": {
+        "heading": "Listen vs speak",
+        "kicker": "TWO DIRECTIONS",
+        "left": {
+          "icon": "Mic",
+          "title": "Speech to text",
+          "stat": "Voice → words",
+          "label": "listens and types for you"
+        },
+        "right": {
+          "icon": "Volume2",
+          "title": "Text to speech",
+          "stat": "Words → voice",
+          "label": "speaks like a narrator"
+        }
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's how speech to text works. [1] Your voice is recorded as a sound wave. [2] That wave is turned into a picture of sound, called a spectrogram, which shows which pitches are loud at each moment. [3] A speech model reads that picture, a bit like reading an image, [4] and predicts the most likely words, in order, [5] giving you the final text.",
+      "data": {
+        "heading": "Speech to text",
+        "kicker": "HOW IT LISTENS",
+        "nodes": [
+          [
+            "Mic",
+            "Your voice",
+            "Recorded as a sound wave"
+          ],
+          [
+            "AudioLines",
+            "Spectrogram",
+            "A picture of sound over time"
+          ],
+          [
+            "Brain",
+            "Speech model",
+            "Reads the sound picture"
+          ],
+          [
+            "Type",
+            "Predicts words",
+            "Most likely words, in order"
+          ],
+          [
+            "FileText",
+            "Text",
+            "“Remind me to call Amma”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "And text to speech works in reverse. [1] It starts with your text. [2] First, the words are turned into sounds, the way they should be pronounced. [3] Then the model plans the rhythm, pitch and pauses, so it sounds natural. [4] It generates the actual sound wave, [5] and out comes a voice, just like the one you're hearing right now.",
+      "data": {
+        "heading": "Text to speech",
+        "kicker": "HOW IT SPEAKS",
+        "nodes": [
+          [
+            "FileText",
+            "Your text",
+            "“Your order has arrived”"
+          ],
+          [
+            "Type",
+            "Pronunciation",
+            "Words turned into sounds"
+          ],
+          [
+            "AudioLines",
+            "Rhythm and pitch",
+            "Where to pause, what to stress"
+          ],
+          [
+            "Waves",
+            "Sound wave",
+            "The model generates audio"
+          ],
+          [
+            "Volume2",
+            "Voice",
+            "Natural speech, like this one"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "And you use these every day. [1] Voice typing, and voice notes that turn into text. [2] Auto captions on YouTube and Instagram. [3] And audiobooks, map directions, and AI phone assistants.",
+      "data": {
+        "heading": "Speech AI in your day",
+        "items": [
+          [
+            "Mic",
+            "Voice typing",
+            "Speak instead of typing"
+          ],
+          [
+            "Captions",
+            "Auto captions",
+            "YouTube, Instagram, meetings"
+          ],
+          [
+            "Headphones",
+            "AI voices",
+            "Audiobooks, maps, phone assistants"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "So what makes speech AI hard? [1] Accents, because the same word sounds different in Hyderabad, London and Texas. [2] Background noise, like traffic or a busy office. [3] Mixed languages, like switching between Telugu and English in one sentence. [4] And emotion, sounding happy, calm or serious at the right moment.",
+      "data": {
+        "heading": "The tough parts",
+        "kicker": "WHY IT'S HARD",
+        "terms": [
+          [
+            "Globe",
+            "Accents",
+            "Same word, many sounds"
+          ],
+          [
+            "Volume1",
+            "Noise",
+            "Traffic, crowds, fans"
+          ],
+          [
+            "Languages",
+            "Mixed languages",
+            "Telugu + English in one line"
+          ],
+          [
+            "Smile",
+            "Emotion",
+            "Happy, calm or serious"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think AI voices are just recordings of real people, cut and joined together. [2] Not anymore. Modern AI voices are generated fresh, sound by sound, which is why they can say any sentence, even one nobody has ever said before.",
+      "data": {
+        "myth": "AI voices are just recordings, cut and joined.",
+        "fact": "Modern AI voices are generated fresh, sound by sound, so they can say any sentence.",
+        "tip": "This narration is AI-generated"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What does a speech to text model read, to understand your voice? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] A spectrogram, a picture of sound over time!",
+      "data": {
+        "question": "To understand your voice, the model reads…",
+        "options": [
+          "The letters you type",
+          "A spectrogram, a picture of sound",
+          "Your lip movements"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Speech to text turns your voice into words. [2] It reads a spectrogram, a picture of sound. [3] Text to speech turns words back into a natural voice. [4] And accents, noise and mixed languages make it hard. [5] Next, a real world breakdown, how AI takes notes in your meetings. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "STT",
+            "voice → words"
+          ],
+          [
+            "Spectrogram",
+            "a picture of sound"
+          ],
+          [
+            "TTS",
+            "words → natural voice"
+          ],
+          [
+            "Hard parts",
+            "accents, noise, mixed languages"
+          ]
+        ],
+        "next": "Use Case · AI meeting notes"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Voice typing, auto captions, AI voices. Two technologies power all of them.\n\nEpisode 13 of AI From Scratch: Speech AI\n- Speech to text vs text to speech\n- How AI listens: sound wave, spectrogram, speech model, words\n- How AI speaks: pronunciation, rhythm and pitch, sound wave\n- Where you use it every day\n- What makes it hard: accents, noise, mixed languages, emotion\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI takes notes in your meetings.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #VoiceAI #LearnAI #SpeechRecognition #AIForBeginners",
+    "pinned": "Quiz answer: A spectrogram, a picture of sound over time. Does voice typing understand your accent well? Tell me below.",
+    "cover": "'Speech AI' title card",
+    "alt": "Animated lesson explaining how speech-to-text and text-to-speech AI work."
+  }
+}
