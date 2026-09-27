@@ -1,0 +1,787 @@
+{
+  "id": "ep48",
+  "episode": 48,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Laws Around the World",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5434,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep48/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 48",
+        "title": [
+          "AI",
+          "Laws"
+        ],
+        "subtitle": "A quick world tour",
+        "buzzwords": [
+          "EU AI Act",
+          "Risk levels",
+          "IT Rules",
+          "Labelling",
+          "Deepfakes",
+          "Transparency",
+          "State laws",
+          "Compliance"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 547,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_01.wav",
+      "cues": [
+        158,
+        368
+      ],
+      "captions": [
+        {
+          "text": "AI is moving fast,",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "and governments are racing to",
+          "from": 70,
+          "to": 109
+        },
+        {
+          "text": "write rules for it.",
+          "from": 110,
+          "to": 154
+        },
+        {
+          "text": "Some ban certain uses,",
+          "from": 158,
+          "to": 208
+        },
+        {
+          "text": "some demand labels on AI",
+          "from": 210,
+          "to": 261
+        },
+        {
+          "text": "content, and some prefer lighter guidelines.",
+          "from": 262,
+          "to": 365
+        },
+        {
+          "text": "Let's take a quick world",
+          "from": 368,
+          "to": 433
+        },
+        {
+          "text": "tour of AI laws,",
+          "from": 433,
+          "to": 477
+        },
+        {
+          "text": "as of September 2026.",
+          "from": 477,
+          "to": 533
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "EU AI Act",
+        "short": "EU",
+        "definition": "The EU's law that regulates AI by risk level, from banned uses to strict rules for high-risk systems.",
+        "chips": [
+          [
+            "Layers",
+            "Sorted by risk"
+          ],
+          [
+            "Ban",
+            "Some uses banned"
+          ],
+          [
+            "CalendarClock",
+            "High-risk rules from Dec 2027"
+          ]
+        ]
+      },
+      "from": 547,
+      "durationInFrames": 626,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_02.wav",
+      "cues": [
+        126,
+        203,
+        341
+      ],
+      "captions": [
+        {
+          "text": "The biggest example is the",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "European Union's AI Act.",
+          "from": 50,
+          "to": 124
+        },
+        {
+          "text": "It sorts AI by risk level.",
+          "from": 126,
+          "to": 200
+        },
+        {
+          "text": "Some uses are banned outright,",
+          "from": 203,
+          "to": 266
+        },
+        {
+          "text": "like social scoring of citizens.",
+          "from": 267,
+          "to": 338
+        },
+        {
+          "text": "High risk uses,",
+          "from": 341,
+          "to": 379
+        },
+        {
+          "text": "like hiring or credit decisions,",
+          "from": 379,
+          "to": 458
+        },
+        {
+          "text": "face strict checks,",
+          "from": 458,
+          "to": 506
+        },
+        {
+          "text": "and those rules now start",
+          "from": 506,
+          "to": 567
+        },
+        {
+          "text": "from December 2027.",
+          "from": 567,
+          "to": 615
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "EU risk levels",
+        "kicker": "THE PYRAMID",
+        "cols": [
+          "Rule"
+        ],
+        "rows": [
+          [
+            "Unacceptable",
+            "Banned"
+          ],
+          [
+            "High risk",
+            "Strict checks"
+          ],
+          [
+            "Limited",
+            "Be transparent"
+          ],
+          [
+            "Minimal",
+            "Mostly free"
+          ]
+        ]
+      },
+      "from": 1173,
+      "durationInFrames": 686,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_03.wav",
+      "cues": [
+        91,
+        204,
+        412,
+        549
+      ],
+      "captions": [
+        {
+          "text": "Here's how the EU risk",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "levels work.",
+          "from": 52,
+          "to": 88
+        },
+        {
+          "text": "Unacceptable risk,",
+          "from": 91,
+          "to": 125
+        },
+        {
+          "text": "like social scoring,",
+          "from": 131,
+          "to": 163
+        },
+        {
+          "text": "is banned.",
+          "from": 167,
+          "to": 201
+        },
+        {
+          "text": "High risk,",
+          "from": 204,
+          "to": 224
+        },
+        {
+          "text": "like hiring and medical tools,",
+          "from": 229,
+          "to": 292
+        },
+        {
+          "text": "needs testing,",
+          "from": 293,
+          "to": 322
+        },
+        {
+          "text": "documentation, and human oversight.",
+          "from": 326,
+          "to": 409
+        },
+        {
+          "text": "Limited risk,",
+          "from": 412,
+          "to": 436
+        },
+        {
+          "text": "like chatbots,",
+          "from": 440,
+          "to": 466
+        },
+        {
+          "text": "must tell people they're talking",
+          "from": 471,
+          "to": 513
+        },
+        {
+          "text": "to AI.",
+          "from": 515,
+          "to": 547
+        },
+        {
+          "text": "And minimal risk,",
+          "from": 549,
+          "to": 583
+        },
+        {
+          "text": "like spam filters,",
+          "from": 585,
+          "to": 629
+        },
+        {
+          "text": "is mostly free.",
+          "from": 632,
+          "to": 674
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "India's approach",
+        "kicker": "CLOSE TO HOME",
+        "steps": [
+          [
+            "BookOpen",
+            "Guidelines",
+            "Not one big AI law"
+          ],
+          [
+            "Tag",
+            "Label AI content",
+            "IT Rules, Feb 2026"
+          ],
+          [
+            "Timer",
+            "Fast takedowns",
+            "Unlawful content"
+          ]
+        ]
+      },
+      "from": 1859,
+      "durationInFrames": 717,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_04.wav",
+      "cues": [
+        60,
+        204,
+        519
+      ],
+      "captions": [
+        {
+          "text": "Now, India.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "India has chosen guidelines,",
+          "from": 60,
+          "to": 122
+        },
+        {
+          "text": "rather than one big AI law.",
+          "from": 123,
+          "to": 201
+        },
+        {
+          "text": "But in February 2026,",
+          "from": 204,
+          "to": 256
+        },
+        {
+          "text": "it amended its IT Rules,",
+          "from": 256,
+          "to": 315
+        },
+        {
+          "text": "so AI-generated content,",
+          "from": 315,
+          "to": 374
+        },
+        {
+          "text": "including deepfakes,",
+          "from": 374,
+          "to": 424
+        },
+        {
+          "text": "must be clearly labelled on platforms.",
+          "from": 424,
+          "to": 516
+        },
+        {
+          "text": "And platforms must take down",
+          "from": 519,
+          "to": 581
+        },
+        {
+          "text": "unlawful content fast,",
+          "from": 581,
+          "to": 630
+        },
+        {
+          "text": "within hours of an official order.",
+          "from": 630,
+          "to": 705
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "USA and China",
+        "kicker": "TWO GIANTS",
+        "left": {
+          "icon": "Flag",
+          "title": "USA",
+          "stat": "Patchwork",
+          "label": "state laws, federal debate"
+        },
+        "right": {
+          "icon": "Landmark",
+          "title": "China",
+          "stat": "Labels + reviews",
+          "label": "AI content must be marked"
+        }
+      },
+      "from": 2576,
+      "durationInFrames": 634,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_05.wav",
+      "cues": [
+        62,
+        413
+      ],
+      "captions": [
+        {
+          "text": "Two other big players.",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "The United States has no",
+          "from": 62,
+          "to": 102
+        },
+        {
+          "text": "single federal AI law.",
+          "from": 106,
+          "to": 172
+        },
+        {
+          "text": "States like California and Colorado",
+          "from": 176,
+          "to": 248
+        },
+        {
+          "text": "write their own rules,",
+          "from": 253,
+          "to": 296
+        },
+        {
+          "text": "while the federal government pushes",
+          "from": 298,
+          "to": 345
+        },
+        {
+          "text": "for one national framework.",
+          "from": 346,
+          "to": 410
+        },
+        {
+          "text": "China requires labels on AI-generated",
+          "from": 413,
+          "to": 493
+        },
+        {
+          "text": "content, and security reviews for",
+          "from": 494,
+          "to": 559
+        },
+        {
+          "text": "public AI services.",
+          "from": 561,
+          "to": 622
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Common themes",
+        "items": [
+          [
+            "Eye",
+            "Transparency",
+            "Say when it's AI"
+          ],
+          [
+            "ScanFace",
+            "Deepfake rules",
+            "Protect real people"
+          ],
+          [
+            "UserCheck",
+            "Accountability",
+            "Someone is responsible"
+          ]
+        ]
+      },
+      "from": 3210,
+      "durationInFrames": 541,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_06.wav",
+      "cues": [
+        90,
+        258,
+        366
+      ],
+      "captions": [
+        {
+          "text": "A few common themes appear everywhere.",
+          "from": 10,
+          "to": 88
+        },
+        {
+          "text": "Transparency.",
+          "from": 90,
+          "to": 131
+        },
+        {
+          "text": "Tell people when they're dealing",
+          "from": 133,
+          "to": 170
+        },
+        {
+          "text": "with AI,",
+          "from": 171,
+          "to": 199
+        },
+        {
+          "text": "or AI content.",
+          "from": 202,
+          "to": 255
+        },
+        {
+          "text": "Deepfake rules,",
+          "from": 258,
+          "to": 286
+        },
+        {
+          "text": "against fake media of real people.",
+          "from": 291,
+          "to": 363
+        },
+        {
+          "text": "And accountability,",
+          "from": 366,
+          "to": 399
+        },
+        {
+          "text": "a human,",
+          "from": 401,
+          "to": 421
+        },
+        {
+          "text": "or company,",
+          "from": 425,
+          "to": 451
+        },
+        {
+          "text": "must answer for what the",
+          "from": 453,
+          "to": 487
+        },
+        {
+          "text": "AI does.",
+          "from": 489,
+          "to": 529
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI is completely unregulated.",
+        "fact": "Privacy, fraud, copyright and discrimination laws already apply. New AI laws add rules on top.",
+        "tip": "Old laws still apply"
+      },
+      "from": 3751,
+      "durationInFrames": 459,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_07.wav",
+      "cues": [
+        57,
+        159
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "People think AI is completely unregulated.",
+          "from": 57,
+          "to": 156
+        },
+        {
+          "text": "Existing laws on privacy,",
+          "from": 159,
+          "to": 218
+        },
+        {
+          "text": "fraud, copyright,",
+          "from": 220,
+          "to": 261
+        },
+        {
+          "text": "and discrimination already apply to AI.",
+          "from": 265,
+          "to": 358
+        },
+        {
+          "text": "New AI laws add rules",
+          "from": 361,
+          "to": 414
+        },
+        {
+          "text": "on top.",
+          "from": 415,
+          "to": 445
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The EU AI Act sorts AI by…",
+        "options": [
+          "Risk level",
+          "Company size",
+          "Colour of the logo"
+        ],
+        "answer": 0
+      },
+      "from": 4210,
+      "durationInFrames": 493,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_08.wav",
+      "cues": [
+        163,
+        380
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "How does the EU AI",
+          "from": 44,
+          "to": 86
+        },
+        {
+          "text": "Act mainly sort AI systems?",
+          "from": 88,
+          "to": 160
+        },
+        {
+          "text": "Pause and think,",
+          "from": 163,
+          "to": 202
+        },
+        {
+          "text": "and if you get it",
+          "from": 207,
+          "to": 224
+        },
+        {
+          "text": "right, comment below!",
+          "from": 226,
+          "to": 281
+        },
+        {
+          "text": "By risk level,",
+          "from": 380,
+          "to": 405
+        },
+        {
+          "text": "from banned uses,",
+          "from": 407,
+          "to": 435
+        },
+        {
+          "text": "to minimal risk!",
+          "from": 439,
+          "to": 479
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "EU",
+            "risk levels"
+          ],
+          [
+            "India",
+            "guidelines + labels"
+          ],
+          [
+            "USA & China",
+            "states, labels"
+          ],
+          [
+            "Old laws",
+            "still apply"
+          ]
+        ],
+        "next": "EP 49 · AI and jobs"
+      },
+      "from": 4703,
+      "durationInFrames": 731,
+      "voiceFrom": 10,
+      "audio": "lessons/ep48/voice_09.wav",
+      "cues": [
+        47,
+        244,
+        378,
+        490,
+        586
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "The EU AI Act sorts",
+          "from": 47,
+          "to": 101
+        },
+        {
+          "text": "AI by risk,",
+          "from": 101,
+          "to": 133
+        },
+        {
+          "text": "with high-risk rules from December 2027.",
+          "from": 133,
+          "to": 242
+        },
+        {
+          "text": "India uses guidelines,",
+          "from": 244,
+          "to": 291
+        },
+        {
+          "text": "plus labelling rules for AI content.",
+          "from": 293,
+          "to": 376
+        },
+        {
+          "text": "The US has state laws,",
+          "from": 378,
+          "to": 428
+        },
+        {
+          "text": "and China requires labels.",
+          "from": 429,
+          "to": 488
+        },
+        {
+          "text": "And existing laws already apply",
+          "from": 490,
+          "to": 545
+        },
+        {
+          "text": "to AI.",
+          "from": 547,
+          "to": 584
+        },
+        {
+          "text": "Next, AI and jobs.",
+          "from": 586,
+          "to": 656
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 659,
+          "to": 719
+        }
+      ],
+      "image": null
+    }
+  ]
+}
