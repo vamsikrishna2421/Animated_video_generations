@@ -6,7 +6,7 @@
   "title": "RAG Retrieval Augmented Generation",
   "host": "female",
   "fps": 30,
-  "totalFrames": 4400,
+  "totalFrames": 5011,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -34,48 +34,48 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 349,
+      "durationInFrames": 391,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_01.wav",
       "cues": [
-        178,
-        257
+        200,
+        290
       ],
       "captions": [
         {
           "text": "Ask ChatGPT about your company's",
           "from": 10,
-          "to": 80
+          "to": 90
         },
         {
           "text": "leave policy,",
-          "from": 80,
-          "to": 109
+          "from": 90,
+          "to": 123
         },
         {
           "text": "and it has absolutely no idea.",
-          "from": 109,
-          "to": 175
+          "from": 123,
+          "to": 198
         },
         {
           "text": "That's because it was never",
-          "from": 178,
-          "to": 208
+          "from": 200,
+          "to": 233
         },
         {
           "text": "trained on your documents.",
-          "from": 209,
-          "to": 252
+          "from": 236,
+          "to": 287
         },
         {
           "text": "And the fix for that",
-          "from": 257,
-          "to": 284
+          "from": 290,
+          "to": 321
         },
         {
           "text": "is called RAG.",
-          "from": 286,
-          "to": 338
+          "from": 324,
+          "to": 379
         }
       ],
       "image": null
@@ -97,69 +97,69 @@
           "label": "answers from your documents"
         }
       },
-      "from": 349,
-      "durationInFrames": 426,
+      "from": 391,
+      "durationInFrames": 486,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_02.wav",
       "cues": [
-        58,
-        236
+        64,
+        275
       ],
       "captions": [
         {
           "text": "Think of it like an exam.",
           "from": 10,
-          "to": 52
+          "to": 62
         },
         {
           "text": "A normal LLM is like",
-          "from": 58,
-          "to": 99
+          "from": 64,
+          "to": 110
         },
         {
           "text": "a closed book exam.",
-          "from": 100,
-          "to": 142
+          "from": 111,
+          "to": 163
         },
         {
           "text": "It answers from memory,",
-          "from": 146,
-          "to": 184
+          "from": 166,
+          "to": 207
         },
         {
           "text": "and sometimes,",
-          "from": 185,
-          "to": 206
+          "from": 208,
+          "to": 232
         },
         {
           "text": "it guesses.",
-          "from": 209,
-          "to": 234
-        },
-        {
-          "text": "But RAG is like an",
-          "from": 236,
+          "from": 238,
           "to": 273
         },
         {
+          "text": "But RAG is like an",
+          "from": 275,
+          "to": 320
+        },
+        {
           "text": "open book exam.",
-          "from": 274,
-          "to": 311
+          "from": 322,
+          "to": 365
         },
         {
           "text": "It looks up the right",
-          "from": 316,
-          "to": 339
+          "from": 367,
+          "to": 389
         },
         {
           "text": "pages first,",
-          "from": 340,
-          "to": 370
+          "from": 391,
+          "to": 425
         },
         {
           "text": "and then it answers.",
-          "from": 372,
-          "to": 414
+          "from": 427,
+          "to": 473
         }
       ],
       "image": null
@@ -185,81 +185,81 @@
           ]
         ]
       },
-      "from": 775,
-      "durationInFrames": 587,
+      "from": 877,
+      "durationInFrames": 700,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_03.wav",
       "cues": [
-        106,
-        254,
-        332,
-        442
+        123,
+        302,
+        411,
+        541
       ],
       "captions": [
         {
           "text": "RAG stands for retrieval augmented generation.",
           "from": 10,
-          "to": 103
+          "to": 121
         },
         {
           "text": "In simple words,",
-          "from": 106,
-          "to": 129
+          "from": 123,
+          "to": 148
         },
         {
           "text": "it means,",
-          "from": 134,
-          "to": 154
+          "from": 154,
+          "to": 177
         },
         {
           "text": "find the right information first,",
-          "from": 155,
-          "to": 200
-        },
-        {
-          "text": "and then answer.",
-          "from": 203,
+          "from": 179,
           "to": 232
         },
         {
-          "text": "So first,",
+          "text": "and then answer.",
           "from": 235,
-          "to": 249
+          "to": 275
+        },
+        {
+          "text": "So first,",
+          "from": 278,
+          "to": 299
         },
         {
           "text": "retrieve, which means search your documents.",
-          "from": 254,
-          "to": 316
+          "from": 302,
+          "to": 389
         },
         {
           "text": "Then, augment,",
-          "from": 320,
-          "to": 345
+          "from": 393,
+          "to": 432
         },
         {
           "text": "which means add what you",
-          "from": 348,
-          "to": 377
+          "from": 433,
+          "to": 465
         },
         {
           "text": "found to the prompt.",
-          "from": 378,
-          "to": 411
-        },
-        {
-          "text": "And finally,",
-          "from": 413,
-          "to": 440
-        },
-        {
-          "text": "generate, where the LLM writes",
-          "from": 442,
+          "from": 468,
           "to": 506
         },
         {
+          "text": "And finally,",
+          "from": 508,
+          "to": 535
+        },
+        {
+          "text": "generate, where the LLM writes",
+          "from": 541,
+          "to": 616
+        },
+        {
           "text": "the answer using that information.",
-          "from": 506,
-          "to": 574
+          "from": 618,
+          "to": 688
         }
       ],
       "image": null
@@ -296,97 +296,97 @@
           ]
         ]
       },
-      "from": 1362,
-      "durationInFrames": 623,
+      "from": 1577,
+      "durationInFrames": 716,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_04.wav",
       "cues": [
-        97,
-        181,
-        248,
-        359,
-        475
+        110,
+        217,
+        294,
+        423,
+        552
       ],
       "captions": [
         {
           "text": "Let's see it in action,",
           "from": 10,
-          "to": 40
+          "to": 44
         },
         {
           "text": "with an HR policy bot.",
-          "from": 46,
-          "to": 95
+          "from": 48,
+          "to": 108
         },
         {
           "text": "An employee asks,",
-          "from": 97,
-          "to": 128
+          "from": 110,
+          "to": 149
         },
         {
           "text": "how many leave days do",
-          "from": 129,
-          "to": 159
+          "from": 151,
+          "to": 183
         },
         {
           "text": "I get?",
-          "from": 161,
-          "to": 179
+          "from": 184,
+          "to": 215
         },
         {
           "text": "That question is turned into",
-          "from": 181,
-          "to": 226
+          "from": 217,
+          "to": 269
         },
         {
           "text": "an embedding,",
-          "from": 226,
-          "to": 248
-        },
-        {
-          "text": "and the vector database finds",
-          "from": 248,
+          "from": 269,
           "to": 294
         },
         {
-          "text": "the matching paragraph in the",
+          "text": "and the vector database finds",
           "from": 294,
-          "to": 341
+          "to": 348
+        },
+        {
+          "text": "the matching paragraph in the",
+          "from": 348,
+          "to": 401
         },
         {
           "text": "HR policy.",
-          "from": 341,
-          "to": 358
+          "from": 401,
+          "to": 421
         },
         {
           "text": "That paragraph is added to",
-          "from": 359,
-          "to": 408
+          "from": 423,
+          "to": 477
         },
         {
           "text": "the prompt,",
-          "from": 408,
-          "to": 430
+          "from": 477,
+          "to": 501
         },
         {
           "text": "along with the question,",
-          "from": 430,
-          "to": 475
+          "from": 501,
+          "to": 552
         },
         {
           "text": "and the LLM answers,",
-          "from": 475,
-          "to": 513
+          "from": 552,
+          "to": 594
         },
         {
           "text": "twenty four days a year,",
-          "from": 513,
-          "to": 558
+          "from": 594,
+          "to": 644
         },
         {
           "text": "and it even cites the policy.",
-          "from": 558,
-          "to": 612
+          "from": 644,
+          "to": 705
         }
       ],
       "image": null
@@ -413,65 +413,65 @@
           ]
         ]
       },
-      "from": 1985,
-      "durationInFrames": 465,
+      "from": 2293,
+      "durationInFrames": 525,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_05.wav",
       "cues": [
-        73,
-        172,
-        295
+        84,
+        199,
+        338
       ],
       "captions": [
         {
           "text": "So where is RAG used today?",
           "from": 10,
-          "to": 69
+          "to": 82
         },
         {
           "text": "In company chatbots that answer",
-          "from": 73,
-          "to": 121
+          "from": 84,
+          "to": 137
         },
         {
           "text": "from internal documents.",
-          "from": 122,
-          "to": 169
+          "from": 139,
+          "to": 196
         },
         {
           "text": "In bank and telecom support",
-          "from": 172,
-          "to": 217
+          "from": 199,
+          "to": 248
         },
         {
           "text": "bots that always follow the",
-          "from": 219,
-          "to": 258
+          "from": 249,
+          "to": 295
         },
         {
           "text": "latest rules.",
-          "from": 259,
-          "to": 291
+          "from": 296,
+          "to": 335
         },
         {
           "text": "And in those chat with",
-          "from": 295,
-          "to": 324
+          "from": 338,
+          "to": 370
         },
         {
           "text": "your PDF tools,",
-          "from": 324,
-          "to": 366
+          "from": 371,
+          "to": 416
         },
         {
           "text": "for notes,",
-          "from": 367,
-          "to": 387
+          "from": 418,
+          "to": 441
         },
         {
           "text": "contracts and research papers.",
-          "from": 388,
-          "to": 454
+          "from": 443,
+          "to": 512
         }
       ],
       "image": null
@@ -503,81 +503,81 @@
           ]
         ]
       },
-      "from": 2450,
-      "durationInFrames": 572,
+      "from": 2818,
+      "durationInFrames": 643,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_06.wav",
       "cues": [
-        79,
-        259,
-        359,
-        468
+        90,
+        306,
+        419,
+        535
       ],
       "captions": [
         {
           "text": "So why is everyone using RAG?",
           "from": 10,
-          "to": 73
+          "to": 87
         },
         {
           "text": "First, it stays fresh.",
-          "from": 79,
-          "to": 122
+          "from": 90,
+          "to": 152
         },
         {
           "text": "You update the documents,",
-          "from": 125,
-          "to": 162
+          "from": 155,
+          "to": 196
         },
         {
           "text": "and the answers update instantly,",
-          "from": 165,
-          "to": 216
-        },
-        {
-          "text": "with no retraining.",
-          "from": 218,
+          "from": 198,
           "to": 256
         },
         {
+          "text": "with no retraining.",
+          "from": 258,
+          "to": 304
+        },
+        {
           "text": "It's private,",
-          "from": 259,
-          "to": 280
+          "from": 306,
+          "to": 330
         },
         {
           "text": "because your data stays in",
-          "from": 282,
-          "to": 316
+          "from": 331,
+          "to": 369
         },
         {
           "text": "your own database.",
-          "from": 317,
-          "to": 356
+          "from": 369,
+          "to": 417
         },
         {
           "text": "It's trustworthy,",
-          "from": 359,
-          "to": 384
+          "from": 419,
+          "to": 444
         },
         {
           "text": "because it can show you",
-          "from": 388,
-          "to": 414
+          "from": 447,
+          "to": 474
         },
         {
           "text": "the source for every answer.",
-          "from": 415,
-          "to": 463
+          "from": 475,
+          "to": 532
         },
         {
           "text": "And it's cheap,",
-          "from": 468,
-          "to": 493
+          "from": 535,
+          "to": 565
         },
         {
           "text": "compared to training a whole model.",
-          "from": 495,
-          "to": 558
+          "from": 567,
+          "to": 632
         }
       ],
       "image": null
@@ -589,59 +589,59 @@
         "fact": "If retrieval finds the wrong text, the answer is wrong. Good RAG needs good search and clean docs.",
         "tip": "Garbage in, garbage out"
       },
-      "from": 3022,
-      "durationInFrames": 427,
+      "from": 3461,
+      "durationInFrames": 474,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_07.wav",
       "cues": [
-        50,
-        168
+        59,
+        194
       ],
       "captions": [
         {
           "text": "Here's a common myth.",
           "from": 10,
-          "to": 47
+          "to": 57
         },
         {
           "text": "People think that with RAG,",
-          "from": 50,
-          "to": 100
+          "from": 59,
+          "to": 118
         },
         {
           "text": "the AI never makes mistakes.",
-          "from": 101,
-          "to": 162
-        },
-        {
-          "text": "Not quite.",
-          "from": 168,
+          "from": 119,
           "to": 191
         },
         {
-          "text": "If the search finds the",
-          "from": 195,
+          "text": "Not quite.",
+          "from": 194,
           "to": 225
         },
         {
+          "text": "If the search finds the",
+          "from": 227,
+          "to": 256
+        },
+        {
           "text": "wrong paragraph,",
-          "from": 226,
-          "to": 254
+          "from": 258,
+          "to": 287
         },
         {
           "text": "the answer will be wrong too.",
-          "from": 258,
-          "to": 305
+          "from": 290,
+          "to": 347
         },
         {
           "text": "So good RAG needs good",
-          "from": 310,
-          "to": 353
+          "from": 350,
+          "to": 394
         },
         {
           "text": "search, and clean documents.",
-          "from": 355,
-          "to": 414
+          "from": 397,
+          "to": 461
         }
       ],
       "image": null
@@ -657,49 +657,54 @@
         ],
         "answer": 1
       },
-      "from": 3449,
-      "durationInFrames": 396,
+      "from": 3935,
+      "durationInFrames": 427,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_08.wav",
       "cues": [
-        104,
-        232
+        116,
+        311
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 30
+          "to": 31
         },
         {
           "text": "In RAG,",
-          "from": 42,
-          "to": 55
+          "from": 43,
+          "to": 59
         },
         {
           "text": "what does the R stand for?",
-          "from": 57,
-          "to": 94
+          "from": 64,
+          "to": 113
         },
         {
-          "text": "Pause and think.",
-          "from": 104,
-          "to": 139
+          "text": "Pause and think,",
+          "from": 116,
+          "to": 143
+        },
+        {
+          "text": "and if you get it",
+          "from": 149,
+          "to": 165
+        },
+        {
+          "text": "right, comment below!",
+          "from": 167,
+          "to": 220
         },
         {
           "text": "It's retrieval!",
-          "from": 232,
-          "to": 259
+          "from": 311,
+          "to": 342
         },
         {
           "text": "Find the right information first.",
-          "from": 268,
-          "to": 325
-        },
-        {
-          "text": "Comment R if you got it!",
-          "from": 330,
-          "to": 384
+          "from": 347,
+          "to": 413
         }
       ],
       "image": null
@@ -727,82 +732,82 @@
         ],
         "next": "EP 08 · Prompt vs RAG vs Fine-tune"
       },
-      "from": 3845,
-      "durationInFrames": 555,
+      "from": 4362,
+      "durationInFrames": 649,
       "voiceFrom": 10,
       "audio": "lessons/ep07/voice_09.wav",
       "cues": [
-        40,
-        129,
-        185,
-        220,
-        290
+        48,
+        155,
+        218,
+        258,
+        351
       ],
       "captions": [
         {
           "text": "Let's recap.",
           "from": 10,
-          "to": 34
+          "to": 46
         },
         {
           "text": "RAG is like an open",
-          "from": 40,
-          "to": 79
+          "from": 48,
+          "to": 95
         },
         {
           "text": "book exam for AI.",
-          "from": 80,
-          "to": 125
+          "from": 97,
+          "to": 153
         },
         {
           "text": "It retrieves the right information,",
-          "from": 129,
-          "to": 183
+          "from": 155,
+          "to": 216
         },
         {
           "text": "adds it to the prompt,",
-          "from": 185,
-          "to": 219
-        },
-        {
-          "text": "and then generates an answer,",
-          "from": 220,
+          "from": 218,
           "to": 256
         },
         {
+          "text": "and then generates an answer,",
+          "from": 258,
+          "to": 304
+        },
+        {
           "text": "with sources.",
-          "from": 257,
-          "to": 288
+          "from": 305,
+          "to": 349
         },
         {
           "text": "In the next episode,",
-          "from": 290,
-          "to": 328
+          "from": 351,
+          "to": 396
         },
         {
           "text": "prompting, RAG or fine tuning,",
-          "from": 328,
-          "to": 383
+          "from": 396,
+          "to": 462
         },
         {
           "text": "which one should you use,",
-          "from": 383,
-          "to": 430
+          "from": 462,
+          "to": 518
         },
         {
           "text": "and when?",
-          "from": 430,
-          "to": 448
+          "from": 518,
+          "to": 539
         },
         {
           "text": "Follow AI Maastaaru,",
-          "from": 454,
-          "to": 502
+          "from": 543,
+          "to": 596
         },
         {
           "text": "so you don't miss it!",
-          "from": 504,
-          "to": 541
+          "from": 598,
+          "to": 637
         }
       ],
       "image": null

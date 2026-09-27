@@ -5,8 +5,8 @@
   "handle": "@ai_maastaaru",
   "title": "Prompt Engineering",
   "host": "female",
-  "voice": "hf_beta",
-  "speed": 1.0,
+  "voice": "af_heart",
+  "speed": 0.92,
   "lang": "en-us",
   "fps": 30,
   "music": {
@@ -156,7 +156,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! Which of these prompts will get the better answer? [1] Pause and think. <pause 3.2> [2] It's B! It has a role, some context, a clear task and a format. Comment B if you got it!",
+      "text": "Quick quiz! Which of these prompts will get the better answer? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It's B! It has a role, some context, a clear task and a format.",
       "data": {
         "question": "Which prompt gets a better answer?",
         "options": [

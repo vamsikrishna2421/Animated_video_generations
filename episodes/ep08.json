@@ -5,8 +5,8 @@
   "handle": "@ai_maastaaru",
   "title": "Prompting vs RAG vs Fine Tuning",
   "host": "female",
-  "voice": "hf_beta",
-  "speed": 1.0,
+  "voice": "af_heart",
+  "speed": 0.92,
   "lang": "en-us",
   "fps": 30,
   "music": {
@@ -160,7 +160,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! Your prices change every week, and your chatbot must always know the latest ones. Which approach should you use? [1] Pause and think. <pause 3.2> [2] It's RAG! Just update the documents, and the answers update instantly. Comment RAG if you got it!",
+      "text": "Quick quiz! Your prices change every week, and your chatbot must always know the latest ones. Which approach should you use? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It's RAG! Just update the documents, and the answers update instantly.",
       "data": {
         "question": "Prices change weekly. Use…",
         "options": [

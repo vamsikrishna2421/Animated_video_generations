@@ -6,7 +6,7 @@
   "title": "Tool Use and Function Calling",
   "host": "female",
   "fps": 30,
-  "totalFrames": 3460,
+  "totalFrames": 3900,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -34,48 +34,48 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 302,
+      "durationInFrames": 333,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_01.wav",
       "cues": [
-        145,
-        238
+        160,
+        262
       ],
       "captions": [
         {
           "text": "Here's something surprising.",
           "from": 10,
-          "to": 56
+          "to": 63
         },
         {
           "text": "An LLM on its own",
-          "from": 60,
-          "to": 96
+          "from": 65,
+          "to": 103
         },
         {
           "text": "can only write text.",
-          "from": 97,
-          "to": 141
+          "from": 104,
+          "to": 158
         },
         {
           "text": "It can't check the weather",
-          "from": 145,
-          "to": 175
+          "from": 160,
+          "to": 192
         },
         {
           "text": "right now,",
-          "from": 177,
-          "to": 196
+          "from": 194,
+          "to": 214
         },
         {
           "text": "or book you a cab.",
-          "from": 200,
-          "to": 231
+          "from": 218,
+          "to": 259
         },
         {
           "text": "Unless, we give it tools.",
-          "from": 238,
-          "to": 288
+          "from": 262,
+          "to": 321
         }
       ],
       "image": null
@@ -101,71 +101,71 @@
           ]
         ]
       },
-      "from": 302,
-      "durationInFrames": 432,
+      "from": 333,
+      "durationInFrames": 490,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_02.wav",
       "cues": [
-        95,
-        278,
-        310,
-        361
+        105,
+        323,
+        358,
+        414
       ],
       "captions": [
         {
           "text": "Tool use,",
           "from": 10,
-          "to": 27
+          "to": 31
         },
         {
           "text": "which is also called function",
-          "from": 32,
-          "to": 72
+          "from": 36,
+          "to": 78
         },
         {
           "text": "calling, means the AI can",
-          "from": 74,
-          "to": 125
+          "from": 80,
+          "to": 138
         },
         {
           "text": "ask your app to run",
-          "from": 128,
-          "to": 153
+          "from": 140,
+          "to": 167
         },
         {
           "text": "a function,",
-          "from": 154,
-          "to": 177
+          "from": 168,
+          "to": 197
         },
         {
           "text": "and then use the result",
-          "from": 179,
-          "to": 210
+          "from": 199,
+          "to": 235
         },
         {
           "text": "in its answer.",
-          "from": 212,
-          "to": 241
+          "from": 237,
+          "to": 280
         },
         {
           "text": "With tools,",
-          "from": 242,
-          "to": 268
+          "from": 282,
+          "to": 313
         },
         {
           "text": "it can get live data,",
-          "from": 269,
-          "to": 308
+          "from": 315,
+          "to": 356
         },
         {
           "text": "calculate things exactly,",
-          "from": 310,
-          "to": 359
+          "from": 358,
+          "to": 413
         },
         {
           "text": "and even take actions for you.",
-          "from": 361,
-          "to": 420
+          "from": 414,
+          "to": 479
         }
       ],
       "image": null
@@ -183,91 +183,91 @@
         "result": "rain: 80% · 24°C",
         "answer": "Yes! There's an 80% chance of rain in Hyderabad today. Carry an umbrella."
       },
-      "from": 734,
-      "durationInFrames": 569,
+      "from": 823,
+      "durationInFrames": 656,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_03.wav",
       "cues": [
-        51,
-        145,
-        278,
-        400
+        55,
+        166,
+        332,
+        474
       ],
       "captions": [
         {
           "text": "Let's watch it happen.",
           "from": 10,
-          "to": 46
+          "to": 52
         },
         {
           "text": "You ask,",
-          "from": 51,
-          "to": 63
+          "from": 55,
+          "to": 70
         },
         {
           "text": "should I carry an umbrella",
-          "from": 68,
-          "to": 102
+          "from": 76,
+          "to": 111
         },
         {
           "text": "in Hyderabad today?",
-          "from": 103,
-          "to": 141
+          "from": 112,
+          "to": 163
         },
         {
           "text": "Instead of guessing,",
-          "from": 145,
-          "to": 175
+          "from": 166,
+          "to": 203
         },
         {
           "text": "the model writes a tool",
-          "from": 175,
-          "to": 209
+          "from": 203,
+          "to": 246
         },
         {
           "text": "call, get the weather,",
-          "from": 209,
-          "to": 242
+          "from": 246,
+          "to": 287
         },
         {
           "text": "for the city Hyderabad.",
-          "from": 242,
-          "to": 276
+          "from": 287,
+          "to": 329
         },
         {
           "text": "Your app calls the weather",
-          "from": 278,
-          "to": 308
+          "from": 332,
+          "to": 365
         },
         {
           "text": "service, and gets back,",
-          "from": 310,
-          "to": 348
+          "from": 367,
+          "to": 411
         },
         {
           "text": "rain, eighty percent.",
-          "from": 353,
-          "to": 399
+          "from": 416,
+          "to": 472
         },
         {
           "text": "And then the model answers,",
-          "from": 400,
-          "to": 440
+          "from": 474,
+          "to": 514
         },
         {
           "text": "yes, carry an umbrella,",
-          "from": 443,
-          "to": 488
+          "from": 519,
+          "to": 572
         },
         {
           "text": "there's an eighty percent chance",
-          "from": 489,
-          "to": 530
+          "from": 574,
+          "to": 615
         },
         {
           "text": "of rain.",
-          "from": 531,
-          "to": 556
+          "from": 616,
+          "to": 644
         }
       ],
       "image": null
@@ -294,70 +294,70 @@
           ]
         ]
       },
-      "from": 1303,
-      "durationInFrames": 406,
+      "from": 1479,
+      "durationInFrames": 449,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_04.wav",
       "cues": [
-        68,
-        176,
-        262
+        77,
+        197,
+        301
       ],
       "captions": [
         {
           "text": "Now here's the important part.",
           "from": 10,
-          "to": 64
+          "to": 75
         },
         {
           "text": "The AI never runs the",
-          "from": 68,
-          "to": 104
+          "from": 77,
+          "to": 116
         },
         {
           "text": "tool by itself,",
-          "from": 105,
-          "to": 137
+          "from": 118,
+          "to": 152
         },
         {
           "text": "it only asks.",
-          "from": 140,
-          "to": 171
+          "from": 155,
+          "to": 195
         },
         {
           "text": "Your app decides whether to",
-          "from": 176,
-          "to": 213
+          "from": 197,
+          "to": 238
         },
         {
           "text": "run it,",
-          "from": 215,
-          "to": 227
+          "from": 240,
+          "to": 255
         },
         {
           "text": "and then runs it.",
-          "from": 228,
-          "to": 259
+          "from": 257,
+          "to": 298
         },
         {
           "text": "Then the result goes back",
-          "from": 262,
-          "to": 299
+          "from": 301,
+          "to": 338
         },
         {
           "text": "to the AI.",
-          "from": 300,
-          "to": 328
+          "from": 340,
+          "to": 374
         },
         {
           "text": "And that's what keeps you",
-          "from": 333,
-          "to": 362
+          "from": 376,
+          "to": 405
         },
         {
           "text": "in control.",
-          "from": 363,
-          "to": 394
+          "from": 406,
+          "to": 437
         }
       ],
       "image": null
@@ -384,50 +384,50 @@
           ]
         ]
       },
-      "from": 1709,
-      "durationInFrames": 323,
+      "from": 1928,
+      "durationInFrames": 355,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_05.wav",
       "cues": [
-        67,
-        158,
-        229
+        80,
+        178,
+        254
       ],
       "captions": [
         {
           "text": "And this is already everywhere.",
           "from": 10,
-          "to": 65
+          "to": 78
         },
         {
           "text": "There are assistants that add",
-          "from": 67,
-          "to": 116
+          "from": 80,
+          "to": 134
         },
         {
           "text": "events to your calendar,",
-          "from": 116,
-          "to": 158
+          "from": 134,
+          "to": 178
         },
         {
           "text": "travel apps that check flight",
-          "from": 158,
-          "to": 208
+          "from": 178,
+          "to": 231
         },
         {
           "text": "prices live,",
-          "from": 208,
-          "to": 229
+          "from": 231,
+          "to": 254
         },
         {
           "text": "and support bots that look",
-          "from": 229,
-          "to": 274
+          "from": 254,
+          "to": 302
         },
         {
           "text": "up your order status.",
-          "from": 274,
-          "to": 310
+          "from": 302,
+          "to": 341
         }
       ],
       "image": null
@@ -439,64 +439,64 @@
         "fact": "It can only request tools a developer gave it. The app does the work, and should confirm big actions.",
         "tip": "Always confirm payments & deletes"
       },
-      "from": 2032,
-      "durationInFrames": 439,
+      "from": 2283,
+      "durationInFrames": 495,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_06.wav",
       "cues": [
-        51,
-        154
+        59,
+        176
       ],
       "captions": [
         {
           "text": "Here's a common myth.",
           "from": 10,
-          "to": 49
+          "to": 57
         },
         {
           "text": "People think the AI is",
-          "from": 51,
-          "to": 92
+          "from": 59,
+          "to": 104
         },
         {
           "text": "directly logged into their apps.",
-          "from": 93,
-          "to": 147
+          "from": 105,
+          "to": 173
         },
         {
           "text": "It's not.",
-          "from": 154,
-          "to": 176
+          "from": 176,
+          "to": 206
         },
         {
           "text": "It can only request the",
-          "from": 179,
-          "to": 215
+          "from": 208,
+          "to": 250
         },
         {
           "text": "tools that a developer has",
-          "from": 215,
-          "to": 256
+          "from": 250,
+          "to": 298
         },
         {
           "text": "given it.",
-          "from": 256,
-          "to": 271
+          "from": 298,
+          "to": 315
         },
         {
           "text": "Your app does the actual",
-          "from": 273,
-          "to": 309
+          "from": 318,
+          "to": 355
         },
         {
           "text": "work, and it should always",
-          "from": 310,
-          "to": 348
+          "from": 356,
+          "to": 399
         },
         {
           "text": "ask you before doing anything important.",
-          "from": 351,
-          "to": 426
+          "from": 401,
+          "to": 482
         }
       ],
       "image": null
@@ -512,49 +512,54 @@
         ],
         "answer": 1
       },
-      "from": 2471,
-      "durationInFrames": 397,
+      "from": 2778,
+      "durationInFrames": 438,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_07.wav",
       "cues": [
-        123,
-        254
+        139,
+        344
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 28
+          "to": 32
         },
         {
           "text": "In function calling,",
-          "from": 30,
-          "to": 64
+          "from": 44,
+          "to": 74
         },
         {
           "text": "who actually runs the function?",
-          "from": 65,
-          "to": 116
+          "from": 75,
+          "to": 137
         },
         {
-          "text": "Pause and think.",
-          "from": 123,
-          "to": 160
+          "text": "Pause and think,",
+          "from": 139,
+          "to": 174
+        },
+        {
+          "text": "and if you get it",
+          "from": 180,
+          "to": 197
+        },
+        {
+          "text": "right, comment below!",
+          "from": 198,
+          "to": 252
         },
         {
           "text": "It's your app!",
-          "from": 254,
-          "to": 271
+          "from": 344,
+          "to": 364
         },
         {
           "text": "The AI only asks.",
-          "from": 283,
-          "to": 328
-        },
-        {
-          "text": "Comment app if you got it!",
-          "from": 334,
-          "to": 385
+          "from": 371,
+          "to": 423
         }
       ],
       "image": null
@@ -582,92 +587,92 @@
         ],
         "next": "EP 10 · AI Agents"
       },
-      "from": 2868,
-      "durationInFrames": 592,
+      "from": 3216,
+      "durationInFrames": 684,
       "voiceFrom": 10,
       "audio": "lessons/ep09/voice_08.wav",
       "cues": [
-        40,
-        143,
-        191,
-        236,
-        316
+        45,
+        169,
+        227,
+        281,
+        377
       ],
       "captions": [
         {
           "text": "Let's recap.",
           "from": 10,
-          "to": 34
+          "to": 42
         },
         {
           "text": "Tools let AI use live",
-          "from": 40,
-          "to": 81
+          "from": 45,
+          "to": 91
         },
         {
           "text": "data, and take real actions.",
-          "from": 82,
-          "to": 142
+          "from": 92,
+          "to": 166
         },
         {
           "text": "The AI only asks for",
-          "from": 143,
-          "to": 178
+          "from": 169,
+          "to": 211
         },
         {
           "text": "a tool,",
-          "from": 178,
-          "to": 191
+          "from": 211,
+          "to": 227
         },
         {
           "text": "your app actually runs it,",
-          "from": 191,
-          "to": 236
+          "from": 227,
+          "to": 281
         },
         {
           "text": "and the result comes back",
-          "from": 236,
-          "to": 279
+          "from": 281,
+          "to": 333
         },
         {
           "text": "as a helpful answer.",
-          "from": 279,
-          "to": 313
+          "from": 333,
+          "to": 375
         },
         {
           "text": "In the next episode,",
-          "from": 316,
-          "to": 356
+          "from": 377,
+          "to": 424
         },
         {
           "text": "AI agents,",
-          "from": 356,
-          "to": 378
+          "from": 424,
+          "to": 449
         },
         {
           "text": "where AI plans and uses",
-          "from": 378,
-          "to": 425
+          "from": 449,
+          "to": 503
         },
         {
           "text": "tools on its own,",
-          "from": 425,
-          "to": 460
+          "from": 503,
+          "to": 544
         },
         {
           "text": "step by step.",
-          "from": 460,
-          "to": 487
+          "from": 544,
+          "to": 575
         },
         {
           "text": "Follow AI Maastaaru,",
-          "from": 489,
-          "to": 537
+          "from": 578,
+          "to": 632
         },
         {
           "text": "so you don't miss it!",
-          "from": 541,
-          "to": 578
+          "from": 633,
+          "to": 672
         }
       ],
       "image": null

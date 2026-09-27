@@ -29,9 +29,6 @@ LEAD_S, TAIL_S, GAP_S, LONG_GAP_S = 0.35, 0.55, 0.16, 0.32
 PRON = {
     "Maastaaru": "mˈɑːsʈɑːɾu",   # Telugu మాస్టారు: retroflex ʈ, tapped ɾ, short final u
     "Namaste": "nəmˈʌsteː",
-    # Hindi voices voice a sentence-initial k ("quick quiz" -> "guig guiz"); aspirate these.
-    "Quick": "kʰwˈɪk", "quick": "kʰwˈɪk", "quiz": "kʰwˈɪz",
-    "Cost": "kʰˈɔːst", "cost": "kʰˈɔːst",
     # Spelled-out plural acronym: "el-el-emz", not "el-el-em-es".
     "L L Ms": "ˈɛl ˈɛl ˈɛmz",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.
@@ -42,6 +39,23 @@ PRON = {
 def display(text: str) -> str:
     """Spoken spellings -> on-screen spellings."""
     return re.sub(r"\bA I\b", "AI", text)
+
+
+# American/British voices can't do the retroflex ʈ (it becomes a 'd'), so they get a
+# tapped-r version that still sounds like Maastaaru rather than 'Master-roo'.
+PRON_EN_VOICES = {"Maastaaru": "mɑːstˈɑːɾuː"}
+
+
+# Hindi voices voice a sentence-initial k ("quick quiz" -> "guig guiz"); aspirate these.
+PRON_HINDI_VOICES = {"Quick": "kʰwˈɪk", "quick": "kʰwˈɪk", "quiz": "kʰwˈɪz", "Cost": "kʰˈɔːst", "cost": "kʰˈɔːst"}
+
+
+def lexicon_for(voice: str, base: dict) -> dict:
+    if voice.startswith(("af_", "am_", "bf_", "bm_")):
+        return {**base, **PRON_EN_VOICES}
+    if voice.startswith(("hf_", "hm_")):
+        return {**PRON_HINDI_VOICES, **base}
+    return base
 
 
 def to_phonemes(kokoro, text: str, lang: str, lex: dict) -> str:
@@ -115,6 +129,7 @@ def synth_flow(kokoro, sents: list[str], voice: str, speed: float, lang: str, le
     Returns (audio, sr, per_sentence) where per_sentence[i] = (clean_text, word_spans, cue_map);
     word_spans are (start_s, end_s) per display word and cue_map maps cue id -> seconds."""
     cleans, phons = [], []
+    lex = lexicon_for(voice, lex)
     for sent in sents:
         clean = re.sub(r"\s+", " ", MARK.sub("", sent)).strip()
         ph = to_phonemes(kokoro, clean, lang, lex)

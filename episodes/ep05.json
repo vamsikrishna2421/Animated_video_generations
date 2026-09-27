@@ -5,8 +5,8 @@
   "handle": "@ai_maastaaru",
   "title": "Temperature and Hallucinations",
   "host": "female",
-  "voice": "hf_beta",
-  "speed": 1.0,
+  "voice": "af_heart",
+  "speed": 0.92,
   "lang": "en-us",
   "fps": 30,
   "music": {
@@ -191,7 +191,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! You're writing code for a banking app. Which temperature should you use? [1] Pause and think. <pause 3.2> [2] Low! For banking code, you want precise answers that repeat every time. Comment low if you got it!",
+      "text": "Quick quiz! You're writing code for a banking app. Which temperature should you use? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Low! For banking code, you want precise answers that repeat every time.",
       "data": {
         "question": "Code for a banking app needs…",
         "options": [

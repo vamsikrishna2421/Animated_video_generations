@@ -54,7 +54,7 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
         );
       })}
       {counting && (
-        <div style={{ position: "absolute", top: 1100, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+        <div style={{ position: "absolute", top: 1080, right: 90, display: "flex", justifyContent: "center" }}>
           <svg width="130" height="130">
             <circle cx="65" cy="65" r="55" stroke="rgba(255,255,255,0.15)" strokeWidth="10" fill="none" />
             <circle cx="65" cy="65" r="55" stroke={L.amber} strokeWidth="10" fill="none" strokeDasharray={2 * Math.PI * 55} strokeDashoffset={2 * Math.PI * 55 * (1 - ring)} transform="rotate(-90 65 65)" strokeLinecap="round" />
@@ -62,9 +62,9 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
           </svg>
         </div>
       )}
-      {shown && (
-        <div style={{ position: "absolute", top: 1115, left: 0, right: 0, textAlign: "center", fontFamily: L.font, fontWeight: 800, fontSize: 40, color: L.green, opacity: interpolate(f, [reveal, reveal + 10], [0, 1], clamp) }}>
-          Comment your score below!
+      {counting && (
+        <div style={{ position: "absolute", top: 1110, left: 90, right: 260, textAlign: "center", fontFamily: L.font, fontWeight: 800, fontSize: 36, color: L.amber, lineHeight: 1.2, opacity: interpolate(f, [countFrom, countFrom + 10], [0, 1], clamp) }}>
+          {data.commentPrompt ?? "Got it right? Comment below!"}
         </div>
       )}
       {ticks.map((t) => (

@@ -5,8 +5,8 @@
   "handle": "@ai_maastaaru",
   "title": "Tool Use and Function Calling",
   "host": "female",
-  "voice": "hf_beta",
-  "speed": 1.0,
+  "voice": "af_heart",
+  "speed": 0.92,
   "lang": "en-us",
   "fps": 30,
   "music": {
@@ -133,7 +133,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! In function calling, who actually runs the function? [1] Pause and think. <pause 3.2> [2] It's your app! The AI only asks. Comment app if you got it!",
+      "text": "Quick quiz! In function calling, who actually runs the function? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It's your app! The AI only asks.",
       "data": {
         "question": "Who actually runs the function?",
         "options": [
