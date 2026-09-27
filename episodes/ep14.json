@@ -1,0 +1,233 @@
+{
+  "id": "ep14",
+  "episode": 14,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Image Generation Part 1 Diffusion",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Type a sentence, like a tiger riding a scooter in Hyderabad, and seconds later, you have a picture. [1] Nobody drew it, and it never existed before. [2] So let's understand how AI creates images, with diffusion.",
+      "data": {
+        "kicker": "EPISODE 14",
+        "title": [
+          "Image",
+          "Generation"
+        ],
+        "subtitle": "Part 1: how diffusion works",
+        "buzzwords": [
+          "Diffusion",
+          "Noise",
+          "Prompt",
+          "Seed",
+          "Steps",
+          "Midjourney",
+          "Qwen-Image",
+          "Stable Diffusion"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Most image generators use something called diffusion. [1] And the idea is surprisingly simple. The AI learns to turn random noise into a clear picture, step by step. [2] It starts with pure static, [3] removes a little noise at each step, [4] until a picture appears.",
+      "data": {
+        "term": "Diffusion model",
+        "short": "Diffusion",
+        "definition": "An AI that learns to turn random noise into a clear image, one small step at a time.",
+        "chips": [
+          [
+            "Tv",
+            "Start with static"
+          ],
+          [
+            "Eraser",
+            "Remove noise, step by step"
+          ],
+          [
+            "Image",
+            "A picture appears"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "So how does it learn this? [1] During training, it takes millions of real images, and adds noise to them, bit by bit, until they're pure static. [2] Then it practises the reverse, predicting and removing that noise at every step. [3] And after enough practice, it can start from fresh static, and create a brand new image.",
+      "data": {
+        "heading": "How it learns",
+        "kicker": "TRAINING",
+        "steps": [
+          [
+            "Image",
+            "Add noise",
+            "Real photos slowly turned to static"
+          ],
+          [
+            "Undo2",
+            "Learn to remove it",
+            "Predict the noise at each step"
+          ],
+          [
+            "Sparkles",
+            "Create new images",
+            "Start from fresh static"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "So where does your sentence come in? [1] You type your prompt. [2] A text model turns it into numbers that capture its meaning, just like embeddings. [3] The image model starts from random static, [4] and at every step, it removes noise in the direction of your description, [5] until your tiger on a scooter appears.",
+      "data": {
+        "heading": "From words to picture",
+        "kicker": "HOW YOUR PROMPT GUIDES IT",
+        "nodes": [
+          [
+            "Type",
+            "Your prompt",
+            "“A tiger riding a scooter”"
+          ],
+          [
+            "Hash",
+            "Meaning as numbers",
+            "Like embeddings (EP 06)"
+          ],
+          [
+            "Tv",
+            "Random static",
+            "The starting point"
+          ],
+          [
+            "Eraser",
+            "Guided clean-up",
+            "Each step moves toward your words"
+          ],
+          [
+            "Image",
+            "Your image",
+            "A brand new picture"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four words you'll see in image tools. [1] The prompt, which is your description. [2] The seed, the starting static, so the same seed gives a similar image. [3] Steps, how many rounds of clean-up, where more steps usually means more detail. [4] And the negative prompt, which says what you don't want, like blurry, or extra fingers.",
+      "data": {
+        "heading": "Image tool words",
+        "kicker": "KNOBS YOU CAN TURN",
+        "terms": [
+          [
+            "Type",
+            "Prompt",
+            "Describe what you want"
+          ],
+          [
+            "Dice5",
+            "Seed",
+            "The starting static"
+          ],
+          [
+            "Layers",
+            "Steps",
+            "Rounds of clean-up"
+          ],
+          [
+            "Ban",
+            "Negative prompt",
+            "What you don't want"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where is it used? [1] Designers create posters, ads and social media visuals in minutes. [2] Game and film teams sketch concept art and storyboards. [3] And online shops create product photos, without a photo shoot.",
+      "data": {
+        "heading": "Where it's used",
+        "items": [
+          [
+            "Palette",
+            "Design",
+            "Posters, ads, social posts"
+          ],
+          [
+            "Clapperboard",
+            "Concept art",
+            "Games, films, storyboards"
+          ],
+          [
+            "ShoppingBag",
+            "Product photos",
+            "No photo shoot needed"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think AI image generators just copy and paste bits of existing pictures. [2] That's not how diffusion works. It learns patterns, like what a tiger or a scooter looks like, and builds a new image from noise. But questions about training data and copyright are real, and we'll cover them in a later episode.",
+      "data": {
+        "myth": "AI image generators copy and paste bits of existing pictures.",
+        "fact": "Diffusion learns patterns and builds a new image from noise. Training-data questions are still real.",
+        "tip": "Copyright episode coming"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Where does a diffusion model start, when it creates a new image? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] From random noise, and then it removes it, step by step!",
+      "data": {
+        "question": "A diffusion model starts from…",
+        "options": [
+          "A blank white canvas",
+          "Random noise",
+          "A copy of a real photo"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Diffusion turns noise into a picture, step by step. [2] It learns by practising how to remove noise. [3] Your prompt guides every step. [4] And the same seed gives a similar image. [5] Next, a real world breakdown, how Netflix and YouTube decide what you should watch. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Diffusion",
+            "noise → picture, step by step"
+          ],
+          [
+            "Training",
+            "learn to remove noise"
+          ],
+          [
+            "Prompt",
+            "guides every step"
+          ],
+          [
+            "Seed",
+            "same seed, similar image"
+          ]
+        ],
+        "next": "Use Case · Netflix & YouTube picks"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Type \"a tiger riding a scooter\" and seconds later you have a picture nobody drew. How?\n\nEpisode 14 of AI From Scratch: Image Generation, Part 1\n- Diffusion: turning random noise into a picture, step by step\n- How it learns: add noise, then practise removing it\n- How your prompt guides every step\n- Image tool words: prompt, seed, steps, negative prompt\n- The myth: \"AI just copies and pastes images\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How Netflix and YouTube decide what you watch.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #AIArt #LearnAI #GenerativeAI #AIForBeginners",
+    "pinned": "Quiz answer: From random noise, which it removes step by step. What's the wildest image you've made with AI?",
+    "cover": "'Image Generation' title card",
+    "alt": "Animated lesson explaining how diffusion models turn random noise into images guided by a text prompt."
+  }
+}
