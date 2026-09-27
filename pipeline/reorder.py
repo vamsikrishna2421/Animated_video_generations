@@ -52,6 +52,22 @@ HOOKS = {
     "uc23": "AI reading *X-rays*", "uc24": "Can AI catch *AI fakes*?",
 }
 
+# Spoken form of the hook (first words of the voice-over), where the on-screen text doesn't read aloud well.
+SPOKEN = {
+    "ep32": "How does AI find one line, in a thousand pages?", "ep34": "Free AI, versus paid AI.",
+    "ep37": "How do you shrink a 140 gigabyte AI, down to 35?", "uc03": "One hour meeting. Notes in seconds.",
+    "uc15": "How do apps know, 32 minutes?", "uc06": "Your bank's 2 AM support agent.",
+    "q03": "Can you get six out of six?", "q04": "Can you get six out of six?", "q05": "Can you get six out of six?", "q06": "Can you get six out of six?",
+}
+
+
+def spoken_hook(i: str) -> str:
+    if i in SPOKEN:
+        return SPOKEN[i]
+    h = HOOKS[i].replace("*", "")
+    return h if h[-1] in ".?!" else h + "."
+
+
 # Spoken 'Next' line and end-card label for each item, by what follows it.
 EP_NEXT = {
     "ep24": ("Next, we'll learn the three ways machines learn, supervised, unsupervised and reinforcement.", "EP 24 · Types of learning"),
@@ -104,7 +120,11 @@ def main() -> None:
     for i in ORDER[posted_through:]:
         p = ROOT / "episodes" / f"{i}.json"
         d = json.loads(p.read_text())
-        d["scenes"][0]["data"]["hook"] = HOOKS[i]
+        b = d["scenes"][0]
+        b["data"]["hook"] = HOOKS[i]
+        sh = spoken_hook(i)
+        if not b["text"].startswith(sh):
+            b["text"] = sh + " " + b["text"]
         nx = next_for(i) if not i.startswith("q") else None
         if nx:
             spoken, label, cap = nx

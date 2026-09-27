@@ -120,7 +120,8 @@ const SceneWrap: React.FC<{ s: SceneData; handle: string; host?: "male" | "femal
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const Comp = SCENES[s.type];
-  const inS = spring({ frame: f, fps, config: { damping: 18 } });
+  // The opening scene is fully visible on frame 0: Instagram shows that frame, and blank starts get skipped.
+  const inS = s.from === 0 ? 1 : spring({ frame: f, fps, config: { damping: 18 } });
   const out = interpolate(f, [s.durationInFrames - 8, s.durationInFrames], [1, 0], clamp);
   const n = Math.max(s.cues.length, 1);
   const cue = (i: number) => s.cues[i] ?? Math.round(s.voiceFrom + ((i + 1) * (s.durationInFrames - s.voiceFrom)) / (n + 2));

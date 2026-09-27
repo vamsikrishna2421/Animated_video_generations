@@ -39,13 +39,13 @@ export const Banner: React.FC<SceneProps> = ({ data, cue, image }) => {
       })}
       {image && <SceneImage src={image} style={{ position: "absolute", left: 90, right: 90, top: 300, height: 380, opacity: kick }} />}
       {hook && (
-        <div style={{ position: "absolute", left: 60, right: 60, top: 290, fontFamily: L.font, fontWeight: 800, fontSize: hook.length > 30 ? 74 : 88, lineHeight: 1.08, color: L.text, letterSpacing: -1, transform: `scale(${punch})`, transformOrigin: "left top", textShadow: "0 6px 30px rgba(0,0,0,0.6)" }}>
+        <div style={{ position: "absolute", left: 60, right: 60, top: 290, fontFamily: L.font, fontWeight: 800, fontSize: hook.length > 30 ? 84 : 100, lineHeight: 1.1, color: L.text, letterSpacing: -1, transform: `scale(${punch})`, transformOrigin: "left top", textShadow: "0 6px 30px rgba(0,0,0,0.6)" }}>
           {hook.split(/(\*[^*]+\*)/).map((part, i) =>
             part.startsWith("*") ? <span key={i} style={{ color: "#0A0F24", background: L.amber, padding: "0 14px", borderRadius: 12, boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" }}>{part.slice(1, -1)}</span> : <span key={i}>{part}</span>
           )}
         </div>
       )}
-      <div style={{ position: "absolute", left: 80, right: 80, top: hook ? 610 : image ? 720 : 420 }}>
+      <div style={{ position: "absolute", left: 80, right: 80, top: hook ? 640 : image ? 720 : 420 }}>
         <div
           style={{
             display: "inline-block",
