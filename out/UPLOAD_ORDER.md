@@ -58,7 +58,7 @@ Already posted: `out/posted/`.
 | 051 | ep48 | AI Laws Around the World | ready |
 | 052 | ep49 | AI and Jobs | ready |
 | 053 | q05 | Quiz #5: Episodes 41–49 | ready |
-| 054 | ep50 | Your First AI API Call | rendering soon |
+| 054 | ep50 | Your First AI API Call | ready |
 | 055 | ep51 | Build a Chatbot with a System Prompt | rendering soon |
 | 056 | ep52 | Build RAG Over Your PDFs, Part 1 | rendering soon |
 | 057 | ep53 | Build RAG Over Your PDFs, Part 2 | rendering soon |
