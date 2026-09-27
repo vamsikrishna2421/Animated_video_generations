@@ -1,201 +1,201 @@
 {
-  "id": "ep51",
-  "episode": 51,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Build a Chatbot with a System Prompt",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep51",
+ "episode": 51,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Build a Chatbot with a System Prompt",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Last time, we asked the AI one question. [1] Today, we build a real chatbot, that remembers the conversation, and has its own personality. [2] All in about a dozen lines of Python.",
+   "data": {
+    "kicker": "EPISODE 51",
+    "title": [
+     "Build a",
+     "Chatbot"
+    ],
+    "subtitle": "Memory and personality",
+    "buzzwords": [
+     "System prompt",
+     "Chat history",
+     "Loop",
+     "Roles",
+     "Personality",
+     "Memory",
+     "Python",
+     "Hands-on"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Last time, we asked the AI one question. [1] Today, we build a real chatbot, that remembers the conversation, and has its own personality. [2] All in about a dozen lines of Python.",
-      "data": {
-        "kicker": "EPISODE 51",
-        "title": [
-          "Build a",
-          "Chatbot"
-        ],
-        "subtitle": "Memory and personality",
-        "buzzwords": [
-          "System prompt",
-          "Chat history",
-          "Loop",
-          "Roles",
-          "Personality",
-          "Memory",
-          "Python",
-          "Hands-on"
-        ]
-      }
+  {
+   "type": "versus",
+   "text": "A chatbot uses two kinds of instructions. [1] The system prompt, set by you, the builder. It defines the bot's personality, and rules, for the whole chat. [2] User messages, typed by the person, one at a time.",
+   "data": {
+    "heading": "Two kinds of instructions",
+    "kicker": "WHO SAYS WHAT",
+    "left": {
+     "icon": "Settings",
+     "title": "System prompt",
+     "stat": "Builder",
+     "label": "personality and rules"
     },
-    {
-      "type": "versus",
-      "text": "A chatbot uses two kinds of instructions. [1] The system prompt, set by you, the builder. It defines the bot's personality, and rules, for the whole chat. [2] User messages, typed by the person, one at a time.",
-      "data": {
-        "heading": "Two kinds of instructions",
-        "kicker": "WHO SAYS WHAT",
-        "left": {
-          "icon": "Settings",
-          "title": "System prompt",
-          "stat": "Builder",
-          "label": "personality and rules"
-        },
-        "right": {
-          "icon": "MessageSquare",
-          "title": "User messages",
-          "stat": "Person",
-          "label": "questions, one by one"
-        }
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Here's a surprise. [1] The model has no memory between calls. Each call starts fresh. [2] So we keep a list of every message, the chat history. [3] And we send the whole history, every time, so the model sees the full conversation.",
-      "data": {
-        "heading": "How chatbots 'remember'",
-        "kicker": "THE TRICK",
-        "steps": [
-          [
-            "Brain",
-            "No memory",
-            "Every call starts fresh"
-          ],
-          [
-            "ListOrdered",
-            "Keep a list",
-            "The chat history"
-          ],
-          [
-            "Send",
-            "Resend it",
-            "Every single turn"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "code",
-      "text": "Here's the code. [1] Set up the client, and an empty history list. [2] Loop forever. Read what the user types, and add it to the history, with the role user. [3] Call the model, with a system prompt that gives it a personality, and the full history. [4] Take the reply's text. [5] Add it to the history, as the assistant, and print it. [6] Now it remembers your name!",
-      "data": {
-        "heading": "A chatbot in 13 lines",
-        "file": "chatbot.py",
-        "lines": [
-          "import anthropic",
-          "client = anthropic.Anthropic()",
-          "hist = []",
-          "while True:",
-          "    msg = input(\"You: \")",
-          "    hist.append({\"role\": \"user\", \"content\": msg})",
-          "    reply = client.messages.create(",
-          "        model=\"claude-sonnet-5\", max_tokens=500,",
-          "        system=\"You are a friendly AI tutor.\",",
-          "        messages=hist)",
-          "    text = reply.content[0].text",
-          "    hist.append({\"role\": \"assistant\", \"content\": text})",
-          "    print(\"AI:\", text)"
-        ],
-        "groups": [
-          3,
-          3,
-          4,
-          1,
-          2
-        ],
-        "output": [
-          "You: hi, I'm Ravi",
-          "AI: Namaste Ravi! What shall we learn?",
-          "You: what's my name?",
-          "AI: Your name is Ravi!"
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "Change one line, the system prompt, and you get a totally different bot. [1] A patient maths tutor, that never gives away the answer directly. [2] A support bot for your shop, that only talks about orders. [3] Or a Telugu speaking travel guide for Hyderabad.",
-      "data": {
-        "heading": "One line, new bot",
-        "items": [
-          [
-            "GraduationCap",
-            "Maths tutor",
-            "Hints, not answers"
-          ],
-          [
-            "ShoppingBag",
-            "Shop support",
-            "Only order questions"
-          ],
-          [
-            "Map",
-            "Travel guide",
-            "Hyderabad, in Telugu"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common mistake. [1] Beginners let the history grow forever. [2] Every turn resends everything, so long chats get slower, cost more, and eventually overflow the context window. Real apps trim, or summarise, old messages.",
-      "data": {
-        "myth": "Just let the chat history grow forever.",
-        "fact": "Long history costs more, runs slower, and can overflow the context window. Trim or summarise it.",
-        "tip": "Keep history in check"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! How does a chatbot remember earlier messages? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] We resend the whole chat history, every single turn!",
-      "data": {
-        "question": "A chatbot remembers because…",
-        "options": [
-          "We resend the chat history every turn",
-          "The model saves memories itself",
-          "It reads your mind"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] The system prompt sets personality and rules. [2] The model has no memory, so we keep a history list. [3] Every turn, we resend the full history. [4] And we trim long histories, to control cost. [5] Next, build RAG over your own PDFs. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "System prompt",
-            "personality and rules"
-          ],
-          [
-            "History",
-            "a list of messages"
-          ],
-          [
-            "Resend",
-            "every turn"
-          ],
-          [
-            "Trim",
-            "long chats"
-          ]
-        ],
-        "next": "EP 52 · RAG over PDFs"
-      }
+    "right": {
+     "icon": "MessageSquare",
+     "title": "User messages",
+     "stat": "Person",
+     "label": "questions, one by one"
     }
-  ],
-  "post": {
-    "caption": "Build a chatbot that remembers you and has its own personality, in 13 lines of Python.\n\nAI From Scratch, Episode 51: build a chatbot\n- System prompt vs user messages\n- How chatbots 'remember': resending chat history\n- The code, line by line\n- Change the system prompt, get a new bot\n- Mistake: letting history grow forever\n\nQuiz at the end. Got it right? Comment below.\n\nModel names change often, so check your provider's docs for the latest.\nNext: build RAG over your own PDFs.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #Python #Chatbot #LearnAI #CodingForBeginners",
-    "pinned": "Quiz answer: We resend the whole chat history every turn. What personality would you give your chatbot? Comment below!",
-    "cover": "'Build a Chatbot' title card",
-    "alt": "Animated coding tutorial: building a Python chatbot with a system prompt and chat history."
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Here's a surprise. [1] The model has no memory between calls. Each call starts fresh. [2] So we keep a list of every message, the chat history. [3] And we send the whole history, every time, so the model sees the full conversation.",
+   "data": {
+    "heading": "How chatbots 'remember'",
+    "kicker": "THE TRICK",
+    "steps": [
+     [
+      "Brain",
+      "No memory",
+      "Every call starts fresh"
+     ],
+     [
+      "ListOrdered",
+      "Keep a list",
+      "The chat history"
+     ],
+     [
+      "Send",
+      "Resend it",
+      "Every single turn"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "code",
+   "text": "[1] Here's the code. [2] Set up the client, and an empty history list. [3] Loop forever. Read what the user types, and add it to the history, with the role user. [4] Call the model, with a system prompt that gives it a personality, and the full history. [5] Take the reply's text. [6] Add it to the history, as the assistant, and print it. [7] Now it remembers your name!",
+   "data": {
+    "heading": "A chatbot in 13 lines",
+    "file": "chatbot.py",
+    "lines": [
+     "import anthropic",
+     "client = anthropic.Anthropic()",
+     "hist = []",
+     "while True:",
+     "    msg = input(\"You: \")",
+     "    hist.append({\"role\": \"user\", \"content\": msg})",
+     "    reply = client.messages.create(",
+     "        model=\"claude-sonnet-5\", max_tokens=500,",
+     "        system=\"You are a friendly AI tutor.\",",
+     "        messages=hist)",
+     "    text = reply.content[0].text",
+     "    hist.append({\"role\": \"assistant\", \"content\": text})",
+     "    print(\"AI:\", text)"
+    ],
+    "groups": [
+     3,
+     3,
+     4,
+     1,
+     2
+    ],
+    "output": [
+     "You: hi, I'm Ravi",
+     "AI: Namaste Ravi! What shall we learn?",
+     "You: what's my name?",
+     "AI: Your name is Ravi!"
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "Change one line, the system prompt, and you get a totally different bot. [1] A patient maths tutor, that never gives away the answer directly. [2] A support bot for your shop, that only talks about orders. [3] Or a Telugu speaking travel guide for Hyderabad.",
+   "data": {
+    "heading": "One line, new bot",
+    "items": [
+     [
+      "GraduationCap",
+      "Maths tutor",
+      "Hints, not answers"
+     ],
+     [
+      "ShoppingBag",
+      "Shop support",
+      "Only order questions"
+     ],
+     [
+      "Map",
+      "Travel guide",
+      "Hyderabad, in Telugu"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common mistake. [1] Beginners let the history grow forever. [2] Every turn resends everything, so long chats get slower, cost more, and eventually overflow the context window. Real apps trim, or summarise, old messages.",
+   "data": {
+    "myth": "Just let the chat history grow forever.",
+    "fact": "Long history costs more, runs slower, and can overflow the context window. Trim or summarise it.",
+    "tip": "Keep history in check"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! How does a chatbot remember earlier messages? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] We resend the whole chat history, every single turn!",
+   "data": {
+    "question": "A chatbot remembers because…",
+    "options": [
+     "We resend the chat history every turn",
+     "The model saves memories itself",
+     "It reads your mind"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] The system prompt sets personality and rules. [2] The model has no memory, so we keep a history list. [3] Every turn, we resend the full history. [4] And we trim long histories, to control cost. [5] Next, build RAG over your own PDFs. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "System prompt",
+      "personality and rules"
+     ],
+     [
+      "History",
+      "a list of messages"
+     ],
+     [
+      "Resend",
+      "every turn"
+     ],
+     [
+      "Trim",
+      "long chats"
+     ]
+    ],
+    "next": "EP 52 · RAG over PDFs"
+   }
   }
+ ],
+ "post": {
+  "caption": "Build a chatbot that remembers you and has its own personality, in 13 lines of Python.\n\nAI From Scratch, Episode 51: build a chatbot\n- System prompt vs user messages\n- How chatbots 'remember': resending chat history\n- The code, line by line\n- Change the system prompt, get a new bot\n- Mistake: letting history grow forever\n\nQuiz at the end. Got it right? Comment below.\n\nModel names change often, so check your provider's docs for the latest.\nNext: build RAG over your own PDFs.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #Python #Chatbot #LearnAI #CodingForBeginners",
+  "pinned": "Quiz answer: We resend the whole chat history every turn. What personality would you give your chatbot? Comment below!",
+  "cover": "'Build a Chatbot' title card",
+  "alt": "Animated coding tutorial: building a Python chatbot with a system prompt and chat history."
+ }
 }

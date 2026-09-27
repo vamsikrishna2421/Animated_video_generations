@@ -1,231 +1,231 @@
 {
-  "id": "ep30",
-  "episode": 30,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "RLHF: How AI Learns Good Manners",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep30",
+ "episode": 30,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "RLHF: How AI Learns Good Manners",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Ask a raw language model a question, and it might ramble, or say something rude. [1] So how did chatbots become so helpful and polite? [2] The answer is RLHF, reinforcement learning from human feedback.",
+   "data": {
+    "kicker": "EPISODE 30",
+    "title": [
+     "RLHF",
+     "Explained"
+    ],
+    "subtitle": "How AI learns good manners",
+    "buzzwords": [
+     "Human feedback",
+     "Reward model",
+     "Preferences",
+     "Alignment",
+     "Fine-tuning",
+     "Helpful",
+     "Harmless",
+     "Honest"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Ask a raw language model a question, and it might ramble, or say something rude. [1] So how did chatbots become so helpful and polite? [2] The answer is RLHF, reinforcement learning from human feedback.",
-      "data": {
-        "kicker": "EPISODE 30",
-        "title": [
-          "RLHF",
-          "Explained"
-        ],
-        "subtitle": "How AI learns good manners",
-        "buzzwords": [
-          "Human feedback",
-          "Reward model",
-          "Preferences",
-          "Alignment",
-          "Fine-tuning",
-          "Helpful",
-          "Harmless",
-          "Honest"
-        ]
-      }
+  {
+   "type": "definition",
+   "text": "[1] RLHF means training an AI using human preferences. [2] Humans compare the AI's answers, [3] a reward model learns what humans like, [4] and the AI practises until it earns high rewards.",
+   "data": {
+    "term": "RLHF",
+    "short": "RLHF",
+    "definition": "Reinforcement Learning from Human Feedback: training an AI to give the kinds of answers people prefer.",
+    "chips": [
+     [
+      "Users",
+      "Humans compare answers"
+     ],
+     [
+      "Scale",
+      "A reward model learns"
+     ],
+     [
+      "TrendingUp",
+      "The AI practises"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Here are the steps. [1] Start with a pretrained model, from episode 7. [2] Fine-tune it on good example answers, written by people. [3] Then the model writes two answers to the same question, and a person picks the better one. [4] Thousands of these choices train a reward model. [5] Finally, reinforcement learning makes the AI chase high reward scores.",
+   "data": {
+    "heading": "The RLHF recipe",
+    "nodes": [
+     [
+      "Brain",
+      "Pretrained",
+      "Knows language"
+     ],
+     [
+      "PenLine",
+      "Examples",
+      "Learn from good answers"
+     ],
+     [
+      "ThumbsUp",
+      "Compare",
+      "Humans pick A or B"
+     ],
+     [
+      "Scale",
+      "Reward model",
+      "Learns what people like"
+     ],
+     [
+      "TrendingUp",
+      "Practise",
+      "Chase high rewards"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "The key moment is the comparison. [1] Answer A is short, clear, and polite. [2] Answer B is long, confusing, and a little rude. [3] The person picks A. It's much easier to choose the better answer than to write a perfect one.",
+   "data": {
+    "heading": "Which is better?",
+    "kicker": "HUMAN FEEDBACK",
+    "left": {
+     "icon": "ThumbsUp",
+     "title": "Answer A",
+     "stat": "Chosen",
+     "label": "clear, polite, helpful"
     },
-    {
-      "type": "definition",
-      "text": "RLHF means training an AI using human preferences. [1] Humans compare the AI's answers, [2] a reward model learns what humans like, [3] and the AI practises until it earns high rewards.",
-      "data": {
-        "term": "RLHF",
-        "short": "RLHF",
-        "definition": "Reinforcement Learning from Human Feedback: training an AI to give the kinds of answers people prefer.",
-        "chips": [
-          [
-            "Users",
-            "Humans compare answers"
-          ],
-          [
-            "Scale",
-            "A reward model learns"
-          ],
-          [
-            "TrendingUp",
-            "The AI practises"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here are the steps. [1] Start with a pretrained model, from episode 7. [2] Fine-tune it on good example answers, written by people. [3] Then the model writes two answers to the same question, and a person picks the better one. [4] Thousands of these choices train a reward model. [5] Finally, reinforcement learning makes the AI chase high reward scores.",
-      "data": {
-        "heading": "The RLHF recipe",
-        "nodes": [
-          [
-            "Brain",
-            "Pretrained",
-            "Knows language"
-          ],
-          [
-            "PenLine",
-            "Examples",
-            "Learn from good answers"
-          ],
-          [
-            "ThumbsUp",
-            "Compare",
-            "Humans pick A or B"
-          ],
-          [
-            "Scale",
-            "Reward model",
-            "Learns what people like"
-          ],
-          [
-            "TrendingUp",
-            "Practise",
-            "Chase high rewards"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "The key moment is the comparison. [1] Answer A is short, clear, and polite. [2] Answer B is long, confusing, and a little rude. [3] The person picks A. It's much easier to choose the better answer than to write a perfect one.",
-      "data": {
-        "heading": "Which is better?",
-        "kicker": "HUMAN FEEDBACK",
-        "left": {
-          "icon": "ThumbsUp",
-          "title": "Answer A",
-          "stat": "Chosen",
-          "label": "clear, polite, helpful"
-        },
-        "right": {
-          "icon": "ThumbsDown",
-          "title": "Answer B",
-          "stat": "Rejected",
-          "label": "long, confusing, rude"
-        }
-      }
-    },
-    {
-      "type": "agentloop",
-      "text": "Remember reinforcement learning from episode 24? [1] Here, the AI writes an answer, [2] the reward model scores it, [3] and the AI adjusts itself. [4] Over many rounds, it learns to be helpful, honest, and harmless.",
-      "data": {
-        "goalLabel": "GOAL",
-        "goal": "Answers people prefer",
-        "stages": [
-          [
-            "PenLine",
-            "Answer"
-          ],
-          [
-            "Scale",
-            "Score"
-          ],
-          [
-            "RefreshCw",
-            "Adjust"
-          ]
-        ],
-        "log": [
-          "rambling answer → score 2",
-          "clear answer → score 7",
-          "clear and kind answer → score 9",
-          "✓ helpful, honest, harmless"
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Preference data, the A or B choices people made. [2] The reward model, a model that scores answers the way people would. [3] Alignment, making AI behave the way we intend. [4] And DPO, a newer, simpler method that learns straight from preferences, without a separate reward model.",
-      "data": {
-        "heading": "RLHF words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "ListChecks",
-            "Preference data",
-            "A-or-B choices"
-          ],
-          [
-            "Scale",
-            "Reward model",
-            "Predicts what people like"
-          ],
-          [
-            "Target",
-            "Alignment",
-            "Behaves as intended"
-          ],
-          [
-            "Zap",
-            "DPO",
-            "Skips the reward model"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think RLHF teaches the AI new facts. [2] Mostly, it doesn't. The knowledge comes from pretraining. RLHF shapes behaviour, like tone, helpfulness, and saying no to harmful requests.",
-      "data": {
-        "myth": "RLHF teaches the AI new facts.",
-        "fact": "Knowledge mostly comes from pretraining. RLHF shapes behaviour: tone, helpfulness and refusing harm.",
-        "tip": "Pretraining = knowledge, RLHF = manners"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! In RLHF, what do humans mainly do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] They pick the better of two answers, and those choices train the reward model!",
-      "data": {
-        "question": "In RLHF, humans mainly…",
-        "options": [
-          "Pick the better of two answers",
-          "Write all the training data",
-          "Build the GPU chips"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] RLHF trains AI with human preferences. [2] People pick the better of two answers. [3] A reward model learns what people like. [4] And the AI practises to earn high rewards. [5] Next, how to fine-tune a model cheaply, with LoRA. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Preferences",
-            "train the AI"
-          ],
-          [
-            "Humans pick",
-            "the better answer"
-          ],
-          [
-            "Reward model",
-            "scores answers"
-          ],
-          [
-            "Practise",
-            "to earn high rewards"
-          ]
-        ],
-        "next": "EP 31 · LoRA"
-      }
+    "right": {
+     "icon": "ThumbsDown",
+     "title": "Answer B",
+     "stat": "Rejected",
+     "label": "long, confusing, rude"
     }
-  ],
-  "post": {
-    "caption": "Why is ChatGPT polite instead of rambling? Thank RLHF.\n\nAI From Scratch, Episode 30: RLHF, reinforcement learning from human feedback\n- The recipe: pretrain, examples, compare, reward model, practise\n- Why picking A or B is easier than writing perfect answers\n- The reward loop that builds helpful, honest, harmless AI\n- Jargon: preference data, reward model, alignment, DPO\n- Myth: RLHF shapes manners, not knowledge\n\nQuiz at the end. Got it right? Comment below.\n\nNext: fine-tuning cheaply with LoRA.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #RLHF #LearnAI #ChatGPT #AIForBeginners",
-    "pinned": "Quiz answer: Humans pick the better of two answers, and those choices train the reward model. Ever clicked thumbs up or down on ChatGPT? That's feedback too!",
-    "cover": "'RLHF Explained' title card",
-    "alt": "Animated explainer of RLHF: humans compare answers, a reward model learns preferences, and the AI practises."
+   }
+  },
+  {
+   "type": "agentloop",
+   "text": "[1] Remember reinforcement learning from episode 24? [2] Here, the AI writes an answer, [3] the reward model scores it, [4] and the AI adjusts itself. [5] Over many rounds, it learns to be helpful, honest, and harmless.",
+   "data": {
+    "goalLabel": "GOAL",
+    "goal": "Answers people prefer",
+    "stages": [
+     [
+      "PenLine",
+      "Answer"
+     ],
+     [
+      "Scale",
+      "Score"
+     ],
+     [
+      "RefreshCw",
+      "Adjust"
+     ]
+    ],
+    "log": [
+     "rambling answer → score 2",
+     "clear answer → score 7",
+     "clear and kind answer → score 9",
+     "✓ helpful, honest, harmless"
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Preference data, the A or B choices people made. [2] The reward model, a model that scores answers the way people would. [3] Alignment, making AI behave the way we intend. [4] And DPO, a newer, simpler method that learns straight from preferences, without a separate reward model.",
+   "data": {
+    "heading": "RLHF words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "ListChecks",
+      "Preference data",
+      "A-or-B choices"
+     ],
+     [
+      "Scale",
+      "Reward model",
+      "Predicts what people like"
+     ],
+     [
+      "Target",
+      "Alignment",
+      "Behaves as intended"
+     ],
+     [
+      "Zap",
+      "DPO",
+      "Skips the reward model"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think RLHF teaches the AI new facts. [2] Mostly, it doesn't. The knowledge comes from pretraining. RLHF shapes behaviour, like tone, helpfulness, and saying no to harmful requests.",
+   "data": {
+    "myth": "RLHF teaches the AI new facts.",
+    "fact": "Knowledge mostly comes from pretraining. RLHF shapes behaviour: tone, helpfulness and refusing harm.",
+    "tip": "Pretraining = knowledge, RLHF = manners"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! In RLHF, what do humans mainly do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] They pick the better of two answers, and those choices train the reward model!",
+   "data": {
+    "question": "In RLHF, humans mainly…",
+    "options": [
+     "Pick the better of two answers",
+     "Write all the training data",
+     "Build the GPU chips"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] RLHF trains AI with human preferences. [2] People pick the better of two answers. [3] A reward model learns what people like. [4] And the AI practises to earn high rewards. [5] Next, how to fine-tune a model cheaply, with LoRA. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Preferences",
+      "train the AI"
+     ],
+     [
+      "Humans pick",
+      "the better answer"
+     ],
+     [
+      "Reward model",
+      "scores answers"
+     ],
+     [
+      "Practise",
+      "to earn high rewards"
+     ]
+    ],
+    "next": "EP 31 · LoRA"
+   }
   }
+ ],
+ "post": {
+  "caption": "Why is ChatGPT polite instead of rambling? Thank RLHF.\n\nAI From Scratch, Episode 30: RLHF, reinforcement learning from human feedback\n- The recipe: pretrain, examples, compare, reward model, practise\n- Why picking A or B is easier than writing perfect answers\n- The reward loop that builds helpful, honest, harmless AI\n- Jargon: preference data, reward model, alignment, DPO\n- Myth: RLHF shapes manners, not knowledge\n\nQuiz at the end. Got it right? Comment below.\n\nNext: fine-tuning cheaply with LoRA.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #RLHF #LearnAI #ChatGPT #AIForBeginners",
+  "pinned": "Quiz answer: Humans pick the better of two answers, and those choices train the reward model. Ever clicked thumbs up or down on ChatGPT? That's feedback too!",
+  "cover": "'RLHF Explained' title card",
+  "alt": "Animated explainer of RLHF: humans compare answers, a reward model learns preferences, and the AI practises."
+ }
 }

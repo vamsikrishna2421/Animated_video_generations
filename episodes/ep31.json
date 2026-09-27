@@ -1,232 +1,232 @@
 {
-  "id": "ep31",
-  "episode": 31,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Fine-tuning Deep Dive: LoRA",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep31",
+ "episode": 31,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Fine-tuning Deep Dive: LoRA",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Fine-tuning a huge AI model used to need a room full of expensive GPUs. [1] Today, you can do it on a single gaming graphics card. [2] The trick is called LoRA. Let's see how it works.",
+   "data": {
+    "kicker": "EPISODE 31",
+    "title": [
+     "LoRA",
+     "Explained"
+    ],
+    "subtitle": "Fine-tuning on a budget",
+    "buzzwords": [
+     "Fine-tuning",
+     "Adapters",
+     "Low rank",
+     "Parameters",
+     "Frozen weights",
+     "Cheap",
+     "Fast",
+     "Custom models"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Fine-tuning a huge AI model used to need a room full of expensive GPUs. [1] Today, you can do it on a single gaming graphics card. [2] The trick is called LoRA. Let's see how it works.",
-      "data": {
-        "kicker": "EPISODE 31",
-        "title": [
-          "LoRA",
-          "Explained"
-        ],
-        "subtitle": "Fine-tuning on a budget",
-        "buzzwords": [
-          "Fine-tuning",
-          "Adapters",
-          "Low rank",
-          "Parameters",
-          "Frozen weights",
-          "Cheap",
-          "Fast",
-          "Custom models"
-        ]
-      }
+  {
+   "type": "compare",
+   "text": "First, a quick reminder from episode 18. [1] Full fine-tuning updates every single weight in the model, billions of numbers. It's slow, and needs huge memory. [2] LoRA freezes the original model, and trains a tiny add-on instead. Often less than one percent of the size.",
+   "data": {
+    "heading": "Two ways to fine-tune",
+    "left": {
+     "icon": "Building2",
+     "title": "Full fine-tuning",
+     "points": [
+      "Updates every weight",
+      "Needs huge GPU memory",
+      "A full copy per task"
+     ]
     },
-    {
-      "type": "compare",
-      "text": "First, a quick reminder from episode 18. [1] Full fine-tuning updates every single weight in the model, billions of numbers. It's slow, and needs huge memory. [2] LoRA freezes the original model, and trains a tiny add-on instead. Often less than one percent of the size.",
-      "data": {
-        "heading": "Two ways to fine-tune",
-        "left": {
-          "icon": "Building2",
-          "title": "Full fine-tuning",
-          "points": [
-            "Updates every weight",
-            "Needs huge GPU memory",
-            "A full copy per task"
-          ]
-        },
-        "right": {
-          "icon": "Puzzle",
-          "title": "LoRA",
-          "points": [
-            "Original model frozen",
-            "Trains a tiny add-on",
-            "Often under 1% of the size"
-          ]
-        }
-      }
-    },
-    {
-      "type": "definition",
-      "text": "LoRA stands for low rank adaptation. [1] Think of the big model as a thick textbook. [2] Instead of rewriting the whole book, you stick a few sticky notes inside, [3] and the notes change how the book is read.",
-      "data": {
-        "term": "LoRA",
-        "short": "LoRA",
-        "definition": "Low-Rank Adaptation: keep the big model frozen and train small add-on matrices that adjust its behaviour.",
-        "chips": [
-          [
-            "BookOpen",
-            "The model is a textbook"
-          ],
-          [
-            "StickyNote",
-            "Add sticky notes"
-          ],
-          [
-            "Sparkles",
-            "Notes change the answers"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's how it works. [1] Take a pretrained model and freeze all its weights. [2] Attach small adapter matrices to some of its layers. [3] Train only those adapters on your own examples. [4] Save the adapter, often just a few megabytes. [5] At run time, plug it in, and the model behaves in your custom way.",
-      "data": {
-        "heading": "How LoRA works",
-        "nodes": [
-          [
-            "Lock",
-            "Freeze",
-            "The big model"
-          ],
-          [
-            "Plug",
-            "Attach",
-            "Small adapters"
-          ],
-          [
-            "Dumbbell",
-            "Train",
-            "Only the adapters"
-          ],
-          [
-            "Save",
-            "Save",
-            "A few megabytes"
-          ],
-          [
-            "Zap",
-            "Plug in",
-            "Custom behaviour"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where is LoRA used? [1] Image generators learn a new art style, or a person's face, from a few photos. [2] Companies teach a chatbot their tone and product terms. [3] And one base model can swap between many adapters, like a lawyer mode, and a doctor mode.",
-      "data": {
-        "heading": "Where it's used",
-        "items": [
-          [
-            "Palette",
-            "Image styles",
-            "A new art style from a few pictures"
-          ],
-          [
-            "Building",
-            "Company chatbots",
-            "Brand tone and terms"
-          ],
-          [
-            "Shuffle",
-            "Swappable skills",
-            "One model, many adapters"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Adapter, the small trainable add-on. [2] Rank, how big the adapter is. Smaller rank means fewer numbers. [3] Frozen weights, the original model that stays unchanged. [4] And QLoRA, LoRA on a compressed model, so it fits on even smaller GPUs.",
-      "data": {
-        "heading": "LoRA words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Puzzle",
-            "Adapter",
-            "The small add-on"
-          ],
-          [
-            "SlidersHorizontal",
-            "Rank",
-            "How big the adapter is"
-          ],
-          [
-            "Lock",
-            "Frozen weights",
-            "The original model"
-          ],
-          [
-            "Minimize2",
-            "QLoRA",
-            "LoRA on a compressed model"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think LoRA is a weaker, low quality shortcut. [2] For many tasks, it gets close to full fine-tuning results, at a fraction of the cost. But it can't add huge amounts of new knowledge. For fresh facts, use RAG.",
-      "data": {
-        "myth": "LoRA is a weak, low quality shortcut.",
-        "fact": "For many tasks it gets close to full fine-tuning at a fraction of the cost. For fresh facts, use RAG.",
-        "tip": "LoRA for style and skills, RAG for facts"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What does LoRA train? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Only small add-on adapters, while the big model stays frozen!",
-      "data": {
-        "question": "LoRA trains…",
-        "options": [
-          "Only small add-on adapters",
-          "Every weight in the model",
-          "A brand new model from scratch"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] LoRA freezes the big model. [2] It trains tiny adapters instead. [3] Adapters are just a few megabytes, and swappable. [4] It's great for style and skills, while RAG handles facts. [5] Next, RAG part two, chunking and vector databases. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Freeze",
-            "the big model"
-          ],
-          [
-            "Train",
-            "tiny adapters"
-          ],
-          [
-            "Swap",
-            "adapters of a few MB"
-          ],
-          [
-            "Style & skills",
-            "while RAG handles facts"
-          ]
-        ],
-        "next": "EP 32 · RAG Part 2"
-      }
+    "right": {
+     "icon": "Puzzle",
+     "title": "LoRA",
+     "points": [
+      "Original model frozen",
+      "Trains a tiny add-on",
+      "Often under 1% of the size"
+     ]
     }
-  ],
-  "post": {
-    "caption": "How people fine-tune giant AI models on a single gaming GPU.\n\nAI From Scratch, Episode 31: LoRA (Low-Rank Adaptation)\n- Full fine-tuning vs LoRA\n- The sticky-notes-in-a-textbook analogy\n- How it works: freeze, attach, train, save, plug in\n- Where it's used: image styles, company chatbots, swappable skills\n- Jargon: adapter, rank, frozen weights, QLoRA\n- LoRA for style and skills, RAG for facts\n\nQuiz at the end. Got it right? Comment below.\n\nNext: RAG Part 2, chunking and vector databases.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #LoRA #FineTuning #LearnAI #AIForBeginners",
-    "pinned": "Quiz answer: Only small add-on adapters, while the big model stays frozen. Have you seen LoRA models for image generators? Comment below!",
-    "cover": "'LoRA Explained' title card",
-    "alt": "Animated explainer of LoRA fine-tuning: a frozen big model with small trainable adapters."
+   }
+  },
+  {
+   "type": "definition",
+   "text": "[1] LoRA stands for low rank adaptation. [2] Think of the big model as a thick textbook. [3] Instead of rewriting the whole book, you stick a few sticky notes inside, [4] and the notes change how the book is read.",
+   "data": {
+    "term": "LoRA",
+    "short": "LoRA",
+    "definition": "Low-Rank Adaptation: keep the big model frozen and train small add-on matrices that adjust its behaviour.",
+    "chips": [
+     [
+      "BookOpen",
+      "The model is a textbook"
+     ],
+     [
+      "StickyNote",
+      "Add sticky notes"
+     ],
+     [
+      "Sparkles",
+      "Notes change the answers"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Here's how it works. [1] Take a pretrained model and freeze all its weights. [2] Attach small adapter matrices to some of its layers. [3] Train only those adapters on your own examples. [4] Save the adapter, often just a few megabytes. [5] At run time, plug it in, and the model behaves in your custom way.",
+   "data": {
+    "heading": "How LoRA works",
+    "nodes": [
+     [
+      "Lock",
+      "Freeze",
+      "The big model"
+     ],
+     [
+      "Plug",
+      "Attach",
+      "Small adapters"
+     ],
+     [
+      "Dumbbell",
+      "Train",
+      "Only the adapters"
+     ],
+     [
+      "Save",
+      "Save",
+      "A few megabytes"
+     ],
+     [
+      "Zap",
+      "Plug in",
+      "Custom behaviour"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where is LoRA used? [1] Image generators learn a new art style, or a person's face, from a few photos. [2] Companies teach a chatbot their tone and product terms. [3] And one base model can swap between many adapters, like a lawyer mode, and a doctor mode.",
+   "data": {
+    "heading": "Where it's used",
+    "items": [
+     [
+      "Palette",
+      "Image styles",
+      "A new art style from a few pictures"
+     ],
+     [
+      "Building",
+      "Company chatbots",
+      "Brand tone and terms"
+     ],
+     [
+      "Shuffle",
+      "Swappable skills",
+      "One model, many adapters"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Adapter, the small trainable add-on. [2] Rank, how big the adapter is. Smaller rank means fewer numbers. [3] Frozen weights, the original model that stays unchanged. [4] And QLoRA, LoRA on a compressed model, so it fits on even smaller GPUs.",
+   "data": {
+    "heading": "LoRA words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Puzzle",
+      "Adapter",
+      "The small add-on"
+     ],
+     [
+      "SlidersHorizontal",
+      "Rank",
+      "How big the adapter is"
+     ],
+     [
+      "Lock",
+      "Frozen weights",
+      "The original model"
+     ],
+     [
+      "Minimize2",
+      "QLoRA",
+      "LoRA on a compressed model"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think LoRA is a weaker, low quality shortcut. [2] For many tasks, it gets close to full fine-tuning results, at a fraction of the cost. But it can't add huge amounts of new knowledge. For fresh facts, use RAG.",
+   "data": {
+    "myth": "LoRA is a weak, low quality shortcut.",
+    "fact": "For many tasks it gets close to full fine-tuning at a fraction of the cost. For fresh facts, use RAG.",
+    "tip": "LoRA for style and skills, RAG for facts"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What does LoRA train? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Only small add-on adapters, while the big model stays frozen!",
+   "data": {
+    "question": "LoRA trains…",
+    "options": [
+     "Only small add-on adapters",
+     "Every weight in the model",
+     "A brand new model from scratch"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] LoRA freezes the big model. [2] It trains tiny adapters instead. [3] Adapters are just a few megabytes, and swappable. [4] It's great for style and skills, while RAG handles facts. [5] Next, RAG part two, chunking and vector databases. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Freeze",
+      "the big model"
+     ],
+     [
+      "Train",
+      "tiny adapters"
+     ],
+     [
+      "Swap",
+      "adapters of a few MB"
+     ],
+     [
+      "Style & skills",
+      "while RAG handles facts"
+     ]
+    ],
+    "next": "EP 32 · RAG Part 2"
+   }
   }
+ ],
+ "post": {
+  "caption": "How people fine-tune giant AI models on a single gaming GPU.\n\nAI From Scratch, Episode 31: LoRA (Low-Rank Adaptation)\n- Full fine-tuning vs LoRA\n- The sticky-notes-in-a-textbook analogy\n- How it works: freeze, attach, train, save, plug in\n- Where it's used: image styles, company chatbots, swappable skills\n- Jargon: adapter, rank, frozen weights, QLoRA\n- LoRA for style and skills, RAG for facts\n\nQuiz at the end. Got it right? Comment below.\n\nNext: RAG Part 2, chunking and vector databases.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #LoRA #FineTuning #LearnAI #AIForBeginners",
+  "pinned": "Quiz answer: Only small add-on adapters, while the big model stays frozen. Have you seen LoRA models for image generators? Comment below!",
+  "cover": "'LoRA Explained' title card",
+  "alt": "Animated explainer of LoRA fine-tuning: a frozen big model with small trainable adapters."
+ }
 }

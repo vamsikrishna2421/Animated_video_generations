@@ -1,232 +1,232 @@
 {
-  "id": "ep47",
-  "episode": 47,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Guardrails in Real AI Products",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep47",
+ "episode": 47,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Guardrails in Real AI Products",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "A bank's chatbot suddenly starts giving stock tips, or insulting a customer. [1] That would be a disaster. So how do companies keep AI on track? [2] With guardrails. Let's see how they work in real products.",
+   "data": {
+    "kicker": "EPISODE 47",
+    "title": [
+     "Guard-",
+     "rails"
+    ],
+    "subtitle": "Keeping AI on track",
+    "buzzwords": [
+     "Input filters",
+     "Output checks",
+     "Topic limits",
+     "PII",
+     "Moderation",
+     "Validation",
+     "Fallbacks",
+     "Logging"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "A bank's chatbot suddenly starts giving stock tips, or insulting a customer. [1] That would be a disaster. So how do companies keep AI on track? [2] With guardrails. Let's see how they work in real products.",
-      "data": {
-        "kicker": "EPISODE 47",
-        "title": [
-          "Guard-",
-          "rails"
-        ],
-        "subtitle": "Keeping AI on track",
-        "buzzwords": [
-          "Input filters",
-          "Output checks",
-          "Topic limits",
-          "PII",
-          "Moderation",
-          "Validation",
-          "Fallbacks",
-          "Logging"
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "Guardrails are safety checks placed around an AI model. [1] They check what goes in, [2] they check what comes out, [3] and they stop, or fix, anything unsafe or off-topic.",
-      "data": {
-        "term": "Guardrails",
-        "short": "Guardrails",
-        "definition": "Safety checks around an AI model that filter inputs and outputs, keeping it safe and on-topic.",
-        "chips": [
-          [
-            "ArrowDownToLine",
-            "Check what goes in"
-          ],
-          [
-            "ArrowUpFromLine",
-            "Check what comes out"
-          ],
-          [
-            "ShieldCheck",
-            "Stop or fix problems"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's a typical guarded chatbot. [1] The user's message arrives. [2] An input check blocks attacks, like prompt injection, and hides personal data. [3] The model writes a reply, following its system prompt. [4] An output check scans for harmful content, made-up facts, or leaked data. [5] Only then does the safe reply reach the user.",
-      "data": {
-        "heading": "A guarded chatbot",
-        "nodes": [
-          [
-            "MessageSquare",
-            "Message",
-            "From the user"
-          ],
-          [
-            "ShieldCheck",
-            "Input check",
-            "Attacks, personal data"
-          ],
-          [
-            "Brain",
-            "Model",
-            "Follows system prompt"
-          ],
-          [
-            "ScanSearch",
-            "Output check",
-            "Harm, errors, leaks"
-          ],
-          [
-            "CheckCircle2",
-            "Safe reply",
-            "To the user"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "There are three common guardrail types. [1] Topic limits, a bank bot only talks about banking. [2] Content moderation, blocking hate, violence, or self harm content, and sharing help resources. [3] Format checks, making sure answers are valid, like correct JSON for an app, or a real account number format.",
-      "data": {
-        "heading": "Common guardrails",
-        "kicker": "THREE TYPES",
-        "steps": [
-          [
-            "Fence",
-            "Topic limits",
-            "Stay in its lane"
-          ],
-          [
-            "ShieldAlert",
-            "Moderation",
-            "Block harmful content"
-          ],
-          [
-            "Braces",
-            "Format checks",
-            "Valid, usable answers"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "Here are real examples. [1] A food delivery bot politely refuses to write your college essay. [2] A health app adds, please consult a doctor, to medical answers. [3] And a banking bot hands off to a human, when a customer is angry, or the question is complex.",
-      "data": {
-        "heading": "Guardrails in action",
-        "items": [
-          [
-            "UtensilsCrossed",
-            "Food app bot",
-            "Stays on food orders"
-          ],
-          [
-            "HeartPulse",
-            "Health app",
-            "Adds 'consult a doctor'"
-          ],
-          [
-            "Headphones",
-            "Bank bot",
-            "Hands off to a human"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] PII, personally identifiable information, like phone numbers, and Aadhaar. [2] Moderation model, a classifier that flags harmful text. [3] Fallback, a safe response when something fails. [4] And human handoff, passing the conversation to a real person.",
-      "data": {
-        "heading": "Guardrail words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "IdCard",
-            "PII",
-            "Personal details"
-          ],
-          [
-            "ShieldAlert",
-            "Moderation model",
-            "Flags harmful text"
-          ],
-          [
-            "LifeBuoy",
-            "Fallback",
-            "Safe default reply"
-          ],
-          [
-            "Headphones",
-            "Human handoff",
-            "Pass to a person"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think a good system prompt is enough to keep the AI safe. [2] Prompts can be tricked, as we saw with jailbreaks. Real products stack several layers, input checks, output checks, and human review.",
-      "data": {
-        "myth": "A good system prompt is enough to keep AI safe.",
-        "fact": "Prompts can be tricked. Real products stack layers: input checks, output checks and human review.",
-        "tip": "Many layers, not one"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What does an output guardrail do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It checks the AI's reply, before the user sees it!",
-      "data": {
-        "question": "An output guardrail…",
-        "options": [
-          "Checks the AI's reply before the user sees it",
-          "Makes the model bigger",
-          "Speeds up the internet"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Guardrails are safety checks around the model. [2] Input checks block attacks, and hide personal data. [3] Output checks catch harm, errors, and leaks. [4] And real products stack many layers, including human handoff. [5] Next, AI laws around the world. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Guardrails",
-            "checks around the model"
-          ],
-          [
-            "Input",
-            "block attacks, hide PII"
-          ],
-          [
-            "Output",
-            "catch harm and leaks"
-          ],
-          [
-            "Layers",
-            "plus human handoff"
-          ]
-        ],
-        "next": "EP 48 · AI laws"
-      }
-    }
-  ],
-  "post": {
-    "caption": "How do companies stop their chatbot from going rogue? Guardrails.\n\nAI From Scratch, Episode 47: guardrails in real products\n- What guardrails are\n- A guarded chatbot: input check, model, output check\n- Types: topic limits, moderation, format checks\n- Real examples: food, health and banking bots\n- Jargon: PII, moderation model, fallback, human handoff\n- Myth: a system prompt alone isn't enough\n\nQuiz at the end. Got it right? Comment below.\n\nNext: AI laws around the world.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #AIGuardrails #ResponsibleAI #LearnAI #AISafety",
-    "pinned": "Quiz answer: It checks the AI's reply before the user sees it. Ever seen a chatbot refuse a request? Comment what you asked!",
-    "cover": "'Guardrails' title card",
-    "alt": "Animated explainer of AI guardrails: input checks, output checks and layered safety in real products."
+  {
+   "type": "definition",
+   "text": "[1] Guardrails are safety checks placed around an AI model. [2] They check what goes in, [3] they check what comes out, [4] and they stop, or fix, anything unsafe or off-topic.",
+   "data": {
+    "term": "Guardrails",
+    "short": "Guardrails",
+    "definition": "Safety checks around an AI model that filter inputs and outputs, keeping it safe and on-topic.",
+    "chips": [
+     [
+      "ArrowDownToLine",
+      "Check what goes in"
+     ],
+     [
+      "ArrowUpFromLine",
+      "Check what comes out"
+     ],
+     [
+      "ShieldCheck",
+      "Stop or fix problems"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Here's a typical guarded chatbot. [1] The user's message arrives. [2] An input check blocks attacks, like prompt injection, and hides personal data. [3] The model writes a reply, following its system prompt. [4] An output check scans for harmful content, made-up facts, or leaked data. [5] Only then does the safe reply reach the user.",
+   "data": {
+    "heading": "A guarded chatbot",
+    "nodes": [
+     [
+      "MessageSquare",
+      "Message",
+      "From the user"
+     ],
+     [
+      "ShieldCheck",
+      "Input check",
+      "Attacks, personal data"
+     ],
+     [
+      "Brain",
+      "Model",
+      "Follows system prompt"
+     ],
+     [
+      "ScanSearch",
+      "Output check",
+      "Harm, errors, leaks"
+     ],
+     [
+      "CheckCircle2",
+      "Safe reply",
+      "To the user"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "There are three common guardrail types. [1] Topic limits, a bank bot only talks about banking. [2] Content moderation, blocking hate, violence, or self harm content, and sharing help resources. [3] Format checks, making sure answers are valid, like correct JSON for an app, or a real account number format.",
+   "data": {
+    "heading": "Common guardrails",
+    "kicker": "THREE TYPES",
+    "steps": [
+     [
+      "Fence",
+      "Topic limits",
+      "Stay in its lane"
+     ],
+     [
+      "ShieldAlert",
+      "Moderation",
+      "Block harmful content"
+     ],
+     [
+      "Braces",
+      "Format checks",
+      "Valid, usable answers"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "Here are real examples. [1] A food delivery bot politely refuses to write your college essay. [2] A health app adds, please consult a doctor, to medical answers. [3] And a banking bot hands off to a human, when a customer is angry, or the question is complex.",
+   "data": {
+    "heading": "Guardrails in action",
+    "items": [
+     [
+      "UtensilsCrossed",
+      "Food app bot",
+      "Stays on food orders"
+     ],
+     [
+      "HeartPulse",
+      "Health app",
+      "Adds 'consult a doctor'"
+     ],
+     [
+      "Headphones",
+      "Bank bot",
+      "Hands off to a human"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] PII, personally identifiable information, like phone numbers, and Aadhaar. [2] Moderation model, a classifier that flags harmful text. [3] Fallback, a safe response when something fails. [4] And human handoff, passing the conversation to a real person.",
+   "data": {
+    "heading": "Guardrail words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "IdCard",
+      "PII",
+      "Personal details"
+     ],
+     [
+      "ShieldAlert",
+      "Moderation model",
+      "Flags harmful text"
+     ],
+     [
+      "LifeBuoy",
+      "Fallback",
+      "Safe default reply"
+     ],
+     [
+      "Headphones",
+      "Human handoff",
+      "Pass to a person"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think a good system prompt is enough to keep the AI safe. [2] Prompts can be tricked, as we saw with jailbreaks. Real products stack several layers, input checks, output checks, and human review.",
+   "data": {
+    "myth": "A good system prompt is enough to keep AI safe.",
+    "fact": "Prompts can be tricked. Real products stack layers: input checks, output checks and human review.",
+    "tip": "Many layers, not one"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What does an output guardrail do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It checks the AI's reply, before the user sees it!",
+   "data": {
+    "question": "An output guardrail…",
+    "options": [
+     "Checks the AI's reply before the user sees it",
+     "Makes the model bigger",
+     "Speeds up the internet"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Guardrails are safety checks around the model. [2] Input checks block attacks, and hide personal data. [3] Output checks catch harm, errors, and leaks. [4] And real products stack many layers, including human handoff. [5] Next, AI laws around the world. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Guardrails",
+      "checks around the model"
+     ],
+     [
+      "Input",
+      "block attacks, hide PII"
+     ],
+     [
+      "Output",
+      "catch harm and leaks"
+     ],
+     [
+      "Layers",
+      "plus human handoff"
+     ]
+    ],
+    "next": "EP 48 · AI laws"
+   }
   }
+ ],
+ "post": {
+  "caption": "How do companies stop their chatbot from going rogue? Guardrails.\n\nAI From Scratch, Episode 47: guardrails in real products\n- What guardrails are\n- A guarded chatbot: input check, model, output check\n- Types: topic limits, moderation, format checks\n- Real examples: food, health and banking bots\n- Jargon: PII, moderation model, fallback, human handoff\n- Myth: a system prompt alone isn't enough\n\nQuiz at the end. Got it right? Comment below.\n\nNext: AI laws around the world.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #AIGuardrails #ResponsibleAI #LearnAI #AISafety",
+  "pinned": "Quiz answer: It checks the AI's reply before the user sees it. Ever seen a chatbot refuse a request? Comment what you asked!",
+  "cover": "'Guardrails' title card",
+  "alt": "Animated explainer of AI guardrails: input checks, output checks and layered safety in real products."
+ }
 }

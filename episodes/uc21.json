@@ -1,229 +1,229 @@
 {
-  "id": "uc21",
-  "episode": 21,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 21",
-  "handle": "@ai_maastaaru",
-  "title": "How Wake Words Like 'Hey Siri' Work",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc21",
+ "episode": 21,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 21",
+ "handle": "@ai_maastaaru",
+ "title": "How Wake Words Like 'Hey Siri' Work",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You say, hey Google, from across the room, and your phone lights up instantly. [1] Is it recording everything you say, all day? [2] Let's break down how wake word detection really works.",
+   "data": {
+    "kicker": "USE CASE 21",
+    "title": [
+     "Wake",
+     "Words"
+    ],
+    "subtitle": "How 'Hey Siri' hears you",
+    "buzzwords": [
+     "Wake word",
+     "Always listening",
+     "On-device",
+     "Tiny model",
+     "Low power",
+     "Privacy",
+     "Audio",
+     "Keyword spotting"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You say, hey Google, from across the room, and your phone lights up instantly. [1] Is it recording everything you say, all day? [2] Let's break down how wake word detection really works.",
-      "data": {
-        "kicker": "USE CASE 21",
-        "title": [
-          "Wake",
-          "Words"
-        ],
-        "subtitle": "How 'Hey Siri' hears you",
-        "buzzwords": [
-          "Wake word",
-          "Always listening",
-          "On-device",
-          "Tiny model",
-          "Low power",
-          "Privacy",
-          "Audio",
-          "Keyword spotting"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's the flow. [1] The microphone listens in short, rolling slices of about one second. [2] A tiny model on the device checks each slice for the wake word. [3] If the score crosses a threshold, it wakes up. [4] Only then does the full assistant start recording your request, [5] and send it for speech to text, and the AI brain.",
+   "data": {
+    "heading": "From sound to wake-up",
+    "nodes": [
+     [
+      "Mic",
+      "Listen",
+      "One-second slices"
+     ],
+     [
+      "Cpu",
+      "Tiny model",
+      "Checks each slice"
+     ],
+     [
+      "Gauge",
+      "Threshold",
+      "Score high enough?"
+     ],
+     [
+      "Power",
+      "Wake up",
+      "Assistant turns on"
+     ],
+     [
+      "Cloud",
+      "Request",
+      "Speech to text + AI"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "[1] This is called keyword spotting. [2] The model is trained on thousands of people saying the wake word, [3] in different accents, and noisy rooms, [4] plus lots of audio that is not the wake word, so it learns the difference.",
+   "data": {
+    "term": "Keyword spotting",
+    "short": "KWS",
+    "definition": "A tiny always-on model that listens for one specific phrase and ignores everything else.",
+    "chips": [
+     [
+      "Users",
+      "Thousands of voices"
+     ],
+     [
+      "Volume2",
+      "Accents and noisy rooms"
+     ],
+     [
+      "X",
+      "Lots of non-wake-word audio"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Why a tiny model? [1] It runs all day, so it must use very little battery. Some phones use a special low power chip just for this. [2] It must respond in a fraction of a second. [3] And it runs on the device, so your everyday talk isn't sent anywhere.",
+   "data": {
+    "heading": "Built to be tiny",
+    "kicker": "DESIGN RULES",
+    "steps": [
+     [
+      "BatteryFull",
+      "Low power",
+      "Runs all day"
+     ],
+     [
+      "Zap",
+      "Instant",
+      "Fraction of a second"
+     ],
+     [
+      "Lock",
+      "On-device",
+      "Everyday talk stays local"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "There are two kinds of mistakes. [1] A false wake, when a TV show says something similar, and the assistant turns on by accident. [2] A missed wake, when you say it, and nothing happens. [3] The threshold balances these two.",
+   "data": {
+    "heading": "Two kinds of mistakes",
+    "kicker": "THE BALANCE",
+    "left": {
+     "icon": "BellRing",
+     "title": "False wake",
+     "stat": "Oops!",
+     "label": "wakes up when you didn't call"
     },
-    {
-      "type": "pipeline",
-      "text": "Here's the flow. [1] The microphone listens in short, rolling slices of about one second. [2] A tiny model on the device checks each slice for the wake word. [3] If the score crosses a threshold, it wakes up. [4] Only then does the full assistant start recording your request, [5] and send it for speech to text, and the AI brain.",
-      "data": {
-        "heading": "From sound to wake-up",
-        "nodes": [
-          [
-            "Mic",
-            "Listen",
-            "One-second slices"
-          ],
-          [
-            "Cpu",
-            "Tiny model",
-            "Checks each slice"
-          ],
-          [
-            "Gauge",
-            "Threshold",
-            "Score high enough?"
-          ],
-          [
-            "Power",
-            "Wake up",
-            "Assistant turns on"
-          ],
-          [
-            "Cloud",
-            "Request",
-            "Speech to text + AI"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "This is called keyword spotting. [1] The model is trained on thousands of people saying the wake word, [2] in different accents, and noisy rooms, [3] plus lots of audio that is not the wake word, so it learns the difference.",
-      "data": {
-        "term": "Keyword spotting",
-        "short": "KWS",
-        "definition": "A tiny always-on model that listens for one specific phrase and ignores everything else.",
-        "chips": [
-          [
-            "Users",
-            "Thousands of voices"
-          ],
-          [
-            "Volume2",
-            "Accents and noisy rooms"
-          ],
-          [
-            "X",
-            "Lots of non-wake-word audio"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Why a tiny model? [1] It runs all day, so it must use very little battery. Some phones use a special low power chip just for this. [2] It must respond in a fraction of a second. [3] And it runs on the device, so your everyday talk isn't sent anywhere.",
-      "data": {
-        "heading": "Built to be tiny",
-        "kicker": "DESIGN RULES",
-        "steps": [
-          [
-            "BatteryFull",
-            "Low power",
-            "Runs all day"
-          ],
-          [
-            "Zap",
-            "Instant",
-            "Fraction of a second"
-          ],
-          [
-            "Lock",
-            "On-device",
-            "Everyday talk stays local"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "There are two kinds of mistakes. [1] A false wake, when a TV show says something similar, and the assistant turns on by accident. [2] A missed wake, when you say it, and nothing happens. [3] The threshold balances these two.",
-      "data": {
-        "heading": "Two kinds of mistakes",
-        "kicker": "THE BALANCE",
-        "left": {
-          "icon": "BellRing",
-          "title": "False wake",
-          "stat": "Oops!",
-          "label": "wakes up when you didn't call"
-        },
-        "right": {
-          "icon": "BellOff",
-          "title": "Missed wake",
-          "stat": "Hello?",
-          "label": "ignores you when you did"
-        }
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Wake word, the trigger phrase. [2] Threshold, the score needed to wake. [3] Voice match, extra checking that it's your voice. [4] And false accept rate, how often it wakes by mistake.",
-      "data": {
-        "heading": "Wake word jargon",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Megaphone",
-            "Wake word",
-            "The trigger phrase"
-          ],
-          [
-            "Gauge",
-            "Threshold",
-            "Score needed to wake"
-          ],
-          [
-            "Fingerprint",
-            "Voice match",
-            "Is it really you?"
-          ],
-          [
-            "BellRing",
-            "False accept rate",
-            "Wakes by mistake"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think the assistant records and uploads everything, all day. [2] The wake word check happens on the device. Audio is usually sent only after it wakes. But false wakes can send short clips, so check your privacy settings.",
-      "data": {
-        "myth": "The assistant uploads everything you say, all day.",
-        "fact": "The wake check runs on the device. Audio is usually sent only after waking, but false wakes can send clips.",
-        "tip": "Check your privacy settings"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Where does the wake word check usually happen? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] On the device itself, with a tiny low power model!",
-      "data": {
-        "question": "The wake word check happens…",
-        "options": [
-          "On the device itself",
-          "In the cloud, all day",
-          "In a call centre"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] A tiny model listens in short slices, on the device. [2] It's trained on many voices, and lots of non-wake-word audio. [3] A threshold balances false wakes and missed wakes. [4] The full assistant records only after it wakes. [5] Next, why AI runs on GPUs. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Tiny model",
-            "on the device"
-          ],
-          [
-            "Trained",
-            "on many voices"
-          ],
-          [
-            "Threshold",
-            "false vs missed wakes"
-          ],
-          [
-            "Records",
-            "only after waking"
-          ]
-        ],
-        "next": "EP 36 · GPUs"
-      }
+    "right": {
+     "icon": "BellOff",
+     "title": "Missed wake",
+     "stat": "Hello?",
+     "label": "ignores you when you did"
     }
-  ],
-  "post": {
-    "caption": "Is your phone recording everything, waiting for 'Hey Siri'? Here's what's actually happening.\n\nReal World AI, Use Case 21: wake word detection\n- The flow: listen, tiny model, threshold, wake up, request\n- Keyword spotting, trained on thousands of voices\n- Why it must be tiny, low power and on-device\n- False wakes vs missed wakes\n- Myth: it's not uploading everything all day\n\nQuiz at the end. Got it right? Comment below.\n\nNext: why AI runs on GPUs.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #VoiceAssistant #LearnAI #OnDeviceAI #AIForBeginners",
-    "pinned": "Quiz answer: On the device itself, with a tiny low power model. Has your assistant ever woken up by mistake? Comment below!",
-    "cover": "'Wake Words' title card",
-    "alt": "Animated breakdown of how wake word detection works on phones and smart speakers."
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Wake word, the trigger phrase. [2] Threshold, the score needed to wake. [3] Voice match, extra checking that it's your voice. [4] And false accept rate, how often it wakes by mistake.",
+   "data": {
+    "heading": "Wake word jargon",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Megaphone",
+      "Wake word",
+      "The trigger phrase"
+     ],
+     [
+      "Gauge",
+      "Threshold",
+      "Score needed to wake"
+     ],
+     [
+      "Fingerprint",
+      "Voice match",
+      "Is it really you?"
+     ],
+     [
+      "BellRing",
+      "False accept rate",
+      "Wakes by mistake"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think the assistant records and uploads everything, all day. [2] The wake word check happens on the device. Audio is usually sent only after it wakes. But false wakes can send short clips, so check your privacy settings.",
+   "data": {
+    "myth": "The assistant uploads everything you say, all day.",
+    "fact": "The wake check runs on the device. Audio is usually sent only after waking, but false wakes can send clips.",
+    "tip": "Check your privacy settings"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Where does the wake word check usually happen? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] On the device itself, with a tiny low power model!",
+   "data": {
+    "question": "The wake word check happens…",
+    "options": [
+     "On the device itself",
+     "In the cloud, all day",
+     "In a call centre"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] A tiny model listens in short slices, on the device. [2] It's trained on many voices, and lots of non-wake-word audio. [3] A threshold balances false wakes and missed wakes. [4] The full assistant records only after it wakes. [5] Next, why AI runs on GPUs. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Tiny model",
+      "on the device"
+     ],
+     [
+      "Trained",
+      "on many voices"
+     ],
+     [
+      "Threshold",
+      "false vs missed wakes"
+     ],
+     [
+      "Records",
+      "only after waking"
+     ]
+    ],
+    "next": "EP 36 · GPUs"
+   }
   }
+ ],
+ "post": {
+  "caption": "Is your phone recording everything, waiting for 'Hey Siri'? Here's what's actually happening.\n\nReal World AI, Use Case 21: wake word detection\n- The flow: listen, tiny model, threshold, wake up, request\n- Keyword spotting, trained on thousands of voices\n- Why it must be tiny, low power and on-device\n- False wakes vs missed wakes\n- Myth: it's not uploading everything all day\n\nQuiz at the end. Got it right? Comment below.\n\nNext: why AI runs on GPUs.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #VoiceAssistant #LearnAI #OnDeviceAI #AIForBeginners",
+  "pinned": "Quiz answer: On the device itself, with a tiny low power model. Has your assistant ever woken up by mistake? Comment below!",
+  "cover": "'Wake Words' title card",
+  "alt": "Animated breakdown of how wake word detection works on phones and smart speakers."
+ }
 }

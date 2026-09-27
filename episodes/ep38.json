@@ -1,225 +1,225 @@
 {
-  "id": "ep38",
-  "episode": 38,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "How to Run AI on Your Own Laptop",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep38",
+ "episode": 38,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "How to Run AI on Your Own Laptop",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "What if you could chat with an AI, with no internet, no subscription, and nothing leaving your computer? [1] You can, today, on a normal laptop. [2] Let's see how to run AI locally.",
+   "data": {
+    "kicker": "EPISODE 38",
+    "title": [
+     "Run AI",
+     "Locally"
+    ],
+    "subtitle": "AI on your own laptop",
+    "buzzwords": [
+     "Ollama",
+     "LM Studio",
+     "Offline",
+     "Private",
+     "Open models",
+     "GGUF",
+     "RAM",
+     "No subscription"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "What if you could chat with an AI, with no internet, no subscription, and nothing leaving your computer? [1] You can, today, on a normal laptop. [2] Let's see how to run AI locally.",
-      "data": {
-        "kicker": "EPISODE 38",
-        "title": [
-          "Run AI",
-          "Locally"
-        ],
-        "subtitle": "AI on your own laptop",
-        "buzzwords": [
-          "Ollama",
-          "LM Studio",
-          "Offline",
-          "Private",
-          "Open models",
-          "GGUF",
-          "RAM",
-          "No subscription"
-        ]
-      }
+  {
+   "type": "steps",
+   "text": "It takes three simple steps. [1] Install a tool, like Ollama, or LM Studio. [2] Download an open model, like Llama, Qwen, or Gemma, often a 4 bit version. [3] Start chatting. Everything runs on your own machine.",
+   "data": {
+    "heading": "Three steps",
+    "kicker": "GET STARTED",
+    "steps": [
+     [
+      "Download",
+      "Install a tool",
+      "Ollama or LM Studio"
+     ],
+     [
+      "Package",
+      "Get a model",
+      "Llama, Qwen, Gemma"
+     ],
+     [
+      "MessageSquare",
+      "Chat",
+      "All on your machine"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "text": "[1] What can your laptop handle? [2] With 8 gigabytes of RAM, try small models, around 3 billion parameters. [3] With 16 gigabytes, 7 to 8 billion parameter models run nicely. [4] With 32 gigabytes or more, you can try models around 30 billion parameters, at 4 bits.",
+   "data": {
+    "heading": "What fits?",
+    "kicker": "ROUGH GUIDE",
+    "cols": [
+     "Model size"
+    ],
+    "rows": [
+     [
+      "8 GB RAM",
+      "~3B parameters"
+     ],
+     [
+      "16 GB RAM",
+      "7–8B parameters"
+     ],
+     [
+      "32 GB+ RAM",
+      "~30B at 4-bit"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "compare",
+   "text": "Why run locally? [1] Privacy, your data never leaves your laptop. No monthly fees. It works offline, on a plane, or in a village. [2] But it's slower than the cloud, the models are smaller, and it uses your battery.",
+   "data": {
+    "heading": "The trade-off",
+    "left": {
+     "icon": "ThumbsUp",
+     "title": "Pros",
+     "points": [
+      "Private: nothing leaves",
+      "No monthly fees",
+      "Works offline"
+     ]
     },
-    {
-      "type": "steps",
-      "text": "It takes three simple steps. [1] Install a tool, like Ollama, or LM Studio. [2] Download an open model, like Llama, Qwen, or Gemma, often a 4 bit version. [3] Start chatting. Everything runs on your own machine.",
-      "data": {
-        "heading": "Three steps",
-        "kicker": "GET STARTED",
-        "steps": [
-          [
-            "Download",
-            "Install a tool",
-            "Ollama or LM Studio"
-          ],
-          [
-            "Package",
-            "Get a model",
-            "Llama, Qwen, Gemma"
-          ],
-          [
-            "MessageSquare",
-            "Chat",
-            "All on your machine"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "table",
-      "text": "What can your laptop handle? [1] With 8 gigabytes of RAM, try small models, around 3 billion parameters. [2] With 16 gigabytes, 7 to 8 billion parameter models run nicely. [3] With 32 gigabytes or more, you can try models around 30 billion parameters, at 4 bits.",
-      "data": {
-        "heading": "What fits?",
-        "kicker": "ROUGH GUIDE",
-        "cols": [
-          "Model size"
-        ],
-        "rows": [
-          [
-            "8 GB RAM",
-            "~3B parameters"
-          ],
-          [
-            "16 GB RAM",
-            "7–8B parameters"
-          ],
-          [
-            "32 GB+ RAM",
-            "~30B at 4-bit"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "compare",
-      "text": "Why run locally? [1] Privacy, your data never leaves your laptop. No monthly fees. It works offline, on a plane, or in a village. [2] But it's slower than the cloud, the models are smaller, and it uses your battery.",
-      "data": {
-        "heading": "The trade-off",
-        "left": {
-          "icon": "ThumbsUp",
-          "title": "Pros",
-          "points": [
-            "Private: nothing leaves",
-            "No monthly fees",
-            "Works offline"
-          ]
-        },
-        "right": {
-          "icon": "ThumbsDown",
-          "title": "Cons",
-          "points": [
-            "Slower than the cloud",
-            "Smaller models",
-            "Drains the battery"
-          ]
-        }
-      }
-    },
-    {
-      "type": "examples",
-      "text": "What do people use local AI for? [1] Summarising private documents, like contracts or medical reports. [2] Coding help, without sharing company code. [3] And learning, experimenting with different models for free.",
-      "data": {
-        "heading": "What people use it for",
-        "items": [
-          [
-            "FileLock",
-            "Private documents",
-            "Contracts, reports"
-          ],
-          [
-            "Code",
-            "Coding help",
-            "Company code stays local"
-          ],
-          [
-            "FlaskConical",
-            "Experiments",
-            "Try models for free"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Local inference, running a model on your own device. [2] Tokens per second, how fast it writes. [3] Context length, how much text it can read at once. [4] And a local server, which lets your own apps talk to the model, like an API.",
-      "data": {
-        "heading": "Local AI words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Laptop",
-            "Local inference",
-            "Runs on your device"
-          ],
-          [
-            "Gauge",
-            "Tokens per second",
-            "Writing speed"
-          ],
-          [
-            "ScrollText",
-            "Context length",
-            "How much it reads"
-          ],
-          [
-            "Server",
-            "Local server",
-            "Your apps can use it"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think you need an expensive gaming PC to run AI. [2] Small models run on everyday laptops. Apple's M series chips, with shared memory, handle them especially well. A GPU helps, but isn't required.",
-      "data": {
-        "myth": "You need an expensive gaming PC to run AI.",
-        "fact": "Small models run on everyday laptops. A GPU helps, but isn't required.",
-        "tip": "Start small, like 3B to 8B"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What is the biggest privacy benefit of running AI locally? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Your data never leaves your device!",
-      "data": {
-        "question": "The biggest privacy benefit is…",
-        "options": [
-          "Your data never leaves your device",
-          "It's always smarter",
-          "It never makes mistakes"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Install a tool like Ollama or LM Studio. [2] Download an open model, sized for your RAM. [3] It's private, free, and works offline. [4] But it's slower, with smaller models. [5] Next, where does AI cost come from? Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Install",
-            "Ollama or LM Studio"
-          ],
-          [
-            "Download",
-            "a model that fits"
-          ],
-          [
-            "Private",
-            "free and offline"
-          ],
-          [
-            "Trade-off",
-            "slower, smaller"
-          ]
-        ],
-        "next": "EP 39 · AI costs"
-      }
+    "right": {
+     "icon": "ThumbsDown",
+     "title": "Cons",
+     "points": [
+      "Slower than the cloud",
+      "Smaller models",
+      "Drains the battery"
+     ]
     }
-  ],
-  "post": {
-    "caption": "Chat with AI with no internet, no subscription, and nothing leaving your laptop.\n\nAI From Scratch, Episode 38: running AI locally\n- 3 steps: install a tool, get a model, chat\n- What fits in 8, 16 and 32 GB of RAM\n- Pros and cons of local AI\n- Uses: private documents, coding, experiments\n- Jargon: local inference, tokens per second, context length, local server\n- Myth: you don't need a gaming PC\n\nQuiz at the end. Got it right? Comment below.\n\nNext: where AI costs come from.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #LocalAI #Ollama #LearnAI #OpenSourceAI",
-    "pinned": "Quiz answer: Your data never leaves your device. Tried Ollama or LM Studio? Which model do you run? Comment below!",
-    "cover": "'Run AI Locally' title card",
-    "alt": "Animated guide to running AI models locally on a laptop with tools like Ollama and LM Studio."
+   }
+  },
+  {
+   "type": "examples",
+   "text": "What do people use local AI for? [1] Summarising private documents, like contracts or medical reports. [2] Coding help, without sharing company code. [3] And learning, experimenting with different models for free.",
+   "data": {
+    "heading": "What people use it for",
+    "items": [
+     [
+      "FileLock",
+      "Private documents",
+      "Contracts, reports"
+     ],
+     [
+      "Code",
+      "Coding help",
+      "Company code stays local"
+     ],
+     [
+      "FlaskConical",
+      "Experiments",
+      "Try models for free"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Local inference, running a model on your own device. [2] Tokens per second, how fast it writes. [3] Context length, how much text it can read at once. [4] And a local server, which lets your own apps talk to the model, like an API.",
+   "data": {
+    "heading": "Local AI words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Laptop",
+      "Local inference",
+      "Runs on your device"
+     ],
+     [
+      "Gauge",
+      "Tokens per second",
+      "Writing speed"
+     ],
+     [
+      "ScrollText",
+      "Context length",
+      "How much it reads"
+     ],
+     [
+      "Server",
+      "Local server",
+      "Your apps can use it"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think you need an expensive gaming PC to run AI. [2] Small models run on everyday laptops. Apple's M series chips, with shared memory, handle them especially well. A GPU helps, but isn't required.",
+   "data": {
+    "myth": "You need an expensive gaming PC to run AI.",
+    "fact": "Small models run on everyday laptops. A GPU helps, but isn't required.",
+    "tip": "Start small, like 3B to 8B"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What is the biggest privacy benefit of running AI locally? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Your data never leaves your device!",
+   "data": {
+    "question": "The biggest privacy benefit is…",
+    "options": [
+     "Your data never leaves your device",
+     "It's always smarter",
+     "It never makes mistakes"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Install a tool like Ollama or LM Studio. [2] Download an open model, sized for your RAM. [3] It's private, free, and works offline. [4] But it's slower, with smaller models. [5] Next, where does AI cost come from? Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Install",
+      "Ollama or LM Studio"
+     ],
+     [
+      "Download",
+      "a model that fits"
+     ],
+     [
+      "Private",
+      "free and offline"
+     ],
+     [
+      "Trade-off",
+      "slower, smaller"
+     ]
+    ],
+    "next": "EP 39 · AI costs"
+   }
   }
+ ],
+ "post": {
+  "caption": "Chat with AI with no internet, no subscription, and nothing leaving your laptop.\n\nAI From Scratch, Episode 38: running AI locally\n- 3 steps: install a tool, get a model, chat\n- What fits in 8, 16 and 32 GB of RAM\n- Pros and cons of local AI\n- Uses: private documents, coding, experiments\n- Jargon: local inference, tokens per second, context length, local server\n- Myth: you don't need a gaming PC\n\nQuiz at the end. Got it right? Comment below.\n\nNext: where AI costs come from.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #LocalAI #Ollama #LearnAI #OpenSourceAI",
+  "pinned": "Quiz answer: Your data never leaves your device. Tried Ollama or LM Studio? Which model do you run? Comment below!",
+  "cover": "'Run AI Locally' title card",
+  "alt": "Animated guide to running AI models locally on a laptop with tools like Ollama and LM Studio."
+ }
 }

@@ -1,4 +1,5 @@
 import { interpolate, useCurrentFrame } from "remotion";
+import { Icon } from "../Icon";
 import { L, SceneProps, clamp } from "../theme";
 import { Heading, Panel, useSpring } from "./common";
 
@@ -38,7 +39,41 @@ const Row: React.FC<{ side: any; color: string; glowOut: number; children?: Reac
 // Spammers keep changing words, so hand-written rules break.
 const SPAM = ["lottery", "l0ttery", "L-O-T-T-E-R-Y", "prize$$$"];
 
-export const Compare: React.FC<SceneProps> = ({ data, cue }) => {
+// Generic two-column comparison: data.left / data.right = { icon, title, points[] }, revealed on cues 0 and 1.
+const Column: React.FC<{ side: any; at: number; color: string; top: number }> = ({ side, at, color, top }) => {
+  const f = useCurrentFrame();
+  const s = useSpring(at, 12);
+  return (
+    <Panel style={{ position: "absolute", top, left: 60, right: 60, padding: "28px 34px", borderColor: color, opacity: s, transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 16 }}>
+        <div style={{ width: 70, height: 70, borderRadius: 20, background: `${color}33`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Icon name={side.icon} size={40} color={color} />
+        </div>
+        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 44, color }}>{side.title}</div>
+      </div>
+      {side.points.map((pt: string, i: number) => (
+        <div key={i} style={{ display: "flex", gap: 14, fontFamily: L.font, fontWeight: 600, fontSize: 36, color: L.text, lineHeight: 1.3, marginTop: 12, opacity: interpolate(f, [at + 10 + i * 8, at + 20 + i * 8], [0, 1], clamp) }}>
+          <span style={{ color, fontWeight: 800 }}>•</span>
+          <span>{pt}</span>
+        </div>
+      ))}
+    </Panel>
+  );
+};
+
+export const Compare: React.FC<SceneProps> = (props) => {
+  const { data, cue } = props;
+  if (!data.left?.points) return <RulesCompare {...props} />;
+  return (
+    <>
+      <Heading kicker={data.kicker ?? "SIDE BY SIDE"}>{data.heading}</Heading>
+      <Column side={data.left} at={cue(0)} color={L.blue} top={470} />
+      <Column side={data.right} at={cue(1)} color={L.amber} top={850} />
+    </>
+  );
+};
+
+const RulesCompare: React.FC<SceneProps> = ({ data, cue }) => {
   const f = useCurrentFrame();
   const top = useSpring(4, 14);
   const bottom = useSpring(cue(1), 12);

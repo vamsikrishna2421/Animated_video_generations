@@ -1,217 +1,217 @@
 {
-  "id": "ep40",
-  "episode": 40,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "AI Benchmarks: How Models Are Tested",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep40",
+ "episode": 40,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "AI Benchmarks: How Models Are Tested",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Every new AI model launches with a chart, showing it beat everyone else. [1] But what are those tests, and can you trust them? [2] Let's understand AI benchmarks.",
+   "data": {
+    "kicker": "EPISODE 40",
+    "title": [
+     "AI",
+     "Benchmarks"
+    ],
+    "subtitle": "How models are tested",
+    "buzzwords": [
+     "MMLU",
+     "Leaderboards",
+     "Coding tests",
+     "Math",
+     "Arena",
+     "Scores",
+     "Contamination",
+     "Evals"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Every new AI model launches with a chart, showing it beat everyone else. [1] But what are those tests, and can you trust them? [2] Let's understand AI benchmarks.",
-      "data": {
-        "kicker": "EPISODE 40",
-        "title": [
-          "AI",
-          "Benchmarks"
-        ],
-        "subtitle": "How models are tested",
-        "buzzwords": [
-          "MMLU",
-          "Leaderboards",
-          "Coding tests",
-          "Math",
-          "Arena",
-          "Scores",
-          "Contamination",
-          "Evals"
-        ]
-      }
+  {
+   "type": "definition",
+   "text": "[1] A benchmark is a standard exam for AI models. [2] It's a fixed set of questions with known answers, [3] every model takes the same test, [4] and the scores let us compare them fairly.",
+   "data": {
+    "term": "Benchmark",
+    "short": "Benchmark",
+    "definition": "A standard set of test questions with known answers, used to compare AI models fairly.",
+    "chips": [
+     [
+      "ClipboardList",
+      "Fixed questions"
+     ],
+     [
+      "Users",
+      "Same test for all"
+     ],
+     [
+      "BarChart3",
+      "Comparable scores"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "text": "[1] Here are some popular ones. [2] MMLU tests general knowledge, across dozens of school and college subjects. [3] Math benchmarks test step by step problem solving. [4] Coding benchmarks check whether the model's code actually passes tests. [5] And chatbot arenas let real people vote on which answer they prefer.",
+   "data": {
+    "heading": "Popular benchmarks",
+    "kicker": "THE EXAMS",
+    "cols": [
+     "Tests"
+    ],
+    "rows": [
+     [
+      "MMLU",
+      "General knowledge"
+     ],
+     [
+      "Math sets",
+      "Step-by-step solving"
+     ],
+     [
+      "Coding sets",
+      "Does the code run?"
+     ],
+     [
+      "Arenas",
+      "People vote blind"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "There are two styles of testing. [1] Automatic tests have exact answers, so they're fast and cheap. [2] Human preference tests, like arenas, capture what people actually like, but they're slower, and can reward confident sounding answers.",
+   "data": {
+    "heading": "Two ways to test",
+    "kicker": "EXAM STYLES",
+    "left": {
+     "icon": "CheckCheck",
+     "title": "Automatic",
+     "stat": "Exact answers",
+     "label": "fast, cheap, repeatable"
     },
-    {
-      "type": "definition",
-      "text": "A benchmark is a standard exam for AI models. [1] It's a fixed set of questions with known answers, [2] every model takes the same test, [3] and the scores let us compare them fairly.",
-      "data": {
-        "term": "Benchmark",
-        "short": "Benchmark",
-        "definition": "A standard set of test questions with known answers, used to compare AI models fairly.",
-        "chips": [
-          [
-            "ClipboardList",
-            "Fixed questions"
-          ],
-          [
-            "Users",
-            "Same test for all"
-          ],
-          [
-            "BarChart3",
-            "Comparable scores"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "table",
-      "text": "Here are some popular ones. [1] MMLU tests general knowledge, across dozens of school and college subjects. [2] Math benchmarks test step by step problem solving. [3] Coding benchmarks check whether the model's code actually passes tests. [4] And chatbot arenas let real people vote on which answer they prefer.",
-      "data": {
-        "heading": "Popular benchmarks",
-        "kicker": "THE EXAMS",
-        "cols": [
-          "Tests"
-        ],
-        "rows": [
-          [
-            "MMLU",
-            "General knowledge"
-          ],
-          [
-            "Math sets",
-            "Step-by-step solving"
-          ],
-          [
-            "Coding sets",
-            "Does the code run?"
-          ],
-          [
-            "Arenas",
-            "People vote blind"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "There are two styles of testing. [1] Automatic tests have exact answers, so they're fast and cheap. [2] Human preference tests, like arenas, capture what people actually like, but they're slower, and can reward confident sounding answers.",
-      "data": {
-        "heading": "Two ways to test",
-        "kicker": "EXAM STYLES",
-        "left": {
-          "icon": "CheckCheck",
-          "title": "Automatic",
-          "stat": "Exact answers",
-          "label": "fast, cheap, repeatable"
-        },
-        "right": {
-          "icon": "Users",
-          "title": "Human votes",
-          "stat": "Preferences",
-          "label": "real taste, but slower"
-        }
-      }
-    },
-    {
-      "type": "steps",
-      "text": "But benchmarks have problems. [1] Contamination, when test questions leak into the training data, so the model has seen the answers. [2] Saturation, when every top model scores near 100 percent, so the test stops being useful. [3] And gaming, when models are tuned just to score high, not to be useful.",
-      "data": {
-        "heading": "Why scores can mislead",
-        "kicker": "WATCH OUT",
-        "steps": [
-          [
-            "Droplets",
-            "Contamination",
-            "Saw the answers in training"
-          ],
-          [
-            "Gauge",
-            "Saturation",
-            "Everyone scores ~100%"
-          ],
-          [
-            "Dice5",
-            "Gaming",
-            "Tuned for the test"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So how should you judge a model? [1] Look at several benchmarks, not just one. [2] Check community reviews, and arena rankings. [3] And most importantly, test it on your own real tasks.",
-      "data": {
-        "heading": "How to judge a model",
-        "items": [
-          [
-            "Layers",
-            "Many benchmarks",
-            "Not just one chart"
-          ],
-          [
-            "MessagesSquare",
-            "Community",
-            "Reviews and arenas"
-          ],
-          [
-            "FlaskConical",
-            "Your own tests",
-            "Real tasks you care about"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think the model with the highest benchmark score is the best for everything. [2] A model can top one chart, and still be worse at your task. Benchmarks are a starting point, not a final answer.",
-      "data": {
-        "myth": "The highest benchmark score means the best model for everything.",
-        "fact": "A model can top one chart and still be worse at your task. Benchmarks are a starting point.",
-        "tip": "Test on your own tasks"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What is benchmark contamination? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The test questions leaked into the training data, so the model saw the answers!",
-      "data": {
-        "question": "Contamination means…",
-        "options": [
-          "Test questions leaked into training data",
-          "The GPU got too hot",
-          "The test was too hard"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Benchmarks are standard exams for AI. [2] Popular ones test knowledge, math, coding, and human preference. [3] Watch out for contamination, saturation, and gaming. [4] And always test on your own tasks. [5] Next, how to choose the right model. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Benchmarks",
-            "standard AI exams"
-          ],
-          [
-            "Types",
-            "knowledge, math, code, votes"
-          ],
-          [
-            "Pitfalls",
-            "leaks, saturation, gaming"
-          ],
-          [
-            "Test",
-            "on your own tasks"
-          ]
-        ],
-        "next": "EP 41 · Choosing a model"
-      }
+    "right": {
+     "icon": "Users",
+     "title": "Human votes",
+     "stat": "Preferences",
+     "label": "real taste, but slower"
     }
-  ],
-  "post": {
-    "caption": "Every AI launch has a chart saying it beat everyone. Here's how to read it.\n\nAI From Scratch, Episode 40: AI benchmarks\n- What a benchmark is\n- Popular ones: MMLU, math, coding, arenas\n- Automatic tests vs human votes\n- Pitfalls: contamination, saturation, gaming\n- How to judge a model for yourself\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how to choose the right model.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #AIBenchmarks #LearnAI #LLM #AIForBeginners",
-    "pinned": "Quiz answer: The test questions leaked into the training data, so the model saw the answers. Do you trust AI launch charts? Comment below!",
-    "cover": "'AI Benchmarks' title card",
-    "alt": "Animated explainer of AI benchmarks, how models are tested and why scores can mislead."
+   }
+  },
+  {
+   "type": "steps",
+   "text": "But benchmarks have problems. [1] Contamination, when test questions leak into the training data, so the model has seen the answers. [2] Saturation, when every top model scores near 100 percent, so the test stops being useful. [3] And gaming, when models are tuned just to score high, not to be useful.",
+   "data": {
+    "heading": "Why scores can mislead",
+    "kicker": "WATCH OUT",
+    "steps": [
+     [
+      "Droplets",
+      "Contamination",
+      "Saw the answers in training"
+     ],
+     [
+      "Gauge",
+      "Saturation",
+      "Everyone scores ~100%"
+     ],
+     [
+      "Dice5",
+      "Gaming",
+      "Tuned for the test"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So how should you judge a model? [1] Look at several benchmarks, not just one. [2] Check community reviews, and arena rankings. [3] And most importantly, test it on your own real tasks.",
+   "data": {
+    "heading": "How to judge a model",
+    "items": [
+     [
+      "Layers",
+      "Many benchmarks",
+      "Not just one chart"
+     ],
+     [
+      "MessagesSquare",
+      "Community",
+      "Reviews and arenas"
+     ],
+     [
+      "FlaskConical",
+      "Your own tests",
+      "Real tasks you care about"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think the model with the highest benchmark score is the best for everything. [2] A model can top one chart, and still be worse at your task. Benchmarks are a starting point, not a final answer.",
+   "data": {
+    "myth": "The highest benchmark score means the best model for everything.",
+    "fact": "A model can top one chart and still be worse at your task. Benchmarks are a starting point.",
+    "tip": "Test on your own tasks"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What is benchmark contamination? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The test questions leaked into the training data, so the model saw the answers!",
+   "data": {
+    "question": "Contamination means…",
+    "options": [
+     "Test questions leaked into training data",
+     "The GPU got too hot",
+     "The test was too hard"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Benchmarks are standard exams for AI. [2] Popular ones test knowledge, math, coding, and human preference. [3] Watch out for contamination, saturation, and gaming. [4] And always test on your own tasks. [5] Next, how to choose the right model. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Benchmarks",
+      "standard AI exams"
+     ],
+     [
+      "Types",
+      "knowledge, math, code, votes"
+     ],
+     [
+      "Pitfalls",
+      "leaks, saturation, gaming"
+     ],
+     [
+      "Test",
+      "on your own tasks"
+     ]
+    ],
+    "next": "EP 41 · Choosing a model"
+   }
   }
+ ],
+ "post": {
+  "caption": "Every AI launch has a chart saying it beat everyone. Here's how to read it.\n\nAI From Scratch, Episode 40: AI benchmarks\n- What a benchmark is\n- Popular ones: MMLU, math, coding, arenas\n- Automatic tests vs human votes\n- Pitfalls: contamination, saturation, gaming\n- How to judge a model for yourself\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how to choose the right model.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #AIBenchmarks #LearnAI #LLM #AIForBeginners",
+  "pinned": "Quiz answer: The test questions leaked into the training data, so the model saw the answers. Do you trust AI launch charts? Comment below!",
+  "cover": "'AI Benchmarks' title card",
+  "alt": "Animated explainer of AI benchmarks, how models are tested and why scores can mislead."
+ }
 }

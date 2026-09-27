@@ -1,237 +1,237 @@
 {
-  "id": "ep41",
-  "episode": 41,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "How to Choose the Right AI Model",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep41",
+ "episode": 41,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "How to Choose the Right AI Model",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "There are hundreds of AI models out there. Big, small, open, closed, cheap, expensive. [1] How do you pick the right one for your project? [2] Today, a simple checklist that puts together everything we've learned.",
+   "data": {
+    "kicker": "EPISODE 41",
+    "title": [
+     "Choose",
+     "a Model"
+    ],
+    "subtitle": "A simple checklist",
+    "buzzwords": [
+     "Quality",
+     "Cost",
+     "Speed",
+     "Privacy",
+     "Context",
+     "Open",
+     "Closed",
+     "Multimodal"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "There are hundreds of AI models out there. Big, small, open, closed, cheap, expensive. [1] How do you pick the right one for your project? [2] Today, a simple checklist that puts together everything we've learned.",
-      "data": {
-        "kicker": "EPISODE 41",
-        "title": [
-          "Choose",
-          "a Model"
-        ],
-        "subtitle": "A simple checklist",
-        "buzzwords": [
-          "Quality",
-          "Cost",
-          "Speed",
-          "Privacy",
-          "Context",
-          "Open",
-          "Closed",
-          "Multimodal"
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Start with the task. [1] What exactly must it do? Chat, write code, read images, or classify tickets? [2] How good must it be? A typo in a fun caption is fine, but not in a medical summary. [3] And what are the limits, like budget, speed, and privacy?",
-      "data": {
-        "heading": "Start with the task",
-        "kicker": "STEP 1",
-        "steps": [
-          [
-            "Target",
-            "The job",
-            "Chat, code, images, sorting?"
-          ],
-          [
-            "Gauge",
-            "Quality bar",
-            "Fun caption vs medical"
-          ],
-          [
-            "ShieldCheck",
-            "Limits",
-            "Budget, speed, privacy"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "table",
-      "text": "Now, match the needs. [1] Need top reasoning? A large frontier model. [2] Huge volume of simple jobs? A small, cheap model. [3] Private data? An open model on your own servers. [4] Photos or voice? A multimodal model. [5] Long documents? A big context window.",
-      "data": {
-        "heading": "Match the need",
-        "kicker": "STEP 2",
-        "cols": [
-          "Pick"
-        ],
-        "rows": [
-          [
-            "Top reasoning",
-            "Large frontier model"
-          ],
-          [
-            "High volume, simple",
-            "Small, cheap model"
-          ],
-          [
-            "Private data",
-            "Open, self-hosted"
-          ],
-          [
-            "Photos or voice",
-            "Multimodal model"
-          ],
-          [
-            "Long documents",
-            "Big context window"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Then test like a pro. [1] Shortlist two or three models. [2] Build a small test set, of 30 to 50 real examples. [3] Run all models on the same set. [4] Compare quality, cost, and speed. [5] Pick the cheapest one that clears your quality bar.",
-      "data": {
-        "heading": "Test like a pro",
-        "nodes": [
-          [
-            "ListChecks",
-            "Shortlist",
-            "2–3 models"
-          ],
-          [
-            "ClipboardList",
-            "Test set",
-            "30–50 real examples"
-          ],
-          [
-            "Play",
-            "Run",
-            "Same set for all"
-          ],
-          [
-            "BarChart3",
-            "Compare",
-            "Quality, cost, speed"
-          ],
-          [
-            "Trophy",
-            "Pick",
-            "Cheapest that passes"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "dial",
-      "text": "Remember, it's always a trade-off, a triangle of quality, cost, and speed. [1] Push for top quality, and cost goes up. [2] Push for speed and low cost, and quality may drop. [3] The balance point depends on your task.",
-      "data": {
-        "heading": "The trade-off triangle",
-        "prompt": "Summarise a support ticket",
-        "settings": [
-          [
-            0,
-            "cheap · fast",
-            "Small model: good enough for sorting tickets"
-          ],
-          [
-            0.5,
-            "balanced",
-            "Mid model: solid summaries at a fair price"
-          ],
-          [
-            1,
-            "top quality",
-            "Frontier model: best, but pricier and slower"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think they should always use the newest, biggest model. [2] Often, a smaller or older model does the job just as well, for a fraction of the price. And you can mix models, for different steps.",
-      "data": {
-        "myth": "Always use the newest, biggest model.",
-        "fact": "A smaller or older model often does the job just as well, for a fraction of the price.",
-        "tip": "Mix models for different steps"
-      }
-    },
-    {
-      "type": "examples",
-      "text": "Here's a real example. A customer support app might use three models. [1] A small model sorts incoming tickets. [2] A mid model drafts the replies, using RAG. [3] And a top model handles only the tricky cases.",
-      "data": {
-        "heading": "Mixing models",
-        "items": [
-          [
-            "Inbox",
-            "Sort tickets",
-            "Small, cheap model"
-          ],
-          [
-            "PenLine",
-            "Draft replies",
-            "Mid model + RAG"
-          ],
-          [
-            "Brain",
-            "Tricky cases",
-            "Top model"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! After testing, which model should you usually pick? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The cheapest one that meets your quality bar!",
-      "data": {
-        "question": "After testing, pick…",
-        "options": [
-          "The cheapest one that meets your quality bar",
-          "Always the biggest",
-          "The one with the coolest name"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Start with the task, the quality bar, and the limits. [2] Match needs to model types. [3] Test on real examples, and compare. [4] Pick the cheapest model that passes, and mix models where it helps. [5] Next, a big topic, bias in AI. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Task",
-            "quality bar, limits"
-          ],
-          [
-            "Match",
-            "needs to model types"
-          ],
-          [
-            "Test",
-            "on real examples"
-          ],
-          [
-            "Pick",
-            "cheapest that passes"
-          ]
-        ],
-        "next": "EP 42 · Bias in AI"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Hundreds of AI models. How do you pick the right one? A simple checklist.\n\nAI From Scratch, Episode 41: choosing the right model\n- Start with the task, the quality bar and the limits\n- Match needs to model types\n- Test like a pro with 30–50 real examples\n- The quality, cost, speed triangle\n- Myth: newest and biggest isn't always best\n\nQuiz at the end. Got it right? Comment below.\n\nNext: bias in AI.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #LearnAI #LLM #AITools #AIForBeginners",
-    "pinned": "Quiz answer: The cheapest one that meets your quality bar. Which model do you use most? Comment below!",
-    "cover": "'Choose a Model' title card",
-    "alt": "Animated checklist for choosing the right AI model by task, quality, cost, speed and privacy."
+  {
+   "type": "steps",
+   "text": "Start with the task. [1] What exactly must it do? Chat, write code, read images, or classify tickets? [2] How good must it be? A typo in a fun caption is fine, but not in a medical summary. [3] And what are the limits, like budget, speed, and privacy?",
+   "data": {
+    "heading": "Start with the task",
+    "kicker": "STEP 1",
+    "steps": [
+     [
+      "Target",
+      "The job",
+      "Chat, code, images, sorting?"
+     ],
+     [
+      "Gauge",
+      "Quality bar",
+      "Fun caption vs medical"
+     ],
+     [
+      "ShieldCheck",
+      "Limits",
+      "Budget, speed, privacy"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "text": "[1] Now, match the needs. [2] Need top reasoning? A large frontier model. [3] Huge volume of simple jobs? A small, cheap model. [4] Private data? An open model on your own servers. [5] Photos or voice? A multimodal model. [6] Long documents? A big context window.",
+   "data": {
+    "heading": "Match the need",
+    "kicker": "STEP 2",
+    "cols": [
+     "Pick"
+    ],
+    "rows": [
+     [
+      "Top reasoning",
+      "Large frontier model"
+     ],
+     [
+      "High volume, simple",
+      "Small, cheap model"
+     ],
+     [
+      "Private data",
+      "Open, self-hosted"
+     ],
+     [
+      "Photos or voice",
+      "Multimodal model"
+     ],
+     [
+      "Long documents",
+      "Big context window"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Then test like a pro. [1] Shortlist two or three models. [2] Build a small test set, of 30 to 50 real examples. [3] Run all models on the same set. [4] Compare quality, cost, and speed. [5] Pick the cheapest one that clears your quality bar.",
+   "data": {
+    "heading": "Test like a pro",
+    "nodes": [
+     [
+      "ListChecks",
+      "Shortlist",
+      "2–3 models"
+     ],
+     [
+      "ClipboardList",
+      "Test set",
+      "30–50 real examples"
+     ],
+     [
+      "Play",
+      "Run",
+      "Same set for all"
+     ],
+     [
+      "BarChart3",
+      "Compare",
+      "Quality, cost, speed"
+     ],
+     [
+      "Trophy",
+      "Pick",
+      "Cheapest that passes"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "dial",
+   "text": "Remember, it's always a trade-off, a triangle of quality, cost, and speed. [1] Push for top quality, and cost goes up. [2] Push for speed and low cost, and quality may drop. [3] The balance point depends on your task.",
+   "data": {
+    "heading": "The trade-off triangle",
+    "prompt": "Summarise a support ticket",
+    "settings": [
+     [
+      0,
+      "cheap · fast",
+      "Small model: good enough for sorting tickets"
+     ],
+     [
+      0.5,
+      "balanced",
+      "Mid model: solid summaries at a fair price"
+     ],
+     [
+      1,
+      "top quality",
+      "Frontier model: best, but pricier and slower"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think they should always use the newest, biggest model. [2] Often, a smaller or older model does the job just as well, for a fraction of the price. And you can mix models, for different steps.",
+   "data": {
+    "myth": "Always use the newest, biggest model.",
+    "fact": "A smaller or older model often does the job just as well, for a fraction of the price.",
+    "tip": "Mix models for different steps"
+   }
+  },
+  {
+   "type": "examples",
+   "text": "Here's a real example. A customer support app might use three models. [1] A small model sorts incoming tickets. [2] A mid model drafts the replies, using RAG. [3] And a top model handles only the tricky cases.",
+   "data": {
+    "heading": "Mixing models",
+    "items": [
+     [
+      "Inbox",
+      "Sort tickets",
+      "Small, cheap model"
+     ],
+     [
+      "PenLine",
+      "Draft replies",
+      "Mid model + RAG"
+     ],
+     [
+      "Brain",
+      "Tricky cases",
+      "Top model"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! After testing, which model should you usually pick? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The cheapest one that meets your quality bar!",
+   "data": {
+    "question": "After testing, pick…",
+    "options": [
+     "The cheapest one that meets your quality bar",
+     "Always the biggest",
+     "The one with the coolest name"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Start with the task, the quality bar, and the limits. [2] Match needs to model types. [3] Test on real examples, and compare. [4] Pick the cheapest model that passes, and mix models where it helps. [5] Next, a big topic, bias in AI. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Task",
+      "quality bar, limits"
+     ],
+     [
+      "Match",
+      "needs to model types"
+     ],
+     [
+      "Test",
+      "on real examples"
+     ],
+     [
+      "Pick",
+      "cheapest that passes"
+     ]
+    ],
+    "next": "EP 42 · Bias in AI"
+   }
   }
+ ],
+ "post": {
+  "caption": "Hundreds of AI models. How do you pick the right one? A simple checklist.\n\nAI From Scratch, Episode 41: choosing the right model\n- Start with the task, the quality bar and the limits\n- Match needs to model types\n- Test like a pro with 30–50 real examples\n- The quality, cost, speed triangle\n- Myth: newest and biggest isn't always best\n\nQuiz at the end. Got it right? Comment below.\n\nNext: bias in AI.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #LearnAI #LLM #AITools #AIForBeginners",
+  "pinned": "Quiz answer: The cheapest one that meets your quality bar. Which model do you use most? Comment below!",
+  "cover": "'Choose a Model' title card",
+  "alt": "Animated checklist for choosing the right AI model by task, quality, cost, speed and privacy."
+ }
 }

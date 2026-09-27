@@ -1,0 +1,231 @@
+{
+  "id": "ep54",
+  "episode": 54,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build an AI Agent with Tools",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "A chatbot can only talk. An agent can act, like checking the weather, searching, or booking. [1] In episode 10, we learned how agents work. [2] Today, we build one in Python, with a real tool loop.",
+      "data": {
+        "kicker": "EPISODE 54",
+        "title": [
+          "Build an",
+          "Agent"
+        ],
+        "subtitle": "Give your AI real tools",
+        "buzzwords": [
+          "Tools",
+          "Tool use",
+          "JSON schema",
+          "Loop",
+          "stop_reason",
+          "Function",
+          "Python",
+          "Hands-on"
+        ]
+      }
+    },
+    {
+      "type": "toolcall",
+      "text": "Here's what we're building. [1] The user asks, what's the weather in Hyderabad? [2] The model replies with a tool call, get weather, for Hyderabad. [3] Our code runs the function, and gets the result. [4] And the model uses that result, to answer.",
+      "data": {
+        "heading": "What we're building",
+        "question": "What's the weather in Hyderabad?",
+        "call": {
+          "tool": "get_weather",
+          "city": "Hyderabad"
+        },
+        "tool": "OUR PYTHON FUNCTION",
+        "result": "Hyderabad: 31°C, sunny",
+        "answer": "It's 31°C and sunny in Hyderabad right now!"
+      }
+    },
+    {
+      "type": "code",
+      "text": "[1] Here's the agent, using the client from before. [2] First, describe the tool, its name, what it does, and its input, a city. [3] Then, the real Python function. Here it returns sample weather, but it could call a real weather API. [4] Start the conversation, with the user's question. [5] In a loop, call the model, and give it the tools. [6] If the model doesn't want a tool, it's finished, so we stop. [7] Otherwise, find its tool call, and run our function. [8] Add the model's request, and the tool result, to the conversation, and loop again. [9] Finally, print the answer. [10] The AI used our tool!",
+      "data": {
+        "heading": "An agent in 17 lines",
+        "file": "agent.py",
+        "lines": [
+          "tools = [{\"name\": \"get_weather\",",
+          "  \"description\": \"Current weather for a city\",",
+          "  \"input_schema\": {\"type\": \"object\",",
+          "    \"properties\": {\"city\": {\"type\": \"string\"}}}}]",
+          "def get_weather(city): return f\"{city}: 31°C, sunny\"",
+          "msgs = [{\"role\": \"user\", \"content\": \"Weather in Hyderabad?\"}]",
+          "while True:",
+          "    r = client.messages.create(model=\"claude-sonnet-5\",",
+          "        max_tokens=500, tools=tools, messages=msgs)",
+          "    if r.stop_reason != \"tool_use\": break",
+          "    call = next(b for b in r.content if b.type == \"tool_use\")",
+          "    result = get_weather(**call.input)",
+          "    msgs.append({\"role\": \"assistant\", \"content\": r.content})",
+          "    msgs.append({\"role\": \"user\", \"content\": [",
+          "        {\"type\": \"tool_result\", \"tool_use_id\": call.id,",
+          "         \"content\": result}]})",
+          "print(r.content[0].text)"
+        ],
+        "groups": [
+          4,
+          1,
+          1,
+          3,
+          1,
+          2,
+          4,
+          1
+        ],
+        "output": [
+          "$ python agent.py",
+          "It's 31°C and sunny in Hyderabad right now!"
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "The key idea is the loop. [1] The model decides if it needs a tool, and which one. [2] Your code runs the tool, the model never runs it itself. [3] The result goes back to the model, and it loops until it's ready to answer.",
+      "data": {
+        "heading": "The agent loop",
+        "kicker": "HOW IT THINKS",
+        "steps": [
+          [
+            "Brain",
+            "Model decides",
+            "Which tool, what input"
+          ],
+          [
+            "Wrench",
+            "Your code runs it",
+            "Model never runs it"
+          ],
+          [
+            "RefreshCw",
+            "Loop",
+            "Until it can answer"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Tool schema, the description of a tool and its inputs, so the model knows how to use it. [2] Stop reason, why the model stopped, like tool use, or end of turn. [3] Tool result, the output we send back. [4] And tool use ID, which links each result to its request.",
+      "data": {
+        "heading": "Agent words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "FileCode",
+            "Tool schema",
+            "Describes the tool"
+          ],
+          [
+            "CircleStop",
+            "Stop reason",
+            "Why it stopped"
+          ],
+          [
+            "ArrowDownToLine",
+            "Tool result",
+            "Output sent back"
+          ],
+          [
+            "Link",
+            "Tool use ID",
+            "Links result to request"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Swap in different tools, and you get different agents. [1] A search tool, for an agent that reads the latest news. [2] A calendar tool, to book meetings. [3] Or a database tool, to answer questions about your sales.",
+      "data": {
+        "heading": "Add more tools",
+        "items": [
+          [
+            "Globe",
+            "Web search",
+            "Latest news"
+          ],
+          [
+            "CalendarDays",
+            "Calendar",
+            "Book meetings"
+          ],
+          [
+            "Database",
+            "Database",
+            "Answer sales questions"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's an important safety rule. [1] Beginners give agents powerful tools, like delete files, or send payments, with no checks. [2] Always limit what tools can do, add a step limit to the loop, and ask a human to confirm risky actions.",
+      "data": {
+        "myth": "Give the agent any tool, it'll use it wisely.",
+        "fact": "Limit tool powers, cap the loop, and confirm risky actions with a human.",
+        "tip": "Least power, human confirms"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In a tool-using agent, who actually runs the tool? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Your code runs it! The model only asks for it.",
+      "data": {
+        "question": "Who runs the tool?",
+        "options": [
+          "Your code",
+          "The model itself",
+          "The user"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Describe your tools with a schema. [2] The model asks for a tool, and your code runs it. [3] Send the result back, and loop until it answers. [4] And limit tool powers, for safety. [5] Next, build your own MCP server. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Schema",
+            "describe the tools"
+          ],
+          [
+            "Model asks",
+            "your code runs"
+          ],
+          [
+            "Loop",
+            "until the answer"
+          ],
+          [
+            "Safety",
+            "limit tool powers"
+          ]
+        ],
+        "next": "EP 55 · MCP server"
+      }
+    }
+  ],
+  "post": {
+    "caption": "A chatbot talks. An agent acts. Build one with a real tool loop, in 17 lines of Python.\n\nAI From Scratch, Episode 54: build an AI agent with tools\n- What we're building: question, tool call, result, answer\n- The code, line by line\n- The agent loop: the model asks, your code runs\n- Jargon: tool schema, stop reason, tool result, tool use ID\n- Safety: limit tool powers and confirm risky actions\n\nQuiz at the end. Got it right? Comment below.\n\nNext: build your own MCP server.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #AIAgents #Python #LearnAI #CodingForBeginners",
+    "pinned": "Quiz answer: Your code runs the tool. The model only asks for it. What tool would you give your agent first? Comment below!",
+    "cover": "'Build an Agent' title card",
+    "alt": "Animated coding tutorial: building a Python AI agent with a tool-use loop."
+  }
+}

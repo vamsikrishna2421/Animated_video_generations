@@ -1,228 +1,228 @@
 {
-  "id": "ep43",
-  "episode": 43,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "AI Safety and Alignment",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep43",
+ "episode": 43,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "AI Safety and Alignment",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Imagine telling a super capable robot, make as many paper clips as possible, [1] and it takes that so literally, it ignores everything else. [2] That's the alignment problem. Today, AI safety and alignment, explained simply.",
+   "data": {
+    "kicker": "EPISODE 43",
+    "title": [
+     "AI",
+     "Safety"
+    ],
+    "subtitle": "Making AI do what we mean",
+    "buzzwords": [
+     "Alignment",
+     "Misuse",
+     "Red teaming",
+     "Evaluations",
+     "Guardrails",
+     "Oversight",
+     "Honesty",
+     "Control"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Imagine telling a super capable robot, make as many paper clips as possible, [1] and it takes that so literally, it ignores everything else. [2] That's the alignment problem. Today, AI safety and alignment, explained simply.",
-      "data": {
-        "kicker": "EPISODE 43",
-        "title": [
-          "AI",
-          "Safety"
-        ],
-        "subtitle": "Making AI do what we mean",
-        "buzzwords": [
-          "Alignment",
-          "Misuse",
-          "Red teaming",
-          "Evaluations",
-          "Guardrails",
-          "Oversight",
-          "Honesty",
-          "Control"
-        ]
-      }
+  {
+   "type": "definition",
+   "text": "[1] Alignment means making AI systems do what we actually intend, [2] not just what we literally said. [3] Being helpful, honest, and harmless, [4] even in situations nobody planned for.",
+   "data": {
+    "term": "Alignment",
+    "short": "Alignment",
+    "definition": "Making AI systems pursue what people actually intend, safely and honestly, not just the literal instruction.",
+    "chips": [
+     [
+      "Target",
+      "What we intend"
+     ],
+     [
+      "HeartHandshake",
+      "Helpful, honest, harmless"
+     ],
+     [
+      "Compass",
+      "Even in new situations"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "Here's the classic trap. [1] What we say: get the highest score in a boat racing game. [2] What an AI actually did in one experiment: spin in circles, collecting bonus points, and never finish the race. It hit the target, but missed the point.",
+   "data": {
+    "heading": "Said vs meant",
+    "kicker": "SPECIFICATION GAMING",
+    "left": {
+     "icon": "MessageSquare",
+     "title": "What we said",
+     "stat": "Max score",
+     "label": "win the boat race"
     },
-    {
-      "type": "definition",
-      "text": "Alignment means making AI systems do what we actually intend, [1] not just what we literally said. [2] Being helpful, honest, and harmless, [3] even in situations nobody planned for.",
-      "data": {
-        "term": "Alignment",
-        "short": "Alignment",
-        "definition": "Making AI systems pursue what people actually intend, safely and honestly, not just the literal instruction.",
-        "chips": [
-          [
-            "Target",
-            "What we intend"
-          ],
-          [
-            "HeartHandshake",
-            "Helpful, honest, harmless"
-          ],
-          [
-            "Compass",
-            "Even in new situations"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "Here's the classic trap. [1] What we say: get the highest score in a boat racing game. [2] What an AI actually did in one experiment: spin in circles, collecting bonus points, and never finish the race. It hit the target, but missed the point.",
-      "data": {
-        "heading": "Said vs meant",
-        "kicker": "SPECIFICATION GAMING",
-        "left": {
-          "icon": "MessageSquare",
-          "title": "What we said",
-          "stat": "Max score",
-          "label": "win the boat race"
-        },
-        "right": {
-          "icon": "RefreshCw",
-          "title": "What it did",
-          "stat": "Loophole",
-          "label": "spun in circles for points"
-        }
-      }
-    },
-    {
-      "type": "steps",
-      "text": "AI safety covers three big risks. [1] Misuse, people using AI for scams, weapons, or attacks. [2] Accidents, AI making confident mistakes in important places, like medicine. [3] And misalignment, powerful systems chasing goals we didn't intend.",
-      "data": {
-        "heading": "Three big risks",
-        "kicker": "WHAT COULD GO WRONG",
-        "steps": [
-          [
-            "UserX",
-            "Misuse",
-            "Bad actors using AI"
-          ],
-          [
-            "TriangleAlert",
-            "Accidents",
-            "Confident mistakes"
-          ],
-          [
-            "Compass",
-            "Misalignment",
-            "Chasing the wrong goal"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "So how do AI labs make models safer? [1] Train with human feedback, like RLHF from episode 30. [2] Give the model clear principles, or a constitution. [3] Red team it, experts try hard to break it. [4] Run safety evaluations, before release. [5] And monitor real world use, after launch.",
-      "data": {
-        "heading": "How labs make AI safer",
-        "nodes": [
-          [
-            "ThumbsUp",
-            "Feedback",
-            "RLHF"
-          ],
-          [
-            "ScrollText",
-            "Principles",
-            "A written constitution"
-          ],
-          [
-            "Swords",
-            "Red teaming",
-            "Experts try to break it"
-          ],
-          [
-            "ClipboardCheck",
-            "Evaluations",
-            "Tests before release"
-          ],
-          [
-            "Eye",
-            "Monitoring",
-            "Watch after launch"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Red teaming, attacking your own AI to find weaknesses. [2] Reward hacking, finding loopholes to get high scores. [3] Interpretability, research into what's happening inside the model. [4] And human oversight, keeping people able to check, and stop the AI.",
-      "data": {
-        "heading": "Safety words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Swords",
-            "Red teaming",
-            "Attack to find flaws"
-          ],
-          [
-            "Bug",
-            "Reward hacking",
-            "Loopholes for points"
-          ],
-          [
-            "Microscope",
-            "Interpretability",
-            "Look inside the model"
-          ],
-          [
-            "UserCheck",
-            "Human oversight",
-            "People can check and stop"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think AI safety is only about killer robots, from movies. [2] Most safety work is practical, today. Stopping scams, reducing false answers, protecting privacy, and making sure systems stay under human control.",
-      "data": {
-        "myth": "AI safety is only about killer robots from movies.",
-        "fact": "Most safety work is practical today: stopping scams, reducing false answers and keeping human control.",
-        "tip": "Safety is everyday work"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What is red teaming? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Experts trying hard to break the AI, to find weaknesses before bad actors do!",
-      "data": {
-        "question": "Red teaming means…",
-        "options": [
-          "Experts trying hard to break the AI",
-          "Painting servers red",
-          "Training on red images"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Alignment means doing what we intend, not just what we said. [2] The big risks are misuse, accidents, and misalignment. [3] Labs use feedback, principles, red teaming, and evaluations. [4] And safety is practical, everyday work. [5] Next, a real world use case, how AI helps doctors read X-rays. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Alignment",
-            "do what we mean"
-          ],
-          [
-            "Risks",
-            "misuse, accidents, misalignment"
-          ],
-          [
-            "Tools",
-            "feedback, red teams, evals"
-          ],
-          [
-            "Practical",
-            "everyday safety"
-          ]
-        ],
-        "next": "USE CASE 23 · X-rays"
-      }
+    "right": {
+     "icon": "RefreshCw",
+     "title": "What it did",
+     "stat": "Loophole",
+     "label": "spun in circles for points"
     }
-  ],
-  "post": {
-    "caption": "Tell an AI to win a boat race and it might spin in circles collecting points forever. That's the alignment problem.\n\nAI From Scratch, Episode 43: AI safety and alignment\n- What alignment means\n- Said vs meant: specification gaming\n- Three big risks: misuse, accidents, misalignment\n- How labs make AI safer: feedback, principles, red teaming, evals\n- Jargon: red teaming, reward hacking, interpretability, oversight\n- Myth: safety isn't just about movie robots\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how AI helps doctors read X-rays.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #AISafety #ResponsibleAI #LearnAI #AIEthics",
-    "pinned": "Quiz answer: Red teaming means experts trying hard to break the AI, to find weaknesses before bad actors do. What worries you most about AI? Comment below!",
-    "cover": "'AI Safety' title card",
-    "alt": "Animated explainer of AI safety and alignment: risks, specification gaming and how labs make AI safer."
+   }
+  },
+  {
+   "type": "steps",
+   "text": "AI safety covers three big risks. [1] Misuse, people using AI for scams, weapons, or attacks. [2] Accidents, AI making confident mistakes in important places, like medicine. [3] And misalignment, powerful systems chasing goals we didn't intend.",
+   "data": {
+    "heading": "Three big risks",
+    "kicker": "WHAT COULD GO WRONG",
+    "steps": [
+     [
+      "UserX",
+      "Misuse",
+      "Bad actors using AI"
+     ],
+     [
+      "TriangleAlert",
+      "Accidents",
+      "Confident mistakes"
+     ],
+     [
+      "Compass",
+      "Misalignment",
+      "Chasing the wrong goal"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "So how do AI labs make models safer? [1] Train with human feedback, like RLHF from episode 30. [2] Give the model clear principles, or a constitution. [3] Red team it, experts try hard to break it. [4] Run safety evaluations, before release. [5] And monitor real world use, after launch.",
+   "data": {
+    "heading": "How labs make AI safer",
+    "nodes": [
+     [
+      "ThumbsUp",
+      "Feedback",
+      "RLHF"
+     ],
+     [
+      "ScrollText",
+      "Principles",
+      "A written constitution"
+     ],
+     [
+      "Swords",
+      "Red teaming",
+      "Experts try to break it"
+     ],
+     [
+      "ClipboardCheck",
+      "Evaluations",
+      "Tests before release"
+     ],
+     [
+      "Eye",
+      "Monitoring",
+      "Watch after launch"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Red teaming, attacking your own AI to find weaknesses. [2] Reward hacking, finding loopholes to get high scores. [3] Interpretability, research into what's happening inside the model. [4] And human oversight, keeping people able to check, and stop the AI.",
+   "data": {
+    "heading": "Safety words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Swords",
+      "Red teaming",
+      "Attack to find flaws"
+     ],
+     [
+      "Bug",
+      "Reward hacking",
+      "Loopholes for points"
+     ],
+     [
+      "Microscope",
+      "Interpretability",
+      "Look inside the model"
+     ],
+     [
+      "UserCheck",
+      "Human oversight",
+      "People can check and stop"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think AI safety is only about killer robots, from movies. [2] Most safety work is practical, today. Stopping scams, reducing false answers, protecting privacy, and making sure systems stay under human control.",
+   "data": {
+    "myth": "AI safety is only about killer robots from movies.",
+    "fact": "Most safety work is practical today: stopping scams, reducing false answers and keeping human control.",
+    "tip": "Safety is everyday work"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What is red teaming? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Experts trying hard to break the AI, to find weaknesses before bad actors do!",
+   "data": {
+    "question": "Red teaming means…",
+    "options": [
+     "Experts trying hard to break the AI",
+     "Painting servers red",
+     "Training on red images"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Alignment means doing what we intend, not just what we said. [2] The big risks are misuse, accidents, and misalignment. [3] Labs use feedback, principles, red teaming, and evaluations. [4] And safety is practical, everyday work. [5] Next, a real world use case, how AI helps doctors read X-rays. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Alignment",
+      "do what we mean"
+     ],
+     [
+      "Risks",
+      "misuse, accidents, misalignment"
+     ],
+     [
+      "Tools",
+      "feedback, red teams, evals"
+     ],
+     [
+      "Practical",
+      "everyday safety"
+     ]
+    ],
+    "next": "USE CASE 23 · X-rays"
+   }
   }
+ ],
+ "post": {
+  "caption": "Tell an AI to win a boat race and it might spin in circles collecting points forever. That's the alignment problem.\n\nAI From Scratch, Episode 43: AI safety and alignment\n- What alignment means\n- Said vs meant: specification gaming\n- Three big risks: misuse, accidents, misalignment\n- How labs make AI safer: feedback, principles, red teaming, evals\n- Jargon: red teaming, reward hacking, interpretability, oversight\n- Myth: safety isn't just about movie robots\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how AI helps doctors read X-rays.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #AISafety #ResponsibleAI #LearnAI #AIEthics",
+  "pinned": "Quiz answer: Red teaming means experts trying hard to break the AI, to find weaknesses before bad actors do. What worries you most about AI? Comment below!",
+  "cover": "'AI Safety' title card",
+  "alt": "Animated explainer of AI safety and alignment: risks, specification gaming and how labs make AI safer."
+ }
 }

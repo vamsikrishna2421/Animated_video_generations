@@ -1,272 +1,272 @@
 {
-  "id": "ep32",
-  "episode": 32,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "RAG, Part 2: Chunking, Vector Databases and Reranking",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep32",
+ "episode": 32,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "RAG, Part 2: Chunking, Vector Databases and Reranking",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "In episode 7, we learned that RAG lets AI look things up before answering. [1] But how does it find the right paragraph, among thousands of pages? [2] Let's open the engine room of RAG. Part 2.",
+   "data": {
+    "kicker": "EPISODE 32",
+    "title": [
+     "RAG",
+     "Part 2"
+    ],
+    "subtitle": "Chunking, vector databases, reranking",
+    "buzzwords": [
+     "Chunks",
+     "Embeddings",
+     "Vector database",
+     "Top K",
+     "Reranking",
+     "Retrieval",
+     "Context",
+     "Citations"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "In episode 7, we learned that RAG lets AI look things up before answering. [1] But how does it find the right paragraph, among thousands of pages? [2] Let's open the engine room of RAG. Part 2.",
-      "data": {
-        "kicker": "EPISODE 32",
-        "title": [
-          "RAG",
-          "Part 2"
-        ],
-        "subtitle": "Chunking, vector databases, reranking",
-        "buzzwords": [
-          "Chunks",
-          "Embeddings",
-          "Vector database",
-          "Top K",
-          "Reranking",
-          "Retrieval",
-          "Context",
-          "Citations"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's the full RAG pipeline. [1] First, split your documents into small chunks. [2] Turn each chunk into an embedding, a list of numbers that captures its meaning. [3] Store them in a vector database. [4] When a question comes in, find the closest chunks, [5] then rerank them, and send the best few to the AI.",
+   "data": {
+    "heading": "The RAG engine",
+    "nodes": [
+     [
+      "Scissors",
+      "Chunk",
+      "Split documents"
+     ],
+     [
+      "Binary",
+      "Embed",
+      "Meaning as numbers"
+     ],
+     [
+      "Database",
+      "Store",
+      "Vector database"
+     ],
+     [
+      "Search",
+      "Retrieve",
+      "Closest chunks"
+     ],
+     [
+      "ListOrdered",
+      "Rerank",
+      "Best few to the AI"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Let's start with chunking. [1] If chunks are too big, the useful sentence gets buried in noise. [2] If chunks are too small, they lose context, like half a sentence. [3] A common choice is a few hundred words per chunk, with a little overlap, so ideas aren't cut in half.",
+   "data": {
+    "heading": "Chunking",
+    "kicker": "STEP 1",
+    "steps": [
+     [
+      "Maximize2",
+      "Too big",
+      "Answer buried in noise"
+     ],
+     [
+      "Minimize2",
+      "Too small",
+      "Loses context"
+     ],
+     [
+      "Layers",
+      "Just right",
+      "A few hundred words + overlap"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "embedmap",
+   "text": "Next, embeddings, from episode 6. [1] Each chunk becomes a point on a map of meaning. [2] Chunks about refunds cluster together, and so do chunks about shipping. [3] A question like, can I get my money back, lands near the refund chunks, even without the word refund.",
+   "data": {
+    "heading": "Chunks on a meaning map",
+    "kicker": "STEP 2",
+    "points": [
+     [
+      "Refund policy",
+      0.18,
+      0.2,
+      0
+     ],
+     [
+      "Return window",
+      0.34,
+      0.12,
+      0
+     ],
+     [
+      "Money back",
+      0.24,
+      0.34,
+      0
+     ],
+     [
+      "Delivery times",
+      0.66,
+      0.2,
+      1
+     ],
+     [
+      "Courier partners",
+      0.84,
+      0.3,
+      1
+     ],
+     [
+      "Tracking",
+      0.7,
+      0.38,
+      1
+     ],
+     [
+      "Warranty",
+      0.3,
+      0.74,
+      2
+     ],
+     [
+      "Repairs",
+      0.52,
+      0.84,
+      2
+     ],
+     [
+      "Spare parts",
+      0.18,
+      0.86,
+      2
+     ]
+    ],
+    "query": [
+     "Can I get my money back?",
+     0.3,
+     0.26
+    ],
+    "neighbors": [
+     "Money back",
+     "Refund policy"
+    ],
+    "note": "Found by meaning, not exact words"
+   }
+  },
+  {
+   "type": "definition",
+   "text": "[1] A vector database stores millions of these points, [2] and finds the nearest ones to your question in milliseconds. [3] It returns the top K matches, say the top 20. [4] Popular ones include Pinecone, Chroma, and pgvector.",
+   "data": {
+    "term": "Vector database",
+    "short": "Vector DB",
+    "definition": "A database built to store embeddings and quickly find the ones closest in meaning to a query.",
+    "chips": [
+     [
+      "Gauge",
+      "Search in milliseconds"
+     ],
+     [
+      "ListOrdered",
+      "Returns the top K"
+     ],
+     [
+      "Database",
+      "Pinecone, Chroma, pgvector"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "Now, reranking. [1] Vector search is fast, but a bit rough. It finds chunks that sound similar. [2] A reranker is slower, but smarter. It reads the question and each chunk together, and scores how well it actually answers. [3] So we search wide, then rerank, and keep the best few.",
+   "data": {
+    "heading": "Search, then rerank",
+    "kicker": "STEP 3",
+    "left": {
+     "icon": "Zap",
+     "title": "Vector search",
+     "stat": "Fast",
+     "label": "finds similar-sounding chunks"
     },
-    {
-      "type": "pipeline",
-      "text": "Here's the full RAG pipeline. [1] First, split your documents into small chunks. [2] Turn each chunk into an embedding, a list of numbers that captures its meaning. [3] Store them in a vector database. [4] When a question comes in, find the closest chunks, [5] then rerank them, and send the best few to the AI.",
-      "data": {
-        "heading": "The RAG engine",
-        "nodes": [
-          [
-            "Scissors",
-            "Chunk",
-            "Split documents"
-          ],
-          [
-            "Binary",
-            "Embed",
-            "Meaning as numbers"
-          ],
-          [
-            "Database",
-            "Store",
-            "Vector database"
-          ],
-          [
-            "Search",
-            "Retrieve",
-            "Closest chunks"
-          ],
-          [
-            "ListOrdered",
-            "Rerank",
-            "Best few to the AI"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Let's start with chunking. [1] If chunks are too big, the useful sentence gets buried in noise. [2] If chunks are too small, they lose context, like half a sentence. [3] A common choice is a few hundred words per chunk, with a little overlap, so ideas aren't cut in half.",
-      "data": {
-        "heading": "Chunking",
-        "kicker": "STEP 1",
-        "steps": [
-          [
-            "Maximize2",
-            "Too big",
-            "Answer buried in noise"
-          ],
-          [
-            "Minimize2",
-            "Too small",
-            "Loses context"
-          ],
-          [
-            "Layers",
-            "Just right",
-            "A few hundred words + overlap"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "embedmap",
-      "text": "Next, embeddings, from episode 6. [1] Each chunk becomes a point on a map of meaning. [2] Chunks about refunds cluster together, and so do chunks about shipping. [3] A question like, can I get my money back, lands near the refund chunks, even without the word refund.",
-      "data": {
-        "heading": "Chunks on a meaning map",
-        "kicker": "STEP 2",
-        "points": [
-          [
-            "Refund policy",
-            0.18,
-            0.2,
-            0
-          ],
-          [
-            "Return window",
-            0.34,
-            0.12,
-            0
-          ],
-          [
-            "Money back",
-            0.24,
-            0.34,
-            0
-          ],
-          [
-            "Delivery times",
-            0.66,
-            0.2,
-            1
-          ],
-          [
-            "Courier partners",
-            0.84,
-            0.3,
-            1
-          ],
-          [
-            "Tracking",
-            0.7,
-            0.38,
-            1
-          ],
-          [
-            "Warranty",
-            0.3,
-            0.74,
-            2
-          ],
-          [
-            "Repairs",
-            0.52,
-            0.84,
-            2
-          ],
-          [
-            "Spare parts",
-            0.18,
-            0.86,
-            2
-          ]
-        ],
-        "query": [
-          "Can I get my money back?",
-          0.3,
-          0.26
-        ],
-        "neighbors": [
-          "Money back",
-          "Refund policy"
-        ],
-        "note": "Found by meaning, not exact words"
-      }
-    },
-    {
-      "type": "definition",
-      "text": "A vector database stores millions of these points, [1] and finds the nearest ones to your question in milliseconds. [2] It returns the top K matches, say the top 20. [3] Popular ones include Pinecone, Chroma, and pgvector.",
-      "data": {
-        "term": "Vector database",
-        "short": "Vector DB",
-        "definition": "A database built to store embeddings and quickly find the ones closest in meaning to a query.",
-        "chips": [
-          [
-            "Gauge",
-            "Search in milliseconds"
-          ],
-          [
-            "ListOrdered",
-            "Returns the top K"
-          ],
-          [
-            "Database",
-            "Pinecone, Chroma, pgvector"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "Now, reranking. [1] Vector search is fast, but a bit rough. It finds chunks that sound similar. [2] A reranker is slower, but smarter. It reads the question and each chunk together, and scores how well it actually answers. [3] So we search wide, then rerank, and keep the best few.",
-      "data": {
-        "heading": "Search, then rerank",
-        "kicker": "STEP 3",
-        "left": {
-          "icon": "Zap",
-          "title": "Vector search",
-          "stat": "Fast",
-          "label": "finds similar-sounding chunks"
-        },
-        "right": {
-          "icon": "ListOrdered",
-          "title": "Reranker",
-          "stat": "Smart",
-          "label": "checks which truly answers"
-        }
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think, with a giant context window, you can skip retrieval and just paste everything. [2] Long prompts cost more, run slower, and the AI can miss details buried in the middle. Good retrieval still wins.",
-      "data": {
-        "myth": "With a giant context window, just paste everything and skip retrieval.",
-        "fact": "Huge prompts cost more, run slower, and details in the middle get missed. Good retrieval still wins.",
-        "tip": "Send the best, not the most"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What does a reranker do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It re-scores the retrieved chunks by how well they actually answer the question!",
-      "data": {
-        "question": "A reranker…",
-        "options": [
-          "Re-scores retrieved chunks by how well they answer",
-          "Splits documents into chunks",
-          "Trains the language model"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Chunk documents into right-sized pieces, with overlap. [2] Embed each chunk as meaning numbers. [3] A vector database finds the closest chunks fast. [4] And a reranker picks the best few for the AI. [5] Next, RAG part three, hybrid search, and measuring quality. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Chunk",
-            "right-sized, with overlap"
-          ],
-          [
-            "Embed",
-            "meaning as numbers"
-          ],
-          [
-            "Vector DB",
-            "finds closest chunks"
-          ],
-          [
-            "Rerank",
-            "keep the best few"
-          ]
-        ],
-        "next": "EP 33 · RAG Part 3"
-      }
+    "right": {
+     "icon": "ListOrdered",
+     "title": "Reranker",
+     "stat": "Smart",
+     "label": "checks which truly answers"
     }
-  ],
-  "post": {
-    "caption": "How does RAG find the right paragraph in thousands of pages? This is the engine room.\n\nAI From Scratch, Episode 32: RAG Part 2\n- The pipeline: chunk, embed, store, retrieve, rerank\n- Chunking: too big, too small, just right\n- Embeddings on a meaning map\n- Vector databases and top K\n- Why reranking beats raw vector search\n- Myth: giant context windows don't replace retrieval\n\nQuiz at the end. Got it right? Comment below.\n\nNext: RAG Part 3, hybrid search and measuring quality.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #RAG #VectorDatabase #LearnAI #GenerativeAI",
-    "pinned": "Quiz answer: A reranker re-scores the retrieved chunks by how well they actually answer the question. Which vector database have you tried? Comment below!",
-    "cover": "'RAG Part 2' title card",
-    "alt": "Animated explainer of RAG internals: chunking, embeddings, vector databases and reranking."
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think, with a giant context window, you can skip retrieval and just paste everything. [2] Long prompts cost more, run slower, and the AI can miss details buried in the middle. Good retrieval still wins.",
+   "data": {
+    "myth": "With a giant context window, just paste everything and skip retrieval.",
+    "fact": "Huge prompts cost more, run slower, and details in the middle get missed. Good retrieval still wins.",
+    "tip": "Send the best, not the most"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What does a reranker do? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It re-scores the retrieved chunks by how well they actually answer the question!",
+   "data": {
+    "question": "A reranker…",
+    "options": [
+     "Re-scores retrieved chunks by how well they answer",
+     "Splits documents into chunks",
+     "Trains the language model"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Chunk documents into right-sized pieces, with overlap. [2] Embed each chunk as meaning numbers. [3] A vector database finds the closest chunks fast. [4] And a reranker picks the best few for the AI. [5] Next, RAG part three, hybrid search, and measuring quality. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Chunk",
+      "right-sized, with overlap"
+     ],
+     [
+      "Embed",
+      "meaning as numbers"
+     ],
+     [
+      "Vector DB",
+      "finds closest chunks"
+     ],
+     [
+      "Rerank",
+      "keep the best few"
+     ]
+    ],
+    "next": "EP 33 · RAG Part 3"
+   }
   }
+ ],
+ "post": {
+  "caption": "How does RAG find the right paragraph in thousands of pages? This is the engine room.\n\nAI From Scratch, Episode 32: RAG Part 2\n- The pipeline: chunk, embed, store, retrieve, rerank\n- Chunking: too big, too small, just right\n- Embeddings on a meaning map\n- Vector databases and top K\n- Why reranking beats raw vector search\n- Myth: giant context windows don't replace retrieval\n\nQuiz at the end. Got it right? Comment below.\n\nNext: RAG Part 3, hybrid search and measuring quality.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #RAG #VectorDatabase #LearnAI #GenerativeAI",
+  "pinned": "Quiz answer: A reranker re-scores the retrieved chunks by how well they actually answer the question. Which vector database have you tried? Comment below!",
+  "cover": "'RAG Part 2' title card",
+  "alt": "Animated explainer of RAG internals: chunking, embeddings, vector databases and reranking."
+ }
 }

@@ -1,228 +1,228 @@
 {
-  "id": "ep39",
-  "episode": 39,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Where AI Costs Come From",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep39",
+ "episode": 39,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Where AI Costs Come From",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Every time you send a message to a chatbot, someone pays for it. [1] Sometimes a fraction of a rupee, sometimes much more. [2] So where does the cost of AI actually come from? Let's break it down.",
+   "data": {
+    "kicker": "EPISODE 39",
+    "title": [
+     "AI",
+     "Costs"
+    ],
+    "subtitle": "Who pays for every answer?",
+    "buzzwords": [
+     "Tokens",
+     "Input",
+     "Output",
+     "Inference",
+     "Training",
+     "GPUs",
+     "Caching",
+     "Pricing"
+    ]
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Every time you send a message to a chatbot, someone pays for it. [1] Sometimes a fraction of a rupee, sometimes much more. [2] So where does the cost of AI actually come from? Let's break it down.",
-      "data": {
-        "kicker": "EPISODE 39",
-        "title": [
-          "AI",
-          "Costs"
-        ],
-        "subtitle": "Who pays for every answer?",
-        "buzzwords": [
-          "Tokens",
-          "Input",
-          "Output",
-          "Inference",
-          "Training",
-          "GPUs",
-          "Caching",
-          "Pricing"
-        ]
-      }
+  {
+   "type": "versus",
+   "text": "There are two big costs. [1] Training, a huge one time cost, to build the model. For the biggest models, it can be hundreds of millions of dollars. [2] Inference, a small cost every time someone uses it. Tiny per message, but it adds up with millions of users.",
+   "data": {
+    "heading": "Two big costs",
+    "kicker": "BUILD VS USE",
+    "left": {
+     "icon": "Hammer",
+     "title": "Training",
+     "stat": "One time",
+     "label": "huge cost to build the model"
     },
-    {
-      "type": "versus",
-      "text": "There are two big costs. [1] Training, a huge one time cost, to build the model. For the biggest models, it can be hundreds of millions of dollars. [2] Inference, a small cost every time someone uses it. Tiny per message, but it adds up with millions of users.",
-      "data": {
-        "heading": "Two big costs",
-        "kicker": "BUILD VS USE",
-        "left": {
-          "icon": "Hammer",
-          "title": "Training",
-          "stat": "One time",
-          "label": "huge cost to build the model"
-        },
-        "right": {
-          "icon": "MessageSquare",
-          "title": "Inference",
-          "stat": "Every use",
-          "label": "tiny per message, adds up"
-        }
-      }
-    },
-    {
-      "type": "definition",
-      "text": "APIs charge per token, from episode 3. [1] Input tokens, the text you send, including documents and chat history. [2] Output tokens, the text the model writes, which usually cost several times more. [3] Longer conversations cost more, because the history is sent again, every turn.",
-      "data": {
-        "term": "Pay per token",
-        "short": "Tokens",
-        "definition": "AI APIs charge by the number of tokens read and written. Output tokens usually cost more than input.",
-        "chips": [
-          [
-            "ArrowDownToLine",
-            "Input tokens"
-          ],
-          [
-            "ArrowUpFromLine",
-            "Output tokens cost more"
-          ],
-          [
-            "History",
-            "History is resent"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's what drives the bill. [1] Model size, bigger models cost more per token. [2] Prompt length, long documents and chat history. [3] Answer length, long answers cost more. [4] Number of calls, agents may call the model many times, for one task. [5] And traffic, multiplied by every user.",
-      "data": {
-        "heading": "What drives the bill",
-        "nodes": [
-          [
-            "Brain",
-            "Model size",
-            "Bigger costs more"
-          ],
-          [
-            "FileText",
-            "Prompt length",
-            "Docs and history"
-          ],
-          [
-            "PenLine",
-            "Answer length",
-            "Output tokens"
-          ],
-          [
-            "Repeat",
-            "Calls per task",
-            "Agents loop"
-          ],
-          [
-            "Users",
-            "Traffic",
-            "Times every user"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "So how do teams cut costs? [1] Use the smallest model that does the job well. [2] Keep prompts short, and send only relevant chunks, with RAG. [3] And use caching, reusing answers, and repeated prompt parts, instead of paying again.",
-      "data": {
-        "heading": "How to cut costs",
-        "kicker": "SAVE MONEY",
-        "steps": [
-          [
-            "Minimize2",
-            "Right-size",
-            "Smallest model that works"
-          ],
-          [
-            "Scissors",
-            "Trim prompts",
-            "Only relevant chunks"
-          ],
-          [
-            "Archive",
-            "Cache",
-            "Reuse, don't repay"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Price per million tokens, how APIs list their prices. [2] Prompt caching, a discount when the start of your prompt repeats. [3] Batch processing, cheaper prices if you can wait for results. [4] And latency, how long you wait, which often trades off against cost.",
-      "data": {
-        "heading": "Cost words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Tag",
-            "Price per million",
-            "How APIs list prices"
-          ],
-          [
-            "Archive",
-            "Prompt caching",
-            "Discount on repeats"
-          ],
-          [
-            "Layers",
-            "Batch",
-            "Cheaper if you wait"
-          ],
-          [
-            "Timer",
-            "Latency",
-            "How long you wait"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think free chatbots cost nothing to run. [2] Every answer uses GPUs and electricity. Free plans are paid for by subscriptions, investors, or limits on how much you can use.",
-      "data": {
-        "myth": "Free chatbots cost nothing to run.",
-        "fact": "Every answer uses GPUs and electricity. Free plans are paid for by subscriptions, investors or usage limits.",
-        "tip": "Nothing is truly free"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Which usually costs more per token? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Output tokens, the text the model writes, usually cost more!",
-      "data": {
-        "question": "Which costs more per token?",
-        "options": [
-          "Output tokens",
-          "Input tokens",
-          "They're always equal"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Training is a huge one time cost. [2] Inference costs a little, every time. [3] APIs charge per token, and output costs more. [4] Cut costs with smaller models, shorter prompts, and caching. [5] Next, how AI models are tested, with benchmarks. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Training",
-            "one-time, huge"
-          ],
-          [
-            "Inference",
-            "every use"
-          ],
-          [
-            "Per token",
-            "output costs more"
-          ],
-          [
-            "Save",
-            "right-size, trim, cache"
-          ]
-        ],
-        "next": "EP 40 · Benchmarks"
-      }
+    "right": {
+     "icon": "MessageSquare",
+     "title": "Inference",
+     "stat": "Every use",
+     "label": "tiny per message, adds up"
     }
-  ],
-  "post": {
-    "caption": "Every chatbot message costs someone money. Here's where it goes.\n\nAI From Scratch, Episode 39: where AI costs come from\n- Training vs inference\n- Pay per token: input vs output\n- What drives the bill: size, prompts, answers, calls, traffic\n- How teams cut costs: right-size, trim, cache\n- Jargon: price per million, prompt caching, batch, latency\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how AI models are tested, with benchmarks.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #LearnAI #AICost #GenerativeAI #AIForBeginners",
-    "pinned": "Quiz answer: Output tokens, the text the model writes, usually cost more. Did you know chat history is resent every turn? Comment below!",
-    "cover": "'AI Costs' title card",
-    "alt": "Animated explainer of AI costs: training vs inference, token pricing and ways to cut costs."
+   }
+  },
+  {
+   "type": "definition",
+   "text": "[1] APIs charge per token, from episode 3. [2] Input tokens, the text you send, including documents and chat history. [3] Output tokens, the text the model writes, which usually cost several times more. [4] Longer conversations cost more, because the history is sent again, every turn.",
+   "data": {
+    "term": "Pay per token",
+    "short": "Tokens",
+    "definition": "AI APIs charge by the number of tokens read and written. Output tokens usually cost more than input.",
+    "chips": [
+     [
+      "ArrowDownToLine",
+      "Input tokens"
+     ],
+     [
+      "ArrowUpFromLine",
+      "Output tokens cost more"
+     ],
+     [
+      "History",
+      "History is resent"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Here's what drives the bill. [1] Model size, bigger models cost more per token. [2] Prompt length, long documents and chat history. [3] Answer length, long answers cost more. [4] Number of calls, agents may call the model many times, for one task. [5] And traffic, multiplied by every user.",
+   "data": {
+    "heading": "What drives the bill",
+    "nodes": [
+     [
+      "Brain",
+      "Model size",
+      "Bigger costs more"
+     ],
+     [
+      "FileText",
+      "Prompt length",
+      "Docs and history"
+     ],
+     [
+      "PenLine",
+      "Answer length",
+      "Output tokens"
+     ],
+     [
+      "Repeat",
+      "Calls per task",
+      "Agents loop"
+     ],
+     [
+      "Users",
+      "Traffic",
+      "Times every user"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "So how do teams cut costs? [1] Use the smallest model that does the job well. [2] Keep prompts short, and send only relevant chunks, with RAG. [3] And use caching, reusing answers, and repeated prompt parts, instead of paying again.",
+   "data": {
+    "heading": "How to cut costs",
+    "kicker": "SAVE MONEY",
+    "steps": [
+     [
+      "Minimize2",
+      "Right-size",
+      "Smallest model that works"
+     ],
+     [
+      "Scissors",
+      "Trim prompts",
+      "Only relevant chunks"
+     ],
+     [
+      "Archive",
+      "Cache",
+      "Reuse, don't repay"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Price per million tokens, how APIs list their prices. [2] Prompt caching, a discount when the start of your prompt repeats. [3] Batch processing, cheaper prices if you can wait for results. [4] And latency, how long you wait, which often trades off against cost.",
+   "data": {
+    "heading": "Cost words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Tag",
+      "Price per million",
+      "How APIs list prices"
+     ],
+     [
+      "Archive",
+      "Prompt caching",
+      "Discount on repeats"
+     ],
+     [
+      "Layers",
+      "Batch",
+      "Cheaper if you wait"
+     ],
+     [
+      "Timer",
+      "Latency",
+      "How long you wait"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think free chatbots cost nothing to run. [2] Every answer uses GPUs and electricity. Free plans are paid for by subscriptions, investors, or limits on how much you can use.",
+   "data": {
+    "myth": "Free chatbots cost nothing to run.",
+    "fact": "Every answer uses GPUs and electricity. Free plans are paid for by subscriptions, investors or usage limits.",
+    "tip": "Nothing is truly free"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which usually costs more per token? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Output tokens, the text the model writes, usually cost more!",
+   "data": {
+    "question": "Which costs more per token?",
+    "options": [
+     "Output tokens",
+     "Input tokens",
+     "They're always equal"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Training is a huge one time cost. [2] Inference costs a little, every time. [3] APIs charge per token, and output costs more. [4] Cut costs with smaller models, shorter prompts, and caching. [5] Next, how AI models are tested, with benchmarks. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Training",
+      "one-time, huge"
+     ],
+     [
+      "Inference",
+      "every use"
+     ],
+     [
+      "Per token",
+      "output costs more"
+     ],
+     [
+      "Save",
+      "right-size, trim, cache"
+     ]
+    ],
+    "next": "EP 40 · Benchmarks"
+   }
   }
+ ],
+ "post": {
+  "caption": "Every chatbot message costs someone money. Here's where it goes.\n\nAI From Scratch, Episode 39: where AI costs come from\n- Training vs inference\n- Pay per token: input vs output\n- What drives the bill: size, prompts, answers, calls, traffic\n- How teams cut costs: right-size, trim, cache\n- Jargon: price per million, prompt caching, batch, latency\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how AI models are tested, with benchmarks.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #LearnAI #AICost #GenerativeAI #AIForBeginners",
+  "pinned": "Quiz answer: Output tokens, the text the model writes, usually cost more. Did you know chat history is resent every turn? Comment below!",
+  "cover": "'AI Costs' title card",
+  "alt": "Animated explainer of AI costs: training vs inference, token pricing and ways to cut costs."
+ }
 }
