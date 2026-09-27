@@ -1,0 +1,213 @@
+{
+  "id": "ep35",
+  "episode": 35,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Small Language Models",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Everyone talks about giant AI models with hundreds of billions of parameters. [1] But some of the most useful models are tiny, small enough to run on your phone. [2] Let's talk about small language models.",
+      "data": {
+        "kicker": "EPISODE 35",
+        "title": [
+          "Small",
+          "Models"
+        ],
+        "subtitle": "Big brains in tiny packages",
+        "buzzwords": [
+          "SLM",
+          "On-device",
+          "Parameters",
+          "Distillation",
+          "Phi",
+          "Gemma",
+          "Fast",
+          "Private"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "A small language model, or SLM, [1] usually has a few billion parameters, or fewer, [2] compared to hundreds of billions in the biggest models. [3] It's small enough to run on a laptop, or even a phone.",
+      "data": {
+        "term": "Small language model",
+        "short": "SLM",
+        "definition": "A language model with roughly a few billion parameters or fewer, compact enough to run on everyday devices.",
+        "chips": [
+          [
+            "Hash",
+            "A few billion parameters"
+          ],
+          [
+            "Building2",
+            "vs hundreds of billions"
+          ],
+          [
+            "Smartphone",
+            "Runs on laptops and phones"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Think of it like vehicles. [1] A giant model is a big truck. It can carry anything, but it's expensive to run. [2] A small model is a scooter. It can't carry everything, but it's cheap, fast, and zips through daily trips.",
+      "data": {
+        "heading": "Truck vs scooter",
+        "kicker": "SIZE MATTERS",
+        "left": {
+          "icon": "Truck",
+          "title": "Giant model",
+          "stat": "Carries anything",
+          "label": "powerful, but costly and slower"
+        },
+        "right": {
+          "icon": "Bike",
+          "title": "Small model",
+          "stat": "Quick trips",
+          "label": "cheap, fast and private"
+        }
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Why use a small model? [1] It's faster, cheaper, works offline, and keeps data on your device. [2] But it knows less, makes more mistakes on hard reasoning, and handles fewer languages well.",
+      "data": {
+        "heading": "The trade-off",
+        "left": {
+          "icon": "ThumbsUp",
+          "title": "Strengths",
+          "points": [
+            "Fast and cheap",
+            "Works offline",
+            "Data stays on the device"
+          ]
+        },
+        "right": {
+          "icon": "ThumbsDown",
+          "title": "Limits",
+          "points": [
+            "Knows less",
+            "Weaker at hard reasoning",
+            "More mistakes"
+          ]
+        }
+      }
+    },
+    {
+      "type": "steps",
+      "text": "So how do small models get so smart? [1] Better data. Carefully picked, high quality training text. [2] Distillation. A big teacher model trains a small student model, to copy its answers. [3] And focus. Fine-tuning on one job, instead of everything.",
+      "data": {
+        "heading": "How small gets smart",
+        "kicker": "THE SECRETS",
+        "steps": [
+          [
+            "Filter",
+            "Better data",
+            "High quality text"
+          ],
+          [
+            "GraduationCap",
+            "Distillation",
+            "Big teacher, small student"
+          ],
+          [
+            "Target",
+            "Focus",
+            "Trained for one job"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Where are small models used? [1] Phone features like smart replies, and summarising notifications. [2] Company tasks like sorting support tickets, at huge volume. [3] And private assistants that run fully offline, on a laptop.",
+      "data": {
+        "heading": "Where they shine",
+        "items": [
+          [
+            "Smartphone",
+            "On your phone",
+            "Smart replies, summaries"
+          ],
+          [
+            "Inbox",
+            "High volume jobs",
+            "Sorting tickets fast"
+          ],
+          [
+            "Laptop",
+            "Offline assistants",
+            "Nothing leaves your laptop"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think bigger is always better. [2] For a focused task, a small fine-tuned model can match a giant one, while being many times faster and cheaper. Pick the smallest model that does the job well.",
+      "data": {
+        "myth": "Bigger is always better.",
+        "fact": "For focused tasks, a small fine-tuned model can match a giant one, faster and cheaper.",
+        "tip": "Smallest model that does the job"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What is distillation? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] A big teacher model trains a small student model to copy its answers!",
+      "data": {
+        "question": "Distillation means…",
+        "options": [
+          "A big teacher model trains a small student",
+          "Deleting half the model",
+          "Adding more GPUs"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Small models have a few billion parameters, or fewer. [2] They're fast, cheap, private, and work offline. [3] They get smart through better data, distillation, and focus. [4] And the best choice is the smallest model that does the job. [5] Next, a real world use case, how wake words like, hey Siri, work. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Small",
+            "a few billion parameters"
+          ],
+          [
+            "Fast & private",
+            "works offline"
+          ],
+          [
+            "Distillation",
+            "teacher to student"
+          ],
+          [
+            "Right-size",
+            "smallest that works"
+          ]
+        ],
+        "next": "USE CASE 21 · Wake words"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Not every AI needs to be giant. Some of the most useful ones fit on your phone.\n\nAI From Scratch, Episode 35: Small Language Models (SLMs)\n- What makes a model 'small'\n- Truck vs scooter: the trade-off\n- How small models get smart: data, distillation, focus\n- Where they shine: phones, high volume jobs, offline assistants\n- Myth: bigger isn't always better\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how wake words like 'Hey Siri' work.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #SmallLanguageModels #LearnAI #OnDeviceAI #AIForBeginners",
+    "pinned": "Quiz answer: A big teacher model trains a small student model to copy its answers. Have you run an AI model on your own laptop? Comment below!",
+    "cover": "'Small Models' title card",
+    "alt": "Animated explainer of small language models: trade-offs, distillation and where they're used."
+  }
+}

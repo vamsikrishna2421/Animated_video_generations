@@ -1,0 +1,736 @@
+{
+  "id": "ep35",
+  "episode": 35,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Small Language Models",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4308,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep35/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 35",
+        "title": [
+          "Small",
+          "Models"
+        ],
+        "subtitle": "Big brains in tiny packages",
+        "buzzwords": [
+          "SLM",
+          "On-device",
+          "Parameters",
+          "Distillation",
+          "Phi",
+          "Gemma",
+          "Fast",
+          "Private"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 413,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_01.wav",
+      "cues": [
+        172,
+        324
+      ],
+      "captions": [
+        {
+          "text": "Everyone talks about giant AI",
+          "from": 10,
+          "to": 74
+        },
+        {
+          "text": "models with hundreds of billions",
+          "from": 76,
+          "to": 130
+        },
+        {
+          "text": "of parameters.",
+          "from": 132,
+          "to": 171
+        },
+        {
+          "text": "But some of the most",
+          "from": 172,
+          "to": 212
+        },
+        {
+          "text": "useful models are tiny,",
+          "from": 212,
+          "to": 256
+        },
+        {
+          "text": "small enough to run on",
+          "from": 256,
+          "to": 299
+        },
+        {
+          "text": "your phone.",
+          "from": 299,
+          "to": 322
+        },
+        {
+          "text": "Let's talk about small language models.",
+          "from": 324,
+          "to": 400
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Small language model",
+        "short": "SLM",
+        "definition": "A language model with roughly a few billion parameters or fewer, compact enough to run on everyday devices.",
+        "chips": [
+          [
+            "Hash",
+            "A few billion parameters"
+          ],
+          [
+            "Building2",
+            "vs hundreds of billions"
+          ],
+          [
+            "Smartphone",
+            "Runs on laptops and phones"
+          ]
+        ]
+      },
+      "from": 413,
+      "durationInFrames": 413,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_02.wav",
+      "cues": [
+        76,
+        175,
+        294
+      ],
+      "captions": [
+        {
+          "text": "A small language model,",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "or SLM,",
+          "from": 60,
+          "to": 76
+        },
+        {
+          "text": "usually has a few billion",
+          "from": 76,
+          "to": 130
+        },
+        {
+          "text": "parameters, or fewer,",
+          "from": 130,
+          "to": 175
+        },
+        {
+          "text": "compared to hundreds of billions",
+          "from": 175,
+          "to": 243
+        },
+        {
+          "text": "in the biggest models.",
+          "from": 243,
+          "to": 291
+        },
+        {
+          "text": "It's small enough to run",
+          "from": 294,
+          "to": 325
+        },
+        {
+          "text": "on a laptop,",
+          "from": 326,
+          "to": 354
+        },
+        {
+          "text": "or even a phone.",
+          "from": 355,
+          "to": 402
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Truck vs scooter",
+        "kicker": "SIZE MATTERS",
+        "left": {
+          "icon": "Truck",
+          "title": "Giant model",
+          "stat": "Carries anything",
+          "label": "powerful, but costly and slower"
+        },
+        "right": {
+          "icon": "Bike",
+          "title": "Small model",
+          "stat": "Quick trips",
+          "label": "cheap, fast and private"
+        }
+      },
+      "from": 826,
+      "durationInFrames": 459,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_03.wav",
+      "cues": [
+        65,
+        234
+      ],
+      "captions": [
+        {
+          "text": "Think of it like vehicles.",
+          "from": 10,
+          "to": 63
+        },
+        {
+          "text": "A giant model is a",
+          "from": 65,
+          "to": 99
+        },
+        {
+          "text": "big truck.",
+          "from": 101,
+          "to": 128
+        },
+        {
+          "text": "It can carry anything,",
+          "from": 131,
+          "to": 167
+        },
+        {
+          "text": "but it's expensive to run.",
+          "from": 171,
+          "to": 231
+        },
+        {
+          "text": "A small model is a scooter.",
+          "from": 234,
+          "to": 292
+        },
+        {
+          "text": "It can't carry everything,",
+          "from": 294,
+          "to": 333
+        },
+        {
+          "text": "but it's cheap,",
+          "from": 338,
+          "to": 363
+        },
+        {
+          "text": "fast, and zips through daily trips.",
+          "from": 366,
+          "to": 445
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "compare",
+      "data": {
+        "heading": "The trade-off",
+        "left": {
+          "icon": "ThumbsUp",
+          "title": "Strengths",
+          "points": [
+            "Fast and cheap",
+            "Works offline",
+            "Data stays on the device"
+          ]
+        },
+        "right": {
+          "icon": "ThumbsDown",
+          "title": "Limits",
+          "points": [
+            "Knows less",
+            "Weaker at hard reasoning",
+            "More mistakes"
+          ]
+        }
+      },
+      "from": 1285,
+      "durationInFrames": 393,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_04.wav",
+      "cues": [
+        60,
+        206
+      ],
+      "captions": [
+        {
+          "text": "Why use a small model?",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "It's faster,",
+          "from": 60,
+          "to": 88
+        },
+        {
+          "text": "cheaper, works offline,",
+          "from": 90,
+          "to": 136
+        },
+        {
+          "text": "and keeps data on your device.",
+          "from": 140,
+          "to": 204
+        },
+        {
+          "text": "But it knows less,",
+          "from": 206,
+          "to": 238
+        },
+        {
+          "text": "makes more mistakes on hard",
+          "from": 239,
+          "to": 285
+        },
+        {
+          "text": "reasoning, and handles fewer languages well.",
+          "from": 287,
+          "to": 381
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How small gets smart",
+        "kicker": "THE SECRETS",
+        "steps": [
+          [
+            "Filter",
+            "Better data",
+            "High quality text"
+          ],
+          [
+            "GraduationCap",
+            "Distillation",
+            "Big teacher, small student"
+          ],
+          [
+            "Target",
+            "Focus",
+            "Trained for one job"
+          ]
+        ]
+      },
+      "from": 1678,
+      "durationInFrames": 538,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_05.wav",
+      "cues": [
+        84,
+        210,
+        395
+      ],
+      "captions": [
+        {
+          "text": "So how do small models",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "get so smart?",
+          "from": 46,
+          "to": 81
+        },
+        {
+          "text": "Better data.",
+          "from": 84,
+          "to": 116
+        },
+        {
+          "text": "Carefully picked,",
+          "from": 118,
+          "to": 147
+        },
+        {
+          "text": "high quality training text.",
+          "from": 151,
+          "to": 208
+        },
+        {
+          "text": "Distillation.",
+          "from": 210,
+          "to": 252
+        },
+        {
+          "text": "A big teacher model trains",
+          "from": 255,
+          "to": 302
+        },
+        {
+          "text": "a small student model,",
+          "from": 303,
+          "to": 346
+        },
+        {
+          "text": "to copy its answers.",
+          "from": 347,
+          "to": 388
+        },
+        {
+          "text": "And focus.",
+          "from": 395,
+          "to": 432
+        },
+        {
+          "text": "Fine-tuning on one job,",
+          "from": 435,
+          "to": 481
+        },
+        {
+          "text": "instead of everything.",
+          "from": 482,
+          "to": 526
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where they shine",
+        "items": [
+          [
+            "Smartphone",
+            "On your phone",
+            "Smart replies, summaries"
+          ],
+          [
+            "Inbox",
+            "High volume jobs",
+            "Sorting tickets fast"
+          ],
+          [
+            "Laptop",
+            "Offline assistants",
+            "Nothing leaves your laptop"
+          ]
+        ]
+      },
+      "from": 2216,
+      "durationInFrames": 477,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_06.wav",
+      "cues": [
+        68,
+        211,
+        344
+      ],
+      "captions": [
+        {
+          "text": "Where are small models used?",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "Phone features like smart replies,",
+          "from": 68,
+          "to": 135
+        },
+        {
+          "text": "and summarising notifications.",
+          "from": 136,
+          "to": 208
+        },
+        {
+          "text": "Company tasks like sorting support",
+          "from": 211,
+          "to": 274
+        },
+        {
+          "text": "tickets, at huge volume.",
+          "from": 276,
+          "to": 341
+        },
+        {
+          "text": "And private assistants that run",
+          "from": 344,
+          "to": 388
+        },
+        {
+          "text": "fully offline,",
+          "from": 392,
+          "to": 426
+        },
+        {
+          "text": "on a laptop.",
+          "from": 428,
+          "to": 464
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Bigger is always better.",
+        "fact": "For focused tasks, a small fine-tuned model can match a giant one, faster and cheaper.",
+        "tip": "Smallest model that does the job"
+      },
+      "from": 2693,
+      "durationInFrames": 461,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_07.wav",
+      "cues": [
+        57,
+        133
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "People think bigger is always better.",
+          "from": 57,
+          "to": 130
+        },
+        {
+          "text": "For a focused task,",
+          "from": 133,
+          "to": 173
+        },
+        {
+          "text": "a small fine-tuned model can",
+          "from": 173,
+          "to": 232
+        },
+        {
+          "text": "match a giant one,",
+          "from": 232,
+          "to": 271
+        },
+        {
+          "text": "while being many times faster",
+          "from": 271,
+          "to": 332
+        },
+        {
+          "text": "and cheaper.",
+          "from": 332,
+          "to": 358
+        },
+        {
+          "text": "Pick the smallest model that",
+          "from": 361,
+          "to": 404
+        },
+        {
+          "text": "does the job well.",
+          "from": 406,
+          "to": 449
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Distillation means…",
+        "options": [
+          "A big teacher model trains a small student",
+          "Deleting half the model",
+          "Adding more GPUs"
+        ],
+        "answer": 0
+      },
+      "from": 3154,
+      "durationInFrames": 448,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_08.wav",
+      "cues": [
+        91,
+        307
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "What is distillation?",
+          "from": 43,
+          "to": 88
+        },
+        {
+          "text": "Pause and think,",
+          "from": 91,
+          "to": 129
+        },
+        {
+          "text": "and if you get it",
+          "from": 130,
+          "to": 148
+        },
+        {
+          "text": "right, comment below!",
+          "from": 149,
+          "to": 209
+        },
+        {
+          "text": "A big teacher model trains",
+          "from": 307,
+          "to": 349
+        },
+        {
+          "text": "a small student model to",
+          "from": 350,
+          "to": 388
+        },
+        {
+          "text": "copy its answers!",
+          "from": 390,
+          "to": 436
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Small",
+            "a few billion parameters"
+          ],
+          [
+            "Fast & private",
+            "works offline"
+          ],
+          [
+            "Distillation",
+            "teacher to student"
+          ],
+          [
+            "Right-size",
+            "smallest that works"
+          ]
+        ],
+        "next": "USE CASE 21 · Wake words"
+      },
+      "from": 3602,
+      "durationInFrames": 706,
+      "voiceFrom": 10,
+      "audio": "lessons/ep35/voice_09.wav",
+      "cues": [
+        46,
+        146,
+        247,
+        362,
+        470
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Small models have a few",
+          "from": 46,
+          "to": 79
+        },
+        {
+          "text": "billion parameters,",
+          "from": 80,
+          "to": 110
+        },
+        {
+          "text": "or fewer.",
+          "from": 116,
+          "to": 145
+        },
+        {
+          "text": "They're fast,",
+          "from": 146,
+          "to": 168
+        },
+        {
+          "text": "cheap, private,",
+          "from": 172,
+          "to": 199
+        },
+        {
+          "text": "and work offline.",
+          "from": 205,
+          "to": 245
+        },
+        {
+          "text": "They get smart through better",
+          "from": 247,
+          "to": 282
+        },
+        {
+          "text": "data, distillation,",
+          "from": 284,
+          "to": 324
+        },
+        {
+          "text": "and focus.",
+          "from": 325,
+          "to": 360
+        },
+        {
+          "text": "And the best choice is",
+          "from": 362,
+          "to": 390
+        },
+        {
+          "text": "the smallest model that does",
+          "from": 392,
+          "to": 433
+        },
+        {
+          "text": "the job.",
+          "from": 435,
+          "to": 466
+        },
+        {
+          "text": "Next, a real world use",
+          "from": 470,
+          "to": 519
+        },
+        {
+          "text": "case, how wake words like,",
+          "from": 521,
+          "to": 579
+        },
+        {
+          "text": "hey Siri, work.",
+          "from": 582,
+          "to": 630
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 634,
+          "to": 694
+        }
+      ],
+      "image": null
+    }
+  ]
+}

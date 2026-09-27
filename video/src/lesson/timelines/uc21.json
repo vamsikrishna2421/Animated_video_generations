@@ -1,0 +1,771 @@
+{
+  "id": "uc21",
+  "episode": 21,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Wake Words Like 'Hey Siri' Work",
+  "host": "female",
+  "label": "USE CASE 21",
+  "fps": 30,
+  "totalFrames": 4432,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc21/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 21",
+        "title": [
+          "Wake",
+          "Words"
+        ],
+        "subtitle": "How 'Hey Siri' hears you",
+        "buzzwords": [
+          "Wake word",
+          "Always listening",
+          "On-device",
+          "Tiny model",
+          "Low power",
+          "Privacy",
+          "Audio",
+          "Keyword spotting"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 372,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_01.wav",
+      "cues": [
+        166,
+        254
+      ],
+      "captions": [
+        {
+          "text": "You say,",
+          "from": 10,
+          "to": 28
+        },
+        {
+          "text": "hey Google,",
+          "from": 32,
+          "to": 52
+        },
+        {
+          "text": "from across the room,",
+          "from": 57,
+          "to": 91
+        },
+        {
+          "text": "and your phone lights up instantly.",
+          "from": 93,
+          "to": 163
+        },
+        {
+          "text": "Is it recording everything you",
+          "from": 166,
+          "to": 205
+        },
+        {
+          "text": "say, all day?",
+          "from": 207,
+          "to": 252
+        },
+        {
+          "text": "Let's break down how wake",
+          "from": 254,
+          "to": 298
+        },
+        {
+          "text": "word detection really works.",
+          "from": 299,
+          "to": 358
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From sound to wake-up",
+        "nodes": [
+          [
+            "Mic",
+            "Listen",
+            "One-second slices"
+          ],
+          [
+            "Cpu",
+            "Tiny model",
+            "Checks each slice"
+          ],
+          [
+            "Gauge",
+            "Threshold",
+            "Score high enough?"
+          ],
+          [
+            "Power",
+            "Wake up",
+            "Assistant turns on"
+          ],
+          [
+            "Cloud",
+            "Request",
+            "Speech to text + AI"
+          ]
+        ]
+      },
+      "from": 372,
+      "durationInFrames": 648,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_02.wav",
+      "cues": [
+        49,
+        191,
+        315,
+        414,
+        525
+      ],
+      "captions": [
+        {
+          "text": "Here's the flow.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "The microphone listens in short,",
+          "from": 49,
+          "to": 108
+        },
+        {
+          "text": "rolling slices of about one second.",
+          "from": 113,
+          "to": 188
+        },
+        {
+          "text": "A tiny model on the",
+          "from": 191,
+          "to": 229
+        },
+        {
+          "text": "device checks each slice for",
+          "from": 229,
+          "to": 285
+        },
+        {
+          "text": "the wake word.",
+          "from": 285,
+          "to": 313
+        },
+        {
+          "text": "If the score crosses a",
+          "from": 315,
+          "to": 350
+        },
+        {
+          "text": "threshold, it wakes up.",
+          "from": 351,
+          "to": 412
+        },
+        {
+          "text": "Only then does the full",
+          "from": 414,
+          "to": 451
+        },
+        {
+          "text": "assistant start recording your request,",
+          "from": 453,
+          "to": 524
+        },
+        {
+          "text": "and send it for speech",
+          "from": 525,
+          "to": 555
+        },
+        {
+          "text": "to text,",
+          "from": 556,
+          "to": 582
+        },
+        {
+          "text": "and the AI brain.",
+          "from": 584,
+          "to": 635
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Keyword spotting",
+        "short": "KWS",
+        "definition": "A tiny always-on model that listens for one specific phrase and ignores everything else.",
+        "chips": [
+          [
+            "Users",
+            "Thousands of voices"
+          ],
+          [
+            "Volume2",
+            "Accents and noisy rooms"
+          ],
+          [
+            "X",
+            "Lots of non-wake-word audio"
+          ]
+        ]
+      },
+      "from": 1020,
+      "durationInFrames": 425,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_03.wav",
+      "cues": [
+        84,
+        196,
+        273
+      ],
+      "captions": [
+        {
+          "text": "This is called keyword spotting.",
+          "from": 10,
+          "to": 82
+        },
+        {
+          "text": "The model is trained on",
+          "from": 84,
+          "to": 124
+        },
+        {
+          "text": "thousands of people saying the",
+          "from": 127,
+          "to": 168
+        },
+        {
+          "text": "wake word,",
+          "from": 169,
+          "to": 194
+        },
+        {
+          "text": "in different accents,",
+          "from": 196,
+          "to": 231
+        },
+        {
+          "text": "and noisy rooms,",
+          "from": 234,
+          "to": 271
+        },
+        {
+          "text": "plus lots of audio that",
+          "from": 273,
+          "to": 313
+        },
+        {
+          "text": "is not the wake word,",
+          "from": 315,
+          "to": 357
+        },
+        {
+          "text": "so it learns the difference.",
+          "from": 360,
+          "to": 412
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Built to be tiny",
+        "kicker": "DESIGN RULES",
+        "steps": [
+          [
+            "BatteryFull",
+            "Low power",
+            "Runs all day"
+          ],
+          [
+            "Zap",
+            "Instant",
+            "Fraction of a second"
+          ],
+          [
+            "Lock",
+            "On-device",
+            "Everyday talk stays local"
+          ]
+        ]
+      },
+      "from": 1445,
+      "durationInFrames": 516,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_04.wav",
+      "cues": [
+        58,
+        284,
+        368
+      ],
+      "captions": [
+        {
+          "text": "Why a tiny model?",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "It runs all day,",
+          "from": 58,
+          "to": 92
+        },
+        {
+          "text": "so it must use very",
+          "from": 95,
+          "to": 125
+        },
+        {
+          "text": "little battery.",
+          "from": 127,
+          "to": 165
+        },
+        {
+          "text": "Some phones use a special",
+          "from": 169,
+          "to": 214
+        },
+        {
+          "text": "low power chip just for this.",
+          "from": 217,
+          "to": 281
+        },
+        {
+          "text": "It must respond in a",
+          "from": 284,
+          "to": 323
+        },
+        {
+          "text": "fraction of a second.",
+          "from": 323,
+          "to": 365
+        },
+        {
+          "text": "And it runs on the",
+          "from": 368,
+          "to": 405
+        },
+        {
+          "text": "device, so your everyday talk",
+          "from": 405,
+          "to": 464
+        },
+        {
+          "text": "isn't sent anywhere.",
+          "from": 464,
+          "to": 505
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two kinds of mistakes",
+        "kicker": "THE BALANCE",
+        "left": {
+          "icon": "BellRing",
+          "title": "False wake",
+          "stat": "Oops!",
+          "label": "wakes up when you didn't call"
+        },
+        "right": {
+          "icon": "BellOff",
+          "title": "Missed wake",
+          "stat": "Hello?",
+          "label": "ignores you when you did"
+        }
+      },
+      "from": 1961,
+      "durationInFrames": 446,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_05.wav",
+      "cues": [
+        71,
+        260,
+        363
+      ],
+      "captions": [
+        {
+          "text": "There are two kinds of mistakes.",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "A false wake,",
+          "from": 71,
+          "to": 100
+        },
+        {
+          "text": "when a TV show says",
+          "from": 102,
+          "to": 140
+        },
+        {
+          "text": "something similar,",
+          "from": 141,
+          "to": 175
+        },
+        {
+          "text": "and the assistant turns on",
+          "from": 180,
+          "to": 220
+        },
+        {
+          "text": "by accident.",
+          "from": 221,
+          "to": 258
+        },
+        {
+          "text": "A missed wake,",
+          "from": 260,
+          "to": 286
+        },
+        {
+          "text": "when you say it,",
+          "from": 289,
+          "to": 311
+        },
+        {
+          "text": "and nothing happens.",
+          "from": 314,
+          "to": 360
+        },
+        {
+          "text": "The threshold balances these two.",
+          "from": 363,
+          "to": 433
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Wake word jargon",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Megaphone",
+            "Wake word",
+            "The trigger phrase"
+          ],
+          [
+            "Gauge",
+            "Threshold",
+            "Score needed to wake"
+          ],
+          [
+            "Fingerprint",
+            "Voice match",
+            "Is it really you?"
+          ],
+          [
+            "BellRing",
+            "False accept rate",
+            "Wakes by mistake"
+          ]
+        ]
+      },
+      "from": 2407,
+      "durationInFrames": 408,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_06.wav",
+      "cues": [
+        56,
+        127,
+        202,
+        292
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "Wake word,",
+          "from": 56,
+          "to": 75
+        },
+        {
+          "text": "the trigger phrase.",
+          "from": 80,
+          "to": 124
+        },
+        {
+          "text": "Threshold, the score needed to wake.",
+          "from": 127,
+          "to": 199
+        },
+        {
+          "text": "Voice match,",
+          "from": 202,
+          "to": 226
+        },
+        {
+          "text": "extra checking that it's your voice.",
+          "from": 230,
+          "to": 290
+        },
+        {
+          "text": "And false accept rate,",
+          "from": 292,
+          "to": 329
+        },
+        {
+          "text": "how often it wakes by mistake.",
+          "from": 331,
+          "to": 395
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The assistant uploads everything you say, all day.",
+        "fact": "The wake check runs on the device. Audio is usually sent only after waking, but false wakes can send clips.",
+        "tip": "Check your privacy settings"
+      },
+      "from": 2815,
+      "durationInFrames": 506,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_07.wav",
+      "cues": [
+        57,
+        186
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "People think the assistant records",
+          "from": 57,
+          "to": 110
+        },
+        {
+          "text": "and uploads everything,",
+          "from": 112,
+          "to": 152
+        },
+        {
+          "text": "all day.",
+          "from": 154,
+          "to": 184
+        },
+        {
+          "text": "The wake word check happens",
+          "from": 186,
+          "to": 240
+        },
+        {
+          "text": "on the device.",
+          "from": 240,
+          "to": 269
+        },
+        {
+          "text": "Audio is usually sent only",
+          "from": 272,
+          "to": 322
+        },
+        {
+          "text": "after it wakes.",
+          "from": 324,
+          "to": 361
+        },
+        {
+          "text": "But false wakes can send",
+          "from": 362,
+          "to": 402
+        },
+        {
+          "text": "short clips,",
+          "from": 405,
+          "to": 431
+        },
+        {
+          "text": "so check your privacy settings.",
+          "from": 433,
+          "to": 494
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The wake word check happens…",
+        "options": [
+          "On the device itself",
+          "In the cloud, all day",
+          "In a call centre"
+        ],
+        "answer": 0
+      },
+      "from": 3321,
+      "durationInFrames": 445,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_08.wav",
+      "cues": [
+        120,
+        332
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "Where does the wake word",
+          "from": 44,
+          "to": 70
+        },
+        {
+          "text": "check usually happen?",
+          "from": 72,
+          "to": 117
+        },
+        {
+          "text": "Pause and think,",
+          "from": 120,
+          "to": 156
+        },
+        {
+          "text": "and if you get it",
+          "from": 158,
+          "to": 175
+        },
+        {
+          "text": "right, comment below!",
+          "from": 177,
+          "to": 233
+        },
+        {
+          "text": "On the device itself,",
+          "from": 332,
+          "to": 376
+        },
+        {
+          "text": "with a tiny low power model!",
+          "from": 376,
+          "to": 433
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Tiny model",
+            "on the device"
+          ],
+          [
+            "Trained",
+            "on many voices"
+          ],
+          [
+            "Threshold",
+            "false vs missed wakes"
+          ],
+          [
+            "Records",
+            "only after waking"
+          ]
+        ],
+        "next": "EP 36 · GPUs"
+      },
+      "from": 3766,
+      "durationInFrames": 666,
+      "voiceFrom": 10,
+      "audio": "lessons/uc21/voice_09.wav",
+      "cues": [
+        47,
+        162,
+        287,
+        392,
+        485
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "A tiny model listens in",
+          "from": 47,
+          "to": 98
+        },
+        {
+          "text": "short slices,",
+          "from": 98,
+          "to": 128
+        },
+        {
+          "text": "on the device.",
+          "from": 128,
+          "to": 160
+        },
+        {
+          "text": "It's trained on many voices,",
+          "from": 162,
+          "to": 209
+        },
+        {
+          "text": "and lots of non-wake-word audio.",
+          "from": 213,
+          "to": 285
+        },
+        {
+          "text": "A threshold balances false wakes",
+          "from": 287,
+          "to": 351
+        },
+        {
+          "text": "and missed wakes.",
+          "from": 353,
+          "to": 390
+        },
+        {
+          "text": "The full assistant records only",
+          "from": 392,
+          "to": 444
+        },
+        {
+          "text": "after it wakes.",
+          "from": 446,
+          "to": 482
+        },
+        {
+          "text": "Next, why AI runs on GPUs.",
+          "from": 485,
+          "to": 588
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 591,
+          "to": 654
+        }
+      ],
+      "image": null
+    }
+  ]
+}
