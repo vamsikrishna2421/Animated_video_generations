@@ -68,7 +68,7 @@ Already posted: `out/posted/`.
 | 061 | ep57 | Deploy Your AI App | ready |
 | 062 | ep58 | Your AI Career Roadmap | ready |
 | 063 | q06 | Quiz #6: Episodes 50–58 | ready |
-| 064 | uc01 | How an AI Phone Call Assistant Works | rendering soon |
+| 064 | uc01 | How an AI Phone Call Assistant Works | ready |
 | 065 | uc02 | How ChatGPT Searches the Web | rendering soon |
 | 066 | uc03 | How AI Meeting Notes Work | rendering soon |
 | 067 | uc04 | How Netflix and YouTube Recommend Videos | rendering soon |
