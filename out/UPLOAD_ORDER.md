@@ -54,7 +54,7 @@ Already posted: `out/posted/`.
 | 047 | ep44 | AI and Your Privacy | ready |
 | 048 | ep45 | Deepfakes and How to Spot Them | ready |
 | 049 | ep46 | Copyright and AI | ready |
-| 050 | ep47 | Guardrails in Real AI Products | rendering soon |
+| 050 | ep47 | Guardrails in Real AI Products | ready |
 | 051 | ep48 | AI Laws Around the World | rendering soon |
 | 052 | ep49 | AI and Jobs | rendering soon |
 | 053 | q05 | Quiz #5: Episodes 41–49 | rendering soon |
