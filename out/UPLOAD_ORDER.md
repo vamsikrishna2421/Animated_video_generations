@@ -76,7 +76,7 @@ Already posted: `out/posted/`.
 | 069 | uc06 | How a Bank Support Bot Works | ready |
 | 070 | uc07 | How Smart Replies Work | ready |
 | 071 | uc08 | How Live Translation Works | ready |
-| 072 | uc09 | How an AI Coding Assistant Builds a Feature | rendering soon |
+| 072 | uc09 | How an AI Coding Assistant Builds a Feature | ready |
 | 073 | uc10 | How the Instagram Reels Feed Works | rendering soon |
 | 074 | uc11 | How Google Lens Works | rendering soon |
 | 075 | uc12 | How AI Tutor Apps Work | rendering soon |
