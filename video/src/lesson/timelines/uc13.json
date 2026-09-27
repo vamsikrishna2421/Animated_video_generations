@@ -1,0 +1,806 @@
+{
+  "id": "uc13",
+  "episode": 13,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How AI Music Generation Works",
+  "host": "female",
+  "label": "USE CASE 13",
+  "fps": 30,
+  "totalFrames": 5054,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc13/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 13",
+        "title": [
+          "AI",
+          "Music"
+        ],
+        "subtitle": "From a sentence to a song",
+        "buzzwords": [
+          "Text to music",
+          "Audio tokens",
+          "Melody",
+          "Rhythm",
+          "Vocals",
+          "Diffusion",
+          "Soundtrack",
+          "Copyright"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 358,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_01.wav",
+      "cues": [
+        142,
+        257
+      ],
+      "captions": [
+        {
+          "text": "Type, a peaceful Carnatic style",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "song with flute and rain",
+          "from": 75,
+          "to": 112
+        },
+        {
+          "text": "sounds, and in seconds,",
+          "from": 114,
+          "to": 173
+        },
+        {
+          "text": "an AI plays you a",
+          "from": 175,
+          "to": 207
+        },
+        {
+          "text": "brand new track.",
+          "from": 209,
+          "to": 254
+        },
+        {
+          "text": "Let's break down how AI",
+          "from": 257,
+          "to": 305
+        },
+        {
+          "text": "creates music.",
+          "from": 307,
+          "to": 344
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From words to a song",
+        "nodes": [
+          [
+            "Type",
+            "Your prompt",
+            "“Calm flute, rain, Carnatic style”"
+          ],
+          [
+            "Hash",
+            "Meaning as numbers",
+            "Mood, instruments, style"
+          ],
+          [
+            "AudioLines",
+            "Audio tokens",
+            "Tiny chunks of sound, in order"
+          ],
+          [
+            "Waves",
+            "Decode",
+            "Tokens → sound wave"
+          ],
+          [
+            "Music",
+            "Your track",
+            "A brand new song"
+          ]
+        ]
+      },
+      "from": 358,
+      "durationInFrames": 748,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_02.wav",
+      "cues": [
+        90,
+        213,
+        336,
+        574,
+        685
+      ],
+      "captions": [
+        {
+          "text": "Here's how a text to",
+          "from": 10,
+          "to": 41
+        },
+        {
+          "text": "music model works.",
+          "from": 43,
+          "to": 88
+        },
+        {
+          "text": "You describe the song,",
+          "from": 90,
+          "to": 129
+        },
+        {
+          "text": "the mood,",
+          "from": 131,
+          "to": 153
+        },
+        {
+          "text": "instruments and style.",
+          "from": 155,
+          "to": 211
+        },
+        {
+          "text": "A text model turns your",
+          "from": 213,
+          "to": 249
+        },
+        {
+          "text": "words into numbers that capture",
+          "from": 250,
+          "to": 299
+        },
+        {
+          "text": "their meaning.",
+          "from": 300,
+          "to": 334
+        },
+        {
+          "text": "The music model then generates",
+          "from": 336,
+          "to": 384
+        },
+        {
+          "text": "audio tokens,",
+          "from": 386,
+          "to": 423
+        },
+        {
+          "text": "tiny chunks of sound,",
+          "from": 425,
+          "to": 474
+        },
+        {
+          "text": "one after another,",
+          "from": 476,
+          "to": 514
+        },
+        {
+          "text": "guided by your description.",
+          "from": 516,
+          "to": 572
+        },
+        {
+          "text": "A decoder turns those tokens",
+          "from": 574,
+          "to": 627
+        },
+        {
+          "text": "back into a sound wave,",
+          "from": 628,
+          "to": 684
+        },
+        {
+          "text": "and you hear your new track.",
+          "from": 685,
+          "to": 735
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Audio tokens",
+        "short": "Tokens",
+        "definition": "Tiny compressed chunks of sound that a model can predict one after another, like words.",
+        "chips": [
+          [
+            "Hash",
+            "Sound as codes"
+          ],
+          [
+            "ArrowRight",
+            "Predict the next"
+          ],
+          [
+            "Tv",
+            "Or use diffusion"
+          ]
+        ]
+      },
+      "from": 1106,
+      "durationInFrames": 620,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_03.wav",
+      "cues": [
+        108,
+        271,
+        357,
+        475
+      ],
+      "captions": [
+        {
+          "text": "The clever idea here is",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "audio tokens.",
+          "from": 59,
+          "to": 106
+        },
+        {
+          "text": "Just like text is split",
+          "from": 108,
+          "to": 149
+        },
+        {
+          "text": "into tokens,",
+          "from": 150,
+          "to": 184
+        },
+        {
+          "text": "sound can be compressed into",
+          "from": 188,
+          "to": 225
+        },
+        {
+          "text": "tokens too.",
+          "from": 226,
+          "to": 269
+        },
+        {
+          "text": "So a song becomes a",
+          "from": 271,
+          "to": 304
+        },
+        {
+          "text": "sequence of sound codes,",
+          "from": 306,
+          "to": 356
+        },
+        {
+          "text": "and the model predicts the",
+          "from": 357,
+          "to": 389
+        },
+        {
+          "text": "next code,",
+          "from": 391,
+          "to": 418
+        },
+        {
+          "text": "just like the next word.",
+          "from": 421,
+          "to": 471
+        },
+        {
+          "text": "Some models use diffusion instead,",
+          "from": 475,
+          "to": 545
+        },
+        {
+          "text": "cleaning noise into sound.",
+          "from": 548,
+          "to": 608
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "What it learns",
+        "kicker": "TRAINING",
+        "steps": [
+          [
+            "Drum",
+            "Rhythm",
+            "How beats repeat"
+          ],
+          [
+            "Music",
+            "Melody and harmony",
+            "Notes that fit together"
+          ],
+          [
+            "ListOrdered",
+            "Structure",
+            "Verse, chorus, ending"
+          ]
+        ]
+      },
+      "from": 1726,
+      "durationInFrames": 496,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_04.wav",
+      "cues": [
+        175,
+        255,
+        354
+      ],
+      "captions": [
+        {
+          "text": "During training,",
+          "from": 10,
+          "to": 36
+        },
+        {
+          "text": "the model listens to huge",
+          "from": 39,
+          "to": 82
+        },
+        {
+          "text": "amounts of music,",
+          "from": 84,
+          "to": 116
+        },
+        {
+          "text": "and learns its patterns.",
+          "from": 117,
+          "to": 172
+        },
+        {
+          "text": "Rhythm and tempo,",
+          "from": 175,
+          "to": 207
+        },
+        {
+          "text": "how beats repeat.",
+          "from": 208,
+          "to": 252
+        },
+        {
+          "text": "Melody and harmony,",
+          "from": 255,
+          "to": 291
+        },
+        {
+          "text": "which notes sound good together.",
+          "from": 293,
+          "to": 351
+        },
+        {
+          "text": "And structure,",
+          "from": 354,
+          "to": 379
+        },
+        {
+          "text": "like verse,",
+          "from": 381,
+          "to": 405
+        },
+        {
+          "text": "chorus, and a satisfying ending.",
+          "from": 409,
+          "to": 484
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where it's used",
+        "items": [
+          [
+            "Smartphone",
+            "Creators",
+            "Background music for reels"
+          ],
+          [
+            "Mic2",
+            "Musicians",
+            "Sketch ideas fast"
+          ],
+          [
+            "Gamepad2",
+            "Games",
+            "Music that reacts"
+          ]
+        ]
+      },
+      "from": 2222,
+      "durationInFrames": 430,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_05.wav",
+      "cues": [
+        57,
+        166,
+        297
+      ],
+      "captions": [
+        {
+          "text": "So where is it used?",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "Creators make background music for",
+          "from": 57,
+          "to": 114
+        },
+        {
+          "text": "reels and videos.",
+          "from": 116,
+          "to": 163
+        },
+        {
+          "text": "Musicians sketch ideas,",
+          "from": 166,
+          "to": 222
+        },
+        {
+          "text": "and try out different styles quickly.",
+          "from": 224,
+          "to": 295
+        },
+        {
+          "text": "And games create music that",
+          "from": 297,
+          "to": 340
+        },
+        {
+          "text": "changes with what's happening on screen.",
+          "from": 342,
+          "to": 418
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The tough parts",
+        "kicker": "WHY IT'S HARD",
+        "terms": [
+          [
+            "Clock",
+            "Long songs",
+            "Staying coherent"
+          ],
+          [
+            "Mic",
+            "Vocals",
+            "Clear, natural singing"
+          ],
+          [
+            "Scale",
+            "Copyright",
+            "Training data questions"
+          ],
+          [
+            "Copy",
+            "Originality",
+            "Not too close to real songs"
+          ]
+        ]
+      },
+      "from": 2652,
+      "durationInFrames": 574,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_06.wav",
+      "cues": [
+        62,
+        178,
+        286,
+        421
+      ],
+      "captions": [
+        {
+          "text": "So what are the tough parts?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Long songs,",
+          "from": 62,
+          "to": 93
+        },
+        {
+          "text": "keeping a full track coherent",
+          "from": 94,
+          "to": 142
+        },
+        {
+          "text": "for minutes.",
+          "from": 144,
+          "to": 175
+        },
+        {
+          "text": "Vocals, lyrics that sound clear",
+          "from": 178,
+          "to": 244
+        },
+        {
+          "text": "and natural.",
+          "from": 246,
+          "to": 283
+        },
+        {
+          "text": "Copyright, since training on artists'",
+          "from": 286,
+          "to": 346
+        },
+        {
+          "text": "music raises real questions.",
+          "from": 347,
+          "to": 418
+        },
+        {
+          "text": "And originality,",
+          "from": 421,
+          "to": 454
+        },
+        {
+          "text": "avoiding songs that sound too",
+          "from": 456,
+          "to": 508
+        },
+        {
+          "text": "close to existing ones.",
+          "from": 510,
+          "to": 561
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI music just stitches pieces of existing songs together.",
+        "fact": "It creates new audio token by token, but learns from real music, so artist fairness is an open debate.",
+        "tip": "Respect artists' rights"
+      },
+      "from": 3226,
+      "durationInFrames": 557,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_07.wav",
+      "cues": [
+        59,
+        207
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think AI music just",
+          "from": 59,
+          "to": 112
+        },
+        {
+          "text": "stitches together pieces of existing songs.",
+          "from": 114,
+          "to": 204
+        },
+        {
+          "text": "Generative models create new audio,",
+          "from": 207,
+          "to": 281
+        },
+        {
+          "text": "token by token.",
+          "from": 284,
+          "to": 334
+        },
+        {
+          "text": "But they learn from real",
+          "from": 335,
+          "to": 370
+        },
+        {
+          "text": "music, so fairness to artists,",
+          "from": 372,
+          "to": 442
+        },
+        {
+          "text": "and copyright,",
+          "from": 446,
+          "to": 476
+        },
+        {
+          "text": "are important open debates.",
+          "from": 481,
+          "to": 543
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "AI music models predict…",
+        "options": [
+          "Audio tokens",
+          "Hashtags",
+          "Pixels"
+        ],
+        "answer": 0
+      },
+      "from": 3783,
+      "durationInFrames": 573,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_08.wav",
+      "cues": [
+        199,
+        414
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "Many AI music models create",
+          "from": 45,
+          "to": 100
+        },
+        {
+          "text": "songs by predicting what,",
+          "from": 103,
+          "to": 151
+        },
+        {
+          "text": "one after another?",
+          "from": 153,
+          "to": 197
+        },
+        {
+          "text": "Pause and think,",
+          "from": 199,
+          "to": 237
+        },
+        {
+          "text": "and if you get it",
+          "from": 239,
+          "to": 256
+        },
+        {
+          "text": "right, comment below!",
+          "from": 258,
+          "to": 316
+        },
+        {
+          "text": "Audio tokens,",
+          "from": 414,
+          "to": 449
+        },
+        {
+          "text": "tiny chunks of sound,",
+          "from": 451,
+          "to": 495
+        },
+        {
+          "text": "just like words in a sentence!",
+          "from": 497,
+          "to": 559
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Prompt",
+            "mood, instruments, style"
+          ],
+          [
+            "Audio tokens",
+            "sound as codes"
+          ],
+          [
+            "Predict",
+            "next token, like words"
+          ],
+          [
+            "Debate",
+            "artists and copyright"
+          ]
+        ],
+        "next": "EP 24 · Types of learning"
+      },
+      "from": 4356,
+      "durationInFrames": 698,
+      "voiceFrom": 10,
+      "audio": "lessons/uc13/voice_09.wav",
+      "cues": [
+        45,
+        136,
+        218,
+        321,
+        425
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "You describe the mood,",
+          "from": 45,
+          "to": 78
+        },
+        {
+          "text": "instruments and style.",
+          "from": 81,
+          "to": 132
+        },
+        {
+          "text": "Sound is compressed into audio tokens.",
+          "from": 136,
+          "to": 217
+        },
+        {
+          "text": "The model predicts the next",
+          "from": 218,
+          "to": 255
+        },
+        {
+          "text": "token, just like words.",
+          "from": 256,
+          "to": 319
+        },
+        {
+          "text": "And fairness to artists is",
+          "from": 321,
+          "to": 360
+        },
+        {
+          "text": "an important open debate.",
+          "from": 360,
+          "to": 422
+        },
+        {
+          "text": "Next, we'll learn the three",
+          "from": 425,
+          "to": 463
+        },
+        {
+          "text": "ways machines learn,",
+          "from": 465,
+          "to": 508
+        },
+        {
+          "text": "supervised, unsupervised and reinforcement.",
+          "from": 511,
+          "to": 618
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 622,
+          "to": 686
+        }
+      ],
+      "image": null
+    }
+  ]
+}
