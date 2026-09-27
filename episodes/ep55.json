@@ -1,0 +1,241 @@
+{
+ "id": "ep55",
+ "episode": 55,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Build Your Own MCP Server",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "In episode 11, we learned that MCP is like a USB-C port for AI, one standard way to plug in tools. [1] Today, we build our own MCP server, a notes app any AI assistant can use. [2] About fifteen lines of Python.",
+   "data": {
+    "kicker": "EPISODE 55",
+    "title": [
+     "Build an",
+     "MCP Server"
+    ],
+    "subtitle": "Plug your tools into any AI",
+    "buzzwords": [
+     "MCP",
+     "FastMCP",
+     "Tools",
+     "Server",
+     "Client",
+     "stdio",
+     "Claude",
+     "Hands-on"
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Here's how the pieces fit. [1] The user chats in an AI app, like Claude Desktop, or an IDE. [2] The app has a built-in MCP client. [3] The client connects to our MCP server. [4] The server offers tools, like add note, and list notes. [5] The model calls them, whenever it needs to.",
+   "data": {
+    "heading": "How MCP connects",
+    "nodes": [
+     [
+      "MessageSquare",
+      "AI app",
+      "Claude, IDEs, agents"
+     ],
+     [
+      "Plug",
+      "MCP client",
+      "Inside the app"
+     ],
+     [
+      "Server",
+      "Our server",
+      "notes.py"
+     ],
+     [
+      "Wrench",
+      "Tools",
+      "add_note, list_notes"
+     ],
+     [
+      "Sparkles",
+      "Used by AI",
+      "When needed"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "Why not just put tools inside your app, like last episode? [1] Tools in your code work only in your own app. [2] An MCP server works with any MCP-compatible app. Build it once, and plug it in everywhere.",
+   "data": {
+    "heading": "Why MCP?",
+    "kicker": "BUILD ONCE",
+    "left": {
+     "icon": "Lock",
+     "title": "Tools in code",
+     "stat": "One app",
+     "label": "only your own program"
+    },
+    "right": {
+     "icon": "Plug",
+     "title": "MCP server",
+     "stat": "Any app",
+     "label": "build once, plug in everywhere"
+    }
+   }
+  },
+  {
+   "type": "code",
+   "text": "[1] Here's the server, using the official Python SDK. Install it with pip install mcp. [2] Import FastMCP. [3] Create a server called notes, and a list to hold them. [4] Now, a tool. The decorator registers it, and the type hints, and docstring, tell the AI what it does, and what inputs it takes. This one saves a note. [5] A second tool returns all the notes. [6] Finally, run the server. [7] Connect it to an app, and just ask in plain English!",
+   "data": {
+    "heading": "A notes MCP server",
+    "file": "notes.py",
+    "lines": [
+     "from mcp.server.fastmcp import FastMCP",
+     "mcp = FastMCP(\"notes\")",
+     "notes = []",
+     "@mcp.tool()",
+     "def add_note(text: str) -> str:",
+     "    \"\"\"Save a note.\"\"\"",
+     "    notes.append(text)",
+     "    return \"Saved!\"",
+     "",
+     "@mcp.tool()",
+     "def list_notes() -> list[str]:",
+     "    \"\"\"Return all saved notes.\"\"\"",
+     "    return notes",
+     "if __name__ == \"__main__\":",
+     "    mcp.run()"
+    ],
+    "groups": [
+     1,
+     2,
+     6,
+     4,
+     2
+    ],
+    "output": [
+     "$ claude mcp add notes -- python notes.py",
+     "You: note down, buy milk",
+     "AI: Saved! You have 1 note."
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] MCP server, a program that offers tools to AI apps. [2] MCP client, the part of the AI app that connects to servers. [3] Resource, read-only data a server can share, like files. [4] And transport, how they talk. Local servers usually use standard input and output.",
+   "data": {
+    "heading": "MCP words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Server",
+      "MCP server",
+      "Offers tools"
+     ],
+     [
+      "Plug",
+      "MCP client",
+      "Connects from the app"
+     ],
+     [
+      "FileText",
+      "Resource",
+      "Read-only data"
+     ],
+     [
+      "ArrowLeftRight",
+      "Transport",
+      "How they talk"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "What could you build? [1] A server for your company's database, so AI can answer sales questions. [2] A server for your smart home, to switch lights on and off. [3] Or a server for your college timetable, and assignments.",
+   "data": {
+    "heading": "Ideas to build",
+    "items": [
+     [
+      "Database",
+      "Company data",
+      "Answer sales questions"
+     ],
+     [
+      "Lightbulb",
+      "Smart home",
+      "Lights on, lights off"
+     ],
+     [
+      "CalendarDays",
+      "College",
+      "Timetable, assignments"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's an important warning. [1] People install any MCP server they find online. [2] A server can run code on your computer, and read your data. Only install servers from sources you trust, and give them the least access they need.",
+   "data": {
+    "myth": "Any MCP server from the internet is safe to install.",
+    "fact": "Servers can run code and read your data. Use trusted sources and least access.",
+    "tip": "Trust before you install"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What tells the AI what an MCP tool does? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Its name, type hints, and docstring, which become the tool's description!",
+   "data": {
+    "question": "The AI learns what a tool does from…",
+    "options": [
+     "Its name, type hints and docstring",
+     "The file size",
+     "The colour of the code"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] An MCP server offers tools to any MCP app. [2] FastMCP turns Python functions into tools, with one decorator. [3] Docstrings and type hints describe them to the AI. [4] And only install servers you trust. [5] Next, build a voice assistant. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "MCP server",
+      "tools for any app"
+     ],
+     [
+      "FastMCP",
+      "one decorator"
+     ],
+     [
+      "Docstrings",
+      "describe tools"
+     ],
+     [
+      "Trust",
+      "before installing"
+     ]
+    ],
+    "next": "EP 56 · Voice assistant"
+   }
+  }
+ ],
+ "post": {
+  "caption": "Build your own MCP server in about 15 lines of Python, and plug it into any AI app.\n\nAI From Scratch, Episode 55: build an MCP server\n- How MCP connects apps, clients, servers and tools\n- Why MCP: build once, plug in everywhere\n- The code, line by line with FastMCP\n- Jargon: server, client, resource, transport\n- Only install MCP servers you trust\n\nQuiz at the end. Got it right? Comment below.\n\nNext: build a voice assistant.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #MCP #Python #AIAgents #LearnAI",
+  "pinned": "Quiz answer: Its name, type hints and docstring, which become the tool's description. What MCP server would you build? Comment below!",
+  "cover": "'Build an MCP Server' title card",
+  "alt": "Animated coding tutorial: building a notes MCP server in Python with FastMCP."
+ }
+}

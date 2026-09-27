@@ -1,0 +1,863 @@
+{
+  "id": "ep55",
+  "episode": 55,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build Your Own MCP Server",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5207,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep55/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 55",
+        "title": [
+          "Build an",
+          "MCP Server"
+        ],
+        "subtitle": "Plug your tools into any AI",
+        "buzzwords": [
+          "MCP",
+          "FastMCP",
+          "Tools",
+          "Server",
+          "Client",
+          "stdio",
+          "Claude",
+          "Hands-on"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 528,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_01.wav",
+      "cues": [
+        265,
+        451
+      ],
+      "captions": [
+        {
+          "text": "In episode 11,",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "we learned that MCP is",
+          "from": 52,
+          "to": 102
+        },
+        {
+          "text": "like a USB-C port for",
+          "from": 104,
+          "to": 153
+        },
+        {
+          "text": "AI, one standard way to",
+          "from": 155,
+          "to": 214
+        },
+        {
+          "text": "plug in tools.",
+          "from": 216,
+          "to": 262
+        },
+        {
+          "text": "Today, we build our own",
+          "from": 265,
+          "to": 314
+        },
+        {
+          "text": "MCP server,",
+          "from": 316,
+          "to": 360
+        },
+        {
+          "text": "a notes app any AI",
+          "from": 362,
+          "to": 404
+        },
+        {
+          "text": "assistant can use.",
+          "from": 405,
+          "to": 449
+        },
+        {
+          "text": "About fifteen lines of Python.",
+          "from": 451,
+          "to": 516
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How MCP connects",
+        "nodes": [
+          [
+            "MessageSquare",
+            "AI app",
+            "Claude, IDEs, agents"
+          ],
+          [
+            "Plug",
+            "MCP client",
+            "Inside the app"
+          ],
+          [
+            "Server",
+            "Our server",
+            "notes.py"
+          ],
+          [
+            "Wrench",
+            "Tools",
+            "add_note, list_notes"
+          ],
+          [
+            "Sparkles",
+            "Used by AI",
+            "When needed"
+          ]
+        ]
+      },
+      "from": 528,
+      "durationInFrames": 619,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_02.wav",
+      "cues": [
+        64,
+        223,
+        313,
+        400,
+        518
+      ],
+      "captions": [
+        {
+          "text": "Here's how the pieces fit.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "The user chats in an",
+          "from": 64,
+          "to": 97
+        },
+        {
+          "text": "AI app,",
+          "from": 99,
+          "to": 125
+        },
+        {
+          "text": "like Claude Desktop,",
+          "from": 128,
+          "to": 168
+        },
+        {
+          "text": "or an IDE.",
+          "from": 171,
+          "to": 220
+        },
+        {
+          "text": "The app has a built-in",
+          "from": 223,
+          "to": 259
+        },
+        {
+          "text": "MCP client.",
+          "from": 262,
+          "to": 310
+        },
+        {
+          "text": "The client connects to our",
+          "from": 313,
+          "to": 349
+        },
+        {
+          "text": "MCP server.",
+          "from": 352,
+          "to": 398
+        },
+        {
+          "text": "The server offers tools,",
+          "from": 400,
+          "to": 445
+        },
+        {
+          "text": "like add note,",
+          "from": 450,
+          "to": 476
+        },
+        {
+          "text": "and list notes.",
+          "from": 478,
+          "to": 516
+        },
+        {
+          "text": "The model calls them,",
+          "from": 518,
+          "to": 558
+        },
+        {
+          "text": "whenever it needs to.",
+          "from": 560,
+          "to": 607
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Why MCP?",
+        "kicker": "BUILD ONCE",
+        "left": {
+          "icon": "Lock",
+          "title": "Tools in code",
+          "stat": "One app",
+          "label": "only your own program"
+        },
+        "right": {
+          "icon": "Plug",
+          "title": "MCP server",
+          "stat": "Any app",
+          "label": "build once, plug in everywhere"
+        }
+      },
+      "from": 1147,
+      "durationInFrames": 429,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_03.wav",
+      "cues": [
+        126,
+        211
+      ],
+      "captions": [
+        {
+          "text": "Why not just put tools",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "inside your app,",
+          "from": 46,
+          "to": 72
+        },
+        {
+          "text": "like last episode?",
+          "from": 76,
+          "to": 124
+        },
+        {
+          "text": "Tools in your code work",
+          "from": 126,
+          "to": 162
+        },
+        {
+          "text": "only in your own app.",
+          "from": 164,
+          "to": 209
+        },
+        {
+          "text": "An MCP server works with",
+          "from": 211,
+          "to": 266
+        },
+        {
+          "text": "any MCP-compatible app.",
+          "from": 267,
+          "to": 334
+        },
+        {
+          "text": "Build it once,",
+          "from": 338,
+          "to": 363
+        },
+        {
+          "text": "and plug it in everywhere.",
+          "from": 364,
+          "to": 417
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "A notes MCP server",
+        "file": "notes.py",
+        "lines": [
+          "from mcp.server.fastmcp import FastMCP",
+          "mcp = FastMCP(\"notes\")",
+          "notes = []",
+          "",
+          "@mcp.tool()",
+          "def add_note(text: str) -> str:",
+          "    \"\"\"Save a note.\"\"\"",
+          "    notes.append(text)",
+          "    return \"Saved!\"",
+          "",
+          "@mcp.tool()",
+          "def list_notes() -> list[str]:",
+          "    \"\"\"Return all saved notes.\"\"\"",
+          "    return notes",
+          "if __name__ == \"__main__\":",
+          "    mcp.run()"
+        ],
+        "groups": [
+          1,
+          3,
+          6,
+          4,
+          2
+        ],
+        "output": [
+          "$ claude mcp add notes -- python notes.py",
+          "You: note down, buy milk",
+          "AI: Saved! You have 1 note."
+        ]
+      },
+      "from": 1576,
+      "durationInFrames": 910,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_04.wav",
+      "cues": [
+        10,
+        204,
+        267,
+        358,
+        651,
+        731,
+        794
+      ],
+      "captions": [
+        {
+          "text": "Here's the server,",
+          "from": 10,
+          "to": 36
+        },
+        {
+          "text": "using the official Python SDK.",
+          "from": 38,
+          "to": 107
+        },
+        {
+          "text": "Install it with pip install mcp.",
+          "from": 110,
+          "to": 202
+        },
+        {
+          "text": "Import FastMCP.",
+          "from": 204,
+          "to": 265
+        },
+        {
+          "text": "Create a server called notes,",
+          "from": 267,
+          "to": 308
+        },
+        {
+          "text": "and a list to hold them.",
+          "from": 313,
+          "to": 355
+        },
+        {
+          "text": "Now, a tool.",
+          "from": 358,
+          "to": 399
+        },
+        {
+          "text": "The decorator registers it,",
+          "from": 400,
+          "to": 443
+        },
+        {
+          "text": "and the type hints,",
+          "from": 445,
+          "to": 470
+        },
+        {
+          "text": "and docstring,",
+          "from": 475,
+          "to": 499
+        },
+        {
+          "text": "tell the AI what it",
+          "from": 501,
+          "to": 533
+        },
+        {
+          "text": "does, and what inputs it takes.",
+          "from": 534,
+          "to": 600
+        },
+        {
+          "text": "This one saves a note.",
+          "from": 603,
+          "to": 649
+        },
+        {
+          "text": "A second tool returns all",
+          "from": 651,
+          "to": 698
+        },
+        {
+          "text": "the notes.",
+          "from": 699,
+          "to": 727
+        },
+        {
+          "text": "Finally, run the server.",
+          "from": 731,
+          "to": 792
+        },
+        {
+          "text": "Connect it to an app,",
+          "from": 794,
+          "to": 826
+        },
+        {
+          "text": "and just ask in plain English!",
+          "from": 830,
+          "to": 897
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "MCP words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Server",
+            "MCP server",
+            "Offers tools"
+          ],
+          [
+            "Plug",
+            "MCP client",
+            "Connects from the app"
+          ],
+          [
+            "FileText",
+            "Resource",
+            "Read-only data"
+          ],
+          [
+            "ArrowLeftRight",
+            "Transport",
+            "How they talk"
+          ]
+        ]
+      },
+      "from": 2486,
+      "durationInFrames": 646,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_05.wav",
+      "cues": [
+        57,
+        189,
+        324,
+        457
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "MCP server,",
+          "from": 57,
+          "to": 91
+        },
+        {
+          "text": "a program that offers tools",
+          "from": 95,
+          "to": 138
+        },
+        {
+          "text": "to AI apps.",
+          "from": 140,
+          "to": 187
+        },
+        {
+          "text": "MCP client,",
+          "from": 189,
+          "to": 216
+        },
+        {
+          "text": "the part of the AI",
+          "from": 216,
+          "to": 257
+        },
+        {
+          "text": "app that connects to servers.",
+          "from": 257,
+          "to": 322
+        },
+        {
+          "text": "Resource, read-only data a server",
+          "from": 324,
+          "to": 393
+        },
+        {
+          "text": "can share,",
+          "from": 395,
+          "to": 414
+        },
+        {
+          "text": "like files.",
+          "from": 420,
+          "to": 455
+        },
+        {
+          "text": "And transport,",
+          "from": 457,
+          "to": 481
+        },
+        {
+          "text": "how they talk.",
+          "from": 483,
+          "to": 520
+        },
+        {
+          "text": "Local servers usually use standard",
+          "from": 523,
+          "to": 581
+        },
+        {
+          "text": "input and output.",
+          "from": 582,
+          "to": 633
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Ideas to build",
+        "items": [
+          [
+            "Database",
+            "Company data",
+            "Answer sales questions"
+          ],
+          [
+            "Lightbulb",
+            "Smart home",
+            "Lights on, lights off"
+          ],
+          [
+            "CalendarDays",
+            "College",
+            "Timetable, assignments"
+          ]
+        ]
+      },
+      "from": 3132,
+      "durationInFrames": 439,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_06.wav",
+      "cues": [
+        47,
+        205,
+        320
+      ],
+      "captions": [
+        {
+          "text": "What could you build?",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "A server for your company's",
+          "from": 47,
+          "to": 86
+        },
+        {
+          "text": "database, so AI can answer",
+          "from": 87,
+          "to": 153
+        },
+        {
+          "text": "sales questions.",
+          "from": 155,
+          "to": 202
+        },
+        {
+          "text": "A server for your smart",
+          "from": 205,
+          "to": 238
+        },
+        {
+          "text": "home, to switch lights on",
+          "from": 240,
+          "to": 289
+        },
+        {
+          "text": "and off.",
+          "from": 290,
+          "to": 318
+        },
+        {
+          "text": "Or a server for your",
+          "from": 320,
+          "to": 349
+        },
+        {
+          "text": "college timetable,",
+          "from": 350,
+          "to": 388
+        },
+        {
+          "text": "and assignments.",
+          "from": 390,
+          "to": 425
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Any MCP server from the internet is safe to install.",
+        "fact": "Servers can run code and read your data. Use trusted sources and least access.",
+        "tip": "Trust before you install"
+      },
+      "from": 3571,
+      "durationInFrames": 482,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_07.wav",
+      "cues": [
+        68,
+        189
+      ],
+      "captions": [
+        {
+          "text": "Here's an important warning.",
+          "from": 10,
+          "to": 66
+        },
+        {
+          "text": "People install any MCP server",
+          "from": 68,
+          "to": 138
+        },
+        {
+          "text": "they find online.",
+          "from": 139,
+          "to": 186
+        },
+        {
+          "text": "A server can run code",
+          "from": 189,
+          "to": 232
+        },
+        {
+          "text": "on your computer,",
+          "from": 232,
+          "to": 260
+        },
+        {
+          "text": "and read your data.",
+          "from": 262,
+          "to": 306
+        },
+        {
+          "text": "Only install servers from sources",
+          "from": 308,
+          "to": 368
+        },
+        {
+          "text": "you trust,",
+          "from": 370,
+          "to": 396
+        },
+        {
+          "text": "and give them the least",
+          "from": 398,
+          "to": 424
+        },
+        {
+          "text": "access they need.",
+          "from": 427,
+          "to": 470
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The AI learns what a tool does from…",
+        "options": [
+          "Its name, type hints and docstring",
+          "The file size",
+          "The colour of the code"
+        ],
+        "answer": 0
+      },
+      "from": 4053,
+      "durationInFrames": 506,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_08.wav",
+      "cues": [
+        142,
+        354
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 33
+        },
+        {
+          "text": "What tells the AI what",
+          "from": 44,
+          "to": 80
+        },
+        {
+          "text": "an MCP tool does?",
+          "from": 80,
+          "to": 140
+        },
+        {
+          "text": "Pause and think,",
+          "from": 142,
+          "to": 178
+        },
+        {
+          "text": "and if you get it",
+          "from": 180,
+          "to": 197
+        },
+        {
+          "text": "right, comment below!",
+          "from": 199,
+          "to": 255
+        },
+        {
+          "text": "Its name,",
+          "from": 354,
+          "to": 375
+        },
+        {
+          "text": "type hints,",
+          "from": 379,
+          "to": 397
+        },
+        {
+          "text": "and docstring,",
+          "from": 398,
+          "to": 423
+        },
+        {
+          "text": "which become the tool's description!",
+          "from": 426,
+          "to": 493
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "MCP server",
+            "tools for any app"
+          ],
+          [
+            "FastMCP",
+            "one decorator"
+          ],
+          [
+            "Docstrings",
+            "describe tools"
+          ],
+          [
+            "Trust",
+            "before installing"
+          ]
+        ],
+        "next": "EP 56 · Voice assistant"
+      },
+      "from": 4559,
+      "durationInFrames": 648,
+      "voiceFrom": 10,
+      "audio": "lessons/ep55/voice_09.wav",
+      "cues": [
+        46,
+        166,
+        316,
+        417,
+        499
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "An MCP server offers tools",
+          "from": 46,
+          "to": 106
+        },
+        {
+          "text": "to any MCP app.",
+          "from": 107,
+          "to": 163
+        },
+        {
+          "text": "FastMCP turns Python functions into",
+          "from": 166,
+          "to": 250
+        },
+        {
+          "text": "tools, with one decorator.",
+          "from": 250,
+          "to": 314
+        },
+        {
+          "text": "Docstrings and type hints describe",
+          "from": 316,
+          "to": 375
+        },
+        {
+          "text": "them to the AI.",
+          "from": 376,
+          "to": 415
+        },
+        {
+          "text": "And only install servers you trust.",
+          "from": 417,
+          "to": 496
+        },
+        {
+          "text": "Next, build a voice assistant.",
+          "from": 499,
+          "to": 566
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 570,
+          "to": 636
+        }
+      ],
+      "image": null
+    }
+  ]
+}
