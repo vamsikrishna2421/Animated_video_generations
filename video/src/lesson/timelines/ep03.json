@@ -6,7 +6,7 @@
   "title": "Tokens and Context Window",
   "host": "female",
   "fps": 30,
-  "totalFrames": 3636,
+  "totalFrames": 4581,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -35,53 +35,53 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 318,
+      "durationInFrames": 396,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_01.wav",
       "cues": [
-        150,
-        259
+        174,
+        336
       ],
       "captions": [
         {
-          "text": "Ever had a long chat",
+          "text": "Have you ever had a",
           "from": 10,
-          "to": 46
+          "to": 48
         },
         {
-          "text": "with ChatGPT,",
-          "from": 46,
-          "to": 69
+          "text": "long chat with ChatGPT,",
+          "from": 48,
+          "to": 93
         },
         {
           "text": "and it forgot what you",
-          "from": 69,
-          "to": 108
+          "from": 93,
+          "to": 136
         },
         {
           "text": "said at the start?",
-          "from": 108,
-          "to": 140
+          "from": 136,
+          "to": 172
         },
         {
           "text": "That's not a bug.",
-          "from": 150,
-          "to": 185
+          "from": 174,
+          "to": 215
         },
         {
-          "text": "It's tokens,",
-          "from": 189,
-          "to": 212
+          "text": "It's because of tokens,",
+          "from": 217,
+          "to": 258
         },
         {
-          "text": "and the context window.",
-          "from": 212,
-          "to": 255
+          "text": "and something called the context window.",
+          "from": 261,
+          "to": 333
         },
         {
-          "text": "Let's break it down.",
-          "from": 259,
-          "to": 297
+          "text": "So let's break it down.",
+          "from": 336,
+          "to": 384
         }
       ],
       "image": null
@@ -107,61 +107,76 @@
           ]
         ]
       },
-      "from": 318,
-      "durationInFrames": 447,
+      "from": 396,
+      "durationInFrames": 557,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_02.wav",
       "cues": [
-        90,
-        237,
-        305,
-        371
+        104,
+        304,
+        383,
+        451
       ],
       "captions": [
         {
           "text": "L L Ms don't read",
           "from": 10,
-          "to": 45
+          "to": 51
         },
         {
           "text": "words the way we do.",
-          "from": 45,
-          "to": 85
+          "from": 52,
+          "to": 101
         },
         {
-          "text": "They read tokens.",
-          "from": 90,
-          "to": 130
+          "text": "They read tokens,",
+          "from": 104,
+          "to": 141
         },
         {
-          "text": "Small chunks of text,",
-          "from": 134,
-          "to": 174
+          "text": "which are small chunks of",
+          "from": 141,
+          "to": 194
         },
         {
-          "text": "often a word,",
-          "from": 174,
-          "to": 199
+          "text": "text, often a whole word,",
+          "from": 194,
+          "to": 248
         },
         {
-          "text": "or part of a word.",
-          "from": 199,
-          "to": 232
+          "text": "or just a part of",
+          "from": 248,
+          "to": 285
         },
         {
-          "text": "Common words are usually one token.",
-          "from": 237,
+          "text": "a word.",
+          "from": 285,
           "to": 301
         },
         {
-          "text": "Rare words get split into pieces.",
-          "from": 305,
-          "to": 366
+          "text": "Common words are usually one",
+          "from": 304,
+          "to": 354
         },
         {
-          "text": "Numbers and symbols count too.",
-          "from": 371,
-          "to": 426
+          "text": "token, rare words get split",
+          "from": 356,
+          "to": 415
+        },
+        {
+          "text": "into pieces,",
+          "from": 416,
+          "to": 448
+        },
+        {
+          "text": "and numbers and symbols count",
+          "from": 451,
+          "to": 500
+        },
+        {
+          "text": "as tokens too.",
+          "from": 502,
+          "to": 545
         }
       ],
       "image": null
@@ -198,66 +213,76 @@
           ]
         ]
       },
-      "from": 765,
-      "durationInFrames": 466,
+      "from": 953,
+      "durationInFrames": 605,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_03.wav",
       "cues": [
-        49,
-        188,
-        285,
-        378
+        58,
+        247,
+        366,
+        463
       ],
       "captions": [
         {
-          "text": "Here's the idea.",
+          "text": "Here's how it looks.",
           "from": 10,
-          "to": 44
+          "to": 55
         },
         {
           "text": "A long word like unbelievable",
-          "from": 49,
-          "to": 105
+          "from": 58,
+          "to": 113
         },
         {
-          "text": "can become pieces,",
-          "from": 105,
-          "to": 141
+          "text": "can be split into pieces,",
+          "from": 115,
+          "to": 161
         },
         {
           "text": "like un,",
-          "from": 141,
-          "to": 157
+          "from": 163,
+          "to": 187
         },
         {
-          "text": "believ, able.",
-          "from": 157,
-          "to": 184
+          "text": "believ, and able.",
+          "from": 189,
+          "to": 244
         },
         {
-          "text": "Roughly, one token is about",
-          "from": 188,
-          "to": 236
+          "text": "As a rough rule,",
+          "from": 247,
+          "to": 279
         },
         {
-          "text": "three quarters of a word.",
-          "from": 236,
-          "to": 280
+          "text": "one token is about three",
+          "from": 279,
+          "to": 328
         },
         {
-          "text": "So a hundred tokens is",
-          "from": 285,
-          "to": 326
+          "text": "quarters of a word,",
+          "from": 328,
+          "to": 366
+        },
+        {
+          "text": "so a hundred tokens is",
+          "from": 366,
+          "to": 410
         },
         {
           "text": "about seventy five words.",
-          "from": 326,
-          "to": 373
+          "from": 410,
+          "to": 460
         },
         {
-          "text": "And AI companies charge per token.",
-          "from": 378,
-          "to": 445
+          "text": "And here's why it matters,",
+          "from": 463,
+          "to": 508
+        },
+        {
+          "text": "AI companies charge you per token.",
+          "from": 511,
+          "to": 593
         }
       ],
       "image": null
@@ -312,49 +337,64 @@
         ],
         "note": "Too long? The oldest messages drop out."
       },
-      "from": 1231,
-      "durationInFrames": 375,
+      "from": 1558,
+      "durationInFrames": 502,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_04.wav",
       "cues": [
-        59,
-        260
+        100,
+        367
       ],
       "captions": [
         {
-          "text": "Now, the context window.",
+          "text": "Now, let's talk about the",
           "from": 10,
-          "to": 55
+          "to": 50
         },
         {
-          "text": "It's the model's working memory.",
-          "from": 59,
-          "to": 112
+          "text": "context window.",
+          "from": 51,
+          "to": 97
+        },
+        {
+          "text": "Think of it as the",
+          "from": 100,
+          "to": 124
+        },
+        {
+          "text": "model's working memory.",
+          "from": 125,
+          "to": 182
         },
         {
           "text": "Your messages and its replies",
-          "from": 117,
-          "to": 170
+          "from": 185,
+          "to": 243
         },
         {
-          "text": "must all fit inside.",
-          "from": 170,
-          "to": 207
+          "text": "all have to fit inside it.",
+          "from": 246,
+          "to": 303
         },
         {
-          "text": "When the chat gets too",
-          "from": 212,
-          "to": 250
+          "text": "So when the chat gets",
+          "from": 306,
+          "to": 337
         },
         {
-          "text": "long, the oldest messages fall",
-          "from": 250,
-          "to": 300
+          "text": "too long,",
+          "from": 339,
+          "to": 365
         },
         {
-          "text": "out, and the model forgets them.",
-          "from": 300,
-          "to": 354
+          "text": "the oldest messages fall out,",
+          "from": 367,
+          "to": 427
+        },
+        {
+          "text": "and the model simply forgets them.",
+          "from": 428,
+          "to": 491
         }
       ],
       "image": null
@@ -382,49 +422,54 @@
           "right": "Modern"
         }
       },
-      "from": 1606,
-      "durationInFrames": 317,
+      "from": 2060,
+      "durationInFrames": 410,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_05.wav",
       "cues": [
-        65,
-        151
+        109,
+        218
       ],
       "captions": [
         {
-          "text": "And these windows keep growing.",
+          "text": "And the good news is,",
           "from": 10,
-          "to": 60
+          "to": 49
+        },
+        {
+          "text": "these windows keep growing.",
+          "from": 50,
+          "to": 107
         },
         {
           "text": "Early chatbots could hold only",
-          "from": 65,
-          "to": 122
+          "from": 109,
+          "to": 161
         },
         {
-          "text": "a few pages.",
-          "from": 122,
-          "to": 146
+          "text": "a few pages of text.",
+          "from": 163,
+          "to": 216
         },
         {
-          "text": "Modern models hold hundreds of",
-          "from": 151,
-          "to": 208
+          "text": "But modern models can hold",
+          "from": 218,
+          "to": 269
         },
         {
-          "text": "thousands of tokens.",
-          "from": 208,
-          "to": 246
+          "text": "hundreds of thousands of tokens,",
+          "from": 269,
+          "to": 332
         },
         {
-          "text": "Entire books,",
-          "from": 251,
-          "to": 279
+          "text": "that's entire books,",
+          "from": 332,
+          "to": 372
         },
         {
-          "text": "at once.",
-          "from": 279,
-          "to": 297
+          "text": "all at once.",
+          "from": 372,
+          "to": 397
         }
       ],
       "image": null
@@ -451,65 +496,70 @@
           ]
         ]
       },
-      "from": 1923,
-      "durationInFrames": 375,
+      "from": 2470,
+      "durationInFrames": 533,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_06.wav",
       "cues": [
-        53,
-        130,
-        213
+        55,
+        169,
+        304
       ],
       "captions": [
         {
-          "text": "Why should you care?",
+          "text": "So why should you care?",
           "from": 10,
-          "to": 44
+          "to": 52
         },
         {
-          "text": "Cost.",
-          "from": 53,
-          "to": 74
+          "text": "First, cost,",
+          "from": 55,
+          "to": 85
         },
         {
-          "text": "More tokens,",
-          "from": 78,
-          "to": 102
+          "text": "because more tokens means a",
+          "from": 89,
+          "to": 129
         },
         {
           "text": "bigger bill.",
-          "from": 102,
-          "to": 125
-        },
-        {
-          "text": "Long documents may need to",
           "from": 130,
-          "to": 173
+          "to": 165
         },
         {
-          "text": "be split into chunks.",
-          "from": 173,
-          "to": 208
+          "text": "Second, long documents sometimes need",
+          "from": 169,
+          "to": 240
         },
         {
-          "text": "And in long chats,",
-          "from": 213,
-          "to": 245
-        },
-        {
-          "text": "start fresh or ask for",
-          "from": 245,
-          "to": 283
-        },
-        {
-          "text": "a summary,",
-          "from": 283,
+          "text": "to be split into smaller chunks.",
+          "from": 240,
           "to": 302
         },
         {
-          "text": "when the AI starts forgetting.",
-          "from": 302,
-          "to": 354
+          "text": "And third,",
+          "from": 304,
+          "to": 326
+        },
+        {
+          "text": "in a long chat,",
+          "from": 326,
+          "to": 359
+        },
+        {
+          "text": "when the AI starts forgetting,",
+          "from": 359,
+          "to": 421
+        },
+        {
+          "text": "just start a fresh chat,",
+          "from": 421,
+          "to": 471
+        },
+        {
+          "text": "or ask it for a summary.",
+          "from": 471,
+          "to": 522
         }
       ],
       "image": null
@@ -521,54 +571,59 @@
         "fact": "It only sees what fits in the context window. 'Memory' features just add saved notes to your prompt.",
         "tip": "Long chat acting weird? Start fresh."
       },
-      "from": 2298,
-      "durationInFrames": 383,
+      "from": 3003,
+      "durationInFrames": 469,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_07.wav",
       "cues": [
-        54,
-        137
+        58,
+        172
       ],
       "captions": [
         {
           "text": "Here's a common myth.",
           "from": 10,
-          "to": 50
+          "to": 56
         },
         {
-          "text": "The AI remembers everything you",
-          "from": 54,
-          "to": 108
+          "text": "People think the AI remembers",
+          "from": 58,
+          "to": 111
         },
         {
-          "text": "ever told it.",
-          "from": 108,
-          "to": 132
+          "text": "everything they've ever told it.",
+          "from": 113,
+          "to": 169
         },
         {
-          "text": "Nope.",
-          "from": 137,
-          "to": 156
+          "text": "It doesn't.",
+          "from": 172,
+          "to": 200
         },
         {
           "text": "It only sees what fits",
-          "from": 161,
-          "to": 197
+          "from": 202,
+          "to": 248
         },
         {
           "text": "in the current context window.",
-          "from": 197,
-          "to": 245
+          "from": 248,
+          "to": 310
         },
         {
-          "text": "Memory features just add saved",
-          "from": 250,
-          "to": 304
+          "text": "Those memory features just quietly",
+          "from": 312,
+          "to": 378
         },
         {
-          "text": "notes into your prompt, quietly.",
-          "from": 304,
-          "to": 362
+          "text": "add a few saved notes",
+          "from": 380,
+          "to": 420
+        },
+        {
+          "text": "into your prompt.",
+          "from": 421,
+          "to": 457
         }
       ],
       "image": null
@@ -584,54 +639,54 @@
         ],
         "answer": 1
       },
-      "from": 2681,
-      "durationInFrames": 404,
+      "from": 3472,
+      "durationInFrames": 427,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_08.wav",
       "cues": [
-        137,
-        272
+        131,
+        337
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 39
+          "to": 32
         },
         {
           "text": "Why did the AI forget",
-          "from": 48,
-          "to": 84
+          "from": 43,
+          "to": 77
         },
         {
-          "text": "your name,",
-          "from": 84,
-          "to": 101
+          "text": "your name in a long chat?",
+          "from": 78,
+          "to": 129
         },
         {
-          "text": "in a long chat?",
-          "from": 101,
-          "to": 127
+          "text": "Pause and think,",
+          "from": 131,
+          "to": 166
         },
         {
-          "text": "Pause and think.",
-          "from": 137,
-          "to": 171
+          "text": "and if you get it",
+          "from": 172,
+          "to": 189
         },
         {
-          "text": "It fell out of the",
-          "from": 272,
-          "to": 304
+          "text": "right, comment below!",
+          "from": 190,
+          "to": 246
         },
         {
-          "text": "context window!",
-          "from": 304,
-          "to": 331
-        },
-        {
-          "text": "Comment your answer!",
-          "from": 340,
+          "text": "Your name fell out of",
+          "from": 337,
           "to": 378
+        },
+        {
+          "text": "the context window!",
+          "from": 378,
+          "to": 415
         }
       ],
       "image": null
@@ -659,82 +714,92 @@
         ],
         "next": "EP 04 · Prompt Engineering"
       },
-      "from": 3085,
-      "durationInFrames": 551,
+      "from": 3899,
+      "durationInFrames": 682,
       "voiceFrom": 10,
       "audio": "lessons/ep03/voice_09.wav",
       "cues": [
-        37,
-        100,
-        184,
-        262,
-        334
+        45,
+        118,
+        199,
+        276,
+        392
       ],
       "captions": [
         {
-          "text": "Recap.",
+          "text": "Let's recap.",
           "from": 10,
-          "to": 32
+          "to": 42
         },
         {
           "text": "AI reads text as tokens.",
-          "from": 37,
-          "to": 96
+          "from": 45,
+          "to": 116
         },
         {
           "text": "One token is about three",
-          "from": 100,
-          "to": 144
+          "from": 118,
+          "to": 162
         },
         {
           "text": "quarters of a word.",
-          "from": 144,
-          "to": 180
+          "from": 162,
+          "to": 197
         },
         {
           "text": "The context window is its",
-          "from": 184,
-          "to": 229
+          "from": 199,
+          "to": 240
         },
         {
-          "text": "working memory.",
-          "from": 229,
-          "to": 257
+          "text": "working memory,",
+          "from": 242,
+          "to": 275
         },
         {
-          "text": "Too long,",
-          "from": 262,
-          "to": 280
+          "text": "and when the chat gets",
+          "from": 276,
+          "to": 305
         },
         {
-          "text": "and old messages fall out.",
-          "from": 280,
-          "to": 330
+          "text": "too long,",
+          "from": 308,
+          "to": 329
         },
         {
-          "text": "Next episode,",
+          "text": "old messages fall out.",
           "from": 334,
-          "to": 360
+          "to": 390
         },
         {
-          "text": "prompt engineering.",
-          "from": 360,
-          "to": 397
+          "text": "In the next episode,",
+          "from": 392,
+          "to": 431
         },
         {
-          "text": "How to talk to AI,",
-          "from": 402,
-          "to": 435
+          "text": "we'll learn prompt engineering,",
+          "from": 431,
+          "to": 489
         },
         {
-          "text": "and get great answers.",
-          "from": 435,
-          "to": 474
+          "text": "and how to get really",
+          "from": 489,
+          "to": 530
         },
         {
-          "text": "Follow AI Maastaaru!",
-          "from": 479,
-          "to": 525
+          "text": "great answers from AI.",
+          "from": 530,
+          "to": 572
+        },
+        {
+          "text": "Follow AI Maastaaru,",
+          "from": 576,
+          "to": 630
+        },
+        {
+          "text": "so you don't miss it!",
+          "from": 631,
+          "to": 670
         }
       ],
       "image": null
