@@ -42,7 +42,7 @@ export const Code: React.FC<SceneProps> = ({ data, cue }) => {
   const panel = useSpring(cue(0) - 6, 14);
   const outS = useSpring(cue(groups.length + 1), 12);
   const active = groups.reduce((a, _, i) => (f >= cue(i + 1) ? i : a), -1);
-  const size = lines.length > 12 ? 27 : 30;
+  const size = lines.length > 14 ? 25 : lines.length > 12 ? 27 : 30;
   return (
     <>
       <Heading kicker={data.kicker ?? "HANDS-ON"}>{data.heading}</Heading>

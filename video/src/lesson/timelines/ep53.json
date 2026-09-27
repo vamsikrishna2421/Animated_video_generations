@@ -1,0 +1,750 @@
+{
+  "id": "ep53",
+  "episode": 53,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build RAG Over Your PDFs, Part 2",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4254,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep53/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 53",
+        "title": [
+          "RAG Build",
+          "Part 2"
+        ],
+        "subtitle": "Search and answer with sources",
+        "buzzwords": [
+          "Query",
+          "Top K",
+          "Context",
+          "Citations",
+          "Grounding",
+          "System prompt",
+          "Python",
+          "Hands-on"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 387,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_01.wav",
+      "cues": [
+        175,
+        301
+      ],
+      "captions": [
+        {
+          "text": "Last time,",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "we loaded our PDF,",
+          "from": 32,
+          "to": 80
+        },
+        {
+          "text": "chunked it,",
+          "from": 82,
+          "to": 101
+        },
+        {
+          "text": "and stored it in a",
+          "from": 103,
+          "to": 128
+        },
+        {
+          "text": "vector database.",
+          "from": 130,
+          "to": 172
+        },
+        {
+          "text": "Today, we ask it questions,",
+          "from": 175,
+          "to": 234
+        },
+        {
+          "text": "and get answers with sources.",
+          "from": 237,
+          "to": 299
+        },
+        {
+          "text": "Part two of our RAG build.",
+          "from": 301,
+          "to": 374
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Question to answer",
+        "nodes": [
+          [
+            "MessageSquare",
+            "Ask",
+            "The user's question"
+          ],
+          [
+            "Search",
+            "Retrieve",
+            "Top 4 chunks"
+          ],
+          [
+            "FileText",
+            "Context",
+            "Numbered sources"
+          ],
+          [
+            "Brain",
+            "Answer",
+            "Only from sources"
+          ],
+          [
+            "Quote",
+            "Cite",
+            "Source numbers"
+          ]
+        ]
+      },
+      "from": 387,
+      "durationInFrames": 505,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_02.wav",
+      "cues": [
+        48,
+        112,
+        210,
+        304,
+        401
+      ],
+      "captions": [
+        {
+          "text": "Here's the flow.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "The user asks a question.",
+          "from": 48,
+          "to": 109
+        },
+        {
+          "text": "Chroma finds the four chunks",
+          "from": 112,
+          "to": 164
+        },
+        {
+          "text": "closest in meaning.",
+          "from": 165,
+          "to": 209
+        },
+        {
+          "text": "We paste them into the",
+          "from": 210,
+          "to": 236
+        },
+        {
+          "text": "prompt, as numbered sources.",
+          "from": 237,
+          "to": 302
+        },
+        {
+          "text": "The model answers,",
+          "from": 304,
+          "to": 338
+        },
+        {
+          "text": "using only those sources.",
+          "from": 341,
+          "to": 399
+        },
+        {
+          "text": "And it cites the source",
+          "from": 401,
+          "to": 431
+        },
+        {
+          "text": "numbers, so you can check.",
+          "from": 432,
+          "to": 492
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "Ask your PDF",
+        "file": "ask.py",
+        "lines": [
+          "import anthropic, chromadb",
+          "db = chromadb.PersistentClient(\"db\")",
+          "col = db.get_collection(\"docs\")",
+          "q = input(\"Ask: \")",
+          "hits = col.query(query_texts=[q], n_results=4)",
+          "context = \"\\n\\n\".join(",
+          "    f\"[{i}] {d}\" for i, d in",
+          "    zip(hits[\"ids\"][0], hits[\"documents\"][0]))",
+          "reply = anthropic.Anthropic().messages.create(",
+          "    model=\"claude-sonnet-5\", max_tokens=500,",
+          "    system=\"Answer ONLY from the sources. \"",
+          "           \"Cite source numbers. If unsure, say so.\",",
+          "    messages=[{\"role\": \"user\",",
+          "      \"content\": f\"Sources:\\n{context}\\n\\nQ: {q}\"}])",
+          "print(reply.content[0].text)"
+        ],
+        "groups": [
+          3,
+          2,
+          3,
+          6,
+          1
+        ],
+        "output": [
+          "Ask: Is dental treatment covered?",
+          "Only dental treatment needed after an",
+          "accident is covered [12]. Routine care is not [13]."
+        ]
+      },
+      "from": 892,
+      "durationInFrames": 843,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_03.wav",
+      "cues": [
+        45,
+        142,
+        258,
+        412,
+        727,
+        765
+      ],
+      "captions": [
+        {
+          "text": "Here's the code.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Open the same database,",
+          "from": 45,
+          "to": 85
+        },
+        {
+          "text": "and our docs collection.",
+          "from": 90,
+          "to": 139
+        },
+        {
+          "text": "Read the question,",
+          "from": 142,
+          "to": 176
+        },
+        {
+          "text": "and ask Chroma for the",
+          "from": 176,
+          "to": 218
+        },
+        {
+          "text": "four closest chunks.",
+          "from": 218,
+          "to": 255
+        },
+        {
+          "text": "Join them into one context,",
+          "from": 258,
+          "to": 306
+        },
+        {
+          "text": "each labelled with its chunk",
+          "from": 309,
+          "to": 346
+        },
+        {
+          "text": "ID, like a numbered source.",
+          "from": 348,
+          "to": 410
+        },
+        {
+          "text": "Call the model.",
+          "from": 412,
+          "to": 447
+        },
+        {
+          "text": "The system prompt says,",
+          "from": 449,
+          "to": 497
+        },
+        {
+          "text": "answer only from the sources,",
+          "from": 497,
+          "to": 557
+        },
+        {
+          "text": "cite them,",
+          "from": 557,
+          "to": 579
+        },
+        {
+          "text": "and admit when unsure.",
+          "from": 579,
+          "to": 625
+        },
+        {
+          "text": "The user message holds the",
+          "from": 627,
+          "to": 667
+        },
+        {
+          "text": "sources, and the question.",
+          "from": 669,
+          "to": 725
+        },
+        {
+          "text": "Print the answer.",
+          "from": 727,
+          "to": 762
+        },
+        {
+          "text": "And it replies with citations!",
+          "from": 765,
+          "to": 831
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "The magic prompt",
+        "kicker": "THREE RULES",
+        "steps": [
+          [
+            "Anchor",
+            "Grounding",
+            "Only from the sources"
+          ],
+          [
+            "Quote",
+            "Citations",
+            "Show where facts came from"
+          ],
+          [
+            "ShieldCheck",
+            "Honesty",
+            "Say 'not found' if missing"
+          ]
+        ]
+      },
+      "from": 1735,
+      "durationInFrames": 513,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_04.wav",
+      "cues": [
+        105,
+        227,
+        340
+      ],
+      "captions": [
+        {
+          "text": "That system prompt does three",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "important jobs.",
+          "from": 59,
+          "to": 102
+        },
+        {
+          "text": "Grounding.",
+          "from": 105,
+          "to": 135
+        },
+        {
+          "text": "Answer only from the sources,",
+          "from": 137,
+          "to": 193
+        },
+        {
+          "text": "not from memory.",
+          "from": 193,
+          "to": 225
+        },
+        {
+          "text": "Citations.",
+          "from": 227,
+          "to": 266
+        },
+        {
+          "text": "Show which chunk each fact",
+          "from": 269,
+          "to": 310
+        },
+        {
+          "text": "came from.",
+          "from": 311,
+          "to": 336
+        },
+        {
+          "text": "Honesty.",
+          "from": 340,
+          "to": 372
+        },
+        {
+          "text": "If the answer isn't in",
+          "from": 374,
+          "to": 419
+        },
+        {
+          "text": "the sources,",
+          "from": 419,
+          "to": 444
+        },
+        {
+          "text": "say so,",
+          "from": 444,
+          "to": 460
+        },
+        {
+          "text": "instead of guessing.",
+          "from": 460,
+          "to": 501
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "What you can build",
+        "items": [
+          [
+            "ShieldCheck",
+            "Policy helper",
+            "Insurance, loans"
+          ],
+          [
+            "GraduationCap",
+            "Study buddy",
+            "Your textbooks"
+          ],
+          [
+            "Building2",
+            "HR helpdesk",
+            "Company policies"
+          ]
+        ]
+      },
+      "from": 2248,
+      "durationInFrames": 439,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_05.wav",
+      "cues": [
+        71,
+        202,
+        301
+      ],
+      "captions": [
+        {
+          "text": "You can build a lot",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "with this.",
+          "from": 38,
+          "to": 68
+        },
+        {
+          "text": "Ask questions to your insurance",
+          "from": 71,
+          "to": 125
+        },
+        {
+          "text": "policy, or loan agreement.",
+          "from": 127,
+          "to": 199
+        },
+        {
+          "text": "Revise for exams from your",
+          "from": 202,
+          "to": 246
+        },
+        {
+          "text": "textbook PDFs.",
+          "from": 248,
+          "to": 298
+        },
+        {
+          "text": "Or give your company a",
+          "from": 301,
+          "to": 330
+        },
+        {
+          "text": "helpdesk bot,",
+          "from": 331,
+          "to": 364
+        },
+        {
+          "text": "over its HR policies.",
+          "from": 365,
+          "to": 426
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "If it answers one question well, it's done.",
+        "fact": "Test with a golden set, including questions the PDF can't answer.",
+        "tip": "Test the 'I don't know' case"
+      },
+      "from": 2687,
+      "durationInFrames": 476,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_06.wav",
+      "cues": [
+        66,
+        193
+      ],
+      "captions": [
+        {
+          "text": "Here's a common mistake.",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "People think once RAG works",
+          "from": 66,
+          "to": 122
+        },
+        {
+          "text": "for one question,",
+          "from": 124,
+          "to": 156
+        },
+        {
+          "text": "it's done.",
+          "from": 158,
+          "to": 190
+        },
+        {
+          "text": "Test it with a golden",
+          "from": 193,
+          "to": 245
+        },
+        {
+          "text": "set, from episode 33.",
+          "from": 245,
+          "to": 297
+        },
+        {
+          "text": "Try questions whose answers aren't",
+          "from": 300,
+          "to": 368
+        },
+        {
+          "text": "in the PDF,",
+          "from": 368,
+          "to": 391
+        },
+        {
+          "text": "and check that it says,",
+          "from": 391,
+          "to": 437
+        },
+        {
+          "text": "I don't know.",
+          "from": 437,
+          "to": 465
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Answer ONLY from sources, because…",
+        "options": [
+          "To reduce made-up answers",
+          "To make it slower",
+          "To use more tokens"
+        ],
+        "answer": 0
+      },
+      "from": 3163,
+      "durationInFrames": 497,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_07.wav",
+      "cues": [
+        148,
+        365
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 33
+        },
+        {
+          "text": "Why do we tell the",
+          "from": 45,
+          "to": 78
+        },
+        {
+          "text": "model to answer ONLY from",
+          "from": 78,
+          "to": 123
+        },
+        {
+          "text": "the sources?",
+          "from": 123,
+          "to": 146
+        },
+        {
+          "text": "Pause and think,",
+          "from": 148,
+          "to": 187
+        },
+        {
+          "text": "and if you get it",
+          "from": 189,
+          "to": 207
+        },
+        {
+          "text": "right, comment below!",
+          "from": 209,
+          "to": 267
+        },
+        {
+          "text": "To reduce made-up answers,",
+          "from": 365,
+          "to": 414
+        },
+        {
+          "text": "and keep it grounded in",
+          "from": 417,
+          "to": 449
+        },
+        {
+          "text": "your document!",
+          "from": 449,
+          "to": 485
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Retrieve",
+            "top chunks"
+          ],
+          [
+            "Context",
+            "numbered sources"
+          ],
+          [
+            "Prompt",
+            "ground, cite, be honest"
+          ],
+          [
+            "Test",
+            "with a golden set"
+          ]
+        ],
+        "next": "EP 54 · Build an agent"
+      },
+      "from": 3660,
+      "durationInFrames": 594,
+      "voiceFrom": 10,
+      "audio": "lessons/ep53/voice_08.wav",
+      "cues": [
+        50,
+        139,
+        231,
+        359,
+        425
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "Chroma finds the closest chunks",
+          "from": 50,
+          "to": 103
+        },
+        {
+          "text": "to the question.",
+          "from": 104,
+          "to": 137
+        },
+        {
+          "text": "We paste them into the",
+          "from": 139,
+          "to": 163
+        },
+        {
+          "text": "prompt, as numbered sources.",
+          "from": 165,
+          "to": 230
+        },
+        {
+          "text": "The system prompt forces grounding,",
+          "from": 231,
+          "to": 298
+        },
+        {
+          "text": "citations, and honesty.",
+          "from": 299,
+          "to": 357
+        },
+        {
+          "text": "And we test with a",
+          "from": 359,
+          "to": 383
+        },
+        {
+          "text": "golden set.",
+          "from": 386,
+          "to": 422
+        },
+        {
+          "text": "Next, build an AI agent",
+          "from": 425,
+          "to": 485
+        },
+        {
+          "text": "with tools.",
+          "from": 486,
+          "to": 518
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 521,
+          "to": 582
+        }
+      ],
+      "image": null
+    }
+  ]
+}
