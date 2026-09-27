@@ -1,0 +1,707 @@
+{
+  "id": "ep51",
+  "episode": 51,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build a Chatbot with a System Prompt",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4074,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep51/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 51",
+        "title": [
+          "Build a",
+          "Chatbot"
+        ],
+        "subtitle": "Memory and personality",
+        "buzzwords": [
+          "System prompt",
+          "Chat history",
+          "Loop",
+          "Roles",
+          "Personality",
+          "Memory",
+          "Python",
+          "Hands-on"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 406,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_01.wav",
+      "cues": [
+        108,
+        312
+      ],
+      "captions": [
+        {
+          "text": "Last time,",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "we asked the AI one question.",
+          "from": 33,
+          "to": 106
+        },
+        {
+          "text": "Today, we build a real",
+          "from": 108,
+          "to": 158
+        },
+        {
+          "text": "chatbot, that remembers the conversation,",
+          "from": 159,
+          "to": 244
+        },
+        {
+          "text": "and has its own personality.",
+          "from": 245,
+          "to": 309
+        },
+        {
+          "text": "All in about a dozen",
+          "from": 312,
+          "to": 349
+        },
+        {
+          "text": "lines of Python.",
+          "from": 350,
+          "to": 394
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two kinds of instructions",
+        "kicker": "WHO SAYS WHAT",
+        "left": {
+          "icon": "Settings",
+          "title": "System prompt",
+          "stat": "Builder",
+          "label": "personality and rules"
+        },
+        "right": {
+          "icon": "MessageSquare",
+          "title": "User messages",
+          "stat": "Person",
+          "label": "questions, one by one"
+        }
+      },
+      "from": 406,
+      "durationInFrames": 456,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_02.wav",
+      "cues": [
+        100,
+        331
+      ],
+      "captions": [
+        {
+          "text": "A chatbot uses two kinds",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "of instructions.",
+          "from": 59,
+          "to": 99
+        },
+        {
+          "text": "The system prompt,",
+          "from": 100,
+          "to": 135
+        },
+        {
+          "text": "set by you,",
+          "from": 137,
+          "to": 161
+        },
+        {
+          "text": "the builder.",
+          "from": 165,
+          "to": 195
+        },
+        {
+          "text": "It defines the bot's personality,",
+          "from": 197,
+          "to": 265
+        },
+        {
+          "text": "and rules,",
+          "from": 265,
+          "to": 287
+        },
+        {
+          "text": "for the whole chat.",
+          "from": 287,
+          "to": 328
+        },
+        {
+          "text": "User messages,",
+          "from": 331,
+          "to": 364
+        },
+        {
+          "text": "typed by the person,",
+          "from": 364,
+          "to": 410
+        },
+        {
+          "text": "one at a time.",
+          "from": 410,
+          "to": 444
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How chatbots 'remember'",
+        "kicker": "THE TRICK",
+        "steps": [
+          [
+            "Brain",
+            "No memory",
+            "Every call starts fresh"
+          ],
+          [
+            "ListOrdered",
+            "Keep a list",
+            "The chat history"
+          ],
+          [
+            "Send",
+            "Resend it",
+            "Every single turn"
+          ]
+        ]
+      },
+      "from": 862,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_03.wav",
+      "cues": [
+        53,
+        195,
+        302
+      ],
+      "captions": [
+        {
+          "text": "Here's a surprise.",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "The model has no memory",
+          "from": 53,
+          "to": 93
+        },
+        {
+          "text": "between calls.",
+          "from": 95,
+          "to": 133
+        },
+        {
+          "text": "Each call starts fresh.",
+          "from": 135,
+          "to": 192
+        },
+        {
+          "text": "So we keep a list",
+          "from": 195,
+          "to": 220
+        },
+        {
+          "text": "of every message,",
+          "from": 221,
+          "to": 254
+        },
+        {
+          "text": "the chat history.",
+          "from": 256,
+          "to": 299
+        },
+        {
+          "text": "And we send the whole",
+          "from": 302,
+          "to": 325
+        },
+        {
+          "text": "history, every time,",
+          "from": 326,
+          "to": 374
+        },
+        {
+          "text": "so the model sees the",
+          "from": 377,
+          "to": 410
+        },
+        {
+          "text": "full conversation.",
+          "from": 413,
+          "to": 458
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "A chatbot in 13 lines",
+        "file": "chatbot.py",
+        "lines": [
+          "import anthropic",
+          "client = anthropic.Anthropic()",
+          "hist = []",
+          "while True:",
+          "    msg = input(\"You: \")",
+          "    hist.append({\"role\": \"user\", \"content\": msg})",
+          "    reply = client.messages.create(",
+          "        model=\"claude-sonnet-5\", max_tokens=500,",
+          "        system=\"You are a friendly AI tutor.\",",
+          "        messages=hist)",
+          "    text = reply.content[0].text",
+          "    hist.append({\"role\": \"assistant\", \"content\": text})",
+          "    print(\"AI:\", text)"
+        ],
+        "groups": [
+          3,
+          3,
+          4,
+          1,
+          2
+        ],
+        "output": [
+          "You: hi, I'm Ravi",
+          "AI: Namaste Ravi! What shall we learn?",
+          "You: what's my name?",
+          "AI: Your name is Ravi!"
+        ]
+      },
+      "from": 1333,
+      "durationInFrames": 673,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_04.wav",
+      "cues": [
+        48,
+        131,
+        296,
+        445,
+        498,
+        606
+      ],
+      "captions": [
+        {
+          "text": "Here's the code.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "Set up the client,",
+          "from": 48,
+          "to": 73
+        },
+        {
+          "text": "and an empty history list.",
+          "from": 79,
+          "to": 128
+        },
+        {
+          "text": "Loop forever.",
+          "from": 131,
+          "to": 165
+        },
+        {
+          "text": "Read what the user types,",
+          "from": 168,
+          "to": 213
+        },
+        {
+          "text": "and add it to the",
+          "from": 213,
+          "to": 244
+        },
+        {
+          "text": "history, with the role user.",
+          "from": 244,
+          "to": 293
+        },
+        {
+          "text": "Call the model,",
+          "from": 296,
+          "to": 318
+        },
+        {
+          "text": "with a system prompt that",
+          "from": 320,
+          "to": 355
+        },
+        {
+          "text": "gives it a personality,",
+          "from": 356,
+          "to": 395
+        },
+        {
+          "text": "and the full history.",
+          "from": 398,
+          "to": 443
+        },
+        {
+          "text": "Take the reply's text.",
+          "from": 445,
+          "to": 496
+        },
+        {
+          "text": "Add it to the history,",
+          "from": 498,
+          "to": 535
+        },
+        {
+          "text": "as the assistant,",
+          "from": 539,
+          "to": 569
+        },
+        {
+          "text": "and print it.",
+          "from": 572,
+          "to": 602
+        },
+        {
+          "text": "Now it remembers your name!",
+          "from": 606,
+          "to": 660
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "One line, new bot",
+        "items": [
+          [
+            "GraduationCap",
+            "Maths tutor",
+            "Hints, not answers"
+          ],
+          [
+            "ShoppingBag",
+            "Shop support",
+            "Only order questions"
+          ],
+          [
+            "Map",
+            "Travel guide",
+            "Hyderabad, in Telugu"
+          ]
+        ]
+      },
+      "from": 2006,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_05.wav",
+      "cues": [
+        154,
+        289,
+        398
+      ],
+      "captions": [
+        {
+          "text": "Change one line,",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "the system prompt,",
+          "from": 46,
+          "to": 82
+        },
+        {
+          "text": "and you get a totally",
+          "from": 84,
+          "to": 112
+        },
+        {
+          "text": "different bot.",
+          "from": 114,
+          "to": 152
+        },
+        {
+          "text": "A patient maths tutor,",
+          "from": 154,
+          "to": 205
+        },
+        {
+          "text": "that never gives away the",
+          "from": 206,
+          "to": 240
+        },
+        {
+          "text": "answer directly.",
+          "from": 242,
+          "to": 286
+        },
+        {
+          "text": "A support bot for your",
+          "from": 289,
+          "to": 320
+        },
+        {
+          "text": "shop, that only talks about orders.",
+          "from": 322,
+          "to": 395
+        },
+        {
+          "text": "Or a Telugu speaking travel",
+          "from": 398,
+          "to": 449
+        },
+        {
+          "text": "guide for Hyderabad.",
+          "from": 451,
+          "to": 502
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Just let the chat history grow forever.",
+        "fact": "Long history costs more, runs slower, and can overflow the context window. Trim or summarise it.",
+        "tip": "Keep history in check"
+      },
+      "from": 2520,
+      "durationInFrames": 503,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_06.wav",
+      "cues": [
+        64,
+        139
+      ],
+      "captions": [
+        {
+          "text": "Here's a common mistake.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Beginners let the history grow forever.",
+          "from": 64,
+          "to": 137
+        },
+        {
+          "text": "Every turn resends everything,",
+          "from": 139,
+          "to": 195
+        },
+        {
+          "text": "so long chats get slower,",
+          "from": 197,
+          "to": 251
+        },
+        {
+          "text": "cost more,",
+          "from": 253,
+          "to": 282
+        },
+        {
+          "text": "and eventually overflow the context window.",
+          "from": 284,
+          "to": 375
+        },
+        {
+          "text": "Real apps trim,",
+          "from": 378,
+          "to": 417
+        },
+        {
+          "text": "or summarise,",
+          "from": 420,
+          "to": 447
+        },
+        {
+          "text": "old messages.",
+          "from": 450,
+          "to": 489
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "A chatbot remembers because…",
+        "options": [
+          "We resend the chat history every turn",
+          "The model saves memories itself",
+          "It reads your mind"
+        ],
+        "answer": 0
+      },
+      "from": 3023,
+      "durationInFrames": 447,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_07.wav",
+      "cues": [
+        122,
+        331
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "How does a chatbot remember",
+          "from": 33,
+          "to": 74
+        },
+        {
+          "text": "earlier messages?",
+          "from": 76,
+          "to": 120
+        },
+        {
+          "text": "Pause and think,",
+          "from": 122,
+          "to": 159
+        },
+        {
+          "text": "and if you get it",
+          "from": 160,
+          "to": 178
+        },
+        {
+          "text": "right, comment below!",
+          "from": 179,
+          "to": 234
+        },
+        {
+          "text": "We resend the whole chat",
+          "from": 331,
+          "to": 367
+        },
+        {
+          "text": "history, every single turn!",
+          "from": 368,
+          "to": 435
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "System prompt",
+            "personality and rules"
+          ],
+          [
+            "History",
+            "a list of messages"
+          ],
+          [
+            "Resend",
+            "every turn"
+          ],
+          [
+            "Trim",
+            "long chats"
+          ]
+        ],
+        "next": "EP 52 · RAG over PDFs"
+      },
+      "from": 3470,
+      "durationInFrames": 604,
+      "voiceFrom": 10,
+      "audio": "lessons/ep51/voice_08.wav",
+      "cues": [
+        45,
+        133,
+        235,
+        322,
+        418
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "The system prompt sets personality",
+          "from": 45,
+          "to": 100
+        },
+        {
+          "text": "and rules.",
+          "from": 102,
+          "to": 132
+        },
+        {
+          "text": "The model has no memory,",
+          "from": 133,
+          "to": 175
+        },
+        {
+          "text": "so we keep a history list.",
+          "from": 180,
+          "to": 233
+        },
+        {
+          "text": "Every turn,",
+          "from": 235,
+          "to": 258
+        },
+        {
+          "text": "we resend the full history.",
+          "from": 264,
+          "to": 319
+        },
+        {
+          "text": "And we trim long histories,",
+          "from": 322,
+          "to": 364
+        },
+        {
+          "text": "to control cost.",
+          "from": 369,
+          "to": 415
+        },
+        {
+          "text": "Next, build RAG over your",
+          "from": 418,
+          "to": 478
+        },
+        {
+          "text": "own PDFs.",
+          "from": 479,
+          "to": 523
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 526,
+          "to": 592
+        }
+      ],
+      "image": null
+    }
+  ]
+}

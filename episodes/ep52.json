@@ -1,0 +1,241 @@
+{
+  "id": "ep52",
+  "episode": 52,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build RAG Over Your PDFs, Part 1",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Imagine asking questions to your insurance policy, or a 200 page textbook, and getting instant answers. [1] Over two episodes, we'll build exactly that, a RAG app over your own PDFs. [2] Part one, loading and storing the documents.",
+      "data": {
+        "kicker": "EPISODE 52",
+        "title": [
+          "RAG Build",
+          "Part 1"
+        ],
+        "subtitle": "Chat with your PDFs",
+        "buzzwords": [
+          "PDF",
+          "pypdf",
+          "Chunks",
+          "Overlap",
+          "Embeddings",
+          "Chroma",
+          "Vector DB",
+          "Python"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's the plan, from episode 32. [1] Load the PDF, and pull out its text. [2] Split the text into overlapping chunks. [3] Turn each chunk into an embedding. [4] Store everything in a vector database. [5] Next episode, we'll search it, and answer questions.",
+      "data": {
+        "heading": "The build plan",
+        "nodes": [
+          [
+            "FileText",
+            "Load",
+            "Read the PDF text"
+          ],
+          [
+            "Scissors",
+            "Chunk",
+            "Overlapping pieces"
+          ],
+          [
+            "Binary",
+            "Embed",
+            "Meaning as numbers"
+          ],
+          [
+            "Database",
+            "Store",
+            "Vector database"
+          ],
+          [
+            "MessageSquare",
+            "Ask",
+            "Part 2"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "We need two free libraries. [1] pypdf, to read text from PDF files. [2] Chroma, a simple vector database, that also creates embeddings for us, automatically. [3] Install both with one command, pip install pypdf chromadb.",
+      "data": {
+        "heading": "Setup",
+        "kicker": "TOOLS",
+        "steps": [
+          [
+            "FileText",
+            "pypdf",
+            "Reads PDF text"
+          ],
+          [
+            "Database",
+            "Chroma",
+            "Vector DB + embeddings"
+          ],
+          [
+            "Package",
+            "One command",
+            "pip install pypdf chromadb"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "code",
+      "text": "Here's the code. [1] Import the two libraries. [2] Open the PDF, and join the text from every page. [3] Split it into words, and make chunks of 200 words, moving forward 150 at a time, so neighbouring chunks overlap by 50 words. [4] Create a Chroma database, saved in a folder, with a collection called docs. [5] Add all the chunks, each with an ID. Chroma embeds them for us. [6] Run it, and our PDF is stored, ready to search!",
+      "data": {
+        "heading": "Load, chunk, store",
+        "file": "ingest.py",
+        "lines": [
+          "from pypdf import PdfReader",
+          "import chromadb",
+          "",
+          "reader = PdfReader(\"policy.pdf\")",
+          "text = \" \".join(p.extract_text() for p in reader.pages)",
+          "",
+          "words = text.split()",
+          "chunks = [\" \".join(words[i:i+200])",
+          "          for i in range(0, len(words), 150)]",
+          "",
+          "db = chromadb.PersistentClient(\"db\")",
+          "col = db.get_or_create_collection(\"docs\")",
+          "col.add(documents=chunks,",
+          "        ids=[str(i) for i in range(len(chunks))])",
+          "print(len(chunks), \"chunks stored\")"
+        ],
+        "groups": [
+          3,
+          3,
+          4,
+          2,
+          3
+        ],
+        "output": [
+          "$ python ingest.py",
+          "48 chunks stored"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Why the overlap? [1] Without overlap, a key sentence can get cut in half, between two chunks, and neither chunk makes sense. [2] With overlap, the sentence appears whole in at least one chunk, so search can find it.",
+      "data": {
+        "heading": "Why overlap?",
+        "kicker": "SMALL DETAIL, BIG IMPACT",
+        "left": {
+          "icon": "Scissors",
+          "title": "No overlap",
+          "stat": "Cut in half",
+          "label": "key sentences get split"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "With overlap",
+          "stat": "Kept whole",
+          "label": "sentence fits in one chunk"
+        }
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Ingestion, the process of loading, chunking, and storing documents. [2] Collection, a named group of chunks inside the database. [3] Persistent, saved to disk, so you only ingest once. [4] And ID, a unique label for every chunk, so we can cite it later.",
+      "data": {
+        "heading": "Build words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Upload",
+            "Ingestion",
+            "Load, chunk, store"
+          ],
+          [
+            "FolderOpen",
+            "Collection",
+            "A named group"
+          ],
+          [
+            "Save",
+            "Persistent",
+            "Saved to disk"
+          ],
+          [
+            "Tag",
+            "ID",
+            "Label for each chunk"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common problem. [1] People expect every PDF to work. [2] Scanned PDFs are just pictures of pages, with no text inside. pypdf returns nothing. For those, you first need OCR, from use case 19, to read the text.",
+      "data": {
+        "myth": "Every PDF works the same way.",
+        "fact": "Scanned PDFs are just images with no text. Run OCR first.",
+        "tip": "No text? Use OCR"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Why do chunks overlap? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] So key sentences aren't cut in half, between two chunks!",
+      "data": {
+        "question": "Chunks overlap so that…",
+        "options": [
+          "Key sentences aren't cut in half",
+          "The file gets bigger",
+          "It looks nicer"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] pypdf reads the text from your PDF. [2] We split it into overlapping chunks. [3] Chroma embeds and stores them, on disk. [4] Scanned PDFs need OCR first. [5] Next, part two, searching the chunks, and answering questions with sources. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "pypdf",
+            "reads the text"
+          ],
+          [
+            "Chunks",
+            "with overlap"
+          ],
+          [
+            "Chroma",
+            "embeds and stores"
+          ],
+          [
+            "Scanned?",
+            "OCR first"
+          ]
+        ],
+        "next": "EP 53 · RAG Part 2"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Chat with your own PDFs. Part 1 of a hands-on RAG build in Python.\n\nAI From Scratch, Episode 52: build RAG over your PDFs, Part 1\n- The build plan: load, chunk, embed, store\n- Setup: pip install pypdf chromadb\n- The code, line by line\n- Why chunks overlap\n- Scanned PDFs need OCR first\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Part 2, search and answer with sources.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #RAG #Python #LearnAI #CodingForBeginners",
+    "pinned": "Quiz answer: So key sentences aren't cut in half between two chunks. Which PDF would you chat with first? Comment below!",
+    "cover": "'RAG Build Part 1' title card",
+    "alt": "Animated coding tutorial: loading a PDF, chunking with overlap and storing in Chroma for RAG."
+  }
+}

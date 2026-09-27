@@ -1,0 +1,783 @@
+{
+  "id": "ep50",
+  "episode": 50,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Your First AI API Call",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4627,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep50/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 50",
+        "title": [
+          "First",
+          "API Call"
+        ],
+        "subtitle": "Hands-on season begins",
+        "buzzwords": [
+          "Python",
+          "API key",
+          "SDK",
+          "Request",
+          "Response",
+          "Tokens",
+          "Model",
+          "Hello AI"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 405,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_01.wav",
+      "cues": [
+        72,
+        218
+      ],
+      "captions": [
+        {
+          "text": "Welcome to the hands-on season!",
+          "from": 10,
+          "to": 70
+        },
+        {
+          "text": "Until now,",
+          "from": 72,
+          "to": 94
+        },
+        {
+          "text": "we learned how AI works.",
+          "from": 100,
+          "to": 161
+        },
+        {
+          "text": "Now, we build with it.",
+          "from": 164,
+          "to": 216
+        },
+        {
+          "text": "Today, in about ten lines",
+          "from": 218,
+          "to": 268
+        },
+        {
+          "text": "of Python,",
+          "from": 269,
+          "to": 295
+        },
+        {
+          "text": "we'll make our very first",
+          "from": 297,
+          "to": 333
+        },
+        {
+          "text": "AI API call.",
+          "from": 335,
+          "to": 393
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "What an API call does",
+        "nodes": [
+          [
+            "FileCode",
+            "Request",
+            "Model + message"
+          ],
+          [
+            "KeyRound",
+            "Send",
+            "With your API key"
+          ],
+          [
+            "Server",
+            "Model runs",
+            "On their servers"
+          ],
+          [
+            "ArrowDownToLine",
+            "Response",
+            "Answer + token count"
+          ],
+          [
+            "Sparkles",
+            "Use it",
+            "In your app"
+          ]
+        ]
+      },
+      "from": 405,
+      "durationInFrames": 663,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_02.wav",
+      "cues": [
+        93,
+        222,
+        341,
+        426,
+        549
+      ],
+      "captions": [
+        {
+          "text": "First, what happens in an",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "API call?",
+          "from": 54,
+          "to": 90
+        },
+        {
+          "text": "Your program writes a request,",
+          "from": 93,
+          "to": 139
+        },
+        {
+          "text": "with a model name,",
+          "from": 144,
+          "to": 176
+        },
+        {
+          "text": "and your message.",
+          "from": 180,
+          "to": 219
+        },
+        {
+          "text": "It sends it over the",
+          "from": 222,
+          "to": 246
+        },
+        {
+          "text": "internet, with your secret API key.",
+          "from": 248,
+          "to": 339
+        },
+        {
+          "text": "The AI company's servers run",
+          "from": 341,
+          "to": 396
+        },
+        {
+          "text": "the model.",
+          "from": 397,
+          "to": 424
+        },
+        {
+          "text": "A response comes back,",
+          "from": 426,
+          "to": 474
+        },
+        {
+          "text": "with the answer,",
+          "from": 474,
+          "to": 510
+        },
+        {
+          "text": "and token counts.",
+          "from": 510,
+          "to": 547
+        },
+        {
+          "text": "And your program uses the",
+          "from": 549,
+          "to": 587
+        },
+        {
+          "text": "answer, however it likes.",
+          "from": 589,
+          "to": 650
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "What you need",
+        "kicker": "SETUP",
+        "steps": [
+          [
+            "Code",
+            "Python",
+            "On your computer"
+          ],
+          [
+            "KeyRound",
+            "An API key",
+            "From the developer console"
+          ],
+          [
+            "Package",
+            "The library",
+            "pip install anthropic"
+          ]
+        ]
+      },
+      "from": 1068,
+      "durationInFrames": 522,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_03.wav",
+      "cues": [
+        59,
+        133,
+        348
+      ],
+      "captions": [
+        {
+          "text": "You need three things.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Python installed on your computer.",
+          "from": 59,
+          "to": 130
+        },
+        {
+          "text": "An API key,",
+          "from": 133,
+          "to": 163
+        },
+        {
+          "text": "from a provider's developer console,",
+          "from": 163,
+          "to": 257
+        },
+        {
+          "text": "like Anthropic,",
+          "from": 257,
+          "to": 297
+        },
+        {
+          "text": "OpenAI, or Google.",
+          "from": 297,
+          "to": 346
+        },
+        {
+          "text": "And their Python library,",
+          "from": 348,
+          "to": 386
+        },
+        {
+          "text": "installed with one command,",
+          "from": 391,
+          "to": 443
+        },
+        {
+          "text": "pip install anthropic.",
+          "from": 445,
+          "to": 508
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "Hello, AI!",
+        "file": "first_call.py",
+        "lines": [
+          "import anthropic",
+          "",
+          "client = anthropic.Anthropic()",
+          "",
+          "reply = client.messages.create(",
+          "    model=\"claude-sonnet-5\",",
+          "    max_tokens=300,",
+          "    messages=[{\"role\": \"user\",",
+          "      \"content\": \"Explain AI in one line\"}],",
+          ")",
+          "print(reply.content[0].text)"
+        ],
+        "groups": [
+          2,
+          2,
+          3,
+          3,
+          1
+        ],
+        "output": [
+          "$ python first_call.py",
+          "AI is software that learns patterns",
+          "from data to make predictions."
+        ]
+      },
+      "from": 1590,
+      "durationInFrames": 882,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_04.wav",
+      "cues": [
+        174,
+        234,
+        414,
+        557,
+        718,
+        796
+      ],
+      "captions": [
+        {
+          "text": "Here's the code.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "We'll use Claude's API,",
+          "from": 45,
+          "to": 90
+        },
+        {
+          "text": "but every provider looks almost",
+          "from": 94,
+          "to": 140
+        },
+        {
+          "text": "the same.",
+          "from": 141,
+          "to": 171
+        },
+        {
+          "text": "First, import the library.",
+          "from": 174,
+          "to": 231
+        },
+        {
+          "text": "Create a client.",
+          "from": 234,
+          "to": 270
+        },
+        {
+          "text": "It reads your API key",
+          "from": 272,
+          "to": 307
+        },
+        {
+          "text": "from an environment variable,",
+          "from": 307,
+          "to": 355
+        },
+        {
+          "text": "so it's never written in",
+          "from": 355,
+          "to": 395
+        },
+        {
+          "text": "the code.",
+          "from": 395,
+          "to": 411
+        },
+        {
+          "text": "Now, create a message,",
+          "from": 414,
+          "to": 454
+        },
+        {
+          "text": "choosing the model,",
+          "from": 454,
+          "to": 488
+        },
+        {
+          "text": "and the maximum length of",
+          "from": 488,
+          "to": 533
+        },
+        {
+          "text": "the answer.",
+          "from": 533,
+          "to": 554
+        },
+        {
+          "text": "Then, the messages list.",
+          "from": 557,
+          "to": 614
+        },
+        {
+          "text": "The role is user,",
+          "from": 616,
+          "to": 650
+        },
+        {
+          "text": "and the content is our question.",
+          "from": 654,
+          "to": 715
+        },
+        {
+          "text": "Finally, print the text of",
+          "from": 718,
+          "to": 771
+        },
+        {
+          "text": "the reply.",
+          "from": 771,
+          "to": 793
+        },
+        {
+          "text": "Run it,",
+          "from": 796,
+          "to": 812
+        },
+        {
+          "text": "and the AI answers!",
+          "from": 815,
+          "to": 869
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "API words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "KeyRound",
+            "API key",
+            "Your secret password"
+          ],
+          [
+            "Package",
+            "SDK",
+            "The helper library"
+          ],
+          [
+            "Users",
+            "Role",
+            "User or assistant"
+          ],
+          [
+            "Ruler",
+            "Max tokens",
+            "Answer length limit"
+          ]
+        ]
+      },
+      "from": 2472,
+      "durationInFrames": 590,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_05.wav",
+      "cues": [
+        57,
+        171,
+        301,
+        408
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "API key,",
+          "from": 57,
+          "to": 78
+        },
+        {
+          "text": "your secret password for the service.",
+          "from": 78,
+          "to": 168
+        },
+        {
+          "text": "SDK, the library that makes",
+          "from": 171,
+          "to": 232
+        },
+        {
+          "text": "calling the API easy.",
+          "from": 234,
+          "to": 298
+        },
+        {
+          "text": "Role, who is speaking,",
+          "from": 301,
+          "to": 341
+        },
+        {
+          "text": "the user,",
+          "from": 342,
+          "to": 360
+        },
+        {
+          "text": "or the assistant.",
+          "from": 365,
+          "to": 406
+        },
+        {
+          "text": "And max tokens,",
+          "from": 408,
+          "to": 446
+        },
+        {
+          "text": "the limit on how long",
+          "from": 447,
+          "to": 482
+        },
+        {
+          "text": "the answer can be,",
+          "from": 483,
+          "to": 516
+        },
+        {
+          "text": "which also limits the cost.",
+          "from": 518,
+          "to": 577
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "It's fine to paste your API key in the code.",
+        "fact": "Bots scan GitHub for leaked keys within minutes. Use environment variables.",
+        "tip": "Never commit your key"
+      },
+      "from": 3062,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_06.wav",
+      "cues": [
+        64,
+        223
+      ],
+      "captions": [
+        {
+          "text": "Here's a common mistake.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Beginners paste their API key",
+          "from": 64,
+          "to": 125
+        },
+        {
+          "text": "directly into the code,",
+          "from": 125,
+          "to": 173
+        },
+        {
+          "text": "and push it to GitHub.",
+          "from": 173,
+          "to": 220
+        },
+        {
+          "text": "Bots scan GitHub for keys",
+          "from": 223,
+          "to": 275
+        },
+        {
+          "text": "within minutes,",
+          "from": 275,
+          "to": 307
+        },
+        {
+          "text": "and can run up a",
+          "from": 307,
+          "to": 341
+        },
+        {
+          "text": "huge bill.",
+          "from": 341,
+          "to": 363
+        },
+        {
+          "text": "Always keep keys in environment",
+          "from": 365,
+          "to": 418
+        },
+        {
+          "text": "variables, or a secret manager.",
+          "from": 420,
+          "to": 503
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Keep your API key…",
+        "options": [
+          "In an environment variable",
+          "Pasted in your code on GitHub",
+          "In your Instagram bio"
+        ],
+        "answer": 0
+      },
+      "from": 3576,
+      "durationInFrames": 421,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_07.wav",
+      "cues": [
+        109,
+        317
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Where should you keep your",
+          "from": 43,
+          "to": 63
+        },
+        {
+          "text": "API key?",
+          "from": 64,
+          "to": 107
+        },
+        {
+          "text": "Pause and think,",
+          "from": 109,
+          "to": 143
+        },
+        {
+          "text": "and if you get it",
+          "from": 145,
+          "to": 162
+        },
+        {
+          "text": "right, comment below!",
+          "from": 164,
+          "to": 219
+        },
+        {
+          "text": "In an environment variable,",
+          "from": 317,
+          "to": 361
+        },
+        {
+          "text": "never in your code!",
+          "from": 366,
+          "to": 408
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Request",
+            "and response"
+          ],
+          [
+            "Setup",
+            "Python, key, library"
+          ],
+          [
+            "Code",
+            "client, messages, print"
+          ],
+          [
+            "Secret",
+            "keep your key safe"
+          ]
+        ],
+        "next": "EP 51 · Build a chatbot"
+      },
+      "from": 3997,
+      "durationInFrames": 630,
+      "voiceFrom": 10,
+      "audio": "lessons/ep50/voice_08.wav",
+      "cues": [
+        46,
+        157,
+        268,
+        371,
+        425
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "An API call sends a",
+          "from": 46,
+          "to": 87
+        },
+        {
+          "text": "request, and gets a response.",
+          "from": 88,
+          "to": 155
+        },
+        {
+          "text": "You need Python,",
+          "from": 157,
+          "to": 185
+        },
+        {
+          "text": "an API key,",
+          "from": 189,
+          "to": 224
+        },
+        {
+          "text": "and the library.",
+          "from": 226,
+          "to": 266
+        },
+        {
+          "text": "Create a client,",
+          "from": 268,
+          "to": 296
+        },
+        {
+          "text": "send messages,",
+          "from": 298,
+          "to": 322
+        },
+        {
+          "text": "and print the reply.",
+          "from": 328,
+          "to": 368
+        },
+        {
+          "text": "And keep your key secret.",
+          "from": 371,
+          "to": 422
+        },
+        {
+          "text": "Next, we'll turn this into",
+          "from": 425,
+          "to": 468
+        },
+        {
+          "text": "a real chatbot,",
+          "from": 469,
+          "to": 502
+        },
+        {
+          "text": "with a system prompt.",
+          "from": 504,
+          "to": 548
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 552,
+          "to": 618
+        }
+      ],
+      "image": null
+    }
+  ]
+}
