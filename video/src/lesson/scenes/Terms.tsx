@@ -12,7 +12,7 @@ export const Terms: React.FC<SceneProps> = ({ data, cue }) => {
   const active = terms.reduce((a, _, i) => (f >= cue(i) ? i : a), -1);
   return (
     <>
-      <Heading kicker="GLOSSARY">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "GLOSSARY"}>{data.heading}</Heading>
       <div style={{ position: "absolute", top: 480, left: 60, right: 60, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
         {terms.map(([icon, term, def], i) => {
           const s = useSpring(cue(i), 13);
