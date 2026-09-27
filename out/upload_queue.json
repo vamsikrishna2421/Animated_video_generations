@@ -1,0 +1,702 @@
+{
+ "how_to_use": "Upload items in ascending serial order. Skip status 'posted'. Upload only status 'ready' (video exists); if the next serial is 'rendering soon', wait and re-read this file. Never skip ahead past a missing serial.",
+ "next_serial": "024",
+ "items": [
+  {
+   "serial": "001",
+   "id": "ep00",
+   "title": "Learn AI From Scratch - Trailer",
+   "status": "posted",
+   "video": "out/posted/001_ep00_learn_ai_from_scratch_trailer.mp4",
+   "captions": "out/posted/001_ep00_captions.txt"
+  },
+  {
+   "serial": "002",
+   "id": "ep01",
+   "title": "AI vs ML vs Deep Learning vs GenAI",
+   "status": "posted",
+   "video": "out/posted/002_ep01_ai_vs_ml_vs_deep_learning_vs_genai.mp4",
+   "captions": "out/posted/002_ep01_captions.txt"
+  },
+  {
+   "serial": "003",
+   "id": "ep02",
+   "title": "What is an LLM",
+   "status": "posted",
+   "video": "out/posted/003_ep02_what_is_an_llm.mp4",
+   "captions": "out/posted/003_ep02_captions.txt"
+  },
+  {
+   "serial": "004",
+   "id": "ep03",
+   "title": "Tokens and Context Window",
+   "status": "posted",
+   "video": "out/posted/004_ep03_tokens_and_context_window.mp4",
+   "captions": "out/posted/004_ep03_captions.txt"
+  },
+  {
+   "serial": "005",
+   "id": "ep04",
+   "title": "Prompt Engineering",
+   "status": "posted",
+   "video": "out/posted/005_ep04_prompt_engineering.mp4",
+   "captions": "out/posted/005_ep04_captions.txt"
+  },
+  {
+   "serial": "006",
+   "id": "ep05",
+   "title": "Temperature and Hallucinations",
+   "status": "posted",
+   "video": "out/posted/006_ep05_temperature_and_hallucinations.mp4",
+   "captions": "out/posted/006_ep05_captions.txt"
+  },
+  {
+   "serial": "007",
+   "id": "ep06",
+   "title": "Embeddings and Vector Search",
+   "status": "posted",
+   "video": "out/posted/007_ep06_embeddings_and_vector_search.mp4",
+   "captions": "out/posted/007_ep06_captions.txt"
+  },
+  {
+   "serial": "008",
+   "id": "ep07",
+   "title": "RAG Retrieval Augmented Generation",
+   "status": "posted",
+   "video": "out/posted/008_ep07_rag_retrieval_augmented_generation.mp4",
+   "captions": "out/posted/008_ep07_captions.txt"
+  },
+  {
+   "serial": "009",
+   "id": "ep08",
+   "title": "Prompting vs RAG vs Fine Tuning",
+   "status": "posted",
+   "video": "out/posted/009_ep08_prompting_vs_rag_vs_fine_tuning.mp4",
+   "captions": "out/posted/009_ep08_captions.txt"
+  },
+  {
+   "serial": "010",
+   "id": "ep09",
+   "title": "Tool Use and Function Calling",
+   "status": "posted",
+   "video": "out/posted/010_ep09_tool_use_and_function_calling.mp4",
+   "captions": "out/posted/010_ep09_captions.txt"
+  },
+  {
+   "serial": "011",
+   "id": "ep10",
+   "title": "AI Agents",
+   "status": "posted",
+   "video": "out/posted/011_ep10_ai_agents.mp4",
+   "captions": "out/posted/011_ep10_captions.txt"
+  },
+  {
+   "serial": "012",
+   "id": "ep11",
+   "title": "MCP Model Context Protocol",
+   "status": "posted",
+   "video": "out/posted/012_ep11_mcp_model_context_protocol.mp4",
+   "captions": "out/posted/012_ep11_captions.txt"
+  },
+  {
+   "serial": "013",
+   "id": "ep12",
+   "title": "Multimodal AI",
+   "status": "posted",
+   "video": "out/posted/013_ep12_multimodal_ai.mp4",
+   "captions": "out/posted/013_ep12_captions.txt"
+  },
+  {
+   "serial": "014",
+   "id": "ep13",
+   "title": "Speech AI",
+   "status": "posted",
+   "video": "out/posted/014_ep13_speech_ai.mp4",
+   "captions": "out/posted/014_ep13_captions.txt"
+  },
+  {
+   "serial": "015",
+   "id": "ep14",
+   "title": "Image Generation Part 1 Diffusion",
+   "status": "posted",
+   "video": "out/posted/015_ep14_image_generation_part_1_diffusion.mp4",
+   "captions": "out/posted/015_ep14_captions.txt"
+  },
+  {
+   "serial": "016",
+   "id": "ep15",
+   "title": "Image and Video Generation Part 2",
+   "status": "posted",
+   "video": "out/posted/016_ep15_image_and_video_generation_part_2.mp4",
+   "captions": "out/posted/016_ep15_captions.txt"
+  },
+  {
+   "serial": "017",
+   "id": "ep16",
+   "title": "Reasoning Models",
+   "status": "posted",
+   "video": "out/posted/017_ep16_reasoning_models.mp4",
+   "captions": "out/posted/017_ep16_captions.txt"
+  },
+  {
+   "serial": "018",
+   "id": "ep17",
+   "title": "AI Memory and Context Engineering",
+   "status": "posted",
+   "video": "out/posted/018_ep17_ai_memory_and_context_engineering.mp4",
+   "captions": "out/posted/018_ep17_captions.txt"
+  },
+  {
+   "serial": "019",
+   "id": "ep18",
+   "title": "Multi Agent Systems",
+   "status": "posted",
+   "video": "out/posted/019_ep18_multi_agent_systems.mp4",
+   "captions": "out/posted/019_ep18_captions.txt"
+  },
+  {
+   "serial": "020",
+   "id": "ep19",
+   "title": "AI Coding Assistants",
+   "status": "posted",
+   "video": "out/posted/020_ep19_ai_coding_assistants.mp4",
+   "captions": "out/posted/020_ep19_captions.txt"
+  },
+  {
+   "serial": "021",
+   "id": "ep20",
+   "title": "AI Security Prompt Injection",
+   "status": "posted",
+   "video": "out/posted/021_ep20_ai_security_prompt_injection.mp4",
+   "captions": "out/posted/021_ep20_captions.txt"
+  },
+  {
+   "serial": "022",
+   "id": "ep21",
+   "title": "How a Neural Network Learns Part 1",
+   "status": "posted",
+   "video": "out/posted/022_ep21_how_a_neural_network_learns_part_1.mp4",
+   "captions": "out/posted/022_ep21_captions.txt"
+  },
+  {
+   "serial": "023",
+   "id": "ep22",
+   "title": "How a Neural Network Learns Part 2",
+   "status": "posted",
+   "video": "out/posted/023_ep22_how_a_neural_network_learns_part_2.mp4",
+   "captions": "out/posted/023_ep22_captions.txt"
+  },
+  {
+   "serial": "024",
+   "id": "ep23",
+   "title": "How a Neural Network Learns Part 3",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/024_ep23_captions.txt"
+  },
+  {
+   "serial": "025",
+   "id": "ep24",
+   "title": "Supervised Unsupervised Reinforcement Learning",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/025_ep24_captions.txt"
+  },
+  {
+   "serial": "026",
+   "id": "ep25",
+   "title": "Training Data",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/026_ep25_captions.txt"
+  },
+  {
+   "serial": "027",
+   "id": "ep26",
+   "title": "Overfitting vs Underfitting",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/027_ep26_captions.txt"
+  },
+  {
+   "serial": "028",
+   "id": "ep27",
+   "title": "Transformers Part 1 Attention",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/028_ep27_captions.txt"
+  },
+  {
+   "serial": "029",
+   "id": "ep28",
+   "title": "Transformers Part 2 Inside a Transformer",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/029_ep28_captions.txt"
+  },
+  {
+   "serial": "030",
+   "id": "ep29",
+   "title": "Computer Vision",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/030_ep29_captions.txt"
+  },
+  {
+   "serial": "031",
+   "id": "ep30",
+   "title": "RLHF: How AI Learns Good Manners",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/031_ep30_captions.txt"
+  },
+  {
+   "serial": "032",
+   "id": "q03",
+   "title": "Quiz #3: Episodes 21–30",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/032_q03_captions.txt"
+  },
+  {
+   "serial": "033",
+   "id": "ep31",
+   "title": "Fine-tuning Deep Dive: LoRA",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/033_ep31_captions.txt"
+  },
+  {
+   "serial": "034",
+   "id": "ep32",
+   "title": "RAG, Part 2: Chunking, Vector Databases and Reranking",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/034_ep32_captions.txt"
+  },
+  {
+   "serial": "035",
+   "id": "ep33",
+   "title": "RAG, Part 3: Hybrid Search and Measuring Quality",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/035_ep33_captions.txt"
+  },
+  {
+   "serial": "036",
+   "id": "ep34",
+   "title": "Open vs Closed AI Models",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/036_ep34_captions.txt"
+  },
+  {
+   "serial": "037",
+   "id": "ep35",
+   "title": "Small Language Models",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/037_ep35_captions.txt"
+  },
+  {
+   "serial": "038",
+   "id": "ep36",
+   "title": "Why AI Runs on GPUs",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/038_ep36_captions.txt"
+  },
+  {
+   "serial": "039",
+   "id": "ep37",
+   "title": "Quantization: Shrinking AI Models",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/039_ep37_captions.txt"
+  },
+  {
+   "serial": "040",
+   "id": "ep38",
+   "title": "How to Run AI on Your Own Laptop",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/040_ep38_captions.txt"
+  },
+  {
+   "serial": "041",
+   "id": "ep39",
+   "title": "Where AI Costs Come From",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/041_ep39_captions.txt"
+  },
+  {
+   "serial": "042",
+   "id": "ep40",
+   "title": "AI Benchmarks: How Models Are Tested",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/042_ep40_captions.txt"
+  },
+  {
+   "serial": "043",
+   "id": "q04",
+   "title": "Quiz #4: Episodes 31–40",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/043_q04_captions.txt"
+  },
+  {
+   "serial": "044",
+   "id": "ep41",
+   "title": "How to Choose the Right AI Model",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/044_ep41_captions.txt"
+  },
+  {
+   "serial": "045",
+   "id": "ep42",
+   "title": "Bias in AI",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/045_ep42_captions.txt"
+  },
+  {
+   "serial": "046",
+   "id": "ep43",
+   "title": "AI Safety and Alignment",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/046_ep43_captions.txt"
+  },
+  {
+   "serial": "047",
+   "id": "ep44",
+   "title": "AI and Your Privacy",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/047_ep44_captions.txt"
+  },
+  {
+   "serial": "048",
+   "id": "ep45",
+   "title": "Deepfakes and How to Spot Them",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/048_ep45_captions.txt"
+  },
+  {
+   "serial": "049",
+   "id": "ep46",
+   "title": "Copyright and AI",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/049_ep46_captions.txt"
+  },
+  {
+   "serial": "050",
+   "id": "ep47",
+   "title": "Guardrails in Real AI Products",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/050_ep47_captions.txt"
+  },
+  {
+   "serial": "051",
+   "id": "ep48",
+   "title": "AI Laws Around the World",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/051_ep48_captions.txt"
+  },
+  {
+   "serial": "052",
+   "id": "ep49",
+   "title": "AI and Jobs",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/052_ep49_captions.txt"
+  },
+  {
+   "serial": "053",
+   "id": "q05",
+   "title": "Quiz #5: Episodes 41–49",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/053_q05_captions.txt"
+  },
+  {
+   "serial": "054",
+   "id": "ep50",
+   "title": "Your First AI API Call",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/054_ep50_captions.txt"
+  },
+  {
+   "serial": "055",
+   "id": "ep51",
+   "title": "Build a Chatbot with a System Prompt",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/055_ep51_captions.txt"
+  },
+  {
+   "serial": "056",
+   "id": "ep52",
+   "title": "Build RAG Over Your PDFs, Part 1",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/056_ep52_captions.txt"
+  },
+  {
+   "serial": "057",
+   "id": "ep53",
+   "title": "Build RAG Over Your PDFs, Part 2",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/057_ep53_captions.txt"
+  },
+  {
+   "serial": "058",
+   "id": "ep54",
+   "title": "Build an AI Agent with Tools",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/058_ep54_captions.txt"
+  },
+  {
+   "serial": "059",
+   "id": "ep55",
+   "title": "Build Your Own MCP Server",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/059_ep55_captions.txt"
+  },
+  {
+   "serial": "060",
+   "id": "ep56",
+   "title": "Build a Voice Assistant",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/060_ep56_captions.txt"
+  },
+  {
+   "serial": "061",
+   "id": "ep57",
+   "title": "Deploy Your AI App",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/061_ep57_captions.txt"
+  },
+  {
+   "serial": "062",
+   "id": "ep58",
+   "title": "Your AI Career Roadmap",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/062_ep58_captions.txt"
+  },
+  {
+   "serial": "063",
+   "id": "q06",
+   "title": "Quiz #6: Episodes 50–58",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/063_q06_captions.txt"
+  },
+  {
+   "serial": "064",
+   "id": "uc01",
+   "title": "How an AI Phone Call Assistant Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/064_uc01_captions.txt"
+  },
+  {
+   "serial": "065",
+   "id": "uc02",
+   "title": "How ChatGPT Searches the Web",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/065_uc02_captions.txt"
+  },
+  {
+   "serial": "066",
+   "id": "uc03",
+   "title": "How AI Meeting Notes Work",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/066_uc03_captions.txt"
+  },
+  {
+   "serial": "067",
+   "id": "uc04",
+   "title": "How Netflix and YouTube Recommend Videos",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/067_uc04_captions.txt"
+  },
+  {
+   "serial": "068",
+   "id": "uc05",
+   "title": "How Magic Eraser Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/068_uc05_captions.txt"
+  },
+  {
+   "serial": "069",
+   "id": "uc06",
+   "title": "How a Bank Support Bot Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/069_uc06_captions.txt"
+  },
+  {
+   "serial": "070",
+   "id": "uc07",
+   "title": "How Smart Replies Work",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/070_uc07_captions.txt"
+  },
+  {
+   "serial": "071",
+   "id": "uc08",
+   "title": "How Live Translation Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/071_uc08_captions.txt"
+  },
+  {
+   "serial": "072",
+   "id": "uc09",
+   "title": "How an AI Coding Assistant Builds a Feature",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/072_uc09_captions.txt"
+  },
+  {
+   "serial": "073",
+   "id": "uc10",
+   "title": "How the Instagram Reels Feed Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/073_uc10_captions.txt"
+  },
+  {
+   "serial": "074",
+   "id": "uc11",
+   "title": "How Google Lens Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/074_uc11_captions.txt"
+  },
+  {
+   "serial": "075",
+   "id": "uc12",
+   "title": "How AI Tutor Apps Work",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/075_uc12_captions.txt"
+  },
+  {
+   "serial": "076",
+   "id": "uc13",
+   "title": "How AI Music Generation Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/076_uc13_captions.txt"
+  },
+  {
+   "serial": "077",
+   "id": "uc14",
+   "title": "How UPI and Card Fraud Detection Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/077_uc14_captions.txt"
+  },
+  {
+   "serial": "078",
+   "id": "uc15",
+   "title": "How Delivery Apps Predict Arrival Time",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/078_uc15_captions.txt"
+  },
+  {
+   "serial": "079",
+   "id": "uc16",
+   "title": "How Ride Apps Set ETA and Surge Pricing",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/079_uc16_captions.txt"
+  },
+  {
+   "serial": "080",
+   "id": "uc17",
+   "title": "How Face Unlock Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/080_uc17_captions.txt"
+  },
+  {
+   "serial": "081",
+   "id": "uc18",
+   "title": "How Self Driving Cars See the Road",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/081_uc18_captions.txt"
+  },
+  {
+   "serial": "082",
+   "id": "uc19",
+   "title": "How KYC Document Scanning Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/082_uc19_captions.txt"
+  },
+  {
+   "serial": "083",
+   "id": "uc20",
+   "title": "How Crop Disease Detection Apps Work",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/083_uc20_captions.txt"
+  },
+  {
+   "serial": "084",
+   "id": "uc21",
+   "title": "How Wake Words Like 'Hey Siri' Work",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/084_uc21_captions.txt"
+  },
+  {
+   "serial": "085",
+   "id": "uc22",
+   "title": "How Resume Screening Software Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/085_uc22_captions.txt"
+  },
+  {
+   "serial": "086",
+   "id": "uc23",
+   "title": "How AI Helps Doctors Read X-rays",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/086_uc23_captions.txt"
+  },
+  {
+   "serial": "087",
+   "id": "uc24",
+   "title": "How Deepfake Detection Works",
+   "status": "rendering soon",
+   "video": null,
+   "captions": "out/087_uc24_captions.txt"
+  }
+ ]
+}

@@ -97,6 +97,7 @@ Common hashtags (add 3–5 of these to every post): `#AIforBeginners #LearnAI #A
 Every upload has a 3-digit serial in `series/upload_order.json` (serial = position + 1). Files:
 `out/<serial>_<id>_<slug>.mp4` and `out/<serial>_<id>_captions.txt` (first line `UPLOAD: <serial>`).
 Post strictly in serial order, whatever the id prefix (ep / uc / q). Already-posted uploads live in `out/posted/`.
+`out/upload_queue.json` is the machine-readable queue (serial, id, title, status, video, captions, next_serial).
 `out/UPLOAD_ORDER.md` lists every serial with status: posted / ready / rendering soon.
 A video only appears in `out/` once it has been rendered from the latest script; stale renders are removed.
 Posted so far: 001–023 (trailer + EP 1–22). Next: 024 = EP 23.

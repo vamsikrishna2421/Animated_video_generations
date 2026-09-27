@@ -314,7 +314,7 @@ def main() -> None:
     where = serialize(out)
     for old in list(out.glob("*_captions.txt")) + list((out / "posted").glob("*_captions.txt")):
         old.unlink()
-    rows = []
+    rows, items = [], []
     for ep, p in all_posts().items():
         if ep not in where:
             continue  # not scheduled for upload (e.g. q01, q02)
@@ -336,11 +336,21 @@ def main() -> None:
         title = json.loads(spec.read_text())["title"] if spec.exists() else ep
         status = "posted" if dest.name == "posted" else ("ready" if videos else "rendering soon")
         rows.append((serial, ep, title, status))
+        items.append({"serial": serial, "id": ep, "title": title, "status": status,
+                      "video": f"{dest.relative_to(ROOT)}/{video}" if videos else None,
+                      "captions": f"{dest.relative_to(ROOT)}/{serial}_{ep}_captions.txt"})
     rows.sort()
     (out / "UPLOAD_ORDER.md").write_text(
         "# Upload order\n\nPost strictly by serial. Files: `out/<serial>_<id>_*.mp4` + `out/<serial>_<id>_captions.txt`.\n"
         "Already posted: `out/posted/`.\n\n| Serial | ID | Title | Status |\n|---|---|---|---|\n"
         + "".join(f"| {s} | {i} | {t} | {st} |\n" for s, i, t, st in rows))
+    items.sort(key=lambda x: x["serial"])
+    nxt = next((x for x in items if x["status"] != "posted"), None)
+    (out / "upload_queue.json").write_text(json.dumps({
+        "how_to_use": "Upload items in ascending serial order. Skip status 'posted'. Upload only status 'ready' (video exists); "
+                      "if the next serial is 'rendering soon', wait and re-read this file. Never skip ahead past a missing serial.",
+        "next_serial": nxt["serial"] if nxt else None,
+        "items": items}, indent=1, ensure_ascii=False) + "\n")
     print("wrote captions for", len(rows), "uploads; see out/UPLOAD_ORDER.md")
 
 
