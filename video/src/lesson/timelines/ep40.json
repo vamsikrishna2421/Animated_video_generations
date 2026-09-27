@@ -1,0 +1,717 @@
+{
+  "id": "ep40",
+  "episode": 40,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Benchmarks: How Models Are Tested",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4329,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep40/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 40",
+        "title": [
+          "AI",
+          "Benchmarks"
+        ],
+        "subtitle": "How models are tested",
+        "buzzwords": [
+          "MMLU",
+          "Leaderboards",
+          "Coding tests",
+          "Math",
+          "Arena",
+          "Scores",
+          "Contamination",
+          "Evals"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 329,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_01.wav",
+      "cues": [
+        158,
+        241
+      ],
+      "captions": [
+        {
+          "text": "Every new AI model launches",
+          "from": 10,
+          "to": 67
+        },
+        {
+          "text": "with a chart,",
+          "from": 68,
+          "to": 94
+        },
+        {
+          "text": "showing it beat everyone else.",
+          "from": 96,
+          "to": 156
+        },
+        {
+          "text": "But what are those tests,",
+          "from": 158,
+          "to": 198
+        },
+        {
+          "text": "and can you trust them?",
+          "from": 199,
+          "to": 238
+        },
+        {
+          "text": "Let's understand AI benchmarks.",
+          "from": 241,
+          "to": 314
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Benchmark",
+        "short": "Benchmark",
+        "definition": "A standard set of test questions with known answers, used to compare AI models fairly.",
+        "chips": [
+          [
+            "ClipboardList",
+            "Fixed questions"
+          ],
+          [
+            "Users",
+            "Same test for all"
+          ],
+          [
+            "BarChart3",
+            "Comparable scores"
+          ]
+        ]
+      },
+      "from": 329,
+      "durationInFrames": 365,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_02.wav",
+      "cues": [
+        123,
+        208,
+        277
+      ],
+      "captions": [
+        {
+          "text": "A benchmark is a standard",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "exam for AI models.",
+          "from": 54,
+          "to": 121
+        },
+        {
+          "text": "It's a fixed set of",
+          "from": 123,
+          "to": 146
+        },
+        {
+          "text": "questions with known answers,",
+          "from": 148,
+          "to": 206
+        },
+        {
+          "text": "every model takes the same",
+          "from": 208,
+          "to": 250
+        },
+        {
+          "text": "test, and the scores let",
+          "from": 252,
+          "to": 302
+        },
+        {
+          "text": "us compare them fairly.",
+          "from": 303,
+          "to": 354
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Popular benchmarks",
+        "kicker": "THE EXAMS",
+        "cols": [
+          "Tests"
+        ],
+        "rows": [
+          [
+            "MMLU",
+            "General knowledge"
+          ],
+          [
+            "Math sets",
+            "Step-by-step solving"
+          ],
+          [
+            "Coding sets",
+            "Does the code run?"
+          ],
+          [
+            "Arenas",
+            "People vote blind"
+          ]
+        ]
+      },
+      "from": 694,
+      "durationInFrames": 628,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_03.wav",
+      "cues": [
+        65,
+        232,
+        344,
+        481
+      ],
+      "captions": [
+        {
+          "text": "Here are some popular ones.",
+          "from": 10,
+          "to": 63
+        },
+        {
+          "text": "MMLU tests general knowledge,",
+          "from": 65,
+          "to": 132
+        },
+        {
+          "text": "across dozens of school and",
+          "from": 134,
+          "to": 182
+        },
+        {
+          "text": "college subjects.",
+          "from": 183,
+          "to": 229
+        },
+        {
+          "text": "Math benchmarks test step by",
+          "from": 232,
+          "to": 288
+        },
+        {
+          "text": "step problem solving.",
+          "from": 290,
+          "to": 341
+        },
+        {
+          "text": "Coding benchmarks check whether the",
+          "from": 344,
+          "to": 393
+        },
+        {
+          "text": "model's code actually passes tests.",
+          "from": 394,
+          "to": 478
+        },
+        {
+          "text": "And chatbot arenas let real",
+          "from": 481,
+          "to": 535
+        },
+        {
+          "text": "people vote on which answer",
+          "from": 536,
+          "to": 582
+        },
+        {
+          "text": "they prefer.",
+          "from": 584,
+          "to": 616
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two ways to test",
+        "kicker": "EXAM STYLES",
+        "left": {
+          "icon": "CheckCheck",
+          "title": "Automatic",
+          "stat": "Exact answers",
+          "label": "fast, cheap, repeatable"
+        },
+        "right": {
+          "icon": "Users",
+          "title": "Human votes",
+          "stat": "Preferences",
+          "label": "real taste, but slower"
+        }
+      },
+      "from": 1322,
+      "durationInFrames": 479,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_04.wav",
+      "cues": [
+        71,
+        205
+      ],
+      "captions": [
+        {
+          "text": "There are two styles of testing.",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "Automatic tests have exact answers,",
+          "from": 71,
+          "to": 142
+        },
+        {
+          "text": "so they're fast and cheap.",
+          "from": 143,
+          "to": 202
+        },
+        {
+          "text": "Human preference tests,",
+          "from": 205,
+          "to": 242
+        },
+        {
+          "text": "like arenas,",
+          "from": 247,
+          "to": 278
+        },
+        {
+          "text": "capture what people actually like,",
+          "from": 280,
+          "to": 341
+        },
+        {
+          "text": "but they're slower,",
+          "from": 343,
+          "to": 378
+        },
+        {
+          "text": "and can reward confident sounding answers.",
+          "from": 380,
+          "to": 466
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Why scores can mislead",
+        "kicker": "WATCH OUT",
+        "steps": [
+          [
+            "Droplets",
+            "Contamination",
+            "Saw the answers in training"
+          ],
+          [
+            "Gauge",
+            "Saturation",
+            "Everyone scores ~100%"
+          ],
+          [
+            "Dice5",
+            "Gaming",
+            "Tuned for the test"
+          ]
+        ]
+      },
+      "from": 1801,
+      "durationInFrames": 622,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_05.wav",
+      "cues": [
+        78,
+        269,
+        463
+      ],
+      "captions": [
+        {
+          "text": "But benchmarks have problems.",
+          "from": 10,
+          "to": 76
+        },
+        {
+          "text": "Contamination, when test questions leak",
+          "from": 78,
+          "to": 153
+        },
+        {
+          "text": "into the training data,",
+          "from": 154,
+          "to": 192
+        },
+        {
+          "text": "so the model has seen",
+          "from": 194,
+          "to": 226
+        },
+        {
+          "text": "the answers.",
+          "from": 227,
+          "to": 266
+        },
+        {
+          "text": "Saturation, when every top model",
+          "from": 269,
+          "to": 336
+        },
+        {
+          "text": "scores near 100 percent,",
+          "from": 337,
+          "to": 393
+        },
+        {
+          "text": "so the test stops being useful.",
+          "from": 395,
+          "to": 461
+        },
+        {
+          "text": "And gaming,",
+          "from": 463,
+          "to": 488
+        },
+        {
+          "text": "when models are tuned just",
+          "from": 488,
+          "to": 543
+        },
+        {
+          "text": "to score high,",
+          "from": 543,
+          "to": 573
+        },
+        {
+          "text": "not to be useful.",
+          "from": 573,
+          "to": 610
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "How to judge a model",
+        "items": [
+          [
+            "Layers",
+            "Many benchmarks",
+            "Not just one chart"
+          ],
+          [
+            "MessagesSquare",
+            "Community",
+            "Reviews and arenas"
+          ],
+          [
+            "FlaskConical",
+            "Your own tests",
+            "Real tasks you care about"
+          ]
+        ]
+      },
+      "from": 2423,
+      "durationInFrames": 374,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_06.wav",
+      "cues": [
+        68,
+        157,
+        250
+      ],
+      "captions": [
+        {
+          "text": "So how should you judge",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "a model?",
+          "from": 39,
+          "to": 65
+        },
+        {
+          "text": "Look at several benchmarks,",
+          "from": 68,
+          "to": 115
+        },
+        {
+          "text": "not just one.",
+          "from": 119,
+          "to": 155
+        },
+        {
+          "text": "Check community reviews,",
+          "from": 157,
+          "to": 199
+        },
+        {
+          "text": "and arena rankings.",
+          "from": 203,
+          "to": 248
+        },
+        {
+          "text": "And most importantly,",
+          "from": 250,
+          "to": 287
+        },
+        {
+          "text": "test it on your own",
+          "from": 289,
+          "to": 320
+        },
+        {
+          "text": "real tasks.",
+          "from": 321,
+          "to": 360
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The highest benchmark score means the best model for everything.",
+        "fact": "A model can top one chart and still be worse at your task. Benchmarks are a starting point.",
+        "tip": "Test on your own tasks"
+      },
+      "from": 2797,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_07.wav",
+      "cues": [
+        59,
+        204
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think the model with",
+          "from": 59,
+          "to": 106
+        },
+        {
+          "text": "the highest benchmark score is",
+          "from": 106,
+          "to": 159
+        },
+        {
+          "text": "the best for everything.",
+          "from": 159,
+          "to": 202
+        },
+        {
+          "text": "A model can top one",
+          "from": 204,
+          "to": 238
+        },
+        {
+          "text": "chart, and still be worse",
+          "from": 240,
+          "to": 280
+        },
+        {
+          "text": "at your task.",
+          "from": 282,
+          "to": 320
+        },
+        {
+          "text": "Benchmarks are a starting point,",
+          "from": 323,
+          "to": 391
+        },
+        {
+          "text": "not a final answer.",
+          "from": 391,
+          "to": 432
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Contamination means…",
+        "options": [
+          "Test questions leaked into training data",
+          "The GPU got too hot",
+          "The test was too hard"
+        ],
+        "answer": 0
+      },
+      "from": 3241,
+      "durationInFrames": 484,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_08.wav",
+      "cues": [
+        117,
+        333
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "What is benchmark contamination?",
+          "from": 45,
+          "to": 115
+        },
+        {
+          "text": "Pause and think,",
+          "from": 117,
+          "to": 156
+        },
+        {
+          "text": "and if you get it",
+          "from": 158,
+          "to": 176
+        },
+        {
+          "text": "right, comment below!",
+          "from": 177,
+          "to": 235
+        },
+        {
+          "text": "The test questions leaked into",
+          "from": 333,
+          "to": 377
+        },
+        {
+          "text": "the training data,",
+          "from": 378,
+          "to": 410
+        },
+        {
+          "text": "so the model saw the answers!",
+          "from": 411,
+          "to": 471
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Benchmarks",
+            "standard AI exams"
+          ],
+          [
+            "Types",
+            "knowledge, math, code, votes"
+          ],
+          [
+            "Pitfalls",
+            "leaks, saturation, gaming"
+          ],
+          [
+            "Test",
+            "on your own tasks"
+          ]
+        ],
+        "next": "EP 41 · Choosing a model"
+      },
+      "from": 3725,
+      "durationInFrames": 604,
+      "voiceFrom": 10,
+      "audio": "lessons/ep40/voice_09.wav",
+      "cues": [
+        46,
+        133,
+        269,
+        380,
+        451
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Benchmarks are standard exams for AI.",
+          "from": 46,
+          "to": 131
+        },
+        {
+          "text": "Popular ones test knowledge,",
+          "from": 133,
+          "to": 184
+        },
+        {
+          "text": "math, coding,",
+          "from": 190,
+          "to": 220
+        },
+        {
+          "text": "and human preference.",
+          "from": 222,
+          "to": 266
+        },
+        {
+          "text": "Watch out for contamination,",
+          "from": 269,
+          "to": 322
+        },
+        {
+          "text": "saturation, and gaming.",
+          "from": 324,
+          "to": 378
+        },
+        {
+          "text": "And always test on your",
+          "from": 380,
+          "to": 411
+        },
+        {
+          "text": "own tasks.",
+          "from": 411,
+          "to": 448
+        },
+        {
+          "text": "Next, how to choose the",
+          "from": 451,
+          "to": 490
+        },
+        {
+          "text": "right model.",
+          "from": 491,
+          "to": 521
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 525,
+          "to": 592
+        }
+      ],
+      "image": null
+    }
+  ]
+}

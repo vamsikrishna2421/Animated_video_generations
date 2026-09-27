@@ -1,0 +1,791 @@
+{
+  "id": "ep41",
+  "episode": 41,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How to Choose the Right AI Model",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4523,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep41/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 41",
+        "title": [
+          "Choose",
+          "a Model"
+        ],
+        "subtitle": "A simple checklist",
+        "buzzwords": [
+          "Quality",
+          "Cost",
+          "Speed",
+          "Privacy",
+          "Context",
+          "Open",
+          "Closed",
+          "Multimodal"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 449,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_01.wav",
+      "cues": [
+        234,
+        307
+      ],
+      "captions": [
+        {
+          "text": "There are hundreds of AI",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "models out there.",
+          "from": 57,
+          "to": 90
+        },
+        {
+          "text": "Big, small,",
+          "from": 93,
+          "to": 133
+        },
+        {
+          "text": "open, closed,",
+          "from": 135,
+          "to": 173
+        },
+        {
+          "text": "cheap, expensive.",
+          "from": 177,
+          "to": 232
+        },
+        {
+          "text": "How do you pick the",
+          "from": 234,
+          "to": 254
+        },
+        {
+          "text": "right one for your project?",
+          "from": 256,
+          "to": 305
+        },
+        {
+          "text": "Today, a simple checklist that",
+          "from": 307,
+          "to": 366
+        },
+        {
+          "text": "puts together everything we've learned.",
+          "from": 367,
+          "to": 436
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Start with the task",
+        "kicker": "STEP 1",
+        "steps": [
+          [
+            "Target",
+            "The job",
+            "Chat, code, images, sorting?"
+          ],
+          [
+            "Gauge",
+            "Quality bar",
+            "Fun caption vs medical"
+          ],
+          [
+            "ShieldCheck",
+            "Limits",
+            "Budget, speed, privacy"
+          ]
+        ]
+      },
+      "from": 449,
+      "durationInFrames": 537,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_02.wav",
+      "cues": [
+        52,
+        231,
+        411
+      ],
+      "captions": [
+        {
+          "text": "Start with the task.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "What exactly must it do?",
+          "from": 52,
+          "to": 105
+        },
+        {
+          "text": "Chat, write code,",
+          "from": 107,
+          "to": 149
+        },
+        {
+          "text": "read images,",
+          "from": 151,
+          "to": 175
+        },
+        {
+          "text": "or classify tickets?",
+          "from": 180,
+          "to": 226
+        },
+        {
+          "text": "How good must it be?",
+          "from": 231,
+          "to": 278
+        },
+        {
+          "text": "A typo in a fun",
+          "from": 280,
+          "to": 309
+        },
+        {
+          "text": "caption is fine,",
+          "from": 310,
+          "to": 345
+        },
+        {
+          "text": "but not in a medical summary.",
+          "from": 350,
+          "to": 408
+        },
+        {
+          "text": "And what are the limits,",
+          "from": 411,
+          "to": 442
+        },
+        {
+          "text": "like budget,",
+          "from": 447,
+          "to": 472
+        },
+        {
+          "text": "speed, and privacy?",
+          "from": 475,
+          "to": 525
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Match the need",
+        "kicker": "STEP 2",
+        "cols": [
+          "Pick"
+        ],
+        "rows": [
+          [
+            "Top reasoning",
+            "Large frontier model"
+          ],
+          [
+            "High volume, simple",
+            "Small, cheap model"
+          ],
+          [
+            "Private data",
+            "Open, self-hosted"
+          ],
+          [
+            "Photos or voice",
+            "Multimodal model"
+          ],
+          [
+            "Long documents",
+            "Big context window"
+          ]
+        ]
+      },
+      "from": 986,
+      "durationInFrames": 610,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_03.wav",
+      "cues": [
+        62,
+        163,
+        287,
+        400,
+        500
+      ],
+      "captions": [
+        {
+          "text": "Now, match the needs.",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "Need top reasoning?",
+          "from": 62,
+          "to": 98
+        },
+        {
+          "text": "A large frontier model.",
+          "from": 106,
+          "to": 160
+        },
+        {
+          "text": "Huge volume of simple jobs?",
+          "from": 163,
+          "to": 227
+        },
+        {
+          "text": "A small,",
+          "from": 232,
+          "to": 250
+        },
+        {
+          "text": "cheap model.",
+          "from": 254,
+          "to": 285
+        },
+        {
+          "text": "Private data?",
+          "from": 287,
+          "to": 322
+        },
+        {
+          "text": "An open model on your",
+          "from": 324,
+          "to": 357
+        },
+        {
+          "text": "own servers.",
+          "from": 359,
+          "to": 392
+        },
+        {
+          "text": "Photos or voice?",
+          "from": 400,
+          "to": 440
+        },
+        {
+          "text": "A multimodal model.",
+          "from": 449,
+          "to": 497
+        },
+        {
+          "text": "Long documents?",
+          "from": 500,
+          "to": 537
+        },
+        {
+          "text": "A big context window.",
+          "from": 541,
+          "to": 598
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Test like a pro",
+        "nodes": [
+          [
+            "ListChecks",
+            "Shortlist",
+            "2–3 models"
+          ],
+          [
+            "ClipboardList",
+            "Test set",
+            "30–50 real examples"
+          ],
+          [
+            "Play",
+            "Run",
+            "Same set for all"
+          ],
+          [
+            "BarChart3",
+            "Compare",
+            "Quality, cost, speed"
+          ],
+          [
+            "Trophy",
+            "Pick",
+            "Cheapest that passes"
+          ]
+        ]
+      },
+      "from": 1596,
+      "durationInFrames": 516,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_04.wav",
+      "cues": [
+        61,
+        124,
+        254,
+        326,
+        413
+      ],
+      "captions": [
+        {
+          "text": "Then test like a pro.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Shortlist two or three models.",
+          "from": 61,
+          "to": 122
+        },
+        {
+          "text": "Build a small test set,",
+          "from": 124,
+          "to": 168
+        },
+        {
+          "text": "of 30 to 50 real examples.",
+          "from": 170,
+          "to": 251
+        },
+        {
+          "text": "Run all models on the",
+          "from": 254,
+          "to": 302
+        },
+        {
+          "text": "same set.",
+          "from": 302,
+          "to": 324
+        },
+        {
+          "text": "Compare quality,",
+          "from": 326,
+          "to": 357
+        },
+        {
+          "text": "cost, and speed.",
+          "from": 359,
+          "to": 410
+        },
+        {
+          "text": "Pick the cheapest one that",
+          "from": 413,
+          "to": 450
+        },
+        {
+          "text": "clears your quality bar.",
+          "from": 452,
+          "to": 503
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "dial",
+      "data": {
+        "heading": "The trade-off triangle",
+        "prompt": "Summarise a support ticket",
+        "settings": [
+          [
+            0,
+            "cheap · fast",
+            "Small model: good enough for sorting tickets"
+          ],
+          [
+            0.5,
+            "balanced",
+            "Mid model: solid summaries at a fair price"
+          ],
+          [
+            1,
+            "top quality",
+            "Frontier model: best, but pricier and slower"
+          ]
+        ]
+      },
+      "from": 2112,
+      "durationInFrames": 454,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_05.wav",
+      "cues": [
+        175,
+        261,
+        371
+      ],
+      "captions": [
+        {
+          "text": "Remember, it's always a trade-off,",
+          "from": 10,
+          "to": 73
+        },
+        {
+          "text": "a triangle of quality,",
+          "from": 74,
+          "to": 119
+        },
+        {
+          "text": "cost, and speed.",
+          "from": 123,
+          "to": 172
+        },
+        {
+          "text": "Push for top quality,",
+          "from": 175,
+          "to": 212
+        },
+        {
+          "text": "and cost goes up.",
+          "from": 217,
+          "to": 258
+        },
+        {
+          "text": "Push for speed and low",
+          "from": 261,
+          "to": 298
+        },
+        {
+          "text": "cost, and quality may drop.",
+          "from": 300,
+          "to": 369
+        },
+        {
+          "text": "The balance point depends on",
+          "from": 371,
+          "to": 408
+        },
+        {
+          "text": "your task.",
+          "from": 409,
+          "to": 440
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Always use the newest, biggest model.",
+        "fact": "A smaller or older model often does the job just as well, for a fraction of the price.",
+        "tip": "Mix models for different steps"
+      },
+      "from": 2566,
+      "durationInFrames": 459,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_06.wav",
+      "cues": [
+        59,
+        182
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think they should always",
+          "from": 59,
+          "to": 100
+        },
+        {
+          "text": "use the newest,",
+          "from": 102,
+          "to": 134
+        },
+        {
+          "text": "biggest model.",
+          "from": 140,
+          "to": 179
+        },
+        {
+          "text": "Often, a smaller or older",
+          "from": 182,
+          "to": 236
+        },
+        {
+          "text": "model does the job just",
+          "from": 236,
+          "to": 285
+        },
+        {
+          "text": "as well,",
+          "from": 285,
+          "to": 304
+        },
+        {
+          "text": "for a fraction of the price.",
+          "from": 304,
+          "to": 364
+        },
+        {
+          "text": "And you can mix models,",
+          "from": 366,
+          "to": 403
+        },
+        {
+          "text": "for different steps.",
+          "from": 405,
+          "to": 445
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Mixing models",
+        "items": [
+          [
+            "Inbox",
+            "Sort tickets",
+            "Small, cheap model"
+          ],
+          [
+            "PenLine",
+            "Draft replies",
+            "Mid model + RAG"
+          ],
+          [
+            "Brain",
+            "Tricky cases",
+            "Top model"
+          ]
+        ]
+      },
+      "from": 3025,
+      "durationInFrames": 476,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_07.wav",
+      "cues": [
+        161,
+        248,
+        368
+      ],
+      "captions": [
+        {
+          "text": "Here's a real example.",
+          "from": 10,
+          "to": 66
+        },
+        {
+          "text": "A customer support app might",
+          "from": 68,
+          "to": 116
+        },
+        {
+          "text": "use three models.",
+          "from": 117,
+          "to": 159
+        },
+        {
+          "text": "A small model sorts incoming tickets.",
+          "from": 161,
+          "to": 244
+        },
+        {
+          "text": "A mid model drafts the",
+          "from": 248,
+          "to": 284
+        },
+        {
+          "text": "replies, using RAG.",
+          "from": 286,
+          "to": 365
+        },
+        {
+          "text": "And a top model handles",
+          "from": 368,
+          "to": 406
+        },
+        {
+          "text": "only the tricky cases.",
+          "from": 409,
+          "to": 463
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "After testing, pick…",
+        "options": [
+          "The cheapest one that meets your quality bar",
+          "Always the biggest",
+          "The one with the coolest name"
+        ],
+        "answer": 0
+      },
+      "from": 3501,
+      "durationInFrames": 439,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_08.wav",
+      "cues": [
+        142,
+        350
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "After testing,",
+          "from": 45,
+          "to": 71
+        },
+        {
+          "text": "which model should you usually pick?",
+          "from": 77,
+          "to": 139
+        },
+        {
+          "text": "Pause and think,",
+          "from": 142,
+          "to": 178
+        },
+        {
+          "text": "and if you get it",
+          "from": 179,
+          "to": 196
+        },
+        {
+          "text": "right, comment below!",
+          "from": 198,
+          "to": 252
+        },
+        {
+          "text": "The cheapest one that meets",
+          "from": 350,
+          "to": 386
+        },
+        {
+          "text": "your quality bar!",
+          "from": 387,
+          "to": 427
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Task",
+            "quality bar, limits"
+          ],
+          [
+            "Match",
+            "needs to model types"
+          ],
+          [
+            "Test",
+            "on real examples"
+          ],
+          [
+            "Pick",
+            "cheapest that passes"
+          ]
+        ],
+        "next": "EP 42 · Bias in AI"
+      },
+      "from": 3940,
+      "durationInFrames": 583,
+      "voiceFrom": 10,
+      "audio": "lessons/ep41/voice_09.wav",
+      "cues": [
+        46,
+        151,
+        210,
+        291,
+        408
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Start with the task,",
+          "from": 46,
+          "to": 86
+        },
+        {
+          "text": "the quality bar,",
+          "from": 86,
+          "to": 118
+        },
+        {
+          "text": "and the limits.",
+          "from": 118,
+          "to": 148
+        },
+        {
+          "text": "Match needs to model types.",
+          "from": 151,
+          "to": 208
+        },
+        {
+          "text": "Test on real examples,",
+          "from": 210,
+          "to": 255
+        },
+        {
+          "text": "and compare.",
+          "from": 255,
+          "to": 288
+        },
+        {
+          "text": "Pick the cheapest model that",
+          "from": 291,
+          "to": 328
+        },
+        {
+          "text": "passes, and mix models where",
+          "from": 330,
+          "to": 375
+        },
+        {
+          "text": "it helps.",
+          "from": 375,
+          "to": 405
+        },
+        {
+          "text": "Next, a big topic,",
+          "from": 408,
+          "to": 456
+        },
+        {
+          "text": "bias in AI.",
+          "from": 462,
+          "to": 508
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 511,
+          "to": 571
+        }
+      ],
+      "image": null
+    }
+  ]
+}
