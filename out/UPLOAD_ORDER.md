@@ -74,7 +74,7 @@ Already posted: `out/posted/`.
 | 067 | uc04 | How Netflix and YouTube Recommend Videos | ready |
 | 068 | uc05 | How Magic Eraser Works | ready |
 | 069 | uc06 | How a Bank Support Bot Works | ready |
-| 070 | uc07 | How Smart Replies Work | rendering soon |
+| 070 | uc07 | How Smart Replies Work | ready |
 | 071 | uc08 | How Live Translation Works | rendering soon |
 | 072 | uc09 | How an AI Coding Assistant Builds a Feature | rendering soon |
 | 073 | uc10 | How the Instagram Reels Feed Works | rendering soon |
