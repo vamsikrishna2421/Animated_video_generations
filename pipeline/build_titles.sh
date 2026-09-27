@@ -2,7 +2,7 @@
 # 15 s cinematic opening titles: synthesised score + Kokoro VO + Remotion.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-OUT="${1:-$ROOT/out/muse_titles_15s.mp4}"
+OUT="${1:-$ROOT/sample_out/muse_titles_15s.mp4}"
 
 mkdir -p "$ROOT/models"
 BASE=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0

@@ -3,7 +3,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SCRIPT="${1:-$ROOT/script/promo.json}"
-OUT="${2:-$ROOT/out/muse_tax_promo.mp4}"
+OUT="${2:-$ROOT/sample_out/muse_tax_promo.mp4}"
 
 # 1. Models (Kokoro v1.0 ONNX, ~340 MB, one-time download)
 mkdir -p "$ROOT/models"

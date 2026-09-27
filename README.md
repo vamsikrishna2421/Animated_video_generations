@@ -5,11 +5,11 @@ Promo videos built the way the "Claude Code + Remotion" crowd does it: the visua
 Voice is generated **locally with Kokoro** (82M-param TTS, ONNX, CPU), and music is
 **synthesised procedurally** in Python, so there are no samples, API keys, or paid services.
 
-Sample: `out/muse_tax_promo.mp4`, a 52 s 1080p promo for **Muse**, a personal tax assistant
+Sample: `sample_out/muse_tax_promo.mp4`, a 52 s 1080p promo for **Muse**, a personal tax assistant
 that takes the user from collecting documents, to planning savings (old vs new regime,
 deductions), to seeing the refund, to filing and e-verifying the ITR.
 
-Sample 2: `out/muse_titles_15s.mp4`, a 15 s cinematic opening-title sequence in the style of
+Sample 2: `sample_out/muse_titles_15s.mp4`, a 15 s cinematic opening-title sequence in the style of
 the "Opus made HBO documentary titles, even the soundtrack is code" post: black 2.39:1 frame,
 film grain, document fragments flickering on each hit, a pre-impact silence, a braam impact, a
 light-sweep title reveal, and a serif tagline. Score and trailer VO (Kokoro `bm_george`) are
