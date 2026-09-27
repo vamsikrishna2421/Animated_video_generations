@@ -1,0 +1,820 @@
+{
+  "id": "ep19",
+  "episode": 19,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Coding Assistants",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4865,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep19/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 19",
+        "title": [
+          "AI Coding",
+          "Assistants"
+        ],
+        "subtitle": "How AI reads and writes code",
+        "buzzwords": [
+          "Autocomplete",
+          "Copilot",
+          "Claude Code",
+          "Agents",
+          "Tests",
+          "Diff",
+          "Repo",
+          "Review"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 411,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_01.wav",
+      "cues": [
+        268,
+        361
+      ],
+      "captions": [
+        {
+          "text": "Developers now type,",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "add a login page to",
+          "from": 57,
+          "to": 92
+        },
+        {
+          "text": "my app,",
+          "from": 92,
+          "to": 115
+        },
+        {
+          "text": "and an AI writes the",
+          "from": 116,
+          "to": 153
+        },
+        {
+          "text": "code, runs it,",
+          "from": 154,
+          "to": 193
+        },
+        {
+          "text": "and even fixes its own bugs.",
+          "from": 194,
+          "to": 265
+        },
+        {
+          "text": "So how do AI coding",
+          "from": 268,
+          "to": 307
+        },
+        {
+          "text": "assistants actually work?",
+          "from": 308,
+          "to": 359
+        },
+        {
+          "text": "Let's find out.",
+          "from": 361,
+          "to": 398
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three levels",
+        "kicker": "FROM HINTS TO AGENTS",
+        "steps": [
+          [
+            "Keyboard",
+            "Autocomplete",
+            "Suggests the next lines"
+          ],
+          [
+            "MessageSquare",
+            "Chat",
+            "Explain, fix, write snippets"
+          ],
+          [
+            "Bot",
+            "Coding agents",
+            "Edit files, run tests, repeat"
+          ]
+        ]
+      },
+      "from": 411,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_02.wav",
+      "cues": [
+        83,
+        204,
+        362
+      ],
+      "captions": [
+        {
+          "text": "There are three levels of",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "coding help.",
+          "from": 57,
+          "to": 81
+        },
+        {
+          "text": "Autocomplete, which suggests the next",
+          "from": 83,
+          "to": 142
+        },
+        {
+          "text": "few lines as you type.",
+          "from": 143,
+          "to": 201
+        },
+        {
+          "text": "Chat, where you ask questions",
+          "from": 204,
+          "to": 253
+        },
+        {
+          "text": "about code,",
+          "from": 254,
+          "to": 280
+        },
+        {
+          "text": "and get explanations or snippets.",
+          "from": 285,
+          "to": 360
+        },
+        {
+          "text": "And coding agents,",
+          "from": 362,
+          "to": 393
+        },
+        {
+          "text": "which take a whole task,",
+          "from": 397,
+          "to": 439
+        },
+        {
+          "text": "edit many files,",
+          "from": 441,
+          "to": 472
+        },
+        {
+          "text": "and run tests on their own.",
+          "from": 476,
+          "to": 531
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "agentloop",
+      "data": {
+        "goalLabel": "TASK",
+        "goal": "“Fix the failing login test”",
+        "stages": [
+          [
+            "FileSearch",
+            "Read"
+          ],
+          [
+            "PenLine",
+            "Edit"
+          ],
+          [
+            "FlaskConical",
+            "Test"
+          ]
+        ],
+        "log": [
+          "read auth.py and test_login.py",
+          "edit: fix the password check",
+          "run tests → 1 failing, try again",
+          "✓ all tests pass, show the changes"
+        ]
+      },
+      "from": 954,
+      "durationInFrames": 688,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_03.wav",
+      "cues": [
+        168,
+        258,
+        340,
+        408,
+        559
+      ],
+      "captions": [
+        {
+          "text": "Here's how a coding agent",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "works, on a task like,",
+          "from": 53,
+          "to": 98
+        },
+        {
+          "text": "fix the failing login test.",
+          "from": 100,
+          "to": 165
+        },
+        {
+          "text": "It loops,",
+          "from": 168,
+          "to": 188
+        },
+        {
+          "text": "read, edit,",
+          "from": 193,
+          "to": 220
+        },
+        {
+          "text": "and test.",
+          "from": 225,
+          "to": 255
+        },
+        {
+          "text": "It reads the relevant files",
+          "from": 258,
+          "to": 301
+        },
+        {
+          "text": "in your project.",
+          "from": 302,
+          "to": 338
+        },
+        {
+          "text": "It edits the code to",
+          "from": 340,
+          "to": 371
+        },
+        {
+          "text": "fix the bug.",
+          "from": 372,
+          "to": 405
+        },
+        {
+          "text": "It runs the tests,",
+          "from": 408,
+          "to": 447
+        },
+        {
+          "text": "one still fails,",
+          "from": 448,
+          "to": 483
+        },
+        {
+          "text": "so it reads the error",
+          "from": 485,
+          "to": 514
+        },
+        {
+          "text": "and tries again.",
+          "from": 515,
+          "to": 556
+        },
+        {
+          "text": "Now all the tests pass,",
+          "from": 559,
+          "to": 614
+        },
+        {
+          "text": "and it shows you the changes.",
+          "from": 618,
+          "to": 675
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Codebase context",
+        "short": "Context",
+        "definition": "The files, errors and rules an assistant reads so its code fits your project.",
+        "chips": [
+          [
+            "FileSearch",
+            "Search files"
+          ],
+          [
+            "TriangleAlert",
+            "Read errors"
+          ],
+          [
+            "BookMarked",
+            "Follow your rules"
+          ]
+        ]
+      },
+      "from": 1642,
+      "durationInFrames": 425,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_04.wav",
+      "cues": [
+        95,
+        222,
+        272,
+        326
+      ],
+      "captions": [
+        {
+          "text": "And the secret ingredient is context.",
+          "from": 10,
+          "to": 93
+        },
+        {
+          "text": "A coding assistant is only",
+          "from": 95,
+          "to": 143
+        },
+        {
+          "text": "as good as what it",
+          "from": 145,
+          "to": 166
+        },
+        {
+          "text": "can see of your project.",
+          "from": 167,
+          "to": 220
+        },
+        {
+          "text": "So it searches your files,",
+          "from": 222,
+          "to": 269
+        },
+        {
+          "text": "reads the error messages,",
+          "from": 272,
+          "to": 324
+        },
+        {
+          "text": "and follows your project's rules",
+          "from": 326,
+          "to": 380
+        },
+        {
+          "text": "and style.",
+          "from": 382,
+          "to": 414
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Coding words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "GitCompare",
+            "Diff",
+            "The exact changes"
+          ],
+          [
+            "FlaskConical",
+            "Tests",
+            "Check the code works"
+          ],
+          [
+            "FolderGit2",
+            "Repo",
+            "Your project's code folder"
+          ],
+          [
+            "Eye",
+            "Review",
+            "A human checks first"
+          ]
+        ]
+      },
+      "from": 2067,
+      "durationInFrames": 605,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_05.wav",
+      "cues": [
+        67,
+        206,
+        326,
+        462
+      ],
+      "captions": [
+        {
+          "text": "Here are four words you'll hear.",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "A diff,",
+          "from": 67,
+          "to": 89
+        },
+        {
+          "text": "which shows the exact changes",
+          "from": 91,
+          "to": 141
+        },
+        {
+          "text": "the AI wants to make.",
+          "from": 142,
+          "to": 203
+        },
+        {
+          "text": "Tests, small programs that check",
+          "from": 206,
+          "to": 269
+        },
+        {
+          "text": "the code actually works.",
+          "from": 270,
+          "to": 324
+        },
+        {
+          "text": "A repo,",
+          "from": 326,
+          "to": 347
+        },
+        {
+          "text": "short for repository,",
+          "from": 352,
+          "to": 399
+        },
+        {
+          "text": "your project's folder of code.",
+          "from": 400,
+          "to": 459
+        },
+        {
+          "text": "And review,",
+          "from": 462,
+          "to": 492
+        },
+        {
+          "text": "a human checking the changes",
+          "from": 494,
+          "to": 541
+        },
+        {
+          "text": "before they go live.",
+          "from": 543,
+          "to": 592
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where developers use it",
+        "items": [
+          [
+            "Code",
+            "In the editor",
+            "VS Code, GitHub Copilot"
+          ],
+          [
+            "SquareTerminal",
+            "In the terminal",
+            "Coding agents like Claude Code"
+          ],
+          [
+            "LayoutTemplate",
+            "App builders",
+            "Describe it, get a first version"
+          ]
+        ]
+      },
+      "from": 2672,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_06.wav",
+      "cues": [
+        58,
+        213,
+        310
+      ],
+      "captions": [
+        {
+          "text": "So where is it used?",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "In code editors like VS",
+          "from": 58,
+          "to": 113
+        },
+        {
+          "text": "Code, with assistants like GitHub Copilot.",
+          "from": 113,
+          "to": 211
+        },
+        {
+          "text": "In terminal coding agents,",
+          "from": 213,
+          "to": 260
+        },
+        {
+          "text": "like Claude Code.",
+          "from": 265,
+          "to": 307
+        },
+        {
+          "text": "And in app builders,",
+          "from": 310,
+          "to": 343
+        },
+        {
+          "text": "where you describe an app,",
+          "from": 346,
+          "to": 382
+        },
+        {
+          "text": "and get a first version.",
+          "from": 384,
+          "to": 432
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "With AI assistants, you don't need to learn programming.",
+        "fact": "They make programmers faster, but you still need to understand, review and secure the code.",
+        "tip": "Learn the basics, then go faster"
+      },
+      "from": 3116,
+      "durationInFrames": 538,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_07.wav",
+      "cues": [
+        59,
+        202
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think AI coding assistants",
+          "from": 59,
+          "to": 119
+        },
+        {
+          "text": "mean you don't need to",
+          "from": 122,
+          "to": 146
+        },
+        {
+          "text": "learn programming anymore.",
+          "from": 147,
+          "to": 200
+        },
+        {
+          "text": "They make programmers much faster,",
+          "from": 202,
+          "to": 264
+        },
+        {
+          "text": "but you still need to",
+          "from": 268,
+          "to": 293
+        },
+        {
+          "text": "understand the code,",
+          "from": 295,
+          "to": 332
+        },
+        {
+          "text": "to review it,",
+          "from": 334,
+          "to": 360
+        },
+        {
+          "text": "catch mistakes,",
+          "from": 362,
+          "to": 394
+        },
+        {
+          "text": "and keep it secure.",
+          "from": 396,
+          "to": 446
+        },
+        {
+          "text": "Learning the basics matters more",
+          "from": 449,
+          "to": 497
+        },
+        {
+          "text": "than ever.",
+          "from": 499,
+          "to": 526
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "When tests fail, a coding agent…",
+        "options": [
+          "Gives up",
+          "Reads the error and tries again",
+          "Deletes the tests"
+        ],
+        "answer": 1
+      },
+      "from": 3654,
+      "durationInFrames": 449,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_08.wav",
+      "cues": [
+        118,
+        324
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "What does a coding agent",
+          "from": 32,
+          "to": 63
+        },
+        {
+          "text": "do after its tests fail?",
+          "from": 64,
+          "to": 116
+        },
+        {
+          "text": "Pause and think,",
+          "from": 118,
+          "to": 156
+        },
+        {
+          "text": "and if you get it",
+          "from": 158,
+          "to": 175
+        },
+        {
+          "text": "right, comment below!",
+          "from": 176,
+          "to": 232
+        },
+        {
+          "text": "It reads the error,",
+          "from": 324,
+          "to": 355
+        },
+        {
+          "text": "and tries again,",
+          "from": 357,
+          "to": 387
+        },
+        {
+          "text": "until the tests pass!",
+          "from": 388,
+          "to": 435
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Levels",
+            "autocomplete, chat, agents"
+          ],
+          [
+            "Loop",
+            "read, edit, test"
+          ],
+          [
+            "Context",
+            "files, errors, rules"
+          ],
+          [
+            "Review",
+            "a human checks the diff"
+          ]
+        ],
+        "next": "Use Case · AI builds a feature"
+      },
+      "from": 4103,
+      "durationInFrames": 762,
+      "voiceFrom": 10,
+      "audio": "lessons/ep19/voice_09.wav",
+      "cues": [
+        48,
+        183,
+        285,
+        409,
+        494
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "Coding help comes in three",
+          "from": 48,
+          "to": 87
+        },
+        {
+          "text": "levels, autocomplete,",
+          "from": 88,
+          "to": 132
+        },
+        {
+          "text": "chat and agents.",
+          "from": 134,
+          "to": 181
+        },
+        {
+          "text": "Coding agents loop,",
+          "from": 183,
+          "to": 219
+        },
+        {
+          "text": "read, edit and test.",
+          "from": 223,
+          "to": 283
+        },
+        {
+          "text": "Good results depend on context,",
+          "from": 285,
+          "to": 338
+        },
+        {
+          "text": "files, errors and rules.",
+          "from": 342,
+          "to": 407
+        },
+        {
+          "text": "And a human should always",
+          "from": 409,
+          "to": 442
+        },
+        {
+          "text": "review the changes.",
+          "from": 443,
+          "to": 491
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 494,
+          "to": 553
+        },
+        {
+          "text": "watch an AI coding assistant",
+          "from": 558,
+          "to": 610
+        },
+        {
+          "text": "build a feature,",
+          "from": 612,
+          "to": 642
+        },
+        {
+          "text": "step by step.",
+          "from": 644,
+          "to": 681
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 685,
+          "to": 750
+        }
+      ],
+      "image": null
+    }
+  ]
+}

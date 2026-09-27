@@ -1,0 +1,786 @@
+{
+  "id": "ep18",
+  "episode": 18,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Multi Agent Systems",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4816,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep18/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 18",
+        "title": [
+          "Multi-Agent",
+          "Systems"
+        ],
+        "subtitle": "AI agents working as a team",
+        "buzzwords": [
+          "Agents",
+          "Orchestrator",
+          "Roles",
+          "Parallel",
+          "Hand-off",
+          "Reviewer",
+          "Workflow",
+          "Teamwork"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 389,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_01.wav",
+      "cues": [
+        90,
+        290
+      ],
+      "captions": [
+        {
+          "text": "One AI agent can plan",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "a trip.",
+          "from": 63,
+          "to": 88
+        },
+        {
+          "text": "But what if you had",
+          "from": 90,
+          "to": 111
+        },
+        {
+          "text": "a whole team of agents,",
+          "from": 112,
+          "to": 158
+        },
+        {
+          "text": "a researcher,",
+          "from": 160,
+          "to": 191
+        },
+        {
+          "text": "a writer and a checker,",
+          "from": 193,
+          "to": 237
+        },
+        {
+          "text": "all working together?",
+          "from": 239,
+          "to": 287
+        },
+        {
+          "text": "Let's understand multi agent systems.",
+          "from": 290,
+          "to": 375
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Multi-agent system",
+        "short": "Team",
+        "definition": "Several AI agents, each with its own role, working together toward one goal.",
+        "chips": [
+          [
+            "Users",
+            "Specialist roles"
+          ],
+          [
+            "ArrowLeftRight",
+            "Hand work over"
+          ],
+          [
+            "Crown",
+            "A manager coordinates"
+          ]
+        ]
+      },
+      "from": 389,
+      "durationInFrames": 530,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_02.wav",
+      "cues": [
+        229,
+        335,
+        390,
+        442
+      ],
+      "captions": [
+        {
+          "text": "A multi agent system is",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "a group of AI agents,",
+          "from": 60,
+          "to": 116
+        },
+        {
+          "text": "each with its own role,",
+          "from": 118,
+          "to": 159
+        },
+        {
+          "text": "all working toward one goal.",
+          "from": 161,
+          "to": 226
+        },
+        {
+          "text": "Think of it like a",
+          "from": 229,
+          "to": 248
+        },
+        {
+          "text": "small company,",
+          "from": 250,
+          "to": 280
+        },
+        {
+          "text": "but made of AI.",
+          "from": 282,
+          "to": 333
+        },
+        {
+          "text": "Each agent has a specialty,",
+          "from": 335,
+          "to": 388
+        },
+        {
+          "text": "they pass work to each",
+          "from": 390,
+          "to": 423
+        },
+        {
+          "text": "other, and a manager agent",
+          "from": 424,
+          "to": 477
+        },
+        {
+          "text": "coordinates them.",
+          "from": 479,
+          "to": 519
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "A team at work",
+        "kicker": "EXAMPLE: A MARKET REPORT",
+        "nodes": [
+          [
+            "Crown",
+            "Manager",
+            "Breaks the goal into tasks"
+          ],
+          [
+            "Search",
+            "Researcher",
+            "Finds data on the web"
+          ],
+          [
+            "PenLine",
+            "Writer",
+            "Drafts the report"
+          ],
+          [
+            "CheckCircle2",
+            "Reviewer",
+            "Checks facts, suggests fixes"
+          ],
+          [
+            "FileText",
+            "Final report",
+            "Delivered to you"
+          ]
+        ]
+      },
+      "from": 919,
+      "durationInFrames": 616,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_03.wav",
+      "cues": [
+        140,
+        227,
+        318,
+        397,
+        508
+      ],
+      "captions": [
+        {
+          "text": "Say the goal is,",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "write a report on electric",
+          "from": 45,
+          "to": 88
+        },
+        {
+          "text": "scooters in India.",
+          "from": 90,
+          "to": 138
+        },
+        {
+          "text": "The manager agent breaks it",
+          "from": 140,
+          "to": 186
+        },
+        {
+          "text": "into tasks.",
+          "from": 187,
+          "to": 225
+        },
+        {
+          "text": "A research agent searches the",
+          "from": 227,
+          "to": 273
+        },
+        {
+          "text": "web for data.",
+          "from": 274,
+          "to": 315
+        },
+        {
+          "text": "A writer agent drafts the report.",
+          "from": 318,
+          "to": 394
+        },
+        {
+          "text": "A reviewer agent checks the",
+          "from": 397,
+          "to": 441
+        },
+        {
+          "text": "facts and suggests fixes,",
+          "from": 443,
+          "to": 506
+        },
+        {
+          "text": "and the manager delivers the",
+          "from": 508,
+          "to": 548
+        },
+        {
+          "text": "final report to you.",
+          "from": 551,
+          "to": 604
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "One agent vs a team",
+        "kicker": "WHY A TEAM?",
+        "left": {
+          "icon": "Bot",
+          "title": "One agent",
+          "stat": "Does everything",
+          "label": "can lose track on big jobs"
+        },
+        "right": {
+          "icon": "Users",
+          "title": "Agent team",
+          "stat": "Focused roles",
+          "label": "smaller jobs, can run in parallel"
+        }
+      },
+      "from": 1535,
+      "durationInFrames": 446,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_04.wav",
+      "cues": [
+        86,
+        248
+      ],
+      "captions": [
+        {
+          "text": "So why not just use",
+          "from": 10,
+          "to": 39
+        },
+        {
+          "text": "one big agent?",
+          "from": 41,
+          "to": 83
+        },
+        {
+          "text": "One agent doing everything can",
+          "from": 86,
+          "to": 134
+        },
+        {
+          "text": "get overloaded,",
+          "from": 136,
+          "to": 168
+        },
+        {
+          "text": "and lose track on long tasks.",
+          "from": 169,
+          "to": 244
+        },
+        {
+          "text": "A team of focused agents",
+          "from": 248,
+          "to": 290
+        },
+        {
+          "text": "keeps each job small and",
+          "from": 292,
+          "to": 340
+        },
+        {
+          "text": "clear, and they can even",
+          "from": 342,
+          "to": 390
+        },
+        {
+          "text": "work in parallel.",
+          "from": 392,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Team patterns",
+        "kicker": "HOW TEAMS ARE SET UP",
+        "terms": [
+          [
+            "Crown",
+            "Manager-worker",
+            "A boss hands out tasks"
+          ],
+          [
+            "Workflow",
+            "Pipeline",
+            "An assembly line of agents"
+          ],
+          [
+            "MessagesSquare",
+            "Debate",
+            "Argue sides, pick the best"
+          ],
+          [
+            "CheckCircle2",
+            "Reviewer",
+            "One checks another"
+          ]
+        ]
+      },
+      "from": 1981,
+      "durationInFrames": 599,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_05.wav",
+      "cues": [
+        85,
+        204,
+        355,
+        483
+      ],
+      "captions": [
+        {
+          "text": "Here are four common team patterns.",
+          "from": 10,
+          "to": 82
+        },
+        {
+          "text": "Manager and workers,",
+          "from": 85,
+          "to": 128
+        },
+        {
+          "text": "where one boss hands out tasks.",
+          "from": 130,
+          "to": 202
+        },
+        {
+          "text": "Pipeline, where each agent passes",
+          "from": 204,
+          "to": 271
+        },
+        {
+          "text": "work to the next,",
+          "from": 272,
+          "to": 301
+        },
+        {
+          "text": "like an assembly line.",
+          "from": 304,
+          "to": 353
+        },
+        {
+          "text": "Debate, where agents argue different",
+          "from": 355,
+          "to": 414
+        },
+        {
+          "text": "sides to reach a better answer.",
+          "from": 416,
+          "to": 481
+        },
+        {
+          "text": "And reviewer,",
+          "from": 483,
+          "to": 511
+        },
+        {
+          "text": "where one agent checks another's work.",
+          "from": 513,
+          "to": 587
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Agent teams at work",
+        "items": [
+          [
+            "Code",
+            "Software",
+            "Plan, code and test agents"
+          ],
+          [
+            "Search",
+            "Deep research",
+            "Many readers at once"
+          ],
+          [
+            "Headset",
+            "Support",
+            "Route, answer, escalate"
+          ]
+        ]
+      },
+      "from": 2580,
+      "durationInFrames": 538,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_06.wav",
+      "cues": [
+        59,
+        231,
+        374
+      ],
+      "captions": [
+        {
+          "text": "So where is this used?",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "In software,",
+          "from": 59,
+          "to": 87
+        },
+        {
+          "text": "where one agent plans,",
+          "from": 89,
+          "to": 138
+        },
+        {
+          "text": "another writes code,",
+          "from": 140,
+          "to": 175
+        },
+        {
+          "text": "and another tests it.",
+          "from": 180,
+          "to": 228
+        },
+        {
+          "text": "In deep research tools,",
+          "from": 231,
+          "to": 278
+        },
+        {
+          "text": "which send many agents to",
+          "from": 278,
+          "to": 329
+        },
+        {
+          "text": "read sources at once.",
+          "from": 329,
+          "to": 372
+        },
+        {
+          "text": "And in customer support,",
+          "from": 374,
+          "to": 417
+        },
+        {
+          "text": "where agents route,",
+          "from": 419,
+          "to": 456
+        },
+        {
+          "text": "answer and escalate questions.",
+          "from": 459,
+          "to": 526
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "More agents always means better results.",
+        "fact": "Each agent adds cost, delay and more chances for mistakes. One good agent is often enough.",
+        "tip": "Start simple, add agents if needed"
+      },
+      "from": 3118,
+      "durationInFrames": 503,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_07.wav",
+      "cues": [
+        58,
+        161
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think more agents always",
+          "from": 58,
+          "to": 110
+        },
+        {
+          "text": "means better results.",
+          "from": 112,
+          "to": 158
+        },
+        {
+          "text": "Not always.",
+          "from": 161,
+          "to": 196
+        },
+        {
+          "text": "Every extra agent adds cost,",
+          "from": 199,
+          "to": 260
+        },
+        {
+          "text": "delay, and more chances for",
+          "from": 260,
+          "to": 320
+        },
+        {
+          "text": "mistakes to be passed along.",
+          "from": 320,
+          "to": 381
+        },
+        {
+          "text": "Often, one good agent with",
+          "from": 384,
+          "to": 437
+        },
+        {
+          "text": "the right tools is enough.",
+          "from": 437,
+          "to": 489
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The manager agent usually…",
+        "options": [
+          "Splits the goal and coordinates",
+          "Stores all the data",
+          "Generates the images"
+        ],
+        "answer": 0
+      },
+      "from": 3621,
+      "durationInFrames": 495,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_08.wav",
+      "cues": [
+        176,
+        378
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "In a multi agent system,",
+          "from": 44,
+          "to": 97
+        },
+        {
+          "text": "what does the manager agent",
+          "from": 98,
+          "to": 137
+        },
+        {
+          "text": "usually do?",
+          "from": 139,
+          "to": 174
+        },
+        {
+          "text": "Pause and think,",
+          "from": 176,
+          "to": 210
+        },
+        {
+          "text": "and if you get it",
+          "from": 212,
+          "to": 229
+        },
+        {
+          "text": "right, comment below!",
+          "from": 230,
+          "to": 287
+        },
+        {
+          "text": "It breaks the goal into",
+          "from": 378,
+          "to": 407
+        },
+        {
+          "text": "tasks, and coordinates the team!",
+          "from": 408,
+          "to": 482
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Team",
+            "agents with different roles"
+          ],
+          [
+            "Manager",
+            "splits and coordinates"
+          ],
+          [
+            "Why",
+            "focused jobs, parallel work"
+          ],
+          [
+            "Careful",
+            "more agents, more cost"
+          ]
+        ],
+        "next": "Use Case · Live translation"
+      },
+      "from": 4116,
+      "durationInFrames": 700,
+      "voiceFrom": 10,
+      "audio": "lessons/ep18/voice_09.wav",
+      "cues": [
+        47,
+        166,
+        251,
+        347,
+        431
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "A multi agent system is",
+          "from": 47,
+          "to": 92
+        },
+        {
+          "text": "a team of agents with",
+          "from": 93,
+          "to": 126
+        },
+        {
+          "text": "different roles.",
+          "from": 128,
+          "to": 163
+        },
+        {
+          "text": "A manager splits the goal",
+          "from": 166,
+          "to": 208
+        },
+        {
+          "text": "and coordinates.",
+          "from": 210,
+          "to": 249
+        },
+        {
+          "text": "Teams keep jobs focused,",
+          "from": 251,
+          "to": 298
+        },
+        {
+          "text": "and can work in parallel.",
+          "from": 302,
+          "to": 346
+        },
+        {
+          "text": "But more agents also means",
+          "from": 347,
+          "to": 392
+        },
+        {
+          "text": "more cost.",
+          "from": 394,
+          "to": 428
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 431,
+          "to": 496
+        },
+        {
+          "text": "how live translation lets two",
+          "from": 498,
+          "to": 549
+        },
+        {
+          "text": "people talk in different languages.",
+          "from": 550,
+          "to": 615
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 619,
+          "to": 688
+        }
+      ],
+      "image": null
+    }
+  ]
+}

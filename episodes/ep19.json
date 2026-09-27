@@ -1,0 +1,226 @@
+{
+  "id": "ep19",
+  "episode": 19,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Coding Assistants",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Developers now type, add a login page to my app, and an AI writes the code, runs it, and even fixes its own bugs. [1] So how do AI coding assistants actually work? [2] Let's find out.",
+      "data": {
+        "kicker": "EPISODE 19",
+        "title": [
+          "AI Coding",
+          "Assistants"
+        ],
+        "subtitle": "How AI reads and writes code",
+        "buzzwords": [
+          "Autocomplete",
+          "Copilot",
+          "Claude Code",
+          "Agents",
+          "Tests",
+          "Diff",
+          "Repo",
+          "Review"
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "There are three levels of coding help. [1] Autocomplete, which suggests the next few lines as you type. [2] Chat, where you ask questions about code, and get explanations or snippets. [3] And coding agents, which take a whole task, edit many files, and run tests on their own.",
+      "data": {
+        "heading": "Three levels",
+        "kicker": "FROM HINTS TO AGENTS",
+        "steps": [
+          [
+            "Keyboard",
+            "Autocomplete",
+            "Suggests the next lines"
+          ],
+          [
+            "MessageSquare",
+            "Chat",
+            "Explain, fix, write snippets"
+          ],
+          [
+            "Bot",
+            "Coding agents",
+            "Edit files, run tests, repeat"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "agentloop",
+      "text": "Here's how a coding agent works, on a task like, fix the failing login test. [1] It loops, read, edit, and test. [2] It reads the relevant files in your project. [3] It edits the code to fix the bug. [4] It runs the tests, one still fails, so it reads the error and tries again. [5] Now all the tests pass, and it shows you the changes.",
+      "data": {
+        "goalLabel": "TASK",
+        "goal": "“Fix the failing login test”",
+        "stages": [
+          [
+            "FileSearch",
+            "Read"
+          ],
+          [
+            "PenLine",
+            "Edit"
+          ],
+          [
+            "FlaskConical",
+            "Test"
+          ]
+        ],
+        "log": [
+          "read auth.py and test_login.py",
+          "edit: fix the password check",
+          "run tests → 1 failing, try again",
+          "✓ all tests pass, show the changes"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "And the secret ingredient is context. [1] A coding assistant is only as good as what it can see of your project. [2] So it searches your files, [3] reads the error messages, [4] and follows your project's rules and style.",
+      "data": {
+        "term": "Codebase context",
+        "short": "Context",
+        "definition": "The files, errors and rules an assistant reads so its code fits your project.",
+        "chips": [
+          [
+            "FileSearch",
+            "Search files"
+          ],
+          [
+            "TriangleAlert",
+            "Read errors"
+          ],
+          [
+            "BookMarked",
+            "Follow your rules"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four words you'll hear. [1] A diff, which shows the exact changes the AI wants to make. [2] Tests, small programs that check the code actually works. [3] A repo, short for repository, your project's folder of code. [4] And review, a human checking the changes before they go live.",
+      "data": {
+        "heading": "Coding words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "GitCompare",
+            "Diff",
+            "The exact changes"
+          ],
+          [
+            "FlaskConical",
+            "Tests",
+            "Check the code works"
+          ],
+          [
+            "FolderGit2",
+            "Repo",
+            "Your project's code folder"
+          ],
+          [
+            "Eye",
+            "Review",
+            "A human checks first"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where is it used? [1] In code editors like VS Code, with assistants like GitHub Copilot. [2] In terminal coding agents, like Claude Code. [3] And in app builders, where you describe an app, and get a first version.",
+      "data": {
+        "heading": "Where developers use it",
+        "items": [
+          [
+            "Code",
+            "In the editor",
+            "VS Code, GitHub Copilot"
+          ],
+          [
+            "SquareTerminal",
+            "In the terminal",
+            "Coding agents like Claude Code"
+          ],
+          [
+            "LayoutTemplate",
+            "App builders",
+            "Describe it, get a first version"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think AI coding assistants mean you don't need to learn programming anymore. [2] They make programmers much faster, but you still need to understand the code, to review it, catch mistakes, and keep it secure. Learning the basics matters more than ever.",
+      "data": {
+        "myth": "With AI assistants, you don't need to learn programming.",
+        "fact": "They make programmers faster, but you still need to understand, review and secure the code.",
+        "tip": "Learn the basics, then go faster"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What does a coding agent do after its tests fail? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It reads the error, and tries again, until the tests pass!",
+      "data": {
+        "question": "When tests fail, a coding agent…",
+        "options": [
+          "Gives up",
+          "Reads the error and tries again",
+          "Deletes the tests"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Coding help comes in three levels, autocomplete, chat and agents. [2] Coding agents loop, read, edit and test. [3] Good results depend on context, files, errors and rules. [4] And a human should always review the changes. [5] Next, a real world breakdown, watch an AI coding assistant build a feature, step by step. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Levels",
+            "autocomplete, chat, agents"
+          ],
+          [
+            "Loop",
+            "read, edit, test"
+          ],
+          [
+            "Context",
+            "files, errors, rules"
+          ],
+          [
+            "Review",
+            "a human checks the diff"
+          ]
+        ],
+        "next": "Use Case · AI builds a feature"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Type \"add a login page\" and AI writes the code, runs it and fixes its own bugs. How?\n\nEpisode 19 of AI From Scratch: AI Coding Assistants\n- Three levels: autocomplete, chat, coding agents\n- The coding agent loop: read, edit, test, repeat\n- Why context is the secret ingredient\n- Jargon: diff, tests, repo, review\n- The myth: \"no need to learn programming anymore\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Watch an AI coding assistant build a feature, step by step.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #AICoding #LearnAI #Programming #AIForBeginners",
+    "pinned": "Quiz answer: It reads the error and tries again until the tests pass. Which coding assistant do you use?",
+    "cover": "'AI Coding Assistants' title card",
+    "alt": "Animated lesson explaining how AI coding assistants and coding agents read, edit and test code."
+  }
+}

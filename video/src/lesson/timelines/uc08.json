@@ -1,0 +1,836 @@
+{
+  "id": "uc08",
+  "episode": 8,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Live Translation Works",
+  "host": "female",
+  "label": "USE CASE 08",
+  "fps": 30,
+  "totalFrames": 5080,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc08/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 08",
+        "title": [
+          "Live",
+          "Translation"
+        ],
+        "subtitle": "Talk across languages",
+        "buzzwords": [
+          "Speech to text",
+          "Translation",
+          "Text to speech",
+          "Streaming",
+          "Earbuds",
+          "Captions",
+          "Languages",
+          "Real time"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 397,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_01.wav",
+      "cues": [
+        120,
+        297
+      ],
+      "captions": [
+        {
+          "text": "Imagine you're in Tokyo,",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "and you only speak Telugu.",
+          "from": 61,
+          "to": 118
+        },
+        {
+          "text": "You talk into your phone,",
+          "from": 120,
+          "to": 159
+        },
+        {
+          "text": "the shopkeeper hears Japanese,",
+          "from": 160,
+          "to": 215
+        },
+        {
+          "text": "replies, and you hear Telugu.",
+          "from": 218,
+          "to": 295
+        },
+        {
+          "text": "Let's break down how live",
+          "from": 297,
+          "to": 337
+        },
+        {
+          "text": "translation works.",
+          "from": 339,
+          "to": 383
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The translation chain",
+        "nodes": [
+          [
+            "Mic",
+            "You speak",
+            "In Telugu"
+          ],
+          [
+            "FileText",
+            "Speech to text",
+            "Telugu words (EP 13)"
+          ],
+          [
+            "Languages",
+            "Translate",
+            "Telugu → Japanese"
+          ],
+          [
+            "Volume2",
+            "Text to speech",
+            "Natural Japanese voice"
+          ],
+          [
+            "Repeat",
+            "Reply flows back",
+            "Japanese → Telugu"
+          ]
+        ]
+      },
+      "from": 397,
+      "durationInFrames": 604,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_02.wav",
+      "cues": [
+        86,
+        136,
+        240,
+        350,
+        470
+      ],
+      "captions": [
+        {
+          "text": "Here's the chain,",
+          "from": 10,
+          "to": 36
+        },
+        {
+          "text": "for every sentence.",
+          "from": 40,
+          "to": 83
+        },
+        {
+          "text": "You speak in Telugu.",
+          "from": 86,
+          "to": 133
+        },
+        {
+          "text": "Speech to text writes down",
+          "from": 136,
+          "to": 179
+        },
+        {
+          "text": "your words,",
+          "from": 180,
+          "to": 197
+        },
+        {
+          "text": "in Telugu.",
+          "from": 203,
+          "to": 238
+        },
+        {
+          "text": "A translation model turns that",
+          "from": 240,
+          "to": 292
+        },
+        {
+          "text": "text into Japanese.",
+          "from": 294,
+          "to": 347
+        },
+        {
+          "text": "Text to speech speaks it",
+          "from": 350,
+          "to": 387
+        },
+        {
+          "text": "out, in a natural Japanese voice.",
+          "from": 388,
+          "to": 467
+        },
+        {
+          "text": "And then the same chain",
+          "from": 470,
+          "to": 523
+        },
+        {
+          "text": "runs in reverse,",
+          "from": 523,
+          "to": 560
+        },
+        {
+          "text": "for the reply.",
+          "from": 560,
+          "to": 593
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Machine translation",
+        "short": "Translate",
+        "definition": "AI that converts text from one language to another by understanding its meaning.",
+        "chips": [
+          [
+            "Brain",
+            "Meaning, not words"
+          ],
+          [
+            "ArrowLeftRight",
+            "Grammar and order"
+          ],
+          [
+            "Smile",
+            "The right tone"
+          ]
+        ]
+      },
+      "from": 1001,
+      "durationInFrames": 559,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_03.wav",
+      "cues": [
+        98,
+        342,
+        426,
+        494
+      ],
+      "captions": [
+        {
+          "text": "That middle step is machine translation.",
+          "from": 10,
+          "to": 95
+        },
+        {
+          "text": "Modern translation uses the same",
+          "from": 98,
+          "to": 156
+        },
+        {
+          "text": "kind of models as LLMs,",
+          "from": 158,
+          "to": 221
+        },
+        {
+          "text": "trained on millions of sentences",
+          "from": 223,
+          "to": 282
+        },
+        {
+          "text": "and their translations.",
+          "from": 285,
+          "to": 339
+        },
+        {
+          "text": "It understands meaning,",
+          "from": 342,
+          "to": 386
+        },
+        {
+          "text": "not just words,",
+          "from": 388,
+          "to": 424
+        },
+        {
+          "text": "it handles grammar and word",
+          "from": 426,
+          "to": 470
+        },
+        {
+          "text": "order, and it picks the",
+          "from": 472,
+          "to": 511
+        },
+        {
+          "text": "right tone.",
+          "from": 512,
+          "to": 548
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Words vs meaning",
+        "kicker": "WHY MEANING MATTERS",
+        "left": {
+          "icon": "Type",
+          "title": "Word by word",
+          "stat": "Literal",
+          "label": "cats and dogs falling from the sky?"
+        },
+        "right": {
+          "icon": "Brain",
+          "title": "Meaning-based",
+          "stat": "Natural",
+          "label": "“It's raining very heavily”"
+        }
+      },
+      "from": 1560,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_04.wav",
+      "cues": [
+        70,
+        257
+      ],
+      "captions": [
+        {
+          "text": "Here's why meaning matters.",
+          "from": 10,
+          "to": 67
+        },
+        {
+          "text": "Word by word translation gets",
+          "from": 70,
+          "to": 127
+        },
+        {
+          "text": "idioms badly wrong,",
+          "from": 129,
+          "to": 166
+        },
+        {
+          "text": "like, it's raining cats and dogs.",
+          "from": 167,
+          "to": 254
+        },
+        {
+          "text": "A meaning based model says,",
+          "from": 257,
+          "to": 308
+        },
+        {
+          "text": "it's raining very heavily,",
+          "from": 308,
+          "to": 356
+        },
+        {
+          "text": "in the other language,",
+          "from": 356,
+          "to": 398
+        },
+        {
+          "text": "which is what you actually meant.",
+          "from": 398,
+          "to": 459
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The tough parts",
+        "kicker": "WHY IT'S HARD",
+        "terms": [
+          [
+            "Timer",
+            "Speed",
+            "Every step adds delay"
+          ],
+          [
+            "Languages",
+            "Mixed languages",
+            "Telugu + English together"
+          ],
+          [
+            "MapPin",
+            "Names",
+            "Shouldn't be translated"
+          ],
+          [
+            "Handshake",
+            "Politeness",
+            "Changes with who you talk to"
+          ]
+        ]
+      },
+      "from": 2031,
+      "durationInFrames": 510,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_05.wav",
+      "cues": [
+        66,
+        166,
+        287,
+        395
+      ],
+      "captions": [
+        {
+          "text": "So what are the tough parts?",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Speed, because every step adds",
+          "from": 66,
+          "to": 123
+        },
+        {
+          "text": "a little delay.",
+          "from": 124,
+          "to": 163
+        },
+        {
+          "text": "Mixed languages,",
+          "from": 166,
+          "to": 195
+        },
+        {
+          "text": "like Telugu with English words",
+          "from": 200,
+          "to": 251
+        },
+        {
+          "text": "in between.",
+          "from": 252,
+          "to": 282
+        },
+        {
+          "text": "Names and places,",
+          "from": 287,
+          "to": 326
+        },
+        {
+          "text": "which shouldn't be translated at all.",
+          "from": 329,
+          "to": 392
+        },
+        {
+          "text": "And politeness,",
+          "from": 395,
+          "to": 423
+        },
+        {
+          "text": "which can change with who",
+          "from": 425,
+          "to": 457
+        },
+        {
+          "text": "you're talking to.",
+          "from": 458,
+          "to": 498
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Getting faster",
+        "kicker": "WHAT'S NEXT",
+        "steps": [
+          [
+            "Zap",
+            "Streaming",
+            "Translate while you speak"
+          ],
+          [
+            "AudioLines",
+            "Speech to speech",
+            "Skip the text step"
+          ],
+          [
+            "Mic",
+            "Your voice",
+            "Can sound like you"
+          ]
+        ]
+      },
+      "from": 2541,
+      "durationInFrames": 479,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_06.wav",
+      "cues": [
+        92,
+        213,
+        346
+      ],
+      "captions": [
+        {
+          "text": "And newer systems are getting",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "even better.",
+          "from": 53,
+          "to": 88
+        },
+        {
+          "text": "Streaming, where they start translating",
+          "from": 92,
+          "to": 155
+        },
+        {
+          "text": "before you finish speaking.",
+          "from": 157,
+          "to": 209
+        },
+        {
+          "text": "Speech to speech models,",
+          "from": 213,
+          "to": 257
+        },
+        {
+          "text": "which can skip the text",
+          "from": 259,
+          "to": 296
+        },
+        {
+          "text": "step entirely.",
+          "from": 298,
+          "to": 344
+        },
+        {
+          "text": "And voice matching,",
+          "from": 346,
+          "to": 382
+        },
+        {
+          "text": "where the translation can even",
+          "from": 383,
+          "to": 428
+        },
+        {
+          "text": "sound like you.",
+          "from": 430,
+          "to": 466
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll find it",
+        "items": [
+          [
+            "Smartphone",
+            "Phone apps",
+            "Conversation mode"
+          ],
+          [
+            "Headphones",
+            "Earbuds",
+            "Translation in your ear"
+          ],
+          [
+            "Captions",
+            "Video calls",
+            "Translated live captions"
+          ]
+        ]
+      },
+      "from": 3020,
+      "durationInFrames": 397,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_07.wav",
+      "cues": [
+        57,
+        171,
+        255
+      ],
+      "captions": [
+        {
+          "text": "So where will you find it?",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "Conversation mode in translation apps",
+          "from": 57,
+          "to": 130
+        },
+        {
+          "text": "on your phone.",
+          "from": 131,
+          "to": 169
+        },
+        {
+          "text": "Earbuds that translate right in",
+          "from": 171,
+          "to": 226
+        },
+        {
+          "text": "your ear.",
+          "from": 226,
+          "to": 253
+        },
+        {
+          "text": "And live captions in video",
+          "from": 255,
+          "to": 297
+        },
+        {
+          "text": "calls, translated as people speak.",
+          "from": 298,
+          "to": 385
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI translation is perfect, so no need to learn languages.",
+        "fact": "Great for travel and basics, but it can miss jokes and key details. Use humans for legal or medical.",
+        "tip": "Use a human for high stakes"
+      },
+      "from": 3417,
+      "durationInFrames": 564,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_08.wav",
+      "cues": [
+        59,
+        234
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think AI translation is",
+          "from": 59,
+          "to": 118
+        },
+        {
+          "text": "perfect, so there's no need",
+          "from": 121,
+          "to": 169
+        },
+        {
+          "text": "to learn languages anymore.",
+          "from": 171,
+          "to": 231
+        },
+        {
+          "text": "It's great for travel and",
+          "from": 234,
+          "to": 271
+        },
+        {
+          "text": "basics, but it can miss",
+          "from": 273,
+          "to": 321
+        },
+        {
+          "text": "jokes, emotions and important details.",
+          "from": 323,
+          "to": 420
+        },
+        {
+          "text": "For legal or medical conversations,",
+          "from": 422,
+          "to": 495
+        },
+        {
+          "text": "use a human translator.",
+          "from": 497,
+          "to": 552
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The correct order is…",
+        "options": [
+          "Translate → speech to text → speak",
+          "Speech to text → translate → speak",
+          "Speak → translate → speech to text"
+        ],
+        "answer": 1
+      },
+      "from": 3981,
+      "durationInFrames": 460,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_09.wav",
+      "cues": [
+        137,
+        341
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 33
+        },
+        {
+          "text": "What's the correct order in",
+          "from": 44,
+          "to": 79
+        },
+        {
+          "text": "live speech translation?",
+          "from": 80,
+          "to": 135
+        },
+        {
+          "text": "Pause and think,",
+          "from": 137,
+          "to": 173
+        },
+        {
+          "text": "and if you get it",
+          "from": 175,
+          "to": 192
+        },
+        {
+          "text": "right, comment below!",
+          "from": 194,
+          "to": 249
+        },
+        {
+          "text": "Speech to text,",
+          "from": 341,
+          "to": 370
+        },
+        {
+          "text": "then translate,",
+          "from": 375,
+          "to": 402
+        },
+        {
+          "text": "then text to speech!",
+          "from": 404,
+          "to": 446
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Listen",
+            "speech to text"
+          ],
+          [
+            "Translate",
+            "meaning, not word by word"
+          ],
+          [
+            "Speak",
+            "text to speech"
+          ],
+          [
+            "Next gen",
+            "streaming, speech-to-speech"
+          ]
+        ],
+        "next": "EP 19 · AI coding assistants"
+      },
+      "from": 4441,
+      "durationInFrames": 639,
+      "voiceFrom": 10,
+      "audio": "lessons/uc08/voice_10.wav",
+      "cues": [
+        48,
+        147,
+        255,
+        326,
+        426
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "First, speech to text writes",
+          "from": 48,
+          "to": 103
+        },
+        {
+          "text": "down what you said.",
+          "from": 105,
+          "to": 145
+        },
+        {
+          "text": "Then translation converts the meaning,",
+          "from": 147,
+          "to": 207
+        },
+        {
+          "text": "not just the words.",
+          "from": 208,
+          "to": 253
+        },
+        {
+          "text": "Then text to speech speaks",
+          "from": 255,
+          "to": 297
+        },
+        {
+          "text": "it out.",
+          "from": 299,
+          "to": 323
+        },
+        {
+          "text": "And newer systems stream,",
+          "from": 326,
+          "to": 368
+        },
+        {
+          "text": "or skip the text step.",
+          "from": 372,
+          "to": 423
+        },
+        {
+          "text": "Next, we'll learn how AI",
+          "from": 426,
+          "to": 476
+        },
+        {
+          "text": "coding assistants read and write code.",
+          "from": 477,
+          "to": 560
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 564,
+          "to": 627
+        }
+      ],
+      "image": null
+    }
+  ]
+}
