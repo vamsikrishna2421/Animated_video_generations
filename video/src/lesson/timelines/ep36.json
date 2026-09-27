@@ -1,0 +1,748 @@
+{
+  "id": "ep36",
+  "episode": 36,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Why AI Runs on GPUs",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4792,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep36/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 36",
+        "title": [
+          "Why",
+          "GPUs?"
+        ],
+        "subtitle": "The chips behind AI",
+        "buzzwords": [
+          "GPU",
+          "CPU",
+          "Parallel",
+          "Matrix math",
+          "VRAM",
+          "CUDA",
+          "Data centre",
+          "Nvidia"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_01.wav",
+      "cues": [
+        196,
+        316
+      ],
+      "captions": [
+        {
+          "text": "Here's a surprise.",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "The chips made for video",
+          "from": 55,
+          "to": 89
+        },
+        {
+          "text": "games now power almost every",
+          "from": 91,
+          "to": 146
+        },
+        {
+          "text": "AI you use.",
+          "from": 148,
+          "to": 193
+        },
+        {
+          "text": "Companies spend billions buying them,",
+          "from": 196,
+          "to": 258
+        },
+        {
+          "text": "and wait months to get them.",
+          "from": 260,
+          "to": 313
+        },
+        {
+          "text": "Why does AI need GPUs?",
+          "from": 316,
+          "to": 380
+        },
+        {
+          "text": "Let's find out.",
+          "from": 383,
+          "to": 420
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Professors vs students",
+        "kicker": "CPU VS GPU",
+        "left": {
+          "icon": "Cpu",
+          "title": "CPU",
+          "stat": "Few, powerful",
+          "label": "complex tasks, one by one"
+        },
+        "right": {
+          "icon": "Grid3x3",
+          "title": "GPU",
+          "stat": "Thousands",
+          "label": "simple sums, all at once"
+        }
+      },
+      "from": 433,
+      "durationInFrames": 586,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_02.wav",
+      "cues": [
+        66,
+        320
+      ],
+      "captions": [
+        {
+          "text": "Let's compare two chips.",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "A CPU has a few",
+          "from": 66,
+          "to": 106
+        },
+        {
+          "text": "very powerful cores.",
+          "from": 108,
+          "to": 158
+        },
+        {
+          "text": "It's like a handful of",
+          "from": 160,
+          "to": 185
+        },
+        {
+          "text": "professors, great at complex tasks,",
+          "from": 187,
+          "to": 266
+        },
+        {
+          "text": "one after another.",
+          "from": 268,
+          "to": 317
+        },
+        {
+          "text": "A GPU has thousands of",
+          "from": 320,
+          "to": 371
+        },
+        {
+          "text": "simpler cores.",
+          "from": 374,
+          "to": 412
+        },
+        {
+          "text": "It's like a stadium full",
+          "from": 415,
+          "to": 448
+        },
+        {
+          "text": "of students,",
+          "from": 448,
+          "to": 474
+        },
+        {
+          "text": "each doing a simple sum,",
+          "from": 476,
+          "to": 524
+        },
+        {
+          "text": "all at the same time.",
+          "from": 526,
+          "to": 573
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Matrix multiplication",
+        "short": "MatMul",
+        "definition": "Multiplying big grids of numbers. It's the core operation inside every neural network.",
+        "chips": [
+          [
+            "Grid3x3",
+            "Big grids of numbers"
+          ],
+          [
+            "Plus",
+            "Simple sums"
+          ],
+          [
+            "Layers",
+            "All run side by side"
+          ]
+        ]
+      },
+      "from": 1019,
+      "durationInFrames": 560,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_03.wav",
+      "cues": [
+        154,
+        325,
+        462
+      ],
+      "captions": [
+        {
+          "text": "And AI is mostly simple",
+          "from": 10,
+          "to": 66
+        },
+        {
+          "text": "math, repeated billions of times.",
+          "from": 68,
+          "to": 152
+        },
+        {
+          "text": "Every layer of a neural",
+          "from": 154,
+          "to": 204
+        },
+        {
+          "text": "network multiplies big grids of",
+          "from": 204,
+          "to": 269
+        },
+        {
+          "text": "numbers, called matrices.",
+          "from": 269,
+          "to": 322
+        },
+        {
+          "text": "Each multiply is simple,",
+          "from": 325,
+          "to": 380
+        },
+        {
+          "text": "and they can all run",
+          "from": 381,
+          "to": 413
+        },
+        {
+          "text": "side by side.",
+          "from": 416,
+          "to": 460
+        },
+        {
+          "text": "That's exactly what GPUs are",
+          "from": 462,
+          "to": 517
+        },
+        {
+          "text": "built for.",
+          "from": 518,
+          "to": 548
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "From games to AI",
+        "kicker": "A SHORT HISTORY",
+        "steps": [
+          [
+            "Gamepad2",
+            "Games",
+            "Millions of pixels at once"
+          ],
+          [
+            "Sparkles",
+            "2012 breakthrough",
+            "Neural nets trained on GPUs"
+          ],
+          [
+            "Code",
+            "CUDA",
+            "Easy to program for AI"
+          ]
+        ]
+      },
+      "from": 1579,
+      "durationInFrames": 589,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_04.wav",
+      "cues": [
+        77,
+        210,
+        410
+      ],
+      "captions": [
+        {
+          "text": "Why did gaming chips fit",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "so well?",
+          "from": 47,
+          "to": 74
+        },
+        {
+          "text": "Games colour millions of pixels,",
+          "from": 77,
+          "to": 139
+        },
+        {
+          "text": "every frame,",
+          "from": 140,
+          "to": 166
+        },
+        {
+          "text": "in parallel.",
+          "from": 169,
+          "to": 207
+        },
+        {
+          "text": "Around 2012,",
+          "from": 210,
+          "to": 238
+        },
+        {
+          "text": "researchers found the same chips",
+          "from": 238,
+          "to": 308
+        },
+        {
+          "text": "could train neural networks many",
+          "from": 308,
+          "to": 378
+        },
+        {
+          "text": "times faster.",
+          "from": 378,
+          "to": 407
+        },
+        {
+          "text": "Then, Nvidia's CUDA software made",
+          "from": 410,
+          "to": 484
+        },
+        {
+          "text": "GPUs easy to program for AI.",
+          "from": 485,
+          "to": 578
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "GPU words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "MemoryStick",
+            "VRAM",
+            "The GPU's memory"
+          ],
+          [
+            "Columns3",
+            "Parallel",
+            "Many sums at once"
+          ],
+          [
+            "Cpu",
+            "TPU",
+            "Google's AI chip"
+          ],
+          [
+            "Server",
+            "Cluster",
+            "Thousands of GPUs linked"
+          ]
+        ]
+      },
+      "from": 2168,
+      "durationInFrames": 588,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_05.wav",
+      "cues": [
+        61,
+        205,
+        305,
+        418
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "VRAM, the GPU's own memory.",
+          "from": 61,
+          "to": 142
+        },
+        {
+          "text": "The whole model has to",
+          "from": 144,
+          "to": 175
+        },
+        {
+          "text": "fit in it.",
+          "from": 178,
+          "to": 203
+        },
+        {
+          "text": "Parallel processing,",
+          "from": 205,
+          "to": 250
+        },
+        {
+          "text": "doing many sums at once.",
+          "from": 250,
+          "to": 302
+        },
+        {
+          "text": "TPU, Google's own chip made",
+          "from": 305,
+          "to": 368
+        },
+        {
+          "text": "just for AI.",
+          "from": 370,
+          "to": 416
+        },
+        {
+          "text": "And a cluster,",
+          "from": 418,
+          "to": 444
+        },
+        {
+          "text": "thousands of GPUs linked together,",
+          "from": 446,
+          "to": 514
+        },
+        {
+          "text": "to train giant models.",
+          "from": 519,
+          "to": 574
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where GPUs work",
+        "items": [
+          [
+            "Server",
+            "Training",
+            "Thousands of GPUs, for weeks"
+          ],
+          [
+            "MessageSquare",
+            "Inference",
+            "Every chat you send"
+          ],
+          [
+            "Laptop",
+            "At home",
+            "Run small models locally"
+          ]
+        ]
+      },
+      "from": 2756,
+      "durationInFrames": 536,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_06.wav",
+      "cues": [
+        68,
+        209,
+        377
+      ],
+      "captions": [
+        {
+          "text": "So where do GPUs matter?",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "Training, where a big model",
+          "from": 68,
+          "to": 116
+        },
+        {
+          "text": "can use thousands of GPUs",
+          "from": 118,
+          "to": 171
+        },
+        {
+          "text": "for weeks.",
+          "from": 172,
+          "to": 207
+        },
+        {
+          "text": "Inference, every time you chat,",
+          "from": 209,
+          "to": 271
+        },
+        {
+          "text": "a GPU in a data",
+          "from": 273,
+          "to": 312
+        },
+        {
+          "text": "centre generates your answer.",
+          "from": 313,
+          "to": 375
+        },
+        {
+          "text": "And your own laptop,",
+          "from": 377,
+          "to": 415
+        },
+        {
+          "text": "where a gaming GPU can",
+          "from": 417,
+          "to": 462
+        },
+        {
+          "text": "run small open models.",
+          "from": 463,
+          "to": 523
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The fastest GPU always wins.",
+        "fact": "Memory is often the real limit. If the model doesn't fit in VRAM, speed doesn't matter.",
+        "tip": "Check the VRAM first"
+      },
+      "from": 3292,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_07.wav",
+      "cues": [
+        59,
+        165
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think the fastest GPU",
+          "from": 59,
+          "to": 119
+        },
+        {
+          "text": "always wins.",
+          "from": 122,
+          "to": 162
+        },
+        {
+          "text": "Often, memory is the real limit.",
+          "from": 165,
+          "to": 252
+        },
+        {
+          "text": "If the model doesn't fit",
+          "from": 254,
+          "to": 303
+        },
+        {
+          "text": "in VRAM,",
+          "from": 303,
+          "to": 320
+        },
+        {
+          "text": "it won't run well,",
+          "from": 320,
+          "to": 357
+        },
+        {
+          "text": "no matter how fast the",
+          "from": 357,
+          "to": 402
+        },
+        {
+          "text": "chip is.",
+          "from": 402,
+          "to": 419
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "GPUs are great for AI because…",
+        "options": [
+          "They do thousands of simple sums at once",
+          "They have one super-fast core",
+          "They store more files"
+        ],
+        "answer": 0
+      },
+      "from": 3725,
+      "durationInFrames": 484,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_08.wav",
+      "cues": [
+        116,
+        327
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Why are GPUs great for AI?",
+          "from": 42,
+          "to": 114
+        },
+        {
+          "text": "Pause and think,",
+          "from": 116,
+          "to": 153
+        },
+        {
+          "text": "and if you get it",
+          "from": 154,
+          "to": 171
+        },
+        {
+          "text": "right, comment below!",
+          "from": 173,
+          "to": 229
+        },
+        {
+          "text": "They do thousands of simple",
+          "from": 327,
+          "to": 366
+        },
+        {
+          "text": "sums at the same time,",
+          "from": 368,
+          "to": 411
+        },
+        {
+          "text": "perfect for matrix math!",
+          "from": 414,
+          "to": 470
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "CPU",
+            "few, powerful cores"
+          ],
+          [
+            "GPU",
+            "thousands of cores"
+          ],
+          [
+            "Matrix math",
+            "runs in parallel"
+          ],
+          [
+            "VRAM",
+            "decides what fits"
+          ]
+        ],
+        "next": "EP 37 · Quantization"
+      },
+      "from": 4209,
+      "durationInFrames": 583,
+      "voiceFrom": 10,
+      "audio": "lessons/ep36/voice_09.wav",
+      "cues": [
+        47,
+        125,
+        206,
+        323,
+        401
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "CPUs have a few powerful cores.",
+          "from": 47,
+          "to": 122
+        },
+        {
+          "text": "GPUs have thousands of simple ones.",
+          "from": 125,
+          "to": 203
+        },
+        {
+          "text": "AI is mostly matrix math,",
+          "from": 206,
+          "to": 266
+        },
+        {
+          "text": "which runs in parallel.",
+          "from": 270,
+          "to": 320
+        },
+        {
+          "text": "And VRAM decides which models fit.",
+          "from": 323,
+          "to": 398
+        },
+        {
+          "text": "Next, quantization,",
+          "from": 401,
+          "to": 451
+        },
+        {
+          "text": "shrinking models to fit.",
+          "from": 455,
+          "to": 506
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 510,
+          "to": 571
+        }
+      ],
+      "image": null
+    }
+  ]
+}

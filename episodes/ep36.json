@@ -1,0 +1,218 @@
+{
+  "id": "ep36",
+  "episode": 36,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Why AI Runs on GPUs",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Here's a surprise. The chips made for video games now power almost every AI you use. [1] Companies spend billions buying them, and wait months to get them. [2] Why does AI need GPUs? Let's find out.",
+      "data": {
+        "kicker": "EPISODE 36",
+        "title": [
+          "Why",
+          "GPUs?"
+        ],
+        "subtitle": "The chips behind AI",
+        "buzzwords": [
+          "GPU",
+          "CPU",
+          "Parallel",
+          "Matrix math",
+          "VRAM",
+          "CUDA",
+          "Data centre",
+          "Nvidia"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Let's compare two chips. [1] A CPU has a few very powerful cores. It's like a handful of professors, great at complex tasks, one after another. [2] A GPU has thousands of simpler cores. It's like a stadium full of students, each doing a simple sum, all at the same time.",
+      "data": {
+        "heading": "Professors vs students",
+        "kicker": "CPU VS GPU",
+        "left": {
+          "icon": "Cpu",
+          "title": "CPU",
+          "stat": "Few, powerful",
+          "label": "complex tasks, one by one"
+        },
+        "right": {
+          "icon": "Grid3x3",
+          "title": "GPU",
+          "stat": "Thousands",
+          "label": "simple sums, all at once"
+        }
+      }
+    },
+    {
+      "type": "definition",
+      "text": "And AI is mostly simple math, repeated billions of times. [1] Every layer of a neural network multiplies big grids of numbers, called matrices. [2] Each multiply is simple, and they can all run side by side. [3] That's exactly what GPUs are built for.",
+      "data": {
+        "term": "Matrix multiplication",
+        "short": "MatMul",
+        "definition": "Multiplying big grids of numbers. It's the core operation inside every neural network.",
+        "chips": [
+          [
+            "Grid3x3",
+            "Big grids of numbers"
+          ],
+          [
+            "Plus",
+            "Simple sums"
+          ],
+          [
+            "Layers",
+            "All run side by side"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Why did gaming chips fit so well? [1] Games colour millions of pixels, every frame, in parallel. [2] Around 2012, researchers found the same chips could train neural networks many times faster. [3] Then, Nvidia's CUDA software made GPUs easy to program for AI.",
+      "data": {
+        "heading": "From games to AI",
+        "kicker": "A SHORT HISTORY",
+        "steps": [
+          [
+            "Gamepad2",
+            "Games",
+            "Millions of pixels at once"
+          ],
+          [
+            "Sparkles",
+            "2012 breakthrough",
+            "Neural nets trained on GPUs"
+          ],
+          [
+            "Code",
+            "CUDA",
+            "Easy to program for AI"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] VRAM, the GPU's own memory. The whole model has to fit in it. [2] Parallel processing, doing many sums at once. [3] TPU, Google's own chip made just for AI. [4] And a cluster, thousands of GPUs linked together, to train giant models.",
+      "data": {
+        "heading": "GPU words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "MemoryStick",
+            "VRAM",
+            "The GPU's memory"
+          ],
+          [
+            "Columns3",
+            "Parallel",
+            "Many sums at once"
+          ],
+          [
+            "Cpu",
+            "TPU",
+            "Google's AI chip"
+          ],
+          [
+            "Server",
+            "Cluster",
+            "Thousands of GPUs linked"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where do GPUs matter? [1] Training, where a big model can use thousands of GPUs for weeks. [2] Inference, every time you chat, a GPU in a data centre generates your answer. [3] And your own laptop, where a gaming GPU can run small open models.",
+      "data": {
+        "heading": "Where GPUs work",
+        "items": [
+          [
+            "Server",
+            "Training",
+            "Thousands of GPUs, for weeks"
+          ],
+          [
+            "MessageSquare",
+            "Inference",
+            "Every chat you send"
+          ],
+          [
+            "Laptop",
+            "At home",
+            "Run small models locally"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think the fastest GPU always wins. [2] Often, memory is the real limit. If the model doesn't fit in VRAM, it won't run well, no matter how fast the chip is.",
+      "data": {
+        "myth": "The fastest GPU always wins.",
+        "fact": "Memory is often the real limit. If the model doesn't fit in VRAM, speed doesn't matter.",
+        "tip": "Check the VRAM first"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Why are GPUs great for AI? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] They do thousands of simple sums at the same time, perfect for matrix math!",
+      "data": {
+        "question": "GPUs are great for AI because…",
+        "options": [
+          "They do thousands of simple sums at once",
+          "They have one super-fast core",
+          "They store more files"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] CPUs have a few powerful cores. [2] GPUs have thousands of simple ones. [3] AI is mostly matrix math, which runs in parallel. [4] And VRAM decides which models fit. [5] Next, quantization, shrinking models to fit. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "CPU",
+            "few, powerful cores"
+          ],
+          [
+            "GPU",
+            "thousands of cores"
+          ],
+          [
+            "Matrix math",
+            "runs in parallel"
+          ],
+          [
+            "VRAM",
+            "decides what fits"
+          ]
+        ],
+        "next": "EP 37 · Quantization"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Why does AI run on chips made for video games?\n\nAI From Scratch, Episode 36: GPUs\n- CPU vs GPU: professors vs a stadium of students\n- AI is mostly matrix math, repeated billions of times\n- From gaming to the 2012 AI breakthrough, and CUDA\n- Jargon: VRAM, parallel, TPU, cluster\n- Myth: memory, not speed, is often the real limit\n\nQuiz at the end. Got it right? Comment below.\n\nNext: quantization, shrinking models to fit.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #GPU #LearnAI #Nvidia #AIForBeginners",
+    "pinned": "Quiz answer: GPUs do thousands of simple sums at the same time, perfect for matrix math. What GPU do you have? Comment below!",
+    "cover": "'Why GPUs?' title card",
+    "alt": "Animated explainer of why AI runs on GPUs: parallel matrix math, VRAM and history."
+  }
+}

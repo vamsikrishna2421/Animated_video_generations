@@ -1,0 +1,223 @@
+{
+  "id": "ep37",
+  "episode": 37,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quantization: Shrinking AI Models",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "A 70 billion parameter model needs about 140 gigabytes of memory. [1] That's way more than any gaming GPU. [2] Yet people run it at home. The trick is quantization. Let's see how it works.",
+      "data": {
+        "kicker": "EPISODE 37",
+        "title": [
+          "Quanti-",
+          "zation"
+        ],
+        "subtitle": "Shrinking AI models to fit",
+        "buzzwords": [
+          "Precision",
+          "16-bit",
+          "8-bit",
+          "4-bit",
+          "GGUF",
+          "Memory",
+          "Speed",
+          "Compression"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Quantization means storing the model's numbers with less precision. [1] Normally, each weight uses 16 bits. [2] Quantization rounds them to 8 bits, or even 4 bits. [3] The model gets much smaller, and faster, with only a small loss in quality.",
+      "data": {
+        "term": "Quantization",
+        "short": "Quantize",
+        "definition": "Storing a model's weights with fewer bits, like 8 or 4 instead of 16, to make it smaller and faster.",
+        "chips": [
+          [
+            "Binary",
+            "Normally 16 bits"
+          ],
+          [
+            "Minimize2",
+            "Rounded to 8 or 4 bits"
+          ],
+          [
+            "Zap",
+            "Smaller and faster"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Think of a photo. [1] The original is a huge, high resolution file. [2] A compressed version is a fraction of the size, and on your phone screen, it looks almost the same. Quantization does this, for AI weights.",
+      "data": {
+        "heading": "Like compressing a photo",
+        "kicker": "THE ANALOGY",
+        "left": {
+          "icon": "Image",
+          "title": "Original",
+          "stat": "16-bit",
+          "label": "huge file, full detail"
+        },
+        "right": {
+          "icon": "ImageDown",
+          "title": "Compressed",
+          "stat": "4-bit",
+          "label": "tiny file, looks almost the same"
+        }
+      }
+    },
+    {
+      "type": "table",
+      "text": "Here's the math for a 70 billion parameter model. [1] At 16 bits, about 140 gigabytes. [2] At 8 bits, about 70 gigabytes. [3] And at 4 bits, about 35 gigabytes. That's a quarter of the size.",
+      "data": {
+        "heading": "A 70B model",
+        "kicker": "THE NUMBERS",
+        "cols": [
+          "Memory",
+          "Quality"
+        ],
+        "rows": [
+          [
+            "16-bit",
+            "≈ 140 GB",
+            "Full"
+          ],
+          [
+            "8-bit",
+            "≈ 70 GB",
+            "Almost full"
+          ],
+          [
+            "4-bit",
+            "≈ 35 GB",
+            "Slightly lower"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "So how does it work? [1] Look at a group of weights, and find their range. [2] Divide that range into a few steps, like 16 steps for 4 bits. [3] Round each weight to the nearest step, and store just the step number, plus one scale value.",
+      "data": {
+        "heading": "How it works",
+        "kicker": "STEP BY STEP",
+        "steps": [
+          [
+            "Ruler",
+            "Find the range",
+            "Of a group of weights"
+          ],
+          [
+            "SlidersHorizontal",
+            "Make steps",
+            "16 steps for 4 bits"
+          ],
+          [
+            "Magnet",
+            "Snap",
+            "Each weight to its nearest step"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Precision, how many bits each number uses. [2] GGUF, a popular file format for quantized models you run at home. [3] Q4, shorthand for a 4 bit version. [4] And perplexity, a score that shows how much quality was lost.",
+      "data": {
+        "heading": "Quantization words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Binary",
+            "Precision",
+            "Bits per number"
+          ],
+          [
+            "FileBox",
+            "GGUF",
+            "Format for local models"
+          ],
+          [
+            "Tag",
+            "Q4",
+            "A 4-bit version"
+          ],
+          [
+            "Activity",
+            "Perplexity",
+            "Measures quality loss"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think quantized models are broken, low quality copies. [2] At 8 bits, most people can't tell the difference. At 4 bits, there's a small drop. Only very low bits, like 2 bits, hurt a lot.",
+      "data": {
+        "myth": "Quantized models are broken, low quality copies.",
+        "fact": "8-bit is nearly identical, 4-bit drops a little. Only very low bits, like 2-bit, hurt a lot.",
+        "tip": "4-bit is the sweet spot"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! A model is 140 gigabytes at 16 bits. About how big is it at 4 bits? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] About 35 gigabytes, a quarter of the size!",
+      "data": {
+        "question": "140 GB at 16-bit → 4-bit is about…",
+        "options": [
+          "35 gigabytes",
+          "70 gigabytes",
+          "140 gigabytes"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Quantization stores weights with fewer bits. [2] 16 bits to 8, or 4. [3] Models get much smaller and faster. [4] And 4 bits is often the sweet spot for quality. [5] Next, how to run AI models on your own laptop. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Fewer bits",
+            "per weight"
+          ],
+          [
+            "16 → 8 → 4",
+            "bits"
+          ],
+          [
+            "Smaller",
+            "and faster"
+          ],
+          [
+            "4-bit",
+            "the sweet spot"
+          ]
+        ],
+        "next": "EP 38 · Run AI locally"
+      }
+    }
+  ],
+  "post": {
+    "caption": "How do people run a 140 GB AI model on a home PC? Quantization.\n\nAI From Scratch, Episode 37: Quantization\n- Fewer bits per weight: 16 to 8 to 4\n- The photo compression analogy\n- The numbers for a 70B model\n- How rounding to steps works\n- Jargon: precision, GGUF, Q4, perplexity\n- Myth: 4-bit is the sweet spot, not broken\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how to run AI on your own laptop.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #Quantization #LearnAI #LocalAI #AIForBeginners",
+    "pinned": "Quiz answer: About 35 gigabytes, a quarter of the size. Which quantized model do you run? Comment below!",
+    "cover": "'Quantization' title card",
+    "alt": "Animated explainer of quantization: storing AI model weights with fewer bits to shrink memory."
+  }
+}
