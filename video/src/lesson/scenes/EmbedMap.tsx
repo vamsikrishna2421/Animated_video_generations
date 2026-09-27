@@ -17,7 +17,7 @@ export const EmbedMap: React.FC<SceneProps> = ({ data, cue }) => {
   const link = interpolate(f, [cue(2), cue(2) + 16], [0, 1], clamp);
   return (
     <>
-      <Heading kicker="MEANING AS COORDINATES">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "MEANING AS COORDINATES"}>{data.heading}</Heading>
       <svg width={1080} height={1250} style={{ position: "absolute", left: 0, top: 0 }}>
         <rect x={X0} y={Y0} width={W} height={H} rx={30} fill="rgba(255,255,255,0.04)" stroke={L.border} strokeWidth={2} />
         {[0.25, 0.5, 0.75].map((g) => (

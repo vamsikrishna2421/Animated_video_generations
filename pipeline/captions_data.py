@@ -262,9 +262,20 @@ Follow @ai_maastaaru for more real world AI breakdowns.""",
 }
 
 
+def all_posts() -> dict:
+    """Posts defined here, plus any episode JSON with a "post" object (newer episodes)."""
+    import json
+    posts = dict(POSTS)
+    for f in sorted((ROOT / "episodes").glob("*.json")):
+        spec = json.loads(f.read_text())
+        if "post" in spec:
+            posts[spec["id"]] = spec["post"]
+    return posts
+
+
 def main() -> None:
     out = ROOT / "out"
-    for ep, p in POSTS.items():
+    for ep, p in all_posts().items():
         videos = sorted(out.glob(f"{ep}_*.mp4"))
         video = videos[0].name if videos else f"{ep}_<not rendered yet>.mp4"
         assert len(p["tags"].split()) <= 5, ep

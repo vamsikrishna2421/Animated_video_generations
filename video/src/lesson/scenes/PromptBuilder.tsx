@@ -14,7 +14,7 @@ export const PromptBuilder: React.FC<SceneProps> = ({ data, cue }) => {
   const partSprings = parts.map((_, i) => useSpring(cue(i + 1), 12));
   return (
     <>
-      <Heading kicker="PROMPT RECIPE">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "PROMPT RECIPE"}>{data.heading}</Heading>
       {!built && (
         <div style={{ position: "absolute", top: 490, left: 60, right: 60, opacity: weak }}>
           <Panel style={{ padding: "26px 30px", borderColor: L.rose }}>

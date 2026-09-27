@@ -17,7 +17,7 @@ export const Predict: React.FC<SceneProps> = ({ data, cue }) => {
   const panel = useSpring(4, 15);
   return (
     <>
-      <Heading kicker="THE ONE TRICK">Guess the next word</Heading>
+      <Heading kicker={data.kicker ?? "THE ONE TRICK"}>Guess the next word</Heading>
       <Panel style={{ position: "absolute", top: 490, left: 60, right: 60, padding: "34px 38px", minHeight: 170, opacity: panel }}>
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 54, lineHeight: 1.3, color: L.text }}>
           {data.prompt}{" "}

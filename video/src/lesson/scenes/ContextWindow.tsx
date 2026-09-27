@@ -17,7 +17,7 @@ export const ContextWindow: React.FC<SceneProps> = ({ data, cue }) => {
   const boxTop = 560;
   return (
     <>
-      <Heading kicker="MEMORY LIMIT">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "MEMORY LIMIT"}>{data.heading}</Heading>
       <div style={{ position: "absolute", top: 480, left: 60, right: 60, display: "flex", justifyContent: "space-between", fontFamily: L.font, fontWeight: 800, fontSize: 28, letterSpacing: 3 }}>
         <span style={{ color: L.rose, opacity: overflow > 0 ? 1 : 0.3 }}>↑ FORGOTTEN</span>
         <span style={{ color: L.amber }}>{data.label}</span>

@@ -15,7 +15,7 @@ export const GenAI: React.FC<SceneProps> = ({ data, cue }) => {
   const fact = useSpring(cue(5), 12);
   return (
     <>
-      <Heading kicker="THE NEWEST LAYER">
+      <Heading kicker={data.kicker ?? "THE NEWEST LAYER"}>
         Generative <span style={gradText(L.amber, L.rose)}>AI</span>
       </Heading>
       <Panel style={{ position: "absolute", top: 480, left: 90, right: 90, padding: 30, opacity: phone, transform: `translateY(${(1 - phone) * 60}px)` }}>

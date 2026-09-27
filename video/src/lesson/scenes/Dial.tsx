@@ -17,7 +17,7 @@ export const Dial: React.FC<SceneProps> = ({ data, cue }) => {
   const color = `hsl(${hue} 90% 60%)`;
   return (
     <>
-      <Heading kicker="THE CREATIVITY DIAL">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "THE CREATIVITY DIAL"}>{data.heading}</Heading>
       <Panel style={{ position: "absolute", top: 480, left: 60, right: 60, padding: "24px 30px" }}>
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 26, letterSpacing: 4, color: L.muted }}>PROMPT</div>
         <div style={{ fontFamily: L.font, fontWeight: 700, fontSize: 38, color: L.text, marginTop: 6 }}>{data.prompt}</div>

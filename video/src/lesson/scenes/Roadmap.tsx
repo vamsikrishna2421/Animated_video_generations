@@ -10,7 +10,7 @@ export const Roadmap: React.FC<SceneProps> = ({ data, cue }) => {
   const active = seasons.reduce((a, _, i) => (f >= cue(i) ? i : a), -1);
   return (
     <>
-      <Heading kicker="THE COURSE">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "THE COURSE"}>{data.heading}</Heading>
       <div style={{ position: "absolute", top: 470, left: 50, right: 50 }}>
         {seasons.map((s, si) => {
           const on = si === active;

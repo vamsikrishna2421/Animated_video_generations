@@ -19,7 +19,7 @@ export const Pipeline: React.FC<SceneProps> = ({ data, cue }) => {
   const packet = { x: from.x + (to.x - from.x) * t, y: from.y + (to.y - from.y) * t };
   return (
     <>
-      <Heading kicker="HOW IT FLOWS">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "HOW IT FLOWS"}>{data.heading}</Heading>
       <svg width={1080} height={1300} style={{ position: "absolute", left: 0, top: 0 }}>
         {nodes.slice(1).map((_, i) => {
           const a = pos(i), b = pos(i + 1);

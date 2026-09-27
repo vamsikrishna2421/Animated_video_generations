@@ -13,7 +13,7 @@ export const Tokens: React.FC<SceneProps> = ({ data, cue }) => {
   const plain = useSpring(4, 14);
   return (
     <>
-      <Heading kicker="HOW AI READS">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "HOW AI READS"}>{data.heading}</Heading>
       <Panel style={{ position: "absolute", top: 470, left: 60, right: 60, padding: "26px 32px", opacity: plain }}>
         <div style={{ fontFamily: L.font, fontWeight: 600, fontSize: 26, letterSpacing: 4, color: L.muted }}>YOU TYPE</div>
         <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 46, color: L.text, marginTop: 8 }}>{data.sentence}</div>

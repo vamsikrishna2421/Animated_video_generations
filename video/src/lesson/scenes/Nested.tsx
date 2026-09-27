@@ -9,7 +9,7 @@ export const Nested: React.FC<SceneProps> = ({ data, cue }) => {
   const take = useSpring(cue(4), 12);
   return (
     <>
-      <Heading kicker="THE BIG PICTURE">How they fit together</Heading>
+      <Heading kicker={data.kicker ?? "THE BIG PICTURE"}>How they fit together</Heading>
       <svg width={1080} height={1250} style={{ position: "absolute", left: 0, top: 0 }}>
         {rings.map(([label, color], i) => {
           const s = interpolate(f, [cue(i), cue(i) + 14], [0, 1], { ...clamp, easing: (x) => 1 - Math.pow(1 - x, 3) });

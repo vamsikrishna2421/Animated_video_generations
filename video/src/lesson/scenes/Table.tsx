@@ -15,7 +15,7 @@ export const Table: React.FC<SceneProps> = ({ data, cue }) => {
   const cell = (v: string) => (v === "✓" ? L.green : v === "✗" ? L.rose : L.text);
   return (
     <>
-      <Heading kicker="WHICH ONE WHEN">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "WHICH ONE WHEN"}>{data.heading}</Heading>
       <Panel style={{ position: "absolute", top: 470, left: 40, right: 40, padding: "20px 18px" }}>
         <div style={{ display: "flex", opacity: head }}>
           <div style={{ width: 250 }} />

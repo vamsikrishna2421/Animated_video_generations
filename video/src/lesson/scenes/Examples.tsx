@@ -11,7 +11,7 @@ export const Examples: React.FC<SceneProps> = ({ data, cue }) => {
   const active = items.reduce((a, _, i) => (f >= cue(i) ? i : a), -1);
   return (
     <>
-      <Heading kicker="REAL WORLD">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "REAL WORLD"}>{data.heading}</Heading>
       {items.map(([icon, title, sub], i) => {
         const s = useSpring(cue(i), 12);
         const on = i === active;

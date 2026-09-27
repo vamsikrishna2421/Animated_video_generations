@@ -47,7 +47,7 @@ export const Compare: React.FC<SceneProps> = ({ data, cue }) => {
   const broken = f > cue(0) + 60;
   return (
     <>
-      <Heading kicker="HOW MACHINES LEARN">Rules vs Learning</Heading>
+      <Heading kicker={data.kicker ?? "HOW MACHINES LEARN"}>Rules vs Learning</Heading>
       <Panel style={{ position: "absolute", top: 490, left: 60, right: 60, padding: "30px 34px", opacity: top, transform: `translateY(${(1 - top) * 40}px)` }}>
         <Row side={data.left} color={L.rose} glowOut={0}>
           <div style={{ marginTop: 22, fontFamily: L.mono, fontSize: 30, color: L.muted, opacity: f > cue(0) ? 1 : 0.4 }}>

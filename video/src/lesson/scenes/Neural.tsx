@@ -46,7 +46,7 @@ export const Neural: React.FC<SceneProps> = ({ data, cue }) => {
   const layerOn = (c: number) => (c === 0 ? cue(0) : cue(c));
   return (
     <>
-      <Heading kicker="INSPIRED BY THE BRAIN">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "INSPIRED BY THE BRAIN"}>{data.heading}</Heading>
       <svg width={1080} height={1250} style={{ position: "absolute", left: 0, top: 0, opacity: net }}>
         {COLS.slice(0, -1).map((n, c) =>
           Array.from({ length: n }).flatMap((_, r) =>

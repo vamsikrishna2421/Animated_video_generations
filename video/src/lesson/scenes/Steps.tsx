@@ -12,7 +12,7 @@ export const Steps: React.FC<SceneProps> = ({ data, cue }) => {
   const gap = Math.min(250, 720 / steps.length);
   return (
     <>
-      <Heading kicker="STEP BY STEP">{data.heading}</Heading>
+      <Heading kicker={data.kicker ?? "STEP BY STEP"}>{data.heading}</Heading>
       <div style={{ position: "absolute", left: 130, top: 560, width: 8, height: gap * (steps.length - 1), borderRadius: 4, background: "rgba(255,255,255,0.12)" }}>
         <div
           style={{
