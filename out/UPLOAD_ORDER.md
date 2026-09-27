@@ -63,7 +63,7 @@ Already posted: `out/posted/`.
 | 056 | ep52 | Build RAG Over Your PDFs, Part 1 | ready |
 | 057 | ep53 | Build RAG Over Your PDFs, Part 2 | ready |
 | 058 | ep54 | Build an AI Agent with Tools | ready |
-| 059 | ep55 | Build Your Own MCP Server | rendering soon |
+| 059 | ep55 | Build Your Own MCP Server | ready |
 | 060 | ep56 | Build a Voice Assistant | rendering soon |
 | 061 | ep57 | Deploy Your AI App | rendering soon |
 | 062 | ep58 | Your AI Career Roadmap | rendering soon |
