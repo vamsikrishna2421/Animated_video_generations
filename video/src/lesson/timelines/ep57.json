@@ -1,0 +1,833 @@
+{
+  "id": "ep57",
+  "episode": 57,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Deploy Your AI App",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4711,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep57/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 57",
+        "title": [
+          "Deploy",
+          "Your App"
+        ],
+        "subtitle": "From laptop to live link",
+        "buzzwords": [
+          "Streamlit",
+          "Web app",
+          "GitHub",
+          "Secrets",
+          "requirements.txt",
+          "Cloud",
+          "Share link",
+          "Hands-on"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 386,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_01.wav",
+      "cues": [
+        130,
+        292
+      ],
+      "captions": [
+        {
+          "text": "So far,",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "our AI apps only run",
+          "from": 34,
+          "to": 85
+        },
+        {
+          "text": "on our own laptop.",
+          "from": 85,
+          "to": 128
+        },
+        {
+          "text": "Today, we turn one into",
+          "from": 130,
+          "to": 179
+        },
+        {
+          "text": "a real web app,",
+          "from": 181,
+          "to": 217
+        },
+        {
+          "text": "with a link you can",
+          "from": 219,
+          "to": 242
+        },
+        {
+          "text": "share with anyone.",
+          "from": 245,
+          "to": 289
+        },
+        {
+          "text": "Let's deploy your AI app,",
+          "from": 292,
+          "to": 341
+        },
+        {
+          "text": "for free.",
+          "from": 345,
+          "to": 373
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "A web app in 14 lines",
+        "file": "app.py",
+        "lines": [
+          "import streamlit as st",
+          "import anthropic",
+          "",
+          "st.title(\"Ask AI Maastaaru\")",
+          "key = st.secrets[\"ANTHROPIC_API_KEY\"]",
+          "client = anthropic.Anthropic(api_key=key)",
+          "",
+          "q = st.text_input(\"Your question\")",
+          "if st.button(\"Ask\") and q:",
+          "    with st.spinner(\"Thinking...\"):",
+          "        r = client.messages.create(model=\"claude-sonnet-5\",",
+          "            max_tokens=400,",
+          "            messages=[{\"role\": \"user\", \"content\": q}])",
+          "    st.write(r.content[0].text)"
+        ],
+        "groups": [
+          3,
+          1,
+          3,
+          2,
+          4,
+          1
+        ],
+        "output": [
+          "$ streamlit run app.py",
+          "Local URL: http://localhost:8501"
+        ]
+      },
+      "from": 386,
+      "durationInFrames": 759,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_02.wav",
+      "cues": [
+        10,
+        129,
+        217,
+        254,
+        415,
+        496,
+        587,
+        654
+      ],
+      "captions": [
+        {
+          "text": "We'll use Streamlit,",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "which turns a Python script",
+          "from": 41,
+          "to": 82
+        },
+        {
+          "text": "into a web page.",
+          "from": 83,
+          "to": 127
+        },
+        {
+          "text": "Import Streamlit,",
+          "from": 129,
+          "to": 161
+        },
+        {
+          "text": "and the AI library.",
+          "from": 163,
+          "to": 214
+        },
+        {
+          "text": "Add a title.",
+          "from": 217,
+          "to": 251
+        },
+        {
+          "text": "Read the API key from",
+          "from": 254,
+          "to": 295
+        },
+        {
+          "text": "Streamlit's secrets,",
+          "from": 296,
+          "to": 314
+        },
+        {
+          "text": "never from the code,",
+          "from": 316,
+          "to": 366
+        },
+        {
+          "text": "and create the client.",
+          "from": 371,
+          "to": 413
+        },
+        {
+          "text": "Add a text box,",
+          "from": 415,
+          "to": 449
+        },
+        {
+          "text": "and an Ask button.",
+          "from": 454,
+          "to": 494
+        },
+        {
+          "text": "When clicked,",
+          "from": 496,
+          "to": 519
+        },
+        {
+          "text": "show a spinner,",
+          "from": 521,
+          "to": 545
+        },
+        {
+          "text": "and call the model.",
+          "from": 547,
+          "to": 585
+        },
+        {
+          "text": "Then write the answer on",
+          "from": 587,
+          "to": 633
+        },
+        {
+          "text": "the page.",
+          "from": 633,
+          "to": 651
+        },
+        {
+          "text": "Run it locally,",
+          "from": 654,
+          "to": 686
+        },
+        {
+          "text": "and it opens in your browser!",
+          "from": 688,
+          "to": 747
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Going live",
+        "nodes": [
+          [
+            "FileText",
+            "requirements.txt",
+            "List the libraries"
+          ],
+          [
+            "Github",
+            "GitHub",
+            "Push your code"
+          ],
+          [
+            "Cloud",
+            "Streamlit Cloud",
+            "Pick the repo"
+          ],
+          [
+            "KeyRound",
+            "Secrets",
+            "Paste your API key"
+          ],
+          [
+            "Share2",
+            "Deploy",
+            "Share the link"
+          ]
+        ]
+      },
+      "from": 1145,
+      "durationInFrames": 560,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_03.wav",
+      "cues": [
+        74,
+        193,
+        251,
+        374,
+        476
+      ],
+      "captions": [
+        {
+          "text": "Now, let's put it online.",
+          "from": 10,
+          "to": 71
+        },
+        {
+          "text": "Add a requirements file,",
+          "from": 74,
+          "to": 120
+        },
+        {
+          "text": "listing streamlit and anthropic.",
+          "from": 122,
+          "to": 191
+        },
+        {
+          "text": "Push your code to GitHub.",
+          "from": 193,
+          "to": 247
+        },
+        {
+          "text": "Sign in to Streamlit Community",
+          "from": 251,
+          "to": 296
+        },
+        {
+          "text": "Cloud, and pick your repository.",
+          "from": 297,
+          "to": 371
+        },
+        {
+          "text": "Paste your API key into",
+          "from": 374,
+          "to": 420
+        },
+        {
+          "text": "the app's secrets settings.",
+          "from": 421,
+          "to": 474
+        },
+        {
+          "text": "Click deploy,",
+          "from": 476,
+          "to": 504
+        },
+        {
+          "text": "and share your link!",
+          "from": 507,
+          "to": 547
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Where to host",
+        "kicker": "FREE VS PAID",
+        "left": {
+          "icon": "Gift",
+          "title": "Free platforms",
+          "stat": "Demos",
+          "label": "Streamlit Cloud, HF Spaces"
+        },
+        "right": {
+          "icon": "Server",
+          "title": "Paid cloud",
+          "stat": "Products",
+          "label": "more power and control"
+        }
+      },
+      "from": 1705,
+      "durationInFrames": 465,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_04.wav",
+      "cues": [
+        58,
+        280
+      ],
+      "captions": [
+        {
+          "text": "Where can you host it?",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "Free platforms,",
+          "from": 58,
+          "to": 86
+        },
+        {
+          "text": "like Streamlit Community Cloud,",
+          "from": 91,
+          "to": 146
+        },
+        {
+          "text": "or Hugging Face Spaces,",
+          "from": 148,
+          "to": 197
+        },
+        {
+          "text": "are perfect for demos,",
+          "from": 199,
+          "to": 241
+        },
+        {
+          "text": "and learning.",
+          "from": 245,
+          "to": 278
+        },
+        {
+          "text": "Paid cloud servers give you",
+          "from": 280,
+          "to": 320
+        },
+        {
+          "text": "more power,",
+          "from": 322,
+          "to": 350
+        },
+        {
+          "text": "custom domains,",
+          "from": 352,
+          "to": 381
+        },
+        {
+          "text": "and control,",
+          "from": 382,
+          "to": 406
+        },
+        {
+          "text": "for real products.",
+          "from": 408,
+          "to": 451
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Protect your wallet",
+        "kicker": "BEFORE YOU SHARE",
+        "steps": [
+          [
+            "Wallet",
+            "Spending limit",
+            "In the provider console"
+          ],
+          [
+            "Gauge",
+            "Rate limit",
+            "Questions per visitor"
+          ],
+          [
+            "KeyRound",
+            "Secrets only",
+            "Never in GitHub"
+          ]
+        ]
+      },
+      "from": 2170,
+      "durationInFrames": 503,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_05.wav",
+      "cues": [
+        99,
+        236,
+        357
+      ],
+      "captions": [
+        {
+          "text": "Before sharing publicly,",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "protect yourself.",
+          "from": 56,
+          "to": 96
+        },
+        {
+          "text": "Set a monthly spending limit,",
+          "from": 99,
+          "to": 153
+        },
+        {
+          "text": "in your AI provider's console.",
+          "from": 154,
+          "to": 234
+        },
+        {
+          "text": "Add a simple limit on",
+          "from": 236,
+          "to": 270
+        },
+        {
+          "text": "how many questions each visitor",
+          "from": 271,
+          "to": 322
+        },
+        {
+          "text": "can ask.",
+          "from": 324,
+          "to": 355
+        },
+        {
+          "text": "And keep your API key",
+          "from": 357,
+          "to": 403
+        },
+        {
+          "text": "only in secrets,",
+          "from": 405,
+          "to": 447
+        },
+        {
+          "text": "never in GitHub.",
+          "from": 450,
+          "to": 492
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Deploy words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Rocket",
+            "Deploy",
+            "Put it online"
+          ],
+          [
+            "FileText",
+            "requirements.txt",
+            "Libraries to install"
+          ],
+          [
+            "KeyRound",
+            "Secrets",
+            "Keys stored safely"
+          ],
+          [
+            "Gauge",
+            "Rate limit",
+            "Usage cap"
+          ]
+        ]
+      },
+      "from": 2673,
+      "durationInFrames": 565,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_06.wav",
+      "cues": [
+        56,
+        163,
+        290,
+        448
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "Deploy, putting your app on",
+          "from": 56,
+          "to": 97
+        },
+        {
+          "text": "a server,",
+          "from": 98,
+          "to": 112
+        },
+        {
+          "text": "so others can use it.",
+          "from": 114,
+          "to": 161
+        },
+        {
+          "text": "Requirements file,",
+          "from": 163,
+          "to": 198
+        },
+        {
+          "text": "the list of libraries the",
+          "from": 201,
+          "to": 234
+        },
+        {
+          "text": "server installs.",
+          "from": 236,
+          "to": 286
+        },
+        {
+          "text": "Secrets, private settings like API",
+          "from": 290,
+          "to": 362
+        },
+        {
+          "text": "keys, stored safely by the host.",
+          "from": 363,
+          "to": 445
+        },
+        {
+          "text": "And rate limit,",
+          "from": 448,
+          "to": 477
+        },
+        {
+          "text": "a cap on how often",
+          "from": 479,
+          "to": 511
+        },
+        {
+          "text": "someone can use it.",
+          "from": 513,
+          "to": 553
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Deploy it, share it, forget it.",
+        "fact": "A viral link or bots can explode your bill overnight. Set limits and watch usage.",
+        "tip": "Launch with limits"
+      },
+      "from": 3238,
+      "durationInFrames": 423,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_07.wav",
+      "cues": [
+        62,
+        162
+      ],
+      "captions": [
+        {
+          "text": "Here's a common mistake.",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "People deploy,",
+          "from": 62,
+          "to": 93
+        },
+        {
+          "text": "share the link,",
+          "from": 99,
+          "to": 117
+        },
+        {
+          "text": "and forget about it.",
+          "from": 118,
+          "to": 160
+        },
+        {
+          "text": "If the link goes viral,",
+          "from": 162,
+          "to": 202
+        },
+        {
+          "text": "or bots find it,",
+          "from": 206,
+          "to": 243
+        },
+        {
+          "text": "your AI bill can explode overnight.",
+          "from": 245,
+          "to": 326
+        },
+        {
+          "text": "Set limits,",
+          "from": 330,
+          "to": 351
+        },
+        {
+          "text": "and check usage regularly.",
+          "from": 355,
+          "to": 411
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "In a deployed app, the API key goes…",
+        "options": [
+          "In the host's secrets settings",
+          "In your GitHub code",
+          "On the web page"
+        ],
+        "answer": 0
+      },
+      "from": 3661,
+      "durationInFrames": 451,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_08.wav",
+      "cues": [
+        131,
+        342
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Where should your API key",
+          "from": 42,
+          "to": 81
+        },
+        {
+          "text": "live in a deployed app?",
+          "from": 83,
+          "to": 129
+        },
+        {
+          "text": "Pause and think,",
+          "from": 131,
+          "to": 168
+        },
+        {
+          "text": "and if you get it",
+          "from": 170,
+          "to": 186
+        },
+        {
+          "text": "right, comment below!",
+          "from": 188,
+          "to": 243
+        },
+        {
+          "text": "In the host's secrets settings,",
+          "from": 342,
+          "to": 401
+        },
+        {
+          "text": "never in your code!",
+          "from": 401,
+          "to": 438
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Streamlit",
+            "Python to web app"
+          ],
+          [
+            "Deploy",
+            "GitHub + Streamlit Cloud"
+          ],
+          [
+            "Secrets",
+            "for your API key"
+          ],
+          [
+            "Limits",
+            "before sharing"
+          ]
+        ],
+        "next": "EP 58 · Career roadmap"
+      },
+      "from": 4112,
+      "durationInFrames": 599,
+      "voiceFrom": 10,
+      "audio": "lessons/ep57/voice_09.wav",
+      "cues": [
+        48,
+        122,
+        236,
+        309,
+        402
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Streamlit turns Python into a",
+          "from": 48,
+          "to": 94
+        },
+        {
+          "text": "web app.",
+          "from": 96,
+          "to": 119
+        },
+        {
+          "text": "Push to GitHub,",
+          "from": 122,
+          "to": 150
+        },
+        {
+          "text": "and deploy on Streamlit Community Cloud.",
+          "from": 154,
+          "to": 233
+        },
+        {
+          "text": "Keep your API key in secrets.",
+          "from": 236,
+          "to": 307
+        },
+        {
+          "text": "And set spending and rate",
+          "from": 309,
+          "to": 347
+        },
+        {
+          "text": "limits before sharing.",
+          "from": 349,
+          "to": 399
+        },
+        {
+          "text": "Next, the season finale,",
+          "from": 402,
+          "to": 455
+        },
+        {
+          "text": "your AI career roadmap.",
+          "from": 458,
+          "to": 521
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 525,
+          "to": 587
+        }
+      ],
+      "image": null
+    }
+  ]
+}

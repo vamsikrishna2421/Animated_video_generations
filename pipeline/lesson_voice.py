@@ -49,6 +49,7 @@ PRON = {
     "Aadhaar": "ˈɑːdɑːɹ",
     "PII": "pˈiː ˈaɪ ˈaɪ",
     "schema": "skˈiːmə",
+    "Streamlit": "stɹˈiːmlɪt", "GitHub": "ɡˈɪthʌb",
     "pyttsx3": "pˈaɪ tˈiː tˈiː ˈɛs ˈɛks θɹˈiː", "Kokoro": "kˈoʊkəɹˌoʊ", "sounddevice": "sˈaʊnd dɪvˌaɪs",
     "pypdf": "pˈaɪ pˈiː dˈiː ˈɛf", "chromadb": "kɹˈoʊmə dˈiː bˈiː",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.

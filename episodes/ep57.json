@@ -1,0 +1,241 @@
+{
+  "id": "ep57",
+  "episode": 57,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Deploy Your AI App",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "So far, our AI apps only run on our own laptop. [1] Today, we turn one into a real web app, with a link you can share with anyone. [2] Let's deploy your AI app, for free.",
+      "data": {
+        "kicker": "EPISODE 57",
+        "title": [
+          "Deploy",
+          "Your App"
+        ],
+        "subtitle": "From laptop to live link",
+        "buzzwords": [
+          "Streamlit",
+          "Web app",
+          "GitHub",
+          "Secrets",
+          "requirements.txt",
+          "Cloud",
+          "Share link",
+          "Hands-on"
+        ]
+      }
+    },
+    {
+      "type": "code",
+      "text": "[1] We'll use Streamlit, which turns a Python script into a web page. [2] Import Streamlit, and the AI library. [3] Add a title. [4] Read the API key from Streamlit's secrets, never from the code, and create the client. [5] Add a text box, and an Ask button. [6] When clicked, show a spinner, and call the model. [7] Then write the answer on the page. [8] Run it locally, and it opens in your browser!",
+      "data": {
+        "heading": "A web app in 14 lines",
+        "file": "app.py",
+        "lines": [
+          "import streamlit as st",
+          "import anthropic",
+          "",
+          "st.title(\"Ask AI Maastaaru\")",
+          "key = st.secrets[\"ANTHROPIC_API_KEY\"]",
+          "client = anthropic.Anthropic(api_key=key)",
+          "",
+          "q = st.text_input(\"Your question\")",
+          "if st.button(\"Ask\") and q:",
+          "    with st.spinner(\"Thinking...\"):",
+          "        r = client.messages.create(model=\"claude-sonnet-5\",",
+          "            max_tokens=400,",
+          "            messages=[{\"role\": \"user\", \"content\": q}])",
+          "    st.write(r.content[0].text)"
+        ],
+        "groups": [
+          3,
+          1,
+          3,
+          2,
+          4,
+          1
+        ],
+        "output": [
+          "$ streamlit run app.py",
+          "Local URL: http://localhost:8501"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Now, let's put it online. [1] Add a requirements file, listing streamlit and anthropic. [2] Push your code to GitHub. [3] Sign in to Streamlit Community Cloud, and pick your repository. [4] Paste your API key into the app's secrets settings. [5] Click deploy, and share your link!",
+      "data": {
+        "heading": "Going live",
+        "nodes": [
+          [
+            "FileText",
+            "requirements.txt",
+            "List the libraries"
+          ],
+          [
+            "Github",
+            "GitHub",
+            "Push your code"
+          ],
+          [
+            "Cloud",
+            "Streamlit Cloud",
+            "Pick the repo"
+          ],
+          [
+            "KeyRound",
+            "Secrets",
+            "Paste your API key"
+          ],
+          [
+            "Share2",
+            "Deploy",
+            "Share the link"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Where can you host it? [1] Free platforms, like Streamlit Community Cloud, or Hugging Face Spaces, are perfect for demos, and learning. [2] Paid cloud servers give you more power, custom domains, and control, for real products.",
+      "data": {
+        "heading": "Where to host",
+        "kicker": "FREE VS PAID",
+        "left": {
+          "icon": "Gift",
+          "title": "Free platforms",
+          "stat": "Demos",
+          "label": "Streamlit Cloud, HF Spaces"
+        },
+        "right": {
+          "icon": "Server",
+          "title": "Paid cloud",
+          "stat": "Products",
+          "label": "more power and control"
+        }
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Before sharing publicly, protect yourself. [1] Set a monthly spending limit, in your AI provider's console. [2] Add a simple limit on how many questions each visitor can ask. [3] And keep your API key only in secrets, never in GitHub.",
+      "data": {
+        "heading": "Protect your wallet",
+        "kicker": "BEFORE YOU SHARE",
+        "steps": [
+          [
+            "Wallet",
+            "Spending limit",
+            "In the provider console"
+          ],
+          [
+            "Gauge",
+            "Rate limit",
+            "Questions per visitor"
+          ],
+          [
+            "KeyRound",
+            "Secrets only",
+            "Never in GitHub"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] Deploy, putting your app on a server, so others can use it. [2] Requirements file, the list of libraries the server installs. [3] Secrets, private settings like API keys, stored safely by the host. [4] And rate limit, a cap on how often someone can use it.",
+      "data": {
+        "heading": "Deploy words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Rocket",
+            "Deploy",
+            "Put it online"
+          ],
+          [
+            "FileText",
+            "requirements.txt",
+            "Libraries to install"
+          ],
+          [
+            "KeyRound",
+            "Secrets",
+            "Keys stored safely"
+          ],
+          [
+            "Gauge",
+            "Rate limit",
+            "Usage cap"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common mistake. [1] People deploy, share the link, and forget about it. [2] If the link goes viral, or bots find it, your AI bill can explode overnight. Set limits, and check usage regularly.",
+      "data": {
+        "myth": "Deploy it, share it, forget it.",
+        "fact": "A viral link or bots can explode your bill overnight. Set limits and watch usage.",
+        "tip": "Launch with limits"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Where should your API key live in a deployed app? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] In the host's secrets settings, never in your code!",
+      "data": {
+        "question": "In a deployed app, the API key goes…",
+        "options": [
+          "In the host's secrets settings",
+          "In your GitHub code",
+          "On the web page"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Streamlit turns Python into a web app. [2] Push to GitHub, and deploy on Streamlit Community Cloud. [3] Keep your API key in secrets. [4] And set spending and rate limits before sharing. [5] Next, the season finale, your AI career roadmap. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Streamlit",
+            "Python to web app"
+          ],
+          [
+            "Deploy",
+            "GitHub + Streamlit Cloud"
+          ],
+          [
+            "Secrets",
+            "for your API key"
+          ],
+          [
+            "Limits",
+            "before sharing"
+          ]
+        ],
+        "next": "EP 58 · Career roadmap"
+      }
+    }
+  ],
+  "post": {
+    "caption": "From your laptop to a live link anyone can use. Deploy your AI app for free.\n\nAI From Scratch, Episode 57: deploy your AI app\n- A Streamlit web app in 14 lines\n- Going live: requirements.txt, GitHub, Streamlit Community Cloud, secrets\n- Free platforms vs paid cloud\n- Protect your wallet: spending limits, rate limits, secrets\n- Mistake: deploy and forget\n\nQuiz at the end. Got it right? Comment below.\n\nNext: the season finale, your AI career roadmap.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #Streamlit #Python #LearnAI #CodingForBeginners",
+    "pinned": "Quiz answer: In the host's secrets settings, never in your code! Deployed your app? Drop your link in the comments!",
+    "cover": "'Deploy Your App' title card",
+    "alt": "Animated coding tutorial: building a Streamlit AI web app and deploying it to Streamlit Community Cloud."
+  }
+}
