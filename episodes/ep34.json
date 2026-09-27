@@ -1,0 +1,217 @@
+{
+  "id": "ep34",
+  "episode": 34,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Open vs Closed AI Models",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Some AI models you can only use through a website or an API. [1] Others, you can download for free, and run on your own computer. [2] What's the difference, and which should you pick? Let's talk open versus closed models.",
+      "data": {
+        "kicker": "EPISODE 34",
+        "title": [
+          "Open vs",
+          "Closed"
+        ],
+        "subtitle": "Which AI model should you use?",
+        "buzzwords": [
+          "Open weights",
+          "API",
+          "Llama",
+          "Qwen",
+          "Mistral",
+          "GPT",
+          "Claude",
+          "Gemini"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Here's the core difference. [1] A closed model stays on the company's servers. You send a request, and get an answer back. GPT, Claude, and Gemini work like this. [2] An open weights model can be downloaded, and run anywhere. Llama, Qwen, Mistral, and DeepSeek are examples.",
+      "data": {
+        "heading": "The core difference",
+        "kicker": "TWO WORLDS",
+        "left": {
+          "icon": "Lock",
+          "title": "Closed",
+          "stat": "Use via API",
+          "label": "GPT, Claude, Gemini"
+        },
+        "right": {
+          "icon": "Unlock",
+          "title": "Open weights",
+          "stat": "Download it",
+          "label": "Llama, Qwen, Mistral, DeepSeek"
+        }
+      }
+    },
+    {
+      "type": "definition",
+      "text": "So what does open weights mean? [1] Remember, the weights are the billions of numbers the model learned. [2] Open weights means those numbers are shared publicly. [3] But the training data and code are often still private, so it's not always fully open source.",
+      "data": {
+        "term": "Open weights",
+        "short": "Open",
+        "definition": "A model whose learned numbers, the weights, are published so anyone can download and run it.",
+        "chips": [
+          [
+            "Binary",
+            "Weights = learned numbers"
+          ],
+          [
+            "Download",
+            "Shared publicly"
+          ],
+          [
+            "EyeOff",
+            "Data often still private"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Each side has strengths. [1] Closed models are often the most capable, easy to start with, and need no hardware. [2] Open models give you privacy, control, no per-request fees, and you can fine-tune them freely.",
+      "data": {
+        "heading": "Strengths",
+        "left": {
+          "icon": "Lock",
+          "title": "Closed",
+          "points": [
+            "Often the most capable",
+            "Easy to start, no hardware",
+            "Company handles safety and updates"
+          ]
+        },
+        "right": {
+          "icon": "Unlock",
+          "title": "Open",
+          "points": [
+            "Data stays with you",
+            "Full control and fine-tuning",
+            "No per-request fees"
+          ]
+        }
+      }
+    },
+    {
+      "type": "table",
+      "text": "Here's a quick guide. [1] Building a quick prototype? Start with a closed API. [2] Handling private hospital or bank data? Open models on your own servers. [3] Need the very best reasoning? Often closed. [4] Running offline on a phone? A small open model.",
+      "data": {
+        "heading": "Which one when?",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Pick"
+        ],
+        "rows": [
+          [
+            "Quick prototype",
+            "Closed API"
+          ],
+          [
+            "Private data",
+            "Open, self-hosted"
+          ],
+          [
+            "Top reasoning",
+            "Often closed"
+          ],
+          [
+            "Offline on a phone",
+            "Small open model"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think open models are always free. [2] The download is free, but running them isn't. You pay for GPUs, electricity, and engineers. At small scale, an API can even be cheaper.",
+      "data": {
+        "myth": "Open models are completely free.",
+        "fact": "The download is free, but GPUs, electricity and engineers cost money. At small scale, an API can be cheaper.",
+        "tip": "Free to download, not free to run"
+      }
+    },
+    {
+      "type": "examples",
+      "text": "In practice, many companies mix both. [1] A closed model for hard reasoning tasks, [2] a small open model for simple, high volume jobs, [3] and open models on their own servers for sensitive data.",
+      "data": {
+        "heading": "Mix and match",
+        "items": [
+          [
+            "Brain",
+            "Hard reasoning",
+            "A top closed model"
+          ],
+          [
+            "Zap",
+            "High volume, simple",
+            "A small open model"
+          ],
+          [
+            "ShieldCheck",
+            "Sensitive data",
+            "Open, on own servers"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! A hospital wants patient data to never leave its own servers. Which is the better fit? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] An open model running on their own servers, so the data never leaves!",
+      "data": {
+        "question": "Data must stay in-house. Which fits?",
+        "options": [
+          "An open model, self-hosted",
+          "A closed model API",
+          "It doesn't matter"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Closed models are used through an API. [2] Open weights models can be downloaded and run anywhere. [3] Closed is easy and powerful, while open gives privacy and control. [4] And open is free to download, not free to run. [5] Next, small language models. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Closed",
+            "used via API"
+          ],
+          [
+            "Open weights",
+            "download and run"
+          ],
+          [
+            "Trade-off",
+            "power vs control"
+          ],
+          [
+            "Not free",
+            "to run"
+          ]
+        ],
+        "next": "EP 35 · Small Models"
+      }
+    }
+  ],
+  "post": {
+    "caption": "GPT or Llama? API or download? Open vs closed AI models, simply explained.\n\nAI From Scratch, Episode 34: Open vs Closed models\n- Closed: GPT, Claude, Gemini via API\n- Open weights: Llama, Qwen, Mistral, DeepSeek\n- What open weights really means\n- Strengths of each, and when to pick which\n- Myth: free to download is not free to run\n\nQuiz at the end. Got it right? Comment below.\n\nNext: small language models.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #OpenSourceAI #LearnAI #LLM #AIForBeginners",
+    "pinned": "Quiz answer: An open model running on their own servers, so the data never leaves. Which open model have you tried? Comment below!",
+    "cover": "'Open vs Closed' title card",
+    "alt": "Animated comparison of open-weights and closed AI models, with when to choose each."
+  }
+}

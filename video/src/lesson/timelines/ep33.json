@@ -1,0 +1,758 @@
+{
+  "id": "ep33",
+  "episode": 33,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "RAG, Part 3: Hybrid Search and Measuring Quality",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4590,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep33/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 33",
+        "title": [
+          "RAG",
+          "Part 3"
+        ],
+        "subtitle": "Hybrid search and measuring quality",
+        "buzzwords": [
+          "Hybrid search",
+          "Keywords",
+          "BM25",
+          "Semantic",
+          "Recall",
+          "Faithfulness",
+          "Evaluation",
+          "Golden set"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 508,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_01.wav",
+      "cues": [
+        98,
+        250
+      ],
+      "captions": [
+        {
+          "text": "Your RAG chatbot works in",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "the demo.",
+          "from": 72,
+          "to": 96
+        },
+        {
+          "text": "But then a user types",
+          "from": 98,
+          "to": 133
+        },
+        {
+          "text": "an exact order number,",
+          "from": 134,
+          "to": 181
+        },
+        {
+          "text": "and it finds nothing useful.",
+          "from": 186,
+          "to": 248
+        },
+        {
+          "text": "Today, in RAG part three,",
+          "from": 250,
+          "to": 329
+        },
+        {
+          "text": "we fix that with hybrid",
+          "from": 330,
+          "to": 369
+        },
+        {
+          "text": "search, and learn how to",
+          "from": 371,
+          "to": 412
+        },
+        {
+          "text": "measure if RAG is actually good.",
+          "from": 413,
+          "to": 497
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two kinds of search",
+        "kicker": "KNOW THE TOOLS",
+        "left": {
+          "icon": "Hash",
+          "title": "Keyword",
+          "stat": "Exact words",
+          "label": "order numbers, names, codes"
+        },
+        "right": {
+          "icon": "Brain",
+          "title": "Semantic",
+          "stat": "Meaning",
+          "label": "different words, same idea"
+        }
+      },
+      "from": 508,
+      "durationInFrames": 513,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_02.wav",
+      "cues": [
+        67,
+        252,
+        427
+      ],
+      "captions": [
+        {
+          "text": "There are two ways to search.",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "Keyword search matches exact words.",
+          "from": 67,
+          "to": 141
+        },
+        {
+          "text": "It's great for names,",
+          "from": 143,
+          "to": 182
+        },
+        {
+          "text": "codes, and order numbers.",
+          "from": 186,
+          "to": 249
+        },
+        {
+          "text": "Semantic search matches meaning.",
+          "from": 252,
+          "to": 316
+        },
+        {
+          "text": "It's great when people use",
+          "from": 318,
+          "to": 365
+        },
+        {
+          "text": "different words for the same idea.",
+          "from": 365,
+          "to": 425
+        },
+        {
+          "text": "Each one misses what the",
+          "from": 427,
+          "to": 462
+        },
+        {
+          "text": "other catches.",
+          "from": 463,
+          "to": 501
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Hybrid search",
+        "short": "Hybrid",
+        "definition": "Running keyword search and semantic search together, then merging their results into one ranked list.",
+        "chips": [
+          [
+            "Hash",
+            "Keyword matches"
+          ],
+          [
+            "Brain",
+            "Meaning matches"
+          ],
+          [
+            "Merge",
+            "Merged into one list"
+          ]
+        ]
+      },
+      "from": 1021,
+      "durationInFrames": 407,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_03.wav",
+      "cues": [
+        107,
+        188,
+        267
+      ],
+      "captions": [
+        {
+          "text": "Hybrid search runs both at",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "the same time.",
+          "from": 60,
+          "to": 104
+        },
+        {
+          "text": "Keyword search finds the exact",
+          "from": 107,
+          "to": 157
+        },
+        {
+          "text": "matches, semantic search finds the",
+          "from": 158,
+          "to": 226
+        },
+        {
+          "text": "meaning matches,",
+          "from": 228,
+          "to": 265
+        },
+        {
+          "text": "and the results are merged",
+          "from": 267,
+          "to": 303
+        },
+        {
+          "text": "into one ranked list,",
+          "from": 304,
+          "to": 347
+        },
+        {
+          "text": "before reranking.",
+          "from": 349,
+          "to": 395
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Who finds it?",
+        "kicker": "SIDE BY SIDE",
+        "cols": [
+          "Keyword",
+          "Semantic",
+          "Hybrid"
+        ],
+        "rows": [
+          [
+            "\"Order 4581 status\"",
+            "✓",
+            "✗",
+            "✓"
+          ],
+          [
+            "\"My parcel hasn't shown up\"",
+            "✗",
+            "✓",
+            "✓"
+          ],
+          [
+            "\"Refund for order 4581\"",
+            "½",
+            "½",
+            "✓"
+          ]
+        ]
+      },
+      "from": 1428,
+      "durationInFrames": 378,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_04.wav",
+      "cues": [
+        59,
+        201,
+        310
+      ],
+      "captions": [
+        {
+          "text": "Here's a quick example.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "For the question,",
+          "from": 59,
+          "to": 99
+        },
+        {
+          "text": "order 4 5 8 1",
+          "from": 99,
+          "to": 131
+        },
+        {
+          "text": "status, keyword search wins.",
+          "from": 131,
+          "to": 197
+        },
+        {
+          "text": "For, my parcel hasn't shown",
+          "from": 201,
+          "to": 242
+        },
+        {
+          "text": "up, semantic search wins.",
+          "from": 243,
+          "to": 307
+        },
+        {
+          "text": "Hybrid gets both right.",
+          "from": 310,
+          "to": 365
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Measuring RAG quality",
+        "kicker": "THREE CHECKS",
+        "steps": [
+          [
+            "Search",
+            "Retrieval",
+            "Found the right chunks?"
+          ],
+          [
+            "ShieldCheck",
+            "Faithfulness",
+            "Sticks to the sources?"
+          ],
+          [
+            "Target",
+            "Relevance",
+            "Answers the question?"
+          ]
+        ]
+      },
+      "from": 1806,
+      "durationInFrames": 544,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_05.wav",
+      "cues": [
+        92,
+        242,
+        404
+      ],
+      "captions": [
+        {
+          "text": "Now, how do we know",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "if RAG is good?",
+          "from": 40,
+          "to": 88
+        },
+        {
+          "text": "First, retrieval.",
+          "from": 92,
+          "to": 134
+        },
+        {
+          "text": "Did it find the right chunks?",
+          "from": 137,
+          "to": 188
+        },
+        {
+          "text": "This is called recall.",
+          "from": 191,
+          "to": 239
+        },
+        {
+          "text": "Second, faithfulness.",
+          "from": 242,
+          "to": 298
+        },
+        {
+          "text": "Does the answer stick to",
+          "from": 300,
+          "to": 333
+        },
+        {
+          "text": "those chunks,",
+          "from": 334,
+          "to": 355
+        },
+        {
+          "text": "without making things up?",
+          "from": 359,
+          "to": 401
+        },
+        {
+          "text": "Third, relevance.",
+          "from": 404,
+          "to": 453
+        },
+        {
+          "text": "Does the answer actually address",
+          "from": 455,
+          "to": 498
+        },
+        {
+          "text": "the question?",
+          "from": 500,
+          "to": 532
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How to test RAG",
+        "nodes": [
+          [
+            "ClipboardList",
+            "Golden set",
+            "Questions + right answers"
+          ],
+          [
+            "Play",
+            "Run",
+            "Through the system"
+          ],
+          [
+            "Scale",
+            "Score",
+            "People or AI judge"
+          ],
+          [
+            "SlidersHorizontal",
+            "Tweak",
+            "One change at a time"
+          ],
+          [
+            "BarChart3",
+            "Compare",
+            "Did it improve?"
+          ]
+        ]
+      },
+      "from": 2350,
+      "durationInFrames": 596,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_06.wav",
+      "cues": [
+        68,
+        193,
+        287,
+        429,
+        507
+      ],
+      "captions": [
+        {
+          "text": "Here's how teams test it.",
+          "from": 10,
+          "to": 65
+        },
+        {
+          "text": "Build a golden set,",
+          "from": 68,
+          "to": 104
+        },
+        {
+          "text": "real questions with known correct answers.",
+          "from": 106,
+          "to": 190
+        },
+        {
+          "text": "Run every question through the",
+          "from": 193,
+          "to": 236
+        },
+        {
+          "text": "RAG system.",
+          "from": 238,
+          "to": 284
+        },
+        {
+          "text": "Score each answer,",
+          "from": 287,
+          "to": 325
+        },
+        {
+          "text": "using people,",
+          "from": 328,
+          "to": 352
+        },
+        {
+          "text": "or another AI as a judge.",
+          "from": 355,
+          "to": 427
+        },
+        {
+          "text": "Change one thing,",
+          "from": 429,
+          "to": 457
+        },
+        {
+          "text": "like chunk size.",
+          "from": 462,
+          "to": 504
+        },
+        {
+          "text": "Run it again,",
+          "from": 507,
+          "to": 531
+        },
+        {
+          "text": "and compare the scores.",
+          "from": 534,
+          "to": 584
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "If a few demo questions look right, it's ready to launch.",
+        "fact": "Real users ask messy questions. Measure with a golden set before launch.",
+        "tip": "A demo is not a test"
+      },
+      "from": 2946,
+      "durationInFrames": 482,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_07.wav",
+      "cues": [
+        59,
+        216
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think if a few",
+          "from": 59,
+          "to": 92
+        },
+        {
+          "text": "demo questions look right,",
+          "from": 94,
+          "to": 139
+        },
+        {
+          "text": "the RAG system is ready.",
+          "from": 143,
+          "to": 213
+        },
+        {
+          "text": "A demo is not a test.",
+          "from": 216,
+          "to": 278
+        },
+        {
+          "text": "Real users ask messy,",
+          "from": 281,
+          "to": 332
+        },
+        {
+          "text": "surprising questions.",
+          "from": 334,
+          "to": 383
+        },
+        {
+          "text": "Measure with a golden set,",
+          "from": 386,
+          "to": 427
+        },
+        {
+          "text": "before you launch.",
+          "from": 428,
+          "to": 469
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Exact product code — which search?",
+        "options": [
+          "Keyword search",
+          "Semantic search",
+          "Neither"
+        ],
+        "answer": 0
+      },
+      "from": 3428,
+      "durationInFrames": 598,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_08.wav",
+      "cues": [
+        198,
+        411
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "A user searches an exact",
+          "from": 44,
+          "to": 86
+        },
+        {
+          "text": "product code.",
+          "from": 87,
+          "to": 125
+        },
+        {
+          "text": "Which search is most likely",
+          "from": 126,
+          "to": 165
+        },
+        {
+          "text": "to find it?",
+          "from": 167,
+          "to": 196
+        },
+        {
+          "text": "Pause and think,",
+          "from": 198,
+          "to": 235
+        },
+        {
+          "text": "and if you get it",
+          "from": 239,
+          "to": 256
+        },
+        {
+          "text": "right, comment below!",
+          "from": 258,
+          "to": 313
+        },
+        {
+          "text": "Keyword search,",
+          "from": 411,
+          "to": 439
+        },
+        {
+          "text": "because it matches exact words",
+          "from": 440,
+          "to": 487
+        },
+        {
+          "text": "and codes.",
+          "from": 488,
+          "to": 523
+        },
+        {
+          "text": "Hybrid search gives you both!",
+          "from": 526,
+          "to": 584
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Keyword",
+            "exact words"
+          ],
+          [
+            "Semantic",
+            "meaning"
+          ],
+          [
+            "Hybrid",
+            "both, merged"
+          ],
+          [
+            "Measure",
+            "with a golden set"
+          ]
+        ],
+        "next": "EP 34 · Open vs Closed"
+      },
+      "from": 4026,
+      "durationInFrames": 564,
+      "voiceFrom": 10,
+      "audio": "lessons/ep33/voice_09.wav",
+      "cues": [
+        47,
+        124,
+        189,
+        251,
+        392
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Keyword search matches exact words.",
+          "from": 47,
+          "to": 122
+        },
+        {
+          "text": "Semantic search matches meaning.",
+          "from": 124,
+          "to": 187
+        },
+        {
+          "text": "Hybrid search combines both.",
+          "from": 189,
+          "to": 249
+        },
+        {
+          "text": "And we measure retrieval,",
+          "from": 251,
+          "to": 290
+        },
+        {
+          "text": "faithfulness, and relevance,",
+          "from": 294,
+          "to": 343
+        },
+        {
+          "text": "with a golden set.",
+          "from": 345,
+          "to": 389
+        },
+        {
+          "text": "Next, open versus closed AI models.",
+          "from": 392,
+          "to": 489
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 492,
+          "to": 552
+        }
+      ],
+      "image": null
+    }
+  ]
+}

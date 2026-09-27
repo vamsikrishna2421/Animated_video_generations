@@ -50,7 +50,7 @@ def split_on_silence(a, sr, min_gap=1.5):
 
 
 def words(t: str):
-    return [us(w) for w in re.findall(r"[a-z0-9]+", t.lower().replace("’", "'"))]
+    return [us(w) for w in re.findall(r"[a-z0-9]+", t.lower().replace("’", "'").replace("-", ""))]
 
 
 def main() -> None:

@@ -1,0 +1,231 @@
+{
+  "id": "ep33",
+  "episode": 33,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "RAG, Part 3: Hybrid Search and Measuring Quality",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Your RAG chatbot works in the demo. [1] But then a user types an exact order number, and it finds nothing useful. [2] Today, in RAG part three, we fix that with hybrid search, and learn how to measure if RAG is actually good.",
+      "data": {
+        "kicker": "EPISODE 33",
+        "title": [
+          "RAG",
+          "Part 3"
+        ],
+        "subtitle": "Hybrid search and measuring quality",
+        "buzzwords": [
+          "Hybrid search",
+          "Keywords",
+          "BM25",
+          "Semantic",
+          "Recall",
+          "Faithfulness",
+          "Evaluation",
+          "Golden set"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "There are two ways to search. [1] Keyword search matches exact words. It's great for names, codes, and order numbers. [2] Semantic search matches meaning. It's great when people use different words for the same idea. [3] Each one misses what the other catches.",
+      "data": {
+        "heading": "Two kinds of search",
+        "kicker": "KNOW THE TOOLS",
+        "left": {
+          "icon": "Hash",
+          "title": "Keyword",
+          "stat": "Exact words",
+          "label": "order numbers, names, codes"
+        },
+        "right": {
+          "icon": "Brain",
+          "title": "Semantic",
+          "stat": "Meaning",
+          "label": "different words, same idea"
+        }
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Hybrid search runs both at the same time. [1] Keyword search finds the exact matches, [2] semantic search finds the meaning matches, [3] and the results are merged into one ranked list, before reranking.",
+      "data": {
+        "term": "Hybrid search",
+        "short": "Hybrid",
+        "definition": "Running keyword search and semantic search together, then merging their results into one ranked list.",
+        "chips": [
+          [
+            "Hash",
+            "Keyword matches"
+          ],
+          [
+            "Brain",
+            "Meaning matches"
+          ],
+          [
+            "Merge",
+            "Merged into one list"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "Here's a quick example. [1] For the question, order 4 5 8 1 status, keyword search wins. [2] For, my parcel hasn't shown up, semantic search wins. [3] Hybrid gets both right.",
+      "data": {
+        "heading": "Who finds it?",
+        "kicker": "SIDE BY SIDE",
+        "cols": [
+          "Keyword",
+          "Semantic",
+          "Hybrid"
+        ],
+        "rows": [
+          [
+            "\"Order 4581 status\"",
+            "✓",
+            "✗",
+            "✓"
+          ],
+          [
+            "\"My parcel hasn't shown up\"",
+            "✗",
+            "✓",
+            "✓"
+          ],
+          [
+            "\"Refund for order 4581\"",
+            "½",
+            "½",
+            "✓"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Now, how do we know if RAG is good? [1] First, retrieval. Did it find the right chunks? This is called recall. [2] Second, faithfulness. Does the answer stick to those chunks, without making things up? [3] Third, relevance. Does the answer actually address the question?",
+      "data": {
+        "heading": "Measuring RAG quality",
+        "kicker": "THREE CHECKS",
+        "steps": [
+          [
+            "Search",
+            "Retrieval",
+            "Found the right chunks?"
+          ],
+          [
+            "ShieldCheck",
+            "Faithfulness",
+            "Sticks to the sources?"
+          ],
+          [
+            "Target",
+            "Relevance",
+            "Answers the question?"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's how teams test it. [1] Build a golden set, real questions with known correct answers. [2] Run every question through the RAG system. [3] Score each answer, using people, or another AI as a judge. [4] Change one thing, like chunk size. [5] Run it again, and compare the scores.",
+      "data": {
+        "heading": "How to test RAG",
+        "nodes": [
+          [
+            "ClipboardList",
+            "Golden set",
+            "Questions + right answers"
+          ],
+          [
+            "Play",
+            "Run",
+            "Through the system"
+          ],
+          [
+            "Scale",
+            "Score",
+            "People or AI judge"
+          ],
+          [
+            "SlidersHorizontal",
+            "Tweak",
+            "One change at a time"
+          ],
+          [
+            "BarChart3",
+            "Compare",
+            "Did it improve?"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think if a few demo questions look right, the RAG system is ready. [2] A demo is not a test. Real users ask messy, surprising questions. Measure with a golden set, before you launch.",
+      "data": {
+        "myth": "If a few demo questions look right, it's ready to launch.",
+        "fact": "Real users ask messy questions. Measure with a golden set before launch.",
+        "tip": "A demo is not a test"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! A user searches an exact product code. Which search is most likely to find it? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Keyword search, because it matches exact words and codes. Hybrid search gives you both!",
+      "data": {
+        "question": "Exact product code — which search?",
+        "options": [
+          "Keyword search",
+          "Semantic search",
+          "Neither"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Keyword search matches exact words. [2] Semantic search matches meaning. [3] Hybrid search combines both. [4] And we measure retrieval, faithfulness, and relevance, with a golden set. [5] Next, open versus closed AI models. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Keyword",
+            "exact words"
+          ],
+          [
+            "Semantic",
+            "meaning"
+          ],
+          [
+            "Hybrid",
+            "both, merged"
+          ],
+          [
+            "Measure",
+            "with a golden set"
+          ]
+        ],
+        "next": "EP 34 · Open vs Closed"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Your RAG demo works. Then a user types an order number and it finds nothing. Here's the fix.\n\nAI From Scratch, Episode 33: RAG Part 3\n- Keyword vs semantic search\n- Hybrid search: the best of both\n- Three checks: retrieval, faithfulness, relevance\n- How teams test RAG with a golden set\n- Myth: a demo is not a test\n\nQuiz at the end. Got it right? Comment below.\n\nNext: open vs closed AI models.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #RAG #LearnAI #GenerativeAI #AIForBeginners",
+    "pinned": "Quiz answer: Keyword search, because it matches exact words and codes. Hybrid search gives you both! Building a RAG app? Comment below!",
+    "cover": "'RAG Part 3' title card",
+    "alt": "Animated explainer of hybrid search and how to measure RAG quality with a golden set."
+  }
+}
