@@ -1,0 +1,841 @@
+{
+  "id": "uc11",
+  "episode": 11,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Google Lens Works",
+  "host": "female",
+  "label": "USE CASE 11",
+  "fps": 30,
+  "totalFrames": 4440,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc11/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 11",
+        "title": [
+          "Google",
+          "Lens"
+        ],
+        "subtitle": "How visual search works",
+        "buzzwords": [
+          "Visual search",
+          "Embeddings",
+          "OCR",
+          "Shopping",
+          "Translate",
+          "Circle to Search",
+          "Vision",
+          "Camera"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 405,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_01.wav",
+      "cues": [
+        153,
+        313
+      ],
+      "captions": [
+        {
+          "text": "You point your camera at",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "a flower,",
+          "from": 59,
+          "to": 78
+        },
+        {
+          "text": "a shoe,",
+          "from": 78,
+          "to": 93
+        },
+        {
+          "text": "or a sign in another",
+          "from": 93,
+          "to": 134
+        },
+        {
+          "text": "language, and Google Lens instantly",
+          "from": 134,
+          "to": 203
+        },
+        {
+          "text": "tells you what it is,",
+          "from": 203,
+          "to": 245
+        },
+        {
+          "text": "where to buy it,",
+          "from": 245,
+          "to": 278
+        },
+        {
+          "text": "or what it says.",
+          "from": 278,
+          "to": 310
+        },
+        {
+          "text": "Let's break down how visual",
+          "from": 313,
+          "to": 355
+        },
+        {
+          "text": "search works.",
+          "from": 356,
+          "to": 391
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "In about a second",
+        "nodes": [
+          [
+            "Camera",
+            "Snap a photo",
+            "A plant on your balcony"
+          ],
+          [
+            "ScanSearch",
+            "Find the object",
+            "Crop out the main subject"
+          ],
+          [
+            "Hash",
+            "Embedding",
+            "What it looks like, as numbers"
+          ],
+          [
+            "Search",
+            "Match",
+            "Closest images out of billions"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“Hibiscus”, with links"
+          ]
+        ]
+      },
+      "from": 405,
+      "durationInFrames": 621,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_02.wav",
+      "cues": [
+        81,
+        147,
+        252,
+        400,
+        505
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens,",
+          "from": 10,
+          "to": 41
+        },
+        {
+          "text": "in about a second.",
+          "from": 45,
+          "to": 78
+        },
+        {
+          "text": "You snap a photo of",
+          "from": 81,
+          "to": 125
+        },
+        {
+          "text": "a plant.",
+          "from": 125,
+          "to": 145
+        },
+        {
+          "text": "A vision model finds the",
+          "from": 147,
+          "to": 197
+        },
+        {
+          "text": "main object in the frame.",
+          "from": 197,
+          "to": 249
+        },
+        {
+          "text": "It turns that object into",
+          "from": 252,
+          "to": 294
+        },
+        {
+          "text": "an embedding,",
+          "from": 296,
+          "to": 322
+        },
+        {
+          "text": "a list of numbers for",
+          "from": 324,
+          "to": 354
+        },
+        {
+          "text": "what it looks like.",
+          "from": 355,
+          "to": 397
+        },
+        {
+          "text": "It searches billions of images",
+          "from": 400,
+          "to": 458
+        },
+        {
+          "text": "for the closest matches,",
+          "from": 458,
+          "to": 505
+        },
+        {
+          "text": "and shows you the answer,",
+          "from": 505,
+          "to": 554
+        },
+        {
+          "text": "it's a hibiscus,",
+          "from": 554,
+          "to": 585
+        },
+        {
+          "text": "with links.",
+          "from": 585,
+          "to": 608
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "embedmap",
+      "data": {
+        "heading": "A map of looks",
+        "kicker": "REMEMBER EP 06?",
+        "points": [
+          [
+            "Rose",
+            0.14,
+            0.22,
+            0
+          ],
+          [
+            "Hibiscus",
+            0.34,
+            0.12,
+            0
+          ],
+          [
+            "Lotus",
+            0.2,
+            0.38,
+            0
+          ],
+          [
+            "Sneaker",
+            0.68,
+            0.16,
+            1
+          ],
+          [
+            "Sandal",
+            0.86,
+            0.3,
+            1
+          ],
+          [
+            "Boot",
+            0.62,
+            0.36,
+            1
+          ],
+          [
+            "Charminar",
+            0.56,
+            0.7,
+            2
+          ],
+          [
+            "Taj Mahal",
+            0.8,
+            0.82,
+            2
+          ],
+          [
+            "India Gate",
+            0.4,
+            0.86,
+            2
+          ]
+        ],
+        "query": [
+          "Your photo",
+          0.3,
+          0.26
+        ],
+        "neighbors": [
+          "Hibiscus",
+          "Rose"
+        ],
+        "note": "Looks similar, sits close"
+      },
+      "from": 1026,
+      "durationInFrames": 442,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_03.wav",
+      "cues": [
+        117,
+        292,
+        343
+      ],
+      "captions": [
+        {
+          "text": "Remember the map of meaning?",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "Images get one too.",
+          "from": 62,
+          "to": 113
+        },
+        {
+          "text": "Similar looking things sit close",
+          "from": 117,
+          "to": 163
+        },
+        {
+          "text": "together, flowers here,",
+          "from": 164,
+          "to": 214
+        },
+        {
+          "text": "shoes there,",
+          "from": 218,
+          "to": 240
+        },
+        {
+          "text": "landmarks over there.",
+          "from": 242,
+          "to": 290
+        },
+        {
+          "text": "Your photo lands on the",
+          "from": 292,
+          "to": 334
+        },
+        {
+          "text": "map, and its nearest neighbours",
+          "from": 334,
+          "to": 391
+        },
+        {
+          "text": "tell Lens what it is.",
+          "from": 391,
+          "to": 430
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "More than names",
+        "kicker": "THREE MODES",
+        "steps": [
+          [
+            "Languages",
+            "Read and translate",
+            "OCR on signs and menus"
+          ],
+          [
+            "ShoppingBag",
+            "Shop the look",
+            "Similar products and prices"
+          ],
+          [
+            "Calculator",
+            "Homework help",
+            "Explains the steps"
+          ]
+        ]
+      },
+      "from": 1468,
+      "durationInFrames": 498,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_04.wav",
+      "cues": [
+        82,
+        264,
+        364
+      ],
+      "captions": [
+        {
+          "text": "And Lens does more than",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "name things.",
+          "from": 47,
+          "to": 80
+        },
+        {
+          "text": "Text mode reads words in",
+          "from": 82,
+          "to": 136
+        },
+        {
+          "text": "the image,",
+          "from": 136,
+          "to": 159
+        },
+        {
+          "text": "and can translate them,",
+          "from": 159,
+          "to": 210
+        },
+        {
+          "text": "and that's called OCR.",
+          "from": 210,
+          "to": 260
+        },
+        {
+          "text": "Shopping mode finds similar products",
+          "from": 264,
+          "to": 324
+        },
+        {
+          "text": "and prices.",
+          "from": 326,
+          "to": 361
+        },
+        {
+          "text": "And homework mode reads a",
+          "from": 364,
+          "to": 401
+        },
+        {
+          "text": "maths problem,",
+          "from": 403,
+          "to": 434
+        },
+        {
+          "text": "and explains the steps.",
+          "from": 435,
+          "to": 484
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "When it struggles",
+        "kicker": "THE HARD CASES",
+        "terms": [
+          [
+            "Focus",
+            "Blur and darkness",
+            "Hard to see details"
+          ],
+          [
+            "RotateCw",
+            "Odd angles",
+            "Unfamiliar views"
+          ],
+          [
+            "Copy",
+            "Look-alikes",
+            "Very similar things"
+          ],
+          [
+            "HelpCircle",
+            "Rare items",
+            "Few images to match"
+          ]
+        ]
+      },
+      "from": 1966,
+      "durationInFrames": 452,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_05.wav",
+      "cues": [
+        75,
+        141,
+        235,
+        327
+      ],
+      "captions": [
+        {
+          "text": "So when does visual search struggle?",
+          "from": 10,
+          "to": 70
+        },
+        {
+          "text": "Blurry or dark photos.",
+          "from": 75,
+          "to": 138
+        },
+        {
+          "text": "Unusual angles,",
+          "from": 141,
+          "to": 175
+        },
+        {
+          "text": "like the bottom of a shoe.",
+          "from": 175,
+          "to": 232
+        },
+        {
+          "text": "Look alikes,",
+          "from": 235,
+          "to": 257
+        },
+        {
+          "text": "like two very similar plants.",
+          "from": 262,
+          "to": 322
+        },
+        {
+          "text": "And rare items,",
+          "from": 327,
+          "to": 357
+        },
+        {
+          "text": "with very few matching images online.",
+          "from": 359,
+          "to": 440
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "Smartphone",
+            "Phone search",
+            "Lens, Circle to Search"
+          ],
+          [
+            "ShoppingBag",
+            "Shopping apps",
+            "Search with a photo"
+          ],
+          [
+            "Leaf",
+            "ID apps",
+            "Plants, birds, insects"
+          ]
+        ]
+      },
+      "from": 2418,
+      "durationInFrames": 381,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_06.wav",
+      "cues": [
+        71,
+        175,
+        258
+      ],
+      "captions": [
+        {
+          "text": "So where does visual search",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "show up?",
+          "from": 46,
+          "to": 69
+        },
+        {
+          "text": "Google Lens,",
+          "from": 71,
+          "to": 100
+        },
+        {
+          "text": "and Circle to Search on phones.",
+          "from": 102,
+          "to": 171
+        },
+        {
+          "text": "Shopping apps that let you",
+          "from": 175,
+          "to": 210
+        },
+        {
+          "text": "search with a photo.",
+          "from": 213,
+          "to": 256
+        },
+        {
+          "text": "And apps that identify plants,",
+          "from": 258,
+          "to": 315
+        },
+        {
+          "text": "birds and insects.",
+          "from": 318,
+          "to": 368
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Visual search is always right, even for mushrooms or medicines.",
+        "fact": "It's a best guess from similar images. For anything safety-related, confirm with an expert.",
+        "tip": "Double-check anything risky"
+      },
+      "from": 2799,
+      "durationInFrames": 516,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_07.wav",
+      "cues": [
+        60,
+        278
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "People think visual search is",
+          "from": 60,
+          "to": 107
+        },
+        {
+          "text": "always right,",
+          "from": 109,
+          "to": 139
+        },
+        {
+          "text": "so it's safe to trust,",
+          "from": 141,
+          "to": 185
+        },
+        {
+          "text": "even for wild mushrooms or medicines.",
+          "from": 188,
+          "to": 276
+        },
+        {
+          "text": "It's only a best guess,",
+          "from": 278,
+          "to": 320
+        },
+        {
+          "text": "based on similar images.",
+          "from": 322,
+          "to": 382
+        },
+        {
+          "text": "For anything safety related,",
+          "from": 383,
+          "to": 435
+        },
+        {
+          "text": "always confirm with an expert.",
+          "from": 436,
+          "to": 504
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Lens identifies things by…",
+        "options": [
+          "Asking a human",
+          "Matching image embeddings",
+          "Reading your messages"
+        ],
+        "answer": 1
+      },
+      "from": 3315,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_08.wav",
+      "cues": [
+        119,
+        332
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "How does Lens work out",
+          "from": 46,
+          "to": 76
+        },
+        {
+          "text": "what's in your photo?",
+          "from": 77,
+          "to": 117
+        },
+        {
+          "text": "Pause and think,",
+          "from": 119,
+          "to": 156
+        },
+        {
+          "text": "and if you get it",
+          "from": 157,
+          "to": 175
+        },
+        {
+          "text": "right, comment below!",
+          "from": 176,
+          "to": 234
+        },
+        {
+          "text": "It turns your photo into",
+          "from": 332,
+          "to": 366
+        },
+        {
+          "text": "an embedding,",
+          "from": 367,
+          "to": 388
+        },
+        {
+          "text": "and finds the closest matches!",
+          "from": 392,
+          "to": 459
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Detect",
+            "find the main object"
+          ],
+          [
+            "Embed",
+            "appearance as numbers"
+          ],
+          [
+            "Match",
+            "closest of billions"
+          ],
+          [
+            "Modes",
+            "text, shopping, homework"
+          ]
+        ],
+        "next": "EP 22 · Neural networks, Part 2"
+      },
+      "from": 3786,
+      "durationInFrames": 654,
+      "voiceFrom": 10,
+      "audio": "lessons/uc11/voice_09.wav",
+      "cues": [
+        45,
+        123,
+        200,
+        297,
+        409
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "A vision model finds the",
+          "from": 45,
+          "to": 81
+        },
+        {
+          "text": "main object.",
+          "from": 82,
+          "to": 120
+        },
+        {
+          "text": "It turns its appearance into",
+          "from": 123,
+          "to": 161
+        },
+        {
+          "text": "an embedding.",
+          "from": 162,
+          "to": 197
+        },
+        {
+          "text": "Lens finds the closest matches",
+          "from": 200,
+          "to": 261
+        },
+        {
+          "text": "out of billions.",
+          "from": 261,
+          "to": 295
+        },
+        {
+          "text": "And it can also read",
+          "from": 297,
+          "to": 325
+        },
+        {
+          "text": "text, shop and help with homework.",
+          "from": 327,
+          "to": 406
+        },
+        {
+          "text": "Next, part two of how",
+          "from": 409,
+          "to": 453
+        },
+        {
+          "text": "neural networks learn,",
+          "from": 456,
+          "to": 498
+        },
+        {
+          "text": "the loss,",
+          "from": 500,
+          "to": 519
+        },
+        {
+          "text": "and gradient descent.",
+          "from": 524,
+          "to": 573
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 577,
+          "to": 642
+        }
+      ],
+      "image": null
+    }
+  ]
+}

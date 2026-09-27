@@ -1,0 +1,217 @@
+{
+  "id": "ep22",
+  "episode": 22,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How a Neural Network Learns Part 2",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "In part one, we learned that training means finding good weights. [1] But a big network has billions of weights, so how does it find good ones? [2] In part two, let's understand the loss, and gradient descent.",
+      "data": {
+        "kicker": "EPISODE 22",
+        "title": [
+          "How AI",
+          "Learns"
+        ],
+        "subtitle": "Part 2: loss and gradient descent",
+        "buzzwords": [
+          "Loss",
+          "Gradient descent",
+          "Learning rate",
+          "Epoch",
+          "Batch",
+          "Training",
+          "Optimiser",
+          "Valley"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "First, the network needs a way to know how wrong it is. [1] That's called the loss, a single number that measures the mistake. [2] A big loss means a bad answer, [3] a small loss means a good answer, [4] and training tries to make the loss as small as possible.",
+      "data": {
+        "term": "Loss",
+        "short": "Loss",
+        "definition": "A single number that measures how wrong the network's answer is.",
+        "chips": [
+          [
+            "TrendingUp",
+            "Big loss = bad"
+          ],
+          [
+            "TrendingDown",
+            "Small loss = good"
+          ],
+          [
+            "Target",
+            "Goal: shrink it"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Here's an example. The network sees a photo of a cat. [1] It guesses, 30 percent cat, and 70 percent dog. [2] The right answer is 100 percent cat, so the loss is high. [3] After learning a little, it guesses 90 percent cat, and the loss drops.",
+      "data": {
+        "heading": "Watch the loss",
+        "kicker": "A SIMPLE EXAMPLE",
+        "steps": [
+          [
+            "Image",
+            "Guess",
+            "30% cat, 70% dog"
+          ],
+          [
+            "TriangleAlert",
+            "Loss is high",
+            "The right answer was cat"
+          ],
+          [
+            "TrendingDown",
+            "Adjust and retry",
+            "90% cat, loss drops"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "So how does it adjust the weights? With gradient descent. [1] Imagine you're on a foggy hill at night, and you want to reach the bottom. [2] You feel which way the ground slopes down, [3] take a small step that way, [4] and repeat, until you reach the valley.",
+      "data": {
+        "term": "Gradient descent",
+        "short": "Slope",
+        "definition": "Adjusting the weights in small steps, in the direction that reduces the loss, like walking downhill.",
+        "chips": [
+          [
+            "Compass",
+            "Feel the slope"
+          ],
+          [
+            "Footprints",
+            "Take a small step"
+          ],
+          [
+            "Repeat",
+            "Repeat to the bottom"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "The size of each step is called the learning rate. [1] If the steps are too big, you leap over the valley, and bounce around forever. [2] If they're just right, you walk steadily down to the lowest point.",
+      "data": {
+        "heading": "Step size matters",
+        "kicker": "THE LEARNING RATE",
+        "left": {
+          "icon": "Rocket",
+          "title": "Steps too big",
+          "stat": "Overshoot",
+          "label": "bounce past the bottom"
+        },
+        "right": {
+          "icon": "Footprints",
+          "title": "Steps just right",
+          "stat": "Steady descent",
+          "label": "reach the lowest point"
+        }
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four words from training. [1] An epoch, one full pass through all the training data. [2] A batch, a small group of examples looked at together. [3] The learning rate, which is the step size. [4] And convergence, when the loss stops improving, and training is done.",
+      "data": {
+        "heading": "Training words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "RefreshCw",
+            "Epoch",
+            "One full pass of the data"
+          ],
+          [
+            "Layers",
+            "Batch",
+            "A small group at a time"
+          ],
+          [
+            "Footprints",
+            "Learning rate",
+            "The step size"
+          ],
+          [
+            "Flag",
+            "Convergence",
+            "Loss stops improving"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think training finds the one perfect answer. [2] It usually finds a very good spot, not the perfect one. The landscape has many valleys, and a good valley is usually more than enough.",
+      "data": {
+        "myth": "Training finds the one perfect answer.",
+        "fact": "It usually finds a very good spot, not the perfect one, and that's more than enough.",
+        "tip": "Good enough is great"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In gradient descent, what are we trying to make smaller? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The loss! Every step tries to make the mistake smaller.",
+      "data": {
+        "question": "Gradient descent tries to shrink the…",
+        "options": [
+          "Loss",
+          "Number of layers",
+          "Screen size"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The loss measures how wrong the answer is. [2] Gradient descent takes small steps downhill, to reduce it. [3] The learning rate is the step size. [4] And an epoch is one full pass through the data. [5] Next, a real world breakdown, how AI tutor apps teach you. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Loss",
+            "how wrong the answer is"
+          ],
+          [
+            "Gradient descent",
+            "small steps downhill"
+          ],
+          [
+            "Learning rate",
+            "the step size"
+          ],
+          [
+            "Epoch",
+            "one pass through the data"
+          ]
+        ],
+        "next": "Use Case · AI tutor apps"
+      }
+    }
+  ],
+  "post": {
+    "caption": "A network has billions of weights. How does it find good ones? By walking downhill.\n\nEpisode 22 of AI From Scratch: How a Neural Network Learns, Part 2\n- The loss: one number for \"how wrong\"\n- Watch the loss drop on a cat photo\n- Gradient descent: the foggy hill analogy\n- The learning rate: why step size matters\n- Jargon: epoch, batch, convergence\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI tutor apps teach you.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #NeuralNetworks #LearnAI #MachineLearning #AIForBeginners",
+    "pinned": "Quiz answer: The loss. Every step tries to make the mistake smaller. Part 3 reveals how each weight knows which way to move.",
+    "cover": "'How AI Learns · Part 2' title card",
+    "alt": "Animated lesson explaining loss and gradient descent in neural network training."
+  }
+}
