@@ -53,7 +53,7 @@ Already posted: `out/posted/`.
 | 046 | ep43 | AI Safety and Alignment | ready |
 | 047 | ep44 | AI and Your Privacy | ready |
 | 048 | ep45 | Deepfakes and How to Spot Them | ready |
-| 049 | ep46 | Copyright and AI | rendering soon |
+| 049 | ep46 | Copyright and AI | ready |
 | 050 | ep47 | Guardrails in Real AI Products | rendering soon |
 | 051 | ep48 | AI Laws Around the World | rendering soon |
 | 052 | ep49 | AI and Jobs | rendering soon |
