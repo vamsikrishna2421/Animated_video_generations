@@ -164,7 +164,7 @@ def sfx_whoosh():
     n = int(0.45 * SR)
     t = np.arange(n) / SR
     env = np.sin(np.pi * t / t[-1]) ** 2
-    x = rng.standard_normal(n)
+    x = np.random.default_rng(99).standard_normal(n)  # fixed seed: identical file every build
     lo = lowpass(x, 900)
     hi = highpass(x, 2500)
     mix = np.where(t < t[-1] / 2, lo, 0.6 * lo + 0.4 * hi)
