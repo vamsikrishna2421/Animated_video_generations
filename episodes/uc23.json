@@ -36,7 +36,8 @@
      "Tuberculosis",
      "Second opinion",
      "Doctors"
-    ]
+    ],
+    "hook": "AI reading *X-rays*"
    }
   },
   {
@@ -199,7 +200,7 @@
   },
   {
    "type": "recap",
-   "text": "Let's recap. [1] A vision model scans the X-ray, and highlights suspicious areas. [2] It's trained on expert-labelled scans. [3] It helps with triage, screening, and second opinions. [4] And the doctor always makes the final call. [5] Next, how deepfake detection works. Follow AI Maastaaru!",
+   "text": "Let's recap. [1] A vision model scans the X-ray, and highlights suspicious areas. [2] It's trained on expert-labelled scans. [3] It helps with triage, screening, and second opinions. [4] And the doctor always makes the final call. [5] Next, use case 24, how deepfake detection works. Follow AI Maastaaru!",
    "data": {
     "points": [
      [
@@ -219,12 +220,12 @@
       "makes the final call"
      ]
     ],
-    "next": "USE CASE 24 · Deepfakes"
+    "next": "USE CASE 24 · Deepfake detection"
    }
   }
  ],
  "post": {
-  "caption": "AI can scan a chest X-ray in seconds and flag possible problems. Here's how it works.\n\nReal World AI, Use Case 23: AI in radiology\n- The flow: capture, detect, heatmap, triage, doctor\n- Trained on expert-labelled scans\n- Where it helps: triage, TB screening, second opinions\n- Jargon: sensitivity, specificity, heatmap, approval\n- Myth: AI assists radiologists, it doesn't replace them\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how deepfake detection works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "caption": "AI can scan a chest X-ray in seconds and flag possible problems. Here's how it works.\n\nReal World AI, Use Case 23: AI in radiology\n- The flow: capture, detect, heatmap, triage, doctor\n- Trained on expert-labelled scans\n- Where it helps: triage, TB screening, second opinions\n- Jargon: sensitivity, specificity, heatmap, approval\n- Myth: AI assists radiologists, it doesn't replace them\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How deepfake detection works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
   "tags": "#AIMaastaaru #HealthcareAI #Radiology #LearnAI #AIforGood",
   "pinned": "Quiz answer: The doctor! AI flags and highlights, but the radiologist decides. Know a doctor using AI tools? Share this with them!",
   "cover": "'AI for X-rays' title card",

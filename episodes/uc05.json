@@ -1,233 +1,234 @@
 {
-  "id": "uc05",
-  "episode": 5,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 05",
-  "handle": "@ai_maastaaru",
-  "title": "How Magic Eraser Works",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc05",
+ "episode": 5,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 05",
+ "handle": "@ai_maastaaru",
+ "title": "How Magic Eraser Works",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You take a perfect photo at the beach, except for a stranger walking right behind you. [1] One tap, and they vanish, like they were never there. [2] Let's break down how magic eraser works.",
+   "data": {
+    "kicker": "USE CASE 05",
+    "title": [
+     "Magic",
+     "Eraser"
+    ],
+    "subtitle": "How AI removes things from photos",
+    "buzzwords": [
+     "Inpainting",
+     "Mask",
+     "Segmentation",
+     "Generative fill",
+     "Photos",
+     "Pixels",
+     "Clean up",
+     "Remove"
+    ],
+    "hook": "*Erase anyone* from a photo"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You take a perfect photo at the beach, except for a stranger walking right behind you. [1] One tap, and they vanish, like they were never there. [2] Let's break down how magic eraser works.",
-      "data": {
-        "kicker": "USE CASE 05",
-        "title": [
-          "Magic",
-          "Eraser"
-        ],
-        "subtitle": "How AI removes things from photos",
-        "buzzwords": [
-          "Inpainting",
-          "Mask",
-          "Segmentation",
-          "Generative fill",
-          "Photos",
-          "Pixels",
-          "Clean up",
-          "Remove"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens after you tap. [1] You brush over the person you want gone. [2] The app creates a mask, marking exactly those pixels. [3] Those pixels are removed, leaving a hole. [4] An inpainting model looks at everything around the hole, the sand, the waves, the sky, [5] and paints in what most likely belongs there.",
-      "data": {
-        "heading": "One tap, five steps",
-        "nodes": [
-          [
-            "Brush",
-            "You select",
-            "Brush over the stranger"
-          ],
-          [
-            "SquareDashed",
-            "Mask",
-            "Marks exactly those pixels"
-          ],
-          [
-            "Eraser",
-            "Remove",
-            "Leaves a hole"
-          ],
-          [
-            "Eye",
-            "Look around",
-            "Sand, waves, sky nearby"
-          ],
-          [
-            "Image",
-            "Fill in",
-            "Paints what belongs there"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "That last step is called inpainting, which you met in episode fifteen. [1] The model fills a missing area, so it blends in with its surroundings. [2] It studies the nearby textures and colours, [3] continues lines and patterns, like the horizon, [4] and matches the lighting and shadows.",
-      "data": {
-        "term": "Inpainting",
-        "short": "Fill",
-        "definition": "Filling a missing part of an image so it blends in with everything around it.",
-        "chips": [
-          [
-            "Palette",
-            "Match textures"
-          ],
-          [
-            "Ruler",
-            "Continue lines"
-          ],
-          [
-            "Sun",
-            "Match lighting"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Many apps even find the distractions for you. [1] First, a detection model finds objects, like people, wires and bins. [2] Then a segmentation model outlines each one, pixel by pixel. [3] And the app suggests, remove these, with just one tap.",
-      "data": {
-        "heading": "Auto-detect",
-        "kicker": "EVEN SMARTER",
-        "steps": [
-          [
-            "ScanSearch",
-            "Detect",
-            "Find people, wires, bins"
-          ],
-          [
-            "Shapes",
-            "Segment",
-            "Outline each one exactly"
-          ],
-          [
-            "WandSparkles",
-            "Suggest",
-            "Remove with one tap"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where will you find it? [1] Phone galleries from Google, Samsung and Apple all have their own versions. [2] Design apps like Canva and Photoshop offer generative fill. [3] And online shops use it to clean up product photos.",
-      "data": {
-        "heading": "Where you'll find it",
-        "items": [
-          [
-            "Smartphone",
-            "Phone galleries",
-            "Google, Samsung, Apple tools"
-          ],
-          [
-            "Palette",
-            "Design apps",
-            "Canva, Photoshop generative fill"
-          ],
-          [
-            "ShoppingBag",
-            "Online shops",
-            "Clean product photos"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So when does it struggle? [1] Big areas, where there's too little around to copy from. [2] Text and faces in the background, which are hard to fake well. [3] Shadows and reflections, which sometimes get left behind. [4] And whatever was hidden behind the object, which the AI has to guess.",
-      "data": {
-        "heading": "When it struggles",
-        "kicker": "THE HARD CASES",
-        "terms": [
-          [
-            "Maximize",
-            "Big areas",
-            "Little to copy from"
-          ],
-          [
-            "Type",
-            "Text and faces",
-            "Hard to fake well"
-          ],
-          [
-            "Sun",
-            "Shadows",
-            "Can be left behind"
-          ],
-          [
-            "HelpCircle",
-            "Hidden stuff",
-            "The AI has to guess"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think magic eraser reveals what was really behind the object. [2] It doesn't, because it can't see through things. It invents a believable guess, which is why edited photos should never be treated as proof.",
-      "data": {
-        "myth": "Magic eraser reveals what was really behind the object.",
-        "fact": "It can't see through things. It invents a believable guess, so edited photos aren't proof.",
-        "tip": "It guesses, it doesn't reveal"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What is the AI step that fills in the removed area called? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Inpainting! It fills the hole so it blends right in.",
-      "data": {
-        "question": "Filling the removed area is called…",
-        "options": [
-          "Inpainting",
-          "Outpainting",
-          "Speech to text"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] You brush over what you want gone. [2] The app masks those pixels. [3] Inpainting fills the hole so it blends in. [4] And remember, it invents a guess, it doesn't reveal the truth. [5] Next, we'll learn how some AI models think before they answer. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Select",
-            "brush over it"
-          ],
-          [
-            "Mask",
-            "mark the pixels"
-          ],
-          [
-            "Inpaint",
-            "fill so it blends"
-          ],
-          [
-            "Guess",
-            "it invents, not reveals"
-          ]
-        ],
-        "next": "EP 16 · Reasoning models"
-      }
-    }
-  ],
-  "post": {
-    "caption": "A stranger ruins your perfect beach photo. One tap and they're gone. How?\n\nReal World AI, Use Case 05: magic eraser\n- The 5 steps: select, mask, remove, look around, fill in\n- Inpainting: filling a hole so it blends in\n- Auto-detect: finding people, wires and bins for you\n- When it struggles: big areas, text, faces, shadows\n- The myth: \"it reveals what was really behind\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Reasoning models, AI that thinks before it answers.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #AIPhotoEditing #LearnAI #GenerativeAI #AIForBeginners",
-    "pinned": "Quiz answer: Inpainting. It fills the hole so it blends right in. What's the first thing you'd erase from your photos?",
-    "cover": "'Magic Eraser' title card",
-    "alt": "Animated breakdown of how magic eraser tools remove objects from photos using masks and inpainting."
+  {
+   "type": "pipeline",
+   "text": "Here's what happens after you tap. [1] You brush over the person you want gone. [2] The app creates a mask, marking exactly those pixels. [3] Those pixels are removed, leaving a hole. [4] An inpainting model looks at everything around the hole, the sand, the waves, the sky, [5] and paints in what most likely belongs there.",
+   "data": {
+    "heading": "One tap, five steps",
+    "nodes": [
+     [
+      "Brush",
+      "You select",
+      "Brush over the stranger"
+     ],
+     [
+      "SquareDashed",
+      "Mask",
+      "Marks exactly those pixels"
+     ],
+     [
+      "Eraser",
+      "Remove",
+      "Leaves a hole"
+     ],
+     [
+      "Eye",
+      "Look around",
+      "Sand, waves, sky nearby"
+     ],
+     [
+      "Image",
+      "Fill in",
+      "Paints what belongs there"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "That last step is called inpainting, which you met in episode fifteen. [1] The model fills a missing area, so it blends in with its surroundings. [2] It studies the nearby textures and colours, [3] continues lines and patterns, like the horizon, [4] and matches the lighting and shadows.",
+   "data": {
+    "term": "Inpainting",
+    "short": "Fill",
+    "definition": "Filling a missing part of an image so it blends in with everything around it.",
+    "chips": [
+     [
+      "Palette",
+      "Match textures"
+     ],
+     [
+      "Ruler",
+      "Continue lines"
+     ],
+     [
+      "Sun",
+      "Match lighting"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Many apps even find the distractions for you. [1] First, a detection model finds objects, like people, wires and bins. [2] Then a segmentation model outlines each one, pixel by pixel. [3] And the app suggests, remove these, with just one tap.",
+   "data": {
+    "heading": "Auto-detect",
+    "kicker": "EVEN SMARTER",
+    "steps": [
+     [
+      "ScanSearch",
+      "Detect",
+      "Find people, wires, bins"
+     ],
+     [
+      "Shapes",
+      "Segment",
+      "Outline each one exactly"
+     ],
+     [
+      "WandSparkles",
+      "Suggest",
+      "Remove with one tap"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where will you find it? [1] Phone galleries from Google, Samsung and Apple all have their own versions. [2] Design apps like Canva and Photoshop offer generative fill. [3] And online shops use it to clean up product photos.",
+   "data": {
+    "heading": "Where you'll find it",
+    "items": [
+     [
+      "Smartphone",
+      "Phone galleries",
+      "Google, Samsung, Apple tools"
+     ],
+     [
+      "Palette",
+      "Design apps",
+      "Canva, Photoshop generative fill"
+     ],
+     [
+      "ShoppingBag",
+      "Online shops",
+      "Clean product photos"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So when does it struggle? [1] Big areas, where there's too little around to copy from. [2] Text and faces in the background, which are hard to fake well. [3] Shadows and reflections, which sometimes get left behind. [4] And whatever was hidden behind the object, which the AI has to guess.",
+   "data": {
+    "heading": "When it struggles",
+    "kicker": "THE HARD CASES",
+    "terms": [
+     [
+      "Maximize",
+      "Big areas",
+      "Little to copy from"
+     ],
+     [
+      "Type",
+      "Text and faces",
+      "Hard to fake well"
+     ],
+     [
+      "Sun",
+      "Shadows",
+      "Can be left behind"
+     ],
+     [
+      "HelpCircle",
+      "Hidden stuff",
+      "The AI has to guess"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think magic eraser reveals what was really behind the object. [2] It doesn't, because it can't see through things. It invents a believable guess, which is why edited photos should never be treated as proof.",
+   "data": {
+    "myth": "Magic eraser reveals what was really behind the object.",
+    "fact": "It can't see through things. It invents a believable guess, so edited photos aren't proof.",
+    "tip": "It guesses, it doesn't reveal"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What is the AI step that fills in the removed area called? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Inpainting! It fills the hole so it blends right in.",
+   "data": {
+    "question": "Filling the removed area is called…",
+    "options": [
+     "Inpainting",
+     "Outpainting",
+     "Speech to text"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] You brush over what you want gone. [2] The app masks those pixels. [3] Inpainting fills the hole so it blends in. [4] And remember, it invents a guess, it doesn't reveal the truth. [5] Next, use case 6, how a bank support bot works. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Select",
+      "brush over it"
+     ],
+     [
+      "Mask",
+      "mark the pixels"
+     ],
+     [
+      "Inpaint",
+      "fill so it blends"
+     ],
+     [
+      "Guess",
+      "it invents, not reveals"
+     ]
+    ],
+    "next": "USE CASE 6 · Bank support bot"
+   }
   }
+ ],
+ "post": {
+  "caption": "A stranger ruins your perfect beach photo. One tap and they're gone. How?\n\nReal World AI, Use Case 05: magic eraser\n- The 5 steps: select, mask, remove, look around, fill in\n- Inpainting: filling a hole so it blends in\n- Auto-detect: finding people, wires and bins for you\n- When it struggles: big areas, text, faces, shadows\n- The myth: \"it reveals what was really behind\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How a bank support bot works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #AIPhotoEditing #LearnAI #GenerativeAI #AIForBeginners",
+  "pinned": "Quiz answer: Inpainting. It fills the hole so it blends right in. What's the first thing you'd erase from your photos?",
+  "cover": "'Magic Eraser' title card",
+  "alt": "Animated breakdown of how magic eraser tools remove objects from photos using masks and inpainting."
+ }
 }

@@ -1,233 +1,234 @@
 {
-  "id": "uc13",
-  "episode": 13,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 13",
-  "handle": "@ai_maastaaru",
-  "title": "How AI Music Generation Works",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc13",
+ "episode": 13,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 13",
+ "handle": "@ai_maastaaru",
+ "title": "How AI Music Generation Works",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Type, a peaceful Carnatic style song with flute and rain sounds, [1] and in seconds, an AI plays you a brand new track. [2] Let's break down how AI creates music.",
+   "data": {
+    "kicker": "USE CASE 13",
+    "title": [
+     "AI",
+     "Music"
+    ],
+    "subtitle": "From a sentence to a song",
+    "buzzwords": [
+     "Text to music",
+     "Audio tokens",
+     "Melody",
+     "Rhythm",
+     "Vocals",
+     "Diffusion",
+     "Soundtrack",
+     "Copyright"
+    ],
+    "hook": "A full song from *one sentence*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Type, a peaceful Carnatic style song with flute and rain sounds, [1] and in seconds, an AI plays you a brand new track. [2] Let's break down how AI creates music.",
-      "data": {
-        "kicker": "USE CASE 13",
-        "title": [
-          "AI",
-          "Music"
-        ],
-        "subtitle": "From a sentence to a song",
-        "buzzwords": [
-          "Text to music",
-          "Audio tokens",
-          "Melody",
-          "Rhythm",
-          "Vocals",
-          "Diffusion",
-          "Soundtrack",
-          "Copyright"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's how a text to music model works. [1] You describe the song, the mood, instruments and style. [2] A text model turns your words into numbers that capture their meaning. [3] The music model then generates audio tokens, tiny chunks of sound, one after another, guided by your description. [4] A decoder turns those tokens back into a sound wave, [5] and you hear your new track.",
-      "data": {
-        "heading": "From words to a song",
-        "nodes": [
-          [
-            "Type",
-            "Your prompt",
-            "“Calm flute, rain, Carnatic style”"
-          ],
-          [
-            "Hash",
-            "Meaning as numbers",
-            "Mood, instruments, style"
-          ],
-          [
-            "AudioLines",
-            "Audio tokens",
-            "Tiny chunks of sound, in order"
-          ],
-          [
-            "Waves",
-            "Decode",
-            "Tokens → sound wave"
-          ],
-          [
-            "Music",
-            "Your track",
-            "A brand new song"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "The clever idea here is audio tokens. [1] Just like text is split into tokens, sound can be compressed into tokens too. [2] So a song becomes a sequence of sound codes, [3] and the model predicts the next code, just like the next word. [4] Some models use diffusion instead, cleaning noise into sound.",
-      "data": {
-        "term": "Audio tokens",
-        "short": "Tokens",
-        "definition": "Tiny compressed chunks of sound that a model can predict one after another, like words.",
-        "chips": [
-          [
-            "Hash",
-            "Sound as codes"
-          ],
-          [
-            "ArrowRight",
-            "Predict the next"
-          ],
-          [
-            "Tv",
-            "Or use diffusion"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "During training, the model listens to huge amounts of music, and learns its patterns. [1] Rhythm and tempo, how beats repeat. [2] Melody and harmony, which notes sound good together. [3] And structure, like verse, chorus, and a satisfying ending.",
-      "data": {
-        "heading": "What it learns",
-        "kicker": "TRAINING",
-        "steps": [
-          [
-            "Drum",
-            "Rhythm",
-            "How beats repeat"
-          ],
-          [
-            "Music",
-            "Melody and harmony",
-            "Notes that fit together"
-          ],
-          [
-            "ListOrdered",
-            "Structure",
-            "Verse, chorus, ending"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where is it used? [1] Creators make background music for reels and videos. [2] Musicians sketch ideas, and try out different styles quickly. [3] And games create music that changes with what's happening on screen.",
-      "data": {
-        "heading": "Where it's used",
-        "items": [
-          [
-            "Smartphone",
-            "Creators",
-            "Background music for reels"
-          ],
-          [
-            "Mic2",
-            "Musicians",
-            "Sketch ideas fast"
-          ],
-          [
-            "Gamepad2",
-            "Games",
-            "Music that reacts"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So what are the tough parts? [1] Long songs, keeping a full track coherent for minutes. [2] Vocals, lyrics that sound clear and natural. [3] Copyright, since training on artists' music raises real questions. [4] And originality, avoiding songs that sound too close to existing ones.",
-      "data": {
-        "heading": "The tough parts",
-        "kicker": "WHY IT'S HARD",
-        "terms": [
-          [
-            "Clock",
-            "Long songs",
-            "Staying coherent"
-          ],
-          [
-            "Mic",
-            "Vocals",
-            "Clear, natural singing"
-          ],
-          [
-            "Scale",
-            "Copyright",
-            "Training data questions"
-          ],
-          [
-            "Copy",
-            "Originality",
-            "Not too close to real songs"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think AI music just stitches together pieces of existing songs. [2] Generative models create new audio, token by token. But they learn from real music, so fairness to artists, and copyright, are important open debates.",
-      "data": {
-        "myth": "AI music just stitches pieces of existing songs together.",
-        "fact": "It creates new audio token by token, but learns from real music, so artist fairness is an open debate.",
-        "tip": "Respect artists' rights"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Many AI music models create songs by predicting what, one after another? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Audio tokens, tiny chunks of sound, just like words in a sentence!",
-      "data": {
-        "question": "AI music models predict…",
-        "options": [
-          "Audio tokens",
-          "Hashtags",
-          "Pixels"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] You describe the mood, instruments and style. [2] Sound is compressed into audio tokens. [3] The model predicts the next token, just like words. [4] And fairness to artists is an important open debate. [5] Next, we'll learn the three ways machines learn, supervised, unsupervised and reinforcement. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Prompt",
-            "mood, instruments, style"
-          ],
-          [
-            "Audio tokens",
-            "sound as codes"
-          ],
-          [
-            "Predict",
-            "next token, like words"
-          ],
-          [
-            "Debate",
-            "artists and copyright"
-          ]
-        ],
-        "next": "EP 24 · Types of learning"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Type a sentence, get a brand new song. How does AI make music?\n\nReal World AI, Use Case 13: AI music generation\n- The flow: prompt, meaning, audio tokens, decode, track\n- Audio tokens: sound as codes, predicted like words\n- What it learns: rhythm, melody, harmony, structure\n- The tough parts: long songs, vocals, copyright, originality\n- The debate: fairness to artists\n\nQuiz at the end. Got it right? Comment below.\n\nNext: The three ways machines learn.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #AIMusic #LearnAI #GenerativeAI #AIForBeginners",
-    "pinned": "Quiz answer: Audio tokens, tiny chunks of sound, predicted like words. Would you listen to an AI-made song? Be honest!",
-    "cover": "'AI Music' title card",
-    "alt": "Animated breakdown of how text-to-music AI models generate songs using audio tokens."
+  {
+   "type": "pipeline",
+   "text": "Here's how a text to music model works. [1] You describe the song, the mood, instruments and style. [2] A text model turns your words into numbers that capture their meaning. [3] The music model then generates audio tokens, tiny chunks of sound, one after another, guided by your description. [4] A decoder turns those tokens back into a sound wave, [5] and you hear your new track.",
+   "data": {
+    "heading": "From words to a song",
+    "nodes": [
+     [
+      "Type",
+      "Your prompt",
+      "“Calm flute, rain, Carnatic style”"
+     ],
+     [
+      "Hash",
+      "Meaning as numbers",
+      "Mood, instruments, style"
+     ],
+     [
+      "AudioLines",
+      "Audio tokens",
+      "Tiny chunks of sound, in order"
+     ],
+     [
+      "Waves",
+      "Decode",
+      "Tokens → sound wave"
+     ],
+     [
+      "Music",
+      "Your track",
+      "A brand new song"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "The clever idea here is audio tokens. [1] Just like text is split into tokens, sound can be compressed into tokens too. [2] So a song becomes a sequence of sound codes, [3] and the model predicts the next code, just like the next word. [4] Some models use diffusion instead, cleaning noise into sound.",
+   "data": {
+    "term": "Audio tokens",
+    "short": "Tokens",
+    "definition": "Tiny compressed chunks of sound that a model can predict one after another, like words.",
+    "chips": [
+     [
+      "Hash",
+      "Sound as codes"
+     ],
+     [
+      "ArrowRight",
+      "Predict the next"
+     ],
+     [
+      "Tv",
+      "Or use diffusion"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "During training, the model listens to huge amounts of music, and learns its patterns. [1] Rhythm and tempo, how beats repeat. [2] Melody and harmony, which notes sound good together. [3] And structure, like verse, chorus, and a satisfying ending.",
+   "data": {
+    "heading": "What it learns",
+    "kicker": "TRAINING",
+    "steps": [
+     [
+      "Drum",
+      "Rhythm",
+      "How beats repeat"
+     ],
+     [
+      "Music",
+      "Melody and harmony",
+      "Notes that fit together"
+     ],
+     [
+      "ListOrdered",
+      "Structure",
+      "Verse, chorus, ending"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where is it used? [1] Creators make background music for reels and videos. [2] Musicians sketch ideas, and try out different styles quickly. [3] And games create music that changes with what's happening on screen.",
+   "data": {
+    "heading": "Where it's used",
+    "items": [
+     [
+      "Smartphone",
+      "Creators",
+      "Background music for reels"
+     ],
+     [
+      "Mic2",
+      "Musicians",
+      "Sketch ideas fast"
+     ],
+     [
+      "Gamepad2",
+      "Games",
+      "Music that reacts"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So what are the tough parts? [1] Long songs, keeping a full track coherent for minutes. [2] Vocals, lyrics that sound clear and natural. [3] Copyright, since training on artists' music raises real questions. [4] And originality, avoiding songs that sound too close to existing ones.",
+   "data": {
+    "heading": "The tough parts",
+    "kicker": "WHY IT'S HARD",
+    "terms": [
+     [
+      "Clock",
+      "Long songs",
+      "Staying coherent"
+     ],
+     [
+      "Mic",
+      "Vocals",
+      "Clear, natural singing"
+     ],
+     [
+      "Scale",
+      "Copyright",
+      "Training data questions"
+     ],
+     [
+      "Copy",
+      "Originality",
+      "Not too close to real songs"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think AI music just stitches together pieces of existing songs. [2] Generative models create new audio, token by token. But they learn from real music, so fairness to artists, and copyright, are important open debates.",
+   "data": {
+    "myth": "AI music just stitches pieces of existing songs together.",
+    "fact": "It creates new audio token by token, but learns from real music, so artist fairness is an open debate.",
+    "tip": "Respect artists' rights"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Many AI music models create songs by predicting what, one after another? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Audio tokens, tiny chunks of sound, just like words in a sentence!",
+   "data": {
+    "question": "AI music models predict…",
+    "options": [
+     "Audio tokens",
+     "Hashtags",
+     "Pixels"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] You describe the mood, instruments and style. [2] Sound is compressed into audio tokens. [3] The model predicts the next token, just like words. [4] And fairness to artists is an important open debate. [5] Next, use case 14, how UPI and card fraud detection works. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Prompt",
+      "mood, instruments, style"
+     ],
+     [
+      "Audio tokens",
+      "sound as codes"
+     ],
+     [
+      "Predict",
+      "next token, like words"
+     ],
+     [
+      "Debate",
+      "artists and copyright"
+     ]
+    ],
+    "next": "USE CASE 14 · Fraud detection"
+   }
   }
+ ],
+ "post": {
+  "caption": "Type a sentence, get a brand new song. How does AI make music?\n\nReal World AI, Use Case 13: AI music generation\n- The flow: prompt, meaning, audio tokens, decode, track\n- Audio tokens: sound as codes, predicted like words\n- What it learns: rhythm, melody, harmony, structure\n- The tough parts: long songs, vocals, copyright, originality\n- The debate: fairness to artists\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How UPI and card fraud detection works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #AIMusic #LearnAI #GenerativeAI #AIForBeginners",
+  "pinned": "Quiz answer: Audio tokens, tiny chunks of sound, predicted like words. Would you listen to an AI-made song? Be honest!",
+  "cover": "'AI Music' title card",
+  "alt": "Animated breakdown of how text-to-music AI models generate songs using audio tokens."
+ }
 }

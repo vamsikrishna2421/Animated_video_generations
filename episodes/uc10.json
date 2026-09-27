@@ -1,229 +1,230 @@
 {
-  "id": "uc10",
-  "episode": 10,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 10",
-  "handle": "@ai_maastaaru",
-  "title": "How the Instagram Reels Feed Works",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc10",
+ "episode": 10,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 10",
+ "handle": "@ai_maastaaru",
+ "title": "How the Instagram Reels Feed Works",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You open Instagram for two minutes, and somehow, an hour disappears. [1] Every reel feels like it was picked just for you. [2] Let's break down how the Reels feed decides what you see.",
+   "data": {
+    "kicker": "USE CASE 10",
+    "title": [
+     "Reels",
+     "Feed"
+    ],
+    "subtitle": "How ranking works",
+    "buzzwords": [
+     "Ranking",
+     "Watch time",
+     "Shares",
+     "Saves",
+     "Explore",
+     "Creators",
+     "Viral",
+     "Signals"
+    ],
+    "hook": "Why you *can't stop* scrolling Reels"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You open Instagram for two minutes, and somehow, an hour disappears. [1] Every reel feels like it was picked just for you. [2] Let's break down how the Reels feed decides what you see.",
-      "data": {
-        "kicker": "USE CASE 10",
-        "title": [
-          "Reels",
-          "Feed"
-        ],
-        "subtitle": "How ranking works",
-        "buzzwords": [
-          "Ranking",
-          "Watch time",
-          "Shares",
-          "Saves",
-          "Explore",
-          "Creators",
-          "Viral",
-          "Signals"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's what happens every time you scroll. [1] The system gathers thousands of possible reels, from accounts you follow, and ones you don't. [2] It filters out anything you've already seen, or that breaks the rules. [3] A model predicts, for each reel, how likely you are to watch, like, share or skip it. [4] It ranks them by those predictions, [5] and shows you the top ones, with some variety mixed in.",
+   "data": {
+    "heading": "Every time you scroll",
+    "nodes": [
+     [
+      "Layers",
+      "Gather candidates",
+      "Thousands of possible reels"
+     ],
+     [
+      "Filter",
+      "Filter",
+      "Seen or unsafe ones removed"
+     ],
+     [
+      "Brain",
+      "Predict",
+      "Watch, like, share or skip?"
+     ],
+     [
+      "ListOrdered",
+      "Rank",
+      "Highest predicted interest first"
+     ],
+     [
+      "Smartphone",
+      "Your feed",
+      "Top reels plus some variety"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So which signals matter? [1] Watch time, especially watching till the end, or rewatching. [2] Shares, because sending a reel to a friend is a strong signal. [3] Saves, which say this is worth coming back to. [4] And skips, because scrolling past quickly tells it you're not interested.",
+   "data": {
+    "heading": "The signals",
+    "kicker": "WHAT IT WATCHES",
+    "terms": [
+     [
+      "Clock",
+      "Watch time",
+      "Watched fully or rewatched"
+     ],
+     [
+      "Send",
+      "Shares",
+      "Sent to a friend"
+     ],
+     [
+      "Bookmark",
+      "Saves",
+      "Worth coming back to"
+     ],
+     [
+      "SkipForward",
+      "Skips",
+      "Scrolled past fast"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "The heart of it is prediction. [1] For every reel, the model estimates the chance you'll engage with it. [2] It learns from billions of past views, [3] combines many signals into one score, [4] and keeps updating as you scroll.",
+   "data": {
+    "term": "Engagement prediction",
+    "short": "Score",
+    "definition": "Estimating how likely you are to watch, like, share or skip each reel.",
+    "chips": [
+     [
+      "Database",
+      "Learns from past views"
+     ],
+     [
+      "Calculator",
+      "Many signals, one score"
+     ],
+     [
+      "RefreshCw",
+      "Updates as you scroll"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "So why do you see accounts you don't follow? [1] A following feed only shows people you chose. [2] A recommended feed can show anyone, and that's how small creators can suddenly go viral.",
+   "data": {
+    "heading": "Following vs recommended",
+    "kicker": "WHY STRANGERS APPEAR",
+    "left": {
+     "icon": "Users",
+     "title": "Following feed",
+     "stat": "People you chose",
+     "label": "limited and predictable"
     },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens every time you scroll. [1] The system gathers thousands of possible reels, from accounts you follow, and ones you don't. [2] It filters out anything you've already seen, or that breaks the rules. [3] A model predicts, for each reel, how likely you are to watch, like, share or skip it. [4] It ranks them by those predictions, [5] and shows you the top ones, with some variety mixed in.",
-      "data": {
-        "heading": "Every time you scroll",
-        "nodes": [
-          [
-            "Layers",
-            "Gather candidates",
-            "Thousands of possible reels"
-          ],
-          [
-            "Filter",
-            "Filter",
-            "Seen or unsafe ones removed"
-          ],
-          [
-            "Brain",
-            "Predict",
-            "Watch, like, share or skip?"
-          ],
-          [
-            "ListOrdered",
-            "Rank",
-            "Highest predicted interest first"
-          ],
-          [
-            "Smartphone",
-            "Your feed",
-            "Top reels plus some variety"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So which signals matter? [1] Watch time, especially watching till the end, or rewatching. [2] Shares, because sending a reel to a friend is a strong signal. [3] Saves, which say this is worth coming back to. [4] And skips, because scrolling past quickly tells it you're not interested.",
-      "data": {
-        "heading": "The signals",
-        "kicker": "WHAT IT WATCHES",
-        "terms": [
-          [
-            "Clock",
-            "Watch time",
-            "Watched fully or rewatched"
-          ],
-          [
-            "Send",
-            "Shares",
-            "Sent to a friend"
-          ],
-          [
-            "Bookmark",
-            "Saves",
-            "Worth coming back to"
-          ],
-          [
-            "SkipForward",
-            "Skips",
-            "Scrolled past fast"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "The heart of it is prediction. [1] For every reel, the model estimates the chance you'll engage with it. [2] It learns from billions of past views, [3] combines many signals into one score, [4] and keeps updating as you scroll.",
-      "data": {
-        "term": "Engagement prediction",
-        "short": "Score",
-        "definition": "Estimating how likely you are to watch, like, share or skip each reel.",
-        "chips": [
-          [
-            "Database",
-            "Learns from past views"
-          ],
-          [
-            "Calculator",
-            "Many signals, one score"
-          ],
-          [
-            "RefreshCw",
-            "Updates as you scroll"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "So why do you see accounts you don't follow? [1] A following feed only shows people you chose. [2] A recommended feed can show anyone, and that's how small creators can suddenly go viral.",
-      "data": {
-        "heading": "Following vs recommended",
-        "kicker": "WHY STRANGERS APPEAR",
-        "left": {
-          "icon": "Users",
-          "title": "Following feed",
-          "stat": "People you chose",
-          "label": "limited and predictable"
-        },
-        "right": {
-          "icon": "Sparkles",
-          "title": "Recommended feed",
-          "stat": "Anyone",
-          "label": "how small creators go viral"
-        }
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So what does this mean for creators? [1] Hook viewers in the first two seconds, so they don't skip. [2] Make reels worth watching to the end, or sharing with a friend. [3] And post consistently, so the system learns who enjoys your content.",
-      "data": {
-        "heading": "Tips for creators",
-        "kicker": "FOR CREATORS",
-        "items": [
-          [
-            "Zap",
-            "Strong hook",
-            "The first two seconds matter"
-          ],
-          [
-            "Share2",
-            "Shareable",
-            "Worth sending to a friend"
-          ],
-          [
-            "CalendarCheck",
-            "Consistency",
-            "Helps it learn your audience"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think there's one secret trick, like a special hashtag, that guarantees views. [2] There isn't. The ranking combines many signals, and mostly rewards reels that people genuinely watch, share and save.",
-      "data": {
-        "myth": "One secret trick, like a special hashtag, guarantees views.",
-        "fact": "Ranking combines many signals and rewards reels people genuinely watch, share and save.",
-        "tip": "Make it worth watching"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Which of these is a strong signal that you liked a reel? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Sharing it with a friend!",
-      "data": {
-        "question": "A strong signal you liked a reel is…",
-        "options": [
-          "Scrolling past quickly",
-          "Sharing it with a friend",
-          "Muting the sound"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] The feed gathers thousands of candidate reels. [2] A model predicts how likely you are to engage with each one. [3] Watch time, shares and saves matter most. [4] And for creators, a strong hook and consistency help. [5] Next, we start a new season, how a neural network actually learns, part one. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Gather",
-            "thousands of candidates"
-          ],
-          [
-            "Predict",
-            "chance you'll engage"
-          ],
-          [
-            "Signals",
-            "watch time, shares, saves"
-          ],
-          [
-            "Creators",
-            "hook, shareable, consistent"
-          ]
-        ],
-        "next": "EP 21 · Neural networks, Part 1"
-      }
+    "right": {
+     "icon": "Sparkles",
+     "title": "Recommended feed",
+     "stat": "Anyone",
+     "label": "how small creators go viral"
     }
-  ],
-  "post": {
-    "caption": "Two minutes on Reels becomes an hour. How does Instagram pick every reel for you?\n\nReal World AI, Use Case 10: how the Reels feed works\n- The flow: gather, filter, predict, rank, show\n- The signals: watch time, shares, saves, skips\n- Engagement prediction, explained\n- Why accounts you don't follow show up\n- Tips for creators: hook, shareable, consistent\n\nQuiz at the end. Got it right? Comment below.\n\nNext: A new season begins, how a neural network learns.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #InstagramReels #LearnAI #CreatorTips #AIForBeginners",
-    "pinned": "Quiz answer: Sharing it with a friend. If this reel helped you, you know what to do 😉",
-    "cover": "'Reels Feed' title card",
-    "alt": "Animated breakdown of how the Instagram Reels feed ranks videos using engagement predictions."
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So what does this mean for creators? [1] Hook viewers in the first two seconds, so they don't skip. [2] Make reels worth watching to the end, or sharing with a friend. [3] And post consistently, so the system learns who enjoys your content.",
+   "data": {
+    "heading": "Tips for creators",
+    "kicker": "FOR CREATORS",
+    "items": [
+     [
+      "Zap",
+      "Strong hook",
+      "The first two seconds matter"
+     ],
+     [
+      "Share2",
+      "Shareable",
+      "Worth sending to a friend"
+     ],
+     [
+      "CalendarCheck",
+      "Consistency",
+      "Helps it learn your audience"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think there's one secret trick, like a special hashtag, that guarantees views. [2] There isn't. The ranking combines many signals, and mostly rewards reels that people genuinely watch, share and save.",
+   "data": {
+    "myth": "One secret trick, like a special hashtag, guarantees views.",
+    "fact": "Ranking combines many signals and rewards reels people genuinely watch, share and save.",
+    "tip": "Make it worth watching"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which of these is a strong signal that you liked a reel? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Sharing it with a friend!",
+   "data": {
+    "question": "A strong signal you liked a reel is…",
+    "options": [
+     "Scrolling past quickly",
+     "Sharing it with a friend",
+     "Muting the sound"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] The feed gathers thousands of candidate reels. [2] A model predicts how likely you are to engage with each one. [3] Watch time, shares and saves matter most. [4] And for creators, a strong hook and consistency help. [5] Next, use case 11, how Google Lens works. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Gather",
+      "thousands of candidates"
+     ],
+     [
+      "Predict",
+      "chance you'll engage"
+     ],
+     [
+      "Signals",
+      "watch time, shares, saves"
+     ],
+     [
+      "Creators",
+      "hook, shareable, consistent"
+     ]
+    ],
+    "next": "USE CASE 11 · Google Lens"
+   }
   }
+ ],
+ "post": {
+  "caption": "Two minutes on Reels becomes an hour. How does Instagram pick every reel for you?\n\nReal World AI, Use Case 10: how the Reels feed works\n- The flow: gather, filter, predict, rank, show\n- The signals: watch time, shares, saves, skips\n- Engagement prediction, explained\n- Why accounts you don't follow show up\n- Tips for creators: hook, shareable, consistent\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How Google Lens works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #InstagramReels #LearnAI #CreatorTips #AIForBeginners",
+  "pinned": "Quiz answer: Sharing it with a friend. If this reel helped you, you know what to do 😉",
+  "cover": "'Reels Feed' title card",
+  "alt": "Animated breakdown of how the Instagram Reels feed ranks videos using engagement predictions."
+ }
 }

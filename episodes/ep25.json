@@ -1,229 +1,230 @@
 {
-  "id": "ep25",
-  "episode": 25,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Training Data",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep25",
+ "episode": 25,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Training Data",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "People say data is the new oil. [1] For AI, it's even more than that, because a model can only be as good as the data it learns from. [2] Let's understand training data.",
+   "data": {
+    "kicker": "EPISODE 25",
+    "title": [
+     "Training",
+     "Data"
+    ],
+    "subtitle": "The real fuel of AI",
+    "buzzwords": [
+     "Datasets",
+     "Labels",
+     "Cleaning",
+     "Bias",
+     "Test set",
+     "Diversity",
+     "Quality",
+     "Garbage in"
+    ],
+    "hook": "*Bad data* makes dumb AI"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "People say data is the new oil. [1] For AI, it's even more than that, because a model can only be as good as the data it learns from. [2] Let's understand training data.",
-      "data": {
-        "kicker": "EPISODE 25",
-        "title": [
-          "Training",
-          "Data"
-        ],
-        "subtitle": "The real fuel of AI",
-        "buzzwords": [
-          "Datasets",
-          "Labels",
-          "Cleaning",
-          "Bias",
-          "Test set",
-          "Diversity",
-          "Quality",
-          "Garbage in"
-        ]
-      }
+  {
+   "type": "definition",
+   "text": "Training data is the collection of examples a model learns from. [1] It can be text, images, audio or numbers. [2] For LLMs, it's trillions of words from books and the web. [3] For vision models, millions of photos. [4] And for a spam filter, thousands of emails.",
+   "data": {
+    "term": "Training data",
+    "short": "Data",
+    "definition": "The collection of examples a model learns from.",
+    "chips": [
+     [
+      "BookOpen",
+      "Text for LLMs"
+     ],
+     [
+      "Image",
+      "Photos for vision"
+     ],
+     [
+      "Mail",
+      "Emails for spam"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "Before training, data goes through a pipeline. [1] First, collect, gather lots of examples. [2] Then clean, remove duplicates, junk and errors. [3] Label, add the right answers, often done by humans. [4] Split, keeping some data aside for testing, [5] and only then, train the model.",
+   "data": {
+    "heading": "The data pipeline",
+    "kicker": "BEFORE TRAINING",
+    "nodes": [
+     [
+      "Database",
+      "Collect",
+      "Gather lots of examples"
+     ],
+     [
+      "Eraser",
+      "Clean",
+      "Remove junk and duplicates"
+     ],
+     [
+      "Tag",
+      "Label",
+      "Add the right answers"
+     ],
+     [
+      "Split",
+      "Split",
+      "Keep some aside for testing"
+     ],
+     [
+      "Cpu",
+      "Train",
+      "Now the model learns"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So what makes data good? [1] Quantity, enough examples to learn from. [2] Quality, correct and clean. [3] Diversity, covering many people, places and situations. [4] And freshness, up to date, so the world hasn't moved on.",
+   "data": {
+    "heading": "What makes data good",
+    "kicker": "GOOD DATA",
+    "terms": [
+     [
+      "Layers",
+      "Quantity",
+      "Enough examples"
+     ],
+     [
+      "BadgeCheck",
+      "Quality",
+      "Correct and clean"
+     ],
+     [
+      "Globe",
+      "Diversity",
+      "Many people and places"
+     ],
+     [
+      "RefreshCw",
+      "Freshness",
+      "Up to date"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "There's a famous rule, garbage in, garbage out. [1] If a face recognition model mostly sees light skinned faces, it can fail on darker skin. [2] With diverse, balanced data, it works fairly for everyone.",
+   "data": {
+    "heading": "Narrow vs diverse data",
+    "kicker": "GARBAGE IN, GARBAGE OUT",
+    "left": {
+     "icon": "TriangleAlert",
+     "title": "Narrow data",
+     "stat": "Works for some",
+     "label": "fails for everyone else"
     },
-    {
-      "type": "definition",
-      "text": "Training data is the collection of examples a model learns from. [1] It can be text, images, audio or numbers. [2] For LLMs, it's trillions of words from books and the web. [3] For vision models, millions of photos. [4] And for a spam filter, thousands of emails.",
-      "data": {
-        "term": "Training data",
-        "short": "Data",
-        "definition": "The collection of examples a model learns from.",
-        "chips": [
-          [
-            "BookOpen",
-            "Text for LLMs"
-          ],
-          [
-            "Image",
-            "Photos for vision"
-          ],
-          [
-            "Mail",
-            "Emails for spam"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Before training, data goes through a pipeline. [1] First, collect, gather lots of examples. [2] Then clean, remove duplicates, junk and errors. [3] Label, add the right answers, often done by humans. [4] Split, keeping some data aside for testing, [5] and only then, train the model.",
-      "data": {
-        "heading": "The data pipeline",
-        "kicker": "BEFORE TRAINING",
-        "nodes": [
-          [
-            "Database",
-            "Collect",
-            "Gather lots of examples"
-          ],
-          [
-            "Eraser",
-            "Clean",
-            "Remove junk and duplicates"
-          ],
-          [
-            "Tag",
-            "Label",
-            "Add the right answers"
-          ],
-          [
-            "Split",
-            "Split",
-            "Keep some aside for testing"
-          ],
-          [
-            "Cpu",
-            "Train",
-            "Now the model learns"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So what makes data good? [1] Quantity, enough examples to learn from. [2] Quality, correct and clean. [3] Diversity, covering many people, places and situations. [4] And freshness, up to date, so the world hasn't moved on.",
-      "data": {
-        "heading": "What makes data good",
-        "kicker": "GOOD DATA",
-        "terms": [
-          [
-            "Layers",
-            "Quantity",
-            "Enough examples"
-          ],
-          [
-            "BadgeCheck",
-            "Quality",
-            "Correct and clean"
-          ],
-          [
-            "Globe",
-            "Diversity",
-            "Many people and places"
-          ],
-          [
-            "RefreshCw",
-            "Freshness",
-            "Up to date"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "There's a famous rule, garbage in, garbage out. [1] If a face recognition model mostly sees light skinned faces, it can fail on darker skin. [2] With diverse, balanced data, it works fairly for everyone.",
-      "data": {
-        "heading": "Narrow vs diverse data",
-        "kicker": "GARBAGE IN, GARBAGE OUT",
-        "left": {
-          "icon": "TriangleAlert",
-          "title": "Narrow data",
-          "stat": "Works for some",
-          "label": "fails for everyone else"
-        },
-        "right": {
-          "icon": "Users",
-          "title": "Diverse data",
-          "stat": "Works for all",
-          "label": "fairer results"
-        }
-      }
-    },
-    {
-      "type": "steps",
-      "text": "So why keep some data aside? [1] The training set, which the model learns from. [2] The validation set, used to tune settings during training. [3] And the test set, kept completely hidden, like a final exam the model has never seen.",
-      "data": {
-        "heading": "The three splits",
-        "kicker": "TRAIN, TUNE, TEST",
-        "steps": [
-          [
-            "BookOpen",
-            "Training set",
-            "The model learns from it"
-          ],
-          [
-            "SlidersHorizontal",
-            "Validation set",
-            "Tune the settings"
-          ],
-          [
-            "GraduationCap",
-            "Test set",
-            "A final exam, never seen"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think more data is always better. [2] More helps, but only if it's good. A smaller, clean, well labelled dataset often beats a huge messy one. Quality usually matters more than quantity.",
-      "data": {
-        "myth": "More data is always better.",
-        "fact": "Only good data helps. A clean, well-labelled dataset often beats a huge messy one.",
-        "tip": "Quality over quantity"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Why keep a test set hidden from the model during training? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] To check how it does on data it has never seen, just like a real exam!",
-      "data": {
-        "question": "We hide the test set to…",
-        "options": [
-          "Save storage space",
-          "Check it on data it's never seen",
-          "Make training faster"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Training data is what the model learns from. [2] It's collected, cleaned, labelled and split. [3] Good data is high quality, diverse and fresh. [4] And the test set is a hidden final exam. [5] Next, a real world breakdown, how delivery apps predict when your food will arrive. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Data",
-            "what the model learns from"
-          ],
-          [
-            "Pipeline",
-            "collect, clean, label, split"
-          ],
-          [
-            "Good data",
-            "quality, diversity, freshness"
-          ],
-          [
-            "Test set",
-            "a hidden final exam"
-          ]
-        ],
-        "next": "Use Case · Delivery ETA"
-      }
+    "right": {
+     "icon": "Users",
+     "title": "Diverse data",
+     "stat": "Works for all",
+     "label": "fairer results"
     }
-  ],
-  "post": {
-    "caption": "An AI model can only be as good as the data it learns from.\n\nEpisode 25 of AI From Scratch: Training Data\n- What training data is, for LLMs, vision and spam filters\n- The data pipeline: collect, clean, label, split\n- What makes data good: quantity, quality, diversity, freshness\n- Garbage in, garbage out: why narrow data hurts fairness\n- Training, validation and test sets\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How delivery apps predict when your food arrives.\nFollow @ai_maastaaru for the full series.",
-    "tags": "#AIMaastaaru #TrainingData #LearnAI #DataScience #AIForBeginners",
-    "pinned": "Quiz answer: To check it on data it has never seen, like a real exam. Quality or quantity, which matters more? Comment!",
-    "cover": "'Training Data' title card",
-    "alt": "Animated lesson explaining AI training data, data pipelines, data quality and train/test splits."
+   }
+  },
+  {
+   "type": "steps",
+   "text": "So why keep some data aside? [1] The training set, which the model learns from. [2] The validation set, used to tune settings during training. [3] And the test set, kept completely hidden, like a final exam the model has never seen.",
+   "data": {
+    "heading": "The three splits",
+    "kicker": "TRAIN, TUNE, TEST",
+    "steps": [
+     [
+      "BookOpen",
+      "Training set",
+      "The model learns from it"
+     ],
+     [
+      "SlidersHorizontal",
+      "Validation set",
+      "Tune the settings"
+     ],
+     [
+      "GraduationCap",
+      "Test set",
+      "A final exam, never seen"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think more data is always better. [2] More helps, but only if it's good. A smaller, clean, well labelled dataset often beats a huge messy one. Quality usually matters more than quantity.",
+   "data": {
+    "myth": "More data is always better.",
+    "fact": "Only good data helps. A clean, well-labelled dataset often beats a huge messy one.",
+    "tip": "Quality over quantity"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Why keep a test set hidden from the model during training? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] To check how it does on data it has never seen, just like a real exam!",
+   "data": {
+    "question": "We hide the test set to…",
+    "options": [
+     "Save storage space",
+     "Check it on data it's never seen",
+     "Make training faster"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Training data is what the model learns from. [2] It's collected, cleaned, labelled and split. [3] Good data is high quality, diverse and fresh. [4] And the test set is a hidden final exam. [5] Next, we'll learn the difference between a model that memorises, and one that truly understands. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Data",
+      "what the model learns from"
+     ],
+     [
+      "Pipeline",
+      "collect, clean, label, split"
+     ],
+     [
+      "Good data",
+      "quality, diversity, freshness"
+     ],
+     [
+      "Test set",
+      "a hidden final exam"
+     ]
+    ],
+    "next": "EP 26 · Overfitting"
+   }
   }
+ ],
+ "post": {
+  "caption": "An AI model can only be as good as the data it learns from.\n\nEpisode 25 of AI From Scratch: Training Data\n- What training data is, for LLMs, vision and spam filters\n- The data pipeline: collect, clean, label, split\n- What makes data good: quantity, quality, diversity, freshness\n- Garbage in, garbage out: why narrow data hurts fairness\n- Training, validation and test sets\n\nQuiz at the end. Got it right? Comment below.\n\nNext: the difference between a model that memorises, and one that truly understands.\nFollow @ai_maastaaru for the full series.",
+  "tags": "#AIMaastaaru #TrainingData #LearnAI #DataScience #AIForBeginners",
+  "pinned": "Quiz answer: To check it on data it has never seen, like a real exam. Quality or quantity, which matters more? Comment!",
+  "cover": "'Training Data' title card",
+  "alt": "Animated lesson explaining AI training data, data pipelines, data quality and train/test splits."
+ }
 }

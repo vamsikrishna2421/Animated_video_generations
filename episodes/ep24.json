@@ -1,275 +1,276 @@
 {
-  "id": "ep24",
-  "episode": 24,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Supervised Unsupervised Reinforcement Learning",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep24",
+ "episode": 24,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Supervised Unsupervised Reinforcement Learning",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Machines can learn in three very different ways, a bit like how children learn. [1] With a teacher, by exploring on their own, or by trial and error. [2] Let's understand supervised, unsupervised, and reinforcement learning.",
+   "data": {
+    "kicker": "EPISODE 24",
+    "title": [
+     "3 Ways",
+     "AI Learns"
+    ],
+    "subtitle": "Supervised, unsupervised, reinforcement",
+    "buzzwords": [
+     "Labels",
+     "Clusters",
+     "Rewards",
+     "Training data",
+     "Patterns",
+     "Agents",
+     "Trial and error",
+     "Datasets"
+    ],
+    "hook": "3 ways machines learn, *just like kids*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Machines can learn in three very different ways, a bit like how children learn. [1] With a teacher, by exploring on their own, or by trial and error. [2] Let's understand supervised, unsupervised, and reinforcement learning.",
-      "data": {
-        "kicker": "EPISODE 24",
-        "title": [
-          "3 Ways",
-          "AI Learns"
-        ],
-        "subtitle": "Supervised, unsupervised, reinforcement",
-        "buzzwords": [
-          "Labels",
-          "Clusters",
-          "Rewards",
-          "Training data",
-          "Patterns",
-          "Agents",
-          "Trial and error",
-          "Datasets"
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Here are the three types. [1] Supervised learning, learning from labelled examples, like a teacher giving you the answers. [2] Unsupervised learning, finding patterns in data with no labels at all. [3] And reinforcement learning, learning by trial and error, with rewards and penalties.",
-      "data": {
-        "heading": "The big three",
-        "kicker": "THREE WAYS TO LEARN",
-        "steps": [
-          [
-            "GraduationCap",
-            "Supervised",
-            "Examples with answers"
-          ],
-          [
-            "Search",
-            "Unsupervised",
-            "Find patterns alone"
-          ],
-          [
-            "Trophy",
-            "Reinforcement",
-            "Trial, error and rewards"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "Supervised learning is the most common. [1] You show the model thousands of examples, each with the correct answer, called a label. [2] Like emails marked spam or not spam, [3] photos labelled cat or dog, [4] or house details with their prices.",
-      "data": {
-        "term": "Supervised learning",
-        "short": "Labels",
-        "definition": "Learning from examples that come with the correct answer, called labels.",
-        "chips": [
-          [
-            "Mail",
-            "Spam or not"
-          ],
-          [
-            "Image",
-            "Cat or dog"
-          ],
-          [
-            "Home",
-            "House prices"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "embedmap",
-      "text": "Unsupervised learning has no answers at all. [1] The model just looks for natural groups in the data. Here, shoppers group themselves by what they buy. [2] Now a new shopper arrives, [3] and lands near the fitness group, so the store can suggest sports gear.",
-      "data": {
-        "heading": "Finding groups",
-        "kicker": "UNSUPERVISED",
-        "points": [
-          [
-            "Gym fan",
-            0.14,
-            0.2,
-            0
-          ],
-          [
-            "Runner",
-            0.32,
-            0.12,
-            0
-          ],
-          [
-            "Yoga fan",
-            0.2,
-            0.36,
-            0
-          ],
-          [
-            "Gamer",
-            0.68,
-            0.18,
-            1
-          ],
-          [
-            "Streamer",
-            0.86,
-            0.3,
-            1
-          ],
-          [
-            "Techie",
-            0.62,
-            0.36,
-            1
-          ],
-          [
-            "Chef",
-            0.56,
-            0.72,
-            2
-          ],
-          [
-            "Baker",
-            0.8,
-            0.82,
-            2
-          ],
-          [
-            "Foodie",
-            0.4,
-            0.86,
-            2
-          ]
-        ],
-        "query": [
-          "New shopper",
-          0.28,
-          0.26
-        ],
-        "neighbors": [
-          "Runner",
-          "Gym fan"
-        ],
-        "note": "Groups found without any labels"
-      }
-    },
-    {
-      "type": "agentloop",
-      "text": "Reinforcement learning is learning by trial and error. [1] An agent tries an action, sees what happens, and gets a reward or a penalty. Take a game playing AI. [2] It moves, and loses points for crashing. [3] It gains points for collecting coins. [4] It tries new paths, and scores big. [5] And after millions of games, it becomes an expert.",
-      "data": {
-        "goalLabel": "GOAL",
-        "goal": "Win the game",
-        "stages": [
-          [
-            "Gamepad2",
-            "Act"
-          ],
-          [
-            "Eye",
-            "Observe"
-          ],
-          [
-            "Trophy",
-            "Reward"
-          ]
-        ],
-        "log": [
-          "move right → crashed, −10",
-          "move up → collected a coin, +5",
-          "try a new path → scored, +50",
-          "✓ after millions of games: expert"
-        ]
-      }
-    },
-    {
-      "type": "table",
-      "text": "Here's a quick cheat sheet. [1] Three types, side by side. [2] Supervised needs labels, like a spam filter. [3] Unsupervised needs no labels, like finding customer groups. [4] And reinforcement uses rewards instead of labels, like a game playing AI.",
-      "data": {
-        "heading": "Side by side",
-        "kicker": "THE CHEAT SHEET",
-        "cols": [
-          "Labels?",
-          "Example"
-        ],
-        "rows": [
-          [
-            "Supervised",
-            "✓",
-            "Spam filter"
-          ],
-          [
-            "Unsupervised",
-            "✗",
-            "Customer groups"
-          ],
-          [
-            "Reinforcement",
-            "Rewards",
-            "Game-playing AI"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think modern AI uses only one of these. [2] Big models like ChatGPT use all three. Pre-training learns patterns from raw text, fine-tuning uses labelled examples, and human feedback uses rewards, which we'll explore in a later episode.",
-      "data": {
-        "myth": "Modern AI uses only one type of learning.",
-        "fact": "Big models use all three: raw-text pre-training, labelled fine-tuning, and reward-based feedback.",
-        "tip": "LLMs mix all three"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! A robot learns to walk by falling, getting up, and earning points for every step. Which type of learning is that? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Reinforcement learning! Trial, error and rewards.",
-      "data": {
-        "question": "Learning to walk with points is…",
-        "options": [
-          "Supervised",
-          "Unsupervised",
-          "Reinforcement"
-        ],
-        "answer": 2
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Supervised learning uses examples with answers. [2] Unsupervised learning finds groups on its own. [3] Reinforcement learning uses trial, error and rewards. [4] And big language models use all three. [5] Next, a real world breakdown, how banks catch UPI and card fraud in milliseconds. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Supervised",
-            "examples with answers"
-          ],
-          [
-            "Unsupervised",
-            "find groups alone"
-          ],
-          [
-            "Reinforcement",
-            "trial, error, rewards"
-          ],
-          [
-            "LLMs",
-            "use all three"
-          ]
-        ],
-        "next": "Use Case · UPI fraud detection"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Machines learn in three ways: with a teacher, on their own, or by trial and error.\n\nEpisode 24 of AI From Scratch: Supervised vs Unsupervised vs Reinforcement Learning\n- Supervised: examples with answers (spam, cat vs dog, house prices)\n- Unsupervised: finding groups with no labels\n- Reinforcement: trial, error and rewards\n- Side-by-side cheat sheet\n- The myth: \"modern AI uses only one type\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How banks catch UPI and card fraud.\nFollow @ai_maastaaru for the full series.",
-    "tags": "#AIMaastaaru #MachineLearning #LearnAI #DataScience #AIForBeginners",
-    "pinned": "Quiz answer: Reinforcement learning, trial, error and rewards. Which type do you think YOU use most when learning?",
-    "cover": "'3 Ways AI Learns' title card",
-    "alt": "Animated lesson explaining supervised, unsupervised and reinforcement learning with everyday examples."
+  {
+   "type": "steps",
+   "text": "Here are the three types. [1] Supervised learning, learning from labelled examples, like a teacher giving you the answers. [2] Unsupervised learning, finding patterns in data with no labels at all. [3] And reinforcement learning, learning by trial and error, with rewards and penalties.",
+   "data": {
+    "heading": "The big three",
+    "kicker": "THREE WAYS TO LEARN",
+    "steps": [
+     [
+      "GraduationCap",
+      "Supervised",
+      "Examples with answers"
+     ],
+     [
+      "Search",
+      "Unsupervised",
+      "Find patterns alone"
+     ],
+     [
+      "Trophy",
+      "Reinforcement",
+      "Trial, error and rewards"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "Supervised learning is the most common. [1] You show the model thousands of examples, each with the correct answer, called a label. [2] Like emails marked spam or not spam, [3] photos labelled cat or dog, [4] or house details with their prices.",
+   "data": {
+    "term": "Supervised learning",
+    "short": "Labels",
+    "definition": "Learning from examples that come with the correct answer, called labels.",
+    "chips": [
+     [
+      "Mail",
+      "Spam or not"
+     ],
+     [
+      "Image",
+      "Cat or dog"
+     ],
+     [
+      "Home",
+      "House prices"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "embedmap",
+   "text": "Unsupervised learning has no answers at all. [1] The model just looks for natural groups in the data. Here, shoppers group themselves by what they buy. [2] Now a new shopper arrives, [3] and lands near the fitness group, so the store can suggest sports gear.",
+   "data": {
+    "heading": "Finding groups",
+    "kicker": "UNSUPERVISED",
+    "points": [
+     [
+      "Gym fan",
+      0.14,
+      0.2,
+      0
+     ],
+     [
+      "Runner",
+      0.32,
+      0.12,
+      0
+     ],
+     [
+      "Yoga fan",
+      0.2,
+      0.36,
+      0
+     ],
+     [
+      "Gamer",
+      0.68,
+      0.18,
+      1
+     ],
+     [
+      "Streamer",
+      0.86,
+      0.3,
+      1
+     ],
+     [
+      "Techie",
+      0.62,
+      0.36,
+      1
+     ],
+     [
+      "Chef",
+      0.56,
+      0.72,
+      2
+     ],
+     [
+      "Baker",
+      0.8,
+      0.82,
+      2
+     ],
+     [
+      "Foodie",
+      0.4,
+      0.86,
+      2
+     ]
+    ],
+    "query": [
+     "New shopper",
+     0.28,
+     0.26
+    ],
+    "neighbors": [
+     "Runner",
+     "Gym fan"
+    ],
+    "note": "Groups found without any labels"
+   }
+  },
+  {
+   "type": "agentloop",
+   "text": "Reinforcement learning is learning by trial and error. [1] An agent tries an action, sees what happens, and gets a reward or a penalty. Take a game playing AI. [2] It moves, and loses points for crashing. [3] It gains points for collecting coins. [4] It tries new paths, and scores big. [5] And after millions of games, it becomes an expert.",
+   "data": {
+    "goalLabel": "GOAL",
+    "goal": "Win the game",
+    "stages": [
+     [
+      "Gamepad2",
+      "Act"
+     ],
+     [
+      "Eye",
+      "Observe"
+     ],
+     [
+      "Trophy",
+      "Reward"
+     ]
+    ],
+    "log": [
+     "move right → crashed, −10",
+     "move up → collected a coin, +5",
+     "try a new path → scored, +50",
+     "✓ after millions of games: expert"
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "text": "Here's a quick cheat sheet. [1] Three types, side by side. [2] Supervised needs labels, like a spam filter. [3] Unsupervised needs no labels, like finding customer groups. [4] And reinforcement uses rewards instead of labels, like a game playing AI.",
+   "data": {
+    "heading": "Side by side",
+    "kicker": "THE CHEAT SHEET",
+    "cols": [
+     "Labels?",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Supervised",
+      "✓",
+      "Spam filter"
+     ],
+     [
+      "Unsupervised",
+      "✗",
+      "Customer groups"
+     ],
+     [
+      "Reinforcement",
+      "Rewards",
+      "Game-playing AI"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think modern AI uses only one of these. [2] Big models like ChatGPT use all three. Pre-training learns patterns from raw text, fine-tuning uses labelled examples, and human feedback uses rewards, which we'll explore in a later episode.",
+   "data": {
+    "myth": "Modern AI uses only one type of learning.",
+    "fact": "Big models use all three: raw-text pre-training, labelled fine-tuning, and reward-based feedback.",
+    "tip": "LLMs mix all three"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! A robot learns to walk by falling, getting up, and earning points for every step. Which type of learning is that? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Reinforcement learning! Trial, error and rewards.",
+   "data": {
+    "question": "Learning to walk with points is…",
+    "options": [
+     "Supervised",
+     "Unsupervised",
+     "Reinforcement"
+    ],
+    "answer": 2
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Supervised learning uses examples with answers. [2] Unsupervised learning finds groups on its own. [3] Reinforcement learning uses trial, error and rewards. [4] And big language models use all three. [5] Next, we'll learn why data is the real fuel of AI. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Supervised",
+      "examples with answers"
+     ],
+     [
+      "Unsupervised",
+      "find groups alone"
+     ],
+     [
+      "Reinforcement",
+      "trial, error, rewards"
+     ],
+     [
+      "LLMs",
+      "use all three"
+     ]
+    ],
+    "next": "EP 25 · Training data"
+   }
   }
+ ],
+ "post": {
+  "caption": "Machines learn in three ways: with a teacher, on their own, or by trial and error.\n\nEpisode 24 of AI From Scratch: Supervised vs Unsupervised vs Reinforcement Learning\n- Supervised: examples with answers (spam, cat vs dog, house prices)\n- Unsupervised: finding groups with no labels\n- Reinforcement: trial, error and rewards\n- Side-by-side cheat sheet\n- The myth: \"modern AI uses only one type\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: why data is the real fuel of AI.\nFollow @ai_maastaaru for the full series.",
+  "tags": "#AIMaastaaru #MachineLearning #LearnAI #DataScience #AIForBeginners",
+  "pinned": "Quiz answer: Reinforcement learning, trial, error and rewards. Which type do you think YOU use most when learning?",
+  "cover": "'3 Ways AI Learns' title card",
+  "alt": "Animated lesson explaining supervised, unsupervised and reinforcement learning with everyday examples."
+ }
 }

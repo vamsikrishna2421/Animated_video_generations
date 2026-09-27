@@ -1,217 +1,218 @@
 {
-  "id": "ep27",
-  "episode": 27,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Transformers Part 1 Attention",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep27",
+ "episode": 27,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Transformers Part 1 Attention",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Almost every modern AI, ChatGPT, Claude, Gemini, even many image and music models, is built on one design from 2017, the transformer. [1] And its secret ingredient is called attention. [2] So let's understand it, in part one.",
+   "data": {
+    "kicker": "EPISODE 27",
+    "title": [
+     "Attention"
+    ],
+    "subtitle": "Transformers, Part 1: the key idea",
+    "buzzwords": [
+     "Transformer",
+     "Self-attention",
+     "Context",
+     "Multi-head",
+     "2017",
+     "Parallel",
+     "Tokens",
+     "GPT"
+    ],
+    "hook": "The *one idea* behind ChatGPT"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Almost every modern AI, ChatGPT, Claude, Gemini, even many image and music models, is built on one design from 2017, the transformer. [1] And its secret ingredient is called attention. [2] So let's understand it, in part one.",
-      "data": {
-        "kicker": "EPISODE 27",
-        "title": [
-          "Attention"
-        ],
-        "subtitle": "Transformers, Part 1: the key idea",
-        "buzzwords": [
-          "Transformer",
-          "Self-attention",
-          "Context",
-          "Multi-head",
-          "2017",
-          "Parallel",
-          "Tokens",
-          "GPT"
-        ]
-      }
+  {
+   "type": "definition",
+   "text": "Attention is the idea that each word can look at every other word, and decide which ones matter. [1] It's how a model understands context. [2] Each word asks, which other words help explain me? [3] It gives those words more weight, [4] and builds its meaning from them.",
+   "data": {
+    "term": "Attention",
+    "short": "Focus",
+    "definition": "Each word looks at every other word and decides which ones matter for its meaning.",
+    "chips": [
+     [
+      "Eye",
+      "Look at all words"
+     ],
+     [
+      "SlidersHorizontal",
+      "Weigh the important ones"
+     ],
+     [
+      "Sparkles",
+      "Build the meaning"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Here's an example. Take the word bank. [1] In, I sat on the river bank, attention links bank to river, so it means the side of a river. [2] In, I deposited money in the bank, attention links bank to money, and deposited. [3] Same word, different meaning, and attention works it out from context.",
+   "data": {
+    "heading": "One word, two meanings",
+    "kicker": "ATTENTION IN ACTION",
+    "steps": [
+     [
+      "Waves",
+      "“river bank”",
+      "bank ↔ river → riverside"
+     ],
+     [
+      "Landmark",
+      "“money in the bank”",
+      "bank ↔ money, deposited"
+     ],
+     [
+      "Lightbulb",
+      "Context decides",
+      "Same word, different meaning"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "So why was this such a big deal? [1] Older models read text one word at a time, and often forgot the start of long passages. [2] Transformers look at all the words at once, so they capture long range meaning, and train much faster on powerful chips.",
+   "data": {
+    "heading": "Old vs transformer",
+    "kicker": "WHY IT CHANGED EVERYTHING",
+    "left": {
+     "icon": "ArrowRight",
+     "title": "Older models",
+     "stat": "One word at a time",
+     "label": "forget the beginning"
     },
-    {
-      "type": "definition",
-      "text": "Attention is the idea that each word can look at every other word, and decide which ones matter. [1] It's how a model understands context. [2] Each word asks, which other words help explain me? [3] It gives those words more weight, [4] and builds its meaning from them.",
-      "data": {
-        "term": "Attention",
-        "short": "Focus",
-        "definition": "Each word looks at every other word and decides which ones matter for its meaning.",
-        "chips": [
-          [
-            "Eye",
-            "Look at all words"
-          ],
-          [
-            "SlidersHorizontal",
-            "Weigh the important ones"
-          ],
-          [
-            "Sparkles",
-            "Build the meaning"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Here's an example. Take the word bank. [1] In, I sat on the river bank, attention links bank to river, so it means the side of a river. [2] In, I deposited money in the bank, attention links bank to money, and deposited. [3] Same word, different meaning, and attention works it out from context.",
-      "data": {
-        "heading": "One word, two meanings",
-        "kicker": "ATTENTION IN ACTION",
-        "steps": [
-          [
-            "Waves",
-            "“river bank”",
-            "bank ↔ river → riverside"
-          ],
-          [
-            "Landmark",
-            "“money in the bank”",
-            "bank ↔ money, deposited"
-          ],
-          [
-            "Lightbulb",
-            "Context decides",
-            "Same word, different meaning"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "So why was this such a big deal? [1] Older models read text one word at a time, and often forgot the start of long passages. [2] Transformers look at all the words at once, so they capture long range meaning, and train much faster on powerful chips.",
-      "data": {
-        "heading": "Old vs transformer",
-        "kicker": "WHY IT CHANGED EVERYTHING",
-        "left": {
-          "icon": "ArrowRight",
-          "title": "Older models",
-          "stat": "One word at a time",
-          "label": "forget the beginning"
-        },
-        "right": {
-          "icon": "Layers",
-          "title": "Transformers",
-          "stat": "All words at once",
-          "label": "long context, fast training"
-        }
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are a few terms. [1] Self attention, where words in the same sentence look at each other. [2] Attention weights, how strongly one word focuses on another. [3] Multi head attention, many attention patterns at once, like one for grammar, and one for meaning. [4] And parallel processing, handling all the words together.",
-      "data": {
-        "heading": "Attention words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Repeat",
-            "Self-attention",
-            "Words look at each other"
-          ],
-          [
-            "SlidersHorizontal",
-            "Attention weights",
-            "How strong each link is"
-          ],
-          [
-            "Layers",
-            "Multi-head",
-            "Many patterns at once"
-          ],
-          [
-            "Zap",
-            "Parallel",
-            "All words together"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where are transformers used? [1] In chatbots and LLMs, like ChatGPT, Claude and Gemini. [2] In translation, which is actually where transformers started. [3] And even in images and audio, where patches and sound tokens attend to each other.",
-      "data": {
-        "heading": "Transformers everywhere",
-        "items": [
-          [
-            "MessageSquare",
-            "LLMs",
-            "ChatGPT, Claude, Gemini"
-          ],
-          [
-            "Languages",
-            "Translation",
-            "Where transformers started"
-          ],
-          [
-            "Image",
-            "Images and audio",
-            "Patches and sound tokens"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think attention means the AI is focusing, like a person paying attention. [2] It's just maths, a way of computing how related each word is to every other word. The name is a helpful metaphor, not a sign of awareness.",
-      "data": {
-        "myth": "Attention means the AI is consciously focusing.",
-        "fact": "It's maths: computing how related each word is to every other word. The name is a metaphor.",
-        "tip": "Helpful name, simple maths"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! In the sentence, I sat on the river bank, which word helps the model understand bank? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] River! Attention links bank to river, so it means a riverside.",
-      "data": {
-        "question": "In “I sat on the river bank”, bank is explained by…",
-        "options": [
-          "sat",
-          "river",
-          "I"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Attention lets every word look at every other word. [2] Context decides the meaning. [3] Transformers read all the words at once, not one at a time. [4] And they power text, image and audio models. [5] In part two, we'll see how a transformer turns attention into a full answer. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Attention",
-            "words look at each other"
-          ],
-          [
-            "Context",
-            "decides the meaning"
-          ],
-          [
-            "All at once",
-            "not one word at a time"
-          ],
-          [
-            "Everywhere",
-            "text, images, audio"
-          ]
-        ],
-        "next": "EP 28 · Transformers, Part 2"
-      }
+    "right": {
+     "icon": "Layers",
+     "title": "Transformers",
+     "stat": "All words at once",
+     "label": "long context, fast training"
     }
-  ],
-  "post": {
-    "caption": "ChatGPT, Claude, Gemini: almost every modern AI runs on one idea from 2017. It's called attention.\n\nEpisode 27 of AI From Scratch: Transformers, Part 1: Attention\n- What attention is, in plain words\n- One word, two meanings: river bank vs money in the bank\n- Why transformers beat older models\n- Jargon: self-attention, attention weights, multi-head\n- The myth: \"attention means the AI is focusing like a person\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Transformers, Part 2: from attention to answers.\nFollow @ai_maastaaru for the full series.",
-    "tags": "#AIMaastaaru #Transformers #LearnAI #LLM #AIForBeginners",
-    "pinned": "Quiz answer: River. Attention links bank to river, so it means a riverside. Can you think of another word with two meanings?",
-    "cover": "'Attention' title card",
-    "alt": "Animated lesson explaining attention in transformer models using the word 'bank' in two different contexts."
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are a few terms. [1] Self attention, where words in the same sentence look at each other. [2] Attention weights, how strongly one word focuses on another. [3] Multi head attention, many attention patterns at once, like one for grammar, and one for meaning. [4] And parallel processing, handling all the words together.",
+   "data": {
+    "heading": "Attention words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Repeat",
+      "Self-attention",
+      "Words look at each other"
+     ],
+     [
+      "SlidersHorizontal",
+      "Attention weights",
+      "How strong each link is"
+     ],
+     [
+      "Layers",
+      "Multi-head",
+      "Many patterns at once"
+     ],
+     [
+      "Zap",
+      "Parallel",
+      "All words together"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where are transformers used? [1] In chatbots and LLMs, like ChatGPT, Claude and Gemini. [2] In translation, which is actually where transformers started. [3] And even in images and audio, where patches and sound tokens attend to each other.",
+   "data": {
+    "heading": "Transformers everywhere",
+    "items": [
+     [
+      "MessageSquare",
+      "LLMs",
+      "ChatGPT, Claude, Gemini"
+     ],
+     [
+      "Languages",
+      "Translation",
+      "Where transformers started"
+     ],
+     [
+      "Image",
+      "Images and audio",
+      "Patches and sound tokens"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think attention means the AI is focusing, like a person paying attention. [2] It's just maths, a way of computing how related each word is to every other word. The name is a helpful metaphor, not a sign of awareness.",
+   "data": {
+    "myth": "Attention means the AI is consciously focusing.",
+    "fact": "It's maths: computing how related each word is to every other word. The name is a metaphor.",
+    "tip": "Helpful name, simple maths"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! In the sentence, I sat on the river bank, which word helps the model understand bank? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] River! Attention links bank to river, so it means a riverside.",
+   "data": {
+    "question": "In “I sat on the river bank”, bank is explained by…",
+    "options": [
+     "sat",
+     "river",
+     "I"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Attention lets every word look at every other word. [2] Context decides the meaning. [3] Transformers read all the words at once, not one at a time. [4] And they power text, image and audio models. [5] In part two, we'll see how a transformer turns attention into a full answer. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Attention",
+      "words look at each other"
+     ],
+     [
+      "Context",
+      "decides the meaning"
+     ],
+     [
+      "All at once",
+      "not one word at a time"
+     ],
+     [
+      "Everywhere",
+      "text, images, audio"
+     ]
+    ],
+    "next": "EP 28 · Transformers, Part 2"
+   }
   }
+ ],
+ "post": {
+  "caption": "ChatGPT, Claude, Gemini: almost every modern AI runs on one idea from 2017. It's called attention.\n\nEpisode 27 of AI From Scratch: Transformers, Part 1: Attention\n- What attention is, in plain words\n- One word, two meanings: river bank vs money in the bank\n- Why transformers beat older models\n- Jargon: self-attention, attention weights, multi-head\n- The myth: \"attention means the AI is focusing like a person\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Transformers, Part 2: from attention to answers.\nFollow @ai_maastaaru for the full series.",
+  "tags": "#AIMaastaaru #Transformers #LearnAI #LLM #AIForBeginners",
+  "pinned": "Quiz answer: River. Attention links bank to river, so it means a riverside. Can you think of another word with two meanings?",
+  "cover": "'Attention' title card",
+  "alt": "Animated lesson explaining attention in transformer models using the word 'bank' in two different contexts."
+ }
 }

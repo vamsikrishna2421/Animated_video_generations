@@ -1,233 +1,234 @@
 {
-  "id": "uc20",
-  "episode": 20,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 20",
-  "handle": "@ai_maastaaru",
-  "title": "How Crop Disease Detection Apps Work",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc20",
+ "episode": 20,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 20",
+ "handle": "@ai_maastaaru",
+ "title": "How Crop Disease Detection Apps Work",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "A farmer notices strange spots on her tomato leaves. [1] She takes a photo with her phone, and within seconds, an app names the disease, and suggests what to do. [2] Let's break down how crop disease apps work.",
+   "data": {
+    "kicker": "USE CASE 20",
+    "title": [
+     "Crop",
+     "Doctor AI"
+    ],
+    "subtitle": "A plant doctor in your pocket",
+    "buzzwords": [
+     "Agriculture",
+     "Leaf photos",
+     "Classification",
+     "Offline",
+     "Local language",
+     "Farmers",
+     "Edge AI",
+     "Harvest"
+    ],
+    "hook": "A plant doctor *in your pocket*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "A farmer notices strange spots on her tomato leaves. [1] She takes a photo with her phone, and within seconds, an app names the disease, and suggests what to do. [2] Let's break down how crop disease apps work.",
-      "data": {
-        "kicker": "USE CASE 20",
-        "title": [
-          "Crop",
-          "Doctor AI"
-        ],
-        "subtitle": "A plant doctor in your pocket",
-        "buzzwords": [
-          "Agriculture",
-          "Leaf photos",
-          "Classification",
-          "Offline",
-          "Local language",
-          "Farmers",
-          "Edge AI",
-          "Harvest"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's how it works. [1] The farmer photographs the affected leaf. [2] The app checks the photo is clear, and finds the leaf. [3] A vision model classifies the problem, like early blight, or healthy. [4] It gives a confidence score, like 92 percent sure, [5] and shows advice in the farmer's own language.",
-      "data": {
-        "heading": "From photo to advice",
-        "nodes": [
-          [
-            "Camera",
-            "Photo",
-            "A spotted tomato leaf"
-          ],
-          [
-            "Crop",
-            "Find the leaf",
-            "Check it's clear"
-          ],
-          [
-            "ScanSearch",
-            "Classify",
-            "Early blight? Healthy?"
-          ],
-          [
-            "Gauge",
-            "Confidence",
-            "For example, 92% sure"
-          ],
-          [
-            "Languages",
-            "Advice",
-            "In the farmer's language"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "At its heart, it's image classification, from episode 29. [1] The model was trained on thousands of labelled leaf photos. [2] Healthy leaves, [3] leaves with different diseases and pests, [4] and leaves showing nutrient problems.",
-      "data": {
-        "term": "Image classification",
-        "short": "Classify",
-        "definition": "A vision model that sorts a photo into one of several labels, like a disease name.",
-        "chips": [
-          [
-            "Leaf",
-            "Healthy leaves"
-          ],
-          [
-            "Bug",
-            "Diseases and pests"
-          ],
-          [
-            "Sprout",
-            "Nutrient problems"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "To really work for farmers, the app needs a few special features. [1] It works offline, with a small model on the phone, because fields often have weak signal. [2] It speaks local languages, with voice, for farmers who prefer listening. [3] And it connects to human experts, when the model isn't sure.",
-      "data": {
-        "heading": "Built for farmers",
-        "kicker": "WHAT MAKES IT WORK",
-        "steps": [
-          [
-            "WifiOff",
-            "Works offline",
-            "A small on-device model"
-          ],
-          [
-            "Mic",
-            "Local language",
-            "Voice advice in Telugu, Hindi…"
-          ],
-          [
-            "UserRound",
-            "Expert backup",
-            "When it's not sure"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] The dataset, the labelled photos it learned from. [2] Confidence, how sure the model is. [3] Edge AI, running the model on the phone itself. [4] And transfer learning, starting from a model trained on general photos, then teaching it about leaves.",
-      "data": {
-        "heading": "Crop AI words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Database",
-            "Dataset",
-            "Labelled leaf photos"
-          ],
-          [
-            "Gauge",
-            "Confidence",
-            "How sure it is"
-          ],
-          [
-            "Smartphone",
-            "Edge AI",
-            "Runs on the phone"
-          ],
-          [
-            "RefreshCw",
-            "Transfer learning",
-            "General model → leaf expert"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where does it help? [1] Farmers catch crop diseases early, and save their harvest. [2] Agriculture officers check many farms quickly. [3] And researchers track where diseases are spreading.",
-      "data": {
-        "heading": "Where it helps",
-        "items": [
-          [
-            "Sprout",
-            "Farmers",
-            "Catch diseases early"
-          ],
-          [
-            "ClipboardList",
-            "Field officers",
-            "Check many farms fast"
-          ],
-          [
-            "Map",
-            "Researchers",
-            "Track outbreaks"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think the app's answer is always right, so they can spray chemicals straight away. [2] It's a helpful first opinion, but similar looking diseases can confuse it. For serious problems, confirm with a local agriculture expert.",
-      "data": {
-        "myth": "The app is always right, so spray chemicals straight away.",
-        "fact": "It's a helpful first opinion, but look-alike diseases can confuse it. Confirm serious cases with an expert.",
-        "tip": "AI first, expert confirms"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Why do crop apps often run the model on the phone itself? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Because fields often have weak internet, so it has to work offline!",
-      "data": {
-        "question": "They run on the phone because…",
-        "options": [
-          "Fields often have weak internet",
-          "Phones are bigger",
-          "It looks cooler"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] The farmer photographs the affected leaf. [2] A model trained on labelled leaves classifies the problem. [3] It runs offline, as a small model on the phone. [4] And serious cases should be confirmed with an expert. [5] Next, we'll learn how AI learns good manners, with human feedback. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Photo",
-            "of the affected leaf"
-          ],
-          [
-            "Classify",
-            "trained on labelled leaves"
-          ],
-          [
-            "Offline",
-            "small model on the phone"
-          ],
-          [
-            "Confirm",
-            "with an expert if serious"
-          ]
-        ],
-        "next": "EP 30 · RLHF"
-      }
-    }
-  ],
-  "post": {
-    "caption": "A photo of a spotted leaf, and seconds later the app names the disease. AI for farmers.\n\nReal World AI, Use Case 20: crop disease detection\n- The flow: photo, find the leaf, classify, confidence, advice\n- Image classification trained on labelled leaves\n- Built for farmers: offline, local language, expert backup\n- Jargon: dataset, confidence, edge AI, transfer learning\n- Reminder: confirm serious problems with an expert\n\nQuiz at the end. Got it right? Comment below.\n\nNext: RLHF, how AI learns good manners.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #AgriTech #LearnAI #AIforGood #AIForBeginners",
-    "pinned": "Quiz answer: Fields often have weak internet, so it has to work offline. Know a farmer who'd find this useful? Share it with them!",
-    "cover": "'Crop Doctor AI' title card",
-    "alt": "Animated breakdown of how crop disease apps use image classification on phones to help farmers."
+  {
+   "type": "pipeline",
+   "text": "Here's how it works. [1] The farmer photographs the affected leaf. [2] The app checks the photo is clear, and finds the leaf. [3] A vision model classifies the problem, like early blight, or healthy. [4] It gives a confidence score, like 92 percent sure, [5] and shows advice in the farmer's own language.",
+   "data": {
+    "heading": "From photo to advice",
+    "nodes": [
+     [
+      "Camera",
+      "Photo",
+      "A spotted tomato leaf"
+     ],
+     [
+      "Crop",
+      "Find the leaf",
+      "Check it's clear"
+     ],
+     [
+      "ScanSearch",
+      "Classify",
+      "Early blight? Healthy?"
+     ],
+     [
+      "Gauge",
+      "Confidence",
+      "For example, 92% sure"
+     ],
+     [
+      "Languages",
+      "Advice",
+      "In the farmer's language"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "At its heart, it's image classification, from episode 29. [1] The model was trained on thousands of labelled leaf photos. [2] Healthy leaves, [3] leaves with different diseases and pests, [4] and leaves showing nutrient problems.",
+   "data": {
+    "term": "Image classification",
+    "short": "Classify",
+    "definition": "A vision model that sorts a photo into one of several labels, like a disease name.",
+    "chips": [
+     [
+      "Leaf",
+      "Healthy leaves"
+     ],
+     [
+      "Bug",
+      "Diseases and pests"
+     ],
+     [
+      "Sprout",
+      "Nutrient problems"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "To really work for farmers, the app needs a few special features. [1] It works offline, with a small model on the phone, because fields often have weak signal. [2] It speaks local languages, with voice, for farmers who prefer listening. [3] And it connects to human experts, when the model isn't sure.",
+   "data": {
+    "heading": "Built for farmers",
+    "kicker": "WHAT MAKES IT WORK",
+    "steps": [
+     [
+      "WifiOff",
+      "Works offline",
+      "A small on-device model"
+     ],
+     [
+      "Mic",
+      "Local language",
+      "Voice advice in Telugu, Hindi…"
+     ],
+     [
+      "UserRound",
+      "Expert backup",
+      "When it's not sure"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] The dataset, the labelled photos it learned from. [2] Confidence, how sure the model is. [3] Edge AI, running the model on the phone itself. [4] And transfer learning, starting from a model trained on general photos, then teaching it about leaves.",
+   "data": {
+    "heading": "Crop AI words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Database",
+      "Dataset",
+      "Labelled leaf photos"
+     ],
+     [
+      "Gauge",
+      "Confidence",
+      "How sure it is"
+     ],
+     [
+      "Smartphone",
+      "Edge AI",
+      "Runs on the phone"
+     ],
+     [
+      "RefreshCw",
+      "Transfer learning",
+      "General model → leaf expert"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where does it help? [1] Farmers catch crop diseases early, and save their harvest. [2] Agriculture officers check many farms quickly. [3] And researchers track where diseases are spreading.",
+   "data": {
+    "heading": "Where it helps",
+    "items": [
+     [
+      "Sprout",
+      "Farmers",
+      "Catch diseases early"
+     ],
+     [
+      "ClipboardList",
+      "Field officers",
+      "Check many farms fast"
+     ],
+     [
+      "Map",
+      "Researchers",
+      "Track outbreaks"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think the app's answer is always right, so they can spray chemicals straight away. [2] It's a helpful first opinion, but similar looking diseases can confuse it. For serious problems, confirm with a local agriculture expert.",
+   "data": {
+    "myth": "The app is always right, so spray chemicals straight away.",
+    "fact": "It's a helpful first opinion, but look-alike diseases can confuse it. Confirm serious cases with an expert.",
+    "tip": "AI first, expert confirms"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Why do crop apps often run the model on the phone itself? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Because fields often have weak internet, so it has to work offline!",
+   "data": {
+    "question": "They run on the phone because…",
+    "options": [
+     "Fields often have weak internet",
+     "Phones are bigger",
+     "It looks cooler"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] The farmer photographs the affected leaf. [2] A model trained on labelled leaves classifies the problem. [3] It runs offline, as a small model on the phone. [4] And serious cases should be confirmed with an expert. [5] Next, use case 21, how wake words like, hey Siri, work. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Photo",
+      "of the affected leaf"
+     ],
+     [
+      "Classify",
+      "trained on labelled leaves"
+     ],
+     [
+      "Offline",
+      "small model on the phone"
+     ],
+     [
+      "Confirm",
+      "with an expert if serious"
+     ]
+    ],
+    "next": "USE CASE 21 · Wake words"
+   }
   }
+ ],
+ "post": {
+  "caption": "A photo of a spotted leaf, and seconds later the app names the disease. AI for farmers.\n\nReal World AI, Use Case 20: crop disease detection\n- The flow: photo, find the leaf, classify, confidence, advice\n- Image classification trained on labelled leaves\n- Built for farmers: offline, local language, expert backup\n- Jargon: dataset, confidence, edge AI, transfer learning\n- Reminder: confirm serious problems with an expert\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How wake words like, hey Siri, work.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #AgriTech #LearnAI #AIforGood #AIForBeginners",
+  "pinned": "Quiz answer: Fields often have weak internet, so it has to work offline. Know a farmer who'd find this useful? Share it with them!",
+  "cover": "'Crop Doctor AI' title card",
+  "alt": "Animated breakdown of how crop disease apps use image classification on phones to help farmers."
+ }
 }

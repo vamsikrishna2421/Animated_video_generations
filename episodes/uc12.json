@@ -1,238 +1,239 @@
 {
-  "id": "uc12",
-  "episode": 12,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 12",
-  "handle": "@ai_maastaaru",
-  "title": "How AI Tutor Apps Work",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc12",
+ "episode": 12,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 12",
+ "handle": "@ai_maastaaru",
+ "title": "How AI Tutor Apps Work",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Stuck on a maths problem at 11 PM, you ask an AI tutor, and instead of just giving the answer, it asks you a question back. [1] So how do AI tutor apps actually teach? [2] Let's break it down.",
+   "data": {
+    "kicker": "USE CASE 12",
+    "title": [
+     "AI",
+     "Tutors"
+    ],
+    "subtitle": "How AI teaches you",
+    "buzzwords": [
+     "Hints",
+     "Syllabus",
+     "RAG",
+     "Memory",
+     "Adaptive",
+     "Practice",
+     "Socratic",
+     "Homework"
+    ],
+    "hook": "An AI tutor that *won't give answers*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Stuck on a maths problem at 11 PM, you ask an AI tutor, and instead of just giving the answer, it asks you a question back. [1] So how do AI tutor apps actually teach? [2] Let's break it down.",
-      "data": {
-        "kicker": "USE CASE 12",
-        "title": [
-          "AI",
-          "Tutors"
-        ],
-        "subtitle": "How AI teaches you",
-        "buzzwords": [
-          "Hints",
-          "Syllabus",
-          "RAG",
-          "Memory",
-          "Adaptive",
-          "Practice",
-          "Socratic",
-          "Homework"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's what happens when you ask for help. [1] You upload your homework question. [2] The tutor reads your textbook chapter, using RAG, so it teaches your syllabus. [3] It checks its memory of you, like what you struggled with last week. [4] It gives you a hint, not the answer, and asks you to try the next step, [5] and it adapts, based on how you respond.",
+   "data": {
+    "heading": "When you ask for help",
+    "nodes": [
+     [
+      "Camera",
+      "Your question",
+      "A photo of a maths problem"
+     ],
+     [
+      "BookOpen",
+      "Your syllabus",
+      "RAG over the textbook (EP 07)"
+     ],
+     [
+      "BookMarked",
+      "Your history",
+      "Memory of past struggles (EP 17)"
+     ],
+     [
+      "Lightbulb",
+      "A hint",
+      "Not the answer, the next step"
+     ],
+     [
+      "RefreshCw",
+      "Adapt",
+      "Harder or easier, based on you"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "prompt",
+   "text": "And the magic is mostly in the instructions. [1] A plain assistant just gives the answer, x equals 4. [2] A tutor gets a role, you are a patient maths tutor for a class 9 student. [3] A rule, never give the final answer directly. [4] A method, give one hint at a time, and ask a question back. [5] And a format, short, friendly and encouraging. [6] Now it guides you to the answer yourself.",
+   "data": {
+    "heading": "The tutor's instructions",
+    "kicker": "REMEMBER EP 04?",
+    "bad": "Solve 2x + 3 = 11.",
+    "badReply": "x = 4.",
+    "parts": [
+     [
+      "ROLE",
+      "You are a patient maths tutor for a Class 9 student.",
+      "#8B5CF6"
+     ],
+     [
+      "RULE",
+      "Never give the final answer directly.",
+      "#22D3EE"
+     ],
+     [
+      "METHOD",
+      "One hint at a time, then ask a question back.",
+      "#F59E0B"
+     ],
+     [
+      "FORMAT",
+      "Short, friendly, encouraging.",
+      "#34D399"
+     ]
+    ],
+    "goodReply": "Great start! What could you subtract from both sides to get 2x on its own?"
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So what makes a good AI tutor? [1] Socratic questions, guiding you with questions, instead of answers. [2] Adaptive difficulty, harder when you're doing well, easier when you're stuck. [3] Spaced practice, bringing back old topics before you forget them. [4] And encouragement, because confidence matters.",
+   "data": {
+    "heading": "A good AI tutor",
+    "kicker": "WHAT MATTERS",
+    "terms": [
+     [
+      "HelpCircle",
+      "Socratic",
+      "Guide with questions"
+     ],
+     [
+      "SlidersHorizontal",
+      "Adaptive",
+      "Harder or easier for you"
+     ],
+     [
+      "CalendarClock",
+      "Spaced practice",
+      "Revisit before you forget"
+     ],
+     [
+      "Smile",
+      "Encouraging",
+      "Confidence matters"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "Here's the big difference. [1] An answer bot gives you the answer, and you learn nothing. [2] A good tutor makes you think, so you can solve the next problem on your own.",
+   "data": {
+    "heading": "Answer bot vs tutor",
+    "kicker": "ANSWERS VS LEARNING",
+    "left": {
+     "icon": "Zap",
+     "title": "Answer bot",
+     "stat": "Gives answers",
+     "label": "fast, but you learn nothing"
     },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens when you ask for help. [1] You upload your homework question. [2] The tutor reads your textbook chapter, using RAG, so it teaches your syllabus. [3] It checks its memory of you, like what you struggled with last week. [4] It gives you a hint, not the answer, and asks you to try the next step, [5] and it adapts, based on how you respond.",
-      "data": {
-        "heading": "When you ask for help",
-        "nodes": [
-          [
-            "Camera",
-            "Your question",
-            "A photo of a maths problem"
-          ],
-          [
-            "BookOpen",
-            "Your syllabus",
-            "RAG over the textbook (EP 07)"
-          ],
-          [
-            "BookMarked",
-            "Your history",
-            "Memory of past struggles (EP 17)"
-          ],
-          [
-            "Lightbulb",
-            "A hint",
-            "Not the answer, the next step"
-          ],
-          [
-            "RefreshCw",
-            "Adapt",
-            "Harder or easier, based on you"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "prompt",
-      "text": "And the magic is mostly in the instructions. [1] A plain assistant just gives the answer, x equals 4. [2] A tutor gets a role, you are a patient maths tutor for a class 9 student. [3] A rule, never give the final answer directly. [4] A method, give one hint at a time, and ask a question back. [5] And a format, short, friendly and encouraging. [6] Now it guides you to the answer yourself.",
-      "data": {
-        "heading": "The tutor's instructions",
-        "kicker": "REMEMBER EP 04?",
-        "bad": "Solve 2x + 3 = 11.",
-        "badReply": "x = 4.",
-        "parts": [
-          [
-            "ROLE",
-            "You are a patient maths tutor for a Class 9 student.",
-            "#8B5CF6"
-          ],
-          [
-            "RULE",
-            "Never give the final answer directly.",
-            "#22D3EE"
-          ],
-          [
-            "METHOD",
-            "One hint at a time, then ask a question back.",
-            "#F59E0B"
-          ],
-          [
-            "FORMAT",
-            "Short, friendly, encouraging.",
-            "#34D399"
-          ]
-        ],
-        "goodReply": "Great start! What could you subtract from both sides to get 2x on its own?"
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So what makes a good AI tutor? [1] Socratic questions, guiding you with questions, instead of answers. [2] Adaptive difficulty, harder when you're doing well, easier when you're stuck. [3] Spaced practice, bringing back old topics before you forget them. [4] And encouragement, because confidence matters.",
-      "data": {
-        "heading": "A good AI tutor",
-        "kicker": "WHAT MATTERS",
-        "terms": [
-          [
-            "HelpCircle",
-            "Socratic",
-            "Guide with questions"
-          ],
-          [
-            "SlidersHorizontal",
-            "Adaptive",
-            "Harder or easier for you"
-          ],
-          [
-            "CalendarClock",
-            "Spaced practice",
-            "Revisit before you forget"
-          ],
-          [
-            "Smile",
-            "Encouraging",
-            "Confidence matters"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "Here's the big difference. [1] An answer bot gives you the answer, and you learn nothing. [2] A good tutor makes you think, so you can solve the next problem on your own.",
-      "data": {
-        "heading": "Answer bot vs tutor",
-        "kicker": "ANSWERS VS LEARNING",
-        "left": {
-          "icon": "Zap",
-          "title": "Answer bot",
-          "stat": "Gives answers",
-          "label": "fast, but you learn nothing"
-        },
-        "right": {
-          "icon": "GraduationCap",
-          "title": "AI tutor",
-          "stat": "Makes you think",
-          "label": "you solve the next one alone"
-        }
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where will you see this? [1] Learning apps with AI tutors for school maths and science. [2] Language apps that chat with you, and correct your mistakes. [3] And coding platforms that give hints when your code fails.",
-      "data": {
-        "heading": "Where you'll find it",
-        "items": [
-          [
-            "GraduationCap",
-            "School subjects",
-            "Maths and science tutors"
-          ],
-          [
-            "Languages",
-            "Language apps",
-            "Chat and get corrected"
-          ],
-          [
-            "Code",
-            "Coding practice",
-            "Hints when code fails"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think AI tutors will replace teachers. [2] They're great for practice at any hour, but teachers bring motivation, judgement, and understanding each student as a person. The best results come from both together.",
-      "data": {
-        "myth": "AI tutors will replace teachers.",
-        "fact": "Great for practice any time, but teachers bring motivation, judgement and care. Both together work best.",
-        "tip": "AI practice + human teacher"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What does a good AI tutor do when you're stuck? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It gives you a hint, and asks a question back!",
-      "data": {
-        "question": "When you're stuck, a good tutor…",
-        "options": [
-          "Gives the final answer",
-          "Gives a hint and asks a question",
-          "Changes the subject"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] RAG lets the tutor teach your syllabus. [2] Memory helps it know your weak spots. [3] It gives hints, not answers. [4] And it adapts to how you're doing. [5] Next, the final part of how neural networks learn, backpropagation, explained without maths. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "RAG",
-            "teaches your syllabus"
-          ],
-          [
-            "Memory",
-            "knows your weak spots"
-          ],
-          [
-            "Hints",
-            "not answers"
-          ],
-          [
-            "Adaptive",
-            "adjusts to you"
-          ]
-        ],
-        "next": "EP 23 · Neural networks, Part 3"
-      }
+    "right": {
+     "icon": "GraduationCap",
+     "title": "AI tutor",
+     "stat": "Makes you think",
+     "label": "you solve the next one alone"
     }
-  ],
-  "post": {
-    "caption": "You ask an AI tutor for the answer and it asks you a question back. That's by design.\n\nReal World AI, Use Case 12: how AI tutor apps work\n- The flow: your question, your syllabus (RAG), your history (memory), a hint, adapt\n- The tutor's hidden instructions: role, rule, method, format\n- What makes a good tutor: Socratic, adaptive, spaced practice, encouraging\n- Answer bot vs tutor\n- The myth: \"AI tutors will replace teachers\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How neural networks learn, Part 3: backpropagation.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #AIinEducation #LearnAI #EdTech #AIForBeginners",
-    "pinned": "Quiz answer: It gives a hint and asks a question back. Tip: tell any AI 'don't give me the answer, just hints' and it becomes a tutor!",
-    "cover": "'AI Tutors' title card",
-    "alt": "Animated breakdown of how AI tutor apps use RAG, memory and hints to teach instead of giving answers."
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where will you see this? [1] Learning apps with AI tutors for school maths and science. [2] Language apps that chat with you, and correct your mistakes. [3] And coding platforms that give hints when your code fails.",
+   "data": {
+    "heading": "Where you'll find it",
+    "items": [
+     [
+      "GraduationCap",
+      "School subjects",
+      "Maths and science tutors"
+     ],
+     [
+      "Languages",
+      "Language apps",
+      "Chat and get corrected"
+     ],
+     [
+      "Code",
+      "Coding practice",
+      "Hints when code fails"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think AI tutors will replace teachers. [2] They're great for practice at any hour, but teachers bring motivation, judgement, and understanding each student as a person. The best results come from both together.",
+   "data": {
+    "myth": "AI tutors will replace teachers.",
+    "fact": "Great for practice any time, but teachers bring motivation, judgement and care. Both together work best.",
+    "tip": "AI practice + human teacher"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What does a good AI tutor do when you're stuck? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It gives you a hint, and asks a question back!",
+   "data": {
+    "question": "When you're stuck, a good tutor…",
+    "options": [
+     "Gives the final answer",
+     "Gives a hint and asks a question",
+     "Changes the subject"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] RAG lets the tutor teach your syllabus. [2] Memory helps it know your weak spots. [3] It gives hints, not answers. [4] And it adapts to how you're doing. [5] Next, use case 13, how AI creates music. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "RAG",
+      "teaches your syllabus"
+     ],
+     [
+      "Memory",
+      "knows your weak spots"
+     ],
+     [
+      "Hints",
+      "not answers"
+     ],
+     [
+      "Adaptive",
+      "adjusts to you"
+     ]
+    ],
+    "next": "USE CASE 13 · AI music"
+   }
   }
+ ],
+ "post": {
+  "caption": "You ask an AI tutor for the answer and it asks you a question back. That's by design.\n\nReal World AI, Use Case 12: how AI tutor apps work\n- The flow: your question, your syllabus (RAG), your history (memory), a hint, adapt\n- The tutor's hidden instructions: role, rule, method, format\n- What makes a good tutor: Socratic, adaptive, spaced practice, encouraging\n- Answer bot vs tutor\n- The myth: \"AI tutors will replace teachers\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI creates music.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #AIinEducation #LearnAI #EdTech #AIForBeginners",
+  "pinned": "Quiz answer: It gives a hint and asks a question back. Tip: tell any AI 'don't give me the answer, just hints' and it becomes a tutor!",
+  "cover": "'AI Tutors' title card",
+  "alt": "Animated breakdown of how AI tutor apps use RAG, memory and hints to teach instead of giving answers."
+ }
 }

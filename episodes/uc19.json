@@ -1,233 +1,234 @@
 {
-  "id": "uc19",
-  "episode": 19,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 19",
-  "handle": "@ai_maastaaru",
-  "title": "How KYC Document Scanning Works",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc19",
+ "episode": 19,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 19",
+ "handle": "@ai_maastaaru",
+ "title": "How KYC Document Scanning Works",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Opening a bank account used to take days of paperwork. [1] Now you photograph your ID card, take a selfie, and it's verified in minutes. [2] Let's break down how KYC document scanning works.",
+   "data": {
+    "kicker": "USE CASE 19",
+    "title": [
+     "KYC",
+     "Scanning"
+    ],
+    "subtitle": "How apps read and verify your ID",
+    "buzzwords": [
+     "OCR",
+     "KYC",
+     "Face match",
+     "Liveness",
+     "Verification",
+     "Documents",
+     "Fintech",
+     "Selfie"
+    ],
+    "hook": "KYC in *seconds*. How?"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Opening a bank account used to take days of paperwork. [1] Now you photograph your ID card, take a selfie, and it's verified in minutes. [2] Let's break down how KYC document scanning works.",
-      "data": {
-        "kicker": "USE CASE 19",
-        "title": [
-          "KYC",
-          "Scanning"
-        ],
-        "subtitle": "How apps read and verify your ID",
-        "buzzwords": [
-          "OCR",
-          "KYC",
-          "Face match",
-          "Liveness",
-          "Verification",
-          "Documents",
-          "Fintech",
-          "Selfie"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's the flow. [1] You photograph your ID card. [2] Vision models find the card, straighten it, and fix the lighting. [3] OCR reads the text, like your name, date of birth and ID number. [4] The app checks those details against official records, [5] and compares your selfie with the photo on the card.",
-      "data": {
-        "heading": "From photo to verified",
-        "nodes": [
-          [
-            "Camera",
-            "Photo of your ID",
-            "Front and back"
-          ],
-          [
-            "Crop",
-            "Clean up",
-            "Find, straighten, fix lighting"
-          ],
-          [
-            "Type",
-            "OCR",
-            "Read name, date of birth, number"
-          ],
-          [
-            "Database",
-            "Verify",
-            "Check against official records"
-          ],
-          [
-            "ScanFace",
-            "Face match",
-            "Selfie vs ID photo"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "The key step is OCR, optical character recognition. [1] It turns a picture of text into real text a computer can use. [2] It finds where the text is, [3] recognises each character, even in different fonts, [4] and works out which field is which, like name, or date of birth.",
-      "data": {
-        "term": "Optical character recognition",
-        "short": "OCR",
-        "definition": "Turning a picture of text into real text a computer can use.",
-        "chips": [
-          [
-            "ScanSearch",
-            "Find the text"
-          ],
-          [
-            "Type",
-            "Read characters"
-          ],
-          [
-            "Tag",
-            "Label each field"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "To stop fraud, the app runs extra checks. [1] Document checks, looking for signs of editing, or a fake card. [2] A face match, comparing your selfie with the ID photo, using embeddings. [3] And liveness, making sure it's really you, live, not a photo of a photo.",
-      "data": {
-        "heading": "Fraud checks",
-        "kicker": "STAYING SAFE",
-        "steps": [
-          [
-            "FileSearch",
-            "Document check",
-            "Signs of editing or fakes"
-          ],
-          [
-            "ScanFace",
-            "Face match",
-            "Selfie vs ID photo (UC 17)"
-          ],
-          [
-            "Eye",
-            "Liveness",
-            "A real, live person"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] KYC, which stands for know your customer, the rules banks follow to verify identity. [2] OCR, reading text from images. [3] Face match, comparing two faces. [4] And video KYC, a live video call with an agent, used for some accounts.",
-      "data": {
-        "heading": "KYC words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "UserCheck",
-            "KYC",
-            "Know Your Customer"
-          ],
-          [
-            "Type",
-            "OCR",
-            "Text from images"
-          ],
-          [
-            "ScanFace",
-            "Face match",
-            "Selfie vs ID photo"
-          ],
-          [
-            "Video",
-            "Video KYC",
-            "Live call with an agent"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where will you see it? [1] Opening bank and trading accounts online. [2] Getting a new SIM card, or a loan in an app. [3] And wallet and fintech apps verifying their users.",
-      "data": {
-        "heading": "Where you'll see it",
-        "items": [
-          [
-            "Landmark",
-            "Banking",
-            "Accounts opened online"
-          ],
-          [
-            "Smartphone",
-            "SIM and loans",
-            "Quick verification"
-          ],
-          [
-            "Wallet",
-            "Fintech apps",
-            "Wallets and trading apps"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think any app asking for their ID photo is safe. [2] Only share ID documents with official, trusted apps. Scammers also ask for ID photos and selfies, so never send them over chat to strangers.",
-      "data": {
-        "myth": "Any app asking for my ID photo is safe.",
-        "fact": "Only share ID with official, trusted apps. Scammers ask for ID photos and selfies too.",
-        "tip": "Never send ID over chat"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Which technology reads the text on your ID card? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] OCR, optical character recognition!",
-      "data": {
-        "question": "The text on your ID is read by…",
-        "options": [
-          "OCR",
-          "Text to speech",
-          "Surge pricing"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Vision models find and straighten your card. [2] OCR reads the text. [3] The app verifies records, and matches your face. [4] And only share your ID with trusted apps. [5] Next, a real world breakdown, how a phone app helps farmers spot crop diseases. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Clean up",
-            "find and straighten the card"
-          ],
-          [
-            "OCR",
-            "read the text"
-          ],
-          [
-            "Verify",
-            "records + face match"
-          ],
-          [
-            "Careful",
-            "only share with trusted apps"
-          ]
-        ],
-        "next": "Use Case · Crop disease app"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Photo of your ID + a selfie = account verified in minutes. How does KYC scanning work?\n\nReal World AI, Use Case 19: KYC document scanning\n- The flow: photo, clean up, OCR, verify, face match\n- OCR: turning a picture of text into real text\n- Fraud checks: document checks, face match, liveness\n- Jargon: KYC, OCR, face match, video KYC\n- Safety: never send ID photos to strangers over chat\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How a phone app helps farmers spot crop diseases.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #KYC #LearnAI #FinTech #AIForBeginners",
-    "pinned": "Quiz answer: OCR, optical character recognition. Reminder: only share your ID with official apps, never over chat.",
-    "cover": "'KYC Scanning' title card",
-    "alt": "Animated breakdown of how KYC apps use OCR, verification and face matching to check ID documents."
+  {
+   "type": "pipeline",
+   "text": "Here's the flow. [1] You photograph your ID card. [2] Vision models find the card, straighten it, and fix the lighting. [3] OCR reads the text, like your name, date of birth and ID number. [4] The app checks those details against official records, [5] and compares your selfie with the photo on the card.",
+   "data": {
+    "heading": "From photo to verified",
+    "nodes": [
+     [
+      "Camera",
+      "Photo of your ID",
+      "Front and back"
+     ],
+     [
+      "Crop",
+      "Clean up",
+      "Find, straighten, fix lighting"
+     ],
+     [
+      "Type",
+      "OCR",
+      "Read name, date of birth, number"
+     ],
+     [
+      "Database",
+      "Verify",
+      "Check against official records"
+     ],
+     [
+      "ScanFace",
+      "Face match",
+      "Selfie vs ID photo"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "The key step is OCR, optical character recognition. [1] It turns a picture of text into real text a computer can use. [2] It finds where the text is, [3] recognises each character, even in different fonts, [4] and works out which field is which, like name, or date of birth.",
+   "data": {
+    "term": "Optical character recognition",
+    "short": "OCR",
+    "definition": "Turning a picture of text into real text a computer can use.",
+    "chips": [
+     [
+      "ScanSearch",
+      "Find the text"
+     ],
+     [
+      "Type",
+      "Read characters"
+     ],
+     [
+      "Tag",
+      "Label each field"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "To stop fraud, the app runs extra checks. [1] Document checks, looking for signs of editing, or a fake card. [2] A face match, comparing your selfie with the ID photo, using embeddings. [3] And liveness, making sure it's really you, live, not a photo of a photo.",
+   "data": {
+    "heading": "Fraud checks",
+    "kicker": "STAYING SAFE",
+    "steps": [
+     [
+      "FileSearch",
+      "Document check",
+      "Signs of editing or fakes"
+     ],
+     [
+      "ScanFace",
+      "Face match",
+      "Selfie vs ID photo (UC 17)"
+     ],
+     [
+      "Eye",
+      "Liveness",
+      "A real, live person"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] KYC, which stands for know your customer, the rules banks follow to verify identity. [2] OCR, reading text from images. [3] Face match, comparing two faces. [4] And video KYC, a live video call with an agent, used for some accounts.",
+   "data": {
+    "heading": "KYC words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "UserCheck",
+      "KYC",
+      "Know Your Customer"
+     ],
+     [
+      "Type",
+      "OCR",
+      "Text from images"
+     ],
+     [
+      "ScanFace",
+      "Face match",
+      "Selfie vs ID photo"
+     ],
+     [
+      "Video",
+      "Video KYC",
+      "Live call with an agent"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where will you see it? [1] Opening bank and trading accounts online. [2] Getting a new SIM card, or a loan in an app. [3] And wallet and fintech apps verifying their users.",
+   "data": {
+    "heading": "Where you'll see it",
+    "items": [
+     [
+      "Landmark",
+      "Banking",
+      "Accounts opened online"
+     ],
+     [
+      "Smartphone",
+      "SIM and loans",
+      "Quick verification"
+     ],
+     [
+      "Wallet",
+      "Fintech apps",
+      "Wallets and trading apps"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think any app asking for their ID photo is safe. [2] Only share ID documents with official, trusted apps. Scammers also ask for ID photos and selfies, so never send them over chat to strangers.",
+   "data": {
+    "myth": "Any app asking for my ID photo is safe.",
+    "fact": "Only share ID with official, trusted apps. Scammers ask for ID photos and selfies too.",
+    "tip": "Never send ID over chat"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which technology reads the text on your ID card? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] OCR, optical character recognition!",
+   "data": {
+    "question": "The text on your ID is read by…",
+    "options": [
+     "OCR",
+     "Text to speech",
+     "Surge pricing"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Vision models find and straighten your card. [2] OCR reads the text. [3] The app verifies records, and matches your face. [4] And only share your ID with trusted apps. [5] Next, use case 20, how crop disease detection apps work. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Clean up",
+      "find and straighten the card"
+     ],
+     [
+      "OCR",
+      "read the text"
+     ],
+     [
+      "Verify",
+      "records + face match"
+     ],
+     [
+      "Careful",
+      "only share with trusted apps"
+     ]
+    ],
+    "next": "USE CASE 20 · Crop doctor"
+   }
   }
+ ],
+ "post": {
+  "caption": "Photo of your ID + a selfie = account verified in minutes. How does KYC scanning work?\n\nReal World AI, Use Case 19: KYC document scanning\n- The flow: photo, clean up, OCR, verify, face match\n- OCR: turning a picture of text into real text\n- Fraud checks: document checks, face match, liveness\n- Jargon: KYC, OCR, face match, video KYC\n- Safety: never send ID photos to strangers over chat\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How crop disease detection apps work.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #KYC #LearnAI #FinTech #AIForBeginners",
+  "pinned": "Quiz answer: OCR, optical character recognition. Reminder: only share your ID with official apps, never over chat.",
+  "cover": "'KYC Scanning' title card",
+  "alt": "Animated breakdown of how KYC apps use OCR, verification and face matching to check ID documents."
+ }
 }

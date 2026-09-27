@@ -1,229 +1,230 @@
 {
-  "id": "uc16",
-  "episode": 16,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 16",
-  "handle": "@ai_maastaaru",
-  "title": "How Ride Apps Set ETA and Surge Pricing",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc16",
+ "episode": 16,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 16",
+ "handle": "@ai_maastaaru",
+ "title": "How Ride Apps Set ETA and Surge Pricing",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "It's raining, it's 6 PM, and your cab app says, fares are higher than usual. [1] So why does the price jump, and how does it know the driver will arrive in 4 minutes? [2] Let's break down ride apps.",
+   "data": {
+    "kicker": "USE CASE 16",
+    "title": [
+     "Surge",
+     "Pricing"
+    ],
+    "subtitle": "How ride apps set ETA and price",
+    "buzzwords": [
+     "Surge",
+     "ETA",
+     "Matching",
+     "Demand",
+     "Supply",
+     "Forecasting",
+     "Routes",
+     "Drivers"
+    ],
+    "hook": "Why your cab costs more *in rain*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "It's raining, it's 6 PM, and your cab app says, fares are higher than usual. [1] So why does the price jump, and how does it know the driver will arrive in 4 minutes? [2] Let's break down ride apps.",
-      "data": {
-        "kicker": "USE CASE 16",
-        "title": [
-          "Surge",
-          "Pricing"
-        ],
-        "subtitle": "How ride apps set ETA and price",
-        "buzzwords": [
-          "Surge",
-          "ETA",
-          "Matching",
-          "Demand",
-          "Supply",
-          "Forecasting",
-          "Routes",
-          "Drivers"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "When you book a ride, a lot happens in seconds. [1] You enter your pickup and destination. [2] The system finds nearby drivers, and predicts each one's arrival time. [3] It matches you with the best driver, not always the closest. [4] It predicts the trip time, using traffic and routes, [5] and then shows you the price.",
+   "data": {
+    "heading": "In a few seconds",
+    "nodes": [
+     [
+      "MapPin",
+      "Your request",
+      "Pickup and destination"
+     ],
+     [
+      "Car",
+      "Nearby drivers",
+      "Predict each one's arrival"
+     ],
+     [
+      "Handshake",
+      "Best match",
+      "Not always the closest"
+     ],
+     [
+      "Route",
+      "Trip time",
+      "Traffic and routes"
+     ],
+     [
+      "IndianRupee",
+      "Price",
+      "Base fare × demand"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "The price part is called dynamic pricing, or surge. [1] When many people want rides, and few drivers are free, prices rise. [2] Demand goes up, like in rain or office hours, [3] supply is low, with few free drivers, [4] so the price multiplier rises, and more drivers head to that area.",
+   "data": {
+    "term": "Dynamic pricing",
+    "short": "Surge",
+    "definition": "Prices that rise and fall with demand and the number of free drivers.",
+    "chips": [
+     [
+      "TrendingUp",
+      "High demand"
+     ],
+     [
+      "Car",
+      "Few drivers"
+     ],
+     [
+      "IndianRupee",
+      "Price rises"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "AI also predicts demand before it happens. [1] It learns patterns, like office rush hours, and flights landing at the airport. [2] It watches signals, like weather, events and festivals. [3] And it nudges drivers towards areas that will soon be busy.",
+   "data": {
+    "heading": "Predicting demand",
+    "kicker": "FORECASTING",
+    "steps": [
+     [
+      "CalendarDays",
+      "Patterns",
+      "Rush hours, flights landing"
+     ],
+     [
+      "CloudRain",
+      "Signals",
+      "Weather, events, festivals"
+     ],
+     [
+      "Navigation",
+      "Position drivers",
+      "Head where demand is coming"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "So why do apps use surge at all? [1] With fixed prices, when demand spikes, there are simply no cars, and very long waits. [2] With dynamic prices, more drivers come online, so you can at least get a ride, but at a higher price.",
+   "data": {
+    "heading": "Fixed vs dynamic",
+    "kicker": "THE TRADE-OFF",
+    "left": {
+     "icon": "Lock",
+     "title": "Fixed price",
+     "stat": "Same price",
+     "label": "but no cars when it's busy"
     },
-    {
-      "type": "pipeline",
-      "text": "When you book a ride, a lot happens in seconds. [1] You enter your pickup and destination. [2] The system finds nearby drivers, and predicts each one's arrival time. [3] It matches you with the best driver, not always the closest. [4] It predicts the trip time, using traffic and routes, [5] and then shows you the price.",
-      "data": {
-        "heading": "In a few seconds",
-        "nodes": [
-          [
-            "MapPin",
-            "Your request",
-            "Pickup and destination"
-          ],
-          [
-            "Car",
-            "Nearby drivers",
-            "Predict each one's arrival"
-          ],
-          [
-            "Handshake",
-            "Best match",
-            "Not always the closest"
-          ],
-          [
-            "Route",
-            "Trip time",
-            "Traffic and routes"
-          ],
-          [
-            "IndianRupee",
-            "Price",
-            "Base fare × demand"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "The price part is called dynamic pricing, or surge. [1] When many people want rides, and few drivers are free, prices rise. [2] Demand goes up, like in rain or office hours, [3] supply is low, with few free drivers, [4] so the price multiplier rises, and more drivers head to that area.",
-      "data": {
-        "term": "Dynamic pricing",
-        "short": "Surge",
-        "definition": "Prices that rise and fall with demand and the number of free drivers.",
-        "chips": [
-          [
-            "TrendingUp",
-            "High demand"
-          ],
-          [
-            "Car",
-            "Few drivers"
-          ],
-          [
-            "IndianRupee",
-            "Price rises"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "AI also predicts demand before it happens. [1] It learns patterns, like office rush hours, and flights landing at the airport. [2] It watches signals, like weather, events and festivals. [3] And it nudges drivers towards areas that will soon be busy.",
-      "data": {
-        "heading": "Predicting demand",
-        "kicker": "FORECASTING",
-        "steps": [
-          [
-            "CalendarDays",
-            "Patterns",
-            "Rush hours, flights landing"
-          ],
-          [
-            "CloudRain",
-            "Signals",
-            "Weather, events, festivals"
-          ],
-          [
-            "Navigation",
-            "Position drivers",
-            "Head where demand is coming"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "So why do apps use surge at all? [1] With fixed prices, when demand spikes, there are simply no cars, and very long waits. [2] With dynamic prices, more drivers come online, so you can at least get a ride, but at a higher price.",
-      "data": {
-        "heading": "Fixed vs dynamic",
-        "kicker": "THE TRADE-OFF",
-        "left": {
-          "icon": "Lock",
-          "title": "Fixed price",
-          "stat": "Same price",
-          "label": "but no cars when it's busy"
-        },
-        "right": {
-          "icon": "TrendingUp",
-          "title": "Dynamic price",
-          "stat": "Price rises",
-          "label": "more drivers come online"
-        }
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] ETA, the estimated time of arrival. [2] Matching, pairing riders with drivers. [3] The surge multiplier, how much higher than normal the fare is. [4] And forecasting, predicting future demand.",
-      "data": {
-        "heading": "Ride app words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Clock",
-            "ETA",
-            "Estimated time of arrival"
-          ],
-          [
-            "Handshake",
-            "Matching",
-            "Pairing riders and drivers"
-          ],
-          [
-            "X",
-            "Surge multiplier",
-            "How much above normal"
-          ],
-          [
-            "TrendingUp",
-            "Forecasting",
-            "Predicting demand"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think surge prices are completely random. [2] They're mainly driven by demand and supply in your area, at that moment. So waiting a few minutes, or walking a little way, can often lower the price.",
-      "data": {
-        "myth": "Surge prices are completely random.",
-        "fact": "They're mainly driven by demand and supply in your area right now.",
-        "tip": "Wait a bit or walk a little"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Why do ride prices surge? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] High demand, and few free drivers!",
-      "data": {
-        "question": "Ride prices surge because of…",
-        "options": [
-          "Random numbers",
-          "High demand and few free drivers",
-          "A broken app"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] The app matches you with the best driver, not just the closest. [2] It predicts arrival and trip times using traffic. [3] Surge comes from high demand and low supply. [4] And forecasting moves drivers to busy areas early. [5] Next, the idea that changed AI forever, transformers and attention, part one. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Match",
-            "best driver, not just closest"
-          ],
-          [
-            "ETA",
-            "predicted with traffic"
-          ],
-          [
-            "Surge",
-            "demand vs supply"
-          ],
-          [
-            "Forecast",
-            "predict busy areas"
-          ]
-        ],
-        "next": "EP 27 · Transformers, Part 1"
-      }
+    "right": {
+     "icon": "TrendingUp",
+     "title": "Dynamic price",
+     "stat": "Price rises",
+     "label": "more drivers come online"
     }
-  ],
-  "post": {
-    "caption": "Rain + 6 PM = \"fares are higher than usual\". Why does the price jump?\n\nReal World AI, Use Case 16: ride app ETA and surge pricing\n- What happens in seconds: drivers, ETA, matching, trip time, price\n- Dynamic pricing: demand vs supply\n- Forecasting demand before it happens\n- Fixed vs dynamic prices, the real trade-off\n- Tip: waiting a few minutes or walking a little can lower the price\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Transformers, the idea that changed AI.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #MachineLearning #LearnAI #RideApps #AIForBeginners",
-    "pinned": "Quiz answer: High demand and few free drivers. What's the highest surge you've ever seen? 😅",
-    "cover": "'Surge Pricing' title card",
-    "alt": "Animated breakdown of how ride-hailing apps match drivers, predict arrival times and set surge prices."
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] ETA, the estimated time of arrival. [2] Matching, pairing riders with drivers. [3] The surge multiplier, how much higher than normal the fare is. [4] And forecasting, predicting future demand.",
+   "data": {
+    "heading": "Ride app words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Clock",
+      "ETA",
+      "Estimated time of arrival"
+     ],
+     [
+      "Handshake",
+      "Matching",
+      "Pairing riders and drivers"
+     ],
+     [
+      "X",
+      "Surge multiplier",
+      "How much above normal"
+     ],
+     [
+      "TrendingUp",
+      "Forecasting",
+      "Predicting demand"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think surge prices are completely random. [2] They're mainly driven by demand and supply in your area, at that moment. So waiting a few minutes, or walking a little way, can often lower the price.",
+   "data": {
+    "myth": "Surge prices are completely random.",
+    "fact": "They're mainly driven by demand and supply in your area right now.",
+    "tip": "Wait a bit or walk a little"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Why do ride prices surge? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] High demand, and few free drivers!",
+   "data": {
+    "question": "Ride prices surge because of…",
+    "options": [
+     "Random numbers",
+     "High demand and few free drivers",
+     "A broken app"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] The app matches you with the best driver, not just the closest. [2] It predicts arrival and trip times using traffic. [3] Surge comes from high demand and low supply. [4] And forecasting moves drivers to busy areas early. [5] Next, use case 17, how face unlock works. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Match",
+      "best driver, not just closest"
+     ],
+     [
+      "ETA",
+      "predicted with traffic"
+     ],
+     [
+      "Surge",
+      "demand vs supply"
+     ],
+     [
+      "Forecast",
+      "predict busy areas"
+     ]
+    ],
+    "next": "USE CASE 17 · Face unlock"
+   }
   }
+ ],
+ "post": {
+  "caption": "Rain + 6 PM = \"fares are higher than usual\". Why does the price jump?\n\nReal World AI, Use Case 16: ride app ETA and surge pricing\n- What happens in seconds: drivers, ETA, matching, trip time, price\n- Dynamic pricing: demand vs supply\n- Forecasting demand before it happens\n- Fixed vs dynamic prices, the real trade-off\n- Tip: waiting a few minutes or walking a little can lower the price\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How face unlock works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #MachineLearning #LearnAI #RideApps #AIForBeginners",
+  "pinned": "Quiz answer: High demand and few free drivers. What's the highest surge you've ever seen? 😅",
+  "cover": "'Surge Pricing' title card",
+  "alt": "Animated breakdown of how ride-hailing apps match drivers, predict arrival times and set surge prices."
+ }
 }

@@ -1,242 +1,243 @@
 {
-  "id": "ep56",
-  "episode": 56,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Build a Voice Assistant",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep56",
+ "episode": 56,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Build a Voice Assistant",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "In use case 1, we saw how phone call assistants work, speech to text, the AI brain, then text to speech. [1] Today, we build our own talking assistant in Python. [2] You speak, it thinks, and it talks back.",
+   "data": {
+    "kicker": "EPISODE 56",
+    "title": [
+     "Build a",
+     "Voice Bot"
+    ],
+    "subtitle": "Speak, think, talk back",
+    "buzzwords": [
+     "Whisper",
+     "Speech to text",
+     "LLM",
+     "Text to speech",
+     "Microphone",
+     "Latency",
+     "Kokoro",
+     "Hands-on"
+    ],
+    "hook": "Build your own *talking AI*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "In use case 1, we saw how phone call assistants work, speech to text, the AI brain, then text to speech. [1] Today, we build our own talking assistant in Python. [2] You speak, it thinks, and it talks back.",
-      "data": {
-        "kicker": "EPISODE 56",
-        "title": [
-          "Build a",
-          "Voice Bot"
-        ],
-        "subtitle": "Speak, think, talk back",
-        "buzzwords": [
-          "Whisper",
-          "Speech to text",
-          "LLM",
-          "Text to speech",
-          "Microphone",
-          "Latency",
-          "Kokoro",
-          "Hands-on"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's the loop. [1] Record your voice from the microphone. [2] Whisper turns the speech into text. [3] The language model writes a reply. [4] A text to speech engine turns the reply into audio. [5] And the speaker plays it. Then, repeat.",
+   "data": {
+    "heading": "The voice loop",
+    "nodes": [
+     [
+      "Mic",
+      "Record",
+      "Your voice"
+     ],
+     [
+      "AudioLines",
+      "Whisper",
+      "Speech → text"
+     ],
+     [
+      "Brain",
+      "LLM",
+      "Writes the reply"
+     ],
+     [
+      "Volume2",
+      "TTS",
+      "Text → speech"
+     ],
+     [
+      "Speaker",
+      "Play",
+      "And repeat"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "You need three things. [1] Whisper, an open speech recognition model that runs on your computer. [2] A text to speech engine, like pyttsx3, which uses your computer's built-in voices. [3] And sounddevice, to record from the microphone.",
+   "data": {
+    "heading": "Setup",
+    "kicker": "TOOLS",
+    "steps": [
+     [
+      "AudioLines",
+      "Whisper",
+      "pip install openai-whisper"
+     ],
+     [
+      "Volume2",
+      "pyttsx3",
+      "Built-in voices"
+     ],
+     [
+      "Mic",
+      "sounddevice",
+      "Records the mic"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "code",
+   "text": "[1] Here's the full assistant. [2] Import the libraries. [3] Load the Whisper model, the speech engine, and the AI client. [4] In a loop, wait for Enter, then record five seconds of audio, and save it to a file. [5] Whisper transcribes the audio into text. [6] Send the text to the model, and ask for a short, one sentence reply, because long answers are boring to listen to. [7] Finally, speak the reply out loud. [8] Try it, and have a conversation!",
+   "data": {
+    "heading": "A talking assistant",
+    "file": "voice_bot.py",
+    "lines": [
+     "import anthropic, whisper, pyttsx3",
+     "import sounddevice as sd, scipy.io.wavfile as wav",
+     "stt = whisper.load_model(\"base\")",
+     "tts = pyttsx3.init()",
+     "client = anthropic.Anthropic()",
+     "while True:",
+     "    input(\"Press Enter, then speak for 5 seconds\")",
+     "    audio = sd.rec(5 * 16000, samplerate=16000, channels=1)",
+     "    sd.wait(); wav.write(\"q.wav\", 16000, audio)",
+     "    text = stt.transcribe(\"q.wav\")[\"text\"]",
+     "    r = client.messages.create(model=\"claude-sonnet-5\",",
+     "        max_tokens=200, system=\"Answer in one sentence.\",",
+     "        messages=[{\"role\": \"user\", \"content\": text}])",
+     "    tts.say(r.content[0].text)",
+     "    tts.runAndWait()"
+    ],
+    "groups": [
+     2,
+     3,
+     4,
+     1,
+     3,
+     2
+    ],
+    "output": [
+     "You (speaking): What's the capital of Telangana?",
+     "AI (speaking): Hyderabad is the capital of Telangana."
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "Want a nicer voice? [1] Built-in voices are free and instant, but sound robotic. [2] Neural voices, like Kokoro, which makes the voice you're hearing right now, sound much more human, and still run on your own computer.",
+   "data": {
+    "heading": "Upgrade the voice",
+    "kicker": "SOUND HUMAN",
+    "left": {
+     "icon": "Bot",
+     "title": "Built-in TTS",
+     "stat": "Robotic",
+     "label": "free and instant"
     },
-    {
-      "type": "pipeline",
-      "text": "Here's the loop. [1] Record your voice from the microphone. [2] Whisper turns the speech into text. [3] The language model writes a reply. [4] A text to speech engine turns the reply into audio. [5] And the speaker plays it. Then, repeat.",
-      "data": {
-        "heading": "The voice loop",
-        "nodes": [
-          [
-            "Mic",
-            "Record",
-            "Your voice"
-          ],
-          [
-            "AudioLines",
-            "Whisper",
-            "Speech → text"
-          ],
-          [
-            "Brain",
-            "LLM",
-            "Writes the reply"
-          ],
-          [
-            "Volume2",
-            "TTS",
-            "Text → speech"
-          ],
-          [
-            "Speaker",
-            "Play",
-            "And repeat"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "You need three things. [1] Whisper, an open speech recognition model that runs on your computer. [2] A text to speech engine, like pyttsx3, which uses your computer's built-in voices. [3] And sounddevice, to record from the microphone.",
-      "data": {
-        "heading": "Setup",
-        "kicker": "TOOLS",
-        "steps": [
-          [
-            "AudioLines",
-            "Whisper",
-            "pip install openai-whisper"
-          ],
-          [
-            "Volume2",
-            "pyttsx3",
-            "Built-in voices"
-          ],
-          [
-            "Mic",
-            "sounddevice",
-            "Records the mic"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "code",
-      "text": "[1] Here's the full assistant. [2] Import the libraries. [3] Load the Whisper model, the speech engine, and the AI client. [4] In a loop, wait for Enter, then record five seconds of audio, and save it to a file. [5] Whisper transcribes the audio into text. [6] Send the text to the model, and ask for a short, one sentence reply, because long answers are boring to listen to. [7] Finally, speak the reply out loud. [8] Try it, and have a conversation!",
-      "data": {
-        "heading": "A talking assistant",
-        "file": "voice_bot.py",
-        "lines": [
-          "import anthropic, whisper, pyttsx3",
-          "import sounddevice as sd, scipy.io.wavfile as wav",
-          "stt = whisper.load_model(\"base\")",
-          "tts = pyttsx3.init()",
-          "client = anthropic.Anthropic()",
-          "while True:",
-          "    input(\"Press Enter, then speak for 5 seconds\")",
-          "    audio = sd.rec(5 * 16000, samplerate=16000, channels=1)",
-          "    sd.wait(); wav.write(\"q.wav\", 16000, audio)",
-          "    text = stt.transcribe(\"q.wav\")[\"text\"]",
-          "    r = client.messages.create(model=\"claude-sonnet-5\",",
-          "        max_tokens=200, system=\"Answer in one sentence.\",",
-          "        messages=[{\"role\": \"user\", \"content\": text}])",
-          "    tts.say(r.content[0].text)",
-          "    tts.runAndWait()"
-        ],
-        "groups": [
-          2,
-          3,
-          4,
-          1,
-          3,
-          2
-        ],
-        "output": [
-          "You (speaking): What's the capital of Telangana?",
-          "AI (speaking): Hyderabad is the capital of Telangana."
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "Want a nicer voice? [1] Built-in voices are free and instant, but sound robotic. [2] Neural voices, like Kokoro, which makes the voice you're hearing right now, sound much more human, and still run on your own computer.",
-      "data": {
-        "heading": "Upgrade the voice",
-        "kicker": "SOUND HUMAN",
-        "left": {
-          "icon": "Bot",
-          "title": "Built-in TTS",
-          "stat": "Robotic",
-          "label": "free and instant"
-        },
-        "right": {
-          "icon": "Sparkles",
-          "title": "Kokoro",
-          "stat": "Natural",
-          "label": "neural, still runs locally"
-        }
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms for voice apps. [1] Latency, the delay before it replies. Keep it under about a second, to feel natural. [2] Streaming, speaking the first words while the rest is still being written. [3] VAD, voice activity detection, knowing when you've stopped talking. [4] And barge-in, letting you interrupt the assistant.",
-      "data": {
-        "heading": "Voice app words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Timer",
-            "Latency",
-            "Delay before reply"
-          ],
-          [
-            "Waves",
-            "Streaming",
-            "Speak while writing"
-          ],
-          [
-            "AudioLines",
-            "VAD",
-            "Detects when you stop"
-          ],
-          [
-            "Hand",
-            "Barge-in",
-            "You can interrupt"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common belief. [1] People think voice assistants must feel slow and clunky. [2] Our simple version waits for each step. Real assistants stream every stage, and overlap them, to reply in under a second.",
-      "data": {
-        "myth": "Voice assistants must feel slow and clunky.",
-        "fact": "Real assistants stream and overlap every stage to reply in under a second.",
-        "tip": "Stream every stage"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What does Whisper do in our voice assistant? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It turns your speech into text!",
-      "data": {
-        "question": "Whisper's job is…",
-        "options": [
-          "Turn speech into text",
-          "Write the reply",
-          "Play the audio"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] The loop is record, transcribe, think, speak. [2] Whisper does speech to text, on your computer. [3] The model writes a short reply. [4] And TTS speaks it, with Kokoro for a natural voice. [5] Next, deploy your AI app, so anyone can use it. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Loop",
-            "record, transcribe, think, speak"
-          ],
-          [
-            "Whisper",
-            "speech to text"
-          ],
-          [
-            "LLM",
-            "short replies"
-          ],
-          [
-            "TTS",
-            "Kokoro sounds human"
-          ]
-        ],
-        "next": "EP 57 · Deploy your app"
-      }
+    "right": {
+     "icon": "Sparkles",
+     "title": "Kokoro",
+     "stat": "Natural",
+     "label": "neural, still runs locally"
     }
-  ],
-  "post": {
-    "caption": "Build your own talking AI assistant in Python. You speak, it thinks, it talks back.\n\nAI From Scratch, Episode 56: build a voice assistant\n- The voice loop: record, Whisper, LLM, TTS, play\n- Setup: openai-whisper, pyttsx3, sounddevice\n- The code, line by line\n- Upgrade the voice with Kokoro (the voice you're hearing!)\n- Jargon: latency, streaming, VAD, barge-in\n\nQuiz at the end. Got it right? Comment below.\n\nNext: deploy your AI app.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #VoiceAI #Python #LearnAI #CodingForBeginners",
-    "pinned": "Quiz answer: Whisper turns your speech into text. Fun fact: this channel's voice is made with Kokoro, running locally! Comment what you'd ask your voice bot.",
-    "cover": "'Build a Voice Bot' title card",
-    "alt": "Animated coding tutorial: building a Python voice assistant with Whisper, an LLM and text-to-speech."
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms for voice apps. [1] Latency, the delay before it replies. Keep it under about a second, to feel natural. [2] Streaming, speaking the first words while the rest is still being written. [3] VAD, voice activity detection, knowing when you've stopped talking. [4] And barge-in, letting you interrupt the assistant.",
+   "data": {
+    "heading": "Voice app words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Timer",
+      "Latency",
+      "Delay before reply"
+     ],
+     [
+      "Waves",
+      "Streaming",
+      "Speak while writing"
+     ],
+     [
+      "AudioLines",
+      "VAD",
+      "Detects when you stop"
+     ],
+     [
+      "Hand",
+      "Barge-in",
+      "You can interrupt"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common belief. [1] People think voice assistants must feel slow and clunky. [2] Our simple version waits for each step. Real assistants stream every stage, and overlap them, to reply in under a second.",
+   "data": {
+    "myth": "Voice assistants must feel slow and clunky.",
+    "fact": "Real assistants stream and overlap every stage to reply in under a second.",
+    "tip": "Stream every stage"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What does Whisper do in our voice assistant? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It turns your speech into text!",
+   "data": {
+    "question": "Whisper's job is…",
+    "options": [
+     "Turn speech into text",
+     "Write the reply",
+     "Play the audio"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] The loop is record, transcribe, think, speak. [2] Whisper does speech to text, on your computer. [3] The model writes a short reply. [4] And TTS speaks it, with Kokoro for a natural voice. [5] Next, deploy your AI app, so anyone can use it. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Loop",
+      "record, transcribe, think, speak"
+     ],
+     [
+      "Whisper",
+      "speech to text"
+     ],
+     [
+      "LLM",
+      "short replies"
+     ],
+     [
+      "TTS",
+      "Kokoro sounds human"
+     ]
+    ],
+    "next": "EP 57 · Deploy your app"
+   }
   }
+ ],
+ "post": {
+  "caption": "Build your own talking AI assistant in Python. You speak, it thinks, it talks back.\n\nAI From Scratch, Episode 56: build a voice assistant\n- The voice loop: record, Whisper, LLM, TTS, play\n- Setup: openai-whisper, pyttsx3, sounddevice\n- The code, line by line\n- Upgrade the voice with Kokoro (the voice you're hearing!)\n- Jargon: latency, streaming, VAD, barge-in\n\nQuiz at the end. Got it right? Comment below.\n\nNext: deploy your AI app.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #VoiceAI #Python #LearnAI #CodingForBeginners",
+  "pinned": "Quiz answer: Whisper turns your speech into text. Fun fact: this channel's voice is made with Kokoro, running locally! Comment what you'd ask your voice bot.",
+  "cover": "'Build a Voice Bot' title card",
+  "alt": "Animated coding tutorial: building a Python voice assistant with Whisper, an LLM and text-to-speech."
+ }
 }

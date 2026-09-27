@@ -1,239 +1,240 @@
 {
-  "id": "ep28",
-  "episode": 28,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Transformers Part 2 Inside a Transformer",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep28",
+ "episode": 28,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Transformers Part 2 Inside a Transformer",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "In part one, we learned attention, how words look at each other. [1] But how does a transformer go from your prompt to a full answer? [2] In part two, let's follow a sentence through the machine.",
+   "data": {
+    "kicker": "EPISODE 28",
+    "title": [
+     "Inside a",
+     "Transformer"
+    ],
+    "subtitle": "Part 2: from prompt to answer",
+    "buzzwords": [
+     "Embeddings",
+     "Position",
+     "Layers",
+     "Feed-forward",
+     "Decoder",
+     "Parameters",
+     "Next token",
+     "Context"
+    ],
+    "hook": "What's *inside* ChatGPT's brain?"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "In part one, we learned attention, how words look at each other. [1] But how does a transformer go from your prompt to a full answer? [2] In part two, let's follow a sentence through the machine.",
-      "data": {
-        "kicker": "EPISODE 28",
-        "title": [
-          "Inside a",
-          "Transformer"
-        ],
-        "subtitle": "Part 2: from prompt to answer",
-        "buzzwords": [
-          "Embeddings",
-          "Position",
-          "Layers",
-          "Feed-forward",
-          "Decoder",
-          "Parameters",
-          "Next token",
-          "Context"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's the journey, for the prompt, the capital of India is. [1] First, the text is split into tokens. [2] Each token becomes an embedding, plus a signal for its position in the sentence. [3] The tokens pass through many transformer layers, each with attention, and a small thinking step. [4] At the end, the model scores every possible next token, [5] picks one, New, and repeats, to get Delhi.",
-      "data": {
-        "heading": "From prompt to answer",
-        "kicker": "THE JOURNEY",
-        "nodes": [
-          [
-            "Type",
-            "Tokens",
-            "“The capital of India is”"
-          ],
-          [
-            "Hash",
-            "Embeddings + position",
-            "Meaning and word order"
-          ],
-          [
-            "Layers",
-            "Transformer layers",
-            "Attention + thinking, repeated"
-          ],
-          [
-            "BarChart3",
-            "Score next token",
-            "Every word it knows"
-          ],
-          [
-            "Sparkles",
-            "Pick and repeat",
-            "“New” → “Delhi”"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "Each transformer layer does two jobs. [1] Think of it as a team meeting, followed by some private thinking. [2] In the attention step, every token gathers information from the others. [3] In the feed forward step, each token thinks about what it learned, on its own. [4] Stack dozens of these layers, and the understanding gets deeper and deeper.",
-      "data": {
-        "term": "Transformer layer",
-        "short": "Layer",
-        "definition": "One round of attention (tokens share information) plus a feed-forward step (each token thinks alone).",
-        "chips": [
-          [
-            "Users",
-            "Attention: share"
-          ],
-          [
-            "Brain",
-            "Feed-forward: think"
-          ],
-          [
-            "Layers",
-            "Stack many layers"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Now, one sneaky problem. Attention looks at all the words at once, so how does it know word order? [1] Dog bites man, and man bites dog, use exactly the same words. [2] So each token gets a position signal added to it, first, second, third. [3] And now the model knows who bit whom.",
-      "data": {
-        "heading": "Word order matters",
-        "kicker": "POSITION SIGNALS",
-        "steps": [
-          [
-            "ArrowLeftRight",
-            "Same words",
-            "“dog bites man” vs “man bites dog”"
-          ],
-          [
-            "Hash",
-            "Add position",
-            "1st, 2nd, 3rd…"
-          ],
-          [
-            "CheckCircle2",
-            "Order understood",
-            "Now it knows who bit whom"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "predict",
-      "text": "And at the very end, it's next token prediction, from episode two. [1] The model scores every possible next token. New is the most likely, and Mumbai is much less likely. [2] It picks New, [3] then runs again, and adds Delhi.",
-      "data": {
-        "heading": "The final step",
-        "kicker": "REMEMBER EP 02?",
-        "prompt": "The capital of India is",
-        "options": [
-          [
-            "New",
-            88
-          ],
-          [
-            "Mumbai",
-            6
-          ],
-          [
-            "a",
-            4
-          ],
-          [
-            "Kolkata",
-            1
-          ]
-        ],
-        "continuation": [
-          "Delhi."
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four words to know. [1] Parameters, the numbers inside all these layers, often billions of them. [2] Layers, how many rounds of attention and thinking there are. [3] Context length, how many tokens it can look at, at once. [4] And decoder, the type of transformer chatbots use, which writes one token at a time.",
-      "data": {
-        "heading": "Transformer words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Hash",
-            "Parameters",
-            "Billions of numbers"
-          ],
-          [
-            "Layers",
-            "Layers",
-            "Rounds of attention + thinking"
-          ],
-          [
-            "Ruler",
-            "Context length",
-            "Tokens it can see at once"
-          ],
-          [
-            "PenLine",
-            "Decoder",
-            "Writes one token at a time"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think a transformer looks up answers in a stored database of facts. [2] It doesn't. Its knowledge is spread across billions of parameters, as patterns. That's why it can be brilliant, and also why it can confidently get facts wrong.",
-      "data": {
-        "myth": "A transformer looks up answers in a database of facts.",
-        "fact": "Knowledge is spread across billions of parameters as patterns, which is why it can also be wrong.",
-        "tip": "Patterns, not a database"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! How does a transformer know that, dog bites man, is different from, man bites dog? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Position signals! Each token knows where it sits in the sentence.",
-      "data": {
-        "question": "It knows word order through…",
-        "options": [
-          "Position signals",
-          "Bigger fonts",
-          "Random guessing"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Text is split into tokens, and turned into embeddings. [2] Position signals keep track of word order. [3] Stacked layers of attention and thinking build understanding. [4] And at the end, it predicts the next token. [5] Next, we'll learn how AI sees images, with computer vision. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Tokens",
-            "split and embed"
-          ],
-          [
-            "Position",
-            "word-order signals"
-          ],
-          [
-            "Layers",
-            "attention + thinking, stacked"
-          ],
-          [
-            "Output",
-            "predict the next token"
-          ]
-        ],
-        "next": "EP 29 · Computer vision"
-      }
-    }
-  ],
-  "post": {
-    "caption": "How does a transformer turn \"The capital of India is\" into \"New Delhi\"? Let's follow it through the machine.\n\nEpisode 28 of AI From Scratch: Transformers, Part 2\n- The journey: tokens, embeddings, layers, scores, next token\n- Each layer: a team meeting (attention) + private thinking (feed-forward)\n- Position signals: how it knows \"dog bites man\" ≠ \"man bites dog\"\n- The final step: next token prediction\n- The myth: \"it looks up answers in a database\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Computer vision, how AI sees images.\nFollow @ai_maastaaru for the full series.",
-    "tags": "#AIMaastaaru #Transformers #LearnAI #LLM #AIForBeginners",
-    "pinned": "Quiz answer: Position signals. Each token knows where it sits in the sentence. Transformers: finally clear? Rate it 1–10!",
-    "cover": "'Inside a Transformer' title card",
-    "alt": "Animated lesson following a prompt through a transformer: tokens, embeddings, position, layers and next-token prediction."
+  {
+   "type": "pipeline",
+   "text": "Here's the journey, for the prompt, the capital of India is. [1] First, the text is split into tokens. [2] Each token becomes an embedding, plus a signal for its position in the sentence. [3] The tokens pass through many transformer layers, each with attention, and a small thinking step. [4] At the end, the model scores every possible next token, [5] picks one, New, and repeats, to get Delhi.",
+   "data": {
+    "heading": "From prompt to answer",
+    "kicker": "THE JOURNEY",
+    "nodes": [
+     [
+      "Type",
+      "Tokens",
+      "“The capital of India is”"
+     ],
+     [
+      "Hash",
+      "Embeddings + position",
+      "Meaning and word order"
+     ],
+     [
+      "Layers",
+      "Transformer layers",
+      "Attention + thinking, repeated"
+     ],
+     [
+      "BarChart3",
+      "Score next token",
+      "Every word it knows"
+     ],
+     [
+      "Sparkles",
+      "Pick and repeat",
+      "“New” → “Delhi”"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "Each transformer layer does two jobs. [1] Think of it as a team meeting, followed by some private thinking. [2] In the attention step, every token gathers information from the others. [3] In the feed forward step, each token thinks about what it learned, on its own. [4] Stack dozens of these layers, and the understanding gets deeper and deeper.",
+   "data": {
+    "term": "Transformer layer",
+    "short": "Layer",
+    "definition": "One round of attention (tokens share information) plus a feed-forward step (each token thinks alone).",
+    "chips": [
+     [
+      "Users",
+      "Attention: share"
+     ],
+     [
+      "Brain",
+      "Feed-forward: think"
+     ],
+     [
+      "Layers",
+      "Stack many layers"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Now, one sneaky problem. Attention looks at all the words at once, so how does it know word order? [1] Dog bites man, and man bites dog, use exactly the same words. [2] So each token gets a position signal added to it, first, second, third. [3] And now the model knows who bit whom.",
+   "data": {
+    "heading": "Word order matters",
+    "kicker": "POSITION SIGNALS",
+    "steps": [
+     [
+      "ArrowLeftRight",
+      "Same words",
+      "“dog bites man” vs “man bites dog”"
+     ],
+     [
+      "Hash",
+      "Add position",
+      "1st, 2nd, 3rd…"
+     ],
+     [
+      "CheckCircle2",
+      "Order understood",
+      "Now it knows who bit whom"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "predict",
+   "text": "And at the very end, it's next token prediction, from episode two. [1] The model scores every possible next token. New is the most likely, and Mumbai is much less likely. [2] It picks New, [3] then runs again, and adds Delhi.",
+   "data": {
+    "heading": "The final step",
+    "kicker": "REMEMBER EP 02?",
+    "prompt": "The capital of India is",
+    "options": [
+     [
+      "New",
+      88
+     ],
+     [
+      "Mumbai",
+      6
+     ],
+     [
+      "a",
+      4
+     ],
+     [
+      "Kolkata",
+      1
+     ]
+    ],
+    "continuation": [
+     "Delhi."
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four words to know. [1] Parameters, the numbers inside all these layers, often billions of them. [2] Layers, how many rounds of attention and thinking there are. [3] Context length, how many tokens it can look at, at once. [4] And decoder, the type of transformer chatbots use, which writes one token at a time.",
+   "data": {
+    "heading": "Transformer words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Hash",
+      "Parameters",
+      "Billions of numbers"
+     ],
+     [
+      "Layers",
+      "Layers",
+      "Rounds of attention + thinking"
+     ],
+     [
+      "Ruler",
+      "Context length",
+      "Tokens it can see at once"
+     ],
+     [
+      "PenLine",
+      "Decoder",
+      "Writes one token at a time"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think a transformer looks up answers in a stored database of facts. [2] It doesn't. Its knowledge is spread across billions of parameters, as patterns. That's why it can be brilliant, and also why it can confidently get facts wrong.",
+   "data": {
+    "myth": "A transformer looks up answers in a database of facts.",
+    "fact": "Knowledge is spread across billions of parameters as patterns, which is why it can also be wrong.",
+    "tip": "Patterns, not a database"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! How does a transformer know that, dog bites man, is different from, man bites dog? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Position signals! Each token knows where it sits in the sentence.",
+   "data": {
+    "question": "It knows word order through…",
+    "options": [
+     "Position signals",
+     "Bigger fonts",
+     "Random guessing"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Text is split into tokens, and turned into embeddings. [2] Position signals keep track of word order. [3] Stacked layers of attention and thinking build understanding. [4] And at the end, it predicts the next token. [5] Next, we'll learn how AI sees images, with computer vision. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Tokens",
+      "split and embed"
+     ],
+     [
+      "Position",
+      "word-order signals"
+     ],
+     [
+      "Layers",
+      "attention + thinking, stacked"
+     ],
+     [
+      "Output",
+      "predict the next token"
+     ]
+    ],
+    "next": "EP 29 · Computer vision"
+   }
   }
+ ],
+ "post": {
+  "caption": "How does a transformer turn \"The capital of India is\" into \"New Delhi\"? Let's follow it through the machine.\n\nEpisode 28 of AI From Scratch: Transformers, Part 2\n- The journey: tokens, embeddings, layers, scores, next token\n- Each layer: a team meeting (attention) + private thinking (feed-forward)\n- Position signals: how it knows \"dog bites man\" ≠ \"man bites dog\"\n- The final step: next token prediction\n- The myth: \"it looks up answers in a database\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Computer vision, how AI sees images.\nFollow @ai_maastaaru for the full series.",
+  "tags": "#AIMaastaaru #Transformers #LearnAI #LLM #AIForBeginners",
+  "pinned": "Quiz answer: Position signals. Each token knows where it sits in the sentence. Transformers: finally clear? Rate it 1–10!",
+  "cover": "'Inside a Transformer' title card",
+  "alt": "Animated lesson following a prompt through a transformer: tokens, embeddings, position, layers and next-token prediction."
+ }
 }

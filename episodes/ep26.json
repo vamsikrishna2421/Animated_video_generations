@@ -1,223 +1,224 @@
 {
-  "id": "ep26",
-  "episode": 26,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "Overfitting vs Underfitting",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep26",
+ "episode": 26,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Overfitting vs Underfitting",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Imagine a student who memorises last year's exam answers, and then fails when the questions change. [1] AI models can make exactly the same mistake. [2] Let's understand overfitting, and underfitting.",
+   "data": {
+    "kicker": "EPISODE 26",
+    "title": [
+     "Overfitting",
+     "vs Underfitting"
+    ],
+    "subtitle": "Memorising vs understanding",
+    "buzzwords": [
+     "Overfitting",
+     "Underfitting",
+     "Test set",
+     "Accuracy",
+     "Regularisation",
+     "Early stopping",
+     "Generalisation",
+     "Memorising"
+    ],
+    "hook": "Memorising is *not* learning. Even for AI."
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Imagine a student who memorises last year's exam answers, and then fails when the questions change. [1] AI models can make exactly the same mistake. [2] Let's understand overfitting, and underfitting.",
-      "data": {
-        "kicker": "EPISODE 26",
-        "title": [
-          "Overfitting",
-          "vs Underfitting"
-        ],
-        "subtitle": "Memorising vs understanding",
-        "buzzwords": [
-          "Overfitting",
-          "Underfitting",
-          "Test set",
-          "Accuracy",
-          "Regularisation",
-          "Early stopping",
-          "Generalisation",
-          "Memorising"
-        ]
-      }
+  {
+   "type": "versus",
+   "text": "Here's the core idea. [1] An overfit model memorises its training data, even the random noise, so it aces practice, but fails on new data. [2] A well fit model learns the real pattern, so it does well on new data too.",
+   "data": {
+    "heading": "Memorise vs understand",
+    "kicker": "THE CORE IDEA",
+    "left": {
+     "icon": "Copy",
+     "title": "Overfitting",
+     "stat": "Memorises",
+     "label": "aces practice, fails the real exam"
     },
-    {
-      "type": "versus",
-      "text": "Here's the core idea. [1] An overfit model memorises its training data, even the random noise, so it aces practice, but fails on new data. [2] A well fit model learns the real pattern, so it does well on new data too.",
-      "data": {
-        "heading": "Memorise vs understand",
-        "kicker": "THE CORE IDEA",
-        "left": {
-          "icon": "Copy",
-          "title": "Overfitting",
-          "stat": "Memorises",
-          "label": "aces practice, fails the real exam"
-        },
-        "right": {
-          "icon": "Lightbulb",
-          "title": "Good fit",
-          "stat": "Understands",
-          "label": "does well on new questions"
-        }
-      }
-    },
-    {
-      "type": "definition",
-      "text": "And there's the opposite problem, underfitting. [1] An underfit model is too simple to learn the pattern at all. [2] It does badly on practice, [3] it does badly on the real test, [4] just like a student who barely studied.",
-      "data": {
-        "term": "Underfitting",
-        "short": "Under",
-        "definition": "When a model is too simple to learn the pattern, so it does badly everywhere.",
-        "chips": [
-          [
-            "XCircle",
-            "Bad on practice"
-          ],
-          [
-            "XCircle",
-            "Bad on the test"
-          ],
-          [
-            "BookX",
-            "Barely studied"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "table",
-      "text": "Here's the whole picture. [1] Practice scores, against real test scores. [2] Underfit, bad on both. [3] Overfit, great on practice, but bad on the real test. [4] And a good fit, good on both, and that's the goal.",
-      "data": {
-        "heading": "The whole picture",
-        "kicker": "THE CHEAT SHEET",
-        "cols": [
-          "Practice",
-          "Real test"
-        ],
-        "rows": [
-          [
-            "Underfit",
-            "✗",
-            "✗"
-          ],
-          [
-            "Overfit",
-            "✓",
-            "✗"
-          ],
-          [
-            "Good fit",
-            "✓",
-            "✓"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "So how do you catch overfitting? [1] Compare training accuracy with test accuracy, remember the test set from episode 25? [2] If training is 99 percent, but the test is only 70, it's memorising. [3] If both are close, and high, you've got a good fit.",
-      "data": {
-        "heading": "How to spot it",
-        "kicker": "THE WARNING SIGNS",
-        "steps": [
-          [
-            "Scale",
-            "Compare scores",
-            "Training vs test (EP 25)"
-          ],
-          [
-            "TriangleAlert",
-            "Big gap",
-            "99% vs 70%: memorising"
-          ],
-          [
-            "CheckCircle2",
-            "Close and high",
-            "A good fit"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "And how do you fix it? [1] More data, so there's more to learn from, and less to memorise. [2] A simpler model, if it's too big for the task. [3] Regularisation, a gentle penalty for being too complex. [4] And early stopping, ending training before it starts memorising.",
-      "data": {
-        "heading": "The fixes",
-        "kicker": "HOW TO FIX IT",
-        "terms": [
-          [
-            "Database",
-            "More data",
-            "Less to memorise"
-          ],
-          [
-            "Minimize2",
-            "Simpler model",
-            "Right-sized for the task"
-          ],
-          [
-            "Scale",
-            "Regularisation",
-            "A penalty for complexity"
-          ],
-          [
-            "Timer",
-            "Early stopping",
-            "Stop before memorising"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think a model that scores 100 percent in training must be amazing. [2] It's often a warning sign. A perfect training score usually means it memorised, so always check it on data it has never seen.",
-      "data": {
-        "myth": "A 100% training score means an amazing model.",
-        "fact": "It's often a warning sign of memorising. Always check on data it has never seen.",
-        "tip": "Trust the test score"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! A model scores 99 percent in training, but only 60 percent on new data. What's wrong? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Overfitting! It memorised the training data.",
-      "data": {
-        "question": "99% in training, 60% on new data means…",
-        "options": [
-          "Underfitting",
-          "Overfitting",
-          "Nothing, it's perfect"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] An overfit model memorises, and fails on new data. [2] An underfit model is too simple, and fails everywhere. [3] You spot it by comparing training and test scores. [4] And you fix it with more data, a simpler model, or stopping early. [5] Next, a real world breakdown, how ride apps set arrival times and surge prices. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Overfit",
-            "memorises, fails new data"
-          ],
-          [
-            "Underfit",
-            "too simple, fails everywhere"
-          ],
-          [
-            "Spot it",
-            "compare train vs test"
-          ],
-          [
-            "Fix",
-            "more data, simpler, stop early"
-          ]
-        ],
-        "next": "Use Case · Ride ETA & surge"
-      }
+    "right": {
+     "icon": "Lightbulb",
+     "title": "Good fit",
+     "stat": "Understands",
+     "label": "does well on new questions"
     }
-  ],
-  "post": {
-    "caption": "The student who memorised last year's answers fails the new exam. AI can make the same mistake.\n\nEpisode 26 of AI From Scratch: Overfitting vs Underfitting\n- Overfitting: memorising instead of understanding\n- Underfitting: too simple to learn anything\n- The cheat sheet: practice vs real test scores\n- How to spot it: the train vs test gap\n- How to fix it: more data, simpler model, regularisation, early stopping\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How ride apps set arrival times and surge prices.\nFollow @ai_maastaaru for the full series.",
-    "tags": "#AIMaastaaru #MachineLearning #LearnAI #DataScience #AIForBeginners",
-    "pinned": "Quiz answer: Overfitting, it memorised the training data. Ever memorised answers for an exam? Be honest 😄",
-    "cover": "'Overfitting vs Underfitting' title card",
-    "alt": "Animated lesson explaining overfitting and underfitting in machine learning with an exam analogy."
+   }
+  },
+  {
+   "type": "definition",
+   "text": "And there's the opposite problem, underfitting. [1] An underfit model is too simple to learn the pattern at all. [2] It does badly on practice, [3] it does badly on the real test, [4] just like a student who barely studied.",
+   "data": {
+    "term": "Underfitting",
+    "short": "Under",
+    "definition": "When a model is too simple to learn the pattern, so it does badly everywhere.",
+    "chips": [
+     [
+      "XCircle",
+      "Bad on practice"
+     ],
+     [
+      "XCircle",
+      "Bad on the test"
+     ],
+     [
+      "BookX",
+      "Barely studied"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "text": "Here's the whole picture. [1] Practice scores, against real test scores. [2] Underfit, bad on both. [3] Overfit, great on practice, but bad on the real test. [4] And a good fit, good on both, and that's the goal.",
+   "data": {
+    "heading": "The whole picture",
+    "kicker": "THE CHEAT SHEET",
+    "cols": [
+     "Practice",
+     "Real test"
+    ],
+    "rows": [
+     [
+      "Underfit",
+      "✗",
+      "✗"
+     ],
+     [
+      "Overfit",
+      "✓",
+      "✗"
+     ],
+     [
+      "Good fit",
+      "✓",
+      "✓"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "So how do you catch overfitting? [1] Compare training accuracy with test accuracy, remember the test set from episode 25? [2] If training is 99 percent, but the test is only 70, it's memorising. [3] If both are close, and high, you've got a good fit.",
+   "data": {
+    "heading": "How to spot it",
+    "kicker": "THE WARNING SIGNS",
+    "steps": [
+     [
+      "Scale",
+      "Compare scores",
+      "Training vs test (EP 25)"
+     ],
+     [
+      "TriangleAlert",
+      "Big gap",
+      "99% vs 70%: memorising"
+     ],
+     [
+      "CheckCircle2",
+      "Close and high",
+      "A good fit"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "And how do you fix it? [1] More data, so there's more to learn from, and less to memorise. [2] A simpler model, if it's too big for the task. [3] Regularisation, a gentle penalty for being too complex. [4] And early stopping, ending training before it starts memorising.",
+   "data": {
+    "heading": "The fixes",
+    "kicker": "HOW TO FIX IT",
+    "terms": [
+     [
+      "Database",
+      "More data",
+      "Less to memorise"
+     ],
+     [
+      "Minimize2",
+      "Simpler model",
+      "Right-sized for the task"
+     ],
+     [
+      "Scale",
+      "Regularisation",
+      "A penalty for complexity"
+     ],
+     [
+      "Timer",
+      "Early stopping",
+      "Stop before memorising"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think a model that scores 100 percent in training must be amazing. [2] It's often a warning sign. A perfect training score usually means it memorised, so always check it on data it has never seen.",
+   "data": {
+    "myth": "A 100% training score means an amazing model.",
+    "fact": "It's often a warning sign of memorising. Always check on data it has never seen.",
+    "tip": "Trust the test score"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! A model scores 99 percent in training, but only 60 percent on new data. What's wrong? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Overfitting! It memorised the training data.",
+   "data": {
+    "question": "99% in training, 60% on new data means…",
+    "options": [
+     "Underfitting",
+     "Overfitting",
+     "Nothing, it's perfect"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] An overfit model memorises, and fails on new data. [2] An underfit model is too simple, and fails everywhere. [3] You spot it by comparing training and test scores. [4] And you fix it with more data, a simpler model, or stopping early. [5] Next, the idea that changed AI forever, transformers and attention, part one. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Overfit",
+      "memorises, fails new data"
+     ],
+     [
+      "Underfit",
+      "too simple, fails everywhere"
+     ],
+     [
+      "Spot it",
+      "compare train vs test"
+     ],
+     [
+      "Fix",
+      "more data, simpler, stop early"
+     ]
+    ],
+    "next": "EP 27 · Transformers, Part 1"
+   }
   }
+ ],
+ "post": {
+  "caption": "The student who memorised last year's answers fails the new exam. AI can make the same mistake.\n\nEpisode 26 of AI From Scratch: Overfitting vs Underfitting\n- Overfitting: memorising instead of understanding\n- Underfitting: too simple to learn anything\n- The cheat sheet: practice vs real test scores\n- How to spot it: the train vs test gap\n- How to fix it: more data, simpler model, regularisation, early stopping\n\nQuiz at the end. Got it right? Comment below.\n\nNext: the idea that changed AI forever, transformers and attention, part one.\nFollow @ai_maastaaru for the full series.",
+  "tags": "#AIMaastaaru #MachineLearning #LearnAI #DataScience #AIForBeginners",
+  "pinned": "Quiz answer: Overfitting, it memorised the training data. Ever memorised answers for an exam? Be honest 😄",
+  "cover": "'Overfitting vs Underfitting' title card",
+  "alt": "Animated lesson explaining overfitting and underfitting in machine learning with an exam analogy."
+ }
 }

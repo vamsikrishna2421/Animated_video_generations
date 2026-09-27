@@ -9,7 +9,7 @@ text = q.read_text()
 
 def mark(m):
     num, ep_id, title, status = m.group(1), m.group(2), m.group(3), m.group(4)
-    done = any((ROOT / "out").glob(f"{ep_id}_*.mp4"))
+    done = any(re.match(rf"^(\d{{3}}_)?{ep_id}_", v.name) for v in (ROOT / "out").rglob("*.mp4"))
     return f"| {num} | {ep_id} | {title} | {'done' if done else status.strip()} |"
 
 

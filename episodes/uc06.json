@@ -1,226 +1,227 @@
 {
-  "id": "uc06",
-  "episode": 6,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 06",
-  "handle": "@ai_maastaaru",
-  "title": "How a Bank Support Bot Works",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc06",
+ "episode": 6,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 06",
+ "handle": "@ai_maastaaru",
+ "title": "How a Bank Support Bot Works",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You message your bank's app at midnight, asking why your card was declined. [1] And a bot replies instantly, with the actual reason. [2] Let's break down how a bank's support bot works.",
+   "data": {
+    "kicker": "USE CASE 06",
+    "title": [
+     "Bank",
+     "Support Bot"
+    ],
+    "subtitle": "RAG + tools + a human",
+    "buzzwords": [
+     "RAG",
+     "Tools",
+     "Agents",
+     "Policies",
+     "Transactions",
+     "Human handoff",
+     "Security",
+     "24/7"
+    ],
+    "hook": "Your bank's *2 AM* support agent"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You message your bank's app at midnight, asking why your card was declined. [1] And a bot replies instantly, with the actual reason. [2] Let's break down how a bank's support bot works.",
-      "data": {
-        "kicker": "USE CASE 06",
-        "title": [
-          "Bank",
-          "Support Bot"
-        ],
-        "subtitle": "RAG + tools + a human",
-        "buzzwords": [
-          "RAG",
-          "Tools",
-          "Agents",
-          "Policies",
-          "Transactions",
-          "Human handoff",
-          "Security",
-          "24/7"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's what happens behind that reply. [1] You ask, why was my card declined? [2] First, the bot confirms who you are, safely, through the app's login. [3] It searches the bank's policy documents, and that's RAG. [4] It calls tools to check your actual account, like recent transactions. [5] And it answers, your card hit its daily limit, and you can raise it in settings.",
+   "data": {
+    "heading": "Behind the reply",
+    "nodes": [
+     [
+      "MessageCircleQuestion",
+      "You ask",
+      "“Why was my card declined?”"
+     ],
+     [
+      "ShieldCheck",
+      "Verify you",
+      "Through the app's secure login"
+     ],
+     [
+      "BookOpen",
+      "Search policies",
+      "RAG over bank documents (EP 07)"
+     ],
+     [
+      "Wrench",
+      "Check your account",
+      "Tools for real data (EP 09)"
+     ],
+     [
+      "Sparkles",
+      "Answer",
+      "“Daily limit reached, raise it in settings”"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "So it's really three ideas working together. [1] RAG, to answer from the bank's own rules and FAQs. [2] Tools, to look up your real account data. [3] And an agent loop, to decide which one to use, and in what order.",
+   "data": {
+    "heading": "Three ideas together",
+    "kicker": "THE RECIPE",
+    "steps": [
+     [
+      "BookOpen",
+      "RAG",
+      "Bank rules and FAQs"
+     ],
+     [
+      "Wrench",
+      "Tools",
+      "Your real account data"
+     ],
+     [
+      "Bot",
+      "Agent loop",
+      "Decides what to do next"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "toolcall",
+   "text": "Let's see it live. [1] You ask, why was my card declined? [2] The bot calls a tool, get recent transactions, for your card. [3] The bank's system replies, declined, because the daily limit was reached. [4] And the bot explains, and tells you exactly how to raise the limit.",
+   "data": {
+    "heading": "The bot, with tools",
+    "question": "Why was my card declined?",
+    "call": {
+     "tool": "get_recent_transactions",
+     "card": "xx4521",
+     "limit": 3
     },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens behind that reply. [1] You ask, why was my card declined? [2] First, the bot confirms who you are, safely, through the app's login. [3] It searches the bank's policy documents, and that's RAG. [4] It calls tools to check your actual account, like recent transactions. [5] And it answers, your card hit its daily limit, and you can raise it in settings.",
-      "data": {
-        "heading": "Behind the reply",
-        "nodes": [
-          [
-            "MessageCircleQuestion",
-            "You ask",
-            "“Why was my card declined?”"
-          ],
-          [
-            "ShieldCheck",
-            "Verify you",
-            "Through the app's secure login"
-          ],
-          [
-            "BookOpen",
-            "Search policies",
-            "RAG over bank documents (EP 07)"
-          ],
-          [
-            "Wrench",
-            "Check your account",
-            "Tools for real data (EP 09)"
-          ],
-          [
-            "Sparkles",
-            "Answer",
-            "“Daily limit reached, raise it in settings”"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "steps",
-      "text": "So it's really three ideas working together. [1] RAG, to answer from the bank's own rules and FAQs. [2] Tools, to look up your real account data. [3] And an agent loop, to decide which one to use, and in what order.",
-      "data": {
-        "heading": "Three ideas together",
-        "kicker": "THE RECIPE",
-        "steps": [
-          [
-            "BookOpen",
-            "RAG",
-            "Bank rules and FAQs"
-          ],
-          [
-            "Wrench",
-            "Tools",
-            "Your real account data"
-          ],
-          [
-            "Bot",
-            "Agent loop",
-            "Decides what to do next"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "toolcall",
-      "text": "Let's see it live. [1] You ask, why was my card declined? [2] The bot calls a tool, get recent transactions, for your card. [3] The bank's system replies, declined, because the daily limit was reached. [4] And the bot explains, and tells you exactly how to raise the limit.",
-      "data": {
-        "heading": "The bot, with tools",
-        "question": "Why was my card declined?",
-        "call": {
-          "tool": "get_recent_transactions",
-          "card": "xx4521",
-          "limit": 3
-        },
-        "tool": "BANK SYSTEM",
-        "result": "declined: daily limit ₹50,000 reached",
-        "answer": "Your card reached its ₹50,000 daily limit. You can raise it in Settings, under Card limits."
-      }
-    },
-    {
-      "type": "terms",
-      "text": "And banks add strong safety rails. [1] Verification, so it only shows your data after you log in. [2] No secrets, so it never asks for your PIN, OTP or password. [3] Limits, so it can't move money without your confirmation. [4] And human handoff, so complaints and fraud cases go to a real person.",
-      "data": {
-        "heading": "Safety rails",
-        "kicker": "SAFETY FIRST",
-        "terms": [
-          [
-            "ShieldCheck",
-            "Verification",
-            "Only after secure login"
-          ],
-          [
-            "KeyRound",
-            "No secrets",
-            "Never asks PIN or OTP"
-          ],
-          [
-            "Hand",
-            "Limits",
-            "Money moves need your OK"
-          ],
-          [
-            "UserRound",
-            "Human handoff",
-            "Complaints go to a person"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where will you see this? [1] Banking apps answering card and account questions. [2] Telecom apps handling plan changes and bill queries. [3] And airline apps rebooking your flight when there's a delay.",
-      "data": {
-        "heading": "Support bots everywhere",
-        "items": [
-          [
-            "Landmark",
-            "Banking apps",
-            "Cards, accounts, limits"
-          ],
-          [
-            "Signal",
-            "Telecom apps",
-            "Plans and bills"
-          ],
-          [
-            "Plane",
-            "Airline apps",
-            "Rebooking after delays"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think a support bot can do anything a bank employee can. [2] It can't, and that's by design. It only gets specific tools and permissions, and anything risky goes to a human. And remember, no real bank bot will ever ask for your OTP.",
-      "data": {
-        "myth": "A support bot can do anything a bank employee can.",
-        "fact": "It only gets specific tools and permissions. Anything risky goes to a human.",
-        "tip": "Never share your OTP"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Which part lets a bank bot answer from the bank's own rule book? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] RAG! It retrieves the bank's policies, and answers from them.",
-      "data": {
-        "question": "Answering from the bank's rules uses…",
-        "options": [
-          "RAG",
-          "Text to speech",
-          "Temperature"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] RAG lets the bot answer from the bank's rules. [2] Tools let it check your real account. [3] An agent loop decides what to do next. [4] And safety rails protect you, like login checks and human handoff. [5] Next, we'll learn how AI assistants remember you, and what they forget. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "RAG",
-            "answers from bank rules"
-          ],
-          [
-            "Tools",
-            "checks your real account"
-          ],
-          [
-            "Agent",
-            "decides what to do"
-          ],
-          [
-            "Safety",
-            "login, no OTPs, human handoff"
-          ]
-        ],
-        "next": "EP 17 · Memory & context"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Midnight, your card is declined, and the bank's bot tells you exactly why. How does it work?\n\nReal World AI, Use Case 06: a bank support bot\n- The flow: verify you, search policies, check your account, answer\n- Three ideas together: RAG + tools + an agent loop\n- A live tool call to the bank's system\n- Safety rails: login checks, no OTPs, limits, human handoff\n- Reminder: no real bank bot will ever ask for your OTP\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI assistants remember you.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #AIChatbot #LearnAI #FinTech #AIForBeginners",
-    "pinned": "Quiz answer: RAG. It retrieves the bank's policies and answers from them. And remember: never share your OTP with anyone, bot or human.",
-    "cover": "'Bank Support Bot' title card",
-    "alt": "Animated breakdown of how a bank's AI support bot combines RAG, tools and safety checks."
+    "tool": "BANK SYSTEM",
+    "result": "declined: daily limit ₹50,000 reached",
+    "answer": "Your card reached its ₹50,000 daily limit. You can raise it in Settings, under Card limits."
+   }
+  },
+  {
+   "type": "terms",
+   "text": "And banks add strong safety rails. [1] Verification, so it only shows your data after you log in. [2] No secrets, so it never asks for your PIN, OTP or password. [3] Limits, so it can't move money without your confirmation. [4] And human handoff, so complaints and fraud cases go to a real person.",
+   "data": {
+    "heading": "Safety rails",
+    "kicker": "SAFETY FIRST",
+    "terms": [
+     [
+      "ShieldCheck",
+      "Verification",
+      "Only after secure login"
+     ],
+     [
+      "KeyRound",
+      "No secrets",
+      "Never asks PIN or OTP"
+     ],
+     [
+      "Hand",
+      "Limits",
+      "Money moves need your OK"
+     ],
+     [
+      "UserRound",
+      "Human handoff",
+      "Complaints go to a person"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where will you see this? [1] Banking apps answering card and account questions. [2] Telecom apps handling plan changes and bill queries. [3] And airline apps rebooking your flight when there's a delay.",
+   "data": {
+    "heading": "Support bots everywhere",
+    "items": [
+     [
+      "Landmark",
+      "Banking apps",
+      "Cards, accounts, limits"
+     ],
+     [
+      "Signal",
+      "Telecom apps",
+      "Plans and bills"
+     ],
+     [
+      "Plane",
+      "Airline apps",
+      "Rebooking after delays"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think a support bot can do anything a bank employee can. [2] It can't, and that's by design. It only gets specific tools and permissions, and anything risky goes to a human. And remember, no real bank bot will ever ask for your OTP.",
+   "data": {
+    "myth": "A support bot can do anything a bank employee can.",
+    "fact": "It only gets specific tools and permissions. Anything risky goes to a human.",
+    "tip": "Never share your OTP"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which part lets a bank bot answer from the bank's own rule book? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] RAG! It retrieves the bank's policies, and answers from them.",
+   "data": {
+    "question": "Answering from the bank's rules uses…",
+    "options": [
+     "RAG",
+     "Text to speech",
+     "Temperature"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] RAG lets the bot answer from the bank's rules. [2] Tools let it check your real account. [3] An agent loop decides what to do next. [4] And safety rails protect you, like login checks and human handoff. [5] Next, use case 7, how smart replies work. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "RAG",
+      "answers from bank rules"
+     ],
+     [
+      "Tools",
+      "checks your real account"
+     ],
+     [
+      "Agent",
+      "decides what to do"
+     ],
+     [
+      "Safety",
+      "login, no OTPs, human handoff"
+     ]
+    ],
+    "next": "USE CASE 7 · Smart replies"
+   }
   }
+ ],
+ "post": {
+  "caption": "Midnight, your card is declined, and the bank's bot tells you exactly why. How does it work?\n\nReal World AI, Use Case 06: a bank support bot\n- The flow: verify you, search policies, check your account, answer\n- Three ideas together: RAG + tools + an agent loop\n- A live tool call to the bank's system\n- Safety rails: login checks, no OTPs, limits, human handoff\n- Reminder: no real bank bot will ever ask for your OTP\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How smart replies work.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #AIChatbot #LearnAI #FinTech #AIForBeginners",
+  "pinned": "Quiz answer: RAG. It retrieves the bank's policies and answers from them. And remember: never share your OTP with anyone, bot or human.",
+  "cover": "'Bank Support Bot' title card",
+  "alt": "Animated breakdown of how a bank's AI support bot combines RAG, tools and safety checks."
+ }
 }

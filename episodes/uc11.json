@@ -1,284 +1,285 @@
 {
-  "id": "uc11",
-  "episode": 11,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 11",
-  "handle": "@ai_maastaaru",
-  "title": "How Google Lens Works",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc11",
+ "episode": 11,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 11",
+ "handle": "@ai_maastaaru",
+ "title": "How Google Lens Works",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You point your camera at a flower, a shoe, or a sign in another language, [1] and Google Lens instantly tells you what it is, where to buy it, or what it says. [2] Let's break down how visual search works.",
+   "data": {
+    "kicker": "USE CASE 11",
+    "title": [
+     "Google",
+     "Lens"
+    ],
+    "subtitle": "How visual search works",
+    "buzzwords": [
+     "Visual search",
+     "Embeddings",
+     "OCR",
+     "Shopping",
+     "Translate",
+     "Circle to Search",
+     "Vision",
+     "Camera"
+    ],
+    "hook": "Point your camera. *Get answers.*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You point your camera at a flower, a shoe, or a sign in another language, [1] and Google Lens instantly tells you what it is, where to buy it, or what it says. [2] Let's break down how visual search works.",
-      "data": {
-        "kicker": "USE CASE 11",
-        "title": [
-          "Google",
-          "Lens"
-        ],
-        "subtitle": "How visual search works",
-        "buzzwords": [
-          "Visual search",
-          "Embeddings",
-          "OCR",
-          "Shopping",
-          "Translate",
-          "Circle to Search",
-          "Vision",
-          "Camera"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens, in about a second. [1] You snap a photo of a plant. [2] A vision model finds the main object in the frame. [3] It turns that object into an embedding, a list of numbers for what it looks like. [4] It searches billions of images for the closest matches, [5] and shows you the answer, it's a hibiscus, with links.",
-      "data": {
-        "heading": "In about a second",
-        "nodes": [
-          [
-            "Camera",
-            "Snap a photo",
-            "A plant on your balcony"
-          ],
-          [
-            "ScanSearch",
-            "Find the object",
-            "Crop out the main subject"
-          ],
-          [
-            "Hash",
-            "Embedding",
-            "What it looks like, as numbers"
-          ],
-          [
-            "Search",
-            "Match",
-            "Closest images out of billions"
-          ],
-          [
-            "Sparkles",
-            "Answer",
-            "“Hibiscus”, with links"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "embedmap",
-      "text": "Remember the map of meaning? Images get one too. [1] Similar looking things sit close together, flowers here, shoes there, landmarks over there. [2] Your photo lands on the map, [3] and its nearest neighbours tell Lens what it is.",
-      "data": {
-        "heading": "A map of looks",
-        "kicker": "REMEMBER EP 06?",
-        "points": [
-          [
-            "Rose",
-            0.14,
-            0.22,
-            0
-          ],
-          [
-            "Hibiscus",
-            0.34,
-            0.12,
-            0
-          ],
-          [
-            "Lotus",
-            0.2,
-            0.38,
-            0
-          ],
-          [
-            "Sneaker",
-            0.68,
-            0.16,
-            1
-          ],
-          [
-            "Sandal",
-            0.86,
-            0.3,
-            1
-          ],
-          [
-            "Boot",
-            0.62,
-            0.36,
-            1
-          ],
-          [
-            "Charminar",
-            0.56,
-            0.7,
-            2
-          ],
-          [
-            "Taj Mahal",
-            0.8,
-            0.82,
-            2
-          ],
-          [
-            "India Gate",
-            0.4,
-            0.86,
-            2
-          ]
-        ],
-        "query": [
-          "Your photo",
-          0.3,
-          0.26
-        ],
-        "neighbors": [
-          "Hibiscus",
-          "Rose"
-        ],
-        "note": "Looks similar, sits close"
-      }
-    },
-    {
-      "type": "steps",
-      "text": "And Lens does more than name things. [1] Text mode reads words in the image, and can translate them, and that's called OCR. [2] Shopping mode finds similar products and prices. [3] And homework mode reads a maths problem, and explains the steps.",
-      "data": {
-        "heading": "More than names",
-        "kicker": "THREE MODES",
-        "steps": [
-          [
-            "Languages",
-            "Read and translate",
-            "OCR on signs and menus"
-          ],
-          [
-            "ShoppingBag",
-            "Shop the look",
-            "Similar products and prices"
-          ],
-          [
-            "Calculator",
-            "Homework help",
-            "Explains the steps"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So when does visual search struggle? [1] Blurry or dark photos. [2] Unusual angles, like the bottom of a shoe. [3] Look alikes, like two very similar plants. [4] And rare items, with very few matching images online.",
-      "data": {
-        "heading": "When it struggles",
-        "kicker": "THE HARD CASES",
-        "terms": [
-          [
-            "Focus",
-            "Blur and darkness",
-            "Hard to see details"
-          ],
-          [
-            "RotateCw",
-            "Odd angles",
-            "Unfamiliar views"
-          ],
-          [
-            "Copy",
-            "Look-alikes",
-            "Very similar things"
-          ],
-          [
-            "HelpCircle",
-            "Rare items",
-            "Few images to match"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where does visual search show up? [1] Google Lens, and Circle to Search on phones. [2] Shopping apps that let you search with a photo. [3] And apps that identify plants, birds and insects.",
-      "data": {
-        "heading": "Where you'll see it",
-        "items": [
-          [
-            "Smartphone",
-            "Phone search",
-            "Lens, Circle to Search"
-          ],
-          [
-            "ShoppingBag",
-            "Shopping apps",
-            "Search with a photo"
-          ],
-          [
-            "Leaf",
-            "ID apps",
-            "Plants, birds, insects"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think visual search is always right, so it's safe to trust, even for wild mushrooms or medicines. [2] It's only a best guess, based on similar images. For anything safety related, always confirm with an expert.",
-      "data": {
-        "myth": "Visual search is always right, even for mushrooms or medicines.",
-        "fact": "It's a best guess from similar images. For anything safety-related, confirm with an expert.",
-        "tip": "Double-check anything risky"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! How does Lens work out what's in your photo? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It turns your photo into an embedding, and finds the closest matches!",
-      "data": {
-        "question": "Lens identifies things by…",
-        "options": [
-          "Asking a human",
-          "Matching image embeddings",
-          "Reading your messages"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] A vision model finds the main object. [2] It turns its appearance into an embedding. [3] Lens finds the closest matches out of billions. [4] And it can also read text, shop and help with homework. [5] Next, part two of how neural networks learn, the loss, and gradient descent. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Detect",
-            "find the main object"
-          ],
-          [
-            "Embed",
-            "appearance as numbers"
-          ],
-          [
-            "Match",
-            "closest of billions"
-          ],
-          [
-            "Modes",
-            "text, shopping, homework"
-          ]
-        ],
-        "next": "EP 22 · Neural networks, Part 2"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Point your camera at anything and Google Lens knows what it is. How?\n\nReal World AI, Use Case 11: how visual search works\n- The flow: snap, detect, embed, match, answer\n- A map of looks: similar images sit close together\n- Three modes: read and translate, shop the look, homework help\n- When it struggles: blur, odd angles, look-alikes, rare items\n- Reminder: confirm anything safety-related with an expert\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How neural networks learn, Part 2.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #GoogleLens #LearnAI #ComputerVision #AIForBeginners",
-    "pinned": "Quiz answer: It turns your photo into an embedding and finds the closest matches. What's the weirdest thing you've searched with your camera?",
-    "cover": "'Google Lens' title card",
-    "alt": "Animated breakdown of how visual search tools identify objects using image embeddings."
+  {
+   "type": "pipeline",
+   "text": "Here's what happens, in about a second. [1] You snap a photo of a plant. [2] A vision model finds the main object in the frame. [3] It turns that object into an embedding, a list of numbers for what it looks like. [4] It searches billions of images for the closest matches, [5] and shows you the answer, it's a hibiscus, with links.",
+   "data": {
+    "heading": "In about a second",
+    "nodes": [
+     [
+      "Camera",
+      "Snap a photo",
+      "A plant on your balcony"
+     ],
+     [
+      "ScanSearch",
+      "Find the object",
+      "Crop out the main subject"
+     ],
+     [
+      "Hash",
+      "Embedding",
+      "What it looks like, as numbers"
+     ],
+     [
+      "Search",
+      "Match",
+      "Closest images out of billions"
+     ],
+     [
+      "Sparkles",
+      "Answer",
+      "“Hibiscus”, with links"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "embedmap",
+   "text": "Remember the map of meaning? Images get one too. [1] Similar looking things sit close together, flowers here, shoes there, landmarks over there. [2] Your photo lands on the map, [3] and its nearest neighbours tell Lens what it is.",
+   "data": {
+    "heading": "A map of looks",
+    "kicker": "REMEMBER EP 06?",
+    "points": [
+     [
+      "Rose",
+      0.14,
+      0.22,
+      0
+     ],
+     [
+      "Hibiscus",
+      0.34,
+      0.12,
+      0
+     ],
+     [
+      "Lotus",
+      0.2,
+      0.38,
+      0
+     ],
+     [
+      "Sneaker",
+      0.68,
+      0.16,
+      1
+     ],
+     [
+      "Sandal",
+      0.86,
+      0.3,
+      1
+     ],
+     [
+      "Boot",
+      0.62,
+      0.36,
+      1
+     ],
+     [
+      "Charminar",
+      0.56,
+      0.7,
+      2
+     ],
+     [
+      "Taj Mahal",
+      0.8,
+      0.82,
+      2
+     ],
+     [
+      "India Gate",
+      0.4,
+      0.86,
+      2
+     ]
+    ],
+    "query": [
+     "Your photo",
+     0.3,
+     0.26
+    ],
+    "neighbors": [
+     "Hibiscus",
+     "Rose"
+    ],
+    "note": "Looks similar, sits close"
+   }
+  },
+  {
+   "type": "steps",
+   "text": "And Lens does more than name things. [1] Text mode reads words in the image, and can translate them, and that's called OCR. [2] Shopping mode finds similar products and prices. [3] And homework mode reads a maths problem, and explains the steps.",
+   "data": {
+    "heading": "More than names",
+    "kicker": "THREE MODES",
+    "steps": [
+     [
+      "Languages",
+      "Read and translate",
+      "OCR on signs and menus"
+     ],
+     [
+      "ShoppingBag",
+      "Shop the look",
+      "Similar products and prices"
+     ],
+     [
+      "Calculator",
+      "Homework help",
+      "Explains the steps"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So when does visual search struggle? [1] Blurry or dark photos. [2] Unusual angles, like the bottom of a shoe. [3] Look alikes, like two very similar plants. [4] And rare items, with very few matching images online.",
+   "data": {
+    "heading": "When it struggles",
+    "kicker": "THE HARD CASES",
+    "terms": [
+     [
+      "Focus",
+      "Blur and darkness",
+      "Hard to see details"
+     ],
+     [
+      "RotateCw",
+      "Odd angles",
+      "Unfamiliar views"
+     ],
+     [
+      "Copy",
+      "Look-alikes",
+      "Very similar things"
+     ],
+     [
+      "HelpCircle",
+      "Rare items",
+      "Few images to match"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where does visual search show up? [1] Google Lens, and Circle to Search on phones. [2] Shopping apps that let you search with a photo. [3] And apps that identify plants, birds and insects.",
+   "data": {
+    "heading": "Where you'll see it",
+    "items": [
+     [
+      "Smartphone",
+      "Phone search",
+      "Lens, Circle to Search"
+     ],
+     [
+      "ShoppingBag",
+      "Shopping apps",
+      "Search with a photo"
+     ],
+     [
+      "Leaf",
+      "ID apps",
+      "Plants, birds, insects"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think visual search is always right, so it's safe to trust, even for wild mushrooms or medicines. [2] It's only a best guess, based on similar images. For anything safety related, always confirm with an expert.",
+   "data": {
+    "myth": "Visual search is always right, even for mushrooms or medicines.",
+    "fact": "It's a best guess from similar images. For anything safety-related, confirm with an expert.",
+    "tip": "Double-check anything risky"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! How does Lens work out what's in your photo? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It turns your photo into an embedding, and finds the closest matches!",
+   "data": {
+    "question": "Lens identifies things by…",
+    "options": [
+     "Asking a human",
+     "Matching image embeddings",
+     "Reading your messages"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] A vision model finds the main object. [2] It turns its appearance into an embedding. [3] Lens finds the closest matches out of billions. [4] And it can also read text, shop and help with homework. [5] Next, use case 12, how AI tutor apps work. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Detect",
+      "find the main object"
+     ],
+     [
+      "Embed",
+      "appearance as numbers"
+     ],
+     [
+      "Match",
+      "closest of billions"
+     ],
+     [
+      "Modes",
+      "text, shopping, homework"
+     ]
+    ],
+    "next": "USE CASE 12 · AI tutors"
+   }
   }
+ ],
+ "post": {
+  "caption": "Point your camera at anything and Google Lens knows what it is. How?\n\nReal World AI, Use Case 11: how visual search works\n- The flow: snap, detect, embed, match, answer\n- A map of looks: similar images sit close together\n- Three modes: read and translate, shop the look, homework help\n- When it struggles: blur, odd angles, look-alikes, rare items\n- Reminder: confirm anything safety-related with an expert\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI tutor apps work.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #GoogleLens #LearnAI #ComputerVision #AIForBeginners",
+  "pinned": "Quiz answer: It turns your photo into an embedding and finds the closest matches. What's the weirdest thing you've searched with your camera?",
+  "cover": "'Google Lens' title card",
+  "alt": "Animated breakdown of how visual search tools identify objects using image embeddings."
+ }
 }

@@ -1,284 +1,285 @@
 {
-  "id": "uc04",
-  "episode": 4,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 04",
-  "handle": "@ai_maastaaru",
-  "title": "How Netflix and YouTube Recommend Videos",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc04",
+ "episode": 4,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 04",
+ "handle": "@ai_maastaaru",
+ "title": "How Netflix and YouTube Recommend Videos",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You finish one video, and the next one is somehow exactly what you wanted. [1] So how do YouTube and Netflix know your taste so well? [2] Let's break down recommendation systems.",
+   "data": {
+    "kicker": "USE CASE 04",
+    "title": [
+     "What To",
+     "Watch Next"
+    ],
+    "subtitle": "How recommendations work",
+    "buzzwords": [
+     "Watch time",
+     "Embeddings",
+     "Ranking",
+     "Signals",
+     "Cold start",
+     "Collaborative",
+     "For you",
+     "Autoplay"
+    ],
+    "hook": "How YouTube *reads your mind*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You finish one video, and the next one is somehow exactly what you wanted. [1] So how do YouTube and Netflix know your taste so well? [2] Let's break down recommendation systems.",
-      "data": {
-        "kicker": "USE CASE 04",
-        "title": [
-          "What To",
-          "Watch Next"
-        ],
-        "subtitle": "How recommendations work",
-        "buzzwords": [
-          "Watch time",
-          "Embeddings",
-          "Ranking",
-          "Signals",
-          "Cold start",
-          "Collaborative",
-          "For you",
-          "Autoplay"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "It all starts with signals, basically everything you do. [1] What you watch, and for how long. [2] What you like, share or skip. [3] What people similar to you enjoyed. [4] All of this is turned into numbers, [5] and the system predicts what you're most likely to watch next.",
-      "data": {
-        "heading": "It starts with signals",
-        "nodes": [
-          [
-            "Play",
-            "What you watch",
-            "And for how long"
-          ],
-          [
-            "ThumbsUp",
-            "Likes and skips",
-            "Every tap is a signal"
-          ],
-          [
-            "Users",
-            "Similar people",
-            "What they enjoyed"
-          ],
-          [
-            "Hash",
-            "Turned into numbers",
-            "Your taste as embeddings"
-          ],
-          [
-            "Target",
-            "Prediction",
-            "What you'll likely watch next"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "embedmap",
-      "text": "Here's the key idea, from episode six. [1] Both you and every video get an embedding, a spot on a map of taste. Comedy here, cricket there, cooking over there. [2] Your profile lands on the map, based on what you watch. [3] And the closest videos become your recommendations.",
-      "data": {
-        "heading": "A map of taste",
-        "kicker": "REMEMBER EP 06?",
-        "points": [
-          [
-            "Standup",
-            0.14,
-            0.2,
-            0
-          ],
-          [
-            "Sitcoms",
-            0.3,
-            0.12,
-            0
-          ],
-          [
-            "Pranks",
-            0.22,
-            0.34,
-            0
-          ],
-          [
-            "Test match",
-            0.66,
-            0.14,
-            1
-          ],
-          [
-            "Highlights",
-            0.84,
-            0.26,
-            1
-          ],
-          [
-            "Commentary",
-            0.7,
-            0.34,
-            1
-          ],
-          [
-            "Biryani",
-            0.58,
-            0.7,
-            2
-          ],
-          [
-            "Dosa",
-            0.8,
-            0.8,
-            2
-          ],
-          [
-            "Baking",
-            0.44,
-            0.86,
-            2
-          ]
-        ],
-        "query": [
-          "You",
-          0.66,
-          0.78
-        ],
-        "neighbors": [
-          "Biryani",
-          "Dosa"
-        ],
-        "note": "Watch cooking videos, get more cooking videos"
-      }
-    },
-    {
-      "type": "steps",
-      "text": "Big platforms do this in two stages. [1] First, they pick candidates. From millions of videos, they quickly pick a few hundred that might suit you. [2] Then comes ranking, where a bigger model scores each one carefully, and puts them in order. [3] And finally, they mix in a little variety, so you also see something fresh.",
-      "data": {
-        "heading": "Two stages",
-        "kicker": "AT MASSIVE SCALE",
-        "steps": [
-          [
-            "Filter",
-            "Pick candidates",
-            "Millions → a few hundred"
-          ],
-          [
-            "ListOrdered",
-            "Rank them",
-            "Score and sort carefully"
-          ],
-          [
-            "Shuffle",
-            "Add variety",
-            "A few fresh surprises"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms you'll hear. [1] Collaborative filtering, which means people like you liked this. [2] Content based, which means this is similar to what you watched. [3] Watch time, one of the strongest signals of all. [4] And the cold start problem, when a new user or a new video has no history yet.",
-      "data": {
-        "heading": "Recommendation words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "Users",
-            "Collaborative",
-            "People like you liked it"
-          ],
-          [
-            "Film",
-            "Content-based",
-            "Similar to what you watched"
-          ],
-          [
-            "Clock",
-            "Watch time",
-            "A very strong signal"
-          ],
-          [
-            "Snowflake",
-            "Cold start",
-            "New user, no history"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "And this is everywhere. [1] YouTube and Netflix choose your next video. [2] Amazon and Flipkart suggest products. [3] And Spotify builds your daily mixes.",
-      "data": {
-        "heading": "Recommendations everywhere",
-        "items": [
-          [
-            "Play",
-            "Video apps",
-            "YouTube, Netflix, Prime"
-          ],
-          [
-            "ShoppingCart",
-            "Shopping",
-            "Amazon, Flipkart"
-          ],
-          [
-            "Music",
-            "Music",
-            "Spotify daily mixes"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think apps listen to their conversations to recommend things. [2] Usually, they don't need to. What you watch, search and click, plus what similar people do, is enough to predict you surprisingly well.",
-      "data": {
-        "myth": "Apps listen to my conversations to recommend things.",
-        "fact": "They usually don't need to. Your clicks, searches and similar people predict you surprisingly well.",
-        "tip": "Your clicks say a lot"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! What's the cold start problem? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] A new user or video has no history yet, so it's hard to recommend!",
-      "data": {
-        "question": "The cold start problem is…",
-        "options": [
-          "The server is too cold",
-          "A new user or video has no history",
-          "Videos load too slowly"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Recommendations start with your signals, like watch time and skips. [2] You and every video become points on a map of taste. [3] Platforms pick candidates, then rank them. [4] And new users face the cold start problem. [5] Next, part two of image generation, how AI now creates videos. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Signals",
-            "watch, like, skip"
-          ],
-          [
-            "Embeddings",
-            "you and videos on a map"
-          ],
-          [
-            "Two stages",
-            "pick candidates, then rank"
-          ],
-          [
-            "Cold start",
-            "no history yet"
-          ]
-        ],
-        "next": "EP 15 · Image & video, Part 2"
-      }
-    }
-  ],
-  "post": {
-    "caption": "The next video is always exactly what you wanted. How does YouTube know?\n\nReal World AI, Use Case 04: recommendation systems\n- Signals: watch time, likes, skips, similar people\n- A map of taste: you and every video as embeddings\n- Two stages: pick candidates, then rank them\n- Jargon: collaborative filtering, content-based, cold start\n- The myth: \"apps listen to my conversations\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Image & video generation, Part 2.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #Recommendations #LearnAI #MachineLearning #AIForBeginners",
-    "pinned": "Quiz answer: A new user or video has no history yet, so it's hard to recommend. What's the most accurate recommendation you've ever got?",
-    "cover": "'What To Watch Next' title card",
-    "alt": "Animated breakdown of how YouTube and Netflix recommendation systems use signals and embeddings."
+  {
+   "type": "pipeline",
+   "text": "It all starts with signals, basically everything you do. [1] What you watch, and for how long. [2] What you like, share or skip. [3] What people similar to you enjoyed. [4] All of this is turned into numbers, [5] and the system predicts what you're most likely to watch next.",
+   "data": {
+    "heading": "It starts with signals",
+    "nodes": [
+     [
+      "Play",
+      "What you watch",
+      "And for how long"
+     ],
+     [
+      "ThumbsUp",
+      "Likes and skips",
+      "Every tap is a signal"
+     ],
+     [
+      "Users",
+      "Similar people",
+      "What they enjoyed"
+     ],
+     [
+      "Hash",
+      "Turned into numbers",
+      "Your taste as embeddings"
+     ],
+     [
+      "Target",
+      "Prediction",
+      "What you'll likely watch next"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "embedmap",
+   "text": "Here's the key idea, from episode six. [1] Both you and every video get an embedding, a spot on a map of taste. Comedy here, cricket there, cooking over there. [2] Your profile lands on the map, based on what you watch. [3] And the closest videos become your recommendations.",
+   "data": {
+    "heading": "A map of taste",
+    "kicker": "REMEMBER EP 06?",
+    "points": [
+     [
+      "Standup",
+      0.14,
+      0.2,
+      0
+     ],
+     [
+      "Sitcoms",
+      0.3,
+      0.12,
+      0
+     ],
+     [
+      "Pranks",
+      0.22,
+      0.34,
+      0
+     ],
+     [
+      "Test match",
+      0.66,
+      0.14,
+      1
+     ],
+     [
+      "Highlights",
+      0.84,
+      0.26,
+      1
+     ],
+     [
+      "Commentary",
+      0.7,
+      0.34,
+      1
+     ],
+     [
+      "Biryani",
+      0.58,
+      0.7,
+      2
+     ],
+     [
+      "Dosa",
+      0.8,
+      0.8,
+      2
+     ],
+     [
+      "Baking",
+      0.44,
+      0.86,
+      2
+     ]
+    ],
+    "query": [
+     "You",
+     0.66,
+     0.78
+    ],
+    "neighbors": [
+     "Biryani",
+     "Dosa"
+    ],
+    "note": "Watch cooking videos, get more cooking videos"
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Big platforms do this in two stages. [1] First, they pick candidates. From millions of videos, they quickly pick a few hundred that might suit you. [2] Then comes ranking, where a bigger model scores each one carefully, and puts them in order. [3] And finally, they mix in a little variety, so you also see something fresh.",
+   "data": {
+    "heading": "Two stages",
+    "kicker": "AT MASSIVE SCALE",
+    "steps": [
+     [
+      "Filter",
+      "Pick candidates",
+      "Millions → a few hundred"
+     ],
+     [
+      "ListOrdered",
+      "Rank them",
+      "Score and sort carefully"
+     ],
+     [
+      "Shuffle",
+      "Add variety",
+      "A few fresh surprises"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms you'll hear. [1] Collaborative filtering, which means people like you liked this. [2] Content based, which means this is similar to what you watched. [3] Watch time, one of the strongest signals of all. [4] And the cold start problem, when a new user or a new video has no history yet.",
+   "data": {
+    "heading": "Recommendation words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Users",
+      "Collaborative",
+      "People like you liked it"
+     ],
+     [
+      "Film",
+      "Content-based",
+      "Similar to what you watched"
+     ],
+     [
+      "Clock",
+      "Watch time",
+      "A very strong signal"
+     ],
+     [
+      "Snowflake",
+      "Cold start",
+      "New user, no history"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "And this is everywhere. [1] YouTube and Netflix choose your next video. [2] Amazon and Flipkart suggest products. [3] And Spotify builds your daily mixes.",
+   "data": {
+    "heading": "Recommendations everywhere",
+    "items": [
+     [
+      "Play",
+      "Video apps",
+      "YouTube, Netflix, Prime"
+     ],
+     [
+      "ShoppingCart",
+      "Shopping",
+      "Amazon, Flipkart"
+     ],
+     [
+      "Music",
+      "Music",
+      "Spotify daily mixes"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think apps listen to their conversations to recommend things. [2] Usually, they don't need to. What you watch, search and click, plus what similar people do, is enough to predict you surprisingly well.",
+   "data": {
+    "myth": "Apps listen to my conversations to recommend things.",
+    "fact": "They usually don't need to. Your clicks, searches and similar people predict you surprisingly well.",
+    "tip": "Your clicks say a lot"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What's the cold start problem? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] A new user or video has no history yet, so it's hard to recommend!",
+   "data": {
+    "question": "The cold start problem is…",
+    "options": [
+     "The server is too cold",
+     "A new user or video has no history",
+     "Videos load too slowly"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Recommendations start with your signals, like watch time and skips. [2] You and every video become points on a map of taste. [3] Platforms pick candidates, then rank them. [4] And new users face the cold start problem. [5] Next, use case 5, how magic eraser works. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Signals",
+      "watch, like, skip"
+     ],
+     [
+      "Embeddings",
+      "you and videos on a map"
+     ],
+     [
+      "Two stages",
+      "pick candidates, then rank"
+     ],
+     [
+      "Cold start",
+      "no history yet"
+     ]
+    ],
+    "next": "USE CASE 5 · Magic eraser"
+   }
   }
+ ],
+ "post": {
+  "caption": "The next video is always exactly what you wanted. How does YouTube know?\n\nReal World AI, Use Case 04: recommendation systems\n- Signals: watch time, likes, skips, similar people\n- A map of taste: you and every video as embeddings\n- Two stages: pick candidates, then rank them\n- Jargon: collaborative filtering, content-based, cold start\n- The myth: \"apps listen to my conversations\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How magic eraser works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #Recommendations #LearnAI #MachineLearning #AIForBeginners",
+  "pinned": "Quiz answer: A new user or video has no history yet, so it's hard to recommend. What's the most accurate recommendation you've ever got?",
+  "cover": "'What To Watch Next' title card",
+  "alt": "Animated breakdown of how YouTube and Netflix recommendation systems use signals and embeddings."
+ }
 }

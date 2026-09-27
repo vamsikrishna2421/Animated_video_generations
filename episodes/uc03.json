@@ -1,241 +1,242 @@
 {
-  "id": "uc03",
-  "episode": 3,
-  "series": "REAL WORLD AI",
-  "label": "USE CASE 03",
-  "handle": "@ai_maastaaru",
-  "title": "How AI Meeting Notes Work",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "uc03",
+ "episode": 3,
+ "series": "REAL WORLD AI",
+ "label": "USE CASE 03",
+ "handle": "@ai_maastaaru",
+ "title": "How AI Meeting Notes Work",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You finish a one hour meeting, and within seconds you get a neat summary, with action items for everyone. [1] So how does the AI actually do that? [2] Let's break down AI meeting notes.",
+   "data": {
+    "kicker": "USE CASE 03",
+    "title": [
+     "AI Meeting",
+     "Notes"
+    ],
+    "subtitle": "From voices to action items",
+    "buzzwords": [
+     "Transcript",
+     "Speakers",
+     "Summary",
+     "Action items",
+     "Zoom",
+     "Google Meet",
+     "Teams",
+     "Diarization"
+    ],
+    "hook": "1-hour meeting. *Notes in seconds.*"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You finish a one hour meeting, and within seconds you get a neat summary, with action items for everyone. [1] So how does the AI actually do that? [2] Let's break down AI meeting notes.",
-      "data": {
-        "kicker": "USE CASE 03",
-        "title": [
-          "AI Meeting",
-          "Notes"
-        ],
-        "subtitle": "From voices to action items",
-        "buzzwords": [
-          "Transcript",
-          "Speakers",
-          "Summary",
-          "Action items",
-          "Zoom",
-          "Google Meet",
-          "Teams",
-          "Diarization"
-        ]
-      }
-    },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens after you hit record. [1] The meeting audio is captured, every voice in the call. [2] Speech to text turns everything into a transcript. [3] Then speaker labelling works out who said what. [4] An LLM reads the whole transcript, [5] and writes a summary, the decisions, and the action items.",
-      "data": {
-        "heading": "From call to notes",
-        "nodes": [
-          [
-            "Mic",
-            "Record the call",
-            "Every voice captured"
-          ],
-          [
-            "FileText",
-            "Transcript",
-            "Speech to text (EP 13)"
-          ],
-          [
-            "Users",
-            "Who said what",
-            "Speaker labelling"
-          ],
-          [
-            "Brain",
-            "LLM reads it all",
-            "Understands the discussion"
-          ],
-          [
-            "ListChecks",
-            "Notes",
-            "Summary, decisions, action items"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "definition",
-      "text": "That middle step has a fancy name. [1] Speaker diarization, which simply means working out who spoke when. [2] It groups voices by how they sound, [3] matches them to the names in the call, [4] and labels every line of the transcript.",
-      "data": {
-        "term": "Speaker diarization",
-        "short": "Who?",
-        "definition": "Working out who spoke when, so every line of the transcript has a name.",
-        "chips": [
-          [
-            "AudioLines",
-            "Groups voices"
-          ],
-          [
-            "Users",
-            "Matches names"
-          ],
-          [
-            "Tag",
-            "Labels each line"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "prompt",
-      "text": "And the LLM step is really just a well written prompt. [1] A lazy prompt, like summarise this, gives you a vague paragraph. [2] Real tools send something more like this. A role, you are a meeting assistant. [3] Context, here's today's transcript, with names. [4] The task, list the decisions, and who does what, by when. [5] And the format, short bullet points. [6] And that's how you get notes that are actually useful.",
-      "data": {
-        "heading": "The prompt behind the notes",
-        "kicker": "REMEMBER EP 04?",
-        "bad": "Summarise this.",
-        "badReply": "The team discussed several topics and agreed to follow up later.",
-        "parts": [
-          [
-            "ROLE",
-            "You are a meeting assistant.",
-            "#8B5CF6"
-          ],
-          [
-            "CONTEXT",
-            "Today's call transcript, with speaker names.",
-            "#22D3EE"
-          ],
-          [
-            "TASK",
-            "List decisions and action items, with owners and dates.",
-            "#F59E0B"
-          ],
-          [
-            "FORMAT",
-            "Short bullet points, under 100 words.",
-            "#34D399"
-          ]
-        ],
-        "goodReply": "Decision: launch on the 15th. Priya: final designs by Friday. Rahul: budget by Tuesday."
-      }
-    },
-    {
-      "type": "examples",
-      "text": "So where will you find this? [1] Zoom, Google Meet and Microsoft Teams all offer AI summaries. [2] Note taker apps record in person meetings, and even lectures. [3] And some doctors use similar tools to write visit notes, while they talk to patients.",
-      "data": {
-        "heading": "Where you'll find it",
-        "items": [
-          [
-            "Video",
-            "Video calls",
-            "Zoom, Meet and Teams summaries"
-          ],
-          [
-            "Mic",
-            "Note taker apps",
-            "Meetings and lectures"
-          ],
-          [
-            "Stethoscope",
-            "Doctor's notes",
-            "Visit notes while they talk"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "So what makes this tricky? [1] Crosstalk, when two people talk at the same time. [2] Names and jargon, like product names, or Indian names. [3] Long meetings, which may not fit in the context window, remember episode three? [4] And privacy, because everyone should know they're being recorded.",
-      "data": {
-        "heading": "The tough parts",
-        "kicker": "WHY IT'S HARD",
-        "terms": [
-          [
-            "MessagesSquare",
-            "Crosstalk",
-            "Two people at once"
-          ],
-          [
-            "Tag",
-            "Names and jargon",
-            "Product names, Indian names"
-          ],
-          [
-            "Clock",
-            "Long meetings",
-            "May not fit the context window"
-          ],
-          [
-            "Lock",
-            "Privacy",
-            "Everyone should know"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think AI meeting notes are always complete and correct. [2] They're a great first draft, but they can miss sarcasm, mix up speakers, or even invent an action item. So always skim them before you share.",
-      "data": {
-        "myth": "AI meeting notes are always complete and correct.",
-        "fact": "Great first draft, but they can mix up speakers or invent an action item. Skim before sharing.",
-        "tip": "Review before you send"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Which step works out who said what, in a meeting transcript? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Speaker diarization! It works out who spoke when.",
-      "data": {
-        "question": "Who-said-what is handled by…",
-        "options": [
-          "Text to speech",
-          "Speaker diarization",
-          "Temperature"
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] First, the call is recorded. [2] Speech to text makes a transcript. [3] Speaker diarization works out who spoke when. [4] And an LLM writes the notes and action items. [5] Next, we'll see how AI creates images from just a sentence. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Record",
-            "capture every voice"
-          ],
-          [
-            "Transcribe",
-            "speech to text"
-          ],
-          [
-            "Who spoke",
-            "speaker diarization"
-          ],
-          [
-            "Summarise",
-            "an LLM writes the notes"
-          ]
-        ],
-        "next": "EP 14 · Image generation"
-      }
-    }
-  ],
-  "post": {
-    "caption": "A one hour meeting, and seconds later you have a summary with action items. How?\n\nReal World AI, Use Case 03: AI meeting notes\n- The flow: record, transcript, who said what, LLM, notes\n- Speaker diarization: working out who spoke when\n- The prompt behind useful notes (role, context, task, format)\n- Where you'll find it: Zoom, Meet, Teams, note taker apps\n- The tough parts: crosstalk, names, long meetings, privacy\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI creates images from a sentence.\nFollow @ai_maastaaru for more real world AI breakdowns.",
-    "tags": "#AIMaastaaru #AIProductivity #LearnAI #GenerativeAI #AIForBeginners",
-    "pinned": "Quiz answer: Speaker diarization. It works out who spoke when. Do you use AI notes in your meetings?",
-    "cover": "'AI Meeting Notes' title card",
-    "alt": "Animated breakdown of how AI meeting note tools turn a call into a summary and action items."
+  {
+   "type": "pipeline",
+   "text": "Here's what happens after you hit record. [1] The meeting audio is captured, every voice in the call. [2] Speech to text turns everything into a transcript. [3] Then speaker labelling works out who said what. [4] An LLM reads the whole transcript, [5] and writes a summary, the decisions, and the action items.",
+   "data": {
+    "heading": "From call to notes",
+    "nodes": [
+     [
+      "Mic",
+      "Record the call",
+      "Every voice captured"
+     ],
+     [
+      "FileText",
+      "Transcript",
+      "Speech to text (EP 13)"
+     ],
+     [
+      "Users",
+      "Who said what",
+      "Speaker labelling"
+     ],
+     [
+      "Brain",
+      "LLM reads it all",
+      "Understands the discussion"
+     ],
+     [
+      "ListChecks",
+      "Notes",
+      "Summary, decisions, action items"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "That middle step has a fancy name. [1] Speaker diarization, which simply means working out who spoke when. [2] It groups voices by how they sound, [3] matches them to the names in the call, [4] and labels every line of the transcript.",
+   "data": {
+    "term": "Speaker diarization",
+    "short": "Who?",
+    "definition": "Working out who spoke when, so every line of the transcript has a name.",
+    "chips": [
+     [
+      "AudioLines",
+      "Groups voices"
+     ],
+     [
+      "Users",
+      "Matches names"
+     ],
+     [
+      "Tag",
+      "Labels each line"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "prompt",
+   "text": "And the LLM step is really just a well written prompt. [1] A lazy prompt, like summarise this, gives you a vague paragraph. [2] Real tools send something more like this. A role, you are a meeting assistant. [3] Context, here's today's transcript, with names. [4] The task, list the decisions, and who does what, by when. [5] And the format, short bullet points. [6] And that's how you get notes that are actually useful.",
+   "data": {
+    "heading": "The prompt behind the notes",
+    "kicker": "REMEMBER EP 04?",
+    "bad": "Summarise this.",
+    "badReply": "The team discussed several topics and agreed to follow up later.",
+    "parts": [
+     [
+      "ROLE",
+      "You are a meeting assistant.",
+      "#8B5CF6"
+     ],
+     [
+      "CONTEXT",
+      "Today's call transcript, with speaker names.",
+      "#22D3EE"
+     ],
+     [
+      "TASK",
+      "List decisions and action items, with owners and dates.",
+      "#F59E0B"
+     ],
+     [
+      "FORMAT",
+      "Short bullet points, under 100 words.",
+      "#34D399"
+     ]
+    ],
+    "goodReply": "Decision: launch on the 15th. Priya: final designs by Friday. Rahul: budget by Tuesday."
+   }
+  },
+  {
+   "type": "examples",
+   "text": "So where will you find this? [1] Zoom, Google Meet and Microsoft Teams all offer AI summaries. [2] Note taker apps record in person meetings, and even lectures. [3] And some doctors use similar tools to write visit notes, while they talk to patients.",
+   "data": {
+    "heading": "Where you'll find it",
+    "items": [
+     [
+      "Video",
+      "Video calls",
+      "Zoom, Meet and Teams summaries"
+     ],
+     [
+      "Mic",
+      "Note taker apps",
+      "Meetings and lectures"
+     ],
+     [
+      "Stethoscope",
+      "Doctor's notes",
+      "Visit notes while they talk"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "So what makes this tricky? [1] Crosstalk, when two people talk at the same time. [2] Names and jargon, like product names, or Indian names. [3] Long meetings, which may not fit in the context window, remember episode three? [4] And privacy, because everyone should know they're being recorded.",
+   "data": {
+    "heading": "The tough parts",
+    "kicker": "WHY IT'S HARD",
+    "terms": [
+     [
+      "MessagesSquare",
+      "Crosstalk",
+      "Two people at once"
+     ],
+     [
+      "Tag",
+      "Names and jargon",
+      "Product names, Indian names"
+     ],
+     [
+      "Clock",
+      "Long meetings",
+      "May not fit the context window"
+     ],
+     [
+      "Lock",
+      "Privacy",
+      "Everyone should know"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think AI meeting notes are always complete and correct. [2] They're a great first draft, but they can miss sarcasm, mix up speakers, or even invent an action item. So always skim them before you share.",
+   "data": {
+    "myth": "AI meeting notes are always complete and correct.",
+    "fact": "Great first draft, but they can mix up speakers or invent an action item. Skim before sharing.",
+    "tip": "Review before you send"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which step works out who said what, in a meeting transcript? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Speaker diarization! It works out who spoke when.",
+   "data": {
+    "question": "Who-said-what is handled by…",
+    "options": [
+     "Text to speech",
+     "Speaker diarization",
+     "Temperature"
+    ],
+    "answer": 1
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] First, the call is recorded. [2] Speech to text makes a transcript. [3] Speaker diarization works out who spoke when. [4] And an LLM writes the notes and action items. [5] Next, use case 4, how Netflix and YouTube recommend videos. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Record",
+      "capture every voice"
+     ],
+     [
+      "Transcribe",
+      "speech to text"
+     ],
+     [
+      "Who spoke",
+      "speaker diarization"
+     ],
+     [
+      "Summarise",
+      "an LLM writes the notes"
+     ]
+    ],
+    "next": "USE CASE 4 · Recommendations"
+   }
   }
+ ],
+ "post": {
+  "caption": "A one hour meeting, and seconds later you have a summary with action items. How?\n\nReal World AI, Use Case 03: AI meeting notes\n- The flow: record, transcript, who said what, LLM, notes\n- Speaker diarization: working out who spoke when\n- The prompt behind useful notes (role, context, task, format)\n- Where you'll find it: Zoom, Meet, Teams, note taker apps\n- The tough parts: crosstalk, names, long meetings, privacy\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How Netflix and YouTube recommend videos.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "tags": "#AIMaastaaru #AIProductivity #LearnAI #GenerativeAI #AIForBeginners",
+  "pinned": "Quiz answer: Speaker diarization. It works out who spoke when. Do you use AI notes in your meetings?",
+  "cover": "'AI Meeting Notes' title card",
+  "alt": "Animated breakdown of how AI meeting note tools turn a call into a summary and action items."
+ }
 }

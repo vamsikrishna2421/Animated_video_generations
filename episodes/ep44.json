@@ -1,229 +1,230 @@
 {
-  "id": "ep44",
-  "episode": 44,
-  "series": "AI FROM SCRATCH",
-  "handle": "@ai_maastaaru",
-  "title": "AI and Your Privacy",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "ep44",
+ "episode": 44,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "AI and Your Privacy",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "You paste your salary slip into a chatbot, and ask it to plan your taxes. [1] Where does that data go? Who can see it? Could it be used for training? [2] Let's talk about AI and your privacy.",
+   "data": {
+    "kicker": "EPISODE 44",
+    "title": [
+     "AI &",
+     "Privacy"
+    ],
+    "subtitle": "Where does your data go?",
+    "buzzwords": [
+     "Personal data",
+     "Training data",
+     "Opt out",
+     "Encryption",
+     "Retention",
+     "DPDP Act",
+     "Local AI",
+     "Consent"
+    ],
+    "hook": "Stop pasting *this* into ChatGPT"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "You paste your salary slip into a chatbot, and ask it to plan your taxes. [1] Where does that data go? Who can see it? Could it be used for training? [2] Let's talk about AI and your privacy.",
-      "data": {
-        "kicker": "EPISODE 44",
-        "title": [
-          "AI &",
-          "Privacy"
-        ],
-        "subtitle": "Where does your data go?",
-        "buzzwords": [
-          "Personal data",
-          "Training data",
-          "Opt out",
-          "Encryption",
-          "Retention",
-          "DPDP Act",
-          "Local AI",
-          "Consent"
-        ]
-      }
+  {
+   "type": "pipeline",
+   "text": "Here's what happens when you send a message. [1] Your text travels, encrypted, to the company's servers. [2] The model reads it, and writes a reply. [3] The chat may be stored, for your history and for safety checks. [4] Depending on the settings, it may be used to train future models. [5] And it's deleted after a set time, or when you delete it.",
+   "data": {
+    "heading": "Journey of your message",
+    "nodes": [
+     [
+      "Lock",
+      "Sent",
+      "Encrypted in transit"
+     ],
+     [
+      "Brain",
+      "Processed",
+      "The model replies"
+     ],
+     [
+      "Database",
+      "Stored",
+      "History and safety"
+     ],
+     [
+      "GraduationCap",
+      "Training?",
+      "Depends on settings"
+     ],
+     [
+      "Trash2",
+      "Deleted",
+      "After a set time"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "There are two very different setups. [1] Consumer chat apps, where your chats may be used to improve models, unless you opt out. [2] Business and API plans, which usually don't train on your data by default, and come with contracts.",
+   "data": {
+    "heading": "Not all plans are equal",
+    "kicker": "CHECK YOUR PLAN",
+    "left": {
+     "icon": "Smartphone",
+     "title": "Consumer apps",
+     "stat": "May train",
+     "label": "unless you opt out"
     },
-    {
-      "type": "pipeline",
-      "text": "Here's what happens when you send a message. [1] Your text travels, encrypted, to the company's servers. [2] The model reads it, and writes a reply. [3] The chat may be stored, for your history and for safety checks. [4] Depending on the settings, it may be used to train future models. [5] And it's deleted after a set time, or when you delete it.",
-      "data": {
-        "heading": "Journey of your message",
-        "nodes": [
-          [
-            "Lock",
-            "Sent",
-            "Encrypted in transit"
-          ],
-          [
-            "Brain",
-            "Processed",
-            "The model replies"
-          ],
-          [
-            "Database",
-            "Stored",
-            "History and safety"
-          ],
-          [
-            "GraduationCap",
-            "Training?",
-            "Depends on settings"
-          ],
-          [
-            "Trash2",
-            "Deleted",
-            "After a set time"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "versus",
-      "text": "There are two very different setups. [1] Consumer chat apps, where your chats may be used to improve models, unless you opt out. [2] Business and API plans, which usually don't train on your data by default, and come with contracts.",
-      "data": {
-        "heading": "Not all plans are equal",
-        "kicker": "CHECK YOUR PLAN",
-        "left": {
-          "icon": "Smartphone",
-          "title": "Consumer apps",
-          "stat": "May train",
-          "label": "unless you opt out"
-        },
-        "right": {
-          "icon": "Building2",
-          "title": "Business / API",
-          "stat": "Usually not",
-          "label": "no training by default, contracts"
-        }
-      }
-    },
-    {
-      "type": "steps",
-      "text": "So what should you never paste into a public chatbot? [1] Passwords, and OTPs. [2] Full ID numbers, like Aadhaar, PAN, or bank details. [3] And confidential work data, like client files, or unreleased code.",
-      "data": {
-        "heading": "Never paste these",
-        "kicker": "PROTECT YOURSELF",
-        "steps": [
-          [
-            "KeyRound",
-            "Passwords & OTPs",
-            "Never, ever"
-          ],
-          [
-            "IdCard",
-            "ID numbers",
-            "Aadhaar, PAN, bank"
-          ],
-          [
-            "Briefcase",
-            "Confidential work",
-            "Client files, code"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "examples",
-      "text": "Here are smart privacy habits. [1] Turn off training on your chats, in the app's settings. [2] Remove names and numbers, before pasting documents. [3] And for sensitive work, use a business plan, or run a model locally, from episode 38.",
-      "data": {
-        "heading": "Smart habits",
-        "items": [
-          [
-            "Settings",
-            "Check settings",
-            "Turn off chat training"
-          ],
-          [
-            "Eraser",
-            "Redact",
-            "Remove names and numbers"
-          ],
-          [
-            "Laptop",
-            "Go local",
-            "For sensitive work"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "terms",
-      "text": "Here are four terms. [1] Personal data, anything that identifies you. [2] Data retention, how long your chats are kept. [3] Opt out, choosing not to let your data be used for training. [4] And India's DPDP Act, the Digital Personal Data Protection law, which gives you rights over your data.",
-      "data": {
-        "heading": "Privacy words",
-        "kicker": "JARGON BUSTER",
-        "terms": [
-          [
-            "User",
-            "Personal data",
-            "Identifies you"
-          ],
-          [
-            "Clock",
-            "Retention",
-            "How long it's kept"
-          ],
-          [
-            "ToggleLeft",
-            "Opt out",
-            "Say no to training"
-          ],
-          [
-            "Scale",
-            "DPDP Act",
-            "India's data law"
-          ]
-        ]
-      }
-    },
-    {
-      "type": "myth",
-      "text": "Here's a common myth. [1] People think deleting a chat from the screen removes it everywhere, instantly. [2] Companies may keep it for a while, for safety and legal reasons. Read the privacy policy, and share carefully from the start.",
-      "data": {
-        "myth": "Deleting a chat removes it everywhere, instantly.",
-        "fact": "Companies may keep it for a while for safety and legal reasons. Share carefully from the start.",
-        "tip": "Think before you paste"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Quick quiz! Which should you never paste into a public chatbot? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Passwords and OTPs, never!",
-      "data": {
-        "question": "Never paste…",
-        "options": [
-          "Your passwords and OTPs",
-          "A recipe question",
-          "A poem you wrote"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "type": "recap",
-      "text": "Let's recap. [1] Your messages are sent, processed, and often stored. [2] Consumer apps may train on chats, unless you opt out. [3] Never paste passwords, ID numbers, or confidential data. [4] Use settings, redaction, and local AI for sensitive work. [5] Next, deepfakes, and how to spot them. Follow AI Maastaaru!",
-      "data": {
-        "points": [
-          [
-            "Stored",
-            "often, for a while"
-          ],
-          [
-            "Opt out",
-            "of chat training"
-          ],
-          [
-            "Never paste",
-            "passwords, IDs, secrets"
-          ],
-          [
-            "Protect",
-            "redact or go local"
-          ]
-        ],
-        "next": "EP 45 · Deepfakes"
-      }
+    "right": {
+     "icon": "Building2",
+     "title": "Business / API",
+     "stat": "Usually not",
+     "label": "no training by default, contracts"
     }
-  ],
-  "post": {
-    "caption": "You paste your salary slip into a chatbot. Where does that data go?\n\nAI From Scratch, Episode 44: AI and your privacy\n- The journey of your message\n- Consumer apps vs business plans\n- Never paste: passwords, OTPs, Aadhaar, PAN, confidential work\n- Smart habits: settings, redaction, local AI\n- Jargon: personal data, retention, opt out, DPDP Act\n- Myth: deleting a chat isn't instant everywhere\n\nQuiz at the end. Got it right? Comment below.\n\nNext: deepfakes and how to spot them.\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #DataPrivacy #LearnAI #CyberSafety #AIForBeginners",
-    "pinned": "Quiz answer: Passwords and OTPs, never! Have you turned off chat training in your AI app settings? Comment below!",
-    "cover": "'AI & Privacy' title card",
-    "alt": "Animated explainer of AI privacy: where chat data goes and how to protect yourself."
+   }
+  },
+  {
+   "type": "steps",
+   "text": "So what should you never paste into a public chatbot? [1] Passwords, and OTPs. [2] Full ID numbers, like Aadhaar, PAN, or bank details. [3] And confidential work data, like client files, or unreleased code.",
+   "data": {
+    "heading": "Never paste these",
+    "kicker": "PROTECT YOURSELF",
+    "steps": [
+     [
+      "KeyRound",
+      "Passwords & OTPs",
+      "Never, ever"
+     ],
+     [
+      "IdCard",
+      "ID numbers",
+      "Aadhaar, PAN, bank"
+     ],
+     [
+      "Briefcase",
+      "Confidential work",
+      "Client files, code"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "Here are smart privacy habits. [1] Turn off training on your chats, in the app's settings. [2] Remove names and numbers, before pasting documents. [3] And for sensitive work, use a business plan, or run a model locally, from episode 38.",
+   "data": {
+    "heading": "Smart habits",
+    "items": [
+     [
+      "Settings",
+      "Check settings",
+      "Turn off chat training"
+     ],
+     [
+      "Eraser",
+      "Redact",
+      "Remove names and numbers"
+     ],
+     [
+      "Laptop",
+      "Go local",
+      "For sensitive work"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Personal data, anything that identifies you. [2] Data retention, how long your chats are kept. [3] Opt out, choosing not to let your data be used for training. [4] And India's DPDP Act, the Digital Personal Data Protection law, which gives you rights over your data.",
+   "data": {
+    "heading": "Privacy words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "User",
+      "Personal data",
+      "Identifies you"
+     ],
+     [
+      "Clock",
+      "Retention",
+      "How long it's kept"
+     ],
+     [
+      "ToggleLeft",
+      "Opt out",
+      "Say no to training"
+     ],
+     [
+      "Scale",
+      "DPDP Act",
+      "India's data law"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think deleting a chat from the screen removes it everywhere, instantly. [2] Companies may keep it for a while, for safety and legal reasons. Read the privacy policy, and share carefully from the start.",
+   "data": {
+    "myth": "Deleting a chat removes it everywhere, instantly.",
+    "fact": "Companies may keep it for a while for safety and legal reasons. Share carefully from the start.",
+    "tip": "Think before you paste"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which should you never paste into a public chatbot? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Passwords and OTPs, never!",
+   "data": {
+    "question": "Never paste…",
+    "options": [
+     "Your passwords and OTPs",
+     "A recipe question",
+     "A poem you wrote"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] Your messages are sent, processed, and often stored. [2] Consumer apps may train on chats, unless you opt out. [3] Never paste passwords, ID numbers, or confidential data. [4] Use settings, redaction, and local AI for sensitive work. [5] Next, deepfakes, and how to spot them. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Stored",
+      "often, for a while"
+     ],
+     [
+      "Opt out",
+      "of chat training"
+     ],
+     [
+      "Never paste",
+      "passwords, IDs, secrets"
+     ],
+     [
+      "Protect",
+      "redact or go local"
+     ]
+    ],
+    "next": "EP 45 · Deepfakes"
+   }
   }
+ ],
+ "post": {
+  "caption": "You paste your salary slip into a chatbot. Where does that data go?\n\nAI From Scratch, Episode 44: AI and your privacy\n- The journey of your message\n- Consumer apps vs business plans\n- Never paste: passwords, OTPs, Aadhaar, PAN, confidential work\n- Smart habits: settings, redaction, local AI\n- Jargon: personal data, retention, opt out, DPDP Act\n- Myth: deleting a chat isn't instant everywhere\n\nQuiz at the end. Got it right? Comment below.\n\nNext: deepfakes and how to spot them.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #DataPrivacy #LearnAI #CyberSafety #AIForBeginners",
+  "pinned": "Quiz answer: Passwords and OTPs, never! Have you turned off chat training in your AI app settings? Comment below!",
+  "cover": "'AI & Privacy' title card",
+  "alt": "Animated explainer of AI privacy: where chat data goes and how to protect yourself."
+ }
 }

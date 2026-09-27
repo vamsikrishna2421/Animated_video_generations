@@ -1,171 +1,172 @@
 {
-  "id": "q03",
-  "episode": 3,
-  "series": "AI FROM SCRATCH",
-  "label": "QUIZ #3",
-  "handle": "@ai_maastaaru",
-  "title": "Quiz #3: Episodes 21–30",
-  "host": "female",
-  "voice": "af_heart",
-  "speed": 0.92,
-  "lang": "en-us",
-  "fps": 30,
-  "flow": "continuous",
-  "music": {
-    "bpm": 90,
-    "volume": 0.16,
-    "duckedVolume": 0.07
+ "id": "q03",
+ "episode": 3,
+ "series": "AI FROM SCRATCH",
+ "label": "QUIZ #3",
+ "handle": "@ai_maastaaru",
+ "title": "Quiz #3: Episodes 21–30",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Quiz time! 6 tricky questions, from episodes 21 to 30. [1] Five seconds each. Count how many you get right. [2] Ready? Let's go!",
+   "data": {
+    "kicker": "QUIZ #3",
+    "title": [
+     "Quiz",
+     "Time"
+    ],
+    "subtitle": "Episodes 21–30 · 6 tricky questions",
+    "buzzwords": [
+     "Neurons",
+     "Weights",
+     "Backprop",
+     "Overfitting",
+     "Attention",
+     "Transformers",
+     "Vision",
+     "RLHF"
+    ],
+    "hook": "Can you get *6/6*?"
+   }
   },
-  "scenes": [
-    {
-      "type": "banner",
-      "text": "Quiz time! 6 tricky questions, from episodes 21 to 30. [1] Five seconds each. Count how many you get right. [2] Ready? Let's go!",
-      "data": {
-        "kicker": "QUIZ #3",
-        "title": [
-          "Quiz",
-          "Time"
-        ],
-        "subtitle": "Episodes 21–30 · 6 tricky questions",
-        "buzzwords": [
-          "Neurons",
-          "Weights",
-          "Backprop",
-          "Overfitting",
-          "Attention",
-          "Transformers",
-          "Vision",
-          "RLHF"
-        ]
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Question 1. What does backpropagation do? [1] Five seconds. Keep score! <pause 4.5> [2] It sends the error backward through the network, nudging each weight to reduce the mistake.",
-      "data": {
-        "question": "Backpropagation…",
-        "options": [
-          "Adds more layers",
-          "Sends the error backward to fix weights",
-          "Deletes bad training data",
-          "Speeds up the GPU"
-        ],
-        "answer": 1,
-        "badge": "QUESTION 1/6",
-        "commentPrompt": "Keep score!"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Question 2. Grouping customers by behaviour, with no labels, is which type of learning? [1] Five seconds. Keep score! <pause 4.5> [2] Unsupervised learning! No labels, the model finds the groups by itself.",
-      "data": {
-        "question": "Grouping customers, no labels. Which type?",
-        "options": [
-          "Supervised",
-          "Reinforcement",
-          "Unsupervised",
-          "Transfer"
-        ],
-        "answer": 2,
-        "badge": "QUESTION 2/6",
-        "commentPrompt": "Keep score!"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Question 3. A model scores 99 percent on practice data, but 60 percent on new data. What's wrong? [1] Five seconds. Keep score! <pause 4.5> [2] Overfitting! It memorised the practice data instead of learning general patterns.",
-      "data": {
-        "question": "99% on practice, 60% on new data?",
-        "options": [
-          "Underfitting",
-          "Overfitting",
-          "A perfect fit",
-          "Quantization"
-        ],
-        "answer": 1,
-        "badge": "QUESTION 3/6",
-        "commentPrompt": "Keep score!"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Question 4. The cat sat on the mat because it was tired. In attention, which word does it focus on most? [1] Five seconds. Keep score! <pause 4.5> [2] Cat! Mats don't get tired. Attention links it to the word that makes sense.",
-      "data": {
-        "question": "\"…because it was tired.\" 'It' attends to?",
-        "options": [
-          "mat",
-          "sat",
-          "cat",
-          "tired"
-        ],
-        "answer": 2,
-        "badge": "QUESTION 4/6",
-        "commentPrompt": "Keep score!"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Question 5. What happens if the learning rate is way too high? [1] Five seconds. Keep score! <pause 4.5> [2] It overshoots! The weights jump around too much, and training may never settle.",
-      "data": {
-        "question": "Learning rate way too high?",
-        "options": [
-          "Training becomes perfect",
-          "The model gets smaller",
-          "Nothing changes",
-          "It overshoots and never settles"
-        ],
-        "answer": 3,
-        "badge": "QUESTION 5/6",
-        "commentPrompt": "Keep score!"
-      }
-    },
-    {
-      "type": "quiz",
-      "text": "Question 6. In RLHF, what does the reward model learn from? [1] Five seconds. Keep score! <pause 4.5> [2] From humans picking the better of two answers. Those choices teach it what people prefer.",
-      "data": {
-        "question": "The RLHF reward model learns from…",
-        "options": [
-          "Humans picking the better answer",
-          "Wikipedia facts",
-          "GPU temperature",
-          "Random scores"
-        ],
-        "answer": 0,
-        "badge": "QUESTION 6/6",
-        "commentPrompt": "Keep score!"
-      }
-    },
-    {
-      "type": "score",
-      "text": "So, how many did you get? [1] 6 out of 6? You're a true AI Maastaaru! [2] 4 or 5, great work. [3] 3 or less? Rewatch episodes 21 to 30, and try again. [4] Comment your score below!",
-      "data": {
-        "heading": "How many did you get?",
-        "bands": [
-          [
-            "6/6",
-            "True AI Maastaaru!",
-            "Trophy"
-          ],
-          [
-            "4–5",
-            "Great work!",
-            "ThumbsUp"
-          ],
-          [
-            "0–3",
-            "Rewatch & retry",
-            "RefreshCw"
-          ]
-        ],
-        "prompt": "Comment your score /6"
-      }
-    }
-  ],
-  "post": {
-    "caption": "Think you've really learned it? 6 tricky questions from episodes 21–30. 5 seconds each.\n\nKeep count, then comment your score out of 6!\n\nFollow @ai_maastaaru to learn AI from scratch.",
-    "tags": "#AIMaastaaru #AIQuiz #LearnAI #QuizTime #AIForBeginners",
-    "pinned": "Comment your score out of 6! Which question got you? Missed some? Rewatch episodes 21–30 on our page.",
-    "cover": "'Quiz Time #3' title card",
-    "alt": "Animated quiz reel with 6 multiple-choice questions on AI concepts from episodes 21–30."
+  {
+   "type": "quiz",
+   "text": "Question 1. What does backpropagation do? [1] Five seconds. Keep score! <pause 4.5> [2] It sends the error backward through the network, nudging each weight to reduce the mistake.",
+   "data": {
+    "question": "Backpropagation…",
+    "options": [
+     "Adds more layers",
+     "Sends the error backward to fix weights",
+     "Deletes bad training data",
+     "Speeds up the GPU"
+    ],
+    "answer": 1,
+    "badge": "QUESTION 1/6",
+    "commentPrompt": "Keep score!"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Question 2. Grouping customers by behaviour, with no labels, is which type of learning? [1] Five seconds. Keep score! <pause 4.5> [2] Unsupervised learning! No labels, the model finds the groups by itself.",
+   "data": {
+    "question": "Grouping customers, no labels. Which type?",
+    "options": [
+     "Supervised",
+     "Reinforcement",
+     "Unsupervised",
+     "Transfer"
+    ],
+    "answer": 2,
+    "badge": "QUESTION 2/6",
+    "commentPrompt": "Keep score!"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Question 3. A model scores 99 percent on practice data, but 60 percent on new data. What's wrong? [1] Five seconds. Keep score! <pause 4.5> [2] Overfitting! It memorised the practice data instead of learning general patterns.",
+   "data": {
+    "question": "99% on practice, 60% on new data?",
+    "options": [
+     "Underfitting",
+     "Overfitting",
+     "A perfect fit",
+     "Quantization"
+    ],
+    "answer": 1,
+    "badge": "QUESTION 3/6",
+    "commentPrompt": "Keep score!"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Question 4. The cat sat on the mat because it was tired. In attention, which word does it focus on most? [1] Five seconds. Keep score! <pause 4.5> [2] Cat! Mats don't get tired. Attention links it to the word that makes sense.",
+   "data": {
+    "question": "\"…because it was tired.\" 'It' attends to?",
+    "options": [
+     "mat",
+     "sat",
+     "cat",
+     "tired"
+    ],
+    "answer": 2,
+    "badge": "QUESTION 4/6",
+    "commentPrompt": "Keep score!"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Question 5. What happens if the learning rate is way too high? [1] Five seconds. Keep score! <pause 4.5> [2] It overshoots! The weights jump around too much, and training may never settle.",
+   "data": {
+    "question": "Learning rate way too high?",
+    "options": [
+     "Training becomes perfect",
+     "The model gets smaller",
+     "Nothing changes",
+     "It overshoots and never settles"
+    ],
+    "answer": 3,
+    "badge": "QUESTION 5/6",
+    "commentPrompt": "Keep score!"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Question 6. In RLHF, what does the reward model learn from? [1] Five seconds. Keep score! <pause 4.5> [2] From humans picking the better of two answers. Those choices teach it what people prefer.",
+   "data": {
+    "question": "The RLHF reward model learns from…",
+    "options": [
+     "Humans picking the better answer",
+     "Wikipedia facts",
+     "GPU temperature",
+     "Random scores"
+    ],
+    "answer": 0,
+    "badge": "QUESTION 6/6",
+    "commentPrompt": "Keep score!"
+   }
+  },
+  {
+   "type": "score",
+   "text": "So, how many did you get? [1] 6 out of 6? You're a true AI Maastaaru! [2] 4 or 5, great work. [3] 3 or less? Rewatch episodes 21 to 30, and try again. [4] Comment your score below!",
+   "data": {
+    "heading": "How many did you get?",
+    "bands": [
+     [
+      "6/6",
+      "True AI Maastaaru!",
+      "Trophy"
+     ],
+     [
+      "4–5",
+      "Great work!",
+      "ThumbsUp"
+     ],
+     [
+      "0–3",
+      "Rewatch & retry",
+      "RefreshCw"
+     ]
+    ],
+    "prompt": "Comment your score /6"
+   }
   }
+ ],
+ "post": {
+  "caption": "Think you've really learned it? 6 tricky questions from episodes 21–30. 5 seconds each.\n\nKeep count, then comment your score out of 6!\n\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #AIQuiz #LearnAI #QuizTime #AIForBeginners",
+  "pinned": "Comment your score out of 6! Which question got you? Missed some? Rewatch episodes 21–30 on our page.",
+  "cover": "'Quiz Time #3' title card",
+  "alt": "Animated quiz reel with 6 multiple-choice questions on AI concepts from episodes 21–30."
+ }
 }

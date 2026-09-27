@@ -36,7 +36,8 @@
      "Privacy",
      "Audio",
      "Keyword spotting"
-    ]
+    ],
+    "hook": "Is your phone *always listening*?"
    }
   },
   {
@@ -195,7 +196,7 @@
   },
   {
    "type": "recap",
-   "text": "Let's recap. [1] A tiny model listens in short slices, on the device. [2] It's trained on many voices, and lots of non-wake-word audio. [3] A threshold balances false wakes and missed wakes. [4] The full assistant records only after it wakes. [5] Next, how resume screening software works. Follow AI Maastaaru!",
+   "text": "Let's recap. [1] A tiny model listens in short slices, on the device. [2] It's trained on many voices, and lots of non-wake-word audio. [3] A threshold balances false wakes and missed wakes. [4] The full assistant records only after it wakes. [5] Next, use case 22, how resume screening software works. Follow AI Maastaaru!",
    "data": {
     "points": [
      [
@@ -220,7 +221,7 @@
   }
  ],
  "post": {
-  "caption": "Is your phone recording everything, waiting for 'Hey Siri'? Here's what's actually happening.\n\nReal World AI, Use Case 21: wake word detection\n- The flow: listen, tiny model, threshold, wake up, request\n- Keyword spotting, trained on thousands of voices\n- Why it must be tiny, low power and on-device\n- False wakes vs missed wakes\n- Myth: it's not uploading everything all day\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how resume screening software works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+  "caption": "Is your phone recording everything, waiting for 'Hey Siri'? Here's what's actually happening.\n\nReal World AI, Use Case 21: wake word detection\n- The flow: listen, tiny model, threshold, wake up, request\n- Keyword spotting, trained on thousands of voices\n- Why it must be tiny, low power and on-device\n- False wakes vs missed wakes\n- Myth: it's not uploading everything all day\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How resume screening software works.\nFollow @ai_maastaaru for more real world AI breakdowns.",
   "tags": "#AIMaastaaru #VoiceAssistant #LearnAI #OnDeviceAI #AIForBeginners",
   "pinned": "Quiz answer: On the device itself, with a tiny low power model. Has your assistant ever woken up by mistake? Comment below!",
   "cover": "'Wake Words' title card",

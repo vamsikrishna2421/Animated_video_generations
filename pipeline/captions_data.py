@@ -273,13 +273,57 @@ def all_posts() -> dict:
     return posts
 
 
+def serialize(out: Path) -> dict:
+    """Rename rendered videos to <serial>_<id>_<slug>.mp4 per series/upload_order.json.
+    Already-posted uploads move to out/posted/. Returns {id: (serial, dir)}."""
+    import json
+    import re
+    cfg = json.loads((ROOT / "series" / "upload_order.json").read_text())
+    posted = out / "posted"
+    posted.mkdir(exist_ok=True)
+    where = {}
+    for k, i in enumerate(cfg["order"]):
+        serial = f"{k + 1:03d}"
+        dest = posted if k < cfg["posted_through"] else out
+        where[i] = (serial, dest)
+        vids = [v for v in list(out.glob("*.mp4")) + list(posted.glob("*.mp4")) if re.match(rf"^(\d{{3}}_)?{i}_", v.name)]
+        if not vids:
+            continue
+        newest = max(vids, key=lambda v: v.stat().st_mtime)
+        spec, tl = ROOT / "episodes" / f"{i}.json", ROOT / "video" / "src" / "lesson" / "timelines" / f"{i}.json"
+        if dest == out and spec.exists():
+            s_m = spec.stat().st_mtime
+            # Script edited after this video (or after the voice pass it used): old render, never upload it.
+            if newest.stat().st_mtime < s_m or (tl.exists() and tl.stat().st_mtime < s_m):
+                for v in vids:
+                    v.unlink()
+                continue
+        slug = re.sub(rf"^(\d{{3}}_)?{i}_", "", newest.name)
+        target = dest / f"{serial}_{i}_{slug}"
+        if newest != target:
+            newest.replace(target)
+        for v in vids:
+            if v != newest and v.exists() and v != target:
+                v.unlink()
+    return where
+
+
 def main() -> None:
+    import json
     out = ROOT / "out"
+    where = serialize(out)
+    for old in list(out.glob("*_captions.txt")) + list((out / "posted").glob("*_captions.txt")):
+        old.unlink()
+    rows = []
     for ep, p in all_posts().items():
-        videos = sorted(out.glob(f"{ep}_*.mp4"))
-        video = videos[0].name if videos else f"{ep}_<not rendered yet>.mp4"
+        if ep not in where:
+            continue  # not scheduled for upload (e.g. q01, q02)
+        serial, dest = where[ep]
+        videos = sorted(dest.glob(f"{serial}_{ep}_*.mp4"))
+        video = videos[0].name if videos else f"{serial}_{ep}_<not rendered yet>.mp4"
         assert len(p["tags"].split()) <= 5, ep
         text = (
+            f"UPLOAD: {serial}\n"
             f"VIDEO: {video}\n\n"
             f"=== CAPTION ===\n{p['caption'].strip()}\n\n"
             f"=== HASHTAGS ===\n{p['tags']}\n\n"
@@ -287,8 +331,17 @@ def main() -> None:
             f"=== COVER ===\n{p['cover']}\n\n"
             f"=== ALT_TEXT ===\n{p['alt']}\n"
         )
-        (out / f"{ep}_captions.txt").write_text(text)
-        print("wrote", f"out/{ep}_captions.txt", "->", video)
+        (dest / f"{serial}_{ep}_captions.txt").write_text(text)
+        spec = ROOT / "episodes" / f"{ep}.json"
+        title = json.loads(spec.read_text())["title"] if spec.exists() else ep
+        status = "posted" if dest.name == "posted" else ("ready" if videos else "rendering soon")
+        rows.append((serial, ep, title, status))
+    rows.sort()
+    (out / "UPLOAD_ORDER.md").write_text(
+        "# Upload order\n\nPost strictly by serial. Files: `out/<serial>_<id>_*.mp4` + `out/<serial>_<id>_captions.txt`.\n"
+        "Already posted: `out/posted/`.\n\n| Serial | ID | Title | Status |\n|---|---|---|---|\n"
+        + "".join(f"| {s} | {i} | {t} | {st} |\n" for s, i, t, st in rows))
+    print("wrote captions for", len(rows), "uploads; see out/UPLOAD_ORDER.md")
 
 
 if __name__ == "__main__":
