@@ -1,0 +1,844 @@
+{
+  "id": "ep24",
+  "episode": 24,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Supervised Unsupervised Reinforcement Learning",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5178,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep24/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 24",
+        "title": [
+          "3 Ways",
+          "AI Learns"
+        ],
+        "subtitle": "Supervised, unsupervised, reinforcement",
+        "buzzwords": [
+          "Labels",
+          "Clusters",
+          "Rewards",
+          "Training data",
+          "Patterns",
+          "Agents",
+          "Trial and error",
+          "Datasets"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 467,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_01.wav",
+      "cues": [
+        160,
+        306
+      ],
+      "captions": [
+        {
+          "text": "Machines can learn in three",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "very different ways,",
+          "from": 61,
+          "to": 100
+        },
+        {
+          "text": "a bit like how children learn.",
+          "from": 102,
+          "to": 159
+        },
+        {
+          "text": "With a teacher,",
+          "from": 160,
+          "to": 190
+        },
+        {
+          "text": "by exploring on their own,",
+          "from": 195,
+          "to": 241
+        },
+        {
+          "text": "or by trial and error.",
+          "from": 244,
+          "to": 304
+        },
+        {
+          "text": "Let's understand supervised,",
+          "from": 306,
+          "to": 365
+        },
+        {
+          "text": "unsupervised, and reinforcement learning.",
+          "from": 367,
+          "to": 454
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "The big three",
+        "kicker": "THREE WAYS TO LEARN",
+        "steps": [
+          [
+            "GraduationCap",
+            "Supervised",
+            "Examples with answers"
+          ],
+          [
+            "Search",
+            "Unsupervised",
+            "Find patterns alone"
+          ],
+          [
+            "Trophy",
+            "Reinforcement",
+            "Trial, error and rewards"
+          ]
+        ]
+      },
+      "from": 467,
+      "durationInFrames": 572,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_02.wav",
+      "cues": [
+        66,
+        242,
+        391
+      ],
+      "captions": [
+        {
+          "text": "Here are the three types.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Supervised learning,",
+          "from": 66,
+          "to": 108
+        },
+        {
+          "text": "learning from labelled examples,",
+          "from": 110,
+          "to": 161
+        },
+        {
+          "text": "like a teacher giving you",
+          "from": 166,
+          "to": 199
+        },
+        {
+          "text": "the answers.",
+          "from": 200,
+          "to": 239
+        },
+        {
+          "text": "Unsupervised learning,",
+          "from": 242,
+          "to": 287
+        },
+        {
+          "text": "finding patterns in data with",
+          "from": 289,
+          "to": 338
+        },
+        {
+          "text": "no labels at all.",
+          "from": 340,
+          "to": 388
+        },
+        {
+          "text": "And reinforcement learning,",
+          "from": 391,
+          "to": 439
+        },
+        {
+          "text": "learning by trial and error,",
+          "from": 442,
+          "to": 499
+        },
+        {
+          "text": "with rewards and penalties.",
+          "from": 500,
+          "to": 560
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Supervised learning",
+        "short": "Labels",
+        "definition": "Learning from examples that come with the correct answer, called labels.",
+        "chips": [
+          [
+            "Mail",
+            "Spam or not"
+          ],
+          [
+            "Image",
+            "Cat or dog"
+          ],
+          [
+            "Home",
+            "House prices"
+          ]
+        ]
+      },
+      "from": 1039,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_03.wav",
+      "cues": [
+        93,
+        262,
+        354,
+        428
+      ],
+      "captions": [
+        {
+          "text": "Supervised learning is the most common.",
+          "from": 10,
+          "to": 91
+        },
+        {
+          "text": "You show the model thousands",
+          "from": 93,
+          "to": 148
+        },
+        {
+          "text": "of examples,",
+          "from": 148,
+          "to": 172
+        },
+        {
+          "text": "each with the correct answer,",
+          "from": 172,
+          "to": 229
+        },
+        {
+          "text": "called a label.",
+          "from": 229,
+          "to": 260
+        },
+        {
+          "text": "Like emails marked spam or",
+          "from": 262,
+          "to": 316
+        },
+        {
+          "text": "not spam,",
+          "from": 318,
+          "to": 351
+        },
+        {
+          "text": "photos labelled cat or dog,",
+          "from": 354,
+          "to": 422
+        },
+        {
+          "text": "or house details with their prices.",
+          "from": 428,
+          "to": 502
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "embedmap",
+      "data": {
+        "heading": "Finding groups",
+        "kicker": "UNSUPERVISED",
+        "points": [
+          [
+            "Gym fan",
+            0.14,
+            0.2,
+            0
+          ],
+          [
+            "Runner",
+            0.32,
+            0.12,
+            0
+          ],
+          [
+            "Yoga fan",
+            0.2,
+            0.36,
+            0
+          ],
+          [
+            "Gamer",
+            0.68,
+            0.18,
+            1
+          ],
+          [
+            "Streamer",
+            0.86,
+            0.3,
+            1
+          ],
+          [
+            "Techie",
+            0.62,
+            0.36,
+            1
+          ],
+          [
+            "Chef",
+            0.56,
+            0.72,
+            2
+          ],
+          [
+            "Baker",
+            0.8,
+            0.82,
+            2
+          ],
+          [
+            "Foodie",
+            0.4,
+            0.86,
+            2
+          ]
+        ],
+        "query": [
+          "New shopper",
+          0.28,
+          0.26
+        ],
+        "neighbors": [
+          "Runner",
+          "Gym fan"
+        ],
+        "note": "Groups found without any labels"
+      },
+      "from": 1553,
+      "durationInFrames": 508,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_04.wav",
+      "cues": [
+        108,
+        313,
+        371
+      ],
+      "captions": [
+        {
+          "text": "Unsupervised learning has no answers",
+          "from": 10,
+          "to": 78
+        },
+        {
+          "text": "at all.",
+          "from": 80,
+          "to": 107
+        },
+        {
+          "text": "The model just looks for",
+          "from": 108,
+          "to": 153
+        },
+        {
+          "text": "natural groups in the data.",
+          "from": 153,
+          "to": 202
+        },
+        {
+          "text": "Here, shoppers group themselves by",
+          "from": 206,
+          "to": 271
+        },
+        {
+          "text": "what they buy.",
+          "from": 273,
+          "to": 310
+        },
+        {
+          "text": "Now a new shopper arrives,",
+          "from": 313,
+          "to": 368
+        },
+        {
+          "text": "and lands near the fitness",
+          "from": 371,
+          "to": 406
+        },
+        {
+          "text": "group, so the store can",
+          "from": 407,
+          "to": 446
+        },
+        {
+          "text": "suggest sports gear.",
+          "from": 447,
+          "to": 496
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "agentloop",
+      "data": {
+        "goalLabel": "GOAL",
+        "goal": "Win the game",
+        "stages": [
+          [
+            "Gamepad2",
+            "Act"
+          ],
+          [
+            "Eye",
+            "Observe"
+          ],
+          [
+            "Trophy",
+            "Reward"
+          ]
+        ],
+        "log": [
+          "move right → crashed, −10",
+          "move up → collected a coin, +5",
+          "try a new path → scored, +50",
+          "✓ after millions of games: expert"
+        ]
+      },
+      "from": 2061,
+      "durationInFrames": 701,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_05.wav",
+      "cues": [
+        123,
+        346,
+        434,
+        511,
+        592
+      ],
+      "captions": [
+        {
+          "text": "Reinforcement learning is learning by",
+          "from": 10,
+          "to": 70
+        },
+        {
+          "text": "trial and error.",
+          "from": 73,
+          "to": 121
+        },
+        {
+          "text": "An agent tries an action,",
+          "from": 123,
+          "to": 173
+        },
+        {
+          "text": "sees what happens,",
+          "from": 176,
+          "to": 208
+        },
+        {
+          "text": "and gets a reward or",
+          "from": 212,
+          "to": 247
+        },
+        {
+          "text": "a penalty.",
+          "from": 248,
+          "to": 283
+        },
+        {
+          "text": "Take a game playing AI.",
+          "from": 285,
+          "to": 344
+        },
+        {
+          "text": "It moves,",
+          "from": 346,
+          "to": 364
+        },
+        {
+          "text": "and loses points for crashing.",
+          "from": 369,
+          "to": 431
+        },
+        {
+          "text": "It gains points for collecting coins.",
+          "from": 434,
+          "to": 508
+        },
+        {
+          "text": "It tries new paths,",
+          "from": 511,
+          "to": 548
+        },
+        {
+          "text": "and scores big.",
+          "from": 549,
+          "to": 590
+        },
+        {
+          "text": "And after millions of games,",
+          "from": 592,
+          "to": 636
+        },
+        {
+          "text": "it becomes an expert.",
+          "from": 640,
+          "to": 688
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Side by side",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Labels?",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Supervised",
+            "✓",
+            "Spam filter"
+          ],
+          [
+            "Unsupervised",
+            "✗",
+            "Customer groups"
+          ],
+          [
+            "Reinforcement",
+            "Rewards",
+            "Game-playing AI"
+          ]
+        ]
+      },
+      "from": 2762,
+      "durationInFrames": 541,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_06.wav",
+      "cues": [
+        63,
+        141,
+        246,
+        376
+      ],
+      "captions": [
+        {
+          "text": "Here's a quick cheat sheet.",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "Three types,",
+          "from": 63,
+          "to": 91
+        },
+        {
+          "text": "side by side.",
+          "from": 94,
+          "to": 138
+        },
+        {
+          "text": "Supervised needs labels,",
+          "from": 141,
+          "to": 188
+        },
+        {
+          "text": "like a spam filter.",
+          "from": 192,
+          "to": 243
+        },
+        {
+          "text": "Unsupervised needs no labels,",
+          "from": 246,
+          "to": 309
+        },
+        {
+          "text": "like finding customer groups.",
+          "from": 312,
+          "to": 374
+        },
+        {
+          "text": "And reinforcement uses rewards instead",
+          "from": 376,
+          "to": 441
+        },
+        {
+          "text": "of labels,",
+          "from": 442,
+          "to": 464
+        },
+        {
+          "text": "like a game playing AI.",
+          "from": 466,
+          "to": 529
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Modern AI uses only one type of learning.",
+        "fact": "Big models use all three: raw-text pre-training, labelled fine-tuning, and reward-based feedback.",
+        "tip": "LLMs mix all three"
+      },
+      "from": 3303,
+      "durationInFrames": 593,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_07.wav",
+      "cues": [
+        58,
+        169
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think modern AI uses",
+          "from": 58,
+          "to": 120
+        },
+        {
+          "text": "only one of these.",
+          "from": 122,
+          "to": 166
+        },
+        {
+          "text": "Big models like ChatGPT use",
+          "from": 169,
+          "to": 246
+        },
+        {
+          "text": "all three.",
+          "from": 246,
+          "to": 276
+        },
+        {
+          "text": "Pre-training learns patterns from raw",
+          "from": 278,
+          "to": 337
+        },
+        {
+          "text": "text, fine-tuning uses labelled examples,",
+          "from": 339,
+          "to": 435
+        },
+        {
+          "text": "and human feedback uses rewards,",
+          "from": 436,
+          "to": 503
+        },
+        {
+          "text": "which we'll explore in a",
+          "from": 505,
+          "to": 537
+        },
+        {
+          "text": "later episode.",
+          "from": 539,
+          "to": 581
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Learning to walk with points is…",
+        "options": [
+          "Supervised",
+          "Unsupervised",
+          "Reinforcement"
+        ],
+        "answer": 2
+      },
+      "from": 3896,
+      "durationInFrames": 591,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_08.wav",
+      "cues": [
+        249,
+        454
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "A robot learns to walk",
+          "from": 44,
+          "to": 84
+        },
+        {
+          "text": "by falling,",
+          "from": 85,
+          "to": 105
+        },
+        {
+          "text": "getting up,",
+          "from": 107,
+          "to": 122
+        },
+        {
+          "text": "and earning points for every step.",
+          "from": 126,
+          "to": 191
+        },
+        {
+          "text": "Which type of learning is that?",
+          "from": 192,
+          "to": 246
+        },
+        {
+          "text": "Pause and think,",
+          "from": 249,
+          "to": 285
+        },
+        {
+          "text": "and if you get it",
+          "from": 286,
+          "to": 303
+        },
+        {
+          "text": "right, comment below!",
+          "from": 305,
+          "to": 355
+        },
+        {
+          "text": "Reinforcement learning!",
+          "from": 454,
+          "to": 501
+        },
+        {
+          "text": "Trial, error and rewards.",
+          "from": 504,
+          "to": 578
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Supervised",
+            "examples with answers"
+          ],
+          [
+            "Unsupervised",
+            "find groups alone"
+          ],
+          [
+            "Reinforcement",
+            "trial, error, rewards"
+          ],
+          [
+            "LLMs",
+            "use all three"
+          ]
+        ],
+        "next": "Use Case · UPI fraud detection"
+      },
+      "from": 4487,
+      "durationInFrames": 691,
+      "voiceFrom": 10,
+      "audio": "lessons/ep24/voice_09.wav",
+      "cues": [
+        48,
+        140,
+        232,
+        350,
+        427
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Supervised learning uses examples with answers.",
+          "from": 48,
+          "to": 137
+        },
+        {
+          "text": "Unsupervised learning finds groups on",
+          "from": 140,
+          "to": 201
+        },
+        {
+          "text": "its own.",
+          "from": 202,
+          "to": 229
+        },
+        {
+          "text": "Reinforcement learning uses trial,",
+          "from": 232,
+          "to": 298
+        },
+        {
+          "text": "error and rewards.",
+          "from": 300,
+          "to": 347
+        },
+        {
+          "text": "And big language models use",
+          "from": 350,
+          "to": 389
+        },
+        {
+          "text": "all three.",
+          "from": 391,
+          "to": 424
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 427,
+          "to": 494
+        },
+        {
+          "text": "how banks catch UPI and",
+          "from": 496,
+          "to": 548
+        },
+        {
+          "text": "card fraud in milliseconds.",
+          "from": 550,
+          "to": 609
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 613,
+          "to": 680
+        }
+      ],
+      "image": null
+    }
+  ]
+}

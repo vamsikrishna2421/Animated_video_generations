@@ -1,0 +1,843 @@
+{
+  "id": "uc14",
+  "episode": 14,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How UPI and Card Fraud Detection Works",
+  "host": "female",
+  "label": "USE CASE 14",
+  "fps": 30,
+  "totalFrames": 5167,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc14/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 14",
+        "title": [
+          "Fraud",
+          "Detection"
+        ],
+        "subtitle": "UPI and card payments",
+        "buzzwords": [
+          "UPI",
+          "Risk score",
+          "Anomaly",
+          "OTP",
+          "Machine learning",
+          "Payments",
+          "Banks",
+          "Real time"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 439,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_01.wav",
+      "cues": [
+        142,
+        341
+      ],
+      "captions": [
+        {
+          "text": "You pay 50 rupees for",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "chai, and it goes through instantly.",
+          "from": 53,
+          "to": 140
+        },
+        {
+          "text": "But if a stranger tries",
+          "from": 142,
+          "to": 179
+        },
+        {
+          "text": "to use your card at",
+          "from": 181,
+          "to": 210
+        },
+        {
+          "text": "3 AM in another country,",
+          "from": 213,
+          "to": 275
+        },
+        {
+          "text": "it's blocked in milliseconds.",
+          "from": 278,
+          "to": 338
+        },
+        {
+          "text": "Let's break down how fraud",
+          "from": 341,
+          "to": 386
+        },
+        {
+          "text": "detection works.",
+          "from": 388,
+          "to": 425
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "In the second you pay",
+        "nodes": [
+          [
+            "Smartphone",
+            "You tap pay",
+            "₹50 for chai"
+          ],
+          [
+            "Layers",
+            "Gather details",
+            "Amount, time, place, device"
+          ],
+          [
+            "Brain",
+            "Compare",
+            "With your normal behaviour"
+          ],
+          [
+            "Gauge",
+            "Risk score",
+            "Safe → suspicious"
+          ],
+          [
+            "ShieldCheck",
+            "Decision",
+            "Allow, confirm or block"
+          ]
+        ]
+      },
+      "from": 439,
+      "durationInFrames": 657,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_02.wav",
+      "cues": [
+        77,
+        116,
+        305,
+        388,
+        492
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens in the",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "second you pay.",
+          "from": 51,
+          "to": 76
+        },
+        {
+          "text": "You tap pay.",
+          "from": 77,
+          "to": 114
+        },
+        {
+          "text": "The system gathers the details,",
+          "from": 116,
+          "to": 172
+        },
+        {
+          "text": "the amount,",
+          "from": 174,
+          "to": 197
+        },
+        {
+          "text": "time, location,",
+          "from": 199,
+          "to": 236
+        },
+        {
+          "text": "device, and who you're paying.",
+          "from": 238,
+          "to": 303
+        },
+        {
+          "text": "A model compares this with",
+          "from": 305,
+          "to": 344
+        },
+        {
+          "text": "your normal behaviour,",
+          "from": 345,
+          "to": 385
+        },
+        {
+          "text": "and gives it a risk",
+          "from": 388,
+          "to": 411
+        },
+        {
+          "text": "score, from safe to suspicious.",
+          "from": 413,
+          "to": 488
+        },
+        {
+          "text": "Low risk goes through,",
+          "from": 492,
+          "to": 537
+        },
+        {
+          "text": "while high risk is blocked,",
+          "from": 538,
+          "to": 590
+        },
+        {
+          "text": "or you're asked to confirm.",
+          "from": 591,
+          "to": 645
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Anomaly detection",
+        "short": "Odd?",
+        "definition": "Learning what normal looks like, then flagging anything unusual.",
+        "chips": [
+          [
+            "IndianRupee",
+            "Unusual amount"
+          ],
+          [
+            "Smartphone",
+            "New device or place"
+          ],
+          [
+            "Timer",
+            "Too many, too fast"
+          ]
+        ]
+      },
+      "from": 1096,
+      "durationInFrames": 486,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_03.wav",
+      "cues": [
+        100,
+        251,
+        337,
+        402
+      ],
+      "captions": [
+        {
+          "text": "The key idea is anomaly detection.",
+          "from": 10,
+          "to": 98
+        },
+        {
+          "text": "The model learns what normal",
+          "from": 100,
+          "to": 144
+        },
+        {
+          "text": "looks like for you,",
+          "from": 146,
+          "to": 177
+        },
+        {
+          "text": "and flags anything unusual.",
+          "from": 178,
+          "to": 249
+        },
+        {
+          "text": "Like a huge amount,",
+          "from": 251,
+          "to": 291
+        },
+        {
+          "text": "far above your usual,",
+          "from": 293,
+          "to": 335
+        },
+        {
+          "text": "a new phone,",
+          "from": 337,
+          "to": 365
+        },
+        {
+          "text": "or a new city,",
+          "from": 367,
+          "to": 401
+        },
+        {
+          "text": "or many payments in just",
+          "from": 402,
+          "to": 439
+        },
+        {
+          "text": "a few minutes.",
+          "from": 440,
+          "to": 473
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Normal vs suspicious",
+        "kicker": "SPOT THE DIFFERENCE",
+        "cols": [
+          "Normal",
+          "Suspicious"
+        ],
+        "rows": [
+          [
+            "Amount",
+            "₹50 – ₹2,000",
+            "₹80,000"
+          ],
+          [
+            "Place",
+            "Your city",
+            "Another country"
+          ],
+          [
+            "Time",
+            "Daytime",
+            "3 AM"
+          ],
+          [
+            "Device",
+            "Your phone",
+            "New phone"
+          ]
+        ]
+      },
+      "from": 1582,
+      "durationInFrames": 594,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_04.wav",
+      "cues": [
+        45,
+        136,
+        283,
+        375,
+        474
+      ],
+      "captions": [
+        {
+          "text": "Let's compare.",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "Here's your normal,",
+          "from": 45,
+          "to": 69
+        },
+        {
+          "text": "against something suspicious.",
+          "from": 73,
+          "to": 133
+        },
+        {
+          "text": "Amount, your usual small payments,",
+          "from": 136,
+          "to": 193
+        },
+        {
+          "text": "versus a sudden 80 thousand rupees.",
+          "from": 199,
+          "to": 281
+        },
+        {
+          "text": "Place, your city,",
+          "from": 283,
+          "to": 315
+        },
+        {
+          "text": "versus another country.",
+          "from": 321,
+          "to": 372
+        },
+        {
+          "text": "Time, daytime,",
+          "from": 375,
+          "to": 414
+        },
+        {
+          "text": "versus 3 AM.",
+          "from": 420,
+          "to": 471
+        },
+        {
+          "text": "And device,",
+          "from": 474,
+          "to": 495
+        },
+        {
+          "text": "your own phone,",
+          "from": 500,
+          "to": 526
+        },
+        {
+          "text": "versus a brand new one.",
+          "from": 532,
+          "to": 583
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "What's inside",
+        "kicker": "REMEMBER EP 24?",
+        "steps": [
+          [
+            "GraduationCap",
+            "Supervised",
+            "Past fraud cases"
+          ],
+          [
+            "Search",
+            "Unsupervised",
+            "Spot brand-new tricks"
+          ],
+          [
+            "Ruler",
+            "Rules",
+            "Hard limits, like daily caps"
+          ]
+        ]
+      },
+      "from": 2176,
+      "durationInFrames": 540,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_05.wav",
+      "cues": [
+        112,
+        278,
+        422
+      ],
+      "captions": [
+        {
+          "text": "Banks use the learning types",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "from episode 24.",
+          "from": 72,
+          "to": 109
+        },
+        {
+          "text": "Supervised models learn from past",
+          "from": 112,
+          "to": 166
+        },
+        {
+          "text": "cases, already marked fraud or genuine.",
+          "from": 167,
+          "to": 274
+        },
+        {
+          "text": "Unsupervised models spot brand new",
+          "from": 278,
+          "to": 347
+        },
+        {
+          "text": "tricks that nobody has labelled yet.",
+          "from": 350,
+          "to": 420
+        },
+        {
+          "text": "And rules add hard limits,",
+          "from": 422,
+          "to": 480
+        },
+        {
+          "text": "like daily caps.",
+          "from": 482,
+          "to": 526
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The balance",
+        "kicker": "HARD TRADE-OFFS",
+        "terms": [
+          [
+            "XCircle",
+            "False positive",
+            "Blocking a real payment"
+          ],
+          [
+            "TriangleAlert",
+            "False negative",
+            "Missing real fraud"
+          ],
+          [
+            "Zap",
+            "Speed",
+            "Decide in milliseconds"
+          ],
+          [
+            "KeyRound",
+            "Step-up check",
+            "Ask for OTP or PIN"
+          ]
+        ]
+      },
+      "from": 2716,
+      "durationInFrames": 606,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_06.wav",
+      "cues": [
+        65,
+        206,
+        326,
+        432
+      ],
+      "captions": [
+        {
+          "text": "And there's a tricky balance.",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "False positives,",
+          "from": 65,
+          "to": 100
+        },
+        {
+          "text": "blocking a genuine payment,",
+          "from": 103,
+          "to": 146
+        },
+        {
+          "text": "which annoys customers.",
+          "from": 147,
+          "to": 202
+        },
+        {
+          "text": "False negatives,",
+          "from": 206,
+          "to": 238
+        },
+        {
+          "text": "missing real fraud,",
+          "from": 240,
+          "to": 276
+        },
+        {
+          "text": "which loses money.",
+          "from": 276,
+          "to": 321
+        },
+        {
+          "text": "Speed, because decisions must happen",
+          "from": 326,
+          "to": 391
+        },
+        {
+          "text": "in milliseconds.",
+          "from": 393,
+          "to": 429
+        },
+        {
+          "text": "And step up checks,",
+          "from": 432,
+          "to": 479
+        },
+        {
+          "text": "like asking for an OTP",
+          "from": 479,
+          "to": 533
+        },
+        {
+          "text": "or PIN,",
+          "from": 533,
+          "to": 552
+        },
+        {
+          "text": "when it's unsure.",
+          "from": 552,
+          "to": 595
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Fraud detection means my money can never be stolen.",
+        "fact": "Scams that trick YOU into paying can look normal. Never share OTP or PIN, or approve unexpected collect requests.",
+        "tip": "Never share OTP or PIN"
+      },
+      "from": 3322,
+      "durationInFrames": 628,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_07.wav",
+      "cues": [
+        59,
+        190
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think fraud detection means",
+          "from": 59,
+          "to": 120
+        },
+        {
+          "text": "their money can never be stolen.",
+          "from": 122,
+          "to": 188
+        },
+        {
+          "text": "It catches most unusual activity,",
+          "from": 190,
+          "to": 266
+        },
+        {
+          "text": "but when a scammer tricks",
+          "from": 268,
+          "to": 299
+        },
+        {
+          "text": "you into paying yourself,",
+          "from": 300,
+          "to": 346
+        },
+        {
+          "text": "it can look normal to",
+          "from": 347,
+          "to": 376
+        },
+        {
+          "text": "the system.",
+          "from": 378,
+          "to": 413
+        },
+        {
+          "text": "So never share your OTP",
+          "from": 416,
+          "to": 472
+        },
+        {
+          "text": "or PIN,",
+          "from": 475,
+          "to": 511
+        },
+        {
+          "text": "and never approve a collect",
+          "from": 515,
+          "to": 552
+        },
+        {
+          "text": "request you didn't expect.",
+          "from": 553,
+          "to": 616
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "A real payment blocked by mistake is…",
+        "options": [
+          "A false positive",
+          "A false negative",
+          "A token"
+        ],
+        "answer": 0
+      },
+      "from": 3950,
+      "durationInFrames": 509,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_08.wav",
+      "cues": [
+        160,
+        367
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "A genuine payment gets blocked",
+          "from": 32,
+          "to": 81
+        },
+        {
+          "text": "by mistake.",
+          "from": 82,
+          "to": 118
+        },
+        {
+          "text": "What is that called?",
+          "from": 120,
+          "to": 158
+        },
+        {
+          "text": "Pause and think,",
+          "from": 160,
+          "to": 195
+        },
+        {
+          "text": "and if you get it",
+          "from": 199,
+          "to": 216
+        },
+        {
+          "text": "right, comment below!",
+          "from": 218,
+          "to": 262
+        },
+        {
+          "text": "A false positive!",
+          "from": 367,
+          "to": 414
+        },
+        {
+          "text": "The system thought it was",
+          "from": 415,
+          "to": 443
+        },
+        {
+          "text": "fraud, but it wasn't.",
+          "from": 446,
+          "to": 496
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Details",
+            "amount, place, time, device"
+          ],
+          [
+            "Anomaly",
+            "unusual for you"
+          ],
+          [
+            "Risk score",
+            "allow, confirm or block"
+          ],
+          [
+            "You",
+            "never share OTP or PIN"
+          ]
+        ],
+        "next": "EP 25 · Training data"
+      },
+      "from": 4459,
+      "durationInFrames": 708,
+      "voiceFrom": 10,
+      "audio": "lessons/uc14/voice_09.wav",
+      "cues": [
+        45,
+        154,
+        253,
+        360,
+        512
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "The system looks at amount,",
+          "from": 45,
+          "to": 85
+        },
+        {
+          "text": "place, time and device.",
+          "from": 87,
+          "to": 151
+        },
+        {
+          "text": "Anomaly detection flags anything unusual",
+          "from": 154,
+          "to": 225
+        },
+        {
+          "text": "for you.",
+          "from": 227,
+          "to": 251
+        },
+        {
+          "text": "A risk score decides to",
+          "from": 253,
+          "to": 292
+        },
+        {
+          "text": "allow, confirm or block.",
+          "from": 294,
+          "to": 358
+        },
+        {
+          "text": "And you are the last",
+          "from": 360,
+          "to": 385
+        },
+        {
+          "text": "line of defence,",
+          "from": 387,
+          "to": 414
+        },
+        {
+          "text": "so never share your OTP",
+          "from": 416,
+          "to": 467
+        },
+        {
+          "text": "or PIN.",
+          "from": 470,
+          "to": 508
+        },
+        {
+          "text": "Next, we'll learn why data",
+          "from": 512,
+          "to": 560
+        },
+        {
+          "text": "is the real fuel of AI.",
+          "from": 562,
+          "to": 627
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 631,
+          "to": 696
+        }
+      ],
+      "image": null
+    }
+  ]
+}

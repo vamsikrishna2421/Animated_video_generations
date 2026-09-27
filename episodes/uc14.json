@@ -1,0 +1,243 @@
+{
+  "id": "uc14",
+  "episode": 14,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 14",
+  "handle": "@ai_maastaaru",
+  "title": "How UPI and Card Fraud Detection Works",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You pay 50 rupees for chai, and it goes through instantly. [1] But if a stranger tries to use your card at 3 AM in another country, it's blocked in milliseconds. [2] Let's break down how fraud detection works.",
+      "data": {
+        "kicker": "USE CASE 14",
+        "title": [
+          "Fraud",
+          "Detection"
+        ],
+        "subtitle": "UPI and card payments",
+        "buzzwords": [
+          "UPI",
+          "Risk score",
+          "Anomaly",
+          "OTP",
+          "Machine learning",
+          "Payments",
+          "Banks",
+          "Real time"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's what happens in the second you pay. [1] You tap pay. [2] The system gathers the details, the amount, time, location, device, and who you're paying. [3] A model compares this with your normal behaviour, [4] and gives it a risk score, from safe to suspicious. [5] Low risk goes through, while high risk is blocked, or you're asked to confirm.",
+      "data": {
+        "heading": "In the second you pay",
+        "nodes": [
+          [
+            "Smartphone",
+            "You tap pay",
+            "₹50 for chai"
+          ],
+          [
+            "Layers",
+            "Gather details",
+            "Amount, time, place, device"
+          ],
+          [
+            "Brain",
+            "Compare",
+            "With your normal behaviour"
+          ],
+          [
+            "Gauge",
+            "Risk score",
+            "Safe → suspicious"
+          ],
+          [
+            "ShieldCheck",
+            "Decision",
+            "Allow, confirm or block"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "The key idea is anomaly detection. [1] The model learns what normal looks like for you, and flags anything unusual. [2] Like a huge amount, far above your usual, [3] a new phone, or a new city, [4] or many payments in just a few minutes.",
+      "data": {
+        "term": "Anomaly detection",
+        "short": "Odd?",
+        "definition": "Learning what normal looks like, then flagging anything unusual.",
+        "chips": [
+          [
+            "IndianRupee",
+            "Unusual amount"
+          ],
+          [
+            "Smartphone",
+            "New device or place"
+          ],
+          [
+            "Timer",
+            "Too many, too fast"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "Let's compare. [1] Here's your normal, against something suspicious. [2] Amount, your usual small payments, versus a sudden 80 thousand rupees. [3] Place, your city, versus another country. [4] Time, daytime, versus 3 AM. [5] And device, your own phone, versus a brand new one.",
+      "data": {
+        "heading": "Normal vs suspicious",
+        "kicker": "SPOT THE DIFFERENCE",
+        "cols": [
+          "Normal",
+          "Suspicious"
+        ],
+        "rows": [
+          [
+            "Amount",
+            "₹50 – ₹2,000",
+            "₹80,000"
+          ],
+          [
+            "Place",
+            "Your city",
+            "Another country"
+          ],
+          [
+            "Time",
+            "Daytime",
+            "3 AM"
+          ],
+          [
+            "Device",
+            "Your phone",
+            "New phone"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Banks use the learning types from episode 24. [1] Supervised models learn from past cases, already marked fraud or genuine. [2] Unsupervised models spot brand new tricks that nobody has labelled yet. [3] And rules add hard limits, like daily caps.",
+      "data": {
+        "heading": "What's inside",
+        "kicker": "REMEMBER EP 24?",
+        "steps": [
+          [
+            "GraduationCap",
+            "Supervised",
+            "Past fraud cases"
+          ],
+          [
+            "Search",
+            "Unsupervised",
+            "Spot brand-new tricks"
+          ],
+          [
+            "Ruler",
+            "Rules",
+            "Hard limits, like daily caps"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "And there's a tricky balance. [1] False positives, blocking a genuine payment, which annoys customers. [2] False negatives, missing real fraud, which loses money. [3] Speed, because decisions must happen in milliseconds. [4] And step up checks, like asking for an OTP or PIN, when it's unsure.",
+      "data": {
+        "heading": "The balance",
+        "kicker": "HARD TRADE-OFFS",
+        "terms": [
+          [
+            "XCircle",
+            "False positive",
+            "Blocking a real payment"
+          ],
+          [
+            "TriangleAlert",
+            "False negative",
+            "Missing real fraud"
+          ],
+          [
+            "Zap",
+            "Speed",
+            "Decide in milliseconds"
+          ],
+          [
+            "KeyRound",
+            "Step-up check",
+            "Ask for OTP or PIN"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think fraud detection means their money can never be stolen. [2] It catches most unusual activity, but when a scammer tricks you into paying yourself, it can look normal to the system. So never share your OTP or PIN, and never approve a collect request you didn't expect.",
+      "data": {
+        "myth": "Fraud detection means my money can never be stolen.",
+        "fact": "Scams that trick YOU into paying can look normal. Never share OTP or PIN, or approve unexpected collect requests.",
+        "tip": "Never share OTP or PIN"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! A genuine payment gets blocked by mistake. What is that called? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] A false positive! The system thought it was fraud, but it wasn't.",
+      "data": {
+        "question": "A real payment blocked by mistake is…",
+        "options": [
+          "A false positive",
+          "A false negative",
+          "A token"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The system looks at amount, place, time and device. [2] Anomaly detection flags anything unusual for you. [3] A risk score decides to allow, confirm or block. [4] And you are the last line of defence, so never share your OTP or PIN. [5] Next, we'll learn why data is the real fuel of AI. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Details",
+            "amount, place, time, device"
+          ],
+          [
+            "Anomaly",
+            "unusual for you"
+          ],
+          [
+            "Risk score",
+            "allow, confirm or block"
+          ],
+          [
+            "You",
+            "never share OTP or PIN"
+          ]
+        ],
+        "next": "EP 25 · Training data"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Your ₹50 chai payment goes through instantly, but a stranger's 3 AM payment gets blocked in milliseconds. How?\n\nReal World AI, Use Case 14: UPI and card fraud detection\n- The flow: gather details, compare with your normal, risk score, decide\n- Anomaly detection, explained\n- Normal vs suspicious, side by side\n- The balance: false positives vs false negatives\n- Your part: never share OTP or PIN, never approve unexpected collect requests\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Why data is the real fuel of AI.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #FraudDetection #LearnAI #UPI #AIForBeginners",
+    "pinned": "Quiz answer: A false positive. And remember: no bank or app will ever ask for your OTP or PIN. Share this with your family!",
+    "cover": "'Fraud Detection' title card",
+    "alt": "Animated breakdown of how banks use AI anomaly detection and risk scores to stop UPI and card fraud."
+  }
+}
