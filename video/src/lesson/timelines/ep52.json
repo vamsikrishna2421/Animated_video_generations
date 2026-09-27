@@ -1,0 +1,826 @@
+{
+  "id": "ep52",
+  "episode": 52,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build RAG Over Your PDFs, Part 1",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4918,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep52/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 52",
+        "title": [
+          "RAG Build",
+          "Part 1"
+        ],
+        "subtitle": "Chat with your PDFs",
+        "buzzwords": [
+          "PDF",
+          "pypdf",
+          "Chunks",
+          "Overlap",
+          "Embeddings",
+          "Chroma",
+          "Vector DB",
+          "Python"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_01.wav",
+      "cues": [
+        244,
+        426
+      ],
+      "captions": [
+        {
+          "text": "Imagine asking questions to your",
+          "from": 10,
+          "to": 65
+        },
+        {
+          "text": "insurance policy,",
+          "from": 67,
+          "to": 110
+        },
+        {
+          "text": "or a 200 page textbook,",
+          "from": 112,
+          "to": 178
+        },
+        {
+          "text": "and getting instant answers.",
+          "from": 179,
+          "to": 243
+        },
+        {
+          "text": "Over two episodes,",
+          "from": 244,
+          "to": 281
+        },
+        {
+          "text": "we'll build exactly that,",
+          "from": 283,
+          "to": 329
+        },
+        {
+          "text": "a RAG app over your",
+          "from": 331,
+          "to": 376
+        },
+        {
+          "text": "own PDFs.",
+          "from": 378,
+          "to": 424
+        },
+        {
+          "text": "Part one,",
+          "from": 426,
+          "to": 454
+        },
+        {
+          "text": "loading and storing the documents.",
+          "from": 457,
+          "to": 530
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The build plan",
+        "nodes": [
+          [
+            "FileText",
+            "Load",
+            "Read the PDF text"
+          ],
+          [
+            "Scissors",
+            "Chunk",
+            "Overlapping pieces"
+          ],
+          [
+            "Binary",
+            "Embed",
+            "Meaning as numbers"
+          ],
+          [
+            "Database",
+            "Store",
+            "Vector database"
+          ],
+          [
+            "MessageSquare",
+            "Ask",
+            "Part 2"
+          ]
+        ]
+      },
+      "from": 543,
+      "durationInFrames": 525,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_02.wav",
+      "cues": [
+        90,
+        178,
+        262,
+        337,
+        413
+      ],
+      "captions": [
+        {
+          "text": "Here's the plan,",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "from episode 32.",
+          "from": 49,
+          "to": 87
+        },
+        {
+          "text": "Load the PDF,",
+          "from": 90,
+          "to": 123
+        },
+        {
+          "text": "and pull out its text.",
+          "from": 128,
+          "to": 175
+        },
+        {
+          "text": "Split the text into overlapping chunks.",
+          "from": 178,
+          "to": 259
+        },
+        {
+          "text": "Turn each chunk into an embedding.",
+          "from": 262,
+          "to": 334
+        },
+        {
+          "text": "Store everything in a vector database.",
+          "from": 337,
+          "to": 410
+        },
+        {
+          "text": "Next episode,",
+          "from": 413,
+          "to": 438
+        },
+        {
+          "text": "we'll search it,",
+          "from": 439,
+          "to": 464
+        },
+        {
+          "text": "and answer questions.",
+          "from": 466,
+          "to": 513
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Setup",
+        "kicker": "TOOLS",
+        "steps": [
+          [
+            "FileText",
+            "pypdf",
+            "Reads PDF text"
+          ],
+          [
+            "Database",
+            "Chroma",
+            "Vector DB + embeddings"
+          ],
+          [
+            "Package",
+            "One command",
+            "pip install pypdf chromadb"
+          ]
+        ]
+      },
+      "from": 1068,
+      "durationInFrames": 494,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_03.wav",
+      "cues": [
+        73,
+        175,
+        347
+      ],
+      "captions": [
+        {
+          "text": "We need two free libraries.",
+          "from": 10,
+          "to": 70
+        },
+        {
+          "text": "pypdf, to read text from",
+          "from": 73,
+          "to": 122
+        },
+        {
+          "text": "PDF files.",
+          "from": 124,
+          "to": 172
+        },
+        {
+          "text": "Chroma, a simple vector database,",
+          "from": 175,
+          "to": 238
+        },
+        {
+          "text": "that also creates embeddings for",
+          "from": 243,
+          "to": 292
+        },
+        {
+          "text": "us, automatically.",
+          "from": 293,
+          "to": 345
+        },
+        {
+          "text": "Install both with one command,",
+          "from": 347,
+          "to": 406
+        },
+        {
+          "text": "pip install pypdf chromadb.",
+          "from": 408,
+          "to": 481
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "Load, chunk, store",
+        "file": "ingest.py",
+        "lines": [
+          "from pypdf import PdfReader",
+          "import chromadb",
+          "",
+          "reader = PdfReader(\"policy.pdf\")",
+          "text = \" \".join(p.extract_text() for p in reader.pages)",
+          "",
+          "words = text.split()",
+          "chunks = [\" \".join(words[i:i+200])",
+          "          for i in range(0, len(words), 150)]",
+          "",
+          "db = chromadb.PersistentClient(\"db\")",
+          "col = db.get_or_create_collection(\"docs\")",
+          "col.add(documents=chunks,",
+          "        ids=[str(i) for i in range(len(chunks))])",
+          "print(len(chunks), \"chunks stored\")"
+        ],
+        "groups": [
+          3,
+          3,
+          4,
+          2,
+          3
+        ],
+        "output": [
+          "$ python ingest.py",
+          "48 chunks stored"
+        ]
+      },
+      "from": 1562,
+      "durationInFrames": 845,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_04.wav",
+      "cues": [
+        46,
+        99,
+        201,
+        453,
+        591,
+        724
+      ],
+      "captions": [
+        {
+          "text": "Here's the code.",
+          "from": 10,
+          "to": 41
+        },
+        {
+          "text": "Import the two libraries.",
+          "from": 46,
+          "to": 98
+        },
+        {
+          "text": "Open the PDF,",
+          "from": 99,
+          "to": 130
+        },
+        {
+          "text": "and join the text from",
+          "from": 132,
+          "to": 159
+        },
+        {
+          "text": "every page.",
+          "from": 161,
+          "to": 198
+        },
+        {
+          "text": "Split it into words,",
+          "from": 201,
+          "to": 231
+        },
+        {
+          "text": "and make chunks of 200",
+          "from": 232,
+          "to": 273
+        },
+        {
+          "text": "words, moving forward 150 at",
+          "from": 274,
+          "to": 335
+        },
+        {
+          "text": "a time,",
+          "from": 336,
+          "to": 360
+        },
+        {
+          "text": "so neighbouring chunks overlap by",
+          "from": 362,
+          "to": 411
+        },
+        {
+          "text": "50 words.",
+          "from": 414,
+          "to": 450
+        },
+        {
+          "text": "Create a Chroma database,",
+          "from": 453,
+          "to": 497
+        },
+        {
+          "text": "saved in a folder,",
+          "from": 500,
+          "to": 527
+        },
+        {
+          "text": "with a collection called docs.",
+          "from": 529,
+          "to": 589
+        },
+        {
+          "text": "Add all the chunks,",
+          "from": 591,
+          "to": 622
+        },
+        {
+          "text": "each with an ID.",
+          "from": 625,
+          "to": 666
+        },
+        {
+          "text": "Chroma embeds them for us.",
+          "from": 668,
+          "to": 722
+        },
+        {
+          "text": "Run it,",
+          "from": 724,
+          "to": 742
+        },
+        {
+          "text": "and our PDF is stored,",
+          "from": 744,
+          "to": 790
+        },
+        {
+          "text": "ready to search!",
+          "from": 794,
+          "to": 831
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Why overlap?",
+        "kicker": "SMALL DETAIL, BIG IMPACT",
+        "left": {
+          "icon": "Scissors",
+          "title": "No overlap",
+          "stat": "Cut in half",
+          "label": "key sentences get split"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "With overlap",
+          "stat": "Kept whole",
+          "label": "sentence fits in one chunk"
+        }
+      },
+      "from": 2407,
+      "durationInFrames": 411,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_05.wav",
+      "cues": [
+        51,
+        241
+      ],
+      "captions": [
+        {
+          "text": "Why the overlap?",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "Without overlap,",
+          "from": 51,
+          "to": 78
+        },
+        {
+          "text": "a key sentence can get",
+          "from": 80,
+          "to": 116
+        },
+        {
+          "text": "cut in half,",
+          "from": 118,
+          "to": 142
+        },
+        {
+          "text": "between two chunks,",
+          "from": 144,
+          "to": 175
+        },
+        {
+          "text": "and neither chunk makes sense.",
+          "from": 179,
+          "to": 239
+        },
+        {
+          "text": "With overlap,",
+          "from": 241,
+          "to": 264
+        },
+        {
+          "text": "the sentence appears whole in",
+          "from": 267,
+          "to": 309
+        },
+        {
+          "text": "at least one chunk,",
+          "from": 309,
+          "to": 347
+        },
+        {
+          "text": "so search can find it.",
+          "from": 349,
+          "to": 399
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Build words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Upload",
+            "Ingestion",
+            "Load, chunk, store"
+          ],
+          [
+            "FolderOpen",
+            "Collection",
+            "A named group"
+          ],
+          [
+            "Save",
+            "Persistent",
+            "Saved to disk"
+          ],
+          [
+            "Tag",
+            "ID",
+            "Label for each chunk"
+          ]
+        ]
+      },
+      "from": 2818,
+      "durationInFrames": 583,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_06.wav",
+      "cues": [
+        61,
+        200,
+        314,
+        436
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Ingestion, the process of loading,",
+          "from": 61,
+          "to": 127
+        },
+        {
+          "text": "chunking, and storing documents.",
+          "from": 131,
+          "to": 198
+        },
+        {
+          "text": "Collection, a named group of",
+          "from": 200,
+          "to": 247
+        },
+        {
+          "text": "chunks inside the database.",
+          "from": 248,
+          "to": 311
+        },
+        {
+          "text": "Persistent, saved to disk,",
+          "from": 314,
+          "to": 373
+        },
+        {
+          "text": "so you only ingest once.",
+          "from": 376,
+          "to": 434
+        },
+        {
+          "text": "And ID,",
+          "from": 436,
+          "to": 460
+        },
+        {
+          "text": "a unique label for every",
+          "from": 462,
+          "to": 501
+        },
+        {
+          "text": "chunk, so we can cite",
+          "from": 502,
+          "to": 541
+        },
+        {
+          "text": "it later.",
+          "from": 541,
+          "to": 571
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Every PDF works the same way.",
+        "fact": "Scanned PDFs are just images with no text. Run OCR first.",
+        "tip": "No text? Use OCR"
+      },
+      "from": 3401,
+      "durationInFrames": 512,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_07.wav",
+      "cues": [
+        61,
+        146
+      ],
+      "captions": [
+        {
+          "text": "Here's a common problem.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "People expect every PDF to work.",
+          "from": 61,
+          "to": 142
+        },
+        {
+          "text": "Scanned PDFs are just pictures",
+          "from": 146,
+          "to": 204
+        },
+        {
+          "text": "of pages,",
+          "from": 205,
+          "to": 229
+        },
+        {
+          "text": "with no text inside.",
+          "from": 230,
+          "to": 286
+        },
+        {
+          "text": "pypdf returns nothing.",
+          "from": 289,
+          "to": 342
+        },
+        {
+          "text": "For those,",
+          "from": 344,
+          "to": 365
+        },
+        {
+          "text": "you first need OCR,",
+          "from": 368,
+          "to": 414
+        },
+        {
+          "text": "from use case 19,",
+          "from": 417,
+          "to": 458
+        },
+        {
+          "text": "to read the text.",
+          "from": 460,
+          "to": 499
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Chunks overlap so that…",
+        "options": [
+          "Key sentences aren't cut in half",
+          "The file gets bigger",
+          "It looks nicer"
+        ],
+        "answer": 0
+      },
+      "from": 3913,
+      "durationInFrames": 408,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_08.wav",
+      "cues": [
+        81,
+        288
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 28
+        },
+        {
+          "text": "Why do chunks overlap?",
+          "from": 30,
+          "to": 79
+        },
+        {
+          "text": "Pause and think,",
+          "from": 81,
+          "to": 116
+        },
+        {
+          "text": "and if you get it",
+          "from": 117,
+          "to": 134
+        },
+        {
+          "text": "right, comment below!",
+          "from": 136,
+          "to": 190
+        },
+        {
+          "text": "So key sentences aren't cut",
+          "from": 288,
+          "to": 333
+        },
+        {
+          "text": "in half,",
+          "from": 334,
+          "to": 349
+        },
+        {
+          "text": "between two chunks!",
+          "from": 352,
+          "to": 395
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "pypdf",
+            "reads the text"
+          ],
+          [
+            "Chunks",
+            "with overlap"
+          ],
+          [
+            "Chroma",
+            "embeds and stores"
+          ],
+          [
+            "Scanned?",
+            "OCR first"
+          ]
+        ],
+        "next": "EP 53 · RAG Part 2"
+      },
+      "from": 4321,
+      "durationInFrames": 597,
+      "voiceFrom": 10,
+      "audio": "lessons/ep52/voice_09.wav",
+      "cues": [
+        46,
+        120,
+        195,
+        282,
+        373
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "pypdf reads the text from",
+          "from": 46,
+          "to": 82
+        },
+        {
+          "text": "your PDF.",
+          "from": 83,
+          "to": 117
+        },
+        {
+          "text": "We split it into overlapping chunks.",
+          "from": 120,
+          "to": 192
+        },
+        {
+          "text": "Chroma embeds and stores them,",
+          "from": 195,
+          "to": 249
+        },
+        {
+          "text": "on disk.",
+          "from": 250,
+          "to": 279
+        },
+        {
+          "text": "Scanned PDFs need OCR first.",
+          "from": 282,
+          "to": 370
+        },
+        {
+          "text": "Next, part two,",
+          "from": 373,
+          "to": 415
+        },
+        {
+          "text": "searching the chunks,",
+          "from": 417,
+          "to": 445
+        },
+        {
+          "text": "and answering questions with sources.",
+          "from": 450,
+          "to": 520
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 523,
+          "to": 585
+        }
+      ],
+      "image": null
+    }
+  ]
+}
