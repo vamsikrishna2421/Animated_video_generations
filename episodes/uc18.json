@@ -1,0 +1,234 @@
+{
+  "id": "uc18",
+  "episode": 18,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 18",
+  "handle": "@ai_maastaaru",
+  "title": "How Self Driving Cars See the Road",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "A car drives through traffic, with nobody touching the steering wheel. [1] It sees lanes, signals, bikes and people, and decides what to do, many times every second. [2] Let's break down how self driving cars see the road.",
+      "data": {
+        "kicker": "USE CASE 18",
+        "title": [
+          "Self-Driving",
+          "Cars"
+        ],
+        "subtitle": "How cars see and decide",
+        "buzzwords": [
+          "Lidar",
+          "Radar",
+          "Cameras",
+          "Perception",
+          "Planning",
+          "Robotaxi",
+          "Sensor fusion",
+          "Autopilot"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Every moment, the car runs a loop. [1] Sensors capture the world, cameras, radar, and sometimes lidar. [2] Perception models detect cars, lanes, signs and people. [3] Prediction models guess what everyone will do next, like that biker turning left. [4] A planner picks the safest path and speed, [5] and control turns it into steering, braking and acceleration.",
+      "data": {
+        "heading": "Sense, think, act",
+        "nodes": [
+          [
+            "Camera",
+            "Sense",
+            "Cameras, radar, lidar"
+          ],
+          [
+            "ScanSearch",
+            "Perceive",
+            "Cars, lanes, signs, people"
+          ],
+          [
+            "Brain",
+            "Predict",
+            "What will others do next?"
+          ],
+          [
+            "Route",
+            "Plan",
+            "Safest path and speed"
+          ],
+          [
+            "Car",
+            "Act",
+            "Steer, brake, accelerate"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Each sensor has a job. [1] Cameras see colour, signs and lane markings. [2] Radar measures distance and speed, even in fog or rain. [3] Lidar uses lasers to build a precise 3D map. [4] And GPS, with maps, tells the car where it is.",
+      "data": {
+        "heading": "The sensors",
+        "kicker": "EYES OF THE CAR",
+        "terms": [
+          [
+            "Camera",
+            "Cameras",
+            "Colour, signs, lanes"
+          ],
+          [
+            "Radar",
+            "Radar",
+            "Distance and speed, even in fog"
+          ],
+          [
+            "Scan",
+            "Lidar",
+            "A laser 3D map"
+          ],
+          [
+            "Map",
+            "GPS + maps",
+            "Where am I?"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "The car combines all these sensors, and that's called sensor fusion. [1] Each sensor covers another's weaknesses. [2] Cameras can struggle with glare, [3] radar can't read signs, [4] but together, they build one reliable picture.",
+      "data": {
+        "term": "Sensor fusion",
+        "short": "Fusion",
+        "definition": "Combining cameras, radar and other sensors into one reliable picture of the road.",
+        "chips": [
+          [
+            "Sun",
+            "Cameras: glare"
+          ],
+          [
+            "Radar",
+            "Radar: no signs"
+          ],
+          [
+            "Layers",
+            "Together: reliable"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Self driving comes in levels. [1] Driver assistance, like lane keeping and adaptive cruise control, where you're still driving. [2] Partial self driving, where the car steers and brakes, but you must watch constantly. [3] And full self driving, with no driver needed, which today runs as robotaxis in only a few cities.",
+      "data": {
+        "heading": "Levels of autonomy",
+        "kicker": "NOT ALL THE SAME",
+        "steps": [
+          [
+            "Hand",
+            "Assistance",
+            "Lane keeping, cruise control"
+          ],
+          [
+            "Eye",
+            "Partial",
+            "Car drives, you supervise"
+          ],
+          [
+            "Car",
+            "Full",
+            "No driver, robotaxis in a few cities"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So why is it so hard, especially on Indian roads? [1] Unpredictable traffic, like cows, autos, and people crossing anywhere. [2] Missing or faded lane markings. [3] And heavy rain, with poor visibility.",
+      "data": {
+        "heading": "Why it's hard",
+        "kicker": "THE CHALLENGE",
+        "items": [
+          [
+            "Users",
+            "Unpredictable traffic",
+            "Cows, autos, people crossing"
+          ],
+          [
+            "Route",
+            "Faded lanes",
+            "Missing road markings"
+          ],
+          [
+            "CloudRain",
+            "Bad weather",
+            "Heavy rain, low visibility"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think today's cars with autopilot features can drive themselves anywhere. [2] Most cars sold today only have driver assistance. You must keep your hands ready, and your eyes on the road.",
+      "data": {
+        "myth": "Cars with autopilot features can drive themselves anywhere.",
+        "fact": "Most cars today only have driver assistance. Hands ready, eyes on the road.",
+        "tip": "You're still the driver"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Which sensor measures distance and speed, even in fog? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Radar!",
+      "data": {
+        "question": "Distance and speed, even in fog, comes from…",
+        "options": [
+          "Radar",
+          "A microphone",
+          "The speakers"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The car loops through sense, perceive, predict, plan and act. [2] It uses cameras, radar and sometimes lidar. [3] Sensor fusion combines them into one picture. [4] And most cars today only have driver assistance. [5] Next, a real world breakdown, how apps scan your ID documents for KYC in seconds. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Loop",
+            "sense, perceive, predict, plan, act"
+          ],
+          [
+            "Sensors",
+            "cameras, radar, lidar"
+          ],
+          [
+            "Fusion",
+            "one reliable picture"
+          ],
+          [
+            "Today",
+            "mostly driver assistance"
+          ]
+        ],
+        "next": "Use Case · KYC document scanning"
+      }
+    }
+  ],
+  "post": {
+    "caption": "No hands on the wheel. How does a self-driving car see the road and decide what to do?\n\nReal World AI, Use Case 18: self-driving cars\n- The loop: sense, perceive, predict, plan, act\n- The sensors: cameras, radar, lidar, GPS\n- Sensor fusion: one reliable picture\n- Levels of autonomy: assistance, partial, full\n- Why Indian roads are especially hard\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How apps scan your ID for KYC in seconds.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #SelfDrivingCars #LearnAI #ComputerVision #AIForBeginners",
+    "pinned": "Quiz answer: Radar. Would you trust a self-driving car on Indian roads? Yes or no?",
+    "cover": "'Self-Driving Cars' title card",
+    "alt": "Animated breakdown of how self-driving cars use sensors, perception, prediction and planning."
+  }
+}

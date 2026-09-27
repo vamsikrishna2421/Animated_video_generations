@@ -1,0 +1,767 @@
+{
+  "id": "uc18",
+  "episode": 18,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Self Driving Cars See the Road",
+  "host": "female",
+  "label": "USE CASE 18",
+  "fps": 30,
+  "totalFrames": 4882,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc18/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 18",
+        "title": [
+          "Self-Driving",
+          "Cars"
+        ],
+        "subtitle": "How cars see and decide",
+        "buzzwords": [
+          "Lidar",
+          "Radar",
+          "Cameras",
+          "Perception",
+          "Planning",
+          "Robotaxi",
+          "Sensor fusion",
+          "Autopilot"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 478,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_01.wav",
+      "cues": [
+        143,
+        361
+      ],
+      "captions": [
+        {
+          "text": "A car drives through traffic,",
+          "from": 10,
+          "to": 66
+        },
+        {
+          "text": "with nobody touching the steering wheel.",
+          "from": 68,
+          "to": 140
+        },
+        {
+          "text": "It sees lanes,",
+          "from": 143,
+          "to": 180
+        },
+        {
+          "text": "signals, bikes and people,",
+          "from": 183,
+          "to": 247
+        },
+        {
+          "text": "and decides what to do,",
+          "from": 252,
+          "to": 294
+        },
+        {
+          "text": "many times every second.",
+          "from": 296,
+          "to": 358
+        },
+        {
+          "text": "Let's break down how self",
+          "from": 361,
+          "to": 403
+        },
+        {
+          "text": "driving cars see the road.",
+          "from": 406,
+          "to": 466
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Sense, think, act",
+        "nodes": [
+          [
+            "Camera",
+            "Sense",
+            "Cameras, radar, lidar"
+          ],
+          [
+            "ScanSearch",
+            "Perceive",
+            "Cars, lanes, signs, people"
+          ],
+          [
+            "Brain",
+            "Predict",
+            "What will others do next?"
+          ],
+          [
+            "Route",
+            "Plan",
+            "Safest path and speed"
+          ],
+          [
+            "Car",
+            "Act",
+            "Steer, brake, accelerate"
+          ]
+        ]
+      },
+      "from": 478,
+      "durationInFrames": 733,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_02.wav",
+      "cues": [
+        81,
+        224,
+        357,
+        500,
+        590
+      ],
+      "captions": [
+        {
+          "text": "Every moment,",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "the car runs a loop.",
+          "from": 34,
+          "to": 78
+        },
+        {
+          "text": "Sensors capture the world,",
+          "from": 81,
+          "to": 127
+        },
+        {
+          "text": "cameras, radar,",
+          "from": 129,
+          "to": 168
+        },
+        {
+          "text": "and sometimes lidar.",
+          "from": 172,
+          "to": 222
+        },
+        {
+          "text": "Perception models detect cars,",
+          "from": 224,
+          "to": 282
+        },
+        {
+          "text": "lanes, signs and people.",
+          "from": 287,
+          "to": 355
+        },
+        {
+          "text": "Prediction models guess what everyone",
+          "from": 357,
+          "to": 406
+        },
+        {
+          "text": "will do next,",
+          "from": 407,
+          "to": 432
+        },
+        {
+          "text": "like that biker turning left.",
+          "from": 436,
+          "to": 496
+        },
+        {
+          "text": "A planner picks the safest",
+          "from": 500,
+          "to": 545
+        },
+        {
+          "text": "path and speed,",
+          "from": 548,
+          "to": 589
+        },
+        {
+          "text": "and control turns it into",
+          "from": 590,
+          "to": 630
+        },
+        {
+          "text": "steering, braking and acceleration.",
+          "from": 634,
+          "to": 721
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The sensors",
+        "kicker": "EYES OF THE CAR",
+        "terms": [
+          [
+            "Camera",
+            "Cameras",
+            "Colour, signs, lanes"
+          ],
+          [
+            "Radar",
+            "Radar",
+            "Distance and speed, even in fog"
+          ],
+          [
+            "Scan",
+            "Lidar",
+            "A laser 3D map"
+          ],
+          [
+            "Map",
+            "GPS + maps",
+            "Where am I?"
+          ]
+        ]
+      },
+      "from": 1211,
+      "durationInFrames": 540,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_03.wav",
+      "cues": [
+        62,
+        166,
+        305,
+        413
+      ],
+      "captions": [
+        {
+          "text": "Each sensor has a job.",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "Cameras see colour,",
+          "from": 62,
+          "to": 98
+        },
+        {
+          "text": "signs and lane markings.",
+          "from": 100,
+          "to": 163
+        },
+        {
+          "text": "Radar measures distance and speed,",
+          "from": 166,
+          "to": 235
+        },
+        {
+          "text": "even in fog or rain.",
+          "from": 237,
+          "to": 302
+        },
+        {
+          "text": "Lidar uses lasers to build",
+          "from": 305,
+          "to": 369
+        },
+        {
+          "text": "a precise 3D map.",
+          "from": 369,
+          "to": 411
+        },
+        {
+          "text": "And GPS,",
+          "from": 413,
+          "to": 445
+        },
+        {
+          "text": "with maps,",
+          "from": 450,
+          "to": 471
+        },
+        {
+          "text": "tells the car where it is.",
+          "from": 473,
+          "to": 528
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Sensor fusion",
+        "short": "Fusion",
+        "definition": "Combining cameras, radar and other sensors into one reliable picture of the road.",
+        "chips": [
+          [
+            "Sun",
+            "Cameras: glare"
+          ],
+          [
+            "Radar",
+            "Radar: no signs"
+          ],
+          [
+            "Layers",
+            "Together: reliable"
+          ]
+        ]
+      },
+      "from": 1751,
+      "durationInFrames": 472,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_04.wav",
+      "cues": [
+        151,
+        238,
+        302,
+        360
+      ],
+      "captions": [
+        {
+          "text": "The car combines all these",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "sensors, and that's called sensor fusion.",
+          "from": 56,
+          "to": 148
+        },
+        {
+          "text": "Each sensor covers another's weaknesses.",
+          "from": 151,
+          "to": 236
+        },
+        {
+          "text": "Cameras can struggle with glare,",
+          "from": 238,
+          "to": 296
+        },
+        {
+          "text": "radar can't read signs,",
+          "from": 302,
+          "to": 359
+        },
+        {
+          "text": "but together,",
+          "from": 360,
+          "to": 386
+        },
+        {
+          "text": "they build one reliable picture.",
+          "from": 388,
+          "to": 461
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Levels of autonomy",
+        "kicker": "NOT ALL THE SAME",
+        "steps": [
+          [
+            "Hand",
+            "Assistance",
+            "Lane keeping, cruise control"
+          ],
+          [
+            "Eye",
+            "Partial",
+            "Car drives, you supervise"
+          ],
+          [
+            "Car",
+            "Full",
+            "No driver, robotaxis in a few cities"
+          ]
+        ]
+      },
+      "from": 2223,
+      "durationInFrames": 641,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_05.wav",
+      "cues": [
+        82,
+        255,
+        425
+      ],
+      "captions": [
+        {
+          "text": "Self driving comes in levels.",
+          "from": 10,
+          "to": 79
+        },
+        {
+          "text": "Driver assistance,",
+          "from": 82,
+          "to": 120
+        },
+        {
+          "text": "like lane keeping and adaptive",
+          "from": 122,
+          "to": 169
+        },
+        {
+          "text": "cruise control,",
+          "from": 171,
+          "to": 201
+        },
+        {
+          "text": "where you're still driving.",
+          "from": 202,
+          "to": 253
+        },
+        {
+          "text": "Partial self driving,",
+          "from": 255,
+          "to": 297
+        },
+        {
+          "text": "where the car steers and",
+          "from": 298,
+          "to": 331
+        },
+        {
+          "text": "brakes, but you must watch constantly.",
+          "from": 332,
+          "to": 423
+        },
+        {
+          "text": "And full self driving,",
+          "from": 425,
+          "to": 465
+        },
+        {
+          "text": "with no driver needed,",
+          "from": 467,
+          "to": 510
+        },
+        {
+          "text": "which today runs as robotaxis",
+          "from": 512,
+          "to": 573
+        },
+        {
+          "text": "in only a few cities.",
+          "from": 575,
+          "to": 629
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Why it's hard",
+        "kicker": "THE CHALLENGE",
+        "items": [
+          [
+            "Users",
+            "Unpredictable traffic",
+            "Cows, autos, people crossing"
+          ],
+          [
+            "Route",
+            "Faded lanes",
+            "Missing road markings"
+          ],
+          [
+            "CloudRain",
+            "Bad weather",
+            "Heavy rain, low visibility"
+          ]
+        ]
+      },
+      "from": 2864,
+      "durationInFrames": 445,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_06.wav",
+      "cues": [
+        124,
+        283,
+        355
+      ],
+      "captions": [
+        {
+          "text": "So why is it so",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "hard, especially on Indian roads?",
+          "from": 39,
+          "to": 122
+        },
+        {
+          "text": "Unpredictable traffic,",
+          "from": 124,
+          "to": 166
+        },
+        {
+          "text": "like cows,",
+          "from": 168,
+          "to": 196
+        },
+        {
+          "text": "autos, and people crossing anywhere.",
+          "from": 200,
+          "to": 279
+        },
+        {
+          "text": "Missing or faded lane markings.",
+          "from": 283,
+          "to": 352
+        },
+        {
+          "text": "And heavy rain,",
+          "from": 355,
+          "to": 382
+        },
+        {
+          "text": "with poor visibility.",
+          "from": 386,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Cars with autopilot features can drive themselves anywhere.",
+        "fact": "Most cars today only have driver assistance. Hands ready, eyes on the road.",
+        "tip": "You're still the driver"
+      },
+      "from": 3309,
+      "durationInFrames": 447,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_07.wav",
+      "cues": [
+        59,
+        216
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think today's cars with",
+          "from": 59,
+          "to": 106
+        },
+        {
+          "text": "autopilot features can drive themselves anywhere.",
+          "from": 108,
+          "to": 213
+        },
+        {
+          "text": "Most cars sold today only",
+          "from": 216,
+          "to": 271
+        },
+        {
+          "text": "have driver assistance.",
+          "from": 272,
+          "to": 327
+        },
+        {
+          "text": "You must keep your hands",
+          "from": 329,
+          "to": 374
+        },
+        {
+          "text": "ready, and your eyes on",
+          "from": 374,
+          "to": 417
+        },
+        {
+          "text": "the road.",
+          "from": 417,
+          "to": 435
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Distance and speed, even in fog, comes from…",
+        "options": [
+          "Radar",
+          "A microphone",
+          "The speakers"
+        ],
+        "answer": 0
+      },
+      "from": 3756,
+      "durationInFrames": 392,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_08.wav",
+      "cues": [
+        148,
+        351
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 29
+        },
+        {
+          "text": "Which sensor measures distance and",
+          "from": 42,
+          "to": 86
+        },
+        {
+          "text": "speed, even in fog?",
+          "from": 88,
+          "to": 146
+        },
+        {
+          "text": "Pause and think,",
+          "from": 148,
+          "to": 180
+        },
+        {
+          "text": "and if you get it",
+          "from": 184,
+          "to": 200
+        },
+        {
+          "text": "right, comment below!",
+          "from": 202,
+          "to": 253
+        },
+        {
+          "text": "Radar!",
+          "from": 351,
+          "to": 380
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Loop",
+            "sense, perceive, predict, plan, act"
+          ],
+          [
+            "Sensors",
+            "cameras, radar, lidar"
+          ],
+          [
+            "Fusion",
+            "one reliable picture"
+          ],
+          [
+            "Today",
+            "mostly driver assistance"
+          ]
+        ],
+        "next": "Use Case · KYC document scanning"
+      },
+      "from": 4148,
+      "durationInFrames": 734,
+      "voiceFrom": 10,
+      "audio": "lessons/uc18/voice_09.wav",
+      "cues": [
+        46,
+        175,
+        284,
+        368,
+        472
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "The car loops through sense,",
+          "from": 46,
+          "to": 91
+        },
+        {
+          "text": "perceive, predict,",
+          "from": 93,
+          "to": 131
+        },
+        {
+          "text": "plan and act.",
+          "from": 134,
+          "to": 172
+        },
+        {
+          "text": "It uses cameras,",
+          "from": 175,
+          "to": 207
+        },
+        {
+          "text": "radar and sometimes lidar.",
+          "from": 211,
+          "to": 281
+        },
+        {
+          "text": "Sensor fusion combines them into",
+          "from": 284,
+          "to": 331
+        },
+        {
+          "text": "one picture.",
+          "from": 333,
+          "to": 366
+        },
+        {
+          "text": "And most cars today only",
+          "from": 368,
+          "to": 415
+        },
+        {
+          "text": "have driver assistance.",
+          "from": 416,
+          "to": 469
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 472,
+          "to": 532
+        },
+        {
+          "text": "how apps scan your ID",
+          "from": 534,
+          "to": 570
+        },
+        {
+          "text": "documents for KYC in seconds.",
+          "from": 571,
+          "to": 648
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 652,
+          "to": 722
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -46,5 +46,7 @@ import uc14 from "./uc14.json";
 import uc15 from "./uc15.json";
 import uc16 from "./uc16.json";
 import uc17 from "./uc17.json";
+import uc18 from "./uc18.json";
+import uc19 from "./uc19.json";
 
-export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22, ep23, ep24, ep25, ep26, ep27, ep28, ep29, uc01, uc02, uc03, uc04, uc05, uc06, uc07, uc08, uc09, uc10, uc11, uc12, uc13, uc14, uc15, uc16, uc17];
+export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22, ep23, ep24, ep25, ep26, ep27, ep28, ep29, uc01, uc02, uc03, uc04, uc05, uc06, uc07, uc08, uc09, uc10, uc11, uc12, uc13, uc14, uc15, uc16, uc17, uc18, uc19];
