@@ -70,7 +70,7 @@ Already posted: `out/posted/`.
 | 063 | q06 | Quiz #6: Episodes 50–58 | ready |
 | 064 | uc01 | How an AI Phone Call Assistant Works | ready |
 | 065 | uc02 | How ChatGPT Searches the Web | ready |
-| 066 | uc03 | How AI Meeting Notes Work | rendering soon |
+| 066 | uc03 | How AI Meeting Notes Work | ready |
 | 067 | uc04 | How Netflix and YouTube Recommend Videos | rendering soon |
 | 068 | uc05 | How Magic Eraser Works | rendering soon |
 | 069 | uc06 | How a Bank Support Bot Works | rendering soon |
