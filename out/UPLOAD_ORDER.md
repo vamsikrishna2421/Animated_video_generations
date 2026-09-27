@@ -45,7 +45,7 @@ Already posted: `out/posted/`.
 | 038 | ep36 | Why AI Runs on GPUs | ready |
 | 039 | ep37 | Quantization: Shrinking AI Models | ready |
 | 040 | ep38 | How to Run AI on Your Own Laptop | ready |
-| 041 | ep39 | Where AI Costs Come From | rendering soon |
+| 041 | ep39 | Where AI Costs Come From | ready |
 | 042 | ep40 | AI Benchmarks: How Models Are Tested | rendering soon |
 | 043 | q04 | Quiz #4: Episodes 31–40 | rendering soon |
 | 044 | ep41 | How to Choose the Right AI Model | rendering soon |
