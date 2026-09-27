@@ -5,6 +5,8 @@ import { Titles } from "./titles/Titles";
 import titles from "./titles_timeline.json";
 import { Lesson, LessonTimeline } from "./lesson/Lesson";
 import { timelines } from "./lesson/timelines";
+import { Story } from "./story/Story";
+import storyTl from "./story/story_timeline.json";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -15,6 +17,14 @@ export const RemotionRoot: React.FC = () => (
       fps={timeline.fps}
       width={1920}
       height={1080}
+    />
+    <Composition
+      id="ChannelStory"
+      component={Story}
+      durationInFrames={storyTl.totalFrames}
+      fps={storyTl.fps}
+      width={1080}
+      height={1920}
     />
     <Composition
       id="MuseTitles"

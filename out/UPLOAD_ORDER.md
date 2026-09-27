@@ -43,7 +43,7 @@ Already posted: `out/posted/`.
 | 036 | ep34 | Open vs Closed AI Models | ready |
 | 037 | ep35 | Small Language Models | ready |
 | 038 | ep36 | Why AI Runs on GPUs | ready |
-| 039 | ep37 | Quantization: Shrinking AI Models | rendering soon |
+| 039 | ep37 | Quantization: Shrinking AI Models | ready |
 | 040 | ep38 | How to Run AI on Your Own Laptop | rendering soon |
 | 041 | ep39 | Where AI Costs Come From | rendering soon |
 | 042 | ep40 | AI Benchmarks: How Models Are Tested | rendering soon |
