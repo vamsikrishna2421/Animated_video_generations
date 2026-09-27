@@ -23,7 +23,7 @@ IGNORE = {"maastaaru", "chatgpt", "recognising", "recognises", "behaviour", "nei
 
 def us(w: str) -> str:
     """Fold British spellings to American so 'colours' matches 'colors'."""
-    for a, b in (("our", "or"), ("isation", "ization"), ("ise", "ize"), ("ising", "izing"), ("lling", "ling"), ("practis", "practic"), ("tre", "ter")):
+    for a, b in (("our", "or"), ("isation", "ization"), ("ise", "ize"), ("ising", "izing"), ("lling", "ling"), ("lled", "led"), ("practis", "practic"), ("tre", "ter")):
         if w.endswith(a) or a in w:
             w = w.replace(a, b)
     return w

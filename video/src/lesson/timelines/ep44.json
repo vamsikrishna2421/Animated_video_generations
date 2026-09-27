@@ -1,0 +1,786 @@
+{
+  "id": "ep44",
+  "episode": 44,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI and Your Privacy",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4619,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep44/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 44",
+        "title": [
+          "AI &",
+          "Privacy"
+        ],
+        "subtitle": "Where does your data go?",
+        "buzzwords": [
+          "Personal data",
+          "Training data",
+          "Opt out",
+          "Encryption",
+          "Retention",
+          "DPDP Act",
+          "Local AI",
+          "Consent"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 382,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_01.wav",
+      "cues": [
+        154,
+        286
+      ],
+      "captions": [
+        {
+          "text": "You paste your salary slip",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "into a chatbot,",
+          "from": 52,
+          "to": 85
+        },
+        {
+          "text": "and ask it to plan",
+          "from": 86,
+          "to": 113
+        },
+        {
+          "text": "your taxes.",
+          "from": 114,
+          "to": 153
+        },
+        {
+          "text": "Where does that data go?",
+          "from": 154,
+          "to": 194
+        },
+        {
+          "text": "Who can see it?",
+          "from": 200,
+          "to": 234
+        },
+        {
+          "text": "Could it be used for training?",
+          "from": 236,
+          "to": 284
+        },
+        {
+          "text": "Let's talk about AI and",
+          "from": 286,
+          "to": 333
+        },
+        {
+          "text": "your privacy.",
+          "from": 334,
+          "to": 370
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Journey of your message",
+        "nodes": [
+          [
+            "Lock",
+            "Sent",
+            "Encrypted in transit"
+          ],
+          [
+            "Brain",
+            "Processed",
+            "The model replies"
+          ],
+          [
+            "Database",
+            "Stored",
+            "History and safety"
+          ],
+          [
+            "GraduationCap",
+            "Training?",
+            "Depends on settings"
+          ],
+          [
+            "Trash2",
+            "Deleted",
+            "After a set time"
+          ]
+        ]
+      },
+      "from": 382,
+      "durationInFrames": 657,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_02.wav",
+      "cues": [
+        85,
+        203,
+        285,
+        406,
+        525
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens when you",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "send a message.",
+          "from": 48,
+          "to": 82
+        },
+        {
+          "text": "Your text travels,",
+          "from": 85,
+          "to": 120
+        },
+        {
+          "text": "encrypted, to the company's servers.",
+          "from": 124,
+          "to": 201
+        },
+        {
+          "text": "The model reads it,",
+          "from": 203,
+          "to": 233
+        },
+        {
+          "text": "and writes a reply.",
+          "from": 236,
+          "to": 282
+        },
+        {
+          "text": "The chat may be stored,",
+          "from": 285,
+          "to": 324
+        },
+        {
+          "text": "for your history and for",
+          "from": 327,
+          "to": 363
+        },
+        {
+          "text": "safety checks.",
+          "from": 365,
+          "to": 404
+        },
+        {
+          "text": "Depending on the settings,",
+          "from": 406,
+          "to": 454
+        },
+        {
+          "text": "it may be used to",
+          "from": 454,
+          "to": 485
+        },
+        {
+          "text": "train future models.",
+          "from": 485,
+          "to": 522
+        },
+        {
+          "text": "And it's deleted after a",
+          "from": 525,
+          "to": 560
+        },
+        {
+          "text": "set time,",
+          "from": 561,
+          "to": 591
+        },
+        {
+          "text": "or when you delete it.",
+          "from": 594,
+          "to": 645
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Not all plans are equal",
+        "kicker": "CHECK YOUR PLAN",
+        "left": {
+          "icon": "Smartphone",
+          "title": "Consumer apps",
+          "stat": "May train",
+          "label": "unless you opt out"
+        },
+        "right": {
+          "icon": "Building2",
+          "title": "Business / API",
+          "stat": "Usually not",
+          "label": "no training by default, contracts"
+        }
+      },
+      "from": 1039,
+      "durationInFrames": 464,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_03.wav",
+      "cues": [
+        80,
+        256
+      ],
+      "captions": [
+        {
+          "text": "There are two very different setups.",
+          "from": 10,
+          "to": 77
+        },
+        {
+          "text": "Consumer chat apps,",
+          "from": 80,
+          "to": 126
+        },
+        {
+          "text": "where your chats may be",
+          "from": 128,
+          "to": 155
+        },
+        {
+          "text": "used to improve models,",
+          "from": 157,
+          "to": 202
+        },
+        {
+          "text": "unless you opt out.",
+          "from": 204,
+          "to": 253
+        },
+        {
+          "text": "Business and API plans,",
+          "from": 256,
+          "to": 320
+        },
+        {
+          "text": "which usually don't train on",
+          "from": 322,
+          "to": 357
+        },
+        {
+          "text": "your data by default,",
+          "from": 358,
+          "to": 400
+        },
+        {
+          "text": "and come with contracts.",
+          "from": 402,
+          "to": 451
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Never paste these",
+        "kicker": "PROTECT YOURSELF",
+        "steps": [
+          [
+            "KeyRound",
+            "Passwords & OTPs",
+            "Never, ever"
+          ],
+          [
+            "IdCard",
+            "ID numbers",
+            "Aadhaar, PAN, bank"
+          ],
+          [
+            "Briefcase",
+            "Confidential work",
+            "Client files, code"
+          ]
+        ]
+      },
+      "from": 1503,
+      "durationInFrames": 460,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_04.wav",
+      "cues": [
+        97,
+        169,
+        303
+      ],
+      "captions": [
+        {
+          "text": "So what should you never",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "paste into a public chatbot?",
+          "from": 37,
+          "to": 94
+        },
+        {
+          "text": "Passwords, and OTPs.",
+          "from": 97,
+          "to": 166
+        },
+        {
+          "text": "Full ID numbers,",
+          "from": 169,
+          "to": 203
+        },
+        {
+          "text": "like Aadhaar,",
+          "from": 208,
+          "to": 235
+        },
+        {
+          "text": "PAN, or bank details.",
+          "from": 238,
+          "to": 301
+        },
+        {
+          "text": "And confidential work data,",
+          "from": 303,
+          "to": 353
+        },
+        {
+          "text": "like client files,",
+          "from": 355,
+          "to": 392
+        },
+        {
+          "text": "or unreleased code.",
+          "from": 395,
+          "to": 448
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Smart habits",
+        "items": [
+          [
+            "Settings",
+            "Check settings",
+            "Turn off chat training"
+          ],
+          [
+            "Eraser",
+            "Redact",
+            "Remove names and numbers"
+          ],
+          [
+            "Laptop",
+            "Go local",
+            "For sensitive work"
+          ]
+        ]
+      },
+      "from": 1963,
+      "durationInFrames": 489,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_05.wav",
+      "cues": [
+        80,
+        181,
+        294
+      ],
+      "captions": [
+        {
+          "text": "Here are smart privacy habits.",
+          "from": 10,
+          "to": 78
+        },
+        {
+          "text": "Turn off training on your",
+          "from": 80,
+          "to": 126
+        },
+        {
+          "text": "chats, in the app's settings.",
+          "from": 126,
+          "to": 178
+        },
+        {
+          "text": "Remove names and numbers,",
+          "from": 181,
+          "to": 231
+        },
+        {
+          "text": "before pasting documents.",
+          "from": 233,
+          "to": 292
+        },
+        {
+          "text": "And for sensitive work,",
+          "from": 294,
+          "to": 345
+        },
+        {
+          "text": "use a business plan,",
+          "from": 345,
+          "to": 390
+        },
+        {
+          "text": "or run a model locally,",
+          "from": 390,
+          "to": 441
+        },
+        {
+          "text": "from episode 38.",
+          "from": 441,
+          "to": 478
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Privacy words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "User",
+            "Personal data",
+            "Identifies you"
+          ],
+          [
+            "Clock",
+            "Retention",
+            "How long it's kept"
+          ],
+          [
+            "ToggleLeft",
+            "Opt out",
+            "Say no to training"
+          ],
+          [
+            "Scale",
+            "DPDP Act",
+            "India's data law"
+          ]
+        ]
+      },
+      "from": 2452,
+      "durationInFrames": 594,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_06.wav",
+      "cues": [
+        59,
+        158,
+        255,
+        373
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Personal data,",
+          "from": 59,
+          "to": 91
+        },
+        {
+          "text": "anything that identifies you.",
+          "from": 93,
+          "to": 155
+        },
+        {
+          "text": "Data retention,",
+          "from": 158,
+          "to": 190
+        },
+        {
+          "text": "how long your chats are kept.",
+          "from": 194,
+          "to": 252
+        },
+        {
+          "text": "Opt out,",
+          "from": 255,
+          "to": 277
+        },
+        {
+          "text": "choosing not to let your",
+          "from": 279,
+          "to": 312
+        },
+        {
+          "text": "data be used for training.",
+          "from": 313,
+          "to": 370
+        },
+        {
+          "text": "And India's DPDP Act,",
+          "from": 373,
+          "to": 437
+        },
+        {
+          "text": "the Digital Personal Data Protection",
+          "from": 439,
+          "to": 496
+        },
+        {
+          "text": "law, which gives you rights",
+          "from": 498,
+          "to": 544
+        },
+        {
+          "text": "over your data.",
+          "from": 545,
+          "to": 583
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Deleting a chat removes it everywhere, instantly.",
+        "fact": "Companies may keep it for a while for safety and legal reasons. Share carefully from the start.",
+        "tip": "Think before you paste"
+      },
+      "from": 3046,
+      "durationInFrames": 469,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_07.wav",
+      "cues": [
+        58,
+        208
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think deleting a chat",
+          "from": 58,
+          "to": 112
+        },
+        {
+          "text": "from the screen removes it",
+          "from": 112,
+          "to": 163
+        },
+        {
+          "text": "everywhere, instantly.",
+          "from": 163,
+          "to": 206
+        },
+        {
+          "text": "Companies may keep it for",
+          "from": 208,
+          "to": 262
+        },
+        {
+          "text": "a while,",
+          "from": 262,
+          "to": 280
+        },
+        {
+          "text": "for safety and legal reasons.",
+          "from": 280,
+          "to": 342
+        },
+        {
+          "text": "Read the privacy policy,",
+          "from": 345,
+          "to": 390
+        },
+        {
+          "text": "and share carefully from the start.",
+          "from": 390,
+          "to": 455
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Never paste…",
+        "options": [
+          "Your passwords and OTPs",
+          "A recipe question",
+          "A poem you wrote"
+        ],
+        "answer": 0
+      },
+      "from": 3515,
+      "durationInFrames": 425,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_08.wav",
+      "cues": [
+        125,
+        334
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "Which should you never paste",
+          "from": 43,
+          "to": 73
+        },
+        {
+          "text": "into a public chatbot?",
+          "from": 73,
+          "to": 123
+        },
+        {
+          "text": "Pause and think,",
+          "from": 125,
+          "to": 162
+        },
+        {
+          "text": "and if you get it",
+          "from": 163,
+          "to": 181
+        },
+        {
+          "text": "right, comment below!",
+          "from": 182,
+          "to": 235
+        },
+        {
+          "text": "Passwords and OTPs, never!",
+          "from": 334,
+          "to": 413
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Stored",
+            "often, for a while"
+          ],
+          [
+            "Opt out",
+            "of chat training"
+          ],
+          [
+            "Never paste",
+            "passwords, IDs, secrets"
+          ],
+          [
+            "Protect",
+            "redact or go local"
+          ]
+        ],
+        "next": "EP 45 · Deepfakes"
+      },
+      "from": 3940,
+      "durationInFrames": 679,
+      "voiceFrom": 10,
+      "audio": "lessons/ep44/voice_09.wav",
+      "cues": [
+        46,
+        155,
+        258,
+        385,
+        513
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "Your messages are sent,",
+          "from": 46,
+          "to": 85
+        },
+        {
+          "text": "processed, and often stored.",
+          "from": 86,
+          "to": 153
+        },
+        {
+          "text": "Consumer apps may train on",
+          "from": 155,
+          "to": 197
+        },
+        {
+          "text": "chats, unless you opt out.",
+          "from": 198,
+          "to": 255
+        },
+        {
+          "text": "Never paste passwords,",
+          "from": 258,
+          "to": 296
+        },
+        {
+          "text": "ID numbers,",
+          "from": 300,
+          "to": 324
+        },
+        {
+          "text": "or confidential data.",
+          "from": 329,
+          "to": 382
+        },
+        {
+          "text": "Use settings,",
+          "from": 385,
+          "to": 410
+        },
+        {
+          "text": "redaction, and local AI for",
+          "from": 413,
+          "to": 469
+        },
+        {
+          "text": "sensitive work.",
+          "from": 471,
+          "to": 510
+        },
+        {
+          "text": "Next, deepfakes,",
+          "from": 513,
+          "to": 555
+        },
+        {
+          "text": "and how to spot them.",
+          "from": 559,
+          "to": 601
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 604,
+          "to": 667
+        }
+      ],
+      "image": null
+    }
+  ]
+}

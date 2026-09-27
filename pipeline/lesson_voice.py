@@ -46,6 +46,7 @@ PRON = {
     "Ollama": "oʊlˈɑːmə",
     "RAM": "ɹˈæm",
     "Inference": "ˈɪnfəɹəns",
+    "Aadhaar": "ˈɑːdɑːɹ",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.
     "is live": "ɪz lˈaɪv", "is already live": "ɪz ɔːlɹˈɛdi lˈaɪv", "now live": "nˈaʊ lˈaɪv",
 }
