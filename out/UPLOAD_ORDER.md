@@ -38,7 +38,7 @@ Already posted: `out/posted/`.
 | 031 | ep30 | RLHF: How AI Learns Good Manners | ready |
 | 032 | q03 | Quiz #3: Episodes 21–30 | ready |
 | 033 | ep31 | Fine-tuning Deep Dive: LoRA | ready |
-| 034 | ep32 | RAG, Part 2: Chunking, Vector Databases and Reranking | rendering soon |
+| 034 | ep32 | RAG, Part 2: Chunking, Vector Databases and Reranking | ready |
 | 035 | ep33 | RAG, Part 3: Hybrid Search and Measuring Quality | rendering soon |
 | 036 | ep34 | Open vs Closed AI Models | rendering soon |
 | 037 | ep35 | Small Language Models | rendering soon |
