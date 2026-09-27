@@ -6,7 +6,7 @@
   "title": "Temperature and Hallucinations",
   "host": "female",
   "fps": 30,
-  "totalFrames": 3741,
+  "totalFrames": 4192,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -35,53 +35,58 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 345,
+      "durationInFrames": 413,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_01.wav",
       "cues": [
-        127,
-        238
+        163,
+        271
       ],
       "captions": [
         {
-          "text": "Why does AI sometimes make",
+          "text": "Have you noticed that AI",
           "from": 10,
-          "to": 58
+          "to": 50
         },
         {
-          "text": "things up,",
-          "from": 58,
-          "to": 77
+          "text": "sometimes makes things up,",
+          "from": 52,
+          "to": 97
         },
         {
-          "text": "with total confidence?",
-          "from": 77,
-          "to": 118
+          "text": "and says them with total confidence?",
+          "from": 98,
+          "to": 159
         },
         {
           "text": "And why does the same",
-          "from": 127,
-          "to": 161
+          "from": 163,
+          "to": 190
         },
         {
-          "text": "question get a different answer",
-          "from": 161,
-          "to": 211
+          "text": "question give you a different",
+          "from": 192,
+          "to": 223
         },
         {
-          "text": "each time?",
-          "from": 211,
-          "to": 228
-        },
-        {
-          "text": "In this episode,",
-          "from": 238,
+          "text": "answer every time?",
+          "from": 225,
           "to": 268
         },
         {
-          "text": "temperature and hallucinations.",
-          "from": 268,
-          "to": 324
+          "text": "In this episode,",
+          "from": 271,
+          "to": 306
+        },
+        {
+          "text": "let's understand temperature,",
+          "from": 308,
+          "to": 356
+        },
+        {
+          "text": "and hallucinations.",
+          "from": 357,
+          "to": 401
         }
       ],
       "image": null
@@ -107,71 +112,71 @@
           ]
         ]
       },
-      "from": 345,
-      "durationInFrames": 431,
+      "from": 413,
+      "durationInFrames": 495,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_02.wav",
       "cues": [
-        142,
-        229,
-        289,
-        351
+        136,
+        223,
+        298,
+        384
       ],
       "captions": [
         {
-          "text": "Remember, an L L M",
+          "text": "Remember, an LLM picks the",
           "from": 10,
-          "to": 45
+          "to": 64
         },
         {
-          "text": "picks the next word from",
-          "from": 45,
-          "to": 90
+          "text": "next word from a list",
+          "from": 66,
+          "to": 93
         },
         {
-          "text": "a list of likely options.",
-          "from": 90,
-          "to": 138
+          "text": "of likely options.",
+          "from": 93,
+          "to": 134
         },
         {
           "text": "Temperature controls how adventurous that",
-          "from": 142,
-          "to": 210
+          "from": 136,
+          "to": 195
         },
         {
           "text": "pick is.",
-          "from": 210,
-          "to": 224
+          "from": 197,
+          "to": 220
         },
         {
-          "text": "Low temperature,",
-          "from": 229,
-          "to": 258
+          "text": "With a low temperature,",
+          "from": 223,
+          "to": 257
         },
         {
-          "text": "it plays safe.",
-          "from": 258,
-          "to": 284
+          "text": "it plays it safe,",
+          "from": 261,
+          "to": 297
         },
         {
-          "text": "High temperature,",
-          "from": 289,
-          "to": 319
+          "text": "and with a high temperature,",
+          "from": 298,
+          "to": 338
         },
         {
-          "text": "it takes risks.",
-          "from": 319,
-          "to": 346
+          "text": "it takes more risks.",
+          "from": 340,
+          "to": 380
         },
         {
-          "text": "Same model,",
-          "from": 351,
-          "to": 371
+          "text": "So it's the same model,",
+          "from": 384,
+          "to": 421
         },
         {
-          "text": "different personality.",
-          "from": 371,
-          "to": 410
+          "text": "just with a different personality.",
+          "from": 423,
+          "to": 484
         }
       ],
       "image": null
@@ -199,75 +204,85 @@
           ]
         ]
       },
-      "from": 776,
-      "durationInFrames": 448,
+      "from": 908,
+      "durationInFrames": 540,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_03.wav",
       "cues": [
-        127,
-        249,
-        324
+        144,
+        280,
+        377
       ],
       "captions": [
         {
-          "text": "Let's turn the dial.",
+          "text": "Let's turn the dial and see.",
           "from": 10,
-          "to": 49
+          "to": 60
         },
         {
-          "text": "The prompt:",
-          "from": 54,
-          "to": 73
+          "text": "Our prompt is,",
+          "from": 64,
+          "to": 84
         },
         {
           "text": "describe the moon in one line.",
-          "from": 73,
-          "to": 122
+          "from": 89,
+          "to": 139
         },
         {
           "text": "At zero,",
-          "from": 127,
-          "to": 142
+          "from": 144,
+          "to": 158
         },
         {
           "text": "you get a plain,",
-          "from": 142,
-          "to": 170
+          "from": 160,
+          "to": 181
         },
         {
-          "text": "factual answer.",
-          "from": 170,
-          "to": 197
+          "text": "factual answer,",
+          "from": 182,
+          "to": 213
         },
         {
-          "text": "The same every time.",
-          "from": 202,
+          "text": "and it's the same every",
+          "from": 215,
           "to": 244
         },
         {
+          "text": "single time.",
+          "from": 246,
+          "to": 278
+        },
+        {
           "text": "Around point seven,",
-          "from": 249,
-          "to": 284
+          "from": 280,
+          "to": 308
         },
         {
-          "text": "it gets more vivid.",
-          "from": 284,
-          "to": 320
+          "text": "it becomes more vivid and interesting.",
+          "from": 313,
+          "to": 372
         },
         {
-          "text": "At one,",
-          "from": 324,
-          "to": 339
+          "text": "And at one,",
+          "from": 377,
+          "to": 395
         },
         {
-          "text": "it's wild and poetic.",
-          "from": 339,
-          "to": 379
+          "text": "it gets wild and poetic,",
+          "from": 398,
+          "to": 450
         },
         {
-          "text": "Sometimes, too wild.",
-          "from": 384,
-          "to": 427
+          "text": "and sometimes,",
+          "from": 452,
+          "to": 477
+        },
+        {
+          "text": "a little too wild.",
+          "from": 480,
+          "to": 526
         }
       ],
       "image": null
@@ -303,67 +318,67 @@
           ]
         ]
       },
-      "from": 1224,
-      "durationInFrames": 402,
+      "from": 1448,
+      "durationInFrames": 401,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_04.wav",
       "cues": [
-        63,
-        105,
-        186,
-        250,
+        56,
+        103,
+        182,
+        254,
         319
       ],
       "captions": [
         {
-          "text": "When should you use which?",
+          "text": "So when should you use which?",
           "from": 10,
-          "to": 53
+          "to": 50
         },
         {
-          "text": "Here's a cheat sheet.",
-          "from": 63,
-          "to": 100
+          "text": "Here's a quick cheat sheet.",
+          "from": 56,
+          "to": 99
         },
         {
-          "text": "Maths and facts?",
-          "from": 105,
-          "to": 138
+          "text": "For maths and facts,",
+          "from": 103,
+          "to": 134
         },
         {
-          "text": "Low temperature.",
-          "from": 148,
-          "to": 181
+          "text": "keep the temperature low.",
+          "from": 138,
+          "to": 178
         },
         {
-          "text": "Writing code?",
-          "from": 186,
-          "to": 218
+          "text": "For writing code,",
+          "from": 182,
+          "to": 208
         },
         {
-          "text": "Low.",
-          "from": 228,
-          "to": 245
+          "text": "keep it low as well.",
+          "from": 213,
+          "to": 250
         },
         {
-          "text": "Brainstorming.",
-          "from": 250,
-          "to": 281
+          "text": "For brainstorming ideas,",
+          "from": 254,
+          "to": 296
         },
         {
-          "text": "Turn it up.",
-          "from": 286,
-          "to": 314
+          "text": "turn it up,",
+          "from": 298,
+          "to": 317
         },
         {
-          "text": "Poems and stories.",
+          "text": "and for poems and stories,",
           "from": 319,
-          "to": 359
+          "to": 355
         },
         {
-          "text": "High.",
-          "from": 363,
-          "to": 381
+          "text": "go high.",
+          "from": 360,
+          "to": 389
         }
       ],
       "image": null
@@ -389,51 +404,56 @@
           ]
         ]
       },
-      "from": 1626,
-      "durationInFrames": 365,
+      "from": 1849,
+      "durationInFrames": 417,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_05.wav",
       "cues": [
-        57,
-        177,
-        213,
-        249
+        82,
+        220,
+        251,
+        281
       ],
       "captions": [
         {
-          "text": "Now, hallucinations.",
+          "text": "Now, let's talk about hallucinations.",
           "from": 10,
-          "to": 52
+          "to": 80
         },
         {
           "text": "A hallucination is when the",
-          "from": 57,
-          "to": 106
+          "from": 82,
+          "to": 121
         },
         {
-          "text": "AI confidently says something false.",
-          "from": 106,
-          "to": 172
+          "text": "AI confidently says something that",
+          "from": 123,
+          "to": 180
         },
         {
-          "text": "Made up facts.",
-          "from": 177,
-          "to": 208
+          "text": "isn't true.",
+          "from": 181,
+          "to": 207
         },
         {
-          "text": "Made up quotes.",
-          "from": 213,
-          "to": 244
+          "text": "It could be made up",
+          "from": 210,
+          "to": 230
         },
         {
-          "text": "Even citations to research papers",
-          "from": 249,
-          "to": 311
+          "text": "facts, made up quotes,",
+          "from": 232,
+          "to": 280
         },
         {
-          "text": "that don't exist.",
-          "from": 311,
-          "to": 344
+          "text": "or even citations to research",
+          "from": 281,
+          "to": 335
+        },
+        {
+          "text": "papers that don't exist at all.",
+          "from": 337,
+          "to": 405
         }
       ],
       "image": null
@@ -460,65 +480,65 @@
           ]
         ]
       },
-      "from": 1991,
-      "durationInFrames": 375,
+      "from": 2266,
+      "durationInFrames": 410,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_06.wav",
       "cues": [
-        57,
-        159,
-        258
+        55,
+        164,
+        280
       ],
       "captions": [
         {
-          "text": "Why does it happen?",
+          "text": "So why does this happen?",
           "from": 10,
-          "to": 48
+          "to": 50
         },
         {
-          "text": "The model is trained to",
-          "from": 57,
-          "to": 97
+          "text": "Well, the model is trained",
+          "from": 55,
+          "to": 89
         },
         {
-          "text": "sound fluent,",
-          "from": 97,
+          "text": "to sound fluent,",
+          "from": 90,
           "to": 121
         },
         {
           "text": "not to check facts.",
-          "from": 121,
-          "to": 154
+          "from": 123,
+          "to": 160
         },
         {
-          "text": "If it doesn't know,",
-          "from": 159,
-          "to": 187
+          "text": "So when it doesn't know",
+          "from": 164,
+          "to": 184
         },
         {
-          "text": "it still predicts something that",
+          "text": "something, it still predicts an",
           "from": 187,
-          "to": 233
+          "to": 232
         },
         {
-          "text": "sounds right.",
-          "from": 233,
-          "to": 253
+          "text": "answer that sounds right.",
+          "from": 234,
+          "to": 278
         },
         {
           "text": "And a higher temperature adds",
-          "from": 258,
-          "to": 305
+          "from": 280,
+          "to": 319
         },
         {
           "text": "more randomness,",
-          "from": 305,
-          "to": 331
+          "from": 321,
+          "to": 346
         },
         {
-          "text": "and more risk.",
-          "from": 331,
-          "to": 354
+          "text": "which means more risk.",
+          "from": 350,
+          "to": 397
         }
       ],
       "image": null
@@ -545,65 +565,65 @@
           ]
         ]
       },
-      "from": 2366,
-      "durationInFrames": 393,
+      "from": 2676,
+      "durationInFrames": 456,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_07.wav",
       "cues": [
-        61,
-        134,
-        306
+        63,
+        153,
+        346
       ],
       "captions": [
         {
-          "text": "How to protect yourself.",
+          "text": "So how do you protect yourself?",
           "from": 10,
-          "to": 56
+          "to": 58
         },
         {
           "text": "Ask for sources,",
-          "from": 61,
-          "to": 89
+          "from": 63,
+          "to": 91
         },
         {
-          "text": "and actually check them.",
-          "from": 89,
-          "to": 129
+          "text": "and actually open and check them.",
+          "from": 95,
+          "to": 152
         },
         {
           "text": "Give it the facts yourself,",
-          "from": 134,
-          "to": 178
+          "from": 153,
+          "to": 192
         },
         {
-          "text": "right in the prompt.",
-          "from": 178,
-          "to": 212
+          "text": "right inside the prompt,",
+          "from": 194,
+          "to": 234
         },
         {
-          "text": "That's the idea behind RAG,",
-          "from": 217,
-          "to": 274
+          "text": "and that's the idea behind",
+          "from": 236,
+          "to": 275
         },
         {
-          "text": "coming soon.",
-          "from": 274,
-          "to": 301
+          "text": "RAG, which is coming up soon.",
+          "from": 276,
+          "to": 343
         },
         {
-          "text": "And tell it,",
-          "from": 306,
-          "to": 322
+          "text": "And tell it clearly,",
+          "from": 346,
+          "to": 377
         },
         {
           "text": "if you're not sure,",
-          "from": 322,
-          "to": 349
+          "from": 380,
+          "to": 401
         },
         {
-          "text": "say I don't know.",
-          "from": 349,
-          "to": 372
+          "text": "just say I don't know.",
+          "from": 402,
+          "to": 444
         }
       ],
       "image": null
@@ -619,59 +639,64 @@
         ],
         "answer": 1
       },
-      "from": 2759,
-      "durationInFrames": 464,
+      "from": 3132,
+      "durationInFrames": 474,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_08.wav",
       "cues": [
-        155,
-        290
+        149,
+        277
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 39
+          "to": 28
         },
         {
           "text": "You're writing code for a",
-          "from": 48,
-          "to": 87
+          "from": 29,
+          "to": 70
         },
         {
           "text": "banking app.",
-          "from": 87,
-          "to": 106
+          "from": 70,
+          "to": 90
         },
         {
-          "text": "Which temperature?",
-          "from": 111,
-          "to": 146
+          "text": "Which temperature should you use?",
+          "from": 94,
+          "to": 141
         },
         {
           "text": "Pause and think.",
-          "from": 155,
-          "to": 189
+          "from": 149,
+          "to": 184
         },
         {
           "text": "Low!",
-          "from": 290,
-          "to": 307
+          "from": 277,
+          "to": 286
         },
         {
-          "text": "You want precise,",
-          "from": 317,
-          "to": 350
+          "text": "For banking code,",
+          "from": 288,
+          "to": 319
         },
         {
-          "text": "repeatable answers.",
-          "from": 350,
-          "to": 387
+          "text": "you want precise answers that",
+          "from": 321,
+          "to": 364
+        },
+        {
+          "text": "repeat every time.",
+          "from": 365,
+          "to": 406
         },
         {
           "text": "Comment low if you got it!",
-          "from": 391,
-          "to": 439
+          "from": 409,
+          "to": 463
         }
       ],
       "image": null
@@ -699,67 +724,72 @@
         ],
         "next": "EP 06 · Embeddings"
       },
-      "from": 3223,
-      "durationInFrames": 518,
+      "from": 3606,
+      "durationInFrames": 586,
       "voiceFrom": 10,
       "audio": "lessons/ep05/voice_09.wav",
       "cues": [
-        37,
-        110,
-        152,
-        194,
-        308
+        40,
+        105,
+        156,
+        214,
+        322
       ],
       "captions": [
         {
-          "text": "Recap.",
+          "text": "Let's recap.",
           "from": 10,
-          "to": 32
+          "to": 34
         },
         {
           "text": "Temperature is the creativity dial.",
-          "from": 37,
-          "to": 105
+          "from": 40,
+          "to": 101
         },
         {
-          "text": "Low is precise.",
-          "from": 110,
-          "to": 148
+          "text": "Low temperature is precise,",
+          "from": 105,
+          "to": 154
         },
         {
-          "text": "High is creative.",
-          "from": 152,
-          "to": 189
+          "text": "and high temperature is creative.",
+          "from": 156,
+          "to": 211
         },
         {
-          "text": "Hallucinations are confident mistakes,",
-          "from": 194,
-          "to": 269
+          "text": "And hallucinations are confident mistakes,",
+          "from": 214,
+          "to": 276
         },
         {
           "text": "so always verify.",
-          "from": 269,
-          "to": 303
+          "from": 281,
+          "to": 320
         },
         {
-          "text": "Next episode, embeddings.",
-          "from": 308,
-          "to": 359
+          "text": "In the next episode,",
+          "from": 322,
+          "to": 357
         },
         {
-          "text": "How AI understands meaning,",
-          "from": 363,
-          "to": 417
+          "text": "we'll see how AI understands",
+          "from": 357,
+          "to": 405
         },
         {
-          "text": "using maths.",
-          "from": 417,
-          "to": 441
+          "text": "meaning, using something called embeddings.",
+          "from": 405,
+          "to": 479
         },
         {
-          "text": "Follow AI Maastaaru!",
-          "from": 446,
-          "to": 492
+          "text": "Follow AI Maastaaru,",
+          "from": 483,
+          "to": 534
+        },
+        {
+          "text": "so you don't miss it!",
+          "from": 535,
+          "to": 571
         }
       ],
       "image": null

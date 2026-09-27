@@ -6,7 +6,7 @@
   "title": "Prompting vs RAG vs Fine Tuning",
   "host": "female",
   "fps": 30,
-  "totalFrames": 3872,
+  "totalFrames": 4113,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -37,43 +37,48 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 250,
+      "durationInFrames": 283,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_01.wav",
       "cues": [
-        85,
-        198
+        97,
+        208
       ],
       "captions": [
         {
-          "text": "You want an AI that",
+          "text": "So you want an AI",
           "from": 10,
-          "to": 45
+          "to": 44
         },
         {
-          "text": "knows your business.",
+          "text": "that really knows your business.",
           "from": 45,
-          "to": 80
+          "to": 93
         },
         {
           "text": "Should you write a better",
-          "from": 85,
-          "to": 127
+          "from": 97,
+          "to": 119
         },
         {
           "text": "prompt, use RAG,",
-          "from": 127,
-          "to": 154
+          "from": 121,
+          "to": 157
         },
         {
           "text": "or fine tune a model?",
-          "from": 154,
-          "to": 189
+          "from": 159,
+          "to": 202
         },
         {
-          "text": "Let's settle it.",
-          "from": 198,
-          "to": 229
+          "text": "Let's settle this once and",
+          "from": 208,
+          "to": 244
+        },
+        {
+          "text": "for all.",
+          "from": 246,
+          "to": 271
         }
       ],
       "image": null
@@ -99,61 +104,71 @@
           ]
         ]
       },
-      "from": 250,
-      "durationInFrames": 445,
+      "from": 283,
+      "durationInFrames": 456,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_02.wav",
       "cues": [
-        67,
-        255,
-        310,
-        379
+        84,
+        272,
+        318,
+        374
       ],
       "captions": [
         {
-          "text": "First, what is fine tuning?",
+          "text": "First, what exactly is fine tuning?",
           "from": 10,
-          "to": 58
+          "to": 79
         },
         {
           "text": "It means training an existing",
-          "from": 67,
-          "to": 118
+          "from": 84,
+          "to": 126
         },
         {
           "text": "model a little more,",
-          "from": 118,
-          "to": 153
+          "from": 127,
+          "to": 161
         },
         {
           "text": "on your own examples,",
-          "from": 153,
-          "to": 191
+          "from": 162,
+          "to": 198
         },
         {
           "text": "so it learns a new",
-          "from": 191,
-          "to": 223
+          "from": 199,
+          "to": 220
         },
         {
-          "text": "style or skill.",
-          "from": 223,
-          "to": 250
+          "text": "style or a new skill.",
+          "from": 222,
+          "to": 270
         },
         {
-          "text": "It needs lots of examples.",
-          "from": 255,
-          "to": 305
+          "text": "It needs a lot of",
+          "from": 272,
+          "to": 292
         },
         {
-          "text": "It changes how the model behaves.",
-          "from": 310,
-          "to": 374
+          "text": "examples, it changes how the",
+          "from": 293,
+          "to": 342
         },
         {
-          "text": "And it costs time and money.",
-          "from": 379,
-          "to": 424
+          "text": "model behaves,",
+          "from": 343,
+          "to": 373
+        },
+        {
+          "text": "and it costs both time",
+          "from": 374,
+          "to": 414
+        },
+        {
+          "text": "and money.",
+          "from": 417,
+          "to": 444
         }
       ],
       "image": null
@@ -180,55 +195,70 @@
           ]
         ]
       },
-      "from": 695,
-      "durationInFrames": 383,
+      "from": 739,
+      "durationInFrames": 487,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_03.wav",
       "cues": [
-        60,
-        155,
-        264
+        118,
+        227,
+        349
       ],
       "captions": [
         {
-          "text": "Think of a new employee.",
+          "text": "Here's an easy way to",
           "from": 10,
-          "to": 56
+          "to": 40
         },
         {
-          "text": "Prompting is giving clear instructions",
-          "from": 60,
-          "to": 122
+          "text": "think about it.",
+          "from": 41,
+          "to": 66
         },
         {
-          "text": "for today's task.",
-          "from": 122,
-          "to": 150
+          "text": "Imagine a new employee.",
+          "from": 69,
+          "to": 115
         },
         {
-          "text": "RAG is handing them the",
-          "from": 155,
-          "to": 196
+          "text": "Prompting is like giving them",
+          "from": 118,
+          "to": 155
         },
         {
-          "text": "company handbook,",
-          "from": 196,
-          "to": 227
+          "text": "clear instructions for today's task.",
+          "from": 157,
+          "to": 225
         },
         {
-          "text": "to look things up.",
+          "text": "RAG is like handing them",
           "from": 227,
-          "to": 259
+          "to": 270
         },
         {
-          "text": "Fine tuning is sending them",
-          "from": 264,
-          "to": 308
+          "text": "the company handbook,",
+          "from": 271,
+          "to": 304
         },
         {
-          "text": "on a months long training course.",
-          "from": 308,
-          "to": 362
+          "text": "so they can look things up.",
+          "from": 306,
+          "to": 346
+        },
+        {
+          "text": "And fine tuning is like",
+          "from": 349,
+          "to": 387
+        },
+        {
+          "text": "sending them on a training",
+          "from": 387,
+          "to": 431
+        },
+        {
+          "text": "course, for a few months.",
+          "from": 431,
+          "to": 473
         }
       ],
       "image": null
@@ -270,98 +300,98 @@
         ],
         "note": "Prompt first → RAG for knowledge → fine-tune for behaviour"
       },
-      "from": 1078,
-      "durationInFrames": 758,
+      "from": 1226,
+      "durationInFrames": 716,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_04.wav",
       "cues": [
-        54,
-        91,
-        272,
-        378,
-        482,
-        578
+        46,
+        88,
+        230,
+        327,
+        423,
+        517
       ],
       "captions": [
         {
-          "text": "Here's the cheat sheet.",
+          "text": "Here's your cheat sheet.",
           "from": 10,
-          "to": 49
+          "to": 40
         },
         {
-          "text": "Three options.",
-          "from": 54,
-          "to": 86
+          "text": "We have three options.",
+          "from": 46,
+          "to": 85
         },
         {
-          "text": "Setup cost.",
-          "from": 91,
-          "to": 121
+          "text": "Setup cost,",
+          "from": 88,
+          "to": 107
         },
         {
-          "text": "Prompting is basically free.",
-          "from": 126,
-          "to": 179
+          "text": "prompting is basically free,",
+          "from": 111,
+          "to": 152
         },
         {
-          "text": "RAG is low.",
-          "from": 184,
-          "to": 223
+          "text": "RAG is low,",
+          "from": 153,
+          "to": 183
         },
         {
-          "text": "Fine tuning is high.",
-          "from": 227,
-          "to": 267
+          "text": "and fine tuning is high.",
+          "from": 183,
+          "to": 225
         },
         {
-          "text": "Fresh or private information?",
-          "from": 272,
-          "to": 326
+          "text": "Need fresh or private information?",
+          "from": 230,
+          "to": 278
         },
         {
           "text": "RAG wins.",
-          "from": 336,
-          "to": 373
+          "from": 289,
+          "to": 324
         },
         {
-          "text": "A special style or format?",
-          "from": 378,
-          "to": 431
+          "text": "Need a special style or format?",
+          "from": 327,
+          "to": 374
         },
         {
           "text": "Fine tuning wins.",
-          "from": 441,
-          "to": 477
+          "from": 382,
+          "to": 419
         },
         {
-          "text": "Speed to get started?",
-          "from": 482,
-          "to": 524
+          "text": "And to get started quickly,",
+          "from": 423,
+          "to": 459
         },
         {
-          "text": "Prompting, in minutes.",
-          "from": 533,
-          "to": 573
+          "text": "prompting takes just minutes.",
+          "from": 463,
+          "to": 512
         },
         {
-          "text": "Rule of thumb.",
-          "from": 578,
-          "to": 608
+          "text": "So here's the rule of thumb.",
+          "from": 517,
+          "to": 563
         },
         {
           "text": "Start with prompts,",
-          "from": 612,
-          "to": 649
+          "from": 567,
+          "to": 596
         },
         {
           "text": "add RAG for knowledge,",
-          "from": 649,
-          "to": 691
+          "from": 597,
+          "to": 644
         },
         {
-          "text": "fine tune for behaviour.",
-          "from": 691,
-          "to": 737
+          "text": "and fine tune for behaviour.",
+          "from": 647,
+          "to": 704
         }
       ],
       "image": null
@@ -388,65 +418,70 @@
           ]
         ]
       },
-      "from": 1836,
-      "durationInFrames": 499,
+      "from": 1942,
+      "durationInFrames": 531,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_05.wav",
       "cues": [
-        51,
-        179,
-        291
+        74,
+        186,
+        314
       ],
       "captions": [
         {
-          "text": "Real examples.",
+          "text": "Let's look at some real examples.",
           "from": 10,
-          "to": 47
+          "to": 69
         },
         {
-          "text": "A startup writing social media captions.",
-          "from": 51,
-          "to": 126
+          "text": "A startup writing social media captions?",
+          "from": 74,
+          "to": 141
         },
         {
           "text": "Good prompts are enough.",
-          "from": 131,
-          "to": 174
+          "from": 145,
+          "to": 183
         },
         {
           "text": "A law firm answering from",
-          "from": 179,
+          "from": 186,
           "to": 222
         },
         {
-          "text": "thousands of case files.",
-          "from": 222,
-          "to": 264
+          "text": "thousands of case files?",
+          "from": 224,
+          "to": 266
         },
         {
-          "text": "RAG.",
-          "from": 269,
-          "to": 286
+          "text": "That's RAG.",
+          "from": 271,
+          "to": 309
         },
         {
-          "text": "A telecom company that wants",
-          "from": 291,
-          "to": 346
+          "text": "And a telecom company that",
+          "from": 314,
+          "to": 351
         },
         {
-          "text": "replies in its exact brand",
-          "from": 346,
-          "to": 398
+          "text": "wants replies in its exact",
+          "from": 352,
+          "to": 399
         },
         {
-          "text": "tone, every single time.",
-          "from": 398,
-          "to": 445
+          "text": "brand tone,",
+          "from": 401,
+          "to": 426
         },
         {
-          "text": "Fine tuning.",
-          "from": 450,
-          "to": 478
+          "text": "every single time?",
+          "from": 428,
+          "to": 465
+        },
+        {
+          "text": "That's fine tuning.",
+          "from": 472,
+          "to": 517
         }
       ],
       "image": null
@@ -458,64 +493,64 @@
         "fact": "Fine-tuning shapes style and behaviour. For changing facts, RAG is cheaper and easier to update.",
         "tip": "Facts → RAG · Behaviour → fine-tune"
       },
-      "from": 2335,
-      "durationInFrames": 412,
+      "from": 2473,
+      "durationInFrames": 458,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_06.wav",
       "cues": [
-        54,
-        157
+        49,
+        166
       ],
       "captions": [
         {
           "text": "Here's a common myth.",
           "from": 10,
-          "to": 50
+          "to": 46
         },
         {
-          "text": "Fine tuning is the best",
-          "from": 54,
-          "to": 96
+          "text": "People think fine tuning is",
+          "from": 49,
+          "to": 92
         },
         {
-          "text": "way to teach a model",
-          "from": 96,
-          "to": 133
+          "text": "the best way to teach",
+          "from": 93,
+          "to": 121
         },
         {
-          "text": "new facts.",
-          "from": 133,
-          "to": 152
+          "text": "a model new facts.",
+          "from": 122,
+          "to": 161
         },
         {
-          "text": "Usually not.",
-          "from": 157,
-          "to": 189
+          "text": "Usually, it's not.",
+          "from": 166,
+          "to": 205
         },
         {
           "text": "Fine tuning is great for",
-          "from": 194,
-          "to": 234
+          "from": 208,
+          "to": 246
         },
         {
           "text": "style and behaviour.",
-          "from": 234,
-          "to": 268
+          "from": 248,
+          "to": 289
         },
         {
-          "text": "For facts that change,",
-          "from": 273,
-          "to": 318
+          "text": "But for facts that keep",
+          "from": 292,
+          "to": 320
         },
         {
-          "text": "RAG is cheaper,",
-          "from": 318,
-          "to": 348
+          "text": "changing, RAG is cheaper,",
+          "from": 321,
+          "to": 387
         },
         {
-          "text": "and easier to update.",
-          "from": 348,
-          "to": 391
+          "text": "and much easier to update.",
+          "from": 389,
+          "to": 446
         }
       ],
       "image": null
@@ -531,64 +566,64 @@
         ],
         "answer": 1
       },
-      "from": 2747,
-      "durationInFrames": 542,
+      "from": 2931,
+      "durationInFrames": 561,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_07.wav",
       "cues": [
-        220,
-        355
+        222,
+        353
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 39
+          "to": 29
         },
         {
           "text": "Your prices change every week,",
-          "from": 48,
-          "to": 102
+          "from": 31,
+          "to": 82
         },
         {
-          "text": "and the chatbot must always",
-          "from": 102,
-          "to": 151
+          "text": "and your chatbot must always",
+          "from": 84,
+          "to": 128
         },
         {
-          "text": "know the latest.",
-          "from": 151,
-          "to": 181
+          "text": "know the latest ones.",
+          "from": 130,
+          "to": 167
         },
         {
-          "text": "Which one?",
-          "from": 185,
-          "to": 210
+          "text": "Which approach should you use?",
+          "from": 171,
+          "to": 216
         },
         {
           "text": "Pause and think.",
-          "from": 220,
-          "to": 254
+          "from": 222,
+          "to": 260
         },
         {
-          "text": "RAG!",
-          "from": 355,
-          "to": 372
+          "text": "It's RAG!",
+          "from": 353,
+          "to": 370
         },
         {
-          "text": "Update the documents,",
-          "from": 382,
-          "to": 419
+          "text": "Just update the documents,",
+          "from": 371,
+          "to": 417
         },
         {
-          "text": "and answers update instantly.",
+          "text": "and the answers update instantly.",
           "from": 419,
-          "to": 470
+          "to": 479
         },
         {
-          "text": "Comment RAG!",
-          "from": 475,
-          "to": 517
+          "text": "Comment RAG if you got it!",
+          "from": 482,
+          "to": 550
         }
       ],
       "image": null
@@ -616,32 +651,32 @@
         ],
         "next": "EP 09 · Tool Use"
       },
-      "from": 3289,
-      "durationInFrames": 583,
+      "from": 3492,
+      "durationInFrames": 621,
       "voiceFrom": 10,
       "audio": "lessons/ep08/voice_08.wav",
       "cues": [
-        37,
+        40,
         133,
-        207,
-        278,
-        350
+        205,
+        275,
+        354
       ],
       "captions": [
         {
-          "text": "Recap.",
+          "text": "Let's recap.",
           "from": 10,
-          "to": 32
+          "to": 33
         },
         {
-          "text": "Prompting is instructions.",
-          "from": 37,
+          "text": "Prompting is giving instructions,",
+          "from": 40,
           "to": 86
         },
         {
-          "text": "Always start there.",
+          "text": "so always start there.",
           "from": 91,
-          "to": 128
+          "to": 130
         },
         {
           "text": "RAG adds knowledge that stays fresh.",
@@ -650,48 +685,58 @@
         },
         {
           "text": "Fine tuning teaches style and behaviour.",
-          "from": 207,
-          "to": 274
+          "from": 205,
+          "to": 271
         },
         {
-          "text": "And real apps often combine",
-          "from": 278,
-          "to": 326
+          "text": "And most real apps actually",
+          "from": 275,
+          "to": 315
         },
         {
-          "text": "all three.",
-          "from": 326,
-          "to": 345
+          "text": "combine all three.",
+          "from": 316,
+          "to": 351
         },
         {
-          "text": "Next episode,",
-          "from": 350,
-          "to": 380
+          "text": "In the next episode,",
+          "from": 354,
+          "to": 387
         },
         {
-          "text": "tool use.",
-          "from": 380,
-          "to": 401
+          "text": "we'll see how AI can",
+          "from": 387,
+          "to": 420
         },
         {
-          "text": "How AI can check the",
-          "from": 406,
-          "to": 441
+          "text": "check the weather,",
+          "from": 420,
+          "to": 450
         },
         {
-          "text": "weather, book a cab,",
-          "from": 441,
-          "to": 477
+          "text": "book a cab,",
+          "from": 450,
+          "to": 468
         },
         {
-          "text": "or send an email.",
-          "from": 477,
-          "to": 507
+          "text": "or send an email,",
+          "from": 468,
+          "to": 497
         },
         {
-          "text": "Follow AI Maastaaru!",
-          "from": 512,
-          "to": 558
+          "text": "using tools.",
+          "from": 497,
+          "to": 517
+        },
+        {
+          "text": "Follow AI Maastaaru,",
+          "from": 522,
+          "to": 568
+        },
+        {
+          "text": "so you don't miss it!",
+          "from": 571,
+          "to": 607
         }
       ],
       "image": null

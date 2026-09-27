@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "Why does AI sometimes make things up, with total confidence? [1] And why does the same question get a different answer each time? [2] In this episode, temperature and hallucinations.",
+      "text": "Have you noticed that AI sometimes makes things up, and says them with total confidence? [1] And why does the same question give you a different answer every time? [2] In this episode, let's understand temperature, and hallucinations.",
       "data": {
         "kicker": "EPISODE 05",
         "title": [
@@ -39,7 +39,7 @@
     },
     {
       "type": "definition",
-      "text": "Remember, an L L M picks the next word from a list of likely options. [1] Temperature controls how adventurous that pick is. [2] Low temperature, it plays safe. [3] High temperature, it takes risks. [4] Same model, different personality.",
+      "text": "Remember, an LLM picks the next word from a list of likely options. [1] Temperature controls how adventurous that pick is. [2] With a low temperature, it plays it safe, [3] and with a high temperature, it takes more risks. [4] So it's the same model, just with a different personality.",
       "data": {
         "term": "Temperature",
         "short": "Temp",
@@ -62,7 +62,7 @@
     },
     {
       "type": "dial",
-      "text": "Let's turn the dial. The prompt: describe the moon in one line. [1] At zero, you get a plain, factual answer. The same every time. [2] Around point seven, it gets more vivid. [3] At one, it's wild and poetic. Sometimes, too wild.",
+      "text": "Let's turn the dial and see. Our prompt is, describe the moon in one line. [1] At zero, you get a plain, factual answer, and it's the same every single time. [2] Around point seven, it becomes more vivid and interesting. [3] And at one, it gets wild and poetic, and sometimes, a little too wild.",
       "data": {
         "heading": "Turn the dial",
         "prompt": "Describe the Moon in one line.",
@@ -87,7 +87,7 @@
     },
     {
       "type": "table",
-      "text": "When should you use which? [1] Here's a cheat sheet. [2] Maths and facts? Low temperature. [3] Writing code? Low. [4] Brainstorming. Turn it up. [5] Poems and stories. High.",
+      "text": "So when should you use which? [1] Here's a quick cheat sheet. [2] For maths and facts, keep the temperature low. [3] For writing code, keep it low as well. [4] For brainstorming ideas, turn it up, [5] and for poems and stories, go high.",
       "data": {
         "heading": "Low or high?",
         "cols": [
@@ -120,7 +120,7 @@
     },
     {
       "type": "definition",
-      "text": "Now, hallucinations. [1] A hallucination is when the AI confidently says something false. [2] Made up facts. [3] Made up quotes. [4] Even citations to research papers that don't exist.",
+      "text": "Now, let's talk about hallucinations. [1] A hallucination is when the AI confidently says something that isn't true. It could be [2] made up facts, [3] made up quotes, [4] or even citations to research papers that don't exist at all.",
       "data": {
         "term": "Hallucination",
         "short": "?!",
@@ -143,7 +143,7 @@
     },
     {
       "type": "steps",
-      "text": "Why does it happen? [1] The model is trained to sound fluent, not to check facts. [2] If it doesn't know, it still predicts something that sounds right. [3] And a higher temperature adds more randomness, and more risk.",
+      "text": "So why does this happen? [1] Well, the model is trained to sound fluent, not to check facts. [2] So when it doesn't know something, it still predicts an answer that sounds right. [3] And a higher temperature adds more randomness, which means more risk.",
       "data": {
         "heading": "Why it happens",
         "steps": [
@@ -167,7 +167,7 @@
     },
     {
       "type": "examples",
-      "text": "How to protect yourself. [1] Ask for sources, and actually check them. [2] Give it the facts yourself, right in the prompt. That's the idea behind RAG, coming soon. [3] And tell it, if you're not sure, say I don't know.",
+      "text": "So how do you protect yourself? [1] Ask for sources, and actually open and check them. [2] Give it the facts yourself, right inside the prompt, and that's the idea behind RAG, which is coming up soon. [3] And tell it clearly, if you're not sure, just say I don't know.",
       "data": {
         "heading": "How to reduce it",
         "items": [
@@ -191,7 +191,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! You're writing code for a banking app. Which temperature? [1] Pause and think. <pause 3.2> [2] Low! You want precise, repeatable answers. Comment low if you got it!",
+      "text": "Quick quiz! You're writing code for a banking app. Which temperature should you use? [1] Pause and think. <pause 3.2> [2] Low! For banking code, you want precise answers that repeat every time. Comment low if you got it!",
       "data": {
         "question": "Code for a banking app needs…",
         "options": [
@@ -204,7 +204,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] Temperature is the creativity dial. [2] Low is precise. [3] High is creative. [4] Hallucinations are confident mistakes, so always verify. [5] Next episode, embeddings. How AI understands meaning, using maths. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] Temperature is the creativity dial. [2] Low temperature is precise, [3] and high temperature is creative. [4] And hallucinations are confident mistakes, so always verify. [5] In the next episode, we'll see how AI understands meaning, using something called embeddings. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -227,5 +227,6 @@
         "next": "EP 06 · Embeddings"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }

@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "How does Google Photos find your dog, when you just type dog? [1] How does Spotify know which songs feel similar? [2] The answer is embeddings.",
+      "text": "How does Google Photos find your dog, when you just type the word dog? [1] And how does Spotify know which songs feel similar? [2] The answer is something called embeddings.",
       "data": {
         "kicker": "EPISODE 06",
         "title": [
@@ -38,7 +38,7 @@
     },
     {
       "type": "definition",
-      "text": "An embedding turns something, a word, a sentence, or an image, [1] into a list of numbers that captures its meaning. [2] Meaning becomes numbers. [3] Similar things end up close together. [4] It's like giving every idea a location on a map.",
+      "text": "An embedding takes something, like a word, a sentence, or even an image, [1] and turns it into a list of numbers that captures its meaning. [2] So meaning becomes numbers, [3] and things with similar meaning end up close together. [4] Think of it like giving every idea its own location on a map.",
       "data": {
         "term": "Embedding",
         "short": "Vectors",
@@ -61,7 +61,7 @@
     },
     {
       "type": "embedmap",
-      "text": "Picture a map of meaning. [1] Fruits cluster together. Animals over here. Vehicles over there. [2] Now, search for puppy. [3] Its nearest neighbours are dog and cat. Not because the letters match, but because the meaning does.",
+      "text": "So picture a map of meaning. [1] Here, the fruits cluster together, the animals sit over here, and the vehicles are over there. [2] Now, let's search for puppy. [3] And its nearest neighbours are dog and cat. Not because the spelling matches, but because the meaning does.",
       "data": {
         "heading": "A map of meaning",
         "points": [
@@ -134,7 +134,7 @@
     },
     {
       "type": "pipeline",
-      "text": "This is called vector search. [1] First, every document is turned into an embedding, [2] meaning a list of numbers, [3] and saved in a vector database. [4] When you search, your query becomes numbers too, [5] and the database returns the closest matches, in milliseconds.",
+      "text": "And this is called vector search. Here's how it works. [1] First, every document is turned into an embedding, [2] which is just a list of numbers, [3] and it's saved in a vector database. [4] When you search, your question is turned into numbers too, [5] and the database returns the closest matches, in milliseconds.",
       "data": {
         "heading": "Vector search",
         "nodes": [
@@ -168,7 +168,7 @@
     },
     {
       "type": "examples",
-      "text": "You've already used this. [1] Google Photos finding beach, with no tags. [2] Spotify and YouTube suggesting similar songs. [3] And online stores showing, you may also like.",
+      "text": "And trust me, you've already used this. [1] Google Photos finds beach photos, even without any tags. [2] Spotify and YouTube suggest songs that feel similar. [3] And online stores keep showing you, you may also like.",
       "data": {
         "heading": "Embeddings in your day",
         "items": [
@@ -192,7 +192,7 @@
     },
     {
       "type": "myth",
-      "text": "Here's a common myth. [1] Search just matches exact keywords. [2] Not anymore. Embedding search matches meaning. Search cheap flights, and it also finds budget airfare, with zero words in common.",
+      "text": "Here's a common myth. [1] People think search just matches exact keywords. [2] Not anymore. Embedding search matches meaning. So if you search for cheap flights, it can also find budget airfare, even with zero words in common.",
       "data": {
         "myth": "Search just matches exact keywords.",
         "fact": "Embedding search matches meaning: “cheap flights” also finds “budget airfare”.",
@@ -201,7 +201,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! In embedding space, which word sits closest to king? [1] Pause and think. <pause 3.2> [2] Queen! Similar meaning, close together. Comment queen if you got it!",
+      "text": "Quick quiz! In embedding space, which word sits closest to king? [1] Pause and think. <pause 3.2> [2] It's queen! They have similar meaning, so they sit close together. Comment queen if you got it!",
       "data": {
         "question": "Which word is closest to “king”?",
         "options": [
@@ -214,7 +214,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] Embeddings turn meaning into numbers. [2] Similar things sit close together. [3] Vector databases search them by meaning. [4] They power photo search, recommendations, and more. [5] Next episode, the big one. RAG. How to make AI answer from your own documents. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] Embeddings turn meaning into numbers. [2] Things with similar meaning sit close together. [3] Vector databases search them by meaning, [4] and they power photo search, recommendations, and a lot more. [5] Next episode is the big one, RAG, and how to make AI answer from your own documents. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -237,5 +237,6 @@
         "next": "EP 07 · RAG"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }

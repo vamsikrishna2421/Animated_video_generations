@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "A chatbot answers one question. [1] An agent gets a goal, and works on it by itself, step after step. [2] In this episode, AI agents.",
+      "text": "A chatbot answers one question at a time. [1] But an agent gets a goal, and works on it by itself, step after step. [2] So in this episode, let's understand AI agents.",
       "data": {
         "kicker": "EPISODE 10",
         "title": [
@@ -38,7 +38,7 @@
     },
     {
       "type": "definition",
-      "text": "An AI agent is an L L M, plus tools, running in a loop. [1] It plans the next step, uses a tool, looks at the result, and repeats, until the goal is done. [2] It plans. [3] It uses tools. [4] It checks its own results.",
+      "text": "An AI agent is basically an LLM, plus tools, running in a loop. [1] It plans the next step, uses a tool, looks at the result, and repeats that until the goal is done. So it [2] plans, [3] it uses tools, [4] and it checks its own results along the way.",
       "data": {
         "term": "AI Agent",
         "short": "Agent",
@@ -61,7 +61,7 @@
     },
     {
       "type": "agentloop",
-      "text": "Let's give an agent a goal. Plan a weekend trip to Goa, under fifteen thousand rupees. [1] It loops. Plan, act, observe. [2] It searches for trains. [3] It checks hotel prices. [4] It adds it up. Over budget, so it swaps the hotel. [5] And it returns a full plan, under budget.",
+      "text": "Let's give an agent a real goal. Plan a weekend trip to Goa, for under fifteen thousand rupees. [1] Now it starts looping, plan, act, and observe. [2] First, it searches for trains. [3] Then it checks hotel prices. [4] It adds everything up, sees that it's over budget, and swaps the hotel. [5] And finally, it gives you a complete plan, under budget.",
       "data": {
         "goal": "Plan a Goa weekend under ₹15,000",
         "stages": [
@@ -88,7 +88,7 @@
     },
     {
       "type": "versus",
-      "text": "Chatbot versus agent. [1] A chatbot gives you information, and you do the work. [2] An agent does the work, across many steps and tools, and reports back.",
+      "text": "So what's the difference between a chatbot and an agent? [1] A chatbot gives you information, and then you do the work. [2] An agent actually does the work, across many steps and tools, and then reports back to you.",
       "data": {
         "heading": "Chatbot vs Agent",
         "left": {
@@ -107,7 +107,7 @@
     },
     {
       "type": "examples",
-      "text": "Agents are already here. [1] Coding agents that write, test and fix code across a whole project. [2] Research agents that read dozens of pages, and write a report. [3] And customer service agents that can actually process your refund.",
+      "text": "And agents are already here. [1] There are coding agents that write, test and fix code across a whole project. [2] Research agents that read dozens of pages, and write a report for you. [3] And customer service agents that can actually process your refund.",
       "data": {
         "heading": "Agents at work",
         "items": [
@@ -131,7 +131,7 @@
     },
     {
       "type": "myth",
-      "text": "Here's a common myth. [1] Agents are fully autonomous. Just let them run. [2] Careful. Mistakes can snowball over many steps. Good agents check with a human before important actions, like payments.",
+      "text": "Here's a common myth. [1] People think agents are fully independent, so you can just let them run. [2] Be careful. Small mistakes can snowball over many steps. That's why good agents check with a human before important actions, like payments.",
       "data": {
         "myth": "Agents are fully autonomous. Just let them run.",
         "fact": "Mistakes can snowball across steps. Good agents check with a human before important actions.",
@@ -153,7 +153,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] An agent is an L L M, with tools, in a loop. [2] Plan, act, observe, repeat. [3] It does multi step work for you. [4] With a human approving the big actions. [5] Next episode, M C P. The universal connector for AI tools. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] An agent is an LLM, with tools, running in a loop. [2] It plans, acts, observes, and repeats. [3] It does multi step work for you, [4] with a human approving the big actions. [5] In the next episode, we'll look at MCP, the universal connector for AI tools. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -176,5 +176,6 @@
         "next": "EP 11 · MCP"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }

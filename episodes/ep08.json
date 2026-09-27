@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "You want an AI that knows your business. [1] Should you write a better prompt, use RAG, or fine tune a model? [2] Let's settle it.",
+      "text": "So you want an AI that really knows your business. [1] Should you write a better prompt, use RAG, or fine tune a model? [2] Let's settle this once and for all.",
       "data": {
         "kicker": "EPISODE 08",
         "title": [
@@ -41,7 +41,7 @@
     },
     {
       "type": "definition",
-      "text": "First, what is fine tuning? [1] It means training an existing model a little more, on your own examples, so it learns a new style or skill. [2] It needs lots of examples. [3] It changes how the model behaves. [4] And it costs time and money.",
+      "text": "First, what exactly is fine tuning? [1] It means training an existing model a little more, on your own examples, so it learns a new style or a new skill. [2] It needs a lot of examples, [3] it changes how the model behaves, [4] and it costs both time and money.",
       "data": {
         "term": "Fine-tuning",
         "short": "Tune",
@@ -64,7 +64,7 @@
     },
     {
       "type": "examples",
-      "text": "Think of a new employee. [1] Prompting is giving clear instructions for today's task. [2] RAG is handing them the company handbook, to look things up. [3] Fine tuning is sending them on a months long training course.",
+      "text": "Here's an easy way to think about it. Imagine a new employee. [1] Prompting is like giving them clear instructions for today's task. [2] RAG is like handing them the company handbook, so they can look things up. [3] And fine tuning is like sending them on a training course, for a few months.",
       "data": {
         "heading": "Think: a new employee",
         "items": [
@@ -88,7 +88,7 @@
     },
     {
       "type": "table",
-      "text": "Here's the cheat sheet. [1] Three options. [2] Setup cost. Prompting is basically free. RAG is low. Fine tuning is high. [3] Fresh or private information? RAG wins. [4] A special style or format? Fine tuning wins. [5] Speed to get started? Prompting, in minutes. [6] Rule of thumb. Start with prompts, add RAG for knowledge, fine tune for behaviour.",
+      "text": "Here's your cheat sheet. [1] We have three options. [2] Setup cost, prompting is basically free, RAG is low, and fine tuning is high. [3] Need fresh or private information? RAG wins. [4] Need a special style or format? Fine tuning wins. [5] And to get started quickly, prompting takes just minutes. [6] So here's the rule of thumb. Start with prompts, add RAG for knowledge, and fine tune for behaviour.",
       "data": {
         "heading": "The cheat sheet",
         "cols": [
@@ -127,7 +127,7 @@
     },
     {
       "type": "examples",
-      "text": "Real examples. [1] A startup writing social media captions. Good prompts are enough. [2] A law firm answering from thousands of case files. RAG. [3] A telecom company that wants replies in its exact brand tone, every single time. Fine tuning.",
+      "text": "Let's look at some real examples. [1] A startup writing social media captions? Good prompts are enough. [2] A law firm answering from thousands of case files? That's RAG. [3] And a telecom company that wants replies in its exact brand tone, every single time? That's fine tuning.",
       "data": {
         "heading": "Which would you pick?",
         "items": [
@@ -151,7 +151,7 @@
     },
     {
       "type": "myth",
-      "text": "Here's a common myth. [1] Fine tuning is the best way to teach a model new facts. [2] Usually not. Fine tuning is great for style and behaviour. For facts that change, RAG is cheaper, and easier to update.",
+      "text": "Here's a common myth. [1] People think fine tuning is the best way to teach a model new facts. [2] Usually, it's not. Fine tuning is great for style and behaviour. But for facts that keep changing, RAG is cheaper, and much easier to update.",
       "data": {
         "myth": "Fine-tuning is the best way to add new facts.",
         "fact": "Fine-tuning shapes style and behaviour. For changing facts, RAG is cheaper and easier to update.",
@@ -160,7 +160,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! Your prices change every week, and the chatbot must always know the latest. Which one? [1] Pause and think. <pause 3.2> [2] RAG! Update the documents, and answers update instantly. Comment RAG!",
+      "text": "Quick quiz! Your prices change every week, and your chatbot must always know the latest ones. Which approach should you use? [1] Pause and think. <pause 3.2> [2] It's RAG! Just update the documents, and the answers update instantly. Comment RAG if you got it!",
       "data": {
         "question": "Prices change weekly. Use…",
         "options": [
@@ -173,7 +173,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] Prompting is instructions. Always start there. [2] RAG adds knowledge that stays fresh. [3] Fine tuning teaches style and behaviour. [4] And real apps often combine all three. [5] Next episode, tool use. How AI can check the weather, book a cab, or send an email. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] Prompting is giving instructions, so always start there. [2] RAG adds knowledge that stays fresh. [3] Fine tuning teaches style and behaviour. [4] And most real apps actually combine all three. [5] In the next episode, we'll see how AI can check the weather, book a cab, or send an email, using tools. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -196,5 +196,6 @@
         "next": "EP 09 · Tool Use"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }

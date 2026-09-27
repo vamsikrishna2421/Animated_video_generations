@@ -103,6 +103,70 @@ def phrases(words, max_words=5):
     return out
 
 
+def words_before(sent: str, pos: int) -> int:
+    """How many words precede character `pos` of a sentence (markers ignored)."""
+    return len(MARK.sub("", sent[:pos]).split())
+
+
+def synth_flow(kokoro, sents: list[str], voice: str, speed: float, lang: str, lex: dict):
+    """Synthesise several sentences as ONE continuous take, so intonation flows across
+    them, and use the model's per-phoneme timings to place every word.
+
+    Returns (audio, sr, per_sentence) where per_sentence[i] = (clean_text, word_spans, cue_map);
+    word_spans are (start_s, end_s) per display word and cue_map maps cue id -> seconds."""
+    cleans, phons = [], []
+    for sent in sents:
+        clean = re.sub(r"\s+", " ", MARK.sub("", sent)).strip()
+        ph = to_phonemes(kokoro, clean, lang, lex)
+        if voice.startswith(("hf_", "hm_")):
+            ph = indian_english(ph)
+        cleans.append(clean)
+        phons.append(ph)
+    full = " ".join(phons)
+    audio, sr, spoken = kokoro.create_timed(
+        full, voice, speed, lang, is_phonemes=True, continuous=True, sentence_pause=0.38, clause_pause=0.14
+    )
+    known = kokoro.tokenizer.known(full)
+    if len(spoken) != len(known):
+        raise RuntimeError("phoneme timings do not line up with the phoneme string")
+
+    # Trim leading silence and shift timings to match.
+    nz = np.where(np.abs(audio) > 0.008)[0]
+    cut = max(int(nz[0] - 0.03 * sr), 0) if nz.size else 0
+    audio = audio[cut: (nz[-1] + int(0.08 * sr)) if nz.size else None]
+    shift = cut / sr
+    starts = [t.start - shift for t in spoken]
+    ends = [t.end - shift for t in spoken]
+
+    per_sentence, offset = [], 0
+    for sent, clean, ph in zip(sents, cleans, phons):
+        k = kokoro.tokenizer.known(ph)
+        # Phoneme "words" (space separated) with their index range in the full string.
+        spans, i = [], 0
+        for w in k.split(" "):
+            if w:
+                spans.append((offset + i, offset + i + len(w) - 1))
+            i += len(w) + 1
+        offset += len(k) + 1
+        words = display(clean).split(" ")
+        if len(spans) == len(words):
+            ws = [(starts[a], ends[b]) for a, b in spans]
+        else:  # number/abbreviation expanded differently: map proportionally by characters
+            total = sum(len(w) + 1 for w in words)
+            s0, s1 = starts[spans[0][0]], ends[spans[-1][1]]
+            ws, acc = [], 0
+            for w in words:
+                a = s0 + (s1 - s0) * acc / total
+                acc += len(w) + 1
+                ws.append((a, s0 + (s1 - s0) * acc / total))
+        cue_map = {int(m.group(1)): ws[min(words_before(sent, m.start()), len(ws) - 1)][0] for m in MARK.finditer(sent)}
+        per_sentence.append((clean, ws, cue_map))
+
+    audio = audio * (10 ** (-16 / 20) / (np.sqrt(np.mean(audio**2)) + 1e-9))
+    audio = np.tanh(audio * 1.1) / np.tanh(1.1)
+    return audio, sr, per_sentence
+
+
 def main(spec_path: Path) -> None:
     spec = json.loads(spec_path.read_text())
     ep, fps = spec["id"], spec["fps"]
@@ -110,7 +174,9 @@ def main(spec_path: Path) -> None:
     tl_dir = ROOT / "video" / "src" / "lesson" / "timelines"
     audio_dir.mkdir(parents=True, exist_ok=True)
     tl_dir.mkdir(parents=True, exist_ok=True)
-    kokoro = Kokoro(str(ROOT / "models" / "kokoro-v1.0.onnx"), str(ROOT / "models" / "voices-v1.0.bin"))
+    flow = spec.get("flow") == "continuous"
+    model = ROOT / "models" / ("kokoro-v1.0-timed.onnx" if flow else "kokoro-v1.0.onnx")
+    kokoro = Kokoro(str(model), str(ROOT / "models" / "voices-v1.0.bin"))
     lex = {**PRON, **spec.get("pronunciations", {})}
 
     scenes, cursor = [], 0
@@ -120,7 +186,37 @@ def main(spec_path: Path) -> None:
         chunks, cues, captions = [], {}, []
         t = 0.0
         sr = 24000
-        for sent in sentences(scene["text"]):
+        if flow:
+            # Group sentences between <pause> markers; each group is one continuous take.
+            groups, cur = [], []
+            for sent in sentences(scene["text"]):
+                if PAUSE.fullmatch(sent):
+                    groups += [cur, sent] if cur else [sent]
+                    cur = []
+                else:
+                    cur.append(sent)
+            if cur:
+                groups.append(cur)
+            for g in groups:
+                if isinstance(g, str):
+                    secs = float(PAUSE.fullmatch(g).group(1))
+                    chunks.append(np.zeros(int(secs * sr)))
+                    t += secs
+                    continue
+                audio, sr, per = synth_flow(kokoro, g, voice, speed, spec["lang"], lex)
+                for clean, ws, cue_map in per:
+                    for cid, sec in cue_map.items():
+                        cues[cid] = t + sec
+                    words = display(clean).split(" ")
+                    i = 0
+                    for ph in phrases(words):
+                        a, b = ws[i][0], ws[i + len(ph) - 1][1]
+                        captions.append({"text": " ".join(ph), "from": round((LEAD_S + t + a) * fps), "to": round((LEAD_S + t + b) * fps)})
+                        i += len(ph)
+                gap = 0.3
+                chunks += [audio, np.zeros(int(gap * sr))]
+                t += len(audio) / sr + gap
+        for sent in ([] if flow else sentences(scene["text"])):
             if m := PAUSE.fullmatch(sent):
                 chunks.append(np.zeros(int(float(m.group(1)) * sr)))
                 t += float(m.group(1))

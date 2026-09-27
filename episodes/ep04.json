@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "Same AI. Same question. So why do some people get amazing answers, and others get junk? [1] The secret is the prompt. [2] In this episode, prompt engineering.",
+      "text": "Same AI, same question. So why do some people get amazing answers, while others get total junk? [1] Here's the secret, it's all in the prompt. [2] So in this episode, let's talk about prompt engineering.",
       "data": {
         "kicker": "EPISODE 04",
         "title": [
@@ -39,7 +39,7 @@
     },
     {
       "type": "definition",
-      "text": "A prompt is simply the instruction you give an AI. [1] Prompt engineering means writing that instruction clearly, so the AI knows exactly what you want. [2] Better input. [3] Better output. [4] Fewer retries.",
+      "text": "A prompt is simply the instruction you give an AI. [1] And prompt engineering just means writing that instruction clearly, so the AI knows exactly what you want. When you do that, [2] your input gets better, [3] your answers get better, [4] and you spend a lot less time retrying.",
       "data": {
         "term": "Prompt Engineering",
         "short": "Prompt",
@@ -62,7 +62,7 @@
     },
     {
       "type": "prompt",
-      "text": "Look at this. [1] Write about my product. The reply is vague and generic. [2] Now let's build a better prompt. First, a role. You are an expert marketer. [3] Then context. My brand sells handmade coconut soaps from Kerala. [4] The task. Write an Instagram caption for our new jasmine soap. [5] And the format. Under forty words, friendly, three hashtags. [6] Now the reply is exactly what we wanted.",
+      "text": "Let me show you. [1] Here's a lazy prompt, write about my product. And look at the reply, it's vague and generic. [2] Now let's build a better one, step by step. First, give it a role, you are an expert marketer. [3] Then some context, my brand sells handmade coconut soaps from Kerala. [4] Next, the actual task, write an Instagram caption for our new jasmine soap. [5] And finally, the format, under forty words, friendly, with three hashtags. [6] And now, the reply is exactly what we wanted.",
       "data": {
         "heading": "Build a better prompt",
         "bad": "Write about my product.",
@@ -94,7 +94,7 @@
     },
     {
       "type": "terms",
-      "text": "Four power moves. [1] Give examples. Show one or two samples of what you want. That's called few shot prompting. [2] Ask it to think step by step, for maths and logic. [3] Set constraints. Word limits, tone, language. [4] And iterate. Treat it like a conversation, and refine.",
+      "text": "Here are four power moves you can use today. [1] First, give examples. Show it one or two samples of what you want, and that's called few shot prompting. [2] Second, for maths or logic, ask it to think step by step. [3] Third, set clear limits, like word count, tone, or language. [4] And fourth, iterate. Treat it like a conversation, and keep refining.",
       "data": {
         "heading": "4 power moves",
         "terms": [
@@ -123,7 +123,7 @@
     },
     {
       "type": "examples",
-      "text": "Real life uses. [1] Get your resume reviewed, the way a recruiter would. [2] Draft a polite WhatsApp reply to your landlord. [3] Turn messy meeting notes into a clean summary with action items.",
+      "text": "So where can you use this in real life? [1] You can get your resume reviewed, the way a recruiter would. [2] You can draft a polite WhatsApp reply to your landlord. [3] Or you can turn messy meeting notes into a clean summary, with action items.",
       "data": {
         "heading": "Try these today",
         "items": [
@@ -147,7 +147,7 @@
     },
     {
       "type": "myth",
-      "text": "Here's a common myth. [1] Prompt engineering needs secret magic words. [2] Not really. It's just clear communication. If a smart new intern would understand your instruction, the AI will too.",
+      "text": "Here's a common myth. [1] People think prompt engineering needs secret magic words. [2] Honestly, it doesn't. It's just clear communication. If a smart new intern would understand your instruction, the AI will understand it too.",
       "data": {
         "myth": "You need secret magic words.",
         "fact": "It's clear communication. If a smart new intern would understand it, so will the AI.",
@@ -156,7 +156,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! Which prompt will get the better answer? [1] Pause and think. <pause 3.2> [2] B! It has a role, context, a task and a format. Comment B if you got it!",
+      "text": "Quick quiz! Which of these prompts will get the better answer? [1] Pause and think. <pause 3.2> [2] It's B! It has a role, some context, a clear task and a format. Comment B if you got it!",
       "data": {
         "question": "Which prompt gets a better answer?",
         "options": [
@@ -169,7 +169,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] A prompt is your instruction to the AI. [2] Use the recipe. Role, context, task, format. [3] Show examples. [4] And iterate. [5] Next episode, temperature and hallucinations. Why AI sometimes confidently makes things up. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] A prompt is simply your instruction to the AI. [2] Use the recipe, role, context, task and format. [3] Show it examples of what good looks like, [4] and keep iterating. [5] In the next episode, we'll talk about temperature and hallucinations, and why AI sometimes makes things up so confidently. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -192,5 +192,6 @@
         "next": "EP 05 · Hallucinations"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }

@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "An L L M on its own can only write text. [1] It can't check today's weather, or book you a cab. [2] Unless we give it tools.",
+      "text": "Here's something surprising. An LLM on its own can only write text. [1] It can't check the weather right now, or book you a cab. [2] Unless, we give it tools.",
       "data": {
         "kicker": "EPISODE 09",
         "title": [
@@ -38,7 +38,7 @@
     },
     {
       "type": "definition",
-      "text": "Tool use, also called function calling, [1] means the AI can ask your app to run a function, and then use the result. [2] Get live data. [3] Calculate exactly. [4] Take actions.",
+      "text": "Tool use, which is also called function calling, [1] means the AI can ask your app to run a function, and then use the result in its answer. With tools, it can [2] get live data, [3] calculate things exactly, [4] and even take actions for you.",
       "data": {
         "term": "Tool use · Function calling",
         "short": "Tools",
@@ -61,7 +61,7 @@
     },
     {
       "type": "toolcall",
-      "text": "Watch. [1] You ask, should I carry an umbrella in Hyderabad today? [2] The model doesn't guess. It writes a tool call. Get weather, city Hyderabad. [3] Your app calls the weather service, and gets back, rain, eighty percent. [4] And the model answers. Yes, carry an umbrella, there's an eighty percent chance of rain.",
+      "text": "Let's watch it happen. [1] You ask, should I carry an umbrella in Hyderabad today? [2] Instead of guessing, the model writes a tool call, get the weather, for the city Hyderabad. [3] Your app calls the weather service, and gets back, rain, eighty percent. [4] And then the model answers, yes, carry an umbrella, there's an eighty percent chance of rain.",
       "data": {
         "heading": "Function calling, live",
         "question": "Should I carry an umbrella in Hyderabad today?",
@@ -76,7 +76,7 @@
     },
     {
       "type": "steps",
-      "text": "Important. [1] The AI never runs the tool itself. It only asks. [2] Your app decides whether to run it, and runs it. [3] Then the result goes back to the AI. That keeps you in control.",
+      "text": "Now here's the important part. [1] The AI never runs the tool by itself, it only asks. [2] Your app decides whether to run it, and then runs it. [3] Then the result goes back to the AI. And that's what keeps you in control.",
       "data": {
         "heading": "Who does what",
         "steps": [
@@ -100,7 +100,7 @@
     },
     {
       "type": "examples",
-      "text": "It's already everywhere. [1] Assistants that add events to your calendar. [2] Travel apps that check flight prices live. [3] Support bots that look up your order status.",
+      "text": "And this is already everywhere. [1] There are assistants that add events to your calendar, [2] travel apps that check flight prices live, [3] and support bots that look up your order status.",
       "data": {
         "heading": "Tools in action",
         "items": [
@@ -124,7 +124,7 @@
     },
     {
       "type": "myth",
-      "text": "Here's a common myth. [1] The AI is directly logged into your apps. [2] No. It can only request tools that a developer gave it. The app does the actual work, and should ask you before anything important.",
+      "text": "Here's a common myth. [1] People think the AI is directly logged into their apps. [2] It's not. It can only request the tools that a developer has given it. Your app does the actual work, and it should always ask you before doing anything important.",
       "data": {
         "myth": "The AI is directly logged into my apps.",
         "fact": "It can only request tools a developer gave it. The app does the work, and should confirm big actions.",
@@ -133,7 +133,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! In function calling, who actually runs the function? [1] Pause and think. <pause 3.2> [2] Your app does! The AI only asks. Comment app if you got it!",
+      "text": "Quick quiz! In function calling, who actually runs the function? [1] Pause and think. <pause 3.2> [2] It's your app! The AI only asks. Comment app if you got it!",
       "data": {
         "question": "Who actually runs the function?",
         "options": [
@@ -146,7 +146,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] Tools let AI use live data, and take actions. [2] The AI only asks. [3] Your app runs the tool. [4] The result comes back as a helpful answer. [5] Next episode, AI agents. When AI plans and uses tools on its own, step by step. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] Tools let AI use live data, and take real actions. [2] The AI only asks for a tool, [3] your app actually runs it, [4] and the result comes back as a helpful answer. [5] In the next episode, AI agents, where AI plans and uses tools on its own, step by step. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -169,5 +169,6 @@
         "next": "EP 10 · AI Agents"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }

@@ -6,7 +6,7 @@
   "title": "Prompt Engineering",
   "host": "female",
   "fps": 30,
-  "totalFrames": 3756,
+  "totalFrames": 4101,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -35,53 +35,58 @@
         ]
       },
       "from": 0,
-      "durationInFrames": 340,
+      "durationInFrames": 382,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_01.wav",
       "cues": [
-        202,
-        256
+        197,
+        269
       ],
       "captions": [
         {
-          "text": "Same AI.",
+          "text": "Same AI,",
           "from": 10,
-          "to": 39
+          "to": 35
         },
         {
-          "text": "Same question.",
-          "from": 44,
-          "to": 74
+          "text": "same question.",
+          "from": 37,
+          "to": 67
         },
         {
           "text": "So why do some people",
-          "from": 79,
-          "to": 118
+          "from": 72,
+          "to": 102
         },
         {
           "text": "get amazing answers,",
-          "from": 118,
-          "to": 155
+          "from": 104,
+          "to": 141
         },
         {
-          "text": "and others get junk?",
-          "from": 155,
-          "to": 193
+          "text": "while others get total junk?",
+          "from": 143,
+          "to": 192
         },
         {
-          "text": "The secret is the prompt.",
-          "from": 202,
-          "to": 252
+          "text": "Here's the secret,",
+          "from": 197,
+          "to": 227
         },
         {
-          "text": "In this episode,",
-          "from": 256,
-          "to": 285
+          "text": "it's all in the prompt.",
+          "from": 227,
+          "to": 264
         },
         {
-          "text": "prompt engineering.",
-          "from": 285,
-          "to": 319
+          "text": "So in this episode,",
+          "from": 269,
+          "to": 300
+        },
+        {
+          "text": "let's talk about prompt engineering.",
+          "from": 304,
+          "to": 369
         }
       ],
       "image": null
@@ -107,61 +112,71 @@
           ]
         ]
       },
-      "from": 340,
-      "durationInFrames": 402,
+      "from": 382,
+      "durationInFrames": 477,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_02.wav",
       "cues": [
         99,
-        272,
-        309,
-        347
+        306,
+        349,
+        391
       ],
       "captions": [
         {
           "text": "A prompt is simply the",
           "from": 10,
-          "to": 48
+          "to": 41
         },
         {
           "text": "instruction you give an AI.",
-          "from": 48,
-          "to": 94
+          "from": 43,
+          "to": 96
         },
         {
-          "text": "Prompt engineering means writing that",
+          "text": "And prompt engineering just means",
           "from": 99,
-          "to": 165
+          "to": 147
         },
         {
-          "text": "instruction clearly,",
-          "from": 165,
+          "text": "writing that instruction clearly,",
+          "from": 149,
           "to": 201
         },
         {
           "text": "so the AI knows exactly",
-          "from": 201,
-          "to": 242
+          "from": 203,
+          "to": 249
         },
         {
           "text": "what you want.",
-          "from": 242,
-          "to": 268
+          "from": 250,
+          "to": 277
         },
         {
-          "text": "Better input.",
-          "from": 272,
-          "to": 304
+          "text": "When you do that,",
+          "from": 279,
+          "to": 305
         },
         {
-          "text": "Better output.",
-          "from": 309,
-          "to": 342
+          "text": "your input gets better,",
+          "from": 306,
+          "to": 348
         },
         {
-          "text": "Fewer retries.",
-          "from": 347,
-          "to": 381
+          "text": "your answers get better,",
+          "from": 349,
+          "to": 390
+        },
+        {
+          "text": "and you spend a lot",
+          "from": 391,
+          "to": 415
+        },
+        {
+          "text": "less time retrying.",
+          "from": 417,
+          "to": 465
         }
       ],
       "image": null
@@ -196,103 +211,128 @@
         ],
         "goodReply": "Fresh jasmine meets pure Kerala coconut oil, handmade in small batches. Your skin deserves this little ritual. #HandmadeSoap #KeralaMade #SelfCare"
       },
-      "from": 742,
-      "durationInFrames": 768,
+      "from": 859,
+      "durationInFrames": 759,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_03.wav",
       "cues": [
-        44,
-        157,
-        307,
-        440,
-        562,
-        676
+        41,
+        177,
+        314,
+        424,
+        544,
+        668
       ],
       "captions": [
         {
-          "text": "Look at this.",
+          "text": "Let me show you.",
           "from": 10,
-          "to": 39
+          "to": 38
         },
         {
-          "text": "Write about my product.",
-          "from": 44,
-          "to": 88
+          "text": "Here's a lazy prompt,",
+          "from": 41,
+          "to": 71
         },
         {
-          "text": "The reply is vague and generic.",
-          "from": 93,
-          "to": 152
+          "text": "write about my product.",
+          "from": 73,
+          "to": 108
         },
         {
-          "text": "Now let's build a better prompt.",
-          "from": 157,
-          "to": 210
+          "text": "And look at the reply,",
+          "from": 111,
+          "to": 136
         },
         {
-          "text": "First, a role.",
-          "from": 215,
-          "to": 246
+          "text": "it's vague and generic.",
+          "from": 137,
+          "to": 176
         },
         {
-          "text": "You are an expert marketer.",
-          "from": 251,
-          "to": 302
+          "text": "Now let's build a better",
+          "from": 177,
+          "to": 203
         },
         {
-          "text": "Then context.",
-          "from": 307,
-          "to": 341
+          "text": "one, step by step.",
+          "from": 203,
+          "to": 239
         },
         {
-          "text": "My brand sells handmade coconut",
-          "from": 346,
-          "to": 402
+          "text": "First, give it a role,",
+          "from": 242,
+          "to": 269
+        },
+        {
+          "text": "you are an expert marketer.",
+          "from": 269,
+          "to": 307
+        },
+        {
+          "text": "Then some context,",
+          "from": 314,
+          "to": 338
+        },
+        {
+          "text": "my brand sells handmade coconut",
+          "from": 339,
+          "to": 386
         },
         {
           "text": "soaps from Kerala.",
-          "from": 402,
-          "to": 436
+          "from": 388,
+          "to": 421
         },
         {
-          "text": "The task.",
-          "from": 440,
+          "text": "Next, the actual task,",
+          "from": 424,
           "to": 466
         },
         {
-          "text": "Write an Instagram caption for",
-          "from": 470,
-          "to": 521
+          "text": "write an Instagram caption for",
+          "from": 467,
+          "to": 506
         },
         {
           "text": "our new jasmine soap.",
-          "from": 521,
-          "to": 557
+          "from": 506,
+          "to": 543
         },
         {
-          "text": "And the format.",
-          "from": 562,
-          "to": 592
+          "text": "And finally,",
+          "from": 544,
+          "to": 560
         },
         {
-          "text": "Under forty words,",
-          "from": 597,
-          "to": 628
+          "text": "the format,",
+          "from": 561,
+          "to": 574
         },
         {
-          "text": "friendly, three hashtags.",
-          "from": 628,
-          "to": 671
+          "text": "under forty words,",
+          "from": 579,
+          "to": 607
         },
         {
-          "text": "Now the reply is exactly",
-          "from": 676,
+          "text": "friendly, with three hashtags.",
+          "from": 610,
+          "to": 666
+        },
+        {
+          "text": "And now,",
+          "from": 668,
+          "to": 679
+        },
+        {
+          "text": "the reply is exactly what",
+          "from": 680,
           "to": 719
         },
         {
-          "text": "what we wanted.",
+          "text": "we wanted.",
           "from": 719,
-          "to": 748
+          "to": 749
         }
       ],
       "image": null
@@ -324,86 +364,91 @@
           ]
         ]
       },
-      "from": 1510,
-      "durationInFrames": 539,
+      "from": 1618,
+      "durationInFrames": 599,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_04.wav",
       "cues": [
-        52,
-        224,
-        320,
-        417
+        78,
+        243,
+        342,
+        453
       ],
       "captions": [
         {
-          "text": "Four power moves.",
+          "text": "Here are four power moves",
           "from": 10,
-          "to": 47
+          "to": 44
         },
         {
-          "text": "Give examples.",
-          "from": 52,
-          "to": 86
+          "text": "you can use today.",
+          "from": 44,
+          "to": 74
         },
         {
-          "text": "Show one or two samples",
-          "from": 91,
-          "to": 130
+          "text": "First, give examples.",
+          "from": 78,
+          "to": 118
         },
         {
-          "text": "of what you want.",
-          "from": 130,
-          "to": 160
+          "text": "Show it one or two",
+          "from": 124,
+          "to": 142
         },
         {
-          "text": "That's called few shot prompting.",
-          "from": 164,
-          "to": 219
+          "text": "samples of what you want,",
+          "from": 144,
+          "to": 178
         },
         {
-          "text": "Ask it to think step",
-          "from": 224,
-          "to": 262
+          "text": "and that's called few shot prompting.",
+          "from": 180,
+          "to": 238
         },
         {
-          "text": "by step,",
-          "from": 262,
-          "to": 278
+          "text": "Second, for maths or logic,",
+          "from": 243,
+          "to": 285
         },
         {
-          "text": "for maths and logic.",
-          "from": 278,
-          "to": 315
+          "text": "ask it to think step",
+          "from": 290,
+          "to": 316
         },
         {
-          "text": "Set constraints.",
-          "from": 320,
-          "to": 354
+          "text": "by step.",
+          "from": 317,
+          "to": 340
         },
         {
-          "text": "Word limits,",
-          "from": 359,
-          "to": 383
+          "text": "Third, set clear limits,",
+          "from": 342,
+          "to": 379
         },
         {
-          "text": "tone, language.",
-          "from": 383,
-          "to": 412
+          "text": "like word count,",
+          "from": 379,
+          "to": 408
         },
         {
-          "text": "And iterate.",
-          "from": 417,
-          "to": 445
+          "text": "tone, or language.",
+          "from": 410,
+          "to": 448
+        },
+        {
+          "text": "And fourth, iterate.",
+          "from": 453,
+          "to": 493
         },
         {
           "text": "Treat it like a conversation,",
-          "from": 449,
-          "to": 499
+          "from": 497,
+          "to": 542
         },
         {
-          "text": "and refine.",
-          "from": 499,
-          "to": 518
+          "text": "and keep refining.",
+          "from": 546,
+          "to": 586
         }
       ],
       "image": null
@@ -430,50 +475,60 @@
           ]
         ]
       },
-      "from": 2049,
-      "durationInFrames": 357,
+      "from": 2217,
+      "durationInFrames": 422,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_05.wav",
       "cues": [
-        55,
-        140,
-        226
+        80,
+        183,
+        277
       ],
       "captions": [
         {
-          "text": "Real life uses.",
+          "text": "So where can you use",
           "from": 10,
-          "to": 50
+          "to": 34
         },
         {
-          "text": "Get your resume reviewed,",
-          "from": 55,
-          "to": 94
+          "text": "this in real life?",
+          "from": 36,
+          "to": 75
         },
         {
-          "text": "the way a recruiter would.",
-          "from": 94,
-          "to": 135
+          "text": "You can get your resume",
+          "from": 80,
+          "to": 111
         },
         {
-          "text": "Draft a polite WhatsApp reply",
-          "from": 140,
-          "to": 191
+          "text": "reviewed, the way a recruiter would.",
+          "from": 112,
+          "to": 181
         },
         {
-          "text": "to your landlord.",
-          "from": 191,
-          "to": 221
+          "text": "You can draft a polite",
+          "from": 183,
+          "to": 220
         },
         {
-          "text": "Turn messy meeting notes into",
-          "from": 226,
-          "to": 277
+          "text": "WhatsApp reply to your landlord.",
+          "from": 220,
+          "to": 273
         },
         {
-          "text": "a clean summary with action items.",
+          "text": "Or you can turn messy",
           "from": 277,
-          "to": 336
+          "to": 307
+        },
+        {
+          "text": "meeting notes into a clean",
+          "from": 309,
+          "to": 345
+        },
+        {
+          "text": "summary, with action items.",
+          "from": 348,
+          "to": 409
         }
       ],
       "image": null
@@ -485,49 +540,54 @@
         "fact": "It's clear communication. If a smart new intern would understand it, so will the AI.",
         "tip": "Role + Context + Task + Format"
       },
-      "from": 2406,
-      "durationInFrames": 386,
+      "from": 2639,
+      "durationInFrames": 427,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_06.wav",
       "cues": [
-        54,
-        143
+        51,
+        158
       ],
       "captions": [
         {
           "text": "Here's a common myth.",
           "from": 10,
-          "to": 50
+          "to": 48
         },
         {
-          "text": "Prompt engineering needs secret magic words.",
-          "from": 54,
-          "to": 138
+          "text": "People think prompt engineering needs",
+          "from": 51,
+          "to": 105
         },
         {
-          "text": "Not really.",
-          "from": 143,
-          "to": 171
+          "text": "secret magic words.",
+          "from": 109,
+          "to": 153
+        },
+        {
+          "text": "Honestly, it doesn't.",
+          "from": 158,
+          "to": 197
         },
         {
           "text": "It's just clear communication.",
-          "from": 176,
-          "to": 231
+          "from": 201,
+          "to": 255
         },
         {
           "text": "If a smart new intern",
-          "from": 236,
-          "to": 274
+          "from": 260,
+          "to": 296
         },
         {
           "text": "would understand your instruction,",
-          "from": 274,
-          "to": 336
+          "from": 298,
+          "to": 346
         },
         {
-          "text": "the AI will too.",
-          "from": 336,
-          "to": 365
+          "text": "the AI will understand it too.",
+          "from": 348,
+          "to": 416
         }
       ],
       "image": null
@@ -543,54 +603,59 @@
         ],
         "answer": 1
       },
-      "from": 2792,
-      "durationInFrames": 435,
+      "from": 3066,
+      "durationInFrames": 429,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_07.wav",
       "cues": [
-        117,
-        252
+        112,
+        244
       ],
       "captions": [
         {
           "text": "Quick quiz!",
           "from": 10,
-          "to": 39
+          "to": 31
         },
         {
-          "text": "Which prompt will get the",
-          "from": 48,
-          "to": 86
+          "text": "Which of these prompts will",
+          "from": 43,
+          "to": 71
         },
         {
-          "text": "better answer?",
-          "from": 86,
-          "to": 107
+          "text": "get the better answer?",
+          "from": 73,
+          "to": 106
         },
         {
           "text": "Pause and think.",
-          "from": 117,
+          "from": 112,
           "to": 151
         },
         {
-          "text": "B!",
-          "from": 252,
-          "to": 269
+          "text": "It's B!",
+          "from": 244,
+          "to": 259
         },
         {
           "text": "It has a role,",
-          "from": 279,
-          "to": 306
+          "from": 261,
+          "to": 283
         },
         {
-          "text": "context, a task and a format.",
-          "from": 306,
-          "to": 359
+          "text": "some context,",
+          "from": 285,
+          "to": 310
+        },
+        {
+          "text": "a clear task and a format.",
+          "from": 314,
+          "to": 364
         },
         {
           "text": "Comment B if you got it!",
-          "from": 364,
-          "to": 410
+          "from": 367,
+          "to": 417
         }
       ],
       "image": null
@@ -618,82 +683,92 @@
         ],
         "next": "EP 05 · Hallucinations"
       },
-      "from": 3227,
-      "durationInFrames": 529,
+      "from": 3495,
+      "durationInFrames": 606,
       "voiceFrom": 10,
       "audio": "lessons/ep04/voice_08.wav",
       "cues": [
-        37,
-        108,
-        210,
-        249,
-        281
+        41,
+        121,
+        219,
+        271,
+        308
       ],
       "captions": [
         {
-          "text": "Recap.",
+          "text": "Let's recap.",
           "from": 10,
-          "to": 32
+          "to": 34
         },
         {
-          "text": "A prompt is your instruction",
-          "from": 37,
-          "to": 85
+          "text": "A prompt is simply your",
+          "from": 41,
+          "to": 69
         },
         {
-          "text": "to the AI.",
-          "from": 85,
-          "to": 103
+          "text": "instruction to the AI.",
+          "from": 70,
+          "to": 118
         },
         {
-          "text": "Use the recipe.",
-          "from": 108,
-          "to": 144
+          "text": "Use the recipe,",
+          "from": 121,
+          "to": 148
         },
         {
-          "text": "Role, context,",
-          "from": 149,
-          "to": 178
+          "text": "role, context,",
+          "from": 150,
+          "to": 181
         },
         {
-          "text": "task, format.",
-          "from": 178,
-          "to": 205
+          "text": "task and format.",
+          "from": 183,
+          "to": 216
         },
         {
-          "text": "Show examples.",
-          "from": 210,
-          "to": 244
+          "text": "Show it examples of what",
+          "from": 219,
+          "to": 246
         },
         {
-          "text": "And iterate.",
-          "from": 249,
-          "to": 276
+          "text": "good looks like,",
+          "from": 247,
+          "to": 270
         },
         {
-          "text": "Next episode,",
-          "from": 281,
-          "to": 307
+          "text": "and keep iterating.",
+          "from": 271,
+          "to": 305
         },
         {
-          "text": "temperature and hallucinations.",
-          "from": 307,
-          "to": 366
+          "text": "In the next episode,",
+          "from": 308,
+          "to": 340
         },
         {
-          "text": "Why AI sometimes confidently makes",
-          "from": 371,
-          "to": 433
+          "text": "we'll talk about temperature and",
+          "from": 340,
+          "to": 391
         },
         {
-          "text": "things up.",
-          "from": 433,
-          "to": 453
+          "text": "hallucinations, and why AI sometimes",
+          "from": 391,
+          "to": 448
         },
         {
-          "text": "Follow AI Maastaaru!",
-          "from": 457,
-          "to": 503
+          "text": "makes things up so confidently.",
+          "from": 448,
+          "to": 498
+        },
+        {
+          "text": "Follow AI Maastaaru,",
+          "from": 502,
+          "to": 553
+        },
+        {
+          "text": "so you don't miss it!",
+          "from": 555,
+          "to": 592
         }
       ],
       "image": null
