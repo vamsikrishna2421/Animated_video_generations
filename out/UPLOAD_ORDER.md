@@ -30,7 +30,7 @@ Already posted: `out/posted/`.
 | 023 | ep22 | How a Neural Network Learns Part 2 | posted |
 | 024 | ep23 | How a Neural Network Learns Part 3 | ready |
 | 025 | ep24 | Supervised Unsupervised Reinforcement Learning | ready |
-| 026 | ep25 | Training Data | rendering soon |
+| 026 | ep25 | Training Data | ready |
 | 027 | ep26 | Overfitting vs Underfitting | rendering soon |
 | 028 | ep27 | Transformers Part 1 Attention | rendering soon |
 | 029 | ep28 | Transformers Part 2 Inside a Transformer | rendering soon |
