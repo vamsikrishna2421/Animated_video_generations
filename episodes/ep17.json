@@ -1,0 +1,229 @@
+{
+  "id": "ep17",
+  "episode": 17,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI Memory and Context Engineering",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You tell an AI assistant you're vegetarian, and weeks later, it still suggests veg recipes. [1] But wait, didn't we learn that AI forgets everything outside its context window? [2] So let's understand how AI memory really works.",
+      "data": {
+        "kicker": "EPISODE 17",
+        "title": [
+          "AI",
+          "Memory"
+        ],
+        "subtitle": "How assistants remember you",
+        "buzzwords": [
+          "Memory",
+          "Context window",
+          "System prompt",
+          "Notes",
+          "Personalisation",
+          "Context engineering",
+          "RAG",
+          "Privacy"
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "AI assistants use three kinds of memory. [1] Short term memory is the context window, the current chat, which we saw in episode three. [2] Long term memory is saved notes about you, like your name or your diet, stored outside the model. [3] And knowledge memory is documents it can search, using RAG.",
+      "data": {
+        "heading": "Three kinds of memory",
+        "kicker": "HOW AI REMEMBERS",
+        "steps": [
+          [
+            "MessageSquare",
+            "Short-term",
+            "The current chat (EP 03)"
+          ],
+          [
+            "BookMarked",
+            "Long-term",
+            "Saved notes about you"
+          ],
+          [
+            "Database",
+            "Knowledge",
+            "Documents it can search (EP 07)"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's how long term memory works. [1] You mention, I'm vegetarian. [2] The app decides it's worth remembering, and saves a short note. [3] Weeks later, you start a new chat, and ask for dinner ideas. [4] The app finds the relevant notes, and quietly adds them to the prompt. [5] So the model suggests paneer tikka, not chicken.",
+      "data": {
+        "heading": "Long-term memory",
+        "kicker": "UNDER THE HOOD",
+        "nodes": [
+          [
+            "MessageSquare",
+            "You mention",
+            "“I'm vegetarian”"
+          ],
+          [
+            "BookMarked",
+            "Save a note",
+            "“User is vegetarian”"
+          ],
+          [
+            "CalendarDays",
+            "Weeks later",
+            "“Any dinner ideas?”"
+          ],
+          [
+            "Search",
+            "Find notes",
+            "Added to the prompt"
+          ],
+          [
+            "Sparkles",
+            "Personal answer",
+            "“Try paneer tikka!”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "And this brings us to a newer skill, context engineering. [1] It means carefully choosing what goes into the model's context window, for every request. [2] The right instructions, [3] the right memories and documents, [4] and nothing extra that could confuse it.",
+      "data": {
+        "term": "Context engineering",
+        "short": "Context",
+        "definition": "Choosing exactly what goes into the model's context window for each request.",
+        "chips": [
+          [
+            "FileText",
+            "Right instructions"
+          ],
+          [
+            "BookMarked",
+            "Right memories"
+          ],
+          [
+            "Scissors",
+            "Nothing extra"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "So how is this different from prompt engineering? [1] Prompt engineering is about writing one good instruction. [2] Context engineering is about building the whole package, instructions, memories, documents and tool results, every single time.",
+      "data": {
+        "heading": "Prompt vs context",
+        "kicker": "THE NEXT STEP",
+        "left": {
+          "icon": "Type",
+          "title": "Prompt engineering",
+          "stat": "One instruction",
+          "label": "write a good request"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Context engineering",
+          "stat": "The whole package",
+          "label": "instructions + memory + docs + tools"
+        }
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms to know. [1] The system prompt, hidden instructions the app always sends first. [2] Memory, the saved facts about you. [3] Summarising, which compresses old chats, so they fit. [4] And forgetting, because you can usually view and delete what an assistant remembers.",
+      "data": {
+        "heading": "Memory words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Settings2",
+            "System prompt",
+            "Hidden instructions sent first"
+          ],
+          [
+            "BookMarked",
+            "Memory",
+            "Saved facts about you"
+          ],
+          [
+            "Minimize2",
+            "Summarising",
+            "Squeeze old chats to fit"
+          ],
+          [
+            "Trash2",
+            "Forgetting",
+            "View and delete memories"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think the AI model itself learns and changes from every chat. [2] It doesn't. The model stays the same. The app just saves notes and adds them to your prompt later. And in most apps, you can see and delete those notes.",
+      "data": {
+        "myth": "The AI model learns and changes from every chat.",
+        "fact": "The model stays the same. The app saves notes and adds them to your prompt later.",
+        "tip": "Check your memory settings"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Where is an assistant's long term memory usually stored? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] As saved notes outside the model, added to your prompt when needed!",
+      "data": {
+        "question": "Long-term memory is usually…",
+        "options": [
+          "Inside the model's brain",
+          "Saved notes outside the model",
+          "Nowhere, it remembers everything"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Short term memory is the context window. [2] Long term memory is saved notes about you. [3] Context engineering means choosing what goes in, every time. [4] And you can view and delete what it remembers. [5] Next, a real world breakdown, how smart replies suggest your next message. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Short-term",
+            "the context window"
+          ],
+          [
+            "Long-term",
+            "saved notes about you"
+          ],
+          [
+            "Context eng.",
+            "choose what goes in"
+          ],
+          [
+            "Control",
+            "view and delete memories"
+          ]
+        ],
+        "next": "Use Case · Smart replies"
+      }
+    }
+  ],
+  "post": {
+    "caption": "You told AI you're vegetarian weeks ago, and it still remembers. How, if it forgets outside the context window?\n\nEpisode 17 of AI From Scratch: AI Memory & Context Engineering\n- Three kinds of memory: short-term, long-term, knowledge\n- How long-term memory really works: saved notes + your prompt\n- Context engineering: choosing what goes in, every time\n- Prompt engineering vs context engineering\n- The myth: \"the model learns from every chat\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How smart replies suggest your next message.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #ContextEngineering #LearnAI #ChatGPT #AIForBeginners",
+    "pinned": "Quiz answer: Saved notes outside the model, added to your prompt when needed. Have you checked what your AI assistant remembers about you?",
+    "cover": "'AI Memory' title card",
+    "alt": "Animated lesson explaining how AI assistants remember users and what context engineering means."
+  }
+}

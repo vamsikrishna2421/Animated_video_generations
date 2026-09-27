@@ -1,0 +1,809 @@
+{
+  "id": "uc06",
+  "episode": 6,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How a Bank Support Bot Works",
+  "host": "female",
+  "label": "USE CASE 06",
+  "fps": 30,
+  "totalFrames": 4836,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc06/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 06",
+        "title": [
+          "Bank",
+          "Support Bot"
+        ],
+        "subtitle": "RAG + tools + a human",
+        "buzzwords": [
+          "RAG",
+          "Tools",
+          "Agents",
+          "Policies",
+          "Transactions",
+          "Human handoff",
+          "Security",
+          "24/7"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 376,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_01.wav",
+      "cues": [
+        154,
+        271
+      ],
+      "captions": [
+        {
+          "text": "You message your bank's app",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "at midnight,",
+          "from": 46,
+          "to": 71
+        },
+        {
+          "text": "asking why your card was declined.",
+          "from": 74,
+          "to": 152
+        },
+        {
+          "text": "And a bot replies instantly,",
+          "from": 154,
+          "to": 216
+        },
+        {
+          "text": "with the actual reason.",
+          "from": 216,
+          "to": 268
+        },
+        {
+          "text": "Let's break down how a",
+          "from": 271,
+          "to": 304
+        },
+        {
+          "text": "bank's support bot works.",
+          "from": 305,
+          "to": 361
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Behind the reply",
+        "nodes": [
+          [
+            "MessageCircleQuestion",
+            "You ask",
+            "“Why was my card declined?”"
+          ],
+          [
+            "ShieldCheck",
+            "Verify you",
+            "Through the app's secure login"
+          ],
+          [
+            "BookOpen",
+            "Search policies",
+            "RAG over bank documents (EP 07)"
+          ],
+          [
+            "Wrench",
+            "Check your account",
+            "Tools for real data (EP 09)"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“Daily limit reached, raise it in settings”"
+          ]
+        ]
+      },
+      "from": 376,
+      "durationInFrames": 724,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_02.wav",
+      "cues": [
+        80,
+        165,
+        304,
+        425,
+        556
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens behind that reply.",
+          "from": 10,
+          "to": 77
+        },
+        {
+          "text": "You ask,",
+          "from": 80,
+          "to": 99
+        },
+        {
+          "text": "why was my card declined?",
+          "from": 102,
+          "to": 161
+        },
+        {
+          "text": "First, the bot confirms who",
+          "from": 165,
+          "to": 215
+        },
+        {
+          "text": "you are,",
+          "from": 217,
+          "to": 231
+        },
+        {
+          "text": "safely, through the app's login.",
+          "from": 233,
+          "to": 302
+        },
+        {
+          "text": "It searches the bank's policy",
+          "from": 304,
+          "to": 348
+        },
+        {
+          "text": "documents, and that's RAG.",
+          "from": 349,
+          "to": 423
+        },
+        {
+          "text": "It calls tools to check",
+          "from": 425,
+          "to": 461
+        },
+        {
+          "text": "your actual account,",
+          "from": 462,
+          "to": 495
+        },
+        {
+          "text": "like recent transactions.",
+          "from": 498,
+          "to": 554
+        },
+        {
+          "text": "And it answers,",
+          "from": 556,
+          "to": 585
+        },
+        {
+          "text": "your card hit its daily",
+          "from": 587,
+          "to": 625
+        },
+        {
+          "text": "limit, and you can raise",
+          "from": 627,
+          "to": 671
+        },
+        {
+          "text": "it in settings.",
+          "from": 672,
+          "to": 711
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three ideas together",
+        "kicker": "THE RECIPE",
+        "steps": [
+          [
+            "BookOpen",
+            "RAG",
+            "Bank rules and FAQs"
+          ],
+          [
+            "Wrench",
+            "Tools",
+            "Your real account data"
+          ],
+          [
+            "Bot",
+            "Agent loop",
+            "Decides what to do next"
+          ]
+        ]
+      },
+      "from": 1100,
+      "durationInFrames": 454,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_03.wav",
+      "cues": [
+        103,
+        223,
+        310
+      ],
+      "captions": [
+        {
+          "text": "So it's really three ideas",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "working together.",
+          "from": 59,
+          "to": 100
+        },
+        {
+          "text": "RAG, to answer from the",
+          "from": 103,
+          "to": 158
+        },
+        {
+          "text": "bank's own rules and FAQs.",
+          "from": 158,
+          "to": 220
+        },
+        {
+          "text": "Tools, to look up your",
+          "from": 223,
+          "to": 263
+        },
+        {
+          "text": "real account data.",
+          "from": 265,
+          "to": 308
+        },
+        {
+          "text": "And an agent loop,",
+          "from": 310,
+          "to": 344
+        },
+        {
+          "text": "to decide which one to",
+          "from": 346,
+          "to": 380
+        },
+        {
+          "text": "use, and in what order.",
+          "from": 383,
+          "to": 443
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "toolcall",
+      "data": {
+        "heading": "The bot, with tools",
+        "question": "Why was my card declined?",
+        "call": {
+          "tool": "get_recent_transactions",
+          "card": "xx4521",
+          "limit": 3
+        },
+        "tool": "BANK SYSTEM",
+        "result": "declined: daily limit ₹50,000 reached",
+        "answer": "Your card reached its ₹50,000 daily limit. You can raise it in Settings, under Card limits."
+      },
+      "from": 1554,
+      "durationInFrames": 549,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_04.wav",
+      "cues": [
+        50,
+        136,
+        265,
+        405
+      ],
+      "captions": [
+        {
+          "text": "Let's see it live.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "You ask,",
+          "from": 50,
+          "to": 68
+        },
+        {
+          "text": "why was my card declined?",
+          "from": 74,
+          "to": 135
+        },
+        {
+          "text": "The bot calls a tool,",
+          "from": 136,
+          "to": 175
+        },
+        {
+          "text": "get recent transactions,",
+          "from": 177,
+          "to": 222
+        },
+        {
+          "text": "for your card.",
+          "from": 223,
+          "to": 263
+        },
+        {
+          "text": "The bank's system replies,",
+          "from": 265,
+          "to": 310
+        },
+        {
+          "text": "declined, because the daily limit",
+          "from": 315,
+          "to": 369
+        },
+        {
+          "text": "was reached.",
+          "from": 371,
+          "to": 403
+        },
+        {
+          "text": "And the bot explains,",
+          "from": 405,
+          "to": 449
+        },
+        {
+          "text": "and tells you exactly how",
+          "from": 450,
+          "to": 492
+        },
+        {
+          "text": "to raise the limit.",
+          "from": 493,
+          "to": 536
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Safety rails",
+        "kicker": "SAFETY FIRST",
+        "terms": [
+          [
+            "ShieldCheck",
+            "Verification",
+            "Only after secure login"
+          ],
+          [
+            "KeyRound",
+            "No secrets",
+            "Never asks PIN or OTP"
+          ],
+          [
+            "Hand",
+            "Limits",
+            "Money moves need your OK"
+          ],
+          [
+            "UserRound",
+            "Human handoff",
+            "Complaints go to a person"
+          ]
+        ]
+      },
+      "from": 2103,
+      "durationInFrames": 639,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_05.wav",
+      "cues": [
+        90,
+        207,
+        370,
+        476
+      ],
+      "captions": [
+        {
+          "text": "And banks add strong safety rails.",
+          "from": 10,
+          "to": 88
+        },
+        {
+          "text": "Verification, so it only shows",
+          "from": 90,
+          "to": 143
+        },
+        {
+          "text": "your data after you log in.",
+          "from": 144,
+          "to": 204
+        },
+        {
+          "text": "No secrets,",
+          "from": 207,
+          "to": 236
+        },
+        {
+          "text": "so it never asks for",
+          "from": 237,
+          "to": 268
+        },
+        {
+          "text": "your PIN,",
+          "from": 269,
+          "to": 300
+        },
+        {
+          "text": "OTP or password.",
+          "from": 301,
+          "to": 368
+        },
+        {
+          "text": "Limits, so it can't move",
+          "from": 370,
+          "to": 414
+        },
+        {
+          "text": "money without your confirmation.",
+          "from": 416,
+          "to": 473
+        },
+        {
+          "text": "And human handoff,",
+          "from": 476,
+          "to": 514
+        },
+        {
+          "text": "so complaints and fraud cases",
+          "from": 516,
+          "to": 572
+        },
+        {
+          "text": "go to a real person.",
+          "from": 574,
+          "to": 627
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Support bots everywhere",
+        "items": [
+          [
+            "Landmark",
+            "Banking apps",
+            "Cards, accounts, limits"
+          ],
+          [
+            "Signal",
+            "Telecom apps",
+            "Plans and bills"
+          ],
+          [
+            "Plane",
+            "Airline apps",
+            "Rebooking after delays"
+          ]
+        ]
+      },
+      "from": 2742,
+      "durationInFrames": 380,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_06.wav",
+      "cues": [
+        56,
+        160,
+        267
+      ],
+      "captions": [
+        {
+          "text": "So where will you see this?",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "Banking apps answering card and",
+          "from": 56,
+          "to": 112
+        },
+        {
+          "text": "account questions.",
+          "from": 113,
+          "to": 158
+        },
+        {
+          "text": "Telecom apps handling plan changes",
+          "from": 160,
+          "to": 224
+        },
+        {
+          "text": "and bill queries.",
+          "from": 226,
+          "to": 265
+        },
+        {
+          "text": "And airline apps rebooking your",
+          "from": 267,
+          "to": 314
+        },
+        {
+          "text": "flight when there's a delay.",
+          "from": 316,
+          "to": 369
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "A support bot can do anything a bank employee can.",
+        "fact": "It only gets specific tools and permissions. Anything risky goes to a human.",
+        "tip": "Never share your OTP"
+      },
+      "from": 3122,
+      "durationInFrames": 562,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_07.wav",
+      "cues": [
+        60,
+        176
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "People think a support bot",
+          "from": 60,
+          "to": 99
+        },
+        {
+          "text": "can do anything a bank",
+          "from": 100,
+          "to": 130
+        },
+        {
+          "text": "employee can.",
+          "from": 132,
+          "to": 172
+        },
+        {
+          "text": "It can't,",
+          "from": 176,
+          "to": 200
+        },
+        {
+          "text": "and that's by design.",
+          "from": 202,
+          "to": 254
+        },
+        {
+          "text": "It only gets specific tools",
+          "from": 256,
+          "to": 307
+        },
+        {
+          "text": "and permissions,",
+          "from": 308,
+          "to": 341
+        },
+        {
+          "text": "and anything risky goes to",
+          "from": 344,
+          "to": 387
+        },
+        {
+          "text": "a human.",
+          "from": 389,
+          "to": 418
+        },
+        {
+          "text": "And remember,",
+          "from": 420,
+          "to": 444
+        },
+        {
+          "text": "no real bank bot will",
+          "from": 447,
+          "to": 484
+        },
+        {
+          "text": "ever ask for your OTP.",
+          "from": 486,
+          "to": 550
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Answering from the bank's rules uses…",
+        "options": [
+          "RAG",
+          "Text to speech",
+          "Temperature"
+        ],
+        "answer": 0
+      },
+      "from": 3684,
+      "durationInFrames": 500,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_08.wav",
+      "cues": [
+        155,
+        362
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "Which part lets a bank",
+          "from": 43,
+          "to": 82
+        },
+        {
+          "text": "bot answer from the bank's",
+          "from": 82,
+          "to": 128
+        },
+        {
+          "text": "own rule book?",
+          "from": 128,
+          "to": 153
+        },
+        {
+          "text": "Pause and think,",
+          "from": 155,
+          "to": 193
+        },
+        {
+          "text": "and if you get it",
+          "from": 194,
+          "to": 211
+        },
+        {
+          "text": "right, comment below!",
+          "from": 213,
+          "to": 270
+        },
+        {
+          "text": "RAG!",
+          "from": 362,
+          "to": 377
+        },
+        {
+          "text": "It retrieves the bank's policies,",
+          "from": 387,
+          "to": 444
+        },
+        {
+          "text": "and answers from them.",
+          "from": 445,
+          "to": 488
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "RAG",
+            "answers from bank rules"
+          ],
+          [
+            "Tools",
+            "checks your real account"
+          ],
+          [
+            "Agent",
+            "decides what to do"
+          ],
+          [
+            "Safety",
+            "login, no OTPs, human handoff"
+          ]
+        ],
+        "next": "EP 17 · Memory & context"
+      },
+      "from": 4184,
+      "durationInFrames": 652,
+      "voiceFrom": 10,
+      "audio": "lessons/uc06/voice_09.wav",
+      "cues": [
+        47,
+        142,
+        212,
+        291,
+        428
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "RAG lets the bot answer",
+          "from": 47,
+          "to": 95
+        },
+        {
+          "text": "from the bank's rules.",
+          "from": 95,
+          "to": 140
+        },
+        {
+          "text": "Tools let it check your",
+          "from": 142,
+          "to": 172
+        },
+        {
+          "text": "real account.",
+          "from": 173,
+          "to": 209
+        },
+        {
+          "text": "An agent loop decides what",
+          "from": 212,
+          "to": 256
+        },
+        {
+          "text": "to do next.",
+          "from": 257,
+          "to": 289
+        },
+        {
+          "text": "And safety rails protect you,",
+          "from": 291,
+          "to": 344
+        },
+        {
+          "text": "like login checks and human handoff.",
+          "from": 345,
+          "to": 424
+        },
+        {
+          "text": "Next, we'll learn how AI",
+          "from": 428,
+          "to": 482
+        },
+        {
+          "text": "assistants remember you,",
+          "from": 484,
+          "to": 524
+        },
+        {
+          "text": "and what they forget.",
+          "from": 526,
+          "to": 569
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 573,
+          "to": 640
+        }
+      ],
+      "image": null
+    }
+  ]
+}

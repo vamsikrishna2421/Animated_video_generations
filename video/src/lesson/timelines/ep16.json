@@ -1,0 +1,836 @@
+{
+  "id": "ep16",
+  "episode": 16,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Reasoning Models",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5293,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep16/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 16",
+        "title": [
+          "Reasoning",
+          "Models"
+        ],
+        "subtitle": "AI that thinks before it answers",
+        "buzzwords": [
+          "Chain of thought",
+          "Thinking",
+          "Test-time compute",
+          "Logic",
+          "Maths",
+          "Planning",
+          "Step by step",
+          "Budget"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 441,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_01.wav",
+      "cues": [
+        235,
+        357
+      ],
+      "captions": [
+        {
+          "text": "Some AI models now pause",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "and think before they answer,",
+          "from": 62,
+          "to": 125
+        },
+        {
+          "text": "sometimes for a few seconds,",
+          "from": 125,
+          "to": 185
+        },
+        {
+          "text": "sometimes for minutes.",
+          "from": 185,
+          "to": 232
+        },
+        {
+          "text": "And they solve problems that",
+          "from": 235,
+          "to": 275
+        },
+        {
+          "text": "normal chatbots often get wrong.",
+          "from": 278,
+          "to": 354
+        },
+        {
+          "text": "So let's understand reasoning models.",
+          "from": 357,
+          "to": 428
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Fast vs thoughtful",
+        "kicker": "TWO STYLES",
+        "left": {
+          "icon": "Zap",
+          "title": "Regular model",
+          "stat": "Answers instantly",
+          "label": "first thought, straight out"
+        },
+        "right": {
+          "icon": "Brain",
+          "title": "Reasoning model",
+          "stat": "Thinks first",
+          "label": "works it out, then answers"
+        }
+      },
+      "from": 441,
+      "durationInFrames": 519,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_02.wav",
+      "cues": [
+        58,
+        298
+      ],
+      "captions": [
+        {
+          "text": "Here's the difference.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "A regular LLM answers straight",
+          "from": 58,
+          "to": 129
+        },
+        {
+          "text": "away, word by word,",
+          "from": 130,
+          "to": 192
+        },
+        {
+          "text": "a bit like blurting out",
+          "from": 193,
+          "to": 223
+        },
+        {
+          "text": "the first thing that comes",
+          "from": 224,
+          "to": 258
+        },
+        {
+          "text": "to mind.",
+          "from": 260,
+          "to": 295
+        },
+        {
+          "text": "A reasoning model first works",
+          "from": 298,
+          "to": 349
+        },
+        {
+          "text": "through the problem step by",
+          "from": 350,
+          "to": 385
+        },
+        {
+          "text": "step, checks itself,",
+          "from": 387,
+          "to": 442
+        },
+        {
+          "text": "and only then gives the answer.",
+          "from": 444,
+          "to": 508
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Chain of thought",
+        "short": "Think",
+        "definition": "The model works through a problem step by step before giving its final answer.",
+        "chips": [
+          [
+            "ListOrdered",
+            "Break it down"
+          ],
+          [
+            "CheckCircle2",
+            "Check each step"
+          ],
+          [
+            "RefreshCw",
+            "Fix mistakes"
+          ]
+        ]
+      },
+      "from": 960,
+      "durationInFrames": 457,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_03.wav",
+      "cues": [
+        99,
+        259,
+        332,
+        367
+      ],
+      "captions": [
+        {
+          "text": "The trick behind it is",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "called chain of thought.",
+          "from": 44,
+          "to": 97
+        },
+        {
+          "text": "Instead of jumping to the",
+          "from": 99,
+          "to": 128
+        },
+        {
+          "text": "answer, the model writes out",
+          "from": 130,
+          "to": 181
+        },
+        {
+          "text": "its reasoning,",
+          "from": 182,
+          "to": 212
+        },
+        {
+          "text": "step by step.",
+          "from": 214,
+          "to": 256
+        },
+        {
+          "text": "It breaks the problem into",
+          "from": 259,
+          "to": 295
+        },
+        {
+          "text": "smaller parts,",
+          "from": 298,
+          "to": 330
+        },
+        {
+          "text": "checks each step,",
+          "from": 332,
+          "to": 365
+        },
+        {
+          "text": "and fixes mistakes before it answers.",
+          "from": 367,
+          "to": 446
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "The bat and ball puzzle",
+        "kicker": "WATCH IT THINK",
+        "steps": [
+          [
+            "Zap",
+            "Quick guess",
+            "₹10 (wrong)"
+          ],
+          [
+            "Calculator",
+            "Step by step",
+            "ball = x, bat = x + 100, 2x + 100 = 110"
+          ],
+          [
+            "CheckCircle2",
+            "Answer",
+            "ball = ₹5, bat = ₹105"
+          ]
+        ]
+      },
+      "from": 1417,
+      "durationInFrames": 794,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_04.wav",
+      "cues": [
+        322,
+        421,
+        670
+      ],
+      "captions": [
+        {
+          "text": "Let's watch it on a",
+          "from": 10,
+          "to": 33
+        },
+        {
+          "text": "classic puzzle.",
+          "from": 34,
+          "to": 73
+        },
+        {
+          "text": "A bat and a ball",
+          "from": 75,
+          "to": 111
+        },
+        {
+          "text": "cost 110 rupees in total,",
+          "from": 111,
+          "to": 167
+        },
+        {
+          "text": "and the bat costs 100",
+          "from": 167,
+          "to": 214
+        },
+        {
+          "text": "rupees more than the ball.",
+          "from": 214,
+          "to": 272
+        },
+        {
+          "text": "How much is the ball?",
+          "from": 274,
+          "to": 320
+        },
+        {
+          "text": "A quick guess says 10",
+          "from": 322,
+          "to": 354
+        },
+        {
+          "text": "rupees, but that's wrong.",
+          "from": 356,
+          "to": 418
+        },
+        {
+          "text": "A reasoning model thinks,",
+          "from": 421,
+          "to": 489
+        },
+        {
+          "text": "if the ball is x,",
+          "from": 489,
+          "to": 536
+        },
+        {
+          "text": "the bat is x plus",
+          "from": 536,
+          "to": 583
+        },
+        {
+          "text": "100, so 2x plus 100",
+          "from": 583,
+          "to": 635
+        },
+        {
+          "text": "equals 110.",
+          "from": 635,
+          "to": 667
+        },
+        {
+          "text": "So x is 5,",
+          "from": 670,
+          "to": 707
+        },
+        {
+          "text": "and the ball costs 5 rupees.",
+          "from": 709,
+          "to": 782
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Reasoning words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "MessageSquare",
+            "Thinking tokens",
+            "Hidden working notes"
+          ],
+          [
+            "Cpu",
+            "Test-time compute",
+            "More effort while answering"
+          ],
+          [
+            "Timer",
+            "Thinking budget",
+            "How long it may think"
+          ],
+          [
+            "Scale",
+            "Trade-off",
+            "Smarter, but slower and costlier"
+          ]
+        ]
+      },
+      "from": 2211,
+      "durationInFrames": 730,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_05.wav",
+      "cues": [
+        64,
+        234,
+        418,
+        536
+      ],
+      "captions": [
+        {
+          "text": "Here are a few terms",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "you'll hear.",
+          "from": 37,
+          "to": 61
+        },
+        {
+          "text": "Thinking tokens,",
+          "from": 64,
+          "to": 93
+        },
+        {
+          "text": "the extra words the model",
+          "from": 95,
+          "to": 136
+        },
+        {
+          "text": "writes while reasoning,",
+          "from": 137,
+          "to": 174
+        },
+        {
+          "text": "which you often don't see.",
+          "from": 176,
+          "to": 231
+        },
+        {
+          "text": "Test time compute,",
+          "from": 234,
+          "to": 268
+        },
+        {
+          "text": "which means spending more computing",
+          "from": 270,
+          "to": 318
+        },
+        {
+          "text": "power while answering,",
+          "from": 320,
+          "to": 362
+        },
+        {
+          "text": "not only while training.",
+          "from": 364,
+          "to": 415
+        },
+        {
+          "text": "A thinking budget,",
+          "from": 418,
+          "to": 453
+        },
+        {
+          "text": "a setting for how long",
+          "from": 454,
+          "to": 490
+        },
+        {
+          "text": "it's allowed to think.",
+          "from": 491,
+          "to": 533
+        },
+        {
+          "text": "And the trade off,",
+          "from": 536,
+          "to": 562
+        },
+        {
+          "text": "more thinking usually means better",
+          "from": 566,
+          "to": 617
+        },
+        {
+          "text": "answers, but slower and more expensive.",
+          "from": 619,
+          "to": 718
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Which one when?",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Regular",
+          "Reasoning"
+        ],
+        "rows": [
+          [
+            "Quick chat",
+            "✓",
+            "✗"
+          ],
+          [
+            "Maths & logic",
+            "✗",
+            "✓"
+          ],
+          [
+            "Coding bugs",
+            "~",
+            "✓"
+          ],
+          [
+            "Big plans",
+            "✗",
+            "✓"
+          ]
+        ]
+      },
+      "from": 2941,
+      "durationInFrames": 537,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_06.wav",
+      "cues": [
+        57,
+        107,
+        235,
+        321,
+        419
+      ],
+      "captions": [
+        {
+          "text": "So when should you use which?",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "Here's a quick cheat sheet.",
+          "from": 57,
+          "to": 105
+        },
+        {
+          "text": "For quick chats and simple",
+          "from": 107,
+          "to": 146
+        },
+        {
+          "text": "questions, a regular model is faster.",
+          "from": 147,
+          "to": 233
+        },
+        {
+          "text": "For maths and logic,",
+          "from": 235,
+          "to": 280
+        },
+        {
+          "text": "use reasoning.",
+          "from": 285,
+          "to": 319
+        },
+        {
+          "text": "For tricky coding bugs,",
+          "from": 321,
+          "to": 363
+        },
+        {
+          "text": "reasoning helps a lot.",
+          "from": 367,
+          "to": 417
+        },
+        {
+          "text": "And for big plans with",
+          "from": 419,
+          "to": 452
+        },
+        {
+          "text": "many steps,",
+          "from": 454,
+          "to": 478
+        },
+        {
+          "text": "reasoning wins.",
+          "from": 482,
+          "to": 524
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Reasoning models think like humans and are never wrong.",
+        "fact": "They still predict words, just more carefully. They can make mistakes and overthink simple questions.",
+        "tip": "Still verify what matters"
+      },
+      "from": 3478,
+      "durationInFrames": 512,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_07.wav",
+      "cues": [
+        58,
+        187
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think reasoning models think",
+          "from": 58,
+          "to": 112
+        },
+        {
+          "text": "like humans,",
+          "from": 113,
+          "to": 141
+        },
+        {
+          "text": "and are never wrong.",
+          "from": 142,
+          "to": 184
+        },
+        {
+          "text": "They're still predicting words,",
+          "from": 187,
+          "to": 230
+        },
+        {
+          "text": "just more carefully.",
+          "from": 234,
+          "to": 278
+        },
+        {
+          "text": "They can still make mistakes,",
+          "from": 280,
+          "to": 329
+        },
+        {
+          "text": "and sometimes they overthink simple questions.",
+          "from": 333,
+          "to": 422
+        },
+        {
+          "text": "So keep checking the important answers.",
+          "from": 425,
+          "to": 500
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The ball costs…",
+        "options": [
+          "₹10",
+          "₹5",
+          "₹55"
+        ],
+        "answer": 1
+      },
+      "from": 3990,
+      "durationInFrames": 650,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_08.wav",
+      "cues": [
+        270,
+        474
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "A bat and a ball",
+          "from": 44,
+          "to": 88
+        },
+        {
+          "text": "cost 110 rupees,",
+          "from": 88,
+          "to": 132
+        },
+        {
+          "text": "and the bat costs 100",
+          "from": 132,
+          "to": 189
+        },
+        {
+          "text": "rupees more.",
+          "from": 189,
+          "to": 223
+        },
+        {
+          "text": "How much is the ball?",
+          "from": 225,
+          "to": 268
+        },
+        {
+          "text": "Pause and think,",
+          "from": 270,
+          "to": 307
+        },
+        {
+          "text": "and if you get it",
+          "from": 309,
+          "to": 327
+        },
+        {
+          "text": "right, comment below!",
+          "from": 328,
+          "to": 383
+        },
+        {
+          "text": "5 rupees!",
+          "from": 474,
+          "to": 515
+        },
+        {
+          "text": "The bat is 105,",
+          "from": 516,
+          "to": 561
+        },
+        {
+          "text": "and together they make 110.",
+          "from": 561,
+          "to": 638
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Reasoning",
+            "thinks before answering"
+          ],
+          [
+            "Chain of thought",
+            "step by step working"
+          ],
+          [
+            "Trade-off",
+            "better, but slower, costlier"
+          ],
+          [
+            "Use for",
+            "maths, code, big plans"
+          ]
+        ],
+        "next": "Use Case · Bank support bot"
+      },
+      "from": 4640,
+      "durationInFrames": 653,
+      "voiceFrom": 10,
+      "audio": "lessons/ep16/voice_09.wav",
+      "cues": [
+        46,
+        119,
+        212,
+        333,
+        428
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Reasoning models think before they answer.",
+          "from": 46,
+          "to": 117
+        },
+        {
+          "text": "They use chain of thought,",
+          "from": 119,
+          "to": 154
+        },
+        {
+          "text": "working step by step.",
+          "from": 160,
+          "to": 210
+        },
+        {
+          "text": "More thinking means better answers,",
+          "from": 212,
+          "to": 264
+        },
+        {
+          "text": "but slower and costlier.",
+          "from": 268,
+          "to": 330
+        },
+        {
+          "text": "Use them for maths,",
+          "from": 333,
+          "to": 368
+        },
+        {
+          "text": "code and big plans.",
+          "from": 371,
+          "to": 425
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 428,
+          "to": 488
+        },
+        {
+          "text": "how a bank's customer support",
+          "from": 490,
+          "to": 536
+        },
+        {
+          "text": "bot works.",
+          "from": 537,
+          "to": 570
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 574,
+          "to": 641
+        }
+      ],
+      "image": null
+    }
+  ]
+}

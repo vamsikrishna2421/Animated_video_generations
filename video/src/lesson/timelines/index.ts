@@ -15,10 +15,12 @@ import ep12 from "./ep12.json";
 import ep13 from "./ep13.json";
 import ep14 from "./ep14.json";
 import ep15 from "./ep15.json";
+import ep16 from "./ep16.json";
 import uc01 from "./uc01.json";
 import uc02 from "./uc02.json";
 import uc03 from "./uc03.json";
 import uc04 from "./uc04.json";
 import uc05 from "./uc05.json";
+import uc06 from "./uc06.json";
 
-export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, uc01, uc02, uc03, uc04, uc05];
+export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, uc01, uc02, uc03, uc04, uc05, uc06];
