@@ -1,0 +1,233 @@
+{
+  "id": "uc15",
+  "episode": 15,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 15",
+  "handle": "@ai_maastaaru",
+  "title": "How Delivery Apps Predict Arrival Time",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You order biryani, and the app says, arriving in 32 minutes. [1] And somehow, it's usually right. [2] Let's break down how delivery apps predict arrival time.",
+      "data": {
+        "kicker": "USE CASE 15",
+        "title": [
+          "Delivery",
+          "ETA"
+        ],
+        "subtitle": "How apps predict arrival time",
+        "buzzwords": [
+          "ETA",
+          "Regression",
+          "Traffic",
+          "GPS",
+          "Cooking time",
+          "Weather",
+          "Routes",
+          "Predictions"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "The ETA is really three predictions added together. [1] How long the restaurant will take to cook. [2] How long until a delivery partner reaches the restaurant. [3] And how long the ride from the restaurant to you will take. [4] A model predicts each one, from past data, [5] and adds them up, 32 minutes.",
+      "data": {
+        "heading": "Three predictions, one ETA",
+        "nodes": [
+          [
+            "ChefHat",
+            "Cooking time",
+            "This restaurant, this dish"
+          ],
+          [
+            "Bike",
+            "Pickup time",
+            "Partner reaching the restaurant"
+          ],
+          [
+            "MapPin",
+            "Travel time",
+            "Restaurant → your door"
+          ],
+          [
+            "Brain",
+            "Predict each",
+            "Learned from past orders"
+          ],
+          [
+            "Clock",
+            "ETA",
+            "“Arriving in 32 min”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "So what does the model look at? [1] Distance and route, including one way streets. [2] Traffic, and time of day, like the evening rush. [3] Weather, because rain slows everything down. [4] And how busy the restaurant is, like a Friday night crowd.",
+      "data": {
+        "heading": "What it considers",
+        "kicker": "THE FACTORS",
+        "terms": [
+          [
+            "Route",
+            "Distance and route",
+            "Real roads, not straight lines"
+          ],
+          [
+            "Car",
+            "Traffic and time",
+            "The evening rush"
+          ],
+          [
+            "CloudRain",
+            "Weather",
+            "Rain slows everything"
+          ],
+          [
+            "Store",
+            "Restaurant load",
+            "Friday night crowd"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Predicting a number, like minutes, is called regression. [1] It's supervised learning, where the label is the actual delivery time from past orders. [2] The model learns from millions of deliveries, [3] works out how each factor adds time, [4] and predicts the minutes for your new order.",
+      "data": {
+        "term": "Regression",
+        "short": "Minutes",
+        "definition": "Supervised learning that predicts a number, like minutes, instead of a category.",
+        "chips": [
+          [
+            "Database",
+            "Millions of past orders"
+          ],
+          [
+            "SlidersHorizontal",
+            "How each factor adds time"
+          ],
+          [
+            "Clock",
+            "Predict the minutes"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "And the ETA keeps updating. [1] When the restaurant marks the food ready, the model knows cooking is done. [2] GPS tracks the delivery partner, so travel time updates live. [3] And if there's a sudden traffic jam, the ETA adjusts, and you get a notification.",
+      "data": {
+        "heading": "It keeps updating",
+        "kicker": "LIVE ETA",
+        "steps": [
+          [
+            "CheckCircle2",
+            "Food ready",
+            "Cooking time now known"
+          ],
+          [
+            "Navigation",
+            "Live GPS",
+            "Travel time updates"
+          ],
+          [
+            "Bell",
+            "Surprises",
+            "Traffic jam? ETA adjusts"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "The same idea powers many apps. [1] Food delivery apps like Swiggy and Zomato. [2] Quick commerce apps, promising 10 minute groceries. [3] And courier and online shopping delivery estimates.",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "UtensilsCrossed",
+            "Food delivery",
+            "Swiggy, Zomato"
+          ],
+          [
+            "ShoppingBasket",
+            "Quick commerce",
+            "10-minute groceries"
+          ],
+          [
+            "Package",
+            "Couriers",
+            "Parcel delivery dates"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think the ETA is just distance divided by speed. [2] That's only a small part of it. Cooking time, partner availability, traffic and weather often matter more than the distance itself.",
+      "data": {
+        "myth": "The ETA is just distance divided by speed.",
+        "fact": "Cooking time, partner availability, traffic and weather often matter more than distance.",
+        "tip": "Many factors, one number"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Predicting a number, like delivery minutes, is called what? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Regression! Supervised learning that predicts a number.",
+      "data": {
+        "question": "Predicting a number is called…",
+        "options": [
+          "Regression",
+          "Clustering",
+          "Tokenization"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The ETA adds up cooking, pickup and travel time. [2] The model considers traffic, weather and restaurant load. [3] Predicting a number like this is called regression. [4] And the ETA updates live as things change. [5] Next, we'll learn the difference between a model that memorises, and one that truly understands. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "3 parts",
+            "cook, pickup, travel"
+          ],
+          [
+            "Factors",
+            "traffic, weather, busyness"
+          ],
+          [
+            "Regression",
+            "predicting a number"
+          ],
+          [
+            "Live",
+            "updates as things change"
+          ]
+        ],
+        "next": "EP 26 · Overfitting"
+      }
+    }
+  ],
+  "post": {
+    "caption": "\"Arriving in 32 minutes\", and it's usually right. How do delivery apps know?\n\nReal World AI, Use Case 15: delivery time prediction\n- The ETA = cooking time + pickup time + travel time\n- The factors: route, traffic, weather, restaurant load\n- Regression: predicting a number from past orders\n- Live updates with GPS and \"food ready\" signals\n- The myth: \"ETA is just distance ÷ speed\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Overfitting, when AI memorises instead of understanding.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #MachineLearning #LearnAI #FoodDelivery #AIForBeginners",
+    "pinned": "Quiz answer: Regression, supervised learning that predicts a number. Is your delivery app's ETA usually accurate?",
+    "cover": "'Delivery ETA' title card",
+    "alt": "Animated breakdown of how food delivery apps predict arrival time using regression models."
+  }
+}

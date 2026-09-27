@@ -1,0 +1,767 @@
+{
+  "id": "ep25",
+  "episode": 25,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Training Data",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4505,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep25/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 25",
+        "title": [
+          "Training",
+          "Data"
+        ],
+        "subtitle": "The real fuel of AI",
+        "buzzwords": [
+          "Datasets",
+          "Labels",
+          "Cleaning",
+          "Bias",
+          "Test set",
+          "Diversity",
+          "Quality",
+          "Garbage in"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 354,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_01.wav",
+      "cues": [
+        86,
+        279
+      ],
+      "captions": [
+        {
+          "text": "People say data is the",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "new oil.",
+          "from": 54,
+          "to": 83
+        },
+        {
+          "text": "For AI,",
+          "from": 86,
+          "to": 117
+        },
+        {
+          "text": "it's even more than that,",
+          "from": 118,
+          "to": 160
+        },
+        {
+          "text": "because a model can only",
+          "from": 161,
+          "to": 200
+        },
+        {
+          "text": "be as good as the",
+          "from": 202,
+          "to": 225
+        },
+        {
+          "text": "data it learns from.",
+          "from": 227,
+          "to": 277
+        },
+        {
+          "text": "Let's understand training data.",
+          "from": 279,
+          "to": 343
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Training data",
+        "short": "Data",
+        "definition": "The collection of examples a model learns from.",
+        "chips": [
+          [
+            "BookOpen",
+            "Text for LLMs"
+          ],
+          [
+            "Image",
+            "Photos for vision"
+          ],
+          [
+            "Mail",
+            "Emails for spam"
+          ]
+        ]
+      },
+      "from": 354,
+      "durationInFrames": 551,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_02.wav",
+      "cues": [
+        124,
+        235,
+        359,
+        444
+      ],
+      "captions": [
+        {
+          "text": "Training data is the collection",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "of examples a model learns from.",
+          "from": 54,
+          "to": 122
+        },
+        {
+          "text": "It can be text,",
+          "from": 124,
+          "to": 153
+        },
+        {
+          "text": "images, audio or numbers.",
+          "from": 154,
+          "to": 232
+        },
+        {
+          "text": "For LLMs,",
+          "from": 235,
+          "to": 268
+        },
+        {
+          "text": "it's trillions of words from",
+          "from": 270,
+          "to": 310
+        },
+        {
+          "text": "books and the web.",
+          "from": 312,
+          "to": 356
+        },
+        {
+          "text": "For vision models,",
+          "from": 359,
+          "to": 389
+        },
+        {
+          "text": "millions of photos.",
+          "from": 394,
+          "to": 442
+        },
+        {
+          "text": "And for a spam filter,",
+          "from": 444,
+          "to": 493
+        },
+        {
+          "text": "thousands of emails.",
+          "from": 493,
+          "to": 538
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The data pipeline",
+        "kicker": "BEFORE TRAINING",
+        "nodes": [
+          [
+            "Database",
+            "Collect",
+            "Gather lots of examples"
+          ],
+          [
+            "Eraser",
+            "Clean",
+            "Remove junk and duplicates"
+          ],
+          [
+            "Tag",
+            "Label",
+            "Add the right answers"
+          ],
+          [
+            "Split",
+            "Split",
+            "Keep some aside for testing"
+          ],
+          [
+            "Cpu",
+            "Train",
+            "Now the model learns"
+          ]
+        ]
+      },
+      "from": 905,
+      "durationInFrames": 588,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_03.wav",
+      "cues": [
+        104,
+        190,
+        307,
+        427,
+        510
+      ],
+      "captions": [
+        {
+          "text": "Before training,",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "data goes through a pipeline.",
+          "from": 40,
+          "to": 100
+        },
+        {
+          "text": "First, collect,",
+          "from": 104,
+          "to": 133
+        },
+        {
+          "text": "gather lots of examples.",
+          "from": 136,
+          "to": 188
+        },
+        {
+          "text": "Then clean,",
+          "from": 190,
+          "to": 214
+        },
+        {
+          "text": "remove duplicates,",
+          "from": 216,
+          "to": 249
+        },
+        {
+          "text": "junk and errors.",
+          "from": 255,
+          "to": 304
+        },
+        {
+          "text": "Label, add the right answers,",
+          "from": 307,
+          "to": 363
+        },
+        {
+          "text": "often done by humans.",
+          "from": 365,
+          "to": 423
+        },
+        {
+          "text": "Split, keeping some data aside",
+          "from": 427,
+          "to": 479
+        },
+        {
+          "text": "for testing,",
+          "from": 480,
+          "to": 508
+        },
+        {
+          "text": "and only then,",
+          "from": 510,
+          "to": 535
+        },
+        {
+          "text": "train the model.",
+          "from": 539,
+          "to": 576
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "What makes data good",
+        "kicker": "GOOD DATA",
+        "terms": [
+          [
+            "Layers",
+            "Quantity",
+            "Enough examples"
+          ],
+          [
+            "BadgeCheck",
+            "Quality",
+            "Correct and clean"
+          ],
+          [
+            "Globe",
+            "Diversity",
+            "Many people and places"
+          ],
+          [
+            "RefreshCw",
+            "Freshness",
+            "Up to date"
+          ]
+        ]
+      },
+      "from": 1493,
+      "durationInFrames": 466,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_04.wav",
+      "cues": [
+        60,
+        148,
+        216,
+        346
+      ],
+      "captions": [
+        {
+          "text": "So what makes data good?",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "Quantity, enough examples to learn from.",
+          "from": 60,
+          "to": 146
+        },
+        {
+          "text": "Quality, correct and clean.",
+          "from": 148,
+          "to": 214
+        },
+        {
+          "text": "Diversity, covering many people,",
+          "from": 216,
+          "to": 278
+        },
+        {
+          "text": "places and situations.",
+          "from": 280,
+          "to": 344
+        },
+        {
+          "text": "And freshness,",
+          "from": 346,
+          "to": 368
+        },
+        {
+          "text": "up to date,",
+          "from": 371,
+          "to": 394
+        },
+        {
+          "text": "so the world hasn't moved on.",
+          "from": 397,
+          "to": 454
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Narrow vs diverse data",
+        "kicker": "GARBAGE IN, GARBAGE OUT",
+        "left": {
+          "icon": "TriangleAlert",
+          "title": "Narrow data",
+          "stat": "Works for some",
+          "label": "fails for everyone else"
+        },
+        "right": {
+          "icon": "Users",
+          "title": "Diverse data",
+          "stat": "Works for all",
+          "label": "fairer results"
+        }
+      },
+      "from": 1959,
+      "durationInFrames": 443,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_05.wav",
+      "cues": [
+        123,
+        307
+      ],
+      "captions": [
+        {
+          "text": "There's a famous rule,",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "garbage in,",
+          "from": 52,
+          "to": 77
+        },
+        {
+          "text": "garbage out.",
+          "from": 81,
+          "to": 120
+        },
+        {
+          "text": "If a face recognition model",
+          "from": 123,
+          "to": 166
+        },
+        {
+          "text": "mostly sees light skinned faces,",
+          "from": 168,
+          "to": 237
+        },
+        {
+          "text": "it can fail on darker skin.",
+          "from": 239,
+          "to": 306
+        },
+        {
+          "text": "With diverse,",
+          "from": 307,
+          "to": 334
+        },
+        {
+          "text": "balanced data,",
+          "from": 339,
+          "to": 370
+        },
+        {
+          "text": "it works fairly for everyone.",
+          "from": 372,
+          "to": 431
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "The three splits",
+        "kicker": "TRAIN, TUNE, TEST",
+        "steps": [
+          [
+            "BookOpen",
+            "Training set",
+            "The model learns from it"
+          ],
+          [
+            "SlidersHorizontal",
+            "Validation set",
+            "Tune the settings"
+          ],
+          [
+            "GraduationCap",
+            "Test set",
+            "A final exam, never seen"
+          ]
+        ]
+      },
+      "from": 2402,
+      "durationInFrames": 464,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_06.wav",
+      "cues": [
+        74,
+        162,
+        279
+      ],
+      "captions": [
+        {
+          "text": "So why keep some data aside?",
+          "from": 10,
+          "to": 73
+        },
+        {
+          "text": "The training set,",
+          "from": 74,
+          "to": 98
+        },
+        {
+          "text": "which the model learns from.",
+          "from": 102,
+          "to": 160
+        },
+        {
+          "text": "The validation set,",
+          "from": 162,
+          "to": 201
+        },
+        {
+          "text": "used to tune settings during training.",
+          "from": 204,
+          "to": 277
+        },
+        {
+          "text": "And the test set,",
+          "from": 279,
+          "to": 311
+        },
+        {
+          "text": "kept completely hidden,",
+          "from": 312,
+          "to": 359
+        },
+        {
+          "text": "like a final exam the",
+          "from": 360,
+          "to": 399
+        },
+        {
+          "text": "model has never seen.",
+          "from": 401,
+          "to": 452
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "More data is always better.",
+        "fact": "Only good data helps. A clean, well-labelled dataset often beats a huge messy one.",
+        "tip": "Quality over quantity"
+      },
+      "from": 2866,
+      "durationInFrames": 470,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_07.wav",
+      "cues": [
+        57,
+        139
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "People think more data is",
+          "from": 57,
+          "to": 98
+        },
+        {
+          "text": "always better.",
+          "from": 100,
+          "to": 136
+        },
+        {
+          "text": "More helps,",
+          "from": 139,
+          "to": 163
+        },
+        {
+          "text": "but only if it's good.",
+          "from": 165,
+          "to": 215
+        },
+        {
+          "text": "A smaller,",
+          "from": 218,
+          "to": 241
+        },
+        {
+          "text": "clean, well labelled dataset often",
+          "from": 245,
+          "to": 316
+        },
+        {
+          "text": "beats a huge messy one.",
+          "from": 318,
+          "to": 374
+        },
+        {
+          "text": "Quality usually matters more than quantity.",
+          "from": 377,
+          "to": 459
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "We hide the test set to…",
+        "options": [
+          "Save storage space",
+          "Check it on data it's never seen",
+          "Make training faster"
+        ],
+        "answer": 1
+      },
+      "from": 3336,
+      "durationInFrames": 518,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_08.wav",
+      "cues": [
+        148,
+        365
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Why keep a test set",
+          "from": 43,
+          "to": 78
+        },
+        {
+          "text": "hidden from the model during training?",
+          "from": 78,
+          "to": 146
+        },
+        {
+          "text": "Pause and think,",
+          "from": 148,
+          "to": 185
+        },
+        {
+          "text": "and if you get it",
+          "from": 187,
+          "to": 204
+        },
+        {
+          "text": "right, comment below!",
+          "from": 206,
+          "to": 267
+        },
+        {
+          "text": "To check how it does",
+          "from": 365,
+          "to": 388
+        },
+        {
+          "text": "on data it has never",
+          "from": 389,
+          "to": 420
+        },
+        {
+          "text": "seen, just like a real exam!",
+          "from": 423,
+          "to": 505
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Data",
+            "what the model learns from"
+          ],
+          [
+            "Pipeline",
+            "collect, clean, label, split"
+          ],
+          [
+            "Good data",
+            "quality, diversity, freshness"
+          ],
+          [
+            "Test set",
+            "a hidden final exam"
+          ]
+        ],
+        "next": "Use Case · Delivery ETA"
+      },
+      "from": 3854,
+      "durationInFrames": 651,
+      "voiceFrom": 10,
+      "audio": "lessons/ep25/voice_09.wav",
+      "cues": [
+        45,
+        120,
+        218,
+        320,
+        408
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "Training data is what the",
+          "from": 45,
+          "to": 77
+        },
+        {
+          "text": "model learns from.",
+          "from": 79,
+          "to": 118
+        },
+        {
+          "text": "It's collected,",
+          "from": 120,
+          "to": 146
+        },
+        {
+          "text": "cleaned, labelled and split.",
+          "from": 148,
+          "to": 215
+        },
+        {
+          "text": "Good data is high quality,",
+          "from": 218,
+          "to": 265
+        },
+        {
+          "text": "diverse and fresh.",
+          "from": 269,
+          "to": 318
+        },
+        {
+          "text": "And the test set is",
+          "from": 320,
+          "to": 347
+        },
+        {
+          "text": "a hidden final exam.",
+          "from": 348,
+          "to": 405
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 408,
+          "to": 471
+        },
+        {
+          "text": "how delivery apps predict when",
+          "from": 474,
+          "to": 519
+        },
+        {
+          "text": "your food will arrive.",
+          "from": 520,
+          "to": 567
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 571,
+          "to": 639
+        }
+      ],
+      "image": null
+    }
+  ]
+}

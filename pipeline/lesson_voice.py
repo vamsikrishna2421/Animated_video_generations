@@ -32,6 +32,7 @@ PRON = {
     "Hyderabad": "hˈaɪdəɹəbˌɑːd",
     # Spelled-out plural acronym: "el-el-emz", not "el-el-em-es".
     "L L Ms": "ˈɛl ˈɛl ˈɛmz",
+    "LLMs": "ˌɛlˌɛlˈɛmz",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.
     "is live": "ɪz lˈaɪv", "is already live": "ɪz ɔːlɹˈɛdi lˈaɪv", "now live": "nˈaʊ lˈaɪv",
 }

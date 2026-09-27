@@ -1,0 +1,771 @@
+{
+  "id": "uc15",
+  "episode": 15,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Delivery Apps Predict Arrival Time",
+  "host": "female",
+  "label": "USE CASE 15",
+  "fps": 30,
+  "totalFrames": 4493,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc15/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 15",
+        "title": [
+          "Delivery",
+          "ETA"
+        ],
+        "subtitle": "How apps predict arrival time",
+        "buzzwords": [
+          "ETA",
+          "Regression",
+          "Traffic",
+          "GPS",
+          "Cooking time",
+          "Weather",
+          "Routes",
+          "Predictions"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 342,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_01.wav",
+      "cues": [
+        149,
+        221
+      ],
+      "captions": [
+        {
+          "text": "You order biryani,",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "and the app says,",
+          "from": 53,
+          "to": 93
+        },
+        {
+          "text": "arriving in 32 minutes.",
+          "from": 93,
+          "to": 147
+        },
+        {
+          "text": "And somehow,",
+          "from": 149,
+          "to": 175
+        },
+        {
+          "text": "it's usually right.",
+          "from": 176,
+          "to": 218
+        },
+        {
+          "text": "Let's break down how delivery",
+          "from": 221,
+          "to": 266
+        },
+        {
+          "text": "apps predict arrival time.",
+          "from": 269,
+          "to": 329
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Three predictions, one ETA",
+        "nodes": [
+          [
+            "ChefHat",
+            "Cooking time",
+            "This restaurant, this dish"
+          ],
+          [
+            "Bike",
+            "Pickup time",
+            "Partner reaching the restaurant"
+          ],
+          [
+            "MapPin",
+            "Travel time",
+            "Restaurant → your door"
+          ],
+          [
+            "Brain",
+            "Predict each",
+            "Learned from past orders"
+          ],
+          [
+            "Clock",
+            "ETA",
+            "“Arriving in 32 min”"
+          ]
+        ]
+      },
+      "from": 342,
+      "durationInFrames": 580,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_02.wav",
+      "cues": [
+        118,
+        193,
+        298,
+        399,
+        497
+      ],
+      "captions": [
+        {
+          "text": "The ETA is really three",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "predictions added together.",
+          "from": 56,
+          "to": 115
+        },
+        {
+          "text": "How long the restaurant will",
+          "from": 118,
+          "to": 153
+        },
+        {
+          "text": "take to cook.",
+          "from": 154,
+          "to": 190
+        },
+        {
+          "text": "How long until a delivery",
+          "from": 193,
+          "to": 234
+        },
+        {
+          "text": "partner reaches the restaurant.",
+          "from": 236,
+          "to": 296
+        },
+        {
+          "text": "And how long the ride",
+          "from": 298,
+          "to": 334
+        },
+        {
+          "text": "from the restaurant to you",
+          "from": 334,
+          "to": 378
+        },
+        {
+          "text": "will take.",
+          "from": 378,
+          "to": 396
+        },
+        {
+          "text": "A model predicts each one,",
+          "from": 399,
+          "to": 461
+        },
+        {
+          "text": "from past data,",
+          "from": 461,
+          "to": 497
+        },
+        {
+          "text": "and adds them up,",
+          "from": 497,
+          "to": 539
+        },
+        {
+          "text": "32 minutes.",
+          "from": 539,
+          "to": 566
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "What it considers",
+        "kicker": "THE FACTORS",
+        "terms": [
+          [
+            "Route",
+            "Distance and route",
+            "Real roads, not straight lines"
+          ],
+          [
+            "Car",
+            "Traffic and time",
+            "The evening rush"
+          ],
+          [
+            "CloudRain",
+            "Weather",
+            "Rain slows everything"
+          ],
+          [
+            "Store",
+            "Restaurant load",
+            "Friday night crowd"
+          ]
+        ]
+      },
+      "from": 922,
+      "durationInFrames": 481,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_03.wav",
+      "cues": [
+        67,
+        164,
+        266,
+        356
+      ],
+      "captions": [
+        {
+          "text": "So what does the model",
+          "from": 10,
+          "to": 36
+        },
+        {
+          "text": "look at?",
+          "from": 38,
+          "to": 64
+        },
+        {
+          "text": "Distance and route,",
+          "from": 67,
+          "to": 102
+        },
+        {
+          "text": "including one way streets.",
+          "from": 104,
+          "to": 161
+        },
+        {
+          "text": "Traffic, and time of day,",
+          "from": 164,
+          "to": 213
+        },
+        {
+          "text": "like the evening rush.",
+          "from": 218,
+          "to": 264
+        },
+        {
+          "text": "Weather, because rain slows everything down.",
+          "from": 266,
+          "to": 354
+        },
+        {
+          "text": "And how busy the restaurant",
+          "from": 356,
+          "to": 396
+        },
+        {
+          "text": "is, like a Friday night crowd.",
+          "from": 398,
+          "to": 469
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Regression",
+        "short": "Minutes",
+        "definition": "Supervised learning that predicts a number, like minutes, instead of a category.",
+        "chips": [
+          [
+            "Database",
+            "Millions of past orders"
+          ],
+          [
+            "SlidersHorizontal",
+            "How each factor adds time"
+          ],
+          [
+            "Clock",
+            "Predict the minutes"
+          ]
+        ]
+      },
+      "from": 1403,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_04.wav",
+      "cues": [
+        128,
+        300,
+        380,
+        459
+      ],
+      "captions": [
+        {
+          "text": "Predicting a number,",
+          "from": 10,
+          "to": 41
+        },
+        {
+          "text": "like minutes,",
+          "from": 44,
+          "to": 71
+        },
+        {
+          "text": "is called regression.",
+          "from": 73,
+          "to": 125
+        },
+        {
+          "text": "It's supervised learning,",
+          "from": 128,
+          "to": 178
+        },
+        {
+          "text": "where the label is the",
+          "from": 180,
+          "to": 206
+        },
+        {
+          "text": "actual delivery time from past orders.",
+          "from": 208,
+          "to": 298
+        },
+        {
+          "text": "The model learns from millions",
+          "from": 300,
+          "to": 346
+        },
+        {
+          "text": "of deliveries,",
+          "from": 347,
+          "to": 378
+        },
+        {
+          "text": "works out how each factor",
+          "from": 380,
+          "to": 424
+        },
+        {
+          "text": "adds time,",
+          "from": 426,
+          "to": 458
+        },
+        {
+          "text": "and predicts the minutes for",
+          "from": 459,
+          "to": 494
+        },
+        {
+          "text": "your new order.",
+          "from": 495,
+          "to": 532
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "It keeps updating",
+        "kicker": "LIVE ETA",
+        "steps": [
+          [
+            "CheckCircle2",
+            "Food ready",
+            "Cooking time now known"
+          ],
+          [
+            "Navigation",
+            "Live GPS",
+            "Travel time updates"
+          ],
+          [
+            "Bell",
+            "Surprises",
+            "Traffic jam? ETA adjusts"
+          ]
+        ]
+      },
+      "from": 1946,
+      "durationInFrames": 521,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_05.wav",
+      "cues": [
+        69,
+        207,
+        353
+      ],
+      "captions": [
+        {
+          "text": "And the ETA keeps updating.",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "When the restaurant marks the",
+          "from": 69,
+          "to": 106
+        },
+        {
+          "text": "food ready,",
+          "from": 108,
+          "to": 132
+        },
+        {
+          "text": "the model knows cooking is done.",
+          "from": 133,
+          "to": 204
+        },
+        {
+          "text": "GPS tracks the delivery partner,",
+          "from": 207,
+          "to": 278
+        },
+        {
+          "text": "so travel time updates live.",
+          "from": 280,
+          "to": 351
+        },
+        {
+          "text": "And if there's a sudden",
+          "from": 353,
+          "to": 380
+        },
+        {
+          "text": "traffic jam,",
+          "from": 381,
+          "to": 411
+        },
+        {
+          "text": "the ETA adjusts,",
+          "from": 412,
+          "to": 450
+        },
+        {
+          "text": "and you get a notification.",
+          "from": 452,
+          "to": 509
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "UtensilsCrossed",
+            "Food delivery",
+            "Swiggy, Zomato"
+          ],
+          [
+            "ShoppingBasket",
+            "Quick commerce",
+            "10-minute groceries"
+          ],
+          [
+            "Package",
+            "Couriers",
+            "Parcel delivery dates"
+          ]
+        ]
+      },
+      "from": 2467,
+      "durationInFrames": 398,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_06.wav",
+      "cues": [
+        87,
+        180,
+        286
+      ],
+      "captions": [
+        {
+          "text": "The same idea powers many apps.",
+          "from": 10,
+          "to": 84
+        },
+        {
+          "text": "Food delivery apps like Swiggy",
+          "from": 87,
+          "to": 139
+        },
+        {
+          "text": "and Zomato.",
+          "from": 142,
+          "to": 178
+        },
+        {
+          "text": "Quick commerce apps,",
+          "from": 180,
+          "to": 218
+        },
+        {
+          "text": "promising 10 minute groceries.",
+          "from": 219,
+          "to": 284
+        },
+        {
+          "text": "And courier and online shopping",
+          "from": 286,
+          "to": 341
+        },
+        {
+          "text": "delivery estimates.",
+          "from": 343,
+          "to": 385
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The ETA is just distance divided by speed.",
+        "fact": "Cooking time, partner availability, traffic and weather often matter more than distance.",
+        "tip": "Many factors, one number"
+      },
+      "from": 2865,
+      "durationInFrames": 446,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_07.wav",
+      "cues": [
+        59,
+        172
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think the ETA is",
+          "from": 59,
+          "to": 97
+        },
+        {
+          "text": "just distance divided by speed.",
+          "from": 98,
+          "to": 170
+        },
+        {
+          "text": "That's only a small part",
+          "from": 172,
+          "to": 209
+        },
+        {
+          "text": "of it.",
+          "from": 210,
+          "to": 233
+        },
+        {
+          "text": "Cooking time,",
+          "from": 236,
+          "to": 268
+        },
+        {
+          "text": "partner availability,",
+          "from": 270,
+          "to": 311
+        },
+        {
+          "text": "traffic and weather often matter",
+          "from": 314,
+          "to": 372
+        },
+        {
+          "text": "more than the distance itself.",
+          "from": 374,
+          "to": 432
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Predicting a number is called…",
+        "options": [
+          "Regression",
+          "Clustering",
+          "Tokenization"
+        ],
+        "answer": 0
+      },
+      "from": 3311,
+      "durationInFrames": 485,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_08.wav",
+      "cues": [
+        149,
+        357
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Predicting a number,",
+          "from": 42,
+          "to": 67
+        },
+        {
+          "text": "like delivery minutes,",
+          "from": 73,
+          "to": 103
+        },
+        {
+          "text": "is called what?",
+          "from": 108,
+          "to": 147
+        },
+        {
+          "text": "Pause and think,",
+          "from": 149,
+          "to": 186
+        },
+        {
+          "text": "and if you get it",
+          "from": 188,
+          "to": 205
+        },
+        {
+          "text": "right, comment below!",
+          "from": 206,
+          "to": 257
+        },
+        {
+          "text": "Regression!",
+          "from": 357,
+          "to": 390
+        },
+        {
+          "text": "Supervised learning that predicts a number.",
+          "from": 394,
+          "to": 472
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "3 parts",
+            "cook, pickup, travel"
+          ],
+          [
+            "Factors",
+            "traffic, weather, busyness"
+          ],
+          [
+            "Regression",
+            "predicting a number"
+          ],
+          [
+            "Live",
+            "updates as things change"
+          ]
+        ],
+        "next": "EP 26 · Overfitting"
+      },
+      "from": 3796,
+      "durationInFrames": 697,
+      "voiceFrom": 10,
+      "audio": "lessons/uc15/voice_09.wav",
+      "cues": [
+        45,
+        151,
+        259,
+        347,
+        439
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "The ETA adds up cooking,",
+          "from": 45,
+          "to": 91
+        },
+        {
+          "text": "pickup and travel time.",
+          "from": 94,
+          "to": 150
+        },
+        {
+          "text": "The model considers traffic,",
+          "from": 151,
+          "to": 199
+        },
+        {
+          "text": "weather and restaurant load.",
+          "from": 204,
+          "to": 257
+        },
+        {
+          "text": "Predicting a number like this",
+          "from": 259,
+          "to": 297
+        },
+        {
+          "text": "is called regression.",
+          "from": 299,
+          "to": 345
+        },
+        {
+          "text": "And the ETA updates live",
+          "from": 347,
+          "to": 391
+        },
+        {
+          "text": "as things change.",
+          "from": 393,
+          "to": 436
+        },
+        {
+          "text": "Next, we'll learn the difference",
+          "from": 439,
+          "to": 483
+        },
+        {
+          "text": "between a model that memorises,",
+          "from": 485,
+          "to": 544
+        },
+        {
+          "text": "and one that truly understands.",
+          "from": 546,
+          "to": 618
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 621,
+          "to": 685
+        }
+      ],
+      "image": null
+    }
+  ]
+}
