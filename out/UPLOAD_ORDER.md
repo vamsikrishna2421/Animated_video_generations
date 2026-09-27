@@ -47,7 +47,7 @@ Already posted: `out/posted/`.
 | 040 | ep38 | How to Run AI on Your Own Laptop | ready |
 | 041 | ep39 | Where AI Costs Come From | ready |
 | 042 | ep40 | AI Benchmarks: How Models Are Tested | ready |
-| 043 | q04 | Quiz #4: Episodes 31–40 | rendering soon |
+| 043 | q04 | Quiz #4: Episodes 31–40 | ready |
 | 044 | ep41 | How to Choose the Right AI Model | rendering soon |
 | 045 | ep42 | Bias in AI | rendering soon |
 | 046 | ep43 | AI Safety and Alignment | rendering soon |
