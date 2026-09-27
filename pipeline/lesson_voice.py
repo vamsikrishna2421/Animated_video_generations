@@ -203,35 +203,39 @@ def main(spec_path: Path) -> None:
         t = 0.0
         sr = 24000
         if flow:
-            # Group sentences between <pause> markers; each group is one continuous take.
-            groups, cur = [], []
+            # The whole scene is ONE continuous take (so no sentence ever starts a fresh take,
+            # which weakens its first sound). <pause N> silence is spliced in afterwards,
+            # between the two sentences, using the word timings.
+            sents, pause_after = [], {}
             for sent in sentences(scene["text"]):
-                if PAUSE.fullmatch(sent):
-                    groups += [cur, sent] if cur else [sent]
-                    cur = []
+                if m := PAUSE.fullmatch(sent):
+                    if sents:
+                        pause_after[len(sents) - 1] = pause_after.get(len(sents) - 1, 0) + float(m.group(1))
                 else:
-                    cur.append(sent)
-            if cur:
-                groups.append(cur)
-            for g in groups:
-                if isinstance(g, str):
-                    secs = float(PAUSE.fullmatch(g).group(1))
-                    chunks.append(np.zeros(int(secs * sr)))
-                    t += secs
-                    continue
-                audio, sr, per = synth_flow(kokoro, g, voice, speed, spec["lang"], lex)
-                for clean, ws, cue_map in per:
-                    for cid, sec in cue_map.items():
-                        cues[cid] = t + sec
-                    words = display(clean).split(" ")
-                    i = 0
-                    for ph in phrases(words):
-                        a, b = ws[i][0], ws[i + len(ph) - 1][1]
-                        captions.append({"text": " ".join(ph), "from": round((LEAD_S + t + a) * fps), "to": round((LEAD_S + t + b) * fps)})
-                        i += len(ph)
-                gap = 0.3
-                chunks += [audio, np.zeros(int(gap * sr))]
-                t += len(audio) / sr + gap
+                    sents.append(sent)
+            audio, sr, per = synth_flow(kokoro, sents, voice, speed, spec["lang"], lex)
+            shift = 0.0
+            pieces, prev_cut = [], 0
+            for si2, (clean, ws, cue_map) in enumerate(per):
+                for cid, sec in cue_map.items():
+                    cues[cid] = t + sec + shift
+                words = display(clean).split(" ")
+                i = 0
+                for ph in phrases(words):
+                    a, b = ws[i][0] + shift, ws[i + len(ph) - 1][1] + shift
+                    captions.append({"text": " ".join(ph), "from": round((LEAD_S + t + a) * fps), "to": round((LEAD_S + t + b) * fps)})
+                    i += len(ph)
+                if si2 in pause_after and si2 + 1 < len(per):
+                    # split halfway through the natural gap between this sentence and the next
+                    split = (ws[-1][1] + per[si2 + 1][1][0][0]) / 2
+                    cut_at = int(split * sr)
+                    pieces += [audio[prev_cut:cut_at], np.zeros(int(pause_after[si2] * sr))]
+                    prev_cut = cut_at
+                    shift += pause_after[si2]
+            pieces.append(audio[prev_cut:])
+            audio = np.concatenate(pieces)
+            chunks += [audio, np.zeros(int(0.3 * sr))]
+            t += len(audio) / sr + 0.3
         for sent in ([] if flow else sentences(scene["text"])):
             if m := PAUSE.fullmatch(sent):
                 chunks.append(np.zeros(int(float(m.group(1)) * sr)))
