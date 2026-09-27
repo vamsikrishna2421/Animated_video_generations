@@ -1,0 +1,790 @@
+{
+  "id": "ep39",
+  "episode": 39,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Where AI Costs Come From",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4758,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep39/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 39",
+        "title": [
+          "AI",
+          "Costs"
+        ],
+        "subtitle": "Who pays for every answer?",
+        "buzzwords": [
+          "Tokens",
+          "Input",
+          "Output",
+          "Inference",
+          "Training",
+          "GPUs",
+          "Caching",
+          "Pricing"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 393,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_01.wav",
+      "cues": [
+        135,
+        246
+      ],
+      "captions": [
+        {
+          "text": "Every time you send a",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "message to a chatbot,",
+          "from": 41,
+          "to": 83
+        },
+        {
+          "text": "someone pays for it.",
+          "from": 86,
+          "to": 132
+        },
+        {
+          "text": "Sometimes a fraction of a",
+          "from": 135,
+          "to": 187
+        },
+        {
+          "text": "rupee, sometimes much more.",
+          "from": 187,
+          "to": 243
+        },
+        {
+          "text": "So where does the cost",
+          "from": 246,
+          "to": 274
+        },
+        {
+          "text": "of AI actually come from?",
+          "from": 275,
+          "to": 334
+        },
+        {
+          "text": "Let's break it down.",
+          "from": 337,
+          "to": 381
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two big costs",
+        "kicker": "BUILD VS USE",
+        "left": {
+          "icon": "Hammer",
+          "title": "Training",
+          "stat": "One time",
+          "label": "huge cost to build the model"
+        },
+        "right": {
+          "icon": "MessageSquare",
+          "title": "Inference",
+          "stat": "Every use",
+          "label": "tiny per message, adds up"
+        }
+      },
+      "from": 393,
+      "durationInFrames": 540,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_02.wav",
+      "cues": [
+        66,
+        295
+      ],
+      "captions": [
+        {
+          "text": "There are two big costs.",
+          "from": 10,
+          "to": 63
+        },
+        {
+          "text": "Training, a huge one time",
+          "from": 66,
+          "to": 119
+        },
+        {
+          "text": "cost, to build the model.",
+          "from": 121,
+          "to": 178
+        },
+        {
+          "text": "For the biggest models,",
+          "from": 180,
+          "to": 220
+        },
+        {
+          "text": "it can be hundreds of",
+          "from": 220,
+          "to": 257
+        },
+        {
+          "text": "millions of dollars.",
+          "from": 257,
+          "to": 292
+        },
+        {
+          "text": "Inference, a small cost every",
+          "from": 295,
+          "to": 353
+        },
+        {
+          "text": "time someone uses it.",
+          "from": 355,
+          "to": 405
+        },
+        {
+          "text": "Tiny per message,",
+          "from": 407,
+          "to": 449
+        },
+        {
+          "text": "but it adds up with",
+          "from": 454,
+          "to": 479
+        },
+        {
+          "text": "millions of users.",
+          "from": 481,
+          "to": 527
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Pay per token",
+        "short": "Tokens",
+        "definition": "AI APIs charge by the number of tokens read and written. Output tokens usually cost more than input.",
+        "chips": [
+          [
+            "ArrowDownToLine",
+            "Input tokens"
+          ],
+          [
+            "ArrowUpFromLine",
+            "Output tokens cost more"
+          ],
+          [
+            "History",
+            "History is resent"
+          ]
+        ]
+      },
+      "from": 933,
+      "durationInFrames": 610,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_03.wav",
+      "cues": [
+        121,
+        274,
+        443
+      ],
+      "captions": [
+        {
+          "text": "APIs charge per token,",
+          "from": 10,
+          "to": 67
+        },
+        {
+          "text": "from episode 3.",
+          "from": 71,
+          "to": 119
+        },
+        {
+          "text": "Input tokens,",
+          "from": 121,
+          "to": 154
+        },
+        {
+          "text": "the text you send,",
+          "from": 157,
+          "to": 186
+        },
+        {
+          "text": "including documents and chat history.",
+          "from": 189,
+          "to": 271
+        },
+        {
+          "text": "Output tokens,",
+          "from": 274,
+          "to": 310
+        },
+        {
+          "text": "the text the model writes,",
+          "from": 312,
+          "to": 358
+        },
+        {
+          "text": "which usually cost several times more.",
+          "from": 359,
+          "to": 440
+        },
+        {
+          "text": "Longer conversations cost more,",
+          "from": 443,
+          "to": 505
+        },
+        {
+          "text": "because the history is sent",
+          "from": 509,
+          "to": 544
+        },
+        {
+          "text": "again, every turn.",
+          "from": 544,
+          "to": 598
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "What drives the bill",
+        "nodes": [
+          [
+            "Brain",
+            "Model size",
+            "Bigger costs more"
+          ],
+          [
+            "FileText",
+            "Prompt length",
+            "Docs and history"
+          ],
+          [
+            "PenLine",
+            "Answer length",
+            "Output tokens"
+          ],
+          [
+            "Repeat",
+            "Calls per task",
+            "Agents loop"
+          ],
+          [
+            "Users",
+            "Traffic",
+            "Times every user"
+          ]
+        ]
+      },
+      "from": 1543,
+      "durationInFrames": 595,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_04.wav",
+      "cues": [
+        64,
+        169,
+        270,
+        361,
+        492
+      ],
+      "captions": [
+        {
+          "text": "Here's what drives the bill.",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "Model size,",
+          "from": 64,
+          "to": 91
+        },
+        {
+          "text": "bigger models cost more per token.",
+          "from": 94,
+          "to": 167
+        },
+        {
+          "text": "Prompt length,",
+          "from": 169,
+          "to": 193
+        },
+        {
+          "text": "long documents and chat history.",
+          "from": 197,
+          "to": 268
+        },
+        {
+          "text": "Answer length,",
+          "from": 270,
+          "to": 296
+        },
+        {
+          "text": "long answers cost more.",
+          "from": 299,
+          "to": 358
+        },
+        {
+          "text": "Number of calls,",
+          "from": 361,
+          "to": 388
+        },
+        {
+          "text": "agents may call the model",
+          "from": 389,
+          "to": 426
+        },
+        {
+          "text": "many times,",
+          "from": 428,
+          "to": 450
+        },
+        {
+          "text": "for one task.",
+          "from": 452,
+          "to": 490
+        },
+        {
+          "text": "And traffic,",
+          "from": 492,
+          "to": 519
+        },
+        {
+          "text": "multiplied by every user.",
+          "from": 521,
+          "to": 584
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How to cut costs",
+        "kicker": "SAVE MONEY",
+        "steps": [
+          [
+            "Minimize2",
+            "Right-size",
+            "Smallest model that works"
+          ],
+          [
+            "Scissors",
+            "Trim prompts",
+            "Only relevant chunks"
+          ],
+          [
+            "Archive",
+            "Cache",
+            "Reuse, don't repay"
+          ]
+        ]
+      },
+      "from": 2138,
+      "durationInFrames": 488,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_05.wav",
+      "cues": [
+        72,
+        161,
+        305
+      ],
+      "captions": [
+        {
+          "text": "So how do teams cut costs?",
+          "from": 10,
+          "to": 70
+        },
+        {
+          "text": "Use the smallest model that",
+          "from": 72,
+          "to": 112
+        },
+        {
+          "text": "does the job well.",
+          "from": 114,
+          "to": 159
+        },
+        {
+          "text": "Keep prompts short,",
+          "from": 161,
+          "to": 198
+        },
+        {
+          "text": "and send only relevant chunks,",
+          "from": 199,
+          "to": 252
+        },
+        {
+          "text": "with RAG.",
+          "from": 256,
+          "to": 302
+        },
+        {
+          "text": "And use caching,",
+          "from": 305,
+          "to": 339
+        },
+        {
+          "text": "reusing answers,",
+          "from": 342,
+          "to": 375
+        },
+        {
+          "text": "and repeated prompt parts,",
+          "from": 379,
+          "to": 427
+        },
+        {
+          "text": "instead of paying again.",
+          "from": 429,
+          "to": 476
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Cost words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Tag",
+            "Price per million",
+            "How APIs list prices"
+          ],
+          [
+            "Archive",
+            "Prompt caching",
+            "Discount on repeats"
+          ],
+          [
+            "Layers",
+            "Batch",
+            "Cheaper if you wait"
+          ],
+          [
+            "Timer",
+            "Latency",
+            "How long you wait"
+          ]
+        ]
+      },
+      "from": 2626,
+      "durationInFrames": 577,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_06.wav",
+      "cues": [
+        60,
+        188,
+        309,
+        432
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "Price per million tokens,",
+          "from": 60,
+          "to": 111
+        },
+        {
+          "text": "how APIs list their prices.",
+          "from": 112,
+          "to": 185
+        },
+        {
+          "text": "Prompt caching,",
+          "from": 188,
+          "to": 220
+        },
+        {
+          "text": "a discount when the start",
+          "from": 222,
+          "to": 256
+        },
+        {
+          "text": "of your prompt repeats.",
+          "from": 257,
+          "to": 306
+        },
+        {
+          "text": "Batch processing,",
+          "from": 309,
+          "to": 343
+        },
+        {
+          "text": "cheaper prices if you can",
+          "from": 345,
+          "to": 384
+        },
+        {
+          "text": "wait for results.",
+          "from": 386,
+          "to": 429
+        },
+        {
+          "text": "And latency,",
+          "from": 432,
+          "to": 459
+        },
+        {
+          "text": "how long you wait,",
+          "from": 462,
+          "to": 492
+        },
+        {
+          "text": "which often trades off against cost.",
+          "from": 493,
+          "to": 564
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Free chatbots cost nothing to run.",
+        "fact": "Every answer uses GPUs and electricity. Free plans are paid for by subscriptions, investors or usage limits.",
+        "tip": "Nothing is truly free"
+      },
+      "from": 3203,
+      "durationInFrames": 457,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_07.wav",
+      "cues": [
+        59,
+        154
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think free chatbots cost",
+          "from": 59,
+          "to": 112
+        },
+        {
+          "text": "nothing to run.",
+          "from": 115,
+          "to": 152
+        },
+        {
+          "text": "Every answer uses GPUs and electricity.",
+          "from": 154,
+          "to": 259
+        },
+        {
+          "text": "Free plans are paid for",
+          "from": 262,
+          "to": 296
+        },
+        {
+          "text": "by subscriptions,",
+          "from": 298,
+          "to": 336
+        },
+        {
+          "text": "investors, or limits on how",
+          "from": 338,
+          "to": 402
+        },
+        {
+          "text": "much you can use.",
+          "from": 404,
+          "to": 444
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Which costs more per token?",
+        "options": [
+          "Output tokens",
+          "Input tokens",
+          "They're always equal"
+        ],
+        "answer": 0
+      },
+      "from": 3660,
+      "durationInFrames": 462,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_08.wav",
+      "cues": [
+        113,
+        325
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Which usually costs more per token?",
+          "from": 43,
+          "to": 111
+        },
+        {
+          "text": "Pause and think,",
+          "from": 113,
+          "to": 149
+        },
+        {
+          "text": "and if you get it",
+          "from": 151,
+          "to": 168
+        },
+        {
+          "text": "right, comment below!",
+          "from": 169,
+          "to": 227
+        },
+        {
+          "text": "Output tokens,",
+          "from": 325,
+          "to": 356
+        },
+        {
+          "text": "the text the model writes,",
+          "from": 361,
+          "to": 397
+        },
+        {
+          "text": "usually cost more!",
+          "from": 403,
+          "to": 450
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Training",
+            "one-time, huge"
+          ],
+          [
+            "Inference",
+            "every use"
+          ],
+          [
+            "Per token",
+            "output costs more"
+          ],
+          [
+            "Save",
+            "right-size, trim, cache"
+          ]
+        ],
+        "next": "EP 40 · Benchmarks"
+      },
+      "from": 4122,
+      "durationInFrames": 636,
+      "voiceFrom": 10,
+      "audio": "lessons/ep39/voice_09.wav",
+      "cues": [
+        45,
+        125,
+        202,
+        316,
+        439
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "Training is a huge one",
+          "from": 45,
+          "to": 84
+        },
+        {
+          "text": "time cost.",
+          "from": 86,
+          "to": 123
+        },
+        {
+          "text": "Inference costs a little,",
+          "from": 125,
+          "to": 162
+        },
+        {
+          "text": "every time.",
+          "from": 165,
+          "to": 200
+        },
+        {
+          "text": "APIs charge per token,",
+          "from": 202,
+          "to": 256
+        },
+        {
+          "text": "and output costs more.",
+          "from": 262,
+          "to": 314
+        },
+        {
+          "text": "Cut costs with smaller models,",
+          "from": 316,
+          "to": 369
+        },
+        {
+          "text": "shorter prompts,",
+          "from": 374,
+          "to": 397
+        },
+        {
+          "text": "and caching.",
+          "from": 402,
+          "to": 436
+        },
+        {
+          "text": "Next, how AI models are",
+          "from": 439,
+          "to": 492
+        },
+        {
+          "text": "tested, with benchmarks.",
+          "from": 494,
+          "to": 553
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 557,
+          "to": 624
+        }
+      ],
+      "image": null
+    }
+  ]
+}
