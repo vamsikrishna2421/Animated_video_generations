@@ -1,0 +1,809 @@
+{
+  "id": "ep56",
+  "episode": 56,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Build a Voice Assistant",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4790,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep56/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 56",
+        "title": [
+          "Build a",
+          "Voice Bot"
+        ],
+        "subtitle": "Speak, think, talk back",
+        "buzzwords": [
+          "Whisper",
+          "Speech to text",
+          "LLM",
+          "Text to speech",
+          "Microphone",
+          "Latency",
+          "Kokoro",
+          "Hands-on"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 447,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_01.wav",
+      "cues": [
+        244,
+        351
+      ],
+      "captions": [
+        {
+          "text": "In use case 1,",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "we saw how phone call",
+          "from": 45,
+          "to": 78
+        },
+        {
+          "text": "assistants work,",
+          "from": 79,
+          "to": 112
+        },
+        {
+          "text": "speech to text,",
+          "from": 114,
+          "to": 151
+        },
+        {
+          "text": "the AI brain,",
+          "from": 153,
+          "to": 189
+        },
+        {
+          "text": "then text to speech.",
+          "from": 191,
+          "to": 242
+        },
+        {
+          "text": "Today, we build our own",
+          "from": 244,
+          "to": 285
+        },
+        {
+          "text": "talking assistant in Python.",
+          "from": 287,
+          "to": 349
+        },
+        {
+          "text": "You speak,",
+          "from": 351,
+          "to": 368
+        },
+        {
+          "text": "it thinks,",
+          "from": 373,
+          "to": 391
+        },
+        {
+          "text": "and it talks back.",
+          "from": 394,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The voice loop",
+        "nodes": [
+          [
+            "Mic",
+            "Record",
+            "Your voice"
+          ],
+          [
+            "AudioLines",
+            "Whisper",
+            "Speech → text"
+          ],
+          [
+            "Brain",
+            "LLM",
+            "Writes the reply"
+          ],
+          [
+            "Volume2",
+            "TTS",
+            "Text → speech"
+          ],
+          [
+            "Speaker",
+            "Play",
+            "And repeat"
+          ]
+        ]
+      },
+      "from": 447,
+      "durationInFrames": 484,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_02.wav",
+      "cues": [
+        45,
+        114,
+        189,
+        264,
+        375
+      ],
+      "captions": [
+        {
+          "text": "Here's the loop.",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "Record your voice from the microphone.",
+          "from": 45,
+          "to": 111
+        },
+        {
+          "text": "Whisper turns the speech into text.",
+          "from": 114,
+          "to": 187
+        },
+        {
+          "text": "The language model writes a reply.",
+          "from": 189,
+          "to": 262
+        },
+        {
+          "text": "A text to speech engine",
+          "from": 264,
+          "to": 306
+        },
+        {
+          "text": "turns the reply into audio.",
+          "from": 308,
+          "to": 372
+        },
+        {
+          "text": "And the speaker plays it.",
+          "from": 375,
+          "to": 422
+        },
+        {
+          "text": "Then, repeat.",
+          "from": 425,
+          "to": 471
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Setup",
+        "kicker": "TOOLS",
+        "steps": [
+          [
+            "AudioLines",
+            "Whisper",
+            "pip install openai-whisper"
+          ],
+          [
+            "Volume2",
+            "pyttsx3",
+            "Built-in voices"
+          ],
+          [
+            "Mic",
+            "sounddevice",
+            "Records the mic"
+          ]
+        ]
+      },
+      "from": 931,
+      "durationInFrames": 483,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_03.wav",
+      "cues": [
+        61,
+        204,
+        381
+      ],
+      "captions": [
+        {
+          "text": "You need three things.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Whisper, an open speech recognition",
+          "from": 61,
+          "to": 128
+        },
+        {
+          "text": "model that runs on your computer.",
+          "from": 129,
+          "to": 201
+        },
+        {
+          "text": "A text to speech engine,",
+          "from": 204,
+          "to": 256
+        },
+        {
+          "text": "like pyttsx3,",
+          "from": 256,
+          "to": 286
+        },
+        {
+          "text": "which uses your computer's built-in voices.",
+          "from": 286,
+          "to": 378
+        },
+        {
+          "text": "And sounddevice,",
+          "from": 381,
+          "to": 412
+        },
+        {
+          "text": "to record from the microphone.",
+          "from": 412,
+          "to": 471
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "code",
+      "data": {
+        "heading": "A talking assistant",
+        "file": "voice_bot.py",
+        "lines": [
+          "import anthropic, whisper, pyttsx3",
+          "import sounddevice as sd, scipy.io.wavfile as wav",
+          "stt = whisper.load_model(\"base\")",
+          "tts = pyttsx3.init()",
+          "client = anthropic.Anthropic()",
+          "while True:",
+          "    input(\"Press Enter, then speak for 5 seconds\")",
+          "    audio = sd.rec(5 * 16000, samplerate=16000, channels=1)",
+          "    sd.wait(); wav.write(\"q.wav\", 16000, audio)",
+          "    text = stt.transcribe(\"q.wav\")[\"text\"]",
+          "    r = client.messages.create(model=\"claude-sonnet-5\",",
+          "        max_tokens=200, system=\"Answer in one sentence.\",",
+          "        messages=[{\"role\": \"user\", \"content\": text}])",
+          "    tts.say(r.content[0].text)",
+          "    tts.runAndWait()"
+        ],
+        "groups": [
+          2,
+          3,
+          4,
+          1,
+          3,
+          2
+        ],
+        "output": [
+          "🎤 You: What's the capital of Telangana?",
+          "🔊 AI: Hyderabad is the capital of Telangana."
+        ]
+      },
+      "from": 1414,
+      "durationInFrames": 858,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_04.wav",
+      "cues": [
+        10,
+        59,
+        111,
+        230,
+        389,
+        473,
+        696,
+        778
+      ],
+      "captions": [
+        {
+          "text": "Here's the full assistant.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "Import the libraries.",
+          "from": 59,
+          "to": 108
+        },
+        {
+          "text": "Load the Whisper model,",
+          "from": 111,
+          "to": 143
+        },
+        {
+          "text": "the speech engine,",
+          "from": 148,
+          "to": 174
+        },
+        {
+          "text": "and the AI client.",
+          "from": 178,
+          "to": 228
+        },
+        {
+          "text": "In a loop,",
+          "from": 230,
+          "to": 247
+        },
+        {
+          "text": "wait for Enter,",
+          "from": 250,
+          "to": 277
+        },
+        {
+          "text": "then record five seconds of",
+          "from": 279,
+          "to": 319
+        },
+        {
+          "text": "audio, and save it to",
+          "from": 320,
+          "to": 353
+        },
+        {
+          "text": "a file.",
+          "from": 354,
+          "to": 387
+        },
+        {
+          "text": "Whisper transcribes the audio into text.",
+          "from": 389,
+          "to": 470
+        },
+        {
+          "text": "Send the text to the",
+          "from": 473,
+          "to": 513
+        },
+        {
+          "text": "model, and ask for a",
+          "from": 513,
+          "to": 553
+        },
+        {
+          "text": "short, one sentence reply,",
+          "from": 553,
+          "to": 605
+        },
+        {
+          "text": "because long answers are boring",
+          "from": 605,
+          "to": 666
+        },
+        {
+          "text": "to listen to.",
+          "from": 666,
+          "to": 693
+        },
+        {
+          "text": "Finally, speak the reply out loud.",
+          "from": 696,
+          "to": 775
+        },
+        {
+          "text": "Try it,",
+          "from": 778,
+          "to": 793
+        },
+        {
+          "text": "and have a conversation!",
+          "from": 797,
+          "to": 846
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Upgrade the voice",
+        "kicker": "SOUND HUMAN",
+        "left": {
+          "icon": "Bot",
+          "title": "Built-in TTS",
+          "stat": "Robotic",
+          "label": "free and instant"
+        },
+        "right": {
+          "icon": "Sparkles",
+          "title": "Kokoro",
+          "stat": "Natural",
+          "label": "neural, still runs locally"
+        }
+      },
+      "from": 2272,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_05.wav",
+      "cues": [
+        58,
+        190
+      ],
+      "captions": [
+        {
+          "text": "Want a nicer voice?",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "Built-in voices are free and",
+          "from": 58,
+          "to": 110
+        },
+        {
+          "text": "instant, but sound robotic.",
+          "from": 112,
+          "to": 187
+        },
+        {
+          "text": "Neural voices,",
+          "from": 190,
+          "to": 219
+        },
+        {
+          "text": "like Kokoro,",
+          "from": 224,
+          "to": 253
+        },
+        {
+          "text": "which makes the voice you're",
+          "from": 254,
+          "to": 283
+        },
+        {
+          "text": "hearing right now,",
+          "from": 284,
+          "to": 322
+        },
+        {
+          "text": "sound much more human,",
+          "from": 324,
+          "to": 362
+        },
+        {
+          "text": "and still run on your",
+          "from": 364,
+          "to": 393
+        },
+        {
+          "text": "own computer.",
+          "from": 394,
+          "to": 433
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Voice app words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Timer",
+            "Latency",
+            "Delay before reply"
+          ],
+          [
+            "Waves",
+            "Streaming",
+            "Speak while writing"
+          ],
+          [
+            "AudioLines",
+            "VAD",
+            "Detects when you stop"
+          ],
+          [
+            "Hand",
+            "Barge-in",
+            "You can interrupt"
+          ]
+        ]
+      },
+      "from": 2716,
+      "durationInFrames": 639,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_06.wav",
+      "cues": [
+        83,
+        260,
+        393,
+        525
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms for",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "voice apps.",
+          "from": 46,
+          "to": 80
+        },
+        {
+          "text": "Latency, the delay before it replies.",
+          "from": 83,
+          "to": 170
+        },
+        {
+          "text": "Keep it under about a",
+          "from": 173,
+          "to": 197
+        },
+        {
+          "text": "second, to feel natural.",
+          "from": 200,
+          "to": 257
+        },
+        {
+          "text": "Streaming, speaking the first words",
+          "from": 260,
+          "to": 317
+        },
+        {
+          "text": "while the rest is still",
+          "from": 318,
+          "to": 350
+        },
+        {
+          "text": "being written.",
+          "from": 351,
+          "to": 389
+        },
+        {
+          "text": "VAD, voice activity detection,",
+          "from": 393,
+          "to": 464
+        },
+        {
+          "text": "knowing when you've stopped talking.",
+          "from": 467,
+          "to": 522
+        },
+        {
+          "text": "And barge-in,",
+          "from": 525,
+          "to": 555
+        },
+        {
+          "text": "letting you interrupt the assistant.",
+          "from": 557,
+          "to": 626
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Voice assistants must feel slow and clunky.",
+        "fact": "Real assistants stream and overlap every stage to reply in under a second.",
+        "tip": "Stream every stage"
+      },
+      "from": 3355,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_07.wav",
+      "cues": [
+        62,
+        180
+      ],
+      "captions": [
+        {
+          "text": "Here's a common belief.",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "People think voice assistants must",
+          "from": 62,
+          "to": 115
+        },
+        {
+          "text": "feel slow and clunky.",
+          "from": 116,
+          "to": 178
+        },
+        {
+          "text": "Our simple version waits for",
+          "from": 180,
+          "to": 221
+        },
+        {
+          "text": "each step.",
+          "from": 223,
+          "to": 255
+        },
+        {
+          "text": "Real assistants stream every stage,",
+          "from": 258,
+          "to": 326
+        },
+        {
+          "text": "and overlap them,",
+          "from": 327,
+          "to": 360
+        },
+        {
+          "text": "to reply in under a second.",
+          "from": 361,
+          "to": 421
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Whisper's job is…",
+        "options": [
+          "Turn speech into text",
+          "Write the reply",
+          "Play the audio"
+        ],
+        "answer": 0
+      },
+      "from": 3788,
+      "durationInFrames": 403,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_08.wav",
+      "cues": [
+        121,
+        331
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "What does Whisper do in",
+          "from": 45,
+          "to": 74
+        },
+        {
+          "text": "our voice assistant?",
+          "from": 75,
+          "to": 119
+        },
+        {
+          "text": "Pause and think,",
+          "from": 121,
+          "to": 158
+        },
+        {
+          "text": "and if you get it",
+          "from": 160,
+          "to": 177
+        },
+        {
+          "text": "right, comment below!",
+          "from": 178,
+          "to": 232
+        },
+        {
+          "text": "It turns your speech into text!",
+          "from": 331,
+          "to": 390
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Loop",
+            "record, transcribe, think, speak"
+          ],
+          [
+            "Whisper",
+            "speech to text"
+          ],
+          [
+            "LLM",
+            "short replies"
+          ],
+          [
+            "TTS",
+            "Kokoro sounds human"
+          ]
+        ],
+        "next": "EP 57 · Deploy your app"
+      },
+      "from": 4191,
+      "durationInFrames": 599,
+      "voiceFrom": 10,
+      "audio": "lessons/ep56/voice_09.wav",
+      "cues": [
+        45,
+        150,
+        236,
+        301,
+        417
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "The loop is record,",
+          "from": 45,
+          "to": 77
+        },
+        {
+          "text": "transcribe, think, speak.",
+          "from": 81,
+          "to": 147
+        },
+        {
+          "text": "Whisper does speech to text,",
+          "from": 150,
+          "to": 197
+        },
+        {
+          "text": "on your computer.",
+          "from": 201,
+          "to": 234
+        },
+        {
+          "text": "The model writes a short reply.",
+          "from": 236,
+          "to": 299
+        },
+        {
+          "text": "And TTS speaks it,",
+          "from": 301,
+          "to": 342
+        },
+        {
+          "text": "with Kokoro for a natural voice.",
+          "from": 342,
+          "to": 413
+        },
+        {
+          "text": "Next, deploy your AI app,",
+          "from": 417,
+          "to": 476
+        },
+        {
+          "text": "so anyone can use it.",
+          "from": 480,
+          "to": 523
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 527,
+          "to": 587
+        }
+      ],
+      "image": null
+    }
+  ]
+}
