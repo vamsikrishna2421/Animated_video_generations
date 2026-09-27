@@ -1,0 +1,785 @@
+{
+  "id": "ep42",
+  "episode": 42,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Bias in AI",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4764,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep42/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 42",
+        "title": [
+          "Bias",
+          "in AI"
+        ],
+        "subtitle": "When AI learns our unfairness",
+        "buzzwords": [
+          "Fairness",
+          "Training data",
+          "Stereotypes",
+          "Representation",
+          "Audits",
+          "Diverse data",
+          "Harm",
+          "Accountability"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 412,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_01.wav",
+      "cues": [
+        160,
+        256
+      ],
+      "captions": [
+        {
+          "text": "Ask an image generator for",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "a picture of a doctor,",
+          "from": 62,
+          "to": 107
+        },
+        {
+          "text": "and it often shows a man.",
+          "from": 107,
+          "to": 157
+        },
+        {
+          "text": "Ask for a nurse,",
+          "from": 160,
+          "to": 195
+        },
+        {
+          "text": "and it often shows a woman.",
+          "from": 195,
+          "to": 253
+        },
+        {
+          "text": "Why does AI pick up",
+          "from": 256,
+          "to": 292
+        },
+        {
+          "text": "these patterns?",
+          "from": 292,
+          "to": 323
+        },
+        {
+          "text": "Let's talk about bias in AI.",
+          "from": 327,
+          "to": 400
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "AI bias",
+        "short": "Bias",
+        "definition": "When an AI system produces unfair results for certain groups, usually because of patterns in its training data.",
+        "chips": [
+          [
+            "Scale",
+            "Unfair results"
+          ],
+          [
+            "Repeat",
+            "Repeats stereotypes"
+          ],
+          [
+            "Database",
+            "Learned from data"
+          ]
+        ]
+      },
+      "from": 412,
+      "durationInFrames": 389,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_02.wav",
+      "cues": [
+        129,
+        194,
+        276
+      ],
+      "captions": [
+        {
+          "text": "Bias in AI means the",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "system treats some groups unfairly,",
+          "from": 61,
+          "to": 127
+        },
+        {
+          "text": "or repeats stereotypes.",
+          "from": 129,
+          "to": 192
+        },
+        {
+          "text": "It usually isn't programmed on purpose.",
+          "from": 194,
+          "to": 274
+        },
+        {
+          "text": "It's learned from patterns in",
+          "from": 276,
+          "to": 318
+        },
+        {
+          "text": "data, made by people.",
+          "from": 320,
+          "to": 376
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Where bias comes from",
+        "kicker": "THE SOURCES",
+        "steps": [
+          [
+            "PieChart",
+            "Skewed data",
+            "Too many of one group"
+          ],
+          [
+            "UserX",
+            "Missing data",
+            "Some groups barely appear"
+          ],
+          [
+            "History",
+            "Past decisions",
+            "Old unfairness copied"
+          ]
+        ]
+      },
+      "from": 801,
+      "durationInFrames": 655,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_03.wav",
+      "cues": [
+        61,
+        228,
+        427
+      ],
+      "captions": [
+        {
+          "text": "Where does bias come from?",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "Skewed data.",
+          "from": 61,
+          "to": 98
+        },
+        {
+          "text": "If most photos of engineers",
+          "from": 100,
+          "to": 143
+        },
+        {
+          "text": "show men,",
+          "from": 146,
+          "to": 163
+        },
+        {
+          "text": "the model learns that pattern.",
+          "from": 167,
+          "to": 225
+        },
+        {
+          "text": "Missing data.",
+          "from": 228,
+          "to": 264
+        },
+        {
+          "text": "If some accents or skin",
+          "from": 266,
+          "to": 311
+        },
+        {
+          "text": "tones are rare in the",
+          "from": 311,
+          "to": 352
+        },
+        {
+          "text": "data, the model works worse",
+          "from": 352,
+          "to": 405
+        },
+        {
+          "text": "for them.",
+          "from": 405,
+          "to": 424
+        },
+        {
+          "text": "Past decisions.",
+          "from": 427,
+          "to": 468
+        },
+        {
+          "text": "If old hiring records were",
+          "from": 471,
+          "to": 515
+        },
+        {
+          "text": "unfair, a model trained on",
+          "from": 517,
+          "to": 575
+        },
+        {
+          "text": "them copies that unfairness.",
+          "from": 576,
+          "to": 642
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Real world effects",
+        "items": [
+          [
+            "ScanFace",
+            "Face recognition",
+            "Worse on darker skin"
+          ],
+          [
+            "Briefcase",
+            "Hiring tools",
+            "Unfair to women's CVs"
+          ],
+          [
+            "Mic",
+            "Voice assistants",
+            "Struggle with accents"
+          ]
+        ]
+      },
+      "from": 1456,
+      "durationInFrames": 516,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_04.wav",
+      "cues": [
+        75,
+        180,
+        336
+      ],
+      "captions": [
+        {
+          "text": "This has real effects.",
+          "from": 10,
+          "to": 71
+        },
+        {
+          "text": "Face recognition that works worse",
+          "from": 75,
+          "to": 130
+        },
+        {
+          "text": "on darker skin.",
+          "from": 132,
+          "to": 177
+        },
+        {
+          "text": "Hiring tools that downgraded CVs",
+          "from": 180,
+          "to": 257
+        },
+        {
+          "text": "mentioning women's colleges or clubs.",
+          "from": 260,
+          "to": 334
+        },
+        {
+          "text": "And voice assistants that struggle",
+          "from": 336,
+          "to": 386
+        },
+        {
+          "text": "with certain accents,",
+          "from": 388,
+          "to": 430
+        },
+        {
+          "text": "including many Indian accents.",
+          "from": 432,
+          "to": 502
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Reducing bias",
+        "nodes": [
+          [
+            "Database",
+            "Diverse data",
+            "Balanced and broad"
+          ],
+          [
+            "Users",
+            "Test by group",
+            "Compare results"
+          ],
+          [
+            "Wrench",
+            "Fix gaps",
+            "Data or model changes"
+          ],
+          [
+            "UserCheck",
+            "Human review",
+            "For big decisions"
+          ],
+          [
+            "Eye",
+            "Monitor",
+            "Keep checking"
+          ]
+        ]
+      },
+      "from": 1972,
+      "durationInFrames": 529,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_05.wav",
+      "cues": [
+        80,
+        165,
+        252,
+        369,
+        452
+      ],
+      "captions": [
+        {
+          "text": "So how do teams reduce bias?",
+          "from": 10,
+          "to": 77
+        },
+        {
+          "text": "Collect diverse,",
+          "from": 80,
+          "to": 116
+        },
+        {
+          "text": "balanced data.",
+          "from": 122,
+          "to": 162
+        },
+        {
+          "text": "Test results separately,",
+          "from": 165,
+          "to": 206
+        },
+        {
+          "text": "for different groups.",
+          "from": 207,
+          "to": 249
+        },
+        {
+          "text": "Fix the gaps,",
+          "from": 252,
+          "to": 278
+        },
+        {
+          "text": "by adding data,",
+          "from": 282,
+          "to": 312
+        },
+        {
+          "text": "or adjusting the model.",
+          "from": 316,
+          "to": 367
+        },
+        {
+          "text": "Keep humans in the loop",
+          "from": 369,
+          "to": 414
+        },
+        {
+          "text": "for big decisions.",
+          "from": 414,
+          "to": 450
+        },
+        {
+          "text": "And keep monitoring after launch.",
+          "from": 452,
+          "to": 516
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Bias words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Scale",
+            "Fairness",
+            "No unfair disadvantage"
+          ],
+          [
+            "Users",
+            "Representation",
+            "Everyone in the data"
+          ],
+          [
+            "ClipboardCheck",
+            "Bias audit",
+            "Test for unfairness"
+          ],
+          [
+            "MapPin",
+            "Proxy",
+            "Hidden stand-in detail"
+          ]
+        ]
+      },
+      "from": 2501,
+      "durationInFrames": 644,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_06.wav",
+      "cues": [
+        60,
+        179,
+        290,
+        420
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Fairness, results that don't disadvantage",
+          "from": 60,
+          "to": 127
+        },
+        {
+          "text": "a group unfairly.",
+          "from": 128,
+          "to": 176
+        },
+        {
+          "text": "Representation, whether all groups appear",
+          "from": 179,
+          "to": 262
+        },
+        {
+          "text": "in the data.",
+          "from": 262,
+          "to": 287
+        },
+        {
+          "text": "A bias audit,",
+          "from": 290,
+          "to": 326
+        },
+        {
+          "text": "an organised test for unfair results.",
+          "from": 328,
+          "to": 418
+        },
+        {
+          "text": "And proxy,",
+          "from": 420,
+          "to": 446
+        },
+        {
+          "text": "a harmless looking detail,",
+          "from": 448,
+          "to": 495
+        },
+        {
+          "text": "like a postcode,",
+          "from": 499,
+          "to": 535
+        },
+        {
+          "text": "that secretly stands in for",
+          "from": 540,
+          "to": 584
+        },
+        {
+          "text": "something sensitive.",
+          "from": 586,
+          "to": 631
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI is neutral because it's just maths.",
+        "fact": "The data comes from our world, unfairness included. Without care, AI copies it at scale.",
+        "tip": "Fair data, tested results"
+      },
+      "from": 3145,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_07.wav",
+      "cues": [
+        58,
+        173
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think AI is neutral,",
+          "from": 58,
+          "to": 113
+        },
+        {
+          "text": "because it's just maths.",
+          "from": 118,
+          "to": 171
+        },
+        {
+          "text": "The maths is neutral,",
+          "from": 173,
+          "to": 216
+        },
+        {
+          "text": "but the data comes from",
+          "from": 220,
+          "to": 250
+        },
+        {
+          "text": "our world,",
+          "from": 250,
+          "to": 266
+        },
+        {
+          "text": "with all its unfairness.",
+          "from": 271,
+          "to": 323
+        },
+        {
+          "text": "Without care,",
+          "from": 325,
+          "to": 357
+        },
+        {
+          "text": "AI can copy it,",
+          "from": 357,
+          "to": 393
+        },
+        {
+          "text": "at a huge scale.",
+          "from": 393,
+          "to": 432
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The most common source of bias is…",
+        "options": [
+          "Patterns in the training data",
+          "The colour of the computer",
+          "The internet speed"
+        ],
+        "answer": 0
+      },
+      "from": 3589,
+      "durationInFrames": 443,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_08.wav",
+      "cues": [
+        128,
+        343
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 30
+        },
+        {
+          "text": "What is the most common",
+          "from": 43,
+          "to": 71
+        },
+        {
+          "text": "source of AI bias?",
+          "from": 73,
+          "to": 126
+        },
+        {
+          "text": "Pause and think,",
+          "from": 128,
+          "to": 165
+        },
+        {
+          "text": "and if you get it",
+          "from": 170,
+          "to": 188
+        },
+        {
+          "text": "right, comment below!",
+          "from": 189,
+          "to": 244
+        },
+        {
+          "text": "Patterns in the training data,",
+          "from": 343,
+          "to": 400
+        },
+        {
+          "text": "made by people!",
+          "from": 400,
+          "to": 430
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Bias",
+            "unfair results"
+          ],
+          [
+            "Sources",
+            "skewed, missing, past"
+          ],
+          [
+            "Effects",
+            "faces, hiring, voice"
+          ],
+          [
+            "Fix",
+            "diverse data, test, review"
+          ]
+        ],
+        "next": "USE CASE 22 · Resume screening"
+      },
+      "from": 4032,
+      "durationInFrames": 732,
+      "voiceFrom": 10,
+      "audio": "lessons/ep42/voice_09.wav",
+      "cues": [
+        45,
+        148,
+        268,
+        384,
+        514
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "AI bias means unfair results",
+          "from": 45,
+          "to": 108
+        },
+        {
+          "text": "for some groups.",
+          "from": 110,
+          "to": 146
+        },
+        {
+          "text": "It comes from skewed data,",
+          "from": 148,
+          "to": 189
+        },
+        {
+          "text": "missing data,",
+          "from": 194,
+          "to": 215
+        },
+        {
+          "text": "and past decisions.",
+          "from": 220,
+          "to": 266
+        },
+        {
+          "text": "It has real effects,",
+          "from": 268,
+          "to": 302
+        },
+        {
+          "text": "in faces,",
+          "from": 307,
+          "to": 328
+        },
+        {
+          "text": "hiring, and voice.",
+          "from": 334,
+          "to": 381
+        },
+        {
+          "text": "Reduce it with diverse data,",
+          "from": 384,
+          "to": 434
+        },
+        {
+          "text": "testing by group,",
+          "from": 435,
+          "to": 465
+        },
+        {
+          "text": "and human review.",
+          "from": 468,
+          "to": 511
+        },
+        {
+          "text": "Next, a real world use",
+          "from": 514,
+          "to": 557
+        },
+        {
+          "text": "case, how resume screening software works.",
+          "from": 559,
+          "to": 647
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 651,
+          "to": 720
+        }
+      ],
+      "image": null
+    }
+  ]
+}

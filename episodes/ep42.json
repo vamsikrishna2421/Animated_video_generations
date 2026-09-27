@@ -1,0 +1,232 @@
+{
+ "id": "ep42",
+ "episode": 42,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Bias in AI",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Ask an image generator for a picture of a doctor, and it often shows a man. [1] Ask for a nurse, and it often shows a woman. [2] Why does AI pick up these patterns? Let's talk about bias in AI.",
+   "data": {
+    "kicker": "EPISODE 42",
+    "title": [
+     "Bias",
+     "in AI"
+    ],
+    "subtitle": "When AI learns our unfairness",
+    "buzzwords": [
+     "Fairness",
+     "Training data",
+     "Stereotypes",
+     "Representation",
+     "Audits",
+     "Diverse data",
+     "Harm",
+     "Accountability"
+    ]
+   }
+  },
+  {
+   "type": "definition",
+   "text": "Bias in AI means the system treats some groups unfairly, [1] or repeats stereotypes. [2] It usually isn't programmed on purpose. [3] It's learned from patterns in data, made by people.",
+   "data": {
+    "term": "AI bias",
+    "short": "Bias",
+    "definition": "When an AI system produces unfair results for certain groups, usually because of patterns in its training data.",
+    "chips": [
+     [
+      "Scale",
+      "Unfair results"
+     ],
+     [
+      "Repeat",
+      "Repeats stereotypes"
+     ],
+     [
+      "Database",
+      "Learned from data"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Where does bias come from? [1] Skewed data. If most photos of engineers show men, the model learns that pattern. [2] Missing data. If some accents or skin tones are rare in the data, the model works worse for them. [3] Past decisions. If old hiring records were unfair, a model trained on them copies that unfairness.",
+   "data": {
+    "heading": "Where bias comes from",
+    "kicker": "THE SOURCES",
+    "steps": [
+     [
+      "PieChart",
+      "Skewed data",
+      "Too many of one group"
+     ],
+     [
+      "UserX",
+      "Missing data",
+      "Some groups barely appear"
+     ],
+     [
+      "History",
+      "Past decisions",
+      "Old unfairness copied"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "This has real effects. [1] Face recognition that works worse on darker skin. [2] Hiring tools that downgraded CVs mentioning women's colleges or clubs. [3] And voice assistants that struggle with certain accents, including many Indian accents.",
+   "data": {
+    "heading": "Real world effects",
+    "items": [
+     [
+      "ScanFace",
+      "Face recognition",
+      "Worse on darker skin"
+     ],
+     [
+      "Briefcase",
+      "Hiring tools",
+      "Unfair to women's CVs"
+     ],
+     [
+      "Mic",
+      "Voice assistants",
+      "Struggle with accents"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "So how do teams reduce bias? [1] Collect diverse, balanced data. [2] Test results separately, for different groups. [3] Fix the gaps, by adding data, or adjusting the model. [4] Keep humans in the loop for big decisions. [5] And keep monitoring after launch.",
+   "data": {
+    "heading": "Reducing bias",
+    "nodes": [
+     [
+      "Database",
+      "Diverse data",
+      "Balanced and broad"
+     ],
+     [
+      "Users",
+      "Test by group",
+      "Compare results"
+     ],
+     [
+      "Wrench",
+      "Fix gaps",
+      "Data or model changes"
+     ],
+     [
+      "UserCheck",
+      "Human review",
+      "For big decisions"
+     ],
+     [
+      "Eye",
+      "Monitor",
+      "Keep checking"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "terms",
+   "text": "Here are four terms. [1] Fairness, results that don't disadvantage a group unfairly. [2] Representation, whether all groups appear in the data. [3] A bias audit, an organised test for unfair results. [4] And proxy, a harmless looking detail, like a postcode, that secretly stands in for something sensitive.",
+   "data": {
+    "heading": "Bias words",
+    "kicker": "JARGON BUSTER",
+    "terms": [
+     [
+      "Scale",
+      "Fairness",
+      "No unfair disadvantage"
+     ],
+     [
+      "Users",
+      "Representation",
+      "Everyone in the data"
+     ],
+     [
+      "ClipboardCheck",
+      "Bias audit",
+      "Test for unfairness"
+     ],
+     [
+      "MapPin",
+      "Proxy",
+      "Hidden stand-in detail"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think AI is neutral, because it's just maths. [2] The maths is neutral, but the data comes from our world, with all its unfairness. Without care, AI can copy it, at a huge scale.",
+   "data": {
+    "myth": "AI is neutral because it's just maths.",
+    "fact": "The data comes from our world, unfairness included. Without care, AI copies it at scale.",
+    "tip": "Fair data, tested results"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! What is the most common source of AI bias? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Patterns in the training data, made by people!",
+   "data": {
+    "question": "The most common source of bias is…",
+    "options": [
+     "Patterns in the training data",
+     "The colour of the computer",
+     "The internet speed"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] AI bias means unfair results for some groups. [2] It comes from skewed data, missing data, and past decisions. [3] It has real effects, in faces, hiring, and voice. [4] Reduce it with diverse data, testing by group, and human review. [5] Next, a real world use case, how resume screening software works. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Bias",
+      "unfair results"
+     ],
+     [
+      "Sources",
+      "skewed, missing, past"
+     ],
+     [
+      "Effects",
+      "faces, hiring, voice"
+     ],
+     [
+      "Fix",
+      "diverse data, test, review"
+     ]
+    ],
+    "next": "USE CASE 22 · Resume screening"
+   }
+  }
+ ],
+ "post": {
+  "caption": "Ask AI for a doctor and it draws a man. Ask for a nurse and it draws a woman. Why?\n\nAI From Scratch, Episode 42: bias in AI\n- What AI bias is\n- Where it comes from: skewed data, missing data, past decisions\n- Real effects: face recognition, hiring, accents\n- How teams reduce bias\n- Jargon: fairness, representation, bias audit, proxy\n- Myth: 'it's just maths' doesn't make AI neutral\n\nQuiz at the end. Got it right? Comment below.\n\nNext: how resume screening software works.\nFollow @ai_maastaaru to learn AI from scratch.",
+  "tags": "#AIMaastaaru #AIBias #ResponsibleAI #LearnAI #AIEthics",
+  "pinned": "Quiz answer: Patterns in the training data, made by people. Has a voice assistant ever misunderstood your accent? Comment below!",
+  "cover": "'Bias in AI' title card",
+  "alt": "Animated explainer of AI bias: where it comes from, real effects and how to reduce it."
+ }
+}

@@ -41,6 +41,7 @@ import ep38 from "./ep38.json";
 import ep39 from "./ep39.json";
 import ep40 from "./ep40.json";
 import ep41 from "./ep41.json";
+import ep42 from "./ep42.json";
 import uc01 from "./uc01.json";
 import uc02 from "./uc02.json";
 import uc03 from "./uc03.json";
@@ -63,4 +64,4 @@ import uc19 from "./uc19.json";
 import uc20 from "./uc20.json";
 import uc21 from "./uc21.json";
 
-export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22, ep23, ep24, ep25, ep26, ep27, ep28, ep29, ep30, ep31, ep32, ep33, ep34, ep35, ep36, ep37, ep38, ep39, ep40, ep41, uc01, uc02, uc03, uc04, uc05, uc06, uc07, uc08, uc09, uc10, uc11, uc12, uc13, uc14, uc15, uc16, uc17, uc18, uc19, uc20, uc21];
+export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22, ep23, ep24, ep25, ep26, ep27, ep28, ep29, ep30, ep31, ep32, ep33, ep34, ep35, ep36, ep37, ep38, ep39, ep40, ep41, ep42, uc01, uc02, uc03, uc04, uc05, uc06, uc07, uc08, uc09, uc10, uc11, uc12, uc13, uc14, uc15, uc16, uc17, uc18, uc19, uc20, uc21];
