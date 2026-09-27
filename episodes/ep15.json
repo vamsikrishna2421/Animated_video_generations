@@ -1,0 +1,233 @@
+{
+  "id": "ep15",
+  "episode": 15,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Image and Video Generation Part 2",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "In part one, we saw how diffusion turns noise into a picture. [1] But AI can now make videos too, and even edit your photos with just a sentence. [2] So in part two, let's see how.",
+      "data": {
+        "kicker": "EPISODE 15",
+        "title": [
+          "Image &",
+          "Video AI"
+        ],
+        "subtitle": "Part 2: video, editing and prompting",
+        "buzzwords": [
+          "Text to video",
+          "Frames",
+          "Inpainting",
+          "Outpainting",
+          "Consistency",
+          "Motion",
+          "Prompting",
+          "Editing"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "A video is just many images in a row, so why is it so much harder? [1] An image only needs to look good once. [2] But a video needs every frame to match the next, the same face, the same shirt, and motion that makes physical sense.",
+      "data": {
+        "heading": "Image vs video",
+        "kicker": "WHY VIDEO IS HARDER",
+        "left": {
+          "icon": "Image",
+          "title": "One image",
+          "stat": "Look good once",
+          "label": "a single frame"
+        },
+        "right": {
+          "icon": "Film",
+          "title": "A video",
+          "stat": "Stay consistent",
+          "label": "hundreds of frames that must match"
+        }
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's how video models handle it. [1] You describe a scene, like rain falling on a Hyderabad street at night. [2] The model treats the whole clip as one block of frames, across space and time. [3] It starts with noise, for every frame at once, [4] and cleans them all up together, so they stay consistent, [5] giving you a short clip, usually a few seconds long.",
+      "data": {
+        "heading": "How AI makes video",
+        "kicker": "UNDER THE HOOD",
+        "nodes": [
+          [
+            "Type",
+            "Your prompt",
+            "“Rain on a Hyderabad street at night”"
+          ],
+          [
+            "Layers",
+            "A block of frames",
+            "Space and time together"
+          ],
+          [
+            "Tv",
+            "Noise everywhere",
+            "Every frame starts as static"
+          ],
+          [
+            "Eraser",
+            "Clean up together",
+            "Frames stay consistent"
+          ],
+          [
+            "Film",
+            "Your clip",
+            "Usually a few seconds"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "AI can also edit the images you already have. [1] Inpainting, where you select an area, and the AI redraws just that part. [2] Outpainting, where it extends the picture beyond its edges. [3] And instruction editing, where you simply say, make it sunset, and it changes the scene for you.",
+      "data": {
+        "heading": "Editing with AI",
+        "kicker": "THREE TRICKS",
+        "steps": [
+          [
+            "Brush",
+            "Inpainting",
+            "Redraw a selected area"
+          ],
+          [
+            "Maximize",
+            "Outpainting",
+            "Extend beyond the edges"
+          ],
+          [
+            "WandSparkles",
+            "Instruction editing",
+            "“Make it sunset”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "prompt",
+      "text": "Want better results? Build your image prompt like this. [1] A lazy prompt, like a cat, gives you something generic. [2] Now add a subject with details, a fluffy orange cat wearing a tiny helmet. [3] Then the setting, riding a scooter through a busy Hyderabad market. [4] The style, colourful 3D animation. [5] And the camera, low angle, golden hour light. [6] And now, it looks like a movie poster.",
+      "data": {
+        "heading": "Prompting for images",
+        "kicker": "THE RECIPE",
+        "bad": "A cat.",
+        "badReply": "A plain, generic photo of a random cat.",
+        "parts": [
+          [
+            "SUBJECT",
+            "A fluffy orange cat wearing a tiny helmet.",
+            "#8B5CF6"
+          ],
+          [
+            "SETTING",
+            "Riding a scooter through a busy Hyderabad market.",
+            "#22D3EE"
+          ],
+          [
+            "STYLE",
+            "Colourful 3D animation.",
+            "#F59E0B"
+          ],
+          [
+            "CAMERA",
+            "Low angle, golden hour light.",
+            "#34D399"
+          ]
+        ],
+        "goodReply": "A vivid, cinematic scene: an orange cat in a helmet zooming through a golden-hour market."
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So where do people use this? [1] Short video ads and social media clips. [2] Film and game previews, before anything is shot. [3] And quick photo fixes, like removing people from the background.",
+      "data": {
+        "heading": "Where it's used",
+        "items": [
+          [
+            "Megaphone",
+            "Ads and reels",
+            "Short clips in minutes"
+          ],
+          [
+            "Clapperboard",
+            "Previews",
+            "Scenes before filming"
+          ],
+          [
+            "Eraser",
+            "Photo fixes",
+            "Remove unwanted objects"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think AI can already make a full movie from one prompt. [2] Not yet. Most models make short clips, and keeping characters consistent across scenes is still hard. Real productions stitch many clips together, with a lot of human editing.",
+      "data": {
+        "myth": "AI can already make a full movie from one prompt.",
+        "fact": "Most models make short clips. Real productions stitch many clips with lots of human editing.",
+        "tip": "Short clips, human editing"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Why is AI video harder than AI images? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Every frame must stay consistent with the next!",
+      "data": {
+        "question": "AI video is harder because…",
+        "options": [
+          "Videos have more colours",
+          "Every frame must stay consistent",
+          "Videos need longer prompts"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] A video is many frames that must match. [2] Video models clean up all the frames together, as one block. [3] AI can inpaint, outpaint, and edit from instructions. [4] And great prompts have a subject, setting, style and camera. [5] Next, a real world breakdown, how magic eraser removes people from your photos. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Video",
+            "many frames that must match"
+          ],
+          [
+            "Together",
+            "clean all frames as one block"
+          ],
+          [
+            "Editing",
+            "inpaint, outpaint, instruct"
+          ],
+          [
+            "Prompts",
+            "subject, setting, style, camera"
+          ]
+        ],
+        "next": "Use Case · Magic eraser"
+      }
+    }
+  ],
+  "post": {
+    "caption": "AI can now make videos and edit your photos with a sentence. How?\n\nEpisode 15 of AI From Scratch: Image & Video Generation, Part 2\n- Why video is much harder than images\n- How video models keep every frame consistent\n- Editing tricks: inpainting, outpainting, instruction editing\n- The image prompt recipe: subject, setting, style, camera\n- The myth: \"AI can make a full movie from one prompt\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How magic eraser removes people from your photos.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #AIVideo #LearnAI #GenerativeAI #AIForBeginners",
+    "pinned": "Quiz answer: Every frame must stay consistent with the next. Try the prompt recipe and share what you made!",
+    "cover": "'Image & Video AI' title card",
+    "alt": "Animated lesson explaining AI video generation, image editing and how to write better image prompts."
+  }
+}

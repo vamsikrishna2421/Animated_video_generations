@@ -29,6 +29,7 @@ LEAD_S, TAIL_S, GAP_S, LONG_GAP_S = 0.35, 0.55, 0.16, 0.32
 PRON = {
     "Maastaaru": "mˈɑːsʈɑːɾu",   # Telugu మాస్టారు: retroflex ʈ, tapped ɾ, short final u
     "Namaste": "nəmˈʌsteː",
+    "Hyderabad": "hˈaɪdəɹəbˌɑːd",
     # Spelled-out plural acronym: "el-el-emz", not "el-el-em-es".
     "L L Ms": "ˈɛl ˈɛl ˈɛmz",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.

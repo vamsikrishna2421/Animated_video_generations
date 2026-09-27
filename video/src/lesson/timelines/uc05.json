@@ -1,0 +1,801 @@
+{
+  "id": "uc05",
+  "episode": 5,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Magic Eraser Works",
+  "host": "female",
+  "label": "USE CASE 05",
+  "fps": 30,
+  "totalFrames": 4624,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc05/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 05",
+        "title": [
+          "Magic",
+          "Eraser"
+        ],
+        "subtitle": "How AI removes things from photos",
+        "buzzwords": [
+          "Inpainting",
+          "Mask",
+          "Segmentation",
+          "Generative fill",
+          "Photos",
+          "Pixels",
+          "Clean up",
+          "Remove"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 383,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_01.wav",
+      "cues": [
+        175,
+        283
+      ],
+      "captions": [
+        {
+          "text": "You take a perfect photo",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "at the beach,",
+          "from": 57,
+          "to": 83
+        },
+        {
+          "text": "except for a stranger walking",
+          "from": 83,
+          "to": 138
+        },
+        {
+          "text": "right behind you.",
+          "from": 138,
+          "to": 172
+        },
+        {
+          "text": "One tap,",
+          "from": 175,
+          "to": 202
+        },
+        {
+          "text": "and they vanish,",
+          "from": 203,
+          "to": 228
+        },
+        {
+          "text": "like they were never there.",
+          "from": 233,
+          "to": 280
+        },
+        {
+          "text": "Let's break down how magic",
+          "from": 283,
+          "to": 328
+        },
+        {
+          "text": "eraser works.",
+          "from": 331,
+          "to": 369
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "One tap, five steps",
+        "nodes": [
+          [
+            "Brush",
+            "You select",
+            "Brush over the stranger"
+          ],
+          [
+            "SquareDashed",
+            "Mask",
+            "Marks exactly those pixels"
+          ],
+          [
+            "Eraser",
+            "Remove",
+            "Leaves a hole"
+          ],
+          [
+            "Eye",
+            "Look around",
+            "Sand, waves, sky nearby"
+          ],
+          [
+            "Image",
+            "Fill in",
+            "Paints what belongs there"
+          ]
+        ]
+      },
+      "from": 383,
+      "durationInFrames": 612,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_02.wav",
+      "cues": [
+        74,
+        146,
+        265,
+        358,
+        519
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens after you tap.",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "You brush over the person",
+          "from": 74,
+          "to": 107
+        },
+        {
+          "text": "you want gone.",
+          "from": 109,
+          "to": 144
+        },
+        {
+          "text": "The app creates a mask,",
+          "from": 146,
+          "to": 188
+        },
+        {
+          "text": "marking exactly those pixels.",
+          "from": 190,
+          "to": 262
+        },
+        {
+          "text": "Those pixels are removed,",
+          "from": 265,
+          "to": 314
+        },
+        {
+          "text": "leaving a hole.",
+          "from": 316,
+          "to": 356
+        },
+        {
+          "text": "An inpainting model looks at",
+          "from": 358,
+          "to": 400
+        },
+        {
+          "text": "everything around the hole,",
+          "from": 403,
+          "to": 444
+        },
+        {
+          "text": "the sand,",
+          "from": 446,
+          "to": 467
+        },
+        {
+          "text": "the waves,",
+          "from": 469,
+          "to": 491
+        },
+        {
+          "text": "the sky,",
+          "from": 495,
+          "to": 516
+        },
+        {
+          "text": "and paints in what most",
+          "from": 519,
+          "to": 550
+        },
+        {
+          "text": "likely belongs there.",
+          "from": 552,
+          "to": 600
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Inpainting",
+        "short": "Fill",
+        "definition": "Filling a missing part of an image so it blends in with everything around it.",
+        "chips": [
+          [
+            "Palette",
+            "Match textures"
+          ],
+          [
+            "Ruler",
+            "Continue lines"
+          ],
+          [
+            "Sun",
+            "Match lighting"
+          ]
+        ]
+      },
+      "from": 995,
+      "durationInFrames": 565,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_03.wav",
+      "cues": [
+        159,
+        296,
+        379,
+        483
+      ],
+      "captions": [
+        {
+          "text": "That last step is called",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "inpainting, which you met in",
+          "from": 53,
+          "to": 106
+        },
+        {
+          "text": "episode fifteen.",
+          "from": 107,
+          "to": 157
+        },
+        {
+          "text": "The model fills a missing",
+          "from": 159,
+          "to": 196
+        },
+        {
+          "text": "area, so it blends in",
+          "from": 198,
+          "to": 244
+        },
+        {
+          "text": "with its surroundings.",
+          "from": 246,
+          "to": 292
+        },
+        {
+          "text": "It studies the nearby textures",
+          "from": 296,
+          "to": 347
+        },
+        {
+          "text": "and colours,",
+          "from": 349,
+          "to": 377
+        },
+        {
+          "text": "continues lines and patterns,",
+          "from": 379,
+          "to": 443
+        },
+        {
+          "text": "like the horizon,",
+          "from": 445,
+          "to": 482
+        },
+        {
+          "text": "and matches the lighting and shadows.",
+          "from": 483,
+          "to": 553
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Auto-detect",
+        "kicker": "EVEN SMARTER",
+        "steps": [
+          [
+            "ScanSearch",
+            "Detect",
+            "Find people, wires, bins"
+          ],
+          [
+            "Shapes",
+            "Segment",
+            "Outline each one exactly"
+          ],
+          [
+            "WandSparkles",
+            "Suggest",
+            "Remove with one tap"
+          ]
+        ]
+      },
+      "from": 1560,
+      "durationInFrames": 534,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_04.wav",
+      "cues": [
+        99,
+        268,
+        407
+      ],
+      "captions": [
+        {
+          "text": "Many apps even find the",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "distractions for you.",
+          "from": 51,
+          "to": 96
+        },
+        {
+          "text": "First, a detection model finds",
+          "from": 99,
+          "to": 156
+        },
+        {
+          "text": "objects, like people,",
+          "from": 158,
+          "to": 209
+        },
+        {
+          "text": "wires and bins.",
+          "from": 212,
+          "to": 265
+        },
+        {
+          "text": "Then a segmentation model outlines",
+          "from": 268,
+          "to": 330
+        },
+        {
+          "text": "each one,",
+          "from": 331,
+          "to": 352
+        },
+        {
+          "text": "pixel by pixel.",
+          "from": 354,
+          "to": 405
+        },
+        {
+          "text": "And the app suggests,",
+          "from": 407,
+          "to": 442
+        },
+        {
+          "text": "remove these,",
+          "from": 447,
+          "to": 473
+        },
+        {
+          "text": "with just one tap.",
+          "from": 477,
+          "to": 522
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll find it",
+        "items": [
+          [
+            "Smartphone",
+            "Phone galleries",
+            "Google, Samsung, Apple tools"
+          ],
+          [
+            "Palette",
+            "Design apps",
+            "Canva, Photoshop generative fill"
+          ],
+          [
+            "ShoppingBag",
+            "Online shops",
+            "Clean product photos"
+          ]
+        ]
+      },
+      "from": 2094,
+      "durationInFrames": 456,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_05.wav",
+      "cues": [
+        57,
+        205,
+        340
+      ],
+      "captions": [
+        {
+          "text": "So where will you find it?",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "Phone galleries from Google,",
+          "from": 57,
+          "to": 107
+        },
+        {
+          "text": "Samsung and Apple all have",
+          "from": 109,
+          "to": 156
+        },
+        {
+          "text": "their own versions.",
+          "from": 157,
+          "to": 202
+        },
+        {
+          "text": "Design apps like Canva and",
+          "from": 205,
+          "to": 256
+        },
+        {
+          "text": "Photoshop offer generative fill.",
+          "from": 258,
+          "to": 338
+        },
+        {
+          "text": "And online shops use it",
+          "from": 340,
+          "to": 380
+        },
+        {
+          "text": "to clean up product photos.",
+          "from": 382,
+          "to": 443
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "When it struggles",
+        "kicker": "THE HARD CASES",
+        "terms": [
+          [
+            "Maximize",
+            "Big areas",
+            "Little to copy from"
+          ],
+          [
+            "Type",
+            "Text and faces",
+            "Hard to fake well"
+          ],
+          [
+            "Sun",
+            "Shadows",
+            "Can be left behind"
+          ],
+          [
+            "HelpCircle",
+            "Hidden stuff",
+            "The AI has to guess"
+          ]
+        ]
+      },
+      "from": 2550,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_06.wav",
+      "cues": [
+        56,
+        159,
+        283,
+        402
+      ],
+      "captions": [
+        {
+          "text": "So when does it struggle?",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "Big areas,",
+          "from": 56,
+          "to": 77
+        },
+        {
+          "text": "where there's too little around",
+          "from": 82,
+          "to": 119
+        },
+        {
+          "text": "to copy from.",
+          "from": 120,
+          "to": 156
+        },
+        {
+          "text": "Text and faces in the",
+          "from": 159,
+          "to": 201
+        },
+        {
+          "text": "background, which are hard to",
+          "from": 201,
+          "to": 258
+        },
+        {
+          "text": "fake well.",
+          "from": 258,
+          "to": 279
+        },
+        {
+          "text": "Shadows and reflections,",
+          "from": 283,
+          "to": 332
+        },
+        {
+          "text": "which sometimes get left behind.",
+          "from": 333,
+          "to": 400
+        },
+        {
+          "text": "And whatever was hidden behind",
+          "from": 402,
+          "to": 441
+        },
+        {
+          "text": "the object,",
+          "from": 442,
+          "to": 467
+        },
+        {
+          "text": "which the AI has to guess.",
+          "from": 468,
+          "to": 530
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Magic eraser reveals what was really behind the object.",
+        "fact": "It can't see through things. It invents a believable guess, so edited photos aren't proof.",
+        "tip": "It guesses, it doesn't reveal"
+      },
+      "from": 3093,
+      "durationInFrames": 478,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_07.wav",
+      "cues": [
+        59,
+        203
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think magic eraser reveals",
+          "from": 59,
+          "to": 130
+        },
+        {
+          "text": "what was really behind the object.",
+          "from": 131,
+          "to": 200
+        },
+        {
+          "text": "It doesn't,",
+          "from": 203,
+          "to": 223
+        },
+        {
+          "text": "because it can't see through things.",
+          "from": 224,
+          "to": 289
+        },
+        {
+          "text": "It invents a believable guess,",
+          "from": 291,
+          "to": 352
+        },
+        {
+          "text": "which is why edited photos",
+          "from": 353,
+          "to": 401
+        },
+        {
+          "text": "should never be treated as proof.",
+          "from": 403,
+          "to": 464
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Filling the removed area is called…",
+        "options": [
+          "Inpainting",
+          "Outpainting",
+          "Speech to text"
+        ],
+        "answer": 0
+      },
+      "from": 3571,
+      "durationInFrames": 475,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_08.wav",
+      "cues": [
+        151,
+        358
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 33
+        },
+        {
+          "text": "What is the AI step",
+          "from": 44,
+          "to": 80
+        },
+        {
+          "text": "that fills in the removed",
+          "from": 80,
+          "to": 126
+        },
+        {
+          "text": "area called?",
+          "from": 126,
+          "to": 149
+        },
+        {
+          "text": "Pause and think,",
+          "from": 151,
+          "to": 190
+        },
+        {
+          "text": "and if you get it",
+          "from": 191,
+          "to": 208
+        },
+        {
+          "text": "right, comment below!",
+          "from": 210,
+          "to": 266
+        },
+        {
+          "text": "Inpainting!",
+          "from": 358,
+          "to": 387
+        },
+        {
+          "text": "It fills the hole so",
+          "from": 391,
+          "to": 419
+        },
+        {
+          "text": "it blends right in.",
+          "from": 420,
+          "to": 462
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Select",
+            "brush over it"
+          ],
+          [
+            "Mask",
+            "mark the pixels"
+          ],
+          [
+            "Inpaint",
+            "fill so it blends"
+          ],
+          [
+            "Guess",
+            "it invents, not reveals"
+          ]
+        ],
+        "next": "EP 16 · Reasoning models"
+      },
+      "from": 4046,
+      "durationInFrames": 578,
+      "voiceFrom": 10,
+      "audio": "lessons/uc05/voice_09.wav",
+      "cues": [
+        45,
+        105,
+        173,
+        259,
+        378
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "You brush over what you",
+          "from": 45,
+          "to": 73
+        },
+        {
+          "text": "want gone.",
+          "from": 74,
+          "to": 101
+        },
+        {
+          "text": "The app masks those pixels.",
+          "from": 105,
+          "to": 171
+        },
+        {
+          "text": "Inpainting fills the hole so",
+          "from": 173,
+          "to": 221
+        },
+        {
+          "text": "it blends in.",
+          "from": 221,
+          "to": 257
+        },
+        {
+          "text": "And remember,",
+          "from": 259,
+          "to": 281
+        },
+        {
+          "text": "it invents a guess,",
+          "from": 284,
+          "to": 319
+        },
+        {
+          "text": "it doesn't reveal the truth.",
+          "from": 321,
+          "to": 375
+        },
+        {
+          "text": "Next, we'll learn how some",
+          "from": 378,
+          "to": 423
+        },
+        {
+          "text": "AI models think before they answer.",
+          "from": 426,
+          "to": 503
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 507,
+          "to": 567
+        }
+      ],
+      "image": null
+    }
+  ]
+}

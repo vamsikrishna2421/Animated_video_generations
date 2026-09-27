@@ -1,0 +1,228 @@
+{
+  "id": "ep16",
+  "episode": 16,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Reasoning Models",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Some AI models now pause and think before they answer, sometimes for a few seconds, sometimes for minutes. [1] And they solve problems that normal chatbots often get wrong. [2] So let's understand reasoning models.",
+      "data": {
+        "kicker": "EPISODE 16",
+        "title": [
+          "Reasoning",
+          "Models"
+        ],
+        "subtitle": "AI that thinks before it answers",
+        "buzzwords": [
+          "Chain of thought",
+          "Thinking",
+          "Test-time compute",
+          "Logic",
+          "Maths",
+          "Planning",
+          "Step by step",
+          "Budget"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Here's the difference. [1] A regular LLM answers straight away, word by word, a bit like blurting out the first thing that comes to mind. [2] A reasoning model first works through the problem step by step, checks itself, and only then gives the answer.",
+      "data": {
+        "heading": "Fast vs thoughtful",
+        "kicker": "TWO STYLES",
+        "left": {
+          "icon": "Zap",
+          "title": "Regular model",
+          "stat": "Answers instantly",
+          "label": "first thought, straight out"
+        },
+        "right": {
+          "icon": "Brain",
+          "title": "Reasoning model",
+          "stat": "Thinks first",
+          "label": "works it out, then answers"
+        }
+      }
+    },
+    {
+      "type": "definition",
+      "text": "The trick behind it is called chain of thought. [1] Instead of jumping to the answer, the model writes out its reasoning, step by step. [2] It breaks the problem into smaller parts, [3] checks each step, [4] and fixes mistakes before it answers.",
+      "data": {
+        "term": "Chain of thought",
+        "short": "Think",
+        "definition": "The model works through a problem step by step before giving its final answer.",
+        "chips": [
+          [
+            "ListOrdered",
+            "Break it down"
+          ],
+          [
+            "CheckCircle2",
+            "Check each step"
+          ],
+          [
+            "RefreshCw",
+            "Fix mistakes"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Let's watch it on a classic puzzle. A bat and a ball cost 110 rupees in total, and the bat costs 100 rupees more than the ball. How much is the ball? [1] A quick guess says 10 rupees, but that's wrong. [2] A reasoning model thinks, if the ball is x, the bat is x plus 100, so 2x plus 100 equals 110. [3] So x is 5, and the ball costs 5 rupees.",
+      "data": {
+        "heading": "The bat and ball puzzle",
+        "kicker": "WATCH IT THINK",
+        "steps": [
+          [
+            "Zap",
+            "Quick guess",
+            "₹10 (wrong)"
+          ],
+          [
+            "Calculator",
+            "Step by step",
+            "ball = x, bat = x + 100, 2x + 100 = 110"
+          ],
+          [
+            "CheckCircle2",
+            "Answer",
+            "ball = ₹5, bat = ₹105"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are a few terms you'll hear. [1] Thinking tokens, the extra words the model writes while reasoning, which you often don't see. [2] Test time compute, which means spending more computing power while answering, not only while training. [3] A thinking budget, a setting for how long it's allowed to think. [4] And the trade off, more thinking usually means better answers, but slower and more expensive.",
+      "data": {
+        "heading": "Reasoning words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "MessageSquare",
+            "Thinking tokens",
+            "Hidden working notes"
+          ],
+          [
+            "Cpu",
+            "Test-time compute",
+            "More effort while answering"
+          ],
+          [
+            "Timer",
+            "Thinking budget",
+            "How long it may think"
+          ],
+          [
+            "Scale",
+            "Trade-off",
+            "Smarter, but slower and costlier"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "So when should you use which? [1] Here's a quick cheat sheet. [2] For quick chats and simple questions, a regular model is faster. [3] For maths and logic, use reasoning. [4] For tricky coding bugs, reasoning helps a lot. [5] And for big plans with many steps, reasoning wins.",
+      "data": {
+        "heading": "Which one when?",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Regular",
+          "Reasoning"
+        ],
+        "rows": [
+          [
+            "Quick chat",
+            "✓",
+            "✗"
+          ],
+          [
+            "Maths & logic",
+            "✗",
+            "✓"
+          ],
+          [
+            "Coding bugs",
+            "~",
+            "✓"
+          ],
+          [
+            "Big plans",
+            "✗",
+            "✓"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think reasoning models think like humans, and are never wrong. [2] They're still predicting words, just more carefully. They can still make mistakes, and sometimes they overthink simple questions. So keep checking the important answers.",
+      "data": {
+        "myth": "Reasoning models think like humans and are never wrong.",
+        "fact": "They still predict words, just more carefully. They can make mistakes and overthink simple questions.",
+        "tip": "Still verify what matters"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! A bat and a ball cost 110 rupees, and the bat costs 100 rupees more. How much is the ball? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] 5 rupees! The bat is 105, and together they make 110.",
+      "data": {
+        "question": "The ball costs…",
+        "options": [
+          "₹10",
+          "₹5",
+          "₹55"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Reasoning models think before they answer. [2] They use chain of thought, working step by step. [3] More thinking means better answers, but slower and costlier. [4] Use them for maths, code and big plans. [5] Next, a real world breakdown, how a bank's customer support bot works. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Reasoning",
+            "thinks before answering"
+          ],
+          [
+            "Chain of thought",
+            "step by step working"
+          ],
+          [
+            "Trade-off",
+            "better, but slower, costlier"
+          ],
+          [
+            "Use for",
+            "maths, code, big plans"
+          ]
+        ],
+        "next": "Use Case · Bank support bot"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Some AI models now think before they answer. What's actually going on?\n\nEpisode 16 of AI From Scratch: Reasoning Models\n- Fast vs thoughtful: regular vs reasoning models\n- Chain of thought, explained simply\n- Watch it solve the famous bat and ball puzzle\n- Jargon: thinking tokens, test-time compute, thinking budget\n- Cheat sheet: when to use which\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How a bank's customer support bot works.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #ReasoningModels #LearnAI #ChatGPT #AIForBeginners",
+    "pinned": "Quiz answer: The ball costs ₹5 and the bat ₹105. Did you say ₹10 at first? Most people do!",
+    "cover": "'Reasoning Models' title card",
+    "alt": "Animated lesson explaining AI reasoning models and chain-of-thought thinking with the bat and ball puzzle."
+  }
+}

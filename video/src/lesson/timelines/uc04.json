@@ -1,0 +1,836 @@
+{
+  "id": "uc04",
+  "episode": 4,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Netflix and YouTube Recommend Videos",
+  "host": "female",
+  "label": "USE CASE 04",
+  "fps": 30,
+  "totalFrames": 4525,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc04/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 04",
+        "title": [
+          "What To",
+          "Watch Next"
+        ],
+        "subtitle": "How recommendations work",
+        "buzzwords": [
+          "Watch time",
+          "Embeddings",
+          "Ranking",
+          "Signals",
+          "Cold start",
+          "Collaborative",
+          "For you",
+          "Autoplay"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 349,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_01.wav",
+      "cues": [
+        155,
+        257
+      ],
+      "captions": [
+        {
+          "text": "You finish one video,",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "and the next one is",
+          "from": 57,
+          "to": 80
+        },
+        {
+          "text": "somehow exactly what you wanted.",
+          "from": 82,
+          "to": 153
+        },
+        {
+          "text": "So how do YouTube and",
+          "from": 155,
+          "to": 195
+        },
+        {
+          "text": "Netflix know your taste so well?",
+          "from": 195,
+          "to": 255
+        },
+        {
+          "text": "Let's break down recommendation systems.",
+          "from": 257,
+          "to": 335
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "It starts with signals",
+        "nodes": [
+          [
+            "Play",
+            "What you watch",
+            "And for how long"
+          ],
+          [
+            "ThumbsUp",
+            "Likes and skips",
+            "Every tap is a signal"
+          ],
+          [
+            "Users",
+            "Similar people",
+            "What they enjoyed"
+          ],
+          [
+            "Hash",
+            "Turned into numbers",
+            "Your taste as embeddings"
+          ],
+          [
+            "Target",
+            "Prediction",
+            "What you'll likely watch next"
+          ]
+        ]
+      },
+      "from": 349,
+      "durationInFrames": 518,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_02.wav",
+      "cues": [
+        121,
+        191,
+        269,
+        342,
+        405
+      ],
+      "captions": [
+        {
+          "text": "It all starts with signals,",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "basically everything you do.",
+          "from": 60,
+          "to": 120
+        },
+        {
+          "text": "What you watch,",
+          "from": 121,
+          "to": 146
+        },
+        {
+          "text": "and for how long.",
+          "from": 150,
+          "to": 189
+        },
+        {
+          "text": "What you like,",
+          "from": 191,
+          "to": 215
+        },
+        {
+          "text": "share or skip.",
+          "from": 219,
+          "to": 267
+        },
+        {
+          "text": "What people similar to you enjoyed.",
+          "from": 269,
+          "to": 339
+        },
+        {
+          "text": "All of this is turned",
+          "from": 342,
+          "to": 369
+        },
+        {
+          "text": "into numbers,",
+          "from": 369,
+          "to": 400
+        },
+        {
+          "text": "and the system predicts what",
+          "from": 405,
+          "to": 440
+        },
+        {
+          "text": "you're most likely to watch next.",
+          "from": 441,
+          "to": 504
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "embedmap",
+      "data": {
+        "heading": "A map of taste",
+        "kicker": "REMEMBER EP 06?",
+        "points": [
+          [
+            "Standup",
+            0.14,
+            0.2,
+            0
+          ],
+          [
+            "Sitcoms",
+            0.3,
+            0.12,
+            0
+          ],
+          [
+            "Pranks",
+            0.22,
+            0.34,
+            0
+          ],
+          [
+            "Test match",
+            0.66,
+            0.14,
+            1
+          ],
+          [
+            "Highlights",
+            0.84,
+            0.26,
+            1
+          ],
+          [
+            "Commentary",
+            0.7,
+            0.34,
+            1
+          ],
+          [
+            "Biryani",
+            0.58,
+            0.7,
+            2
+          ],
+          [
+            "Dosa",
+            0.8,
+            0.8,
+            2
+          ],
+          [
+            "Baking",
+            0.44,
+            0.86,
+            2
+          ]
+        ],
+        "query": [
+          "You",
+          0.66,
+          0.78
+        ],
+        "neighbors": [
+          "Biryani",
+          "Dosa"
+        ],
+        "note": "Watch cooking videos, get more cooking videos"
+      },
+      "from": 867,
+      "durationInFrames": 557,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_03.wav",
+      "cues": [
+        103,
+        340,
+        449
+      ],
+      "captions": [
+        {
+          "text": "Here's the key idea,",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "from episode six.",
+          "from": 54,
+          "to": 101
+        },
+        {
+          "text": "Both you and every video",
+          "from": 103,
+          "to": 152
+        },
+        {
+          "text": "get an embedding,",
+          "from": 154,
+          "to": 182
+        },
+        {
+          "text": "a spot on a map",
+          "from": 184,
+          "to": 209
+        },
+        {
+          "text": "of taste.",
+          "from": 210,
+          "to": 244
+        },
+        {
+          "text": "Comedy here,",
+          "from": 246,
+          "to": 273
+        },
+        {
+          "text": "cricket there,",
+          "from": 275,
+          "to": 297
+        },
+        {
+          "text": "cooking over there.",
+          "from": 300,
+          "to": 338
+        },
+        {
+          "text": "Your profile lands on the",
+          "from": 340,
+          "to": 390
+        },
+        {
+          "text": "map, based on what you watch.",
+          "from": 390,
+          "to": 447
+        },
+        {
+          "text": "And the closest videos become",
+          "from": 449,
+          "to": 494
+        },
+        {
+          "text": "your recommendations.",
+          "from": 496,
+          "to": 544
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Two stages",
+        "kicker": "AT MASSIVE SCALE",
+        "steps": [
+          [
+            "Filter",
+            "Pick candidates",
+            "Millions → a few hundred"
+          ],
+          [
+            "ListOrdered",
+            "Rank them",
+            "Score and sort carefully"
+          ],
+          [
+            "Shuffle",
+            "Add variety",
+            "A few fresh surprises"
+          ]
+        ]
+      },
+      "from": 1424,
+      "durationInFrames": 622,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_04.wav",
+      "cues": [
+        97,
+        298,
+        457
+      ],
+      "captions": [
+        {
+          "text": "Big platforms do this in",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "two stages.",
+          "from": 54,
+          "to": 93
+        },
+        {
+          "text": "First, they pick candidates.",
+          "from": 97,
+          "to": 165
+        },
+        {
+          "text": "From millions of videos,",
+          "from": 167,
+          "to": 203
+        },
+        {
+          "text": "they quickly pick a few",
+          "from": 208,
+          "to": 238
+        },
+        {
+          "text": "hundred that might suit you.",
+          "from": 239,
+          "to": 295
+        },
+        {
+          "text": "Then comes ranking,",
+          "from": 298,
+          "to": 334
+        },
+        {
+          "text": "where a bigger model scores",
+          "from": 335,
+          "to": 373
+        },
+        {
+          "text": "each one carefully,",
+          "from": 375,
+          "to": 409
+        },
+        {
+          "text": "and puts them in order.",
+          "from": 410,
+          "to": 455
+        },
+        {
+          "text": "And finally,",
+          "from": 457,
+          "to": 484
+        },
+        {
+          "text": "they mix in a little",
+          "from": 486,
+          "to": 511
+        },
+        {
+          "text": "variety, so you also see",
+          "from": 512,
+          "to": 569
+        },
+        {
+          "text": "something fresh.",
+          "from": 571,
+          "to": 610
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Recommendation words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Users",
+            "Collaborative",
+            "People like you liked it"
+          ],
+          [
+            "Film",
+            "Content-based",
+            "Similar to what you watched"
+          ],
+          [
+            "Clock",
+            "Watch time",
+            "A very strong signal"
+          ],
+          [
+            "Snowflake",
+            "Cold start",
+            "New user, no history"
+          ]
+        ]
+      },
+      "from": 2046,
+      "durationInFrames": 578,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_05.wav",
+      "cues": [
+        68,
+        185,
+        308,
+        412
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms you'll hear.",
+          "from": 10,
+          "to": 66
+        },
+        {
+          "text": "Collaborative filtering,",
+          "from": 68,
+          "to": 110
+        },
+        {
+          "text": "which means people like you",
+          "from": 111,
+          "to": 148
+        },
+        {
+          "text": "liked this.",
+          "from": 149,
+          "to": 183
+        },
+        {
+          "text": "Content based,",
+          "from": 185,
+          "to": 216
+        },
+        {
+          "text": "which means this is similar",
+          "from": 218,
+          "to": 260
+        },
+        {
+          "text": "to what you watched.",
+          "from": 262,
+          "to": 305
+        },
+        {
+          "text": "Watch time,",
+          "from": 308,
+          "to": 333
+        },
+        {
+          "text": "one of the strongest signals",
+          "from": 333,
+          "to": 393
+        },
+        {
+          "text": "of all.",
+          "from": 393,
+          "to": 409
+        },
+        {
+          "text": "And the cold start problem,",
+          "from": 412,
+          "to": 458
+        },
+        {
+          "text": "when a new user or",
+          "from": 460,
+          "to": 492
+        },
+        {
+          "text": "a new video has no",
+          "from": 493,
+          "to": 526
+        },
+        {
+          "text": "history yet.",
+          "from": 529,
+          "to": 566
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Recommendations everywhere",
+        "items": [
+          [
+            "Play",
+            "Video apps",
+            "YouTube, Netflix, Prime"
+          ],
+          [
+            "ShoppingCart",
+            "Shopping",
+            "Amazon, Flipkart"
+          ],
+          [
+            "Music",
+            "Music",
+            "Spotify daily mixes"
+          ]
+        ]
+      },
+      "from": 2624,
+      "durationInFrames": 330,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_06.wav",
+      "cues": [
+        61,
+        151,
+        241
+      ],
+      "captions": [
+        {
+          "text": "And this is everywhere.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "YouTube and Netflix choose your",
+          "from": 61,
+          "to": 124
+        },
+        {
+          "text": "next video.",
+          "from": 124,
+          "to": 148
+        },
+        {
+          "text": "Amazon and Flipkart suggest products.",
+          "from": 151,
+          "to": 235
+        },
+        {
+          "text": "And Spotify builds your daily mixes.",
+          "from": 241,
+          "to": 317
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Apps listen to my conversations to recommend things.",
+        "fact": "They usually don't need to. Your clicks, searches and similar people predict you surprisingly well.",
+        "tip": "Your clicks say a lot"
+      },
+      "from": 2954,
+      "durationInFrames": 453,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_07.wav",
+      "cues": [
+        59,
+        178
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think apps listen to",
+          "from": 59,
+          "to": 100
+        },
+        {
+          "text": "their conversations to recommend things.",
+          "from": 100,
+          "to": 176
+        },
+        {
+          "text": "Usually, they don't need to.",
+          "from": 178,
+          "to": 238
+        },
+        {
+          "text": "What you watch,",
+          "from": 239,
+          "to": 266
+        },
+        {
+          "text": "search and click,",
+          "from": 270,
+          "to": 304
+        },
+        {
+          "text": "plus what similar people do,",
+          "from": 305,
+          "to": 359
+        },
+        {
+          "text": "is enough to predict you",
+          "from": 361,
+          "to": 394
+        },
+        {
+          "text": "surprisingly well.",
+          "from": 396,
+          "to": 441
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The cold start problem is…",
+        "options": [
+          "The server is too cold",
+          "A new user or video has no history",
+          "Videos load too slowly"
+        ],
+        "answer": 1
+      },
+      "from": 3407,
+      "durationInFrames": 435,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_08.wav",
+      "cues": [
+        88,
+        287
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 29
+        },
+        {
+          "text": "What's the cold start problem?",
+          "from": 31,
+          "to": 86
+        },
+        {
+          "text": "Pause and think,",
+          "from": 88,
+          "to": 122
+        },
+        {
+          "text": "and if you get it",
+          "from": 123,
+          "to": 139
+        },
+        {
+          "text": "right, comment below!",
+          "from": 141,
+          "to": 194
+        },
+        {
+          "text": "A new user or video",
+          "from": 287,
+          "to": 330
+        },
+        {
+          "text": "has no history yet,",
+          "from": 332,
+          "to": 374
+        },
+        {
+          "text": "so it's hard to recommend!",
+          "from": 375,
+          "to": 423
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Signals",
+            "watch, like, skip"
+          ],
+          [
+            "Embeddings",
+            "you and videos on a map"
+          ],
+          [
+            "Two stages",
+            "pick candidates, then rank"
+          ],
+          [
+            "Cold start",
+            "no history yet"
+          ]
+        ],
+        "next": "EP 15 · Image & video, Part 2"
+      },
+      "from": 3842,
+      "durationInFrames": 683,
+      "voiceFrom": 10,
+      "audio": "lessons/uc04/voice_09.wav",
+      "cues": [
+        47,
+        177,
+        278,
+        363,
+        447
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Recommendations start with your signals,",
+          "from": 47,
+          "to": 107
+        },
+        {
+          "text": "like watch time and skips.",
+          "from": 112,
+          "to": 173
+        },
+        {
+          "text": "You and every video become",
+          "from": 177,
+          "to": 221
+        },
+        {
+          "text": "points on a map of taste.",
+          "from": 223,
+          "to": 275
+        },
+        {
+          "text": "Platforms pick candidates,",
+          "from": 278,
+          "to": 323
+        },
+        {
+          "text": "then rank them.",
+          "from": 328,
+          "to": 361
+        },
+        {
+          "text": "And new users face the",
+          "from": 363,
+          "to": 396
+        },
+        {
+          "text": "cold start problem.",
+          "from": 397,
+          "to": 444
+        },
+        {
+          "text": "Next, part two of image",
+          "from": 447,
+          "to": 498
+        },
+        {
+          "text": "generation, how AI now creates videos.",
+          "from": 499,
+          "to": 601
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 605,
+          "to": 671
+        }
+      ],
+      "image": null
+    }
+  ]
+}

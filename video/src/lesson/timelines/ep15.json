@@ -1,0 +1,847 @@
+{
+  "id": "ep15",
+  "episode": 15,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Image and Video Generation Part 2",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5024,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep15/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 15",
+        "title": [
+          "Image &",
+          "Video AI"
+        ],
+        "subtitle": "Part 2: video, editing and prompting",
+        "buzzwords": [
+          "Text to video",
+          "Frames",
+          "Inpainting",
+          "Outpainting",
+          "Consistency",
+          "Motion",
+          "Prompting",
+          "Editing"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 392,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_01.wav",
+      "cues": [
+        141,
+        304
+      ],
+      "captions": [
+        {
+          "text": "In part one,",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "we saw how diffusion turns",
+          "from": 39,
+          "to": 84
+        },
+        {
+          "text": "noise into a picture.",
+          "from": 86,
+          "to": 139
+        },
+        {
+          "text": "But AI can now make",
+          "from": 141,
+          "to": 176
+        },
+        {
+          "text": "videos too,",
+          "from": 178,
+          "to": 210
+        },
+        {
+          "text": "and even edit your photos",
+          "from": 212,
+          "to": 253
+        },
+        {
+          "text": "with just a sentence.",
+          "from": 254,
+          "to": 301
+        },
+        {
+          "text": "So in part two,",
+          "from": 304,
+          "to": 340
+        },
+        {
+          "text": "let's see how.",
+          "from": 342,
+          "to": 380
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Image vs video",
+        "kicker": "WHY VIDEO IS HARDER",
+        "left": {
+          "icon": "Image",
+          "title": "One image",
+          "stat": "Look good once",
+          "label": "a single frame"
+        },
+        "right": {
+          "icon": "Film",
+          "title": "A video",
+          "stat": "Stay consistent",
+          "label": "hundreds of frames that must match"
+        }
+      },
+      "from": 392,
+      "durationInFrames": 469,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_02.wav",
+      "cues": [
+        151,
+        231
+      ],
+      "captions": [
+        {
+          "text": "A video is just many",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "images in a row,",
+          "from": 54,
+          "to": 89
+        },
+        {
+          "text": "so why is it so",
+          "from": 89,
+          "to": 122
+        },
+        {
+          "text": "much harder?",
+          "from": 122,
+          "to": 148
+        },
+        {
+          "text": "An image only needs to",
+          "from": 151,
+          "to": 189
+        },
+        {
+          "text": "look good once.",
+          "from": 190,
+          "to": 229
+        },
+        {
+          "text": "But a video needs every",
+          "from": 231,
+          "to": 266
+        },
+        {
+          "text": "frame to match the next,",
+          "from": 268,
+          "to": 317
+        },
+        {
+          "text": "the same face,",
+          "from": 319,
+          "to": 352
+        },
+        {
+          "text": "the same shirt,",
+          "from": 353,
+          "to": 384
+        },
+        {
+          "text": "and motion that makes physical sense.",
+          "from": 386,
+          "to": 457
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How AI makes video",
+        "kicker": "UNDER THE HOOD",
+        "nodes": [
+          [
+            "Type",
+            "Your prompt",
+            "“Rain on a Hyderabad street at night”"
+          ],
+          [
+            "Layers",
+            "A block of frames",
+            "Space and time together"
+          ],
+          [
+            "Tv",
+            "Noise everywhere",
+            "Every frame starts as static"
+          ],
+          [
+            "Eraser",
+            "Clean up together",
+            "Frames stay consistent"
+          ],
+          [
+            "Film",
+            "Your clip",
+            "Usually a few seconds"
+          ]
+        ]
+      },
+      "from": 861,
+      "durationInFrames": 673,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_03.wav",
+      "cues": [
+        77,
+        217,
+        369,
+        456,
+        563
+      ],
+      "captions": [
+        {
+          "text": "Here's how video models handle it.",
+          "from": 10,
+          "to": 75
+        },
+        {
+          "text": "You describe a scene,",
+          "from": 77,
+          "to": 114
+        },
+        {
+          "text": "like rain falling on a",
+          "from": 116,
+          "to": 154
+        },
+        {
+          "text": "Hyderabad street at night.",
+          "from": 156,
+          "to": 215
+        },
+        {
+          "text": "The model treats the whole",
+          "from": 217,
+          "to": 251
+        },
+        {
+          "text": "clip as one block of",
+          "from": 252,
+          "to": 284
+        },
+        {
+          "text": "frames, across space and time.",
+          "from": 286,
+          "to": 367
+        },
+        {
+          "text": "It starts with noise,",
+          "from": 369,
+          "to": 410
+        },
+        {
+          "text": "for every frame at once,",
+          "from": 410,
+          "to": 456
+        },
+        {
+          "text": "and cleans them all up",
+          "from": 456,
+          "to": 498
+        },
+        {
+          "text": "together, so they stay consistent,",
+          "from": 498,
+          "to": 563
+        },
+        {
+          "text": "giving you a short clip,",
+          "from": 563,
+          "to": 609
+        },
+        {
+          "text": "usually a few seconds long.",
+          "from": 609,
+          "to": 661
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Editing with AI",
+        "kicker": "THREE TRICKS",
+        "steps": [
+          [
+            "Brush",
+            "Inpainting",
+            "Redraw a selected area"
+          ],
+          [
+            "Maximize",
+            "Outpainting",
+            "Extend beyond the edges"
+          ],
+          [
+            "WandSparkles",
+            "Instruction editing",
+            "“Make it sunset”"
+          ]
+        ]
+      },
+      "from": 1534,
+      "durationInFrames": 589,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_04.wav",
+      "cues": [
+        113,
+        271,
+        394
+      ],
+      "captions": [
+        {
+          "text": "AI can also edit the",
+          "from": 10,
+          "to": 52
+        },
+        {
+          "text": "images you already have.",
+          "from": 53,
+          "to": 111
+        },
+        {
+          "text": "Inpainting, where you select an",
+          "from": 113,
+          "to": 164
+        },
+        {
+          "text": "area, and the AI redraws",
+          "from": 166,
+          "to": 223
+        },
+        {
+          "text": "just that part.",
+          "from": 225,
+          "to": 268
+        },
+        {
+          "text": "Outpainting, where it extends the",
+          "from": 271,
+          "to": 328
+        },
+        {
+          "text": "picture beyond its edges.",
+          "from": 329,
+          "to": 391
+        },
+        {
+          "text": "And instruction editing,",
+          "from": 394,
+          "to": 435
+        },
+        {
+          "text": "where you simply say,",
+          "from": 438,
+          "to": 474
+        },
+        {
+          "text": "make it sunset,",
+          "from": 476,
+          "to": 512
+        },
+        {
+          "text": "and it changes the scene",
+          "from": 514,
+          "to": 547
+        },
+        {
+          "text": "for you.",
+          "from": 548,
+          "to": 576
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "prompt",
+      "data": {
+        "heading": "Prompting for images",
+        "kicker": "THE RECIPE",
+        "bad": "A cat.",
+        "badReply": "A plain, generic photo of a random cat.",
+        "parts": [
+          [
+            "SUBJECT",
+            "A fluffy orange cat wearing a tiny helmet.",
+            "#8B5CF6"
+          ],
+          [
+            "SETTING",
+            "Riding a scooter through a busy Hyderabad market.",
+            "#22D3EE"
+          ],
+          [
+            "STYLE",
+            "Colourful 3D animation.",
+            "#F59E0B"
+          ],
+          [
+            "CAMERA",
+            "Low angle, golden hour light.",
+            "#34D399"
+          ]
+        ],
+        "goodReply": "A vivid, cinematic scene: an orange cat in a helmet zooming through a golden-hour market."
+      },
+      "from": 2123,
+      "durationInFrames": 788,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_05.wav",
+      "cues": [
+        117,
+        225,
+        376,
+        497,
+        595,
+        698
+      ],
+      "captions": [
+        {
+          "text": "Want better results?",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "Build your image prompt like this.",
+          "from": 54,
+          "to": 115
+        },
+        {
+          "text": "A lazy prompt,",
+          "from": 117,
+          "to": 145
+        },
+        {
+          "text": "like a cat,",
+          "from": 150,
+          "to": 169
+        },
+        {
+          "text": "gives you something generic.",
+          "from": 171,
+          "to": 222
+        },
+        {
+          "text": "Now add a subject with",
+          "from": 225,
+          "to": 257
+        },
+        {
+          "text": "details, a fluffy orange cat",
+          "from": 258,
+          "to": 321
+        },
+        {
+          "text": "wearing a tiny helmet.",
+          "from": 322,
+          "to": 374
+        },
+        {
+          "text": "Then the setting,",
+          "from": 376,
+          "to": 400
+        },
+        {
+          "text": "riding a scooter through a",
+          "from": 403,
+          "to": 439
+        },
+        {
+          "text": "busy Hyderabad market.",
+          "from": 442,
+          "to": 496
+        },
+        {
+          "text": "The style,",
+          "from": 497,
+          "to": 527
+        },
+        {
+          "text": "colourful 3D animation.",
+          "from": 527,
+          "to": 592
+        },
+        {
+          "text": "And the camera,",
+          "from": 595,
+          "to": 620
+        },
+        {
+          "text": "low angle,",
+          "from": 623,
+          "to": 647
+        },
+        {
+          "text": "golden hour light.",
+          "from": 652,
+          "to": 696
+        },
+        {
+          "text": "And now,",
+          "from": 698,
+          "to": 717
+        },
+        {
+          "text": "it looks like a movie poster.",
+          "from": 719,
+          "to": 777
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where it's used",
+        "items": [
+          [
+            "Megaphone",
+            "Ads and reels",
+            "Short clips in minutes"
+          ],
+          [
+            "Clapperboard",
+            "Previews",
+            "Scenes before filming"
+          ],
+          [
+            "Eraser",
+            "Photo fixes",
+            "Remove unwanted objects"
+          ]
+        ]
+      },
+      "from": 2911,
+      "durationInFrames": 393,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_06.wav",
+      "cues": [
+        67,
+        158,
+        259
+      ],
+      "captions": [
+        {
+          "text": "So where do people use this?",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "Short video ads and social",
+          "from": 67,
+          "to": 114
+        },
+        {
+          "text": "media clips.",
+          "from": 116,
+          "to": 154
+        },
+        {
+          "text": "Film and game previews,",
+          "from": 158,
+          "to": 200
+        },
+        {
+          "text": "before anything is shot.",
+          "from": 204,
+          "to": 257
+        },
+        {
+          "text": "And quick photo fixes,",
+          "from": 259,
+          "to": 302
+        },
+        {
+          "text": "like removing people from the background.",
+          "from": 302,
+          "to": 381
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI can already make a full movie from one prompt.",
+        "fact": "Most models make short clips. Real productions stitch many clips with lots of human editing.",
+        "tip": "Short clips, human editing"
+      },
+      "from": 3304,
+      "durationInFrames": 539,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_07.wav",
+      "cues": [
+        58,
+        180
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think AI can already",
+          "from": 58,
+          "to": 104
+        },
+        {
+          "text": "make a full movie from",
+          "from": 105,
+          "to": 141
+        },
+        {
+          "text": "one prompt.",
+          "from": 142,
+          "to": 177
+        },
+        {
+          "text": "Not yet.",
+          "from": 180,
+          "to": 208
+        },
+        {
+          "text": "Most models make short clips,",
+          "from": 212,
+          "to": 268
+        },
+        {
+          "text": "and keeping characters consistent across",
+          "from": 273,
+          "to": 332
+        },
+        {
+          "text": "scenes is still hard.",
+          "from": 334,
+          "to": 393
+        },
+        {
+          "text": "Real productions stitch many clips",
+          "from": 396,
+          "to": 451
+        },
+        {
+          "text": "together, with a lot of",
+          "from": 453,
+          "to": 487
+        },
+        {
+          "text": "human editing.",
+          "from": 489,
+          "to": 527
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "AI video is harder because…",
+        "options": [
+          "Videos have more colours",
+          "Every frame must stay consistent",
+          "Videos need longer prompts"
+        ],
+        "answer": 1
+      },
+      "from": 3843,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_08.wav",
+      "cues": [
+        143,
+        345
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Why is AI video harder",
+          "from": 43,
+          "to": 90
+        },
+        {
+          "text": "than AI images?",
+          "from": 92,
+          "to": 141
+        },
+        {
+          "text": "Pause and think,",
+          "from": 143,
+          "to": 179
+        },
+        {
+          "text": "and if you get it",
+          "from": 181,
+          "to": 197
+        },
+        {
+          "text": "right, comment below!",
+          "from": 199,
+          "to": 254
+        },
+        {
+          "text": "Every frame must stay consistent",
+          "from": 345,
+          "to": 404
+        },
+        {
+          "text": "with the next!",
+          "from": 404,
+          "to": 431
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Video",
+            "many frames that must match"
+          ],
+          [
+            "Together",
+            "clean all frames as one block"
+          ],
+          [
+            "Editing",
+            "inpaint, outpaint, instruct"
+          ],
+          [
+            "Prompts",
+            "subject, setting, style, camera"
+          ]
+        ],
+        "next": "Use Case · Magic eraser"
+      },
+      "from": 4287,
+      "durationInFrames": 737,
+      "voiceFrom": 10,
+      "audio": "lessons/ep15/voice_09.wav",
+      "cues": [
+        45,
+        130,
+        240,
+        359,
+        486
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 42
+        },
+        {
+          "text": "A video is many frames",
+          "from": 45,
+          "to": 88
+        },
+        {
+          "text": "that must match.",
+          "from": 89,
+          "to": 127
+        },
+        {
+          "text": "Video models clean up all",
+          "from": 130,
+          "to": 169
+        },
+        {
+          "text": "the frames together,",
+          "from": 170,
+          "to": 197
+        },
+        {
+          "text": "as one block.",
+          "from": 203,
+          "to": 237
+        },
+        {
+          "text": "AI can inpaint,",
+          "from": 240,
+          "to": 279
+        },
+        {
+          "text": "outpaint, and edit from instructions.",
+          "from": 283,
+          "to": 356
+        },
+        {
+          "text": "And great prompts have a",
+          "from": 359,
+          "to": 388
+        },
+        {
+          "text": "subject, setting,",
+          "from": 390,
+          "to": 430
+        },
+        {
+          "text": "style and camera.",
+          "from": 435,
+          "to": 483
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 486,
+          "to": 549
+        },
+        {
+          "text": "how magic eraser removes people",
+          "from": 550,
+          "to": 612
+        },
+        {
+          "text": "from your photos.",
+          "from": 614,
+          "to": 652
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 656,
+          "to": 725
+        }
+      ],
+      "image": null
+    }
+  ]
+}
