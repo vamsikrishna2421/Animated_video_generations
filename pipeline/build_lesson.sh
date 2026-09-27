@@ -12,6 +12,7 @@ BASE=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v
 for f in kokoro-v1.0.onnx voices-v1.0.bin; do
   [ -s "$ROOT/models/$f" ] || curl -L --fail -o "$ROOT/models/$f" "$BASE/$f"
 done
+[ -s "$ROOT/models/kokoro-v1.0-timed.onnx" ] || python3 "$ROOT/pipeline/make_timed_model.py"
 
 # Images first (GPU only) so the timeline picks them up.
 if [ "${2:-}" = "--images" ]; then python3 "$ROOT/pipeline/lesson_images.py" "$SPEC"; fi
