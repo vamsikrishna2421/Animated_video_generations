@@ -1,0 +1,742 @@
+{
+  "id": "ep49",
+  "episode": 49,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "AI and Jobs",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4660,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep49/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 49",
+        "title": [
+          "AI &",
+          "Jobs"
+        ],
+        "subtitle": "Will AI take my job?",
+        "buzzwords": [
+          "Automation",
+          "Augmentation",
+          "Reskilling",
+          "New roles",
+          "Productivity",
+          "Tasks",
+          "Careers",
+          "Future of work"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_01.wav",
+      "cues": [
+        146,
+        305
+      ],
+      "captions": [
+        {
+          "text": "Will AI take my job?",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "It's the question everyone is asking.",
+          "from": 71,
+          "to": 145
+        },
+        {
+          "text": "The honest answer is,",
+          "from": 146,
+          "to": 193
+        },
+        {
+          "text": "AI changes tasks first,",
+          "from": 196,
+          "to": 254
+        },
+        {
+          "text": "and jobs second.",
+          "from": 257,
+          "to": 302
+        },
+        {
+          "text": "Let's look at what's really",
+          "from": 305,
+          "to": 339
+        },
+        {
+          "text": "happening to work,",
+          "from": 341,
+          "to": 373
+        },
+        {
+          "text": "and how to stay ahead.",
+          "from": 375,
+          "to": 420
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Jobs = tasks",
+        "short": "Tasks",
+        "definition": "Every job is a bundle of tasks. AI automates some tasks, which reshapes the job more often than it removes it.",
+        "chips": [
+          [
+            "Package",
+            "A bundle of tasks"
+          ],
+          [
+            "Sparkles",
+            "AI handles some"
+          ],
+          [
+            "RefreshCw",
+            "Most jobs change"
+          ]
+        ]
+      },
+      "from": 433,
+      "durationInFrames": 405,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_02.wav",
+      "cues": [
+        61,
+        130,
+        286
+      ],
+      "captions": [
+        {
+          "text": "Here's the key idea.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "A job is a bundle",
+          "from": 61,
+          "to": 93
+        },
+        {
+          "text": "of tasks.",
+          "from": 94,
+          "to": 128
+        },
+        {
+          "text": "AI is good at some",
+          "from": 130,
+          "to": 165
+        },
+        {
+          "text": "tasks, like drafting,",
+          "from": 166,
+          "to": 220
+        },
+        {
+          "text": "summarising, and sorting.",
+          "from": 224,
+          "to": 283
+        },
+        {
+          "text": "So most jobs change,",
+          "from": 286,
+          "to": 330
+        },
+        {
+          "text": "rather than disappear completely.",
+          "from": 331,
+          "to": 392
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Replace or assist?",
+        "kicker": "TWO EFFECTS",
+        "left": {
+          "icon": "Bot",
+          "title": "Automation",
+          "stat": "AI does it",
+          "label": "sorting invoices, data entry"
+        },
+        "right": {
+          "icon": "Users",
+          "title": "Augmentation",
+          "stat": "AI helps",
+          "label": "doctors, coders, designers"
+        }
+      },
+      "from": 838,
+      "durationInFrames": 488,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_03.wav",
+      "cues": [
+        92,
+        264
+      ],
+      "captions": [
+        {
+          "text": "There are two ways AI",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "affects work.",
+          "from": 59,
+          "to": 89
+        },
+        {
+          "text": "Automation, where AI does a",
+          "from": 92,
+          "to": 153
+        },
+        {
+          "text": "task instead of a person,",
+          "from": 153,
+          "to": 211
+        },
+        {
+          "text": "like sorting invoices.",
+          "from": 211,
+          "to": 262
+        },
+        {
+          "text": "Augmentation, where AI helps a",
+          "from": 264,
+          "to": 332
+        },
+        {
+          "text": "person do more,",
+          "from": 334,
+          "to": 370
+        },
+        {
+          "text": "like a doctor using AI",
+          "from": 371,
+          "to": 420
+        },
+        {
+          "text": "to read scans faster.",
+          "from": 421,
+          "to": 476
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Who's most affected?",
+        "kicker": "EXPOSURE",
+        "cols": [
+          "AI impact"
+        ],
+        "rows": [
+          [
+            "Routine writing, data entry",
+            "High"
+          ],
+          [
+            "Coding, analysis",
+            "Heavily assisted"
+          ],
+          [
+            "Hands-on work",
+            "Lower"
+          ],
+          [
+            "Trust and relationships",
+            "Stays human"
+          ]
+        ]
+      },
+      "from": 1326,
+      "durationInFrames": 629,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_04.wav",
+      "cues": [
+        92,
+        200,
+        291,
+        427
+      ],
+      "captions": [
+        {
+          "text": "Some tasks are more exposed",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "than others.",
+          "from": 60,
+          "to": 90
+        },
+        {
+          "text": "Routine writing and data entry,",
+          "from": 92,
+          "to": 148
+        },
+        {
+          "text": "high exposure.",
+          "from": 152,
+          "to": 197
+        },
+        {
+          "text": "Coding and analysis,",
+          "from": 200,
+          "to": 238
+        },
+        {
+          "text": "heavily assisted.",
+          "from": 243,
+          "to": 288
+        },
+        {
+          "text": "Hands-on work,",
+          "from": 291,
+          "to": 315
+        },
+        {
+          "text": "like plumbing or nursing care,",
+          "from": 320,
+          "to": 378
+        },
+        {
+          "text": "lower exposure.",
+          "from": 380,
+          "to": 425
+        },
+        {
+          "text": "And jobs built on trust",
+          "from": 427,
+          "to": 471
+        },
+        {
+          "text": "and relationships,",
+          "from": 472,
+          "to": 507
+        },
+        {
+          "text": "like teaching and sales,",
+          "from": 509,
+          "to": 555
+        },
+        {
+          "text": "change, but stay human.",
+          "from": 557,
+          "to": 616
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "New jobs, too",
+        "items": [
+          [
+            "TrendingUp",
+            "Net growth",
+            "WEF: 170M new, 92M displaced by 2030"
+          ],
+          [
+            "Wrench",
+            "New roles",
+            "Trainers, evaluators, AI engineers"
+          ],
+          [
+            "Sparkles",
+            "Every field",
+            "Needs AI-skilled people"
+          ]
+        ]
+      },
+      "from": 1955,
+      "durationInFrames": 697,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_05.wav",
+      "cues": [
+        90,
+        418,
+        576
+      ],
+      "captions": [
+        {
+          "text": "AI also creates new jobs.",
+          "from": 10,
+          "to": 88
+        },
+        {
+          "text": "The World Economic Forum's 2025",
+          "from": 90,
+          "to": 181
+        },
+        {
+          "text": "report expects about 170 million",
+          "from": 181,
+          "to": 275
+        },
+        {
+          "text": "jobs created,",
+          "from": 275,
+          "to": 315
+        },
+        {
+          "text": "and 92 million displaced,",
+          "from": 315,
+          "to": 389
+        },
+        {
+          "text": "by 2030.",
+          "from": 389,
+          "to": 415
+        },
+        {
+          "text": "New roles include AI trainers,",
+          "from": 418,
+          "to": 488
+        },
+        {
+          "text": "evaluators, and AI engineers.",
+          "from": 491,
+          "to": 574
+        },
+        {
+          "text": "And every field now needs",
+          "from": 576,
+          "to": 616
+        },
+        {
+          "text": "people who can use AI well.",
+          "from": 618,
+          "to": 686
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How to stay ahead",
+        "kicker": "YOUR PLAN",
+        "steps": [
+          [
+            "Wrench",
+            "Use AI tools",
+            "In your own field"
+          ],
+          [
+            "HeartHandshake",
+            "Human strengths",
+            "Judgement, people skills"
+          ],
+          [
+            "GraduationCap",
+            "Keep learning",
+            "Skills keep changing"
+          ]
+        ]
+      },
+      "from": 2652,
+      "durationInFrames": 474,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_06.wav",
+      "cues": [
+        63,
+        196,
+        341
+      ],
+      "captions": [
+        {
+          "text": "So how do you stay ahead?",
+          "from": 10,
+          "to": 60
+        },
+        {
+          "text": "Learn to use AI tools",
+          "from": 63,
+          "to": 107
+        },
+        {
+          "text": "in your own field,",
+          "from": 108,
+          "to": 137
+        },
+        {
+          "text": "like you're doing right now.",
+          "from": 140,
+          "to": 194
+        },
+        {
+          "text": "Build human strengths,",
+          "from": 196,
+          "to": 234
+        },
+        {
+          "text": "like judgement,",
+          "from": 236,
+          "to": 267
+        },
+        {
+          "text": "communication, and creativity.",
+          "from": 268,
+          "to": 338
+        },
+        {
+          "text": "And keep learning.",
+          "from": 341,
+          "to": 380
+        },
+        {
+          "text": "Skills now change every few years.",
+          "from": 383,
+          "to": 460
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI will replace everyone.",
+        "fact": "AI won't replace you, but a person using AI well might.",
+        "tip": "Learn it early"
+      },
+      "from": 3126,
+      "durationInFrames": 429,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_07.wav",
+      "cues": [
+        56,
+        147
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "People say AI will replace everyone.",
+          "from": 56,
+          "to": 145
+        },
+        {
+          "text": "A more accurate saying is,",
+          "from": 147,
+          "to": 199
+        },
+        {
+          "text": "AI won't replace you,",
+          "from": 200,
+          "to": 246
+        },
+        {
+          "text": "but a person using AI",
+          "from": 248,
+          "to": 296
+        },
+        {
+          "text": "well might.",
+          "from": 298,
+          "to": 329
+        },
+        {
+          "text": "The advantage goes to people",
+          "from": 331,
+          "to": 376
+        },
+        {
+          "text": "who learn it early.",
+          "from": 378,
+          "to": 418
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Augmentation means…",
+        "options": [
+          "AI helps a person do more",
+          "AI fully replaces the person",
+          "Buying a bigger computer"
+        ],
+        "answer": 0
+      },
+      "from": 3555,
+      "durationInFrames": 446,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_08.wav",
+      "cues": [
+        88,
+        298
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "What does augmentation mean?",
+          "from": 32,
+          "to": 86
+        },
+        {
+          "text": "Pause and think,",
+          "from": 88,
+          "to": 122
+        },
+        {
+          "text": "and if you get it",
+          "from": 124,
+          "to": 141
+        },
+        {
+          "text": "right, comment below!",
+          "from": 142,
+          "to": 199
+        },
+        {
+          "text": "AI helps a person do",
+          "from": 298,
+          "to": 340
+        },
+        {
+          "text": "more, like a doctor reading",
+          "from": 342,
+          "to": 388
+        },
+        {
+          "text": "scans faster!",
+          "from": 390,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Tasks",
+            "change first"
+          ],
+          [
+            "Automate",
+            "and augment"
+          ],
+          [
+            "New jobs",
+            "are created too"
+          ],
+          [
+            "Stay ahead",
+            "use AI, keep learning"
+          ]
+        ],
+        "next": "EP 50 · Hands-on season"
+      },
+      "from": 4001,
+      "durationInFrames": 659,
+      "voiceFrom": 10,
+      "audio": "lessons/ep49/voice_09.wav",
+      "cues": [
+        47,
+        169,
+        244,
+        331,
+        463
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Jobs are bundles of tasks,",
+          "from": 47,
+          "to": 95
+        },
+        {
+          "text": "and AI changes tasks first.",
+          "from": 100,
+          "to": 166
+        },
+        {
+          "text": "It both automates,",
+          "from": 169,
+          "to": 199
+        },
+        {
+          "text": "and augments.",
+          "from": 205,
+          "to": 242
+        },
+        {
+          "text": "It removes some jobs,",
+          "from": 244,
+          "to": 284
+        },
+        {
+          "text": "and creates new ones.",
+          "from": 285,
+          "to": 328
+        },
+        {
+          "text": "Stay ahead by using AI,",
+          "from": 331,
+          "to": 386
+        },
+        {
+          "text": "building human strengths,",
+          "from": 387,
+          "to": 423
+        },
+        {
+          "text": "and learning.",
+          "from": 428,
+          "to": 460
+        },
+        {
+          "text": "Next, a new season,",
+          "from": 463,
+          "to": 508
+        },
+        {
+          "text": "building with AI,",
+          "from": 513,
+          "to": 547
+        },
+        {
+          "text": "hands on!",
+          "from": 551,
+          "to": 583
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 586,
+          "to": 647
+        }
+      ],
+      "image": null
+    }
+  ]
+}

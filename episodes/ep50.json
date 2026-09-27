@@ -1,0 +1,218 @@
+{
+  "id": "ep50",
+  "episode": 50,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Your First AI API Call",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Welcome to the hands-on season! [1] Until now, we learned how AI works. Now, we build with it. [2] Today, in about ten lines of Python, we'll make our very first AI API call.",
+      "data": {
+        "kicker": "EPISODE 50",
+        "title": [
+          "First",
+          "API Call"
+        ],
+        "subtitle": "Hands-on season begins",
+        "buzzwords": [
+          "Python",
+          "API key",
+          "SDK",
+          "Request",
+          "Response",
+          "Tokens",
+          "Model",
+          "Hello AI"
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "First, what happens in an API call? [1] Your program writes a request, with a model name, and your message. [2] It sends it over the internet, with your secret API key. [3] The AI company's servers run the model. [4] A response comes back, with the answer, and token counts. [5] And your program uses the answer, however it likes.",
+      "data": {
+        "heading": "What an API call does",
+        "nodes": [
+          [
+            "FileCode",
+            "Request",
+            "Model + message"
+          ],
+          [
+            "KeyRound",
+            "Send",
+            "With your API key"
+          ],
+          [
+            "Server",
+            "Model runs",
+            "On their servers"
+          ],
+          [
+            "ArrowDownToLine",
+            "Response",
+            "Answer + token count"
+          ],
+          [
+            "Sparkles",
+            "Use it",
+            "In your app"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "You need three things. [1] Python installed on your computer. [2] An API key, from a provider's developer console, like Anthropic, OpenAI, or Google. [3] And their Python library, installed with one command, pip install anthropic.",
+      "data": {
+        "heading": "What you need",
+        "kicker": "SETUP",
+        "steps": [
+          [
+            "Code",
+            "Python",
+            "On your computer"
+          ],
+          [
+            "KeyRound",
+            "An API key",
+            "From the developer console"
+          ],
+          [
+            "Package",
+            "The library",
+            "pip install anthropic"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "code",
+      "text": "Here's the code. We'll use Claude's API, but every provider looks almost the same. [1] First, import the library. [2] Create a client. It reads your API key from an environment variable, so it's never written in the code. [3] Now, create a message, choosing the model, and the maximum length of the answer. [4] Then, the messages list. The role is user, and the content is our question. [5] Finally, print the text of the reply. [6] Run it, and the AI answers!",
+      "data": {
+        "heading": "Hello, AI!",
+        "file": "first_call.py",
+        "lines": [
+          "import anthropic",
+          "",
+          "client = anthropic.Anthropic()",
+          "",
+          "reply = client.messages.create(",
+          "    model=\"claude-sonnet-5\",",
+          "    max_tokens=300,",
+          "    messages=[{\"role\": \"user\",",
+          "      \"content\": \"Explain AI in one line\"}],",
+          ")",
+          "print(reply.content[0].text)"
+        ],
+        "groups": [
+          2,
+          2,
+          3,
+          3,
+          1
+        ],
+        "output": [
+          "$ python first_call.py",
+          "AI is software that learns patterns",
+          "from data to make predictions."
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four terms. [1] API key, your secret password for the service. [2] SDK, the library that makes calling the API easy. [3] Role, who is speaking, the user, or the assistant. [4] And max tokens, the limit on how long the answer can be, which also limits the cost.",
+      "data": {
+        "heading": "API words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "KeyRound",
+            "API key",
+            "Your secret password"
+          ],
+          [
+            "Package",
+            "SDK",
+            "The helper library"
+          ],
+          [
+            "Users",
+            "Role",
+            "User or assistant"
+          ],
+          [
+            "Ruler",
+            "Max tokens",
+            "Answer length limit"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common mistake. [1] Beginners paste their API key directly into the code, and push it to GitHub. [2] Bots scan GitHub for keys within minutes, and can run up a huge bill. Always keep keys in environment variables, or a secret manager.",
+      "data": {
+        "myth": "It's fine to paste your API key in the code.",
+        "fact": "Bots scan GitHub for leaked keys within minutes. Use environment variables.",
+        "tip": "Never commit your key"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Where should you keep your API key? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] In an environment variable, never in your code!",
+      "data": {
+        "question": "Keep your API key…",
+        "options": [
+          "In an environment variable",
+          "Pasted in your code on GitHub",
+          "In your Instagram bio"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] An API call sends a request, and gets a response. [2] You need Python, an API key, and the library. [3] Create a client, send messages, and print the reply. [4] And keep your key secret. [5] Next, we'll turn this into a real chatbot, with a system prompt. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Request",
+            "and response"
+          ],
+          [
+            "Setup",
+            "Python, key, library"
+          ],
+          [
+            "Code",
+            "client, messages, print"
+          ],
+          [
+            "Secret",
+            "keep your key safe"
+          ]
+        ],
+        "next": "EP 51 · Build a chatbot"
+      }
+    }
+  ],
+  "post": {
+    "caption": "The hands-on season starts now! Your first AI API call in about 10 lines of Python.\n\nAI From Scratch, Episode 50: your first AI API call\n- What happens in an API call\n- Setup: Python, an API key, pip install anthropic\n- The code, line by line\n- Jargon: API key, SDK, role, max tokens\n- Never commit your API key to GitHub\n\nQuiz at the end. Got it right? Comment below.\n\nModel names change often, so check your provider's docs for the latest.\nNext: build a chatbot with a system prompt.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #Python #LearnAI #AIAPI #CodingForBeginners",
+    "pinned": "Quiz answer: In an environment variable, never in your code! Did you run it? Comment what the AI said to you!",
+    "cover": "'First API Call' title card",
+    "alt": "Animated coding tutorial: making a first AI API call in Python, line by line."
+  }
+}

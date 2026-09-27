@@ -27,6 +27,7 @@ import { EmbedMap } from "./scenes/EmbedMap";
 import { Pipeline } from "./scenes/Pipeline";
 import { Table } from "./scenes/Table";
 import { ToolCall } from "./scenes/ToolCall";
+import { Code } from "./scenes/Code";
 import { AgentLoop } from "./scenes/AgentLoop";
 import { L, SceneData, SceneProps, clamp } from "./theme";
 
@@ -56,6 +57,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   pipeline: Pipeline,
   table: Table,
   toolcall: ToolCall,
+  code: Code,
   agentloop: AgentLoop,
 };
 
