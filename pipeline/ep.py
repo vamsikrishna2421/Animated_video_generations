@@ -50,7 +50,7 @@ def quiz_reel(qid: str, num: int, span: str, eps: str, buzz: list, questions: li
     scenes.append(S("score", f"So, how many did you get? [1] {n} out of {n}? You're a true AI Maastaaru! [2] {n - 2} or {n - 1}, great work. [3] {n - 3} or less? Rewatch episodes {eps}, and try again. [4] Comment your score below!",
                     heading="How many did you get?", bands=[[f"{n}/{n}", "True AI Maastaaru!", "Trophy"], [f"{n - 2}–{n - 1}", "Great work!", "ThumbsUp"], [f"0–{n - 3}", "Rewatch & retry", "RefreshCw"]],
                     prompt=f"Comment your score /{n}"))
-    save(qid, dict(label=f"QUIZ #{num}", title=f"Quiz #{num}: Episodes {span}"), scenes, post=dict(
+    save(qid, dict(episode=num, label=f"QUIZ #{num}", title=f"Quiz #{num}: Episodes {span}"), scenes, post=dict(
         caption=f"""Think you've really learned it? {n} tricky questions from episodes {span}. 5 seconds each.
 
 Keep count, then comment your score out of {n}!

@@ -1,0 +1,564 @@
+{
+  "id": "q04",
+  "episode": 4,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quiz #4: Episodes 31–40",
+  "host": "female",
+  "label": "QUIZ #4",
+  "fps": 30,
+  "totalFrames": 3863,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/q04/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "QUIZ #4",
+        "title": [
+          "Quiz",
+          "Time"
+        ],
+        "subtitle": "Episodes 31–40 · 6 tricky questions",
+        "buzzwords": [
+          "LoRA",
+          "RAG",
+          "Open models",
+          "GPUs",
+          "Quantization",
+          "Local AI",
+          "Costs",
+          "Benchmarks"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 314,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_01.wav",
+      "cues": [
+        150,
+        244
+      ],
+      "captions": [
+        {
+          "text": "Quiz time!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "6 tricky questions,",
+          "from": 45,
+          "to": 91
+        },
+        {
+          "text": "from episodes 31 to 40.",
+          "from": 91,
+          "to": 146
+        },
+        {
+          "text": "Five seconds each.",
+          "from": 150,
+          "to": 194
+        },
+        {
+          "text": "Count how many you get right.",
+          "from": 196,
+          "to": 239
+        },
+        {
+          "text": "Ready?",
+          "from": 244,
+          "to": 264
+        },
+        {
+          "text": "Let's go!",
+          "from": 268,
+          "to": 301
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "LoRA mainly trains…",
+        "options": [
+          "Every weight in the model",
+          "Small adapter matrices",
+          "The tokenizer",
+          "The GPU drivers"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 1/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 314,
+      "durationInFrames": 436,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_02.wav",
+      "cues": [
+        99,
+        305
+      ],
+      "captions": [
+        {
+          "text": "Question 1.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "What does LoRA mainly train?",
+          "from": 46,
+          "to": 91
+        },
+        {
+          "text": "Five seconds.",
+          "from": 99,
+          "to": 132
+        },
+        {
+          "text": "Keep score!",
+          "from": 135,
+          "to": 158
+        },
+        {
+          "text": "Small adapter matrices!",
+          "from": 305,
+          "to": 359
+        },
+        {
+          "text": "The big model stays frozen.",
+          "from": 361,
+          "to": 423
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "7B model at 4-bit ≈ how much memory?",
+        "options": [
+          "About 3.5 GB",
+          "About 14 GB",
+          "About 28 GB",
+          "About 700 MB"
+        ],
+        "answer": 0,
+        "badge": "QUESTION 2/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 750,
+      "durationInFrames": 595,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_03.wav",
+      "cues": [
+        215,
+        420
+      ],
+      "captions": [
+        {
+          "text": "Question 2.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "A 7 billion parameter model",
+          "from": 48,
+          "to": 98
+        },
+        {
+          "text": "at 4 bits.",
+          "from": 101,
+          "to": 137
+        },
+        {
+          "text": "Roughly how much memory do",
+          "from": 141,
+          "to": 180
+        },
+        {
+          "text": "its weights need?",
+          "from": 180,
+          "to": 212
+        },
+        {
+          "text": "Five seconds.",
+          "from": 215,
+          "to": 250
+        },
+        {
+          "text": "Keep score!",
+          "from": 252,
+          "to": 281
+        },
+        {
+          "text": "About 3.5 gigabytes.",
+          "from": 420,
+          "to": 483
+        },
+        {
+          "text": "Four bits is half a",
+          "from": 486,
+          "to": 513
+        },
+        {
+          "text": "byte, times seven billion.",
+          "from": 514,
+          "to": 583
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Why add a reranker?",
+        "options": [
+          "To create the embeddings",
+          "To store the PDFs",
+          "It checks which chunks truly answer",
+          "To cool the GPU"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 3/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1345,
+      "durationInFrames": 525,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_04.wav",
+      "cues": [
+        129,
+        336
+      ],
+      "captions": [
+        {
+          "text": "Question 3.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Why add a reranker after",
+          "from": 50,
+          "to": 94
+        },
+        {
+          "text": "vector search?",
+          "from": 96,
+          "to": 123
+        },
+        {
+          "text": "Five seconds.",
+          "from": 129,
+          "to": 164
+        },
+        {
+          "text": "Keep score!",
+          "from": 166,
+          "to": 197
+        },
+        {
+          "text": "Vector search is fast but rough.",
+          "from": 336,
+          "to": 405
+        },
+        {
+          "text": "The reranker checks which chunks",
+          "from": 408,
+          "to": 458
+        },
+        {
+          "text": "truly answer the question.",
+          "from": 460,
+          "to": 512
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "'Open weights' means…",
+        "options": [
+          "The training data is public",
+          "The weights can be downloaded",
+          "It's free to run",
+          "Anyone can edit the original"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 4/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1870,
+      "durationInFrames": 525,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_05.wav",
+      "cues": [
+        113,
+        318
+      ],
+      "captions": [
+        {
+          "text": "Question 4.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "What does open weights actually mean?",
+          "from": 46,
+          "to": 109
+        },
+        {
+          "text": "Five seconds.",
+          "from": 113,
+          "to": 147
+        },
+        {
+          "text": "Keep score!",
+          "from": 150,
+          "to": 180
+        },
+        {
+          "text": "The weights can be downloaded!",
+          "from": 318,
+          "to": 372
+        },
+        {
+          "text": "The training data is often",
+          "from": 375,
+          "to": 417
+        },
+        {
+          "text": "still private,",
+          "from": 418,
+          "to": 445
+        },
+        {
+          "text": "and running it still costs money.",
+          "from": 449,
+          "to": 513
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Which costs more per token?",
+        "options": [
+          "Input tokens",
+          "System prompt tokens",
+          "They're always equal",
+          "Output tokens"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 5/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 2395,
+      "durationInFrames": 540,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_06.wav",
+      "cues": [
+        175,
+        383
+      ],
+      "captions": [
+        {
+          "text": "Question 5.",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "With most AI APIs,",
+          "from": 51,
+          "to": 100
+        },
+        {
+          "text": "which usually costs more per token?",
+          "from": 104,
+          "to": 172
+        },
+        {
+          "text": "Five seconds.",
+          "from": 175,
+          "to": 211
+        },
+        {
+          "text": "Keep score!",
+          "from": 213,
+          "to": 246
+        },
+        {
+          "text": "Output tokens,",
+          "from": 383,
+          "to": 413
+        },
+        {
+          "text": "the text the model writes,",
+          "from": 417,
+          "to": 455
+        },
+        {
+          "text": "usually cost several times more.",
+          "from": 458,
+          "to": 528
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Benchmark contamination is…",
+        "options": [
+          "The GPU overheating",
+          "A test that's too easy",
+          "Test questions leaked into training",
+          "Unfair human votes"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 6/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 2935,
+      "durationInFrames": 495,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_07.wav",
+      "cues": [
+        121,
+        331
+      ],
+      "captions": [
+        {
+          "text": "Question 6.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "What is benchmark contamination?",
+          "from": 50,
+          "to": 116
+        },
+        {
+          "text": "Five seconds.",
+          "from": 121,
+          "to": 158
+        },
+        {
+          "text": "Keep score!",
+          "from": 161,
+          "to": 194
+        },
+        {
+          "text": "Test questions leaked into the",
+          "from": 331,
+          "to": 374
+        },
+        {
+          "text": "training data,",
+          "from": 375,
+          "to": 404
+        },
+        {
+          "text": "so the model has already",
+          "from": 405,
+          "to": 440
+        },
+        {
+          "text": "seen the answers.",
+          "from": 443,
+          "to": 482
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "score",
+      "data": {
+        "heading": "How many did you get?",
+        "bands": [
+          [
+            "6/6",
+            "True AI Maastaaru!",
+            "Trophy"
+          ],
+          [
+            "4–5",
+            "Great work!",
+            "ThumbsUp"
+          ],
+          [
+            "0–3",
+            "Rewatch & retry",
+            "RefreshCw"
+          ]
+        ],
+        "prompt": "Comment your score /6"
+      },
+      "from": 3430,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/q04/voice_08.wav",
+      "cues": [
+        62,
+        165,
+        226,
+        369
+      ],
+      "captions": [
+        {
+          "text": "So, how many did you get?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "6 out of 6?",
+          "from": 62,
+          "to": 98
+        },
+        {
+          "text": "You're a true AI Maastaaru!",
+          "from": 101,
+          "to": 159
+        },
+        {
+          "text": "4 or 5,",
+          "from": 165,
+          "to": 189
+        },
+        {
+          "text": "great work.",
+          "from": 194,
+          "to": 219
+        },
+        {
+          "text": "3 or less?",
+          "from": 226,
+          "to": 264
+        },
+        {
+          "text": "Rewatch episodes 31 to 40,",
+          "from": 267,
+          "to": 331
+        },
+        {
+          "text": "and try again.",
+          "from": 331,
+          "to": 366
+        },
+        {
+          "text": "Comment your score below!",
+          "from": 369,
+          "to": 422
+        }
+      ],
+      "image": null
+    }
+  ]
+}

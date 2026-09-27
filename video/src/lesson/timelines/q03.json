@@ -1,0 +1,614 @@
+{
+  "id": "q03",
+  "episode": 3,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quiz #3: Episodes 21–30",
+  "host": "female",
+  "label": "QUIZ #3",
+  "fps": 30,
+  "totalFrames": 4052,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/q03/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "QUIZ #3",
+        "title": [
+          "Quiz",
+          "Time"
+        ],
+        "subtitle": "Episodes 21–30 · 6 tricky questions",
+        "buzzwords": [
+          "Neurons",
+          "Weights",
+          "Backprop",
+          "Overfitting",
+          "Attention",
+          "Transformers",
+          "Vision",
+          "RLHF"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 311,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_01.wav",
+      "cues": [
+        147,
+        242
+      ],
+      "captions": [
+        {
+          "text": "Quiz time!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "6 tricky questions,",
+          "from": 45,
+          "to": 89
+        },
+        {
+          "text": "from episodes 21 to 30.",
+          "from": 89,
+          "to": 143
+        },
+        {
+          "text": "Five seconds each.",
+          "from": 147,
+          "to": 191
+        },
+        {
+          "text": "Count how many you get right.",
+          "from": 193,
+          "to": 236
+        },
+        {
+          "text": "Ready?",
+          "from": 242,
+          "to": 262
+        },
+        {
+          "text": "Let's go!",
+          "from": 266,
+          "to": 299
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Backpropagation…",
+        "options": [
+          "Adds more layers",
+          "Sends the error backward to fix weights",
+          "Deletes bad training data",
+          "Speeds up the GPU"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 1/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 311,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_02.wav",
+      "cues": [
+        103,
+        310
+      ],
+      "captions": [
+        {
+          "text": "Question 1.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "What does backpropagation do?",
+          "from": 47,
+          "to": 97
+        },
+        {
+          "text": "Five seconds.",
+          "from": 103,
+          "to": 138
+        },
+        {
+          "text": "Keep score!",
+          "from": 141,
+          "to": 173
+        },
+        {
+          "text": "It sends the error backward",
+          "from": 310,
+          "to": 348
+        },
+        {
+          "text": "through the network,",
+          "from": 350,
+          "to": 375
+        },
+        {
+          "text": "nudging each weight to reduce",
+          "from": 378,
+          "to": 424
+        },
+        {
+          "text": "the mistake.",
+          "from": 425,
+          "to": 458
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Grouping customers, no labels. Which type?",
+        "options": [
+          "Supervised",
+          "Reinforcement",
+          "Unsupervised",
+          "Transfer"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 2/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 782,
+      "durationInFrames": 555,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_03.wav",
+      "cues": [
+        179,
+        391
+      ],
+      "captions": [
+        {
+          "text": "Question 2.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "Grouping customers by behaviour,",
+          "from": 50,
+          "to": 102
+        },
+        {
+          "text": "with no labels,",
+          "from": 104,
+          "to": 129
+        },
+        {
+          "text": "is which type of learning?",
+          "from": 130,
+          "to": 176
+        },
+        {
+          "text": "Five seconds.",
+          "from": 179,
+          "to": 216
+        },
+        {
+          "text": "Keep score!",
+          "from": 218,
+          "to": 250
+        },
+        {
+          "text": "Unsupervised learning!",
+          "from": 391,
+          "to": 443
+        },
+        {
+          "text": "No labels,",
+          "from": 446,
+          "to": 467
+        },
+        {
+          "text": "the model finds the groups",
+          "from": 471,
+          "to": 506
+        },
+        {
+          "text": "by itself.",
+          "from": 507,
+          "to": 542
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "99% on practice, 60% on new data?",
+        "options": [
+          "Underfitting",
+          "Overfitting",
+          "A perfect fit",
+          "Quantization"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 3/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1337,
+      "durationInFrames": 615,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_04.wav",
+      "cues": [
+        238,
+        450
+      ],
+      "captions": [
+        {
+          "text": "Question 3.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "A model scores 99 percent",
+          "from": 50,
+          "to": 106
+        },
+        {
+          "text": "on practice data,",
+          "from": 106,
+          "to": 144
+        },
+        {
+          "text": "but 60 percent on new data.",
+          "from": 144,
+          "to": 203
+        },
+        {
+          "text": "What's wrong?",
+          "from": 206,
+          "to": 234
+        },
+        {
+          "text": "Five seconds.",
+          "from": 238,
+          "to": 277
+        },
+        {
+          "text": "Keep score!",
+          "from": 280,
+          "to": 310
+        },
+        {
+          "text": "Overfitting!",
+          "from": 450,
+          "to": 484
+        },
+        {
+          "text": "It memorised the practice data",
+          "from": 486,
+          "to": 535
+        },
+        {
+          "text": "instead of learning general patterns.",
+          "from": 537,
+          "to": 603
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "\"…because it was tired.\" 'It' attends to?",
+        "options": [
+          "mat",
+          "sat",
+          "cat",
+          "tired"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 4/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1952,
+      "durationInFrames": 607,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_05.wav",
+      "cues": [
+        225,
+        429
+      ],
+      "captions": [
+        {
+          "text": "Question 4.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "The cat sat on the",
+          "from": 46,
+          "to": 79
+        },
+        {
+          "text": "mat because it was tired.",
+          "from": 79,
+          "to": 124
+        },
+        {
+          "text": "In attention,",
+          "from": 127,
+          "to": 151
+        },
+        {
+          "text": "which word does it focus",
+          "from": 157,
+          "to": 193
+        },
+        {
+          "text": "on most?",
+          "from": 194,
+          "to": 220
+        },
+        {
+          "text": "Five seconds.",
+          "from": 225,
+          "to": 258
+        },
+        {
+          "text": "Keep score!",
+          "from": 261,
+          "to": 288
+        },
+        {
+          "text": "Cat!",
+          "from": 429,
+          "to": 440
+        },
+        {
+          "text": "Mats don't get tired.",
+          "from": 454,
+          "to": 505
+        },
+        {
+          "text": "Attention links it to the",
+          "from": 508,
+          "to": 542
+        },
+        {
+          "text": "word that makes sense.",
+          "from": 545,
+          "to": 594
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Learning rate way too high?",
+        "options": [
+          "Training becomes perfect",
+          "The model gets smaller",
+          "Nothing changes",
+          "It overshoots and never settles"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 5/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 2559,
+      "durationInFrames": 509,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_06.wav",
+      "cues": [
+        137,
+        347
+      ],
+      "captions": [
+        {
+          "text": "Question 5.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "What happens if the learning",
+          "from": 50,
+          "to": 87
+        },
+        {
+          "text": "rate is way too high?",
+          "from": 89,
+          "to": 134
+        },
+        {
+          "text": "Five seconds.",
+          "from": 137,
+          "to": 173
+        },
+        {
+          "text": "Keep score!",
+          "from": 175,
+          "to": 203
+        },
+        {
+          "text": "It overshoots!",
+          "from": 347,
+          "to": 386
+        },
+        {
+          "text": "The weights jump around too",
+          "from": 388,
+          "to": 426
+        },
+        {
+          "text": "much, and training may never settle.",
+          "from": 427,
+          "to": 497
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The RLHF reward model learns from…",
+        "options": [
+          "Humans picking the better answer",
+          "Wikipedia facts",
+          "GPU temperature",
+          "Random scores"
+        ],
+        "answer": 0,
+        "badge": "QUESTION 6/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 3068,
+      "durationInFrames": 549,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_07.wav",
+      "cues": [
+        163,
+        371
+      ],
+      "captions": [
+        {
+          "text": "Question 6.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "In RLHF,",
+          "from": 51,
+          "to": 71
+        },
+        {
+          "text": "what does the reward model",
+          "from": 71,
+          "to": 132
+        },
+        {
+          "text": "learn from?",
+          "from": 132,
+          "to": 159
+        },
+        {
+          "text": "Five seconds.",
+          "from": 163,
+          "to": 199
+        },
+        {
+          "text": "Keep score!",
+          "from": 201,
+          "to": 234
+        },
+        {
+          "text": "From humans picking the better",
+          "from": 371,
+          "to": 409
+        },
+        {
+          "text": "of two answers.",
+          "from": 410,
+          "to": 452
+        },
+        {
+          "text": "Those choices teach it what",
+          "from": 454,
+          "to": 496
+        },
+        {
+          "text": "people prefer.",
+          "from": 498,
+          "to": 536
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "score",
+      "data": {
+        "heading": "How many did you get?",
+        "bands": [
+          [
+            "6/6",
+            "True AI Maastaaru!",
+            "Trophy"
+          ],
+          [
+            "4–5",
+            "Great work!",
+            "ThumbsUp"
+          ],
+          [
+            "0–3",
+            "Rewatch & retry",
+            "RefreshCw"
+          ]
+        ],
+        "prompt": "Comment your score /6"
+      },
+      "from": 3617,
+      "durationInFrames": 435,
+      "voiceFrom": 10,
+      "audio": "lessons/q03/voice_08.wav",
+      "cues": [
+        62,
+        165,
+        227,
+        370
+      ],
+      "captions": [
+        {
+          "text": "So, how many did you get?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "6 out of 6?",
+          "from": 62,
+          "to": 97
+        },
+        {
+          "text": "You're a true AI Maastaaru!",
+          "from": 101,
+          "to": 159
+        },
+        {
+          "text": "4 or 5,",
+          "from": 165,
+          "to": 189
+        },
+        {
+          "text": "great work.",
+          "from": 194,
+          "to": 219
+        },
+        {
+          "text": "3 or less?",
+          "from": 227,
+          "to": 265
+        },
+        {
+          "text": "Rewatch episodes 21 to 30,",
+          "from": 267,
+          "to": 331
+        },
+        {
+          "text": "and try again.",
+          "from": 331,
+          "to": 367
+        },
+        {
+          "text": "Comment your score below!",
+          "from": 370,
+          "to": 423
+        }
+      ],
+      "image": null
+    }
+  ]
+}

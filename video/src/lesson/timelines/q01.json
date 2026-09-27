@@ -1,0 +1,614 @@
+{
+  "id": "q01",
+  "episode": 1,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quiz #1: Episodes 1–10",
+  "host": "female",
+  "label": "QUIZ #1",
+  "fps": 30,
+  "totalFrames": 4091,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/q01/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "QUIZ #1",
+        "title": [
+          "Quiz",
+          "Time"
+        ],
+        "subtitle": "Episodes 1–10 · 6 tricky questions",
+        "buzzwords": [
+          "Tokens",
+          "LLMs",
+          "Embeddings",
+          "RAG",
+          "Temperature",
+          "Agents",
+          "Tools",
+          "Prompts"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 301,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_01.wav",
+      "cues": [
+        138,
+        231
+      ],
+      "captions": [
+        {
+          "text": "Quiz time!",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "6 tricky questions,",
+          "from": 46,
+          "to": 79
+        },
+        {
+          "text": "from episodes 1 to 10.",
+          "from": 81,
+          "to": 133
+        },
+        {
+          "text": "Five seconds each.",
+          "from": 138,
+          "to": 180
+        },
+        {
+          "text": "Count how many you get right.",
+          "from": 183,
+          "to": 226
+        },
+        {
+          "text": "Ready?",
+          "from": 231,
+          "to": 250
+        },
+        {
+          "text": "Let's go!",
+          "from": 256,
+          "to": 289
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Which one is NOT generative AI?",
+        "options": [
+          "An image generator",
+          "A spam filter",
+          "A chatbot writing poems",
+          "A music generator"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 1/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 301,
+      "durationInFrames": 542,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_02.wav",
+      "cues": [
+        125,
+        333
+      ],
+      "captions": [
+        {
+          "text": "Question 1.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "Which one of these is",
+          "from": 50,
+          "to": 72
+        },
+        {
+          "text": "NOT generative AI?",
+          "from": 74,
+          "to": 120
+        },
+        {
+          "text": "Five seconds.",
+          "from": 125,
+          "to": 162
+        },
+        {
+          "text": "Keep score!",
+          "from": 164,
+          "to": 188
+        },
+        {
+          "text": "A spam filter!",
+          "from": 333,
+          "to": 375
+        },
+        {
+          "text": "It sorts emails into spam",
+          "from": 377,
+          "to": 427
+        },
+        {
+          "text": "or not spam.",
+          "from": 429,
+          "to": 469
+        },
+        {
+          "text": "It doesn't create anything new.",
+          "from": 471,
+          "to": 529
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "1,000 tokens ≈ how many words?",
+        "options": [
+          "About 250 words",
+          "About 1,000 words",
+          "About 750 words",
+          "About 4,000 words"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 2/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 843,
+      "durationInFrames": 527,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_03.wav",
+      "cues": [
+        143,
+        356
+      ],
+      "captions": [
+        {
+          "text": "Question 2.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "Roughly how many words fit",
+          "from": 48,
+          "to": 87
+        },
+        {
+          "text": "in one thousand tokens?",
+          "from": 88,
+          "to": 140
+        },
+        {
+          "text": "Five seconds.",
+          "from": 143,
+          "to": 182
+        },
+        {
+          "text": "Keep score!",
+          "from": 184,
+          "to": 218
+        },
+        {
+          "text": "About 750 words,",
+          "from": 356,
+          "to": 392
+        },
+        {
+          "text": "because one token is roughly",
+          "from": 394,
+          "to": 448
+        },
+        {
+          "text": "three quarters of a word.",
+          "from": 450,
+          "to": 515
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "An LLM is trained to…",
+        "options": [
+          "Search the internet",
+          "Store every website",
+          "Copy human thoughts",
+          "Predict the next token"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 3/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1370,
+      "durationInFrames": 511,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_04.wav",
+      "cues": [
+        158,
+        361
+      ],
+      "captions": [
+        {
+          "text": "Question 3.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "At its core,",
+          "from": 50,
+          "to": 71
+        },
+        {
+          "text": "what is a large language",
+          "from": 73,
+          "to": 109
+        },
+        {
+          "text": "model trained to do?",
+          "from": 110,
+          "to": 154
+        },
+        {
+          "text": "Five seconds.",
+          "from": 158,
+          "to": 191
+        },
+        {
+          "text": "Keep score!",
+          "from": 194,
+          "to": 221
+        },
+        {
+          "text": "Predict the next token!",
+          "from": 361,
+          "to": 409
+        },
+        {
+          "text": "Everything else is built on",
+          "from": 411,
+          "to": 460
+        },
+        {
+          "text": "top of that one skill.",
+          "from": 460,
+          "to": 499
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Closest to 'puppy' in meaning?",
+        "options": [
+          "Puppet",
+          "Pupil",
+          "Pepper",
+          "Dog"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 4/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1881,
+      "durationInFrames": 563,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_05.wav",
+      "cues": [
+        146,
+        356
+      ],
+      "captions": [
+        {
+          "text": "Question 4.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "In embedding space,",
+          "from": 48,
+          "to": 79
+        },
+        {
+          "text": "which word sits closest to puppy?",
+          "from": 83,
+          "to": 144
+        },
+        {
+          "text": "Five seconds.",
+          "from": 146,
+          "to": 185
+        },
+        {
+          "text": "Keep score!",
+          "from": 187,
+          "to": 215
+        },
+        {
+          "text": "Dog!",
+          "from": 356,
+          "to": 377
+        },
+        {
+          "text": "Embeddings group words by meaning,",
+          "from": 381,
+          "to": 442
+        },
+        {
+          "text": "not by spelling,",
+          "from": 444,
+          "to": 475
+        },
+        {
+          "text": "so puppet and pupil are",
+          "from": 476,
+          "to": 514
+        },
+        {
+          "text": "far away.",
+          "from": 517,
+          "to": 550
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Prices change daily. Best approach?",
+        "options": [
+          "RAG",
+          "Fine-tuning",
+          "Higher temperature",
+          "A bigger model"
+        ],
+        "answer": 0,
+        "badge": "QUESTION 5/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 2444,
+      "durationInFrames": 648,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_06.wav",
+      "cues": [
+        225,
+        432
+      ],
+      "captions": [
+        {
+          "text": "Question 5.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "Your bot must answer from",
+          "from": 52,
+          "to": 90
+        },
+        {
+          "text": "today's price list,",
+          "from": 91,
+          "to": 124
+        },
+        {
+          "text": "which changes daily.",
+          "from": 128,
+          "to": 176
+        },
+        {
+          "text": "What's the best approach?",
+          "from": 179,
+          "to": 221
+        },
+        {
+          "text": "Five seconds.",
+          "from": 225,
+          "to": 258
+        },
+        {
+          "text": "Keep score!",
+          "from": 262,
+          "to": 291
+        },
+        {
+          "text": "RAG!",
+          "from": 432,
+          "to": 451
+        },
+        {
+          "text": "Look up the latest prices",
+          "from": 458,
+          "to": 498
+        },
+        {
+          "text": "at answer time.",
+          "from": 500,
+          "to": 542
+        },
+        {
+          "text": "A fine-tuned model would already",
+          "from": 544,
+          "to": 606
+        },
+        {
+          "text": "be out of date.",
+          "from": 606,
+          "to": 635
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Who runs the weather API?",
+        "options": [
+          "The language model",
+          "The user",
+          "Your app's code",
+          "The GPU"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 6/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 3092,
+      "durationInFrames": 578,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_07.wav",
+      "cues": [
+        163,
+        371
+      ],
+      "captions": [
+        {
+          "text": "Question 6.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "In function calling,",
+          "from": 51,
+          "to": 81
+        },
+        {
+          "text": "who actually runs the weather API?",
+          "from": 86,
+          "to": 158
+        },
+        {
+          "text": "Five seconds.",
+          "from": 163,
+          "to": 201
+        },
+        {
+          "text": "Keep score!",
+          "from": 203,
+          "to": 226
+        },
+        {
+          "text": "Your app's code!",
+          "from": 371,
+          "to": 404
+        },
+        {
+          "text": "The model only asks for",
+          "from": 410,
+          "to": 456
+        },
+        {
+          "text": "the tool.",
+          "from": 456,
+          "to": 475
+        },
+        {
+          "text": "Your app runs it,",
+          "from": 477,
+          "to": 507
+        },
+        {
+          "text": "and sends back the result.",
+          "from": 512,
+          "to": 565
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "score",
+      "data": {
+        "heading": "How many did you get?",
+        "bands": [
+          [
+            "6/6",
+            "True AI Maastaaru!",
+            "Trophy"
+          ],
+          [
+            "4–5",
+            "Great work!",
+            "ThumbsUp"
+          ],
+          [
+            "0–3",
+            "Rewatch & retry",
+            "RefreshCw"
+          ]
+        ],
+        "prompt": "Comment your score /6"
+      },
+      "from": 3670,
+      "durationInFrames": 421,
+      "voiceFrom": 10,
+      "audio": "lessons/q01/voice_08.wav",
+      "cues": [
+        61,
+        164,
+        224,
+        357
+      ],
+      "captions": [
+        {
+          "text": "So, how many did you get?",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "6 out of 6?",
+          "from": 61,
+          "to": 97
+        },
+        {
+          "text": "You're a true AI Maastaaru!",
+          "from": 100,
+          "to": 158
+        },
+        {
+          "text": "4 or 5,",
+          "from": 164,
+          "to": 187
+        },
+        {
+          "text": "great work.",
+          "from": 192,
+          "to": 216
+        },
+        {
+          "text": "3 or less?",
+          "from": 224,
+          "to": 260
+        },
+        {
+          "text": "Rewatch episodes 1 to 10,",
+          "from": 262,
+          "to": 315
+        },
+        {
+          "text": "and try again.",
+          "from": 317,
+          "to": 354
+        },
+        {
+          "text": "Comment your score below!",
+          "from": 357,
+          "to": 410
+        }
+      ],
+      "image": null
+    }
+  ]
+}
