@@ -1,0 +1,228 @@
+{
+ "id": "ep58",
+ "episode": 58,
+ "series": "AI FROM SCRATCH",
+ "handle": "@ai_maastaaru",
+ "title": "Your AI Career Roadmap",
+ "host": "female",
+ "voice": "af_heart",
+ "speed": 0.92,
+ "lang": "en-us",
+ "fps": 30,
+ "flow": "continuous",
+ "music": {
+  "bpm": 90,
+  "volume": 0.16,
+  "duckedVolume": 0.07
+ },
+ "scenes": [
+  {
+   "type": "banner",
+   "text": "Fifty eight episodes ago, we started with, what is AI? [1] Now you know how models learn, how to build with them, and how to use them safely. [2] So what's next? Let's map out AI careers, and how to get started.",
+   "data": {
+    "kicker": "EPISODE 58",
+    "title": [
+     "AI Career",
+     "Roadmap"
+    ],
+    "subtitle": "Season finale",
+    "buzzwords": [
+     "AI engineer",
+     "ML engineer",
+     "Data scientist",
+     "Prompt engineer",
+     "Portfolio",
+     "Python",
+     "Projects",
+     "Keep learning"
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "text": "[1] Here are four popular AI roles. [2] AI engineers build apps using existing models, like chatbots, RAG, and agents. [3] ML engineers train, fine-tune, and deploy models. [4] Data scientists analyse data, and build prediction models. [5] And AI product managers decide what to build, and why.",
+   "data": {
+    "heading": "Popular AI roles",
+    "kicker": "WHO DOES WHAT",
+    "cols": [
+     "What they do"
+    ],
+    "rows": [
+     [
+      "AI engineer",
+      "Build apps with models"
+     ],
+     [
+      "ML engineer",
+      "Train and deploy models"
+     ],
+     [
+      "Data scientist",
+      "Analyse, predict"
+     ],
+     [
+      "AI product manager",
+      "Decide what to build"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "versus",
+   "text": "What about prompt engineering? [1] As a standalone job title, it's become less common. [2] But as a skill, it's everywhere. Every AI role, and many non-tech jobs, now expect you to prompt well.",
+   "data": {
+    "heading": "Prompt engineer?",
+    "kicker": "JOB OR SKILL",
+    "left": {
+     "icon": "Briefcase",
+     "title": "As a job title",
+     "stat": "Rarer",
+     "label": "fewer standalone roles"
+    },
+    "right": {
+     "icon": "Sparkles",
+     "title": "As a skill",
+     "stat": "Everywhere",
+     "label": "expected in every role"
+    }
+   }
+  },
+  {
+   "type": "steps",
+   "text": "Here's a simple path to become an AI engineer. [1] Learn Python basics, and how APIs work. [2] Build the projects from our hands-on season, a chatbot, RAG, an agent, and a deployed app. [3] Share them on GitHub and LinkedIn, and explain what you learned.",
+   "data": {
+    "heading": "Path to AI engineer",
+    "kicker": "START HERE",
+    "steps": [
+     [
+      "Code",
+      "Python + APIs",
+      "The foundation"
+     ],
+     [
+      "Hammer",
+      "Build projects",
+      "Chatbot, RAG, agent, app"
+     ],
+     [
+      "Share2",
+      "Show your work",
+      "GitHub and LinkedIn"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "pipeline",
+   "text": "For ML engineering, the path goes deeper. [1] Maths basics, like statistics, and linear algebra. [2] Classic machine learning, with scikit-learn. [3] Deep learning, with PyTorch. [4] Fine-tuning open models, like we learned with LoRA. [5] And deploying models, on GPUs, at scale.",
+   "data": {
+    "heading": "Path to ML engineer",
+    "nodes": [
+     [
+      "Sigma",
+      "Maths",
+      "Statistics, linear algebra"
+     ],
+     [
+      "BarChart3",
+      "Classic ML",
+      "scikit-learn"
+     ],
+     [
+      "Brain",
+      "Deep learning",
+      "PyTorch"
+     ],
+     [
+      "SlidersHorizontal",
+      "Fine-tuning",
+      "LoRA on open models"
+     ],
+     [
+      "Server",
+      "Deploy",
+      "GPUs at scale"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "examples",
+   "text": "A portfolio beats a certificate. Here are three project ideas that stand out. [1] A RAG bot over your state's government schemes, in your local language. [2] A voice assistant that helps farmers check crop prices. [3] Or an agent that tracks job postings, and drafts tailored cover letters.",
+   "data": {
+    "heading": "Projects that stand out",
+    "items": [
+     [
+      "Landmark",
+      "Scheme helper",
+      "RAG in your language"
+     ],
+     [
+      "Sprout",
+      "Farmer voice bot",
+      "Crop prices by voice"
+     ],
+     [
+      "Briefcase",
+      "Job agent",
+      "Tracks posts, drafts letters"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "text": "Here's a common myth. [1] People think you need a PhD, or a top college degree, to work in AI. [2] For AI engineering, strong projects, and clear communication, often matter more. Research roles do value advanced degrees, but there are many paths in.",
+   "data": {
+    "myth": "You need a PhD or a top college to work in AI.",
+    "fact": "For AI engineering, strong projects and clear communication often matter more.",
+    "tip": "Build, share, repeat"
+   }
+  },
+  {
+   "type": "quiz",
+   "text": "Quick quiz! Which role mainly builds apps using existing AI models? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The AI engineer, building chatbots, RAG, and agents on top of existing models!",
+   "data": {
+    "question": "Builds apps with existing models…",
+    "options": [
+     "AI engineer",
+     "Data entry operator",
+     "Hardware engineer"
+    ],
+    "answer": 0
+   }
+  },
+  {
+   "type": "recap",
+   "text": "Let's recap. [1] AI engineers build with models, ML engineers train them. [2] Prompting is a skill for everyone. [3] Build projects, and share them publicly. [4] A portfolio beats a certificate. [5] Thank you for learning AI from scratch with us! More real world breakdowns, and AI news, are coming. Follow AI Maastaaru!",
+   "data": {
+    "points": [
+     [
+      "Roles",
+      "build vs train"
+     ],
+     [
+      "Prompting",
+      "a skill for all"
+     ],
+     [
+      "Projects",
+      "build and share"
+     ],
+     [
+      "Portfolio",
+      "beats certificates"
+     ]
+    ],
+    "next": "More coming · Stay tuned"
+   }
+  }
+ ],
+ "post": {
+  "caption": "58 episodes ago we started with 'What is AI?'. Here's where you go next: your AI career roadmap.\n\nAI From Scratch, Episode 58 (season finale): AI careers\n- Popular roles: AI engineer, ML engineer, data scientist, AI PM\n- Prompt engineering: a skill more than a job title\n- Path to AI engineer, and path to ML engineer\n- Portfolio project ideas that stand out\n- Myth: you don't need a PhD for AI engineering\n\nQuiz at the end. Got it right? Comment below.\n\nThank you for learning AI from scratch with us! More real world breakdowns and AI news coming.\nFollow @ai_maastaaru.",
+  "tags": "#AIMaastaaru #AICareers #LearnAI #TechCareers #AIForBeginners",
+  "pinned": "Quiz answer: The AI engineer, building apps on top of existing models. Which AI role are you aiming for? Comment below!",
+  "cover": "'AI Career Roadmap' title card",
+  "alt": "Animated AI career roadmap: roles, learning paths and portfolio project ideas."
+ }
+}
