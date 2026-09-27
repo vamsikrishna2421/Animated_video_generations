@@ -1,0 +1,770 @@
+{
+  "id": "ep30",
+  "episode": 30,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "RLHF: How AI Learns Good Manners",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4699,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep30/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 30",
+        "title": [
+          "RLHF",
+          "Explained"
+        ],
+        "subtitle": "How AI learns good manners",
+        "buzzwords": [
+          "Human feedback",
+          "Reward model",
+          "Preferences",
+          "Alignment",
+          "Fine-tuning",
+          "Helpful",
+          "Harmless",
+          "Honest"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 434,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_01.wav",
+      "cues": [
+        173,
+        274
+      ],
+      "captions": [
+        {
+          "text": "Ask a raw language model",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "a question,",
+          "from": 52,
+          "to": 80
+        },
+        {
+          "text": "and it might ramble,",
+          "from": 82,
+          "to": 115
+        },
+        {
+          "text": "or say something rude.",
+          "from": 117,
+          "to": 170
+        },
+        {
+          "text": "So how did chatbots become",
+          "from": 173,
+          "to": 218
+        },
+        {
+          "text": "so helpful and polite?",
+          "from": 220,
+          "to": 273
+        },
+        {
+          "text": "The answer is RLHF,",
+          "from": 274,
+          "to": 335
+        },
+        {
+          "text": "reinforcement learning from human feedback.",
+          "from": 338,
+          "to": 421
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "RLHF",
+        "short": "RLHF",
+        "definition": "Reinforcement Learning from Human Feedback: training an AI to give the kinds of answers people prefer.",
+        "chips": [
+          [
+            "Users",
+            "Humans compare answers"
+          ],
+          [
+            "Scale",
+            "A reward model learns"
+          ],
+          [
+            "TrendingUp",
+            "The AI practises"
+          ]
+        ]
+      },
+      "from": 434,
+      "durationInFrames": 424,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_02.wav",
+      "cues": [
+        146,
+        223,
+        299
+      ],
+      "captions": [
+        {
+          "text": "RLHF means training an AI",
+          "from": 10,
+          "to": 82
+        },
+        {
+          "text": "using human preferences.",
+          "from": 84,
+          "to": 143
+        },
+        {
+          "text": "Humans compare the AI's answers,",
+          "from": 146,
+          "to": 220
+        },
+        {
+          "text": "a reward model learns what",
+          "from": 223,
+          "to": 264
+        },
+        {
+          "text": "humans like,",
+          "from": 266,
+          "to": 297
+        },
+        {
+          "text": "and the AI practises until",
+          "from": 299,
+          "to": 354
+        },
+        {
+          "text": "it earns high rewards.",
+          "from": 355,
+          "to": 411
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "The RLHF recipe",
+        "nodes": [
+          [
+            "Brain",
+            "Pretrained",
+            "Knows language"
+          ],
+          [
+            "PenLine",
+            "Examples",
+            "Learn from good answers"
+          ],
+          [
+            "ThumbsUp",
+            "Compare",
+            "Humans pick A or B"
+          ],
+          [
+            "Scale",
+            "Reward model",
+            "Learns what people like"
+          ],
+          [
+            "TrendingUp",
+            "Practise",
+            "Chase high rewards"
+          ]
+        ]
+      },
+      "from": 858,
+      "durationInFrames": 693,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_03.wav",
+      "cues": [
+        50,
+        147,
+        260,
+        420,
+        521
+      ],
+      "captions": [
+        {
+          "text": "Here are the steps.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "Start with a pretrained model,",
+          "from": 50,
+          "to": 95
+        },
+        {
+          "text": "from episode 7.",
+          "from": 97,
+          "to": 144
+        },
+        {
+          "text": "Fine-tune it on good example",
+          "from": 147,
+          "to": 193
+        },
+        {
+          "text": "answers, written by people.",
+          "from": 194,
+          "to": 258
+        },
+        {
+          "text": "Then the model writes two",
+          "from": 260,
+          "to": 296
+        },
+        {
+          "text": "answers to the same question,",
+          "from": 298,
+          "to": 350
+        },
+        {
+          "text": "and a person picks the",
+          "from": 352,
+          "to": 382
+        },
+        {
+          "text": "better one.",
+          "from": 384,
+          "to": 417
+        },
+        {
+          "text": "Thousands of these choices train",
+          "from": 420,
+          "to": 475
+        },
+        {
+          "text": "a reward model.",
+          "from": 476,
+          "to": 518
+        },
+        {
+          "text": "Finally, reinforcement learning makes the",
+          "from": 521,
+          "to": 596
+        },
+        {
+          "text": "AI chase high reward scores.",
+          "from": 599,
+          "to": 681
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Which is better?",
+        "kicker": "HUMAN FEEDBACK",
+        "left": {
+          "icon": "ThumbsUp",
+          "title": "Answer A",
+          "stat": "Chosen",
+          "label": "clear, polite, helpful"
+        },
+        "right": {
+          "icon": "ThumbsDown",
+          "title": "Answer B",
+          "stat": "Rejected",
+          "label": "long, confusing, rude"
+        }
+      },
+      "from": 1551,
+      "durationInFrames": 465,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_04.wav",
+      "cues": [
+        79,
+        167,
+        282
+      ],
+      "captions": [
+        {
+          "text": "The key moment is the comparison.",
+          "from": 10,
+          "to": 77
+        },
+        {
+          "text": "Answer A is short,",
+          "from": 79,
+          "to": 117
+        },
+        {
+          "text": "clear, and polite.",
+          "from": 120,
+          "to": 165
+        },
+        {
+          "text": "Answer B is long,",
+          "from": 167,
+          "to": 212
+        },
+        {
+          "text": "confusing, and a little rude.",
+          "from": 216,
+          "to": 280
+        },
+        {
+          "text": "The person picks A.",
+          "from": 282,
+          "to": 329
+        },
+        {
+          "text": "It's much easier to choose",
+          "from": 331,
+          "to": 370
+        },
+        {
+          "text": "the better answer than to",
+          "from": 372,
+          "to": 407
+        },
+        {
+          "text": "write a perfect one.",
+          "from": 409,
+          "to": 453
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "agentloop",
+      "data": {
+        "goalLabel": "GOAL",
+        "goal": "Answers people prefer",
+        "stages": [
+          [
+            "PenLine",
+            "Answer"
+          ],
+          [
+            "Scale",
+            "Score"
+          ],
+          [
+            "RefreshCw",
+            "Adjust"
+          ]
+        ],
+        "log": [
+          "rambling answer → score 2",
+          "clear answer → score 7",
+          "clear and kind answer → score 9",
+          "✓ helpful, honest, harmless"
+        ]
+      },
+      "from": 2016,
+      "durationInFrames": 469,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_05.wav",
+      "cues": [
+        121,
+        193,
+        249,
+        319
+      ],
+      "captions": [
+        {
+          "text": "Remember reinforcement learning from episode 24?",
+          "from": 10,
+          "to": 118
+        },
+        {
+          "text": "Here, the AI writes an",
+          "from": 121,
+          "to": 168
+        },
+        {
+          "text": "answer, the reward model scores",
+          "from": 169,
+          "to": 232
+        },
+        {
+          "text": "it, and the AI adjusts itself.",
+          "from": 235,
+          "to": 317
+        },
+        {
+          "text": "Over many rounds,",
+          "from": 319,
+          "to": 357
+        },
+        {
+          "text": "it learns to be helpful,",
+          "from": 357,
+          "to": 409
+        },
+        {
+          "text": "honest, and harmless.",
+          "from": 409,
+          "to": 456
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "RLHF words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "ListChecks",
+            "Preference data",
+            "A-or-B choices"
+          ],
+          [
+            "Scale",
+            "Reward model",
+            "Predicts what people like"
+          ],
+          [
+            "Target",
+            "Alignment",
+            "Behaves as intended"
+          ],
+          [
+            "Zap",
+            "DPO",
+            "Skips the reward model"
+          ]
+        ]
+      },
+      "from": 2485,
+      "durationInFrames": 618,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_06.wav",
+      "cues": [
+        59,
+        162,
+        296,
+        408
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Preference data,",
+          "from": 59,
+          "to": 87
+        },
+        {
+          "text": "the A or B choices",
+          "from": 90,
+          "to": 125
+        },
+        {
+          "text": "people made.",
+          "from": 127,
+          "to": 160
+        },
+        {
+          "text": "The reward model,",
+          "from": 162,
+          "to": 190
+        },
+        {
+          "text": "a model that scores answers",
+          "from": 194,
+          "to": 245
+        },
+        {
+          "text": "the way people would.",
+          "from": 246,
+          "to": 293
+        },
+        {
+          "text": "Alignment, making AI behave the",
+          "from": 296,
+          "to": 361
+        },
+        {
+          "text": "way we intend.",
+          "from": 363,
+          "to": 405
+        },
+        {
+          "text": "And DPO,",
+          "from": 408,
+          "to": 439
+        },
+        {
+          "text": "a newer,",
+          "from": 441,
+          "to": 457
+        },
+        {
+          "text": "simpler method that learns straight",
+          "from": 460,
+          "to": 509
+        },
+        {
+          "text": "from preferences,",
+          "from": 510,
+          "to": 544
+        },
+        {
+          "text": "without a separate reward model.",
+          "from": 546,
+          "to": 606
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "RLHF teaches the AI new facts.",
+        "fact": "Knowledge mostly comes from pretraining. RLHF shapes behaviour: tone, helpfulness and refusing harm.",
+        "tip": "Pretraining = knowledge, RLHF = manners"
+      },
+      "from": 3103,
+      "durationInFrames": 509,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_07.wav",
+      "cues": [
+        56,
+        170
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "People think RLHF teaches the",
+          "from": 56,
+          "to": 117
+        },
+        {
+          "text": "AI new facts.",
+          "from": 119,
+          "to": 167
+        },
+        {
+          "text": "Mostly, it doesn't.",
+          "from": 170,
+          "to": 222
+        },
+        {
+          "text": "The knowledge comes from pretraining.",
+          "from": 224,
+          "to": 293
+        },
+        {
+          "text": "RLHF shapes behaviour,",
+          "from": 296,
+          "to": 356
+        },
+        {
+          "text": "like tone,",
+          "from": 357,
+          "to": 383
+        },
+        {
+          "text": "helpfulness, and saying no to",
+          "from": 388,
+          "to": 447
+        },
+        {
+          "text": "harmful requests.",
+          "from": 448,
+          "to": 495
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "In RLHF, humans mainly…",
+        "options": [
+          "Pick the better of two answers",
+          "Write all the training data",
+          "Build the GPU chips"
+        ],
+        "answer": 0
+      },
+      "from": 3612,
+      "durationInFrames": 499,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_08.wav",
+      "cues": [
+        144,
+        353
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "In RLHF,",
+          "from": 44,
+          "to": 83
+        },
+        {
+          "text": "what do humans mainly do?",
+          "from": 85,
+          "to": 142
+        },
+        {
+          "text": "Pause and think,",
+          "from": 144,
+          "to": 178
+        },
+        {
+          "text": "and if you get it",
+          "from": 183,
+          "to": 200
+        },
+        {
+          "text": "right, comment below!",
+          "from": 201,
+          "to": 255
+        },
+        {
+          "text": "They pick the better of",
+          "from": 353,
+          "to": 378
+        },
+        {
+          "text": "two answers,",
+          "from": 381,
+          "to": 407
+        },
+        {
+          "text": "and those choices train the",
+          "from": 410,
+          "to": 449
+        },
+        {
+          "text": "reward model!",
+          "from": 450,
+          "to": 488
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Preferences",
+            "train the AI"
+          ],
+          [
+            "Humans pick",
+            "the better answer"
+          ],
+          [
+            "Reward model",
+            "scores answers"
+          ],
+          [
+            "Practise",
+            "to earn high rewards"
+          ]
+        ],
+        "next": "EP 31 · LoRA"
+      },
+      "from": 4111,
+      "durationInFrames": 588,
+      "voiceFrom": 10,
+      "audio": "lessons/ep30/voice_09.wav",
+      "cues": [
+        47,
+        151,
+        224,
+        298,
+        398
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "RLHF trains AI with human preferences.",
+          "from": 47,
+          "to": 148
+        },
+        {
+          "text": "People pick the better of",
+          "from": 151,
+          "to": 184
+        },
+        {
+          "text": "two answers.",
+          "from": 187,
+          "to": 222
+        },
+        {
+          "text": "A reward model learns what",
+          "from": 224,
+          "to": 266
+        },
+        {
+          "text": "people like.",
+          "from": 268,
+          "to": 296
+        },
+        {
+          "text": "And the AI practises to",
+          "from": 298,
+          "to": 343
+        },
+        {
+          "text": "earn high rewards.",
+          "from": 344,
+          "to": 395
+        },
+        {
+          "text": "Next, how to fine-tune a",
+          "from": 398,
+          "to": 444
+        },
+        {
+          "text": "model cheaply,",
+          "from": 445,
+          "to": 476
+        },
+        {
+          "text": "with LoRA.",
+          "from": 477,
+          "to": 513
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 516,
+          "to": 576
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -33,6 +33,10 @@ PRON = {
     # Spelled-out plural acronym: "el-el-emz", not "el-el-em-es".
     "L L Ms": "ˈɛl ˈɛl ˈɛmz",
     "LLMs": "ˌɛlˌɛlˈɛmz",
+    "RLHF": "ˈɑːɹ ˈɛl ˈeɪtʃ ˈɛf",
+    "pretrained": "pɹˌiːtɹˈeɪnd",
+    "pretraining": "pɹˌiːtɹˈeɪnɪŋ",
+    "LoRA": "lˈɔːɹə",
     # Adjective "live" (on air / available) vs verb "live" (reside): fix the adjective by phrase.
     "is live": "ɪz lˈaɪv", "is already live": "ɪz ɔːlɹˈɛdi lˈaɪv", "now live": "nˈaʊ lˈaɪv",
 }
