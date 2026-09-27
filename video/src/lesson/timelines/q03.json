@@ -7,7 +7,7 @@
   "host": "female",
   "label": "QUIZ #3",
   "fps": 30,
-  "totalFrames": 4052,
+  "totalFrames": 4114,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -33,51 +33,62 @@
           "Transformers",
           "Vision",
           "RLHF"
-        ]
+        ],
+        "hook": "Can you get *6/6*?"
       },
       "from": 0,
-      "durationInFrames": 311,
+      "durationInFrames": 373,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_01.wav",
       "cues": [
-        147,
-        242
+        207,
+        302
       ],
       "captions": [
         {
-          "text": "Quiz time!",
+          "text": "Can you get six out",
           "from": 10,
-          "to": 35
+          "to": 47
+        },
+        {
+          "text": "of six?",
+          "from": 47,
+          "to": 61
+        },
+        {
+          "text": "Quiz time!",
+          "from": 63,
+          "to": 93
         },
         {
           "text": "6 tricky questions,",
-          "from": 45,
-          "to": 89
-        },
-        {
-          "text": "from episodes 21 to 30.",
-          "from": 89,
+          "from": 99,
           "to": 143
         },
         {
+          "text": "from episodes 21 to 30.",
+          "from": 143,
+          "to": 196
+        },
+        {
           "text": "Five seconds each.",
-          "from": 147,
-          "to": 191
+          "from": 207,
+          "to": 252
         },
         {
           "text": "Count how many you get right.",
-          "from": 193,
-          "to": 236
+          "from": 254,
+          "to": 297
         },
         {
           "text": "Ready?",
-          "from": 242,
-          "to": 262
+          "from": 302,
+          "to": 323
         },
         {
           "text": "Let's go!",
-          "from": 266,
-          "to": 299
+          "from": 328,
+          "to": 360
         }
       ],
       "image": null
@@ -96,7 +107,7 @@
         "badge": "QUESTION 1/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 311,
+      "from": 373,
       "durationInFrames": 471,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_02.wav",
@@ -162,7 +173,7 @@
         "badge": "QUESTION 2/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 782,
+      "from": 844,
       "durationInFrames": 555,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_03.wav",
@@ -238,7 +249,7 @@
         "badge": "QUESTION 3/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 1337,
+      "from": 1399,
       "durationInFrames": 615,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_04.wav",
@@ -314,7 +325,7 @@
         "badge": "QUESTION 4/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 1952,
+      "from": 2014,
       "durationInFrames": 607,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_05.wav",
@@ -400,7 +411,7 @@
         "badge": "QUESTION 5/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 2559,
+      "from": 2621,
       "durationInFrames": 509,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_06.wav",
@@ -466,7 +477,7 @@
         "badge": "QUESTION 6/6",
         "commentPrompt": "Keep score!"
       },
-      "from": 3068,
+      "from": 3130,
       "durationInFrames": 549,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_07.wav",
@@ -551,7 +562,7 @@
         ],
         "prompt": "Comment your score /6"
       },
-      "from": 3617,
+      "from": 3679,
       "durationInFrames": 435,
       "voiceFrom": 10,
       "audio": "lessons/q03/voice_08.wav",

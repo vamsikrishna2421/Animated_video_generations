@@ -36,7 +36,7 @@ Already posted: `out/posted/`.
 | 029 | ep28 | Transformers Part 2 Inside a Transformer | ready |
 | 030 | ep29 | Computer Vision | ready |
 | 031 | ep30 | RLHF: How AI Learns Good Manners | ready |
-| 032 | q03 | Quiz #3: Episodes 21–30 | rendering soon |
+| 032 | q03 | Quiz #3: Episodes 21–30 | ready |
 | 033 | ep31 | Fine-tuning Deep Dive: LoRA | rendering soon |
 | 034 | ep32 | RAG, Part 2: Chunking, Vector Databases and Reranking | rendering soon |
 | 035 | ep33 | RAG, Part 3: Hybrid Search and Measuring Quality | rendering soon |
