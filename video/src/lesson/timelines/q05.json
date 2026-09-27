@@ -1,0 +1,604 @@
+{
+  "id": "q05",
+  "episode": 5,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quiz #5: Episodes 41–49",
+  "host": "female",
+  "label": "QUIZ #5",
+  "fps": 30,
+  "totalFrames": 4118,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/q05/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "QUIZ #5",
+        "title": [
+          "Quiz",
+          "Time"
+        ],
+        "subtitle": "Episodes 41–49 · 6 tricky questions",
+        "buzzwords": [
+          "Bias",
+          "Safety",
+          "Privacy",
+          "Deepfakes",
+          "Copyright",
+          "Guardrails",
+          "AI laws",
+          "Jobs"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 324,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_01.wav",
+      "cues": [
+        160,
+        254
+      ],
+      "captions": [
+        {
+          "text": "Quiz time!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "6 tricky questions,",
+          "from": 45,
+          "to": 94
+        },
+        {
+          "text": "from episodes 41 to 49.",
+          "from": 94,
+          "to": 152
+        },
+        {
+          "text": "Five seconds each.",
+          "from": 160,
+          "to": 203
+        },
+        {
+          "text": "Count how many you get right.",
+          "from": 205,
+          "to": 249
+        },
+        {
+          "text": "Ready?",
+          "from": 254,
+          "to": 275
+        },
+        {
+          "text": "Let's go!",
+          "from": 279,
+          "to": 312
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "EU AI Act: social scoring is…",
+        "options": [
+          "High risk",
+          "Limited risk",
+          "Banned",
+          "Minimal risk"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 1/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 324,
+      "durationInFrames": 501,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_02.wav",
+      "cues": [
+        178,
+        386
+      ],
+      "captions": [
+        {
+          "text": "Question 1.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "Under the EU AI Act,",
+          "from": 48,
+          "to": 103
+        },
+        {
+          "text": "social scoring of citizens is what?",
+          "from": 106,
+          "to": 176
+        },
+        {
+          "text": "Five seconds.",
+          "from": 178,
+          "to": 211
+        },
+        {
+          "text": "Keep score!",
+          "from": 215,
+          "to": 243
+        },
+        {
+          "text": "Banned!",
+          "from": 386,
+          "to": 406
+        },
+        {
+          "text": "It's in the unacceptable risk category.",
+          "from": 411,
+          "to": 490
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Unfair old hiring records. Which bias source?",
+        "options": [
+          "Missing data",
+          "Skewed data",
+          "Random noise",
+          "Past decisions"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 2/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 825,
+      "durationInFrames": 595,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_03.wav",
+      "cues": [
+        226,
+        433
+      ],
+      "captions": [
+        {
+          "text": "Question 2.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "A hiring model copies unfairness",
+          "from": 48,
+          "to": 110
+        },
+        {
+          "text": "from old hiring records.",
+          "from": 112,
+          "to": 164
+        },
+        {
+          "text": "Which source of bias is this?",
+          "from": 168,
+          "to": 223
+        },
+        {
+          "text": "Five seconds.",
+          "from": 226,
+          "to": 262
+        },
+        {
+          "text": "Keep score!",
+          "from": 264,
+          "to": 294
+        },
+        {
+          "text": "Past decisions!",
+          "from": 433,
+          "to": 475
+        },
+        {
+          "text": "The model learned the unfairness",
+          "from": 477,
+          "to": 522
+        },
+        {
+          "text": "baked into old choices.",
+          "from": 524,
+          "to": 582
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "A hidden stand-in detail is called a…",
+        "options": [
+          "Proxy",
+          "Token",
+          "Adapter",
+          "Guardrail"
+        ],
+        "answer": 0,
+        "badge": "QUESTION 3/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1420,
+      "durationInFrames": 558,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_04.wav",
+      "cues": [
+        189,
+        395
+      ],
+      "captions": [
+        {
+          "text": "Question 3.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "A postcode that secretly stands",
+          "from": 50,
+          "to": 100
+        },
+        {
+          "text": "in for religion or caste",
+          "from": 102,
+          "to": 149
+        },
+        {
+          "text": "is called what?",
+          "from": 152,
+          "to": 186
+        },
+        {
+          "text": "Five seconds.",
+          "from": 189,
+          "to": 225
+        },
+        {
+          "text": "Keep score!",
+          "from": 227,
+          "to": 257
+        },
+        {
+          "text": "A proxy!",
+          "from": 395,
+          "to": 426
+        },
+        {
+          "text": "Harmless looking data that secretly",
+          "from": 428,
+          "to": 485
+        },
+        {
+          "text": "reveals something sensitive.",
+          "from": 487,
+          "to": 545
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Spinning for points instead of racing?",
+        "options": [
+          "Hallucination",
+          "Reward hacking",
+          "Overfitting",
+          "Prompt injection"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 4/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1978,
+      "durationInFrames": 621,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_05.wav",
+      "cues": [
+        249,
+        458
+      ],
+      "captions": [
+        {
+          "text": "Question 4.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "An AI in a boat",
+          "from": 49,
+          "to": 81
+        },
+        {
+          "text": "race game spins in circles",
+          "from": 82,
+          "to": 133
+        },
+        {
+          "text": "collecting points,",
+          "from": 134,
+          "to": 162
+        },
+        {
+          "text": "instead of finishing.",
+          "from": 166,
+          "to": 210
+        },
+        {
+          "text": "What's this called?",
+          "from": 212,
+          "to": 246
+        },
+        {
+          "text": "Five seconds.",
+          "from": 249,
+          "to": 285
+        },
+        {
+          "text": "Keep score!",
+          "from": 287,
+          "to": 316
+        },
+        {
+          "text": "Reward hacking!",
+          "from": 458,
+          "to": 496
+        },
+        {
+          "text": "It found a loophole to",
+          "from": 498,
+          "to": 528
+        },
+        {
+          "text": "score points,",
+          "from": 530,
+          "to": 554
+        },
+        {
+          "text": "and missed the real goal.",
+          "from": 559,
+          "to": 609
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Urgent money call in your boss's voice?",
+        "options": [
+          "Transfer quickly",
+          "Ask for a selfie",
+          "Share an OTP to verify",
+          "Hang up, call a known number"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 5/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 2599,
+      "durationInFrames": 584,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_06.wav",
+      "cues": [
+        225,
+        431
+      ],
+      "captions": [
+        {
+          "text": "Question 5.",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "Your boss calls in their",
+          "from": 52,
+          "to": 96
+        },
+        {
+          "text": "own voice,",
+          "from": 96,
+          "to": 116
+        },
+        {
+          "text": "asking for an urgent money transfer.",
+          "from": 116,
+          "to": 181
+        },
+        {
+          "text": "Best first step?",
+          "from": 184,
+          "to": 221
+        },
+        {
+          "text": "Five seconds.",
+          "from": 225,
+          "to": 261
+        },
+        {
+          "text": "Keep score!",
+          "from": 263,
+          "to": 291
+        },
+        {
+          "text": "Hang up,",
+          "from": 431,
+          "to": 445
+        },
+        {
+          "text": "and call back on a",
+          "from": 448,
+          "to": 472
+        },
+        {
+          "text": "number you already know.",
+          "from": 473,
+          "to": 520
+        },
+        {
+          "text": "Voices can be cloned.",
+          "from": 523,
+          "to": 571
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Which is an OUTPUT guardrail?",
+        "options": [
+          "Blocking injected prompts",
+          "Scanning replies for leaked data",
+          "Hiding PII before the model",
+          "Limiting message length"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 6/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 3183,
+      "durationInFrames": 491,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_07.wav",
+      "cues": [
+        125,
+        334
+      ],
+      "captions": [
+        {
+          "text": "Question 6.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "Which one of these is",
+          "from": 50,
+          "to": 75
+        },
+        {
+          "text": "an output guardrail?",
+          "from": 76,
+          "to": 118
+        },
+        {
+          "text": "Five seconds.",
+          "from": 125,
+          "to": 161
+        },
+        {
+          "text": "Keep score!",
+          "from": 163,
+          "to": 196
+        },
+        {
+          "text": "Scanning the AI's reply for",
+          "from": 334,
+          "to": 386
+        },
+        {
+          "text": "leaked data.",
+          "from": 388,
+          "to": 418
+        },
+        {
+          "text": "The others check what goes in.",
+          "from": 420,
+          "to": 479
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "score",
+      "data": {
+        "heading": "How many did you get?",
+        "bands": [
+          [
+            "6/6",
+            "True AI Maastaaru!",
+            "Trophy"
+          ],
+          [
+            "4–5",
+            "Great work!",
+            "ThumbsUp"
+          ],
+          [
+            "0–3",
+            "Rewatch & retry",
+            "RefreshCw"
+          ]
+        ],
+        "prompt": "Comment your score /6"
+      },
+      "from": 3674,
+      "durationInFrames": 444,
+      "voiceFrom": 10,
+      "audio": "lessons/q05/voice_08.wav",
+      "cues": [
+        62,
+        165,
+        226,
+        379
+      ],
+      "captions": [
+        {
+          "text": "So, how many did you get?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "6 out of 6?",
+          "from": 62,
+          "to": 98
+        },
+        {
+          "text": "You're a true AI Maastaaru!",
+          "from": 101,
+          "to": 159
+        },
+        {
+          "text": "4 or 5,",
+          "from": 165,
+          "to": 189
+        },
+        {
+          "text": "great work.",
+          "from": 194,
+          "to": 219
+        },
+        {
+          "text": "3 or less?",
+          "from": 226,
+          "to": 265
+        },
+        {
+          "text": "Rewatch episodes 41 to 49,",
+          "from": 267,
+          "to": 337
+        },
+        {
+          "text": "and try again.",
+          "from": 337,
+          "to": 376
+        },
+        {
+          "text": "Comment your score below!",
+          "from": 379,
+          "to": 432
+        }
+      ],
+      "image": null
+    }
+  ]
+}

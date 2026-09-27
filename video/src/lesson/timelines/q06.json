@@ -1,0 +1,589 @@
+{
+  "id": "q06",
+  "episode": 6,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quiz #6: Episodes 50–58",
+  "host": "female",
+  "label": "QUIZ #6",
+  "fps": 30,
+  "totalFrames": 3990,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/q06/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "QUIZ #6",
+        "title": [
+          "Quiz",
+          "Time"
+        ],
+        "subtitle": "Episodes 50–58 · 6 tricky questions",
+        "buzzwords": [
+          "API calls",
+          "Chatbots",
+          "RAG",
+          "Agents",
+          "MCP",
+          "Voice",
+          "Deploy",
+          "Careers"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 317,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_01.wav",
+      "cues": [
+        151,
+        246
+      ],
+      "captions": [
+        {
+          "text": "Quiz time!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "6 tricky questions,",
+          "from": 45,
+          "to": 89
+        },
+        {
+          "text": "from episodes 50 to 58.",
+          "from": 89,
+          "to": 142
+        },
+        {
+          "text": "Five seconds each.",
+          "from": 151,
+          "to": 195
+        },
+        {
+          "text": "Count how many you get right.",
+          "from": 197,
+          "to": 241
+        },
+        {
+          "text": "Ready?",
+          "from": 246,
+          "to": 266
+        },
+        {
+          "text": "Let's go!",
+          "from": 272,
+          "to": 305
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Why do long chats cost more?",
+        "options": [
+          "History is resent every turn",
+          "The model gets tired",
+          "Prices rise at night",
+          "Longer words cost more"
+        ],
+        "answer": 0,
+        "badge": "QUESTION 1/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 317,
+      "durationInFrames": 542,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_02.wav",
+      "cues": [
+        157,
+        365
+      ],
+      "captions": [
+        {
+          "text": "Question 1.",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "Why does a chatbot conversation",
+          "from": 50,
+          "to": 97
+        },
+        {
+          "text": "cost more as it gets longer?",
+          "from": 99,
+          "to": 154
+        },
+        {
+          "text": "Five seconds.",
+          "from": 157,
+          "to": 193
+        },
+        {
+          "text": "Keep score!",
+          "from": 195,
+          "to": 229
+        },
+        {
+          "text": "The whole history is resent",
+          "from": 365,
+          "to": 411
+        },
+        {
+          "text": "every turn,",
+          "from": 413,
+          "to": 440
+        },
+        {
+          "text": "so every message adds more",
+          "from": 442,
+          "to": 485
+        },
+        {
+          "text": "input tokens.",
+          "from": 487,
+          "to": 530
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Keep looping while stop_reason is…",
+        "options": [
+          "end_turn",
+          "tool_use",
+          "max_tokens",
+          "error"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 2/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 859,
+      "durationInFrames": 532,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_03.wav",
+      "cues": [
+        159,
+        366
+      ],
+      "captions": [
+        {
+          "text": "Question 2.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "In our agent loop,",
+          "from": 48,
+          "to": 74
+        },
+        {
+          "text": "we keep looping while the",
+          "from": 78,
+          "to": 105
+        },
+        {
+          "text": "stop reason is what?",
+          "from": 108,
+          "to": 156
+        },
+        {
+          "text": "Five seconds.",
+          "from": 159,
+          "to": 195
+        },
+        {
+          "text": "Keep score!",
+          "from": 197,
+          "to": 222
+        },
+        {
+          "text": "Tool use!",
+          "from": 366,
+          "to": 399
+        },
+        {
+          "text": "While the model keeps asking",
+          "from": 401,
+          "to": 438
+        },
+        {
+          "text": "for tools,",
+          "from": 440,
+          "to": 463
+        },
+        {
+          "text": "we run them,",
+          "from": 464,
+          "to": 484
+        },
+        {
+          "text": "and loop again.",
+          "from": 485,
+          "to": 519
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "200-word chunks, step 150. Overlap?",
+        "options": [
+          "150 words",
+          "200 words",
+          "350 words",
+          "50 words"
+        ],
+        "answer": 3,
+        "badge": "QUESTION 3/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1391,
+      "durationInFrames": 566,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_04.wav",
+      "cues": [
+        234,
+        443
+      ],
+      "captions": [
+        {
+          "text": "Question 3.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "Chunks of 200 words,",
+          "from": 51,
+          "to": 103
+        },
+        {
+          "text": "moving forward 150 each time.",
+          "from": 103,
+          "to": 178
+        },
+        {
+          "text": "How much do they overlap?",
+          "from": 184,
+          "to": 228
+        },
+        {
+          "text": "Five seconds.",
+          "from": 234,
+          "to": 271
+        },
+        {
+          "text": "Keep score!",
+          "from": 274,
+          "to": 301
+        },
+        {
+          "text": "50 words!",
+          "from": 443,
+          "to": 479
+        },
+        {
+          "text": "200 minus 150.",
+          "from": 482,
+          "to": 555
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "FastMCP: what describes a tool to the AI?",
+        "options": [
+          "The file name",
+          "The server port",
+          "The docstring and type hints",
+          "The folder name"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 4/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 1957,
+      "durationInFrames": 508,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_05.wav",
+      "cues": [
+        167,
+        375
+      ],
+      "captions": [
+        {
+          "text": "Question 4.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "In FastMCP,",
+          "from": 48,
+          "to": 77
+        },
+        {
+          "text": "what tells the AI what",
+          "from": 77,
+          "to": 131
+        },
+        {
+          "text": "a tool does?",
+          "from": 131,
+          "to": 162
+        },
+        {
+          "text": "Five seconds.",
+          "from": 167,
+          "to": 203
+        },
+        {
+          "text": "Keep score!",
+          "from": 205,
+          "to": 230
+        },
+        {
+          "text": "The docstring and type hints!",
+          "from": 375,
+          "to": 431
+        },
+        {
+          "text": "They become the tool's description.",
+          "from": 433,
+          "to": 495
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Which one turns speech into text?",
+        "options": [
+          "pyttsx3",
+          "Whisper",
+          "sounddevice",
+          "Streamlit"
+        ],
+        "answer": 1,
+        "badge": "QUESTION 5/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 2465,
+      "durationInFrames": 577,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_06.wav",
+      "cues": [
+        152,
+        361
+      ],
+      "captions": [
+        {
+          "text": "Question 5.",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "In our voice bot,",
+          "from": 52,
+          "to": 77
+        },
+        {
+          "text": "which library turns speech into text?",
+          "from": 77,
+          "to": 148
+        },
+        {
+          "text": "Five seconds.",
+          "from": 152,
+          "to": 190
+        },
+        {
+          "text": "Keep score!",
+          "from": 192,
+          "to": 222
+        },
+        {
+          "text": "Whisper!",
+          "from": 361,
+          "to": 390
+        },
+        {
+          "text": "pyttsx3 speaks,",
+          "from": 392,
+          "to": 432
+        },
+        {
+          "text": "sounddevice records,",
+          "from": 432,
+          "to": 485
+        },
+        {
+          "text": "and Streamlit builds web apps.",
+          "from": 485,
+          "to": 563
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Where does the API key go?",
+        "options": [
+          "In app.py",
+          "In requirements.txt",
+          "In the host's secrets",
+          "In the page title"
+        ],
+        "answer": 2,
+        "badge": "QUESTION 6/6",
+        "commentPrompt": "Keep score!"
+      },
+      "from": 3042,
+      "durationInFrames": 511,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_07.wav",
+      "cues": [
+        161,
+        365
+      ],
+      "captions": [
+        {
+          "text": "Question 6.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "In a deployed Streamlit app,",
+          "from": 51,
+          "to": 95
+        },
+        {
+          "text": "where should your API key go?",
+          "from": 99,
+          "to": 156
+        },
+        {
+          "text": "Five seconds.",
+          "from": 161,
+          "to": 194
+        },
+        {
+          "text": "Keep score!",
+          "from": 198,
+          "to": 227
+        },
+        {
+          "text": "In the host's secrets settings.",
+          "from": 365,
+          "to": 424
+        },
+        {
+          "text": "Never in your code,",
+          "from": 428,
+          "to": 455
+        },
+        {
+          "text": "or on GitHub.",
+          "from": 459,
+          "to": 499
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "score",
+      "data": {
+        "heading": "How many did you get?",
+        "bands": [
+          [
+            "6/6",
+            "True AI Maastaaru!",
+            "Trophy"
+          ],
+          [
+            "4–5",
+            "Great work!",
+            "ThumbsUp"
+          ],
+          [
+            "0–3",
+            "Rewatch & retry",
+            "RefreshCw"
+          ]
+        ],
+        "prompt": "Comment your score /6"
+      },
+      "from": 3553,
+      "durationInFrames": 437,
+      "voiceFrom": 10,
+      "audio": "lessons/q06/voice_08.wav",
+      "cues": [
+        61,
+        165,
+        227,
+        372
+      ],
+      "captions": [
+        {
+          "text": "So, how many did you get?",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "6 out of 6?",
+          "from": 61,
+          "to": 96
+        },
+        {
+          "text": "You're a true AI Maastaaru!",
+          "from": 100,
+          "to": 159
+        },
+        {
+          "text": "4 or 5,",
+          "from": 165,
+          "to": 189
+        },
+        {
+          "text": "great work.",
+          "from": 195,
+          "to": 219
+        },
+        {
+          "text": "3 or less?",
+          "from": 227,
+          "to": 265
+        },
+        {
+          "text": "Rewatch episodes 50 to 58,",
+          "from": 267,
+          "to": 333
+        },
+        {
+          "text": "and try again.",
+          "from": 333,
+          "to": 369
+        },
+        {
+          "text": "Comment your score below!",
+          "from": 372,
+          "to": 426
+        }
+      ],
+      "image": null
+    }
+  ]
+}

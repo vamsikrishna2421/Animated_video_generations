@@ -68,3 +68,16 @@ the episodes it depends on. Status is updated as each video lands in `out/`.
 | 60 | ep48 | AI laws |  |
 | 61 | ep49 | AI and jobs |  |
 | 62–70 | ep50–ep58 | Hands-on season (build it yourself) | |
+
+## Render order (updated): fundamentals first, quiz reels, then remaining use cases
+ep35–ep40 → q01–q04 → ep41–ep49 → q05 → ep50–ep58 → q06 → uc21–uc24.
+Recap "Next:" lines follow this order (ep35→EP36, ep42→EP43, ep43→EP44, ep45→EP46; uc21→uc22→uc23→uc24).
+
+| id | Quiz reel | Covers |
+|---|---|---|
+| q01 | Quiz #1 | EP 1–10 |
+| q02 | Quiz #2 | EP 11–20 |
+| q03 | Quiz #3 | EP 21–30 |
+| q04 | Quiz #4 | EP 31–40 |
+| q05 | Quiz #5 | EP 41–49 |
+| q06 | Quiz #6 | EP 50–58 |

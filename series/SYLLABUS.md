@@ -182,3 +182,13 @@ render (about 3 minutes) → captions file with source links → upload.
 - Script style rules: [`SCRIPT_STYLE.md`](SCRIPT_STYLE.md).
 - One render at a time; each episode gets `out/<id>_captions.txt` for upload automation.
 - Every script passes `pipeline/voice_qa.py` before posting.
+
+---
+
+## Track 5: Quiz reels
+Quiz-only reels, one per ~10 episodes. 6 harder questions, 4 options each, answer position varied,
+5-second countdown with a "Keep score!" prompt, answer reveal with a one-line explanation after each
+question, then a score screen ("6/6 True AI Maastaaru · 4–5 Great work · 0–3 Rewatch") asking viewers to
+comment their score. Built with `quiz_reel()` in `pipeline/ep.py`; ids `q01`, `q02`, ...
+Question rules: test understanding, not recall of a definition. Use traps (spelling vs meaning, jailbreak vs
+injection, keyword vs semantic), small calculations (tokens → words, bits → GB), and scenario questions.

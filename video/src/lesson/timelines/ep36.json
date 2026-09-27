@@ -7,7 +7,7 @@
   "host": "female",
   "label": null,
   "fps": 30,
-  "totalFrames": 4792,
+  "totalFrames": 4793,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -203,6 +203,7 @@
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_03.wav",
       "cues": [
+        10,
         154,
         325,
         462
@@ -472,13 +473,13 @@
         ]
       },
       "from": 2756,
-      "durationInFrames": 536,
+      "durationInFrames": 537,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_06.wav",
       "cues": [
         68,
         209,
-        377
+        378
       ],
       "captions": [
         {
@@ -504,22 +505,22 @@
         {
           "text": "Inference, every time you chat,",
           "from": 209,
-          "to": 271
+          "to": 272
         },
         {
           "text": "a GPU in a data",
-          "from": 273,
+          "from": 274,
           "to": 312
         },
         {
           "text": "centre generates your answer.",
-          "from": 313,
+          "from": 314,
           "to": 375
         },
         {
           "text": "And your own laptop,",
-          "from": 377,
-          "to": 415
+          "from": 378,
+          "to": 416
         },
         {
           "text": "where a gaming GPU can",
@@ -528,8 +529,8 @@
         },
         {
           "text": "run small open models.",
-          "from": 463,
-          "to": 523
+          "from": 464,
+          "to": 524
         }
       ],
       "image": null
@@ -541,7 +542,7 @@
         "fact": "Memory is often the real limit. If the model doesn't fit in VRAM, speed doesn't matter.",
         "tip": "Check the VRAM first"
       },
-      "from": 3292,
+      "from": 3293,
       "durationInFrames": 433,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_07.wav",
@@ -609,7 +610,7 @@
         ],
         "answer": 0
       },
-      "from": 3725,
+      "from": 3726,
       "durationInFrames": 484,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_08.wav",
@@ -684,7 +685,7 @@
         ],
         "next": "EP 37 · Quantization"
       },
-      "from": 4209,
+      "from": 4210,
       "durationInFrames": 583,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_09.wav",
