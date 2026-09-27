@@ -384,7 +384,7 @@ const Pillars: React.FC = () => {
               {i === 2 && (
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 14, fontFamily: C.inter, fontWeight: 800, fontSize: 28, color: C.amber, whiteSpace: "nowrap" }}>
                   <div style={{ width: 16, height: 16, borderRadius: 8, background: C.rose, opacity: Math.floor(f / 10) % 2 ? 0.3 : 1 }} />
-                  <div style={{ transform: `translateX(${-((lf * 4) % 400)}px)` }}>NEW MODEL · NEW TOOL · AI NEWS · NEW MODEL · NEW TOOL</div>
+                  <div style={{ flex: 1, overflow: "hidden" }}><div style={{ transform: `translateX(${-((lf * 4) % 400)}px)` }}>NEW MODEL · NEW TOOL · AI NEWS · NEW MODEL · NEW TOOL · AI NEWS</div></div>
                 </div>
               )}
             </div>
