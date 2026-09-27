@@ -23,30 +23,30 @@ the episodes it depends on. Status is updated as each video lands in `out/`.
 | 15 | ep19 | AI coding assistants | done |
 | 16 | uc09 | How an AI coding assistant builds a feature | done |
 | 17 | ep20 | AI security: prompt injection and jailbreaks | done |
-| 18 | uc10 | How the Instagram Reels feed ranks videos |  |
-| 19 | ep21 | How a neural network learns, Part 1 |  |
-| 20 | uc11 | How Google Lens works |  |
-| 21 | ep22 | How a neural network learns, Part 2 |  |
-| 22 | uc12 | How AI tutor apps work |  |
-| 23 | ep23 | How a neural network learns, Part 3 |  |
-| 24 | uc13 | How AI music generation works |  |
-| 25 | ep24 | Supervised, unsupervised, reinforcement learning |  |
-| 26 | uc14 | How UPI and card fraud detection works |  |
-| 27 | ep25 | Training data |  |
-| 28 | uc15 | How delivery apps predict arrival time |  |
-| 29 | ep26 | Overfitting vs underfitting |  |
-| 30 | uc16 | How ride apps set ETA and surge pricing |  |
-| 31 | ep27 | Transformers, Part 1: attention |  |
-| 32 | ep28 | Transformers, Part 2 |  |
-| 33 | ep29 | Computer vision |  |
-| 34 | uc17 | How face unlock works |  |
-| 35 | uc18 | How self-driving cars see the road |  |
-| 36 | uc19 | How KYC document scanning works |  |
-| 37 | uc20 | How crop disease detection apps work |  |
-| 38 | ep30 | RLHF & reward models |  |
-| 39 | ep31 | Fine-tuning deep dive: LoRA |  |
-| 40 | ep32 | RAG, Part 2: chunking, vector databases, reranking |  |
-| 41 | ep33 | RAG, Part 3: hybrid search and quality |  |
+| 18 | uc10 | How the Instagram Reels feed ranks videos | done |
+| 19 | ep21 | How a neural network learns, Part 1 | done |
+| 20 | uc11 | How Google Lens works | done |
+| 21 | ep22 | How a neural network learns, Part 2 | done |
+| 22 | uc12 | How AI tutor apps work | done |
+| 23 | ep23 | How a neural network learns, Part 3 | done |
+| 24 | uc13 | How AI music generation works | done |
+| 25 | ep24 | Supervised, unsupervised, reinforcement learning | done |
+| 26 | uc14 | How UPI and card fraud detection works | done |
+| 27 | ep25 | Training data | done |
+| 28 | uc15 | How delivery apps predict arrival time | done |
+| 29 | ep26 | Overfitting vs underfitting | done |
+| 30 | uc16 | How ride apps set ETA and surge pricing | done |
+| 31 | ep27 | Transformers, Part 1: attention | done |
+| 32 | ep28 | Transformers, Part 2 | done |
+| 33 | ep29 | Computer vision | done |
+| 34 | uc17 | How face unlock works | done |
+| 35 | uc18 | How self-driving cars see the road | done |
+| 36 | uc19 | How KYC document scanning works | done |
+| 37 | uc20 | How crop disease detection apps work | done |
+| 38 | ep30 | RLHF & reward models | done |
+| 39 | ep31 | Fine-tuning deep dive: LoRA | done |
+| 40 | ep32 | RAG, Part 2: chunking, vector databases, reranking | done |
+| 41 | ep33 | RAG, Part 3: hybrid search and quality | done |
 | 42 | ep34 | Open vs closed models |  |
 | 43 | ep35 | Model size & small language models |  |
 | 44 | uc21 | How wake words work ("Hey Siri") |  |

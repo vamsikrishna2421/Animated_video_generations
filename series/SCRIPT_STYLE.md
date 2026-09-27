@@ -23,3 +23,13 @@ Goal: sound like a friendly teacher talking to one person, not a slide being rea
 Episodes 04+ set `"flow": "continuous"`: each scene is voiced as one continuous take (split
 only at `<pause>`), with word timings taken from the model, so intonation carries across
 sentences.
+
+## Cue marker conventions per scene type
+Marker `[n]` fires `cue(n-1)`. Scenes that reserve `[1]` for the panel/intro:
+- `definition`: `[1]` types the definition, `[2]..` reveal chips (markers = chips + 1).
+- `table`: `[1]` shows the header, `[2]..` reveal rows (markers = rows + 1).
+- `agentloop`: `[1]` starts the loop, `[2]..` reveal log lines (markers = log + 1).
+- `code`: `[1]` opens the editor, `[2]..` type each line group, last marker shows output (markers = groups + 2).
+Scenes where `[1]` is the first item: `steps`, `terms`, `examples`, `pipeline`, `recap`, `dial`, `versus` (`[1]` left, `[2]` right),
+`compare` with `points` (`[1]` left column, `[2]` right column), `embedmap` (`[1]` points, `[2]` query, `[3]` neighbours).
+`compare` without `points` is the ep01-only rules-vs-learning layout.
