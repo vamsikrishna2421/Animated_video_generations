@@ -1,0 +1,207 @@
+{
+  "id": "ep29",
+  "episode": 29,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Computer Vision",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Your phone unlocks with your face, your gallery finds every picture of your dog, and cars can spot pedestrians. [1] All of this is computer vision. [2] Let's understand how AI sees images.",
+      "data": {
+        "kicker": "EPISODE 29",
+        "title": [
+          "Computer",
+          "Vision"
+        ],
+        "subtitle": "How AI sees images",
+        "buzzwords": [
+          "Pixels",
+          "Detection",
+          "Segmentation",
+          "CNN",
+          "Vision transformer",
+          "Tracking",
+          "Cameras",
+          "Recognition"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Computer vision is the field of AI that understands images and videos. [1] To a computer, an image is just a grid of numbers, one for each pixel's colour. [2] The model finds edges and shapes, [3] then objects, [4] and finally, what's happening in the scene.",
+      "data": {
+        "term": "Computer vision",
+        "short": "Vision",
+        "definition": "AI that understands images and video, starting from a grid of pixel numbers.",
+        "chips": [
+          [
+            "Grid3x3",
+            "Pixels as numbers"
+          ],
+          [
+            "Shapes",
+            "Edges and shapes"
+          ],
+          [
+            "Eye",
+            "Objects and scenes"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Computer vision has four classic tasks. [1] Classification, what's in this image? A cat. [2] Detection, where are the objects? It draws a box around each one. [3] Segmentation, which exact pixels belong to each object. [4] And tracking, following objects across video frames.",
+      "data": {
+        "heading": "Four classic tasks",
+        "kicker": "WHAT VISION MODELS DO",
+        "steps": [
+          [
+            "Tag",
+            "Classification",
+            "“It's a cat”"
+          ],
+          [
+            "SquareDashed",
+            "Detection",
+            "Boxes around objects"
+          ],
+          [
+            "Shapes",
+            "Segmentation",
+            "Exact pixels of each object"
+          ],
+          [
+            "Navigation",
+            "Tracking",
+            "Follow objects across frames"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "neural",
+      "text": "Inside, it works in layers, just like we saw in episode one. [1] It starts with raw pixels. [2] Early layers find edges. [3] Middle layers combine them into shapes. [4] And later layers recognise whole objects.",
+      "data": {
+        "heading": "Layers of seeing",
+        "kicker": "REMEMBER EP 01?",
+        "layers": [
+          "Pixels",
+          "Edges",
+          "Shapes",
+          "Objects"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "There are two main designs. [1] Convolutional networks slide small filters across the image, looking at nearby pixels, and they're great at local patterns. [2] Vision transformers cut the image into patches, and use attention, from episode 27, to relate every patch to every other.",
+      "data": {
+        "heading": "Two designs",
+        "kicker": "CNN VS TRANSFORMER",
+        "left": {
+          "icon": "Grid3x3",
+          "title": "CNN",
+          "stat": "Sliding filters",
+          "label": "great at local patterns"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Vision transformer",
+          "stat": "Patches + attention",
+          "label": "relates the whole image"
+        }
+      }
+    },
+    {
+      "type": "examples",
+      "text": "And it's everywhere. [1] Face unlock, and photo search on your phone. [2] Cameras that read number plates at toll plazas. [3] And factories that spot defects on production lines.",
+      "data": {
+        "heading": "Vision in action",
+        "items": [
+          [
+            "ScanFace",
+            "Your phone",
+            "Face unlock, photo search"
+          ],
+          [
+            "Car",
+            "Traffic",
+            "Number plate reading"
+          ],
+          [
+            "Factory",
+            "Factories",
+            "Spotting defects"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think computer vision sees the world just like we do. [2] It can be fooled by things humans ignore, like odd lighting, unusual angles, or tiny changes to pixels. That's why safety critical systems use multiple checks.",
+      "data": {
+        "myth": "Computer vision sees the world just like we do.",
+        "fact": "It can be fooled by odd lighting, angles or tiny pixel changes, so critical systems double-check.",
+        "tip": "Multiple checks for safety"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Which task draws a box around each object in an image? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Detection! It finds where each object is, with a box.",
+      "data": {
+        "question": "Boxes around objects is called…",
+        "options": [
+          "Classification",
+          "Detection",
+          "Tracking"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] To AI, images are grids of numbers. [2] Vision models classify, detect, segment and track. [3] They're built with CNNs or vision transformers. [4] And they can be fooled, so critical systems double check. [5] Next, a real world breakdown, how face unlock recognises you, even in the dark. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Pixels",
+            "images are numbers"
+          ],
+          [
+            "Tasks",
+            "classify, detect, segment, track"
+          ],
+          [
+            "Designs",
+            "CNNs, vision transformers"
+          ],
+          [
+            "Careful",
+            "it can be fooled"
+          ]
+        ],
+        "next": "Use Case · Face unlock"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Face unlock, photo search, cars spotting pedestrians: it's all computer vision. How does AI see?\n\nEpisode 29 of AI From Scratch: Computer Vision\n- Images are just grids of numbers\n- Four classic tasks: classify, detect, segment, track\n- Layers of seeing: pixels, edges, shapes, objects\n- Two designs: CNNs vs vision transformers\n- The myth: \"AI sees like we do\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How face unlock recognises you, even in the dark.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #ComputerVision #LearnAI #DeepLearning #AIForBeginners",
+    "pinned": "Quiz answer: Detection, it draws a box around each object. Where do you use computer vision most in your day?",
+    "cover": "'Computer Vision' title card",
+    "alt": "Animated lesson explaining computer vision tasks and how AI models process images."
+  }
+}

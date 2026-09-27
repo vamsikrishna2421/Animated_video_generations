@@ -1,0 +1,898 @@
+{
+  "id": "ep28",
+  "episode": 28,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Transformers Part 2 Inside a Transformer",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5227,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep28/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 28",
+        "title": [
+          "Inside a",
+          "Transformer"
+        ],
+        "subtitle": "Part 2: from prompt to answer",
+        "buzzwords": [
+          "Embeddings",
+          "Position",
+          "Layers",
+          "Feed-forward",
+          "Decoder",
+          "Parameters",
+          "Next token",
+          "Context"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 373,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_01.wav",
+      "cues": [
+        139,
+        249
+      ],
+      "captions": [
+        {
+          "text": "In part one,",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "we learned attention,",
+          "from": 40,
+          "to": 79
+        },
+        {
+          "text": "how words look at each other.",
+          "from": 82,
+          "to": 138
+        },
+        {
+          "text": "But how does a transformer",
+          "from": 139,
+          "to": 177
+        },
+        {
+          "text": "go from your prompt to",
+          "from": 178,
+          "to": 205
+        },
+        {
+          "text": "a full answer?",
+          "from": 207,
+          "to": 247
+        },
+        {
+          "text": "In part two,",
+          "from": 249,
+          "to": 282
+        },
+        {
+          "text": "let's follow a sentence through",
+          "from": 284,
+          "to": 328
+        },
+        {
+          "text": "the machine.",
+          "from": 329,
+          "to": 360
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From prompt to answer",
+        "kicker": "THE JOURNEY",
+        "nodes": [
+          [
+            "Type",
+            "Tokens",
+            "“The capital of India is”"
+          ],
+          [
+            "Hash",
+            "Embeddings + position",
+            "Meaning and word order"
+          ],
+          [
+            "Layers",
+            "Transformer layers",
+            "Attention + thinking, repeated"
+          ],
+          [
+            "BarChart3",
+            "Score next token",
+            "Every word it knows"
+          ],
+          [
+            "Sparkles",
+            "Pick and repeat",
+            "“New” → “Delhi”"
+          ]
+        ]
+      },
+      "from": 373,
+      "durationInFrames": 764,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_02.wav",
+      "cues": [
+        123,
+        210,
+        357,
+        542,
+        650
+      ],
+      "captions": [
+        {
+          "text": "Here's the journey,",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "for the prompt,",
+          "from": 46,
+          "to": 75
+        },
+        {
+          "text": "the capital of India is.",
+          "from": 75,
+          "to": 120
+        },
+        {
+          "text": "First, the text is split",
+          "from": 123,
+          "to": 167
+        },
+        {
+          "text": "into tokens.",
+          "from": 168,
+          "to": 208
+        },
+        {
+          "text": "Each token becomes an embedding,",
+          "from": 210,
+          "to": 269
+        },
+        {
+          "text": "plus a signal for its",
+          "from": 269,
+          "to": 309
+        },
+        {
+          "text": "position in the sentence.",
+          "from": 309,
+          "to": 355
+        },
+        {
+          "text": "The tokens pass through many",
+          "from": 357,
+          "to": 403
+        },
+        {
+          "text": "transformer layers,",
+          "from": 405,
+          "to": 446
+        },
+        {
+          "text": "each with attention,",
+          "from": 447,
+          "to": 486
+        },
+        {
+          "text": "and a small thinking step.",
+          "from": 487,
+          "to": 539
+        },
+        {
+          "text": "At the end,",
+          "from": 542,
+          "to": 561
+        },
+        {
+          "text": "the model scores every possible",
+          "from": 564,
+          "to": 614
+        },
+        {
+          "text": "next token,",
+          "from": 616,
+          "to": 648
+        },
+        {
+          "text": "picks one,",
+          "from": 650,
+          "to": 679
+        },
+        {
+          "text": "New, and repeats,",
+          "from": 682,
+          "to": 714
+        },
+        {
+          "text": "to get Delhi.",
+          "from": 719,
+          "to": 753
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Transformer layer",
+        "short": "Layer",
+        "definition": "One round of attention (tokens share information) plus a feed-forward step (each token thinks alone).",
+        "chips": [
+          [
+            "Users",
+            "Attention: share"
+          ],
+          [
+            "Brain",
+            "Feed-forward: think"
+          ],
+          [
+            "Layers",
+            "Stack many layers"
+          ]
+        ]
+      },
+      "from": 1137,
+      "durationInFrames": 658,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_03.wav",
+      "cues": [
+        93,
+        214,
+        352,
+        499
+      ],
+      "captions": [
+        {
+          "text": "Each transformer layer does two jobs.",
+          "from": 10,
+          "to": 91
+        },
+        {
+          "text": "Think of it as a",
+          "from": 93,
+          "to": 112
+        },
+        {
+          "text": "team meeting,",
+          "from": 115,
+          "to": 142
+        },
+        {
+          "text": "followed by some private thinking.",
+          "from": 144,
+          "to": 212
+        },
+        {
+          "text": "In the attention step,",
+          "from": 214,
+          "to": 258
+        },
+        {
+          "text": "every token gathers information from",
+          "from": 258,
+          "to": 327
+        },
+        {
+          "text": "the others.",
+          "from": 327,
+          "to": 350
+        },
+        {
+          "text": "In the feed forward step,",
+          "from": 352,
+          "to": 399
+        },
+        {
+          "text": "each token thinks about what",
+          "from": 399,
+          "to": 451
+        },
+        {
+          "text": "it learned,",
+          "from": 451,
+          "to": 473
+        },
+        {
+          "text": "on its own.",
+          "from": 473,
+          "to": 495
+        },
+        {
+          "text": "Stack dozens of these layers,",
+          "from": 499,
+          "to": 557
+        },
+        {
+          "text": "and the understanding gets deeper",
+          "from": 559,
+          "to": 612
+        },
+        {
+          "text": "and deeper.",
+          "from": 615,
+          "to": 646
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Word order matters",
+        "kicker": "POSITION SIGNALS",
+        "steps": [
+          [
+            "ArrowLeftRight",
+            "Same words",
+            "“dog bites man” vs “man bites dog”"
+          ],
+          [
+            "Hash",
+            "Add position",
+            "1st, 2nd, 3rd…"
+          ],
+          [
+            "CheckCircle2",
+            "Order understood",
+            "Now it knows who bit whom"
+          ]
+        ]
+      },
+      "from": 1795,
+      "durationInFrames": 597,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_04.wav",
+      "cues": [
+        200,
+        353,
+        507
+      ],
+      "captions": [
+        {
+          "text": "Now, one sneaky problem.",
+          "from": 10,
+          "to": 74
+        },
+        {
+          "text": "Attention looks at all the",
+          "from": 77,
+          "to": 120
+        },
+        {
+          "text": "words at once,",
+          "from": 120,
+          "to": 145
+        },
+        {
+          "text": "so how does it know",
+          "from": 145,
+          "to": 177
+        },
+        {
+          "text": "word order?",
+          "from": 177,
+          "to": 197
+        },
+        {
+          "text": "Dog bites man,",
+          "from": 200,
+          "to": 233
+        },
+        {
+          "text": "and man bites dog,",
+          "from": 237,
+          "to": 279
+        },
+        {
+          "text": "use exactly the same words.",
+          "from": 282,
+          "to": 350
+        },
+        {
+          "text": "So each token gets a",
+          "from": 353,
+          "to": 387
+        },
+        {
+          "text": "position signal added to it,",
+          "from": 389,
+          "to": 440
+        },
+        {
+          "text": "first, second, third.",
+          "from": 443,
+          "to": 504
+        },
+        {
+          "text": "And now the model knows",
+          "from": 507,
+          "to": 549
+        },
+        {
+          "text": "who bit whom.",
+          "from": 549,
+          "to": 585
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "predict",
+      "data": {
+        "heading": "The final step",
+        "kicker": "REMEMBER EP 02?",
+        "prompt": "The capital of India is",
+        "options": [
+          [
+            "New",
+            88
+          ],
+          [
+            "Mumbai",
+            6
+          ],
+          [
+            "a",
+            4
+          ],
+          [
+            "Kolkata",
+            1
+          ]
+        ],
+        "continuation": [
+          "Delhi."
+        ]
+      },
+      "from": 2392,
+      "durationInFrames": 468,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_05.wav",
+      "cues": [
+        142,
+        352,
+        382
+      ],
+      "captions": [
+        {
+          "text": "And at the very end,",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "it's next token prediction,",
+          "from": 46,
+          "to": 91
+        },
+        {
+          "text": "from episode two.",
+          "from": 92,
+          "to": 140
+        },
+        {
+          "text": "The model scores every possible",
+          "from": 142,
+          "to": 193
+        },
+        {
+          "text": "next token.",
+          "from": 194,
+          "to": 234
+        },
+        {
+          "text": "New is the most likely,",
+          "from": 238,
+          "to": 280
+        },
+        {
+          "text": "and Mumbai is much less likely.",
+          "from": 282,
+          "to": 350
+        },
+        {
+          "text": "It picks New,",
+          "from": 352,
+          "to": 380
+        },
+        {
+          "text": "then runs again,",
+          "from": 382,
+          "to": 411
+        },
+        {
+          "text": "and adds Delhi.",
+          "from": 415,
+          "to": 457
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Transformer words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Hash",
+            "Parameters",
+            "Billions of numbers"
+          ],
+          [
+            "Layers",
+            "Layers",
+            "Rounds of attention + thinking"
+          ],
+          [
+            "Ruler",
+            "Context length",
+            "Tokens it can see at once"
+          ],
+          [
+            "PenLine",
+            "Decoder",
+            "Writes one token at a time"
+          ]
+        ]
+      },
+      "from": 2860,
+      "durationInFrames": 623,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_06.wav",
+      "cues": [
+        66,
+        214,
+        321,
+        442
+      ],
+      "captions": [
+        {
+          "text": "Here are four words to know.",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "Parameters, the numbers inside all",
+          "from": 66,
+          "to": 126
+        },
+        {
+          "text": "these layers,",
+          "from": 128,
+          "to": 152
+        },
+        {
+          "text": "often billions of them.",
+          "from": 154,
+          "to": 211
+        },
+        {
+          "text": "Layers, how many rounds of",
+          "from": 214,
+          "to": 260
+        },
+        {
+          "text": "attention and thinking there are.",
+          "from": 260,
+          "to": 319
+        },
+        {
+          "text": "Context length,",
+          "from": 321,
+          "to": 354
+        },
+        {
+          "text": "how many tokens it can",
+          "from": 354,
+          "to": 402
+        },
+        {
+          "text": "look at,",
+          "from": 402,
+          "to": 421
+        },
+        {
+          "text": "at once.",
+          "from": 421,
+          "to": 439
+        },
+        {
+          "text": "And decoder,",
+          "from": 442,
+          "to": 468
+        },
+        {
+          "text": "the type of transformer chatbots",
+          "from": 468,
+          "to": 533
+        },
+        {
+          "text": "use, which writes one token",
+          "from": 533,
+          "to": 589
+        },
+        {
+          "text": "at a time.",
+          "from": 589,
+          "to": 610
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "A transformer looks up answers in a database of facts.",
+        "fact": "Knowledge is spread across billions of parameters as patterns, which is why it can also be wrong.",
+        "tip": "Patterns, not a database"
+      },
+      "from": 3483,
+      "durationInFrames": 530,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_07.wav",
+      "cues": [
+        59,
+        208
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think a transformer looks",
+          "from": 59,
+          "to": 107
+        },
+        {
+          "text": "up answers in a stored",
+          "from": 108,
+          "to": 154
+        },
+        {
+          "text": "database of facts.",
+          "from": 156,
+          "to": 205
+        },
+        {
+          "text": "It doesn't.",
+          "from": 208,
+          "to": 237
+        },
+        {
+          "text": "Its knowledge is spread across",
+          "from": 239,
+          "to": 286
+        },
+        {
+          "text": "billions of parameters,",
+          "from": 289,
+          "to": 332
+        },
+        {
+          "text": "as patterns.",
+          "from": 335,
+          "to": 374
+        },
+        {
+          "text": "That's why it can be",
+          "from": 376,
+          "to": 398
+        },
+        {
+          "text": "brilliant, and also why it",
+          "from": 400,
+          "to": 448
+        },
+        {
+          "text": "can confidently get facts wrong.",
+          "from": 450,
+          "to": 518
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "It knows word order through…",
+        "options": [
+          "Position signals",
+          "Bigger fonts",
+          "Random guessing"
+        ],
+        "answer": 0
+      },
+      "from": 4013,
+      "durationInFrames": 553,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_08.wav",
+      "cues": [
+        199,
+        407
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "How does a transformer know",
+          "from": 43,
+          "to": 79
+        },
+        {
+          "text": "that, dog bites man,",
+          "from": 81,
+          "to": 127
+        },
+        {
+          "text": "is different from,",
+          "from": 130,
+          "to": 151
+        },
+        {
+          "text": "man bites dog?",
+          "from": 152,
+          "to": 196
+        },
+        {
+          "text": "Pause and think,",
+          "from": 199,
+          "to": 236
+        },
+        {
+          "text": "and if you get it",
+          "from": 238,
+          "to": 255
+        },
+        {
+          "text": "right, comment below!",
+          "from": 256,
+          "to": 309
+        },
+        {
+          "text": "Position signals!",
+          "from": 407,
+          "to": 451
+        },
+        {
+          "text": "Each token knows where it",
+          "from": 453,
+          "to": 500
+        },
+        {
+          "text": "sits in the sentence.",
+          "from": 500,
+          "to": 539
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Tokens",
+            "split and embed"
+          ],
+          [
+            "Position",
+            "word-order signals"
+          ],
+          [
+            "Layers",
+            "attention + thinking, stacked"
+          ],
+          [
+            "Output",
+            "predict the next token"
+          ]
+        ],
+        "next": "EP 29 · Computer vision"
+      },
+      "from": 4566,
+      "durationInFrames": 661,
+      "voiceFrom": 10,
+      "audio": "lessons/ep28/voice_09.wav",
+      "cues": [
+        46,
+        159,
+        245,
+        352,
+        444
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Text is split into tokens,",
+          "from": 46,
+          "to": 98
+        },
+        {
+          "text": "and turned into embeddings.",
+          "from": 101,
+          "to": 157
+        },
+        {
+          "text": "Position signals keep track of",
+          "from": 159,
+          "to": 211
+        },
+        {
+          "text": "word order.",
+          "from": 212,
+          "to": 241
+        },
+        {
+          "text": "Stacked layers of attention and",
+          "from": 245,
+          "to": 290
+        },
+        {
+          "text": "thinking build understanding.",
+          "from": 292,
+          "to": 350
+        },
+        {
+          "text": "And at the end,",
+          "from": 352,
+          "to": 377
+        },
+        {
+          "text": "it predicts the next token.",
+          "from": 379,
+          "to": 440
+        },
+        {
+          "text": "Next, we'll learn how AI",
+          "from": 444,
+          "to": 499
+        },
+        {
+          "text": "sees images,",
+          "from": 501,
+          "to": 531
+        },
+        {
+          "text": "with computer vision.",
+          "from": 534,
+          "to": 580
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 584,
+          "to": 648
+        }
+      ],
+      "image": null
+    }
+  ]
+}
