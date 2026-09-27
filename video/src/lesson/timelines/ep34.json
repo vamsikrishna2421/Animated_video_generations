@@ -7,7 +7,7 @@
   "host": "female",
   "label": null,
   "fps": 30,
-  "totalFrames": 4624,
+  "totalFrames": 4696,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -33,61 +33,72 @@
           "GPT",
           "Claude",
           "Gemini"
-        ]
+        ],
+        "hook": "*Free* AI vs *paid* AI"
       },
       "from": 0,
-      "durationInFrames": 466,
+      "durationInFrames": 538,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_01.wav",
       "cues": [
-        162,
-        293
+        244,
+        367
       ],
       "captions": [
         {
-          "text": "Some AI models you can",
+          "text": "Free AI,",
           "from": 10,
-          "to": 54
+          "to": 41
+        },
+        {
+          "text": "versus paid AI.",
+          "from": 44,
+          "to": 94
+        },
+        {
+          "text": "Some AI models you can",
+          "from": 98,
+          "to": 137
         },
         {
           "text": "only use through a website",
-          "from": 56,
-          "to": 104
+          "from": 139,
+          "to": 184
         },
         {
           "text": "or an API.",
-          "from": 108,
-          "to": 160
+          "from": 188,
+          "to": 241
         },
         {
           "text": "Others, you can download for",
-          "from": 162,
-          "to": 210
-        },
-        {
-          "text": "free, and run on your",
-          "from": 213,
-          "to": 252
-        },
-        {
-          "text": "own computer.",
-          "from": 254,
+          "from": 244,
           "to": 291
         },
         {
+          "text": "free, and run on your",
+          "from": 294,
+          "to": 328
+        },
+        {
+          "text": "own computer.",
+          "from": 329,
+          "to": 364
+        },
+        {
           "text": "What's the difference,",
-          "from": 293,
-          "to": 321
+          "from": 367,
+          "to": 394
         },
         {
           "text": "and which should you pick?",
-          "from": 324,
-          "to": 367
+          "from": 398,
+          "to": 440
         },
         {
           "text": "Let's talk open versus closed models.",
-          "from": 369,
-          "to": 453
+          "from": 443,
+          "to": 525
         }
       ],
       "image": null
@@ -110,7 +121,7 @@
           "label": "Llama, Qwen, Mistral, DeepSeek"
         }
       },
-      "from": 466,
+      "from": 538,
       "durationInFrames": 583,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_02.wav",
@@ -203,7 +214,7 @@
           ]
         ]
       },
-      "from": 1049,
+      "from": 1121,
       "durationInFrames": 504,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_03.wav",
@@ -285,7 +296,7 @@
           ]
         }
       },
-      "from": 1553,
+      "from": 1625,
       "durationInFrames": 439,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_04.wav",
@@ -364,7 +375,7 @@
           ]
         ]
       },
-      "from": 1992,
+      "from": 2064,
       "durationInFrames": 536,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_05.wav",
@@ -431,7 +442,7 @@
         "fact": "The download is free, but GPUs, electricity and engineers cost money. At small scale, an API can be cheaper.",
         "tip": "Free to download, not free to run"
       },
-      "from": 2528,
+      "from": 2600,
       "durationInFrames": 475,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_06.wav",
@@ -510,7 +521,7 @@
           ]
         ]
       },
-      "from": 3003,
+      "from": 3075,
       "durationInFrames": 424,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_07.wav",
@@ -574,7 +585,7 @@
         ],
         "answer": 0
       },
-      "from": 3427,
+      "from": 3499,
       "durationInFrames": 571,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_08.wav",
@@ -659,7 +670,7 @@
         ],
         "next": "EP 35 · Small Models"
       },
-      "from": 3998,
+      "from": 4070,
       "durationInFrames": 626,
       "voiceFrom": 10,
       "audio": "lessons/ep34/voice_09.wav",
