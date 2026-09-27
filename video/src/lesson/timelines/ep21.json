@@ -1,0 +1,770 @@
+{
+  "id": "ep21",
+  "episode": 21,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How a Neural Network Learns Part 1",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4762,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep21/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 21",
+        "title": [
+          "How AI",
+          "Learns"
+        ],
+        "subtitle": "Part 1: neurons, weights and biases",
+        "buzzwords": [
+          "Neuron",
+          "Weights",
+          "Bias",
+          "Activation",
+          "Layers",
+          "Parameters",
+          "Training",
+          "Neural network"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 368,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_01.wav",
+      "cues": [
+        84,
+        208
+      ],
+      "captions": [
+        {
+          "text": "We keep saying that AI learns.",
+          "from": 10,
+          "to": 82
+        },
+        {
+          "text": "But what does learning actually",
+          "from": 84,
+          "to": 124
+        },
+        {
+          "text": "mean, inside a neural network?",
+          "from": 126,
+          "to": 206
+        },
+        {
+          "text": "Let's start a three part",
+          "from": 208,
+          "to": 242
+        },
+        {
+          "text": "series, beginning with neurons,",
+          "from": 244,
+          "to": 304
+        },
+        {
+          "text": "weights and biases.",
+          "from": 307,
+          "to": 355
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Artificial neuron",
+        "short": "Neuron",
+        "definition": "A tiny calculator that weighs its inputs, adds them up and passes on a result.",
+        "chips": [
+          [
+            "Hash",
+            "Takes numbers in"
+          ],
+          [
+            "SlidersHorizontal",
+            "Weighs each one"
+          ],
+          [
+            "ArrowRight",
+            "Passes a result on"
+          ]
+        ]
+      },
+      "from": 368,
+      "durationInFrames": 476,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_02.wav",
+      "cues": [
+        116,
+        236,
+        284,
+        373
+      ],
+      "captions": [
+        {
+          "text": "Everything starts with a tiny",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "unit called a neuron.",
+          "from": 59,
+          "to": 113
+        },
+        {
+          "text": "An artificial neuron is really",
+          "from": 116,
+          "to": 172
+        },
+        {
+          "text": "just a small calculator.",
+          "from": 173,
+          "to": 234
+        },
+        {
+          "text": "It takes in some numbers,",
+          "from": 236,
+          "to": 282
+        },
+        {
+          "text": "multiplies each one by an",
+          "from": 284,
+          "to": 328
+        },
+        {
+          "text": "importance value,",
+          "from": 329,
+          "to": 370
+        },
+        {
+          "text": "adds them all up,",
+          "from": 373,
+          "to": 407
+        },
+        {
+          "text": "and passes on a result.",
+          "from": 409,
+          "to": 463
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "The umbrella neuron",
+        "kicker": "A SIMPLE EXAMPLE",
+        "steps": [
+          [
+            "Cloud",
+            "Inputs",
+            "Clouds, forecast, humidity"
+          ],
+          [
+            "SlidersHorizontal",
+            "Weights",
+            "The forecast matters most"
+          ],
+          [
+            "Umbrella",
+            "Decision",
+            "Total high enough? Take it!"
+          ]
+        ]
+      },
+      "from": 844,
+      "durationInFrames": 653,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_03.wav",
+      "cues": [
+        109,
+        265,
+        420
+      ],
+      "captions": [
+        {
+          "text": "Let's make it real.",
+          "from": 10,
+          "to": 49
+        },
+        {
+          "text": "Should you carry an umbrella today?",
+          "from": 51,
+          "to": 107
+        },
+        {
+          "text": "The inputs are clues,",
+          "from": 109,
+          "to": 148
+        },
+        {
+          "text": "like clouds,",
+          "from": 153,
+          "to": 178
+        },
+        {
+          "text": "the weather forecast,",
+          "from": 182,
+          "to": 213
+        },
+        {
+          "text": "and a humid feeling.",
+          "from": 217,
+          "to": 263
+        },
+        {
+          "text": "Each clue gets a weight,",
+          "from": 265,
+          "to": 306
+        },
+        {
+          "text": "and the forecast matters most,",
+          "from": 308,
+          "to": 355
+        },
+        {
+          "text": "so it gets the biggest weight.",
+          "from": 359,
+          "to": 417
+        },
+        {
+          "text": "The neuron adds up each",
+          "from": 420,
+          "to": 461
+        },
+        {
+          "text": "clue times its weight,",
+          "from": 462,
+          "to": 504
+        },
+        {
+          "text": "and if the total is",
+          "from": 506,
+          "to": 528
+        },
+        {
+          "text": "high enough,",
+          "from": 531,
+          "to": 554
+        },
+        {
+          "text": "it says,",
+          "from": 557,
+          "to": 577
+        },
+        {
+          "text": "yes, take the umbrella.",
+          "from": 580,
+          "to": 641
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The key words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "SlidersHorizontal",
+            "Weight",
+            "How important an input is"
+          ],
+          [
+            "Plus",
+            "Bias",
+            "An extra nudge"
+          ],
+          [
+            "Zap",
+            "Activation",
+            "Fire or not, and how much"
+          ],
+          [
+            "Hash",
+            "Parameters",
+            "All weights and biases"
+          ]
+        ]
+      },
+      "from": 1497,
+      "durationInFrames": 606,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_04.wav",
+      "cues": [
+        57,
+        139,
+        293,
+        437
+      ],
+      "captions": [
+        {
+          "text": "Now the key words.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "A weight is how important",
+          "from": 57,
+          "to": 97
+        },
+        {
+          "text": "an input is.",
+          "from": 98,
+          "to": 136
+        },
+        {
+          "text": "A bias is an extra",
+          "from": 139,
+          "to": 178
+        },
+        {
+          "text": "nudge, which sets how easily",
+          "from": 179,
+          "to": 236
+        },
+        {
+          "text": "the neuron says yes.",
+          "from": 237,
+          "to": 291
+        },
+        {
+          "text": "An activation decides whether,",
+          "from": 293,
+          "to": 349
+        },
+        {
+          "text": "and how strongly,",
+          "from": 351,
+          "to": 382
+        },
+        {
+          "text": "the neuron fires.",
+          "from": 384,
+          "to": 435
+        },
+        {
+          "text": "And parameters are all the",
+          "from": 437,
+          "to": 478
+        },
+        {
+          "text": "weights and biases together,",
+          "from": 480,
+          "to": 532
+        },
+        {
+          "text": "the numbers the network learns.",
+          "from": 533,
+          "to": 594
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "neural",
+      "data": {
+        "heading": "From neurons to networks",
+        "kicker": "CONNECT THEM",
+        "layers": [
+          "Pixels",
+          "Edges",
+          "Shapes",
+          "Cat!"
+        ]
+      },
+      "from": 2103,
+      "durationInFrames": 460,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_05.wav",
+      "cues": [
+        135,
+        197,
+        309,
+        381
+      ],
+      "captions": [
+        {
+          "text": "One neuron is simple,",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "but connect thousands of them",
+          "from": 66,
+          "to": 105
+        },
+        {
+          "text": "in layers,",
+          "from": 107,
+          "to": 134
+        },
+        {
+          "text": "and you get a neural network.",
+          "from": 135,
+          "to": 195
+        },
+        {
+          "text": "The first layers pick up",
+          "from": 197,
+          "to": 233
+        },
+        {
+          "text": "simple patterns,",
+          "from": 235,
+          "to": 264
+        },
+        {
+          "text": "like edges.",
+          "from": 269,
+          "to": 306
+        },
+        {
+          "text": "Middle layers combine them into shapes.",
+          "from": 309,
+          "to": 379
+        },
+        {
+          "text": "And the last layer gives",
+          "from": 381,
+          "to": 415
+        },
+        {
+          "text": "the answer.",
+          "from": 416,
+          "to": 449
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Before vs after training",
+        "kicker": "WHAT LEARNING MEANS",
+        "left": {
+          "icon": "Dice5",
+          "title": "Before training",
+          "stat": "Random weights",
+          "label": "random guesses"
+        },
+        "right": {
+          "icon": "Target",
+          "title": "After training",
+          "stat": "Tuned weights",
+          "label": "the right answers"
+        }
+      },
+      "from": 2563,
+      "durationInFrames": 498,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_06.wav",
+      "cues": [
+        77,
+        242
+      ],
+      "captions": [
+        {
+          "text": "So what does learning actually mean?",
+          "from": 10,
+          "to": 75
+        },
+        {
+          "text": "Before training,",
+          "from": 77,
+          "to": 104
+        },
+        {
+          "text": "all the weights are random,",
+          "from": 105,
+          "to": 148
+        },
+        {
+          "text": "so the network's answers are",
+          "from": 150,
+          "to": 191
+        },
+        {
+          "text": "random guesses.",
+          "from": 193,
+          "to": 240
+        },
+        {
+          "text": "After training,",
+          "from": 242,
+          "to": 270
+        },
+        {
+          "text": "the weights have been tuned,",
+          "from": 270,
+          "to": 320
+        },
+        {
+          "text": "so the right inputs lead",
+          "from": 320,
+          "to": 363
+        },
+        {
+          "text": "to the right answers.",
+          "from": 363,
+          "to": 400
+        },
+        {
+          "text": "Learning simply means finding good weights.",
+          "from": 404,
+          "to": 484
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Artificial neurons work just like brain cells.",
+        "fact": "They're loosely inspired by the brain. An artificial neuron is simple maths: multiply, add, decide.",
+        "tip": "Inspired by, not a copy of"
+      },
+      "from": 3061,
+      "durationInFrames": 524,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_07.wav",
+      "cues": [
+        59,
+        176
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think artificial neurons work",
+          "from": 59,
+          "to": 122
+        },
+        {
+          "text": "just like brain cells.",
+          "from": 124,
+          "to": 175
+        },
+        {
+          "text": "They're only loosely inspired by",
+          "from": 176,
+          "to": 229
+        },
+        {
+          "text": "the brain.",
+          "from": 230,
+          "to": 264
+        },
+        {
+          "text": "An artificial neuron is simple",
+          "from": 266,
+          "to": 336
+        },
+        {
+          "text": "maths, multiply,",
+          "from": 336,
+          "to": 374
+        },
+        {
+          "text": "add and decide,",
+          "from": 374,
+          "to": 410
+        },
+        {
+          "text": "while real brain cells are",
+          "from": 410,
+          "to": 470
+        },
+        {
+          "text": "far more complex.",
+          "from": 470,
+          "to": 511
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Learning changes the…",
+        "options": [
+          "Weights and biases",
+          "Size of the screen",
+          "Number of users"
+        ],
+        "answer": 0
+      },
+      "from": 3585,
+      "durationInFrames": 498,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_08.wav",
+      "cues": [
+        143,
+        349
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "In a neural network,",
+          "from": 44,
+          "to": 72
+        },
+        {
+          "text": "what does learning actually change?",
+          "from": 77,
+          "to": 140
+        },
+        {
+          "text": "Pause and think,",
+          "from": 143,
+          "to": 177
+        },
+        {
+          "text": "and if you get it",
+          "from": 179,
+          "to": 196
+        },
+        {
+          "text": "right, comment below!",
+          "from": 198,
+          "to": 251
+        },
+        {
+          "text": "The weights and biases!",
+          "from": 349,
+          "to": 402
+        },
+        {
+          "text": "Learning means finding good values",
+          "from": 405,
+          "to": 459
+        },
+        {
+          "text": "for them.",
+          "from": 461,
+          "to": 486
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Neuron",
+            "weigh, add, decide"
+          ],
+          [
+            "Weights",
+            "how important each input is"
+          ],
+          [
+            "Layers",
+            "simple → complex patterns"
+          ],
+          [
+            "Learning",
+            "finding good weights"
+          ]
+        ],
+        "next": "Use Case · Google Lens"
+      },
+      "from": 4083,
+      "durationInFrames": 679,
+      "voiceFrom": 10,
+      "audio": "lessons/ep21/voice_09.wav",
+      "cues": [
+        47,
+        167,
+        250,
+        342,
+        418
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "A neuron weighs its inputs,",
+          "from": 47,
+          "to": 101
+        },
+        {
+          "text": "adds them up,",
+          "from": 104,
+          "to": 123
+        },
+        {
+          "text": "and decides.",
+          "from": 128,
+          "to": 164
+        },
+        {
+          "text": "Weights say how important each",
+          "from": 167,
+          "to": 212
+        },
+        {
+          "text": "input is.",
+          "from": 214,
+          "to": 247
+        },
+        {
+          "text": "Layers turn simple patterns into",
+          "from": 250,
+          "to": 304
+        },
+        {
+          "text": "complex ones.",
+          "from": 305,
+          "to": 340
+        },
+        {
+          "text": "And learning means finding good weights.",
+          "from": 342,
+          "to": 415
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 418,
+          "to": 483
+        },
+        {
+          "text": "how Google Lens recognises anything",
+          "from": 485,
+          "to": 548
+        },
+        {
+          "text": "you point your camera at.",
+          "from": 549,
+          "to": 594
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 598,
+          "to": 667
+        }
+      ],
+      "image": null
+    }
+  ]
+}

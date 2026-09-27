@@ -1,0 +1,208 @@
+{
+  "id": "ep21",
+  "episode": 21,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How a Neural Network Learns Part 1",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "We keep saying that AI learns. [1] But what does learning actually mean, inside a neural network? [2] Let's start a three part series, beginning with neurons, weights and biases.",
+      "data": {
+        "kicker": "EPISODE 21",
+        "title": [
+          "How AI",
+          "Learns"
+        ],
+        "subtitle": "Part 1: neurons, weights and biases",
+        "buzzwords": [
+          "Neuron",
+          "Weights",
+          "Bias",
+          "Activation",
+          "Layers",
+          "Parameters",
+          "Training",
+          "Neural network"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Everything starts with a tiny unit called a neuron. [1] An artificial neuron is really just a small calculator. [2] It takes in some numbers, [3] multiplies each one by an importance value, [4] adds them all up, and passes on a result.",
+      "data": {
+        "term": "Artificial neuron",
+        "short": "Neuron",
+        "definition": "A tiny calculator that weighs its inputs, adds them up and passes on a result.",
+        "chips": [
+          [
+            "Hash",
+            "Takes numbers in"
+          ],
+          [
+            "SlidersHorizontal",
+            "Weighs each one"
+          ],
+          [
+            "ArrowRight",
+            "Passes a result on"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Let's make it real. Should you carry an umbrella today? [1] The inputs are clues, like clouds, the weather forecast, and a humid feeling. [2] Each clue gets a weight, and the forecast matters most, so it gets the biggest weight. [3] The neuron adds up each clue times its weight, and if the total is high enough, it says, yes, take the umbrella.",
+      "data": {
+        "heading": "The umbrella neuron",
+        "kicker": "A SIMPLE EXAMPLE",
+        "steps": [
+          [
+            "Cloud",
+            "Inputs",
+            "Clouds, forecast, humidity"
+          ],
+          [
+            "SlidersHorizontal",
+            "Weights",
+            "The forecast matters most"
+          ],
+          [
+            "Umbrella",
+            "Decision",
+            "Total high enough? Take it!"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Now the key words. [1] A weight is how important an input is. [2] A bias is an extra nudge, which sets how easily the neuron says yes. [3] An activation decides whether, and how strongly, the neuron fires. [4] And parameters are all the weights and biases together, the numbers the network learns.",
+      "data": {
+        "heading": "The key words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "SlidersHorizontal",
+            "Weight",
+            "How important an input is"
+          ],
+          [
+            "Plus",
+            "Bias",
+            "An extra nudge"
+          ],
+          [
+            "Zap",
+            "Activation",
+            "Fire or not, and how much"
+          ],
+          [
+            "Hash",
+            "Parameters",
+            "All weights and biases"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "neural",
+      "text": "One neuron is simple, but connect thousands of them in layers, [1] and you get a neural network. [2] The first layers pick up simple patterns, like edges. [3] Middle layers combine them into shapes. [4] And the last layer gives the answer.",
+      "data": {
+        "heading": "From neurons to networks",
+        "kicker": "CONNECT THEM",
+        "layers": [
+          "Pixels",
+          "Edges",
+          "Shapes",
+          "Cat!"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "So what does learning actually mean? [1] Before training, all the weights are random, so the network's answers are random guesses. [2] After training, the weights have been tuned, so the right inputs lead to the right answers. Learning simply means finding good weights.",
+      "data": {
+        "heading": "Before vs after training",
+        "kicker": "WHAT LEARNING MEANS",
+        "left": {
+          "icon": "Dice5",
+          "title": "Before training",
+          "stat": "Random weights",
+          "label": "random guesses"
+        },
+        "right": {
+          "icon": "Target",
+          "title": "After training",
+          "stat": "Tuned weights",
+          "label": "the right answers"
+        }
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think artificial neurons work just like brain cells. [2] They're only loosely inspired by the brain. An artificial neuron is simple maths, multiply, add and decide, while real brain cells are far more complex.",
+      "data": {
+        "myth": "Artificial neurons work just like brain cells.",
+        "fact": "They're loosely inspired by the brain. An artificial neuron is simple maths: multiply, add, decide.",
+        "tip": "Inspired by, not a copy of"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! In a neural network, what does learning actually change? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] The weights and biases! Learning means finding good values for them.",
+      "data": {
+        "question": "Learning changes the…",
+        "options": [
+          "Weights and biases",
+          "Size of the screen",
+          "Number of users"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] A neuron weighs its inputs, adds them up, and decides. [2] Weights say how important each input is. [3] Layers turn simple patterns into complex ones. [4] And learning means finding good weights. [5] Next, a real world breakdown, how Google Lens recognises anything you point your camera at. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Neuron",
+            "weigh, add, decide"
+          ],
+          [
+            "Weights",
+            "how important each input is"
+          ],
+          [
+            "Layers",
+            "simple → complex patterns"
+          ],
+          [
+            "Learning",
+            "finding good weights"
+          ]
+        ],
+        "next": "Use Case · Google Lens"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Everyone says \"AI learns\". But what does learning actually mean inside a neural network?\n\nEpisode 21 of AI From Scratch: How a Neural Network Learns, Part 1\n- The artificial neuron: a tiny calculator\n- The umbrella neuron: inputs, weights, decision\n- Key words: weight, bias, activation, parameters\n- From neurons to layers to networks\n- Learning = finding good weights\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How Google Lens recognises anything.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #NeuralNetworks #LearnAI #DeepLearning #AIForBeginners",
+    "pinned": "Quiz answer: The weights and biases. Learning means finding good values for them. Part 2 explains HOW it finds them.",
+    "cover": "'How AI Learns' title card",
+    "alt": "Animated lesson explaining artificial neurons, weights, biases and layers in a neural network."
+  }
+}
