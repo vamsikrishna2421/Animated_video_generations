@@ -1,0 +1,827 @@
+{
+  "id": "uc12",
+  "episode": 12,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How AI Tutor Apps Work",
+  "host": "female",
+  "label": "USE CASE 12",
+  "fps": 30,
+  "totalFrames": 4658,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc12/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 12",
+        "title": [
+          "AI",
+          "Tutors"
+        ],
+        "subtitle": "How AI teaches you",
+        "buzzwords": [
+          "Hints",
+          "Syllabus",
+          "RAG",
+          "Memory",
+          "Adaptive",
+          "Practice",
+          "Socratic",
+          "Homework"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 420,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_01.wav",
+      "cues": [
+        274,
+        365
+      ],
+      "captions": [
+        {
+          "text": "Stuck on a maths problem",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "at 11 PM,",
+          "from": 53,
+          "to": 94
+        },
+        {
+          "text": "you ask an AI tutor,",
+          "from": 97,
+          "to": 149
+        },
+        {
+          "text": "and instead of just giving",
+          "from": 152,
+          "to": 182
+        },
+        {
+          "text": "the answer,",
+          "from": 183,
+          "to": 208
+        },
+        {
+          "text": "it asks you a question back.",
+          "from": 209,
+          "to": 271
+        },
+        {
+          "text": "So how do AI tutor",
+          "from": 274,
+          "to": 313
+        },
+        {
+          "text": "apps actually teach?",
+          "from": 314,
+          "to": 363
+        },
+        {
+          "text": "Let's break it down.",
+          "from": 365,
+          "to": 409
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "When you ask for help",
+        "nodes": [
+          [
+            "Camera",
+            "Your question",
+            "A photo of a maths problem"
+          ],
+          [
+            "BookOpen",
+            "Your syllabus",
+            "RAG over the textbook (EP 07)"
+          ],
+          [
+            "BookMarked",
+            "Your history",
+            "Memory of past struggles (EP 17)"
+          ],
+          [
+            "Lightbulb",
+            "A hint",
+            "Not the answer, the next step"
+          ],
+          [
+            "RefreshCw",
+            "Adapt",
+            "Harder or easier, based on you"
+          ]
+        ]
+      },
+      "from": 420,
+      "durationInFrames": 660,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_02.wav",
+      "cues": [
+        84,
+        148,
+        312,
+        430,
+        563
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens when you",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "ask for help.",
+          "from": 47,
+          "to": 82
+        },
+        {
+          "text": "You upload your homework question.",
+          "from": 84,
+          "to": 146
+        },
+        {
+          "text": "The tutor reads your textbook",
+          "from": 148,
+          "to": 189
+        },
+        {
+          "text": "chapter, using RAG,",
+          "from": 190,
+          "to": 250
+        },
+        {
+          "text": "so it teaches your syllabus.",
+          "from": 252,
+          "to": 310
+        },
+        {
+          "text": "It checks its memory of",
+          "from": 312,
+          "to": 346
+        },
+        {
+          "text": "you, like what you struggled",
+          "from": 348,
+          "to": 388
+        },
+        {
+          "text": "with last week.",
+          "from": 389,
+          "to": 428
+        },
+        {
+          "text": "It gives you a hint,",
+          "from": 430,
+          "to": 466
+        },
+        {
+          "text": "not the answer,",
+          "from": 468,
+          "to": 501
+        },
+        {
+          "text": "and asks you to try",
+          "from": 502,
+          "to": 529
+        },
+        {
+          "text": "the next step,",
+          "from": 531,
+          "to": 561
+        },
+        {
+          "text": "and it adapts,",
+          "from": 563,
+          "to": 588
+        },
+        {
+          "text": "based on how you respond.",
+          "from": 591,
+          "to": 648
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "prompt",
+      "data": {
+        "heading": "The tutor's instructions",
+        "kicker": "REMEMBER EP 04?",
+        "bad": "Solve 2x + 3 = 11.",
+        "badReply": "x = 4.",
+        "parts": [
+          [
+            "ROLE",
+            "You are a patient maths tutor for a Class 9 student.",
+            "#8B5CF6"
+          ],
+          [
+            "RULE",
+            "Never give the final answer directly.",
+            "#22D3EE"
+          ],
+          [
+            "METHOD",
+            "One hint at a time, then ask a question back.",
+            "#F59E0B"
+          ],
+          [
+            "FORMAT",
+            "Short, friendly, encouraging.",
+            "#34D399"
+          ]
+        ],
+        "goodReply": "Great start! What could you subtract from both sides to get 2x on its own?"
+      },
+      "from": 1080,
+      "durationInFrames": 753,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_03.wav",
+      "cues": [
+        96,
+        209,
+        342,
+        439,
+        558,
+        665
+      ],
+      "captions": [
+        {
+          "text": "And the magic is mostly",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "in the instructions.",
+          "from": 55,
+          "to": 94
+        },
+        {
+          "text": "A plain assistant just gives",
+          "from": 96,
+          "to": 136
+        },
+        {
+          "text": "the answer,",
+          "from": 137,
+          "to": 160
+        },
+        {
+          "text": "x equals 4.",
+          "from": 163,
+          "to": 207
+        },
+        {
+          "text": "A tutor gets a role,",
+          "from": 209,
+          "to": 246
+        },
+        {
+          "text": "you are a patient maths",
+          "from": 246,
+          "to": 289
+        },
+        {
+          "text": "tutor for a class 9 student.",
+          "from": 289,
+          "to": 340
+        },
+        {
+          "text": "A rule,",
+          "from": 342,
+          "to": 361
+        },
+        {
+          "text": "never give the final answer directly.",
+          "from": 366,
+          "to": 437
+        },
+        {
+          "text": "A method,",
+          "from": 439,
+          "to": 458
+        },
+        {
+          "text": "give one hint at a",
+          "from": 458,
+          "to": 495
+        },
+        {
+          "text": "time, and ask a question back.",
+          "from": 495,
+          "to": 556
+        },
+        {
+          "text": "And a format,",
+          "from": 558,
+          "to": 582
+        },
+        {
+          "text": "short, friendly and encouraging.",
+          "from": 585,
+          "to": 662
+        },
+        {
+          "text": "Now it guides you to",
+          "from": 665,
+          "to": 695
+        },
+        {
+          "text": "the answer yourself.",
+          "from": 695,
+          "to": 739
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "A good AI tutor",
+        "kicker": "WHAT MATTERS",
+        "terms": [
+          [
+            "HelpCircle",
+            "Socratic",
+            "Guide with questions"
+          ],
+          [
+            "SlidersHorizontal",
+            "Adaptive",
+            "Harder or easier for you"
+          ],
+          [
+            "CalendarClock",
+            "Spaced practice",
+            "Revisit before you forget"
+          ],
+          [
+            "Smile",
+            "Encouraging",
+            "Confidence matters"
+          ]
+        ]
+      },
+      "from": 1833,
+      "durationInFrames": 575,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_04.wav",
+      "cues": [
+        74,
+        208,
+        348,
+        473
+      ],
+      "captions": [
+        {
+          "text": "So what makes a good",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "AI tutor?",
+          "from": 35,
+          "to": 72
+        },
+        {
+          "text": "Socratic questions,",
+          "from": 74,
+          "to": 112
+        },
+        {
+          "text": "guiding you with questions,",
+          "from": 115,
+          "to": 154
+        },
+        {
+          "text": "instead of answers.",
+          "from": 159,
+          "to": 205
+        },
+        {
+          "text": "Adaptive difficulty,",
+          "from": 208,
+          "to": 249
+        },
+        {
+          "text": "harder when you're doing well,",
+          "from": 251,
+          "to": 291
+        },
+        {
+          "text": "easier when you're stuck.",
+          "from": 293,
+          "to": 344
+        },
+        {
+          "text": "Spaced practice,",
+          "from": 348,
+          "to": 384
+        },
+        {
+          "text": "bringing back old topics before",
+          "from": 386,
+          "to": 436
+        },
+        {
+          "text": "you forget them.",
+          "from": 437,
+          "to": 471
+        },
+        {
+          "text": "And encouragement,",
+          "from": 473,
+          "to": 503
+        },
+        {
+          "text": "because confidence matters.",
+          "from": 504,
+          "to": 562
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Answer bot vs tutor",
+        "kicker": "ANSWERS VS LEARNING",
+        "left": {
+          "icon": "Zap",
+          "title": "Answer bot",
+          "stat": "Gives answers",
+          "label": "fast, but you learn nothing"
+        },
+        "right": {
+          "icon": "GraduationCap",
+          "title": "AI tutor",
+          "stat": "Makes you think",
+          "label": "you solve the next one alone"
+        }
+      },
+      "from": 2408,
+      "durationInFrames": 312,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_05.wav",
+      "cues": [
+        61,
+        169
+      ],
+      "captions": [
+        {
+          "text": "Here's the big difference.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "An answer bot gives you",
+          "from": 61,
+          "to": 96
+        },
+        {
+          "text": "the answer,",
+          "from": 97,
+          "to": 121
+        },
+        {
+          "text": "and you learn nothing.",
+          "from": 122,
+          "to": 166
+        },
+        {
+          "text": "A good tutor makes you",
+          "from": 169,
+          "to": 199
+        },
+        {
+          "text": "think, so you can solve",
+          "from": 202,
+          "to": 243
+        },
+        {
+          "text": "the next problem on your own.",
+          "from": 245,
+          "to": 300
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll find it",
+        "items": [
+          [
+            "GraduationCap",
+            "School subjects",
+            "Maths and science tutors"
+          ],
+          [
+            "Languages",
+            "Language apps",
+            "Chat and get corrected"
+          ],
+          [
+            "Code",
+            "Coding practice",
+            "Hints when code fails"
+          ]
+        ]
+      },
+      "from": 2720,
+      "durationInFrames": 405,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_06.wav",
+      "cues": [
+        56,
+        181,
+        290
+      ],
+      "captions": [
+        {
+          "text": "So where will you see this?",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "Learning apps with AI tutors",
+          "from": 56,
+          "to": 112
+        },
+        {
+          "text": "for school maths and science.",
+          "from": 113,
+          "to": 178
+        },
+        {
+          "text": "Language apps that chat with",
+          "from": 181,
+          "to": 223
+        },
+        {
+          "text": "you, and correct your mistakes.",
+          "from": 225,
+          "to": 288
+        },
+        {
+          "text": "And coding platforms that give",
+          "from": 290,
+          "to": 337
+        },
+        {
+          "text": "hints when your code fails.",
+          "from": 339,
+          "to": 392
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "AI tutors will replace teachers.",
+        "fact": "Great for practice any time, but teachers bring motivation, judgement and care. Both together work best.",
+        "tip": "AI practice + human teacher"
+      },
+      "from": 3125,
+      "durationInFrames": 498,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_07.wav",
+      "cues": [
+        59,
+        159
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think AI tutors will",
+          "from": 59,
+          "to": 110
+        },
+        {
+          "text": "replace teachers.",
+          "from": 111,
+          "to": 157
+        },
+        {
+          "text": "They're great for practice at",
+          "from": 159,
+          "to": 196
+        },
+        {
+          "text": "any hour,",
+          "from": 197,
+          "to": 223
+        },
+        {
+          "text": "but teachers bring motivation,",
+          "from": 227,
+          "to": 289
+        },
+        {
+          "text": "judgement, and understanding each student",
+          "from": 291,
+          "to": 367
+        },
+        {
+          "text": "as a person.",
+          "from": 369,
+          "to": 407
+        },
+        {
+          "text": "The best results come from",
+          "from": 409,
+          "to": 449
+        },
+        {
+          "text": "both together.",
+          "from": 450,
+          "to": 486
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "When you're stuck, a good tutor…",
+        "options": [
+          "Gives the final answer",
+          "Gives a hint and asks a question",
+          "Changes the subject"
+        ],
+        "answer": 1
+      },
+      "from": 3623,
+      "durationInFrames": 431,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_08.wav",
+      "cues": [
+        124,
+        334
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "What does a good AI",
+          "from": 45,
+          "to": 72
+        },
+        {
+          "text": "tutor do when you're stuck?",
+          "from": 75,
+          "to": 122
+        },
+        {
+          "text": "Pause and think,",
+          "from": 124,
+          "to": 159
+        },
+        {
+          "text": "and if you get it",
+          "from": 161,
+          "to": 178
+        },
+        {
+          "text": "right, comment below!",
+          "from": 180,
+          "to": 236
+        },
+        {
+          "text": "It gives you a hint,",
+          "from": 334,
+          "to": 362
+        },
+        {
+          "text": "and asks a question back!",
+          "from": 366,
+          "to": 418
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "RAG",
+            "teaches your syllabus"
+          ],
+          [
+            "Memory",
+            "knows your weak spots"
+          ],
+          [
+            "Hints",
+            "not answers"
+          ],
+          [
+            "Adaptive",
+            "adjusts to you"
+          ]
+        ],
+        "next": "EP 23 · Neural networks, Part 3"
+      },
+      "from": 4054,
+      "durationInFrames": 604,
+      "voiceFrom": 10,
+      "audio": "lessons/uc12/voice_09.wav",
+      "cues": [
+        46,
+        135,
+        208,
+        274,
+        339
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "RAG lets the tutor teach",
+          "from": 46,
+          "to": 98
+        },
+        {
+          "text": "your syllabus.",
+          "from": 98,
+          "to": 132
+        },
+        {
+          "text": "Memory helps it know your",
+          "from": 135,
+          "to": 171
+        },
+        {
+          "text": "weak spots.",
+          "from": 172,
+          "to": 206
+        },
+        {
+          "text": "It gives hints,",
+          "from": 208,
+          "to": 233
+        },
+        {
+          "text": "not answers.",
+          "from": 238,
+          "to": 271
+        },
+        {
+          "text": "And it adapts to how",
+          "from": 274,
+          "to": 303
+        },
+        {
+          "text": "you're doing.",
+          "from": 304,
+          "to": 336
+        },
+        {
+          "text": "Next, the final part of",
+          "from": 339,
+          "to": 384
+        },
+        {
+          "text": "how neural networks learn,",
+          "from": 386,
+          "to": 432
+        },
+        {
+          "text": "backpropagation, explained without maths.",
+          "from": 434,
+          "to": 526
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 530,
+          "to": 592
+        }
+      ],
+      "image": null
+    }
+  ]
+}

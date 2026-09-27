@@ -1,0 +1,794 @@
+{
+  "id": "ep22",
+  "episode": 22,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How a Neural Network Learns Part 2",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4315,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep22/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 22",
+        "title": [
+          "How AI",
+          "Learns"
+        ],
+        "subtitle": "Part 2: loss and gradient descent",
+        "buzzwords": [
+          "Loss",
+          "Gradient descent",
+          "Learning rate",
+          "Epoch",
+          "Batch",
+          "Training",
+          "Optimiser",
+          "Valley"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 410,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_01.wav",
+      "cues": [
+        131,
+        264
+      ],
+      "captions": [
+        {
+          "text": "In part one,",
+          "from": 10,
+          "to": 37
+        },
+        {
+          "text": "we learned that training means",
+          "from": 40,
+          "to": 78
+        },
+        {
+          "text": "finding good weights.",
+          "from": 81,
+          "to": 129
+        },
+        {
+          "text": "But a big network has",
+          "from": 131,
+          "to": 162
+        },
+        {
+          "text": "billions of weights,",
+          "from": 165,
+          "to": 199
+        },
+        {
+          "text": "so how does it find",
+          "from": 201,
+          "to": 228
+        },
+        {
+          "text": "good ones?",
+          "from": 229,
+          "to": 262
+        },
+        {
+          "text": "In part two,",
+          "from": 264,
+          "to": 297
+        },
+        {
+          "text": "let's understand the loss,",
+          "from": 300,
+          "to": 344
+        },
+        {
+          "text": "and gradient descent.",
+          "from": 348,
+          "to": 397
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Loss",
+        "short": "Loss",
+        "definition": "A single number that measures how wrong the network's answer is.",
+        "chips": [
+          [
+            "TrendingUp",
+            "Big loss = bad"
+          ],
+          [
+            "TrendingDown",
+            "Small loss = good"
+          ],
+          [
+            "Target",
+            "Goal: shrink it"
+          ]
+        ]
+      },
+      "from": 410,
+      "durationInFrames": 507,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_02.wav",
+      "cues": [
+        119,
+        245,
+        313,
+        385
+      ],
+      "captions": [
+        {
+          "text": "First, the network needs a",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "way to know how wrong",
+          "from": 52,
+          "to": 86
+        },
+        {
+          "text": "it is.",
+          "from": 87,
+          "to": 116
+        },
+        {
+          "text": "That's called the loss,",
+          "from": 119,
+          "to": 159
+        },
+        {
+          "text": "a single number that measures",
+          "from": 161,
+          "to": 203
+        },
+        {
+          "text": "the mistake.",
+          "from": 205,
+          "to": 242
+        },
+        {
+          "text": "A big loss means a",
+          "from": 245,
+          "to": 276
+        },
+        {
+          "text": "bad answer,",
+          "from": 278,
+          "to": 311
+        },
+        {
+          "text": "a small loss means a",
+          "from": 313,
+          "to": 350
+        },
+        {
+          "text": "good answer,",
+          "from": 353,
+          "to": 383
+        },
+        {
+          "text": "and training tries to make",
+          "from": 385,
+          "to": 422
+        },
+        {
+          "text": "the loss as small as possible.",
+          "from": 423,
+          "to": 495
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Watch the loss",
+        "kicker": "A SIMPLE EXAMPLE",
+        "steps": [
+          [
+            "Image",
+            "Guess",
+            "30% cat, 70% dog"
+          ],
+          [
+            "TriangleAlert",
+            "Loss is high",
+            "The right answer was cat"
+          ],
+          [
+            "TrendingDown",
+            "Adjust and retry",
+            "90% cat, loss drops"
+          ]
+        ]
+      },
+      "from": 917,
+      "durationInFrames": 516,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_03.wav",
+      "cues": [
+        121,
+        240,
+        368
+      ],
+      "captions": [
+        {
+          "text": "Here's an example.",
+          "from": 10,
+          "to": 50
+        },
+        {
+          "text": "The network sees a photo",
+          "from": 52,
+          "to": 99
+        },
+        {
+          "text": "of a cat.",
+          "from": 99,
+          "to": 118
+        },
+        {
+          "text": "It guesses,",
+          "from": 121,
+          "to": 146
+        },
+        {
+          "text": "30 percent cat,",
+          "from": 148,
+          "to": 180
+        },
+        {
+          "text": "and 70 percent dog.",
+          "from": 184,
+          "to": 238
+        },
+        {
+          "text": "The right answer is 100",
+          "from": 240,
+          "to": 287
+        },
+        {
+          "text": "percent cat,",
+          "from": 289,
+          "to": 314
+        },
+        {
+          "text": "so the loss is high.",
+          "from": 316,
+          "to": 366
+        },
+        {
+          "text": "After learning a little,",
+          "from": 368,
+          "to": 400
+        },
+        {
+          "text": "it guesses 90 percent cat,",
+          "from": 403,
+          "to": 457
+        },
+        {
+          "text": "and the loss drops.",
+          "from": 459,
+          "to": 502
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Gradient descent",
+        "short": "Slope",
+        "definition": "Adjusting the weights in small steps, in the direction that reduces the loss, like walking downhill.",
+        "chips": [
+          [
+            "Compass",
+            "Feel the slope"
+          ],
+          [
+            "Footprints",
+            "Take a small step"
+          ],
+          [
+            "Repeat",
+            "Repeat to the bottom"
+          ]
+        ]
+      },
+      "from": 1433,
+      "durationInFrames": 473,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_04.wav",
+      "cues": [
+        125,
+        252,
+        331,
+        381
+      ],
+      "captions": [
+        {
+          "text": "So how does it adjust",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "the weights?",
+          "from": 42,
+          "to": 70
+        },
+        {
+          "text": "With gradient descent.",
+          "from": 71,
+          "to": 122
+        },
+        {
+          "text": "Imagine you're on a foggy",
+          "from": 125,
+          "to": 165
+        },
+        {
+          "text": "hill at night,",
+          "from": 166,
+          "to": 190
+        },
+        {
+          "text": "and you want to reach",
+          "from": 192,
+          "to": 215
+        },
+        {
+          "text": "the bottom.",
+          "from": 217,
+          "to": 250
+        },
+        {
+          "text": "You feel which way the",
+          "from": 252,
+          "to": 280
+        },
+        {
+          "text": "ground slopes down,",
+          "from": 281,
+          "to": 326
+        },
+        {
+          "text": "take a small step that",
+          "from": 331,
+          "to": 364
+        },
+        {
+          "text": "way, and repeat,",
+          "from": 366,
+          "to": 409
+        },
+        {
+          "text": "until you reach the valley.",
+          "from": 410,
+          "to": 461
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Step size matters",
+        "kicker": "THE LEARNING RATE",
+        "left": {
+          "icon": "Rocket",
+          "title": "Steps too big",
+          "stat": "Overshoot",
+          "label": "bounce past the bottom"
+        },
+        "right": {
+          "icon": "Footprints",
+          "title": "Steps just right",
+          "stat": "Steady descent",
+          "label": "reach the lowest point"
+        }
+      },
+      "from": 1906,
+      "durationInFrames": 376,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_05.wav",
+      "cues": [
+        101,
+        245
+      ],
+      "captions": [
+        {
+          "text": "The size of each step",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "is called the learning rate.",
+          "from": 47,
+          "to": 99
+        },
+        {
+          "text": "If the steps are too",
+          "from": 101,
+          "to": 128
+        },
+        {
+          "text": "big, you leap over the",
+          "from": 130,
+          "to": 167
+        },
+        {
+          "text": "valley, and bounce around forever.",
+          "from": 169,
+          "to": 242
+        },
+        {
+          "text": "If they're just right,",
+          "from": 245,
+          "to": 280
+        },
+        {
+          "text": "you walk steadily down to",
+          "from": 281,
+          "to": 321
+        },
+        {
+          "text": "the lowest point.",
+          "from": 322,
+          "to": 363
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Training words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "RefreshCw",
+            "Epoch",
+            "One full pass of the data"
+          ],
+          [
+            "Layers",
+            "Batch",
+            "A small group at a time"
+          ],
+          [
+            "Footprints",
+            "Learning rate",
+            "The step size"
+          ],
+          [
+            "Flag",
+            "Convergence",
+            "Loss stops improving"
+          ]
+        ]
+      },
+      "from": 2282,
+      "durationInFrames": 517,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_06.wav",
+      "cues": [
+        74,
+        186,
+        293,
+        377
+      ],
+      "captions": [
+        {
+          "text": "Here are four words from training.",
+          "from": 10,
+          "to": 71
+        },
+        {
+          "text": "An epoch,",
+          "from": 74,
+          "to": 96
+        },
+        {
+          "text": "one full pass through all",
+          "from": 99,
+          "to": 142
+        },
+        {
+          "text": "the training data.",
+          "from": 142,
+          "to": 184
+        },
+        {
+          "text": "A batch,",
+          "from": 186,
+          "to": 204
+        },
+        {
+          "text": "a small group of examples",
+          "from": 207,
+          "to": 249
+        },
+        {
+          "text": "looked at together.",
+          "from": 250,
+          "to": 291
+        },
+        {
+          "text": "The learning rate,",
+          "from": 293,
+          "to": 319
+        },
+        {
+          "text": "which is the step size.",
+          "from": 321,
+          "to": 375
+        },
+        {
+          "text": "And convergence,",
+          "from": 377,
+          "to": 405
+        },
+        {
+          "text": "when the loss stops improving,",
+          "from": 409,
+          "to": 456
+        },
+        {
+          "text": "and training is done.",
+          "from": 459,
+          "to": 504
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Training finds the one perfect answer.",
+        "fact": "It usually finds a very good spot, not the perfect one, and that's more than enough.",
+        "tip": "Good enough is great"
+      },
+      "from": 2799,
+      "durationInFrames": 432,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_07.wav",
+      "cues": [
+        59,
+        163
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think training finds the",
+          "from": 59,
+          "to": 107
+        },
+        {
+          "text": "one perfect answer.",
+          "from": 110,
+          "to": 160
+        },
+        {
+          "text": "It usually finds a very",
+          "from": 163,
+          "to": 202
+        },
+        {
+          "text": "good spot,",
+          "from": 203,
+          "to": 229
+        },
+        {
+          "text": "not the perfect one.",
+          "from": 230,
+          "to": 274
+        },
+        {
+          "text": "The landscape has many valleys,",
+          "from": 277,
+          "to": 335
+        },
+        {
+          "text": "and a good valley is",
+          "from": 337,
+          "to": 368
+        },
+        {
+          "text": "usually more than enough.",
+          "from": 370,
+          "to": 418
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Gradient descent tries to shrink the…",
+        "options": [
+          "Loss",
+          "Number of layers",
+          "Screen size"
+        ],
+        "answer": 0
+      },
+      "from": 3231,
+      "durationInFrames": 471,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_08.wav",
+      "cues": [
+        141,
+        345
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "In gradient descent,",
+          "from": 44,
+          "to": 78
+        },
+        {
+          "text": "what are we trying to",
+          "from": 83,
+          "to": 102
+        },
+        {
+          "text": "make smaller?",
+          "from": 103,
+          "to": 138
+        },
+        {
+          "text": "Pause and think,",
+          "from": 141,
+          "to": 175
+        },
+        {
+          "text": "and if you get it",
+          "from": 179,
+          "to": 197
+        },
+        {
+          "text": "right, comment below!",
+          "from": 198,
+          "to": 246
+        },
+        {
+          "text": "The loss!",
+          "from": 345,
+          "to": 375
+        },
+        {
+          "text": "Every step tries to make",
+          "from": 377,
+          "to": 413
+        },
+        {
+          "text": "the mistake smaller.",
+          "from": 414,
+          "to": 460
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Loss",
+            "how wrong the answer is"
+          ],
+          [
+            "Gradient descent",
+            "small steps downhill"
+          ],
+          [
+            "Learning rate",
+            "the step size"
+          ],
+          [
+            "Epoch",
+            "one pass through the data"
+          ]
+        ],
+        "next": "Use Case · AI tutor apps"
+      },
+      "from": 3702,
+      "durationInFrames": 613,
+      "voiceFrom": 10,
+      "audio": "lessons/ep22/voice_09.wav",
+      "cues": [
+        45,
+        129,
+        242,
+        310,
+        405
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 41
+        },
+        {
+          "text": "The loss measures how wrong",
+          "from": 45,
+          "to": 86
+        },
+        {
+          "text": "the answer is.",
+          "from": 87,
+          "to": 126
+        },
+        {
+          "text": "Gradient descent takes small steps",
+          "from": 129,
+          "to": 184
+        },
+        {
+          "text": "downhill, to reduce it.",
+          "from": 185,
+          "to": 240
+        },
+        {
+          "text": "The learning rate is the",
+          "from": 242,
+          "to": 272
+        },
+        {
+          "text": "step size.",
+          "from": 274,
+          "to": 307
+        },
+        {
+          "text": "And an epoch is one",
+          "from": 310,
+          "to": 341
+        },
+        {
+          "text": "full pass through the data.",
+          "from": 343,
+          "to": 402
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 405,
+          "to": 464
+        },
+        {
+          "text": "how AI tutor apps teach you.",
+          "from": 467,
+          "to": 535
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 539,
+          "to": 601
+        }
+      ],
+      "image": null
+    }
+  ]
+}

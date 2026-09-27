@@ -1,0 +1,229 @@
+{
+  "id": "ep23",
+  "episode": 23,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How a Neural Network Learns Part 3",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "In part two, we walked downhill to reduce the loss. [1] But with billions of weights, how does each weight know which way to move? [2] In this final part, let's understand backpropagation, without any maths.",
+      "data": {
+        "kicker": "EPISODE 23",
+        "title": [
+          "How AI",
+          "Learns"
+        ],
+        "subtitle": "Part 3: backpropagation",
+        "buzzwords": [
+          "Backpropagation",
+          "Forward pass",
+          "Backward pass",
+          "Gradient",
+          "Optimiser",
+          "Training loop",
+          "Weights",
+          "Blame"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Backpropagation is how a network works out who's to blame for a mistake. [1] It sends the error backwards through the network, layer by layer. [2] It starts at the output, where the mistake showed up, [3] works out how much each weight contributed, [4] and tells every weight which way to change.",
+      "data": {
+        "term": "Backpropagation",
+        "short": "Backprop",
+        "definition": "Sending the error backwards through the network to work out how each weight should change.",
+        "chips": [
+          [
+            "Undo2",
+            "Error flows backwards"
+          ],
+          [
+            "Scale",
+            "Share the blame"
+          ],
+          [
+            "SlidersHorizontal",
+            "Nudge each weight"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Here's an analogy. A restaurant gets a bad review, the biryani was too salty. [1] The manager asks the head chef. [2] The head chef traces it back, to the cook who added the salt, and to the recipe card. [3] Then everyone who contributed adjusts a little, the biggest cause the most, and the others less.",
+      "data": {
+        "heading": "The salty biryani",
+        "kicker": "AN ANALOGY",
+        "steps": [
+          [
+            "MessageSquareWarning",
+            "Bad review",
+            "“Too salty!”"
+          ],
+          [
+            "Search",
+            "Trace it back",
+            "Head chef → cook → recipe"
+          ],
+          [
+            "SlidersHorizontal",
+            "Everyone adjusts",
+            "The biggest cause changes most"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Put it all together, and this is how every network trains. [1] The forward pass, where data flows through, and the network makes a guess. [2] The loss, which measures how wrong that guess was. [3] The backward pass, where backpropagation shares out the blame. [4] The update, where every weight takes a small step, with gradient descent. [5] And repeat, millions of times, until the network is good.",
+      "data": {
+        "heading": "The training loop",
+        "kicker": "ALL THREE PARTS TOGETHER",
+        "nodes": [
+          [
+            "ArrowRight",
+            "Forward pass",
+            "Make a guess"
+          ],
+          [
+            "Target",
+            "Loss",
+            "How wrong was it?"
+          ],
+          [
+            "Undo2",
+            "Backward pass",
+            "Share out the blame"
+          ],
+          [
+            "SlidersHorizontal",
+            "Update",
+            "A small step for every weight"
+          ],
+          [
+            "Repeat",
+            "Repeat",
+            "Millions of times"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "terms",
+      "text": "Here are four words to remember. [1] The forward pass, data going in, and a guess coming out. [2] The backward pass, the error going back. [3] The gradient, which direction, and how strongly, each weight should change. [4] And the optimiser, the method that uses gradients to update the weights.",
+      "data": {
+        "heading": "Training words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "ArrowRight",
+            "Forward pass",
+            "Data in, guess out"
+          ],
+          [
+            "Undo2",
+            "Backward pass",
+            "Error flows back"
+          ],
+          [
+            "Compass",
+            "Gradient",
+            "Which way, how much"
+          ],
+          [
+            "Settings2",
+            "Optimiser",
+            "Updates the weights"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "And this explains why training is so expensive. [1] Training needs forward and backward passes, over and over, on huge amounts of data, for weeks. [2] Using a trained model, which is called inference, is just one forward pass per answer.",
+      "data": {
+        "heading": "Training vs using",
+        "kicker": "WHY TRAINING COSTS SO MUCH",
+        "left": {
+          "icon": "Cpu",
+          "title": "Training",
+          "stat": "Forward + backward",
+          "label": "billions of times, for weeks"
+        },
+        "right": {
+          "icon": "Zap",
+          "title": "Using the model",
+          "stat": "Forward only",
+          "label": "one pass per answer"
+        }
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think AI learns while you chat with it, using backpropagation. [2] Normally, it doesn't. Backpropagation happens during training, done by the company that builds the model. When you chat, the weights stay frozen, and it only does forward passes.",
+      "data": {
+        "myth": "AI learns from my chats using backpropagation.",
+        "fact": "Backprop happens during training. When you chat, the weights stay frozen.",
+        "tip": "Chatting ≠ training"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Which step sends the error backwards through the network? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Backpropagation! It shares out the blame, so every weight knows which way to move.",
+      "data": {
+        "question": "The error travels backwards during…",
+        "options": [
+          "The forward pass",
+          "Backpropagation",
+          "Tokenization"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] The forward pass makes a guess. [2] The loss measures the mistake. [3] Backpropagation shares out the blame, backwards. [4] And every weight takes a small step to improve. [5] Next, a real world breakdown, how AI creates music from a single sentence. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Forward",
+            "make a guess"
+          ],
+          [
+            "Loss",
+            "measure the mistake"
+          ],
+          [
+            "Backprop",
+            "share the blame backwards"
+          ],
+          [
+            "Update",
+            "a small step for every weight"
+          ]
+        ],
+        "next": "Use Case · AI music"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Billions of weights, one mistake. How does each weight know which way to move?\n\nEpisode 23 of AI From Scratch: How a Neural Network Learns, Part 3\n- Backpropagation: sharing out the blame, backwards\n- The salty biryani analogy\n- The full training loop: forward, loss, backward, update, repeat\n- Why training costs so much more than using a model\n- The myth: \"AI learns from my chats\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How AI creates music from a sentence.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #NeuralNetworks #LearnAI #DeepLearning #AIForBeginners",
+    "pinned": "Quiz answer: Backpropagation. You've now finished the neural network trilogy! Which part helped you most?",
+    "cover": "'How AI Learns · Part 3' title card",
+    "alt": "Animated lesson explaining backpropagation and the neural network training loop without maths."
+  }
+}
