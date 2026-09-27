@@ -5,8 +5,8 @@
   "handle": "@ai_maastaaru",
   "title": "Tokens and Context Window",
   "host": "female",
-  "voice": "hf_beta",
-  "speed": 1.0,
+  "voice": "af_heart",
+  "speed": 0.92,
   "lang": "en-us",
   "fps": 30,
   "music": {
@@ -17,7 +17,7 @@
   "scenes": [
     {
       "type": "banner",
-      "text": "Ever had a long chat with ChatGPT, and it forgot what you said at the start? [1] That's not a bug. It's tokens, and the context window. [2] Let's break it down.",
+      "text": "Have you ever had a long chat with ChatGPT, and it forgot what you said at the start? [1] That's not a bug. It's because of tokens, and something called the context window. [2] So let's break it down.",
       "data": {
         "kicker": "EPISODE 03",
         "title": [
@@ -39,7 +39,7 @@
     },
     {
       "type": "definition",
-      "text": "L L Ms don't read words the way we do. [1] They read tokens. Small chunks of text, often a word, or part of a word. [2] Common words are usually one token. [3] Rare words get split into pieces. [4] Numbers and symbols count too.",
+      "text": "L L Ms don't read words the way we do. [1] They read tokens, which are small chunks of text, often a whole word, or just a part of a word. [2] Common words are usually one token, [3] rare words get split into pieces, [4] and numbers and symbols count as tokens too.",
       "data": {
         "term": "Token",
         "short": "Token",
@@ -62,7 +62,7 @@
     },
     {
       "type": "tokens",
-      "text": "Here's the idea. [1] A long word like unbelievable can become pieces, like un, believ, able. [2] Roughly, one token is about three quarters of a word. [3] So a hundred tokens is about seventy five words. [4] And AI companies charge per token.",
+      "text": "Here's how it looks. [1] A long word like unbelievable can be split into pieces, like un, believ, and able. [2] As a rough rule, one token is about three quarters of a word, [3] so a hundred tokens is about seventy five words. [4] And here's why it matters, AI companies charge you per token.",
       "data": {
         "heading": "Words → tokens",
         "sentence": "Unbelievable! AI reads in tokens.",
@@ -96,7 +96,7 @@
     },
     {
       "type": "window",
-      "text": "Now, the context window. [1] It's the model's working memory. Your messages and its replies must all fit inside. When the chat gets too long, [2] the oldest messages fall out, and the model forgets them.",
+      "text": "Now, let's talk about the context window. [1] Think of it as the model's working memory. Your messages and its replies all have to fit inside it. So when the chat gets too long, [2] the oldest messages fall out, and the model simply forgets them.",
       "data": {
         "heading": "The context window",
         "label": "WINDOW: 6 MESSAGES",
@@ -148,7 +148,7 @@
     },
     {
       "type": "versus",
-      "text": "And these windows keep growing. [1] Early chatbots could hold only a few pages. [2] Modern models hold hundreds of thousands of tokens. Entire books, at once.",
+      "text": "And the good news is, these windows keep growing. [1] Early chatbots could hold only a few pages of text. [2] But modern models can hold hundreds of thousands of tokens, that's entire books, all at once.",
       "data": {
         "heading": "Windows keep growing",
         "left": {
@@ -173,7 +173,7 @@
     },
     {
       "type": "examples",
-      "text": "Why should you care? [1] Cost. More tokens, bigger bill. [2] Long documents may need to be split into chunks. [3] And in long chats, start fresh or ask for a summary, when the AI starts forgetting.",
+      "text": "So why should you care? [1] First, cost, because more tokens means a bigger bill. [2] Second, long documents sometimes need to be split into smaller chunks. [3] And third, in a long chat, when the AI starts forgetting, just start a fresh chat, or ask it for a summary.",
       "data": {
         "heading": "Why it matters",
         "items": [
@@ -197,7 +197,7 @@
     },
     {
       "type": "myth",
-      "text": "Here's a common myth. [1] The AI remembers everything you ever told it. [2] Nope. It only sees what fits in the current context window. Memory features just add saved notes into your prompt, quietly.",
+      "text": "Here's a common myth. [1] People think the AI remembers everything they've ever told it. [2] It doesn't. It only sees what fits in the current context window. Those memory features just quietly add a few saved notes into your prompt.",
       "data": {
         "myth": "The AI remembers everything I ever told it.",
         "fact": "It only sees what fits in the context window. 'Memory' features just add saved notes to your prompt.",
@@ -206,7 +206,7 @@
     },
     {
       "type": "quiz",
-      "text": "Quick quiz! Why did the AI forget your name, in a long chat? [1] Pause and think. <pause 3.2> [2] It fell out of the context window! Comment your answer!",
+      "text": "Quick quiz! Why did the AI forget your name in a long chat? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Your name fell out of the context window!",
       "data": {
         "question": "The AI forgot your name because…",
         "options": [
@@ -219,7 +219,7 @@
     },
     {
       "type": "recap",
-      "text": "Recap. [1] AI reads text as tokens. [2] One token is about three quarters of a word. [3] The context window is its working memory. [4] Too long, and old messages fall out. [5] Next episode, prompt engineering. How to talk to AI, and get great answers. Follow AI Maastaaru!",
+      "text": "Let's recap. [1] AI reads text as tokens. [2] One token is about three quarters of a word. [3] The context window is its working memory, [4] and when the chat gets too long, old messages fall out. [5] In the next episode, we'll learn prompt engineering, and how to get really great answers from AI. Follow AI Maastaaru, so you don't miss it!",
       "data": {
         "points": [
           [
@@ -242,5 +242,6 @@
         "next": "EP 04 · Prompt Engineering"
       }
     }
-  ]
+  ],
+  "flow": "continuous"
 }
