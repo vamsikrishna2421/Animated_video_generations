@@ -1,0 +1,760 @@
+{
+  "id": "ep38",
+  "episode": 38,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "How to Run AI on Your Own Laptop",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4421,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep38/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 38",
+        "title": [
+          "Run AI",
+          "Locally"
+        ],
+        "subtitle": "AI on your own laptop",
+        "buzzwords": [
+          "Ollama",
+          "LM Studio",
+          "Offline",
+          "Private",
+          "Open models",
+          "GGUF",
+          "RAM",
+          "No subscription"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 382,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_01.wav",
+      "cues": [
+        204,
+        293
+      ],
+      "captions": [
+        {
+          "text": "What if you could chat",
+          "from": 10,
+          "to": 37
+        },
+        {
+          "text": "with an AI,",
+          "from": 38,
+          "to": 70
+        },
+        {
+          "text": "with no internet,",
+          "from": 72,
+          "to": 108
+        },
+        {
+          "text": "no subscription,",
+          "from": 110,
+          "to": 141
+        },
+        {
+          "text": "and nothing leaving your computer?",
+          "from": 145,
+          "to": 201
+        },
+        {
+          "text": "You can,",
+          "from": 204,
+          "to": 220
+        },
+        {
+          "text": "today, on a normal laptop.",
+          "from": 226,
+          "to": 291
+        },
+        {
+          "text": "Let's see how to run",
+          "from": 293,
+          "to": 324
+        },
+        {
+          "text": "AI locally.",
+          "from": 327,
+          "to": 370
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three steps",
+        "kicker": "GET STARTED",
+        "steps": [
+          [
+            "Download",
+            "Install a tool",
+            "Ollama or LM Studio"
+          ],
+          [
+            "Package",
+            "Get a model",
+            "Llama, Qwen, Gemma"
+          ],
+          [
+            "MessageSquare",
+            "Chat",
+            "All on your machine"
+          ]
+        ]
+      },
+      "from": 382,
+      "durationInFrames": 488,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_02.wav",
+      "cues": [
+        74,
+        194,
+        375
+      ],
+      "captions": [
+        {
+          "text": "It takes three simple steps.",
+          "from": 10,
+          "to": 71
+        },
+        {
+          "text": "Install a tool,",
+          "from": 74,
+          "to": 102
+        },
+        {
+          "text": "like Ollama,",
+          "from": 107,
+          "to": 134
+        },
+        {
+          "text": "or LM Studio.",
+          "from": 139,
+          "to": 190
+        },
+        {
+          "text": "Download an open model,",
+          "from": 194,
+          "to": 235
+        },
+        {
+          "text": "like Llama,",
+          "from": 240,
+          "to": 262
+        },
+        {
+          "text": "Qwen, or Gemma,",
+          "from": 266,
+          "to": 310
+        },
+        {
+          "text": "often a 4 bit version.",
+          "from": 312,
+          "to": 372
+        },
+        {
+          "text": "Start chatting.",
+          "from": 375,
+          "to": 407
+        },
+        {
+          "text": "Everything runs on your own machine.",
+          "from": 409,
+          "to": 475
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "What fits?",
+        "kicker": "ROUGH GUIDE",
+        "cols": [
+          "Model size"
+        ],
+        "rows": [
+          [
+            "8 GB RAM",
+            "~3B parameters"
+          ],
+          [
+            "16 GB RAM",
+            "7–8B parameters"
+          ],
+          [
+            "32 GB+ RAM",
+            "~30B at 4-bit"
+          ]
+        ]
+      },
+      "from": 870,
+      "durationInFrames": 589,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_03.wav",
+      "cues": [
+        63,
+        236,
+        388
+      ],
+      "captions": [
+        {
+          "text": "What can your laptop handle?",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "With 8 gigabytes of RAM,",
+          "from": 63,
+          "to": 125
+        },
+        {
+          "text": "try small models,",
+          "from": 127,
+          "to": 164
+        },
+        {
+          "text": "around 3 billion parameters.",
+          "from": 166,
+          "to": 234
+        },
+        {
+          "text": "With 16 gigabytes,",
+          "from": 236,
+          "to": 280
+        },
+        {
+          "text": "7 to 8 billion parameter",
+          "from": 284,
+          "to": 331
+        },
+        {
+          "text": "models run nicely.",
+          "from": 333,
+          "to": 386
+        },
+        {
+          "text": "With 32 gigabytes or more,",
+          "from": 388,
+          "to": 446
+        },
+        {
+          "text": "you can try models around",
+          "from": 446,
+          "to": 502
+        },
+        {
+          "text": "30 billion parameters,",
+          "from": 502,
+          "to": 552
+        },
+        {
+          "text": "at 4 bits.",
+          "from": 552,
+          "to": 575
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "compare",
+      "data": {
+        "heading": "The trade-off",
+        "left": {
+          "icon": "ThumbsUp",
+          "title": "Pros",
+          "points": [
+            "Private: nothing leaves",
+            "No monthly fees",
+            "Works offline"
+          ]
+        },
+        "right": {
+          "icon": "ThumbsDown",
+          "title": "Cons",
+          "points": [
+            "Slower than the cloud",
+            "Smaller models",
+            "Drains the battery"
+          ]
+        }
+      },
+      "from": 1459,
+      "durationInFrames": 451,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_04.wav",
+      "cues": [
+        56,
+        306
+      ],
+      "captions": [
+        {
+          "text": "Why run locally?",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "Privacy, your data never leaves",
+          "from": 56,
+          "to": 111
+        },
+        {
+          "text": "your laptop.",
+          "from": 112,
+          "to": 143
+        },
+        {
+          "text": "No monthly fees.",
+          "from": 147,
+          "to": 194
+        },
+        {
+          "text": "It works offline,",
+          "from": 197,
+          "to": 228
+        },
+        {
+          "text": "on a plane,",
+          "from": 234,
+          "to": 256
+        },
+        {
+          "text": "or in a village.",
+          "from": 261,
+          "to": 304
+        },
+        {
+          "text": "But it's slower than the",
+          "from": 306,
+          "to": 330
+        },
+        {
+          "text": "cloud, the models are smaller,",
+          "from": 331,
+          "to": 390
+        },
+        {
+          "text": "and it uses your battery.",
+          "from": 392,
+          "to": 440
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "What people use it for",
+        "items": [
+          [
+            "FileLock",
+            "Private documents",
+            "Contracts, reports"
+          ],
+          [
+            "Code",
+            "Coding help",
+            "Company code stays local"
+          ],
+          [
+            "FlaskConical",
+            "Experiments",
+            "Try models for free"
+          ]
+        ]
+      },
+      "from": 1910,
+      "durationInFrames": 445,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_05.wav",
+      "cues": [
+        94,
+        236,
+        326
+      ],
+      "captions": [
+        {
+          "text": "What do people use local",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "AI for?",
+          "from": 52,
+          "to": 90
+        },
+        {
+          "text": "Summarising private documents,",
+          "from": 94,
+          "to": 144
+        },
+        {
+          "text": "like contracts or medical reports.",
+          "from": 149,
+          "to": 233
+        },
+        {
+          "text": "Coding help,",
+          "from": 236,
+          "to": 263
+        },
+        {
+          "text": "without sharing company code.",
+          "from": 264,
+          "to": 324
+        },
+        {
+          "text": "And learning,",
+          "from": 326,
+          "to": 352
+        },
+        {
+          "text": "experimenting with different models for free.",
+          "from": 354,
+          "to": 433
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Local AI words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Laptop",
+            "Local inference",
+            "Runs on your device"
+          ],
+          [
+            "Gauge",
+            "Tokens per second",
+            "Writing speed"
+          ],
+          [
+            "ScrollText",
+            "Context length",
+            "How much it reads"
+          ],
+          [
+            "Server",
+            "Local server",
+            "Your apps can use it"
+          ]
+        ]
+      },
+      "from": 2355,
+      "durationInFrames": 519,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_06.wav",
+      "cues": [
+        59,
+        163,
+        246,
+        356
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Local inference,",
+          "from": 59,
+          "to": 86
+        },
+        {
+          "text": "running a model on your",
+          "from": 91,
+          "to": 122
+        },
+        {
+          "text": "own device.",
+          "from": 124,
+          "to": 160
+        },
+        {
+          "text": "Tokens per second,",
+          "from": 163,
+          "to": 195
+        },
+        {
+          "text": "how fast it writes.",
+          "from": 196,
+          "to": 244
+        },
+        {
+          "text": "Context length,",
+          "from": 246,
+          "to": 280
+        },
+        {
+          "text": "how much text it can",
+          "from": 280,
+          "to": 324
+        },
+        {
+          "text": "read at once.",
+          "from": 324,
+          "to": 353
+        },
+        {
+          "text": "And a local server,",
+          "from": 356,
+          "to": 391
+        },
+        {
+          "text": "which lets your own apps",
+          "from": 392,
+          "to": 426
+        },
+        {
+          "text": "talk to the model,",
+          "from": 427,
+          "to": 457
+        },
+        {
+          "text": "like an API.",
+          "from": 459,
+          "to": 507
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "You need an expensive gaming PC to run AI.",
+        "fact": "Small models run on everyday laptops. A GPU helps, but isn't required.",
+        "tip": "Start small, like 3B to 8B"
+      },
+      "from": 2874,
+      "durationInFrames": 524,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_07.wav",
+      "cues": [
+        57,
+        186
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "People think you need an",
+          "from": 57,
+          "to": 88
+        },
+        {
+          "text": "expensive gaming PC to run AI.",
+          "from": 89,
+          "to": 182
+        },
+        {
+          "text": "Small models run on everyday laptops.",
+          "from": 186,
+          "to": 273
+        },
+        {
+          "text": "Apple's M series chips,",
+          "from": 276,
+          "to": 326
+        },
+        {
+          "text": "with shared memory,",
+          "from": 331,
+          "to": 364
+        },
+        {
+          "text": "handle them especially well.",
+          "from": 367,
+          "to": 428
+        },
+        {
+          "text": "A GPU helps,",
+          "from": 430,
+          "to": 466
+        },
+        {
+          "text": "but isn't required.",
+          "from": 468,
+          "to": 512
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "The biggest privacy benefit is…",
+        "options": [
+          "Your data never leaves your device",
+          "It's always smarter",
+          "It never makes mistakes"
+        ],
+        "answer": 0
+      },
+      "from": 3398,
+      "durationInFrames": 452,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_08.wav",
+      "cues": [
+        160,
+        370
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "What is the biggest privacy",
+          "from": 43,
+          "to": 84
+        },
+        {
+          "text": "benefit of running AI locally?",
+          "from": 85,
+          "to": 157
+        },
+        {
+          "text": "Pause and think,",
+          "from": 160,
+          "to": 198
+        },
+        {
+          "text": "and if you get it",
+          "from": 199,
+          "to": 217
+        },
+        {
+          "text": "right, comment below!",
+          "from": 218,
+          "to": 272
+        },
+        {
+          "text": "Your data never leaves your device!",
+          "from": 370,
+          "to": 438
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Install",
+            "Ollama or LM Studio"
+          ],
+          [
+            "Download",
+            "a model that fits"
+          ],
+          [
+            "Private",
+            "free and offline"
+          ],
+          [
+            "Trade-off",
+            "slower, smaller"
+          ]
+        ],
+        "next": "EP 39 · AI costs"
+      },
+      "from": 3850,
+      "durationInFrames": 571,
+      "voiceFrom": 10,
+      "audio": "lessons/ep38/voice_09.wav",
+      "cues": [
+        46,
+        149,
+        254,
+        338,
+        416
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Install a tool like Ollama",
+          "from": 46,
+          "to": 96
+        },
+        {
+          "text": "or LM Studio.",
+          "from": 98,
+          "to": 146
+        },
+        {
+          "text": "Download an open model,",
+          "from": 149,
+          "to": 192
+        },
+        {
+          "text": "sized for your RAM.",
+          "from": 197,
+          "to": 251
+        },
+        {
+          "text": "It's private,",
+          "from": 254,
+          "to": 275
+        },
+        {
+          "text": "free, and works offline.",
+          "from": 281,
+          "to": 337
+        },
+        {
+          "text": "But it's slower,",
+          "from": 338,
+          "to": 362
+        },
+        {
+          "text": "with smaller models.",
+          "from": 367,
+          "to": 413
+        },
+        {
+          "text": "Next, where does AI cost",
+          "from": 416,
+          "to": 469
+        },
+        {
+          "text": "come from?",
+          "from": 471,
+          "to": 496
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 499,
+          "to": 559
+        }
+      ],
+      "image": null
+    }
+  ]
+}

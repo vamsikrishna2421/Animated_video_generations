@@ -1,0 +1,738 @@
+{
+  "id": "ep37",
+  "episode": 37,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Quantization: Shrinking AI Models",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4470,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep37/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 37",
+        "title": [
+          "Quanti-",
+          "zation"
+        ],
+        "subtitle": "Shrinking AI models to fit",
+        "buzzwords": [
+          "Precision",
+          "16-bit",
+          "8-bit",
+          "4-bit",
+          "GGUF",
+          "Memory",
+          "Speed",
+          "Compression"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 437,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_01.wav",
+      "cues": [
+        175,
+        255
+      ],
+      "captions": [
+        {
+          "text": "A 70 billion parameter model",
+          "from": 10,
+          "to": 82
+        },
+        {
+          "text": "needs about 140 gigabytes of memory.",
+          "from": 82,
+          "to": 172
+        },
+        {
+          "text": "That's way more than any",
+          "from": 175,
+          "to": 208
+        },
+        {
+          "text": "gaming GPU.",
+          "from": 211,
+          "to": 253
+        },
+        {
+          "text": "Yet people run it at home.",
+          "from": 255,
+          "to": 314
+        },
+        {
+          "text": "The trick is quantization.",
+          "from": 316,
+          "to": 373
+        },
+        {
+          "text": "Let's see how it works.",
+          "from": 375,
+          "to": 422
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Quantization",
+        "short": "Quantize",
+        "definition": "Storing a model's weights with fewer bits, like 8 or 4 instead of 16, to make it smaller and faster.",
+        "chips": [
+          [
+            "Binary",
+            "Normally 16 bits"
+          ],
+          [
+            "Minimize2",
+            "Rounded to 8 or 4 bits"
+          ],
+          [
+            "Zap",
+            "Smaller and faster"
+          ]
+        ]
+      },
+      "from": 437,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_02.wav",
+      "cues": [
+        136,
+        230,
+        348
+      ],
+      "captions": [
+        {
+          "text": "Quantization means storing the model's",
+          "from": 10,
+          "to": 73
+        },
+        {
+          "text": "numbers with less precision.",
+          "from": 74,
+          "to": 133
+        },
+        {
+          "text": "Normally, each weight uses 16 bits.",
+          "from": 136,
+          "to": 228
+        },
+        {
+          "text": "Quantization rounds them to 8",
+          "from": 230,
+          "to": 278
+        },
+        {
+          "text": "bits, or even 4 bits.",
+          "from": 280,
+          "to": 346
+        },
+        {
+          "text": "The model gets much smaller,",
+          "from": 348,
+          "to": 399
+        },
+        {
+          "text": "and faster,",
+          "from": 400,
+          "to": 428
+        },
+        {
+          "text": "with only a small loss",
+          "from": 429,
+          "to": 468
+        },
+        {
+          "text": "in quality.",
+          "from": 470,
+          "to": 503
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Like compressing a photo",
+        "kicker": "THE ANALOGY",
+        "left": {
+          "icon": "Image",
+          "title": "Original",
+          "stat": "16-bit",
+          "label": "huge file, full detail"
+        },
+        "right": {
+          "icon": "ImageDown",
+          "title": "Compressed",
+          "stat": "4-bit",
+          "label": "tiny file, looks almost the same"
+        }
+      },
+      "from": 951,
+      "durationInFrames": 453,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_03.wav",
+      "cues": [
+        50,
+        164
+      ],
+      "captions": [
+        {
+          "text": "Think of a photo.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "The original is a huge,",
+          "from": 50,
+          "to": 98
+        },
+        {
+          "text": "high resolution file.",
+          "from": 105,
+          "to": 162
+        },
+        {
+          "text": "A compressed version is a",
+          "from": 164,
+          "to": 212
+        },
+        {
+          "text": "fraction of the size,",
+          "from": 212,
+          "to": 252
+        },
+        {
+          "text": "and on your phone screen,",
+          "from": 252,
+          "to": 299
+        },
+        {
+          "text": "it looks almost the same.",
+          "from": 299,
+          "to": 347
+        },
+        {
+          "text": "Quantization does this,",
+          "from": 349,
+          "to": 391
+        },
+        {
+          "text": "for AI weights.",
+          "from": 394,
+          "to": 439
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "A 70B model",
+        "kicker": "THE NUMBERS",
+        "cols": [
+          "Memory",
+          "Quality"
+        ],
+        "rows": [
+          [
+            "16-bit",
+            "≈ 140 GB",
+            "Full"
+          ],
+          [
+            "8-bit",
+            "≈ 70 GB",
+            "Almost full"
+          ],
+          [
+            "4-bit",
+            "≈ 35 GB",
+            "Slightly lower"
+          ]
+        ]
+      },
+      "from": 1404,
+      "durationInFrames": 474,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_04.wav",
+      "cues": [
+        120,
+        226,
+        309
+      ],
+      "captions": [
+        {
+          "text": "Here's the math for a",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "70 billion parameter model.",
+          "from": 57,
+          "to": 117
+        },
+        {
+          "text": "At 16 bits,",
+          "from": 120,
+          "to": 158
+        },
+        {
+          "text": "about 140 gigabytes.",
+          "from": 158,
+          "to": 223
+        },
+        {
+          "text": "At 8 bits,",
+          "from": 226,
+          "to": 251
+        },
+        {
+          "text": "about 70 gigabytes.",
+          "from": 255,
+          "to": 307
+        },
+        {
+          "text": "And at 4 bits,",
+          "from": 309,
+          "to": 349
+        },
+        {
+          "text": "about 35 gigabytes.",
+          "from": 349,
+          "to": 404
+        },
+        {
+          "text": "That's a quarter of the size.",
+          "from": 406,
+          "to": 462
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How it works",
+        "kicker": "STEP BY STEP",
+        "steps": [
+          [
+            "Ruler",
+            "Find the range",
+            "Of a group of weights"
+          ],
+          [
+            "SlidersHorizontal",
+            "Make steps",
+            "16 steps for 4 bits"
+          ],
+          [
+            "Magnet",
+            "Snap",
+            "Each weight to its nearest step"
+          ]
+        ]
+      },
+      "from": 1878,
+      "durationInFrames": 463,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_05.wav",
+      "cues": [
+        50,
+        138,
+        279
+      ],
+      "captions": [
+        {
+          "text": "So how does it work?",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "Look at a group of",
+          "from": 50,
+          "to": 83
+        },
+        {
+          "text": "weights, and find their range.",
+          "from": 83,
+          "to": 136
+        },
+        {
+          "text": "Divide that range into a",
+          "from": 138,
+          "to": 176
+        },
+        {
+          "text": "few steps,",
+          "from": 178,
+          "to": 200
+        },
+        {
+          "text": "like 16 steps for 4 bits.",
+          "from": 203,
+          "to": 276
+        },
+        {
+          "text": "Round each weight to the",
+          "from": 279,
+          "to": 313
+        },
+        {
+          "text": "nearest step,",
+          "from": 315,
+          "to": 343
+        },
+        {
+          "text": "and store just the step",
+          "from": 345,
+          "to": 375
+        },
+        {
+          "text": "number, plus one scale value.",
+          "from": 376,
+          "to": 450
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Quantization words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Binary",
+            "Precision",
+            "Bits per number"
+          ],
+          [
+            "FileBox",
+            "GGUF",
+            "Format for local models"
+          ],
+          [
+            "Tag",
+            "Q4",
+            "A 4-bit version"
+          ],
+          [
+            "Activity",
+            "Perplexity",
+            "Measures quality loss"
+          ]
+        ]
+      },
+      "from": 2341,
+      "durationInFrames": 543,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_06.wav",
+      "cues": [
+        56,
+        152,
+        310,
+        408
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "Precision, how many bits each",
+          "from": 56,
+          "to": 109
+        },
+        {
+          "text": "number uses.",
+          "from": 110,
+          "to": 149
+        },
+        {
+          "text": "GGUF, a popular file format",
+          "from": 152,
+          "to": 218
+        },
+        {
+          "text": "for quantized models you run",
+          "from": 218,
+          "to": 286
+        },
+        {
+          "text": "at home.",
+          "from": 286,
+          "to": 307
+        },
+        {
+          "text": "Q4, shorthand for a 4",
+          "from": 310,
+          "to": 370
+        },
+        {
+          "text": "bit version.",
+          "from": 371,
+          "to": 406
+        },
+        {
+          "text": "And perplexity,",
+          "from": 408,
+          "to": 436
+        },
+        {
+          "text": "a score that shows how",
+          "from": 438,
+          "to": 475
+        },
+        {
+          "text": "much quality was lost.",
+          "from": 477,
+          "to": 529
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Quantized models are broken, low quality copies.",
+        "fact": "8-bit is nearly identical, 4-bit drops a little. Only very low bits, like 2-bit, hurt a lot.",
+        "tip": "4-bit is the sweet spot"
+      },
+      "from": 2884,
+      "durationInFrames": 475,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_07.wav",
+      "cues": [
+        59,
+        192
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think quantized models are",
+          "from": 59,
+          "to": 112
+        },
+        {
+          "text": "broken, low quality copies.",
+          "from": 115,
+          "to": 189
+        },
+        {
+          "text": "At 8 bits,",
+          "from": 192,
+          "to": 214
+        },
+        {
+          "text": "most people can't tell the difference.",
+          "from": 216,
+          "to": 284
+        },
+        {
+          "text": "At 4 bits,",
+          "from": 287,
+          "to": 309
+        },
+        {
+          "text": "there's a small drop.",
+          "from": 314,
+          "to": 356
+        },
+        {
+          "text": "Only very low bits,",
+          "from": 358,
+          "to": 396
+        },
+        {
+          "text": "like 2 bits,",
+          "from": 399,
+          "to": 423
+        },
+        {
+          "text": "hurt a lot.",
+          "from": 429,
+          "to": 462
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "140 GB at 16-bit → 4-bit is about…",
+        "options": [
+          "35 gigabytes",
+          "70 gigabytes",
+          "140 gigabytes"
+        ],
+        "answer": 0
+      },
+      "from": 3359,
+      "durationInFrames": 551,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_08.wav",
+      "cues": [
+        221,
+        436
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "A model is 140 gigabytes",
+          "from": 42,
+          "to": 117
+        },
+        {
+          "text": "at 16 bits.",
+          "from": 117,
+          "to": 152
+        },
+        {
+          "text": "About how big is it",
+          "from": 155,
+          "to": 182
+        },
+        {
+          "text": "at 4 bits?",
+          "from": 183,
+          "to": 218
+        },
+        {
+          "text": "Pause and think,",
+          "from": 221,
+          "to": 259
+        },
+        {
+          "text": "and if you get it",
+          "from": 260,
+          "to": 278
+        },
+        {
+          "text": "right, comment below!",
+          "from": 279,
+          "to": 338
+        },
+        {
+          "text": "About 35 gigabytes,",
+          "from": 436,
+          "to": 463
+        },
+        {
+          "text": "a quarter of the size!",
+          "from": 464,
+          "to": 539
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Fewer bits",
+            "per weight"
+          ],
+          [
+            "16 → 8 → 4",
+            "bits"
+          ],
+          [
+            "Smaller",
+            "and faster"
+          ],
+          [
+            "4-bit",
+            "the sweet spot"
+          ]
+        ],
+        "next": "EP 38 · Run AI locally"
+      },
+      "from": 3910,
+      "durationInFrames": 560,
+      "voiceFrom": 10,
+      "audio": "lessons/ep37/voice_09.wav",
+      "cues": [
+        46,
+        132,
+        207,
+        282,
+        379
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Quantization stores weights with fewer bits.",
+          "from": 46,
+          "to": 129
+        },
+        {
+          "text": "16 bits to 8,",
+          "from": 132,
+          "to": 171
+        },
+        {
+          "text": "or 4.",
+          "from": 174,
+          "to": 204
+        },
+        {
+          "text": "Models get much smaller and faster.",
+          "from": 207,
+          "to": 279
+        },
+        {
+          "text": "And 4 bits is often",
+          "from": 282,
+          "to": 317
+        },
+        {
+          "text": "the sweet spot for quality.",
+          "from": 318,
+          "to": 376
+        },
+        {
+          "text": "Next, how to run AI",
+          "from": 379,
+          "to": 430
+        },
+        {
+          "text": "models on your own laptop.",
+          "from": 432,
+          "to": 484
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 487,
+          "to": 548
+        }
+      ],
+      "image": null
+    }
+  ]
+}
