@@ -61,7 +61,7 @@ Already posted: `out/posted/`.
 | 054 | ep50 | Your First AI API Call | ready |
 | 055 | ep51 | Build a Chatbot with a System Prompt | ready |
 | 056 | ep52 | Build RAG Over Your PDFs, Part 1 | ready |
-| 057 | ep53 | Build RAG Over Your PDFs, Part 2 | rendering soon |
+| 057 | ep53 | Build RAG Over Your PDFs, Part 2 | ready |
 | 058 | ep54 | Build an AI Agent with Tools | rendering soon |
 | 059 | ep55 | Build Your Own MCP Server | rendering soon |
 | 060 | ep56 | Build a Voice Assistant | rendering soon |
