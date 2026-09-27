@@ -1,0 +1,777 @@
+{
+  "id": "ep46",
+  "episode": 46,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Copyright and AI",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5151,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep46/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 46",
+        "title": [
+          "Copyright",
+          "& AI"
+        ],
+        "subtitle": "Who owns what AI makes?",
+        "buzzwords": [
+          "Copyright",
+          "Training data",
+          "Fair use",
+          "Lawsuits",
+          "Ownership",
+          "Licensing",
+          "Artists",
+          "Authors"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 446,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_01.wav",
+      "cues": [
+        203,
+        348
+      ],
+      "captions": [
+        {
+          "text": "AI models learned from millions",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "of books,",
+          "from": 68,
+          "to": 88
+        },
+        {
+          "text": "articles, songs,",
+          "from": 91,
+          "to": 134
+        },
+        {
+          "text": "and pictures made by people.",
+          "from": 140,
+          "to": 200
+        },
+        {
+          "text": "So who owns what AI creates?",
+          "from": 203,
+          "to": 272
+        },
+        {
+          "text": "And was it fair to",
+          "from": 274,
+          "to": 296
+        },
+        {
+          "text": "train on all that work?",
+          "from": 298,
+          "to": 346
+        },
+        {
+          "text": "Let's untangle copyright and AI.",
+          "from": 348,
+          "to": 434
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Copyright",
+        "short": "Copyright",
+        "definition": "The legal right creators have over their original work, controlling who can copy and use it.",
+        "chips": [
+          [
+            "BookOpen",
+            "Books, music, art, code"
+          ],
+          [
+            "FileLock",
+            "Permission to copy"
+          ],
+          [
+            "Scale",
+            "Exceptions like fair use"
+          ]
+        ]
+      },
+      "from": 446,
+      "durationInFrames": 487,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_02.wav",
+      "cues": [
+        139,
+        275,
+        352
+      ],
+      "captions": [
+        {
+          "text": "Copyright is the legal right",
+          "from": 10,
+          "to": 55
+        },
+        {
+          "text": "creators have over their original work.",
+          "from": 56,
+          "to": 136
+        },
+        {
+          "text": "It covers books,",
+          "from": 139,
+          "to": 173
+        },
+        {
+          "text": "music, art,",
+          "from": 176,
+          "to": 212
+        },
+        {
+          "text": "photos, and code.",
+          "from": 215,
+          "to": 273
+        },
+        {
+          "text": "Others usually need permission to",
+          "from": 275,
+          "to": 323
+        },
+        {
+          "text": "copy it,",
+          "from": 325,
+          "to": 350
+        },
+        {
+          "text": "with some exceptions,",
+          "from": 352,
+          "to": 387
+        },
+        {
+          "text": "like fair use,",
+          "from": 388,
+          "to": 418
+        },
+        {
+          "text": "or fair dealing in India.",
+          "from": 421,
+          "to": 476
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Three big questions",
+        "kicker": "THE DEBATE",
+        "steps": [
+          [
+            "Database",
+            "Training",
+            "Allowed without permission?"
+          ],
+          [
+            "Copy",
+            "Outputs",
+            "Too close to the original?"
+          ],
+          [
+            "UserCircle",
+            "Ownership",
+            "Who owns AI creations?"
+          ]
+        ]
+      },
+      "from": 933,
+      "durationInFrames": 568,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_03.wav",
+      "cues": [
+        70,
+        231,
+        378
+      ],
+      "captions": [
+        {
+          "text": "There are three big questions.",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "Training.",
+          "from": 70,
+          "to": 97
+        },
+        {
+          "text": "Is it legal to train",
+          "from": 99,
+          "to": 132
+        },
+        {
+          "text": "AI on copyrighted work,",
+          "from": 134,
+          "to": 186
+        },
+        {
+          "text": "without permission?",
+          "from": 191,
+          "to": 228
+        },
+        {
+          "text": "Outputs.",
+          "from": 231,
+          "to": 262
+        },
+        {
+          "text": "What if the AI produces",
+          "from": 264,
+          "to": 303
+        },
+        {
+          "text": "something very close to an",
+          "from": 305,
+          "to": 339
+        },
+        {
+          "text": "existing work?",
+          "from": 340,
+          "to": 375
+        },
+        {
+          "text": "Ownership.",
+          "from": 378,
+          "to": 412
+        },
+        {
+          "text": "Who owns what the AI",
+          "from": 414,
+          "to": 461
+        },
+        {
+          "text": "creates, the user,",
+          "from": 461,
+          "to": 503
+        },
+        {
+          "text": "the company,",
+          "from": 503,
+          "to": 532
+        },
+        {
+          "text": "or no one?",
+          "from": 532,
+          "to": 557
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Two sides of training",
+        "kicker": "THE ARGUMENT",
+        "left": {
+          "icon": "Building2",
+          "title": "AI companies",
+          "stat": "Learning",
+          "label": "like reading, transformative"
+        },
+        "right": {
+          "icon": "Palette",
+          "title": "Creators",
+          "stat": "Taking",
+          "label": "no permission, no payment"
+        }
+      },
+      "from": 1501,
+      "durationInFrames": 586,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_04.wav",
+      "cues": [
+        87,
+        290
+      ],
+      "captions": [
+        {
+          "text": "On training,",
+          "from": 10,
+          "to": 39
+        },
+        {
+          "text": "there are two sides.",
+          "from": 39,
+          "to": 85
+        },
+        {
+          "text": "AI companies argue that learning",
+          "from": 87,
+          "to": 146
+        },
+        {
+          "text": "patterns from work is like",
+          "from": 147,
+          "to": 185
+        },
+        {
+          "text": "a person reading books,",
+          "from": 186,
+          "to": 232
+        },
+        {
+          "text": "and is transformative.",
+          "from": 234,
+          "to": 286
+        },
+        {
+          "text": "Creators argue their work was",
+          "from": 290,
+          "to": 334
+        },
+        {
+          "text": "taken without permission or payment,",
+          "from": 335,
+          "to": 410
+        },
+        {
+          "text": "and AI now competes with them.",
+          "from": 412,
+          "to": 482
+        },
+        {
+          "text": "Courts in many countries are",
+          "from": 485,
+          "to": 529
+        },
+        {
+          "text": "still deciding.",
+          "from": 531,
+          "to": 573
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Happening now",
+        "items": [
+          [
+            "Gavel",
+            "Lawsuits",
+            "Authors, artists, newsrooms"
+          ],
+          [
+            "Landmark",
+            "In India",
+            "ANI vs OpenAI, Delhi High Court"
+          ],
+          [
+            "Handshake",
+            "Licensing deals",
+            "Paying for content"
+          ]
+        ]
+      },
+      "from": 2087,
+      "durationInFrames": 631,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_05.wav",
+      "cues": [
+        74,
+        252,
+        424
+      ],
+      "captions": [
+        {
+          "text": "This is playing out right now.",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "Authors, artists,",
+          "from": 74,
+          "to": 115
+        },
+        {
+          "text": "and news organisations have filed",
+          "from": 120,
+          "to": 174
+        },
+        {
+          "text": "lawsuits against AI companies.",
+          "from": 177,
+          "to": 249
+        },
+        {
+          "text": "In India,",
+          "from": 252,
+          "to": 277
+        },
+        {
+          "text": "the news agency ANI took",
+          "from": 277,
+          "to": 340
+        },
+        {
+          "text": "OpenAI to the Delhi High Court.",
+          "from": 340,
+          "to": 421
+        },
+        {
+          "text": "Meanwhile, some AI companies now",
+          "from": 424,
+          "to": 495
+        },
+        {
+          "text": "sign licensing deals,",
+          "from": 498,
+          "to": 546
+        },
+        {
+          "text": "paying publishers for their content.",
+          "from": 549,
+          "to": 619
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "Can you own it?",
+        "kicker": "OWNERSHIP",
+        "cols": [
+          "Protected?"
+        ],
+        "rows": [
+          [
+            "Heavy human creative input",
+            "Likely, the human parts"
+          ],
+          [
+            "Pure AI from a short prompt",
+            "Often no"
+          ]
+        ]
+      },
+      "from": 2718,
+      "durationInFrames": 578,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_06.wav",
+      "cues": [
+        94,
+        295
+      ],
+      "captions": [
+        {
+          "text": "What about ownership of AI outputs?",
+          "from": 10,
+          "to": 92
+        },
+        {
+          "text": "If a human makes strong",
+          "from": 94,
+          "to": 132
+        },
+        {
+          "text": "creative choices,",
+          "from": 133,
+          "to": 170
+        },
+        {
+          "text": "and edits the work,",
+          "from": 172,
+          "to": 208
+        },
+        {
+          "text": "copyright may protect the human parts.",
+          "from": 211,
+          "to": 292
+        },
+        {
+          "text": "If the AI makes it",
+          "from": 295,
+          "to": 330
+        },
+        {
+          "text": "entirely, from one short prompt,",
+          "from": 331,
+          "to": 406
+        },
+        {
+          "text": "many places,",
+          "from": 408,
+          "to": 436
+        },
+        {
+          "text": "including the US Copyright Office,",
+          "from": 438,
+          "to": 507
+        },
+        {
+          "text": "say it can't be copyrighted.",
+          "from": 510,
+          "to": 566
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "If AI made it, it's free to use any way.",
+        "fact": "Outputs can still copy protected characters or logos. Check the tool's terms for commercial use.",
+        "tip": "Rules are still evolving"
+      },
+      "from": 3296,
+      "durationInFrames": 559,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_07.wav",
+      "cues": [
+        59,
+        192
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think,",
+          "from": 59,
+          "to": 85
+        },
+        {
+          "text": "if an AI made it,",
+          "from": 86,
+          "to": 122
+        },
+        {
+          "text": "it's free to use in",
+          "from": 124,
+          "to": 155
+        },
+        {
+          "text": "any way.",
+          "from": 157,
+          "to": 190
+        },
+        {
+          "text": "AI outputs can still copy",
+          "from": 192,
+          "to": 243
+        },
+        {
+          "text": "protected characters,",
+          "from": 244,
+          "to": 285
+        },
+        {
+          "text": "logos, or styles too closely.",
+          "from": 288,
+          "to": 368
+        },
+        {
+          "text": "For commercial use,",
+          "from": 370,
+          "to": 406
+        },
+        {
+          "text": "check the tool's terms,",
+          "from": 407,
+          "to": 448
+        },
+        {
+          "text": "and be careful with famous",
+          "from": 452,
+          "to": 488
+        },
+        {
+          "text": "brands, and characters.",
+          "from": 490,
+          "to": 547
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Pure AI image from a short prompt — copyrightable in the US?",
+        "options": [
+          "Usually no",
+          "Always yes",
+          "Only on weekends"
+        ],
+        "answer": 0
+      },
+      "from": 3855,
+      "durationInFrames": 592,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_08.wav",
+      "cues": [
+        225,
+        450
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "Can a picture made entirely",
+          "from": 43,
+          "to": 100
+        },
+        {
+          "text": "by AI from a short",
+          "from": 100,
+          "to": 139
+        },
+        {
+          "text": "prompt usually be copyrighted in",
+          "from": 139,
+          "to": 206
+        },
+        {
+          "text": "the US?",
+          "from": 206,
+          "to": 222
+        },
+        {
+          "text": "Pause and think,",
+          "from": 225,
+          "to": 265
+        },
+        {
+          "text": "and if you get it",
+          "from": 267,
+          "to": 285
+        },
+        {
+          "text": "right, comment below!",
+          "from": 286,
+          "to": 351
+        },
+        {
+          "text": "Usually no,",
+          "from": 450,
+          "to": 479
+        },
+        {
+          "text": "because copyright needs meaningful human authorship!",
+          "from": 481,
+          "to": 578
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Copyright",
+            "protects creators"
+          ],
+          [
+            "Questions",
+            "training, outputs, ownership"
+          ],
+          [
+            "Now",
+            "lawsuits and licensing"
+          ],
+          [
+            "Evolving",
+            "differs by country"
+          ]
+        ],
+        "next": "EP 47 · Guardrails"
+      },
+      "from": 4447,
+      "durationInFrames": 704,
+      "voiceFrom": 10,
+      "audio": "lessons/ep46/voice_09.wav",
+      "cues": [
+        46,
+        133,
+        247,
+        362,
+        523
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "Copyright protects creators' original work.",
+          "from": 46,
+          "to": 131
+        },
+        {
+          "text": "The big questions are training,",
+          "from": 133,
+          "to": 183
+        },
+        {
+          "text": "outputs, and ownership.",
+          "from": 185,
+          "to": 244
+        },
+        {
+          "text": "Lawsuits and licensing deals are",
+          "from": 247,
+          "to": 301
+        },
+        {
+          "text": "shaping the rules right now.",
+          "from": 304,
+          "to": 359
+        },
+        {
+          "text": "Pure AI outputs often can't",
+          "from": 362,
+          "to": 422
+        },
+        {
+          "text": "be copyrighted,",
+          "from": 423,
+          "to": 455
+        },
+        {
+          "text": "and the rules differ by country.",
+          "from": 457,
+          "to": 520
+        },
+        {
+          "text": "Next, guardrails in real AI products.",
+          "from": 523,
+          "to": 625
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 628,
+          "to": 692
+        }
+      ],
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,780 @@
+{
+  "id": "ep47",
+  "episode": 47,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Guardrails in Real AI Products",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4761,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep47/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 47",
+        "title": [
+          "Guard-",
+          "rails"
+        ],
+        "subtitle": "Keeping AI on track",
+        "buzzwords": [
+          "Input filters",
+          "Output checks",
+          "Topic limits",
+          "PII",
+          "Moderation",
+          "Validation",
+          "Fallbacks",
+          "Logging"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 436,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_01.wav",
+      "cues": [
+        171,
+        303
+      ],
+      "captions": [
+        {
+          "text": "A bank's chatbot suddenly starts",
+          "from": 10,
+          "to": 62
+        },
+        {
+          "text": "giving stock tips,",
+          "from": 64,
+          "to": 104
+        },
+        {
+          "text": "or insulting a customer.",
+          "from": 108,
+          "to": 168
+        },
+        {
+          "text": "That would be a disaster.",
+          "from": 171,
+          "to": 217
+        },
+        {
+          "text": "So how do companies keep",
+          "from": 220,
+          "to": 258
+        },
+        {
+          "text": "AI on track?",
+          "from": 261,
+          "to": 299
+        },
+        {
+          "text": "With guardrails.",
+          "from": 303,
+          "to": 343
+        },
+        {
+          "text": "Let's see how they work",
+          "from": 345,
+          "to": 378
+        },
+        {
+          "text": "in real products.",
+          "from": 379,
+          "to": 422
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Guardrails",
+        "short": "Guardrails",
+        "definition": "Safety checks around an AI model that filter inputs and outputs, keeping it safe and on-topic.",
+        "chips": [
+          [
+            "ArrowDownToLine",
+            "Check what goes in"
+          ],
+          [
+            "ArrowUpFromLine",
+            "Check what comes out"
+          ],
+          [
+            "ShieldCheck",
+            "Stop or fix problems"
+          ]
+        ]
+      },
+      "from": 436,
+      "durationInFrames": 359,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_02.wav",
+      "cues": [
+        126,
+        169,
+        211
+      ],
+      "captions": [
+        {
+          "text": "Guardrails are safety checks placed",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "around an AI model.",
+          "from": 70,
+          "to": 124
+        },
+        {
+          "text": "They check what goes in,",
+          "from": 126,
+          "to": 167
+        },
+        {
+          "text": "they check what comes out,",
+          "from": 169,
+          "to": 209
+        },
+        {
+          "text": "and they stop,",
+          "from": 211,
+          "to": 234
+        },
+        {
+          "text": "or fix,",
+          "from": 237,
+          "to": 267
+        },
+        {
+          "text": "anything unsafe or off-topic.",
+          "from": 268,
+          "to": 347
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "A guarded chatbot",
+        "nodes": [
+          [
+            "MessageSquare",
+            "Message",
+            "From the user"
+          ],
+          [
+            "ShieldCheck",
+            "Input check",
+            "Attacks, personal data"
+          ],
+          [
+            "Brain",
+            "Model",
+            "Follows system prompt"
+          ],
+          [
+            "ScanSearch",
+            "Output check",
+            "Harm, errors, leaks"
+          ],
+          [
+            "CheckCircle2",
+            "Safe reply",
+            "To the user"
+          ]
+        ]
+      },
+      "from": 795,
+      "durationInFrames": 677,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_03.wav",
+      "cues": [
+        76,
+        137,
+        302,
+        411,
+        568
+      ],
+      "captions": [
+        {
+          "text": "Here's a typical guarded chatbot.",
+          "from": 10,
+          "to": 74
+        },
+        {
+          "text": "The user's message arrives.",
+          "from": 76,
+          "to": 135
+        },
+        {
+          "text": "An input check blocks attacks,",
+          "from": 137,
+          "to": 193
+        },
+        {
+          "text": "like prompt injection,",
+          "from": 198,
+          "to": 239
+        },
+        {
+          "text": "and hides personal data.",
+          "from": 243,
+          "to": 300
+        },
+        {
+          "text": "The model writes a reply,",
+          "from": 302,
+          "to": 348
+        },
+        {
+          "text": "following its system prompt.",
+          "from": 351,
+          "to": 408
+        },
+        {
+          "text": "An output check scans for",
+          "from": 411,
+          "to": 454
+        },
+        {
+          "text": "harmful content,",
+          "from": 456,
+          "to": 492
+        },
+        {
+          "text": "made-up facts,",
+          "from": 494,
+          "to": 522
+        },
+        {
+          "text": "or leaked data.",
+          "from": 526,
+          "to": 565
+        },
+        {
+          "text": "Only then does the safe",
+          "from": 568,
+          "to": 610
+        },
+        {
+          "text": "reply reach the user.",
+          "from": 611,
+          "to": 665
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Common guardrails",
+        "kicker": "THREE TYPES",
+        "steps": [
+          [
+            "Fence",
+            "Topic limits",
+            "Stay in its lane"
+          ],
+          [
+            "ShieldAlert",
+            "Moderation",
+            "Block harmful content"
+          ],
+          [
+            "Braces",
+            "Format checks",
+            "Valid, usable answers"
+          ]
+        ]
+      },
+      "from": 1472,
+      "durationInFrames": 652,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_04.wav",
+      "cues": [
+        88,
+        198,
+        408
+      ],
+      "captions": [
+        {
+          "text": "There are three common guardrail types.",
+          "from": 10,
+          "to": 86
+        },
+        {
+          "text": "Topic limits,",
+          "from": 88,
+          "to": 115
+        },
+        {
+          "text": "a bank bot only talks",
+          "from": 118,
+          "to": 157
+        },
+        {
+          "text": "about banking.",
+          "from": 158,
+          "to": 196
+        },
+        {
+          "text": "Content moderation,",
+          "from": 198,
+          "to": 240
+        },
+        {
+          "text": "blocking hate,",
+          "from": 242,
+          "to": 268
+        },
+        {
+          "text": "violence, or self harm content,",
+          "from": 272,
+          "to": 340
+        },
+        {
+          "text": "and sharing help resources.",
+          "from": 342,
+          "to": 405
+        },
+        {
+          "text": "Format checks,",
+          "from": 408,
+          "to": 440
+        },
+        {
+          "text": "making sure answers are valid,",
+          "from": 440,
+          "to": 506
+        },
+        {
+          "text": "like correct JSON for an",
+          "from": 506,
+          "to": 559
+        },
+        {
+          "text": "app, or a real account",
+          "from": 559,
+          "to": 608
+        },
+        {
+          "text": "number format.",
+          "from": 608,
+          "to": 640
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Guardrails in action",
+        "items": [
+          [
+            "UtensilsCrossed",
+            "Food app bot",
+            "Stays on food orders"
+          ],
+          [
+            "HeartPulse",
+            "Health app",
+            "Adds 'consult a doctor'"
+          ],
+          [
+            "Headphones",
+            "Bank bot",
+            "Hands off to a human"
+          ]
+        ]
+      },
+      "from": 2124,
+      "durationInFrames": 551,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_05.wav",
+      "cues": [
+        74,
+        207,
+        347
+      ],
+      "captions": [
+        {
+          "text": "Here are real examples.",
+          "from": 10,
+          "to": 71
+        },
+        {
+          "text": "A food delivery bot politely",
+          "from": 74,
+          "to": 128
+        },
+        {
+          "text": "refuses to write your college essay.",
+          "from": 130,
+          "to": 204
+        },
+        {
+          "text": "A health app adds,",
+          "from": 207,
+          "to": 244
+        },
+        {
+          "text": "please consult a doctor,",
+          "from": 247,
+          "to": 293
+        },
+        {
+          "text": "to medical answers.",
+          "from": 295,
+          "to": 345
+        },
+        {
+          "text": "And a banking bot hands",
+          "from": 347,
+          "to": 384
+        },
+        {
+          "text": "off to a human,",
+          "from": 386,
+          "to": 419
+        },
+        {
+          "text": "when a customer is angry,",
+          "from": 421,
+          "to": 471
+        },
+        {
+          "text": "or the question is complex.",
+          "from": 473,
+          "to": 537
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Guardrail words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "IdCard",
+            "PII",
+            "Personal details"
+          ],
+          [
+            "ShieldAlert",
+            "Moderation model",
+            "Flags harmful text"
+          ],
+          [
+            "LifeBuoy",
+            "Fallback",
+            "Safe default reply"
+          ],
+          [
+            "Headphones",
+            "Human handoff",
+            "Pass to a person"
+          ]
+        ]
+      },
+      "from": 2675,
+      "durationInFrames": 590,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_06.wav",
+      "cues": [
+        59,
+        231,
+        357,
+        458
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "PII, personally identifiable information,",
+          "from": 59,
+          "to": 154
+        },
+        {
+          "text": "like phone numbers,",
+          "from": 155,
+          "to": 188
+        },
+        {
+          "text": "and Aadhaar.",
+          "from": 192,
+          "to": 228
+        },
+        {
+          "text": "Moderation model,",
+          "from": 231,
+          "to": 264
+        },
+        {
+          "text": "a classifier that flags harmful text.",
+          "from": 267,
+          "to": 354
+        },
+        {
+          "text": "Fallback, a safe response when",
+          "from": 357,
+          "to": 413
+        },
+        {
+          "text": "something fails.",
+          "from": 415,
+          "to": 455
+        },
+        {
+          "text": "And human handoff,",
+          "from": 458,
+          "to": 490
+        },
+        {
+          "text": "passing the conversation to a",
+          "from": 492,
+          "to": 538
+        },
+        {
+          "text": "real person.",
+          "from": 540,
+          "to": 578
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "A good system prompt is enough to keep AI safe.",
+        "fact": "Prompts can be tricked. Real products stack layers: input checks, output checks and human review.",
+        "tip": "Many layers, not one"
+      },
+      "from": 3265,
+      "durationInFrames": 463,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_07.wav",
+      "cues": [
+        58,
+        180
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think a good system",
+          "from": 58,
+          "to": 94
+        },
+        {
+          "text": "prompt is enough to keep",
+          "from": 95,
+          "to": 132
+        },
+        {
+          "text": "the AI safe.",
+          "from": 133,
+          "to": 178
+        },
+        {
+          "text": "Prompts can be tricked,",
+          "from": 180,
+          "to": 215
+        },
+        {
+          "text": "as we saw with jailbreaks.",
+          "from": 218,
+          "to": 279
+        },
+        {
+          "text": "Real products stack several layers,",
+          "from": 282,
+          "to": 347
+        },
+        {
+          "text": "input checks,",
+          "from": 349,
+          "to": 376
+        },
+        {
+          "text": "output checks,",
+          "from": 379,
+          "to": 405
+        },
+        {
+          "text": "and human review.",
+          "from": 409,
+          "to": 451
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "An output guardrail…",
+        "options": [
+          "Checks the AI's reply before the user sees it",
+          "Makes the model bigger",
+          "Speeds up the internet"
+        ],
+        "answer": 0
+      },
+      "from": 3728,
+      "durationInFrames": 422,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_08.wav",
+      "cues": [
+        93,
+        303
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 29
+        },
+        {
+          "text": "What does an output guardrail do?",
+          "from": 31,
+          "to": 91
+        },
+        {
+          "text": "Pause and think,",
+          "from": 93,
+          "to": 126
+        },
+        {
+          "text": "and if you get it",
+          "from": 130,
+          "to": 147
+        },
+        {
+          "text": "right, comment below!",
+          "from": 149,
+          "to": 205
+        },
+        {
+          "text": "It checks the AI's reply,",
+          "from": 303,
+          "to": 356
+        },
+        {
+          "text": "before the user sees it!",
+          "from": 359,
+          "to": 410
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Guardrails",
+            "checks around the model"
+          ],
+          [
+            "Input",
+            "block attacks, hide PII"
+          ],
+          [
+            "Output",
+            "catch harm and leaks"
+          ],
+          [
+            "Layers",
+            "plus human handoff"
+          ]
+        ],
+        "next": "EP 48 · AI laws"
+      },
+      "from": 4150,
+      "durationInFrames": 611,
+      "voiceFrom": 10,
+      "audio": "lessons/ep47/voice_09.wav",
+      "cues": [
+        46,
+        130,
+        238,
+        338,
+        457
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "Guardrails are safety checks around",
+          "from": 46,
+          "to": 98
+        },
+        {
+          "text": "the model.",
+          "from": 99,
+          "to": 128
+        },
+        {
+          "text": "Input checks block attacks,",
+          "from": 130,
+          "to": 176
+        },
+        {
+          "text": "and hide personal data.",
+          "from": 182,
+          "to": 236
+        },
+        {
+          "text": "Output checks catch harm,",
+          "from": 238,
+          "to": 287
+        },
+        {
+          "text": "errors, and leaks.",
+          "from": 290,
+          "to": 333
+        },
+        {
+          "text": "And real products stack many",
+          "from": 338,
+          "to": 379
+        },
+        {
+          "text": "layers, including human handoff.",
+          "from": 380,
+          "to": 454
+        },
+        {
+          "text": "Next, AI laws around the world.",
+          "from": 457,
+          "to": 532
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 535,
+          "to": 599
+        }
+      ],
+      "image": null
+    }
+  ]
+}

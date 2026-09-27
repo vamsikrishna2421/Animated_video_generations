@@ -1,0 +1,209 @@
+{
+  "id": "ep46",
+  "episode": 46,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Copyright and AI",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "AI models learned from millions of books, articles, songs, and pictures made by people. [1] So who owns what AI creates? And was it fair to train on all that work? [2] Let's untangle copyright and AI.",
+      "data": {
+        "kicker": "EPISODE 46",
+        "title": [
+          "Copyright",
+          "& AI"
+        ],
+        "subtitle": "Who owns what AI makes?",
+        "buzzwords": [
+          "Copyright",
+          "Training data",
+          "Fair use",
+          "Lawsuits",
+          "Ownership",
+          "Licensing",
+          "Artists",
+          "Authors"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Copyright is the legal right creators have over their original work. [1] It covers books, music, art, photos, and code. [2] Others usually need permission to copy it, [3] with some exceptions, like fair use, or fair dealing in India.",
+      "data": {
+        "term": "Copyright",
+        "short": "Copyright",
+        "definition": "The legal right creators have over their original work, controlling who can copy and use it.",
+        "chips": [
+          [
+            "BookOpen",
+            "Books, music, art, code"
+          ],
+          [
+            "FileLock",
+            "Permission to copy"
+          ],
+          [
+            "Scale",
+            "Exceptions like fair use"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "There are three big questions. [1] Training. Is it legal to train AI on copyrighted work, without permission? [2] Outputs. What if the AI produces something very close to an existing work? [3] Ownership. Who owns what the AI creates, the user, the company, or no one?",
+      "data": {
+        "heading": "Three big questions",
+        "kicker": "THE DEBATE",
+        "steps": [
+          [
+            "Database",
+            "Training",
+            "Allowed without permission?"
+          ],
+          [
+            "Copy",
+            "Outputs",
+            "Too close to the original?"
+          ],
+          [
+            "UserCircle",
+            "Ownership",
+            "Who owns AI creations?"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "On training, there are two sides. [1] AI companies argue that learning patterns from work is like a person reading books, and is transformative. [2] Creators argue their work was taken without permission or payment, and AI now competes with them. Courts in many countries are still deciding.",
+      "data": {
+        "heading": "Two sides of training",
+        "kicker": "THE ARGUMENT",
+        "left": {
+          "icon": "Building2",
+          "title": "AI companies",
+          "stat": "Learning",
+          "label": "like reading, transformative"
+        },
+        "right": {
+          "icon": "Palette",
+          "title": "Creators",
+          "stat": "Taking",
+          "label": "no permission, no payment"
+        }
+      }
+    },
+    {
+      "type": "examples",
+      "text": "This is playing out right now. [1] Authors, artists, and news organisations have filed lawsuits against AI companies. [2] In India, the news agency ANI took OpenAI to the Delhi High Court. [3] Meanwhile, some AI companies now sign licensing deals, paying publishers for their content.",
+      "data": {
+        "heading": "Happening now",
+        "items": [
+          [
+            "Gavel",
+            "Lawsuits",
+            "Authors, artists, newsrooms"
+          ],
+          [
+            "Landmark",
+            "In India",
+            "ANI vs OpenAI, Delhi High Court"
+          ],
+          [
+            "Handshake",
+            "Licensing deals",
+            "Paying for content"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "What about ownership of AI outputs? [1] If a human makes strong creative choices, and edits the work, copyright may protect the human parts. [2] If the AI makes it entirely, from one short prompt, many places, including the US Copyright Office, say it can't be copyrighted.",
+      "data": {
+        "heading": "Can you own it?",
+        "kicker": "OWNERSHIP",
+        "cols": [
+          "Protected?"
+        ],
+        "rows": [
+          [
+            "Heavy human creative input",
+            "Likely, the human parts"
+          ],
+          [
+            "Pure AI from a short prompt",
+            "Often no"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think, if an AI made it, it's free to use in any way. [2] AI outputs can still copy protected characters, logos, or styles too closely. For commercial use, check the tool's terms, and be careful with famous brands, and characters.",
+      "data": {
+        "myth": "If AI made it, it's free to use any way.",
+        "fact": "Outputs can still copy protected characters or logos. Check the tool's terms for commercial use.",
+        "tip": "Rules are still evolving"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! Can a picture made entirely by AI from a short prompt usually be copyrighted in the US? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Usually no, because copyright needs meaningful human authorship!",
+      "data": {
+        "question": "Pure AI image from a short prompt — copyrightable in the US?",
+        "options": [
+          "Usually no",
+          "Always yes",
+          "Only on weekends"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Copyright protects creators' original work. [2] The big questions are training, outputs, and ownership. [3] Lawsuits and licensing deals are shaping the rules right now. [4] Pure AI outputs often can't be copyrighted, and the rules differ by country. [5] Next, guardrails in real AI products. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Copyright",
+            "protects creators"
+          ],
+          [
+            "Questions",
+            "training, outputs, ownership"
+          ],
+          [
+            "Now",
+            "lawsuits and licensing"
+          ],
+          [
+            "Evolving",
+            "differs by country"
+          ]
+        ],
+        "next": "EP 47 · Guardrails"
+      }
+    }
+  ],
+  "post": {
+    "caption": "AI learned from millions of human works. So who owns what it creates?\n\nAI From Scratch, Episode 46: copyright and AI\n- What copyright covers\n- Three big questions: training, outputs, ownership\n- Both sides of the training debate\n- Happening now: lawsuits (including ANI vs OpenAI in India) and licensing deals\n- Can you own AI-generated work?\n\nQuiz at the end. Got it right? Comment below.\n\nNot legal advice. Rules differ by country and are still evolving.\nNext: guardrails in real AI products.\nFollow @ai_maastaaru to learn AI from scratch.",
+    "tags": "#AIMaastaaru #Copyright #AIEthics #LearnAI #GenerativeAI",
+    "pinned": "Quiz answer: Usually no, because US copyright needs meaningful human authorship. Should AI companies pay creators for training data? Comment below!",
+    "cover": "'Copyright & AI' title card",
+    "alt": "Animated explainer of copyright and AI: training data, outputs, ownership and ongoing lawsuits."
+  }
+}
