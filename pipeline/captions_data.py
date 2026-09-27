@@ -1,0 +1,248 @@
+"""Instagram post copy per episode, written to out/<id>_captions.txt next to each video.
+Format (for upload automation): a VIDEO line, then sections headed '=== NAME ==='.
+Run: python3 pipeline/captions_data.py
+"""
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+NEXT = "Follow @ai_maastaaru for the full series."
+QUIZ = "Quiz at the end. Got it right? Comment below."
+
+POSTS = {
+"ep00": dict(
+ caption="""Want to learn AI but don't know where to start?
+
+Welcome to AI From Scratch, a new series on AI Maastaaru.
+
+Every episode:
+- Under 3 minutes
+- Plain words, no jargon
+- Real examples from apps you already use
+- A quick quiz at the end
+
+Season 1: Foundations (AI vs ML, LLMs, tokens, prompts, embeddings)
+Season 2: Build with AI (RAG, tools, agents, MCP)
+Season 3: Hands-on (build your own AI apps)
+
+No coding needed to start. Just curiosity.
+
+Follow @ai_maastaaru and turn on notifications so you don't miss an episode.
+
+Comment "AI" if you're in.""",
+ tags="#AIMaastaaru #AIFromScratch #LearnAI #AIForBeginners #ArtificialIntelligence",
+ pinned="Which topic should I explain first after the basics: RAG, AI agents, or prompt engineering? Comment below.",
+ cover="'Learn AI from scratch' title frame (first 2 seconds)",
+ alt="Animated teacher introducing the AI From Scratch series: 3-minute AI lessons for beginners."),
+"ep01": dict(
+ caption=f"""AI, ML, Deep Learning, GenAI. Everyone uses these words. What's the actual difference?
+
+Episode 1 of AI From Scratch, in under 3 minutes:
+
+- AI: the big idea, machines doing things that need human intelligence
+- Machine Learning: learns patterns from data instead of hand-written rules
+- Deep Learning: neural networks with many layers
+- Generative AI: creates new text, images, music, code, even voices
+
+Real examples inside: Gmail spam filter, Netflix recommendations, face unlock, ChatGPT.
+
+Quick quiz at the end: is face unlock Generative AI? Comment your answer.
+
+Save this for later. Next episode: What is an LLM?
+Follow @ai_maastaaru so you don't miss it.""",
+ tags="#AIMaastaaru #LearnAI #AIForBeginners #MachineLearning #GenerativeAI",
+ pinned="Quiz answer: Face unlock is Deep Learning, not Generative AI. It recognises your face, it doesn't create one. How many did you get right?",
+ cover="'AI vs ML vs Deep Learning vs GenAI' title card",
+ alt="Animated lesson explaining the difference between AI, machine learning, deep learning and generative AI with real-world examples."),
+"ep02": dict(
+ caption=f"""How does ChatGPT actually "think"?
+
+It plays one game, again and again: guess the next word.
+
+Episode 2 of AI From Scratch:
+- What an LLM (Large Language Model) really is
+- The next-word prediction trick, shown live
+- How LLMs are made: pre-training, fine-tuning, human feedback
+- Jargon buster: parameters, training, inference, prompt
+- The big myth: "LLMs are always right"
+
+{QUIZ}
+
+Next: Tokens and context window, or why AI forgets things in long chats.
+{NEXT}""",
+ tags="#AIMaastaaru #LearnAI #LLM #ChatGPT #AIForBeginners",
+ pinned="Quiz answer: An LLM writes by predicting the next word, again and again. It is not searching Google each time. Did you get it?",
+ cover="'What is an LLM?' title card",
+ alt="Animated lesson explaining what a large language model is and how it predicts the next word."),
+"ep03": dict(
+ caption=f"""Ever had a long chat with ChatGPT and it forgot what you said at the start?
+
+That's not a bug. It's tokens and the context window.
+
+Episode 3 of AI From Scratch:
+- Tokens: how AI actually reads text
+- 1 token = about 3/4 of a word
+- Context window: the AI's working memory
+- Why old messages "fall out" in long chats
+- Why tokens decide your AI bill
+
+{QUIZ}
+
+Next: Prompt engineering, or how to get great answers from AI.
+{NEXT}""",
+ tags="#AIMaastaaru #LearnAI #ChatGPT #AIForBeginners #PromptEngineering",
+ pinned="Quiz answer: Your name fell out of the context window. Tip: when a long chat starts acting weird, start a fresh chat or ask for a summary.",
+ cover="'Tokens & Context' title card",
+ alt="Animated lesson explaining tokens and the context window in AI chatbots."),
+"ep04": dict(
+ caption=f"""Same AI. Same question. So why do some people get amazing answers and others get junk?
+
+It's all in the prompt.
+
+Episode 4 of AI From Scratch: Prompt Engineering
+- The recipe: Role + Context + Task + Format
+- Watch a lazy prompt turn into a great one, live
+- 4 power moves: examples, step by step, clear limits, iterate
+- Use it today: resume review, polite WhatsApp replies, meeting notes
+
+{QUIZ}
+
+Save this and try it on your next prompt.
+Next: Temperature and hallucinations, or why AI confidently makes things up.
+{NEXT}""",
+ tags="#AIMaastaaru #PromptEngineering #LearnAI #ChatGPT #AIForBeginners",
+ pinned="Quiz answer: B. It has a role, context, a clear task and a format. Try the recipe on your next ChatGPT prompt and tell me the difference.",
+ cover="'Prompt Engineering' title card",
+ alt="Animated lesson showing how to write better AI prompts using role, context, task and format."),
+"ep05": dict(
+ caption=f"""Why does AI sometimes make things up, and say them with total confidence?
+
+Episode 5 of AI From Scratch: Temperature and Hallucinations
+- Temperature: the creativity dial inside every AI
+- Watch the same prompt at 0, 0.7 and 1
+- Cheat sheet: when to go low, when to go high
+- Why hallucinations happen
+- 3 ways to protect yourself from fake answers
+
+{QUIZ}
+
+Next: Embeddings, or how AI understands meaning.
+{NEXT}""",
+ tags="#AIMaastaaru #LearnAI #ChatGPT #AIForBeginners #GenerativeAI",
+ pinned="Quiz answer: Low temperature. For banking code you want precise answers that repeat every time. Have you ever caught AI making something up? Share below.",
+ cover="'Temperature & Hallucinations' title card",
+ alt="Animated lesson explaining AI temperature settings and why AI hallucinates."),
+"ep06": dict(
+ caption=f"""How does Google Photos find your dog when you just type "dog"?
+
+Episode 6 of AI From Scratch: Embeddings
+- Embeddings: turning meaning into numbers
+- A map of meaning, where "puppy" lands next to dog and cat
+- Vector search, step by step
+- Where you already use it: photo search, similar songs, "you may also like"
+- Why search now matches meaning, not just keywords
+
+{QUIZ}
+
+Next: RAG, or how to make AI answer from your own documents.
+{NEXT}""",
+ tags="#AIMaastaaru #LearnAI #Embeddings #AIForBeginners #MachineLearning",
+ pinned="Quiz answer: Queen. Similar meaning, so they sit close together on the map. What's a search that surprised you by finding exactly what you meant?",
+ cover="'Embeddings' title card",
+ alt="Animated lesson explaining embeddings and vector search with a map of word meanings."),
+"ep07": dict(
+ caption=f"""Ask ChatGPT about your company's leave policy and it has no idea. The fix is called RAG.
+
+Episode 7 of AI From Scratch: RAG (Retrieval-Augmented Generation)
+- Closed book vs open book exam: the easiest way to understand RAG
+- Retrieve, Augment, Generate, explained simply
+- A real HR policy bot, step by step
+- Where companies use RAG today
+- Why it's so popular: fresh, private, cites sources, cheap
+
+This is the most used AI pattern in companies right now. Save it.
+
+{QUIZ}
+
+Next: Prompting vs RAG vs Fine-tuning, and which one to use when.
+{NEXT}""",
+ tags="#AIMaastaaru #RAG #LearnAI #GenerativeAI #AIForBeginners",
+ pinned="Quiz answer: R stands for Retrieval. Find the right information first, then answer. Where would you use a RAG bot at your workplace?",
+ cover="'RAG' title card",
+ alt="Animated lesson explaining retrieval-augmented generation with an HR policy chatbot example."),
+"ep08": dict(
+ caption=f"""You want an AI that knows your business. Better prompt, RAG, or fine-tuning?
+
+Episode 8 of AI From Scratch: Prompting vs RAG vs Fine-tuning
+- What fine-tuning actually is
+- The new-employee analogy that makes it click
+- Cheat sheet: cost, fresh info, custom style, time to start
+- Real examples: startup captions, law firm Q&A, brand-tone support
+- Rule of thumb: prompt first, RAG for knowledge, fine-tune for behaviour
+
+{QUIZ}
+
+Next: Tool use, or how AI checks the weather, books a cab, or sends an email.
+{NEXT}""",
+ tags="#AIMaastaaru #LearnAI #RAG #FineTuning #AIForBeginners",
+ pinned="Quiz answer: RAG. Update the documents and the answers update instantly, no retraining needed. Which one would your business need first?",
+ cover="'Prompt vs RAG vs Fine-tune' title card",
+ alt="Animated lesson comparing prompting, RAG and fine-tuning with a cheat sheet and real examples."),
+"ep09": dict(
+ caption=f"""On its own, an AI can only write text. So how does it check the weather or book a cab?
+
+Episode 9 of AI From Scratch: Tool Use (Function Calling)
+- What function calling really means
+- Live demo: "Should I carry an umbrella in Hyderabad today?"
+- Who does what: the AI asks, your app runs it
+- Where you already see it: calendars, flight prices, order tracking
+- The big myth: "AI is logged into my apps"
+
+{QUIZ}
+
+Next: AI Agents, when AI plans and uses tools on its own.
+{NEXT}""",
+ tags="#AIMaastaaru #LearnAI #FunctionCalling #AIAgents #AIForBeginners",
+ pinned="Quiz answer: Your app runs the function. The AI only asks. That's what keeps you in control. What task would you give an AI with tools?",
+ cover="'Tool Use' title card",
+ alt="Animated lesson explaining AI tool use and function calling with a live weather example."),
+"ep10": dict(
+ caption=f"""A chatbot answers. An agent gets things done.
+
+Episode 10 of AI From Scratch: AI Agents
+- What an AI agent is: an LLM + tools + a loop
+- Plan, act, observe: watch an agent plan a Goa trip under 15,000 rupees
+- Chatbot vs agent, side by side
+- Agents at work: coding, research, customer service
+- Why good agents still check with a human
+
+{QUIZ}
+
+Next: MCP, the universal connector for AI tools.
+{NEXT}""",
+ tags="#AIMaastaaru #AIAgents #LearnAI #GenerativeAI #AIForBeginners",
+ pinned="Quiz answer: An agent works in a loop, using tools, toward a goal. What's one task you'd hand over to an AI agent?",
+ cover="'AI Agents' title card",
+ alt="Animated lesson explaining AI agents with a plan-act-observe loop and a trip-planning example."),
+}
+
+
+def main() -> None:
+    out = ROOT / "out"
+    for ep, p in POSTS.items():
+        videos = sorted(out.glob(f"{ep}_*.mp4"))
+        video = videos[0].name if videos else f"{ep}_<not rendered yet>.mp4"
+        assert len(p["tags"].split()) <= 5, ep
+        text = (
+            f"VIDEO: {video}\n\n"
+            f"=== CAPTION ===\n{p['caption'].strip()}\n\n"
+            f"=== HASHTAGS ===\n{p['tags']}\n\n"
+            f"=== PINNED_COMMENT ===\n{p['pinned']}\n\n"
+            f"=== COVER ===\n{p['cover']}\n\n"
+            f"=== ALT_TEXT ===\n{p['alt']}\n"
+        )
+        (out / f"{ep}_captions.txt").write_text(text)
+        print("wrote", f"out/{ep}_captions.txt", "->", video)
+
+
+if __name__ == "__main__":
+    main()

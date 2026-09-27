@@ -25,4 +25,5 @@ BROWSER_ARGS=()
 if [ -n "${REMOTION_BROWSER:-}" ]; then BROWSER_ARGS=(--browser-executable="$REMOTION_BROWSER"); fi
 mkdir -p "$(dirname "$OUT")"
 npx remotion render src/index.ts "Lesson-$EP" "$OUT" --codec=h264 --crf=27 --x264-preset=slow --pixel-format=yuv420p --audio-codec=aac --audio-bitrate=192k "${BROWSER_ARGS[@]}"
+python3 "$ROOT/pipeline/captions_data.py" > /dev/null && echo "captions: out/${EP}_captions.txt"
 echo "done: $OUT"
