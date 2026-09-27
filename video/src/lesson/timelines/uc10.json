@@ -1,0 +1,801 @@
+{
+  "id": "uc10",
+  "episode": 10,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How the Instagram Reels Feed Works",
+  "host": "female",
+  "label": "USE CASE 10",
+  "fps": 30,
+  "totalFrames": 4489,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc10/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 10",
+        "title": [
+          "Reels",
+          "Feed"
+        ],
+        "subtitle": "How ranking works",
+        "buzzwords": [
+          "Ranking",
+          "Watch time",
+          "Shares",
+          "Saves",
+          "Explore",
+          "Creators",
+          "Viral",
+          "Signals"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 370,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_01.wav",
+      "cues": [
+        163,
+        250
+      ],
+      "captions": [
+        {
+          "text": "You open Instagram for two",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "minutes, and somehow,",
+          "from": 56,
+          "to": 105
+        },
+        {
+          "text": "an hour disappears.",
+          "from": 106,
+          "to": 161
+        },
+        {
+          "text": "Every reel feels like it",
+          "from": 163,
+          "to": 199
+        },
+        {
+          "text": "was picked just for you.",
+          "from": 199,
+          "to": 248
+        },
+        {
+          "text": "Let's break down how the",
+          "from": 250,
+          "to": 285
+        },
+        {
+          "text": "Reels feed decides what you see.",
+          "from": 287,
+          "to": 357
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "Every time you scroll",
+        "nodes": [
+          [
+            "Layers",
+            "Gather candidates",
+            "Thousands of possible reels"
+          ],
+          [
+            "Filter",
+            "Filter",
+            "Seen or unsafe ones removed"
+          ],
+          [
+            "Brain",
+            "Predict",
+            "Watch, like, share or skip?"
+          ],
+          [
+            "ListOrdered",
+            "Rank",
+            "Highest predicted interest first"
+          ],
+          [
+            "Smartphone",
+            "Your feed",
+            "Top reels plus some variety"
+          ]
+        ]
+      },
+      "from": 370,
+      "durationInFrames": 738,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_02.wav",
+      "cues": [
+        88,
+        249,
+        377,
+        550,
+        616
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens every time",
+          "from": 10,
+          "to": 54
+        },
+        {
+          "text": "you scroll.",
+          "from": 56,
+          "to": 87
+        },
+        {
+          "text": "The system gathers thousands of",
+          "from": 88,
+          "to": 134
+        },
+        {
+          "text": "possible reels,",
+          "from": 136,
+          "to": 169
+        },
+        {
+          "text": "from accounts you follow,",
+          "from": 170,
+          "to": 204
+        },
+        {
+          "text": "and ones you don't.",
+          "from": 207,
+          "to": 247
+        },
+        {
+          "text": "It filters out anything you've",
+          "from": 249,
+          "to": 289
+        },
+        {
+          "text": "already seen,",
+          "from": 291,
+          "to": 317
+        },
+        {
+          "text": "or that breaks the rules.",
+          "from": 320,
+          "to": 374
+        },
+        {
+          "text": "A model predicts,",
+          "from": 377,
+          "to": 406
+        },
+        {
+          "text": "for each reel,",
+          "from": 407,
+          "to": 433
+        },
+        {
+          "text": "how likely you are to",
+          "from": 436,
+          "to": 464
+        },
+        {
+          "text": "watch, like,",
+          "from": 466,
+          "to": 496
+        },
+        {
+          "text": "share or skip it.",
+          "from": 500,
+          "to": 548
+        },
+        {
+          "text": "It ranks them by those",
+          "from": 550,
+          "to": 584
+        },
+        {
+          "text": "predictions, and shows you the",
+          "from": 586,
+          "to": 635
+        },
+        {
+          "text": "top ones,",
+          "from": 637,
+          "to": 664
+        },
+        {
+          "text": "with some variety mixed in.",
+          "from": 665,
+          "to": 727
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The signals",
+        "kicker": "WHAT IT WATCHES",
+        "terms": [
+          [
+            "Clock",
+            "Watch time",
+            "Watched fully or rewatched"
+          ],
+          [
+            "Send",
+            "Shares",
+            "Sent to a friend"
+          ],
+          [
+            "Bookmark",
+            "Saves",
+            "Worth coming back to"
+          ],
+          [
+            "SkipForward",
+            "Skips",
+            "Scrolled past fast"
+          ]
+        ]
+      },
+      "from": 1108,
+      "durationInFrames": 554,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_03.wav",
+      "cues": [
+        58,
+        194,
+        319,
+        414
+      ],
+      "captions": [
+        {
+          "text": "So which signals matter?",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "Watch time,",
+          "from": 58,
+          "to": 88
+        },
+        {
+          "text": "especially watching till the end,",
+          "from": 89,
+          "to": 145
+        },
+        {
+          "text": "or rewatching.",
+          "from": 147,
+          "to": 190
+        },
+        {
+          "text": "Shares, because sending a reel",
+          "from": 194,
+          "to": 241
+        },
+        {
+          "text": "to a friend is a",
+          "from": 242,
+          "to": 270
+        },
+        {
+          "text": "strong signal.",
+          "from": 272,
+          "to": 316
+        },
+        {
+          "text": "Saves, which say this is",
+          "from": 319,
+          "to": 364
+        },
+        {
+          "text": "worth coming back to.",
+          "from": 365,
+          "to": 412
+        },
+        {
+          "text": "And skips,",
+          "from": 414,
+          "to": 437
+        },
+        {
+          "text": "because scrolling past quickly tells",
+          "from": 439,
+          "to": 496
+        },
+        {
+          "text": "it you're not interested.",
+          "from": 497,
+          "to": 542
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Engagement prediction",
+        "short": "Score",
+        "definition": "Estimating how likely you are to watch, like, share or skip each reel.",
+        "chips": [
+          [
+            "Database",
+            "Learns from past views"
+          ],
+          [
+            "Calculator",
+            "Many signals, one score"
+          ],
+          [
+            "RefreshCw",
+            "Updates as you scroll"
+          ]
+        ]
+      },
+      "from": 1662,
+      "durationInFrames": 434,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_04.wav",
+      "cues": [
+        74,
+        202,
+        277,
+        353
+      ],
+      "captions": [
+        {
+          "text": "The heart of it is prediction.",
+          "from": 10,
+          "to": 72
+        },
+        {
+          "text": "For every reel,",
+          "from": 74,
+          "to": 104
+        },
+        {
+          "text": "the model estimates the chance",
+          "from": 105,
+          "to": 152
+        },
+        {
+          "text": "you'll engage with it.",
+          "from": 153,
+          "to": 199
+        },
+        {
+          "text": "It learns from billions of",
+          "from": 202,
+          "to": 241
+        },
+        {
+          "text": "past views,",
+          "from": 243,
+          "to": 275
+        },
+        {
+          "text": "combines many signals into one",
+          "from": 277,
+          "to": 329
+        },
+        {
+          "text": "score, and keeps updating as",
+          "from": 331,
+          "to": 389
+        },
+        {
+          "text": "you scroll.",
+          "from": 391,
+          "to": 423
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Following vs recommended",
+        "kicker": "WHY STRANGERS APPEAR",
+        "left": {
+          "icon": "Users",
+          "title": "Following feed",
+          "stat": "People you chose",
+          "label": "limited and predictable"
+        },
+        "right": {
+          "icon": "Sparkles",
+          "title": "Recommended feed",
+          "stat": "Anyone",
+          "label": "how small creators go viral"
+        }
+      },
+      "from": 2096,
+      "durationInFrames": 365,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_05.wav",
+      "cues": [
+        81,
+        180
+      ],
+      "captions": [
+        {
+          "text": "So why do you see",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "accounts you don't follow?",
+          "from": 32,
+          "to": 79
+        },
+        {
+          "text": "A following feed only shows",
+          "from": 81,
+          "to": 132
+        },
+        {
+          "text": "people you chose.",
+          "from": 133,
+          "to": 178
+        },
+        {
+          "text": "A recommended feed can show",
+          "from": 180,
+          "to": 223
+        },
+        {
+          "text": "anyone, and that's how small",
+          "from": 226,
+          "to": 279
+        },
+        {
+          "text": "creators can suddenly go viral.",
+          "from": 280,
+          "to": 352
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Tips for creators",
+        "kicker": "FOR CREATORS",
+        "items": [
+          [
+            "Zap",
+            "Strong hook",
+            "The first two seconds matter"
+          ],
+          [
+            "Share2",
+            "Shareable",
+            "Worth sending to a friend"
+          ],
+          [
+            "CalendarCheck",
+            "Consistency",
+            "Helps it learn your audience"
+          ]
+        ]
+      },
+      "from": 2461,
+      "durationInFrames": 456,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_06.wav",
+      "cues": [
+        80,
+        186,
+        310
+      ],
+      "captions": [
+        {
+          "text": "So what does this mean",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "for creators?",
+          "from": 40,
+          "to": 77
+        },
+        {
+          "text": "Hook viewers in the first",
+          "from": 80,
+          "to": 125
+        },
+        {
+          "text": "two seconds,",
+          "from": 125,
+          "to": 148
+        },
+        {
+          "text": "so they don't skip.",
+          "from": 148,
+          "to": 183
+        },
+        {
+          "text": "Make reels worth watching to",
+          "from": 186,
+          "to": 227
+        },
+        {
+          "text": "the end,",
+          "from": 228,
+          "to": 250
+        },
+        {
+          "text": "or sharing with a friend.",
+          "from": 254,
+          "to": 308
+        },
+        {
+          "text": "And post consistently,",
+          "from": 310,
+          "to": 357
+        },
+        {
+          "text": "so the system learns who",
+          "from": 358,
+          "to": 394
+        },
+        {
+          "text": "enjoys your content.",
+          "from": 396,
+          "to": 444
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "One secret trick, like a special hashtag, guarantees views.",
+        "fact": "Ranking combines many signals and rewards reels people genuinely watch, share and save.",
+        "tip": "Make it worth watching"
+      },
+      "from": 2917,
+      "durationInFrames": 478,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_07.wav",
+      "cues": [
+        58,
+        220
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think there's one secret",
+          "from": 58,
+          "to": 108
+        },
+        {
+          "text": "trick, like a special hashtag,",
+          "from": 110,
+          "to": 164
+        },
+        {
+          "text": "that guarantees views.",
+          "from": 168,
+          "to": 217
+        },
+        {
+          "text": "There isn't.",
+          "from": 220,
+          "to": 253
+        },
+        {
+          "text": "The ranking combines many signals,",
+          "from": 255,
+          "to": 319
+        },
+        {
+          "text": "and mostly rewards reels that",
+          "from": 324,
+          "to": 369
+        },
+        {
+          "text": "people genuinely watch,",
+          "from": 371,
+          "to": 417
+        },
+        {
+          "text": "share and save.",
+          "from": 421,
+          "to": 465
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "A strong signal you liked a reel is…",
+        "options": [
+          "Scrolling past quickly",
+          "Sharing it with a friend",
+          "Muting the sound"
+        ],
+        "answer": 1
+      },
+      "from": 3395,
+      "durationInFrames": 402,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_08.wav",
+      "cues": [
+        141,
+        345
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Which of these is a",
+          "from": 43,
+          "to": 66
+        },
+        {
+          "text": "strong signal that you liked",
+          "from": 68,
+          "to": 110
+        },
+        {
+          "text": "a reel?",
+          "from": 111,
+          "to": 139
+        },
+        {
+          "text": "Pause and think,",
+          "from": 141,
+          "to": 178
+        },
+        {
+          "text": "and if you get it",
+          "from": 180,
+          "to": 197
+        },
+        {
+          "text": "right, comment below!",
+          "from": 198,
+          "to": 254
+        },
+        {
+          "text": "Sharing it with a friend!",
+          "from": 345,
+          "to": 388
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Gather",
+            "thousands of candidates"
+          ],
+          [
+            "Predict",
+            "chance you'll engage"
+          ],
+          [
+            "Signals",
+            "watch time, shares, saves"
+          ],
+          [
+            "Creators",
+            "hook, shareable, consistent"
+          ]
+        ],
+        "next": "EP 21 · Neural networks, Part 1"
+      },
+      "from": 3797,
+      "durationInFrames": 692,
+      "voiceFrom": 10,
+      "audio": "lessons/uc10/voice_09.wav",
+      "cues": [
+        45,
+        131,
+        243,
+        339,
+        455
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "The feed gathers thousands of",
+          "from": 45,
+          "to": 89
+        },
+        {
+          "text": "candidate reels.",
+          "from": 91,
+          "to": 128
+        },
+        {
+          "text": "A model predicts how likely",
+          "from": 131,
+          "to": 178
+        },
+        {
+          "text": "you are to engage with",
+          "from": 179,
+          "to": 212
+        },
+        {
+          "text": "each one.",
+          "from": 212,
+          "to": 241
+        },
+        {
+          "text": "Watch time,",
+          "from": 243,
+          "to": 269
+        },
+        {
+          "text": "shares and saves matter most.",
+          "from": 273,
+          "to": 336
+        },
+        {
+          "text": "And for creators,",
+          "from": 339,
+          "to": 371
+        },
+        {
+          "text": "a strong hook and consistency help.",
+          "from": 373,
+          "to": 451
+        },
+        {
+          "text": "Next, we start a new",
+          "from": 455,
+          "to": 489
+        },
+        {
+          "text": "season, how a neural network",
+          "from": 491,
+          "to": 542
+        },
+        {
+          "text": "actually learns,",
+          "from": 545,
+          "to": 575
+        },
+        {
+          "text": "part one.",
+          "from": 577,
+          "to": 609
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 613,
+          "to": 680
+        }
+      ],
+      "image": null
+    }
+  ]
+}

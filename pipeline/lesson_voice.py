@@ -148,7 +148,7 @@ def synth_flow(kokoro, sents: list[str], voice: str, speed: float, lang: str, le
 
     # Trim leading silence and shift timings to match.
     nz = np.where(np.abs(audio) > 0.008)[0]
-    cut = max(int(nz[0] - 0.03 * sr), 0) if nz.size else 0
+    cut = max(int(nz[0] - 0.15 * sr), 0) if nz.size else 0  # generous pre-roll: soft onsets (sh, f, h) sit below the threshold
     audio = audio[cut: (nz[-1] + int(0.08 * sr)) if nz.size else None]
     shift = cut / sr
     starts = [t.start - shift for t in spoken]
