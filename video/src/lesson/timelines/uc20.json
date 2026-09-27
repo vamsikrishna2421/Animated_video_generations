@@ -1,0 +1,781 @@
+{
+  "id": "uc20",
+  "episode": 20,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Crop Disease Detection Apps Work",
+  "host": "female",
+  "label": "USE CASE 20",
+  "fps": 30,
+  "totalFrames": 4682,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc20/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 20",
+        "title": [
+          "Crop",
+          "Doctor AI"
+        ],
+        "subtitle": "A plant doctor in your pocket",
+        "buzzwords": [
+          "Agriculture",
+          "Leaf photos",
+          "Classification",
+          "Offline",
+          "Local language",
+          "Farmers",
+          "Edge AI",
+          "Harvest"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 441,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_01.wav",
+      "cues": [
+        130,
+        338
+      ],
+      "captions": [
+        {
+          "text": "A farmer notices strange spots",
+          "from": 10,
+          "to": 74
+        },
+        {
+          "text": "on her tomato leaves.",
+          "from": 75,
+          "to": 128
+        },
+        {
+          "text": "She takes a photo with",
+          "from": 130,
+          "to": 161
+        },
+        {
+          "text": "her phone,",
+          "from": 162,
+          "to": 188
+        },
+        {
+          "text": "and within seconds,",
+          "from": 190,
+          "to": 223
+        },
+        {
+          "text": "an app names the disease,",
+          "from": 225,
+          "to": 278
+        },
+        {
+          "text": "and suggests what to do.",
+          "from": 279,
+          "to": 335
+        },
+        {
+          "text": "Let's break down how crop",
+          "from": 338,
+          "to": 380
+        },
+        {
+          "text": "disease apps work.",
+          "from": 382,
+          "to": 428
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From photo to advice",
+        "nodes": [
+          [
+            "Camera",
+            "Photo",
+            "A spotted tomato leaf"
+          ],
+          [
+            "Crop",
+            "Find the leaf",
+            "Check it's clear"
+          ],
+          [
+            "ScanSearch",
+            "Classify",
+            "Early blight? Healthy?"
+          ],
+          [
+            "Gauge",
+            "Confidence",
+            "For example, 92% sure"
+          ],
+          [
+            "Languages",
+            "Advice",
+            "In the farmer's language"
+          ]
+        ]
+      },
+      "from": 441,
+      "durationInFrames": 592,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_02.wav",
+      "cues": [
+        55,
+        136,
+        249,
+        391,
+        476
+      ],
+      "captions": [
+        {
+          "text": "Here's how it works.",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "The farmer photographs the affected leaf.",
+          "from": 55,
+          "to": 133
+        },
+        {
+          "text": "The app checks the photo",
+          "from": 136,
+          "to": 175
+        },
+        {
+          "text": "is clear,",
+          "from": 176,
+          "to": 196
+        },
+        {
+          "text": "and finds the leaf.",
+          "from": 200,
+          "to": 246
+        },
+        {
+          "text": "A vision model classifies the",
+          "from": 249,
+          "to": 298
+        },
+        {
+          "text": "problem, like early blight,",
+          "from": 300,
+          "to": 352
+        },
+        {
+          "text": "or healthy.",
+          "from": 354,
+          "to": 389
+        },
+        {
+          "text": "It gives a confidence score,",
+          "from": 391,
+          "to": 436
+        },
+        {
+          "text": "like 92 percent sure,",
+          "from": 437,
+          "to": 474
+        },
+        {
+          "text": "and shows advice in the",
+          "from": 476,
+          "to": 527
+        },
+        {
+          "text": "farmer's own language.",
+          "from": 530,
+          "to": 579
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Image classification",
+        "short": "Classify",
+        "definition": "A vision model that sorts a photo into one of several labels, like a disease name.",
+        "chips": [
+          [
+            "Leaf",
+            "Healthy leaves"
+          ],
+          [
+            "Bug",
+            "Diseases and pests"
+          ],
+          [
+            "Sprout",
+            "Nutrient problems"
+          ]
+        ]
+      },
+      "from": 1033,
+      "durationInFrames": 466,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_03.wav",
+      "cues": [
+        148,
+        266,
+        304,
+        379
+      ],
+      "captions": [
+        {
+          "text": "At its heart,",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "it's image classification,",
+          "from": 43,
+          "to": 106
+        },
+        {
+          "text": "from episode 29.",
+          "from": 106,
+          "to": 146
+        },
+        {
+          "text": "The model was trained on",
+          "from": 148,
+          "to": 185
+        },
+        {
+          "text": "thousands of labelled leaf photos.",
+          "from": 188,
+          "to": 263
+        },
+        {
+          "text": "Healthy leaves,",
+          "from": 266,
+          "to": 301
+        },
+        {
+          "text": "leaves with different diseases and",
+          "from": 304,
+          "to": 353
+        },
+        {
+          "text": "pests, and leaves showing nutrient problems.",
+          "from": 354,
+          "to": 454
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Built for farmers",
+        "kicker": "WHAT MAKES IT WORK",
+        "steps": [
+          [
+            "WifiOff",
+            "Works offline",
+            "A small on-device model"
+          ],
+          [
+            "Mic",
+            "Local language",
+            "Voice advice in Telugu, Hindi…"
+          ],
+          [
+            "UserRound",
+            "Expert backup",
+            "When it's not sure"
+          ]
+        ]
+      },
+      "from": 1499,
+      "durationInFrames": 594,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_04.wav",
+      "cues": [
+        139,
+        325,
+        466
+      ],
+      "captions": [
+        {
+          "text": "To really work for farmers,",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "the app needs a few",
+          "from": 61,
+          "to": 90
+        },
+        {
+          "text": "special features.",
+          "from": 92,
+          "to": 136
+        },
+        {
+          "text": "It works offline,",
+          "from": 139,
+          "to": 176
+        },
+        {
+          "text": "with a small model on",
+          "from": 176,
+          "to": 221
+        },
+        {
+          "text": "the phone,",
+          "from": 221,
+          "to": 243
+        },
+        {
+          "text": "because fields often have weak signal.",
+          "from": 243,
+          "to": 322
+        },
+        {
+          "text": "It speaks local languages,",
+          "from": 325,
+          "to": 370
+        },
+        {
+          "text": "with voice,",
+          "from": 375,
+          "to": 395
+        },
+        {
+          "text": "for farmers who prefer listening.",
+          "from": 397,
+          "to": 464
+        },
+        {
+          "text": "And it connects to human",
+          "from": 466,
+          "to": 499
+        },
+        {
+          "text": "experts, when the model isn't sure.",
+          "from": 500,
+          "to": 582
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Crop AI words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Database",
+            "Dataset",
+            "Labelled leaf photos"
+          ],
+          [
+            "Gauge",
+            "Confidence",
+            "How sure it is"
+          ],
+          [
+            "Smartphone",
+            "Edge AI",
+            "Runs on the phone"
+          ],
+          [
+            "RefreshCw",
+            "Transfer learning",
+            "General model → leaf expert"
+          ]
+        ]
+      },
+      "from": 2093,
+      "durationInFrames": 533,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_05.wav",
+      "cues": [
+        59,
+        157,
+        232,
+        341
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "The dataset,",
+          "from": 59,
+          "to": 83
+        },
+        {
+          "text": "the labelled photos it learned from.",
+          "from": 85,
+          "to": 154
+        },
+        {
+          "text": "Confidence, how sure the model is.",
+          "from": 157,
+          "to": 229
+        },
+        {
+          "text": "Edge AI,",
+          "from": 232,
+          "to": 252
+        },
+        {
+          "text": "running the model on the",
+          "from": 252,
+          "to": 308
+        },
+        {
+          "text": "phone itself.",
+          "from": 308,
+          "to": 339
+        },
+        {
+          "text": "And transfer learning,",
+          "from": 341,
+          "to": 379
+        },
+        {
+          "text": "starting from a model trained",
+          "from": 382,
+          "to": 424
+        },
+        {
+          "text": "on general photos,",
+          "from": 426,
+          "to": 463
+        },
+        {
+          "text": "then teaching it about leaves.",
+          "from": 465,
+          "to": 519
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where it helps",
+        "items": [
+          [
+            "Sprout",
+            "Farmers",
+            "Catch diseases early"
+          ],
+          [
+            "ClipboardList",
+            "Field officers",
+            "Check many farms fast"
+          ],
+          [
+            "Map",
+            "Researchers",
+            "Track outbreaks"
+          ]
+        ]
+      },
+      "from": 2626,
+      "durationInFrames": 379,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_06.wav",
+      "cues": [
+        50,
+        179,
+        278
+      ],
+      "captions": [
+        {
+          "text": "So where does it help?",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "Farmers catch crop diseases early,",
+          "from": 50,
+          "to": 120
+        },
+        {
+          "text": "and save their harvest.",
+          "from": 122,
+          "to": 176
+        },
+        {
+          "text": "Agriculture officers check many farms quickly.",
+          "from": 179,
+          "to": 275
+        },
+        {
+          "text": "And researchers track where diseases",
+          "from": 278,
+          "to": 332
+        },
+        {
+          "text": "are spreading.",
+          "from": 334,
+          "to": 366
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The app is always right, so spray chemicals straight away.",
+        "fact": "It's a helpful first opinion, but look-alike diseases can confuse it. Confirm serious cases with an expert.",
+        "tip": "AI first, expert confirms"
+      },
+      "from": 3005,
+      "durationInFrames": 513,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_07.wav",
+      "cues": [
+        59,
+        223
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think the app's answer",
+          "from": 59,
+          "to": 100
+        },
+        {
+          "text": "is always right,",
+          "from": 102,
+          "to": 138
+        },
+        {
+          "text": "so they can spray chemicals",
+          "from": 139,
+          "to": 182
+        },
+        {
+          "text": "straight away.",
+          "from": 184,
+          "to": 221
+        },
+        {
+          "text": "It's a helpful first opinion,",
+          "from": 223,
+          "to": 274
+        },
+        {
+          "text": "but similar looking diseases can",
+          "from": 276,
+          "to": 330
+        },
+        {
+          "text": "confuse it.",
+          "from": 331,
+          "to": 366
+        },
+        {
+          "text": "For serious problems,",
+          "from": 368,
+          "to": 413
+        },
+        {
+          "text": "confirm with a local agriculture expert.",
+          "from": 415,
+          "to": 500
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "They run on the phone because…",
+        "options": [
+          "Fields often have weak internet",
+          "Phones are bigger",
+          "It looks cooler"
+        ],
+        "answer": 0
+      },
+      "from": 3518,
+      "durationInFrames": 499,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_08.wav",
+      "cues": [
+        151,
+        363
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "Why do crop apps often",
+          "from": 43,
+          "to": 85
+        },
+        {
+          "text": "run the model on the",
+          "from": 85,
+          "to": 123
+        },
+        {
+          "text": "phone itself?",
+          "from": 123,
+          "to": 149
+        },
+        {
+          "text": "Pause and think,",
+          "from": 151,
+          "to": 188
+        },
+        {
+          "text": "and if you get it",
+          "from": 190,
+          "to": 207
+        },
+        {
+          "text": "right, comment below!",
+          "from": 208,
+          "to": 265
+        },
+        {
+          "text": "Because fields often have weak",
+          "from": 363,
+          "to": 412
+        },
+        {
+          "text": "internet, so it has to",
+          "from": 414,
+          "to": 448
+        },
+        {
+          "text": "work offline!",
+          "from": 450,
+          "to": 487
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Photo",
+            "of the affected leaf"
+          ],
+          [
+            "Classify",
+            "trained on labelled leaves"
+          ],
+          [
+            "Offline",
+            "small model on the phone"
+          ],
+          [
+            "Confirm",
+            "with an expert if serious"
+          ]
+        ],
+        "next": "EP 30 · RLHF"
+      },
+      "from": 4017,
+      "durationInFrames": 665,
+      "voiceFrom": 10,
+      "audio": "lessons/uc20/voice_09.wav",
+      "cues": [
+        45,
+        124,
+        239,
+        344,
+        447
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "The farmer photographs the affected leaf.",
+          "from": 45,
+          "to": 122
+        },
+        {
+          "text": "A model trained on labelled",
+          "from": 124,
+          "to": 168
+        },
+        {
+          "text": "leaves classifies the problem.",
+          "from": 170,
+          "to": 236
+        },
+        {
+          "text": "It runs offline,",
+          "from": 239,
+          "to": 275
+        },
+        {
+          "text": "as a small model on",
+          "from": 275,
+          "to": 318
+        },
+        {
+          "text": "the phone.",
+          "from": 318,
+          "to": 342
+        },
+        {
+          "text": "And serious cases should be",
+          "from": 344,
+          "to": 384
+        },
+        {
+          "text": "confirmed with an expert.",
+          "from": 386,
+          "to": 444
+        },
+        {
+          "text": "Next, we'll learn how AI",
+          "from": 447,
+          "to": 502
+        },
+        {
+          "text": "learns good manners,",
+          "from": 503,
+          "to": 539
+        },
+        {
+          "text": "with human feedback.",
+          "from": 541,
+          "to": 586
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 589,
+          "to": 653
+        }
+      ],
+      "image": null
+    }
+  ]
+}
