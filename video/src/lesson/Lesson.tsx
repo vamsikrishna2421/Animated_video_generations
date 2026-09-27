@@ -28,6 +28,7 @@ import { Pipeline } from "./scenes/Pipeline";
 import { Table } from "./scenes/Table";
 import { ToolCall } from "./scenes/ToolCall";
 import { Code } from "./scenes/Code";
+import { Score } from "./scenes/Score";
 import { AgentLoop } from "./scenes/AgentLoop";
 import { L, SceneData, SceneProps, clamp } from "./theme";
 
@@ -58,6 +59,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   table: Table,
   toolcall: ToolCall,
   code: Code,
+  score: Score,
   agentloop: AgentLoop,
 };
 

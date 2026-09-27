@@ -13,14 +13,18 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
   const counting = f >= countFrom && f < reveal;
   const ring = interpolate(f, [countFrom, reveal], [1, 0], clamp);
   const shown = f >= reveal;
+  const four = data.options.length > 3;
+  const gap = four ? 128 : 160;
+  const boxH = four ? 110 : 130;
+  const ringTop = four ? 1118 : 1080;
   const ticks = Array.from({ length: Math.max(0, Math.floor((reveal - countFrom) / fps)) }, (_, i) => countFrom + i * fps);
   return (
     <>
       <div style={{ position: "absolute", top: 290, left: 0, right: 0, textAlign: "center" }}>
         <div style={{ display: "inline-block", transform: `scale(${badge}) rotate(${(1 - badge) * -20}deg)`, fontFamily: L.font, fontWeight: 800, fontSize: 64, letterSpacing: 10, color: "#0A0F24", background: L.amber, padding: "14px 44px", borderRadius: 24 }}>
-          QUICK QUIZ
+          {data.badge ?? "QUICK QUIZ"}
         </div>
-        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: 60, color: L.text, marginTop: 44, padding: "0 70px", lineHeight: 1.15 }}>{data.question}</div>
+        <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: data.question.length > 60 ? 50 : 60, color: L.text, marginTop: 44, padding: "0 70px", lineHeight: 1.15 }}>{data.question}</div>
       </div>
       {data.options.map((o: string, i: number) => {
         const s = useSpring(10 + i * 6, 12);
@@ -31,10 +35,10 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
             key={o}
             style={{
               position: "absolute",
-              top: 620 + i * 160,
+              top: (four ? 600 : 620) + i * gap,
               left: 90,
               right: 90,
-              height: 130,
+              height: boxH,
               display: "flex",
               alignItems: "center",
               gap: 28,
@@ -47,14 +51,14 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
             }}
           >
             <div style={{ width: 70, height: 70, borderRadius: 35, background: shown && right ? L.green : "rgba(255,255,255,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: L.font, fontWeight: 800, fontSize: 36, color: "white" }}>
-              {shown && right ? <Icon name="Check" size={44} stroke={3.5} /> : "ABC"[i]}
+              {shown && right ? <Icon name="Check" size={44} stroke={3.5} /> : "ABCD"[i]}
             </div>
-            <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: o.length > 26 ? 36 : 46, color: L.text, lineHeight: 1.15 }}>{o}</div>
+            <div style={{ fontFamily: L.font, fontWeight: 800, fontSize: o.length > 26 ? 34 : four ? 42 : 46, color: L.text, lineHeight: 1.15 }}>{o}</div>
           </Panel>
         );
       })}
       {counting && (
-        <div style={{ position: "absolute", top: 1080, right: 90, display: "flex", justifyContent: "center" }}>
+        <div style={{ position: "absolute", top: ringTop, right: 90, display: "flex", justifyContent: "center" }}>
           <svg width="130" height="130">
             <circle cx="65" cy="65" r="55" stroke="rgba(255,255,255,0.15)" strokeWidth="10" fill="none" />
             <circle cx="65" cy="65" r="55" stroke={L.amber} strokeWidth="10" fill="none" strokeDasharray={2 * Math.PI * 55} strokeDashoffset={2 * Math.PI * 55 * (1 - ring)} transform="rotate(-90 65 65)" strokeLinecap="round" />
@@ -63,7 +67,7 @@ export const Quiz: React.FC<SceneProps> = ({ data, cue }) => {
         </div>
       )}
       {counting && (
-        <div style={{ position: "absolute", top: 1110, left: 90, right: 260, textAlign: "center", fontFamily: L.font, fontWeight: 800, fontSize: 36, color: L.amber, lineHeight: 1.2, opacity: interpolate(f, [countFrom, countFrom + 10], [0, 1], clamp) }}>
+        <div style={{ position: "absolute", top: ringTop + 30, left: 90, right: 260, textAlign: "center", fontFamily: L.font, fontWeight: 800, fontSize: 36, color: L.amber, lineHeight: 1.2, opacity: interpolate(f, [countFrom, countFrom + 10], [0, 1], clamp) }}>
           {data.commentPrompt ?? "Got it right? Comment below!"}
         </div>
       )}
