@@ -11,6 +11,8 @@ import ep08 from "./ep08.json";
 import ep09 from "./ep09.json";
 import ep10 from "./ep10.json";
 import ep11 from "./ep11.json";
+import ep12 from "./ep12.json";
 import uc01 from "./uc01.json";
+import uc02 from "./uc02.json";
 
-export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, uc01];
+export const timelines = [ep00, ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10, ep11, ep12, uc01, uc02];

@@ -1,0 +1,831 @@
+{
+  "id": "ep12",
+  "episode": 12,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Multimodal AI",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4879,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep12/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 12",
+        "title": [
+          "Multimodal",
+          "AI"
+        ],
+        "subtitle": "How AI sees, hears and speaks",
+        "buzzwords": [
+          "Vision",
+          "Voice",
+          "Images",
+          "Audio",
+          "Video",
+          "Patches",
+          "Tokens",
+          "Live chat"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 373,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_01.wav",
+      "cues": [
+        153,
+        241
+      ],
+      "captions": [
+        {
+          "text": "You can show AI a",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "photo of your fridge,",
+          "from": 53,
+          "to": 91
+        },
+        {
+          "text": "and it suggests a recipe.",
+          "from": 93,
+          "to": 151
+        },
+        {
+          "text": "You can talk to it,",
+          "from": 153,
+          "to": 187
+        },
+        {
+          "text": "and it talks right back.",
+          "from": 189,
+          "to": 239
+        },
+        {
+          "text": "That's multimodal AI,",
+          "from": 241,
+          "to": 294
+        },
+        {
+          "text": "so let's understand how it works.",
+          "from": 295,
+          "to": 358
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Multimodal AI",
+        "short": "Multi",
+        "definition": "AI that understands and creates more than one kind of data: text, images, audio and video.",
+        "chips": [
+          [
+            "Eye",
+            "See images"
+          ],
+          [
+            "Ear",
+            "Hear audio"
+          ],
+          [
+            "Volume2",
+            "Speak and draw"
+          ]
+        ]
+      },
+      "from": 373,
+      "durationInFrames": 534,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_02.wav",
+      "cues": [
+        179,
+        402,
+        431,
+        456
+      ],
+      "captions": [
+        {
+          "text": "Modal just means a type",
+          "from": 10,
+          "to": 47
+        },
+        {
+          "text": "of data,",
+          "from": 48,
+          "to": 70
+        },
+        {
+          "text": "like text,",
+          "from": 72,
+          "to": 101
+        },
+        {
+          "text": "images, audio or video.",
+          "from": 103,
+          "to": 176
+        },
+        {
+          "text": "So a multimodal AI is",
+          "from": 179,
+          "to": 230
+        },
+        {
+          "text": "one that can understand more",
+          "from": 232,
+          "to": 272
+        },
+        {
+          "text": "than one type,",
+          "from": 274,
+          "to": 305
+        },
+        {
+          "text": "and often create more than",
+          "from": 307,
+          "to": 346
+        },
+        {
+          "text": "one type too.",
+          "from": 348,
+          "to": 391
+        },
+        {
+          "text": "It can see images,",
+          "from": 393,
+          "to": 429
+        },
+        {
+          "text": "hear audio,",
+          "from": 431,
+          "to": 454
+        },
+        {
+          "text": "and speak,",
+          "from": 456,
+          "to": 479
+        },
+        {
+          "text": "or even draw.",
+          "from": 481,
+          "to": 523
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "How AI reads a photo",
+        "kicker": "UNDER THE HOOD",
+        "nodes": [
+          [
+            "Image",
+            "Your photo",
+            "A picture of your fridge"
+          ],
+          [
+            "Grid3x3",
+            "Cut into patches",
+            "Small tiles of the image"
+          ],
+          [
+            "Hash",
+            "Patches become numbers",
+            "Like tokens for words"
+          ],
+          [
+            "Layers",
+            "Image + question together",
+            "One long sequence"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“Try a tomato omelette!”"
+          ]
+        ]
+      },
+      "from": 907,
+      "durationInFrames": 697,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_03.wav",
+      "cues": [
+        84,
+        169,
+        295,
+        418,
+        567
+      ],
+      "captions": [
+        {
+          "text": "So how does one model",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "understand a photo?",
+          "from": 40,
+          "to": 82
+        },
+        {
+          "text": "You give it a picture,",
+          "from": 84,
+          "to": 112
+        },
+        {
+          "text": "say, of your fridge.",
+          "from": 115,
+          "to": 166
+        },
+        {
+          "text": "First, the image is cut",
+          "from": 169,
+          "to": 211
+        },
+        {
+          "text": "into small patches,",
+          "from": 212,
+          "to": 248
+        },
+        {
+          "text": "like tiles.",
+          "from": 251,
+          "to": 293
+        },
+        {
+          "text": "Each patch is turned into",
+          "from": 295,
+          "to": 331
+        },
+        {
+          "text": "numbers, just like word tokens.",
+          "from": 332,
+          "to": 415
+        },
+        {
+          "text": "Now the image and your",
+          "from": 418,
+          "to": 449
+        },
+        {
+          "text": "question sit side by side,",
+          "from": 451,
+          "to": 516
+        },
+        {
+          "text": "as one long sequence,",
+          "from": 522,
+          "to": 563
+        },
+        {
+          "text": "and the model reads both",
+          "from": 567,
+          "to": 605
+        },
+        {
+          "text": "together, and answers in words.",
+          "from": 606,
+          "to": 685
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Try it yourself",
+        "items": [
+          [
+            "Calculator",
+            "Homework help",
+            "Snap a problem, get the steps"
+          ],
+          [
+            "Languages",
+            "Menu translation",
+            "Photo in, your language out"
+          ],
+          [
+            "AudioLines",
+            "Live voice chat",
+            "Talk, and it talks back"
+          ]
+        ]
+      },
+      "from": 1604,
+      "durationInFrames": 450,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_04.wav",
+      "cues": [
+        56,
+        183,
+        313
+      ],
+      "captions": [
+        {
+          "text": "So what can you do",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "with it?",
+          "from": 34,
+          "to": 53
+        },
+        {
+          "text": "Point your camera at a",
+          "from": 56,
+          "to": 99
+        },
+        {
+          "text": "maths problem,",
+          "from": 99,
+          "to": 128
+        },
+        {
+          "text": "and get step by step help.",
+          "from": 128,
+          "to": 179
+        },
+        {
+          "text": "Snap a menu in another",
+          "from": 183,
+          "to": 219
+        },
+        {
+          "text": "language, and get it translated instantly.",
+          "from": 220,
+          "to": 310
+        },
+        {
+          "text": "Or just talk to it",
+          "from": 313,
+          "to": 344
+        },
+        {
+          "text": "live, and it replies in",
+          "from": 345,
+          "to": 393
+        },
+        {
+          "text": "a natural voice.",
+          "from": 394,
+          "to": 437
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "What goes in, what comes out",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Understand",
+          "Create"
+        ],
+        "rows": [
+          [
+            "Text",
+            "✓",
+            "✓"
+          ],
+          [
+            "Images",
+            "✓",
+            "✓"
+          ],
+          [
+            "Audio",
+            "✓",
+            "✓"
+          ],
+          [
+            "Video",
+            "✓",
+            "Some"
+          ]
+        ]
+      },
+      "from": 2054,
+      "durationInFrames": 555,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_05.wav",
+      "cues": [
+        80,
+        160,
+        220,
+        332,
+        414
+      ],
+      "captions": [
+        {
+          "text": "Here's what today's models can handle.",
+          "from": 10,
+          "to": 78
+        },
+        {
+          "text": "Let's look at understanding versus creating.",
+          "from": 80,
+          "to": 158
+        },
+        {
+          "text": "Text, they can do both.",
+          "from": 160,
+          "to": 217
+        },
+        {
+          "text": "Images, they can read them,",
+          "from": 220,
+          "to": 271
+        },
+        {
+          "text": "and many can create them.",
+          "from": 276,
+          "to": 329
+        },
+        {
+          "text": "Audio, they can listen,",
+          "from": 332,
+          "to": 377
+        },
+        {
+          "text": "and speak.",
+          "from": 381,
+          "to": 412
+        },
+        {
+          "text": "And video,",
+          "from": 414,
+          "to": 434
+        },
+        {
+          "text": "many can watch it,",
+          "from": 439,
+          "to": 471
+        },
+        {
+          "text": "and some can now create",
+          "from": 472,
+          "to": 506
+        },
+        {
+          "text": "short clips.",
+          "from": 508,
+          "to": 541
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Separate vs all-in-one",
+        "kicker": "OLD VS NEW",
+        "left": {
+          "icon": "Puzzle",
+          "title": "Separate models",
+          "stat": "Glued together",
+          "label": "one AI per data type"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Multimodal model",
+          "stat": "All in one",
+          "label": "understands them together"
+        }
+      },
+      "from": 2609,
+      "durationInFrames": 540,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_06.wav",
+      "cues": [
+        70,
+        291
+      ],
+      "captions": [
+        {
+          "text": "And here's why this matters.",
+          "from": 10,
+          "to": 68
+        },
+        {
+          "text": "Earlier, you needed separate AIs,",
+          "from": 70,
+          "to": 134
+        },
+        {
+          "text": "one for text,",
+          "from": 138,
+          "to": 169
+        },
+        {
+          "text": "one for images,",
+          "from": 172,
+          "to": 204
+        },
+        {
+          "text": "one for speech,",
+          "from": 205,
+          "to": 234
+        },
+        {
+          "text": "all glued together.",
+          "from": 236,
+          "to": 288
+        },
+        {
+          "text": "Now, a single multimodal model",
+          "from": 291,
+          "to": 355
+        },
+        {
+          "text": "handles them all,",
+          "from": 357,
+          "to": 389
+        },
+        {
+          "text": "so it connects the dots,",
+          "from": 391,
+          "to": 432
+        },
+        {
+          "text": "like what's in your photo,",
+          "from": 434,
+          "to": 470
+        },
+        {
+          "text": "and what you actually asked.",
+          "from": 474,
+          "to": 528
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "If AI can see a photo, it understands it perfectly.",
+        "fact": "It can misread small text, miscount objects or misjudge a scene. Check anything important.",
+        "tip": "Verify what matters"
+      },
+      "from": 3149,
+      "durationInFrames": 475,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_07.wav",
+      "cues": [
+        59,
+        194
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 56
+        },
+        {
+          "text": "People think if AI can",
+          "from": 59,
+          "to": 100
+        },
+        {
+          "text": "see a photo,",
+          "from": 102,
+          "to": 130
+        },
+        {
+          "text": "it understands it perfectly.",
+          "from": 132,
+          "to": 191
+        },
+        {
+          "text": "Not always.",
+          "from": 194,
+          "to": 229
+        },
+        {
+          "text": "It can misread small text,",
+          "from": 231,
+          "to": 279
+        },
+        {
+          "text": "miscount objects,",
+          "from": 284,
+          "to": 317
+        },
+        {
+          "text": "or misjudge what's happening.",
+          "from": 321,
+          "to": 375
+        },
+        {
+          "text": "So for anything important,",
+          "from": 377,
+          "to": 421
+        },
+        {
+          "text": "check it yourself.",
+          "from": 423,
+          "to": 462
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Multimodal AI means…",
+        "options": [
+          "It uses many GPUs",
+          "It works with more than one type of data",
+          "It speaks many languages"
+        ],
+        "answer": 1
+      },
+      "from": 3624,
+      "durationInFrames": 501,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_08.wav",
+      "cues": [
+        112,
+        312
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 29
+        },
+        {
+          "text": "What does multimodal actually mean?",
+          "from": 42,
+          "to": 109
+        },
+        {
+          "text": "Pause and think,",
+          "from": 112,
+          "to": 145
+        },
+        {
+          "text": "and if you get it",
+          "from": 146,
+          "to": 163
+        },
+        {
+          "text": "right, comment below!",
+          "from": 165,
+          "to": 220
+        },
+        {
+          "text": "It means the AI works",
+          "from": 312,
+          "to": 353
+        },
+        {
+          "text": "with more than one type",
+          "from": 354,
+          "to": 384
+        },
+        {
+          "text": "of data,",
+          "from": 385,
+          "to": 410
+        },
+        {
+          "text": "like text,",
+          "from": 412,
+          "to": 440
+        },
+        {
+          "text": "images and audio!",
+          "from": 442,
+          "to": 490
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Multimodal",
+            "more than one type of data"
+          ],
+          [
+            "Patches",
+            "images become tokens"
+          ],
+          [
+            "Together",
+            "photo + question, one model"
+          ],
+          [
+            "Careful",
+            "it can still misread"
+          ]
+        ],
+        "next": "Use Case · ChatGPT web search"
+      },
+      "from": 4125,
+      "durationInFrames": 754,
+      "voiceFrom": 10,
+      "audio": "lessons/ep12/voice_09.wav",
+      "cues": [
+        48,
+        159,
+        312,
+        405,
+        503
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 46
+        },
+        {
+          "text": "Multimodal AI works with more",
+          "from": 48,
+          "to": 107
+        },
+        {
+          "text": "than one type of data.",
+          "from": 108,
+          "to": 157
+        },
+        {
+          "text": "Images are cut into patches,",
+          "from": 159,
+          "to": 214
+        },
+        {
+          "text": "and turned into numbers,",
+          "from": 218,
+          "to": 259
+        },
+        {
+          "text": "just like tokens.",
+          "from": 261,
+          "to": 309
+        },
+        {
+          "text": "One model reads your photo",
+          "from": 312,
+          "to": 357
+        },
+        {
+          "text": "and your question together.",
+          "from": 359,
+          "to": 404
+        },
+        {
+          "text": "But it can still misread",
+          "from": 405,
+          "to": 441
+        },
+        {
+          "text": "things, so verify.",
+          "from": 442,
+          "to": 500
+        },
+        {
+          "text": "Next up,",
+          "from": 503,
+          "to": 524
+        },
+        {
+          "text": "a real world breakdown,",
+          "from": 524,
+          "to": 578
+        },
+        {
+          "text": "how ChatGPT searches the web",
+          "from": 578,
+          "to": 644
+        },
+        {
+          "text": "to answer you.",
+          "from": 644,
+          "to": 678
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 682,
+          "to": 743
+        }
+      ],
+      "image": null
+    }
+  ]
+}

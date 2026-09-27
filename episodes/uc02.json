@@ -1,0 +1,245 @@
+{
+  "id": "uc02",
+  "episode": 2,
+  "series": "REAL WORLD AI",
+  "label": "USE CASE 02",
+  "handle": "@ai_maastaaru",
+  "title": "How ChatGPT Searches the Web",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "Ask ChatGPT about something that happened this morning, and it still answers, with links. [1] But wait, wasn't it trained months ago? [2] Let's break down how AI searches the web for you.",
+      "data": {
+        "kicker": "USE CASE 02",
+        "title": [
+          "AI Web",
+          "Search"
+        ],
+        "subtitle": "How ChatGPT answers with fresh info",
+        "buzzwords": [
+          "Knowledge cutoff",
+          "Search tool",
+          "Sources",
+          "Citations",
+          "RAG",
+          "Tool use",
+          "Fresh info",
+          "Links"
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "Here's the problem. [1] An LLM only knows what was in its training data, and that stops at a certain date, called the knowledge cutoff. [2] With web search, it can look things up live, so it knows what happened today.",
+      "data": {
+        "heading": "Frozen vs live",
+        "kicker": "THE PROBLEM",
+        "left": {
+          "icon": "Brain",
+          "title": "Without search",
+          "stat": "Frozen in time",
+          "label": "knows only up to its cutoff"
+        },
+        "right": {
+          "icon": "Globe",
+          "title": "With web search",
+          "stat": "Live info",
+          "label": "looks things up right now"
+        }
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "Here's what happens, in seconds. [1] You ask, who won yesterday's cricket match? [2] The model sees it needs fresh information, so it calls a search tool. [3] The search returns the top results, [4] the system reads the best pages, and pulls out the key parts, [5] and the model writes the answer, with links to its sources.",
+      "data": {
+        "heading": "From question to answer",
+        "nodes": [
+          [
+            "MessageCircleQuestion",
+            "You ask",
+            "“Who won yesterday's match?”"
+          ],
+          [
+            "Search",
+            "Search tool",
+            "The model decides to search"
+          ],
+          [
+            "Globe",
+            "Top results",
+            "A list of web pages"
+          ],
+          [
+            "FileText",
+            "Read the pages",
+            "Pulls out the key parts"
+          ],
+          [
+            "Sparkles",
+            "Answer + sources",
+            "With links you can check"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "text": "Notice something? This combines two ideas you already know. [1] Tool use, from episode nine, because searching is a tool the model calls. [2] And RAG, from episode seven, because it retrieves information, and adds it to the prompt. [3] Put them together, and you get an AI that's up to date.",
+      "data": {
+        "heading": "Two ideas, combined",
+        "kicker": "WHAT'S INSIDE",
+        "steps": [
+          [
+            "Wrench",
+            "Tool use",
+            "The model calls a search tool (EP 09)"
+          ],
+          [
+            "BookOpen",
+            "RAG",
+            "Found pages go into the prompt (EP 07)"
+          ],
+          [
+            "Sparkles",
+            "Fresh answers",
+            "Up to date, with sources"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "toolcall",
+      "text": "Let's watch it happen. [1] You ask, what's the gold price in India today? [2] The model writes a search, gold price India today. [3] It gets back three fresh sources, updated this morning. [4] And it answers with today's rate, and shows you the links, so you can check them.",
+      "data": {
+        "heading": "Web search, live",
+        "question": "What's the gold price in India today?",
+        "call": {
+          "tool": "web_search",
+          "query": "gold price India today"
+        },
+        "tool": "SEARCH RESULTS",
+        "result": "3 sources · updated this morning",
+        "answer": "Here's today's rate, based on these 3 sources. Tap a link to see the details."
+      }
+    },
+    {
+      "type": "terms",
+      "text": "A few smart habits. [1] Check the sources, open at least one link. [2] Look at the dates, old pages give old answers. [3] For anything important, ask for more than one source. [4] And remember, if the pages are wrong, the answer can be wrong too.",
+      "data": {
+        "heading": "Use it wisely",
+        "kicker": "SMART HABITS",
+        "terms": [
+          [
+            "Link",
+            "Check sources",
+            "Open at least one link"
+          ],
+          [
+            "Calendar",
+            "Look at dates",
+            "Old pages, old answers"
+          ],
+          [
+            "Files",
+            "More sources",
+            "For anything important"
+          ],
+          [
+            "TriangleAlert",
+            "Garbage in",
+            "Wrong pages, wrong answer"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "Where will you see this? [1] ChatGPT, Gemini, Claude and Perplexity can all search the web. [2] Google shows AI overviews at the top of search results. [3] And shopping assistants compare prices across stores.",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "MessageSquare",
+            "AI chat apps",
+            "ChatGPT, Gemini, Claude, Perplexity"
+          ],
+          [
+            "Search",
+            "AI in search",
+            "AI overviews on top of results"
+          ],
+          [
+            "ShoppingBag",
+            "Shopping assistants",
+            "Compare prices across stores"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think the AI already knows everything on the internet. [2] It doesn't. Without search, it only knows its training data, and with search, it reads just a handful of pages each time.",
+      "data": {
+        "myth": "The AI already knows everything on the internet.",
+        "fact": "Without search it only knows its training data. With search, it reads a handful of pages each time.",
+        "tip": "Always open the sources"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! When ChatGPT searches the web, which two ideas is it combining? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] Tool use and RAG! It calls a search tool, then adds what it finds to the prompt.",
+      "data": {
+        "question": "Web search combines…",
+        "options": [
+          "Tool use and RAG",
+          "Fine-tuning and temperature",
+          "Tokens and embeddings"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] LLMs are frozen at their knowledge cutoff. [2] Web search is a tool the model calls. [3] The results go into the prompt, just like RAG. [4] And you should always check the sources. [5] Next, we'll learn how AI turns speech into text, and text back into speech. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Cutoff",
+            "models are frozen in time"
+          ],
+          [
+            "Search",
+            "a tool the model calls"
+          ],
+          [
+            "RAG",
+            "results go into the prompt"
+          ],
+          [
+            "Check",
+            "open the sources"
+          ]
+        ],
+        "next": "EP 13 · Speech AI"
+      }
+    }
+  ],
+  "post": {
+    "caption": "ChatGPT was trained months ago. So how does it know what happened this morning?\n\nReal World AI, Use Case 02: how AI searches the web\n- The knowledge cutoff problem\n- The flow: question, search tool, top results, read pages, answer with sources\n- It's two ideas combined: tool use (EP 09) + RAG (EP 07)\n- Smart habits: check sources, look at dates, ask for more than one source\n\nQuiz at the end. Got it right? Comment below.\n\nNext: Speech AI, or how AI turns speech into text and back.\nFollow @ai_maastaaru for more real world AI breakdowns.",
+    "tags": "#AIMaastaaru #ChatGPT #LearnAI #AISearch #AIForBeginners",
+    "pinned": "Quiz answer: Tool use and RAG. It calls a search tool, then adds what it finds to the prompt. Do you check the sources AI gives you?",
+    "cover": "'AI Web Search' title card",
+    "alt": "Animated breakdown of how AI chatbots search the web and answer with sources."
+  }
+}

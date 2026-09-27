@@ -1,0 +1,232 @@
+{
+  "id": "ep12",
+  "episode": 12,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Multimodal AI",
+  "host": "female",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "lang": "en-us",
+  "fps": 30,
+  "flow": "continuous",
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "text": "You can show AI a photo of your fridge, and it suggests a recipe. [1] You can talk to it, and it talks right back. [2] That's multimodal AI, so let's understand how it works.",
+      "data": {
+        "kicker": "EPISODE 12",
+        "title": [
+          "Multimodal",
+          "AI"
+        ],
+        "subtitle": "How AI sees, hears and speaks",
+        "buzzwords": [
+          "Vision",
+          "Voice",
+          "Images",
+          "Audio",
+          "Video",
+          "Patches",
+          "Tokens",
+          "Live chat"
+        ]
+      }
+    },
+    {
+      "type": "definition",
+      "text": "Modal just means a type of data, like text, images, audio or video. [1] So a multimodal AI is one that can understand more than one type, and often create more than one type too. It can [2] see images, [3] hear audio, [4] and speak, or even draw.",
+      "data": {
+        "term": "Multimodal AI",
+        "short": "Multi",
+        "definition": "AI that understands and creates more than one kind of data: text, images, audio and video.",
+        "chips": [
+          [
+            "Eye",
+            "See images"
+          ],
+          [
+            "Ear",
+            "Hear audio"
+          ],
+          [
+            "Volume2",
+            "Speak and draw"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "pipeline",
+      "text": "So how does one model understand a photo? [1] You give it a picture, say, of your fridge. [2] First, the image is cut into small patches, like tiles. [3] Each patch is turned into numbers, just like word tokens. [4] Now the image and your question sit side by side, as one long sequence, [5] and the model reads both together, and answers in words.",
+      "data": {
+        "heading": "How AI reads a photo",
+        "kicker": "UNDER THE HOOD",
+        "nodes": [
+          [
+            "Image",
+            "Your photo",
+            "A picture of your fridge"
+          ],
+          [
+            "Grid3x3",
+            "Cut into patches",
+            "Small tiles of the image"
+          ],
+          [
+            "Hash",
+            "Patches become numbers",
+            "Like tokens for words"
+          ],
+          [
+            "Layers",
+            "Image + question together",
+            "One long sequence"
+          ],
+          [
+            "Sparkles",
+            "Answer",
+            "“Try a tomato omelette!”"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "examples",
+      "text": "So what can you do with it? [1] Point your camera at a maths problem, and get step by step help. [2] Snap a menu in another language, and get it translated instantly. [3] Or just talk to it live, and it replies in a natural voice.",
+      "data": {
+        "heading": "Try it yourself",
+        "items": [
+          [
+            "Calculator",
+            "Homework help",
+            "Snap a problem, get the steps"
+          ],
+          [
+            "Languages",
+            "Menu translation",
+            "Photo in, your language out"
+          ],
+          [
+            "AudioLines",
+            "Live voice chat",
+            "Talk, and it talks back"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "text": "Here's what today's models can handle. [1] Let's look at understanding versus creating. [2] Text, they can do both. [3] Images, they can read them, and many can create them. [4] Audio, they can listen, and speak. [5] And video, many can watch it, and some can now create short clips.",
+      "data": {
+        "heading": "What goes in, what comes out",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Understand",
+          "Create"
+        ],
+        "rows": [
+          [
+            "Text",
+            "✓",
+            "✓"
+          ],
+          [
+            "Images",
+            "✓",
+            "✓"
+          ],
+          [
+            "Audio",
+            "✓",
+            "✓"
+          ],
+          [
+            "Video",
+            "✓",
+            "Some"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "versus",
+      "text": "And here's why this matters. [1] Earlier, you needed separate AIs, one for text, one for images, one for speech, all glued together. [2] Now, a single multimodal model handles them all, so it connects the dots, like what's in your photo, and what you actually asked.",
+      "data": {
+        "heading": "Separate vs all-in-one",
+        "kicker": "OLD VS NEW",
+        "left": {
+          "icon": "Puzzle",
+          "title": "Separate models",
+          "stat": "Glued together",
+          "label": "one AI per data type"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Multimodal model",
+          "stat": "All in one",
+          "label": "understands them together"
+        }
+      }
+    },
+    {
+      "type": "myth",
+      "text": "Here's a common myth. [1] People think if AI can see a photo, it understands it perfectly. [2] Not always. It can misread small text, miscount objects, or misjudge what's happening. So for anything important, check it yourself.",
+      "data": {
+        "myth": "If AI can see a photo, it understands it perfectly.",
+        "fact": "It can misread small text, miscount objects or misjudge a scene. Check anything important.",
+        "tip": "Verify what matters"
+      }
+    },
+    {
+      "type": "quiz",
+      "text": "Quick quiz! What does multimodal actually mean? [1] Pause and think, and if you get it right, comment below! <pause 3.2> [2] It means the AI works with more than one type of data, like text, images and audio!",
+      "data": {
+        "question": "Multimodal AI means…",
+        "options": [
+          "It uses many GPUs",
+          "It works with more than one type of data",
+          "It speaks many languages"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "type": "recap",
+      "text": "Let's recap. [1] Multimodal AI works with more than one type of data. [2] Images are cut into patches, and turned into numbers, just like tokens. [3] One model reads your photo and your question together. [4] But it can still misread things, so verify. [5] Next up, a real world breakdown, how ChatGPT searches the web to answer you. Follow AI Maastaaru!",
+      "data": {
+        "points": [
+          [
+            "Multimodal",
+            "more than one type of data"
+          ],
+          [
+            "Patches",
+            "images become tokens"
+          ],
+          [
+            "Together",
+            "photo + question, one model"
+          ],
+          [
+            "Careful",
+            "it can still misread"
+          ]
+        ],
+        "next": "Use Case · ChatGPT web search"
+      }
+    }
+  ],
+  "post": {
+    "caption": "Show AI a photo of your fridge and it suggests a recipe. How does it \"see\"?\n\nEpisode 12 of AI From Scratch: Multimodal AI\n- What \"multimodal\" really means\n- How AI reads a photo: patches, numbers, one sequence\n- What you can do today: homework help, menu translation, live voice chat\n- Cheat sheet: text, images, audio, video\n- Why one all-in-one model beats separate ones\n\nQuiz at the end. Got it right? Comment below.\n\nNext: How ChatGPT searches the web to answer you.\nFollow @ai_maastaaru for the full series.",
+    "tags": "#AIMaastaaru #MultimodalAI #LearnAI #GenerativeAI #AIForBeginners",
+    "pinned": "Quiz answer: Multimodal means the AI works with more than one type of data, like text, images and audio. What's the coolest photo you've asked AI about?",
+    "cover": "'Multimodal AI' title card",
+    "alt": "Animated lesson explaining multimodal AI and how a model reads images alongside text."
+  }
+}

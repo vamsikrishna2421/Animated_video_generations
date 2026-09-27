@@ -1,0 +1,883 @@
+{
+  "id": "uc02",
+  "episode": 2,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How ChatGPT Searches the Web",
+  "host": "female",
+  "label": "USE CASE 02",
+  "fps": 30,
+  "totalFrames": 5075,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc02/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 02",
+        "title": [
+          "AI Web",
+          "Search"
+        ],
+        "subtitle": "How ChatGPT answers with fresh info",
+        "buzzwords": [
+          "Knowledge cutoff",
+          "Search tool",
+          "Sources",
+          "Citations",
+          "RAG",
+          "Tool use",
+          "Fresh info",
+          "Links"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 372,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_01.wav",
+      "cues": [
+        182,
+        263
+      ],
+      "captions": [
+        {
+          "text": "Ask ChatGPT about something that",
+          "from": 10,
+          "to": 73
+        },
+        {
+          "text": "happened this morning,",
+          "from": 73,
+          "to": 116
+        },
+        {
+          "text": "and it still answers,",
+          "from": 116,
+          "to": 158
+        },
+        {
+          "text": "with links.",
+          "from": 158,
+          "to": 180
+        },
+        {
+          "text": "But wait,",
+          "from": 182,
+          "to": 205
+        },
+        {
+          "text": "wasn't it trained months ago?",
+          "from": 207,
+          "to": 260
+        },
+        {
+          "text": "Let's break down how AI",
+          "from": 263,
+          "to": 311
+        },
+        {
+          "text": "searches the web for you.",
+          "from": 314,
+          "to": 359
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Frozen vs live",
+        "kicker": "THE PROBLEM",
+        "left": {
+          "icon": "Brain",
+          "title": "Without search",
+          "stat": "Frozen in time",
+          "label": "knows only up to its cutoff"
+        },
+        "right": {
+          "icon": "Globe",
+          "title": "With web search",
+          "stat": "Live info",
+          "label": "looks things up right now"
+        }
+      },
+      "from": 372,
+      "durationInFrames": 424,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_02.wav",
+      "cues": [
+        56,
+        275
+      ],
+      "captions": [
+        {
+          "text": "Here's the problem.",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "An LLM only knows what",
+          "from": 56,
+          "to": 100
+        },
+        {
+          "text": "was in its training data,",
+          "from": 100,
+          "to": 151
+        },
+        {
+          "text": "and that stops at a",
+          "from": 151,
+          "to": 190
+        },
+        {
+          "text": "certain date,",
+          "from": 190,
+          "to": 217
+        },
+        {
+          "text": "called the knowledge cutoff.",
+          "from": 217,
+          "to": 274
+        },
+        {
+          "text": "With web search,",
+          "from": 275,
+          "to": 301
+        },
+        {
+          "text": "it can look things up",
+          "from": 306,
+          "to": 331
+        },
+        {
+          "text": "live, so it knows what",
+          "from": 333,
+          "to": 374
+        },
+        {
+          "text": "happened today.",
+          "from": 376,
+          "to": 412
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "From question to answer",
+        "nodes": [
+          [
+            "MessageCircleQuestion",
+            "You ask",
+            "“Who won yesterday's match?”"
+          ],
+          [
+            "Search",
+            "Search tool",
+            "The model decides to search"
+          ],
+          [
+            "Globe",
+            "Top results",
+            "A list of web pages"
+          ],
+          [
+            "FileText",
+            "Read the pages",
+            "Pulls out the key parts"
+          ],
+          [
+            "Sparkles",
+            "Answer + sources",
+            "With links you can check"
+          ]
+        ]
+      },
+      "from": 796,
+      "durationInFrames": 611,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_03.wav",
+      "cues": [
+        75,
+        164,
+        301,
+        368,
+        487
+      ],
+      "captions": [
+        {
+          "text": "Here's what happens,",
+          "from": 10,
+          "to": 39
+        },
+        {
+          "text": "in seconds.",
+          "from": 40,
+          "to": 73
+        },
+        {
+          "text": "You ask,",
+          "from": 75,
+          "to": 94
+        },
+        {
+          "text": "who won yesterday's cricket match?",
+          "from": 97,
+          "to": 163
+        },
+        {
+          "text": "The model sees it needs",
+          "from": 164,
+          "to": 200
+        },
+        {
+          "text": "fresh information,",
+          "from": 202,
+          "to": 236
+        },
+        {
+          "text": "so it calls a search tool.",
+          "from": 239,
+          "to": 299
+        },
+        {
+          "text": "The search returns the top",
+          "from": 301,
+          "to": 342
+        },
+        {
+          "text": "results, the system reads the",
+          "from": 343,
+          "to": 398
+        },
+        {
+          "text": "best pages,",
+          "from": 401,
+          "to": 431
+        },
+        {
+          "text": "and pulls out the key",
+          "from": 436,
+          "to": 462
+        },
+        {
+          "text": "parts, and the model writes",
+          "from": 463,
+          "to": 514
+        },
+        {
+          "text": "the answer,",
+          "from": 515,
+          "to": 539
+        },
+        {
+          "text": "with links to its sources.",
+          "from": 541,
+          "to": 599
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Two ideas, combined",
+        "kicker": "WHAT'S INSIDE",
+        "steps": [
+          [
+            "Wrench",
+            "Tool use",
+            "The model calls a search tool (EP 09)"
+          ],
+          [
+            "BookOpen",
+            "RAG",
+            "Found pages go into the prompt (EP 07)"
+          ],
+          [
+            "Sparkles",
+            "Fresh answers",
+            "Up to date, with sources"
+          ]
+        ]
+      },
+      "from": 1407,
+      "durationInFrames": 572,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_04.wav",
+      "cues": [
+        138,
+        286,
+        458
+      ],
+      "captions": [
+        {
+          "text": "Notice something?",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "This combines two ideas you",
+          "from": 46,
+          "to": 99
+        },
+        {
+          "text": "already know.",
+          "from": 100,
+          "to": 135
+        },
+        {
+          "text": "Tool use,",
+          "from": 138,
+          "to": 159
+        },
+        {
+          "text": "from episode nine,",
+          "from": 160,
+          "to": 195
+        },
+        {
+          "text": "because searching is a tool",
+          "from": 198,
+          "to": 240
+        },
+        {
+          "text": "the model calls.",
+          "from": 242,
+          "to": 284
+        },
+        {
+          "text": "And RAG,",
+          "from": 286,
+          "to": 306
+        },
+        {
+          "text": "from episode seven,",
+          "from": 308,
+          "to": 343
+        },
+        {
+          "text": "because it retrieves information,",
+          "from": 345,
+          "to": 401
+        },
+        {
+          "text": "and adds it to the prompt.",
+          "from": 403,
+          "to": 456
+        },
+        {
+          "text": "Put them together,",
+          "from": 458,
+          "to": 486
+        },
+        {
+          "text": "and you get an AI",
+          "from": 488,
+          "to": 520
+        },
+        {
+          "text": "that's up to date.",
+          "from": 522,
+          "to": 559
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "toolcall",
+      "data": {
+        "heading": "Web search, live",
+        "question": "What's the gold price in India today?",
+        "call": {
+          "tool": "web_search",
+          "query": "gold price India today"
+        },
+        "tool": "SEARCH RESULTS",
+        "result": "3 sources · updated this morning",
+        "answer": "Here's today's rate, based on these 3 sources. Tap a link to see the details."
+      },
+      "from": 1979,
+      "durationInFrames": 514,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_05.wav",
+      "cues": [
+        54,
+        147,
+        257,
+        372
+      ],
+      "captions": [
+        {
+          "text": "Let's watch it happen.",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "You ask,",
+          "from": 54,
+          "to": 73
+        },
+        {
+          "text": "what's the gold price in",
+          "from": 78,
+          "to": 108
+        },
+        {
+          "text": "India today?",
+          "from": 110,
+          "to": 146
+        },
+        {
+          "text": "The model writes a search,",
+          "from": 147,
+          "to": 190
+        },
+        {
+          "text": "gold price India today.",
+          "from": 196,
+          "to": 254
+        },
+        {
+          "text": "It gets back three fresh",
+          "from": 257,
+          "to": 295
+        },
+        {
+          "text": "sources, updated this morning.",
+          "from": 297,
+          "to": 370
+        },
+        {
+          "text": "And it answers with today's",
+          "from": 372,
+          "to": 408
+        },
+        {
+          "text": "rate, and shows you the",
+          "from": 410,
+          "to": 440
+        },
+        {
+          "text": "links, so you can check them.",
+          "from": 442,
+          "to": 502
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Use it wisely",
+        "kicker": "SMART HABITS",
+        "terms": [
+          [
+            "Link",
+            "Check sources",
+            "Open at least one link"
+          ],
+          [
+            "Calendar",
+            "Look at dates",
+            "Old pages, old answers"
+          ],
+          [
+            "Files",
+            "More sources",
+            "For anything important"
+          ],
+          [
+            "TriangleAlert",
+            "Garbage in",
+            "Wrong pages, wrong answer"
+          ]
+        ]
+      },
+      "from": 2493,
+      "durationInFrames": 497,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_06.wav",
+      "cues": [
+        63,
+        155,
+        252,
+        359
+      ],
+      "captions": [
+        {
+          "text": "A few smart habits.",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "Check the sources,",
+          "from": 63,
+          "to": 97
+        },
+        {
+          "text": "open at least one link.",
+          "from": 99,
+          "to": 152
+        },
+        {
+          "text": "Look at the dates,",
+          "from": 155,
+          "to": 178
+        },
+        {
+          "text": "old pages give old answers.",
+          "from": 181,
+          "to": 250
+        },
+        {
+          "text": "For anything important,",
+          "from": 252,
+          "to": 292
+        },
+        {
+          "text": "ask for more than one source.",
+          "from": 294,
+          "to": 357
+        },
+        {
+          "text": "And remember,",
+          "from": 359,
+          "to": 382
+        },
+        {
+          "text": "if the pages are wrong,",
+          "from": 385,
+          "to": 426
+        },
+        {
+          "text": "the answer can be wrong too.",
+          "from": 428,
+          "to": 485
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Where you'll see it",
+        "items": [
+          [
+            "MessageSquare",
+            "AI chat apps",
+            "ChatGPT, Gemini, Claude, Perplexity"
+          ],
+          [
+            "Search",
+            "AI in search",
+            "AI overviews on top of results"
+          ],
+          [
+            "ShoppingBag",
+            "Shopping assistants",
+            "Compare prices across stores"
+          ]
+        ]
+      },
+      "from": 2990,
+      "durationInFrames": 441,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_07.wav",
+      "cues": [
+        53,
+        219,
+        330
+      ],
+      "captions": [
+        {
+          "text": "Where will you see this?",
+          "from": 10,
+          "to": 51
+        },
+        {
+          "text": "ChatGPT, Gemini,",
+          "from": 53,
+          "to": 97
+        },
+        {
+          "text": "Claude and Perplexity can all",
+          "from": 97,
+          "to": 175
+        },
+        {
+          "text": "search the web.",
+          "from": 175,
+          "to": 216
+        },
+        {
+          "text": "Google shows AI overviews at",
+          "from": 219,
+          "to": 275
+        },
+        {
+          "text": "the top of search results.",
+          "from": 276,
+          "to": 328
+        },
+        {
+          "text": "And shopping assistants compare prices",
+          "from": 330,
+          "to": 388
+        },
+        {
+          "text": "across stores.",
+          "from": 390,
+          "to": 429
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "The AI already knows everything on the internet.",
+        "fact": "Without search it only knows its training data. With search, it reads a handful of pages each time.",
+        "tip": "Always open the sources"
+      },
+      "from": 3431,
+      "durationInFrames": 433,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_08.wav",
+      "cues": [
+        59,
+        175
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think the AI already",
+          "from": 59,
+          "to": 110
+        },
+        {
+          "text": "knows everything on the internet.",
+          "from": 110,
+          "to": 172
+        },
+        {
+          "text": "It doesn't.",
+          "from": 175,
+          "to": 206
+        },
+        {
+          "text": "Without search,",
+          "from": 208,
+          "to": 235
+        },
+        {
+          "text": "it only knows its training",
+          "from": 238,
+          "to": 275
+        },
+        {
+          "text": "data, and with search,",
+          "from": 277,
+          "to": 326
+        },
+        {
+          "text": "it reads just a handful",
+          "from": 329,
+          "to": 366
+        },
+        {
+          "text": "of pages each time.",
+          "from": 367,
+          "to": 421
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Web search combines…",
+        "options": [
+          "Tool use and RAG",
+          "Fine-tuning and temperature",
+          "Tokens and embeddings"
+        ],
+        "answer": 0
+      },
+      "from": 3864,
+      "durationInFrames": 577,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_09.wav",
+      "cues": [
+        184,
+        389
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 34
+        },
+        {
+          "text": "When ChatGPT searches the web,",
+          "from": 44,
+          "to": 111
+        },
+        {
+          "text": "which two ideas is it combining?",
+          "from": 111,
+          "to": 182
+        },
+        {
+          "text": "Pause and think,",
+          "from": 184,
+          "to": 222
+        },
+        {
+          "text": "and if you get it",
+          "from": 223,
+          "to": 240
+        },
+        {
+          "text": "right, comment below!",
+          "from": 242,
+          "to": 297
+        },
+        {
+          "text": "Tool use and RAG!",
+          "from": 389,
+          "to": 452
+        },
+        {
+          "text": "It calls a search tool,",
+          "from": 454,
+          "to": 497
+        },
+        {
+          "text": "then adds what it finds",
+          "from": 498,
+          "to": 531
+        },
+        {
+          "text": "to the prompt.",
+          "from": 532,
+          "to": 564
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Cutoff",
+            "models are frozen in time"
+          ],
+          [
+            "Search",
+            "a tool the model calls"
+          ],
+          [
+            "RAG",
+            "results go into the prompt"
+          ],
+          [
+            "Check",
+            "open the sources"
+          ]
+        ],
+        "next": "EP 13 · Speech AI"
+      },
+      "from": 4441,
+      "durationInFrames": 634,
+      "voiceFrom": 10,
+      "audio": "lessons/uc02/voice_10.wav",
+      "cues": [
+        45,
+        139,
+        220,
+        324,
+        393
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 43
+        },
+        {
+          "text": "LLMs are frozen at their",
+          "from": 45,
+          "to": 92
+        },
+        {
+          "text": "knowledge cutoff.",
+          "from": 93,
+          "to": 136
+        },
+        {
+          "text": "Web search is a tool",
+          "from": 139,
+          "to": 175
+        },
+        {
+          "text": "the model calls.",
+          "from": 177,
+          "to": 218
+        },
+        {
+          "text": "The results go into the",
+          "from": 220,
+          "to": 250
+        },
+        {
+          "text": "prompt, just like RAG.",
+          "from": 252,
+          "to": 321
+        },
+        {
+          "text": "And you should always check",
+          "from": 324,
+          "to": 355
+        },
+        {
+          "text": "the sources.",
+          "from": 357,
+          "to": 390
+        },
+        {
+          "text": "Next, we'll learn how AI",
+          "from": 393,
+          "to": 445
+        },
+        {
+          "text": "turns speech into text,",
+          "from": 447,
+          "to": 490
+        },
+        {
+          "text": "and text back into speech.",
+          "from": 494,
+          "to": 552
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 556,
+          "to": 621
+        }
+      ],
+      "image": null
+    }
+  ]
+}
