@@ -1,0 +1,786 @@
+{
+  "id": "uc16",
+  "episode": 16,
+  "series": "REAL WORLD AI",
+  "handle": "@ai_maastaaru",
+  "title": "How Ride Apps Set ETA and Surge Pricing",
+  "host": "female",
+  "label": "USE CASE 16",
+  "fps": 30,
+  "totalFrames": 4631,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/uc16/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "USE CASE 16",
+        "title": [
+          "Surge",
+          "Pricing"
+        ],
+        "subtitle": "How ride apps set ETA and price",
+        "buzzwords": [
+          "Surge",
+          "ETA",
+          "Matching",
+          "Demand",
+          "Supply",
+          "Forecasting",
+          "Routes",
+          "Drivers"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 403,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_01.wav",
+      "cues": [
+        184,
+        332
+      ],
+      "captions": [
+        {
+          "text": "It's raining,",
+          "from": 10,
+          "to": 32
+        },
+        {
+          "text": "it's 6 PM,",
+          "from": 35,
+          "to": 70
+        },
+        {
+          "text": "and your cab app says,",
+          "from": 74,
+          "to": 116
+        },
+        {
+          "text": "fares are higher than usual.",
+          "from": 118,
+          "to": 181
+        },
+        {
+          "text": "So why does the price",
+          "from": 184,
+          "to": 216
+        },
+        {
+          "text": "jump, and how does it",
+          "from": 218,
+          "to": 253
+        },
+        {
+          "text": "know the driver will arrive",
+          "from": 255,
+          "to": 291
+        },
+        {
+          "text": "in 4 minutes?",
+          "from": 292,
+          "to": 330
+        },
+        {
+          "text": "Let's break down ride apps.",
+          "from": 332,
+          "to": 388
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "pipeline",
+      "data": {
+        "heading": "In a few seconds",
+        "nodes": [
+          [
+            "MapPin",
+            "Your request",
+            "Pickup and destination"
+          ],
+          [
+            "Car",
+            "Nearby drivers",
+            "Predict each one's arrival"
+          ],
+          [
+            "Handshake",
+            "Best match",
+            "Not always the closest"
+          ],
+          [
+            "Route",
+            "Trip time",
+            "Traffic and routes"
+          ],
+          [
+            "IndianRupee",
+            "Price",
+            "Base fare × demand"
+          ]
+        ]
+      },
+      "from": 403,
+      "durationInFrames": 635,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_02.wav",
+      "cues": [
+        110,
+        188,
+        338,
+        462,
+        567
+      ],
+      "captions": [
+        {
+          "text": "When you book a ride,",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "a lot happens in seconds.",
+          "from": 47,
+          "to": 108
+        },
+        {
+          "text": "You enter your pickup and destination.",
+          "from": 110,
+          "to": 187
+        },
+        {
+          "text": "The system finds nearby drivers,",
+          "from": 188,
+          "to": 254
+        },
+        {
+          "text": "and predicts each one's arrival time.",
+          "from": 258,
+          "to": 335
+        },
+        {
+          "text": "It matches you with the",
+          "from": 338,
+          "to": 386
+        },
+        {
+          "text": "best driver,",
+          "from": 386,
+          "to": 412
+        },
+        {
+          "text": "not always the closest.",
+          "from": 412,
+          "to": 460
+        },
+        {
+          "text": "It predicts the trip time,",
+          "from": 462,
+          "to": 509
+        },
+        {
+          "text": "using traffic and routes,",
+          "from": 511,
+          "to": 565
+        },
+        {
+          "text": "and then shows you the price.",
+          "from": 567,
+          "to": 623
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Dynamic pricing",
+        "short": "Surge",
+        "definition": "Prices that rise and fall with demand and the number of free drivers.",
+        "chips": [
+          [
+            "TrendingUp",
+            "High demand"
+          ],
+          [
+            "Car",
+            "Few drivers"
+          ],
+          [
+            "IndianRupee",
+            "Price rises"
+          ]
+        ]
+      },
+      "from": 1038,
+      "durationInFrames": 605,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_03.wav",
+      "cues": [
+        125,
+        274,
+        373,
+        459
+      ],
+      "captions": [
+        {
+          "text": "The price part is called",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "dynamic pricing,",
+          "from": 46,
+          "to": 83
+        },
+        {
+          "text": "or surge.",
+          "from": 85,
+          "to": 123
+        },
+        {
+          "text": "When many people want rides,",
+          "from": 125,
+          "to": 172
+        },
+        {
+          "text": "and few drivers are free,",
+          "from": 175,
+          "to": 221
+        },
+        {
+          "text": "prices rise.",
+          "from": 223,
+          "to": 271
+        },
+        {
+          "text": "Demand goes up,",
+          "from": 274,
+          "to": 303
+        },
+        {
+          "text": "like in rain or office",
+          "from": 307,
+          "to": 348
+        },
+        {
+          "text": "hours, supply is low,",
+          "from": 349,
+          "to": 409
+        },
+        {
+          "text": "with few free drivers,",
+          "from": 411,
+          "to": 458
+        },
+        {
+          "text": "so the price multiplier rises,",
+          "from": 459,
+          "to": 524
+        },
+        {
+          "text": "and more drivers head to",
+          "from": 525,
+          "to": 560
+        },
+        {
+          "text": "that area.",
+          "from": 561,
+          "to": 593
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "Predicting demand",
+        "kicker": "FORECASTING",
+        "steps": [
+          [
+            "CalendarDays",
+            "Patterns",
+            "Rush hours, flights landing"
+          ],
+          [
+            "CloudRain",
+            "Signals",
+            "Weather, events, festivals"
+          ],
+          [
+            "Navigation",
+            "Position drivers",
+            "Head where demand is coming"
+          ]
+        ]
+      },
+      "from": 1643,
+      "durationInFrames": 526,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_04.wav",
+      "cues": [
+        119,
+        285,
+        406
+      ],
+      "captions": [
+        {
+          "text": "AI also predicts demand before",
+          "from": 10,
+          "to": 82
+        },
+        {
+          "text": "it happens.",
+          "from": 83,
+          "to": 116
+        },
+        {
+          "text": "It learns patterns,",
+          "from": 119,
+          "to": 158
+        },
+        {
+          "text": "like office rush hours,",
+          "from": 160,
+          "to": 212
+        },
+        {
+          "text": "and flights landing at the airport.",
+          "from": 216,
+          "to": 282
+        },
+        {
+          "text": "It watches signals,",
+          "from": 285,
+          "to": 324
+        },
+        {
+          "text": "like weather,",
+          "from": 325,
+          "to": 347
+        },
+        {
+          "text": "events and festivals.",
+          "from": 349,
+          "to": 403
+        },
+        {
+          "text": "And it nudges drivers towards",
+          "from": 406,
+          "to": 451
+        },
+        {
+          "text": "areas that will soon be busy.",
+          "from": 453,
+          "to": 514
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Fixed vs dynamic",
+        "kicker": "THE TRADE-OFF",
+        "left": {
+          "icon": "Lock",
+          "title": "Fixed price",
+          "stat": "Same price",
+          "label": "but no cars when it's busy"
+        },
+        "right": {
+          "icon": "TrendingUp",
+          "title": "Dynamic price",
+          "stat": "Price rises",
+          "label": "more drivers come online"
+        }
+      },
+      "from": 2169,
+      "durationInFrames": 458,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_05.wav",
+      "cues": [
+        73,
+        251
+      ],
+      "captions": [
+        {
+          "text": "So why do apps use",
+          "from": 10,
+          "to": 38
+        },
+        {
+          "text": "surge at all?",
+          "from": 39,
+          "to": 71
+        },
+        {
+          "text": "With fixed prices,",
+          "from": 73,
+          "to": 112
+        },
+        {
+          "text": "when demand spikes,",
+          "from": 112,
+          "to": 152
+        },
+        {
+          "text": "there are simply no cars,",
+          "from": 152,
+          "to": 206
+        },
+        {
+          "text": "and very long waits.",
+          "from": 206,
+          "to": 249
+        },
+        {
+          "text": "With dynamic prices,",
+          "from": 251,
+          "to": 291
+        },
+        {
+          "text": "more drivers come online,",
+          "from": 291,
+          "to": 341
+        },
+        {
+          "text": "so you can at least",
+          "from": 341,
+          "to": 379
+        },
+        {
+          "text": "get a ride,",
+          "from": 379,
+          "to": 402
+        },
+        {
+          "text": "but at a higher price.",
+          "from": 402,
+          "to": 446
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Ride app words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Clock",
+            "ETA",
+            "Estimated time of arrival"
+          ],
+          [
+            "Handshake",
+            "Matching",
+            "Pairing riders and drivers"
+          ],
+          [
+            "X",
+            "Surge multiplier",
+            "How much above normal"
+          ],
+          [
+            "TrendingUp",
+            "Forecasting",
+            "Predicting demand"
+          ]
+        ]
+      },
+      "from": 2627,
+      "durationInFrames": 457,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_06.wav",
+      "cues": [
+        61,
+        143,
+        231,
+        357
+      ],
+      "captions": [
+        {
+          "text": "Here are four terms.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "ETA, the estimated time of arrival.",
+          "from": 61,
+          "to": 140
+        },
+        {
+          "text": "Matching, pairing riders with drivers.",
+          "from": 143,
+          "to": 228
+        },
+        {
+          "text": "The surge multiplier,",
+          "from": 231,
+          "to": 274
+        },
+        {
+          "text": "how much higher than normal",
+          "from": 276,
+          "to": 317
+        },
+        {
+          "text": "the fare is.",
+          "from": 318,
+          "to": 354
+        },
+        {
+          "text": "And forecasting,",
+          "from": 357,
+          "to": 388
+        },
+        {
+          "text": "predicting future demand.",
+          "from": 390,
+          "to": 445
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Surge prices are completely random.",
+        "fact": "They're mainly driven by demand and supply in your area right now.",
+        "tip": "Wait a bit or walk a little"
+      },
+      "from": 3084,
+      "durationInFrames": 458,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_07.wav",
+      "cues": [
+        59,
+        168
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think surge prices are",
+          "from": 59,
+          "to": 115
+        },
+        {
+          "text": "completely random.",
+          "from": 116,
+          "to": 166
+        },
+        {
+          "text": "They're mainly driven by demand",
+          "from": 168,
+          "to": 218
+        },
+        {
+          "text": "and supply in your area,",
+          "from": 219,
+          "to": 260
+        },
+        {
+          "text": "at that moment.",
+          "from": 262,
+          "to": 299
+        },
+        {
+          "text": "So waiting a few minutes,",
+          "from": 302,
+          "to": 341
+        },
+        {
+          "text": "or walking a little way,",
+          "from": 345,
+          "to": 387
+        },
+        {
+          "text": "can often lower the price.",
+          "from": 389,
+          "to": 445
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "Ride prices surge because of…",
+        "options": [
+          "Random numbers",
+          "High demand and few free drivers",
+          "A broken app"
+        ],
+        "answer": 1
+      },
+      "from": 3542,
+      "durationInFrames": 381,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_08.wav",
+      "cues": [
+        90,
+        292
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 28
+        },
+        {
+          "text": "Why do ride prices surge?",
+          "from": 30,
+          "to": 88
+        },
+        {
+          "text": "Pause and think,",
+          "from": 90,
+          "to": 123
+        },
+        {
+          "text": "and if you get it",
+          "from": 124,
+          "to": 141
+        },
+        {
+          "text": "right, comment below!",
+          "from": 142,
+          "to": 193
+        },
+        {
+          "text": "High demand,",
+          "from": 292,
+          "to": 316
+        },
+        {
+          "text": "and few free drivers!",
+          "from": 318,
+          "to": 367
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Match",
+            "best driver, not just closest"
+          ],
+          [
+            "ETA",
+            "predicted with traffic"
+          ],
+          [
+            "Surge",
+            "demand vs supply"
+          ],
+          [
+            "Forecast",
+            "predict busy areas"
+          ]
+        ],
+        "next": "EP 27 · Transformers, Part 1"
+      },
+      "from": 3923,
+      "durationInFrames": 708,
+      "voiceFrom": 10,
+      "audio": "lessons/uc16/voice_09.wav",
+      "cues": [
+        46,
+        158,
+        257,
+        348,
+        457
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "The app matches you with",
+          "from": 46,
+          "to": 89
+        },
+        {
+          "text": "the best driver,",
+          "from": 89,
+          "to": 118
+        },
+        {
+          "text": "not just the closest.",
+          "from": 118,
+          "to": 156
+        },
+        {
+          "text": "It predicts arrival and trip",
+          "from": 158,
+          "to": 200
+        },
+        {
+          "text": "times using traffic.",
+          "from": 202,
+          "to": 253
+        },
+        {
+          "text": "Surge comes from high demand",
+          "from": 257,
+          "to": 306
+        },
+        {
+          "text": "and low supply.",
+          "from": 308,
+          "to": 346
+        },
+        {
+          "text": "And forecasting moves drivers to",
+          "from": 348,
+          "to": 401
+        },
+        {
+          "text": "busy areas early.",
+          "from": 402,
+          "to": 454
+        },
+        {
+          "text": "Next, the idea that changed",
+          "from": 457,
+          "to": 508
+        },
+        {
+          "text": "AI forever,",
+          "from": 510,
+          "to": 543
+        },
+        {
+          "text": "transformers and attention,",
+          "from": 545,
+          "to": 595
+        },
+        {
+          "text": "part one.",
+          "from": 597,
+          "to": 628
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 632,
+          "to": 696
+        }
+      ],
+      "image": null
+    }
+  ]
+}

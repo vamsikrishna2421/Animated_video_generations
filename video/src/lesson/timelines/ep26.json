@@ -1,0 +1,775 @@
+{
+  "id": "ep26",
+  "episode": 26,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Overfitting vs Underfitting",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 4632,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep26/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 26",
+        "title": [
+          "Overfitting",
+          "vs Underfitting"
+        ],
+        "subtitle": "Memorising vs understanding",
+        "buzzwords": [
+          "Overfitting",
+          "Underfitting",
+          "Test set",
+          "Accuracy",
+          "Regularisation",
+          "Early stopping",
+          "Generalisation",
+          "Memorising"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 426,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_01.wav",
+      "cues": [
+        220,
+        320
+      ],
+      "captions": [
+        {
+          "text": "Imagine a student who memorises",
+          "from": 10,
+          "to": 64
+        },
+        {
+          "text": "last year's exam answers,",
+          "from": 67,
+          "to": 134
+        },
+        {
+          "text": "and then fails when the",
+          "from": 136,
+          "to": 166
+        },
+        {
+          "text": "questions change.",
+          "from": 168,
+          "to": 217
+        },
+        {
+          "text": "AI models can make exactly",
+          "from": 220,
+          "to": 274
+        },
+        {
+          "text": "the same mistake.",
+          "from": 275,
+          "to": 318
+        },
+        {
+          "text": "Let's understand overfitting,",
+          "from": 320,
+          "to": 374
+        },
+        {
+          "text": "and underfitting.",
+          "from": 376,
+          "to": 413
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Memorise vs understand",
+        "kicker": "THE CORE IDEA",
+        "left": {
+          "icon": "Copy",
+          "title": "Overfitting",
+          "stat": "Memorises",
+          "label": "aces practice, fails the real exam"
+        },
+        "right": {
+          "icon": "Lightbulb",
+          "title": "Good fit",
+          "stat": "Understands",
+          "label": "does well on new questions"
+        }
+      },
+      "from": 426,
+      "durationInFrames": 481,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_02.wav",
+      "cues": [
+        64,
+        317
+      ],
+      "captions": [
+        {
+          "text": "Here's the core idea.",
+          "from": 10,
+          "to": 61
+        },
+        {
+          "text": "An overfit model memorises its",
+          "from": 64,
+          "to": 122
+        },
+        {
+          "text": "training data,",
+          "from": 124,
+          "to": 156
+        },
+        {
+          "text": "even the random noise,",
+          "from": 158,
+          "to": 200
+        },
+        {
+          "text": "so it aces practice,",
+          "from": 203,
+          "to": 250
+        },
+        {
+          "text": "but fails on new data.",
+          "from": 251,
+          "to": 314
+        },
+        {
+          "text": "A well fit model learns",
+          "from": 317,
+          "to": 359
+        },
+        {
+          "text": "the real pattern,",
+          "from": 361,
+          "to": 395
+        },
+        {
+          "text": "so it does well on",
+          "from": 397,
+          "to": 428
+        },
+        {
+          "text": "new data too.",
+          "from": 429,
+          "to": 468
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Underfitting",
+        "short": "Under",
+        "definition": "When a model is too simple to learn the pattern, so it does badly everywhere.",
+        "chips": [
+          [
+            "XCircle",
+            "Bad on practice"
+          ],
+          [
+            "XCircle",
+            "Bad on the test"
+          ],
+          [
+            "BookX",
+            "Barely studied"
+          ]
+        ]
+      },
+      "from": 907,
+      "durationInFrames": 430,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_03.wav",
+      "cues": [
+        104,
+        221,
+        275,
+        338
+      ],
+      "captions": [
+        {
+          "text": "And there's the opposite problem, underfitting.",
+          "from": 10,
+          "to": 101
+        },
+        {
+          "text": "An underfit model is too",
+          "from": 104,
+          "to": 150
+        },
+        {
+          "text": "simple to learn the pattern",
+          "from": 153,
+          "to": 189
+        },
+        {
+          "text": "at all.",
+          "from": 190,
+          "to": 219
+        },
+        {
+          "text": "It does badly on practice,",
+          "from": 221,
+          "to": 275
+        },
+        {
+          "text": "it does badly on the",
+          "from": 275,
+          "to": 317
+        },
+        {
+          "text": "real test,",
+          "from": 317,
+          "to": 338
+        },
+        {
+          "text": "just like a student who",
+          "from": 338,
+          "to": 386
+        },
+        {
+          "text": "barely studied.",
+          "from": 386,
+          "to": 418
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "table",
+      "data": {
+        "heading": "The whole picture",
+        "kicker": "THE CHEAT SHEET",
+        "cols": [
+          "Practice",
+          "Real test"
+        ],
+        "rows": [
+          [
+            "Underfit",
+            "✗",
+            "✗"
+          ],
+          [
+            "Overfit",
+            "✓",
+            "✗"
+          ],
+          [
+            "Good fit",
+            "✓",
+            "✓"
+          ]
+        ]
+      },
+      "from": 1337,
+      "durationInFrames": 431,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_04.wav",
+      "cues": [
+        61,
+        147,
+        209,
+        324
+      ],
+      "captions": [
+        {
+          "text": "Here's the whole picture.",
+          "from": 10,
+          "to": 59
+        },
+        {
+          "text": "Practice scores,",
+          "from": 61,
+          "to": 89
+        },
+        {
+          "text": "against real test scores.",
+          "from": 91,
+          "to": 145
+        },
+        {
+          "text": "Underfit, bad on both.",
+          "from": 147,
+          "to": 207
+        },
+        {
+          "text": "Overfit, great on practice,",
+          "from": 209,
+          "to": 267
+        },
+        {
+          "text": "but bad on the real test.",
+          "from": 267,
+          "to": 322
+        },
+        {
+          "text": "And a good fit,",
+          "from": 324,
+          "to": 349
+        },
+        {
+          "text": "good on both,",
+          "from": 355,
+          "to": 376
+        },
+        {
+          "text": "and that's the goal.",
+          "from": 381,
+          "to": 419
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "How to spot it",
+        "kicker": "THE WARNING SIGNS",
+        "steps": [
+          [
+            "Scale",
+            "Compare scores",
+            "Training vs test (EP 25)"
+          ],
+          [
+            "TriangleAlert",
+            "Big gap",
+            "99% vs 70%: memorising"
+          ],
+          [
+            "CheckCircle2",
+            "Close and high",
+            "A good fit"
+          ]
+        ]
+      },
+      "from": 1768,
+      "durationInFrames": 544,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_05.wav",
+      "cues": [
+        71,
+        255,
+        424
+      ],
+      "captions": [
+        {
+          "text": "So how do you catch overfitting?",
+          "from": 10,
+          "to": 69
+        },
+        {
+          "text": "Compare training accuracy with test",
+          "from": 71,
+          "to": 148
+        },
+        {
+          "text": "accuracy, remember the test set",
+          "from": 148,
+          "to": 216
+        },
+        {
+          "text": "from episode 25?",
+          "from": 216,
+          "to": 252
+        },
+        {
+          "text": "If training is 99 percent,",
+          "from": 255,
+          "to": 320
+        },
+        {
+          "text": "but the test is only",
+          "from": 320,
+          "to": 370
+        },
+        {
+          "text": "70, it's memorising.",
+          "from": 370,
+          "to": 421
+        },
+        {
+          "text": "If both are close,",
+          "from": 424,
+          "to": 458
+        },
+        {
+          "text": "and high,",
+          "from": 462,
+          "to": 485
+        },
+        {
+          "text": "you've got a good fit.",
+          "from": 488,
+          "to": 531
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "The fixes",
+        "kicker": "HOW TO FIX IT",
+        "terms": [
+          [
+            "Database",
+            "More data",
+            "Less to memorise"
+          ],
+          [
+            "Minimize2",
+            "Simpler model",
+            "Right-sized for the task"
+          ],
+          [
+            "Scale",
+            "Regularisation",
+            "A penalty for complexity"
+          ],
+          [
+            "Timer",
+            "Early stopping",
+            "Stop before memorising"
+          ]
+        ]
+      },
+      "from": 2312,
+      "durationInFrames": 538,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_06.wav",
+      "cues": [
+        56,
+        183,
+        279,
+        405
+      ],
+      "captions": [
+        {
+          "text": "And how do you fix it?",
+          "from": 10,
+          "to": 53
+        },
+        {
+          "text": "More data,",
+          "from": 56,
+          "to": 79
+        },
+        {
+          "text": "so there's more to learn",
+          "from": 81,
+          "to": 111
+        },
+        {
+          "text": "from, and less to memorise.",
+          "from": 113,
+          "to": 180
+        },
+        {
+          "text": "A simpler model,",
+          "from": 183,
+          "to": 216
+        },
+        {
+          "text": "if it's too big for",
+          "from": 216,
+          "to": 256
+        },
+        {
+          "text": "the task.",
+          "from": 256,
+          "to": 276
+        },
+        {
+          "text": "Regularisation, a gentle penalty for",
+          "from": 279,
+          "to": 354
+        },
+        {
+          "text": "being too complex.",
+          "from": 355,
+          "to": 403
+        },
+        {
+          "text": "And early stopping,",
+          "from": 405,
+          "to": 441
+        },
+        {
+          "text": "ending training before it starts memorising.",
+          "from": 442,
+          "to": 525
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "A 100% training score means an amazing model.",
+        "fact": "It's often a warning sign of memorising. Always check on data it has never seen.",
+        "tip": "Trust the test score"
+      },
+      "from": 2850,
+      "durationInFrames": 477,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_07.wav",
+      "cues": [
+        59,
+        217
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think a model that",
+          "from": 59,
+          "to": 96
+        },
+        {
+          "text": "scores 100 percent in training",
+          "from": 98,
+          "to": 167
+        },
+        {
+          "text": "must be amazing.",
+          "from": 170,
+          "to": 214
+        },
+        {
+          "text": "It's often a warning sign.",
+          "from": 217,
+          "to": 273
+        },
+        {
+          "text": "A perfect training score usually",
+          "from": 275,
+          "to": 332
+        },
+        {
+          "text": "means it memorised,",
+          "from": 334,
+          "to": 376
+        },
+        {
+          "text": "so always check it on",
+          "from": 377,
+          "to": 410
+        },
+        {
+          "text": "data it has never seen.",
+          "from": 411,
+          "to": 465
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "99% in training, 60% on new data means…",
+        "options": [
+          "Underfitting",
+          "Overfitting",
+          "Nothing, it's perfect"
+        ],
+        "answer": 1
+      },
+      "from": 3327,
+      "durationInFrames": 557,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_08.wav",
+      "cues": [
+        238,
+        443
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 31
+        },
+        {
+          "text": "A model scores 99 percent",
+          "from": 44,
+          "to": 101
+        },
+        {
+          "text": "in training,",
+          "from": 101,
+          "to": 129
+        },
+        {
+          "text": "but only 60 percent on",
+          "from": 129,
+          "to": 180
+        },
+        {
+          "text": "new data.",
+          "from": 180,
+          "to": 202
+        },
+        {
+          "text": "What's wrong?",
+          "from": 204,
+          "to": 236
+        },
+        {
+          "text": "Pause and think,",
+          "from": 238,
+          "to": 272
+        },
+        {
+          "text": "and if you get it",
+          "from": 276,
+          "to": 294
+        },
+        {
+          "text": "right, comment below!",
+          "from": 295,
+          "to": 344
+        },
+        {
+          "text": "Overfitting!",
+          "from": 443,
+          "to": 478
+        },
+        {
+          "text": "It memorised the training data.",
+          "from": 480,
+          "to": 546
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Overfit",
+            "memorises, fails new data"
+          ],
+          [
+            "Underfit",
+            "too simple, fails everywhere"
+          ],
+          [
+            "Spot it",
+            "compare train vs test"
+          ],
+          [
+            "Fix",
+            "more data, simpler, stop early"
+          ]
+        ],
+        "next": "Use Case · Ride ETA & surge"
+      },
+      "from": 3884,
+      "durationInFrames": 748,
+      "voiceFrom": 10,
+      "audio": "lessons/ep26/voice_09.wav",
+      "cues": [
+        45,
+        154,
+        264,
+        357,
+        489
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 44
+        },
+        {
+          "text": "An overfit model memorises,",
+          "from": 45,
+          "to": 98
+        },
+        {
+          "text": "and fails on new data.",
+          "from": 103,
+          "to": 152
+        },
+        {
+          "text": "An underfit model is too",
+          "from": 154,
+          "to": 194
+        },
+        {
+          "text": "simple, and fails everywhere.",
+          "from": 196,
+          "to": 262
+        },
+        {
+          "text": "You spot it by comparing",
+          "from": 264,
+          "to": 301
+        },
+        {
+          "text": "training and test scores.",
+          "from": 303,
+          "to": 355
+        },
+        {
+          "text": "And you fix it with",
+          "from": 357,
+          "to": 379
+        },
+        {
+          "text": "more data,",
+          "from": 380,
+          "to": 404
+        },
+        {
+          "text": "a simpler model,",
+          "from": 406,
+          "to": 434
+        },
+        {
+          "text": "or stopping early.",
+          "from": 436,
+          "to": 486
+        },
+        {
+          "text": "Next, a real world breakdown,",
+          "from": 489,
+          "to": 557
+        },
+        {
+          "text": "how ride apps set arrival",
+          "from": 559,
+          "to": 606
+        },
+        {
+          "text": "times and surge prices.",
+          "from": 607,
+          "to": 672
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 675,
+          "to": 736
+        }
+      ],
+      "image": null
+    }
+  ]
+}

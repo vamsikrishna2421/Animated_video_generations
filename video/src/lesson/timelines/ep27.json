@@ -1,0 +1,823 @@
+{
+  "id": "ep27",
+  "episode": 27,
+  "series": "AI FROM SCRATCH",
+  "handle": "@ai_maastaaru",
+  "title": "Transformers Part 1 Attention",
+  "host": "female",
+  "label": null,
+  "fps": 30,
+  "totalFrames": 5098,
+  "music": {
+    "bpm": 90,
+    "volume": 0.16,
+    "duckedVolume": 0.07,
+    "audio": "lessons/ep27/music.wav"
+  },
+  "scenes": [
+    {
+      "type": "banner",
+      "data": {
+        "kicker": "EPISODE 27",
+        "title": [
+          "Attention"
+        ],
+        "subtitle": "Transformers, Part 1: the key idea",
+        "buzzwords": [
+          "Transformer",
+          "Self-attention",
+          "Context",
+          "Multi-head",
+          "2017",
+          "Parallel",
+          "Tokens",
+          "GPT"
+        ]
+      },
+      "from": 0,
+      "durationInFrames": 558,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_01.wav",
+      "cues": [
+        375,
+        469
+      ],
+      "captions": [
+        {
+          "text": "Almost every modern AI,",
+          "from": 10,
+          "to": 75
+        },
+        {
+          "text": "ChatGPT, Claude,",
+          "from": 75,
+          "to": 121
+        },
+        {
+          "text": "Gemini, even many image and",
+          "from": 121,
+          "to": 196
+        },
+        {
+          "text": "music models,",
+          "from": 196,
+          "to": 234
+        },
+        {
+          "text": "is built on one design",
+          "from": 234,
+          "to": 296
+        },
+        {
+          "text": "from 2017,",
+          "from": 296,
+          "to": 326
+        },
+        {
+          "text": "the transformer.",
+          "from": 326,
+          "to": 372
+        },
+        {
+          "text": "And its secret ingredient is",
+          "from": 375,
+          "to": 420
+        },
+        {
+          "text": "called attention.",
+          "from": 421,
+          "to": 466
+        },
+        {
+          "text": "So let's understand it,",
+          "from": 469,
+          "to": 508
+        },
+        {
+          "text": "in part one.",
+          "from": 510,
+          "to": 546
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "definition",
+      "data": {
+        "term": "Attention",
+        "short": "Focus",
+        "definition": "Each word looks at every other word and decides which ones matter for its meaning.",
+        "chips": [
+          [
+            "Eye",
+            "Look at all words"
+          ],
+          [
+            "SlidersHorizontal",
+            "Weigh the important ones"
+          ],
+          [
+            "Sparkles",
+            "Build the meaning"
+          ]
+        ]
+      },
+      "from": 558,
+      "durationInFrames": 508,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_02.wav",
+      "cues": [
+        194,
+        278,
+        386,
+        441
+      ],
+      "captions": [
+        {
+          "text": "Attention is the idea that",
+          "from": 10,
+          "to": 58
+        },
+        {
+          "text": "each word can look at",
+          "from": 60,
+          "to": 91
+        },
+        {
+          "text": "every other word,",
+          "from": 93,
+          "to": 128
+        },
+        {
+          "text": "and decide which ones matter.",
+          "from": 130,
+          "to": 192
+        },
+        {
+          "text": "It's how a model understands context.",
+          "from": 194,
+          "to": 276
+        },
+        {
+          "text": "Each word asks,",
+          "from": 278,
+          "to": 316
+        },
+        {
+          "text": "which other words help explain me?",
+          "from": 317,
+          "to": 383
+        },
+        {
+          "text": "It gives those words more",
+          "from": 386,
+          "to": 421
+        },
+        {
+          "text": "weight, and builds its meaning",
+          "from": 424,
+          "to": 470
+        },
+        {
+          "text": "from them.",
+          "from": 471,
+          "to": 496
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "steps",
+      "data": {
+        "heading": "One word, two meanings",
+        "kicker": "ATTENTION IN ACTION",
+        "steps": [
+          [
+            "Waves",
+            "“river bank”",
+            "bank ↔ river → riverside"
+          ],
+          [
+            "Landmark",
+            "“money in the bank”",
+            "bank ↔ money, deposited"
+          ],
+          [
+            "Lightbulb",
+            "Context decides",
+            "Same word, different meaning"
+          ]
+        ]
+      },
+      "from": 1066,
+      "durationInFrames": 605,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_03.wav",
+      "cues": [
+        95,
+        284,
+        461
+      ],
+      "captions": [
+        {
+          "text": "Here's an example.",
+          "from": 10,
+          "to": 48
+        },
+        {
+          "text": "Take the word bank.",
+          "from": 50,
+          "to": 93
+        },
+        {
+          "text": "In, I sat on the",
+          "from": 95,
+          "to": 129
+        },
+        {
+          "text": "river bank,",
+          "from": 129,
+          "to": 153
+        },
+        {
+          "text": "attention links bank to river,",
+          "from": 153,
+          "to": 215
+        },
+        {
+          "text": "so it means the side",
+          "from": 215,
+          "to": 257
+        },
+        {
+          "text": "of a river.",
+          "from": 257,
+          "to": 281
+        },
+        {
+          "text": "In, I deposited money in",
+          "from": 284,
+          "to": 338
+        },
+        {
+          "text": "the bank,",
+          "from": 338,
+          "to": 359
+        },
+        {
+          "text": "attention links bank to money,",
+          "from": 359,
+          "to": 425
+        },
+        {
+          "text": "and deposited.",
+          "from": 425,
+          "to": 458
+        },
+        {
+          "text": "Same word,",
+          "from": 461,
+          "to": 485
+        },
+        {
+          "text": "different meaning,",
+          "from": 488,
+          "to": 512
+        },
+        {
+          "text": "and attention works it out",
+          "from": 516,
+          "to": 551
+        },
+        {
+          "text": "from context.",
+          "from": 552,
+          "to": 592
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "versus",
+      "data": {
+        "heading": "Old vs transformer",
+        "kicker": "WHY IT CHANGED EVERYTHING",
+        "left": {
+          "icon": "ArrowRight",
+          "title": "Older models",
+          "stat": "One word at a time",
+          "label": "forget the beginning"
+        },
+        "right": {
+          "icon": "Layers",
+          "title": "Transformers",
+          "stat": "All words at once",
+          "label": "long context, fast training"
+        }
+      },
+      "from": 1671,
+      "durationInFrames": 510,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_04.wav",
+      "cues": [
+        78,
+        264
+      ],
+      "captions": [
+        {
+          "text": "So why was this such",
+          "from": 10,
+          "to": 40
+        },
+        {
+          "text": "a big deal?",
+          "from": 41,
+          "to": 76
+        },
+        {
+          "text": "Older models read text one",
+          "from": 78,
+          "to": 134
+        },
+        {
+          "text": "word at a time,",
+          "from": 134,
+          "to": 168
+        },
+        {
+          "text": "and often forgot the start",
+          "from": 168,
+          "to": 224
+        },
+        {
+          "text": "of long passages.",
+          "from": 224,
+          "to": 262
+        },
+        {
+          "text": "Transformers look at all the",
+          "from": 264,
+          "to": 320
+        },
+        {
+          "text": "words at once,",
+          "from": 320,
+          "to": 349
+        },
+        {
+          "text": "so they capture long range",
+          "from": 349,
+          "to": 400
+        },
+        {
+          "text": "meaning, and train much faster",
+          "from": 400,
+          "to": 460
+        },
+        {
+          "text": "on powerful chips.",
+          "from": 460,
+          "to": 496
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "terms",
+      "data": {
+        "heading": "Attention words",
+        "kicker": "JARGON BUSTER",
+        "terms": [
+          [
+            "Repeat",
+            "Self-attention",
+            "Words look at each other"
+          ],
+          [
+            "SlidersHorizontal",
+            "Attention weights",
+            "How strong each link is"
+          ],
+          [
+            "Layers",
+            "Multi-head",
+            "Many patterns at once"
+          ],
+          [
+            "Zap",
+            "Parallel",
+            "All words together"
+          ]
+        ]
+      },
+      "from": 2181,
+      "durationInFrames": 641,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_05.wav",
+      "cues": [
+        61,
+        190,
+        318,
+        513
+      ],
+      "captions": [
+        {
+          "text": "Here are a few terms.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "Self attention,",
+          "from": 61,
+          "to": 90
+        },
+        {
+          "text": "where words in the same",
+          "from": 90,
+          "to": 134
+        },
+        {
+          "text": "sentence look at each other.",
+          "from": 134,
+          "to": 187
+        },
+        {
+          "text": "Attention weights,",
+          "from": 190,
+          "to": 220
+        },
+        {
+          "text": "how strongly one word focuses",
+          "from": 223,
+          "to": 279
+        },
+        {
+          "text": "on another.",
+          "from": 280,
+          "to": 315
+        },
+        {
+          "text": "Multi head attention,",
+          "from": 318,
+          "to": 361
+        },
+        {
+          "text": "many attention patterns at once,",
+          "from": 361,
+          "to": 426
+        },
+        {
+          "text": "like one for grammar,",
+          "from": 426,
+          "to": 470
+        },
+        {
+          "text": "and one for meaning.",
+          "from": 470,
+          "to": 511
+        },
+        {
+          "text": "And parallel processing,",
+          "from": 513,
+          "to": 561
+        },
+        {
+          "text": "handling all the words together.",
+          "from": 564,
+          "to": 630
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "examples",
+      "data": {
+        "heading": "Transformers everywhere",
+        "items": [
+          [
+            "MessageSquare",
+            "LLMs",
+            "ChatGPT, Claude, Gemini"
+          ],
+          [
+            "Languages",
+            "Translation",
+            "Where transformers started"
+          ],
+          [
+            "Image",
+            "Images and audio",
+            "Patches and sound tokens"
+          ]
+        ]
+      },
+      "from": 2822,
+      "durationInFrames": 516,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_06.wav",
+      "cues": [
+        69,
+        236,
+        352
+      ],
+      "captions": [
+        {
+          "text": "So where are transformers used?",
+          "from": 10,
+          "to": 67
+        },
+        {
+          "text": "In chatbots and LLMs,",
+          "from": 69,
+          "to": 135
+        },
+        {
+          "text": "like ChatGPT,",
+          "from": 135,
+          "to": 177
+        },
+        {
+          "text": "Claude and Gemini.",
+          "from": 177,
+          "to": 233
+        },
+        {
+          "text": "In translation,",
+          "from": 236,
+          "to": 269
+        },
+        {
+          "text": "which is actually where transformers started.",
+          "from": 271,
+          "to": 350
+        },
+        {
+          "text": "And even in images and",
+          "from": 352,
+          "to": 390
+        },
+        {
+          "text": "audio, where patches and sound",
+          "from": 392,
+          "to": 446
+        },
+        {
+          "text": "tokens attend to each other.",
+          "from": 448,
+          "to": 504
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "myth",
+      "data": {
+        "myth": "Attention means the AI is consciously focusing.",
+        "fact": "It's maths: computing how related each word is to every other word. The name is a metaphor.",
+        "tip": "Helpful name, simple maths"
+      },
+      "from": 3338,
+      "durationInFrames": 538,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_07.wav",
+      "cues": [
+        59,
+        238
+      ],
+      "captions": [
+        {
+          "text": "Here's a common myth.",
+          "from": 10,
+          "to": 57
+        },
+        {
+          "text": "People think attention means the",
+          "from": 59,
+          "to": 110
+        },
+        {
+          "text": "AI is focusing,",
+          "from": 112,
+          "to": 163
+        },
+        {
+          "text": "like a person paying attention.",
+          "from": 164,
+          "to": 236
+        },
+        {
+          "text": "It's just maths,",
+          "from": 238,
+          "to": 275
+        },
+        {
+          "text": "a way of computing how",
+          "from": 278,
+          "to": 315
+        },
+        {
+          "text": "related each word is to",
+          "from": 316,
+          "to": 360
+        },
+        {
+          "text": "every other word.",
+          "from": 362,
+          "to": 405
+        },
+        {
+          "text": "The name is a helpful",
+          "from": 407,
+          "to": 452
+        },
+        {
+          "text": "metaphor, not a sign of awareness.",
+          "from": 452,
+          "to": 524
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "quiz",
+      "data": {
+        "question": "In “I sat on the river bank”, bank is explained by…",
+        "options": [
+          "sat",
+          "river",
+          "I"
+        ],
+        "answer": 1
+      },
+      "from": 3876,
+      "durationInFrames": 555,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_08.wav",
+      "cues": [
+        196,
+        407
+      ],
+      "captions": [
+        {
+          "text": "Quick quiz!",
+          "from": 10,
+          "to": 35
+        },
+        {
+          "text": "In the sentence,",
+          "from": 44,
+          "to": 74
+        },
+        {
+          "text": "I sat on the river",
+          "from": 74,
+          "to": 107
+        },
+        {
+          "text": "bank, which word helps the",
+          "from": 107,
+          "to": 154
+        },
+        {
+          "text": "model understand bank?",
+          "from": 154,
+          "to": 194
+        },
+        {
+          "text": "Pause and think,",
+          "from": 196,
+          "to": 232
+        },
+        {
+          "text": "and if you get it",
+          "from": 234,
+          "to": 251
+        },
+        {
+          "text": "right, comment below!",
+          "from": 253,
+          "to": 308
+        },
+        {
+          "text": "River!",
+          "from": 407,
+          "to": 430
+        },
+        {
+          "text": "Attention links bank to river,",
+          "from": 433,
+          "to": 486
+        },
+        {
+          "text": "so it means a riverside.",
+          "from": 489,
+          "to": 543
+        }
+      ],
+      "image": null
+    },
+    {
+      "type": "recap",
+      "data": {
+        "points": [
+          [
+            "Attention",
+            "words look at each other"
+          ],
+          [
+            "Context",
+            "decides the meaning"
+          ],
+          [
+            "All at once",
+            "not one word at a time"
+          ],
+          [
+            "Everywhere",
+            "text, images, audio"
+          ]
+        ],
+        "next": "EP 28 · Transformers, Part 2"
+      },
+      "from": 4431,
+      "durationInFrames": 667,
+      "voiceFrom": 10,
+      "audio": "lessons/ep27/voice_09.wav",
+      "cues": [
+        48,
+        143,
+        211,
+        332,
+        428
+      ],
+      "captions": [
+        {
+          "text": "Let's recap.",
+          "from": 10,
+          "to": 45
+        },
+        {
+          "text": "Attention lets every word look",
+          "from": 48,
+          "to": 96
+        },
+        {
+          "text": "at every other word.",
+          "from": 98,
+          "to": 141
+        },
+        {
+          "text": "Context decides the meaning.",
+          "from": 143,
+          "to": 208
+        },
+        {
+          "text": "Transformers read all the words",
+          "from": 211,
+          "to": 274
+        },
+        {
+          "text": "at once,",
+          "from": 274,
+          "to": 292
+        },
+        {
+          "text": "not one at a time.",
+          "from": 292,
+          "to": 330
+        },
+        {
+          "text": "And they power text,",
+          "from": 332,
+          "to": 369
+        },
+        {
+          "text": "image and audio models.",
+          "from": 372,
+          "to": 426
+        },
+        {
+          "text": "In part two,",
+          "from": 428,
+          "to": 460
+        },
+        {
+          "text": "we'll see how a transformer",
+          "from": 462,
+          "to": 504
+        },
+        {
+          "text": "turns attention into a full answer.",
+          "from": 506,
+          "to": 582
+        },
+        {
+          "text": "Follow AI Maastaaru!",
+          "from": 585,
+          "to": 655
+        }
+      ],
+      "image": null
+    }
+  ]
+}
