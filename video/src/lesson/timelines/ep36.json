@@ -7,7 +7,7 @@
   "host": "female",
   "label": null,
   "fps": 30,
-  "totalFrames": 4793,
+  "totalFrames": 4862,
   "music": {
     "bpm": 90,
     "volume": 0.16,
@@ -33,56 +33,62 @@
           "CUDA",
           "Data centre",
           "Nvidia"
-        ]
+        ],
+        "hook": "Why AI needs *gaming chips*"
       },
       "from": 0,
-      "durationInFrames": 433,
+      "durationInFrames": 502,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_01.wav",
       "cues": [
-        196,
-        316
+        264,
+        384
       ],
       "captions": [
         {
-          "text": "Here's a surprise.",
+          "text": "Why AI needs gaming chips.",
           "from": 10,
-          "to": 53
+          "to": 80
+        },
+        {
+          "text": "Here's a surprise.",
+          "from": 82,
+          "to": 125
         },
         {
           "text": "The chips made for video",
-          "from": 55,
-          "to": 89
+          "from": 126,
+          "to": 161
         },
         {
           "text": "games now power almost every",
-          "from": 91,
-          "to": 146
+          "from": 162,
+          "to": 217
         },
         {
           "text": "AI you use.",
-          "from": 148,
-          "to": 193
+          "from": 219,
+          "to": 262
         },
         {
           "text": "Companies spend billions buying them,",
-          "from": 196,
-          "to": 258
+          "from": 264,
+          "to": 325
         },
         {
           "text": "and wait months to get them.",
-          "from": 260,
-          "to": 313
+          "from": 327,
+          "to": 381
         },
         {
           "text": "Why does AI need GPUs?",
-          "from": 316,
-          "to": 380
+          "from": 384,
+          "to": 450
         },
         {
           "text": "Let's find out.",
-          "from": 383,
-          "to": 420
+          "from": 453,
+          "to": 490
         }
       ],
       "image": null
@@ -105,7 +111,7 @@
           "label": "simple sums, all at once"
         }
       },
-      "from": 433,
+      "from": 502,
       "durationInFrames": 586,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_02.wav",
@@ -198,7 +204,7 @@
           ]
         ]
       },
-      "from": 1019,
+      "from": 1088,
       "durationInFrames": 560,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_03.wav",
@@ -285,7 +291,7 @@
           ]
         ]
       },
-      "from": 1579,
+      "from": 1648,
       "durationInFrames": 589,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_04.wav",
@@ -381,7 +387,7 @@
           ]
         ]
       },
-      "from": 2168,
+      "from": 2237,
       "durationInFrames": 588,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_05.wav",
@@ -472,7 +478,7 @@
           ]
         ]
       },
-      "from": 2756,
+      "from": 2825,
       "durationInFrames": 537,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_06.wav",
@@ -542,7 +548,7 @@
         "fact": "Memory is often the real limit. If the model doesn't fit in VRAM, speed doesn't matter.",
         "tip": "Check the VRAM first"
       },
-      "from": 3293,
+      "from": 3362,
       "durationInFrames": 433,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_07.wav",
@@ -610,7 +616,7 @@
         ],
         "answer": 0
       },
-      "from": 3726,
+      "from": 3795,
       "durationInFrames": 484,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_08.wav",
@@ -685,7 +691,7 @@
         ],
         "next": "EP 37 · Quantization"
       },
-      "from": 4210,
+      "from": 4279,
       "durationInFrames": 583,
       "voiceFrom": 10,
       "audio": "lessons/ep36/voice_09.wav",

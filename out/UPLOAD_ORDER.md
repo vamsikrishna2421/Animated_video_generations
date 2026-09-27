@@ -42,7 +42,7 @@ Already posted: `out/posted/`.
 | 035 | ep33 | RAG, Part 3: Hybrid Search and Measuring Quality | ready |
 | 036 | ep34 | Open vs Closed AI Models | ready |
 | 037 | ep35 | Small Language Models | ready |
-| 038 | ep36 | Why AI Runs on GPUs | rendering soon |
+| 038 | ep36 | Why AI Runs on GPUs | ready |
 | 039 | ep37 | Quantization: Shrinking AI Models | rendering soon |
 | 040 | ep38 | How to Run AI on Your Own Laptop | rendering soon |
 | 041 | ep39 | Where AI Costs Come From | rendering soon |
