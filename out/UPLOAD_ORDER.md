@@ -86,7 +86,7 @@ Already posted: `out/posted/`.
 | 079 | uc16 | How Ride Apps Set ETA and Surge Pricing | ready |
 | 080 | uc17 | How Face Unlock Works | ready |
 | 081 | uc18 | How Self Driving Cars See the Road | ready |
-| 082 | uc19 | How KYC Document Scanning Works | rendering soon |
+| 082 | uc19 | How KYC Document Scanning Works | ready |
 | 083 | uc20 | How Crop Disease Detection Apps Work | rendering soon |
 | 084 | uc21 | How Wake Words Like 'Hey Siri' Work | rendering soon |
 | 085 | uc22 | How Resume Screening Software Works | rendering soon |
