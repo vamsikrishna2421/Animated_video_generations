@@ -80,7 +80,7 @@ Already posted: `out/posted/`.
 | 073 | uc10 | How the Instagram Reels Feed Works | ready |
 | 074 | uc11 | How Google Lens Works | ready |
 | 075 | uc12 | How AI Tutor Apps Work | ready |
-| 076 | uc13 | How AI Music Generation Works | rendering soon |
+| 076 | uc13 | How AI Music Generation Works | ready |
 | 077 | uc14 | How UPI and Card Fraud Detection Works | rendering soon |
 | 078 | uc15 | How Delivery Apps Predict Arrival Time | rendering soon |
 | 079 | uc16 | How Ride Apps Set ETA and Surge Pricing | rendering soon |
