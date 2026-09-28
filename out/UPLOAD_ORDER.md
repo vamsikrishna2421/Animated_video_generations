@@ -91,4 +91,4 @@ Already posted: `out/posted/`.
 | 084 | uc21 | How Wake Words Like 'Hey Siri' Work | ready |
 | 085 | uc22 | How Resume Screening Software Works | ready |
 | 086 | uc23 | How AI Helps Doctors Read X-rays | ready |
-| 087 | uc24 | How Deepfake Detection Works | rendering soon |
+| 087 | uc24 | How Deepfake Detection Works | ready |
