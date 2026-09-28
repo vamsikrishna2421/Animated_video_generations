@@ -81,7 +81,7 @@ Already posted: `out/posted/`.
 | 074 | uc11 | How Google Lens Works | ready |
 | 075 | uc12 | How AI Tutor Apps Work | ready |
 | 076 | uc13 | How AI Music Generation Works | ready |
-| 077 | uc14 | How UPI and Card Fraud Detection Works | rendering soon |
+| 077 | uc14 | How UPI and Card Fraud Detection Works | ready |
 | 078 | uc15 | How Delivery Apps Predict Arrival Time | rendering soon |
 | 079 | uc16 | How Ride Apps Set ETA and Surge Pricing | rendering soon |
 | 080 | uc17 | How Face Unlock Works | rendering soon |
