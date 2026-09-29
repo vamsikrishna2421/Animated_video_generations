@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 from captions_data import POSTS  # noqa: E402
 
-POSTED = [f"ep{i:02d}" for i in range(0, 24)]
-EPS = [f"ep{i:02d}" for i in range(24, 59)]
+POSTED = [f"ep{i:02d}" for i in range(0, 25)]
+EPS = [f"ep{i:02d}" for i in range(25, 59)]
 QUIZ_AFTER = {"ep30": "q03", "ep40": "q04", "ep49": "q05", "ep58": "q06"}
 UCS = [f"uc{i:02d}" for i in range(1, 25)]
 ORDER = POSTED + [x for e in EPS for x in ([e] + ([QUIZ_AFTER[e]] if e in QUIZ_AFTER else []))] + UCS

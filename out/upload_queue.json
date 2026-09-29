@@ -1,6 +1,6 @@
 {
  "how_to_use": "Upload items in ascending serial order. Skip status 'posted'. Upload only status 'ready' (video exists); if the next serial is 'rendering soon', wait and re-read this file. Never skip ahead past a missing serial.",
- "next_serial": "025",
+ "next_serial": "026",
  "items": [
   {
    "serial": "001",
@@ -198,9 +198,9 @@
    "serial": "025",
    "id": "ep24",
    "title": "Supervised Unsupervised Reinforcement Learning",
-   "status": "ready",
-   "video": "out/025_ep24_three_ways_machines_learn.mp4",
-   "captions": "out/025_ep24_captions.txt"
+   "status": "posted",
+   "video": "out/posted/025_ep24_three_ways_machines_learn.mp4",
+   "captions": "out/posted/025_ep24_captions.txt"
   },
   {
    "serial": "026",
