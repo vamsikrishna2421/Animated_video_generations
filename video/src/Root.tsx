@@ -7,7 +7,7 @@ import { Lesson, LessonTimeline } from "./lesson/Lesson";
 import { timelines } from "./lesson/timelines";
 import { Story } from "./story/Story";
 import storyTl from "./story/story_timeline.json";
-import { Reel, ReelTimeline } from "./reel/Reel";
+import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
 export const RemotionRoot: React.FC = () => (
@@ -20,6 +20,18 @@ export const RemotionRoot: React.FC = () => (
       width={1920}
       height={1080}
     />
+    {(reels as unknown as ReelTimeline[]).map((tl) => (
+      <Composition
+        key={`yt-${tl.id}`}
+        id={`YT-${tl.id}`}
+        component={ReelYT as unknown as React.FC<Record<string, unknown>>}
+        defaultProps={{ tl }}
+        durationInFrames={tl.totalFrames}
+        fps={tl.fps}
+        width={1920}
+        height={1080}
+      />
+    ))}
     {(reels as unknown as ReelTimeline[]).map((tl) => (
       <Composition
         key={tl.id}

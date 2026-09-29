@@ -29,7 +29,7 @@ const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
 type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
-export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[] };
+export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -630,7 +630,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   );
 };
 
-const SceneWrap: React.FC<{ s: Scene; first: boolean }> = ({ s, first }) => {
+const SceneWrap: React.FC<{ s: Scene; first: boolean; noCaptions?: boolean }> = ({ s, first, noCaptions }) => {
   const f = useCurrentFrame();
   const cue = (n: number) => {
     for (const l of s.lines) if (l.cues[String(n)] !== undefined) return l.cues[String(n)];
@@ -645,8 +645,104 @@ const SceneWrap: React.FC<{ s: Scene; first: boolean }> = ({ s, first }) => {
       {(s.data.memes ?? []).map((m: Meme, i: number) => (
         <Sticker key={i} m={m} at={m.line !== undefined ? line(m.line).from + 4 : m.at !== undefined ? cue(m.at) : 0} />
       ))}
-      <Captions s={s} />
+      {!noCaptions && <Captions s={s} />}
     </AbsoluteFill>
+  );
+};
+
+// ---------------- YouTube (16:9, long-form) ----------------
+// Left: the reel's visual (portrait area y 240..1440, scaled 0.8). Right: chapter, title, notes that
+// appear on cues, and large subtitles. data.yt = { chapter, title, notes: [[text, cue]] }.
+const YTSubs: React.FC<{ s: Scene }> = ({ s }) => {
+  const f = useCurrentFrame();
+  const l = lineAt(s, f);
+  if (!l) return null;
+  const groups: Word[][] = [];
+  let cur: Word[] = [];
+  l.words.forEach((w) => {
+    cur.push(w);
+    if (cur.length >= 7 || /[.!?]$/.test(w.w)) {
+      groups.push(cur);
+      cur = [];
+    }
+  });
+  if (cur.length) groups.push(cur);
+  const g = groups.find((gr, i) => f < (groups[i + 1]?.[0].from ?? l.from + l.frames + 4)) ?? groups[groups.length - 1];
+  if (!g) return null;
+  return (
+    <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 46, lineHeight: 1.3, color: "white" }}>
+      {g.map((w, i) => (
+        <span key={i} style={{ color: f >= w.from && f < w.to + 2 ? C.amber : f >= w.from ? "white" : "rgba(255,255,255,0.5)" }}>{w.w} </span>
+      ))}
+    </div>
+  );
+};
+const YTNotes: React.FC<{ s: Scene; idx: number }> = ({ s, idx }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const y = s.data.yt ?? {};
+  const cue = (n: number) => {
+    for (const l of s.lines) if (l.cues[String(n)] !== undefined) return l.cues[String(n)];
+    return Math.round(s.frames * (n / 5));
+  };
+  const head = spring({ frame: f, fps, config: { damping: 14 } });
+  return (
+    <div style={{ position: "absolute", left: 1000, right: 70, top: 110, bottom: 60 }}>
+      <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 26, letterSpacing: 5, color: C.teal, opacity: head }}>CHAPTER {idx + 1}{y.chapter ? ` · ${String(y.chapter).toUpperCase()}` : ""}</div>
+      <div style={{ marginTop: 10, fontFamily: C.inter, fontWeight: 900, fontSize: 60, lineHeight: 1.08, color: "white", opacity: head, transform: `translateX(${(1 - head) * 40}px)` }}>{y.title ?? ""}</div>
+      <div style={{ marginTop: 34, display: "flex", flexDirection: "column", gap: 18 }}>
+        {(y.notes ?? []).map(([t, at]: [string, number], i: number) => {
+          const a = cue(at);
+          const p = spring({ frame: f - a, fps, config: { damping: 14 } });
+          return f >= a ? (
+            <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start", opacity: p, transform: `translateX(${(1 - p) * 30}px)` }}>
+              <div style={{ marginTop: 14, width: 14, height: 14, borderRadius: 7, background: C.amber, flexShrink: 0 }} />
+              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 36, lineHeight: 1.3, color: "#E2E8F0" }}>{t}</div>
+            </div>
+          ) : null;
+        })}
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 20, padding: "22px 28px", borderRadius: 22, background: "rgba(6,8,20,0.72)", border: "2px solid rgba(255,255,255,0.08)" }}>
+        <YTSubs s={s} />
+      </div>
+    </div>
+  );
+};
+export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
+  const f = useCurrentFrame();
+  const talking = tl.scenes.some((s) => s.lines.some((l) => f >= s.from + l.from - 2 && f < s.from + l.from + l.frames + 3));
+  return (
+    <LookCtx.Provider value={tl.look ?? "classic"}>
+      <AbsoluteFill style={{ background: C.bg }}>
+        <Fonts />
+        <style>{`@font-face{font-family:Anton;src:url(${staticFile("fonts/anton-latin-400-normal.woff2")}) format('woff2');}`}</style>
+        <Backdrop />
+        <div style={{ position: "absolute", left: 1000, top: 44, fontFamily: C.inter, fontWeight: 800, fontSize: 28, letterSpacing: 4, color: "white" }}>
+          AI FROM SCRATCH <span style={{ color: C.amber }}>· {tl.label}</span>{tl.banner ? <span style={{ color: C.muted }}> · {tl.banner}</span> : null}
+        </div>
+        {tl.scenes.map((s, i) => (
+          <Sequence key={s.id} from={s.from} durationInFrames={s.frames + 1}>
+            <div style={{ position: "absolute", left: 70, top: 60, width: 864, height: 960, borderRadius: 30, overflow: "hidden", boxShadow: "0 30px 80px rgba(0,0,0,0.6)", border: "3px solid rgba(255,255,255,0.12)" }}>
+              <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transformOrigin: "0 0", transform: "scale(0.8) translateY(-240px)" }}>
+                <SceneWrap s={s} first={i === 0} noCaptions />
+              </div>
+            </div>
+            <YTNotes s={s} idx={i} />
+          </Sequence>
+        ))}
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 8, background: "rgba(255,255,255,0.1)" }}>
+          <div style={{ width: `${(f / tl.totalFrames) * 100}%`, height: "100%", background: `linear-gradient(90deg, ${C.amber}, ${C.rose})` }} />
+        </div>
+        <Audio src={staticFile(tl.music)} volume={() => (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1])} />
+        {tl.scenes.flatMap((s) =>
+          s.lines.map((l, k) => (
+            <Sequence key={`${s.id}-${k}`} from={s.from + l.from} durationInFrames={l.frames + 20} layout="none">
+              <Audio src={staticFile(l.audio)} volume={1} />
+            </Sequence>
+          ))
+        )}
+      </AbsoluteFill>
+    </LookCtx.Provider>
   );
 };
 

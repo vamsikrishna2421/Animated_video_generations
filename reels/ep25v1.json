@@ -18,7 +18,26 @@
    "id": "hook",
    "type": "case_hook",
    "tail": 0.45,
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The case",
+     "title": "An AI that was always right... or was it?",
+     "notes": [
+      [
+       "Task: tell a husky from a wolf in a photo",
+       0
+      ],
+      [
+       "It got the answers right on its test",
+       1
+      ],
+      [
+       "Then researchers asked: what is it looking at?",
+       2
+      ]
+     ]
+    }
+   },
    "lines": [
     {
      "who": "maastaaru",
@@ -32,7 +51,30 @@
    "id": "reveal",
    "type": "case_reveal",
    "tail": 0.45,
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The evidence",
+     "title": "It learned a shortcut",
+     "notes": [
+      [
+       "Training wolves: almost all in snow",
+       1
+      ],
+      [
+       "Training huskies: almost all on grass",
+       2
+      ],
+      [
+       "Shortcut learned: snow means wolf",
+       3
+      ],
+      [
+       "Husky in snow → predicted WOLF",
+       5
+      ]
+     ]
+    }
+   },
    "lines": [
     {
      "who": "maastaaru",
@@ -46,7 +88,26 @@
    "id": "gigo",
    "type": "gigo",
    "tail": 0.45,
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The golden rule",
+     "title": "Garbage in, garbage out",
+     "notes": [
+      [
+       "A model only learns patterns its data shows",
+       1
+      ],
+      [
+       "Biased or messy data → biased, wrong answers",
+       2
+      ],
+      [
+       "More training can't fix bad data",
+       3
+      ]
+     ]
+    }
+   },
    "lines": [
     {
      "who": "maastaaru",
@@ -60,7 +121,30 @@
    "id": "checklist",
    "type": "checklist",
    "tail": 0.45,
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "Good data",
+     "title": "Four things good data needs",
+     "notes": [
+      [
+       "Quantity: enough examples to learn from",
+       1
+      ],
+      [
+       "Quality: correct labels, no junk or duplicates",
+       2
+      ],
+      [
+       "Diversity: every place, person and situation",
+       3
+      ],
+      [
+       "Freshness: data that matches today's world",
+       4
+      ]
+     ]
+    }
+   },
    "lines": [
     {
      "who": "maastaaru",
@@ -74,7 +158,30 @@
    "id": "datasplit",
    "type": "datasplit",
    "tail": 0.45,
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The surprise exam",
+     "title": "Train, validation, test",
+     "notes": [
+      [
+       "Train set (~80%): the model learns from it",
+       2
+      ],
+      [
+       "Validation set (~10%): tune settings",
+       3
+      ],
+      [
+       "Test set (~10%): hidden until the very end",
+       4
+      ],
+      [
+       "Score on unseen data = real performance",
+       5
+      ]
+     ]
+    }
+   },
    "lines": [
     {
      "who": "maastaaru",
@@ -95,7 +202,25 @@
      "Diversity",
      "Freshness"
     ],
-    "answer": 1
+    "answer": 1,
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Crack this case",
+     "notes": [
+      [
+       "An AI spots cats perfectly... only indoors",
+       0
+      ],
+      [
+       "Which data rule did it break?",
+       1
+      ],
+      [
+       "Answer: Diversity",
+       2
+      ]
+     ]
+    }
    },
    "lines": [
     {
@@ -119,7 +244,25 @@
      "Garbage in, garbage out",
      "Good data: quantity, quality, diversity, freshness",
      "Always test on data it has never seen"
-    ]
+    ],
+    "yt": {
+     "chapter": "Case closed",
+     "title": "An AI is only as smart as its data",
+     "notes": [
+      [
+       "Garbage in, garbage out",
+       0
+      ],
+      [
+       "Check quantity, quality, diversity, freshness",
+       1
+      ],
+      [
+       "Always test on data it has never seen",
+       2
+      ]
+     ]
+    }
    },
    "lines": [
     {

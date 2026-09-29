@@ -57,3 +57,16 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 - The Telugu spec copies the English scene `data`. Each line keeps the Telugu `text` (with `[n]` cue markers placed on the spoken Telugu words) and adds `show` with the English sentence, which becomes the subtitle. Cue timing follows the spoken words.
 - Telugu narration: Tenglish (Telugu sentences, English tech words), ElevenLabs voice "Nitya A – Clear, Engaging Tutor" (`54PRhiFo9gt3cL6Jh53g`), eleven_v3, gap 0.35.
 - Output: the English video goes to `out/<serial>_<id>_*.mp4` as before; the Telugu one goes to `out/telugu/<serial>_<id>_*_telugu.mp4`, listed as `video_telugu` in `out/upload_queue.json`.
+
+## Four versions per episode (from EP25)
+| Version | Format | Narration | Voice | Output |
+|---|---|---|---|---|
+| Insta English | 9:16 reel, 60–95 s | `reels/<ep>v1.json` | ElevenLabs Pooja | `out/<serial>_<ep>_*.mp4` |
+| Insta Telugu | 9:16 reel, same visuals | `reels/<ep>te.json` | ElevenLabs Nitya A | `out/telugu/…_telugu.mp4` |
+| YouTube English | 16:9, long-form (8–15 min) | `reels/<ep>yt.json` | Google Chirp 3 HD (English) | `out/youtube/…_yt.mp4` |
+| YouTube Telugu | 16:9, same visuals | `reels/<ep>ytte.json` | Google Chirp 3 HD (Telugu) | `out/youtube/…_yt_telugu.mp4` |
+
+- YouTube composition `YT-<id>` (`ReelYT` in `video/src/reel/Reel.tsx`): the reel visual on the left (portrait area y 240..1440 at 0.8 scale), with the chapter, title, notes and large English subtitles on the right. Each scene's `data.yt = {chapter, title, notes: [[text, cue]]}`.
+- The YouTube script is the deep version: the same hook and analogy as the reel, plus the full lesson (definitions, worked examples, code where useful, common mistakes, a myth, recap, quiz, next episode). Every lesson template (`type: "lesson"`, `data.kind`) and every reel scene type can be a chapter.
+- Google text-to-speech: `pipeline/google_tts.py script reels/<id>.json` fills missing `file` takes from each line's `tts` text (needs `GOOGLE_TTS_API_KEY`).
+- Visuals are English in all four versions.
