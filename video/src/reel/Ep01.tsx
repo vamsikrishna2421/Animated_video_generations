@@ -132,7 +132,7 @@ const Mango: React.FC<ArtP> = ({ d, cue }) => {
         </div>
       )}
       {f >= learned && (
-        <div style={{ position: "absolute", left: 0, right: 0, top: 36, textAlign: "center" }}>
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 28, textAlign: "center" }}>
           <span style={{ display: "inline-block", background: "rgba(21,128,61,0.92)", color: "white", fontFamily: C.inter, fontWeight: 900, fontSize: 36, padding: "8px 22px", borderRadius: 14, transform: `scale(${0.7 + 0.3 * pop(f, learned)})` }}>Learned: yellow + soft = ripe</span>
         </div>
       )}
