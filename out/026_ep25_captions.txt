@@ -1,29 +1,28 @@
 UPLOAD: 026
-VIDEO: 026_ep25_training_data.mp4
+VIDEO: 026_ep25_the_ai_that_cheated.mp4
 
 === CAPTION ===
-An AI model can only be as good as the data it learns from.
+Researchers built an AI that could tell a husky from a wolf. Then they checked what it was actually looking at. It wasn't the animal.
 
-Episode 25 of AI From Scratch: Training Data
-- What training data is, for LLMs, vision and spam filters
-- The data pipeline: collect, clean, label, split
-- What makes data good: quantity, quality, diversity, freshness
-- Garbage in, garbage out: why narrow data hurts fairness
-- Training, validation and test sets
+Episode 25 of AI From Scratch: Training Data, told as a case file
+- The AI that cheated: it learned "snow = wolf" (from the 2016 "Why Should I Trust You?" study)
+- Garbage in, garbage out
+- What good data needs: quantity, quality, diversity, freshness
+- The surprise exam: train, tune, and a hidden test set
 
-Quiz at the end. Got it right? Comment below.
+Your turn, detective: an AI spots cats perfectly, but only indoors. Which rule did its data break? Comment your answer.
 
-Next: the difference between a model that memorises, and one that truly understands.
+Next case: the AI that memorised every answer and still failed the exam.
 Follow @ai_maastaaru for the full series.
 
 === HASHTAGS ===
-#AIMaastaaru #TrainingData #LearnAI #DataScience #AIForBeginners
+#TrainingData #MachineLearning #LearnAI #AIForBeginners #DataScience
 
 === PINNED_COMMENT ===
-Quiz answer: To check it on data it has never seen, like a real exam. Quality or quantity, which matters more? Comment!
+Answer: Diversity. It never saw a cat outdoors. Did you crack the case?
 
 === COVER ===
-'Training Data' title card
+Case board: husky and wolf polaroids with a heatmap on the snow, stamp "THE AI THAT CHEATED"
 
 === ALT_TEXT ===
-Animated lesson explaining AI training data, data pipelines, data quality and train/test splits.
+Animated detective-style reel about training data: an AI that learned snow means wolf, garbage in garbage out, what good data needs, and train/validation/test splits.
