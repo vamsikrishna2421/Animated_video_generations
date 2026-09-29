@@ -10,6 +10,7 @@ import soundfile as sf
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 from story_promo import FPS, SR, score  # noqa: E402
+from reel_build import stretch  # noqa: E402
 
 LANG = sys.argv[1] if len(sys.argv) > 1 else "te"  # "te" or "en"
 OUT = ROOT / "video" / "public" / f"story_{LANG}"
@@ -25,6 +26,8 @@ def main():
         a = a.mean(axis=1) if a.ndim > 1 else a
         idx = np.where(np.abs(a) > 0.01)[0]
         a = a[max(0, idx[0] - int(0.03 * sr)): idx[-1] + int(0.08 * sr)]
+        if LANG == "en":
+            a = stretch(a, sr, 1.12)  # the free English voice reads slowly
         a = np.tanh(a / (np.sqrt(np.mean(a ** 2)) + 1e-9) * 10 ** (-15 / 20) * 1.2) / np.tanh(1.2)
         sf.write(OUT / f"vo_{bid}_n.wav", a.astype(np.float32), sr)
         dur = len(a) / sr
