@@ -80,3 +80,4 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 - Memes carry the joke visually; the narration underneath stays a clean sentence. Don't make the narrator speak meme captions ("Panik… Kalm…"); that sounded messy.
 
 - English (free Mary voice) felt too slow at tempo 1.0: English specs use `tempo` 1.12 and `maxgap` 0.4, keeping `gap` 0.5 between sentences. Pronunciation fixes live in `EN_FIX` (A.I., L.L.M., M.C.P., HITEC City → "High-tech City").
+- Approved (Telugu page): promo v2 (`out/telugu_page/00_promo_insta_te.mp4`, "nice") and intro (`out/telugu_page/01_intro_insta_te.mp4`, "very nice"): energetic Kiran narration, English visuals, Drake meme, level-up intro. Use them as the template.
