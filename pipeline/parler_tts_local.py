@@ -22,8 +22,9 @@ REPO = "RXD03/indic-parler-tts"  # mirror of ai4bharat/indic-parler-tts
 SHA = "c68daecb60f80c8f"  # prefix of the official model.safetensors sha256
 VOICES = {
     # Named speakers the model was trained with; the description steers pace, tone and recording quality.
-    "te": "Lalitha speaks in a clear, warm and friendly tone at a moderate, unhurried pace, like a good teacher. "
-          "The recording is very clear, close-up, with no background noise.",
+    # User's pick: Prakash as an energetic FM radio host (sample 3). Lalitha was rejected.
+    "te": "Prakash speaks like an energetic FM radio host explaining a topic: confident, expressive and upbeat, "
+          "with a lively but clear pace. The recording is very clear, close-up, studio quality, with no background noise.",
     "en": "Mary speaks in a clear, warm and friendly tone with an Indian English accent at a moderate, unhurried pace, "
           "like a good teacher. The recording is very clear, close-up, with no background noise.",
 }
@@ -56,8 +57,14 @@ def sentences(text):
     return [s for s in re.split(r"(?<=[.!?।])\s+", text.strip()) if s]
 
 
+EN_FIX = [(r"\bGenAI\b", "Gen A.I."), (r"\bAI\b", "A.I."), (r"\bLLMs\b", "L.L.M.s"), (r"\bLLM\b", "L.L.M."), (r"\bMCP\b", "M.C.P.")]
+
+
 def say(lang, text, out: Path, voice=None, pause=0.35):
     """Synthesize sentence by sentence (the model is best on short inputs) and join with short pauses."""
+    if lang == "en":
+        for a, b in EN_FIX:
+            text = re.sub(a, b, text)
     m = load()
     torch = m["torch"]
     desc = m["dtok"](voice or VOICES[lang], return_tensors="pt")
