@@ -329,7 +329,7 @@ const Pillars: React.FC = () => {
     return s;
   });
   const cards = [
-    { icon: "GraduationCap", title: "Learn from scratch", sub: "58 episodes, zero jargon", c1: C.violet, c2: C.blue },
+    { icon: "GraduationCap", title: "Learn from scratch", sub: "82 episodes, zero jargon", c1: C.violet, c2: C.blue },
     { icon: "Smartphone", title: "Real World AI", sub: "How your apps really work", c1: C.teal, c2: C.green },
     { icon: "Zap", title: "Latest AI updates", sub: "New tools, models and news", c1: C.amber, c2: C.rose },
   ];
@@ -418,7 +418,7 @@ const Cta: React.FC = () => {
       <div style={{ position: "absolute", left: 540, top: 470, transform: `translate(-50%,-50%) scale(${logo})`, width: 230, height: 230, borderRadius: "50%", border: `7px solid ${C.amber}`, overflow: "hidden", background: "#1E1B4B", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 0 60px ${C.amber}88` }}>
         <Mascot size={220} talking={false} variant="female" />
       </div>
-      <div style={{ position: "absolute", top: 640, left: 0, right: 0, textAlign: "center", fontFamily: C.inter, fontWeight: 800, fontSize: 96, letterSpacing: -1, ...grad(C.amber, C.rose) }}>
+      <div style={{ position: "absolute", top: 650, left: 0, right: 0, textAlign: "center", fontFamily: C.inter, fontWeight: 800, fontSize: 74, letterSpacing: -1, ...grad(C.amber, C.rose) }}>
         {handle.slice(0, typed)}
       </div>
       <div style={{ position: "absolute", top: 780, left: 0, right: 0, textAlign: "center", fontFamily: C.inter, fontWeight: 700, fontSize: 46, color: C.text, opacity: interpolate(f, [24, 36], [0, 1], cl) }}>
@@ -483,7 +483,7 @@ const Panik: React.FC = () => {
   const f = useCurrentFrame();
   const b = B.panik;
   const v0 = b.voiceFrom - b.from;
-  const marks = [0, 0.42, 0.74].map((k) => v0 + Math.round(k * b.voiceFrames));
+  const marks = [0, 0.31, 0.71].map((k) => v0 + Math.round(k * b.voiceFrames));
   const texts = ["A new AI model drops every week", "This page explains it in Telugu", "You haven't followed it yet"];
   const inS = useSp(0, 14);
   const W = 900, H = Math.round((W * 760) / 543);
