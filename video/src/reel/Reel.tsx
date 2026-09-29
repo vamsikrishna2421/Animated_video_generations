@@ -666,7 +666,10 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
       </div>
       {tl.banner ? (
         <div style={{ position: "absolute", top: 118, left: 50, right: 50, height: 88, borderRadius: 22, background: "#F8FAFC", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 28px", boxShadow: "0 10px 30px rgba(0,0,0,0.4)" }}>
-          <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 44, color: "#0A0F24" }}>{tl.banner}</span>
+          <span style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            {tl.label && <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 30, color: "#0A0F24", background: C.amber, padding: "4px 14px", borderRadius: 12, whiteSpace: "nowrap" }}>{tl.label}</span>}
+            <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 40, color: "#0A0F24", whiteSpace: "nowrap" }}>{tl.banner}</span>
+          </span>
           <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 800, fontSize: 32, color: "#fff", background: "#0A0F24", padding: "4px 14px", borderRadius: 12 }}>
             {(() => { const r = Math.max(0, Math.ceil((tl.totalFrames - f) / tl.fps)); return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`; })()}
           </span>
