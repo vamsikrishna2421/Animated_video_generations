@@ -1,0 +1,771 @@
+{
+ "id": "ep00v2",
+ "look": "classic",
+ "topic": "",
+ "banner": "Welcome to AI From Scratch",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "title": "Welcome to AI From Scratch",
+ "handle": "@ai_maastaaru",
+ "label": "INTRO",
+ "fps": 30,
+ "totalFrames": 1485,
+ "music": "reel/ep00v2/score.wav",
+ "scenes": [
+  {
+   "id": "jargon",
+   "type": "jargon",
+   "data": {
+    "yt": {
+     "chapter": "Start here",
+     "title": "AI sounds like a different language",
+     "notes": [
+      [
+       "ChatGPT, agents, RAG, MCP, tokens...",
+       0
+      ],
+      [
+       "Too many new words, every week",
+       1
+      ],
+      [
+       "This series makes it simple",
+       2
+      ]
+     ]
+    }
+   },
+   "from": 0,
+   "frames": 337,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep00v2/line_01.wav",
+     "from": 2,
+     "frames": 307,
+     "words": [
+      {
+       "w": "Want",
+       "from": 10,
+       "to": 18
+      },
+      {
+       "w": "to",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "learn",
+       "from": 22,
+       "to": 32
+      },
+      {
+       "w": "AI,",
+       "from": 32,
+       "to": 38
+      },
+      {
+       "w": "but",
+       "from": 38,
+       "to": 52
+      },
+      {
+       "w": "don't",
+       "from": 52,
+       "to": 61
+      },
+      {
+       "w": "know",
+       "from": 61,
+       "to": 69
+      },
+      {
+       "w": "where",
+       "from": 69,
+       "to": 78
+      },
+      {
+       "w": "to",
+       "from": 78,
+       "to": 99
+      },
+      {
+       "w": "start?",
+       "from": 99,
+       "to": 114
+      },
+      {
+       "w": "ChatGPT,",
+       "from": 114,
+       "to": 133
+      },
+      {
+       "w": "agents,",
+       "from": 133,
+       "to": 149
+      },
+      {
+       "w": "RAG...",
+       "from": 149,
+       "to": 176
+      },
+      {
+       "w": "it",
+       "from": 176,
+       "to": 181
+      },
+      {
+       "w": "all",
+       "from": 181,
+       "to": 187
+      },
+      {
+       "w": "sounds",
+       "from": 187,
+       "to": 198
+      },
+      {
+       "w": "like",
+       "from": 198,
+       "to": 206
+      },
+      {
+       "w": "a",
+       "from": 206,
+       "to": 209
+      },
+      {
+       "w": "different",
+       "from": 209,
+       "to": 224
+      },
+      {
+       "w": "language.",
+       "from": 224,
+       "to": 239
+      },
+      {
+       "w": "Let's",
+       "from": 239,
+       "to": 265
+      },
+      {
+       "w": "make",
+       "from": 265,
+       "to": 273
+      },
+      {
+       "w": "it",
+       "from": 273,
+       "to": 277
+      },
+      {
+       "w": "simple.",
+       "from": 277,
+       "to": 289
+      }
+     ],
+     "cues": {
+      "1": 114,
+      "2": 239
+     }
+    }
+   ]
+  },
+  {
+   "id": "levelup",
+   "type": "levelup",
+   "data": {
+    "quests": [
+     [
+      "BookOpen",
+      "Quest 1 · The basics",
+      "AI, ML, LLMs, tokens, prompts"
+     ],
+     [
+      "Brain",
+      "Quest 2 · How AI learns",
+      "training, neural nets, data"
+     ],
+     [
+      "Wrench",
+      "Quest 3 · Build with AI",
+      "RAG, agents, tools, MCP"
+     ],
+     [
+      "Rocket",
+      "Quest 4 · Real apps",
+      "how apps work + build your own"
+     ]
+    ],
+    "yt": {
+     "chapter": "The plan",
+     "title": "Learn AI like a game",
+     "notes": [
+      [
+       "Quest 1: the basics (AI, ML, LLMs)",
+       1
+      ],
+      [
+       "Quest 2: how AI learns",
+       2
+      ],
+      [
+       "Quest 3: build with AI (RAG, agents, MCP)",
+       3
+      ],
+      [
+       "Quest 4: real apps + build your own",
+       4
+      ]
+     ]
+    }
+   },
+   "from": 337,
+   "frames": 657,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep00v2/line_02.wav",
+     "from": 0,
+     "frames": 628,
+     "words": [
+      {
+       "w": "Think",
+       "from": 8,
+       "to": 18
+      },
+      {
+       "w": "of",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "this",
+       "from": 22,
+       "to": 30
+      },
+      {
+       "w": "page",
+       "from": 30,
+       "to": 38
+      },
+      {
+       "w": "like",
+       "from": 38,
+       "to": 46
+      },
+      {
+       "w": "a",
+       "from": 46,
+       "to": 53
+      },
+      {
+       "w": "game.",
+       "from": 53,
+       "to": 79
+      },
+      {
+       "w": "You",
+       "from": 79,
+       "to": 85
+      },
+      {
+       "w": "start",
+       "from": 85,
+       "to": 94
+      },
+      {
+       "w": "at",
+       "from": 94,
+       "to": 99
+      },
+      {
+       "w": "level",
+       "from": 99,
+       "to": 108
+      },
+      {
+       "w": "one.",
+       "from": 108,
+       "to": 132
+      },
+      {
+       "w": "First",
+       "from": 132,
+       "to": 142
+      },
+      {
+       "w": "quest:",
+       "from": 142,
+       "to": 161
+      },
+      {
+       "w": "the",
+       "from": 161,
+       "to": 167
+      },
+      {
+       "w": "basics.",
+       "from": 167,
+       "to": 201
+      },
+      {
+       "w": "What",
+       "from": 201,
+       "to": 208
+      },
+      {
+       "w": "AI,",
+       "from": 208,
+       "to": 223
+      },
+      {
+       "w": "machine",
+       "from": 223,
+       "to": 235
+      },
+      {
+       "w": "learning",
+       "from": 235,
+       "to": 249
+      },
+      {
+       "w": "and",
+       "from": 249,
+       "to": 255
+      },
+      {
+       "w": "ChatGPT",
+       "from": 255,
+       "to": 277
+      },
+      {
+       "w": "really",
+       "from": 277,
+       "to": 288
+      },
+      {
+       "w": "are.",
+       "from": 288,
+       "to": 312
+      },
+      {
+       "w": "Next,",
+       "from": 312,
+       "to": 322
+      },
+      {
+       "w": "how",
+       "from": 322,
+       "to": 328
+      },
+      {
+       "w": "AI",
+       "from": 328,
+       "to": 332
+      },
+      {
+       "w": "actually",
+       "from": 332,
+       "to": 346
+      },
+      {
+       "w": "learns.",
+       "from": 346,
+       "to": 359
+      },
+      {
+       "w": "Then,",
+       "from": 359,
+       "to": 384
+      },
+      {
+       "w": "build",
+       "from": 384,
+       "to": 403
+      },
+      {
+       "w": "with",
+       "from": 403,
+       "to": 416
+      },
+      {
+       "w": "AI.",
+       "from": 416,
+       "to": 439
+      },
+      {
+       "w": "RAG,",
+       "from": 439,
+       "to": 446
+      },
+      {
+       "w": "agents",
+       "from": 446,
+       "to": 463
+      },
+      {
+       "w": "and",
+       "from": 463,
+       "to": 470
+      },
+      {
+       "w": "tools.",
+       "from": 470,
+       "to": 480
+      },
+      {
+       "w": "And",
+       "from": 480,
+       "to": 487
+      },
+      {
+       "w": "finally,",
+       "from": 487,
+       "to": 517
+      },
+      {
+       "w": "how",
+       "from": 517,
+       "to": 530
+      },
+      {
+       "w": "real",
+       "from": 530,
+       "to": 538
+      },
+      {
+       "w": "apps",
+       "from": 538,
+       "to": 545
+      },
+      {
+       "w": "work,",
+       "from": 545,
+       "to": 555
+      },
+      {
+       "w": "and",
+       "from": 555,
+       "to": 575
+      },
+      {
+       "w": "how",
+       "from": 575,
+       "to": 581
+      },
+      {
+       "w": "to",
+       "from": 581,
+       "to": 585
+      },
+      {
+       "w": "build",
+       "from": 585,
+       "to": 595
+      },
+      {
+       "w": "your",
+       "from": 595,
+       "to": 602
+      },
+      {
+       "w": "own.",
+       "from": 602,
+       "to": 610
+      }
+     ],
+     "cues": {
+      "1": 132,
+      "2": 312,
+      "3": 359,
+      "4": 480,
+      "5": 610
+     }
+    }
+   ]
+  },
+  {
+   "id": "promise",
+   "type": "promise",
+   "data": {
+    "cards": [
+     [
+      "Timer",
+      "Short & sharp",
+      "#F59E0B"
+     ],
+     [
+      "MessageCircle",
+      "Simple words",
+      "#22D3EE"
+     ],
+     [
+      "Lightbulb",
+      "Real examples + a quiz",
+      "#34D399"
+     ]
+    ],
+    "yt": {
+     "chapter": "The format",
+     "title": "What every episode gives you",
+     "notes": [
+      [
+       "Short and sharp",
+       1
+      ],
+      [
+       "Simple words, no jargon",
+       2
+      ],
+      [
+       "Real examples and a quiz",
+       3
+      ]
+     ]
+    }
+   },
+   "from": 993,
+   "frames": 208,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep00v2/line_03.wav",
+     "from": 0,
+     "frames": 180,
+     "words": [
+      {
+       "w": "Every",
+       "from": 8,
+       "to": 17
+      },
+      {
+       "w": "episode",
+       "from": 17,
+       "to": 29
+      },
+      {
+       "w": "is",
+       "from": 29,
+       "to": 33
+      },
+      {
+       "w": "short,",
+       "from": 33,
+       "to": 44
+      },
+      {
+       "w": "in",
+       "from": 44,
+       "to": 57
+      },
+      {
+       "w": "simple",
+       "from": 57,
+       "to": 67
+      },
+      {
+       "w": "words,",
+       "from": 67,
+       "to": 78
+      },
+      {
+       "w": "with",
+       "from": 78,
+       "to": 91
+      },
+      {
+       "w": "real",
+       "from": 91,
+       "to": 99
+      },
+      {
+       "w": "examples,",
+       "from": 99,
+       "to": 114
+      },
+      {
+       "w": "and",
+       "from": 114,
+       "to": 120
+      },
+      {
+       "w": "a",
+       "from": 120,
+       "to": 123
+      },
+      {
+       "w": "quick",
+       "from": 123,
+       "to": 144
+      },
+      {
+       "w": "quiz.",
+       "from": 144,
+       "to": 159
+      }
+     ],
+     "cues": {
+      "1": 33,
+      "2": 44,
+      "3": 78
+     }
+    }
+   ]
+  },
+  {
+   "id": "rollsafe",
+   "type": "rollsafe",
+   "data": {
+    "top": "Can't get confused by AI jargon",
+    "bottom": "if you learn it from scratch",
+    "yt": {
+     "chapter": "Let's go",
+     "title": "Start with Episode 1",
+     "notes": [
+      [
+       "Learn it from scratch, in order",
+       1
+      ],
+      [
+       "Follow so you don't miss an episode",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1201,
+   "frames": 271,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep00v2/line_04.wav",
+     "from": 0,
+     "frames": 243,
+     "words": [
+      {
+       "w": "You",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "can't",
+       "from": 14,
+       "to": 22
+      },
+      {
+       "w": "get",
+       "from": 22,
+       "to": 28
+      },
+      {
+       "w": "confused",
+       "from": 28,
+       "to": 44
+      },
+      {
+       "w": "by",
+       "from": 44,
+       "to": 48
+      },
+      {
+       "w": "AI",
+       "from": 48,
+       "to": 52
+      },
+      {
+       "w": "jargon...",
+       "from": 52,
+       "to": 66
+      },
+      {
+       "w": "if",
+       "from": 66,
+       "to": 70
+      },
+      {
+       "w": "you",
+       "from": 70,
+       "to": 108
+      },
+      {
+       "w": "learn",
+       "from": 108,
+       "to": 117
+      },
+      {
+       "w": "it",
+       "from": 117,
+       "to": 121
+      },
+      {
+       "w": "from",
+       "from": 121,
+       "to": 128
+      },
+      {
+       "w": "scratch.",
+       "from": 128,
+       "to": 140
+      },
+      {
+       "w": "Follow,",
+       "from": 140,
+       "to": 151
+      },
+      {
+       "w": "and",
+       "from": 151,
+       "to": 173
+      },
+      {
+       "w": "let's",
+       "from": 173,
+       "to": 189
+      },
+      {
+       "w": "start",
+       "from": 189,
+       "to": 197
+      },
+      {
+       "w": "with",
+       "from": 197,
+       "to": 204
+      },
+      {
+       "w": "episode",
+       "from": 204,
+       "to": 219
+      },
+      {
+       "w": "one.",
+       "from": 219,
+       "to": 229
+      }
+     ],
+     "cues": {
+      "1": 66,
+      "2": 140
+     }
+    }
+   ]
+  }
+ ]
+}

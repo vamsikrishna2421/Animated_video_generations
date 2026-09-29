@@ -99,7 +99,7 @@ const LevelUp: React.FC<SP> = ({ s, cue }) => {
         );
       })}
       {f >= lastAt && f < lastAt + 26 && (
-        <div style={{ position: "absolute", top: 520, left: 0, right: 0, textAlign: "center", fontFamily: C.anton, fontSize: 120, color: C.amber, transform: `scale(${interpolate(f - lastAt, [0, 6], [1.8, 1], cl)}) rotate(-5deg)`, opacity: interpolate(f - lastAt, [18, 26], [1, 0], cl), textShadow: "0 8px 30px rgba(0,0,0,0.7)", zIndex: 5 }}>LEVEL UP!</div>
+        <div style={{ position: "absolute", top: 1235, left: 0, right: 0, textAlign: "center", fontFamily: C.anton, fontSize: 120, color: C.amber, transform: `scale(${interpolate(f - lastAt, [0, 6], [1.8, 1], cl)}) rotate(-5deg)`, opacity: interpolate(f - lastAt, [18, 26], [1, 0], cl), textShadow: "0 8px 30px rgba(0,0,0,0.7)", zIndex: 5 }}>LEVEL UP!</div>
       )}
     </AbsoluteFill>
   );
