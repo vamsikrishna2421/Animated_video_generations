@@ -2,6 +2,8 @@ import { AbsoluteFill, Audio, Img, Sequence, interpolate, random, spring, static
 import { Fonts } from "../components/Fonts";
 import { Icon } from "../lesson/Icon";
 import { Mascot } from "../lesson/Mascot";
+import { createContext, useContext } from "react";
+import { Backdrop, SCENES as LESSON } from "../lesson/Lesson";
 import { Quiz } from "../lesson/scenes/Quiz";
 import { Chintu } from "./Chintu";
 
@@ -25,7 +27,7 @@ const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
 type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
-export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[] };
+export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic" };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -49,8 +51,11 @@ const shakeXY = (f: number, at: number, amt = 22) => {
 };
 
 // ---------------- backgrounds ----------------
+// "classic" look = the original lesson backdrop; "rays" = comic sunburst (v2 meme style).
+const LookCtx = createContext<"rays" | "classic">("rays");
 const Rays: React.FC<{ c1: string; c2: string }> = ({ c1, c2 }) => {
   const f = useCurrentFrame();
+  if (useContext(LookCtx) === "classic") return <Backdrop />;
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
       <div style={{ position: "absolute", left: "50%", top: "45%", width: 3000, height: 3000, transform: `translate(-50%,-50%) rotate(${f * 0.4}deg)`, background: `repeating-conic-gradient(${c1} 0deg 10deg, ${c2} 10deg 20deg)`, opacity: 0.55 }} />
@@ -150,7 +155,7 @@ const Cricket: React.FC<SP> = ({ s, cue, line }) => {
         <div style={{ position: "absolute", top: 760, left: 0, right: 0, textAlign: "center", transform: `scale(${interpolate(f - out, [0, 6], [2.5, 1], cl)}) rotate(-8deg)`, fontFamily: C.anton, fontSize: 280, color: C.rose, textShadow: outline }}>OUT!</div>
       )}
       {sad && (
-        <div style={{ position: "absolute", top: 1070, left: 220, right: 220, transform: `scale(${sadS})`, borderRadius: 20, overflow: "hidden", border: "5px solid white" }}>
+        <div style={{ position: "absolute", top: 1000, left: 350, right: 350, transform: `scale(${sadS})`, borderRadius: 20, overflow: "hidden", border: "5px solid white" }}>
           <Img src={staticFile("reel/memes/fine.png")} style={{ width: "100%", display: "block" }} />
           <div style={{ position: "absolute", top: 8, left: 0, right: 0, textAlign: "center", fontFamily: C.anton, fontSize: 44, color: "white", textShadow: outline }}>INDIAN FANS RIGHT NOW</div>
         </div>
@@ -302,7 +307,7 @@ const Mass: React.FC<SP> = ({ s, line }) => {
       <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 210, background: "#000" }} />
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 250, background: "#000" }} />
       {f >= g && (
-        <div style={{ position: "absolute", top: 1010, left: 0, right: 0, textAlign: "center", transform: `scale(${gS}) rotate(-6deg) translateX(${Math.sin(f * 3) * 6}px)`, fontFamily: C.anton, fontSize: 130, color: C.teal, textShadow: outline }}>GOOSEBUMPS!</div>
+        <div style={{ position: "absolute", top: 1190, left: 0, right: 0, textAlign: "center", transform: `scale(${gS}) rotate(-6deg) translateX(${Math.sin(f * 3) * 6}px)`, fontFamily: C.anton, fontSize: 130, color: C.teal, textShadow: outline }}>GOOSEBUMPS!</div>
       )}
     </AbsoluteFill>
   );
@@ -372,7 +377,38 @@ const Outro: React.FC<SP> = ({ s, cue }) => {
   );
 };
 
-const SCENES: Record<string, React.FC<SP>> = { meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
+// Original lesson templates inside a reel: data.kind picks the lesson scene; marker [n] -> lesson cue(n-1).
+const LessonScene: React.FC<SP> = ({ s, cue }) => {
+  const Comp = LESSON[s.data.kind];
+  return (
+    <AbsoluteFill>
+      <Backdrop />
+      {Comp ? <Comp data={{ ...s.data, handle: "@ai_maastaaru" }} cue={(i) => cue(i + 1)} duration={s.frames} image={undefined as any} /> : null}
+    </AbsoluteFill>
+  );
+};
+
+// Meme sticker that slaps onto any scene at a cue: pop + wobble + label strip + boom.
+type Meme = { img: string; at?: number; line?: number; x: number; y: number; w: number; rot?: number; label?: string; crop?: "right" };
+const Sticker: React.FC<{ m: Meme; at: number }> = ({ m, at }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  if (f < at) return null;
+  const s = spring({ frame: f - at, fps, config: { damping: 9, mass: 0.6 } });
+  const wob = Math.sin((f - at) / 3) * 3 * Math.exp(-(f - at) / 20);
+  return (
+    <div style={{ position: "absolute", left: m.x, top: m.y, width: m.w, transform: `translate(-50%,-50%) scale(${s}) rotate(${(m.rot ?? -5) + wob}deg)`, borderRadius: 18, overflow: "hidden", border: "6px solid white", boxShadow: "0 18px 40px rgba(0,0,0,0.55)", background: "#000" }}>
+      <div style={{ overflow: "hidden", aspectRatio: m.crop === "right" ? "340 / 678" : undefined }}>
+        <Img src={staticFile(`reel/memes/${m.img}`)} style={m.crop === "right" ? { width: "200%", marginLeft: "-100%", display: "block" } : { width: "100%", display: "block" }} />
+      </div>
+      {m.label && <div style={{ background: "white", color: "#111", fontFamily: C.anton, fontSize: Math.max(26, m.w / 13), textAlign: "center", padding: "4px 10px", lineHeight: 1.1 }}>{m.label}</div>}
+      <Boom at={at} vol={0.55} />
+    </div>
+  );
+};
+
+const SCENES: Record<string, React.FC<SP>> = {
+  lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
 
 // ---------------- karaoke captions + speaker tag ----------------
 const chunks = (words: Word[]) => {
@@ -428,6 +464,9 @@ const SceneWrap: React.FC<{ s: Scene; first: boolean }> = ({ s, first }) => {
   return (
     <AbsoluteFill style={{ opacity: inP, transform: `scale(${first ? 1 : 1.12 - 0.12 * inP})` }}>
       {Comp ? <Comp s={s} cue={cue} line={line} /> : null}
+      {(s.data.memes ?? []).map((m: Meme, i: number) => (
+        <Sticker key={i} m={m} at={m.line !== undefined ? line(m.line).from + 4 : m.at !== undefined ? cue(m.at) : 0} />
+      ))}
       <Captions s={s} />
     </AbsoluteFill>
   );
@@ -437,6 +476,7 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
   const f = useCurrentFrame();
   const talking = tl.scenes.some((s) => s.lines.some((l) => f >= s.from + l.from - 2 && f < s.from + l.from + l.frames + 3));
   return (
+    <LookCtx.Provider value={tl.look ?? "rays"}>
     <AbsoluteFill style={{ background: C.bg }}>
       <Fonts />
       <style>{`@font-face{font-family:Anton;src:url(${staticFile("fonts/anton-latin-400-normal.woff2")}) format('woff2');}`}</style>
@@ -466,5 +506,6 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
         </Sequence>
       ))}
     </AbsoluteFill>
+    </LookCtx.Provider>
   );
 };

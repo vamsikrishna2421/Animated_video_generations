@@ -302,7 +302,7 @@ def main(spec_path: Path) -> None:
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     sf.write(out / "score.wav", score(total, [s["from"] / FPS for s in scenes], drops).astype(np.float32), MSR)
-    tl = {"id": rid, "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
+    tl = {"id": rid, "look": spec.get("look", "rays"), "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
           "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)

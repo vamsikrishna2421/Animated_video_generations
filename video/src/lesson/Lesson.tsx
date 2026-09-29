@@ -32,7 +32,7 @@ import { Score } from "./scenes/Score";
 import { AgentLoop } from "./scenes/AgentLoop";
 import { L, SceneData, SceneProps, clamp } from "./theme";
 
-const SCENES: Record<string, React.FC<SceneProps>> = {
+export const SCENES: Record<string, React.FC<SceneProps>> = {
   banner: Banner,
   definition: Definition,
   compare: Compare,
@@ -77,7 +77,7 @@ export type LessonTimeline = {
   scenes: SceneData[];
 };
 
-const Backdrop: React.FC = () => {
+export const Backdrop: React.FC = () => {
   const f = useCurrentFrame();
   const blob = (c: string, x: number, y: number, s: number, sp: number, ph: number) => (
     <div style={{ position: "absolute", left: x - s / 2 + Math.sin(f * sp + ph) * 140, top: y - s / 2 + Math.cos(f * sp + ph) * 120, width: s * 2, height: s * 2, background: `radial-gradient(circle, ${c}66 0%, ${c}22 35%, transparent 65%)` }} />
