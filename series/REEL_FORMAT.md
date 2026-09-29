@@ -15,7 +15,7 @@ Source: three outlier Indian AI-education reels (analysed with vidIQ, Sep 2026):
 | Calm, clean look | black/navy background, line diagrams, no heavy SFX | classic lesson backdrop, Inter captions, lo-fi bed, no booms |
 | Music | low lo-fi, 15–20 % | `music: "lofi"`, `musicVol: [0.10, 0.26]` |
 | Ending | one-line recap, a tease of the next topic, an ego or score CTA | quiz, then recap with the next-episode tease |
-| Length | 24–78 s | 78 s (v4 was 101 s) |
+| Length | 24–78 s | 70 s (v4 was 101 s) |
 
 ## Rules for new reels
 1. At most one meme per 2 scenes, always paired with an educational visual and never replacing it.
@@ -34,3 +34,8 @@ Source: three outlier Indian AI-education reels (analysed with vidIQ, Sep 2026):
   "bridge": "SAME IDEA IN AI"}}
 ```
 Chip coordinates are in the 1000×560 top panel. `at` refers to the `[n]` cue markers in the lines.
+
+## Voice and cast (feedback on v5)
+- Never say or show "Maastaaru"; the teacher's on-screen label is "Teacher". The account handle @ai_maastaaru stays.
+- The teacher (ElevenLabs Pooja) carries the lesson. Chintu gets at most one line per reel, and only as the setup question. No reaction or slang lines ("Ayyo", "Brooo", "stonks").
+- `start` in a line trims unwanted opening words from an existing take (verify the cut with `asr_check.py`).

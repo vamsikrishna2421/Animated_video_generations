@@ -1,5 +1,5 @@
 {
- "id": "ep23v5",
+ "id": "ep23v6",
  "title": "Backpropagation: the AI blame game",
  "label": "EP 23",
  "topic": "BACKPROP",
@@ -18,7 +18,7 @@
    "type": "split",
    "data": {
     "top": {
-     "img": "reel/ep23v5/img/catch.jpg",
+     "img": "reel/ep23v6/img/catch.jpg",
      "tag": "LAST BALL",
      "icon": "Trophy",
      "pan": -40,
@@ -58,15 +58,17 @@
    "lines": [
     {
      "who": "chintu",
-     "text": "Maastaaru! AI has billions of numbers inside... how does it even know which one messed up?",
+     "text": "AI has billions of numbers inside... how does it even know which one messed up?",
      "file": "02_chintu_ask.mp3",
-     "maxgap": 0.2
+     "maxgap": 0.2,
+     "start": 2.0
     },
     {
      "who": "maastaaru",
-     "text": "Easy, Chintu. Same way we find out who lost the cricket match.",
+     "text": "Same way we find out who lost the cricket match.",
      "file": "03_m_easy.mp3",
-     "maxgap": 0.2
+     "maxgap": 0.2,
+     "start": 1.8
     }
    ],
    "tail": 0.05
@@ -81,13 +83,6 @@
      "text": "Last ball! India needs SIX to win! [1] He swings... [2] and he's CAUGHT on the boundary!",
      "file": "04_comm_lastball.mp3",
      "maxgap": 0.2
-    },
-    {
-     "who": "chintu",
-     "text": "Ayyo, no! Whose fault is this?",
-     "file": "05_chintu_ayyo.mp3",
-     "maxgap": 0.15,
-     "tempo": 1.2
     }
    ],
    "tail": 0.05
@@ -97,7 +92,7 @@
    "type": "split",
    "data": {
     "top": {
-     "img": "reel/ep23v5/img/dressing.jpg",
+     "img": "reel/ep23v6/img/dressing.jpg",
      "tag": "POST-MATCH REVIEW",
      "icon": "ClipboardList",
      "pan": 30,
@@ -167,7 +162,7 @@
    "type": "split",
    "data": {
     "top": {
-     "img": "reel/ep23v5/img/umpire.jpg",
+     "img": "reel/ep23v6/img/umpire.jpg",
      "tag": "REPLAY IT BACKWARD",
      "icon": "MonitorPlay",
      "pan": -30,
@@ -238,16 +233,11 @@
    },
    "lines": [
     {
-     "who": "chintu",
-     "text": "[1] Wait, so everyone doesn't get the same blame?",
-     "file": "09_chintu_wait.mp3",
-     "maxgap": 0.2
-    },
-    {
      "who": "maastaaru",
-     "text": "Nope! [2] Blame by contribution. [3] Then each weight fixes itself, just a little.",
+     "text": "[1] Blame [2] by contribution. [3] Then each weight fixes itself, just a little.",
      "file": "10_m_nope.mp3",
-     "maxgap": 0.2
+     "maxgap": 0.2,
+     "start": 0.6
     }
    ],
    "tail": 0.05
@@ -264,7 +254,7 @@
      "chips": [
       {
        "t": "Mistakes going down",
-       "at": 4,
+       "at": 3,
        "x": 500,
        "y": 470,
        "c": "#34D399"
@@ -284,13 +274,6 @@
      "text": "[1] Repeat this blame and fix, [2] millions of times, [3] and the mistakes keep shrinking.",
      "file": "13_m_repeat.mp3",
      "maxgap": 0.2
-    },
-    {
-     "who": "chintu",
-     "text": "[4] Mistakes going down... total stonks!",
-     "file": "14_chintu_stonks.mp3",
-     "maxgap": 0.15,
-     "tempo": 1.2
     }
    ],
    "tail": 0.05
@@ -344,32 +327,14 @@
      ]
     ],
     "next": "EP 24 · Types of learning",
-    "memes": [
-     {
-      "img": "khaby-lame.jpg",
-      "line": 1,
-      "x": 850,
-      "y": 1260,
-      "w": 220,
-      "rot": 6,
-      "crop": "right"
-     }
-    ]
+    "memes": []
    },
    "lines": [
     {
-     "who": "chintu",
-     "text": "[1] So AI learns [2] by... [3] blaming [4] smartly?",
-     "file": "17_chintu_outro.mp3",
-     "maxgap": 0.15,
-     "tempo": 1.2
-    },
-    {
      "who": "maastaaru",
-     "text": "Exactly! Follow AI Maastaaru. [5] Next, the three ways machines learn.",
-     "file": "18_m_outro.mp3",
-     "maxgap": 0.15,
-     "tempo": 1.2
+     "file": "19_m_outro2.mp3",
+     "maxgap": 0.2,
+     "text": "[1] So that's how AI learns. Send the error backward, [2] blame each part by how much it contributed, [3] fix every weight a little, [4] and repeat, millions of times. [5] Follow for part four: the three ways machines learn."
     }
    ],
    "tail": 0.05

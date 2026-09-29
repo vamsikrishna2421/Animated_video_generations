@@ -30,7 +30,7 @@ from story_promo import bass808, boom, clap, hat_tick, keys, kick808, riser, scr
 
 FPS = 30
 SPEAKERS = {
-    "maastaaru": dict(voice="af_heart", speed=1.0, lang="en-us", name="Maastaaru", color="#F59E0B"),
+    "maastaaru": dict(voice="af_heart", speed=1.0, lang="en-us", name="Teacher", color="#F59E0B"),
     "chintu": dict(voice="hm_psi", speed=1.08, lang="en-us", name="Chintu", color="#22D3EE"),
     "commentator": dict(voice="bm_george", speed=1.1, lang="en-gb", name="Commentary", color="#34D399", fx="radio"),
     "trailer": dict(voice="am_onyx", speed=0.9, lang="en-us", name="", color="#F43F5E", fx="trailer"),
@@ -173,6 +173,8 @@ def file_line(line, rid):
     for k, f in enumerate(parts):
         a, sr = sf.read(src / f)
         a = a.mean(axis=1) if a.ndim > 1 else a
+        if k == 0 and line.get("start"):  # drop an unwanted opening word (e.g. a name) from the take
+            a = a[int(line["start"] * sr):]
         nz = np.where(np.abs(a) > 0.01)[0]
         a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.1 * sr)]
         a = tighten(a, sr, line.get("maxgap", 0.3))

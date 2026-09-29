@@ -100,7 +100,7 @@ const Character: React.FC<{ who: "chintu" | "maastaaru"; active: boolean; talkin
       <div style={{ width: 400, height: 400, margin: "0 auto", borderRadius: "50%", border: `10px solid ${col}`, background: "#1E1B4B", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: active ? `0 0 60px ${col}` : "none" }}>
         {who === "chintu" ? <Chintu size={380} talking={talking} /> : <Mascot size={380} talking={talking} variant="female" />}
       </div>
-      <div style={{ marginTop: 18, display: "inline-block", background: col, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 40, padding: "6px 26px", borderRadius: 30 }}>{who === "chintu" ? "Chintu" : "Maastaaru"}</div>
+      <div style={{ marginTop: 18, display: "inline-block", background: col, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 40, padding: "6px 26px", borderRadius: 30 }}>{who === "chintu" ? "Chintu" : "Teacher"}</div>
     </div>
   );
 };
@@ -138,8 +138,9 @@ const Cricket: React.FC<SP> = ({ s, cue, line }) => {
   const ballX = 540 + p * 330;
   const ballY = 1150 - Math.sin(p * Math.PI) * 650 - p * 120;
   const lost = f >= out;
-  const sad = f >= line(1).from;
-  const sadS = useSp(line(1).from, 10);
+  const sadAt = s.lines.length > 1 ? line(1).from : cue(2) + 20;
+  const sad = f >= sadAt;
+  const sadS = useSp(sadAt, 10);
   return (
     <AbsoluteFill style={{ transform: shakeXY(f, out, 28) }}>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 80%, #1f7a3a 0%, #0f4d24 45%, #07210f 80%)" }} />

@@ -1,5 +1,5 @@
 {
- "id": "ep23v5",
+ "id": "ep23v6",
  "look": "classic",
  "topic": "BACKPROP",
  "musicVol": [
@@ -10,15 +10,15 @@
  "handle": "@ai_maastaaru",
  "label": "EP 23",
  "fps": 30,
- "totalFrames": 2333,
- "music": "reel/ep23v5/score.wav",
+ "totalFrames": 2087,
+ "music": "reel/ep23v6/score.wav",
  "scenes": [
   {
    "id": "hook",
    "type": "split",
    "data": {
     "top": {
-     "img": "reel/ep23v5/img/catch.jpg",
+     "img": "reel/ep23v6/img/catch.jpg",
      "tag": "LAST BALL",
      "icon": "Trophy",
      "pan": -40,
@@ -49,7 +49,7 @@
      "name": "Commentary",
      "color": "#34D399",
      "sub": null,
-     "audio": "reel/ep23v5/line_01.wav",
+     "audio": "reel/ep23v6/line_01.wav",
      "from": 2,
      "frames": 134,
      "words": [
@@ -135,168 +135,153 @@
    "type": "dialogue",
    "data": {},
    "from": 138,
-   "frames": 305,
+   "frames": 225,
    "lines": [
     {
      "who": "chintu",
      "name": "Chintu",
      "color": "#22D3EE",
      "sub": null,
-     "audio": "reel/ep23v5/line_02.wav",
+     "audio": "reel/ep23v6/line_02.wav",
      "from": 0,
-     "frames": 171,
+     "frames": 137,
      "words": [
       {
-       "w": "Maastaaru!",
-       "from": 1,
-       "to": 18
-      },
-      {
        "w": "AI",
-       "from": 18,
-       "to": 23
+       "from": 1,
+       "to": 5
       },
       {
        "w": "has",
-       "from": 23,
-       "to": 35
+       "from": 5,
+       "to": 11
       },
       {
        "w": "billions",
-       "from": 35,
-       "to": 49
+       "from": 11,
+       "to": 29
       },
       {
        "w": "of",
-       "from": 49,
-       "to": 54
+       "from": 29,
+       "to": 33
       },
       {
        "w": "numbers",
-       "from": 54,
-       "to": 72
+       "from": 33,
+       "to": 45
       },
       {
        "w": "inside...",
-       "from": 72,
-       "to": 88
+       "from": 45,
+       "to": 60
       },
       {
        "w": "how",
-       "from": 88,
-       "to": 94
+       "from": 60,
+       "to": 66
       },
       {
        "w": "does",
-       "from": 94,
-       "to": 102
+       "from": 66,
+       "to": 79
       },
       {
        "w": "it",
-       "from": 102,
-       "to": 113
+       "from": 79,
+       "to": 83
       },
       {
        "w": "even",
-       "from": 113,
-       "to": 121
+       "from": 83,
+       "to": 91
       },
       {
        "w": "know",
-       "from": 121,
-       "to": 130
+       "from": 91,
+       "to": 98
       },
       {
        "w": "which",
-       "from": 130,
-       "to": 139
+       "from": 98,
+       "to": 107
       },
       {
        "w": "one",
-       "from": 139,
-       "to": 146
+       "from": 107,
+       "to": 113
       },
       {
        "w": "messed",
-       "from": 146,
-       "to": 157
+       "from": 113,
+       "to": 123
       },
       {
        "w": "up?",
-       "from": 157,
-       "to": 167
+       "from": 123,
+       "to": 133
       }
      ],
      "cues": {}
     },
     {
      "who": "maastaaru",
-     "name": "Maastaaru",
+     "name": "Teacher",
      "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_03.wav",
-     "from": 173,
-     "frames": 129,
+     "audio": "reel/ep23v6/line_03.wav",
+     "from": 139,
+     "frames": 84,
      "words": [
       {
-       "w": "Easy,",
-       "from": 174,
-       "to": 188
-      },
-      {
-       "w": "Chintu.",
-       "from": 188,
-       "to": 201
-      },
-      {
        "w": "Same",
-       "from": 201,
-       "to": 209
+       "from": 141,
+       "to": 148
       },
       {
        "w": "way",
-       "from": 209,
-       "to": 221
+       "from": 148,
+       "to": 153
       },
       {
        "w": "we",
-       "from": 221,
-       "to": 226
+       "from": 153,
+       "to": 158
       },
       {
        "w": "find",
-       "from": 226,
-       "to": 234
+       "from": 158,
+       "to": 165
       },
       {
        "w": "out",
-       "from": 234,
-       "to": 241
+       "from": 165,
+       "to": 170
       },
       {
        "w": "who",
-       "from": 241,
-       "to": 247
+       "from": 170,
+       "to": 176
       },
       {
        "w": "lost",
-       "from": 247,
-       "to": 259
+       "from": 176,
+       "to": 183
       },
       {
        "w": "the",
-       "from": 259,
-       "to": 266
+       "from": 183,
+       "to": 189
       },
       {
        "w": "cricket",
-       "from": 266,
-       "to": 278
+       "from": 189,
+       "to": 200
       },
       {
        "w": "match.",
-       "from": 278,
-       "to": 290
+       "from": 200,
+       "to": 210
       }
      ],
      "cues": {}
@@ -307,15 +292,15 @@
    "id": "match",
    "type": "cricket",
    "data": {},
-   "from": 444,
-   "frames": 232,
+   "from": 364,
+   "frames": 160,
    "lines": [
     {
      "who": "commentator",
      "name": "Commentary",
      "color": "#34D399",
      "sub": null,
-     "audio": "reel/ep23v5/line_04.wav",
+     "audio": "reel/ep23v6/line_04.wav",
      "from": 0,
      "frames": 157,
      "words": [
@@ -399,48 +384,6 @@
       "1": 70,
       "2": 99
      }
-    },
-    {
-     "who": "chintu",
-     "name": "Chintu",
-     "color": "#22D3EE",
-     "sub": null,
-     "audio": "reel/ep23v5/line_05.wav",
-     "from": 158,
-     "frames": 71,
-     "words": [
-      {
-       "w": "Ayyo,",
-       "from": 160,
-       "to": 173
-      },
-      {
-       "w": "no!",
-       "from": 173,
-       "to": 181
-      },
-      {
-       "w": "Whose",
-       "from": 181,
-       "to": 198
-      },
-      {
-       "w": "fault",
-       "from": 198,
-       "to": 210
-      },
-      {
-       "w": "is",
-       "from": 210,
-       "to": 217
-      },
-      {
-       "w": "this?",
-       "from": 217,
-       "to": 229
-      }
-     ],
-     "cues": {}
     }
    ]
   },
@@ -449,7 +392,7 @@
    "type": "split",
    "data": {
     "top": {
-     "img": "reel/ep23v5/img/dressing.jpg",
+     "img": "reel/ep23v6/img/dressing.jpg",
      "tag": "POST-MATCH REVIEW",
      "icon": "ClipboardList",
      "pan": 30,
@@ -504,15 +447,15 @@
      ]
     }
    },
-   "from": 676,
+   "from": 524,
    "frames": 249,
    "lines": [
     {
      "who": "maastaaru",
-     "name": "Maastaaru",
+     "name": "Teacher",
      "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_06.wav",
+     "audio": "reel/ep23v6/line_05.wav",
      "from": 0,
      "frames": 246,
      "words": [
@@ -666,7 +609,7 @@
    "type": "split",
    "data": {
     "top": {
-     "img": "reel/ep23v5/img/umpire.jpg",
+     "img": "reel/ep23v6/img/umpire.jpg",
      "tag": "REPLAY IT BACKWARD",
      "icon": "MonitorPlay",
      "pan": -30,
@@ -683,15 +626,15 @@
      "blame": 2
     }
    },
-   "from": 925,
+   "from": 773,
    "frames": 345,
    "lines": [
     {
      "who": "maastaaru",
-     "name": "Maastaaru",
+     "name": "Teacher",
      "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_07.wav",
+     "audio": "reel/ep23v6/line_06.wav",
      "from": 0,
      "frames": 273,
      "words": [
@@ -821,7 +764,7 @@
      "name": "Commentary",
      "color": "#34D399",
      "sub": null,
-     "audio": "reel/ep23v5/line_08.wav",
+     "audio": "reel/ep23v6/line_07.wav",
      "from": 275,
      "frames": 68,
      "words": [
@@ -903,136 +846,78 @@
      }
     ]
    },
-   "from": 1271,
-   "frames": 229,
+   "from": 1119,
+   "frames": 135,
    "lines": [
     {
-     "who": "chintu",
-     "name": "Chintu",
-     "color": "#22D3EE",
-     "sub": null,
-     "audio": "reel/ep23v5/line_09.wav",
-     "from": 0,
-     "frames": 81,
-     "words": [
-      {
-       "w": "Wait,",
-       "from": 1,
-       "to": 16
-      },
-      {
-       "w": "so",
-       "from": 16,
-       "to": 21
-      },
-      {
-       "w": "everyone",
-       "from": 21,
-       "to": 36
-      },
-      {
-       "w": "doesn't",
-       "from": 36,
-       "to": 49
-      },
-      {
-       "w": "get",
-       "from": 49,
-       "to": 55
-      },
-      {
-       "w": "the",
-       "from": 55,
-       "to": 62
-      },
-      {
-       "w": "same",
-       "from": 62,
-       "to": 70
-      },
-      {
-       "w": "blame?",
-       "from": 70,
-       "to": 81
-      }
-     ],
-     "cues": {
-      "1": 1
-     }
-    },
-    {
      "who": "maastaaru",
-     "name": "Maastaaru",
+     "name": "Teacher",
      "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_10.wav",
-     "from": 83,
-     "frames": 143,
+     "audio": "reel/ep23v6/line_08.wav",
+     "from": 0,
+     "frames": 132,
      "words": [
       {
-       "w": "Nope!",
-       "from": 85,
-       "to": 99
-      },
-      {
        "w": "Blame",
-       "from": 99,
-       "to": 108
+       "from": 1,
+       "to": 10
       },
       {
        "w": "by",
-       "from": 108,
-       "to": 113
+       "from": 10,
+       "to": 15
       },
       {
        "w": "contribution.",
-       "from": 113,
-       "to": 134
+       "from": 15,
+       "to": 38
       },
       {
        "w": "Then",
-       "from": 134,
-       "to": 146
+       "from": 38,
+       "to": 51
       },
       {
        "w": "each",
-       "from": 146,
-       "to": 157
+       "from": 51,
+       "to": 59
       },
       {
        "w": "weight",
-       "from": 157,
-       "to": 173
+       "from": 59,
+       "to": 70
       },
       {
        "w": "fixes",
-       "from": 173,
-       "to": 182
+       "from": 70,
+       "to": 86
       },
       {
        "w": "itself,",
-       "from": 182,
-       "to": 199
+       "from": 86,
+       "to": 104
       },
       {
        "w": "just",
-       "from": 199,
-       "to": 211
+       "from": 104,
+       "to": 116
       },
       {
        "w": "a",
-       "from": 211,
-       "to": 214
+       "from": 116,
+       "to": 120
       },
       {
        "w": "little.",
-       "from": 214,
-       "to": 226
+       "from": 120,
+       "to": 132
       }
      ],
      "cues": {
-      "2": 99,
-      "3": 134
+      "1": 1,
+      "2": 10,
+      "3": 38
      }
     }
    ]
@@ -1049,7 +934,7 @@
      "chips": [
       {
        "t": "Mistakes going down",
-       "at": 4,
+       "at": 3,
        "x": 500,
        "y": 470,
        "c": "#34D399"
@@ -1063,15 +948,15 @@
     },
     "bridge": "WHAT IT MEANS"
    },
-   "from": 1500,
-   "frames": 238,
+   "from": 1254,
+   "frames": 138,
    "lines": [
     {
      "who": "maastaaru",
-     "name": "Maastaaru",
+     "name": "Teacher",
      "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_11.wav",
+     "audio": "reel/ep23v6/line_09.wav",
      "from": 0,
      "frames": 135,
      "words": [
@@ -1146,45 +1031,6 @@
       "2": 49,
       "3": 82
      }
-    },
-    {
-     "who": "chintu",
-     "name": "Chintu",
-     "color": "#22D3EE",
-     "sub": null,
-     "audio": "reel/ep23v5/line_12.wav",
-     "from": 136,
-     "frames": 98,
-     "words": [
-      {
-       "w": "Mistakes",
-       "from": 139,
-       "to": 164
-      },
-      {
-       "w": "going",
-       "from": 164,
-       "to": 178
-      },
-      {
-       "w": "down...",
-       "from": 178,
-       "to": 197
-      },
-      {
-       "w": "total",
-       "from": 197,
-       "to": 211
-      },
-      {
-       "w": "stonks!",
-       "from": 211,
-       "to": 234
-      }
-     ],
-     "cues": {
-      "4": 139
-     }
     }
    ]
   },
@@ -1200,15 +1046,15 @@
     ],
     "answer": 1
    },
-   "from": 1738,
+   "from": 1392,
    "frames": 318,
    "lines": [
     {
      "who": "maastaaru",
-     "name": "Maastaaru",
+     "name": "Teacher",
      "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_13.wav",
+     "audio": "reel/ep23v6/line_10.wav",
      "from": 0,
      "frames": 314,
      "words": [
@@ -1344,130 +1190,207 @@
      ]
     ],
     "next": "EP 24 · Types of learning",
-    "memes": [
-     {
-      "img": "khaby-lame.jpg",
-      "line": 1,
-      "x": 850,
-      "y": 1260,
-      "w": 220,
-      "rot": 6,
-      "crop": "right"
-     }
-    ]
+    "memes": []
    },
-   "from": 2056,
-   "frames": 265,
+   "from": 1710,
+   "frames": 365,
    "lines": [
     {
-     "who": "chintu",
-     "name": "Chintu",
-     "color": "#22D3EE",
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
      "sub": null,
-     "audio": "reel/ep23v5/line_14.wav",
+     "audio": "reel/ep23v6/line_11.wav",
      "from": 0,
-     "frames": 106,
+     "frames": 362,
      "words": [
       {
        "w": "So",
-       "from": 0,
-       "to": 9
+       "from": 3,
+       "to": 7
       },
       {
-       "w": "AI",
-       "from": 9,
+       "w": "that's",
+       "from": 7,
        "to": 18
       },
       {
-       "w": "learns",
+       "w": "how",
        "from": 18,
-       "to": 38
-      },
-      {
-       "w": "by...",
-       "from": 38,
-       "to": 56
-      },
-      {
-       "w": "blaming",
-       "from": 56,
-       "to": 79
-      },
-      {
-       "w": "smartly?",
-       "from": 79,
-       "to": 106
-      }
-     ],
-     "cues": {
-      "1": 0,
-      "2": 38,
-      "3": 56,
-      "4": 79
-     }
-    },
-    {
-     "who": "maastaaru",
-     "name": "Maastaaru",
-     "color": "#F59E0B",
-     "sub": null,
-     "audio": "reel/ep23v5/line_15.wav",
-     "from": 108,
-     "frames": 154,
-     "words": [
-      {
-       "w": "Exactly!",
-       "from": 108,
-       "to": 127
-      },
-      {
-       "w": "Follow",
-       "from": 127,
-       "to": 145
+       "to": 24
       },
       {
        "w": "AI",
-       "from": 145,
-       "to": 151
+       "from": 24,
+       "to": 28
       },
       {
-       "w": "Maastaaru.",
-       "from": 151,
-       "to": 177
+       "w": "learns.",
+       "from": 28,
+       "to": 45
       },
       {
-       "w": "Next,",
-       "from": 177,
-       "to": 194
+       "w": "Send",
+       "from": 45,
+       "to": 53
       },
       {
        "w": "the",
-       "from": 194,
-       "to": 202
+       "from": 53,
+       "to": 59
+      },
+      {
+       "w": "error",
+       "from": 59,
+       "to": 71
+      },
+      {
+       "w": "backward,",
+       "from": 71,
+       "to": 91
+      },
+      {
+       "w": "blame",
+       "from": 91,
+       "to": 100
+      },
+      {
+       "w": "each",
+       "from": 100,
+       "to": 107
+      },
+      {
+       "w": "part",
+       "from": 107,
+       "to": 114
+      },
+      {
+       "w": "by",
+       "from": 114,
+       "to": 119
+      },
+      {
+       "w": "how",
+       "from": 119,
+       "to": 125
+      },
+      {
+       "w": "much",
+       "from": 125,
+       "to": 132
+      },
+      {
+       "w": "it",
+       "from": 132,
+       "to": 136
+      },
+      {
+       "w": "contributed,",
+       "from": 136,
+       "to": 161
+      },
+      {
+       "w": "fix",
+       "from": 161,
+       "to": 167
+      },
+      {
+       "w": "every",
+       "from": 167,
+       "to": 175
+      },
+      {
+       "w": "weight",
+       "from": 175,
+       "to": 186
+      },
+      {
+       "w": "a",
+       "from": 186,
+       "to": 189
+      },
+      {
+       "w": "little,",
+       "from": 189,
+       "to": 209
+      },
+      {
+       "w": "and",
+       "from": 209,
+       "to": 220
+      },
+      {
+       "w": "repeat,",
+       "from": 220,
+       "to": 231
+      },
+      {
+       "w": "millions",
+       "from": 231,
+       "to": 245
+      },
+      {
+       "w": "of",
+       "from": 245,
+       "to": 249
+      },
+      {
+       "w": "times.",
+       "from": 249,
+       "to": 270
+      },
+      {
+       "w": "Follow",
+       "from": 270,
+       "to": 280
+      },
+      {
+       "w": "for",
+       "from": 280,
+       "to": 286
+      },
+      {
+       "w": "part",
+       "from": 286,
+       "to": 299
+      },
+      {
+       "w": "four:",
+       "from": 299,
+       "to": 316
+      },
+      {
+       "w": "the",
+       "from": 316,
+       "to": 322
       },
       {
        "w": "three",
-       "from": 202,
-       "to": 214
+       "from": 322,
+       "to": 331
       },
       {
        "w": "ways",
-       "from": 214,
-       "to": 224
+       "from": 331,
+       "to": 338
       },
       {
        "w": "machines",
-       "from": 224,
-       "to": 243
+       "from": 338,
+       "to": 352
       },
       {
        "w": "learn.",
-       "from": 243,
-       "to": 257
+       "from": 352,
+       "to": 362
       }
      ],
      "cues": {
-      "5": 177
+      "1": 3,
+      "2": 91,
+      "3": 161,
+      "4": 209,
+      "5": 270
      }
     }
    ]
