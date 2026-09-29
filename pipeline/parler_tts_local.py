@@ -28,6 +28,16 @@ VOICES = {
     "en": "Mary speaks in a clear, warm and friendly tone with an Indian English accent at a moderate, unhurried pace, "
           "like a good teacher. The recording is very clear, close-up, with no background noise.",
 }
+# Named characters (series/VOICES.md). A line picks one with "cast": "<name>"; "post" is an ffmpeg filter.
+CAST = {
+    "narrator_te": {"lang": "te", "voice": None},
+    "rj_young": {"lang": "te", "voice": "Kiran speaks like a young, friendly radio host chatting with listeners: casual, cheerful and expressive, "
+                 "at a lively but clear pace. The recording is very clear, close-up, studio quality, with no background noise."},
+    "sidekick": {"lang": "te", "voice": "Kiran speaks in a very excited, high-pitched, animated and expressive voice, fast and bouncy, "
+                 "like a funny cartoon character. The recording is very clear, close-up, with no background noise.",
+                 "post": "asetrate=44100*1.32,aresample=44100,atempo=0.9"},
+    "narrator_en": {"lang": "en", "voice": None},
+}
 _M = {}
 
 
@@ -81,6 +91,17 @@ def say(lang, text, out: Path, voice=None, pause=0.35):
     return out
 
 
+def post(path: Path, filt: str):
+    """Apply an ffmpeg audio filter in place (e.g. pitch-up for the cartoon sidekick)."""
+    import os
+    import subprocess
+    ff = ROOT / "video" / "node_modules" / "@remotion" / "compositor-linux-x64-gnu" / "ffmpeg"
+    tmp = path.with_suffix(".post.wav")
+    subprocess.run([str(ff), "-y", "-loglevel", "error", "-i", str(path), "-af", filt, str(tmp)], check=True,
+                   env={**os.environ, "LD_LIBRARY_PATH": str(ff.parent)})
+    tmp.replace(path)
+
+
 def clean(text):
     return re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", text)).strip()
 
@@ -95,7 +116,11 @@ def script(spec_path: Path):
                 text = line.get(tkey) or (clean(line["text"]) if key == "file" and "file2" not in line else None)
                 if line.get(key) and text and not (src / line[key]).exists():
                     print("synth", line[key], flush=True)
-                    say(lang, text, src / line[key], voice)
+                    cast = CAST.get(line.get("cast", ""), {})
+                    out = src / line[key]
+                    say(cast.get("lang", lang), text, out, cast.get("voice") or voice)
+                    if cast.get("post"):
+                        post(out, cast["post"])
 
 
 if __name__ == "__main__":
