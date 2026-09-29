@@ -718,7 +718,7 @@ export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
         <Fonts />
         <style>{`@font-face{font-family:Anton;src:url(${staticFile("fonts/anton-latin-400-normal.woff2")}) format('woff2');}`}</style>
         <Backdrop />
-        <div style={{ position: "absolute", left: 1000, top: 44, fontFamily: C.inter, fontWeight: 800, fontSize: 28, letterSpacing: 4, color: "white" }}>
+        <div style={{ position: "absolute", left: 1000, right: 70, top: 44, fontFamily: C.inter, fontWeight: 800, fontSize: 26, letterSpacing: 3, color: "white", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
           AI FROM SCRATCH <span style={{ color: C.amber }}>· {tl.label}</span>{tl.banner ? <span style={{ color: C.muted }}> · {tl.banner}</span> : null}
         </div>
         {tl.scenes.map((s, i) => (
