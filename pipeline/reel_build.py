@@ -103,11 +103,12 @@ def eleven_line(line, who):
     return a, sr, words, cues
 
 
-def voiced_spans(a, sr, gap=0.12):
-    """Speech regions [(start_s, end_s)] from a 10 ms energy envelope."""
+def voiced_spans(a, sr, gap=0.12, floor=None):
+    """Speech regions [(start_s, end_s)] from a 10 ms energy envelope. The default (12% of the peak) finds
+    stressed speech for caption timing; pass an absolute `floor` to find true silence only."""
     fr = int(0.01 * sr)
     env = np.array([np.sqrt(np.mean(a[i:i + fr] ** 2)) for i in range(0, len(a) - fr, fr)])
-    on = env > max(0.02, 0.12 * env.max())
+    on = env > (floor if floor is not None else max(0.02, 0.12 * env.max()))
     spans, start, quiet = [], None, 0
     for i, v in enumerate(on):
         if v:
@@ -126,7 +127,8 @@ def voiced_spans(a, sr, gap=0.12):
 
 def tighten(a, sr, maxgap):
     """Shorten long silences inside a take to `maxgap` seconds (20 ms crossfade), keeping reel pace."""
-    spans = voiced_spans(a, sr)
+    # Only true silence may be cut: a peak-relative threshold also removed quiet word endings and soft syllables.
+    spans = voiced_spans(a, sr, floor=0.008 * (np.abs(a).max() / 0.9 + 1e-9))
     if len(spans) < 2:
         return a
     out, prev_end, fade = [], 0, int(0.02 * sr)

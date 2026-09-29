@@ -69,38 +69,6 @@ def sentences(text):
     return [s for s in parts if re.search(r"\w", s)]
 
 
-TRIES = 5
-MAX_CPS = 19.0  # characters per voiced second above this means words were skipped
-MAX_HOLE = 0.9  # a silence this long inside one sentence means the model went quiet mid-sentence
-
-
-def chunks(s, limit=110):
-    """Split a long sentence at commas: the model drops words on long inputs."""
-    if len(s) <= limit:
-        return [s]
-    out, cur = [], ""
-    for piece in re.split(r"(?<=,)\s+", s):
-        if cur and len(cur) + len(piece) > limit:
-            out.append(cur)
-            cur = piece
-        else:
-            cur = f"{cur} {piece}".strip()
-    return out + ([cur] if cur else [])
-
-
-def dropout(a, sr, text):
-    """0 when the take looks complete; otherwise how far it is over the limits (skipped words / a mid-sentence hole)."""
-    fr = int(0.01 * sr)
-    env = np.array([np.sqrt(np.mean(a[i:i + fr] ** 2)) for i in range(0, max(0, len(a) - fr), fr)])
-    on = np.where(env > 0.01)[0]
-    if len(on) == 0:
-        return 99.0
-    voiced = len(on) * 0.01
-    hole = (np.diff(on).max() - 1) * 0.01 if len(on) > 1 else 0
-    cps = len(re.sub(r"\s+", "", text)) / voiced
-    return max(0.0, cps / MAX_CPS - 1) + max(0.0, hole - MAX_HOLE)
-
-
 EN_FIX = [(r"\bHITEC City\b", "High-tech City"), (r"\bGenAI\b", "Gen A.I."), (r"\bAI\b", "A.I."), (r"\bLLMs\b", "L.L.M.s"), (r"\bLLM\b", "L.L.M."), (r"\bMCP\b", "M.C.P.")]
 
 
@@ -114,21 +82,12 @@ def say(lang, text, out: Path, voice=None, pause=0.35):
     desc = m["dtok"](voice or VOICES[lang], return_tensors="pt")
     sr = m["model"].config.sampling_rate
     parts = []
-    for s in [c for x in sentences(text) for c in chunks(x)]:
+    for s in sentences(text):
         p = m["tok"](s, return_tensors="pt")
-        best = None
-        for attempt in range(TRIES):  # the model samples, so a retry gives a fresh take
-            with torch.no_grad():
-                a = m["model"].generate(input_ids=desc.input_ids, attention_mask=desc.attention_mask,
-                                        prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
-            a = np.atleast_1d(a.cpu().numpy().squeeze())
-            score = dropout(a, sr, s)
-            if best is None or score < best[0]:
-                best = (score, a)
-            if score == 0:
-                break
-            print(f"  retry {attempt + 1} ({score:.2f}): {s[:40]}", flush=True)
-        parts += [best[1], np.zeros(int(pause * sr))]
+        with torch.no_grad():
+            a = m["model"].generate(input_ids=desc.input_ids, attention_mask=desc.attention_mask,
+                                    prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
+        parts += [np.atleast_1d(a.cpu().numpy().squeeze()), np.zeros(int(pause * sr))]
     out.parent.mkdir(parents=True, exist_ok=True)
     sf.write(out, np.concatenate(parts).astype(np.float32), sr)
     return out
