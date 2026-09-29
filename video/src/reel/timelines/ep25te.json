@@ -17,7 +17,26 @@
   {
    "id": "hook",
    "type": "case_hook",
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The case",
+     "title": "An AI that was always right... or was it?",
+     "notes": [
+      [
+       "Task: tell a husky from a wolf in a photo",
+       0
+      ],
+      [
+       "It got the answers right on its test",
+       1
+      ],
+      [
+       "Then researchers asked: what is it looking at?",
+       2
+      ]
+     ]
+    }
+   },
    "from": 0,
    "frames": 358,
    "lines": [
@@ -166,7 +185,30 @@
   {
    "id": "reveal",
    "type": "case_reveal",
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The evidence",
+     "title": "It learned a shortcut",
+     "notes": [
+      [
+       "Training wolves: almost all in snow",
+       1
+      ],
+      [
+       "Training huskies: almost all on grass",
+       2
+      ],
+      [
+       "Shortcut learned: snow means wolf",
+       3
+      ],
+      [
+       "Husky in snow → predicted WOLF",
+       5
+      ]
+     ]
+    }
+   },
    "from": 358,
    "frames": 550,
    "lines": [
@@ -383,7 +425,26 @@
   {
    "id": "gigo",
    "type": "gigo",
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The golden rule",
+     "title": "Garbage in, garbage out",
+     "notes": [
+      [
+       "A model only learns patterns its data shows",
+       1
+      ],
+      [
+       "Biased or messy data → biased, wrong answers",
+       2
+      ],
+      [
+       "More training can't fix bad data",
+       3
+      ]
+     ]
+    }
+   },
    "from": 909,
    "frames": 259,
    "lines": [
@@ -513,7 +574,30 @@
   {
    "id": "checklist",
    "type": "checklist",
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "Good data",
+     "title": "Four things good data needs",
+     "notes": [
+      [
+       "Quantity: enough examples to learn from",
+       1
+      ],
+      [
+       "Quality: correct labels, no junk or duplicates",
+       2
+      ],
+      [
+       "Diversity: every place, person and situation",
+       3
+      ],
+      [
+       "Freshness: data that matches today's world",
+       4
+      ]
+     ]
+    }
+   },
    "from": 1168,
    "frames": 545,
    "lines": [
@@ -699,7 +783,30 @@
   {
    "id": "datasplit",
    "type": "datasplit",
-   "data": {},
+   "data": {
+    "yt": {
+     "chapter": "The surprise exam",
+     "title": "Train, validation, test",
+     "notes": [
+      [
+       "Train set (~80%): the model learns from it",
+       2
+      ],
+      [
+       "Validation set (~10%): tune settings",
+       3
+      ],
+      [
+       "Test set (~10%): hidden until the very end",
+       4
+      ],
+      [
+       "Score on unseen data = real performance",
+       5
+      ]
+     ]
+    }
+   },
    "from": 1713,
    "frames": 424,
    "lines": [
@@ -888,7 +995,25 @@
      "Diversity",
      "Freshness"
     ],
-    "answer": 1
+    "answer": 1,
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Crack this case",
+     "notes": [
+      [
+       "An AI spots cats perfectly... only indoors",
+       0
+      ],
+      [
+       "Which data rule did it break?",
+       1
+      ],
+      [
+       "Answer: Diversity",
+       2
+      ]
+     ]
+    }
    },
    "from": 2137,
    "frames": 507,
@@ -905,127 +1030,127 @@
       {
        "w": "Your",
        "from": 1,
-       "to": 13
+       "to": 12
       },
       {
        "w": "turn,",
-       "from": 13,
-       "to": 27
+       "from": 12,
+       "to": 26
       },
       {
        "w": "detective.",
-       "from": 27,
-       "to": 67
+       "from": 26,
+       "to": 65
       },
       {
        "w": "An",
-       "from": 67,
-       "to": 74
+       "from": 65,
+       "to": 72
       },
       {
        "w": "AI",
-       "from": 74,
-       "to": 81
+       "from": 72,
+       "to": 78
       },
       {
        "w": "spots",
-       "from": 81,
-       "to": 107
+       "from": 78,
+       "to": 99
       },
       {
        "w": "cats",
-       "from": 107,
-       "to": 119
+       "from": 99,
+       "to": 114
       },
       {
        "w": "perfectly...",
-       "from": 119,
-       "to": 157
+       "from": 114,
+       "to": 152
       },
       {
        "w": "but",
-       "from": 157,
-       "to": 173
+       "from": 152,
+       "to": 161
       },
       {
        "w": "only",
-       "from": 173,
-       "to": 185
+       "from": 161,
+       "to": 178
       },
       {
        "w": "indoors.",
-       "from": 185,
-       "to": 215
+       "from": 178,
+       "to": 208
       },
       {
        "w": "Which",
-       "from": 215,
-       "to": 229
+       "from": 208,
+       "to": 221
       },
       {
        "w": "rule",
-       "from": 229,
-       "to": 250
+       "from": 221,
+       "to": 232
       },
       {
        "w": "did",
+       "from": 232,
+       "to": 250
+      },
+      {
+       "w": "its",
        "from": 250,
        "to": 259
       },
       {
-       "w": "its",
-       "from": 259,
-       "to": 272
-      },
-      {
        "w": "data",
-       "from": 272,
-       "to": 284
+       "from": 259,
+       "to": 274
       },
       {
        "w": "break?",
-       "from": 284,
-       "to": 377
+       "from": 274,
+       "to": 290
       },
       {
        "w": "Diversity!",
-       "from": 377,
-       "to": 403
+       "from": 367,
+       "to": 395
       },
       {
        "w": "It",
-       "from": 403,
-       "to": 417
+       "from": 395,
+       "to": 403
       },
       {
        "w": "never",
-       "from": 417,
-       "to": 431
+       "from": 403,
+       "to": 426
       },
       {
        "w": "saw",
-       "from": 431,
-       "to": 440
+       "from": 426,
+       "to": 436
       },
       {
        "w": "a",
-       "from": 440,
-       "to": 445
+       "from": 436,
+       "to": 441
       },
       {
        "w": "cat",
-       "from": 445,
-       "to": 459
+       "from": 441,
+       "to": 452
       },
       {
        "w": "outdoors.",
-       "from": 459,
+       "from": 452,
        "to": 488
       }
      ],
      "cues": {
-      "1": 226,
-      "2": 379
+      "1": 217,
+      "2": 367
      }
     }
    ]
@@ -1038,7 +1163,25 @@
      "Garbage in, garbage out",
      "Good data: quantity, quality, diversity, freshness",
      "Always test on data it has never seen"
-    ]
+    ],
+    "yt": {
+     "chapter": "Case closed",
+     "title": "An AI is only as smart as its data",
+     "notes": [
+      [
+       "Garbage in, garbage out",
+       0
+      ],
+      [
+       "Check quantity, quality, diversity, freshness",
+       1
+      ],
+      [
+       "Always test on data it has never seen",
+       2
+      ]
+     ]
+    }
    },
    "from": 2644,
    "frames": 439,

@@ -185,40 +185,56 @@ def file_line(line, rid):
         audio.append(a)
         if k == 0 and len(parts) > 1:
             audio.append(np.zeros(int(line.get("pause", 3.0) * sr)))
+    bounds = []  # sample ranges of each spoken part (the pause between parts is silence)
+    pos = 0
+    for k, piece in enumerate(audio):
+        if not (k == 1 and len(parts) > 1):
+            bounds.append((pos, pos + len(piece)))
+        pos += len(piece)
     a = np.concatenate(audio)
     a = a * (10 ** (-15 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9))
-    text = line["text"]
-    toks = [t for t in re.sub(r"<pause [\d.]+>", " ", text).split()]
-    marks, words = {}, []
-    for t in toks:
-        m = re.fullmatch(r"\[(\d+)\]", t)
-        if m:
-            marks[len(words)] = int(m.group(1))
-        else:
-            words.append(t)
-    shown = line.get("show", " ".join(words)).split()
-    spans = voiced_spans(a, sr)
-    total = sum(e - s for s, e in spans) or len(a) / sr
-    weights = [len(w) + 1 for w in shown]
-    wsum = sum(weights)
-    out, acc = [], 0.0
+    # Text parts follow "<pause>" (same count as audio parts); captions ("show") may also carry "<pause>".
+    seg_text = re.split(r"<pause [\d.]+>", line["text"])
+    seg_show = re.split(r"<pause [\d.]+>", line["show"]) if line.get("show") else [None] * len(seg_text)
+    if len(seg_text) != len(bounds):
+        seg_text, seg_show = [" ".join(seg_text)], [line.get("show")]
+        bounds = [(0, len(a))]
+    if len(seg_show) != len(seg_text):  # captions without a pause marker: split by length
+        words_all = line["show"].split()
+        cut = round(len(words_all) * len(seg_text[0]) / max(1, sum(len(t) for t in seg_text)))
+        seg_show = [" ".join(words_all[:cut]), " ".join(words_all[cut:])]
+    out, cues = [], {}
+    for (b0, b1), txt, shw in zip(bounds, seg_text, seg_show):
+        marks, words = {}, []
+        for t in txt.split():
+            m = re.fullmatch(r"\[(\d+)\]", t)
+            if m:
+                marks[len(words)] = int(m.group(1))
+            else:
+                words.append(t)
+        shown = (shw if shw is not None else " ".join(words)).split()
+        spans = [(s + b0 / sr, e + b0 / sr) for s, e in voiced_spans(a[b0:b1], sr)] or [(b0 / sr, b1 / sr)]
+        total = sum(e - s for s, e in spans)
 
-    def at(x):  # map a fraction of voiced time onto the real timeline
-        need = x * total
-        for s, e in spans:
-            if need <= e - s:
-                return s + need
-            need -= e - s
-        return spans[-1][1] if spans else x * len(a) / sr
-    for w, wt in zip(shown, weights):
-        s0 = at(acc / wsum)
-        acc += wt
-        out.append((w, s0, at(acc / wsum)))
-    # Cue times follow the SPOKEN words (text), so on-screen cues stay in sync even when captions
-    # show a different language (e.g. Telugu audio with English subtitles via "show").
-    sw = [len(w) + 1 for w in words]
-    ssum = sum(sw) or 1
-    cues = {n: at(sum(sw[:i]) / ssum) for i, n in marks.items()} if out else {}
+        def at(x, spans=spans, total=total):  # map a fraction of this part's voiced time onto the timeline
+            need = x * total
+            for s0, e0 in spans:
+                if need < e0 - s0:
+                    return s0 + need
+                need -= e0 - s0
+            return spans[-1][1]
+        weights = [len(w) + 1 for w in shown]
+        wsum = sum(weights) or 1
+        acc = 0.0
+        for w, wt in zip(shown, weights):
+            s0 = at(acc / wsum)
+            acc += wt
+            out.append((w, s0, at(acc / wsum)))
+        # Cue times follow the SPOKEN words, so cues stay in sync when captions are in another language.
+        sw = [len(w) + 1 for w in words]
+        ssum = sum(sw) or 1
+        for i, n in marks.items():
+            cues[n] = at(sum(sw[:i]) / ssum)
     return a, sr, out, cues
 
 
