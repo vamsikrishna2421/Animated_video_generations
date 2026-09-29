@@ -11,8 +11,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 from story_promo import FPS, SR, score  # noqa: E402
 
-OUT = ROOT / "video" / "public" / "story_te"
-TL = ROOT / "video" / "src" / "story" / "story_timeline_te.json"
+LANG = sys.argv[1] if len(sys.argv) > 1 else "te"  # "te" or "en"
+OUT = ROOT / "video" / "public" / f"story_{LANG}"
+TL = ROOT / "video" / "src" / "story" / f"story_timeline_{LANG}.json"
 # Beat id and minimum on-screen seconds (the meme beat needs time for all three panels).
 BEATS = [("fast", 3.0), ("flood", 3.8), ("lost", 2.8), ("drake", 6.5), ("reveal", 3.6), ("pillars", 7.4), ("cta", 5.2)]
 
@@ -29,10 +30,10 @@ def main():
         dur = len(a) / sr
         length = max(mn, dur + 0.9)
         beats.append({"id": bid, "text": "", "from": round(t * FPS), "frames": round(length * FPS),
-                      "voiceFrom": round((t + 0.2) * FPS), "voiceFrames": round(dur * FPS), "audio": f"story_te/vo_{bid}_n.wav"})
+                      "voiceFrom": round((t + 0.2) * FPS), "voiceFrames": round(dur * FPS), "audio": f"story_{LANG}/vo_{bid}_n.wav"})
         t += length
     sf.write(OUT / "score.wav", score([(b["id"], b["from"] / FPS) for b in beats], t).astype(np.float32), SR)
-    TL.write_text(json.dumps({"fps": FPS, "totalFrames": round(t * FPS), "music": "story_te/score.wav", "beats": beats}, indent=1) + "\n")
+    TL.write_text(json.dumps({"fps": FPS, "totalFrames": round(t * FPS), "music": f"story_{LANG}/score.wav", "beats": beats}, indent=1) + "\n")
     print(f"total {t:.1f}s", [(b["id"], round(b["frames"] / FPS, 1)) for b in beats])
 
 

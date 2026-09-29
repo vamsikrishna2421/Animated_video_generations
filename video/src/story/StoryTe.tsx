@@ -2,7 +2,7 @@ import { AbsoluteFill, Audio, Sequence, interpolate, random, spring, staticFile,
 import { Fonts } from "../components/Fonts";
 import { Icon } from "../lesson/Icon";
 import { Mascot } from "../lesson/Mascot";
-import tl from "./story_timeline_te.json";
+import tlTe from "./story_timeline_te.json";
 
 // Instagram Story channel promo (1080x1920). Content stays inside y 250..1600 (Story UI safe zone).
 const C = {
@@ -22,8 +22,13 @@ const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const grad = (a: string, b: string, deg = 90) =>
   ({ background: `linear-gradient(${deg}deg, ${a}, ${b})`, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }) as const;
 
-type Beat = (typeof tl.beats)[number];
-const B = Object.fromEntries(tl.beats.map((b) => [b.id, b])) as Record<string, Beat>;
+type Beat = (typeof tlTe.beats)[number];
+type StoryTl = { fps: number; totalFrames: number; music: string; beats: Beat[] };
+// Per-language config. Set at the top of each render (one composition renders per process).
+export type PromoCfg = { tl: StoryTl; handle: string; subline: string; drake: [string, string]; episodes: string };
+let tl: StoryTl = tlTe as StoryTl;
+let B: Record<string, Beat> = {};
+let CFG: PromoCfg = { tl, handle: "@ai_maastaaru_telugu", subline: "AI, explained in Telugu.", drake: ["Confusing English AI tutorials", "AI explained in Telugu, simply"], episodes: "82 episodes, zero jargon" };
 
 const useSp = (at: number, damping = 12, mass = 1) => {
   const f = useCurrentFrame();
@@ -308,7 +313,7 @@ const Reveal: React.FC = () => {
         })}
       </div>
       <div style={{ position: "absolute", top: 1300, left: 0, right: 0, textAlign: "center", fontFamily: C.inter, fontWeight: 700, fontSize: 50, color: C.teal, opacity: interpolate(f, [34, 46], [0, 1], cl), letterSpacing: 2 }}>
-        AI, explained in Telugu.
+        {CFG.subline}
       </div>
     </AbsoluteFill>
   );
@@ -329,7 +334,7 @@ const Pillars: React.FC = () => {
     return s;
   });
   const cards = [
-    { icon: "GraduationCap", title: "Learn from scratch", sub: "82 episodes, zero jargon", c1: C.violet, c2: C.blue },
+    { icon: "GraduationCap", title: "Learn from scratch", sub: CFG.episodes, c1: C.violet, c2: C.blue },
     { icon: "Smartphone", title: "Real World AI", sub: "How your apps really work", c1: C.teal, c2: C.green },
     { icon: "Zap", title: "Latest AI updates", sub: "New tools, models and news", c1: C.amber, c2: C.rose },
   ];
@@ -404,7 +409,7 @@ const Pillars: React.FC = () => {
 const Cta: React.FC = () => {
   const f = useCurrentFrame();
   const b = B.cta;
-  const handle = "@ai_maastaaru_telugu";
+  const handle = CFG.handle;
   const typed = Math.floor(interpolate(f, [4, 30], [0, handle.length], cl));
   const tapAt = 54;
   const cursorX = interpolate(f, [30, tapAt], [900, 600], cl);
@@ -484,7 +489,7 @@ const Drake: React.FC = () => {
   const b = B.drake;
   const v0 = b.voiceFrom - b.from;
   const marks = [v0, v0 + Math.round(0.48 * b.voiceFrames)];
-  const texts = ["Confusing English AI tutorials", "AI explained in Telugu, simply"];
+  const texts = CFG.drake;
   const inS = useSp(0, 14);
   const W = 470, H = Math.round((W * 698) / 446);
   return (
@@ -514,7 +519,10 @@ const Drake: React.FC = () => {
 
 const SCENES: Record<string, React.FC> = { fast: Fast, flood: Flood, lost: Lost, drake: Drake, reveal: Reveal, pillars: Pillars, cta: Cta };
 
-export const StoryTe: React.FC = () => {
+export const StoryTe: React.FC<{ cfg?: PromoCfg }> = ({ cfg }) => {
+  if (cfg) CFG = cfg;
+  tl = CFG.tl;
+  B = Object.fromEntries(tl.beats.map((b) => [b.id, b])) as Record<string, Beat>;
   const f = useCurrentFrame();
   // camera shake + white flash on the big impacts
   const hits = [B.reveal.from, B.cta.from];
@@ -568,4 +576,34 @@ const BeatWrap: React.FC<{ first: boolean; frames: number; children: React.React
   const inP = first ? 1 : interpolate(f, [0, 7], [0, 1], cl);
   const outP = interpolate(f, [frames - 6, frames], [1, 0], cl);
   return <AbsoluteFill style={{ opacity: Math.min(inP, outP), transform: `scale(${(first ? 1 : 1.15 - 0.15 * inP) * (1 + 0.12 * (1 - outP))})` }}>{children}</AbsoluteFill>;
+};
+
+// YouTube channel trailer (16:9): the vertical promo on the left, branding and pillars on the right.
+export const StoryYT: React.FC<{ cfg: PromoCfg }> = ({ cfg }) => {
+  const f = useCurrentFrame();
+  const t = (a: number) => interpolate(f, [a, a + 14], [0, 1], cl);
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 70% 40%, #1e1b4b 0%, #04060F 70%)" }}>
+      <Fonts />
+      <div style={{ position: "absolute", left: 150, top: 0, width: 608, height: 1080, overflow: "hidden", borderLeft: "2px solid rgba(255,255,255,0.08)", borderRight: "2px solid rgba(255,255,255,0.08)" }}>
+        <div style={{ width: 1080, height: 1920, transform: "scale(0.5625)", transformOrigin: "0 0" }}>
+          <StoryTe cfg={cfg} />
+        </div>
+      </div>
+      <div style={{ position: "absolute", left: 880, right: 90, top: 250 }}>
+        <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: C.amber, opacity: t(10) }}>NEW CHANNEL</div>
+        <div style={{ fontFamily: C.anton, fontSize: 120, lineHeight: 1, color: C.text, marginTop: 10, opacity: t(20) }}>AI FROM SCRATCH</div>
+        <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 44, color: C.teal, marginTop: 16, opacity: t(30) }}>{cfg.subline}</div>
+        <div style={{ marginTop: 60, display: "flex", flexDirection: "column", gap: 22 }}>
+          {[["GraduationCap", "Learn AI from scratch"], ["Smartphone", "How real apps use AI"], ["Zap", "Latest AI updates"]].map(([ic, txt], i) => (
+            <div key={txt} style={{ display: "flex", alignItems: "center", gap: 20, opacity: t(45 + i * 12), transform: `translateX(${(1 - t(45 + i * 12)) * 40}px)` }}>
+              <div style={{ width: 70, height: 70, borderRadius: 18, background: `linear-gradient(135deg, ${[C.violet, C.teal, C.amber][i]}, ${[C.blue, C.green, C.rose][i]})`, display: "flex", alignItems: "center", justifyContent: "center" }}><Icon name={ic} size={40} color="white" /></div>
+              <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 42, color: C.text }}>{txt}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: 70, fontFamily: C.inter, fontWeight: 800, fontSize: 40, color: C.amber, opacity: t(90) }}>{cfg.handle}</div>
+      </div>
+    </AbsoluteFill>
+  );
 };
