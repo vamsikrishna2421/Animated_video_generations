@@ -1,0 +1,416 @@
+{
+ "id": "ep01te",
+ "title": "AI vs ML vs Deep Learning vs GenAI",
+ "label": "EP 1",
+ "banner": "AI vs ML vs DL vs GenAI",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.0,
+ "gap": 0.35,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "address",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The confusion",
+     "title": "Four words, one family",
+     "notes": [
+      [
+       "AI, ML, Deep Learning, GenAI",
+       0
+      ],
+      [
+       "Not four different things",
+       2
+      ],
+      [
+       "Think of an address: India → HITEC City",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.45,
+     "text": "{AI}. మెషీన్ లెర్నింగ్. డీప్ లెర్నింగ్. జెనరేటివ్ {AI}. [1] ఇవి నాలుగు వేర్వేరు విషయాలా? [2] అసలు కాదు. వీటిని ఒక అడ్రస్ లాగా అనుకోండి. [3] ఇండియా, [4] తెలంగాణ, [5] హైదరాబాద్, [6] ఇంకా హైటెక్ సిటీ.",
+     "show": "AI. Machine learning. Deep learning. Generative AI. Are they four different things? Not really. Think of them like an address. India, Telangana, Hyderabad, and HITEC City."
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "nightcity",
+     "tag": "AI · THE BIG IDEA",
+     "icon": "Sparkles",
+     "pops": [
+      [
+       "ScanFace",
+       "Faces",
+       2
+      ],
+      [
+       "Mic",
+       "Speech",
+       3
+      ],
+      [
+       "Scale",
+       "Decisions",
+       4
+      ]
+     ]
+    },
+    "bottom": {
+     "kind": "iconrow",
+     "tag": "IN AI",
+     "headline": "Machines doing tasks that need human intelligence",
+     "items": [
+      [
+       "ScanFace",
+       "Recognise a face",
+       2
+      ],
+      [
+       "Mic",
+       "Understand speech",
+       3
+      ],
+      [
+       "Scale",
+       "Make a decision",
+       4
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "AI",
+     "title": "The big idea (the country)",
+     "notes": [
+      [
+       "Machines doing tasks that need human intelligence",
+       1
+      ],
+      [
+       "Recognising faces",
+       2
+      ],
+      [
+       "Understanding speech",
+       3
+      ],
+      [
+       "Making decisions",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_ai.wav",
+     "maxgap": 0.45,
+     "text": "ముందు అన్నిటికంటే పెద్దది చూద్దాం. [1] మనుషుల తెలివి అవసరమయ్యే పనిని ఏ మెషీన్ చేసినా, అది {AI}. [2] ఒక ఫేస్ ని గుర్తుపట్టడం. [3] మాటలను అర్థం చేసుకోవడం. [4] ఒక నిర్ణయం తీసుకోవడం.",
+     "show": "Let's start with the biggest one. AI is any machine doing something that normally needs human intelligence. Recognising a face. Understanding speech. Making a decision."
+    }
+   ]
+  },
+  {
+   "id": "ml",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "mango",
+     "tag": "MACHINE LEARNING · THE MANGO TEST",
+     "icon": "Apple",
+     "norule": 2,
+     "seen": 3,
+     "learned": 4
+    },
+    "bottom": {
+     "kind": "labels",
+     "tag": "IN AI · LEARNS FROM EXAMPLES",
+     "show": 4,
+     "lbl": 4,
+     "r1": 5,
+     "r2": 5,
+     "pred": 5
+    },
+    "yt": {
+     "chapter": "Machine learning",
+     "title": "Learning from examples (the state)",
+     "notes": [
+      [
+       "Old software: hand-written rules",
+       0
+      ],
+      [
+       "ML: learns patterns from examples",
+       1
+      ],
+      [
+       "Like learning ripe mangoes by seeing many",
+       3
+      ],
+      [
+       "Spam filters learn from labelled emails",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_ml.wav",
+     "maxgap": 0.45,
+     "text": "పాత సాఫ్ట్‌వేర్, ప్రోగ్రామర్ చేత్తో రాసిన రూల్స్ ని మాత్రమే ఫాలో అవుతుంది. [1] మెషీన్ లెర్నింగ్ వేరు. ఇది ఎగ్జాంపుల్స్ నుండి నేర్చుకుంటుంది. [2] మీరు పండిన మామిడిపండుని గుర్తుపట్టడం ఎలా నేర్చుకున్నారో, అలాగే. ఎవరూ మీకు రూల్ బుక్ ఇవ్వలేదు. [3] మీరు వందల మామిడిపండ్లు చూశారు, అంతే. [4] అలాగే, వేల ఈమెయిల్స్ ని స్పామ్, నాట్ స్పామ్ అని చూపిస్తే, మెషీన్ తనంతట తానే ప్యాటర్న్ నేర్చుకుంటుంది. [5]",
+     "show": "Old software only follows rules a programmer writes by hand. Machine learning is different. It learns from examples, like how you learned to pick a ripe mango. Nobody gave you a rulebook. You just saw hundreds of mangoes. Show a machine thousands of emails marked spam or not spam, and it learns the pattern by itself."
+    }
+   ]
+  },
+  {
+   "id": "dl",
+   "type": "deep",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Deep learning",
+     "title": "Layered networks (the city)",
+     "notes": [
+      [
+       "Neural networks with many layers",
+       1
+      ],
+      [
+       "Early layers: edges",
+       2
+      ],
+      [
+       "Middle layers: shapes",
+       3
+      ],
+      [
+       "Last layers: whole objects",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_dl.wav",
+     "maxgap": 0.45,
+     "text": "డీప్ లెర్నింగ్ అంటే, మెదడు లాంటి నెట్‌వర్క్ తో చేసే మెషీన్ లెర్నింగ్. [1] చిన్న చిన్న మ్యాథ్ యూనిట్స్, పొరలు పొరలుగా కనెక్ట్ అయి ఉంటాయి. [2] మొదటి పొరలు గీతలను గుర్తిస్తాయి. [3] తర్వాతవి, ఆకారాలను. [4] చివరివి, ఒక పిల్లి మొత్తాన్ని. పొరలు ఎక్కువైతే, డెప్త్ ఎక్కువ. అందుకే దీన్ని డీప్ లెర్నింగ్ అంటారు.",
+     "show": "Deep learning is machine learning with a brain-like network. Layers of tiny math units, connected together. The first layers spot edges. The next ones, shapes. The last ones, a whole cat. More layers, more depth. That's why it's called deep learning."
+    }
+   ]
+  },
+  {
+   "id": "gen",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "studio",
+     "tag": "GENERATIVE AI · IT CREATES",
+     "icon": "Wand2"
+    },
+    "bottom": {
+     "kind": "iconrow",
+     "tag": "IN AI",
+     "headline": "Creates brand-new content",
+     "items": [
+      [
+       "Type",
+       "Text",
+       1
+      ],
+      [
+       "Image",
+       "Images",
+       2
+      ],
+      [
+       "Music",
+       "Music",
+       3
+      ],
+      [
+       "Code2",
+       "Code",
+       4
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "Generative AI",
+     "title": "Creates new things (the neighbourhood)",
+     "notes": [
+      [
+       "Text, images, music, code",
+       1
+      ],
+      [
+       "ChatGPT, Gemini, Claude",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_gen.wav",
+     "maxgap": 0.45,
+     "text": "తర్వాత వచ్చింది జెనరేటివ్ {AI}. ఇది గుర్తుపట్టడమే కాదు, కొత్తవి క్రియేట్ చేస్తుంది. [1] టెక్స్ట్. [2] ఇమేజెస్. [3] మ్యూజిక్. [4] కోడ్. చాట్ జీపీటీ, జెమిని, ఇవన్నీ జెనరేటివ్ {AI}.",
+     "show": "Then came generative AI. It doesn't just recognise things, it creates brand new ones. Text. Images. Music. Code. ChatGPT and Gemini are generative AI."
+    }
+   ]
+  },
+  {
+   "id": "nested",
+   "type": "nested",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The whole picture",
+     "title": "Every GenAI is AI",
+     "notes": [
+      [
+       "AI ⊃ ML ⊃ Deep Learning ⊃ GenAI",
+       1
+      ],
+      [
+       "Not every AI is generative",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_nested.wav",
+     "maxgap": 0.45,
+     "text": "సో, మొత్తం అడ్రస్ ఇదే. [1] {AI} అంటే దేశం. [2] మెషీన్ లెర్నింగ్, దానిలో ఒక రాష్ట్రం. [3] డీప్ లెర్నింగ్, ఆ రాష్ట్రంలో ఒక సిటీ. [4] జెనరేటివ్ {AI}, ఆ సిటీలో అన్నిటికంటే కొత్త, బిజీ ఏరియా. [5] ప్రతి జెనరేటివ్ {AI}, {AI} నే. కానీ ప్రతి {AI}, జెనరేటివ్ కాదు.",
+     "show": "So here's the whole address. AI is the country. Machine learning is a state inside it. Deep learning is a city inside that. And generative AI is the newest, busiest neighbourhood. Every generative AI is AI, but not every AI is generative."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.45,
+   "data": {
+    "question": "Your phone's face unlock. Which one is it?",
+    "options": [
+     "Generative AI",
+     "Deep learning",
+     "Neither, it's just rules"
+    ],
+    "answer": 1,
+    "yt": {
+     "chapter": "Quick test",
+     "title": "Face unlock: which one?",
+     "notes": [
+      [
+       "Recognises, doesn't create",
+       1
+      ],
+      [
+       "Answer: Deep learning",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_quizA.wav",
+     "file2": "08_quizB.wav",
+     "pause": 2.5,
+     "gap": 0.1,
+     "maxgap": 0.5,
+     "text": "చిన్న టెస్ట్! మీ ఫోన్ ఫేస్ అన్‌లాక్. ఇది ఏది? [1] <pause 2> [2] డీప్ లెర్నింగ్! అది మీ ఫేస్ ని గుర్తుపడుతుంది, కొత్తది క్రియేట్ చేయదు. కాబట్టి అది జెనరేటివ్ కాదు.",
+     "tts": "చిన్న టెస్ట్! మీ ఫోన్ ఫేస్ అన్‌లాక్. ఇది ఏది?",
+     "tts2": "డీప్ లెర్నింగ్! అది మీ ఫేస్ ని గుర్తుపడుతుంది, కొత్తది క్రియేట్ చేయదు. కాబట్టి అది జెనరేటివ్ కాదు.",
+     "show": "Quick test! Your phone's face unlock. Which one is it? Deep learning! It recognises your face. It doesn't create one, so it's not generative."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "tail": 0.45,
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "AI",
+      "the big idea"
+     ],
+     [
+      "Machine learning",
+      "learns from examples"
+     ],
+     [
+      "Deep learning",
+      "layered networks"
+     ],
+     [
+      "Generative AI",
+      "creates new things"
+     ]
+    ],
+    "next": "EP 2 · What is an LLM?",
+    "yt": {
+     "chapter": "Recap",
+     "title": "Remember the address",
+     "notes": [
+      [
+       "AI = country, ML = state",
+       1
+      ],
+      [
+       "Deep learning = city, GenAI = neighbourhood",
+       3
+      ],
+      [
+       "Next: What is an LLM?",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.45,
+     "text": "సో, [1] {AI} అంటే పెద్ద ఐడియా. [2] మెషీన్ లెర్నింగ్, ఎగ్జాంపుల్స్ నుండి నేర్చుకుంటుంది. [3] డీప్ లెర్నింగ్, పొరల నెట్‌వర్క్ వాడుతుంది. [4] జెనరేటివ్ {AI}, కొత్తవి క్రియేట్ చేస్తుంది. [5] నెక్స్ట్: లార్జ్ లాంగ్వేజ్ మోడల్ అంటే ఏంటి, చాట్ జీపీటీ ఎలా ఆలోచిస్తుంది? మిస్ అవ్వకుండా ఫాలో చేయండి.",
+     "show": "So, AI is the big idea. Machine learning learns from examples. Deep learning uses layered networks. Generative AI creates new things. Next, what is a large language model, and how does ChatGPT think? Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}

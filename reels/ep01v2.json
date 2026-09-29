@@ -1,0 +1,408 @@
+{
+ "id": "ep01v2",
+ "title": "AI vs ML vs Deep Learning vs GenAI",
+ "label": "EP 1",
+ "banner": "AI vs ML vs DL vs GenAI",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.0,
+ "gap": 0.5,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "address",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The confusion",
+     "title": "Four words, one family",
+     "notes": [
+      [
+       "AI, ML, Deep Learning, GenAI",
+       0
+      ],
+      [
+       "Not four different things",
+       2
+      ],
+      [
+       "Think of an address: India → HITEC City",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.55,
+     "text": "AI. Machine learning. Deep learning. Generative AI. [1] Are they four different things? [2] Not really. Think of them like an address. [3] India, [4] Telangana, [5] Hyderabad, [6] and HITEC City."
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "nightcity",
+     "tag": "AI · THE BIG IDEA",
+     "icon": "Sparkles",
+     "pops": [
+      [
+       "ScanFace",
+       "Faces",
+       2
+      ],
+      [
+       "Mic",
+       "Speech",
+       3
+      ],
+      [
+       "Scale",
+       "Decisions",
+       4
+      ]
+     ]
+    },
+    "bottom": {
+     "kind": "iconrow",
+     "tag": "IN AI",
+     "headline": "Machines doing tasks that need human intelligence",
+     "items": [
+      [
+       "ScanFace",
+       "Recognise a face",
+       2
+      ],
+      [
+       "Mic",
+       "Understand speech",
+       3
+      ],
+      [
+       "Scale",
+       "Make a decision",
+       4
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "AI",
+     "title": "The big idea (the country)",
+     "notes": [
+      [
+       "Machines doing tasks that need human intelligence",
+       1
+      ],
+      [
+       "Recognising faces",
+       2
+      ],
+      [
+       "Understanding speech",
+       3
+      ],
+      [
+       "Making decisions",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_ai.wav",
+     "maxgap": 0.55,
+     "text": "Let's start with the biggest one. [1] AI is any machine doing something that normally needs human intelligence. [2] Recognising a face. [3] Understanding speech. [4] Making a decision."
+    }
+   ]
+  },
+  {
+   "id": "ml",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "mango",
+     "tag": "MACHINE LEARNING · THE MANGO TEST",
+     "icon": "Apple",
+     "norule": 2,
+     "seen": 3,
+     "learned": 4
+    },
+    "bottom": {
+     "kind": "labels",
+     "tag": "IN AI · LEARNS FROM EXAMPLES",
+     "show": 4,
+     "lbl": 4,
+     "r1": 5,
+     "r2": 5,
+     "pred": 5
+    },
+    "yt": {
+     "chapter": "Machine learning",
+     "title": "Learning from examples (the state)",
+     "notes": [
+      [
+       "Old software: hand-written rules",
+       0
+      ],
+      [
+       "ML: learns patterns from examples",
+       1
+      ],
+      [
+       "Like learning ripe mangoes by seeing many",
+       3
+      ],
+      [
+       "Spam filters learn from labelled emails",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_ml.wav",
+     "maxgap": 0.55,
+     "text": "Old software only follows rules a programmer writes by hand. [1] Machine learning is different. It learns from examples, [2] like how you learned to pick a ripe mango. Nobody gave you a rulebook. [3] You just saw hundreds of mangoes. [4] Show a machine thousands of emails marked spam or not spam, and it learns the pattern by itself. [5]"
+    }
+   ]
+  },
+  {
+   "id": "dl",
+   "type": "deep",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Deep learning",
+     "title": "Layered networks (the city)",
+     "notes": [
+      [
+       "Neural networks with many layers",
+       1
+      ],
+      [
+       "Early layers: edges",
+       2
+      ],
+      [
+       "Middle layers: shapes",
+       3
+      ],
+      [
+       "Last layers: whole objects",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_dl.wav",
+     "maxgap": 0.55,
+     "text": "Deep learning is machine learning with a brain-like network. [1] Layers of tiny math units, connected together. [2] The first layers spot edges. [3] The next ones, shapes. [4] The last ones, a whole cat. More layers, more depth. That's why it's called deep learning."
+    }
+   ]
+  },
+  {
+   "id": "gen",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "studio",
+     "tag": "GENERATIVE AI · IT CREATES",
+     "icon": "Wand2"
+    },
+    "bottom": {
+     "kind": "iconrow",
+     "tag": "IN AI",
+     "headline": "Creates brand-new content",
+     "items": [
+      [
+       "Type",
+       "Text",
+       1
+      ],
+      [
+       "Image",
+       "Images",
+       2
+      ],
+      [
+       "Music",
+       "Music",
+       3
+      ],
+      [
+       "Code2",
+       "Code",
+       4
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "Generative AI",
+     "title": "Creates new things (the neighbourhood)",
+     "notes": [
+      [
+       "Text, images, music, code",
+       1
+      ],
+      [
+       "ChatGPT, Gemini, Claude",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_gen.wav",
+     "maxgap": 0.55,
+     "text": "Then came generative AI. It doesn't just recognise things, it creates brand new ones. [1] Text. [2] Images. [3] Music. [4] Code. ChatGPT and Gemini are generative AI."
+    }
+   ]
+  },
+  {
+   "id": "nested",
+   "type": "nested",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The whole picture",
+     "title": "Every GenAI is AI",
+     "notes": [
+      [
+       "AI ⊃ ML ⊃ Deep Learning ⊃ GenAI",
+       1
+      ],
+      [
+       "Not every AI is generative",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_nested.wav",
+     "maxgap": 0.55,
+     "text": "So here's the whole address. [1] AI is the country. [2] Machine learning is a state inside it. [3] Deep learning is a city inside that. [4] And generative AI is the newest, busiest neighbourhood. [5] Every generative AI is AI, but not every AI is generative."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.45,
+   "data": {
+    "question": "Your phone's face unlock. Which one is it?",
+    "options": [
+     "Generative AI",
+     "Deep learning",
+     "Neither, it's just rules"
+    ],
+    "answer": 1,
+    "yt": {
+     "chapter": "Quick test",
+     "title": "Face unlock: which one?",
+     "notes": [
+      [
+       "Recognises, doesn't create",
+       1
+      ],
+      [
+       "Answer: Deep learning",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_quizA.wav",
+     "file2": "08_quizB.wav",
+     "pause": 2.5,
+     "gap": 0.1,
+     "maxgap": 0.5,
+     "text": "Quick test! Your phone's face unlock. Which one is it? [1] <pause 2> [2] Deep learning! It recognises your face. It doesn't create one, so it's not generative.",
+     "tts": "Quick test! Your phone's face unlock. Which one is it?",
+     "tts2": "Deep learning! It recognises your face. It doesn't create one, so it's not generative."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "tail": 0.45,
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "AI",
+      "the big idea"
+     ],
+     [
+      "Machine learning",
+      "learns from examples"
+     ],
+     [
+      "Deep learning",
+      "layered networks"
+     ],
+     [
+      "Generative AI",
+      "creates new things"
+     ]
+    ],
+    "next": "EP 2 · What is an LLM?",
+    "yt": {
+     "chapter": "Recap",
+     "title": "Remember the address",
+     "notes": [
+      [
+       "AI = country, ML = state",
+       1
+      ],
+      [
+       "Deep learning = city, GenAI = neighbourhood",
+       3
+      ],
+      [
+       "Next: What is an LLM?",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.55,
+     "text": "So, [1] AI is the big idea. [2] Machine learning learns from examples. [3] Deep learning uses layered networks. [4] Generative AI creates new things. [5] Next, what is a large language model, and how does ChatGPT think? Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}
