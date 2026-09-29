@@ -9,6 +9,7 @@ import { Story } from "./story/Story";
 import storyTl from "./story/story_timeline.json";
 import storyTeTl from "./story/story_timeline_te.json";
 import { StoryTe } from "./story/StoryTe";
+import { RideWorld } from "./reel/World";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -46,6 +47,7 @@ export const RemotionRoot: React.FC = () => (
         height={1920}
       />
     ))}
+    <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     <Composition
       id="ChannelStoryTe"
       component={StoryTe}
