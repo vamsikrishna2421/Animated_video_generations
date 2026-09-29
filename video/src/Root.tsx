@@ -10,6 +10,7 @@ import storyTl from "./story/story_timeline.json";
 import storyTeTl from "./story/story_timeline_te.json";
 import { StoryTe } from "./story/StoryTe";
 import { RideWorld } from "./reel/World";
+import { Scene3DTest } from "./reel/Scene3D";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -47,6 +48,7 @@ export const RemotionRoot: React.FC = () => (
         height={1920}
       />
     ))}
+    <Composition id="Scene3DTest" component={Scene3DTest} durationInFrames={150} fps={30} width={1000} height={560} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     <Composition
       id="ChannelStoryTe"
