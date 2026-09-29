@@ -1,0 +1,93 @@
+"""Free, local text-to-speech with AI4Bharat Indic Parler-TTS (Apache-2.0), for Telugu and Indian English.
+
+Weights come from an ungated mirror whose model.safetensors is byte-identical to ai4bharat/indic-parler-tts
+(sha256 is checked after download).
+
+  python3 pipeline/parler_tts_local.py say te "తెలుగు వాక్యం" out.wav
+  python3 pipeline/parler_tts_local.py script reels/<id>.json      # fill missing line "file" takes from "tts" text
+
+Spec keys for "script": "parler_lang" ("te" | "en"), optional "parler_voice" (speaker description).
+"""
+import hashlib
+import json
+import re
+import sys
+from pathlib import Path
+
+import numpy as np
+import soundfile as sf
+
+ROOT = Path(__file__).resolve().parent.parent
+REPO = "RXD03/indic-parler-tts"  # mirror of ai4bharat/indic-parler-tts
+SHA = "c68daecb60f80c8f"  # prefix of the official model.safetensors sha256
+VOICES = {
+    # Named speakers the model was trained with; the description steers pace, tone and recording quality.
+    "te": "Lalitha speaks in a clear, warm and friendly tone at a moderate, unhurried pace, like a good teacher. "
+          "The recording is very clear, close-up, with no background noise.",
+    "en": "Mary speaks in a clear, warm and friendly tone with an Indian English accent at a moderate, unhurried pace, "
+          "like a good teacher. The recording is very clear, close-up, with no background noise.",
+}
+_M = {}
+
+
+def load():
+    if _M:
+        return _M
+    import torch
+    from huggingface_hub import hf_hub_download
+    from parler_tts import ParlerTTSForConditionalGeneration
+    from transformers import AutoTokenizer
+
+    torch.set_num_threads(4)
+    weights = hf_hub_download(REPO, "model.safetensors")
+    h = hashlib.sha256()
+    with open(weights, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 24), b""):
+            h.update(chunk)
+    if not h.hexdigest().startswith(SHA):
+        raise SystemExit(f"weights hash mismatch: {h.hexdigest()}")
+    model = ParlerTTSForConditionalGeneration.from_pretrained(REPO).eval()
+    _M.update(model=model, tok=AutoTokenizer.from_pretrained(REPO),
+              dtok=AutoTokenizer.from_pretrained(model.config.text_encoder._name_or_path), torch=torch)
+    return _M
+
+
+def sentences(text):
+    return [s for s in re.split(r"(?<=[.!?।])\s+", text.strip()) if s]
+
+
+def say(lang, text, out: Path, voice=None, pause=0.35):
+    """Synthesize sentence by sentence (the model is best on short inputs) and join with short pauses."""
+    m = load()
+    torch = m["torch"]
+    desc = m["dtok"](voice or VOICES[lang], return_tensors="pt")
+    sr = m["model"].config.sampling_rate
+    parts = []
+    for s in sentences(text):
+        p = m["tok"](s, return_tensors="pt")
+        with torch.no_grad():
+            a = m["model"].generate(input_ids=desc.input_ids, attention_mask=desc.attention_mask,
+                                    prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
+        parts += [a.cpu().numpy().squeeze(), np.zeros(int(pause * sr))]
+    out.parent.mkdir(parents=True, exist_ok=True)
+    sf.write(out, np.concatenate(parts).astype(np.float32), sr)
+    return out
+
+
+def script(spec_path: Path):
+    spec = json.loads(spec_path.read_text())
+    src = ROOT / "video" / "public" / "reel" / spec["id"] / "src"
+    lang, voice = spec["parler_lang"], spec.get("parler_voice")
+    for sc in spec["scenes"]:
+        for line in sc["lines"]:
+            for key, tkey in (("file", "tts"), ("file2", "tts2")):
+                if line.get(key) and line.get(tkey) and not (src / line[key]).exists():
+                    print("synth", line[key], flush=True)
+                    say(lang, line[tkey], src / line[key], voice)
+
+
+if __name__ == "__main__":
+    if sys.argv[1] == "say":
+        print(say(sys.argv[2], sys.argv[3], Path(sys.argv[4])))
+    elif sys.argv[1] == "script":
+        script(Path(sys.argv[2]))
