@@ -1,0 +1,220 @@
+{
+ "id": "ep24v1",
+ "title": "3 ways machines learn",
+ "label": "EP 24",
+ "banner": "3 ways AI learns, just like you",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.08,
+ "gap": 0.35,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "split",
+   "tail": 0.3,
+   "data": {
+    "top": {
+     "art": "tiles",
+     "tag": "YOU DID THIS TOO",
+     "icon": "Baby",
+     "at": [
+      3,
+      4,
+      5
+     ]
+    },
+    "bottom": {
+     "kind": "cards3",
+     "tag": "IN AI",
+     "at": [
+      3,
+      4,
+      5
+     ]
+    },
+    "bridge": "SAME 3 WAYS IN AI"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.mp3",
+     "maxgap": 0.4,
+     "text": "ChatGPT learned in three completely different ways. [1] And you've used all three... [2] since you were five. [3] With a teacher... [4] on your own... [5] and by trial and error."
+    }
+   ]
+  },
+  {
+   "id": "supervised",
+   "type": "split",
+   "tail": 0.3,
+   "data": {
+    "top": {
+     "art": "tuition",
+     "tag": "WAY 1 · TUITION CLASS",
+     "icon": "GraduationCap",
+     "q": 1,
+     "a": 2,
+     "stamp": {
+      "t": "SUPERVISED",
+      "at": 3,
+      "c": "#F59E0B"
+     }
+    },
+    "bottom": {
+     "kind": "labels",
+     "tag": "IN AI · SUPERVISED LEARNING",
+     "show": 4,
+     "lbl": 5,
+     "r1": 6,
+     "r2": 7,
+     "pred": 8
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_supervised.mp3",
+     "maxgap": 0.4,
+     "text": "Way one: tuition class. [1] The teacher gives you questions... [2] with the answers. [3] That's supervised learning. [4] You show the AI thousands of examples, each with the right answer, [5] called a label. [6] Spam, or not spam. [7] Cat, or dog. [8] Then it answers new ones on its own."
+    }
+   ]
+  },
+  {
+   "id": "unsupervised",
+   "type": "split",
+   "tail": 0.3,
+   "data": {
+    "top": {
+     "art": "cupboard",
+     "tag": "WAY 2 · THE MESSY CUPBOARD",
+     "icon": "Shirt",
+     "start": 2,
+     "g1": 3,
+     "g2": 4,
+     "g3": 5,
+     "stamp": {
+      "t": "UNSUPERVISED",
+      "at": 6,
+      "c": "#22D3EE"
+     }
+    },
+    "bottom": {
+     "kind": "clusters",
+     "tag": "IN AI · UNSUPERVISED LEARNING",
+     "group": 7,
+     "label": 8,
+     "newer": 9
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_unsupervised.mp3",
+     "maxgap": 0.4,
+     "text": "Way two: a messy cupboard... [1] and nobody tells you where anything goes. [2] You still end up with neat piles. [3] Shirts. [4] Socks. [5] Books. [6] That's unsupervised learning. [7] No answers at all. The AI finds natural groups on its own. [8] Like a shop discovering its fitness buyers... [9] and suggesting sports gear to the next one."
+    }
+   ]
+  },
+  {
+   "id": "reinforcement",
+   "type": "split",
+   "tail": 0.3,
+   "data": {
+    "top": {
+     "art": "cycle",
+     "tag": "WAY 3 · LEARNING TO RIDE",
+     "icon": "Bike",
+     "fall": 1,
+     "ride": 2,
+     "stamp": {
+      "t": "REINFORCEMENT",
+      "at": 3,
+      "c": "#34D399"
+     }
+    },
+    "bottom": {
+     "kind": "reward",
+     "tag": "IN AI · REINFORCEMENT LEARNING",
+     "start": 4,
+     "uses": 5
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_reinforcement.mp3",
+     "maxgap": 0.4,
+     "text": "Way three: learning to ride a cycle. [1] Fall... and it hurts. [2] Balance... and you fly. [3] That's reinforcement learning. [4] Try something, get a reward or a penalty, and try again. [5] Game AIs, robots, even self-driving cars learn this way."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.3,
+   "data": {
+    "question": "A robot learns to walk by falling and earning points for every step. Which type?",
+    "options": [
+     "Supervised",
+     "Unsupervised",
+     "Reinforcement"
+    ],
+    "answer": 2
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_quizA.mp3",
+     "file2": "06_answer_outro.mp3",
+     "end2": 4.2,
+     "pause": 2.5,
+     "maxgap": 0.4,
+     "gap": 0.1,
+     "text": "Quick test! A robot learns to walk by falling... and earning points for every step. [1] Which type of learning is that? <pause 2> [2] Reinforcement learning! Trial, error, and rewards."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "tail": 0.4,
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "Supervised",
+      "learns from answers"
+     ],
+     [
+      "Unsupervised",
+      "finds groups alone"
+     ],
+     [
+      "Reinforcement",
+      "trial, error, rewards"
+     ],
+     [
+      "ChatGPT",
+      "used all three"
+     ]
+    ],
+    "next": "EP 25 · Why data is AI's fuel"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_answer_outro.mp3",
+     "start": 4.4,
+     "maxgap": 0.4,
+     "text": "So... [1] learning with answers is supervised. [2] Finding groups alone is unsupervised. [3] Trial and error is reinforcement. [4] And ChatGPT? It used all three. [5] Next up: why data is the real fuel of AI. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}

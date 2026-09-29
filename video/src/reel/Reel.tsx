@@ -6,6 +6,7 @@ import { createContext, useContext } from "react";
 import { Backdrop, SCENES as LESSON } from "../lesson/Lesson";
 import { Quiz } from "../lesson/scenes/Quiz";
 import { Chintu } from "./Chintu";
+import { ART, BOTTOM2 } from "./ReelArt";
 
 // v2 "entertainment" reel: memes, multiple characters, karaoke captions, fast cuts.
 const C = {
@@ -437,9 +438,10 @@ const AnalogyPanel: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> =
   const px = interpolate(f, [0, s.frames], [0, d.pan ?? -30]);
   const stampAt = d.stamp ? cue(d.stamp.at) : 1e9;
   const st = interpolate(f - stampAt, [0, 6], [2.2, 1], cl);
+  const dock = interpolate(f - stampAt, [34, 46], [0, 1], cl); // stamp shrinks into the corner so the scene stays visible
   return (
     <div style={{ position: "absolute", left: PANEL.x, top: PANEL.topY, width: PANEL.w, height: PANEL.topH, borderRadius: 30, overflow: "hidden", border: "4px solid rgba(255,255,255,0.85)", boxShadow: "0 24px 60px rgba(0,0,0,0.55)", background: "#000" }}>
-      <Img src={staticFile(d.img)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z}) translateX(${px}px)` }} />
+      {d.art && ART[d.art] ? (() => { const A = ART[d.art]; return <A d={d} cue={cue} frames={s.frames} />; })() : <Img src={staticFile(d.img)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z}) translateX(${px}px)` }} />}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 30%, transparent 65%, rgba(0,0,0,0.55) 100%)" }} />
       <PanelTag icon={d.icon ?? "Clapperboard"} t={d.tag ?? "REAL LIFE"} c={C.amber} />
       {(d.chips ?? []).map((c: any, i: number) => <Chip key={i} t={c.t} at={cue(c.at)} x={c.x} y={c.y} c={c.c} />)}
@@ -450,7 +452,7 @@ const AnalogyPanel: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> =
         </div>
       )}
       {f >= stampAt && (
-        <div style={{ position: "absolute", right: 50, top: 150, transform: `scale(${st}) rotate(-10deg)`, border: `8px solid ${d.stamp?.c ?? C.rose}`, color: d.stamp?.c ?? C.rose, fontFamily: C.anton, fontSize: 110, padding: "0 30px", borderRadius: 18, background: "rgba(0,0,0,0.35)" }}>{d.stamp.t}</div>
+        <div style={{ position: "absolute", right: 50 - 30 * dock, top: 150 + 215 * dock, transformOrigin: "100% 100%", transform: `scale(${st * (1 - 0.6 * dock)}) rotate(${-10 * (1 - dock)}deg)`, border: `8px solid ${d.stamp?.c ?? C.rose}`, color: d.stamp?.c ?? C.rose, fontFamily: C.anton, fontSize: 110, padding: "0 30px", borderRadius: 18, background: "rgba(0,0,0,0.35)" }}>{d.stamp.t}</div>
       )}
     </div>
   );
@@ -558,7 +560,7 @@ const Loss: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> = ({ d, s
     </>
   );
 };
-const BOTTOM: Record<string, React.FC<any>> = { predict: Predict, layers: Layers, backflow: Backflow, loss: Loss };
+const BOTTOM: Record<string, React.FC<any>> = { predict: Predict, layers: Layers, backflow: Backflow, loss: Loss, ...BOTTOM2 };
 const Split: React.FC<SP> = ({ s, cue }) => {
   const f = useCurrentFrame();
   const d = s.data;
@@ -616,7 +618,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
         {c.map((w, i) => {
           const on = f >= w.from;
           return (
-            <span key={i} style={{ display: "inline-block", margin: classic ? "0 12px" : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? 70 : 96, lineHeight: 1.05, textTransform: classic ? "none" : "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? 1.12 : 1})` }}>
+            <span key={i} style={{ display: "inline-block", margin: classic ? "0 15px" : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? 70 : 96, lineHeight: 1.05, textTransform: classic ? "none" : "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? (classic ? 1.04 : 1.12) : 1})` }}>
               {w.w}
             </span>
           );

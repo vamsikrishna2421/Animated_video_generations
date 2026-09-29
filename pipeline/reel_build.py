@@ -173,8 +173,11 @@ def file_line(line, rid):
     for k, f in enumerate(parts):
         a, sr = sf.read(src / f)
         a = a.mean(axis=1) if a.ndim > 1 else a
-        if k == 0 and line.get("start"):  # drop an unwanted opening word (e.g. a name) from the take
-            a = a[int(line["start"] * sr):]
+        sfx = "" if k == 0 else "2"
+        if line.get("end" + sfx):  # keep only the first N seconds of a take
+            a = a[:int(line["end" + sfx] * sr)]
+        if line.get("start" + sfx):  # drop an unwanted opening part (e.g. a name) from the take
+            a = a[int(line["start" + sfx] * sr):]
         nz = np.where(np.abs(a) > 0.01)[0]
         a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.1 * sr)]
         a = tighten(a, sr, line.get("maxgap", 0.3))

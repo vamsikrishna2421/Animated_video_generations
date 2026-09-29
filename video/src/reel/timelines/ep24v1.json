@@ -1,0 +1,1432 @@
+{
+ "id": "ep24v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "3 ways AI learns, just like you",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "title": "3 ways machines learn",
+ "handle": "@ai_maastaaru",
+ "label": "EP 24",
+ "fps": 30,
+ "totalFrames": 2882,
+ "music": "reel/ep24v1/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "tiles",
+     "tag": "YOU DID THIS TOO",
+     "icon": "Baby",
+     "at": [
+      3,
+      4,
+      5
+     ]
+    },
+    "bottom": {
+     "kind": "cards3",
+     "tag": "IN AI",
+     "at": [
+      3,
+      4,
+      5
+     ]
+    },
+    "bridge": "SAME 3 WAYS IN AI"
+   },
+   "from": 0,
+   "frames": 326,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep24v1/line_01.wav",
+     "from": 2,
+     "frames": 305,
+     "words": [
+      {
+       "w": "ChatGPT",
+       "from": 3,
+       "to": 14
+      },
+      {
+       "w": "learned",
+       "from": 14,
+       "to": 26
+      },
+      {
+       "w": "in",
+       "from": 26,
+       "to": 30
+      },
+      {
+       "w": "three",
+       "from": 30,
+       "to": 39
+      },
+      {
+       "w": "completely",
+       "from": 39,
+       "to": 55
+      },
+      {
+       "w": "different",
+       "from": 55,
+       "to": 70
+      },
+      {
+       "w": "ways.",
+       "from": 70,
+       "to": 78
+      },
+      {
+       "w": "And",
+       "from": 78,
+       "to": 84
+      },
+      {
+       "w": "you've",
+       "from": 84,
+       "to": 104
+      },
+      {
+       "w": "used",
+       "from": 104,
+       "to": 111
+      },
+      {
+       "w": "all",
+       "from": 111,
+       "to": 117
+      },
+      {
+       "w": "three...",
+       "from": 117,
+       "to": 136
+      },
+      {
+       "w": "since",
+       "from": 136,
+       "to": 154
+      },
+      {
+       "w": "you",
+       "from": 154,
+       "to": 160
+      },
+      {
+       "w": "were",
+       "from": 160,
+       "to": 167
+      },
+      {
+       "w": "five.",
+       "from": 167,
+       "to": 191
+      },
+      {
+       "w": "With",
+       "from": 191,
+       "to": 199
+      },
+      {
+       "w": "a",
+       "from": 199,
+       "to": 202
+      },
+      {
+       "w": "teacher...",
+       "from": 202,
+       "to": 228
+      },
+      {
+       "w": "on",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "your",
+       "from": 233,
+       "to": 252
+      },
+      {
+       "w": "own...",
+       "from": 252,
+       "to": 267
+      },
+      {
+       "w": "and",
+       "from": 267,
+       "to": 273
+      },
+      {
+       "w": "by",
+       "from": 273,
+       "to": 278
+      },
+      {
+       "w": "trial",
+       "from": 278,
+       "to": 286
+      },
+      {
+       "w": "and",
+       "from": 286,
+       "to": 292
+      },
+      {
+       "w": "error.",
+       "from": 292,
+       "to": 302
+      }
+     ],
+     "cues": {
+      "1": 78,
+      "2": 136,
+      "3": 191,
+      "4": 228,
+      "5": 267
+     }
+    }
+   ]
+  },
+  {
+   "id": "supervised",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "tuition",
+     "tag": "WAY 1 · TUITION CLASS",
+     "icon": "GraduationCap",
+     "q": 1,
+     "a": 2,
+     "stamp": {
+      "t": "SUPERVISED",
+      "at": 3,
+      "c": "#F59E0B"
+     }
+    },
+    "bottom": {
+     "kind": "labels",
+     "tag": "IN AI · SUPERVISED LEARNING",
+     "show": 4,
+     "lbl": 5,
+     "r1": 6,
+     "r2": 7,
+     "pred": 8
+    }
+   },
+   "from": 326,
+   "frames": 527,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep24v1/line_02.wav",
+     "from": 0,
+     "frames": 507,
+     "words": [
+      {
+       "w": "Way",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "one:",
+       "from": 6,
+       "to": 13
+      },
+      {
+       "w": "tuition",
+       "from": 13,
+       "to": 35
+      },
+      {
+       "w": "class.",
+       "from": 35,
+       "to": 45
+      },
+      {
+       "w": "The",
+       "from": 45,
+       "to": 61
+      },
+      {
+       "w": "teacher",
+       "from": 61,
+       "to": 76
+      },
+      {
+       "w": "gives",
+       "from": 76,
+       "to": 84
+      },
+      {
+       "w": "you",
+       "from": 84,
+       "to": 90
+      },
+      {
+       "w": "questions...",
+       "from": 90,
+       "to": 118
+      },
+      {
+       "w": "with",
+       "from": 118,
+       "to": 125
+      },
+      {
+       "w": "the",
+       "from": 125,
+       "to": 131
+      },
+      {
+       "w": "answers.",
+       "from": 131,
+       "to": 160
+      },
+      {
+       "w": "That's",
+       "from": 160,
+       "to": 170
+      },
+      {
+       "w": "supervised",
+       "from": 170,
+       "to": 196
+      },
+      {
+       "w": "learning.",
+       "from": 196,
+       "to": 210
+      },
+      {
+       "w": "You",
+       "from": 210,
+       "to": 215
+      },
+      {
+       "w": "show",
+       "from": 215,
+       "to": 227
+      },
+      {
+       "w": "the",
+       "from": 227,
+       "to": 233
+      },
+      {
+       "w": "AI",
+       "from": 233,
+       "to": 237
+      },
+      {
+       "w": "thousands",
+       "from": 237,
+       "to": 251
+      },
+      {
+       "w": "of",
+       "from": 251,
+       "to": 255
+      },
+      {
+       "w": "examples,",
+       "from": 255,
+       "to": 280
+      },
+      {
+       "w": "each",
+       "from": 280,
+       "to": 287
+      },
+      {
+       "w": "with",
+       "from": 287,
+       "to": 294
+      },
+      {
+       "w": "the",
+       "from": 294,
+       "to": 300
+      },
+      {
+       "w": "right",
+       "from": 300,
+       "to": 319
+      },
+      {
+       "w": "answer,",
+       "from": 319,
+       "to": 335
+      },
+      {
+       "w": "called",
+       "from": 335,
+       "to": 353
+      },
+      {
+       "w": "a",
+       "from": 353,
+       "to": 356
+      },
+      {
+       "w": "label.",
+       "from": 356,
+       "to": 373
+      },
+      {
+       "w": "Spam,",
+       "from": 373,
+       "to": 381
+      },
+      {
+       "w": "or",
+       "from": 381,
+       "to": 389
+      },
+      {
+       "w": "not",
+       "from": 389,
+       "to": 395
+      },
+      {
+       "w": "spam.",
+       "from": 395,
+       "to": 422
+      },
+      {
+       "w": "Cat,",
+       "from": 422,
+       "to": 429
+      },
+      {
+       "w": "or",
+       "from": 429,
+       "to": 434
+      },
+      {
+       "w": "dog.",
+       "from": 434,
+       "to": 449
+      },
+      {
+       "w": "Then",
+       "from": 449,
+       "to": 456
+      },
+      {
+       "w": "it",
+       "from": 456,
+       "to": 460
+      },
+      {
+       "w": "answers",
+       "from": 460,
+       "to": 471
+      },
+      {
+       "w": "new",
+       "from": 471,
+       "to": 477
+      },
+      {
+       "w": "ones",
+       "from": 477,
+       "to": 490
+      },
+      {
+       "w": "on",
+       "from": 490,
+       "to": 494
+      },
+      {
+       "w": "its",
+       "from": 494,
+       "to": 500
+      },
+      {
+       "w": "own.",
+       "from": 500,
+       "to": 507
+      }
+     ],
+     "cues": {
+      "1": 45,
+      "2": 118,
+      "3": 160,
+      "4": 210,
+      "5": 335,
+      "6": 373,
+      "7": 422,
+      "8": 449
+     }
+    }
+   ]
+  },
+  {
+   "id": "unsupervised",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "cupboard",
+     "tag": "WAY 2 · THE MESSY CUPBOARD",
+     "icon": "Shirt",
+     "start": 2,
+     "g1": 3,
+     "g2": 4,
+     "g3": 5,
+     "stamp": {
+      "t": "UNSUPERVISED",
+      "at": 6,
+      "c": "#22D3EE"
+     }
+    },
+    "bottom": {
+     "kind": "clusters",
+     "tag": "IN AI · UNSUPERVISED LEARNING",
+     "group": 7,
+     "label": 8,
+     "newer": 9
+    }
+   },
+   "from": 852,
+   "frames": 612,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep24v1/line_03.wav",
+     "from": 0,
+     "frames": 593,
+     "words": [
+      {
+       "w": "Way",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "two:",
+       "from": 7,
+       "to": 14
+      },
+      {
+       "w": "a",
+       "from": 14,
+       "to": 17
+      },
+      {
+       "w": "messy",
+       "from": 17,
+       "to": 37
+      },
+      {
+       "w": "cupboard...",
+       "from": 37,
+       "to": 54
+      },
+      {
+       "w": "and",
+       "from": 54,
+       "to": 60
+      },
+      {
+       "w": "nobody",
+       "from": 60,
+       "to": 80
+      },
+      {
+       "w": "tells",
+       "from": 80,
+       "to": 89
+      },
+      {
+       "w": "you",
+       "from": 89,
+       "to": 95
+      },
+      {
+       "w": "where",
+       "from": 95,
+       "to": 104
+      },
+      {
+       "w": "anything",
+       "from": 104,
+       "to": 117
+      },
+      {
+       "w": "goes.",
+       "from": 117,
+       "to": 130
+      },
+      {
+       "w": "You",
+       "from": 130,
+       "to": 136
+      },
+      {
+       "w": "still",
+       "from": 136,
+       "to": 156
+      },
+      {
+       "w": "end",
+       "from": 156,
+       "to": 162
+      },
+      {
+       "w": "up",
+       "from": 162,
+       "to": 166
+      },
+      {
+       "w": "with",
+       "from": 166,
+       "to": 173
+      },
+      {
+       "w": "neat",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "piles.",
+       "from": 181,
+       "to": 195
+      },
+      {
+       "w": "Shirts.",
+       "from": 195,
+       "to": 218
+      },
+      {
+       "w": "Socks.",
+       "from": 218,
+       "to": 250
+      },
+      {
+       "w": "Books.",
+       "from": 250,
+       "to": 271
+      },
+      {
+       "w": "That's",
+       "from": 271,
+       "to": 287
+      },
+      {
+       "w": "unsupervised",
+       "from": 287,
+       "to": 306
+      },
+      {
+       "w": "learning.",
+       "from": 306,
+       "to": 331
+      },
+      {
+       "w": "No",
+       "from": 331,
+       "to": 336
+      },
+      {
+       "w": "answers",
+       "from": 336,
+       "to": 351
+      },
+      {
+       "w": "at",
+       "from": 351,
+       "to": 356
+      },
+      {
+       "w": "all.",
+       "from": 356,
+       "to": 374
+      },
+      {
+       "w": "The",
+       "from": 374,
+       "to": 380
+      },
+      {
+       "w": "AI",
+       "from": 380,
+       "to": 384
+      },
+      {
+       "w": "finds",
+       "from": 384,
+       "to": 397
+      },
+      {
+       "w": "natural",
+       "from": 397,
+       "to": 409
+      },
+      {
+       "w": "groups",
+       "from": 409,
+       "to": 419
+      },
+      {
+       "w": "on",
+       "from": 419,
+       "to": 424
+      },
+      {
+       "w": "its",
+       "from": 424,
+       "to": 430
+      },
+      {
+       "w": "own.",
+       "from": 430,
+       "to": 437
+      },
+      {
+       "w": "Like",
+       "from": 437,
+       "to": 456
+      },
+      {
+       "w": "a",
+       "from": 456,
+       "to": 459
+      },
+      {
+       "w": "shop",
+       "from": 459,
+       "to": 466
+      },
+      {
+       "w": "discovering",
+       "from": 466,
+       "to": 484
+      },
+      {
+       "w": "its",
+       "from": 484,
+       "to": 490
+      },
+      {
+       "w": "fitness",
+       "from": 490,
+       "to": 502
+      },
+      {
+       "w": "buyers...",
+       "from": 502,
+       "to": 527
+      },
+      {
+       "w": "and",
+       "from": 527,
+       "to": 533
+      },
+      {
+       "w": "suggesting",
+       "from": 533,
+       "to": 549
+      },
+      {
+       "w": "sports",
+       "from": 549,
+       "to": 560
+      },
+      {
+       "w": "gear",
+       "from": 560,
+       "to": 567
+      },
+      {
+       "w": "to",
+       "from": 567,
+       "to": 572
+      },
+      {
+       "w": "the",
+       "from": 572,
+       "to": 578
+      },
+      {
+       "w": "next",
+       "from": 578,
+       "to": 585
+      },
+      {
+       "w": "one.",
+       "from": 585,
+       "to": 592
+      }
+     ],
+     "cues": {
+      "1": 54,
+      "2": 130,
+      "3": 195,
+      "4": 218,
+      "5": 250,
+      "6": 271,
+      "7": 331,
+      "8": 437,
+      "9": 527
+     }
+    }
+   ]
+  },
+  {
+   "id": "reinforcement",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "cycle",
+     "tag": "WAY 3 · LEARNING TO RIDE",
+     "icon": "Bike",
+     "fall": 1,
+     "ride": 2,
+     "stamp": {
+      "t": "REINFORCEMENT",
+      "at": 3,
+      "c": "#34D399"
+     }
+    },
+    "bottom": {
+     "kind": "reward",
+     "tag": "IN AI · REINFORCEMENT LEARNING",
+     "start": 4,
+     "uses": 5
+    }
+   },
+   "from": 1464,
+   "frames": 520,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep24v1/line_04.wav",
+     "from": 0,
+     "frames": 500,
+     "words": [
+      {
+       "w": "Way",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "three:",
+       "from": 7,
+       "to": 17
+      },
+      {
+       "w": "learning",
+       "from": 17,
+       "to": 42
+      },
+      {
+       "w": "to",
+       "from": 42,
+       "to": 46
+      },
+      {
+       "w": "ride",
+       "from": 46,
+       "to": 54
+      },
+      {
+       "w": "a",
+       "from": 54,
+       "to": 57
+      },
+      {
+       "w": "cycle.",
+       "from": 57,
+       "to": 68
+      },
+      {
+       "w": "Fall...",
+       "from": 68,
+       "to": 91
+      },
+      {
+       "w": "and",
+       "from": 91,
+       "to": 108
+      },
+      {
+       "w": "it",
+       "from": 108,
+       "to": 120
+      },
+      {
+       "w": "hurts.",
+       "from": 120,
+       "to": 141
+      },
+      {
+       "w": "Balance...",
+       "from": 141,
+       "to": 173
+      },
+      {
+       "w": "and",
+       "from": 173,
+       "to": 179
+      },
+      {
+       "w": "you",
+       "from": 179,
+       "to": 185
+      },
+      {
+       "w": "fly.",
+       "from": 185,
+       "to": 204
+      },
+      {
+       "w": "That's",
+       "from": 204,
+       "to": 218
+      },
+      {
+       "w": "reinforcement",
+       "from": 218,
+       "to": 239
+      },
+      {
+       "w": "learning.",
+       "from": 239,
+       "to": 266
+      },
+      {
+       "w": "Try",
+       "from": 266,
+       "to": 272
+      },
+      {
+       "w": "something,",
+       "from": 272,
+       "to": 299
+      },
+      {
+       "w": "get",
+       "from": 299,
+       "to": 311
+      },
+      {
+       "w": "a",
+       "from": 311,
+       "to": 314
+      },
+      {
+       "w": "reward",
+       "from": 314,
+       "to": 325
+      },
+      {
+       "w": "or",
+       "from": 325,
+       "to": 338
+      },
+      {
+       "w": "a",
+       "from": 338,
+       "to": 341
+      },
+      {
+       "w": "penalty,",
+       "from": 341,
+       "to": 354
+      },
+      {
+       "w": "and",
+       "from": 354,
+       "to": 360
+      },
+      {
+       "w": "try",
+       "from": 360,
+       "to": 378
+      },
+      {
+       "w": "again.",
+       "from": 378,
+       "to": 388
+      },
+      {
+       "w": "Game",
+       "from": 388,
+       "to": 396
+      },
+      {
+       "w": "AIs,",
+       "from": 396,
+       "to": 414
+      },
+      {
+       "w": "robots,",
+       "from": 414,
+       "to": 434
+      },
+      {
+       "w": "even",
+       "from": 434,
+       "to": 441
+      },
+      {
+       "w": "self-driving",
+       "from": 441,
+       "to": 461
+      },
+      {
+       "w": "cars",
+       "from": 461,
+       "to": 469
+      },
+      {
+       "w": "learn",
+       "from": 469,
+       "to": 485
+      },
+      {
+       "w": "this",
+       "from": 485,
+       "to": 493
+      },
+      {
+       "w": "way.",
+       "from": 493,
+       "to": 500
+      }
+     ],
+     "cues": {
+      "1": 68,
+      "2": 141,
+      "3": 204,
+      "4": 266,
+      "5": 388
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "data": {
+    "question": "A robot learns to walk by falling and earning points for every step. Which type?",
+    "options": [
+     "Supervised",
+     "Unsupervised",
+     "Reinforcement"
+    ],
+    "answer": 2
+   },
+   "from": 1984,
+   "frames": 410,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep24v1/line_05.wav",
+     "from": 0,
+     "frames": 398,
+     "words": [
+      {
+       "w": "Quick",
+       "from": 1,
+       "to": 14
+      },
+      {
+       "w": "test!",
+       "from": 14,
+       "to": 34
+      },
+      {
+       "w": "A",
+       "from": 34,
+       "to": 37
+      },
+      {
+       "w": "robot",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "learns",
+       "from": 45,
+       "to": 56
+      },
+      {
+       "w": "to",
+       "from": 56,
+       "to": 60
+      },
+      {
+       "w": "walk",
+       "from": 60,
+       "to": 67
+      },
+      {
+       "w": "by",
+       "from": 67,
+       "to": 75
+      },
+      {
+       "w": "falling...",
+       "from": 75,
+       "to": 100
+      },
+      {
+       "w": "and",
+       "from": 100,
+       "to": 106
+      },
+      {
+       "w": "earning",
+       "from": 106,
+       "to": 118
+      },
+      {
+       "w": "points",
+       "from": 118,
+       "to": 128
+      },
+      {
+       "w": "for",
+       "from": 128,
+       "to": 134
+      },
+      {
+       "w": "every",
+       "from": 134,
+       "to": 153
+      },
+      {
+       "w": "step.",
+       "from": 153,
+       "to": 162
+      },
+      {
+       "w": "Which",
+       "from": 162,
+       "to": 171
+      },
+      {
+       "w": "type",
+       "from": 171,
+       "to": 178
+      },
+      {
+       "w": "of",
+       "from": 178,
+       "to": 183
+      },
+      {
+       "w": "learning",
+       "from": 183,
+       "to": 196
+      },
+      {
+       "w": "is",
+       "from": 196,
+       "to": 200
+      },
+      {
+       "w": "that?",
+       "from": 200,
+       "to": 292
+      },
+      {
+       "w": "Reinforcement",
+       "from": 292,
+       "to": 313
+      },
+      {
+       "w": "learning!",
+       "from": 313,
+       "to": 337
+      },
+      {
+       "w": "Trial,",
+       "from": 337,
+       "to": 347
+      },
+      {
+       "w": "error,",
+       "from": 347,
+       "to": 364
+      },
+      {
+       "w": "and",
+       "from": 364,
+       "to": 374
+      },
+      {
+       "w": "rewards.",
+       "from": 374,
+       "to": 391
+      }
+     ],
+     "cues": {
+      "1": 162,
+      "2": 292
+     }
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "Supervised",
+      "learns from answers"
+     ],
+     [
+      "Unsupervised",
+      "finds groups alone"
+     ],
+     [
+      "Reinforcement",
+      "trial, error, rewards"
+     ],
+     [
+      "ChatGPT",
+      "used all three"
+     ]
+    ],
+    "next": "EP 25 · Why data is AI's fuel"
+   },
+   "from": 2395,
+   "frames": 476,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep24v1/line_06.wav",
+     "from": 0,
+     "frames": 453,
+     "words": [
+      {
+       "w": "So...",
+       "from": 4,
+       "to": 25
+      },
+      {
+       "w": "learning",
+       "from": 25,
+       "to": 38
+      },
+      {
+       "w": "with",
+       "from": 38,
+       "to": 46
+      },
+      {
+       "w": "answers",
+       "from": 46,
+       "to": 58
+      },
+      {
+       "w": "is",
+       "from": 58,
+       "to": 63
+      },
+      {
+       "w": "supervised.",
+       "from": 63,
+       "to": 92
+      },
+      {
+       "w": "Finding",
+       "from": 92,
+       "to": 105
+      },
+      {
+       "w": "groups",
+       "from": 105,
+       "to": 121
+      },
+      {
+       "w": "alone",
+       "from": 121,
+       "to": 130
+      },
+      {
+       "w": "is",
+       "from": 130,
+       "to": 134
+      },
+      {
+       "w": "unsupervised.",
+       "from": 134,
+       "to": 167
+      },
+      {
+       "w": "Trial",
+       "from": 167,
+       "to": 176
+      },
+      {
+       "w": "and",
+       "from": 176,
+       "to": 182
+      },
+      {
+       "w": "error",
+       "from": 182,
+       "to": 191
+      },
+      {
+       "w": "is",
+       "from": 191,
+       "to": 196
+      },
+      {
+       "w": "reinforcement.",
+       "from": 196,
+       "to": 230
+      },
+      {
+       "w": "And",
+       "from": 230,
+       "to": 236
+      },
+      {
+       "w": "ChatGPT?",
+       "from": 236,
+       "to": 261
+      },
+      {
+       "w": "It",
+       "from": 261,
+       "to": 266
+      },
+      {
+       "w": "used",
+       "from": 266,
+       "to": 278
+      },
+      {
+       "w": "all",
+       "from": 278,
+       "to": 288
+      },
+      {
+       "w": "three.",
+       "from": 288,
+       "to": 309
+      },
+      {
+       "w": "Next",
+       "from": 309,
+       "to": 328
+      },
+      {
+       "w": "up:",
+       "from": 328,
+       "to": 334
+      },
+      {
+       "w": "why",
+       "from": 334,
+       "to": 341
+      },
+      {
+       "w": "data",
+       "from": 341,
+       "to": 348
+      },
+      {
+       "w": "is",
+       "from": 348,
+       "to": 353
+      },
+      {
+       "w": "the",
+       "from": 353,
+       "to": 359
+      },
+      {
+       "w": "real",
+       "from": 359,
+       "to": 367
+      },
+      {
+       "w": "fuel",
+       "from": 367,
+       "to": 379
+      },
+      {
+       "w": "of",
+       "from": 379,
+       "to": 383
+      },
+      {
+       "w": "AI.",
+       "from": 383,
+       "to": 389
+      },
+      {
+       "w": "Follow,",
+       "from": 389,
+       "to": 413
+      },
+      {
+       "w": "so",
+       "from": 413,
+       "to": 418
+      },
+      {
+       "w": "you",
+       "from": 418,
+       "to": 430
+      },
+      {
+       "w": "don't",
+       "from": 430,
+       "to": 439
+      },
+      {
+       "w": "miss",
+       "from": 439,
+       "to": 447
+      },
+      {
+       "w": "it.",
+       "from": 447,
+       "to": 453
+      }
+     ],
+     "cues": {
+      "1": 25,
+      "2": 92,
+      "3": 167,
+      "4": 230,
+      "5": 309
+     }
+    }
+   ]
+  }
+ ]
+}
