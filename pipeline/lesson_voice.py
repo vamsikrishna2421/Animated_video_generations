@@ -49,6 +49,7 @@ PRON = {
     "Aadhaar": "ˈɑːdɑːɹ",
     "PII": "pˈiː ˈaɪ ˈaɪ",
     "schema": "skˈiːmə",
+    "Stonks": "stˈɑːŋks", "Bro": "bɹˈoʊ",
     "scikit": "sˈaɪkɪt", "PyTorch": "pˈaɪtɔːɹtʃ",
     "Streamlit": "stɹˈiːmlɪt", "GitHub": "ɡˈɪthʌb",
     "pyttsx3": "pˈaɪ tˈiː tˈiː ˈɛs ˈɛks θɹˈiː", "Kokoro": "kˈoʊkəɹˌoʊ", "sounddevice": "sˈaʊnd dɪvˌaɪs",
