@@ -478,28 +478,30 @@ const Cta: React.FC = () => {
 };
 
 
-// ---------- meme: Panik / Kalm / Panik ----------
-const Panik: React.FC = () => {
+// ---------- meme: Drake (no to confusing English tutorials, yes to AI in Telugu) ----------
+const Drake: React.FC = () => {
   const f = useCurrentFrame();
-  const b = B.panik;
+  const b = B.drake;
   const v0 = b.voiceFrom - b.from;
-  const marks = [0, 0.31, 0.71].map((k) => v0 + Math.round(k * b.voiceFrames));
-  const texts = ["A new AI model drops every week", "This page explains it in Telugu", "You haven't followed it yet"];
+  const marks = [v0, v0 + Math.round(0.48 * b.voiceFrames)];
+  const texts = ["Confusing English AI tutorials", "AI explained in Telugu, simply"];
   const inS = useSp(0, 14);
-  const W = 900, H = Math.round((W * 760) / 543);
+  const W = 470, H = Math.round((W * 698) / 446);
   return (
     <AbsoluteFill>
-      <div style={{ position: "absolute", left: (1080 - W) / 2, top: 300, width: W, height: H, transform: `scale(${0.9 + 0.1 * inS})`, borderRadius: 24, overflow: "hidden", border: "6px solid white", boxShadow: "0 30px 80px rgba(0,0,0,0.6)" }}>
-        <img src={staticFile("reel/memes/panik-kalm-panik.png")} style={{ width: W, height: H, display: "block" }} />
-        {texts.map((t, i) => {
-          const on = f >= marks[i];
-          const s = interpolate(f - marks[i], [0, 6], [1.25, 1], cl);
-          return (
-            <div key={t} style={{ position: "absolute", left: 18, top: (H / 3) * i + 18, width: W * 0.44, height: H / 3 - 36, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: C.inter, fontWeight: 900, fontSize: 50, lineHeight: 1.12, color: "#111", opacity: on ? 1 : 0, transform: `scale(${s})` }}>
-              {t}
-            </div>
-          );
-        })}
+      <div style={{ position: "absolute", left: 50, right: 50, top: 330, height: H, display: "flex", borderRadius: 24, overflow: "hidden", border: "6px solid white", background: "#fff", transform: `scale(${0.9 + 0.1 * inS})`, boxShadow: "0 30px 80px rgba(0,0,0,0.6)" }}>
+        <img src={staticFile("reel/memes/drake.png")} style={{ width: W, height: H, display: "block" }} />
+        <div style={{ flex: 1, position: "relative" }}>
+          {texts.map((t, i) => {
+            const on = f >= marks[i];
+            const k = interpolate(f - marks[i], [0, 7], [0, 1], cl);
+            return (
+              <div key={t} style={{ position: "absolute", left: 0, right: 0, top: (H / 2) * i, height: H / 2, display: "flex", alignItems: "center", justifyContent: "center", padding: "0 26px", textAlign: "center", fontFamily: C.inter, fontWeight: 900, fontSize: 52, lineHeight: 1.12, color: i === 0 ? "#6b7280" : "#15803d", opacity: on ? k : 0, transform: `translateX(${(1 - k) * 60}px)`, textDecoration: i === 0 && f >= marks[1] ? "line-through" : "none", borderTop: i === 1 ? "4px solid #e5e7eb" : "none" }}>
+                {t}
+              </div>
+            );
+          })}
+        </div>
       </div>
       {marks.map((m, i) => (
         <Sequence key={i} from={m} durationInFrames={10} layout="none">
@@ -510,7 +512,7 @@ const Panik: React.FC = () => {
   );
 };
 
-const SCENES: Record<string, React.FC> = { fast: Fast, flood: Flood, lost: Lost, panik: Panik, reveal: Reveal, pillars: Pillars, cta: Cta };
+const SCENES: Record<string, React.FC> = { fast: Fast, flood: Flood, lost: Lost, drake: Drake, reveal: Reveal, pillars: Pillars, cta: Cta };
 
 export const StoryTe: React.FC = () => {
   const f = useCurrentFrame();

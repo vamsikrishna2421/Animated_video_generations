@@ -14,7 +14,7 @@ from story_promo import FPS, SR, score  # noqa: E402
 OUT = ROOT / "video" / "public" / "story_te"
 TL = ROOT / "video" / "src" / "story" / "story_timeline_te.json"
 # Beat id and minimum on-screen seconds (the meme beat needs time for all three panels).
-BEATS = [("fast", 3.0), ("flood", 3.8), ("lost", 2.8), ("panik", 8.0), ("reveal", 3.6), ("pillars", 7.4), ("cta", 5.2)]
+BEATS = [("fast", 3.0), ("flood", 3.8), ("lost", 2.8), ("drake", 6.5), ("reveal", 3.6), ("pillars", 7.4), ("cta", 5.2)]
 
 
 def main():

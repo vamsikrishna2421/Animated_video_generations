@@ -76,3 +76,5 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 - User verdict: the ElevenLabs Telugu voice (Nitya) sounds nicer, but the free one is acceptable; the free English voice is good. ElevenLabs free tier is disabled; switch back only if a paid plan is added.
 - Specs: set `"parler_lang": "te" | "en"` and give each line a `tts` text (plus `tts2` for a `file2` part); `python3 pipeline/parler_tts_local.py script reels/<id>.json` fills missing takes.
 - Delivery style: a lively, friendly radio-host (RJ) voice, but the words stay a clean, decent lesson. No gimmick hook lines or slang fillers ("hello hello", "enti sangathi", "ready aa?"). The energy comes from the voice, not from filler phrases.
+- Telugu narration text for the free model is written fully in Telugu script, including English loanwords ("ఏఐ" for AI, "మోడల్స్", "టూల్స్", "డేటా"). The model mispronounces Latin letters inside Telugu. Subtitles (`show`) stay English.
+- Memes carry the joke visually; the narration underneath stays a clean sentence. Don't make the narrator speak meme captions ("Panik… Kalm…"); that sounded messy.
