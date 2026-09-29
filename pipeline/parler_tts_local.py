@@ -74,6 +74,10 @@ def say(lang, text, out: Path, voice=None, pause=0.35):
     return out
 
 
+def clean(text):
+    return re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", text)).strip()
+
+
 def script(spec_path: Path):
     spec = json.loads(spec_path.read_text())
     src = ROOT / "video" / "public" / "reel" / spec["id"] / "src"
@@ -81,9 +85,10 @@ def script(spec_path: Path):
     for sc in spec["scenes"]:
         for line in sc["lines"]:
             for key, tkey in (("file", "tts"), ("file2", "tts2")):
-                if line.get(key) and line.get(tkey) and not (src / line[key]).exists():
+                text = line.get(tkey) or (clean(line["text"]) if key == "file" and "file2" not in line else None)
+                if line.get(key) and text and not (src / line[key]).exists():
                     print("synth", line[key], flush=True)
-                    say(lang, line[tkey], src / line[key], voice)
+                    say(lang, text, src / line[key], voice)
 
 
 if __name__ == "__main__":

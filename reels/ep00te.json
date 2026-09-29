@@ -1,0 +1,197 @@
+{
+ "id": "ep00te",
+ "title": "Welcome to AI From Scratch",
+ "label": "INTRO",
+ "banner": "Welcome to AI From Scratch",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.0,
+ "gap": 0.35,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "jargon",
+   "type": "jargon",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Start here",
+     "title": "AI sounds like a different language",
+     "notes": [
+      [
+       "ChatGPT, agents, RAG, MCP, tokens...",
+       0
+      ],
+      [
+       "Too many new words, every week",
+       1
+      ],
+      [
+       "This series makes it simple",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_jargon.wav",
+     "maxgap": 0.45,
+     "text": "AI నేర్చుకోవాలని ఉంది, కానీ ఎక్కడ మొదలుపెట్టాలో తెలియట్లేదా? [1] ChatGPT, agents, RAG... అంతా వేరే భాష లాగా అనిపిస్తోంది కదా. [2] దీన్ని simple గా చేద్దాం.",
+     "show": "Want to learn AI, but don't know where to start? ChatGPT, agents, RAG... it all sounds like a different language. Let's make it simple."
+    }
+   ]
+  },
+  {
+   "id": "levelup",
+   "type": "levelup",
+   "tail": 0.45,
+   "data": {
+    "quests": [
+     [
+      "BookOpen",
+      "Quest 1 · The basics",
+      "AI, ML, LLMs, tokens, prompts"
+     ],
+     [
+      "Brain",
+      "Quest 2 · How AI learns",
+      "training, neural nets, data"
+     ],
+     [
+      "Wrench",
+      "Quest 3 · Build with AI",
+      "RAG, agents, tools, MCP"
+     ],
+     [
+      "Rocket",
+      "Quest 4 · Real apps",
+      "how apps work + build your own"
+     ]
+    ],
+    "yt": {
+     "chapter": "The plan",
+     "title": "Learn AI like a game",
+     "notes": [
+      [
+       "Quest 1: the basics (AI, ML, LLMs)",
+       1
+      ],
+      [
+       "Quest 2: how AI learns",
+       2
+      ],
+      [
+       "Quest 3: build with AI (RAG, agents, MCP)",
+       3
+      ],
+      [
+       "Quest 4: real apps + build your own",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_levelup.wav",
+     "maxgap": 0.45,
+     "text": "ఈ page ని ఒక game లాగా అనుకోండి. మీరు level one దగ్గర మొదలుపెడతారు. [1] మొదటి quest: basics. AI, machine learning, ChatGPT అంటే నిజంగా ఏంటి. [2] తర్వాత, AI అసలు ఎలా నేర్చుకుంటుంది. [3] ఆ తర్వాత, AI తో build చేయడం. RAG, agents, tools. [4] చివరగా, real apps ఎలా పని చేస్తాయి, మీ సొంత app ఎలా build చేయాలి. [5]",
+     "show": "Think of this page like a game. You start at level one. First quest: the basics. What AI, machine learning and ChatGPT really are. Next, how AI actually learns. Then, build with AI. RAG, agents and tools. And finally, how real apps work, and how to build your own."
+    }
+   ]
+  },
+  {
+   "id": "promise",
+   "type": "promise",
+   "tail": 0.45,
+   "data": {
+    "cards": [
+     [
+      "Timer",
+      "Short & sharp",
+      "#F59E0B"
+     ],
+     [
+      "MessageCircle",
+      "Simple words",
+      "#22D3EE"
+     ],
+     [
+      "Lightbulb",
+      "Real examples + a quiz",
+      "#34D399"
+     ]
+    ],
+    "yt": {
+     "chapter": "The format",
+     "title": "What every episode gives you",
+     "notes": [
+      [
+       "Short and sharp",
+       1
+      ],
+      [
+       "Simple words, no jargon",
+       2
+      ],
+      [
+       "Real examples and a quiz",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_promise.wav",
+     "maxgap": 0.45,
+     "text": "ప్రతి episode [1] short గా, [2] simple మాటల్లో, [3] real examples తో, ఒక చిన్న quiz తో ఉంటుంది.",
+     "show": "Every episode is short, in simple words, with real examples, and a quick quiz."
+    }
+   ]
+  },
+  {
+   "id": "rollsafe",
+   "type": "rollsafe",
+   "tail": 0.45,
+   "data": {
+    "top": "Can't get confused by AI jargon",
+    "bottom": "if you learn it from scratch",
+    "yt": {
+     "chapter": "Let's go",
+     "title": "Start with Episode 1",
+     "notes": [
+      [
+       "Learn it from scratch, in order",
+       1
+      ],
+      [
+       "Follow so you don't miss an episode",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_rollsafe.wav",
+     "maxgap": 0.45,
+     "text": "AI jargon తో confuse అవ్వలేరు... [1] మీరు దాన్ని scratch నుండి నేర్చుకుంటే. [2] Follow చేయండి, episode one తో మొదలుపెడదాం.",
+     "show": "You can't get confused by AI jargon... if you learn it from scratch. Follow, and let's start with episode one."
+    }
+   ]
+  }
+ ]
+}

@@ -8,6 +8,7 @@ import { Quiz } from "../lesson/scenes/Quiz";
 import { Chintu } from "./Chintu";
 import { ART, BOTTOM2 } from "./ReelArt";
 import { CASE_SCENES } from "./CaseFile";
+import { INTRO_SCENES } from "./Intro";
 
 // v2 "entertainment" reel: memes, multiple characters, karaoke captions, fast cuts.
 const C = {
@@ -585,7 +586,7 @@ const Split: React.FC<SP> = ({ s, cue }) => {
 };
 
 const SCENES: Record<string, React.FC<SP>> = {
-  ...(CASE_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
+  ...(CASE_SCENES as Record<string, React.FC<SP>>), ...(INTRO_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
 
 // ---------------- karaoke captions + speaker tag ----------------
 const chunks = (words: Word[]) => {

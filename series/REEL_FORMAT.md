@@ -70,3 +70,8 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 - The YouTube script is the deep version: the same hook and analogy as the reel, plus the full lesson (definitions, worked examples, code where useful, common mistakes, a myth, recap, quiz, next episode). Every lesson template (`type: "lesson"`, `data.kind`) and every reel scene type can be a chapter.
 - Google text-to-speech: `pipeline/google_tts.py script reels/<id>.json` fills missing `file` takes from each line's `tts` text (needs `GOOGLE_TTS_API_KEY`).
 - Visuals are English in all four versions.
+
+## Voices (current default, free)
+- All four versions use AI4Bharat Indic Parler-TTS running locally (`pipeline/parler_tts_local.py`): Telugu "Lalitha", English "Mary" (Indian English). Free with no credit limits; about 5 s of compute per 1 s of audio on this machine.
+- User verdict: the ElevenLabs Telugu voice (Nitya) sounds nicer, but the free one is acceptable; the free English voice is good. ElevenLabs free tier is disabled; switch back only if a paid plan is added.
+- Specs: set `"parler_lang": "te" | "en"` and give each line a `tts` text (plus `tts2` for a `file2` part); `python3 pipeline/parler_tts_local.py script reels/<id>.json` fills missing takes.
