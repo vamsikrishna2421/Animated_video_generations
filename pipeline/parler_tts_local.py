@@ -64,7 +64,9 @@ def load():
 
 
 def sentences(text):
-    return [s for s in re.split(r"(?<=[.!?।])\s+", text.strip()) if s]
+    # Split on sentence ends, but never inside initialisms like "A.I." or "L.L.M." (a capital letter + period).
+    parts = re.split(r"(?<=[.!?।])(?<![A-Z]\.)\s+", text.strip())
+    return [s for s in parts if re.search(r"\w", s)]
 
 
 EN_FIX = [(r"\bGenAI\b", "Gen A.I."), (r"\bAI\b", "A.I."), (r"\bLLMs\b", "L.L.M.s"), (r"\bLLM\b", "L.L.M."), (r"\bMCP\b", "M.C.P.")]
@@ -85,7 +87,7 @@ def say(lang, text, out: Path, voice=None, pause=0.35):
         with torch.no_grad():
             a = m["model"].generate(input_ids=desc.input_ids, attention_mask=desc.attention_mask,
                                     prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
-        parts += [a.cpu().numpy().squeeze(), np.zeros(int(pause * sr))]
+        parts += [np.atleast_1d(a.cpu().numpy().squeeze()), np.zeros(int(pause * sr))]
     out.parent.mkdir(parents=True, exist_ok=True)
     sf.write(out, np.concatenate(parts).astype(np.float32), sr)
     return out

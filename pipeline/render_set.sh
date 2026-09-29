@@ -16,6 +16,7 @@ for item in "$@"; do
       render ChannelStoryTeYT out/youtube/00_promo_yt_te.mp4 ;;
     intro|ep*)
       id=$([ "$item" = intro ] && echo ep00 || echo "$item"); n=$([ "$item" = intro ] && echo 01_intro || echo "02_${item}")
+      python3 pipeline/parler_tts_local.py script "reels/${id}v2.json" && python3 pipeline/parler_tts_local.py script "reels/${id}te.json"
       python3 pipeline/reel_build.py "reels/${id}v2.json" && python3 pipeline/reel_build.py "reels/${id}te.json"
       render "Reel-${id}v2" "out/insta_en/${n}_insta_en.mp4"
       render "Reel-${id}te" "out/telugu_page/${n}_insta_te.mp4"
