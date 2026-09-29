@@ -1,8 +1,8 @@
 {
  "id": "ep25te",
- "title": "The AI that cheated (Telugu)",
+ "title": "The AI that cheated (Telugu audio)",
  "label": "EP 25",
- "banner": "AI చేసిన మోసం",
+ "banner": "The AI that cheated",
  "topic": "",
  "look": "classic",
  "tempo": 1.0,
@@ -24,7 +24,8 @@
      "who": "maastaaru",
      "file": "01_hook.mp3",
      "maxgap": 0.45,
-     "text": "Researchers ఒక AI ని తయారు చేశారు... husky కి, wolf కి తేడా చెప్పగలిగే AI. [1] తర్వాత, అది అసలు ఏం చూస్తోందో check చేశారు. [2] అది animal ని చూడట్లేదు."
+     "text": "Researchers ఒక AI ని తయారు చేశారు... husky కి, wolf కి తేడా చెప్పగలిగే AI. [1] తర్వాత, అది అసలు ఏం చూస్తోందో check చేశారు. [2] అది animal ని చూడట్లేదు.",
+     "show": "Researchers built an AI that could tell a husky from a wolf. Then they checked what it was actually looking at. It wasn't the animal."
     }
    ]
   },
@@ -38,7 +39,8 @@
      "who": "maastaaru",
      "file": "02_reveal.mp3",
      "maxgap": 0.45,
-     "text": "అది snow ని చూస్తోంది. [1] Training photos లో, దాదాపు ప్రతి wolf snow లోనే ఉంది... [2] ప్రతి husky, grass మీద. [3] So AI ఒక shortcut నేర్చుకుంది: snow ఉంటే, wolf. [4] ఇప్పుడు snow లో ఉన్న husky ని చూపిస్తే... [5] wolf అంటుంది."
+     "text": "అది snow ని చూస్తోంది. [1] Training photos లో, దాదాపు ప్రతి wolf snow లోనే ఉంది... [2] ప్రతి husky, grass మీద. [3] So AI ఒక shortcut నేర్చుకుంది: snow ఉంటే, wolf. [4] ఇప్పుడు snow లో ఉన్న husky ని చూపిస్తే... [5] wolf అంటుంది.",
+     "show": "It was looking at the snow. In the training photos, almost every wolf stood in snow... and every husky, on grass. So the AI learned a shortcut: snow means wolf. Show it a husky in the snow... wolf."
     }
    ]
   },
@@ -52,7 +54,8 @@
      "who": "maastaaru",
      "file": "03_gigo.mp3",
      "maxgap": 0.45,
-     "text": "ఇదే AI golden rule. [1] Garbage in... [2] garbage out. [3] Data లో ఏం చూపిస్తే, model అదే నేర్చుకుంటుంది."
+     "text": "ఇదే AI golden rule. [1] Garbage in... [2] garbage out. [3] Data లో ఏం చూపిస్తే, model అదే నేర్చుకుంటుంది.",
+     "show": "This is the golden rule of AI. Garbage in... garbage out. A model can only learn what its data shows it."
     }
    ]
   },
@@ -66,7 +69,8 @@
      "who": "maastaaru",
      "file": "04_checklist.mp3",
      "maxgap": 0.45,
-     "text": "మరి good data కి ఏం కావాలి? [1] Quantity: సరిపడా examples. [2] Quality: సరైన labels, junk ఉండకూడదు. [3] Diversity: grass మీద wolves కూడా, అన్ని skin tones ఉన్న faces కూడా. [4] ఇంకా Freshness... data పాతది కాకూడదు."
+     "text": "మరి good data కి ఏం కావాలి? [1] Quantity: సరిపడా examples. [2] Quality: సరైన labels, junk ఉండకూడదు. [3] Diversity: grass మీద wolves కూడా, అన్ని skin tones ఉన్న faces కూడా. [4] ఇంకా Freshness... data పాతది కాకూడదు.",
+     "show": "So what makes data good? Quantity: enough examples. Quality: correct labels, no junk. Diversity: wolves on grass too, and faces of every skin tone. And freshness... so the world hasn't moved on."
     }
    ]
   },
@@ -80,7 +84,8 @@
      "who": "maastaaru",
      "file": "05_split.mp3",
      "maxgap": 0.45,
-     "text": "Cheating AI ని పట్టుకోవాలంటే... [1] కొంత data ని దాచిపెడతాం. [2] ఎక్కువ data తో train చేస్తాం. [3] కొంచెం data తో tune చేస్తాం. [4] ఇంతవరకు చూడని photos తో test చేస్తాం. [5] ఒక surprise exam లాగా."
+     "text": "Cheating AI ని పట్టుకోవాలంటే... [1] కొంత data ని దాచిపెడతాం. [2] ఎక్కువ data తో train చేస్తాం. [3] కొంచెం data తో tune చేస్తాం. [4] ఇంతవరకు చూడని photos తో test చేస్తాం. [5] ఒక surprise exam లాగా.",
+     "show": "And to catch a cheating AI... we hide some data away. Train on most of it. Tune on a little. And test on photos it has never seen. A surprise exam."
     }
    ]
   },
@@ -89,7 +94,7 @@
    "type": "quiz",
    "tail": 0.35,
    "data": {
-    "question": "ఒక AI cats ని ఇంట్లో మాత్రమే గుర్తిస్తుంది. దాని data ఏ rule break చేసింది?",
+    "question": "An AI spots cats perfectly... but only indoors. Which rule did its data break?",
     "options": [
      "Quantity",
      "Diversity",
@@ -106,7 +111,8 @@
      "file2": "07_answer_outro.mp3",
      "end2": 4.3,
      "pause": 2.5,
-     "gap": 0.1
+     "gap": 0.1,
+     "show": "Your turn, detective. An AI spots cats perfectly... but only indoors. Which rule did its data break? Diversity! It never saw a cat outdoors."
     }
    ]
   },
@@ -118,7 +124,7 @@
     "points": [
      "Garbage in, garbage out",
      "Good data: quantity, quality, diversity, freshness",
-     "ఇంతవరకు చూడని data తో test చేయాలి"
+     "Always test on data it has never seen"
     ]
    },
    "lines": [
@@ -127,7 +133,8 @@
      "file": "07_answer_outro.mp3",
      "maxgap": 0.45,
      "text": "Case closed. [1] AI ఎంత smart అనేది, దాని data మీదే ఆధారపడి ఉంటుంది. [2] Next: ప్రతి answer బట్టీ పట్టిన AI... అయినా exam fail అయింది. Miss అవ్వకుండా, follow చేయండి.",
-     "start": 5.8
+     "start": 5.8,
+     "show": "Case closed. An AI is only as smart as its data. Next: the AI that memorised every answer... and still failed the exam. Follow, so you don't miss it."
     }
    ]
   }

@@ -338,7 +338,9 @@ def main() -> None:
         rows.append((serial, ep, title, status))
         items.append({"serial": serial, "id": ep, "title": title, "status": status,
                       "video": f"{dest.relative_to(ROOT)}/{video}" if videos else None,
-                      "captions": f"{dest.relative_to(ROOT)}/{serial}_{ep}_captions.txt"})
+                      "captions": f"{dest.relative_to(ROOT)}/{serial}_{ep}_captions.txt",
+                      # Same video with Telugu narration (English visuals); None until rendered.
+                      "video_telugu": next((f"out/telugu/{v.name}" for v in sorted((out / "telugu").glob(f"{serial}_{ep}_*.mp4"))), None)})
     rows.sort()
     (out / "UPLOAD_ORDER.md").write_text(
         "# Upload order\n\nPost strictly by serial. Files: `out/<serial>_<id>_*.mp4` + `out/<serial>_<id>_captions.txt`.\n"

@@ -50,3 +50,10 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 
 ## Status
 - v7 was approved and posted as upload 024 (`out/posted/024_ep23_backprop_cricket_blame_game.mp4`). Use it as the template for the next episodes, with the new pacing in rule 3.
+
+## Two audio versions for every reel (from EP25)
+- Every reel ships twice with identical visuals: English narration (`reels/<ep>v1.json`) and Telugu narration (`reels/<ep>te.json`).
+- Everything on screen stays English in both: banner, cards, quiz, subtitles. Many viewers understand spoken Telugu but can't read it; everyone reads English.
+- The Telugu spec copies the English scene `data`. Each line keeps the Telugu `text` (with `[n]` cue markers placed on the spoken Telugu words) and adds `show` with the English sentence, which becomes the subtitle. Cue timing follows the spoken words.
+- Telugu narration: Tenglish (Telugu sentences, English tech words), ElevenLabs voice "Nitya A – Clear, Engaging Tutor" (`54PRhiFo9gt3cL6Jh53g`), eleven_v3, gap 0.35.
+- Output: the English video goes to `out/<serial>_<id>_*.mp4` as before; the Telugu one goes to `out/telugu/<serial>_<id>_*_telugu.mp4`, listed as `video_telugu` in `out/upload_queue.json`.

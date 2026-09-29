@@ -214,7 +214,11 @@ def file_line(line, rid):
         s0 = at(acc / wsum)
         acc += wt
         out.append((w, s0, at(acc / wsum)))
-    cues = {n: out[min(i, len(out) - 1)][1] for i, n in marks.items()} if out else {}
+    # Cue times follow the SPOKEN words (text), so on-screen cues stay in sync even when captions
+    # show a different language (e.g. Telugu audio with English subtitles via "show").
+    sw = [len(w) + 1 for w in words]
+    ssum = sum(sw) or 1
+    cues = {n: at(sum(sw[:i]) / ssum) for i, n in marks.items()} if out else {}
     return a, sr, out, cues
 
 
