@@ -54,6 +54,144 @@ def fx(a, sr, kind):
     return a
 
 
+VOICES_FILE = ROOT / "reels" / "voices.json"
+
+
+def eleven_line(line, who):
+    """ElevenLabs take for one line. Uses line['el'] (text with audio tags like [excited]) when present.
+    Cue markers [n] land on the word they precede; <pause N> inserts exact silence."""
+    from eleven import tts
+    cfg = json.loads(VOICES_FILE.read_text())[who]
+    raw = line.get("el", line["text"])
+    chunks, words, cues, t, sr = [], [], {}, 0.0, 44100
+    for part in re.split(r"(<pause [\d.]+>)", raw):
+        if not part.strip():
+            continue
+        if PAUSE.fullmatch(part.strip()):
+            sec = float(re.findall(r"[\d.]+", part)[0])
+            chunks.append(np.zeros(int(sec * sr), dtype=np.float32))
+            t += sec
+            continue
+        marks, n_words = {}, 0
+        for tok in part.split():
+            m = re.fullmatch(r"\[(\d+)\]", tok)
+            if m:
+                marks[n_words] = int(m.group(1))
+            elif not re.fullmatch(r"\[[^\]]*\]", tok):
+                n_words += 1
+        text = re.sub(r"\s+", " ", re.sub(r"\[\d+\]", "", part)).strip()
+        a, sr, ws = tts(text, cfg["voice_id"], cfg.get("model", "eleven_v3"), cfg.get("settings"), cfg.get("language"))
+        nz = np.where(np.abs(a) > 0.01)[0]
+        if nz.size:  # trim the model's leading/trailing air
+            cut = max(0, nz[0] - int(0.04 * sr))
+            a = a[cut: nz[-1] + int(0.12 * sr)]
+            ws = [(w, s - cut / sr, e - cut / sr) for w, s, e in ws]
+        for i, n in marks.items():
+            if ws:
+                cues[n] = t + ws[min(i, len(ws) - 1)][1]
+        words += [(w, t + s, t + e) for w, s, e in ws]
+        chunks.append(a)
+        t += len(a) / sr
+    a = np.concatenate(chunks)
+    if "show" in line:  # e.g. Hindi audio with transliterated captions spread over the take
+        shown, d = line["show"].split(), len(a) / sr
+        words = [(w, d * i / len(shown), d * (i + 1) / len(shown)) for i, w in enumerate(shown)]
+    a = a * (10 ** (-15 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9))
+    return a, sr, words, cues
+
+
+def voiced_spans(a, sr, gap=0.12):
+    """Speech regions [(start_s, end_s)] from a 10 ms energy envelope."""
+    fr = int(0.01 * sr)
+    env = np.array([np.sqrt(np.mean(a[i:i + fr] ** 2)) for i in range(0, len(a) - fr, fr)])
+    on = env > max(0.02, 0.12 * env.max())
+    spans, start, quiet = [], None, 0
+    for i, v in enumerate(on):
+        if v:
+            if start is None:
+                start = i
+            quiet = 0
+        elif start is not None:
+            quiet += 1
+            if quiet * 0.01 >= gap:
+                spans.append((start * 0.01, (i - quiet + 1) * 0.01))
+                start, quiet = None, 0
+    if start is not None:
+        spans.append((start * 0.01, len(on) * 0.01))
+    return spans
+
+
+def tighten(a, sr, maxgap):
+    """Shorten long silences inside a take to `maxgap` seconds (20 ms crossfade), keeping reel pace."""
+    spans = voiced_spans(a, sr)
+    if len(spans) < 2:
+        return a
+    out, prev_end, fade = [], 0, int(0.02 * sr)
+    for i, (s0, e0) in enumerate(spans):
+        s_i, e_i = int(s0 * sr), int(e0 * sr)
+        if i == 0:
+            out.append(a[:e_i])
+        else:
+            gap = s_i - prev_end
+            keep = min(gap, int(maxgap * sr))
+            half = keep // 2
+            seg = np.concatenate([a[prev_end: prev_end + half], a[s_i - (keep - half): e_i]])
+            if out and len(seg) > fade:
+                seg[:fade] *= np.linspace(0, 1, fade)
+            out.append(seg)
+        prev_end = e_i
+    out.append(a[prev_end:])
+    return np.concatenate(out)
+
+
+def file_line(line, rid):
+    """Pre-generated take(s) (e.g. ElevenLabs via the connector). Words are spread over the voiced
+    audio by character length, so captions follow the real delivery, pauses included."""
+    src = ROOT / "video" / "public" / "reel" / rid / "src"
+    parts = [line["file"]] + ([line["file2"]] if line.get("file2") else [])
+    audio, sr = [], None
+    for k, f in enumerate(parts):
+        a, sr = sf.read(src / f)
+        a = a.mean(axis=1) if a.ndim > 1 else a
+        nz = np.where(np.abs(a) > 0.01)[0]
+        a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.1 * sr)]
+        a = tighten(a, sr, line.get("maxgap", 0.3))
+        audio.append(a)
+        if k == 0 and len(parts) > 1:
+            audio.append(np.zeros(int(line.get("pause", 3.0) * sr)))
+    a = np.concatenate(audio)
+    a = a * (10 ** (-15 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9))
+    text = line["text"]
+    toks = [t for t in re.sub(r"<pause [\d.]+>", " ", text).split()]
+    marks, words = {}, []
+    for t in toks:
+        m = re.fullmatch(r"\[(\d+)\]", t)
+        if m:
+            marks[len(words)] = int(m.group(1))
+        else:
+            words.append(t)
+    shown = line.get("show", " ".join(words)).split()
+    spans = voiced_spans(a, sr)
+    total = sum(e - s for s, e in spans) or len(a) / sr
+    weights = [len(w) + 1 for w in shown]
+    wsum = sum(weights)
+    out, acc = [], 0.0
+
+    def at(x):  # map a fraction of voiced time onto the real timeline
+        need = x * total
+        for s, e in spans:
+            if need <= e - s:
+                return s + need
+            need -= e - s
+        return spans[-1][1] if spans else x * len(a) / sr
+    for w, wt in zip(shown, weights):
+        s0 = at(acc / wsum)
+        acc += wt
+        out.append((w, s0, at(acc / wsum)))
+    cues = {n: out[min(i, len(out) - 1)][1] for i, n in marks.items()} if out else {}
+    return a, sr, out, cues
+
+
 def synth_line(kokoro, line, sp):
     """Returns (audio, words[(w, s, e)], cues{n: s})."""
     text = line["text"]
@@ -139,8 +277,14 @@ def main(spec_path: Path) -> None:
         lines = []
         for line in sc["lines"]:
             sp = SPEAKERS[line["who"]]
-            a, sr, words, cues = synth_line(kokoro, line, sp)
+            if "file" in line:
+                a, sr, words, cues = file_line(line, rid)
+            elif spec.get("engine") == "eleven":
+                a, sr, words, cues = eleven_line(line, line["who"])
+            else:
+                a, sr, words, cues = synth_line(kokoro, line, sp)
             a = fx(a, sr, sp.get("fx"))
+            a = np.tanh(a * (10 ** (-15 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9)) * 1.2) / np.tanh(1.2)  # equal loudness after effects
             n += 1
             sf.write(out / f"line_{n:02d}.wav", a.astype(np.float32), sr)
             dur = len(a) / sr

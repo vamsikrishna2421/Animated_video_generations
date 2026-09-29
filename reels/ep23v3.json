@@ -1,0 +1,231 @@
+{
+ "id": "ep23v3",
+ "title": "Backpropagation: the AI blame game",
+ "label": "EP 23",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "meme",
+   "data": {
+    "img": "spiderman.jpg",
+    "top": "BREAKING: AI got it WRONG",
+    "labels": [
+     [
+      "LAYER 1",
+      0.2,
+      0.62
+     ],
+     [
+      "LAYER 3",
+      0.72,
+      0.62
+     ]
+    ],
+    "shakeAt": 1
+   },
+   "lines": [
+    {
+     "who": "commentator",
+     "text": "Breaking news! AI got it WRONG... [1] and now every layer is blaming each other!",
+     "file": "01b_comm_hook.mp3",
+     "maxgap": 0.3
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "ask",
+   "type": "dialogue",
+   "data": {},
+   "lines": [
+    {
+     "who": "chintu",
+     "text": "Maastaaru! AI has billions of numbers inside... how does it even know which one messed up?",
+     "file": "02_chintu_ask.mp3"
+    },
+    {
+     "who": "maastaaru",
+     "text": "Easy, Chintu. Same way we find out who lost the cricket match.",
+     "file": "03_m_easy.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "match",
+   "type": "cricket",
+   "data": {},
+   "lines": [
+    {
+     "who": "commentator",
+     "text": "Last ball! India needs SIX to win! [1] He swings... [2] and he's CAUGHT on the boundary!",
+     "file": "04_comm_lastball.mp3"
+    },
+    {
+     "who": "chintu",
+     "text": "Ayyo, no! Whose fault is this?",
+     "file": "05_chintu_ayyo.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "blame",
+   "type": "blame",
+   "data": {
+    "chain": [
+     [
+      "Selectors",
+      "Layer 1",
+      10
+     ],
+     [
+      "Captain",
+      "Layer 2",
+      30
+     ],
+     [
+      "Batsman",
+      "Layer 3",
+      60
+     ]
+    ]
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Start at the result, [1] and walk backwards. [2] The batsman takes the most blame. [3] The captain who changed the batting order takes some. [4] And the selectors... a little.",
+     "file": "06_m_blame.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "net",
+   "type": "net",
+   "data": {},
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Backpropagation does exactly this inside AI. [1] The error flows backward, layer by layer, [2] and every connection gets blamed by how much it contributed.",
+     "file": "07_m_backprop.mp3"
+    },
+    {
+     "who": "commentator",
+     "text": "And the third umpire says... fair review!",
+     "file": "08_comm_umpire.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "drake",
+   "type": "drake",
+   "data": {
+    "no": "Blame everyone equally",
+    "yes": "Blame by contribution, then fix a little"
+   },
+   "lines": [
+    {
+     "who": "chintu",
+     "text": "Wait, so everyone doesn't get the same blame?",
+     "file": "09_chintu_wait.mp3"
+    },
+    {
+     "who": "maastaaru",
+     "text": "Nope! [1] Blame by contribution. [2] Then each weight fixes itself, just a little.",
+     "file": "10_m_nope.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "mass",
+   "type": "mass",
+   "drop": true,
+   "data": {
+    "title": "BACKPROP",
+    "tag": "The AI detective"
+   },
+   "lines": [
+    {
+     "who": "filmy",
+     "text": "गलती कहीं भी हो, मैं पीछे जाकर पकड़ लूँगा!",
+     "show": "Galti kahin bhi ho, main peeche jaakar pakad loonga!",
+     "sub": "Wherever the mistake is, I'll go back and catch it!",
+     "file": "11_filmy.mp3",
+     "maxgap": 0.7
+    },
+    {
+     "who": "chintu",
+     "text": "Brooo... goosebumps!",
+     "file": "12_chintu_brooo.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "stonks",
+   "type": "stonks",
+   "data": {},
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Repeat this blame and fix, [1] millions of times, and the mistakes keep shrinking.",
+     "file": "13_m_repeat.mp3"
+    },
+    {
+     "who": "chintu",
+     "text": "Mistakes going down... total stonks!",
+     "file": "14_chintu_stonks.mp3"
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "data": {
+    "question": "In backprop, which layer gets blamed FIRST?",
+    "options": [
+     "The first layer",
+     "The last layer",
+     "All layers at once"
+    ],
+    "answer": 1
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Quick test! Which layer gets blamed first? [1] Three seconds. <pause 3> [2] The last layer! Blame starts at the answer, and flows backward.",
+     "gap": 0.1,
+     "file": "15_m_quizA.mp3",
+     "file2": "16_m_quizB.mp3",
+     "pause": 3.0
+    }
+   ],
+   "tail": 0.15
+  },
+  {
+   "id": "outro",
+   "type": "outro",
+   "data": {
+    "img": "khaby-lame.jpg",
+    "label": "Blame smartly. Fix a little. Repeat."
+   },
+   "lines": [
+    {
+     "who": "chintu",
+     "text": "So AI learns by... blaming smartly?",
+     "file": "17_chintu_outro.mp3"
+    },
+    {
+     "who": "maastaaru",
+     "text": "Exactly! [1] Follow AI Maastaaru. Next, the three ways machines learn.",
+     "file": "18_m_outro.mp3"
+    }
+   ],
+   "tail": 0.15
+  }
+ ]
+}
