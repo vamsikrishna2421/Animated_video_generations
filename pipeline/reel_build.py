@@ -10,6 +10,9 @@ Writes video/public/reel/<id>/line_XX.wav, score.wav and video/src/reel/timeline
 Run: python3 pipeline/reel_build.py reels/ep23v2.json
 """
 import json
+import os
+import subprocess
+import tempfile
 import re
 import sys
 from pathlib import Path
@@ -144,6 +147,23 @@ def tighten(a, sr, maxgap):
     return np.concatenate(out)
 
 
+TEMPO = 1.0  # spec-level "tempo" overrides; >1 = faster delivery, pitch kept
+
+
+def stretch(a, sr, tempo):
+    """Pitch-preserving speed change (ffmpeg atempo) to remove drag from slow takes."""
+    if abs(tempo - 1) < 1e-3:
+        return a
+    ff = ROOT / "video" / "node_modules" / "@remotion" / "compositor-linux-x64-gnu" / "ffmpeg"
+    env = {**os.environ, "LD_LIBRARY_PATH": str(ff.parent)}
+    with tempfile.TemporaryDirectory() as d:
+        i, o = Path(d) / "i.wav", Path(d) / "o.wav"
+        sf.write(i, a.astype(np.float32), sr)
+        subprocess.run([str(ff), "-y", "-loglevel", "error", "-i", str(i), "-filter:a", f"atempo={tempo}", str(o)], check=True, env=env)
+        b, _ = sf.read(o)
+    return b.mean(axis=1) if b.ndim > 1 else b
+
+
 def file_line(line, rid):
     """Pre-generated take(s) (e.g. ElevenLabs via the connector). Words are spread over the voiced
     audio by character length, so captions follow the real delivery, pauses included."""
@@ -156,6 +176,7 @@ def file_line(line, rid):
         nz = np.where(np.abs(a) > 0.01)[0]
         a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.1 * sr)]
         a = tighten(a, sr, line.get("maxgap", 0.3))
+        a = stretch(a, sr, line.get("tempo", TEMPO))
         audio.append(a)
         if k == 0 and len(parts) > 1:
             audio.append(np.zeros(int(line.get("pause", 3.0) * sr)))
@@ -265,13 +286,43 @@ def score(total, scene_starts, drops):
     return st * 0.9
 
 
+def lofi(total, scene_starts):
+    """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops."""
+    n = int(total * MSR)
+    mix = np.zeros(n)
+    beat = 60 / 88
+    chords = [[57, 60, 64, 67], [53, 57, 60, 64], [55, 59, 62, 65], [52, 55, 59, 62]]
+    t0, b = 0.0, 0
+    while t0 < total:
+        for i in range(4):
+            ts = t0 + i * beat
+            if i in (0, 2):
+                place(mix, kick808(45, 0.4, 1.5) * 0.45, ts)
+            if i in (1, 3):
+                place(mix, hat_tick() * 0.35, ts)
+            place(mix, hat_tick() * 0.18, ts + beat / 2)
+        for k, note in enumerate(chords[b % 4]):
+            place(mix, keys(note, beat * 3.5) * 0.5, t0 + k * 0.03)
+        place(mix, keys(chords[b % 4][3] + 12, beat) * 0.3, t0 + beat * 2.5)
+        t0 += beat * 4
+        b += 1
+    st = np.stack([mix, np.roll(mix, int(0.02 * MSR))], axis=1)
+    st = np.tanh(st / (np.max(np.abs(st)) + 1e-9) * 1.2) / np.tanh(1.2)
+    fo = int(0.8 * MSR)
+    st[-fo:] *= np.linspace(1, 0, fo)[:, None]
+    return st * 0.8
+
+
 def main(spec_path: Path) -> None:
+    global TEMPO, GAP
     spec = json.loads(spec_path.read_text())
+    TEMPO = spec.get("tempo", 1.0)
+    GAP = spec.get("gap", GAP)
     rid = spec["id"]
     out = ROOT / "video" / "public" / "reel" / rid
     out.mkdir(parents=True, exist_ok=True)
     kokoro = Kokoro(str(ROOT / "models" / "kokoro-v1.0-timed.onnx"), str(ROOT / "models" / "voices-v1.0.bin"))
-    t, n, scenes = 0.25, 0, []
+    t, n, scenes = spec.get("lead", 0.25), 0, []
     for si, sc in enumerate(spec["scenes"]):
         s_from = 0.0 if si == 0 else t  # first scene is on screen from frame 0
         lines = []
@@ -301,8 +352,10 @@ def main(spec_path: Path) -> None:
     total = t + 0.4
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
-    sf.write(out / "score.wav", score(total, [s["from"] / FPS for s in scenes], drops).astype(np.float32), MSR)
-    tl = {"id": rid, "look": spec.get("look", "rays"), "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
+    starts = [s["from"] / FPS for s in scenes]
+    bed = lofi(total, starts) if spec.get("music") == "lofi" else score(total, starts, drops)
+    sf.write(out / "score.wav", bed.astype(np.float32), MSR)
+    tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
           "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)

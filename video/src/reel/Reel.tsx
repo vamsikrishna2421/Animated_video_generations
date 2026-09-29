@@ -27,7 +27,7 @@ const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
 type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
-export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic" };
+export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; musicVol?: number[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -393,6 +393,7 @@ type Meme = { img: string; at?: number; line?: number; x: number; y: number; w: 
 const Sticker: React.FC<{ m: Meme; at: number }> = ({ m, at }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const classic = useContext(LookCtx) === "classic";
   if (f < at) return null;
   const s = spring({ frame: f - at, fps, config: { damping: 9, mass: 0.6 } });
   const wob = Math.sin((f - at) / 3) * 3 * Math.exp(-(f - at) / 20);
@@ -402,13 +403,184 @@ const Sticker: React.FC<{ m: Meme; at: number }> = ({ m, at }) => {
         <Img src={staticFile(`reel/memes/${m.img}`)} style={m.crop === "right" ? { width: "200%", marginLeft: "-100%", display: "block" } : { width: "100%", display: "block" }} />
       </div>
       {m.label && <div style={{ background: "white", color: "#111", fontFamily: C.anton, fontSize: Math.max(26, m.w / 13), textAlign: "center", padding: "4px 10px", lineHeight: 1.1 }}>{m.label}</div>}
-      <Boom at={at} vol={0.55} />
+      {classic ? <Pop at={at} /> : <Boom at={at} vol={0.55} />}
     </div>
   );
 };
 
+
+// ---------------- scene: split — real-life analogy (top) in parallel with the AI concept (bottom) ----------------
+// data.top: { img, tag, pan?, chips?: [{t, at, x, y, c?}], ticker?, stamp?: {t, at} }
+// data.bottom: { kind: "predict"|"layers"|"backflow"|"loss", tag, ... }
+const PANEL = { x: 40, w: 1000, topY: 262, topH: 560, botY: 900, botH: 500 };
+const Chip: React.FC<{ t: string; at: number; x: number; y: number; c?: string }> = ({ t, at, x, y, c = C.amber }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  if (f < at) return null;
+  const sp = spring({ frame: f - at, fps, config: { damping: 14 } });
+  return (
+    <div style={{ position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) scale(${sp})`, background: "rgba(8,10,24,0.86)", border: `3px solid ${c}`, color: "white", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "8px 20px", borderRadius: 16, whiteSpace: "nowrap", boxShadow: "0 10px 26px rgba(0,0,0,0.5)" }}>
+      {t}
+    </div>
+  );
+};
+const PanelTag: React.FC<{ icon: string; t: string; c: string }> = ({ icon, t, c }) => (
+  <div style={{ position: "absolute", left: 20, top: 18, display: "flex", alignItems: "center", gap: 10, background: c, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 28, letterSpacing: 3, padding: "6px 18px", borderRadius: 14 }}>
+    <Icon name={icon} size={30} color="#0A0F24" stroke={2.8} /> {t}
+  </div>
+);
+const AnalogyPanel: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> = ({ d, s, cue }) => {
+  const f = useCurrentFrame();
+  const z = interpolate(f, [0, s.frames], [1.04, 1.16]);
+  const px = interpolate(f, [0, s.frames], [0, d.pan ?? -30]);
+  const stampAt = d.stamp ? cue(d.stamp.at) : 1e9;
+  const st = interpolate(f - stampAt, [0, 6], [2.2, 1], cl);
+  return (
+    <div style={{ position: "absolute", left: PANEL.x, top: PANEL.topY, width: PANEL.w, height: PANEL.topH, borderRadius: 30, overflow: "hidden", border: "4px solid rgba(255,255,255,0.85)", boxShadow: "0 24px 60px rgba(0,0,0,0.55)", background: "#000" }}>
+      <Img src={staticFile(d.img)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z}) translateX(${px}px)` }} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 30%, transparent 65%, rgba(0,0,0,0.55) 100%)" }} />
+      <PanelTag icon={d.icon ?? "Clapperboard"} t={d.tag ?? "REAL LIFE"} c={C.amber} />
+      {(d.chips ?? []).map((c: any, i: number) => <Chip key={i} t={c.t} at={cue(c.at)} x={c.x} y={c.y} c={c.c} />)}
+      {d.ticker && (
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 70, display: "flex", alignItems: "center", background: "rgba(190,18,60,0.92)", overflow: "hidden" }}>
+          <div style={{ background: "white", color: C.rose, fontFamily: C.inter, fontWeight: 900, fontSize: 30, padding: "0 18px", height: "100%", display: "flex", alignItems: "center", letterSpacing: 2 }}>BREAKING</div>
+          <div style={{ whiteSpace: "nowrap", fontFamily: C.inter, fontWeight: 800, fontSize: 34, color: "white", transform: `translateX(${40 - f * 4}px)`, paddingLeft: 20 }}>{d.ticker} · {d.ticker}</div>
+        </div>
+      )}
+      {f >= stampAt && (
+        <div style={{ position: "absolute", right: 50, top: 150, transform: `scale(${st}) rotate(-10deg)`, border: `8px solid ${d.stamp?.c ?? C.rose}`, color: d.stamp?.c ?? C.rose, fontFamily: C.anton, fontSize: 110, padding: "0 30px", borderRadius: 18, background: "rgba(0,0,0,0.35)" }}>{d.stamp.t}</div>
+      )}
+    </div>
+  );
+};
+
+// --- bottom "IN AI" visuals, drawn in a 1000x500 panel ---
+const Predict: React.FC<{ d: any; cue: (n: number) => number }> = ({ d, cue }) => {
+  const f = useCurrentFrame();
+  const wrong = d.wrongAt !== undefined ? cue(d.wrongAt) : 8;
+  const on = f >= wrong;
+  const err = interpolate(f, [wrong, wrong + 18], [0, d.error ?? 0.92], cl);
+  const box = (x: number, icon: string, label: string, c: string, sub?: string) => (
+    <div style={{ position: "absolute", left: x, top: 110, width: 260, height: 230, borderRadius: 24, background: "rgba(255,255,255,0.06)", border: `3px solid ${c}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10 }}>
+      <Icon name={icon} size={90} color={c} />
+      <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 40, color: "white" }}>{label}</div>
+      {sub && <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 26, color: C.muted }}>{sub}</div>}
+    </div>
+  );
+  return (
+    <>
+      {box(40, d.inIcon ?? "Image", d.input ?? "Cat photo", C.teal, "input")}
+      <div style={{ position: "absolute", left: 318, top: 200, fontFamily: C.anton, fontSize: 60, color: C.muted }}>→</div>
+      {box(370, "BrainCircuit", "AI", C.violet, "billions of weights")}
+      <div style={{ position: "absolute", left: 648, top: 200, fontFamily: C.anton, fontSize: 60, color: C.muted }}>→</div>
+      {box(700, on ? "XCircle" : "HelpCircle", on ? (d.output ?? "\"Dog\"") : "…", on ? C.rose : C.muted, on ? `answer: ${d.truth ?? "cat"}` : "output")}
+      <div style={{ position: "absolute", left: 40, right: 40, top: 380, height: 50, borderRadius: 25, background: "rgba(255,255,255,0.08)", overflow: "hidden" }}>
+        <div style={{ width: `${err * 100}%`, height: "100%", background: `linear-gradient(90deg, ${C.amber}, ${C.rose})` }} />
+        <div style={{ position: "absolute", left: 24, top: 6, fontFamily: C.inter, fontWeight: 800, fontSize: 30, color: "white" }}>ERROR {err.toFixed(2)}</div>
+      </div>
+    </>
+  );
+};
+const Layers: React.FC<{ d: any; cue: (n: number) => number }> = ({ d, cue }) => {
+  const f = useCurrentFrame();
+  const rows: [string, number, number][] = d.rows; // [label, pct, cue]
+  const start = cue(d.start ?? 1);
+  const arrowY = interpolate(f, [start, cue(rows[rows.length - 1][2]) + 10], [95, 440], cl);
+  return (
+    <>
+      <div style={{ position: "absolute", left: 40, top: 90, width: 14, height: 360, borderRadius: 7, background: "rgba(255,255,255,0.1)" }} />
+      {f >= start && <div style={{ position: "absolute", left: 30, top: arrowY - 17, width: 34, height: 34, borderRadius: 17, background: C.rose, boxShadow: `0 0 26px ${C.rose}` }} />}
+      {rows.map(([label, pct, at], i) => {
+        const a = cue(at);
+        const p = interpolate(f, [a, a + 16], [0, 1], cl);
+        return (
+          <div key={label} style={{ position: "absolute", left: 90, right: 40, top: 90 + i * 125, height: 100, opacity: 0.4 + 0.6 * Math.min(1, p * 2) }}>
+            <div style={{ display: "flex", justifyContent: "space-between", fontFamily: C.inter, fontWeight: 800, fontSize: 36, color: "white" }}>
+              <span>{label}</span>
+              <span style={{ color: C.amber }}>{Math.round(pct * p)}%</span>
+            </div>
+            <div style={{ marginTop: 10, height: 38, borderRadius: 19, background: "rgba(255,255,255,0.08)", overflow: "hidden" }}>
+              <div style={{ width: `${pct * p}%`, height: "100%", background: `linear-gradient(90deg, ${C.violet}, ${C.rose})` }} />
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+const Backflow: React.FC<{ d: any; cue: (n: number) => number }> = ({ d, cue }) => {
+  const f = useCurrentFrame();
+  const layers = [3, 4, 4, 1];
+  const X = (i: number) => 110 + i * 260;
+  const Y = (i: number, j: number) => 270 + (j - (layers[i] - 1) / 2) * 100;
+  const back = cue(d.back ?? 1);
+  const blame = cue(d.blame ?? 2);
+  const edges: [number, number, number, number, number][] = [];
+  layers.forEach((n, i) => {
+    if (i === layers.length - 1) return;
+    for (let a = 0; a < n; a++) for (let b = 0; b < layers[i + 1]; b++) edges.push([i, a, i + 1, b, random(`bf${i}${a}${b}`)]);
+  });
+  return (
+    <svg width={1000} height={500} style={{ position: "absolute", inset: 0 }}>
+      {edges.map(([i, a, i2, b, r], k) => {
+        const reach = interpolate(f, [back + (3 - i2) * 10, back + (3 - i2) * 10 + 10], [0, 1], cl);
+        return <line key={k} x1={X(i)} y1={Y(i, a)} x2={X(i2)} y2={Y(i2, b)} stroke={reach > 0 ? C.rose : "rgba(255,255,255,0.22)"} strokeWidth={f >= blame ? 1.5 + r * 8 : 2.5} opacity={0.35 + 0.65 * reach} />;
+      })}
+      {layers.map((n, i) => Array.from({ length: n }, (_, j) => <circle key={`${i}${j}`} cx={X(i)} cy={Y(i, j)} r={i === 3 ? 38 : 28} fill={i === 3 ? C.rose : "#1E1B4B"} stroke={i === 3 ? "white" : C.teal} strokeWidth={5} />))}
+      {f >= back && [0, 1].map((k) => {
+        const p = ((f - back) / 28 + k / 2) % 1;
+        return <circle key={k} cx={X(3) - p * (X(3) - X(0))} cy={270 + Math.sin(p * 8 + k) * 70} r={13} fill={C.amber} />;
+      })}
+      <text x={X(3)} y={470} fill={C.rose} fontFamily="Inter" fontWeight={800} fontSize={28} textAnchor="middle">error</text>
+      <text x={X(0)} y={470} fill={C.teal} fontFamily="Inter" fontWeight={800} fontSize={28} textAnchor="middle">input</text>
+      {f >= blame && <text x={500} y={60} fill={C.amber} fontFamily="DejaVu Sans Mono" fontWeight={800} fontSize={34} textAnchor="middle">thicker line = more blame</text>}
+    </svg>
+  );
+};
+const Loss: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> = ({ d, s, cue }) => {
+  const f = useCurrentFrame();
+  const p = interpolate(f, [cue(d.start ?? 1), s.frames - 10], [0, 1], cl);
+  const pts = Array.from({ length: 40 }, (_, i) => [60 + i * 22.5, 110 + (1 - Math.exp(-i / 9)) * 280 + (random(`ls${i}`) - 0.5) * 26 * Math.exp(-i / 20)]);
+  const shown = Math.max(2, Math.floor(p * pts.length));
+  const rounds = Math.round(1 + p ** 3 * 999999);
+  return (
+    <>
+      <svg width={1000} height={500} style={{ position: "absolute", inset: 0 }}>
+        <line x1={60} y1={420} x2={960} y2={420} stroke="rgba(255,255,255,0.25)" strokeWidth={3} />
+        <line x1={60} y1={90} x2={60} y2={420} stroke="rgba(255,255,255,0.25)" strokeWidth={3} />
+        <polyline points={pts.slice(0, shown).map((q) => q.join(",")).join(" ")} fill="none" stroke={C.green} strokeWidth={9} strokeLinejoin="round" strokeLinecap="round" />
+      </svg>
+      <div style={{ position: "absolute", left: 80, top: 70, fontFamily: C.inter, fontWeight: 800, fontSize: 32, color: C.green }}>MISTAKES ↓</div>
+      <div style={{ position: "absolute", right: 40, top: 70, fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 800, fontSize: 32, color: "white" }}>round {rounds.toLocaleString("en-IN")}</div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 440, textAlign: "center", fontFamily: C.inter, fontWeight: 700, fontSize: 28, color: C.muted }}>blame → nudge weights → try again</div>
+    </>
+  );
+};
+const BOTTOM: Record<string, React.FC<any>> = { predict: Predict, layers: Layers, backflow: Backflow, loss: Loss };
+const Split: React.FC<SP> = ({ s, cue }) => {
+  const f = useCurrentFrame();
+  const d = s.data;
+  const B = BOTTOM[d.bottom.kind];
+  const bIn = useSp(s.from === 0 ? -30 : 4, 14);
+  return (
+    <AbsoluteFill>
+      <Backdrop />
+      <AnalogyPanel d={d.top} s={s} cue={cue} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: PANEL.topY + PANEL.topH + 14, display: "flex", justifyContent: "center", alignItems: "center", gap: 18 }}>
+        <div style={{ width: 150, height: 3, background: "rgba(255,255,255,0.3)" }} />
+        <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 30, letterSpacing: 5, color: "white", opacity: 0.9 }}>{d.bridge ?? "SAME IDEA IN AI"}</div>
+        <div style={{ width: 150, height: 3, background: "rgba(255,255,255,0.3)" }} />
+      </div>
+      <div style={{ position: "absolute", left: PANEL.x, top: PANEL.botY, width: PANEL.w, height: PANEL.botH, borderRadius: 30, background: "rgba(10,14,36,0.82)", border: `3px solid ${C.teal}88`, overflow: "hidden", opacity: bIn, transform: `translateY(${(1 - bIn) * 40}px)` }}>
+        <PanelTag icon="Cpu" t={d.bottom.tag ?? "IN AI"} c={C.teal} />
+        {B ? <B d={d.bottom} s={s} cue={cue} /> : null}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const SCENES: Record<string, React.FC<SP>> = {
-  lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
+  split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
 
 // ---------------- karaoke captions + speaker tag ----------------
 const chunks = (words: Word[]) => {
@@ -426,6 +598,7 @@ const chunks = (words: Word[]) => {
 };
 const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   const f = useCurrentFrame();
+  const classic = useContext(LookCtx) === "classic";
   const l = lineAt(s, f);
   if (!l) return null;
   const cs = chunks(l.words);
@@ -441,7 +614,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
         {c.map((w, i) => {
           const on = f >= w.from;
           return (
-            <span key={i} style={{ display: "inline-block", margin: "0 18px", fontFamily: C.anton, fontSize: 96, lineHeight: 1.05, textTransform: "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? 1.12 : 1})` }}>
+            <span key={i} style={{ display: "inline-block", margin: classic ? "0 12px" : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? 78 : 96, lineHeight: 1.05, textTransform: classic ? "none" : "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? 1.12 : 1})` }}>
               {w.w}
             </span>
           );
@@ -492,7 +665,15 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
       <div style={{ position: "absolute", top: 150, left: 60, fontFamily: C.inter, fontWeight: 800, fontSize: 30, letterSpacing: 4, color: "white", background: "rgba(0,0,0,0.45)", padding: "8px 20px", borderRadius: 30 }}>
         AI FROM SCRATCH <span style={{ color: C.amber }}>· {tl.label}</span>
       </div>
-      <Audio src={staticFile(tl.music)} volume={() => (talking ? 0.22 : 0.55)} />
+      {tl.topic && (
+        <div style={{ position: "absolute", top: 150, right: 60, display: "flex", alignItems: "center", gap: 12, fontFamily: C.inter, fontWeight: 800, fontSize: 30, color: "white", background: "rgba(0,0,0,0.45)", padding: "8px 20px", borderRadius: 30 }}>
+          <span style={{ letterSpacing: 3 }}>{tl.topic}</span>
+          <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", color: C.amber }}>
+            {(() => { const r = Math.max(0, Math.ceil((tl.totalFrames - f) / tl.fps)); return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`; })()}
+          </span>
+        </div>
+      )}
+      <Audio src={staticFile(tl.music)} volume={() => (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1])} />
       {tl.scenes.flatMap((s) =>
         s.lines.map((l, k) => (
           <Sequence key={`${s.id}-${k}`} from={s.from + l.from} durationInFrames={l.frames + 20} layout="none">
@@ -502,7 +683,7 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
       )}
       {tl.scenes.slice(1).map((s) => (
         <Sequence key={`w-${s.id}`} from={Math.max(0, s.from - 6)} durationInFrames={16} layout="none">
-          <Audio src={staticFile("audio/sfx_whoosh.wav")} volume={0.45} />
+          <Audio src={staticFile("audio/sfx_whoosh.wav")} volume={tl.look === "classic" ? 0.25 : 0.45} />
         </Sequence>
       ))}
     </AbsoluteFill>

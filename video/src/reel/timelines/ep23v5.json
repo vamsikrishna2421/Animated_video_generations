@@ -1,0 +1,1476 @@
+{
+ "id": "ep23v5",
+ "look": "classic",
+ "topic": "BACKPROP",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "title": "Backpropagation: the AI blame game",
+ "handle": "@ai_maastaaru",
+ "label": "EP 23",
+ "fps": 30,
+ "totalFrames": 2333,
+ "music": "reel/ep23v5/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/ep23v5/img/catch.jpg",
+     "tag": "LAST BALL",
+     "icon": "Trophy",
+     "pan": -40,
+     "ticker": "AI got it wrong. Now every layer is blaming the others.",
+     "chips": [
+      {
+       "t": "Whose fault?",
+       "at": 1,
+       "x": 760,
+       "y": 120,
+       "c": "#F43F5E"
+      }
+     ]
+    },
+    "bottom": {
+     "kind": "predict",
+     "tag": "IN AI",
+     "input": "Cat photo",
+     "output": "\"Dog\"",
+     "truth": "cat"
+    }
+   },
+   "from": 0,
+   "frames": 138,
+   "lines": [
+    {
+     "who": "commentator",
+     "name": "Commentary",
+     "color": "#34D399",
+     "sub": null,
+     "audio": "reel/ep23v5/line_01.wav",
+     "from": 2,
+     "frames": 134,
+     "words": [
+      {
+       "w": "Breaking",
+       "from": 5,
+       "to": 16
+      },
+      {
+       "w": "news!",
+       "from": 16,
+       "to": 28
+      },
+      {
+       "w": "AI",
+       "from": 28,
+       "to": 37
+      },
+      {
+       "w": "got",
+       "from": 37,
+       "to": 42
+      },
+      {
+       "w": "it",
+       "from": 42,
+       "to": 45
+      },
+      {
+       "w": "WRONG...",
+       "from": 45,
+       "to": 56
+      },
+      {
+       "w": "and",
+       "from": 56,
+       "to": 66
+      },
+      {
+       "w": "now",
+       "from": 66,
+       "to": 71
+      },
+      {
+       "w": "every",
+       "from": 71,
+       "to": 82
+      },
+      {
+       "w": "layer",
+       "from": 82,
+       "to": 90
+      },
+      {
+       "w": "is",
+       "from": 90,
+       "to": 93
+      },
+      {
+       "w": "blaming",
+       "from": 93,
+       "to": 107
+      },
+      {
+       "w": "each",
+       "from": 107,
+       "to": 114
+      },
+      {
+       "w": "other!",
+       "from": 114,
+       "to": 126
+      }
+     ],
+     "cues": {
+      "1": 56
+     }
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "type": "dialogue",
+   "data": {},
+   "from": 138,
+   "frames": 305,
+   "lines": [
+    {
+     "who": "chintu",
+     "name": "Chintu",
+     "color": "#22D3EE",
+     "sub": null,
+     "audio": "reel/ep23v5/line_02.wav",
+     "from": 0,
+     "frames": 171,
+     "words": [
+      {
+       "w": "Maastaaru!",
+       "from": 1,
+       "to": 18
+      },
+      {
+       "w": "AI",
+       "from": 18,
+       "to": 23
+      },
+      {
+       "w": "has",
+       "from": 23,
+       "to": 35
+      },
+      {
+       "w": "billions",
+       "from": 35,
+       "to": 49
+      },
+      {
+       "w": "of",
+       "from": 49,
+       "to": 54
+      },
+      {
+       "w": "numbers",
+       "from": 54,
+       "to": 72
+      },
+      {
+       "w": "inside...",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "w": "how",
+       "from": 88,
+       "to": 94
+      },
+      {
+       "w": "does",
+       "from": 94,
+       "to": 102
+      },
+      {
+       "w": "it",
+       "from": 102,
+       "to": 113
+      },
+      {
+       "w": "even",
+       "from": 113,
+       "to": 121
+      },
+      {
+       "w": "know",
+       "from": 121,
+       "to": 130
+      },
+      {
+       "w": "which",
+       "from": 130,
+       "to": 139
+      },
+      {
+       "w": "one",
+       "from": 139,
+       "to": 146
+      },
+      {
+       "w": "messed",
+       "from": 146,
+       "to": 157
+      },
+      {
+       "w": "up?",
+       "from": 157,
+       "to": 167
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_03.wav",
+     "from": 173,
+     "frames": 129,
+     "words": [
+      {
+       "w": "Easy,",
+       "from": 174,
+       "to": 188
+      },
+      {
+       "w": "Chintu.",
+       "from": 188,
+       "to": 201
+      },
+      {
+       "w": "Same",
+       "from": 201,
+       "to": 209
+      },
+      {
+       "w": "way",
+       "from": 209,
+       "to": 221
+      },
+      {
+       "w": "we",
+       "from": 221,
+       "to": 226
+      },
+      {
+       "w": "find",
+       "from": 226,
+       "to": 234
+      },
+      {
+       "w": "out",
+       "from": 234,
+       "to": 241
+      },
+      {
+       "w": "who",
+       "from": 241,
+       "to": 247
+      },
+      {
+       "w": "lost",
+       "from": 247,
+       "to": 259
+      },
+      {
+       "w": "the",
+       "from": 259,
+       "to": 266
+      },
+      {
+       "w": "cricket",
+       "from": 266,
+       "to": 278
+      },
+      {
+       "w": "match.",
+       "from": 278,
+       "to": 290
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "match",
+   "type": "cricket",
+   "data": {},
+   "from": 444,
+   "frames": 232,
+   "lines": [
+    {
+     "who": "commentator",
+     "name": "Commentary",
+     "color": "#34D399",
+     "sub": null,
+     "audio": "reel/ep23v5/line_04.wav",
+     "from": 0,
+     "frames": 157,
+     "words": [
+      {
+       "w": "Last",
+       "from": 2,
+       "to": 10
+      },
+      {
+       "w": "ball!",
+       "from": 10,
+       "to": 18
+      },
+      {
+       "w": "India",
+       "from": 18,
+       "to": 33
+      },
+      {
+       "w": "needs",
+       "from": 33,
+       "to": 41
+      },
+      {
+       "w": "SIX",
+       "from": 41,
+       "to": 53
+      },
+      {
+       "w": "to",
+       "from": 53,
+       "to": 63
+      },
+      {
+       "w": "win!",
+       "from": 63,
+       "to": 70
+      },
+      {
+       "w": "He",
+       "from": 70,
+       "to": 79
+      },
+      {
+       "w": "swings...",
+       "from": 79,
+       "to": 99
+      },
+      {
+       "w": "and",
+       "from": 99,
+       "to": 105
+      },
+      {
+       "w": "he's",
+       "from": 105,
+       "to": 118
+      },
+      {
+       "w": "CAUGHT",
+       "from": 118,
+       "to": 128
+      },
+      {
+       "w": "on",
+       "from": 128,
+       "to": 132
+      },
+      {
+       "w": "the",
+       "from": 132,
+       "to": 138
+      },
+      {
+       "w": "boundary!",
+       "from": 138,
+       "to": 153
+      }
+     ],
+     "cues": {
+      "1": 70,
+      "2": 99
+     }
+    },
+    {
+     "who": "chintu",
+     "name": "Chintu",
+     "color": "#22D3EE",
+     "sub": null,
+     "audio": "reel/ep23v5/line_05.wav",
+     "from": 158,
+     "frames": 71,
+     "words": [
+      {
+       "w": "Ayyo,",
+       "from": 160,
+       "to": 173
+      },
+      {
+       "w": "no!",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "Whose",
+       "from": 181,
+       "to": 198
+      },
+      {
+       "w": "fault",
+       "from": 198,
+       "to": 210
+      },
+      {
+       "w": "is",
+       "from": 210,
+       "to": 217
+      },
+      {
+       "w": "this?",
+       "from": 217,
+       "to": 229
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "blame",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/ep23v5/img/dressing.jpg",
+     "tag": "POST-MATCH REVIEW",
+     "icon": "ClipboardList",
+     "pan": 30,
+     "chips": [
+      {
+       "t": "Result: LOST",
+       "at": 1,
+       "x": 760,
+       "y": 60,
+       "c": "#F43F5E"
+      },
+      {
+       "t": "Batsman · 60%",
+       "at": 2,
+       "x": 230,
+       "y": 330
+      },
+      {
+       "t": "Captain · 30%",
+       "at": 3,
+       "x": 580,
+       "y": 150
+      },
+      {
+       "t": "Selectors · 10%",
+       "at": 4,
+       "x": 800,
+       "y": 470
+      }
+     ]
+    },
+    "bottom": {
+     "kind": "layers",
+     "tag": "IN AI · WALK BACKWARD",
+     "start": 1,
+     "rows": [
+      [
+       "Layer 3 (last)",
+       60,
+       2
+      ],
+      [
+       "Layer 2",
+       30,
+       3
+      ],
+      [
+       "Layer 1 (first)",
+       10,
+       4
+      ]
+     ]
+    }
+   },
+   "from": 676,
+   "frames": 249,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_06.wav",
+     "from": 0,
+     "frames": 246,
+     "words": [
+      {
+       "w": "Start",
+       "from": 0,
+       "to": 8
+      },
+      {
+       "w": "at",
+       "from": 8,
+       "to": 12
+      },
+      {
+       "w": "the",
+       "from": 12,
+       "to": 17
+      },
+      {
+       "w": "result,",
+       "from": 17,
+       "to": 27
+      },
+      {
+       "w": "and",
+       "from": 27,
+       "to": 38
+      },
+      {
+       "w": "walk",
+       "from": 38,
+       "to": 45
+      },
+      {
+       "w": "backwards.",
+       "from": 45,
+       "to": 73
+      },
+      {
+       "w": "The",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "batsman",
+       "from": 78,
+       "to": 88
+      },
+      {
+       "w": "takes",
+       "from": 88,
+       "to": 96
+      },
+      {
+       "w": "the",
+       "from": 96,
+       "to": 101
+      },
+      {
+       "w": "most",
+       "from": 101,
+       "to": 112
+      },
+      {
+       "w": "blame.",
+       "from": 112,
+       "to": 126
+      },
+      {
+       "w": "The",
+       "from": 126,
+       "to": 131
+      },
+      {
+       "w": "captain",
+       "from": 131,
+       "to": 142
+      },
+      {
+       "w": "who",
+       "from": 142,
+       "to": 147
+      },
+      {
+       "w": "changed",
+       "from": 147,
+       "to": 157
+      },
+      {
+       "w": "the",
+       "from": 157,
+       "to": 162
+      },
+      {
+       "w": "batting",
+       "from": 162,
+       "to": 173
+      },
+      {
+       "w": "order",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "takes",
+       "from": 181,
+       "to": 188
+      },
+      {
+       "w": "some.",
+       "from": 188,
+       "to": 201
+      },
+      {
+       "w": "And",
+       "from": 201,
+       "to": 206
+      },
+      {
+       "w": "the",
+       "from": 206,
+       "to": 212
+      },
+      {
+       "w": "selectors...",
+       "from": 212,
+       "to": 229
+      },
+      {
+       "w": "a",
+       "from": 229,
+       "to": 236
+      },
+      {
+       "w": "little.",
+       "from": 236,
+       "to": 246
+      }
+     ],
+     "cues": {
+      "1": 27,
+      "2": 73,
+      "3": 126,
+      "4": 201
+     }
+    }
+   ]
+  },
+  {
+   "id": "net",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/ep23v5/img/umpire.jpg",
+     "tag": "REPLAY IT BACKWARD",
+     "icon": "MonitorPlay",
+     "pan": -30,
+     "stamp": {
+      "t": "FAIR ✓",
+      "at": 3,
+      "c": "#34D399"
+     }
+    },
+    "bottom": {
+     "kind": "backflow",
+     "tag": "IN AI · BACKPROPAGATION",
+     "back": 1,
+     "blame": 2
+    }
+   },
+   "from": 925,
+   "frames": 345,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_07.wav",
+     "from": 0,
+     "frames": 273,
+     "words": [
+      {
+       "w": "Backpropagation",
+       "from": 1,
+       "to": 27
+      },
+      {
+       "w": "does",
+       "from": 27,
+       "to": 36
+      },
+      {
+       "w": "exactly",
+       "from": 36,
+       "to": 49
+      },
+      {
+       "w": "this",
+       "from": 49,
+       "to": 57
+      },
+      {
+       "w": "inside",
+       "from": 57,
+       "to": 69
+      },
+      {
+       "w": "AI.",
+       "from": 69,
+       "to": 75
+      },
+      {
+       "w": "The",
+       "from": 75,
+       "to": 82
+      },
+      {
+       "w": "error",
+       "from": 82,
+       "to": 97
+      },
+      {
+       "w": "flows",
+       "from": 97,
+       "to": 111
+      },
+      {
+       "w": "backward,",
+       "from": 111,
+       "to": 127
+      },
+      {
+       "w": "layer",
+       "from": 127,
+       "to": 142
+      },
+      {
+       "w": "by",
+       "from": 142,
+       "to": 147
+      },
+      {
+       "w": "layer,",
+       "from": 147,
+       "to": 159
+      },
+      {
+       "w": "and",
+       "from": 159,
+       "to": 165
+      },
+      {
+       "w": "every",
+       "from": 165,
+       "to": 180
+      },
+      {
+       "w": "connection",
+       "from": 180,
+       "to": 198
+      },
+      {
+       "w": "gets",
+       "from": 198,
+       "to": 207
+      },
+      {
+       "w": "blamed",
+       "from": 207,
+       "to": 222
+      },
+      {
+       "w": "by",
+       "from": 222,
+       "to": 227
+      },
+      {
+       "w": "how",
+       "from": 227,
+       "to": 238
+      },
+      {
+       "w": "much",
+       "from": 238,
+       "to": 247
+      },
+      {
+       "w": "it",
+       "from": 247,
+       "to": 251
+      },
+      {
+       "w": "contributed.",
+       "from": 251,
+       "to": 273
+      }
+     ],
+     "cues": {
+      "1": 75,
+      "2": 159
+     }
+    },
+    {
+     "who": "commentator",
+     "name": "Commentary",
+     "color": "#34D399",
+     "sub": null,
+     "audio": "reel/ep23v5/line_08.wav",
+     "from": 275,
+     "frames": 68,
+     "words": [
+      {
+       "w": "And",
+       "from": 275,
+       "to": 280
+      },
+      {
+       "w": "the",
+       "from": 280,
+       "to": 289
+      },
+      {
+       "w": "third",
+       "from": 289,
+       "to": 297
+      },
+      {
+       "w": "umpire",
+       "from": 297,
+       "to": 310
+      },
+      {
+       "w": "says...",
+       "from": 310,
+       "to": 326
+      },
+      {
+       "w": "fair",
+       "from": 326,
+       "to": 332
+      },
+      {
+       "w": "review!",
+       "from": 332,
+       "to": 342
+      }
+     ],
+     "cues": {
+      "3": 326
+     }
+    }
+   ]
+  },
+  {
+   "id": "drake",
+   "type": "lesson",
+   "data": {
+    "kind": "compare",
+    "heading": "Who gets blamed?",
+    "kicker": "FAIR BLAME",
+    "left": {
+     "icon": "Users",
+     "title": "Everyone equally",
+     "points": [
+      "Batsman: 33%",
+      "Captain: 33%",
+      "Selectors: 33%"
+     ]
+    },
+    "right": {
+     "icon": "Scale",
+     "title": "By contribution",
+     "points": [
+      "Batsman: 60%",
+      "Captain: 30%",
+      "Selectors: 10%"
+     ]
+    },
+    "memes": [
+     {
+      "img": "drake.png",
+      "at": 2,
+      "x": 900,
+      "y": 1290,
+      "w": 230,
+      "rot": 8
+     }
+    ]
+   },
+   "from": 1271,
+   "frames": 229,
+   "lines": [
+    {
+     "who": "chintu",
+     "name": "Chintu",
+     "color": "#22D3EE",
+     "sub": null,
+     "audio": "reel/ep23v5/line_09.wav",
+     "from": 0,
+     "frames": 81,
+     "words": [
+      {
+       "w": "Wait,",
+       "from": 1,
+       "to": 16
+      },
+      {
+       "w": "so",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "everyone",
+       "from": 21,
+       "to": 36
+      },
+      {
+       "w": "doesn't",
+       "from": 36,
+       "to": 49
+      },
+      {
+       "w": "get",
+       "from": 49,
+       "to": 55
+      },
+      {
+       "w": "the",
+       "from": 55,
+       "to": 62
+      },
+      {
+       "w": "same",
+       "from": 62,
+       "to": 70
+      },
+      {
+       "w": "blame?",
+       "from": 70,
+       "to": 81
+      }
+     ],
+     "cues": {
+      "1": 1
+     }
+    },
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_10.wav",
+     "from": 83,
+     "frames": 143,
+     "words": [
+      {
+       "w": "Nope!",
+       "from": 85,
+       "to": 99
+      },
+      {
+       "w": "Blame",
+       "from": 99,
+       "to": 108
+      },
+      {
+       "w": "by",
+       "from": 108,
+       "to": 113
+      },
+      {
+       "w": "contribution.",
+       "from": 113,
+       "to": 134
+      },
+      {
+       "w": "Then",
+       "from": 134,
+       "to": 146
+      },
+      {
+       "w": "each",
+       "from": 146,
+       "to": 157
+      },
+      {
+       "w": "weight",
+       "from": 157,
+       "to": 173
+      },
+      {
+       "w": "fixes",
+       "from": 173,
+       "to": 182
+      },
+      {
+       "w": "itself,",
+       "from": 182,
+       "to": 199
+      },
+      {
+       "w": "just",
+       "from": 199,
+       "to": 211
+      },
+      {
+       "w": "a",
+       "from": 211,
+       "to": 214
+      },
+      {
+       "w": "little.",
+       "from": 214,
+       "to": 226
+      }
+     ],
+     "cues": {
+      "2": 99,
+      "3": 134
+     }
+    }
+   ]
+  },
+  {
+   "id": "stonks",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/memes/stonks.png",
+     "tag": "THE MEME VERSION",
+     "icon": "TrendingUp",
+     "pan": 0,
+     "chips": [
+      {
+       "t": "Mistakes going down",
+       "at": 4,
+       "x": 500,
+       "y": 470,
+       "c": "#34D399"
+      }
+     ]
+    },
+    "bottom": {
+     "kind": "loss",
+     "tag": "IN AI · TRAINING",
+     "start": 1
+    },
+    "bridge": "WHAT IT MEANS"
+   },
+   "from": 1500,
+   "frames": 238,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_11.wav",
+     "from": 0,
+     "frames": 135,
+     "words": [
+      {
+       "w": "Repeat",
+       "from": 1,
+       "to": 11
+      },
+      {
+       "w": "this",
+       "from": 11,
+       "to": 18
+      },
+      {
+       "w": "blame",
+       "from": 18,
+       "to": 27
+      },
+      {
+       "w": "and",
+       "from": 27,
+       "to": 33
+      },
+      {
+       "w": "fix,",
+       "from": 33,
+       "to": 49
+      },
+      {
+       "w": "millions",
+       "from": 49,
+       "to": 62
+      },
+      {
+       "w": "of",
+       "from": 62,
+       "to": 66
+      },
+      {
+       "w": "times,",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "w": "and",
+       "from": 82,
+       "to": 88
+      },
+      {
+       "w": "the",
+       "from": 88,
+       "to": 94
+      },
+      {
+       "w": "mistakes",
+       "from": 94,
+       "to": 111
+      },
+      {
+       "w": "keep",
+       "from": 111,
+       "to": 119
+      },
+      {
+       "w": "shrinking.",
+       "from": 119,
+       "to": 135
+      }
+     ],
+     "cues": {
+      "1": 1,
+      "2": 49,
+      "3": 82
+     }
+    },
+    {
+     "who": "chintu",
+     "name": "Chintu",
+     "color": "#22D3EE",
+     "sub": null,
+     "audio": "reel/ep23v5/line_12.wav",
+     "from": 136,
+     "frames": 98,
+     "words": [
+      {
+       "w": "Mistakes",
+       "from": 139,
+       "to": 164
+      },
+      {
+       "w": "going",
+       "from": 164,
+       "to": 178
+      },
+      {
+       "w": "down...",
+       "from": 178,
+       "to": 197
+      },
+      {
+       "w": "total",
+       "from": 197,
+       "to": 211
+      },
+      {
+       "w": "stonks!",
+       "from": 211,
+       "to": 234
+      }
+     ],
+     "cues": {
+      "4": 139
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "data": {
+    "question": "In backprop, which layer gets blamed FIRST?",
+    "options": [
+     "The first layer",
+     "The last layer",
+     "All layers at once"
+    ],
+    "answer": 1
+   },
+   "from": 1738,
+   "frames": 318,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_13.wav",
+     "from": 0,
+     "frames": 314,
+     "words": [
+      {
+       "w": "Quick",
+       "from": 1,
+       "to": 13
+      },
+      {
+       "w": "test!",
+       "from": 13,
+       "to": 26
+      },
+      {
+       "w": "Which",
+       "from": 26,
+       "to": 34
+      },
+      {
+       "w": "layer",
+       "from": 34,
+       "to": 41
+      },
+      {
+       "w": "gets",
+       "from": 41,
+       "to": 54
+      },
+      {
+       "w": "blamed",
+       "from": 54,
+       "to": 74
+      },
+      {
+       "w": "first?",
+       "from": 74,
+       "to": 83
+      },
+      {
+       "w": "Three",
+       "from": 83,
+       "to": 91
+      },
+      {
+       "w": "seconds.",
+       "from": 91,
+       "to": 176
+      },
+      {
+       "w": "The",
+       "from": 176,
+       "to": 181
+      },
+      {
+       "w": "last",
+       "from": 181,
+       "to": 192
+      },
+      {
+       "w": "layer!",
+       "from": 192,
+       "to": 201
+      },
+      {
+       "w": "Blame",
+       "from": 201,
+       "to": 214
+      },
+      {
+       "w": "starts",
+       "from": 214,
+       "to": 229
+      },
+      {
+       "w": "at",
+       "from": 229,
+       "to": 238
+      },
+      {
+       "w": "the",
+       "from": 238,
+       "to": 243
+      },
+      {
+       "w": "answer,",
+       "from": 243,
+       "to": 257
+      },
+      {
+       "w": "and",
+       "from": 257,
+       "to": 273
+      },
+      {
+       "w": "flows",
+       "from": 273,
+       "to": 281
+      },
+      {
+       "w": "backward.",
+       "from": 281,
+       "to": 298
+      }
+     ],
+     "cues": {
+      "1": 83,
+      "2": 176
+     }
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "Error",
+      "flows backward"
+     ],
+     [
+      "Blame",
+      "by contribution"
+     ],
+     [
+      "Fix",
+      "each weight a little"
+     ],
+     [
+      "Repeat",
+      "millions of times"
+     ]
+    ],
+    "next": "EP 24 · Types of learning",
+    "memes": [
+     {
+      "img": "khaby-lame.jpg",
+      "line": 1,
+      "x": 850,
+      "y": 1260,
+      "w": 220,
+      "rot": 6,
+      "crop": "right"
+     }
+    ]
+   },
+   "from": 2056,
+   "frames": 265,
+   "lines": [
+    {
+     "who": "chintu",
+     "name": "Chintu",
+     "color": "#22D3EE",
+     "sub": null,
+     "audio": "reel/ep23v5/line_14.wav",
+     "from": 0,
+     "frames": 106,
+     "words": [
+      {
+       "w": "So",
+       "from": 0,
+       "to": 9
+      },
+      {
+       "w": "AI",
+       "from": 9,
+       "to": 18
+      },
+      {
+       "w": "learns",
+       "from": 18,
+       "to": 38
+      },
+      {
+       "w": "by...",
+       "from": 38,
+       "to": 56
+      },
+      {
+       "w": "blaming",
+       "from": 56,
+       "to": 79
+      },
+      {
+       "w": "smartly?",
+       "from": 79,
+       "to": 106
+      }
+     ],
+     "cues": {
+      "1": 0,
+      "2": 38,
+      "3": 56,
+      "4": 79
+     }
+    },
+    {
+     "who": "maastaaru",
+     "name": "Maastaaru",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep23v5/line_15.wav",
+     "from": 108,
+     "frames": 154,
+     "words": [
+      {
+       "w": "Exactly!",
+       "from": 108,
+       "to": 127
+      },
+      {
+       "w": "Follow",
+       "from": 127,
+       "to": 145
+      },
+      {
+       "w": "AI",
+       "from": 145,
+       "to": 151
+      },
+      {
+       "w": "Maastaaru.",
+       "from": 151,
+       "to": 177
+      },
+      {
+       "w": "Next,",
+       "from": 177,
+       "to": 194
+      },
+      {
+       "w": "the",
+       "from": 194,
+       "to": 202
+      },
+      {
+       "w": "three",
+       "from": 202,
+       "to": 214
+      },
+      {
+       "w": "ways",
+       "from": 214,
+       "to": 224
+      },
+      {
+       "w": "machines",
+       "from": 224,
+       "to": 243
+      },
+      {
+       "w": "learn.",
+       "from": 243,
+       "to": 257
+      }
+     ],
+     "cues": {
+      "5": 177
+     }
+    }
+   ]
+  }
+ ]
+}
