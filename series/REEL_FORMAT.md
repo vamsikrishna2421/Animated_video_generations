@@ -78,3 +78,5 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 - Delivery style: a lively, friendly radio-host (RJ) voice, but the words stay a clean, decent lesson. No gimmick hook lines or slang fillers ("hello hello", "enti sangathi", "ready aa?"). The energy comes from the voice, not from filler phrases.
 - Telugu narration text for the free model is written fully in Telugu script, including English loanwords ("ఏఐ" for AI, "మోడల్స్", "టూల్స్", "డేటా"). The model mispronounces Latin letters inside Telugu. Subtitles (`show`) stay English.
 - Memes carry the joke visually; the narration underneath stays a clean sentence. Don't make the narrator speak meme captions ("Panik… Kalm…"); that sounded messy.
+
+- English (free Mary voice) felt too slow at tempo 1.0: English specs use `tempo` 1.12 and `maxgap` 0.4, keeping `gap` 0.5 between sentences. Pronunciation fixes live in `EN_FIX` (A.I., L.L.M., M.C.P., HITEC City → "High-tech City").

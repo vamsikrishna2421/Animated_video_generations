@@ -69,7 +69,7 @@ def sentences(text):
     return [s for s in parts if re.search(r"\w", s)]
 
 
-EN_FIX = [(r"\bGenAI\b", "Gen A.I."), (r"\bAI\b", "A.I."), (r"\bLLMs\b", "L.L.M.s"), (r"\bLLM\b", "L.L.M."), (r"\bMCP\b", "M.C.P.")]
+EN_FIX = [(r"\bHITEC City\b", "High-tech City"), (r"\bGenAI\b", "Gen A.I."), (r"\bAI\b", "A.I."), (r"\bLLMs\b", "L.L.M.s"), (r"\bLLM\b", "L.L.M."), (r"\bMCP\b", "M.C.P.")]
 
 
 def say(lang, text, out: Path, voice=None, pause=0.35):
