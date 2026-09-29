@@ -22,15 +22,15 @@ REPO = "RXD03/indic-parler-tts"  # mirror of ai4bharat/indic-parler-tts
 SHA = "c68daecb60f80c8f"  # prefix of the official model.safetensors sha256
 VOICES = {
     # Named speakers the model was trained with; the description steers pace, tone and recording quality.
-    # User's pick: Prakash as an energetic FM radio host (sample 3). Lalitha was rejected.
-    "te": "Prakash speaks like an energetic FM radio host explaining a topic: confident, expressive and upbeat, "
-          "with a lively but clear pace. The recording is very clear, close-up, studio quality, with no background noise.",
+    # User's pick: energetic Kiran (morning-show RJ) + radio processing (see radio()). Lalitha rejected.
+    "te": "Kiran speaks with very high energy, like an excited FM radio host on a morning show: loud, fast and enthusiastic, "
+          "with big variation in pitch and a smiling voice. The recording is very clear, close-up, studio quality, with no background noise.",
     "en": "Mary speaks in a clear, warm and friendly tone with an Indian English accent at a moderate, unhurried pace, "
           "like a good teacher. The recording is very clear, close-up, with no background noise.",
 }
 # Named characters (series/VOICES.md). A line picks one with "cast": "<name>"; "post" is an ffmpeg filter.
 CAST = {
-    "narrator_te": {"lang": "te", "voice": None},
+    "narrator_te": {"lang": "te", "voice": None, "radio": True},
     "rj_young": {"lang": "te", "voice": "Kiran speaks like a young, friendly radio host chatting with listeners: casual, cheerful and expressive, "
                  "at a lively but clear pace. The recording is very clear, close-up, studio quality, with no background noise."},
     "sidekick": {"lang": "te", "voice": "Kiran speaks in a very excited, high-pitched, animated and expressive voice, fast and bouncy, "
@@ -91,6 +91,17 @@ def say(lang, text, out: Path, voice=None, pause=0.35):
     return out
 
 
+def radio(path: Path, tempo=1.1):
+    """FM-radio polish the user liked: high-pass, presence lift, soft compression, 10% faster (pitch kept)."""
+    from scipy.signal import butter, sosfilt
+    a, sr = sf.read(path)
+    hp = sosfilt(butter(2, 120, "hp", fs=sr, output="sos"), a)
+    x = hp + 0.6 * sosfilt(butter(2, [2500, 6000], "bp", fs=sr, output="sos"), hp)
+    x = np.tanh(x / (np.sqrt(np.mean(x ** 2)) + 1e-9) * 0.25 * 2.2) / np.tanh(2.2)
+    sf.write(path, (x * 0.9).astype(np.float32), sr)
+    post(path, f"atempo={tempo}")
+
+
 def post(path: Path, filt: str):
     """Apply an ffmpeg audio filter in place (e.g. pitch-up for the cartoon sidekick)."""
     import os
@@ -116,11 +127,13 @@ def script(spec_path: Path):
                 text = line.get(tkey) or (clean(line["text"]) if key == "file" and "file2" not in line else None)
                 if line.get(key) and text and not (src / line[key]).exists():
                     print("synth", line[key], flush=True)
-                    cast = CAST.get(line.get("cast", ""), {})
+                    cast = CAST.get(line.get("cast") or ("narrator_te" if lang == "te" else ""), {})
                     out = src / line[key]
                     say(cast.get("lang", lang), text, out, cast.get("voice") or voice)
                     if cast.get("post"):
                         post(out, cast["post"])
+                    if cast.get("radio"):
+                        radio(out)
 
 
 if __name__ == "__main__":
