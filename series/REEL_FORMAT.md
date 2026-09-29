@@ -20,7 +20,7 @@ Source: three outlier Indian AI-education reels (analysed with vidIQ, Sep 2026):
 ## Rules for new reels
 1. At most one meme per 2 scenes, always paired with an educational visual and never replacing it.
 2. Keep goofy full-screen "hype" scenes (e.g. the goosebumps/filmy slide) out.
-3. Pacing (after feedback that v7 was too fast with no gaps): `tempo` 1.0–1.05, `gap` 0.35 between sentences, `maxgap` 0.35 inside a take, scene `tail` 0.3. Keep the visuals fast but let the voice breathe between sentences. Aim for 2.5–3.0 words/s.
+3. Pacing (v7 and EP25 both felt too fast): `tempo` 1.0, `gap` 0.5 between sentences, `maxgap` 0.55 inside a take, scene `tail` 0.45. Aim for 2.2–2.6 words/s. Visuals stay fast; the voice breathes. Telugu voices are slower already, so use gap 0.35 for them.
 4. Analogy stills: ElevenLabs `flux-2-pro`, 16:9, "cinematic film still, no logos, no text". The free plan allows 3 images a day.
 5. Real movie clips can't be used: they are blocked from this environment and copyrighted.
 
