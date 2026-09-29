@@ -27,7 +27,7 @@ const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
 type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
-export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; musicVol?: number[] };
+export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -422,6 +422,7 @@ const Chip: React.FC<{ t: string; at: number; x: number; y: number; c?: string }
   return (
     <div style={{ position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) scale(${sp})`, background: "rgba(8,10,24,0.86)", border: `3px solid ${c}`, color: "white", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "8px 20px", borderRadius: 16, whiteSpace: "nowrap", boxShadow: "0 10px 26px rgba(0,0,0,0.5)" }}>
       {t}
+      <Sequence from={0} durationInFrames={8} layout="none"><Audio src={staticFile("audio/sfx_tick.wav")} volume={0.3} /></Sequence>
     </div>
   );
 };
@@ -608,14 +609,14 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   const pop = interpolate(f - c[0].from, [0, 4], [0.85, 1], cl);
   return (
     <div style={{ position: "absolute", top: 1440, left: 40, right: 40, textAlign: "center" }}>
-      {l.name && (
-        <div style={{ display: "inline-block", marginBottom: 14, background: l.color, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "4px 22px", borderRadius: 20 }}>{l.name}</div>
+      {l.name && !(classic && l.who === "maastaaru") && (
+        <div style={{ display: "table", margin: "0 auto 14px", background: l.color, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "4px 22px", borderRadius: 20 }}>{l.name}</div>
       )}
-      <div style={{ transform: `scale(${pop})` }}>
+      <div style={{ transform: `scale(${pop})`, display: classic ? "inline-block" : "block", background: classic ? "rgba(6,8,20,0.78)" : "transparent", borderRadius: 26, padding: classic ? "10px 18px" : 0 }}>
         {c.map((w, i) => {
           const on = f >= w.from;
           return (
-            <span key={i} style={{ display: "inline-block", margin: classic ? "0 12px" : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? 78 : 96, lineHeight: 1.05, textTransform: classic ? "none" : "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? 1.12 : 1})` }}>
+            <span key={i} style={{ display: "inline-block", margin: classic ? "0 12px" : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? 70 : 96, lineHeight: 1.05, textTransform: classic ? "none" : "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? 1.12 : 1})` }}>
               {w.w}
             </span>
           );
@@ -663,10 +664,19 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
       <div style={{ position: "absolute", top: 222, left: 60, right: 60, height: 10, borderRadius: 5, background: "rgba(255,255,255,0.15)" }}>
         <div style={{ width: `${(f / tl.totalFrames) * 100}%`, height: "100%", borderRadius: 5, background: `linear-gradient(90deg, ${C.amber}, ${C.rose})` }} />
       </div>
+      {tl.banner ? (
+        <div style={{ position: "absolute", top: 118, left: 50, right: 50, height: 88, borderRadius: 22, background: "#F8FAFC", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 28px", boxShadow: "0 10px 30px rgba(0,0,0,0.4)" }}>
+          <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 44, color: "#0A0F24" }}>{tl.banner}</span>
+          <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 800, fontSize: 32, color: "#fff", background: "#0A0F24", padding: "4px 14px", borderRadius: 12 }}>
+            {(() => { const r = Math.max(0, Math.ceil((tl.totalFrames - f) / tl.fps)); return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`; })()}
+          </span>
+        </div>
+      ) : (
       <div style={{ position: "absolute", top: 150, left: 60, fontFamily: C.inter, fontWeight: 800, fontSize: 30, letterSpacing: 4, color: "white", background: "rgba(0,0,0,0.45)", padding: "8px 20px", borderRadius: 30 }}>
         AI FROM SCRATCH <span style={{ color: C.amber }}>· {tl.label}</span>
       </div>
-      {tl.topic && (
+      )}
+      {tl.topic && !tl.banner && (
         <div style={{ position: "absolute", top: 150, right: 60, display: "flex", alignItems: "center", gap: 12, fontFamily: C.inter, fontWeight: 800, fontSize: 30, color: "white", background: "rgba(0,0,0,0.45)", padding: "8px 20px", borderRadius: 30 }}>
           <span style={{ letterSpacing: 3 }}>{tl.topic}</span>
           <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", color: C.amber }}>

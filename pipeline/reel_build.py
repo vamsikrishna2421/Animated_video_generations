@@ -357,7 +357,7 @@ def main(spec_path: Path) -> None:
     starts = [s["from"] / FPS for s in scenes]
     bed = lofi(total, starts) if spec.get("music") == "lofi" else score(total, starts, drops)
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
-    tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
+    tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
           "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)

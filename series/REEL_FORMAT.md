@@ -39,3 +39,11 @@ Chip coordinates are in the 1000×560 top panel. `at` refers to the `[n]` cue ma
 - Never say or show "Maastaaru"; the teacher's on-screen label is "Teacher". The account handle @ai_maastaaru stays.
 - The teacher (ElevenLabs Pooja) carries the lesson. Chintu gets at most one line per reel, and only as the setup question. No reaction or slang lines ("Ayyo", "Brooo", "stonks").
 - `start` in a line trims unwanted opening words from an existing take (verify the cut with `asr_check.py`).
+
+## Reference the user liked (YouTube Short a0m2_paWqn0, 75 s)
+- One narrator, fast (160–170 wpm), analytical and slightly contrarian ("Here's what I think").
+- No characters. Clean UI cards, progress bars and meters on a dot-grid canvas.
+- Pinned top banner with the hook phrase for the whole video. Visual change every 1.5–3 s.
+- Captions: white on a dark pill, active word in yellow. Subtle UI clicks and pops; low lo-fi music.
+- Ends with three concrete uses, then "comment KEYWORD and I'll send the guide".
+Applied in v7: teacher-only narration (plus one commentator cameo for the last ball), pinned `banner`, pill captions, tick on each chip reveal.

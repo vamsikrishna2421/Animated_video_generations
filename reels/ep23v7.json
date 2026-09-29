@@ -1,0 +1,327 @@
+{
+ "id": "ep23v7",
+ "title": "Backpropagation: the AI blame game",
+ "label": "EP 23",
+ "topic": "BACKPROP",
+ "look": "classic",
+ "tempo": 1.1,
+ "gap": 0.05,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/ep23v7/img/catch.jpg",
+     "tag": "LAST BALL",
+     "icon": "Trophy",
+     "pan": -40,
+     "chips": [
+      {
+       "t": "Which number messed up?",
+       "at": 1,
+       "x": 700,
+       "y": 110,
+       "c": "#F43F5E"
+      },
+      {
+       "t": "Cricket has the answer",
+       "at": 2,
+       "x": 330,
+       "y": 480
+      }
+     ]
+    },
+    "bottom": {
+     "kind": "predict",
+     "tag": "IN AI",
+     "input": "Cat photo",
+     "output": "\"Dog\"",
+     "truth": "cat"
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "20_m_hook.mp3",
+     "maxgap": 0.2,
+     "text": "Your AI just got it WRONG. [1] So which of its billion numbers messed up? [2] Let's find out... the same way a cricket team reviews a loss."
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "match",
+   "type": "cricket",
+   "data": {},
+   "lines": [
+    {
+     "who": "commentator",
+     "text": "Last ball! India needs SIX to win! [1] He swings... [2] and he's CAUGHT on the boundary!",
+     "file": "04_comm_lastball.mp3",
+     "maxgap": 0.2
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "blame",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/ep23v7/img/dressing.jpg",
+     "tag": "POST-MATCH REVIEW",
+     "icon": "ClipboardList",
+     "pan": 30,
+     "chips": [
+      {
+       "t": "Result: LOST",
+       "at": 1,
+       "x": 760,
+       "y": 60,
+       "c": "#F43F5E"
+      },
+      {
+       "t": "Batsman · 60%",
+       "at": 2,
+       "x": 230,
+       "y": 330
+      },
+      {
+       "t": "Captain · 30%",
+       "at": 3,
+       "x": 580,
+       "y": 150
+      },
+      {
+       "t": "Selectors · 10%",
+       "at": 4,
+       "x": 800,
+       "y": 470
+      }
+     ]
+    },
+    "bottom": {
+     "kind": "layers",
+     "tag": "IN AI · WALK BACKWARD",
+     "start": 1,
+     "rows": [
+      [
+       "Layer 3 (last)",
+       60,
+       2
+      ],
+      [
+       "Layer 2",
+       30,
+       3
+      ],
+      [
+       "Layer 1 (first)",
+       10,
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Start at the result, [1] and walk backwards. [2] The batsman takes the most blame. [3] The captain who changed the batting order takes some. [4] And the selectors... a little.",
+     "file": "06_m_blame.mp3",
+     "maxgap": 0.2
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "net",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/ep23v7/img/umpire.jpg",
+     "tag": "REPLAY IT BACKWARD",
+     "icon": "MonitorPlay",
+     "pan": -30,
+     "stamp": {
+      "t": "FAIR ✓",
+      "at": 3,
+      "c": "#34D399"
+     }
+    },
+    "bottom": {
+     "kind": "backflow",
+     "tag": "IN AI · BACKPROPAGATION",
+     "back": 1,
+     "blame": 2
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Backpropagation does exactly this inside AI. [1] The error flows backward, layer by layer, [2] and every connection gets blamed by how much it contributed.",
+     "file": "07_m_backprop.mp3",
+     "maxgap": 0.2
+    },
+    {
+     "who": "commentator",
+     "text": "And the third umpire says... [3] fair review!",
+     "file": "08_comm_umpire.mp3",
+     "maxgap": 0.2
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "drake",
+   "type": "lesson",
+   "data": {
+    "kind": "compare",
+    "heading": "Who gets blamed?",
+    "kicker": "FAIR BLAME",
+    "left": {
+     "icon": "Users",
+     "title": "Everyone equally",
+     "points": [
+      "Batsman: 33%",
+      "Captain: 33%",
+      "Selectors: 33%"
+     ]
+    },
+    "right": {
+     "icon": "Scale",
+     "title": "By contribution",
+     "points": [
+      "Batsman: 60%",
+      "Captain: 30%",
+      "Selectors: 10%"
+     ]
+    },
+    "memes": [
+     {
+      "img": "drake.png",
+      "at": 2,
+      "x": 900,
+      "y": 1290,
+      "w": 230,
+      "rot": 8
+     }
+    ]
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "[1] Blame [2] by contribution. [3] Then each weight fixes itself, just a little.",
+     "file": "10_m_nope.mp3",
+     "maxgap": 0.2,
+     "start": 0.6
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "stonks",
+   "type": "split",
+   "data": {
+    "top": {
+     "img": "reel/memes/stonks.png",
+     "tag": "THE MEME VERSION",
+     "icon": "TrendingUp",
+     "pan": 0,
+     "chips": [
+      {
+       "t": "Mistakes going down",
+       "at": 3,
+       "x": 500,
+       "y": 470,
+       "c": "#34D399"
+      }
+     ]
+    },
+    "bottom": {
+     "kind": "loss",
+     "tag": "IN AI · TRAINING",
+     "start": 1
+    },
+    "bridge": "WHAT IT MEANS"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "[1] Repeat this blame and fix, [2] millions of times, [3] and the mistakes keep shrinking.",
+     "file": "13_m_repeat.mp3",
+     "maxgap": 0.2
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "data": {
+    "question": "In backprop, which layer gets blamed FIRST?",
+    "options": [
+     "The first layer",
+     "The last layer",
+     "All layers at once"
+    ],
+    "answer": 1
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "text": "Quick test! Which layer gets blamed first? [1] Three seconds. <pause 2> [2] The last layer! Blame starts at the answer, and flows backward.",
+     "gap": 0.1,
+     "file": "15_m_quizA.mp3",
+     "file2": "16_m_quizB.mp3",
+     "pause": 2.2,
+     "maxgap": 0.2
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "Error",
+      "flows backward"
+     ],
+     [
+      "Blame",
+      "by contribution"
+     ],
+     [
+      "Fix",
+      "each weight a little"
+     ],
+     [
+      "Repeat",
+      "millions of times"
+     ]
+    ],
+    "next": "EP 24 · Types of learning",
+    "memes": []
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "19_m_outro2.mp3",
+     "maxgap": 0.2,
+     "text": "[1] So that's how AI learns. Send the error backward, [2] blame each part by how much it contributed, [3] fix every weight a little, [4] and repeat, millions of times. [5] Follow for part four: the three ways machines learn."
+    }
+   ],
+   "tail": 0.05
+  }
+ ],
+ "banner": "How AI learns from its mistakes"
+}
