@@ -20,7 +20,7 @@ Source: three outlier Indian AI-education reels (analysed with vidIQ, Sep 2026):
 ## Rules for new reels
 1. At most one meme per 2 scenes, always paired with an educational visual and never replacing it.
 2. Keep goofy full-screen "hype" scenes (e.g. the goosebumps/filmy slide) out.
-3. Pacing: `tempo` 1.1, `gap` 0.05, scene `tail` 0.05, `maxgap` 0.2. Aim for 2.6–3.4 words/s in `voice_judge`.
+3. Pacing (after feedback that v7 was too fast with no gaps): `tempo` 1.0–1.05, `gap` 0.35 between sentences, `maxgap` 0.35 inside a take, scene `tail` 0.3. Keep the visuals fast but let the voice breathe between sentences. Aim for 2.5–3.0 words/s.
 4. Analogy stills: ElevenLabs `flux-2-pro`, 16:9, "cinematic film still, no logos, no text". The free plan allows 3 images a day.
 5. Real movie clips can't be used: they are blocked from this environment and copyrighted.
 
@@ -47,3 +47,6 @@ Chip coordinates are in the 1000×560 top panel. `at` refers to the `[n]` cue ma
 - Captions: white on a dark pill, active word in yellow. Subtle UI clicks and pops; low lo-fi music.
 - Ends with three concrete uses, then "comment KEYWORD and I'll send the guide".
 Applied in v7: teacher-only narration (plus one commentator cameo for the last ball), pinned `banner`, pill captions, tick on each chip reveal.
+
+## Status
+- v7 was approved and posted as upload 024 (`out/posted/024_ep23_backprop_cricket_blame_game.mp4`). Use it as the template for the next episodes, with the new pacing in rule 3.

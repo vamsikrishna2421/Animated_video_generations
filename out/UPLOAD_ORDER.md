@@ -28,7 +28,7 @@ Already posted: `out/posted/`.
 | 021 | ep20 | AI Security Prompt Injection | posted |
 | 022 | ep21 | How a Neural Network Learns Part 1 | posted |
 | 023 | ep22 | How a Neural Network Learns Part 2 | posted |
-| 024 | ep23 | How a Neural Network Learns Part 3 | ready |
+| 024 | ep23 | How a Neural Network Learns Part 3 | posted |
 | 025 | ep24 | Supervised Unsupervised Reinforcement Learning | ready |
 | 026 | ep25 | Training Data | ready |
 | 027 | ep26 | Overfitting vs Underfitting | ready |

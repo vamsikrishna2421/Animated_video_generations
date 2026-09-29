@@ -1,0 +1,29 @@
+UPLOAD: 024
+VIDEO: 024_ep23_backprop_cricket_blame_game.mp4
+
+=== CAPTION ===
+Your AI just got it wrong. So which of its billion numbers messed up?
+
+Episode 23 of AI From Scratch: How a Neural Network Learns, Part 3 (backpropagation), explained with a cricket match.
+- Last ball, India loses. Who takes the blame?
+- Start at the result and walk backwards
+- Blame by contribution: batsman 60%, captain 30%, selectors 10%
+- Error flows backward, every weight fixes itself a little
+- Repeat millions of times and mistakes keep shrinking
+
+Quick test at the end: which layer gets blamed first? Comment your answer.
+
+Next: the three ways machines learn.
+Follow @ai_maastaaru for the full series.
+
+=== HASHTAGS ===
+#Backpropagation #NeuralNetworks #LearnAI #DeepLearning #AIForBeginners
+
+=== PINNED_COMMENT ===
+Answer: the LAST layer. Blame starts at the output and flows backward. Did you get it right?
+
+=== COVER ===
+Split frame: batsman caught on the boundary (top), AI answering "Dog" for a cat photo (bottom)
+
+=== ALT_TEXT ===
+Animated reel explaining backpropagation with a cricket analogy: a lost match reviewed backwards, blame shared by contribution, and a neural network fixing its weights.

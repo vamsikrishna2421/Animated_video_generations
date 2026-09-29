@@ -221,10 +221,10 @@
   }
  ],
  "post": {
-  "caption": "Billions of weights, one mistake. How does each weight know which way to move?\n\nEpisode 23 of AI From Scratch: How a Neural Network Learns, Part 3\n- Backpropagation: sharing out the blame, backwards\n- The salty biryani analogy\n- The full training loop: forward, loss, backward, update, repeat\n- Why training costs so much more than using a model\n- The myth: \"AI learns from my chats\"\n\nQuiz at the end. Got it right? Comment below.\n\nNext: the three ways machines learn, supervised, unsupervised and reinforcement.\nFollow @ai_maastaaru for the full series.",
-  "tags": "#AIMaastaaru #NeuralNetworks #LearnAI #DeepLearning #AIForBeginners",
-  "pinned": "Quiz answer: Backpropagation. You've now finished the neural network trilogy! Which part helped you most?",
-  "cover": "'How AI Learns · Part 3' title card",
-  "alt": "Animated lesson explaining backpropagation and the neural network training loop without maths."
+  "caption": "Your AI just got it wrong. So which of its billion numbers messed up?\n\nEpisode 23 of AI From Scratch: How a Neural Network Learns, Part 3 (backpropagation), explained with a cricket match.\n- Last ball, India loses. Who takes the blame?\n- Start at the result and walk backwards\n- Blame by contribution: batsman 60%, captain 30%, selectors 10%\n- Error flows backward, every weight fixes itself a little\n- Repeat millions of times and mistakes keep shrinking\n\nQuick test at the end: which layer gets blamed first? Comment your answer.\n\nNext: the three ways machines learn.\nFollow @ai_maastaaru for the full series.",
+  "tags": "#Backpropagation #NeuralNetworks #LearnAI #DeepLearning #AIForBeginners",
+  "pinned": "Answer: the LAST layer. Blame starts at the output and flows backward. Did you get it right?",
+  "cover": "Split frame: batsman caught on the boundary (top), AI answering \"Dog\" for a cat photo (bottom)",
+  "alt": "Animated reel explaining backpropagation with a cricket analogy: a lost match reviewed backwards, blame shared by contribution, and a neural network fixing its weights."
  }
 }
