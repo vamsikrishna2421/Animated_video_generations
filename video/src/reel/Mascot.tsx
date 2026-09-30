@@ -57,10 +57,50 @@ const Part: React.FC<{ p?: number; children: React.ReactNode }> = ({ p, children
 };
 export type Reveal = Partial<Record<"legs" | "shorts" | "kurta" | "armR" | "armL" | "head" | "hair" | "eyes" | "face" | "mouth", number>>;
 
-export const Kid: React.FC<{ f: number; o: number; w: number; wave: number; point: number; talk: number; look: number; chest?: number; tada?: number; reveal?: Reveal }> = ({ f, o, w, wave, point, talk, look, chest = 0, tada = 0, reveal = {} }) => {
+// Direct pose overrides for acted (silent) scenes: arm/leg angles, head tilt, gaze and expressions.
+export type Pose = {
+  lUp?: number; lLow?: number; rUp?: number; rLow?: number; legL?: number; legR?: number; tilt?: number; lookX?: number; lookY?: number;
+  eyes?: "normal" | "wide" | "squint" | "side" | "dizzy" | "closed"; mouth?: "o" | "grin" | "flat" | "wobble" | "smile"; brow?: number; blush?: number;
+};
+
+const Eye: React.FC<{ x: number; mode: string; blink: number; lx: number; ly: number; f: number }> = ({ x, mode, blink, lx, ly, f }) => {
+  if (mode === "dizzy") {
+    const r = f * 12;
+    return <g transform={`rotate(${r} ${x} -140)`}><path d={`M ${x - 18},-158 L ${x + 18},-122 M ${x + 18},-158 L ${x - 18},-122`} stroke="#231815" strokeWidth={8} strokeLinecap="round" /></g>;
+  }
+  if (mode === "closed" || mode === "squint" || blink < 0.5) {
+    return <path d={`M ${x - 24},-138 Q ${x},${mode === "squint" ? -150 : -128} ${x + 24},-138`} stroke="#231815" strokeWidth={7} fill="none" strokeLinecap="round" />;
+  }
+  const big = mode === "wide" ? 1.25 : 1;
+  const pr = mode === "wide" ? 9 : 14;
+  return (
+    <g>
+      <ellipse cx={x} cy={-140} rx={26 * big} ry={32 * big} fill="#fff" />
+      <circle cx={x + 9 * lx} cy={-136 + 10 * ly} r={pr} fill="#231815" />
+      <circle cx={x + 9 * lx + 4} cy={-141 + 10 * ly} r={4} fill="#fff" />
+      {mode === "side" && <rect x={x - 30} y={-176} width={60} height={30} fill={K.skin} />}
+      {mode === "side" && <line x1={x - 27} y1={-146} x2={x + 27} y2={-146} stroke="#231815" strokeWidth={6} strokeLinecap="round" />}
+    </g>
+  );
+};
+
+const ActedMouth: React.FC<{ mode: string; f: number }> = ({ mode, f }) => {
+  if (mode === "o") return <ellipse cx={0} cy={6} rx={16} ry={22} fill="#4a1010" stroke={K.lip} strokeWidth={5} />;
+  if (mode === "flat") return <line x1={-24} y1={0} x2={24} y2={0} stroke={K.lip} strokeWidth={7} strokeLinecap="round" />;
+  if (mode === "wobble") return <path d={`M -30,0 ${[-20, -10, 0, 10, 20, 30].map((x, i) => `L ${x},${(i % 2 ? -6 : 6) * Math.sin(f / 2)}`).join(" ")}`} stroke={K.lip} strokeWidth={6} fill="none" strokeLinecap="round" />;
+  if (mode === "grin") return (
+    <g>
+      <path d="M -44,-6 Q 0,46 44,-6 Z" fill="#4a1010" stroke={K.lip} strokeWidth={5} />
+      <path d="M -38,-3 Q 0,10 38,-3 L 36,4 Q 0,16 -36,4 Z" fill="#fff" />
+    </g>
+  );
+  return <path d="M -30,-4 Q 0,22 30,-4" stroke={K.lip} strokeWidth={7} fill="none" strokeLinecap="round" />;
+};
+
+export const Kid: React.FC<{ f: number; o: number; w: number; wave: number; point: number; talk: number; look: number; chest?: number; tada?: number; reveal?: Reveal; pose?: Pose }> = ({ f, o, w, wave, point, talk, look, chest = 0, tada = 0, reveal = {}, pose }) => {
   const blink = f % 96 < 4 || f % 157 < 3 ? 0.12 : 1;
-  const tilt = Math.sin(f / 13) * 3 + talk * Math.sin(f / 5) * 2.5;
-  const brow = -6 - 10 * Math.max(0, o - 0.55);
+  const tilt = pose?.tilt ?? Math.sin(f / 13) * 3 + talk * Math.sin(f / 5) * 2.5;
+  const brow = pose?.brow ?? -6 - 10 * Math.max(0, o - 0.55);
   // Screen-left arm: rest -> wave (sentence 1) -> point up at the follow card (sentence 3).
   const waveUp = 150, waveLow = 150 + 28 * Math.sin(f / 3.2);
   const restUp = 18 + talk * 10 * Math.sin(f / 7), restLow = 30 + talk * 25 * Math.sin(f / 6);
@@ -72,13 +112,17 @@ export const Kid: React.FC<{ f: number; o: number; w: number; wave: number; poin
   // Screen-right arm: hand on hip, pops out for emphasis while talking.
   let rUp = -25 - talk * 30 * Math.max(0, Math.sin(f / 9)), rLow = -110 + talk * 60 * Math.max(0, Math.sin(f / 9));
   rUp += (-110 - rUp) * tada; rLow += (-140 - rLow) * tada;
+  if (pose) {
+    lUp = pose.lUp ?? lUp; lLow = pose.lLow ?? lLow; rUp = pose.rUp ?? rUp; rLow = pose.rLow ?? rLow;
+  }
+  const legA = (x: number) => (x < 0 ? pose?.legL : pose?.legR) ?? 0;
   return (
     <g>
       <ellipse cx={0} cy={4} rx={150} ry={22} fill="#000" opacity={0.18} />
       {/* legs + shoes */}
       <Part p={reveal.legs}>
       {[-38, 38].map((x) => (
-        <g key={x}>
+        <g key={x} transform={`rotate(${legA(x)} ${x} -165)`}>
           <rect x={x - 17} y={-165} width={34} height={150} rx={16} fill={K.skin} />
           <ellipse cx={x + (x > 0 ? 14 : -14)} cy={-12} rx={38} ry={20} fill={K.shoe} stroke="#d9d9d9" strokeWidth={4} />
         </g>
@@ -112,20 +156,26 @@ export const Kid: React.FC<{ f: number; o: number; w: number; wave: number; poin
         {[-44, 44].map((x) => (
           <g key={x}>
             <rect x={x - 26} y={-190 + brow} width={52} height={11} rx={6} fill={K.hair} transform={`rotate(${x < 0 ? -6 : 6} ${x} ${-185 + brow})`} />
-            <ellipse cx={x} cy={-140} rx={26} ry={32 * blink} fill="#fff" />
-            {blink > 0.5 && <circle cx={x + 6 * look} cy={-136 - 8 * Math.abs(look)} r={14} fill="#231815" />}
-            {blink > 0.5 && <circle cx={x + 6 * look + 5} cy={-142 - 8 * Math.abs(look)} r={5} fill="#fff" />}
+            {pose ? (
+              <Eye x={x} mode={pose.eyes ?? "normal"} blink={pose.eyes === "wide" ? 1 : blink} lx={pose.lookX ?? 0} ly={pose.lookY ?? 0} f={f} />
+            ) : (
+              <>
+                <ellipse cx={x} cy={-140} rx={26} ry={32 * blink} fill="#fff" />
+                {blink > 0.5 && <circle cx={x + 6 * look} cy={-136 - 8 * Math.abs(look)} r={14} fill="#231815" />}
+                {blink > 0.5 && <circle cx={x + 6 * look + 5} cy={-142 - 8 * Math.abs(look)} r={5} fill="#fff" />}
+              </>
+            )}
           </g>
         ))}
         </Part>
         <Part p={reveal.face}>
         <path d="M -6,-112 Q 0,-96 10,-104" stroke={K.skinDark} strokeWidth={6} fill="none" strokeLinecap="round" />
-        <ellipse cx={-78} cy={-92} rx={20} ry={12} fill={K.cheek} opacity={0.55} />
-        <ellipse cx={78} cy={-92} rx={20} ry={12} fill={K.cheek} opacity={0.55} />
+        <ellipse cx={-78} cy={-92} rx={20} ry={12} fill={K.cheek} opacity={0.55 + 0.45 * (pose?.blush ?? 0)} />
+        <ellipse cx={78} cy={-92} rx={20} ry={12} fill={K.cheek} opacity={0.55 + 0.45 * (pose?.blush ?? 0)} />
         </Part>
         <Part p={reveal.mouth}>
         <g transform="translate(0,-72)">
-          <Mouth o={o} w={w} smile={1 - o} />
+          {pose?.mouth ? <ActedMouth mode={pose.mouth} f={f} /> : <Mouth o={o} w={w} smile={1 - o} />}
         </g>
         </Part>
       </g>
@@ -133,11 +183,21 @@ export const Kid: React.FC<{ f: number; o: number; w: number; wave: number; poin
   );
 };
 
-export const Chip: React.FC<{ f: number; x: number; y: number; spin: number }> = ({ f, x, y, spin }) => {
+export const Chip: React.FC<{ f: number; x: number; y: number; spin: number; squash?: number; hover?: boolean }> = ({ f, x, y, spin, squash = 0, hover = true }) => {
   const glow = 0.5 + 0.5 * Math.sin(f / 4);
+  const bob = hover ? Math.sin(f / 9) * 14 : 0;
+  if (squash > 0.3) {  // squashed flat under someone's feet: >_< face
+    return (
+      <g transform={`translate(${x},${y}) scale(${1 + squash * 0.35},${1 - squash * 0.55})`}>
+        <circle cx={0} cy={0} r={82} fill="#f1f5f9" stroke="#cbd5e1" strokeWidth={6} />
+        <rect x={-56} y={-38} width={112} height={66} rx={26} fill="#1e293b" />
+        <path d="M -36,-14 L -18,-2 L -36,10 M 36,-14 L 18,-2 L 36,10" stroke="#22d3ee" strokeWidth={7} fill="none" strokeLinecap="round" />
+      </g>
+    );
+  }
   return (
-    <g transform={`translate(${x},${y + Math.sin(f / 9) * 14}) rotate(${spin})`}>
-      <ellipse cx={0} cy={150 - Math.sin(f / 9) * 14} rx={60} ry={12} fill="#000" opacity={0.12} />
+    <g transform={`translate(${x},${y + bob}) rotate(${spin})`}>
+      {hover && <ellipse cx={0} cy={150 - bob} rx={60} ry={12} fill="#000" opacity={0.12} />}
       <line x1={0} y1={-78} x2={0} y2={-112} stroke="#9aa3b2" strokeWidth={6} />
       <circle cx={0} cy={-118} r={12} fill="#22d3ee" opacity={0.6 + 0.4 * glow} />
       <circle cx={0} cy={-118} r={24} fill="#22d3ee" opacity={0.18 * glow} />
