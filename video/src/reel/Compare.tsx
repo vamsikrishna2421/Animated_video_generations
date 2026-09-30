@@ -1,12 +1,26 @@
-import { AbsoluteFill, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Fonts } from "../components/Fonts";
 
 // Same-prompt comparison reel (9:16): intro with the prompt, each entry played in turn with a numbered label,
 // then a "which one was better?" card. Landscape entries sit on a blurred copy of themselves.
 export type CompareItem = { src: string; label: string; frames: number; landscape: boolean; still?: number };
-export type CompareProps = { title: string; prompt: string; items: CompareItem[]; question: string; handle: string };
+// Optional narration: one line for the intro, one announcing each entry, one for the outro (with captions).
+export type VoLine = { src: string; frames: number; text: string };
+export type CompareProps = { title: string; prompt: string; items: CompareItem[]; question: string; handle: string; vo?: { intro: VoLine; items: VoLine[]; outro: VoLine } };
 export const INTRO = 135, OUTRO = 165;
-export const compareDuration = (p: CompareProps) => INTRO + p.items.reduce((a, i) => a + i.frames, 0) + OUTRO;
+const introLen = (p: CompareProps) => Math.max(INTRO, (p.vo?.intro.frames ?? 0) + 30);
+const outroLen = (p: CompareProps) => Math.max(OUTRO, (p.vo?.outro.frames ?? 0) + 50);
+export const compareDuration = (p: CompareProps) => introLen(p) + p.items.reduce((a, i) => a + i.frames, 0) + outroLen(p);
+
+const Caption: React.FC<{ text: string; frames: number; bottom?: number }> = ({ text, frames, bottom = 300 }) => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [0, 6, frames, frames + 8], [0, 1, 1, 0], cl);
+  return (
+    <div style={{ position: "absolute", bottom, left: 60, right: 60, textAlign: "center", opacity: o }}>
+      <span style={{ display: "inline", fontFamily: SANS, fontWeight: 800, fontSize: 44, lineHeight: 1.5, color: "#fff", background: "rgba(0,0,0,0.62)", padding: "6px 18px", borderRadius: 14, boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" }}>{text}</span>
+    </div>
+  );
+};
 const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const SERIF = "'DejaVu Serif', Georgia, serif";
 const SANS = "Inter, 'DejaVu Sans', sans-serif";
@@ -26,20 +40,22 @@ const Label: React.FC<{ n: number; label: string }> = ({ n, label }) => {
   );
 };
 
-const Entry: React.FC<{ item: CompareItem; n: number; total: number }> = ({ item, n, total }) => {
+const Entry: React.FC<{ item: CompareItem; n: number; total: number; vo?: VoLine }> = ({ item, n, total, vo }) => {
   const f = useCurrentFrame();
+  const duck = (fr: number) => (vo && fr < vo.frames + 8 ? 0.22 : 1);
   const fadeIn = interpolate(f, [0, 10], [0, 1], cl);
   return (
     <AbsoluteFill style={{ background: "#000", opacity: fadeIn }}>
       {item.landscape ? (
         <>
           <OffthreadVideo src={staticFile(item.src)} muted style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(40px) brightness(0.45)", transform: "scale(1.2)" }} />
-          <OffthreadVideo src={staticFile(item.src)} style={{ position: "absolute", top: (1920 - 608) / 2, left: 0, width: 1080, height: 608 }} />
+          <OffthreadVideo src={staticFile(item.src)} volume={duck} style={{ position: "absolute", top: (1920 - 608) / 2, left: 0, width: 1080, height: 608 }} />
         </>
       ) : (
-        <OffthreadVideo src={staticFile(item.src)} style={{ position: "absolute", width: "100%", height: "100%" }} />
+        <OffthreadVideo src={staticFile(item.src)} volume={duck} style={{ position: "absolute", width: "100%", height: "100%" }} />
       )}
       <Label n={n} label={item.label} />
+      {vo && <Audio src={staticFile(vo.src)} />}
       <div style={{ position: "absolute", bottom: 120, left: 0, right: 0, textAlign: "center", fontFamily: SANS, fontWeight: 700, fontSize: 34, color: "rgba(244,234,211,0.75)", letterSpacing: 3 }}>
         {n} / {total}
       </div>
@@ -47,12 +63,12 @@ const Entry: React.FC<{ item: CompareItem; n: number; total: number }> = ({ item
   );
 };
 
-const Intro: React.FC<{ title: string; prompt: string; n: number }> = ({ title, prompt, n }) => {
+const Intro: React.FC<{ title: string; prompt: string; n: number; len: number }> = ({ title, prompt, n, len }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const a = spring({ frame: f - 4, fps, config: { damping: 14 } });
   const b = spring({ frame: f - 28, fps, config: { damping: 14 } });
-  const out = interpolate(f, [INTRO - 12, INTRO], [1, 0], cl);
+  const out = interpolate(f, [len - 12, len], [1, 0], cl);
   return (
     <AbsoluteFill style={{ background: BG, opacity: out }}>
       <div style={{ position: "absolute", top: 380, left: 70, right: 70, textAlign: "center", transform: `scale(${a})` }}>
@@ -92,21 +108,29 @@ const Outro: React.FC<{ items: CompareItem[]; question: string; handle: string }
 };
 
 export const CompareReel: React.FC<CompareProps> = (p) => {
-  let at = INTRO;
+  const iLen = introLen(p);
+  let at = iLen;
   return (
     <AbsoluteFill style={{ background: "#000" }}>
       <Fonts />
-      <Sequence durationInFrames={INTRO}><Intro title={p.title} prompt={p.prompt} n={p.items.length} /></Sequence>
+      <Sequence durationInFrames={iLen}>
+        <Intro title={p.title} prompt={p.prompt} n={p.items.length} len={iLen} />
+        {p.vo && <Sequence from={8}><Audio src={staticFile(p.vo.intro.src)} /><Caption text={p.vo.intro.text} frames={p.vo.intro.frames} bottom={160} /></Sequence>}
+      </Sequence>
       {p.items.map((it, i) => {
         const from = at;
         at += it.frames;
         return (
           <Sequence key={i} from={from} durationInFrames={it.frames}>
-            <Entry item={it} n={i + 1} total={p.items.length} />
+            <Entry item={it} n={i + 1} total={p.items.length} vo={p.vo?.items[i]} />
+            {p.vo?.items[i] && <Caption text={p.vo.items[i].text} frames={p.vo.items[i].frames} />}
           </Sequence>
         );
       })}
-      <Sequence from={at}><Outro items={p.items} question={p.question} handle={p.handle} /></Sequence>
+      <Sequence from={at}>
+        <Outro items={p.items} question={p.question} handle={p.handle} />
+        {p.vo && <Sequence from={10}><Audio src={staticFile(p.vo.outro.src)} /></Sequence>}
+      </Sequence>
     </AbsoluteFill>
   );
 };
