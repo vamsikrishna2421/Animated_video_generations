@@ -1,5 +1,8 @@
 """Voice lines for the page mascot (cartoon kid). Telugu uses the approved "sidekick" cast; English uses a
-matching cartoon description. Writes video/public/mascot/cta_{te,en}.wav."""
+matching cartoon description. The character introduces himself by name at the end.
+
+  python3 pipeline/mascot_voice.py [--name Bittu] [--out video/public/mascot] te en
+"""
 import sys
 from pathlib import Path
 
@@ -8,17 +11,28 @@ from parler_tts_local import CAST, ROOT, post, say  # noqa: E402
 
 LINES = {
     "te": "హాయ్ ఫ్రెండ్స్! ఎ ఐ ని ఈజీగా నేర్చుకోవాలా? ఎ ఐ మాస్టారు ని ఫాలో అవ్వండి! "
-          "ఎ ఐ ని మొదటి నుండి నేర్చుకోండి. లేటెస్ట్ ఎ ఐ టాపిక్స్, న్యూస్ తో, ఎప్పుడూ అప్డేట్ గా ఉండండి!",
+          "ఎ ఐ ని మొదటి నుండి నేర్చుకోండి. లేటెస్ట్ ఎ ఐ టాపిక్స్, న్యూస్ తో, ఎప్పుడూ అప్డేట్ గా ఉండండి! "
+          "నా పేరు {name_te}. నేను ఇలా ఉంటాను!",
     "en": "Hey friends! Want to learn AI the easy way? Follow AI Maastaaru! "
-          "Learn AI from scratch, and stay updated with the latest AI topics and news!",
+          "Learn AI from scratch, and stay updated with the latest AI topics and news! "
+          "And me, I'm {name}. This is how I look!",
 }
 EN_KID = ("Mary speaks in a very excited, high-pitched, animated and cheerful voice, fast and bouncy, like a funny cartoon "
           "character. The recording is very clear, close-up, with no background noise.")
 
+
 if __name__ == "__main__":
-    out = ROOT / "video" / "public" / "mascot"
-    for lang in sys.argv[1:] or ["te", "en"]:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("langs", nargs="*", default=["te", "en"])
+    ap.add_argument("--name", default="Bittu")
+    ap.add_argument("--name-te", default="బిట్టు", help="the name in Telugu script")
+    ap.add_argument("--out", default=str(ROOT / "video" / "public" / "mascot"))
+    args = ap.parse_args()
+    out = Path(args.out)
+    for lang in args.langs:
         f = out / f"cta_{lang}.wav"
-        say(lang, LINES[lang], f, CAST["sidekick"]["voice"] if lang == "te" else EN_KID)
+        text = LINES[lang].format(name=args.name, name_te=args.name_te)
+        say(lang, text, f, CAST["sidekick"]["voice"] if lang == "te" else EN_KID)
         post(f, CAST["sidekick"]["post"] if lang == "te" else "asetrate=44100*1.18,aresample=44100,atempo=0.95")
         print("wrote", f, flush=True)

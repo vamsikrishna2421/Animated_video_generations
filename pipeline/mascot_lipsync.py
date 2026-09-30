@@ -13,14 +13,16 @@ ROOT = Path(__file__).resolve().parent.parent
 FPS = 30
 SUBS = {  # English on-screen lines, one per spoken sentence (Telugu audio keeps English subtitles)
     "te": ["Hi friends!", "Want to learn AI the easy way?", "Follow AI Maastaaru!", "Learn AI from scratch.",
-           "Stay updated with the latest AI topics and news!"],
+           "Stay updated with the latest AI topics and news!",
+           "My name is {name}.", "This is how I look!"],
     "en": ["Hey friends!", "Want to learn AI the easy way?", "Follow AI Maastaaru!",
-           "Learn AI from scratch, and stay updated with the latest AI topics and news!"],
+           "Learn AI from scratch, and stay updated with the latest AI topics and news!",
+           "And me, I'm {name}.", "This is how I look!"],
 }
 
 
-def build(lang):
-    wav = ROOT / "video" / "public" / "mascot" / f"cta_{lang}.wav"
+def build(lang, name="Bittu", wav_dir=None, out_dir=None):
+    wav = Path(wav_dir or ROOT / "video" / "public" / "mascot") / f"cta_{lang}.wav"
     a, sr = sf.read(wav)
     a = a.mean(axis=1) if a.ndim > 1 else a
     hop = sr // FPS
@@ -41,7 +43,7 @@ def build(lang):
         if v and quiet >= int(0.25 * FPS):
             starts.append(i)
         quiet = 0 if v else quiet + 1
-    subs = SUBS[lang]
+    subs = [x.format(name=name) for x in SUBS[lang]]
     if len(starts) != len(subs):  # fall back to spreading lines by text length
         total = sum(len(s) for s in subs)
         first, last = starts[0] if starts else 0, n
@@ -50,11 +52,18 @@ def build(lang):
             starts.append(int(first + (last - first) * acc / total))
             acc += len(s)
     data = {"frames": n, "open": op, "wide": [round(float(x), 2) for x in wid], "starts": starts, "subs": subs}
-    out = ROOT / "video" / "src" / "reel" / f"mascot_{lang}.json"
+    out = Path(out_dir or ROOT / "video" / "src" / "reel") / f"mascot_{lang}.json"
     out.write_text(json.dumps(data))
     print(lang, "frames", n, "starts", starts)
 
 
 if __name__ == "__main__":
-    for lang in sys.argv[1:] or ["te", "en"]:
-        build(lang)
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("langs", nargs="*", default=["te", "en"])
+    ap.add_argument("--name", default="Bittu")
+    ap.add_argument("--wav-dir")
+    ap.add_argument("--out-dir")
+    a = ap.parse_args()
+    for lang in a.langs:
+        build(lang, a.name, a.wav_dir, a.out_dir)

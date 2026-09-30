@@ -8,7 +8,7 @@ export type MascotData = { frames: number; open: number[]; wide: number[]; start
 export const LEAD = 15, TAIL = 50;
 const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const INTER = "Inter, 'DejaVu Sans', sans-serif";
-const K = { skin: "#b97a52", skinDark: "#9c6340", hair: "#1f1612", kurta: "#22a699", kurtaDark: "#18857a", collar: "#ffd166", shorts: "#2f6fbf", shoe: "#ffffff", cheek: "#e98a7a", lip: "#7a2323" };
+export const K = { skin: "#b97a52", skinDark: "#9c6340", hair: "#1f1612", kurta: "#22a699", kurtaDark: "#18857a", collar: "#ffd166", shorts: "#2f6fbf", shoe: "#ffffff", cheek: "#e98a7a", lip: "#7a2323" };
 
 // One arm: angles in degrees, 0 = hanging down, +90 = pointing to screen-left, 180 = straight up.
 const Arm: React.FC<{ x: number; y: number; up: number; low: number }> = ({ x, y, up, low }) => {
@@ -39,44 +39,75 @@ const Mouth: React.FC<{ o: number; w: number; smile: number }> = ({ o, w, smile 
   );
 };
 
-const Kid: React.FC<{ f: number; o: number; w: number; wave: number; point: number; talk: number; look: number }> = ({ f, o, w, wave, point, talk, look }) => {
+// Sketch mode (for the build time-lapse): a part is first traced as a pencil outline, then coloured in.
+// p = undefined -> drawn normally; 0..0.5 -> outline being traced; 0.5..1 -> colour fades in.
+export const SketchStyle: React.FC = () => (
+  <style>{`.sk * { fill: none !important; stroke: #2b2b2b !important; stroke-width: 3.5px !important; stroke-dasharray: 2600; stroke-dashoffset: var(--d); stroke-linecap: round; }`}</style>
+);
+const Part: React.FC<{ p?: number; children: React.ReactNode }> = ({ p, children }) => {
+  if (p === undefined) return <>{children}</>;
+  const s = Math.min(1, Math.max(0, p * 2)), fill = Math.min(1, Math.max(0, p * 2 - 1));
+  if (s <= 0) return null;
+  return (
+    <g>
+      <g opacity={fill}>{children}</g>
+      <g className="sk" opacity={1 - fill * 0.85} style={{ ["--d" as string]: 2600 * (1 - s) }}>{children}</g>
+    </g>
+  );
+};
+export type Reveal = Partial<Record<"legs" | "shorts" | "kurta" | "armR" | "armL" | "head" | "hair" | "eyes" | "face" | "mouth", number>>;
+
+export const Kid: React.FC<{ f: number; o: number; w: number; wave: number; point: number; talk: number; look: number; chest?: number; tada?: number; reveal?: Reveal }> = ({ f, o, w, wave, point, talk, look, chest = 0, tada = 0, reveal = {} }) => {
   const blink = f % 96 < 4 || f % 157 < 3 ? 0.12 : 1;
   const tilt = Math.sin(f / 13) * 3 + talk * Math.sin(f / 5) * 2.5;
   const brow = -6 - 10 * Math.max(0, o - 0.55);
   // Screen-left arm: rest -> wave (sentence 1) -> point up at the follow card (sentence 3).
   const waveUp = 150, waveLow = 150 + 28 * Math.sin(f / 3.2);
   const restUp = 18 + talk * 10 * Math.sin(f / 7), restLow = 30 + talk * 25 * Math.sin(f / 6);
-  const lUp = restUp + (waveUp - restUp) * wave + (135 - restUp) * point * (1 - wave);
-  const lLow = restLow + (waveLow - restLow) * wave + (150 - restLow) * point * (1 - wave);
+  let lUp = restUp + (waveUp - restUp) * wave + (135 - restUp) * point * (1 - wave);
+  let lLow = restLow + (waveLow - restLow) * wave + (150 - restLow) * point * (1 - wave);
+  // "My name is..." -> hand on chest; "This is how I look!" -> both arms out, ta-da.
+  lUp += (20 - lUp) * chest; lLow += (-120 - lLow) * chest;
+  lUp += (110 - lUp) * tada; lLow += (140 - lLow) * tada;
   // Screen-right arm: hand on hip, pops out for emphasis while talking.
-  const rUp = -25 - talk * 30 * Math.max(0, Math.sin(f / 9)), rLow = -110 + talk * 60 * Math.max(0, Math.sin(f / 9));
+  let rUp = -25 - talk * 30 * Math.max(0, Math.sin(f / 9)), rLow = -110 + talk * 60 * Math.max(0, Math.sin(f / 9));
+  rUp += (-110 - rUp) * tada; rLow += (-140 - rLow) * tada;
   return (
     <g>
       <ellipse cx={0} cy={4} rx={150} ry={22} fill="#000" opacity={0.18} />
       {/* legs + shoes */}
+      <Part p={reveal.legs}>
       {[-38, 38].map((x) => (
         <g key={x}>
           <rect x={x - 17} y={-165} width={34} height={150} rx={16} fill={K.skin} />
           <ellipse cx={x + (x > 0 ? 14 : -14)} cy={-12} rx={38} ry={20} fill={K.shoe} stroke="#d9d9d9" strokeWidth={4} />
         </g>
       ))}
-      <path d="M -88,-250 L 88,-250 L 96,-150 L 8,-150 L 0,-190 L -8,-150 L -96,-150 Z" fill={K.shorts} />
-      <Arm x={95} y={-410} up={rUp} low={rLow} />
+      </Part>
+      <Part p={reveal.shorts}><path d="M -88,-250 L 88,-250 L 96,-150 L 8,-150 L 0,-190 L -8,-150 L -96,-150 Z" fill={K.shorts} /></Part>
+      <Part p={reveal.armR}><Arm x={95} y={-410} up={rUp} low={rLow} /></Part>
       {/* kurta */}
+      <Part p={reveal.kurta}>
       <path d="M -92,-425 Q 0,-445 92,-425 L 118,-215 Q 0,-195 -118,-215 Z" fill={K.kurta} />
       <path d="M -40,-432 L 0,-360 L 40,-432" fill="none" stroke={K.collar} strokeWidth={12} strokeLinejoin="round" />
       {[-330, -295, -260].map((y) => <circle key={y} cx={0} cy={y} r={6} fill={K.collar} />)}
       <path d="M -118,-215 Q 0,-195 118,-215" stroke={K.kurtaDark} strokeWidth={8} fill="none" />
-      <Arm x={-95} y={-410} up={lUp} low={lLow} />
+      </Part>
+      <Part p={reveal.armL}><Arm x={-95} y={-410} up={lUp} low={lLow} /></Part>
       {/* head */}
       <g transform={`translate(0,-440) rotate(${tilt})`}>
+        <Part p={reveal.head}>
         <rect x={-26} y={-30} width={52} height={40} fill={K.skinDark} />
         <circle cx={-118} cy={-125} r={26} fill={K.skin} />
         <circle cx={118} cy={-125} r={26} fill={K.skin} />
         <ellipse cx={0} cy={-130} rx={122} ry={118} fill={K.skin} />
+        </Part>
         {/* hair: messy top with a cowlick */}
+        <Part p={reveal.hair}>
         <path d="M -124,-150 Q -130,-250 -30,-262 Q 40,-275 100,-235 Q 132,-200 124,-150 Q 95,-205 40,-212 Q 60,-190 20,-196 Q -30,-222 -60,-200 Q -95,-190 -124,-150 Z" fill={K.hair} />
         <path d="M 10,-258 Q 30,-310 70,-300 Q 40,-290 38,-262 Z" fill={K.hair} />
+        </Part>
+        <Part p={reveal.eyes}>
         {/* brows, eyes, nose, cheeks, mouth */}
         {[-44, 44].map((x) => (
           <g key={x}>
@@ -86,18 +117,23 @@ const Kid: React.FC<{ f: number; o: number; w: number; wave: number; point: numb
             {blink > 0.5 && <circle cx={x + 6 * look + 5} cy={-142 - 8 * Math.abs(look)} r={5} fill="#fff" />}
           </g>
         ))}
+        </Part>
+        <Part p={reveal.face}>
         <path d="M -6,-112 Q 0,-96 10,-104" stroke={K.skinDark} strokeWidth={6} fill="none" strokeLinecap="round" />
         <ellipse cx={-78} cy={-92} rx={20} ry={12} fill={K.cheek} opacity={0.55} />
         <ellipse cx={78} cy={-92} rx={20} ry={12} fill={K.cheek} opacity={0.55} />
+        </Part>
+        <Part p={reveal.mouth}>
         <g transform="translate(0,-72)">
           <Mouth o={o} w={w} smile={1 - o} />
         </g>
+        </Part>
       </g>
     </g>
   );
 };
 
-const Chip: React.FC<{ f: number; x: number; y: number; spin: number }> = ({ f, x, y, spin }) => {
+export const Chip: React.FC<{ f: number; x: number; y: number; spin: number }> = ({ f, x, y, spin }) => {
   const glow = 0.5 + 0.5 * Math.sin(f / 4);
   return (
     <g transform={`translate(${x},${y + Math.sin(f / 9) * 14}) rotate(${spin})`}>
@@ -117,7 +153,7 @@ const Chip: React.FC<{ f: number; x: number; y: number; spin: number }> = ({ f, 
   );
 };
 
-export const MascotCTA: React.FC<{ data: MascotData; audio: string; handle: string }> = ({ data, audio, handle }) => {
+export const MascotCTA: React.FC<{ data: MascotData; audio: string; handle: string; name?: string }> = ({ data, audio, handle, name }) => {
   const f = useCurrentFrame();
   const { fps, width: W, height: H } = useVideoConfig();
   const k = f - LEAD; // frame into the voice take
@@ -129,6 +165,10 @@ export const MascotCTA: React.FC<{ data: MascotData; audio: string; handle: stri
   const within = (a: number, b: number, ramp = 6) => interpolate(k, [a, a + ramp, b - ramp, b], [0, 1, 1, 0], cl);
   const wave = within(st[0] - 4, st[1] ?? end);
   const point = within(st[2] - 4, st[3] ?? end, 8);
+  const nSub = data.subs.length;
+  const hasName = !!name && nSub >= 6;
+  const chest = hasName ? within(st[nSub - 2] - 3, st[nSub - 1], 6) : 0;
+  const tada = hasName ? interpolate(k, [st[nSub - 1] - 3, st[nSub - 1] + 6], [0, 1], cl) : 0;
   const talk = Math.min(1, o * 1.6);
   const enter = spring({ frame: f, fps, config: { damping: 11, mass: 0.7 } });
   const kidX = W * 0.6, kidY = H - 110 + (1 - enter) * 700 - Math.max(0, Math.sin(k / 4)) * 10 * talk;
@@ -182,9 +222,18 @@ export const MascotCTA: React.FC<{ data: MascotData; audio: string; handle: stri
       <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
         <Chip f={f} x={chipX} y={chipY} spin={sent === 1 ? Math.sin(k / 3) * 12 : 0} />
         <g transform={`translate(${kidX},${kidY}) scale(1.45)`}>
-          <Kid f={f} o={o} w={w} wave={wave} point={point} talk={talk} look={point > 0.3 ? -0.8 : Math.sin(f / 40) * 0.3} />
+          <Kid f={f} o={o} w={w} wave={wave} point={point} talk={talk} look={point > 0.3 ? -0.8 : Math.sin(f / 40) * 0.3} chest={chest} tada={tada} />
         </g>
       </svg>
+      {tada > 0 && (
+        <div style={{ position: "absolute", left: kidX - 260, width: 520, top: kidY - 1060, textAlign: "center", transform: `scale(${tada})` }}>
+          {Array.from({ length: 12 }, (_, i) => {
+            const ang = (i / 12) * Math.PI * 2, r = 150 + 60 * tada + 20 * Math.sin(f / 3 + i);
+            return <div key={i} style={{ position: "absolute", left: 260 + Math.cos(ang) * r * 1.5 - 12, top: 60 + Math.sin(ang) * r * 0.6 - 12, width: 24, height: 24, borderRadius: 12, background: ["#ffd166", "#22d3ee", "#f472b6"][i % 3], opacity: 0.9 }} />;
+          })}
+          <span style={{ display: "inline-block", fontFamily: INTER, fontWeight: 900, fontSize: 72, color: "#0f172a", background: "#ffd166", padding: "14px 44px", borderRadius: 60, boxShadow: "0 12px 40px rgba(0,0,0,0.2)" }}>I'm {name}!</span>
+        </div>
+      )}
       <Sequence from={LEAD}>
         <Audio src={staticFile(audio)} />
       </Sequence>

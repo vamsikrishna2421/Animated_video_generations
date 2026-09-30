@@ -16,6 +16,7 @@ import { ChariotRace } from "./reel/Chariot3D";
 import { LEAD, MascotCTA, TAIL } from "./reel/Mascot";
 import mascotTe from "./reel/mascot_te.json";
 import mascotEn from "./reel/mascot_en.json";
+import { BuildProps, BuildTimelapse, buildDuration } from "./reel/BuildTimelapse";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -54,8 +55,11 @@ export const RemotionRoot: React.FC = () => (
       />
     ))}
     <Composition id="Scene3DTest" component={Scene3DTest} durationInFrames={150} fps={30} width={1000} height={560} />
-    <Composition id="MascotTe" component={MascotCTA as unknown as React.FC<Record<string, unknown>>} durationInFrames={LEAD + mascotTe.frames + TAIL} fps={30} width={1080} height={1920} defaultProps={{ data: mascotTe, audio: "mascot/cta_te.wav", handle: "@ai_maastaaru_telugu" }} />
-    <Composition id="MascotEn" component={MascotCTA as unknown as React.FC<Record<string, unknown>>} durationInFrames={LEAD + mascotEn.frames + TAIL} fps={30} width={1080} height={1920} defaultProps={{ data: mascotEn, audio: "mascot/cta_en.wav", handle: "@ai_maastaaru" }} />
+    <Composition id="MascotTe" component={MascotCTA as unknown as React.FC<Record<string, unknown>>} durationInFrames={LEAD + mascotTe.frames + TAIL} calculateMetadata={({ props }) => ({ durationInFrames: LEAD + (props as { data: { frames: number } }).data.frames + TAIL })} fps={30} width={1080} height={1920} defaultProps={{ data: mascotTe, audio: "mascot/cta_te.wav", handle: "@ai_maastaaru_telugu" }} />
+    <Composition id="MascotEn" component={MascotCTA as unknown as React.FC<Record<string, unknown>>} durationInFrames={LEAD + mascotEn.frames + TAIL} calculateMetadata={({ props }) => ({ durationInFrames: LEAD + (props as { data: { frames: number } }).data.frames + TAIL })} fps={30} width={1080} height={1920} defaultProps={{ data: mascotEn, audio: "mascot/cta_en.wav", handle: "@ai_maastaaru" }} />
+    <Composition id="BuildTimelapse" component={BuildTimelapse as unknown as React.FC<Record<string, unknown>>} durationInFrames={buildDuration(mascotEn)} fps={30} width={1080} height={1920}
+      defaultProps={{ label: "AI", name: "Bittu", minutes: 0, clock: [0, 1, 2, 3, 4], code: "// code", data: mascotEn, audio: "mascot/cta_en.wav", handle: "@ai_maastaaru", snaps: { before: "mascot/cta_en.wav", after: "mascot/cta_en.wav" } }}
+      calculateMetadata={({ props }) => ({ durationInFrames: buildDuration((props as unknown as BuildProps).data) })} />
     <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     {([
