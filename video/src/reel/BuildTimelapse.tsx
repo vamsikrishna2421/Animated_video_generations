@@ -2,6 +2,7 @@ import { AbsoluteFill, Audio, Img, interpolate, Sequence, spring, staticFile, us
 import { Fonts } from "../components/Fonts";
 import { Chip, Kid, LEAD, MascotCTA, MascotData, Reveal, SketchStyle, TAIL } from "./Mascot";
 import { DAY, Ridge, Sky } from "./World";
+import { GagReel } from "./Gags";
 
 // Time-lapse of how the mascot reel was built: real code, the drawing in build order (pencil outline, then
 // colour), the real first test frame and its fix, the voice + lip-sync step, then the finished reel.
@@ -17,6 +18,7 @@ export type BuildProps = {
   handle: string;
   snaps: { before: string; after: string };
   music?: string;
+  gag?: number; // frames of the silent gag reel to play between the making-of and the promo (0 = none)
 };
 
 const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -24,7 +26,8 @@ const INTER = "Inter, 'DejaVu Sans', sans-serif";
 const MONO = "'DejaVu Sans Mono', monospace";
 export const SCENES = { hook: 0, code: 105, draw: 300, fix: 720, voice: 870, reveal: 990 };
 export const END_LEN = 120;
-export const buildDuration = (d: MascotData) => SCENES.reveal + LEAD + d.frames + TAIL + END_LEN;
+export const GAG_CUT = 790; // the gag reel up to (not including) its own end card
+export const buildDuration = (d: MascotData, gag = 0) => SCENES.reveal + gag + LEAD + d.frames + TAIL + END_LEN;
 
 const STEPS = ["Code", "Draw", "Test & fix", "Voice", "Animate"];
 const PARTS: { key: keyof Reveal; label: string; at: [number, number] }[] = [
@@ -276,9 +279,13 @@ const EndCard: React.FC<{ label: string; minutes: number; handle: string }> = ({
 export const BuildTimelapse: React.FC<BuildProps> = (p) => {
   const f = useCurrentFrame();
   const mascotLen = LEAD + p.data.frames + TAIL;
-  const endAt = SCENES.reveal + mascotLen;
-  const flash = interpolate(f, [SCENES.reveal - 8, SCENES.reveal, SCENES.reveal + 10], [0, 1, 0], cl);
-  const musicVol = (fr: number) => (fr < SCENES.reveal - 10 ? 0.35 : fr < endAt ? 0.06 : 0.3);
+  const gag = p.gag ?? 0;
+  const promoAt = SCENES.reveal + gag;
+  const endAt = promoAt + mascotLen;
+  const flashAt = (at: number) => interpolate(f, [at - 8, at, at + 10], [0, 1, 0], cl);
+  const flash = Math.max(flashAt(SCENES.reveal), gag ? flashAt(promoAt) : 0);
+  const musicVol = (fr: number) => (fr < SCENES.reveal - 10 ? 0.35 : fr < promoAt ? 0 : fr < endAt ? 0.06 : 0.3);
+  const tagIn = interpolate(f, [SCENES.reveal + 6, SCENES.reveal + 16, SCENES.reveal + 80, SCENES.reveal + 92], [0, 1, 1, 0], cl);
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
       <Fonts />
@@ -289,7 +296,15 @@ export const BuildTimelapse: React.FC<BuildProps> = (p) => {
       <Sequence from={SCENES.fix} durationInFrames={SCENES.voice - SCENES.fix}><FixStep snaps={p.snaps} /></Sequence>
       <Sequence from={SCENES.voice} durationInFrames={SCENES.reveal - SCENES.voice}><VoiceStep data={p.data} /></Sequence>
       {f < SCENES.reveal && <Clock clock={p.clock} />}
-      <Sequence from={SCENES.reveal} durationInFrames={mascotLen}>
+      {gag > 0 && (
+        <Sequence from={SCENES.reveal} durationInFrames={gag}>
+          <GagReel handle={p.handle} />
+          <div style={{ position: "absolute", top: 70, left: 0, right: 0, textAlign: "center", opacity: tagIn }}>
+            <span style={{ fontFamily: INTER, fontWeight: 900, fontSize: 46, color: "white", background: "rgba(15,23,42,0.85)", padding: "14px 34px", borderRadius: 30 }}>STEP 5 · brings him to life</span>
+          </div>
+        </Sequence>
+      )}
+      <Sequence from={promoAt} durationInFrames={mascotLen}>
         <MascotCTA data={p.data} audio={p.audio} handle={p.handle} name={p.name} />
       </Sequence>
       <Sequence from={endAt}><EndCard label={p.label} minutes={p.minutes} handle={p.handle} /></Sequence>

@@ -60,7 +60,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MascotEn" component={MascotCTA as unknown as React.FC<Record<string, unknown>>} durationInFrames={LEAD + mascotEn.frames + TAIL} calculateMetadata={({ props }) => ({ durationInFrames: LEAD + (props as { data: { frames: number } }).data.frames + TAIL })} fps={30} width={1080} height={1920} defaultProps={{ data: mascotEn, audio: "mascot/cta_en.wav", handle: "@ai_maastaaru" }} />
     <Composition id="BuildTimelapse" component={BuildTimelapse as unknown as React.FC<Record<string, unknown>>} durationInFrames={buildDuration(mascotEn)} fps={30} width={1080} height={1920}
       defaultProps={{ label: "AI", name: "Bittu", minutes: 0, clock: [0, 1, 2, 3, 4], code: "// code", data: mascotEn, audio: "mascot/cta_en.wav", handle: "@ai_maastaaru", snaps: { before: "mascot/cta_en.wav", after: "mascot/cta_en.wav" } }}
-      calculateMetadata={({ props }) => ({ durationInFrames: buildDuration((props as unknown as BuildProps).data) })} />
+      calculateMetadata={({ props }) => ({ durationInFrames: buildDuration((props as unknown as BuildProps).data, (props as unknown as BuildProps).gag ?? 0) })} />
     <Composition id="GagFollow" component={GagReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={GAG_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru" }} />
     <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
