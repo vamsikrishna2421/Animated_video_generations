@@ -12,6 +12,7 @@ import { StoryTe, StoryYT, PromoCfg } from "./story/StoryTe";
 import storyEnTl from "./story/story_timeline_en.json";
 import { RideWorld } from "./reel/World";
 import { Scene3DTest } from "./reel/Scene3D";
+import { ChariotRace } from "./reel/Chariot3D";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -50,6 +51,7 @@ export const RemotionRoot: React.FC = () => (
       />
     ))}
     <Composition id="Scene3DTest" component={Scene3DTest} durationInFrames={150} fps={30} width={1000} height={560} />
+    <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     {([
       ["Te", { tl: storyTeTl, handle: "@ai_maastaaru_telugu", subline: "AI, explained in Telugu.", drake: ["Confusing English AI tutorials", "AI explained in Telugu, simply"], episodes: "82 episodes, zero jargon" }],
