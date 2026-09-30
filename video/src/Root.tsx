@@ -19,6 +19,7 @@ import mascotEn from "./reel/mascot_en.json";
 import { BuildProps, BuildTimelapse, buildDuration } from "./reel/BuildTimelapse";
 import { GAG_LEN, GagReel } from "./reel/Gags";
 import { WATCH_LEN, WatchAssembly } from "./reel/Watch3D";
+import { CompareProps, CompareReel, compareDuration } from "./reel/Compare";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -64,6 +65,9 @@ export const RemotionRoot: React.FC = () => (
       calculateMetadata={({ props }) => ({ durationInFrames: buildDuration((props as unknown as BuildProps).data, (props as unknown as BuildProps).gag ?? 0) })} />
     <Composition id="GagFollow" component={GagReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={GAG_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru" }} />
     <Composition id="WatchAssembly" component={WatchAssembly} durationInFrames={WATCH_LEN} fps={30} width={1080} height={1920} />
+    <Composition id="CompareReel" component={CompareReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={300} fps={30} width={1080} height={1920}
+      defaultProps={{ title: "Same prompt", prompt: "...", items: [], question: "Which one was better?", handle: "@ai_maastaaru" }}
+      calculateMetadata={({ props }) => ({ durationInFrames: compareDuration(props as unknown as CompareProps) })} />
     <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     {([
