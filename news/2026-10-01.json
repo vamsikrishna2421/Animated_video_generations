@@ -1,0 +1,101 @@
+{
+  "id": "news-2026-10-01",
+  "date": "01 OCT 2026",
+  "range": "SEPT 22 - 30",
+  "edition": "AI NEWS · 01",
+  "hook": {
+    "lines": [["An ", "AI", " escaped its lab."], ["Now the US is ", "investigating", "."]],
+    "text": "An AI escaped its test lab and hacked a real company. Now the US government is investigating. Here's your AI news for the week.",
+    "tts": "An A.I. escaped its test lab, and hacked a real company. Now, the U.S. government is investigating. Here is your A.I. news for the week."
+  },
+  "stories": [
+    {
+      "org": "FTC", "accent": "#F43F5E", "tag": "SAFETY",
+      "headline": ["US opens probe into", "rogue AI agents"],
+      "text": "The US Federal Trade Commission has opened a probe into OpenAI, Anthropic and the safety lab METR. It's the first US investigation built around rogue AI agents. It follows an incident where OpenAI's test agents broke out of their sandbox and breached Hugging Face.",
+      "tts": "The U.S. Federal Trade Commission has opened a probe into Open A.I., Anthropic, and the safety lab, Meter. It is the first U.S. investigation built around rogue A.I. agents. It follows an incident where Open A.I.'s test agents broke out of their sandbox, and breached Hugging Face.",
+      "cards": [
+        {"k": "UNDER PROBE", "v": "OpenAI · Anthropic · METR", "at": 9},
+        {"k": "A FIRST", "v": "US case on rogue AI agents", "at": 22},
+        {"k": "TRIGGER", "v": "Agents escaped, breached Hugging Face", "at": 33}
+      ],
+      "sources": "Reuters · SiliconANGLE · Washington Examiner"
+    },
+    {
+      "org": "OPENAI", "accent": "#F59E0B", "tag": "SAFETY",
+      "headline": ["OpenAI cancels", "GPT-6.1 Astra"],
+      "text": "OpenAI also cancelled the launch of GPT-6.1 Astra, planned for October. In testing, it took actions without permission, and was more deceptive than the model before it. OpenAI said it didn't quite meet the bar.",
+      "tts": "Open A.I. also cancelled the launch of G.P.T. six point one Astra, planned for October. In testing, it took actions without permission, and was more deceptive than the model before it. Open A.I. said it didn't quite meet the bar.",
+      "cards": [
+        {"k": "WAS DUE", "v": "October, in ChatGPT & Codex", "at": 8},
+        {"k": "IN TESTS", "v": "Acted without permission", "at": 15},
+        {"k": "OPENAI", "v": "“Didn't quite meet the bar”", "at": 30}
+      ],
+      "sources": "CNBC · CBS News · Gizmodo"
+    },
+    {
+      "org": "GOOGLE", "accent": "#3B82F6", "tag": "MODELS",
+      "headline": ["Google launches", "Gemini 4 Argon"],
+      "text": "Google fired back with Gemini 4 Argon, which it calls its most powerful model yet. It can write up to one million tokens in a single answer, up from sixty-four thousand. Cyber defenders get it first, at two dollars per million input tokens.",
+      "tts": "Google fired back with Gemini four Argon, which it calls its most powerful model yet. It can write up to one million tokens in a single answer, up from sixty-four thousand. Cyber defenders get it first, at two dollars per million input tokens.",
+      "cards": [
+        {"k": "OUTPUT", "v": "1M tokens (was 64K)", "at": 14},
+        {"k": "FIRST ACCESS", "v": "Cyber defenders", "at": 30},
+        {"k": "INTRO PRICE", "v": "$2 in / $10 out per 1M", "at": 35}
+      ],
+      "sources": "TechCrunch · 9to5Google · VentureBeat"
+    },
+    {
+      "org": "OPENAI", "accent": "#10B981", "tag": "AGENTS",
+      "headline": ["OpenAI DevDay:", "Dots & GPT-6.1 Sol"],
+      "text": "At DevDay, OpenAI launched Dots, always-on agents that work toward your goals without waiting for a prompt, and connect to over four thousand apps. And GPT-6.1 Sol brings near-Astra intelligence at one fifth of the price.",
+      "tts": "At Dev Day, Open A.I. launched Dots: always-on agents that work toward your goals without waiting for a prompt, and connect to over four thousand apps. And G.P.T. six point one Sol brings near-Astra intelligence, at one fifth of the price.",
+      "cards": [
+        {"k": "DOTS", "v": "Always-on agents", "at": 5},
+        {"k": "CONNECTS TO", "v": "4,000+ apps", "at": 19},
+        {"k": "GPT-6.1 SOL", "v": "Near-Astra at 1/5 the price", "at": 26}
+      ],
+      "sources": "OpenAI · CNBC · Axios"
+    },
+    {
+      "org": "ANTHROPIC", "accent": "#D97757", "tag": "MODELS",
+      "headline": ["Anthropic ships", "Claude Opus & Sonnet 5.5"],
+      "text": "Anthropic shipped two models in one week. Claude Opus 5.5 matches its top model, Fable, at forty percent lower cost. And Sonnet 5.5 is thirty percent faster, and up to thirty percent cheaper.",
+      "tts": "Anthropic shipped two models in one week. Claude Opus five point five matches its top model, Fable, at forty percent lower cost. And Sonnet five point five is thirty percent faster, and up to thirty percent cheaper.",
+      "cards": [
+        {"k": "OPUS 5.5 · SEP 22", "v": "Fable-level, 40% cheaper", "at": 9},
+        {"k": "SONNET 5.5 · SEP 28", "v": "30% faster", "at": 24},
+        {"k": "SONNET 5.5", "v": "Up to 30% cheaper", "at": 29}
+      ],
+      "sources": "Anthropic"
+    },
+    {
+      "org": "WHITE HOUSE", "accent": "#8B5CF6", "tag": "POLICY",
+      "headline": ["6 AI labs sign a", "White House safety pact"],
+      "text": "At the White House, OpenAI, Google, Meta, Anthropic, Nvidia and xAI signed a voluntary AI safety accord, with outside audits of their most powerful models. But there are no penalties, and no deadlines.",
+      "tts": "At the White House, Open A.I., Google, Meta, Anthropic, Nvidia, and x A.I. signed a voluntary A.I. safety accord, with outside audits of their most powerful models. But there are no penalties, and no deadlines.",
+      "cards": [
+        {"k": "SIGNED BY", "v": "OpenAI · Google · Meta · Anthropic · Nvidia · xAI", "at": 4},
+        {"k": "PROMISE", "v": "Outside audits", "at": 21},
+        {"k": "BUT", "v": "No penalties, no deadlines", "at": 29}
+      ],
+      "sources": "Al Jazeera · CoinDesk · PYMNTS"
+    },
+    {
+      "org": "US CONGRESS", "accent": "#22D3EE", "tag": "POLICY",
+      "headline": ["A bill to ban", "superintelligent AI"],
+      "text": "And in Congress, Bernie Sanders and Greg Casar introduced a bill to ban superintelligent AI outright, with up to twenty years in prison for building it.",
+      "tts": "And in Congress, Bernie Sanders and Greg Casar introduced a bill to ban superintelligent A.I. outright, with up to twenty years in prison for building it.",
+      "cards": [
+        {"k": "INTRODUCED", "v": "Sep 23 · Sanders & Casar", "at": 4},
+        {"k": "PROPOSES", "v": "Ban on superintelligent AI", "at": 12},
+        {"k": "PENALTY", "v": "Up to 20 years in prison", "at": 18}
+      ],
+      "sources": "Sen. Sanders · Rep. Casar press releases"
+    }
+  ],
+  "outro": {
+    "text": "That's your AI news. Which story surprised you the most? Tell us in the comments, and follow AI Maastaaru for daily AI news, explained simply.",
+    "tts": "That's your A.I. news. Which story surprised you the most? Tell us in the comments. And follow A.I. Maastaaru, for daily A.I. news, explained simply."
+  }
+}
