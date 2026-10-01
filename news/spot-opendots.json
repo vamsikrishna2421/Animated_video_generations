@@ -5,31 +5,79 @@
  "edition": "AI SPOTLIGHT",
  "kicker": "AI SPOTLIGHT",
  "title": "OPENDOTS",
- "recap": "OPENDOTS IN 4 POINTS",
+ "recap": "OPENDOTS IN 5 POINTS",
  "hook": {
   "lines": [
    [
-    "OpenAI launched ",
-    "Dots",
-    "."
+    "OpenAI's agent ",
+    "froze",
+    " on stage."
    ],
    [
-    "It was cloned in ",
+    "The internet cloned it in ",
     "an hour",
     "."
    ]
   ],
-  "text": "OpenAI launched always-on AI agents. Developers cloned them for free in about an hour. Here's OpenDots.",
-  "tts": "Open A.I. launched always-on A.I. agents. Developers cloned them for free, in about an hour. Here is Open Dots."
+  "text": "OpenAI's new agent froze live on stage. Then the internet built a free version in about an hour. Here's OpenDots.",
+  "tts": "Open A.I.'s new agent froze, live on stage. Then the internet built a free version, in about an hour. Here is Open Dots."
  },
  "stories": [
+  {
+   "org": "OPENAI DEVDAY",
+   "accent": "#10B981",
+   "tag": "LIVE DEMO",
+   "headline": [
+    "“Dottie's having",
+    "a slow morning”"
+   ],
+   "text": "On stage, OpenAI's Holly Li asked her Dots agent to catch her up on test results. It said it was checking, went silent for about ten seconds, then said it was still checking.",
+   "tts": "On stage, Open A.I.'s Holly Li asked her Dots agent to catch her up on test results. It said it was checking, went silent for about ten seconds, then said it was still checking.",
+   "cards": [
+    {
+     "k": "",
+     "v": "",
+     "at": 4
+    },
+    {
+     "k": "",
+     "v": "",
+     "at": 19
+    },
+    {
+     "k": "",
+     "v": "",
+     "at": 28
+    }
+   ],
+   "demo": {
+    "type": "chat",
+    "title": "DEVDAY LIVE DEMO, SEPT 29",
+    "lines": [
+     {
+      "who": "user",
+      "t": "Catch me up on the user testing results."
+     },
+     {
+      "who": "dots",
+      "t": "Checking that now."
+     },
+     {
+      "who": "dots",
+      "t": "Still checking."
+     }
+    ],
+    "note": "RECONSTRUCTED FROM FUTURISM'S REPORT"
+   },
+   "sources": "Futurism"
+  },
   {
    "org": "OPENAI",
    "accent": "#10B981",
    "tag": "THE ORIGINAL",
    "headline": [
-    "OpenAI Dots:",
-    "agents that never sleep"
+    "What Dots",
+    "actually is"
    ],
    "text": "OpenAI's Dots are agents with their own cloud computer. They work on your goals around the clock and connect to over four thousand apps. They come with ChatGPT Pro and Business Premium.",
    "tts": "Open A.I.'s Dots are agents with their own cloud computer. They work on your goals around the clock, and connect to over four thousand apps. They come with ChatGPT Pro, and Business Premium.",

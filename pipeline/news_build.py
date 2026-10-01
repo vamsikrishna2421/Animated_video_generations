@@ -81,7 +81,7 @@ def build(spec_path, lang="en"):
         words = word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):
-            entry.update({k: seg[k] for k in ("org", "accent", "tag", "headline", "sources")})
+            entry.update({k: seg[k] for k in ("org", "accent", "tag", "headline", "sources", "demo") if k in seg})
             entry["cards"] = [{**c, "f": words[min(c["at"], len(words) - 1)]["s"]} for c in seg["cards"]]
         if name == "hook":
             entry["lines"] = seg["lines"]

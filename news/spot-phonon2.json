@@ -78,7 +78,25 @@
      "at": 21
     }
    ],
-   "sources": "Fermion Research (Hugging Face)"
+   "sources": "Fermion Research (Hugging Face)",
+   "demo": {
+    "type": "bars",
+    "title": "DOWNLOAD SIZE · LOWER WORD ERROR IS BETTER",
+    "rows": [
+     {
+      "label": "Phonon-2",
+      "value": 164,
+      "show": "164 MB · 5.21%",
+      "hi": true
+     },
+     {
+      "label": "Whisper large turbo",
+      "value": 1618,
+      "show": "1,618 MB · 6.58%"
+     }
+    ],
+    "note": "OPEN ASR LEADERBOARD, 7 ENGLISH SETS"
+   }
   },
   {
    "org": "SPEED",
@@ -107,7 +125,25 @@
      "at": 21
     }
    ],
-   "sources": "Fermion Research (Hugging Face)"
+   "sources": "Fermion Research (Hugging Face)",
+   "demo": {
+    "type": "bars",
+    "title": "TIME TO TRANSCRIBE 1 HOUR OF AUDIO",
+    "rows": [
+     {
+      "label": "Phonon-2 on a MacBook Air",
+      "value": 20,
+      "show": "~20 s",
+      "hi": true
+     },
+     {
+      "label": "Listening in real time",
+      "value": 3600,
+      "show": "60 min"
+     }
+    ],
+    "note": "FERMION RESEARCH, M5 MACBOOK AIR"
+   }
   },
   {
    "org": "USE CASES",
@@ -117,26 +153,26 @@
     "Free subtitles,",
     "notes, dictation"
    ],
-   "text": "Use it for meeting notes, video subtitles, voice typing and podcast transcripts. It's open, under a CC BY licence, so you can build on it with credit.",
-   "tts": "Use it for meeting notes, video subtitles, voice typing, and podcast transcripts. It is open, under a C.C. B.Y. licence, so you can build on it, with credit.",
+   "text": "Its makers ship it inside Detta, a free Mac dictation app that runs fully offline. Use it for meeting notes, subtitles and podcast transcripts. It's open under CC BY, so you can build on it with credit.",
+   "tts": "Its makers ship it inside Detta, a free Mac dictation app that runs fully offline. Use it for meeting notes, subtitles, and podcast transcripts. It is open under C.C. B.Y., so you can build on it, with credit.",
    "cards": [
     {
-     "k": "WORK",
-     "v": "Meeting notes",
-     "at": 4
+     "k": "DETTA",
+     "v": "Free Mac dictation, offline",
+     "at": 5
     },
     {
-     "k": "CREATORS",
-     "v": "Subtitles · podcast transcripts",
-     "at": 7
+     "k": "USE IT FOR",
+     "v": "Notes · subtitles · transcripts",
+     "at": 17
     },
     {
      "k": "LICENCE",
      "v": "CC BY 4.0 (open)",
-     "at": 18
+     "at": 26
     }
    ],
-   "sources": "Fermion Research (Hugging Face)"
+   "sources": "Fermion Research"
   }
  ],
  "outro": {

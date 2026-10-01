@@ -1,4 +1,5 @@
 import React from "react";
+import * as Icons from "lucide-react";
 import { AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { Aurora, BrandFonts, Grain } from "../brand/Base";
 import { Karaoke } from "../brand/Captions";
@@ -10,9 +11,10 @@ import { B, cl, F, pop, prog } from "../brand/tokens";
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
 type Card = { k: string; v: string; f: number };
+type Demo = { type: "bars" | "route" | "montage" | "chat"; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
-  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][];
+  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo;
 };
 export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string };
 const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
@@ -54,6 +56,110 @@ const Header: React.FC<{ edition: string; date: string }> = ({ edition, date }) 
   );
 };
 
+
+/** Animated demo panels for spotlight sections; steps follow the section's card cues. */
+const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, cues, accent }) => {
+  const f = useCurrentFrame();
+  const step = (i: number) => cues[Math.min(i, cues.length - 1)] ?? 10 + i * 20;
+  const box: React.CSSProperties = { position: "absolute", top: 640, left: 60, right: 60, height: 720, borderRadius: 36, background: "rgba(17,22,44,0.82)", border: "2px solid rgba(255,255,255,0.08)", padding: "40px 44px", overflow: "hidden" };
+  const title = d.title && <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 26, letterSpacing: 3, color: accent, marginBottom: 30 }}>{d.title}</div>;
+  const note = d.note && <div style={{ position: "absolute", bottom: 30, left: 44, fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, color: "rgba(255,255,255,0.45)" }}>{d.note}</div>;
+  if (d.type === "bars") {
+    const rows = d.rows ?? [];
+    const max = Math.max(...rows.map((r) => r.value));
+    return (
+      <div style={box}>
+        {title}
+        {rows.map((r, i) => {
+          const p = prog(f, step(i) - 3, step(i) + 22);
+          return (
+            <div key={i} style={{ marginBottom: 44, opacity: prog(f, step(i) - 6, step(i)) }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontFamily: F.inter, fontWeight: 800, fontSize: 40, color: B.white, marginBottom: 14 }}>
+                <span>{r.label}</span><span style={{ color: r.hi ? accent : "rgba(255,255,255,0.8)" }}>{r.show}</span>
+              </div>
+              <div style={{ height: 46, borderRadius: 23, background: "rgba(255,255,255,0.07)" }}>
+                <div style={{ height: "100%", borderRadius: 23, width: `${Math.max(1.5, (r.value / max) * 100) * p}%`, background: r.hi ? accent : "rgba(255,255,255,0.45)", boxShadow: r.hi ? `0 0 30px ${accent}88` : "none" }} />
+              </div>
+            </div>
+          );
+        })}
+        {note}
+      </div>
+    );
+  }
+  if (d.type === "route") {
+    const bins = d.bins ?? ["BILLING", "TECH", "SALES"];
+    return (
+      <div style={box}>
+        {title}
+        <div style={{ position: "absolute", left: 44, right: 44, bottom: 60, display: "flex", gap: 20 }}>
+          {bins.map((b, i) => <div key={b} style={{ flex: 1, height: 150, borderRadius: 24, border: `3px dashed ${accent}88`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F.mono, fontWeight: 700, fontSize: 30, color: accent }}>{b}</div>)}
+        </div>
+        {Array.from({ length: 8 }, (_, k) => {
+          const t0 = step(0) - 6 + k * 9, t = prog(f, t0, t0 + 16);
+          if (f < t0) return null;
+          const bin = [0, 1, 2, 1, 0, 2, 1, 0][k], conf = [92, 88, 97, 81, 95, 90, 86, 99][k];
+          const x = interpolate(t, [0, 1], [390, 70 + bin * 315]), y = interpolate(t, [0, 1], [130, 420]);
+          return (
+            <div key={k} style={{ position: "absolute", left: x, top: y, width: 200, padding: "12px 16px", borderRadius: 16, background: B.white, color: B.ink, fontFamily: F.inter, fontWeight: 800, fontSize: 24, opacity: 1 - prog(f, t0 + 30, t0 + 40), boxShadow: "0 10px 24px rgba(0,0,0,0.35)" }}>
+              Ticket #{1040 + k}
+              <div style={{ fontFamily: F.mono, fontSize: 20, color: accent === "#38BDF8" ? "#0369A1" : B.blue }}>{bins[bin]} · {conf}%</div>
+            </div>
+          );
+        })}
+        {note}
+      </div>
+    );
+  }
+  if (d.type === "montage") {
+    const tiles = d.tiles ?? [];
+    return (
+      <div style={box}>
+        {title}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 26 }}>
+          {tiles.map((t, i) => {
+            const s = pop(f, step(i) - 3, 12);
+            const Ic = (Icons as unknown as Record<string, React.FC<{ size: number; color: string }>>)[t.icon] ?? Icons.Sparkles;
+            return (
+              <div key={i} style={{ height: 250, borderRadius: 28, background: `linear-gradient(135deg, ${accent}33, rgba(255,255,255,0.04))`, border: `2px solid ${accent}55`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 18, transform: `scale(${s})`, opacity: interpolate(s, [0, 0.3], [0, 1], cl) }}>
+                <Ic size={88} color={B.white} />
+                <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 36, color: B.white, textAlign: "center", padding: "0 16px" }}>{t.label}</div>
+              </div>
+            );
+          })}
+        </div>
+        {note}
+      </div>
+    );
+  }
+  // chat replay with a waiting timer
+  const lines = d.lines ?? [];
+  const waitFrom = step(1), waitTo = step(2);
+  const secs = Math.max(0, Math.min(10, ((f - waitFrom) / Math.max(1, waitTo - waitFrom)) * 10));
+  return (
+    <div style={box}>
+      {title}
+      {lines.map((l, i) => {
+        const s = pop(f, step(i) - 3, 13);
+        if (f < step(i) - 3) return null;
+        const me = l.who === "user";
+        return (
+          <div key={i} style={{ display: "flex", justifyContent: me ? "flex-end" : "flex-start", marginBottom: 24, transform: `scale(${s})`, transformOrigin: me ? "right" : "left" }}>
+            <div style={{ maxWidth: "78%", padding: "22px 28px", borderRadius: 30, background: me ? B.igBlue : "rgba(255,255,255,0.1)", fontFamily: F.inter, fontWeight: 600, fontSize: 38, lineHeight: 1.25, color: B.white }}>{l.t}</div>
+          </div>
+        );
+      })}
+      {f >= waitFrom && f < waitTo + 20 && (
+        <div style={{ display: "flex", alignItems: "center", gap: 18, marginTop: 10, fontFamily: F.mono, fontWeight: 700, fontSize: 34, color: B.amber }}>
+          <div style={{ display: "flex", gap: 10 }}>{[0, 1, 2].map((i) => <span key={i} style={{ width: 16, height: 16, borderRadius: 8, background: B.amber, opacity: 0.3 + 0.7 * Math.max(0, Math.sin(f / 4 - i)) }} />)}</div>
+          silence · {secs.toFixed(1)} s
+        </div>
+      )}
+      {note}
+    </div>
+  );
+};
+
 const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total }) => {
   const f = useCurrentFrame();
   const accent = seg.accent ?? B.cyan;
@@ -78,7 +184,8 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
           );
         })}
       </div>
-      <div style={{ position: "absolute", top: 640, left: 60, right: 60 }}>
+      {seg.demo && <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />}
+      <div style={{ position: "absolute", top: 640, left: 60, right: 60, display: seg.demo ? "none" : "block" }}>
         {cards.map((c, i) => {
           const s = pop(f, c.f - 3, 13);
           if (f < c.f - 3) return null;

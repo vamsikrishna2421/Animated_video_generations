@@ -9,18 +9,18 @@
  "hook": {
   "lines": [
    [
-    "An AI that ",
-    "never chats",
-    "."
+    "",
+    "74 demos",
+    " in 5 days."
    ],
    [
-    "It just ",
-    "decides",
-    "."
+    "It never ",
+    "writes",
+    " a word."
    ]
   ],
-  "text": "This AI never writes a single sentence. It just makes decisions, fast and cheap. Here's Jev.",
-  "tts": "This A.I. never writes a single sentence. It just makes decisions, fast, and cheap. Here is Jev."
+  "text": "Builders posted seventy-four demo videos of this AI in its first five days. It plays Doom, searches flights and blocks ads in real time. And it never writes a single sentence. Here's Jev.",
+  "tts": "Builders posted seventy four demo videos of this A.I. in its first five days. It plays Doom, searches flights, and blocks ads in real time. And it never writes a single sentence. Here is Jev."
  },
  "stories": [
   {
@@ -50,7 +50,17 @@
      "at": 17
     }
    ],
-   "sources": "heise · TypeSafe AI"
+   "sources": "heise · TypeSafe AI",
+   "demo": {
+    "type": "route",
+    "title": "DECISIONS, NOT TEXT",
+    "bins": [
+     "BILLING",
+     "TECH",
+     "SALES"
+    ],
+    "note": "ILLUSTRATIVE"
+   }
   },
   {
    "org": "TYPESAFE AI",
@@ -79,36 +89,81 @@
      "at": 22
     }
    ],
-   "sources": "heise · TypeSafe AI"
+   "sources": "heise · TypeSafe AI",
+   "demo": {
+    "type": "bars",
+    "title": "COST PER MILLION INPUT TOKENS",
+    "rows": [
+     {
+      "label": "Jev",
+      "value": 1,
+      "show": "$0.042",
+      "hi": true
+     },
+     {
+      "label": "Frontier model",
+      "value": 200,
+      "show": "~200× more"
+     }
+    ],
+    "note": "TYPESAFE'S OWN BENCHMARK CLAIM"
+   }
   },
   {
    "org": "USE CASES",
    "accent": "#F59E0B",
    "tag": "REAL WORLD",
    "headline": [
-    "Where it",
-    "pays off"
+    "What builders",
+    "made with it"
    ],
-   "text": "Think support tickets routed instantly, AI agents choosing the right tool, and guardrails checking other models in real time. Millions of small decisions, for almost nothing.",
-   "tts": "Think support tickets routed instantly, A.I. agents choosing the right tool, and guardrails checking other models in real time. Millions of small decisions, for almost nothing.",
+   "text": "In its first week, builders made it play Doom, search flights, block ads in real time and trade. In business, the same trick routes support tickets and guards other AIs.",
+   "tts": "In its first week, builders made it play Doom, search flights, block ads in real time, and trade. In business, the same trick routes support tickets, and guards other A.I.s.",
    "cards": [
     {
-     "k": "SUPPORT",
-     "v": "Route tickets instantly",
-     "at": 1
+     "k": "",
+     "v": "",
+     "at": 7
     },
     {
-     "k": "AGENTS",
-     "v": "Pick the right tool",
-     "at": 5
+     "k": "",
+     "v": "",
+     "at": 10
     },
     {
-     "k": "SAFETY",
-     "v": "Real-time guardrails",
-     "at": 11
+     "k": "",
+     "v": "",
+     "at": 13
+    },
+    {
+     "k": "",
+     "v": "",
+     "at": 19
     }
    ],
-   "sources": "heise"
+   "sources": "awesome-jev-use-cases (GitHub) · heise",
+   "demo": {
+    "type": "montage",
+    "title": "VIRAL DEMOS, SEPT 15-19",
+    "tiles": [
+     {
+      "icon": "Gamepad2",
+      "label": "Plays Doom"
+     },
+     {
+      "icon": "Plane",
+      "label": "Flight search agent"
+     },
+     {
+      "icon": "ShieldBan",
+      "label": "Real-time ad blocker"
+     },
+     {
+      "icon": "TrendingUp",
+      "label": "Trading bot"
+     }
+    ]
+   }
   },
   {
    "org": "HONEST LIMITS",
