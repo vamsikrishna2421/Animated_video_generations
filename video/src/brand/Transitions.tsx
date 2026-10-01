@@ -11,7 +11,7 @@ export const Wipe: React.FC<{ at: number; dur?: number; colors?: string[] }> = (
     <AbsoluteFill style={{ pointerEvents: "none", overflow: "hidden" }}>
       {colors.map((c, i) => {
         const t = interpolate(f, [at - dur / 2 + i * 1.2, at + dur / 2 + i * 1.2], [0, 1], { ...cl, easing: easeInOut });
-        return <div key={i} style={{ position: "absolute", top: -400, bottom: -400, left: "-10%", width: "120%", background: c, transform: `translateX(${-110 + t * 220}%) skewX(-18deg)` }} />;
+        return <div key={i} style={{ position: "absolute", top: -400, bottom: -400, left: "-10%", width: "120%", background: c, transform: `translateX(${-150 + t * 300}%) skewX(-18deg)` }} />;
       })}
     </AbsoluteFill>
   );
