@@ -24,6 +24,7 @@ import { BrandShowreel, CaptionsDemo, FollowOutro, SHOWREEL_LEN, SubscribeOutro 
 import ep00v2Timeline from "./reel/timelines/ep00v2.json";
 import { LogoSting } from "./brand/Logo";
 import { NewsReel, NewsTimeline } from "./news/NewsReel";
+import { NewsYT, ytDuration } from "./news/NewsYT";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -84,6 +85,9 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="NewsReel" component={NewsReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={300} fps={30} width={1080} height={1920}
       defaultProps={{ handle: "@ai_maastaaru", tl: { id: "x", date: "", range: "", edition: "AI NEWS", lang: "en", frames: 300, segments: [] } }}
       calculateMetadata={({ props }) => ({ durationInFrames: Math.max(30, (props as unknown as { tl: NewsTimeline }).tl.frames) })} />
+    <Composition id="NewsYT" component={NewsYT as unknown as React.FC<Record<string, unknown>>} durationInFrames={300} fps={30} width={1920} height={1080}
+      defaultProps={{ tl: { id: "x", date: "", range: "", edition: "AI NEWS", lang: "en", frames: 300, segments: [] } }}
+      calculateMetadata={({ props }) => ({ durationInFrames: Math.max(120, ytDuration((props as unknown as { tl: NewsTimeline }).tl)) })} />
     <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     {([
