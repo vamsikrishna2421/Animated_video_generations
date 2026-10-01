@@ -81,3 +81,8 @@ Applied in v7: teacher-only narration (plus one commentator cameo for the last b
 
 - English (free Mary voice) felt too slow at tempo 1.0: English specs use `tempo` 1.12 and `maxgap` 0.4, keeping `gap` 0.5 between sentences. Pronunciation fixes live in `EN_FIX` (A.I., L.L.M., M.C.P., HITEC City → "High-tech City").
 - Approved (Telugu page): promo v2 (`out/telugu_page/00_promo_insta_te.mp4`, "nice") and intro (`out/telugu_page/01_intro_insta_te.mp4`, "very nice"): energetic Kiran narration, English visuals, Drake meme, level-up intro. Use them as the template.
+
+## Brand kit (motion graphics + templates)
+- See `series/BRAND_KIT.md`. Reusable stings, follow/subscribe outros, karaoke captions and scene templates live in `video/src/brand/`; `pipeline/render_brand.sh` renders them to `out/brand/`.
+- Reels open on the hook, never on the logo. End with `out/brand/follow_outro.mp4` (Telugu page: `follow_outro_te.mp4`). YouTube: cold open, then `sting_yt`, content, `subscribe_yt`.
+- Every final render is loudness-normalised with `pipeline/loudnorm.py` (-14 LUFS).
