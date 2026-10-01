@@ -22,7 +22,7 @@ from reel_build import stretch, tighten, voiced_spans  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 FPS = 30
-TEMPO = {"en": 1.12, "te": 1.0}  # Telugu narrator already gets +10% in radio()
+TEMPO = {"en": 1.18, "te": 1.0}  # Telugu narrator already gets +10% in radio()
 
 
 def take(text, lang, out_dir):
@@ -76,8 +76,8 @@ def build(spec_path, lang="en"):
         a, sr = take(seg[key], lang, out_dir)
         f = out_dir / f"{name}.wav"
         sf.write(f, a.astype(np.float32), sr)
-        ld = lead.get(name, 12)  # story: room for the cut + headline before the voice
-        frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, 16)
+        ld = lead.get(name, 8)  # story: room for the cut + headline before the voice
+        frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, 10)
         words = word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):
