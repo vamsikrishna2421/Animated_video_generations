@@ -72,6 +72,20 @@ def sentences(text):
 EN_FIX = [(r"\bHITEC City\b", "High-tech City"), (r"\bChatGPT\b", "Chat G.P.T."), (r"\bGenAI\b", "Gen A.I."), (r"\bAI\b", "A.I."), (r"\bLLMs\b", "L.L.M.s"), (r"\bLLM\b", "L.L.M."), (r"\bMCP\b", "M.C.P.")]
 
 
+def chunks(s, limit=120):
+    """Split a long sentence at commas: the model is fastest and most reliable on short inputs."""
+    if len(s) <= limit:
+        return [s]
+    out, cur = [], ""
+    for piece in re.split(r"(?<=,)\s+", s):
+        if cur and len(cur) + len(piece) > limit:
+            out.append(cur)
+            cur = piece
+        else:
+            cur = f"{cur} {piece}".strip()
+    return out + ([cur] if cur else [])
+
+
 def say(lang, text, out: Path, voice=None, pause=0.35):
     """Synthesize sentence by sentence (the model is best on short inputs) and join with short pauses."""
     if lang == "en":
@@ -82,11 +96,13 @@ def say(lang, text, out: Path, voice=None, pause=0.35):
     desc = m["dtok"](voice or VOICES[lang], return_tensors="pt")
     sr = m["model"].config.sampling_rate
     parts = []
-    for s in sentences(text):
+    for s in [c for x in sentences(text) for c in chunks(x)]:
         p = m["tok"](s, return_tensors="pt")
+        # Cap the length (~86 audio frames per second): a long input can otherwise run on to the model's maximum.
+        cap = int(86 * (len(s) / 9 + 2.5))
         with torch.no_grad():
             a = m["model"].generate(input_ids=desc.input_ids, attention_mask=desc.attention_mask,
-                                    prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
+                                    prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask, max_new_tokens=cap)
         parts += [np.atleast_1d(a.cpu().numpy().squeeze()), np.zeros(int(pause * sr))]
     out.parent.mkdir(parents=True, exist_ok=True)
     sf.write(out, np.concatenate(parts).astype(np.float32), sr)
