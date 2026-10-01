@@ -34,7 +34,7 @@ export const SearchHook: React.FC<{ segs: Seg[]; label?: string; start?: number;
   const enter = enterAt ?? times[times.length - 1] + 12;
   const pulse = interpolate(f, [enter, enter + 4, enter + 14], [1, 1.035, 1], cl);
   const rise = prog(f, enter + 4, enter + 20);
-  const inS = pop(f, 0, 14);
+  const inS = pop(f, -10, 14); // already on screen at frame 0: the first frame of a reel is its thumbnail
   return (
     <AbsoluteFill>
       <Aurora dark={dark} />
