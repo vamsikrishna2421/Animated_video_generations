@@ -1,0 +1,146 @@
+{
+ "id": "spot-phonon2",
+ "date": "01 OCT 2026",
+ "range": "FERMION RESEARCH",
+ "edition": "AI SPOTLIGHT",
+ "kicker": "AI SPOTLIGHT",
+ "title": "PHONON-2",
+ "recap": "PHONON-2 IN 4 POINTS",
+ "hook": {
+  "lines": [
+   [
+    "Beats Whisper",
+    "."
+   ],
+   [
+    "At ",
+    "1/10",
+    " the size."
+   ]
+  ],
+  "text": "This tiny free model beats OpenAI's Whisper at speech to text, and it's ten times smaller. Here's Phonon-2.",
+  "tts": "This tiny, free model beats Open A.I.'s Whisper at speech to text, and it is ten times smaller. Here is Phonon two."
+ },
+ "stories": [
+  {
+   "org": "FERMION RESEARCH",
+   "accent": "#F472B6",
+   "tag": "WHAT",
+   "headline": [
+    "A 164 MB",
+    "speech model"
+   ],
+   "text": "Phonon-2 turns English speech into text. The whole model is a one hundred sixty-four megabyte download, smaller than most phone games.",
+   "tts": "Phonon two turns English speech into text. The whole model is a one hundred sixty four megabyte download, smaller than most phone games.",
+   "cards": [
+    {
+     "k": "TASK",
+     "v": "Speech → text (English)",
+     "at": 2
+    },
+    {
+     "k": "SIZE",
+     "v": "164 MB",
+     "at": 10
+    },
+    {
+     "k": "FOR SCALE",
+     "v": "Smaller than most phone games",
+     "at": 16
+    }
+   ],
+   "sources": "Fermion Research (Hugging Face)"
+  },
+  {
+   "org": "BENCHMARK",
+   "accent": "#22C55E",
+   "tag": "ACCURACY",
+   "headline": [
+    "More accurate than",
+    "Whisper large turbo"
+   ],
+   "text": "On the Open ASR Leaderboard it makes five point two errors per hundred words. Whisper large turbo makes six point six, at about ten times the size.",
+   "tts": "On the Open A.S.R. leaderboard, it makes five point two errors per hundred words. Whisper large turbo makes six point six, at about ten times the size.",
+   "cards": [
+    {
+     "k": "PHONON-2",
+     "v": "5.21% word error",
+     "at": 7
+    },
+    {
+     "k": "WHISPER LARGE TURBO",
+     "v": "6.58% word error",
+     "at": 14
+    },
+    {
+     "k": "SIZE",
+     "v": "164 MB vs 1,618 MB",
+     "at": 21
+    }
+   ],
+   "sources": "Fermion Research (Hugging Face)"
+  },
+  {
+   "org": "SPEED",
+   "accent": "#38BDF8",
+   "tag": "ON A LAPTOP",
+   "headline": [
+    "1 hour of audio",
+    "in 20 seconds"
+   ],
+   "text": "It transcribes an hour of audio in about twenty seconds on a MacBook Air. No cloud, no per-minute fees, and your audio never leaves your device.",
+   "tts": "It transcribes an hour of audio in about twenty seconds, on a MacBook Air. No cloud, no per minute fees, and your audio never leaves your device.",
+   "cards": [
+    {
+     "k": "M5 MACBOOK AIR",
+     "v": "1 hour → ~20 s",
+     "at": 4
+    },
+    {
+     "k": "COST",
+     "v": "No per-minute fees",
+     "at": 16
+    },
+    {
+     "k": "PRIVACY",
+     "v": "Runs fully offline",
+     "at": 21
+    }
+   ],
+   "sources": "Fermion Research (Hugging Face)"
+  },
+  {
+   "org": "USE CASES",
+   "accent": "#F59E0B",
+   "tag": "REAL WORLD",
+   "headline": [
+    "Free subtitles,",
+    "notes, dictation"
+   ],
+   "text": "Use it for meeting notes, video subtitles, voice typing and podcast transcripts. It's open, under a CC BY licence, so you can build on it with credit.",
+   "tts": "Use it for meeting notes, video subtitles, voice typing, and podcast transcripts. It is open, under a C.C. B.Y. licence, so you can build on it, with credit.",
+   "cards": [
+    {
+     "k": "WORK",
+     "v": "Meeting notes",
+     "at": 4
+    },
+    {
+     "k": "CREATORS",
+     "v": "Subtitles · podcast transcripts",
+     "at": 7
+    },
+    {
+     "k": "LICENCE",
+     "v": "CC BY 4.0 (open)",
+     "at": 18
+    }
+   ],
+   "sources": "Fermion Research (Hugging Face)"
+  }
+ ],
+ "outro": {
+  "text": "Would you use this? Tell us in the comments, and follow AI Maastaaru for AI news, explained simply.",
+  "tts": "Would you use this? Tell us in the comments. And follow A.I. Maastaaru, for A.I. news, explained simply."
+ }
+}

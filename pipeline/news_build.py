@@ -70,7 +70,7 @@ def build(spec_path, lang="en"):
     out_dir.mkdir(parents=True, exist_ok=True)
     key = "tts" if lang == "en" else "tts_te"
     segs = [("hook", spec["hook"])] + [(f"story{i + 1}", s) for i, s in enumerate(spec["stories"])] + [("outro", spec["outro"])]
-    timeline = {**{k: spec[k] for k in ("id", "date", "range", "edition")}, "lang": lang, "segments": []}
+    timeline = {**{k: spec[k] for k in ("id", "date", "range", "edition")}, **{k: spec[k] for k in ("kicker", "title", "recap") if k in spec}, "lang": lang, "segments": []}
     lead, tail = {"hook": 4, "outro": 6}, {"hook": 14, "outro": 150}
     for name, seg in segs:
         a, sr = take(seg[key], lang, out_dir)

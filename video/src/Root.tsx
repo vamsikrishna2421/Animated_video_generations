@@ -23,6 +23,7 @@ import { CompareProps, CompareReel, compareDuration } from "./reel/Compare";
 import { BrandShowreel, CaptionsDemo, FollowOutro, SHOWREEL_LEN, SubscribeOutro } from "./brand/Showreel";
 import ep00v2Timeline from "./reel/timelines/ep00v2.json";
 import { LogoSting } from "./brand/Logo";
+import { NewsReel, NewsTimeline } from "./news/NewsReel";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 
@@ -80,6 +81,9 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Brand-Follow-Te" component={FollowOutro as unknown as React.FC<Record<string, unknown>>} durationInFrames={120} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru_telugu", tagline: "AI, explained in Telugu." }} />
     <Composition id="Brand-Captions" component={CaptionsDemo as unknown as React.FC<Record<string, unknown>>} durationInFrames={ep00v2Timeline.scenes[0].lines[0].frames + 10} fps={30} width={1080} height={1920} defaultProps={{ audio: ep00v2Timeline.scenes[0].lines[0].audio, words: ep00v2Timeline.scenes[0].lines[0].words, handle: "@ai_maastaaru" }} />
     <Composition id="Brand-Subscribe" component={SubscribeOutro as unknown as React.FC<Record<string, unknown>>} durationInFrames={90} fps={30} width={1920} height={1080} defaultProps={{ handle: "AI Maastaaru" }} />
+    <Composition id="NewsReel" component={NewsReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={300} fps={30} width={1080} height={1920}
+      defaultProps={{ handle: "@ai_maastaaru", tl: { id: "x", date: "", range: "", edition: "AI NEWS", lang: "en", frames: 300, segments: [] } }}
+      calculateMetadata={({ props }) => ({ durationInFrames: Math.max(30, (props as unknown as { tl: NewsTimeline }).tl.frames) })} />
     <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     {([

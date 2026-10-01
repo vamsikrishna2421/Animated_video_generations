@@ -1,0 +1,147 @@
+{
+ "id": "spot-jev",
+ "date": "01 OCT 2026",
+ "range": "TYPESAFE AI · JEV",
+ "edition": "AI SPOTLIGHT",
+ "kicker": "AI SPOTLIGHT",
+ "title": "JEV",
+ "recap": "JEV IN 4 POINTS",
+ "hook": {
+  "lines": [
+   [
+    "An AI that ",
+    "never chats",
+    "."
+   ],
+   [
+    "It just ",
+    "decides",
+    "."
+   ]
+  ],
+  "text": "This AI never writes a single sentence. It just makes decisions, fast and cheap. Here's Jev.",
+  "tts": "This A.I. never writes a single sentence. It just makes decisions, fast, and cheap. Here is Jev."
+ },
+ "stories": [
+  {
+   "org": "TYPESAFE AI",
+   "accent": "#38BDF8",
+   "tag": "WHAT",
+   "headline": [
+    "Answers, not",
+    "essays"
+   ],
+   "text": "Jev, from TypeSafe AI, doesn't generate text. It returns a typed answer with a probability, like route to billing, ninety two percent sure, that your software can use directly.",
+   "tts": "Jev, from Type Safe A.I., doesn't generate text. It returns a typed answer with a probability, like: route to billing, ninety two percent sure, that your software can use directly.",
+   "cards": [
+    {
+     "k": "OUTPUT",
+     "v": "A typed answer",
+     "at": 9
+    },
+    {
+     "k": "PLUS",
+     "v": "A probability",
+     "at": 14
+    },
+    {
+     "k": "EXAMPLE",
+     "v": "“billing” · 92% sure",
+     "at": 17
+    }
+   ],
+   "sources": "heise · TypeSafe AI"
+  },
+  {
+   "org": "TYPESAFE AI",
+   "accent": "#22C55E",
+   "tag": "SPEED + COST",
+   "headline": [
+    "Milliseconds,",
+    "fractions of a cent"
+   ],
+   "text": "It answers in seventy to five hundred milliseconds, and costs about four cents per million input tokens. TypeSafe says that's roughly one two-hundredth of a frontier model's cost.",
+   "tts": "It answers in seventy to five hundred milliseconds, and costs about four cents per million input tokens. Type Safe says that is roughly one two-hundredth of a frontier model's cost.",
+   "cards": [
+    {
+     "k": "LATENCY",
+     "v": "70-500 ms",
+     "at": 3
+    },
+    {
+     "k": "PRICE",
+     "v": "$0.042 per 1M input tokens",
+     "at": 11
+    },
+    {
+     "k": "TYPESAFE CLAIM",
+     "v": "~1/200 of frontier cost",
+     "at": 22
+    }
+   ],
+   "sources": "heise · TypeSafe AI"
+  },
+  {
+   "org": "USE CASES",
+   "accent": "#F59E0B",
+   "tag": "REAL WORLD",
+   "headline": [
+    "Where it",
+    "pays off"
+   ],
+   "text": "Think support tickets routed instantly, AI agents choosing the right tool, and guardrails checking other models in real time. Millions of small decisions, for almost nothing.",
+   "tts": "Think support tickets routed instantly, A.I. agents choosing the right tool, and guardrails checking other models in real time. Millions of small decisions, for almost nothing.",
+   "cards": [
+    {
+     "k": "SUPPORT",
+     "v": "Route tickets instantly",
+     "at": 1
+    },
+    {
+     "k": "AGENTS",
+     "v": "Pick the right tool",
+     "at": 5
+    },
+    {
+     "k": "SAFETY",
+     "v": "Real-time guardrails",
+     "at": 11
+    }
+   ],
+   "sources": "heise"
+  },
+  {
+   "org": "HONEST LIMITS",
+   "accent": "#F43F5E",
+   "tag": "KNOW THIS",
+   "headline": [
+    "Not a",
+    "chatbot"
+   ],
+   "text": "It needs a fixed set of possible answers, it struggles with counting and dates, and access is still a waitlist. It's a fast decision layer, not a replacement for ChatGPT.",
+   "tts": "It needs a fixed set of possible answers, it struggles with counting and dates, and access is still a waitlist. It is a fast decision layer, not a replacement for ChatGPT.",
+   "cards": [
+    {
+     "k": "NEEDS",
+     "v": "A fixed set of answers",
+     "at": 3
+    },
+    {
+     "k": "WEAK AT",
+     "v": "Counting, dates",
+     "at": 13
+    },
+    {
+     "k": "ACCESS",
+     "v": "Waitlist (early access)",
+     "at": 19
+    }
+   ],
+   "sources": "TypeSafe AI docs"
+  }
+ ],
+ "outro": {
+  "text": "Would you use this? Tell us in the comments, and follow AI Maastaaru for AI news, explained simply.",
+  "tts": "Would you use this? Tell us in the comments. And follow A.I. Maastaaru, for A.I. news, explained simply."
+ }
+}

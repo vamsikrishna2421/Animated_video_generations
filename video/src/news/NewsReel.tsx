@@ -14,7 +14,7 @@ type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][];
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[] };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string };
 const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 
@@ -100,16 +100,16 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
   );
 };
 
-const Hook: React.FC<{ seg: Seg; range: string }> = ({ seg, range }) => {
+const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string }> = ({ seg, range, kicker = "YOUR WEEK IN AI", title = "AI NEWS" }) => {
   const f = useCurrentFrame();
   // the last sentence ("Here's your AI news...") swaps to the title card
   const lastStart = seg.words.find((w, i) => i > 0 && /^here/i.test(w.w))?.s ?? seg.frames - 60;
-  const title = prog(f, lastStart - 4, lastStart + 8);
+  const tc = prog(f, lastStart - 4, lastStart + 8);
   const shake = f < 14 ? (14 - f) * 1.4 : 0;
   return (
     <AbsoluteFill>
       <Backdrop accent={B.rose} />
-      <AbsoluteFill style={{ justifyContent: "center", padding: "0 70px", opacity: 1 - title, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
+      <AbsoluteFill style={{ justifyContent: "center", padding: "0 70px", opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
         {(seg.lines ?? []).map((parts, li) => {
           const p = prog(f, 2 + li * 30, 16 + li * 30);
           return (
@@ -121,9 +121,9 @@ const Hook: React.FC<{ seg: Seg; range: string }> = ({ seg, range }) => {
           );
         })}
       </AbsoluteFill>
-      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: title, transform: `scale(${0.9 + 0.1 * title})` }}>
-        <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 34, letterSpacing: 8, color: B.rose }}>YOUR WEEK IN AI</div>
-        <div style={{ marginTop: 18, fontFamily: F.inter, fontWeight: 800, fontSize: 150, letterSpacing: -6, color: B.white, lineHeight: 1 }}>AI NEWS</div>
+      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: tc, transform: `scale(${0.9 + 0.1 * tc})` }}>
+        <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 34, letterSpacing: 8, color: B.rose }}>{kicker}</div>
+        <div style={{ marginTop: 18, fontFamily: F.inter, fontWeight: 800, fontSize: title.length > 8 ? 120 : 150, letterSpacing: -6, color: B.white, lineHeight: 1, textAlign: "center" }}>{title}</div>
         <div style={{ marginTop: 24, fontFamily: F.inter, fontWeight: 800, fontSize: 56, color: B.cyan }}>{range}</div>
       </AbsoluteFill>
       <Karaoke words={seg.words} bottom={300} size={86} max={3} />
@@ -131,7 +131,7 @@ const Hook: React.FC<{ seg: Seg; range: string }> = ({ seg, range }) => {
   );
 };
 
-const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string }> = ({ seg, stories, handle }) => {
+const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string; recap?: string }> = ({ seg, stories, handle, recap }) => {
   const f = useCurrentFrame();
   const followAt = seg.frames - FOLLOW_LEN;
   return (
@@ -139,7 +139,7 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string }> = ({ seg, st
       <Backdrop accent={B.violet} />
       {f < followAt && (
         <div style={{ position: "absolute", top: 240, left: 60, right: 60 }}>
-          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 6, color: B.cyan, marginBottom: 26 }}>THIS WEEK IN 7 STORIES</div>
+          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 6, color: B.cyan, marginBottom: 26 }}>{recap ?? `THIS WEEK IN ${stories.length} STORIES`}</div>
           {stories.map((s, i) => {
             const p = prog(f, 4 + i * 4, 16 + i * 4);
             return (
@@ -177,7 +177,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <BrandFonts />
       {tl.segments.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <Hook seg={s} range={tl.range} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
+          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
