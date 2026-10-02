@@ -1,0 +1,295 @@
+{
+ "id": "news-2026-10-02",
+ "date": "02 OCT 2026",
+ "range": "OCT 2",
+ "edition": "AI NEWS · 02",
+ "kicker": "TODAY IN AI",
+ "title": "AI NEWS",
+ "recap": "TODAY IN 7 STORIES",
+ "look": "broadcast",
+ "hook": {
+  "lines": [
+   [
+    "Meta's AI app beat ",
+    "ChatGPT's",
+    " record."
+   ],
+   [
+    "And a 14-person startup is worth ",
+    "$10B",
+    "."
+   ]
+  ],
+  "text": "Meta's new AI app just beat ChatGPT's download record. A fourteen-person startup is now worth ten billion dollars. And Washington renamed AI. Here's today's AI news.",
+  "tts": "Meta's new A.I. app just beat ChatGPT's download record. A fourteen person startup is now worth ten billion dollars. And Washington renamed A.I. Here is today's A.I. news.",
+  "tts_te": "మెటా కొత్త ఎ ఐ యాప్, చాట్ జి పి టి డౌన్ లోడ్ రికార్డ్ ని బద్దలు కొట్టింది. పధ్నాలుగు మంది ఉన్న ఒక స్టార్టప్ విలువ ఇప్పుడు పది బిలియన్ డాలర్లు. ఇంకా అమెరికా, ఎ ఐ పేరునే మార్చేసింది. ఇదిగో ఈ రోజు ఎ ఐ న్యూస్."
+ },
+ "stories": [
+  {
+   "org": "META",
+   "accent": "#3B82F6",
+   "tag": "APPS",
+   "headline": [
+    "Meta's Muse breaks",
+    "ChatGPT's record"
+   ],
+   "text": "Meta's AI agent app Muse crossed five million US downloads in just twenty-two days. That's faster than ChatGPT, which took fifty-six days, Grok at one hundred and three, and Claude at four hundred and ninety-two. Meta pushed it hard, with up to half of its in-house ad space.",
+   "tts_te": "మెటా కొత్త ఎ ఐ ఏజెంట్ యాప్ మ్యూజ్, అమెరికాలో కేవలం ఇరవై రెండు రోజుల్లో యాభై లక్షల డౌన్ లోడ్స్ దాటింది. చాట్ జి పి టి కి యాభై ఆరు రోజులు, గ్రోక్ కి నూట మూడు, క్లాడ్ కి నాలుగు వందల తొంభై రెండు రోజులు పట్టాయి. మెటా తన యాడ్ స్పేస్ లో సగం వరకు దీనికే వాడింది.",
+   "cards": [
+    {
+     "k": "MILESTONE",
+     "v": "5M US downloads",
+     "cue": "million"
+    },
+    {
+     "k": "MUSE",
+     "v": "22 days",
+     "cue": "twenty-two"
+    },
+    {
+     "k": "BOOSTED BY",
+     "v": "Up to half of Meta's ad space",
+     "cue": "half"
+    }
+   ],
+   "demo": {
+    "type": "bars",
+    "title": "DAYS TO 5M US DOWNLOADS",
+    "rows": [
+     {
+      "label": "Meta Muse",
+      "value": 22,
+      "show": "22 days",
+      "hi": true
+     },
+     {
+      "label": "ChatGPT",
+      "value": 56,
+      "show": "56 days"
+     },
+     {
+      "label": "Grok",
+      "value": 103,
+      "show": "103 days"
+     },
+     {
+      "label": "Claude",
+      "value": 492,
+      "show": "492 days"
+     }
+    ],
+    "note": "SENSOR TOWER"
+   },
+   "sources": "Sensor Tower via Forbes · Yahoo Tech",
+   "tts": "Meta's A.I. agent app Muse crossed five million U.S. downloads in just twenty-two days. That's faster than ChatGPT, which took fifty-six days, Grok at one hundred and three, and Claude at four hundred and ninety-two. Meta pushed it hard, with up to half of its in-house ad space."
+  },
+  {
+   "org": "DECISION MODELS",
+   "accent": "#38BDF8",
+   "tag": "MODELS",
+   "headline": [
+    "Tiny AI deciders",
+    "go open source"
+   ],
+   "text": "Remember Jev, the AI that decides instead of chatting? Now everyone wants one. Cloudflare open-sourced Clef, and AWS released Strands Decider 2B, which runs on a laptop. Cloudflare says Clef-flash answers in about thirty-nine milliseconds, more than ten times faster than Jev in its tests.",
+   "tts_te": "చాట్ చేయకుండా నిర్ణయాలు మాత్రమే తీసుకునే జెవ్ గుర్తుందా? ఇప్పుడు అందరూ అలాంటి మోడల్స్ తెస్తున్నారు. క్లౌడ్ ఫ్లేర్, క్లెఫ్ ని ఓపెన్ సోర్స్ చేసింది. ఎ డబ్ల్యూ ఎస్, ల్యాప్ టాప్ మీదే పనిచేసే స్ట్రాండ్స్ డిసైడర్ ని విడుదల చేసింది. క్లెఫ్ ఫ్లాష్ దాదాపు ముప్పై తొమ్మిది మిల్లీ సెకన్లలో సమాధానం ఇస్తుందని, జెవ్ కంటే పది రెట్లు వేగమని క్లౌడ్ ఫ్లేర్ చెబుతోంది.",
+   "cards": [
+    {
+     "k": "CLOUDFLARE",
+     "v": "Clef · Apache 2.0",
+     "cue": "Clef,"
+    },
+    {
+     "k": "AWS",
+     "v": "Strands Decider 2B",
+     "cue": "Strands"
+    },
+    {
+     "k": "CLOUDFLARE SAYS",
+     "v": "~39 ms",
+     "cue": "milliseconds"
+    }
+   ],
+   "demo": {
+    "type": "bars",
+    "title": "MEDIAN LATENCY · LOWER IS FASTER",
+    "rows": [
+     {
+      "label": "Clef-flash",
+      "value": 38.8,
+      "show": "38.8 ms",
+      "hi": true
+     },
+     {
+      "label": "Clef",
+      "value": 209.3,
+      "show": "209 ms"
+     },
+     {
+      "label": "Jev",
+      "value": 524.1,
+      "show": "524 ms"
+     }
+    ],
+    "note": "CLOUDFLARE'S OWN BENCHMARK, 43 EVALS"
+   },
+   "sources": "Cloudflare blog · The New Stack · MarkTechPost",
+   "tts": "Remember Jev, the A.I. that decides instead of chatting? Now everyone wants one. Cloudflare open-sourced Clef, and A.W.S. released Strands Decider two B, which runs on a laptop. Cloudflare says Clef flash answers in about thirty-nine milliseconds, more than ten times faster than Jev in its tests."
+  },
+  {
+   "org": "OPENAI",
+   "accent": "#F59E0B",
+   "tag": "SECURITY",
+   "headline": [
+    "OpenAI catches a",
+    "reasoning heist"
+   ],
+   "text": "OpenAI says people linked to Moonshot AI, the maker of Kimi, tried to extract its models' hidden reasoning, about sixteen thousand requests from more than four thousand accounts. The aim: train a rival model. OpenAI says its encryption held, banned the accounts, and shared what it found with other labs.",
+   "tts_te": "కిమీ ని తయారుచేసే మూన్ షాట్ ఎ ఐ కి సంబంధించిన వ్యక్తులు, తమ మోడల్స్ దాచిన రీజనింగ్ ని బయటకు తీయడానికి ప్రయత్నించారని ఓపెన్ ఎ ఐ చెప్పింది. నాలుగు వేలకు పైగా అకౌంట్స్ నుండి దాదాపు పదహారు వేల రిక్వెస్ట్స్ వచ్చాయి. లక్ష్యం, ఒక పోటీ మోడల్ ని ట్రైన్ చేయడం. తమ ఎన్ క్రిప్షన్ సురక్షితంగా ఉందని, అకౌంట్స్ ని బ్యాన్ చేశామని ఓపెన్ ఎ ఐ చెప్పింది.",
+   "cards": [
+    {
+     "k": "LINKED TO",
+     "v": "Moonshot AI (Kimi)",
+     "cue": "Moonshot"
+    },
+    {
+     "k": "SCALE",
+     "v": "16,000 requests · 4,000+ accounts",
+     "cue": "sixteen"
+    },
+    {
+     "k": "OUTCOME",
+     "v": "Encryption held, accounts banned",
+     "cue": "banned"
+    }
+   ],
+   "sources": "The Next Web · Mixed · InfoSec Today",
+   "tts": "Open A.I. says people linked to Moonshot A.I., the maker of Kimi, tried to extract its models' hidden reasoning, about sixteen thousand requests from more than four thousand accounts. The aim: train a rival model. Open A.I. says its encryption held, banned the accounts, and shared what it found with other labs."
+  },
+  {
+   "org": "AMD",
+   "accent": "#F43F5E",
+   "tag": "DEALS",
+   "headline": [
+    "AMD buys World Labs",
+    "for $8.2 billion"
+   ],
+   "text": "AMD is buying Fei-Fei Li's World Labs for about eight point two billion dollars in stock. World Labs builds AI that generates interactive 3D worlds, useful for training robots. Fei-Fei Li will become AMD's chief scientist. Seven months ago, World Labs was valued at five billion.",
+   "tts_te": "ఫే ఫే లీ స్థాపించిన వరల్డ్ ల్యాబ్స్ ని, ఎ ఎం డి దాదాపు ఎనిమిది పాయింట్ రెండు బిలియన్ డాలర్లకు కొనుగోలు చేస్తోంది. వరల్డ్ ల్యాబ్స్, రోబోట్స్ ట్రైనింగ్ కి పనికొచ్చే త్రీ డి ప్రపంచాల్ని సృష్టించే ఎ ఐ ని తయారు చేస్తుంది. ఫే ఫే లీ, ఎ ఎం డి చీఫ్ సైంటిస్ట్ అవుతారు.",
+   "cards": [
+    {
+     "k": "DEAL",
+     "v": "$8.2B, all stock",
+     "cue": "billion"
+    },
+    {
+     "k": "WORLD LABS BUILDS",
+     "v": "Interactive 3D worlds",
+     "cue": "3D"
+    },
+    {
+     "k": "FEI-FEI LI",
+     "v": "AMD chief scientist",
+     "cue": "scientist."
+    }
+   ],
+   "sources": "AMD · CNBC · Fortune",
+   "tts": "A.M.D. is buying Fay Fay Li's World Labs for about eight point two billion dollars in stock. World Labs builds A.I. that generates interactive 3D worlds, useful for training robots. Fay Fay Li will become A.M.D.'s chief scientist. Seven months ago, World Labs was valued at five billion."
+  },
+  {
+   "org": "INSTINCT",
+   "accent": "#A3E635",
+   "tag": "AGENTS",
+   "headline": [
+    "A 14-person startup",
+    "worth $10 billion"
+   ],
+   "text": "Personal AI agent Instinct raised one billion dollars at a ten billion dollar valuation, just thirty-three days after it was valued at two point five billion. It books trips, orders groceries and cancels subscriptions for you. It has only fourteen employees, and it's still invite-only.",
+   "tts_te": "పర్సనల్ ఎ ఐ ఏజెంట్ ఇన్ స్టింక్ట్, పది బిలియన్ డాలర్ల వాల్యుయేషన్ తో ఒక బిలియన్ డాలర్లు సేకరించింది. ముప్పై మూడు రోజుల క్రితమే దాని విలువ రెండున్నర బిలియన్స్. ఇది మీ కోసం ట్రిప్స్ బుక్ చేస్తుంది, గ్రాసరీస్ ఆర్డర్ చేస్తుంది, సబ్ స్క్రిప్షన్స్ క్యాన్సిల్ చేస్తుంది. కంపెనీలో కేవలం పధ్నాలుగు మంది ఉద్యోగులే.",
+   "cards": [
+    {
+     "k": "RAISED",
+     "v": "$1B at $10B valuation",
+     "cue": "one"
+    },
+    {
+     "k": "33 DAYS AGO",
+     "v": "Valued at $2.5B",
+     "cue": "thirty-three"
+    },
+    {
+     "k": "TEAM",
+     "v": "14 employees",
+     "cue": "fourteen"
+    }
+   ],
+   "sources": "Yahoo Finance · PYMNTS · TFN",
+   "tts": "Personal A.I. agent Instinct raised one billion dollars at a ten billion dollar valuation, just thirty-three days after it was valued at two point five billion. It books trips, orders groceries and cancels subscriptions for you. It has only fourteen employees, and it's still invite-only."
+  },
+  {
+   "org": "ARMADIN",
+   "accent": "#8B5CF6",
+   "tag": "SECURITY",
+   "headline": [
+    "AI hackers that",
+    "attack you first"
+   ],
+   "text": "Armadin, the new startup from Mandiant founder Kevin Mandia, raised two hundred fifty-five million dollars at a two point five billion valuation. It sends swarms of AI agents to attack a company's own network, the way real hackers would, so holes get fixed first.",
+   "tts_te": "మాండియంట్ వ్యవస్థాపకుడు కెవిన్ మాండియా కొత్త స్టార్టప్ ఆర్మడిన్, రెండున్నర బిలియన్ డాలర్ల వాల్యుయేషన్ తో రెండు వందల యాభై ఐదు మిలియన్ డాలర్లు సేకరించింది. ఇది నిజమైన హ్యాకర్స్ లాగా, ఎ ఐ ఏజెంట్స్ గుంపుని కంపెనీ నెట్ వర్క్ మీదే దాడికి పంపుతుంది, లోపాల్ని ముందే సరిచేయడానికి.",
+   "cards": [
+    {
+     "k": "FOUNDER",
+     "v": "Kevin Mandia (Mandiant)",
+     "cue": "Mandia,"
+    },
+    {
+     "k": "RAISED",
+     "v": "$255.5M at $2.5B",
+     "cue": "million"
+    },
+    {
+     "k": "HOW",
+     "v": "AI agent swarms attack first",
+     "cue": "swarms"
+    }
+   ],
+   "sources": "SecurityWeek · Crypto Briefing",
+   "tts": "Armadin, the new startup from Mandiant founder Kevin Mandia, raised two hundred fifty-five million dollars at a two point five billion valuation. It sends swarms of A.I. agents to attack a company's own network, the way real hackers would, so holes get fixed first."
+  },
+  {
+   "org": "WHITE HOUSE",
+   "accent": "#22D3EE",
+   "tag": "POLICY",
+   "headline": [
+    "Washington renames",
+    "AI to “SI”"
+   ],
+   "text": "And a new executive order tells US federal agencies to stop saying artificial intelligence. Official documents must now say super intelligence, or SI. The same order launched America.gov, a single portal for government services.",
+   "tts_te": "ఇక, అమెరికా కొత్త ఎగ్జిక్యూటివ్ ఆర్డర్ ప్రకారం, ఫెడరల్ డాక్యుమెంట్స్ లో ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ అనకూడదు. ఇకపై సూపర్ ఇంటెలిజెన్స్, లేదా ఎస్ ఐ అనాలి. అదే ఆర్డర్ తో, ప్రభుత్వ సేవల కోసం అమెరికా డాట్ గవ్ అనే పోర్టల్ కూడా మొదలైంది.",
+   "cards": [
+    {
+     "k": "APPLIES TO",
+     "v": "Federal documents",
+     "cue": "documents"
+    },
+    {
+     "k": "ORDER",
+     "v": "“AI” becomes “Super Intelligence”",
+     "cue": "intelligence,"
+    },
+    {
+     "k": "ALSO",
+     "v": "America.gov portal",
+     "cue": "America.gov,"
+    }
+   ],
+   "sources": "The Register · IAPP · Digital Watch",
+   "tts": "And a new executive order tells U.S. federal agencies to stop saying artificial intelligence. Official documents must now say super intelligence, or SI. The same order launched America.gov, a single portal for government services."
+  }
+ ],
+ "outro": {
+  "text": "That's today's AI news. Which story surprised you most? Tell us in the comments, and follow AI Maastaaru for daily AI news, explained simply.",
+  "tts": "That's today's A.I. news. Which story surprised you most? Tell us in the comments. And follow A.I. Maastaaru, for daily A.I. news, explained simply.",
+  "tts_te": "ఇదీ ఈ రోజు ఎ ఐ న్యూస్. మీకు ఏ వార్త ఎక్కువ ఆశ్చర్యం కలిగించింది? కామెంట్ లో చెప్పండి. రోజూ ఎ ఐ న్యూస్ కోసం, ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
+ }
+}
