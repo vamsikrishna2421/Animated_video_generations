@@ -258,11 +258,57 @@ def loop(bars=8):
     return norm(y, 0.85)
 
 
+def news_theme(bars=16):
+    """Broadcast-news bed, 120 BPM, D minor: driving 8th-note pulse bass, 16th staccato synth ostinato,
+    timpani + toms on phrase starts, ride ticks, low string pad, a riser into every 8th bar. Seamless loop."""
+    beats = bars * 4
+    n = int((beats + 4) * BEAT * SR)
+    out = np.zeros(n)
+    prog = [(50, [62, 65, 69]), (46, [62, 65, 70]), (48, [60, 64, 67]), (45, [61, 64, 69])]  # Dm Bb C A
+    for b in range(beats + 4):
+        at = b * BEAT
+        bar = (b // 4) % len(prog)
+        root, chord = prog[bar]
+        for k in range(2):  # pulse bass in 8ths
+            t = t_(BEAT * 0.42)
+            x = (saw(hz(root - 12), BEAT * 0.42) * 0.5 + np.sin(2 * np.pi * hz(root - 12) * t)) * np.exp(-t * 7)
+            place(out, lp(x, 600) * 0.32, at + k * BEAT / 2)
+        for k in range(4):  # staccato ostinato
+            m = chord[[0, 2, 1, 2][k]] + (12 if (b % 4 == 3 and k > 1) else 0)
+            t = t_(0.11)
+            x = (saw(hz(m), 0.11) * 0.4 + np.sin(2 * np.pi * hz(m) * t)) * np.exp(-t * 30)
+            place(out, lp(x, 3800) * 0.09, at + k * BEAT / 4)
+        if b % 4 == 0:  # string pad + ride accent
+            x = sum(saw(hz(m - 12), 4 * BEAT, d) for m in chord for d in (-0.003, 0.003))
+            env = np.minimum(1, t_(4 * BEAT) / 0.25) * np.minimum(1, (4 * BEAT - t_(4 * BEAT)) / 0.3)
+            place(out, lp(x, 1200) * env * 0.035, at)
+        if b % 8 == 0:  # timpani hit on phrase starts
+            t = t_(1.0)
+            x = np.sin(2 * np.pi * (hz(root - 24) * (1 + 0.4 * np.exp(-t * 18))) * t) * np.exp(-t * 3.2)
+            x += 0.25 * bp(rng.standard_normal(len(t)), 80, 600) * np.exp(-t * 14)
+            place(out, x * 0.55, at)
+        if b % 2 == 1:
+            place(out, clap() * 0.35, at)
+        place(out, hat() * 0.5, at + BEAT / 2)
+        if b % 32 == 30:  # tom fill into the next phrase
+            for k, f0 in enumerate((180, 150, 120, 95)):
+                t = t_(0.22)
+                place(out, np.sin(2 * np.pi * f0 * (1 + 0.5 * np.exp(-t * 25)) * t) * np.exp(-t * 12) * 0.35, at + k * BEAT / 4)
+        if b % 32 == 28:
+            place(out, riser(4 * BEAT) * 0.22, at)
+    L = int(beats * BEAT * SR)
+    xf = int(0.05 * SR)
+    y = out[:L].copy()
+    y[:xf] = y[:xf] * np.linspace(0, 1, xf) + out[L:L + xf] * np.linspace(1, 0, xf)
+    y = np.tanh(y * 1.3) / np.tanh(1.3)
+    return norm(y, 0.85)
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     items = {"sting": sting(), "whoosh": whoosh(), "pop": pop(), "click": click(), "enter": enter(), "stamp": stamp(),
              "tick": tick(), "swipe": swipe(), "chime": chime(), "heart": heart(), "riser": riser(), "impact": impact(),
-             "bell": bell(), "bed_120": music(72, drop=56, breakdown=(48, 56)), "loop_120": loop()}
+             "bell": bell(), "bed_120": music(72, drop=56, breakdown=(48, 56)), "loop_120": loop(), "news_120": news_theme()}
     for i in range(6):
         items[f"type{i}"] = key(i)
     for k, v in items.items():

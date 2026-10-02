@@ -14,9 +14,9 @@ type Card = { k: string; v: string; f: number };
 type Demo = { type: "bars" | "route" | "montage" | "chat"; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
-  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo;
+  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string;
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string };
 const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 
@@ -207,6 +207,103 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
   );
 };
 
+
+/** Broadcast lower-third: label + headline band + scrolling ticker of the other stories. */
+const LowerThird: React.FC<{ label: string; headline: string; ticker: string; accent: string }> = ({ label, headline, ticker, accent }) => {
+  const f = useCurrentFrame();
+  const s = prog(f, 6, 18);
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, transform: `translateY(${(1 - s) * 100}%)` }}>
+      <div style={{ display: "flex", alignItems: "stretch", marginLeft: 22 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, background: B.rose, color: B.white, fontFamily: F.inter, fontWeight: 800, fontSize: 22, letterSpacing: 2, padding: "6px 16px", borderRadius: "10px 10px 0 0" }}>
+          <span style={{ width: 11, height: 11, borderRadius: 6, background: B.white, opacity: f % 30 < 18 ? 1 : 0.3 }} />{label}
+        </div>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", background: "linear-gradient(90deg, #FFFFFF, #E9EEFF)", padding: "12px 22px", borderLeft: `12px solid ${accent}` }}>
+        <div style={{ fontFamily: F.archivo, fontSize: headline.length > 30 ? 30 : headline.length > 24 ? 34 : 40, lineHeight: 1.05, color: B.ink, textTransform: "uppercase", whiteSpace: "nowrap", overflow: "hidden", clipPath: `inset(0 ${(1 - prog(f, 10, 26)) * 100}% 0 0)` }}>{headline}</div>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", height: 46, background: "#0A1030", overflow: "hidden" }}>
+        <div style={{ flexShrink: 0, height: "100%", padding: "0 16px", display: "flex", alignItems: "center", background: accent, color: B.night, fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, zIndex: 1 }}>AI MAASTAARU</div>
+        <div style={{ whiteSpace: "nowrap", fontFamily: F.inter, fontWeight: 600, fontSize: 24, color: "rgba(255,255,255,0.9)", transform: `translateX(${900 - f * 5}px)` }}>
+          {Array.from({ length: 3 }, () => ticker).join("   •   ")}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/** Broadcast story layout: numbered heading banner, dek, framed "on-air" panel with lower third, stat chips. */
+const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: string }> = ({ seg, n, total, ticker }) => {
+  const f = useCurrentFrame();
+  const accent = seg.accent ?? B.cyan;
+  const cards = seg.cards ?? [];
+  const live = Math.max(0, cards.filter((c) => f >= c.f - 3).length - 1);
+  const shown = cards.filter((c) => f >= c.f - 3);
+  const ban = prog(f, 0, 14);
+  const words = seg.words.map((w) => w.w).join(" ");
+  const dek = (seg.dek as string | undefined) ?? (words.match(/^.*?[.!?](\s|$)/)?.[0] ?? words).slice(0, 140);
+  const cur = cards[live];
+  const curIn = cur ? pop(f, cur.f - 3, 12) : 0;
+  return (
+    <AbsoluteFill>
+      <Backdrop accent={accent} />
+      {/* heading banner */}
+      <div style={{ position: "absolute", top: 210, left: 56, right: 56, display: "flex", gap: 26, opacity: ban, transform: `translateY(${(1 - ban) * -24}px)` }}>
+        <div style={{ fontFamily: F.playfair, fontStyle: "italic", fontWeight: 900, fontSize: 170, lineHeight: 0.9, color: accent }}>{String(n).padStart(2, "0")}</div>
+        <div style={{ flex: 1, paddingTop: 6 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, fontFamily: F.mono, fontWeight: 700, fontSize: 24, letterSpacing: 2, color: "rgba(255,255,255,0.75)" }}>
+            <span style={{ width: 34, height: 34, borderRadius: 17, background: accent, color: B.night, display: "inline-flex", alignItems: "center", justifyContent: "center", fontFamily: F.inter, fontWeight: 800, fontSize: 18 }}>{(seg.org ?? "?")[0]}</span>
+            {seg.org} · {seg.tag}
+            <span style={{ marginLeft: "auto", color: "rgba(255,255,255,0.45)" }}>{String(n).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+          </div>
+          {(seg.headline ?? []).map((line, i) => {
+            const p = prog(f, 4 + i * 5, 18 + i * 5);
+            return (
+              <div key={i} style={{ overflow: "hidden" }}>
+                <div style={{ transform: `translateY(${(1 - p) * 110}%)`, fontFamily: F.archivo, fontSize: 70, letterSpacing: -2, lineHeight: 1.04, color: B.white }}>{line}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div style={{ position: "absolute", top: 455, left: 60, right: 60, fontFamily: F.inter, fontWeight: 600, fontSize: 34, lineHeight: 1.3, color: "rgba(255,255,255,0.82)", opacity: prog(f, 14, 26), display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dek}</div>
+      <div style={{ position: "absolute", top: 600, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, color: "rgba(255,255,255,0.45)", opacity: prog(f, 20, 32) }}>SOURCES: {seg.sources?.toUpperCase()}</div>
+      {seg.demo ? (
+        <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />
+      ) : (
+        <div style={{ position: "absolute", top: 650, left: 50, right: 50, height: 640, borderRadius: 26, overflow: "hidden", border: "2px solid rgba(255,255,255,0.1)", background: `radial-gradient(ellipse at 30% 30%, ${accent}55, #070A18 70%)`, opacity: prog(f, 4, 16), transform: `scale(${0.96 + 0.04 * prog(f, 4, 16)})` }}>
+          <AbsoluteFill style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize: "48px 48px", backgroundPosition: `0 ${f * 0.8}px` }} />
+          <div style={{ position: "absolute", top: 30, left: 34, fontFamily: F.mono, fontWeight: 700, fontSize: 22, letterSpacing: 4, color: accent }}>{seg.org}</div>
+          {!shown.length && (
+            <div style={{ position: "absolute", top: 150, left: 40, right: 40, fontFamily: F.archivo, fontSize: 120, lineHeight: 1, color: "rgba(255,255,255,0.12)", opacity: prog(f, 6, 18) }}>{seg.org}</div>
+          )}
+          {shown.length > 0 && cur && (
+            <div style={{ position: "absolute", top: 120, left: 40, right: 40, transform: `translateY(${(1 - curIn) * 50}px)`, opacity: interpolate(curIn, [0, 0.3], [0, 1], cl) }}>
+              <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 4, color: accent }}>{cur.k}</div>
+              <div style={{ marginTop: 14, fontFamily: F.archivo, fontSize: cur.v.length > 26 ? 66 : 84, lineHeight: 1.05, color: B.white }}>{cur.v}</div>
+            </div>
+          )}
+          <LowerThird label={seg.tag ?? "NEWS"} headline={(seg.headline ?? []).join(" ")} ticker={ticker} accent={accent} />
+        </div>
+      )}
+      {false && (
+        <div style={{ position: "absolute", top: 1316, left: 56, right: 56, display: "flex", flexWrap: "wrap", gap: 14 }}>
+          {shown.map((c, i) => {
+            const s = pop(f, c.f - 3, 13);
+            return (
+              <div key={i} style={{ display: "flex", alignItems: "baseline", gap: 12, padding: "12px 20px", borderRadius: 16, background: i === live ? `${accent}26` : "rgba(255,255,255,0.06)", border: `2px solid ${i === live ? accent : "rgba(255,255,255,0.08)"}`, transform: `scale(${s})` }}>
+                <span style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 17, letterSpacing: 2, color: accent }}>{c.k}</span>
+                <span style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 28, color: B.white }}>{c.v}</span>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      <Karaoke words={seg.words} bottom={300} size={80} max={3} />
+    </AbsoluteFill>
+  );
+};
+
 const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string }> = ({ seg, range, kicker = "YOUR WEEK IN AI", title = "AI NEWS" }) => {
   const f = useCurrentFrame();
   // the last sentence ("Here's your AI news...") swaps to the title card
@@ -284,7 +381,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <BrandFonts />
       {tl.segments.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
+          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} ticker={stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
@@ -294,7 +391,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {starts.slice(1).map((s) => <Wipe key={s} at={s} />)}
       <Grain opacity={0.06} />
       {/* music + SFX */}
-      <Audio src={A("loop_120")} volume={(fr) => (fr >= followAbs ? 0.35 : 0.12)} loop />
+      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} volume={(fr) => (fr >= followAbs ? 0.35 : tl.look === "broadcast" ? 0.15 : 0.12)} loop />
       {starts.slice(1).map((s) => <Sequence key={`w${s}`} from={s - 8} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.4} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[tl.segments.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.35} /></Sequence>
