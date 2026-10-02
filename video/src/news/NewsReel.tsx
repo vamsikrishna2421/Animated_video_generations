@@ -260,7 +260,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
             const p = prog(f, 4 + i * 5, 18 + i * 5);
             return (
               <div key={i} style={{ overflow: "hidden" }}>
-                <div style={{ transform: `translateY(${(1 - p) * 110}%)`, fontFamily: F.archivo, fontSize: 70, letterSpacing: -2, lineHeight: 1.04, color: B.white }}>{line}</div>
+                <div style={{ transform: `translateY(${(1 - p) * 110}%)`, fontFamily: F.archivo, fontSize: Math.max(...(seg.headline ?? [""]).map((l) => l.length)) > 19 ? 52 : Math.max(...(seg.headline ?? [""]).map((l) => l.length)) > 16 ? 60 : 70, letterSpacing: -2, lineHeight: 1.04, color: B.white, whiteSpace: "nowrap" }}>{line}</div>
               </div>
             );
           })}
