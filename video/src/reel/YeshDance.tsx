@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame } from "remotion";
+import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
 import { easeInOut, FPose, Fumble, idle, legIK, mix } from "./Fumble";
 import duet2 from "./mocap/yesh_duet2.json";
@@ -109,3 +109,15 @@ export const YeshDance: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+/** Private check: the reference footage beside the animation (never published; the clip is git-ignored). */
+export const YeshCompare: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000", flexDirection: "row" }}>
+    <div style={{ width: 720, height: 1280, display: "flex", alignItems: "center", overflow: "hidden" }}>
+      <OffthreadVideo src={staticFile("mocap/yesh_duet2.mp4")} muted style={{ width: 1280, marginLeft: -280 }} />
+    </div>
+    <div style={{ width: 720, height: 1280, overflow: "hidden" }}>
+      <div style={{ width: 1080, height: 1920, transform: "scale(0.6667)", transformOrigin: "top left" }}><YeshDance /></div>
+    </div>
+  </AbsoluteFill>
+);
