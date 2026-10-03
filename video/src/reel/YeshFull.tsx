@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, staticFile, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
 import { easeInOut, FPose, Fumble, idle, legIK, mix } from "./Fumble";
 import { MocapData } from "./MocapCheck";
@@ -179,6 +179,24 @@ const H_SEGS: Seg[] = [
   [82.35, (t) => ({ ...idle(t * 30), armL: [165, 10], armR: [-165, -10], handL: "open", handR: "open", smile: 1, mo: 0.5, shut: 0.6, tilt: 10, shrug: 0.4, hipY: -20 * Math.sin(Math.min(1, (t - 82.35) / 0.4) * Math.PI) })],
 ];
 
+/** Festival street at night (user-supplied art): scaled to frame height, vanishing point centred, flickering
+ * lantern glow and drifting dust on top. */
+const StreetStage: React.FC = () => {
+  const f = useCurrentFrame();
+  const flick = 0.5 + 0.25 * Math.sin(f / 4.3) + 0.15 * Math.sin(f / 1.7);
+  return (
+    <AbsoluteFill>
+      <Img src={staticFile("yesh/bg_street.png")} style={{ position: "absolute", top: 0, left: -1399, height: 1920, width: 3412 }} />
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 70% 40% at 50% 62%, rgba(255,190,110,${0.12 + 0.08 * flick}), transparent 70%)` }} />
+      <AbsoluteFill style={{ background: "linear-gradient(rgba(10,20,40,0.15), transparent 40%, rgba(40,15,5,0.25))" }} />
+      {Array.from({ length: 26 }, (_, i) => {
+        const x = (i * 397 + f * (0.6 + (i % 5) * 0.2)) % 1180 - 50, y = 1450 - ((f * (0.8 + (i % 3) * 0.3) + i * 211) % 900);
+        return <div key={i} style={{ position: "absolute", left: x, top: y, width: 5 + (i % 3) * 2, height: 5 + (i % 3) * 2, borderRadius: 6, background: "rgba(255,210,140,0.55)", filter: "blur(1px)" }} />;
+      })}
+    </AbsoluteFill>
+  );
+};
+
 // ---------- staging: where they stand, camera shots, crowd ----------
 type Shot = { t: number; zoom: number; cx: number; cy: number; cut?: boolean };
 const SHOTS: Shot[] = [
@@ -267,9 +285,9 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
     <AbsoluteFill style={{ overflow: "hidden", background: "#140c2e" }}>
       <Fonts />
       <div style={{ position: "absolute", inset: 0, transformOrigin: "0 0", transform: `translate(540px,960px) scale(${1 + (z - 1) * 0.35}) translate(${-540 - (shot.cx - 540) * 0.35}px,${-960 - (shot.cy - 960) * 0.35}px)` }}>
-        <FestivalStage />
+        <StreetStage />
       </div>
-      <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
+      <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, filter: "sepia(0.1) saturate(1.08) drop-shadow(0 0 14px rgba(255,170,80,0.35))" }}>
         <g transform={cam}>
           {crowdOn(t) && (
             <g style={{ filter: "brightness(0.16) saturate(0) blur(3.5px)" }} opacity={0.8}>
