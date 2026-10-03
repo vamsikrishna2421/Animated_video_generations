@@ -10,6 +10,7 @@ import wide2 from "./mocap/yesh_wide2.json";
 import faceK1 from "./mocap/yesh_face_k1.json";
 import faceK2 from "./mocap/yesh_face_k2.json";
 import audio from "./mocap/yesh_audio.json";
+import { hook, HOOK_END } from "./HookStep";
 
 // Yeshanagula, 0:51.0 - 0:82.9 of the song, as a Mr. Fumble x Heroine dance cover.
 // Body: motion captured from the male lead where tracking held (wide group shots, solo, duet), with an animator
@@ -104,7 +105,8 @@ const F_SEGS: Seg[] = [
   [61.5, (t) => ({ ...idle(t * 30), turn: -0.55, bend: -6 + 4 * sw(t), lean: -2 + 2 * sw(t), armL: [70, 30], armR: [-18, -20], smile: 1, shut: 1, tilt: -8 + 4 * sw(t), blush: 0.5 })],
   [62.5, (t) => ({ ...idle(t * 30), turn: -0.6, lookX: -1, smile: 0.8, blush: 0.7, browL: 0.4, browR: 0.1, armL: [40, 60], armR: [-18, -22], winkR: t > 62.7 && t < 62.85 ? 1 : 0 })],
   [63.0, (t) => ({ ...idle(t * 30), turn: -0.55, lookX: -1, smile: 0.95, mo: 0.3, armL: [16, 20], armR: [-30, -95], handR: "fist", lean: -3 })],
-  [64.5, (t) => {
+  [64.5, (t) => ({ ...hook(t), turn: 0 })],
+  [HOOK_END, (t) => {
     const c = capt(CAPS.wide1, t);
     const key: FPose = { ...crouch(40), legL: legIK(-60, 395 - 40, -1), legR: legIK(60, 395 - 40, 1), lean: 8 * sw(t), armL: [150 * Math.max(0, sw(t)) + 20, -20], armR: [-40, -30], handL: "fist", handR: "fist", twist: 0.4 * sw(t) };
     const w = t < 66.3 ? 0.75 : 0.35; // before 66.3 the crowd confused the tracker: lean on the key pose
@@ -169,7 +171,8 @@ const H_SEGS: Seg[] = [
   [61.5, (t) => ({ ...idle(t * 30), turn: 0.55, bend: 6 + 4 * sw(t), lean: 2 + 2 * sw(t), armL: [14, 18], armR: [-60, -40], smile: 1, shut: 1, tilt: 8 + 4 * sw(t), blush: 0.6, mo: lipF(t) })],
   [62.5, (t) => ({ ...idle(t * 30), turn: 0.6, lookX: 1, smile: 0.8, blush: 0.8, browL: 0.3, browR: 0.3, armL: [30, -130], armR: [-16, -20], handL: "open" })],
   [63.0, (t) => ({ ...idle(t * 30), ...faceAt(K2, 62.9, t), smile: 1, mo: 0.55 + 0.2 * bounce(t), shut: 0.7, tilt: -12, armL: [24, -140], armR: [-16, -24], handL: "open", lean: -4 })],
-  [64.5, (t) => folk(t, 64.5)],
+  [64.5, (t) => ({ ...ownFace(mirror(hook(t + 0.04))), smile: 0.95, mo: 0.3 * bounce(t), handL: "fist", handR: "fist" })],
+  [HOOK_END, (t) => folk(t, HOOK_END)],
   [73.2, (t) => ({ ...idle(t * 30), turn: Math.cos(((t - 73.2) / 0.6) * Math.PI * 2) * 0.7, armL: [160, 20 + 20 * sw(t)], armR: [-160, -20 - 20 * sw(t)], handL: "open", handR: "open", smile: 1, mo: 0.3, bend: 5 * sw(t), breath: 1 })],
   [74.5, (t) => ({ ...duetHeroine(t - 74.5), mo: Math.max(duetHeroine(t - 74.5).mo ?? 0, lipF(t)) })],
   [78.5, (t) => ({ ...mix(ownFace(mirror(F_SEGS[18][1](t + 0.05))), folk(t, 78.5), 0.35), smile: 0.95, mo: 0.3 * bounce(t) + lipF(t), turn: 0 })],

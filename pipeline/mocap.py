@@ -26,6 +26,7 @@ import numpy as np
 from scipy.signal import savgol_filter
 
 ROOT = Path(__file__).resolve().parent.parent
+GRANULAR = True  # lighter smoothing: keeps sharp hits and small accents
 MODEL = ROOT / "pipeline/models/pose_landmarker_full.task"
 FF = ROOT / "video/node_modules/@remotion/compositor-linux-x64-gnu"
 L1, L2, LS = 200, 195, 300  # rig thigh, shin, spine
@@ -290,8 +291,10 @@ def to_rig3d(img, world, shots, normalize=False):
     V2 = (lambda i, j: IM[:, j] - IM[:, i]) if not normalize else (lambda i, j: V(i, j)[:, :2])  # noqa: E731
     o["hipTilt"] = np.array([deg(math.atan2(v[1], v[0])) for v in V2(24, 23)])
     o["rel"] = np.array([deg(math.atan2(v[1], v[0])) for v in V2(12, 11)]) - lean
-    for nm, (s_, e_, w_) in {"aL": (12, 14, 16), "aR": (11, 13, 15)}.items():
+    for nm, (s_, e_, w_, ix_) in {"aL": (12, 14, 16, 20), "aR": (11, 13, 15, 19)}.items():
         up, lo = a2(V(s_, e_), s_, e_) - lean, a2(V(e_, w_), e_, w_) - lean
+        hand = a2(V(w_, ix_), w_, ix_) - lean
+        o[nm + "w"] = np.clip((hand - lo + 180) % 360 - 180, -70, 70)  # wrist bend: hand direction vs forearm
         o[nm + "u"], o[nm + "e"] = up, lo - up
         o[nm + "s0"], o[nm + "s1"] = sc(V(s_, e_), s_, e_), sc(V(e_, w_), e_, w_)
         o[nm + "back"] = (W3[:, w_, 2] > S[:, 2] + 0.06).astype(float)
@@ -304,6 +307,9 @@ def to_rig3d(img, world, shots, normalize=False):
         # shins stay full length (their measured length is mostly noise at low resolution)
         o[nm + "s0"], o[nm + "s1"] = (sc(V(h_, k_), h_, k_), sc(V(k_, a_), k_, a_)) if normalize else (np.clip(sc(V(h_, k_), h_, k_), 0.6, 1.0), np.ones(F))
     o["legLFront"] = (W3[:, 26, 2] < W3[:, 25, 2]).astype(float)
+    for nm, (an_, he_, ft_) in {"tL": (28, 30, 32), "tR": (27, 29, 31)}.items():  # toe lift from heel -> toe tip
+        d = IM[:, ft_] - IM[:, he_]
+        o[nm] = np.clip(-np.degrees(np.arctan2(d[:, 1], np.abs(d[:, 0]) + 1e-6)), -40, 40)
     o["turn"] = np.clip(np.sin(np.radians(yh)) * 1.3, -1, 1)
     o["twist"] = np.clip(np.sin(np.radians(yc - yp)) * 1.6, -1, 1)
     o["bodyTurn"] = np.clip(np.sin(np.radians((yc + yp) / 2)), -1, 1)
@@ -311,7 +317,7 @@ def to_rig3d(img, world, shots, normalize=False):
     out = {}
     for k, v in o.items():
         v = np.degrees(np.unwrap(np.radians(v))) if k in ("lean", "hipTilt", "rel", "tilt") or k[-1] in "uetk" and k[:2] in ("aL", "aR", "lL", "lR") else v
-        out[k] = smooth(medfilt(v, 5 if k.endswith("s0") else 3), 9 if k.endswith("s0") else 7) if not k.endswith("back") and k != "legLFront" else (medfilt(v, 5) > 0.5).astype(float)
+        out[k] = smooth(medfilt(v, 5 if k.endswith("s0") else 3), 9 if k.endswith("s0") else (5 if GRANULAR else 7)) if not k.endswith("back") and k != "legLFront" else (medfilt(v, 5) > 0.5).astype(float)
     hip = (img[:, 23, :2] + img[:, 24, :2]) / 2
     s_px = LS / np.median(np.linalg.norm((img[:, 11, :2] + img[:, 12, :2]) / 2 - hip, axis=1))
     out["x"] = smooth((hip[:, 0] - hip[0, 0]) * s_px)
@@ -342,6 +348,7 @@ def poses3d(o):
             "armLBack": bool(o["aLback"][i]), "armRBack": bool(o["aRback"][i]),
             "legL": [r1(o["lLt"][i]), r1(o["lLk"][i])], "legR": [r1(o["lRt"][i]), r1(o["lRk"][i])],
             "legLs": [r2(o["lLs0"][i]), r2(o["lLs1"][i])], "legRs": [r2(o["lRs0"][i]), r2(o["lRs1"][i])], "legLFront": bool(o["legLFront"][i]),
+            "wristL": r1(o["aLw"][i]), "wristR": r1(o["aRw"][i]), "toeL": r1(o["tL"][i]), "toeR": r1(o["tR"][i]),
             "smile": 0.5, "mw": 0.6, "handL": "open", "handR": "open",
         })
     return res
