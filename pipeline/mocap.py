@@ -58,7 +58,19 @@ def detect(video, start, end, people, fps_out=30):
     return out, W, H
 
 
-def detect_follow(video, start, end, seeds, fps_out=30, win_w=0.42, up=2.5, jump=0.18):
+def look(fr, a):
+    """Hue/saturation histogram of the torso-to-knee box: a cheap 'what are they wearing' signature."""
+    pts = a[[11, 12, 23, 24, 25, 26], :2]
+    x0, y0 = np.maximum(pts.min(0).astype(int), 0)
+    x1, y1 = pts.max(0).astype(int)
+    if x1 - x0 < 6 or y1 - y0 < 6:
+        return None
+    patch = cv2.cvtColor(fr[y0:y1, x0:x1], cv2.COLOR_BGR2HSV)
+    h = cv2.calcHist([patch], [0, 1], None, [18, 8], [0, 180, 0, 256])
+    return cv2.normalize(h, h).flatten()
+
+
+def detect_follow(video, start, end, seeds, fps_out=30, win_w=0.42, up=2.5, jump=0.18, reseed=None):
     """Follow specific dancers through a crowd. seeds: [(x, y), ...] normalised start positions (hip centre).
     Each frame, a window around each target's last position is cropped, upscaled and searched; the pose whose
     hips are nearest the last position wins (within `jump` of the frame width), otherwise the frame is missing."""
@@ -72,25 +84,41 @@ def detect_follow(video, start, end, seeds, fps_out=30, win_w=0.42, up=2.5, jump
     W, H = cap.get(3), cap.get(4)
     last = [np.array([x * W, y * H]) for x, y in seeds]
     tracks = [[] for _ in seeds]
+    app = [None] * len(seeds)  # clothing colour histogram per dancer
+    reseed = sorted(reseed or [])  # [(time, [(x, y), ...]), ...]: re-point the targets after camera cuts
     for k in range(int((end - start) * fps_out)):
-        cap.set(cv2.CAP_PROP_POS_MSEC, (start + k / fps_out) * 1000)
+        t = start + k / fps_out
+        while reseed and t >= reseed[0][0]:
+            last = [np.array([x * W, y * H]) for x, y in reseed.pop(0)[1]]
+        cap.set(cv2.CAP_PROP_POS_MSEC, t * 1000)
         ok, fr = cap.read()
         if not ok:
             break
+        taken = []
         for j, c in enumerate(last):
             ww = int(W * win_w)
             x0 = int(np.clip(c[0] - ww / 2, 0, W - ww))
             crop = cv2.resize(fr[:, x0:x0 + ww], None, fx=up, fy=up, interpolation=cv2.INTER_CUBIC)
             r = det.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)))
-            best, bd = None, W * jump
+            best, bs = None, np.inf
             for lm in r.pose_landmarks:
                 a = np.array([[x0 + p.x * ww, p.y * H, p.visibility] for p in lm])
-                d = np.linalg.norm((a[23, :2] + a[24, :2]) / 2 - c)
-                if d < bd:
-                    best, bd = a, d
+                hc = (a[23, :2] + a[24, :2]) / 2
+                d = np.linalg.norm(hc - c)
+                if d > W * jump or any(np.linalg.norm(hc - q) < W * 0.03 for q in taken):
+                    continue  # too far from where this dancer was, or already claimed by the other track
+                h = look(fr, a)
+                score = d / (W * jump) + (2.0 * cv2.compareHist(app[j], h, cv2.HISTCMP_BHATTACHARYYA) if app[j] is not None and h is not None else 0)
+                if score < bs:
+                    best, bs, bh = a, score, h
+            if best is not None and app[j] is not None and bh is not None and cv2.compareHist(app[j], bh, cv2.HISTCMP_BHATTACHARYYA) > 0.55:
+                best = None  # looks like someone else (clothing colours don't match)
             tracks[j].append(best)
             if best is not None:
                 last[j] = (best[23, :2] + best[24, :2]) / 2
+                taken.append(last[j])
+                if app[j] is None and bh is not None:
+                    app[j] = bh  # remember this dancer's clothing colours from the first confident lock
     det.close()
     return tracks, W, H
 
@@ -211,10 +239,12 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--people", type=int, default=1)
     ap.add_argument("--follow", help='follow dancers from normalised hip positions, e.g. "0.5,0.7;0.33,0.75"')
+    ap.add_argument("--reseed", help='after cuts: "72.5=0.5,0.7;0.3,0.7|75.5=..." (same order as --follow)')
     a = ap.parse_args()
     if a.follow:
         seeds = [tuple(float(v) for v in s_.split(",")) for s_ in a.follow.split(";")]
-        raw, W, H = detect_follow(a.video, a.start, a.end, seeds)
+        rs = [(float(b.split("=")[0]), [tuple(float(v) for v in q.split(",")) for q in b.split("=")[1].split(";")]) for b in a.reseed.split("|")] if a.reseed else None
+        raw, W, H = detect_follow(a.video, a.start, a.end, seeds, reseed=rs)
         frames = raw[0]
     else:
         frames, W, H = detect(a.video, a.start, a.end, a.people)
