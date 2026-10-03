@@ -8,7 +8,7 @@ import { MocapData } from "./MocapCheck";
 // Yeshanagula duet test (74.5-78.5 s of the song). Mr. Fumble performs the motion captured from the male lead;
 // the heroine is keyframed from a frame-by-frame reading of the female lead (her saree defeats pose tracking),
 // on the song's beat grid (~83 BPM, beats at 0.28 s + n * 0.717 s in this window).
-const D = duet2 as unknown as MocapData; // track 0 = male lead
+const D = duet2 as unknown as MocapData; // track 0 = female lead (sparse: keyframed instead), track 1 = male lead
 export const YESH_LEN = 120;
 const BEAT = 0.717, B0 = 0.28;
 const sw = (t: number) => Math.sin(((t - B0) / BEAT) * Math.PI * 2);
@@ -60,20 +60,37 @@ const FestivalStage: React.FC = () => {
 
 /** Male lead: captured motion, except the low-groove shot where tracking lost him in the crowd (keyframed from
  * the frames: deep wide crouch, forward lean, arms sweeping low on the beat). Cuts in the film are blended. */
-const tr = D.tracks[0];
+const tr = D.tracks[1];
 const capt = (f: number): FPose => {
   const p = tr.poses[Math.max(0, Math.min(tr.poses.length - 1, f))];
   return { ...p, lean: Math.max(-30, Math.min(30, p.lean ?? 0)) };
 };
 const groove = (t: number): FPose => ({ ...crouch(78), legL: legIK(-40, 395 - 78, -1), legR: legIK(40, 395 - 78, 1), lean: 22, armL: [-30 + 34 * sw(t), 18], armR: [10 + 34 * sw(t), -18], hipTilt: 7 * sw(t), bend: -6 * sw(t), twist: 0.35 * sw(t), shrug: 0.15, tilt: 5 * sw(t), handL: "open", handR: "open" });
+/** Cleanup layer for the male lead: key poses read frame by frame from the footage (arm heights, crouch depth,
+ * the knee lift and hop, the bouncing low step). Captured motion rides on top for natural timing and secondary
+ * movement (head, twist, small arm swings): final = mix(capture, key pose, weight). */
+const NK: [number, number, (t: number) => FPose][] = [
+  // [start s, weight of the key pose, pose]
+  [0.0, 0.8, (t) => ({ ...crouch(10 + 8 * Math.abs(sw(t))), armL: [165, 12], armR: [-150, -30], handL: "open", handR: "open", lean: -3, smile: 1, mo: 0.4, shrug: 0.3 })],
+  [0.55, 0.7, (t) => ({ ...crouch(16), turn: -0.4, armL: [30, 20], armR: [-35, -25], smile: 0.8 })],
+  [0.9, 1.0, (t) => groove(t)],
+  [1.98, 0.85, () => ({ hipY: -8, still: true, legL: [72, -112], legLs: [0.72, 1], legR: [-4, 2], armL: [42, -122], armR: [-42, 122], handL: "fist", handR: "fist", lean: 4, smile: 0.9, shrug: 0.25 })],
+  [2.25, 0.9, () => ({ hipY: -62, still: true, legL: [48, -86], legR: [-48, 86], legLs: [0.8, 1], legRs: [0.8, 1], armL: [122, -64], armR: [-122, 64], handL: "fist", handR: "fist", smile: 1, mo: 0.35, shrug: 0.4 })],
+  [2.48, 0.8, (t) => ({ ...crouch(44), lean: 10, armL: [-10, 20], armR: [10, -20], smile: 0.8 })],
+  [2.9, 0.75, (t) => ({ ...crouch(30 + 16 * Math.abs(sw(t))), hipX: 10 * sw(t), turn: -0.3, lookX: -0.8, armL: [30, -72], armR: [-30, 72], handL: "fist", handR: "fist", shrugL: 0.25 * Math.max(0, sw(t)), shrugR: 0.25 * Math.max(0, -sw(t)), hipTilt: 5 * sw(t), twist: 0.25 * sw(t), smile: 0.85 })],
+];
+const keyed = (t: number): [FPose, number] => {
+  let i = 0;
+  while (i < NK.length - 1 && t >= NK[i + 1][0]) i++;
+  const cur = NK[i][2](t);
+  if (i === 0) return [cur, NK[0][1]];
+  const u = easeInOut((t - NK[i][0]) / 0.14);
+  return u >= 1 ? [cur, NK[i][1]] : [mix(NK[i - 1][2](t), cur, u), NK[i - 1][1] + (NK[i][1] - NK[i - 1][1]) * u];
+};
 const lead = (f: number): FPose => {
-  const t = f / 30;
-  const G0 = 31, G1 = 59;
-  let p = f >= G0 && f < G1 ? groove(t) : capt(f);
-  if (f >= G0 - 5 && f < G0 + 5) p = mix(capt(G0 - 5), groove(t), easeInOut((f - G0 + 5) / 10));
-  if (f >= G1 - 5 && f < G1 + 5) p = mix(groove(t), capt(G1 + 5), easeInOut((f - G1 + 5) / 10));
-  for (const c of [90]) if (f >= c - 4 && f < c + 4) p = mix(capt(c - 4), capt(c + 4), easeInOut((f - c + 4) / 8));
-  return p;
+  const [k, w] = keyed(f / 30);
+  const c = capt(f);
+  return { ...mix(c, k, w), turn: k.turn ?? c.turn, handL: k.handL ?? c.handL, handR: k.handR ?? c.handR };
 };
 
 export const YeshDance: React.FC = () => {

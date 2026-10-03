@@ -84,6 +84,7 @@ def detect_follow(video, start, end, seeds, fps_out=30, win_w=0.42, up=2.5, jump
     W, H = cap.get(3), cap.get(4)
     last = [np.array([x * W, y * H]) for x, y in seeds]
     tracks = [[] for _ in seeds]
+    worlds = [[] for _ in seeds]  # MediaPipe 3D skeleton (metres, hip-centred) for the same detections
     app = [None] * len(seeds)  # clothing colour histogram per dancer
     reseed = sorted(reseed or [])  # [(time, [(x, y), ...]), ...]: re-point the targets after camera cuts
     for k in range(int((end - start) * fps_out)):
@@ -94,32 +95,61 @@ def detect_follow(video, start, end, seeds, fps_out=30, win_w=0.42, up=2.5, jump
         ok, fr = cap.read()
         if not ok:
             break
-        taken = []
-        for j, c in enumerate(last):
-            ww = int(W * win_w)
-            x0 = int(np.clip(c[0] - ww / 2, 0, W - ww))
-            crop = cv2.resize(fr[:, x0:x0 + ww], None, fx=up, fy=up, interpolation=cv2.INTER_CUBIC)
-            r = det.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)))
-            best, bs = None, np.inf
-            for lm in r.pose_landmarks:
-                a = np.array([[x0 + p.x * ww, p.y * H, p.visibility] for p in lm])
-                hc = (a[23, :2] + a[24, :2]) / 2
-                d = np.linalg.norm(hc - c)
-                if d > W * jump or any(np.linalg.norm(hc - q) < W * 0.03 for q in taken):
-                    continue  # too far from where this dancer was, or already claimed by the other track
-                h = look(fr, a)
-                score = d / (W * jump) + (2.0 * cv2.compareHist(app[j], h, cv2.HISTCMP_BHATTACHARYYA) if app[j] is not None and h is not None else 0)
-                if score < bs:
-                    best, bs, bh = a, score, h
-            if best is not None and app[j] is not None and bh is not None and cv2.compareHist(app[j], bh, cv2.HISTCMP_BHATTACHARYYA) > 0.55:
-                best = None  # looks like someone else (clothing colours don't match)
-            tracks[j].append(best)
-            if best is not None:
-                last[j] = (best[23, :2] + best[24, :2]) / 2
-                taken.append(last[j])
-                if app[j] is None and bh is not None:
-                    app[j] = bh  # remember this dancer's clothing colours from the first confident lock
+        # 1) gather candidate dancers around every target (retrying other zoom levels when a window comes up empty)
+        cands = []  # (image landmarks, world landmarks, hip centre, clothing histogram)
+        for c in last:
+            for ww_k, up_k in ((win_w, up), (win_w * 0.7, up * 1.4), (min(0.9, win_w * 1.5), up * 0.8)):
+                ww = int(W * ww_k)
+                x0 = int(np.clip(c[0] - ww / 2, 0, W - ww))
+                crop = cv2.resize(fr[:, x0:x0 + ww], None, fx=up_k, fy=up_k, interpolation=cv2.INTER_CUBIC)
+                r = det.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)))
+                hit = False
+                for li, lm in enumerate(r.pose_landmarks):
+                    a_ = np.array([[x0 + p.x * ww, p.y * H, p.visibility] for p in lm])
+                    hc = (a_[23, :2] + a_[24, :2]) / 2
+                    hit |= np.linalg.norm(hc - c) < W * jump
+                    if all(np.linalg.norm(hc - q[2]) > W * 0.03 for q in cands):
+                        cands.append((a_, np.array([[q.x, q.y, q.z] for q in r.pose_world_landmarks[li]]), hc, look(fr, a_)))
+                if hit:
+                    break
+        # 2) joint assignment: each target takes a distinct candidate; cost = distance moved + how unlike that
+        #    target's outfit it looks, *relative* to the other target's outfit (robust to lighting changes per cut)
+        n = len(last)
+        def cost(j, ci):
+            a_, _, hc, h = cands[ci]
+            d = np.linalg.norm(hc - last[j]) / (W * jump)
+            if d > 1:
+                return np.inf
+            if h is None or app[j] is None:
+                return d
+            mine = cv2.compareHist(app[j], h, cv2.HISTCMP_BHATTACHARYYA)
+            others = [cv2.compareHist(app[o], h, cv2.HISTCMP_BHATTACHARYYA) for o in range(n) if o != j and app[o] is not None]
+            if others and mine > min(others) + 0.04:
+                return np.inf  # looks more like the other dancer
+            return d + 2.0 * mine
+        import itertools
+        best_combo, best_cost = [None] * n, np.inf
+        opts = list(range(len(cands))) + [None]
+        for combo in itertools.product(opts, repeat=n):
+            used = [c_ for c_ in combo if c_ is not None]
+            if len(used) != len(set(used)):
+                continue
+            tot = sum(cost(j, c_) if c_ is not None else 1.2 for j, c_ in enumerate(combo))
+            if tot < best_cost:
+                best_combo, best_cost = list(combo), tot
+        for j, ci in enumerate(best_combo):
+            if ci is None:
+                tracks[j].append(None)
+                worlds[j].append(None)
+                continue
+            a_, wl_, hc, h = cands[ci]
+            tracks[j].append(a_)
+            worlds[j].append(wl_)
+            last[j] = hc
+            if app[j] is None and h is not None:
+                app[j] = h  # remember this dancer's clothing colours from the first lock
     det.close()
+    detect_follow.worlds = worlds  # 3D skeletons ride along without changing the return shape
     return tracks, W, H
 
 
@@ -152,10 +182,10 @@ def good(p):
     return abs(math.degrees(math.atan2(v[0], -v[1]))) < 70
 
 
-def fill(track, hold=12):
+def fill(track, hold=12, mask=None):
     """Interpolate short gaps; across long gaps (scene cuts, occlusion) hold the last good pose instead of
     inventing motion. Returns an (F, 33, 3) array or None when the person is barely seen."""
-    ok = [good(p) for p in track]
+    ok = mask if mask is not None else [good(p) for p in track]
     idx = [i for i, g in enumerate(ok) if g]
     if len(idx) < max(5, len(track) * 0.3):
         return None
@@ -214,6 +244,109 @@ def to_rig(a):
     return out
 
 
+def to_rig3d(img, world, shots, normalize=False):
+    """Depth-aware retarget. img: (F,33,3) image landmarks (for stage position); world: (F,33,3) 3D skeleton.
+    Each camera shot is turned so the dancer's average facing points at our audience (the film's angle changes
+    every cut, ours should not); rotations inside a shot are kept. Bones are projected orthographically: angles
+    come from the projection, foreshortening = projected / true length, and depth decides front/behind.
+    Hybrid (default): limb directions come from the 2D image (the silhouette the audience actually sees; the 3D
+    estimate is weakest on legs), while the 3D skeleton supplies only what 2D cannot know: foreshortening, which
+    limb is in front, and chest-vs-hip twist. normalize=True turns each shot to face the camera (all-3D mode)."""
+    F = len(world)
+    W3 = world.copy()
+    for a, b in (zip(shots, shots[1:] + [F]) if normalize else []):
+        seg = W3[a:b]
+        hv = seg[:, 23] - seg[:, 24]
+        th = np.median(np.arctan2(hv[:, 2], hv[:, 0]))
+        c, s_ = np.cos(th), np.sin(th)
+        x, z = seg[..., 0].copy(), seg[..., 2].copy()
+        seg[..., 0], seg[..., 2] = x * c + z * s_, -x * s_ + z * c
+        W3[a:b] = seg
+    mid = lambda i, j: (W3[:, i] + W3[:, j]) / 2  # noqa: E731
+    P, S = mid(23, 24), mid(11, 12)
+    deg = np.degrees
+    IM = img[:, :, :2]
+    def a2(v, i=None, j=None):
+        if not normalize and i is not None:  # direction from the image silhouette
+            d = IM[:, j] - IM[:, i]
+            return np.array([ang(x, y) for x, y in d])
+        return np.array([ang(x, y) for x, y in v[:, :2]])
+    def sc(v, i=None, j=None):
+        if not normalize and i is not None:
+            # foreshortening measured in the picture: this segment's on-screen length vs its own longest length in
+            # the clip (self-calibrating, no depth guess). Smoothed later.
+            L = np.linalg.norm(IM[:, j] - IM[:, i], axis=1)
+            return np.clip(L / (np.percentile(L, 92) + 1e-6), 0.5, 1.0)
+        return np.clip(np.linalg.norm(v[:, :2], axis=1) / (np.linalg.norm(v, axis=1) + 1e-6), 0.3, 1.0)
+    V = lambda i, j: W3[:, j] - W3[:, i]  # noqa: E731
+    torso = S - P
+    t2 = torso[:, :2] if normalize else (IM[:, 11] + IM[:, 12]) / 2 - (IM[:, 23] + IM[:, 24]) / 2
+    lean = np.array([deg(math.atan2(x, -y)) for x, y in t2])
+    yaw = lambda i, j: deg(np.arctan2((W3[:, i] - W3[:, j])[:, 2], (W3[:, i] - W3[:, j])[:, 0]))  # noqa: E731
+    yp, yc, yh = yaw(23, 24), yaw(11, 12), yaw(7, 8)
+    o = {}
+    o["lean"] = lean
+    o["spineS"] = sc(torso) if normalize else np.clip(np.linalg.norm((IM[:, 11] + IM[:, 12]) / 2 - (IM[:, 23] + IM[:, 24]) / 2, axis=1) / (np.percentile(np.linalg.norm((IM[:, 11] + IM[:, 12]) / 2 - (IM[:, 23] + IM[:, 24]) / 2, axis=1), 92) + 1e-6), 0.85, 1.0)
+    V2 = (lambda i, j: IM[:, j] - IM[:, i]) if not normalize else (lambda i, j: V(i, j)[:, :2])  # noqa: E731
+    o["hipTilt"] = np.array([deg(math.atan2(v[1], v[0])) for v in V2(24, 23)])
+    o["rel"] = np.array([deg(math.atan2(v[1], v[0])) for v in V2(12, 11)]) - lean
+    for nm, (s_, e_, w_) in {"aL": (12, 14, 16), "aR": (11, 13, 15)}.items():
+        up, lo = a2(V(s_, e_), s_, e_) - lean, a2(V(e_, w_), e_, w_) - lean
+        o[nm + "u"], o[nm + "e"] = up, lo - up
+        o[nm + "s0"], o[nm + "s1"] = sc(V(s_, e_), s_, e_), sc(V(e_, w_), e_, w_)
+        o[nm + "back"] = (W3[:, w_, 2] > S[:, 2] + 0.06).astype(float)
+    for nm, (h_, k_, a_) in {"lL": (24, 26, 28), "lR": (23, 25, 27)}.items():
+        th_, sh_ = a2(V(h_, k_), h_, k_), a2(V(k_, a_), k_, a_)
+        o[nm + "t"], o[nm + "k"] = th_, sh_ - th_
+        # legs stay full length: in a frontal dance they move mostly in the picture plane, and their measured
+        # on-screen length is too noisy at low resolution to be worth trusting
+        # thighs: a squat points them at the camera, so their on-screen shortening *is* the crouch depth;
+        # shins stay full length (their measured length is mostly noise at low resolution)
+        o[nm + "s0"], o[nm + "s1"] = (sc(V(h_, k_), h_, k_), sc(V(k_, a_), k_, a_)) if normalize else (np.clip(sc(V(h_, k_), h_, k_), 0.6, 1.0), np.ones(F))
+    o["legLFront"] = (W3[:, 26, 2] < W3[:, 25, 2]).astype(float)
+    o["turn"] = np.clip(np.sin(np.radians(yh)) * 1.3, -1, 1)
+    o["twist"] = np.clip(np.sin(np.radians(yc - yp)) * 1.6, -1, 1)
+    o["bodyTurn"] = np.clip(np.sin(np.radians((yc + yp) / 2)), -1, 1)
+    o["tilt"] = np.array([deg(math.atan2(v[1], v[0])) for v in V2(8, 7)]) - lean
+    out = {}
+    for k, v in o.items():
+        v = np.degrees(np.unwrap(np.radians(v))) if k in ("lean", "hipTilt", "rel", "tilt") or k[-1] in "uetk" and k[:2] in ("aL", "aR", "lL", "lR") else v
+        out[k] = smooth(medfilt(v, 5 if k.endswith("s0") else 3), 9 if k.endswith("s0") else 7) if not k.endswith("back") and k != "legLFront" else (medfilt(v, 5) > 0.5).astype(float)
+    hip = (img[:, 23, :2] + img[:, 24, :2]) / 2
+    s_px = LS / np.median(np.linalg.norm((img[:, 11, :2] + img[:, 12, :2]) / 2 - hip, axis=1))
+    out["x"] = smooth((hip[:, 0] - hip[0, 0]) * s_px)
+    drop = lambda t, k, s0, s1: L1 * s0 * np.cos(np.radians(t)) + L2 * s1 * np.cos(np.radians(t + k))  # noqa: E731
+    out["hipY"] = smooth(395 - np.maximum(drop(out["lLt"], out["lLk"], out["lLs0"], out["lLs1"]), drop(out["lRt"], out["lRk"], out["lRs0"], out["lRs1"])))
+    return out
+
+
+def medfilt(v, k=3):
+    from scipy.signal import medfilt as mf
+    return mf(np.asarray(v, dtype=float), k) if len(v) >= k else v
+
+
+def poses3d(o):
+    r1 = lambda v: round(float(v), 1)  # noqa: E731
+    r2 = lambda v: round(float(v), 2)  # noqa: E731
+    for k in ("aLu", "aLe", "aRu", "aRe", "lLt", "lLk", "lRt", "lRk"):
+        o[k] = (np.asarray(o[k]) + 180) % 360 - 180  # one turn only, so blends never spin a limb the long way round
+    res = []
+    for i in range(len(o["lean"])):
+        rel = float(o["rel"][i])
+        res.append({
+            "still": True, "hipY": r1(o["hipY"][i]), "lean": r1(np.clip(o["lean"][i], -40, 40)), "spineS": r2(o["spineS"][i]),
+            "hipTilt": r1(np.clip(o["hipTilt"][i], -20, 20)), "shrugL": r2(np.clip(rel / 25, -0.4, 1)), "shrugR": r2(np.clip(-rel / 25, -0.4, 1)),
+            "turn": r2(o["turn"][i] * 0.8), "bodyTurn": r2(o["bodyTurn"][i] * 0.8), "twist": r2(o["twist"][i]), "tilt": r1(np.clip(o["tilt"][i], -30, 30)),
+            "armL": [r1(o["aLu"][i]), r1(o["aLe"][i])], "armR": [r1(o["aRu"][i]), r1(o["aRe"][i])],
+            "armLs": [r2(o["aLs0"][i]), r2(o["aLs1"][i])], "armRs": [r2(o["aRs0"][i]), r2(o["aRs1"][i])],
+            "armLBack": bool(o["aLback"][i]), "armRBack": bool(o["aRback"][i]),
+            "legL": [r1(o["lLt"][i]), r1(o["lLk"][i])], "legR": [r1(o["lRt"][i]), r1(o["lRk"][i])],
+            "legLs": [r2(o["lLs0"][i]), r2(o["lLs1"][i])], "legRs": [r2(o["lRs0"][i]), r2(o["lRs1"][i])], "legLFront": bool(o["legLFront"][i]),
+            "smile": 0.5, "mw": 0.6, "handL": "open", "handR": "open",
+        })
+    return res
+
+
 def poses(o):
     F = len(o["lean"])
     res = []
@@ -239,6 +372,7 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--people", type=int, default=1)
     ap.add_argument("--follow", help='follow dancers from normalised hip positions, e.g. "0.5,0.7;0.33,0.75"')
+    ap.add_argument("--flat", action="store_true", help="2D-only retarget (ignore the 3D skeleton)")
     ap.add_argument("--reseed", help='after cuts: "72.5=0.5,0.7;0.3,0.7|75.5=..." (same order as --follow)')
     a = ap.parse_args()
     if a.follow:
@@ -250,9 +384,19 @@ def main():
         frames, W, H = detect(a.video, a.start, a.end, a.people)
         raw = assign(frames, a.people)
     tracks = []
-    for tr in raw:
+    worlds = getattr(detect_follow, "worlds", None) if a.follow else None
+    shots = [0] + ([int((t - a.start) * 30) for t, _ in rs] if a.follow and rs else [])
+    for ti, tr in enumerate(raw):
         arr = fill(tr)
-        if arr is None:
+        if arr is None:  # keep the slot so track indices always match the --follow order
+            tracks.append({"x": [], "poses": [], "found": sum(good(p) for p in tr)})
+            continue
+        if worlds is not None and not a.flat:
+            mask = [good(p) for p in tr]
+            wtr = [w if (w is not None and m) else None for w, m in zip(worlds[ti], mask)]
+            warr = fill([np.c_[w, np.ones(33)] if w is not None else None for w in wtr], mask=[w is not None for w in wtr])[:, :, :3]
+            o = to_rig3d(arr, warr, shots)
+            tracks.append({"x": [round(float(v), 1) for v in o["x"]], "poses": poses3d(o), "found": sum(mask)})
             continue
         o = to_rig(arr)
         tracks.append({"x": [round(float(v), 1) for v in o["x"]], "poses": poses(o), "found": sum(good(p) for p in tr)})

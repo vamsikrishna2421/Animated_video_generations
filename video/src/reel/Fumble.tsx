@@ -25,13 +25,15 @@ const usePal = () => useContext(Pal);
 export type Hand = "open" | "fist" | "point" | "thumb" | "paw";
 export type FPose = {
   hipX?: number; hipY?: number; lean?: number; hipTilt?: number; bend?: number; twist?: number; shrug?: number; shrugL?: number; shrugR?: number; breath?: number; // pelvis tilt (deg), spine side-bend (deg), chest twist -1..1, shoulders up 0..1, chest breath 0..1 // crouch (px, + = down), torso lean (deg, + = toward screen-right)
-  tilt?: number; neck?: number; turn?: number; // head tilt (deg), neck stretch (px), face turn (-1 left .. 1 right)
+  tilt?: number; neck?: number; turn?: number; bodyTurn?: number; // head tilt (deg), neck stretch (px), face turn (-1 left .. 1 right)
   browL?: number; browR?: number; knit?: number; // brow raise -1..1 each (screen-left / screen-right eye), frown 0..1
   lookX?: number; lookY?: number; lid?: number; squint?: number; eyeSize?: number; shut?: number; // shut: 0..1 per both (1 = closed happy arcs)
   winkL?: number; winkR?: number;
   mw?: number; mo?: number; smile?: number; skew?: number; pucker?: number; lipOut?: number; // mouth width/open/smile/skew/pucker/pout
   armL?: [number, number]; armR?: [number, number]; handL?: Hand; handR?: Hand; back?: boolean; // arms behind the torso
   legL?: [number, number]; legR?: [number, number]; toeL?: number; toeR?: number; // thigh, knee (deg); toe lift (deg)
+  armLs?: [number, number]; armRs?: [number, number]; legLs?: [number, number]; legRs?: [number, number]; spineS?: number; // 3D foreshortening: projected/true length per segment
+  armLBack?: boolean; armRBack?: boolean; legLFront?: boolean; // depth order from 3D: arm behind the torso, which leg is nearer
   blush?: number; sweat?: number; still?: boolean; // still: no built-in breathing bob (walk cycles drive the hips)
 };
 export type FReveal = Partial<Record<"shoes" | "legs" | "torso" | "vest" | "tie" | "armL" | "armR" | "head" | "ears" | "hair" | "eyes" | "brows" | "nose" | "mouth", number>>;
@@ -54,12 +56,12 @@ const HandShape: React.FC<{ x: number; y: number; a: number; kind: Hand; flip: n
   );
 };
 
-const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean; far?: boolean }> = ({ x, y, a, hand, flip, bones, far }) => {
-  const [ex, ey] = pt(x, y, a[0], 130);
-  const [hx, hy] = pt(ex, ey, a[0] + a[1], 120);
+const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean; far?: boolean; ls?: [number, number] }> = ({ x, y, a, hand, flip, bones, far, ls = [1, 1] }) => {
+  const [ex, ey] = pt(x, y, a[0], 130 * ls[0]);
+  const [hx, hy] = pt(ex, ey, a[0] + a[1], 120 * ls[1]);
   const { C, hero } = usePal();
   if (hero) {
-    const [mx, my] = pt(x, y, a[0], 52);
+    const [mx, my] = pt(x, y, a[0], 52 * ls[0]);
     return (
       <g>
         <line x1={x} y1={y} x2={ex} y2={ey} stroke={far ? C.skinDark : C.skin} strokeWidth={28} strokeLinecap="round" />
@@ -83,10 +85,10 @@ const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; fli
   );
 };
 
-const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; dir: number; bones?: boolean; p?: number; ps?: number; far?: boolean }> = ({ x, y, a, toe, dir, bones, p, ps, far }) => {
-  const [kx, ky] = pt(x, y, a[0], 200);
-  const [ax, ay] = pt(kx, ky, a[0] + a[1], 195);
-  const [sx, sy] = pt(kx, ky, a[0] + a[1], 170);
+const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; dir: number; bones?: boolean; p?: number; ps?: number; far?: boolean; ls?: [number, number] }> = ({ x, y, a, toe, dir, bones, p, ps, far, ls = [1, 1] }) => {
+  const [kx, ky] = pt(x, y, a[0], 200 * ls[0]);
+  const [ax, ay] = pt(kx, ky, a[0] + a[1], 195 * ls[1]);
+  const [sx, sy] = pt(kx, ky, a[0] + a[1], 170 * ls[1]);
   const { C, hero } = usePal();
   if (hero) {
     return (
@@ -283,20 +285,21 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
   const blink = f % 110 < 4 || f % 173 < 3 ? 0 : 1;
   const hipY = -410 + (p.hipY ?? 0) - (p.still ? 0 : 2 * Math.sin(f / 16));
   const turn = p.turn ?? 0;
-  const dir = Math.abs(turn) > 0.35 ? Math.sign(turn) : 0;
+  const dir = Math.abs(p.bodyTurn ?? turn) > 0.35 ? Math.sign(p.bodyTurn ?? turn) : 0;
   const legL = p.legL ?? [6, 0], legR = p.legR ?? [-6, 0];
   const armL = p.armL ?? [14, 18], armR = p.armR ?? [-14, -18];
   const SH = -300; // shoulders above the hip
   const uid = useId().replace(/:/g, "");
   // side-on: hips and shoulders narrow, the far limbs go darker and behind the body
-  const prof = Math.min(1, Math.max(0, (Math.abs(turn) - 0.3) / 0.3));
-  const farR = turn < 0 && prof > 0.5, farL = turn > 0 && prof > 0.5; // facing right we see his left side, so screen-left limbs are far
+  const bodyTurn = p.bodyTurn ?? turn; // the body can face the camera while the head turns (and vice versa)
+  const prof = Math.min(1, Math.max(0, (Math.abs(bodyTurn) - 0.3) / 0.3));
+  const farR = bodyTurn < 0 && prof > 0.5, farL = bodyTurn > 0 && prof > 0.5; // facing right we see his left side, so screen-left limbs are far
   // ---- flexible torso: pelvis tilt, curved spine, chest twist, shoulders, breathing ----
   const rad = (d: number) => (d * Math.PI) / 180;
   const ht = rad(p.hipTilt ?? 0), bd = rad(p.bend ?? 0), tw = (p.twist ?? 0) * (1 - prof);
   const br = p.breath ?? 0.5 + 0.5 * Math.sin(f / 22);
   const shL = (p.shrugL ?? 0) + (p.shrug ?? 0), shR = (p.shrugR ?? 0) + (p.shrug ?? 0);
-  const Ls = -SH;
+  const Ls = -SH * (p.spineS ?? 1);
   const N: [number, number] = [Ls * Math.sin(bd / 2), -Ls * Math.cos(bd / 2) - 3 * br]; // neck base
   const spine = (u: number): [number, number] => { const q = 1 - u; return [q * q * 0 + 2 * q * u * 0 + u * u * N[0], 2 * q * u * (-Ls / 2) + u * u * N[1]]; };
   const toWorld = (x: number, y: number): [number, number] => [N[0] + x * Math.cos(bd) - y * Math.sin(bd), N[1] + x * Math.sin(bd) + y * Math.cos(bd)];
@@ -318,19 +321,20 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
   const torsoD = `M ${pts(Lp)} Q ${capL[0].toFixed(1)},${capL[1].toFixed(1)} ${nL[0].toFixed(1)},${nL[1].toFixed(1)} L ${nR[0].toFixed(1)},${nR[1].toFixed(1)} Q ${capR[0].toFixed(1)},${capR[1].toFixed(1)} ${pts([...Rp].reverse())} Z`;
   const mid = spine(0.5);
   const ftx = (u: number) => tw * 26 * u; // chest-front features slide with the twist
-  const armRN = <Part p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR} /></Part>;
-  const armLN = <Part p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL} /></Part>;
-  const arms = <>{!farR && armRN}{!farL && armLN}</>;
-  const farArm = farL ? armLN : farR ? armRN : null;
+  const armRN = <Part p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR || !!p.armRBack} ls={p.armRs} /></Part>;
+  const armLN = <Part p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL || !!p.armLBack} ls={p.armLs} /></Part>;
+  const backR = farR || !!p.armRBack, backL = farL || !!p.armLBack; // 3D depth wins when the capture says an arm is behind the body
+  const arms = <>{!backR && armRN}{!backL && armLN}</>;
+  const farArm = <>{backL && armLN}{backR && armRN}</>;
   const fx = turn * 34; // face features slide with the turn
   return (
     <g>
       <ellipse cx={0} cy={6} rx={170} ry={22} fill="#000" opacity={0.16} />
       <g transform={`translate(${p.hipX ?? 0},${hipY})`}>
         {(() => {
-          const lL = <Leg key="l" x={hipL[0]} y={hipL[1]} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL} />;
-          const lR = <Leg key="r" x={hipR[0]} y={hipR[1]} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR} />;
-          return farR ? [lR, lL] : [lL, lR];
+          const lL = <Leg key="l" x={hipL[0]} y={hipL[1]} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL || p.legLFront === false} ls={p.legLs} />;
+          const lR = <Leg key="r" x={hipR[0]} y={hipR[1]} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR || p.legLFront === true} ls={p.legRs} />;
+          return farR || p.legLFront === true ? [lR, lL] : [lL, lR];
         })()}
         {hero && (() => {
           // flared half-saree skirt: hangs from the tilted waist and flares around wherever the knees and ankles go
@@ -350,7 +354,7 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
             </g>
           );
         })()}
-        {farArm && <g transform={`rotate(${p.lean ?? 0})`}>{farArm}</g>}
+        {(backL || backR) && <g transform={`rotate(${p.lean ?? 0})`}>{farArm}</g>}
         <g transform={`rotate(${p.lean ?? 0})`}>
           {p.back && arms}
           <defs><clipPath id={`tc${uid}`}><path d={torsoD} /></clipPath></defs>
@@ -495,9 +499,9 @@ const S = (t: number, period: number) => Math.sin((t / period) * Math.PI * 2);
 export const easeInOut = (u: number) => (u <= 0 ? 0 : u >= 1 ? 1 : u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
 /** Ease out with a small overshoot, so arms land with weight instead of snapping. */
 export const easeBack = (u: number, k = 1.6) => (u <= 0 ? 0 : u >= 1 ? 1 : 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2));
-const NUM: (keyof FPose)[] = ["hipX", "hipY", "lean", "hipTilt", "bend", "twist", "shrug", "shrugL", "shrugR", "tilt", "neck", "turn", "browL", "browR", "knit", "lookX", "lookY", "lid", "squint", "eyeSize", "shut", "winkL", "winkR", "mw", "mo", "smile", "skew", "pucker", "lipOut", "toeL", "toeR", "blush", "sweat"];
-const PAIR: (keyof FPose)[] = ["armL", "armR", "legL", "legR"];
-const DEF: Partial<Record<keyof FPose, number | [number, number]>> = { eyeSize: 1, mw: 0.6, smile: 0.2, armL: [14, 18], armR: [-14, -18], legL: [6, 0], legR: [-6, 0] };
+const NUM: (keyof FPose)[] = ["bodyTurn", "spineS", "hipX", "hipY", "lean", "hipTilt", "bend", "twist", "shrug", "shrugL", "shrugR", "tilt", "neck", "turn", "browL", "browR", "knit", "lookX", "lookY", "lid", "squint", "eyeSize", "shut", "winkL", "winkR", "mw", "mo", "smile", "skew", "pucker", "lipOut", "toeL", "toeR", "blush", "sweat"];
+const PAIR: (keyof FPose)[] = ["armL", "armR", "legL", "legR", "armLs", "armRs", "legLs", "legRs"];
+const DEF: Partial<Record<keyof FPose, number | [number, number]>> = { spineS: 1, armLs: [1, 1], armRs: [1, 1], legLs: [1, 1], legRs: [1, 1], eyeSize: 1, mw: 0.6, smile: 0.2, armL: [14, 18], armR: [-14, -18], legL: [6, 0], legR: [-6, 0] };
 /** Blend two poses (u = 0 -> a, 1 -> b). Hands/flags switch at the halfway point. */
 export const mix = (a: FPose, b: FPose, u: number): FPose => {
   const out: FPose = { ...(u < 0.5 ? a : b) };
