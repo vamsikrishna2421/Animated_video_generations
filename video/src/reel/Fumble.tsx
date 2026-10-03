@@ -37,6 +37,7 @@ export type FPose = {
   legL?: [number, number]; legR?: [number, number]; toeL?: number; toeR?: number; // thigh, knee (deg); toe lift (deg)
   armLs?: [number, number]; armRs?: [number, number]; legLs?: [number, number]; legRs?: [number, number]; spineS?: number; // 3D foreshortening: projected/true length per segment
   armLBack?: boolean; armRBack?: boolean; legLFront?: boolean; // depth order from 3D: arm behind the torso, which leg is nearer
+  swayX?: number; // body sideways velocity for hair/cloth follow-through
   blush?: number; sweat?: number; still?: boolean; // still: no built-in breathing bob (walk cycles drive the hips)
 };
 export type FReveal = Partial<Record<"shoes" | "legs" | "torso" | "vest" | "tie" | "armL" | "armR" | "head" | "ears" | "hair" | "eyes" | "brows" | "nose" | "mouth", number>>;
@@ -59,6 +60,27 @@ const HandShape: React.FC<{ x: number; y: number; a: number; kind: Hand; flip: n
   );
 };
 
+/** One smooth, tapered limb through shoulder->elbow->wrist (rubber-hose style): a quadratic curve that passes
+ * through the joint, outlined with a width that tapers from w0 to w1, with round ends. No rigid sticks. */
+const Limb: React.FC<{ a: [number, number]; b: [number, number]; c: [number, number]; w0: number; w1: number; fill: string }> = ({ a, b, c, w0, w1, fill }) => {
+  const k: [number, number] = [2 * b[0] - (a[0] + c[0]) / 2, 2 * b[1] - (a[1] + c[1]) / 2];
+  const N = 14, L: string[] = [], R: string[] = [];
+  for (let i = 0; i <= N; i++) {
+    const t = i / N, u = 1 - t;
+    const x = u * u * a[0] + 2 * u * t * k[0] + t * t * c[0], y = u * u * a[1] + 2 * u * t * k[1] + t * t * c[1];
+    const dx = 2 * u * (k[0] - a[0]) + 2 * t * (c[0] - k[0]), dy = 2 * u * (k[1] - a[1]) + 2 * t * (c[1] - k[1]);
+    const n = Math.hypot(dx, dy) || 1, w = (w0 + (w1 - w0) * t) / 2 * (1 + 0.06 * Math.sin(t * Math.PI));
+    L.push(`${(x - (dy / n) * w).toFixed(1)},${(y + (dx / n) * w).toFixed(1)}`);
+    R.push(`${(x + (dy / n) * w).toFixed(1)},${(y - (dx / n) * w).toFixed(1)}`);
+  }
+  return (
+    <g fill={fill}>
+      <path d={`M ${L.join(" L ")} L ${R.reverse().join(" L ")} Z`} />
+      <circle cx={a[0]} cy={a[1]} r={w0 / 2} /><circle cx={c[0]} cy={c[1]} r={w1 / 2} />
+    </g>
+  );
+};
+
 const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean; far?: boolean; ls?: [number, number]; wr?: number }> = ({ x, y, a, hand, flip, bones, far, ls = [1, 1], wr = 0 }) => {
   const [ex, ey] = pt(x, y, a[0], 130 * ls[0]);
   const [hx, hy] = pt(ex, ey, a[0] + a[1], 120 * ls[1]);
@@ -67,8 +89,7 @@ const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; fli
     const [mx, my] = pt(x, y, a[0], 52 * ls[0]);
     return (
       <g>
-        <line x1={x} y1={y} x2={ex} y2={ey} stroke={far ? C.skinDark : C.skin} strokeWidth={28} strokeLinecap="round" />
-        <line x1={ex} y1={ey} x2={hx} y2={hy} stroke={far ? C.skinDark : C.skin} strokeWidth={24} strokeLinecap="round" />
+        <Limb a={[x, y]} b={[ex, ey]} c={[hx, hy]} w0={30} w1={21} fill={far ? C.skinDark : C.skin} />
         <line x1={x} y1={y} x2={mx} y2={my} stroke={far ? C.shirtDark : C.shirt} strokeWidth={40} strokeLinecap="round" />
         <circle cx={mx} cy={my} r={4} fill={C.argyle} />
         <HandShape x={hx} y={hy} a={a[0] + a[1] + wr} kind={hand} flip={flip} />
@@ -78,9 +99,7 @@ const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; fli
   }
   return (
     <g>
-      <line x1={x} y1={y} x2={ex} y2={ey} stroke={far ? C.shirtDark : C.shirt} strokeWidth={38} strokeLinecap="round" />
-      <line x1={ex} y1={ey} x2={hx} y2={hy} stroke={far ? C.shirtDark : C.shirt} strokeWidth={34} strokeLinecap="round" />
-      <circle cx={ex} cy={ey} r={15} fill={C.shirtDark} opacity={0.4} />
+      <Limb a={[x, y]} b={[ex, ey]} c={[hx, hy]} w0={40} w1={30} fill={far ? C.shirtDark : C.shirt} />
       <line x1={hx - 15 * Math.cos(r(a[0] + a[1]))} y1={hy - 15 * Math.sin(r(a[0] + a[1]))} x2={hx + 15 * Math.cos(r(a[0] + a[1]))} y2={hy + 15 * Math.sin(r(a[0] + a[1]))} stroke="#fff" strokeWidth={8} strokeLinecap="round" />
       <HandShape x={hx} y={hy} a={a[0] + a[1] + wr} kind={hand} flip={flip} />
       {bones && <Bones pts={[[x, y], [ex, ey], [hx, hy]]} />}
@@ -96,8 +115,7 @@ const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; di
   if (hero) {
     return (
       <g>
-        <line x1={x} y1={y} x2={kx} y2={ky} stroke={far ? C.skinDark : C.skin} strokeWidth={40} strokeLinecap="round" />
-        <line x1={kx} y1={ky} x2={ax} y2={ay} stroke={far ? C.skinDark : C.skin} strokeWidth={30} strokeLinecap="round" />
+        <Limb a={[x, y]} b={[kx, ky]} c={[ax, ay]} w0={42} w1={26} fill={far ? C.skinDark : C.skin} />
         {[-10, 0, 10].map((d) => <circle key={d} cx={ax + d} cy={ay - 4} r={4} fill={C.argyle} />)}
         <g transform={`translate(${ax},${ay + 6}) rotate(${-toe * dir})`}>
           <path d={`M ${-18 * dir},-8 Q ${-22 * dir},12 0,12 L ${50 * dir},12 Q ${64 * dir},10 ${58 * dir},-2 Q ${40 * dir},-12 ${8 * dir},-12 Z`} fill={far ? C.skinDark : C.skin} />
@@ -111,8 +129,7 @@ const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; di
   return (
     <g>
       <P p={p}>
-        <line x1={x} y1={y} x2={kx} y2={ky} stroke={far ? C.trousersDark : C.trousers} strokeWidth={56} strokeLinecap="round" />
-        <line x1={kx} y1={ky} x2={sx} y2={sy} stroke={far ? C.trousersDark : C.trousers} strokeWidth={50} strokeLinecap="round" />
+        <Limb a={[x, y]} b={[kx, ky]} c={[sx, sy]} w0={60} w1={46} fill={far ? C.trousersDark : C.trousers} />
         <line x1={sx} y1={sy} x2={ax} y2={ay} stroke={far ? "#d4d4d4" : C.sock} strokeWidth={30} strokeLinecap="round" />
       </P>
       <P p={ps}>
@@ -427,7 +444,7 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
               {braids && !hero && (() => {
                 const world = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35 + (p.lean ?? 0)); // gravity: hang straight down on screen
                 return [-1, 1].map((sd) => {
-                  const sway = 6 * Math.sin(f / 9 + sd) + 0.25 * (p.hipX ?? 0) * sd * 0;
+                  const sway = 4 * Math.sin(f / 9 + sd) - Math.max(-25, Math.min(25, (p.swayX ?? 0) * 2.5));
                   const segs = Array.from({ length: 13 }, (_, i) => {
                     const a = ((world + sway * (i / 12) + sd * 4) * Math.PI) / 180;
                     return [sd * (96 + i * 1.2) - Math.sin(a) * 26 * i, -170 + 26 * i * Math.cos(a)] as [number, number];
@@ -451,7 +468,7 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
               </P>
               {hero && (() => {
                 // centre-parted hair framing the face, jasmine, jhumkas; the braid comes forward over her left shoulder
-                const sw = 5 * Math.sin(f / 11), hang = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35) * 0.8;
+                const sw = 4 * Math.sin(f / 11) - Math.max(-20, Math.min(20, (p.swayX ?? 0) * 2)), hang = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35) * 0.8;
                 const NB = 15, braid = Array.from({ length: NB }, (_, i) => { const a = ((hang + sw * (i / (NB - 1))) * Math.PI) / 180; return [-94 - 3 * i - Math.sin(a) * 30 * i, -64 + 33 * i * Math.cos(a)] as [number, number]; });
                 const jh = (x: number) => (
                   <g transform={`translate(${x},-88) rotate(${sw * 2 + hang})`}>
@@ -554,6 +571,28 @@ export const exaggerate = (p: FPose, k = 1.45): FPose => {
     ...p, armL: arm(p.armL, [14, 18]), armR: arm(p.armR, [-14, -18]), wristL: sc(p.wristL, 1.6, 80), wristR: sc(p.wristR, 1.6, 80),
     lean: sc(p.lean, k, 32), bend: sc(p.bend, k, 22), hipTilt: sc(p.hipTilt, k, 22), twist: sc(p.twist, k, 1), tilt: sc(p.tilt, 1.25, 30),
     shrug: sc(p.shrug, k, 1), shrugL: sc(p.shrugL, k, 1), shrugR: sc(p.shrugR, k, 1), hipX: sc(p.hipX, 1.2, 60),
+  };
+};
+
+/** Overlapping action + follow-through for any pose function of time (pure: samples the past, no state, so it
+ * renders identically in parallel). Forearms trail the upper arms by ~1 frame, hands/wrists by ~2, the head by
+ * ~2, and each trailing part overshoots in the direction it was moving (spring-like settle). */
+export const follow = (pf: (t: number) => FPose, t: number, dt = 1 / 30): FPose => {
+  const p = pf(t), a = pf(t - dt), b = pf(t - 2 * dt), c = pf(t - 3 * dt);
+  const lag = (cur?: [number, number], p1?: [number, number], p2?: [number, number]): [number, number] | undefined => {
+    if (!cur || !p1 || !p2) return cur;
+    const vel = cur[0] - p1[0]; // upper arm speed (deg/frame)
+    // forearm: delayed by one frame relative to the upper arm, plus overshoot opposite to the upper arm's motion
+    const lo = 0.4 * p1[1] + 0.6 * cur[1] - vel * 0.35;
+    return [cur[0], Math.max(-170, Math.min(170, lo))];
+  };
+  const head = (x?: number, y?: number, z?: number) => (x === undefined ? x : 0.55 * x + 0.3 * (y ?? x) + 0.15 * (z ?? x));
+  return {
+    ...p, armL: lag(p.armL, a.armL, b.armL), armR: lag(p.armR, a.armR, b.armR),
+    wristL: (p.wristL ?? 0) - 0.6 * ((p.armL?.[1] ?? 0) - (a.armL?.[1] ?? 0)) - 0.4 * ((a.armL?.[1] ?? 0) - (b.armL?.[1] ?? 0)),
+    wristR: (p.wristR ?? 0) - 0.6 * ((p.armR?.[1] ?? 0) - (a.armR?.[1] ?? 0)) - 0.4 * ((a.armR?.[1] ?? 0) - (b.armR?.[1] ?? 0)),
+    tilt: head(a.tilt, b.tilt, c.tilt), turn: head(a.turn, b.turn, c.turn),
+    swayX: ((p.hipX ?? 0) - (a.hipX ?? 0)) * 4 + ((p.lean ?? 0) - (b.lean ?? 0)) * 1.2, // feeds the braid pendulum
   };
 };
 
