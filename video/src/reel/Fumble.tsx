@@ -14,7 +14,7 @@ export const FC_ = {
 };
 /** Heroine: the page's original female lead (half-saree, long braid with jasmine, jhumkas). Same skeleton as Mr. Fumble. */
 export const HC_: typeof FC_ = {
-  skin: "#d99a6c", skinDark: "#bf7f55", hair: "#16100f", brow: "#1a1210", shirt: "#c2185b", shirtDark: "#9c1149",
+  skin: "#e3a882", skinDark: "#c98a64", hair: "#16100f", brow: "#1a1210", shirt: "#c2185b", shirtDark: "#9c1149",
   vest: "#0f8b8d", vestDark: "#0b6e70", argyle: "#e8b923", tie: "#e8b923", trousers: "#0f8b8d", trousersDark: "#0b6e70",
   sock: "#e8b923", shoe: "#8a3b12", shoeHi: "#b4552a", lip: "#c2185b", mouth: "#5a1020", ink: "#1a1210",
 };
@@ -129,7 +129,55 @@ const Bones: React.FC<{ pts: [number, number][] }> = ({ pts }) => (
   </g>
 );
 
-const Eye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: number }> = ({ x, s, p, blink, wink }) => {
+/** Heroine eyes: big almond shape, deep brown iris with catch-lights, a thick lash line with a wing. */
+const HeroEye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: number }> = ({ x, s, p, blink, wink }) => {
+  const { C } = usePal();
+  const out = x < 0 ? -1 : 1;
+  const size = (p.eyeSize ?? 1) * s;
+  const rx = 27 * size, ry = 23 * size, y = -116;
+  const shut = Math.max(p.shut ?? 0, wink);
+  const lid = Math.min(1, Math.max(p.lid ?? 0, 1 - blink));
+  const lash = (yy: number, k: number) => (
+    <g stroke={C.ink} strokeLinecap="round" fill="none">
+      {[0.6, 0.9].map((u) => <path key={u} d={`M ${x + out * rx * u},${yy - k * ry * (1.05 - u * 0.75)} q ${out * 4},${-6 * k} ${out * 10},${-8 * k}`} strokeWidth={3} />)}
+    </g>
+  );
+  if (shut > 0.5 || lid > 0.85) {
+    // closed: a soft downward arc with lashes (a happy, graceful close)
+    return <g><path d={`M ${x - rx},${y} Q ${x},${y + 14} ${x + rx},${y}`} stroke={C.ink} strokeWidth={6} fill="none" strokeLinecap="round" />{lash(y + 6, -0.5)}</g>;
+  }
+  const lx = (p.lookX ?? 0) * rx * 0.35, ly = (p.lookY ?? 0) * ry * 0.3;
+  const id = `he${Math.round(x)}`;
+  const ix = x - out * rx, iy = y + 3, ox = x + out * rx, oy = y - 5; // inner corner sits lower, outer corner lifts
+  const topY = (k: number) => y - ry * k + lid * ry * 2.1;
+  const top = `M ${ix},${iy} C ${x - out * rx * 0.6},${topY(1.25)} ${x + out * rx * 0.5},${topY(1.2)} ${ox},${oy}`;
+  const shape = `M ${ix},${iy} C ${x - out * rx * 0.6},${y - ry * 1.25} ${x + out * rx * 0.5},${y - ry * 1.2} ${ox},${oy} C ${x + out * rx * 0.5},${y + ry * 0.95} ${x - out * rx * 0.6},${y + ry * 0.95} ${ix},${iy} Z`;
+  return (
+    <g>
+      <defs><clipPath id={id}><path d={shape} /></clipPath></defs>
+      <path d={shape} fill="#fffaf5" />
+      <g clipPath={`url(#${id})`}>
+        <circle cx={x + lx} cy={y + ly} r={ry * 0.95} fill="#4a2a17" />
+        <circle cx={x + lx} cy={y + ly} r={ry * 0.95} fill="none" stroke="#2a160b" strokeWidth={4} />
+        <circle cx={x + lx} cy={y + ly + 5} r={ry * 0.6} fill="#8a5632" opacity={0.5} />
+        <circle cx={x + lx} cy={y + ly} r={ry * 0.42} fill="#150a05" />
+        <circle cx={x + lx + 7} cy={y + ly - 7} r={6} fill="#fff" />
+        <circle cx={x + lx - 6} cy={y + ly + 8} r={2.6} fill="#fff" opacity={0.85} />
+        <path d={`M ${ix - out * 6},${y - ry * 2} L ${ox + out * 6},${y - ry * 2} L ${ox + out * 6},${oy} C ${x + out * rx * 0.5},${topY(1.2)} ${x - out * rx * 0.6},${topY(1.25)} ${ix},${iy} Z`} fill={C.skin} opacity={lid > 0.02 ? 1 : 0} />
+      </g>
+      <path d={`${top} q ${out * 10},-3 ${out * 20},-13`} stroke={C.ink} strokeWidth={7} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={`M ${ix + out * 4},${iy + 2} C ${x - out * rx * 0.5},${y + ry * 0.95} ${x + out * rx * 0.5},${y + ry * 0.95} ${ox - out * 2},${oy + 4}`} stroke={C.ink} strokeWidth={2.5} fill="none" opacity={0.5} />
+      {lid < 0.4 && lash(y, 1)}
+    </g>
+  );
+};
+
+const Eye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: number }> = (props) => {
+  const { hero } = usePal();
+  return hero ? <HeroEye {...props} /> : <ToonEye {...props} />;
+};
+
+const ToonEye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: number }> = ({ x, s, p, blink, wink }) => {
   const { C, hero } = usePal();
   const size = (p.eyeSize ?? 1) * s * (hero ? 0.95 : 1);
   const rx = 23 * size, ry = 28 * size, y = -128;
@@ -171,15 +219,34 @@ const Eye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: numbe
 
 const Brow: React.FC<{ x: number; raise: number; knit: number; side: number }> = ({ x, raise, knit, side }) => {
   const { C, hero } = usePal();
-  const y = -170 - 26 * raise;
+  const y = (hero ? -160 : -170) - 26 * raise;
   const inner = y + 14 * knit - 6 * Math.max(0, raise), outer = y - 4 * knit + 4 * Math.max(0, -raise);
   const ix = x - side * 26, ox = x + side * 26;
-  return <path d={`M ${ix},${inner} Q ${x},${Math.min(inner, outer) - 12 - 6 * raise} ${ox},${outer}`} stroke={C.brow} strokeWidth={hero ? 8 : 14} fill="none" strokeLinecap="round" />;
+  return <path d={`M ${ix},${inner} Q ${x},${Math.min(inner, outer) - 12 - 6 * raise} ${ox},${outer}`} stroke={C.brow} strokeWidth={hero ? 5 : 14} fill="none" strokeLinecap="round" />;
 };
 
 const Mouth: React.FC<{ p: FPose }> = ({ p }) => {
   const { C, hero } = usePal();
   const w = (hero ? 0.8 : 1) * 18 + 30 * (p.mw ?? 0.6), o = p.mo ?? 0, sm = p.smile ?? 0.2, sk = p.skew ?? 0, pk = p.pucker ?? 0, out = p.lipOut ?? 0;
+  if (hero && pk <= 0.5) {
+    const hw = 13 + 13 * (p.mw ?? 0.6), lift = -sm * 7;
+    if (o < 0.1) {
+      return (
+        <g>
+          <path d={`M ${-hw},${lift + sk * -6} Q ${-hw * 0.45},${-7 + lift * 0.4} ${-2},${-4} L 0,-2 L 2,-4 Q ${hw * 0.45},${-7 + lift * 0.4} ${hw},${lift + sk * 6} Q ${hw * 0.3},${2 + sm * 2} 0,${1} Q ${-hw * 0.3},${2 + sm * 2} ${-hw},${lift + sk * -6} Z`} fill="#d14a6e" />
+          <path d={`M ${-hw},${lift + sk * -6} Q 0,${4 + sm * 6} ${hw},${lift + sk * 6} Q ${hw * 0.5},${11 + sm * 4 + out * 6} 0,${12 + sm * 3 + out * 6} Q ${-hw * 0.5},${11 + sm * 4 + out * 6} ${-hw},${lift + sk * -6} Z`} fill="#e45f84" />
+          <ellipse cx={-3} cy={7} rx={hw * 0.3} ry={2.2} fill="#fff" opacity={0.35} />
+        </g>
+      );
+    }
+    const h = 6 + 30 * o;
+    return (
+      <g>
+        <path d={`M ${-hw},${lift} Q 0,${-6} ${hw},${lift} Q ${hw * 0.7},${h + 4} 0,${h + 6} Q ${-hw * 0.7},${h + 4} ${-hw},${lift} Z`} fill="#5a1626" stroke="#d14a6e" strokeWidth={5} strokeLinejoin="round" />
+        {sm > 0.2 && <path d={`M ${-hw * 0.75},${lift + 1} Q 0,${3} ${hw * 0.75},${lift + 1} L ${hw * 0.65},${lift + 8} Q 0,${10} ${-hw * 0.65},${lift + 8} Z`} fill="#fff" />}
+      </g>
+    );
+  }
   if (pk > 0.5) {
     return (
       <g>
@@ -346,17 +413,17 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
             <g transform="translate(0,-26) scale(1.2) translate(0,8)">
               {hero && <path d="M -102,-150 Q -116,-60 -96,-20 Q -70,8 -40,-6 L 40,-6 Q 70,8 96,-20 Q 116,-60 102,-150 Q 98,-270 0,-272 Q -98,-270 -102,-150 Z" fill={C.hair} />}
               <Part p={reveal.ears}>
-                <ellipse cx={-96 + Math.max(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={turn > 0.6 ? 0 : 1} />
-                <ellipse cx={96 + Math.min(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={turn < -0.6 ? 0 : 1} />
+                <ellipse cx={-96 + Math.max(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={hero || turn > 0.6 ? 0 : 1} />
+                <ellipse cx={96 + Math.min(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={hero || turn < -0.6 ? 0 : 1} />
               </Part>
               <Part p={reveal.head}>
-                {hero ? <path d="M -88,-140 Q -94,-248 0,-250 Q 94,-248 88,-140 Q 88,-74 56,-26 Q 30,6 0,8 Q -30,6 -56,-26 Q -88,-74 -88,-140 Z" fill={C.skin} /> : <path d="M -94,-140 Q -98,-250 0,-252 Q 98,-250 94,-140 Q 96,-60 64,-14 Q 34,16 0,16 Q -34,16 -64,-14 Q -96,-60 -94,-140 Z" fill={C.skin} />}
+                {hero ? <path d="M -90,-138 Q -96,-252 0,-254 Q 96,-252 90,-138 Q 92,-80 66,-40 Q 36,-2 0,4 Q -36,-2 -66,-40 Q -92,-80 -90,-138 Z" fill={C.skin} /> : <path d="M -94,-140 Q -98,-250 0,-252 Q 98,-250 94,-140 Q 96,-60 64,-14 Q 34,16 0,16 Q -34,16 -64,-14 Q -96,-60 -94,-140 Z" fill={C.skin} />}
                 {!hero && <path d="M -20,6 Q 0,14 20,6" stroke={C.skinDark} strokeWidth={4} fill="none" strokeLinecap="round" />}
               </Part>
               {hero && (() => {
                 // centre-parted hair framing the face, jasmine, jhumkas; the braid comes forward over her left shoulder
                 const sw = 5 * Math.sin(f / 11), hang = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35) * 0.8;
-                const braid = Array.from({ length: 9 }, (_, i) => { const a = ((hang + sw * (i / 8)) * Math.PI) / 180; return [-92 - 6 * i - Math.sin(a) * 30 * i, -60 + 34 * i * Math.cos(a)] as [number, number]; });
+                const NB = 15, braid = Array.from({ length: NB }, (_, i) => { const a = ((hang + sw * (i / (NB - 1))) * Math.PI) / 180; return [-94 - 3 * i - Math.sin(a) * 30 * i, -64 + 33 * i * Math.cos(a)] as [number, number]; });
                 const jh = (x: number) => (
                   <g transform={`translate(${x},-88) rotate(${sw * 2 + hang})`}>
                     <circle cx={0} cy={0} r={6} fill={C.argyle} /><line x1={0} y1={0} x2={0} y2={16} stroke={C.argyle} strokeWidth={3} />
@@ -369,9 +436,9 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                     <path d={`M ${fx * 0.3},-266 L ${fx * 0.3},-216`} stroke="#4a3830" strokeWidth={4} strokeLinecap="round" />
                     <path d={`M -60,-240 Q -20,-258 ${-8 + fx * 0.3},-262 M 60,-240 Q 20,-258 ${8 + fx * 0.3},-262`} stroke="#3a2c26" strokeWidth={3} fill="none" opacity={0.7} />
                     {turn < 0.6 && jh(-96 + Math.max(0, turn) * 18)}{turn > -0.6 && jh(96 + Math.min(0, turn) * 18)}
-                    {braid.map(([x, y], i) => <ellipse key={i} cx={x} cy={y} rx={22 - i * 1.2} ry={24} fill={C.hair} stroke="#2b201c" strokeWidth={3} />)}
-                    {braid.slice(0, 4).map(([x, y], i) => <circle key={`j${i}`} cx={x + 16} cy={y - 6} r={7} fill="#fffdf2" stroke="#e7e2c8" strokeWidth={2} />)}
-                    <path d={`M ${braid[8][0] - 8},${braid[8][1] + 20} l -6,26 l 14,0 Z`} fill="#c2185b" />
+                    {braid.map(([x, y], i) => <g key={i}><ellipse cx={x} cy={y} rx={24 - i * 0.9} ry={23} fill={C.hair} stroke="#2b201c" strokeWidth={3} /><path d={`M ${x - 12},${y - 10} Q ${x},${y - 2} ${x + 10},${y - 14}`} stroke="#4a3a34" strokeWidth={3} fill="none" opacity={0.8} /></g>)}
+                    {braid.map(([x, y], i) => <g key={`j${i}`}>{[[18, -6], [-16, 4]].map(([dx, dy], k) => (i + k) % 2 === 0 ? <circle key={k} cx={x + dx * (1 - i * 0.03)} cy={y + dy} r={6.5} fill="#fffdf2" stroke="#e7e2c8" strokeWidth={2} /> : null)}</g>)}
+                    <path d={`M ${braid[NB - 1][0] - 10},${braid[NB - 1][1] + 18} q -4,22 -10,34 q 12,-4 20,0 q -6,-12 -4,-34 Z`} fill="#c2185b" /><circle cx={braid[NB - 1][0] - 9} cy={braid[NB - 1][1] + 54} r={6} fill={C.argyle} />
                   </g>
                 );
               })()}
@@ -389,14 +456,22 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                   <Brow x={38} raise={p.browR ?? 0} knit={p.knit ?? 0} side={1} />
                 </Part>
                 <Part p={reveal.nose}>
-                  <ellipse cx={turn * 12} cy={-84} rx={hero ? 12 : 20} ry={hero ? 14 : 22} fill={C.skinDark} />
-                  <ellipse cx={turn * 12 - 6} cy={-90} rx={6} ry={5} fill="#fff" opacity={0.45} />
-                  {hero && <circle cx={turn * 12 + 13} cy={-80} r={4} fill={C.argyle} />}
+                  {hero ? (
+                    <g>
+                      <path d={`M ${turn * 12 + 2},-96 Q ${turn * 12 + 8},-80 ${turn * 12 + 2},-74 Q ${turn * 12 - 4},-71 ${turn * 12 - 8},-75`} stroke={C.skinDark} strokeWidth={4} fill="none" strokeLinecap="round" />
+                      <circle cx={turn * 12 + 10} cy={-76} r={3.5} fill={C.argyle} />
+                    </g>
+                  ) : (
+                    <>
+                      <ellipse cx={turn * 12} cy={-84} rx={20} ry={22} fill={C.skinDark} />
+                      <ellipse cx={turn * 12 - 6} cy={-90} rx={6} ry={5} fill="#fff" opacity={0.45} />
+                    </>
+                  )}
                 </Part>
-                {hero && <circle cx={0} cy={-196} r={7} fill="#c2185b" />}
-                {(p.blush ?? 0) > 0 && [-62, 62].map((x) => <ellipse key={x} cx={x} cy={-66} rx={22} ry={12} fill="#f08a7a" opacity={0.55 * (p.blush ?? 0)} />)}
+                {hero && <circle cx={0} cy={-178} r={6} fill="#c2185b" />}
+                {(hero || (p.blush ?? 0) > 0) && [-56, 56].map((x) => <ellipse key={x} cx={x} cy={hero ? -76 : -66} rx={hero ? 20 : 22} ry={hero ? 11 : 12} fill={hero ? "#f2788f" : "#f08a7a"} opacity={(hero ? 0.32 : 0) + 0.55 * (p.blush ?? 0)} />)}
                 <Part p={reveal.mouth}>
-                  <g transform={`translate(${turn * 8},-36)`}><Mouth p={p} /></g>
+                  <g transform={`translate(${turn * 8},${hero ? -40 : -36})`}><Mouth p={p} /></g>
                 </Part>
               </g>
               {(p.sweat ?? 0) > 0 && <path d="M 100,-200 Q 92,-182 100,-172 Q 108,-182 100,-200 Z" fill="#7dd3fc" opacity={p.sweat} />}
