@@ -14,9 +14,9 @@ const BEAT = 0.717, B0 = 0.28;
 const sw = (t: number) => Math.sin(((t - B0) / BEAT) * Math.PI * 2);
 
 /** Crouched stance with both feet planted (drop = how far the hips sink). */
-const crouch = (drop: number): Partial<FPose> => ({ hipY: drop, legL: legIK(-12, 395 - drop, -1), legR: legIK(12, 395 - drop, 1), still: true });
+export const crouch = (drop: number): Partial<FPose> => ({ hipY: drop, legL: legIK(-12, 395 - drop, -1), legR: legIK(12, 395 - drop, 1), still: true });
 
-const K: [number, (t: number) => FPose][] = [
+export const K: [number, (t: number) => FPose][] = [
   [0.0, (t) => ({ ...idle(t * 30), armL: [160, 12], armR: [-162, -8], handL: "open", handR: "open", tilt: -10, lean: -4, smile: 0.9, mo: 0.35, bend: 5 * sw(t), shrug: 0.25 })],
   [0.55, (t) => ({ ...idle(t * 30), armL: [150, 98], armR: [-150, -98], handL: "open", handR: "open", tilt: 9, smile: 0.7, mo: 0.15, shrug: 0.35, bend: -4 })],
   [0.9, (t) => ({ ...crouch(64), lean: 16, armL: [-18 + 30 * sw(t), 22], armR: [18 + 30 * sw(t), -22], hipTilt: 6 * sw(t), bend: -5 * sw(t), twist: 0.3 * sw(t), smile: 0.75, lookX: 0.4 * sw(t), tilt: 4 * sw(t) })],
@@ -24,7 +24,7 @@ const K: [number, (t: number) => FPose][] = [
   [2.4, (t) => ({ ...crouch(10), turn: Math.cos(((t - 2.4) / 0.45) * Math.PI * 2) * 0.8, armL: [100, 8], armR: [-100, -8], handL: "open", handR: "open", smile: 0.9, shut: 0.6, bend: 4, breath: 1 })],
   [2.9, (t) => ({ ...crouch(10 + 9 * Math.abs(sw(t))), turn: 0.7, lookX: 1, armR: [-78, -12], armL: [24, 34], handR: "open", handL: "open", smile: 0.85, mo: 0.15, twist: 0.25, bend: 3 * sw(t), hipTilt: -4 * sw(t) })],
 ];
-const heroine = (t: number): FPose => {
+export const heroine = (t: number): FPose => {
   let i = 0;
   while (i < K.length - 1 && t >= K[i + 1][0]) i++;
   const cur = K[i][1](t);
@@ -34,7 +34,7 @@ const heroine = (t: number): FPose => {
 };
 
 /** Festival-night set: deep sky, string lights, lanterns, warm dusty floor, a spotlight haze. */
-const FestivalStage: React.FC = () => {
+export const FestivalStage: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill>
@@ -65,11 +65,11 @@ const capt = (f: number): FPose => {
   const p = tr.poses[Math.max(0, Math.min(tr.poses.length - 1, f))];
   return { ...p, lean: Math.max(-30, Math.min(30, p.lean ?? 0)) };
 };
-const groove = (t: number): FPose => ({ ...crouch(78), legL: legIK(-40, 395 - 78, -1), legR: legIK(40, 395 - 78, 1), lean: 22, armL: [-30 + 34 * sw(t), 18], armR: [10 + 34 * sw(t), -18], hipTilt: 7 * sw(t), bend: -6 * sw(t), twist: 0.35 * sw(t), shrug: 0.15, tilt: 5 * sw(t), handL: "open", handR: "open" });
+export const groove = (t: number): FPose => ({ ...crouch(78), legL: legIK(-40, 395 - 78, -1), legR: legIK(40, 395 - 78, 1), lean: 22, armL: [-30 + 34 * sw(t), 18], armR: [10 + 34 * sw(t), -18], hipTilt: 7 * sw(t), bend: -6 * sw(t), twist: 0.35 * sw(t), shrug: 0.15, tilt: 5 * sw(t), handL: "open", handR: "open" });
 /** Cleanup layer for the male lead: key poses read frame by frame from the footage (arm heights, crouch depth,
  * the knee lift and hop, the bouncing low step). Captured motion rides on top for natural timing and secondary
  * movement (head, twist, small arm swings): final = mix(capture, key pose, weight). */
-const NK: [number, number, (t: number) => FPose][] = [
+export const NK: [number, number, (t: number) => FPose][] = [
   // [start s, weight of the key pose, pose]
   [0.0, 0.8, (t) => ({ ...crouch(10 + 8 * Math.abs(sw(t))), armL: [165, 12], armR: [-150, -30], handL: "open", handR: "open", lean: -3, smile: 1, mo: 0.4, shrug: 0.3 })],
   [0.55, 0.7, (t) => ({ ...crouch(16), turn: -0.4, armL: [30, 20], armR: [-35, -25], smile: 0.8 })],
@@ -79,7 +79,7 @@ const NK: [number, number, (t: number) => FPose][] = [
   [2.48, 0.8, (t) => ({ ...crouch(44), lean: 10, armL: [-10, 20], armR: [10, -20], smile: 0.8 })],
   [2.9, 0.75, (t) => ({ ...crouch(30 + 16 * Math.abs(sw(t))), hipX: 10 * sw(t), turn: -0.3, lookX: -0.8, armL: [30, -72], armR: [-30, 72], handL: "fist", handR: "fist", shrugL: 0.25 * Math.max(0, sw(t)), shrugR: 0.25 * Math.max(0, -sw(t)), hipTilt: 5 * sw(t), twist: 0.25 * sw(t), smile: 0.85 })],
 ];
-const keyed = (t: number): [FPose, number] => {
+export const keyed = (t: number): [FPose, number] => {
   let i = 0;
   while (i < NK.length - 1 && t >= NK[i + 1][0]) i++;
   const cur = NK[i][2](t);
@@ -87,7 +87,7 @@ const keyed = (t: number): [FPose, number] => {
   const u = easeInOut((t - NK[i][0]) / 0.14);
   return u >= 1 ? [cur, NK[i][1]] : [mix(NK[i - 1][2](t), cur, u), NK[i - 1][1] + (NK[i][1] - NK[i - 1][1]) * u];
 };
-const lead = (f: number): FPose => {
+export const lead = (f: number): FPose => {
   const [k, w] = keyed(f / 30);
   const c = capt(f);
   return { ...mix(c, k, w), turn: k.turn ?? c.turn, handL: k.handL ?? c.handL, handR: k.handR ?? c.handR };

@@ -159,8 +159,8 @@ const HeroEye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: n
       <defs><clipPath id={id}><path d={shape} /></clipPath></defs>
       <path d={shape} fill="#fffaf5" />
       <g clipPath={`url(#${id})`}>
-        <circle cx={x + lx} cy={y + ly} r={ry * 0.95} fill="#4a2a17" />
-        <circle cx={x + lx} cy={y + ly} r={ry * 0.95} fill="none" stroke="#2a160b" strokeWidth={4} />
+        <circle cx={x + lx} cy={y + ly} r={ry * 0.86} fill="#4a2a17" />
+        <circle cx={x + lx} cy={y + ly} r={ry * 0.86} fill="none" stroke="#2a160b" strokeWidth={4} />
         <circle cx={x + lx} cy={y + ly + 5} r={ry * 0.6} fill="#8a5632" opacity={0.5} />
         <circle cx={x + lx} cy={y + ly} r={ry * 0.42} fill="#150a05" />
         <circle cx={x + lx + 7} cy={y + ly - 7} r={6} fill="#fff" />
