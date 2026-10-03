@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
-import { easeInOut, FPose, Fumble, idle, legIK, mix } from "./Fumble";
+import { easeInOut, exaggerate, FPose, Fumble, idle, legIK, mix } from "./Fumble";
 import { MocapData } from "./MocapCheck";
 import { crouch, FestivalStage, groove, heroine as duetHeroine, lead as duetLead } from "./YeshDance";
 import wide1 from "./mocap/yesh_wide1.json";
@@ -279,7 +279,7 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
   const pulse = 1 + 0.014 * Math.exp(-sinceBeat(t) * 9);
   const z = shot.zoom * pulse;
   const pos = positions(t);
-  const hp = run(H_SEGS, t), fp = run(F_SEGS, t);
+  const hp = exaggerate(run(H_SEGS, t), 1.35), fp = exaggerate(run(F_SEGS, t), 1.45);
   const cam = `translate(540,960) scale(${z}) translate(${-shot.cx},${-shot.cy})`;
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: "#140c2e" }}>
@@ -292,7 +292,7 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
           {crowdOn(t) && (
             <g style={{ filter: "brightness(0.16) saturate(0) blur(3.5px)" }} opacity={0.8}>
               {CROWD.map((c, i) => {
-                const p = run(F_SEGS, t - (c.d * 2) / 30);
+                const p = exaggerate(run(F_SEGS, t - (c.d * 2) / 30), 1.3);
                 return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><Fumble f={f + i * 7} p={{ ...(c.m ? mirror(p) : p), ...GRIN }} braids /></g>;
               })}
             </g>

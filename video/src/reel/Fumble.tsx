@@ -47,7 +47,7 @@ const pt = (x: number, y: number, a: number, len: number): [number, number] => [
 const HandShape: React.FC<{ x: number; y: number; a: number; kind: Hand; flip: number }> = ({ x, y, a, kind, flip }) => {
   const { C, hero } = usePal();
   return (
-  <g transform={`translate(${x},${y}) rotate(${a})`}>
+  <g transform={`translate(${x},${y}) rotate(${a}) scale(${hero ? 1.15 : 1.4})`}>
     {kind === "point" && <line x1={0} y1={0} x2={0} y2={46} stroke={C.skin} strokeWidth={12} strokeLinecap="round" />}
     {kind === "thumb" && <line x1={0} y1={0} x2={-30 * flip} y2={-16} stroke={C.skin} strokeWidth={12} strokeLinecap="round" />}
     {kind === "open" && [-12, -4, 4, 12].map((d) => <line key={d} x1={d} y1={8} x2={d * 1.3} y2={34} stroke={C.skin} strokeWidth={9} strokeLinecap="round" />)}
@@ -541,6 +541,22 @@ export const mix = (a: FPose, b: FPose, u: number): FPose => {
   }
   return out;
 };
+/** Cartoon exaggeration: push every pose further from rest (arms, wrists, lean, spine, hips, shoulders, crouch)
+ * so movements read clearly on a phone. k = 1 leaves the pose unchanged. */
+export const exaggerate = (p: FPose, k = 1.45): FPose => {
+  const arm = (a: [number, number] | undefined, rest: [number, number]): [number, number] | undefined => {
+    if (!a) return a;
+    const up = rest[0] + (a[0] - rest[0]) * k, lo = rest[1] + (a[1] - rest[1]) * k;
+    return [Math.max(-185, Math.min(185, up)), Math.max(-160, Math.min(160, lo))];
+  };
+  const sc = (v: number | undefined, m = k, lim = 999) => (v === undefined ? v : Math.max(-lim, Math.min(lim, v * m)));
+  return {
+    ...p, armL: arm(p.armL, [14, 18]), armR: arm(p.armR, [-14, -18]), wristL: sc(p.wristL, 1.6, 80), wristR: sc(p.wristR, 1.6, 80),
+    lean: sc(p.lean, k, 32), bend: sc(p.bend, k, 22), hipTilt: sc(p.hipTilt, k, 22), twist: sc(p.twist, k, 1), tilt: sc(p.tilt, 1.25, 30),
+    shrug: sc(p.shrug, k, 1), shrugL: sc(p.shrugL, k, 1), shrugR: sc(p.shrugR, k, 1), hipX: sc(p.hipX, 1.2, 60),
+  };
+};
+
 /** Move from one pose to another over `dur` frames starting at `at`, with overshoot. */
 export const trans = (t: number, from: FPose, to: FPose, at: number, dur = 12) => mix(from, to, easeBack((t - at) / dur));
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
-import { easeBack, easeInOut, FPose, Fumble, legIK, mix } from "./Fumble";
+import { easeBack, easeInOut, exaggerate, FPose, Fumble, legIK, mix } from "./Fumble";
 
 // Yeshanagula hook step (film 64.4 - 68.5 s), keyed at 24 fps resolution from the footage, every key placed on
 // the measured beat grid (64.769, 65.466, 66.186, 66.906, 67.625, 68.345). Feet stay planted in a wide stance;
@@ -82,7 +82,7 @@ export const HookTutorial: React.FC = () => {
   else if (f < TUT.full2 - 20) { t = HOOK_START + ((f - TUT.slow) / 30) * SLOW; label = "SLOW · 0.5×"; slow = true; }
   else if (f < TUT.full2) { t = HOOK_END; label = "your turn"; }
   else { t = Math.min(HOOK_END, HOOK_START + (f - TUT.full2) / 30); label = "FULL SPEED"; }
-  const p = hook(t);
+  const p = exaggerate(hook(t), 1.45);
   const count = COUNTS.filter(([c]) => t >= c - 0.03).pop();
   const countAge = count ? t - count[0] : 9;
   const cue = CUES.filter(([c]) => t >= c).pop();
