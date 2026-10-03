@@ -3,7 +3,7 @@ import { AbsoluteFill, Audio, Img, interpolate, Sequence, spring, staticFile, us
 import { Fonts } from "../components/Fonts";
 import { CodeLine, Studio, Title } from "./BuildTimelapse";
 import { SketchStyle } from "./Mascot";
-import { browWiggle, doubleTake, FPose, FReveal, Fumble, idle, innocent, kf, peek, shock, smugGrin, stiffWalk, tiptoe } from "./Fumble";
+import { browWiggle, doubleTake, FPose, FReveal, Fumble, idle, innocent, kf, peek, shock, smugGrin, stiffWalk, tiptoe, trans, walkDist } from "./Fumble";
 
 // Making-of for Mr. Fumble: code -> drawing -> rig -> test & fix -> the mannerism library -> a short silent
 // sketch. Who built it and the build time arrive as props, so the repo carries no branding.
@@ -173,8 +173,8 @@ const MoveClip: React.FC<{ k: number }> = ({ k }) => {
   const { fps } = useVideoConfig();
   const tag = spring({ frame: f - 2, fps, config: { damping: 14 } });
   let x = 540, p: FPose = idle(f), s = SC, y = FLOOR;
-  if (k === 0) { x = kf(f, [[0, -180], [96, 540]]); p = f < 96 ? stiffWalk(f) : { ...smugGrin(f), shut: 0, lid: 0.4, lookX: 0, tilt: -8 }; }
-  if (k === 1) { x = kf(f, [[0, -160], [130, 760]]); p = tiptoe(f); }
+  if (k === 0) { x = -180 + walkDist(Math.min(f, 80), "march") * SC; p = f < 80 ? stiffWalk(f) : trans(f, stiffWalk(80), { ...smugGrin(f), shut: 0, lid: 0.4, lookX: 0, tilt: -8 }, 80, 14); }
+  if (k === 1) { x = -120 + walkDist(f, "tiptoe") * SC; p = tiptoe(f); }
   if (k === 2) { s = 2.7; y = 960 + 880 * 2.7; p = f < 20 ? idle(f) : browWiggle(f - 20); }
   if (k === 3) { s = 1.6; y = FLOOR + 560; p = doubleTake(Math.max(0, f - 30)); }
   if (k === 4) { p = f < 20 ? idle(f) : smugGrin(f); }
@@ -196,10 +196,10 @@ const MoveClip: React.FC<{ k: number }> = ({ k }) => {
 };
 const moveSfx = (base: number) => {
   const out: React.ReactNode[] = [];
-  for (let t = 11; t < 96; t += 11) out.push(<Sfx key={`c${t}`} at={base + t} src={A("clunk")} vol={0.45} />);
-  out.push(<Sfx key="s0" at={base + 104} src={A("hum_smug")} vol={0.7} />);
+  for (let t = 15; t < 80; t += 15) out.push(<Sfx key={`c${t}`} at={base + t} src={A("clunk")} vol={0.45} />);
+  out.push(<Sfx key="s0" at={base + 96} src={A("hum_smug")} vol={0.7} />);
   const b1 = base + MOVE;
-  for (let t = 18; t < 130; t += 18) out.push(<Sfx key={`t${t}`} at={b1 + t} src={A(`tip${(t / 18) % 4}`)} vol={0.6} />);
+  for (let t = 22; t < 145; t += 22) out.push(<Sfx key={`t${t}`} at={b1 + t} src={A(`tip${(t / 22) % 4}`)} vol={0.6} />);
   const b2 = base + 2 * MOVE;
   out.push(<Sfx key="q2" at={b2 + 24} src={A("hum_q")} vol={0.6} />, <Sfx key="g2" at={b2 + 90} src={A("giggle")} vol={0.6} />);
   const b3 = base + 3 * MOVE;
@@ -217,12 +217,12 @@ export const FumbleSketch: React.FC<{ handle: string; music?: boolean }> = ({ ha
   const BX = 850, BY = 1170;
   const pressed = f >= 340;
   let x = 300, p: FPose = idle(f);
-  if (f < 90) { x = kf(f, [[0, -180], [90, 300]]); p = stiffWalk(f); }
-  else if (f < 120) p = { ...idle(f), turn: 0.6, lookX: 1, browL: 0.6, browR: 0.2, mo: 0.2 }; // spots the button
+  if (f < 50) { x = -180 + walkDist(f, "march") * SC; p = stiffWalk(f); }
+  else if (f < 120) { x = -180 + walkDist(50, "march") * SC; p = trans(f, stiffWalk(50), { ...idle(f), turn: 0.6, lookX: 1, browL: 0.6, browR: 0.2, mo: 0.2 }, 50, 14); } // stops, spots the button
   else if (f < 180) p = doubleTake(f - 120 + 10); // looks at the camera
   else if (f < 225) p = { ...browWiggle(f - 180), turn: -0.3 };
-  else if (f < 315) { x = kf(f, [[225, 300], [315, 600]]); p = tiptoe(f - 225); }
-  else if (f < 340) { x = kf(f, [[315, 600], [330, 540]]); p = peek(f - 315, 1); }
+  else if (f < 315) { x = -180 + walkDist(50, "march") * SC + walkDist(f - 225, "tiptoe") * SC; p = tiptoe(f - 225); }
+  else if (f < 340) { x = kf(f, [[315, -180 + walkDist(50, "march") * SC + walkDist(90, "tiptoe") * SC], [330, 540]]); p = peek(f - 315, 1); }
   else if (f < 360) { x = 540; p = { turn: 0.6, lean: 14, armL: [-112, -8], handL: "point", armR: [-14, -18], browL: 0.8, browR: 0.8, mo: 0.4, eyeSize: 1.2, lookX: 1 }; }
   else if (f < 420) { x = kf(f, [[360, 540], [380, 440]]); p = smugGrin(f); }
   else { x = 440; p = innocent(f); }
@@ -247,11 +247,11 @@ export const FumbleSketch: React.FC<{ handle: string; music?: boolean }> = ({ ha
         return <div key={i} style={{ position: "absolute", left: x + 150 + t * 120, top: 330 - t * 160, fontSize: 70, color: "#1e3a8a", opacity: 1 - t }}>♪</div>;
       })}
       {music && <Audio src={A("sneak")} volume={0.3} />}
-      {[11, 22, 33, 44, 55, 66, 77, 88].map((t) => <Sfx key={t} at={t} src={A("clunk")} vol={0.45} />)}
+      {[15, 30, 45].map((t) => <Sfx key={t} at={t} src={A("clunk")} vol={0.45} />)}
       <Sfx at={92} src={A("hum_q")} vol={0.7} />
       <Sfx at={158} src={A("slide_up")} vol={0.5} />
       <Sfx at={186} src={A("giggle")} vol={0.6} />
-      {[243, 261, 279, 297].map((t, i) => <Sfx key={t} at={t} src={A(`tip${i}`)} vol={0.6} />)}
+      {[247, 269, 291, 313].map((t, i) => <Sfx key={t} at={t} src={A(`tip${i}`)} vol={0.6} />)}
       <Sfx at={318} src={A("hmph")} vol={0.5} />
       <Sfx at={340} src={staticFile("audio/gag_ding.wav")} vol={0.7} />
       <Sfx at={362} src={A("hum_smug")} vol={0.8} />

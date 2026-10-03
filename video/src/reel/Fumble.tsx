@@ -16,7 +16,7 @@ const C = FC_;
 
 export type Hand = "open" | "fist" | "point" | "thumb" | "paw";
 export type FPose = {
-  hipY?: number; lean?: number; // crouch (px, + = down), torso lean (deg, + = toward screen-right)
+  hipX?: number; hipY?: number; lean?: number; // crouch (px, + = down), torso lean (deg, + = toward screen-right)
   tilt?: number; neck?: number; turn?: number; // head tilt (deg), neck stretch (px), face turn (-1 left .. 1 right)
   browL?: number; browR?: number; knit?: number; // brow raise -1..1 each (screen-left / screen-right eye), frown 0..1
   lookX?: number; lookY?: number; lid?: number; squint?: number; eyeSize?: number; shut?: number; // shut: 0..1 per both (1 = closed happy arcs)
@@ -24,7 +24,7 @@ export type FPose = {
   mw?: number; mo?: number; smile?: number; skew?: number; pucker?: number; lipOut?: number; // mouth width/open/smile/skew/pucker/pout
   armL?: [number, number]; armR?: [number, number]; handL?: Hand; handR?: Hand; back?: boolean; // arms behind the torso
   legL?: [number, number]; legR?: [number, number]; toeL?: number; toeR?: number; // thigh, knee (deg); toe lift (deg)
-  blush?: number; sweat?: number;
+  blush?: number; sweat?: number; still?: boolean; // still: no built-in breathing bob (walk cycles drive the hips)
 };
 export type FReveal = Partial<Record<"shoes" | "legs" | "torso" | "vest" | "tie" | "armL" | "armR" | "head" | "ears" | "hair" | "eyes" | "brows" | "nose" | "mouth", number>>;
 
@@ -42,13 +42,13 @@ const HandShape: React.FC<{ x: number; y: number; a: number; kind: Hand; flip: n
   </g>
 );
 
-const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean }> = ({ x, y, a, hand, flip, bones }) => {
+const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean; far?: boolean }> = ({ x, y, a, hand, flip, bones, far }) => {
   const [ex, ey] = pt(x, y, a[0], 130);
   const [hx, hy] = pt(ex, ey, a[0] + a[1], 120);
   return (
     <g>
-      <line x1={x} y1={y} x2={ex} y2={ey} stroke={C.shirt} strokeWidth={38} strokeLinecap="round" />
-      <line x1={ex} y1={ey} x2={hx} y2={hy} stroke={C.shirt} strokeWidth={34} strokeLinecap="round" />
+      <line x1={x} y1={y} x2={ex} y2={ey} stroke={far ? C.shirtDark : C.shirt} strokeWidth={38} strokeLinecap="round" />
+      <line x1={ex} y1={ey} x2={hx} y2={hy} stroke={far ? C.shirtDark : C.shirt} strokeWidth={34} strokeLinecap="round" />
       <circle cx={ex} cy={ey} r={15} fill={C.shirtDark} opacity={0.4} />
       <line x1={hx - 15 * Math.cos(r(a[0] + a[1]))} y1={hy - 15 * Math.sin(r(a[0] + a[1]))} x2={hx + 15 * Math.cos(r(a[0] + a[1]))} y2={hy + 15 * Math.sin(r(a[0] + a[1]))} stroke="#fff" strokeWidth={8} strokeLinecap="round" />
       <HandShape x={hx} y={hy} a={a[0] + a[1]} kind={hand} flip={flip} />
@@ -57,16 +57,16 @@ const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; fli
   );
 };
 
-const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; dir: number; bones?: boolean; p?: number; ps?: number }> = ({ x, y, a, toe, dir, bones, p, ps }) => {
+const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; dir: number; bones?: boolean; p?: number; ps?: number; far?: boolean }> = ({ x, y, a, toe, dir, bones, p, ps, far }) => {
   const [kx, ky] = pt(x, y, a[0], 200);
   const [ax, ay] = pt(kx, ky, a[0] + a[1], 195);
   const [sx, sy] = pt(kx, ky, a[0] + a[1], 170);
   return (
     <g>
       <Part p={p}>
-        <line x1={x} y1={y} x2={kx} y2={ky} stroke={C.trousers} strokeWidth={56} strokeLinecap="round" />
-        <line x1={kx} y1={ky} x2={sx} y2={sy} stroke={C.trousers} strokeWidth={50} strokeLinecap="round" />
-        <line x1={sx} y1={sy} x2={ax} y2={ay} stroke={C.sock} strokeWidth={30} strokeLinecap="round" />
+        <line x1={x} y1={y} x2={kx} y2={ky} stroke={far ? C.trousersDark : C.trousers} strokeWidth={56} strokeLinecap="round" />
+        <line x1={kx} y1={ky} x2={sx} y2={sy} stroke={far ? C.trousersDark : C.trousers} strokeWidth={50} strokeLinecap="round" />
+        <line x1={sx} y1={sy} x2={ax} y2={ay} stroke={far ? "#d4d4d4" : C.sock} strokeWidth={30} strokeLinecap="round" />
       </Part>
       <Part p={ps}>
         <g transform={`translate(${ax},${ay + 6}) rotate(${-toe * dir})`}>
@@ -154,25 +154,31 @@ const Mouth: React.FC<{ p: FPose }> = ({ p }) => {
 
 export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }> = ({ f, p, reveal = {}, bones }) => {
   const blink = f % 110 < 4 || f % 173 < 3 ? 0 : 1;
-  const hipY = -410 + (p.hipY ?? 0) - 2 * Math.sin(f / 16);
+  const hipY = -410 + (p.hipY ?? 0) - (p.still ? 0 : 2 * Math.sin(f / 16));
   const turn = p.turn ?? 0;
   const dir = Math.abs(turn) > 0.35 ? Math.sign(turn) : 0;
   const legL = p.legL ?? [6, 0], legR = p.legR ?? [-6, 0];
   const armL = p.armL ?? [14, 18], armR = p.armR ?? [-14, -18];
   const SH = -300; // shoulders above the hip
-  const arms = (
-    <>
-      <Part p={reveal.armR}><Arm x={88} y={SH + 22} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} /></Part>
-      <Part p={reveal.armL}><Arm x={-88} y={SH + 22} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} /></Part>
-    </>
-  );
+  // side-on: hips and shoulders narrow, the far limbs go darker and behind the body
+  const prof = Math.min(1, Math.max(0, (Math.abs(turn) - 0.3) / 0.3));
+  const farR = turn < 0 && prof > 0.5, farL = turn > 0 && prof > 0.5; // facing right we see his left side, so screen-left limbs are far
+  const hx = 34 * (1 - 0.7 * prof), sx = 88 * (1 - 0.5 * prof);
+  const armRN = <Part p={reveal.armR}><Arm x={sx} y={SH + 22} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR} /></Part>;
+  const armLN = <Part p={reveal.armL}><Arm x={-sx} y={SH + 22} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL} /></Part>;
+  const arms = <>{!farR && armRN}{!farL && armLN}</>;
+  const farArm = farL ? armLN : farR ? armRN : null;
   const fx = turn * 34; // face features slide with the turn
   return (
     <g>
       <ellipse cx={0} cy={6} rx={170} ry={22} fill="#000" opacity={0.16} />
-      <g transform={`translate(0,${hipY})`}>
-        <Leg x={-34} y={0} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} />
-        <Leg x={34} y={0} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} />
+      <g transform={`translate(${p.hipX ?? 0},${hipY})`}>
+        {(() => {
+          const lL = <Leg key="l" x={-hx} y={0} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL} />;
+          const lR = <Leg key="r" x={hx} y={0} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR} />;
+          return farR ? [lR, lL] : [lL, lR];
+        })()}
+        {farArm && <g transform={`rotate(${p.lean ?? 0})`}>{farArm}</g>}
         <g transform={`rotate(${p.lean ?? 0})`}>
           {p.back && arms}
           {/* torso: shirt, argyle vest, waistband */}
@@ -250,30 +256,109 @@ const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 export const kf = (t: number, keys: [number, number][]) => interpolate(t, keys.map((k) => k[0]), keys.map((k) => k[1]), cl);
 const S = (t: number, period: number) => Math.sin((t / period) * Math.PI * 2);
 
-export const idle = (t: number): FPose => ({ browL: 0.05 * S(t, 90), browR: 0.05 * S(t + 20, 90), lookX: 0.15 * S(t, 140), tilt: 2 * S(t, 120) });
+// ---------- motion engine: easing, pose blending, two-bone leg IK, planted-foot walk cycles ----------
+export const easeInOut = (u: number) => (u <= 0 ? 0 : u >= 1 ? 1 : u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
+/** Ease out with a small overshoot, so arms land with weight instead of snapping. */
+export const easeBack = (u: number, k = 1.6) => (u <= 0 ? 0 : u >= 1 ? 1 : 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2));
+const NUM: (keyof FPose)[] = ["hipX", "hipY", "lean", "tilt", "neck", "turn", "browL", "browR", "knit", "lookX", "lookY", "lid", "squint", "eyeSize", "shut", "winkL", "winkR", "mw", "mo", "smile", "skew", "pucker", "lipOut", "toeL", "toeR", "blush", "sweat"];
+const PAIR: (keyof FPose)[] = ["armL", "armR", "legL", "legR"];
+const DEF: Partial<Record<keyof FPose, number | [number, number]>> = { eyeSize: 1, mw: 0.6, smile: 0.2, armL: [14, 18], armR: [-14, -18], legL: [6, 0], legR: [-6, 0] };
+/** Blend two poses (u = 0 -> a, 1 -> b). Hands/flags switch at the halfway point. */
+export const mix = (a: FPose, b: FPose, u: number): FPose => {
+  const out: FPose = { ...(u < 0.5 ? a : b) };
+  const o = out as Record<string, unknown>, A_ = a as Record<string, unknown>, B_ = b as Record<string, unknown>, D = DEF as Record<string, unknown>;
+  for (const k of NUM) {
+    const x = (A_[k] ?? D[k] ?? 0) as number, y = (B_[k] ?? D[k] ?? 0) as number;
+    o[k] = x + (y - x) * u;
+  }
+  for (const k of PAIR) {
+    const x = (A_[k] ?? D[k]) as [number, number], y = (B_[k] ?? D[k]) as [number, number];
+    o[k] = [x[0] + (y[0] - x[0]) * u, x[1] + (y[1] - x[1]) * u];
+  }
+  return out;
+};
+/** Move from one pose to another over `dur` frames starting at `at`, with overshoot. */
+export const trans = (t: number, from: FPose, to: FPose, at: number, dur = 12) => mix(from, to, easeBack((t - at) / dur));
 
-/** Stiff, proud march: barely-bent legs, chin up, elbows locked at 90 degrees, swinging. ~22-frame stride. */
-export const stiffWalk = (t: number, dir = 1): FPose => {
-  const s = S(t, 22);
+const L1 = 200, L2 = 195; // thigh, shin (hip joint -> knee -> ankle)
+/** Two-bone IK: angles that put the ankle at (dx, dy) from the hip joint (dy down), knee pointing toward `dir`. */
+export const legIK = (dx: number, dy: number, dir = 1): [number, number] => {
+  const d = Math.min(L1 + L2 - 0.5, Math.max(40, Math.hypot(dx, dy)));
+  const base = (Math.atan2(-dx, dy) * 180) / Math.PI;
+  const a = (Math.acos((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d)) * 180) / Math.PI;
+  const g = (Math.acos((L2 * L2 + d * d - L1 * L1) / (2 * L2 * d)) * 180) / Math.PI;
+  return [base - a * dir, (a + g) * dir];
+};
+const fr = (x: number) => x - Math.floor(x);
+
+type Gait = { P: number; S: number; H: number; base: number; bob: number; stance: number; heel: number; arm: number; elbow: number; lean: number; tip?: boolean };
+const GAIT: Record<"walk" | "march" | "tiptoe", Gait> = {
+  walk: { P: 34, S: 95, H: 46, base: 14, bob: 9, stance: 0.6, heel: 18, arm: 20, elbow: 16, lean: 4 },
+  march: { P: 30, S: 110, H: 30, base: 5, bob: 5, stance: 0.58, heel: 26, arm: 34, elbow: 85, lean: -3 },
+  tiptoe: { P: 44, S: 62, H: 120, base: 44, bob: 8, stance: 0.55, heel: 0, arm: 8, elbow: 125, lean: 15, tip: true },
+};
+/** Distance travelled after t frames, in rig units (multiply by the render scale). Keeps the planted foot still. */
+export const walkDist = (t: number, kind: keyof typeof GAIT = "walk") => (2 * GAIT[kind].S * t) / GAIT[kind].P;
+
+/** One foot through the cycle: forward offset, lift and toe angle at phase ph (0 = heel strike). */
+const foot = (ph: number, g: Gait) => {
+  const a = g.S * g.stance;
+  if (ph < g.stance) {
+    const u = ph / g.stance;
+    const heelUp = g.tip ? 1 : Math.max(0, (u - 0.72) / 0.28);
+    const toe = g.tip ? -32 : u < 0.2 ? g.heel * (1 - u / 0.2) : -26 * heelUp;
+    return { x: a * (1 - 2 * u), lift: (g.tip ? 22 : 0) + 20 * heelUp * (g.tip ? 0 : 1), toe };
+  }
+  const u = (ph - g.stance) / (1 - g.stance);
+  const toe = g.tip ? -32 : u < 0.35 ? -26 * (1 - u / 0.35) : g.heel * ((u - 0.35) / 0.65);
+  return { x: -a + 2 * a * easeInOut(u), lift: (g.tip ? 22 : 0) + g.H * Math.sin(Math.PI * u) + (g.tip ? 0 : 20 * (1 - u) * (1 - u) * 0.5), toe };
+};
+
+/** Gait pose with planted feet, hip bob, counter-swinging arms with elbow lag. dir: 1 = walking right. */
+const gait = (t: number, dir: number, kind: keyof typeof GAIT): FPose => {
+  const g = GAIT[kind];
+  const ph = fr(t / g.P);
+  const L = foot(ph, g), R = foot(fr(ph + 0.5), g);
+  const down = g.base + g.bob * Math.cos(2 * Math.PI * 2 * (ph - 0.08));
+  const reach = (fx: number, lift: number): [number, number] => legIK(fx * dir, L1 + L2 - down - lift, dir);
+  // arms swing against the same-side leg; the forearm trails the upper arm a little
+  const swing = (p0: number, lag: number) => -Math.cos(2 * Math.PI * (p0 - lag));
+  const arm = (p0: number): [number, number] => {
+    const up = swing(p0, 0), lo = swing(p0, 0.07);
+    return kind === "walk" ? [-dir * g.arm * up, -dir * (g.elbow + 14 * Math.max(0, lo))] : kind === "march" ? [-dir * g.arm * up, -dir * g.elbow] : [-dir * (42 + 6 * up), -dir * (78 - 8 * lo)];
+  };
   return {
-    turn: 0.55 * dir, tilt: -4 * dir, hipY: -6 * Math.abs(s), lean: -3 * dir,
-    legL: [24 * s * dir, 4], legR: [-24 * s * dir, 4], toeL: Math.max(0, 14 * s), toeR: Math.max(0, -14 * s),
-    armL: [-30 * s * dir, -85 * dir], armR: [30 * s * dir, -85 * dir], handL: "fist", handR: "fist",
-    browL: 0.35, browR: 0.35, lid: 0.35, mw: 0.4, smile: 0.1, lookX: 0.6 * dir,
+    still: true, turn: 0.6 * dir, hipY: down, lean: dir * (g.lean + 1.2 * Math.cos(4 * Math.PI * ph)), tilt: -dir * 1.5 * Math.cos(4 * Math.PI * ph),
+    legL: reach(L.x, L.lift), legR: reach(R.x, R.lift), toeL: L.toe, toeR: R.toe,
+    armL: arm(fr(ph + 0.5)), armR: arm(ph), handL: kind === "march" ? "fist" : kind === "tiptoe" ? "paw" : "open", handR: kind === "march" ? "fist" : kind === "tiptoe" ? "paw" : "open",
+    lookX: 0.6 * dir,
   };
 };
 
-/** Exaggerated tiptoe sneak: hunched, knees high, hands up like paws, eyes darting. ~36-frame cycle. */
-export const tiptoe = (t: number, dir = 1): FPose => {
-  const ph = (t % 36) / 36, s = S(t, 36);
-  const upL = ph < 0.5 ? Math.sin(ph * 2 * Math.PI) : 0, upR = ph >= 0.5 ? Math.sin((ph - 0.5) * 2 * Math.PI) : 0;
+/** Relaxed natural walk. ~34-frame cycle, foot down every 17 frames. */
+export const walk = (t: number, dir = 1): FPose => ({ ...gait(t, dir, "walk"), mw: 0.5, smile: 0.25 });
+
+/** Standing idle with a slow weight shift (one leg straight, the other knee soft) and breathing. */
+export const idle = (t: number): FPose => {
+  const w = 0.5 + 0.5 * Math.sin((t / 210) * Math.PI * 2); // 0 = weight on left, 1 = on right
+  const hipX = -8 + 16 * w;
+  const lean = (d: number) => (Math.atan2(d, 395) * 180) / Math.PI; // keeps each foot where it stands
   return {
-    turn: 0.6 * dir, lean: 14 * dir, hipY: 34 - 10 * Math.abs(s), neck: -10, tilt: 6 * dir,
-    legL: [(-10 - 60 * upL) * dir, (10 + 100 * upL) * dir], legR: [(10 - 60 * upR) * dir, (10 + 100 * upR) * dir], toeL: -26, toeR: -26,
-    armL: [(-100) * dir, 120 * dir], armR: [(-80) * dir, 120 * dir], handL: "paw", handR: "paw",
-    lookX: Math.sign(S(t, 48)) * 0.9, browL: 0.6, browR: 0.6, eyeSize: 1.15, mw: 0.3, mo: 0, smile: -0.2, skew: 0.4 * dir,
+    hipX, lean: (w - 0.5) * -3,
+    legL: [lean(hipX + 6) - 5 * w, 10 * w], legR: [lean(hipX - 6) + 5 * (1 - w), -10 * (1 - w)], toeL: -6 * w, toeR: -6 * (1 - w),
+    armL: [10 + 2 * Math.sin(t / 30), 14 + 3 * Math.sin(t / 30 - 0.6)], armR: [-10 - 2 * Math.sin(t / 30), -14 - 3 * Math.sin(t / 30 - 0.6)],
+    browL: 0.05 * S(t, 90), browR: 0.05 * S(t + 20, 90), lookX: 0.15 * S(t, 140), tilt: 2 * S(t, 120) - (w - 0.5) * 3,
   };
 };
+
+/** Stiff, proud march: long straight-legged strides, chin up, elbows locked at 90 degrees. ~30-frame cycle. */
+export const stiffWalk = (t: number, dir = 1): FPose => ({ ...gait(t, dir, "march"), tilt: -5 * dir, browL: 0.35, browR: 0.35, lid: 0.35, mw: 0.4, smile: 0.1 });
+
+/** Exaggerated tiptoe sneak: on the balls of the feet, knees high, hunched, hands up like paws, eyes darting. */
+export const tiptoe = (t: number, dir = 1): FPose => ({
+  ...gait(t, dir, "tiptoe"), neck: -10, tilt: 6 * dir,
+  lookX: Math.sign(S(t, 52)) * 0.9, browL: 0.6, browR: 0.6, eyeSize: 1.15, mw: 0.3, mo: 0, smile: -0.2, skew: 0.4 * dir,
+});
 
 /** The independent eyebrow wiggle, with a sideways smirk. */
 export const browWiggle = (t: number): FPose => ({
@@ -324,3 +409,15 @@ export const pout = (t: number): FPose => ({
   turn: -0.5, tilt: 8, knit: 1, browL: -0.6, browR: -0.6, lookX: 0.9, lipOut: 0.8, smile: -0.6, mw: 0.35,
   armL: [6, -102], armR: [-6, 102], handL: "fist", handR: "fist", lid: 0.3 + 0.05 * S(t, 30),
 });
+
+/** Friendly wave: arm swings up with overshoot, forearm waves from the elbow, hand trails. */
+export const wave = (t: number): FPose => {
+  const up = easeBack(t / 14);
+  return { ...idle(t), armL: [14 + 136 * up, 18 + (12 + 28 * Math.sin(t / 3.5)) * up], handL: "open", smile: 0.7, mw: 0.7, browL: 0.4, browR: 0.4, tilt: 6 * up };
+};
+
+/** "Who, me?" shrug: forearms out, palms up, head tilt, brows up, flat mouth. */
+export const shrug = (t: number): FPose => {
+  const u = easeBack(t / 12);
+  return { ...idle(t), hipY: 6 - 10 * u, armL: [14 + 22 * u, 18 + 52 * u], armR: [-14 - 22 * u, -18 - 52 * u], handL: "open", handR: "open", tilt: 10 * u, browL: 0.9 * u, browR: 0.6 * u, mw: 0.35, smile: -0.2 * u, skew: 0.3 * u };
+};
