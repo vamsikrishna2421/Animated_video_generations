@@ -64,7 +64,7 @@ const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, c
   const step = (i: number) => cues[Math.min(i, cues.length - 1)] ?? 10 + i * 20;
   const box: React.CSSProperties = { position: "absolute", top: 640, left: 60, right: 60, height: 720, borderRadius: 36, background: "rgba(17,22,44,0.82)", border: "2px solid rgba(255,255,255,0.08)", padding: "40px 44px", overflow: "hidden" };
   const title = d.title && <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 26, letterSpacing: 3, color: accent, marginBottom: 30 }}>{d.title}</div>;
-  const note = d.note && <div style={{ position: "absolute", bottom: 30, left: 44, fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, color: "rgba(255,255,255,0.45)" }}>{d.note}</div>;
+  const note = d.note && <div style={{ position: "absolute", bottom: 30, left: 44, fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 2, color: "rgba(255,255,255,0.45)" }}>{d.note}</div>;
   if (d.type === "bars") {
     const rows = d.rows ?? [];
     const max = Math.max(...rows.map((r) => r.value));
@@ -72,9 +72,10 @@ const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, c
       <div style={box}>
         {title}
         {rows.map((r, i) => {
-          const p = prog(f, step(i) - 3, step(i) + 22);
+          const st = Math.min(step(i), 20 + i * 14);
+          const p = prog(f, st - 3, st + 22);
           return (
-            <div key={i} style={{ marginBottom: 44, opacity: prog(f, step(i) - 6, step(i)) }}>
+            <div key={i} style={{ marginBottom: 44, opacity: prog(f, st - 6, st) }}>
               <div style={{ display: "flex", justifyContent: "space-between", fontFamily: F.inter, fontWeight: 800, fontSize: 40, color: B.white, marginBottom: 14 }}>
                 <span>{r.label}</span><span style={{ color: r.hi ? accent : "rgba(255,255,255,0.8)" }}>{r.show}</span>
               </div>
@@ -99,11 +100,12 @@ const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, c
         {Array.from({ length: 8 }, (_, k) => {
           const t0 = step(0) - 6 + k * 9, t = prog(f, t0, t0 + 16);
           if (f < t0) return null;
-          const bin = [0, 1, 2, 1, 0, 2, 1, 0][k], conf = [92, 88, 97, 81, 95, 90, 86, 99][k];
-          const x = interpolate(t, [0, 1], [390, 70 + bin * 315]), y = interpolate(t, [0, 1], [130, 420]);
+          const bin = [0, 1, 2, 1, 0, 2, 1, 0][k] % bins.length, conf = [92, 88, 97, 81, 95, 90, 86, 99][k];
+          const nb = bins.length, slot = (840 - 20 * (nb - 1)) / nb, pile = [0, 1, 2, 1, 0, 2, 1, 0].slice(0, k).filter((b) => b % nb === bin).length;
+          const x = interpolate(t, [0, 1], [390, 44 + bin * (slot + 20) + slot / 2 - 100]), y = interpolate(t, [0, 1], [130, 360 - pile * 34]);
           return (
-            <div key={k} style={{ position: "absolute", left: x, top: y, width: 200, padding: "12px 16px", borderRadius: 16, background: B.white, color: B.ink, fontFamily: F.inter, fontWeight: 800, fontSize: 24, opacity: 1 - prog(f, t0 + 30, t0 + 40), boxShadow: "0 10px 24px rgba(0,0,0,0.35)" }}>
-              Ticket #{1040 + k}
+            <div key={k} style={{ position: "absolute", left: x, top: y, width: 200, padding: "12px 16px", borderRadius: 16, background: B.white, color: B.ink, fontFamily: F.inter, fontWeight: 800, fontSize: 24, boxShadow: "0 10px 24px rgba(0,0,0,0.35)" }}>
+              {d.q ?? "Ticket"} #{1040 + k}
               <div style={{ fontFamily: F.mono, fontSize: 20, color: accent === "#38BDF8" ? "#0369A1" : B.blue }}>{bins[bin]} · {conf}%</div>
             </div>
           );
@@ -296,7 +298,7 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
           );
         })}
       </div>
-      <div style={{ position: "absolute", top: 1490, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 22, letterSpacing: 2, color: "rgba(255,255,255,0.5)", opacity: prog(f, 20, 34) }}>SOURCES: {seg.sources?.toUpperCase()}</div>
+      <div style={{ position: "absolute", top: 1480, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 1, color: "rgba(255,255,255,0.65)", opacity: prog(f, 20, 34) }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       <Karaoke words={seg.words} bottom={300} size={86} max={3} />
     </AbsoluteFill>
   );
@@ -486,7 +488,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {starts.slice(1).map((s) => <Wipe key={s} at={s} />)}
       <Grain opacity={0.06} />
       {/* music + SFX */}
-      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} volume={(fr) => (fr >= followAbs ? 0.35 : tl.look === "broadcast" ? 0.15 : 0.12)} loop />
+      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} volume={(fr) => (fr >= followAbs ? 0.35 : tl.look === "broadcast" ? 0.15 : 0.08)} loop />
       {starts.slice(1).map((s) => <Sequence key={`w${s}`} from={s - 8} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.4} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[tl.segments.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.35} /></Sequence>
