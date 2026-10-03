@@ -7,11 +7,12 @@ import { CTA_SFX, FollowCard } from "../brand/Cta";
 import { LogoBug } from "../brand/Logo";
 import { Wipe } from "../brand/Transitions";
 import { B, cl, F, pop, prog } from "../brand/tokens";
+import { Fumble, FPose, idle, kf, smugGrin } from "../reel/Fumble";
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
 type Card = { k: string; v: string; f: number };
-type Demo = { type: "bars" | "route" | "montage" | "chat"; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
+type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string;
@@ -132,6 +133,60 @@ const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, c
       </div>
     );
   }
+  if (d.type === "fumble") return <FumbleDemo d={d} step={step} accent={accent} box={box} title={title} note={note} />;
+  if (d.type === "sort") {
+    const items = d.items ?? [];
+    const col = (side: 1 | 2) => (side === 1 ? accent : B.violet);
+    return (
+      <div style={box}>
+        {title}
+        <div style={{ position: "absolute", left: 44, right: 44, top: 110, display: "flex", gap: 24 }}>
+          {([1, 2] as const).map((sd) => (
+            <div key={sd} style={{ flex: 1, height: 560, borderRadius: 26, border: `3px solid ${col(sd)}66`, background: `${col(sd)}12` }}>
+              <div style={{ textAlign: "center", padding: "18px 0 6px", fontFamily: F.inter, fontWeight: 800, fontSize: 36, color: col(sd) }}>SYSTEM {sd}</div>
+              <div style={{ textAlign: "center", fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, color: "rgba(255,255,255,0.55)" }}>{sd === 1 ? "FAST · ONE DECISION" : "SLOW · MANY STEPS"}</div>
+            </div>
+          ))}
+        </div>
+        {items.map((it, i) => {
+          const t0 = step(i), p = prog(f, t0 - 2, t0 + 12);
+          if (f < t0 - 2) return null;
+          const k = items.slice(0, i).filter((o) => o.side === it.side).length;
+          const x = interpolate(p, [0, 1], [190, it.side === 1 ? 20 : 452]), y = interpolate(p, [0, 1], [40, 230 + k * 96]);
+          return (
+            <div key={i} style={{ position: "absolute", left: 44 + x, top: y, width: 400, padding: "14px 18px", borderRadius: 18, background: B.white, color: B.ink, fontFamily: F.inter, fontWeight: 800, fontSize: 28, lineHeight: 1.15, boxShadow: "0 10px 24px rgba(0,0,0,0.35)", borderLeft: `10px solid ${col(it.side)}`, transform: `scale(${0.9 + 0.1 * p})` }}>{it.t}</div>
+          );
+        })}
+        {note}
+      </div>
+    );
+  }
+  if (d.type === "pipe") {
+    const items = d.items ?? [];
+    return (
+      <div style={box}>
+        {title}
+        <div style={{ position: "absolute", left: 300, top: 250, width: 300, height: 170, borderRadius: 28, background: `${accent}22`, border: `4px solid ${accent}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 40, color: accent }}>SYSTEM 1</div>
+          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 20, color: "rgba(255,255,255,0.7)" }}>DECIDES IN MS</div>
+        </div>
+        <div style={{ position: "absolute", left: 600, top: 470, width: 300, height: 170, borderRadius: 28, background: `${B.violet}22`, border: `4px solid ${B.violet}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 40, color: B.violet }}>SYSTEM 2</div>
+          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 20, color: "rgba(255,255,255,0.7)" }}>THINKS IN SECONDS</div>
+        </div>
+        <div style={{ position: "absolute", left: 40, top: 520, width: 300, textAlign: "center", fontFamily: F.mono, fontWeight: 700, fontSize: 22, color: B.green }}>ANSWERED INSTANTLY</div>
+        {items.map((it, i) => {
+          const t0 = step(0) + i * 14, p = prog(f, t0, t0 + 16), q = prog(f, t0 + 18, t0 + 34);
+          if (f < t0) return null;
+          const hard = it.side === 2;
+          const x = p < 1 ? interpolate(p, [0, 1], [0, 330]) : hard ? interpolate(q, [0, 1], [330, 630]) : interpolate(q, [0, 1], [330, 70]);
+          const y = p < 1 ? interpolate(p, [0, 1], [130, 300]) : interpolate(q, [0, 1], [300, hard ? 650 : 570]);
+          return <div key={i} style={{ position: "absolute", left: 44 + x - 30, top: y, width: 240, padding: "10px 14px", borderRadius: 14, background: B.white, color: B.ink, fontFamily: F.inter, fontWeight: 800, fontSize: 22, opacity: 1 - prog(f, t0 + 50, t0 + 60), borderLeft: `8px solid ${hard ? B.violet : accent}` }}>{it.t}</div>;
+        })}
+        {note}
+      </div>
+    );
+  }
   // chat replay with a waiting timer
   const lines = d.lines ?? [];
   const waitFrom = step(1), waitTo = step(2);
@@ -153,6 +208,46 @@ const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, c
         <div style={{ display: "flex", alignItems: "center", gap: 18, marginTop: 10, fontFamily: F.mono, fontWeight: 700, fontSize: 34, color: B.amber }}>
           <div style={{ display: "flex", gap: 10 }}>{[0, 1, 2].map((i) => <span key={i} style={{ width: 16, height: 16, borderRadius: 8, background: B.amber, opacity: 0.3 + 0.7 * Math.max(0, Math.sin(f / 4 - i)) }} />)}</div>
           silence · {secs.toFixed(1)} s
+        </div>
+      )}
+      {note}
+    </div>
+  );
+};
+
+/** Mr. Fumble acts out the two systems: s1 = instant catch, s2 = working through a sum step by step. */
+const FumbleDemo: React.FC<{ d: Demo; step: (i: number) => number; accent: string; box: React.CSSProperties; title: React.ReactNode; note: React.ReactNode }> = ({ d, step, accent, box, title, note }) => {
+  const f = useCurrentFrame();
+  const t0 = step(0);
+  const s1 = d.variant !== "s2";
+  let p: FPose = idle(f), clock = 0;
+  if (s1) {
+    const hit = t0 + 18;
+    p = f < hit ? { ...idle(f), lookX: -0.8 } : f < hit + 8 ? { eyeSize: 1.3, browL: 1, browR: 1, mo: 0.5, armL: [150, 10], armR: [-14, -18], handL: "open", lookX: -0.6, lookY: -0.6 } : { ...smugGrin(f), armL: [150, 10], handL: "fist", shut: 0, lid: 0.3 };
+    clock = Math.min(0.3, Math.max(0, (f - hit + 6) / 30));
+  } else {
+    const steps = d.steps ?? [];
+    const n = steps.filter((_, i) => f >= step(i + 1) - 2).length;
+    p = n < steps.length ? { tilt: 8 + 4 * Math.sin(f / 20), lookY: -0.8, lookX: 0.5, browL: 0.8, browR: -0.4, knit: 0.5, mw: 0.3, skew: 0.5, armL: [30, 150], handL: "point", armR: [-40, -110], handR: "fist", lid: 0.2 } : { ...smugGrin(f), shut: 0, lid: 0.35 };
+    clock = Math.max(0, (Math.min(f, step(steps.length) + 10) - t0) / 30);
+  }
+  const ballT = (f - t0) / 18;
+  return (
+    <div style={box}>
+      {title}
+      <div style={{ position: "absolute", right: 44, top: 36, fontFamily: F.mono, fontWeight: 700, fontSize: 46, color: s1 ? accent : B.violet }}>{clock.toFixed(1)} s</div>
+      <svg width={960} height={720} style={{ position: "absolute", left: 0, top: 0 }}>
+        <g transform="translate(300,690) scale(0.5)"><Fumble f={f} p={p} /></g>
+        {s1 && ballT > -0.2 && ballT < 1 && <circle cx={kf(ballT, [[0, 960], [1, 190]])} cy={kf(ballT, [[0, 200], [0.5, 120], [1, 270]])} r={30} fill="#F43F5E" stroke="#fff" strokeWidth={5} />}
+        {s1 && ballT >= 1 && <circle cx={176} cy={250} r={30} fill="#F43F5E" stroke="#fff" strokeWidth={5} />}
+      </svg>
+      {!s1 && (
+        <div style={{ position: "absolute", left: 520, top: 130, width: 380 }}>
+          <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 64, color: B.white, marginBottom: 20 }}>{d.q}</div>
+          {(d.steps ?? []).map((st, i) => {
+            const a = prog(f, step(i + 1) - 2, step(i + 1) + 8);
+            return <div key={i} style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, color: i === (d.steps ?? []).length - 1 ? B.green : "rgba(255,255,255,0.85)", opacity: a, transform: `translateY(${(1 - a) * 20}px)`, marginBottom: 14 }}>{st}</div>;
+          })}
         </div>
       )}
       {note}
