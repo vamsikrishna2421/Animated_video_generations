@@ -2,7 +2,6 @@ import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
 import { easeBack, easeInOut, exaggerate, FPose, Fumble, legIK, mix } from "./Fumble";
-import { SolHero } from "./SolHeroine";
 
 // Yeshanagula hook step (film 64.4 - 68.5 s), keyed at 24 fps resolution from the footage, every key placed on
 // the measured beat grid (64.769, 65.466, 66.186, 66.906, 67.625, 68.345). Feet stay planted in a wide stance;
@@ -93,7 +92,7 @@ export const HookTutorial: React.FC = () => {
       <div style={{ position: "absolute", left: 0, right: 0, top: 1480, bottom: 0, background: "linear-gradient(#7a4a2a, #4a2a18)" }} />
       {[-215, 215].map((x) => <div key={x} style={{ position: "absolute", left: 540 + x * 1.25 - 40, top: 1640, width: 80, height: 14, borderRadius: 7, background: "#ffd166", opacity: 0.5 }} />)}
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
-        <g transform="translate(540,1680)"><SolHero f={f} p={p} scale={1.25} /></g>
+        <g transform="translate(540,1650) scale(1.25)"><Fumble f={f} p={p} braids /></g>
         {slow && <g transform="translate(150,520) scale(0.32)" opacity={0.9}><Fumble f={f} p={p} bonesOnly /></g>}
       </svg>
       <div style={{ position: "absolute", top: 110, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 900, fontSize: 64, color: "#fff" }}>{label}</div>
