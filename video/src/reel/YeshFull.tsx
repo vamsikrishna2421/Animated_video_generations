@@ -11,6 +11,7 @@ import faceK1 from "./mocap/yesh_face_k1.json";
 import faceK2 from "./mocap/yesh_face_k2.json";
 import audio from "./mocap/yesh_audio.json";
 import { hook, HOOK_END } from "./HookStep";
+import { SolHero, SolHeroine } from "./SolHeroine";
 
 // Yeshanagula, 0:51.0 - 0:82.9 of the song, as a Mr. Fumble x Heroine dance cover.
 // Body: motion captured from the male lead where tracking held (wide group shots, solo, duet), with an animator
@@ -256,7 +257,7 @@ const shotAt = (t: number) => {
   return { ...a, zoom: a.zoom + (b.zoom - a.zoom) * u, cx: a.cx + (b.cx - a.cx) * u, cy: a.cy + (b.cy - a.cy) * u };
 };
 const positions = (t: number): { h: number; f: number } => {
-  if (t < 64.5) return t >= 61.5 && t < 62.5 ? { h: 395, f: 700 } : { h: 380, f: 710 };
+  if (t < 64.5) return t >= 61.5 && t < 62.5 ? { h: 360, f: 730 } : { h: 340, f: 750 };
   if (t < 74.5) return { h: 330, f: 730 };
   if (t < 78.5) return { h: 290, f: 770 };
   return { h: 320, f: 740 };
@@ -293,12 +294,12 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
             <g style={{ filter: "brightness(0.16) saturate(0) blur(3.5px)" }} opacity={0.8}>
               {CROWD.map((c, i) => {
                 const p = exaggerate(run(F_SEGS, t - (c.d * 2) / 30), 1.3);
-                return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><Fumble f={f + i * 7} p={{ ...(c.m ? mirror(p) : p), ...GRIN }} braids /></g>;
+                return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><SolHero f={f + i * 7} p={c.m ? mirror(p) : p} scale={0.95} /></g>;
               })}
             </g>
           )}
-          <g transform={`translate(${pos.h},1640) scale(0.98)`}><Fumble f={f} p={hp} look="heroine" /></g>
-          <g transform={`translate(${pos.f},1640) scale(1.02)`}><Fumble f={f} p={fp} braids /></g>
+          <g transform={`translate(${pos.h},1660)`}><SolHeroine f={f} p={hp} scale={0.9} /></g>
+          <g transform={`translate(${pos.f},1655)`}><SolHero f={f} p={fp} scale={1.0} /></g>
         </g>
       </svg>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(10,5,25,0.55))", pointerEvents: "none" }} />
