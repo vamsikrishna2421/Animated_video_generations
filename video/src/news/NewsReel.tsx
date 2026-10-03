@@ -298,7 +298,7 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
           );
         })}
       </div>
-      <div style={{ position: "absolute", top: 1480, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 1, color: "rgba(255,255,255,0.65)", opacity: prog(f, 20, 34) }}>SOURCES: {seg.sources?.toUpperCase()}</div>
+      <div style={{ position: "absolute", top: 1385, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 1, color: "rgba(255,255,255,0.65)", opacity: prog(f, 20, 34) }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       <Karaoke words={seg.words} bottom={300} size={86} max={3} />
     </AbsoluteFill>
   );
