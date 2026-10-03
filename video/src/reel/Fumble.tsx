@@ -738,6 +738,21 @@ export const wave = (t: number): FPose => {
 };
 
 /** "Who, me?" shrug: forearms out, palms up, head tilt, brows up, flat mouth. */
+/** "This one... or that one?": hand on chin, gaze dwells on one side then swings to the other, head tilts and brows
+ *  trade with each swing, mouth skews into a "hmm". One full this/that cycle = period frames. */
+export const ponder = (t: number, period = 56): FPose => {
+  const ph = (t / period) % 1;
+  const sm = (x: number) => x * x * (3 - 2 * x);
+  // dwell, quick swing, dwell, quick swing back: side -1 (screen-left) .. 1 (screen-right)
+  const side = ph < 0.38 ? -1 : ph < 0.5 ? -1 + 2 * sm((ph - 0.38) / 0.12) : ph < 0.88 ? 1 : 1 - 2 * sm((ph - 0.88) / 0.12);
+  const tap = Math.max(0, Math.sin((t / 9) * Math.PI)); // finger tapping the chin
+  return {
+    ...idle(t), turn: 0.45 * side, lookX: 0.9 * side, lookY: -0.15, neck: -18, tilt: 9 * side, twist: 0.12 * side, lean: 2 * side, bend: 2 * side,
+    browL: side < 0 ? 0.8 : -0.2, browR: side < 0 ? -0.2 : 0.8, knit: 0.3, lid: 0.2, squint: 0.2,
+    mw: 0.25, mo: 0.08, smile: -0.1, skew: -0.7 * side, pucker: 0.35,
+    armR: [14, 150 + 4 * tap], handR: "fist", wristR: -10, armL: [22, -110], handL: "fist", shrugR: 0.4,
+  };
+};
 export const shrug = (t: number): FPose => {
   const u = easeBack(t / 12);
   return { ...idle(t), hipY: 6 - 10 * u, armL: [14 + 22 * u, 18 + 52 * u], armR: [-14 - 22 * u, -18 - 52 * u], handL: "open", handR: "open", tilt: 10 * u, browL: 0.9 * u, browR: 0.6 * u, mw: 0.35, smile: -0.2 * u, skew: 0.3 * u, shrug: 0.95 * u, bend: 3 * u, breath: 0.5 + 0.5 * u };

@@ -7,7 +7,7 @@ import { CTA_SFX, FollowCard } from "../brand/Cta";
 import { LogoBug } from "../brand/Logo";
 import { Wipe } from "../brand/Transitions";
 import { B, cl, F, pop, prog } from "../brand/tokens";
-import { browWiggle, doubleTake, exaggerate, follow, Fumble, FPose, idle, kf, shock, smugGrin, wave } from "../reel/Fumble";
+import { browWiggle, doubleTake, ponder, exaggerate, follow, Fumble, FPose, idle, kf, shock, smugGrin, wave } from "../reel/Fumble";
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
@@ -259,7 +259,7 @@ const FumbleDemo: React.FC<{ d: Demo; step: (i: number) => number; accent: strin
 
 /** Mr. Fumble as a small on-screen presenter: double-take when a section opens, eyebrow wiggle on every new
  * card/number, a smug grin on verdict sections, idle sway in between. Poses come from the shared rig. */
-const Presenter: React.FC<{ cues: number[]; mood?: "verdict" | "shock" | "wave"; x?: number; y?: number; s?: number }> = ({ cues, mood, x = 935, y = 640, s = 0.3 }) => {
+const Presenter: React.FC<{ cues: number[]; mood?: "verdict" | "shock" | "wave" | "decide"; x?: number; y?: number; s?: number }> = ({ cues, mood, x = 935, y = 640, s = 0.3 }) => {
   const f = useCurrentFrame();
   const at = (fr: number): FPose => {
     if (mood === "shock") return fr < 40 ? shock(fr) : idle(fr);
@@ -267,13 +267,26 @@ const Presenter: React.FC<{ cues: number[]; mood?: "verdict" | "shock" | "wave";
     if (fr < 50) return doubleTake(fr);
     const c = [...cues].reverse().find((q) => fr >= q - 2 && fr < q + 34);
     if (c !== undefined) return { ...browWiggle(fr - c), turn: -0.35, lookX: -0.8 };
-    return mood === "verdict" ? smugGrin(fr) : { ...idle(fr), turn: -0.3, lookX: -0.6 };
+    if (mood === "decide") return ponder(fr - 50);
+    if (mood === "verdict") return fr < 140 ? ponder(fr - 50) : smugGrin(fr);
+    return { ...idle(fr), turn: -0.3, lookX: -0.6 };
   };
   const p = exaggerate(follow((t) => at(Math.round(t * 30)), f / 30), 1.2);
   const enter = Math.min(1, f / 10);
+  // "?" pops on whichever side he is weighing while pondering
+  const pondering = (mood === "decide" || (mood === "verdict" && f < 140)) && f >= 50 && !cues.some((q) => f >= q - 2 && f < q + 34);
+  const ph = (((f - 50) / 56) % 1 + 1) % 1;
+  const qSide = ph < 0.44 || ph >= 0.94 ? -1 : 1;
+  const qAge = (ph < 0.44 ? ph + 0.06 : ph >= 0.94 ? ph - 0.94 : ph - 0.44) * 56;
   return (
     <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
       <g transform={`translate(${x + (1 - enter) * 200},${y}) scale(${s})`}><Fumble f={f} p={p} braids={false} /></g>
+      {pondering && (
+        <text x={x + (qSide < 0 ? -175 : -30) * (s / 0.56)} y={y - (qSide < 0 ? 600 : 1010) * s - 14 * Math.max(0, 1 - qAge / 6)} fontFamily="Inter" fontWeight={900} fontSize={110 * (s / 0.56)} fill={B.amber}
+          opacity={Math.min(1, qAge / 4)} transform={`rotate(${qSide * 12} ${x} ${y - 600 * s})`}>
+          ?
+        </text>
+      )}
     </svg>
   );
 };
@@ -302,7 +315,7 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
           );
         })}
       </div>
-      <Presenter cues={cards.map((c) => c.f)} mood={/VERDICT|WHICH|USE IT|PATTERN|SMART/i.test(`${seg.tag} ${seg.org}`) ? "verdict" : undefined} x={950} y={830} s={0.56} />
+      <Presenter cues={cards.map((c) => c.f)} mood={/VERDICT|WHICH|USE IT|PATTERN|SMART/i.test(`${seg.tag} ${seg.org}`) ? "verdict" : /ROUND| VS |SPEED|PRICE|ACCURACY/i.test(`${seg.tag} ${seg.org}`) ? "decide" : undefined} x={950} y={830} s={0.56} />
       {seg.demo && <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />}
       <div style={{ position: "absolute", top: 640, left: 60, right: 60, display: seg.demo ? "none" : "block" }}>
         {cards.map((c, i) => {
