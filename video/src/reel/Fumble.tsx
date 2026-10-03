@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { interpolate } from "remotion";
 import { Part } from "./Mascot";
 
@@ -16,7 +16,7 @@ const C = FC_;
 
 export type Hand = "open" | "fist" | "point" | "thumb" | "paw";
 export type FPose = {
-  hipX?: number; hipY?: number; lean?: number; // crouch (px, + = down), torso lean (deg, + = toward screen-right)
+  hipX?: number; hipY?: number; lean?: number; hipTilt?: number; bend?: number; twist?: number; shrug?: number; shrugL?: number; shrugR?: number; breath?: number; // pelvis tilt (deg), spine side-bend (deg), chest twist -1..1, shoulders up 0..1, chest breath 0..1 // crouch (px, + = down), torso lean (deg, + = toward screen-right)
   tilt?: number; neck?: number; turn?: number; // head tilt (deg), neck stretch (px), face turn (-1 left .. 1 right)
   browL?: number; browR?: number; knit?: number; // brow raise -1..1 each (screen-left / screen-right eye), frown 0..1
   lookX?: number; lookY?: number; lid?: number; squint?: number; eyeSize?: number; shut?: number; // shut: 0..1 per both (1 = closed happy arcs)
@@ -160,12 +160,39 @@ export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: b
   const legL = p.legL ?? [6, 0], legR = p.legR ?? [-6, 0];
   const armL = p.armL ?? [14, 18], armR = p.armR ?? [-14, -18];
   const SH = -300; // shoulders above the hip
+  const uid = useId().replace(/:/g, "");
   // side-on: hips and shoulders narrow, the far limbs go darker and behind the body
   const prof = Math.min(1, Math.max(0, (Math.abs(turn) - 0.3) / 0.3));
   const farR = turn < 0 && prof > 0.5, farL = turn > 0 && prof > 0.5; // facing right we see his left side, so screen-left limbs are far
+  // ---- flexible torso: pelvis tilt, curved spine, chest twist, shoulders, breathing ----
+  const rad = (d: number) => (d * Math.PI) / 180;
+  const ht = rad(p.hipTilt ?? 0), bd = rad(p.bend ?? 0), tw = (p.twist ?? 0) * (1 - prof);
+  const br = p.breath ?? 0.5 + 0.5 * Math.sin(f / 22);
+  const shL = (p.shrugL ?? 0) + (p.shrug ?? 0), shR = (p.shrugR ?? 0) + (p.shrug ?? 0);
+  const Ls = -SH;
+  const N: [number, number] = [Ls * Math.sin(bd / 2), -Ls * Math.cos(bd / 2) - 3 * br]; // neck base
+  const spine = (u: number): [number, number] => { const q = 1 - u; return [q * q * 0 + 2 * q * u * 0 + u * u * N[0], 2 * q * u * (-Ls / 2) + u * u * N[1]]; };
+  const toWorld = (x: number, y: number): [number, number] => [N[0] + x * Math.cos(bd) - y * Math.sin(bd), N[1] + x * Math.sin(bd) + y * Math.cos(bd)];
   const hx = 34 * (1 - 0.7 * prof), sx = 88 * (1 - 0.5 * prof);
-  const armRN = <Part p={reveal.armR}><Arm x={sx} y={SH + 22} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR} /></Part>;
-  const armLN = <Part p={reveal.armL}><Arm x={-sx} y={SH + 22} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL} /></Part>;
+  const hipL: [number, number] = [-hx * Math.cos(ht), -hx * Math.sin(ht)], hipR: [number, number] = [hx * Math.cos(ht), hx * Math.sin(ht)];
+  const shY = (sh: number) => 22 - 30 * sh - 2 * br;
+  const swingX = (p.twist ?? 0) * prof * 34 * Math.sign(turn || 1); // side-on, the chest twist shows as one shoulder forward, the other back
+  const shoulderL = toWorld(-sx * (1 + 0.1 * tw) - swingX, shY(shL)), shoulderR = toWorld(sx * (1 - 0.1 * tw) + swingX, shY(shR));
+  const width = (u: number) => (u < 0.5 ? 78 + 12 * u : 84 + 16 * (u - 0.5)) * (1 + 0.035 * br * u) * (1 - 0.32 * prof);
+  const samples = Array.from({ length: 9 }, (_, i) => i / 8);
+  const edge = (side: number) => samples.map((u) => {
+    const [cx, cy] = spine(u), th = bd * u + (u === 0 ? ht : 0) * 0, w = width(u) * (1 + side * 0.12 * tw * u);
+    const tilt = ht * (1 - u) + th; // the waist follows the pelvis, the chest follows the spine
+    return [cx + side * w * Math.cos(tilt), cy + side * w * Math.sin(tilt)] as [number, number];
+  });
+  const Lp = edge(-1), Rp = edge(1);
+  const capL = toWorld(-sx + 6, shY(shL) - 22), capR = toWorld(sx - 6, shY(shR) - 22), nL = toWorld(-56, -6), nR = toWorld(56, -6);
+  const pts = (a: [number, number][]) => a.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" L ");
+  const torsoD = `M ${pts(Lp)} Q ${capL[0].toFixed(1)},${capL[1].toFixed(1)} ${nL[0].toFixed(1)},${nL[1].toFixed(1)} L ${nR[0].toFixed(1)},${nR[1].toFixed(1)} Q ${capR[0].toFixed(1)},${capR[1].toFixed(1)} ${pts([...Rp].reverse())} Z`;
+  const mid = spine(0.5);
+  const ftx = (u: number) => tw * 26 * u; // chest-front features slide with the twist
+  const armRN = <Part p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR} /></Part>;
+  const armLN = <Part p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL} /></Part>;
   const arms = <>{!farR && armRN}{!farL && armLN}</>;
   const farArm = farL ? armLN : farR ? armRN : null;
   const fx = turn * 34; // face features slide with the turn
@@ -174,37 +201,51 @@ export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: b
       <ellipse cx={0} cy={6} rx={170} ry={22} fill="#000" opacity={0.16} />
       <g transform={`translate(${p.hipX ?? 0},${hipY})`}>
         {(() => {
-          const lL = <Leg key="l" x={-hx} y={0} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL} />;
-          const lR = <Leg key="r" x={hx} y={0} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR} />;
+          const lL = <Leg key="l" x={hipL[0]} y={hipL[1]} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL} />;
+          const lR = <Leg key="r" x={hipR[0]} y={hipR[1]} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR} />;
           return farR ? [lR, lL] : [lL, lR];
         })()}
         {farArm && <g transform={`rotate(${p.lean ?? 0})`}>{farArm}</g>}
         <g transform={`rotate(${p.lean ?? 0})`}>
           {p.back && arms}
-          {/* torso: shirt, argyle vest, waistband */}
+          <defs><clipPath id={`tc${uid}`}><path d={torsoD} /></clipPath></defs>
+          {/* torso: shirt silhouette, argyle vest bent along the spine, waistband on the pelvis */}
           <Part p={reveal.torso}>
-            <path d={`M -76,10 L -92,${SH + 30} Q -96,${SH} -60,${SH - 6} L 60,${SH - 6} Q 96,${SH} 92,${SH + 30} L 76,10 Z`} fill={C.shirt} />
-            <rect x={-80} y={-14} width={160} height={40} rx={10} fill={C.trousers} />
-            <rect x={-80} y={-14} width={160} height={10} fill={C.trousersDark} />
+            <path d={torsoD} fill={C.shirt} />
           </Part>
           <Part p={reveal.vest}>
-            <path d={`M -80,-8 L -88,${SH + 40} Q -86,${SH + 4} -54,${SH} L 0,${SH + 110} L 54,${SH} Q 86,${SH + 4} 88,${SH + 40} L 80,-8 Q 0,6 -80,-8 Z`} fill={C.vest} />
-            <g opacity={0.85}>
-              {[-50, 0, 50].map((cx) => [-70, -170].map((cy) => (
-                <path key={`${cx}${cy}`} d={`M ${cx},${cy - 44} L ${cx + 24},${cy} L ${cx},${cy + 44} L ${cx - 24},${cy} Z`} fill={(cx / 50 + cy / 100) % 2 ? C.vestDark : "none"} stroke={C.argyle} strokeWidth={3} />
-              )))}
+            <g clipPath={`url(#tc${uid})`}>
+              <path d={torsoD} fill={C.vest} />
+              <g transform={`translate(${mid[0] + ftx(0.5)},${mid[1] + 150}) rotate(${(p.bend ?? 0) * 0.5})`} opacity={0.85}>
+                {[-100, -50, 0, 50, 100].map((cx) => [-70, -170, -270].map((cy) => (
+                  <path key={`${cx}${cy}`} d={`M ${cx},${cy - 44} L ${cx + 24},${cy} L ${cx},${cy + 44} L ${cx - 24},${cy} Z`} fill={((cx / 50 + cy / 100) % 2 + 2) % 2 ? C.vestDark : "none"} stroke={C.argyle} strokeWidth={3} />
+                )))}
+              </g>
+              <g transform={`translate(${N[0]},${N[1]}) rotate(${p.bend ?? 0})`}>
+                <path d={`M ${-58 + ftx(1)},-10 L ${-54 + ftx(1)},0 L ${ftx(1)},110 L ${54 + ftx(1)},0 L ${58 + ftx(1)},-10 Z`} fill={C.shirt} />
+              </g>
+              <g transform={`rotate(${p.hipTilt ?? 0})`}>
+                <path d="M -110,-8 Q 0,6 110,-8 L 110,40 L -110,40 Z" fill={C.vestDark} opacity={0.35} />
+              </g>
             </g>
-            <path d={`M -80,-8 Q 0,6 80,-8`} stroke={C.vestDark} strokeWidth={10} fill="none" />
-            {[SH + 140, SH + 190, SH + 240].map((y) => <circle key={y} cx={0} cy={y} r={6} fill={C.argyle} />)}
+            {[0.28, 0.45, 0.62].map((u) => { const [x, y] = spine(u); return <circle key={u} cx={x + ftx(u)} cy={y} r={6} fill={C.argyle} />; })}
           </Part>
-          {/* collar + bow tie */}
-          <Part p={reveal.tie}>
-            <path d={`M -34,${SH - 6} L 0,${SH + 30} L 34,${SH - 6} L 22,${SH - 22} L 0,${SH} L -22,${SH - 22} Z`} fill="#fff" stroke={C.shirtDark} strokeWidth={3} />
-            <path d={`M 0,${SH + 4} L -34,${SH - 12} L -34,${SH + 20} Z M 0,${SH + 4} L 34,${SH - 12} L 34,${SH + 20} Z`} fill={C.tie} />
-            <rect x={-8} y={SH - 4} width={16} height={16} rx={4} fill="#c2410c" />
+          <Part p={reveal.torso}>
+            <g transform={`rotate(${p.hipTilt ?? 0})`}>
+              <rect x={-82 * (1 - 0.3 * prof)} y={-14} width={164 * (1 - 0.3 * prof)} height={40} rx={10} fill={C.trousers} />
+              <rect x={-82 * (1 - 0.3 * prof)} y={-14} width={164 * (1 - 0.3 * prof)} height={10} fill={C.trousersDark} />
+            </g>
           </Part>
-          {/* neck + head */}
-          <g transform={`translate(${turn * 6},${SH - 14 - (p.neck ?? 0)}) rotate(${p.tilt ?? 0})`}>
+          {/* collar + bow tie ride on the chest */}
+          <g transform={`translate(${N[0] + ftx(1)},${N[1]}) rotate(${p.bend ?? 0})`}>
+            <Part p={reveal.tie}>
+              <path d="M -34,-6 L 0,30 L 34,-6 L 22,-22 L 0,0 L -22,-22 Z" fill="#fff" stroke={C.shirtDark} strokeWidth={3} />
+              <path d="M 0,4 L -34,-12 L -34,20 Z M 0,4 L 34,-12 L 34,20 Z" fill={C.tie} />
+              <rect x={-8} y={-4} width={16} height={16} rx={4} fill="#c2410c" />
+            </Part>
+          </g>
+          {/* neck + head: the head counter-tilts to stay level as the spine bends */}
+          <g transform={`translate(${N[0] + turn * 6 + ftx(1) * 0.5},${N[1] - 14 - (p.neck ?? 0) + 8 * Math.max(shL, shR)}) rotate(${(p.tilt ?? 0) + (p.bend ?? 0) * 0.35})`}>
             <Part p={reveal.head}>
               <rect x={-24} y={-34} width={48} height={50 + (p.neck ?? 0)} fill={C.skinDark} />
             </Part>
@@ -244,7 +285,7 @@ export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: b
             {bones && <Bones pts={[[0, 0], [0, -150]]} />}
           </g>
           {!p.back && arms}
-          {bones && <Bones pts={[[0, 0], [0, SH], [-88, SH + 22], [0, SH], [88, SH + 22]]} />}
+          {bones && <Bones pts={[[0, 0], spine(0.5), N, shoulderL, N, shoulderR]} />}
         </g>
       </g>
     </g>
@@ -260,7 +301,7 @@ const S = (t: number, period: number) => Math.sin((t / period) * Math.PI * 2);
 export const easeInOut = (u: number) => (u <= 0 ? 0 : u >= 1 ? 1 : u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
 /** Ease out with a small overshoot, so arms land with weight instead of snapping. */
 export const easeBack = (u: number, k = 1.6) => (u <= 0 ? 0 : u >= 1 ? 1 : 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2));
-const NUM: (keyof FPose)[] = ["hipX", "hipY", "lean", "tilt", "neck", "turn", "browL", "browR", "knit", "lookX", "lookY", "lid", "squint", "eyeSize", "shut", "winkL", "winkR", "mw", "mo", "smile", "skew", "pucker", "lipOut", "toeL", "toeR", "blush", "sweat"];
+const NUM: (keyof FPose)[] = ["hipX", "hipY", "lean", "hipTilt", "bend", "twist", "shrug", "shrugL", "shrugR", "tilt", "neck", "turn", "browL", "browR", "knit", "lookX", "lookY", "lid", "squint", "eyeSize", "shut", "winkL", "winkR", "mw", "mo", "smile", "skew", "pucker", "lipOut", "toeL", "toeR", "blush", "sweat"];
 const PAIR: (keyof FPose)[] = ["armL", "armR", "legL", "legR"];
 const DEF: Partial<Record<keyof FPose, number | [number, number]>> = { eyeSize: 1, mw: 0.6, smile: 0.2, armL: [14, 18], armR: [-14, -18], legL: [6, 0], legR: [-6, 0] };
 /** Blend two poses (u = 0 -> a, 1 -> b). Hands/flags switch at the halfway point. */
@@ -291,11 +332,11 @@ export const legIK = (dx: number, dy: number, dir = 1): [number, number] => {
 };
 const fr = (x: number) => x - Math.floor(x);
 
-type Gait = { P: number; S: number; H: number; base: number; bob: number; stance: number; heel: number; arm: number; elbow: number; lean: number; tip?: boolean };
+type Gait = { P: number; S: number; H: number; base: number; bob: number; stance: number; heel: number; arm: number; elbow: number; lean: number; tiltA: number; twistA: number; hunch: number; tip?: boolean };
 const GAIT: Record<"walk" | "march" | "tiptoe", Gait> = {
-  walk: { P: 34, S: 95, H: 46, base: 14, bob: 9, stance: 0.6, heel: 18, arm: 20, elbow: 16, lean: 4 },
-  march: { P: 30, S: 110, H: 30, base: 5, bob: 5, stance: 0.58, heel: 26, arm: 34, elbow: 85, lean: -3 },
-  tiptoe: { P: 44, S: 62, H: 120, base: 44, bob: 8, stance: 0.55, heel: 0, arm: 8, elbow: 125, lean: 15, tip: true },
+  walk: { P: 34, S: 95, H: 46, base: 14, bob: 9, stance: 0.6, heel: 18, arm: 20, elbow: 16, lean: 4, tiltA: 5, twistA: 0.35, hunch: 0 },
+  march: { P: 30, S: 110, H: 30, base: 5, bob: 5, stance: 0.58, heel: 26, arm: 34, elbow: 85, lean: -3, tiltA: 7, twistA: 0.18, hunch: -0.05 },
+  tiptoe: { P: 44, S: 62, H: 120, base: 44, bob: 8, stance: 0.55, heel: 0, arm: 8, elbow: 125, lean: 15, tiltA: 6, twistA: 0.25, hunch: 0.4, tip: true },
 };
 /** Distance travelled after t frames, in rig units (multiply by the render scale). Keeps the planted foot still. */
 export const walkDist = (t: number, kind: keyof typeof GAIT = "walk") => (2 * GAIT[kind].S * t) / GAIT[kind].P;
@@ -328,7 +369,9 @@ const gait = (t: number, dir: number, kind: keyof typeof GAIT): FPose => {
     return kind === "walk" ? [-dir * g.arm * up, -dir * (g.elbow + 14 * Math.max(0, lo))] : kind === "march" ? [-dir * g.arm * up, -dir * g.elbow] : [-dir * (42 + 6 * up), -dir * (78 - 8 * lo)];
   };
   return {
-    still: true, turn: 0.6 * dir, hipY: down, lean: dir * (g.lean + 1.2 * Math.cos(4 * Math.PI * ph)), tilt: -dir * 1.5 * Math.cos(4 * Math.PI * ph),
+    still: true, turn: 0.6 * dir, hipY: down,
+    hipTilt: -g.tiltA * Math.cos(2 * Math.PI * (ph - 0.8)), bend: 0.55 * g.tiltA * Math.cos(2 * Math.PI * (ph - 0.86)), twist: g.twistA * Math.sin(2 * Math.PI * ph),
+    shrugL: g.hunch + 0.07 * Math.max(0, -Math.cos(2 * Math.PI * ph)), shrugR: g.hunch + 0.07 * Math.max(0, Math.cos(2 * Math.PI * ph)), lean: dir * (g.lean + 1.2 * Math.cos(4 * Math.PI * ph)), tilt: -dir * 1.5 * Math.cos(4 * Math.PI * ph),
     legL: reach(L.x, L.lift), legR: reach(R.x, R.lift), toeL: L.toe, toeR: R.toe,
     armL: arm(fr(ph + 0.5)), armR: arm(ph), handL: kind === "march" ? "fist" : kind === "tiptoe" ? "paw" : "open", handR: kind === "march" ? "fist" : kind === "tiptoe" ? "paw" : "open",
     lookX: 0.6 * dir,
@@ -344,7 +387,7 @@ export const idle = (t: number): FPose => {
   const hipX = -8 + 16 * w;
   const lean = (d: number) => (Math.atan2(d, 395) * 180) / Math.PI; // keeps each foot where it stands
   return {
-    hipX, lean: (w - 0.5) * -3,
+    hipX, lean: (w - 0.5) * -3, hipTilt: -(w - 0.5) * 10, bend: (w - 0.5) * 7, twist: 0.12 * Math.sin(t / 70),
     legL: [lean(hipX + 6) - 5 * w, 10 * w], legR: [lean(hipX - 6) + 5 * (1 - w), -10 * (1 - w)], toeL: -6 * w, toeR: -6 * (1 - w),
     armL: [10 + 2 * Math.sin(t / 30), 14 + 3 * Math.sin(t / 30 - 0.6)], armR: [-10 - 2 * Math.sin(t / 30), -14 - 3 * Math.sin(t / 30 - 0.6)],
     browL: 0.05 * S(t, 90), browR: 0.05 * S(t + 20, 90), lookX: 0.15 * S(t, 140), tilt: 2 * S(t, 120) - (w - 0.5) * 3,
@@ -362,7 +405,7 @@ export const tiptoe = (t: number, dir = 1): FPose => ({
 
 /** The independent eyebrow wiggle, with a sideways smirk. */
 export const browWiggle = (t: number): FPose => ({
-  browL: S(t, 14), browR: -S(t, 14), lookX: 0.3, tilt: 5, skew: 0.8, smile: 0.4, mw: 0.5, lid: 0.25,
+  browL: S(t, 14), browR: -S(t, 14), lookX: 0.3, tilt: 5, skew: 0.8, smile: 0.4, mw: 0.5, lid: 0.25, shrugL: 0.12 * Math.max(0, S(t, 14)), shrugR: 0.12 * Math.max(0, -S(t, 14)), bend: 3, twist: -0.15,
   armL: [20, 160], handL: "point", armR: [-14, -18],
 });
 
@@ -373,13 +416,13 @@ export const doubleTake = (t: number): FPose => {
   return {
     turn: 0.7 * look, lookX: look, neck: 36 * snap * kf(t, [[34, 1], [56, 0.4]]), tilt: -6 * snap,
     eyeSize: 1 + 0.35 * snap, browL: snap ? 1 : 0.1, browR: snap ? 1 : 0.1, mo: 0.5 * snap, mw: 0.35, smile: 0.2 - 0.4 * snap,
-    hipY: -10 * snap, armL: [14 + 60 * snap, 18 + 70 * snap], armR: [-14 - 60 * snap, -18 - 70 * snap],
+    hipY: -10 * snap, shrug: 0.55 * snap * kf(t, [[34, 1], [56, 0.5]]), twist: 0.35 * look, bend: -4 * snap, armL: [14 + 60 * snap, 18 + 70 * snap], armR: [-14 - 60 * snap, -18 - 70 * snap],
   };
 };
 
 /** Chin up, eyes shut, smug closed grin, hands on hips, a satisfied bounce. */
 export const smugGrin = (t: number): FPose => ({
-  tilt: -8 + 2 * S(t, 30), shut: 1, smile: 0.9, mw: 0.85, mo: 0, skew: 0.15, browL: 0.5, browR: 0.5, neck: 8, hipY: -4 * Math.abs(S(t, 30)),
+  tilt: -8 + 2 * S(t, 30), shut: 1, smile: 0.9, mw: 0.85, mo: 0, skew: 0.15, browL: 0.5, browR: 0.5, neck: 8, hipY: -4 * Math.abs(S(t, 30)), breath: 1, lean: -3, bend: 2.5 * S(t, 60), hipTilt: -2.5 * S(t, 60), shrug: -0.08,
   armL: [38, -82], armR: [-38, 82], handL: "fist", handR: "fist", blush: 0.4,
 });
 
@@ -388,36 +431,36 @@ export const innocent = (t: number): FPose => {
   const s = S(t, 40);
   return {
     back: true, armL: [-24, -20], armR: [24, 20], handL: "fist", handR: "fist", lookY: -0.9, lookX: 0.4 * S(t, 80),
-    pucker: 1, mo: 0.2, browL: 0.7, browR: 0.7, tilt: 6 * S(t, 80), toeL: 12 * Math.max(0, s), toeR: 12 * Math.max(0, s), hipY: -8 * Math.max(0, s),
+    pucker: 1, mo: 0.2, browL: 0.7, browR: 0.7, tilt: 6 * S(t, 80), twist: 0.2 * S(t, 80), bend: 3 * S(t, 80), hipTilt: -2 * S(t, 80), shrug: 0.1, toeL: 12 * Math.max(0, s), toeR: 12 * Math.max(0, s), hipY: -8 * Math.max(0, s),
   };
 };
 
 /** Lean sideways and peek, one eye squinting. */
 export const peek = (t: number, dir = 1): FPose => ({
-  lean: 26 * dir * kf(t, [[0, 0], [14, 1]]), turn: 0.5 * dir, lookX: dir, winkL: dir > 0 ? 1 : 0, winkR: dir < 0 ? 1 : 0,
+  lean: 12 * dir * kf(t, [[0, 0], [14, 1]]), bend: 18 * dir * kf(t, [[0, 0], [16, 1]]), hipTilt: -5 * dir * kf(t, [[0, 0], [14, 1]]), shrug: 0.3, turn: 0.5 * dir, lookX: dir, winkL: dir > 0 ? 1 : 0, winkR: dir < 0 ? 1 : 0,
   browL: 0.8, browR: -0.4, knit: 0.2, mw: 0.25, skew: -0.6 * dir, armL: [40, 120], armR: [-40, -120], handL: "paw", handR: "paw",
 });
 
 /** Startled jump back: O mouth, wide eyes, arms flung up. */
 export const shock = (t: number): FPose => {
   const j = kf(t, [[0, 0], [6, 1], [20, 0.6]]);
-  return { hipY: -40 * Math.sin(Math.min(1, t / 14) * Math.PI), lean: -10 * j, eyeSize: 1.4, browL: 1, browR: 1, mo: 0.8, mw: 0.3, smile: -0.3, armL: [150 * j, 20], armR: [-150 * j, -20], handL: "open", handR: "open", neck: 20 * j };
+  return { hipY: -40 * Math.sin(Math.min(1, t / 14) * Math.PI), lean: -6 * j, bend: -4 * j, shrug: 0.9 * j, breath: 1, eyeSize: 1.4, browL: 1, browR: 1, mo: 0.8, mw: 0.3, smile: -0.3, armL: [150 * j, 20], armR: [-150 * j, -20], handL: "open", handR: "open", neck: 20 * j };
 };
 
 /** Arms crossed, lower lip out, brows knitted, head turned away. */
 export const pout = (t: number): FPose => ({
-  turn: -0.5, tilt: 8, knit: 1, browL: -0.6, browR: -0.6, lookX: 0.9, lipOut: 0.8, smile: -0.6, mw: 0.35,
+  turn: -0.5, tilt: 8, knit: 1, browL: -0.6, browR: -0.6, lookX: 0.9, lipOut: 0.8, smile: -0.6, mw: 0.35, shrug: 0.25 + 0.03 * S(t, 40), twist: -0.35, bend: -3, hipTilt: 3,
   armL: [6, -102], armR: [-6, 102], handL: "fist", handR: "fist", lid: 0.3 + 0.05 * S(t, 30),
 });
 
 /** Friendly wave: arm swings up with overshoot, forearm waves from the elbow, hand trails. */
 export const wave = (t: number): FPose => {
   const up = easeBack(t / 14);
-  return { ...idle(t), armL: [14 + 136 * up, 18 + (12 + 28 * Math.sin(t / 3.5)) * up], handL: "open", smile: 0.7, mw: 0.7, browL: 0.4, browR: 0.4, tilt: 6 * up };
+  return { ...idle(t), armL: [14 + 136 * up, 18 + (12 + 28 * Math.sin(t / 3.5)) * up], handL: "open", smile: 0.7, mw: 0.7, browL: 0.4, browR: 0.4, tilt: 6 * up, bend: 5 * up + 1.5 * Math.sin(t / 3.5) * up, shrugL: 0.35 * up, twist: -0.15 * up };
 };
 
 /** "Who, me?" shrug: forearms out, palms up, head tilt, brows up, flat mouth. */
 export const shrug = (t: number): FPose => {
   const u = easeBack(t / 12);
-  return { ...idle(t), hipY: 6 - 10 * u, armL: [14 + 22 * u, 18 + 52 * u], armR: [-14 - 22 * u, -18 - 52 * u], handL: "open", handR: "open", tilt: 10 * u, browL: 0.9 * u, browR: 0.6 * u, mw: 0.35, smile: -0.2 * u, skew: 0.3 * u };
+  return { ...idle(t), hipY: 6 - 10 * u, armL: [14 + 22 * u, 18 + 52 * u], armR: [-14 - 22 * u, -18 - 52 * u], handL: "open", handR: "open", tilt: 10 * u, browL: 0.9 * u, browR: 0.6 * u, mw: 0.35, smile: -0.2 * u, skew: 0.3 * u, shrug: 0.95 * u, bend: 3 * u, breath: 0.5 + 0.5 * u };
 };

@@ -16,7 +16,7 @@ comedy comes from mannerisms, hums and foley.
   <g transform="translate(540,1660) scale(1.22)"><Fumble f={frame} p={tiptoe(frame)} /></g>
 </svg>
 ```
-`p` is a pose object (37 controls). Mannerism clips return poses from a local frame count:
+`p` is a pose object (44 controls, including a flexible torso: `hipTilt`, `bend`, `twist`, `shrug`/`shrugL`/`shrugR`, `breath`). Mannerism clips return poses from a local frame count:
 `idle`, `stiffWalk(t, dir)`, `tiptoe(t, dir)`, `browWiggle`, `doubleTake` (60 f), `smugGrin`, `innocent`,
 `peek(t, dir)`, `shock`, `pout`. Spread a clip and override fields to vary it:
 `{ ...smugGrin(t), shut: 0, lookX: 1 }`.
