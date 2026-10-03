@@ -19,7 +19,7 @@ export const HC_: typeof FC_ = {
   sock: "#e8b923", shoe: "#8a3b12", shoeHi: "#b4552a", lip: "#c2185b", mouth: "#5a1020", ink: "#1a1210",
 };
 export type Look = "fumble" | "heroine";
-const Pal = createContext<{ C: typeof FC_; hero: boolean }>({ C: FC_, hero: false });
+const Pal = createContext<{ C: typeof FC_; hero: boolean; braids?: boolean }>({ C: FC_, hero: false });
 const BonesOnly = createContext(false);
 /** A drawable part that disappears in skeleton-only mode. */
 const P: React.FC<{ p?: number; children: React.ReactNode }> = (props) => (useContext(BonesOnly) ? null : <Part {...props} />);
@@ -282,14 +282,14 @@ const Mouth: React.FC<{ p: FPose }> = ({ p }) => {
   );
 };
 
-export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean; look?: Look; bonesOnly?: boolean }> = ({ look = "fumble", bonesOnly = false, ...rest }) => (
+export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean; look?: Look; bonesOnly?: boolean; braids?: boolean }> = ({ look = "fumble", bonesOnly = false, braids = false, ...rest }) => (
   <BonesOnly.Provider value={bonesOnly}>
-    <Pal.Provider value={{ C: look === "heroine" ? HC_ : FC_, hero: look === "heroine" }}><Body {...rest} bones={rest.bones || bonesOnly} /></Pal.Provider>
+    <Pal.Provider value={{ C: look === "heroine" ? HC_ : FC_, hero: look === "heroine", braids }}><Body {...rest} bones={rest.bones || bonesOnly} /></Pal.Provider>
   </BonesOnly.Provider>
 );
 
 const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }> = ({ f, p, reveal = {}, bones }) => {
-  const { C, hero } = usePal();
+  const { C, hero, braids } = usePal();
   const blink = f % 110 < 4 || f % 173 < 3 ? 0 : 1;
   const hipY = -410 + (p.hipY ?? 0) - (p.still ? 0 : 2 * Math.sin(f / 16));
   const turn = p.turn ?? 0;
@@ -424,6 +424,23 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
             </P>
             <g transform="translate(0,-26) scale(1.2) translate(0,8)">
               {hero && <path d="M -102,-150 Q -116,-60 -96,-20 Q -70,8 -40,-6 L 40,-6 Q 70,8 96,-20 Q 116,-60 102,-150 Q 98,-270 0,-272 Q -98,-270 -102,-150 Z" fill={C.hair} />}
+              {braids && !hero && (() => {
+                const world = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35 + (p.lean ?? 0)); // gravity: hang straight down on screen
+                return [-1, 1].map((sd) => {
+                  const sway = 6 * Math.sin(f / 9 + sd) + 0.25 * (p.hipX ?? 0) * sd * 0;
+                  const segs = Array.from({ length: 13 }, (_, i) => {
+                    const a = ((world + sway * (i / 12) + sd * 4) * Math.PI) / 180;
+                    return [sd * (96 + i * 1.2) - Math.sin(a) * 26 * i, -170 + 26 * i * Math.cos(a)] as [number, number];
+                  });
+                  return (
+                    <g key={sd}>
+                      {segs.map(([x, y], i) => <g key={i}><ellipse cx={x} cy={y} rx={15 - i * 0.55} ry={16} fill={C.hair} stroke="#24170f" strokeWidth={3} /><path d={`M ${x - 9},${y - 7} Q ${x},${y - 1} ${x + 8},${y - 10}`} stroke="#5a4334" strokeWidth={2.5} fill="none" /></g>)}
+                      <rect x={segs[12][0] - 9} y={segs[12][1] + 10} width={18} height={10} rx={4} fill="#c2410c" />
+                      <path d={`M ${segs[12][0] - 8},${segs[12][1] + 20} l -3,22 l 22,0 l -3,-22 Z`} fill={C.hair} />
+                    </g>
+                  );
+                });
+              })()}
               <P p={reveal.ears}>
                 <ellipse cx={-96 + Math.max(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={hero || turn > 0.6 ? 0 : 1} />
                 <ellipse cx={96 + Math.min(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={hero || turn < -0.6 ? 0 : 1} />

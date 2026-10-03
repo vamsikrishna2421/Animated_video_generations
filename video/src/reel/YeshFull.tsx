@@ -275,12 +275,12 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
             <g style={{ filter: "brightness(0.16) saturate(0) blur(3.5px)" }} opacity={0.8}>
               {CROWD.map((c, i) => {
                 const p = run(F_SEGS, t - (c.d * 2) / 30);
-                return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><Fumble f={f + i * 7} p={{ ...(c.m ? mirror(p) : p), ...GRIN }} /></g>;
+                return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><Fumble f={f + i * 7} p={{ ...(c.m ? mirror(p) : p), ...GRIN }} braids /></g>;
               })}
             </g>
           )}
           <g transform={`translate(${pos.h},1640) scale(0.98)`}><Fumble f={f} p={hp} look="heroine" /></g>
-          <g transform={`translate(${pos.f},1640) scale(1.02)`}><Fumble f={f} p={fp} /></g>
+          <g transform={`translate(${pos.f},1640) scale(1.02)`}><Fumble f={f} p={fp} braids /></g>
         </g>
       </svg>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(10,5,25,0.55))", pointerEvents: "none" }} />

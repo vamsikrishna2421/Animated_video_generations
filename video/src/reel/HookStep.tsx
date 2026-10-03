@@ -9,7 +9,7 @@ import { easeBack, easeInOut, FPose, Fumble, legIK, mix } from "./Fumble";
 // Times are film seconds so the move drops straight into the song.
 
 /** Wide horse stance with both feet locked at +-110 on the floor; the pelvis moves between them. */
-export const stance = (drop: number, hipX = 0, spread = 165): Partial<FPose> => ({
+export const stance = (drop: number, hipX = 0, spread = 215): Partial<FPose> => ({
   still: true, hipX, hipY: drop,
   legL: legIK(-spread - (hipX - 34), 395 - drop, -1), legR: legIK(spread - (hipX + 34), 395 - drop, 1),
   toeL: 6, toeR: 6,
@@ -22,27 +22,28 @@ const LAUGH: Partial<FPose> = { smile: 1, mo: 0.6, shut: 0.75, browL: 0.4, browR
 type Key = { t: number; p: FPose; hit?: boolean };
 const k = (t: number, drop: number, hipX: number, p: Partial<FPose>, hit = false): Key => ({ t, hit, p: { ...stance(drop + 22, hipX * 2), handL: "fist", handR: "fist", ...p } });
 
+// Arm/lean values marked (m) are measured from the footage (median of 3 frames, pose tracking on the male lead,
+// identity checked on an overlay); the rest are read by eye where tracking lost him (64.71, 64.96, 66.90, 67.10).
 export const HOOK_KEYS: Key[] = [
-  k(64.42, 50, -18, { armR: [-140, -60], armL: [42, 30], lean: -11, bend: -7, twist: -0.25, tilt: -8, lookY: -0.7, ...FIERCE }),
-  k(64.71, 52, -22, { armR: [-174, -14], armL: [34, 22], lean: -14, bend: -10, twist: -0.35, shrugR: 0.55, tilt: -14, lookY: -1, wristR: -20, ...SHOUT }, true),
-  k(64.96, 56, -12, { armR: [-62, -112], armL: [48, 96], lean: -5, bend: -3, tilt: -2, ...FIERCE }),
-  k(65.10, 64, -4, { armL: [40, -116], armR: [-40, 116], lean: 0, bend: 0, tilt: 4, lookY: 0.4, shrug: 0.25, ...FIERCE }, true),
-  k(65.40, 58, 6, { armL: [46, 8], armR: [-46, -8], handL: "open", handR: "open", lean: 4, tilt: -3, breath: 1, ...FIERCE }),
-  k(65.60, 56, 14, { armL: [74, 92], armR: [-36, -12], lean: 8, bend: 6, twist: 0.2, ...FIERCE }),
-  k(65.85, 54, 20, { armL: [166, 24], armR: [-40, -16], lean: 11, bend: 8, twist: 0.3, shrugL: 0.5, tilt: -9, lookY: -0.8, wristL: 18, ...SHOUT }, true),
-  k(66.05, 56, 20, { armL: [148, 54], armR: [-62, -10], lean: 10, bend: 7, shrugL: 0.3, tilt: -6, ...FIERCE }),
-  k(66.19, 54, 22, { armL: [172, 14], armR: [-74, -8], lean: 12, bend: 8, shrugL: 0.6, tilt: -11, lookY: -1, wristL: 22, ...SHOUT }, true),
-  k(66.45, 56, 18, { armL: [150, 50], armR: [-82, -4], lean: 9, bend: 6, shrugL: 0.3, ...FIERCE }),
-  k(66.65, 54, 6, { armL: [158, 62], armR: [-150, -62], lean: 2, bend: 0, shrug: 0.4, tilt: -8, ...FIERCE }),
+  k(64.42, 50, 10, { armL: [33, 92], armR: [-105, -99], lean: -6, bend: -4, twist: -0.2, tilt: -6, lookY: -0.5, ...FIERCE }), // (m) both arms flexed up
+  k(64.71, 52, 12, { armL: [40, 100], armR: [-150, -60], lean: -9, bend: -6, twist: -0.3, shrugR: 0.5, tilt: -12, lookY: -1, wristR: -20, ...SHOUT }, true),
+  k(64.96, 56, 6, { armL: [36, 60], armR: [-70, -90], lean: -8, bend: -4, tilt: -2, ...FIERCE }),
+  k(65.40, 60, 0, { armL: [15, -134], armR: [-16, 124], lean: -3, tilt: 3, lookY: 0.3, shrug: 0.25, ...FIERCE }, true), // (m) hands at chest
+  k(65.60, 58, 8, { armL: [30, -146], armR: [-47, -7], handR: "open", lean: -10, bend: -5, ...FIERCE }), // (m)
+  k(65.85, 54, 14, { armL: [49, 141], armR: [-35, -15], handR: "open", lean: -15, bend: -8, twist: -0.25, shrugL: 0.3, tilt: -6, lookY: -0.6, ...SHOUT }, true), // (m) fist rising
+  k(66.05, 54, 18, { armL: [115, 84], armR: [-34, -49], lean: -18, bend: -10, shrugL: 0.45, tilt: -8, ...FIERCE }), // (m) flexed fist beside head
+  k(66.19, 52, 20, { armL: [113, 98], armR: [-64, -12], handR: "open", lean: -21, bend: -11, shrugL: 0.6, tilt: -11, lookY: -1, wristL: 15, ...SHOUT }, true), // (m)
+  k(66.45, 54, 16, { armL: [102, 95], armR: [-70, -5], handR: "open", lean: -16, bend: -9, shrugL: 0.4, ...FIERCE }), // (m)
+  k(66.65, 56, 8, { armL: [18, -153], armR: [-32, -67], lean: -12, bend: -6, shrug: 0.2, tilt: -4, ...FIERCE }), // (m) hand back to chest
   k(66.90, 50, 0, { armL: [176, 28], armR: [-176, -28], handL: "open", handR: "open", lean: -4, shrug: 0.7, breath: 1, tilt: -16, lookY: -1, wristL: 25, wristR: -25, ...SHOUT }, true),
-  k(67.10, 52, 0, { armL: [170, 34], armR: [-170, -34], handL: "open", handR: "open", lean: -3, shrug: 0.6, tilt: -12, lookY: -1, ...SHOUT }),
-  k(67.30, 66, -14, { armL: [-32, -62], armR: [-42, -30], lean: 10, bend: 9, twist: 0.5, tilt: 7, lookY: 0.6, ...FIERCE }, true),
-  k(67.45, 64, -10, { armL: [-22, -82], armR: [-32, -22], lean: 7, bend: 6, twist: 0.4, tilt: 4, ...FIERCE }),
-  k(67.70, 54, 12, { armL: [170, 22], armR: [-40, -22], lean: 7, bend: 5, twist: 0.25, shrugL: 0.55, tilt: -11, lookY: -0.9, wristL: 20, ...SHOUT }, true),
-  k(67.92, 60, 4, { armL: [38, -120], armR: [-38, 120], handL: "open", handR: "open", lean: 0, bend: 0, tilt: 2, ...FIERCE }, true),
-  k(68.05, 58, 0, { armL: [22, -62], armR: [-22, 62], lean: 0, tilt: -2, ...FIERCE }),
-  k(68.30, 54, 0, { armL: [36, -110], armR: [-36, 110], shrug: 0.45, breath: 1, tilt: -10, ...LAUGH }, true),
-  k(68.45, 58, 0, { armL: [36, -110], armR: [-36, 110], shrug: 0.05, tilt: -6, ...LAUGH }),
+  k(67.10, 52, 0, { armL: [150, 50], armR: [-150, -50], lean: -2, shrug: 0.5, tilt: -10, lookY: -0.8, ...SHOUT }),
+  k(67.30, 62, -6, { armL: [73, -18], armR: [-7, 75], handL: "open", lean: 2, bend: 3, twist: 0.3, tilt: 5, lookY: 0.4, ...FIERCE }, true), // (m) arm swung out, other across belly
+  k(67.45, 58, -4, { armL: [84, 107], armR: [-43, 75], lean: -2, bend: -2, shrugL: 0.35, tilt: -4, ...FIERCE }), // (m) flex up
+  k(67.70, 54, 0, { armL: [17, -117], armR: [-23, -170], lean: -5, bend: -3, tilt: -9, lookY: -0.7, ...SHOUT }, true), // (m)
+  k(67.92, 58, 0, { armL: [21, -132], armR: [4, 101], handL: "open", handR: "open", lean: -1, tilt: 2, ...FIERCE }, true), // (m) clap at chest
+  k(68.05, 58, 4, { armL: [24, -100], armR: [-9, 56], lean: 5, tilt: -2, ...FIERCE }), // (m, right arm only)
+  k(68.30, 54, 0, { armL: [38, -10], armR: [-40, 20], handL: "open", handR: "open", shrug: 0.45, breath: 1, lean: -10, tilt: -10, ...LAUGH }, true), // (m, left arm)
+  k(68.45, 58, 0, { armL: [14, 6], armR: [-46, -26], handL: "open", handR: "open", shrug: 0.05, lean: -4, tilt: -6, ...LAUGH }), // (m)
 ];
 
 /** The hook step at film time t (s). Accents (hit) arrive with overshoot; everything else eases. */
@@ -70,8 +71,8 @@ const FULL = HOOK_END - HOOK_START; // ~4.03 s
 export const TUT = { full1: 0, slow: Math.round(FULL * 30) + 20, full2: Math.round(FULL * 30) + 20 + Math.round((FULL / SLOW) * 30) + 20 };
 export const HOOK_TUT_LEN = TUT.full2 + Math.round(FULL * 30) + 60;
 
-const COUNTS: [number, string][] = [[64.71, "1"], [65.10, "&"], [65.85, "2"], [66.19, "&"], [66.90, "3"], [67.30, "&"], [67.70, "4"], [67.92, "&"], [68.30, "5"]];
-const CUES: [number, string][] = [[64.42, "lunge, fist up"], [65.0, "hands to chest"], [65.75, "other fist up, pump"], [66.6, "both arms up"], [67.25, "whip down"], [67.65, "up again"], [67.9, "clap"], [68.2, "fists, bounce"]];
+const COUNTS: [number, string][] = [[64.71, "1"], [65.40, "&"], [65.85, "2"], [66.19, "&"], [66.90, "3"], [67.30, "&"], [67.70, "4"], [67.92, "&"], [68.30, "5"]];
+const CUES: [number, string][] = [[64.42, "flex up, punch"], [65.25, "hands to chest"], [65.75, "lean left, fist beside head"], [66.6, "chest, then both arms up"], [67.25, "swing out, flex"], [67.65, "hand to chest"], [67.9, "clap"], [68.2, "open, laugh"]];
 
 export const HookTutorial: React.FC = () => {
   const f = useCurrentFrame();
@@ -89,9 +90,9 @@ export const HookTutorial: React.FC = () => {
     <AbsoluteFill style={{ background: "linear-gradient(#1b1240, #3a1740 60%, #6b2a2a)" }}>
       <Fonts />
       <div style={{ position: "absolute", left: 0, right: 0, top: 1480, bottom: 0, background: "linear-gradient(#7a4a2a, #4a2a18)" }} />
-      {[-165, 165].map((x) => <div key={x} style={{ position: "absolute", left: 540 + x * 1.25 - 40, top: 1640, width: 80, height: 14, borderRadius: 7, background: "#ffd166", opacity: 0.5 }} />)}
+      {[-215, 215].map((x) => <div key={x} style={{ position: "absolute", left: 540 + x * 1.25 - 40, top: 1640, width: 80, height: 14, borderRadius: 7, background: "#ffd166", opacity: 0.5 }} />)}
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
-        <g transform="translate(540,1650) scale(1.25)"><Fumble f={f} p={p} /></g>
+        <g transform="translate(540,1650) scale(1.25)"><Fumble f={f} p={p} braids /></g>
         {slow && <g transform="translate(150,520) scale(0.32)" opacity={0.9}><Fumble f={f} p={p} bonesOnly /></g>}
       </svg>
       <div style={{ position: "absolute", top: 110, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 900, fontSize: 64, color: "#fff" }}>{label}</div>
