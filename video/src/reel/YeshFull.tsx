@@ -18,7 +18,10 @@ import audio from "./mocap/yesh_audio.json";
 // Mouths follow the vocal envelope for the singing character. Camera: close / medium / wide shots cut on beats.
 // No song in the file: the track is added from Instagram's music library (start the clip at 0:51).
 export const T0 = 51.0, T1 = 82.9;
-export const YESH_FULL_LEN = Math.round((T1 - T0) * 30);
+export const END_CARD = 75;
+export const YESH_FULL_LEN = Math.round((T1 - T0) * 30) + END_CARD;
+export const DROP = 64.5; // hook-first cut starts on the drop
+export const YESH_DROP_LEN = Math.round((T1 - DROP) * 30) + END_CARD;
 
 type Face = Partial<FPose>;
 type Cap = { start: number; data: MocapData; track: number };
@@ -128,6 +131,28 @@ const F_SEGS: Seg[] = [
 ];
 
 // ---------- Heroine (female lead) ----------
+/** Her own folk-dance phrases, four beats each, locked to the measured beats: clap-bounce, arms-up sway,
+ * full spin, and the lead's step done with her own flourish. */
+const folk = (t: number, from: number): FPose => {
+  const p = phase(t) - phase(from), k = Math.floor(p / 4) % 4, u = p - Math.floor(p);
+  const s1 = Math.sin(p * Math.PI * 2), b = Math.abs(Math.cos(p * Math.PI));
+  const face: Face = { smile: 0.95, mw: 0.7, mo: 0.15 + 0.25 * b, browL: 0.35, browR: 0.35, blush: 0.4 };
+  if (k === 0) { // clap on every beat, knees bouncing, hips swaying
+    const c = Math.pow(Math.abs(Math.cos(p * Math.PI)), 3);
+    return { ...crouch(10 + 18 * b), hipX: 14 * s1, hipTilt: 9 * s1, bend: -6 * s1, armL: [70 - 30 * c, 60 + 40 * c], armR: [-70 + 30 * c, -60 - 40 * c], handL: "open", handR: "open", tilt: 7 * s1, ...face };
+  }
+  if (k === 1) { // arms up, wrists circling, swaying side to side
+    return { ...crouch(8 + 10 * b), hipX: 18 * s1, hipTilt: 10 * s1, bend: 8 * s1, armL: [158 + 8 * s1, 30 + 30 * Math.sin(p * 9)], armR: [-158 + 8 * s1, -30 - 30 * Math.cos(p * 9)], handL: "open", handR: "open", tilt: -6 * s1, ...face, shut: 0.5 };
+  }
+  if (k === 2) { // full turn over four beats, arms out, skirt flaring
+    const turn = Math.cos(((p % 4) / 4) * Math.PI * 2);
+    return { ...crouch(12), bodyTurn: Math.sin(((p % 4) / 4) * Math.PI * 2) * 0.9, turn: Math.sin(((p % 4) / 4) * Math.PI * 2) * 0.9, armL: [96 + 10 * turn, 20], armR: [-96 - 10 * turn, -20], handL: "open", handR: "open", breath: 1, ...face, mo: 0.35 };
+  }
+  // his step, mirrored, with her hands at the waist and a head tilt on each beat
+  const m = ownFace(mirror(run(F_SEGS, t)));
+  return { ...m, armL: [38, -84], armR: [-38, 84], handL: "fist", handR: "fist", tilt: 9 * s1, shrugL: 0.3 * Math.max(0, s1), shrugR: 0.3 * Math.max(0, -s1), ...face, eyeSize: 1, lid: 0 };
+};
+
 const K1 = faceK1 as { face: Face[] }, K2 = faceK2 as { face: Face[] };
 const lipF = (t: number) => (singer(t) === 2 ? Math.min(0.9, env(t) * 1.1) : 0);
 const H_SEGS: Seg[] = [
@@ -144,10 +169,10 @@ const H_SEGS: Seg[] = [
   [61.5, (t) => ({ ...idle(t * 30), turn: 0.55, bend: 6 + 4 * sw(t), lean: 2 + 2 * sw(t), armL: [14, 18], armR: [-60, -40], smile: 1, shut: 1, tilt: 8 + 4 * sw(t), blush: 0.6, mo: lipF(t) })],
   [62.5, (t) => ({ ...idle(t * 30), turn: 0.6, lookX: 1, smile: 0.8, blush: 0.8, browL: 0.3, browR: 0.3, armL: [30, -130], armR: [-16, -20], handL: "open" })],
   [63.0, (t) => ({ ...idle(t * 30), ...faceAt(K2, 62.9, t), smile: 1, mo: 0.55 + 0.2 * bounce(t), shut: 0.7, tilt: -12, armL: [24, -140], armR: [-16, -24], handL: "open", lean: -4 })],
-  [64.5, (t) => ({ ...ownFace(soften(mirror(F_SEGS[14][1](t + 0.07)), 0.85)), handL: "open", handR: "open", smile: 0.95, mo: 0.25 * bounce(t), shut: t > 67.9 && t < 68.5 ? 0.7 : 0, turn: 0 })],
+  [64.5, (t) => folk(t, 64.5)],
   [73.2, (t) => ({ ...idle(t * 30), turn: Math.cos(((t - 73.2) / 0.6) * Math.PI * 2) * 0.7, armL: [160, 20 + 20 * sw(t)], armR: [-160, -20 - 20 * sw(t)], handL: "open", handR: "open", smile: 1, mo: 0.3, bend: 5 * sw(t), breath: 1 })],
   [74.5, (t) => ({ ...duetHeroine(t - 74.5), mo: Math.max(duetHeroine(t - 74.5).mo ?? 0, lipF(t)) })],
-  [78.5, (t) => ({ ...ownFace(soften(mirror(F_SEGS[18][1](t + 0.05)), 0.9)), handL: "open", handR: "open", smile: 0.95, mo: 0.3 * bounce(t) + lipF(t), turn: 0 })],
+  [78.5, (t) => ({ ...mix(ownFace(mirror(F_SEGS[18][1](t + 0.05))), folk(t, 78.5), 0.35), smile: 0.95, mo: 0.3 * bounce(t) + lipF(t), turn: 0 })],
   [82.35, (t) => ({ ...idle(t * 30), armL: [165, 10], armR: [-165, -10], handL: "open", handR: "open", smile: 1, mo: 0.5, shut: 0.6, tilt: 10, shrug: 0.4, hipY: -20 * Math.sin(Math.min(1, (t - 82.35) / 0.4) * Math.PI) })],
 ];
 
@@ -177,10 +202,34 @@ const SHOTS: Shot[] = [
   { t: 81.5, zoom: 1.0, cx: 540, cy: 1000 },
   { t: 82.35, zoom: 1.25, cx: 640, cy: 1000 },
 ];
+const beatAfter = (x: number) => BEATS.find((b) => b >= x) ?? x;
+const COVER: [number, number, number][] = [[1.0, 540, 1000], [1.45, 720, 980], [1.55, 360, 960], [2.05, 600, 760], [1.15, 540, 1060], [1.5, 380, 820], [1.7, 720, 800]];
+/** Second half: a new angle every two beats (wide / medium on him / medium on her / faces / push-in). */
+const coverage = (a: number, b: number, offset = 0, drop = 0): Shot[] => {
+  const out: Shot[] = [];
+  let t = beatAfter(a), i = offset;
+  while (t < b) {
+    const [zoom, cx, cy] = COVER[i % COVER.length];
+    const yy = cy + (cy < 900 ? drop : drop * 0.4); // follow the heads down when the dancers squat
+    out.push({ t, zoom: Math.min(zoom, drop ? 1.6 : 2.1), cx, cy: yy, cut: true });
+    out.push({ t: t + 1.38, zoom: Math.min(zoom, drop ? 1.6 : 2.1) * 1.08, cx, cy: yy - 20 }); // slow push within the shot
+    const n = BEATS.indexOf(t);
+    t = n >= 0 && BEATS[n + 2] ? BEATS[n + 2] : t + 1.44;
+    i++;
+  }
+  return out;
+};
+const ALL_SHOTS: Shot[] = [
+  ...SHOTS.filter((s) => s.t < 64.5),
+  { t: 64.5, zoom: 1.0, cx: 540, cy: 1000, cut: true }, ...coverage(64.6, 71.4, 1),
+  ...SHOTS.filter((s) => s.t >= 71.5 && s.t < 78.5),
+  { t: 78.5, zoom: 0.98, cx: 540, cy: 1000, cut: true }, ...coverage(78.6, 82.2, 3, 140),
+  { t: 82.2, zoom: 1.0, cx: 560, cy: 1000, cut: true }, { t: 82.35, zoom: 1.15, cx: 560, cy: 920, cut: true },
+].sort((x, y) => x.t - y.t);
 const shotAt = (t: number) => {
   let i = 0;
-  while (i < SHOTS.length - 1 && t >= SHOTS[i + 1].t) i++;
-  const a = SHOTS[i], b = SHOTS[i + 1];
+  while (i < ALL_SHOTS.length - 1 && t >= ALL_SHOTS[i + 1].t) i++;
+  const a = ALL_SHOTS[i], b = ALL_SHOTS[i + 1];
   if (!b || b.cut) return a; // hold until the next cut
   const u = easeInOut((t - a.t) / (b.t - a.t));
   return { ...a, zoom: a.zoom + (b.zoom - a.zoom) * u, cx: a.cx + (b.cx - a.cx) * u, cy: a.cy + (b.cy - a.cy) * u };
@@ -198,10 +247,14 @@ const CROWD = [
 ];
 const crowdOn = (t: number) => (t >= 64.5 && t < 74.5) || t >= 78.5;
 
-export const YeshFull: React.FC<{ title?: boolean }> = ({ title = true }) => {
+export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: number }> = ({ title = true, handle = "@ai_maastaaru_telugu", from = T0 }) => {
   const f = useCurrentFrame();
-  const t = T0 + f / 30;
-  const shot = shotAt(t);
+  const raw = from + f / 30;
+  const lf = f; // frames since the reel started (for on-screen text)
+  const t = raw >= 82.18 && raw < 82.36 ? 82.18 : Math.min(raw, T1 - 0.01); // a held beat before the final jump
+  const flash = Math.max(0, 1 - Math.abs(raw - 82.38) / 0.12);
+  const endIn = Math.max(0, Math.min(1, (raw - T1) / 0.25));
+  const shot = from === DROP && lf < 105 ? { zoom: 1.22, cx: 520, cy: 1000 } : shotAt(t);
   const pulse = 1 + 0.014 * Math.exp(-sinceBeat(t) * 9);
   const z = shot.zoom * pulse;
   const pos = positions(t);
@@ -216,9 +269,9 @@ export const YeshFull: React.FC<{ title?: boolean }> = ({ title = true }) => {
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
         <g transform={cam}>
           {crowdOn(t) && (
-            <g style={{ filter: "brightness(0.12) saturate(0) blur(1.5px)" }} opacity={0.92}>
+            <g style={{ filter: "brightness(0.16) saturate(0) blur(3.5px)" }} opacity={0.8}>
               {CROWD.map((c, i) => {
-                const p = run(F_SEGS, t - c.d / 30);
+                const p = run(F_SEGS, t - (c.d * 2) / 30);
                 return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><Fumble f={f + i * 7} p={{ ...(c.m ? mirror(p) : p), ...GRIN }} /></g>;
               })}
             </g>
@@ -228,10 +281,43 @@ export const YeshFull: React.FC<{ title?: boolean }> = ({ title = true }) => {
         </g>
       </svg>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(10,5,25,0.55))", pointerEvents: "none" }} />
-      {title && f < 75 && (
-        <div style={{ position: "absolute", top: 150, left: 0, right: 0, textAlign: "center", opacity: Math.min(1, f / 6, (75 - f) / 10) }}>
-          <span style={{ fontFamily: "Inter", fontWeight: 900, fontSize: 46, color: "#fff", background: "rgba(20,12,46,0.75)", padding: "12px 28px", borderRadius: 24 }}>Mr. Fumble × Yeshanagula</span>
+      {raw >= 64.5 && raw < 71.5 && !(from === DROP && lf < 105) && (
+        <div style={{ position: "absolute", top: 230, right: 30, width: 300, height: 400, borderRadius: 22, background: "rgba(11,16,34,0.88)", border: "2px solid #22d3ee", overflow: "hidden", opacity: Math.min(1, (raw - 64.5) / 0.3, (71.5 - raw) / 0.3) }}>
+          <svg width={300} height={400}><g transform="translate(150,380) scale(0.33)"><Fumble f={f} p={fp} bonesOnly /></g></svg>
+          <div style={{ position: "absolute", top: 10, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 800, fontSize: 26, color: "#22d3ee", letterSpacing: 1 }}>AI POSE TRACKING</div>
         </div>
+      )}
+      {title && from === DROP && lf < 105 && (
+        <div style={{ position: "absolute", left: 30, top: 330, width: 460, height: 720, borderRadius: 30, background: "rgba(11,16,34,0.92)", border: "3px solid #22d3ee", opacity: Math.min(1, lf / 4, (105 - lf) / 12) }}>
+          <svg width={460} height={700}><g transform="translate(230,670) scale(0.58)"><Fumble f={f} p={fp} bonesOnly /></g></svg>
+          <div style={{ position: "absolute", top: 18, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 900, fontSize: 32, color: "#22d3ee" }}>AI POSE TRACKING</div>
+          <div style={{ position: "absolute", bottom: 16, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 700, fontSize: 22, color: "#cbd5e1" }}>Google MediaPipe → cartoon rig</div>
+        </div>
+      )}
+      {title && from === DROP && lf < 105 && (
+        <div style={{ position: "absolute", top: 150, left: 40, right: 40, textAlign: "center", opacity: Math.min(1, lf / 3, (105 - lf) / 10) }}>
+          <div style={{ display: "inline-block", fontFamily: "Inter", fontWeight: 900, fontSize: 58, lineHeight: 1.12, color: "#fff", background: "rgba(20,12,46,0.85)", padding: "16px 28px", borderRadius: 26 }}>AI copied this dance <span style={{ color: "#ffd166" }}>from the film</span> 👀</div>
+        </div>
+      )}
+      {title && from !== DROP && f < 84 && (
+        <div style={{ position: "absolute", top: 210, left: 50, right: 50, textAlign: "center", opacity: Math.min(1, f / 4, (84 - f) / 10), transform: `scale(${1 + 0.06 * Math.max(0, 1 - f / 8)})` }}>
+          <div style={{ display: "inline-block", fontFamily: "Inter", fontWeight: 900, fontSize: 64, lineHeight: 1.12, color: "#fff", background: "rgba(20,12,46,0.82)", padding: "18px 30px", borderRadius: 28 }}>AI copied this dance<br /><span style={{ color: "#ffd166" }}>step by step</span> 👀</div>
+        </div>
+      )}
+      {raw < T1 && (
+        <div style={{ position: "absolute", top: 70, left: 40, display: "flex", alignItems: "center", gap: 10, background: "rgba(11,16,34,0.8)", border: "2px solid rgba(34,211,238,0.6)", borderRadius: 18, padding: "8px 16px" }}>
+          <div style={{ width: 12, height: 12, borderRadius: 6, background: "#f43f5e", opacity: f % 30 < 18 ? 1 : 0.3 }} />
+          <span style={{ fontFamily: "Inter", fontWeight: 800, fontSize: 34, color: "#fff" }}>AI motion capture</span>
+        </div>
+      )}
+      <AbsoluteFill style={{ background: "#fff", opacity: flash * 0.8, pointerEvents: "none" }} />
+      {raw >= T1 && (
+        <AbsoluteFill style={{ background: `rgba(20,12,46,${0.85 * endIn})`, alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+          <div style={{ transform: `scale(${0.85 + 0.15 * endIn})`, opacity: endIn }}>
+            <div style={{ fontFamily: "Inter", fontWeight: 900, fontSize: 64, color: "#fff", lineHeight: 1.15 }}>Dance tracked by AI<br />from the film</div><div style={{ marginTop: 18, fontFamily: "Inter", fontWeight: 700, fontSize: 34, color: "#cbd5e1" }}>MediaPipe pose tracking + hand-polished keyframes</div>
+            <div style={{ marginTop: 40, display: "inline-block", fontFamily: "Inter", fontWeight: 900, fontSize: 48, color: "#fff", background: "#0095f6", padding: "16px 40px", borderRadius: 22 }}>Follow {handle}</div>
+          </div>
+        </AbsoluteFill>
       )}
     </AbsoluteFill>
   );

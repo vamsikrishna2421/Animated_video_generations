@@ -20,6 +20,9 @@ export const HC_: typeof FC_ = {
 };
 export type Look = "fumble" | "heroine";
 const Pal = createContext<{ C: typeof FC_; hero: boolean }>({ C: FC_, hero: false });
+const BonesOnly = createContext(false);
+/** A drawable part that disappears in skeleton-only mode. */
+const P: React.FC<{ p?: number; children: React.ReactNode }> = (props) => (useContext(BonesOnly) ? null : <Part {...props} />);
 const usePal = () => useContext(Pal);
 
 export type Hand = "open" | "fist" | "point" | "thumb" | "paw";
@@ -107,29 +110,32 @@ const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; di
   }
   return (
     <g>
-      <Part p={p}>
+      <P p={p}>
         <line x1={x} y1={y} x2={kx} y2={ky} stroke={far ? C.trousersDark : C.trousers} strokeWidth={56} strokeLinecap="round" />
         <line x1={kx} y1={ky} x2={sx} y2={sy} stroke={far ? C.trousersDark : C.trousers} strokeWidth={50} strokeLinecap="round" />
         <line x1={sx} y1={sy} x2={ax} y2={ay} stroke={far ? "#d4d4d4" : C.sock} strokeWidth={30} strokeLinecap="round" />
-      </Part>
-      <Part p={ps}>
+      </P>
+      <P p={ps}>
         <g transform={`translate(${ax},${ay + 6}) rotate(${-toe * dir})`}>
           <path d={`M ${-26 * dir},-14 Q ${-30 * dir},14 ${0},16 L ${58 * dir},16 Q ${78 * dir},14 ${70 * dir},-4 Q ${50 * dir},-20 ${10 * dir},-18 Z`} fill={C.shoe} />
           <path d={`M ${14 * dir},-12 Q ${44 * dir},-14 ${60 * dir},-4`} stroke={C.shoeHi} strokeWidth={5} fill="none" strokeLinecap="round" />
           <line x1={-26 * dir} y1={16} x2={74 * dir} y2={16} stroke="#3a2010" strokeWidth={6} strokeLinecap="round" />
         </g>
-      </Part>
+      </P>
       {bones && <Bones pts={[[x, y], [kx, ky], [ax, ay]]} />}
     </g>
   );
 };
 
-const Bones: React.FC<{ pts: [number, number][] }> = ({ pts }) => (
-  <g>
-    <polyline points={pts.map((p) => p.join(",")).join(" ")} stroke="#22d3ee" strokeWidth={5} fill="none" />
-    {pts.map(([x, y], i) => <circle key={i} cx={x} cy={y} r={11} fill="#0b1022" stroke="#22d3ee" strokeWidth={5} />)}
-  </g>
-);
+const Bones: React.FC<{ pts: [number, number][] }> = ({ pts }) => {
+  const big = useContext(BonesOnly);
+  return (
+    <g>
+      <polyline points={pts.map((p) => p.join(",")).join(" ")} stroke="#22d3ee" strokeWidth={big ? 12 : 5} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      {pts.map(([x, y], i) => <circle key={i} cx={x} cy={y} r={big ? 16 : 11} fill={big ? "#f43f5e" : "#0b1022"} stroke={big ? "#fff" : "#22d3ee"} strokeWidth={5} />)}
+    </g>
+  );
+};
 
 /** Heroine eyes: big almond shape, deep brown iris with catch-lights, a thick lash line with a wing. */
 const HeroEye: React.FC<{ x: number; s: number; p: FPose; blink: number; wink: number }> = ({ x, s, p, blink, wink }) => {
@@ -276,8 +282,10 @@ const Mouth: React.FC<{ p: FPose }> = ({ p }) => {
   );
 };
 
-export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean; look?: Look }> = ({ look = "fumble", ...rest }) => (
-  <Pal.Provider value={{ C: look === "heroine" ? HC_ : FC_, hero: look === "heroine" }}><Body {...rest} /></Pal.Provider>
+export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean; look?: Look; bonesOnly?: boolean }> = ({ look = "fumble", bonesOnly = false, ...rest }) => (
+  <BonesOnly.Provider value={bonesOnly}>
+    <Pal.Provider value={{ C: look === "heroine" ? HC_ : FC_, hero: look === "heroine" }}><Body {...rest} bones={rest.bones || bonesOnly} /></Pal.Provider>
+  </BonesOnly.Provider>
 );
 
 const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }> = ({ f, p, reveal = {}, bones }) => {
@@ -321,15 +329,15 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
   const torsoD = `M ${pts(Lp)} Q ${capL[0].toFixed(1)},${capL[1].toFixed(1)} ${nL[0].toFixed(1)},${nL[1].toFixed(1)} L ${nR[0].toFixed(1)},${nR[1].toFixed(1)} Q ${capR[0].toFixed(1)},${capR[1].toFixed(1)} ${pts([...Rp].reverse())} Z`;
   const mid = spine(0.5);
   const ftx = (u: number) => tw * 26 * u; // chest-front features slide with the twist
-  const armRN = <Part p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR || !!p.armRBack} ls={p.armRs} /></Part>;
-  const armLN = <Part p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL || !!p.armLBack} ls={p.armLs} /></Part>;
+  const armRN = <P p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR || !!p.armRBack} ls={p.armRs} /></P>;
+  const armLN = <P p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL || !!p.armLBack} ls={p.armLs} /></P>;
   const backR = farR || !!p.armRBack, backL = farL || !!p.armLBack; // 3D depth wins when the capture says an arm is behind the body
   const arms = <>{!backR && armRN}{!backL && armLN}</>;
   const farArm = <>{backL && armLN}{backR && armRN}</>;
   const fx = turn * 34; // face features slide with the turn
   return (
     <g>
-      <ellipse cx={0} cy={6} rx={170} ry={22} fill="#000" opacity={0.16} />
+      {!useContext(BonesOnly) && <ellipse cx={0} cy={6} rx={170} ry={22} fill="#000" opacity={0.16} />}
       <g transform={`translate(${p.hipX ?? 0},${hipY})`}>
         {(() => {
           const lL = <Leg key="l" x={hipL[0]} y={hipL[1]} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL || p.legLFront === false} ls={p.legLs} />;
@@ -359,9 +367,9 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
           {p.back && arms}
           <defs><clipPath id={`tc${uid}`}><path d={torsoD} /></clipPath></defs>
           {/* torso: shirt silhouette, argyle vest bent along the spine, waistband on the pelvis */}
-          <Part p={reveal.torso}>
+          <P p={reveal.torso}>
             <path d={torsoD} fill={C.shirt} />
-          </Part>
+          </P>
           {hero && (
             <g clipPath={`url(#tc${uid})`}>
               {/* half-saree pallu: a teal drape with a gold border from the right hip over the left shoulder */}
@@ -371,7 +379,7 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
               <g transform={`rotate(${p.hipTilt ?? 0})`}><rect x={-110} y={-22} width={220} height={30} fill={C.argyle} /></g>
             </g>
           )}
-          {!hero && <Part p={reveal.vest}>
+          {!hero && <P p={reveal.vest}>
             <g clipPath={`url(#tc${uid})`}>
               <path d={torsoD} fill={C.vest} />
               <g transform={`translate(${mid[0] + ftx(0.5)},${mid[1] + 150}) rotate(${(p.bend ?? 0) * 0.5})`} opacity={0.85}>
@@ -387,13 +395,13 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
               </g>
             </g>
             {[0.28, 0.45, 0.62].map((u) => { const [x, y] = spine(u); return <circle key={u} cx={x + ftx(u)} cy={y} r={6} fill={C.argyle} />; })}
-          </Part>}
-          {!hero && <Part p={reveal.torso}>
+          </P>}
+          {!hero && <P p={reveal.torso}>
             <g transform={`rotate(${p.hipTilt ?? 0})`}>
               <rect x={-82 * (1 - 0.3 * prof)} y={-14} width={164 * (1 - 0.3 * prof)} height={40} rx={10} fill={C.trousers} />
               <rect x={-82 * (1 - 0.3 * prof)} y={-14} width={164 * (1 - 0.3 * prof)} height={10} fill={C.trousersDark} />
             </g>
-          </Part>}
+          </P>}
           {/* collar + bow tie ride on the chest */}
           <g transform={`translate(${N[0] + ftx(1)},${N[1]}) rotate(${p.bend ?? 0})`}>
             {hero && (
@@ -403,27 +411,27 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                 <path d="M 0,58 L -12,74 L 0,92 L 12,74 Z" fill={C.argyle} /><circle cx={0} cy={76} r={5} fill="#c2185b" />
               </g>
             )}
-            {!hero && <Part p={reveal.tie}>
+            {!hero && <P p={reveal.tie}>
               <path d="M -34,-6 L 0,30 L 34,-6 L 22,-22 L 0,0 L -22,-22 Z" fill="#fff" stroke={C.shirtDark} strokeWidth={3} />
               <path d="M 0,4 L -34,-12 L -34,20 Z M 0,4 L 34,-12 L 34,20 Z" fill={C.tie} />
               <rect x={-8} y={-4} width={16} height={16} rx={4} fill="#c2410c" />
-            </Part>}
+            </P>}
           </g>
           {/* neck + head: the head counter-tilts to stay level as the spine bends */}
           <g transform={`translate(${N[0] + turn * 6 + ftx(1) * 0.5},${N[1] - 14 - (p.neck ?? 0) + 8 * Math.max(shL, shR)}) rotate(${(p.tilt ?? 0) + (p.bend ?? 0) * 0.35})`}>
-            <Part p={reveal.head}>
+            <P p={reveal.head}>
               <rect x={-24} y={-34} width={48} height={50 + (p.neck ?? 0)} fill={C.skinDark} />
-            </Part>
+            </P>
             <g transform="translate(0,-26) scale(1.2) translate(0,8)">
               {hero && <path d="M -102,-150 Q -116,-60 -96,-20 Q -70,8 -40,-6 L 40,-6 Q 70,8 96,-20 Q 116,-60 102,-150 Q 98,-270 0,-272 Q -98,-270 -102,-150 Z" fill={C.hair} />}
-              <Part p={reveal.ears}>
+              <P p={reveal.ears}>
                 <ellipse cx={-96 + Math.max(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={hero || turn > 0.6 ? 0 : 1} />
                 <ellipse cx={96 + Math.min(0, turn) * 18} cy={-112} rx={18} ry={28} fill={C.skin} stroke={C.skinDark} strokeWidth={3} opacity={hero || turn < -0.6 ? 0 : 1} />
-              </Part>
-              <Part p={reveal.head}>
+              </P>
+              <P p={reveal.head}>
                 {hero ? <path d="M -90,-138 Q -96,-252 0,-254 Q 96,-252 90,-138 Q 92,-80 66,-40 Q 36,-2 0,4 Q -36,-2 -66,-40 Q -92,-80 -90,-138 Z" fill={C.skin} /> : <path d="M -94,-140 Q -98,-250 0,-252 Q 98,-250 94,-140 Q 96,-60 64,-14 Q 34,16 0,16 Q -34,16 -64,-14 Q -96,-60 -94,-140 Z" fill={C.skin} />}
                 {!hero && <path d="M -20,6 Q 0,14 20,6" stroke={C.skinDark} strokeWidth={4} fill="none" strokeLinecap="round" />}
-              </Part>
+              </P>
               {hero && (() => {
                 // centre-parted hair framing the face, jasmine, jhumkas; the braid comes forward over her left shoulder
                 const sw = 5 * Math.sin(f / 11), hang = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35) * 0.8;
@@ -446,20 +454,20 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                   </g>
                 );
               })()}
-              {!hero && <Part p={reveal.hair}>
+              {!hero && <P p={reveal.hair}>
                 <path d={`M -98,-140 Q -104,-238 -40,-262 Q 10,-280 70,-258 Q 104,-240 98,-140 L 86,-170 Q 80,-214 ${30 + fx * 0.3},-222 L ${-20 + fx * 0.3},-210 Q -78,-206 -86,-170 Z`} fill={C.hair} />
                 <path d={`M ${-20 + fx * 0.3},-262 L ${-28 + fx * 0.3},-214`} stroke="#5a4334" strokeWidth={4} strokeLinecap="round" />
-              </Part>}
+              </P>}
               <g transform={`translate(${fx},0)`}>
-                <Part p={reveal.eyes}>
+                <P p={reveal.eyes}>
                   <Eye x={-38} s={1 - Math.max(0, turn) * 0.25} p={p} blink={blink} wink={p.winkL ?? 0} />
                   <Eye x={38} s={1 + Math.min(0, turn) * 0.25} p={p} blink={blink} wink={p.winkR ?? 0} />
-                </Part>
-                <Part p={reveal.brows}>
+                </P>
+                <P p={reveal.brows}>
                   <Brow x={-38} raise={p.browL ?? 0} knit={p.knit ?? 0} side={-1} />
                   <Brow x={38} raise={p.browR ?? 0} knit={p.knit ?? 0} side={1} />
-                </Part>
-                <Part p={reveal.nose}>
+                </P>
+                <P p={reveal.nose}>
                   {hero ? (
                     <g>
                       <path d={`M ${turn * 12 + 2},-96 Q ${turn * 12 + 8},-80 ${turn * 12 + 2},-74 Q ${turn * 12 - 4},-71 ${turn * 12 - 8},-75`} stroke={C.skinDark} strokeWidth={4} fill="none" strokeLinecap="round" />
@@ -471,12 +479,12 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                       <ellipse cx={turn * 12 - 6} cy={-90} rx={6} ry={5} fill="#fff" opacity={0.45} />
                     </>
                   )}
-                </Part>
+                </P>
                 {hero && <circle cx={0} cy={-178} r={6} fill="#c2185b" />}
                 {(hero || (p.blush ?? 0) > 0) && [-56, 56].map((x) => <ellipse key={x} cx={x} cy={hero ? -76 : -66} rx={hero ? 20 : 22} ry={hero ? 11 : 12} fill={hero ? "#f2788f" : "#f08a7a"} opacity={(hero ? 0.32 : 0) + 0.55 * (p.blush ?? 0)} />)}
-                <Part p={reveal.mouth}>
+                <P p={reveal.mouth}>
                   <g transform={`translate(${turn * 8},${hero ? -40 : -36})`}><Mouth p={p} /></g>
-                </Part>
+                </P>
               </g>
               {(p.sweat ?? 0) > 0 && <path d="M 100,-200 Q 92,-182 100,-172 Q 108,-182 100,-200 Z" fill="#7dd3fc" opacity={p.sweat} />}
             </g>

@@ -29,7 +29,7 @@ import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 import { FumbleSheet } from "./reel/FumbleSheet";
 import { YESH_LEN, YeshCompare, YeshDance } from "./reel/YeshDance";
-import { YESH_FULL_LEN, YeshFull } from "./reel/YeshFull";
+import { DROP, YESH_DROP_LEN, YESH_FULL_LEN, YeshFull } from "./reel/YeshFull";
 import { MocapCheck } from "./reel/MocapCheck";
 import { HeroinePoses, HeroineSheet } from "./reel/HeroineSheet";
 import { FumbleMotion, MOTION_LEN } from "./reel/FumbleMotion";
@@ -97,7 +97,8 @@ export const RemotionRoot: React.FC = () => (
       calculateMetadata={({ props }) => ({ durationInFrames: Math.max(120, ytDuration((props as unknown as { tl: NewsTimeline }).tl)) })} />
     <Composition id="FumbleSheet" component={FumbleSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
     <Composition id="YeshDance" component={YeshDance} durationInFrames={YESH_LEN} fps={30} width={1080} height={1920} />
-    <Composition id="YeshFull" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_FULL_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true }} />
+    <Composition id="YeshFull" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_FULL_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true, handle: "@ai_maastaaru_telugu" }} />
+    <Composition id="YeshDrop" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_DROP_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true, handle: "@ai_maastaaru_telugu", from: DROP }} />
     <Composition id="YeshCompare" component={YeshCompare} durationInFrames={YESH_LEN} fps={30} width={1440} height={1280} />
     <Composition id="MocapCheck" component={MocapCheck as unknown as React.FC<Record<string, unknown>>} durationInFrames={480} fps={30} width={1080} height={1920} defaultProps={{ name: "test_jp" }} />
     <Composition id="HeroineSheet" component={HeroineSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
