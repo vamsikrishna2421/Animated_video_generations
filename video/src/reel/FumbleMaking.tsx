@@ -222,7 +222,7 @@ export const FumbleSketch: React.FC<{ handle: string; music?: boolean }> = ({ ha
   else if (f < 180) p = doubleTake(f - 120 + 10); // looks at the camera
   else if (f < 225) p = { ...browWiggle(f - 180), turn: -0.3 };
   else if (f < 315) { x = kf(f, [[225, 300], [315, 600]]); p = tiptoe(f - 225); }
-  else if (f < 340) { x = kf(f, [[315, 600], [330, 540]]); p = peek(f - 315, -1); }
+  else if (f < 340) { x = kf(f, [[315, 600], [330, 540]]); p = peek(f - 315, 1); }
   else if (f < 360) { x = 540; p = { turn: 0.6, lean: 14, armL: [-112, -8], handL: "point", armR: [-14, -18], browL: 0.8, browR: 0.8, mo: 0.4, eyeSize: 1.2, lookX: 1 }; }
   else if (f < 420) { x = kf(f, [[360, 540], [380, 440]]); p = smugGrin(f); }
   else { x = 440; p = innocent(f); }
