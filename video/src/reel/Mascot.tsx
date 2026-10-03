@@ -44,7 +44,7 @@ const Mouth: React.FC<{ o: number; w: number; smile: number }> = ({ o, w, smile 
 export const SketchStyle: React.FC = () => (
   <style>{`.sk * { fill: none !important; stroke: #2b2b2b !important; stroke-width: 3.5px !important; stroke-dasharray: 2600; stroke-dashoffset: var(--d); stroke-linecap: round; }`}</style>
 );
-const Part: React.FC<{ p?: number; children: React.ReactNode }> = ({ p, children }) => {
+export const Part: React.FC<{ p?: number; children: React.ReactNode }> = ({ p, children }) => {
   if (p === undefined) return <>{children}</>;
   const s = Math.min(1, Math.max(0, p * 2)), fill = Math.min(1, Math.max(0, p * 2 - 1));
   if (s <= 0) return null;

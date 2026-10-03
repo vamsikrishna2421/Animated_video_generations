@@ -27,6 +27,8 @@ import { NewsReel, NewsTimeline } from "./news/NewsReel";
 import { NewsYT, ytDuration } from "./news/NewsYT";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
+import { FumbleSheet } from "./reel/FumbleSheet";
+import { FM_LEN, FumbleMaking, FumbleMakingProps, FumbleSketch, SKETCH_LEN } from "./reel/FumbleMaking";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -88,6 +90,10 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="NewsYT" component={NewsYT as unknown as React.FC<Record<string, unknown>>} durationInFrames={300} fps={30} width={1920} height={1080}
       defaultProps={{ tl: { id: "x", date: "", range: "", edition: "AI NEWS", lang: "en", frames: 300, segments: [] } }}
       calculateMetadata={({ props }) => ({ durationInFrames: Math.max(120, ytDuration((props as unknown as { tl: NewsTimeline }).tl)) })} />
+    <Composition id="FumbleSheet" component={FumbleSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
+    <Composition id="FumbleSketch" component={FumbleSketch as unknown as React.FC<Record<string, unknown>>} durationInFrames={SKETCH_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru" }} />
+    <Composition id="FumbleMaking" component={FumbleMaking as unknown as React.FC<Record<string, unknown>>} durationInFrames={FM_LEN} fps={30} width={1080} height={1920}
+      defaultProps={{ label: "AI", minutes: 30, clock: [0, 3, 8, 12, 15, 25], code: "// code", handle: "@ai_maastaaru", snaps: { before: "fumble/snaps/before.png", after: "fumble/snaps/after.png" } } satisfies FumbleMakingProps} />
     <Composition id="ChariotRace" component={ChariotRace} durationInFrames={450} fps={30} width={1920} height={1080} />
     <Composition id="WorldDemo" component={RideWorld as unknown as React.FC<Record<string, unknown>>} durationInFrames={180} fps={30} width={1000} height={560} />
     {([

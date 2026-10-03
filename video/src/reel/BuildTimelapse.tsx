@@ -43,7 +43,7 @@ const PARTS: { key: keyof Reveal; label: string; at: [number, number] }[] = [
   { key: "mouth", label: "mouth", at: [0, -512] },
 ];
 
-const Studio: React.FC = () => {
+export const Studio: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 30%, #1e2a5a 0%, #0b1022 70%)" }}>
@@ -54,7 +54,7 @@ const Studio: React.FC = () => {
   );
 };
 
-const Title: React.FC<{ step: number; text: string; from: number }> = ({ step, text, from }) => {
+export const Title: React.FC<{ step: number; text: string; from: number }> = ({ step, text, from }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = spring({ frame: f - from, fps, config: { damping: 14 } });
@@ -112,7 +112,7 @@ const Hook: React.FC<{ label: string }> = ({ label }) => {
 };
 
 const KW = /\b(const|let|export|import|from|return|type|if|else|new|for|of|React|FC)\b/;
-const CodeLine: React.FC<{ line: string }> = ({ line }) => {
+export const CodeLine: React.FC<{ line: string }> = ({ line }) => {
   const parts = line.split(/("[^"]*"|`[^`]*`|\b\d+(?:\.\d+)?\b|\b(?:const|let|export|import|from|return|type|if|else|new|for|of)\b|\/\/.*$)/);
   return (
     <>
