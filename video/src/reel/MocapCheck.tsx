@@ -3,16 +3,17 @@ import { Fonts } from "../components/Fonts";
 import { Stage } from "./FumbleMaking";
 import { FPose, Fumble, Look } from "./Fumble";
 import testJp from "./mocap/test_jp.json";
+import yeshDuet1 from "./mocap/yesh_duet1.json";
 
 // Retargeting check: the reference clip (top) and the rig performing the captured motion (bottom).
 export type MocapTrack = { x: number[]; poses: FPose[] };
 export type MocapData = { fps: number; frames: number; src: { w: number; h: number }; tracks: MocapTrack[] };
-export const MOCAP: Record<string, MocapData> = { test_jp: testJp as unknown as MocapData };
+export const MOCAP: Record<string, MocapData> = { test_jp: testJp as unknown as MocapData, yesh_duet1: yeshDuet1 as unknown as MocapData };
 
-export const MocapCheck: React.FC<{ name: string; look?: Look }> = ({ name, look = "fumble" }) => {
+export const MocapCheck: React.FC<{ name: string; look?: Look; track?: number }> = ({ name, look = "fumble", track = 0 }) => {
   const f = useCurrentFrame();
   const d = MOCAP[name];
-  const tr = d.tracks[0];
+  const tr = d.tracks[track];
   const i = Math.min(tr.poses.length - 1, f);
   return (
     <AbsoluteFill style={{ background: "#0b1022" }}>

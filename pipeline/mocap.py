@@ -58,6 +58,43 @@ def detect(video, start, end, people, fps_out=30):
     return out, W, H
 
 
+def detect_follow(video, start, end, seeds, fps_out=30, win_w=0.42, up=2.5, jump=0.18):
+    """Follow specific dancers through a crowd. seeds: [(x, y), ...] normalised start positions (hip centre).
+    Each frame, a window around each target's last position is cropped, upscaled and searched; the pose whose
+    hips are nearest the last position wins (within `jump` of the frame width), otherwise the frame is missing."""
+    import mediapipe as mp
+    from mediapipe.tasks import python as mpt
+    from mediapipe.tasks.python import vision
+    det = vision.PoseLandmarker.create_from_options(vision.PoseLandmarkerOptions(
+        base_options=mpt.BaseOptions(model_asset_path=str(MODEL)), running_mode=vision.RunningMode.IMAGE, num_poses=3,
+        min_pose_detection_confidence=0.3))
+    cap = cv2.VideoCapture(str(video))
+    W, H = cap.get(3), cap.get(4)
+    last = [np.array([x * W, y * H]) for x, y in seeds]
+    tracks = [[] for _ in seeds]
+    for k in range(int((end - start) * fps_out)):
+        cap.set(cv2.CAP_PROP_POS_MSEC, (start + k / fps_out) * 1000)
+        ok, fr = cap.read()
+        if not ok:
+            break
+        for j, c in enumerate(last):
+            ww = int(W * win_w)
+            x0 = int(np.clip(c[0] - ww / 2, 0, W - ww))
+            crop = cv2.resize(fr[:, x0:x0 + ww], None, fx=up, fy=up, interpolation=cv2.INTER_CUBIC)
+            r = det.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)))
+            best, bd = None, W * jump
+            for lm in r.pose_landmarks:
+                a = np.array([[x0 + p.x * ww, p.y * H, p.visibility] for p in lm])
+                d = np.linalg.norm((a[23, :2] + a[24, :2]) / 2 - c)
+                if d < bd:
+                    best, bd = a, d
+            tracks[j].append(best)
+            if best is not None:
+                last[j] = (best[23, :2] + best[24, :2]) / 2
+    det.close()
+    return tracks, W, H
+
+
 def assign(frames, n):
     """Keep identities stable by hip-centre distance to each track's last position."""
     tracks = [[None] * len(frames) for _ in range(n)]
@@ -173,10 +210,17 @@ def main():
     ap.add_argument("--end", type=float, required=True)
     ap.add_argument("--name", required=True)
     ap.add_argument("--people", type=int, default=1)
+    ap.add_argument("--follow", help='follow dancers from normalised hip positions, e.g. "0.5,0.7;0.33,0.75"')
     a = ap.parse_args()
-    frames, W, H = detect(a.video, a.start, a.end, a.people)
+    if a.follow:
+        seeds = [tuple(float(v) for v in s_.split(",")) for s_ in a.follow.split(";")]
+        raw, W, H = detect_follow(a.video, a.start, a.end, seeds)
+        frames = raw[0]
+    else:
+        frames, W, H = detect(a.video, a.start, a.end, a.people)
+        raw = assign(frames, a.people)
     tracks = []
-    for tr in assign(frames, a.people):
+    for tr in raw:
         arr = fill(tr)
         if arr is None:
             continue
