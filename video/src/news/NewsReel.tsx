@@ -7,7 +7,7 @@ import { CTA_SFX, FollowCard } from "../brand/Cta";
 import { LogoBug } from "../brand/Logo";
 import { Wipe } from "../brand/Transitions";
 import { B, cl, F, pop, prog } from "../brand/tokens";
-import { Fumble, FPose, idle, kf, smugGrin } from "../reel/Fumble";
+import { browWiggle, doubleTake, exaggerate, follow, Fumble, FPose, idle, kf, shock, smugGrin, wave } from "../reel/Fumble";
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
@@ -257,6 +257,27 @@ const FumbleDemo: React.FC<{ d: Demo; step: (i: number) => number; accent: strin
   );
 };
 
+/** Mr. Fumble as a small on-screen presenter: double-take when a section opens, eyebrow wiggle on every new
+ * card/number, a smug grin on verdict sections, idle sway in between. Poses come from the shared rig. */
+const Presenter: React.FC<{ cues: number[]; mood?: "verdict" | "shock" | "wave"; x?: number; y?: number; s?: number }> = ({ cues, mood, x = 935, y = 640, s = 0.3 }) => {
+  const f = useCurrentFrame();
+  const at = (fr: number): FPose => {
+    if (mood === "shock") return fr < 40 ? shock(fr) : idle(fr);
+    if (mood === "wave") return wave(fr);
+    if (fr < 50) return doubleTake(fr);
+    const c = [...cues].reverse().find((q) => fr >= q - 2 && fr < q + 34);
+    if (c !== undefined) return { ...browWiggle(fr - c), turn: -0.35, lookX: -0.8 };
+    return mood === "verdict" ? smugGrin(fr) : { ...idle(fr), turn: -0.3, lookX: -0.6 };
+  };
+  const p = exaggerate(follow((t) => at(Math.round(t * 30)), f / 30), 1.2);
+  const enter = Math.min(1, f / 10);
+  return (
+    <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+      <g transform={`translate(${x + (1 - enter) * 200},${y}) scale(${s})`}><Fumble f={f} p={p} braids={false} /></g>
+    </svg>
+  );
+};
+
 const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total }) => {
   const f = useCurrentFrame();
   const accent = seg.accent ?? B.cyan;
@@ -281,6 +302,7 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
           );
         })}
       </div>
+      <Presenter cues={cards.map((c) => c.f)} mood={/VERDICT|WHICH|USE IT|PATTERN|SMART/i.test(`${seg.tag} ${seg.org}`) ? "verdict" : undefined} x={950} y={830} s={0.56} />
       {seg.demo && <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />}
       <div style={{ position: "absolute", top: 640, left: 60, right: 60, display: seg.demo ? "none" : "block" }}>
         {cards.map((c, i) => {
@@ -427,6 +449,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
         <div style={{ marginTop: 18, fontFamily: F.inter, fontWeight: 800, fontSize: title.length > 8 ? 120 : 150, letterSpacing: -6, color: B.white, lineHeight: 1, textAlign: "center" }}>{title}</div>
         <div style={{ marginTop: 24, fontFamily: F.inter, fontWeight: 800, fontSize: 56, color: B.cyan }}>{range}</div>
       </AbsoluteFill>
+      <Presenter cues={[]} mood="shock" x={900} y={1520} s={0.34} />
       <Karaoke words={seg.words} bottom={300} size={86} max={3} />
     </AbsoluteFill>
   );
@@ -458,6 +481,7 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string; recap?: string
           <FollowCard handle={handle} />
         </Sequence>
       )}
+      {f < followAt && <Presenter cues={[]} mood="wave" x={900} y={1520} s={0.34} />}
       {f < followAt && <Karaoke words={seg.words} bottom={300} size={86} max={3} />}
     </AbsoluteFill>
   );
