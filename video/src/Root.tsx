@@ -28,6 +28,7 @@ import { NewsYT, ytDuration } from "./news/NewsYT";
 import { Reel, ReelTimeline, ReelYT } from "./reel/Reel";
 import { reels } from "./reel/timelines";
 import { FumbleSheet } from "./reel/FumbleSheet";
+import { MocapCheck } from "./reel/MocapCheck";
 import { HeroinePoses, HeroineSheet } from "./reel/HeroineSheet";
 import { FumbleMotion, MOTION_LEN } from "./reel/FumbleMotion";
 import { FM_LEN, FumbleMaking, FumbleMakingProps, FumbleSketch, SKETCH_LEN } from "./reel/FumbleMaking";
@@ -93,6 +94,7 @@ export const RemotionRoot: React.FC = () => (
       defaultProps={{ tl: { id: "x", date: "", range: "", edition: "AI NEWS", lang: "en", frames: 300, segments: [] } }}
       calculateMetadata={({ props }) => ({ durationInFrames: Math.max(120, ytDuration((props as unknown as { tl: NewsTimeline }).tl)) })} />
     <Composition id="FumbleSheet" component={FumbleSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
+    <Composition id="MocapCheck" component={MocapCheck as unknown as React.FC<Record<string, unknown>>} durationInFrames={480} fps={30} width={1080} height={1920} defaultProps={{ name: "test_jp" }} />
     <Composition id="HeroineSheet" component={HeroineSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
     <Composition id="HeroinePoses" component={HeroinePoses} durationInFrames={120} fps={30} width={1080} height={1920} />
     <Composition id="FumbleMotion" component={FumbleMotion as unknown as React.FC<Record<string, unknown>>} durationInFrames={MOTION_LEN} fps={30} width={1080} height={1920} defaultProps={{ onion: false }} />
