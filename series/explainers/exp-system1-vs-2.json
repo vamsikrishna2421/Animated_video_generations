@@ -1,0 +1,237 @@
+{
+ "id": "exp-system1-vs-2",
+ "date": "OCT 2026",
+ "range": "FAST vs SLOW AI",
+ "edition": "AI EXPLAINED",
+ "kicker": "AI EXPLAINED",
+ "title": "SYSTEM 1 vs 2",
+ "recap": "SYSTEM 1 vs 2 IN 4 POINTS",
+ "hook": {
+  "lines": [
+   [
+    "Your brain has ",
+    "2 speeds",
+    "."
+   ],
+   [
+    "AI ",
+    "just split",
+    " too."
+   ]
+  ],
+  "text": "Two plus two? You answered instantly. Seventeen times twenty-four? You had to stop and think. AI just split the same way. Here's System 1 versus System 2.",
+  "tts": "Two plus two? You answered instantly. Seventeen times twenty four? You had to stop, and think. A.I. just split the same way. Here is System 1, versus System 2.",
+  "tts_te": "రెండు ప్లస్ రెండు? వెంటనే చెప్పేశారు. పదిహేడు ఇంటు ఇరవై నాలుగు? కాసేపు ఆలోచించాల్సి వచ్చింది. ఎ ఐ కూడా ఇప్పుడు ఇలాగే రెండుగా విడిపోయింది. ఇదిగో, సిస్టమ్ వన్ వర్సెస్ సిస్టమ్ టూ."
+ },
+ "stories": [
+  {
+   "org": "THE IDEA",
+   "accent": "#38BDF8",
+   "tag": "KAHNEMAN",
+   "headline": [
+    "Fast brain,",
+    "slow brain"
+   ],
+   "text": "Psychologist Daniel Kahneman named them. System 1 is fast and automatic, like two plus two. System 2 is slow and deliberate, like working out seventeen times twenty-four step by step.",
+   "tts": "Psychologist Daniel Kahneman named them. System 1 is fast and automatic, like two plus two. System 2 is slow and deliberate, like working out seventeen times twenty four, step by step.",
+   "tts_te": "సైకాలజిస్ట్ డేనియల్ కానెమన్ వీటికి పేర్లు పెట్టారు. సిస్టమ్ వన్ వేగంగా, ఆటోమేటిక్ గా పనిచేస్తుంది, రెండు ప్లస్ రెండు లాగా. సిస్టమ్ టూ నెమ్మదిగా, జాగ్రత్తగా ఆలోచిస్తుంది, పదిహేడు ఇంటు ఇరవై నాలుగు ని స్టెప్ బై స్టెప్ లెక్కపెట్టినట్టు.",
+   "cards": [
+    {
+     "k": "",
+     "v": "",
+     "cue": "slow"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "deliberate"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "working"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "step"
+    }
+   ],
+   "sources": "Kahneman, Thinking, Fast and Slow (2011)",
+   "demo": {
+    "type": "fumble",
+    "variant": "s2",
+    "title": "SYSTEM 2 · THINKING",
+    "q": "17 × 24",
+    "steps": [
+     "17 × 20 = 340",
+     "17 × 4 = 68",
+     "= 408"
+    ]
+   }
+  },
+  {
+   "org": "SYSTEM 1 AI",
+   "accent": "#22C55E",
+   "tag": "DECISION MODELS",
+   "headline": [
+    "AI that",
+    "just decides"
+   ],
+   "text": "Decision models like TypeSafe's Jev are System 1 AI. You give them a question and a fixed list of answers, like spam or not spam. They don't write a word. They pick one, with a confidence, like spam, 97 percent, in under half a second.",
+   "tts": "Decision models like Type Safe's Jev are System 1 A.I. You give them a question, and a fixed list of answers, like spam, or not spam. They don't write a word. They pick one, with a confidence. Like, spam, ninety seven percent. In under half a second.",
+   "tts_te": "టైప్ సేఫ్ వారి జెవ్ లాంటి డెసిషన్ మోడల్స్, సిస్టమ్ వన్ ఎ ఐ. మీరు ఒక ప్రశ్న, ఒక ఫిక్స్డ్ సమాధానాల లిస్ట్ ఇస్తారు, ఉదాహరణకి స్పామ్, లేదా స్పామ్ కాదు. ఇవి ఒక్క పదం కూడా రాయవు. ఒక సమాధానం ఎంచుకుని, ఎంత ఖచ్చితంగా అనేది చెబుతాయి. స్పామ్, తొంభై ఏడు శాతం. అదీ అర సెకను లోపే.",
+   "cards": [
+    {
+     "k": "QUESTION",
+     "v": "Is this email spam?",
+     "cue": "question"
+    },
+    {
+     "k": "ANSWER",
+     "v": "spam · 97% sure",
+     "cue": "97"
+    },
+    {
+     "k": "SPEED",
+     "v": "70–500 ms (TypeSafe's claim)",
+     "cue": "half"
+    }
+   ],
+   "sources": "TypeSafe docs and launch post",
+   "demo": {
+    "type": "route",
+    "title": "SYSTEM 1 · ONE QUICK DECISION",
+    "bins": [
+     "BILLING",
+     "TECH",
+     "SALES"
+    ],
+    "note": "ILLUSTRATIVE"
+   }
+  },
+  {
+   "org": "SYSTEM 2 AI",
+   "accent": "#8B5CF6",
+   "tag": "REASONING MODELS",
+   "headline": [
+    "AI that",
+    "thinks first"
+   ],
+   "text": "Reasoning models, like ChatGPT's thinking mode or OpenAI's o-series, work like System 2. They reason step by step, so they handle math, code and planning, but they take seconds. TypeSafe says those models take 3 seconds or more, where Jev answers in under half a second.",
+   "tts": "Reasoning models, like Chat G.P.T.'s thinking mode, or Open A.I.'s o series, work like System 2. They reason step by step, so they handle math, code, and planning. But they take seconds. Type Safe says those models take three seconds or more, where Jev answers in under half a second.",
+   "tts_te": "చాట్ జి పి టి థింకింగ్ మోడ్, ఓపెన్ ఎ ఐ ఓ సిరీస్ లాంటి రీజనింగ్ మోడల్స్, సిస్టమ్ టూ లాగా పనిచేస్తాయి. ఇవి స్టెప్ బై స్టెప్ ఆలోచిస్తాయి, అందుకే లెక్కలు, కోడ్, ప్లానింగ్ చేయగలవు. కానీ సెకన్లు పడుతుంది. ఆ మోడల్స్ కి మూడు సెకన్లు లేదా అంతకంటే ఎక్కువ పడుతుందని, జెవ్ అర సెకను లోపే చెబుతుందని టైప్ సేఫ్ అంటోంది.",
+   "cards": [
+    {
+     "k": "",
+     "v": "",
+     "cue": "seconds."
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "under"
+    }
+   ],
+   "sources": "VentureBeat (OpenAI's Noam Brown) · TypeSafe launch post",
+   "demo": {
+    "type": "bars",
+    "title": "TIME TO ANSWER · LOWER IS FASTER",
+    "rows": [
+     {
+      "label": "Decision model (Jev)",
+      "value": 0.5,
+      "show": "under 0.5 s",
+      "hi": true
+     },
+     {
+      "label": "Reasoning model",
+      "value": 3,
+      "show": "3 s or more"
+     }
+    ],
+    "note": "TYPESAFE'S CLAIM"
+   }
+  },
+  {
+   "org": "USE BOTH",
+   "accent": "#F59E0B",
+   "tag": "THE SMART SETUP",
+   "headline": [
+    "Fast first,",
+    "think when needed"
+   ],
+   "text": "The smart setup uses both. Spam check? System 1. Route a ticket? System 1. Next game move? System 1. Write a reply, solve math, plan a trip? Send those to System 2.",
+   "tts": "The smart setup uses both. Spam check? System 1. Route a ticket? System 1. Next game move? System 1. Write a reply, solve math, plan a trip? Send those, to System 2.",
+   "tts_te": "తెలివైన పద్ధతి, రెండింటినీ వాడటం. స్పామ్ చెక్? సిస్టమ్ వన్. టికెట్ ఎవరికి పంపాలి? సిస్టమ్ వన్. గేమ్ లో తర్వాతి మూవ్? సిస్టమ్ వన్. రిప్లై రాయడం, లెక్కలు, ట్రిప్ ప్లాన్ చేయడం? వాటిని సిస్టమ్ టూ కి పంపండి.",
+   "cards": [
+    {
+     "k": "",
+     "v": "",
+     "cue": "Spam"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "Route"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "game"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "reply"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "math"
+    },
+    {
+     "k": "",
+     "v": "",
+     "cue": "plan"
+    }
+   ],
+   "sources": "TypeSafe docs · TechTarget",
+   "demo": {
+    "type": "sort",
+    "title": "WHICH SYSTEM?",
+    "items": [
+     {
+      "t": "Is this email spam?",
+      "side": 1
+     },
+     {
+      "t": "Route this ticket",
+      "side": 1
+     },
+     {
+      "t": "Next game move",
+      "side": 1
+     },
+     {
+      "t": "Write a reply",
+      "side": 2
+     },
+     {
+      "t": "Solve 17 × 24",
+      "side": 2
+     },
+     {
+      "t": "Plan a 3-day trip",
+      "side": 2
+     }
+    ]
+   }
+  }
+ ],
+ "outro": {
+  "text": "Next: Jev versus Clef-flash. Which System 1 model should you pick? Follow so you don't miss it.",
+  "tts": "Next: Jev, versus Clef flash. Which System 1 model should you pick? Follow, so you don't miss it.",
+  "tts_te": "తర్వాతి వీడియో: జెవ్ వర్సెస్ క్లెఫ్ ఫ్లాష్. ఏ సిస్టమ్ వన్ మోడల్ ఎంచుకోవాలి? మిస్ అవ్వకుండా ఫాలో అవ్వండి."
+ }
+}
