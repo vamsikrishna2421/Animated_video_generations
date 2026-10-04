@@ -212,7 +212,7 @@ const SHOTS: Shot[] = [
   { t: 56.0, zoom: 1.63, cx: 650, cy: 760, cut: true },
   { t: 57.25, zoom: 1.38, cx: 560, cy: 820, cut: true },
   { t: 58.0, zoom: 1.12, cx: 560, cy: 1150, cut: true },
-  { t: 58.75, zoom: 1.59, cx: 545, cy: 760, cut: true },
+  { t: 58.75, zoom: 1.5, cx: 610, cy: 770, cut: true },
   { t: 60.75, zoom: 1.46, cx: 560, cy: 780, cut: true },
   { t: 61.5, zoom: 1.72, cx: 540, cy: 740, cut: true },
   { t: 62.5, zoom: 1.55, cx: 540, cy: 760, cut: true },
@@ -252,9 +252,9 @@ const ALL_SHOTS: Shot[] = [
   { t: 78.5, zoom: 0.98, cx: 540, cy: 1000, cut: true }, ...coverage(78.6, 82.2, 3, 140),
   { t: 82.2, zoom: 1.0, cx: 560, cy: 1000, cut: true }, { t: 82.35, zoom: 1.15, cx: 560, cy: 920, cut: true },
 ].sort((x, y) => x.t - y.t).map((s) => { // every cut lands on the nearest beat (within a quarter second)
-  if (!s.cut || s.t < 64.4) return s;
+  if (!s.cut || s.t <= T0) return s;
   const b = BEATS.reduce((m, x) => (Math.abs(x - s.t) < Math.abs(m - s.t) ? x : m), BEATS[0]);
-  return Math.abs(b - s.t) < 0.25 ? { ...s, t: b } : s;
+  return Math.abs(b - s.t) < 0.37 ? { ...s, t: b } : s;
 }).sort((x, y) => x.t - y.t);
 const shotAt = (t: number) => {
   let i = 0;
@@ -267,7 +267,7 @@ const shotAt = (t: number) => {
 const positions = (t: number): { h: number; f: number } => {
   if (t < 64.5) return t >= 61.5 && t < 62.5 ? { h: 395, f: 700 } : { h: 380, f: 710 };
   if (t < 74.5) return { h: 330, f: 730 };
-  if (t < 78.5) return { h: 290, f: 770 };
+  if (t < 78.5) return { h: 320, f: 750 };
   return { h: 320, f: 740 };
 };
 const CROWD = [
@@ -298,14 +298,15 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
   // while they dance, every shot keeps both full bodies in frame (the steps are the point); close-ups only in the acting intro
   const fit = (s: { zoom: number; cx: number; cy: number }) => {
     if (t < 64.5) return s;
-    const zoom = Math.min(s.zoom, 1.2), mid = (pos.h + pos.f) / 2, half = 960 / zoom;
+    const zoom = Math.min(s.zoom, 1.2, 1080 / (pos.f - pos.h + 560)), mid = (pos.h + pos.f) / 2, half = 960 / zoom; // both bodies plus arm room
     return { zoom, cx: Math.max(mid - 40, Math.min(mid + 40, s.cx)), cy: Math.max(1730 - half, Math.min(720 + half, s.cy)) };
   };
   const shot = fit(shot0);
   const pulse = 1 + 0.014 * Math.exp(-sinceBeat(t) * 9);
   const z = shot.zoom * pulse;
   const hp0 = H_POSE(t), fp0 = F_POSE(t);
-  const hp = { ...hp0, hipX: (hp0.hipX ?? 0) + lockH()(t) }, fp = { ...fp0, hipX: (fp0.hipX ?? 0) + lockF()(t) };
+  const keep = (x: number) => Math.max(-60, Math.min(60, x)); // never drift out of the shot
+  const hp = { ...hp0, hipX: keep((hp0.hipX ?? 0) + lockH()(t)) }, fp = { ...fp0, hipX: keep((fp0.hipX ?? 0) + lockF()(t)), lean: Math.max(-24, Math.min(24, fp0.lean ?? 0)) };
   const cam = `translate(540,960) scale(${z}) translate(${-shot.cx},${-shot.cy})`;
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: "#140c2e" }}>
