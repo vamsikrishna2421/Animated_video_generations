@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
+import { SongSet } from "./SongSet";
 import { exaggerate, follow, FPose, Fumble } from "./Fumble";
 import { beatWarp } from "./motionPost";
 import bj from "./mocap/bj.json";
@@ -17,6 +18,7 @@ const END = 75; // our end card (frames)
 export const MJ_REEL_LEN = Math.round((T1 - T0) * 30) + END;
 const STEPS = (steps as unknown as { clips: { id: string; t: [number, number]; name: string; short: string }[] }).clips;
 const BEATS = Array.from({ length: 84 }, (_, k) => 0.2 + (k * 60) / 117); // Billie Jean, 117 BPM
+const HITS = STEPS.map((c) => c.t[0]).filter((x) => x > T0 + 0.5);
 const beatIdx = (t: number) => BEATS.filter((b) => t >= b).length - 1;
 const sinceBeat = (t: number) => { const k = beatIdx(t); return k >= 0 ? t - BEATS[k] : 9; };
 
@@ -98,12 +100,14 @@ export const MJReel: React.FC<{ handle?: string }> = ({ handle = "@ai_maastaaru"
     <AbsoluteFill style={{ overflow: "hidden", background: "#0b0a18" }}>
       <Fonts />
       <Studio t={t} f={f} />
+      <SongSet layer="back" t={t} beats={BEATS} hits={HITS} flavor="pop" />
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
         <g transform={cam(t, xAt(t))}>
         <ellipse cx={540 + xAt(t)} cy={1790} rx={190} ry={26} fill="rgba(0,0,0,0.45)" />
         <g transform={`translate(${540 + xAt(t)},1790) scale(1.0)`} opacity={ended ? Math.max(0, 1 - endAge * 4) : 1}><Fumble f={f} p={p} /></g>
         </g>
       </svg>
+      <SongSet layer="front" t={t} beats={BEATS} hits={HITS} flavor="pop" />
       {/* proof panel: the tracked skeleton, first 3.5 s */}
       {!ended && (
         <div style={{ position: "absolute", right: 22, top: 1500, width: 230, height: 380, borderRadius: 22, background: "rgba(11,16,34,0.86)", border: "3px solid #22d3ee", opacity: Math.min(1, f / 5) }}>

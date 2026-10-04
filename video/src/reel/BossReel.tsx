@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { Fonts } from "../components/Fonts";
+import { SongSet } from "./SongSet";
 import { exaggerate, follow, FPose, Fumble } from "./Fumble";
 import boss from "./mocap/boss.json";
 import face from "./mocap/boss_face.json";
@@ -17,6 +18,7 @@ const END = 75; // our end card (frames)
 export const BOSS_REEL_LEN = Math.round((T1 - T0) * 30) + END;
 const STEPS = (steps as unknown as { clips: { id: string; t: [number, number]; name: string; short: string }[] }).clips;
 const BEATS = [0.14, 0.7, 1.25, 1.8, 2.36, 2.91, 3.47, 3.99, 4.57, 5.13, 5.69, 6.25, 6.8, 7.36, 7.92, 8.46, 9.02, 9.58, 10.14, 10.69, 11.25, 11.81, 12.36, 12.92, 13.47, 14.02, 14.58, 15.14, 15.7, 16.25, 16.8, 17.36, 17.91, 18.47, 19.03, 19.59, 20.14, 20.69, 21.25, 21.82, 22.36, 22.92, 23.48, 24.18, 24.86, 25.43, 25.98, 26.53, 27.09, 27.65, 28.2, 28.76, 29.3, 29.87, 30.42, 30.99];
+const HITS = STEPS.map((c) => c.t[0]).filter((x) => x > T0 + 0.5);
 const beatIdx = (t: number) => BEATS.filter((b) => t >= b).length - 1;
 const sinceBeat = (t: number) => { const k = beatIdx(t); return k >= 0 ? t - BEATS[k] : 9; };
 
@@ -97,12 +99,14 @@ export const BossReel: React.FC<{ handle?: string }> = ({ handle = "@ai_maastaar
     <AbsoluteFill style={{ overflow: "hidden", background: "#0b0a18" }}>
       <Fonts />
       <Studio t={t} f={f} />
+      <SongSet layer="back" t={t} beats={BEATS} hits={HITS} flavor="telugu" />
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
         <g transform={cam(t, xAt(t))}>
         <ellipse cx={540 + xAt(t)} cy={1790} rx={190} ry={26} fill="rgba(0,0,0,0.45)" />
         <g transform={`translate(${540 + xAt(t)},1790) scale(1.0)`} opacity={ended ? Math.max(0, 1 - endAge * 4) : 1}><Fumble f={f} p={p} look="boss" /></g>
         </g>
       </svg>
+      <SongSet layer="front" t={t} beats={BEATS} hits={HITS} flavor="telugu" />
       {/* proof panel: the tracked skeleton, first 3.5 s */}
       {!ended && (
         <div style={{ position: "absolute", left: 22, top: 640, width: 230, height: 380, borderRadius: 22, background: "rgba(11,16,34,0.86)", border: "3px solid #22d3ee", opacity: Math.min(1, f / 5) }}>
