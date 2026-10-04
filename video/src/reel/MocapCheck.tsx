@@ -7,11 +7,13 @@ import yeshDuet1 from "./mocap/yesh_duet1.json";
 import yeshDuet2 from "./mocap/yesh_duet2.json";
 import yeshNani1 from "./mocap/yesh_nani1.json";
 import yeshNani1Flat from "./mocap/yesh_nani1_flat.json";
+import yeshWide1 from "./mocap/yesh_wide1.json";
+import yeshWide2 from "./mocap/yesh_wide2.json";
 
 // Retargeting check: the reference clip (top) and the rig performing the captured motion (bottom).
 export type MocapTrack = { x: number[]; poses: FPose[] };
 export type MocapData = { fps: number; frames: number; src: { w: number; h: number }; tracks: MocapTrack[] };
-export const MOCAP: Record<string, MocapData> = { test_jp: testJp as unknown as MocapData, yesh_duet1: yeshDuet1 as unknown as MocapData, yesh_duet2: yeshDuet2 as unknown as MocapData, yesh_nani1: yeshNani1 as unknown as MocapData, yesh_nani1_flat: yeshNani1Flat as unknown as MocapData };
+export const MOCAP: Record<string, MocapData> = { test_jp: testJp as unknown as MocapData, yesh_duet1: yeshDuet1 as unknown as MocapData, yesh_duet2: yeshDuet2 as unknown as MocapData, yesh_nani1: yeshNani1 as unknown as MocapData, yesh_nani1_flat: yeshNani1Flat as unknown as MocapData, yesh_wide1: yeshWide1 as unknown as MocapData, yesh_wide2: yeshWide2 as unknown as MocapData };
 
 export const MocapCheck: React.FC<{ name: string; look?: Look; track?: number; compare?: string }> = ({ name, look = "fumble", track = 0, compare }) => {
   const f = useCurrentFrame();

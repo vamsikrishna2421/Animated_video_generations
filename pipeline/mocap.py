@@ -5,7 +5,7 @@
   -> video/src/reel/mocap/<name>.json   {fps, frames, tracks: [{x: [...], poses: [FPose...]}...]}
   -> video/public/mocap/<name>.mp4      the cut reference clip (for side-by-side checks only; never published)
 
-Model (git-ignored, ~9 MB): curl -sSL -o pipeline/models/pose_landmarker_full.task https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/latest/pose_landmarker_full.task
+Model (git-ignored, ~30 MB): curl -sSL -o pipeline/models/pose_landmarker_heavy.task https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_heavy/float16/latest/pose_landmarker_heavy.task
 Needs: pip install mediapipe; apt-get install libegl1 libgles2.
 
 MediaPipe Pose (33 landmarks) per frame, people kept apart by where their hips are, then mapped onto rig
@@ -27,7 +27,7 @@ from scipy.signal import savgol_filter
 
 ROOT = Path(__file__).resolve().parent.parent
 GRANULAR = True  # lighter smoothing: keeps sharp hits and small accents
-MODEL = ROOT / "pipeline/models/pose_landmarker_full.task"
+MODEL = ROOT / "pipeline/models/pose_landmarker_heavy.task"  # offline: accuracy over speed
 FF = ROOT / "video/node_modules/@remotion/compositor-linux-x64-gnu"
 L1, L2, LS = 200, 195, 300  # rig thigh, shin, spine
 
@@ -198,6 +198,79 @@ def fill(track, hold=12, mask=None):
         if b - a > hold:
             arr[a + 1:b] = arr[a]
     return arr
+
+
+# ---------- landmark cleanup (before any angle is computed) ----------
+PAIRS = [(11, 12), (13, 14), (15, 16), (17, 18), (19, 20), (21, 22), (23, 24), (25, 26), (27, 28), (29, 30), (31, 32)]
+BONES = [(11, 13), (13, 15), (12, 14), (14, 16), (23, 25), (25, 27), (24, 26), (26, 28)]  # (parent, child)
+# One Euro per joint: (min_cutoff Hz, beta). Torso calm, extremities keep their accents (research notes, item 1).
+OE = {**{j: (0.9, 0.5) for j in (0, 2, 5, 7, 8, 9, 10, 11, 12, 23, 24)}, **{j: (1.2, 0.7) for j in (13, 14, 25, 26)},
+      **{j: (1.8, 1.5) for j in (15, 16, 17, 18, 19, 20, 21, 22, 27, 28, 29, 30, 31, 32)}}
+
+
+def one_euro(x, fps=30.0, min_cutoff=1.0, beta=0.5, d_cutoff=1.0):
+    """Speed-adaptive low-pass: heavy smoothing when a joint is slow (no shimmer), light when it moves fast (no lag)."""
+    al = lambda fc: 1.0 / (1.0 + fps / (2 * math.pi * fc))  # noqa: E731
+    y, dx = np.empty_like(x), 0.0
+    y[0] = x[0]
+    for i in range(1, len(x)):
+        dx = dx + al(d_cutoff) * ((x[i] - x[i - 1]) * fps - dx)
+        y[i] = y[i - 1] + al(min_cutoff + beta * abs(dx)) * (x[i] - y[i - 1])
+    return y
+
+
+def zero_phase(x, **kw):
+    """Forward and backward passes averaged: no lag, so hits land where they happened."""
+    return 0.5 * (one_euro(x, **kw) + one_euro(x[::-1], **kw)[::-1])
+
+
+def hampel(x, w=3, k=3.0):
+    """Indices that sit more than k robust sigmas from their 2w+1 rolling median (tracker spikes)."""
+    bad = np.zeros(len(x), bool)
+    for i in range(len(x)):
+        seg = x[max(0, i - w): i + w + 1]
+        med = np.median(seg)
+        mad = 1.4826 * np.median(np.abs(seg - med)) + 1e-6
+        bad[i] = abs(x[i] - med) > k * mad and abs(x[i] - med) > 0.04
+    return bad
+
+
+def clean(arr, shots, coords=2):
+    """(F,33,>=2) landmarks -> left/right swaps fixed, spikes and limb snaps removed, then zero-phase One Euro.
+    Works shot by shot so nothing is smoothed across a camera cut. Coordinates are normalised by torso length so the
+    filter settings mean the same thing for wide and close shots."""
+    a = arr.copy()
+    F = len(a)
+    for s0, s1 in zip(shots, list(shots[1:]) + [F]):
+        seg = a[s0:s1]
+        n = len(seg)
+        if n < 6:
+            continue
+        torso = np.median(np.linalg.norm((seg[:, 11, :coords] + seg[:, 12, :coords]) / 2 - (seg[:, 23, :coords] + seg[:, 24, :coords]) / 2, axis=1)) + 1e-6
+        for t in range(1, n):  # a pair whose members trade places for a frame is a tracker swap, not a dance move
+            for i, j in PAIRS:
+                keep = np.linalg.norm(seg[t, i, :coords] - seg[t - 1, i, :coords]) + np.linalg.norm(seg[t, j, :coords] - seg[t - 1, j, :coords])
+                swap = np.linalg.norm(seg[t, j, :coords] - seg[t - 1, i, :coords]) + np.linalg.norm(seg[t, i, :coords] - seg[t - 1, j, :coords])
+                if swap < 0.6 * keep:
+                    seg[t, [i, j]] = seg[t, [j, i]]
+        miss = np.zeros((n, 33), bool)
+        for j in range(33):
+            for d in range(coords):
+                miss[:, j] |= hampel(seg[:, j, d] / torso)
+        for p_, c_ in BONES:  # limb snapped to a wrong length: drop the child joint for that frame
+            ln = np.linalg.norm(seg[:, c_, :coords] - seg[:, p_, :coords], axis=1)
+            miss[:, c_] |= np.abs(ln - np.median(ln)) > 0.25 * np.median(ln) * 1.6  # foreshortening is real, so be lenient
+        idx = np.arange(n)
+        for j in range(33):
+            ok = ~miss[:, j]
+            if ok.sum() >= 2 and (~ok).any():
+                for d in range(coords):
+                    seg[:, j, d] = np.interp(idx, idx[ok], seg[ok, j, d])
+            mc, b = OE.get(j, (1.2, 0.7))
+            for d in range(coords):
+                seg[:, j, d] = zero_phase(seg[:, j, d] / torso, min_cutoff=mc, beta=b) * torso
+        a[s0:s1] = seg
+    return a
 
 
 def smooth(x, w=9):
@@ -380,6 +453,7 @@ def main():
     ap.add_argument("--people", type=int, default=1)
     ap.add_argument("--follow", help='follow dancers from normalised hip positions, e.g. "0.5,0.7;0.33,0.75"')
     ap.add_argument("--flat", action="store_true", help="2D-only retarget (ignore the 3D skeleton)")
+    ap.add_argument("--raw", action="store_true", help="skip landmark cleanup (old behaviour, for A/B checks)")
     ap.add_argument("--reseed", help='after cuts: "72.5=0.5,0.7;0.3,0.7|75.5=..." (same order as --follow)')
     a = ap.parse_args()
     if a.follow:
@@ -395,6 +469,8 @@ def main():
     shots = [0] + ([int((t - a.start) * 30) for t, _ in rs] if a.follow and rs else [])
     for ti, tr in enumerate(raw):
         arr = fill(tr)
+        if arr is not None and not a.raw:
+            arr = clean(arr, [0] + ([int((t - a.start) * 30) for t, _ in rs] if a.follow and rs else []))
         if arr is None:  # keep the slot so track indices always match the --follow order
             tracks.append({"x": [], "poses": [], "found": sum(good(p) for p in tr)})
             continue
@@ -402,6 +478,8 @@ def main():
             mask = [good(p) for p in tr]
             wtr = [w if (w is not None and m) else None for w, m in zip(worlds[ti], mask)]
             warr = fill([np.c_[w, np.ones(33)] if w is not None else None for w in wtr], mask=[w is not None for w in wtr])[:, :, :3]
+            if not a.raw:
+                warr = clean(warr, shots, coords=3)
             o = to_rig3d(arr, warr, shots)
             tracks.append({"x": [round(float(v), 1) for v in o["x"]], "poses": poses3d(o), "found": sum(mask)})
             continue
