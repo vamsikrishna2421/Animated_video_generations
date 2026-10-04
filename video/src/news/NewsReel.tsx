@@ -17,7 +17,7 @@ type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string;
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string; lock?: boolean };
 const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 
@@ -436,6 +436,27 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
   );
 };
 
+/** "Scroll locked" countdown pill (retention device): a lock and a timer counting down to the end card, so the viewer
+ * knows exactly how long they are being asked to stay. Unlocks with a click on the end card. */
+const ScrollLock: React.FC<{ end: number }> = ({ end }) => {
+  const f = useCurrentFrame();
+  const left = Math.max(0, Math.ceil((end - f) / 30));
+  const open = f >= end, pop = prog(f, end, end + 8), enter = prog(f, 4, 14);
+  const tick = (end - f) % 30 < 4 && !open ? 1.06 : 1;
+  return (
+    <div style={{ position: "absolute", top: 74, left: 0, right: 0, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 18, opacity: enter, transform: `translateY(${(1 - enter) * -40}px)` }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 18, padding: "8px 24px", borderRadius: 60, background: "rgba(10,12,24,0.78)", border: `2px solid ${open ? B.cyan : "rgba(255,255,255,0.18)"}`, transform: `scale(${tick + 0.08 * Math.sin(pop * Math.PI)})` }}>
+        <svg width={34} height={38} viewBox="0 0 34 38">
+          <rect x={3} y={16} width={28} height={20} rx={5} fill={open ? B.cyan : B.white} />
+          <path d={open ? "M 9,16 V 10 A 8,8 0 0 1 25,8" : "M 9,16 V 10 A 8,8 0 0 1 25,10 V 16"} stroke={open ? B.cyan : B.white} strokeWidth={4} fill="none" />
+        </svg>
+        <span style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 38, letterSpacing: 3, color: B.white }}>{open ? "0:00" : `${Math.floor(left / 60)}:${String(left % 60).padStart(2, "0")}`}</span>
+      </div>
+      <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 22, letterSpacing: 5, color: open ? B.cyan : "rgba(255,255,255,0.55)" }}>{open ? "YOU CAN SCROLL NOW" : "SCROLL LOCKED"}</div>
+    </div>
+  );
+};
+
 const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string }> = ({ seg, range, kicker = "YOUR WEEK IN AI", title = "AI NEWS" }) => {
   const f = useCurrentFrame();
   // the last sentence ("Here's your AI news...") swaps to the title card
@@ -519,7 +540,8 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
-      {f < followAbs && <Header edition={tl.edition} date={tl.date} />}
+      {f < followAbs && !tl.lock && <Header edition={tl.edition} date={tl.date} />}
+      {tl.lock && f < followAbs + 60 && <ScrollLock end={followAbs} />}
       {f < followAbs && <StoryBars n={stories.length} idx={storyIdx >= 0 ? storyIdx : f >= outroStart ? stories.length : -1} p={storyIdx >= 0 ? (f - starts[idx]) / cur.frames : 0} />}
       {f >= starts[1] && f < followAbs && <LogoBug handle={handle} corner="bl" at={starts[1] + 10} />}
       {starts.slice(1).map((s) => <Wipe key={s} at={s} />)}
