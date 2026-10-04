@@ -527,12 +527,12 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {/* music + SFX */}
       {/* music arc: punchy under the hook, sits back for the stories, lifts through the last story into the CTA */}
       <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop volume={(fr) => {
-        if (fr >= followAbs) return 0.35;
+        if (fr >= followAbs) return 0.45;
         const base = tl.look === "broadcast" ? 0.15 : 0.08;
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
-        if (fr >= outroStart) return base * 1.7;
-        return fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base, base * 1.5], cl) : base;
+        if (fr >= outroStart) return interpolate(fr, [outroStart, followAbs], [base * 2.2, base * 3], cl);
+        return fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.3, base * 2.2], cl) : base;
       }} />
       <Sequence from={0} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>
       <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>
