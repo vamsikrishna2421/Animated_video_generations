@@ -36,6 +36,7 @@ import { MocapCheck } from "./reel/MocapCheck";
 import { HeroinePoses, HeroineSheet } from "./reel/HeroineSheet";
 import { FumbleMotion, MOTION_LEN } from "./reel/FumbleMotion";
 import { BossCheck, BOSS_LEN } from "./reel/BossCheck";
+import { BossReel, BOSS_REEL_LEN } from "./reel/BossReel";
 import { FM_LEN, FumbleMaking, FumbleMakingProps, FumbleSketch, SKETCH_LEN } from "./reel/FumbleMaking";
 
 export const RemotionRoot: React.FC = () => (
@@ -101,6 +102,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="FumbleSheet" component={FumbleSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
     <Composition id="YeshDance" component={YeshDance} durationInFrames={YESH_LEN} fps={30} width={1080} height={1920} />
     <Composition id="YeshFull" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_FULL_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true, handle: "@ai_maastaaru_telugu" }} />
+    <Composition id="BossReel" component={BossReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={BOSS_REEL_LEN} fps={30} width={1080} height={1920} />
     <Composition id="BossCheck" component={BossCheck as unknown as React.FC<Record<string, unknown>>} durationInFrames={BOSS_LEN} fps={30} width={1080} height={1920} />
     <Composition id="HookTutorial" component={HookTutorial} durationInFrames={HOOK_TUT_LEN} fps={30} width={1080} height={1920} />
     <Composition id="SolSheet" component={SolSheet} durationInFrames={60} fps={30} width={1080} height={1920} />

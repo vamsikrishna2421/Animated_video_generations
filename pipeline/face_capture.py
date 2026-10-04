@@ -51,6 +51,40 @@ def capture(video, start, end, seed, up=3.0, fps=30):
     return out
 
 
+def capture_crop(video, npz, fps=30):
+    """Full-body footage: the face is tiny, so detect it in an upscaled crop around the tracked head (fullbody.py)."""
+    import mediapipe as mp
+    from mediapipe.tasks import python as mpt
+    from mediapipe.tasks.python import vision
+    z = np.load(npz)
+    img, start = z["imgc"], float(z["start"])
+    det = vision.FaceLandmarker.create_from_options(vision.FaceLandmarkerOptions(
+        base_options=mpt.BaseOptions(model_asset_path=str(MODEL)), output_face_blendshapes=True,
+        output_facial_transformation_matrixes=True, num_faces=1, min_face_detection_confidence=0.3,
+        running_mode=vision.RunningMode.IMAGE))
+    cap = cv2.VideoCapture(str(video))
+    out = []
+    for k in range(len(img)):
+        cap.set(cv2.CAP_PROP_POS_MSEC, (start + k / fps) * 1000)
+        ok, fr = cap.read()
+        if not ok:
+            break
+        p = img[k]
+        torso = np.linalg.norm((p[11, :2] + p[12, :2]) / 2 - (p[23, :2] + p[24, :2]) / 2)
+        c = (p[0, :2] + (p[7, :2] + p[8, :2]) / 2) / 2
+        half = max(30, 0.42 * torso)
+        x0, y0 = int(max(0, c[0] - half)), int(max(0, c[1] - half))
+        x1, y1 = int(min(fr.shape[1], c[0] + half)), int(min(fr.shape[0], c[1] + half))
+        crop = cv2.resize(fr[y0:y1, x0:x1], (400, 400), interpolation=cv2.INTER_CUBIC)
+        r = det.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)))
+        if r.face_blendshapes:
+            out.append(({b.category_name: b.score for b in r.face_blendshapes[0]}, np.array(r.facial_transformation_matrixes[0]), 0.5))
+        else:
+            out.append(None)
+    det.close()
+    return out
+
+
 def to_face(seq):
     keys = ["smile", "mo", "lid", "squint", "browL", "browR", "knit", "pucker", "skew", "lookX", "lookY", "tilt", "turn"]
     F = len(seq)
@@ -99,8 +133,9 @@ def main():
     ap.add_argument("--seed", type=float, required=True, help="normalised x of the face to follow")
     ap.add_argument("--name", required=True)
     ap.add_argument("--up", type=float, default=3.0)
+    ap.add_argument("--crop", help="pipeline/raw/<name>.npz from fullbody.py: detect in crops around the tracked head")
     a = ap.parse_args()
-    seq = capture(a.video, a.start, a.end, a.seed, a.up)
+    seq = capture_crop(a.video, a.crop) if a.crop else capture(a.video, a.start, a.end, a.seed, a.up)
     face, n = to_face(seq)
     out = ROOT / "video/src/reel/mocap" / f"{a.name}.json"
     out.write_text(json.dumps({"fps": 30, "frames": len(seq), "found": n, "face": face or []}))

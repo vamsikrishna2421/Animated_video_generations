@@ -24,7 +24,7 @@ export const BossCheck: React.FC<{ bones?: boolean }> = ({ bones = false }) => {
       </div>
       <div style={{ position: "absolute", top: 960, left: 0, right: 0, bottom: 0, background: "linear-gradient(#2a1c5a, #3b1f4a 70%, #6b3a26)" }} />
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
-        <g transform={`translate(${540 + x},1840) scale(0.86)`}><Fumble f={f} p={p} bones={bones} /></g>
+        <g transform={`translate(${540 + x},1840) scale(0.86)`}><Fumble f={f} p={p} bones={bones} look="boss" /></g>
       </svg>
       <div style={{ position: "absolute", top: 976, left: 24, fontFamily: "Inter", fontWeight: 800, fontSize: 30, color: "#fff", background: "rgba(0,0,0,0.4)", padding: "6px 14px", borderRadius: 12 }}>whole-body capture → Mr. Fumble · feet · wrists · fingers · phone</div>
     </AbsoluteFill>

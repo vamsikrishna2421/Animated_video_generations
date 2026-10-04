@@ -18,8 +18,13 @@ export const HC_: typeof FC_ = {
   vest: "#0f8b8d", vestDark: "#0b6e70", argyle: "#e8b923", tie: "#e8b923", trousers: "#0f8b8d", trousersDark: "#0b6e70",
   sock: "#e8b923", shoe: "#8a3b12", shoeHi: "#b4552a", lip: "#c2185b", mouth: "#5a1020", ink: "#1a1210",
 };
-export type Look = "fumble" | "heroine";
-const Pal = createContext<{ C: typeof FC_; hero: boolean; braids?: boolean }>({ C: FC_, hero: false });
+/** "Boss" outfit for Mr. Fumble: open orange jacket over a black tee, brown trousers, white sneakers. */
+export const BC_: typeof FC_ = {
+  ...FC_, shirt: "#d9822b", shirtDark: "#b0631a", vest: "#1c1c22", vestDark: "#1c1c22", argyle: "#1c1c22",
+  trousers: "#5a3b2a", trousersDark: "#45291c", sock: "#ececec", shoe: "#f2f2f2", shoeHi: "#9aa3ad",
+};
+export type Look = "fumble" | "heroine" | "boss";
+const Pal = createContext<{ C: typeof FC_; hero: boolean; braids?: boolean; boss?: boolean }>({ C: FC_, hero: false });
 const BonesOnly = createContext(false);
 /** A drawable part that disappears in skeleton-only mode. */
 const P: React.FC<{ p?: number; children: React.ReactNode }> = (props) => (useContext(BonesOnly) ? null : <Part {...props} />);
@@ -345,12 +350,12 @@ const Mouth: React.FC<{ p: FPose }> = ({ p }) => {
 
 export const Fumble: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean; look?: Look; bonesOnly?: boolean; braids?: boolean }> = ({ look = "fumble", bonesOnly = false, braids = false, ...rest }) => (
   <BonesOnly.Provider value={bonesOnly}>
-    <Pal.Provider value={{ C: look === "heroine" ? HC_ : FC_, hero: look === "heroine", braids }}><Body {...rest} bones={rest.bones || bonesOnly} /></Pal.Provider>
+    <Pal.Provider value={{ C: look === "heroine" ? HC_ : look === "boss" ? BC_ : FC_, hero: look === "heroine", braids, boss: look === "boss" }}><Body {...rest} bones={rest.bones || bonesOnly} /></Pal.Provider>
   </BonesOnly.Provider>
 );
 
 const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }> = ({ f, p, reveal = {}, bones }) => {
-  const { C, hero, braids } = usePal();
+  const { C, hero, braids, boss } = usePal();
   const blink = f % 110 < 4 || f % 173 < 3 ? 0 : 1;
   const hipY = -410 + (p.hipY ?? 0) - (p.still ? 0 : 2 * Math.sin(f / 16));
   const turn = p.turn ?? 0;
@@ -442,21 +447,32 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
           )}
           {!hero && <P p={reveal.vest}>
             <g clipPath={`url(#tc${uid})`}>
-              <path d={torsoD} fill={C.vest} />
-              <g transform={`translate(${mid[0] + ftx(0.5)},${mid[1] + 150}) rotate(${(p.bend ?? 0) * 0.5})`} opacity={0.85}>
+              {boss ? (
+                // open jacket: the black tee shows in a band down the middle, the jacket (shirt colour) on both sides
+                <path d={`M ${N[0] - 44 + ftx(1)},${N[1] - 6} L ${N[0] + 44 + ftx(1)},${N[1] - 6} L ${62 + ftx(0)},20 L ${-62 + ftx(0)},20 Z`} fill={C.vest} />
+              ) : <path d={torsoD} fill={C.vest} />}
+              {!boss && <g transform={`translate(${mid[0] + ftx(0.5)},${mid[1] + 150}) rotate(${(p.bend ?? 0) * 0.5})`} opacity={0.85}>
                 {[-100, -50, 0, 50, 100].map((cx) => [-70, -170, -270].map((cy) => (
                   <path key={`${cx}${cy}`} d={`M ${cx},${cy - 44} L ${cx + 24},${cy} L ${cx},${cy + 44} L ${cx - 24},${cy} Z`} fill={((cx / 50 + cy / 100) % 2 + 2) % 2 ? C.vestDark : "none"} stroke={C.argyle} strokeWidth={3} />
                 )))}
-              </g>
-              <g transform={`translate(${N[0]},${N[1]}) rotate(${p.bend ?? 0})`}>
+              </g>}
+              {!boss && <g transform={`translate(${N[0]},${N[1]}) rotate(${p.bend ?? 0})`}>
                 <path d={`M ${-58 + ftx(1)},-10 L ${-54 + ftx(1)},0 L ${ftx(1)},110 L ${54 + ftx(1)},0 L ${58 + ftx(1)},-10 Z`} fill={C.shirt} />
-              </g>
+              </g>}
+              {boss && [-1, 1].map((sd) => <path key={sd} d={`M ${N[0] + sd * 44 + ftx(1)},${N[1] - 6} L ${sd * 62 + ftx(0)},20`} stroke={C.shirtDark} strokeWidth={7} />)}
               <g transform={`rotate(${p.hipTilt ?? 0})`}>
                 <path d="M -110,-8 Q 0,6 110,-8 L 110,40 L -110,40 Z" fill={C.vestDark} opacity={0.35} />
               </g>
             </g>
-            {[0.28, 0.45, 0.62].map((u) => { const [x, y] = spine(u); return <circle key={u} cx={x + ftx(u)} cy={y} r={6} fill={C.argyle} />; })}
+            {!boss && [0.28, 0.45, 0.62].map((u) => { const [x, y] = spine(u); return <circle key={u} cx={x + ftx(u)} cy={y} r={6} fill={C.argyle} />; })}
           </P>}
+          {boss && (() => {
+            // jacket tails below the waist swing with the hips (skirtS from the spring pass) and sideways motion
+            const sw = (p.skirtS ?? 0) * 1.4 - Math.max(-30, Math.min(30, (p.swayX ?? 0) * 1.5));
+            return [-1, 1].map((sd) => (
+              <path key={`jt${sd}`} transform={`rotate(${p.hipTilt ?? 0})`} d={`M ${sd * 62},14 L ${sd * 96},0 Q ${sd * (108 + 10 * sd * sw * 0.1) + sw},40 ${sd * 104 + sw},78 L ${sd * 58 + sw * 0.6},70 Z`} fill={C.shirt} stroke={C.shirtDark} strokeWidth={4} />
+            ));
+          })()}
           {!hero && <P p={reveal.torso}>
             <g transform={`rotate(${p.hipTilt ?? 0})`}>
               <rect x={-82 * (1 - 0.3 * prof)} y={-14} width={164 * (1 - 0.3 * prof)} height={40} rx={10} fill={C.trousers} />
@@ -472,7 +488,8 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                 <path d="M 0,58 L -12,74 L 0,92 L 12,74 Z" fill={C.argyle} /><circle cx={0} cy={76} r={5} fill="#c2185b" />
               </g>
             )}
-            {!hero && <P p={reveal.tie}>
+            {boss && [-1, 1].map((sd) => <path key={`lp${sd}`} d={`M ${sd * 40},-14 L ${sd * 62},-4 L ${sd * 34},52 Z`} fill={C.shirtDark} />)}
+            {!hero && !boss && <P p={reveal.tie}>
               <path d="M -34,-6 L 0,30 L 34,-6 L 22,-22 L 0,0 L -22,-22 Z" fill="#fff" stroke={C.shirtDark} strokeWidth={3} />
               <path d="M 0,4 L -34,-12 L -34,20 Z M 0,4 L 34,-12 L 34,20 Z" fill={C.tie} />
               <rect x={-8} y={-4} width={16} height={16} rx={4} fill="#c2410c" />

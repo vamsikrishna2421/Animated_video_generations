@@ -87,6 +87,9 @@ def main():
     fps, W, H, start, shots = float(z["fps"]), float(z["W"]), float(z["H"]), float(z["start"]), [int(s) for s in z["shots"]]
     F = len(img)
     o = to_rig3d(img, wld, shots)
+    # bending toward the camera (hands on knees) shortens the torso far more than mocap.py allows (0.85): let it read
+    tl = np.linalg.norm((img[:, 11, :2] + img[:, 12, :2]) / 2 - (img[:, 23, :2] + img[:, 24, :2]) / 2, axis=1)
+    o["spineS"] = smooth(np.clip(tl / (np.percentile(tl, 92) + 1e-6), 0.5, 1.0), 7)
     poses = poses3d(o)
     rnd = lambda v, d=1: round(float(v), d)  # noqa: E731
 
