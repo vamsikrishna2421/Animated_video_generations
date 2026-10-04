@@ -251,7 +251,11 @@ const ALL_SHOTS: Shot[] = [
   ...SHOTS.filter((s) => s.t >= 71.5 && s.t < 78.5),
   { t: 78.5, zoom: 0.98, cx: 540, cy: 1000, cut: true }, ...coverage(78.6, 82.2, 3, 140),
   { t: 82.2, zoom: 1.0, cx: 560, cy: 1000, cut: true }, { t: 82.35, zoom: 1.15, cx: 560, cy: 920, cut: true },
-].sort((x, y) => x.t - y.t);
+].sort((x, y) => x.t - y.t).map((s) => { // every cut lands on the nearest beat (within a quarter second)
+  if (!s.cut || s.t < 64.4) return s;
+  const b = BEATS.reduce((m, x) => (Math.abs(x - s.t) < Math.abs(m - s.t) ? x : m), BEATS[0]);
+  return Math.abs(b - s.t) < 0.25 ? { ...s, t: b } : s;
+}).sort((x, y) => x.t - y.t);
 const shotAt = (t: number) => {
   let i = 0;
   while (i < ALL_SHOTS.length - 1 && t >= ALL_SHOTS[i + 1].t) i++;
@@ -289,10 +293,17 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
   const t = raw >= 82.18 && raw < 82.36 ? 82.18 : Math.min(raw, T1 - 0.01); // a held beat before the final jump
   const flash = Math.max(0, 1 - Math.abs(raw - 82.38) / 0.12);
   const endIn = Math.max(0, Math.min(1, (raw - T1) / 0.25));
-  const shot = from === DROP && lf < 105 ? { zoom: 1.22, cx: 520, cy: 1000 } : shotAt(t);
+  const pos = positions(t);
+  const shot0 = from === DROP && lf < 105 ? { zoom: 1.22, cx: 520, cy: 1000 } : shotAt(t);
+  // while they dance, every shot keeps both full bodies in frame (the steps are the point); close-ups only in the acting intro
+  const fit = (s: { zoom: number; cx: number; cy: number }) => {
+    if (t < 64.5) return s;
+    const zoom = Math.min(s.zoom, 1.2), mid = (pos.h + pos.f) / 2, half = 960 / zoom;
+    return { zoom, cx: Math.max(mid - 40, Math.min(mid + 40, s.cx)), cy: Math.max(1730 - half, Math.min(720 + half, s.cy)) };
+  };
+  const shot = fit(shot0);
   const pulse = 1 + 0.014 * Math.exp(-sinceBeat(t) * 9);
   const z = shot.zoom * pulse;
-  const pos = positions(t);
   const hp0 = H_POSE(t), fp0 = F_POSE(t);
   const hp = { ...hp0, hipX: (hp0.hipX ?? 0) + lockH()(t) }, fp = { ...fp0, hipX: (fp0.hipX ?? 0) + lockF()(t) };
   const cam = `translate(540,960) scale(${z}) translate(${-shot.cx},${-shot.cy})`;
@@ -305,7 +316,7 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, filter: "sepia(0.1) saturate(1.08) drop-shadow(0 0 14px rgba(255,170,80,0.35))" }}>
         <g transform={cam}>
           {crowdOn(t) && (
-            <g style={{ filter: "brightness(0.16) saturate(0) blur(3.5px)" }} opacity={0.8}>
+            <g style={{ filter: "brightness(0.32) saturate(0.4) blur(2px)" }} opacity={0.7}>
               {CROWD.map((c, i) => {
                 const p = exaggerate(run(F_SEGS, t - (c.d * 2) / 30), 1.3);
                 return <g key={i} transform={`translate(${c.x},${c.y}) scale(${c.s})`}><Fumble f={f + i * 7} p={{ ...(c.m ? mirror(p) : p), ...GRIN }} braids /></g>;
@@ -318,16 +329,16 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
       </svg>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse 80% 60% at 50% 45%, transparent 55%, rgba(10,5,25,0.55))", pointerEvents: "none" }} />
       {raw >= 64.5 && raw < 71.5 && !(from === DROP && lf < 105) && (
-        <div style={{ position: "absolute", top: 230, right: 30, width: 300, height: 400, borderRadius: 22, background: "rgba(11,16,34,0.88)", border: "2px solid #22d3ee", overflow: "hidden", opacity: Math.min(1, (raw - 64.5) / 0.3, (71.5 - raw) / 0.3) }}>
-          <svg width={300} height={400}><g transform="translate(150,380) scale(0.33)"><Fumble f={f} p={fp} bonesOnly /></g></svg>
-          <div style={{ position: "absolute", top: 10, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 800, fontSize: 26, color: "#22d3ee", letterSpacing: 1 }}>AI POSE TRACKING</div>
+        <div style={{ position: "absolute", top: 200, right: 24, width: 380, height: 520, borderRadius: 24, background: "rgba(11,16,34,0.88)", border: "2px solid #22d3ee", overflow: "hidden", opacity: Math.min(1, (raw - 64.5) / 0.3, (71.5 - raw) / 0.3) }}>
+          <svg width={380} height={520}><g transform="translate(190,495) scale(0.43)"><Fumble f={f} p={fp} bonesOnly /></g></svg>
+          <div style={{ position: "absolute", top: 12, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 900, fontSize: 36, color: "#22d3ee", letterSpacing: 1 }}>AI POSE TRACKING</div>
         </div>
       )}
       {title && from === DROP && lf < 105 && (
         <div style={{ position: "absolute", left: 30, top: 330, width: 460, height: 720, borderRadius: 30, background: "rgba(11,16,34,0.92)", border: "3px solid #22d3ee", opacity: Math.min(1, lf / 4, (105 - lf) / 12) }}>
           <svg width={460} height={700}><g transform="translate(230,670) scale(0.58)"><Fumble f={f} p={fp} bonesOnly /></g></svg>
           <div style={{ position: "absolute", top: 18, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 900, fontSize: 32, color: "#22d3ee" }}>AI POSE TRACKING</div>
-          <div style={{ position: "absolute", bottom: 16, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 700, fontSize: 22, color: "#cbd5e1" }}>Google MediaPipe → cartoon rig</div>
+          <div style={{ position: "absolute", bottom: 16, left: 0, right: 0, textAlign: "center", fontFamily: "Inter", fontWeight: 800, fontSize: 30, color: "#cbd5e1" }}>Google MediaPipe → cartoon rig</div>
         </div>
       )}
       {title && from === DROP && lf < 105 && (
@@ -343,14 +354,14 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
       {raw < T1 && (
         <div style={{ position: "absolute", top: 70, left: 40, display: "flex", alignItems: "center", gap: 10, background: "rgba(11,16,34,0.8)", border: "2px solid rgba(34,211,238,0.6)", borderRadius: 18, padding: "8px 16px" }}>
           <div style={{ width: 12, height: 12, borderRadius: 6, background: "#f43f5e", opacity: f % 30 < 18 ? 1 : 0.3 }} />
-          <span style={{ fontFamily: "Inter", fontWeight: 800, fontSize: 34, color: "#fff" }}>AI motion capture</span>
+          <span style={{ fontFamily: "Inter", fontWeight: 800, fontSize: 42, color: "#fff" }}>AI motion capture</span>
         </div>
       )}
       <AbsoluteFill style={{ background: "#fff", opacity: flash * 0.8, pointerEvents: "none" }} />
       {raw >= T1 && (
         <AbsoluteFill style={{ background: `rgba(20,12,46,${0.85 * endIn})`, alignItems: "center", justifyContent: "center", textAlign: "center" }}>
           <div style={{ transform: `scale(${0.85 + 0.15 * endIn})`, opacity: endIn }}>
-            <div style={{ fontFamily: "Inter", fontWeight: 900, fontSize: 64, color: "#fff", lineHeight: 1.15 }}>Dance tracked by AI<br />from the film</div><div style={{ marginTop: 18, fontFamily: "Inter", fontWeight: 700, fontSize: 34, color: "#cbd5e1" }}>MediaPipe pose tracking + hand-polished keyframes</div>
+            <div style={{ fontFamily: "Inter", fontWeight: 900, fontSize: 64, color: "#fff", lineHeight: 1.15 }}>Dance tracked by AI<br />from the film</div><div style={{ marginTop: 18, fontFamily: "Inter", fontWeight: 800, fontSize: 44, color: "#cbd5e1" }}>MediaPipe pose tracking<br />+ hand-polished keyframes</div>
             <div style={{ marginTop: 40, display: "inline-block", fontFamily: "Inter", fontWeight: 900, fontSize: 48, color: "#fff", background: "#0095f6", padding: "16px 40px", borderRadius: 22 }}>Follow {handle}</div>
           </div>
         </AbsoluteFill>
