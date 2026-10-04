@@ -81,6 +81,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--clip", help="source video (phone detection + the side-by-side reference clip)")
+    ap.add_argument("--no-phone", action="store_true", help="skip phone detection (bright clothing fools it)")
     a = ap.parse_args()
     z = np.load(ROOT / "pipeline/raw" / f"{a.name}.npz")
     img, wld, hnd, hok = z["imgc"], z["wldc"], z["hndc"], z["hok"]
@@ -130,7 +131,7 @@ def main():
             return x
         hands[rig] = (smooth(medfilt(np.clip(bend, -80, 80), 3), 5), interp(curl), interp(palm), side, h)
     phone = {"L": np.zeros(F), "R": np.zeros(F)}
-    if a.clip:
+    if a.clip and not a.no_phone:
         for rig in ("L", "R"):
             phone[rig] = phone_in_hand(a.clip, start, fps, img, hands[rig][4], hands[rig][3], F)
         keep = max(phone, key=lambda k: phone[k].sum())  # one phone: the hand that shows the screen most holds it
