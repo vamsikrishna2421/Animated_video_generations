@@ -568,7 +568,7 @@ export const exaggerate = (p: FPose, k = 1.45): FPose => {
   const arm = (a: [number, number] | undefined, rest: [number, number]): [number, number] | undefined => {
     if (!a) return a;
     const up = rest[0] + (a[0] - rest[0]) * k, lo = rest[1] + (a[1] - rest[1]) * k;
-    return [Math.max(-185, Math.min(185, up)), Math.max(-160, Math.min(160, lo))];
+    return [Math.max(-172, Math.min(172, up)), Math.max(-160, Math.min(160, lo))]; // past vertical, raised arms would cross over the head
   };
   const sc = (v: number | undefined, m = k, lim = 999) => (v === undefined ? v : Math.max(-lim, Math.min(lim, v * m)));
   return {
@@ -613,7 +613,7 @@ export const follow = (pf: (t: number) => FPose, t: number, dt = 1 / 30, phys = 
     if (!cur || !p1 || !p2) return cur;
     const vel = cur[0] - p1[0]; // upper arm speed (deg/frame)
     // forearm: delayed by one frame relative to the upper arm, plus overshoot opposite to the upper arm's motion
-    const lo = 0.4 * p1[1] + 0.6 * cur[1] - vel * 0.35;
+    const lo = 0.4 * p1[1] + 0.6 * cur[1] - Math.max(-22, Math.min(22, vel * 0.35)); // capped: a fast raise must not fold the hand onto the face
     return [cur[0], Math.max(-170, Math.min(170, lo))];
   };
   const head = (x?: number, y?: number, z?: number) => (x === undefined ? x : 0.55 * x + 0.3 * (y ?? x) + 0.15 * (z ?? x));

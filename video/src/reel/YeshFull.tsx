@@ -96,10 +96,10 @@ const COY: Face = { smile: 0.6, skew: -0.3, lid: 0.25, lookX: 0.9, blush: 0.6, t
 // ---------- Mr. Fumble (male lead) ----------
 const lipM = (t: number) => (singer(t) === 2 ? 0 : Math.max(0, env(t) - 0.35) * 0.9); // light lip-sync on male lines
 const F_SEGS: Seg[] = [
-  [51.0, (t) => ({ ...idle(t * 30), turn: -0.45, lookX: -1, ...GRIN, armL: [78, 40], handL: "open", armR: [-18, -24], bend: -6, lean: -3, mo: lipM(t) })],
-  [51.8, (t) => ({ ...idle(t * 30), turn: -0.3, armL: [78, 40], armR: [-18, -24], bend: -5, ...LAUGH(t) })],
-  [52.5, (t) => ({ ...idle(t * 30), turn: -0.2, armL: [70, 36], armR: [-24, 168], handR: "fist", ...WHISTLE, tilt: 4 })],
-  [53.15, (t) => ({ ...idle(t * 30), turn: -0.4, lookX: -1, armL: [72, 40], armR: [-22, -26], ...SMUG, browL: 0.5 * Math.max(0, Math.sin(t * 22)), bend: -4 })],
+  [51.0, (t) => ({ ...idle(t * 30), turn: -0.45, lookX: -1, ...GRIN, armL: [34, -100], handL: "fist", armR: [-18, -24], bend: -6, lean: -3, mo: lipM(t) })],
+  [51.8, (t) => ({ ...idle(t * 30), turn: -0.3, armL: [34, -100], handL: "fist", armR: [-18, -24], bend: -5, ...LAUGH(t) })],
+  [52.5, (t) => ({ ...idle(t * 30), turn: -0.2, armL: [32, -96], handL: "fist", armR: [-24, 168], handR: "fist", ...WHISTLE, tilt: 4 })],
+  [53.15, (t) => ({ ...idle(t * 30), turn: -0.4, lookX: -1, armL: [34, -100], handL: "fist", armR: [-22, -26], ...SMUG, browL: 0.5 * Math.max(0, Math.sin(t * 22)), bend: -4 })],
   [54.4, (t) => ({ ...crouch(14 + 10 * bounce(t)), armL: [30 + 18 * sw(t), -40], armR: [-30 + 18 * sw(t), 40], handL: "fist", handR: "fist", hipTilt: 5 * sw(t), twist: 0.3 * sw(t), tilt: 4 * sw(t), ...GRIN, mo: lipM(t) })],
   [56.0, (t) => ({ ...crouch(8), armL: [22, -112], armR: [-22, 112], handL: "open", handR: "open", lookY: 1, lookX: 0.2, tilt: 10, ...SMUG, lid: 0.4, bend: 3 * sw(t) })],
   [57.25, (t) => ({ ...idle(t * 30), turn: -0.5, lookX: -1, armL: [12, 16], armR: [-30, -110], handR: "fist", browL: Math.sin(t * 26), browR: -Math.sin(t * 26), smile: 0.8, skew: 0.5 })],
@@ -133,7 +133,7 @@ const F_SEGS: Seg[] = [
   }],
   [82.35, (t) => {
     const j = Math.sin(Math.min(1, (t - 82.35) / 0.4) * Math.PI);
-    return { hipY: -70 * j, still: true, legL: [30 * j, -60 * j], legR: [-30 * j, 60 * j], armL: [165, 10], armR: [-165, -10], handL: "open", handR: "open", ...LAUGH(t), tilt: -10, shrug: 0.5 };
+    return { hipY: -70 * j, still: true, legL: [30 * j, -60 * j], legR: [-30 * j, 60 * j], armL: [112, 8], armR: [-112, -8], handL: "open", handR: "open", ...LAUGH(t), tilt: -10, shrug: 0.5 };
   }],
 ];
 
@@ -277,8 +277,9 @@ const F_POSE = (t: number) => exaggerate(follow((x) => run(F_SEGS, x), t, 1 / 30
 const CUTS = SHOTS.filter((s) => s.cut).map((s) => s.t);
 let _lf: ((t: number) => number) | null = null, _lh: ((t: number) => number) | null = null;
 const legsF = (t: number) => run(F_SEGS, t), legsH = (t: number) => run(H_SEGS, t); // legs only: no need for the physics pass
-const lockF = () => (_lf ??= footLock(legsF, T0, T1, { cuts: CUTS }));
-const lockH = () => (_lh ??= footLock(legsH, T0, T1, { hero: true, cuts: CUTS }));
+const CAPTURED: [number, number][] = [[HOOK_END, 74.5], [78.5, 82.35]]; // the motion-captured stretches
+const lockF = () => (_lf ??= footLock(legsF, T0, T1, { cuts: CUTS, active: CAPTURED }));
+const lockH = () => (_lh ??= footLock(legsH, T0, T1, { hero: true, cuts: CUTS, active: CAPTURED }));
 const crowdOn = (t: number) => (t >= 64.5 && t < 74.5) || t >= 78.5;
 
 export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: number }> = ({ title = true, handle = "@ai_maastaaru_telugu", from = T0 }) => {

@@ -72,8 +72,9 @@ const foot = (p: FPose, side: -1 | 1, hero: boolean): [number, number] => {
  * the body over the planted foot. The offset drifts back to centre slowly (so the dancer never wanders off the mark)
  * and resets on camera cuts.
  */
-export const footLock = (pose: (t: number) => FPose, t0: number, t1: number, opts: { hero?: boolean; cuts?: number[]; decay?: number; limit?: number } = {}) => {
-  const { hero = false, cuts = [], decay = 0.97, limit = 70 } = opts;
+export const footLock = (pose: (t: number) => FPose, t0: number, t1: number, opts: { hero?: boolean; cuts?: number[]; decay?: number; limit?: number; active?: [number, number][] } = {}) => {
+  const { hero = false, cuts = [], decay = 0.97, limit = 70, active } = opts;
+  const on = (t: number) => !active || active.some(([a, b]) => t >= a && t < b); // only where captured legs skate; staged poses keep their marks
   const fps = 30, n = Math.ceil((t1 - t0) * fps) + 1;
   const out = new Float32Array(n);
   let corr = 0, stance: -1 | 1 = -1, prev: [number, number] | null = null, prevStance: -1 | 1 = -1;
@@ -84,7 +85,7 @@ export const footLock = (pose: (t: number) => FPose, t0: number, t1: number, opt
     if (Math.abs(L[1] - Rt[1]) > 10) stance = L[1] > Rt[1] ? -1 : 1; // larger y = lower on screen = on the floor
     const cur = stance < 0 ? L : Rt;
     const step = prev ? cur[0] - prev[0] : 0;
-    if (cutFrames.has(i)) corr = 0;
+    if (cutFrames.has(i) || !on(t0 + i / fps)) corr = 0;
     else if (prev && stance === prevStance && Math.abs(step) < 22) corr -= step; // bigger jumps are capture cuts, not steps
     corr = Math.max(-limit, Math.min(limit, corr * decay));
     out[i] = corr;
