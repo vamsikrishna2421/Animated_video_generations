@@ -1,219 +1,219 @@
 {
- "id": "exp-jev-vs-clef",
- "date": "OCT 2026",
- "range": "SYSTEM 1 SHOWDOWN",
- "edition": "AI EXPLAINED",
- "kicker": "AI SHOWDOWN",
- "title": "JEV vs CLEF",
- "recap": "JEV vs CLEF-FLASH",
- "hook": {
-  "lines": [
-   [
-    "One is ",
-    "cheaper",
-    "."
-   ],
-   [
-    "One is ",
-    "open",
-    "."
-   ]
+  "id": "exp-jev-vs-clef",
+  "date": "OCT 2026",
+  "range": "SYSTEM 1 SHOWDOWN",
+  "edition": "AI EXPLAINED",
+  "kicker": "AI SHOWDOWN",
+  "title": "JEV vs CLEF",
+  "recap": "JEV vs CLEF-FLASH",
+  "hook": {
+    "lines": [
+      [
+        "One is ",
+        "cheaper",
+        "."
+      ],
+      [
+        "One is ",
+        "open",
+        "."
+      ]
+    ],
+    "text": "Two System 1 models. One is cheaper. One is open. Neither wins everything. Here's Jev versus Clef-flash.",
+    "tts": "Two System One models. One is cheaper. One is open. Neither wins everything. Here is Jevv, versus Clef-flash.",
+    "tts_te": "రెండు సిస్టమ్ వన్ మోడల్స్. ఒకటి చౌక. ఇంకొకటి ఓపెన్. ఏదీ అన్నింట్లో గెలవదు. ఇదిగో, జెవ్ వర్సెస్ క్లెఫ్ ఫ్లాష్."
+  },
+  "stories": [
+    {
+      "org": "MEET THEM",
+      "accent": "#38BDF8",
+      "tag": "THE CONTENDERS",
+      "headline": [
+        "Closed vs",
+        "open"
+      ],
+      "text": "Jev is TypeSafe's closed model. You can only use it through their service, and it reads text only. Clef-flash is Cloudflare's open model. Anyone can download it, and it can also read images. Both answer the same kind of questions the same way.",
+      "tts": "Jevv is Typesafe's closed model. You can only use it through their service, and it reads text only. Clef-flash is Cloud flare's open model. Anyone can download it, and it can also read images. Both answer the same kind of questions, the same way.",
+      "tts_te": "జెవ్, టైప్ సేఫ్ వారి క్లోజ్డ్ మోడల్. వారి సర్వీస్ ద్వారానే వాడాలి, టెక్స్ట్ మాత్రమే చదువుతుంది. క్లెఫ్ ఫ్లాష్, క్లౌడ్ ఫ్లేర్ వారి ఓపెన్ మోడల్. ఎవరైనా డౌన్ లోడ్ చేసుకోవచ్చు, ఇమేజెస్ కూడా చదవగలదు. రెండూ ఒకే రకమైన ప్రశ్నలకు, ఒకే పద్ధతిలో సమాధానం ఇస్తాయి.",
+      "cards": [
+        {
+          "k": "JEV",
+          "v": "closed · text only",
+          "cue": "closed"
+        },
+        {
+          "k": "CLEF-FLASH",
+          "v": "open · free download · reads images",
+          "cue": "open"
+        },
+        {
+          "k": "BOTH",
+          "v": "same question format",
+          "cue": "Both"
+        }
+      ],
+      "sources": "TypeSafe docs · Cloudflare blog · Hugging Face"
+    },
+    {
+      "org": "PRICE",
+      "accent": "#22C55E",
+      "tag": "ROUND 1",
+      "headline": [
+        "Jev is",
+        "cheaper"
+      ],
+      "text": "Say you sort 10,000 emails. On Jev that costs about 13 cents. On Clef-flash, about 27 cents. Jev only answers with a label, so it charges nothing for the answer. Clef-flash is free to download, but then you pay for your own GPU.",
+      "tts": "Say you sort ten thousand emails. On Jevv, that costs about thirteen cents. On Clef-flash, about twenty seven cents. Jevv only answers with a label, so it charges nothing for the answer. Clef-flash is free to download, but then you pay for your own G.P.U.",
+      "tts_te": "మీరు పది వేల ఈమెయిల్స్ సార్ట్ చేస్తున్నారు అనుకోండి. జెవ్ లో దాదాపు పదమూడు సెంట్స్ అవుతుంది. క్లెఫ్ ఫ్లాష్ లో దాదాపు ఇరవై ఏడు సెంట్స్. జెవ్ సమాధానంగా ఒక లేబుల్ మాత్రమే ఇస్తుంది, అందుకే సమాధానానికి డబ్బులు తీసుకోదు. క్లెఫ్ ఫ్లాష్ ఫ్రీగా డౌన్ లోడ్ చేసుకోవచ్చు, కానీ అప్పుడు మీ సొంత జి పి యు ఖర్చు మీదే.",
+      "cards": [
+        {
+          "k": "",
+          "v": "",
+          "cue": "Jev"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "27"
+        }
+      ],
+      "sources": "TypeSafe models page · Cloudflare Workers AI pricing · our math: 300 tokens per email",
+      "demo": {
+        "type": "bars",
+        "title": "SORTING 10,000 EMAILS · LIST PRICE",
+        "rows": [
+          {
+            "label": "Jev",
+            "value": 0.126,
+            "show": "~13¢",
+            "hi": true
+          },
+          {
+            "label": "Clef-flash (Cloudflare)",
+            "value": 0.27,
+            "show": "~27¢"
+          }
+        ],
+        "note": "ASSUMES ~300 TOKENS PER EMAIL · OCT 2026 PRICES"
+      }
+    },
+    {
+      "org": "SPEED",
+      "accent": "#F59E0B",
+      "tag": "ROUND 2",
+      "headline": [
+        "Speed: too",
+        "close to call"
+      ],
+      "text": "Cloudflare says Clef-flash answers in 39 milliseconds and Jev in 524. But Cloudflare tested Jev over the internet and its own model on its own servers. An independent test put Clef-flash at about 200 milliseconds, and TypeSafe says Jev takes 70 to 500. Both are fast.",
+      "tts": "Cloud flare says Clef-flash answers in thirty nine milli seconds, and Jevv in five twenty four. But Cloud flare tested Jevv over the internet, and its own model on its own servers. An independent test put Clef-flash at about two hundred milli seconds. And Typesafe says Jevv takes seventy to five hundred. Both are fast.",
+      "tts_te": "క్లౌడ్ ఫ్లేర్ ప్రకారం క్లెఫ్ ఫ్లాష్ ముప్పై తొమ్మిది మిల్లీ సెకన్లు, జెవ్ ఐదు వందల ఇరవై నాలుగు. కానీ జెవ్ ని ఇంటర్నెట్ మీదుగా, తమ మోడల్ ని తమ సొంత సర్వర్ల మీద టెస్ట్ చేశారు. ఒక ఇండిపెండెంట్ టెస్ట్ లో క్లెఫ్ ఫ్లాష్ కి దాదాపు రెండు వందల మిల్లీ సెకన్లు వచ్చింది. జెవ్ కి డెబ్బై నుండి ఐదు వందలు అని టైప్ సేఫ్ చెబుతోంది. రెండూ వేగమే.",
+      "cards": [
+        {
+          "k": "CLOUDFLARE'S TEST",
+          "v": "39 ms vs 524 ms (not fair)",
+          "cue": "524."
+        },
+        {
+          "k": "CLEF-FLASH, INDEPENDENT",
+          "v": "~200 ms",
+          "cue": "independent"
+        },
+        {
+          "k": "JEV, TYPESAFE'S CLAIM",
+          "v": "70–500 ms",
+          "cue": "500."
+        }
+      ],
+      "sources": "Cloudflare blog · flaviocopes.com (independent)"
+    },
+    {
+      "org": "ACCURACY",
+      "accent": "#8B5CF6",
+      "tag": "ROUND 3",
+      "headline": [
+        "Split",
+        "decision"
+      ],
+      "text": "On Cloudflare's 41 tests, Clef-flash won 24, Jev won 16, and one was a tie. But Jev won the hardest reasoning tests, like graduate-level science. And every one of these results comes from Cloudflare itself.",
+      "tts": "On Cloud flare's forty one tests, Clef-flash won twenty four, Jevv won sixteen, and one was a tie. But Jevv won the hardest reasoning tests, like graduate level science. And every one of these results comes from Cloud flare itself.",
+      "tts_te": "క్లౌడ్ ఫ్లేర్ నలభై ఒక్క టెస్ట్ లలో, క్లెఫ్ ఫ్లాష్ ఇరవై నాలుగు, జెవ్ పదహారు గెలిచాయి, ఒకటి టై. కానీ అన్నింటికంటే కష్టమైన రీజనింగ్ టెస్ట్ లు, గ్రాడ్యుయేట్ స్థాయి సైన్స్ లాంటివి, జెవ్ గెలిచింది. ఈ ఫలితాలన్నీ క్లౌడ్ ఫ్లేర్ సొంతంగా చేసినవే.",
+      "cards": [
+        {
+          "k": "",
+          "v": "",
+          "cue": "24,"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "16,"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "tie."
+        }
+      ],
+      "sources": "Cloudflare Clef-flash model card (vendor-run)",
+      "demo": {
+        "type": "bars",
+        "title": "TESTS WON (OF 41) · CLOUDFLARE'S RUN",
+        "rows": [
+          {
+            "label": "Clef-flash",
+            "value": 24,
+            "show": "24",
+            "hi": true
+          },
+          {
+            "label": "Jev",
+            "value": 16,
+            "show": "16 · incl. hardest"
+          },
+          {
+            "label": "Tie",
+            "value": 1,
+            "show": "1"
+          }
+        ],
+        "note": "VENDOR-RUN · NOT REPRODUCED"
+      }
+    },
+    {
+      "org": "VERDICT",
+      "accent": "#F43F5E",
+      "tag": "WHICH ONE?",
+      "headline": [
+        "Pick by",
+        "your need"
+      ],
+      "text": "So which one? Clef-flash if you want it free to download, need images, or must keep data on your own servers. Jev for the lowest price and harder judgment calls. Working in Telugu? Test both first. Neither publishes Telugu scores.",
+      "tts": "So which one? Clef-flash, if you want it free to download, need images, or must keep data on your own servers. Jevv, for the lowest price, and harder judgment calls. Working in Telugu? Test both first. Neither publishes Telugu scores.",
+      "tts_te": "మరి ఏది ఎంచుకోవాలి? ఫ్రీ డౌన్ లోడ్, ఇమేజెస్, లేదా డేటా మీ సొంత సర్వర్లలోనే ఉండాలంటే క్లెఫ్ ఫ్లాష్. తక్కువ ధర, కష్టమైన నిర్ణయాలు కావాలంటే జెవ్. తెలుగు లో వాడాలా? ముందు రెండింటినీ టెస్ట్ చేయండి. రెండూ తెలుగు స్కోర్లు ప్రకటించలేదు.",
+      "cards": [
+        {
+          "k": "PICK CLEF-FLASH",
+          "v": "free download · images · own servers",
+          "cue": "free"
+        },
+        {
+          "k": "PICK JEV",
+          "v": "lowest price · harder calls",
+          "cue": "lowest"
+        },
+        {
+          "k": "TELUGU?",
+          "v": "test both first",
+          "cue": "Telugu?"
+        }
+      ],
+      "sources": "TypeSafe docs · Cloudflare model page"
+    }
   ],
-  "text": "Two System 1 models. One is cheaper. One is open. Neither wins everything. Here's Jev versus Clef-flash.",
-  "tts": "Two System One models. One is cheaper. One is open. Neither wins everything. Here is Jevv, versus Clef-flash.",
-  "tts_te": "రెండు సిస్టమ్ వన్ మోడల్స్. ఒకటి చౌక. ఇంకొకటి ఓపెన్. ఏదీ అన్నింట్లో గెలవదు. ఇదిగో, జెవ్ వర్సెస్ క్లెఫ్ ఫ్లాష్."
- },
- "stories": [
-  {
-   "org": "MEET THEM",
-   "accent": "#38BDF8",
-   "tag": "THE CONTENDERS",
-   "headline": [
-    "Closed vs",
-    "open"
-   ],
-   "text": "Jev is TypeSafe's closed model. You can only use it through their service, and it reads text only. Clef-flash is Cloudflare's open model. Anyone can download it, and it can also read images. Both answer the same kind of questions the same way.",
-   "tts": "Jevv is Type Safe's closed model. You can only use it through their service, and it reads text only. Clef-flash is Cloud flare's open model. Anyone can download it, and it can also read images. Both answer the same kind of questions, the same way.",
-   "tts_te": "జెవ్, టైప్ సేఫ్ వారి క్లోజ్డ్ మోడల్. వారి సర్వీస్ ద్వారానే వాడాలి, టెక్స్ట్ మాత్రమే చదువుతుంది. క్లెఫ్ ఫ్లాష్, క్లౌడ్ ఫ్లేర్ వారి ఓపెన్ మోడల్. ఎవరైనా డౌన్ లోడ్ చేసుకోవచ్చు, ఇమేజెస్ కూడా చదవగలదు. రెండూ ఒకే రకమైన ప్రశ్నలకు, ఒకే పద్ధతిలో సమాధానం ఇస్తాయి.",
-   "cards": [
-    {
-     "k": "JEV",
-     "v": "closed · text only",
-     "cue": "closed"
-    },
-    {
-     "k": "CLEF-FLASH",
-     "v": "open · free download · reads images",
-     "cue": "open"
-    },
-    {
-     "k": "BOTH",
-     "v": "same question format",
-     "cue": "Both"
-    }
-   ],
-   "sources": "TypeSafe docs · Cloudflare blog · Hugging Face"
-  },
-  {
-   "org": "PRICE",
-   "accent": "#22C55E",
-   "tag": "ROUND 1",
-   "headline": [
-    "Jev is",
-    "cheaper"
-   ],
-   "text": "Say you sort 10,000 emails. On Jev that costs about 13 cents. On Clef-flash, about 27 cents. Jev only answers with a label, so it charges nothing for the answer. Clef-flash is free to download, but then you pay for your own GPU.",
-   "tts": "Say you sort ten thousand emails. On Jevv, that costs about thirteen cents. On Clef-flash, about twenty seven cents. Jevv only answers with a label, so it charges nothing for the answer. Clef-flash is free to download, but then you pay for your own G.P.U.",
-   "tts_te": "మీరు పది వేల ఈమెయిల్స్ సార్ట్ చేస్తున్నారు అనుకోండి. జెవ్ లో దాదాపు పదమూడు సెంట్స్ అవుతుంది. క్లెఫ్ ఫ్లాష్ లో దాదాపు ఇరవై ఏడు సెంట్స్. జెవ్ సమాధానంగా ఒక లేబుల్ మాత్రమే ఇస్తుంది, అందుకే సమాధానానికి డబ్బులు తీసుకోదు. క్లెఫ్ ఫ్లాష్ ఫ్రీగా డౌన్ లోడ్ చేసుకోవచ్చు, కానీ అప్పుడు మీ సొంత జి పి యు ఖర్చు మీదే.",
-   "cards": [
-    {
-     "k": "",
-     "v": "",
-     "cue": "Jev"
-    },
-    {
-     "k": "",
-     "v": "",
-     "cue": "27"
-    }
-   ],
-   "sources": "TypeSafe models page · Cloudflare Workers AI pricing · our math: 300 tokens per email",
-   "demo": {
-    "type": "bars",
-    "title": "SORTING 10,000 EMAILS · LIST PRICE",
-    "rows": [
-     {
-      "label": "Jev",
-      "value": 0.126,
-      "show": "~13¢",
-      "hi": true
-     },
-     {
-      "label": "Clef-flash (Cloudflare)",
-      "value": 0.27,
-      "show": "~27¢"
-     }
-    ],
-    "note": "ASSUMES ~300 TOKENS PER EMAIL · OCT 2026 PRICES"
-   }
-  },
-  {
-   "org": "SPEED",
-   "accent": "#F59E0B",
-   "tag": "ROUND 2",
-   "headline": [
-    "Speed: too",
-    "close to call"
-   ],
-   "text": "Cloudflare says Clef-flash answers in 39 milliseconds and Jev in 524. But Cloudflare tested Jev over the internet and its own model on its own servers. An independent test put Clef-flash at about 200 milliseconds, and TypeSafe says Jev takes 70 to 500. Both are fast.",
-   "tts": "Cloud flare says Clef-flash answers in thirty nine milliseconds, and Jevv in five twenty four. But Cloud flare tested Jevv over the internet, and its own model on its own servers. An independent test put Clef-flash at about two hundred milliseconds. And Type Safe says Jevv takes seventy to five hundred. Both are fast.",
-   "tts_te": "క్లౌడ్ ఫ్లేర్ ప్రకారం క్లెఫ్ ఫ్లాష్ ముప్పై తొమ్మిది మిల్లీ సెకన్లు, జెవ్ ఐదు వందల ఇరవై నాలుగు. కానీ జెవ్ ని ఇంటర్నెట్ మీదుగా, తమ మోడల్ ని తమ సొంత సర్వర్ల మీద టెస్ట్ చేశారు. ఒక ఇండిపెండెంట్ టెస్ట్ లో క్లెఫ్ ఫ్లాష్ కి దాదాపు రెండు వందల మిల్లీ సెకన్లు వచ్చింది. జెవ్ కి డెబ్బై నుండి ఐదు వందలు అని టైప్ సేఫ్ చెబుతోంది. రెండూ వేగమే.",
-   "cards": [
-    {
-     "k": "CLOUDFLARE'S TEST",
-     "v": "39 ms vs 524 ms (not fair)",
-     "cue": "524."
-    },
-    {
-     "k": "CLEF-FLASH, INDEPENDENT",
-     "v": "~200 ms",
-     "cue": "independent"
-    },
-    {
-     "k": "JEV, TYPESAFE'S CLAIM",
-     "v": "70–500 ms",
-     "cue": "500."
-    }
-   ],
-   "sources": "Cloudflare blog · flaviocopes.com (independent)"
-  },
-  {
-   "org": "ACCURACY",
-   "accent": "#8B5CF6",
-   "tag": "ROUND 3",
-   "headline": [
-    "Split",
-    "decision"
-   ],
-   "text": "On Cloudflare's 41 tests, Clef-flash won 24, Jev won 16, and one was a tie. But Jev won the hardest reasoning tests, like graduate-level science. And every one of these results comes from Cloudflare itself.",
-   "tts": "On Cloud flare's forty one tests, Clef-flash won twenty four, Jevv won sixteen, and one was a tie. But Jevv won the hardest reasoning tests, like graduate level science. And every one of these results comes from Cloud flare itself.",
-   "tts_te": "క్లౌడ్ ఫ్లేర్ నలభై ఒక్క టెస్ట్ లలో, క్లెఫ్ ఫ్లాష్ ఇరవై నాలుగు, జెవ్ పదహారు గెలిచాయి, ఒకటి టై. కానీ అన్నింటికంటే కష్టమైన రీజనింగ్ టెస్ట్ లు, గ్రాడ్యుయేట్ స్థాయి సైన్స్ లాంటివి, జెవ్ గెలిచింది. ఈ ఫలితాలన్నీ క్లౌడ్ ఫ్లేర్ సొంతంగా చేసినవే.",
-   "cards": [
-    {
-     "k": "",
-     "v": "",
-     "cue": "24,"
-    },
-    {
-     "k": "",
-     "v": "",
-     "cue": "16,"
-    },
-    {
-     "k": "",
-     "v": "",
-     "cue": "tie."
-    }
-   ],
-   "sources": "Cloudflare Clef-flash model card (vendor-run)",
-   "demo": {
-    "type": "bars",
-    "title": "TESTS WON (OF 41) · CLOUDFLARE'S RUN",
-    "rows": [
-     {
-      "label": "Clef-flash",
-      "value": 24,
-      "show": "24",
-      "hi": true
-     },
-     {
-      "label": "Jev",
-      "value": 16,
-      "show": "16 · incl. hardest"
-     },
-     {
-      "label": "Tie",
-      "value": 1,
-      "show": "1"
-     }
-    ],
-    "note": "VENDOR-RUN · NOT REPRODUCED"
-   }
-  },
-  {
-   "org": "VERDICT",
-   "accent": "#F43F5E",
-   "tag": "WHICH ONE?",
-   "headline": [
-    "Pick by",
-    "your need"
-   ],
-   "text": "So which one? Clef-flash if you want it free to download, need images, or must keep data on your own servers. Jev for the lowest price and harder judgment calls. Working in Telugu? Test both first. Neither publishes Telugu scores.",
-   "tts": "So which one? Clef-flash, if you want it free to download, need images, or must keep data on your own servers. Jevv, for the lowest price, and harder judgment calls. Working in Telugu? Test both first. Neither publishes Telugu scores.",
-   "tts_te": "మరి ఏది ఎంచుకోవాలి? ఫ్రీ డౌన్ లోడ్, ఇమేజెస్, లేదా డేటా మీ సొంత సర్వర్లలోనే ఉండాలంటే క్లెఫ్ ఫ్లాష్. తక్కువ ధర, కష్టమైన నిర్ణయాలు కావాలంటే జెవ్. తెలుగు లో వాడాలా? ముందు రెండింటినీ టెస్ట్ చేయండి. రెండూ తెలుగు స్కోర్లు ప్రకటించలేదు.",
-   "cards": [
-    {
-     "k": "PICK CLEF-FLASH",
-     "v": "free download · images · own servers",
-     "cue": "free"
-    },
-    {
-     "k": "PICK JEV",
-     "v": "lowest price · harder calls",
-     "cue": "lowest"
-    },
-    {
-     "k": "TELUGU?",
-     "v": "test both first",
-     "cue": "Telugu?"
-    }
-   ],
-   "sources": "TypeSafe docs · Cloudflare model page"
+  "outro": {
+    "text": "Next: the most popular ways people use Jev. Follow so you don't miss it.",
+    "tts": "Next: the most popular ways people use Jevv. Follow, so you don't miss it.",
+    "tts_te": "తర్వాతి వీడియో: జెవ్ ని జనం ఎక్కువగా ఎలా వాడుతున్నారు. మిస్ అవ్వకుండా ఫాలో అవ్వండి."
   }
- ],
- "outro": {
-  "text": "Next: the most popular ways people use Jev. Follow so you don't miss it.",
-  "tts": "Next: the most popular ways people use Jevv. Follow, so you don't miss it.",
-  "tts_te": "తర్వాతి వీడియో: జెవ్ ని జనం ఎక్కువగా ఎలా వాడుతున్నారు. మిస్ అవ్వకుండా ఫాలో అవ్వండి."
- }
 }
