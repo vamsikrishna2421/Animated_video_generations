@@ -82,7 +82,7 @@ export const HookTutorial: React.FC = () => {
   else if (f < TUT.full2 - 20) { t = HOOK_START + ((f - TUT.slow) / 30) * SLOW; label = "SLOW · 0.5×"; slow = true; }
   else if (f < TUT.full2) { t = HOOK_END; label = "your turn"; }
   else { t = Math.min(HOOK_END, HOOK_START + (f - TUT.full2) / 30); label = "FULL SPEED"; }
-  const p = exaggerate(follow((x) => hook(x), t, slow ? 1 / 60 : 1 / 30), 1.45);
+  const p = exaggerate(follow((x) => hook(x), t, slow ? 1 / 60 : 1 / 30, true), 1.45);
   const count = COUNTS.filter(([c]) => t >= c - 0.03).pop();
   const countAge = count ? t - count[0] : 9;
   const cue = CUES.filter(([c]) => t >= c).pop();

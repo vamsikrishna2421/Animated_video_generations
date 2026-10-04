@@ -38,6 +38,7 @@ export type FPose = {
   armLs?: [number, number]; armRs?: [number, number]; legLs?: [number, number]; legRs?: [number, number]; spineS?: number; // 3D foreshortening: projected/true length per segment
   armLBack?: boolean; armRBack?: boolean; legLFront?: boolean; // depth order from 3D: arm behind the torso, which leg is nearer
   swayX?: number; // body sideways velocity for hair/cloth follow-through
+  hairA?: number; hairB?: number; skirtS?: number; earS?: number; // simulated secondary motion: braid root / tip swing (deg), skirt hem swing (px), earring swing (deg)
   blush?: number; sweat?: number; still?: boolean; // still: no built-in breathing bob (walk cycles drive the hips)
 };
 export type FReveal = Partial<Record<"shoes" | "legs" | "torso" | "vest" | "tie" | "armL" | "armR" | "head" | "ears" | "hair" | "eyes" | "brows" | "nose" | "mouth", number>>;
@@ -366,7 +367,7 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
           const knee = (h: [number, number], a: [number, number]) => pt(h[0], h[1], a[0], 200);
           const ank = (h: [number, number], a: [number, number]) => { const k = knee(h, a); return pt(k[0], k[1], a[0] + a[1], 195); };
           const kL = knee(hipL, legL), kR = knee(hipR, legR), aL = ank(hipL, legL), aR = ank(hipR, legR);
-          const hemY = Math.max(aL[1], aR[1]) - 34, sway = 10 * Math.sin(f / 9);
+          const hemY = Math.max(aL[1], aR[1]) - 34, sway = p.skirtS !== undefined ? p.skirtS + 4 * Math.sin(f / 9) : 10 * Math.sin(f / 9);
           const xl = Math.min(kL[0], aL[0], hipL[0]) - 70 + sway, xr = Math.max(kR[0], aR[0], hipR[0]) + 70 + sway;
           const wl: [number, number] = [-72 * Math.cos(ht), -72 * Math.sin(ht) - 6], wr: [number, number] = [72 * Math.cos(ht), 72 * Math.sin(ht) - 6];
           const d = `M ${wl[0]},${wl[1]} Q ${xl + 10},${hemY * 0.5} ${xl},${hemY} Q ${(xl + xr) / 2},${hemY + 22} ${xr},${hemY} Q ${xr - 10},${hemY * 0.5} ${wr[0]},${wr[1]} Z`;
@@ -445,8 +446,10 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
                 const world = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35 + (p.lean ?? 0)); // gravity: hang straight down on screen
                 return [-1, 1].map((sd) => {
                   const sway = 4 * Math.sin(f / 9 + sd) - Math.max(-25, Math.min(25, (p.swayX ?? 0) * 2.5));
+                  const phys = p.hairA !== undefined; // simulated two-mass swing: root follows hairA, tip hairB
                   const segs = Array.from({ length: 13 }, (_, i) => {
-                    const a = ((world + sway * (i / 12) + sd * 4) * Math.PI) / 180;
+                    const u = i / 12, swing = phys ? (p.hairA ?? 0) * Math.min(1, u * 2) + ((p.hairB ?? 0) - (p.hairA ?? 0)) * Math.max(0, u * 2 - 1) + 2 * Math.sin(f / 9 + sd) * u : sway * u;
+                    const a = ((world + swing + sd * 4) * Math.PI) / 180;
                     return [sd * (96 + i * 1.2) - Math.sin(a) * 26 * i, -170 + 26 * i * Math.cos(a)] as [number, number];
                   });
                   return (
@@ -469,9 +472,10 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
               {hero && (() => {
                 // centre-parted hair framing the face, jasmine, jhumkas; the braid comes forward over her left shoulder
                 const sw = 4 * Math.sin(f / 11) - Math.max(-20, Math.min(20, (p.swayX ?? 0) * 2)), hang = -((p.tilt ?? 0) + (p.bend ?? 0) * 0.35) * 0.8;
-                const NB = 15, braid = Array.from({ length: NB }, (_, i) => { const a = ((hang + sw * (i / (NB - 1))) * Math.PI) / 180; return [-94 - 3 * i - Math.sin(a) * 30 * i, -64 + 33 * i * Math.cos(a)] as [number, number]; });
+                const phys = p.hairA !== undefined;
+                const NB = 15, braid = Array.from({ length: NB }, (_, i) => { const u = i / (NB - 1); const swing = phys ? (p.hairA ?? 0) * Math.min(1, u * 2) + ((p.hairB ?? 0) - (p.hairA ?? 0)) * Math.max(0, u * 2 - 1) + 2 * Math.sin(f / 11) * u : sw * u; const a = ((hang + swing) * Math.PI) / 180; return [-94 - 3 * i - Math.sin(a) * 30 * i, -64 + 33 * i * Math.cos(a)] as [number, number]; });
                 const jh = (x: number) => (
-                  <g transform={`translate(${x},-88) rotate(${sw * 2 + hang})`}>
+                  <g transform={`translate(${x},-88) rotate(${(p.earS !== undefined ? p.earS + 3 * Math.sin(f / 7) : sw * 2) + hang})`}>
                     <circle cx={0} cy={0} r={6} fill={C.argyle} /><line x1={0} y1={0} x2={0} y2={16} stroke={C.argyle} strokeWidth={3} />
                     <path d="M -14,32 Q 0,6 14,32 Z" fill={C.argyle} />{[-10, 0, 10].map((d) => <circle key={d} cx={d} cy={36} r={4} fill="#fff" />)}
                   </g>
@@ -577,7 +581,33 @@ export const exaggerate = (p: FPose, k = 1.45): FPose => {
 /** Overlapping action + follow-through for any pose function of time (pure: samples the past, no state, so it
  * renders identically in parallel). Forearms trail the upper arms by ~1 frame, hands/wrists by ~2, the head by
  * ~2, and each trailing part overshoots in the direction it was moving (spring-like settle). */
-export const follow = (pf: (t: number) => FPose, t: number, dt = 1 / 30): FPose => {
+/**
+ * Secondary motion as damped springs driven by the body's own movement over the last ~1.2 s: the braid is a
+ * two-mass pendulum (root swings with the head's sideways acceleration, the tip lags the root), the skirt hem
+ * swings with the pelvis, earrings jiggle fast with the head. Stateless: re-simulated from history every frame.
+ */
+const secondary = (pf: (t: number) => FPose, t: number, n = 36, dt = 1 / 30) => {
+  const R = Math.PI / 180;
+  const headX = (q: FPose) => (q.hipX ?? 0) + 300 * Math.sin(((q.lean ?? 0) + 0.5 * (q.bend ?? 0)) * R) + 2.2 * (q.tilt ?? 0);
+  const hipX = (q: FPose) => (q.hipX ?? 0) + 1.5 * (q.hipTilt ?? 0);
+  const hx: number[] = [], px: number[] = [];
+  for (let i = n + 1; i >= 0; i--) { const q = pf(t - i * dt); hx.push(headX(q)); px.push(hipX(q)); }
+  let a1 = 0, v1 = 0, a2 = 0, v2 = 0, sk = 0, vs = 0, er = 0, ve = 0;
+  const w1 = 9.5, z1 = 0.22, w2 = 7, z2 = 0.3, ws = 13, zs = 0.35, we = 19, ze = 0.12, h = dt / 2;
+  for (let i = 1; i < hx.length - 1; i++) {
+    const ah = (hx[i + 1] - 2 * hx[i] + hx[i - 1]) / (dt * dt), ap = (px[i + 1] - 2 * px[i] + px[i - 1]) / (dt * dt);
+    for (let k = 0; k < 2; k++) { // two substeps, semi-implicit Euler
+      v1 += h * (-w1 * w1 * a1 - 2 * z1 * w1 * v1 - 0.55 * ah); a1 += h * v1;
+      v2 += h * (-w2 * w2 * (a2 - a1) - 2 * z2 * w2 * (v2 - v1)); a2 += h * v2;
+      vs += h * (-ws * ws * sk - 2 * zs * ws * vs - 0.9 * ap); sk += h * vs;
+      ve += h * (-we * we * er - 2 * ze * we * ve - 2.2 * ah); er += h * ve;
+    }
+  }
+  const c = (x: number, m: number) => Math.max(-m, Math.min(m, x));
+  return { hairA: c(a1, 18), hairB: c(a2, 26), skirtS: c(sk, 30), earS: c(er, 30) };
+};
+
+export const follow = (pf: (t: number) => FPose, t: number, dt = 1 / 30, phys = false): FPose => {
   const p = pf(t), a = pf(t - dt), b = pf(t - 2 * dt), c = pf(t - 3 * dt);
   const lag = (cur?: [number, number], p1?: [number, number], p2?: [number, number]): [number, number] | undefined => {
     if (!cur || !p1 || !p2) return cur;
@@ -593,6 +623,7 @@ export const follow = (pf: (t: number) => FPose, t: number, dt = 1 / 30): FPose 
     wristR: (p.wristR ?? 0) - 0.6 * ((p.armR?.[1] ?? 0) - (a.armR?.[1] ?? 0)) - 0.4 * ((a.armR?.[1] ?? 0) - (b.armR?.[1] ?? 0)),
     tilt: head(a.tilt, b.tilt, c.tilt), turn: head(a.turn, b.turn, c.turn),
     swayX: ((p.hipX ?? 0) - (a.hipX ?? 0)) * 4 + ((p.lean ?? 0) - (b.lean ?? 0)) * 1.2, // feeds the braid pendulum
+    ...(phys ? secondary(pf, t) : {}),
   };
 };
 

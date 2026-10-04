@@ -11,6 +11,7 @@ import faceK1 from "./mocap/yesh_face_k1.json";
 import faceK2 from "./mocap/yesh_face_k2.json";
 import audio from "./mocap/yesh_audio.json";
 import { hook, HOOK_END } from "./HookStep";
+import { beatWarp, footLock } from "./motionPost";
 
 // Yeshanagula, 0:51.0 - 0:82.9 of the song, as a Mr. Fumble x Heroine dance cover.
 // Body: motion captured from the male lead where tracking held (wide group shots, solo, duet), with an animator
@@ -46,9 +47,13 @@ const sinceBeat = (t: number) => { const p = phase(t); return (p - Math.floor(p)
 const env = (t: number) => A.env[Math.max(0, Math.min(A.env.length - 1, Math.round((t - T0) * 30)))] ?? 0;
 const singer = (t: number) => A.sing[Math.max(0, Math.min(A.sing.length - 1, Math.round((t - T0) * 30)))] ?? 0;
 
+// each capture is retimed so its accents land on the song's beats (two-frame hold on the hit)
+const WARP = new Map<Cap, (t: number) => number>();
 const capt = (c: Cap, t: number): FPose => {
   const tr = c.data.tracks[c.track];
-  const i = Math.max(0, Math.min(tr.poses.length - 1, Math.round((t - c.start) * 30)));
+  if (!WARP.has(c)) WARP.set(c, beatWarp(tr, c.start, BEATS));
+  const x = (WARP.get(c) as (t: number) => number)(t);
+  const i = Math.max(0, Math.min(tr.poses.length - 1, Math.round((x - c.start) * 30)));
   const p = tr.poses[i];
   return { ...p, lean: Math.max(-30, Math.min(30, p.lean ?? 0)) };
 };
@@ -266,6 +271,14 @@ const CROWD = [
   { x: 760, y: 1470, s: 0.58, d: 4, m: true }, { x: 960, y: 1500, s: 0.62, d: 6, m: false }, { x: 230, y: 1420, s: 0.5, d: 7, m: true },
   { x: 440, y: 1410, s: 0.48, d: 3, m: false }, { x: 650, y: 1410, s: 0.48, d: 6, m: true }, { x: 860, y: 1420, s: 0.5, d: 2, m: false },
 ];
+const H_POSE = (t: number) => exaggerate(follow((x) => run(H_SEGS, x), t, 1 / 30, true), 1.35);
+const F_POSE = (t: number) => exaggerate(follow((x) => run(F_SEGS, x), t, 1 / 30, true), 1.45);
+// planted feet: computed once over the whole dance, lazily (module load stays cheap for other compositions)
+const CUTS = SHOTS.filter((s) => s.cut).map((s) => s.t);
+let _lf: ((t: number) => number) | null = null, _lh: ((t: number) => number) | null = null;
+const legsF = (t: number) => run(F_SEGS, t), legsH = (t: number) => run(H_SEGS, t); // legs only: no need for the physics pass
+const lockF = () => (_lf ??= footLock(legsF, T0, T1, { cuts: CUTS }));
+const lockH = () => (_lh ??= footLock(legsH, T0, T1, { hero: true, cuts: CUTS }));
 const crowdOn = (t: number) => (t >= 64.5 && t < 74.5) || t >= 78.5;
 
 export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: number }> = ({ title = true, handle = "@ai_maastaaru_telugu", from = T0 }) => {
@@ -279,7 +292,8 @@ export const YeshFull: React.FC<{ title?: boolean; handle?: string; from?: numbe
   const pulse = 1 + 0.014 * Math.exp(-sinceBeat(t) * 9);
   const z = shot.zoom * pulse;
   const pos = positions(t);
-  const hp = exaggerate(follow((x) => run(H_SEGS, x), t), 1.35), fp = exaggerate(follow((x) => run(F_SEGS, x), t), 1.45);
+  const hp0 = H_POSE(t), fp0 = F_POSE(t);
+  const hp = { ...hp0, hipX: (hp0.hipX ?? 0) + lockH()(t) }, fp = { ...fp0, hipX: (fp0.hipX ?? 0) + lockF()(t) };
   const cam = `translate(540,960) scale(${z}) translate(${-shot.cx},${-shot.cy})`;
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: "#140c2e" }}>
