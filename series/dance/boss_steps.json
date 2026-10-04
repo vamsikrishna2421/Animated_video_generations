@@ -1,0 +1,30 @@
+{
+  "source": "Instagram reel DTktENHEa9L (Rajashekar, 'Boss hook step', song from Mana Shankara Vara Prasad Garu); reference only, never published",
+  "tempo_bpm": 107.7, "beat_s": 0.557, "dance_window_s": [4.8, 31.0],
+  "clips": [
+    {"id": "C1", "t": [4.8, 6.95], "counts": "1-4", "name": "Belt hold knee-knocks into sumo squat",
+     "moves": ["thumbs hooked in the waistband, elbows out", "knees knock in and out alternately while the heels swivel (pigeon-toe to turn-out)", "hop down at 6.0 into a deep sumo squat", "both hands up beside the ears, fingers spread, held 6.2-6.9"]},
+    {"id": "C2", "t": [7.1, 9.0], "counts": "5-8", "name": "Side-on crouch walk, collar grip",
+     "moves": ["body turned to screen-right, torso bent forward ~35 deg", "one hand grips the jacket collar at the shoulder", "other arm forward, fist with thumb up", "small walking steps on the spot, feet cross, knees soft"]},
+    {"id": "C3", "t": [9.1, 11.0], "counts": "1-4", "name": "Hands on knees, torso sways",
+     "moves": ["wide stance, both hands on the knees", "torso leans left then right, shoulders roll, head drops", "pushes up to standing at 10.8"]},
+    {"id": "C4", "t": [11.0, 13.2], "counts": "5-8", "name": "Belt pull knee-knocks, squat flash, side pose",
+     "moves": ["both hands grip the trousers at the waist", "knees knock alternately, heels twist", "12.7 quick sumo squat, hands up", "13.0 snaps to the side-on crouch pose"]},
+    {"id": "C5", "t": [13.5, 17.9], "counts": "1-8", "name": "Phone torch step",
+     "moves": ["right hand holds a phone with the torch on, left hand on the hip", "phone path per 4 counts: up at the shoulder (1), elbow lifts so the forearm is level across the chest (2), up beside the face (3), swings down to the waist (4)", "feet: heel touches out to the side alternating with a cross step, small travel forward and back", "head nods on each count"]},
+    {"id": "C6", "t": [17.9, 20.1], "counts": "1-4", "name": "Phone step reprise, phone swings down",
+     "moves": ["same phone path once more", "19.6-20.0 the phone arm swings down and out, hands go to the waist"]},
+    {"id": "C7", "t": [20.1, 22.3], "counts": "5-8", "name": "Hands-on-hips swagger, knee lifts",
+     "moves": ["both hands on the hips", "knee lifts and kicks, travelling side to side", "torso leans back, head turned, mouth open (shouting)", "21.8 arms come forward into the roll"]},
+    {"id": "C8", "t": [22.3, 24.8], "counts": "1-4", "name": "Forearm roll + boss arm, belt knock",
+     "moves": ["forearms roll around each other at waist height with a knee lift", "one forearm level across the chest, other hand flicks below it", "23.6-24.6 belt-grip knee-knock with the torso tilted and head turned"]},
+    {"id": "C9", "t": [24.9, 27.1], "counts": "5-8", "name": "Roll, swing, collar pop, jacket flick",
+     "moves": ["forearm roll with a knee lift", "arm swing across", "26.0-26.5 hands at the collar, head thrown back", "26.6-27.0 flicks the jacket open, arms out"]},
+    {"id": "C10", "t": [27.1, 29.3], "counts": "1-4", "name": "Roll, hand flick, belt knock head-up",
+     "moves": ["forearm roll with a knee lift", "hand flick", "28.2-29.2 belt-grip knee-knock, torso tilted, head turned up"]},
+    {"id": "C11", "t": [29.3, 31.0], "counts": "5-8", "name": "Phone out, point at camera, walk in",
+     "moves": ["right hand pulls the phone from the back pocket", "arm extends, phone pointed at the camera", "walks toward the camera"],
+     "note": "the original ends on a photo of the actor on the phone screen: replace (no real-person likeness)"}
+  ],
+  "repeats": {"sumo squat, hands up": ["C1", "C4"], "side-on crouch": ["C2", "C4"], "belt knee-knock": ["C1", "C4", "C8", "C10"], "forearm roll + knee lift": ["C8", "C9", "C10"], "phone step": ["C5", "C6"]}
+}
