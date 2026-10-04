@@ -1,264 +1,317 @@
 {
- "id": "exp-jev-usecases",
- "date": "OCT 2026",
- "range": "HOW PEOPLE USE JEV",
- "edition": "AI EXPLAINED",
- "kicker": "AI USE CASES",
- "title": "USE JEV FOR",
- "recap": "JEV USE CASES",
- "hook": {
-  "lines": [
-   [
-    "500 emails for ",
-    "3.5 cents",
-    "."
-   ],
-   [
-    "",
-    "74 demos",
-    " in 5 days."
-   ]
-  ],
-  "text": "Five hundred emails sorted for three and a half cents. A community list tracked seventy-four viral demos like that. Here are the ones worth copying.",
-  "tts": "Five hundred emails sorted, for three and a half cents. A community list tracked seventy four viral demos like that. Here are the ones worth copying.",
-  "tts_te": "ఐదు వందల ఈమెయిల్స్, మూడున్నర సెంట్స్ కే సార్ట్ అయ్యాయి. ఇలాంటి డెబ్బై నాలుగు వైరల్ డెమోలు ఒక కమ్యూనిటీ లిస్ట్ లో ఉన్నాయి. ఇదిగో, కాపీ కొట్టదగ్గవి."
- },
- "stories": [
-  {
-   "org": "USE 1",
-   "accent": "#38BDF8",
-   "tag": "TRIAGE",
-   "headline": [
-    "Sort",
-    "everything"
-   ],
-   "text": "Number one: triage. Inbox sorting, support tickets, lead scoring, research papers. One builder scored 700 leads in 40 seconds.",
-   "tts": "Number one: triage. Inbox sorting, support tickets, lead scoring, research papers. One builder scored seven hundred leads, in forty seconds.",
-   "tts_te": "నంబర్ వన్: ట్రయాజ్. ఇన్ బాక్స్ సార్టింగ్, సపోర్ట్ టికెట్స్, లీడ్ స్కోరింగ్, రీసెర్చ్ పేపర్లు. ఒక బిల్డర్ ఏడు వందల లీడ్స్ ని నలభై సెకన్లలో స్కోర్ చేశారు.",
-   "cards": [
-    {
-     "k": "",
-     "v": "",
-     "cue": "Inbox"
-    },
-    {
-     "k": "",
-     "v": "",
-     "cue": "support"
-    },
-    {
-     "k": "",
-     "v": "",
-     "cue": "lead"
-    },
-    {
-     "k": "",
-     "v": "",
-     "cue": "papers"
-    }
-   ],
-   "sources": "awesome-jev-use-cases (builders' claims) · TypeSafe docs",
-   "demo": {
-    "type": "montage",
-    "title": "TRIAGE",
-    "tiles": [
-     {
-      "icon": "Mail",
-      "label": "Email triage"
-     },
-     {
-      "icon": "Ticket",
-      "label": "Support routing"
-     },
-     {
-      "icon": "Target",
-      "label": "Lead scoring"
-     },
-     {
-      "icon": "Newspaper",
-      "label": "Paper sorting"
-     }
-    ]
-   }
-  },
-  {
-   "org": "USE 2",
-   "accent": "#22C55E",
-   "tag": "ROUTING + GUARDS",
-   "headline": [
-    "The AI",
-    "traffic cop"
-   ],
-   "text": "Number two: routing and guardrails. Jev picks which AI model or tool should handle each request, and checks other AIs for jailbreak attempts before anything goes out.",
-   "tts": "Number two: routing, and guardrails. Jevv picks which A.I. model or tool should handle each request, and checks other A.I.s for jailbreak attempts, before anything goes out.",
-   "tts_te": "నంబర్ టూ: రూటింగ్, గార్డ్ రెయిల్స్. ప్రతి రిక్వెస్ట్ ని ఏ ఎ ఐ మోడల్ లేదా టూల్ చూసుకోవాలో జెవ్ ఎంచుకుంటుంది. బయటికి వెళ్ళే ముందు, ఇతర ఎ ఐ ల సమాధానాల్లో జైల్ బ్రేక్ ప్రయత్నాలు ఉన్నాయేమో చెక్ చేస్తుంది.",
-   "cards": [
-    {
-     "k": "MODEL ROUTER",
-     "v": "cheap model or big model?",
-     "cue": "picks"
-    },
-    {
-     "k": "TOOL PICKER",
-     "v": "which tool next?",
-     "cue": "tool"
-    },
-    {
-     "k": "GUARDRAIL",
-     "v": "jailbreak? block it",
-     "cue": "jailbreak"
-    }
-   ],
-   "sources": "TypeSafe use-case map · awesome-jev-use-cases",
-   "demo": {
-    "type": "pipe",
-    "title": "ROUTE FAST, ESCALATE HARD",
-    "items": [
-     {
-      "t": "Spam?",
-      "side": 1
-     },
-     {
-      "t": "Which team?",
-      "side": 1
-     },
-     {
-      "t": "Write a contract",
-      "side": 2
-     },
-     {
-      "t": "Refund or not?",
-      "side": 1
-     },
-     {
-      "t": "Plan a migration",
-      "side": 2
-     }
+  "id": "exp-jev-usecases",
+  "date": "OCT 2026",
+  "range": "HOW PEOPLE USE JEV",
+  "edition": "AI EXPLAINED",
+  "kicker": "AI USE CASES",
+  "title": "USE JEV FOR",
+  "recap": "JEV USE CASES",
+  "hook": {
+    "lines": [
+      [
+        "Jev: 500 emails for ",
+        "3.5 cents",
+        "."
+      ],
+      [
+        "A tiny ",
+        "yes/no AI",
+        ", built for speed."
+      ]
     ],
-    "note": "ILLUSTRATIVE"
-   }
+    "text": "Jev sorted five hundred emails for three and a half cents. It's a tiny AI that only answers quick yes-or-no questions, but it's lightning fast. Here's what people build with it.",
+    "tts": "Jevv sorted five hundred emails, for three and a half cents. It's a tiny A.I. that only answers quick, yes or no questions. But it is lightning fast. Here's what people build with it.",
+    "tts_te": "జెవ్, ఐదు వందల ఈమెయిల్స్ ని మూడున్నర సెంట్స్ కే సార్ట్ చేసింది. ఇది అవును, కాదు లాంటి చిన్న ప్రశ్నలకి మాత్రమే జవాబు చెప్పే చిన్న ఎ ఐ. కానీ మెరుపు వేగం. దీంతో జనాలు ఏం తయారుచేస్తున్నారో చూడండి."
   },
-  {
-   "org": "USE 3",
-   "accent": "#F59E0B",
-   "tag": "REAL TIME",
-   "headline": [
-    "Too fast",
-    "for chatbots"
-   ],
-   "text": "Number three: real time. Jev plays Doom at ten moves a second by reading the game as text, for about seven dollars an hour. Builders also made a live ad blocker, voice control with a speech tool in front, and a detector for AI junk posts.",
-   "tts": "Number three: real time. Jevv plays Doom at ten moves a second, by reading the game as text, for about seven dollars an hour. Builders also made a live ad blocker, voice control with a speech tool in front, and a detector for A.I. junk posts.",
-   "tts_te": "నంబర్ త్రీ: రియల్ టైమ్. జెవ్ గేమ్ ని టెక్స్ట్ గా చదువుతూ, డూమ్ ని సెకనుకి పది మూవ్స్ తో ఆడుతుంది, గంటకి దాదాపు ఏడు డాలర్లు. లైవ్ యాడ్ బ్లాకర్, ముందు ఒక స్పీచ్ టూల్ పెట్టి వాయిస్ కంట్రోల్, ఎ ఐ చెత్త పోస్టులని గుర్తించే టూల్ కూడా తయారుచేశారు.",
-   "cards": [
+  "stories": [
     {
-     "k": "",
-     "v": "",
-     "cue": "Doom"
+      "org": "USE 1",
+      "accent": "#38BDF8",
+      "tag": "TRIAGE",
+      "headline": [
+        "Sort",
+        "everything"
+      ],
+      "text": "Number one: triage. Inbox sorting, support tickets, lead scoring, research papers. One builder scored 700 leads in 40 seconds.",
+      "tts": "Number one: triage. Inbox sorting, support tickets, lead scoring, research papers. One builder scored seven hundred leads, in forty seconds.",
+      "tts_te": "నంబర్ వన్: ట్రయాజ్. ఇన్ బాక్స్ సార్టింగ్, సపోర్ట్ టికెట్స్, లీడ్ స్కోరింగ్, రీసెర్చ్ పేపర్లు. ఒక బిల్డర్ ఏడు వందల లీడ్స్ ని నలభై సెకన్లలో స్కోర్ చేశారు.",
+      "cards": [
+        {
+          "k": "",
+          "v": "",
+          "cue": "Inbox"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "support"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "lead"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "papers"
+        }
+      ],
+      "sources": "awesome-jev-use-cases (builders' claims) · TypeSafe docs",
+      "demo": {
+        "type": "montage",
+        "title": "TRIAGE",
+        "tiles": [
+          {
+            "icon": "Mail",
+            "label": "Email triage"
+          },
+          {
+            "icon": "Ticket",
+            "label": "Support routing"
+          },
+          {
+            "icon": "Target",
+            "label": "Lead scoring"
+          },
+          {
+            "icon": "Newspaper",
+            "label": "Paper sorting"
+          }
+        ]
+      }
     },
     {
-     "k": "",
-     "v": "",
-     "cue": "blocker"
+      "org": "USE 2",
+      "accent": "#22C55E",
+      "tag": "ROUTING + GUARDS",
+      "headline": [
+        "The AI",
+        "traffic cop"
+      ],
+      "text": "Number two: traffic control and guardrails. Jev picks which AI model or tool should handle each request, and checks other AI models for jailbreak attempts before anything goes out.",
+      "tts": "Number two: traffic control, and guardrails. Jevv picks which A.I. model or tool should handle each request, and checks other A.I. models for jailbreak attempts, before anything goes out.",
+      "tts_te": "నంబర్ టూ: రూటింగ్, గార్డ్ రెయిల్స్. ప్రతి రిక్వెస్ట్ ని ఏ ఎ ఐ మోడల్ లేదా టూల్ చూసుకోవాలో జెవ్ ఎంచుకుంటుంది. బయటికి వెళ్ళే ముందు, ఇతర ఎ ఐ ల సమాధానాల్లో జైల్ బ్రేక్ ప్రయత్నాలు ఉన్నాయేమో చెక్ చేస్తుంది.",
+      "cards": [
+        {
+          "k": "MODEL ROUTER",
+          "v": "cheap model or big model?",
+          "cue": "picks"
+        },
+        {
+          "k": "TOOL PICKER",
+          "v": "which tool next?",
+          "cue": "tool"
+        },
+        {
+          "k": "GUARDRAIL",
+          "v": "jailbreak? block it",
+          "cue": "jailbreak"
+        }
+      ],
+      "sources": "TypeSafe use-case map · awesome-jev-use-cases",
+      "demo": {
+        "type": "pipe",
+        "title": "ROUTE FAST, ESCALATE HARD",
+        "items": [
+          {
+            "t": "Spam?",
+            "side": 1
+          },
+          {
+            "t": "Which team?",
+            "side": 1
+          },
+          {
+            "t": "Write a contract",
+            "side": 2
+          },
+          {
+            "t": "Refund or not?",
+            "side": 1
+          },
+          {
+            "t": "Plan a migration",
+            "side": 2
+          }
+        ],
+        "note": "ILLUSTRATIVE"
+      }
     },
     {
-     "k": "",
-     "v": "",
-     "cue": "voice"
+      "org": "USE 3",
+      "accent": "#F59E0B",
+      "tag": "REAL TIME",
+      "headline": [
+        "Too fast",
+        "for chatbots"
+      ],
+      "text": "Number three: real time. Jev plays Doom at ten moves a second by reading the game as text, for about seven dollars an hour. Builders also made a live ad blocker, voice control with a speech tool in front, and a detector for AI junk posts.",
+      "tts": "Number three: real time. Jevv plays Doom at ten moves a second, by reading the game as text, for about seven dollars an hour. Builders also made a live ad blocker, voice control with a speech tool in front, and a detector for A.I. junk posts.",
+      "tts_te": "నంబర్ త్రీ: రియల్ టైమ్. జెవ్ గేమ్ ని టెక్స్ట్ గా చదువుతూ, డూమ్ ని సెకనుకి పది మూవ్స్ తో ఆడుతుంది, గంటకి దాదాపు ఏడు డాలర్లు. లైవ్ యాడ్ బ్లాకర్, ముందు ఒక స్పీచ్ టూల్ పెట్టి వాయిస్ కంట్రోల్, ఎ ఐ చెత్త పోస్టులని గుర్తించే టూల్ కూడా తయారుచేశారు.",
+      "cards": [
+        {
+          "k": "",
+          "v": "",
+          "cue": "Doom"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "blocker"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "voice"
+        },
+        {
+          "k": "",
+          "v": "",
+          "cue": "junk"
+        }
+      ],
+      "sources": "TypeSafe launch post · awesome-jev-use-cases",
+      "demo": {
+        "type": "montage",
+        "title": "REAL TIME",
+        "tiles": [
+          {
+            "icon": "Gamepad2",
+            "label": "Plays Doom (as text)"
+          },
+          {
+            "icon": "ShieldOff",
+            "label": "Live ad blocker"
+          },
+          {
+            "icon": "Mic",
+            "label": "Voice control"
+          },
+          {
+            "icon": "ScrollText",
+            "label": "AI-junk detector"
+          }
+        ]
+      }
     },
     {
-     "k": "",
-     "v": "",
-     "cue": "junk"
+      "org": "THE RULES",
+      "accent": "#F43F5E",
+      "tag": "USE IT RIGHT",
+      "headline": [
+        "Copy this",
+        "pattern"
+      ],
+      "text": "Copy this pattern: one clear question, like is this email urgent, and a fixed list of answers, yes or no. Send math, dates and writing to a bigger model. And anything it's unsure about, too.",
+      "tts": "Copy this pattern. One clear question, like, is this email urgent? A fixed list of answers: yes, or no. Send math, dates, and writing to a bigger model. And anything it's unsure about, too.",
+      "tts_te": "ఈ పద్ధతి కాపీ కొట్టండి. ఒక స్పష్టమైన ప్రశ్న, ఉదాహరణకి, ఈ ఈమెయిల్ అర్జెంటా? ఒక ఫిక్స్డ్ సమాధానాల లిస్ట్: అవును, లేదా కాదు. లెక్కలు, తేదీలు, రాయడం పెద్ద మోడల్ కి పంపండి. ఖచ్చితంగా తెలియని కేసులు కూడా.",
+      "cards": [
+        {
+          "k": "QUESTION",
+          "v": "Is this email urgent?",
+          "cue": "urgent"
+        },
+        {
+          "k": "ANSWERS",
+          "v": "yes / no",
+          "cue": "yes"
+        },
+        {
+          "k": "BIGGER MODEL",
+          "v": "math · dates · writing",
+          "cue": "math"
+        },
+        {
+          "k": "UNSURE?",
+          "v": "escalate it too",
+          "cue": "unsure"
+        }
+      ],
+      "sources": "TypeSafe docs (Jev 1.13 limits)",
+      "demo": {
+        "type": "sort",
+        "title": "WHO HANDLES IT?",
+        "items": [
+          {
+            "t": "Is this urgent?",
+            "side": 1
+          },
+          {
+            "t": "17 × 24 = ?",
+            "side": 2
+          },
+          {
+            "t": "Spam or not?",
+            "side": 1
+          },
+          {
+            "t": "Write the reply",
+            "side": 2
+          },
+          {
+            "t": "Date next Friday",
+            "side": 2
+          }
+        ]
+      }
+    },
+    {
+      "org": "TRY IT",
+      "accent": "#8B5CF6",
+      "tag": "GET STARTED",
+      "headline": [
+        "Is there",
+        "an app?"
+      ],
+      "text": "Is there an app? Not yet. These are tools for builders. The easiest free start is Clef-flash on Cloudflare, which gives you a free daily allowance.",
+      "tts": "Is there an app? Not yet. These are tools for builders. The easiest free start is Clef-flash on Cloud flare, which gives you a free daily allowance.",
+      "tts_te": "దీనికి యాప్ ఉందా? ఇంకా లేదు. ఇవి బిల్డర్ల కోసం టూల్స్. ఫ్రీగా మొదలుపెట్టాలంటే సులభమైన దారి క్లౌడ్ ఫ్లేర్ లో క్లెఫ్ ఫ్లాష్. రోజూ ఫ్రీ లిమిట్ ఉంది.",
+      "cards": [
+        {
+          "k": "APP?",
+          "v": "not yet · builder tools",
+          "cue": "builders."
+        },
+        {
+          "k": "FREE START",
+          "v": "Clef-flash on Cloudflare",
+          "cue": "Clef"
+        },
+        {
+          "k": "FREE TIER",
+          "v": "10,000 Neurons / day",
+          "cue": "allowance"
+        }
+      ],
+      "sources": "Cloudflare Workers AI pricing page",
+      "demo": {
+        "type": "montage",
+        "title": "START FREE",
+        "tiles": [
+          {
+            "icon": "Code",
+            "label": "API for builders"
+          },
+          {
+            "icon": "Cloud",
+            "label": "Clef-flash on Cloudflare"
+          },
+          {
+            "icon": "Gift",
+            "label": "10k Neurons/day free"
+          },
+          {
+            "icon": "Smartphone",
+            "label": "App? Not yet"
+          }
+        ]
+      }
     }
-   ],
-   "sources": "TypeSafe launch post · awesome-jev-use-cases",
-   "demo": {
-    "type": "montage",
-    "title": "REAL TIME",
-    "tiles": [
-     {
-      "icon": "Gamepad2",
-      "label": "Plays Doom (as text)"
-     },
-     {
-      "icon": "ShieldOff",
-      "label": "Live ad blocker"
-     },
-     {
-      "icon": "Mic",
-      "label": "Voice control"
-     },
-     {
-      "icon": "ScrollText",
-      "label": "AI-junk detector"
-     }
-    ]
-   }
-  },
-  {
-   "org": "THE RULES",
-   "accent": "#F43F5E",
-   "tag": "USE IT RIGHT",
-   "headline": [
-    "Copy this",
-    "pattern"
-   ],
-   "text": "Copy this pattern: one clear question, like is this email urgent, and a fixed list of answers, yes or no. Keep math, dates and writing out of it, just like 17 times 24 goes to System 2. And send unsure cases to a bigger model.",
-   "tts": "Copy this pattern. One clear question, like, is this email urgent? And a fixed list of answers: yes, or no. Keep math, dates, and writing out of it, just like seventeen times twenty four goes to System Two. And send unsure cases, to a bigger model.",
-   "tts_te": "ఈ పద్ధతి కాపీ కొట్టండి. ఒక స్పష్టమైన ప్రశ్న, ఉదాహరణకి, ఈ ఈమెయిల్ అర్జెంటా? ఒక ఫిక్స్డ్ సమాధానాల లిస్ట్: అవును, లేదా కాదు. లెక్కలు, తేదీలు, రాయడం దానికి ఇవ్వకండి, పదిహేడు ఇంటు ఇరవై నాలుగు సిస్టమ్ టూ కి వెళ్ళినట్టే. ఖచ్చితంగా తెలియని కేసులని పెద్ద మోడల్ కి పంపండి.",
-   "cards": [
-    {
-     "k": "QUESTION",
-     "v": "Is this email urgent?",
-     "cue": "urgent"
-    },
-    {
-     "k": "ANSWERS",
-     "v": "yes / no",
-     "cue": "yes"
-    },
-    {
-     "k": "KEEP OUT",
-     "v": "math · dates · writing",
-     "cue": "math"
-    },
-    {
-     "k": "UNSURE?",
-     "v": "send to a bigger model",
-     "cue": "unsure"
-    }
-   ],
-   "sources": "TypeSafe docs (Jev 1.13 limits)"
-  },
-  {
-   "org": "TRY IT",
-   "accent": "#8B5CF6",
-   "tag": "GET STARTED",
-   "headline": [
-    "Is there",
-    "an app?"
-   ],
-   "text": "Is there an app? Not yet. These are tools for builders. The easiest free start is Clef-flash, which has a small free daily allowance on Cloudflare.",
-   "tts": "Is there an app? Not yet. These are tools for builders. The easiest free start is Clef-flash, which has a small free daily allowance on Cloud flare.",
-   "tts_te": "దీనికి యాప్ ఉందా? ఇంకా లేదు. ఇవి బిల్డర్ల కోసం టూల్స్. ఫ్రీగా మొదలుపెట్టాలంటే సులభమైన దారి క్లెఫ్ ఫ్లాష్, క్లౌడ్ ఫ్లేర్ లో రోజూ కొంచెం ఫ్రీ లిమిట్ ఉంది.",
-   "cards": [
-    {
-     "k": "APP?",
-     "v": "not yet · builder tools",
-     "cue": "builders."
-    },
-    {
-     "k": "FREE START",
-     "v": "Clef-flash on Cloudflare",
-     "cue": "Clef"
-    }
-   ],
-   "sources": "Cloudflare Workers AI pricing"
+  ],
+  "outro": {
+    "text": "Which one would you build? Comment below, and follow for AI, explained simply.",
+    "tts": "Which one would you build? Comment below. And follow, for A.I., explained simply.",
+    "tts_te": "మీరు ఏది తయారుచేస్తారు? కామెంట్ లో చెప్పండి. ఎ ఐ ని సింపుల్ గా తెలుసుకోవడానికి ఫాలో అవ్వండి."
   }
- ],
- "outro": {
-  "text": "Which one would you build? Comment below, and follow for AI, explained simply.",
-  "tts": "Which one would you build? Comment below. And follow, for A.I., explained simply.",
-  "tts_te": "మీరు ఏది తయారుచేస్తారు? కామెంట్ లో చెప్పండి. ఎ ఐ ని సింపుల్ గా తెలుసుకోవడానికి ఫాలో అవ్వండి."
- }
 }

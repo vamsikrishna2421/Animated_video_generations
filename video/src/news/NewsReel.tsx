@@ -121,10 +121,11 @@ const DemoPanel: React.FC<{ d: Demo; cues: number[]; accent: string }> = ({ d, c
         {title}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 26 }}>
           {tiles.map((t, i) => {
-            const s = pop(f, step(i) - 3, 12);
+            const s = 0.9 + 0.1 * pop(f, step(i) - 3, 12); // every tile visible (dim) from the start, pops to full on its cue
+            const lit = f >= step(i) - 3;
             const Ic = (Icons as unknown as Record<string, React.FC<{ size: number; color: string }>>)[t.icon] ?? Icons.Sparkles;
             return (
-              <div key={i} style={{ height: 250, borderRadius: 28, background: `linear-gradient(135deg, ${accent}33, rgba(255,255,255,0.04))`, border: `2px solid ${accent}55`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 18, transform: `scale(${s})`, opacity: interpolate(s, [0, 0.3], [0, 1], cl) }}>
+              <div key={i} style={{ height: 250, borderRadius: 28, background: `linear-gradient(135deg, ${accent}33, rgba(255,255,255,0.04))`, border: `2px solid ${accent}55`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 18, transform: `scale(${s})`, opacity: lit ? 1 : 0.32, filter: lit ? "none" : "grayscale(1)" }}>
                 <Ic size={88} color={B.white} />
                 <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 36, color: B.white, textAlign: "center", padding: "0 16px" }}>{t.label}</div>
               </div>
@@ -303,7 +304,6 @@ const Story: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total
       <div style={{ position: "absolute", top: 230, left: 60, right: 60, display: "flex", alignItems: "center", gap: 16, transform: `translateX(${(1 - chip) * -120}px)`, opacity: chip }}>
         <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 34, letterSpacing: 2, color: B.night, background: accent, padding: "10px 24px", borderRadius: 12 }}>{seg.org}</div>
         <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 26, letterSpacing: 3, color: accent, border: `2px solid ${accent}`, padding: "8px 16px", borderRadius: 10 }}>{seg.tag}</div>
-        <div style={{ marginLeft: "auto", fontFamily: F.mono, fontWeight: 700, fontSize: 32, color: "rgba(255,255,255,0.55)" }}>{String(n).padStart(2, "0")} / {String(total).padStart(2, "0")}</div>
       </div>
       <div style={{ position: "absolute", top: 340, left: 60, right: 60 }}>
         {(seg.headline ?? []).map((line, i) => {
@@ -525,7 +525,18 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {starts.slice(1).map((s) => <Wipe key={s} at={s} />)}
       <Grain opacity={0.06} />
       {/* music + SFX */}
-      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} volume={(fr) => (fr >= followAbs ? 0.35 : tl.look === "broadcast" ? 0.15 : 0.08)} loop />
+      {/* music arc: punchy under the hook, sits back for the stories, lifts through the last story into the CTA */}
+      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop volume={(fr) => {
+        if (fr >= followAbs) return 0.35;
+        const base = tl.look === "broadcast" ? 0.15 : 0.08;
+        if (fr < starts[1]) return base * 1.4;
+        const lastStory = starts[starts.length - 2];
+        if (fr >= outroStart) return base * 1.7;
+        return fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base, base * 1.5], cl) : base;
+      }} />
+      <Sequence from={0} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>
+      <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>
+      <Sequence from={outroStart} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.45} /></Sequence>
       {starts.slice(1).map((s) => <Sequence key={`w${s}`} from={s - 8} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.4} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[tl.segments.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.35} /></Sequence>
