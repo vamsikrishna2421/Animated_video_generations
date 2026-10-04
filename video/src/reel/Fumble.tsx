@@ -38,6 +38,9 @@ export type FPose = {
   armLs?: [number, number]; armRs?: [number, number]; legLs?: [number, number]; legRs?: [number, number]; spineS?: number; // 3D foreshortening: projected/true length per segment
   armLBack?: boolean; armRBack?: boolean; legLFront?: boolean; // depth order from 3D: arm behind the torso, which leg is nearer
   swayX?: number; // body sideways velocity for hair/cloth follow-through
+  footL?: [number, number]; footR?: [number, number]; // captured foot: screen angle of heel->toe (deg, 0 = screen-right, y down), foreshortening 0..1
+  fingL?: number[]; fingR?: number[]; palmL?: number; palmR?: number; // per-finger curl [index, middle, ring, pinky, thumb] 0..1; palm -1 back .. 1 front
+  phoneL?: number; phoneR?: number; // a phone held in that hand (0..1 visibility)
   hairA?: number; hairB?: number; skirtS?: number; earS?: number; // simulated secondary motion: braid root / tip swing (deg), skirt hem swing (px), earring swing (deg)
   blush?: number; sweat?: number; still?: boolean; // still: no built-in breathing bob (walk cycles drive the hips)
 };
@@ -45,6 +48,41 @@ export type FReveal = Partial<Record<"shoes" | "legs" | "torso" | "vest" | "tie"
 
 const r = (d: number) => (d * Math.PI) / 180;
 const pt = (x: number, y: number, a: number, len: number): [number, number] => [x - len * Math.sin(r(a)), y + len * Math.cos(r(a))];
+
+/** Articulated hand from captured finger curls: four fingers that shorten and fold as they curl (knuckles show when
+ * closed), a thumb that swings from out to tucked, palm vs back of the hand, and an optional phone held in it. */
+const FingerHand: React.FC<{ x: number; y: number; a: number; flip: number; fing: number[]; palm: number; phone?: number }> = ({ x, y, a, flip, fing, palm, phone = 0 }) => {
+  const { C, hero } = usePal();
+  const side = -flip * (palm >= 0 ? 1 : -1); // thumb side: outward with the palm to camera, inward with the back
+  const spread = 1 + 0.25 * (1 - (fing[0] + fing[1] + fing[2] + fing[3]) / 4);
+  const th = Math.min(1, Math.max(0, fing[4] ?? 0.3));
+  return (
+    <g transform={`translate(${x},${y}) rotate(${a}) scale(${hero ? 1.15 : 1.4})`}>
+      {[-12, -4, 4, 12].map((d, k) => {
+        const c = Math.min(1, Math.max(0, fing[k] ?? 0.3)), L = (k === 3 ? 20 : k === 0 ? 25 : 27) * (1 - 0.72 * c);
+        const bx = d * spread, by = 16, tx = bx * (1 + 0.15 * (1 - c)), ty = by + L;
+        return (
+          <g key={k}>
+            <line x1={bx} y1={by} x2={tx} y2={ty} stroke={C.skin} strokeWidth={8.5} strokeLinecap="round" />
+            {c > 0.55 && <circle cx={tx} cy={ty} r={4.6} fill={C.skin} stroke={C.skinDark} strokeWidth={1.5} />}
+          </g>
+        );
+      })}
+      <ellipse cx={0} cy={9} rx={18} ry={16} fill={C.skin} stroke={C.skinDark} strokeWidth={2} />
+      {palm < -0.2 && [-8, 0, 8].map((d) => <line key={d} x1={d * 0.6} y1={2} x2={d} y2={16} stroke={C.skinDark} strokeWidth={1.6} opacity={0.6} />)}
+      {palm > 0.2 && <path d="M -10,14 Q 0,20 10,12" stroke={C.skinDark} strokeWidth={1.6} fill="none" opacity={0.55} />}
+      <line x1={14 * side} y1={6} x2={side * (14 + 14 * (1 - th)) - side * 10 * th} y2={6 + 14 + 6 * th} stroke={C.skin} strokeWidth={9.5} strokeLinecap="round" />
+      {phone > 0 && (
+        <g opacity={phone} transform={`rotate(${-8 * flip})`}>
+          <rect x={-15} y={-4} width={30} height={56} rx={6} fill="#14141a" stroke="#3a3a46" strokeWidth={2} />
+          <rect x={-12} y={0} width={24} height={46} rx={3} fill="#bfe3ff" />
+          <circle cx={0} cy={3} r={1.6} fill="#14141a" />
+        </g>
+      )}
+      {hero && [-14, -6, 2].map((d) => <line key={d} x1={-15} y1={d} x2={15} y2={d} stroke={C.argyle} strokeWidth={4} strokeLinecap="round" />)}
+    </g>
+  );
+};
 
 const HandShape: React.FC<{ x: number; y: number; a: number; kind: Hand; flip: number }> = ({ x, y, a, kind, flip }) => {
   const { C, hero } = usePal();
@@ -82,7 +120,8 @@ const Limb: React.FC<{ a: [number, number]; b: [number, number]; c: [number, num
   );
 };
 
-const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean; far?: boolean; ls?: [number, number]; wr?: number }> = ({ x, y, a, hand, flip, bones, far, ls = [1, 1], wr = 0 }) => {
+const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; flip: number; bones?: boolean; far?: boolean; ls?: [number, number]; wr?: number; fing?: number[]; palm?: number; phone?: number }> = ({ x, y, a, hand, flip, bones, far, ls = [1, 1], wr = 0, fing, palm = 1, phone }) => {
+  const Hd: React.FC<{ hx: number; hy: number }> = ({ hx, hy }) => (fing ? <FingerHand x={hx} y={hy} a={a[0] + a[1] + wr} flip={flip} fing={fing} palm={palm} phone={phone} /> : <HandShape x={hx} y={hy} a={a[0] + a[1] + wr} kind={hand} flip={flip} />);
   const [ex, ey] = pt(x, y, a[0], 130 * ls[0]);
   const [hx, hy] = pt(ex, ey, a[0] + a[1], 120 * ls[1]);
   const { C, hero } = usePal();
@@ -93,7 +132,7 @@ const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; fli
         <Limb a={[x, y]} b={[ex, ey]} c={[hx, hy]} w0={30} w1={21} fill={far ? C.skinDark : C.skin} />
         <line x1={x} y1={y} x2={mx} y2={my} stroke={far ? C.shirtDark : C.shirt} strokeWidth={40} strokeLinecap="round" />
         <circle cx={mx} cy={my} r={4} fill={C.argyle} />
-        <HandShape x={hx} y={hy} a={a[0] + a[1] + wr} kind={hand} flip={flip} />
+        <Hd hx={hx} hy={hy} />
         {bones && <Bones pts={[[x, y], [ex, ey], [hx, hy]]} />}
       </g>
     );
@@ -102,13 +141,17 @@ const Arm: React.FC<{ x: number; y: number; a: [number, number]; hand: Hand; fli
     <g>
       <Limb a={[x, y]} b={[ex, ey]} c={[hx, hy]} w0={40} w1={30} fill={far ? C.shirtDark : C.shirt} />
       <line x1={hx - 15 * Math.cos(r(a[0] + a[1]))} y1={hy - 15 * Math.sin(r(a[0] + a[1]))} x2={hx + 15 * Math.cos(r(a[0] + a[1]))} y2={hy + 15 * Math.sin(r(a[0] + a[1]))} stroke="#fff" strokeWidth={8} strokeLinecap="round" />
-      <HandShape x={hx} y={hy} a={a[0] + a[1] + wr} kind={hand} flip={flip} />
+      <Hd hx={hx} hy={hy} />
       {bones && <Bones pts={[[x, y], [ex, ey], [hx, hy]]} />}
     </g>
   );
 };
 
-const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; dir: number; bones?: boolean; p?: number; ps?: number; far?: boolean; ls?: [number, number] }> = ({ x, y, a, toe, dir, bones, p, ps, far, ls = [1, 1] }) => {
+const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; dir: number; bones?: boolean; p?: number; ps?: number; far?: boolean; ls?: [number, number]; foot?: [number, number] }> = ({ x, y, a, toe, dir: dir0, bones, p, ps, far, ls = [1, 1], foot }) => {
+  // a captured foot points where the real one did (screen angle) and shortens when it turns toward the camera
+  const fa = foot ? (((foot[0] % 360) + 540) % 360) - 180 : 0;
+  const dir = foot ? (Math.abs(fa) <= 90 ? 1 : -1) : dir0;
+  const footT = (ax: number, ay: number) => (foot ? `translate(${ax},${ay + 6}) rotate(${dir > 0 ? fa : fa - 180 * Math.sign(fa || 1)}) scale(${Math.max(0.45, foot[1])},1)` : `translate(${ax},${ay + 6}) rotate(${-toe * dir})`);
   const [kx, ky] = pt(x, y, a[0], 200 * ls[0]);
   const [ax, ay] = pt(kx, ky, a[0] + a[1], 195 * ls[1]);
   const [sx, sy] = pt(kx, ky, a[0] + a[1], 170 * ls[1]);
@@ -118,7 +161,7 @@ const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; di
       <g>
         <Limb a={[x, y]} b={[kx, ky]} c={[ax, ay]} w0={42} w1={26} fill={far ? C.skinDark : C.skin} />
         {[-10, 0, 10].map((d) => <circle key={d} cx={ax + d} cy={ay - 4} r={4} fill={C.argyle} />)}
-        <g transform={`translate(${ax},${ay + 6}) rotate(${-toe * dir})`}>
+        <g transform={footT(ax, ay)}>
           <path d={`M ${-18 * dir},-8 Q ${-22 * dir},12 0,12 L ${50 * dir},12 Q ${64 * dir},10 ${58 * dir},-2 Q ${40 * dir},-12 ${8 * dir},-12 Z`} fill={far ? C.skinDark : C.skin} />
           <line x1={-20 * dir} y1={12} x2={60 * dir} y2={12} stroke={C.shoe} strokeWidth={6} strokeLinecap="round" />
           <path d={`M ${6 * dir},-10 L ${30 * dir},10`} stroke={C.shoe} strokeWidth={5} strokeLinecap="round" />
@@ -134,7 +177,7 @@ const Leg: React.FC<{ x: number; y: number; a: [number, number]; toe: number; di
         <line x1={sx} y1={sy} x2={ax} y2={ay} stroke={far ? "#d4d4d4" : C.sock} strokeWidth={30} strokeLinecap="round" />
       </P>
       <P p={ps}>
-        <g transform={`translate(${ax},${ay + 6}) rotate(${-toe * dir})`}>
+        <g transform={footT(ax, ay)}>
           <path d={`M ${-26 * dir},-14 Q ${-30 * dir},14 ${0},16 L ${58 * dir},16 Q ${78 * dir},14 ${70 * dir},-4 Q ${50 * dir},-20 ${10 * dir},-18 Z`} fill={C.shoe} />
           <path d={`M ${14 * dir},-12 Q ${44 * dir},-14 ${60 * dir},-4`} stroke={C.shoeHi} strokeWidth={5} fill="none" strokeLinecap="round" />
           <line x1={-26 * dir} y1={16} x2={74 * dir} y2={16} stroke="#3a2010" strokeWidth={6} strokeLinecap="round" />
@@ -347,8 +390,8 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
   const torsoD = `M ${pts(Lp)} Q ${capL[0].toFixed(1)},${capL[1].toFixed(1)} ${nL[0].toFixed(1)},${nL[1].toFixed(1)} L ${nR[0].toFixed(1)},${nR[1].toFixed(1)} Q ${capR[0].toFixed(1)},${capR[1].toFixed(1)} ${pts([...Rp].reverse())} Z`;
   const mid = spine(0.5);
   const ftx = (u: number) => tw * 26 * u; // chest-front features slide with the twist
-  const armRN = <P p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR || !!p.armRBack} ls={p.armRs} wr={p.wristR} /></P>;
-  const armLN = <P p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL || !!p.armLBack} ls={p.armLs} wr={p.wristL} /></P>;
+  const armRN = <P p={reveal.armR}><Arm x={shoulderR[0]} y={shoulderR[1]} a={armR} hand={p.handR ?? "open"} flip={-1} bones={bones} far={farR || !!p.armRBack} ls={p.armRs} wr={p.wristR} fing={p.fingR} palm={p.palmR} phone={p.phoneR} /></P>;
+  const armLN = <P p={reveal.armL}><Arm x={shoulderL[0]} y={shoulderL[1]} a={armL} hand={p.handL ?? "open"} flip={1} bones={bones} far={farL || !!p.armLBack} ls={p.armLs} wr={p.wristL} fing={p.fingL} palm={p.palmL} phone={p.phoneL} /></P>;
   const backR = farR || !!p.armRBack, backL = farL || !!p.armLBack; // 3D depth wins when the capture says an arm is behind the body
   const arms = <>{!backR && armRN}{!backL && armLN}</>;
   const farArm = <>{backL && armLN}{backR && armRN}</>;
@@ -358,8 +401,8 @@ const Body: React.FC<{ f: number; p: FPose; reveal?: FReveal; bones?: boolean }>
       {!useContext(BonesOnly) && <ellipse cx={0} cy={6} rx={170} ry={22} fill="#000" opacity={0.16} />}
       <g transform={`translate(${p.hipX ?? 0},${hipY})`}>
         {(() => {
-          const lL = <Leg key="l" x={hipL[0]} y={hipL[1]} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL || p.legLFront === false} ls={p.legLs} />;
-          const lR = <Leg key="r" x={hipR[0]} y={hipR[1]} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR || p.legLFront === true} ls={p.legRs} />;
+          const lL = <Leg key="l" x={hipL[0]} y={hipL[1]} a={legL} toe={p.toeL ?? 0} dir={dir || -1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farL || p.legLFront === false} ls={p.legLs} foot={p.footL} />;
+          const lR = <Leg key="r" x={hipR[0]} y={hipR[1]} a={legR} toe={p.toeR ?? 0} dir={dir || 1} bones={bones} p={reveal.legs} ps={reveal.shoes} far={farR || p.legLFront === true} ls={p.legRs} foot={p.footR} />;
           return farR || p.legLFront === true ? [lR, lL] : [lL, lR];
         })()}
         {hero && (() => {
