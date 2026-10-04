@@ -62,7 +62,7 @@ def cuts(video, dur):
     """Scene cuts from frame-difference spikes on a small greyscale proxy."""
     from PIL import Image
     with tempfile.TemporaryDirectory() as td:  # the bundled ffmpeg has no rawvideo muxer, so go through tiny PNGs
-        ff("-i", str(video), "-vf", "scale=64:-2", "-r", "15", str(Path(td) / "%05d.png"))
+        ff("-i", str(video), "-vf", "scale=64:-2", "-r", "30", str(Path(td) / "%05d.png"))  # 30 fps: a 15 fps proxy shifts cuts by up to 0.07 s
         v = np.stack([np.asarray(Image.open(p).convert("L"), dtype=np.float32).ravel() for p in sorted(Path(td).glob("*.png"))])
     n = len(v)
     if n < 3:
@@ -72,7 +72,7 @@ def cuts(video, dur):
     idx = [i for i in range(1, len(d) - 1) if d[i] > thr and d[i] >= d[i - 1] and d[i] >= d[i + 1]]
     out = []
     for i in idx:
-        t = (i + 1) / 15
+        t = (i + 1) / 30
         if not out or t - out[-1] > 0.4:
             out.append(round(t, 2))
     return out
