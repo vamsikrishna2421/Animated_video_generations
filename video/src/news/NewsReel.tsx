@@ -527,7 +527,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {/* music + SFX */}
       {/* music arc: punchy under the hook, sits back for the stories, lifts through the last story into the CTA */}
       <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop volume={(fr) => {
-        if (fr >= followAbs) return 0.45;
+        if (fr >= followAbs) return 0.8; // music-only end card: keep it as loud as the voiced CTA
         const base = tl.look === "broadcast" ? 0.15 : 0.08;
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
