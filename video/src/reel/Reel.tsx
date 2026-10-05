@@ -32,7 +32,16 @@ const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
 type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
-export type ReelTimeline = { id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+// Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last 12 s into the CTA), plus a hit in the first second.
+const musicArc = (tl: ReelTimeline, f: number) => {
+  if (!tl.musicLift) return 1;
+  const end = tl.totalFrames, lift = 12 * tl.fps;
+  const hit = interpolate(f, [0, 0.4 * tl.fps, 1.2 * tl.fps], [1.7, 1.7, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const rise = interpolate(f, [end - lift, end - 2 * tl.fps], [1, tl.musicLift], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return hit * rise;
+};
+
+export type ReelTimeline = { musicLift?: number; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -372,7 +381,7 @@ const Outro: React.FC<SP> = ({ s, cue }) => {
       <div style={{ position: "absolute", top: 1030 - 170 * ctaS, opacity: 1 - ctaS, left: 50, right: 50, textAlign: "center", fontFamily: C.anton, fontSize: 84, lineHeight: 1.05, color: "white", textShadow: outline }}>{s.data.label}</div>
       {f >= cta && (
         <div style={{ position: "absolute", top: 1010, left: 0, right: 0, textAlign: "center", opacity: ctaS }}>
-          <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 70, color: C.amber }}>@ai_maastaaru</div>
+          <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 70, color: C.amber }}>{s.data.handle ?? "@ai_maastaaru"}</div>
           <div style={{ marginTop: 22, display: "inline-flex", alignItems: "center", gap: 16, padding: "22px 70px", borderRadius: 26, background: followed ? "rgba(255,255,255,0.15)" : `linear-gradient(135deg, ${C.blue}, ${C.violet})`, fontFamily: C.inter, fontWeight: 800, fontSize: 56, color: "white", transform: `scale(${f >= tap && f < tap + 5 ? 0.9 : 1})` }}>
             {followed ? <><Icon name="Check" size={52} color="white" stroke={3.5} /> Following</> : "Follow"}
           </div>
@@ -389,7 +398,7 @@ const LessonScene: React.FC<SP> = ({ s, cue }) => {
   return (
     <AbsoluteFill>
       <Backdrop />
-      {Comp ? <Comp data={{ ...s.data, handle: "@ai_maastaaru" }} cue={(i) => cue(i + 1)} duration={s.frames} image={undefined as any} /> : null}
+      {Comp ? <Comp data={{ handle: "@ai_maastaaru", ...s.data }} cue={(i) => cue(i + 1)} duration={s.frames} image={undefined as any} /> : null}
     </AbsoluteFill>
   );
 };
@@ -691,16 +700,16 @@ const YTNotes: React.FC<{ s: Scene; idx: number }> = ({ s, idx }) => {
   const head = spring({ frame: f, fps, config: { damping: 14 } });
   return (
     <div style={{ position: "absolute", left: 1000, right: 70, top: 110, bottom: 60 }}>
-      <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 26, letterSpacing: 5, color: C.teal, opacity: head }}>CHAPTER {idx + 1}{y.chapter ? ` · ${String(y.chapter).toUpperCase()}` : ""}</div>
-      <div style={{ marginTop: 10, fontFamily: C.inter, fontWeight: 900, fontSize: 60, lineHeight: 1.08, color: "white", opacity: head, transform: `translateX(${(1 - head) * 40}px)` }}>{y.title ?? ""}</div>
+      <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 32, letterSpacing: 4, color: C.teal, opacity: head }}>CHAPTER {idx + 1}{y.chapter ? ` · ${String(y.chapter).toUpperCase()}` : ""}</div>
+      <div style={{ marginTop: 10, fontFamily: C.inter, fontWeight: 900, fontSize: 70, lineHeight: 1.06, color: "white", opacity: head, transform: `translateX(${(1 - head) * 40}px)` }}>{y.title ?? ""}</div>
       <div style={{ marginTop: 34, display: "flex", flexDirection: "column", gap: 18 }}>
         {(y.notes ?? []).map(([t, at]: [string, number], i: number) => {
           const a = cue(at);
           const p = spring({ frame: f - a, fps, config: { damping: 14 } });
           return f >= a ? (
             <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start", opacity: p, transform: `translateX(${(1 - p) * 30}px)` }}>
-              <div style={{ marginTop: 14, width: 14, height: 14, borderRadius: 7, background: C.amber, flexShrink: 0 }} />
-              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 36, lineHeight: 1.3, color: "#E2E8F0" }}>{t}</div>
+              <div style={{ marginTop: 20, width: 16, height: 16, borderRadius: 8, background: C.amber, flexShrink: 0 }} />
+              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 48, lineHeight: 1.25, color: "#E2E8F0" }}>{t}</div>
             </div>
           ) : null;
         })}
@@ -720,14 +729,14 @@ export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
         <Fonts />
         <style>{`@font-face{font-family:Anton;src:url(${staticFile("fonts/anton-latin-400-normal.woff2")}) format('woff2');}`}</style>
         <Backdrop />
-        <div style={{ position: "absolute", left: 1000, right: 70, top: 44, fontFamily: C.inter, fontWeight: 800, fontSize: 26, letterSpacing: 3, color: "white", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+        <div style={{ position: "absolute", left: 1000, right: 70, top: 40, fontFamily: C.inter, fontWeight: 800, fontSize: 32, letterSpacing: 3, color: "white", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
           AI FROM SCRATCH <span style={{ color: C.amber }}>· {tl.label}</span>{tl.banner ? <span style={{ color: C.muted }}> · {tl.banner}</span> : null}
         </div>
         {tl.scenes.map((s, i) => (
           <Sequence key={s.id} from={s.from} durationInFrames={s.frames + 1}>
             <div style={{ position: "absolute", left: 70, top: 60, width: 864, height: 960, borderRadius: 30, overflow: "hidden", boxShadow: "0 30px 80px rgba(0,0,0,0.6)", border: "3px solid rgba(255,255,255,0.12)" }}>
               <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transformOrigin: "0 0", transform: "scale(0.8) translateY(-240px)" }}>
-                <SceneWrap s={s} first={i === 0} noCaptions />
+                <SceneWrap s={{ ...s, data: { ...s.data, cta: "Subscribe for the next case" } }} first={i === 0} noCaptions />
               </div>
             </div>
             <YTNotes s={s} idx={i} />
@@ -736,7 +745,7 @@ export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 8, background: "rgba(255,255,255,0.1)" }}>
           <div style={{ width: `${(f / tl.totalFrames) * 100}%`, height: "100%", background: `linear-gradient(90deg, ${C.amber}, ${C.rose})` }} />
         </div>
-        <Audio src={staticFile(tl.music)} volume={() => (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1])} />
+        <Audio src={staticFile(tl.music)} volume={(af) => Math.min(1, (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1]) * musicArc(tl, af))} />
         {tl.scenes.flatMap((s) =>
           s.lines.map((l, k) => (
             <Sequence key={`${s.id}-${k}`} from={s.from + l.from} durationInFrames={l.frames + 20} layout="none">
@@ -789,7 +798,7 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
           </span>
         </div>
       )}
-      <Audio src={staticFile(tl.music)} volume={() => (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1])} />
+      <Audio src={staticFile(tl.music)} volume={(af) => Math.min(1, (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1]) * musicArc(tl, af))} />
       {tl.scenes.flatMap((s) =>
         s.lines.map((l, k) => (
           <Sequence key={`${s.id}-${k}`} from={s.from + l.from} durationInFrames={l.frames + 20} layout="none">

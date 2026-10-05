@@ -382,8 +382,11 @@ def main(spec_path: Path) -> None:
     starts = [s["from"] / FPS for s in scenes]
     bed = lofi(total, starts) if spec.get("music") == "lofi" else score(total, starts, drops)
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
-    tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": "@ai_maastaaru", "label": spec.get("label", ""), "fps": FPS,
-          "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
+    handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
+    for sc in scenes:
+        sc.setdefault("data", {})["handle"] = handle
+    tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": handle, "label": spec.get("label", ""), "fps": FPS,
+          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)
     (tdir / f"{rid}.json").write_text(json.dumps(tl, indent=1, ensure_ascii=False) + "\n")

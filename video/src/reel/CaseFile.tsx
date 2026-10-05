@@ -370,7 +370,7 @@ const CaseClosed: React.FC<SP> = ({ s, cue }) => {
       )}
       {f >= follow && (
         <div style={{ position: "absolute", left: 0, right: 0, top: 1300, display: "flex", justifyContent: "center" }}>
-          <div style={{ padding: "14px 60px", borderRadius: 22, background: `linear-gradient(135deg, ${C.blue}, ${C.violet})`, fontFamily: C.inter, fontWeight: 800, fontSize: 44, color: "white", transform: `scale(${interpolate(f - follow, [0, 6], [0.7, 1], cl)})` }}>Follow @ai_maastaaru</div>
+          <div style={{ padding: "14px 60px", borderRadius: 22, background: `linear-gradient(135deg, ${C.blue}, ${C.violet})`, fontFamily: C.inter, fontWeight: 800, fontSize: 44, color: "white", transform: `scale(${interpolate(f - follow, [0, 6], [0.7, 1], cl)})` }}>{s.data.cta ?? `Follow ${s.data.handle ?? "@ai_maastaaru"}`}</div>
         </div>
       )}
       <Tick at={next} />
