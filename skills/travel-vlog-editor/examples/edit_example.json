@@ -1,0 +1,16 @@
+{"title": "Test trip", "canvas": [1920, 1080], "fps": 30, "brand": "../brand/brand.json", "output": "out/test.mp4",
+ "segments": [
+  {"src": "GX0003", "in": 0, "out": 2.5, "audio": "mute", "text": [{"kind": "big", "text": "We almost missed the flight", "at": 0.2, "dur": 2.2}]},
+  {"card": "intro", "dur": 2.5, "bg_src": "GX0001", "bg_in": 2, "transition": "fadeblack", "tdur": 0.4},
+  {"src": "GX0001", "in": 9, "out": 15, "audio": "voice", "chapter": "Worcester station", "transition": "dissolve", "tdur": 0.5,
+   "text": [{"kind": "location", "text": "Worcester Station", "sub": "Massachusetts  ·  Day 1", "at": 0.4, "dur": 3.5}]},
+  {"src": "GX0001", "in": 15, "out": 19, "speed": 2.0, "zoom": 1.0, "zoom_to": 1.15, "text": [{"kind": "step", "n": 1, "text": "Buy the ticket in the mTicket app", "at": 0.1, "dur": 1.8}]},
+  {"src": "GH0002", "in": 0, "out": 4, "speed": 0.5, "grade": "golden", "audio": "mute", "transition": "slideleft", "tdur": 0.4,
+   "text": [{"kind": "tip", "label": "Money tip", "text": "Youth Pass = 50% off", "at": 0.5, "dur": 3}]},
+  {"card": "chapter", "big": "Part 2", "text": "South Station", "dur": 2, "chapter": "South Station", "transition": "fade", "tdur": 0.3},
+  {"image": "photo.jpg", "dur": 3, "zoom_to": 1.1, "text": [{"kind": "route", "text": "Worcester > South Station > Logan", "current": 1, "at": 0.2, "dur": 2.6}]},
+  {"src": "GX0003", "in": 4, "out": 6, "freeze_end": 1.0, "text": [{"kind": "counter", "text": "$2.40", "sub": "one bus ride", "at": 0.3, "dur": 2.5}]},
+  {"card": "outro", "dur": 4, "bg_src": "GX0001", "bg_in": 5, "transition": "fade", "tdur": 0.5, "chapter": "Wrap-up"}
+ ],
+ "music": [{"file": "music/groove.wav", "at": 0, "gain_db": -12}]
+}
