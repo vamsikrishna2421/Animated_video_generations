@@ -35,6 +35,26 @@ def main():
     feet = P[:, [27, 28, 29, 30, 31, 32], 1].min(1)  # lowest foot point per frame
     floor = uniform_filter1d(feet, 5)
     P[..., 1] -= floor[:, None]  # standing on y = 0
+    # planted feet: a foot that is low and nearly still is in contact; while it stays in contact, shift the whole
+    # body so that foot keeps its touchdown spot (no skating). The correction relaxes slowly back to zero.
+    corr = np.zeros((len(P), 2))
+    c = np.zeros(2)
+    prev = None
+    for i in range(len(P)):
+        best = None
+        for heel, toe in ((29, 31), (30, 32)):
+            hgt = min(P[i, heel, 1], P[i, toe, 1])
+            sp = np.linalg.norm(P[i, heel, [0, 2]] - P[i - 1, heel, [0, 2]]) * 30 if i else 0
+            if hgt < 0.035 and sp < 0.6 and (best is None or hgt < best[0]):
+                best = (hgt, heel)
+        if best is not None and prev is not None and prev[1] == best[1]:
+            j = best[1]
+            c -= (P[i, j, [0, 2]] - P[i - 1, j, [0, 2]])
+        c *= 0.985
+        corr[i] = c
+        prev = best
+    P[..., 0] += corr[:, None, 0]
+    P[..., 2] += corr[:, None, 1]
     # stage travel: hip x in the image, in torso lengths -> metres (torso ~0.52 m)
     hip = (img[:, 23, :2] + img[:, 24, :2]) / 2
     torso = np.median(np.linalg.norm((img[:, 11, :2] + img[:, 12, :2]) / 2 - hip, axis=1))
@@ -45,7 +65,7 @@ def main():
     if rig.exists():
         R = json.load(open(rig))["tracks"][0]["poses"]
         fing = [[p.get("fingR", [0.3] * 5), p.get("fingL", [0.3] * 5)] for p in R]  # dancer's left hand = rig screen-right
-    out = {"fps": 30, "frames": len(P), "joints": [[round(float(v), 3) for v in P[i].ravel()] for i in range(len(P))],
+    out = {"fps": 30, "frames": len(P), "yaw": round(float(y0), 4), "joints": [[round(float(v), 3) for v in P[i].ravel()] for i in range(len(P))],
            "tx": [round(float(v), 3) for v in tx], "tz": [round(float(v), 3) for v in tz]}
     if fing:
         out["fing"] = [[[round(float(c), 2) for c in h] for h in f] for f in fing]

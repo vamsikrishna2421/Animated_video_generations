@@ -10,6 +10,7 @@ import { ART, BOTTOM2 } from "./ReelArt";
 import { CASE_SCENES } from "./CaseFile";
 import { INTRO_SCENES } from "./Intro";
 import { EP01_ART, EP01_BOTTOM, EP01_SCENES } from "./Ep01";
+import { EP02_ART, EP02_BOTTOM, EP02_SCENES } from "./Ep02";
 
 // v2 "entertainment" reel: memes, multiple characters, karaoke captions, fast cuts.
 const C = {
@@ -444,7 +445,7 @@ const AnalogyPanel: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> =
   const dock = interpolate(f - stampAt, [34, 46], [0, 1], cl); // stamp shrinks into the corner so the scene stays visible
   return (
     <div style={{ position: "absolute", left: PANEL.x, top: PANEL.topY, width: PANEL.w, height: PANEL.topH, borderRadius: 30, overflow: "hidden", border: "4px solid rgba(255,255,255,0.85)", boxShadow: "0 24px 60px rgba(0,0,0,0.55)", background: "#000" }}>
-      {d.art && (ART[d.art] || EP01_ART[d.art]) ? (() => { const A = ART[d.art] || EP01_ART[d.art]; return <A d={d} cue={cue} frames={s.frames} />; })() : <Img src={staticFile(d.img)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z}) translateX(${px}px)` }} />}
+      {d.art && (ART[d.art] || EP01_ART[d.art] || EP02_ART[d.art]) ? (() => { const A = ART[d.art] || EP01_ART[d.art] || EP02_ART[d.art]; return <A d={d} cue={cue} frames={s.frames} />; })() : <Img src={staticFile(d.img)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z}) translateX(${px}px)` }} />}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 30%, transparent 65%, rgba(0,0,0,0.55) 100%)" }} />
       <PanelTag icon={d.icon ?? "Clapperboard"} t={d.tag ?? "REAL LIFE"} c={C.amber} />
       {(d.chips ?? []).map((c: any, i: number) => <Chip key={i} t={c.t} at={cue(c.at)} x={c.x} y={c.y} c={c.c} />)}
@@ -563,7 +564,7 @@ const Loss: React.FC<{ d: any; s: Scene; cue: (n: number) => number }> = ({ d, s
     </>
   );
 };
-const BOTTOM: Record<string, React.FC<any>> = { predict: Predict, layers: Layers, backflow: Backflow, loss: Loss, ...BOTTOM2, ...EP01_BOTTOM };
+const BOTTOM: Record<string, React.FC<any>> = { predict: Predict, layers: Layers, backflow: Backflow, loss: Loss, ...BOTTOM2, ...EP01_BOTTOM, ...EP02_BOTTOM };
 const Split: React.FC<SP> = ({ s, cue }) => {
   const f = useCurrentFrame();
   const d = s.data;
@@ -587,7 +588,7 @@ const Split: React.FC<SP> = ({ s, cue }) => {
 };
 
 const SCENES: Record<string, React.FC<SP>> = {
-  ...(CASE_SCENES as Record<string, React.FC<SP>>), ...(INTRO_SCENES as Record<string, React.FC<SP>>), ...(EP01_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
+  ...(CASE_SCENES as Record<string, React.FC<SP>>), ...(INTRO_SCENES as Record<string, React.FC<SP>>), ...(EP01_SCENES as Record<string, React.FC<SP>>), ...(EP02_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
 
 // ---------------- karaoke captions + speaker tag ----------------
 const chunks = (words: Word[]) => {
