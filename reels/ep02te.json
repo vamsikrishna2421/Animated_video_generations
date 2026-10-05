@@ -1,0 +1,391 @@
+{
+ "id": "ep02te",
+ "title": "What is an LLM?",
+ "label": "EP 2",
+ "banner": "What is an LLM?",
+ "topic": "",
+ "look": "classic",
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "tempo": 1.0,
+ "gap": 0.35,
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "autocomplete",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The one game",
+     "title": "ChatGPT plays one game",
+     "notes": [
+      [
+       "Feels like it knows everything",
+       0
+      ],
+      [
+       "Really: guess the next word",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.45,
+     "text": "మీ ఫోన్ కీబోర్డ్ మీ తర్వాతి పదాన్ని ఊహిస్తుంది కదా. [1] ChatGPT కూడా సరిగ్గా అదే చేస్తుంది, కానీ చాలా బాగా. [2] తర్వాతి పదం ఊహించడం.",
+     "show": "Your phone guesses your next word. ChatGPT does the exact same thing, just insanely well. Guess the next word."
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "proverb",
+     "tag": "REAL LIFE · FINISH THE LINE",
+     "icon": "MessageCircle",
+     "say": 1,
+     "shout": 2
+    },
+    "bottom": {
+     "kind": "nextword",
+     "tag": "IN AI · SCORE EVERY NEXT WORD",
+     "context": "Happy birthday to",
+     "show": 3,
+     "bars": [
+      [
+       "you",
+       94
+      ],
+      [
+       "me",
+       2
+      ],
+      [
+       "him",
+       1
+      ],
+      [
+       "her",
+       1
+      ]
+     ],
+     "pick": 5,
+     "note": "illustrative"
+    },
+    "yt": {
+     "chapter": "Next-word prediction",
+     "title": "Finish the saying",
+     "notes": [
+      [
+       "Everyone finishes 'Happy birthday to…'",
+       1
+      ],
+      [
+       "LLM = Large Language Model",
+       3
+      ],
+      [
+       "Scores every possible next word",
+       4
+      ],
+      [
+       "Picks a likely one, word by word",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_predict.wav",
+     "maxgap": 0.45,
+     "text": "ఈ ఆట మీరు ఇప్పటికే ఆడుతున్నారు. [1] ఎవరైనా హ్యాపీ బర్త్‌డే టు... అని పాడితే, [2] అందరూ పూర్తి చేస్తారు, యూ! [3] ఎల్ ఎల్ ఎమ్, అంటే లార్జ్ లాంగ్వేజ్ మోడల్, కూడా అంతే. ఇప్పటివరకు ఉన్న పదాలు చూస్తుంది, [4] తర్వాత వచ్చే ప్రతి పదానికి స్కోర్ ఇస్తుంది, [5] ఎక్కువ అవకాశం ఉన్నది ఎంచుకుంటుంది. మళ్ళీ, పదం తర్వాత పదం.",
+     "show": "You already play this game. Someone sings, Happy birthday to... and everyone finishes, you! An LLM, a Large Language Model, does the same. It looks at the words so far, scores every possible next word, and picks a likely one. Then again, word by word."
+    }
+   ]
+  },
+  {
+   "id": "pretrain",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "library",
+     "tag": "PRE-TRAINING · READ EVERYTHING",
+     "icon": "Library",
+     "read": 1,
+     "count": 2
+    },
+    "bottom": {
+     "kind": "corpus",
+     "tag": "IN AI · GUESS, CHECK, ADJUST",
+     "items": [
+      [
+       "BookOpen",
+       "Books",
+       1
+      ],
+      [
+       "Globe",
+       "Websites",
+       1
+      ],
+      [
+       "Code2",
+       "Code",
+       1
+      ]
+     ],
+     "count": 2,
+     "loop": 3
+    },
+    "yt": {
+     "chapter": "Pre-training",
+     "title": "Reading a giant library",
+     "notes": [
+      [
+       "Books, websites, code",
+       1
+      ],
+      [
+       "Trillions of words",
+       2
+      ],
+      [
+       "Keeps patterns, not the books",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_pretrain.wav",
+     "maxgap": 0.45,
+     "text": "మరి ఇది ఎలా నేర్చుకుంది? [1] ముందు, ఒక పెద్ద లైబ్రరీ మొత్తం చదివింది. పుస్తకాలు, వెబ్‌సైట్లు, కోడ్. [2] ట్రిలియన్ల పదాలు, ఒక మనిషి వేల జన్మల్లో కూడా చదవలేనన్ని. [3] ప్రతి తప్పు ఊహకి కొంచెం సరిదిద్దుకుంది. అది పుస్తకాలు దాచుకోదు. ప్యాటర్న్స్ ని మాత్రమే గుర్తుపెట్టుకుంటుంది. [4] దీన్నే ప్రీ ట్రైనింగ్ అంటారు.",
+     "show": "So how did it learn? First, it read a giant library. Books, websites, code. Trillions of words, more than a person could read in thousands of lifetimes. Every wrong guess nudged it a tiny bit. It doesn't keep the books. It keeps the patterns. That's pre-training."
+    }
+   ]
+  },
+  {
+   "id": "finetune",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "coach",
+     "tag": "FINE-TUNING · LEARN TO HELP",
+     "icon": "ThumbsUp",
+     "examples": 1,
+     "rank": 2
+    },
+    "bottom": {
+     "kind": "pipeline",
+     "tag": "IN AI · THREE STAGES",
+     "stages": [
+      [
+       "Library",
+       "Pre-training",
+       0
+      ],
+      [
+       "GraduationCap",
+       "Fine-tuning",
+       1
+      ],
+      [
+       "ThumbsUp",
+       "Human feedback",
+       2
+      ]
+     ],
+     "done": 4
+    },
+    "yt": {
+     "chapter": "Fine-tuning",
+     "title": "From text-completer to assistant",
+     "notes": [
+      [
+       "Trained on good question-answer examples",
+       1
+      ],
+      [
+       "People rate replies: thumbs up or down",
+       2
+      ],
+      [
+       "Learns the answers people prefer",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_finetune.wav",
+     "maxgap": 0.45,
+     "text": "కానీ టెక్స్ట్ మాత్రమే పూర్తి చేసే మోడల్, ఇంకా మంచి అసిస్టెంట్ కాదు. [1] అందుకే మంచి ప్రశ్నలు, జవాబుల ఉదాహరణలతో దాన్ని ఫైన్ ట్యూన్ చేస్తారు, [2] దాని జవాబులకి మనుషులు రేటింగ్ ఇస్తారు, థంబ్స్ అప్ లేదా డౌన్. [3] మనుషులు ఇష్టపడే విధంగా జవాబివ్వడం నేర్చుకుంటుంది. [4] ఇప్పుడు అది ఒక చాట్ అసిస్టెంట్.",
+     "show": "But a model that only completes text isn't a helpful assistant yet. So it's fine-tuned on examples of good questions and answers, and people rate its replies, thumbs up or down. It learns to answer the way people prefer. Now it's a chat assistant."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "type": "glossary",
+   "tail": 0.45,
+   "data": {
+    "terms": [
+     [
+      "Parameters",
+      "billions of tiny settings tuned while learning",
+      1,
+      "SlidersHorizontal"
+     ],
+     [
+      "Hallucination",
+      "a confident answer that's wrong",
+      2,
+      "Ghost"
+     ]
+    ],
+    "yt": {
+     "chapter": "Two words",
+     "title": "Words you'll hear everywhere",
+     "notes": [
+      [
+       "Parameters: billions of tuned settings",
+       1
+      ],
+      [
+       "Hallucination: confident but wrong",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_words.wav",
+     "maxgap": 0.45,
+     "text": "ప్రతిచోటా వినిపించే రెండు పదాలు. [1] పారామీటర్స్, నేర్చుకుంటూ సెట్ చేసుకున్న చిన్న సెట్టింగ్స్, వందల కోట్లలో. [2] ఇంకా హాలూసినేషన్, కాన్ఫిడెంట్ గా చెప్పే తప్పు జవాబు.",
+     "show": "Two words you'll hear everywhere. Parameters, billions of tiny settings it tuned while learning. And hallucination, a confident answer that's wrong."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.45,
+   "data": {
+    "question": "Does ChatGPT look up answers in a giant database?",
+    "options": [
+     "Yes, a giant database",
+     "No, it predicts the next word",
+     "It searches Google every time"
+    ],
+    "answer": 1,
+    "yt": {
+     "chapter": "Quick test",
+     "title": "Database or prediction?",
+     "notes": [
+      [
+       "It predicts, it doesn't look up",
+       1
+      ],
+      [
+       "Even with web search it writes word by word",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_quizA.wav",
+     "file2": "07_quizB.wav",
+     "pause": 2.5,
+     "gap": 0.1,
+     "maxgap": 0.45,
+     "text": "చిన్న టెస్ట్! [1] ChatGPT జవాబులని ఒక పెద్ద డేటాబేస్ లో వెతుకుతుందా? <pause 2> [2] కాదు! ప్యాటర్న్స్ తో తర్వాతి పదాన్ని ఊహిస్తుంది. వెబ్ లో వెతికినా, జవాబు మాత్రం పదం తర్వాత పదం రాస్తుంది. అందుకే కాన్ఫిడెంట్ గా తప్పు కూడా చెప్పగలదు.",
+     "tts": "చిన్న టెస్ట్! ChatGPT జవాబులని ఒక పెద్ద డేటాబేస్ లో వెతుకుతుందా?",
+     "tts2": "కాదు! ప్యాటర్న్స్ తో తర్వాతి పదాన్ని ఊహిస్తుంది. వెబ్ లో వెతికినా, జవాబు మాత్రం పదం తర్వాత పదం రాస్తుంది. అందుకే కాన్ఫిడెంట్ గా తప్పు కూడా చెప్పగలదు.",
+     "show": "Quick test! Does ChatGPT look up answers in a giant database? No! It predicts the next word from patterns. Even when it searches the web, it still writes word by word. That's why it can be confidently wrong."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "tail": 0.45,
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "LLM",
+      "a giant autocomplete"
+     ],
+     [
+      "Pre-training",
+      "trillions of words"
+     ],
+     [
+      "Fine-tuning + feedback",
+      "coached to be helpful"
+     ],
+     [
+      "Hallucination",
+      "can still make things up"
+     ]
+    ],
+    "next": "EP 3 · Tokens & Context Window",
+    "yt": {
+     "chapter": "Recap",
+     "title": "One game, played very well",
+     "notes": [
+      [
+       "Guess the next word",
+       1
+      ],
+      [
+       "Pre-training on trillions of words",
+       2
+      ],
+      [
+       "Fine-tuning + human feedback",
+       3
+      ],
+      [
+       "Next: tokens and context window",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.45,
+     "text": "అంటే: [1] ఎల్ ఎల్ ఎమ్ ఒక పెద్ద ఆటోకంప్లీట్, [2] ట్రిలియన్ల పదాలతో నేర్చుకుంది, [3] తర్వాత పనికొచ్చేలా ట్రైన్ చేశారు. [4] అయినా ఇంకా తప్పులు కల్పించి చెప్పగలదు. [5] తర్వాతి ఎపిసోడ్ లో, టోకెన్స్, కాంటెక్స్ట్ విండో, పెద్ద చాట్స్ లో ఎ ఐ మీ పేరు ఎందుకు మర్చిపోతుందో. మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "show": "So: an LLM is a giant autocomplete, trained on trillions of words, then coached to be helpful. And it can still make things up. Next, tokens and the context window, and why AI forgets your name in long chats. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}

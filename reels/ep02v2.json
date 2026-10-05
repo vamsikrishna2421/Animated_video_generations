@@ -1,0 +1,384 @@
+{
+ "id": "ep02v2",
+ "title": "What is an LLM?",
+ "label": "EP 2",
+ "banner": "What is an LLM?",
+ "topic": "",
+ "look": "classic",
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "tempo": 1.12,
+ "gap": 0.5,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "autocomplete",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The one game",
+     "title": "ChatGPT plays one game",
+     "notes": [
+      [
+       "Feels like it knows everything",
+       0
+      ],
+      [
+       "Really: guess the next word",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.4,
+     "text": "Your phone guesses your next word. [1] ChatGPT does the exact same thing, just insanely well. [2] Guess the next word."
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "proverb",
+     "tag": "REAL LIFE · FINISH THE LINE",
+     "icon": "MessageCircle",
+     "say": 1,
+     "shout": 2
+    },
+    "bottom": {
+     "kind": "nextword",
+     "tag": "IN AI · SCORE EVERY NEXT WORD",
+     "context": "Happy birthday to",
+     "show": 3,
+     "bars": [
+      [
+       "you",
+       94
+      ],
+      [
+       "me",
+       2
+      ],
+      [
+       "him",
+       1
+      ],
+      [
+       "her",
+       1
+      ]
+     ],
+     "pick": 5,
+     "note": "illustrative"
+    },
+    "yt": {
+     "chapter": "Next-word prediction",
+     "title": "Finish the saying",
+     "notes": [
+      [
+       "Everyone finishes 'Happy birthday to…'",
+       1
+      ],
+      [
+       "LLM = Large Language Model",
+       3
+      ],
+      [
+       "Scores every possible next word",
+       4
+      ],
+      [
+       "Picks a likely one, word by word",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_predict.wav",
+     "maxgap": 0.4,
+     "text": "You already play this game. [1] Someone sings, Happy birthday to... [2] and everyone finishes, you! [3] An LLM, a Large Language Model, does the same. It looks at the words so far, [4] scores every possible next word, [5] and picks a likely one. Then again, word by word."
+    }
+   ]
+  },
+  {
+   "id": "pretrain",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "library",
+     "tag": "PRE-TRAINING · READ EVERYTHING",
+     "icon": "Library",
+     "read": 1,
+     "count": 2
+    },
+    "bottom": {
+     "kind": "corpus",
+     "tag": "IN AI · GUESS, CHECK, ADJUST",
+     "items": [
+      [
+       "BookOpen",
+       "Books",
+       1
+      ],
+      [
+       "Globe",
+       "Websites",
+       1
+      ],
+      [
+       "Code2",
+       "Code",
+       1
+      ]
+     ],
+     "count": 2,
+     "loop": 3
+    },
+    "yt": {
+     "chapter": "Pre-training",
+     "title": "Reading a giant library",
+     "notes": [
+      [
+       "Books, websites, code",
+       1
+      ],
+      [
+       "Trillions of words",
+       2
+      ],
+      [
+       "Keeps patterns, not the books",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_pretrain.wav",
+     "maxgap": 0.4,
+     "text": "So how did it learn? [1] First, it read a giant library. Books, websites, code. [2] Trillions of words, more than a person could read in thousands of lifetimes. [3] Every wrong guess nudged it a tiny bit. It doesn't keep the books. It keeps the patterns. [4] That's pre-training."
+    }
+   ]
+  },
+  {
+   "id": "finetune",
+   "type": "split",
+   "tail": 0.45,
+   "data": {
+    "top": {
+     "art": "coach",
+     "tag": "FINE-TUNING · LEARN TO HELP",
+     "icon": "ThumbsUp",
+     "examples": 1,
+     "rank": 2
+    },
+    "bottom": {
+     "kind": "pipeline",
+     "tag": "IN AI · THREE STAGES",
+     "stages": [
+      [
+       "Library",
+       "Pre-training",
+       0
+      ],
+      [
+       "GraduationCap",
+       "Fine-tuning",
+       1
+      ],
+      [
+       "ThumbsUp",
+       "Human feedback",
+       2
+      ]
+     ],
+     "done": 4
+    },
+    "yt": {
+     "chapter": "Fine-tuning",
+     "title": "From text-completer to assistant",
+     "notes": [
+      [
+       "Trained on good question-answer examples",
+       1
+      ],
+      [
+       "People rate replies: thumbs up or down",
+       2
+      ],
+      [
+       "Learns the answers people prefer",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_finetune.wav",
+     "maxgap": 0.4,
+     "text": "But a model that only completes text isn't a helpful assistant yet. [1] So it's fine-tuned on examples of good questions and answers, [2] and people rate its replies, thumbs up or down. [3] It learns to answer the way people prefer. [4] Now it's a chat assistant."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "type": "glossary",
+   "tail": 0.45,
+   "data": {
+    "terms": [
+     [
+      "Parameters",
+      "billions of tiny settings tuned while learning",
+      1,
+      "SlidersHorizontal"
+     ],
+     [
+      "Hallucination",
+      "a confident answer that's wrong",
+      2,
+      "Ghost"
+     ]
+    ],
+    "yt": {
+     "chapter": "Two words",
+     "title": "Words you'll hear everywhere",
+     "notes": [
+      [
+       "Parameters: billions of tuned settings",
+       1
+      ],
+      [
+       "Hallucination: confident but wrong",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_words.wav",
+     "maxgap": 0.4,
+     "text": "Two words you'll hear everywhere. [1] Parameters, billions of tiny settings it tuned while learning. [2] And hallucination, a confident answer that's wrong."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.45,
+   "data": {
+    "question": "Does ChatGPT look up answers in a giant database?",
+    "options": [
+     "Yes, a giant database",
+     "No, it predicts the next word",
+     "It searches Google every time"
+    ],
+    "answer": 1,
+    "yt": {
+     "chapter": "Quick test",
+     "title": "Database or prediction?",
+     "notes": [
+      [
+       "It predicts, it doesn't look up",
+       1
+      ],
+      [
+       "Even with web search it writes word by word",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_quizA.wav",
+     "file2": "07_quizB.wav",
+     "pause": 2.5,
+     "gap": 0.1,
+     "maxgap": 0.4,
+     "text": "Quick test! [1] Does ChatGPT look up answers in a giant database? <pause 2> [2] No! It predicts the next word from patterns. Even when it searches the web, it still writes word by word. That's why it can be confidently wrong.",
+     "tts": "Quick test! Does ChatGPT look up answers in a giant database?",
+     "tts2": "No! It predicts the next word from patterns. Even when it searches the web, it still writes word by word. That's why it can be confidently wrong."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "tail": 0.45,
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "LLM",
+      "a giant autocomplete"
+     ],
+     [
+      "Pre-training",
+      "trillions of words"
+     ],
+     [
+      "Fine-tuning + feedback",
+      "coached to be helpful"
+     ],
+     [
+      "Hallucination",
+      "can still make things up"
+     ]
+    ],
+    "next": "EP 3 · Tokens & Context Window",
+    "yt": {
+     "chapter": "Recap",
+     "title": "One game, played very well",
+     "notes": [
+      [
+       "Guess the next word",
+       1
+      ],
+      [
+       "Pre-training on trillions of words",
+       2
+      ],
+      [
+       "Fine-tuning + human feedback",
+       3
+      ],
+      [
+       "Next: tokens and context window",
+       5
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.4,
+     "text": "So: [1] an LLM is a giant autocomplete, [2] trained on trillions of words, [3] then coached to be helpful. [4] And it can still make things up. [5] Next, tokens and the context window, and why AI forgets your name in long chats. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}
