@@ -1,0 +1,1748 @@
+{
+ "id": "ep02v2",
+ "look": "classic",
+ "topic": "",
+ "banner": "What is an LLM?",
+ "musicVol": [
+  0.1,
+  0.26
+ ],
+ "title": "What is an LLM?",
+ "handle": "@ai_maastaaru",
+ "label": "EP 2",
+ "fps": 30,
+ "totalFrames": 3488,
+ "music": "reel/ep02v2/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "autocomplete",
+   "data": {
+    "yt": {
+     "chapter": "The one game",
+     "title": "ChatGPT plays one game",
+     "notes": [
+      [
+       "Feels like it knows everything",
+       0
+      ],
+      [
+       "Really: guess the next word",
+       2
+      ]
+     ]
+    }
+   },
+   "from": 0,
+   "frames": 293,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_01.wav",
+     "from": 2,
+     "frames": 263,
+     "words": [
+      {
+       "w": "Your",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "phone",
+       "from": 16,
+       "to": 25
+      },
+      {
+       "w": "guesses",
+       "from": 25,
+       "to": 37
+      },
+      {
+       "w": "your",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "next",
+       "from": 45,
+       "to": 52
+      },
+      {
+       "w": "word.",
+       "from": 52,
+       "to": 90
+      },
+      {
+       "w": "ChatGPT",
+       "from": 90,
+       "to": 103
+      },
+      {
+       "w": "does",
+       "from": 103,
+       "to": 118
+      },
+      {
+       "w": "the",
+       "from": 118,
+       "to": 124
+      },
+      {
+       "w": "exact",
+       "from": 124,
+       "to": 134
+      },
+      {
+       "w": "same",
+       "from": 134,
+       "to": 141
+      },
+      {
+       "w": "thing,",
+       "from": 141,
+       "to": 159
+      },
+      {
+       "w": "just",
+       "from": 159,
+       "to": 166
+      },
+      {
+       "w": "insanely",
+       "from": 166,
+       "to": 180
+      },
+      {
+       "w": "well.",
+       "from": 180,
+       "to": 217
+      },
+      {
+       "w": "Guess",
+       "from": 217,
+       "to": 226
+      },
+      {
+       "w": "the",
+       "from": 226,
+       "to": 232
+      },
+      {
+       "w": "next",
+       "from": 232,
+       "to": 240
+      },
+      {
+       "w": "word.",
+       "from": 240,
+       "to": 249
+      }
+     ],
+     "cues": {
+      "1": 90,
+      "2": 217
+     }
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "proverb",
+     "tag": "REAL LIFE · FINISH THE LINE",
+     "icon": "MessageCircle",
+     "say": 1,
+     "shout": 2
+    },
+    "bottom": {
+     "kind": "nextword",
+     "tag": "IN AI · SCORE EVERY NEXT WORD",
+     "context": "Happy birthday to",
+     "show": 3,
+     "bars": [
+      [
+       "you",
+       94
+      ],
+      [
+       "me",
+       2
+      ],
+      [
+       "him",
+       1
+      ],
+      [
+       "her",
+       1
+      ]
+     ],
+     "pick": 5,
+     "note": "illustrative"
+    },
+    "yt": {
+     "chapter": "Next-word prediction",
+     "title": "Finish the saying",
+     "notes": [
+      [
+       "Everyone finishes 'Happy birthday to…'",
+       1
+      ],
+      [
+       "LLM = Large Language Model",
+       3
+      ],
+      [
+       "Scores every possible next word",
+       4
+      ],
+      [
+       "Picks a likely one, word by word",
+       5
+      ]
+     ]
+    }
+   },
+   "from": 293,
+   "frames": 598,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_02.wav",
+     "from": 0,
+     "frames": 570,
+     "words": [
+      {
+       "w": "You",
+       "from": 8,
+       "to": 13
+      },
+      {
+       "w": "already",
+       "from": 13,
+       "to": 24
+      },
+      {
+       "w": "play",
+       "from": 24,
+       "to": 31
+      },
+      {
+       "w": "this",
+       "from": 31,
+       "to": 38
+      },
+      {
+       "w": "game.",
+       "from": 38,
+       "to": 76
+      },
+      {
+       "w": "Someone",
+       "from": 76,
+       "to": 86
+      },
+      {
+       "w": "sings,",
+       "from": 86,
+       "to": 105
+      },
+      {
+       "w": "Happy",
+       "from": 105,
+       "to": 113
+      },
+      {
+       "w": "birthday",
+       "from": 113,
+       "to": 155
+      },
+      {
+       "w": "to...",
+       "from": 155,
+       "to": 163
+      },
+      {
+       "w": "and",
+       "from": 163,
+       "to": 169
+      },
+      {
+       "w": "everyone",
+       "from": 169,
+       "to": 184
+      },
+      {
+       "w": "finishes,",
+       "from": 184,
+       "to": 232
+      },
+      {
+       "w": "you!",
+       "from": 232,
+       "to": 239
+      },
+      {
+       "w": "An",
+       "from": 239,
+       "to": 243
+      },
+      {
+       "w": "LLM,",
+       "from": 243,
+       "to": 250
+      },
+      {
+       "w": "a",
+       "from": 250,
+       "to": 253
+      },
+      {
+       "w": "Large",
+       "from": 253,
+       "to": 274
+      },
+      {
+       "w": "Language",
+       "from": 274,
+       "to": 286
+      },
+      {
+       "w": "Model,",
+       "from": 286,
+       "to": 296
+      },
+      {
+       "w": "does",
+       "from": 296,
+       "to": 311
+      },
+      {
+       "w": "the",
+       "from": 311,
+       "to": 317
+      },
+      {
+       "w": "same.",
+       "from": 317,
+       "to": 355
+      },
+      {
+       "w": "It",
+       "from": 355,
+       "to": 359
+      },
+      {
+       "w": "looks",
+       "from": 359,
+       "to": 367
+      },
+      {
+       "w": "at",
+       "from": 367,
+       "to": 371
+      },
+      {
+       "w": "the",
+       "from": 371,
+       "to": 376
+      },
+      {
+       "w": "words",
+       "from": 376,
+       "to": 385
+      },
+      {
+       "w": "so",
+       "from": 385,
+       "to": 389
+      },
+      {
+       "w": "far,",
+       "from": 389,
+       "to": 402
+      },
+      {
+       "w": "scores",
+       "from": 402,
+       "to": 411
+      },
+      {
+       "w": "every",
+       "from": 411,
+       "to": 419
+      },
+      {
+       "w": "possible",
+       "from": 419,
+       "to": 432
+      },
+      {
+       "w": "next",
+       "from": 432,
+       "to": 442
+      },
+      {
+       "w": "word,",
+       "from": 442,
+       "to": 450
+      },
+      {
+       "w": "and",
+       "from": 450,
+       "to": 466
+      },
+      {
+       "w": "picks",
+       "from": 466,
+       "to": 474
+      },
+      {
+       "w": "a",
+       "from": 474,
+       "to": 476
+      },
+      {
+       "w": "likely",
+       "from": 476,
+       "to": 486
+      },
+      {
+       "w": "one.",
+       "from": 486,
+       "to": 513
+      },
+      {
+       "w": "Then",
+       "from": 513,
+       "to": 520
+      },
+      {
+       "w": "again,",
+       "from": 520,
+       "to": 536
+      },
+      {
+       "w": "word",
+       "from": 536,
+       "to": 542
+      },
+      {
+       "w": "by",
+       "from": 542,
+       "to": 547
+      },
+      {
+       "w": "word.",
+       "from": 547,
+       "to": 555
+      }
+     ],
+     "cues": {
+      "1": 76,
+      "2": 163,
+      "3": 239,
+      "4": 402,
+      "5": 450
+     }
+    }
+   ]
+  },
+  {
+   "id": "pretrain",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "library",
+     "tag": "PRE-TRAINING · READ EVERYTHING",
+     "icon": "Library",
+     "read": 1,
+     "count": 2
+    },
+    "bottom": {
+     "kind": "corpus",
+     "tag": "IN AI · GUESS, CHECK, ADJUST",
+     "items": [
+      [
+       "BookOpen",
+       "Books",
+       1
+      ],
+      [
+       "Globe",
+       "Websites",
+       1
+      ],
+      [
+       "Code2",
+       "Code",
+       1
+      ]
+     ],
+     "count": 2,
+     "loop": 3
+    },
+    "yt": {
+     "chapter": "Pre-training",
+     "title": "Reading a giant library",
+     "notes": [
+      [
+       "Books, websites, code",
+       1
+      ],
+      [
+       "Trillions of words",
+       2
+      ],
+      [
+       "Keeps patterns, not the books",
+       3
+      ]
+     ]
+    }
+   },
+   "from": 892,
+   "frames": 620,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_03.wav",
+     "from": 0,
+     "frames": 591,
+     "words": [
+      {
+       "w": "So",
+       "from": 7,
+       "to": 11
+      },
+      {
+       "w": "how",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "did",
+       "from": 15,
+       "to": 20
+      },
+      {
+       "w": "it",
+       "from": 20,
+       "to": 24
+      },
+      {
+       "w": "learn?",
+       "from": 24,
+       "to": 32
+      },
+      {
+       "w": "First,",
+       "from": 32,
+       "to": 75
+      },
+      {
+       "w": "it",
+       "from": 75,
+       "to": 78
+      },
+      {
+       "w": "read",
+       "from": 78,
+       "to": 85
+      },
+      {
+       "w": "a",
+       "from": 85,
+       "to": 87
+      },
+      {
+       "w": "giant",
+       "from": 87,
+       "to": 94
+      },
+      {
+       "w": "library.",
+       "from": 94,
+       "to": 105
+      },
+      {
+       "w": "Books,",
+       "from": 105,
+       "to": 140
+      },
+      {
+       "w": "websites,",
+       "from": 140,
+       "to": 157
+      },
+      {
+       "w": "code.",
+       "from": 157,
+       "to": 164
+      },
+      {
+       "w": "Trillions",
+       "from": 164,
+       "to": 206
+      },
+      {
+       "w": "of",
+       "from": 206,
+       "to": 210
+      },
+      {
+       "w": "words,",
+       "from": 210,
+       "to": 218
+      },
+      {
+       "w": "more",
+       "from": 218,
+       "to": 225
+      },
+      {
+       "w": "than",
+       "from": 225,
+       "to": 231
+      },
+      {
+       "w": "a",
+       "from": 231,
+       "to": 233
+      },
+      {
+       "w": "person",
+       "from": 233,
+       "to": 242
+      },
+      {
+       "w": "could",
+       "from": 242,
+       "to": 249
+      },
+      {
+       "w": "read",
+       "from": 249,
+       "to": 255
+      },
+      {
+       "w": "in",
+       "from": 255,
+       "to": 265
+      },
+      {
+       "w": "thousands",
+       "from": 265,
+       "to": 282
+      },
+      {
+       "w": "of",
+       "from": 282,
+       "to": 285
+      },
+      {
+       "w": "lifetimes.",
+       "from": 285,
+       "to": 309
+      },
+      {
+       "w": "Every",
+       "from": 309,
+       "to": 345
+      },
+      {
+       "w": "wrong",
+       "from": 345,
+       "to": 353
+      },
+      {
+       "w": "guess",
+       "from": 353,
+       "to": 360
+      },
+      {
+       "w": "nudged",
+       "from": 360,
+       "to": 369
+      },
+      {
+       "w": "it",
+       "from": 369,
+       "to": 372
+      },
+      {
+       "w": "a",
+       "from": 372,
+       "to": 375
+      },
+      {
+       "w": "tiny",
+       "from": 375,
+       "to": 387
+      },
+      {
+       "w": "bit.",
+       "from": 387,
+       "to": 393
+      },
+      {
+       "w": "It",
+       "from": 393,
+       "to": 428
+      },
+      {
+       "w": "doesn't",
+       "from": 428,
+       "to": 438
+      },
+      {
+       "w": "keep",
+       "from": 438,
+       "to": 444
+      },
+      {
+       "w": "the",
+       "from": 444,
+       "to": 449
+      },
+      {
+       "w": "books.",
+       "from": 449,
+       "to": 457
+      },
+      {
+       "w": "It",
+       "from": 457,
+       "to": 492
+      },
+      {
+       "w": "keeps",
+       "from": 492,
+       "to": 503
+      },
+      {
+       "w": "the",
+       "from": 503,
+       "to": 508
+      },
+      {
+       "w": "patterns.",
+       "from": 508,
+       "to": 524
+      },
+      {
+       "w": "That's",
+       "from": 524,
+       "to": 558
+      },
+      {
+       "w": "pre-training.",
+       "from": 558,
+       "to": 575
+      }
+     ],
+     "cues": {
+      "1": 32,
+      "2": 164,
+      "3": 309,
+      "4": 524
+     }
+    }
+   ]
+  },
+  {
+   "id": "finetune",
+   "type": "split",
+   "data": {
+    "top": {
+     "art": "coach",
+     "tag": "FINE-TUNING · LEARN TO HELP",
+     "icon": "ThumbsUp",
+     "examples": 1,
+     "rank": 2
+    },
+    "bottom": {
+     "kind": "pipeline",
+     "tag": "IN AI · THREE STAGES",
+     "stages": [
+      [
+       "Library",
+       "Pre-training",
+       0
+      ],
+      [
+       "GraduationCap",
+       "Fine-tuning",
+       1
+      ],
+      [
+       "ThumbsUp",
+       "Human feedback",
+       2
+      ]
+     ],
+     "done": 4
+    },
+    "yt": {
+     "chapter": "Fine-tuning",
+     "title": "From text-completer to assistant",
+     "notes": [
+      [
+       "Trained on good question-answer examples",
+       1
+      ],
+      [
+       "People rate replies: thumbs up or down",
+       2
+      ],
+      [
+       "Learns the answers people prefer",
+       3
+      ]
+     ]
+    }
+   },
+   "from": 1511,
+   "frames": 510,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_04.wav",
+     "from": 0,
+     "frames": 482,
+     "words": [
+      {
+       "w": "But",
+       "from": 8,
+       "to": 17
+      },
+      {
+       "w": "a",
+       "from": 17,
+       "to": 20
+      },
+      {
+       "w": "model",
+       "from": 20,
+       "to": 27
+      },
+      {
+       "w": "that",
+       "from": 27,
+       "to": 33
+      },
+      {
+       "w": "only",
+       "from": 33,
+       "to": 40
+      },
+      {
+       "w": "completes",
+       "from": 40,
+       "to": 52
+      },
+      {
+       "w": "text",
+       "from": 52,
+       "to": 59
+      },
+      {
+       "w": "isn't",
+       "from": 59,
+       "to": 71
+      },
+      {
+       "w": "a",
+       "from": 71,
+       "to": 73
+      },
+      {
+       "w": "helpful",
+       "from": 73,
+       "to": 89
+      },
+      {
+       "w": "assistant",
+       "from": 89,
+       "to": 139
+      },
+      {
+       "w": "yet.",
+       "from": 139,
+       "to": 145
+      },
+      {
+       "w": "So",
+       "from": 145,
+       "to": 149
+      },
+      {
+       "w": "it's",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "fine-tuned",
+       "from": 155,
+       "to": 169
+      },
+      {
+       "w": "on",
+       "from": 169,
+       "to": 173
+      },
+      {
+       "w": "examples",
+       "from": 173,
+       "to": 184
+      },
+      {
+       "w": "of",
+       "from": 184,
+       "to": 188
+      },
+      {
+       "w": "good",
+       "from": 188,
+       "to": 199
+      },
+      {
+       "w": "questions",
+       "from": 199,
+       "to": 212
+      },
+      {
+       "w": "and",
+       "from": 212,
+       "to": 217
+      },
+      {
+       "w": "answers,",
+       "from": 217,
+       "to": 228
+      },
+      {
+       "w": "and",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "people",
+       "from": 233,
+       "to": 251
+      },
+      {
+       "w": "rate",
+       "from": 251,
+       "to": 258
+      },
+      {
+       "w": "its",
+       "from": 258,
+       "to": 263
+      },
+      {
+       "w": "replies,",
+       "from": 263,
+       "to": 274
+      },
+      {
+       "w": "thumbs",
+       "from": 274,
+       "to": 289
+      },
+      {
+       "w": "up",
+       "from": 289,
+       "to": 293
+      },
+      {
+       "w": "or",
+       "from": 293,
+       "to": 297
+      },
+      {
+       "w": "down.",
+       "from": 297,
+       "to": 309
+      },
+      {
+       "w": "It",
+       "from": 309,
+       "to": 312
+      },
+      {
+       "w": "learns",
+       "from": 312,
+       "to": 353
+      },
+      {
+       "w": "to",
+       "from": 353,
+       "to": 357
+      },
+      {
+       "w": "answer",
+       "from": 357,
+       "to": 366
+      },
+      {
+       "w": "the",
+       "from": 366,
+       "to": 371
+      },
+      {
+       "w": "way",
+       "from": 371,
+       "to": 376
+      },
+      {
+       "w": "people",
+       "from": 376,
+       "to": 385
+      },
+      {
+       "w": "prefer.",
+       "from": 385,
+       "to": 395
+      },
+      {
+       "w": "Now",
+       "from": 395,
+       "to": 400
+      },
+      {
+       "w": "it's",
+       "from": 400,
+       "to": 437
+      },
+      {
+       "w": "a",
+       "from": 437,
+       "to": 440
+      },
+      {
+       "w": "chat",
+       "from": 440,
+       "to": 446
+      },
+      {
+       "w": "assistant.",
+       "from": 446,
+       "to": 464
+      }
+     ],
+     "cues": {
+      "1": 145,
+      "2": 228,
+      "3": 309,
+      "4": 395
+     }
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "type": "glossary",
+   "data": {
+    "terms": [
+     [
+      "Parameters",
+      "billions of tiny settings tuned while learning",
+      1,
+      "SlidersHorizontal"
+     ],
+     [
+      "Hallucination",
+      "a confident answer that's wrong",
+      2,
+      "Ghost"
+     ]
+    ],
+    "yt": {
+     "chapter": "Two words",
+     "title": "Words you'll hear everywhere",
+     "notes": [
+      [
+       "Parameters: billions of tuned settings",
+       1
+      ],
+      [
+       "Hallucination: confident but wrong",
+       2
+      ]
+     ]
+    }
+   },
+   "from": 2021,
+   "frames": 333,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_05.wav",
+     "from": 0,
+     "frames": 304,
+     "words": [
+      {
+       "w": "Two",
+       "from": 8,
+       "to": 13
+      },
+      {
+       "w": "words",
+       "from": 13,
+       "to": 21
+      },
+      {
+       "w": "you'll",
+       "from": 21,
+       "to": 30
+      },
+      {
+       "w": "hear",
+       "from": 30,
+       "to": 37
+      },
+      {
+       "w": "everywhere.",
+       "from": 37,
+       "to": 52
+      },
+      {
+       "w": "Parameters,",
+       "from": 52,
+       "to": 99
+      },
+      {
+       "w": "billions",
+       "from": 99,
+       "to": 111
+      },
+      {
+       "w": "of",
+       "from": 111,
+       "to": 115
+      },
+      {
+       "w": "tiny",
+       "from": 115,
+       "to": 122
+      },
+      {
+       "w": "settings",
+       "from": 122,
+       "to": 137
+      },
+      {
+       "w": "it",
+       "from": 137,
+       "to": 141
+      },
+      {
+       "w": "tuned",
+       "from": 141,
+       "to": 159
+      },
+      {
+       "w": "while",
+       "from": 159,
+       "to": 174
+      },
+      {
+       "w": "learning.",
+       "from": 174,
+       "to": 216
+      },
+      {
+       "w": "And",
+       "from": 216,
+       "to": 222
+      },
+      {
+       "w": "hallucination,",
+       "from": 222,
+       "to": 245
+      },
+      {
+       "w": "a",
+       "from": 245,
+       "to": 248
+      },
+      {
+       "w": "confident",
+       "from": 248,
+       "to": 261
+      },
+      {
+       "w": "answer",
+       "from": 261,
+       "to": 270
+      },
+      {
+       "w": "that's",
+       "from": 270,
+       "to": 279
+      },
+      {
+       "w": "wrong.",
+       "from": 279,
+       "to": 288
+      }
+     ],
+     "cues": {
+      "1": 52,
+      "2": 216
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "data": {
+    "question": "Does ChatGPT look up answers in a giant database?",
+    "options": [
+     "Yes, a giant database",
+     "No, it predicts the next word",
+     "It searches Google every time"
+    ],
+    "answer": 1,
+    "yt": {
+     "chapter": "Quick test",
+     "title": "Database or prediction?",
+     "notes": [
+      [
+       "It predicts, it doesn't look up",
+       1
+      ],
+      [
+       "Even with web search it writes word by word",
+       2
+      ]
+     ]
+    }
+   },
+   "from": 2354,
+   "frames": 568,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_06.wav",
+     "from": 0,
+     "frames": 552,
+     "words": [
+      {
+       "w": "Quick",
+       "from": 7,
+       "to": 51
+      },
+      {
+       "w": "test!",
+       "from": 51,
+       "to": 64
+      },
+      {
+       "w": "Does",
+       "from": 64,
+       "to": 72
+      },
+      {
+       "w": "ChatGPT",
+       "from": 72,
+       "to": 83
+      },
+      {
+       "w": "look",
+       "from": 83,
+       "to": 91
+      },
+      {
+       "w": "up",
+       "from": 91,
+       "to": 102
+      },
+      {
+       "w": "answers",
+       "from": 102,
+       "to": 114
+      },
+      {
+       "w": "in",
+       "from": 114,
+       "to": 118
+      },
+      {
+       "w": "a",
+       "from": 118,
+       "to": 121
+      },
+      {
+       "w": "giant",
+       "from": 121,
+       "to": 130
+      },
+      {
+       "w": "database?",
+       "from": 130,
+       "to": 144
+      },
+      {
+       "w": "No!",
+       "from": 238,
+       "to": 243
+      },
+      {
+       "w": "It",
+       "from": 243,
+       "to": 246
+      },
+      {
+       "w": "predicts",
+       "from": 246,
+       "to": 293
+      },
+      {
+       "w": "the",
+       "from": 293,
+       "to": 301
+      },
+      {
+       "w": "next",
+       "from": 301,
+       "to": 308
+      },
+      {
+       "w": "word",
+       "from": 308,
+       "to": 314
+      },
+      {
+       "w": "from",
+       "from": 314,
+       "to": 324
+      },
+      {
+       "w": "patterns.",
+       "from": 324,
+       "to": 370
+      },
+      {
+       "w": "Even",
+       "from": 370,
+       "to": 376
+      },
+      {
+       "w": "when",
+       "from": 376,
+       "to": 382
+      },
+      {
+       "w": "it",
+       "from": 382,
+       "to": 386
+      },
+      {
+       "w": "searches",
+       "from": 386,
+       "to": 397
+      },
+      {
+       "w": "the",
+       "from": 397,
+       "to": 402
+      },
+      {
+       "w": "web,",
+       "from": 402,
+       "to": 418
+      },
+      {
+       "w": "it",
+       "from": 418,
+       "to": 422
+      },
+      {
+       "w": "still",
+       "from": 422,
+       "to": 430
+      },
+      {
+       "w": "writes",
+       "from": 430,
+       "to": 438
+      },
+      {
+       "w": "word",
+       "from": 438,
+       "to": 445
+      },
+      {
+       "w": "by",
+       "from": 445,
+       "to": 448
+      },
+      {
+       "w": "word.",
+       "from": 448,
+       "to": 484
+      },
+      {
+       "w": "That's",
+       "from": 484,
+       "to": 493
+      },
+      {
+       "w": "why",
+       "from": 493,
+       "to": 498
+      },
+      {
+       "w": "it",
+       "from": 498,
+       "to": 505
+      },
+      {
+       "w": "can",
+       "from": 505,
+       "to": 510
+      },
+      {
+       "w": "be",
+       "from": 510,
+       "to": 514
+      },
+      {
+       "w": "confidently",
+       "from": 514,
+       "to": 529
+      },
+      {
+       "w": "wrong.",
+       "from": 529,
+       "to": 537
+      }
+     ],
+     "cues": {
+      "1": 64,
+      "2": 238
+     }
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "lesson",
+   "data": {
+    "kind": "recap",
+    "points": [
+     [
+      "LLM",
+      "a giant autocomplete"
+     ],
+     [
+      "Pre-training",
+      "trillions of words"
+     ],
+     [
+      "Fine-tuning + feedback",
+      "coached to be helpful"
+     ],
+     [
+      "Hallucination",
+      "can still make things up"
+     ]
+    ],
+    "next": "EP 3 · Tokens & Context Window",
+    "yt": {
+     "chapter": "Recap",
+     "title": "One game, played very well",
+     "notes": [
+      [
+       "Guess the next word",
+       1
+      ],
+      [
+       "Pre-training on trillions of words",
+       2
+      ],
+      [
+       "Fine-tuning + human feedback",
+       3
+      ],
+      [
+       "Next: tokens and context window",
+       5
+      ]
+     ]
+    }
+   },
+   "from": 2922,
+   "frames": 554,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep02v2/line_07.wav",
+     "from": 0,
+     "frames": 525,
+     "words": [
+      {
+       "w": "So:",
+       "from": 7,
+       "to": 12
+      },
+      {
+       "w": "an",
+       "from": 12,
+       "to": 16
+      },
+      {
+       "w": "LLM",
+       "from": 16,
+       "to": 22
+      },
+      {
+       "w": "is",
+       "from": 22,
+       "to": 26
+      },
+      {
+       "w": "a",
+       "from": 26,
+       "to": 28
+      },
+      {
+       "w": "giant",
+       "from": 28,
+       "to": 37
+      },
+      {
+       "w": "autocomplete,",
+       "from": 37,
+       "to": 55
+      },
+      {
+       "w": "trained",
+       "from": 55,
+       "to": 66
+      },
+      {
+       "w": "on",
+       "from": 66,
+       "to": 70
+      },
+      {
+       "w": "trillions",
+       "from": 70,
+       "to": 95
+      },
+      {
+       "w": "of",
+       "from": 95,
+       "to": 99
+      },
+      {
+       "w": "words,",
+       "from": 99,
+       "to": 108
+      },
+      {
+       "w": "then",
+       "from": 108,
+       "to": 120
+      },
+      {
+       "w": "coached",
+       "from": 120,
+       "to": 146
+      },
+      {
+       "w": "to",
+       "from": 146,
+       "to": 150
+      },
+      {
+       "w": "be",
+       "from": 150,
+       "to": 159
+      },
+      {
+       "w": "helpful.",
+       "from": 159,
+       "to": 206
+      },
+      {
+       "w": "And",
+       "from": 206,
+       "to": 212
+      },
+      {
+       "w": "it",
+       "from": 212,
+       "to": 216
+      },
+      {
+       "w": "can",
+       "from": 216,
+       "to": 221
+      },
+      {
+       "w": "still",
+       "from": 221,
+       "to": 229
+      },
+      {
+       "w": "make",
+       "from": 229,
+       "to": 236
+      },
+      {
+       "w": "things",
+       "from": 236,
+       "to": 245
+      },
+      {
+       "w": "up.",
+       "from": 245,
+       "to": 251
+      },
+      {
+       "w": "Next,",
+       "from": 251,
+       "to": 288
+      },
+      {
+       "w": "tokens",
+       "from": 288,
+       "to": 319
+      },
+      {
+       "w": "and",
+       "from": 319,
+       "to": 325
+      },
+      {
+       "w": "the",
+       "from": 325,
+       "to": 330
+      },
+      {
+       "w": "context",
+       "from": 330,
+       "to": 341
+      },
+      {
+       "w": "window,",
+       "from": 341,
+       "to": 352
+      },
+      {
+       "w": "and",
+       "from": 352,
+       "to": 368
+      },
+      {
+       "w": "why",
+       "from": 368,
+       "to": 373
+      },
+      {
+       "w": "AI",
+       "from": 373,
+       "to": 378
+      },
+      {
+       "w": "forgets",
+       "from": 378,
+       "to": 388
+      },
+      {
+       "w": "your",
+       "from": 388,
+       "to": 395
+      },
+      {
+       "w": "name",
+       "from": 395,
+       "to": 402
+      },
+      {
+       "w": "in",
+       "from": 402,
+       "to": 406
+      },
+      {
+       "w": "long",
+       "from": 406,
+       "to": 413
+      },
+      {
+       "w": "chats.",
+       "from": 413,
+       "to": 427
+      },
+      {
+       "w": "Follow,",
+       "from": 427,
+       "to": 442
+      },
+      {
+       "w": "so",
+       "from": 442,
+       "to": 479
+      },
+      {
+       "w": "you",
+       "from": 479,
+       "to": 490
+      },
+      {
+       "w": "don't",
+       "from": 490,
+       "to": 498
+      },
+      {
+       "w": "miss",
+       "from": 498,
+       "to": 504
+      },
+      {
+       "w": "it.",
+       "from": 504,
+       "to": 510
+      }
+     ],
+     "cues": {
+      "1": 12,
+      "2": 55,
+      "3": 108,
+      "4": 206,
+      "5": 251
+     }
+    }
+   ]
+  }
+ ]
+}
