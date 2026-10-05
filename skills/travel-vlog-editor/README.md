@@ -24,7 +24,7 @@ thumbnail, title, description, chapters and subtitles.
 
 ## What's inside
 - `SKILL.md` - the workflow Claude follows
-- `scripts/` - inventory (scan + proxies + scores), sheets (contact sheets), transcribe (speech), beats (music grid),
+- `scripts/` - inventory (scan + proxies + scores), sheets (contact sheets), transcribe (speech), beats (music grid), sfx (licence-free effects),
   cards (brand graphics), render (edit.json -> video), review_pack (self-check), publish_kit (upload kit),
   setup_check
 - `reference/` - craft playbook, edit.json format, GoPro notes, YouTube notes, viewer review prompt

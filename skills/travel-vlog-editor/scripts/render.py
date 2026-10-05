@@ -142,8 +142,19 @@ def overlay_chain(ctx, base_label, pngs, first_input_index, wm=None):
     return g, cur
 
 
+def letterbox(ctx, seg):
+    """Cinematic bars (edit-level "letterbox": 2.39 or 2.0; a segment can set "letterbox": false or its own ratio)."""
+    r = seg.get("letterbox", ctx.e.get("letterbox"))
+    if not r or ctx.H > ctx.W:
+        return []
+    bh = int(max(0, ctx.H - ctx.W / float(r)) / 2)
+    if bh < 2:
+        return []
+    return [f"drawbox=x=0:y=0:w=iw:h={bh}:color=black:t=fill,drawbox=x=0:y=ih-{bh}:w=iw:h={bh}:color=black:t=fill"]
+
+
 def seg_key(ctx, seg, extra=""):
-    blob = json.dumps([seg, ctx.W, ctx.H, ctx.fps, ctx.preview, ctx.brand, extra, 4], sort_keys=True, default=str)
+    blob = json.dumps([seg, ctx.W, ctx.H, ctx.fps, ctx.preview, ctx.brand, extra, ctx.e.get("letterbox"), 4], sort_keys=True, default=str)
     return hashlib.sha1(blob.encode()).hexdigest()[:14]
 
 
@@ -183,6 +194,7 @@ def render_segment(ctx, i, seg):
         n = int(dur * fps)
         vf.append(f"scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,crop={W * 2}:{H * 2},"
                   f"zoompan=z='{z0}+({z1}-{z0})*on/{max(1, n - 1)}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={fps}")
+        vf += letterbox(ctx, seg)
         pngs = text_pngs(ctx, seg, key, dur)
     else:
         inp, info = ctx.source(seg["src"])
@@ -222,6 +234,7 @@ def render_segment(ctx, i, seg):
             af_prog.append(f"volume={gain}dB")
             if seg.get("freeze_end"):
                 af_prog.append(f"apad=pad_dur={float(seg['freeze_end']):.3f}")
+        vf += letterbox(ctx, seg)
         pngs = text_pngs(ctx, seg, key, dur)
     # assemble the filter graph
     in_count = 1

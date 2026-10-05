@@ -13,6 +13,7 @@ The `//` comments below explain fields; real edit.json files must be plain JSON 
   "project": ".",                    // folder with inventory.json (default: this folder)
   "output": "out/logan_guide.mp4",
   "grade": "natural",                // default grade for all footage segments (see grades below)
+  "letterbox": 2.39,                 // optional cinematic bars (2.39 or 2.0); a segment can set "letterbox": false
   "ambient_db": -6,                  // default gain for "keep" (natural sound) segments
   "music_db": -14,                   // default music gain in the gaps (it is ducked further under speech)
   "loudness": -14,                   // integrated LUFS target (YouTube)
@@ -83,6 +84,9 @@ twice (~0.3 s per word, minimum 1.5 s). Don't stack more than two overlays at on
 ],
 "sfx": [{"file": "sfx/whoosh.wav", "at_seg": 9, "offset": -0.2, "gain_db": -8}]
 ```
+- `python scripts/sfx.py <project>/sfx` generates licence-free whoosh / whoosh_short / swish / hit / boom / riser /
+  riser_long / suck / click / shutter. Whoosh starts ~0.2-0.5 s before a slide/zoom cut; a riser ENDS on the cut
+  (offset = -riser length); hit/boom on frame 1 and big reveals.
 - `at_seg` anchors to the start of segment N (0-based) so it survives edits; `offset` shifts it.
 - The music is ducked automatically while `"audio": "voice"` segments play; mark talking segments as `voice`.
 - To land cuts on the beat: read `<track>.beats.json` and choose `in`/`out` so segment boundaries in the final timeline

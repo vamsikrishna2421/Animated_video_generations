@@ -10,7 +10,7 @@ with as little of their time as possible and with two short check-ins (story out
 Everything runs locally with ffmpeg + Python. Scripts live in `scripts/` next to this file (call them by full path:
 `python "<skill_dir>/scripts/inventory.py" ...`).
 
-Read before starting: `reference/craft.md` (how to make it good), `reference/edit_format.md` (the edit.json you write).
+Read before starting: `reference/craft.md` (how to make it good, incl. the modern style), `reference/edit_format.md` (the edit.json you write).
 Read when relevant: `reference/gopro.md` (GoPro files, telemetry, fixes), `reference/youtube.md` (upload specs,
 chapters, end screens, Shorts, titles/thumbnails), `reference/viewer_review.md` (simulated audience review).
 Channel identity: `brand/brand.json` + `brand/CHANNEL.md` (fill in / update once, re-use for every video).
@@ -51,6 +51,7 @@ python scripts/inventory.py <footage_dir> <project_dir>          # groups GoPro 
 python scripts/sheets.py <project_dir>                           # contact sheets per recording
 python scripts/transcribe.py <project_dir> --lang te --model large-v3   # or en / auto; small = fast draft
 python scripts/beats.py <music_file>                             # for every track you may use
+python scripts/sfx.py <project_dir>/sfx                          # licence-free whooshes, hits, risers
 ```
 Then **read every contact sheet** and `transcripts/ALL.md`, and write `<project>/footage_log.md`: for each
 recording - what happens, quality problems (shaky/dark/wind/tilted), the best moments with timestamps, and a verdict

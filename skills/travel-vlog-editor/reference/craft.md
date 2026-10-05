@@ -11,6 +11,26 @@ Guides are searched for and keep earning views for years; scenic vlogs rely on r
 both: a guide as the main video and the most beautiful 30 s as a Short. Combine where natural: a guide told as a
 small story ("I had 3 hours before my flight...") beats a dry list.
 
+## Modern style (the default unless the user wants calm/classic)
+What makes a 2025-26 travel video feel modern - all of it is possible with render.py:
+- **Cold open montage on the beat**: 6-12 shots of the trip's best moments, cut on `beats` (hard cuts, 0.4-1.2 s
+  each), a `hit` on frame 1, a `riser` into the title. Then straight into the story. No slow logo.
+- **Speed ramps**: real-time -> 4x -> real-time across a walk/drive (split a clip into 3 segments: 1x, 4x, 1x; or
+  `speed` 0.5 on the payoff moment). Hyperlapse between places instead of a plain cut.
+- **Punch-ins**: `zoom_to` 1.08-1.15 slow push on scenic shots; a sudden `zoom` 1.2 cut-in on a reaction or a detail.
+- **Match cuts / motion cuts**: cut from a moving shot to another moving the same direction, or object to object
+  (door -> door, water -> water); `whoosh_short` on fast lateral cuts, `smoothleft`/`slideleft` sparingly.
+- **Sound design**: layer natural sound (water, wind in trees, footsteps, a bell) under the music; drop the music for
+  1-2 s on a big view, then bring it back on a beat. SFX from `sfx.py` 6-12 dB under the music.
+- **Minimal kinetic titles**: `big` for 1-3 words (place names), `location` tags, numbers as `counter`; short on
+  screen, never paragraphs. Consistent brand colours.
+- **Cinematic look**: `"letterbox": 2.39` for scenic vlogs (not for guides with lots of text), `golden`/`warm` grade
+  on foliage and sunsets, `cool` for mist/water; same grade within a chapter.
+- **J/L cuts for talking**: start a speaker's audio under the previous shot (split a segment and keep `audio: voice`
+  on the b-roll) so dialogue flows instead of hard jumps.
+- **Pacing**: 2-3 s average shot in montages and transitions, longer only for speech or one "breathe" shot per chapter.
+- Don't overdo it: one style trick per moment; if everything whooshes, nothing does.
+
 ## Structure
 **Hook (0-15 s)**: open on the strongest moment or the problem, then the promise in one line.
 - Guide: "This is the cheapest way from Worcester to Logan airport - two tickets, one transfer, about 90 minutes.
