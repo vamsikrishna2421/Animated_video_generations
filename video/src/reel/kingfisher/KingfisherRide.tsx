@@ -228,7 +228,7 @@ export const KingfisherRide: React.FC<{ handle?: string; credit?: string }> = ({
       <AbsoluteFill style={{ background: "black", opacity: endDim }} />
       <Title T={T} a={30.8} b={33.6} top={1040} size={50}>
         <div style={{ fontSize: 46, fontWeight: 800, letterSpacing: 3, lineHeight: 1.25 }}>AI-WRITTEN CODE.<br />NO 3D MODELS.</div>
-        <div style={{ marginTop: 34, fontSize: 80, fontWeight: 800, color: "#7dd3fc" }}>{handle}</div>
+        <div style={{ marginTop: 34, fontSize: handle.length > 16 ? 60 : 80, fontWeight: 800, color: "#7dd3fc" }}>{handle}</div>
         <div style={{ marginTop: 18, fontSize: 34, opacity: 0.9 }}>Follow for more AI builds</div>
         {credit ? <div style={{ marginTop: 22, fontSize: 30, opacity: 0.8 }}>{credit}</div> : null}
       </Title>
