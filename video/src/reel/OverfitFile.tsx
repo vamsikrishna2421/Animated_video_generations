@@ -62,18 +62,18 @@ const OfHook: React.FC<SP> = ({ cue }) => {
 const OfAnswerKey: React.FC<SP> = ({ cue }) => {
   const f = useCurrentFrame();
   const key = cue(1), practice = cue(2), change = cue(3), lost = cue(4);
-  const keyS = useSpAt(key, 13), prS = useSpAt(practice, 13), exS = useSpAt(change, 13);
+  const keyS = useSpAt(0, 13), prS = useSpAt(practice, 13), exS = useSpAt(change, 13);
   const answers = ["Q1: TRUE", "Q2: FALSE", "Q3: FALSE", "Q4: TRUE"];
   return (
     <AbsoluteFill>
       <Board />
       <Tag t="EVIDENCE A · THE ANSWER KEY" />
-      <div style={{ position: "absolute", left: 70, top: 360, width: 440, height: 520, background: "#fef3c7", transform: `rotate(-3deg) scale(${0.6 + 0.4 * keyS})`, opacity: f >= key ? 1 : 0.2, boxShadow: "0 14px 28px rgba(0,0,0,0.45)", padding: 30 }}>
+      <div style={{ position: "absolute", left: 70, top: 360, width: 440, height: 520, background: "#fef3c7", transform: `rotate(-3deg) scale(${0.6 + 0.4 * keyS})`, opacity: 1, boxShadow: "0 14px 28px rgba(0,0,0,0.45)", padding: 30 }}>
         <Pin x={220} y={4} />
         <div style={{ fontFamily: C.anton, fontSize: 52, color: C.ink }}>ANSWER KEY</div>
-        <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 26, color: "#92400e", marginBottom: 16 }}>memorised, not understood</div>
+        <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 32, color: "#92400e", marginBottom: 12 }}>memorised, not understood</div>
         {answers.map((a, i) => (
-          <div key={a} style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 40, color: C.ink, marginTop: 12, opacity: interpolate(f, [key + i * 4, key + i * 4 + 6], [0, 1], cl) }}>{a}</div>
+          <div key={a} style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 40, marginTop: 12, opacity: interpolate(f, [4 + i * 5, 10 + i * 5], [0, 1], cl), color: f >= key ? "#b45309" : C.ink }}>{a}</div>
         ))}
       </div>
       <div style={{ position: "absolute", left: 560, top: 380, width: 450, height: 500, background: C.paper, transform: `rotate(2deg) scale(${0.6 + 0.4 * prS})`, opacity: f >= practice ? 1 : 0, boxShadow: "0 14px 28px rgba(0,0,0,0.45)", padding: 30 }}>
@@ -89,7 +89,7 @@ const OfAnswerKey: React.FC<SP> = ({ cue }) => {
       {f >= change && (
         <div style={{ position: "absolute", left: 110, right: 110, top: 960, background: C.paper, transform: `translateY(${(1 - exS) * 500}px) rotate(-1deg)`, boxShadow: "0 14px 28px rgba(0,0,0,0.45)", padding: "26px 34px" }}>
           <Pin x={430} y={4} c={C.red} />
-          <div style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 28, color: "#b45309", letterSpacing: 2 }}>REAL EXAM · SAME TOPIC, NEW WORDING</div>
+          <div style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 32, color: "#b45309", letterSpacing: 1 }}>REAL EXAM · SAME TOPIC, NEW WORDING</div>
           {["The same question, asked a new way", "A new example of the same idea"].map((q, i) => (
             <div key={q} style={{ display: "flex", justifyContent: "space-between", gap: 20, fontFamily: C.inter, fontWeight: 800, fontSize: 34, color: C.ink, marginTop: 18 }}>
               <span>{q}</span><span style={{ color: C.red, opacity: f >= lost + i * 5 ? 1 : 0 }}>✗</span>
@@ -132,7 +132,7 @@ const Graph: React.FC<{ y: number; kind: "over" | "under" | "right"; at: number;
       </svg>
       <div style={{ position: "absolute", left: 650, right: 24, top: 70 }}>
         <div style={{ fontFamily: C.anton, fontSize: 56, color: on ? col : C.muted, lineHeight: 1 }}>{label}</div>
-        <div style={{ marginTop: 12, fontFamily: C.inter, fontWeight: 800, fontSize: 28, color: "#475569", opacity: on ? 1 : 0 }}>{sub}</div>
+        <div style={{ marginTop: 10, fontFamily: C.inter, fontWeight: 800, fontSize: 33, lineHeight: 1.15, color: "#475569", opacity: on ? 1 : 0 }}>{sub}</div>
       </div>
       <Tick at={at} />
     </div>
@@ -159,14 +159,14 @@ const OfGap: React.FC<SP> = ({ cue }) => {
   const ptr = Array.from({ length: N + 1 }, (_, i) => [px(i / N), py(tr(i / N))]);
   const pva = Array.from({ length: N + 1 }, (_, i) => [px(i / N), py(va(i / N))]);
   const d = (pts: number[][]) => pts.map((q, i) => `${i ? "L" : "M"}${q[0]},${q[1]}`).join(" ");
-  const pT = interpolate(f, [train, train + 24], [0, 1], cl), pV = interpolate(f, [val, val + 24], [0, 1], cl);
+  const pT = interpolate(f, [two, train + 10], [0, 1], cl), pV = interpolate(f, [val, val + 24], [0, 1], cl);
   const gap = interpolate(f, [stop, stop + 12], [0, 1], cl);
   const area = `M${px(0.42)},${py(tr(0.42))} ` + ptr.filter((q) => q[0] >= px(0.42)).map((q) => `L${q[0]},${q[1]}`).join(" ") + " " + [...pva].reverse().filter((q) => q[0] >= px(0.42)).map((q) => `L${q[0]},${q[1]}`).join(" ") + " Z";
   return (
     <AbsoluteFill>
       <Board />
       <Tag t="EVIDENCE C · THE ALARM" />
-      <div style={{ position: "absolute", left: 60, top: 360, width: 960, height: 760, background: C.paper, boxShadow: "0 14px 28px rgba(0,0,0,0.45)", opacity: f >= two ? 1 : 0.35 }}>
+      <div style={{ position: "absolute", left: 60, top: 360, width: 960, height: 760, background: C.paper, boxShadow: "0 14px 28px rgba(0,0,0,0.45)" }}>
         <Pin x={480} y={6} />
         <svg width={W} height={H} style={{ position: "absolute", left: 30, top: 60 }}>
           <line x1={80} y1={H - 60} x2={W - 20} y2={H - 60} stroke="#94a3b8" strokeWidth={3} />
@@ -184,7 +184,7 @@ const OfGap: React.FC<SP> = ({ cue }) => {
       </div>
       <Note y={1200} rot={1} bg={C.paper}>
         <div style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 40, color: C.ink, textAlign: "center" }}>
-          {f < stop ? "Practice score up… unseen score?" : <>When the scores <span style={{ color: C.red }}>split apart</span>, stop training.</>}
+          {f < stop ? "Two scores: practice vs unseen data" : <>When the unseen score <span style={{ color: C.red }}>starts falling</span>, stop.</>}
         </div>
       </Note>
       <Tick at={train} /><Tick at={val} /><Thud at={stop} />
@@ -216,7 +216,7 @@ const OfFixes: React.FC<SP> = ({ cue }) => {
             <Icon name={icon} size={90} color={col} stroke={2.6} />
             <div>
               <div style={{ fontFamily: C.anton, fontSize: 60, color: C.ink }}>{t}</div>
-              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 32, color: "#475569" }}>{sub}</div>
+              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 36, color: "#475569" }}>{sub}</div>
             </div>
             <Tick at={at} />
           </div>
@@ -232,7 +232,7 @@ const OfFixes: React.FC<SP> = ({ cue }) => {
             <Icon name={icon} size={90} color={col} stroke={2.6} />
             <div>
               <div style={{ fontFamily: C.anton, fontSize: 60, color: C.ink }}>{t}</div>
-              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 32, color: "#475569" }}>{sub}</div>
+              <div style={{ fontFamily: C.inter, fontWeight: 700, fontSize: 36, color: "#475569" }}>{sub}</div>
             </div>
             <Thud at={under} />
           </div>

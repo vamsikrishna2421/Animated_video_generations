@@ -46,8 +46,8 @@
      "who": "maastaaru",
      "file": "01_hook.wav",
      "maxgap": 0.45,
-     "text": "ఈ ఎ ఐ ప్రాక్టీస్ లో వంద శాతం తెచ్చుకుంది. [1] తర్వాత అసలు ఎగ్జామ్ వచ్చింది... [2] యాభై రెండు శాతం. అవును కాదు టెస్ట్ లో, అది దాదాపు గెస్ చేసినట్టే. [3] ఏం తప్పు జరిగింది?",
-     "show": "This AI scored 100% in practice. Then came the real exam... 52%. On a yes-or-no test, that's barely better than guessing. What went wrong?"
+     "text": "ప్రాక్టీస్ లో వంద శాతం. [1] తర్వాత, అసలు ఎగ్జామ్... [2] యాభై రెండు శాతం. అవును కాదు టెస్ట్ లో, అది దాదాపు గెస్ చేసినట్టే. [3] ఏం తప్పు జరిగింది?",
+     "show": "100% in practice. Then, the real exam... 52%. On a yes-or-no test, that's barely better than guessing. What went wrong?"
     }
    ]
   },
@@ -80,8 +80,8 @@
      "who": "maastaaru",
      "file": "02_key.wav",
      "maxgap": 0.45,
-     "text": "ఇది ఆన్సర్ కీ బట్టీ పట్టిన స్టూడెంట్ లాంటిది. [1] ప్రశ్న ఒకటి: ట్రూ. ప్రశ్న రెండు: ఫాల్స్. [2] ప్రాక్టీస్ పేపర్ లో పర్ఫెక్ట్ స్కోర్. [3] కానీ ప్రశ్నలు కొంచెం మారిస్తే... [4] ఏమీ రాదు. ఎ ఐ లో దీన్ని ఓవర్ ఫిట్టింగ్ అంటారు.",
-     "show": "It's like a student who memorises the answer key. Question one: true. Question two: false. A perfect score on the practice paper. But change the questions a little... and they're lost. In AI, this is called overfitting."
+     "text": "ఇది ఆన్సర్ కీ [1] బట్టీ పట్టిన స్టూడెంట్ లాంటిది. [2] ప్రాక్టీస్ పేపర్ లో పర్ఫెక్ట్ స్కోర్. [3] కానీ ప్రశ్నలు కొంచెం మారిస్తే... [4] ఏమీ రాదు. ఎ ఐ లో దీన్ని ఓవర్ ఫిట్టింగ్ అంటారు.",
+     "show": "It's like a student who memorises the answer key. A perfect score on the practice paper. But change the questions a little... and they're lost. In AI, this is called overfitting."
     }
    ]
   },
@@ -137,7 +137,7 @@
        3
       ],
       [
-       "When they split, stop training (early stopping)",
+       "Stop when the validation score starts falling (early stopping)",
        4
       ]
      ]
@@ -148,8 +148,8 @@
      "who": "maastaaru",
      "file": "04_gap.wav",
      "maxgap": 0.45,
-     "text": "మరి దీన్ని ఎలా పట్టుకోవాలి? [1] ట్రైనింగ్ జరిగేటప్పుడు రెండు స్కోర్లు చూడండి. [2] ప్రాక్టీస్ స్కోర్ పెరుగుతూనే ఉంటుంది. [3] కానీ వాలిడేషన్ స్కోర్, అంటే ఎప్పుడూ చూడని డేటా మీద స్కోర్, తగ్గడం మొదలవుతుంది. [4] రెండూ విడిపోయినప్పుడు, అక్కడే ట్రైనింగ్ ఆపేయండి.",
-     "show": "So how do you catch it? Watch two scores while it trains. The practice score keeps climbing. But the validation score, on data it has never seen, starts to fall. When they split apart, stop training right there."
+     "text": "మరి దీన్ని ఎలా పట్టుకోవాలి? [1] ట్రైనింగ్ జరిగేటప్పుడు రెండు స్కోర్లు చూడండి. [2] ప్రాక్టీస్ స్కోర్ పెరుగుతూనే ఉంటుంది. [3] కానీ వాలిడేషన్ స్కోర్, అంటే ఎప్పుడూ చూడని డేటా మీద స్కోర్, పెరిగి... తర్వాత తగ్గడం మొదలవుతుంది. [4] అది తగ్గిన వెంటనే, ట్రైనింగ్ ఆపేయండి.",
+     "show": "So how do you catch it? Watch two scores while it trains. The practice score keeps climbing. But the validation score, on data it has never seen, peaks... and starts to fall. The moment it falls, stop training."
     }
    ]
   },
@@ -197,7 +197,7 @@
      "title": "Crack this case",
      "notes": [
       [
-       "Practice 55%, new data 53%",
+       "Same yes/no test: practice 55%, new data 53%",
        0
       ],
       [
@@ -210,7 +210,7 @@
       ]
      ]
     },
-    "question": "Practice score 55%. New data 53%. What's wrong with this model?",
+    "question": "Same yes/no test: practice 55%, new data 53%. What's wrong with this model?",
     "options": [
      "Overfitting",
      "Underfitting",
@@ -223,13 +223,13 @@
      "who": "maastaaru",
      "file": "06_quiz.wav",
      "maxgap": 0.45,
-     "text": "ఇప్పుడు మీ వంతు, డిటెక్టివ్. ఒక మోడల్ ప్రాక్టీస్ లో యాభై ఐదు శాతం, కొత్త డేటా మీద యాభై మూడు శాతం తెచ్చుకుంది. [1] ఓవర్ ఫిట్టింగ్ ఆ, అండర్ ఫిట్టింగ్ ఆ? <pause 3.5> [2] అండర్ ఫిట్టింగ్! రెండు స్కోర్లూ తక్కువే. అది ప్యాటర్న్ ని అసలు నేర్చుకోలేదు.",
-     "tts": "ఇప్పుడు మీ వంతు, డిటెక్టివ్. ఒక మోడల్ ప్రాక్టీస్ లో యాభై ఐదు శాతం, కొత్త డేటా మీద యాభై మూడు శాతం తెచ్చుకుంది. ఓవర్ ఫిట్టింగ్ ఆ, అండర్ ఫిట్టింగ్ ఆ?",
+     "text": "ఇప్పుడు మీ వంతు, డిటెక్టివ్. అదే అవును కాదు టెస్ట్. ఒక మోడల్ ప్రాక్టీస్ లో యాభై ఐదు శాతం, కొత్త డేటా మీద యాభై మూడు శాతం తెచ్చుకుంది. [1] ఓవర్ ఫిట్టింగ్ ఆ, అండర్ ఫిట్టింగ్ ఆ? <pause 3.5> [2] అండర్ ఫిట్టింగ్! ప్రాక్టీస్ లో కూడా స్కోర్ తక్కువే. అది ప్యాటర్న్ ని అసలు నేర్చుకోలేదు.",
+     "tts": "ఇప్పుడు మీ వంతు, డిటెక్టివ్. అదే అవును కాదు టెస్ట్. ఒక మోడల్ ప్రాక్టీస్ లో యాభై ఐదు శాతం, కొత్త డేటా మీద యాభై మూడు శాతం తెచ్చుకుంది. ఓవర్ ఫిట్టింగ్ ఆ, అండర్ ఫిట్టింగ్ ఆ?",
      "file2": "06_quiz_answer.wav",
-     "tts2": "అండర్ ఫిట్టింగ్! రెండు స్కోర్లూ తక్కువే. అది ప్యాటర్న్ ని అసలు నేర్చుకోలేదు.",
+     "tts2": "అండర్ ఫిట్టింగ్! ప్రాక్టీస్ లో కూడా స్కోర్ తక్కువే. అది ప్యాటర్న్ ని అసలు నేర్చుకోలేదు.",
      "pause": 3.5,
      "gap": 0.1,
-     "show": "Your turn, detective. A model scores 55% in practice, and 53% on new data. Overfitting, or underfitting? <pause 3.5> Underfitting! Both scores are low. It never learned the pattern at all."
+     "show": "Your turn, detective. Same yes-or-no test. A model scores 55% in practice, and 53% on new data. Overfitting, or underfitting? <pause 3.5> Underfitting! Both scores are low, even in practice. It never learned the pattern."
     }
    ]
   },

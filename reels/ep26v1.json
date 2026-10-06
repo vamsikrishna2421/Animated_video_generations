@@ -45,7 +45,7 @@
      "who": "maastaaru",
      "file": "01_hook.wav",
      "maxgap": 0.4,
-     "text": "This AI scored a hundred percent in practice. [1] Then came the real exam... [2] fifty-two percent. On a yes-or-no test, that's barely better than guessing. [3] What went wrong?"
+     "text": "A hundred percent in practice. [1] Then, the real exam... [2] fifty-two percent. On a yes-or-no test, that's barely better than guessing. [3] What went wrong?"
     }
    ]
   },
@@ -78,7 +78,7 @@
      "who": "maastaaru",
      "file": "02_key.wav",
      "maxgap": 0.4,
-     "text": "It's like a student who memorises the answer key. [1] Question one: true. Question two: false. [2] A perfect score on the practice paper. [3] But change the questions a little... [4] and they're lost. In AI, this is called overfitting."
+     "text": "It's like a student who [1] memorises the answer key. [2] A perfect score on the practice paper. [3] But change the questions a little... [4] and they're lost. In AI, this is called overfitting."
     }
    ]
   },
@@ -133,7 +133,7 @@
        3
       ],
       [
-       "When they split, stop training (early stopping)",
+       "Stop when the validation score starts falling (early stopping)",
        4
       ]
      ]
@@ -144,7 +144,7 @@
      "who": "maastaaru",
      "file": "04_gap.wav",
      "maxgap": 0.4,
-     "text": "So how do you catch it? [1] Watch two scores while it trains. [2] The practice score keeps climbing. [3] But the validation score, on data it has never seen, starts to fall. [4] When they split apart, stop training right there."
+     "text": "So how do you catch it? [1] Watch two scores while it trains. [2] The practice score keeps climbing. [3] But the validation score, on data it has never seen, peaks... and starts to fall. [4] The moment it falls, stop training."
     }
    ]
   },
@@ -191,7 +191,7 @@
      "title": "Crack this case",
      "notes": [
       [
-       "Practice 55%, new data 53%",
+       "Same yes/no test: practice 55%, new data 53%",
        0
       ],
       [
@@ -204,7 +204,7 @@
       ]
      ]
     },
-    "question": "Practice score 55%. New data 53%. What's wrong with this model?",
+    "question": "Same yes/no test: practice 55%, new data 53%. What's wrong with this model?",
     "options": [
      "Overfitting",
      "Underfitting",
@@ -217,10 +217,10 @@
      "who": "maastaaru",
      "file": "06_quiz.wav",
      "maxgap": 0.4,
-     "text": "Your turn, detective. A model scores fifty-five percent in practice, and fifty-three on new data. [1] Overfitting, or underfitting? <pause 3.5> [2] Underfitting! Both scores are low. It never learned the pattern at all.",
-     "tts": "Your turn, detective. A model scores fifty-five percent in practice, and fifty-three on new data. Overfitting, or underfitting?",
+     "text": "Your turn, detective. Same yes-or-no test. A model scores fifty-five percent in practice, and fifty-three on new data. [1] Overfitting, or underfitting? <pause 3.5> [2] Underfitting! Both scores are low, even in practice. It never learned the pattern.",
+     "tts": "Your turn, detective. Same yes-or-no test. A model scores fifty-five percent in practice, and fifty-three on new data. Overfitting, or underfitting?",
      "file2": "06_quiz_answer.wav",
-     "tts2": "Underfitting! Both scores are low. It never learned the pattern at all.",
+     "tts2": "Underfitting! Both scores are low, even in practice. It never learned the pattern.",
      "pause": 3.5,
      "gap": 0.1
     }
@@ -265,7 +265,8 @@
      "who": "maastaaru",
      "file": "07_outro.wav",
      "maxgap": 0.4,
-     "text": "Case closed. [1] Overfitting memorises. Underfitting never learns. The goal is to generalise. [2] Next: the key idea behind ChatGPT... attention. Follow, so you don't miss it."
+     "text": "Case closed. [1] Overfitting memorises. Underfitting never learns. The goal is to generalise. [2] Next: the key idea behind ChatGPT... attention. Follow, so you don't miss it.",
+     "tts": "Case closed. Overfitting memorises. Underfitting never learns. The goal is to generalise. Next: the key idea behind Chat G P T... attention. Follow, so you don't miss it."
     }
    ]
   }

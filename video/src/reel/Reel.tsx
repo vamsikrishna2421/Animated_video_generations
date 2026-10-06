@@ -33,10 +33,10 @@ const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
 type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
-// Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last 12 s into the CTA), plus a hit in the first second.
+// Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last ~28% into the CTA), plus a hit in the first second.
 const musicArc = (tl: ReelTimeline, f: number) => {
   if (!tl.musicLift) return 1;
-  const end = tl.totalFrames, lift = 12 * tl.fps;
+  const end = tl.totalFrames, lift = Math.max(12 * tl.fps, 0.28 * end);  // rises through the quiz, the recap and the CTA
   const hit = interpolate(f, [0, 0.4 * tl.fps, 1.2 * tl.fps], [1.7, 1.7, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const rise = interpolate(f, [end - lift, end - 2 * tl.fps], [1, tl.musicLift], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return hit * rise;

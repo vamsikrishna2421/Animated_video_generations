@@ -352,7 +352,7 @@ const CaseClosed: React.FC<SP> = ({ s, cue }) => {
         <div style={{ position: "absolute", left: 40, top: 40, fontFamily: C.mono, fontWeight: 800, fontSize: 30, color: "#78350f", letterSpacing: 3 }}>{s.data.fileTag ?? "CASE FILE #25 · TRAINING DATA"}</div>
         <div style={{ position: "absolute", left: 40, right: 40, top: 110, display: "flex", flexDirection: "column", gap: 22 }}>
           {(s.data.points ?? []).map((p: string, i: number) => (
-            <div key={p} style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 38, color: C.ink, opacity: interpolate(f, [8 + i * 6, 14 + i * 6], [0, 1], cl) }}>• {p}</div>
+            <div key={p} style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 42, color: C.ink, opacity: interpolate(f, [8 + i * 6, 14 + i * 6], [0, 1], cl) }}>• {p}</div>
           ))}
         </div>
       </div>
@@ -365,7 +365,7 @@ const CaseClosed: React.FC<SP> = ({ s, cue }) => {
       {f >= next && (
         <div style={{ position: "absolute", left: 90, right: 90, top: 1100, background: C.paper, padding: "20px 28px", transform: `translateY(${(1 - nextS) * 200}px) rotate(1deg)`, boxShadow: "0 12px 24px rgba(0,0,0,0.45)", display: "flex", alignItems: "center", gap: 20 }}>
           <div style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 26, color: "#b45309" }}>NEXT CASE<br />{s.data.nextEp ?? "EP 26"}</div>
-          <div style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 36, color: C.ink }}>{s.data.nextText ?? "The AI that memorised every answer… and still failed."}</div>
+          <div style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 40, color: C.ink }}>{s.data.nextText ?? "The AI that memorised every answer… and still failed."}</div>
         </div>
       )}
       {f >= follow && (
