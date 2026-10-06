@@ -25,7 +25,7 @@ import blender_kingfisher as bk  # noqa: E402
 FPS, DUR = 24, 30.0
 # Cycles + AgX reads the three.js palette darker: lift the structural blues and calm the orange
 bk.P.update(cyan=bk.hexc("#2fe6f7"), cyanDeep=bk.hexc("#12b9dc"), wing=bk.hexc("#1a8fae"), crown=bk.hexc("#2277c4"),
-            crownBar=bk.hexc("#8fdcff"), malar=bk.hexc("#2070b8"), orange=bk.hexc("#f39a2c"), orangeDeep=bk.hexc("#e0761c"), orangeLight=bk.hexc("#f8b45a"))
+            crownBar=bk.hexc("#8fdcff"), malar=bk.hexc("#2070b8"), orange=bk.hexc("#ef8a22"), orangeDeep=bk.hexc("#d96a16"), orangeLight=bk.hexc("#f6a94c"))
 NFRAMES = int(FPS * DUR)
 OUTDIR = ROOT / "out" / "local" / "bk_film"
 C3 = Matrix(((1, 0, 0), (0, 0, -1), (0, 1, 0)))  # three.js -> Blender
@@ -392,7 +392,7 @@ class Bird:
         body.data.materials.append(bk.plumage_mat("Plumage"))
         body.parent = self.root
         cards = bk.plumage_cards(rows=112, per=124)
-        cards.data.materials.append(bk.plumage_mat("PlumeCards", rough=0.45, sheen=0.25, coat=0.3, bump=0.08))
+        cards.data.materials.append(bk.plumage_mat("PlumeCards", rough=0.45, sheen=0.25, coat=0.3, bump=0.03))
         cards.parent = self.root
         billm = bk.simple_mat("Bill", bk.srgb("#121214"), rough=0.25, coat=0.7)
         self.lower = None
@@ -784,7 +784,7 @@ def setup(res, samples):
     sc.render.image_settings.quality = 95
     sc.view_settings.view_transform = "AgX"
     sc.view_settings.look = "AgX - Punchy"
-    sc.view_settings.exposure = 0.4
+    sc.view_settings.exposure = 0.15
     cam_d = bpy.data.cameras.new("Cam")
     cam_d.sensor_fit = "VERTICAL"
     cam_d.dof.use_dof = True

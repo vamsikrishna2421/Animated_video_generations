@@ -182,7 +182,7 @@ def plumage_cards(name="Plumage", rows=78, per=96):
             s_ = (i + rng.random() * 0.8) / rows * 0.965 + 0.02
             th = (j + (i % 2) * 0.5 + rng.random() * 0.4) / per * math.pi * 2
             p = surf(s_, th)
-            if any((p - e).length < 0.045 for e in EYES3):
+            if any((p - e).length < 0.034 for e in EYES3):
                 continue
             # local frame: normal n, tangent t pointing to the tail, bitangent b
             ps, pt = surf(min(1, s_ + 0.004), th), surf(s_, th + 0.01)
@@ -195,7 +195,7 @@ def plumage_cards(name="Plumage", rows=78, per=96):
             size = (0.04 - 0.022 * head) * (0.88 + rng.random() * 0.24)
             L, W = size * 1.15, size
             base_c = body_color(s_, th)
-            k = 0.94 + rng.random() * 0.1
+            k = 0.97 + rng.random() * 0.06
             base_c = tuple(min(1, c * k) for c in base_c[:3]) + (1,)
             grid = []
             for a in range(L_SEG + 1):
@@ -204,9 +204,9 @@ def plumage_cards(name="Plumage", rows=78, per=96):
                 row = []
                 for c_ in range(W_SEG + 1):
                     v = c_ / W_SEG * 2 - 1
-                    lift = 0.004 + 0.18 * L * u * u - 0.02 * L * v * v  # tips lift slightly off the body, cupped
+                    lift = 0.0025 + 0.06 * L * u * u - 0.01 * L * v * v  # tips lie close to the body, barely cupped
                     q = p - t * (L * 0.25) + t * (u * L) + b * (v * w * 0.5) + n * lift
-                    shade = 0.8 + 0.2 * smooth(0.0, 0.6, u)  # slightly darker base, lit tip
+                    shade = 0.9 + 0.1 * smooth(0.0, 0.6, u)  # slightly darker base, lit tip
                     cc = tuple(x * shade for x in base_c[:3]) + (1,)
                     row.append((bm.verts.new(to_bl(q)), cc))
                 grid.append(row)
