@@ -40,6 +40,8 @@ import { BossReel, BOSS_REEL_LEN } from "./reel/BossReel";
 import { MJReel, MJ_REEL_LEN } from "./reel/MJReel";
 import { Robot3D, ROBOT_LEN } from "./reel/Robot3D";
 import { RobotSolo, ROBOT_SOLO_LEN } from "./reel/RobotSolo";
+import { KingfisherStudio } from "./reel/kingfisher/Studio";
+import { KingfisherRide, KF_LEN } from "./reel/kingfisher/KingfisherRide";
 import { FM_LEN, FumbleMaking, FumbleMakingProps, FumbleSketch, SKETCH_LEN } from "./reel/FumbleMaking";
 
 export const RemotionRoot: React.FC = () => (
@@ -105,6 +107,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="FumbleSheet" component={FumbleSheet} durationInFrames={120} fps={30} width={1080} height={1920} />
     <Composition id="YeshDance" component={YeshDance} durationInFrames={YESH_LEN} fps={30} width={1080} height={1920} />
     <Composition id="YeshFull" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_FULL_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true, handle: "@ai_maastaaru_telugu" }} />
+    <Composition id="KingfisherRide" component={KingfisherRide as unknown as React.FC<Record<string, unknown>>} durationInFrames={KF_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru", credit: "" }} />
+    <Composition id="KingfisherStudio" component={KingfisherStudio as unknown as React.FC<Record<string, unknown>>} durationInFrames={300} fps={30} width={1080} height={1080} defaultProps={{ view: "spin" }} />
     <Composition id="RobotSolo" component={RobotSolo as unknown as React.FC<Record<string, unknown>>} durationInFrames={ROBOT_SOLO_LEN} fps={30} width={1080} height={1920} defaultProps={{ check: false }} />
     <Composition id="Robot3D" component={Robot3D as unknown as React.FC<Record<string, unknown>>} durationInFrames={ROBOT_LEN} fps={30} width={1080} height={1920} />
     <Composition id="MJReel" component={MJReel as unknown as React.FC<Record<string, unknown>>} durationInFrames={MJ_REEL_LEN} fps={30} width={1080} height={1920} />
