@@ -780,6 +780,8 @@ def setup(res, samples):
     sc.render.fps = FPS
     sc.render.use_motion_blur = True
     sc.render.motion_blur_shutter = 0.5
+    sc.render.image_settings.file_format = "JPEG"
+    sc.render.image_settings.quality = 95
     sc.view_settings.view_transform = "AgX"
     sc.view_settings.look = "AgX - Punchy"
     sc.view_settings.exposure = 0.4
@@ -865,17 +867,17 @@ def main():
     if a.stills:
         for s in a.stills.split(","):
             T = float(s)
-            p = out / f"still_{T:05.2f}.png"
+            p = out / f"still_{T:05.2f}.jpg"
             t1 = time.time()
             render_frame(bird, splash, cam, int(round(T * FPS)), p)
             print(f"still {T} -> {p} ({time.time() - t1:.0f} s)", flush=True)
     if a.render:
         for f in range(a.start, a.end + 1):
-            p = out / f"f{f:04d}.png"
+            p = out / f"f{f:04d}.jpg"
             if p.exists() and p.stat().st_size > 0:
                 continue
             t1 = time.time()
-            tmp = out / f"tmp_{f:04d}.png"
+            tmp = out / f"tmp_{f:04d}.jpg"
             render_frame(bird, splash, cam, f, tmp)
             tmp.rename(p)
             print(f"frame {f} ({time.time() - t1:.0f} s)", flush=True)
