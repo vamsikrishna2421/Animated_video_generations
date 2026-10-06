@@ -18,6 +18,8 @@ import bmesh
 from mathutils import Vector, Matrix, Euler
 
 ROOT = Path(__file__).resolve().parent.parent
+NO: set = set()
+YES: set = set()
 random.seed(26)
 
 # ---------- palette (linear-ish sRGB; Blender converts) ----------
@@ -144,6 +146,80 @@ def sweep_mesh(name, rings, seg, colfn, cap=True):
     return ob
 
 
+# ---------- contour feathers: thousands of overlapping cards laid over the body surface ----------
+def surf(s_, th):
+    rx, ry = prof_at(s_)
+    c = catmull(SPINE, s_)
+    e = 1e-3
+    fwd = (catmull(SPINE, min(1, s_ + e)) - catmull(SPINE, max(0, s_ - e))).normalized()
+    side = Vector((1, 0, 0))
+    up = fwd.cross(side).normalized() * -1
+    if up.y < 0:
+        up = -up
+    return c + side * math.cos(th) * rx + up * math.sin(th) * ry
+
+
+def to_bl(v):
+    return Vector((v.x, -v.z, v.y))
+
+
+EYES3 = [Vector((0.118, 0.232, 0.585)), Vector((-0.118, 0.232, 0.585))]
+
+
+def plumage_cards(name="Plumage", rows=78, per=96):
+    bm = bmesh.new()
+    col = bm.loops.layers.color.new("Col")
+    rng = random.Random(7)
+    L_SEG, W_SEG = 4, 3
+    for i in range(rows):
+        for j in range(per):
+            s_ = (i + rng.random() * 0.8) / rows * 0.965 + 0.02
+            th = (j + (i % 2) * 0.5 + rng.random() * 0.4) / per * math.pi * 2
+            p = surf(s_, th)
+            if any((p - e).length < 0.045 for e in EYES3):
+                continue
+            # local frame: normal n, tangent t pointing to the tail, bitangent b
+            ps, pt = surf(min(1, s_ + 0.004), th), surf(s_, th + 0.01)
+            t = (surf(max(0, s_ - 0.004), th) - ps).normalized()
+            b = (pt - p).normalized()
+            n = t.cross(b).normalized()
+            if n.dot(p - catmull(SPINE, s_)) < 0:
+                n = -n
+            head = smooth(0.66, 0.75, s_)
+            size = (0.05 - 0.026 * head) * (0.85 + rng.random() * 0.3)
+            L, W = size * 1.15, size
+            base_c = body_color(s_, th)
+            k = 0.85 + rng.random() * 0.25
+            base_c = tuple(min(1, c * k) for c in base_c[:3]) + (1,)
+            grid = []
+            for a in range(L_SEG + 1):
+                u = a / L_SEG
+                w = W * (0.55 + 0.45 * math.sin(min(1, u * 1.3) * math.pi / 2)) * math.sqrt(max(0, 1 - max(0, (u - 0.6) / 0.4) ** 2))
+                row = []
+                for c_ in range(W_SEG + 1):
+                    v = c_ / W_SEG * 2 - 1
+                    lift = 0.004 + 0.18 * L * u * u - 0.02 * L * v * v  # tips lift slightly off the body, cupped
+                    q = p - t * (L * 0.25) + t * (u * L) + b * (v * w * 0.5) + n * lift
+                    shade = 0.62 + 0.38 * smooth(0.0, 0.6, u)  # darker base, lit tip
+                    cc = tuple(x * shade for x in base_c[:3]) + (1,)
+                    row.append((bm.verts.new(to_bl(q)), cc))
+                grid.append(row)
+            for a in range(L_SEG):
+                for c_ in range(W_SEG):
+                    vs = (grid[a][c_], grid[a + 1][c_], grid[a + 1][c_ + 1], grid[a][c_ + 1])
+                    f = bm.faces.new([x[0] for x in vs])
+                    for loop, src in zip(f.loops, vs):
+                        loop[col] = src[1]
+    me = bpy.data.meshes.new(name)
+    bm.to_mesh(me)
+    bm.free()
+    for poly in me.polygons:
+        poly.use_smooth = True
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.collection.objects.link(ob)
+    return ob
+
+
 # ---------- materials ----------
 def plumage_mat(name, rough=0.55, sheen=0.6, coat=0.15, bump=0.25):
     m = bpy.data.materials.new(name)
@@ -187,25 +263,28 @@ def simple_mat(name, color, rough=0.4, metal=0.0, coat=0.0, trans=0.0, emit=None
     return m
 
 
-def hair_coat(ob, mat, count=60000, length=0.022):
+def hair_coat(ob, mat, count=90000, length=0.01):
     """Short feather/fur coat as a particle hair system, coloured from the body's vertex colours."""
     ps = ob.modifiers.new("coat", "PARTICLE_SYSTEM").particle_system
     st = ps.settings
     st.type = "HAIR"
     st.count = count
     st.hair_length = length
-    st.use_advanced_hair = True
+    st.use_advanced_hair = False
     st.child_type = "INTERPOLATED"
-    st.child_nbr = 3
+    st.child_percent = 3
     st.rendered_child_count = 6
-    st.root_radius = 0.0035
-    st.tip_radius = 0.0004
-    st.radius_scale = 1.0
+    st.radius_scale = 0.01   # diameter scale (m)
+    st.root_radius = 0.35
+    st.tip_radius = 0.05
     st.effector_weights.gravity = 0.0
-    st.normal_factor = 0.35
-    st.object_align_factor[1] = -0.05  # lie back along the body
+    # strand length/direction come from the emission velocity: short, leaning back along the body (+Y = tail)
+    st.normal_factor = 0.004
+    st.object_align_factor[1] = 0.009
+    st.object_align_factor[2] = 0.001
     st.factor_random = 0.04
     st.material_slot = mat.name
+    st.hair_length = length  # set last: changing hair modes resets it
     return ps
 
 
@@ -227,7 +306,12 @@ def build_bird():
     body.data.materials.append(pm)
     hair_mat = plumage_mat("Coat", rough=0.65, sheen=0.8, coat=0.0, bump=0.0)
     body.data.materials.append(hair_mat)
-    hair_coat(body, hair_mat)
+    if "hair" in YES:
+        hair_coat(body, hair_mat)
+    if "cards" not in NO:
+        cards = plumage_cards()
+        cards.data.materials.append(plumage_mat("PlumeCards", rough=0.42, sheen=0.9, coat=0.25, bump=0.08))
+        cards.parent = rig
     body.parent = rig
     # bill (two mandibles)
     billm = simple_mat("Bill", P["bill"], rough=0.25, coat=0.7)
@@ -396,10 +480,12 @@ def build_world():
         bpy.ops.mesh.primitive_plane_add(size=1, location=(0, side * (11 + 40), -0.3))
         bank = bpy.context.active_object
         bank.scale = (600, 80, 1)
+        bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
         bank.data.materials.append(simple_mat("Bank%d" % side, srgb("#3a4420"), rough=0.95))
         bpy.ops.mesh.primitive_plane_add(size=1, location=(0, side * 12.5, -0.2))
         strip = bpy.context.active_object
         strip.scale = (300, 4, 1)
+        bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
         reedm = simple_mat("Reed%d" % side, srgb("#8a8a3e"), rough=0.7)
         strip.data.materials.append(reedm)
         ps = strip.modifiers.new("reeds", "PARTICLE_SYSTEM").particle_system
@@ -407,12 +493,14 @@ def build_world():
         st.type = "HAIR"
         st.count = 9000
         st.hair_length = 2.6
-        st.root_radius = 0.02
-        st.tip_radius = 0.002
+        st.radius_scale = 0.01
+        st.root_radius = 2.0
+        st.tip_radius = 0.3
         st.factor_random = 0.25
-        st.use_advanced_hair = True
+        st.use_advanced_hair = False
         st.length_random = 0.5
         st.material_slot = reedm.name
+        st.hair_length = 2.6
     tm = simple_mat("Trees", srgb("#22301f"), rough=1)
     for i in range(240):
         side = 1 if random.random() > 0.5 else -1
@@ -420,6 +508,8 @@ def build_world():
         hgt = random.uniform(18, 38)
         bpy.ops.mesh.primitive_cone_add(vertices=10, radius1=hgt * 0.17, depth=hgt, location=(x, y, hgt / 2))
         bpy.context.active_object.data.materials.append(tm)
+    if "haze" in NO:
+        return water
     # volumetric haze in a big box (golden-hour atmosphere, light shafts)
     bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 15))
     box = bpy.context.active_object
@@ -462,7 +552,11 @@ def main():
     ap.add_argument("--frame", type=int, default=1)
     ap.add_argument("--samples", type=int, default=64)
     ap.add_argument("--res", type=float, default=0.5)
+    ap.add_argument("--no", default="", help="comma list to disable: haze,cards,dof (diagnostics)")
+    ap.add_argument("--yes", default="", help="comma list of optional extras: hair")
     a = ap.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:])
+    NO.update(x for x in a.no.split(",") if x)
+    YES.update(x for x in a.yes.split(",") if x)
     bpy.ops.wm.read_factory_settings(use_empty=True)
     rig, wings = build_bird()
     build_world()
@@ -470,14 +564,14 @@ def main():
     rig.location = (0, 0, 1.0)
     rig.rotation_euler = (0, 0, math.radians(-90))  # fly toward +X (toward the sun)
     cam_d = bpy.data.cameras.new("Cam")
-    cam_d.lens = 85
-    cam_d.dof.use_dof = True
-    cam_d.dof.focus_distance = 3.2
+    cam_d.lens = 70
+    cam_d.dof.use_dof = "dof" not in NO
+    cam_d.dof.focus_distance = 4.4
     cam_d.dof.aperture_fstop = 2.8
     cam = bpy.data.objects.new("Cam", cam_d)
     bpy.context.scene.collection.objects.link(cam)
     bpy.context.scene.camera = cam
-    cam.location = (-1.2, -2.9, 1.25)
+    cam.location = (-2.2, -3.6, 1.35)
     direction = Vector((0, 0, 1.05)) - cam.location
     cam.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
     out = Path(a.still or "out/local/bk_test.png")
