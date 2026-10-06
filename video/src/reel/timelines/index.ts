@@ -12,4 +12,6 @@ import t10 from "./ep23v7.json";
 import t11 from "./ep24v1.json";
 import t12 from "./ep25te.json";
 import t13 from "./ep25v1.json";
-export const reels = [t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13];
+import t14 from "./ep26te.json";
+import t15 from "./ep26v1.json";
+export const reels = [t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15];

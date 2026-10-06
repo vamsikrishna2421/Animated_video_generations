@@ -45,8 +45,8 @@ const OfHook: React.FC<SP> = ({ cue }) => {
         {row("PRACTICE", "100%", "#15803d", true, 190)}
         {row("REAL EXAM", f >= score ? `${n}%` : "?", f >= score ? C.red : C.muted, f >= exam, 400)}
       </div>
-      <Stamp t="FAILED" at={score + 16} x={700} y={900} size={120} rot={-12} />
-      <Note y={1110}>
+      <Stamp t="FAILED" at={score + 16} x={540} y={1060} size={120} rot={-8} />
+      <Note y={1200}>
         {f < why ? (
           <div style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 42, color: C.ink }}>Perfect in practice. <span style={{ color: "#b45309" }}>Lost in the exam.</span></div>
         ) : (

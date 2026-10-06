@@ -1,0 +1,1507 @@
+{
+ "id": "ep26v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "The AI that memorised",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "title": "The AI that memorised",
+ "handle": "@ai_maastaaru",
+ "label": "EP 26",
+ "fps": 30,
+ "musicLift": 2.2,
+ "totalFrames": 3535,
+ "music": "reel/ep26v1/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "of_hook",
+   "data": {
+    "yt": {
+     "chapter": "The case",
+     "title": "100% in practice, 52% in the exam",
+     "notes": [
+      [
+       "Practice score: 100%",
+       0
+      ],
+      [
+       "Real exam: 52%",
+       2
+      ],
+      [
+       "On a yes/no test, 50% is pure guessing",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 0,
+   "frames": 422,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_01.wav",
+     "from": 2,
+     "frames": 392,
+     "words": [
+      {
+       "w": "This",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "AI",
+       "from": 14,
+       "to": 18
+      },
+      {
+       "w": "scored",
+       "from": 18,
+       "to": 27
+      },
+      {
+       "w": "a",
+       "from": 27,
+       "to": 30
+      },
+      {
+       "w": "hundred",
+       "from": 30,
+       "to": 41
+      },
+      {
+       "w": "percent",
+       "from": 41,
+       "to": 51
+      },
+      {
+       "w": "in",
+       "from": 51,
+       "to": 55
+      },
+      {
+       "w": "practice.",
+       "from": 55,
+       "to": 68
+      },
+      {
+       "w": "Then",
+       "from": 68,
+       "to": 109
+      },
+      {
+       "w": "came",
+       "from": 109,
+       "to": 116
+      },
+      {
+       "w": "the",
+       "from": 116,
+       "to": 121
+      },
+      {
+       "w": "real",
+       "from": 121,
+       "to": 128
+      },
+      {
+       "w": "exam...",
+       "from": 128,
+       "to": 138
+      },
+      {
+       "w": "fifty-two",
+       "from": 138,
+       "to": 185
+      },
+      {
+       "w": "percent.",
+       "from": 185,
+       "to": 197
+      },
+      {
+       "w": "On",
+       "from": 197,
+       "to": 201
+      },
+      {
+       "w": "a",
+       "from": 201,
+       "to": 235
+      },
+      {
+       "w": "yes-or-no",
+       "from": 235,
+       "to": 249
+      },
+      {
+       "w": "test,",
+       "from": 249,
+       "to": 270
+      },
+      {
+       "w": "that's",
+       "from": 270,
+       "to": 280
+      },
+      {
+       "w": "barely",
+       "from": 280,
+       "to": 295
+      },
+      {
+       "w": "better",
+       "from": 295,
+       "to": 304
+      },
+      {
+       "w": "than",
+       "from": 304,
+       "to": 311
+      },
+      {
+       "w": "guessing.",
+       "from": 311,
+       "to": 324
+      },
+      {
+       "w": "What",
+       "from": 324,
+       "to": 361
+      },
+      {
+       "w": "went",
+       "from": 361,
+       "to": 368
+      },
+      {
+       "w": "wrong?",
+       "from": 368,
+       "to": 377
+      }
+     ],
+     "cues": {
+      "1": 68,
+      "2": 138,
+      "3": 324
+     }
+    }
+   ]
+  },
+  {
+   "id": "key",
+   "type": "of_answerkey",
+   "data": {
+    "yt": {
+     "chapter": "The answer key",
+     "title": "Memorising is not learning",
+     "notes": [
+      [
+       "Memorised answers: perfect practice score",
+       2
+      ],
+      [
+       "Same idea, new wording: fails",
+       4
+      ],
+      [
+       "Overfitting = memorising the training data",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 422,
+   "frames": 544,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_02.wav",
+     "from": 0,
+     "frames": 515,
+     "words": [
+      {
+       "w": "It's",
+       "from": 7,
+       "to": 13
+      },
+      {
+       "w": "like",
+       "from": 13,
+       "to": 20
+      },
+      {
+       "w": "a",
+       "from": 20,
+       "to": 22
+      },
+      {
+       "w": "student",
+       "from": 22,
+       "to": 32
+      },
+      {
+       "w": "who",
+       "from": 32,
+       "to": 43
+      },
+      {
+       "w": "memorises",
+       "from": 43,
+       "to": 56
+      },
+      {
+       "w": "the",
+       "from": 56,
+       "to": 61
+      },
+      {
+       "w": "answer",
+       "from": 61,
+       "to": 70
+      },
+      {
+       "w": "key.",
+       "from": 70,
+       "to": 76
+      },
+      {
+       "w": "Question",
+       "from": 76,
+       "to": 115
+      },
+      {
+       "w": "one:",
+       "from": 115,
+       "to": 121
+      },
+      {
+       "w": "true.",
+       "from": 121,
+       "to": 171
+      },
+      {
+       "w": "Question",
+       "from": 171,
+       "to": 183
+      },
+      {
+       "w": "two:",
+       "from": 183,
+       "to": 199
+      },
+      {
+       "w": "false.",
+       "from": 199,
+       "to": 235
+      },
+      {
+       "w": "A",
+       "from": 235,
+       "to": 237
+      },
+      {
+       "w": "perfect",
+       "from": 237,
+       "to": 247
+      },
+      {
+       "w": "score",
+       "from": 247,
+       "to": 255
+      },
+      {
+       "w": "on",
+       "from": 255,
+       "to": 258
+      },
+      {
+       "w": "the",
+       "from": 258,
+       "to": 263
+      },
+      {
+       "w": "practice",
+       "from": 263,
+       "to": 279
+      },
+      {
+       "w": "paper.",
+       "from": 279,
+       "to": 287
+      },
+      {
+       "w": "But",
+       "from": 287,
+       "to": 324
+      },
+      {
+       "w": "change",
+       "from": 324,
+       "to": 333
+      },
+      {
+       "w": "the",
+       "from": 333,
+       "to": 338
+      },
+      {
+       "w": "questions",
+       "from": 338,
+       "to": 350
+      },
+      {
+       "w": "a",
+       "from": 350,
+       "to": 353
+      },
+      {
+       "w": "little...",
+       "from": 353,
+       "to": 395
+      },
+      {
+       "w": "and",
+       "from": 395,
+       "to": 400
+      },
+      {
+       "w": "they're",
+       "from": 400,
+       "to": 410
+      },
+      {
+       "w": "lost.",
+       "from": 410,
+       "to": 447
+      },
+      {
+       "w": "In",
+       "from": 447,
+       "to": 451
+      },
+      {
+       "w": "AI,",
+       "from": 451,
+       "to": 456
+      },
+      {
+       "w": "this",
+       "from": 456,
+       "to": 466
+      },
+      {
+       "w": "is",
+       "from": 466,
+       "to": 470
+      },
+      {
+       "w": "called",
+       "from": 470,
+       "to": 479
+      },
+      {
+       "w": "overfitting.",
+       "from": 479,
+       "to": 499
+      }
+     ],
+     "cues": {
+      "1": 76,
+      "2": 235,
+      "3": 287,
+      "4": 395
+     }
+    }
+   ]
+  },
+  {
+   "id": "curves",
+   "type": "of_curves",
+   "data": {
+    "yt": {
+     "chapter": "Three fits",
+     "title": "Overfit, underfit, just right",
+     "notes": [
+      [
+       "Overfit: follows every dot, even the noise",
+       1
+      ],
+      [
+       "Underfit: too simple, low scores even in practice",
+       2
+      ],
+      [
+       "Just right: follows the real trend",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 966,
+   "frames": 627,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_03.wav",
+     "from": 0,
+     "frames": 598,
+     "words": [
+      {
+       "w": "Picture",
+       "from": 7,
+       "to": 17
+      },
+      {
+       "w": "it",
+       "from": 17,
+       "to": 25
+      },
+      {
+       "w": "as",
+       "from": 25,
+       "to": 29
+      },
+      {
+       "w": "dots",
+       "from": 29,
+       "to": 36
+      },
+      {
+       "w": "on",
+       "from": 36,
+       "to": 40
+      },
+      {
+       "w": "a",
+       "from": 40,
+       "to": 42
+      },
+      {
+       "w": "graph.",
+       "from": 42,
+       "to": 51
+      },
+      {
+       "w": "Too",
+       "from": 51,
+       "to": 57
+      },
+      {
+       "w": "complex:",
+       "from": 57,
+       "to": 101
+      },
+      {
+       "w": "a",
+       "from": 101,
+       "to": 103
+      },
+      {
+       "w": "wiggly",
+       "from": 103,
+       "to": 119
+      },
+      {
+       "w": "line",
+       "from": 119,
+       "to": 125
+      },
+      {
+       "w": "through",
+       "from": 125,
+       "to": 136
+      },
+      {
+       "w": "every",
+       "from": 136,
+       "to": 147
+      },
+      {
+       "w": "dot,",
+       "from": 147,
+       "to": 154
+      },
+      {
+       "w": "even",
+       "from": 154,
+       "to": 160
+      },
+      {
+       "w": "the",
+       "from": 160,
+       "to": 177
+      },
+      {
+       "w": "random",
+       "from": 177,
+       "to": 186
+      },
+      {
+       "w": "mistakes.",
+       "from": 186,
+       "to": 199
+      },
+      {
+       "w": "That's",
+       "from": 199,
+       "to": 208
+      },
+      {
+       "w": "overfitting.",
+       "from": 208,
+       "to": 248
+      },
+      {
+       "w": "Too",
+       "from": 248,
+       "to": 253
+      },
+      {
+       "w": "simple:",
+       "from": 253,
+       "to": 293
+      },
+      {
+       "w": "a",
+       "from": 293,
+       "to": 296
+      },
+      {
+       "w": "straight",
+       "from": 296,
+       "to": 311
+      },
+      {
+       "w": "line",
+       "from": 311,
+       "to": 318
+      },
+      {
+       "w": "that",
+       "from": 318,
+       "to": 324
+      },
+      {
+       "w": "misses",
+       "from": 324,
+       "to": 333
+      },
+      {
+       "w": "the",
+       "from": 333,
+       "to": 339
+      },
+      {
+       "w": "pattern.",
+       "from": 339,
+       "to": 350
+      },
+      {
+       "w": "That's",
+       "from": 350,
+       "to": 359
+      },
+      {
+       "w": "underfitting:",
+       "from": 359,
+       "to": 403
+      },
+      {
+       "w": "low",
+       "from": 403,
+       "to": 408
+      },
+      {
+       "w": "scores,",
+       "from": 408,
+       "to": 426
+      },
+      {
+       "w": "even",
+       "from": 426,
+       "to": 433
+      },
+      {
+       "w": "in",
+       "from": 433,
+       "to": 437
+      },
+      {
+       "w": "practice.",
+       "from": 437,
+       "to": 457
+      },
+      {
+       "w": "Just",
+       "from": 457,
+       "to": 468
+      },
+      {
+       "w": "right:",
+       "from": 468,
+       "to": 506
+      },
+      {
+       "w": "a",
+       "from": 506,
+       "to": 509
+      },
+      {
+       "w": "smooth",
+       "from": 509,
+       "to": 528
+      },
+      {
+       "w": "curve",
+       "from": 528,
+       "to": 540
+      },
+      {
+       "w": "that",
+       "from": 540,
+       "to": 546
+      },
+      {
+       "w": "follows",
+       "from": 546,
+       "to": 561
+      },
+      {
+       "w": "the",
+       "from": 561,
+       "to": 566
+      },
+      {
+       "w": "real",
+       "from": 566,
+       "to": 573
+      },
+      {
+       "w": "trend.",
+       "from": 573,
+       "to": 582
+      }
+     ],
+     "cues": {
+      "1": 51,
+      "2": 248,
+      "3": 457
+     }
+    }
+   ]
+  },
+  {
+   "id": "gap",
+   "type": "of_gap",
+   "data": {
+    "yt": {
+     "chapter": "The alarm",
+     "title": "Watch two scores",
+     "notes": [
+      [
+       "Training score: keeps going up",
+       2
+      ],
+      [
+       "Validation score: unseen data",
+       3
+      ],
+      [
+       "When they split, stop training (early stopping)",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1592,
+   "frames": 454,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_04.wav",
+     "from": 0,
+     "frames": 425,
+     "words": [
+      {
+       "w": "So",
+       "from": 8,
+       "to": 11
+      },
+      {
+       "w": "how",
+       "from": 11,
+       "to": 16
+      },
+      {
+       "w": "do",
+       "from": 16,
+       "to": 19
+      },
+      {
+       "w": "you",
+       "from": 19,
+       "to": 24
+      },
+      {
+       "w": "catch",
+       "from": 24,
+       "to": 31
+      },
+      {
+       "w": "it?",
+       "from": 31,
+       "to": 64
+      },
+      {
+       "w": "Watch",
+       "from": 64,
+       "to": 71
+      },
+      {
+       "w": "two",
+       "from": 71,
+       "to": 75
+      },
+      {
+       "w": "scores",
+       "from": 75,
+       "to": 83
+      },
+      {
+       "w": "while",
+       "from": 83,
+       "to": 90
+      },
+      {
+       "w": "it",
+       "from": 90,
+       "to": 94
+      },
+      {
+       "w": "trains.",
+       "from": 94,
+       "to": 136
+      },
+      {
+       "w": "The",
+       "from": 136,
+       "to": 141
+      },
+      {
+       "w": "practice",
+       "from": 141,
+       "to": 151
+      },
+      {
+       "w": "score",
+       "from": 151,
+       "to": 158
+      },
+      {
+       "w": "keeps",
+       "from": 158,
+       "to": 170
+      },
+      {
+       "w": "climbing.",
+       "from": 170,
+       "to": 210
+      },
+      {
+       "w": "But",
+       "from": 210,
+       "to": 215
+      },
+      {
+       "w": "the",
+       "from": 215,
+       "to": 220
+      },
+      {
+       "w": "validation",
+       "from": 220,
+       "to": 232
+      },
+      {
+       "w": "score,",
+       "from": 232,
+       "to": 240
+      },
+      {
+       "w": "on",
+       "from": 240,
+       "to": 244
+      },
+      {
+       "w": "data",
+       "from": 244,
+       "to": 250
+      },
+      {
+       "w": "it",
+       "from": 250,
+       "to": 253
+      },
+      {
+       "w": "has",
+       "from": 253,
+       "to": 258
+      },
+      {
+       "w": "never",
+       "from": 258,
+       "to": 265
+      },
+      {
+       "w": "seen,",
+       "from": 265,
+       "to": 272
+      },
+      {
+       "w": "starts",
+       "from": 272,
+       "to": 297
+      },
+      {
+       "w": "to",
+       "from": 297,
+       "to": 300
+      },
+      {
+       "w": "fall.",
+       "from": 300,
+       "to": 307
+      },
+      {
+       "w": "When",
+       "from": 307,
+       "to": 342
+      },
+      {
+       "w": "they",
+       "from": 342,
+       "to": 347
+      },
+      {
+       "w": "split",
+       "from": 347,
+       "to": 354
+      },
+      {
+       "w": "apart,",
+       "from": 354,
+       "to": 362
+      },
+      {
+       "w": "stop",
+       "from": 362,
+       "to": 380
+      },
+      {
+       "w": "training",
+       "from": 380,
+       "to": 394
+      },
+      {
+       "w": "right",
+       "from": 394,
+       "to": 401
+      },
+      {
+       "w": "there.",
+       "from": 401,
+       "to": 409
+      }
+     ],
+     "cues": {
+      "1": 64,
+      "2": 136,
+      "3": 210,
+      "4": 307
+     }
+    }
+   ]
+  },
+  {
+   "id": "fixes",
+   "type": "of_fixes",
+   "data": {
+    "yt": {
+     "chapter": "The fixes",
+     "title": "How to fix each one",
+     "notes": [
+      [
+       "Overfitting: more varied data",
+       1
+      ],
+      [
+       "Overfitting: simpler model, stop early",
+       3
+      ],
+      [
+       "Underfitting: bigger model, train longer",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2046,
+   "frames": 422,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_05.wav",
+     "from": 0,
+     "frames": 394,
+     "words": [
+      {
+       "w": "The",
+       "from": 6,
+       "to": 11
+      },
+      {
+       "w": "fixes.",
+       "from": 11,
+       "to": 20
+      },
+      {
+       "w": "For",
+       "from": 20,
+       "to": 56
+      },
+      {
+       "w": "overfitting:",
+       "from": 56,
+       "to": 73
+      },
+      {
+       "w": "more",
+       "from": 73,
+       "to": 86
+      },
+      {
+       "w": "data,",
+       "from": 86,
+       "to": 94
+      },
+      {
+       "w": "with",
+       "from": 94,
+       "to": 100
+      },
+      {
+       "w": "more",
+       "from": 100,
+       "to": 110
+      },
+      {
+       "w": "variety.",
+       "from": 110,
+       "to": 122
+      },
+      {
+       "w": "A",
+       "from": 122,
+       "to": 124
+      },
+      {
+       "w": "simpler",
+       "from": 124,
+       "to": 164
+      },
+      {
+       "w": "model.",
+       "from": 164,
+       "to": 173
+      },
+      {
+       "w": "Or",
+       "from": 173,
+       "to": 176
+      },
+      {
+       "w": "stop",
+       "from": 176,
+       "to": 211
+      },
+      {
+       "w": "training",
+       "from": 211,
+       "to": 226
+      },
+      {
+       "w": "early.",
+       "from": 226,
+       "to": 235
+      },
+      {
+       "w": "For",
+       "from": 235,
+       "to": 240
+      },
+      {
+       "w": "underfitting,",
+       "from": 240,
+       "to": 288
+      },
+      {
+       "w": "do",
+       "from": 288,
+       "to": 292
+      },
+      {
+       "w": "the",
+       "from": 292,
+       "to": 302
+      },
+      {
+       "w": "opposite:",
+       "from": 302,
+       "to": 314
+      },
+      {
+       "w": "a",
+       "from": 314,
+       "to": 317
+      },
+      {
+       "w": "bigger",
+       "from": 317,
+       "to": 342
+      },
+      {
+       "w": "model,",
+       "from": 342,
+       "to": 351
+      },
+      {
+       "w": "and",
+       "from": 351,
+       "to": 363
+      },
+      {
+       "w": "train",
+       "from": 363,
+       "to": 370
+      },
+      {
+       "w": "longer.",
+       "from": 370,
+       "to": 380
+      }
+     ],
+     "cues": {
+      "1": 73,
+      "2": 122,
+      "3": 173,
+      "4": 235
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Crack this case",
+     "notes": [
+      [
+       "Practice 55%, new data 53%",
+       0
+      ],
+      [
+       "Overfitting or underfitting?",
+       1
+      ],
+      [
+       "Answer: underfitting (both low)",
+       2
+      ]
+     ]
+    },
+    "question": "Practice score 55%. New data 53%. What's wrong with this model?",
+    "options": [
+     "Overfitting",
+     "Underfitting",
+     "Perfect fit"
+    ],
+    "answer": 1,
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2468,
+   "frames": 567,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_06.wav",
+     "from": 0,
+     "frames": 551,
+     "words": [
+      {
+       "w": "Your",
+       "from": 7,
+       "to": 13
+      },
+      {
+       "w": "turn,",
+       "from": 13,
+       "to": 20
+      },
+      {
+       "w": "detective.",
+       "from": 20,
+       "to": 70
+      },
+      {
+       "w": "A",
+       "from": 70,
+       "to": 72
+      },
+      {
+       "w": "model",
+       "from": 72,
+       "to": 79
+      },
+      {
+       "w": "scores",
+       "from": 79,
+       "to": 87
+      },
+      {
+       "w": "fifty-five",
+       "from": 87,
+       "to": 114
+      },
+      {
+       "w": "percent",
+       "from": 114,
+       "to": 128
+      },
+      {
+       "w": "in",
+       "from": 128,
+       "to": 131
+      },
+      {
+       "w": "practice,",
+       "from": 131,
+       "to": 154
+      },
+      {
+       "w": "and",
+       "from": 154,
+       "to": 158
+      },
+      {
+       "w": "fifty-three",
+       "from": 158,
+       "to": 176
+      },
+      {
+       "w": "on",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "new",
+       "from": 180,
+       "to": 184
+      },
+      {
+       "w": "data.",
+       "from": 184,
+       "to": 221
+      },
+      {
+       "w": "Overfitting,",
+       "from": 221,
+       "to": 240
+      },
+      {
+       "w": "or",
+       "from": 240,
+       "to": 244
+      },
+      {
+       "w": "underfitting?",
+       "from": 244,
+       "to": 260
+      },
+      {
+       "w": "Underfitting!",
+       "from": 386,
+       "to": 434
+      },
+      {
+       "w": "Both",
+       "from": 434,
+       "to": 441
+      },
+      {
+       "w": "scores",
+       "from": 441,
+       "to": 450
+      },
+      {
+       "w": "are",
+       "from": 450,
+       "to": 456
+      },
+      {
+       "w": "low.",
+       "from": 456,
+       "to": 463
+      },
+      {
+       "w": "It",
+       "from": 463,
+       "to": 494
+      },
+      {
+       "w": "never",
+       "from": 494,
+       "to": 502
+      },
+      {
+       "w": "learned",
+       "from": 502,
+       "to": 513
+      },
+      {
+       "w": "the",
+       "from": 513,
+       "to": 519
+      },
+      {
+       "w": "pattern",
+       "from": 519,
+       "to": 530
+      },
+      {
+       "w": "at",
+       "from": 530,
+       "to": 534
+      },
+      {
+       "w": "all.",
+       "from": 534,
+       "to": 541
+      }
+     ],
+     "cues": {
+      "1": 221,
+      "2": 386
+     }
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "caseclosed",
+   "data": {
+    "yt": {
+     "chapter": "Case closed",
+     "title": "Don't memorise. Generalise.",
+     "notes": [
+      [
+       "Overfitting: great in practice, fails on new data",
+       0
+      ],
+      [
+       "Underfitting: low scores everywhere",
+       1
+      ],
+      [
+       "Watch the validation score",
+       2
+      ]
+     ]
+    },
+    "points": [
+     "Overfitting: great in practice, fails on new data",
+     "Underfitting: low scores everywhere",
+     "Watch the validation score; stop when it drops"
+    ],
+    "fileTag": "CASE FILE #26 · OVERFITTING",
+    "truth": "Don't memorise.",
+    "truthHi": "Generalise.",
+    "nextEp": "EP 27",
+    "nextText": "The key idea behind ChatGPT: attention.",
+    "handle": "@ai_maastaaru"
+   },
+   "from": 3036,
+   "frames": 487,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep26v1/line_07.wav",
+     "from": 0,
+     "frames": 457,
+     "words": [
+      {
+       "w": "Case",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "closed.",
+       "from": 14,
+       "to": 59
+      },
+      {
+       "w": "Overfitting",
+       "from": 59,
+       "to": 76
+      },
+      {
+       "w": "memorises.",
+       "from": 76,
+       "to": 91
+      },
+      {
+       "w": "Underfitting",
+       "from": 91,
+       "to": 144
+      },
+      {
+       "w": "never",
+       "from": 144,
+       "to": 152
+      },
+      {
+       "w": "learns.",
+       "from": 152,
+       "to": 195
+      },
+      {
+       "w": "The",
+       "from": 195,
+       "to": 200
+      },
+      {
+       "w": "goal",
+       "from": 200,
+       "to": 207
+      },
+      {
+       "w": "is",
+       "from": 207,
+       "to": 212
+      },
+      {
+       "w": "to",
+       "from": 212,
+       "to": 216
+      },
+      {
+       "w": "generalise.",
+       "from": 216,
+       "to": 260
+      },
+      {
+       "w": "Next:",
+       "from": 260,
+       "to": 272
+      },
+      {
+       "w": "the",
+       "from": 272,
+       "to": 278
+      },
+      {
+       "w": "key",
+       "from": 278,
+       "to": 283
+      },
+      {
+       "w": "idea",
+       "from": 283,
+       "to": 290
+      },
+      {
+       "w": "behind",
+       "from": 290,
+       "to": 300
+      },
+      {
+       "w": "ChatGPT...",
+       "from": 300,
+       "to": 315
+      },
+      {
+       "w": "attention.",
+       "from": 315,
+       "to": 363
+      },
+      {
+       "w": "Follow,",
+       "from": 363,
+       "to": 374
+      },
+      {
+       "w": "so",
+       "from": 374,
+       "to": 407
+      },
+      {
+       "w": "you",
+       "from": 407,
+       "to": 413
+      },
+      {
+       "w": "don't",
+       "from": 413,
+       "to": 429
+      },
+      {
+       "w": "miss",
+       "from": 429,
+       "to": 436
+      },
+      {
+       "w": "it.",
+       "from": 436,
+       "to": 441
+      }
+     ],
+     "cues": {
+      "1": 59,
+      "2": 260
+     }
+    }
+   ]
+  }
+ ]
+}
