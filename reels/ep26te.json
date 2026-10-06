@@ -1,0 +1,281 @@
+{
+ "id": "ep26te",
+ "title": "The AI that memorised (Telugu audio)",
+ "label": "EP 26",
+ "banner": "The AI that memorised",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.0,
+ "gap": 0.35,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "musicLift": 2.2,
+ "parler_lang": "te",
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "of_hook",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The case",
+     "title": "100% in practice, 52% in the exam",
+     "notes": [
+      [
+       "Practice score: 100%",
+       0
+      ],
+      [
+       "Real exam: 52%",
+       2
+      ],
+      [
+       "On a yes/no test, 50% is pure guessing",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.45,
+     "text": "ఈ ఎ ఐ ప్రాక్టీస్ లో వంద శాతం తెచ్చుకుంది. [1] తర్వాత అసలు ఎగ్జామ్ వచ్చింది... [2] యాభై రెండు శాతం. అవును కాదు టెస్ట్ లో, అది దాదాపు గెస్ చేసినట్టే. [3] ఏం తప్పు జరిగింది?",
+     "show": "This AI scored 100% in practice. Then came the real exam... 52%. On a yes-or-no test, that's barely better than guessing. What went wrong?"
+    }
+   ]
+  },
+  {
+   "id": "key",
+   "type": "of_answerkey",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The answer key",
+     "title": "Memorising is not learning",
+     "notes": [
+      [
+       "Memorised answers: perfect practice score",
+       2
+      ],
+      [
+       "Same idea, new wording: fails",
+       4
+      ],
+      [
+       "Overfitting = memorising the training data",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_key.wav",
+     "maxgap": 0.45,
+     "text": "ఇది ఆన్సర్ కీ బట్టీ పట్టిన స్టూడెంట్ లాంటిది. [1] ప్రశ్న ఒకటి: ట్రూ. ప్రశ్న రెండు: ఫాల్స్. [2] ప్రాక్టీస్ పేపర్ లో పర్ఫెక్ట్ స్కోర్. [3] కానీ ప్రశ్నలు కొంచెం మారిస్తే... [4] ఏమీ రాదు. ఎ ఐ లో దీన్ని ఓవర్ ఫిట్టింగ్ అంటారు.",
+     "show": "It's like a student who memorises the answer key. Question one: true. Question two: false. A perfect score on the practice paper. But change the questions a little... and they're lost. In AI, this is called overfitting."
+    }
+   ]
+  },
+  {
+   "id": "curves",
+   "type": "of_curves",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Three fits",
+     "title": "Overfit, underfit, just right",
+     "notes": [
+      [
+       "Overfit: follows every dot, even the noise",
+       1
+      ],
+      [
+       "Underfit: too simple, low scores even in practice",
+       2
+      ],
+      [
+       "Just right: follows the real trend",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_curves.wav",
+     "maxgap": 0.45,
+     "text": "దీన్ని గ్రాఫ్ మీద చుక్కలుగా ఊహించుకోండి. [1] మరీ కాంప్లెక్స్: ప్రతి చుక్కనీ, పొరపాట్లను కూడా తాకే వంకర గీత. అది ఓవర్ ఫిట్టింగ్. [2] మరీ సింపుల్: ప్యాటర్న్ ని మిస్ అయ్యే తిన్నని గీత. అది అండర్ ఫిట్టింగ్: ప్రాక్టీస్ లో కూడా తక్కువ స్కోర్లు. [3] సరిగ్గా సరిపోయేది: అసలు ట్రెండ్ ని ఫాలో అయ్యే నున్నటి కర్వ్.",
+     "show": "Picture it as dots on a graph. Too complex: a wiggly line through every dot, even the random mistakes. That's overfitting. Too simple: a straight line that misses the pattern. That's underfitting: low scores, even in practice. Just right: a smooth curve that follows the real trend."
+    }
+   ]
+  },
+  {
+   "id": "gap",
+   "type": "of_gap",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The alarm",
+     "title": "Watch two scores",
+     "notes": [
+      [
+       "Training score: keeps going up",
+       2
+      ],
+      [
+       "Validation score: unseen data",
+       3
+      ],
+      [
+       "When they split, stop training (early stopping)",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_gap.wav",
+     "maxgap": 0.45,
+     "text": "మరి దీన్ని ఎలా పట్టుకోవాలి? [1] ట్రైనింగ్ జరిగేటప్పుడు రెండు స్కోర్లు చూడండి. [2] ప్రాక్టీస్ స్కోర్ పెరుగుతూనే ఉంటుంది. [3] కానీ వాలిడేషన్ స్కోర్, అంటే ఎప్పుడూ చూడని డేటా మీద స్కోర్, తగ్గడం మొదలవుతుంది. [4] రెండూ విడిపోయినప్పుడు, అక్కడే ట్రైనింగ్ ఆపేయండి.",
+     "show": "So how do you catch it? Watch two scores while it trains. The practice score keeps climbing. But the validation score, on data it has never seen, starts to fall. When they split apart, stop training right there."
+    }
+   ]
+  },
+  {
+   "id": "fixes",
+   "type": "of_fixes",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The fixes",
+     "title": "How to fix each one",
+     "notes": [
+      [
+       "Overfitting: more varied data",
+       1
+      ],
+      [
+       "Overfitting: simpler model, stop early",
+       3
+      ],
+      [
+       "Underfitting: bigger model, train longer",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_fixes.wav",
+     "maxgap": 0.45,
+     "text": "మరి పరిష్కారాలు? ఓవర్ ఫిట్టింగ్ కి: [1] ఎక్కువ డేటా, ఎక్కువ వెరైటీ తో. [2] సింపుల్ మోడల్. [3] లేదా ట్రైనింగ్ ని ముందే ఆపేయడం. [4] అండర్ ఫిట్టింగ్ కి, రివర్స్ చేయండి: పెద్ద మోడల్, ఇంకా ఎక్కువ సేపు ట్రైనింగ్.",
+     "show": "The fixes. For overfitting: more data, with more variety. A simpler model. Or stop training early. For underfitting, do the opposite: a bigger model, and train longer."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Crack this case",
+     "notes": [
+      [
+       "Practice 55%, new data 53%",
+       0
+      ],
+      [
+       "Overfitting or underfitting?",
+       1
+      ],
+      [
+       "Answer: underfitting (both low)",
+       2
+      ]
+     ]
+    },
+    "question": "Practice score 55%. New data 53%. What's wrong with this model?",
+    "options": [
+     "Overfitting",
+     "Underfitting",
+     "Perfect fit"
+    ],
+    "answer": 1
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_quiz.wav",
+     "maxgap": 0.45,
+     "text": "ఇప్పుడు మీ వంతు, డిటెక్టివ్. ఒక మోడల్ ప్రాక్టీస్ లో యాభై ఐదు శాతం, కొత్త డేటా మీద యాభై మూడు శాతం తెచ్చుకుంది. [1] ఓవర్ ఫిట్టింగ్ ఆ, అండర్ ఫిట్టింగ్ ఆ? <pause 3.5> [2] అండర్ ఫిట్టింగ్! రెండు స్కోర్లూ తక్కువే. అది ప్యాటర్న్ ని అసలు నేర్చుకోలేదు.",
+     "tts": "ఇప్పుడు మీ వంతు, డిటెక్టివ్. ఒక మోడల్ ప్రాక్టీస్ లో యాభై ఐదు శాతం, కొత్త డేటా మీద యాభై మూడు శాతం తెచ్చుకుంది. ఓవర్ ఫిట్టింగ్ ఆ, అండర్ ఫిట్టింగ్ ఆ?",
+     "file2": "06_quiz_answer.wav",
+     "tts2": "అండర్ ఫిట్టింగ్! రెండు స్కోర్లూ తక్కువే. అది ప్యాటర్న్ ని అసలు నేర్చుకోలేదు.",
+     "pause": 3.5,
+     "gap": 0.1,
+     "show": "Your turn, detective. A model scores 55% in practice, and 53% on new data. Overfitting, or underfitting? <pause 3.5> Underfitting! Both scores are low. It never learned the pattern at all."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "caseclosed",
+   "tail": 0.5,
+   "data": {
+    "yt": {
+     "chapter": "Case closed",
+     "title": "Don't memorise. Generalise.",
+     "notes": [
+      [
+       "Overfitting: great in practice, fails on new data",
+       0
+      ],
+      [
+       "Underfitting: low scores everywhere",
+       1
+      ],
+      [
+       "Watch the validation score",
+       2
+      ]
+     ]
+    },
+    "points": [
+     "Overfitting: great in practice, fails on new data",
+     "Underfitting: low scores everywhere",
+     "Watch the validation score; stop when it drops"
+    ],
+    "fileTag": "CASE FILE #26 · OVERFITTING",
+    "truth": "Don't memorise.",
+    "truthHi": "Generalise.",
+    "nextEp": "EP 27",
+    "nextText": "The key idea behind ChatGPT: attention."
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_outro.wav",
+     "maxgap": 0.45,
+     "text": "కేస్ క్లోజ్డ్. [1] ఓవర్ ఫిట్టింగ్ బట్టీ పడుతుంది. అండర్ ఫిట్టింగ్ అసలు నేర్చుకోదు. మన లక్ష్యం: జనరలైజ్ చేయడం. [2] నెక్స్ట్: చాట్ జీపీటీ వెనక ఉన్న ముఖ్యమైన ఐడియా... అటెన్షన్. మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "show": "Case closed. Overfitting memorises. Underfitting never learns. The goal is to generalise. Next: the key idea behind ChatGPT... attention. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}

@@ -12,17 +12,17 @@ type Line = { from: number; frames: number };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
-const useSpAt = (at: number, damping = 12) => {
+export const useSpAt = (at: number, damping = 12) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   return spring({ frame: f - at, fps, config: { damping } });
 };
-const Tick: React.FC<{ at: number; vol?: number }> = ({ at, vol = 0.3 }) => (
+export const Tick: React.FC<{ at: number; vol?: number }> = ({ at, vol = 0.3 }) => (
   <Sequence from={Math.max(0, at)} durationInFrames={8} layout="none">
     <Audio src={staticFile("audio/sfx_tick.wav")} volume={vol} />
   </Sequence>
 );
-const Thud: React.FC<{ at: number }> = ({ at }) => (
+export const Thud: React.FC<{ at: number }> = ({ at }) => (
   <Sequence from={Math.max(0, at)} durationInFrames={12} layout="none">
     <Audio src={staticFile("audio/sfx_pop.wav")} volume={0.45} />
   </Sequence>
@@ -37,7 +37,7 @@ export const Board: React.FC = () => (
     <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,0.55) 100%)" }} />
   </AbsoluteFill>
 );
-const Pin: React.FC<{ x: number; y: number; c?: string }> = ({ x, y, c = C.red }) => (
+export const Pin: React.FC<{ x: number; y: number; c?: string }> = ({ x, y, c = C.red }) => (
   <div style={{ position: "absolute", left: x - 11, top: y - 11, width: 22, height: 22, borderRadius: 11, background: `radial-gradient(circle at 35% 35%, #fff8, ${c} 45%, #7f1d1d)`, boxShadow: "0 4px 6px rgba(0,0,0,0.5)", zIndex: 5 }} />
 );
 const Str: React.FC<{ x1: number; y1: number; x2: number; y2: number; p: number }> = ({ x1, y1, x2, y2, p }) => (
@@ -45,7 +45,7 @@ const Str: React.FC<{ x1: number; y1: number; x2: number; y2: number; p: number 
     <line x1={x1} y1={y1} x2={x1 + (x2 - x1) * p} y2={y1 + (y2 - y1) * p} stroke={C.red} strokeWidth={5} strokeLinecap="round" />
   </svg>
 );
-const Stamp: React.FC<{ t: string; at: number; x: number; y: number; c?: string; size?: number; rot?: number; bg?: string }> = ({ t, at, x, y, c = C.red, size = 90, rot = -8, bg = "rgba(255,255,255,0.08)" }) => {
+export const Stamp: React.FC<{ t: string; at: number; x: number; y: number; c?: string; size?: number; rot?: number; bg?: string }> = ({ t, at, x, y, c = C.red, size = 90, rot = -8, bg = "rgba(255,255,255,0.08)" }) => {
   const f = useCurrentFrame();
   if (f < at) return null;
   const s = interpolate(f - at, [0, 6], [2.3, 1], cl);
@@ -56,7 +56,7 @@ const Stamp: React.FC<{ t: string; at: number; x: number; y: number; c?: string;
     </div>
   );
 };
-const Tag: React.FC<{ t: string }> = ({ t }) => (
+export const Tag: React.FC<{ t: string }> = ({ t }) => (
   <div style={{ position: "absolute", top: 262, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
     <div style={{ background: C.paper, color: C.ink, fontFamily: C.mono, fontWeight: 800, fontSize: 30, letterSpacing: 4, padding: "8px 22px", borderRadius: 6, transform: "rotate(-1.5deg)", boxShadow: "0 8px 20px rgba(0,0,0,0.4)" }}>{t}</div>
   </div>
@@ -349,7 +349,7 @@ const CaseClosed: React.FC<SP> = ({ s, cue }) => {
       <Board />
       <div style={{ position: "absolute", left: 80, right: 80, top: 330, height: 560, background: "#e7c98f", borderRadius: "10px 10px 18px 18px", boxShadow: "0 20px 40px rgba(0,0,0,0.5)", transform: "rotate(-1deg)" }}>
         <div style={{ position: "absolute", left: 0, top: -40, width: 300, height: 50, background: "#e7c98f", borderRadius: "14px 14px 0 0" }} />
-        <div style={{ position: "absolute", left: 40, top: 40, fontFamily: C.mono, fontWeight: 800, fontSize: 30, color: "#78350f", letterSpacing: 3 }}>CASE FILE #25 · TRAINING DATA</div>
+        <div style={{ position: "absolute", left: 40, top: 40, fontFamily: C.mono, fontWeight: 800, fontSize: 30, color: "#78350f", letterSpacing: 3 }}>{s.data.fileTag ?? "CASE FILE #25 · TRAINING DATA"}</div>
         <div style={{ position: "absolute", left: 40, right: 40, top: 110, display: "flex", flexDirection: "column", gap: 22 }}>
           {(s.data.points ?? []).map((p: string, i: number) => (
             <div key={p} style={{ fontFamily: C.inter, fontWeight: 800, fontSize: 38, color: C.ink, opacity: interpolate(f, [8 + i * 6, 14 + i * 6], [0, 1], cl) }}>• {p}</div>
@@ -359,13 +359,13 @@ const CaseClosed: React.FC<SP> = ({ s, cue }) => {
       <Stamp t="CASE CLOSED" at={6} x={600} y={800} size={110} rot={-10} />
       {f >= truth && (
         <div style={{ position: "absolute", left: 60, right: 60, top: 940, textAlign: "center", fontFamily: C.inter, fontWeight: 900, fontSize: 56, color: C.paper, transform: `scale(${interpolate(f - truth, [0, 6], [0.85, 1], cl)})` }}>
-          An AI is only as smart as <span style={{ color: C.amber }}>its data.</span>
+          {s.data.truth ?? "An AI is only as smart as"} <span style={{ color: C.amber }}>{s.data.truthHi ?? "its data."}</span>
         </div>
       )}
       {f >= next && (
         <div style={{ position: "absolute", left: 90, right: 90, top: 1100, background: C.paper, padding: "20px 28px", transform: `translateY(${(1 - nextS) * 200}px) rotate(1deg)`, boxShadow: "0 12px 24px rgba(0,0,0,0.45)", display: "flex", alignItems: "center", gap: 20 }}>
-          <div style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 26, color: "#b45309" }}>NEXT CASE<br />EP 26</div>
-          <div style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 36, color: C.ink }}>The AI that memorised every answer… and still failed.</div>
+          <div style={{ fontFamily: C.mono, fontWeight: 800, fontSize: 26, color: "#b45309" }}>NEXT CASE<br />{s.data.nextEp ?? "EP 26"}</div>
+          <div style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 36, color: C.ink }}>{s.data.nextText ?? "The AI that memorised every answer… and still failed."}</div>
         </div>
       )}
       {f >= follow && (

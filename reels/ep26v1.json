@@ -1,0 +1,273 @@
+{
+ "id": "ep26v1",
+ "title": "The AI that memorised",
+ "label": "EP 26",
+ "banner": "The AI that memorised",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.12,
+ "gap": 0.5,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "musicLift": 2.2,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "of_hook",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The case",
+     "title": "100% in practice, 52% in the exam",
+     "notes": [
+      [
+       "Practice score: 100%",
+       0
+      ],
+      [
+       "Real exam: 52%",
+       2
+      ],
+      [
+       "On a yes/no test, 50% is pure guessing",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.4,
+     "text": "This AI scored a hundred percent in practice. [1] Then came the real exam... [2] fifty-two percent. On a yes-or-no test, that's barely better than guessing. [3] What went wrong?"
+    }
+   ]
+  },
+  {
+   "id": "key",
+   "type": "of_answerkey",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The answer key",
+     "title": "Memorising is not learning",
+     "notes": [
+      [
+       "Memorised answers: perfect practice score",
+       2
+      ],
+      [
+       "Same idea, new wording: fails",
+       4
+      ],
+      [
+       "Overfitting = memorising the training data",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_key.wav",
+     "maxgap": 0.4,
+     "text": "It's like a student who memorises the answer key. [1] Question one: true. Question two: false. [2] A perfect score on the practice paper. [3] But change the questions a little... [4] and they're lost. In AI, this is called overfitting."
+    }
+   ]
+  },
+  {
+   "id": "curves",
+   "type": "of_curves",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Three fits",
+     "title": "Overfit, underfit, just right",
+     "notes": [
+      [
+       "Overfit: follows every dot, even the noise",
+       1
+      ],
+      [
+       "Underfit: too simple, low scores even in practice",
+       2
+      ],
+      [
+       "Just right: follows the real trend",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_curves.wav",
+     "maxgap": 0.4,
+     "text": "Picture it as dots on a graph. [1] Too complex: a wiggly line through every dot, even the random mistakes. That's overfitting. [2] Too simple: a straight line that misses the pattern. That's underfitting: low scores, even in practice. [3] Just right: a smooth curve that follows the real trend."
+    }
+   ]
+  },
+  {
+   "id": "gap",
+   "type": "of_gap",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The alarm",
+     "title": "Watch two scores",
+     "notes": [
+      [
+       "Training score: keeps going up",
+       2
+      ],
+      [
+       "Validation score: unseen data",
+       3
+      ],
+      [
+       "When they split, stop training (early stopping)",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_gap.wav",
+     "maxgap": 0.4,
+     "text": "So how do you catch it? [1] Watch two scores while it trains. [2] The practice score keeps climbing. [3] But the validation score, on data it has never seen, starts to fall. [4] When they split apart, stop training right there."
+    }
+   ]
+  },
+  {
+   "id": "fixes",
+   "type": "of_fixes",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The fixes",
+     "title": "How to fix each one",
+     "notes": [
+      [
+       "Overfitting: more varied data",
+       1
+      ],
+      [
+       "Overfitting: simpler model, stop early",
+       3
+      ],
+      [
+       "Underfitting: bigger model, train longer",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_fixes.wav",
+     "maxgap": 0.4,
+     "text": "The fixes. For overfitting: [1] more data, with more variety. [2] A simpler model. [3] Or stop training early. [4] For underfitting, do the opposite: a bigger model, and train longer."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "quiz",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Crack this case",
+     "notes": [
+      [
+       "Practice 55%, new data 53%",
+       0
+      ],
+      [
+       "Overfitting or underfitting?",
+       1
+      ],
+      [
+       "Answer: underfitting (both low)",
+       2
+      ]
+     ]
+    },
+    "question": "Practice score 55%. New data 53%. What's wrong with this model?",
+    "options": [
+     "Overfitting",
+     "Underfitting",
+     "Perfect fit"
+    ],
+    "answer": 1
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_quiz.wav",
+     "maxgap": 0.4,
+     "text": "Your turn, detective. A model scores fifty-five percent in practice, and fifty-three on new data. [1] Overfitting, or underfitting? <pause 3.5> [2] Underfitting! Both scores are low. It never learned the pattern at all.",
+     "tts": "Your turn, detective. A model scores fifty-five percent in practice, and fifty-three on new data. Overfitting, or underfitting?",
+     "file2": "06_quiz_answer.wav",
+     "tts2": "Underfitting! Both scores are low. It never learned the pattern at all.",
+     "pause": 3.5,
+     "gap": 0.1
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "caseclosed",
+   "tail": 0.5,
+   "data": {
+    "yt": {
+     "chapter": "Case closed",
+     "title": "Don't memorise. Generalise.",
+     "notes": [
+      [
+       "Overfitting: great in practice, fails on new data",
+       0
+      ],
+      [
+       "Underfitting: low scores everywhere",
+       1
+      ],
+      [
+       "Watch the validation score",
+       2
+      ]
+     ]
+    },
+    "points": [
+     "Overfitting: great in practice, fails on new data",
+     "Underfitting: low scores everywhere",
+     "Watch the validation score; stop when it drops"
+    ],
+    "fileTag": "CASE FILE #26 · OVERFITTING",
+    "truth": "Don't memorise.",
+    "truthHi": "Generalise.",
+    "nextEp": "EP 27",
+    "nextText": "The key idea behind ChatGPT: attention."
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_outro.wav",
+     "maxgap": 0.4,
+     "text": "Case closed. [1] Overfitting memorises. Underfitting never learns. The goal is to generalise. [2] Next: the key idea behind ChatGPT... attention. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}
