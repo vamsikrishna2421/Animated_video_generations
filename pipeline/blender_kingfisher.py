@@ -29,10 +29,16 @@ def srgb(h):
     return tuple(((x + 0.055) / 1.055) ** 2.4 if x > 0.04045 else x / 12.92 for x in c) + (1.0,)
 
 
-P = dict(orange=srgb("#e0661f"), orangeDeep=srgb("#b9480f"), orangeLight=srgb("#f39a4a"), white=srgb("#f6efe2"), buff=srgb("#f2dcc0"),
-         crown=srgb("#1b5f9e"), crownBar=srgb("#6fc4f0"), malar=srgb("#1a5c96"), cyan=srgb("#18d0e6"), cyanDeep=srgb("#0aa2c4"),
-         wing=srgb("#13708a"), wingDark=srgb("#0a3446"), wingSpot=srgb("#6cc9e8"), flight=srgb("#0c2f40"), tail=srgb("#143f78"),
-         bill=srgb("#121214"), foot=srgb("#e2453a"))
+def hexc(h):
+    """Raw sRGB (0..1) for byte vertex colours: Blender linearises those itself."""
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)) + (1.0,)
+
+
+P = dict(orange=hexc("#e0661f"), orangeDeep=hexc("#b9480f"), orangeLight=hexc("#f39a4a"), white=hexc("#f6efe2"), buff=hexc("#f2dcc0"),
+         crown=hexc("#1b5f9e"), crownBar=hexc("#6fc4f0"), malar=hexc("#1a5c96"), cyan=hexc("#18d0e6"), cyanDeep=hexc("#0aa2c4"),
+         wing=hexc("#13708a"), wingDark=hexc("#0a3446"), wingSpot=hexc("#6cc9e8"), flight=hexc("#0c2f40"), tail=hexc("#143f78"),
+         bill=hexc("#121214"), foot=hexc("#e2453a"))
 
 
 def mix(a, b, t):
@@ -186,10 +192,10 @@ def plumage_cards(name="Plumage", rows=78, per=96):
             if n.dot(p - catmull(SPINE, s_)) < 0:
                 n = -n
             head = smooth(0.66, 0.75, s_)
-            size = (0.05 - 0.026 * head) * (0.85 + rng.random() * 0.3)
+            size = (0.04 - 0.022 * head) * (0.88 + rng.random() * 0.24)
             L, W = size * 1.15, size
             base_c = body_color(s_, th)
-            k = 0.85 + rng.random() * 0.25
+            k = 0.94 + rng.random() * 0.1
             base_c = tuple(min(1, c * k) for c in base_c[:3]) + (1,)
             grid = []
             for a in range(L_SEG + 1):
@@ -200,7 +206,7 @@ def plumage_cards(name="Plumage", rows=78, per=96):
                     v = c_ / W_SEG * 2 - 1
                     lift = 0.004 + 0.18 * L * u * u - 0.02 * L * v * v  # tips lift slightly off the body, cupped
                     q = p - t * (L * 0.25) + t * (u * L) + b * (v * w * 0.5) + n * lift
-                    shade = 0.62 + 0.38 * smooth(0.0, 0.6, u)  # darker base, lit tip
+                    shade = 0.8 + 0.2 * smooth(0.0, 0.6, u)  # slightly darker base, lit tip
                     cc = tuple(x * shade for x in base_c[:3]) + (1,)
                     row.append((bm.verts.new(to_bl(q)), cc))
                 grid.append(row)
@@ -314,7 +320,7 @@ def build_bird():
         cards.parent = rig
     body.parent = rig
     # bill (two mandibles)
-    billm = simple_mat("Bill", P["bill"], rough=0.25, coat=0.7)
+    billm = simple_mat("Bill", srgb("#121214"), rough=0.25, coat=0.7)
     for lower in (False, True):
         br = []
         base, tip = Vector((0, 0.196, 0.6)), Vector((0, 0.155, 0.95))
@@ -348,7 +354,7 @@ def build_bird():
     # tail
     for i in range(10):
         u = i / 9 - 0.5
-        f = feather_obj("Tail%d" % i, 0.27 - abs(u) * 0.06, 0.065, P["tail"], srgb("#0d2f5c"), featm)
+        f = feather_obj("Tail%d" % i, 0.27 - abs(u) * 0.06, 0.065, P["tail"], hexc("#0d2f5c"), featm)
         f.parent = rig
         f.location = (u * 0.07, 0.19, 0.05)
         f.rotation_euler = (0.05, 0, u * 1.0)
