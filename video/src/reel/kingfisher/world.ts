@@ -173,9 +173,9 @@ export const updateSplash = (s: Splash, t: number) => {
   const ct = Math.max(0, t);
   const ch = Math.max(0, Math.sin(Math.min(1, ct / 0.9) * Math.PI)) * 2.2;
   s.crown.visible = ct < 0.9;
-  s.crown.scale.set(0.22 + ct * 0.9, Math.max(0.01, ch * 0.45), 0.22 + ct * 0.9);
-  s.crown.position.y = ch * 0.45 / 2;
-  (s.crown.material as THREE.MeshPhysicalMaterial).opacity = 0.35 * (1 - ct / 0.9);
+  s.crown.scale.set(0.25 + ct * 1.1, Math.max(0.01, ch * 0.75), 0.25 + ct * 1.1);
+  s.crown.position.y = ch * 0.75 / 2;
+  (s.crown.material as THREE.MeshPhysicalMaterial).opacity = 0.55 * (1 - ct / 0.9);
   s.rings.forEach((r, i) => {
     const rt = ct - i * 0.35;
     r.visible = rt > 0;
@@ -375,7 +375,7 @@ export const buildWorld = (sunElev = 4, sunAz = 200): World => {
   for (let i = 0; i < 1400; i++) mp.push(-80 + r() * 160, r() * 9, -12 + r() * 24);
   const mg = new THREE.BufferGeometry();
   mg.setAttribute("position", new THREE.Float32BufferAttribute(mp, 3));
-  const motes = new THREE.Points(mg, new THREE.PointsMaterial({ color: "#ffe7b8", size: 0.05, transparent: true, opacity: 0.75, blending: THREE.AdditiveBlending, depthWrite: false }));
+  const motes = new THREE.Points(mg, new THREE.PointsMaterial({ color: "#ffe7b8", size: 2.5, sizeAttenuation: false, map: softTex("glow"), transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false }));
   root.add(motes);
   const splash = buildSplash();
   root.add(splash.group);

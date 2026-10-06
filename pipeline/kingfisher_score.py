@@ -11,7 +11,7 @@ import numpy as np
 from scipy.signal import butter, sosfilt
 
 SR = 48000
-DUR = 36.0
+DUR = 33.0
 N = int(SR * DUR)
 ROOT = Path(__file__).resolve().parent.parent
 rng = np.random.default_rng(26)
@@ -173,7 +173,7 @@ G_ = ["G2", "D3", "G3", "B3"]
 fr = lambda ch: [note(n) for n in ch]  # noqa: E731
 
 # intro + title + launch + chase: Dm Bb F C (2.25 s per chord from 2.5)
-put(music, pad(fr(Dm), 2.6, a=1.8, r=0.6, cut=900, vol=0.10), 0.0)
+put(music, pad(fr(Dm), 2.6, a=0.05, r=0.6, cut=1600, vol=0.17), 0.0)
 prog = [Dm, Bb, F_, C_]
 tt = 2.5
 k = 0
@@ -195,9 +195,9 @@ put(music, pad([note("D2"), note("A2"), note("D3"), note("F3")], 2.6, a=0.2, r=1
 for i, ch in enumerate([D_, A_, Bm, G_]):
     put(music, pad(fr(ch) + [fr(ch)[1] * 2], 2.0, a=0.15, r=0.5, cut=3200, vol=0.15), 24.5 + i * 1.75 * 0 + i * 0.875)
 # landing resolve: G A D (warm), end chord
-put(music, pad(fr(G_), 2.2, a=0.3, r=0.6, cut=2600, vol=0.15), 28.0)
-put(music, pad(fr(A_), 2.2, a=0.3, r=0.6, cut=2600, vol=0.15), 30.0)
-put(music, pad(fr(D_) + [note("F#4"), note("A4")], 5.0, a=0.4, r=3.0, cut=2400, vol=0.16), 32.0)
+put(music, pad(fr(G_), 1.6, a=0.2, r=0.4, cut=2600, vol=0.15), 28.0)
+put(music, pad(fr(A_), 1.6, a=0.2, r=0.4, cut=3000, vol=0.16), 29.4)
+put(music, pad(fr(D_) + [note("F#4"), note("A4"), note("D5")], 2.4, a=0.05, r=1.2, cut=3200, vol=0.19), 30.8)
 # ostinato plucks (eighths at 120 bpm) through launch + chase, back for hover + burst
 arp_m = ["D4", "A4", "F4", "A4", "D5", "A4", "F4", "A4"]
 arp_M = ["D4", "A4", "F#4", "A4", "D5", "A4", "F#4", "A4"]
@@ -208,12 +208,15 @@ for i in range(int((21.8 - 17.0) / 0.25)):
 for i in range(int((28.0 - 24.5) / 0.25)):
     put(music, pluck(note(arp_M[i % 8]), 0.8, vol=0.1), 24.5 + i * 0.25)
 # melody over the landing
-for at, nm, d in [(28.0, "A4", 0.9), (28.9, "D5", 0.9), (29.8, "E5", 0.9), (30.7, "F#5", 1.4), (32.1, "E5", 0.7), (32.8, "D5", 3.0)]:
+for at, nm, d in [(28.0, "A4", 0.6), (28.6, "D5", 0.6), (29.2, "E5", 0.6), (29.8, "F#5", 1.0), (30.8, "D5", 2.2)]:
     put(music, pluck(note(nm), d + 0.6, vol=0.16, bright=0.8), at)
 
 # ---- drums ----
-for b in [0.4, 1.0, 1.6, 2.2]:  # heartbeat under the macro
-    put(drums, heartbeat(0.5), b)
+put(drums, taiko(0.9, 1.0), 0.0)  # hit on frame one
+for b in [0.6, 1.2, 1.8, 2.2]:  # heartbeat under the macro
+    put(drums, heartbeat(0.7), b)
+for i in range(7):  # keep a soft pulse under the slow-motion orbit
+    put(drums, taiko(0.3, 0.5), 13.5 + i * 0.5)
 put(drums, taiko(1.0, 1.2), 2.5)
 for i in range(16):  # chase pattern (120 bpm)
     bt = 8.5 + i * 0.5
@@ -240,10 +243,15 @@ for i in range(7):
     put(drums, taiko(0.85 if i % 2 == 0 else 0.5, 0.6), 24.5 + i * 0.5)
     put(drums, hat(0.08), 24.75 + i * 0.5)
 put(drums, taiko(0.7, 1.0), 28.0)
-put(drums, taiko(0.5, 1.2), 32.0)
+for i in range(6):
+    put(drums, taiko(0.3 + i * 0.08, 0.4), 29.4 + i * 0.23)
+put(drums, taiko(1.0, 1.4), 30.8)
 
 # ---- sound design ----
+put(fx, boom(0.6, 2.0), 0.0)
 put(fx, boom(0.7, 2.5), 2.5)
+put(fx, riser(1.5, 0.35), 29.3)
+put(fx, boom(0.8, 2.2), 30.8)
 put(fx, whoosh(0.9, 0.35), 5.45)
 put(fx, whoosh(0.6, 0.25), 8.45)
 put(fx, whoosh(0.7, 0.3), 12.2)
@@ -261,7 +269,7 @@ drums = reverb(drums, 1.6, 0.15)
 mix = music * 1.0 + drums * 0.55 + fx * 0.6
 cut0, cut1 = int(21.85 * SR), int(22.0 * SR)
 mix[cut0:cut1] *= np.linspace(0.15, 0.0, cut1 - cut0)  # the breath before the splash
-arc = np.interp(np.arange(N) / SR, [0, 2.5, 8.5, 13.5, 17, 21.8, 22.0, 24.5, 28, 33, 36], [0.7, 0.85, 1.0, 0.8, 0.9, 1.1, 1.1, 1.15, 1.05, 1.0, 0.0])
+arc = np.interp(np.arange(N) / SR, [0, 2.5, 8.5, 13.5, 17, 21.8, 22.0, 24.5, 28, 30.8, 32.3, 33], [1.0, 0.95, 1.0, 0.9, 0.95, 1.1, 1.1, 1.15, 1.05, 1.2, 1.0, 0.0])
 mix *= arc
 mix = hp(mix, 30)
 mix = np.tanh(mix * 1.6) / np.tanh(1.6)

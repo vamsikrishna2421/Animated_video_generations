@@ -551,7 +551,7 @@ export const buildBird = (): Bird => {
   const feet = [buildFoot(1), buildFoot(-1)];
   feet.forEach((f) => body.add(f.g));
   const fish = buildFish();
-  fish.position.set(0, -0.13, 0.52);
+  fish.position.set(0, -0.03, 0.5);
   fish.scale.setScalar(1.6);
   fish.rotation.set(0, Math.PI / 2, 0);
   fish.visible = false;
@@ -584,8 +584,8 @@ export const poseBird = (b: Bird, p: BirdPose) => {
   b.lowerBill.rotation.x = p.billOpen * 0.35;
   b.fish.visible = p.fish;
   if (p.fish) {
-    // held by the head, body hanging down and back from the bill tip, still flicking
-    b.fish.rotation.set(1.05 + Math.sin((p.fishWiggle ?? 0) * 12) * 0.12, Math.sin((p.fishWiggle ?? 0) * 7) * 0.2, 0);
+    // held crosswise near the bill tip (as real kingfishers carry fish), angled so it reads from the side
+    b.fish.rotation.set(0.25 + Math.sin((p.fishWiggle ?? 0) * 12) * 0.08, 1.05, Math.sin((p.fishWiggle ?? 0) * 9) * 0.15);
     (b.fish.userData.tail as THREE.Mesh).rotation.y = Math.PI / 2 + Math.sin((p.fishWiggle ?? 0) * 18) * 0.5;
   }
   b.nictitating.forEach((l) => (l.visible = p.lid));

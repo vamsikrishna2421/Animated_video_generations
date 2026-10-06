@@ -8,7 +8,7 @@ import { IMPACT, PERCH, World, buildWorld, updateSplash, updateWorld } from "./w
 
 // "Blue lightning": a 36 s cinematic ride with a kingfisher that is built entirely from code.
 export const KF_FPS = 30;
-export const KF_LEN = 36 * KF_FPS;
+export const KF_LEN = 33 * KF_FPS;
 
 const V = (x: number, y: number, z: number) => new THREE.Vector3(x, y, z);
 const ease = (x: number) => (x < 0 ? 0 : x > 1 ? 1 : x * x * (3 - 2 * x));
@@ -110,7 +110,7 @@ const SHOTS: { t0: number; t1: number; at: (lt: number, d: number, T: number) =>
       cam: V(5.6, 1.5, 7.6), look: pos.clone().lerp(V(0.75, 1.6, 3.2), 0.35), fov: 46, splashT: 1.05 + lt * 0.6 };
   } },
   // 10-11. lands on the branch with breakfast; hero shot, backlit by the low sun, then the end card
-  { t0: 28, t1: 36, at: (lt) => {
+  { t0: 28, t1: 33, at: (lt) => {
     const land = clamp01(lt / 1.1);
     const from = PERCH_BODY.clone().add(V(0.6, 1.1, 0.8));
     const pos = from.lerp(PERCH_BODY, ease(land));
@@ -118,7 +118,7 @@ const SHOTS: { t0: number; t1: number; at: (lt: number, d: number, T: number) =>
     const head = HEAD(PERCH_BODY);
     return { pos, dir: PERCH_DIR.clone().lerp(V(-0.6, 0, -1), 1 - ease(land)).normalize(), roll: 0, pitch: lerp(-0.2, 0.42, settle),
       pose: basePose({ phase: (lt * 3.4) % 1, amp: 1 - settle, folded: settle, feetDown: clamp01(lt / 0.6), tailSpread: lerp(0.8, 0.08, settle), fish: true, fishWiggle: lt, headYaw: settle * Math.sin(lt * 1.5) * 0.25 }),
-      cam: PERCH_BODY.clone().add(V(-4.3, lerp(0.85, 0.55, ease(lt / 8)), lerp(-2.0, -1.0, ease(lt / 8)))), look: PERCH_BODY.clone().add(V(0, 0.2, -0.32)), fov: 36 };
+      cam: PERCH_BODY.clone().add(V(-4.3, lerp(0.85, 0.55, ease(lt / 5)), lerp(-2.0, -1.0, ease(lt / 5)))), look: PERCH_BODY.clone().add(V(0, 0.2, -0.32)), fov: 36 };
   } },
 ];
 
@@ -182,12 +182,24 @@ const Title: React.FC<{ T: number; a: number; b: number; children: React.ReactNo
   );
 };
 
+// high-contrast caption on a soft dark band (readable over bright sky or water)
+const Band: React.FC<{ T: number; a: number; b: number; top: number; dark?: number; children: React.ReactNode }> = ({ T, a, b, top, dark = 0.5, children }) => {
+  const o = interpolate(T, [a, a + 0.35, b - 0.4, b], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, top: top - 40, padding: "40px 60px", opacity: o, textAlign: "center", color: "white",
+      fontFamily: "Inter, 'DejaVu Sans', sans-serif", textShadow: "0 2px 14px rgba(0,0,0,0.7)",
+      background: `linear-gradient(180deg, transparent, rgba(0,0,0,${dark}) 22%, rgba(0,0,0,${dark}) 78%, transparent)` }}>
+      {children}
+    </div>
+  );
+};
+
 export const KingfisherRide: React.FC<{ handle?: string; credit?: string }> = ({ handle = "@ai_maastaaru", credit = "" }) => {
   const f = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const T = f / KF_FPS;
   const cutFlash = [2.5, 5.5, 8.5, 13.5, 17, 19.5, 22, 24.5, 28].some((c) => T >= c && T < c + 0.08) ? 0.12 : 0;
-  const endDim = interpolate(T, [32.6, 33.6], [0, 0.55], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const endDim = interpolate(T, [30.3, 31.0], [0, 0.6], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const fadeIn = interpolate(T, [0, 0.4], [1, 0], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ background: "#000" }}>
@@ -200,17 +212,24 @@ export const KingfisherRide: React.FC<{ handle?: string; credit?: string }> = ({
       <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,0.55) 100%)" }} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(255,170,90,0.10), transparent 35%, transparent 75%, rgba(0,0,0,0.25))", mixBlendMode: "screen" }} />
       <AbsoluteFill style={{ background: "white", opacity: cutFlash, mixBlendMode: "overlay" }} />
-      <Title T={T} a={2.8} b={5.4} top={300} size={92}>
-        <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, letterSpacing: 10 }}>KINGFISHER</div>
-        <div style={{ fontSize: 30, fontWeight: 500, letterSpacing: 6, opacity: 0.85, marginTop: 10, fontStyle: "italic" }}>Alcedo atthis</div>
-      </Title>
-      <Title T={T} a={14.0} b={16.8}>No 3D model. No textures. Every feather is code.</Title>
-      <Title T={T} a={20.0} b={22.0}>A third eyelid shuts before it hits the water.</Title>
-      <Title T={T} a={29.6} b={32.8}>One dive. One fish. Breakfast.</Title>
+      <Band T={T} a={0.15} b={2.45} top={1390}>
+        <div style={{ fontSize: 50, fontWeight: 800, lineHeight: 1.2 }}>AI wrote every line of code<br />for this scene.</div>
+        <div style={{ fontSize: 34, fontWeight: 600, marginTop: 14, color: "#7dd3fc" }}>No 3D models. No stock footage.</div>
+      </Band>
+      <Band T={T} a={2.8} b={5.4} top={250} dark={0.55}>
+        <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 96, fontWeight: 700, letterSpacing: 10 }}>KINGFISHER</div>
+        <div style={{ fontSize: 40, fontWeight: 500, letterSpacing: 4, marginTop: 8, fontStyle: "italic", color: "#ffe2b8" }}>Alcedo atthis</div>
+      </Band>
+      <Band T={T} a={14.0} b={16.8} top={1460}>
+        <div style={{ fontSize: 40, fontWeight: 700 }}>Bird, river, sky, splash and music:<br />all generated from code.</div>
+      </Band>
+      <Band T={T} a={20.0} b={22.0} top={1460}><div style={{ fontSize: 40, fontWeight: 700 }}>A third eyelid shuts as it enters the water.</div></Band>
+      <Band T={T} a={28.9} b={30.5} top={1460}><div style={{ fontSize: 44, fontWeight: 700 }}>One dive. One fish. Breakfast.</div></Band>
       <AbsoluteFill style={{ background: "black", opacity: endDim }} />
-      <Title T={T} a={33.4} b={36.5} top={1180} size={50}>
-        <div style={{ fontSize: 34, letterSpacing: 6, opacity: 0.85 }}>BUILT FROM SCRATCH IN CODE</div>
-        <div style={{ marginTop: 26, fontSize: 64, fontWeight: 800, color: "#7dd3fc" }}>{handle}</div>
+      <Title T={T} a={30.8} b={33.6} top={1040} size={50}>
+        <div style={{ fontSize: 46, fontWeight: 800, letterSpacing: 3, lineHeight: 1.25 }}>AI-WRITTEN CODE.<br />NO 3D MODELS.</div>
+        <div style={{ marginTop: 34, fontSize: 80, fontWeight: 800, color: "#7dd3fc" }}>{handle}</div>
+        <div style={{ marginTop: 18, fontSize: 34, opacity: 0.9 }}>Follow for more AI builds</div>
         {credit ? <div style={{ marginTop: 22, fontSize: 30, opacity: 0.8 }}>{credit}</div> : null}
       </Title>
       <AbsoluteFill style={{ background: "black", opacity: fadeIn }} />
