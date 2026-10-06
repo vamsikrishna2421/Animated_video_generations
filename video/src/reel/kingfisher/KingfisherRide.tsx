@@ -172,7 +172,7 @@ const Scene: React.FC<{ T: number }> = ({ T }) => {
   );
 };
 
-const Title: React.FC<{ T: number; a: number; b: number; children: React.ReactNode; top?: number; size?: number }> = ({ T, a, b, children, top = 1500, size = 44 }) => {
+export const Title: React.FC<{ T: number; a: number; b: number; children: React.ReactNode; top?: number; size?: number }> = ({ T, a, b, children, top = 1500, size = 44 }) => {
   const o = interpolate(T, [a, a + 0.5, b - 0.5, b], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const y = interpolate(T, [a, a + 0.8], [16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
@@ -183,7 +183,7 @@ const Title: React.FC<{ T: number; a: number; b: number; children: React.ReactNo
 };
 
 // high-contrast caption on a soft dark band (readable over bright sky or water)
-const Band: React.FC<{ T: number; a: number; b: number; top: number; dark?: number; children: React.ReactNode }> = ({ T, a, b, top, dark = 0.5, children }) => {
+export const Band: React.FC<{ T: number; a: number; b: number; top: number; dark?: number; children: React.ReactNode }> = ({ T, a, b, top, dark = 0.5, children }) => {
   const o = interpolate(T, [a, a + 0.35, b - 0.4, b], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: top - 40, padding: "40px 60px", opacity: o, textAlign: "center", color: "white",
