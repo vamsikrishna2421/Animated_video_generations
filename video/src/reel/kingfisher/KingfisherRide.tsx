@@ -118,7 +118,7 @@ const SHOTS: { t0: number; t1: number; at: (lt: number, d: number, T: number) =>
     const head = HEAD(PERCH_BODY);
     return { pos, dir: PERCH_DIR.clone().lerp(V(-0.6, 0, -1), 1 - ease(land)).normalize(), roll: 0, pitch: lerp(-0.2, 0.42, settle),
       pose: basePose({ phase: (lt * 3.4) % 1, amp: 1 - settle, folded: settle, feetDown: clamp01(lt / 0.6), tailSpread: lerp(0.8, 0.08, settle), fish: true, fishWiggle: lt, headYaw: settle * Math.sin(lt * 1.5) * 0.25 }),
-      cam: PERCH_BODY.clone().add(V(-3.3, lerp(0.75, 0.45, ease(lt / 8)), lerp(-1.3, -0.2, ease(lt / 8)))), look: PERCH_BODY.clone().add(V(0, 0.22, -0.15)), fov: 36 };
+      cam: PERCH_BODY.clone().add(V(-4.3, lerp(0.85, 0.55, ease(lt / 8)), lerp(-2.0, -1.0, ease(lt / 8)))), look: PERCH_BODY.clone().add(V(0, 0.2, -0.32)), fov: 36 };
   } },
 ];
 
@@ -208,7 +208,7 @@ export const KingfisherRide: React.FC<{ handle?: string; credit?: string }> = ({
       <Title T={T} a={20.0} b={22.0}>A third eyelid shuts before it hits the water.</Title>
       <Title T={T} a={29.6} b={32.8}>One dive. One fish. Breakfast.</Title>
       <AbsoluteFill style={{ background: "black", opacity: endDim }} />
-      <Title T={T} a={33.4} b={36.5} top={760} size={50}>
+      <Title T={T} a={33.4} b={36.5} top={1180} size={50}>
         <div style={{ fontSize: 34, letterSpacing: 6, opacity: 0.85 }}>BUILT FROM SCRATCH IN CODE</div>
         <div style={{ marginTop: 26, fontSize: 64, fontWeight: 800, color: "#7dd3fc" }}>{handle}</div>
         {credit ? <div style={{ marginTop: 22, fontSize: 30, opacity: 0.8 }}>{credit}</div> : null}

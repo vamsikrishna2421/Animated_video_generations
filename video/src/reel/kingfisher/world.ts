@@ -126,11 +126,11 @@ type Splash = { group: THREE.Group; drops: THREE.InstancedMesh; dropV: THREE.Vec
 const buildSplash = (): Splash => {
   const group = new THREE.Group();
   group.position.copy(IMPACT);
-  const waterMat = new THREE.MeshPhysicalMaterial({ color: "#cfeaf5", roughness: 0.05, metalness: 0, transmission: 0.6, transparent: true, opacity: 0.7, ior: 1.33, clearcoat: 1 });
-  const drops = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 8), waterMat, 420);
+  const waterMat = new THREE.MeshStandardMaterial({ color: "#f4fbff", roughness: 0.1, metalness: 0.2, emissive: "#ffe9c8", emissiveIntensity: 0.15, transparent: true, opacity: 0.7 });
+  const drops = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 8), waterMat, 190);
   const r = rng(7), dropV: THREE.Vector3[] = [];
-  for (let i = 0; i < 420; i++) {
-    const a = r() * Math.PI * 2, up = 1.8 + Math.pow(r(), 2) * 5.5, out = 0.8 + r() * 2.6;
+  for (let i = 0; i < 190; i++) {
+    const a = r() * Math.PI * 2, up = 1.5 + Math.pow(r(), 2) * 4.2, out = 0.6 + r() * 2.2;
     dropV.push(new THREE.Vector3(Math.cos(a) * out, up, Math.sin(a) * out));
   }
   drops.frustumCulled = false;
@@ -164,8 +164,8 @@ export const updateSplash = (s: Splash, t: number) => {
     const tt = Math.max(0, t - (i % 5) * 0.03);
     const p = new THREE.Vector3(v.x * tt, v.y * tt - 0.5 * g * tt * tt, v.z * tt);
     const alive = tt > 0 && p.y > -0.05;
-    const sc = alive ? 0.016 + (i % 7) * 0.005 : 0;
-    m.compose(p, q, new THREE.Vector3(sc, sc * (1 + Math.min(1.5, Math.abs(v.y - g * tt) * 0.08)), sc));
+    const sc = alive ? 0.007 + (i % 7) * 0.002 : 0;
+    m.compose(p, q, new THREE.Vector3(sc, sc * (1 + Math.min(3, Math.abs(v.y - g * tt) * 0.35)), sc));
     s.drops.setMatrixAt(i, m);
   });
   s.drops.instanceMatrix.needsUpdate = true;
@@ -222,7 +222,7 @@ export const buildWorld = (sunElev = 4, sunAz = 200): World => {
   // water
   const water = new Water(new THREE.PlaneGeometry(4000, 4000), {
     textureWidth: 1024, textureHeight: 1024, waterNormals: waterNormals(), sunDirection: sunDir.clone(), sunColor: 0xffd9a8,
-    waterColor: 0x0c2a2c, distortionScale: 0.7, fog: true, alpha: 1,
+    waterColor: 0x0c2a2c, distortionScale: 0.28, fog: true, alpha: 1,
   });
   water.rotation.x = -Math.PI / 2;
   (water.material as THREE.ShaderMaterial).uniforms.size.value = 7;
@@ -364,7 +364,8 @@ export const buildWorld = (sunElev = 4, sunAz = 200): World => {
   const mist: THREE.Mesh[] = [];
   for (let i = 0; i < 14; i++) {
     const m = new THREE.Mesh(new THREE.PlaneGeometry(90, 14), new THREE.MeshBasicMaterial({ map: mistTex, color: "#ffe0bf", transparent: true, opacity: 0.32, depthWrite: false, fog: true }));
-    m.position.set(-300 + i * 45, 1.2 + (i % 3) * 0.9, (i % 2 ? 1 : -1) * (3 + (i % 4) * 2.5));
+    m.rotation.x = -Math.PI / 2;
+    m.position.set(-300 + i * 45, 0.35 + (i % 3) * 0.25, (i % 2 ? 1 : -1) * (3 + (i % 4) * 2.5));
     m.userData.x0 = m.position.x;
     root.add(m);
     mist.push(m);
@@ -397,7 +398,6 @@ export const updateWorld = (w: World, t: number, camX: number) => {
   });
   w.mist.forEach((ms, i) => {
     ms.position.x = ms.userData.x0 + t * (0.6 + (i % 3) * 0.25);
-    ms.lookAt(camX, ms.position.y, ms.position.z + 100);
   });
   w.motes.position.set(camX * 0.0, Math.sin(t * 0.3) * 0.2, 0);
   w.motes.rotation.y = t * 0.01;
