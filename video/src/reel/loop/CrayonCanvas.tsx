@@ -36,7 +36,7 @@ export const CrayonCanvas: React.FC<{ draw: Draw; grainAmt?: number; vig?: numbe
     draw(c, W, H, f, boil);
     c.setTransform(1, 0, 0, 1, 0, 0);
     if (vig) vignette(c, W, H, vig);
-    if (grainAmt) grain(c, W, H, grainAmt, boil);
+    if (grainAmt) grain(c, W, H, grainAmt, 0);
   });
   return (
     <AbsoluteFill>

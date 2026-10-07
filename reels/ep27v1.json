@@ -13,7 +13,7 @@
   0.16,
   0.32
  ],
- "musicLift": 2.2,
+ "musicLift": 3.0,
  "parler_lang": "en",
  "scenes": [
   {
@@ -78,7 +78,7 @@
      "who": "maastaaru",
      "file": "02_old.wav",
      "maxgap": 0.4,
-     "text": "Older models, before Transformers, read one word at a time, [1] passing a summary along, like a whisper down a long line. [2] By the end, the start of the sentence has gone blurry."
+     "text": "Older models, before Transformers, read one word at a time, [1] passing a summary along, like a whisper down a long line. [2] By the end, the start of the sentence has faded away."
     }
    ]
   },
@@ -210,7 +210,8 @@
      "who": "maastaaru",
      "file": "06_origin.wav",
      "maxgap": 0.4,
-     "text": "In 2017, Google built a model entirely out of attention: [1] the Transformer. [2] That's the T in ChatGPT."
+     "text": "In 2017, Google built a model entirely out of attention: [1] the Transformer. [2] That's the T in ChatGPT.",
+     "tts": "In twenty seventeen, Google built a model entirely out of attention: the Transformer. That's the T in Chat G P T."
     }
    ]
   },

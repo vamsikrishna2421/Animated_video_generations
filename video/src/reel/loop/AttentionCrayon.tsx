@@ -15,12 +15,12 @@ type WordBox = { w: string; x: number; y: number; wd: number; size: number };
 // ---------- shared drawing ----------
 const background = (c: Ctx, W: number, H: number, boil: number, tint = COL.blue) => {
   c.fillStyle = tint; c.fillRect(0, 0, W, H);
-  const r = rng(40 + boil);
+  const r = rng(40);
   hatch(c, [0, 0, W, H], [COL.deep, COL.navy, "#2a4cff", COL.light], r, { angle: -0.75, gap: 16, w: 5, alpha: 0.35, wobble: 4 });
 };
 
 const page = (c: Ctx, x: number, y: number, w: number, h: number, boil: number, rot = -0.012) => {
-  const r = rng(60 + boil);
+  const r = rng(60);
   c.save();
   c.translate(x + w / 2, y + h / 2); c.rotate(rot); c.translate(-w / 2, -h / 2);
   c.fillStyle = "rgba(4,8,40,0.45)"; c.fillRect(14, 18, w, h);
@@ -206,7 +206,7 @@ const AtOld: React.FC<SP> = ({ cue, s }) => {
         c.fillText("cross the street...", bcx, by - 36);
         c.restore();
       }
-      if (f >= c2) hand(c, "the start goes blurry", W / 2, 1320, 80, COL.orangeLight, seg(f, c2 + 4, c2 + 22), r, -0.03, "center");
+      if (f >= c2) hand(c, "the start fades away", W / 2, 1320, 80, COL.orangeLight, seg(f, c2 + 4, c2 + 22), r, -0.03, "center");
     }} />
   );
 };
