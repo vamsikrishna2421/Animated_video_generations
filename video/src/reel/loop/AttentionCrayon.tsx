@@ -1,4 +1,5 @@
 import React from "react";
+import { Audio, Sequence, staticFile } from "remotion";
 import { Ctx, Pt, rng, stroke, circlePts, hatch, clamp, ease, easeOut, seg, lerp, writeOn } from "./crayon";
 import { COL } from "./scenes";
 import { CrayonCanvas } from "./CrayonCanvas";
@@ -116,6 +117,9 @@ const thread = (c: Ctx, a: Pt, b: Pt, wgt: number, p: number, r: () => number, c
 };
 
 const fade = (f: number, a: number, len = 8) => clamp((f - a) / len);
+const Hit: React.FC<{ at: number; vol?: number }> = ({ at, vol = 0.55 }) => (
+  <Sequence from={Math.max(0, at)} durationInFrames={45} layout="none"><Audio src={staticFile("reel/sfx_boom.wav")} volume={vol} /></Sequence>
+);
 
 // little crayon person (whisper line)
 const kid = (c: Ctx, x: number, y: number, s: number, boil: number, seed: number, mouth = false) => {
@@ -140,7 +144,8 @@ const AtHook: React.FC<SP> = ({ cue }) => {
       background(c, W, H, boil);
       const r = rng(200 + boil);
       page(c, 70, 300, 940, 760, boil);
-      const words = layout(c, S1, 160, 470, 790, 92, 1.45);
+      if (f < c1) hand(c, "which word is 'it'?", W / 2, 400, 80, COL.red, seg(f, 0, 8), r, -0.02, "center");
+      const words = layout(c, S1, 160, 520, 790, 92, 1.45);
       const iIt = 7, iAnimal = 1, iStreet = 5, iTired = 10;
       const swapped = f >= c2;
       drawWords(c, words, boil, { reveal: f / 3.2, hide: swapped ? new Set([iTired]) : undefined, color: (i) => (i === iIt && f >= c1 ? COL.red : "#16152a") });
@@ -194,13 +199,13 @@ const AtOld: React.FC<SP> = ({ cue, s }) => {
       const bx = lerp(xs(bi), xs(Math.min(n - 1, bi + 1)), bt), by = lerp(ys(bi), ys(Math.min(n - 1, bi + 1)), bt) - sz(bi) * 1.4;
       const bcx = clamp(bx, 280, 800);
       if (f >= c1 - 6) {
-        const blur = trip * 9;
+        const blur = trip * 4.5;
         c.save();
         c.beginPath(); c.ellipse(bcx, by - 70, 230, 80, 0, 0, Math.PI * 2); c.fillStyle = COL.cream; c.globalAlpha = 0.95; c.fill();
         c.globalAlpha = 1;
         stroke(c, circlePts(bcx, by - 70, 230, 80), COL.ink, 4, r, { passes: 2, alpha: 0.6 });
         c.filter = `blur(${blur.toFixed(1)}px)`;
-        c.font = `46px ${HAND}`; c.fillStyle = "#16152a"; c.textAlign = "center";
+        c.font = `54px ${HAND}`; c.fillStyle = "#16152a"; c.textAlign = "center";
         c.globalAlpha = 1 - 0.55 * trip;
         c.fillText("The animal didn't", bcx, by - 82);
         c.fillText("cross the street...", bcx, by - 36);
@@ -227,7 +232,7 @@ const AtAttn: React.FC<SP> = ({ cue }) => {
       // reading head sweeps left to right, drawing faint strings back to earlier words
       const head = f < c2 ? Math.min(iTired, Math.floor(seg(f, c1, c2) * (iTired + 1))) : iTired;
       if (f >= c1 && f < c2) {
-        for (let j = 0; j < head; j++) thread(c, top(words[head]), top(words[j]), 0.12, 1, r, COL.light);
+        for (let j = 0; j < head; j++) thread(c, top(words[head]), top(words[j]), 0.06, 1, r, COL.light);
       }
       const W8 = wide ? WEIGHTS_WIDE : WEIGHTS_TIRED;
       const grow = f < c4 ? seg(f, c2 + 6, c3) : 1;
@@ -302,14 +307,14 @@ const AtHow: React.FC<SP> = ({ cue }) => {
         c.font = `64px ${HAND}`; c.fillStyle = "#16152a"; c.textAlign = "center"; c.fillText(w, 0, 20);
         // tag on a string
         stroke(c, [[0, 55], [0, 110]], COL.pale, 3, r, { passes: 1 });
-        c.fillStyle = COL.yellow; c.fillRect(-112, 110, 224, 70);
-        c.font = `700 46px Caveat`; c.fillStyle = "#16152a"; c.fillText(tag, 0, 158);
+        c.fillStyle = COL.yellow; c.fillRect(-118, 110, 236, 88);
+        c.font = `700 58px Caveat`; c.fillStyle = "#16152a"; c.fillText(tag, 0, 172);
         c.textAlign = "left";
         c.restore();
         // match meter
         const m = seg(f, c3, c3 + 18) * score;
         if (f >= c3) {
-          const bx = x - 90, by = y + 230;
+          const bx = x - 90, by = y + 240;
           c.fillStyle = "rgba(255,255,255,0.18)"; c.fillRect(bx, by, 180, 26);
           c.fillStyle = i === 0 ? COL.orange : COL.light; c.fillRect(bx, by, 180 * m, 26);
           stroke(c, [[bx, by], [bx + 180, by], [bx + 180, by + 26], [bx, by + 26], [bx, by]], COL.cream, 3, r, { passes: 1 });
@@ -330,9 +335,9 @@ const AtHow: React.FC<SP> = ({ cue }) => {
       // engineer labels, big
       const lab = c4 + 50;
       if (f >= lab) {
-        hand(c, "QUERY", 120, 1270, 84, COL.red, seg(f, lab, lab + 10), r, -0.04);
-        hand(c, "KEY", 470, 1290, 84, COL.yellow, seg(f, lab + 10, lab + 20), r, 0.02);
-        hand(c, "VALUE", 720, 1270, 84, COL.orangeLight, seg(f, lab + 20, lab + 30), r, -0.03);
+        hand(c, "QUERY = the question", 60, 360, 58, COL.red, seg(f, lab, lab + 10), r, -0.06);
+        hand(c, "KEY = the name tags", W / 2, 1200, 72, COL.yellow, seg(f, lab + 10, lab + 20), r, -0.02, "center");
+        hand(c, "VALUE = the meaning it borrows", W / 2, 1300, 66, COL.orangeLight, seg(f, lab + 20, lab + 30), r, -0.02, "center");
       }
     }} />
   );
@@ -357,6 +362,8 @@ const net = (c: Ctx, cx: number, cy: number, R: number, n: number, p: number, r:
 const AtCost: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
+    <>
+    <Hit at={c2 + 20} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(600 + boil);
@@ -364,11 +371,11 @@ const AtCost: React.FC<SP> = ({ cue }) => {
       const big = f >= c2;
       if (!big) {
         net(c, W / 2, 760, 260, 8, seg(f, c1, c1 + 30), r, COL.pale);
-        if (f >= c1) hand(c, "8 words → 64 checks", W / 2, 1150, 80, COL.cream, seg(f, c1 + 14, c1 + 30), r, -0.02, "center");
+        if (f >= c1) hand(c, "8 words → 36 checks", W / 2, 1150, 80, COL.cream, seg(f, c1 + 14, c1 + 30), r, -0.02, "center");
       } else {
         net(c, W / 2, 760, 330, 16, seg(f, c2, c2 + 30), r, COL.orangeLight);
-        hand(c, "16 words → 256 checks", W / 2, 1150, 80, COL.cream, seg(f, c2 + 10, c2 + 26), r, -0.02, "center");
-        hand(c, "2× the words = 4× the work", W / 2, 1260, 72, COL.yellow, seg(f, c2 + 30, c2 + 46), r, -0.03, "center");
+        hand(c, "16 words → 136 checks", W / 2, 1150, 80, COL.cream, seg(f, c2 + 10, c2 + 26), r, -0.02, "center");
+        hand(c, "2× the words ≈ 4× the work", W / 2, 1260, 72, COL.yellow, seg(f, c2 + 30, c2 + 46), r, -0.03, "center");
       }
       if (f >= c3) {
         // hourglass + LIMIT stamp
@@ -380,6 +387,7 @@ const AtCost: React.FC<SP> = ({ cue }) => {
         hand(c, "long chats: slow + capped", W / 2, 1340, 62, COL.pale, seg(f, c3 + 6, c3 + 22), r, -0.02, "center");
       }
     }} />
+    </>
   );
 };
 
@@ -387,6 +395,8 @@ const AtCost: React.FC<SP> = ({ cue }) => {
 const AtOrigin: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2);
   return (
+    <>
+    <Hit at={c2} vol={0.7} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil);
       const r = rng(700 + boil);
@@ -411,6 +421,7 @@ const AtOrigin: React.FC<SP> = ({ cue }) => {
         hand(c, "Generative Pre-trained Transformer", W / 2, 1260, 58, COL.pale, seg(f, c2 + 14, c2 + 30), r, -0.02, "center");
       }
     }} />
+    </>
   );
 };
 
@@ -458,7 +469,7 @@ const AtQuiz: React.FC<SP> = ({ cue }) => {
       // pause-and-answer countdown ring
       if (f >= c1 + 12 && f < c2) {
         const p = seg(f, c1 + 12, c2);
-        hand(c, "pause & answer", W / 2, 1360, 70, COL.cream, seg(f, c1 + 12, c1 + 24), r, -0.02, "center");
+        hand(c, "pause & comment your answer", W / 2, 1360, 64, COL.cream, seg(f, c1 + 12, c1 + 24), r, -0.02, "center");
         stroke(c, circlePts(W / 2, 1210, 60, 60, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - p), 40), COL.yellow, 10, r, { passes: 2 });
       }
       if (f >= c2) {

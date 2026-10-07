@@ -162,7 +162,7 @@
      "title": "Why long chats get slow",
      "notes": [
       [
-       "Every word checks every other word",
+       "Every word checks every word before it",
        1
       ],
       [
@@ -181,8 +181,8 @@
      "who": "maastaaru",
      "file": "05_cost.wav",
      "maxgap": 0.45,
-     "text": "ఇక్కడే ఒక చిక్కు ఉంది. [1] ప్రతి పదం, ప్రతి ఇతర పదాన్నీ చెక్ చేస్తుంది. [2] మీ ప్రాంప్ట్ రెట్టింపు చేస్తే, అటెన్షన్ పని దాదాపు నాలుగు రెట్లు అవుతుంది. [3] అందుకే చాలా పొడవైన చాట్స్ నెమ్మదిస్తాయి, వాటికి లిమిట్స్ ఉంటాయి.",
-     "show": "Here's the catch. Every word checks every other word. Double your prompt, and the attention work roughly quadruples. That's why very long chats get slow, and why they have limits."
+     "text": "ఇక్కడే ఒక చిక్కు ఉంది. [1] ప్రతి పదం, తన ముందున్న ప్రతి పదాన్నీ చెక్ చేస్తుంది. [2] మీ ప్రాంప్ట్ రెట్టింపు చేస్తే, అటెన్షన్ పని దాదాపు నాలుగు రెట్లు అవుతుంది. [3] అందుకే చాలా పొడవైన చాట్స్ నెమ్మదిస్తాయి, వాటికి లిమిట్స్ ఉంటాయి.",
+     "show": "Here's the catch. Every word checks every word before it. Double your prompt, and the attention work roughly quadruples. That's why very long chats get slow, and why they have limits."
     }
    ]
   },

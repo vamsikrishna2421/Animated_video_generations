@@ -78,7 +78,7 @@
      "who": "maastaaru",
      "file": "02_old.wav",
      "maxgap": 0.4,
-     "text": "Older models, before Transformers, read one word at a time, [1] passing a summary along, like a whisper down a long line. [2] By the end, the start of the sentence has faded away."
+     "text": "Older models, before Transformers, read one word at a time, [1] passing a short summary forward, like a whisper down a long line. [2] By the end, the start of the sentence has faded away."
     }
    ]
   },
@@ -158,7 +158,7 @@
      "title": "Why long chats get slow",
      "notes": [
       [
-       "Every word checks every other word",
+       "Every word checks every word before it",
        1
       ],
       [
@@ -177,7 +177,7 @@
      "who": "maastaaru",
      "file": "05_cost.wav",
      "maxgap": 0.4,
-     "text": "Here's the catch. [1] Every word checks every other word. [2] Double your prompt, and the attention work roughly quadruples. [3] That's why very long chats get slow, and why they have limits."
+     "text": "Here's the catch. [1] Every word checks every word before it. [2] Double your prompt, and the attention work roughly quadruples. [3] That's why very long chats get slow, and why they have limits."
     }
    ]
   },
