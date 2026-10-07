@@ -1,0 +1,286 @@
+{
+ "id": "ep27v1",
+ "title": "Attention: how AI knows what 'it' means",
+ "label": "EP 27",
+ "banner": "How AI pays attention",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.08,
+ "gap": 0.5,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "musicLift": 2.2,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "at_hook",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The puzzle",
+     "title": "What is 'it'?",
+     "notes": [
+      [
+       "'...because it was too tired' -> the animal",
+       1
+      ],
+      [
+       "'...because it was too wide' -> the street",
+       3
+      ],
+      [
+       "One word changes the meaning",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.4,
+     "text": "'The animal didn't cross the street because it was too tired.' [1] 'It' is the animal. [2] Change one word: 'too wide'... [3] and 'it' becomes the street. How does an AI know?"
+    }
+   ]
+  },
+  {
+   "id": "old",
+   "type": "at_old",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The old way",
+     "title": "One word at a time",
+     "notes": [
+      [
+       "Older models read word by word",
+       0
+      ],
+      [
+       "A summary is passed along, like a whisper",
+       1
+      ],
+      [
+       "Long sentences: the start gets blurry",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_old.wav",
+     "maxgap": 0.4,
+     "text": "Older models, before Transformers, read one word at a time, [1] passing a summary along, like a whisper down a long line. [2] By the end, the start of the sentence has gone blurry."
+    }
+   ]
+  },
+  {
+   "id": "attn",
+   "type": "at_attn",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Attention",
+     "title": "Look back, pick what matters",
+     "notes": [
+      [
+       "Each word looks back at earlier words",
+       1
+      ],
+      [
+       "'tired' links 'it' to 'animal'",
+       3
+      ],
+      [
+       "'wide' links 'it' to 'street'",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_attn.wav",
+     "maxgap": 0.4,
+     "text": "Attention fixes that. [1] Each word can look back at every word before it, and decide which ones matter. [2] When the model reaches 'tired', it looks back... [3] and links 'it' to 'animal'. [4] Make it 'wide', and the link jumps to 'street'."
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "type": "at_how",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "How it picks",
+     "title": "Question, name tag, meaning",
+     "notes": [
+      [
+       "Query: the question a word asks",
+       1
+      ],
+      [
+       "Key: the name tag each word wears",
+       2
+      ],
+      [
+       "Value: the meaning it borrows",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_how.wav",
+     "maxgap": 0.4,
+     "text": "How does it pick? [1] 'It' asks a question: 'who am I talking about?' [2] Every earlier word wears a name tag. 'I'm a living thing.' 'I'm a place.' [3] The best match gets the most attention. [4] Then 'it' borrows that word's meaning. Engineers call these: query, key, value."
+    }
+   ]
+  },
+  {
+   "id": "cost",
+   "type": "at_cost",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "Why long chats get slow",
+     "notes": [
+      [
+       "Every word checks every other word",
+       1
+      ],
+      [
+       "2x the prompt = about 4x the attention work",
+       2
+      ],
+      [
+       "That's why context has limits",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_cost.wav",
+     "maxgap": 0.4,
+     "text": "Here's the catch. [1] Every word checks every other word. [2] Double your prompt, and the attention work roughly quadruples. [3] That's why very long chats get slow, and why they have limits."
+    }
+   ]
+  },
+  {
+   "id": "origin",
+   "type": "at_origin",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "2017",
+     "title": "The T in ChatGPT",
+     "notes": [
+      [
+       "Google, 2017: 'Attention Is All You Need'",
+       0
+      ],
+      [
+       "A model built entirely from attention: the Transformer",
+       1
+      ],
+      [
+       "GPT = Generative Pre-trained Transformer",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_origin.wav",
+     "maxgap": 0.4,
+     "text": "In 2017, Google built a model entirely out of attention: [1] the Transformer. [2] That's the T in ChatGPT."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "at_quiz",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "The trophy and the suitcase",
+     "notes": [
+      [
+       "'...because it was too big' -> ?",
+       0
+      ],
+      [
+       "'...because it was too small' -> ?",
+       1
+      ],
+      [
+       "Big: the trophy. Small: the suitcase.",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_quiz.wav",
+     "maxgap": 0.4,
+     "text": "Your turn. 'The trophy didn't fit in the suitcase because it was too big.' What is 'it'? [1] And if it was too small? <pause 2> [2] Too big: the trophy. Too small: the suitcase.",
+     "tts": "Your turn. The trophy didn't fit in the suitcase because it was too big. What is it? And if it was too small?",
+     "file2": "07_quiz_answer.wav",
+     "tts2": "Too big: the trophy. Too small: the suitcase.",
+     "pause": 2.0,
+     "gap": 0.1
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "at_outro",
+   "tail": 0.6,
+   "data": {
+    "yt": {
+     "chapter": "Recap",
+     "title": "Attention in one line",
+     "notes": [
+      [
+       "Each word looks back and decides what matters",
+       0
+      ],
+      [
+       "Next: how AI turns words into numbers",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.4,
+     "text": "Attention: each word looks back and decides what matters. [1] Next, the very first step: how AI turns words into numbers. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}

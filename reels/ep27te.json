@@ -1,0 +1,295 @@
+{
+ "id": "ep27te",
+ "title": "Attention (Telugu audio)",
+ "label": "EP 27",
+ "banner": "How AI pays attention",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.0,
+ "gap": 0.35,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "musicLift": 2.2,
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "at_hook",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The puzzle",
+     "title": "What is 'it'?",
+     "notes": [
+      [
+       "'...because it was too tired' -> the animal",
+       1
+      ],
+      [
+       "'...because it was too wide' -> the street",
+       3
+      ],
+      [
+       "One word changes the meaning",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.45,
+     "text": "ఈ ఇంగ్లీష్ వాక్యం చదవండి. [1] ఇక్కడ 'ఇట్' అంటే, ఆ జంతువు. [2] ఒక్క పదం మార్చండి: 'టూ వైడ్'... [3] ఇప్పుడు 'ఇట్' అంటే, ఆ రోడ్డు. మరి ఎ ఐ కి ఇది ఎలా తెలుస్తుంది?",
+     "show": "Read this sentence. Here, 'it' is the animal. Change one word: 'too wide'... Now 'it' is the street. So how does an AI know?"
+    }
+   ]
+  },
+  {
+   "id": "old",
+   "type": "at_old",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The old way",
+     "title": "One word at a time",
+     "notes": [
+      [
+       "Older models read word by word",
+       0
+      ],
+      [
+       "A summary is passed along, like a whisper",
+       1
+      ],
+      [
+       "Long sentences: the start gets blurry",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_old.wav",
+     "maxgap": 0.45,
+     "text": "పాత మోడల్స్, ట్రాన్స్ ఫార్మర్స్ కంటే ముందు, ఒక్కో పదం చదివేవి. [1] ఒక సారాంశాన్ని ముందుకి పంపుతూ, పొడవాటి లైన్ లో చెవిలో చెప్పినట్టు. [2] చివరికి వచ్చేసరికి, వాక్యం మొదలు మసకబారిపోతుంది.",
+     "show": "Older models, before Transformers, read one word at a time, passing a summary along, like a whisper down a long line. By the end, the start of the sentence goes blurry."
+    }
+   ]
+  },
+  {
+   "id": "attn",
+   "type": "at_attn",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Attention",
+     "title": "Look back, pick what matters",
+     "notes": [
+      [
+       "Each word looks back at earlier words",
+       1
+      ],
+      [
+       "'tired' links 'it' to 'animal'",
+       3
+      ],
+      [
+       "'wide' links 'it' to 'street'",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_attn.wav",
+     "maxgap": 0.45,
+     "text": "అటెన్షన్ దీన్ని సరిచేస్తుంది. [1] ప్రతి పదం, తన ముందున్న ప్రతి పదాన్నీ వెనక్కి చూసి, ఏవి ముఖ్యమో నిర్ణయిస్తుంది. [2] మోడల్ 'టైర్డ్' దగ్గరికి రాగానే, వెనక్కి చూస్తుంది... [3] 'ఇట్' ని 'యానిమల్' తో కలుపుతుంది. [4] 'వైడ్' అని మారిస్తే, ఆ లింక్ 'స్ట్రీట్' కి జంప్ అవుతుంది.",
+     "show": "Attention fixes that. Each word looks back at every word before it, and decides which ones matter. When the model reaches 'tired', it looks back... and links 'it' to 'animal'. Make it 'wide', and the link jumps to 'street'."
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "type": "at_how",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "How it picks",
+     "title": "Question, name tag, meaning",
+     "notes": [
+      [
+       "Query: the question a word asks",
+       1
+      ],
+      [
+       "Key: the name tag each word wears",
+       2
+      ],
+      [
+       "Value: the meaning it borrows",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_how.wav",
+     "maxgap": 0.45,
+     "text": "ఎలా ఎంచుకుంటుంది? [1] 'ఇట్' ఒక ప్రశ్న అడుగుతుంది: 'నేను ఎవరి గురించి?' [2] ముందున్న ప్రతి పదం ఒక నేమ్ ట్యాగ్ పెట్టుకుంటుంది. 'నేను ప్రాణిని.' 'నేను ఒక ప్లేస్.' [3] బాగా మ్యాచ్ అయిన దానికే ఎక్కువ అటెన్షన్. [4] తర్వాత 'ఇట్' ఆ పదం అర్థాన్ని తీసుకుంటుంది. ఇంజనీర్లు వీటిని క్వెరీ, కీ, వాల్యూ అంటారు.",
+     "show": "How does it pick? 'It' asks a question: 'who am I talking about?' Every earlier word wears a name tag. 'I'm a living thing.' 'I'm a place.' The best match gets the most attention. Then 'it' borrows that word's meaning. Engineers call these: query, key, value."
+    }
+   ]
+  },
+  {
+   "id": "cost",
+   "type": "at_cost",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "Why long chats get slow",
+     "notes": [
+      [
+       "Every word checks every other word",
+       1
+      ],
+      [
+       "2x the prompt = about 4x the attention work",
+       2
+      ],
+      [
+       "That's why context has limits",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_cost.wav",
+     "maxgap": 0.45,
+     "text": "ఇక్కడే ఒక చిక్కు ఉంది. [1] ప్రతి పదం, ప్రతి ఇతర పదాన్నీ చెక్ చేస్తుంది. [2] మీ ప్రాంప్ట్ రెట్టింపు చేస్తే, అటెన్షన్ పని దాదాపు నాలుగు రెట్లు అవుతుంది. [3] అందుకే చాలా పొడవైన చాట్స్ నెమ్మదిస్తాయి, వాటికి లిమిట్స్ ఉంటాయి.",
+     "show": "Here's the catch. Every word checks every other word. Double your prompt, and the attention work roughly quadruples. That's why very long chats get slow, and why they have limits."
+    }
+   ]
+  },
+  {
+   "id": "origin",
+   "type": "at_origin",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "2017",
+     "title": "The T in ChatGPT",
+     "notes": [
+      [
+       "Google, 2017: 'Attention Is All You Need'",
+       0
+      ],
+      [
+       "A model built entirely from attention: the Transformer",
+       1
+      ],
+      [
+       "GPT = Generative Pre-trained Transformer",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_origin.wav",
+     "maxgap": 0.45,
+     "text": "రెండు వేల పదిహేడులో, గూగుల్ పూర్తిగా అటెన్షన్ తోనే ఒక మోడల్ తయారు చేసింది: [1] ట్రాన్స్ ఫార్మర్. [2] చాట్ జి పి టి లో 'టి' అంటే అదే.",
+     "show": "In 2017, Google built a model entirely out of attention: the Transformer. That's the T in ChatGPT."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "at_quiz",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "The trophy and the suitcase",
+     "notes": [
+      [
+       "'...because it was too big' -> ?",
+       0
+      ],
+      [
+       "'...because it was too small' -> ?",
+       1
+      ],
+      [
+       "Big: the trophy. Small: the suitcase.",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_quiz.wav",
+     "maxgap": 0.45,
+     "text": "ఇప్పుడు మీ వంతు. ఈ వాక్యంలో, 'ఇట్' అంటే ఏది? [1] మరి 'టూ స్మాల్' అయితే? <pause 2> [2] టూ బిగ్ అయితే, ట్రోఫీ. టూ స్మాల్ అయితే, సూట్ కేస్.",
+     "tts": "ఇప్పుడు మీ వంతు. ఈ వాక్యంలో, 'ఇట్' అంటే ఏది? మరి 'టూ స్మాల్' అయితే?",
+     "file2": "07_quiz_answer.wav",
+     "tts2": "టూ బిగ్ అయితే, ట్రోఫీ. టూ స్మాల్ అయితే, సూట్ కేస్.",
+     "pause": 2.0,
+     "gap": 0.1,
+     "show": "Your turn. In this sentence, what is 'it'? And if it was 'too small'? Too big: the trophy. Too small: the suitcase."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "at_outro",
+   "tail": 0.6,
+   "data": {
+    "yt": {
+     "chapter": "Recap",
+     "title": "Attention in one line",
+     "notes": [
+      [
+       "Each word looks back and decides what matters",
+       0
+      ],
+      [
+       "Next: how AI turns words into numbers",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.45,
+     "text": "అటెన్షన్: ప్రతి పదం వెనక్కి చూసి, ఏది ముఖ్యమో నిర్ణయిస్తుంది. [1] నెక్స్ట్, మొదటి అడుగు: ఎ ఐ పదాలను నంబర్లుగా ఎలా మారుస్తుంది. మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "show": "Attention: each word looks back and decides what matters. Next, the very first step: how AI turns words into numbers. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ],
+ "handle": "@ai_maastaaru_telugu"
+}
