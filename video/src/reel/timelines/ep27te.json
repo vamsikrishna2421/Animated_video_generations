@@ -1,0 +1,1547 @@
+{
+ "id": "ep27te",
+ "look": "classic",
+ "topic": "",
+ "banner": "How AI pays attention",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "title": "Attention (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP 27",
+ "fps": 30,
+ "musicLift": 2.2,
+ "totalFrames": 3136,
+ "music": "reel/ep27te/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "at_hook",
+   "data": {
+    "yt": {
+     "chapter": "The puzzle",
+     "title": "What is 'it'?",
+     "notes": [
+      [
+       "'...because it was too tired' -> the animal",
+       1
+      ],
+      [
+       "'...because it was too wide' -> the street",
+       3
+      ],
+      [
+       "One word changes the meaning",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 0,
+   "frames": 376,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_01.wav",
+     "from": 2,
+     "frames": 351,
+     "words": [
+      {
+       "w": "Read",
+       "from": 10,
+       "to": 18
+      },
+      {
+       "w": "this",
+       "from": 18,
+       "to": 25
+      },
+      {
+       "w": "sentence.",
+       "from": 25,
+       "to": 41
+      },
+      {
+       "w": "Here,",
+       "from": 41,
+       "to": 78
+      },
+      {
+       "w": "'it'",
+       "from": 78,
+       "to": 85
+      },
+      {
+       "w": "is",
+       "from": 85,
+       "to": 90
+      },
+      {
+       "w": "the",
+       "from": 90,
+       "to": 96
+      },
+      {
+       "w": "animal.",
+       "from": 96,
+       "to": 108
+      },
+      {
+       "w": "Change",
+       "from": 108,
+       "to": 150
+      },
+      {
+       "w": "one",
+       "from": 150,
+       "to": 156
+      },
+      {
+       "w": "word:",
+       "from": 156,
+       "to": 165
+      },
+      {
+       "w": "'too",
+       "from": 165,
+       "to": 181
+      },
+      {
+       "w": "wide'...",
+       "from": 181,
+       "to": 233
+      },
+      {
+       "w": "Now",
+       "from": 233,
+       "to": 239
+      },
+      {
+       "w": "'it'",
+       "from": 239,
+       "to": 246
+      },
+      {
+       "w": "is",
+       "from": 246,
+       "to": 251
+      },
+      {
+       "w": "the",
+       "from": 251,
+       "to": 257
+      },
+      {
+       "w": "street.",
+       "from": 257,
+       "to": 298
+      },
+      {
+       "w": "So",
+       "from": 298,
+       "to": 303
+      },
+      {
+       "w": "how",
+       "from": 303,
+       "to": 309
+      },
+      {
+       "w": "does",
+       "from": 309,
+       "to": 316
+      },
+      {
+       "w": "an",
+       "from": 316,
+       "to": 321
+      },
+      {
+       "w": "AI",
+       "from": 321,
+       "to": 326
+      },
+      {
+       "w": "know?",
+       "from": 326,
+       "to": 335
+      }
+     ],
+     "cues": {
+      "1": 71,
+      "2": 108,
+      "3": 221
+     }
+    }
+   ]
+  },
+  {
+   "id": "old",
+   "type": "at_old",
+   "data": {
+    "yt": {
+     "chapter": "The old way",
+     "title": "One word at a time",
+     "notes": [
+      [
+       "Older models read word by word",
+       0
+      ],
+      [
+       "A summary is passed along, like a whisper",
+       1
+      ],
+      [
+       "Long sentences: the start gets blurry",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 376,
+   "frames": 353,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_02.wav",
+     "from": 0,
+     "frames": 329,
+     "words": [
+      {
+       "w": "Older",
+       "from": 1,
+       "to": 9
+      },
+      {
+       "w": "models,",
+       "from": 9,
+       "to": 25
+      },
+      {
+       "w": "before",
+       "from": 25,
+       "to": 35
+      },
+      {
+       "w": "Transformers,",
+       "from": 35,
+       "to": 55
+      },
+      {
+       "w": "read",
+       "from": 55,
+       "to": 70
+      },
+      {
+       "w": "one",
+       "from": 70,
+       "to": 76
+      },
+      {
+       "w": "word",
+       "from": 76,
+       "to": 83
+      },
+      {
+       "w": "at",
+       "from": 83,
+       "to": 87
+      },
+      {
+       "w": "a",
+       "from": 87,
+       "to": 90
+      },
+      {
+       "w": "time,",
+       "from": 90,
+       "to": 135
+      },
+      {
+       "w": "passing",
+       "from": 135,
+       "to": 146
+      },
+      {
+       "w": "a",
+       "from": 146,
+       "to": 149
+      },
+      {
+       "w": "summary",
+       "from": 149,
+       "to": 160
+      },
+      {
+       "w": "along,",
+       "from": 160,
+       "to": 170
+      },
+      {
+       "w": "like",
+       "from": 170,
+       "to": 186
+      },
+      {
+       "w": "a",
+       "from": 186,
+       "to": 189
+      },
+      {
+       "w": "whisper",
+       "from": 189,
+       "to": 200
+      },
+      {
+       "w": "down",
+       "from": 200,
+       "to": 207
+      },
+      {
+       "w": "a",
+       "from": 207,
+       "to": 210
+      },
+      {
+       "w": "long",
+       "from": 210,
+       "to": 217
+      },
+      {
+       "w": "line.",
+       "from": 217,
+       "to": 226
+      },
+      {
+       "w": "By",
+       "from": 226,
+       "to": 252
+      },
+      {
+       "w": "the",
+       "from": 252,
+       "to": 257
+      },
+      {
+       "w": "end,",
+       "from": 257,
+       "to": 264
+      },
+      {
+       "w": "the",
+       "from": 264,
+       "to": 270
+      },
+      {
+       "w": "start",
+       "from": 270,
+       "to": 278
+      },
+      {
+       "w": "of",
+       "from": 278,
+       "to": 283
+      },
+      {
+       "w": "the",
+       "from": 283,
+       "to": 288
+      },
+      {
+       "w": "sentence",
+       "from": 288,
+       "to": 301
+      },
+      {
+       "w": "goes",
+       "from": 301,
+       "to": 308
+      },
+      {
+       "w": "blurry.",
+       "from": 308,
+       "to": 319
+      }
+     ],
+     "cues": {
+      "1": 134,
+      "2": 254
+     }
+    }
+   ]
+  },
+  {
+   "id": "attn",
+   "type": "at_attn",
+   "data": {
+    "yt": {
+     "chapter": "Attention",
+     "title": "Look back, pick what matters",
+     "notes": [
+      [
+       "Each word looks back at earlier words",
+       1
+      ],
+      [
+       "'tired' links 'it' to 'animal'",
+       3
+      ],
+      [
+       "'wide' links 'it' to 'street'",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 729,
+   "frames": 498,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_03.wav",
+     "from": 0,
+     "frames": 474,
+     "words": [
+      {
+       "w": "Attention",
+       "from": 2,
+       "to": 16
+      },
+      {
+       "w": "fixes",
+       "from": 16,
+       "to": 25
+      },
+      {
+       "w": "that.",
+       "from": 25,
+       "to": 33
+      },
+      {
+       "w": "Each",
+       "from": 33,
+       "to": 69
+      },
+      {
+       "w": "word",
+       "from": 69,
+       "to": 77
+      },
+      {
+       "w": "looks",
+       "from": 77,
+       "to": 94
+      },
+      {
+       "w": "back",
+       "from": 94,
+       "to": 101
+      },
+      {
+       "w": "at",
+       "from": 101,
+       "to": 105
+      },
+      {
+       "w": "every",
+       "from": 105,
+       "to": 114
+      },
+      {
+       "w": "word",
+       "from": 114,
+       "to": 121
+      },
+      {
+       "w": "before",
+       "from": 121,
+       "to": 131
+      },
+      {
+       "w": "it,",
+       "from": 131,
+       "to": 137
+      },
+      {
+       "w": "and",
+       "from": 137,
+       "to": 143
+      },
+      {
+       "w": "decides",
+       "from": 143,
+       "to": 155
+      },
+      {
+       "w": "which",
+       "from": 155,
+       "to": 163
+      },
+      {
+       "w": "ones",
+       "from": 163,
+       "to": 171
+      },
+      {
+       "w": "matter.",
+       "from": 171,
+       "to": 210
+      },
+      {
+       "w": "When",
+       "from": 210,
+       "to": 217
+      },
+      {
+       "w": "the",
+       "from": 217,
+       "to": 223
+      },
+      {
+       "w": "model",
+       "from": 223,
+       "to": 232
+      },
+      {
+       "w": "reaches",
+       "from": 232,
+       "to": 243
+      },
+      {
+       "w": "'tired',",
+       "from": 243,
+       "to": 256
+      },
+      {
+       "w": "it",
+       "from": 256,
+       "to": 261
+      },
+      {
+       "w": "looks",
+       "from": 261,
+       "to": 270
+      },
+      {
+       "w": "back...",
+       "from": 270,
+       "to": 310
+      },
+      {
+       "w": "and",
+       "from": 310,
+       "to": 315
+      },
+      {
+       "w": "links",
+       "from": 315,
+       "to": 324
+      },
+      {
+       "w": "'it'",
+       "from": 324,
+       "to": 331
+      },
+      {
+       "w": "to",
+       "from": 331,
+       "to": 336
+      },
+      {
+       "w": "'animal'.",
+       "from": 336,
+       "to": 381
+      },
+      {
+       "w": "Make",
+       "from": 381,
+       "to": 388
+      },
+      {
+       "w": "it",
+       "from": 388,
+       "to": 393
+      },
+      {
+       "w": "'wide',",
+       "from": 393,
+       "to": 404
+      },
+      {
+       "w": "and",
+       "from": 404,
+       "to": 417
+      },
+      {
+       "w": "the",
+       "from": 417,
+       "to": 422
+      },
+      {
+       "w": "link",
+       "from": 422,
+       "to": 430
+      },
+      {
+       "w": "jumps",
+       "from": 430,
+       "to": 438
+      },
+      {
+       "w": "to",
+       "from": 438,
+       "to": 443
+      },
+      {
+       "w": "'street'.",
+       "from": 443,
+       "to": 457
+      }
+     ],
+     "cues": {
+      "1": 69,
+      "2": 178,
+      "3": 302,
+      "4": 376
+     }
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "type": "at_how",
+   "data": {
+    "yt": {
+     "chapter": "How it picks",
+     "title": "Question, name tag, meaning",
+     "notes": [
+      [
+       "Query: the question a word asks",
+       1
+      ],
+      [
+       "Key: the name tag each word wears",
+       2
+      ],
+      [
+       "Value: the meaning it borrows",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 1228,
+   "frames": 542,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_04.wav",
+     "from": 0,
+     "frames": 518,
+     "words": [
+      {
+       "w": "How",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "does",
+       "from": 7,
+       "to": 14
+      },
+      {
+       "w": "it",
+       "from": 14,
+       "to": 19
+      },
+      {
+       "w": "pick?",
+       "from": 19,
+       "to": 56
+      },
+      {
+       "w": "'It'",
+       "from": 56,
+       "to": 63
+      },
+      {
+       "w": "asks",
+       "from": 63,
+       "to": 70
+      },
+      {
+       "w": "a",
+       "from": 70,
+       "to": 73
+      },
+      {
+       "w": "question:",
+       "from": 73,
+       "to": 88
+      },
+      {
+       "w": "'who",
+       "from": 88,
+       "to": 105
+      },
+      {
+       "w": "am",
+       "from": 105,
+       "to": 109
+      },
+      {
+       "w": "I",
+       "from": 109,
+       "to": 112
+      },
+      {
+       "w": "talking",
+       "from": 112,
+       "to": 124
+      },
+      {
+       "w": "about?'",
+       "from": 124,
+       "to": 144
+      },
+      {
+       "w": "Every",
+       "from": 144,
+       "to": 153
+      },
+      {
+       "w": "earlier",
+       "from": 153,
+       "to": 165
+      },
+      {
+       "w": "word",
+       "from": 165,
+       "to": 176
+      },
+      {
+       "w": "wears",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "w": "a",
+       "from": 184,
+       "to": 187
+      },
+      {
+       "w": "name",
+       "from": 187,
+       "to": 195
+      },
+      {
+       "w": "tag.",
+       "from": 195,
+       "to": 202
+      },
+      {
+       "w": "'I'm",
+       "from": 202,
+       "to": 224
+      },
+      {
+       "w": "a",
+       "from": 224,
+       "to": 227
+      },
+      {
+       "w": "living",
+       "from": 227,
+       "to": 237
+      },
+      {
+       "w": "thing.'",
+       "from": 237,
+       "to": 264
+      },
+      {
+       "w": "'I'm",
+       "from": 264,
+       "to": 271
+      },
+      {
+       "w": "a",
+       "from": 271,
+       "to": 274
+      },
+      {
+       "w": "place.'",
+       "from": 274,
+       "to": 296
+      },
+      {
+       "w": "The",
+       "from": 296,
+       "to": 302
+      },
+      {
+       "w": "best",
+       "from": 302,
+       "to": 309
+      },
+      {
+       "w": "match",
+       "from": 309,
+       "to": 318
+      },
+      {
+       "w": "gets",
+       "from": 318,
+       "to": 325
+      },
+      {
+       "w": "the",
+       "from": 325,
+       "to": 331
+      },
+      {
+       "w": "most",
+       "from": 331,
+       "to": 339
+      },
+      {
+       "w": "attention.",
+       "from": 339,
+       "to": 369
+      },
+      {
+       "w": "Then",
+       "from": 369,
+       "to": 376
+      },
+      {
+       "w": "'it'",
+       "from": 376,
+       "to": 384
+      },
+      {
+       "w": "borrows",
+       "from": 384,
+       "to": 395
+      },
+      {
+       "w": "that",
+       "from": 395,
+       "to": 403
+      },
+      {
+       "w": "word's",
+       "from": 403,
+       "to": 413
+      },
+      {
+       "w": "meaning.",
+       "from": 413,
+       "to": 441
+      },
+      {
+       "w": "Engineers",
+       "from": 441,
+       "to": 456
+      },
+      {
+       "w": "call",
+       "from": 456,
+       "to": 463
+      },
+      {
+       "w": "these:",
+       "from": 463,
+       "to": 473
+      },
+      {
+       "w": "query,",
+       "from": 473,
+       "to": 484
+      },
+      {
+       "w": "key,",
+       "from": 484,
+       "to": 495
+      },
+      {
+       "w": "value.",
+       "from": 495,
+       "to": 505
+      }
+     ],
+     "cues": {
+      "1": 25,
+      "2": 130,
+      "3": 298,
+      "4": 368
+     }
+    }
+   ]
+  },
+  {
+   "id": "cost",
+   "type": "at_cost",
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "Why long chats get slow",
+     "notes": [
+      [
+       "Every word checks every other word",
+       1
+      ],
+      [
+       "2x the prompt = about 4x the attention work",
+       2
+      ],
+      [
+       "That's why context has limits",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 1770,
+   "frames": 396,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_05.wav",
+     "from": 0,
+     "frames": 372,
+     "words": [
+      {
+       "w": "Here's",
+       "from": 1,
+       "to": 11
+      },
+      {
+       "w": "the",
+       "from": 11,
+       "to": 17
+      },
+      {
+       "w": "catch.",
+       "from": 17,
+       "to": 28
+      },
+      {
+       "w": "Every",
+       "from": 28,
+       "to": 52
+      },
+      {
+       "w": "word",
+       "from": 52,
+       "to": 59
+      },
+      {
+       "w": "checks",
+       "from": 59,
+       "to": 69
+      },
+      {
+       "w": "every",
+       "from": 69,
+       "to": 78
+      },
+      {
+       "w": "other",
+       "from": 78,
+       "to": 87
+      },
+      {
+       "w": "word.",
+       "from": 87,
+       "to": 96
+      },
+      {
+       "w": "Double",
+       "from": 96,
+       "to": 106
+      },
+      {
+       "w": "your",
+       "from": 106,
+       "to": 130
+      },
+      {
+       "w": "prompt,",
+       "from": 130,
+       "to": 142
+      },
+      {
+       "w": "and",
+       "from": 142,
+       "to": 148
+      },
+      {
+       "w": "the",
+       "from": 148,
+       "to": 153
+      },
+      {
+       "w": "attention",
+       "from": 153,
+       "to": 176
+      },
+      {
+       "w": "work",
+       "from": 176,
+       "to": 183
+      },
+      {
+       "w": "roughly",
+       "from": 183,
+       "to": 195
+      },
+      {
+       "w": "quadruples.",
+       "from": 195,
+       "to": 212
+      },
+      {
+       "w": "That's",
+       "from": 212,
+       "to": 223
+      },
+      {
+       "w": "why",
+       "from": 223,
+       "to": 265
+      },
+      {
+       "w": "very",
+       "from": 265,
+       "to": 273
+      },
+      {
+       "w": "long",
+       "from": 273,
+       "to": 280
+      },
+      {
+       "w": "chats",
+       "from": 280,
+       "to": 289
+      },
+      {
+       "w": "get",
+       "from": 289,
+       "to": 295
+      },
+      {
+       "w": "slow,",
+       "from": 295,
+       "to": 303
+      },
+      {
+       "w": "and",
+       "from": 303,
+       "to": 309
+      },
+      {
+       "w": "why",
+       "from": 309,
+       "to": 315
+      },
+      {
+       "w": "they",
+       "from": 315,
+       "to": 338
+      },
+      {
+       "w": "have",
+       "from": 338,
+       "to": 349
+      },
+      {
+       "w": "limits.",
+       "from": 349,
+       "to": 360
+      }
+     ],
+     "cues": {
+      "1": 46,
+      "2": 103,
+      "3": 222
+     }
+    }
+   ]
+  },
+  {
+   "id": "origin",
+   "type": "at_origin",
+   "data": {
+    "yt": {
+     "chapter": "2017",
+     "title": "The T in ChatGPT",
+     "notes": [
+      [
+       "Google, 2017: 'Attention Is All You Need'",
+       0
+      ],
+      [
+       "A model built entirely from attention: the Transformer",
+       1
+      ],
+      [
+       "GPT = Generative Pre-trained Transformer",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 2166,
+   "frames": 241,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_06.wav",
+     "from": 0,
+     "frames": 217,
+     "words": [
+      {
+       "w": "In",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "2017,",
+       "from": 6,
+       "to": 16
+      },
+      {
+       "w": "Google",
+       "from": 16,
+       "to": 27
+      },
+      {
+       "w": "built",
+       "from": 27,
+       "to": 43
+      },
+      {
+       "w": "a",
+       "from": 43,
+       "to": 47
+      },
+      {
+       "w": "model",
+       "from": 47,
+       "to": 56
+      },
+      {
+       "w": "entirely",
+       "from": 56,
+       "to": 71
+      },
+      {
+       "w": "out",
+       "from": 71,
+       "to": 78
+      },
+      {
+       "w": "of",
+       "from": 78,
+       "to": 82
+      },
+      {
+       "w": "attention:",
+       "from": 82,
+       "to": 100
+      },
+      {
+       "w": "the",
+       "from": 100,
+       "to": 107
+      },
+      {
+       "w": "Transformer.",
+       "from": 107,
+       "to": 159
+      },
+      {
+       "w": "That's",
+       "from": 159,
+       "to": 170
+      },
+      {
+       "w": "the",
+       "from": 170,
+       "to": 177
+      },
+      {
+       "w": "T",
+       "from": 177,
+       "to": 180
+      },
+      {
+       "w": "in",
+       "from": 180,
+       "to": 185
+      },
+      {
+       "w": "ChatGPT.",
+       "from": 185,
+       "to": 200
+      }
+     ],
+     "cues": {
+      "1": 104,
+      "2": 158
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "at_quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "The trophy and the suitcase",
+     "notes": [
+      [
+       "'...because it was too big' -> ?",
+       0
+      ],
+      [
+       "'...because it was too small' -> ?",
+       1
+      ],
+      [
+       "Big: the trophy. Small: the suitcase.",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 2407,
+   "frames": 378,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_07.wav",
+     "from": 0,
+     "frames": 362,
+     "words": [
+      {
+       "w": "Your",
+       "from": 13,
+       "to": 21
+      },
+      {
+       "w": "turn.",
+       "from": 21,
+       "to": 30
+      },
+      {
+       "w": "In",
+       "from": 30,
+       "to": 35
+      },
+      {
+       "w": "this",
+       "from": 35,
+       "to": 75
+      },
+      {
+       "w": "sentence,",
+       "from": 75,
+       "to": 95
+      },
+      {
+       "w": "what",
+       "from": 95,
+       "to": 103
+      },
+      {
+       "w": "is",
+       "from": 103,
+       "to": 108
+      },
+      {
+       "w": "'it'?",
+       "from": 108,
+       "to": 146
+      },
+      {
+       "w": "And",
+       "from": 146,
+       "to": 152
+      },
+      {
+       "w": "if",
+       "from": 152,
+       "to": 157
+      },
+      {
+       "w": "it",
+       "from": 157,
+       "to": 161
+      },
+      {
+       "w": "was",
+       "from": 161,
+       "to": 168
+      },
+      {
+       "w": "'too",
+       "from": 243,
+       "to": 249
+      },
+      {
+       "w": "small'?",
+       "from": 249,
+       "to": 259
+      },
+      {
+       "w": "Too",
+       "from": 259,
+       "to": 264
+      },
+      {
+       "w": "big:",
+       "from": 264,
+       "to": 270
+      },
+      {
+       "w": "the",
+       "from": 270,
+       "to": 275
+      },
+      {
+       "w": "trophy.",
+       "from": 275,
+       "to": 314
+      },
+      {
+       "w": "Too",
+       "from": 314,
+       "to": 319
+      },
+      {
+       "w": "small:",
+       "from": 319,
+       "to": 328
+      },
+      {
+       "w": "the",
+       "from": 328,
+       "to": 333
+      },
+      {
+       "w": "suitcase.",
+       "from": 333,
+       "to": 345
+      }
+     ],
+     "cues": {
+      "1": 109,
+      "2": 243
+     }
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "at_outro",
+   "data": {
+    "yt": {
+     "chapter": "Recap",
+     "title": "Attention in one line",
+     "notes": [
+      [
+       "Each word looks back and decides what matters",
+       0
+      ],
+      [
+       "Next: how AI turns words into numbers",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "from": 2785,
+   "frames": 339,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep27te/line_08.wav",
+     "from": 0,
+     "frames": 310,
+     "words": [
+      {
+       "w": "Attention:",
+       "from": 1,
+       "to": 29
+      },
+      {
+       "w": "each",
+       "from": 29,
+       "to": 36
+      },
+      {
+       "w": "word",
+       "from": 36,
+       "to": 42
+      },
+      {
+       "w": "looks",
+       "from": 42,
+       "to": 51
+      },
+      {
+       "w": "back",
+       "from": 51,
+       "to": 57
+      },
+      {
+       "w": "and",
+       "from": 57,
+       "to": 67
+      },
+      {
+       "w": "decides",
+       "from": 67,
+       "to": 82
+      },
+      {
+       "w": "what",
+       "from": 82,
+       "to": 89
+      },
+      {
+       "w": "matters.",
+       "from": 89,
+       "to": 117
+      },
+      {
+       "w": "Next,",
+       "from": 117,
+       "to": 125
+      },
+      {
+       "w": "the",
+       "from": 125,
+       "to": 138
+      },
+      {
+       "w": "very",
+       "from": 138,
+       "to": 145
+      },
+      {
+       "w": "first",
+       "from": 145,
+       "to": 162
+      },
+      {
+       "w": "step:",
+       "from": 162,
+       "to": 170
+      },
+      {
+       "w": "how",
+       "from": 170,
+       "to": 176
+      },
+      {
+       "w": "AI",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "turns",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "words",
+       "from": 188,
+       "to": 196
+      },
+      {
+       "w": "into",
+       "from": 196,
+       "to": 203
+      },
+      {
+       "w": "numbers.",
+       "from": 203,
+       "to": 215
+      },
+      {
+       "w": "Follow,",
+       "from": 215,
+       "to": 260
+      },
+      {
+       "w": "so",
+       "from": 260,
+       "to": 264
+      },
+      {
+       "w": "you",
+       "from": 264,
+       "to": 269
+      },
+      {
+       "w": "don't",
+       "from": 269,
+       "to": 281
+      },
+      {
+       "w": "miss",
+       "from": 281,
+       "to": 288
+      },
+      {
+       "w": "it.",
+       "from": 288,
+       "to": 293
+      }
+     ],
+     "cues": {
+      "1": 120
+     }
+    }
+   ]
+  }
+ ]
+}

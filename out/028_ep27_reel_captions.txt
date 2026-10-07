@@ -1,0 +1,32 @@
+UPLOAD: 028
+VIDEO: 028_ep27_how_ai_pays_attention.mp4  (crayon-style episode)
+
+=== CAPTION ===
+"The animal didn't cross the street because it was too tired." You know "it" is the animal. Change one word to "wide" and "it" becomes the street. How does an AI know?
+
+Episode 27 of AI From Scratch: Attention, the key idea behind ChatGPT
+- Old models read one word at a time, and the start of a sentence goes blurry
+- Attention: each word looks back at the earlier words and picks what matters
+- How it picks: a question, a name tag, borrowed meaning (query, key, value)
+- The catch: double your prompt and the attention work roughly quadruples. That's why long chats get slow and have limits
+- 2017: Google built a model entirely from attention, the Transformer. The T in ChatGPT
+
+Your turn: "The trophy didn't fit in the suitcase because it was too big." What is "it"? And if it was "too small"? Comment your answer.
+
+Next: the very first step, how AI turns words into numbers.
+Follow @ai_maastaaru for the full series.
+
+=== HASHTAGS ===
+#Attention #Transformers #ChatGPT #LearnAI #AIForBeginners
+
+=== PINNED_COMMENT (post a day later) ===
+Answer: too big = the trophy, too small = the suitcase. One word flips what "it" points to, and attention is how the model tracks that.
+
+=== COVER ===
+Crayon notebook page: "...because it was too tired" with "it" circled in red and an orange arrow to "animal"
+
+=== ALT_TEXT ===
+Hand-drawn crayon-style animated reel explaining attention in AI: pronoun "it" linked to the right word, old one-word-at-a-time models, query/key/value as question, name tag and borrowed meaning, why long prompts cost more, and the Transformer.
+
+=== SOURCES (for comments) ===
+Google Research blog (2017), Transformer: the animal/street example. Vaswani et al. (2017), "Attention Is All You Need".
