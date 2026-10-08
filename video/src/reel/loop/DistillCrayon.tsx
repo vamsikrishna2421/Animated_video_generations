@@ -271,6 +271,8 @@ const badge = (c: Ctx, x: number, y: number, big: string, small: string, col: st
 const DsResults: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
+    <>
+    <Sfx at={c1} src="reel/sfx_boom.wav" vol={0.5} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil);
       const r = rng(1300 + boil);
@@ -287,6 +289,7 @@ const DsResults: React.FC<SP> = ({ cue }) => {
         hand(c, "Google said Flash learned from Pro (Gemini 1.5, 2024)", W / 2, 1270, 40, COL.pale, seg(f, c3 + 18, c3 + 34), r, -0.01, "center");
       }
     }} />
+    </>
   );
 };
 

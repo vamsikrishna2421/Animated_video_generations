@@ -36,15 +36,17 @@ type Word = { w: string; from: number; to: number };
 type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
 // Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last ~28% into the CTA), plus a hit in the first second.
+// tl.musicDrops = [from, to] frame windows where the bed drops out just before a key number.
 const musicArc = (tl: ReelTimeline, f: number) => {
-  if (!tl.musicLift) return 1;
+  const dip = (tl.musicDrops ?? []).reduce((g, [a, b]) => g * interpolate(f, [a - 4, a + 2, b, b + 3], [1, 0.12, 0.12, 1], cl), 1);
+  if (!tl.musicLift) return dip;
   const end = tl.totalFrames, lift = Math.max(12 * tl.fps, 0.28 * end);  // rises through the quiz, the recap and the CTA
   const hit = interpolate(f, [0, 0.4 * tl.fps, 1.2 * tl.fps], [1.7, 1.7, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const rise = interpolate(f, [end - lift, end - 2 * tl.fps], [1, tl.musicLift], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  return hit * rise;
+  return hit * rise * dip;
 };
 
-export type ReelTimeline = { musicLift?: number; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {

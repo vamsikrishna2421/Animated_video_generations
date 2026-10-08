@@ -377,6 +377,9 @@ def main(spec_path: Path) -> None:
         scenes.append({"id": sc["id"], "type": sc["type"], "data": sc.get("data", {}), "from": round(s_from * FPS),
                        "frames": round((t - s_from) * FPS), "lines": lines})
     total = t + 0.4
+    # "drop_cue": k on a scene = a short music drop right before that cue (the key number), released on the cue
+    mdrops = [[max(0, sc["from"] + sc["lines"][0]["cues"][str(spec_sc["drop_cue"])] - round(0.8 * FPS)), sc["from"] + sc["lines"][0]["cues"][str(spec_sc["drop_cue"])]]
+              for spec_sc, sc in zip(spec["scenes"], scenes) if spec_sc.get("drop_cue") is not None and sc["lines"]]
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     starts = [s["from"] / FPS for s in scenes]
@@ -386,7 +389,7 @@ def main(spec_path: Path) -> None:
     for sc in scenes:
         sc.setdefault("data", {})["handle"] = handle
     tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": handle, "label": spec.get("label", ""), "fps": FPS,
-          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
+          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)
     (tdir / f"{rid}.json").write_text(json.dumps(tl, indent=1, ensure_ascii=False) + "\n")
