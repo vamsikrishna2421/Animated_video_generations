@@ -13,7 +13,7 @@
   0.55,
   0.95
  ],
- "musicLift": 1.5,
+ "musicLift": 1.8,
  "musicPad": true,
  "parler_lang": "te",
  "scenes": [
@@ -37,15 +37,15 @@
      "title": "$1,200 vs $12",
      "notes": [
       [
-       "100,000 emails on OpenAI's top model: ~$1,200",
+       "100,000 emails on the top OpenAI model: ~$1,200",
        1
       ],
       [
-       "On its small sibling, GPT-6 Luna: ~$12",
+       "On GPT-6 Luna: ~$12 (API, for builders)",
        2
       ],
       [
-       "5 dirt-cheap picks, 4 with a free option",
+       "5 jobs, 4 with a free option",
        3
       ]
      ]
@@ -82,7 +82,7 @@
     "free": "FREE",
     "try": "chatgpt.com · gemini.google.com",
     "yt": {
-     "chapter": "Chat, writing, study",
+     "chapter": "Questions, writing, homework",
      "title": "Don't pay",
      "notes": [
       [
@@ -90,11 +90,12 @@
        1
       ],
       [
-       "Free Gemini now runs on Flash-Lite",
-       3
+       "$0",
+       2
       ]
      ]
-    }
+    },
+    "exampleAt": 1
    },
    "lines": [
     {
@@ -129,11 +130,11 @@
      "title": "Run it on your laptop",
      "notes": [
       [
-       "Gemma 4 with the free Ollama app: $0, offline",
+       "Gemma 4 + the free Ollama app: $0, offline",
        1
       ],
       [
-       "8 GB RAM runs the small one",
+       "8 GB of RAM is enough · Terminal: ollama run gemma4",
        3
       ]
      ]
@@ -161,7 +162,7 @@
     "icon": "mic",
     "badge": "FREE PLAN + API",
     "pick": "Whisper on Groq (not Grok)",
-    "price": "free plan: 8 hrs/day · paid: $0.04/hr",
+    "price": "free plan: 8 hrs/day",
     "example": "1-hour lecture → text: free",
     "free": "FREE",
     "second": {
@@ -175,15 +176,20 @@
      "title": "Free transcripts, penny voiceovers",
      "notes": [
       [
-       "Whisper on Groq: free up to 8 audio-hours a day, then $0.04/hour",
+       "Whisper on Groq · free plan: up to 8 audio-hours a day",
        2
       ],
       [
-       "Gemini text-to-speech: under 1¢ a minute",
+       "Paid plan: $0.04 an hour",
+       2
+      ],
+      [
+       "Voiceovers: Gemini text-to-speech, under 1¢ a minute",
        4
       ]
      ]
-    }
+    },
+    "price2": "paid plan: $0.04/hr"
    },
    "lines": [
     {
@@ -218,7 +224,7 @@
      "title": "Free plan, then 10¢",
      "notes": [
       [
-       "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
+       "GitHub Copilot Free: 2,000 suggestions a month",
        1
       ],
       [

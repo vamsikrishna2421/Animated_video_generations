@@ -131,13 +131,15 @@ const CmCard: React.FC<SP> = ({ s, cue }) => {
         tag(c, d.pick, 720, 610, ps, COL.cream, "#1d3fa8", -0.03, fade(f, c1, 8));
         if (d.pick2) hand(c, d.pick2, 720, 700, fit(c, d.pick2, 560, 52, 38), COL.cream, seg(f, c1 + 6, c1 + 18), r, -0.01, "center");
       }
-      // the price
-      if (f >= c2) tag(c, d.price, 720, 800, fit(c, d.price, 560, 74, 40), d.free ? "#86efac" : COL.yellow, COL.ink, 0.03, fade(f, c2, 8));
-      // a real-world example
-      if (f >= c3) {
+      // the price (a second price line when a card has two plans)
+      if (f >= c2) tag(c, d.price, 720, 790, fit(c, d.price, 560, 74, 40), d.free ? "#86efac" : COL.yellow, COL.ink, 0.03, fade(f, c2, 8));
+      if (d.price2 && f >= c2 + 6) tag(c, d.price2, 720, 868, fit(c, d.price2, 560, 60, 40), COL.yellow, COL.ink, -0.02, fade(f, c2 + 6, 8));
+      // a real-world example (some cards show it early, so it stays up long enough to read)
+      const cx = d.exampleAt === 1 ? c1 + 12 : d.exampleAt === 2 ? c2 + 8 : c3;
+      if (f >= cx) {
         page(c, 90, 930, 900, 210, boil, -0.012);
-        hand(c, d.example, W / 2, 1020, fit(c, d.example, 820, 66, 40), COL.ink, seg(f, c3, c3 + 14), r, -0.02, "center");
-        if (d.example2) hand(c, d.example2, W / 2, 1097, fit(c, d.example2, 840, 44, 36), "#475569", seg(f, c3 + 10, c3 + 24), r, -0.01, "center");
+        hand(c, d.example, W / 2, 1020, fit(c, d.example, 820, 66, 40), COL.ink, seg(f, cx, cx + 14), r, -0.02, "center");
+        if (d.example2) hand(c, d.example2, W / 2, 1097, fit(c, d.example2, 840, 44, 36), "#475569", seg(f, cx + 10, cx + 24), r, -0.01, "center");
       }
       // a command people can screenshot
       if (d.cmd && f >= c2) {

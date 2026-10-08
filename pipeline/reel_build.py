@@ -393,9 +393,9 @@ def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
             if t0 >= outro - 1e-6:
                 ch = chords[b % 4]
                 for k in range(8):
-                    place(mix, keys(ch[k % 4] + 12, beat * 0.6) * 0.22, t0 + k * beat / 2)
+                    place(mix, keys(ch[k % 4] + 12, beat * 0.6) * 0.32, t0 + k * beat / 2)
                 for k in range(16):
-                    place(mix, hat_tick() * (0.22 if k % 2 else 0.12), t0 + k * beat / 4)
+                    place(mix, hat_tick() * (0.28 if k % 2 else 0.16), t0 + k * beat / 4)
             t0 += beat * 4
             b += 1
     st = np.stack([mix, np.roll(mix, int(0.02 * MSR))], axis=1)
