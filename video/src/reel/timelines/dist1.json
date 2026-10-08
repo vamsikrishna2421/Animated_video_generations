@@ -1,0 +1,1570 @@
+{
+ "id": "dist1",
+ "look": "classic",
+ "topic": "",
+ "banner": "How cheap AI is made",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "title": "How cheap AI is made: distillation",
+ "handle": "@ai_maastaaru",
+ "label": "AI EXPLAINED",
+ "fps": 30,
+ "musicLift": 3.0,
+ "musicDrops": [
+  [
+   1410,
+   1434
+  ],
+  [
+   2169,
+   2193
+  ]
+ ],
+ "totalFrames": 3516,
+ "music": "reel/dist1/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "ds_hook",
+   "data": {
+    "yt": {
+     "chapter": "The hook",
+     "title": "Under 30 minutes, under ₹5,000",
+     "notes": [
+      [
+       "Under 30 minutes, under ₹5,000 (under $50) of rented GPUs",
+       0
+      ],
+      [
+       "Beat OpenAI's o1-preview on competition maths (researchers' report)",
+       1
+      ],
+      [
+       "Its teacher: a smarter AI. That's distillation",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 0,
+   "frames": 579,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_01.wav",
+     "from": 2,
+     "frames": 549,
+     "words": [
+      {
+       "w": "Under",
+       "from": 10,
+       "to": 19
+      },
+      {
+       "w": "thirty",
+       "from": 19,
+       "to": 29
+      },
+      {
+       "w": "minutes.",
+       "from": 29,
+       "to": 74
+      },
+      {
+       "w": "Under",
+       "from": 74,
+       "to": 83
+      },
+      {
+       "w": "five",
+       "from": 83,
+       "to": 94
+      },
+      {
+       "w": "thousand",
+       "from": 94,
+       "to": 107
+      },
+      {
+       "w": "rupees.",
+       "from": 107,
+       "to": 154
+      },
+      {
+       "w": "That's",
+       "from": 154,
+       "to": 172
+      },
+      {
+       "w": "what",
+       "from": 172,
+       "to": 185
+      },
+      {
+       "w": "it",
+       "from": 185,
+       "to": 190
+      },
+      {
+       "w": "took",
+       "from": 190,
+       "to": 197
+      },
+      {
+       "w": "to",
+       "from": 197,
+       "to": 201
+      },
+      {
+       "w": "make",
+       "from": 201,
+       "to": 209
+      },
+      {
+       "w": "an",
+       "from": 209,
+       "to": 213
+      },
+      {
+       "w": "existing",
+       "from": 213,
+       "to": 241
+      },
+      {
+       "w": "AI",
+       "from": 241,
+       "to": 246
+      },
+      {
+       "w": "beat",
+       "from": 246,
+       "to": 253
+      },
+      {
+       "w": "an",
+       "from": 253,
+       "to": 258
+      },
+      {
+       "w": "OpenAI",
+       "from": 258,
+       "to": 268
+      },
+      {
+       "w": "reasoning",
+       "from": 268,
+       "to": 288
+      },
+      {
+       "w": "model",
+       "from": 288,
+       "to": 301
+      },
+      {
+       "w": "at",
+       "from": 301,
+       "to": 306
+      },
+      {
+       "w": "maths,",
+       "from": 306,
+       "to": 316
+      },
+      {
+       "w": "its",
+       "from": 316,
+       "to": 333
+      },
+      {
+       "w": "researchers",
+       "from": 333,
+       "to": 351
+      },
+      {
+       "w": "say.",
+       "from": 351,
+       "to": 386
+      },
+      {
+       "w": "Its",
+       "from": 386,
+       "to": 392
+      },
+      {
+       "w": "teacher?",
+       "from": 392,
+       "to": 437
+      },
+      {
+       "w": "A",
+       "from": 437,
+       "to": 440
+      },
+      {
+       "w": "smarter",
+       "from": 440,
+       "to": 452
+      },
+      {
+       "w": "AI.",
+       "from": 452,
+       "to": 458
+      },
+      {
+       "w": "This",
+       "from": 458,
+       "to": 495
+      },
+      {
+       "w": "is",
+       "from": 495,
+       "to": 500
+      },
+      {
+       "w": "called",
+       "from": 500,
+       "to": 510
+      },
+      {
+       "w": "distillation.",
+       "from": 510,
+       "to": 534
+      }
+     ],
+     "cues": {
+      "1": 154,
+      "2": 386,
+      "3": 437
+     }
+    }
+   ]
+  },
+  {
+   "id": "class",
+   "type": "ds_class",
+   "data": {
+    "yt": {
+     "chapter": "The idea",
+     "title": "A big AI teaches a small one",
+     "notes": [
+      [
+       "Teacher: big, slow, expensive",
+       1
+      ],
+      [
+       "Student: small and fast",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 579,
+   "frames": 201,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_02.wav",
+     "from": 0,
+     "frames": 172,
+     "words": [
+      {
+       "w": "The",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "idea:",
+       "from": 14,
+       "to": 24
+      },
+      {
+       "w": "a",
+       "from": 24,
+       "to": 35
+      },
+      {
+       "w": "big,",
+       "from": 35,
+       "to": 49
+      },
+      {
+       "w": "slow,",
+       "from": 49,
+       "to": 59
+      },
+      {
+       "w": "expensive",
+       "from": 59,
+       "to": 75
+      },
+      {
+       "w": "AI",
+       "from": 75,
+       "to": 80
+      },
+      {
+       "w": "teaches",
+       "from": 80,
+       "to": 114
+      },
+      {
+       "w": "a",
+       "from": 114,
+       "to": 118
+      },
+      {
+       "w": "small,",
+       "from": 118,
+       "to": 129
+      },
+      {
+       "w": "fast",
+       "from": 129,
+       "to": 147
+      },
+      {
+       "w": "one.",
+       "from": 147,
+       "to": 155
+      }
+     ],
+     "cues": {
+      "1": 24,
+      "2": 80
+     }
+    }
+   ]
+  },
+  {
+   "id": "soft",
+   "type": "ds_soft",
+   "data": {
+    "yt": {
+     "chapter": "Hidden lessons",
+     "title": "More than the final answer",
+     "notes": [
+      [
+       "An answer key only says 'cat'",
+       0
+      ],
+      [
+       "The teacher gives 90% cat, 9% tiger, 1% car",
+       2
+      ],
+      [
+       "Chatbots do this with words: how the teacher weighs every next word",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 780,
+   "frames": 631,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_03.wav",
+     "from": 0,
+     "frames": 602,
+     "words": [
+      {
+       "w": "An",
+       "from": 8,
+       "to": 12
+      },
+      {
+       "w": "answer",
+       "from": 12,
+       "to": 22
+      },
+      {
+       "w": "key",
+       "from": 22,
+       "to": 28
+      },
+      {
+       "w": "just",
+       "from": 28,
+       "to": 35
+      },
+      {
+       "w": "says",
+       "from": 35,
+       "to": 42
+      },
+      {
+       "w": "'cat',",
+       "from": 42,
+       "to": 52
+      },
+      {
+       "w": "but",
+       "from": 52,
+       "to": 58
+      },
+      {
+       "w": "a",
+       "from": 58,
+       "to": 74
+      },
+      {
+       "w": "teacher",
+       "from": 74,
+       "to": 85
+      },
+      {
+       "w": "AI",
+       "from": 85,
+       "to": 89
+      },
+      {
+       "w": "shows",
+       "from": 89,
+       "to": 98
+      },
+      {
+       "w": "how",
+       "from": 98,
+       "to": 104
+      },
+      {
+       "w": "much",
+       "from": 104,
+       "to": 111
+      },
+      {
+       "w": "it",
+       "from": 111,
+       "to": 115
+      },
+      {
+       "w": "looks",
+       "from": 115,
+       "to": 128
+      },
+      {
+       "w": "like",
+       "from": 128,
+       "to": 135
+      },
+      {
+       "w": "each",
+       "from": 135,
+       "to": 142
+      },
+      {
+       "w": "option:",
+       "from": 142,
+       "to": 159
+      },
+      {
+       "w": "ninety",
+       "from": 159,
+       "to": 169
+      },
+      {
+       "w": "percent",
+       "from": 169,
+       "to": 197
+      },
+      {
+       "w": "cat,",
+       "from": 197,
+       "to": 204
+      },
+      {
+       "w": "nine",
+       "from": 204,
+       "to": 211
+      },
+      {
+       "w": "percent",
+       "from": 211,
+       "to": 250
+      },
+      {
+       "w": "tiger,",
+       "from": 250,
+       "to": 260
+      },
+      {
+       "w": "one",
+       "from": 260,
+       "to": 266
+      },
+      {
+       "w": "percent",
+       "from": 266,
+       "to": 282
+      },
+      {
+       "w": "car.",
+       "from": 282,
+       "to": 289
+      },
+      {
+       "w": "Those",
+       "from": 289,
+       "to": 333
+      },
+      {
+       "w": "small",
+       "from": 333,
+       "to": 341
+      },
+      {
+       "w": "numbers",
+       "from": 341,
+       "to": 353
+      },
+      {
+       "w": "are",
+       "from": 353,
+       "to": 359
+      },
+      {
+       "w": "hidden",
+       "from": 359,
+       "to": 369
+      },
+      {
+       "w": "lessons.",
+       "from": 369,
+       "to": 381
+      },
+      {
+       "w": "Chatbots",
+       "from": 381,
+       "to": 426
+      },
+      {
+       "w": "learn",
+       "from": 426,
+       "to": 435
+      },
+      {
+       "w": "the",
+       "from": 435,
+       "to": 440
+      },
+      {
+       "w": "same",
+       "from": 440,
+       "to": 447
+      },
+      {
+       "w": "way,",
+       "from": 447,
+       "to": 455
+      },
+      {
+       "w": "with",
+       "from": 455,
+       "to": 462
+      },
+      {
+       "w": "words:",
+       "from": 462,
+       "to": 481
+      },
+      {
+       "w": "the",
+       "from": 481,
+       "to": 501
+      },
+      {
+       "w": "student",
+       "from": 501,
+       "to": 512
+      },
+      {
+       "w": "copies",
+       "from": 512,
+       "to": 522
+      },
+      {
+       "w": "how",
+       "from": 522,
+       "to": 535
+      },
+      {
+       "w": "the",
+       "from": 535,
+       "to": 541
+      },
+      {
+       "w": "teacher",
+       "from": 541,
+       "to": 552
+      },
+      {
+       "w": "weighs",
+       "from": 552,
+       "to": 562
+      },
+      {
+       "w": "every",
+       "from": 562,
+       "to": 571
+      },
+      {
+       "w": "next",
+       "from": 571,
+       "to": 578
+      },
+      {
+       "w": "word.",
+       "from": 578,
+       "to": 587
+      }
+     ],
+     "cues": {
+      "1": 52,
+      "2": 159,
+      "3": 289,
+      "4": 381
+     }
+    }
+   ]
+  },
+  {
+   "id": "results",
+   "type": "ds_results",
+   "data": {
+    "yt": {
+     "chapter": "Does it work?",
+     "title": "97% of the score, much faster",
+     "notes": [
+      [
+       "DistilBERT (2019): kept 97% of the teacher's score",
+       1
+      ],
+      [
+       "40% smaller, 60% faster",
+       2
+      ],
+      [
+       "Google: Gemini 1.5 Flash learned from 1.5 Pro (2024)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1411,
+   "frames": 484,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_04.wav",
+     "from": 0,
+     "frames": 456,
+     "words": [
+      {
+       "w": "It",
+       "from": 9,
+       "to": 13
+      },
+      {
+       "w": "works.",
+       "from": 13,
+       "to": 23
+      },
+      {
+       "w": "One",
+       "from": 23,
+       "to": 28
+      },
+      {
+       "w": "famous",
+       "from": 28,
+       "to": 71
+      },
+      {
+       "w": "student",
+       "from": 71,
+       "to": 82
+      },
+      {
+       "w": "kept",
+       "from": 82,
+       "to": 89
+      },
+      {
+       "w": "ninety-seven",
+       "from": 89,
+       "to": 119
+      },
+      {
+       "w": "percent",
+       "from": 119,
+       "to": 130
+      },
+      {
+       "w": "of",
+       "from": 130,
+       "to": 134
+      },
+      {
+       "w": "its",
+       "from": 134,
+       "to": 147
+      },
+      {
+       "w": "teacher's",
+       "from": 147,
+       "to": 160
+      },
+      {
+       "w": "score,",
+       "from": 160,
+       "to": 176
+      },
+      {
+       "w": "while",
+       "from": 176,
+       "to": 216
+      },
+      {
+       "w": "being",
+       "from": 216,
+       "to": 224
+      },
+      {
+       "w": "forty",
+       "from": 224,
+       "to": 239
+      },
+      {
+       "w": "percent",
+       "from": 239,
+       "to": 250
+      },
+      {
+       "w": "smaller",
+       "from": 250,
+       "to": 261
+      },
+      {
+       "w": "and",
+       "from": 261,
+       "to": 266
+      },
+      {
+       "w": "sixty",
+       "from": 266,
+       "to": 274
+      },
+      {
+       "w": "percent",
+       "from": 274,
+       "to": 285
+      },
+      {
+       "w": "faster.",
+       "from": 285,
+       "to": 301
+      },
+      {
+       "w": "And",
+       "from": 301,
+       "to": 306
+      },
+      {
+       "w": "Google",
+       "from": 306,
+       "to": 345
+      },
+      {
+       "w": "said",
+       "from": 345,
+       "to": 352
+      },
+      {
+       "w": "its",
+       "from": 352,
+       "to": 358
+      },
+      {
+       "w": "Gemini",
+       "from": 358,
+       "to": 371
+      },
+      {
+       "w": "Flash",
+       "from": 371,
+       "to": 379
+      },
+      {
+       "w": "learned",
+       "from": 379,
+       "to": 390
+      },
+      {
+       "w": "from",
+       "from": 390,
+       "to": 401
+      },
+      {
+       "w": "the",
+       "from": 401,
+       "to": 410
+      },
+      {
+       "w": "bigger",
+       "from": 410,
+       "to": 419
+      },
+      {
+       "w": "Pro",
+       "from": 419,
+       "to": 429
+      },
+      {
+       "w": "this",
+       "from": 429,
+       "to": 435
+      },
+      {
+       "w": "way.",
+       "from": 435,
+       "to": 442
+      }
+     ],
+     "cues": {
+      "1": 23,
+      "2": 176,
+      "3": 301
+     }
+    }
+   ]
+  },
+  {
+   "id": "cheap",
+   "type": "ds_cheap",
+   "data": {
+    "yt": {
+     "chapter": "The maths model",
+     "title": "1,000 worked solutions",
+     "notes": [
+      [
+       "An already-trained open model + 1,000 step-by-step solutions",
+       1
+      ],
+      [
+       "Under 30 minutes on rented GPUs",
+       2
+      ],
+      [
+       "Under ₹5,000 (s1, Stanford/UW/Ai2, 2025)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1895,
+   "frames": 425,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_05.wav",
+     "from": 0,
+     "frames": 396,
+     "words": [
+      {
+       "w": "And",
+       "from": 9,
+       "to": 14
+      },
+      {
+       "w": "that",
+       "from": 14,
+       "to": 20
+      },
+      {
+       "w": "maths",
+       "from": 20,
+       "to": 28
+      },
+      {
+       "w": "model?",
+       "from": 28,
+       "to": 37
+      },
+      {
+       "w": "Researchers",
+       "from": 37,
+       "to": 82
+      },
+      {
+       "w": "gave",
+       "from": 82,
+       "to": 89
+      },
+      {
+       "w": "an",
+       "from": 89,
+       "to": 92
+      },
+      {
+       "w": "already-trained",
+       "from": 92,
+       "to": 113
+      },
+      {
+       "w": "open",
+       "from": 113,
+       "to": 124
+      },
+      {
+       "w": "model",
+       "from": 124,
+       "to": 132
+      },
+      {
+       "w": "one",
+       "from": 132,
+       "to": 137
+      },
+      {
+       "w": "thousand",
+       "from": 137,
+       "to": 148
+      },
+      {
+       "w": "worked",
+       "from": 148,
+       "to": 168
+      },
+      {
+       "w": "solutions",
+       "from": 168,
+       "to": 181
+      },
+      {
+       "w": "from",
+       "from": 181,
+       "to": 187
+      },
+      {
+       "w": "a",
+       "from": 187,
+       "to": 190
+      },
+      {
+       "w": "smarter",
+       "from": 190,
+       "to": 200
+      },
+      {
+       "w": "AI.",
+       "from": 200,
+       "to": 205
+      },
+      {
+       "w": "Under",
+       "from": 205,
+       "to": 222
+      },
+      {
+       "w": "thirty",
+       "from": 222,
+       "to": 231
+      },
+      {
+       "w": "minutes",
+       "from": 231,
+       "to": 241
+      },
+      {
+       "w": "of",
+       "from": 241,
+       "to": 245
+      },
+      {
+       "w": "rented",
+       "from": 245,
+       "to": 289
+      },
+      {
+       "w": "chips,",
+       "from": 289,
+       "to": 298
+      },
+      {
+       "w": "under",
+       "from": 298,
+       "to": 310
+      },
+      {
+       "w": "five",
+       "from": 310,
+       "to": 316
+      },
+      {
+       "w": "thousand",
+       "from": 316,
+       "to": 351
+      },
+      {
+       "w": "rupees.",
+       "from": 351,
+       "to": 374
+      }
+     ],
+     "cues": {
+      "1": 37,
+      "2": 205,
+      "3": 298
+     }
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "type": "ds_catch",
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "Copied mistakes, and the rules",
+     "notes": [
+      [
+       "The student copies the teacher's mistakes",
+       1
+      ],
+      [
+       "Big AI companies' terms ban training a rival on their answers",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2320,
+   "frames": 309,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_06.wav",
+     "from": 0,
+     "frames": 280,
+     "words": [
+      {
+       "w": "The",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "catch:",
+       "from": 14,
+       "to": 29
+      },
+      {
+       "w": "the",
+       "from": 29,
+       "to": 36
+      },
+      {
+       "w": "student",
+       "from": 36,
+       "to": 48
+      },
+      {
+       "w": "copies",
+       "from": 48,
+       "to": 59
+      },
+      {
+       "w": "its",
+       "from": 59,
+       "to": 65
+      },
+      {
+       "w": "teacher's",
+       "from": 65,
+       "to": 80
+      },
+      {
+       "w": "mistakes",
+       "from": 80,
+       "to": 94
+      },
+      {
+       "w": "too.",
+       "from": 94,
+       "to": 131
+      },
+      {
+       "w": "And",
+       "from": 131,
+       "to": 137
+      },
+      {
+       "w": "most",
+       "from": 137,
+       "to": 152
+      },
+      {
+       "w": "big",
+       "from": 152,
+       "to": 159
+      },
+      {
+       "w": "AI",
+       "from": 159,
+       "to": 163
+      },
+      {
+       "w": "companies'",
+       "from": 163,
+       "to": 184
+      },
+      {
+       "w": "terms",
+       "from": 184,
+       "to": 193
+      },
+      {
+       "w": "ban",
+       "from": 193,
+       "to": 199
+      },
+      {
+       "w": "using",
+       "from": 199,
+       "to": 209
+      },
+      {
+       "w": "their",
+       "from": 209,
+       "to": 218
+      },
+      {
+       "w": "answers",
+       "from": 218,
+       "to": 230
+      },
+      {
+       "w": "to",
+       "from": 230,
+       "to": 235
+      },
+      {
+       "w": "build",
+       "from": 235,
+       "to": 250
+      },
+      {
+       "w": "a",
+       "from": 250,
+       "to": 253
+      },
+      {
+       "w": "rival.",
+       "from": 253,
+       "to": 264
+      }
+     ],
+     "cues": {
+      "1": 29,
+      "2": 131
+     }
+    }
+   ]
+  },
+  {
+   "id": "pick",
+   "type": "ds_pick",
+   "data": {
+    "yt": {
+     "chapter": "Which one do I use?",
+     "title": "Mini/Flash first, Pro when it slips",
+     "notes": [
+      [
+       "Emails, summaries, extracting data: start with mini or flash",
+       1
+      ],
+      [
+       "Multi-step reasoning, or it keeps slipping: switch to Pro",
+       2
+      ],
+      [
+       "Test on 20 real examples first",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2629,
+   "frames": 543,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_07.wav",
+     "from": 0,
+     "frames": 514,
+     "words": [
+      {
+       "w": "So",
+       "from": 6,
+       "to": 10
+      },
+      {
+       "w": "which",
+       "from": 10,
+       "to": 19
+      },
+      {
+       "w": "do",
+       "from": 19,
+       "to": 23
+      },
+      {
+       "w": "you",
+       "from": 23,
+       "to": 28
+      },
+      {
+       "w": "use?",
+       "from": 28,
+       "to": 35
+      },
+      {
+       "w": "Emails,",
+       "from": 35,
+       "to": 77
+      },
+      {
+       "w": "summaries,",
+       "from": 77,
+       "to": 92
+      },
+      {
+       "w": "pulling",
+       "from": 92,
+       "to": 109
+      },
+      {
+       "w": "out",
+       "from": 109,
+       "to": 114
+      },
+      {
+       "w": "data:",
+       "from": 114,
+       "to": 123
+      },
+      {
+       "w": "start",
+       "from": 123,
+       "to": 145
+      },
+      {
+       "w": "with",
+       "from": 145,
+       "to": 152
+      },
+      {
+       "w": "mini",
+       "from": 152,
+       "to": 159
+      },
+      {
+       "w": "or",
+       "from": 159,
+       "to": 163
+      },
+      {
+       "w": "flash.",
+       "from": 163,
+       "to": 176
+      },
+      {
+       "w": "Faster,",
+       "from": 176,
+       "to": 217
+      },
+      {
+       "w": "and",
+       "from": 217,
+       "to": 223
+      },
+      {
+       "w": "cheaper",
+       "from": 223,
+       "to": 234
+      },
+      {
+       "w": "if",
+       "from": 234,
+       "to": 238
+      },
+      {
+       "w": "you",
+       "from": 238,
+       "to": 247
+      },
+      {
+       "w": "pay.",
+       "from": 247,
+       "to": 285
+      },
+      {
+       "w": "Multi-step",
+       "from": 285,
+       "to": 300
+      },
+      {
+       "w": "reasoning,",
+       "from": 300,
+       "to": 319
+      },
+      {
+       "w": "or",
+       "from": 319,
+       "to": 328
+      },
+      {
+       "w": "it",
+       "from": 328,
+       "to": 332
+      },
+      {
+       "w": "keeps",
+       "from": 332,
+       "to": 341
+      },
+      {
+       "w": "slipping?",
+       "from": 341,
+       "to": 389
+      },
+      {
+       "w": "Switch",
+       "from": 389,
+       "to": 432
+      },
+      {
+       "w": "to",
+       "from": 432,
+       "to": 436
+      },
+      {
+       "w": "Pro.",
+       "from": 436,
+       "to": 443
+      },
+      {
+       "w": "And",
+       "from": 443,
+       "to": 448
+      },
+      {
+       "w": "test",
+       "from": 448,
+       "to": 455
+      },
+      {
+       "w": "on",
+       "from": 455,
+       "to": 459
+      },
+      {
+       "w": "twenty",
+       "from": 459,
+       "to": 469
+      },
+      {
+       "w": "real",
+       "from": 469,
+       "to": 476
+      },
+      {
+       "w": "examples",
+       "from": 476,
+       "to": 488
+      },
+      {
+       "w": "first.",
+       "from": 488,
+       "to": 497
+      }
+     ],
+     "cues": {
+      "1": 35,
+      "2": 285,
+      "3": 443
+     }
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "type": "ds_ask",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "500 emails: Pro or Flash?",
+     "notes": [
+      [
+       "500 office emails to summarise",
+       0
+      ],
+      [
+       "Pro or Flash? Comment your pick",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 3171,
+   "frames": 333,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/dist1/line_08.wav",
+     "from": 0,
+     "frames": 300,
+     "words": [
+      {
+       "w": "Your",
+       "from": 7,
+       "to": 14
+      },
+      {
+       "w": "turn:",
+       "from": 14,
+       "to": 36
+      },
+      {
+       "w": "five",
+       "from": 36,
+       "to": 43
+      },
+      {
+       "w": "hundred",
+       "from": 43,
+       "to": 53
+      },
+      {
+       "w": "office",
+       "from": 53,
+       "to": 63
+      },
+      {
+       "w": "emails",
+       "from": 63,
+       "to": 72
+      },
+      {
+       "w": "to",
+       "from": 72,
+       "to": 76
+      },
+      {
+       "w": "summarise.",
+       "from": 76,
+       "to": 122
+      },
+      {
+       "w": "Pro",
+       "from": 122,
+       "to": 128
+      },
+      {
+       "w": "or",
+       "from": 128,
+       "to": 132
+      },
+      {
+       "w": "Flash?",
+       "from": 132,
+       "to": 141
+      },
+      {
+       "w": "Comment",
+       "from": 141,
+       "to": 176
+      },
+      {
+       "w": "your",
+       "from": 176,
+       "to": 183
+      },
+      {
+       "w": "pick.",
+       "from": 183,
+       "to": 226
+      },
+      {
+       "w": "Follow",
+       "from": 226,
+       "to": 235
+      },
+      {
+       "w": "for",
+       "from": 235,
+       "to": 241
+      },
+      {
+       "w": "more",
+       "from": 241,
+       "to": 247
+      },
+      {
+       "w": "AI,",
+       "from": 247,
+       "to": 253
+      },
+      {
+       "w": "explained",
+       "from": 253,
+       "to": 273
+      },
+      {
+       "w": "simply.",
+       "from": 273,
+       "to": 284
+      }
+     ],
+     "cues": {
+      "1": 122,
+      "2": 226
+     }
+    }
+   ]
+  }
+ ]
+}

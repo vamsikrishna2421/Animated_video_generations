@@ -163,9 +163,9 @@ const DsHook: React.FC<SP> = ({ cue }) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1000 + boil);
       // the numbers first: legible on frame 0 (cover frame), stamped down from slightly larger
-      const k1 = 1 + 0.2 * (1 - easeOut(fade(f, 0, 6))), k2 = 1 + 0.25 * (1 - easeOut(fade(f, 1, 6)));
+      const k1 = 1 + 0.2 * (1 - easeOut(fade(f, 0, 6))), k2 = 1 + 0.12 * (1 - easeOut(fade(f, 1, 6)));
       c.save(); c.translate(300, 560); c.scale(k1, k1); stopwatch(c, 0, 0, 150, f / 30, "< 30 min", r); c.restore();
-      c.save(); c.translate(760, 600); c.scale(k2, k2); c.translate(-760, -600); tag(c, "under ₹5,000", 760, 600, 104, COL.yellow, COL.ink, 0.07, 1); c.restore();
+      c.save(); c.translate(745, 600); c.scale(k2, k2); c.translate(-745, -600); tag(c, "under ₹5,000", 745, 600, 104, COL.yellow, COL.ink, 0.07, 1); c.restore();
       if (f >= c1 && f < c3 + 12) {
         // the maths-test card slides away when the word DISTILLATION arrives
         c.save(); c.translate(-1200 * Math.pow(seg(f, c3, c3 + 10), 2), 0);
