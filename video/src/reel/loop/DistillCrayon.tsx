@@ -315,7 +315,7 @@ const DsCheap: React.FC<SP> = ({ cue }) => {
         if (q >= 1) stroke(c, [[480, 460], [480 - 390 * seg(f, 40, 50), 460 + 360 * seg(f, 40, 50)]], COL.red, 12, r, { passes: 2, alpha: 0.9 });
       }
       // right: 1,000 solved examples written by Gemini
-      c.save(); rrect(c, 570, 430, 450, 420, 26); c.fillStyle = "rgba(255,255,255,0.08)"; c.fill(); c.restore();
+      if (f >= c1) { c.save(); c.globalAlpha = fade(f, c1, 6); rrect(c, 570, 430, 450, 420, 26); c.fillStyle = "rgba(255,255,255,0.08)"; c.fill(); c.restore(); }
       hand(c, "written answers", 795, 500, 58, COL.cream, seg(f, c1, c1 + 12), r, -0.02, "center");
       if (f >= c1) {
         const n = Math.round(12 * seg(f, c1, c1 + 20));
@@ -327,7 +327,7 @@ const DsCheap: React.FC<SP> = ({ cue }) => {
       if (f >= c2 && f < c3) tag(c, "₹5,000 = only this last step", W / 2, 1090, 66, COL.yellow, COL.ink, -0.03, fade(f, c2, 8));
       if (f >= c3) {
         page(c, 110, 1010, 860, 170, boil, -0.01);
-        hand(c, "copying answers = distillation too", W / 2, 1115, 62, "#15803d", seg(f, c3, c3 + 16), r, -0.02, "center");
+        hand(c, "learning from answers = distillation too", W / 2, 1115, 62, "#15803d", seg(f, c3, c3 + 16), r, -0.02, "center");
       }
       hand(c, "s1: Stanford, UW, Ai2 (2025) · already-trained open model", W / 2, 1260, 44, COL.pale, seg(f, c1 + 20, c1 + 36), r, -0.01, "center");
     }} />
@@ -377,14 +377,15 @@ const DsPick: React.FC<SP> = ({ cue }) => {
         items.forEach((it, i) => hand(c, "• " + it, x + 34, 670 + i * 90, 50, COL.cream, clamp(p * 3 - i * 0.6), r, -0.01));
       };
       col(50, "SMALL", "Flash · Flash-Lite · mini", ["emails", "summaries", "pulling out data"], COL.yellow, seg(f, c1, c1 + 24));
-      col(570, "BIGGER", "e.g. Gemini Pro · usually paid", ["multi-step tasks", "it keeps getting", "  it wrong"], COL.orangeLight, seg(f, c2, c2 + 24));
+      col(570, "BIGGER", "e.g. Gemini Pro · usually paid", ["multi-step tasks", "when small fails"], COL.orangeLight, seg(f, c2, c2 + 24));
       if (f >= c3) {
-        page(c, 90, 980, 900, 200, boil, -0.012);
-        hand(c, "developers: Pro ≈ 3x Flash per use", W / 2, 1060, 64, COL.ink, seg(f, c3, c3 + 12), r, -0.02, "center");
-        hand(c, "Google API prices, Oct 2026: 3.8 Flash vs 3.1 Pro (Flash price till Dec 31)", W / 2, 1135, 34, "#475569", seg(f, c3 + 10, c3 + 26), r, -0.01, "center");
+        page(c, 80, 975, 920, 235, boil, -0.012);
+        hand(c, "developers: Pro ≈ 3x Flash per use", W / 2, 1052, 64, COL.ink, seg(f, c3, c3 + 12), r, -0.02, "center");
+        hand(c, "Google API prices, Oct 2026: Gemini 3.8 Flash vs 3.1 Pro", W / 2, 1120, 40, "#475569", seg(f, c3 + 10, c3 + 24), r, -0.01, "center");
+        hand(c, "(Flash price valid till Dec 31, 2026)", W / 2, 1172, 40, "#475569", seg(f, c3 + 16, c3 + 30), r, -0.01, "center");
       }
       if (f >= c4) {
-        tag(c, "test 20 real emails first", W / 2, 1285, 66, "#86efac", COL.ink, -0.02, fade(f, c4, 8));
+        tag(c, "test 20 real emails first", W / 2, 1300, 66, "#86efac", COL.ink, -0.02, fade(f, c4, 8));
       }
     }} />
     </>
