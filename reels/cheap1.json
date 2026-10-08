@@ -1,0 +1,359 @@
+{
+ "id": "cheap1",
+ "title": "Dirt-cheap AI for every job",
+ "label": "AI EXPLAINED",
+ "banner": "Dirt-cheap AI for every job",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.14,
+ "gap": 0.32,
+ "lead": 0.45,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.5,
+ "musicPad": true,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "cm_hook",
+   "tail": 0.35,
+   "data": {
+    "head1": "DIRT-CHEAP AI",
+    "head2": "for every job",
+    "job": "100,000 customer emails, sorted & summarized",
+    "big": "GPT-6 Astra (top)",
+    "bigPrice": "$1,200",
+    "small": "GPT-6 Luna (small)",
+    "smallPrice": "$12",
+    "ratio": "100x cheaper",
+    "tease": "5 dirt-cheap picks · 4 have a free option",
+    "note": "OpenAI API list prices, Oct 2026 · ~500-word emails · not sponsored",
+    "yt": {
+     "chapter": "Same job, 100x cheaper",
+     "title": "$1,200 vs $12",
+     "notes": [
+      [
+       "100,000 emails on OpenAI's top model: ~$1,200",
+       1
+      ],
+      [
+       "On its small sibling, GPT-6 Luna: ~$12",
+       2
+      ],
+      [
+       "5 dirt-cheap picks, 4 with a free option",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.4,
+     "text": "A hundred thousand customer emails, summarized by OpenAI's top model: [1] about twelve hundred dollars. By its small sibling, GPT-6 Luna: [2] twelve dollars. Same simple job. [3] Here are five dirt-cheap picks, four with a free option.",
+     "show": "100,000 customer emails, summarized by OpenAI's top model: [1] about $1,200. By its small sibling, GPT-6 Luna: [2] $12. Same simple job. [3] Here are 5 dirt-cheap picks, 4 with a free option.",
+     "tts": "A hundred thousand customer emails, summarized by Open AI's top model: about twelve hundred dollars. By its small sibling, G.P.T. six Luna: twelve dollars. Same simple job. Here are five dirt-cheap picks, four with a free option.",
+     "pauses": {
+      "2": 0.4
+     }
+    }
+   ],
+   "drop_cue": 2
+  },
+  {
+   "id": "chat",
+   "type": "cm_card",
+   "tail": 0.35,
+   "data": {
+    "n": 1,
+    "of": 5,
+    "job": "Chat, writing, study",
+    "icon": "chat",
+    "badge": "FREE APP",
+    "pick": "free ChatGPT or Gemini",
+    "price": "$0",
+    "example": "homework help, emails, ideas: free",
+    "free": "FREE",
+    "example2": "free Gemini now runs on Flash-Lite, its smallest model",
+    "try": "chatgpt.com · gemini.google.com",
+    "yt": {
+     "chapter": "Chat, writing, study",
+     "title": "Don't pay",
+     "notes": [
+      [
+       "Free ChatGPT or Gemini is plenty",
+       1
+      ],
+      [
+       "Free Gemini now runs on Flash-Lite",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_chat.wav",
+     "maxgap": 0.4,
+     "text": "One. Chat, writing, homework: [1] don't pay. Free ChatGPT or Gemini is plenty. [2] Zero dollars. [3] Note: free Gemini now runs on its smallest model, Flash-Lite.",
+     "show": "One. Chat, writing, homework: [1] don't pay. Free ChatGPT or Gemini is plenty. [2] $0. [3] Note: free Gemini now runs on its smallest model, Flash-Lite.",
+     "tts": "One. Chat, writing, homework: don't pay. Free ChatGPT or Gemini is plenty. Zero dollars. Note: free Gemini now runs on its smallest model, Flash Lite."
+    }
+   ],
+   "lift": true
+  },
+  {
+   "id": "code",
+   "type": "cm_card",
+   "tail": 0.35,
+   "data": {
+    "n": 2,
+    "of": 5,
+    "job": "Coding",
+    "icon": "code",
+    "badge": "FREE PLAN + API",
+    "pick": "GitHub Copilot Free",
+    "price": "free: 2,000 suggestions/mo",
+    "example": "100 coding questions ≈ 10¢",
+    "free": "FREE",
+    "pick2": "API: GPT-6 Luna · or DeepSeek Flash (data stored in China)",
+    "example2": "~2K tokens in, 1.5K out each · Luna: $0.10 in / $0.50 out per 1M",
+    "try": "github.com/features/copilot",
+    "yt": {
+     "chapter": "Coding",
+     "title": "Free plan, then 10¢",
+     "notes": [
+      [
+       "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
+       1
+      ],
+      [
+       "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_code.wav",
+     "maxgap": 0.4,
+     "text": "Two. Coding: [1] GitHub Copilot's free plan gives you two thousand suggestions a month. [2] Building an app? GPT-6 Luna answers [3] a hundred coding questions for about ten cents.",
+     "show": "Two. Coding: [1] GitHub Copilot's free plan gives you 2,000 suggestions a month. [2] Building an app? GPT-6 Luna answers [3] 100 coding questions for about 10¢.",
+     "tts": "Two. Coding: GitHub Copilot's free plan gives you two thousand suggestions a month. Building an app? G.P.T. six Luna answers a hundred coding questions for about ten cents."
+    }
+   ]
+  },
+  {
+   "id": "images",
+   "type": "cm_card",
+   "tail": 0.35,
+   "data": {
+    "n": 3,
+    "of": 5,
+    "job": "Images",
+    "icon": "image",
+    "badge": "FOR BUILDERS · API",
+    "pick": "GPT Image 2 (draft quality)",
+    "price": "$0.006 per image",
+    "example": "100 drafts ≈ 60¢",
+    "example2": "medium quality: $0.053 · 1024×1024",
+    "try": "platform.openai.com",
+    "yt": {
+     "chapter": "Images",
+     "title": "Under a penny each",
+     "notes": [
+      [
+       "GPT Image 2, draft quality: $0.006 per image",
+       2
+      ],
+      [
+       "100 drafts ≈ 60¢",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_images.wav",
+     "maxgap": 0.4,
+     "text": "Three. Images: [1] OpenAI's GPT Image 2 in draft quality, [2] under a penny each. [3] A hundred drafts? About sixty cents.",
+     "show": "Three. Images: [1] OpenAI's GPT Image 2 in draft quality, [2] under a penny each. [3] 100 drafts? About 60¢.",
+     "tts": "Three. Images: Open AI's G.P.T. Image two, in draft quality, under a penny each. A hundred drafts? About sixty cents."
+    }
+   ]
+  },
+  {
+   "id": "audio",
+   "type": "cm_card",
+   "tail": 0.35,
+   "data": {
+    "n": 4,
+    "of": 5,
+    "job": "Audio",
+    "icon": "mic",
+    "badge": "FREE PLAN + API",
+    "pick": "Whisper on Groq (not Grok)",
+    "price": "free 8 hrs/day · then $0.04/hr",
+    "example": "1-hour lecture → text: free",
+    "free": "FREE",
+    "second": {
+     "label": "voiceover:",
+     "pick": "Gemini text-to-speech",
+     "price": "< 1¢ / min"
+    },
+    "try": "console.groq.com · ai.google.dev",
+    "yt": {
+     "chapter": "Audio",
+     "title": "Free transcripts, penny voiceovers",
+     "notes": [
+      [
+       "Whisper on Groq: free up to 8 audio-hours a day, then $0.04/hour",
+       2
+      ],
+      [
+       "Gemini text-to-speech: under 1¢ a minute",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_audio.wav",
+     "maxgap": 0.4,
+     "text": "Four. Audio: [1] Whisper on Groq, with a Q, [2] transcribes up to eight hours a day free, then four cents an hour. [3] A one-hour lecture? Free. [4] Voiceovers? Gemini text-to-speech, under a penny a minute.",
+     "show": "Four. Audio: [1] Whisper on Groq, with a Q, [2] transcribes up to 8 hours a day free, then 4¢ an hour. [3] A 1-hour lecture? Free. [4] Voiceovers? Gemini text-to-speech, under a penny a minute.",
+     "tts": "Four. Audio: Whisper on Grock, with a Q, transcribes up to eight hours a day free, then four cents an hour. A one-hour lecture? Free. Voiceovers? Gemini text to speech, under a penny a minute."
+    }
+   ]
+  },
+  {
+   "id": "local",
+   "type": "cm_card",
+   "tail": 0.35,
+   "data": {
+    "n": 5,
+    "of": 5,
+    "job": "Free & private",
+    "icon": "laptop",
+    "badge": "FREE APP",
+    "pick": "Gemma 4 + Ollama",
+    "price": "$0 · offline",
+    "example": "8 GB RAM runs the small one",
+    "free": "FREE",
+    "cmd": "ollama run gemma4",
+    "example2": "private, not smarter: big cloud models win hard tasks",
+    "try": "ollama.com",
+    "yt": {
+     "chapter": "Free & private",
+     "title": "Run it on your laptop",
+     "notes": [
+      [
+       "Gemma 4 with the free Ollama app: $0, offline",
+       1
+      ],
+      [
+       "8 GB RAM runs the small one",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_local.wav",
+     "maxgap": 0.4,
+     "text": "Five. Free and private: [1] run Gemma 4 on your laptop with the free Ollama app. [2] Zero dollars, and nothing leaves your computer. [3] Eight gigs of RAM is enough. Private, not smarter.",
+     "show": "Five. Free and private: [1] run Gemma 4 on your laptop with the free Ollama app. [2] $0, and nothing leaves your computer. [3] 8 GB of RAM is enough. Private, not smarter.",
+     "tts": "Five. Free and private: run Jemma four on your laptop with the free Oh-lahma app. Zero dollars, and nothing leaves your computer. Eight gigs of RAM is enough. Private, not smarter."
+    }
+   ]
+  },
+  {
+   "id": "rule",
+   "type": "cm_rule",
+   "tail": 0.35,
+   "data": {
+    "title": "the rule",
+    "s1": "start with the cheap one",
+    "s2": "test it on 20 real examples",
+    "s3": "move up only if it fails",
+    "yt": {
+     "chapter": "The rule",
+     "title": "Start cheap, test, move up",
+     "notes": [
+      [
+       "Start cheap",
+       1
+      ],
+      [
+       "Test on 20 real examples",
+       2
+      ],
+      [
+       "Move up only if it fails",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_rule.wav",
+     "maxgap": 0.4,
+     "text": "The rule: [1] start cheap. [2] Test it on twenty real examples. [3] Move up only if it fails.",
+     "show": "The rule: [1] start cheap. [2] Test it on 20 real examples. [3] Move up only if it fails."
+    }
+   ],
+   "lift": true
+  },
+  {
+   "id": "ask",
+   "type": "cm_ask",
+   "tail": 0.6,
+   "data": {
+    "q1": "which job do you use AI for most?",
+    "q2": "comment it",
+    "q3": "I'll reply with the cheapest pick",
+    "recap": "start cheap · test 20 · move up only if it fails",
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Which job?",
+     "notes": [
+      [
+       "Comment your job, get the cheapest pick",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_ask.wav",
+     "maxgap": 0.4,
+     "text": "Which job do you use AI for most? [1] Comment it, and I'll reply with the cheapest pick. [2] Follow for more AI, explained simply.",
+     "pauses": {
+      "2": 0.8
+     }
+    }
+   ],
+   "outro": true
+  }
+ ]
+}

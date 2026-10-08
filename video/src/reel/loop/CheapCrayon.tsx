@@ -85,13 +85,15 @@ const CmHook: React.FC<SP> = ({ s, cue }) => {
       hand(c, d.head1 ?? "DEAD-CHEAP AI", W / 2, 360, 104, COL.yellow, 1, r, -0.03, "center");
       hand(c, d.head2 ?? "for every job", W / 2, 455, 76, COL.cream, 1, r, -0.02, "center");
       // the same job, two price tags
-      hand(c, d.job ?? "", W / 2, 590, fit(c, d.job ?? "", 900, 62), COL.orangeLight, seg(f, 4, 18), r, -0.02, "center");
+      hand(c, d.job ?? "", W / 2, 585, fit(c, d.job ?? "", 940, 62), COL.orangeLight, 1, r, -0.02, "center");
       robot(c, 270, 1180, 1.05, boil, 1, { ...GOLD, mouth: "smile", arms: "down" });
       robot(c, 800, 1180, 0.62, boil, 2, { ...STUDENT, eyes: f >= c2 ? "happy" : "open", mouth: f >= c2 ? "grin" : "smile", arms: f >= c2 ? "thumb" : "down" });
       tag(c, d.big ?? "flagship", 270, 1260, 54, "#fde68a", COL.ink, -0.04, 1);
       tag(c, d.small ?? "dead-cheap", 800, 1260, 54, COL.yellow, COL.ink, 0.04, 1);
-      if (f >= c1) tag(c, d.bigPrice ?? "", 270, 720, 96, COL.cream, COL.red, -0.05, fade(f, c1, 8));
-      if (f >= c2) tag(c, d.smallPrice ?? "", 800, 720, 96, "#86efac", COL.ink, 0.05, fade(f, c2, 8));
+      // both price tags readable on frame 0 (cover); each one pulses when the voice says it
+      const pulse = (at: number) => (f >= at ? 1 + 0.25 * Math.exp(-(f - at) / 5) : 1);
+      c.save(); c.translate(270, 720); c.scale(pulse(c1), pulse(c1)); c.translate(-270, -720); tag(c, d.bigPrice ?? "", 270, 720, 104, COL.cream, COL.red, -0.05, 1); c.restore();
+      c.save(); c.translate(800, 720); c.scale(pulse(c2), pulse(c2)); c.translate(-800, -720); tag(c, d.smallPrice ?? "", 800, 720, 104, "#86efac", COL.ink, 0.05, 1); c.restore();
       if (f >= c2 + 10 && d.ratio) hand(c, d.ratio, W / 2, 860, 64, COL.yellow, seg(f, c2 + 10, c2 + 24), r, -0.02, "center");
       if (f >= c3) {
         c.save(); c.globalAlpha = fade(f, c3, 6);
@@ -106,7 +108,7 @@ const CmHook: React.FC<SP> = ({ s, cue }) => {
 
 // ---------- 2..n PRICE CARD: one job, one pick ----------
 const CmCard: React.FC<SP> = ({ s, cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
   const d = s.data;
   return (
     <>
@@ -114,9 +116,10 @@ const CmCard: React.FC<SP> = ({ s, cue }) => {
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, d.n % 2 ? COL.deep : COL.blue);
       const r = rng(2100 + d.n * 10 + boil);
-      // header: number + job, on screen from frame 0
+      // header: number + job, on screen from frame 0; who it is for (free app vs for builders)
       tag(c, `${d.n} / ${d.of}`, 140, 350, 52, COL.yellow, COL.ink, -0.05, 1);
       hand(c, d.job, W / 2 + 60, 372, fit(c, d.job, 760, 84), COL.cream, 1, r, -0.02, "center");
+      if (d.badge) tag(c, d.badge, 260, 860, fit(c, d.badge, 320, 40, 26), d.badge.startsWith("FREE") ? "#86efac" : "#bfdbfe", COL.ink, -0.03, 1);
       // icon
       c.beginPath(); c.arc(260, 640, 170, 0, 7); c.fillStyle = "rgba(255,255,255,0.12)"; c.fill();
       icon(c, d.icon, 260, 640, 1.15 * easeOut(fade(f, 0, 8)) || 0.01, boil);
@@ -131,16 +134,29 @@ const CmCard: React.FC<SP> = ({ s, cue }) => {
       if (f >= c2) tag(c, d.price, 720, 800, fit(c, d.price, 560, 74, 40), d.free ? "#86efac" : COL.yellow, COL.ink, 0.03, fade(f, c2, 8));
       // a real-world example
       if (f >= c3) {
-        page(c, 90, 920, 900, 220, boil, -0.012);
-        hand(c, d.example, W / 2, 1015, fit(c, d.example, 820, 66, 40), COL.ink, seg(f, c3, c3 + 14), r, -0.02, "center");
-        if (d.example2) hand(c, d.example2, W / 2, 1090, fit(c, d.example2, 820, 44, 30), "#475569", seg(f, c3 + 10, c3 + 24), r, -0.01, "center");
+        page(c, 90, 930, 900, 210, boil, -0.012);
+        hand(c, d.example, W / 2, 1020, fit(c, d.example, 820, 66, 40), COL.ink, seg(f, c3, c3 + 14), r, -0.02, "center");
+        if (d.example2) hand(c, d.example2, W / 2, 1095, fit(c, d.example2, 840, 42, 28), "#475569", seg(f, c3 + 10, c3 + 24), r, -0.01, "center");
+      }
+      // a command people can screenshot
+      if (d.cmd && f >= c2) {
+        c.save(); c.globalAlpha = fade(f, c2, 6); rrect(c, 300, 1165, 480, 70, 14); c.fillStyle = "#0b1020"; c.fill();
+        c.font = "600 40px 'DejaVu Sans Mono', monospace"; c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText("$ " + d.cmd, 540, 1213); c.restore();
+      }
+      // a second pick for the same card (e.g. audio: transcription, then voiceovers)
+      if (d.second && f >= c4) {
+        c.save(); c.globalAlpha = fade(f, c4, 6); rrect(c, 90, 1160, 900, 120, 22); c.fillStyle = "rgba(255,255,255,0.14)"; c.fill(); c.restore();
+        hand(c, d.second.label, 130, 1235, 46, COL.pale, seg(f, c4, c4 + 8), r, -0.01);
+        tag(c, d.second.pick, 520, 1222, fit(c, d.second.pick, 380, 50, 32), COL.cream, "#1d3fa8", -0.02, fade(f, c4 + 2, 8));
+        tag(c, d.second.price, 850, 1222, fit(c, d.second.price, 230, 50, 30), COL.yellow, COL.ink, 0.03, fade(f, c4 + 8, 8));
       }
       if (d.free) {
         const p = fade(f, c2 + 4, 6);
         if (p > 0) { c.save(); c.translate(900, 470); c.rotate(0.18); c.scale(1 + 0.4 * (1 - easeOut(p)), 1 + 0.4 * (1 - easeOut(p))); c.globalAlpha = p;
           c.strokeStyle = "#16a34a"; c.lineWidth = 8; c.strokeRect(-110, -45, 220, 90); c.font = "700 64px Caveat"; c.fillStyle = "#16a34a"; c.textAlign = "center"; c.fillText(d.free, 0, 20); c.restore(); }
       }
-      if (d.source) hand(c, d.source, W / 2, 1205, fit(c, d.source, 960, 38, 28), COL.pale, seg(f, c2 + 10, c2 + 26), r, -0.01, "center");
+      if (d.try) hand(c, "try: " + d.try, W / 2, d.second || d.cmd ? 1330 : 1225, fit(c, "try: " + d.try, 760, 44, 28), COL.yellow, seg(f, c2 + 6, c2 + 20), r, -0.01, "center");
+      if (d.source) hand(c, d.source, W / 2, d.second || d.cmd ? 1380 : 1285, fit(c, d.source, 760, 34, 24), COL.pale, seg(f, c2 + 10, c2 + 26), r, -0.01, "center");
       robot(c, 935, 1420, 0.42, boil, 3, { ...STUDENT, eyes: f >= c2 ? "happy" : "open", mouth: "grin", arms: f >= c3 ? "thumb" : "down" });
     }} />
     </>
@@ -180,9 +196,10 @@ const CmAsk: React.FC<SP> = ({ s, cue }) => {
       background(c, W, H, boil);
       const r = rng(2700 + boil);
       hand(c, "YOUR TURN", W / 2, 370, 100, COL.yellow, seg(f, 0, 10), r, -0.03, "center");
-      const kinds = ["mail", "chat", "code", "image", "mic", "speaker", "laptop"];
-      kinds.forEach((k, i) => { const x = 150 + (i % 4) * 260, y = 560 + Math.floor(i / 4) * 230; icon(c, k, x + (i >= 4 ? 130 : 0), y, 0.55 * easeOut(fade(f, i * 3, 8)) || 0.01, boil); });
+      const kinds = ["chat", "code", "image", "mic", "laptop"];
+      kinds.forEach((k, i) => { const x = 150 + (i % 4) * 260, y = 540 + Math.floor(i / 4) * 200; icon(c, k, x + (i >= 4 ? 130 : 0), y, 0.5 * easeOut(fade(f, i * 3, 8)) || 0.01, boil); });
       hand(c, d.q1 ?? "which job do you use AI for most?", W / 2, 960, fit(c, d.q1 ?? "", 960, 62, 36), COL.cream, seg(f, 8, 24), r, -0.02, "center");
+      if (d.recap) hand(c, d.recap, W / 2, 870, fit(c, d.recap, 960, 46, 30), COL.yellow, seg(f, 4, 18), r, -0.01, "center");
       if (f >= c1) {
         tag(c, d.q2 ?? "comment it", W / 2, 1075, 70, COL.orangeLight, COL.ink, -0.03, fade(f, c1, 8));
         if (d.q3) hand(c, d.q3, W / 2, 1150, fit(c, d.q3, 960, 46, 30), COL.pale, seg(f, c1 + 8, c1 + 22), r, -0.01, "center");
