@@ -313,14 +313,31 @@ def score(total, scene_starts, drops):
     return st * 0.9
 
 
-def lofi(total, scene_starts):
-    """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops."""
+def pad_chord(notes, sec):
+    """Soft sustained pad (slow attack, long release) so the lo-fi bed never drops to silence between bars."""
+    t = np.arange(int(sec * MSR)) / MSR
+    x = np.zeros_like(t)
+    for m in notes:
+        f = 440 * 2 ** ((m - 69) / 12)
+        x += np.sin(2 * np.pi * f * t) + 0.5 * np.sin(2 * np.pi * f * 1.004 * t + 1.0)
+    x *= np.minimum(1, t / 0.4) * np.minimum(1, np.maximum(0, sec - t) / 0.8)
+    return sosfilt(butter(2, 1400, "lp", fs=MSR, output="sos"), x)
+
+
+def lofi(total, scene_starts, pad=False):
+    """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops.
+    pad=True (spec "musicPad") adds a sustained pad and a faint vinyl-noise floor, filling the short silent
+    hole at the end of every bar (the keys stop before the bar line), which is audible once the bed is turned up."""
     n = int(total * MSR)
     mix = np.zeros(n)
     beat = 60 / 88
     chords = [[57, 60, 64, 67], [53, 57, 60, 64], [55, 59, 62, 65], [52, 55, 59, 62]]
+    if pad:
+        mix += sosfilt(butter(2, [300, 4000], "bp", fs=MSR, output="sos"), np.random.default_rng(3).standard_normal(n)) * 0.005
     t0, b = 0.0, 0
     while t0 < total:
+        if pad:
+            place(mix, pad_chord(chords[b % 4][:3], beat * 4 + 0.8) * 0.045, t0)
         for i in range(4):
             ts = t0 + i * beat
             if i in (0, 2):
@@ -383,7 +400,7 @@ def main(spec_path: Path) -> None:
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     starts = [s["from"] / FPS for s in scenes]
-    bed = lofi(total, starts) if spec.get("music") == "lofi" else score(total, starts, drops)
+    bed = lofi(total, starts, pad=spec.get("musicPad", False)) if spec.get("music") == "lofi" else score(total, starts, drops)
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
     handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
     for sc in scenes:
