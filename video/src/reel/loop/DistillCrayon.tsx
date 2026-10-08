@@ -297,8 +297,10 @@ const DsResults: React.FC<SP> = ({ cue }) => {
 
 // ---------- 5 THE MATHS MODEL: copying written answers ----------
 const DsCheap: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
+    <>
+    <Sfx at={c2} src="audio/sfx_chaching.wav" vol={0.4} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1400 + boil);
@@ -321,13 +323,15 @@ const DsCheap: React.FC<SP> = ({ cue }) => {
         hand(c, "1,000 solved examples", 795, 820, 50, COL.yellow, seg(f, c1 + 10, c1 + 24), r, -0.02, "center");
         stroke(c, [[960, 470], [985, 500], [1015, 450]], "#22c55e", 10, r, { passes: 2, alpha: seg(f, c1 + 16, c1 + 20) });
       }
-      if (f >= c1 + 14) tag(c, "written by Gemini", 795, 930, 56, COL.cream, "#1d3fa8", -0.03, fade(f, c1 + 14, 8));
-      if (f >= c2) {
+      if (f >= c1 + 14) tag(c, "by a smarter AI", 795, 930, 56, COL.cream, "#1d3fa8", -0.03, fade(f, c1 + 14, 8));
+      if (f >= c2 && f < c3) tag(c, "₹5,000 = only this last step", W / 2, 1090, 66, COL.yellow, COL.ink, -0.03, fade(f, c2, 8));
+      if (f >= c3) {
         page(c, 110, 1010, 860, 170, boil, -0.01);
-        hand(c, "copying answers = distillation too", W / 2, 1115, 62, "#15803d", seg(f, c2, c2 + 16), r, -0.02, "center");
+        hand(c, "copying answers = distillation too", W / 2, 1115, 62, "#15803d", seg(f, c3, c3 + 16), r, -0.02, "center");
       }
-      hand(c, "s1: Stanford, UW, Ai2 (2025), on an existing open model", W / 2, 1260, 44, COL.pale, seg(f, c1 + 20, c1 + 36), r, -0.01, "center");
+      hand(c, "s1: Stanford, UW, Ai2 (2025) · already-trained open model", W / 2, 1260, 44, COL.pale, seg(f, c1 + 20, c1 + 36), r, -0.01, "center");
     }} />
+    </>
   );
 };
 
@@ -373,11 +377,11 @@ const DsPick: React.FC<SP> = ({ cue }) => {
         items.forEach((it, i) => hand(c, "• " + it, x + 34, 670 + i * 90, 50, COL.cream, clamp(p * 3 - i * 0.6), r, -0.01));
       };
       col(50, "SMALL", "Flash · Flash-Lite · mini", ["emails", "summaries", "pulling out data"], COL.yellow, seg(f, c1, c1 + 24));
-      col(570, "PRO", "the bigger model", ["multi-step tasks", "broken Excel formula", "when small slips"], COL.orangeLight, seg(f, c2, c2 + 24));
+      col(570, "BIGGER", "e.g. Gemini Pro · usually paid", ["multi-step tasks", "it keeps getting", "  it wrong"], COL.orangeLight, seg(f, c2, c2 + 24));
       if (f >= c3) {
         page(c, 90, 980, 900, 200, boil, -0.012);
-        hand(c, "Pro ≈ 3x Flash per word", W / 2, 1065, 70, COL.ink, seg(f, c3, c3 + 12), r, -0.02, "center");
-        hand(c, "Google API prices, Oct 2026 · Pro is paid in most apps", W / 2, 1140, 40, "#475569", seg(f, c3 + 10, c3 + 26), r, -0.01, "center");
+        hand(c, "developers: Pro ≈ 3x Flash per use", W / 2, 1060, 64, COL.ink, seg(f, c3, c3 + 12), r, -0.02, "center");
+        hand(c, "Google API prices, Oct 2026: 3.8 Flash vs 3.1 Pro (Flash price till Dec 31)", W / 2, 1135, 34, "#475569", seg(f, c3 + 10, c3 + 26), r, -0.01, "center");
       }
       if (f >= c4) {
         tag(c, "test 20 real emails first", W / 2, 1285, 66, "#86efac", COL.ink, -0.02, fade(f, c4, 8));
@@ -408,9 +412,10 @@ const DsAsk: React.FC<SP> = ({ s, cue }) => {
       hand(c, "500 customer complaints", W / 2, 830, 64, COL.cream, seg(f, 6, 20), r, -0.02, "center");
       hand(c, "which could become legal trouble?", W / 2, 905, 54, COL.orangeLight, seg(f, 18, 34), r, -0.02, "center");
       if (f >= c1) {
-        tag(c, "FLASH?", 330, 1030, 96, COL.yellow, COL.ink, -0.06, fade(f, c1, 8));
-        tag(c, "PRO?", 750, 1030, 96, COL.orangeLight, COL.ink, 0.06, fade(f, c1 + 6, 8));
-        hand(c, "comment your pick", W / 2, 1140, 62, COL.cream, seg(f, c1 + 10, c1 + 24), r, -0.02, "center");
+        tag(c, "FLASH?", 215, 1030, 80, COL.yellow, COL.ink, -0.06, fade(f, c1, 8));
+        tag(c, "PRO?", 540, 1030, 80, COL.orangeLight, COL.ink, 0.04, fade(f, c1 + 5, 8));
+        tag(c, "BOTH?", 860, 1030, 80, "#86efac", COL.ink, -0.04, fade(f, c1 + 10, 8));
+        hand(c, "comment your pick", W / 2, 1140, 62, COL.cream, seg(f, c1 + 14, c1 + 28), r, -0.02, "center");
       }
       if (f >= c2) {
         const hp = easeOut(fade(f, c2, 10));
