@@ -395,7 +395,7 @@ const DsPick: React.FC<SP> = ({ cue }) => {
         items.forEach((it, i) => hand(c, it.startsWith(" ") ? it : "• " + it, x + 30, 700 + i * 70, 46, COL.cream, clamp(p * 3 - i * 0.5), r, -0.01));
       };
       col(40, "SMALL", ["Flash · Flash-Lite · mini"], ["emails", "summaries", "pulling out data"], COL.yellow, seg(f, c1, c1 + 24));
-      col(550, "BIGGER", ["Gemini Pro", "(usually paid)"], ["multi-step tasks", "Excel formula small", "   keeps getting wrong"], COL.orangeLight, seg(f, c2, c2 + 24));
+      col(550, "BIGGER", ["Gemini Pro", "(usually paid)"], ["multi-step tasks", "Excel formula the", "   small one gets wrong"], COL.orangeLight, seg(f, c2, c2 + 24));
       if (f >= c3) {
         page(c, 80, 975, 920, 235, boil, -0.012);
         hand(c, "developers: Pro ≈ 3x Flash per use", W / 2, 1052, 64, COL.ink, seg(f, c3, c3 + 12), r, -0.02, "center");
