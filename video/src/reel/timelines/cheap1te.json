@@ -14,11 +14,12 @@
  "musicLift": 1.5,
  "musicDrops": [
   [
-   225,
-   249
+   92,
+   116
   ]
  ],
- "totalFrames": 3087,
+ "hideTimerInHook": true,
+ "totalFrames": 2184,
  "music": "reel/cheap1te/score.wav",
  "scenes": [
   {
@@ -33,7 +34,7 @@
     "small": "GPT-6 Luna (small)",
     "smallPrice": "$12",
     "ratio": "100x cheaper",
-    "tease": "5 dirt-cheap picks · 4 have a free option",
+    "tease": "5 jobs · 4 with a free option",
     "note": "OpenAI API list prices, Oct 2026 · ~500-word emails · not sponsored",
     "yt": {
      "chapter": "Same job, 100x cheaper",
@@ -53,11 +54,12 @@
       ]
      ]
     },
+    "api": "API · for builders · try: platform.openai.com",
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase"
    },
    "from": 0,
-   "frames": 497,
+   "frames": 266,
    "lines": [
     {
      "who": "maastaaru",
@@ -66,163 +68,108 @@
      "sub": null,
      "audio": "reel/cheap1te/line_01.wav",
      "from": 14,
-     "frames": 463,
+     "frames": 235,
      "words": [
       {
        "w": "100,000",
-       "from": 15,
-       "to": 27
+       "from": 22,
+       "to": 32
       },
       {
-       "w": "customer",
-       "from": 27,
-       "to": 41
+       "w": "emails:",
+       "from": 32,
+       "to": 49
       },
       {
-       "w": "emails,",
-       "from": 41,
-       "to": 56
+       "w": "$1,200",
+       "from": 49,
+       "to": 62
       },
       {
-       "w": "summarized",
-       "from": 56,
-       "to": 73
+       "w": "on",
+       "from": 62,
+       "to": 67
       },
       {
-       "w": "by",
-       "from": 73,
-       "to": 78
-      },
-      {
-       "w": "OpenAI's",
-       "from": 78,
-       "to": 91
+       "w": "the",
+       "from": 67,
+       "to": 74
       },
       {
        "w": "top",
-       "from": 91,
-       "to": 98
+       "from": 74,
+       "to": 81
       },
       {
-       "w": "model:",
-       "from": 98,
-       "to": 108
+       "w": "OpenAI",
+       "from": 81,
+       "to": 94
       },
       {
-       "w": "about",
-       "from": 108,
-       "to": 130
+       "w": "model.",
+       "from": 94,
+       "to": 116
       },
       {
-       "w": "$1,200.",
-       "from": 130,
-       "to": 147
+       "w": "$12",
+       "from": 116,
+       "to": 143
       },
       {
-       "w": "By",
-       "from": 147,
-       "to": 154
-      },
-      {
-       "w": "its",
-       "from": 154,
-       "to": 162
-      },
-      {
-       "w": "small",
-       "from": 162,
-       "to": 188
-      },
-      {
-       "w": "sibling,",
-       "from": 188,
-       "to": 207
+       "w": "on",
+       "from": 143,
+       "to": 149
       },
       {
        "w": "GPT-6",
-       "from": 207,
-       "to": 224
+       "from": 149,
+       "to": 162
       },
       {
-       "w": "Luna:",
-       "from": 224,
-       "to": 249
-      },
-      {
-       "w": "$12.",
-       "from": 249,
-       "to": 269
-      },
-      {
-       "w": "Same",
-       "from": 269,
-       "to": 280
-      },
-      {
-       "w": "simple",
-       "from": 280,
-       "to": 325
-      },
-      {
-       "w": "job.",
-       "from": 325,
-       "to": 336
-      },
-      {
-       "w": "Here",
-       "from": 336,
-       "to": 375
-      },
-      {
-       "w": "are",
-       "from": 375,
-       "to": 382
+       "w": "Luna.",
+       "from": 162,
+       "to": 175
       },
       {
        "w": "5",
-       "from": 382,
-       "to": 385
+       "from": 175,
+       "to": 178
       },
       {
-       "w": "dirt-cheap",
-       "from": 385,
-       "to": 404
-      },
-      {
-       "w": "picks,",
-       "from": 404,
-       "to": 416
+       "w": "jobs,",
+       "from": 178,
+       "to": 203
       },
       {
        "w": "4",
-       "from": 416,
-       "to": 419
+       "from": 203,
+       "to": 205
       },
       {
        "w": "with",
-       "from": 419,
-       "to": 434
+       "from": 205,
+       "to": 213
       },
       {
        "w": "a",
-       "from": 434,
-       "to": 438
+       "from": 213,
+       "to": 216
       },
       {
        "w": "free",
-       "from": 438,
-       "to": 450
+       "from": 216,
+       "to": 223
       },
       {
        "w": "option.",
-       "from": 450,
-       "to": 464
+       "from": 223,
+       "to": 238
       }
      ],
      "cues": {
-      "1": 108,
-      "2": 249,
-      "3": 336
+      "1": 49,
+      "2": 116,
+      "3": 175
      }
     }
    ]
@@ -238,9 +185,8 @@
     "badge": "FREE APP",
     "pick": "free ChatGPT or Gemini",
     "price": "$0",
-    "example": "homework help, emails, ideas: free",
+    "example": "homework help, writing emails, ideas: free",
     "free": "FREE",
-    "example2": "free Gemini now = Flash-Lite",
     "try": "chatgpt.com · gemini.google.com",
     "yt": {
      "chapter": "Chat, writing, study",
@@ -259,8 +205,8 @@
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase"
    },
-   "from": 497,
-   "frames": 380,
+   "from": 266,
+   "frames": 187,
    "lines": [
     {
      "who": "maastaaru",
@@ -269,658 +215,72 @@
      "sub": null,
      "audio": "reel/cheap1te/line_02.wav",
      "from": 0,
-     "frames": 360,
+     "frames": 172,
      "words": [
       {
-       "w": "One.",
-       "from": 8,
-       "to": 15
-      },
-      {
-       "w": "Chat,",
-       "from": 15,
-       "to": 54
+       "w": "Questions,",
+       "from": 3,
+       "to": 22
       },
       {
        "w": "writing,",
-       "from": 54,
-       "to": 65
+       "from": 22,
+       "to": 31
       },
       {
        "w": "homework:",
-       "from": 65,
-       "to": 84
+       "from": 31,
+       "to": 50
       },
       {
        "w": "don't",
-       "from": 84,
-       "to": 93
+       "from": 50,
+       "to": 58
       },
       {
        "w": "pay.",
-       "from": 93,
-       "to": 116
+       "from": 58,
+       "to": 84
       },
       {
        "w": "Free",
-       "from": 116,
-       "to": 123
+       "from": 84,
+       "to": 91
       },
       {
        "w": "ChatGPT",
-       "from": 123,
-       "to": 135
+       "from": 91,
+       "to": 102
       },
       {
        "w": "or",
-       "from": 135,
-       "to": 139
+       "from": 102,
+       "to": 106
       },
       {
        "w": "Gemini",
-       "from": 139,
-       "to": 149
-      },
-      {
-       "w": "is",
-       "from": 149,
-       "to": 153
-      },
-      {
-       "w": "plenty.",
-       "from": 153,
-       "to": 200
-      },
-      {
-       "w": "$0.",
-       "from": 200,
-       "to": 218
-      },
-      {
-       "w": "Note:",
-       "from": 218,
-       "to": 251
-      },
-      {
-       "w": "free",
-       "from": 251,
-       "to": 271
-      },
-      {
-       "w": "Gemini",
-       "from": 271,
-       "to": 281
-      },
-      {
-       "w": "now",
-       "from": 281,
-       "to": 286
-      },
-      {
-       "w": "runs",
-       "from": 286,
-       "to": 293
-      },
-      {
-       "w": "on",
-       "from": 293,
-       "to": 297
-      },
-      {
-       "w": "its",
-       "from": 297,
-       "to": 302
-      },
-      {
-       "w": "smallest",
-       "from": 302,
-       "to": 319
-      },
-      {
-       "w": "model,",
-       "from": 319,
-       "to": 328
-      },
-      {
-       "w": "Flash-Lite.",
-       "from": 328,
-       "to": 345
-      }
-     ],
-     "cues": {
-      "1": 84,
-      "2": 200,
-      "3": 218
-     }
-    }
-   ]
-  },
-  {
-   "id": "code",
-   "type": "cm_card",
-   "data": {
-    "n": 2,
-    "of": 5,
-    "job": "Coding",
-    "icon": "code",
-    "badge": "FREE PLAN + API",
-    "pick": "GitHub Copilot Free",
-    "price": "free: 2,000 suggestions/mo",
-    "example": "100 coding questions ≈ 10¢",
-    "free": "FREE",
-    "pick2": "API: GPT-6 Luna",
-    "example2": "~2K tokens in, 1.5K out each",
-    "try": "github.com/features/copilot",
-    "yt": {
-     "chapter": "Coding",
-     "title": "Free plan, then 10¢",
-     "notes": [
-      [
-       "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
-       1
-      ],
-      [
-       "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
-       3
-      ]
-     ]
-    },
-    "source": "also cheap: DeepSeek Flash (data stored in China)",
-    "handle": "@ai_maastaaru_telugu",
-    "captionMode": "phrase"
-   },
-   "from": 877,
-   "frames": 362,
-   "lines": [
-    {
-     "who": "maastaaru",
-     "name": "Teacher",
-     "color": "#F59E0B",
-     "sub": null,
-     "audio": "reel/cheap1te/line_03.wav",
-     "from": 0,
-     "frames": 342,
-     "words": [
-      {
-       "w": "Two.",
-       "from": 2,
-       "to": 10
-      },
-      {
-       "w": "Coding:",
-       "from": 10,
-       "to": 67
-      },
-      {
-       "w": "GitHub",
-       "from": 67,
-       "to": 75
-      },
-      {
-       "w": "Copilot's",
-       "from": 75,
-       "to": 88
-      },
-      {
-       "w": "free",
-       "from": 88,
-       "to": 94
-      },
-      {
-       "w": "plan",
-       "from": 94,
-       "to": 100
-      },
-      {
-       "w": "gives",
-       "from": 100,
-       "to": 107
-      },
-      {
-       "w": "you",
-       "from": 107,
-       "to": 112
-      },
-      {
-       "w": "2,000",
-       "from": 112,
-       "to": 119
-      },
-      {
-       "w": "suggestions",
-       "from": 119,
-       "to": 134
-      },
-      {
-       "w": "a",
-       "from": 134,
-       "to": 136
-      },
-      {
-       "w": "month.",
-       "from": 136,
-       "to": 170
-      },
-      {
-       "w": "Building",
-       "from": 170,
-       "to": 186
-      },
-      {
-       "w": "an",
-       "from": 186,
-       "to": 191
-      },
-      {
-       "w": "app?",
-       "from": 191,
-       "to": 224
-      },
-      {
-       "w": "GPT-6",
-       "from": 224,
-       "to": 234
-      },
-      {
-       "w": "Luna",
-       "from": 234,
-       "to": 243
-      },
-      {
-       "w": "answers",
-       "from": 243,
-       "to": 268
-      },
-      {
-       "w": "100",
-       "from": 268,
-       "to": 274
-      },
-      {
-       "w": "coding",
-       "from": 274,
-       "to": 285
-      },
-      {
-       "w": "questions",
-       "from": 285,
-       "to": 300
-      },
-      {
-       "w": "for",
-       "from": 300,
-       "to": 307
-      },
-      {
-       "w": "about",
-       "from": 307,
-       "to": 320
-      },
-      {
-       "w": "10¢.",
-       "from": 320,
-       "to": 328
-      }
-     ],
-     "cues": {
-      "1": 67,
-      "2": 170,
-      "3": 268
-     }
-    }
-   ]
-  },
-  {
-   "id": "images",
-   "type": "cm_card",
-   "data": {
-    "n": 3,
-    "of": 5,
-    "job": "Images",
-    "icon": "image",
-    "badge": "FOR BUILDERS · API",
-    "pick": "GPT Image 2 (draft quality)",
-    "price": "$0.006 per image",
-    "example": "100 drafts ≈ 60¢",
-    "example2": "medium quality: $0.053",
-    "try": "platform.openai.com",
-    "yt": {
-     "chapter": "Images",
-     "title": "Under a penny each",
-     "notes": [
-      [
-       "GPT Image 2, draft quality: $0.006 per image",
-       2
-      ],
-      [
-       "100 drafts ≈ 60¢",
-       3
-      ]
-     ]
-    },
-    "handle": "@ai_maastaaru_telugu",
-    "captionMode": "phrase"
-   },
-   "from": 1239,
-   "frames": 299,
-   "lines": [
-    {
-     "who": "maastaaru",
-     "name": "Teacher",
-     "color": "#F59E0B",
-     "sub": null,
-     "audio": "reel/cheap1te/line_04.wav",
-     "from": 0,
-     "frames": 278,
-     "words": [
-      {
-       "w": "Three.",
-       "from": 12,
-       "to": 34
-      },
-      {
-       "w": "Images:",
-       "from": 34,
-       "to": 54
-      },
-      {
-       "w": "OpenAI's",
-       "from": 54,
-       "to": 70
-      },
-      {
-       "w": "GPT",
-       "from": 70,
-       "to": 77
-      },
-      {
-       "w": "Image",
-       "from": 77,
-       "to": 87
-      },
-      {
-       "w": "2",
-       "from": 87,
-       "to": 91
-      },
-      {
-       "w": "in",
-       "from": 91,
-       "to": 96
-      },
-      {
-       "w": "draft",
-       "from": 96,
-       "to": 110
-      },
-      {
-       "w": "quality,",
-       "from": 110,
-       "to": 126
-      },
-      {
-       "w": "under",
-       "from": 126,
-       "to": 138
-      },
-      {
-       "w": "a",
-       "from": 138,
-       "to": 142
-      },
-      {
-       "w": "penny",
-       "from": 142,
-       "to": 154
-      },
-      {
-       "w": "each.",
-       "from": 154,
-       "to": 166
-      },
-      {
-       "w": "100",
-       "from": 166,
-       "to": 193
-      },
-      {
-       "w": "drafts?",
-       "from": 193,
-       "to": 232
-      },
-      {
-       "w": "About",
-       "from": 232,
-       "to": 245
-      },
-      {
-       "w": "60¢.",
-       "from": 245,
-       "to": 255
-      }
-     ],
-     "cues": {
-      "1": 54,
-      "2": 126,
-      "3": 166
-     }
-    }
-   ]
-  },
-  {
-   "id": "audio",
-   "type": "cm_card",
-   "data": {
-    "n": 4,
-    "of": 5,
-    "job": "Audio",
-    "icon": "mic",
-    "badge": "FREE PLAN + API",
-    "pick": "Whisper on Groq (not Grok)",
-    "price": "free 8 hrs/day · then $0.04/hr",
-    "example": "1-hour lecture → text: free",
-    "free": "FREE",
-    "second": {
-     "label": "voiceover:",
-     "pick": "Gemini text-to-speech",
-     "price": "< 1¢ / min"
-    },
-    "try": "console.groq.com · ai.google.dev",
-    "yt": {
-     "chapter": "Audio",
-     "title": "Free transcripts, penny voiceovers",
-     "notes": [
-      [
-       "Whisper on Groq: free up to 8 audio-hours a day, then $0.04/hour",
-       2
-      ],
-      [
-       "Gemini text-to-speech: under 1¢ a minute",
-       4
-      ]
-     ]
-    },
-    "handle": "@ai_maastaaru_telugu",
-    "captionMode": "phrase"
-   },
-   "from": 1538,
-   "frames": 549,
-   "lines": [
-    {
-     "who": "maastaaru",
-     "name": "Teacher",
-     "color": "#F59E0B",
-     "sub": null,
-     "audio": "reel/cheap1te/line_05.wav",
-     "from": 0,
-     "frames": 529,
-     "words": [
-      {
-       "w": "Four.",
-       "from": 15,
-       "to": 25
-      },
-      {
-       "w": "Audio:",
-       "from": 25,
-       "to": 60
-      },
-      {
-       "w": "Whisper",
-       "from": 60,
-       "to": 91
-      },
-      {
-       "w": "on",
-       "from": 91,
-       "to": 97
-      },
-      {
-       "w": "Groq,",
-       "from": 97,
+       "from": 106,
        "to": 115
       },
       {
-       "w": "with",
+       "w": "is",
        "from": 115,
-       "to": 125
+       "to": 119
       },
       {
-       "w": "a",
-       "from": 125,
-       "to": 129
-      },
-      {
-       "w": "Q,",
-       "from": 129,
+       "w": "plenty.",
+       "from": 119,
        "to": 146
       },
       {
-       "w": "transcribes",
+       "w": "$0.",
        "from": 146,
-       "to": 170
-      },
-      {
-       "w": "up",
-       "from": 170,
-       "to": 182
-      },
-      {
-       "w": "to",
-       "from": 182,
-       "to": 188
-      },
-      {
-       "w": "8",
-       "from": 188,
-       "to": 192
-      },
-      {
-       "w": "hours",
-       "from": 192,
-       "to": 204
-      },
-      {
-       "w": "a",
-       "from": 204,
-       "to": 208
-      },
-      {
-       "w": "day",
-       "from": 208,
-       "to": 229
-      },
-      {
-       "w": "free,",
-       "from": 229,
-       "to": 242
-      },
-      {
-       "w": "then",
-       "from": 242,
-       "to": 252
-      },
-      {
-       "w": "4¢",
-       "from": 252,
-       "to": 258
-      },
-      {
-       "w": "an",
-       "from": 258,
-       "to": 264
-      },
-      {
-       "w": "hour.",
-       "from": 264,
-       "to": 307
-      },
-      {
-       "w": "A",
-       "from": 307,
-       "to": 309
-      },
-      {
-       "w": "1-hour",
-       "from": 309,
-       "to": 318
-      },
-      {
-       "w": "lecture?",
-       "from": 318,
-       "to": 356
-      },
-      {
-       "w": "Free.",
-       "from": 356,
-       "to": 387
-      },
-      {
-       "w": "Voiceovers?",
-       "from": 387,
-       "to": 432
-      },
-      {
-       "w": "Gemini",
-       "from": 432,
-       "to": 443
-      },
-      {
-       "w": "text-to-speech,",
-       "from": 443,
-       "to": 477
-      },
-      {
-       "w": "under",
-       "from": 477,
-       "to": 487
-      },
-      {
-       "w": "a",
-       "from": 487,
-       "to": 490
-      },
-      {
-       "w": "penny",
-       "from": 490,
-       "to": 500
-      },
-      {
-       "w": "a",
-       "from": 500,
-       "to": 503
-      },
-      {
-       "w": "minute.",
-       "from": 503,
-       "to": 517
+       "to": 163
       }
      ],
      "cues": {
-      "1": 60,
-      "2": 146,
-      "3": 307,
-      "4": 387
+      "1": 50,
+      "3": 146
      }
     }
    ]
@@ -929,7 +289,7 @@
    "id": "local",
    "type": "cm_card",
    "data": {
-    "n": 5,
+    "n": 2,
     "of": 5,
     "job": "Free & private",
     "icon": "laptop",
@@ -958,8 +318,597 @@
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase"
    },
-   "from": 2087,
-   "frames": 347,
+   "from": 452,
+   "frames": 263,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/cheap1te/line_03.wav",
+     "from": 0,
+     "frames": 248,
+     "words": [
+      {
+       "w": "Free",
+       "from": 9,
+       "to": 13
+      },
+      {
+       "w": "and",
+       "from": 13,
+       "to": 16
+      },
+      {
+       "w": "private:",
+       "from": 16,
+       "to": 32
+      },
+      {
+       "w": "run",
+       "from": 32,
+       "to": 37
+      },
+      {
+       "w": "Gemma",
+       "from": 37,
+       "to": 50
+      },
+      {
+       "w": "4",
+       "from": 50,
+       "to": 52
+      },
+      {
+       "w": "on",
+       "from": 52,
+       "to": 56
+      },
+      {
+       "w": "your",
+       "from": 56,
+       "to": 61
+      },
+      {
+       "w": "laptop",
+       "from": 61,
+       "to": 70
+      },
+      {
+       "w": "with",
+       "from": 70,
+       "to": 81
+      },
+      {
+       "w": "the",
+       "from": 81,
+       "to": 86
+      },
+      {
+       "w": "free",
+       "from": 86,
+       "to": 99
+      },
+      {
+       "w": "Ollama",
+       "from": 99,
+       "to": 107
+      },
+      {
+       "w": "app.",
+       "from": 107,
+       "to": 113
+      },
+      {
+       "w": "$0,",
+       "from": 113,
+       "to": 121
+      },
+      {
+       "w": "and",
+       "from": 121,
+       "to": 125
+      },
+      {
+       "w": "nothing",
+       "from": 125,
+       "to": 142
+      },
+      {
+       "w": "leaves",
+       "from": 142,
+       "to": 148
+      },
+      {
+       "w": "your",
+       "from": 148,
+       "to": 153
+      },
+      {
+       "w": "computer.",
+       "from": 153,
+       "to": 162
+      },
+      {
+       "w": "8",
+       "from": 162,
+       "to": 165
+      },
+      {
+       "w": "GB",
+       "from": 165,
+       "to": 169
+      },
+      {
+       "w": "of",
+       "from": 169,
+       "to": 172
+      },
+      {
+       "w": "RAM",
+       "from": 172,
+       "to": 177
+      },
+      {
+       "w": "is",
+       "from": 177,
+       "to": 181
+      },
+      {
+       "w": "enough.",
+       "from": 181,
+       "to": 207
+      },
+      {
+       "w": "Private,",
+       "from": 207,
+       "to": 218
+      },
+      {
+       "w": "not",
+       "from": 218,
+       "to": 223
+      },
+      {
+       "w": "smarter.",
+       "from": 223,
+       "to": 248
+      }
+     ],
+     "cues": {
+      "1": 32,
+      "2": 113,
+      "3": 162
+     }
+    }
+   ]
+  },
+  {
+   "id": "audio",
+   "type": "cm_card",
+   "data": {
+    "n": 3,
+    "of": 5,
+    "job": "Audio",
+    "icon": "mic",
+    "badge": "FREE PLAN + API",
+    "pick": "Whisper on Groq (not Grok)",
+    "price": "free plan: 8 hrs/day · paid: $0.04/hr",
+    "example": "1-hour lecture → text: free",
+    "free": "FREE",
+    "second": {
+     "label": "voiceover:",
+     "pick": "Gemini text-to-speech",
+     "price": "< 1¢ / min"
+    },
+    "try": "console.groq.com · ai.google.dev",
+    "yt": {
+     "chapter": "Audio",
+     "title": "Free transcripts, penny voiceovers",
+     "notes": [
+      [
+       "Whisper on Groq: free up to 8 audio-hours a day, then $0.04/hour",
+       2
+      ],
+      [
+       "Gemini text-to-speech: under 1¢ a minute",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 716,
+   "frames": 368,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/cheap1te/line_04.wav",
+     "from": 0,
+     "frames": 348,
+     "words": [
+      {
+       "w": "Audio:",
+       "from": 1,
+       "to": 9
+      },
+      {
+       "w": "Whisper",
+       "from": 9,
+       "to": 32
+      },
+      {
+       "w": "on",
+       "from": 32,
+       "to": 37
+      },
+      {
+       "w": "Groq,",
+       "from": 37,
+       "to": 52
+      },
+      {
+       "w": "with",
+       "from": 52,
+       "to": 61
+      },
+      {
+       "w": "a",
+       "from": 61,
+       "to": 65
+      },
+      {
+       "w": "Q.",
+       "from": 65,
+       "to": 82
+      },
+      {
+       "w": "Free",
+       "from": 82,
+       "to": 91
+      },
+      {
+       "w": "plan:",
+       "from": 91,
+       "to": 101
+      },
+      {
+       "w": "8",
+       "from": 101,
+       "to": 105
+      },
+      {
+       "w": "hours",
+       "from": 105,
+       "to": 115
+      },
+      {
+       "w": "a",
+       "from": 115,
+       "to": 119
+      },
+      {
+       "w": "day.",
+       "from": 119,
+       "to": 136
+      },
+      {
+       "w": "Paid",
+       "from": 136,
+       "to": 144
+      },
+      {
+       "w": "plan:",
+       "from": 144,
+       "to": 155
+      },
+      {
+       "w": "4¢",
+       "from": 155,
+       "to": 160
+      },
+      {
+       "w": "an",
+       "from": 160,
+       "to": 165
+      },
+      {
+       "w": "hour.",
+       "from": 165,
+       "to": 191
+      },
+      {
+       "w": "So",
+       "from": 191,
+       "to": 194
+      },
+      {
+       "w": "a",
+       "from": 194,
+       "to": 197
+      },
+      {
+       "w": "1-hour",
+       "from": 197,
+       "to": 206
+      },
+      {
+       "w": "lecture",
+       "from": 206,
+       "to": 215
+      },
+      {
+       "w": "costs",
+       "from": 215,
+       "to": 223
+      },
+      {
+       "w": "nothing.",
+       "from": 223,
+       "to": 249
+      },
+      {
+       "w": "For",
+       "from": 249,
+       "to": 254
+      },
+      {
+       "w": "voiceovers,",
+       "from": 254,
+       "to": 270
+      },
+      {
+       "w": "Gemini",
+       "from": 270,
+       "to": 279
+      },
+      {
+       "w": "text-to-speech",
+       "from": 279,
+       "to": 305
+      },
+      {
+       "w": "costs",
+       "from": 305,
+       "to": 313
+      },
+      {
+       "w": "under",
+       "from": 313,
+       "to": 321
+      },
+      {
+       "w": "a",
+       "from": 321,
+       "to": 323
+      },
+      {
+       "w": "penny",
+       "from": 323,
+       "to": 331
+      },
+      {
+       "w": "a",
+       "from": 331,
+       "to": 334
+      },
+      {
+       "w": "minute.",
+       "from": 334,
+       "to": 344
+      }
+     ],
+     "cues": {
+      "1": 9,
+      "2": 82,
+      "3": 191,
+      "4": 249
+     }
+    }
+   ]
+  },
+  {
+   "id": "code",
+   "type": "cm_card",
+   "data": {
+    "n": 4,
+    "of": 5,
+    "job": "Coding",
+    "icon": "code",
+    "badge": "FREE PLAN + API",
+    "pick": "GitHub Copilot Free",
+    "price": "free: 2,000 suggestions/mo",
+    "example": "100 coding questions ≈ 10¢",
+    "free": "FREE",
+    "pick2": "API: GPT-6 Luna",
+    "example2": "~2K tokens in, 1.5K out each",
+    "try": "github.com/features/copilot",
+    "yt": {
+     "chapter": "Coding",
+     "title": "Free plan, then 10¢",
+     "notes": [
+      [
+       "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
+       1
+      ],
+      [
+       "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1084,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/cheap1te/line_05.wav",
+     "from": 0,
+     "frames": 263,
+     "words": [
+      {
+       "w": "Coding:",
+       "from": 3,
+       "to": 36
+      },
+      {
+       "w": "GitHub",
+       "from": 36,
+       "to": 45
+      },
+      {
+       "w": "Copilot",
+       "from": 45,
+       "to": 55
+      },
+      {
+       "w": "Free",
+       "from": 55,
+       "to": 61
+      },
+      {
+       "w": "gives",
+       "from": 61,
+       "to": 68
+      },
+      {
+       "w": "you",
+       "from": 68,
+       "to": 73
+      },
+      {
+       "w": "2,000",
+       "from": 73,
+       "to": 81
+      },
+      {
+       "w": "suggestions",
+       "from": 81,
+       "to": 96
+      },
+      {
+       "w": "a",
+       "from": 96,
+       "to": 98
+      },
+      {
+       "w": "month.",
+       "from": 98,
+       "to": 121
+      },
+      {
+       "w": "Building",
+       "from": 121,
+       "to": 136
+      },
+      {
+       "w": "an",
+       "from": 136,
+       "to": 140
+      },
+      {
+       "w": "app?",
+       "from": 140,
+       "to": 163
+      },
+      {
+       "w": "GPT-6",
+       "from": 163,
+       "to": 173
+      },
+      {
+       "w": "Luna",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "answers",
+       "from": 181,
+       "to": 203
+      },
+      {
+       "w": "100",
+       "from": 203,
+       "to": 208
+      },
+      {
+       "w": "coding",
+       "from": 208,
+       "to": 218
+      },
+      {
+       "w": "questions",
+       "from": 218,
+       "to": 233
+      },
+      {
+       "w": "for",
+       "from": 233,
+       "to": 238
+      },
+      {
+       "w": "about",
+       "from": 238,
+       "to": 247
+      },
+      {
+       "w": "10¢.",
+       "from": 247,
+       "to": 254
+      }
+     ],
+     "cues": {
+      "1": 36,
+      "2": 121,
+      "3": 203
+     }
+    }
+   ]
+  },
+  {
+   "id": "images",
+   "type": "cm_card",
+   "data": {
+    "n": 5,
+    "of": 5,
+    "job": "Images",
+    "icon": "image",
+    "badge": "FOR BUILDERS · API",
+    "pick": "GPT Image 2 (draft quality)",
+    "price": "$0.006 per image",
+    "example": "100 drafts ≈ 60¢",
+    "example2": "medium quality: $0.053",
+    "try": "platform.openai.com",
+    "yt": {
+     "chapter": "Images",
+     "title": "Under a penny each",
+     "notes": [
+      [
+       "GPT Image 2, draft quality: $0.006 per image",
+       2
+      ],
+      [
+       "100 drafts ≈ 60¢",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1370,
+   "frames": 245,
    "lines": [
     {
      "who": "maastaaru",
@@ -968,163 +917,98 @@
      "sub": null,
      "audio": "reel/cheap1te/line_06.wav",
      "from": 0,
-     "frames": 327,
+     "frames": 221,
      "words": [
       {
-       "w": "Five.",
-       "from": 14,
-       "to": 19
+       "w": "Images:",
+       "from": 10,
+       "to": 29
       },
       {
-       "w": "Free",
-       "from": 19,
-       "to": 40
+       "w": "GPT",
+       "from": 29,
+       "to": 34
       },
       {
-       "w": "and",
-       "from": 40,
+       "w": "Image",
+       "from": 34,
        "to": 43
       },
       {
-       "w": "private:",
+       "w": "2",
        "from": 43,
-       "to": 62
+       "to": 46
       },
       {
-       "w": "run",
-       "from": 62,
-       "to": 67
+       "w": "from",
+       "from": 46,
+       "to": 53
       },
       {
-       "w": "Gemma",
-       "from": 67,
-       "to": 82
+       "w": "OpenAI,",
+       "from": 53,
+       "to": 64
       },
       {
-       "w": "4",
-       "from": 82,
-       "to": 85
+       "w": "in",
+       "from": 64,
+       "to": 69
       },
       {
-       "w": "on",
-       "from": 85,
-       "to": 89
+       "w": "draft",
+       "from": 69,
+       "to": 77
       },
       {
-       "w": "your",
-       "from": 89,
-       "to": 95
+       "w": "quality,",
+       "from": 77,
+       "to": 90
       },
       {
-       "w": "laptop",
-       "from": 95,
-       "to": 105
+       "w": "under",
+       "from": 90,
+       "to": 101
       },
       {
-       "w": "with",
-       "from": 105,
-       "to": 117
+       "w": "a",
+       "from": 101,
+       "to": 104
       },
       {
-       "w": "the",
-       "from": 117,
-       "to": 123
+       "w": "penny",
+       "from": 104,
+       "to": 115
       },
       {
-       "w": "free",
-       "from": 123,
-       "to": 138
+       "w": "each.",
+       "from": 115,
+       "to": 126
       },
       {
-       "w": "Ollama",
-       "from": 138,
+       "w": "100",
+       "from": 126,
        "to": 147
       },
       {
-       "w": "app.",
+       "w": "drafts?",
        "from": 147,
-       "to": 154
+       "to": 179
       },
       {
-       "w": "$0,",
-       "from": 154,
-       "to": 163
+       "w": "About",
+       "from": 179,
+       "to": 190
       },
       {
-       "w": "and",
-       "from": 163,
-       "to": 167
-      },
-      {
-       "w": "nothing",
-       "from": 167,
-       "to": 189
-      },
-      {
-       "w": "leaves",
-       "from": 189,
-       "to": 197
-      },
-      {
-       "w": "your",
-       "from": 197,
-       "to": 202
-      },
-      {
-       "w": "computer.",
-       "from": 202,
-       "to": 213
-      },
-      {
-       "w": "8",
-       "from": 213,
-       "to": 215
-      },
-      {
-       "w": "GB",
-       "from": 215,
-       "to": 220
-      },
-      {
-       "w": "of",
-       "from": 220,
-       "to": 224
-      },
-      {
-       "w": "RAM",
-       "from": 224,
-       "to": 229
-      },
-      {
-       "w": "is",
-       "from": 229,
-       "to": 233
-      },
-      {
-       "w": "enough.",
-       "from": 233,
-       "to": 275
-      },
-      {
-       "w": "Private,",
-       "from": 275,
-       "to": 287
-      },
-      {
-       "w": "not",
-       "from": 287,
-       "to": 292
-      },
-      {
-       "w": "smarter.",
-       "from": 292,
-       "to": 327
+       "w": "60¢.",
+       "from": 190,
+       "to": 200
       }
      ],
      "cues": {
-      "1": 62,
-      "2": 154,
-      "3": 213
+      "1": 29,
+      "2": 90,
+      "3": 126
      }
     }
    ]
@@ -1158,8 +1042,8 @@
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase"
    },
-   "from": 2434,
-   "frames": 283,
+   "from": 1616,
+   "frames": 245,
    "lines": [
     {
      "who": "maastaaru",
@@ -1168,93 +1052,93 @@
      "sub": null,
      "audio": "reel/cheap1te/line_07.wav",
      "from": 0,
-     "frames": 263,
+     "frames": 221,
      "words": [
       {
        "w": "The",
        "from": 1,
-       "to": 7
+       "to": 6
       },
       {
        "w": "rule:",
-       "from": 7,
-       "to": 27
+       "from": 6,
+       "to": 21
       },
       {
        "w": "start",
-       "from": 27,
-       "to": 50
+       "from": 21,
+       "to": 41
       },
       {
        "w": "cheap.",
-       "from": 50,
-       "to": 71
+       "from": 41,
+       "to": 60
       },
       {
        "w": "Test",
-       "from": 71,
-       "to": 109
+       "from": 60,
+       "to": 91
       },
       {
        "w": "it",
-       "from": 109,
-       "to": 114
+       "from": 91,
+       "to": 96
       },
       {
        "w": "on",
-       "from": 114,
-       "to": 120
+       "from": 96,
+       "to": 100
       },
       {
        "w": "20",
-       "from": 120,
-       "to": 125
+       "from": 100,
+       "to": 105
       },
       {
        "w": "real",
-       "from": 125,
-       "to": 134
+       "from": 105,
+       "to": 113
       },
       {
        "w": "examples.",
-       "from": 134,
-       "to": 153
+       "from": 113,
+       "to": 129
       },
       {
        "w": "Move",
-       "from": 153,
-       "to": 195
+       "from": 129,
+       "to": 162
       },
       {
        "w": "up",
-       "from": 195,
-       "to": 202
+       "from": 162,
+       "to": 168
       },
       {
        "w": "only",
-       "from": 202,
-       "to": 213
+       "from": 168,
+       "to": 177
       },
       {
        "w": "if",
-       "from": 213,
-       "to": 219
+       "from": 177,
+       "to": 183
       },
       {
        "w": "it",
-       "from": 219,
-       "to": 226
+       "from": 183,
+       "to": 189
       },
       {
        "w": "fails.",
-       "from": 226,
-       "to": 241
+       "from": 189,
+       "to": 202
       }
      ],
      "cues": {
-      "1": 27,
-      "2": 71,
-      "3": 153
+      "1": 21,
+      "2": 60,
+      "3": 129
      }
     }
    ]
@@ -1280,8 +1164,8 @@
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase"
    },
-   "from": 2717,
-   "frames": 358,
+   "from": 1861,
+   "frames": 311,
    "lines": [
     {
      "who": "maastaaru",
@@ -1290,122 +1174,122 @@
      "sub": null,
      "audio": "reel/cheap1te/line_08.wav",
      "from": 0,
-     "frames": 331,
+     "frames": 286,
      "words": [
       {
        "w": "Which",
        "from": 1,
-       "to": 9
+       "to": 8
       },
       {
        "w": "job",
-       "from": 9,
-       "to": 15
+       "from": 8,
+       "to": 13
       },
       {
        "w": "do",
-       "from": 15,
-       "to": 19
+       "from": 13,
+       "to": 17
       },
       {
        "w": "you",
-       "from": 19,
-       "to": 25
+       "from": 17,
+       "to": 22
       },
       {
        "w": "use",
-       "from": 25,
-       "to": 31
+       "from": 22,
+       "to": 27
       },
       {
        "w": "AI",
-       "from": 31,
-       "to": 35
+       "from": 27,
+       "to": 31
       },
       {
        "w": "for",
-       "from": 35,
-       "to": 40
+       "from": 31,
+       "to": 36
       },
       {
        "w": "most?",
-       "from": 40,
-       "to": 80
+       "from": 36,
+       "to": 66
       },
       {
        "w": "Comment",
-       "from": 80,
-       "to": 91
+       "from": 66,
+       "to": 76
       },
       {
        "w": "it,",
-       "from": 91,
-       "to": 97
+       "from": 76,
+       "to": 81
       },
       {
        "w": "and",
-       "from": 97,
-       "to": 119
+       "from": 81,
+       "to": 99
       },
       {
        "w": "I'll",
-       "from": 119,
-       "to": 126
+       "from": 99,
+       "to": 105
       },
       {
        "w": "reply",
-       "from": 126,
-       "to": 134
+       "from": 105,
+       "to": 112
       },
       {
        "w": "with",
-       "from": 134,
-       "to": 141
+       "from": 112,
+       "to": 119
       },
       {
        "w": "the",
-       "from": 141,
-       "to": 147
+       "from": 119,
+       "to": 123
       },
       {
        "w": "cheapest",
-       "from": 147,
-       "to": 159
+       "from": 123,
+       "to": 134
       },
       {
        "w": "pick.",
-       "from": 159,
-       "to": 213
+       "from": 134,
+       "to": 181
       },
       {
        "w": "Follow",
-       "from": 213,
-       "to": 228
+       "from": 181,
+       "to": 194
       },
       {
        "w": "to",
-       "from": 228,
-       "to": 234
+       "from": 194,
+       "to": 200
       },
       {
        "w": "understand",
-       "from": 234,
-       "to": 257
+       "from": 200,
+       "to": 220
       },
       {
        "w": "AI,",
-       "from": 257,
-       "to": 266
+       "from": 220,
+       "to": 228
       },
       {
        "w": "simply.",
-       "from": 266,
-       "to": 289
+       "from": 228,
+       "to": 248
       }
      ],
      "cues": {
-      "1": 80,
-      "2": 213
+      "1": 66,
+      "2": 181
      }
     }
    ]
