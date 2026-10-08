@@ -46,6 +46,7 @@ import { KingfisherFilm, KFF_LEN } from "./reel/kingfisher/KingfisherFilm";
 import { LoopReel, LOOP_TEST_LEN } from "./reel/loop/LoopReel";
 import { AttnPreview, ATTN_PREVIEW_SCENE } from "./reel/loop/AttnPreview";
 import { FumbleRasaSheet } from "./reel/FumbleRasa";
+import { FumbleNavarasa, NAV_LEN } from "./reel/navarasa/FumbleNavarasa";
 import { FM_LEN, FumbleMaking, FumbleMakingProps, FumbleSketch, SKETCH_LEN } from "./reel/FumbleMaking";
 
 export const RemotionRoot: React.FC = () => (
@@ -112,6 +113,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="YeshDance" component={YeshDance} durationInFrames={YESH_LEN} fps={30} width={1080} height={1920} />
     <Composition id="YeshFull" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_FULL_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true, handle: "@ai_maastaaru_telugu" }} />
     <Composition id="KingfisherRide" component={KingfisherRide as unknown as React.FC<Record<string, unknown>>} durationInFrames={KF_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru", credit: "" }} />
+    <Composition id="NavarasaEN" component={FumbleNavarasa as unknown as React.FC<Record<string, unknown>>} durationInFrames={NAV_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru" }} />
+    <Composition id="NavarasaTE" component={FumbleNavarasa as unknown as React.FC<Record<string, unknown>>} durationInFrames={NAV_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru_telugu" }} />
     <Composition id="FumbleRasaSheet" component={FumbleRasaSheet} durationInFrames={60} fps={30} width={1080} height={1920} />
     <Composition id="AttnPreview" component={AttnPreview} durationInFrames={8 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />
     <Composition id="LoopReel" component={LoopReel} durationInFrames={LOOP_TEST_LEN} fps={30} width={1080} height={1920} />
