@@ -382,9 +382,11 @@ def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
         place(mix, keys(chords[b % 4][3] + 12, beat) * 0.3, t0 + beat * 2.5)
         t0 += beat * 4
         b += 1
+    norm = np.max(np.abs(mix)) + 1e-9   # level set by the bed itself, so lifts and the outro layer do not push it down
     for t in lifts:
         place(mix, riser(1.2) * 0.3, max(0.0, t - 1.2))
-        place(mix, kick808(42, 0.9, 2.0) * 0.55 + boom(1.2) * 0.35, t)
+        place(mix, kick808(42, 0.9, 2.0) * 0.55, t)
+        place(mix, boom(1.2) * 0.35, t)
     if outro is not None:
         t0, b = 0.0, 0
         while t0 < total:
@@ -397,7 +399,7 @@ def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
             t0 += beat * 4
             b += 1
     st = np.stack([mix, np.roll(mix, int(0.02 * MSR))], axis=1)
-    st = np.tanh(st / (np.max(np.abs(st)) + 1e-9) * 1.2) / np.tanh(1.2)
+    st = np.tanh(st / norm * 1.2) / np.tanh(1.2)
     fo = int(0.8 * MSR)
     st[-fo:] *= np.linspace(1, 0, fo)[:, None]
     return st * 0.8
