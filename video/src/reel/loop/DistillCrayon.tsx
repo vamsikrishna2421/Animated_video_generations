@@ -310,7 +310,7 @@ const DsCheap: React.FC<SP> = ({ cue }) => {
       if (f >= c2) stopwatch(c, 760, 640, 130, (f - c2) / 30, "< 30 min", r);
       if (f >= c3) {
         tag(c, "under ₹5,000", 760, 900, 100, COL.yellow, COL.ink, 0.07, fade(f, c3, 8));
-        hand(c, "(about $50 of rented GPUs)", 760, 990, 42, COL.pale, seg(f, c3 + 6, c3 + 18), r, -0.02, "center");
+        hand(c, "(under $50 of cloud compute)", 760, 990, 42, COL.pale, seg(f, c3 + 6, c3 + 18), r, -0.02, "center");
       }
       hand(c, "s1: Stanford, UW, Ai2 (2025), built on an existing open model", W / 2, 1180, 38, COL.pale, seg(f, c1 + 10, c1 + 26), r, -0.01, "center");
     }} />
