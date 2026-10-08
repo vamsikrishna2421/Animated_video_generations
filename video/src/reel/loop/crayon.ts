@@ -108,6 +108,7 @@ export const writeOn = (c: Ctx, text: string, x: number, y: number, size: number
   c.save();
   c.translate(x, y); c.rotate(rot);
   c.font = `700 ${size}px Caveat`;
+  c.textAlign = "left"; c.textBaseline = "alphabetic"; // never inherit a centred alignment from earlier drawing
   const w = c.measureText(text).width;
   c.beginPath(); c.rect(-10, -size, (w + 20) * clamp(p), size * 1.6); c.clip();
   c.fillStyle = color;

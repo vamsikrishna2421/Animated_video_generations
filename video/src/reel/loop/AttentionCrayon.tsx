@@ -10,17 +10,17 @@ type Line = { from: number; frames: number };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
-const HAND = "'Patrick Hand'";
-type WordBox = { w: string; x: number; y: number; wd: number; size: number };
+export const HAND = "'Patrick Hand'";
+export type WordBox = { w: string; x: number; y: number; wd: number; size: number };
 
 // ---------- shared drawing ----------
-const background = (c: Ctx, W: number, H: number, boil: number, tint = COL.blue) => {
+export const background = (c: Ctx, W: number, H: number, boil: number, tint = COL.blue) => {
   c.fillStyle = tint; c.fillRect(0, 0, W, H);
   const r = rng(40);
   hatch(c, [0, 0, W, H], [COL.deep, COL.navy, "#2a4cff", COL.light], r, { angle: -0.75, gap: 16, w: 5, alpha: 0.35, wobble: 4 });
 };
 
-const page = (c: Ctx, x: number, y: number, w: number, h: number, boil: number, rot = -0.012) => {
+export const page = (c: Ctx, x: number, y: number, w: number, h: number, boil: number, rot = -0.012) => {
   const r = rng(60);
   c.save();
   c.translate(x + w / 2, y + h / 2); c.rotate(rot); c.translate(-w / 2, -h / 2);
@@ -36,7 +36,7 @@ const page = (c: Ctx, x: number, y: number, w: number, h: number, boil: number, 
   c.restore();
 };
 
-const layout = (c: Ctx, text: string, x: number, y: number, maxW: number, size: number, lineH = 1.35): WordBox[] => {
+export const layout = (c: Ctx, text: string, x: number, y: number, maxW: number, size: number, lineH = 1.35): WordBox[] => {
   c.font = `${size}px ${HAND}`;
   const space = c.measureText(" ").width;
   const out: WordBox[] = [];
@@ -50,10 +50,10 @@ const layout = (c: Ctx, text: string, x: number, y: number, maxW: number, size: 
   return out;
 };
 
-const ctr = (b: WordBox): Pt => [b.x + b.wd / 2, b.y - b.size * 0.3];
-const top = (b: WordBox): Pt => [b.x + b.wd / 2, b.y - b.size * 0.78];
+export const ctr = (b: WordBox): Pt => [b.x + b.wd / 2, b.y - b.size * 0.3];
+export const top = (b: WordBox): Pt => [b.x + b.wd / 2, b.y - b.size * 0.78];
 
-const drawWords = (c: Ctx, words: WordBox[], boil: number, opts: { reveal?: number; color?: (i: number) => string; alpha?: (i: number) => number; hide?: Set<number> } = {}) => {
+export const drawWords = (c: Ctx, words: WordBox[], boil: number, opts: { reveal?: number; color?: (i: number) => string; alpha?: (i: number) => number; hide?: Set<number> } = {}) => {
   const r = rng(80 + boil);
   const n = opts.reveal ?? words.length;
   words.forEach((b, i) => {
@@ -70,7 +70,7 @@ const drawWords = (c: Ctx, words: WordBox[], boil: number, opts: { reveal?: numb
 };
 
 // Curved crayon arrow from a to b, drawn up to progress p; lift < 0 bends upward.
-const arrow = (c: Ctx, a: Pt, b: Pt, lift: number, color: string, w: number, p: number, r: () => number, head = true) => {
+export const arrow = (c: Ctx, a: Pt, b: Pt, lift: number, color: string, w: number, p: number, r: () => number, head = true) => {
   if (p <= 0) return;
   const mx = (a[0] + b[0]) / 2, my = Math.min(a[1], b[1]) + lift;
   const pts: Pt[] = [];
@@ -87,13 +87,13 @@ const arrow = (c: Ctx, a: Pt, b: Pt, lift: number, color: string, w: number, p: 
   }
 };
 
-const ring = (c: Ctx, b: WordBox, color: string, p: number, r: () => number, w = 6) => {
+export const ring = (c: Ctx, b: WordBox, color: string, p: number, r: () => number, w = 6) => {
   if (p <= 0) return;
   const [cx, cy] = ctr(b);
   stroke(c, circlePts(cx, cy, b.wd / 2 + 26, b.size * 0.62, -2.2, -2.2 + Math.PI * 2.15 * clamp(p), 40), color, w, r, { passes: 3, alpha: 0.85, jit: 2 });
 };
 
-const scribble = (c: Ctx, b: WordBox, p: number, r: () => number) => {
+export const scribble = (c: Ctx, b: WordBox, p: number, r: () => number) => {
   if (p <= 0) return;
   const pts: Pt[] = [];
   const n = Math.round(12 * clamp(p));
@@ -101,14 +101,14 @@ const scribble = (c: Ctx, b: WordBox, p: number, r: () => number) => {
   stroke(c, pts, COL.red, 6, r, { passes: 2, alpha: 0.85, jit: 2 });
 };
 
-const hand = (c: Ctx, text: string, x: number, y: number, size: number, color: string, p: number, r: () => number, rot = 0, align: "left" | "center" = "left") => {
+export const hand = (c: Ctx, text: string, x: number, y: number, size: number, color: string, p: number, r: () => number, rot = 0, align: "left" | "center" = "left") => {
   if (p <= 0) return;
   if (align === "center") { c.font = `700 ${size}px Caveat`; x -= c.measureText(text).width / 2; }
   writeOn(c, text, x, y, size, color, p, r, rot);
 };
 
 // Glowing attention string between two words; weight 0..1 sets thickness and glow.
-const thread = (c: Ctx, a: Pt, b: Pt, wgt: number, p: number, r: () => number, color = COL.orange) => {
+export const thread = (c: Ctx, a: Pt, b: Pt, wgt: number, p: number, r: () => number, color = COL.orange) => {
   if (p <= 0 || wgt <= 0.01) return;
   c.save();
   c.shadowColor = color; c.shadowBlur = 10 + 30 * wgt;
@@ -116,13 +116,13 @@ const thread = (c: Ctx, a: Pt, b: Pt, wgt: number, p: number, r: () => number, c
   c.restore();
 };
 
-const fade = (f: number, a: number, len = 8) => clamp((f - a) / len);
+export const fade = (f: number, a: number, len = 8) => clamp((f - a) / len);
 const Hit: React.FC<{ at: number; vol?: number }> = ({ at, vol = 0.55 }) => (
   <Sequence from={Math.max(0, at)} durationInFrames={45} layout="none"><Audio src={staticFile("reel/sfx_boom.wav")} volume={vol} /></Sequence>
 );
 
 // little crayon person (whisper line)
-const kid = (c: Ctx, x: number, y: number, s: number, boil: number, seed: number, mouth = false) => {
+export const kid = (c: Ctx, x: number, y: number, s: number, boil: number, seed: number, mouth = false) => {
   const r = rng(seed * 13 + boil);
   c.save();
   c.beginPath(); c.ellipse(x, y + 1.25 * s, 0.75 * s, 0.95 * s, 0, Math.PI, 0); c.lineTo(x + 0.75 * s, y + 2.2 * s); c.lineTo(x - 0.75 * s, y + 2.2 * s); c.closePath();
