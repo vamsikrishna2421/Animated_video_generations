@@ -225,7 +225,7 @@ def st_peace():
 
 STINGS = {"adbhuta": st_wonder, "shringara": st_love, "hasya": st_laugh, "bhayanaka": st_fear, "bibhatsa": st_disgust,
           "raudra": st_anger, "karuna": st_sorrow, "veera": st_courage, "shanta": st_peace}
-GAIN = {"adbhuta": 0.8, "shringara": 0.85, "hasya": 0.9, "bhayanaka": 0.95, "bibhatsa": 0.85, "raudra": 0.9, "karuna": 0.9, "veera": 0.9, "shanta": 0.8}
+GAIN = {"adbhuta": 1.0, "shringara": 1.0, "hasya": 1.0, "bhayanaka": 0.95, "bibhatsa": 0.85, "raudra": 0.9, "karuna": 0.9, "veera": 0.9, "shanta": 0.8}
 CHORDS = [(48, [60, 64, 67]), (43, [59, 62, 67]), (45, [60, 64, 69]), (41, [60, 65, 69])]  # C  G/B  Am  F
 TUNE = [72, None, 76, 74, 72, None, 67, None, 69, None, 72, 71, 69, None, 67, None]  # original bouncy line, 8ths
 
@@ -280,8 +280,8 @@ def main():
     for i, b in enumerate(beats):
         if b["key"] == "shanta":
             continue
-        layers = {"bass", "stab"} | ({"hat"} if i >= 2 else set()) | ({"clap"} if i >= 4 else set()) | ({"tune"} if i >= 6 else set())
-        seg = groove(b["start"] - 0.0, b["end"], 0.55 + 0.05 * i, layers)
+        layers = {"bass", "stab", "hat"} | ({"clap"} if i >= 3 else set()) | ({"tune"} if i >= 5 else set())
+        seg = groove(b["start"] - 0.0, b["end"], 0.75 + 0.03 * i, layers)
         if b["end"] >= drop0 - 1e-6:  # tape-stop into the drop
             k = int((drop0 - 0.5 - b["start"]) * SR)
             seg = np.concatenate([seg[:k], tape_stop(seg[k:], 0.5)])
