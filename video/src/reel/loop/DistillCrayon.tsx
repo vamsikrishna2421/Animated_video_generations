@@ -162,15 +162,18 @@ const DsHook: React.FC<SP> = ({ cue }) => {
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1000 + boil);
-      // the numbers first
-      const pop = easeOut(fade(f, 0, 8));
-      c.save(); c.translate(300, 560); c.scale(pop, pop); stopwatch(c, 0, 0, 150, f / 30, "< 30 min", r); c.restore();
-      tag(c, "under ₹5,000", 760, 600, 104, COL.yellow, COL.ink, 0.07, fade(f, 4, 8));
-      if (f >= c1) {
+      // the numbers first: legible on frame 0 (cover frame), stamped down from slightly larger
+      const k1 = 1 + 0.2 * (1 - easeOut(fade(f, 0, 6))), k2 = 1 + 0.25 * (1 - easeOut(fade(f, 1, 6)));
+      c.save(); c.translate(300, 560); c.scale(k1, k1); stopwatch(c, 0, 0, 150, f / 30, "< 30 min", r); c.restore();
+      c.save(); c.translate(760, 600); c.scale(k2, k2); c.translate(-760, -600); tag(c, "under ₹5,000", 760, 600, 104, COL.yellow, COL.ink, 0.07, 1); c.restore();
+      if (f >= c1 && f < c3 + 12) {
+        // the maths-test card slides away when the word DISTILLATION arrives
+        c.save(); c.translate(-1200 * Math.pow(seg(f, c3, c3 + 10), 2), 0);
         page(c, 120, 820, 840, 250, boil, -0.015);
         hand(c, "maths test", 200, 910, 64, COL.ink, seg(f, c1, c1 + 8), r, -0.02);
         hand(c, "beat an OpenAI reasoning model*", 200, 1000, 60, "#15803d", seg(f, c1 + 6, c1 + 22), r, -0.02);
         hand(c, "*o1-preview, competition maths, researchers' report (s1, 2025)", W / 2, 1120, 36, COL.pale, seg(f, c1 + 14, c1 + 26), r, -0.01, "center");
+        c.restore();
       }
       if (f >= c2) robot(c, 230, 1420, 0.85, boil, 1, { ...TEACHER, look: 0.6, mouth: "smile", arms: "point" });
       if (f >= c2 + 8) robot(c, 860, 1420, 0.5, boil, 2, { ...STUDENT, look: -0.6, eyes: f >= c3 ? "happy" : "open", mouth: f >= c3 ? "grin" : "smile" });
@@ -180,7 +183,7 @@ const DsHook: React.FC<SP> = ({ cue }) => {
           const px = lerp(330, 820, u), py = lerp(1170, 1250, u) - Math.sin(u * Math.PI) * 140;
           c.beginPath(); c.arc(px, py, 9, 0, 7); c.fillStyle = COL.yellow; c.globalAlpha = 0.9 * fade(f, c3, 6); c.fill(); c.globalAlpha = 1;
         }
-        hand(c, "DISTILLATION", W / 2, 1290, 100, COL.yellow, seg(f, c3 + 4, c3 + 20), rng(5 + boil), -0.04, "center");
+        hand(c, "DISTILLATION", W / 2, 990, 116, COL.yellow, seg(f, c3 + 8, c3 + 24), rng(5 + boil), -0.04, "center");
       }
     }} />
     </>
@@ -233,7 +236,7 @@ const DsSoft: React.FC<SP> = ({ cue }) => {
         // the answer key: just "cat"
         c.save(); rrect(c, 520, 340, 470, 140, 18); c.fillStyle = COL.cream; c.fill(); c.restore();
         hand(c, "answer key: cat", 755, 430, 64, COL.ink, seg(f, 0, 12), r, -0.02, "center");
-        if (f >= c1) robot(c, 860, 960, 0.75, boil, 1, { ...TEACHER, mouth: "o", look: -0.8 });
+        if (f >= c1) robot(c, 935, 1050, 0.6, boil, 1, { ...TEACHER, mouth: "o", look: -0.8 });
         if (f >= c2) {
           bars(c, 300, 720, 420, [["cat", 0.9, COL.orange], ["tiger", 0.09, COL.yellow], ["car", 0.01, COL.light]], seg(f, c2, c2 + 30), r, 60);
           if (f >= c2 + 10) catFace(c, 120, 820, 0.4, r, COL.orange, true);
