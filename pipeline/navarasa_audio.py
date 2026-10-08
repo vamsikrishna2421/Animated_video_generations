@@ -95,6 +95,20 @@ def riser(sec):
     return hp(rng.standard_normal(len(t)), 1500) * u ** 2.5 * 0.3 + np.sin(2 * np.pi * np.cumsum(300 + 900 * u ** 2) / SR) * u ** 3 * 0.25
 
 
+def dappu():
+    """A hard frame-drum hit (low membrane + slap), the punch under every face snap."""
+    t = t_(0.5)
+    body = np.sin(2 * np.pi * np.cumsum(70 + 60 * np.exp(-t * 30)) / SR) * np.exp(-t * 9)
+    ring = np.sin(2 * np.pi * 230 * t) * np.exp(-t * 18) * 0.3
+    slap = bp(rng.standard_normal(len(t)), 700, 2600) * np.exp(-t * 45) * 0.8
+    return np.tanh((body + ring + slap) * 2.0) * 0.8
+
+
+def ping():
+    t = t_(0.6)
+    return (np.sin(2 * np.pi * 1568 * t) + 0.5 * np.sin(2 * np.pi * 2093 * t)) * np.exp(-t * 7) * env(0.6, 0.003, 0.1) * 0.35
+
+
 def blip(m):
     t = t_(0.12)
     return np.sin(2 * np.pi * hz(m) * t) * np.exp(-t * 30) * 0.5
@@ -255,8 +269,11 @@ def main():
     place(fx, boom(1.6) * 0.9, 0.0)
     for m in (60, 64, 67, 72):
         place(fx, brass(m, 0.5, 0.9) * 0.35, 0.0)
-    for k in range(9):
-        place(fx, blip(72 + [0, 2, 4, 5, 7, 9, 11, 12, 14][k]), (3 + 5 * k) / TL["fps"])
+    fl = TL["flick"]
+    for k in range(len(fl["keys"])):
+        place(fx, blip(72 + [0, 4, 7, 9, 12, 14, 16][k]), (fl["start"] + fl["step"] * k) / TL["fps"])
+        place(fx, dappu() * 0.35, (fl["start"] + fl["step"] * k) / TL["fps"])
+    place(fx, dappu() * 0.9, 0.0)
     place(music, groove(0.0, 2.0, 0.55, {"bass", "stab"}), 0.0)
 
     # beats: the bed builds layer by layer
@@ -271,6 +288,7 @@ def main():
         place(music, seg, b["start"])
         place(fx, whoosh(0.35, True) * 0.35, b["snap"] - 0.3)
         place(fx, STINGS[b["key"]]() * GAIN[b["key"]], b["snap"])
+        place(fx, dappu() * 0.8, b["snap"])
         # soft typing clicks / notification while the screen fills
         for c in range(6):
             t = t_(0.03)
@@ -280,7 +298,8 @@ def main():
     pz = [b for b in beats if b["key"] == "shanta"][0]
     place(music, pad([48, 55, 60, 64, 67], pz["end"] - pz["start"]) * 1.6, pz["start"])
     place(fx, whoosh(0.35, True) * 0.2, pz["snap"] - 0.3)
-    place(fx, STINGS["shanta"]() * GAIN["shanta"], pz["snap"])
+    place(fx, ping(), pz["snap"] - 0.05)
+    place(fx, STINGS["shanta"]() * GAIN["shanta"], pz["snap"] + 0.05)
     for c in range(4):
         t = t_(0.03)
         place(fx, hp(rng.standard_normal(len(t)), 3000) * np.exp(-t * 120) * 0.1, pz["start"] + 0.12 + c * 0.09)
@@ -290,10 +309,12 @@ def main():
     for i in range(9):
         t = t_(0.1)
         place(fx, np.sin(2 * np.pi * (700 + 60 * i) * t) * np.exp(-t * 40) * 0.25, end0 + (6 + i * 3) / TL["fps"])
-    place(fx, riser(31.6 - (end0 + 1.5)) * 1.1, end0 + 1.5)
-    place(fx, boom(1.0) * 0.9, 31.6)
+    hit = total - 0.9
+    place(fx, riser(hit - (end0 + 1.5)) * 1.1, end0 + 1.5)
+    place(fx, boom(1.0) * 0.9, hit)
+    place(fx, dappu() * 0.9, hit)
     for m in (60, 64, 67, 72):
-        place(fx, brass(m, 0.8, 0.9) * 0.35, 31.6)
+        place(fx, brass(m, 0.8, 0.9) * 0.35, hit)
 
     # duck the bed under every sting (about -6 dB for 0.7 s), keep the drop silent
     duck = np.ones(n)

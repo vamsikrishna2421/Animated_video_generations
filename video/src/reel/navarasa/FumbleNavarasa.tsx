@@ -64,16 +64,30 @@ const ScrWonder: React.FC<{ t: number }> = ({ t }) => (
   <Chat>
     <Bubble me>{typed("Write a poem about chai", t, 3)}</Bubble>
     {t > 9 && <Bubble fs={33}>{POEM.map((l, i) => <div key={i}>{typed(l, t - 9 - i * 3.5, 9)}</div>)}</Bubble>}
-    {t > 25 && <div style={{ alignSelf: "flex-end", marginTop: -8, fontFamily: MONO, fontSize: 28, color: "#64748b" }}>done in 0:03</div>}
+    {t > 22 && <div style={{ position: "absolute", right: 26, bottom: 22, background: "#f97316", color: "white", fontFamily: ANTON, fontSize: 46, padding: "2px 20px", borderRadius: 14, transform: `rotate(-5deg) scale(${easeBack(clamp((t - 22) / 6))})` }}>DONE IN 0:03</div>}
   </Chat>
 );
-const ScrLove: React.FC<{ t: number }> = ({ t }) => (
-  <Chat>
-    <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 36, color: "#334155" }}>2:07 AM</div>
-    <div style={{ background: "#fee2e2", border: "3px solid #ef4444", borderRadius: 16, padding: "12px 18px", fontFamily: MONO, fontSize: 31, color: "#b91c1c", lineHeight: 1.3 }}>TypeError: cannot read properties of undefined (reading 'map')</div>
-    {t > 12 && <Bubble><Check s={34} /> Fixed it. {typed("Line 42 was missing a return.", t - 12, 4)}</Bubble>}
-  </Chat>
-);
+
+const ScrLove: React.FC<{ t: number }> = ({ t }) => {
+  const fixed = t > 14;
+  const left = 118 - Math.floor(t / 30);
+  const cell = (v: string, bad?: boolean) => (
+    <div style={{ border: "2px solid #cbd5e1", padding: "8px 10px", fontFamily: MONO, fontSize: 32, textAlign: "center", color: bad && !fixed ? "#dc2626" : bad ? "#16a34a" : "#0f172a", background: bad && !fixed ? "#fee2e2" : bad ? "#dcfce7" : "white", fontWeight: bad ? 700 : 400 }}>{bad && !fixed ? "#N/A" : v}</div>
+  );
+  return (
+    <div style={{ height: "100%", background: "#f8fafc", padding: 22, boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+        <div style={{ background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 40, padding: "0 16px", borderRadius: 10 }}>DEADLINE</div>
+        <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 44, color: "#dc2626" }}>{`0:0${Math.floor(left / 60)}:${String(left % 60).padStart(2, "0")}`}</div>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", width: "100%" }}>
+        {cell("1,240")}{cell("980", true)}{cell("2,310", true)}{cell("870")}{cell("1,455", true)}{cell("3,020")}
+      </div>
+      {fixed && <Bubble><Check s={36} /> Fixed it.</Bubble>}
+    </div>
+  );
+};
+
 const Hand7: React.FC<{ n: number }> = ({ n }) => {
   const fingers = Array.from({ length: 7 }, (_, i) => -66 + i * 22);
   return (
@@ -91,10 +105,11 @@ const Hand7: React.FC<{ n: number }> = ({ n }) => {
 };
 const ScrLaugh: React.FC<{ t: number; ts: number }> = ({ t, ts }) => (
   <div style={{ height: "100%", background: "#f8fafc", display: "flex", flexDirection: "column", alignItems: "center", padding: 18, boxSizing: "border-box" }}>
-    <div style={{ alignSelf: "stretch", background: "#e2e8f0", borderRadius: 20, padding: "10px 20px", fontFamily: INTER, fontWeight: 600, fontSize: 36, color: "#0f172a" }}>{typed("Generate: a friendly hand, waving", t, 3.5)}</div>
-    {t > 11 && <div style={{ marginTop: 6, transform: `rotate(${6 * Math.sin(t / 5)}deg)` }}><Hand7 n={ts < 0 ? 0 : Math.min(7, Math.floor(ts / 2.2) + 1)} /></div>}
+    <div style={{ alignSelf: "stretch", background: "#e2e8f0", borderRadius: 20, padding: "10px 20px", fontFamily: INTER, fontWeight: 600, fontSize: 38, color: "#0f172a" }}>{typed("Draw: a friendly hand", t, 3.5)}</div>
+    {t > 9 && <div style={{ marginTop: 6, transform: `rotate(${6 * Math.sin(t / 5)}deg)` }}><Hand7 n={ts < 0 ? 0 : Math.min(7, Math.floor(ts / 2.2) + 1)} /></div>}
   </div>
 );
+
 const ScrFear: React.FC<{ t: number }> = ({ t }) => (
   <div style={{ height: "100%", background: "#0b1020", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 34px", boxSizing: "border-box", position: "relative", overflow: "hidden" }}>
     <div style={{ display: "inline-block", alignSelf: "flex-start", background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 40, padding: "2px 18px", letterSpacing: 2, opacity: Math.floor(t / 6) % 2 ? 0.75 : 1 }}>BREAKING</div>
@@ -103,28 +118,31 @@ const ScrFear: React.FC<{ t: number }> = ({ t }) => (
   </div>
 );
 const ScrDisgust: React.FC<{ t: number }> = ({ t }) => (
-  <div style={{ height: "100%", background: "#f8fafc", padding: "20px 28px", boxSizing: "border-box", position: "relative" }}>
+  <div style={{ height: "100%", background: "#f8fafc", padding: "24px 30px", boxSizing: "border-box", position: "relative" }}>
     <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-      <div style={{ width: 64, height: 64, borderRadius: 32, background: "linear-gradient(135deg,#f59e0b,#db2777)" }} />
-      <div><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 30, color: "#0f172a" }}>Growth Guru</div><div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 22, color: "#64748b" }}>Thought Leader · 1m</div></div>
-      <div style={{ marginLeft: "auto", background: "#fef3c7", color: "#92400e", fontFamily: INTER, fontWeight: 800, fontSize: 22, padding: "4px 12px", borderRadius: 10 }}>AI-WRITTEN</div>
+      <div style={{ width: 70, height: 70, borderRadius: 35, background: "linear-gradient(135deg,#f59e0b,#db2777)" }} />
+      <div><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "#0f172a" }}>Growth Guru</div><div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 24, color: "#64748b" }}>Thought Leader</div></div>
+      <div style={{ marginLeft: "auto", background: "#fef3c7", color: "#92400e", fontFamily: INTER, fontWeight: 800, fontSize: 26, padding: "4px 14px", borderRadius: 10 }}>AI-WRITTEN</div>
     </div>
-    <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 38, color: "#0f172a", lineHeight: 1.28, marginTop: 14 }}>{typed("I'm humbled and honoured to announce that AI wrote this post. Agree?", t, 5)}</div>
-    {t > 14 && <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 33, color: "#2563eb", marginTop: 10 }}>#leadership #synergy #blessed #grindset</div>}
+    <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 50, color: "#0f172a", lineHeight: 1.15, marginTop: 22 }}>{typed("Humbled & honoured to announce...", t, 6)}</div>
+    {t > 10 && <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "#2563eb", marginTop: 14 }}>#blessed #synergy</div>}
   </div>
 );
+
 const ScrAnger: React.FC<{ t: number; ts: number }> = ({ t, ts }) => (
   <Chat>
-    <Bubble me>How many r's in "strawberry"?</Bubble>
-    {t > 10 && <Bubble>{typed("There are 2 r's in \"strawberry\". Hope this helps!", t - 10, 4)}</Bubble>}
-    {ts > 8 && (
-      <div style={{ alignSelf: "center", fontFamily: MONO, fontWeight: 700, fontSize: 52, letterSpacing: 4, color: "#0f172a" }}>
-        {"strawberry".split("").map((ch, i) => <span key={i} style={ch === "r" ? { color: "#dc2626", borderBottom: "6px solid #dc2626" } : undefined}>{ch}</span>)}
-        <span style={{ color: "#dc2626", marginLeft: 18 }}>= 3</span>
-      </div>
+    <Bubble fs={36}>Australia's capital is Sydney.</Bubble>
+    {t > 13 && <Bubble me fs={36}>Wrong.</Bubble>}
+    {t > 22 && (
+      <Bubble fs={36}>
+        {typed("You're absolutely right! It's ", t - 22, 6)}
+        {t > 22 + 31 / 6 && <span style={ts > 4 ? { color: "#dc2626", textDecoration: "line-through", textDecorationThickness: 5 } : undefined}>Sydney.</span>}
+      </Bubble>
     )}
+    {ts > 10 && <div style={{ position: "absolute", right: 30, bottom: 24, background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 40, padding: "2px 18px", borderRadius: 12, transform: "rotate(-4deg)" }}>(IT'S CANBERRA)</div>}
   </Chat>
 );
+
 const ScrSorrow: React.FC<{ t: number }> = ({ t }) => {
   const left = 4 * 3600 - 1 - Math.floor(t / 30);
   const hh = Math.floor(left / 3600), mm = Math.floor((left % 3600) / 60), ss = left % 60;
@@ -142,21 +160,32 @@ const ScrSorrow: React.FC<{ t: number }> = ({ t }) => {
   );
 };
 const PROMPT = ["Act as a senior chef.", "Explain step by step.", "Give 3 examples.", "Answer in a table."];
-const ScrCourage: React.FC<{ t: number; ts: number }> = ({ t, ts }) => (
-  <div style={{ height: "100%", background: "#f8fafc", padding: 22, boxSizing: "border-box", position: "relative" }}>
-    <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 24, color: "#64748b", letterSpacing: 2 }}>YOUR PROMPT</div>
-    <div style={{ marginTop: 8, border: `5px solid ${ts > 0 ? "#f59e0b" : "#cbd5e1"}`, boxShadow: ts > 0 ? "0 0 34px rgba(245,158,11,0.8)" : "none", borderRadius: 20, padding: "12px 20px", fontFamily: MONO, fontSize: 36, color: "#0f172a", lineHeight: 1.32 }}>
-      {PROMPT.map((l, i) => <div key={i}>{typed(l, t - i * 5, 7)}</div>)}
+const ScrCourage: React.FC<{ t: number; ts: number }> = ({ t, ts }) => {
+  const sent = ts >= 0;
+  const cx = 860 - 200 * (1 - clamp(t / 26)), cy = 330 - 120 * (1 - clamp(t / 26));
+  return (
+    <div style={{ height: "100%", background: "#f8fafc", padding: "18px 26px", boxSizing: "border-box", position: "relative", fontFamily: INTER }}>
+      <div style={{ fontSize: 34, fontWeight: 600, color: "#64748b", borderBottom: "2px solid #e2e8f0", paddingBottom: 8 }}>To: <span style={{ color: "#0f172a", fontWeight: 800 }}>Boss</span></div>
+      <div style={{ fontSize: 34, fontWeight: 600, color: "#64748b", borderBottom: "2px solid #e2e8f0", padding: "8px 0" }}>Subject: <span style={{ color: "#0f172a", fontWeight: 800 }}>Final report</span></div>
+      <div style={{ marginTop: 12, background: "#eef2ff", borderRadius: 14, padding: "12px 16px", fontSize: 34, fontWeight: 600, color: "#4338ca", fontStyle: "italic" }}>[AI answer, pasted]</div>
+      <div style={{ position: "absolute", left: 30, bottom: 26, background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 38, padding: "0 16px", borderRadius: 10, transform: "rotate(-4deg)", opacity: clamp((t - 8) / 4) }}>DIDN'T READ IT</div>
+      <div style={{ position: "absolute", right: 30, bottom: 24, background: sent ? "#16a34a" : "#2563eb", color: "white", fontFamily: ANTON, fontSize: 48, padding: "4px 34px", borderRadius: 14, transform: `scale(${sent && ts < 4 ? 0.9 : 1})` }}>{sent ? "SENT ✓" : "SEND"}</div>
+      {!sent && <svg width={44} height={56} style={{ position: "absolute", left: cx, top: cy }} viewBox="0 0 44 56"><path d="M 4,4 L 4,46 L 15,36 L 23,54 L 31,50 L 23,32 L 38,32 Z" fill="white" stroke="#111" strokeWidth={4} strokeLinejoin="round" /></svg>}
     </div>
-    {ts > 2 && <div style={{ position: "absolute", right: 30, bottom: 22, background: "#f59e0b", color: "white", fontFamily: ANTON, fontSize: 40, padding: "4px 20px", borderRadius: 12, transform: `rotate(-4deg) scale(${easeBack(clamp(ts / 8))})` }}>PERFECT PROMPT ★★★★★</div>}
-  </div>
-);
-const ScrPeace: React.FC<{ t: number }> = ({ t }) => (
-  <div style={{ height: "100%", background: "#0b1020", padding: "30px 36px", boxSizing: "border-box", fontFamily: MONO, fontSize: 44, lineHeight: 1.45 }}>
-    <div style={{ color: "#94a3b8" }}>$ npm test</div>
-    {t > 6 && <div style={{ color: "#4ade80" }}>✓ 128 passing</div>}
-    {t > 12 && <div style={{ color: "#4ade80", fontWeight: 700 }}>All tests passed.</div>}
-  </div>
+  );
+};
+
+const ScrPeace: React.FC<{ t: number; ts: number }> = ({ t, ts }) => (
+  <Chat>
+    <div style={{ display: "flex", alignItems: "center", gap: 16 }}><div style={{ width: 64, height: 64, borderRadius: 32, background: "linear-gradient(135deg,#334155,#64748b)" }} /><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 44, color: "#0f172a" }}>Boss</div></div>
+    {ts < -1 ? (
+      <div style={{ alignSelf: "flex-start", background: "#e2e8f0", borderRadius: 30, padding: "24px 32px", display: "flex", gap: 16, marginTop: 10 }}>
+        {[0, 1, 2].map((k) => <div key={k} style={{ width: 26, height: 26, borderRadius: 13, background: "#64748b", opacity: 0.35 + 0.65 * (Math.floor(t / 5) % 3 === k ? 1 : 0) }} />)}
+      </div>
+    ) : (
+      <div style={{ alignSelf: "flex-start", background: "#e2e8f0", color: "#0f172a", borderRadius: 26, padding: "16px 26px", fontFamily: INTER, fontWeight: 800, fontSize: 54, transform: `scale(${easeBack(clamp((ts + 1) / 6))})`, transformOrigin: "0% 50%" }}>Perfect, thanks!</div>
+    )}
+  </Chat>
 );
 
 const Screen: React.FC<{ k: string; t: number; ts: number }> = ({ k, t, ts }) => {
@@ -169,7 +198,7 @@ const Screen: React.FC<{ k: string; t: number; ts: number }> = ({ k, t, ts }) =>
     case "raudra": return <ScrAnger t={t} ts={ts} />;
     case "karuna": return <ScrSorrow t={t} />;
     case "veera": return <ScrCourage t={t} ts={ts} />;
-    case "shanta": return <ScrPeace t={t} />;
+    case "shanta": return <ScrPeace t={t} ts={ts} />;
     default: return null;
   }
 };
@@ -205,13 +234,13 @@ const Header: React.FC<{ n?: number; title: string }> = ({ n, title }) => (
   </div>
 );
 
-const Label: React.FC<{ r: Rasa; ts: number; accent: string }> = ({ r, ts, accent }) => {
+const Label: React.FC<{ r: Rasa; ts: number; accent: string; te: boolean }> = ({ r, ts, accent, te }) => {
   if (ts < 0) return null;
   const s = 1 + 1.2 * (1 - easeBack(clamp(ts / 7), 2.2));
   return (
     <div style={{ position: "absolute", top: 650, left: 0, right: 0, textAlign: "center", transform: `rotate(-3deg) scale(${s})`, opacity: clamp(ts / 2) }}>
       <div style={{ fontFamily: ANTON, fontSize: 124, lineHeight: 1, color: accent, letterSpacing: 4, WebkitTextStroke: "4px #111", textShadow: "0 8px 0 rgba(0,0,0,0.55)" }}>{r.name}</div>
-      <div style={{ display: "inline-block", marginTop: 6, fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "#111", background: accent, padding: "2px 18px", borderRadius: 14 }}>{r.te}</div>
+      <div style={{ display: "inline-block", marginTop: 6, fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "#111", background: accent, padding: "2px 18px", borderRadius: 14 }}>{te ? r.te : r.sa}</div>
     </div>
   );
 };
@@ -219,7 +248,7 @@ const Label: React.FC<{ r: Rasa; ts: number; accent: string }> = ({ r, ts, accen
 // ---------------- end card ----------------
 const EndCard: React.FC<{ f: number; handle: string }> = ({ f, handle }) => {
   const t0 = F(TL.endcard[0]), t = f - t0;
-  const pulse = 1 + 0.06 * Math.max(0, 1 - Math.abs(f - F(31.6)) / 6);
+  const pulse = 1 + 0.06 * Math.max(0, 1 - Math.abs(f - F(TL.total - 0.9)) / 6);
   return (
     <AbsoluteFill style={{ background: "#0f172a" }}>
       <div style={{ position: "absolute", top: 96, width: "100%", textAlign: "center", fontFamily: ANTON, fontSize: 78, lineHeight: 1.12, color: "white", opacity: clamp(t / 6) }}>WHICH ONE ARE YOU<br />RIGHT NOW?</div>
@@ -235,9 +264,10 @@ const EndCard: React.FC<{ f: number; handle: string }> = ({ f, handle }) => {
           </div>
         );
       })}
-      <div style={{ position: "absolute", top: 1450, width: "100%", textAlign: "center", opacity: clamp((t - 40) / 8), transform: `scale(${pulse})` }}>
-        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 60, color: "#fde047" }}>Comment the number</div>
-        <div style={{ fontFamily: ANTON, fontSize: handle.length > 16 ? 70 : 84, color: "white", marginTop: 14 }}>{handle}</div>
+      <div style={{ position: "absolute", top: 1405, width: "100%", textAlign: "center", opacity: clamp((t - 40) / 8), transform: `scale(${pulse})` }}>
+        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 60, color: "#fde047" }}>Comment your number</div>
+        <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 38, color: "white", marginTop: 4 }}>and tag the friend who's always #7</div>
+        <div style={{ fontFamily: ANTON, fontSize: handle.length > 16 ? 66 : 78, color: "white", marginTop: 12 }}>{handle}</div>
         <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 36, color: "#cbd5e1", marginTop: 6 }}>Follow for more AI fun</div>
       </div>
     </AbsoluteFill>
@@ -245,7 +275,8 @@ const EndCard: React.FC<{ f: number; handle: string }> = ({ f, handle }) => {
 };
 
 // ---------------- main ----------------
-export const FumbleNavarasa: React.FC<{ handle?: string; title?: string }> = ({ handle = "@ai_maastaaru", title = "AI NAVARASALU" }) => {
+export const FumbleNavarasa: React.FC<{ handle?: string; lang?: "en" | "te" }> = ({ handle = "@ai_maastaaru", lang = "en" }) => {
+  const title = lang === "te" ? "AI NAVARASALU" : "AI NAVARASA";
   const frame = useCurrentFrame();
   const drop0 = F(TL.drop[0]), drop1 = F(TL.drop[1]);
   const f = frame >= drop0 && frame < drop1 ? drop0 - 1 : frame; // freeze during the drop
@@ -254,20 +285,20 @@ export const FumbleNavarasa: React.FC<{ handle?: string; title?: string }> = ({ 
     <AbsoluteFill>
       <Audio key="audio" src={staticFile("navarasa/audio.wav")} />
       <Fonts />{anton}
-      <Body frame={frame} f={f} handle={handle} title={title} />
+      <Body frame={frame} f={f} handle={handle} title={title} te={lang === "te"} />
     </AbsoluteFill>
   );
 };
 
-const Body: React.FC<{ frame: number; f: number; handle: string; title: string }> = ({ frame, f, handle, title }) => {
+const Body: React.FC<{ frame: number; f: number; handle: string; title: string; te: boolean }> = ({ frame, f, handle, title, te }) => {
   if (frame >= F(TL.endcard[0])) return <EndCard f={frame} handle={handle} />;
 
   // hook: title slam + all nine faces flickering
   if (f < F(TL.hook[1])) {
-    const k = Math.floor((f - 3) / 5);
-    const flick = k >= 0 && k < 9 ? RASAS[k] : null;
-    const back = clamp((f - 48) / 10);
-    const p = flick ? flick.pose : mix(RASAS[8].pose, NEUTRAL, easeOut(back));
+    const fl = TL.flick, k = Math.floor((f - fl.start) / fl.step);
+    const flick = k >= 0 && k < fl.keys.length ? rasaOf(fl.keys[k]) : null;
+    const back = clamp((f - fl.start - fl.step * fl.keys.length) / 8);
+    const p = flick ? flick.pose : mix(rasaOf(fl.keys[fl.keys.length - 1]).pose, NEUTRAL, easeOut(back));
     const titleS = 1 + 0.9 * (1 - easeBack(clamp(f / 7), 2));
     return (
       <AbsoluteFill style={{ background: flick ? COL[flick.key][0] : "#111827" }}>
@@ -297,7 +328,7 @@ const Body: React.FC<{ frame: number; f: number; handle: string; title: string }
   const flash = ts >= 0 && ts < 3 ? 1 - ts / 3 : 0;
   const slide = easeOut(tb / 6);
   // last beat: the laptop lid closes after the snap
-  const lid = b.key === "shanta" ? clamp((ts - 4) / 12) : 0;
+  const lid = b.key === "shanta" ? clamp((ts - 20) / 12) : 0;
   return (
     <AbsoluteFill style={{ background: ts >= 0 ? bg : "#111827" }}>
       {ts >= 0 && <Burst color={accent} a={0.12 + 0.25 * Math.max(0, 1 - ts / 15)} rot={ts * 0.4} />}
@@ -307,9 +338,9 @@ const Body: React.FC<{ frame: number; f: number; handle: string; title: string }
           <Screen k={b.key} t={tb} ts={ts} />
         </div>
       </div>
-      {lid > 0.9 && <div style={{ position: "absolute", top: 380, width: "100%", textAlign: "center", fontFamily: INTER, fontWeight: 800, fontSize: 56, color: "white", opacity: clamp((ts - 18) / 8) }}>Good night.</div>}
+      {lid > 0.9 && <div style={{ position: "absolute", top: 380, width: "100%", textAlign: "center", fontFamily: INTER, fontWeight: 800, fontSize: 56, color: "white", opacity: clamp((ts - 34) / 8) }}>Good night.</div>}
       <Header n={bi + 1} title={title} />
-      <Label r={r} ts={ts} accent={accent} />
+      <Label r={r} ts={ts} accent={accent} te={te} />
       {flash > 0 && <AbsoluteFill style={{ background: "white", opacity: 0.7 * flash }} />}
     </AbsoluteFill>
   );

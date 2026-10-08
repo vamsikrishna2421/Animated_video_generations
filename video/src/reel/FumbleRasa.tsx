@@ -7,28 +7,28 @@ import { FPose, Fumble } from "./Fumble";
 // Each rasa is a face pose plus optional cartoon extras drawn in head space (tears, steam, hearts...).
 
 export type Extra = "tears" | "laughTears" | "steam" | "hearts" | "heartEyes" | "sparkles" | "gloom" | "vein" | "shine" | "halo";
-export type Rasa = { key: string; name: string; te: string; line: string; pose: FPose; extras?: Extra[] };
+export type Rasa = { key: string; name: string; te: string; sa: string; line: string; pose: FPose; extras?: Extra[] };
 
 const base: FPose = { still: true, breath: 0.5, armL: [14, 18], armR: [-14, -18] };
 
 export const RASAS: Rasa[] = [
-  { key: "adbhuta", name: "WONDER", te: "Adbhutam", line: "AI writes a poem in 3 seconds",
+  { key: "adbhuta", name: "WONDER", te: "Adbhutam", sa: "Adbhuta", line: "AI writes a poem in 3 seconds",
     pose: { ...base, eyeSize: 1.45, browL: 1, browR: 1, mo: 0.55, mw: 0.25, smile: 0.1, neck: 10, lookY: -0.2 }, extras: ["sparkles"] },
-  { key: "shringara", name: "LOVE", te: "Shrungaram", line: "AI fixes your bug at 2 AM",
+  { key: "shringara", name: "LOVE", te: "Shrungaram", sa: "Shringara", line: "AI fixes your sheet 2 minutes before the deadline",
     pose: { ...base, blush: 1, smile: 0.95, mw: 0.7, tilt: 10, browL: 0.7, browR: 0.7, eyeSize: 1.1 }, extras: ["heartEyes", "hearts"] },
-  { key: "hasya", name: "LAUGHTER", te: "Haasyam", line: "AI draws a hand with 7 fingers",
+  { key: "hasya", name: "LAUGHTER", te: "Haasyam", sa: "Hasya", line: "AI draws a hand with 7 fingers",
     pose: { ...base, shut: 1, mo: 0.8, smile: 1, mw: 0.95, tilt: -12, browL: 0.8, browR: 0.8, neck: -4 }, extras: ["laughTears"] },
-  { key: "bhayanaka", name: "FEAR", te: "Bhayanakam", line: '"AI will take your job"',
+  { key: "bhayanaka", name: "FEAR", te: "Bhayanakam", sa: "Bhayanaka", line: '"AI will take your job"',
     pose: { ...base, eyeSize: 1.3, browL: 0.9, browR: 0.9, knit: -0.7, mo: 0.3, mw: 0.55, smile: -0.7, sweat: 1, shrug: 0.6, lookX: -0.4, neck: -10 }, extras: ["gloom"] },
-  { key: "bibhatsa", name: "DISGUST", te: "Bheebhatsam", line: 'AI LinkedIn post: "Humbled to announce..."',
+  { key: "bibhatsa", name: "DISGUST", te: "Bheebhatsam", sa: "Bibhatsa", line: 'The AI-written "humbled & honoured" post',
     pose: { ...base, squint: 0.7, lid: 0.25, knit: 0.8, browL: -0.5, browR: 0.6, skew: 0.9, lipOut: 0.7, smile: -0.6, mw: 0.45, turn: -0.3, tilt: -9, lookX: 0.6 } },
-  { key: "raudra", name: "ANGER", te: "Raudram", line: "AI is confidently wrong",
+  { key: "raudra", name: "ANGER", te: "Raudram", sa: "Raudra", line: '"You\'re absolutely right!" (same wrong answer)',
     pose: { ...base, knit: 1, browL: -0.9, browR: -0.9, lid: 0.35, mo: 0.45, mw: 0.75, smile: -0.9, blush: 1, shrug: 0.35, neck: 6 }, extras: ["steam", "vein"] },
-  { key: "karuna", name: "SORROW", te: "Karunam", line: '"You\'ve reached your usage limit"',
+  { key: "karuna", name: "SORROW", te: "Karunam", sa: "Karuna", line: '"You\'ve reached your usage limit"',
     pose: { ...base, browL: 0.55, browR: 0.55, knit: -0.95, lid: 0.45, lookY: 0.55, smile: -0.95, mw: 0.5, lipOut: 0.55, tilt: 6, neck: -12, shrug: 0.3 }, extras: ["tears", "gloom"] },
-  { key: "veera", name: "COURAGE", te: "Veeram", line: "You finally write the perfect prompt",
+  { key: "veera", name: "COURAGE", te: "Veeram", sa: "Veera", line: "Sending the AI answer to your boss. Unread.",
     pose: { ...base, tilt: -10, neck: 16, lid: 0.15, knit: 0.5, browL: 0.15, browR: 0.15, mo: 0.12, smile: 0.95, mw: 0.85, skew: 0.2, lookX: 0.35, lookY: -0.2 }, extras: ["shine"] },
-  { key: "shanta", name: "PEACE", te: "Shaantam", line: "It finally works. Laptop closed.",
+  { key: "shanta", name: "PEACE", te: "Shaantam", sa: "Shanta", line: 'Boss: "Perfect, thanks!" Laptop closed.',
     pose: { ...base, shut: 1, smile: 0.3, mw: 0.4, tilt: 4, browL: 0.35, browR: 0.35, neck: 4 }, extras: ["halo"] },
 ];
 
