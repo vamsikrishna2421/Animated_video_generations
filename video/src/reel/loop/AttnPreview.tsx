@@ -22,7 +22,7 @@ export const AttnPreview: React.FC = () => (
 );
 
 // Dev-only: the distillation explainer scenes, evenly spaced cues.
-const DORDER = ["ds_hook", "ds_class", "ds_soft", "ds_results", "ds_cheap", "ds_catch", "ds_pick", "ds_quiz"] as const;
+const DORDER = ["ds_hook", "ds_class", "ds_soft", "ds_results", "ds_cheap", "ds_catch", "ds_pick", "ds_ask"] as const;
 export const DistPreview: React.FC = () => (
   <AbsoluteFill style={{ background: "#000" }}>
     {DORDER.map((t, i) => {

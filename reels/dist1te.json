@@ -1,0 +1,282 @@
+{
+ "id": "dist1te",
+ "title": "How cheap AI is made (Telugu audio)",
+ "label": "AI EXPLAINED",
+ "banner": "How cheap AI is made",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.0,
+ "gap": 0.35,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "musicLift": 3.0,
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "ds_hook",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The hook",
+     "title": "Under 30 minutes, under ₹5,000",
+     "notes": [
+      [
+       "Under 30 minutes, under ₹5,000 (~$50) of rented GPUs",
+       0
+      ],
+      [
+       "Beat OpenAI's o1-preview on competition maths (researchers' report)",
+       1
+      ],
+      [
+       "Its teacher: a smarter AI. That's distillation",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.45,
+     "text": "ముప్పై నిమిషాల లోపు. ఐదు వేల రూపాయల లోపు. [1] ఇప్పటికే ఉన్న ఒక ఎ ఐ, మ్యాథ్స్ లో ఓపెన్ ఎ ఐ రీజనింగ్ మోడల్ ని దాటేసింది అని రీసెర్చర్లు చెప్తున్నారు. [2] దానికి టీచర్ ఎవరు? [3] ఇంకా తెలివైన ఎ ఐ. దీన్నే డిస్టిలేషన్ అంటారు.",
+     "show": "Under 30 minutes. Under ₹5,000. An existing AI beat an OpenAI reasoning model at maths, researchers say. Its teacher? A smarter AI. This is called distillation."
+    }
+   ]
+  },
+  {
+   "id": "class",
+   "type": "ds_class",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The idea",
+     "title": "A big AI teaches a small one",
+     "notes": [
+      [
+       "Teacher: big, slow, expensive",
+       1
+      ],
+      [
+       "Student: small and fast",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_class.wav",
+     "maxgap": 0.45,
+     "text": "ఐడియా ఇదే: [1] పెద్ద, నెమ్మదైన, ఖరీదైన ఎ ఐ, [2] చిన్న, వేగమైన ఎ ఐ కి నేర్పిస్తుంది.",
+     "show": "The idea: a big, slow, expensive AI teaches a small, fast one."
+    }
+   ]
+  },
+  {
+   "id": "soft",
+   "type": "ds_soft",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Hidden lessons",
+     "title": "More than the final answer",
+     "notes": [
+      [
+       "An answer key only says 'cat'",
+       0
+      ],
+      [
+       "The teacher gives 90% cat, 9% tiger, 1% car",
+       2
+      ],
+      [
+       "Chatbots do this with words: how the teacher weighs every next word",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_soft.wav",
+     "maxgap": 0.45,
+     "text": "ఆన్సర్ కీ లో కేవలం 'క్యాట్' అని ఉంటుంది. [1] కానీ టీచర్ ఎ ఐ, ఆ ఫోటో ప్రతి ఆప్షన్ కి ఎంత దగ్గరగా ఉందో చెప్తుంది: [2] తొంభై శాతం క్యాట్, తొమ్మిది శాతం టైగర్, ఒక్క శాతం కార్. [3] ఈ చిన్న నంబర్లలోనే దాగి ఉన్న పాఠాలు ఉంటాయి. [4] చాట్ బాట్లు కూడా ఇలాగే, పదాలతో నేర్చుకుంటాయి: తర్వాత వచ్చే ప్రతి పదానికి టీచర్ ఎంత వెయిట్ ఇస్తుందో, స్టూడెంట్ కాపీ చేస్తుంది.",
+     "show": "An answer key just says 'cat'. A teacher AI shows how close it is to each option: 90% cat, 9% tiger, 1% car. Those small numbers are hidden lessons. Chatbots learn the same way, with words: the student copies how the teacher weighs every next word."
+    }
+   ]
+  },
+  {
+   "id": "results",
+   "type": "ds_results",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Does it work?",
+     "title": "97% of the score, much faster",
+     "notes": [
+      [
+       "DistilBERT (2019): kept 97% of the teacher's score",
+       1
+      ],
+      [
+       "40% smaller, 60% faster",
+       2
+      ],
+      [
+       "Google: Gemini 1.5 Flash learned from 1.5 Pro (2024)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_results.wav",
+     "maxgap": 0.45,
+     "text": "ఇది పని చేస్తుంది. [1] ఒక ఫేమస్ స్టూడెంట్ మోడల్, టీచర్ స్కోర్ లో తొంభై ఏడు శాతం నిలుపుకుంది, [2] నలభై శాతం చిన్నదిగా, అరవై శాతం వేగంగా. [3] గూగుల్ కూడా, తమ జెమినై ఫ్లాష్ పెద్ద ప్రో నుంచి ఇలాగే నేర్చుకుంది అని చెప్పింది.",
+     "show": "It works. One famous student kept 97% of its teacher's score, while being 40% smaller and 60% faster. Google also said its Gemini Flash learned from the bigger Pro this way."
+    }
+   ]
+  },
+  {
+   "id": "cheap",
+   "type": "ds_cheap",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The maths model",
+     "title": "1,000 worked solutions",
+     "notes": [
+      [
+       "An already-trained open model + 1,000 step-by-step solutions",
+       1
+      ],
+      [
+       "Under 30 minutes on rented GPUs",
+       2
+      ],
+      [
+       "Under ₹5,000 (s1, Stanford/UW/Ai2, 2025)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_cheap.wav",
+     "maxgap": 0.45,
+     "text": "మరి ఆ మ్యాథ్స్ మోడల్? [1] రీసెర్చర్లు ఇప్పటికే ట్రైన్ అయిన ఒక ఓపెన్ మోడల్ కి, ఇంకా తెలివైన ఎ ఐ నుంచి వెయ్యి వర్క్డ్ సొల్యూషన్స్ ఇచ్చారు. [2] ముప్పై నిమిషాల లోపు రెంటెడ్ చిప్స్, [3] ఐదు వేల రూపాయల లోపు.",
+     "show": "And that maths model? Researchers gave an already-trained open model 1,000 worked solutions from a smarter AI. Under 30 minutes of rented chips, under ₹5,000."
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "type": "ds_catch",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "Copied mistakes, and the rules",
+     "notes": [
+      [
+       "The student copies the teacher's mistakes",
+       1
+      ],
+      [
+       "Big AI companies' terms ban training a rival on their answers",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_catch.wav",
+     "maxgap": 0.45,
+     "text": "చిక్కు ఏంటంటే: [1] స్టూడెంట్, టీచర్ తప్పుల్ని కూడా కాపీ చేస్తుంది. [2] ఇంకా, చాలా పెద్ద ఎ ఐ కంపెనీల రూల్స్, వాటి ఆన్సర్స్ తో పోటీ మోడల్ తయారు చేయడాన్ని నిషేధిస్తాయి.",
+     "show": "The catch: the student copies its teacher's mistakes too. And most big AI companies' terms ban using their answers to build a rival."
+    }
+   ]
+  },
+  {
+   "id": "pick",
+   "type": "ds_pick",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Which one do I use?",
+     "title": "Mini/Flash first, Pro when it slips",
+     "notes": [
+      [
+       "Emails, summaries, extracting data: start with mini or flash",
+       1
+      ],
+      [
+       "Multi-step reasoning, or it keeps slipping: switch to Pro",
+       2
+      ],
+      [
+       "Test on 20 real examples first",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_pick.wav",
+     "maxgap": 0.45,
+     "text": "మరి మీరు ఏది వాడాలి? [1] ఈమెయిల్స్, సమ్మరీలు, డేటా తీయడం: మినీ లేదా ఫ్లాష్ తో మొదలుపెట్టండి. వేగంగా ఉంటుంది, డబ్బులు కడితే చవక కూడా. [2] స్టెప్ బై స్టెప్ రీజనింగ్ కావాలా, లేదా తప్పులు చేస్తుందా? ప్రో కి మారండి. [3] ముందు ఇరవై నిజమైన ఉదాహరణలతో టెస్ట్ చేయండి.",
+     "show": "So which do you use? Emails, summaries, pulling out data: start with mini or flash. Faster, and cheaper if you pay. Need multi-step reasoning, or it keeps slipping? Switch to Pro. Test on 20 real examples first."
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "type": "ds_ask",
+   "tail": 0.6,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "500 emails: Pro or Flash?",
+     "notes": [
+      [
+       "500 office emails to summarise",
+       0
+      ],
+      [
+       "Pro or Flash? Comment your pick",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_ask.wav",
+     "maxgap": 0.45,
+     "text": "మీ వంతు: ఐదు వందల ఆఫీస్ ఈమెయిల్స్ సమ్మరీ చేయాలి. [1] ప్రో నా, ఫ్లాష్ నా? కామెంట్ చేయండి. [2] ఎ ఐ ని సింపుల్ గా అర్థం చేసుకోవడానికి ఫాలో అవ్వండి.",
+     "show": "Your turn: 500 office emails to summarise. Pro or Flash? Comment your pick. Follow to understand AI, simply."
+    }
+   ]
+  }
+ ],
+ "handle": "@ai_maastaaru_telugu"
+}

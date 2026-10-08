@@ -1,0 +1,277 @@
+{
+ "id": "dist1",
+ "title": "How cheap AI is made: distillation",
+ "label": "AI EXPLAINED",
+ "banner": "How cheap AI is made",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.08,
+ "gap": 0.5,
+ "lead": 0.05,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.32
+ ],
+ "musicLift": 3.0,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "ds_hook",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The hook",
+     "title": "Under 30 minutes, under ₹5,000",
+     "notes": [
+      [
+       "Under 30 minutes, under ₹5,000 (~$50) of rented GPUs",
+       0
+      ],
+      [
+       "Beat OpenAI's o1-preview on competition maths (researchers' report)",
+       1
+      ],
+      [
+       "Its teacher: a smarter AI. That's distillation",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.4,
+     "text": "Under thirty minutes. Under five thousand rupees. [1] That's what it took to make an existing AI beat an OpenAI reasoning model at maths, its researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation.",
+     "tts": "Under thirty minutes. Under five thousand rupees. That's what it took to make an existing A I beat an Open A I reasoning model at maths, its researchers say. Its teacher? A smarter A I. This is called distillation."
+    }
+   ]
+  },
+  {
+   "id": "class",
+   "type": "ds_class",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The idea",
+     "title": "A big AI teaches a small one",
+     "notes": [
+      [
+       "Teacher: big, slow, expensive",
+       1
+      ],
+      [
+       "Student: small and fast",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_class.wav",
+     "maxgap": 0.4,
+     "text": "The idea: [1] a big, slow, expensive AI [2] teaches a small, fast one."
+    }
+   ]
+  },
+  {
+   "id": "soft",
+   "type": "ds_soft",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Hidden lessons",
+     "title": "More than the final answer",
+     "notes": [
+      [
+       "An answer key only says 'cat'",
+       0
+      ],
+      [
+       "The teacher gives 90% cat, 9% tiger, 1% car",
+       2
+      ],
+      [
+       "Chatbots do this with words: how the teacher weighs every next word",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_soft.wav",
+     "maxgap": 0.4,
+     "text": "An answer key just says 'cat'. [1] A teacher AI shows how much it looks like each option: [2] ninety percent cat, nine percent tiger, one percent car. [3] Those small numbers are hidden lessons. [4] Chatbots learn the same way, with words: the student copies how the teacher weighs every next word.",
+     "tts": "An answer key just says: cat. A teacher A I shows how much it looks like each option: ninety percent cat, nine percent tiger, one percent car. Those small numbers are hidden lessons. Chat bots learn the same way, with words: the student copies how the teacher weighs every next word."
+    }
+   ]
+  },
+  {
+   "id": "results",
+   "type": "ds_results",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Does it work?",
+     "title": "97% of the score, much faster",
+     "notes": [
+      [
+       "DistilBERT (2019): kept 97% of the teacher's score",
+       1
+      ],
+      [
+       "40% smaller, 60% faster",
+       2
+      ],
+      [
+       "Google: Gemini 1.5 Flash learned from 1.5 Pro (2024)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_results.wav",
+     "maxgap": 0.4,
+     "text": "It works. [1] One famous student kept ninety-seven percent of its teacher's score, [2] while being forty percent smaller and sixty percent faster. [3] And Google said its Gemini Flash learned from the bigger Pro this way.",
+     "tts": "It works. One famous student kept ninety-seven percent of its teacher's score, while being forty percent smaller and sixty percent faster. And Google said its Jemini Flash learned from the bigger Pro this way."
+    }
+   ]
+  },
+  {
+   "id": "cheap",
+   "type": "ds_cheap",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The maths model",
+     "title": "1,000 worked solutions",
+     "notes": [
+      [
+       "An already-trained open model + 1,000 step-by-step solutions",
+       1
+      ],
+      [
+       "Under 30 minutes on rented GPUs",
+       2
+      ],
+      [
+       "Under ₹5,000 (s1, Stanford/UW/Ai2, 2025)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_cheap.wav",
+     "maxgap": 0.4,
+     "text": "And that maths model? [1] Researchers gave an already-trained open model one thousand worked solutions from a smarter AI. [2] Under thirty minutes of rented chips, [3] under five thousand rupees.",
+     "tts": "So, that maths model? Researchers gave an already-trained open model one thousand worked solutions from a smarter A I. Under thirty minutes of rented chips, under five thousand rupees."
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "type": "ds_catch",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "Copied mistakes, and the rules",
+     "notes": [
+      [
+       "The student copies the teacher's mistakes",
+       1
+      ],
+      [
+       "Big AI companies' terms ban training a rival on their answers",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_catch.wav",
+     "maxgap": 0.4,
+     "text": "The catch: [1] the student copies its teacher's mistakes too. [2] And most big AI companies' terms ban using their answers to build a rival."
+    }
+   ]
+  },
+  {
+   "id": "pick",
+   "type": "ds_pick",
+   "tail": 0.45,
+   "data": {
+    "yt": {
+     "chapter": "Which one do I use?",
+     "title": "Mini/Flash first, Pro when it slips",
+     "notes": [
+      [
+       "Emails, summaries, extracting data: start with mini or flash",
+       1
+      ],
+      [
+       "Multi-step reasoning, or it keeps slipping: switch to Pro",
+       2
+      ],
+      [
+       "Test on 20 real examples first",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_pick.wav",
+     "maxgap": 0.4,
+     "text": "So which do you use? [1] Emails, summaries, pulling out data: start with mini or flash. Faster, and cheaper if you pay. [2] Multi-step reasoning, or it keeps slipping? Switch to Pro. [3] And test on twenty real examples first."
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "type": "ds_ask",
+   "tail": 0.6,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "500 emails: Pro or Flash?",
+     "notes": [
+      [
+       "500 office emails to summarise",
+       0
+      ],
+      [
+       "Pro or Flash? Comment your pick",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_ask.wav",
+     "maxgap": 0.4,
+     "text": "Your turn: five hundred office emails to summarise. [1] Pro or Flash? Comment your pick. [2] Follow for more AI, explained simply."
+    }
+   ]
+  }
+ ]
+}
