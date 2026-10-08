@@ -169,7 +169,7 @@ const DsHook: React.FC<SP> = ({ cue }) => {
       const swap = seg(f, c4 - 6, c4 + 4);
       c.save(); c.translate(-1200 * swap * swap, 0);
       hand(c, "An AI beat OpenAI's", W / 2, 350, 86, COL.cream, 1, r, -0.02, "center");
-      hand(c, "o1-preview at maths", W / 2, 445, 86, COL.yellow, 1, r, -0.02, "center");
+      hand(c, "o1-preview at math", W / 2, 445, 86, COL.yellow, 1, r, -0.02, "center");
       c.restore();
       if (f >= c4) {
         tag(c, "which one should YOU use?", W / 2, 360, 76, COL.yellow, COL.ink, -0.03, fade(f, c4, 8));
@@ -177,7 +177,7 @@ const DsHook: React.FC<SP> = ({ cue }) => {
       }
       const k1 = 1 + 0.2 * (1 - easeOut(fade(f, 0, 6))), k2 = 1 + 0.12 * (1 - easeOut(fade(f, 1, 6)));
       c.save(); c.translate(290, 680); c.scale(k1, k1); stopwatch(c, 0, 0, 140, f / 30, "< 30 min", r); c.restore();
-      c.save(); c.translate(745, 690); c.scale(k2, k2); c.translate(-745, -690); tag(c, "under ₹5,000", 745, 690, 100, COL.yellow, COL.ink, 0.07, 1); c.restore();
+      c.save(); c.translate(745, 690); c.scale(k2, k2); c.translate(-745, -690); tag(c, "under $50", 745, 690, 110, COL.yellow, COL.ink, 0.07, 1); c.restore();
       // teaser for the payoff: headline-size, fully on screen from ~1.5 s to ~8 s
       if (f >= 40 && f < tEnd + 10) {
         const out = seg(f, tEnd, tEnd + 10);
@@ -193,7 +193,7 @@ const DsHook: React.FC<SP> = ({ cue }) => {
         // the fine print, then it slides away when the word DISTILLATION arrives
         c.save(); c.translate(-1200 * Math.pow(seg(f, c3, c3 + 10), 2), 0);
         page(c, 110, 860, 860, 210, boil, -0.015);
-        hand(c, "OpenAI's 2024 model · competition maths", 150, 935, 50, COL.ink, seg(f, tEnd, tEnd + 12), r, -0.02);
+        hand(c, "OpenAI's 2024 model · competition math", 150, 935, 50, COL.ink, seg(f, tEnd, tEnd + 12), r, -0.02);
         hand(c, "built on an existing open model", 150, 1010, 50, "#15803d", seg(f, tEnd + 8, tEnd + 22), r, -0.02);
         hand(c, "researchers' report (s1, 2025)", W / 2, 1125, 46, COL.pale, seg(f, tEnd + 16, tEnd + 28), r, -0.01, "center");
         c.restore();
@@ -321,7 +321,7 @@ const DsCheap: React.FC<SP> = ({ cue }) => {
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1400 + boil);
-      hand(c, "that maths model?", W / 2, 360, 88, COL.orangeLight, seg(f, 0, 12), r, -0.03, "center");
+      hand(c, "that math model?", W / 2, 360, 88, COL.orangeLight, seg(f, 0, 12), r, -0.03, "center");
       // left: the teacher's percentages, crossed out ("it got no percentages")
       c.save(); rrect(c, 60, 430, 450, 420, 26); c.fillStyle = "rgba(255,255,255,0.08)"; c.fill(); c.restore();
       hand(c, "percentages", 285, 500, 58, COL.cream, seg(f, 4, 16), r, -0.02, "center");
@@ -346,7 +346,7 @@ const DsCheap: React.FC<SP> = ({ cue }) => {
         page(c, 110, 1010, 860, 150, boil, -0.01);
         hand(c, "still counts as distillation", W / 2, 1105, 64, "#15803d", seg(f, tD, tD + 14), r, -0.02, "center");
       }
-      if (f >= c2) tag(c, "₹5,000 = only this last step", W / 2, 1250, 66, COL.yellow, COL.ink, -0.03, fade(f, c2, 8));
+      if (f >= c2) tag(c, "$50 = only this last step", W / 2, 1250, 66, COL.yellow, COL.ink, -0.03, fade(f, c2, 8));
       hand(c, "s1: Stanford, UW, Ai2 (2025) · already-trained open model", W / 2, 1360, 44, COL.pale, seg(f, c1 + 20, c1 + 36), r, -0.01, "center");
     }} />
     </>
