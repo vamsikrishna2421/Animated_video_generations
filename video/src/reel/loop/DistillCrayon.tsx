@@ -13,19 +13,19 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 // ---------- robots ----------
-type RobotOpts = { body: string; accent: string; glasses?: boolean; eyes?: "open" | "happy" | "wide"; look?: number; mouth?: "smile" | "o" | "flat" | "grin"; fan?: number; arms?: "down" | "point" | "write" | "up" | "thumb"; bob?: number };
+export type RobotOpts = { body: string; accent: string; glasses?: boolean; eyes?: "open" | "happy" | "wide"; look?: number; mouth?: "smile" | "o" | "flat" | "grin"; fan?: number; arms?: "down" | "point" | "write" | "up" | "thumb"; bob?: number };
 const fillBlob = (c: Ctx, path: () => void, color: string, shade: string[], r: () => number) => {
   c.save(); path(); c.fillStyle = color; c.fill(); c.clip();
   hatch(c, [-400, -500, 400, 100], shade, r, { gap: 9, w: 3, alpha: 0.35, angle: -0.8 });
   c.restore();
 };
-const rrect = (c: Ctx, x: number, y: number, w: number, h: number, rad: number) => {
+export const rrect = (c: Ctx, x: number, y: number, w: number, h: number, rad: number) => {
   c.beginPath(); c.moveTo(x + rad, y); c.lineTo(x + w - rad, y); c.quadraticCurveTo(x + w, y, x + w, y + rad); c.lineTo(x + w, y + h - rad);
   c.quadraticCurveTo(x + w, y + h, x + w - rad, y + h); c.lineTo(x + rad, y + h); c.quadraticCurveTo(x, y + h, x, y + h - rad); c.lineTo(x, y + rad); c.quadraticCurveTo(x, y, x + rad, y); c.closePath();
 };
-const rrectPts = (x: number, y: number, w: number, h: number): Pt[] => [[x, y], [x + w, y], [x + w, y + h], [x, y + h], [x, y]];
+export const rrectPts = (x: number, y: number, w: number, h: number): Pt[] => [[x, y], [x + w, y], [x + w, y + h], [x, y + h], [x, y]];
 
-const robot = (c: Ctx, x: number, y: number, s: number, boil: number, seed: number, o: RobotOpts) => {
+export const robot = (c: Ctx, x: number, y: number, s: number, boil: number, seed: number, o: RobotOpts) => {
   const r = rng(seed * 17 + boil);
   c.save(); c.translate(x, y + (o.bob ?? 0)); c.scale(s, s);
   const shade = [o.accent, COL.ink, "#ffffff"];
@@ -79,10 +79,10 @@ const robot = (c: Ctx, x: number, y: number, s: number, boil: number, seed: numb
   if (m === "flat") stroke(c, [[-18, -250], [18, -250]], COL.ink, 5, r, { passes: 2 });
   c.restore();
 };
-const TEACHER: RobotOpts = { body: "#1d3fa8", accent: COL.orange, glasses: true };
-const STUDENT: RobotOpts = { body: COL.orange, accent: COL.yellow };
+export const TEACHER: RobotOpts = { body: "#1d3fa8", accent: COL.orange, glasses: true };
+export const STUDENT: RobotOpts = { body: COL.orange, accent: COL.yellow };
 
-const tag = (c: Ctx, text: string, x: number, y: number, size: number, bg: string, fg: string, rot: number, p: number) => {
+export const tag = (c: Ctx, text: string, x: number, y: number, size: number, bg: string, fg: string, rot: number, p: number) => {
   if (p <= 0) return;
   c.save(); c.translate(x, y); c.rotate(rot); c.scale(easeOut(p), easeOut(p));
   c.font = `700 ${size}px Caveat`; const w = c.measureText(text).width;
@@ -142,7 +142,7 @@ const speedLines = (c: Ctx, x: number, y: number, n: number, r: () => number, a 
   c.restore();
 };
 
-const Sfx: React.FC<{ at: number; src: string; vol?: number }> = ({ at, src, vol = 0.6 }) => (
+export const Sfx: React.FC<{ at: number; src: string; vol?: number }> = ({ at, src, vol = 0.6 }) => (
   <Sequence from={Math.max(0, at)} durationInFrames={40} layout="none"><Audio src={staticFile(src)} volume={vol} /></Sequence>
 );
 const stopwatch = (c: Ctx, x: number, y: number, R: number, t: number, label: string, r: () => number) => {
