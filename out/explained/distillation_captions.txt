@@ -3,42 +3,49 @@ VIDEO: out/explained/distillation_insta_en.mp4 (Instagram, @ai_maastaaru)
        out/youtube/distillation_yt_en.mp4 / distillation_yt_te.mp4 (YouTube, 16:9)
 
 === CAPTION (English page) ===
-Under 30 minutes. Under ₹5,000. That's what it took to make an existing AI beat an OpenAI reasoning model at maths, its researchers say. Its teacher? A smarter AI.
+Under 30 minutes. Under ₹5,000. That's what it took to make an existing AI beat OpenAI's o1-preview (2024) at competition maths, its researchers say. Its teacher? A smarter AI.
 
-This is distillation: how cheap "mini" and "flash" models learn from big ones.
-- The teacher doesn't just say "cat". It says 90% cat, 9% tiger, 1% car, and the student learns those hidden lessons
+This is distillation: how the cheap "Flash" and "mini" models learn from big ones.
+- An answer key just says "cat". A teacher says 90% cat, 9% tiger, 1% car, and those small numbers are hidden lessons
 - Chatbots do the same with words: the student copies how the teacher weighs every next word
-- DistilBERT kept 97% of its teacher's score while being 40% smaller and 60% faster
-- Google said Gemini 1.5 Flash learned from 1.5 Pro this way
-- The catch: students copy the teacher's mistakes, and big AI companies' terms ban training rivals on their answers
+- In 2024, Google said Gemini 1.5 Flash learned from 1.5 Pro this way
+- That maths model didn't copy percentages: it got 1,000 solved examples written by a smarter AI. The ₹5,000 paid only for that last step, on top of an already-trained open model
+- The catch: students copy the teacher's mistakes, and big AI companies' terms ban training a rival on their answers
 
-Which one should you use? Emails, summaries, pulling out data: start with mini/flash. Multi-step reasoning, or it keeps slipping: Pro. Test on 20 real examples first.
+Which one should you use? Emails, summaries, pulling out data: a small model (Flash, Flash-Lite, mini). Multi-step work, or it keeps getting it wrong: a bigger model like Gemini Pro (usually a paid plan). For developers paying per use, Pro costs about 3x Flash right now. Test 20 real examples first.
 
-Your turn: 500 office emails to summarise. Pro or Flash? Comment your pick.
+Heads-up: from Oct 9, free Gemini app accounts get Flash-Lite only; Flash and Pro move to paid plans.
+
+Your turn: 500 customer complaints. Find the ones that could become legal trouble. Flash, Pro, or both? Comment your pick.
 Follow @ai_maastaaru for more AI, explained simply.
 
-Sources: s1 paper (arXiv 2501.19393: beats o1-preview on competition maths by up to 27%); TechCrunch, Feb 5 2025 (under $50 of compute, under 30 minutes on 16 H100s); DistilBERT (arXiv 1910.01108); Google I/O 2024 (Gemini 1.5 Flash distilled from 1.5 Pro).
+Sources: s1 paper (arXiv 2501.19393: beats o1-preview on competition maths by up to 27%); TechCrunch, Feb 5 2025 (under $50 of compute, under 30 minutes on 16 H100s); Google I/O 2024 (Gemini 1.5 Flash distilled from 1.5 Pro); Google Gemini API pricing, updated Oct 7 2026 (Gemini 3.8 Flash $0.75/$3.75 per 1M tokens until Dec 31 2026, Gemini 3.1 Pro $2/$12); Gemini app plan changes from Oct 9 2026 (TechRadar, Business Today).
 
 === HASHTAGS ===
 #AI #Distillation #Gemini #LearnAI #AIExplained
 
-=== PINNED_COMMENT ===
-Our pick: Flash/mini for 500 emails (fast, cheap). Check 20 of them; switch to Pro only if it misses key points.
+=== PINNED_COMMENT (post a day later) ===
+Our pick: both. Flash sorts all 500 (fast, cheap), then Pro checks only the flagged ones. Test 20 first.
 
 === CAPTION (Telugu page) ===
-30 nimishala lopu. ₹5,000 lopu. Oka existing AI ni maths lo OpenAI reasoning model ni daatela chesaru ani researchers cheptunnaru. Daaniki teacher? Inka telivaina AI 🤖
+30 nimishala lopu. ₹5,000 lopu. Oka existing AI, maths lo OpenAI tholi reasoning model (o1-preview, 2024) ni daatesindi ani researchers cheptunnaru. Daaniki teacher? Inka telivaina AI 🤖
 
-Idhe distillation: chinna "mini", "flash" models pedda models nunchi ela nerchukuntayo.
-✅ Teacher "cat" ani matrame cheppadu: 90% cat, 9% tiger, 1% car. Aa chinna numbers lone daagi unna paathalu
+Idhe distillation: chinna "Flash", "mini" models pedda models nunchi ela nerchukuntayo.
+✅ Answer key lo kevalam "pilli". Teacher cheptundi: pilli 90%, puli 9%, kaaru 1%. Aa chinna numbers lone daagi unna paathalu
 ✅ Chatbots kuda padalatho ilaage nerchukuntayi
-✅ DistilBERT teacher score lo 97% nilupukundi, 40% chinnadi, 60% vegam
-✅ Gemini 1.5 Flash, 1.5 Pro nunchi ilaage nerchukundi ani Google cheppindi
-✅ Chikku: teacher tappulu kuda copy avutayi; pedda AI companies rules rival model ki vaari answers vaadakudadu antayi
+✅ 2024 lo Gemini 1.5 Flash, 1.5 Pro nunchi ilaage nerchukundi ani Google cheppindi
+✅ Aa maths model percentages copy cheyyaledu: inka telivaina AI raasina 1,000 solved examples tho nerchukundi. Aa ₹5,000 aa chivari step ki matrame
+✅ Chikku: teacher tappulu kuda copy avutayi; pedda AI companies tama answers tho rival model tayaru cheyyadaniki oppukovu
 
-Edi vaadali? Emails, summaries, data: mini/flash tho modalu pettandi. Multi-step reasoning ki Pro. Mundu 20 real examples tho test cheyyandi.
+Edi vaadali? Emails, summaries, data: chinna model chaalu (Flash, Flash-Lite, mini). Chaala steps unna pani, leda padhe padhe tappu chestunte: Gemini Pro lanti pedda model (saadharananga paid plan). Vaadinanta dabbu katte developers ki, prastutam Pro, Flash kante daadaapu 3 retlu kharidu. Mundu 20 real examples tho test cheyyandi.
 
-Mee vantu: 500 office emails summary cheyyali. Pro aa, Flash aa? Comment cheyyandi 👇
+Gamaninchandi: Oct 9 nunchi free Gemini app lo Flash-Lite matrame; Flash, Pro paid plans lo.
+
+Mee vantu: 500 customer complaints. Vaatilo legal samasya ayyevi evo kanipettali. Flash aa, Pro aa, rendu naa? Comment cheyyandi 👇
 Follow @ai_maastaaru_telugu 🔔
 
 === HASHTAGS (Telugu) ===
 #AIinTelugu #TeluguAI #Distillation #LearnAI #TeluguTech
+
+=== PINNED_COMMENT (Telugu, post a day later) ===
+Maa pick: rendu. Flash tho 500 sort cheyyandi (fast, cheap), flag ayina vaatini matrame Pro tho check cheyyandi. Mundu 20 test cheyyandi.
