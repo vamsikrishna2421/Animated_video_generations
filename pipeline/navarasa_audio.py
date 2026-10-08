@@ -274,7 +274,9 @@ def main():
         place(fx, blip(72 + [0, 4, 7, 9, 12, 14, 16][k]), (fl["start"] + fl["step"] * k) / TL["fps"])
         place(fx, dappu() * 0.35, (fl["start"] + fl["step"] * k) / TL["fps"])
     place(fx, dappu() * 0.9, 0.0)
-    place(music, groove(0.0, 2.0, 0.55, {"bass", "stab"}), 0.0)
+    place(music, groove(TL["hook"][0], TL["hook"][1], 0.95, {"bass", "stab", "hat", "clap"}), 0.0)
+    first = TL["beats"][0]["snap"]
+    place(fx, riser(first - 1.0) * 0.7, 1.0)
 
     # beats: the bed builds layer by layer
     for i, b in enumerate(beats):
@@ -298,14 +300,16 @@ def main():
     pz = [b for b in beats if b["key"] == "shanta"][0]
     place(music, pad([48, 55, 60, 64, 67], pz["end"] - pz["start"]) * 1.6, pz["start"])
     place(fx, whoosh(0.35, True) * 0.2, pz["snap"] - 0.3)
-    place(fx, ping(), pz["snap"] - 0.05)
+    place(fx, ping() * 1.8, pz["snap"] - 0.05)
+    place(fx, bell(79, 1.6) * 0.7, pz["snap"])
+    place(fx, bell(84, 2.0) * 0.7, pz["snap"] + 0.18)
     place(fx, STINGS["shanta"]() * GAIN["shanta"], pz["snap"] + 0.05)
     for c in range(4):
         t = t_(0.03)
         place(fx, hp(rng.standard_normal(len(t)), 3000) * np.exp(-t * 120) * 0.1, pz["start"] + 0.12 + c * 0.09)
 
     # end card: full groove back, riser, final hit
-    place(music, groove(end0, total, 1.05, {"bass", "stab", "hat", "clap", "tune"}), end0)
+    place(music, groove(end0, total, 1.45, {"bass", "stab", "hat", "clap", "tune"}), end0)
     for i in range(9):
         t = t_(0.1)
         place(fx, np.sin(2 * np.pi * (700 + 60 * i) * t) * np.exp(-t * 40) * 0.25, end0 + (6 + i * 3) / TL["fps"])
@@ -321,8 +325,8 @@ def main():
     for b in beats:
         a, z = int(b["snap"] * SR), int((b["snap"] + 0.7) * SR)
         r = int(0.15 * SR)
-        duck[a:z] = np.minimum(duck[a:z], 0.5)
-        duck[z:z + r] = np.minimum(duck[z:z + r], np.linspace(0.5, 1, len(duck[z:z + r])))
+        duck[a:z] = np.minimum(duck[a:z], 0.7)
+        duck[z:z + r] = np.minimum(duck[z:z + r], np.linspace(0.7, 1, len(duck[z:z + r])))
     music *= duck
     music[int(drop0 * SR):int(drop1 * SR)] = 0
     fx[int(drop0 * SR):int(drop1 * SR)] *= 0.0

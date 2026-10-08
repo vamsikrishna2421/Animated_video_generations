@@ -72,7 +72,7 @@ const ScrLove: React.FC<{ t: number }> = ({ t }) => {
   const fixed = t > 14;
   const left = 118 - Math.floor(t / 30);
   const cell = (v: string, bad?: boolean) => (
-    <div style={{ border: "2px solid #cbd5e1", padding: "8px 10px", fontFamily: MONO, fontSize: 32, textAlign: "center", color: bad && !fixed ? "#dc2626" : bad ? "#16a34a" : "#0f172a", background: bad && !fixed ? "#fee2e2" : bad ? "#dcfce7" : "white", fontWeight: bad ? 700 : 400 }}>{bad && !fixed ? "#N/A" : v}</div>
+    <div style={{ border: "2px solid #cbd5e1", padding: "8px 10px", fontFamily: MONO, fontSize: 40, textAlign: "center", color: bad && !fixed ? "#dc2626" : bad ? "#16a34a" : "#0f172a", background: bad && !fixed ? "#fee2e2" : bad ? "#dcfce7" : "white", fontWeight: bad ? 700 : 400 }}>{bad && !fixed ? "#N/A" : v}</div>
   );
   return (
     <div style={{ height: "100%", background: "#f8fafc", padding: 22, boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 14 }}>
@@ -103,29 +103,39 @@ const Hand7: React.FC<{ n: number }> = ({ n }) => {
     </svg>
   );
 };
+const WALL = "Great question! The answer depends on several important factors. First, let's consider the broader context. Historically, experts have debated this topic at length. On one hand, there are compelling arguments in favour. On the other hand, it is worth noting several considerations. Additionally, individual circumstances may vary. Furthermore, it is essential to weigh the pros and cons carefully. In many cases, the best approach is nuanced. Ultimately, the right answer depends on your specific goals, preferences and situation. In conclusion, ".repeat(3);
 const ScrLaugh: React.FC<{ t: number; ts: number }> = ({ t, ts }) => (
-  <div style={{ height: "100%", background: "#f8fafc", display: "flex", flexDirection: "column", alignItems: "center", padding: 18, boxSizing: "border-box" }}>
-    <div style={{ alignSelf: "stretch", background: "#e2e8f0", borderRadius: 20, padding: "10px 20px", fontFamily: INTER, fontWeight: 600, fontSize: 38, color: "#0f172a" }}>{typed("Draw: a friendly hand", t, 3.5)}</div>
-    {t > 9 && <div style={{ marginTop: 6, transform: `rotate(${6 * Math.sin(t / 5)}deg)` }}><Hand7 n={ts < 0 ? 0 : Math.min(7, Math.floor(ts / 2.2) + 1)} /></div>}
-  </div>
+  <Chat>
+    <Bubble me fs={44}>Yes or no?</Bubble>
+    {t > 5 && (
+      <div style={{ alignSelf: "flex-start", width: "100%", height: 300, overflow: "hidden", background: "#e2e8f0", borderRadius: 22, padding: "10px 16px", boxSizing: "border-box" }}>
+        <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 21, lineHeight: 1.25, color: "#334155", transform: `translateY(${-Math.max(0, t - 8) * 9}px)` }}>{WALL}</div>
+      </div>
+    )}
+    {ts > 3 && <div style={{ position: "absolute", left: 0, right: 0, bottom: 26, textAlign: "center" }}><span style={{ background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 50, padding: "2px 20px", borderRadius: 12, display: "inline-block", transform: `rotate(-3deg) scale(${easeBack(clamp((ts - 3) / 6))})` }}>IT WAS A YES/NO QUESTION</span></div>}
+  </Chat>
 );
 
 const ScrFear: React.FC<{ t: number }> = ({ t }) => (
-  <div style={{ height: "100%", background: "#0b1020", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 34px", boxSizing: "border-box", position: "relative", overflow: "hidden" }}>
-    <div style={{ display: "inline-block", alignSelf: "flex-start", background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 40, padding: "2px 18px", letterSpacing: 2, opacity: Math.floor(t / 6) % 2 ? 0.75 : 1 }}>BREAKING</div>
-    <div style={{ fontFamily: ANTON, fontSize: 96, lineHeight: 1.0, color: "white", marginTop: 14 }}>AI WILL TAKE<br />YOUR JOB</div>
-    <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 28, color: "#94a3b8", marginTop: 10 }}>(every headline, every day)</div>
+  <div style={{ height: "100%", background: "#f8fafc", padding: "20px 26px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 14 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 14 }}><div style={{ width: 60, height: 60, borderRadius: 30, background: "linear-gradient(135deg,#0f766e,#14b8a6)" }} /><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "#0f172a" }}>Manager</div></div>
+    <div style={{ alignSelf: "flex-start", background: "#0b1020", borderRadius: 20, padding: "14px 22px", width: "86%", boxSizing: "border-box" }}>
+      <span style={{ background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 28, padding: "0 10px", letterSpacing: 1 }}>BREAKING</span>
+      <div style={{ fontFamily: ANTON, fontSize: 64, lineHeight: 1.0, color: "white", marginTop: 6 }}>AI WILL TAKE YOUR JOB</div>
+    </div>
+    {t > 11 && <div style={{ alignSelf: "flex-start", background: "#e2e8f0", borderRadius: 26, padding: "8px 26px", fontFamily: INTER, fontWeight: 800, fontSize: 64, color: "#0f172a", transform: `scale(${easeBack(clamp((t - 11) / 6))})`, transformOrigin: "0% 50%" }}>FYI :)</div>}
   </div>
 );
+
 const ScrDisgust: React.FC<{ t: number }> = ({ t }) => (
-  <div style={{ height: "100%", background: "#f8fafc", padding: "24px 30px", boxSizing: "border-box", position: "relative" }}>
+  <div style={{ height: "100%", background: "#f8fafc", padding: "22px 28px", boxSizing: "border-box", position: "relative" }}>
     <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-      <div style={{ width: 70, height: 70, borderRadius: 35, background: "linear-gradient(135deg,#f59e0b,#db2777)" }} />
+      <div style={{ width: 64, height: 64, borderRadius: 32, background: "linear-gradient(135deg,#f59e0b,#db2777)" }} />
       <div><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "#0f172a" }}>Growth Guru</div><div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 24, color: "#64748b" }}>Thought Leader</div></div>
-      <div style={{ marginLeft: "auto", background: "#fef3c7", color: "#92400e", fontFamily: INTER, fontWeight: 800, fontSize: 26, padding: "4px 14px", borderRadius: 10 }}>AI-WRITTEN</div>
     </div>
-    <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 50, color: "#0f172a", lineHeight: 1.15, marginTop: 22 }}>{typed("Humbled & honoured to announce...", t, 6)}</div>
-    {t > 10 && <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "#2563eb", marginTop: 14 }}>#blessed #synergy</div>}
+    <div style={{ marginTop: 16, display: "inline-block", background: "#fde047", fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "#0f172a", padding: "2px 10px", borderRadius: 6 }}>Certainly! Here's a heartfelt post:</div>
+    {t > 6 && <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 44, color: "#0f172a", lineHeight: 1.15, marginTop: 14 }}>{typed("Humbled & honoured to announce...", t - 6, 7)}</div>}
+    {t > 14 && <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 38, color: "#2563eb", marginTop: 10 }}>#blessed #synergy</div>}
   </div>
 );
 
@@ -136,10 +146,10 @@ const ScrAnger: React.FC<{ t: number; ts: number }> = ({ t, ts }) => (
     {t > 22 && (
       <Bubble fs={36}>
         {typed("You're absolutely right! It's ", t - 22, 6)}
-        {t > 22 + 31 / 6 && <span style={ts > 4 ? { color: "#dc2626", textDecoration: "line-through", textDecorationThickness: 5 } : undefined}>Sydney.</span>}
+        {t > 22 + 31 / 6 && <span>Sydney.</span>}
       </Bubble>
     )}
-    {ts > 10 && <div style={{ position: "absolute", right: 30, bottom: 24, background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 40, padding: "2px 18px", borderRadius: 12, transform: "rotate(-4deg)" }}>(IT'S CANBERRA)</div>}
+    {ts > 6 && <div style={{ position: "absolute", right: 26, bottom: 20, background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 52, padding: "2px 20px", borderRadius: 12, transform: `rotate(-4deg) scale(${easeBack(clamp((ts - 6) / 6))})` }}>(IT'S CANBERRA)</div>}
   </Chat>
 );
 
@@ -168,7 +178,7 @@ const ScrCourage: React.FC<{ t: number; ts: number }> = ({ t, ts }) => {
       <div style={{ fontSize: 34, fontWeight: 600, color: "#64748b", borderBottom: "2px solid #e2e8f0", paddingBottom: 8 }}>To: <span style={{ color: "#0f172a", fontWeight: 800 }}>Boss</span></div>
       <div style={{ fontSize: 34, fontWeight: 600, color: "#64748b", borderBottom: "2px solid #e2e8f0", padding: "8px 0" }}>Subject: <span style={{ color: "#0f172a", fontWeight: 800 }}>Final report</span></div>
       <div style={{ marginTop: 12, background: "#eef2ff", borderRadius: 14, padding: "12px 16px", fontSize: 34, fontWeight: 600, color: "#4338ca", fontStyle: "italic" }}>[AI answer, pasted]</div>
-      <div style={{ position: "absolute", left: 30, bottom: 26, background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 38, padding: "0 16px", borderRadius: 10, transform: "rotate(-4deg)", opacity: clamp((t - 8) / 4) }}>DIDN'T READ IT</div>
+      <div style={{ position: "absolute", left: 26, bottom: 20, background: "#dc2626", color: "white", fontFamily: ANTON, fontSize: 58, padding: "0 18px", borderRadius: 12, transform: "rotate(-5deg)", opacity: clamp((t - 8) / 4) }}>DIDN'T READ IT</div>
       <div style={{ position: "absolute", right: 30, bottom: 24, background: sent ? "#16a34a" : "#2563eb", color: "white", fontFamily: ANTON, fontSize: 48, padding: "4px 34px", borderRadius: 14, transform: `scale(${sent && ts < 4 ? 0.9 : 1})` }}>{sent ? "SENT ✓" : "SEND"}</div>
       {!sent && <svg width={44} height={56} style={{ position: "absolute", left: cx, top: cy }} viewBox="0 0 44 56"><path d="M 4,4 L 4,46 L 15,36 L 23,54 L 31,50 L 23,32 L 38,32 Z" fill="white" stroke="#111" strokeWidth={4} strokeLinejoin="round" /></svg>}
     </div>
@@ -251,9 +261,9 @@ const EndCard: React.FC<{ f: number; handle: string }> = ({ f, handle }) => {
   const pulse = 1 + 0.06 * Math.max(0, 1 - Math.abs(f - F(TL.total - 0.9)) / 6);
   return (
     <AbsoluteFill style={{ background: "#0f172a" }}>
-      <div style={{ position: "absolute", top: 96, width: "100%", textAlign: "center", fontFamily: ANTON, fontSize: 78, lineHeight: 1.12, color: "white", opacity: clamp(t / 6) }}>WHICH ONE ARE YOU<br />RIGHT NOW?</div>
-      {RASAS.map((r, i) => {
-        const p = easeBack(clamp((t - 6 - i * 3) / 8));
+      <div style={{ position: "absolute", top: 96, width: "100%", textAlign: "center", fontFamily: ANTON, fontSize: 78, lineHeight: 1.12, color: "white" }}>WHICH ONE ARE YOU<br />RIGHT NOW?</div>
+      {TL.beats.map((bt) => rasaOf(bt.key)).map((r, i) => {
+        const p = easeBack(clamp((t + 2 - i * 2) / 6));
         if (p <= 0) return null;
         const x = 30 + (i % 3) * 345, y = 300 + Math.floor(i / 3) * 370;
         return (
@@ -264,9 +274,9 @@ const EndCard: React.FC<{ f: number; handle: string }> = ({ f, handle }) => {
           </div>
         );
       })}
-      <div style={{ position: "absolute", top: 1405, width: "100%", textAlign: "center", opacity: clamp((t - 40) / 8), transform: `scale(${pulse})` }}>
+      <div style={{ position: "absolute", top: 1405, width: "100%", textAlign: "center", opacity: clamp((t - 16) / 6), transform: `scale(${pulse})` }}>
         <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 60, color: "#fde047" }}>Comment your number</div>
-        <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 38, color: "white", marginTop: 4 }}>and tag the friend who's always #7</div>
+        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 46, color: "white", marginTop: 4 }}>Tag the friend who's always #8</div>
         <div style={{ fontFamily: ANTON, fontSize: handle.length > 16 ? 66 : 78, color: "white", marginTop: 12 }}>{handle}</div>
         <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 36, color: "#cbd5e1", marginTop: 6 }}>Follow for more AI fun</div>
       </div>
