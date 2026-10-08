@@ -439,6 +439,9 @@ def main(spec_path: Path) -> None:
             })
             t += dur + line.get("gap", GAP)
         t += sc.get("tail", 0.25)
+        if spec.get("beatSnap") and spec.get("music") == "lofi" and si < len(spec["scenes"]) - 1:
+            beat = 60 / 88   # the lofi bed's beat: start the next scene (the cut) on a beat
+            t = max(t, np.ceil((t - 0.12) / beat) * beat)
         scenes.append({"id": sc["id"], "type": sc["type"], "data": sc.get("data", {}), "from": round(s_from * FPS),
                        "frames": round((t - s_from) * FPS), "lines": lines})
     total = t + 0.4
@@ -459,7 +462,7 @@ def main(spec_path: Path) -> None:
         if spec.get("captionMode"):
             sc["data"]["captionMode"] = spec["captionMode"]
     tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": handle, "label": spec.get("label", ""), "fps": FPS,
-          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
+          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), **({"hideTimerInHook": True} if spec.get("hideTimerInHook") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)
     (tdir / f"{rid}.json").write_text(json.dumps(tl, indent=1, ensure_ascii=False) + "\n")

@@ -11,7 +11,7 @@
    "small": "GPT-6 Luna (small)",
    "smallPrice": "$12",
    "ratio": "100x cheaper",
-   "tease": "5 dirt-cheap picks · 4 have a free option",
+   "tease": "5 jobs · 4 with a free option",
    "note": "OpenAI API list prices, Oct 2026 · ~500-word emails · not sponsored",
    "yt": {
     "chapter": "Same job, 100x cheaper",
@@ -30,7 +30,8 @@
       3
      ]
     ]
-   }
+   },
+   "api": "API · for builders · try: platform.openai.com"
   }
  },
  {
@@ -44,9 +45,8 @@
    "badge": "FREE APP",
    "pick": "free ChatGPT or Gemini",
    "price": "$0",
-   "example": "homework help, emails, ideas: free",
+   "example": "homework help, writing emails, ideas: free",
    "free": "FREE",
-   "example2": "free Gemini now = Flash-Lite",
    "try": "chatgpt.com · gemini.google.com",
    "yt": {
     "chapter": "Chat, writing, study",
@@ -65,62 +65,31 @@
   }
  },
  {
-  "id": "code",
+  "id": "local",
   "type": "cm_card",
   "data": {
    "n": 2,
    "of": 5,
-   "job": "Coding",
-   "icon": "code",
-   "badge": "FREE PLAN + API",
-   "pick": "GitHub Copilot Free",
-   "price": "free: 2,000 suggestions/mo",
-   "example": "100 coding questions ≈ 10¢",
+   "job": "Free & private",
+   "icon": "laptop",
+   "badge": "FREE APP",
+   "pick": "Gemma 4 + Ollama",
+   "price": "$0 · offline",
+   "example": "8 GB RAM runs the small one",
    "free": "FREE",
-   "pick2": "API: GPT-6 Luna",
-   "example2": "~2K tokens in, 1.5K out each",
-   "try": "github.com/features/copilot",
+   "cmd": "ollama run gemma4",
+   "example2": "private, not smarter",
+   "try": "ollama.com",
    "yt": {
-    "chapter": "Coding",
-    "title": "Free plan, then 10¢",
+    "chapter": "Free & private",
+    "title": "Run it on your laptop",
     "notes": [
      [
-      "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
+      "Gemma 4 with the free Ollama app: $0, offline",
       1
      ],
      [
-      "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
-      3
-     ]
-    ]
-   },
-   "source": "also cheap: DeepSeek Flash (data stored in China)"
-  }
- },
- {
-  "id": "images",
-  "type": "cm_card",
-  "data": {
-   "n": 3,
-   "of": 5,
-   "job": "Images",
-   "icon": "image",
-   "badge": "FOR BUILDERS · API",
-   "pick": "GPT Image 2 (draft quality)",
-   "price": "$0.006 per image",
-   "example": "100 drafts ≈ 60¢",
-   "example2": "medium quality: $0.053",
-   "try": "platform.openai.com",
-   "yt": {
-    "chapter": "Images",
-    "title": "Under a penny each",
-    "notes": [
-     [
-      "GPT Image 2, draft quality: $0.006 per image",
-      2
-     ],
-     [
-      "100 drafts ≈ 60¢",
+      "8 GB RAM runs the small one",
       3
      ]
     ]
@@ -131,13 +100,13 @@
   "id": "audio",
   "type": "cm_card",
   "data": {
-   "n": 4,
+   "n": 3,
    "of": 5,
    "job": "Audio",
    "icon": "mic",
    "badge": "FREE PLAN + API",
    "pick": "Whisper on Groq (not Grok)",
-   "price": "free 8 hrs/day · then $0.04/hr",
+   "price": "free plan: 8 hrs/day · paid: $0.04/hr",
    "example": "1-hour lecture → text: free",
    "free": "FREE",
    "second": {
@@ -163,31 +132,61 @@
   }
  },
  {
-  "id": "local",
+  "id": "code",
+  "type": "cm_card",
+  "data": {
+   "n": 4,
+   "of": 5,
+   "job": "Coding",
+   "icon": "code",
+   "badge": "FREE PLAN + API",
+   "pick": "GitHub Copilot Free",
+   "price": "free: 2,000 suggestions/mo",
+   "example": "100 coding questions ≈ 10¢",
+   "free": "FREE",
+   "pick2": "API: GPT-6 Luna",
+   "example2": "~2K tokens in, 1.5K out each",
+   "try": "github.com/features/copilot",
+   "yt": {
+    "chapter": "Coding",
+    "title": "Free plan, then 10¢",
+    "notes": [
+     [
+      "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
+      1
+     ],
+     [
+      "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
+      3
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "images",
   "type": "cm_card",
   "data": {
    "n": 5,
    "of": 5,
-   "job": "Free & private",
-   "icon": "laptop",
-   "badge": "FREE APP",
-   "pick": "Gemma 4 + Ollama",
-   "price": "$0 · offline",
-   "example": "8 GB RAM runs the small one",
-   "free": "FREE",
-   "cmd": "ollama run gemma4",
-   "example2": "private, not smarter",
-   "try": "ollama.com",
+   "job": "Images",
+   "icon": "image",
+   "badge": "FOR BUILDERS · API",
+   "pick": "GPT Image 2 (draft quality)",
+   "price": "$0.006 per image",
+   "example": "100 drafts ≈ 60¢",
+   "example2": "medium quality: $0.053",
+   "try": "platform.openai.com",
    "yt": {
-    "chapter": "Free & private",
-    "title": "Run it on your laptop",
+    "chapter": "Images",
+    "title": "Under a penny each",
     "notes": [
      [
-      "Gemma 4 with the free Ollama app: $0, offline",
-      1
+      "GPT Image 2, draft quality: $0.006 per image",
+      2
      ],
      [
-      "8 GB RAM runs the small one",
+      "100 drafts ≈ 60¢",
       3
      ]
     ]

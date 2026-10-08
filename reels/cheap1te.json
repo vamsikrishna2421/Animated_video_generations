@@ -5,8 +5,8 @@
  "banner": "Dirt-cheap AI for every job",
  "topic": "",
  "look": "classic",
- "tempo": 1.05,
- "gap": 0.32,
+ "tempo": 1.18,
+ "gap": 0.22,
  "lead": 0.45,
  "music": "lofi",
  "musicVol": [
@@ -20,7 +20,7 @@
   {
    "id": "hook",
    "type": "cm_hook",
-   "tail": 0.35,
+   "tail": 0.25,
    "data": {
     "head1": "DIRT-CHEAP AI",
     "head2": "for every job",
@@ -30,7 +30,7 @@
     "small": "GPT-6 Luna (small)",
     "smallPrice": "$12",
     "ratio": "100x cheaper",
-    "tease": "5 dirt-cheap picks · 4 have a free option",
+    "tease": "5 jobs · 4 with a free option",
     "note": "OpenAI API list prices, Oct 2026 · ~500-word emails · not sponsored",
     "yt": {
      "chapter": "Same job, 100x cheaper",
@@ -49,17 +49,18 @@
        3
       ]
      ]
-    }
+    },
+    "api": "API · for builders · try: platform.openai.com"
    },
    "lines": [
     {
      "who": "maastaaru",
      "file": "01_hook.wav",
-     "maxgap": 0.4,
-     "text": "లక్ష కస్టమర్ ఈమెయిల్స్, ఓపెన్ ఎ ఐ టాప్ మోడల్ తో సమ్మరీ చేస్తే: [1] దాదాపు పన్నెండు వందల డాలర్లు. దాని చిన్న మోడల్, జీ పీ టీ సిక్స్ లూనా తో: [2] పన్నెండు డాలర్లు. అదే సింపుల్ పని. [3] ఇవిగో ఐదు చాలా చవకైన ఆప్షన్లు, నాలుగింటికి ఫ్రీ ఆప్షన్ ఉంది.",
-     "show": "100,000 customer emails, summarized by OpenAI's top model: [1] about $1,200. By its small sibling, GPT-6 Luna: [2] $12. Same simple job. [3] Here are 5 dirt-cheap picks, 4 with a free option.",
+     "maxgap": 0.28,
+     "text": "లక్ష ఈమెయిల్స్: [1] ఓపెన్ ఎ ఐ టాప్ మోడల్ తో పన్నెండు వందల డాలర్లు. [2] జీ పీ టీ సిక్స్ లూనా తో పన్నెండు. [3] ఐదు పనులు, నాలుగింటికి ఫ్రీ ఆప్షన్.",
+     "show": "100,000 emails: [1] $1,200 on the top OpenAI model. [2] $12 on GPT-6 Luna. [3] 5 jobs, 4 with a free option.",
      "pauses": {
-      "2": 0.4
+      "2": 0.35
      }
     }
    ],
@@ -68,7 +69,7 @@
   {
    "id": "chat",
    "type": "cm_card",
-   "tail": 0.35,
+   "tail": 0.25,
    "data": {
     "n": 1,
     "of": 5,
@@ -77,9 +78,8 @@
     "badge": "FREE APP",
     "pick": "free ChatGPT or Gemini",
     "price": "$0",
-    "example": "homework help, emails, ideas: free",
+    "example": "homework help, writing emails, ideas: free",
     "free": "FREE",
-    "example2": "free Gemini now = Flash-Lite",
     "try": "chatgpt.com · gemini.google.com",
     "yt": {
      "chapter": "Chat, writing, study",
@@ -100,147 +100,19 @@
     {
      "who": "maastaaru",
      "file": "02_chat.wav",
-     "maxgap": 0.4,
-     "text": "ఒకటి. చాట్, రైటింగ్, హోమ్ వర్క్: [1] డబ్బులు కట్టొద్దు. ఫ్రీ చాట్ జీ పీ టీ లేదా జెమిని చాలు. [2] సున్నా డాలర్లు. [3] గమనిక: ఫ్రీ జెమిని ఇప్పుడు దాని చిన్న మోడల్, ఫ్లాష్ లైట్ మీద నడుస్తుంది.",
-     "show": "One. Chat, writing, homework: [1] don't pay. Free ChatGPT or Gemini is plenty. [2] $0. [3] Note: free Gemini now runs on its smallest model, Flash-Lite."
+     "maxgap": 0.28,
+     "text": "చాట్, రైటింగ్, హోమ్ వర్క్: [1] డబ్బులు కట్టొద్దు. ఫ్రీ చాట్ జీ పీ టీ లేదా జెమిని చాలు. [2] [3] సున్నా డాలర్లు.",
+     "show": "Questions, writing, homework: [1] don't pay. Free ChatGPT or Gemini is plenty. [2] [3] $0."
     }
    ],
    "lift": true
   },
   {
-   "id": "code",
-   "type": "cm_card",
-   "tail": 0.35,
-   "data": {
-    "n": 2,
-    "of": 5,
-    "job": "Coding",
-    "icon": "code",
-    "badge": "FREE PLAN + API",
-    "pick": "GitHub Copilot Free",
-    "price": "free: 2,000 suggestions/mo",
-    "example": "100 coding questions ≈ 10¢",
-    "free": "FREE",
-    "pick2": "API: GPT-6 Luna",
-    "example2": "~2K tokens in, 1.5K out each",
-    "try": "github.com/features/copilot",
-    "yt": {
-     "chapter": "Coding",
-     "title": "Free plan, then 10¢",
-     "notes": [
-      [
-       "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
-       1
-      ],
-      [
-       "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
-       3
-      ]
-     ]
-    },
-    "source": "also cheap: DeepSeek Flash (data stored in China)"
-   },
-   "lines": [
-    {
-     "who": "maastaaru",
-     "file": "03_code.wav",
-     "maxgap": 0.4,
-     "text": "రెండు. కోడింగ్: [1] గిట్ హబ్ కోపైలట్ ఫ్రీ ప్లాన్ లో నెలకి రెండు వేల సజెషన్లు. [2] యాప్ తయారు చేస్తున్నారా? జీ పీ టీ సిక్స్ లూనా, [3] వంద కోడింగ్ ప్రశ్నలకి దాదాపు పది సెంట్లు.",
-     "show": "Two. Coding: [1] GitHub Copilot's free plan gives you 2,000 suggestions a month. [2] Building an app? GPT-6 Luna answers [3] 100 coding questions for about 10¢."
-    }
-   ]
-  },
-  {
-   "id": "images",
-   "type": "cm_card",
-   "tail": 0.35,
-   "data": {
-    "n": 3,
-    "of": 5,
-    "job": "Images",
-    "icon": "image",
-    "badge": "FOR BUILDERS · API",
-    "pick": "GPT Image 2 (draft quality)",
-    "price": "$0.006 per image",
-    "example": "100 drafts ≈ 60¢",
-    "example2": "medium quality: $0.053",
-    "try": "platform.openai.com",
-    "yt": {
-     "chapter": "Images",
-     "title": "Under a penny each",
-     "notes": [
-      [
-       "GPT Image 2, draft quality: $0.006 per image",
-       2
-      ],
-      [
-       "100 drafts ≈ 60¢",
-       3
-      ]
-     ]
-    }
-   },
-   "lines": [
-    {
-     "who": "maastaaru",
-     "file": "04_images.wav",
-     "maxgap": 0.4,
-     "text": "మూడు. ఇమేజెస్: [1] ఓపెన్ ఎ ఐ జీ పీ టీ ఇమేజ్ టూ, డ్రాఫ్ట్ క్వాలిటీ లో, [2] ఒక్కోటి ఒక సెంటు కంటే తక్కువ. [3] వంద డ్రాఫ్ట్స్? దాదాపు అరవై సెంట్లు.",
-     "show": "Three. Images: [1] OpenAI's GPT Image 2 in draft quality, [2] under a penny each. [3] 100 drafts? About 60¢."
-    }
-   ]
-  },
-  {
-   "id": "audio",
-   "type": "cm_card",
-   "tail": 0.35,
-   "data": {
-    "n": 4,
-    "of": 5,
-    "job": "Audio",
-    "icon": "mic",
-    "badge": "FREE PLAN + API",
-    "pick": "Whisper on Groq (not Grok)",
-    "price": "free 8 hrs/day · then $0.04/hr",
-    "example": "1-hour lecture → text: free",
-    "free": "FREE",
-    "second": {
-     "label": "voiceover:",
-     "pick": "Gemini text-to-speech",
-     "price": "< 1¢ / min"
-    },
-    "try": "console.groq.com · ai.google.dev",
-    "yt": {
-     "chapter": "Audio",
-     "title": "Free transcripts, penny voiceovers",
-     "notes": [
-      [
-       "Whisper on Groq: free up to 8 audio-hours a day, then $0.04/hour",
-       2
-      ],
-      [
-       "Gemini text-to-speech: under 1¢ a minute",
-       4
-      ]
-     ]
-    }
-   },
-   "lines": [
-    {
-     "who": "maastaaru",
-     "file": "05_audio.wav",
-     "maxgap": 0.4,
-     "text": "నాలుగు. ఆడియో: [1] గ్రాక్ మీద విస్పర్, క్యూ తో రాసే గ్రాక్, [2] రోజుకి ఎనిమిది గంటల వరకు ఫ్రీ గా టెక్స్ట్ చేస్తుంది, ఆ తర్వాత గంటకి నాలుగు సెంట్లు. [3] ఒక గంట లెక్చర్? ఫ్రీ. [4] వాయిస్ ఓవర్? జెమిని టెక్స్ట్ టు స్పీచ్, నిమిషానికి ఒక సెంటు కంటే తక్కువ.",
-     "show": "Four. Audio: [1] Whisper on Groq, with a Q, [2] transcribes up to 8 hours a day free, then 4¢ an hour. [3] A 1-hour lecture? Free. [4] Voiceovers? Gemini text-to-speech, under a penny a minute."
-    }
-   ]
-  },
-  {
    "id": "local",
    "type": "cm_card",
-   "tail": 0.35,
+   "tail": 0.25,
    "data": {
-    "n": 5,
+    "n": 2,
     "of": 5,
     "job": "Free & private",
     "icon": "laptop",
@@ -271,16 +143,147 @@
     {
      "who": "maastaaru",
      "file": "06_local.wav",
-     "maxgap": 0.4,
-     "text": "ఐదు. ఫ్రీ, ప్రైవేట్: [1] మీ ల్యాప్ టాప్ లోనే జెమ్మా ఫోర్ ని, ఒల్లామా అనే ఫ్రీ యాప్ తో రన్ చేయండి. [2] సున్నా డాలర్లు, మీ డేటా ఎక్కడికీ వెళ్ళదు. [3] ఎనిమిది జీబీ ర్యామ్ చాలు. ప్రైవేట్, కానీ ఎక్కువ తెలివైనది కాదు.",
-     "show": "Five. Free and private: [1] run Gemma 4 on your laptop with the free Ollama app. [2] $0, and nothing leaves your computer. [3] 8 GB of RAM is enough. Private, not smarter."
+     "maxgap": 0.28,
+     "text": "ఫ్రీ, ప్రైవేట్: [1] మీ ల్యాప్ టాప్ లోనే జెమ్మా ఫోర్ ని, ఒల్లామా అనే ఫ్రీ యాప్ తో రన్ చేయండి. [2] సున్నా డాలర్లు, మీ డేటా ఎక్కడికీ వెళ్ళదు. [3] ఎనిమిది జీబీ ర్యామ్ చాలు. ప్రైవేట్, కానీ ఎక్కువ తెలివైనది కాదు.",
+     "show": "Free and private: [1] run Gemma 4 on your laptop with the free Ollama app. [2] $0, and nothing leaves your computer. [3] 8 GB of RAM is enough. Private, not smarter.",
+     "start": 1.05
+    }
+   ]
+  },
+  {
+   "id": "audio",
+   "type": "cm_card",
+   "tail": 0.25,
+   "data": {
+    "n": 3,
+    "of": 5,
+    "job": "Audio",
+    "icon": "mic",
+    "badge": "FREE PLAN + API",
+    "pick": "Whisper on Groq (not Grok)",
+    "price": "free plan: 8 hrs/day · paid: $0.04/hr",
+    "example": "1-hour lecture → text: free",
+    "free": "FREE",
+    "second": {
+     "label": "voiceover:",
+     "pick": "Gemini text-to-speech",
+     "price": "< 1¢ / min"
+    },
+    "try": "console.groq.com · ai.google.dev",
+    "yt": {
+     "chapter": "Audio",
+     "title": "Free transcripts, penny voiceovers",
+     "notes": [
+      [
+       "Whisper on Groq: free up to 8 audio-hours a day, then $0.04/hour",
+       2
+      ],
+      [
+       "Gemini text-to-speech: under 1¢ a minute",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_audio.wav",
+     "maxgap": 0.28,
+     "text": "ఆడియో: [1] గ్రాక్ మీద విస్పర్, క్యూ తో రాసే గ్రాక్. [2] ఫ్రీ ప్లాన్ లో రోజుకి ఎనిమిది గంటలు. పెయిడ్ ప్లాన్ గంటకి నాలుగు సెంట్లు. [3] అంటే ఒక గంట లెక్చర్ కి ఖర్చు సున్నా. [4] వాయిస్ ఓవర్ కి, జెమిని టెక్స్ట్ టు స్పీచ్, నిమిషానికి ఒక సెంటు కంటే తక్కువ.",
+     "show": "Audio: [1] Whisper on Groq, with a Q. [2] Free plan: 8 hours a day. Paid plan: 4¢ an hour. [3] So a 1-hour lecture costs nothing. [4] For voiceovers, Gemini text-to-speech costs under a penny a minute."
+    }
+   ],
+   "lift": true
+  },
+  {
+   "id": "code",
+   "type": "cm_card",
+   "tail": 0.25,
+   "data": {
+    "n": 4,
+    "of": 5,
+    "job": "Coding",
+    "icon": "code",
+    "badge": "FREE PLAN + API",
+    "pick": "GitHub Copilot Free",
+    "price": "free: 2,000 suggestions/mo",
+    "example": "100 coding questions ≈ 10¢",
+    "free": "FREE",
+    "pick2": "API: GPT-6 Luna",
+    "example2": "~2K tokens in, 1.5K out each",
+    "try": "github.com/features/copilot",
+    "yt": {
+     "chapter": "Coding",
+     "title": "Free plan, then 10¢",
+     "notes": [
+      [
+       "GitHub Copilot Free: 2,000 autocomplete suggestions a month",
+       1
+      ],
+      [
+       "API: GPT-6 Luna, 100 coding questions ≈ 10¢",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_code.wav",
+     "maxgap": 0.28,
+     "text": "కోడింగ్: [1] గిట్ హబ్ కోపైలట్ ఫ్రీ ప్లాన్ లో నెలకి రెండు వేల సజెషన్లు. [2] యాప్ తయారు చేస్తున్నారా? జీ పీ టీ సిక్స్ లూనా, [3] వంద కోడింగ్ ప్రశ్నలకి దాదాపు పది సెంట్లు.",
+     "show": "Coding: [1] GitHub Copilot Free gives you 2,000 suggestions a month. [2] Building an app? GPT-6 Luna answers [3] 100 coding questions for about 10¢.",
+     "start": 1.74
+    }
+   ]
+  },
+  {
+   "id": "images",
+   "type": "cm_card",
+   "tail": 0.25,
+   "data": {
+    "n": 5,
+    "of": 5,
+    "job": "Images",
+    "icon": "image",
+    "badge": "FOR BUILDERS · API",
+    "pick": "GPT Image 2 (draft quality)",
+    "price": "$0.006 per image",
+    "example": "100 drafts ≈ 60¢",
+    "example2": "medium quality: $0.053",
+    "try": "platform.openai.com",
+    "yt": {
+     "chapter": "Images",
+     "title": "Under a penny each",
+     "notes": [
+      [
+       "GPT Image 2, draft quality: $0.006 per image",
+       2
+      ],
+      [
+       "100 drafts ≈ 60¢",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_images.wav",
+     "maxgap": 0.28,
+     "text": "ఇమేజెస్: [1] ఓపెన్ ఎ ఐ జీ పీ టీ ఇమేజ్ టూ, డ్రాఫ్ట్ క్వాలిటీ లో, [2] ఒక్కోటి ఒక సెంటు కంటే తక్కువ. [3] వంద డ్రాఫ్ట్స్? దాదాపు అరవై సెంట్లు.",
+     "show": "Images: [1] GPT Image 2 from OpenAI, in draft quality, [2] under a penny each. [3] 100 drafts? About 60¢.",
+     "start": 1.39
     }
    ]
   },
   {
    "id": "rule",
    "type": "cm_rule",
-   "tail": 0.35,
+   "tail": 0.25,
    "data": {
     "title": "the rule",
     "s1": "start with the cheap one",
@@ -309,7 +312,7 @@
     {
      "who": "maastaaru",
      "file": "07_rule.wav",
-     "maxgap": 0.4,
+     "maxgap": 0.28,
      "text": "రూల్ ఇదే: [1] చవకైన దానితో మొదలుపెట్టండి. [2] ఇరవై నిజమైన ఉదాహరణలతో టెస్ట్ చేయండి. [3] ఫెయిల్ అయితేనే పెద్ద మోడల్ కి వెళ్ళండి.",
      "show": "The rule: [1] start cheap. [2] Test it on 20 real examples. [3] Move up only if it fails."
     }
@@ -341,7 +344,7 @@
     {
      "who": "maastaaru",
      "file": "08_ask.wav",
-     "maxgap": 0.4,
+     "maxgap": 0.28,
      "text": "మీరు ఎ ఐ ని ఏ పనికి ఎక్కువ వాడతారు? [1] కామెంట్ చేయండి, దానికి చవకైన ఆప్షన్ రిప్లై ఇస్తాను. [2] ఎ ఐ ని సింపుల్ గా అర్థం చేసుకోవడానికి ఫాలో అవ్వండి.",
      "show": "Which job do you use AI for most? [1] Comment it, and I'll reply with the cheapest pick. [2] Follow to understand AI, simply.",
      "pauses": {
@@ -352,5 +355,7 @@
    "outro": true
   }
  ],
- "captionMode": "phrase"
+ "captionMode": "phrase",
+ "beatSnap": true,
+ "hideTimerInHook": true
 }

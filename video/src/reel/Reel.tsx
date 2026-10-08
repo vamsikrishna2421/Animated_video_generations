@@ -47,7 +47,7 @@ const musicArc = (tl: ReelTimeline, f: number) => {
   return hit * rise * dip;
 };
 
-export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; hideTimerInHook?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -814,7 +814,7 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
             <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 40, color: "#0A0F24", whiteSpace: "nowrap" }}>{tl.banner}</span>
           </span>
           <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 800, fontSize: 32, color: "#fff", background: "#0A0F24", padding: "4px 14px", borderRadius: 12 }}>
-            {(() => { const r = Math.max(0, Math.ceil((tl.totalFrames - f) / tl.fps)); return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`; })()}
+            {tl.hideTimerInHook && f < (tl.scenes[1]?.from ?? 0) ? "AI" : (() => { const r = Math.max(0, Math.ceil((tl.totalFrames - f) / tl.fps)); return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`; })()}
           </span>
         </div>
       ) : (
