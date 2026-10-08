@@ -605,12 +605,12 @@ const SCENES: Record<string, React.FC<SP>> = {
   ...(CASE_SCENES as Record<string, React.FC<SP>>), ...(OVERFIT_SCENES as Record<string, React.FC<SP>>), ...(ATTN_SCENES as unknown as Record<string, React.FC<SP>>), ...(DISTILL_SCENES as unknown as Record<string, React.FC<SP>>), ...(INTRO_SCENES as Record<string, React.FC<SP>>), ...(EP01_SCENES as Record<string, React.FC<SP>>), ...(EP02_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
 
 // ---------------- karaoke captions + speaker tag ----------------
-const chunks = (words: Word[]) => {
+const chunks = (words: Word[], max = 3) => {
   const out: Word[][] = [];
   let cur: Word[] = [];
   words.forEach((w) => {
     cur.push(w);
-    if (cur.length >= 3 || /[,.!?]$/.test(w.w)) {
+    if (cur.length >= max || (max > 3 ? /[,.!?:]$/ : /[,.!?]$/).test(w.w)) {
       out.push(cur);
       cur = [];
     }
@@ -623,7 +623,10 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   const classic = useContext(LookCtx) === "classic";
   const l = lineAt(s, f);
   if (!l) return null;
-  const cs = chunks(l.words);
+  // "phrase" mode (translated captions, e.g. English captions over a Telugu voice): whole phrases, no per-word
+  // highlight, because the caption's word order does not follow the spoken word order.
+  const phrase = s.data.captionMode === "phrase";
+  const cs = chunks(l.words, phrase ? 7 : 3);
   const c = cs.find((ch, i) => f < (cs[i + 1]?.[0].from ?? l.from + l.frames + 4)) ?? cs[cs.length - 1];
   if (!c) return null;
   const pop = interpolate(f - c[0].from, [0, 4], [0.85, 1], cl);
@@ -634,9 +637,10 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
       )}
       <div style={{ transform: `scale(${pop})`, display: classic ? "inline-block" : "block", background: classic ? "rgba(6,8,20,0.78)" : "transparent", borderRadius: 26, padding: classic ? "10px 18px" : 0 }}>
         {c.map((w, i) => {
-          const on = f >= w.from;
+          const on = phrase || f >= w.from;
+          const hot = !phrase && on && f < w.to + 2;
           return (
-            <span key={i} style={{ display: "inline-block", margin: classic ? "0 15px" : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? 70 : 96, lineHeight: 1.05, textTransform: classic ? "none" : "uppercase", color: on ? (f < w.to + 2 ? C.amber : "white") : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${on && f < w.to + 2 ? (classic ? 1.04 : 1.12) : 1})` }}>
+            <span key={i} style={{ display: "inline-block", margin: classic ? (phrase ? "0 11px" : "0 15px") : "0 18px", fontFamily: classic ? C.inter : C.anton, fontWeight: classic ? 900 : undefined, fontSize: classic ? (phrase ? 60 : 70) : 96, lineHeight: 1.1, textTransform: classic ? "none" : "uppercase", color: hot ? C.amber : on ? "white" : "rgba(255,255,255,0.45)", textShadow: outline, transform: `scale(${hot ? (classic ? 1.04 : 1.12) : 1})` }}>
               {w.w}
             </span>
           );

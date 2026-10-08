@@ -162,17 +162,27 @@ const DsHook: React.FC<SP> = ({ cue }) => {
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1000 + boil);
-      // the numbers first: legible on frame 0 (cover frame), stamped down from slightly larger
+      // frame 0 (cover): the claim in big words + the two numbers, readable with the sound off
+      hand(c, "An AI beat OpenAI's", W / 2, 350, 86, COL.cream, 1, r, -0.02, "center");
+      hand(c, "o1-preview at maths", W / 2, 445, 86, COL.yellow, 1, r, -0.02, "center");
       const k1 = 1 + 0.2 * (1 - easeOut(fade(f, 0, 6))), k2 = 1 + 0.12 * (1 - easeOut(fade(f, 1, 6)));
-      c.save(); c.translate(300, 560); c.scale(k1, k1); stopwatch(c, 0, 0, 150, f / 30, "< 30 min", r); c.restore();
-      c.save(); c.translate(745, 600); c.scale(k2, k2); c.translate(-745, -600); tag(c, "under ₹5,000", 745, 600, 104, COL.yellow, COL.ink, 0.07, 1); c.restore();
+      c.save(); c.translate(290, 680); c.scale(k1, k1); stopwatch(c, 0, 0, 140, f / 30, "< 30 min", r); c.restore();
+      c.save(); c.translate(745, 690); c.scale(k2, k2); c.translate(-745, -690); tag(c, "under ₹5,000", 745, 690, 100, COL.yellow, COL.ink, 0.07, 1); c.restore();
+      // teaser for the payoff, until the fine print arrives
+      if (f >= 60 && f < c1 + 6) {
+        const out = seg(f, c1 - 4, c1 + 6);
+        c.save(); c.translate(-1200 * out * out, 0);
+        hand(c, "...and which model should YOU use?", W / 2, 930, 62, COL.orangeLight, seg(f, 60, 80), r, -0.02, "center");
+        hand(c, "(answer at the end)", W / 2, 1000, 46, COL.pale, seg(f, 74, 90), r, -0.01, "center");
+        c.restore();
+      }
       if (f >= c1 && f < c3 + 12) {
-        // the maths-test card slides away when the word DISTILLATION arrives
+        // the fine print, then it slides away when the word DISTILLATION arrives
         c.save(); c.translate(-1200 * Math.pow(seg(f, c3, c3 + 10), 2), 0);
-        page(c, 120, 820, 840, 250, boil, -0.015);
-        hand(c, "maths test", 200, 910, 64, COL.ink, seg(f, c1, c1 + 8), r, -0.02);
-        hand(c, "beat an OpenAI reasoning model*", 200, 1000, 60, "#15803d", seg(f, c1 + 6, c1 + 22), r, -0.02);
-        hand(c, "*o1-preview, competition maths, researchers' report (s1, 2025)", W / 2, 1120, 36, COL.pale, seg(f, c1 + 14, c1 + 26), r, -0.01, "center");
+        page(c, 110, 860, 860, 210, boil, -0.015);
+        hand(c, "OpenAI's 2024 model · competition maths", 150, 935, 50, COL.ink, seg(f, c1, c1 + 12), r, -0.02);
+        hand(c, "built on an existing open model", 150, 1010, 50, "#15803d", seg(f, c1 + 8, c1 + 22), r, -0.02);
+        hand(c, "researchers' report (s1, 2025)", W / 2, 1125, 46, COL.pale, seg(f, c1 + 16, c1 + 28), r, -0.01, "center");
         c.restore();
       }
       if (f >= c2) robot(c, 230, 1420, 0.85, boil, 1, { ...TEACHER, look: 0.6, mouth: "smile", arms: "point" });
@@ -261,66 +271,63 @@ const DsSoft: React.FC<SP> = ({ cue }) => {
   );
 };
 
-// ---------- 4 DOES IT WORK ----------
-const badge = (c: Ctx, x: number, y: number, big: string, small: string, col: string, p: number, r: () => number) => {
-  if (p <= 0) return;
-  c.save(); c.translate(x, y); const s = easeOut(p) * (1 + 0.15 * (1 - easeOut(p))); c.scale(s, s); c.rotate(-0.04);
-  c.beginPath(); c.arc(0, 0, 135, 0, 7); c.fillStyle = col; c.fill();
-  stroke(c, circlePts(0, 0, 135, 135), COL.cream, 6, r, { passes: 2 });
-  c.font = `700 104px Caveat`; c.fillStyle = COL.ink; c.textAlign = "center"; c.fillText(big, 0, 18);
-  c.font = `700 46px Caveat`; c.fillText(small, 0, 72);
-  c.restore();
-};
+// ---------- 4 WHO USES IT ----------
 const DsResults: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1);
   return (
-    <>
-    <Sfx at={c1} src="reel/sfx_boom.wav" vol={0.5} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil);
       const r = rng(1300 + boil);
-      hand(c, "does it work?", W / 2, 360, 92, COL.cream, seg(f, 2, 14), r, -0.03, "center");
-      badge(c, 540, 600, "97%", "of the score", "#86efac", seg(f, c1 - 2, c1 + 8), r);
-      badge(c, 260, 820, "40%", "smaller", COL.orangeLight, seg(f, c2, c2 + 10), r);
-      badge(c, 820, 820, "60%", "faster", COL.yellow, seg(f, c2 + 10, c2 + 20), r);
-      hand(c, "DistilBERT (2019)", W / 2, 1000, 50, COL.pale, seg(f, c1 + 6, c1 + 18), r, -0.02, "center");
-      if (f >= c3) {
-        c.save(); rrect(c, 90, 1060, 900, 250, 26); c.fillStyle = "rgba(255,255,255,0.12)"; c.fill(); c.restore();
-        hand(c, "Gemini Pro", 300, 1170, 70, COL.cream, seg(f, c3, c3 + 10), r, -0.02, "center");
-        arrow(c, [450, 1150], [620, 1150], -40, COL.orange, 8, seg(f, c3 + 6, c3 + 16), r);
-        hand(c, "Flash", 790, 1170, 76, COL.yellow, seg(f, c3 + 12, c3 + 22), r, -0.02, "center");
-        hand(c, "Google said Flash learned from Pro (Gemini 1.5, 2024)", W / 2, 1270, 40, COL.pale, seg(f, c3 + 18, c3 + 34), r, -0.01, "center");
+      hand(c, "big companies do this", W / 2, 370, 84, COL.cream, seg(f, 0, 12), r, -0.03, "center");
+      robot(c, 300, 1250, 1.45, boil, 1, { ...TEACHER, arms: "point", look: 0.6, mouth: f >= c1 ? "o" : "smile" });
+      robot(c, 820, 1250, 0.75, boil, 2, { ...STUDENT, arms: f >= c1 + 20 ? "write" : "down", look: -0.6, eyes: f >= c1 + 20 ? "happy" : "open", mouth: "grin" });
+      tag(c, "Gemini Pro", 300, 1340, 66, COL.cream, "#1d3fa8", -0.04, fade(f, c1, 8));
+      tag(c, "Gemini Flash", 820, 1340, 60, COL.yellow, COL.ink, 0.04, fade(f, c1 + 8, 8));
+      if (f >= c1) {
+        for (let k = 0; k < 10; k++) {
+          const u = ((f - c1) / 30 + k / 10) % 1;
+          const px = lerp(470, 760, u), py = lerp(760, 980, u) - Math.sin(u * Math.PI) * 160;
+          c.beginPath(); c.arc(px, py, 10, 0, 7); c.fillStyle = COL.yellow; c.globalAlpha = 0.9 * fade(f, c1, 8); c.fill(); c.globalAlpha = 1;
+        }
+        hand(c, "Google said Flash learned from Pro (Gemini 1.5, 2024)", W / 2, 470, 46, COL.pale, seg(f, c1 + 10, c1 + 28), r, -0.01, "center");
       }
     }} />
-    </>
   );
 };
 
-// ---------- 5 IT CAN BE CHEAP ----------
+// ---------- 5 THE MATHS MODEL: copying written answers ----------
 const DsCheap: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1), c2 = cue(2);
   return (
-    <>
-    <Sfx at={c3} src="audio/sfx_chaching.wav" vol={0.55} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1400 + boil);
-      hand(c, "that maths model?", W / 2, 360, 88, COL.orangeLight, seg(f, 2, 14), r, -0.03, "center");
+      hand(c, "that maths model?", W / 2, 360, 88, COL.orangeLight, seg(f, 0, 12), r, -0.03, "center");
+      // left: the teacher's percentages, crossed out
+      c.save(); rrect(c, 60, 430, 450, 420, 26); c.fillStyle = "rgba(255,255,255,0.08)"; c.fill(); c.restore();
+      hand(c, "percentages", 285, 500, 58, COL.cream, seg(f, 4, 16), r, -0.02, "center");
+      bars(c, 240, 600, 170, [["cat", 0.9, COL.orange], ["tiger", 0.09, COL.yellow], ["car", 0.01, COL.light]], seg(f, 6, 26), r, 46);
+      if (f >= 30) {
+        const q = seg(f, 30, 40);
+        stroke(c, [[90, 460], [90 + 390 * q, 460 + 360 * q]], COL.red, 12, r, { passes: 2, alpha: 0.9 });
+        if (q >= 1) stroke(c, [[480, 460], [480 - 390 * seg(f, 40, 50), 460 + 360 * seg(f, 40, 50)]], COL.red, 12, r, { passes: 2, alpha: 0.9 });
+      }
+      // right: 1,000 solved examples written by Gemini
+      c.save(); rrect(c, 570, 430, 450, 420, 26); c.fillStyle = "rgba(255,255,255,0.08)"; c.fill(); c.restore();
+      hand(c, "written answers", 795, 500, 58, COL.cream, seg(f, c1, c1 + 12), r, -0.02, "center");
       if (f >= c1) {
-        const n = Math.round(14 * seg(f, c1, c1 + 20));
-        for (let k = 0; k < n; k++) { c.save(); c.translate(250 + (k % 2) * 6, 760 - k * 14); c.rotate((k % 3 - 1) * 0.03); c.fillStyle = k % 2 ? COL.cream : "#e9dfc4"; c.fillRect(-120, -16, 240, 30); c.restore(); }
-        hand(c, "1,000 worked", 250, 830, 64, COL.cream, seg(f, c1 + 8, c1 + 20), r, -0.03, "center");
-        hand(c, "solutions", 250, 900, 64, COL.cream, seg(f, c1 + 14, c1 + 26), r, -0.03, "center");
-        hand(c, "from a smarter AI", 250, 970, 46, COL.pale, seg(f, c1 + 20, c1 + 32), r, -0.03, "center");
+        const n = Math.round(12 * seg(f, c1, c1 + 20));
+        for (let k = 0; k < n; k++) { c.save(); c.translate(795 + (k % 2) * 6 - 3, 760 - k * 12); c.rotate((k % 3 - 1) * 0.03); c.fillStyle = k % 2 ? COL.cream : "#e9dfc4"; c.fillRect(-150, -18, 300, 34); c.restore(); }
+        hand(c, "1,000 solved examples", 795, 820, 50, COL.yellow, seg(f, c1 + 10, c1 + 24), r, -0.02, "center");
+        stroke(c, [[960, 470], [985, 500], [1015, 450]], "#22c55e", 10, r, { passes: 2, alpha: seg(f, c1 + 16, c1 + 20) });
       }
-      if (f >= c2) stopwatch(c, 760, 640, 130, (f - c2) / 30, "< 30 min", r);
-      if (f >= c3) {
-        tag(c, "under ₹5,000", 760, 900, 100, COL.yellow, COL.ink, 0.07, fade(f, c3, 8));
-        hand(c, "(under $50 of cloud compute)", 760, 990, 42, COL.pale, seg(f, c3 + 6, c3 + 18), r, -0.02, "center");
+      if (f >= c1 + 14) tag(c, "written by Gemini", 795, 930, 56, COL.cream, "#1d3fa8", -0.03, fade(f, c1 + 14, 8));
+      if (f >= c2) {
+        page(c, 110, 1010, 860, 170, boil, -0.01);
+        hand(c, "copying answers = distillation too", W / 2, 1115, 62, "#15803d", seg(f, c2, c2 + 16), r, -0.02, "center");
       }
-      hand(c, "s1: Stanford, UW, Ai2 (2025), built on an existing open model", W / 2, 1180, 38, COL.pale, seg(f, c1 + 10, c1 + 26), r, -0.01, "center");
+      hand(c, "s1: Stanford, UW, Ai2 (2025), on an existing open model", W / 2, 1260, 44, COL.pale, seg(f, c1 + 20, c1 + 36), r, -0.01, "center");
     }} />
-    </>
   );
 };
 
@@ -331,14 +338,14 @@ const DsCatch: React.FC<SP> = ({ cue }) => {
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil);
       const r = rng(1500 + boil);
-      hand(c, "the catch", W / 2, 360, 96, COL.orangeLight, seg(f, 2, 14), r, -0.03, "center");
+      hand(c, "the catch", W / 2, 360, 96, COL.orangeLight, seg(f, 0, 12), r, -0.03, "center");
+      robot(c, 300, 1000, 1.0, boil, 1, { ...TEACHER, mouth: "smile" });
+      robot(c, 800, 1000, 0.7, boil, 2, { ...STUDENT, mouth: f >= c1 + 12 ? "o" : "smile" });
       if (f >= c1) {
-        robot(c, 300, 1000, 1.0, boil, 1, { ...TEACHER, mouth: "smile" });
-        robot(c, 800, 1000, 0.7, boil, 2, { ...STUDENT, mouth: "smile" });
         tag(c, "2 + 2 = 5", 300, 520, 76, COL.cream, COL.red, -0.05, fade(f, c1 + 2, 8));
         tag(c, "2 + 2 = 5", 800, 640, 70, COL.cream, COL.red, 0.05, fade(f, c1 + 12, 8));
         arrow(c, [420, 560], [700, 620], -60, COL.pale, 5, seg(f, c1 + 6, c1 + 16), r);
-        hand(c, "only as good as its teacher", W / 2, 1110, 62, COL.cream, seg(f, c1 + 16, c1 + 32), r, -0.02, "center");
+        hand(c, "mistakes get copied too", W / 2, 1110, 64, COL.cream, seg(f, c1 + 16, c1 + 32), r, -0.02, "center");
       }
       if (f >= c2) {
         page(c, 200, 1150, 680, 220, boil, -0.02);
@@ -349,28 +356,34 @@ const DsCatch: React.FC<SP> = ({ cue }) => {
   );
 };
 
-// ---------- 7 SO WHAT ----------
+// ---------- 7 WHICH ONE DO I USE ----------
 const DsPick: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
   return (
+    <>
+    <Sfx at={c3} src="reel/sfx_boom.wav" vol={0.45} />
     <CrayonCanvas draw={(c, W, H, f, boil) => {
       background(c, W, H, boil, COL.deep);
       const r = rng(1600 + boil);
-      hand(c, "which one do I use?", W / 2, 370, 86, COL.cream, seg(f, 2, 14), r, -0.03, "center");
-      const col = (x: number, title: string, items: string[], tint: string, p: number) => {
-        if (p <= 0) return;
-        c.save(); c.globalAlpha = easeOut(p); rrect(c, x, 440, 450, 560, 30); c.fillStyle = "rgba(255,255,255,0.1)"; c.fill(); c.restore();
-        tag(c, title, x + 225, 520, 64, tint, COL.ink, -0.03, p);
-        items.forEach((it, i) => hand(c, "• " + it, x + 40, 640 + i * 95, 52, COL.cream, clamp(p * 3 - i * 0.6), r, -0.01));
+      hand(c, "which one do I use?", W / 2, 360, 86, COL.cream, seg(f, 0, 12), r, -0.03, "center");
+      const col = (x: number, title: string, sub: string, items: string[], tint: string, p: number) => {
+        c.save(); rrect(c, x, 420, 460, 520, 30); c.fillStyle = "rgba(255,255,255,0.1)"; c.fill(); c.restore();
+        tag(c, title, x + 230, 495, 62, tint, COL.ink, -0.03, 1);
+        hand(c, sub, x + 230, 575, 40, COL.pale, 1, r, -0.01, "center");
+        items.forEach((it, i) => hand(c, "• " + it, x + 34, 670 + i * 90, 50, COL.cream, clamp(p * 3 - i * 0.6), r, -0.01));
       };
-      col(60, "MINI / FLASH", ["emails", "summaries", "pulling out data"], COL.yellow, seg(f, c1, c1 + 20));
-      col(570, "PRO", ["multi-step", "reasoning", "when mini slips"], COL.orangeLight, seg(f, c2, c2 + 20));
+      col(50, "SMALL", "Flash · Flash-Lite · mini", ["emails", "summaries", "pulling out data"], COL.yellow, seg(f, c1, c1 + 24));
+      col(570, "PRO", "the bigger model", ["multi-step tasks", "broken Excel formula", "when small slips"], COL.orangeLight, seg(f, c2, c2 + 24));
       if (f >= c3) {
-        page(c, 140, 1060, 800, 170, boil, -0.01);
-        hand(c, "test on 20 real examples first", W / 2, 1165, 60, "#15803d", seg(f, c3, c3 + 16), r, -0.02, "center");
+        page(c, 90, 980, 900, 200, boil, -0.012);
+        hand(c, "Pro ≈ 3x Flash per word", W / 2, 1065, 70, COL.ink, seg(f, c3, c3 + 12), r, -0.02, "center");
+        hand(c, "Google API prices, Oct 2026 · Pro is paid in most apps", W / 2, 1140, 40, "#475569", seg(f, c3 + 10, c3 + 26), r, -0.01, "center");
       }
-      if (f >= c1) robot(c, 940, 1420, 0.42, boil, 2, { ...STUDENT, eyes: "happy", mouth: "grin", arms: "thumb" });
+      if (f >= c4) {
+        tag(c, "test 20 real emails first", W / 2, 1285, 66, "#86efac", COL.ink, -0.02, fade(f, c4, 8));
+      }
     }} />
+    </>
   );
 };
 
@@ -383,22 +396,29 @@ const DsAsk: React.FC<SP> = ({ s, cue }) => {
       background(c, W, H, boil);
       const r = rng(1700 + boil);
       hand(c, "YOUR TURN", W / 2, 370, 100, COL.yellow, seg(f, 0, 12), r, -0.03, "center");
-      // a stack of 500 emails
-      const n = Math.round(10 * seg(f, 4, 24));
-      for (let k = 0; k < n; k++) { c.save(); c.translate(540 + (k % 2) * 8 - 4, 700 - k * 16); c.rotate((k % 3 - 1) * 0.04); c.fillStyle = k % 2 ? COL.cream : "#e9dfc4"; c.fillRect(-170, -50, 340, 100); stroke(c, [[-170, -50], [0, 10], [170, -50]], "#94a3b8", 3, r, { passes: 1 }); c.restore(); }
-      hand(c, "500 office emails to summarise", W / 2, 840, 60, COL.cream, seg(f, 10, 26), r, -0.02, "center");
+      // a stack of 500 complaints, one flagged
+      const n = Math.round(10 * seg(f, 2, 20));
+      for (let k = 0; k < n; k++) { c.save(); c.translate(540 + (k % 2) * 8 - 4, 690 - k * 15); c.rotate((k % 3 - 1) * 0.04); c.fillStyle = k % 2 ? COL.cream : "#e9dfc4"; c.fillRect(-170, -50, 340, 100); c.restore(); }
+      if (f >= 22) {
+        const p = easeOut(fade(f, 22, 8));
+        c.save(); c.translate(760, 560); c.scale(p, p);
+        c.beginPath(); c.moveTo(0, -70); c.lineTo(66, 50); c.lineTo(-66, 50); c.closePath(); c.fillStyle = COL.red; c.fill();
+        c.font = "700 90px Caveat"; c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("!", 0, 38); c.restore();
+      }
+      hand(c, "500 customer complaints", W / 2, 830, 64, COL.cream, seg(f, 6, 20), r, -0.02, "center");
+      hand(c, "which could become legal trouble?", W / 2, 905, 54, COL.orangeLight, seg(f, 18, 34), r, -0.02, "center");
       if (f >= c1) {
-        tag(c, "PRO?", 330, 990, 96, COL.orangeLight, COL.ink, -0.06, fade(f, c1, 8));
-        tag(c, "FLASH?", 750, 990, 96, COL.yellow, COL.ink, 0.06, fade(f, c1 + 6, 8));
-        hand(c, "comment your pick", W / 2, 1120, 64, COL.cream, seg(f, c1 + 10, c1 + 24), r, -0.02, "center");
+        tag(c, "FLASH?", 330, 1030, 96, COL.yellow, COL.ink, -0.06, fade(f, c1, 8));
+        tag(c, "PRO?", 750, 1030, 96, COL.orangeLight, COL.ink, 0.06, fade(f, c1 + 6, 8));
+        hand(c, "comment your pick", W / 2, 1140, 62, COL.cream, seg(f, c1 + 10, c1 + 24), r, -0.02, "center");
       }
       if (f >= c2) {
         const hp = easeOut(fade(f, c2, 10));
         c.save(); c.globalAlpha = hp;
-        c.fillStyle = "rgba(5,10,40,0.6)"; c.fillRect(0, 1160, W, 260);
+        c.fillStyle = "rgba(5,10,40,0.6)"; c.fillRect(0, 1170, W, 250);
         c.font = `700 ${handle.length > 16 ? 80 : 96}px Caveat`; c.textAlign = "center"; c.fillStyle = COL.yellow;
-        c.fillText(handle, W / 2, 1270);
-        c.font = `52px ${HAND}`; c.fillStyle = COL.cream; c.fillText("Follow for more AI, explained simply", W / 2, 1360);
+        c.fillText(handle, W / 2, 1275);
+        c.font = `52px ${HAND}`; c.fillStyle = COL.cream; c.fillText("Follow for more AI, explained simply", W / 2, 1365);
         c.restore();
       }
     }} />

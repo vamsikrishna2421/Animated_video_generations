@@ -214,7 +214,6 @@ def file_line(line, rid):
                 marks[len(words)] = int(m.group(1))
             else:
                 words.append(t)
-        shown = (shw if shw is not None else " ".join(words)).split()
         spans = [(s + b0 / sr, e + b0 / sr) for s, e in voiced_spans(a[b0:b1], sr)] or [(b0 / sr, b1 / sr)]
         total = sum(e - s for s, e in spans)
 
@@ -225,18 +224,49 @@ def file_line(line, rid):
                     return s0 + need
                 need -= e0 - s0
             return spans[-1][1]
-        weights = [len(w) + 1 for w in shown]
-        wsum = sum(weights) or 1
-        acc = 0.0
-        for w, wt in zip(shown, weights):
-            s0 = at(acc / wsum)
-            acc += wt
-            out.append((w, s0, at(acc / wsum)))
         # Cue times follow the SPOKEN words, so cues stay in sync when captions are in another language.
         sw = [len(w) + 1 for w in words]
         ssum = sum(sw) or 1
-        for i, n in marks.items():
-            cues[n] = at(sum(sw[:i]) / ssum)
+        frac = {n: sum(sw[:i]) / ssum for i, n in marks.items()}
+        for n, x in frac.items():
+            cues[n] = at(x)
+        # Captions: if "show" carries the same [n] markers, each caption segment is pinned between those cues,
+        # so a translated caption follows the spoken phrase order instead of drifting across the whole line.
+        stoks = (shw if shw is not None else " ".join(words)).split()
+        segs, cur, cut_at = [], [], [0.0]
+        for t in stoks:
+            m = re.fullmatch(r"\[(\d+)\]", t)
+            if m and int(m.group(1)) in frac and shw is not None:
+                segs.append(cur)
+                cur = []
+                cut_at.append(frac[int(m.group(1))])
+            elif not m:
+                cur.append(t)
+        segs.append(cur)
+        cut_at.append(1.0)
+        for k, seg in enumerate(segs):
+            lo, hi = cut_at[k], cut_at[k + 1]
+            weights = [len(w) + 1 for w in seg]
+            wsum = sum(weights) or 1
+            acc = 0.0
+            for w, wt in zip(seg, weights):
+                s0 = at(lo + (hi - lo) * acc / wsum)
+                acc += wt
+                out.append((w, s0, at(lo + (hi - lo) * acc / wsum)))
+    # "pauses": {"<cue>": seconds} inserts a short silence just before that cue (snapped to the nearest quiet spot),
+    # e.g. a beat before a key number. Later words and cues move with it.
+    for n, sec in sorted(line.get("pauses", {}).items(), key=lambda kv: -cues.get(int(kv[0]), 0)):
+        if int(n) not in cues:
+            continue
+        t = cues[int(n)]
+        hop = int(0.02 * sr)
+        lo, hi = max(0, int((t - 0.35) * sr)), min(len(a) - hop, int((t + 0.1) * sr))
+        cand = range(lo, max(lo + 1, hi), hop)
+        ins = min(cand, key=lambda i: float(np.sqrt(np.mean(a[i:i + hop] ** 2))))
+        ti = ins / sr
+        a = np.concatenate([a[:ins], np.zeros(int(sec * sr)), a[ins:]])
+        out = [(w, s0 + sec if s0 >= ti else s0, e0 + sec if e0 > ti else e0) for w, s0, e0 in out]
+        cues = {k: (v + sec if v >= ti - 1e-6 else v) for k, v in cues.items()}
     return a, sr, out, cues
 
 
@@ -405,6 +435,8 @@ def main(spec_path: Path) -> None:
     handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
     for sc in scenes:
         sc.setdefault("data", {})["handle"] = handle
+        if spec.get("captionMode"):
+            sc["data"]["captionMode"] = spec["captionMode"]
     tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": handle, "label": spec.get("label", ""), "fps": FPS,
           **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
