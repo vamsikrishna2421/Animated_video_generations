@@ -47,7 +47,7 @@ import { LoopReel, LOOP_TEST_LEN } from "./reel/loop/LoopReel";
 import { AttnPreview, ATTN_PREVIEW_SCENE } from "./reel/loop/AttnPreview";
 import { FumbleRasaSheet } from "./reel/FumbleRasa";
 import { FumbleNavarasa, NAV_LEN } from "./reel/navarasa/FumbleNavarasa";
-import { FumbleBrahmi, FB_LEN } from "./reel/navarasa/FumbleBrahmi";
+import { FumbleBrahmi, FB_LEN, FB_TRIM_LEN } from "./reel/navarasa/FumbleBrahmi";
 import { FM_LEN, FumbleMaking, FumbleMakingProps, FumbleSketch, SKETCH_LEN } from "./reel/FumbleMaking";
 
 export const RemotionRoot: React.FC = () => (
@@ -114,8 +114,10 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="YeshDance" component={YeshDance} durationInFrames={YESH_LEN} fps={30} width={1080} height={1920} />
     <Composition id="YeshFull" component={YeshFull as unknown as React.FC<Record<string, unknown>>} durationInFrames={YESH_FULL_LEN} fps={30} width={1080} height={1920} defaultProps={{ title: true, handle: "@ai_maastaaru_telugu" }} />
     <Composition id="KingfisherRide" component={KingfisherRide as unknown as React.FC<Record<string, unknown>>} durationInFrames={KF_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru", credit: "" }} />
-    <Composition id="FumbleBrahmiEN" component={FumbleBrahmi as unknown as React.FC<Record<string, unknown>>} durationInFrames={FB_LEN} fps={30} width={1080} height={960} defaultProps={{ handle: "@ai_maastaaru" }} />
-    <Composition id="FumbleBrahmiTE" component={FumbleBrahmi as unknown as React.FC<Record<string, unknown>>} durationInFrames={FB_LEN} fps={30} width={1080} height={960} defaultProps={{ handle: "@ai_maastaaru_telugu" }} />
+    <Composition id="FumbleBrahmiEN" component={FumbleBrahmi as unknown as React.FC<Record<string, unknown>>} durationInFrames={FB_LEN} fps={30} width={1080} height={960} defaultProps={{ handle: "@ai_maastaaru", lang: "en" }} />
+    <Composition id="FumbleBrahmiTE" component={FumbleBrahmi as unknown as React.FC<Record<string, unknown>>} durationInFrames={FB_LEN} fps={30} width={1080} height={960} defaultProps={{ handle: "@ai_maastaaru_telugu", lang: "te" }} />
+    <Composition id="FumbleBrahmiTrimEN" component={FumbleBrahmi as unknown as React.FC<Record<string, unknown>>} durationInFrames={FB_TRIM_LEN} fps={30} width={1080} height={960} defaultProps={{ handle: "@ai_maastaaru", lang: "en", trim: true }} />
+    <Composition id="FumbleBrahmiTrimTE" component={FumbleBrahmi as unknown as React.FC<Record<string, unknown>>} durationInFrames={FB_TRIM_LEN} fps={30} width={1080} height={960} defaultProps={{ handle: "@ai_maastaaru_telugu", lang: "te", trim: true }} />
     <Composition id="NavarasaEN" component={FumbleNavarasa as unknown as React.FC<Record<string, unknown>>} durationInFrames={NAV_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru", lang: "en" }} />
     <Composition id="NavarasaTE" component={FumbleNavarasa as unknown as React.FC<Record<string, unknown>>} durationInFrames={NAV_LEN} fps={30} width={1080} height={1920} defaultProps={{ handle: "@ai_maastaaru_telugu", lang: "te" }} />
     <Composition id="FumbleRasaSheet" component={FumbleRasaSheet} durationInFrames={60} fps={30} width={1080} height={1920} />
