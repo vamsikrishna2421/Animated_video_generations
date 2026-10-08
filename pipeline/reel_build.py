@@ -354,10 +354,12 @@ def pad_chord(notes, sec):
     return sosfilt(butter(2, 1400, "lp", fs=MSR, output="sos"), x)
 
 
-def lofi(total, scene_starts, pad=False):
+def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
     """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops.
     pad=True (spec "musicPad") adds a sustained pad and a faint vinyl-noise floor, filling the short silent
-    hole at the end of every bar (the keys stop before the bar line), which is audible once the bed is turned up."""
+    hole at the end of every bar (the keys stop before the bar line), which is audible once the bed is turned up.
+    lifts: times (s) that get a riser into a soft hit (a lift into a reveal). outro: time (s) from which a brighter
+    layer (arpeggio + double-time hats) plays, so the bed itself rises into the call to action."""
     n = int(total * MSR)
     mix = np.zeros(n)
     beat = 60 / 88
@@ -380,6 +382,20 @@ def lofi(total, scene_starts, pad=False):
         place(mix, keys(chords[b % 4][3] + 12, beat) * 0.3, t0 + beat * 2.5)
         t0 += beat * 4
         b += 1
+    for t in lifts:
+        place(mix, riser(1.2) * 0.3, max(0.0, t - 1.2))
+        place(mix, kick808(42, 0.9, 2.0) * 0.55 + boom(1.2) * 0.35, t)
+    if outro is not None:
+        t0, b = 0.0, 0
+        while t0 < total:
+            if t0 >= outro - 1e-6:
+                ch = chords[b % 4]
+                for k in range(8):
+                    place(mix, keys(ch[k % 4] + 12, beat * 0.6) * 0.22, t0 + k * beat / 2)
+                for k in range(16):
+                    place(mix, hat_tick() * (0.22 if k % 2 else 0.12), t0 + k * beat / 4)
+            t0 += beat * 4
+            b += 1
     st = np.stack([mix, np.roll(mix, int(0.02 * MSR))], axis=1)
     st = np.tanh(st / (np.max(np.abs(st)) + 1e-9) * 1.2) / np.tanh(1.2)
     fo = int(0.8 * MSR)
@@ -430,7 +446,10 @@ def main(spec_path: Path) -> None:
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     starts = [s["from"] / FPS for s in scenes]
-    bed = lofi(total, starts, pad=spec.get("musicPad", False)) if spec.get("music") == "lofi" else score(total, starts, drops)
+    lifts = [scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("lift")]
+    outro = next((scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("outro")), None)
+    bed = (lofi(total, starts, pad=spec.get("musicPad", False), lifts=lifts, outro=outro) if spec.get("music") == "lofi"
+           else score(total, starts, drops))
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
     handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
     for sc in scenes:

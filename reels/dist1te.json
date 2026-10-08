@@ -7,13 +7,13 @@
  "look": "classic",
  "tempo": 1.05,
  "gap": 0.35,
- "lead": 0.05,
+ "lead": 0.45,
  "music": "lofi",
  "musicVol": [
   0.55,
   0.95
  ],
- "musicLift": 1.8,
+ "musicLift": 1.5,
  "parler_lang": "te",
  "scenes": [
   {
@@ -45,8 +45,8 @@
      "who": "maastaaru",
      "file": "01_hook.wav",
      "maxgap": 0.45,
-     "text": "ముప్పై నిమిషాల లోపు. ఐదు వేల రూపాయల లోపు. [1] ఇప్పటికే ఉన్న ఒక ఎ ఐ, మ్యాథ్స్ లో ఓపెన్ ఎ ఐ తొలి రీజనింగ్ మోడల్ ని దాటేసింది అని రీసెర్చర్లు చెప్తున్నారు. [2] దానికి టీచర్ ఎవరు? [3] ఇంకా తెలివైన ఎ ఐ. దీన్నే డిస్టిలేషన్ అంటారు.",
-     "show": "Under 30 minutes. Under ₹5,000. [1] An existing AI beat an early OpenAI reasoning model at maths, researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation.",
+     "text": "ముప్పై నిమిషాల లోపు. ఐదు వేల రూపాయల లోపు. [1] ఇప్పటికే ఉన్న ఒక ఎ ఐ, మ్యాథ్స్ లో ఓపెన్ ఎ ఐ తొలి రీజనింగ్ మోడల్ ని దాటేసింది అని రీసెర్చర్లు చెప్తున్నారు. [2] దానికి టీచర్ ఎవరు? [3] ఇంకా తెలివైన ఎ ఐ. దీన్నే డిస్టిలేషన్ అంటారు. [4] చివర్లో, మీరు ఏది వాడాలో చెప్తాను.",
+     "show": "Under 30 minutes. Under ₹5,000. [1] An existing AI beat an early OpenAI reasoning model at maths, researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation. [4] At the end: which one you should use.",
      "pauses": {
       "3": 0.45
      }
@@ -112,8 +112,8 @@
      "who": "maastaaru",
      "file": "03_soft.wav",
      "maxgap": 0.45,
-     "text": "ఆన్సర్ కీ లో కేవలం 'పిల్లి' అని ఉంటుంది. [1] కానీ టీచర్ ఎ ఐ, ఆ ఫోటో ప్రతి ఆప్షన్ కి ఎంత దగ్గరగా ఉందో చెప్తుంది: [2] పిల్లి తొంభై శాతం, పులి తొమ్మిది శాతం, కారు ఒక్క శాతం. [3] ఈ చిన్న నంబర్లలోనే దాగి ఉన్న పాఠాలు ఉంటాయి. [4] చాట్ బాట్లు కూడా ఇలాగే, పదాలతో నేర్చుకుంటాయి: తర్వాత వచ్చే ప్రతి పదానికి టీచర్ ఎంత వెయిట్ ఇస్తుందో, స్టూడెంట్ కాపీ చేస్తుంది.",
-     "show": "An answer key just says 'cat'. [1] A teacher AI shows how close it is to each option: [2] 90% cat, 9% tiger, 1% car. [3] Those small numbers are hidden lessons. [4] Chatbots learn the same way, with words: the student copies how the teacher weighs every next word."
+     "text": "ఆన్సర్ కీ లో కేవలం 'పిల్లి' అని ఉంటుంది. [1] కానీ టీచర్ ఎ ఐ, ఆ ఫోటో ప్రతి ఆప్షన్ కి ఎంత దగ్గరగా ఉందో చెప్తుంది: [2] పిల్లి తొంభై శాతం, పులి తొమ్మిది శాతం, కారు ఒక్క శాతం. [3] ఈ చిన్న నంబర్లలోనే దాగి ఉన్న పాఠాలు ఉంటాయి. [4] చాట్ బాట్లు కూడా పదాలతో ఇలాగే చేస్తాయి.",
+     "show": "An answer key just says 'cat'. [1] A teacher AI shows how close it is to each option: [2] 90% cat, 9% tiger, 1% car. [3] Those small numbers are hidden lessons. [4] Chatbots do the same with words."
     }
    ]
   },
@@ -138,8 +138,9 @@
      "who": "maastaaru",
      "file": "04_results.wav",
      "maxgap": 0.45,
-     "text": "పెద్ద కంపెనీలు ఇదే చేస్తాయి. [1] రెండు వేల ఇరవై నాలుగు లో, గూగుల్ తమ వేగమైన జెమిని ఫ్లాష్, పెద్ద జెమిని ప్రో నుంచి ఇలాగే నేర్చుకుంది అని చెప్పింది.",
-     "show": "Big companies do this. [1] In 2024, Google said its fast Gemini Flash learned from the bigger Gemini Pro this way."
+     "text": "రెండు వేల ఇరవై నాలుగు లో, [1] గూగుల్ తమ వేగమైన జెమిని ఫ్లాష్, పెద్ద జెమిని ప్రో నుంచి ఇలాగే నేర్చుకుంది అని చెప్పింది.",
+     "show": "In 2024, [1] Google said its fast Gemini Flash learned from the bigger Gemini Pro this way.",
+     "start": 2.5
     }
    ]
   },
@@ -176,8 +177,8 @@
      "who": "maastaaru",
      "file": "05_cheap.wav",
      "maxgap": 0.45,
-     "text": "మరి ఆ మ్యాథ్స్ మోడల్? అది టీచర్ శాతాలను కాపీ చేయలేదు. [1] రీసెర్చర్లు ఇప్పటికే ట్రైన్ అయిన ఒక ఓపెన్ మోడల్ కి, ఇంకా తెలివైన ఎ ఐ రాసిన వెయ్యి సాల్వ్డ్ ఎగ్జాంపుల్స్ ఇచ్చారు. [2] ఆ ఐదు వేలు ఈ చివరి స్టెప్ కి మాత్రమే. [3] రాసిన ఆన్సర్స్ కాపీ చేయడం కూడా డిస్టిలేషనే.",
-     "show": "And that maths model? It didn't copy the teacher's percentages. [1] Researchers gave an already-trained open model 1,000 solved examples written by a smarter AI. [2] The ₹5,000 paid only for this last step. [3] Copying written answers counts as distillation too."
+     "text": "మరి ఆ మ్యాథ్స్ మోడల్? దానికి శాతాలు లేవు, రాసిన ఆన్సర్స్ మాత్రమే, అయినా అది డిస్టిలేషనే: [1] రీసెర్చర్లు ఇప్పటికే ట్రైన్ అయిన ఒక ఓపెన్ మోడల్ కి, ఇంకా తెలివైన ఎ ఐ నుంచి వెయ్యి సాల్వ్డ్ ఎగ్జాంపుల్స్ ఇచ్చారు. [2] ఆ ఐదు వేలు ఈ చివరి స్టెప్ కి మాత్రమే.",
+     "show": "And that maths model? It got no percentages, just written answers, and that still counts as distillation: [1] researchers gave an already-trained open model 1,000 solved examples from a smarter AI. [2] That ₹5,000 was only this last step."
     }
    ]
   },
@@ -251,7 +252,8 @@
      }
     }
    ],
-   "drop_cue": 3
+   "drop_cue": 3,
+   "lift": true
   },
   {
    "id": "ask",
@@ -280,9 +282,13 @@
      "file": "08_ask.wav",
      "maxgap": 0.45,
      "text": "మీ వంతు: ఐదు వందల కస్టమర్ కంప్లైంట్స్. వాటిలో లీగల్ సమస్య అయ్యేవి ఏవో కనిపెట్టాలి. [1] ఫ్లాష్ నా, ప్రో నా, రెండూ నా? కామెంట్ చేయండి. [2] ఎ ఐ ని సింపుల్ గా అర్థం చేసుకోవడానికి ఫాలో అవ్వండి.",
-     "show": "Your turn: 500 customer complaints. Find the ones that could become legal trouble. [1] Flash, Pro, or both? Comment your pick. [2] Follow to understand AI, simply."
+     "show": "Your turn: 500 customer complaints. Find the ones that could become legal trouble. [1] Flash, Pro, or both? Comment your pick. [2] Follow to understand AI, simply.",
+     "pauses": {
+      "2": 1.0
+     }
     }
-   ]
+   ],
+   "outro": true
   }
  ],
  "handle": "@ai_maastaaru_telugu",

@@ -7,13 +7,13 @@
  "look": "classic",
  "tempo": 1.14,
  "gap": 0.4,
- "lead": 0.05,
+ "lead": 0.45,
  "music": "lofi",
  "musicVol": [
   0.55,
   0.95
  ],
- "musicLift": 1.8,
+ "musicLift": 1.5,
  "parler_lang": "en",
  "scenes": [
   {
@@ -45,9 +45,9 @@
      "who": "maastaaru",
      "file": "01_hook.wav",
      "maxgap": 0.4,
-     "text": "Under thirty minutes. Under five thousand rupees. [1] That's what it took to make an existing AI beat an early OpenAI reasoning model at maths, its researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation.",
-     "tts": "Under thirty minutes. Under five thousand rupees. That's what it took to make an existing AI beat an early Open AI reasoning model at maths, its researchers say. Its teacher? A smarter AI. This is called distillation.",
-     "show": "Under 30 minutes. Under ₹5,000. [1] That's what it took to make an existing AI beat an early OpenAI reasoning model at maths, its researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation.",
+     "text": "Under thirty minutes. Under five thousand rupees. [1] That's what it took to make an existing AI beat an early OpenAI reasoning model at maths, its researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation. [4] And at the end: which one you should use.",
+     "tts": "Under thirty minutes. Under five thousand rupees. That's what it took to make an existing AI beat an early Open AI reasoning model at maths, its researchers say. Its teacher? A smarter AI. This is called distillation. And at the end: which one you should use.",
+     "show": "Under 30 minutes. Under ₹5,000. [1] That's what it took to make an existing AI beat an early OpenAI reasoning model at maths, its researchers say. [2] Its teacher? [3] A smarter AI. This is called distillation. [4] And at the end: which one you should use.",
      "pauses": {
       "3": 0.45
      }
@@ -79,8 +79,9 @@
      "who": "maastaaru",
      "file": "02_class.wav",
      "maxgap": 0.4,
-     "text": "The idea: [1] a big, slow, expensive AI [2] teaches a small, fast one.",
-     "show": "The idea: [1] a big, slow, expensive AI [2] teaches a small, fast one."
+     "text": "The idea: [1] a big, slow, expensive model [2] teaches a small, fast one.",
+     "show": "The idea: [1] a big, slow, expensive model [2] teaches a small, fast one.",
+     "tts": "The idea: a big, slow, expensive model teaches a small, fast one."
     }
    ]
   },
@@ -113,9 +114,9 @@
      "who": "maastaaru",
      "file": "03_soft.wav",
      "maxgap": 0.4,
-     "text": "An answer key just says 'cat', [1] but a teacher AI shows how much it looks like each option: [2] ninety percent cat, nine percent tiger, one percent car. [3] Those small numbers are hidden lessons. [4] Chatbots learn the same way, with words: the student copies how the teacher weighs every next word.",
-     "tts": "An answer key just says cat, but a teacher AI shows how much it looks like each option: ninety percent cat, nine percent tiger, one percent car. Those small numbers are hidden lessons. Chat bots learn the same way, with words: the student copies how the teacher weighs every next word.",
-     "show": "An answer key just says 'cat', [1] but a teacher AI shows how much it looks like each option: [2] 90% cat, 9% tiger, 1% car. [3] Those small numbers are hidden lessons. [4] Chatbots learn the same way, with words: the student copies how the teacher weighs every next word."
+     "text": "An answer key just says 'cat', [1] but a teacher AI shows how much it looks like each option: [2] ninety percent cat, nine percent tiger, one percent car. [3] Those small numbers are hidden lessons. [4] Chatbots do the same with words.",
+     "tts": "An answer key just says cat, but a teacher AI shows how much it looks like each option: ninety percent cat, nine percent tiger, one percent car. Those small numbers are hidden lessons. Chat bots do the same with words.",
+     "show": "An answer key just says 'cat', [1] but a teacher AI shows how much it looks like each option: [2] 90% cat, 9% tiger, 1% car. [3] Those small numbers are hidden lessons. [4] Chatbots do the same with words."
     }
    ]
   },
@@ -140,9 +141,9 @@
      "who": "maastaaru",
      "file": "04_results.wav",
      "maxgap": 0.4,
-     "text": "Big companies do this. [1] In 2024, Google said its fast Gemini Flash learned from the bigger Gemini Pro this way.",
-     "tts": "Big companies do this. In twenty twenty-four, Google said its fast Gemini Flash learned from the bigger Gemini Pro this way.",
-     "show": "Big companies do this. [1] In 2024, Google said its fast Gemini Flash learned from the bigger Gemini Pro this way."
+     "text": "In 2024, Google said [1] its fast Gemini Flash learned from the bigger Gemini Pro this way.",
+     "show": "In 2024, Google said [1] its fast Gemini Flash learned from the bigger Gemini Pro this way.",
+     "start": 2.2
     }
    ]
   },
@@ -179,9 +180,9 @@
      "who": "maastaaru",
      "file": "05_cheap.wav",
      "maxgap": 0.4,
-     "text": "And that maths model? It didn't copy the teacher's percentages. [1] Researchers gave an already-trained open model one thousand solved examples, written by a smarter AI. [2] The five thousand rupees paid only for this last step. [3] Learning from written answers counts as distillation too.",
-     "tts": "And that maths model? It didn't copy the teacher's percentages. Researchers gave an already-trained open model one thousand solved examples, written by a smarter AI. The five thousand rupees paid only for this last step. Learning from written answers counts as distillation too.",
-     "show": "And that maths model? It didn't copy the teacher's percentages. [1] Researchers gave an already-trained open model 1,000 solved examples, written by a smarter AI. [2] The ₹5,000 paid only for this last step. [3] Learning from written answers counts as distillation too."
+     "text": "And that maths model? It got no percentages, just written answers, and that still counts as distillation: [1] researchers gave an already-trained open model one thousand solved examples from a smarter AI. [2] That five thousand rupees was only this last step.",
+     "tts": "And that maths model? It got no percentages, just written answers, and that still counts as distillation: researchers gave an already-trained open model one thousand solved examples from a smarter AI. That five thousand rupees was only this last step.",
+     "show": "And that maths model? It got no percentages, just written answers, and that still counts as distillation: [1] researchers gave an already-trained open model 1,000 solved examples from a smarter AI. [2] That ₹5,000 was only this last step."
     }
    ]
   },
@@ -248,15 +249,16 @@
      "who": "maastaaru",
      "file": "07_pick.wav",
      "maxgap": 0.4,
-     "text": "So which do you use? [1] Emails, summaries, pulling out data: a small model is enough, like Flash, Flash-Lite or mini. [2] Multi-step tasks, or an Excel formula the small one keeps getting wrong? Move up to a bigger model, like Gemini Pro, usually a paid plan. [3] For developers paying per use, Pro costs about three times Flash right now. [4] So test twenty of your real emails on the small one first.",
-     "show": "So which do you use? [1] Emails, summaries, pulling out data: a small model is enough, like Flash, Flash-Lite or mini. [2] Multi-step tasks, or an Excel formula the small one keeps getting wrong? Move up to a bigger model, like Gemini Pro, usually a paid plan. [3] For developers paying per use, Pro costs about 3x Flash right now. [4] So test 20 of your real emails on the small one first.",
-     "tts": "So which do you use? Emails, summaries, pulling out data: a small model is enough, like Flash, Flash Lite, or mini. Multi-step tasks, or an Excel formula the small one keeps getting wrong? Move up to a bigger model, like Gemini Pro, usually a paid plan. For developers paying per use, Pro costs about three times Flash right now. So test twenty of your real emails on the small one first.",
+     "text": "So which do you use? [1] Emails, summaries, pulling out data: a small model is enough, like Flash, Flash-Lite or mini. [2] Multi-step tasks, or an Excel formula that the small one keeps getting wrong? Move up to a bigger model, like Gemini Pro, usually a paid plan. [3] For developers paying per use, Pro costs about three times Flash right now. [4] So test twenty of your real emails on the small one first.",
+     "show": "So which do you use? [1] Emails, summaries, pulling out data: a small model is enough, like Flash, Flash-Lite or mini. [2] Multi-step tasks, or an Excel formula that the small one keeps getting wrong? Move up to a bigger model, like Gemini Pro, usually a paid plan. [3] For developers paying per use, Pro costs about 3x Flash right now. [4] So test 20 of your real emails on the small one first.",
+     "tts": "So which do you use? Emails, summaries, pulling out data: a small model is enough, like Flash, Flash Lite, or mini. Multi-step tasks, or an Excel formula that the small one keeps getting wrong? Move up to a bigger model, like Gemini Pro, usually a paid plan. For developers paying per use, Pro costs about three times Flash right now. So test twenty of your real emails on the small one first.",
      "pauses": {
       "3": 0.4
      }
     }
    ],
-   "drop_cue": 3
+   "drop_cue": 3,
+   "lift": true
   },
   {
    "id": "ask",
@@ -285,9 +287,13 @@
      "file": "08_ask.wav",
      "maxgap": 0.4,
      "text": "Your turn: five hundred customer complaints. Find the ones that could become legal trouble. [1] Flash, Pro, or both? Comment your pick. [2] Follow for more AI, explained simply.",
-     "show": "Your turn: 500 customer complaints. Find the ones that could become legal trouble. [1] Flash, Pro, or both? Comment your pick. [2] Follow for more AI, explained simply."
+     "show": "Your turn: 500 customer complaints. Find the ones that could become legal trouble. [1] Flash, Pro, or both? Comment your pick. [2] Follow for more AI, explained simply.",
+     "pauses": {
+      "2": 1.0
+     }
     }
-   ]
+   ],
+   "outro": true
   }
  ],
  "musicPad": true

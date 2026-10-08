@@ -618,6 +618,28 @@ const chunks = (words: Word[], max = 3) => {
   if (cur.length) out.push(cur);
   return out;
 };
+// Phrase chunks for translated captions: break at the end of a clause, keep to about two lines, never leave
+// one or two words dangling on their own.
+const phraseChunks = (words: Word[]) => {
+  const len = (ws: Word[]) => ws.reduce((n, w) => n + w.w.length + 1, 0);
+  const out: Word[][] = [];
+  let cur: Word[] = [];
+  words.forEach((w, i) => {
+    cur.push(w);
+    const rest = words.length - i - 1;
+    const clause = /[,:;]$/.test(w.w), stop = /[.!?]$/.test(w.w);
+    const next = words[i + 1];
+    if (stop || (clause && len(cur) >= 16 && rest > 2) || (next && len(cur) + next.w.length + 1 > 46 && rest > 2)) {
+      out.push(cur);
+      cur = [];
+    }
+  });
+  if (cur.length) {
+    if (cur.length <= 2 && out.length && len(out[out.length - 1]) + len(cur) <= 56) out[out.length - 1].push(...cur);
+    else out.push(cur);
+  }
+  return out;
+};
 const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   const f = useCurrentFrame();
   const classic = useContext(LookCtx) === "classic";
@@ -626,7 +648,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   // "phrase" mode (translated captions, e.g. English captions over a Telugu voice): whole phrases, no per-word
   // highlight, because the caption's word order does not follow the spoken word order.
   const phrase = s.data.captionMode === "phrase";
-  const cs = chunks(l.words, phrase ? 7 : 3);
+  const cs = phrase ? phraseChunks(l.words) : chunks(l.words);
   const c = cs.find((ch, i) => f < (cs[i + 1]?.[0].from ?? l.from + l.frames + 4)) ?? cs[cs.length - 1];
   if (!c) return null;
   const pop = interpolate(f - c[0].from, [0, 4], [0.85, 1], cl);
