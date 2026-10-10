@@ -9,7 +9,7 @@ Episode 28 of AI From Scratch: how AI turns words into numbers (Transformers, Pa
 - Embeddings: each ID fetches a long list of numbers from a giant table, an address on a map of meaning. Google Maps needs 2 numbers; OpenAI's open model gpt-oss uses 2,880
 - Position: "dog bites man" vs "man bites dog", so every token also carries its place
 - Layers: on every floor, each word looks back and soaks up what matters
-- Next token: score every option, pick a likely one ("New"), climb again ("York"). One trip per token, which is why answers appear piece by piece
+- Next token: score every option, pick a likely one ("New"), climb again ("York"). Every new token is another climb, which is why answers appear piece by piece
 
 Your turn: does "bank" get the same ID in "river bank" and "bank account"? Comment your answer.
 

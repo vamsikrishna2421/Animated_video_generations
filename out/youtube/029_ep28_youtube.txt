@@ -12,7 +12,7 @@ In this episode:
 - Embeddings: each ID fetches its row from a giant table, a long list of numbers that works like an address on a map of meaning. Google Maps needs 2 numbers; OpenAI's open model gpt-oss uses 2,880
 - Word order: "dog" gets the same embedding first or last, so every token also carries its position
 - Layers: on every floor, each word looks back and soaks up what matters (attention, from Episode 27). gpt-oss-120b has 36 layers
-- The next token: score every possible next token, pick a likely one ("New"), climb again ("York"). One trip per token, which is why answers appear piece by piece
+- The next token: score every possible next token, pick a likely one ("New"), climb again ("York"). Every new token is another climb, which is why answers appear piece by piece
 
 Quiz: does "bank" get the same ID in "river bank" and "bank account"? Answer in the comments.
 
@@ -22,9 +22,9 @@ Chapters:
 0:22 Embeddings: IDs become lists of numbers
 0:37 Word order: position signals
 0:48 Layers: each word looks back
-1:00 The next token, one at a time
-1:11 Quiz: same ID for "bank"?
-1:23 Recap + next episode
+1:01 The next token, one at a time
+1:14 Quiz: same ID for "bank"?
+1:27 Recap + next episode
 
 Sources: token IDs from OpenAI's tiktoken (o200k tokenizer, shared by GPT-4o and the open gpt-oss models); gpt-oss-120b sizes from OpenAI's model config on Hugging Face (hidden size 2,880, 36 layers); Vaswani et al., "Attention Is All You Need" (2017) for position encodings. The score bars are an illustration, not real model output.
 
