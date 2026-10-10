@@ -354,7 +354,7 @@ const LowerThird: React.FC<{ label: string; headline: string; ticker: string; ac
       <div style={{ display: "flex", alignItems: "center", background: "linear-gradient(90deg, #FFFFFF, #E9EEFF)", padding: "12px 22px", borderLeft: `12px solid ${accent}` }}>
         <div style={{ fontFamily: F.archivo, fontSize: headline.length > 30 ? 30 : headline.length > 24 ? 34 : 40, lineHeight: 1.05, color: B.ink, textTransform: "uppercase", whiteSpace: "nowrap", overflow: "hidden", clipPath: `inset(0 ${(1 - prog(f, 10, 26)) * 100}% 0 0)` }}>{headline}</div>
       </div>
-      <div style={{ display: "flex", alignItems: "center", height: 46, background: "#0A1030", overflow: "hidden" }}>
+      <div style={{ display: ticker ? "flex" : "none", alignItems: "center", height: 46, background: "#0A1030", overflow: "hidden" }}>
         <div style={{ flexShrink: 0, height: "100%", padding: "0 16px", display: "flex", alignItems: "center", background: accent, color: B.night, fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, zIndex: 1 }}>AI MAASTAARU</div>
         <div style={{ whiteSpace: "nowrap", fontFamily: F.inter, fontWeight: 600, fontSize: 24, color: "rgba(255,255,255,0.9)", transform: `translateX(${900 - f * 5}px)` }}>
           {Array.from({ length: 3 }, () => ticker).join("   •   ")}
@@ -399,7 +399,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
         </div>
       </div>
       <div style={{ position: "absolute", top: 455, left: 60, right: 60, fontFamily: F.inter, fontWeight: 600, fontSize: 34, lineHeight: 1.3, color: "rgba(255,255,255,0.82)", opacity: prog(f, 14, 26), display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dek}</div>
-      <div style={{ position: "absolute", top: 600, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 20, letterSpacing: 2, color: "rgba(255,255,255,0.45)", opacity: prog(f, 20, 32) }}>SOURCES: {seg.sources?.toUpperCase()}</div>
+      <div style={{ position: "absolute", top: 592, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 26, letterSpacing: 1, color: "rgba(255,255,255,0.78)", opacity: prog(f, 20, 32), whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       {seg.demo ? (
         <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />
       ) : (
@@ -431,7 +431,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
           })}
         </div>
       )}
-      <Karaoke words={seg.words} bottom={300} size={80} max={3} />
+      <Karaoke words={seg.words} bottom={390} size={80} max={3} />
     </AbsoluteFill>
   );
 };
@@ -460,8 +460,8 @@ const ScrollLock: React.FC<{ end: number }> = ({ end }) => {
 const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string }> = ({ seg, range, kicker = "YOUR WEEK IN AI", title = "AI NEWS" }) => {
   const f = useCurrentFrame();
   // the last sentence ("Here's your AI news...") swaps to the title card
-  const lastStart = seg.words.find((w, i) => i > 0 && /^here/i.test(w.w))?.s ?? seg.frames - 60;
-  const tc = prog(f, lastStart - 4, lastStart + 8);
+  const here = seg.words.find((w, i) => i > 0 && /^here/i.test(w.w));
+  const tc = here ? prog(f, here.s - 4, here.s + 8) : 0;
   const shake = f < 14 ? (14 - f) * 1.4 : 0;
   return (
     <AbsoluteFill>
@@ -484,7 +484,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
         <div style={{ marginTop: 24, fontFamily: F.inter, fontWeight: 800, fontSize: 56, color: B.cyan }}>{range}</div>
       </AbsoluteFill>
       <Presenter cues={[]} mood="shock" x={900} y={1520} s={0.34} />
-      <Karaoke words={seg.words} bottom={300} size={86} max={3} />
+      <Karaoke words={seg.words} bottom={390} size={86} max={3} />
     </AbsoluteFill>
   );
 };
@@ -537,7 +537,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <BrandFonts />
       {tl.segments.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} ticker={stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
+          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} ticker={tl.musicBase ? "" : stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
@@ -555,8 +555,8 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
         if (fr >= followAbs) return Math.max(0.8, base * 3.3); // music-only end card: the loudest point of the bed
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
-        if (fr >= outroStart) return base * 1.3; // CTA voice: bed lifted but still ~8 dB under it
-        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.15, base * 1.3], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.15], cl);
+        if (fr >= outroStart) return base * 1.15; // CTA voice: bed lifted but still ~9 dB under it
+        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base, base * 1.15], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.05], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
         return v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1);
       }} />
@@ -566,6 +566,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>
       <Sequence from={outroStart} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.45} /></Sequence>
       {starts.slice(1).map((s) => <Sequence key={`w${s}`} from={s - 8} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.4} /></Sequence>)}
+      {tl.musicBase && starts.slice(1, -1).map((s) => <Sequence key={`st${s}`} from={s + 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.3} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[tl.segments.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.35} /></Sequence>
       )))}

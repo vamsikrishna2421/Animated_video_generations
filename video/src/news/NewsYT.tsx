@@ -262,8 +262,8 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
         const base = tl.musicBaseYT ?? 0.08, outroS = starts[starts.length - 1], lastS = starts[starts.length - 2];
         if (fr >= subAbs) return tl.musicBaseYT ? Math.max(0.3, base * 4) : 0.3; // music-only subscribe card: loudest point
         if (fr < segs[0].frames) return tl.musicBaseYT ? base * 1.4 : 0.22;
-        if (fr >= outroS) return base * 1.3;
-        const v = fr >= lastS ? interpolate(fr, [lastS, outroS], [base * 1.15, base * 1.3], cl) : base * interpolate(fr, [starts[1], lastS], [0.85, 1.15], cl);
+        if (fr >= outroS) return base * 1.15;
+        const v = fr >= lastS ? interpolate(fr, [lastS, outroS], [base, base * 1.15], cl) : base * interpolate(fr, [starts[1], lastS], [0.85, 1.05], cl);
         const swell = chapterStarts.reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2.2, 1], cl)), 1);
         return v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1);
       }} />

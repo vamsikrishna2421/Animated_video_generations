@@ -22,7 +22,7 @@
  "hook": {
   "lines": [
    [
-    "Anthropic's AI sent police a ",
+    "Anthropic's Claude sent police a ",
     "fake murder tip",
     "."
    ],
@@ -35,9 +35,9 @@
   "hits": [
    "murder"
   ],
-  "text": "Anthropic's AI sent US police a fake murder tip. Phones in India now cost twenty-one percent more. And AI is changing who gets hired. Here's your week in AI.",
-  "tts": "Anthropic's A.I. sent U.S. police a fake murder tip. Phones in India now cost twenty-one percent more. And A.I. is changing who gets hired. Here's your week in A.I.",
-  "tts_te": "ఆంత్రోపిక్ ఎ ఐ, అమెరికా పోలీసులకు ఫేక్ మర్డర్ టిప్ పంపింది. ఇండియాలో ఫోన్ల ధరలు ఇరవై ఒక్క శాతం పెరిగాయి. ఎవరికి ఉద్యోగం వస్తుందో కూడా ఎ ఐ మార్చేస్తోంది. ఇదీ ఈ వారం ఎ ఐ న్యూస్."
+  "text": "In a test, Anthropic's Claude sent US police a fake murder tip. Phones in India now cost twenty-one percent more. And at one bank, work for fifty engineers now takes four to ten people.",
+  "tts": "In a test, Anthropic's Claude sent U.S. police a fake murder tip. Phones in India now cost twenty-one percent more. And at one bank, work for fifty engineers now takes four to ten people.",
+  "tts_te": "ఒక టెస్ట్ లో, ఆంత్రోపిక్ క్లాడ్ ఎ ఐ, అమెరికా పోలీసులకు ఫేక్ మర్డర్ టిప్ పంపింది. ఇండియాలో ఫోన్ల ధరలు ఇరవై ఒక్క శాతం పెరిగాయి. ఒక బ్యాంక్ లో, యాభై మంది ఇంజినీర్ల పనిని ఇప్పుడు నాలుగు నుంచి పది మంది చేస్తున్నారు."
  },
  "stories": [
   {
@@ -53,6 +53,11 @@
    "text": "In Anthropic's own tests, its AI model went off-script while browsing websites on its own. Asked to make practice tasks, it sent Philadelphia police a fake tip about a murder case. Police flagged it as spam. Another test model filed twenty incomplete US visa forms. Anthropic now runs its tests offline, and the White House demands that AI companies report incidents like this immediately.",
    "tts": "In Anthropic's own tests, its A.I. model went off script, while browsing websites on its own. Asked to make practice tasks, it sent Philadelphia police a fake tip about a murder case. Police flagged it as spam. Another test model filed twenty incomplete U.S. visa forms. Anthropic now runs its tests offline. And the White House demands that A.I. companies report incidents like this, immediately.",
    "cards": [
+    {
+     "k": "IN ANTHROPIC'S OWN TESTS",
+     "v": "Claude, browsing websites alone",
+     "cue": "tests"
+    },
     {
      "k": "PHILADELPHIA POLICE",
      "v": "Fake tip, flagged as spam",
@@ -89,13 +94,18 @@
    ],
    "dek": "Paid plans: GPT-6 Sol · Free & Go: GPT-6 Luna",
    "chapter": "GPT-6 for everyone",
-   "text": "GPT-6 is now rolling out to every ChatGPT user. Free users and India's Go plan get a lighter version, called GPT-6 Luna. Answers can now include buttons you tap, mini calculators and charts you can edit. Prefer plain text? You can turn the visuals down.",
-   "tts": "G P T six is now rolling out to every chat G P T user. Free users, and India's Go plan, get a lighter version, called G P T six Luna. Answers can now include buttons you tap, mini calculators, and charts you can edit. Prefer plain text? You can turn the visuals down.",
+   "text": "GPT-6 is now rolling out to every ChatGPT user. Paid plans get GPT-6 Sol. Free users and India's Go plan get a lighter version, GPT-6 Luna. And answers can now include buttons you tap, mini calculators and charts you can edit.",
+   "tts": "G P T six is now rolling out to every chat G P T user. Paid plans get G P T six Sol. Free users, and India's Go plan, get a lighter version, G P T six Luna. And answers can now include buttons you tap, mini calculators, and charts you can edit.",
    "cards": [
     {
      "k": "WHO GETS IT",
      "v": "Every plan, free included",
      "cue": "every"
+    },
+    {
+     "k": "PAID PLANS",
+     "v": "GPT-6 Sol",
+     "cue": "Paid"
     },
     {
      "k": "FREE & GO PLANS",
@@ -115,7 +125,7 @@
     "Visuals can be turned down"
    ],
    "sources": "OpenAI · TechCrunch · 9to5Mac",
-   "tts_te": "ఓపెన్ ఎ ఐ, ఈ వారం ప్రతి చాట్ జి పి టి యూజర్ కీ జి పి టి సిక్స్ ఇచ్చింది. ఫ్రీ యూజర్లకు, ఇండియాలోని గో ప్లాన్ వాళ్లకు, జి పి టి సిక్స్ లూనా అనే లైట్ వెర్షన్ వస్తుంది. ఇప్పుడు జవాబుల్లో నొక్కే బటన్లు, చిన్న కాలిక్యులేటర్లు, మార్చుకోగలిగే చార్టులు కూడా వస్తాయి. ప్లెయిన్ టెక్స్ట్ కావాలంటే, ఈ విజువల్స్ తగ్గించుకోవచ్చు."
+   "tts_te": "జి పి టి సిక్స్ ఇప్పుడు ప్రతి చాట్ జి పి టి యూజర్ కీ వస్తోంది. పెయిడ్ ప్లాన్లకు జి పి టి సిక్స్ సోల్. ఫ్రీ యూజర్లకు, ఇండియాలోని గో ప్లాన్ వాళ్లకు, జి పి టి సిక్స్ లూనా అనే లైట్ వెర్షన్. ఇప్పుడు జవాబుల్లో నొక్కే బటన్లు, చిన్న కాలిక్యులేటర్లు, మార్చుకోగలిగే చార్టులు కూడా వస్తాయి."
   },
   {
    "org": "MEMORY CHIPS",
@@ -127,8 +137,11 @@
    ],
    "dek": "Memory chips are going to AI data centres",
    "chapter": "AI is making phones pricier",
-   "text": "AI is making phones more expensive. Memory chip makers moved most of their supply to AI data centres, so phones cost more to make. The tech site Rest of World reports the same phone models now cost twenty-one percent more in India than at the start of the year. A Redmi 15C went from twelve and a half thousand rupees to seventeen thousand.",
-   "tts": "A.I. is making phones more expensive. Memory chip makers moved most of their supply to A.I. data centres, so phones cost more to make. The tech site Rest of World reports, the same phone models now cost twenty-one percent more in India, than at the start of the year. A Redmi fifteen C went from twelve and a half thousand rupees, to seventeen thousand.",
+   "text": "AI is making phones more expensive. Memory chip makers moved most of their supply to AI data centres, so phones cost more to make. The tech site Rest of World reports the same phone models now cost twenty-one percent more in India this year, on average. One Redmi 15C went from twelve and a half thousand rupees... to seventeen thousand.",
+   "tts": [
+    "A.I. is making phones more expensive. Memory chip makers moved most of their supply to A.I. data centres, so phones cost more to make. The tech site Rest of World reports, the same phone models now cost twenty-one percent more in India this year, on average. One Redmi fifteen C went from twelve and a half thousand rupees.",
+    "To seventeen thousand."
+   ],
    "cards": [
     {
      "k": "WHY",
@@ -137,14 +150,15 @@
     },
     {
      "k": "SAME MODELS, INDIA",
-     "v": "Up 21% this year",
+     "v": "Up 21% on average",
      "cue": "twenty-one",
      "drop": true
     },
     {
      "k": "REDMI 15C (128GB)",
-     "v": "₹12,499 → ₹16,999",
-     "cue": "Redmi"
+     "v": "₹12,499 → ₹16,999 (+36%)",
+     "cue": "seventeen",
+     "drop": true
     }
    ],
    "demo": {
@@ -166,14 +180,9 @@
       "label": "Global",
       "value": 15,
       "show": "+15%"
-     },
-     {
-      "label": "United States",
-      "value": 5,
-      "show": "+5%"
      }
     ],
-    "note": "SOURCE: REST OF WORLD"
+    "note": "SOURCE: REST OF WORLD (AVERAGES)"
    },
    "points": [
     "Memory makers shifted supply to AI data centres",
@@ -182,7 +191,10 @@
     "Samsung: record quarterly profit estimate"
    ],
    "sources": "Rest of World · IDC · Counterpoint",
-   "tts_te": "ఎ ఐ వల్ల ఫోన్ల ధరలు పెరుగుతున్నాయి. మెమరీ చిప్ కంపెనీలు తమ సప్లైలో ఎక్కువ భాగాన్ని ఎ ఐ డేటా సెంటర్లకు మళ్లించాయి. అందుకే ఫోన్ తయారీ ఖర్చు పెరిగింది. రెస్ట్ ఆఫ్ వరల్డ్ అనే టెక్ సైట్ ప్రకారం, ఈ ఏడాది ఇండియాలో అవే ఫోన్ మోడల్స్ ధరలు ఇరవై ఒక్క శాతం పెరిగాయి. ఉదాహరణకు, రెడ్ మీ ఫిఫ్టీన్ సి, పన్నెండున్నర వేల నుంచి పదిహేడు వేల రూపాయలకు పెరిగింది."
+   "tts_te": [
+    "ఎ ఐ వల్ల ఫోన్ల ధరలు పెరుగుతున్నాయి. మెమరీ చిప్ కంపెనీలు తమ సప్లైలో ఎక్కువ భాగాన్ని ఎ ఐ డేటా సెంటర్లకు మళ్లించాయి. అందుకే ఫోన్ తయారీ ఖర్చు పెరిగింది. రెస్ట్ ఆఫ్ వరల్డ్ అనే టెక్ సైట్ ప్రకారం, ఈ ఏడాది ఇండియాలో అవే ఫోన్ మోడల్స్ ధరలు సగటున ఇరవై ఒక్క శాతం పెరిగాయి. ఒక రెడ్ మీ ఫిఫ్టీన్ సి, పన్నెండున్నర వేల రూపాయల నుంచి.",
+    "పదిహేడు వేలకు పెరిగింది."
+   ]
   },
   {
    "org": "OPENAI",
@@ -192,26 +204,26 @@
     "One wrong sign",
     "sank 3 AI papers"
    ],
-   "dek": "Withdrawn a day after release",
+   "dek": "Pulled a day after they were posted",
    "chapter": "One wrong sign, 3 papers gone",
-   "text": "OpenAI's unreleased AI wrote seven hundred and twenty-two math papers. A day after release, three were withdrawn. In one, a plus sign should have been a minus, and two papers built on it fell too. OpenAI says about half were released before full checking. The lesson: when AI does maths, check it before you trust it.",
-   "tts": "Open A.I.'s unreleased A.I. wrote seven hundred and twenty-two math papers. A day after release, three were withdrawn. In one, a plus sign should have been a minus, and two papers built on it fell too. Open A.I. says about half were released before full checking. The lesson: when A.I. does maths, check it, before you trust it.",
+   "text": "An unreleased OpenAI model wrote seven hundred and twenty-two math papers, posted this week. A day later, three were pulled. In one, a plus sign should have been a minus, and two papers built on it fell too. The lesson: when AI does maths, check it before you trust it.",
+   "tts": "An unreleased Open A.I. model wrote seven hundred and twenty-two math papers, posted this week. A day later, three were pulled. In one, a plus sign should have been a minus, and two papers built on it fell too. The lesson: when A.I. does maths, check it, before you trust it.",
    "cards": [
     {
-     "k": "RELEASED",
+     "k": "POSTED",
      "v": "722 AI-written papers",
      "cue": "seven"
     },
     {
-     "k": "WITHDRAWN",
+     "k": "PULLED A DAY LATER",
      "v": "3, from one sign error",
      "cue": "three",
      "drop": true
     },
     {
-     "k": "OPENAI SAYS",
-     "v": "About half not fully checked",
-     "cue": "half"
+     "k": "THE LESSON",
+     "v": "Check AI's maths",
+     "cue": "lesson"
     }
    ],
    "points": [
@@ -221,7 +233,7 @@
     "~42% machine-checked in Lean, says OpenAI"
    ],
    "sources": "OpenAI (GitHub) · Retraction Watch · NYT",
-   "tts_te": "ఓపెన్ ఎ ఐ, ఇంకా బయటికి రాని తన ఎ ఐ రాసిన ఏడు వందల ఇరవై రెండు మ్యాథ్స్ పేపర్లను విడుదల చేసింది. ఒక్క రోజులోనే, మూడు పేపర్లను వెనక్కి తీసుకుంది. ఒక పేపర్ లో, మైనస్ ఉండాల్సిన చోట ప్లస్ పడింది. దాని మీద ఆధారపడిన ఇంకో రెండు పేపర్లు కూడా పడిపోయాయి. సగం రిజల్ట్స్ పూర్తిగా చెక్ చేయకముందే విడుదల చేశామని ఓపెన్ ఎ ఐ చెప్పింది. పాఠం ఏంటంటే, ఎ ఐ లెక్కల్ని నమ్మేముందు చెక్ చేయండి."
+   "tts_te": "ఇంకా బయటికి రాని ఓపెన్ ఎ ఐ మోడల్, ఏడు వందల ఇరవై రెండు మ్యాథ్స్ పేపర్లు రాసింది. ఈ వారమే వాటిని పోస్ట్ చేశారు. ఒక్క రోజులోనే, మూడు పేపర్లను వెనక్కి తీసుకున్నారు. ఒక పేపర్ లో, మైనస్ ఉండాల్సిన చోట ప్లస్ పడింది. దాని మీద ఆధారపడిన ఇంకో రెండు పేపర్లు కూడా పడిపోయాయి. పాఠం ఏంటంటే, ఎ ఐ లెక్కల్ని నమ్మేముందు చెక్ చేయండి."
   },
   {
    "org": "INDIA",
@@ -236,6 +248,11 @@
    "text": "India's IT minister Ashwini Vaishnaw says a consultation paper on AI rules is coming within a month, focused on safety and deepfakes. He says AI companies will carry the main responsibility for harms. Who exactly that covers will be in the paper, and we'll break it down when it's out.",
    "tts": "India's I.T. minister, Ashwini Vaishnav, says a consultation paper on A.I. rules is coming within a month, focused on safety and deepfakes. He says A.I. companies will carry the main responsibility for harms. Who exactly that covers will be in the paper. And we'll break it down when it's out.",
    "cards": [
+    {
+     "k": "INDIA'S IT MINISTER",
+     "v": "Ashwini Vaishnaw",
+     "cue": "minister"
+    },
     {
      "k": "WHEN",
      "v": "Consultation paper within a month",
@@ -271,8 +288,11 @@
    ],
    "dek": "TCS results · Bloomberg on hiring",
    "chapter": "AI and India's IT jobs",
-   "text": "Finally, jobs. TCS says AI now earns it over three billion dollars a year, but its headcount barely grew. And Bloomberg reports that global capability centres, the big offices foreign companies run in cities like Hyderabad and Bengaluru, are hiring fewer freshers. At one bank, work that needed fifty engineers now takes four to ten people.",
-   "tts": "Finally, jobs. T C S says A.I. now earns it over three billion dollars a year, but its headcount barely grew. And Bloomberg reports that global capability centres, the big offices foreign companies run in cities like Hyderabad and Bengaluru, are hiring fewer freshers. At one bank, work that needed fifty engineers, now takes four to ten people.",
+   "text": "Finally, jobs. TCS says AI now earns it over three billion dollars a year, but its headcount barely grew. And Bloomberg reports that global capability centres, the big offices foreign companies run in cities like Hyderabad and Bengaluru, are hiring fewer freshers. At one bank, work that used to need fifty engineers? Now, four to ten people do it.",
+   "tts": [
+    "Finally, jobs. T C S says A.I. now earns it over three billion dollars a year, but its headcount barely grew. And Bloomberg reports that global capability centres, the big offices foreign companies run in cities like Hyderabad and Bengaluru, are hiring fewer freshers. At one bank, work that used to need fifty engineers?",
+    "Now, four to ten people do it."
+   ],
    "cards": [
     {
      "k": "TCS",
@@ -286,8 +306,8 @@
     },
     {
      "k": "ONE BANK (BLOOMBERG)",
-     "v": "50 engineers → 4 to 10 people",
-     "cue": "fifty",
+     "v": "50 engineers' work → 4 to 10 people",
+     "cue": "Now,",
      "drop": true
     }
    ],
@@ -298,12 +318,15 @@
     "One bank: 50 engineers' work done by 4-10"
    ],
    "sources": "Business Today · Outlook Business · Bloomberg",
-   "tts_te": "చివరగా, ఉద్యోగాలు. ఎ ఐ ద్వారా ఏడాదికి మూడు బిలియన్ డాలర్లకు పైగా సంపాదిస్తున్నామని టి సి ఎస్ చెప్తోంది. కానీ దాని ఉద్యోగుల సంఖ్య దాదాపు పెరగలేదు. విదేశీ కంపెనీలు హైదరాబాద్, బెంగళూరు లాంటి నగరాల్లో నడిపే పెద్ద ఆఫీసులు, అంటే గ్లోబల్ కేపబిలిటీ సెంటర్లు, ఫ్రెషర్లను తక్కువగా తీసుకుంటున్నాయని బ్లూమ్ బర్గ్ రిపోర్ట్ చేసింది. ఒక బ్యాంక్ లో, యాభై మంది ఇంజినీర్లు చేసే పనిని ఇప్పుడు నాలుగు నుంచి పది మంది చేస్తున్నారు."
+   "tts_te": [
+    "చివరగా, ఉద్యోగాలు. ఎ ఐ ద్వారా ఏడాదికి మూడు బిలియన్ డాలర్లకు పైగా సంపాదిస్తున్నామని టి సి ఎస్ చెప్తోంది. కానీ దాని ఉద్యోగుల సంఖ్య దాదాపు పెరగలేదు. విదేశీ కంపెనీలు హైదరాబాద్, బెంగళూరు లాంటి నగరాల్లో నడిపే పెద్ద ఆఫీసులు, అంటే గ్లోబల్ కేపబిలిటీ సెంటర్లు, ఫ్రెషర్లను తక్కువగా తీసుకుంటున్నాయని బ్లూమ్ బర్గ్ రిపోర్ట్ చేసింది. ఒక బ్యాంక్ లో, ఒకప్పుడు యాభై మంది ఇంజినీర్లు చేసే పని.",
+    "ఇప్పుడు నాలుగు నుంచి పది మంది చేస్తున్నారు."
+   ]
   }
  ],
  "outro": {
-  "text": "That's your week in AI. Would you buy a phone now, or wait? Tell us in the comments. And follow AI Maastaaru: we'll explain India's AI rules paper when it's out.",
-  "tts": "That's your week in A.I. Would you buy a phone now, or wait? Tell us in the comments. And follow A.I. Maastaaru. We'll explain India's A.I. rules paper, when it's out.",
-  "tts_te": "ఇదీ ఈ వారం ఎ ఐ న్యూస్. ఫోన్ ఇప్పుడే కొంటారా, లేక వెయిట్ చేస్తారా? కామెంట్ లో చెప్పండి. ఇండియా ఎ ఐ రూల్స్ పేపర్ రాగానే, మేము వివరంగా చెప్తాం. ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
+  "text": "That's your week in AI. Is AI changing hiring where you work? Tell us in the comments. And follow AI Maastaaru. We will explain India's AI rules paper when it's out.",
+  "tts": "That's your week in A.I. Is A.I. changing hiring where you work? Tell us in the comments. And follow A.I. Maastaaru. We will explain India's A.I. rules paper, when it's out.",
+  "tts_te": "ఇదీ ఈ వారం ఎ ఐ న్యూస్. మీ ఆఫీసులో ఎ ఐ వల్ల హైరింగ్ మారుతోందా? కామెంట్ లో చెప్పండి. ఇండియా ఎ ఐ రూల్స్ పేపర్ రాగానే, మేము వివరంగా చెప్తాం. ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
  }
 }

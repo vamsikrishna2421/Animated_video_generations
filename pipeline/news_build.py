@@ -25,7 +25,7 @@ FPS = 30
 TEMPO = {"en": 1.18, "te": 1.0}  # Telugu narrator already gets +10% in radio()
 
 
-def take(text, lang, out_dir):
+def part(text, lang, out_dir):
     """Synthesise once per distinct text (cached by hash), then trim and tighten pauses."""
     h = hashlib.sha1(f"{lang}|{text}".encode()).hexdigest()[:10]
     raw = out_dir / f"raw_{h}.wav"
@@ -37,7 +37,16 @@ def take(text, lang, out_dir):
     a = a.mean(axis=1) if a.ndim > 1 else a
     nz = np.where(np.abs(a) > 0.01)[0]
     a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.12 * sr)]
-    a = tighten(a, sr, 0.45)
+    return tighten(a, sr, 0.45), sr
+
+
+def take(text, lang, out_dir, pause=0.7):
+    """`text` may be a list of parts: each is voiced separately and joined by a real pause (a beat before a key
+    number), which survives pause-tightening."""
+    parts = [part(t, lang, out_dir) for t in (text if isinstance(text, list) else [text])]
+    sr = parts[0][1]
+    gap = np.zeros(int(pause * sr))
+    a = np.concatenate([x for i, (p, _) in enumerate(parts) for x in ((gap, p) if i else (p,))])
     a = stretch(a, sr, TEMPO[lang])
     return a * (10 ** (-16 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9)), sr
 
@@ -73,7 +82,7 @@ def build(spec_path, lang="en"):
     timeline = {**{k: spec[k] for k in ("id", "date", "range", "edition")}, **{k: spec[k] for k in ("kicker", "title", "recap", "look", "music", "lock", "labs", "musicBase", "musicBaseYT") if k in spec}, "lang": lang, "segments": []}
     lead, tail = {"hook": 4, "outro": 6}, {"hook": 14, "outro": 150}
     for name, seg in segs:
-        a, sr = take(seg[key], lang, out_dir)
+        a, sr = take(seg[key], lang, out_dir, seg.get("pause", 0.7))
         f = out_dir / f"{name}.wav"
         sf.write(f, a.astype(np.float32), sr)
         ld = lead.get(name, 8)  # story: room for the cut + headline before the voice
@@ -81,7 +90,7 @@ def build(spec_path, lang="en"):
         words = word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):
-            entry.update({k: v for k, v in seg.items() if k not in ("text", "tts", "tts_te", "cards")})
+            entry.update({k: v for k, v in seg.items() if k not in ("text", "tts", "tts_te", "cards", "pause")})
             for c in seg["cards"]:  # a card cues on a word index ("at") or on the first word containing "cue"
                 if "cue" in c:
                     c["at"] = next((i for i, w in enumerate(words) if c["cue"].lower() in w["w"].lower()), 0)
