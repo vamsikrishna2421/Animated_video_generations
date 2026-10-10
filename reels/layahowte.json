@@ -1,0 +1,282 @@
+{
+ "id": "layahowte",
+ "title": "Laya, hands-on (Telugu audio)",
+ "label": "HANDS-ON",
+ "banner": "Free AI that decides, not writes",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.8,
+ "musicPad": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "captionTop": 1395,
+ "captionSide": 110,
+ "tempo": 1.1,
+ "parler_lang": "te",
+ "captionMode": "phrase",
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "lh_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Hook",
+     "title": "An AI that can't write",
+     "notes": [
+      [
+       "It never writes text; it answers fixed questions",
+       0
+      ],
+      [
+       "32,138 GitHub stars in 3 weeks (as of Oct 10)",
+       1
+      ],
+      [
+       "What it's good at, and what its own page admits",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "01_hook.wav",
+     "text": "ఈ ఫ్రీ ఎ ఐ, ఒక్క వాక్యం కూడా రాయలేదు. [1] అయినా మూడు వారాల్లో ముప్పై రెండు వేల మంది డెవలపర్లు దీనికి స్టార్ ఇచ్చారు. [2] ఇది దేనిలో బాగుందో, దీని సొంత పేజీ ఏం ఒప్పుకుంటుందో చూద్దాం.",
+     "show": "This free AI can't write a single sentence. [1] Yet 32,000 developers starred it in 3 weeks. [2] Here's what it's good at, and what its own page admits.",
+     "pauses": {
+      "1": 0.25
+     }
+    }
+   ]
+  },
+  {
+   "id": "what",
+   "type": "lh_what",
+   "tail": 0.6,
+   "drop_cue": 3,
+   "data": {
+    "yt": {
+     "chapter": "What it does",
+     "title": "Fixed questions, one number",
+     "notes": [
+      [
+       "Laya, by Nandakishor (Kerala)",
+       0
+      ],
+      [
+       "Example: 1,000 refund emails a day",
+       1
+      ],
+      [
+       "It answers a fixed question, no reply written",
+       2
+      ],
+      [
+       "Real output: 94% sure (base model, run by us)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "02_what.wav",
+     "text": "దీని పేరు లయ, కేరళకి చెందిన నందకిషోర్ తయారు చేశారు. [1] రోజుకి వెయ్యి ఈమెయిల్స్ వస్తాయనుకోండి, ఉదాహరణకు, మాకు రెండుసార్లు బిల్ వేశారు, రీఫండ్ ఇవ్వండి అని. [2] లయ రిప్లై రాయదు. ఇది రీఫండ్ రిక్వెస్టా, అనే ఒక ఫిక్స్డ్ ప్రశ్నకి జవాబు ఇస్తుంది. [3] మేము రన్ చేసి చూశాం: తొంభై నాలుగు శాతం ష్యూర్.",
+     "show": "It's Laya, by Nandakishor from Kerala. [1] Picture 1,000 emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: 94% sure."
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "type": "lh_kinds",
+   "tail": 0.8,
+   "data": {
+    "yt": {
+     "chapter": "3 kinds of questions",
+     "title": "Pick one, score, yes/no",
+     "notes": [
+      [
+       "Pick one: which team? (tech support 95%)",
+       1
+      ],
+      [
+       "Score: how urgent, 1 to 5? (2, 58%)",
+       2
+      ],
+      [
+       "Yes or no: phishing? (1.00)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "03_kinds.wav",
+     "text": "ఇది మూడు రకాల ప్రశ్నలకు జవాబిస్తుంది. [1] ఒకటి ఎంచుకోవడం: ఈ టికెట్ ఏ టీమ్ కి వెళ్ళాలి? [2] స్కోర్: ఎంత అర్జెంట్, ఒకటి నుంచి ఐదు? [3] అవునా కాదా: ఈ ఈమెయిల్ ఫిషింగా?",
+     "show": "Three kinds of questions. [1] Pick one: which team gets this ticket? [2] Score: how urgent, one to five? [3] Yes or no: is this email phishing?"
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "lh_why",
+   "tail": 0.6,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Why use it",
+     "title": "Fast, free, no rambling",
+     "notes": [
+      [
+       "~33 ms a question on a cloud GPU (his page)",
+       1
+      ],
+      [
+       "Free, open source (Apache-2.0)",
+       2
+      ],
+      [
+       "It can be wrong, but it can't ramble",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "04_why.wav",
+     "text": "ఎందుకు వాడాలి? [1] స్పీడ్: క్లౌడ్ జి పి యు మీద ఒక్కో ప్రశ్నకి సుమారు ముప్పై మూడు మిల్లీసెకన్లు. [2] ఇది ఫ్రీ, ఓపెన్ సోర్స్. [3] ఇది ఏమీ రాయదు కాబట్టి, తప్పు చెప్పొచ్చు కానీ, అనవసరంగా సాగదీయదు.",
+     "show": "Why use it? [1] It's fast: about 33 milliseconds a question on a cloud GPU. [2] It's free and open source. [3] And since it never writes, it can be wrong, but it can't ramble."
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "type": "lh_honest",
+   "tail": 0.8,
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "From his own page",
+     "notes": [
+      [
+       "Great on what it was trained on (spam 99%)",
+       1
+      ],
+      [
+       "New business tasks: 36% out of the box vs 46% for always guessing the most common answer; 77% after training (his reported number)",
+       1
+      ],
+      [
+       "20+ options: Jev (paid) does better",
+       2
+      ],
+      [
+       "Telugu: 22% on a 20-option test (English 71%)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "05_catch.wav",
+     "text": "ఇప్పుడు అసలు విషయం, అతని సొంత పేజీ నుంచే. [1] ట్రైన్ చేసిన పనుల్లో, అంటే స్పామ్ లాంటి వాటిలో, ఇది చాలా బాగుంది. కానీ కొత్త బిజినెస్ పనుల్లో, మీ ఉదాహరణలతో ట్రైన్ చేసే వరకు, ఎప్పుడూ ఎక్కువగా వచ్చే జవాబు చెప్పడం కంటే కూడా తక్కువ స్కోర్ చేస్తుంది. [2] చాలా ఆప్షన్లు ఉంటే, పెయిడ్ రైవల్ జెవ్ బాగా చేస్తుంది. [3] తెలుగులో అయితే, ఐదింటిలో ఒక్కటే సరిగ్గా చెప్తుంది.",
+     "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks it's worse than guessing the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right."
+    }
+   ]
+  },
+  {
+   "id": "verdict",
+   "type": "lh_verdict",
+   "tail": 0.6,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Which one?",
+     "title": "Laya, Jev or not yet",
+     "notes": [
+      [
+       "English, few options, examples to train on: Laya",
+       1
+      ],
+      [
+       "Many options or no time to train: Jev (paid)",
+       2
+      ],
+      [
+       "Telugu: not yet",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "06_verdict.wav",
+     "text": "కాబట్టి: [1] ఇంగ్లీష్, కొన్ని ఆప్షన్లు, ట్రైన్ చేయడానికి ఉదాహరణలు ఉంటే? లయ. [2] చాలా ఆప్షన్లు, ట్రైన్ చేసే టైమ్ లేదా? జెవ్. [3] తెలుగు? ఇంకా రెడీ కాలేదు.",
+     "show": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet."
+    }
+   ]
+  },
+  {
+   "id": "try",
+   "type": "lh_try",
+   "tail": 1.2,
+   "outro": true,
+   "data": {
+    "yt": {
+     "chapter": "Try it",
+     "title": "pip install laya",
+     "notes": [
+      [
+       "pip install laya, then a few lines of Python",
+       1
+      ],
+      [
+       "Not a coder? Send this to whoever runs AI at your company",
+       2
+      ],
+      [
+       "github.com/NandhaKishorM/laya",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "07_try.wav",
+     "text": "డెవలపర్లు: [1] పిప్ ఇన్స్టాల్ లయ. [2] కోడర్ కాదా? మీ కంపెనీలో ఎ ఐ చూసుకునే వాళ్లకు దీన్ని పంపండి. [3] మరిన్ని ఫ్రీ ఎ ఐ టూల్స్ కోసం ఫాలో అవ్వండి.",
+     "show": "Developers: [1] pip install laya. [2] Not a coder? Send this to whoever runs AI at your company. [3] And follow for more free AI tools."
+    }
+   ]
+  }
+ ]
+}

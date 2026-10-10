@@ -1,0 +1,287 @@
+{
+ "id": "layahow",
+ "title": "Laya, hands-on",
+ "label": "HANDS-ON",
+ "banner": "Free AI that decides, not writes",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.8,
+ "musicPad": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "captionTop": 1395,
+ "captionSide": 110,
+ "tempo": 1.18,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "lh_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Hook",
+     "title": "An AI that can't write",
+     "notes": [
+      [
+       "It never writes text; it answers fixed questions",
+       0
+      ],
+      [
+       "32,138 GitHub stars in 3 weeks (as of Oct 10)",
+       1
+      ],
+      [
+       "What it's good at, and what its own page admits",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "01_hook.wav",
+     "text": "This free AI can't write a single sentence. [1] Yet thirty-two thousand developers starred it in three weeks. [2] Here's what it's good at, and what its own page admits.",
+     "show": "This free AI can't write a single sentence. [1] Yet 32,000 developers starred it in 3 weeks. [2] Here's what it's good at, and what its own page admits.",
+     "tts": "This free A.I. can't write a single sentence. Yet thirty two thousand developers starred it, in three weeks. Here's what it's good at, and what its own page admits.",
+     "pauses": {
+      "1": 0.25
+     }
+    }
+   ]
+  },
+  {
+   "id": "what",
+   "type": "lh_what",
+   "tail": 0.6,
+   "drop_cue": 3,
+   "data": {
+    "yt": {
+     "chapter": "What it does",
+     "title": "Fixed questions, one number",
+     "notes": [
+      [
+       "Laya, by Nandakishor (Kerala)",
+       0
+      ],
+      [
+       "Example: 1,000 refund emails a day",
+       1
+      ],
+      [
+       "It answers a fixed question, no reply written",
+       2
+      ],
+      [
+       "Real output: 94% sure (base model, run by us)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "02_what.wav",
+     "text": "It's Laya, by Nandakishor from Kerala. [1] Picture a thousand emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: ninety-four percent sure.",
+     "show": "It's Laya, by Nandakishor from Kerala. [1] Picture 1,000 emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: 94% sure.",
+     "tts": "It's Laa-ya, by Nanda-kishore, from Kerala. Picture a thousand emails a day, like: we were billed twice, please refund. Laa-ya doesn't write replies. It answers a fixed question: is this a refund request? We ran it: ninety four percent sure."
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "type": "lh_kinds",
+   "tail": 0.8,
+   "data": {
+    "yt": {
+     "chapter": "3 kinds of questions",
+     "title": "Pick one, score, yes/no",
+     "notes": [
+      [
+       "Pick one: which team? (tech support 95%)",
+       1
+      ],
+      [
+       "Score: how urgent, 1 to 5? (2, 58%)",
+       2
+      ],
+      [
+       "Yes or no: phishing? (1.00)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "03_kinds.wav",
+     "text": "Three kinds of questions. [1] Pick one: which team gets this ticket? [2] Score: how urgent, one to five? [3] Yes or no: is this email phishing?",
+     "show": "Three kinds of questions. [1] Pick one: which team gets this ticket? [2] Score: how urgent, one to five? [3] Yes or no: is this email phishing?",
+     "tts": "Three kinds of questions. Pick one: which team gets this ticket? Score: how urgent, one to five? Yes or no: is this email phishing?"
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "lh_why",
+   "tail": 0.6,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Why use it",
+     "title": "Fast, free, no rambling",
+     "notes": [
+      [
+       "~33 ms a question on a cloud GPU (his page)",
+       1
+      ],
+      [
+       "Free, open source (Apache-2.0)",
+       2
+      ],
+      [
+       "It can be wrong, but it can't ramble",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "04_why.wav",
+     "text": "Why use it? [1] It's fast: about thirty-three milliseconds a question on a cloud GPU. [2] It's free and open source. [3] And since it never writes, it can be wrong, but it can't ramble.",
+     "show": "Why use it? [1] It's fast: about 33 milliseconds a question on a cloud GPU. [2] It's free and open source. [3] And since it never writes, it can be wrong, but it can't ramble.",
+     "tts": "Why use it? It's fast: about thirty three milliseconds a question, on a cloud G P U. It's free, and open source. And since it never writes, it can be wrong, but it can't ramble."
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "type": "lh_honest",
+   "tail": 0.8,
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "From his own page",
+     "notes": [
+      [
+       "Great on what it was trained on (spam 99%)",
+       1
+      ],
+      [
+       "New business tasks: 36% out of the box vs 46% for always guessing the most common answer; 77% after training (his reported number)",
+       1
+      ],
+      [
+       "20+ options: Jev (paid) does better",
+       2
+      ],
+      [
+       "Telugu: 22% on a 20-option test (English 71%)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "05_catch.wav",
+     "text": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks it's worse than guessing the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right.",
+     "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks it's worse than guessing the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right.",
+     "tts": "The catch, from his own page. It's great at what it was trained on, like spam. But on new business tasks, it's worse than guessing the most common answer, until you train it, on your own examples. With many options, the paid rival, Jevv, does better. And in Telugu, it gets about one in five right."
+    }
+   ]
+  },
+  {
+   "id": "verdict",
+   "type": "lh_verdict",
+   "tail": 0.6,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Which one?",
+     "title": "Laya, Jev or not yet",
+     "notes": [
+      [
+       "English, few options, examples to train on: Laya",
+       1
+      ],
+      [
+       "Many options or no time to train: Jev (paid)",
+       2
+      ],
+      [
+       "Telugu: not yet",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "06_verdict.wav",
+     "text": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet.",
+     "show": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet.",
+     "tts": "So. English, a few options, and examples to train it on? Laa-ya. Many options, or no time to train? Jevv. Telugu? Not yet."
+    }
+   ]
+  },
+  {
+   "id": "try",
+   "type": "lh_try",
+   "tail": 1.2,
+   "outro": true,
+   "data": {
+    "yt": {
+     "chapter": "Try it",
+     "title": "pip install laya",
+     "notes": [
+      [
+       "pip install laya, then a few lines of Python",
+       1
+      ],
+      [
+       "Not a coder? Send this to whoever runs AI at your company",
+       2
+      ],
+      [
+       "github.com/NandhaKishorM/laya",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "07_try.wav",
+     "text": "Developers: [1] pip install laya. [2] Not a coder? Send this to whoever runs AI at your company. [3] And follow for more free AI tools.",
+     "show": "Developers: [1] pip install laya. [2] Not a coder? Send this to whoever runs AI at your company. [3] And follow for more free AI tools.",
+     "tts": "Developers: pip install Laa-ya. Not a coder? Send this to whoever runs A.I. at your company. And follow, for more free A.I. tools."
+    }
+   ]
+  }
+ ]
+}

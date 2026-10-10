@@ -94,7 +94,7 @@ export const ProfilePreview: React.FC = () => (
 );
 
 // Dev preview of the "Laya, hands-on" scenes (cues at n/5 of each scene).
-const LORDER = ["lh_hook", "lh_what", "lh_kinds", "lh_why", "lh_try", "lh_honest", "lh_cta"] as const;
+const LORDER = ["lh_hook", "lh_what", "lh_kinds", "lh_why", "lh_honest", "lh_verdict", "lh_try"] as const;
 export const LayaPreview: React.FC = () => (
   <AbsoluteFill style={{ background: "#000" }}>
     {LORDER.map((t, i) => {
