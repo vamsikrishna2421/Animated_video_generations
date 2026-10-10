@@ -267,6 +267,7 @@ export const NewsYT: React.FC<{ tl: NewsTimeline }> = ({ tl }) => {
         return Math.min(1, v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1));
       }} />
       {dropAt.map((d) => <Sequence key={`d${d}`} from={d - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.3} /></Sequence>)}
+      {(segs[0].hits ?? []).map((h) => <Sequence key={`h${h}`} from={h - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.4} /></Sequence>)}
       {chapterStarts.map((s) => <Sequence key={`w${s}`} from={s} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.45} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[segs.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.3} /></Sequence>

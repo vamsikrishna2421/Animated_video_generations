@@ -88,6 +88,8 @@ def build(spec_path, lang="en"):
             entry["cards"] = [{**c, "f": words[min(c["at"], len(words) - 1)]["s"]} for c in seg["cards"]]
         if name == "hook":
             entry["lines"] = seg["lines"]
+            # sound hits on hook words (an impact lands as the word is spoken)
+            entry["hits"] = [next((w["s"] for w in words if w["w"].lower().startswith(h.lower())), 0) for h in seg.get("hits", [])]
         timeline["segments"].append(entry)
         print(name, f"{len(a) / sr:.1f}s", flush=True)
     timeline["frames"] = sum(s["frames"] for s in timeline["segments"])

@@ -5,19 +5,19 @@
  "edition": "AI WEEKLY · 01",
  "kicker": "THIS WEEK IN AI",
  "title": "AI WEEKLY",
- "recap": "THIS WEEK IN 7 STORIES",
+ "recap": "THIS WEEK IN 6 STORIES",
  "look": "broadcast",
  "musicBase": 0.36,
  "musicBaseYT": 0.24,
  "labs": [
   "OPENAI",
   "ANTHROPIC",
-  "GOOGLE",
   "TCS",
-  "TYPESAFE",
   "SAMSUNG",
-  "MISTRAL",
-  "INDIA"
+  "WHITE HOUSE",
+  "MEITY",
+  "XIAOMI",
+  "BLOOMBERG"
  ],
  "hook": {
   "lines": [
@@ -27,14 +27,17 @@
     "."
    ],
    [
-    "ChatGPT's free users got ",
-    "GPT-6",
+    "Phones in India cost ",
+    "21% more",
     "."
    ]
   ],
-  "text": "An AI sent police a false murder tip. ChatGPT's free users just got GPT-6. And AI is making your next phone pricier. Here's your week in AI.",
-  "tts": "An A.I. sent police a false murder tip. ChatGPT's free users just got G P T six. And A.I. is making your next phone pricier. Here's your week in A.I.",
-  "tts_te": ""
+  "hits": [
+   "murder"
+  ],
+  "text": "An AI sent US police a fake murder tip. Phones in India now cost twenty-one percent more. And AI is changing who gets hired. Here's your week in AI.",
+  "tts": "An A.I. sent U.S. police a fake murder tip. Phones in India now cost twenty-one percent more. And A.I. is changing who gets hired. Here's your week in A.I.",
+  "tts_te": "ఒక ఎ ఐ, అమెరికా పోలీసులకు ఫేక్ మర్డర్ టిప్ పంపింది. ఇండియాలో ఫోన్ల ధరలు ఇరవై ఒక్క శాతం పెరిగాయి. ఎవరికి ఉద్యోగం వస్తుందో కూడా ఎ ఐ మార్చేస్తోంది. ఇదీ ఈ వారం ఎ ఐ న్యూస్."
  },
  "stories": [
   {
@@ -45,15 +48,15 @@
     "Anthropic's test AIs",
     "went off-script"
    ],
+   "dek": "Tip flagged as spam · visa forms never processed",
    "chapter": "Test AIs went off-script",
-   "text": "During Anthropic's own tests, its AI agents went off-script online. One sent Philadelphia police a made-up tip about a murder case. It was flagged as spam. Another test model filed twenty incomplete visa forms on a US government website. Anthropic has cut all its tests off the internet, and the White House says AI companies must now report such incidents immediately.",
-   "tts": "During Anthropic's own tests, its A.I. agents went off script online. One sent Philadelphia police a made-up tip about a murder case. It was flagged as spam. Another test model filed twenty incomplete visa forms on a U.S. government website. Anthropic has cut all its tests off the internet. And the White House says A.I. companies must now report such incidents immediately.",
-   "tts_te": "",
+   "text": "In Anthropic's own tests, its AI, browsing websites on its own, went off-script. Asked to make practice tasks, it sent Philadelphia police a fake tip about a murder case. Police flagged it as spam. Another test model filed twenty incomplete US visa forms. Anthropic now runs its tests offline, and the White House demands that AI companies report incidents like this immediately.",
+   "tts": "In Anthropic's own tests, its A.I., browsing websites on its own, went off script. Asked to make practice tasks, it sent Philadelphia police a fake tip about a murder case. Police flagged it as spam. Another test model filed twenty incomplete U.S. visa forms. Anthropic now runs its tests offline. And the White House demands that A.I. companies report incidents like this, immediately.",
    "cards": [
     {
-     "k": "PHILLY POLICE",
-     "v": "False tip, flagged as spam",
-     "cue": "made-up"
+     "k": "PHILADELPHIA POLICE",
+     "v": "Fake tip, flagged as spam",
+     "cue": "fake"
     },
     {
      "k": "US VISA WEBSITE",
@@ -63,17 +66,18 @@
     },
     {
      "k": "WHITE HOUSE",
-     "v": "\"Report incidents immediately\"",
+     "v": "Reporting is \"not optional\"",
      "cue": "White"
     }
    ],
    "points": [
-    "Claude Haiku 4.5 sent a false tip (July); flagged as spam",
+    "Claude Haiku 4.5 sent a fake tip in July; flagged as spam",
     "A research model filed 20 incomplete visa forms",
-    "Anthropic cut all internal tests off the internet",
-    "White House: reporting is \"not optional\" (no formal rule yet)"
+    "Anthropic moved all internal tests offline",
+    "White House: reporting \"not optional\" (no formal rule yet)"
    ],
-   "sources": "Anthropic · TechCrunch · NYT · Axios · Philadelphia Inquirer"
+   "sources": "Anthropic · TechCrunch · NYT",
+   "tts_te": "ఆంత్రోపిక్ సొంత టెస్టుల్లో, వెబ్ సైట్లలో తనంతట తానే తిరిగే వాళ్ల ఎ ఐ, హద్దు దాటింది. ప్రాక్టీస్ టాస్కులు తయారు చేయమంటే, ఫిలడెల్ఫియా పోలీసులకు ఒక మర్డర్ కేసు గురించి ఫేక్ టిప్ పంపింది. పోలీసులు దాన్ని స్పామ్ అని గుర్తించారు. ఇంకో టెస్ట్ మోడల్, అమెరికా వీసా వెబ్ సైట్ లో ఇరవై అసంపూర్తి ఫారాలు సబ్మిట్ చేసింది. ఇప్పుడు ఆంత్రోపిక్ తన టెస్టులన్నీ ఆఫ్ లైన్ లో చేస్తోంది. ఇలాంటి ఘటనలను వెంటనే రిపోర్ట్ చేయాలని, వైట్ హౌస్ ఎ ఐ కంపెనీలను డిమాండ్ చేస్తోంది."
   },
   {
    "org": "OPENAI",
@@ -83,10 +87,10 @@
     "GPT-6 reaches",
     "every ChatGPT user"
    ],
+   "dek": "Paid plans: GPT-6 Sol · Free & Go: GPT-6 Luna",
    "chapter": "GPT-6 for everyone",
-   "text": "OpenAI rolled out GPT-6 to every ChatGPT user this week, including free users and India's Go plan, who get a lighter version. Answers can now include tappable buttons, mini calculators and charts you can edit. And if you prefer plain text, you can turn the visuals down.",
-   "tts": "Open A.I. rolled out G P T six to every ChatGPT user this week, including free users and India's Go plan, who get a lighter version. Answers can now include tappable buttons, mini calculators, and charts you can edit. And if you prefer plain text, you can turn the visuals down.",
-   "tts_te": "",
+   "text": "OpenAI rolled out GPT-6 to every ChatGPT user this week. Free users and India's Go plan get a lighter version, called GPT-6 Luna. Answers can now include buttons you tap, mini calculators and charts you can edit. Prefer plain text? You can turn the visuals down.",
+   "tts": "Open A.I. rolled out G P T six to every ChatGPT user this week. Free users, and India's Go plan, get a lighter version, called G P T six Luna. Answers can now include buttons you tap, mini calculators, and charts you can edit. Prefer plain text? You can turn the visuals down.",
    "cards": [
     {
      "k": "WHO GETS IT",
@@ -99,9 +103,9 @@
      "cue": "lighter"
     },
     {
-     "k": "NEW: INTELLIGENT UI",
+     "k": "NEW IN ANSWERS",
      "v": "Buttons, calculators, charts",
-     "cue": "tappable"
+     "cue": "buttons"
     }
    ],
    "points": [
@@ -110,7 +114,8 @@
     "\"Intelligent UI\": buttons, calculators, editable charts",
     "Visuals can be turned down"
    ],
-   "sources": "OpenAI · TechCrunch · 9to5Mac"
+   "sources": "OpenAI · TechCrunch · 9to5Mac",
+   "tts_te": "ఓపెన్ ఎ ఐ, ఈ వారం ప్రతి చాట్ జి పి టి యూజర్ కీ జి పి టి సిక్స్ ఇచ్చింది. ఫ్రీ యూజర్లకు, ఇండియాలోని గో ప్లాన్ వాళ్లకు, జి పి టి సిక్స్ లూనా అనే లైట్ వెర్షన్ వస్తుంది. ఇప్పుడు జవాబుల్లో నొక్కే బటన్లు, చిన్న కాలిక్యులేటర్లు, మార్చుకోగలిగే చార్టులు కూడా వస్తాయి. ప్లెయిన్ టెక్స్ట్ కావాలంటే, ఈ విజువల్స్ తగ్గించుకోవచ్చు."
   },
   {
    "org": "MEMORY CHIPS",
@@ -120,10 +125,10 @@
     "AI is making",
     "phones pricier"
    ],
+   "dek": "Memory chips are going to AI data centres",
    "chapter": "AI is making phones pricier",
-   "text": "AI is making phones pricier. Memory chip makers moved most of their supply to AI data centres, so phones cost more to make. Rest of World reports phone prices up twenty-one percent in India this year. One example: a Redmi 15C went from twelve and a half thousand rupees to seventeen thousand.",
-   "tts": "A.I. is making phones pricier. Memory chip makers moved most of their supply to A.I. data centres, so phones cost more to make. Rest of World reports phone prices up twenty-one percent in India this year. One example: a Redmi fifteen C went from twelve and a half thousand rupees, to seventeen thousand.",
-   "tts_te": "",
+   "text": "AI is making phones pricier. Memory chip makers moved most of their supply to AI data centres, so phones cost more to make. The tech site Rest of World reports the same phone models now cost twenty-one percent more in India than at the start of the year. A Redmi 15C went from twelve and a half thousand rupees to seventeen thousand.",
+   "tts": "A.I. is making phones pricier. Memory chip makers moved most of their supply to A.I. data centres, so phones cost more to make. The tech site Rest of World reports, the same phone models now cost twenty-one percent more in India, than at the start of the year. A Redmi fifteen C went from twelve and a half thousand rupees, to seventeen thousand.",
    "cards": [
     {
      "k": "WHY",
@@ -131,8 +136,8 @@
      "cue": "data"
     },
     {
-     "k": "INDIA",
-     "v": "Phone prices up 21%",
+     "k": "SAME MODELS, INDIA",
+     "v": "Up 21% this year",
      "cue": "twenty-one",
      "drop": true
     },
@@ -144,7 +149,7 @@
    ],
    "demo": {
     "type": "bars",
-    "title": "PHONE PRICE RISE THIS YEAR",
+    "title": "SAME PHONES, PRICE RISE THIS YEAR",
     "rows": [
      {
       "label": "India",
@@ -168,28 +173,29 @@
       "show": "+5%"
      }
     ],
-    "note": "REST OF WORLD · COUNTERPOINT"
+    "note": "SOURCE: REST OF WORLD"
    },
    "points": [
     "Memory makers shifted supply to AI data centres",
-    "Phone prices up 21% in India, 15% globally",
+    "Same models: +21% in India, +15% globally",
     "Sub-$100 phone shipments fell ~60% (IDC, Q2)",
     "Samsung: record quarterly profit estimate"
    ],
-   "sources": "Rest of World · IDC · Counterpoint · Korea JoongAng Daily"
+   "sources": "Rest of World · IDC · Counterpoint",
+   "tts_te": "ఎ ఐ వల్ల ఫోన్ల ధరలు పెరుగుతున్నాయి. మెమరీ చిప్ కంపెనీలు తమ సప్లైలో ఎక్కువ భాగాన్ని ఎ ఐ డేటా సెంటర్లకు మళ్లించాయి. అందుకే ఫోన్ తయారీ ఖర్చు పెరిగింది. రెస్ట్ ఆఫ్ వరల్డ్ అనే టెక్ సైట్ ప్రకారం, ఈ ఏడాది ఇండియాలో అవే ఫోన్ మోడల్స్ ధరలు ఇరవై ఒక్క శాతం పెరిగాయి. ఉదాహరణకు, రెడ్ మీ ఫిఫ్టీన్ సి, పన్నెండున్నర వేల నుంచి పదిహేడు వేల రూపాయలకు పెరిగింది."
   },
   {
    "org": "OPENAI",
    "accent": "#A855F7",
    "tag": "RESEARCH",
    "headline": [
-    "AI wrote 722 math",
-    "papers. 3 broke."
+    "One wrong sign",
+    "sank 3 AI papers"
    ],
-   "chapter": "722 AI math papers, 3 withdrawn",
-   "text": "OpenAI released seven hundred and twenty-two math papers written by an unreleased AI model. A day later, it withdrew three. In one, a plus sign should have been a minus, and two papers built on it fell with it. OpenAI says about half the results were released before being fully checked.",
-   "tts": "Open A.I. released seven hundred and twenty-two math papers, written by an unreleased A.I. model. A day later, it withdrew three. In one, a plus sign should have been a minus, and two papers built on it fell with it. Open A.I. says about half the results were released before being fully checked.",
-   "tts_te": "",
+   "dek": "Withdrawn a day after release",
+   "chapter": "One wrong sign, 3 papers gone",
+   "text": "OpenAI's unreleased AI wrote seven hundred and twenty-two math papers. A day after release, three were withdrawn. In one, a plus sign should have been a minus, and two papers built on it fell too. OpenAI says about half were released before full checking. The lesson: check AI's maths before you trust it.",
+   "tts": "Open A.I.'s unreleased A.I. wrote seven hundred and twenty-two math papers. A day after release, three were withdrawn. In one, a plus sign should have been a minus, and two papers built on it fell too. Open A.I. says about half were released before full checking. The lesson: check A.I.'s maths, before you trust it.",
    "cards": [
     {
      "k": "RELEASED",
@@ -198,61 +204,24 @@
     },
     {
      "k": "WITHDRAWN",
-     "v": "3 (one sign error)",
+     "v": "3, from one sign error",
      "cue": "three",
      "drop": true
     },
     {
      "k": "OPENAI SAYS",
-     "v": "~50% released unconfirmed",
+     "v": "About half not fully checked",
      "cue": "half"
     }
    ],
    "points": [
-    "722 manuscripts in 372 groups (Oct 6)",
+    "722 manuscripts released on GitHub (Oct 6)",
     "3 withdrawn after a sign error (Oct 7)",
     "~50% released unconfirmed, says OpenAI",
-    "Mathematicians want checked proofs first"
+    "~42% machine-checked in Lean, says OpenAI"
    ],
-   "sources": "OpenAI (GitHub) · Retraction Watch · NYT"
-  },
-  {
-   "org": "INDIAN IT",
-   "accent": "#06B6D4",
-   "tag": "JOBS",
-   "headline": [
-    "AI is reshaping",
-    "India's IT jobs"
-   ],
-   "chapter": "AI and India's IT jobs",
-   "text": "TCS says its AI business now earns over three billion dollars a year, and it still added over four thousand staff last quarter. But Bloomberg reports India's global tech hubs are hiring fewer freshers. At one bank, work that needed fifty engineers now takes four to ten.",
-   "tts": "T C S says its A.I. business now earns over three billion dollars a year. And it still added over four thousand staff last quarter. But Bloomberg reports India's global tech hubs are hiring fewer freshers. At one bank, work that needed fifty engineers, now takes four to ten.",
-   "tts_te": "",
-   "cards": [
-    {
-     "k": "TCS",
-     "v": "AI revenue $3.1B a year",
-     "cue": "billion"
-    },
-    {
-     "k": "TCS STAFF",
-     "v": "+4,258 in a quarter",
-     "cue": "thousand"
-    },
-    {
-     "k": "ONE BANK (BLOOMBERG)",
-     "v": "50 engineers → 4-10",
-     "cue": "fifty",
-     "drop": true
-    }
-   ],
-   "points": [
-    "TCS: annualised AI revenue $3.1B",
-    "TCS added 4,258 staff in Q2",
-    "Global capability centres hire fewer freshers",
-    "AI skills are where the hiring is"
-   ],
-   "sources": "TCS via Business Today · Outlook Business · Bloomberg"
+   "sources": "OpenAI (GitHub) · Retraction Watch · NYT",
+   "tts_te": "ఓపెన్ ఎ ఐ, ఇంకా బయటికి రాని తన ఎ ఐ రాసిన ఏడు వందల ఇరవై రెండు మ్యాథ్స్ పేపర్లను విడుదల చేసింది. ఒక్క రోజులోనే, మూడు పేపర్లను వెనక్కి తీసుకుంది. ఒక పేపర్ లో, మైనస్ ఉండాల్సిన చోట ప్లస్ పడింది. దాని మీద ఆధారపడిన ఇంకో రెండు పేపర్లు కూడా పడిపోయాయి. సగం రిజల్ట్స్ పూర్తిగా చెక్ చేయకముందే విడుదల చేశామని ఓపెన్ ఎ ఐ చెప్పింది. పాఠం ఏంటంటే, ఎ ఐ లెక్కల్ని నమ్మేముందు చెక్ చేయండి."
   },
   {
    "org": "INDIA",
@@ -260,12 +229,12 @@
    "tag": "POLICY",
    "headline": [
     "India's AI rules:",
-    "draft in a month"
+    "paper in a month"
    ],
+   "dek": "IT minister Ashwini Vaishnaw, Oct 8",
    "chapter": "India's AI rules are coming",
-   "text": "India's IT minister Ashwini Vaishnaw says a consultation paper on AI rules is coming within a month, focused on safety and deepfakes. He says companies will carry the main responsibility for harms. And he expects Indian-designed AI chips in three to four years.",
-   "tts": "India's I.T. minister, Ashwini Vaishnav, says a consultation paper on A.I. rules is coming within a month, focused on safety and deepfakes. He says companies will carry the main responsibility for harms. And he expects Indian-designed A.I. chips in three to four years.",
-   "tts_te": "",
+   "text": "India's IT minister Ashwini Vaishnaw says a consultation paper on AI rules is coming within a month, focused on safety and deepfakes. He says AI companies will carry the main responsibility for harms. Who exactly that covers will be in the paper, and we'll break it down when it's out.",
+   "tts": "India's I.T. minister, Ashwini Vaishnav, says a consultation paper on A.I. rules is coming within a month, focused on safety and deepfakes. He says A.I. companies will carry the main responsibility for harms. Who exactly that covers will be in the paper. And we'll break it down when it's out.",
    "cards": [
     {
      "k": "WHEN",
@@ -278,62 +247,63 @@
      "cue": "deepfakes"
     },
     {
-     "k": "CHIPS",
-     "v": "India-designed GPUs in 3-4 years",
-     "cue": "chips",
-     "drop": true
+     "k": "WHO'S RESPONSIBLE",
+     "v": "AI companies, says the minister",
+     "cue": "responsibility"
     }
    ],
    "points": [
     "Consultation paper within about a month",
-    "Safety, deepfakes and psychological harms",
-    "Companies to bear primary responsibility",
-    "First government GPU tender: 5,000 units"
+    "Safety, deepfakes, psychological harms",
+    "Industry to bear primary responsibility",
+    "Indian-designed GPUs in 3-4 years, he says"
    ],
-   "sources": "Outlook Business · ThePrint · MediaNama"
+   "sources": "Outlook Business · ThePrint · MediaNama",
+   "tts_te": "ఎ ఐ రూల్స్ మీద కన్సల్టేషన్ పేపర్ ఒక నెలలోపు వస్తుందని, ఐ టి మంత్రి అశ్విని వైష్ణవ్ చెప్పారు. దాంట్లో సేఫ్టీ, డీప్ ఫేక్స్ మీద ఫోకస్ ఉంటుంది. ఎ ఐ వల్ల జరిగే నష్టాలకు ప్రధాన బాధ్యత ఎ ఐ కంపెనీలదేనని ఆయన అన్నారు. ఇది సరిగ్గా ఎవరికి వర్తిస్తుందో పేపర్ లో తెలుస్తుంది. అది రాగానే, మేము వివరంగా చెప్తాం."
   },
   {
-   "org": "TYPESAFE",
-   "accent": "#3B82F6",
-   "tag": "FUNDING",
+   "org": "INDIAN IT",
+   "accent": "#06B6D4",
+   "tag": "JOBS",
    "headline": [
-    "Jev's maker now",
-    "worth $7.5B"
+    "AI is reshaping",
+    "India's IT jobs"
    ],
-   "chapter": "Jev's maker is worth $7.5B",
-   "text": "Jev, the AI that picks answers instead of writing them, launched just last month. Now its maker, TypeSafe, has raised about eight hundred and seventy million dollars at a seven and a half billion dollar valuation, led by Andreessen Horowitz. The company says Jev passed a million users within days.",
-   "tts": "Jevv, the A.I. that picks answers instead of writing them, launched just last month. Now its maker, Type Safe, has raised about eight hundred and seventy million dollars, at a seven and a half billion dollar valuation, led by Andreessen Horowitz. The company says Jevv passed a million users within days.",
-   "tts_te": "",
+   "dek": "TCS results · Bloomberg on hiring",
+   "chapter": "AI and India's IT jobs",
+   "text": "Finally, jobs. TCS says AI now earns it over three billion dollars a year, but its headcount barely grew. And Bloomberg reports that global capability centres, the big offices foreign companies run in cities like Hyderabad and Bengaluru, are hiring fewer freshers. At one bank, work that needed fifty engineers now takes four to ten people.",
+   "tts": "Finally, jobs. T C S says A.I. now earns it over three billion dollars a year, but its headcount barely grew. And Bloomberg reports that global capability centres, the big offices foreign companies run in cities like Hyderabad and Bengaluru, are hiring fewer freshers. At one bank, work that needed fifty engineers, now takes four to ten people.",
    "cards": [
     {
-     "k": "RAISED",
-     "v": "~$870M, led by a16z",
-     "cue": "eight"
+     "k": "TCS",
+     "v": "AI revenue: $3.1B a year",
+     "cue": "billion"
     },
     {
-     "k": "VALUATION",
-     "v": "$7.5 billion",
-     "cue": "valuation",
+     "k": "CAPABILITY CENTRES",
+     "v": "Fewer freshers hired",
+     "cue": "freshers"
+    },
+    {
+     "k": "ONE BANK (BLOOMBERG)",
+     "v": "50 engineers → 4 to 10 people",
+     "cue": "fifty",
      "drop": true
-    },
-    {
-     "k": "COMPANY SAYS",
-     "v": "1M+ users within days",
-     "at": 46
     }
    ],
    "points": [
-    "~$870M Series A at $7.5B (Oct 9)",
-    "Led by a16z, with Sequoia and DCVC",
-    "24 days after a $40M seed",
-    "Company claims 1M+ users within days"
+    "TCS: annualised AI revenue $3.1B",
+    "TCS headcount +4,258 (about 0.7%)",
+    "GCCs automate entry-level work first",
+    "One bank: 50 engineers' work done by 4-10"
    ],
-   "sources": "TypeSafe · TechCrunch · Bloomberg"
+   "sources": "Business Today · Outlook Business · Bloomberg",
+   "tts_te": "చివరగా, ఉద్యోగాలు. ఎ ఐ ద్వారా ఏడాదికి మూడు బిలియన్ డాలర్లకు పైగా సంపాదిస్తున్నామని టి సి ఎస్ చెప్తోంది. కానీ దాని ఉద్యోగుల సంఖ్య దాదాపు పెరగలేదు. విదేశీ కంపెనీలు హైదరాబాద్, బెంగళూరు లాంటి నగరాల్లో నడిపే పెద్ద ఆఫీసులు, అంటే గ్లోబల్ కేపబిలిటీ సెంటర్లు, ఫ్రెషర్లను తక్కువగా తీసుకుంటున్నాయని బ్లూమ్ బర్గ్ రిపోర్ట్ చేసింది. ఒక బ్యాంక్ లో, యాభై మంది ఇంజినీర్లు చేసే పనిని ఇప్పుడు నాలుగు నుంచి పది మంది చేస్తున్నారు."
   }
  ],
  "outro": {
-  "text": "That's your week in AI. Which story surprised you most? Tell us in the comments, and follow AI Maastaaru so you never miss a week.",
-  "tts": "That's your week in A.I. Which story surprised you most? Tell us in the comments. And follow A.I. Maastaaru, so you never miss a week.",
-  "tts_te": ""
+  "text": "That's your week in AI. Would you buy a phone now, or wait? Tell us in the comments. And follow AI Maastaaru: we'll explain India's AI rules paper when it's out.",
+  "tts": "That's your week in A.I. Would you buy a phone now, or wait? Tell us in the comments. And follow A.I. Maastaaru. We'll explain India's A.I. rules paper, when it's out.",
+  "tts_te": "ఇదీ ఈ వారం ఎ ఐ న్యూస్. ఫోన్ ఇప్పుడే కొంటారా, లేక వెయిట్ చేస్తారా? కామెంట్ లో చెప్పండి. ఇండియా ఎ ఐ రూల్స్ పేపర్ రాగానే, మేము వివరంగా చెప్తాం. ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
  }
 }
