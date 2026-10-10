@@ -1,0 +1,32 @@
+UPLOAD: 029
+VIDEO: 029_ep28_how_ai_turns_words_into_numbers.mp4  (crayon-style episode; replaces the older lesson-format 029_ep28_transformers_part_2_inside_a_transformer.mp4)
+
+=== CAPTION ===
+ChatGPT never sees your words. "The Statue of Liberty is in" reaches it as 976 160801 328 51868 382 306. So how do those numbers turn into "New York"?
+
+Episode 28 of AI From Scratch: how AI turns words into numbers (Transformers, Part 2)
+- Tokens: your text is cut into words or pieces ("YouTube" = "You" + "Tube"), and each token gets an ID
+- Embeddings: each ID fetches a long list of numbers from a giant table, an address on a map of meaning. Google Maps needs 2 numbers; OpenAI's open model gpt-oss uses 2,880
+- Position: "dog bites man" vs "man bites dog", so every token also carries its place
+- Layers: on every floor, each word looks back and soaks up what matters
+- Next token: score every option, pick a likely one ("New"), climb again ("York"). One trip per token, which is why answers appear piece by piece
+
+Your turn: does "bank" get the same ID in "river bank" and "bank account"? Comment your answer.
+
+Next: how AI sees images (computer vision).
+Follow @ai_maastaaru for the full series.
+
+=== HASHTAGS ===
+#Tokens #Embeddings #Transformers #ChatGPT #LearnAI #AIForBeginners
+
+=== PINNED_COMMENT (post a day later) ===
+Answer: yes. "bank" is token 6922 in both, with the same starting embedding. The layers use the words around it to tell a river bank from a money bank.
+
+=== COVER ===
+Crayon notebook page: "The Statue of Liberty is in" flipping into number tiles 976 · 160801 · 328 · 51868 · 382 · 306, header "ChatGPT sees:"
+
+=== ALT_TEXT ===
+Hand-drawn crayon-style animated reel explaining how AI turns words into numbers: tokens and token IDs, embeddings as addresses on a map of meaning, position signals, stacked layers, and next-token prediction one token at a time.
+
+=== SOURCES (for comments) ===
+Token IDs: OpenAI tiktoken, o200k tokenizer (used by GPT-4o and the open gpt-oss models; the IDs are the same in both). gpt-oss-120b sizes: OpenAI's model config on Hugging Face (2,880 numbers per token, 36 layers). Position signals: Vaswani et al. (2017), "Attention Is All You Need". Score bars in the reel are an illustration, not real model output.
