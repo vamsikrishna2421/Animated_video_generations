@@ -556,7 +556,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
         if (fr >= outroStart) return Math.min(1, interpolate(fr, [outroStart, followAbs], [base * 2.2, base * 3], cl));
-        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.3, base * 2.2], cl) : base;
+        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.3, base * 2.2], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.15], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
         return Math.min(1, v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1));
       }} />

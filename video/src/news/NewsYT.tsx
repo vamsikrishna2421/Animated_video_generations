@@ -262,7 +262,7 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
         const base = tl.musicBaseYT ?? 0.08, outroS = starts[starts.length - 1], lastS = starts[starts.length - 2];
         if (fr >= subAbs) return tl.musicBaseYT ? Math.min(1, base * 3) : 0.3;
         if (fr < segs[0].frames) return tl.musicBaseYT ? base * 1.4 : 0.22;
-        const v = fr >= outroS ? Math.min(1, interpolate(fr, [outroS, subAbs], [base * 2, base * 3], cl)) : fr >= lastS ? interpolate(fr, [lastS, outroS], [base * 1.2, base * 2], cl) : base;
+        const v = fr >= outroS ? Math.min(1, interpolate(fr, [outroS, subAbs], [base * 2, base * 3], cl)) : fr >= lastS ? interpolate(fr, [lastS, outroS], [base * 1.2, base * 2], cl) : base * interpolate(fr, [starts[1], lastS], [0.85, 1.15], cl);
         const swell = chapterStarts.reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2.2, 1], cl)), 1);
         return Math.min(1, v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1));
       }} />
