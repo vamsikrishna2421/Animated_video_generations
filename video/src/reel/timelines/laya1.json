@@ -1,0 +1,1444 @@
+{
+ "id": "laya1",
+ "look": "classic",
+ "topic": "",
+ "banner": "From 1 upvote to 32,000 stars",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "title": "From 1 upvote to 32,000 stars",
+ "handle": "@ai_maastaaru",
+ "label": "AI SPOTLIGHT",
+ "fps": 30,
+ "musicLift": 1.8,
+ "musicDrops": [
+  [
+   2056,
+   2080
+  ]
+ ],
+ "hideTimerInHook": true,
+ "totalFrames": 2852,
+ "music": "reel/laya1/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "pf_hook",
+   "data": {
+    "yt": {
+     "chapter": "Hook",
+     "title": "1 upvote vs 1,363",
+     "notes": [
+      [
+       "2025: his Hacker News post, 1 point (his own)",
+       1
+      ],
+      [
+       "2026: 1,363 points",
+       2
+      ],
+      [
+       "Nandakishor Mukkunnoth, Kerala",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 0,
+   "frames": 389,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_01.wav",
+     "from": 9,
+     "frames": 356,
+     "words": [
+      {
+       "w": "In",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "2025,",
+       "from": 21,
+       "to": 31
+      },
+      {
+       "w": "his",
+       "from": 31,
+       "to": 38
+      },
+      {
+       "w": "post",
+       "from": 38,
+       "to": 55
+      },
+      {
+       "w": "got",
+       "from": 55,
+       "to": 62
+      },
+      {
+       "w": "1",
+       "from": 62,
+       "to": 65
+      },
+      {
+       "w": "upvote.",
+       "from": 65,
+       "to": 82
+      },
+      {
+       "w": "His",
+       "from": 82,
+       "to": 92
+      },
+      {
+       "w": "own.",
+       "from": 92,
+       "to": 140
+      },
+      {
+       "w": "In",
+       "from": 140,
+       "to": 146
+      },
+      {
+       "w": "2026,",
+       "from": 146,
+       "to": 185
+      },
+      {
+       "w": "a",
+       "from": 185,
+       "to": 189
+      },
+      {
+       "w": "new",
+       "from": 189,
+       "to": 197
+      },
+      {
+       "w": "one",
+       "from": 197,
+       "to": 216
+      },
+      {
+       "w": "got",
+       "from": 216,
+       "to": 224
+      },
+      {
+       "w": "over",
+       "from": 224,
+       "to": 234
+      },
+      {
+       "w": "1,300.",
+       "from": 234,
+       "to": 254
+      },
+      {
+       "w": "This",
+       "from": 254,
+       "to": 262
+      },
+      {
+       "w": "is",
+       "from": 262,
+       "to": 266
+      },
+      {
+       "w": "Nandakishor,",
+       "from": 266,
+       "to": 313
+      },
+      {
+       "w": "a",
+       "from": 313,
+       "to": 316
+      },
+      {
+       "w": "builder",
+       "from": 316,
+       "to": 333
+      },
+      {
+       "w": "from",
+       "from": 333,
+       "to": 341
+      },
+      {
+       "w": "Kerala.",
+       "from": 341,
+       "to": 353
+      }
+     ],
+     "cues": {
+      "1": 82,
+      "2": 140,
+      "3": 254
+     }
+    }
+   ]
+  },
+  {
+   "id": "y2025",
+   "type": "pf_2025",
+   "data": {
+    "yt": {
+     "chapter": "2025",
+     "title": "An AI that picks, not writes",
+     "notes": [
+      [
+       "Mar 2025: paper on a model that outputs a probability, not text",
+       0
+      ],
+      [
+       "Example: will this customer buy?",
+       1
+      ],
+      [
+       "May 2025 post: 1 point, 0 comments",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 389,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_02.wav",
+     "from": 0,
+     "frames": 327,
+     "words": [
+      {
+       "w": "In",
+       "from": 8,
+       "to": 12
+      },
+      {
+       "w": "March",
+       "from": 12,
+       "to": 20
+      },
+      {
+       "w": "2025,",
+       "from": 20,
+       "to": 28
+      },
+      {
+       "w": "he",
+       "from": 28,
+       "to": 32
+      },
+      {
+       "w": "published",
+       "from": 32,
+       "to": 53
+      },
+      {
+       "w": "an",
+       "from": 53,
+       "to": 57
+      },
+      {
+       "w": "AI",
+       "from": 57,
+       "to": 61
+      },
+      {
+       "w": "model",
+       "from": 61,
+       "to": 69
+      },
+      {
+       "w": "that",
+       "from": 69,
+       "to": 75
+      },
+      {
+       "w": "doesn't",
+       "from": 75,
+       "to": 86
+      },
+      {
+       "w": "write",
+       "from": 86,
+       "to": 100
+      },
+      {
+       "w": "paragraphs.",
+       "from": 100,
+       "to": 116
+      },
+      {
+       "w": "It",
+       "from": 116,
+       "to": 120
+      },
+      {
+       "w": "picks",
+       "from": 120,
+       "to": 133
+      },
+      {
+       "w": "an",
+       "from": 133,
+       "to": 162
+      },
+      {
+       "w": "answer,",
+       "from": 162,
+       "to": 173
+      },
+      {
+       "w": "like",
+       "from": 173,
+       "to": 180
+      },
+      {
+       "w": "'will",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "this",
+       "from": 188,
+       "to": 203
+      },
+      {
+       "w": "customer",
+       "from": 203,
+       "to": 215
+      },
+      {
+       "w": "buy?',",
+       "from": 215,
+       "to": 224
+      },
+      {
+       "w": "with",
+       "from": 224,
+       "to": 238
+      },
+      {
+       "w": "a",
+       "from": 238,
+       "to": 241
+      },
+      {
+       "w": "probability.",
+       "from": 241,
+       "to": 283
+      },
+      {
+       "w": "Almost",
+       "from": 283,
+       "to": 292
+      },
+      {
+       "w": "nobody",
+       "from": 292,
+       "to": 305
+      },
+      {
+       "w": "noticed.",
+       "from": 305,
+       "to": 317
+      }
+     ],
+     "cues": {
+      "1": 116,
+      "2": 283
+     }
+    }
+   ]
+  },
+  {
+   "id": "jev",
+   "type": "pf_jev",
+   "data": {
+    "yt": {
+     "chapter": "Jev",
+     "title": "A $40M launch",
+     "notes": [
+      [
+       "15 Sep 2026: TypeSafe AI launches Jev",
+       1
+      ],
+      [
+       "$40M seed round",
+       1
+      ],
+      [
+       "Also picks answers instead of writing",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 736,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_03.wav",
+     "from": 0,
+     "frames": 277,
+     "words": [
+      {
+       "w": "In",
+       "from": 7,
+       "to": 11
+      },
+      {
+       "w": "September",
+       "from": 11,
+       "to": 25
+      },
+      {
+       "w": "2026,",
+       "from": 25,
+       "to": 33
+      },
+      {
+       "w": "a",
+       "from": 33,
+       "to": 37
+      },
+      {
+       "w": "startup",
+       "from": 37,
+       "to": 60
+      },
+      {
+       "w": "with",
+       "from": 60,
+       "to": 69
+      },
+      {
+       "w": "$40",
+       "from": 69,
+       "to": 76
+      },
+      {
+       "w": "million",
+       "from": 76,
+       "to": 94
+      },
+      {
+       "w": "launched",
+       "from": 94,
+       "to": 113
+      },
+      {
+       "w": "Jev,",
+       "from": 113,
+       "to": 126
+      },
+      {
+       "w": "an",
+       "from": 126,
+       "to": 154
+      },
+      {
+       "w": "AI",
+       "from": 154,
+       "to": 158
+      },
+      {
+       "w": "that",
+       "from": 158,
+       "to": 165
+      },
+      {
+       "w": "also",
+       "from": 165,
+       "to": 172
+      },
+      {
+       "w": "picks",
+       "from": 172,
+       "to": 181
+      },
+      {
+       "w": "answers",
+       "from": 181,
+       "to": 192
+      },
+      {
+       "w": "instead",
+       "from": 192,
+       "to": 203
+      },
+      {
+       "w": "of",
+       "from": 203,
+       "to": 207
+      },
+      {
+       "w": "writing,",
+       "from": 207,
+       "to": 219
+      },
+      {
+       "w": "and",
+       "from": 219,
+       "to": 229
+      },
+      {
+       "w": "it",
+       "from": 229,
+       "to": 240
+      },
+      {
+       "w": "made",
+       "from": 240,
+       "to": 247
+      },
+      {
+       "w": "headlines.",
+       "from": 247,
+       "to": 269
+      }
+     ],
+     "cues": {
+      "1": 33,
+      "2": 126,
+      "3": 219
+     }
+    }
+   ]
+  },
+  {
+   "id": "laya",
+   "type": "pf_laya",
+   "data": {
+    "yt": {
+     "chapter": "Laya",
+     "title": "Three days later",
+     "notes": [
+      [
+       "18 Sep 2026: Laya, free and open source (Apache-2.0)",
+       1
+      ],
+      [
+       "He says he had the core idea first",
+       2
+      ],
+      [
+       "Critics: only partly true",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1043,
+   "frames": 389,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_04.wav",
+     "from": 0,
+     "frames": 370,
+     "words": [
+      {
+       "w": "Three",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "days",
+       "from": 16,
+       "to": 23
+      },
+      {
+       "w": "later,",
+       "from": 23,
+       "to": 44
+      },
+      {
+       "w": "he",
+       "from": 44,
+       "to": 47
+      },
+      {
+       "w": "released",
+       "from": 47,
+       "to": 59
+      },
+      {
+       "w": "Laya:",
+       "from": 59,
+       "to": 74
+      },
+      {
+       "w": "a",
+       "from": 74,
+       "to": 77
+      },
+      {
+       "w": "free,",
+       "from": 77,
+       "to": 85
+      },
+      {
+       "w": "open-source",
+       "from": 85,
+       "to": 101
+      },
+      {
+       "w": "alternative",
+       "from": 101,
+       "to": 117
+      },
+      {
+       "w": "anyone",
+       "from": 117,
+       "to": 126
+      },
+      {
+       "w": "can",
+       "from": 126,
+       "to": 131
+      },
+      {
+       "w": "run.",
+       "from": 131,
+       "to": 166
+      },
+      {
+       "w": "He",
+       "from": 166,
+       "to": 170
+      },
+      {
+       "w": "says",
+       "from": 170,
+       "to": 177
+      },
+      {
+       "w": "he",
+       "from": 177,
+       "to": 181
+      },
+      {
+       "w": "had",
+       "from": 181,
+       "to": 186
+      },
+      {
+       "w": "the",
+       "from": 186,
+       "to": 191
+      },
+      {
+       "w": "core",
+       "from": 191,
+       "to": 198
+      },
+      {
+       "w": "idea",
+       "from": 198,
+       "to": 204
+      },
+      {
+       "w": "first.",
+       "from": 204,
+       "to": 214
+      },
+      {
+       "w": "Critics",
+       "from": 214,
+       "to": 245
+      },
+      {
+       "w": "say",
+       "from": 245,
+       "to": 250
+      },
+      {
+       "w": "that's",
+       "from": 250,
+       "to": 260
+      },
+      {
+       "w": "only",
+       "from": 260,
+       "to": 266
+      },
+      {
+       "w": "partly",
+       "from": 266,
+       "to": 276
+      },
+      {
+       "w": "true.",
+       "from": 276,
+       "to": 283
+      },
+      {
+       "w": "Either",
+       "from": 283,
+       "to": 324
+      },
+      {
+       "w": "way,",
+       "from": 324,
+       "to": 330
+      },
+      {
+       "w": "the",
+       "from": 330,
+       "to": 335
+      },
+      {
+       "w": "world",
+       "from": 335,
+       "to": 343
+      },
+      {
+       "w": "noticed.",
+       "from": 343,
+       "to": 355
+      }
+     ],
+     "cues": {
+      "1": 74,
+      "2": 166,
+      "3": 214,
+      "4": 283
+     }
+    }
+   ]
+  },
+  {
+   "id": "numbers",
+   "type": "pf_numbers",
+   "data": {
+    "yt": {
+     "chapter": "The numbers",
+     "title": "Three weeks later",
+     "notes": [
+      [
+       "Hacker News: 1,363 points",
+       0
+      ],
+      [
+       "GitHub: 32,100 stars",
+       1
+      ],
+      [
+       "~317,000 downloads (PyPI, 18 Sep - 9 Oct)",
+       2
+      ],
+      [
+       "10+ research papers cite or test it",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1432,
+   "frames": 389,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_05.wav",
+     "from": 0,
+     "frames": 357,
+     "words": [
+      {
+       "w": "Over",
+       "from": 7,
+       "to": 15
+      },
+      {
+       "w": "1,300",
+       "from": 15,
+       "to": 24
+      },
+      {
+       "w": "points",
+       "from": 24,
+       "to": 39
+      },
+      {
+       "w": "on",
+       "from": 39,
+       "to": 44
+      },
+      {
+       "w": "Hacker",
+       "from": 44,
+       "to": 55
+      },
+      {
+       "w": "News.",
+       "from": 55,
+       "to": 65
+      },
+      {
+       "w": "32,000",
+       "from": 65,
+       "to": 109
+      },
+      {
+       "w": "GitHub",
+       "from": 109,
+       "to": 123
+      },
+      {
+       "w": "stars.",
+       "from": 123,
+       "to": 140
+      },
+      {
+       "w": "300,000",
+       "from": 140,
+       "to": 186
+      },
+      {
+       "w": "downloads",
+       "from": 186,
+       "to": 206
+      },
+      {
+       "w": "in",
+       "from": 206,
+       "to": 217
+      },
+      {
+       "w": "3",
+       "from": 217,
+       "to": 225
+      },
+      {
+       "w": "weeks.",
+       "from": 225,
+       "to": 268
+      },
+      {
+       "w": "And",
+       "from": 268,
+       "to": 272
+      },
+      {
+       "w": "at",
+       "from": 272,
+       "to": 276
+      },
+      {
+       "w": "least",
+       "from": 276,
+       "to": 283
+      },
+      {
+       "w": "10",
+       "from": 283,
+       "to": 287
+      },
+      {
+       "w": "research",
+       "from": 287,
+       "to": 298
+      },
+      {
+       "w": "papers",
+       "from": 298,
+       "to": 310
+      },
+      {
+       "w": "already",
+       "from": 310,
+       "to": 320
+      },
+      {
+       "w": "cite",
+       "from": 320,
+       "to": 326
+      },
+      {
+       "w": "or",
+       "from": 326,
+       "to": 333
+      },
+      {
+       "w": "test",
+       "from": 333,
+       "to": 340
+      },
+      {
+       "w": "it.",
+       "from": 340,
+       "to": 344
+      }
+     ],
+     "cues": {
+      "1": 65,
+      "2": 140,
+      "3": 268
+     }
+    }
+   ]
+  },
+  {
+   "id": "who",
+   "type": "pf_who",
+   "data": {
+    "yt": {
+     "chapter": "Who he is",
+     "title": "Kasaragod, Kerala",
+     "notes": [
+      [
+       "CEO, Convai Innovations, Kasaragod",
+       0
+      ],
+      [
+       "He says: family earned Rs 200-300 a day in 2008",
+       1
+      ],
+      [
+       "He says: got into a top institute, couldn't afford it",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1820,
+   "frames": 494,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_06.wav",
+     "from": 0,
+     "frames": 476,
+     "words": [
+      {
+       "w": "He",
+       "from": 7,
+       "to": 11
+      },
+      {
+       "w": "runs",
+       "from": 11,
+       "to": 18
+      },
+      {
+       "w": "an",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "AI",
+       "from": 22,
+       "to": 26
+      },
+      {
+       "w": "startup",
+       "from": 26,
+       "to": 37
+      },
+      {
+       "w": "in",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "Kasaragod,",
+       "from": 45,
+       "to": 60
+      },
+      {
+       "w": "Kerala.",
+       "from": 60,
+       "to": 79
+      },
+      {
+       "w": "In",
+       "from": 79,
+       "to": 106
+      },
+      {
+       "w": "an",
+       "from": 106,
+       "to": 111
+      },
+      {
+       "w": "interview,",
+       "from": 111,
+       "to": 136
+      },
+      {
+       "w": "he",
+       "from": 136,
+       "to": 141
+      },
+      {
+       "w": "said",
+       "from": 141,
+       "to": 149
+      },
+      {
+       "w": "his",
+       "from": 149,
+       "to": 156
+      },
+      {
+       "w": "family",
+       "from": 156,
+       "to": 171
+      },
+      {
+       "w": "earned",
+       "from": 171,
+       "to": 183
+      },
+      {
+       "w": "₹200-300",
+       "from": 183,
+       "to": 198
+      },
+      {
+       "w": "a",
+       "from": 198,
+       "to": 202
+      },
+      {
+       "w": "day",
+       "from": 202,
+       "to": 208
+      },
+      {
+       "w": "in",
+       "from": 208,
+       "to": 214
+      },
+      {
+       "w": "2008,",
+       "from": 214,
+       "to": 224
+      },
+      {
+       "w": "a",
+       "from": 224,
+       "to": 227
+      },
+      {
+       "w": "few",
+       "from": 227,
+       "to": 234
+      },
+      {
+       "w": "dollars.",
+       "from": 234,
+       "to": 260
+      },
+      {
+       "w": "He",
+       "from": 260,
+       "to": 264
+      },
+      {
+       "w": "got",
+       "from": 264,
+       "to": 270
+      },
+      {
+       "w": "into",
+       "from": 270,
+       "to": 277
+      },
+      {
+       "w": "a",
+       "from": 277,
+       "to": 307
+      },
+      {
+       "w": "top",
+       "from": 307,
+       "to": 313
+      },
+      {
+       "w": "science",
+       "from": 313,
+       "to": 324
+      },
+      {
+       "w": "institute",
+       "from": 324,
+       "to": 337
+      },
+      {
+       "w": "but",
+       "from": 337,
+       "to": 343
+      },
+      {
+       "w": "couldn't",
+       "from": 343,
+       "to": 355
+      },
+      {
+       "w": "afford",
+       "from": 355,
+       "to": 377
+      },
+      {
+       "w": "it,",
+       "from": 377,
+       "to": 382
+      },
+      {
+       "w": "and",
+       "from": 382,
+       "to": 388
+      },
+      {
+       "w": "studied",
+       "from": 388,
+       "to": 411
+      },
+      {
+       "w": "engineering",
+       "from": 411,
+       "to": 428
+      },
+      {
+       "w": "in",
+       "from": 428,
+       "to": 437
+      },
+      {
+       "w": "Kannur",
+       "from": 437,
+       "to": 446
+      },
+      {
+       "w": "instead.",
+       "from": 446,
+       "to": 462
+      }
+     ],
+     "cues": {
+      "1": 79,
+      "2": 260,
+      "3": 382
+     }
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "type": "pf_work",
+   "data": {
+    "yt": {
+     "chapter": "His work",
+     "title": "Before and beyond Laya",
+     "notes": [
+      [
+       "Peer-reviewed: AI reading ECGs (BMJ Digital Health & AI, 2025)",
+       1
+      ],
+      [
+       "6 arXiv preprints in 2025",
+       2
+      ],
+      [
+       "Hindi language models; Nadhi Audit (offline code security)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2315,
+   "frames": 324,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_07.wav",
+     "from": 0,
+     "frames": 300,
+     "words": [
+      {
+       "w": "Since",
+       "from": 6,
+       "to": 15
+      },
+      {
+       "w": "then:",
+       "from": 15,
+       "to": 33
+      },
+      {
+       "w": "a",
+       "from": 33,
+       "to": 36
+      },
+      {
+       "w": "peer-reviewed",
+       "from": 36,
+       "to": 56
+      },
+      {
+       "w": "paper",
+       "from": 56,
+       "to": 65
+      },
+      {
+       "w": "on",
+       "from": 65,
+       "to": 70
+      },
+      {
+       "w": "AI",
+       "from": 70,
+       "to": 74
+      },
+      {
+       "w": "that",
+       "from": 74,
+       "to": 90
+      },
+      {
+       "w": "reads",
+       "from": 90,
+       "to": 99
+      },
+      {
+       "w": "heart",
+       "from": 99,
+       "to": 108
+      },
+      {
+       "w": "ECGs,",
+       "from": 108,
+       "to": 116
+      },
+      {
+       "w": "six",
+       "from": 116,
+       "to": 122
+      },
+      {
+       "w": "research",
+       "from": 122,
+       "to": 139
+      },
+      {
+       "w": "papers",
+       "from": 139,
+       "to": 150
+      },
+      {
+       "w": "in",
+       "from": 150,
+       "to": 154
+      },
+      {
+       "w": "one",
+       "from": 154,
+       "to": 160
+      },
+      {
+       "w": "year,",
+       "from": 160,
+       "to": 169
+      },
+      {
+       "w": "Hindi",
+       "from": 169,
+       "to": 202
+      },
+      {
+       "w": "language",
+       "from": 202,
+       "to": 215
+      },
+      {
+       "w": "models,",
+       "from": 215,
+       "to": 227
+      },
+      {
+       "w": "and",
+       "from": 227,
+       "to": 240
+      },
+      {
+       "w": "an",
+       "from": 240,
+       "to": 245
+      },
+      {
+       "w": "offline",
+       "from": 245,
+       "to": 256
+      },
+      {
+       "w": "code-security",
+       "from": 256,
+       "to": 277
+      },
+      {
+       "w": "app.",
+       "from": 277,
+       "to": 285
+      }
+     ],
+     "cues": {
+      "1": 33,
+      "2": 116,
+      "3": 169
+     }
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "type": "pf_cta",
+   "data": {
+    "handle": "@ai_maastaaru",
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Tag a builder",
+     "notes": [
+      [
+       "Laya: free on GitHub (pip install laya)",
+       0
+      ],
+      [
+       "Tag a friend building something nobody has noticed yet",
+       1
+      ]
+     ]
+    }
+   },
+   "from": 2639,
+   "frames": 202,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/laya1/line_08.wav",
+     "from": 0,
+     "frames": 175,
+     "words": [
+      {
+       "w": "Builders",
+       "from": 6,
+       "to": 17
+      },
+      {
+       "w": "like",
+       "from": 17,
+       "to": 23
+      },
+      {
+       "w": "him",
+       "from": 23,
+       "to": 28
+      },
+      {
+       "w": "are",
+       "from": 28,
+       "to": 33
+      },
+      {
+       "w": "everywhere.",
+       "from": 33,
+       "to": 48
+      },
+      {
+       "w": "Tag",
+       "from": 48,
+       "to": 80
+      },
+      {
+       "w": "a",
+       "from": 80,
+       "to": 83
+      },
+      {
+       "w": "friend",
+       "from": 83,
+       "to": 92
+      },
+      {
+       "w": "who's",
+       "from": 92,
+       "to": 106
+      },
+      {
+       "w": "building",
+       "from": 106,
+       "to": 117
+      },
+      {
+       "w": "something",
+       "from": 117,
+       "to": 129
+      },
+      {
+       "w": "nobody",
+       "from": 129,
+       "to": 138
+      },
+      {
+       "w": "has",
+       "from": 138,
+       "to": 143
+      },
+      {
+       "w": "noticed",
+       "from": 143,
+       "to": 153
+      },
+      {
+       "w": "yet.",
+       "from": 153,
+       "to": 159
+      }
+     ],
+     "cues": {
+      "1": 48
+     }
+    }
+   ]
+  }
+ ]
+}
