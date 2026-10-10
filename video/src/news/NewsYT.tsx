@@ -197,7 +197,7 @@ const Chapter: React.FC<{ seg: Seg; n: number; total: number; edition: string }>
   );
 };
 
-const Outro: React.FC<{ seg: Seg; stories: Seg[] }> = ({ seg, stories }) => {
+const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string }> = ({ seg, stories, name }) => {
   const f = useCurrentFrame();
   const subAt = seg.frames - SUB_LEN;
   return (
@@ -219,14 +219,14 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[] }> = ({ seg, stories }) => {
           </div>
         </div>
       ) : (
-        <Sequence from={subAt} layout="none"><Subscribe handle="AI Maastaaru" /></Sequence>
+        <Sequence from={subAt} layout="none"><Subscribe handle={name} /></Sequence>
       )}
       {f < subAt && <Karaoke words={seg.words} bottom={46} size={58} max={4} />}
     </AbsoluteFill>
   );
 };
 
-export const NewsYT: React.FC<{ tl: NewsTimeline }> = ({ tl }) => {
+export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, handle }) => {
   const f = useCurrentFrame();
   const segs = tl.segments as Seg[];
   const stories = segs.filter((s) => s.name.startsWith("story"));
@@ -241,7 +241,7 @@ export const NewsYT: React.FC<{ tl: NewsTimeline }> = ({ tl }) => {
       <BrandFonts />
       {segs.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <ColdOpen seg={s} tl={tl} /> : s.name === "outro" ? <Outro seg={s} stories={stories} /> : <Chapter seg={s} n={stories.indexOf(s) + 1} total={stories.length} edition={tl.edition} />}
+          {s.name === "hook" ? <ColdOpen seg={s} tl={tl} /> : s.name === "outro" ? <Outro seg={s} stories={stories} name={handle === "@ai_maastaaru_telugu" ? "AI Maastaaru Telugu" : "AI Maastaaru"} /> : <Chapter seg={s} n={stories.indexOf(s) + 1} total={stories.length} edition={tl.edition} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
