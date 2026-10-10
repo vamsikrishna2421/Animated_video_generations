@@ -1,0 +1,319 @@
+{
+ "id": "ep28te",
+ "title": "How AI turns words into numbers (Telugu audio)",
+ "label": "EP 28",
+ "banner": "How AI turns words into numbers",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.1,
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.8,
+ "musicPad": true,
+ "parler_lang": "te",
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "wn_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "The puzzle",
+     "title": "What ChatGPT actually sees",
+     "notes": [
+      [
+       "You type: 'The Statue of Liberty is in'",
+       0
+      ],
+      [
+       "The model sees: 976 160801 328 51868 382 306",
+       1
+      ],
+      [
+       "No words, only numbers (real token IDs)",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.32,
+     "text": "చాట్ జి పి టి కి, మీ మెసేజ్ [1] ఇలా కనిపిస్తుంది. [2] పదాలు కాదు, కేవలం నంబర్లు. [3] మరి ఈ నంబర్ల నుంచి సమాధానం ఎలా వస్తుంది?",
+     "show": "To ChatGPT, your message looks like [1] this. [2] No words, only numbers. [3] So how do these numbers become an answer?"
+    }
+   ]
+  },
+  {
+   "id": "tokens",
+   "type": "wn_tokens",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Tokens",
+     "title": "Step 1: cut the text into tokens",
+     "notes": [
+      [
+       "A token is a word or a piece of a word",
+       1
+      ],
+      [
+       "'YouTube' = 'You' + 'Tube': two tokens",
+       2
+      ],
+      [
+       "Each token gets an ID, like a ticket number",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_tokens.wav",
+     "maxgap": 0.32,
+     "text": "ముందు, మీ టెక్స్ట్ ని టోకెన్స్ గా కట్ చేస్తారు: [1] పూర్తి పదాలు, లేదా పదాల ముక్కలు. [2] 'యూట్యూబ్' కూడా రెండు టోకెన్స్. [3] ప్రతి టోకెన్ కి ఒక ఐ డి వస్తుంది. కానీ ఐ డి కేవలం ఒక లేబుల్, టికెట్ నంబర్ లాగా.",
+     "show": "First, your text is cut into tokens: [1] whole words, or pieces of words. [2] Even 'YouTube' is two tokens. [3] Each token gets an ID. But an ID is just a label, like a ticket number."
+    }
+   ]
+  },
+  {
+   "id": "embed",
+   "type": "wn_embed",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Embeddings",
+     "title": "Step 2: IDs become embeddings",
+     "notes": [
+      [
+       "Each ID fetches its row from a giant table",
+       1
+      ],
+      [
+       "Google Maps places you with 2 numbers",
+       2
+      ],
+      [
+       "An embedding uses thousands (gpt-oss: 2,880)",
+       3
+      ],
+      [
+       "Similar meanings sit close together",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_embed.wav",
+     "maxgap": 0.32,
+     "text": "అప్పుడు, [1] ప్రతి ఐ డి ఒక పెద్ద టేబుల్ నుంచి తన వరుసను తెచ్చుకుంటుంది: నంబర్ల పొడవాటి లిస్ట్, దాన్నే ఎంబెడ్డింగ్ అంటారు. [2] ఇది ఒక అడ్రస్ లాంటిది: గూగుల్ మ్యాప్స్ మిమ్మల్ని రెండు నంబర్లతో చూపిస్తుంది, [3] ఎంబెడ్డింగ్ వేల నంబర్లు వాడుతుంది. [4] దగ్గరి అర్థం ఉన్న పదాలు దగ్గర దగ్గరగానే ఉంటాయి, పిల్లి పక్కనే కుక్క.",
+     "show": "Then [1] each ID fetches its row from a giant table: a long list of numbers, called an embedding. [2] It's like an address: Google Maps places you with 2 numbers, [3] an embedding uses thousands. [4] Similar meanings sit close together: 'cat' right next to 'dog'."
+    }
+   ]
+  },
+  {
+   "id": "pos",
+   "type": "wn_pos",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Word order",
+     "title": "Position signals",
+     "notes": [
+      [
+       "'dog' gets the same embedding, first or last",
+       0
+      ],
+      [
+       "'dog bites man' vs 'man bites dog'",
+       1
+      ],
+      [
+       "Each token also carries its position",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_pos.wav",
+     "maxgap": 0.32,
+     "text": "కానీ 'డాగ్' మొదట ఉన్నా, చివర ఉన్నా, దానికి అదే లిస్ట్. [1] అంటే 'డాగ్ బైట్స్ మ్యాన్', 'మ్యాన్ బైట్స్ డాగ్' రెండూ ఒకేలా కనిపిస్తాయి. [2] అందుకే ప్రతి టోకెన్ తన పొజిషన్ ని కూడా తీసుకెళ్తుంది, [3] ఇప్పుడు ఎవరు ఎవర్ని కరిచారో తెలుస్తుంది.",
+     "show": "But 'dog' gets the same list, first or last. [1] So 'dog bites man' and 'man bites dog' would look the same. [2] So each token also carries its position, [3] and now it knows who bit whom."
+    }
+   ]
+  },
+  {
+   "id": "layers",
+   "type": "wn_layers",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Layers",
+     "title": "Step 3: climb the layers",
+     "notes": [
+      [
+       "Dozens of layers (gpt-oss-120b: 36)",
+       0
+      ],
+      [
+       "Each word looks back and soaks up what matters (attention, EP27)",
+       1
+      ],
+      [
+       "The last word 'in' now carries 'Statue' + 'Liberty'",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_layers.wav",
+     "maxgap": 0.32,
+     "text": "తర్వాత ఈ ఎంబెడ్డింగ్స్ డజన్ల కొద్దీ లేయర్స్ ఎక్కుతాయి. [1] ప్రతి అంతస్తులో, ప్రతి పదం వెనక్కి చూసి, ముఖ్యమైనది గ్రహిస్తుంది. [2] పైకి వచ్చేసరికి, చివరి పదం 'ఇన్' కి, 'స్టాట్యూ', 'లిబర్టీ' గురించి తెలిసిపోతుంది.",
+     "show": "Then the embeddings climb dozens of layers. [1] On every floor, each word looks back and soaks up what matters. [2] By the top, the last word, 'in', knows about 'Statue' and 'Liberty'."
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "type": "wn_predict",
+   "tail": 0.3,
+   "lift": true,
+   "drop_cue": 1,
+   "data": {
+    "yt": {
+     "chapter": "Next token",
+     "title": "Step 4: one token at a time",
+     "notes": [
+      [
+       "Score every possible next token",
+       0
+      ],
+      [
+       "Pick a likely one: 'New'",
+       1
+      ],
+      [
+       "Climb again: 'York'",
+       3
+      ],
+      [
+       "One trip per token = answers appear piece by piece",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_predict.wav",
+     "maxgap": 0.32,
+     "text": "ఇప్పుడు తర్వాత రాగల ప్రతి టోకెన్ కి స్కోర్ ఇస్తుంది, [1] బాగా సరిపోయేది ఒకటి ఎంచుకుంటుంది, 'న్యూ'. [2] మళ్ళీ పైకి ఎక్కుతుంది, [3] 'యార్క్' కోసం. ఒక్కో టోకెన్ కి ఒక్కో ప్రయాణం. అందుకే సమాధానాలు ముక్క ముక్కగా వస్తాయి.",
+     "show": "Now it scores every possible next token, [1] picks a likely one, 'New', [2] climbs again, [3] for 'York'. One trip per token: that's why answers appear piece by piece.",
+     "pauses": {
+      "1": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "wn_quiz",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Same ID for 'bank'?",
+     "notes": [
+      [
+       "'I sat on the river bank.'",
+       0
+      ],
+      [
+       "'I opened a bank account.'",
+       0
+      ],
+      [
+       "Yes: same ID (6922), same starting embedding",
+       2
+      ],
+      [
+       "The layers tell them apart",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_quiz.wav",
+     "file2": "07_quiz_answer.wav",
+     "pause": 2.0,
+     "gap": 0.1,
+     "maxgap": 0.32,
+     "text": "ఇప్పుడు మీ వంతు: [1] 'రివర్ బ్యాంక్', 'బ్యాంక్ అకౌంట్', రెండింట్లో 'బ్యాంక్' కి ఒకే ఐ డి నా? <pause 2> [2] అవును! అదే ఐ డి, అదే మొదటి లిస్ట్. తేడా లేయర్స్ లో తెలుస్తుంది.",
+     "tts": "ఇప్పుడు మీ వంతు: 'రివర్ బ్యాంక్', 'బ్యాంక్ అకౌంట్', రెండింట్లో 'బ్యాంక్' కి ఒకే ఐ డి నా?",
+     "tts2": "అవును! అదే ఐ డి, అదే మొదటి లిస్ట్. తేడా లేయర్స్ లో తెలుస్తుంది.",
+     "show": "Your turn: [1] 'river bank' and 'bank account': does 'bank' get the same ID in both? <pause 2> [2] Yes! Same ID, same starting list. The layers tell them apart."
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "wn_outro",
+   "tail": 0.6,
+   "outro": true,
+   "data": {
+    "handle": "@ai_maastaaru_telugu",
+    "yt": {
+     "chapter": "Recap",
+     "title": "Words to numbers to answer",
+     "notes": [
+      [
+       "Text -> tokens -> IDs -> embeddings -> layers -> next token",
+       0
+      ],
+      [
+       "Next: how AI sees images (EP29)",
+       6
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_outro.wav",
+     "maxgap": 0.32,
+     "text": "రీక్యాప్: టెక్స్ట్, [1] టోకెన్స్, [2] ఐ డి లు, [3] ఎంబెడ్డింగ్స్, [4] లేయర్స్, [5] తర్వాత ఒక్కో టోకెన్. [6] నెక్స్ట్: ఎ ఐ ఫోటోలను ఎలా చూస్తుంది. మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "show": "Recap: text, [1] tokens, [2] IDs, [3] embeddings, [4] layers, [5] then one token at a time. [6] Next: how AI sees images. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ],
+ "captionMode": "phrase",
+ "handle": "@ai_maastaaru_telugu"
+}

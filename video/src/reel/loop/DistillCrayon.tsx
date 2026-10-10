@@ -91,7 +91,7 @@ export const tag = (c: Ctx, text: string, x: number, y: number, size: number, bg
 };
 
 // ---------- little doodles ----------
-const catFace = (c: Ctx, x: number, y: number, s: number, r: () => number, color = "#9ca3af", stripes = false) => {
+export const catFace = (c: Ctx, x: number, y: number, s: number, r: () => number, color = "#9ca3af", stripes = false) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   [[-1], [1]].forEach(([d]) => { c.beginPath(); c.moveTo(d * 30, -40); c.lineTo(d * 52, -86); c.lineTo(d * 62, -30); c.fillStyle = color; c.fill(); });
   c.beginPath(); c.arc(0, 0, 60, 0, 7); c.fillStyle = color; c.fill();
@@ -101,7 +101,7 @@ const catFace = (c: Ctx, x: number, y: number, s: number, r: () => number, color
   [-1, 1].forEach((d) => [0, 10].forEach((dy) => stroke(c, [[d * 18, 22 + dy], [d * 70, 14 + dy * 1.6]], COL.ink, 2.5, r, { passes: 1 })));
   c.restore();
 };
-const dogFace = (c: Ctx, x: number, y: number, s: number, r: () => number, wolf = false) => {
+export const dogFace = (c: Ctx, x: number, y: number, s: number, r: () => number, wolf = false) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   const col = wolf ? "#94a3b8" : "#d6a46b";
   if (wolf) [[-1], [1]].forEach(([d]) => { c.beginPath(); c.moveTo(d * 26, -44); c.lineTo(d * 46, -100); c.lineTo(d * 62, -34); c.fillStyle = col; c.fill(); });
@@ -112,7 +112,7 @@ const dogFace = (c: Ctx, x: number, y: number, s: number, r: () => number, wolf 
   c.beginPath(); c.ellipse(0, 14, 12, 9, 0, 0, 7); c.fillStyle = COL.ink; c.fill();
   c.restore();
 };
-const car = (c: Ctx, x: number, y: number, s: number, r: () => number) => {
+export const car = (c: Ctx, x: number, y: number, s: number, r: () => number) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   c.beginPath(); rrect(c, -70, -30, 140, 40, 12); c.fillStyle = "#ef4444"; c.fill();
   c.beginPath(); rrect(c, -40, -58, 80, 32, 10); c.fillStyle = "#ef4444"; c.fill();

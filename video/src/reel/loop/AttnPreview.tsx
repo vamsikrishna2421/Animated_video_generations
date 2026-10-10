@@ -3,6 +3,7 @@ import { AbsoluteFill, Sequence } from "remotion";
 import { ATTN_SCENES } from "./AttentionCrayon";
 import { DISTILL_SCENES } from "./DistillCrayon";
 import { CHEAP_SCENES } from "./CheapCrayon";
+import { WORDS_SCENES } from "./WordsCrayon";
 import CHEAP_PREVIEW from "./cheap_preview.json";
 
 // Dev-only: every EP27 scene with evenly spaced cues (no audio) for look checks.
@@ -49,6 +50,23 @@ export const CheapPreview: React.FC = () => (
       const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 5);
       return (
         <Sequence key={sc.id} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
+          <Comp s={s} cue={cue} line={() => s.lines[0]} />
+        </Sequence>
+      );
+    })}
+  </AbsoluteFill>
+);
+
+// Dev preview of the EP28 scenes (cues at n/7 of each scene, so 6-cue scenes fit).
+const WORDER = ["wn_hook", "wn_tokens", "wn_embed", "wn_pos", "wn_layers", "wn_predict", "wn_quiz", "wn_outro"] as const;
+export const WordsPreview: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    {WORDER.map((t, i) => {
+      const Comp = WORDS_SCENES[t] as unknown as React.FC<any>;
+      const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
+      const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 7);
+      return (
+        <Sequence key={t} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
           <Comp s={s} cue={cue} line={() => s.lines[0]} />
         </Sequence>
       );

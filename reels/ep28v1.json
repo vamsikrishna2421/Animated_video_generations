@@ -1,0 +1,316 @@
+{
+ "id": "ep28v1",
+ "title": "How AI turns words into numbers",
+ "label": "EP 28",
+ "banner": "How AI turns words into numbers",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.18,
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.8,
+ "musicPad": true,
+ "parler_lang": "en",
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "wn_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "The puzzle",
+     "title": "What ChatGPT actually sees",
+     "notes": [
+      [
+       "You type: 'The Statue of Liberty is in'",
+       0
+      ],
+      [
+       "The model sees: 976 160801 328 51868 382 306",
+       1
+      ],
+      [
+       "No words, only numbers (real token IDs)",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "01_hook.wav",
+     "text": "To ChatGPT, your message looks like [1] this. [2] No words, only numbers. [3] So how does it turn these numbers into an answer?"
+    }
+   ]
+  },
+  {
+   "id": "tokens",
+   "type": "wn_tokens",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Tokens",
+     "title": "Step 1: cut the text into tokens",
+     "notes": [
+      [
+       "A token is a word or a piece of a word",
+       1
+      ],
+      [
+       "'YouTube' = 'You' + 'Tube': two tokens",
+       2
+      ],
+      [
+       "Each token gets an ID, like a ticket number",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "02_tokens.wav",
+     "text": "First, your text is cut into tokens, [1] words or pieces of words. [2] Even 'YouTube' is two tokens. [3] Each token gets an ID, but an ID is just a label, like a ticket number.",
+     "tts": "First, your text is cut into tokens, words or pieces of words. Even YouTube is two tokens. Each token gets an I.D., but an I.D. is just a label, like a ticket number."
+    }
+   ]
+  },
+  {
+   "id": "embed",
+   "type": "wn_embed",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Embeddings",
+     "title": "Step 2: IDs become embeddings",
+     "notes": [
+      [
+       "Each ID fetches its row from a giant table",
+       1
+      ],
+      [
+       "Google Maps places you with 2 numbers",
+       2
+      ],
+      [
+       "An embedding uses thousands (gpt-oss: 2,880)",
+       3
+      ],
+      [
+       "Similar meanings sit close together",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "03_embed.wav",
+     "text": "So [1] each ID fetches its row from a giant table: a long list of numbers, called an embedding. [2] It's an address: Google Maps places you with two numbers, [3] an embedding uses thousands. [4] Similar meanings live nearby, so 'cat' sits next to 'dog'.",
+     "show": "So [1] each ID fetches its row from a giant table: a long list of numbers, called an embedding. [2] It's an address: Google Maps places you with 2 numbers, [3] an embedding uses thousands. [4] Similar meanings live nearby, so 'cat' sits next to 'dog'.",
+     "tts": "So each I.D. fetches its row from a giant table: a long list of numbers, called an embedding. It's an address: Google Maps places you with two numbers, an embedding uses thousands. Similar meanings live nearby, so cat sits next to dog."
+    }
+   ]
+  },
+  {
+   "id": "pos",
+   "type": "wn_pos",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Word order",
+     "title": "Position signals",
+     "notes": [
+      [
+       "'dog' gets the same embedding, first or last",
+       0
+      ],
+      [
+       "'dog bites man' vs 'man bites dog'",
+       1
+      ],
+      [
+       "Each token also carries its position",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "04_pos.wav",
+     "text": "But 'dog' gets the same list, first or last, [1] so 'dog bites man' would equal 'man bites dog'. [2] So each token also carries its position, [3] and now it knows who bit whom.",
+     "tts": "But dog gets the same list, first or last, so dog bites man would equal man bites dog. So each token also carries its position, and now it knows who bit whom."
+    }
+   ]
+  },
+  {
+   "id": "layers",
+   "type": "wn_layers",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Layers",
+     "title": "Step 3: climb the layers",
+     "notes": [
+      [
+       "Dozens of layers (gpt-oss-120b: 36)",
+       0
+      ],
+      [
+       "Each word looks back and soaks up what matters (attention, EP27)",
+       1
+      ],
+      [
+       "The last word 'in' now carries 'Statue' + 'Liberty'",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "05_layers.wav",
+     "text": "Then the embeddings climb dozens of layers. [1] On every floor, each word looks back and soaks up what matters. [2] By the top, the last word, 'in', knows about 'Statue' and 'Liberty'.",
+     "tts": "Then the embeddings climb dozens of layers. On every floor, each word looks back, and soaks up what matters. By the top, the last word, in, knows about Statue and Liberty."
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "type": "wn_predict",
+   "tail": 0.3,
+   "lift": true,
+   "drop_cue": 1,
+   "data": {
+    "yt": {
+     "chapter": "Next token",
+     "title": "Step 4: one token at a time",
+     "notes": [
+      [
+       "Score every possible next token",
+       0
+      ],
+      [
+       "Pick a likely one: 'New'",
+       1
+      ],
+      [
+       "Climb again: 'York'",
+       3
+      ],
+      [
+       "One trip per token = answers appear piece by piece",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "06_predict.wav",
+     "text": "Now it scores every possible next token, [1] picks a likely one, 'New', [2] and climbs again for [3] 'York'. One trip per token: that's why answers appear piece by piece.",
+     "tts": "Now it scores every possible next token, picks a likely one, New, and climbs again for York. One trip per token: that's why answers appear piece by piece.",
+     "pauses": {
+      "1": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "wn_quiz",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Same ID for 'bank'?",
+     "notes": [
+      [
+       "'I sat on the river bank.'",
+       0
+      ],
+      [
+       "'I opened a bank account.'",
+       0
+      ],
+      [
+       "Yes: same ID (6922), same starting embedding",
+       2
+      ],
+      [
+       "The layers tell them apart",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "07_quiz.wav",
+     "text": "Your turn: [1] does 'bank' get the same ID in 'river bank' and 'bank account'? <pause 2> [2] Yes! Same ID, same starting list. The layers tell them apart.",
+     "tts": "Your turn: does bank get the same I.D. in river bank, and bank account?",
+     "file2": "07_quiz_answer.wav",
+     "tts2": "Yes! Same I.D., same starting list. The layers tell them apart.",
+     "pause": 2.0,
+     "gap": 0.1
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "wn_outro",
+   "tail": 0.6,
+   "outro": true,
+   "data": {
+    "handle": "@ai_maastaaru",
+    "yt": {
+     "chapter": "Recap",
+     "title": "Words to numbers to answer",
+     "notes": [
+      [
+       "Text -> tokens -> IDs -> embeddings -> layers -> next token",
+       0
+      ],
+      [
+       "Next: how AI sees images (EP29)",
+       6
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "08_outro.wav",
+     "text": "Recap: text, [1] tokens, [2] IDs, [3] embeddings, [4] layers, [5] then one token at a time. [6] Next: how AI sees images. Follow, so you don't miss it.",
+     "tts": "Recap: text, tokens, I.D.s, embeddings, layers, then one token at a time. Next: how A.I. sees images. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}
