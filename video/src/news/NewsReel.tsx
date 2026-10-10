@@ -466,7 +466,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
   return (
     <AbsoluteFill>
       <Backdrop accent={B.rose} />
-      <AbsoluteFill style={{ justifyContent: "center", padding: "0 70px", opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
+      <AbsoluteFill style={{ justifyContent: "flex-start", padding: "400px 70px 0", opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
         {(seg.lines ?? []).map((parts, li) => {
           const p = prog(f, 2 + li * 30, 16 + li * 30);
           return (
@@ -550,15 +550,15 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {/* music + SFX */}
       {/* music arc: punchy under the hook, sits back for the stories, lifts through the last story into the CTA.
           Each story cut gets a swell in the gap before its voice; a card with `drop` ducks the bed just before its number. */}
-      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop volume={(fr) => {
-        if (fr >= followAbs) return 0.8; // music-only end card: keep it as loud as the voiced CTA
+      <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop loopVolumeCurveBehavior="extend" allowAmplificationDuringRender volume={(fr) => {
         const base = tl.musicBase ?? (tl.look === "broadcast" ? 0.15 : 0.08);
+        if (fr >= followAbs) return Math.max(0.8, base * 3.3); // music-only end card: the loudest point of the bed
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
-        if (fr >= outroStart) return Math.min(1, interpolate(fr, [outroStart, followAbs], [base * 2.2, base * 3], cl));
-        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.3, base * 2.2], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.15], cl);
+        if (fr >= outroStart) return base * 1.3; // CTA voice: bed lifted but still ~8 dB under it
+        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.15, base * 1.3], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.15], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
-        return Math.min(1, v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1));
+        return v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1);
       }} />
       {dropAt.map((d) => <Sequence key={`d${d}`} from={d - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.32} /></Sequence>)}
       <Sequence from={0} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>
