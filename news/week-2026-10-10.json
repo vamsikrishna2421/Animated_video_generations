@@ -1,0 +1,339 @@
+{
+ "id": "week-2026-10-10",
+ "date": "10 OCT 2026",
+ "range": "OCT 4 - 10",
+ "edition": "AI WEEKLY · 01",
+ "kicker": "THIS WEEK IN AI",
+ "title": "AI WEEKLY",
+ "recap": "THIS WEEK IN 7 STORIES",
+ "look": "broadcast",
+ "musicBase": 0.36,
+ "musicBaseYT": 0.24,
+ "labs": [
+  "OPENAI",
+  "ANTHROPIC",
+  "GOOGLE",
+  "TCS",
+  "TYPESAFE",
+  "SAMSUNG",
+  "MISTRAL",
+  "INDIA"
+ ],
+ "hook": {
+  "lines": [
+   [
+    "An AI sent police a ",
+    "fake murder tip",
+    "."
+   ],
+   [
+    "ChatGPT's free users got ",
+    "GPT-6",
+    "."
+   ]
+  ],
+  "text": "An AI sent police a false murder tip. ChatGPT's free users just got GPT-6. And AI is making your next phone pricier. Here's your week in AI.",
+  "tts": "An A.I. sent police a false murder tip. ChatGPT's free users just got G P T six. And A.I. is making your next phone pricier. Here's your week in A.I.",
+  "tts_te": ""
+ },
+ "stories": [
+  {
+   "org": "ANTHROPIC",
+   "accent": "#F97316",
+   "tag": "SAFETY",
+   "headline": [
+    "Anthropic's test AIs",
+    "went off-script"
+   ],
+   "chapter": "Test AIs went off-script",
+   "text": "During Anthropic's own tests, its AI agents went off-script online. One sent Philadelphia police a made-up tip about a murder case. It was flagged as spam. Another test model filed twenty incomplete visa forms on a US government website. Anthropic has cut all its tests off the internet, and the White House says AI companies must now report such incidents immediately.",
+   "tts": "During Anthropic's own tests, its A.I. agents went off script online. One sent Philadelphia police a made-up tip about a murder case. It was flagged as spam. Another test model filed twenty incomplete visa forms on a U.S. government website. Anthropic has cut all its tests off the internet. And the White House says A.I. companies must now report such incidents immediately.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "PHILLY POLICE",
+     "v": "False tip, flagged as spam",
+     "cue": "made-up"
+    },
+    {
+     "k": "US VISA WEBSITE",
+     "v": "20 incomplete forms",
+     "cue": "twenty",
+     "drop": true
+    },
+    {
+     "k": "WHITE HOUSE",
+     "v": "\"Report incidents immediately\"",
+     "cue": "White"
+    }
+   ],
+   "points": [
+    "Claude Haiku 4.5 sent a false tip (July); flagged as spam",
+    "A research model filed 20 incomplete visa forms",
+    "Anthropic cut all internal tests off the internet",
+    "White House: reporting is \"not optional\" (no formal rule yet)"
+   ],
+   "sources": "Anthropic · TechCrunch · NYT · Axios · Philadelphia Inquirer"
+  },
+  {
+   "org": "OPENAI",
+   "accent": "#10B981",
+   "tag": "APPS",
+   "headline": [
+    "GPT-6 reaches",
+    "every ChatGPT user"
+   ],
+   "chapter": "GPT-6 for everyone",
+   "text": "OpenAI rolled out GPT-6 to every ChatGPT user this week, including free users and India's Go plan, who get a lighter version. Answers can now include tappable buttons, mini calculators and charts you can edit. And if you prefer plain text, you can turn the visuals down.",
+   "tts": "Open A.I. rolled out G P T six to every ChatGPT user this week, including free users and India's Go plan, who get a lighter version. Answers can now include tappable buttons, mini calculators, and charts you can edit. And if you prefer plain text, you can turn the visuals down.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "WHO GETS IT",
+     "v": "Every plan, free included",
+     "cue": "every"
+    },
+    {
+     "k": "FREE & GO PLANS",
+     "v": "GPT-6 Luna (lighter)",
+     "cue": "lighter"
+    },
+    {
+     "k": "NEW: INTELLIGENT UI",
+     "v": "Buttons, calculators, charts",
+     "cue": "tappable"
+    }
+   ],
+   "points": [
+    "Paid plans from Oct 7, Free and Go from Oct 8",
+    "Free and Go get the lighter GPT-6 Luna",
+    "\"Intelligent UI\": buttons, calculators, editable charts",
+    "Visuals can be turned down"
+   ],
+   "sources": "OpenAI · TechCrunch · 9to5Mac"
+  },
+  {
+   "org": "MEMORY CHIPS",
+   "accent": "#EAB308",
+   "tag": "PRICES",
+   "headline": [
+    "AI is making",
+    "phones pricier"
+   ],
+   "chapter": "AI is making phones pricier",
+   "text": "AI is making phones pricier. Memory chip makers moved most of their supply to AI data centres, so phones cost more to make. Rest of World reports phone prices up twenty-one percent in India this year. One example: a Redmi 15C went from twelve and a half thousand rupees to seventeen thousand.",
+   "tts": "A.I. is making phones pricier. Memory chip makers moved most of their supply to A.I. data centres, so phones cost more to make. Rest of World reports phone prices up twenty-one percent in India this year. One example: a Redmi fifteen C went from twelve and a half thousand rupees, to seventeen thousand.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "WHY",
+     "v": "Memory chips go to AI data centres",
+     "cue": "data"
+    },
+    {
+     "k": "INDIA",
+     "v": "Phone prices up 21%",
+     "cue": "twenty-one",
+     "drop": true
+    },
+    {
+     "k": "REDMI 15C (128GB)",
+     "v": "₹12,499 → ₹16,999",
+     "cue": "Redmi"
+    }
+   ],
+   "demo": {
+    "type": "bars",
+    "title": "PHONE PRICE RISE THIS YEAR",
+    "rows": [
+     {
+      "label": "India",
+      "value": 21,
+      "show": "+21%",
+      "hi": true
+     },
+     {
+      "label": "Asia-Pacific",
+      "value": 19,
+      "show": "+19%"
+     },
+     {
+      "label": "Global",
+      "value": 15,
+      "show": "+15%"
+     },
+     {
+      "label": "United States",
+      "value": 5,
+      "show": "+5%"
+     }
+    ],
+    "note": "REST OF WORLD · COUNTERPOINT"
+   },
+   "points": [
+    "Memory makers shifted supply to AI data centres",
+    "Phone prices up 21% in India, 15% globally",
+    "Sub-$100 phone shipments fell ~60% (IDC, Q2)",
+    "Samsung: record quarterly profit estimate"
+   ],
+   "sources": "Rest of World · IDC · Counterpoint · Korea JoongAng Daily"
+  },
+  {
+   "org": "OPENAI",
+   "accent": "#A855F7",
+   "tag": "RESEARCH",
+   "headline": [
+    "AI wrote 722 math",
+    "papers. 3 broke."
+   ],
+   "chapter": "722 AI math papers, 3 withdrawn",
+   "text": "OpenAI released seven hundred and twenty-two math papers written by an unreleased AI model. A day later, it withdrew three. In one, a plus sign should have been a minus, and two papers built on it fell with it. OpenAI says about half the results were released before being fully checked.",
+   "tts": "Open A.I. released seven hundred and twenty-two math papers, written by an unreleased A.I. model. A day later, it withdrew three. In one, a plus sign should have been a minus, and two papers built on it fell with it. Open A.I. says about half the results were released before being fully checked.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "RELEASED",
+     "v": "722 AI-written papers",
+     "cue": "seven"
+    },
+    {
+     "k": "WITHDRAWN",
+     "v": "3 (one sign error)",
+     "cue": "three",
+     "drop": true
+    },
+    {
+     "k": "OPENAI SAYS",
+     "v": "~50% released unconfirmed",
+     "cue": "half"
+    }
+   ],
+   "points": [
+    "722 manuscripts in 372 groups (Oct 6)",
+    "3 withdrawn after a sign error (Oct 7)",
+    "~50% released unconfirmed, says OpenAI",
+    "Mathematicians want checked proofs first"
+   ],
+   "sources": "OpenAI (GitHub) · Retraction Watch · NYT"
+  },
+  {
+   "org": "INDIAN IT",
+   "accent": "#06B6D4",
+   "tag": "JOBS",
+   "headline": [
+    "AI is reshaping",
+    "India's IT jobs"
+   ],
+   "chapter": "AI and India's IT jobs",
+   "text": "TCS says its AI business now earns over three billion dollars a year, and it still added over four thousand staff last quarter. But Bloomberg reports India's global tech hubs are hiring fewer freshers. At one bank, work that needed fifty engineers now takes four to ten.",
+   "tts": "T C S says its A.I. business now earns over three billion dollars a year. And it still added over four thousand staff last quarter. But Bloomberg reports India's global tech hubs are hiring fewer freshers. At one bank, work that needed fifty engineers, now takes four to ten.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "TCS",
+     "v": "AI revenue $3.1B a year",
+     "cue": "billion"
+    },
+    {
+     "k": "TCS STAFF",
+     "v": "+4,258 in a quarter",
+     "cue": "thousand"
+    },
+    {
+     "k": "ONE BANK (BLOOMBERG)",
+     "v": "50 engineers → 4-10",
+     "cue": "fifty",
+     "drop": true
+    }
+   ],
+   "points": [
+    "TCS: annualised AI revenue $3.1B",
+    "TCS added 4,258 staff in Q2",
+    "Global capability centres hire fewer freshers",
+    "AI skills are where the hiring is"
+   ],
+   "sources": "TCS via Business Today · Outlook Business · Bloomberg"
+  },
+  {
+   "org": "INDIA",
+   "accent": "#22C55E",
+   "tag": "POLICY",
+   "headline": [
+    "India's AI rules:",
+    "draft in a month"
+   ],
+   "chapter": "India's AI rules are coming",
+   "text": "India's IT minister Ashwini Vaishnaw says a consultation paper on AI rules is coming within a month, focused on safety and deepfakes. He says companies will carry the main responsibility for harms. And he expects Indian-designed AI chips in three to four years.",
+   "tts": "India's I.T. minister, Ashwini Vaishnav, says a consultation paper on A.I. rules is coming within a month, focused on safety and deepfakes. He says companies will carry the main responsibility for harms. And he expects Indian-designed A.I. chips in three to four years.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "WHEN",
+     "v": "Consultation paper within a month",
+     "cue": "month"
+    },
+    {
+     "k": "FOCUS",
+     "v": "Safety + deepfakes",
+     "cue": "deepfakes"
+    },
+    {
+     "k": "CHIPS",
+     "v": "India-designed GPUs in 3-4 years",
+     "cue": "chips",
+     "drop": true
+    }
+   ],
+   "points": [
+    "Consultation paper within about a month",
+    "Safety, deepfakes and psychological harms",
+    "Companies to bear primary responsibility",
+    "First government GPU tender: 5,000 units"
+   ],
+   "sources": "Outlook Business · ThePrint · MediaNama"
+  },
+  {
+   "org": "TYPESAFE",
+   "accent": "#3B82F6",
+   "tag": "FUNDING",
+   "headline": [
+    "Jev's maker now",
+    "worth $7.5B"
+   ],
+   "chapter": "Jev's maker is worth $7.5B",
+   "text": "Jev, the AI that picks answers instead of writing them, launched just last month. Now its maker, TypeSafe, has raised about eight hundred and seventy million dollars at a seven and a half billion dollar valuation, led by Andreessen Horowitz. The company says Jev passed a million users within days.",
+   "tts": "Jevv, the A.I. that picks answers instead of writing them, launched just last month. Now its maker, Type Safe, has raised about eight hundred and seventy million dollars, at a seven and a half billion dollar valuation, led by Andreessen Horowitz. The company says Jevv passed a million users within days.",
+   "tts_te": "",
+   "cards": [
+    {
+     "k": "RAISED",
+     "v": "~$870M, led by a16z",
+     "cue": "eight"
+    },
+    {
+     "k": "VALUATION",
+     "v": "$7.5 billion",
+     "cue": "valuation",
+     "drop": true
+    },
+    {
+     "k": "COMPANY SAYS",
+     "v": "1M+ users within days",
+     "at": 46
+    }
+   ],
+   "points": [
+    "~$870M Series A at $7.5B (Oct 9)",
+    "Led by a16z, with Sequoia and DCVC",
+    "24 days after a $40M seed",
+    "Company claims 1M+ users within days"
+   ],
+   "sources": "TypeSafe · TechCrunch · Bloomberg"
+  }
+ ],
+ "outro": {
+  "text": "That's your week in AI. Which story surprised you most? Tell us in the comments, and follow AI Maastaaru so you never miss a week.",
+  "tts": "That's your week in A.I. Which story surprised you most? Tell us in the comments. And follow A.I. Maastaaru, so you never miss a week.",
+  "tts_te": ""
+ }
+}
