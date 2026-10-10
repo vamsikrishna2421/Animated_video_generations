@@ -40,8 +40,10 @@ type Line = { who: string; name: string; color: string; sub?: string | null; aud
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
 // Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last ~28% into the CTA), plus a hit in the first second.
 // tl.musicDrops = [from, to] frame windows where the bed drops out just before a key number.
+// tl.musicBoosts = [from, to, gain] windows where the bed sits louder (a lift through the middle).
 const musicArc = (tl: ReelTimeline, f: number) => {
-  const dip = (tl.musicDrops ?? []).reduce((g, [a, b]) => g * interpolate(f, [a - 4, a + 2, b, b + 3], [1, 0.12, 0.12, 1], cl), 1);
+  const dip = (tl.musicDrops ?? []).reduce((g, [a, b]) => g * interpolate(f, [a - 4, a + 2, b, b + 3], [1, 0.12, 0.12, 1], cl), 1)
+    * (tl.musicBoosts ?? []).reduce((g, [a, b, k]) => (b - a > 60 ? g * interpolate(f, [a - 20, a + 20, b - 20, b + 20], [1, k, k, 1], cl) : g), 1);
   if (!tl.musicLift) return dip;
   const end = tl.totalFrames, lift = Math.max(12 * tl.fps, 0.28 * end);  // rises through the quiz, the recap and the CTA
   const hit = interpolate(f, [0, 0.4 * tl.fps, 1.2 * tl.fps], [1.7, 1.7, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
@@ -49,7 +51,7 @@ const musicArc = (tl: ReelTimeline, f: number) => {
   return hit * rise * dip;
 };
 
-export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; hideTimerInHook?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; musicBoosts?: number[][]; hideTimerInHook?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -656,7 +658,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   if (!c) return null;
   const pop = interpolate(f - c[0].from, [0, 4], [0.85, 1], cl);
   return (
-    <div style={{ position: "absolute", top: 1440, left: 40, right: 40, textAlign: "center" }}>
+    <div style={{ position: "absolute", top: phrase ? 1400 : 1440, left: 40, right: 40, textAlign: "center" }}>
       {l.name && !(classic && l.who === "maastaaru") && (
         <div style={{ display: "table", margin: "0 auto 14px", background: l.color, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "4px 22px", borderRadius: 20 }}>{l.name}</div>
       )}

@@ -81,8 +81,8 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "02_tokens.wav",
-     "text": "First, your text is cut into tokens, [1] words or pieces of words. [2] Even 'YouTube' is two tokens. [3] Each token gets an ID, but an ID is just a label, like a ticket number.",
-     "tts": "First, your text is cut into tokens, words or pieces of words. Even YouTube is two tokens. Each token gets an I.D., but an I.D. is just a label, like a ticket number."
+     "text": "First, your text is cut into tokens, [1] words or pieces of words. [2] Even 'YouTube' is two tokens. [3] Each token gets an ID number, but that number is just a label, like a ticket number.",
+     "tts": "First, your text is cut into tokens, words or pieces of words. Even YouTube is two tokens. Each token gets an I D number, but that number is just a label, like a ticket number."
     }
    ]
   },
@@ -190,10 +190,11 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "05_layers.wav",
-     "text": "Then the embeddings climb dozens of layers. [1] On every floor, each word looks back and soaks up what matters. [2] By the top, the last word, 'in', knows about 'Statue' and 'Liberty'.",
-     "tts": "Then the embeddings climb dozens of layers. On every floor, each word looks back, and soaks up what matters. By the top, the last word, in, knows about Statue and Liberty."
+     "text": "Then the embeddings climb dozens of layers. [1] On every floor, each word looks back and soaks up what matters. [2] By the top floor, the last token knows about 'Statue' and 'Liberty'.",
+     "tts": "Then the embeddings climb dozens of layers. On every floor, each word looks back, and soaks up what matters. By the top floor, the last token knows about Statue, and Liberty."
     }
-   ]
+   ],
+   "boost": 1.3
   },
   {
    "id": "predict",
@@ -219,7 +220,7 @@
        3
       ],
       [
-       "One trip per token = answers appear piece by piece",
+       "Every new token is another climb, so answers appear piece by piece",
        3
       ]
      ]
@@ -230,13 +231,14 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "06_predict.wav",
-     "text": "Now it scores every possible next token, [1] picks a likely one, 'New', [2] and climbs again for [3] 'York'. One trip per token: that's why answers appear piece by piece.",
-     "tts": "Now it scores every possible next token, picks a likely one, New, and climbs again for York. One trip per token: that's why answers appear piece by piece.",
+     "text": "Now it scores every possible next token, and picks a likely one: [1] 'New'. [2] Then it climbs again, [3] for 'York'. Every new token is another climb. That's why answers appear piece by piece.",
+     "tts": "Now it scores every possible next token, and picks a likely one: New. Then it climbs again, for York. Every new token is another climb. That's why answers appear piece by piece.",
      "pauses": {
-      "1": 0.35
+      "1": 0.5
      }
     }
-   ]
+   ],
+   "boost": 1.3
   },
   {
    "id": "quiz",
@@ -283,7 +285,7 @@
   {
    "id": "outro",
    "type": "wn_outro",
-   "tail": 0.6,
+   "tail": 1.2,
    "outro": true,
    "data": {
     "handle": "@ai_maastaaru",
@@ -307,8 +309,11 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "08_outro.wav",
-     "text": "In short: text, [1] tokens, [2] IDs, [3] embeddings, [4] layers, [5] then one token at a time. [6] Next: how AI sees images. Follow, so you don't miss it.",
-     "tts": "In short: text, tokens, I.D.s, embeddings, layers, then one token at a time. Next: how A.I. sees images. Follow, so you don't miss it."
+     "text": "In short: text, [1] tokens, [2] IDs, [3] embeddings, [4] layers, [5] then one token at a time. [6] Next: how AI can see pictures. [7] Follow, so you don't miss it.",
+     "tts": "In short: text, tokens, I.D.s, embeddings, layers, then one token at a time. Next: how A.I. can see pictures. Follow, so you don't miss it.",
+     "pauses": {
+      "7": 0.35
+     }
     }
    ]
   }

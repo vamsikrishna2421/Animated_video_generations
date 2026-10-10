@@ -14,12 +14,19 @@
  "musicLift": 1.8,
  "musicDrops": [
   [
-   1859,
-   1883
+   1890,
+   1914
+  ]
+ ],
+ "musicBoosts": [
+  [
+   1432,
+   2189,
+   1.3
   ]
  ],
  "hideTimerInHook": true,
- "totalFrames": 2830,
+ "totalFrames": 2848,
  "music": "reel/ep28te/score.wav",
  "scenes": [
   {
@@ -293,81 +300,86 @@
       {
        "w": "Each",
        "from": 183,
-       "to": 190
+       "to": 189
       },
       {
        "w": "token",
-       "from": 190,
-       "to": 198
+       "from": 189,
+       "to": 196
       },
       {
        "w": "gets",
-       "from": 198,
-       "to": 205
+       "from": 196,
+       "to": 202
       },
       {
        "w": "an",
+       "from": 202,
+       "to": 205
+      },
+      {
+       "w": "ID",
        "from": 205,
        "to": 209
       },
       {
-       "w": "ID.",
+       "w": "number.",
        "from": 209,
-       "to": 215
+       "to": 219
       },
       {
        "w": "But",
-       "from": 215,
-       "to": 221
+       "from": 219,
+       "to": 242
       },
       {
-       "w": "an",
-       "from": 221,
-       "to": 244
-      },
-      {
-       "w": "ID",
-       "from": 244,
+       "w": "that",
+       "from": 242,
        "to": 248
       },
       {
-       "w": "is",
+       "w": "number",
        "from": 248,
-       "to": 252
+       "to": 256
       },
       {
-       "w": "just",
-       "from": 252,
+       "w": "is",
+       "from": 256,
        "to": 263
       },
       {
-       "w": "a",
+       "w": "just",
        "from": 263,
-       "to": 265
+       "to": 269
+      },
+      {
+       "w": "a",
+       "from": 269,
+       "to": 272
       },
       {
        "w": "label,",
-       "from": 265,
-       "to": 275
+       "from": 272,
+       "to": 280
       },
       {
        "w": "like",
-       "from": 275,
-       "to": 282
+       "from": 280,
+       "to": 286
       },
       {
        "w": "a",
-       "from": 282,
-       "to": 285
+       "from": 286,
+       "to": 288
       },
       {
        "w": "ticket",
-       "from": 285,
-       "to": 295
+       "from": 288,
+       "to": 297
       },
       {
        "w": "number.",
-       "from": 295,
+       "from": 297,
        "to": 306
       }
      ],
@@ -1087,7 +1099,7 @@
        3
       ],
       [
-       "One trip per token = answers appear piece by piece",
+       "Every new token is another climb, so answers appear piece by piece",
        3
       ]
      ]
@@ -1105,7 +1117,7 @@
      "sub": null,
      "audio": "reel/ep28te/line_06.wav",
      "from": 0,
-     "frames": 387,
+     "frames": 391,
      "words": [
       {
        "w": "Now",
@@ -1120,133 +1132,158 @@
       {
        "w": "scores",
        "from": 28,
-       "to": 39
+       "to": 40
       },
       {
        "w": "every",
-       "from": 39,
-       "to": 48
+       "from": 40,
+       "to": 50
       },
       {
        "w": "possible",
-       "from": 48,
-       "to": 63
+       "from": 50,
+       "to": 64
       },
       {
        "w": "next",
-       "from": 63,
-       "to": 71
+       "from": 64,
+       "to": 73
       },
       {
        "w": "token,",
-       "from": 71,
-       "to": 103
+       "from": 73,
+       "to": 94
+      },
+      {
+       "w": "and",
+       "from": 94,
+       "to": 101
       },
       {
        "w": "picks",
-       "from": 103,
-       "to": 114
+       "from": 101,
+       "to": 111
       },
       {
        "w": "a",
-       "from": 114,
-       "to": 118
+       "from": 111,
+       "to": 114
       },
       {
        "w": "likely",
-       "from": 118,
-       "to": 131
+       "from": 114,
+       "to": 126
       },
       {
-       "w": "one,",
-       "from": 131,
-       "to": 141
+       "w": "one:",
+       "from": 126,
+       "to": 134
       },
       {
-       "w": "'New',",
-       "from": 141,
-       "to": 160
+       "w": "'New'.",
+       "from": 134,
+       "to": 164
+      },
+      {
+       "w": "Then",
+       "from": 164,
+       "to": 189
+      },
+      {
+       "w": "it",
+       "from": 189,
+       "to": 193
       },
       {
        "w": "climbs",
-       "from": 160,
-       "to": 192
+       "from": 193,
+       "to": 202
       },
       {
        "w": "again,",
-       "from": 192,
-       "to": 212
+       "from": 202,
+       "to": 216
       },
       {
        "w": "for",
-       "from": 212,
-       "to": 217
+       "from": 216,
+       "to": 221
       },
       {
        "w": "'York'.",
-       "from": 217,
-       "to": 246
+       "from": 221,
+       "to": 248
       },
       {
-       "w": "One",
-       "from": 246,
-       "to": 252
+       "w": "Every",
+       "from": 248,
+       "to": 255
       },
       {
-       "w": "trip",
-       "from": 252,
-       "to": 259
+       "w": "new",
+       "from": 255,
+       "to": 260
       },
       {
-       "w": "per",
-       "from": 259,
-       "to": 265
+       "w": "token",
+       "from": 260,
+       "to": 267
       },
       {
-       "w": "token:",
-       "from": 265,
-       "to": 275
+       "w": "is",
+       "from": 267,
+       "to": 271
+      },
+      {
+       "w": "another",
+       "from": 271,
+       "to": 280
+      },
+      {
+       "w": "climb:",
+       "from": 280,
+       "to": 323
       },
       {
        "w": "that's",
-       "from": 275,
-       "to": 319
+       "from": 323,
+       "to": 332
       },
       {
        "w": "why",
-       "from": 319,
-       "to": 325
-      },
-      {
-       "w": "answers",
-       "from": 325,
+       "from": 332,
        "to": 336
       },
       {
-       "w": "appear",
+       "w": "answers",
        "from": 336,
        "to": 346
       },
       {
-       "w": "piece",
+       "w": "appear",
        "from": 346,
        "to": 355
       },
       {
-       "w": "by",
+       "w": "piece",
        "from": 355,
-       "to": 359
+       "to": 362
+      },
+      {
+       "w": "by",
+       "from": 362,
+       "to": 365
       },
       {
        "w": "piece.",
-       "from": 359,
-       "to": 369
+       "from": 365,
+       "to": 374
       }
      ],
      "cues": {
-      "1": 103,
-      "2": 160,
-      "3": 212
+      "1": 134,
+      "2": 164,
+      "3": 216
      }
     }
    ]
@@ -1452,7 +1489,7 @@
     "captionMode": "phrase"
    },
    "from": 2536,
-   "frames": 282,
+   "frames": 300,
    "lines": [
     {
      "who": "maastaaru",

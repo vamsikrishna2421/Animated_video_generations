@@ -211,7 +211,7 @@ export const card = (c: Ctx, x: number, y: number, w: number, h: number, r: () =
 const SENT = ["The", "Statue", "of", "Liberty", "is", "in"];
 const SIDS = ["976", "160801", "328", "51868", "382", "306"];
 const WnHook: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = Math.min(cue(1), 24), c2 = cue(2), c3 = cue(3);   // the flip leads the voice so it lands in the first second
   return (
     <>
       <Sfx at={0} src="reel/sfx_boom.wav" vol={0.8} />
@@ -375,7 +375,7 @@ const WnEmbed: React.FC<SP> = ({ cue }) => {
             for (let i = 0; i < 120; i++) { c.fillStyle = rr() > 0.5 ? COL.orange : COL.light; c.fillRect(590 + (i % 30) * 13.5, 900 + Math.floor(i / 30) * 16, 8, 10); }
             c.restore();
             label(c, "2,880 numbers", 790, 1040, 58, COL.red, caveat, p);
-            label(c, "per token (gpt-oss)", 790, 1084, 36, GREY, handF, p);
+            label(c, "per token, OpenAI's open model", 790, 1084, fitSize(c, "per token, OpenAI's open model", 400, 34, handF), GREY, handF, p);
           }
         }
         // map of meaning
@@ -459,8 +459,9 @@ const WnLayers: React.FC<SP> = ({ s, cue }) => {
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(1500 + boil);
-        tag(c, "gpt-oss-120b: 36 layers", W / 2, 372, 64, COL.yellow, INK, -0.02, seg(f, 4, 14));
-        const n = 5, bx = 100, bw = 670, top = 460, bot = 1385, fh = (bot - top) / n;
+        hand(c, "step 3: climb the layers", W / 2, 350, 72, COL.yellow, seg(f, 0, 14), r, -0.02, "center");
+        label(c, "OpenAI's open model (gpt-oss) has 36 layers", W / 2, 418, 44, COL.pale, caveat, seg(f, 6, 16));
+        const n = 5, bx = 100, bw = 670, top = 490, bot = 1385, fh = (bot - top) / n;
         const pos = seg(f, 6, Math.max(c2 + 10, s.frames - 20)) * (n - 1);
         const fi = Math.min(n - 1, Math.floor(pos)), ph = pos - Math.floor(pos);
         for (let i = 0; i < n; i++) {
@@ -497,11 +498,9 @@ const WnLayers: React.FC<SP> = ({ s, cue }) => {
         label(c, "what matters", 925, 812, 50, COL.cream, caveat, seg(f, c1 + 16, c1 + 26));
         if (f >= c2) {
           const p = fade(f, c2, 10);
-          card(c, 790, 930, 260, 250, r, p, "#fff6d8");
-          label(c, "'in' now", 920, 990, 48, INK, caveat, p);
-          label(c, "knows:", 920, 1040, 48, INK, caveat, p);
-          label(c, "Statue", 920, 1100, 50, COL.orange, caveat, p);
-          label(c, "+ Liberty", 920, 1152, 50, "#15803d", caveat, p);
+          card(c, 140, 1150, 600, 210, r, p, "#fff6d8");
+          label(c, "last token 'in' now knows:", 440, 1225, fitSize(c, "last token 'in' now knows:", 540, 54, caveat), INK, caveat, p);
+          label(c, "Statue + Liberty", 440, 1310, 74, COL.orange, caveat, p);
         }
       }} />
     </>
@@ -518,6 +517,7 @@ const WnPredict: React.FC<SP> = ({ cue }) => {
       <Sfx at={c1} src="audio/sfx_success.wav" vol={0.4} />
       <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.4} />
       <Sfx at={c3} src="audio/sfx_success.wav" vol={0.4} />
+      <Sfx at={c3} src="reel/sfx_boom.wav" vol={0.55} />
       {[0, 1, 2, 3].map((k) => <Sfx key={k} at={c3 + 40 + k * 6} src="audio/sfx_tick.wav" vol={0.3} />)}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
@@ -570,7 +570,7 @@ const WnPredict: React.FC<SP> = ({ cue }) => {
           hand(c, "climb again", 640, 1200, 64, COL.cream, seg(f, c2 + 4, c2 + 18), r, -0.02, "center");
         }
         if (f >= c3 + 24) {
-          hand(c, "1 trip = 1 token", 640, 1290, 64, COL.yellow, seg(f, c3 + 24, c3 + 38), r, -0.02, "center");
+          hand(c, "1 token = 1 more climb", 640, 1290, 64, COL.yellow, seg(f, c3 + 24, c3 + 38), r, -0.02, "center");
           hand(c, "answers appear piece by piece", 640, 1372, 52, COL.pale, seg(f, c3 + 40, c3 + 56), r, -0.02, "center");
         }
       }} />
@@ -601,21 +601,22 @@ const WnQuiz: React.FC<SP> = ({ cue }) => {
         if (f >= c1) hand(c, "same ID for 'bank'?", W / 2, 850, 78, COL.yellow, seg(f, c1, c1 + 14), r, -0.02, "center");
         if (f >= c1 + 24 && f < c2) {
           const q = seg(f, c1 + 24, c2);
-          stroke(c, circlePts(W / 2, 1000, 58, 58, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - q), 40), COL.yellow, 10, r, { passes: 2 });
-          hand(c, "pause & comment your answer", W / 2, 1130, 58, COL.cream, seg(f, c1 + 24, c1 + 38), r, -0.02, "center");
+          stroke(c, circlePts(W / 2, 1010, 70, 70, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - q), 40), COL.yellow, 12, r, { passes: 2 });
+          label(c, String(3 - Math.min(2, Math.floor(q * 3))), W / 2, 1040, 90, COL.yellow, caveat);
+          hand(c, "comment YES or NO", W / 2, 1170, 80, COL.cream, seg(f, c1 + 24, c1 + 36), r, -0.02, "center");
         }
         if (f >= c2) {
           const p = seg(f, c2, c2 + 10);
-          tag(c, "6922", A[5].x + A[5].wd / 2, A[5].y + 58, 46, COL.yellow, INK, -0.03, p);
-          tag(c, "6922", B[3].x + B[3].wd / 2, B[3].y + 58, 46, COL.yellow, INK, 0.03, p);
+          tag(c, "ID 6922", A[5].x + A[5].wd / 2, A[5].y + 62, 54, COL.yellow, INK, -0.03, p);
+          tag(c, "ID 6922", B[3].x + B[3].wd / 2, B[3].y + 62, 54, COL.yellow, INK, 0.03, p);
           stamp(c, "SAME ID ✓", W / 2, 960, 92, COL.green, fade(f, c2 + 6, 8), r, -0.04);
           const lp = seg(f, c2 + 24, c2 + 40);
           tower(c, W / 2, 1200, 0.8, r, Math.floor(f / 6) % 4);
           label(c, "layers", W / 2, 1245, 40, COL.cream, caveat, lp);
           arrow(c, [W / 2 - 90, 1120], [250, 1240], -40, COL.light, 6, lp, r);
           arrow(c, [W / 2 + 90, 1120], [830, 1240], -40, COL.orangeLight, 6, lp, r);
-          label(c, "river side", 230, 1310, 58, COL.pale, caveat, seg(f, c2 + 36, c2 + 46));
-          label(c, "money", 850, 1310, 58, COL.orangeLight, caveat, seg(f, c2 + 40, c2 + 50));
+          label(c, "river side", 230, 1315, 70, COL.pale, caveat, seg(f, c2 + 36, c2 + 46));
+          label(c, "money", 850, 1315, 70, COL.orangeLight, caveat, seg(f, c2 + 40, c2 + 50));
           hand(c, "the layers add context", W / 2, 1390, 60, COL.yellow, seg(f, c2 + 48, c2 + 62), r, -0.02, "center");
         }
       }} />
@@ -637,21 +638,21 @@ const WnOutro: React.FC<SP> = ({ s, cue }) => {
         background(c, W, H, boil);
         const r = rng(1800 + boil);
         CHAIN.forEach((t, i) => {
-          const y = 378 + i * 110, p = seg(f, at[i], at[i] + 10);
-          tag(c, t, W / 2, y, 70, i === 5 ? COL.orange : COL.cream, i === 5 ? COL.cream : INK, i % 2 ? 0.02 : -0.02, p);
-          if (i > 0 && p > 0) arrow(c, [W / 2, y - 98], [W / 2, y - 66], 0, COL.yellow, 6, p, r);
+          const y = 382 + i * 116, p = seg(f, at[i], at[i] + 10);
+          tag(c, t, W / 2, y, 84, i === 5 ? COL.orange : COL.cream, i === 5 ? COL.cream : INK, i % 2 ? 0.02 : -0.02, p);
+          if (i > 0 && p > 0) arrow(c, [W / 2, y - 102], [W / 2, y - 76], 0, COL.yellow, 6, p, r);
         });
         if (f >= c6) {
-          hand(c, "NEXT:", W / 2, 1040, 80, COL.orangeLight, seg(f, c6, c6 + 10), r, -0.02, "center");
+          hand(c, "NEXT:", W / 2, 1082, 76, COL.orangeLight, seg(f, c6, c6 + 10), r, -0.02, "center");
           const ep = easeOut(fade(f, c6 + 4, 10));
-          if (ep > 0) { c.save(); c.globalAlpha = ep; eye(c, 250, 1135, 0.62, r, Math.sin(f * 0.08)); c.restore(); }
-          hand(c, "how AI sees images", 640, 1157, 76, COL.cream, seg(f, c6 + 8, c6 + 24), r, -0.02, "center");
+          if (ep > 0) { c.save(); c.globalAlpha = ep; eye(c, 250, 1170, 0.58, r, Math.sin(f * 0.08)); c.restore(); }
+          hand(c, "how AI sees images", 640, 1190, 72, COL.cream, seg(f, c6 + 8, c6 + 24), r, -0.02, "center");
           const hp = easeOut(fade(f, c6 + 34, 12));
           if (hp > 0) {
             c.save(); c.globalAlpha = hp;
             c.font = caveat(handle.length > 16 ? 78 : 92); c.textAlign = "center"; c.fillStyle = COL.yellow;
-            c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1282);
-            c.shadowBlur = 0; c.font = handF(56); c.fillStyle = COL.cream; c.fillText("Follow for the next episode", W / 2, 1360);
+            c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1300);
+            c.shadowBlur = 0; c.font = handF(56); c.fillStyle = COL.cream; c.fillText("Follow for the next episode", W / 2, 1372);
             c.restore();
           }
         }

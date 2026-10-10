@@ -83,7 +83,7 @@
      "file": "02_tokens.wav",
      "maxgap": 0.32,
      "text": "ముందు, మీ టెక్స్ట్ ని టోకెన్స్ గా కట్ చేస్తారు: [1] పూర్తి పదాలు, లేదా పదాల ముక్కలు. [2] 'యూట్యూబ్' కూడా రెండు టోకెన్స్. [3] ప్రతి టోకెన్ కి ఒక ఐ డి వస్తుంది. కానీ ఐ డి కేవలం ఒక లేబుల్, టికెట్ నంబర్ లాగా.",
-     "show": "First, your text is cut into tokens: [1] whole words, or pieces of words. [2] Even 'YouTube' is two tokens. [3] Each token gets an ID. But an ID is just a label, like a ticket number."
+     "show": "First, your text is cut into tokens: [1] whole words, or pieces of words. [2] Even 'YouTube' is two tokens. [3] Each token gets an ID number. But that number is just a label, like a ticket number."
     }
    ]
   },
@@ -193,7 +193,8 @@
      "text": "తర్వాత ఈ ఎంబెడ్డింగ్స్ డజన్ల కొద్దీ లేయర్స్ ఎక్కుతాయి. [1] ప్రతి అంతస్తులో, ప్రతి పదం వెనక్కి చూసి, ముఖ్యమైనది గ్రహిస్తుంది. [2] పైకి వచ్చేసరికి, చివరి పదం 'ఇన్' కి, 'స్టాట్యూ', 'లిబర్టీ' గురించి తెలిసిపోతుంది.",
      "show": "Then the embeddings climb dozens of layers. [1] On every floor, each word looks back and soaks up what matters. [2] By the top, the last word, 'in', knows about 'Statue' and 'Liberty'."
     }
-   ]
+   ],
+   "boost": 1.3
   },
   {
    "id": "predict",
@@ -219,7 +220,7 @@
        3
       ],
       [
-       "One trip per token = answers appear piece by piece",
+       "Every new token is another climb, so answers appear piece by piece",
        3
       ]
      ]
@@ -230,13 +231,14 @@
      "who": "maastaaru",
      "file": "06_predict.wav",
      "maxgap": 0.32,
-     "text": "ఇప్పుడు తర్వాత రాగల ప్రతి టోకెన్ కి స్కోర్ ఇస్తుంది, [1] బాగా సరిపోయేది ఒకటి ఎంచుకుంటుంది, 'న్యూ'. [2] మళ్ళీ పైకి ఎక్కుతుంది, [3] 'యార్క్' కోసం. ఒక్కో టోకెన్ కి ఒక్కో ప్రయాణం. అందుకే సమాధానాలు ముక్క ముక్కగా వస్తాయి.",
-     "show": "Now it scores every possible next token, [1] picks a likely one, 'New', [2] climbs again, [3] for 'York'. One trip per token: that's why answers appear piece by piece.",
+     "text": "ఇప్పుడు తర్వాత రాగల ప్రతి టోకెన్ కి స్కోర్ ఇస్తుంది, బాగా సరిపోయేది ఒకటి ఎంచుకుంటుంది, [1] 'న్యూ'. [2] మళ్ళీ పైకి ఎక్కుతుంది, [3] 'యార్క్' కోసం. ఒక్కో టోకెన్ కి ఒక్కో ప్రయాణం. అందుకే సమాధానాలు ముక్క ముక్కగా వస్తాయి.",
+     "show": "Now it scores every possible next token, and picks a likely one: [1] 'New'. [2] Then it climbs again, [3] for 'York'. Every new token is another climb: that's why answers appear piece by piece.",
      "pauses": {
-      "1": 0.35
+      "1": 0.5
      }
     }
-   ]
+   ],
+   "boost": 1.3
   },
   {
    "id": "quiz",
@@ -284,7 +286,7 @@
   {
    "id": "outro",
    "type": "wn_outro",
-   "tail": 0.6,
+   "tail": 1.2,
    "outro": true,
    "data": {
     "handle": "@ai_maastaaru_telugu",
