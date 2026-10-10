@@ -51,7 +51,7 @@ const musicArc = (tl: ReelTimeline, f: number) => {
   return hit * rise * dip;
 };
 
-export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; musicBoosts?: number[][]; hideTimerInHook?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; musicBoosts?: number[][]; hideTimerInHook?: boolean; hideTimer?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -658,7 +658,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   if (!c) return null;
   const pop = interpolate(f - c[0].from, [0, 4], [0.85, 1], cl);
   return (
-    <div style={{ position: "absolute", top: phrase ? 1400 : 1440, left: 40, right: 40, textAlign: "center" }}>
+    <div style={{ position: "absolute", top: s.data.captionTop ?? (phrase ? 1400 : 1440), left: s.data.captionSide ?? 40, right: s.data.captionSide ?? 40, textAlign: "center" }}>
       {l.name && !(classic && l.who === "maastaaru") && (
         <div style={{ display: "table", margin: "0 auto 14px", background: l.color, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "4px 22px", borderRadius: 20 }}>{l.name}</div>
       )}
@@ -817,9 +817,9 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
             {tl.label && <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 30, color: "#0A0F24", background: C.amber, padding: "4px 14px", borderRadius: 12, whiteSpace: "nowrap" }}>{tl.label}</span>}
             <span style={{ fontFamily: C.inter, fontWeight: 900, fontSize: 40, color: "#0A0F24", whiteSpace: "nowrap" }}>{tl.banner}</span>
           </span>
-          <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 800, fontSize: 32, color: "#fff", background: "#0A0F24", padding: "4px 14px", borderRadius: 12 }}>
+          {!tl.hideTimer && <span style={{ fontFamily: "'DejaVu Sans Mono', monospace", fontWeight: 800, fontSize: 32, color: "#fff", background: "#0A0F24", padding: "4px 14px", borderRadius: 12 }}>
             {tl.hideTimerInHook && f < (tl.scenes[1]?.from ?? 0) ? "AI" : (() => { const r = Math.max(0, Math.ceil((tl.totalFrames - f) / tl.fps)); return `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}`; })()}
-          </span>
+          </span>}
         </div>
       ) : (
       <div style={{ position: "absolute", top: 150, left: 60, fontFamily: C.inter, fontWeight: 800, fontSize: 30, letterSpacing: 4, color: "white", background: "rgba(0,0,0,0.45)", padding: "8px 20px", borderRadius: 30 }}>

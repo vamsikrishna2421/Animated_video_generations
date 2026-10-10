@@ -471,8 +471,11 @@ def main(spec_path: Path) -> None:
         sc.setdefault("data", {})["handle"] = handle
         if spec.get("captionMode"):
             sc["data"]["captionMode"] = spec["captionMode"]
+        for k in ("captionTop", "captionSide"):   # caption block position (Instagram safe zone)
+            if spec.get(k) is not None:
+                sc["data"][k] = spec[k]
     tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": handle, "label": spec.get("label", ""), "fps": FPS,
-          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), **({"musicBoosts": mboosts} if mboosts else {}), **({"hideTimerInHook": True} if spec.get("hideTimerInHook") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
+          **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), **({"musicBoosts": mboosts} if mboosts else {}), **({"hideTimerInHook": True} if spec.get("hideTimerInHook") else {}), **({"hideTimer": True} if spec.get("hideTimer") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)
     (tdir / f"{rid}.json").write_text(json.dumps(tl, indent=1, ensure_ascii=False) + "\n")

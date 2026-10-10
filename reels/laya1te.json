@@ -2,7 +2,7 @@
  "id": "laya1te",
  "title": "From 1 upvote to 32,000 stars (Telugu audio)",
  "label": "AI SPOTLIGHT",
- "banner": "From 1 upvote to 32,000 stars",
+ "banner": "From 1 upvote to 1,363",
  "topic": "",
  "look": "classic",
  "tempo": 1.1,
@@ -59,7 +59,7 @@
   {
    "id": "y2025",
    "type": "pf_2025",
-   "tail": 0.3,
+   "tail": 1.0,
    "data": {
     "yt": {
      "chapter": "2025",
@@ -85,8 +85,8 @@
      "who": "maastaaru",
      "file": "02_2025.wav",
      "maxgap": 0.32,
-     "text": "రెండు వేల ఇరవై ఐదు మార్చిలో, అతను పేరాగ్రాఫ్స్ రాయని ఒక ఎ ఐ మోడల్ ని పబ్లిష్ చేశాడు. [1] అది ఒక సమాధానాన్ని ఎంచుకుంటుంది, 'ఈ కస్టమర్ కొంటాడా?' లాంటి ప్రశ్నకి, ఒక ప్రాబబిలిటీ తో. [2] దాదాపు ఎవరూ గమనించలేదు.",
-     "show": "In March 2025, he published an AI model that doesn't write paragraphs. [1] It picks an answer, like 'will this customer buy?', with a probability. [2] Almost nobody noticed."
+     "text": "రెండు వేల ఇరవై ఐదు మార్చిలో, అతను పేరాగ్రాఫ్స్ రాయని ఒక ఎ ఐ మోడల్ ని పబ్లిష్ చేశాడు. [1] 'ఈ కస్టమర్ కొంటాడా?' అని అడిగితే, డెబ్బై రెండు శాతం లాంటి ప్రాబబిలిటీ తో జవాబు ఇస్తుంది. [2] దాదాపు ఎవరూ గమనించలేదు.",
+     "show": "In March 2025, he published an AI model that doesn't write paragraphs. [1] Ask it 'will this customer buy?', and it answers with a probability, like 72%. [2] Almost nobody noticed."
     }
    ]
   },
@@ -127,7 +127,7 @@
   {
    "id": "laya",
    "type": "pf_laya",
-   "tail": 0.3,
+   "tail": 1.0,
    "lift": true,
    "data": {
     "yt": {
@@ -139,11 +139,15 @@
        1
       ],
       [
+       "For apps that need a quick yes / no / pick-one answer",
+       1
+      ],
+      [
        "He says he had the core idea first",
        2
       ],
       [
-       "Critics: only partly true",
+       "Critics: his 2025 model only handled sales",
        3
       ]
      ]
@@ -154,10 +158,11 @@
      "who": "maastaaru",
      "file": "04_laya.wav",
      "maxgap": 0.32,
-     "text": "మూడు రోజుల తర్వాత, అతను లయ ని రిలీజ్ చేశాడు: [1] ఎవరైనా వాడుకోగల ఫ్రీ, ఓపెన్ సోర్స్ ఆల్టర్నేటివ్. [2] ఈ ఐడియా ముందు తనదే అని అతను అంటాడు. [3] అది పాక్షికంగానే నిజం అని విమర్శకులు అంటారు. [4] ఏమైనా, ఈసారి ప్రపంచం గమనించింది.",
-     "show": "Three days later, he released Laya: [1] a free, open-source alternative anyone can run. [2] He says he had the core idea first. [3] Critics say that's only partly true. [4] Either way, the world noticed."
+     "text": "మూడు రోజుల తర్వాత, అతను లయ ని రిలీజ్ చేశాడు: [1] ఫ్రీ, ఓపెన్ సోర్స్, అవును, కాదు, లేదా ఒకటి ఎంచుకునే జవాబు కావాల్సిన యాప్స్ కోసం. [2] ఈ ఐడియా ముందు తనదే అని అతను అంటాడు. [3] కానీ అతని రెండు వేల ఇరవై ఐదు మోడల్ సేల్స్ కి మాత్రమే పనిచేసిందని విమర్శకులు అంటారు. [4] ఏమైనా, ఈసారి ప్రపంచం గమనించింది.",
+     "show": "Three days later, he released Laya: [1] free and open source, for apps that need a quick yes, no, or pick-one answer. [2] He says he had the core idea first. [3] Critics say his 2025 model only handled sales. [4] Either way, the world noticed."
     }
-   ]
+   ],
+   "drop_cue": 4
   },
   {
    "id": "numbers",
@@ -193,8 +198,8 @@
      "who": "maastaaru",
      "file": "05_numbers.wav",
      "maxgap": 0.32,
-     "text": "హ్యాకర్ న్యూస్ లో పదమూడు వందలకు పైగా పాయింట్లు. [1] గిట్ హబ్ లో ముప్పై రెండు వేల స్టార్స్. [2] మూడు వారాల్లో మూడు లక్షల డౌన్ లోడ్స్. [3] కనీసం పది రీసెర్చ్ పేపర్లు ఇప్పటికే దీన్ని సైట్ లేదా టెస్ట్ చేశాయి.",
-     "show": "Over 1,300 points on Hacker News. [1] 32,000 GitHub stars. [2] 300,000 downloads in 3 weeks. [3] And at least 10 research papers already cite or test it."
+     "text": "హ్యాకర్ న్యూస్ లో పదమూడు వందలకు పైగా అప్ వోట్స్. [1] గిట్ హబ్ లో ముప్పై రెండు వేలకు పైగా స్టార్స్. [2] మూడు వారాల్లో మూడు లక్షలకు పైగా డౌన్ లోడ్స్. [3] కనీసం పది రీసెర్చ్ పేపర్లు ఇప్పటికే దీన్ని సైట్ చేశాయి, లేదా టెస్ట్ చేశాయి.",
+     "show": "Over 1,300 upvotes on Hacker News. [1] Over 32,000 GitHub stars. [2] Over 300,000 downloads in 3 weeks. [3] And at least 10 research papers already cite it or test it."
     }
    ]
   },
@@ -202,7 +207,6 @@
    "id": "who",
    "type": "pf_who",
    "tail": 0.3,
-   "drop_cue": 2,
    "data": {
     "yt": {
      "chapter": "Who he is",
@@ -247,11 +251,11 @@
        1
       ],
       [
-       "6 arXiv preprints in 2025",
+       "Hindi AI models (2025); 6 arXiv preprints in 2025",
        2
       ],
       [
-       "Hindi language models; Nadhi Audit (offline code security)",
+       "Nadhi Audit: offline code-security app",
        3
       ]
      ]
@@ -262,8 +266,8 @@
      "who": "maastaaru",
      "file": "07_work.wav",
      "maxgap": 0.32,
-     "text": "అప్పటినుంచి: [1] గుండె ఈ సి జి లను చదివే ఎ ఐ పై ఒక పీర్ రివ్యూడ్ పేపర్, [2] ఒక్క సంవత్సరంలో ఆరు రీసెర్చ్ పేపర్లు, [3] హిందీ లాంగ్వేజ్ మోడల్స్, ఇంకా ఒక ఆఫ్ లైన్ కోడ్ సెక్యూరిటీ యాప్.",
-     "show": "Since then: [1] a peer-reviewed paper on AI that reads heart ECGs, [2] six research papers in one year, [3] Hindi language models, and an offline code-security app."
+     "text": "వీటన్నిటికీ ముందు: [1] గుండె ఈ సి జి లను చదివే ఎ ఐ పై ఒక పీర్ రివ్యూడ్ పేపర్, [2] హిందీ కోసం ఎ ఐ మోడల్స్, [3] ఇంకా ఒక ఆఫ్ లైన్ కోడ్ సెక్యూరిటీ యాప్.",
+     "show": "Before all this: [1] a peer-reviewed paper on AI that reads heart ECGs, [2] AI models for Hindi, [3] and an offline code-security app."
     }
    ]
   },
@@ -301,5 +305,8 @@
   }
  ],
  "captionMode": "phrase",
- "handle": "@ai_maastaaru_telugu"
+ "handle": "@ai_maastaaru_telugu",
+ "hideTimer": true,
+ "captionTop": 1395,
+ "captionSide": 110
 }

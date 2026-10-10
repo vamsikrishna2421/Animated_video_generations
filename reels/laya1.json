@@ -2,7 +2,7 @@
  "id": "laya1",
  "title": "From 1 upvote to 32,000 stars",
  "label": "AI SPOTLIGHT",
- "banner": "From 1 upvote to 32,000 stars",
+ "banner": "From 1 upvote to 1,363",
  "topic": "",
  "look": "classic",
  "tempo": 1.18,
@@ -60,7 +60,7 @@
   {
    "id": "y2025",
    "type": "pf_2025",
-   "tail": 0.3,
+   "tail": 1.0,
    "data": {
     "yt": {
      "chapter": "2025",
@@ -86,8 +86,9 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "02_2025.wav",
-     "text": "In March 2025, he published an AI model that doesn't write paragraphs. [1] It picks an answer, like 'will this customer buy?', with a probability. [2] Almost nobody noticed.",
-     "tts": "In March twenty twenty five, he published an A.I. model that doesn't write paragraphs. It picks an answer, like, will this customer buy, with a probability. Almost nobody noticed."
+     "text": "In March 2025, he published an AI model that doesn't write paragraphs. [1] Ask it 'will this customer buy?', and it answers with a probability, like seventy-two percent. [2] Almost nobody noticed.",
+     "tts": "In March twenty twenty five, he published an A.I. model that doesn't write paragraphs. Ask it, will this customer buy, and it answers with a probability, like seventy two percent. Almost nobody noticed.",
+     "show": "In March 2025, he published an AI model that doesn't write paragraphs. [1] Ask it 'will this customer buy?', and it answers with a probability, like 72%. [2] Almost nobody noticed."
     }
    ]
   },
@@ -129,7 +130,7 @@
   {
    "id": "laya",
    "type": "pf_laya",
-   "tail": 0.3,
+   "tail": 1.0,
    "lift": true,
    "data": {
     "yt": {
@@ -141,11 +142,15 @@
        1
       ],
       [
+       "For apps that need a quick yes / no / pick-one answer",
+       1
+      ],
+      [
        "He says he had the core idea first",
        2
       ],
       [
-       "Critics: only partly true",
+       "Critics: his 2025 model only handled sales",
        3
       ]
      ]
@@ -156,10 +161,11 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "04_laya.wav",
-     "text": "Three days later, he released Laya: [1] a free, open-source alternative anyone can run. [2] He says he had the core idea first. [3] Critics say that's only partly true. [4] Either way, the world noticed.",
-     "tts": "Three days later, he released Laya: a free, open source alternative anyone can run. He says he had the core idea first. Critics say that's only partly true. Either way, the world noticed."
+     "text": "Three days later, he released Laya: [1] free and open source, for apps that need a quick yes, no, or pick-one answer. [2] He says he had the core idea first. [3] Critics say his 2025 model only handled sales. [4] Either way, the world noticed.",
+     "tts": "Three days later, he released Laya: free and open source, for apps that need a quick yes, no, or pick one answer. He says he had the core idea first. Critics say his twenty twenty five model only handled sales. Either way, the world noticed."
     }
-   ]
+   ],
+   "drop_cue": 4
   },
   {
    "id": "numbers",
@@ -195,9 +201,9 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "05_numbers.wav",
-     "text": "Over thirteen hundred points on Hacker News. [1] Thirty-two thousand GitHub stars. [2] Three hundred thousand downloads in three weeks. [3] And at least ten research papers already cite or test it.",
-     "show": "Over 1,300 points on Hacker News. [1] 32,000 GitHub stars. [2] 300,000 downloads in 3 weeks. [3] And at least 10 research papers already cite or test it.",
-     "tts": "Over thirteen hundred points on Hacker News. Thirty two thousand Git Hub stars. Three hundred thousand downloads in three weeks. And at least ten research papers already cite or test it."
+     "text": "Over thirteen hundred upvotes on Hacker News. [1] Over thirty-two thousand GitHub stars. [2] Over three hundred thousand downloads in three weeks. [3] And at least ten research papers already cite it or test it.",
+     "show": "Over 1,300 upvotes on Hacker News. [1] Over 32,000 GitHub stars. [2] Over 300,000 downloads in 3 weeks. [3] And at least 10 research papers already cite it or test it.",
+     "tts": "Over thirteen hundred upvotes on Hacker News. Over thirty two thousand Git Hub stars. Over three hundred thousand downloads in three weeks. And at least ten research papers already cite it, or test it."
     }
    ]
   },
@@ -205,7 +211,6 @@
    "id": "who",
    "type": "pf_who",
    "tail": 0.3,
-   "drop_cue": 2,
    "data": {
     "yt": {
      "chapter": "Who he is",
@@ -251,11 +256,11 @@
        1
       ],
       [
-       "6 arXiv preprints in 2025",
+       "Hindi AI models (2025); 6 arXiv preprints in 2025",
        2
       ],
       [
-       "Hindi language models; Nadhi Audit (offline code security)",
+       "Nadhi Audit: offline code-security app",
        3
       ]
      ]
@@ -266,8 +271,8 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "07_work.wav",
-     "text": "Since then: [1] a peer-reviewed paper on AI that reads heart ECGs, [2] six research papers in one year, [3] Hindi language models, and an offline code-security app.",
-     "tts": "Since then: a peer reviewed paper on A.I. that reads heart E.C.G.s, six research papers in one year, Hindi language models, and an offline code security app."
+     "text": "Before all this: [1] a peer-reviewed paper on AI that reads heart ECGs, [2] AI models for Hindi, [3] and an offline code-security app.",
+     "tts": "Before all this: a peer reviewed paper on A.I. that reads heart E.C.G.s, A.I. models for Hindi, and an offline code security app."
     }
    ]
   },
@@ -302,5 +307,8 @@
     }
    ]
   }
- ]
+ ],
+ "hideTimer": true,
+ "captionTop": 1395,
+ "captionSide": 110
 }

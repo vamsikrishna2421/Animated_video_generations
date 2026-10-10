@@ -23,10 +23,10 @@ const hnCard = (c: Ctx, x: number, y: number, w: number, h: number, r: () => num
   c.fillStyle = COL.cream; rrect(c, x, y, w, h, 22); c.fill();
   c.save(); rrect(c, x, y, w, h, 22); c.clip(); c.fillStyle = HN; c.fillRect(x, y, w, 64);
   c.fillStyle = "#fff"; c.fillRect(x + 22, y + 14, 36, 36); c.font = caveat(34); c.fillStyle = HN; c.textAlign = "center"; c.fillText("Y", x + 40, y + 44);
-  c.font = caveat(40); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Hacker News", x + 74, y + 46);
+  c.font = caveat(40); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Hacker News · tech forum", x + 74, y + 46);
   c.restore();
   stroke(c, rrectPts(x, y, w, h), COL.ink, 5, r, { passes: 2, alpha: 0.6 });
-  tag(c, year, x + w - 90, y + 48, 44, hot ? COL.yellow : COL.pale, INK, 0.04, 1);
+  tag(c, year, x + w - 90, y + 50, 48, hot ? COL.yellow : COL.pale, INK, 0.04, 1);
   c.font = caveat(fitSize(c, points, w * 0.62, 124, caveat)); c.fillStyle = hot ? COL.orange : GREY; c.textAlign = "left"; c.fillText(points, x + 40, y + h - 96);
   c.font = handF(44); c.fillStyle = GREY; c.fillText(sub, x + 44, y + h - 28);
   c.restore();
@@ -42,7 +42,7 @@ const calendar = (c: Ctx, x: number, y: number, s: number, r: () => number, mont
   stroke(c, rrectPts(-100, -90, 200, 190), COL.ink, 4, r, { passes: 2, alpha: 0.7 });
   c.font = caveat(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(month, 0, -52);
   c.font = caveat(96); c.fillStyle = INK; c.fillText(day, 0, 40);
-  c.font = caveat(36); c.fillStyle = GREY; c.fillText(year, 0, 86);
+  c.font = caveat(40); c.fillStyle = GREY; c.fillText(year, 0, 88);
   c.restore();
 };
 
@@ -67,7 +67,7 @@ const bubbleSay = (c: Ctx, x: number, y: number, w: number, h: number, text: str
   stroke(c, rrectPts(-w / 2, -h / 2, w, h), col, 6, r, { passes: 2 });
   c.font = caveat(fitSize(c, text, w - 50, 58, caveat)); c.fillStyle = INK; c.textAlign = "center"; c.fillText(text, 0, 14);
   c.restore();
-  label(c, who, x, y - h / 2 - 16, 40, col, caveat, p);
+  label(c, who, x, y - h / 2 - 16, 44, col, caveat, p);
 };
 
 // Green road sign on a pole, with two palm trees: "Kasaragod, Kerala, India". (No map outlines.)
@@ -108,20 +108,26 @@ const PfHook: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
-      <Sfx at={0} src="reel/sfx_boom.wav" vol={0.8} />
+      <Sfx at={0} src="reel/sfx_boom.wav" vol={0.7} />
+      <Sfx at={24} src="reel/sfx_boom.wav" vol={0.7} />
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
       <Sfx at={c2} src="audio/sfx_chaching.wav" vol={0.5} />
       <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.4} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(2100 + boil);
-        hnCard(c, 90, 320, 900, 300, r, "2025", "1 point", "0 comments", false);
+        hnCard(c, 90, 320, 900, 300, r, "2025", "1 upvote", "0 comments", false);
         if (f >= c1) {
           tag(c, "his own", 760, 500, 60, COL.red, COL.cream, -0.06, seg(f, c1, c1 + 8));
           arrow(c, [650, 485], [470, 470], -30, COL.red, 6, seg(f, c1 + 4, c1 + 12), r);
         }
-        const roll = f < c2 ? 1 : lerp(1, 1363, easeOut(seg(f, c2, c2 + 18)));
-        hnCard(c, 90, 680, 900, 300, r, "2026", `${fmt(f < c2 ? 1363 : roll)} points`, "his Laya post", true);
+        const slam = seg(f, 24, 32);
+        if (slam > 0) {
+          const k = 1.6 - 0.6 * easeOut(slam);
+          c.save(); c.translate(540, 830); c.scale(k, k); c.translate(-540, -830); c.globalAlpha = clamp(slam * 2);
+          hnCard(c, 90, 680, 900, 300, r, "2026", `${fmt(lerp(1, 1363, easeOut(seg(f, 26, 44))))} upvotes`, "his Laya post", true);
+          c.restore();
+        }
         if (f >= c2) {
           c.save(); c.shadowColor = COL.yellow; c.shadowBlur = 40 * (1 - seg(f, c2 + 18, c2 + 40));
           stroke(c, rrectPts(90, 680, 900, 300), COL.yellow, 8, r, { passes: 2, alpha: 0.9 * (1 - seg(f, c2 + 30, c2 + 50)) });
@@ -193,18 +199,18 @@ const PfJev: React.FC<SP> = ({ cue }) => {
         background(c, W, H, boil);
         const r = rng(2300 + boil);
         calendar(c, 200, 430, 1, r, "SEPTEMBER", "15", "2026", seg(f, 0, 10));
-        hand(c, "18 months later...", 660, 440, 64, COL.cream, seg(f, 4, 20), r, -0.02, "center");
+        hand(c, "Jev launches", 660, 440, 70, COL.cream, seg(f, 4, 20), r, -0.02, "center");
         bag(c, 290, 760, 1, r, "$40M", seg(f, c1, c1 + 10));
         if (f >= c1) {
           const p = fade(f, c1 + 4, 10);
           card(c, 520, 640, 460, 250, r, p, "#e0f2fe");
           label(c, "Jev", 750, 740, 96, INK, caveat, p);
-          label(c, "by TypeSafe AI", 750, 800, 42, GREY, handF, p);
-          label(c, "$40M seed round", 750, 860, 40, "#0369a1", caveat, p);
+          label(c, "by TypeSafe AI", 750, 805, 46, GREY, handF, p);
+          label(c, "$40M seed round", 750, 862, 46, "#0369a1", caveat, p);
         }
         if (f >= c2) {
           tag(c, "\"billing\" · 92% sure", W / 2, 990, 60, COL.yellow, INK, -0.02, seg(f, c2, c2 + 10));
-          label(c, "also picks answers, not paragraphs", W / 2, 1065, 46, COL.pale, caveat, seg(f, c2 + 6, c2 + 16));
+          label(c, "also picks answers, not paragraphs", W / 2, 1068, 52, COL.pale, caveat, seg(f, c2 + 6, c2 + 16));
         }
         if (f >= c3) {
           ["heise", "SiliconANGLE", "VKTR"].forEach((n, i) => {
@@ -241,13 +247,13 @@ const PfLaya: React.FC<SP> = ({ cue }) => {
         if (f >= c1) {
           const p = fade(f, c1, 10);
           card(c, 140, 580, 800, 300, r, p, COL.cream);
-          label(c, "Laya", W / 2, 700, 120, COL.orange, caveat, p);
-          tag(c, "FREE", 300, 790, 58, COL.green, INK, -0.05, p);
-          label(c, "open source · Apache-2.0", 640, 800, 44, INK, caveat, p);
-          label(c, "pip install laya", W / 2, 856, 40, GREY, handF, p);
+          label(c, "Laya", W / 2, 690, 116, COL.orange, caveat, p);
+          tag(c, "FREE", 280, 770, 58, COL.green, INK, -0.05, p);
+          label(c, "open source · Apache-2.0", 630, 780, 46, INK, caveat, p);
+          label(c, "for quick yes / no / pick-one answers", W / 2, 840, 46, COL.red, caveat, p);
         }
         bubbleSay(c, 300, 1010, 460, 110, "I had the core idea first", "he says", COL.orange, 0.6, r, seg(f, c2, c2 + 10));
-        bubbleSay(c, 780, 1130, 440, 110, "only partly true", "critics (Startup Fortune)", COL.light, -0.6, r, seg(f, c3, c3 + 10));
+        bubbleSay(c, 640, 1160, 600, 110, "his 2025 model only did sales", "critics (Startup Fortune)", COL.light, -0.4, r, seg(f, c3, c3 + 10));
         if (f >= c4) {
           const p = seg(f, c4, c4 + 20);
           arrow(c, [200, 1360], [880, 1250], -40, COL.yellow, 9, p, r);
@@ -269,7 +275,7 @@ const PfNumbers: React.FC<SP> = ({ cue }) => {
         const r = rng(2500 + boil);
         hand(c, "three weeks later", W / 2, 350, 72, COL.yellow, seg(f, 0, 14), r, -0.02, "center");
         const ic = (draw: (x: number, y: number) => void) => draw;
-        counter(c, 500, ic((x, y) => { c.fillStyle = HN; c.fillRect(x - 40, y - 40, 80, 80); c.font = caveat(64); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Y", x, y + 22); }), 1363, "", "points on Hacker News", seg(f, 2, 22), r);
+        counter(c, 500, ic((x, y) => { c.fillStyle = HN; c.fillRect(x - 40, y - 40, 80, 80); c.font = caveat(64); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Y", x, y + 22); }), 1363, "", "upvotes on Hacker News (tech forum)", seg(f, 2, 22), r);
         counter(c, 700, ic((x, y) => { c.beginPath(); for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + k * Math.PI / 5, rr = k % 2 ? 22 : 48; c.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr); } c.closePath(); c.fillStyle = COL.yellow; c.fill(); }), 32100, "", "stars on GitHub", seg(f, c1, c1 + 20), r);
         counter(c, 900, ic((x, y) => { stroke(c, [[x, y - 40], [x, y + 20]], COL.green, 14, r, { passes: 2 }); stroke(c, [[x - 30, y - 5], [x, y + 28], [x + 30, y - 5]], COL.green, 14, r, { passes: 2 }); stroke(c, [[x - 40, y + 44], [x + 40, y + 44]], COL.green, 10, r, { passes: 2 }); }), 317000, "", "downloads in 3 weeks (PyPI)", seg(f, c2, c2 + 20), r);
         counter(c, 1100, ic((x, y) => { for (let k = 0; k < 3; k++) { c.fillStyle = k === 2 ? "#fff" : "#e2e8f0"; c.fillRect(x - 34 + k * 8, y - 44 + k * 8, 62, 78); stroke(c, rrectPts(x - 34 + k * 8, y - 44 + k * 8, 62, 78), COL.ink, 3, r, { passes: 1, alpha: 0.6 }); } }), 10, "+", "research papers cite or test it", seg(f, c3, c3 + 16), r);
@@ -292,27 +298,27 @@ const PfWho: React.FC<SP> = ({ cue }) => {
         palm(c, 120, 980, 1, r, seg(f, 0, 12));
         palm(c, 470, 1010, 0.8, r, seg(f, 4, 16));
         signpost(c, 300, 560, 0.95, r, seg(f, 2, 14));
-        label(c, "CEO, Convai Innovations", 790, 400, 46, COL.cream, caveat, seg(f, 8, 18));
-        label(c, "(an AI startup)", 790, 450, 38, COL.pale, handF, seg(f, 10, 20));
+        label(c, "CEO, Convai Innovations", 760, 400, 48, COL.cream, caveat, seg(f, 8, 18));
+        label(c, "(an AI startup)", 760, 452, 42, COL.pale, handF, seg(f, 10, 20));
         if (f >= c1) {
           const p = fade(f, c1, 10);
-          card(c, 600, 520, 420, 250, r, p, "#fff6d8");
-          label(c, "2008:", 810, 590, 50, INK, caveat, p);
-          label(c, "₹200-300 a day", 810, 660, 58, COL.red, caveat, p);
-          label(c, "(a few dollars)", 810, 712, 38, GREY, handF, p);
-          tag(c, "he said, in an interview", 810, 810, 36, COL.pale, INK, -0.03, p);
+          card(c, 560, 520, 420, 250, r, p, "#fff6d8");
+          label(c, "2008:", 770, 590, 50, INK, caveat, p);
+          label(c, "₹200-300 a day", 770, 660, 58, COL.orange, caveat, p);
+          label(c, "(a few dollars)", 770, 714, 42, GREY, handF, p);
+          tag(c, "he said, in an interview", 770, 812, 42, COL.pale, INK, -0.03, p);
         }
         if (f >= c2) {
           const p = fade(f, c2, 10);
-          card(c, 600, 880, 420, 230, r, p, COL.cream);
-          label(c, "Admitted ✓", 810, 950, 54, "#15803d", caveat, p);
-          label(c, "top science institute", 810, 996, 38, GREY, handF, p);
-          stamp(c, "COULDN'T AFFORD", 810, 1082, 44, COL.red, seg(f, c2 + 18, c2 + 28), r, -0.08);
+          card(c, 560, 880, 420, 230, r, p, COL.cream);
+          label(c, "Admitted ✓", 770, 950, 54, "#15803d", caveat, p);
+          label(c, "top science institute", 770, 1000, 42, GREY, handF, p);
+          label(c, "but couldn't afford it", 770, 1070, 46, INK, caveat, seg(f, c2 + 16, c2 + 26));
         }
         if (f >= c3) {
           const p = fade(f, c3, 10);
           hand(c, "→ engineering in Kannur", W / 2, 1270, 66, COL.yellow, seg(f, c3, c3 + 16), r, -0.02, "center");
-          label(c, "(he said)", W / 2, 1330, 36, COL.pale, handF, p);
+          label(c, "(he said)", W / 2, 1330, 42, COL.pale, handF, p);
         }
       }} />
     </>
@@ -328,49 +334,37 @@ const PfWork: React.FC<SP> = ({ cue }) => {
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(2700 + boil);
-        hand(c, "his work", W / 2, 350, 80, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
+        hand(c, "before all this", W / 2, 350, 80, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
         if (f >= c1) {
           const p = fade(f, c1, 10);
-          card(c, 90, 410, 900, 260, r, p, COL.cream);
-          // ECG trace
+          card(c, 90, 410, 900, 300, r, p, COL.cream);
           const pts: Pt[] = [];
           for (let i = 0; i <= 60; i++) {
             const t = i / 60, x = 130 + t * 820, ph = (t * 4) % 1;
             const yv = ph > 0.42 && ph < 0.46 ? -70 : ph > 0.46 && ph < 0.5 ? 40 : ph > 0.6 && ph < 0.7 ? -14 : 0;
-            pts.push([x, 520 + yv]);
+            pts.push([x, 515 + yv]);
           }
           const n = Math.max(2, Math.round(pts.length * seg(f, c1, c1 + 24)));
           stroke(c, pts.slice(0, n), COL.red, 6, r, { passes: 2 });
-          label(c, "peer-reviewed: AI that reads ECGs", W / 2, 615, 46, INK, caveat, p);
-          label(c, "BMJ Digital Health & AI, 2025", W / 2, 655, 34, GREY, handF, p);
+          label(c, "peer-reviewed: AI that reads ECGs", W / 2, 620, 50, INK, caveat, p);
+          label(c, "BMJ Digital Health & AI, 2025", W / 2, 666, 40, GREY, handF, p);
+          label(c, "+ 6 more papers on arXiv in 2025 (preprints)", W / 2, 770, 42, COL.pale, caveat, seg(f, c1 + 20, c1 + 30));
         }
         if (f >= c2) {
           const p = fade(f, c2, 10);
-          for (let k = 0; k < 6; k++) {
-            const q = seg(f, c2 + k * 3, c2 + k * 3 + 8);
-            if (q <= 0) continue;
-            c.save(); c.globalAlpha = q; c.translate(170 + k * 34, 760 + k * 10); c.rotate(-0.08 + k * 0.03);
-            c.fillStyle = k % 2 ? "#ffffff" : "#f1f5f9"; c.fillRect(0, 0, 170, 220);
-            stroke(c, rrectPts(0, 0, 170, 220), COL.ink, 3, r, { passes: 1, alpha: 0.6 });
-            for (let j = 0; j < 5; j++) stroke(c, [[20, 40 + j * 32], [150, 40 + j * 32]], GREY, 4, r, { passes: 1, alpha: 0.4 });
-            c.restore();
-          }
-          label(c, "6 research papers", 720, 860, 62, COL.cream, caveat, p);
-          label(c, "in 2025 (arXiv)", 720, 920, 44, COL.pale, caveat, p);
+          card(c, 90, 840, 430, 300, r, p, "#fff6d8");
+          label(c, "हिन्दी", 305, 980, 96, COL.orange, (sz) => `700 ${sz}px sans-serif`, p);
+          label(c, "AI models for Hindi", 305, 1080, 46, INK, caveat, p);
         }
         if (f >= c3) {
-          const p = fade(f, c3, 10);
-          card(c, 90, 1060, 430, 260, r, p, "#fff6d8");
-          label(c, "हिन्दी", 305, 1170, 80, COL.orange, (s) => `700 ${s}px sans-serif`, p);
-          label(c, "Hindi language models", 305, 1260, 38, INK, caveat, p);
-          const q = fade(f, c3 + 12, 10);
-          card(c, 560, 1060, 430, 260, r, q, "#e0f2fe");
+          const q = fade(f, c3, 10);
+          card(c, 560, 840, 430, 300, r, q, "#e0f2fe");
           c.save(); c.globalAlpha = clamp(q * 1.4);
-          c.beginPath(); c.moveTo(775, 1100); c.lineTo(840, 1125); c.lineTo(832, 1185); c.quadraticCurveTo(775, 1225, 718, 1185); c.lineTo(710, 1125); c.closePath(); c.fillStyle = COL.light; c.fill();
-          c.font = caveat(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("offline", 775, 1170);
+          c.beginPath(); c.moveTo(775, 880); c.lineTo(850, 908); c.lineTo(840, 976); c.quadraticCurveTo(775, 1020, 710, 976); c.lineTo(700, 908); c.closePath(); c.fillStyle = COL.light; c.fill();
+          c.font = caveat(44); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("offline", 775, 960);
           c.restore();
-          label(c, "code-security app", 775, 1260, 38, INK, caveat, q);
-          label(c, "(Nadhi Audit)", 775, 1298, 32, GREY, handF, q);
+          label(c, "code-security app", 775, 1070, 46, INK, caveat, q);
+          label(c, "(Nadhi Audit)", 775, 1115, 40, GREY, handF, q);
         }
       }} />
     </>
@@ -402,11 +396,12 @@ const PfCta: React.FC<SP> = ({ s, cue }) => {
           hand(c, "tag a friend who's building", W / 2, 990, 66, COL.cream, seg(f, c1, c1 + 14), r, -0.02, "center");
           hand(c, "something nobody has noticed yet", W / 2, 1070, 58, COL.cream, seg(f, c1 + 10, c1 + 26), r, -0.02, "center");
           const p = fade(f, c1 + 24, 12);
-          label(c, "Laya: free on GitHub · @nandakishor_m", W / 2, 1170, 44, COL.pale, caveat, p);
+          label(c, "Laya is free: pip install laya", W / 2, 1160, 52, COL.cream, caveat, p);
+          label(c, "@nandakishor_m", W / 2, 1218, 46, COL.pale, caveat, p);
           c.save(); c.globalAlpha = easeOut(p);
           c.font = caveat(handle.length > 16 ? 78 : 92); c.textAlign = "center"; c.fillStyle = COL.yellow;
-          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1290);
-          c.shadowBlur = 0; c.font = handF(52); c.fillStyle = COL.cream; c.fillText("Follow for more builders", W / 2, 1365);
+          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1305);
+          c.shadowBlur = 0; c.font = handF(50); c.fillStyle = COL.cream; c.fillText("Follow for more builders", W / 2, 1370);
           c.restore();
         }
       }} />
