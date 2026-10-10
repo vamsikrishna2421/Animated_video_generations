@@ -2,7 +2,7 @@
  "id": "laya1",
  "look": "classic",
  "topic": "",
- "banner": "From 1 upvote to 32,000 stars",
+ "banner": "From 1 upvote to 1,363",
  "musicVol": [
   0.55,
   0.95
@@ -14,12 +14,13 @@
  "musicLift": 1.8,
  "musicDrops": [
   [
-   2056,
-   2080
+   1463,
+   1487
   ]
  ],
  "hideTimerInHook": true,
- "totalFrames": 2852,
+ "hideTimer": true,
+ "totalFrames": 2995,
  "music": "reel/laya1/score.wav",
  "scenes": [
   {
@@ -44,7 +45,9 @@
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
    "from": 0,
    "frames": 389,
@@ -209,10 +212,12 @@
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
    "from": 389,
-   "frames": 348,
+   "frames": 411,
    "lines": [
     {
      "who": "maastaaru",
@@ -221,147 +226,157 @@
      "sub": null,
      "audio": "reel/laya1/line_02.wav",
      "from": 0,
-     "frames": 327,
+     "frames": 372,
      "words": [
       {
        "w": "In",
-       "from": 8,
-       "to": 12
+       "from": 6,
+       "to": 10
       },
       {
        "w": "March",
-       "from": 12,
-       "to": 20
+       "from": 10,
+       "to": 18
       },
       {
        "w": "2025,",
-       "from": 20,
-       "to": 28
+       "from": 18,
+       "to": 26
       },
       {
        "w": "he",
-       "from": 28,
-       "to": 32
+       "from": 26,
+       "to": 30
       },
       {
        "w": "published",
-       "from": 32,
-       "to": 53
+       "from": 30,
+       "to": 43
       },
       {
        "w": "an",
-       "from": 53,
-       "to": 57
-      },
-      {
-       "w": "AI",
-       "from": 57,
+       "from": 43,
        "to": 61
       },
       {
-       "w": "model",
+       "w": "AI",
        "from": 61,
-       "to": 69
+       "to": 65
+      },
+      {
+       "w": "model",
+       "from": 65,
+       "to": 73
       },
       {
        "w": "that",
-       "from": 69,
-       "to": 75
+       "from": 73,
+       "to": 80
       },
       {
        "w": "doesn't",
-       "from": 75,
-       "to": 86
+       "from": 80,
+       "to": 90
       },
       {
        "w": "write",
-       "from": 86,
-       "to": 100
+       "from": 90,
+       "to": 102
       },
       {
        "w": "paragraphs.",
-       "from": 100,
-       "to": 116
+       "from": 102,
+       "to": 118
       },
       {
-       "w": "It",
-       "from": 116,
-       "to": 120
+       "w": "Ask",
+       "from": 118,
+       "to": 124
       },
       {
-       "w": "picks",
-       "from": 120,
-       "to": 133
-      },
-      {
-       "w": "an",
-       "from": 133,
-       "to": 162
-      },
-      {
-       "w": "answer,",
-       "from": 162,
-       "to": 173
-      },
-      {
-       "w": "like",
-       "from": 173,
-       "to": 180
+       "w": "it",
+       "from": 124,
+       "to": 129
       },
       {
        "w": "'will",
-       "from": 180,
-       "to": 188
+       "from": 129,
+       "to": 170
       },
       {
        "w": "this",
-       "from": 188,
-       "to": 203
+       "from": 170,
+       "to": 183
       },
       {
        "w": "customer",
-       "from": 203,
-       "to": 215
+       "from": 183,
+       "to": 197
       },
       {
        "w": "buy?',",
-       "from": 215,
-       "to": 224
+       "from": 197,
+       "to": 208
+      },
+      {
+       "w": "and",
+       "from": 208,
+       "to": 226
+      },
+      {
+       "w": "it",
+       "from": 226,
+       "to": 231
+      },
+      {
+       "w": "answers",
+       "from": 231,
+       "to": 244
       },
       {
        "w": "with",
-       "from": 224,
-       "to": 238
+       "from": 244,
+       "to": 252
       },
       {
        "w": "a",
-       "from": 238,
-       "to": 241
+       "from": 252,
+       "to": 255
       },
       {
-       "w": "probability.",
-       "from": 241,
-       "to": 283
+       "w": "probability,",
+       "from": 255,
+       "to": 284
       },
       {
-       "w": "Almost",
-       "from": 283,
+       "w": "like",
+       "from": 284,
        "to": 292
       },
       {
-       "w": "nobody",
+       "w": "72%.",
        "from": 292,
-       "to": 305
+       "to": 327
+      },
+      {
+       "w": "Almost",
+       "from": 327,
+       "to": 336
+      },
+      {
+       "w": "nobody",
+       "from": 336,
+       "to": 345
       },
       {
        "w": "noticed.",
-       "from": 305,
-       "to": 317
+       "from": 345,
+       "to": 357
       }
      ],
      "cues": {
-      "1": 116,
-      "2": 283
+      "1": 118,
+      "2": 327
      }
     }
    ]
@@ -388,10 +403,12 @@
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
-   "from": 736,
-   "frames": 307,
+   "from": 800,
+   "frames": 305,
    "lines": [
     {
      "who": "maastaaru",
@@ -539,19 +556,25 @@
        1
       ],
       [
+       "For apps that need a quick yes / no / pick-one answer",
+       1
+      ],
+      [
        "He says he had the core idea first",
        2
       ],
       [
-       "Critics: only partly true",
+       "Critics: his 2025 model only handled sales",
        3
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
-   "from": 1043,
-   "frames": 389,
+   "from": 1105,
+   "frames": 511,
    "lines": [
     {
      "who": "maastaaru",
@@ -560,174 +583,224 @@
      "sub": null,
      "audio": "reel/laya1/line_04.wav",
      "from": 0,
-     "frames": 370,
+     "frames": 460,
      "words": [
       {
        "w": "Three",
-       "from": 8,
-       "to": 16
+       "from": 7,
+       "to": 15
       },
       {
        "w": "days",
-       "from": 16,
-       "to": 23
+       "from": 15,
+       "to": 22
       },
       {
        "w": "later,",
-       "from": 23,
+       "from": 22,
+       "to": 40
+      },
+      {
+       "w": "he",
+       "from": 40,
        "to": 44
       },
       {
-       "w": "he",
-       "from": 44,
-       "to": 47
-      },
-      {
        "w": "released",
-       "from": 47,
-       "to": 59
+       "from": 44,
+       "to": 72
       },
       {
        "w": "Laya:",
-       "from": 59,
-       "to": 74
+       "from": 72,
+       "to": 84
       },
       {
-       "w": "a",
-       "from": 74,
-       "to": 77
+       "w": "free",
+       "from": 84,
+       "to": 91
       },
       {
-       "w": "free,",
-       "from": 77,
-       "to": 85
+       "w": "and",
+       "from": 91,
+       "to": 96
       },
       {
-       "w": "open-source",
-       "from": 85,
-       "to": 101
+       "w": "open",
+       "from": 96,
+       "to": 109
       },
       {
-       "w": "alternative",
-       "from": 101,
-       "to": 117
+       "w": "source,",
+       "from": 109,
+       "to": 120
       },
       {
-       "w": "anyone",
-       "from": 117,
+       "w": "for",
+       "from": 120,
        "to": 126
       },
       {
-       "w": "can",
+       "w": "apps",
        "from": 126,
-       "to": 131
+       "to": 136
       },
       {
-       "w": "run.",
-       "from": 131,
-       "to": 166
+       "w": "that",
+       "from": 136,
+       "to": 148
+      },
+      {
+       "w": "need",
+       "from": 148,
+       "to": 155
+      },
+      {
+       "w": "a",
+       "from": 155,
+       "to": 167
+      },
+      {
+       "w": "quick",
+       "from": 167,
+       "to": 176
+      },
+      {
+       "w": "yes,",
+       "from": 176,
+       "to": 183
+      },
+      {
+       "w": "no,",
+       "from": 183,
+       "to": 188
+      },
+      {
+       "w": "or",
+       "from": 188,
+       "to": 210
+      },
+      {
+       "w": "pick-one",
+       "from": 210,
+       "to": 223
+      },
+      {
+       "w": "answer.",
+       "from": 223,
+       "to": 234
       },
       {
        "w": "He",
-       "from": 166,
-       "to": 170
+       "from": 234,
+       "to": 238
       },
       {
        "w": "says",
-       "from": 170,
-       "to": 177
-      },
-      {
-       "w": "he",
-       "from": 177,
-       "to": 181
-      },
-      {
-       "w": "had",
-       "from": 181,
-       "to": 186
-      },
-      {
-       "w": "the",
-       "from": 186,
-       "to": 191
-      },
-      {
-       "w": "core",
-       "from": 191,
-       "to": 198
-      },
-      {
-       "w": "idea",
-       "from": 198,
-       "to": 204
-      },
-      {
-       "w": "first.",
-       "from": 204,
-       "to": 214
-      },
-      {
-       "w": "Critics",
-       "from": 214,
+       "from": 238,
        "to": 245
       },
       {
-       "w": "say",
+       "w": "he",
        "from": 245,
-       "to": 250
+       "to": 249
       },
       {
-       "w": "that's",
-       "from": 250,
-       "to": 260
-      },
-      {
-       "w": "only",
-       "from": 260,
-       "to": 266
-      },
-      {
-       "w": "partly",
-       "from": 266,
-       "to": 276
-      },
-      {
-       "w": "true.",
-       "from": 276,
-       "to": 283
-      },
-      {
-       "w": "Either",
-       "from": 283,
-       "to": 324
-      },
-      {
-       "w": "way,",
-       "from": 324,
-       "to": 330
+       "w": "had",
+       "from": 249,
+       "to": 255
       },
       {
        "w": "the",
-       "from": 330,
-       "to": 335
+       "from": 255,
+       "to": 260
+      },
+      {
+       "w": "core",
+       "from": 260,
+       "to": 295
+      },
+      {
+       "w": "idea",
+       "from": 295,
+       "to": 302
+      },
+      {
+       "w": "first.",
+       "from": 302,
+       "to": 312
+      },
+      {
+       "w": "Critics",
+       "from": 312,
+       "to": 323
+      },
+      {
+       "w": "say",
+       "from": 323,
+       "to": 329
+      },
+      {
+       "w": "his",
+       "from": 329,
+       "to": 334
+      },
+      {
+       "w": "2025",
+       "from": 334,
+       "to": 341
+      },
+      {
+       "w": "model",
+       "from": 341,
+       "to": 350
+      },
+      {
+       "w": "only",
+       "from": 350,
+       "to": 362
+      },
+      {
+       "w": "handled",
+       "from": 362,
+       "to": 373
+      },
+      {
+       "w": "sales.",
+       "from": 373,
+       "to": 382
+      },
+      {
+       "w": "Either",
+       "from": 382,
+       "to": 416
+      },
+      {
+       "w": "way,",
+       "from": 416,
+       "to": 423
+      },
+      {
+       "w": "the",
+       "from": 423,
+       "to": 428
       },
       {
        "w": "world",
-       "from": 335,
-       "to": 343
+       "from": 428,
+       "to": 437
       },
       {
        "w": "noticed.",
-       "from": 343,
-       "to": 355
+       "from": 437,
+       "to": 449
       }
      ],
      "cues": {
-      "1": 74,
-      "2": 166,
-      "3": 214,
-      "4": 283
+      "1": 84,
+      "2": 234,
+      "3": 312,
+      "4": 382
      }
     }
    ]
@@ -758,9 +831,11 @@
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
-   "from": 1432,
+   "from": 1616,
    "frames": 389,
    "lines": [
     {
@@ -770,138 +845,138 @@
      "sub": null,
      "audio": "reel/laya1/line_05.wav",
      "from": 0,
-     "frames": 357,
+     "frames": 369,
      "words": [
       {
        "w": "Over",
        "from": 7,
-       "to": 15
+       "to": 16
       },
       {
        "w": "1,300",
-       "from": 15,
-       "to": 24
+       "from": 16,
+       "to": 29
       },
       {
-       "w": "points",
-       "from": 24,
-       "to": 39
+       "w": "upvotes",
+       "from": 29,
+       "to": 47
       },
       {
        "w": "on",
-       "from": 39,
-       "to": 44
+       "from": 47,
+       "to": 53
       },
       {
        "w": "Hacker",
-       "from": 44,
-       "to": 55
+       "from": 53,
+       "to": 64
       },
       {
        "w": "News.",
-       "from": 55,
-       "to": 65
+       "from": 64,
+       "to": 106
+      },
+      {
+       "w": "Over",
+       "from": 106,
+       "to": 120
       },
       {
        "w": "32,000",
-       "from": 65,
-       "to": 109
+       "from": 120,
+       "to": 137
       },
       {
        "w": "GitHub",
-       "from": 109,
-       "to": 123
+       "from": 137,
+       "to": 155
       },
       {
        "w": "stars.",
-       "from": 123,
-       "to": 140
+       "from": 155,
+       "to": 192
+      },
+      {
+       "w": "Over",
+       "from": 192,
+       "to": 202
       },
       {
        "w": "300,000",
-       "from": 140,
-       "to": 186
+       "from": 202,
+       "to": 218
       },
       {
        "w": "downloads",
-       "from": 186,
-       "to": 206
+       "from": 218,
+       "to": 238
       },
       {
        "w": "in",
-       "from": 206,
-       "to": 217
+       "from": 238,
+       "to": 244
       },
       {
        "w": "3",
-       "from": 217,
-       "to": 225
+       "from": 244,
+       "to": 248
       },
       {
        "w": "weeks.",
-       "from": 225,
-       "to": 268
-      },
-      {
-       "w": "And",
-       "from": 268,
-       "to": 272
-      },
-      {
-       "w": "at",
-       "from": 272,
-       "to": 276
-      },
-      {
-       "w": "least",
-       "from": 276,
-       "to": 283
-      },
-      {
-       "w": "10",
-       "from": 283,
+       "from": 248,
        "to": 287
       },
       {
-       "w": "research",
+       "w": "And",
        "from": 287,
-       "to": 298
+       "to": 293
       },
       {
-       "w": "papers",
-       "from": 298,
-       "to": 310
+       "w": "it's",
+       "from": 293,
+       "to": 299
       },
       {
        "w": "already",
+       "from": 299,
+       "to": 310
+      },
+      {
+       "w": "in",
        "from": 310,
-       "to": 320
+       "to": 314
       },
       {
-       "w": "cite",
-       "from": 320,
-       "to": 326
+       "w": "at",
+       "from": 314,
+       "to": 318
       },
       {
-       "w": "or",
-       "from": 326,
+       "w": "least",
+       "from": 318,
+       "to": 329
+      },
+      {
+       "w": "10",
+       "from": 329,
        "to": 333
       },
       {
-       "w": "test",
+       "w": "research",
        "from": 333,
-       "to": 340
+       "to": 345
       },
       {
-       "w": "it.",
-       "from": 340,
-       "to": 344
+       "w": "papers.",
+       "from": 345,
+       "to": 355
       }
      ],
      "cues": {
-      "1": 65,
-      "2": 140,
-      "3": 268
+      "1": 106,
+      "2": 192,
+      "3": 287
      }
     }
    ]
@@ -928,9 +1003,11 @@
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
-   "from": 1820,
+   "from": 2005,
    "frames": 494,
    "lines": [
     {
@@ -1169,19 +1246,21 @@
        1
       ],
       [
-       "6 arXiv preprints in 2025",
+       "Hindi AI models (2025); 6 arXiv preprints in 2025",
        2
       ],
       [
-       "Hindi language models; Nadhi Audit (offline code security)",
+       "Nadhi Audit: offline code-security app",
        3
       ]
      ]
     },
-    "handle": "@ai_maastaaru"
+    "handle": "@ai_maastaaru",
+    "captionTop": 1395,
+    "captionSide": 110
    },
-   "from": 2315,
-   "frames": 324,
+   "from": 2499,
+   "frames": 283,
    "lines": [
     {
      "who": "maastaaru",
@@ -1190,138 +1269,113 @@
      "sub": null,
      "audio": "reel/laya1/line_07.wav",
      "from": 0,
-     "frames": 300,
+     "frames": 259,
      "words": [
       {
-       "w": "Since",
+       "w": "Before",
        "from": 6,
-       "to": 15
+       "to": 16
       },
       {
-       "w": "then:",
-       "from": 15,
-       "to": 33
+       "w": "all",
+       "from": 16,
+       "to": 22
       },
       {
-       "w": "a",
-       "from": 33,
+       "w": "this:",
+       "from": 22,
        "to": 36
       },
       {
-       "w": "peer-reviewed",
+       "w": "a",
        "from": 36,
-       "to": 56
+       "to": 39
+      },
+      {
+       "w": "peer-reviewed",
+       "from": 39,
+       "to": 63
       },
       {
        "w": "paper",
-       "from": 56,
-       "to": 65
+       "from": 63,
+       "to": 72
       },
       {
        "w": "on",
-       "from": 65,
-       "to": 70
+       "from": 72,
+       "to": 76
       },
       {
        "w": "AI",
-       "from": 70,
-       "to": 74
+       "from": 76,
+       "to": 80
       },
       {
        "w": "that",
-       "from": 74,
-       "to": 90
+       "from": 80,
+       "to": 97
       },
       {
        "w": "reads",
-       "from": 90,
-       "to": 99
+       "from": 97,
+       "to": 114
       },
       {
        "w": "heart",
-       "from": 99,
-       "to": 108
+       "from": 114,
+       "to": 123
       },
       {
        "w": "ECGs,",
-       "from": 108,
-       "to": 116
-      },
-      {
-       "w": "six",
-       "from": 116,
-       "to": 122
-      },
-      {
-       "w": "research",
-       "from": 122,
-       "to": 139
-      },
-      {
-       "w": "papers",
-       "from": 139,
-       "to": 150
-      },
-      {
-       "w": "in",
-       "from": 150,
-       "to": 154
-      },
-      {
-       "w": "one",
-       "from": 154,
-       "to": 160
-      },
-      {
-       "w": "year,",
-       "from": 160,
-       "to": 169
+       "from": 123,
+       "to": 132
       },
       {
        "w": "Hindi",
-       "from": 169,
-       "to": 202
+       "from": 132,
+       "to": 144
       },
       {
        "w": "language",
-       "from": 202,
-       "to": 215
+       "from": 144,
+       "to": 157
       },
       {
        "w": "models,",
-       "from": 215,
-       "to": 227
+       "from": 157,
+       "to": 200
       },
       {
        "w": "and",
-       "from": 227,
-       "to": 240
+       "from": 200,
+       "to": 206
       },
       {
        "w": "an",
-       "from": 240,
-       "to": 245
+       "from": 206,
+       "to": 210
       },
       {
        "w": "offline",
-       "from": 245,
-       "to": 256
+       "from": 210,
+       "to": 222
       },
       {
        "w": "code-security",
-       "from": 256,
-       "to": 277
+       "from": 222,
+       "to": 242
       },
       {
        "w": "app.",
-       "from": 277,
-       "to": 285
+       "from": 242,
+       "to": 259
       }
      ],
      "cues": {
-      "1": 33,
-      "2": 116,
-      "3": 169
+      "1": 36,
+      "2": 132,
+      "3": 200
      }
     }
    ]
@@ -1344,9 +1398,11 @@
        1
       ]
      ]
-    }
+    },
+    "captionTop": 1395,
+    "captionSide": 110
    },
-   "from": 2639,
+   "from": 2782,
    "frames": 202,
    "lines": [
     {
