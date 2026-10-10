@@ -4,6 +4,7 @@ import { ATTN_SCENES } from "./AttentionCrayon";
 import { DISTILL_SCENES } from "./DistillCrayon";
 import { CHEAP_SCENES } from "./CheapCrayon";
 import { WORDS_SCENES } from "./WordsCrayon";
+import { PROFILE_SCENES } from "./ProfileCrayon";
 import CHEAP_PREVIEW from "./cheap_preview.json";
 
 // Dev-only: every EP27 scene with evenly spaced cues (no audio) for look checks.
@@ -65,6 +66,23 @@ export const WordsPreview: React.FC = () => (
       const Comp = WORDS_SCENES[t] as unknown as React.FC<any>;
       const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
       const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 7);
+      return (
+        <Sequence key={t} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
+          <Comp s={s} cue={cue} line={() => s.lines[0]} />
+        </Sequence>
+      );
+    })}
+  </AbsoluteFill>
+);
+
+// Dev preview of the profile-reel scenes (cues at n/6 of each scene).
+const PORDER = ["pf_hook", "pf_2025", "pf_jev", "pf_laya", "pf_numbers", "pf_who", "pf_work", "pf_cta"] as const;
+export const ProfilePreview: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    {PORDER.map((t, i) => {
+      const Comp = PROFILE_SCENES[t] as unknown as React.FC<any>;
+      const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
+      const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 6);
       return (
         <Sequence key={t} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
           <Comp s={s} cue={cue} line={() => s.lines[0]} />

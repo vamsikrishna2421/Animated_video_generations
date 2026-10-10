@@ -11,19 +11,19 @@ type Line = { from: number; frames: number };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
-const INK = "#16152a";
-const GREY = "#4a4a6a";
-const caveat = (s: number) => `700 ${s}px Caveat`;
-const handF = (s: number) => `${s}px ${HAND}`;
+export const INK = "#16152a";
+export const GREY = "#4a4a6a";
+export const caveat = (s: number) => `700 ${s}px Caveat`;
+export const handF = (s: number) => `${s}px ${HAND}`;
 
 // Largest size at which `text` fits in `maxW`.
-const fitSize = (c: Ctx, text: string, maxW: number, size: number, font: (s: number) => string, min = 24) => {
+export const fitSize = (c: Ctx, text: string, maxW: number, size: number, font: (s: number) => string, min = 24) => {
   let s = size;
   for (; s > min; s -= 2) { c.font = font(s); if (c.measureText(text).width <= maxW) break; }
   return s;
 };
 
-const label = (c: Ctx, text: string, x: number, y: number, size: number, color: string, font = caveat, a = 1, align: CanvasTextAlign = "center") => {
+export const label = (c: Ctx, text: string, x: number, y: number, size: number, color: string, font = caveat, a = 1, align: CanvasTextAlign = "center") => {
   if (a <= 0) return;
   c.save(); c.globalAlpha = clamp(a); c.font = font(size); c.fillStyle = color; c.textAlign = align; c.fillText(text, x, y); c.restore();
 };
@@ -31,7 +31,7 @@ const label = (c: Ctx, text: string, x: number, y: number, size: number, color: 
 // ---------- doodles ----------
 type TileO = { word?: string; id?: string; wordP?: number; bg?: string; edge?: string; pop?: number; rot?: number; scale?: number };
 // A token card: the ID alone (wordP 0), or the word with its ID underneath (wordP 1).
-const tile = (c: Ctx, cx: number, cy: number, w: number, h: number, r: () => number, o: TileO) => {
+export const tile = (c: Ctx, cx: number, cy: number, w: number, h: number, r: () => number, o: TileO) => {
   const p = o.pop ?? 1;
   if (p <= 0) return;
   const k = easeOut(p) * (o.scale ?? 1);
@@ -110,7 +110,7 @@ const island = (c: Ctx, cx: number, cy: number, rx: number, ry: number, seed: nu
 };
 
 // Map pin with a label on a cream chip.
-const pin = (c: Ctx, x: number, y: number, text: string, col: string, p: number, r: () => number, size = 50, below = true) => {
+export const pin = (c: Ctx, x: number, y: number, text: string, col: string, p: number, r: () => number, size = 50, below = true) => {
   if (p <= 0) return;
   const k = easeOut(p), dy = (1 - k) * -70;
   c.save(); c.translate(x, y + dy); c.globalAlpha = clamp(p * 1.5);
@@ -143,7 +143,7 @@ const bubble = (c: Ctx, x: number, y: number, s: number, r: () => number, p: num
   c.restore();
 };
 
-const eye = (c: Ctx, x: number, y: number, s: number, r: () => number, look: number) => {
+export const eye = (c: Ctx, x: number, y: number, s: number, r: () => number, look: number) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   c.beginPath(); c.ellipse(0, 0, 110, 62, 0, 0, 7); c.fillStyle = "#fff"; c.fill();
   c.save(); c.beginPath(); c.ellipse(0, 0, 110, 62, 0, 0, 7); c.clip();
@@ -156,7 +156,7 @@ const eye = (c: Ctx, x: number, y: number, s: number, r: () => number, look: num
 };
 
 // Little layered machine (a transformer in miniature).
-const tower = (c: Ctx, x: number, y: number, s: number, r: () => number, lit = -1) => {
+export const tower = (c: Ctx, x: number, y: number, s: number, r: () => number, lit = -1) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   for (let i = 0; i < 4; i++) {
     const yy = -i * 40;
@@ -187,7 +187,7 @@ const flipTile = (c: Ctx, cx: number, cy: number, w: number, h: number, r: () =>
   c.restore();
 };
 
-const stamp = (c: Ctx, t: string, x: number, y: number, size: number, col: string, p: number, r: () => number, rot = -0.07) => {
+export const stamp = (c: Ctx, t: string, x: number, y: number, size: number, col: string, p: number, r: () => number, rot = -0.07) => {
   if (p <= 0) return;
   const e = easeOut(p);
   c.save(); c.translate(x, y); c.rotate(rot); const k = 1.6 - 0.6 * e; c.scale(k, k); c.globalAlpha = e;
@@ -197,7 +197,7 @@ const stamp = (c: Ctx, t: string, x: number, y: number, size: number, col: strin
   c.fillStyle = col; c.textAlign = "center"; c.fillText(t, 0, size * 0.04); c.restore();
 };
 
-const card = (c: Ctx, x: number, y: number, w: number, h: number, r: () => number, p: number, bg = COL.cream) => {
+export const card = (c: Ctx, x: number, y: number, w: number, h: number, r: () => number, p: number, bg = COL.cream) => {
   if (p <= 0) return false;
   c.save(); c.globalAlpha = clamp(p * 1.4);
   c.fillStyle = "rgba(4,8,40,0.35)"; rrect(c, x + 8, y + 10, w, h, 20); c.fill();

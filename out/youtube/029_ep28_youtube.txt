@@ -1,0 +1,72 @@
+UPLOAD: 029 (YouTube, two uploads; 16:9 regular videos, not Shorts)
+
+########## ENGLISH: 029_ep28_yt_en.mp4 ##########
+=== TITLE ===
+How AI Turns Words Into Numbers: Tokens, Embeddings and the Next Token | AI From Scratch Ep 28
+
+=== DESCRIPTION ===
+To ChatGPT, "The Statue of Liberty is in" looks like 976 160801 328 51868 382 306. No words, only numbers. So how do those numbers turn into "New York"? This is Transformers, Part 2: following one sentence through the machine.
+
+In this episode:
+- Tokens: text is cut into words or pieces of words ("YouTube" = "You" + "Tube"), and each token gets an ID, just a label like a ticket number
+- Embeddings: each ID fetches its row from a giant table, a long list of numbers that works like an address on a map of meaning. Google Maps needs 2 numbers; OpenAI's open model gpt-oss uses 2,880
+- Word order: "dog" gets the same embedding first or last, so every token also carries its position
+- Layers: on every floor, each word looks back and soaks up what matters (attention, from Episode 27). gpt-oss-120b has 36 layers
+- The next token: score every possible next token, pick a likely one ("New"), climb again ("York"). One trip per token, which is why answers appear piece by piece
+
+Quiz: does "bank" get the same ID in "river bank" and "bank account"? Answer in the comments.
+
+Chapters:
+0:00 The puzzle: what ChatGPT actually sees
+0:10 Tokens: cut the text into pieces
+0:22 Embeddings: IDs become lists of numbers
+0:37 Word order: position signals
+0:48 Layers: each word looks back
+1:00 The next token, one at a time
+1:11 Quiz: same ID for "bank"?
+1:23 Recap + next episode
+
+Sources: token IDs from OpenAI's tiktoken (o200k tokenizer, shared by GPT-4o and the open gpt-oss models); gpt-oss-120b sizes from OpenAI's model config on Hugging Face (hidden size 2,880, 36 layers); Vaswani et al., "Attention Is All You Need" (2017) for position encodings. The score bars are an illustration, not real model output.
+
+Previous episode: How AI pays attention (Transformers, Part 1).
+Next: how AI sees images (computer vision).
+Subscribe for the full AI From Scratch series.
+
+#Tokens #Embeddings #Transformers #ChatGPT #LearnAI #AIForBeginners
+
+=== PINNED_COMMENT (post a day later) ===
+Answer: yes. "bank" is token 6922 in both sentences, with the same starting embedding. The layers use the words around it to tell a river bank from a money bank.
+
+########## TELUGU: 029_ep28_yt_te.mp4 ##########
+=== TITLE ===
+AI Padalanu Numbers Ga Ela Marchutundi? Tokens, Embeddings in Telugu | AI From Scratch Ep 28
+
+=== DESCRIPTION ===
+ChatGPT ki "The Statue of Liberty is in" ante 976 160801 328 51868 382 306 ane numbers! Padalu kaadu, numbers matrame. Mari aa numbers nunchi "New York" ela vastundi? Transformers, Part 2.
+
+Ee episode lo:
+- Tokens: text ni padalu leda padala mukkalu ga cut chestaru ("YouTube" = "You" + "Tube"), prathi token ki oka ID
+- Embeddings: prathi ID oka pedda table nunchi numbers list techukuntundi, meaning map lo oka address. Google Maps ki 2 numbers; gpt-oss ki 2,880
+- Word order: "dog" modata unna chivara unna ade list, anduke prathi token tana position ni kuda teesukeltundi
+- Layers: prathi floor lo prathi padam venakki chusi mukhyamainadi grahistundi (Episode 27 attention)
+- Next token: prathi option ki score, oka manchidi pick ("New"), malli climb ("York"). Okko token ki okko trip, anduke answers mukka mukka ga vastayi
+
+Quiz: "river bank", "bank account" rendintlo "bank" ki okate ID na? Comment cheyyandi.
+
+Chapters:
+0:00 The puzzle: what ChatGPT actually sees
+0:08 Tokens: cut the text into pieces
+0:20 Embeddings: IDs become lists of numbers
+0:35 Word order: position signals
+0:48 Layers: each word looks back
+0:59 The next token, one at a time
+1:13 Quiz: same ID for "bank"?
+1:25 Recap + next episode
+
+Next: AI photos ni ela chustundi (computer vision).
+Subscribe cheyyandi: AI From Scratch, Telugu lo.
+
+#AIinTelugu #TeluguAI #Tokens #ChatGPT #LearnAI
+
+=== PINNED_COMMENT (post a day later) ===
+Answer: avunu. Rendintlo "bank" token 6922, starting embedding kuda okate. Layers chuttu unna padalatho river bank, money bank ni veru chestayi.
