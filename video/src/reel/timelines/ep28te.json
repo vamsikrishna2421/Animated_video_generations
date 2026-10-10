@@ -1,0 +1,1594 @@
+{
+ "id": "ep28te",
+ "look": "classic",
+ "topic": "",
+ "banner": "How AI turns words into numbers",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "title": "How AI turns words into numbers (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP 28",
+ "fps": 30,
+ "musicLift": 1.8,
+ "musicDrops": [
+  [
+   1859,
+   1883
+  ]
+ ],
+ "hideTimerInHook": true,
+ "totalFrames": 2830,
+ "music": "reel/ep28te/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "wn_hook",
+   "data": {
+    "yt": {
+     "chapter": "The puzzle",
+     "title": "What ChatGPT actually sees",
+     "notes": [
+      [
+       "You type: 'The Statue of Liberty is in'",
+       0
+      ],
+      [
+       "The model sees: 976 160801 328 51868 382 306",
+       1
+      ],
+      [
+       "No words, only numbers (real token IDs)",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 0,
+   "frames": 245,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_01.wav",
+     "from": 9,
+     "frames": 212,
+     "words": [
+      {
+       "w": "To",
+       "from": 10,
+       "to": 13
+      },
+      {
+       "w": "ChatGPT,",
+       "from": 13,
+       "to": 22
+      },
+      {
+       "w": "your",
+       "from": 22,
+       "to": 28
+      },
+      {
+       "w": "message",
+       "from": 28,
+       "to": 36
+      },
+      {
+       "w": "looks",
+       "from": 36,
+       "to": 43
+      },
+      {
+       "w": "like",
+       "from": 43,
+       "to": 48
+      },
+      {
+       "w": "this.",
+       "from": 48,
+       "to": 73
+      },
+      {
+       "w": "No",
+       "from": 73,
+       "to": 97
+      },
+      {
+       "w": "words,",
+       "from": 97,
+       "to": 108
+      },
+      {
+       "w": "only",
+       "from": 108,
+       "to": 119
+      },
+      {
+       "w": "numbers.",
+       "from": 119,
+       "to": 153
+      },
+      {
+       "w": "So",
+       "from": 153,
+       "to": 157
+      },
+      {
+       "w": "how",
+       "from": 157,
+       "to": 162
+      },
+      {
+       "w": "do",
+       "from": 162,
+       "to": 167
+      },
+      {
+       "w": "these",
+       "from": 167,
+       "to": 175
+      },
+      {
+       "w": "numbers",
+       "from": 175,
+       "to": 185
+      },
+      {
+       "w": "become",
+       "from": 185,
+       "to": 195
+      },
+      {
+       "w": "an",
+       "from": 195,
+       "to": 199
+      },
+      {
+       "w": "answer?",
+       "from": 199,
+       "to": 210
+      }
+     ],
+     "cues": {
+      "1": 48,
+      "2": 73,
+      "3": 153
+     }
+    }
+   ]
+  },
+  {
+   "id": "tokens",
+   "type": "wn_tokens",
+   "data": {
+    "yt": {
+     "chapter": "Tokens",
+     "title": "Step 1: cut the text into tokens",
+     "notes": [
+      [
+       "A token is a word or a piece of a word",
+       1
+      ],
+      [
+       "'YouTube' = 'You' + 'Tube': two tokens",
+       2
+      ],
+      [
+       "Each token gets an ID, like a ticket number",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 245,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_02.wav",
+     "from": 0,
+     "frames": 318,
+     "words": [
+      {
+       "w": "First,",
+       "from": 1,
+       "to": 13
+      },
+      {
+       "w": "your",
+       "from": 13,
+       "to": 21
+      },
+      {
+       "w": "text",
+       "from": 21,
+       "to": 29
+      },
+      {
+       "w": "is",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "cut",
+       "from": 34,
+       "to": 41
+      },
+      {
+       "w": "into",
+       "from": 41,
+       "to": 49
+      },
+      {
+       "w": "tokens:",
+       "from": 49,
+       "to": 71
+      },
+      {
+       "w": "whole",
+       "from": 71,
+       "to": 79
+      },
+      {
+       "w": "words,",
+       "from": 79,
+       "to": 88
+      },
+      {
+       "w": "or",
+       "from": 88,
+       "to": 92
+      },
+      {
+       "w": "pieces",
+       "from": 92,
+       "to": 100
+      },
+      {
+       "w": "of",
+       "from": 100,
+       "to": 104
+      },
+      {
+       "w": "words.",
+       "from": 104,
+       "to": 123
+      },
+      {
+       "w": "Even",
+       "from": 123,
+       "to": 130
+      },
+      {
+       "w": "'YouTube'",
+       "from": 130,
+       "to": 144
+      },
+      {
+       "w": "is",
+       "from": 144,
+       "to": 148
+      },
+      {
+       "w": "two",
+       "from": 148,
+       "to": 153
+      },
+      {
+       "w": "tokens.",
+       "from": 153,
+       "to": 183
+      },
+      {
+       "w": "Each",
+       "from": 183,
+       "to": 190
+      },
+      {
+       "w": "token",
+       "from": 190,
+       "to": 198
+      },
+      {
+       "w": "gets",
+       "from": 198,
+       "to": 205
+      },
+      {
+       "w": "an",
+       "from": 205,
+       "to": 209
+      },
+      {
+       "w": "ID.",
+       "from": 209,
+       "to": 215
+      },
+      {
+       "w": "But",
+       "from": 215,
+       "to": 221
+      },
+      {
+       "w": "an",
+       "from": 221,
+       "to": 244
+      },
+      {
+       "w": "ID",
+       "from": 244,
+       "to": 248
+      },
+      {
+       "w": "is",
+       "from": 248,
+       "to": 252
+      },
+      {
+       "w": "just",
+       "from": 252,
+       "to": 263
+      },
+      {
+       "w": "a",
+       "from": 263,
+       "to": 265
+      },
+      {
+       "w": "label,",
+       "from": 265,
+       "to": 275
+      },
+      {
+       "w": "like",
+       "from": 275,
+       "to": 282
+      },
+      {
+       "w": "a",
+       "from": 282,
+       "to": 285
+      },
+      {
+       "w": "ticket",
+       "from": 285,
+       "to": 295
+      },
+      {
+       "w": "number.",
+       "from": 295,
+       "to": 306
+      }
+     ],
+     "cues": {
+      "1": 71,
+      "2": 123,
+      "3": 183
+     }
+    }
+   ]
+  },
+  {
+   "id": "embed",
+   "type": "wn_embed",
+   "data": {
+    "yt": {
+     "chapter": "Embeddings",
+     "title": "Step 2: IDs become embeddings",
+     "notes": [
+      [
+       "Each ID fetches its row from a giant table",
+       1
+      ],
+      [
+       "Google Maps places you with 2 numbers",
+       2
+      ],
+      [
+       "An embedding uses thousands (gpt-oss: 2,880)",
+       3
+      ],
+      [
+       "Similar meanings sit close together",
+       4
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 593,
+   "frames": 471,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_03.wav",
+     "from": 0,
+     "frames": 453,
+     "words": [
+      {
+       "w": "Then",
+       "from": 11,
+       "to": 22
+      },
+      {
+       "w": "each",
+       "from": 22,
+       "to": 29
+      },
+      {
+       "w": "ID",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "fetches",
+       "from": 34,
+       "to": 46
+      },
+      {
+       "w": "its",
+       "from": 46,
+       "to": 52
+      },
+      {
+       "w": "row",
+       "from": 52,
+       "to": 58
+      },
+      {
+       "w": "from",
+       "from": 58,
+       "to": 65
+      },
+      {
+       "w": "a",
+       "from": 65,
+       "to": 68
+      },
+      {
+       "w": "giant",
+       "from": 68,
+       "to": 77
+      },
+      {
+       "w": "table:",
+       "from": 77,
+       "to": 87
+      },
+      {
+       "w": "a",
+       "from": 87,
+       "to": 90
+      },
+      {
+       "w": "long",
+       "from": 90,
+       "to": 98
+      },
+      {
+       "w": "list",
+       "from": 98,
+       "to": 115
+      },
+      {
+       "w": "of",
+       "from": 115,
+       "to": 119
+      },
+      {
+       "w": "numbers,",
+       "from": 119,
+       "to": 133
+      },
+      {
+       "w": "called",
+       "from": 133,
+       "to": 148
+      },
+      {
+       "w": "an",
+       "from": 148,
+       "to": 153
+      },
+      {
+       "w": "embedding.",
+       "from": 153,
+       "to": 173
+      },
+      {
+       "w": "It's",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "like",
+       "from": 181,
+       "to": 208
+      },
+      {
+       "w": "an",
+       "from": 208,
+       "to": 213
+      },
+      {
+       "w": "address:",
+       "from": 213,
+       "to": 227
+      },
+      {
+       "w": "Google",
+       "from": 227,
+       "to": 249
+      },
+      {
+       "w": "Maps",
+       "from": 249,
+       "to": 257
+      },
+      {
+       "w": "places",
+       "from": 257,
+       "to": 268
+      },
+      {
+       "w": "you",
+       "from": 268,
+       "to": 274
+      },
+      {
+       "w": "with",
+       "from": 274,
+       "to": 282
+      },
+      {
+       "w": "2",
+       "from": 282,
+       "to": 285
+      },
+      {
+       "w": "numbers,",
+       "from": 285,
+       "to": 299
+      },
+      {
+       "w": "an",
+       "from": 299,
+       "to": 303
+      },
+      {
+       "w": "embedding",
+       "from": 303,
+       "to": 323
+      },
+      {
+       "w": "uses",
+       "from": 323,
+       "to": 331
+      },
+      {
+       "w": "thousands.",
+       "from": 331,
+       "to": 347
+      },
+      {
+       "w": "Similar",
+       "from": 347,
+       "to": 369
+      },
+      {
+       "w": "meanings",
+       "from": 369,
+       "to": 381
+      },
+      {
+       "w": "sit",
+       "from": 381,
+       "to": 387
+      },
+      {
+       "w": "close",
+       "from": 387,
+       "to": 394
+      },
+      {
+       "w": "together:",
+       "from": 394,
+       "to": 408
+      },
+      {
+       "w": "'cat'",
+       "from": 408,
+       "to": 415
+      },
+      {
+       "w": "right",
+       "from": 415,
+       "to": 433
+      },
+      {
+       "w": "next",
+       "from": 433,
+       "to": 440
+      },
+      {
+       "w": "to",
+       "from": 440,
+       "to": 443
+      },
+      {
+       "w": "'dog'.",
+       "from": 443,
+       "to": 453
+      }
+     ],
+     "cues": {
+      "1": 22,
+      "2": 173,
+      "3": 299,
+      "4": 347
+     }
+    }
+   ]
+  },
+  {
+   "id": "pos",
+   "type": "wn_pos",
+   "data": {
+    "yt": {
+     "chapter": "Word order",
+     "title": "Position signals",
+     "notes": [
+      [
+       "'dog' gets the same embedding, first or last",
+       0
+      ],
+      [
+       "'dog bites man' vs 'man bites dog'",
+       1
+      ],
+      [
+       "Each token also carries its position",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1064,
+   "frames": 368,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_04.wav",
+     "from": 0,
+     "frames": 348,
+     "words": [
+      {
+       "w": "But",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "'dog'",
+       "from": 7,
+       "to": 16
+      },
+      {
+       "w": "gets",
+       "from": 16,
+       "to": 23
+      },
+      {
+       "w": "the",
+       "from": 23,
+       "to": 29
+      },
+      {
+       "w": "same",
+       "from": 29,
+       "to": 36
+      },
+      {
+       "w": "list,",
+       "from": 36,
+       "to": 45
+      },
+      {
+       "w": "first",
+       "from": 45,
+       "to": 54
+      },
+      {
+       "w": "or",
+       "from": 54,
+       "to": 58
+      },
+      {
+       "w": "last.",
+       "from": 58,
+       "to": 67
+      },
+      {
+       "w": "So",
+       "from": 67,
+       "to": 71
+      },
+      {
+       "w": "'dog",
+       "from": 71,
+       "to": 94
+      },
+      {
+       "w": "bites",
+       "from": 94,
+       "to": 113
+      },
+      {
+       "w": "man'",
+       "from": 113,
+       "to": 120
+      },
+      {
+       "w": "and",
+       "from": 120,
+       "to": 140
+      },
+      {
+       "w": "'man",
+       "from": 140,
+       "to": 148
+      },
+      {
+       "w": "bites",
+       "from": 148,
+       "to": 156
+      },
+      {
+       "w": "dog'",
+       "from": 156,
+       "to": 173
+      },
+      {
+       "w": "would",
+       "from": 173,
+       "to": 182
+      },
+      {
+       "w": "look",
+       "from": 182,
+       "to": 189
+      },
+      {
+       "w": "the",
+       "from": 189,
+       "to": 195
+      },
+      {
+       "w": "same.",
+       "from": 195,
+       "to": 212
+      },
+      {
+       "w": "So",
+       "from": 212,
+       "to": 217
+      },
+      {
+       "w": "each",
+       "from": 217,
+       "to": 229
+      },
+      {
+       "w": "token",
+       "from": 229,
+       "to": 238
+      },
+      {
+       "w": "also",
+       "from": 238,
+       "to": 246
+      },
+      {
+       "w": "carries",
+       "from": 246,
+       "to": 259
+      },
+      {
+       "w": "its",
+       "from": 259,
+       "to": 265
+      },
+      {
+       "w": "position,",
+       "from": 265,
+       "to": 288
+      },
+      {
+       "w": "and",
+       "from": 288,
+       "to": 294
+      },
+      {
+       "w": "now",
+       "from": 294,
+       "to": 301
+      },
+      {
+       "w": "it",
+       "from": 301,
+       "to": 306
+      },
+      {
+       "w": "knows",
+       "from": 306,
+       "to": 315
+      },
+      {
+       "w": "who",
+       "from": 315,
+       "to": 321
+      },
+      {
+       "w": "bit",
+       "from": 321,
+       "to": 328
+      },
+      {
+       "w": "whom.",
+       "from": 328,
+       "to": 337
+      }
+     ],
+     "cues": {
+      "1": 67,
+      "2": 212,
+      "3": 288
+     }
+    }
+   ]
+  },
+  {
+   "id": "layers",
+   "type": "wn_layers",
+   "data": {
+    "yt": {
+     "chapter": "Layers",
+     "title": "Step 3: climb the layers",
+     "notes": [
+      [
+       "Dozens of layers (gpt-oss-120b: 36)",
+       0
+      ],
+      [
+       "Each word looks back and soaks up what matters (attention, EP27)",
+       1
+      ],
+      [
+       "The last word 'in' now carries 'Statue' + 'Liberty'",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1432,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_05.wav",
+     "from": 0,
+     "frames": 329,
+     "words": [
+      {
+       "w": "Then",
+       "from": 2,
+       "to": 10
+      },
+      {
+       "w": "the",
+       "from": 10,
+       "to": 16
+      },
+      {
+       "w": "embeddings",
+       "from": 16,
+       "to": 34
+      },
+      {
+       "w": "climb",
+       "from": 34,
+       "to": 43
+      },
+      {
+       "w": "dozens",
+       "from": 43,
+       "to": 54
+      },
+      {
+       "w": "of",
+       "from": 54,
+       "to": 59
+      },
+      {
+       "w": "layers.",
+       "from": 59,
+       "to": 71
+      },
+      {
+       "w": "On",
+       "from": 71,
+       "to": 75
+      },
+      {
+       "w": "every",
+       "from": 75,
+       "to": 100
+      },
+      {
+       "w": "floor,",
+       "from": 100,
+       "to": 109
+      },
+      {
+       "w": "each",
+       "from": 109,
+       "to": 115
+      },
+      {
+       "w": "word",
+       "from": 115,
+       "to": 122
+      },
+      {
+       "w": "looks",
+       "from": 122,
+       "to": 130
+      },
+      {
+       "w": "back",
+       "from": 130,
+       "to": 136
+      },
+      {
+       "w": "and",
+       "from": 136,
+       "to": 141
+      },
+      {
+       "w": "soaks",
+       "from": 141,
+       "to": 149
+      },
+      {
+       "w": "up",
+       "from": 149,
+       "to": 153
+      },
+      {
+       "w": "what",
+       "from": 153,
+       "to": 159
+      },
+      {
+       "w": "matters.",
+       "from": 159,
+       "to": 171
+      },
+      {
+       "w": "By",
+       "from": 171,
+       "to": 193
+      },
+      {
+       "w": "the",
+       "from": 193,
+       "to": 199
+      },
+      {
+       "w": "top,",
+       "from": 199,
+       "to": 207
+      },
+      {
+       "w": "the",
+       "from": 207,
+       "to": 213
+      },
+      {
+       "w": "last",
+       "from": 213,
+       "to": 225
+      },
+      {
+       "w": "word,",
+       "from": 225,
+       "to": 234
+      },
+      {
+       "w": "'in',",
+       "from": 234,
+       "to": 247
+      },
+      {
+       "w": "knows",
+       "from": 247,
+       "to": 256
+      },
+      {
+       "w": "about",
+       "from": 256,
+       "to": 265
+      },
+      {
+       "w": "'Statue'",
+       "from": 265,
+       "to": 289
+      },
+      {
+       "w": "and",
+       "from": 289,
+       "to": 294
+      },
+      {
+       "w": "'Liberty'.",
+       "from": 294,
+       "to": 311
+      }
+     ],
+     "cues": {
+      "1": 71,
+      "2": 171
+     }
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "type": "wn_predict",
+   "data": {
+    "yt": {
+     "chapter": "Next token",
+     "title": "Step 4: one token at a time",
+     "notes": [
+      [
+       "Score every possible next token",
+       0
+      ],
+      [
+       "Pick a likely one: 'New'",
+       1
+      ],
+      [
+       "Climb again: 'York'",
+       3
+      ],
+      [
+       "One trip per token = answers appear piece by piece",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1780,
+   "frames": 409,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_06.wav",
+     "from": 0,
+     "frames": 387,
+     "words": [
+      {
+       "w": "Now",
+       "from": 16,
+       "to": 23
+      },
+      {
+       "w": "it",
+       "from": 23,
+       "to": 28
+      },
+      {
+       "w": "scores",
+       "from": 28,
+       "to": 39
+      },
+      {
+       "w": "every",
+       "from": 39,
+       "to": 48
+      },
+      {
+       "w": "possible",
+       "from": 48,
+       "to": 63
+      },
+      {
+       "w": "next",
+       "from": 63,
+       "to": 71
+      },
+      {
+       "w": "token,",
+       "from": 71,
+       "to": 103
+      },
+      {
+       "w": "picks",
+       "from": 103,
+       "to": 114
+      },
+      {
+       "w": "a",
+       "from": 114,
+       "to": 118
+      },
+      {
+       "w": "likely",
+       "from": 118,
+       "to": 131
+      },
+      {
+       "w": "one,",
+       "from": 131,
+       "to": 141
+      },
+      {
+       "w": "'New',",
+       "from": 141,
+       "to": 160
+      },
+      {
+       "w": "climbs",
+       "from": 160,
+       "to": 192
+      },
+      {
+       "w": "again,",
+       "from": 192,
+       "to": 212
+      },
+      {
+       "w": "for",
+       "from": 212,
+       "to": 217
+      },
+      {
+       "w": "'York'.",
+       "from": 217,
+       "to": 246
+      },
+      {
+       "w": "One",
+       "from": 246,
+       "to": 252
+      },
+      {
+       "w": "trip",
+       "from": 252,
+       "to": 259
+      },
+      {
+       "w": "per",
+       "from": 259,
+       "to": 265
+      },
+      {
+       "w": "token:",
+       "from": 265,
+       "to": 275
+      },
+      {
+       "w": "that's",
+       "from": 275,
+       "to": 319
+      },
+      {
+       "w": "why",
+       "from": 319,
+       "to": 325
+      },
+      {
+       "w": "answers",
+       "from": 325,
+       "to": 336
+      },
+      {
+       "w": "appear",
+       "from": 336,
+       "to": 346
+      },
+      {
+       "w": "piece",
+       "from": 346,
+       "to": 355
+      },
+      {
+       "w": "by",
+       "from": 355,
+       "to": 359
+      },
+      {
+       "w": "piece.",
+       "from": 359,
+       "to": 369
+      }
+     ],
+     "cues": {
+      "1": 103,
+      "2": 160,
+      "3": 212
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "wn_quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Same ID for 'bank'?",
+     "notes": [
+      [
+       "'I sat on the river bank.'",
+       0
+      ],
+      [
+       "'I opened a bank account.'",
+       0
+      ],
+      [
+       "Yes: same ID (6922), same starting embedding",
+       2
+      ],
+      [
+       "The layers tell them apart",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 2189,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_07.wav",
+     "from": 0,
+     "frames": 327,
+     "words": [
+      {
+       "w": "Your",
+       "from": 2,
+       "to": 10
+      },
+      {
+       "w": "turn:",
+       "from": 10,
+       "to": 20
+      },
+      {
+       "w": "'river",
+       "from": 20,
+       "to": 36
+      },
+      {
+       "w": "bank'",
+       "from": 36,
+       "to": 42
+      },
+      {
+       "w": "and",
+       "from": 42,
+       "to": 59
+      },
+      {
+       "w": "'bank",
+       "from": 59,
+       "to": 66
+      },
+      {
+       "w": "account':",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "w": "does",
+       "from": 82,
+       "to": 88
+      },
+      {
+       "w": "'bank'",
+       "from": 88,
+       "to": 95
+      },
+      {
+       "w": "get",
+       "from": 95,
+       "to": 99
+      },
+      {
+       "w": "the",
+       "from": 99,
+       "to": 103
+      },
+      {
+       "w": "same",
+       "from": 103,
+       "to": 109
+      },
+      {
+       "w": "ID",
+       "from": 109,
+       "to": 112
+      },
+      {
+       "w": "in",
+       "from": 112,
+       "to": 115
+      },
+      {
+       "w": "both?",
+       "from": 115,
+       "to": 121
+      },
+      {
+       "w": "Yes!",
+       "from": 195,
+       "to": 202
+      },
+      {
+       "w": "Same",
+       "from": 202,
+       "to": 228
+      },
+      {
+       "w": "ID,",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "same",
+       "from": 233,
+       "to": 250
+      },
+      {
+       "w": "starting",
+       "from": 250,
+       "to": 261
+      },
+      {
+       "w": "list.",
+       "from": 261,
+       "to": 269
+      },
+      {
+       "w": "The",
+       "from": 269,
+       "to": 285
+      },
+      {
+       "w": "layers",
+       "from": 285,
+       "to": 294
+      },
+      {
+       "w": "tell",
+       "from": 294,
+       "to": 300
+      },
+      {
+       "w": "them",
+       "from": 300,
+       "to": 307
+      },
+      {
+       "w": "apart.",
+       "from": 307,
+       "to": 316
+      }
+     ],
+     "cues": {
+      "1": 20,
+      "2": 195
+     }
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "type": "wn_outro",
+   "data": {
+    "handle": "@ai_maastaaru_telugu",
+    "yt": {
+     "chapter": "Recap",
+     "title": "Words to numbers to answer",
+     "notes": [
+      [
+       "Text -> tokens -> IDs -> embeddings -> layers -> next token",
+       0
+      ],
+      [
+       "Next: how AI sees images (EP29)",
+       6
+      ]
+     ]
+    },
+    "captionMode": "phrase"
+   },
+   "from": 2536,
+   "frames": 282,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep28te/line_08.wav",
+     "from": 0,
+     "frames": 255,
+     "words": [
+      {
+       "w": "Recap:",
+       "from": 9,
+       "to": 30
+      },
+      {
+       "w": "text,",
+       "from": 30,
+       "to": 48
+      },
+      {
+       "w": "tokens,",
+       "from": 48,
+       "to": 67
+      },
+      {
+       "w": "IDs,",
+       "from": 67,
+       "to": 86
+      },
+      {
+       "w": "embeddings,",
+       "from": 86,
+       "to": 102
+      },
+      {
+       "w": "layers,",
+       "from": 102,
+       "to": 112
+      },
+      {
+       "w": "then",
+       "from": 112,
+       "to": 117
+      },
+      {
+       "w": "one",
+       "from": 117,
+       "to": 120
+      },
+      {
+       "w": "token",
+       "from": 120,
+       "to": 144
+      },
+      {
+       "w": "at",
+       "from": 144,
+       "to": 146
+      },
+      {
+       "w": "a",
+       "from": 146,
+       "to": 148
+      },
+      {
+       "w": "time.",
+       "from": 148,
+       "to": 161
+      },
+      {
+       "w": "Next:",
+       "from": 161,
+       "to": 169
+      },
+      {
+       "w": "how",
+       "from": 169,
+       "to": 174
+      },
+      {
+       "w": "AI",
+       "from": 174,
+       "to": 178
+      },
+      {
+       "w": "sees",
+       "from": 178,
+       "to": 184
+      },
+      {
+       "w": "images.",
+       "from": 184,
+       "to": 211
+      },
+      {
+       "w": "Follow,",
+       "from": 211,
+       "to": 221
+      },
+      {
+       "w": "so",
+       "from": 221,
+       "to": 225
+      },
+      {
+       "w": "you",
+       "from": 225,
+       "to": 230
+      },
+      {
+       "w": "don't",
+       "from": 230,
+       "to": 238
+      },
+      {
+       "w": "miss",
+       "from": 238,
+       "to": 244
+      },
+      {
+       "w": "it.",
+       "from": 244,
+       "to": 249
+      }
+     ],
+     "cues": {
+      "1": 48,
+      "2": 67,
+      "3": 86,
+      "4": 102,
+      "5": 112,
+      "6": 161
+     }
+    }
+   ]
+  }
+ ]
+}
