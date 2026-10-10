@@ -44,7 +44,7 @@ import { KingfisherStudio } from "./reel/kingfisher/Studio";
 import { KingfisherRide, KF_LEN } from "./reel/kingfisher/KingfisherRide";
 import { KingfisherFilm, KFF_LEN } from "./reel/kingfisher/KingfisherFilm";
 import { LoopReel, LOOP_TEST_LEN } from "./reel/loop/LoopReel";
-import { AttnPreview, ATTN_PREVIEW_SCENE, DistPreview, CheapPreview, WordsPreview, ProfilePreview } from "./reel/loop/AttnPreview";
+import { AttnPreview, ATTN_PREVIEW_SCENE, DistPreview, CheapPreview, WordsPreview, ProfilePreview, LayaPreview } from "./reel/loop/AttnPreview";
 import { FumbleRasaSheet } from "./reel/FumbleRasa";
 import { FumbleNavarasa, NAV_LEN } from "./reel/navarasa/FumbleNavarasa";
 import { FumbleBrahmi, FB_LEN, FB_TRIM_LEN } from "./reel/navarasa/FumbleBrahmi";
@@ -123,6 +123,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="FumbleRasaSheet" component={FumbleRasaSheet} durationInFrames={60} fps={30} width={1080} height={1920} />
     <Composition id="DistPreview" component={DistPreview} durationInFrames={8 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />
     <Composition id="ProfilePreview" component={ProfilePreview} durationInFrames={8 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />
+    <Composition id="LayaPreview" component={LayaPreview} durationInFrames={7 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />
     <Composition id="WordsPreview" component={WordsPreview} durationInFrames={8 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />
     <Composition id="CheapPreview" component={CheapPreview} durationInFrames={8 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />
     <Composition id="AttnPreview" component={AttnPreview} durationInFrames={8 * ATTN_PREVIEW_SCENE} fps={30} width={1080} height={1920} />

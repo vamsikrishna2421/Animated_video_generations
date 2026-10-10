@@ -14,6 +14,7 @@ import { DISTILL_SCENES } from "./loop/DistillCrayon";
 import { CHEAP_SCENES } from "./loop/CheapCrayon";
 import { WORDS_SCENES } from "./loop/WordsCrayon";
 import { PROFILE_SCENES } from "./loop/ProfileCrayon";
+import { LAYA_SCENES } from "./loop/LayaCrayon";
 import { INTRO_SCENES } from "./Intro";
 import { EP01_ART, EP01_BOTTOM, EP01_SCENES } from "./Ep01";
 import { EP02_ART, EP02_BOTTOM, EP02_SCENES } from "./Ep02";
@@ -607,7 +608,7 @@ const Split: React.FC<SP> = ({ s, cue }) => {
 };
 
 const SCENES: Record<string, React.FC<SP>> = {
-  ...(CASE_SCENES as Record<string, React.FC<SP>>), ...(OVERFIT_SCENES as Record<string, React.FC<SP>>), ...(ATTN_SCENES as unknown as Record<string, React.FC<SP>>), ...(DISTILL_SCENES as unknown as Record<string, React.FC<SP>>), ...(CHEAP_SCENES as unknown as Record<string, React.FC<SP>>), ...(WORDS_SCENES as unknown as Record<string, React.FC<SP>>), ...(PROFILE_SCENES as unknown as Record<string, React.FC<SP>>), ...(INTRO_SCENES as Record<string, React.FC<SP>>), ...(EP01_SCENES as Record<string, React.FC<SP>>), ...(EP02_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
+  ...(CASE_SCENES as Record<string, React.FC<SP>>), ...(OVERFIT_SCENES as Record<string, React.FC<SP>>), ...(ATTN_SCENES as unknown as Record<string, React.FC<SP>>), ...(DISTILL_SCENES as unknown as Record<string, React.FC<SP>>), ...(CHEAP_SCENES as unknown as Record<string, React.FC<SP>>), ...(WORDS_SCENES as unknown as Record<string, React.FC<SP>>), ...(PROFILE_SCENES as unknown as Record<string, React.FC<SP>>), ...(LAYA_SCENES as unknown as Record<string, React.FC<SP>>), ...(INTRO_SCENES as Record<string, React.FC<SP>>), ...(EP01_SCENES as Record<string, React.FC<SP>>), ...(EP02_SCENES as Record<string, React.FC<SP>>), split: Split, lesson: LessonScene, meme: MemeScene, dialogue: Dialogue, cricket: Cricket, blame: Blame, net: Net, drake: Drake, mass: Mass, stonks: Stonks, quiz: QuizScene, outro: Outro };
 
 // ---------------- karaoke captions + speaker tag ----------------
 const chunks = (words: Word[], max = 3) => {
