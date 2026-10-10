@@ -11,14 +11,14 @@ import { browWiggle, doubleTake, ponder, exaggerate, follow, Fumble, FPose, idle
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
-type Card = { k: string; v: string; f: number };
+type Card = { k: string; v: string; f: number; drop?: boolean };
 type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string;
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string; lock?: boolean };
-const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number };
+const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 
 const Backdrop: React.FC<{ accent: string }> = ({ accent }) => {
@@ -531,6 +531,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
   const storyIdx = stories.indexOf(cur);
   const outroStart = starts[starts.length - 1];
   const followAbs = outroStart + tl.segments[tl.segments.length - 1].frames - FOLLOW_LEN;
+  const dropAt = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => starts[tl.segments.indexOf(s)] + c.f));
   return (
     <AbsoluteFill style={{ background: B.night }}>
       <BrandFonts />
@@ -547,15 +548,19 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       {starts.slice(1).map((s) => <Wipe key={s} at={s} />)}
       <Grain opacity={0.06} />
       {/* music + SFX */}
-      {/* music arc: punchy under the hook, sits back for the stories, lifts through the last story into the CTA */}
+      {/* music arc: punchy under the hook, sits back for the stories, lifts through the last story into the CTA.
+          Each story cut gets a swell in the gap before its voice; a card with `drop` ducks the bed just before its number. */}
       <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop volume={(fr) => {
         if (fr >= followAbs) return 0.8; // music-only end card: keep it as loud as the voiced CTA
-        const base = tl.look === "broadcast" ? 0.15 : 0.08;
+        const base = tl.musicBase ?? (tl.look === "broadcast" ? 0.15 : 0.08);
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
-        if (fr >= outroStart) return interpolate(fr, [outroStart, followAbs], [base * 2.2, base * 3], cl);
-        return fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.3, base * 2.2], cl) : base;
+        if (fr >= outroStart) return Math.min(1, interpolate(fr, [outroStart, followAbs], [base * 2.2, base * 3], cl));
+        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base * 1.3, base * 2.2], cl) : base;
+        const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
+        return Math.min(1, v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1));
       }} />
+      {dropAt.map((d) => <Sequence key={`d${d}`} from={d - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.32} /></Sequence>)}
       <Sequence from={0} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>
       <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>
       <Sequence from={outroStart} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.45} /></Sequence>

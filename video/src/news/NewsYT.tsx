@@ -93,7 +93,7 @@ const DotSphere: React.FC<{ cx: number; cy: number; r: number; color: string }> 
   );
 };
 
-const ColdOpen: React.FC<{ seg: Seg; range: string }> = ({ seg, range }) => {
+const ColdOpen: React.FC<{ seg: Seg; tl: NewsTimeline }> = ({ seg, tl }) => {
   const f = useCurrentFrame();
   const L = seg.frames;
   const p1 = L * 0.28, p2 = L * 0.62;
@@ -107,12 +107,12 @@ const ColdOpen: React.FC<{ seg: Seg; range: string }> = ({ seg, range }) => {
           <Glitch text="FAST" at={14} size={260} spacing={-6} />
         </AbsoluteFill>
       )}
-      {f >= p1 && f < p2 && <Orbit labs={["OPENAI", "GOOGLE", "ANTHROPIC", "META", "NVIDIA", "XAI", "TYPESAFE", "FERMION"]} at={p1} />}
+      {f >= p1 && f < p2 && <Orbit labs={tl.labs ?? ["OPENAI", "GOOGLE", "ANTHROPIC", "META", "NVIDIA", "XAI", "TYPESAFE", "FERMION"]} at={p1} />}
       {f >= p2 && (
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
-          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 34, letterSpacing: 14, color: B.rose, opacity: prog(f, p2 + 6, p2 + 14) }}>THIS WEEK IN AI</div>
-          <Glitch text="AI NEWS · 01" at={p2 + 10} size={190} />
-          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 10, color: B.cyan, opacity: prog(f, p2 + 22, p2 + 32) }}>{range}</div>
+          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 34, letterSpacing: 14, color: B.rose, opacity: prog(f, p2 + 6, p2 + 14) }}>{tl.kicker ?? "THIS WEEK IN AI"}</div>
+          <Glitch text={tl.edition} at={p2 + 10} size={tl.edition.length > 12 ? 150 : 190} />
+          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 10, color: B.cyan, opacity: prog(f, p2 + 22, p2 + 32) }}>{tl.range}</div>
         </AbsoluteFill>
       )}
       <Karaoke words={seg.words} bottom={60} size={64} max={4} />
@@ -120,7 +120,7 @@ const ColdOpen: React.FC<{ seg: Seg; range: string }> = ({ seg, range }) => {
   );
 };
 
-const Chapter: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, total }) => {
+const Chapter: React.FC<{ seg: Seg; n: number; total: number; edition: string }> = ({ seg, n, total, edition }) => {
   const f = useCurrentFrame();
   const accent = seg.accent ?? B.cyan;
   const cards = seg.cards ?? [];
@@ -136,7 +136,7 @@ const Chapter: React.FC<{ seg: Seg; n: number; total: number }> = ({ seg, n, tot
       {/* header */}
       <div style={{ position: "absolute", top: 46, left: 90, right: 90, display: "flex", alignItems: "center", gap: 18 }}>
         <LogoMark size={52} id={`yt${n}`} />
-        <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 24, letterSpacing: 4, color: "rgba(255,255,255,0.7)" }}>AI NEWS · 01</div>
+        <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 24, letterSpacing: 4, color: "rgba(255,255,255,0.7)" }}>{edition}</div>
         <div style={{ marginLeft: "auto", fontFamily: F.mono, fontWeight: 700, fontSize: 24, letterSpacing: 4, color: accent }}>CHAPTER {String(n).padStart(2, "0")} / {String(total).padStart(2, "0")}</div>
       </div>
       {/* left: story */}
@@ -235,12 +235,13 @@ export const NewsYT: React.FC<{ tl: NewsTimeline }> = ({ tl }) => {
   const total = at;
   const subAbs = starts[starts.length - 1] + segs[segs.length - 1].frames - SUB_LEN;
   const chapterStarts = starts.slice(1, -1);
+  const dropAt = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => starts[segs.indexOf(s)] + c.f));
   return (
     <AbsoluteFill style={{ background: "#03040A" }}>
       <BrandFonts />
       {segs.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <ColdOpen seg={s} range={tl.range} /> : s.name === "outro" ? <Outro seg={s} stories={stories} /> : <Chapter seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
+          {s.name === "hook" ? <ColdOpen seg={s} tl={tl} /> : s.name === "outro" ? <Outro seg={s} stories={stories} /> : <Chapter seg={s} n={stories.indexOf(s) + 1} total={stories.length} edition={tl.edition} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
@@ -255,7 +256,17 @@ export const NewsYT: React.FC<{ tl: NewsTimeline }> = ({ tl }) => {
         </div>
       )}
       <Grain opacity={0.05} />
-      <Audio src={A("loop_120")} volume={(fr) => (fr >= subAbs ? 0.3 : fr < segs[0].frames ? 0.22 : 0.08)} loop />
+      {/* music arc: up under the cold open, back for the chapters with a swell at each chapter cut and a dip before
+          a `drop` card's number, rising through the last chapter into the subscribe card */}
+      <Audio src={A(tl.music ?? "loop_120")} loop volume={(fr) => {
+        const base = tl.musicBaseYT ?? 0.08, outroS = starts[starts.length - 1], lastS = starts[starts.length - 2];
+        if (fr >= subAbs) return tl.musicBaseYT ? Math.min(1, base * 3) : 0.3;
+        if (fr < segs[0].frames) return tl.musicBaseYT ? base * 1.4 : 0.22;
+        const v = fr >= outroS ? Math.min(1, interpolate(fr, [outroS, subAbs], [base * 2, base * 3], cl)) : fr >= lastS ? interpolate(fr, [lastS, outroS], [base * 1.2, base * 2], cl) : base;
+        const swell = chapterStarts.reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2.2, 1], cl)), 1);
+        return Math.min(1, v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1));
+      }} />
+      {dropAt.map((d) => <Sequence key={`d${d}`} from={d - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.3} /></Sequence>)}
       {chapterStarts.map((s) => <Sequence key={`w${s}`} from={s} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.45} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[segs.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.3} /></Sequence>
