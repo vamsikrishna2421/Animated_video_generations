@@ -1,0 +1,305 @@
+{
+ "id": "laya1te",
+ "title": "From 1 upvote to 32,000 stars (Telugu audio)",
+ "label": "AI SPOTLIGHT",
+ "banner": "From 1 upvote to 32,000 stars",
+ "topic": "",
+ "look": "classic",
+ "tempo": 1.1,
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.8,
+ "musicPad": true,
+ "parler_lang": "te",
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "pf_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Hook",
+     "title": "1 upvote vs 1,363",
+     "notes": [
+      [
+       "2025: his Hacker News post, 1 point (his own)",
+       1
+      ],
+      [
+       "2026: 1,363 points",
+       2
+      ],
+      [
+       "Nandakishor Mukkunnoth, Kerala",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "01_hook.wav",
+     "maxgap": 0.32,
+     "text": "రెండు వేల ఇరవై ఐదులో, అతని పోస్ట్ కి ఒక్క అప్ వోట్ వచ్చింది. [1] అది కూడా అతనిదే. [2] రెండు వేల ఇరవై ఆరులో, కొత్త పోస్ట్ కి పదమూడు వందలకు పైగా. [3] ఇతను నందకిషోర్, కేరళకి చెందిన ఒక బిల్డర్.",
+     "show": "In 2025, his post got 1 upvote. [1] His own. [2] In 2026, a new one got over 1,300. [3] This is Nandakishor, a builder from Kerala.",
+     "pauses": {
+      "2": 0.4
+     }
+    }
+   ]
+  },
+  {
+   "id": "y2025",
+   "type": "pf_2025",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "2025",
+     "title": "An AI that picks, not writes",
+     "notes": [
+      [
+       "Mar 2025: paper on a model that outputs a probability, not text",
+       0
+      ],
+      [
+       "Example: will this customer buy?",
+       1
+      ],
+      [
+       "May 2025 post: 1 point, 0 comments",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "02_2025.wav",
+     "maxgap": 0.32,
+     "text": "రెండు వేల ఇరవై ఐదు మార్చిలో, అతను పేరాగ్రాఫ్స్ రాయని ఒక ఎ ఐ మోడల్ ని పబ్లిష్ చేశాడు. [1] అది ఒక సమాధానాన్ని ఎంచుకుంటుంది, 'ఈ కస్టమర్ కొంటాడా?' లాంటి ప్రశ్నకి, ఒక ప్రాబబిలిటీ తో. [2] దాదాపు ఎవరూ గమనించలేదు.",
+     "show": "In March 2025, he published an AI model that doesn't write paragraphs. [1] It picks an answer, like 'will this customer buy?', with a probability. [2] Almost nobody noticed."
+    }
+   ]
+  },
+  {
+   "id": "jev",
+   "type": "pf_jev",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Jev",
+     "title": "A $40M launch",
+     "notes": [
+      [
+       "15 Sep 2026: TypeSafe AI launches Jev",
+       1
+      ],
+      [
+       "$40M seed round",
+       1
+      ],
+      [
+       "Also picks answers instead of writing",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "03_jev.wav",
+     "maxgap": 0.32,
+     "text": "రెండు వేల ఇరవై ఆరు సెప్టెంబర్ లో, [1] నలభై మిలియన్ డాలర్లు ఉన్న ఒక స్టార్టప్ జెవ్ ని లాంచ్ చేసింది, [2] అది కూడా రాయకుండా సమాధానాలు ఎంచుకునే ఎ ఐ, [3] దానికి హెడ్ లైన్స్ వచ్చాయి.",
+     "show": "In September 2026, [1] a startup with $40 million launched Jev, [2] an AI that also picks answers instead of writing, [3] and it made headlines."
+    }
+   ]
+  },
+  {
+   "id": "laya",
+   "type": "pf_laya",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Laya",
+     "title": "Three days later",
+     "notes": [
+      [
+       "18 Sep 2026: Laya, free and open source (Apache-2.0)",
+       1
+      ],
+      [
+       "He says he had the core idea first",
+       2
+      ],
+      [
+       "Critics: only partly true",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "04_laya.wav",
+     "maxgap": 0.32,
+     "text": "మూడు రోజుల తర్వాత, అతను లయ ని రిలీజ్ చేశాడు: [1] ఎవరైనా వాడుకోగల ఫ్రీ, ఓపెన్ సోర్స్ ఆల్టర్నేటివ్. [2] ఈ ఐడియా ముందు తనదే అని అతను అంటాడు. [3] అది పాక్షికంగానే నిజం అని విమర్శకులు అంటారు. [4] ఏమైనా, ఈసారి ప్రపంచం గమనించింది.",
+     "show": "Three days later, he released Laya: [1] a free, open-source alternative anyone can run. [2] He says he had the core idea first. [3] Critics say that's only partly true. [4] Either way, the world noticed."
+    }
+   ]
+  },
+  {
+   "id": "numbers",
+   "type": "pf_numbers",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "The numbers",
+     "title": "Three weeks later",
+     "notes": [
+      [
+       "Hacker News: 1,363 points",
+       0
+      ],
+      [
+       "GitHub: 32,100 stars",
+       1
+      ],
+      [
+       "~317,000 downloads (PyPI, 18 Sep - 9 Oct)",
+       2
+      ],
+      [
+       "10+ research papers cite or test it",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "05_numbers.wav",
+     "maxgap": 0.32,
+     "text": "హ్యాకర్ న్యూస్ లో పదమూడు వందలకు పైగా పాయింట్లు. [1] గిట్ హబ్ లో ముప్పై రెండు వేల స్టార్స్. [2] మూడు వారాల్లో మూడు లక్షల డౌన్ లోడ్స్. [3] కనీసం పది రీసెర్చ్ పేపర్లు ఇప్పటికే దీన్ని సైట్ లేదా టెస్ట్ చేశాయి.",
+     "show": "Over 1,300 points on Hacker News. [1] 32,000 GitHub stars. [2] 300,000 downloads in 3 weeks. [3] And at least 10 research papers already cite or test it."
+    }
+   ]
+  },
+  {
+   "id": "who",
+   "type": "pf_who",
+   "tail": 0.3,
+   "drop_cue": 2,
+   "data": {
+    "yt": {
+     "chapter": "Who he is",
+     "title": "Kasaragod, Kerala",
+     "notes": [
+      [
+       "CEO, Convai Innovations, Kasaragod",
+       0
+      ],
+      [
+       "He says: family earned Rs 200-300 a day in 2008",
+       1
+      ],
+      [
+       "He says: got into a top institute, couldn't afford it",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "06_who.wav",
+     "maxgap": 0.32,
+     "text": "అతను కేరళ లోని కాసరగోడ్ లో ఒక ఎ ఐ స్టార్టప్ నడుపుతున్నాడు. [1] రెండు వేల ఎనిమిదిలో తమ కుటుంబం రోజుకి రెండు మూడు వందల రూపాయలు సంపాదించేదని ఒక ఇంటర్వ్యూలో చెప్పాడు. [2] ఒక టాప్ సైన్స్ ఇన్స్టిట్యూట్ లో సీటు వచ్చినా, ఫీజు కట్టలేకపోయాడు, [3] అందుకే కన్నూర్ లో ఇంజనీరింగ్ చదివాడు.",
+     "show": "He runs an AI startup in Kasaragod, Kerala. [1] In an interview, he said his family earned ₹200-300 a day in 2008. [2] He got into a top science institute but couldn't afford it, [3] and studied engineering in Kannur instead."
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "type": "pf_work",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "His work",
+     "title": "Before and beyond Laya",
+     "notes": [
+      [
+       "Peer-reviewed: AI reading ECGs (BMJ Digital Health & AI, 2025)",
+       1
+      ],
+      [
+       "6 arXiv preprints in 2025",
+       2
+      ],
+      [
+       "Hindi language models; Nadhi Audit (offline code security)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "07_work.wav",
+     "maxgap": 0.32,
+     "text": "అప్పటినుంచి: [1] గుండె ఈ సి జి లను చదివే ఎ ఐ పై ఒక పీర్ రివ్యూడ్ పేపర్, [2] ఒక్క సంవత్సరంలో ఆరు రీసెర్చ్ పేపర్లు, [3] హిందీ లాంగ్వేజ్ మోడల్స్, ఇంకా ఒక ఆఫ్ లైన్ కోడ్ సెక్యూరిటీ యాప్.",
+     "show": "Since then: [1] a peer-reviewed paper on AI that reads heart ECGs, [2] six research papers in one year, [3] Hindi language models, and an offline code-security app."
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "type": "pf_cta",
+   "tail": 0.6,
+   "outro": true,
+   "data": {
+    "handle": "@ai_maastaaru_telugu",
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Tag a builder",
+     "notes": [
+      [
+       "Laya: free on GitHub (pip install laya)",
+       0
+      ],
+      [
+       "Tag a friend building something nobody has noticed yet",
+       1
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "file": "08_cta.wav",
+     "maxgap": 0.32,
+     "text": "ఇలాంటి బిల్డర్స్ అన్ని చోట్లా ఉన్నారు. [1] ఇంకా ఎవరూ గమనించని ఏదో ఒకటి తయారు చేస్తున్న మీ ఫ్రెండ్ ని ట్యాగ్ చేయండి.",
+     "show": "Builders like him are everywhere. [1] Tag a friend who's building something nobody has noticed yet."
+    }
+   ]
+  }
+ ],
+ "captionMode": "phrase",
+ "handle": "@ai_maastaaru_telugu"
+}
