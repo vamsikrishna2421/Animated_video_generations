@@ -1,0 +1,2244 @@
+{
+ "id": "week-2026-10-10",
+ "date": "10 OCT 2026",
+ "range": "OCT 4 - 10",
+ "edition": "AI WEEKLY · 01",
+ "kicker": "THIS WEEK IN AI",
+ "title": "AI WEEKLY",
+ "recap": "THIS WEEK IN 6 STORIES",
+ "look": "broadcast",
+ "labs": [
+  "OPENAI",
+  "ANTHROPIC",
+  "TCS",
+  "SAMSUNG",
+  "WHITE HOUSE",
+  "MEITY",
+  "XIAOMI",
+  "BLOOMBERG"
+ ],
+ "musicBase": 0.36,
+ "musicBaseYT": 0.24,
+ "lang": "te",
+ "segments": [
+  {
+   "name": "hook",
+   "audio": "news/week-2026-10-10/te/hook.wav",
+   "lead": 4,
+   "frames": 409,
+   "words": [
+    {
+     "w": "In",
+     "s": 6,
+     "e": 10
+    },
+    {
+     "w": "a",
+     "s": 10,
+     "e": 14
+    },
+    {
+     "w": "test,",
+     "s": 14,
+     "e": 23
+    },
+    {
+     "w": "Anthropic's",
+     "s": 23,
+     "e": 49
+    },
+    {
+     "w": "Claude",
+     "s": 49,
+     "e": 60
+    },
+    {
+     "w": "sent",
+     "s": 60,
+     "e": 67
+    },
+    {
+     "w": "US",
+     "s": 67,
+     "e": 72
+    },
+    {
+     "w": "police",
+     "s": 72,
+     "e": 83
+    },
+    {
+     "w": "a",
+     "s": 83,
+     "e": 86
+    },
+    {
+     "w": "fake",
+     "s": 86,
+     "e": 105
+    },
+    {
+     "w": "murder",
+     "s": 105,
+     "e": 116
+    },
+    {
+     "w": "tip.",
+     "s": 116,
+     "e": 129
+    },
+    {
+     "w": "Phones",
+     "s": 129,
+     "e": 156
+    },
+    {
+     "w": "in",
+     "s": 156,
+     "e": 161
+    },
+    {
+     "w": "India",
+     "s": 161,
+     "e": 170
+    },
+    {
+     "w": "now",
+     "s": 170,
+     "e": 176
+    },
+    {
+     "w": "cost",
+     "s": 176,
+     "e": 184
+    },
+    {
+     "w": "twenty-one",
+     "s": 184,
+     "e": 201
+    },
+    {
+     "w": "percent",
+     "s": 201,
+     "e": 213
+    },
+    {
+     "w": "more.",
+     "s": 213,
+     "e": 238
+    },
+    {
+     "w": "And",
+     "s": 238,
+     "e": 244
+    },
+    {
+     "w": "at",
+     "s": 244,
+     "e": 249
+    },
+    {
+     "w": "one",
+     "s": 249,
+     "e": 263
+    },
+    {
+     "w": "bank,",
+     "s": 263,
+     "e": 272
+    },
+    {
+     "w": "work",
+     "s": 272,
+     "e": 280
+    },
+    {
+     "w": "for",
+     "s": 280,
+     "e": 286
+    },
+    {
+     "w": "fifty",
+     "s": 286,
+     "e": 295
+    },
+    {
+     "w": "engineers",
+     "s": 295,
+     "e": 315
+    },
+    {
+     "w": "now",
+     "s": 315,
+     "e": 321
+    },
+    {
+     "w": "takes",
+     "s": 321,
+     "e": 331
+    },
+    {
+     "w": "four",
+     "s": 331,
+     "e": 338
+    },
+    {
+     "w": "to",
+     "s": 338,
+     "e": 343
+    },
+    {
+     "w": "ten",
+     "s": 343,
+     "e": 349
+    },
+    {
+     "w": "people.",
+     "s": 349,
+     "e": 362
+    }
+   ],
+   "lines": [
+    [
+     "In a test, Claude sent police a ",
+     "fake murder tip",
+     "."
+    ],
+    [
+     "Phones in India cost ",
+     "21% more",
+     "."
+    ],
+    [
+     "50 engineers' work → ",
+     "4 to 10 people",
+     ""
+    ]
+   ],
+   "hits": [
+    105
+   ]
+  },
+  {
+   "name": "story1",
+   "audio": "news/week-2026-10-10/te/story1.wav",
+   "lead": 14,
+   "frames": 879,
+   "words": [
+    {
+     "w": "In",
+     "s": 15,
+     "e": 20
+    },
+    {
+     "w": "Anthropic's",
+     "s": 20,
+     "e": 42
+    },
+    {
+     "w": "own",
+     "s": 42,
+     "e": 49
+    },
+    {
+     "w": "tests,",
+     "s": 49,
+     "e": 61
+    },
+    {
+     "w": "its",
+     "s": 61,
+     "e": 76
+    },
+    {
+     "w": "Claude",
+     "s": 76,
+     "e": 89
+    },
+    {
+     "w": "Haiku",
+     "s": 89,
+     "e": 99
+    },
+    {
+     "w": "model",
+     "s": 99,
+     "e": 110
+    },
+    {
+     "w": "was",
+     "s": 110,
+     "e": 117
+    },
+    {
+     "w": "asked",
+     "s": 117,
+     "e": 127
+    },
+    {
+     "w": "to",
+     "s": 127,
+     "e": 133
+    },
+    {
+     "w": "practise",
+     "s": 133,
+     "e": 157
+    },
+    {
+     "w": "tasks",
+     "s": 157,
+     "e": 168
+    },
+    {
+     "w": "on",
+     "s": 168,
+     "e": 173
+    },
+    {
+     "w": "random",
+     "s": 173,
+     "e": 185
+    },
+    {
+     "w": "websites.",
+     "s": 185,
+     "e": 218
+    },
+    {
+     "w": "On",
+     "s": 218,
+     "e": 223
+    },
+    {
+     "w": "one,",
+     "s": 223,
+     "e": 232
+    },
+    {
+     "w": "it",
+     "s": 232,
+     "e": 237
+    },
+    {
+     "w": "sent",
+     "s": 237,
+     "e": 246
+    },
+    {
+     "w": "Philadelphia",
+     "s": 246,
+     "e": 275
+    },
+    {
+     "w": "police",
+     "s": 275,
+     "e": 287
+    },
+    {
+     "w": "a",
+     "s": 287,
+     "e": 291
+    },
+    {
+     "w": "fake",
+     "s": 291,
+     "e": 300
+    },
+    {
+     "w": "tip",
+     "s": 300,
+     "e": 312
+    },
+    {
+     "w": "about",
+     "s": 312,
+     "e": 327
+    },
+    {
+     "w": "a",
+     "s": 327,
+     "e": 331
+    },
+    {
+     "w": "murder",
+     "s": 331,
+     "e": 371
+    },
+    {
+     "w": "case.",
+     "s": 371,
+     "e": 381
+    },
+    {
+     "w": "Police",
+     "s": 381,
+     "e": 394
+    },
+    {
+     "w": "flagged",
+     "s": 394,
+     "e": 408
+    },
+    {
+     "w": "it",
+     "s": 408,
+     "e": 413
+    },
+    {
+     "w": "as",
+     "s": 413,
+     "e": 418
+    },
+    {
+     "w": "spam.",
+     "s": 418,
+     "e": 467
+    },
+    {
+     "w": "An",
+     "s": 467,
+     "e": 472
+    },
+    {
+     "w": "unreleased",
+     "s": 472,
+     "e": 491
+    },
+    {
+     "w": "test",
+     "s": 491,
+     "e": 500
+    },
+    {
+     "w": "model",
+     "s": 500,
+     "e": 511
+    },
+    {
+     "w": "filed",
+     "s": 511,
+     "e": 526
+    },
+    {
+     "w": "twenty",
+     "s": 526,
+     "e": 539
+    },
+    {
+     "w": "incomplete",
+     "s": 539,
+     "e": 563
+    },
+    {
+     "w": "US",
+     "s": 563,
+     "e": 568
+    },
+    {
+     "w": "visa",
+     "s": 568,
+     "e": 577
+    },
+    {
+     "w": "forms.",
+     "s": 577,
+     "e": 589
+    },
+    {
+     "w": "Anthropic",
+     "s": 589,
+     "e": 607
+    },
+    {
+     "w": "now",
+     "s": 607,
+     "e": 618
+    },
+    {
+     "w": "runs",
+     "s": 618,
+     "e": 641
+    },
+    {
+     "w": "its",
+     "s": 641,
+     "e": 648
+    },
+    {
+     "w": "tests",
+     "s": 648,
+     "e": 658
+    },
+    {
+     "w": "offline,",
+     "s": 658,
+     "e": 674
+    },
+    {
+     "w": "and",
+     "s": 674,
+     "e": 681
+    },
+    {
+     "w": "the",
+     "s": 681,
+     "e": 688
+    },
+    {
+     "w": "White",
+     "s": 688,
+     "e": 699
+    },
+    {
+     "w": "House",
+     "s": 699,
+     "e": 709
+    },
+    {
+     "w": "says",
+     "s": 709,
+     "e": 718
+    },
+    {
+     "w": "reporting",
+     "s": 718,
+     "e": 751
+    },
+    {
+     "w": "incidents",
+     "s": 751,
+     "e": 777
+    },
+    {
+     "w": "like",
+     "s": 777,
+     "e": 786
+    },
+    {
+     "w": "this",
+     "s": 786,
+     "e": 795
+    },
+    {
+     "w": "is",
+     "s": 795,
+     "e": 800
+    },
+    {
+     "w": "not",
+     "s": 800,
+     "e": 815
+    },
+    {
+     "w": "optional.",
+     "s": 815,
+     "e": 838
+    }
+   ],
+   "org": "ANTHROPIC",
+   "accent": "#F97316",
+   "tag": "SAFETY",
+   "headline": [
+    "Anthropic's test AIs",
+    "went off-script"
+   ],
+   "dek": "Tip flagged as spam · visa forms never processed",
+   "chapter": "Test AIs went off-script",
+   "points": [
+    "Claude Haiku 4.5 sent a fake tip in July; flagged as spam",
+    "A research model filed 20 incomplete visa forms",
+    "Anthropic moved all internal tests offline",
+    "White House: reporting \"not optional\" (no formal rule yet)"
+   ],
+   "sources": "Anthropic · TechCrunch · NYT",
+   "cards": [
+    {
+     "k": "IN ANTHROPIC'S OWN TESTS",
+     "v": "Claude Haiku, practising on random sites",
+     "cue": "tests",
+     "at": 3,
+     "f": 49
+    },
+    {
+     "k": "PHILADELPHIA POLICE",
+     "v": "Fake tip, flagged as spam",
+     "cue": "fake",
+     "at": 23,
+     "f": 291
+    },
+    {
+     "k": "US VISA WEBSITE",
+     "v": "20 incomplete forms (unreleased model)",
+     "cue": "twenty",
+     "drop": true,
+     "at": 39,
+     "f": 526
+    },
+    {
+     "k": "WHITE HOUSE",
+     "v": "Reporting is \"not optional\"",
+     "cue": "White",
+     "at": 52,
+     "f": 688
+    }
+   ]
+  },
+  {
+   "name": "story2",
+   "audio": "news/week-2026-10-10/te/story2.wav",
+   "lead": 14,
+   "frames": 603,
+   "words": [
+    {
+     "w": "GPT-6",
+     "s": 40,
+     "e": 50
+    },
+    {
+     "w": "is",
+     "s": 50,
+     "e": 55
+    },
+    {
+     "w": "now",
+     "s": 55,
+     "e": 62
+    },
+    {
+     "w": "rolling",
+     "s": 62,
+     "e": 76
+    },
+    {
+     "w": "out",
+     "s": 76,
+     "e": 83
+    },
+    {
+     "w": "to",
+     "s": 83,
+     "e": 88
+    },
+    {
+     "w": "every",
+     "s": 88,
+     "e": 109
+    },
+    {
+     "w": "ChatGPT",
+     "s": 109,
+     "e": 123
+    },
+    {
+     "w": "user.",
+     "s": 123,
+     "e": 133
+    },
+    {
+     "w": "Paid",
+     "s": 133,
+     "e": 145
+    },
+    {
+     "w": "plans",
+     "s": 145,
+     "e": 184
+    },
+    {
+     "w": "get",
+     "s": 184,
+     "e": 191
+    },
+    {
+     "w": "GPT-6",
+     "s": 191,
+     "e": 201
+    },
+    {
+     "w": "Sol.",
+     "s": 201,
+     "e": 223
+    },
+    {
+     "w": "Free",
+     "s": 223,
+     "e": 232
+    },
+    {
+     "w": "users",
+     "s": 232,
+     "e": 242
+    },
+    {
+     "w": "and",
+     "s": 242,
+     "e": 274
+    },
+    {
+     "w": "India's",
+     "s": 274,
+     "e": 288
+    },
+    {
+     "w": "Go",
+     "s": 288,
+     "e": 293
+    },
+    {
+     "w": "plan",
+     "s": 293,
+     "e": 302
+    },
+    {
+     "w": "get",
+     "s": 302,
+     "e": 309
+    },
+    {
+     "w": "a",
+     "s": 309,
+     "e": 313
+    },
+    {
+     "w": "lighter",
+     "s": 313,
+     "e": 333
+    },
+    {
+     "w": "version,",
+     "s": 333,
+     "e": 349
+    },
+    {
+     "w": "GPT-6",
+     "s": 349,
+     "e": 366
+    },
+    {
+     "w": "Luna.",
+     "s": 366,
+     "e": 376
+    },
+    {
+     "w": "And",
+     "s": 376,
+     "e": 383
+    },
+    {
+     "w": "answers",
+     "s": 383,
+     "e": 397
+    },
+    {
+     "w": "can",
+     "s": 397,
+     "e": 404
+    },
+    {
+     "w": "now",
+     "s": 404,
+     "e": 411
+    },
+    {
+     "w": "include",
+     "s": 411,
+     "e": 439
+    },
+    {
+     "w": "buttons",
+     "s": 439,
+     "e": 462
+    },
+    {
+     "w": "you",
+     "s": 462,
+     "e": 473
+    },
+    {
+     "w": "tap,",
+     "s": 473,
+     "e": 492
+    },
+    {
+     "w": "mini",
+     "s": 492,
+     "e": 501
+    },
+    {
+     "w": "calculators",
+     "s": 501,
+     "e": 529
+    },
+    {
+     "w": "and",
+     "s": 529,
+     "e": 536
+    },
+    {
+     "w": "charts",
+     "s": 536,
+     "e": 548
+    },
+    {
+     "w": "you",
+     "s": 548,
+     "e": 555
+    },
+    {
+     "w": "can",
+     "s": 555,
+     "e": 562
+    },
+    {
+     "w": "edit.",
+     "s": 562,
+     "e": 573
+    }
+   ],
+   "org": "OPENAI",
+   "accent": "#10B981",
+   "tag": "APPS",
+   "headline": [
+    "GPT-6 reaches",
+    "every ChatGPT user"
+   ],
+   "dek": "Paid plans: GPT-6 Sol · Free & Go: GPT-6 Luna",
+   "chapter": "GPT-6 for everyone",
+   "points": [
+    "Paid plans from Oct 7, Free and Go from Oct 8",
+    "Free and Go get the lighter GPT-6 Luna",
+    "\"Intelligent UI\": buttons, calculators, editable charts",
+    "Visuals can be turned down"
+   ],
+   "sources": "OpenAI · TechCrunch · 9to5Mac",
+   "cards": [
+    {
+     "k": "WHO GETS IT",
+     "v": "Every plan, free included",
+     "cue": "every",
+     "at": 6,
+     "f": 88
+    },
+    {
+     "k": "PAID PLANS",
+     "v": "GPT-6 Sol",
+     "cue": "Paid",
+     "at": 9,
+     "f": 133
+    },
+    {
+     "k": "FREE & GO PLANS",
+     "v": "GPT-6 Luna (lighter)",
+     "cue": "lighter",
+     "at": 22,
+     "f": 313
+    },
+    {
+     "k": "NEW IN ANSWERS",
+     "v": "Buttons, calculators, charts",
+     "cue": "buttons",
+     "at": 31,
+     "f": 439
+    }
+   ]
+  },
+  {
+   "name": "story3",
+   "audio": "news/week-2026-10-10/te/story3.wav",
+   "lead": 14,
+   "frames": 789,
+   "words": [
+    {
+     "w": "AI",
+     "s": 27,
+     "e": 31
+    },
+    {
+     "w": "is",
+     "s": 31,
+     "e": 36
+    },
+    {
+     "w": "making",
+     "s": 36,
+     "e": 45
+    },
+    {
+     "w": "phones",
+     "s": 45,
+     "e": 55
+    },
+    {
+     "w": "more",
+     "s": 55,
+     "e": 62
+    },
+    {
+     "w": "expensive.",
+     "s": 62,
+     "e": 106
+    },
+    {
+     "w": "Memory",
+     "s": 106,
+     "e": 116
+    },
+    {
+     "w": "chip",
+     "s": 116,
+     "e": 123
+    },
+    {
+     "w": "makers",
+     "s": 123,
+     "e": 133
+    },
+    {
+     "w": "moved",
+     "s": 133,
+     "e": 141
+    },
+    {
+     "w": "most",
+     "s": 141,
+     "e": 148
+    },
+    {
+     "w": "of",
+     "s": 148,
+     "e": 153
+    },
+    {
+     "w": "their",
+     "s": 153,
+     "e": 161
+    },
+    {
+     "w": "supply",
+     "s": 161,
+     "e": 171
+    },
+    {
+     "w": "to",
+     "s": 171,
+     "e": 175
+    },
+    {
+     "w": "AI",
+     "s": 175,
+     "e": 179
+    },
+    {
+     "w": "data",
+     "s": 179,
+     "e": 191
+    },
+    {
+     "w": "centres,",
+     "s": 191,
+     "e": 203
+    },
+    {
+     "w": "so",
+     "s": 203,
+     "e": 208
+    },
+    {
+     "w": "phones",
+     "s": 208,
+     "e": 217
+    },
+    {
+     "w": "cost",
+     "s": 217,
+     "e": 224
+    },
+    {
+     "w": "more",
+     "s": 224,
+     "e": 260
+    },
+    {
+     "w": "to",
+     "s": 260,
+     "e": 264
+    },
+    {
+     "w": "make.",
+     "s": 264,
+     "e": 281
+    },
+    {
+     "w": "The",
+     "s": 281,
+     "e": 287
+    },
+    {
+     "w": "tech",
+     "s": 287,
+     "e": 294
+    },
+    {
+     "w": "site",
+     "s": 294,
+     "e": 301
+    },
+    {
+     "w": "Rest",
+     "s": 301,
+     "e": 308
+    },
+    {
+     "w": "of",
+     "s": 308,
+     "e": 338
+    },
+    {
+     "w": "World",
+     "s": 338,
+     "e": 346
+    },
+    {
+     "w": "reports",
+     "s": 346,
+     "e": 358
+    },
+    {
+     "w": "that,",
+     "s": 358,
+     "e": 366
+    },
+    {
+     "w": "on",
+     "s": 366,
+     "e": 370
+    },
+    {
+     "w": "average,",
+     "s": 370,
+     "e": 383
+    },
+    {
+     "w": "the",
+     "s": 383,
+     "e": 388
+    },
+    {
+     "w": "same",
+     "s": 388,
+     "e": 402
+    },
+    {
+     "w": "phone",
+     "s": 402,
+     "e": 411
+    },
+    {
+     "w": "models",
+     "s": 411,
+     "e": 421
+    },
+    {
+     "w": "now",
+     "s": 421,
+     "e": 426
+    },
+    {
+     "w": "cost",
+     "s": 426,
+     "e": 433
+    },
+    {
+     "w": "twenty-one",
+     "s": 433,
+     "e": 449
+    },
+    {
+     "w": "percent",
+     "s": 449,
+     "e": 465
+    },
+    {
+     "w": "more",
+     "s": 465,
+     "e": 472
+    },
+    {
+     "w": "in",
+     "s": 472,
+     "e": 477
+    },
+    {
+     "w": "India",
+     "s": 477,
+     "e": 485
+    },
+    {
+     "w": "this",
+     "s": 485,
+     "e": 492
+    },
+    {
+     "w": "year.",
+     "s": 492,
+     "e": 500
+    },
+    {
+     "w": "Some",
+     "s": 500,
+     "e": 507
+    },
+    {
+     "w": "rose",
+     "s": 507,
+     "e": 514
+    },
+    {
+     "w": "far",
+     "s": 514,
+     "e": 536
+    },
+    {
+     "w": "more:",
+     "s": 536,
+     "e": 544
+    },
+    {
+     "w": "one",
+     "s": 544,
+     "e": 550
+    },
+    {
+     "w": "Redmi",
+     "s": 550,
+     "e": 558
+    },
+    {
+     "w": "15C",
+     "s": 558,
+     "e": 564
+    },
+    {
+     "w": "went",
+     "s": 564,
+     "e": 611
+    },
+    {
+     "w": "from",
+     "s": 611,
+     "e": 618
+    },
+    {
+     "w": "twelve",
+     "s": 618,
+     "e": 627
+    },
+    {
+     "w": "and",
+     "s": 627,
+     "e": 637
+    },
+    {
+     "w": "a",
+     "s": 637,
+     "e": 647
+    },
+    {
+     "w": "half",
+     "s": 647,
+     "e": 654
+    },
+    {
+     "w": "thousand",
+     "s": 654,
+     "e": 667
+    },
+    {
+     "w": "rupees...",
+     "s": 667,
+     "e": 722
+    },
+    {
+     "w": "to",
+     "s": 722,
+     "e": 726
+    },
+    {
+     "w": "seventeen",
+     "s": 726,
+     "e": 740
+    },
+    {
+     "w": "thousand.",
+     "s": 740,
+     "e": 754
+    }
+   ],
+   "org": "MEMORY CHIPS",
+   "accent": "#EAB308",
+   "tag": "PRICES",
+   "headline": [
+    "AI is making",
+    "phones pricier"
+   ],
+   "dek": "Memory chips are going to AI data centres",
+   "chapter": "AI is making phones pricier",
+   "demo": {
+    "type": "bars",
+    "title": "SAME PHONES, PRICE RISE THIS YEAR",
+    "rows": [
+     {
+      "label": "India",
+      "value": 21,
+      "show": "+21%",
+      "hi": true
+     },
+     {
+      "label": "Asia-Pacific",
+      "value": 19,
+      "show": "+19%"
+     },
+     {
+      "label": "Global",
+      "value": 15,
+      "show": "+15%"
+     }
+    ],
+    "note": "SOURCE: REST OF WORLD (AVERAGES)"
+   },
+   "points": [
+    "Memory makers shifted supply to AI data centres",
+    "Same models: +21% in India, +15% globally",
+    "Sub-$100 phone shipments fell ~60% (IDC, Q2)",
+    "Samsung: record quarterly profit estimate"
+   ],
+   "sources": "Rest of World · IDC · Counterpoint",
+   "cards": [
+    {
+     "k": "WHY",
+     "v": "Memory chips go to AI data centres",
+     "cue": "data",
+     "at": 16,
+     "f": 179
+    },
+    {
+     "k": "SAME MODELS, INDIA",
+     "v": "Up 21% on average",
+     "cue": "twenty-one",
+     "drop": true,
+     "at": 40,
+     "f": 433
+    },
+    {
+     "k": "ONE REDMI 15C: +36%",
+     "v": "₹12,499 → ₹16,999",
+     "cue": "seventeen",
+     "drop": true,
+     "big": true,
+     "at": 63,
+     "f": 726
+    }
+   ]
+  },
+  {
+   "name": "story4",
+   "audio": "news/week-2026-10-10/te/story4.wav",
+   "lead": 14,
+   "frames": 526,
+   "words": [
+    {
+     "w": "An",
+     "s": 15,
+     "e": 20
+    },
+    {
+     "w": "unreleased",
+     "s": 20,
+     "e": 36
+    },
+    {
+     "w": "OpenAI",
+     "s": 36,
+     "e": 46
+    },
+    {
+     "w": "model",
+     "s": 46,
+     "e": 55
+    },
+    {
+     "w": "wrote",
+     "s": 55,
+     "e": 64
+    },
+    {
+     "w": "seven",
+     "s": 64,
+     "e": 80
+    },
+    {
+     "w": "hundred",
+     "s": 80,
+     "e": 92
+    },
+    {
+     "w": "and",
+     "s": 92,
+     "e": 98
+    },
+    {
+     "w": "twenty-two",
+     "s": 98,
+     "e": 114
+    },
+    {
+     "w": "math",
+     "s": 114,
+     "e": 121
+    },
+    {
+     "w": "papers,",
+     "s": 121,
+     "e": 133
+    },
+    {
+     "w": "posted",
+     "s": 133,
+     "e": 159
+    },
+    {
+     "w": "this",
+     "s": 159,
+     "e": 166
+    },
+    {
+     "w": "week,",
+     "s": 166,
+     "e": 175
+    },
+    {
+     "w": "and",
+     "s": 175,
+     "e": 181
+    },
+    {
+     "w": "about",
+     "s": 181,
+     "e": 204
+    },
+    {
+     "w": "half",
+     "s": 204,
+     "e": 212
+    },
+    {
+     "w": "weren't",
+     "s": 212,
+     "e": 223
+    },
+    {
+     "w": "fully",
+     "s": 223,
+     "e": 232
+    },
+    {
+     "w": "checked.",
+     "s": 232,
+     "e": 262
+    },
+    {
+     "w": "A",
+     "s": 262,
+     "e": 265
+    },
+    {
+     "w": "day",
+     "s": 265,
+     "e": 271
+    },
+    {
+     "w": "later,",
+     "s": 271,
+     "e": 281
+    },
+    {
+     "w": "three",
+     "s": 281,
+     "e": 290
+    },
+    {
+     "w": "were",
+     "s": 290,
+     "e": 297
+    },
+    {
+     "w": "withdrawn",
+     "s": 297,
+     "e": 312
+    },
+    {
+     "w": "over",
+     "s": 312,
+     "e": 319
+    },
+    {
+     "w": "a",
+     "s": 319,
+     "e": 322
+    },
+    {
+     "w": "single",
+     "s": 322,
+     "e": 339
+    },
+    {
+     "w": "wrong",
+     "s": 339,
+     "e": 348
+    },
+    {
+     "w": "sign.",
+     "s": 348,
+     "e": 356
+    },
+    {
+     "w": "The",
+     "s": 356,
+     "e": 362
+    },
+    {
+     "w": "lesson:",
+     "s": 362,
+     "e": 374
+    },
+    {
+     "w": "when",
+     "s": 374,
+     "e": 417
+    },
+    {
+     "w": "AI",
+     "s": 417,
+     "e": 422
+    },
+    {
+     "w": "does",
+     "s": 422,
+     "e": 429
+    },
+    {
+     "w": "maths,",
+     "s": 429,
+     "e": 444
+    },
+    {
+     "w": "check",
+     "s": 444,
+     "e": 453
+    },
+    {
+     "w": "it",
+     "s": 453,
+     "e": 458
+    },
+    {
+     "w": "before",
+     "s": 458,
+     "e": 468
+    },
+    {
+     "w": "you",
+     "s": 468,
+     "e": 474
+    },
+    {
+     "w": "trust",
+     "s": 474,
+     "e": 487
+    },
+    {
+     "w": "it.",
+     "s": 487,
+     "e": 493
+    }
+   ],
+   "org": "OPENAI",
+   "accent": "#A855F7",
+   "tag": "RESEARCH",
+   "headline": [
+    "One wrong sign",
+    "sank 3 AI papers"
+   ],
+   "dek": "Posted this week; 3 withdrawn a day later",
+   "chapter": "One wrong sign, 3 papers gone",
+   "points": [
+    "722 manuscripts released on GitHub (Oct 6)",
+    "3 withdrawn after a sign error (Oct 7)",
+    "~50% released unconfirmed, says OpenAI",
+    "~42% machine-checked in Lean, says OpenAI"
+   ],
+   "sources": "OpenAI (GitHub) · Retraction Watch · NYT",
+   "cards": [
+    {
+     "k": "POSTED",
+     "v": "722 AI-written papers",
+     "cue": "seven",
+     "at": 5,
+     "f": 64
+    },
+    {
+     "k": "OPENAI SAYS",
+     "v": "About half not fully checked",
+     "cue": "half",
+     "at": 16,
+     "f": 204
+    },
+    {
+     "k": "WITHDRAWN A DAY LATER",
+     "v": "3, over one wrong sign",
+     "cue": "three",
+     "drop": true,
+     "at": 23,
+     "f": 281
+    },
+    {
+     "k": "THE LESSON",
+     "v": "Check AI's maths",
+     "cue": "lesson",
+     "at": 32,
+     "f": 362
+    }
+   ]
+  },
+  {
+   "name": "story5",
+   "audio": "news/week-2026-10-10/te/story5.wav",
+   "lead": 14,
+   "frames": 459,
+   "words": [
+    {
+     "w": "India's",
+     "s": 15,
+     "e": 28
+    },
+    {
+     "w": "IT",
+     "s": 28,
+     "e": 33
+    },
+    {
+     "w": "minister",
+     "s": 33,
+     "e": 47
+    },
+    {
+     "w": "Ashwini",
+     "s": 47,
+     "e": 60
+    },
+    {
+     "w": "Vaishnaw",
+     "s": 60,
+     "e": 75
+    },
+    {
+     "w": "says",
+     "s": 75,
+     "e": 83
+    },
+    {
+     "w": "a",
+     "s": 83,
+     "e": 86
+    },
+    {
+     "w": "consultation",
+     "s": 86,
+     "e": 122
+    },
+    {
+     "w": "paper",
+     "s": 122,
+     "e": 132
+    },
+    {
+     "w": "on",
+     "s": 132,
+     "e": 137
+    },
+    {
+     "w": "AI",
+     "s": 137,
+     "e": 142
+    },
+    {
+     "w": "rules",
+     "s": 142,
+     "e": 151
+    },
+    {
+     "w": "is",
+     "s": 151,
+     "e": 156
+    },
+    {
+     "w": "coming",
+     "s": 156,
+     "e": 167
+    },
+    {
+     "w": "within",
+     "s": 167,
+     "e": 197
+    },
+    {
+     "w": "a",
+     "s": 197,
+     "e": 201
+    },
+    {
+     "w": "month,",
+     "s": 201,
+     "e": 212
+    },
+    {
+     "w": "focused",
+     "s": 212,
+     "e": 229
+    },
+    {
+     "w": "on",
+     "s": 229,
+     "e": 239
+    },
+    {
+     "w": "safety",
+     "s": 239,
+     "e": 253
+    },
+    {
+     "w": "and",
+     "s": 253,
+     "e": 260
+    },
+    {
+     "w": "deepfakes.",
+     "s": 260,
+     "e": 306
+    },
+    {
+     "w": "He",
+     "s": 306,
+     "e": 310
+    },
+    {
+     "w": "says",
+     "s": 310,
+     "e": 318
+    },
+    {
+     "w": "AI",
+     "s": 318,
+     "e": 323
+    },
+    {
+     "w": "companies",
+     "s": 323,
+     "e": 339
+    },
+    {
+     "w": "will",
+     "s": 339,
+     "e": 347
+    },
+    {
+     "w": "carry",
+     "s": 347,
+     "e": 357
+    },
+    {
+     "w": "the",
+     "s": 357,
+     "e": 370
+    },
+    {
+     "w": "main",
+     "s": 370,
+     "e": 378
+    },
+    {
+     "w": "responsibility",
+     "s": 378,
+     "e": 402
+    },
+    {
+     "w": "for",
+     "s": 402,
+     "e": 413
+    },
+    {
+     "w": "harms.",
+     "s": 413,
+     "e": 424
+    }
+   ],
+   "org": "INDIA",
+   "accent": "#22C55E",
+   "tag": "POLICY",
+   "headline": [
+    "India's AI rules:",
+    "paper in a month"
+   ],
+   "dek": "IT minister Ashwini Vaishnaw, Oct 8",
+   "chapter": "India's AI rules are coming",
+   "points": [
+    "Consultation paper within about a month",
+    "Safety, deepfakes, psychological harms",
+    "Industry to bear primary responsibility",
+    "Indian-designed GPUs in 3-4 years, he says"
+   ],
+   "sources": "Outlook Business · ThePrint · MediaNama",
+   "cards": [
+    {
+     "k": "INDIA'S IT MINISTER",
+     "v": "Ashwini Vaishnaw",
+     "cue": "minister",
+     "at": 2,
+     "f": 33
+    },
+    {
+     "k": "WHEN",
+     "v": "Consultation paper within a month",
+     "cue": "month",
+     "at": 16,
+     "f": 201
+    },
+    {
+     "k": "FOCUS",
+     "v": "Safety + deepfakes",
+     "cue": "deepfakes",
+     "at": 21,
+     "f": 260
+    },
+    {
+     "k": "WHO'S RESPONSIBLE",
+     "v": "AI companies, says the minister",
+     "cue": "responsibility",
+     "at": 30,
+     "f": 378
+    }
+   ]
+  },
+  {
+   "name": "story6",
+   "audio": "news/week-2026-10-10/te/story6.wav",
+   "lead": 14,
+   "frames": 830,
+   "words": [
+    {
+     "w": "Finally,",
+     "s": 36,
+     "e": 52
+    },
+    {
+     "w": "jobs:",
+     "s": 52,
+     "e": 63
+    },
+    {
+     "w": "TCS",
+     "s": 63,
+     "e": 70
+    },
+    {
+     "w": "says",
+     "s": 70,
+     "e": 79
+    },
+    {
+     "w": "AI",
+     "s": 79,
+     "e": 84
+    },
+    {
+     "w": "now",
+     "s": 84,
+     "e": 99
+    },
+    {
+     "w": "earns",
+     "s": 99,
+     "e": 110
+    },
+    {
+     "w": "it",
+     "s": 110,
+     "e": 115
+    },
+    {
+     "w": "over",
+     "s": 115,
+     "e": 124
+    },
+    {
+     "w": "three",
+     "s": 124,
+     "e": 135
+    },
+    {
+     "w": "billion",
+     "s": 135,
+     "e": 149
+    },
+    {
+     "w": "dollars",
+     "s": 149,
+     "e": 163
+    },
+    {
+     "w": "a",
+     "s": 163,
+     "e": 167
+    },
+    {
+     "w": "year,",
+     "s": 167,
+     "e": 188
+    },
+    {
+     "w": "but",
+     "s": 188,
+     "e": 195
+    },
+    {
+     "w": "its",
+     "s": 195,
+     "e": 202
+    },
+    {
+     "w": "headcount",
+     "s": 202,
+     "e": 229
+    },
+    {
+     "w": "barely",
+     "s": 229,
+     "e": 242
+    },
+    {
+     "w": "grew.",
+     "s": 242,
+     "e": 273
+    },
+    {
+     "w": "And",
+     "s": 273,
+     "e": 280
+    },
+    {
+     "w": "Bloomberg",
+     "s": 280,
+     "e": 298
+    },
+    {
+     "w": "reports",
+     "s": 298,
+     "e": 313
+    },
+    {
+     "w": "that",
+     "s": 313,
+     "e": 322
+    },
+    {
+     "w": "the",
+     "s": 322,
+     "e": 353
+    },
+    {
+     "w": "big",
+     "s": 353,
+     "e": 360
+    },
+    {
+     "w": "tech",
+     "s": 360,
+     "e": 369
+    },
+    {
+     "w": "offices",
+     "s": 369,
+     "e": 383
+    },
+    {
+     "w": "foreign",
+     "s": 383,
+     "e": 398
+    },
+    {
+     "w": "companies",
+     "s": 398,
+     "e": 416
+    },
+    {
+     "w": "run",
+     "s": 416,
+     "e": 423
+    },
+    {
+     "w": "in",
+     "s": 423,
+     "e": 428
+    },
+    {
+     "w": "Hyderabad",
+     "s": 428,
+     "e": 446
+    },
+    {
+     "w": "and",
+     "s": 446,
+     "e": 468
+    },
+    {
+     "w": "Bengaluru",
+     "s": 468,
+     "e": 486
+    },
+    {
+     "w": "are",
+     "s": 486,
+     "e": 493
+    },
+    {
+     "w": "hiring",
+     "s": 493,
+     "e": 506
+    },
+    {
+     "w": "fewer",
+     "s": 506,
+     "e": 516
+    },
+    {
+     "w": "freshers.",
+     "s": 516,
+     "e": 549
+    },
+    {
+     "w": "At",
+     "s": 549,
+     "e": 555
+    },
+    {
+     "w": "one",
+     "s": 555,
+     "e": 562
+    },
+    {
+     "w": "bank,",
+     "s": 562,
+     "e": 601
+    },
+    {
+     "w": "work",
+     "s": 601,
+     "e": 610
+    },
+    {
+     "w": "that",
+     "s": 610,
+     "e": 619
+    },
+    {
+     "w": "used",
+     "s": 619,
+     "e": 636
+    },
+    {
+     "w": "to",
+     "s": 636,
+     "e": 641
+    },
+    {
+     "w": "need",
+     "s": 641,
+     "e": 650
+    },
+    {
+     "w": "fifty",
+     "s": 650,
+     "e": 661
+    },
+    {
+     "w": "engineers?",
+     "s": 661,
+     "e": 680
+    },
+    {
+     "w": "Now,",
+     "s": 680,
+     "e": 748
+    },
+    {
+     "w": "four",
+     "s": 748,
+     "e": 757
+    },
+    {
+     "w": "to",
+     "s": 757,
+     "e": 763
+    },
+    {
+     "w": "ten",
+     "s": 763,
+     "e": 770
+    },
+    {
+     "w": "people",
+     "s": 770,
+     "e": 782
+    },
+    {
+     "w": "do",
+     "s": 782,
+     "e": 788
+    },
+    {
+     "w": "it.",
+     "s": 788,
+     "e": 795
+    }
+   ],
+   "org": "INDIAN IT",
+   "accent": "#06B6D4",
+   "tag": "JOBS",
+   "headline": [
+    "AI is reshaping",
+    "India's IT jobs"
+   ],
+   "dek": "TCS results · Bloomberg on hiring",
+   "chapter": "AI and India's IT jobs",
+   "points": [
+    "TCS: annualised AI revenue $3.1B",
+    "TCS headcount +4,258 (about 0.7%)",
+    "GCCs automate entry-level work first",
+    "One bank: 50 engineers' work done by 4-10"
+   ],
+   "sources": "Business Today · Outlook Business · Bloomberg",
+   "cards": [
+    {
+     "k": "TCS",
+     "v": "AI revenue: $3.1B a year",
+     "cue": "billion",
+     "at": 10,
+     "f": 135
+    },
+    {
+     "k": "BIG TECH OFFICES (GCCs)",
+     "v": "Fewer freshers hired",
+     "cue": "freshers",
+     "at": 37,
+     "f": 516
+    },
+    {
+     "k": "ONE BANK (BLOOMBERG)",
+     "v": "Work that needed 50 engineers",
+     "cue": "bank",
+     "at": 40,
+     "f": 562
+    },
+    {
+     "k": "NOW",
+     "v": "4 to 10 people",
+     "cue": "Now,",
+     "drop": true,
+     "big": true,
+     "at": 48,
+     "f": 680
+    }
+   ]
+  },
+  {
+   "name": "outro",
+   "audio": "news/week-2026-10-10/te/outro.wav",
+   "lead": 6,
+   "frames": 577,
+   "words": [
+    {
+     "w": "That's",
+     "s": 20,
+     "e": 39
+    },
+    {
+     "w": "your",
+     "s": 39,
+     "e": 46
+    },
+    {
+     "w": "week",
+     "s": 46,
+     "e": 54
+    },
+    {
+     "w": "in",
+     "s": 54,
+     "e": 58
+    },
+    {
+     "w": "AI.",
+     "s": 58,
+     "e": 64
+    },
+    {
+     "w": "Now,",
+     "s": 64,
+     "e": 71
+    },
+    {
+     "w": "a",
+     "s": 71,
+     "e": 89
+    },
+    {
+     "w": "question:",
+     "s": 89,
+     "e": 104
+    },
+    {
+     "w": "is",
+     "s": 104,
+     "e": 109
+    },
+    {
+     "w": "AI",
+     "s": 109,
+     "e": 123
+    },
+    {
+     "w": "changing",
+     "s": 123,
+     "e": 136
+    },
+    {
+     "w": "hiring",
+     "s": 136,
+     "e": 147
+    },
+    {
+     "w": "where",
+     "s": 147,
+     "e": 156
+    },
+    {
+     "w": "you",
+     "s": 156,
+     "e": 166
+    },
+    {
+     "w": "work?",
+     "s": 166,
+     "e": 175
+    },
+    {
+     "w": "Tell",
+     "s": 175,
+     "e": 182
+    },
+    {
+     "w": "us",
+     "s": 182,
+     "e": 214
+    },
+    {
+     "w": "in",
+     "s": 214,
+     "e": 218
+    },
+    {
+     "w": "the",
+     "s": 218,
+     "e": 224
+    },
+    {
+     "w": "comments.",
+     "s": 224,
+     "e": 268
+    },
+    {
+     "w": "And",
+     "s": 268,
+     "e": 274
+    },
+    {
+     "w": "follow",
+     "s": 274,
+     "e": 284
+    },
+    {
+     "w": "AI",
+     "s": 284,
+     "e": 289
+    },
+    {
+     "w": "Maastaaru.",
+     "s": 289,
+     "e": 305
+    },
+    {
+     "w": "We",
+     "s": 305,
+     "e": 310
+    },
+    {
+     "w": "will",
+     "s": 310,
+     "e": 317
+    },
+    {
+     "w": "explain",
+     "s": 317,
+     "e": 334
+    },
+    {
+     "w": "India's",
+     "s": 334,
+     "e": 365
+    },
+    {
+     "w": "AI",
+     "s": 365,
+     "e": 370
+    },
+    {
+     "w": "rules",
+     "s": 370,
+     "e": 379
+    },
+    {
+     "w": "paper",
+     "s": 379,
+     "e": 388
+    },
+    {
+     "w": "when",
+     "s": 388,
+     "e": 395
+    },
+    {
+     "w": "it's",
+     "s": 395,
+     "e": 403
+    },
+    {
+     "w": "out.",
+     "s": 403,
+     "e": 410
+    }
+   ]
+  }
+ ],
+ "frames": 5072
+}
