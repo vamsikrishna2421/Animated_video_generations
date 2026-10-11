@@ -173,7 +173,8 @@ const RcHook: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
-      <Sfx at={0} src="reel/sfx_boom.wav" vol={0.7} />
+      <Sfx at={0} src="reel/sfx_boom.wav" vol={1} />
+      <Sfx at={0} src="audio/sfx_whoosh.wav" vol={0.55} />
       {[8, 14, 20].map((a) => <Sfx key={a} at={a} src="audio/sfx_pop.wav" vol={0.3} />)}
       <Sfx at={c1} src="audio/sfx_tick.wav" vol={0.5} />
       <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.4} />
