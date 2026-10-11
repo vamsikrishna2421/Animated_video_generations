@@ -175,7 +175,7 @@ const RcHook: React.FC<SP> = ({ cue }) => {
     <>
       <Sfx at={0} src="reel/sfx_boom.wav" vol={1} />
       <Sfx at={0} src="audio/sfx_whoosh.wav" vol={0.55} />
-      {[8, 14, 20].map((a) => <Sfx key={a} at={a} src="audio/sfx_pop.wav" vol={0.3} />)}
+      <Sfx at={8} src="audio/sfx_pop.wav" vol={0.35} />
       <Sfx at={c1} src="audio/sfx_tick.wav" vol={0.5} />
       <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.45} />
@@ -188,7 +188,7 @@ const RcHook: React.FC<SP> = ({ cue }) => {
           c.save(); c.globalAlpha = out; hand(c, "NOT A ROBOT", W / 2, 408, 110, COL.yellow, seg(f, 0, 12), r, -0.02, "center"); c.restore();
           const [sx, sy, sw, sh] = phone(c, 330, 450, 420, 600, r, out);
           eventPic(c, sx, sy, sw, sh, r, out);
-          ([["robot?!", 190, 560, COL.red, -0.08, 6], ["alien??", 890, 650, COL.orange, 0.07, 12], ["clone!!", 200, 860, "#7c3aed", 0.05, 18]] as const).forEach(([t, x, y, col, rot, at], i) => {
+          ([["robot?!", 190, 600, COL.red, -0.08, 6]] as const).forEach(([t, x, y, col, rot, at], i) => {
             const p = seg(f, at, at + 40) * out;
             comment(c, t, x, y, col, Math.min(p, 0.5), rot);
             const k = seg(f, c1 + i * 4, c1 + 8 + i * 4);   // crossed out when the voice says "not a robot"
@@ -198,14 +198,14 @@ const RcHook: React.FC<SP> = ({ cue }) => {
             const p = fade(f, c2, 10) * out;
             card(c, 90, 1080, 900, 290, r, p, COL.cream);
             label(c, "Susan Dell", 130, 1162, 84, INK, caveat, p, "left");
-            label(c, "charity co-founder, married to Dell's founder", 130, 1236, fitSize(c, "charity co-founder, married to Dell's founder", 820, 52, caveat), INK, caveat, p, "left");
-            label(c, "Source: White House · Oct 7, 2026", 130, 1310, 42, GREY, caveat, p, "left");
+            label(c, "charity co-founder; her husband founded Dell (laptops)", 130, 1236, fitSize(c, "charity co-founder; her husband founded Dell (laptops)", 820, 52, caveat), INK, caveat, p, "left");
+            label(c, "Source: White House · Oct 7, 2026", 130, 1314, 48, GREY, caveat, p, "left");
             tag(c, "real video, not AI", 790, 1130, 42, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
           }
         }
         if (f >= c3) {
-          hand(c, "4 tricks turned a", W / 2, 600, 92, COL.yellow, seg(f, c3, c3 + 14), r, -0.02, "center");
-          hand(c, "normal clip into \"proof\"", W / 2, 720, 92, COL.yellow, seg(f, c3 + 8, c3 + 22), r, -0.02, "center");
+          hand(c, "4 tricks keep turning", W / 2, 600, 92, COL.yellow, seg(f, c3, c3 + 14), r, -0.02, "center");
+          hand(c, "normal clips into \"proof\"", W / 2, 720, 92, COL.yellow, seg(f, c3 + 8, c3 + 22), r, -0.02, "center");
           for (let i = 0; i < 4; i++) {
             const q = seg(f, c3 + 12 + i * 4, c3 + 20 + i * 4);
             const x = 225 + i * 210;
@@ -213,6 +213,7 @@ const RcHook: React.FC<SP> = ({ cue }) => {
             stroke(c, circlePts(x, 940, 76, 76), COL.ink, 5, r, { passes: 2, alpha: q });
             label(c, String(i + 1), x, 970, 90, COL.orange, caveat, q);
           }
+          tag(c, "one of them is AI", 765, 1080, 50, COL.light, "#fff", 0.04, seg(f, c3 + 30, c3 + 38));
         }
       }} />
     </>
@@ -225,7 +226,7 @@ const RcSlow: React.FC<SP> = ({ cue }) => {
   return (
     <>
       <Sfx at={c1} src="audio/sfx_tick.wav" vol={0.45} />
-      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.5} />
+      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.8} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4200 + boil);
@@ -248,8 +249,8 @@ const RcSlow: React.FC<SP> = ({ cue }) => {
           const p = fade(f, c2, 10);
           stamp(c, "SLOWED DOWN", 330, 1214, 76, COL.red, seg(f, c2, c2 + 8), r, -0.07);
           tag(c, "original: normal", 790, 1206, 50, COL.green, INK, 0.04, seg(f, c2 + 14, c2 + 22));
-          label(c, "Lead Stories fact check, Feb 2026: a Dec 2025 White House clip,", W / 2, 1310, fitSize(c, "Lead Stories fact check, Feb 2026: a Dec 2025 White House clip,", 940, 40, caveat), COL.cream, caveat, p);
-          label(c, "compared with the C-SPAN original", W / 2, 1358, 40, COL.cream, caveat, p);
+          label(c, "Lead Stories fact check, Feb 2026: a Dec 2025 White House clip,", W / 2, 1306, fitSize(c, "Lead Stories fact check, Feb 2026: a Dec 2025 White House clip,", 960, 46, caveat), COL.cream, caveat, p);
+          label(c, "compared with the C-SPAN original", W / 2, 1360, 46, COL.cream, caveat, p);
         }
       }} />
     </>
@@ -337,7 +338,7 @@ const RcEnhance: React.FC<SP> = ({ cue }) => {
           label(c, "the filter guesses the missing detail", W / 2, 910, fitSize(c, "the filter guesses the missing detail", 940, 58, caveat), COL.yellow, caveat, p);
           const q = seg(f, c1 + 14, c1 + 24);
           card(c, 90, 940, 900, 130, r, q, "#fff6d8");
-          label(c, "US court (2024):", W / 2, 994, 48, INK, caveat, q);
+          label(c, "Washington state court (2024):", W / 2, 994, 48, INK, caveat, q);
           label(c, "AI-enhanced video not allowed as evidence", W / 2, 1046, fitSize(c, "AI-enhanced video not allowed as evidence", 860, 48, caveat), INK, caveat, q);
         }
         if (f >= c2) {
@@ -348,7 +349,7 @@ const RcEnhance: React.FC<SP> = ({ cue }) => {
           if (f >= c2 + 12) doodleFace(c, 770, 1196, 74, r, 1);
           label(c, "normal shot (0:24)", 310, 1302, 42, GREY, caveat, p);
           label(c, "filtered close-up (0:25)", 770, 1302, 42, COL.red, caveat, seg(f, c2 + 8, c2 + 18));
-          label(c, "what we saw in one viral compilation", W / 2, 1368, 40, COL.pale, caveat, seg(f, c2 + 14, c2 + 24));
+          label(c, "what we saw in one viral compilation", W / 2, 1370, 48, COL.pale, caveat, seg(f, c2 + 14, c2 + 24));
         }
       }} />
     </>
@@ -361,7 +362,7 @@ const RcStory: React.FC<SP> = ({ cue }) => {
   return (
     <>
       {[0, 8, 16].map((d) => <Sfx key={d} at={c1 + d} src="audio/sfx_pop.wav" vol={0.4} />)}
-      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.45} />
+      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.8} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4500 + boil);
@@ -395,7 +396,7 @@ const RcStory: React.FC<SP> = ({ cue }) => {
 const RcCheck: React.FC<SP> = ({ cue }) => {
   const cs = [cue(1), cue(2), cue(3), cue(4)];
   const ROWS = [["1 · slowed?", "everyone moves like they're underwater"], ["2 · a copy?", "blur, glare, another app's logo"],
-    ["3 · a filter?", "waxy skin, eyes that change shape"], ["4 · just the story?", "mute it, ignore the circle: still weird?"]];
+    ["3 · a filter?", "plastic-looking skin, eyes that change shape"], ["4 · just the story?", "mute it, ignore the circle; still weird? watch the original"]];
   return (
     <>
       {cs.map((a, i) => <Sfx key={i} at={a + 10} src="audio/sfx_tick.wav" vol={0.45} />)}
@@ -419,29 +420,32 @@ const RcCheck: React.FC<SP> = ({ cue }) => {
 // ---------- 7 VERDICT + CTA ----------
 const RcClose: React.FC<SP> = ({ s, cue }) => {
   const handle: string = s.data.handle ?? "@ai_maastaaru";
-  const c1 = cue(1), c2 = cue(2);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
-      <Sfx at={c1} src="reel/sfx_boom.wav" vol={0.55} />
-      <Sfx at={c2 + 30} src="audio/sfx_success.wav" vol={0.4} />
+      <Sfx at={c1} src="reel/sfx_boom.wav" vol={0.85} />
+      <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.4} />
+      <Sfx at={c3 + 30} src="audio/sfx_success.wav" vol={0.4} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4700 + boil);
-        hand(c, "so, is she a robot?", W / 2, 420, 92, COL.cream, seg(f, 0, 14), r, -0.02, "center");
-        if (f >= c1) {
-          stamp(c, "REAL PERSON", W / 2, 640, 120, COL.green, seg(f, c1, c1 + 8), r, -0.05);
-          label(c, "edited clips", W / 2, 770, 70, COL.yellow, caveat, seg(f, c1 + 10, c1 + 20));
-        }
+        stamp(c, "REAL PERSON", W / 2, 480, 124, COL.green, seg(f, c1, c1 + 8), r, -0.05);
+        label(c, "edited clips", W / 2, 610, 76, COL.yellow, caveat, seg(f, c1 + 10, c1 + 20));
         if (f >= c2) {
           const p = fade(f, c2, 12);
-          label(c, "AI didn't fake her:", W / 2, 910, 64, COL.cream, caveat, p);
-          label(c, "copies, filters and a voice-over", W / 2, 984, 60, COL.cream, caveat, seg(f, c2 + 8, c2 + 20));
-          label(c, "made the \"proof\"", W / 2, 1056, 60, COL.cream, caveat, seg(f, c2 + 16, c2 + 28));
-          label(c, "originals: links in the caption", W / 2, 1140, 44, COL.pale, handF, seg(f, c2 + 24, c2 + 34));
-          c.save(); c.globalAlpha = easeOut(seg(f, c2 + 30, c2 + 42));
+          card(c, 70, 670, 940, 250, r, p, COL.cream);
+          label(c, "slow motion, copies, filters", W / 2, 768, 64, INK, caveat, p);
+          label(c, "and a voice-over made the \"proof\"", W / 2, 852, 60, INK, caveat, seg(f, c2 + 8, c2 + 20));
+        }
+        if (f >= c3) {
+          const p = fade(f, c3, 12);
+          label(c, "send this to the group", W / 2, 1010, 62, COL.cream, caveat, p);
+          label(c, "that sent you the clip", W / 2, 1078, 62, COL.cream, caveat, p);
+          label(c, "sources in the caption", W / 2, 1150, 48, COL.pale, caveat, seg(f, c3 + 10, c3 + 20));
+          c.save(); c.globalAlpha = easeOut(seg(f, c3 + 24, c3 + 36));
           c.font = caveat(handle.length > 16 ? 76 : 88); c.textAlign = "center"; c.fillStyle = COL.yellow;
-          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1276);
-          c.shadowBlur = 0; c.font = handF(44); c.fillStyle = COL.cream; c.fillText("AI, explained simply", W / 2, 1336);
+          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1280);
+          c.shadowBlur = 0; c.font = handF(44); c.fillStyle = COL.cream; c.fillText("AI, explained simply", W / 2, 1340);
           c.restore();
         }
       }} />

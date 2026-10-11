@@ -12,7 +12,7 @@
   0.5,
   1.15
  ],
- "musicLift": 1.8,
+ "musicLift": 2.3,
  "musicPad": true,
  "beatSnap": true,
  "hideTimerInHook": true,
@@ -42,11 +42,11 @@
        1
       ],
       [
-       "Susan Dell: charity co-founder, married to Dell's founder (White House, Oct 7, 2026)",
+       "Susan Dell, charity co-founder; her husband founded Dell (White House, Oct 7, 2026)",
        2
       ],
       [
-       "4 tricks turned a normal clip into \"proof\"",
+       "4 tricks keep turning normal clips of her into \"proof\"; one is AI",
        3
       ]
      ]
@@ -57,8 +57,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "01_hook.wav",
-     "text": "వైరల్ అయిన ఓవల్ ఆఫీస్ క్లిప్ లో, ట్రంప్ వెనక నిలబడ్డ ఆ మహిళని చూశారా? [1] ఆమె రోబో కాదు. [2] ఆమె పేరు సూసన్ డెల్, డెల్ కంపెనీ స్థాపకుడి భార్య, ఒక ఛారిటీ ఫౌండేషన్ నడుపుతారు. [3] నాలుగు ట్రిక్స్ తో, ఒక మామూలు క్లిప్ ని ప్రూఫ్ లా మార్చారు.",
-     "show": "See that woman behind Trump in the viral Oval Office clip? [1] She is not a robot. [2] She's Susan Dell, a charity co-founder, married to Dell's founder. [3] Four tricks turned a normal clip into 'proof'.",
+     "text": "వైరల్ అయిన ఓవల్ ఆఫీస్ క్లిప్ లో, ట్రంప్ వెనక నిలబడ్డ ఆ మహిళని చూశారా? [1] ఆమె రోబో కాదు. [2] ఆమె పేరు సూసన్ డెల్, ఆమె భర్త డెల్ ల్యాప్ టాప్ కంపెనీ స్థాపకుడు. [3] నాలుగు ట్రిక్స్ తో, ఆమె మామూలు క్లిప్స్ ని ప్రూఫ్ లా మారుస్తున్నారు, అందులో ఒకటి ఎ ఐ.",
+     "show": "See that woman behind Trump in the viral Oval Office clip? [1] She is not a robot. [2] She's Susan Dell, and her husband founded Dell, the laptop company. [3] Four tricks keep turning normal clips of her into 'proof', and one of them is AI.",
      "pauses": {
       "1": 0.2
      }
@@ -92,8 +92,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "02_slow.wav",
-     "text": "మొదటి ట్రిక్: స్లో చేయడం. [1] స్లో మోషన్ లో, మామూలుగా కళ్ళు ఆర్పడం కూడా యంత్రంలా కనిపిస్తుంది. [2] ఫిబ్రవరిలో కూడా ఇదే జరిగింది: ఆమె స్లో క్లిప్ ఒకటి వైరల్ అయింది. ఒరిజినల్ వీడియోలో, ఆమె మామూలుగానే కదులుతున్నారు.",
-     "show": "Trick one: slow it down. [1] Slow motion makes normal blinks look mechanical. [2] It happened to her in February: a slowed clip went viral. In the original video, she moves normally."
+     "text": "మొదటి ట్రిక్: స్లో చేయడం. [1] స్లో మోషన్ లో, మామూలుగా కళ్ళు ఆర్పడం కూడా యంత్రంలా కనిపిస్తుంది. [2] ఇది కొత్త కాదు: ఫిబ్రవరిలో కూడా ఆమె స్లో క్లిప్ ఒకటి వైరల్ అయింది. ఒరిజినల్ సి స్పాన్ వీడియోలో, ఆమె మామూలుగానే కదులుతున్నారు.",
+     "show": "Trick one: slow it down. [1] Slow motion makes normal blinks look mechanical. [2] This isn't new: in February, a slowed clip of her went viral too. In the original C-SPAN video, she moves normally."
     }
    ]
   },
@@ -201,6 +201,7 @@
    "id": "check",
    "type": "rc_check",
    "tail": 0.7,
+   "lift": true,
    "data": {
     "yt": {
      "chapter": "How to check",
@@ -215,11 +216,11 @@
        2
       ],
       [
-       "Waxy skin, eyes that change shape: a filter",
+       "Plastic-looking skin, eyes that change shape: a filter",
        3
       ],
       [
-       "Mute it, ignore the circle: still weird?",
+       "Mute it, ignore the circle; still weird? Find the full original",
        4
       ]
      ]
@@ -230,8 +231,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "06_check.wav",
-     "text": "ఈసారి మీ గ్రూప్ లో ఇలాంటిది వస్తే, చెక్ చేయండి: [1] అందరూ నీళ్ళలో కదిలినట్టు ఉంటే, స్లో చేశారు. [2] బ్లర్, స్క్రీన్ మెరుపు, లేదా వేరే యాప్ లోగో ఉంటే, అది కాపీ. [3] మైనంలా మెరిసే చర్మం, ఆకారం మారే కళ్ళు ఉంటే, ఫిల్టర్. [4] సౌండ్ మ్యూట్ చేసి, సర్కిల్ ని పట్టించుకోకుండా చూడండి: ఇంకా వింతగా ఉందా?",
-     "show": "Next time it lands in your group, check: [1] if everyone moves like they're underwater, it's slowed. [2] Blur, glare or another app's logo means a copy. [3] Waxy skin or eyes that change shape mean a filter. [4] Then mute it and ignore the circle: still weird?"
+     "text": "ఈసారి మీ గ్రూప్ లో ఇలాంటిది వస్తే, చెక్ చేయండి: [1] అందరూ నీళ్ళలో కదిలినట్టు ఉంటే, స్లో చేశారు. [2] బ్లర్, స్క్రీన్ మెరుపు, లేదా వేరే యాప్ లోగో ఉంటే, అది కాపీ. [3] ప్లాస్టిక్ లా కనిపించే చర్మం, ఆకారం మారే కళ్ళు ఉంటే, ఫిల్టర్. [4] సౌండ్ మ్యూట్ చేసి, సర్కిల్ ని పట్టించుకోకుండా చూడండి; ఇంకా వింతగా ఉంటే, పూర్తి ఒరిజినల్ వీడియో చూడండి.",
+     "show": "Next time it lands in your group, check: [1] if everyone moves like they're underwater, it's slowed. [2] Blur, glare or another app's logo means a copy. [3] Plastic-looking skin or eyes that change shape mean a filter. [4] Then mute it and ignore the circle; if it's still weird, find the full original."
     }
    ]
   },
@@ -240,6 +241,7 @@
    "type": "rc_close",
    "tail": 1.2,
    "outro": true,
+   "lift": true,
    "drop_cue": 1,
    "duck": [
     2,
@@ -252,16 +254,16 @@
      "title": "Real person, edited clips",
      "notes": [
       [
-       "So, is she a robot?",
-       0
-      ],
-      [
-       "No: a real person, in edited clips",
+       "Real person, edited clips",
        1
       ],
       [
-       "AI didn't fake her: copies, filters and a voice-over made the \"proof\"",
+       "Slow motion, copies, filters and a voice-over made the \"proof\"",
        2
+      ],
+      [
+       "Send this to the group that sent you the clip",
+       3
       ]
      ]
     },
@@ -272,8 +274,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "07_close.wav",
-     "text": "మరి, ఆమె రోబోనా? [1] కాదు, ఆమె నిజమైన మనిషి, క్లిప్స్ ని ఎడిట్ చేశారు. [2] ఎ ఐ ఆమెని ఫేక్ చేయలేదు: కాపీలు, ఫిల్టర్లు, వాయిస్ ఓవర్ కలిసి ఆ ప్రూఫ్ తయారు చేశాయి. [3] మరిన్ని ఎ ఐ విషయాల కోసం ఫాలో అవ్వండి.",
-     "show": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. [3] Follow for more AI, explained simply."
+     "text": "[1] నిజమైన మనిషి, ఎడిట్ చేసిన క్లిప్స్: [2] స్లో మోషన్, కాపీలు, ఫిల్టర్లు, వాయిస్ ఓవర్ కలిసి ఆ ప్రూఫ్ తయారు చేశాయి. [3] ఈ క్లిప్ పంపిన గ్రూప్ కి ఈ వీడియో పంపండి, మరిన్ని విషయాల కోసం ఫాలో అవ్వండి.",
+     "show": "[1] Real person, edited clips: [2] slow motion, copies, filters and a voice-over made the 'proof'. [3] Send this to the group that sent you the clip, and follow for more."
     }
    ]
   }
