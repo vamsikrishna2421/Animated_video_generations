@@ -85,8 +85,8 @@ def build(spec_path, lang="en"):
         a, sr = take(seg[key], lang, out_dir, seg.get("pause", 0.7))
         f = out_dir / f"{name}.wav"
         sf.write(f, a.astype(np.float32), sr)
-        ld = lead.get(name, 8)  # story: room for the cut + headline before the voice
-        frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, 10)
+        ld = lead.get(name, spec.get("storyLead", 8))  # story: room for the cut + headline before the voice
+        frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, spec.get("storyTail", 10))
         words = word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):

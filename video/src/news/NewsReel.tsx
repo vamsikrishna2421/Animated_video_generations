@@ -11,7 +11,7 @@ import { browWiggle, doubleTake, ponder, exaggerate, follow, Fumble, FPose, idle
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
-type Card = { k: string; v: string; f: number; drop?: boolean };
+type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean };
 type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
@@ -365,6 +365,20 @@ const LowerThird: React.FC<{ label: string; headline: string; ticker: string; ac
 };
 
 /** Broadcast story layout: numbered heading banner, dek, framed "on-air" panel with lower third, stat chips. */
+/** Full-screen number moment for a `big` card: the bed drops just before it and an impact lands on the word. */
+const BigNumber: React.FC<{ c: Card; accent: string }> = ({ c, accent }) => {
+  const f = useCurrentFrame();
+  const t = f - (c.f - 2);
+  if (t < 0 || t > 54) return null;
+  const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 40, c.f + 52);
+  return (
+    <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${accent}40, rgba(5,8,22,0.94) 62%)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
+      <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 6, color: accent }}>{c.k}</div>
+      <div style={{ fontFamily: F.archivo, fontSize: c.v.length > 14 ? 120 : 170, lineHeight: 1, color: B.white, textAlign: "center", padding: "0 50px", transform: `scale(${1.25 - 0.25 * inP})` }}>{c.v}</div>
+    </AbsoluteFill>
+  );
+};
+
 const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: string }> = ({ seg, n, total, ticker }) => {
   const f = useCurrentFrame();
   const accent = seg.accent ?? B.cyan;
@@ -431,6 +445,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
           })}
         </div>
       )}
+      {cards.filter((c) => c.big).map((c, i) => <BigNumber key={i} c={c} accent={accent} />)}
       <Karaoke words={seg.words} bottom={390} size={80} max={3} />
     </AbsoluteFill>
   );
@@ -466,12 +481,12 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
   return (
     <AbsoluteFill>
       <Backdrop accent={B.rose} />
-      <AbsoluteFill style={{ justifyContent: "flex-start", padding: "400px 70px 0", opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
+      <AbsoluteFill style={{ justifyContent: "flex-start", padding: `${(seg.lines ?? []).length > 2 ? 330 : 400}px 70px 0`, opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
         {(seg.lines ?? []).map((parts, li) => {
           const p = prog(f, 2 + li * 30, 16 + li * 30);
           return (
             <div key={li} style={{ overflow: "hidden", marginBottom: 20 }}>
-              <div style={{ transform: `translateY(${(1 - p) * 110}%)`, fontFamily: F.inter, fontWeight: 800, fontSize: 118, letterSpacing: -5, lineHeight: 1.02, color: B.white }}>
+              <div style={{ transform: `translateY(${(1 - p) * 110}%)`, fontFamily: F.inter, fontWeight: 800, fontSize: (seg.lines ?? []).length > 2 ? 96 : 118, letterSpacing: -4, lineHeight: 1.02, color: B.white }}>
                 {parts.map((t, i) => <span key={i} style={{ color: i === 1 ? (li === 0 ? B.rose : B.amber) : undefined }}>{t}</span>)}
               </div>
             </div>
@@ -566,7 +581,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>
       <Sequence from={outroStart} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.45} /></Sequence>
       {starts.slice(1).map((s) => <Sequence key={`w${s}`} from={s - 8} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.4} /></Sequence>)}
-      {tl.musicBase && starts.slice(1, -1).map((s) => <Sequence key={`st${s}`} from={s + 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.3} /></Sequence>)}
+      {tl.musicBase && starts.slice(1, -1).map((s) => <Sequence key={`st${s}`} from={s + 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (
         <Sequence key={`${s.name}${j}`} from={starts[tl.segments.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.35} /></Sequence>
       )))}

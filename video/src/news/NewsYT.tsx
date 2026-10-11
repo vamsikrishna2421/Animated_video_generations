@@ -185,6 +185,16 @@ const Chapter: React.FC<{ seg: Seg; n: number; total: number; edition: string }>
         <div style={{ marginTop: 18, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,0.12)", fontFamily: F.mono, fontWeight: 700, fontSize: 18, letterSpacing: 2, lineHeight: 1.5, color: "rgba(255,255,255,0.55)" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       </div>
       <Karaoke words={seg.words} bottom={46} size={58} max={4} />
+      {/* full-screen number moments (cards marked big) */}
+      {cards.filter((c) => c.big && f >= c.f - 2 && f <= c.f + 52).map((c, i) => {
+        const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 40, c.f + 52);
+        return (
+          <AbsoluteFill key={`big${i}`} style={{ background: `radial-gradient(circle at 50% 45%, ${accent}40, rgba(3,4,10,0.95) 60%)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 20 }}>
+            <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 8, color: accent }}>{c.k}</div>
+            <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 150, letterSpacing: -5, color: B.white, transform: `scale(${1.2 - 0.2 * inP})` }}>{c.v}</div>
+          </AbsoluteFill>
+        );
+      })}
       {/* chapter card */}
       {card > 0 && (
         <AbsoluteFill style={{ background: "#03040A", opacity: card, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 20 }}>
