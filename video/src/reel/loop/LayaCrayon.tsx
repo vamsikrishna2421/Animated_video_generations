@@ -184,7 +184,7 @@ const LhKinds: React.FC<SP> = ({ cue }) => {
             c.restore();
             label(c, String(i + 1), 220 + i * 110, 980, 42, on ? "#fff" : GREY, caveat, p);
           }
-          label(c, "→ 2 (58% sure)", 720, 984, 52, COL.orange, caveat, seg(f, c2 + 10, c2 + 18), "left");
+          label(c, "→ 2 (58% sure)", 712, 984, 46, COL.orange, caveat, seg(f, c2 + 10, c2 + 18), "left");
         }
         if (f >= c3) {
           const p = fade(f, c3, 10);
@@ -240,7 +240,7 @@ const LhWhy: React.FC<SP> = ({ cue }) => {
           stroke(c, [[110, 1030], [500, 1290]], COL.red, 10, r, { passes: 2, alpha: seg(f, c3 + 6, c3 + 12) });
           stroke(c, [[500, 1030], [110, 1290]], COL.red, 10, r, { passes: 2, alpha: seg(f, c3 + 8, c3 + 14) });
           card(c, 560, 1080, 430, 160, r, p, "#ecfdf5");
-          label(c, "YES · 94%", 775, 1180, 76, GREEN, caveat, p);
+          label(c, "YES · 94% sure", 775, 1180, fitSize(c, "YES · 94% sure", 390, 76, caveat), GREEN, caveat, p);
           label(c, "can be wrong, can't ramble", W / 2, 1360, 52, COL.cream, caveat, seg(f, c3 + 12, c3 + 22));
         }
       }} />
