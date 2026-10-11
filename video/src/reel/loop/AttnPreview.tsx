@@ -6,6 +6,7 @@ import { CHEAP_SCENES } from "./CheapCrayon";
 import { WORDS_SCENES } from "./WordsCrayon";
 import { PROFILE_SCENES } from "./ProfileCrayon";
 import { LAYA_SCENES } from "./LayaCrayon";
+import { ROBOT_SCENES } from "./RobotCheckCrayon";
 import CHEAP_PREVIEW from "./cheap_preview.json";
 
 // Dev-only: every EP27 scene with evenly spaced cues (no audio) for look checks.
@@ -99,6 +100,23 @@ export const LayaPreview: React.FC = () => (
   <AbsoluteFill style={{ background: "#000" }}>
     {LORDER.map((t, i) => {
       const Comp = LAYA_SCENES[t] as unknown as React.FC<any>;
+      const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
+      const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 5);
+      return (
+        <Sequence key={t} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
+          <Comp s={s} cue={cue} line={() => s.lines[0]} />
+        </Sequence>
+      );
+    })}
+  </AbsoluteFill>
+);
+
+// Dev preview of the "Is she a robot?" debunk scenes (cues at n/5 of each scene).
+const RORDER = ["rc_hook", "rc_slow", "rc_copies", "rc_enhance", "rc_story", "rc_check", "rc_close"] as const;
+export const RobotPreview: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    {RORDER.map((t, i) => {
+      const Comp = ROBOT_SCENES[t] as unknown as React.FC<any>;
       const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
       const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 5);
       return (

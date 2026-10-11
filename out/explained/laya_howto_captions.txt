@@ -1,0 +1,66 @@
+VIDEO: out/explained/laya_howto_insta_en.mp4 (Instagram, @ai_maastaaru)
+       out/telugu_page/laya_howto_insta_te.mp4 (Instagram, @ai_maastaaru_telugu)
+       out/youtube/laya_howto_yt_en.mp4 / laya_howto_yt_te.mp4 (YouTube, 16:9; text in out/youtube/laya_howto_youtube.txt)
+Tag @nandakishor_m in both posts.
+
+=== CAPTION (English page) ===
+This free AI can't write a single sentence. Over 32,000 developers starred it anyway.
+
+Laya (by Nandakishor, Kerala) doesn't write replies. It answers a fixed question with one number:
+- Pick one: which team gets this ticket? (tech support, 95%)
+- Score: how urgent, 1 to 5? (2, at 58%)
+- Yes or no: is this email phishing? (yes, 1.00)
+We ran these ourselves on the base model.
+
+Why people use it:
+- Fast: about 33 ms a question on a cloud GPU (his measurement, on a T4; 0.2 to 0.6 s on a 4-core CPU)
+- Free and open source (Apache-2.0)
+- It never writes, so it can be wrong, but it can't ramble
+
+The catch, from his own page:
+- Great at what it was trained on (spam: 99%). On new business tasks it scores 36% out of the box, below the 46% you'd get by always guessing the most common answer. After training on that task's examples: 77% (his reported number).
+- With 20+ answer options, the paid Jev (by TypeSafe) does better.
+- Telugu: 22% on a 20-option test (English: 71%).
+
+So which one?
+English, a few options, examples to train it on → Laya
+Many options, or no time to train → Jev (paid)
+Telugu → not yet
+
+Try it: pip install laya · github.com/NandhaKishorM/laya
+Not a coder? Send this to whoever runs AI at your company.
+Follow @ai_maastaaru for more free AI tools, explained simply. Not sponsored. @nandakishor_m
+
+Sources: github.com/NandhaKishorM/laya (README and BENCHMARKS.md); GitHub star count as of Oct 10, 2026. The outputs shown were run by us on the base model.
+
+=== HASHTAGS ===
+#AI #OpenSource #FreeAITools #Python #IndianTech #LearnAI
+
+=== PINNED_COMMENT ===
+pip install laya. What would you ask it: refund or not, which team, how urgent? 👇
+
+=== CAPTION (Telugu page) ===
+Ee free AI oka vaakyam kuda raayaledu. Ayina 32,000 mandi developers deeniki star ichharu.
+
+Laya (Kerala ki chendina Nandakishor tayaru chesaru) reply raayadu. Oka fixed prashnaki oka number tho javaabu istundi:
+- Okati enchukovadam: ee ticket e team ki? (tech support, 95%)
+- Score: entha urgent, 1 nunchi 5? (2, 58%)
+- Avuna kaada: ee email phishing aa? (avunu, 1.00)
+Ivi memu base model meeda run chesi chusam.
+
+Enduku vaadali:
+- Speed: cloud GPU meeda okko prashnaki sumaaru 33 ms (aayana measurement, T4 meeda)
+- Free, open source (Apache-2.0)
+- Emi raayadu kaabatti, tappu cheppochu kaani, anavasaranga saagadeeyadu
+
+Asalu vishayam, aayana page nunche:
+- Train chesina panullo (spam: 99%) chaala baagundi. Kotta business panullo modatlo 36%, eppudu ekkuvaga vachhe javaabu cheppina vachhe 46% kante takkuva. Aa pani examples tho train chesaaka 77% (aayana cheppina number).
+- 20+ options unte, paid Jev (TypeSafe) baaga chestundi.
+- Telugu: 20-option test lo 22% (English: 71%). Ante, Telugu ki inka ready kaaledu.
+
+Try cheyyandi: pip install laya · github.com/NandhaKishorM/laya
+Coder kaada? Mee company lo AI chuskune vaallaki pampandi.
+Marinni free AI tools kosam @ai_maastaaru_telugu ni follow avvandi. Not sponsored. @nandakishor_m
+
+=== HASHTAGS (Telugu) ===
+#AIinTelugu #TeluguAI #OpenSource #FreeAITools #LearnAI
