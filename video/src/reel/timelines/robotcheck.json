@@ -4,34 +4,44 @@
  "topic": "",
  "banner": "How a normal clip becomes \"proof\"",
  "musicVol": [
-  0.55,
-  0.95
+  0.5,
+  1.15
  ],
  "title": "Not a robot: 4 tricks",
  "handle": "@ai_maastaaru",
  "label": "FACT CHECK",
  "fps": 30,
- "musicLift": 1.8,
+ "musicLift": 2.3,
  "musicDrops": [
   [
-   529,
-   553
+   610,
+   634
   ],
   [
-   2482,
-   2506
+   1116,
+   1228,
+   0.5
+  ],
+  [
+   2601,
+   2625
+  ],
+  [
+   2665,
+   2763,
+   0.45
   ]
  ],
  "musicBoosts": [
   [
-   777,
-   1943,
+   1268,
+   2045,
    1.3
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 2902,
+ "totalFrames": 2956,
  "music": "reel/robotcheck/score.wav",
  "scenes": [
   {
@@ -51,11 +61,11 @@
        1
       ],
       [
-       "Susan Dell: charity co-founder, married to Dell's founder (White House, Oct 7, 2026)",
+       "Susan Dell, charity co-founder; her husband founded Dell (White House, Oct 7, 2026)",
        2
       ],
       [
-       "4 tricks turned a normal clip into \"proof\"",
+       "4 tricks keep turning normal clips of her into \"proof\"; one is AI",
        3
       ]
      ]
@@ -65,7 +75,7 @@
     "captionSide": 110
    },
    "from": 0,
-   "frames": 389,
+   "frames": 470,
    "lines": [
     {
      "who": "maastaaru",
@@ -74,7 +84,7 @@
      "sub": null,
      "audio": "reel/robotcheck/line_01.wav",
      "from": 9,
-     "frames": 362,
+     "frames": 429,
      "words": [
       {
        "w": "See",
@@ -84,173 +94,218 @@
       {
        "w": "that",
        "from": 20,
-       "to": 25
+       "to": 26
       },
       {
        "w": "woman",
-       "from": 25,
-       "to": 32
+       "from": 26,
+       "to": 33
       },
       {
        "w": "behind",
-       "from": 32,
-       "to": 40
+       "from": 33,
+       "to": 41
       },
       {
        "w": "Trump",
-       "from": 40,
-       "to": 47
+       "from": 41,
+       "to": 61
       },
       {
        "w": "in",
-       "from": 47,
-       "to": 60
-      },
-      {
-       "w": "the",
-       "from": 60,
+       "from": 61,
        "to": 65
       },
       {
-       "w": "viral",
+       "w": "the",
        "from": 65,
-       "to": 72
+       "to": 69
+      },
+      {
+       "w": "viral",
+       "from": 69,
+       "to": 76
       },
       {
        "w": "Oval",
-       "from": 72,
-       "to": 78
+       "from": 76,
+       "to": 82
       },
       {
        "w": "Office",
-       "from": 78,
-       "to": 92
+       "from": 82,
+       "to": 91
       },
       {
        "w": "clip?",
-       "from": 92,
-       "to": 99
+       "from": 91,
+       "to": 104
       },
       {
        "w": "She",
-       "from": 99,
-       "to": 103
+       "from": 104,
+       "to": 135
       },
       {
        "w": "is",
-       "from": 103,
-       "to": 132
+       "from": 135,
+       "to": 138
       },
       {
        "w": "not",
-       "from": 132,
-       "to": 136
+       "from": 138,
+       "to": 143
       },
       {
        "w": "a",
-       "from": 136,
-       "to": 139
+       "from": 143,
+       "to": 145
       },
       {
        "w": "robot.",
-       "from": 139,
-       "to": 147
-      },
-      {
-       "w": "She's",
-       "from": 147,
+       "from": 145,
        "to": 154
       },
       {
-       "w": "Susan",
+       "w": "She's",
        "from": 154,
-       "to": 187
+       "to": 188
+      },
+      {
+       "w": "Susan",
+       "from": 188,
+       "to": 195
       },
       {
        "w": "Dell,",
-       "from": 187,
-       "to": 194
+       "from": 195,
+       "to": 202
       },
       {
-       "w": "a",
-       "from": 194,
-       "to": 196
+       "w": "and",
+       "from": 202,
+       "to": 207
       },
       {
-       "w": "charity",
-       "from": 196,
-       "to": 210
+       "w": "her",
+       "from": 207,
+       "to": 219
       },
       {
-       "w": "co-founder,",
-       "from": 210,
+       "w": "husband",
+       "from": 219,
        "to": 228
       },
       {
-       "w": "married",
+       "w": "founded",
        "from": 228,
-       "to": 237
+       "to": 238
       },
       {
-       "w": "to",
-       "from": 237,
-       "to": 241
+       "w": "Dell,",
+       "from": 238,
+       "to": 245
       },
       {
-       "w": "Dell's",
-       "from": 241,
-       "to": 253
+       "w": "the",
+       "from": 245,
+       "to": 250
       },
       {
-       "w": "founder.",
-       "from": 253,
-       "to": 264
+       "w": "laptop",
+       "from": 250,
+       "to": 266
+      },
+      {
+       "w": "company.",
+       "from": 266,
+       "to": 277
       },
       {
        "w": "Four",
-       "from": 264,
-       "to": 270
+       "from": 277,
+       "to": 310
       },
       {
        "w": "tricks",
-       "from": 270,
-       "to": 305
-      },
-      {
-       "w": "turned",
-       "from": 305,
+       "from": 310,
        "to": 318
       },
       {
-       "w": "a",
+       "w": "keep",
        "from": 318,
-       "to": 320
-      },
-      {
-       "w": "normal",
-       "from": 320,
        "to": 328
       },
       {
-       "w": "clip",
+       "w": "turning",
        "from": 328,
-       "to": 334
+       "to": 337
+      },
+      {
+       "w": "normal",
+       "from": 337,
+       "to": 345
+      },
+      {
+       "w": "clips",
+       "from": 345,
+       "to": 352
+      },
+      {
+       "w": "of",
+       "from": 352,
+       "to": 356
+      },
+      {
+       "w": "her",
+       "from": 356,
+       "to": 361
       },
       {
        "w": "into",
-       "from": 334,
-       "to": 339
+       "from": 361,
+       "to": 367
       },
       {
-       "w": "'proof'.",
-       "from": 339,
-       "to": 359
+       "w": "'proof',",
+       "from": 367,
+       "to": 395
+      },
+      {
+       "w": "and",
+       "from": 395,
+       "to": 400
+      },
+      {
+       "w": "one",
+       "from": 400,
+       "to": 405
+      },
+      {
+       "w": "of",
+       "from": 405,
+       "to": 408
+      },
+      {
+       "w": "them",
+       "from": 408,
+       "to": 414
+      },
+      {
+       "w": "is",
+       "from": 414,
+       "to": 418
+      },
+      {
+       "w": "AI.",
+       "from": 418,
+       "to": 422
       }
      ],
      "cues": {
-      "1": 99,
-      "2": 147,
-      "3": 264
+      "1": 104,
+      "2": 154,
+      "3": 277
      }
     }
    ]
@@ -277,8 +332,8 @@
     "captionTop": 1395,
     "captionSide": 110
    },
-   "from": 389,
-   "frames": 388,
+   "from": 470,
+   "frames": 409,
    "lines": [
     {
      "who": "maastaaru",
@@ -287,31 +342,31 @@
      "sub": null,
      "audio": "reel/robotcheck/line_02.wav",
      "from": 0,
-     "frames": 346,
+     "frames": 382,
      "words": [
       {
        "w": "Trick",
-       "from": 7,
-       "to": 17
+       "from": 6,
+       "to": 27
       },
       {
        "w": "one:",
-       "from": 17,
-       "to": 30
+       "from": 27,
+       "to": 34
       },
       {
        "w": "slow",
-       "from": 30,
-       "to": 40
+       "from": 34,
+       "to": 65
       },
       {
        "w": "it",
-       "from": 40,
-       "to": 70
+       "from": 65,
+       "to": 69
       },
       {
        "w": "down.",
-       "from": 70,
+       "from": 69,
        "to": 77
       },
       {
@@ -322,122 +377,137 @@
       {
        "w": "motion",
        "from": 83,
-       "to": 91
+       "to": 92
       },
       {
        "w": "makes",
-       "from": 91,
-       "to": 98
+       "from": 92,
+       "to": 100
       },
       {
        "w": "normal",
-       "from": 98,
-       "to": 107
+       "from": 100,
+       "to": 109
       },
       {
        "w": "blinks",
-       "from": 107,
-       "to": 115
+       "from": 109,
+       "to": 118
       },
       {
        "w": "look",
-       "from": 115,
-       "to": 121
+       "from": 118,
+       "to": 125
       },
       {
        "w": "mechanical.",
-       "from": 121,
+       "from": 125,
        "to": 164
       },
       {
-       "w": "It",
+       "w": "This",
        "from": 164,
-       "to": 168
+       "to": 170
       },
       {
-       "w": "happened",
-       "from": 168,
-       "to": 179
-      },
-      {
-       "w": "to",
-       "from": 179,
-       "to": 182
-      },
-      {
-       "w": "her",
-       "from": 182,
-       "to": 187
-      },
-      {
-       "w": "in",
-       "from": 187,
+       "w": "isn't",
+       "from": 170,
        "to": 190
       },
       {
-       "w": "February:",
+       "w": "new:",
        "from": 190,
-       "to": 212
+       "to": 196
+      },
+      {
+       "w": "in",
+       "from": 196,
+       "to": 206
+      },
+      {
+       "w": "February,",
+       "from": 206,
+       "to": 219
       },
       {
        "w": "a",
-       "from": 212,
-       "to": 214
+       "from": 219,
+       "to": 221
       },
       {
        "w": "slowed",
-       "from": 214,
-       "to": 223
+       "from": 221,
+       "to": 235
       },
       {
        "w": "clip",
-       "from": 223,
-       "to": 237
+       "from": 235,
+       "to": 241
+      },
+      {
+       "w": "of",
+       "from": 241,
+       "to": 245
+      },
+      {
+       "w": "her",
+       "from": 245,
+       "to": 250
       },
       {
        "w": "went",
-       "from": 237,
-       "to": 243
+       "from": 250,
+       "to": 257
       },
       {
-       "w": "viral.",
-       "from": 243,
-       "to": 276
+       "w": "viral",
+       "from": 257,
+       "to": 290
       },
       {
-       "w": "In",
-       "from": 276,
-       "to": 280
-      },
-      {
-       "w": "the",
-       "from": 280,
-       "to": 285
-      },
-      {
-       "w": "original",
-       "from": 285,
+       "w": "too.",
+       "from": 290,
        "to": 296
       },
       {
-       "w": "video,",
+       "w": "In",
        "from": 296,
-       "to": 308
+       "to": 300
+      },
+      {
+       "w": "the",
+       "from": 300,
+       "to": 305
+      },
+      {
+       "w": "original",
+       "from": 305,
+       "to": 317
+      },
+      {
+       "w": "C-SPAN",
+       "from": 317,
+       "to": 326
+      },
+      {
+       "w": "video,",
+       "from": 326,
+       "to": 335
       },
       {
        "w": "she",
-       "from": 308,
-       "to": 313
+       "from": 335,
+       "to": 347
       },
       {
        "w": "moves",
-       "from": 313,
-       "to": 320
+       "from": 347,
+       "to": 355
       },
       {
        "w": "normally.",
-       "from": 320,
-       "to": 332
+       "from": 355,
+       "to": 368
       }
      ],
      "cues": {
@@ -469,7 +539,7 @@
     "captionTop": 1395,
     "captionSide": 110
    },
-   "from": 777,
+   "from": 880,
    "frames": 389,
    "lines": [
     {
@@ -624,7 +694,8 @@
      ],
      "cues": {
       "1": 117,
-      "2": 236
+      "2": 236,
+      "3": 348
      }
     }
    ]
@@ -651,7 +722,7 @@
     "captionTop": 1395,
     "captionSide": 110
    },
-   "from": 1166,
+   "from": 1268,
    "frames": 532,
    "lines": [
     {
@@ -888,7 +959,7 @@
     "captionTop": 1395,
     "captionSide": 110
    },
-   "from": 1698,
+   "from": 1800,
    "frames": 245,
    "lines": [
     {
@@ -1025,11 +1096,11 @@
        2
       ],
       [
-       "Waxy skin, eyes that change shape: a filter",
+       "Plastic-looking skin, eyes that change shape: a filter",
        3
       ],
       [
-       "Mute it, ignore the circle: still weird?",
+       "Mute it, ignore the circle; still weird? Find the full original",
        4
       ]
      ]
@@ -1038,8 +1109,8 @@
     "captionTop": 1395,
     "captionSide": 110
    },
-   "from": 1943,
-   "frames": 532,
+   "from": 2045,
+   "frames": 573,
    "lines": [
     {
      "who": "maastaaru",
@@ -1048,11 +1119,11 @@
      "sub": null,
      "audio": "reel/robotcheck/line_06.wav",
      "from": 0,
-     "frames": 492,
+     "frames": 526,
      "words": [
       {
        "w": "Next",
-       "from": 6,
+       "from": 7,
        "to": 12
       },
       {
@@ -1063,201 +1134,211 @@
       {
        "w": "it",
        "from": 18,
-       "to": 21
+       "to": 22
       },
       {
        "w": "lands",
-       "from": 21,
-       "to": 28
+       "from": 22,
+       "to": 29
       },
       {
        "w": "in",
-       "from": 28,
+       "from": 29,
        "to": 32
       },
       {
        "w": "your",
        "from": 32,
-       "to": 37
+       "to": 38
       },
       {
        "w": "group,",
-       "from": 37,
-       "to": 53
+       "from": 38,
+       "to": 52
       },
       {
        "w": "check:",
-       "from": 53,
-       "to": 78
+       "from": 52,
+       "to": 73
       },
       {
        "w": "if",
-       "from": 78,
-       "to": 81
+       "from": 73,
+       "to": 76
       },
       {
        "w": "everyone",
-       "from": 81,
-       "to": 92
+       "from": 76,
+       "to": 87
       },
       {
        "w": "moves",
-       "from": 92,
-       "to": 99
+       "from": 87,
+       "to": 94
       },
       {
        "w": "like",
-       "from": 99,
-       "to": 104
+       "from": 94,
+       "to": 100
       },
       {
        "w": "they're",
-       "from": 104,
-       "to": 114
+       "from": 100,
+       "to": 109
       },
       {
        "w": "underwater,",
-       "from": 114,
-       "to": 135
+       "from": 109,
+       "to": 123
       },
       {
        "w": "it's",
-       "from": 135,
-       "to": 171
+       "from": 123,
+       "to": 129
       },
       {
        "w": "slowed.",
-       "from": 171,
-       "to": 194
+       "from": 129,
+       "to": 165
       },
       {
        "w": "Blur,",
-       "from": 194,
-       "to": 201
+       "from": 165,
+       "to": 176
       },
       {
        "w": "glare",
-       "from": 201,
-       "to": 208
+       "from": 176,
+       "to": 183
       },
       {
        "w": "or",
-       "from": 208,
-       "to": 211
+       "from": 183,
+       "to": 191
       },
       {
        "w": "another",
-       "from": 211,
-       "to": 220
+       "from": 191,
+       "to": 200
       },
       {
        "w": "app's",
-       "from": 220,
-       "to": 233
+       "from": 200,
+       "to": 207
       },
       {
        "w": "logo",
-       "from": 233,
-       "to": 238
+       "from": 207,
+       "to": 213
       },
       {
        "w": "means",
-       "from": 238,
-       "to": 272
+       "from": 213,
+       "to": 232
       },
       {
        "w": "a",
-       "from": 272,
-       "to": 274
+       "from": 232,
+       "to": 234
       },
       {
        "w": "copy.",
-       "from": 274,
-       "to": 281
+       "from": 234,
+       "to": 241
       },
       {
-       "w": "Waxy",
-       "from": 281,
-       "to": 287
+       "w": "Plastic-looking",
+       "from": 241,
+       "to": 285
       },
       {
        "w": "skin",
-       "from": 287,
-       "to": 299
+       "from": 285,
+       "to": 291
       },
       {
        "w": "or",
-       "from": 299,
-       "to": 302
+       "from": 291,
+       "to": 295
       },
       {
        "w": "eyes",
-       "from": 302,
+       "from": 295,
        "to": 313
       },
       {
        "w": "that",
        "from": 313,
-       "to": 323
+       "to": 319
       },
       {
        "w": "change",
-       "from": 323,
-       "to": 338
+       "from": 319,
+       "to": 328
       },
       {
        "w": "shape",
-       "from": 338,
-       "to": 345
+       "from": 328,
+       "to": 335
       },
       {
        "w": "mean",
-       "from": 345,
-       "to": 351
+       "from": 335,
+       "to": 340
       },
       {
        "w": "a",
-       "from": 351,
-       "to": 353
+       "from": 340,
+       "to": 343
       },
       {
        "w": "filter.",
-       "from": 353,
-       "to": 388
+       "from": 343,
+       "to": 361
       },
       {
        "w": "Then",
-       "from": 388,
-       "to": 394
+       "from": 361,
+       "to": 367
       },
       {
        "w": "mute",
-       "from": 394,
-       "to": 408
+       "from": 367,
+       "to": 399
       },
       {
        "w": "it",
-       "from": 408,
-       "to": 411
+       "from": 399,
+       "to": 403
       },
       {
        "w": "and",
-       "from": 411,
-       "to": 416
+       "from": 403,
+       "to": 408
       },
       {
        "w": "ignore",
-       "from": 416,
+       "from": 408,
        "to": 424
       },
       {
        "w": "the",
        "from": 424,
-       "to": 429
+       "to": 428
       },
       {
-       "w": "circle:",
-       "from": 429,
+       "w": "circle;",
+       "from": 428,
+       "to": 438
+      },
+      {
+       "w": "if",
+       "from": 438,
+       "to": 441
+      },
+      {
+       "w": "it's",
+       "from": 441,
        "to": 461
       },
       {
@@ -1266,16 +1347,36 @@
        "to": 468
       },
       {
-       "w": "weird?",
+       "w": "weird,",
        "from": 468,
-       "to": 476
+       "to": 477
+      },
+      {
+       "w": "find",
+       "from": 477,
+       "to": 491
+      },
+      {
+       "w": "the",
+       "from": 491,
+       "to": 496
+      },
+      {
+       "w": "full",
+       "from": 496,
+       "to": 502
+      },
+      {
+       "w": "original.",
+       "from": 502,
+       "to": 514
       }
      ],
      "cues": {
-      "1": 78,
-      "2": 194,
-      "3": 281,
-      "4": 388
+      "1": 73,
+      "2": 165,
+      "3": 241,
+      "4": 361
      }
     }
    ]
@@ -1289,16 +1390,16 @@
      "title": "Real person, edited clips",
      "notes": [
       [
-       "So, is she a robot?",
-       0
-      ],
-      [
-       "No: a real person, in edited clips",
+       "Real person, edited clips",
        1
       ],
       [
-       "AI didn't fake her: copies, filters and a voice-over made the \"proof\"",
+       "Slow motion, copies, filters and a voice-over made the \"proof\"",
        2
+      ],
+      [
+       "Send this to the group that sent you the clip",
+       3
       ]
      ]
     },
@@ -1306,8 +1407,8 @@
     "captionTop": 1395,
     "captionSide": 110
    },
-   "from": 2475,
-   "frames": 415,
+   "from": 2618,
+   "frames": 326,
    "lines": [
     {
      "who": "maastaaru",
@@ -1316,167 +1417,153 @@
      "sub": null,
      "audio": "reel/robotcheck/line_07.wav",
      "from": 0,
-     "frames": 370,
+     "frames": 281,
      "words": [
       {
-       "w": "So,",
+       "w": "Real",
        "from": 7,
        "to": 12
       },
       {
-       "w": "is",
-       "from": 12,
-       "to": 15
-      },
-      {
-       "w": "she",
-       "from": 15,
-       "to": 20
-      },
-      {
-       "w": "a",
-       "from": 20,
-       "to": 23
-      },
-      {
-       "w": "robot?",
-       "from": 23,
-       "to": 31
-      },
-      {
-       "w": "No,",
-       "from": 31,
-       "to": 44
-      },
-      {
-       "w": "she's",
-       "from": 44,
-       "to": 62
-      },
-      {
-       "w": "a",
-       "from": 62,
-       "to": 74
-      },
-      {
-       "w": "real",
-       "from": 74,
-       "to": 80
-      },
-      {
        "w": "person,",
-       "from": 80,
-       "to": 90
-      },
-      {
-       "w": "in",
-       "from": 90,
-       "to": 101
+       "from": 12,
+       "to": 21
       },
       {
        "w": "edited",
-       "from": 101,
-       "to": 110
+       "from": 21,
+       "to": 35
       },
       {
-       "w": "clips.",
-       "from": 110,
-       "to": 122
+       "w": "clips:",
+       "from": 35,
+       "to": 47
       },
       {
-       "w": "AI",
-       "from": 122,
-       "to": 147
+       "w": "slow",
+       "from": 47,
+       "to": 63
       },
       {
-       "w": "didn't",
-       "from": 147,
-       "to": 156
-      },
-      {
-       "w": "fake",
-       "from": 156,
-       "to": 168
-      },
-      {
-       "w": "her:",
-       "from": 168,
-       "to": 175
+       "w": "motion,",
+       "from": 63,
+       "to": 72
       },
       {
        "w": "copies,",
-       "from": 175,
-       "to": 213
+       "from": 72,
+       "to": 85
       },
       {
        "w": "filters",
-       "from": 213,
-       "to": 228
+       "from": 85,
+       "to": 101
       },
       {
        "w": "and",
-       "from": 228,
-       "to": 233
+       "from": 101,
+       "to": 106
       },
       {
        "w": "a",
-       "from": 233,
-       "to": 235
+       "from": 106,
+       "to": 108
       },
       {
        "w": "voice-over",
-       "from": 235,
-       "to": 249
+       "from": 108,
+       "to": 125
       },
       {
        "w": "made",
-       "from": 249,
-       "to": 255
+       "from": 125,
+       "to": 130
       },
       {
        "w": "the",
-       "from": 255,
-       "to": 265
+       "from": 130,
+       "to": 135
       },
       {
        "w": "'proof'.",
-       "from": 265,
-       "to": 309
+       "from": 135,
+       "to": 145
       },
       {
-       "w": "Follow",
-       "from": 309,
-       "to": 318
+       "w": "Send",
+       "from": 145,
+       "to": 151
+      },
+      {
+       "w": "this",
+       "from": 151,
+       "to": 186
+      },
+      {
+       "w": "to",
+       "from": 186,
+       "to": 189
+      },
+      {
+       "w": "the",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "group",
+       "from": 193,
+       "to": 200
+      },
+      {
+       "w": "that",
+       "from": 200,
+       "to": 206
+      },
+      {
+       "w": "sent",
+       "from": 206,
+       "to": 216
+      },
+      {
+       "w": "you",
+       "from": 216,
+       "to": 220
+      },
+      {
+       "w": "the",
+       "from": 220,
+       "to": 225
+      },
+      {
+       "w": "clip,",
+       "from": 225,
+       "to": 231
+      },
+      {
+       "w": "and",
+       "from": 231,
+       "to": 243
+      },
+      {
+       "w": "follow",
+       "from": 243,
+       "to": 251
       },
       {
        "w": "for",
-       "from": 318,
-       "to": 323
+       "from": 251,
+       "to": 260
       },
       {
-       "w": "more",
-       "from": 323,
-       "to": 329
-      },
-      {
-       "w": "AI,",
-       "from": 329,
-       "to": 334
-      },
-      {
-       "w": "explained",
-       "from": 334,
-       "to": 346
-      },
-      {
-       "w": "simply.",
-       "from": 346,
-       "to": 356
+       "w": "more.",
+       "from": 260,
+       "to": 266
       }
      ],
      "cues": {
-      "1": 31,
-      "2": 122
+      "1": 7,
+      "2": 47,
+      "3": 145
      }
     }
    ]
