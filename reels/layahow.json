@@ -65,6 +65,11 @@
    "type": "lh_what",
    "tail": 0.6,
    "drop_cue": 3,
+   "duck": [
+    1,
+    2,
+    0.4
+   ],
    "data": {
     "yt": {
      "chapter": "What it does",
@@ -98,7 +103,7 @@
      "show": "It's Laya, by Nandakishor from Kerala. [1] Picture 1,000 emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: 94% sure.",
      "tts": "It's Laa-ya, by Nanda-kishore, from Kerala. Picture a thousand emails a day, like: we were billed twice, please refund. Laa-ya doesn't write replies. It answers a fixed question: is this a refund request? We ran it: ninety four percent sure.",
      "pauses": {
-      "3": 0.4
+      "3": 0.6
      }
     }
    ]
@@ -215,7 +220,11 @@
      "file": "05_catch.wav",
      "text": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks [4] it's worse than always picking the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right.",
      "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks [4] it's worse than always picking the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right.",
-     "tts": "The catch, from his own page. It's great at what it was trained on, like spam. But on new business tasks, it's worse than always picking the most common answer, until you train it, on your own examples. With many options, the paid rival, Jevv, does better. And in Telugu, it gets about one in five right."
+     "tts": "The catch, from his own page. It's great at what it was trained on, like spam. But on new business tasks, it's worse than always picking the most common answer, until you train it, on your own examples. With many options, the paid rival, Jevv, does better. And in Telugu, it gets about one in five right.",
+     "pauses": {
+      "4": 0.45,
+      "3": 0.5
+     }
     }
    ]
   },
@@ -254,8 +263,8 @@
      "show": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet.",
      "tts": "So. English, a few options, and examples to train it on? Laa-ya. Many options, or no time to train? Jevv. Telugu? Not yet.",
      "pauses": {
-      "2": 0.3,
-      "3": 0.3
+      "2": 0.6,
+      "3": 0.6
      }
     }
    ]

@@ -48,7 +48,7 @@ const musicArc = (tl: ReelTimeline, f: number) => {
     * (tl.musicBoosts ?? []).reduce((g, [a, b, k]) => (b - a > 60 ? g * interpolate(f, [a - 20, a + 20, b - 20, b + 20], [1, k, k, 1], cl) : g), 1);
   if (!tl.musicLift) return dip;
   const end = tl.totalFrames, lift = Math.max(12 * tl.fps, 0.28 * end);  // rises through the quiz, the recap and the CTA
-  const hit = interpolate(f, [0, 0.4 * tl.fps, 1.2 * tl.fps], [1.7, 1.7, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const hit = interpolate(f, [0, 0.6 * tl.fps, 2.0 * tl.fps], [2.1, 2.1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const rise = interpolate(f, [end - lift, end - 2 * tl.fps], [1, tl.musicLift], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return hit * rise * dip;
 };

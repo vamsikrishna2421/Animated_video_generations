@@ -231,7 +231,7 @@ const LhWhy: React.FC<SP> = ({ cue }) => {
           card(c, 90, 740, 900, 230, r, p, COL.cream);
           tag(c, "FREE", 230, 820, 64, COL.green, INK, -0.04, p);
           label(c, "open source (Apache-2.0)", 360, 832, 54, INK, caveat, p, "left");
-          label(c, "4-core CPU: 0.2 to 0.6 s a question (his page)", 130, 922, 42, GREY, caveat, p, "left");
+          label(c, "4-core CPU: 0.2 to 0.6 s a question (his page)", 130, 924, fitSize(c, "4-core CPU: 0.2 to 0.6 s a question (his page)", 840, 50, caveat), INK, caveat, p, "left");
         }
         if (f >= c3) {
           const p = fade(f, c3, 10);
@@ -267,10 +267,11 @@ const LhHonest: React.FC<SP> = ({ cue }) => {
           tag(c, "trained on spam: 99% right", W / 2, 484, 50, COL.green, INK, -0.03, fade(f, c1, 10));
           label(c, "new business tasks (% right):", 90, 586, 48, COL.cream, caveat, fade(f, c1 + 8, 10), "left");
           bar(c, 90, 666, 640, 56, 0.36, COL.red, "out of the box", "36%", seg(f, c1 + 10, c1 + 24), r);
-          bar(c, 90, 816, 640, 56, 0.46, COL.yellow, "always guessing the most common answer", "46%", seg(f, c1 + 18, c1 + 32), r);
+          bar(c, 90, 816, 640, 56, 0.46, COL.yellow, "always picking the most common answer", "46%", seg(f, c1 + 18, c1 + 32), r);
           bar(c, 90, 966, 640, 56, 0.77, COL.green, "after training on your examples", "77%", seg(f, c1 + 28, c1 + 42), r);
-          label(c, "(his reported number)", 90, 1076, 40, COL.pale, caveat, seg(f, c1 + 34, c1 + 44), "left");
-          label(c, "worse than guessing, until you train it", W / 2, 1176, fitSize(c, "worse than guessing, until you train it", 940, 58, caveat), COL.yellow, caveat, seg(f, c1 + 40, c1 + 52));
+          label(c, "(his reported number)", 90, 1078, 46, COL.pale, caveat, seg(f, c1 + 34, c1 + 44), "left");
+          label(c, "worse than always picking the most common answer,", W / 2, 1166, fitSize(c, "worse than always picking the most common answer,", 960, 52, caveat), COL.yellow, caveat, seg(f, c1 + 40, c1 + 52));
+          label(c, "until you train it", W / 2, 1230, 52, COL.yellow, caveat, seg(f, c1 + 44, c1 + 56));
           c.restore();
         }
         if (f >= c2 - 2) {   // screen B slides in from the right
@@ -278,12 +279,13 @@ const LhHonest: React.FC<SP> = ({ cue }) => {
           card(c, 70, 460, 940, 200, r, 1, COL.cream);
           label(c, "20+ answer options?", 110, 540, 60, INK, caveat, 1, "left");
           label(c, "→ Jev (a paid rival, by TypeSafe) does better", 110, 614, fitSize(c, "→ Jev (a paid rival, by TypeSafe) does better", 860, 48, caveat), COL.orange, caveat, 1, "left");
-          label(c, "77-option banking test (his page): Jev 87%, Laya 43%", W / 2, 712, fitSize(c, "77-option banking test (his page): Jev 87%, Laya 43%", 940, 46, caveat), COL.cream, caveat, 1);
+          label(c, "77-option banking test (his page):", W / 2, 712, 46, COL.cream, caveat, 1);
+          label(c, "Jev 87%, untrained Laya 43%", W / 2, 764, 56, COL.orange, caveat, 1);
           if (f >= c3) {
-            label(c, "20-option test (a random guess gets 5%):", 90, 800, 46, COL.cream, caveat, fade(f, c3, 10), "left");
-            bar(c, 90, 890, 640, 60, 0.71, COL.green, "English", "71%", seg(f, c3, c3 + 14), r);
-            bar(c, 90, 1030, 640, 60, 0.22, COL.orange, "Telugu", "22%", seg(f, c3 + 6, c3 + 20), r);
-            label(c, "about 1 in 5", W / 2, 1190, 76, COL.orange, caveat, seg(f, c3 + 18, c3 + 26));
+            label(c, "same 20-option test, by language (pure chance: 5%):", 90, 830, fitSize(c, "same 20-option test, by language (pure chance: 5%):", 900, 48, caveat), COL.cream, caveat, fade(f, c3, 10), "left");
+            bar(c, 90, 910, 640, 60, 0.71, COL.green, "English", "71%", seg(f, c3, c3 + 14), r);
+            bar(c, 90, 1046, 640, 60, 0.22, COL.orange, "Telugu", "22%", seg(f, c3 + 6, c3 + 20), r);
+            label(c, "about 1 in 5", W / 2, 1200, 76, COL.orange, caveat, seg(f, c3 + 18, c3 + 26));
           }
           c.restore();
         }
@@ -304,6 +306,7 @@ const LhVerdict: React.FC<SP> = ({ cue }) => {
   return (
     <>
       {[c1, c2, c3].map((a, i) => <Sfx key={i} at={a} src="audio/sfx_pop.wav" vol={0.4} />)}
+      {[c2 - 15, c3 - 15, c3 + 30].map((a, i) => <Sfx key={`a${i}`} at={a} src="audio/sfx_tick.wav" vol={0.55} />)}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3650 + boil);
@@ -344,22 +347,22 @@ const LhTry: React.FC<SP> = ({ s, cue }) => {
           card(c, 50, 380, 980, 110, r, p, "#0f172a");
           const cmd = "pip install laya";
           label(c, "$ " + cmd.slice(0, Math.round(cmd.length * seg(f, c1, c1 + 16))), 90, 456, 52, COL.green, mono, p, "left");
-          card(c, 50, 520, 980, 590, r, p, COL.cream);
+          card(c, 50, 520, 980, 540, r, p, COL.cream);
           const sz = fitSize(c, "               \"twice, please refund.\"}", 920, 36, mono);
           CODE.forEach(([t, col], i) => label(c, t, 80, 584 + i * 62, sz, col, mono, seg(f, c1 + 6 + i * 3, c1 + 14 + i * 3), "left"));
           tag(c, "noul = yes / no", 800, 550, 46, COL.yellow, INK, 0.03, seg(f, c1 + 20, c1 + 28));
-          label(c, "→ 0.94", 820, 1086, 56, "#b45309", caveat, seg(f, c1 + 34, c1 + 42), "left");
+          label(c, "→ 0.94", 870, 1046, 50, "#b45309", caveat, seg(f, c1 + 34, c1 + 42), "left");
         }
         if (f >= c2) {
           const p = fade(f, c2, 10), t: string = s.data.notCoder ?? "not a coder? send this to whoever runs AI at your company";
           const [t1, t2] = t.includes("? ") ? [t.slice(0, t.indexOf("? ") + 1), t.slice(t.indexOf("? ") + 2)] : [t, ""];
-          card(c, 50, 1126, 980, 150, r, p, "#fff6d8");
-          label(c, t1, W / 2, 1186, 54, INK, caveat, p);
-          label(c, t2, W / 2, 1250, fitSize(c, t2, 920, 50, caveat), INK, caveat, p);
+          card(c, 50, 1078, 980, 176, r, p, "#fff6d8");
+          label(c, t1, W / 2, 1148, 66, INK, caveat, p);
+          label(c, t2, W / 2, 1222, fitSize(c, t2, 920, 60, caveat), INK, caveat, p);
         }
         if (f >= c3) {
           const p = fade(f, c3, 12);
-          label(c, "github.com/NandhaKishorM/laya", W / 2, 1312, 44, COL.pale, mono, p);
+          label(c, "github.com/NandhaKishorM/laya", W / 2, 1300, 44, COL.pale, mono, p);
           c.save(); c.globalAlpha = easeOut(p);
           c.font = caveat(handle.length > 16 ? 70 : 80); c.textAlign = "center"; c.fillStyle = COL.yellow;
           c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1376);

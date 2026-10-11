@@ -66,6 +66,11 @@
    "type": "lh_what",
    "tail": 0.6,
    "drop_cue": 3,
+   "duck": [
+    1,
+    2,
+    0.4
+   ],
    "data": {
     "yt": {
      "chapter": "What it does",
@@ -98,7 +103,7 @@
      "text": "దీని పేరు లయ, కేరళకి చెందిన నందకిషోర్ తయారు చేశారు. [1] రోజుకి వెయ్యి ఈమెయిల్స్ వస్తాయనుకోండి, ఉదాహరణకు, మాకు రెండుసార్లు బిల్ వేశారు, రీఫండ్ ఇవ్వండి అని. [2] లయ రిప్లై రాయదు. ఇది రీఫండ్ రిక్వెస్టా, అనే ఒక ఫిక్స్డ్ ప్రశ్నకి జవాబు ఇస్తుంది. [3] మేము రన్ చేసి చూశాం: తొంభై నాలుగు శాతం ష్యూర్.",
      "show": "It's Laya, by Nandakishor from Kerala. [1] Picture 1,000 emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: 94% sure.",
      "pauses": {
-      "3": 0.4
+      "3": 0.6
      }
     }
    ]
@@ -212,7 +217,11 @@
      "maxgap": 0.32,
      "file": "05_catch.wav",
      "text": "ఇప్పుడు అసలు విషయం, అతని సొంత పేజీ నుంచే. [1] ట్రైన్ చేసిన పనుల్లో, అంటే స్పామ్ లాంటి వాటిలో, ఇది చాలా బాగుంది. కానీ కొత్త బిజినెస్ పనుల్లో, మీ ఉదాహరణలతో ట్రైన్ చేసే వరకు, [4] ఎప్పుడూ ఎక్కువగా వచ్చే జవాబు చెప్పడం కంటే కూడా తక్కువ స్కోర్ చేస్తుంది. [2] చాలా ఆప్షన్లు ఉంటే, పెయిడ్ రైవల్ జెవ్ బాగా చేస్తుంది. [3] తెలుగులో అయితే, ఐదింటిలో ఒక్కటే సరిగ్గా చెప్తుంది.",
-     "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks [4] it's worse than always picking the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right."
+     "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks [4] it's worse than always picking the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right.",
+     "pauses": {
+      "4": 0.45,
+      "3": 0.5
+     }
     }
    ]
   },
@@ -250,8 +259,8 @@
      "text": "కాబట్టి: [1] ఇంగ్లీష్, కొన్ని ఆప్షన్లు, ట్రైన్ చేయడానికి ఉదాహరణలు ఉంటే? లయ. [2] చాలా ఆప్షన్లు, ట్రైన్ చేసే టైమ్ లేదా? జెవ్. [3] మరి తెలుగుకి? ఇంకా రెడీ కాలేదు.",
      "show": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet.",
      "pauses": {
-      "2": 0.3,
-      "3": 0.3
+      "2": 0.6,
+      "3": 0.6
      }
     }
    ]

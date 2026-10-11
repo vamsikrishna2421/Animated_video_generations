@@ -47,10 +47,13 @@ export const phraseGroups = (words: Word[]) => {
   const len = (ws: Word[]) => ws.reduce((n, w) => n + w.w.length + 1, 0);
   const out: Word[][] = [];
   let cur: Word[] = [];
+  const end = (w: Word) => /[.!?]["'”’)]*$/.test(w.w);
   words.forEach((w, i) => {
     cur.push(w);
     const rest = words.length - i - 1, next = words[i + 1];
-    if (/[.!?]["'”’)]*$/.test(w.w) || (/[,:;]$/.test(w.w) && len(cur) >= 16 && rest > 2) || (next && len(cur) + next.w.length + 1 > 42 && rest > 2)) {
+    let left = 0;   // words still to come in this sentence
+    for (let k = i + 1; k < words.length; k++) { left++; if (end(words[k])) break; }
+    if (end(w) || (/[,:;]$/.test(w.w) && len(cur) >= 16 && rest > 2 && left > 2) || (next && len(cur) + next.w.length + 1 > 42 && rest > 2 && left > 2)) {
       out.push(cur);
       cur = [];
     }
