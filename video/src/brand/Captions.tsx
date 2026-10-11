@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { useCurrentFrame } from "remotion";
 import { B, F, pop } from "./tokens";
 
@@ -73,7 +74,7 @@ export const PhraseCaptions: React.FC<{ words: Word[]; bottom?: number; size?: n
   const g = gs[i];
   const inS = pop(f, g[0].s - 2, 10, 0.5, 260);
   return (
-    <div style={{ position: "absolute", left: 60, right: 60, bottom, textAlign: "center", transform: `scale(${0.92 + 0.08 * inS})` }}>
+    <div style={{ position: "absolute", left: 60, right: 60, bottom, textAlign: "center", transform: `scale(${0.92 + 0.08 * inS})`, ...({ textWrap: "balance" } as CSSProperties) }}>
       <span style={{ fontFamily: F.inter, fontWeight: 800, fontSize: size, lineHeight: 1.2, color: B.white, textShadow: "0 3px 10px rgba(0,0,0,0.8), 0 0 2px #000" }}>
         {g.map((w) => w.w).join(" ")}
       </span>

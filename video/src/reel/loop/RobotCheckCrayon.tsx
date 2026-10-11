@@ -200,7 +200,7 @@ const RcHook: React.FC<SP> = ({ cue }) => {
             label(c, "Susan Dell", 130, 1162, 84, INK, caveat, p, "left");
             label(c, "charity co-founder; her husband founded Dell (laptops)", 130, 1236, fitSize(c, "charity co-founder; her husband founded Dell (laptops)", 820, 52, caveat), INK, caveat, p, "left");
             label(c, "Source: White House · Oct 7, 2026", 130, 1314, 48, GREY, caveat, p, "left");
-            tag(c, "real video, not AI", 790, 1130, 42, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
+            tag(c, "real video", 830, 1130, 46, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
           }
         }
         if (f >= c3) {
@@ -347,8 +347,8 @@ const RcEnhance: React.FC<SP> = ({ cue }) => {
           card(c, 570, 1096, 400, 220, r, seg(f, c2 + 8, c2 + 18), COL.cream);
           if (p > 0.3) doodleFace(c, 310, 1196, 74, r, 0);
           if (f >= c2 + 12) doodleFace(c, 770, 1196, 74, r, 1);
-          label(c, "normal shot (0:24)", 310, 1302, 42, GREY, caveat, p);
-          label(c, "filtered close-up (0:25)", 770, 1302, 42, COL.red, caveat, seg(f, c2 + 8, c2 + 18));
+          label(c, "normal shot (0:24)", 310, 1304, 46, INK, handF, p);
+          label(c, "filtered close-up (0:25)", 770, 1304, 46, COL.red, handF, seg(f, c2 + 8, c2 + 18));
           label(c, "what we saw in one viral compilation", W / 2, 1370, 48, COL.pale, caveat, seg(f, c2 + 14, c2 + 24));
         }
       }} />
@@ -396,7 +396,7 @@ const RcStory: React.FC<SP> = ({ cue }) => {
 const RcCheck: React.FC<SP> = ({ cue }) => {
   const cs = [cue(1), cue(2), cue(3), cue(4)];
   const ROWS = [["1 · slowed?", "everyone moves like they're underwater"], ["2 · a copy?", "blur, glare, another app's logo"],
-    ["3 · a filter?", "plastic-looking skin, eyes that change shape"], ["4 · just the story?", "mute it, ignore the circle; still weird? watch the original"]];
+    ["3 · a filter?", "plastic-looking skin, eyes that change shape"], ["4 · just the story?", "mute it, ignore the circle; still weird? find the full original"]];
   return (
     <>
       {cs.map((a, i) => <Sfx key={i} at={a + 10} src="audio/sfx_tick.wav" vol={0.45} />)}
