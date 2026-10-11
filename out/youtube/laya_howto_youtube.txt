@@ -1,0 +1,55 @@
+UPLOAD: Laya, hands-on (YouTube, two uploads; 16:9 regular videos, not Shorts)
+
+########## ENGLISH: laya_howto_yt_en.mp4 ##########
+=== TITLE ===
+This Free AI Can't Write a Sentence. 32,000 People Starred It Anyway | Laya, Hands-On
+
+=== DESCRIPTION ===
+Laya, by Nandakishor from Kerala, is a free, open-source AI that never writes text. It answers a fixed question with one number: is this a refund request? Which team gets this ticket? How urgent is it? We ran it ourselves, then read the limits on his own page.
+
+In this video:
+- What it does: a refund email in, "YES, 94% sure" out (real output, base model, run by us)
+- Three kinds of questions: pick one (which team: tech support, 95% sure), score (how urgent, 1 to 5: 2, 58% sure), yes/no (phishing: yes, 100% sure)
+- Why people use it: about 33 ms a question on a cloud GPU (his measurement, on a T4), so 1,000 emails in about 33 seconds; 0.2 to 0.6 s a question on a 4-core CPU; free and open source (Apache-2.0); it can be wrong, but it can't ramble
+- The catch, from his own page: great on what it was trained on (spam: 99% right). On new business tasks it gets 36% right out of the box, below the 46% you'd get by always picking the most common answer; 77% after training on that task's examples (his reported number). With many options, the paid rival Jev (by TypeSafe) does better: 87% vs 43% on a 77-option banking test (his page). Telugu: 22% on a 20-option test (English: 71%)
+- Which one: English, a few options and examples to train on → Laya. Many options or no time to train → Jev (paid). Telugu → not yet
+
+Try it: pip install laya · https://github.com/NandhaKishorM/laya
+Not a coder? Send this to whoever runs AI at your company.
+
+Chapters:
+{CHAPTERS_EN}
+
+Sources: github.com/NandhaKishorM/laya (README and BENCHMARKS.md); GitHub star count as of Oct 10, 2026. Outputs shown were run by us on the base model. Not sponsored.
+
+#AI #OpenSource #FreeAITools #Python #IndianTech #LearnAI
+
+=== PINNED_COMMENT ===
+pip install laya. What would you ask it: refund or not, which team, how urgent?
+
+########## TELUGU: laya_howto_yt_te.mp4 ##########
+=== TITLE ===
+Ee Free AI Oka Vaakyam Kuda Raayadu, Ayina 32,000 Stars | Laya Hands-On | Telugu
+
+=== DESCRIPTION ===
+Kerala ki chendina Nandakishor tayaru chesina Laya: free, open-source AI. Idi text raayadu; oka fixed prashnaki oka number tho javaabu istundi (refund request aa? e team ki? entha urgent?). Memu run chesi chusam, aayana page lo unna limits kuda cheppam.
+
+Ee video lo:
+- Refund email ki "YES, 94% sure" (memu run chesina real output)
+- 3 rakaala prashnalu: okati enchukovadam, score, avuna kaada (scam/phishing email)
+- Enduku vaadataaru: reppapaatu kanna vegam (cloud GPU meeda okko prashnaki ~33 ms, aayana measurement), free, open source
+- Asalu vishayam (aayana page nunche): kotta business panullo modatlo 36%, eppudu ekkuvaga vachhe javaabu cheppina vachhe 46% kante takkuva; train chesaaka 77%. Chaala options unte paid Jev (TypeSafe) baaga chestundi (77-option test: Jev 87%, Laya 43%). Telugu lo 22% (English 71%)
+- Telugu ki inka ready kaaledu
+
+Try cheyyandi: pip install laya · https://github.com/NandhaKishorM/laya
+Coder kaada? Mee developer friend ki share cheyyandi.
+
+Chapters:
+{CHAPTERS_TE}
+
+Sources: English description lo unnayi. Not sponsored.
+
+#AIinTelugu #TeluguAI #OpenSource #FreeAITools #LearnAI
+
+=== PINNED_COMMENT ===
+pip install laya. Telugu data tho train chesi chudaalaa? Comment cheyyandi.
