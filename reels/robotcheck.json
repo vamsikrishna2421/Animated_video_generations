@@ -9,8 +9,8 @@
  "lead": 0.3,
  "music": "lofi",
  "musicVol": [
-  0.55,
-  0.95
+  0.5,
+  1.15
  ],
  "musicLift": 1.8,
  "musicPad": true,
@@ -102,7 +102,11 @@
    "type": "rc_copies",
    "tail": 0.5,
    "lift": true,
-   "boost": 1.3,
+   "duck": [
+    2,
+    3,
+    0.5
+   ],
    "data": {
     "yt": {
      "chapter": "Trick 2: copies of copies",
@@ -124,8 +128,8 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "03_copies.wav",
-     "text": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, with four and a half million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions.",
-     "show": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, 4.5 million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions.",
+     "text": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, with four and a half million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions. [3]",
+     "show": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, 4.5 million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions. [3]",
      "tts": "Trick two: copies of copies, like a WhatsApp forward. One post, with four and a half million views, is a phone filming a TV. Each copy smears detail, like eyes, and expressions."
     }
    ]
@@ -241,6 +245,11 @@
    "tail": 1.2,
    "outro": true,
    "drop_cue": 1,
+   "duck": [
+    2,
+    3,
+    0.45
+   ],
    "data": {
     "yt": {
      "chapter": "Verdict",
@@ -267,8 +276,8 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "07_close.wav",
-     "text": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. Follow for more AI, explained simply.",
-     "show": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. Follow for more AI, explained simply.",
+     "text": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. [3] Follow for more AI, explained simply.",
+     "show": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. [3] Follow for more AI, explained simply.",
      "tts": "So, is she a robot, or not: no, she's a real person, in edited clips. A.I. didn't fake her. Copies, filters, and a voice-over made the proof. Follow, for more A.I., explained simply."
     }
    ]

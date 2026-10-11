@@ -9,8 +9,8 @@
  "lead": 0.3,
  "music": "lofi",
  "musicVol": [
-  0.55,
-  0.95
+  0.5,
+  1.15
  ],
  "musicLift": 1.8,
  "musicPad": true,
@@ -102,7 +102,11 @@
    "type": "rc_copies",
    "tail": 0.5,
    "lift": true,
-   "boost": 1.3,
+   "duck": [
+    2,
+    3,
+    0.5
+   ],
    "data": {
     "yt": {
      "chapter": "Trick 2: copies of copies",
@@ -124,8 +128,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "03_copies.wav",
-     "text": "రెండో ట్రిక్: కాపీకి కాపీ, వాట్సాప్ ఫార్వర్డ్ లాగా. [1] నలభై ఐదు లక్షల వ్యూస్ ఉన్న ఒక పోస్ట్, టీవీని ఫోన్ తో షూట్ చేసిన వీడియో. [2] ప్రతి కాపీలో, కళ్ళు, ముఖ కవళికలు లాంటి డీటెయిల్ చెదిరిపోతుంది.",
-     "show": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, 4.5 million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions."
+     "text": "రెండో ట్రిక్: కాపీకి కాపీ, వాట్సాప్ ఫార్వర్డ్ లాగా. [1] నలభై ఐదు లక్షల వ్యూస్ ఉన్న ఒక పోస్ట్, టీవీని ఫోన్ తో షూట్ చేసిన వీడియో. [2] ప్రతి కాపీలో, కళ్ళు, ముఖ కవళికలు లాంటి డీటెయిల్ చెదిరిపోతుంది. [3]",
+     "show": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, 4.5 million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions. [3]"
     }
    ]
   },
@@ -237,6 +241,11 @@
    "tail": 1.2,
    "outro": true,
    "drop_cue": 1,
+   "duck": [
+    2,
+    3,
+    0.45
+   ],
    "data": {
     "yt": {
      "chapter": "Verdict",
@@ -263,8 +272,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "07_close.wav",
-     "text": "మరి, ఆమె రోబోనా? [1] కాదు, ఆమె నిజమైన మనిషి, క్లిప్స్ ని ఎడిట్ చేశారు. [2] ఎ ఐ ఆమెని ఫేక్ చేయలేదు: కాపీలు, ఫిల్టర్లు, వాయిస్ ఓవర్ కలిసి ఆ ప్రూఫ్ తయారు చేశాయి. మరిన్ని ఎ ఐ విషయాల కోసం ఫాలో అవ్వండి.",
-     "show": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. Follow for more AI, explained simply."
+     "text": "మరి, ఆమె రోబోనా? [1] కాదు, ఆమె నిజమైన మనిషి, క్లిప్స్ ని ఎడిట్ చేశారు. [2] ఎ ఐ ఆమెని ఫేక్ చేయలేదు: కాపీలు, ఫిల్టర్లు, వాయిస్ ఓవర్ కలిసి ఆ ప్రూఫ్ తయారు చేశాయి. [3] మరిన్ని ఎ ఐ విషయాల కోసం ఫాలో అవ్వండి.",
+     "show": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. [3] Follow for more AI, explained simply."
     }
    ]
   }
