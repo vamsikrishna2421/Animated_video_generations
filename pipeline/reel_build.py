@@ -445,9 +445,22 @@ def main(spec_path: Path) -> None:
         scenes.append({"id": sc["id"], "type": sc["type"], "data": sc.get("data", {}), "from": round(s_from * FPS),
                        "frames": round((t - s_from) * FPS), "lines": lines})
     total = t + 0.4
-    # "drop_cue": k on a scene = a short music drop right before that cue (the key number), released on the cue
-    mdrops = [[max(0, sc["from"] + sc["lines"][0]["cues"][str(spec_sc["drop_cue"])] - round(0.8 * FPS)), sc["from"] + sc["lines"][0]["cues"][str(spec_sc["drop_cue"])]]
-              for spec_sc, sc in zip(spec["scenes"], scenes) if spec_sc.get("drop_cue") is not None and sc["lines"]]
+    # "drop_cue": k (or a list of cues) on a scene = a short music drop right before that cue (the key number), released on the cue
+    # "duck": [cue_a, cue_b, gain] = the bed sits at `gain` between two cues (e.g. under a command the viewer must hear exactly)
+    mdrops = []
+    for spec_sc, sc in zip(spec["scenes"], scenes):
+        if not sc["lines"]:
+            continue
+        cues = sc["lines"][0]["cues"]
+        dc = spec_sc.get("drop_cue")
+        for k in (dc if isinstance(dc, list) else [dc] if dc is not None else []):
+            if str(k) in cues:
+                at = sc["from"] + cues[str(k)]
+                mdrops.append([max(0, at - round(0.8 * FPS)), at])
+        if spec_sc.get("duck"):
+            a, b, g = spec_sc["duck"]
+            if str(a) in cues and str(b) in cues:
+                mdrops.append([sc["from"] + cues[str(a)], sc["from"] + cues[str(b)], g])
     # "boost": g on a scene = the music bed sits g times louder for that scene (a lift through the middle of the reel);
     # consecutive boosted scenes with the same gain become one window so there is no dip at the cut
     mboosts = []

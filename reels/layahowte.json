@@ -53,8 +53,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "01_hook.wav",
-     "text": "ఈ ఫ్రీ ఎ ఐ, ఒక్క వాక్యం కూడా రాయదు. [1] అయినా మూడు వారాల్లో ముప్పై రెండు వేల మంది డెవలపర్లు దీనికి స్టార్ ఇచ్చారు. [2] తెలుగులో పనిచేస్తుందా? అది చివర్లో చెప్తా.",
-     "show": "This free AI doesn't write a single sentence. [1] Yet 32,000 developers gave it a star in 3 weeks. [2] Does it work in Telugu? I'll tell you at the end.",
+     "text": "కేరళకి చెందిన ఈ ఫ్రీ ఎ ఐ, ఒక్క వాక్యం కూడా రాయదు. [1] అయినా మూడు వారాల్లో, ముప్పై రెండు వేల మందికి పైగా దీనికి స్టార్ ఇచ్చారు. [2] తెలుగులో పనిచేస్తుందా? అది చివర్లో చెప్తా.",
+     "show": "This free AI from Kerala doesn't write a single sentence. [1] Yet over 32,000 people gave it a star in 3 weeks. [2] Does it work in Telugu? I'll tell you at the end.",
      "pauses": {
       "1": 0.25
      }
@@ -65,6 +65,7 @@
    "id": "what",
    "type": "lh_what",
    "tail": 0.6,
+   "drop_cue": 3,
    "data": {
     "yt": {
      "chapter": "What it does",
@@ -95,7 +96,10 @@
      "maxgap": 0.32,
      "file": "02_what.wav",
      "text": "దీని పేరు లయ, కేరళకి చెందిన నందకిషోర్ తయారు చేశారు. [1] రోజుకి వెయ్యి ఈమెయిల్స్ వస్తాయనుకోండి, ఉదాహరణకు, మాకు రెండుసార్లు బిల్ వేశారు, రీఫండ్ ఇవ్వండి అని. [2] లయ రిప్లై రాయదు. ఇది రీఫండ్ రిక్వెస్టా, అనే ఒక ఫిక్స్డ్ ప్రశ్నకి జవాబు ఇస్తుంది. [3] మేము రన్ చేసి చూశాం: తొంభై నాలుగు శాతం ష్యూర్.",
-     "show": "It's Laya, by Nandakishor from Kerala. [1] Picture 1,000 emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: 94% sure."
+     "show": "It's Laya, by Nandakishor from Kerala. [1] Picture 1,000 emails a day like 'We were billed twice, please refund.' [2] Laya doesn't write replies. It answers a fixed question: is this a refund request? [3] We ran it: 94% sure.",
+     "pauses": {
+      "3": 0.4
+     }
     }
    ]
   },
@@ -103,6 +107,7 @@
    "id": "kinds",
    "type": "lh_kinds",
    "tail": 0.8,
+   "lift": true,
    "data": {
     "yt": {
      "chapter": "3 kinds of questions",
@@ -173,7 +178,10 @@
    "type": "lh_honest",
    "tail": 0.8,
    "lift": true,
-   "drop_cue": 3,
+   "drop_cue": [
+    4,
+    3
+   ],
    "data": {
     "yt": {
      "chapter": "The catch",
@@ -203,8 +211,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "05_catch.wav",
-     "text": "ఇప్పుడు అసలు విషయం, అతని సొంత పేజీ నుంచే. [1] ట్రైన్ చేసిన పనుల్లో, అంటే స్పామ్ లాంటి వాటిలో, ఇది చాలా బాగుంది. కానీ కొత్త బిజినెస్ పనుల్లో, మీ ఉదాహరణలతో ట్రైన్ చేసే వరకు, ఎప్పుడూ ఎక్కువగా వచ్చే జవాబు చెప్పడం కంటే కూడా తక్కువ స్కోర్ చేస్తుంది. [2] చాలా ఆప్షన్లు ఉంటే, పెయిడ్ రైవల్ జెవ్ బాగా చేస్తుంది. [3] తెలుగులో అయితే, ఐదింటిలో ఒక్కటే సరిగ్గా చెప్తుంది.",
-     "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks it's worse than guessing the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right."
+     "text": "ఇప్పుడు అసలు విషయం, అతని సొంత పేజీ నుంచే. [1] ట్రైన్ చేసిన పనుల్లో, అంటే స్పామ్ లాంటి వాటిలో, ఇది చాలా బాగుంది. కానీ కొత్త బిజినెస్ పనుల్లో, మీ ఉదాహరణలతో ట్రైన్ చేసే వరకు, [4] ఎప్పుడూ ఎక్కువగా వచ్చే జవాబు చెప్పడం కంటే కూడా తక్కువ స్కోర్ చేస్తుంది. [2] చాలా ఆప్షన్లు ఉంటే, పెయిడ్ రైవల్ జెవ్ బాగా చేస్తుంది. [3] తెలుగులో అయితే, ఐదింటిలో ఒక్కటే సరిగ్గా చెప్తుంది.",
+     "show": "The catch, from his own page: [1] it's great at what it was trained on, like spam, but on new business tasks [4] it's worse than always picking the most common answer, until you train it on your examples. [2] With many options, the paid rival Jev does better. [3] And in Telugu, it gets about one in five right."
     }
    ]
   },
@@ -240,7 +248,11 @@
      "maxgap": 0.32,
      "file": "06_verdict.wav",
      "text": "కాబట్టి: [1] ఇంగ్లీష్, కొన్ని ఆప్షన్లు, ట్రైన్ చేయడానికి ఉదాహరణలు ఉంటే? లయ. [2] చాలా ఆప్షన్లు, ట్రైన్ చేసే టైమ్ లేదా? జెవ్. [3] తెలుగు? ఇంకా రెడీ కాలేదు.",
-     "show": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet."
+     "show": "So: [1] English, a few options, and examples to train it on? Laya. [2] Many options, or no time to train? Jev. [3] Telugu? Not yet.",
+     "pauses": {
+      "2": 0.3,
+      "3": 0.3
+     }
     }
    ]
   },
@@ -250,6 +262,11 @@
    "tail": 1.2,
    "outro": true,
    "lift": true,
+   "duck": [
+    1,
+    2,
+    0.3
+   ],
    "data": {
     "yt": {
      "chapter": "Try it",

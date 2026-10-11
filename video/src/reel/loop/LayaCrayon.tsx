@@ -19,7 +19,7 @@ const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
 // Chatbot bubble that keeps filling with paragraph scribbles.
 const chatBubble = (c: Ctx, x: number, y: number, w: number, h: number, r: () => number, fill: number, p: number) => {
   if (!card(c, x, y, w, h, r, p, COL.cream)) return;
-  label(c, "AI chatbot", x + 30, y + 58, 44, GREY, caveat, p, "left");
+  label(c, "AI chatbot", x + 30, y + 62, 56, INK, caveat, p, "left");
   const rows = Math.floor((h - 110) / 46);
   const n = rows * fill;
   for (let i = 0; i < rows; i++) {
@@ -97,7 +97,7 @@ const LhHook: React.FC<SP> = ({ cue }) => {
           const p = fade(f, c1, 10);
           card(c, 90, 950, 900, 190, r, p, COL.cream);
           c.save(); c.globalAlpha = clamp(p * 1.5); star(c, 180, 1045, 52, COL.orange); c.restore();
-          label(c, `${fmt(lerp(0, 32138, easeOut(seg(f, c1, c1 + 30))))} stars`, 270, 1068, 96, INK, caveat, p, "left");
+          label(c, `${fmt(lerp(0, 32138, easeOut(seg(f, c1 - 6, c1 + 12))))} stars`, 270, 1068, 96, INK, caveat, p, "left");
           label(c, "on GitHub, in 3 weeks (as of Oct 10)", 274, 1118, 38, GREY, handF, p, "left");
         }
         if (f >= c2) {
@@ -124,8 +124,8 @@ const LhWhat: React.FC<SP> = ({ cue }) => {
         const r = rng(3200 + boil);
         hand(c, "Laya", W / 2, 360, 96, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
         label(c, "built by Nandakishor (Kerala)", W / 2, 420, 46, COL.cream, caveat, seg(f, 6, 16));
-        if (f >= c1) {
-          const p = fade(f, c1, 10);
+        if (f >= 6) {
+          const p = fade(f, 6, 10);
           card(c, 90, 470, 900, 220, r, p, COL.cream);
           label(c, "message", 130, 530, 40, GREY, caveat, p, "left");
           label(c, "\"We were billed twice,", 130, 600, 58, INK, caveat, p, "left");
@@ -278,11 +278,12 @@ const LhHonest: React.FC<SP> = ({ cue }) => {
           card(c, 70, 460, 940, 200, r, 1, COL.cream);
           label(c, "20+ answer options?", 110, 540, 60, INK, caveat, 1, "left");
           label(c, "→ Jev (a paid rival, by TypeSafe) does better", 110, 614, fitSize(c, "→ Jev (a paid rival, by TypeSafe) does better", 860, 48, caveat), COL.orange, caveat, 1, "left");
+          label(c, "77-option banking test (his page): Jev 87%, Laya 43%", W / 2, 712, fitSize(c, "77-option banking test (his page): Jev 87%, Laya 43%", 940, 46, caveat), COL.cream, caveat, 1);
           if (f >= c3) {
-            label(c, "20-option test (a random guess gets 5%):", 90, 760, 46, COL.cream, caveat, fade(f, c3, 10), "left");
-            bar(c, 90, 860, 640, 60, 0.71, COL.green, "English", "71%", seg(f, c3, c3 + 14), r);
-            bar(c, 90, 1010, 640, 60, 0.22, COL.orange, "Telugu", "22%", seg(f, c3 + 6, c3 + 20), r);
-            label(c, "about 1 in 5", W / 2, 1180, 76, COL.orange, caveat, seg(f, c3 + 18, c3 + 26));
+            label(c, "20-option test (a random guess gets 5%):", 90, 800, 46, COL.cream, caveat, fade(f, c3, 10), "left");
+            bar(c, 90, 890, 640, 60, 0.71, COL.green, "English", "71%", seg(f, c3, c3 + 14), r);
+            bar(c, 90, 1030, 640, 60, 0.22, COL.orange, "Telugu", "22%", seg(f, c3 + 6, c3 + 20), r);
+            label(c, "about 1 in 5", W / 2, 1190, 76, COL.orange, caveat, seg(f, c3 + 18, c3 + 26));
           }
           c.restore();
         }
@@ -346,20 +347,22 @@ const LhTry: React.FC<SP> = ({ s, cue }) => {
           card(c, 50, 520, 980, 590, r, p, COL.cream);
           const sz = fitSize(c, "               \"twice, please refund.\"}", 920, 36, mono);
           CODE.forEach(([t, col], i) => label(c, t, 80, 584 + i * 62, sz, col, mono, seg(f, c1 + 6 + i * 3, c1 + 14 + i * 3), "left"));
-          tag(c, "noul = yes / no", 820, 548, 38, COL.yellow, INK, 0.03, seg(f, c1 + 20, c1 + 28));
+          tag(c, "noul = yes / no", 800, 550, 46, COL.yellow, INK, 0.03, seg(f, c1 + 20, c1 + 28));
           label(c, "→ 0.94", 820, 1086, 56, "#b45309", caveat, seg(f, c1 + 34, c1 + 42), "left");
         }
         if (f >= c2) {
           const p = fade(f, c2, 10), t: string = s.data.notCoder ?? "not a coder? send this to whoever runs AI at your company";
-          label(c, t, W / 2, 1168, fitSize(c, t, 960, 46, caveat), COL.cream, caveat, p);
+          const [t1, t2] = t.includes("? ") ? [t.slice(0, t.indexOf("? ") + 1), t.slice(t.indexOf("? ") + 2)] : [t, ""];
+          card(c, 50, 1126, 980, 150, r, p, "#fff6d8");
+          label(c, t1, W / 2, 1186, 54, INK, caveat, p);
+          label(c, t2, W / 2, 1250, fitSize(c, t2, 920, 50, caveat), INK, caveat, p);
         }
         if (f >= c3) {
           const p = fade(f, c3, 12);
-          label(c, "github.com/NandhaKishorM/laya", W / 2, 1234, 46, COL.pale, mono, p);
+          label(c, "github.com/NandhaKishorM/laya", W / 2, 1312, 44, COL.pale, mono, p);
           c.save(); c.globalAlpha = easeOut(p);
-          c.font = caveat(handle.length > 16 ? 76 : 88); c.textAlign = "center"; c.fillStyle = COL.yellow;
-          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1320);
-          c.shadowBlur = 0; c.font = handF(44); c.fillStyle = COL.cream; c.fillText("free AI tools, explained simply", W / 2, 1376);
+          c.font = caveat(handle.length > 16 ? 70 : 80); c.textAlign = "center"; c.fillStyle = COL.yellow;
+          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1376);
           c.restore();
         }
       }} />
