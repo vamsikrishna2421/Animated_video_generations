@@ -47,7 +47,13 @@ def take(text, lang, out_dir, pause=0.7):
     sr = parts[0][1]
     gap = np.zeros(int(pause * sr))
     a = np.concatenate([x for i, (p, _) in enumerate(parts) for x in ((gap, p) if i else (p,))])
+    starts, at = [], 0  # where each part begins (seconds, after the tempo change): cards can cue on a part
+    for i, (p, _) in enumerate(parts):
+        at += len(gap) if i else 0
+        starts.append(at / sr / TEMPO[lang])
+        at += len(p)
     a = stretch(a, sr, TEMPO[lang])
+    take.starts = starts
     return a * (10 ** (-16 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9)), sr
 
 
@@ -80,21 +86,35 @@ def build(spec_path, lang="en"):
     key = "tts" if lang == "en" else "tts_te"
     segs = [("hook", spec["hook"])] + [(f"story{i + 1}", s) for i, s in enumerate(spec["stories"])] + [("outro", spec["outro"])]
     timeline = {**{k: spec[k] for k in ("id", "date", "range", "edition")}, **{k: spec[k] for k in ("kicker", "title", "recap", "look", "music", "lock", "labs", "musicBase", "musicBaseYT") if k in spec}, "lang": lang, "segments": []}
+    if lang != "en" and spec.get("captionMode_te"):
+        timeline["captionMode"] = spec["captionMode_te"]  # English phrases over the Telugu voice
     lead, tail = {"hook": 4, "outro": 6}, {"hook": 14, "outro": 150}
     for name, seg in segs:
         a, sr = take(seg[key], lang, out_dir, seg.get("pause", 0.7))
         f = out_dir / f"{name}.wav"
         sf.write(f, a.astype(np.float32), sr)
         ld = lead.get(name, spec.get("storyLead", 8))  # story: room for the cut + headline before the voice
-        frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, spec.get("storyTail", 10))
+        frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, seg.get("tail", spec.get("storyTail", 10)))
         words = word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):
-            entry.update({k: v for k, v in seg.items() if k not in ("text", "tts", "tts_te", "cards", "pause")})
-            for c in seg["cards"]:  # a card cues on a word index ("at") or on the first word containing "cue"
-                if "cue" in c:
-                    c["at"] = next((i for i, w in enumerate(words) if c["cue"].lower() in w["w"].lower()), 0)
-            entry["cards"] = [{**c, "f": words[min(c["at"], len(words) - 1)]["s"]} for c in seg["cards"]]
+            entry.update({k: v for k, v in seg.items() if k not in ("text", "tts", "tts_te", "cards", "pause", "tail")})
+            # Telugu cues: word timing over the Telugu text itself, so a card lands when its idea is spoken
+            te_words = word_times(a, sr, " ".join(seg[key]) if isinstance(seg[key], list) else seg[key], ld) if lang != "en" else None
+            cards = []
+            for c in seg["cards"]:  # a card cues on a TTS part, a Telugu word, an English word ("cue") or index ("at")
+                c = dict(c)
+                if "part" in c:
+                    f = ld + round(take.starts[c["part"] - 1] * FPS)
+                elif te_words and "cue_te" in c:
+                    f = next((w["s"] for w in te_words if c["cue_te"] in w["w"]), ld)
+                else:
+                    at = next((i for i, w in enumerate(words) if c["cue"].lower() in w["w"].lower()), 0) if "cue" in c else c["at"]
+                    f = words[min(at, len(words) - 1)]["s"]
+                cards.append({k: v for k, v in c.items() if k not in ("cue_te",)} | {"f": f})
+            if cards:
+                cards[0]["f"] = min(cards[0]["f"], ld + 4)  # never open a story on an empty panel
+            entry["cards"] = cards
         if name == "hook":
             entry["lines"] = seg["lines"]
             # sound hits on hook words (an impact lands as the word is spoken)

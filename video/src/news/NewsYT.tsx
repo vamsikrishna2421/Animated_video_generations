@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { BrandFonts, Grain } from "../brand/Base";
-import { Karaoke } from "../brand/Captions";
+import { Karaoke, PhraseCaptions } from "../brand/Captions";
 import { Subscribe } from "../brand/Cta";
 import { LogoMark, LogoSting } from "../brand/Logo";
 import { B, cl, F, pop, prog, rand } from "../brand/tokens";
@@ -13,6 +13,9 @@ type Seg = NewsTimeline["segments"][number] & { chapter?: string; points?: strin
 export const STING = 90, SUB_LEN = 110;
 export const ytDuration = (tl: NewsTimeline) => tl.frames + STING;
 const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
+let PHRASE = false;
+const Caps: React.FC<{ words: NewsTimeline["segments"][number]["words"]; bottom: number; size: number; max: number }> = ({ words, bottom, size, max }) =>
+  PHRASE ? <PhraseCaptions words={words} bottom={bottom} size={Math.round(size * 0.75)} /> : <Karaoke words={words} bottom={bottom} size={size} max={max} />;
 const W = 1920, H = 1080;
 
 /** 3D star/particle field flying at the camera; `speed` 0.2 = drift, 3 = warp streaks. */
@@ -115,7 +118,7 @@ const ColdOpen: React.FC<{ seg: Seg; tl: NewsTimeline }> = ({ seg, tl }) => {
           <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 10, color: B.cyan, opacity: prog(f, p2 + 22, p2 + 32) }}>{tl.range}</div>
         </AbsoluteFill>
       )}
-      <Karaoke words={seg.words} bottom={60} size={64} max={4} />
+      <Caps words={seg.words} bottom={60} size={64} max={4} />
     </AbsoluteFill>
   );
 };
@@ -184,10 +187,10 @@ const Chapter: React.FC<{ seg: Seg; n: number; total: number; edition: string }>
         })}
         <div style={{ marginTop: 18, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,0.12)", fontFamily: F.mono, fontWeight: 700, fontSize: 18, letterSpacing: 2, lineHeight: 1.5, color: "rgba(255,255,255,0.55)" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       </div>
-      <Karaoke words={seg.words} bottom={46} size={58} max={4} />
+      <Caps words={seg.words} bottom={46} size={58} max={4} />
       {/* full-screen number moments (cards marked big) */}
-      {cards.filter((c) => c.big && f >= c.f - 2 && f <= c.f + 52).map((c, i) => {
-        const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 40, c.f + 52);
+      {cards.filter((c) => c.big && f >= c.f - 2 && f <= c.f + 72).map((c, i) => {
+        const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 60, c.f + 72);
         return (
           <AbsoluteFill key={`big${i}`} style={{ background: `radial-gradient(circle at 50% 45%, ${accent}55, transparent 60%), rgba(3,4,10,0.97)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 20 }}>
             <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 8, color: accent }}>{c.k}</div>
@@ -231,13 +234,14 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string }> = ({ seg, stor
       ) : (
         <Sequence from={subAt} layout="none"><Subscribe handle={name} /></Sequence>
       )}
-      {f < subAt && <Karaoke words={seg.words} bottom={46} size={58} max={4} />}
+      {f < subAt && <Caps words={seg.words} bottom={46} size={58} max={4} />}
     </AbsoluteFill>
   );
 };
 
 export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, handle }) => {
   const f = useCurrentFrame();
+  PHRASE = tl.captionMode === "phrase";
   const segs = tl.segments as Seg[];
   const stories = segs.filter((s) => s.name.startsWith("story"));
   let at = 0;

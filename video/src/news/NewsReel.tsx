@@ -2,7 +2,7 @@ import React from "react";
 import * as Icons from "lucide-react";
 import { AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { Aurora, BrandFonts, Grain } from "../brand/Base";
-import { Karaoke } from "../brand/Captions";
+import { Karaoke, PhraseCaptions } from "../brand/Captions";
 import { CTA_SFX, FollowCard } from "../brand/Cta";
 import { LogoBug } from "../brand/Logo";
 import { Wipe } from "../brand/Transitions";
@@ -17,9 +17,13 @@ type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[];
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase" };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
+// English captions over a Telugu voice show whole phrases (word order differs); English voice keeps karaoke.
+let PHRASE = false;
+const Caps: React.FC<{ words: W[]; bottom: number; size: number; max: number }> = ({ words, bottom, size, max }) =>
+  PHRASE ? <PhraseCaptions words={words} bottom={bottom + 10} size={Math.round(size * 0.66)} /> : <Karaoke words={words} bottom={bottom} size={size} max={max} />;
 
 const Backdrop: React.FC<{ accent: string }> = ({ accent }) => {
   const f = useCurrentFrame();
@@ -369,8 +373,8 @@ const LowerThird: React.FC<{ label: string; headline: string; ticker: string; ac
 const BigNumber: React.FC<{ c: Card; accent: string }> = ({ c, accent }) => {
   const f = useCurrentFrame();
   const t = f - (c.f - 2);
-  if (t < 0 || t > 54) return null;
-  const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 40, c.f + 52);
+  if (t < 0 || t > 74) return null;
+  const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 60, c.f + 72);
   return (
     <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${accent}55, transparent 62%), rgba(5,8,22,0.97)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
       <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 6, color: accent }}>{c.k}</div>
@@ -383,12 +387,13 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
   const f = useCurrentFrame();
   const accent = seg.accent ?? B.cyan;
   const cards = seg.cards ?? [];
-  const live = Math.max(0, cards.filter((c) => f >= c.f - 3).length - 1);
-  const shown = cards.filter((c) => f >= c.f - 3);
+  const panel = cards.filter((c) => !c.big);
+  const live = Math.max(0, panel.filter((c) => f >= c.f - 3).length - 1);
+  const shown = panel.filter((c) => f >= c.f - 3);
   const ban = prog(f, 0, 14);
   const words = seg.words.map((w) => w.w).join(" ");
   const dek = (seg.dek as string | undefined) ?? (words.match(/^.*?[.!?](\s|$)/)?.[0] ?? words).slice(0, 140);
-  const cur = cards[live];
+  const cur = panel[live];
   const curIn = cur ? pop(f, cur.f - 3, 12) : 0;
   return (
     <AbsoluteFill>
@@ -446,7 +451,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
         </div>
       )}
       {cards.filter((c) => c.big).map((c, i) => <BigNumber key={i} c={c} accent={accent} />)}
-      <Karaoke words={seg.words} bottom={390} size={80} max={3} />
+      <Caps words={seg.words} bottom={390} size={80} max={3} />
     </AbsoluteFill>
   );
 };
@@ -499,7 +504,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
         <div style={{ marginTop: 24, fontFamily: F.inter, fontWeight: 800, fontSize: 56, color: B.cyan }}>{range}</div>
       </AbsoluteFill>
       <Presenter cues={[]} mood="shock" x={900} y={1520} s={0.34} />
-      <Karaoke words={seg.words} bottom={390} size={86} max={3} />
+      <Caps words={seg.words} bottom={390} size={86} max={3} />
     </AbsoluteFill>
   );
 };
@@ -531,13 +536,14 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string; recap?: string
         </Sequence>
       )}
       {f < followAt && <Presenter cues={[]} mood="wave" x={900} y={1520} s={0.34} />}
-      {f < followAt && <Karaoke words={seg.words} bottom={300} size={86} max={3} />}
+      {f < followAt && <Caps words={seg.words} bottom={300} size={86} max={3} />}
     </AbsoluteFill>
   );
 };
 
 export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, handle }) => {
   const f = useCurrentFrame();
+  PHRASE = tl.captionMode === "phrase";
   const stories = tl.segments.filter((s) => s.name.startsWith("story"));
   let at = 0;
   const starts = tl.segments.map((s) => { const a = at; at += s.frames; return a; });

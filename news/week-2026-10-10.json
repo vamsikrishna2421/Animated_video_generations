@@ -11,6 +11,7 @@
  "musicBaseYT": 0.24,
  "storyLead": 14,
  "storyTail": 16,
+ "captionMode_te": "phrase",
  "labs": [
   "OPENAI",
   "ANTHROPIC",
@@ -63,23 +64,27 @@
     {
      "k": "IN ANTHROPIC'S OWN TESTS",
      "v": "Claude Haiku, practising on random sites",
-     "cue": "tests"
+     "cue": "tests",
+     "cue_te": "టెస్టుల్లో"
     },
     {
      "k": "PHILADELPHIA POLICE",
      "v": "Fake tip, flagged as spam",
-     "cue": "fake"
+     "cue": "fake",
+     "cue_te": "ఫేక్"
     },
     {
      "k": "US VISA WEBSITE",
      "v": "20 incomplete forms (unreleased model)",
      "cue": "twenty",
+     "cue_te": "ఇరవై",
      "drop": true
     },
     {
      "k": "WHITE HOUSE",
      "v": "Reporting is \"not optional\"",
-     "cue": "White"
+     "cue": "White",
+     "cue_te": "వైట్"
     }
    ],
    "points": [
@@ -107,22 +112,26 @@
     {
      "k": "WHO GETS IT",
      "v": "Every plan, free included",
-     "cue": "every"
+     "cue": "every",
+     "cue_te": "ప్రతి"
     },
     {
      "k": "PAID PLANS",
      "v": "GPT-6 Sol",
-     "cue": "Paid"
+     "cue": "Paid",
+     "cue_te": "పెయిడ్"
     },
     {
      "k": "FREE & GO PLANS",
      "v": "GPT-6 Luna (lighter)",
-     "cue": "lighter"
+     "cue": "lighter",
+     "cue_te": "లైట్"
     },
     {
      "k": "NEW IN ANSWERS",
      "v": "Buttons, calculators, charts",
-     "cue": "buttons"
+     "cue": "buttons",
+     "cue_te": "బటన్లు"
     }
    ],
    "points": [
@@ -138,6 +147,7 @@
    "org": "MEMORY CHIPS",
    "accent": "#EAB308",
    "tag": "PRICES",
+   "tail": 44,
    "headline": [
     "AI is making",
     "phones pricier"
@@ -153,18 +163,20 @@
     {
      "k": "WHY",
      "v": "Memory chips go to AI data centres",
-     "cue": "data"
+     "cue": "data",
+     "cue_te": "డేటా"
     },
     {
      "k": "SAME MODELS, INDIA",
      "v": "Up 21% on average",
      "cue": "twenty-one",
+     "cue_te": "ఇరవై",
      "drop": true
     },
     {
      "k": "ONE REDMI 15C: +36%",
      "v": "₹12,499 → ₹16,999",
-     "cue": "seventeen",
+     "part": 2,
      "drop": true,
      "big": true
     }
@@ -220,23 +232,27 @@
     {
      "k": "POSTED",
      "v": "722 AI-written papers",
-     "cue": "seven"
+     "cue": "seven",
+     "cue_te": "ఏడు"
     },
     {
      "k": "OPENAI SAYS",
      "v": "About half not fully checked",
-     "cue": "half"
+     "cue": "half",
+     "cue_te": "సగం"
     },
     {
      "k": "WITHDRAWN A DAY LATER",
      "v": "3, over one wrong sign",
      "cue": "three",
+     "cue_te": "మూడు",
      "drop": true
     },
     {
      "k": "THE LESSON",
      "v": "Check AI's maths",
-     "cue": "lesson"
+     "cue": "lesson",
+     "cue_te": "పాఠం"
     }
    ],
    "points": [
@@ -264,22 +280,26 @@
     {
      "k": "INDIA'S IT MINISTER",
      "v": "Ashwini Vaishnaw",
-     "cue": "minister"
+     "cue": "minister",
+     "cue_te": "మంత్రి"
     },
     {
      "k": "WHEN",
      "v": "Consultation paper within a month",
-     "cue": "month"
+     "cue": "month",
+     "cue_te": "నెలలోపు"
     },
     {
      "k": "FOCUS",
      "v": "Safety + deepfakes",
-     "cue": "deepfakes"
+     "cue": "deepfakes",
+     "cue_te": "డీప్"
     },
     {
      "k": "WHO'S RESPONSIBLE",
      "v": "AI companies, says the minister",
-     "cue": "responsibility"
+     "cue": "responsibility",
+     "cue_te": "బాధ్యత"
     }
    ],
    "points": [
@@ -295,6 +315,7 @@
    "org": "INDIAN IT",
    "accent": "#06B6D4",
    "tag": "JOBS",
+   "tail": 40,
    "headline": [
     "AI is reshaping",
     "India's IT jobs"
@@ -308,24 +329,27 @@
    ],
    "cards": [
     {
-     "k": "TCS",
-     "v": "AI revenue: $3.1B a year",
-     "cue": "billion"
+     "k": "TCS · AI REVENUE",
+     "v": "$3.1B a year",
+     "cue": "billion",
+     "cue_te": "బిలియన్"
     },
     {
      "k": "BIG TECH OFFICES (GCCs)",
      "v": "Fewer freshers hired",
-     "cue": "freshers"
+     "cue": "freshers",
+     "cue_te": "ఫ్రెషర్లను"
     },
     {
      "k": "ONE BANK (BLOOMBERG)",
      "v": "Work that needed 50 engineers",
-     "cue": "bank"
+     "cue": "bank",
+     "cue_te": "బ్యాంక్"
     },
     {
      "k": "NOW",
      "v": "4 to 10 people",
-     "cue": "Now,",
+     "part": 2,
      "drop": true,
      "big": true
     }

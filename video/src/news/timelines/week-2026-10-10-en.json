@@ -557,14 +557,12 @@
      "k": "IN ANTHROPIC'S OWN TESTS",
      "v": "Claude Haiku, practising on random sites",
      "cue": "tests",
-     "at": 3,
-     "f": 47
+     "f": 18
     },
     {
      "k": "PHILADELPHIA POLICE",
      "v": "Fake tip, flagged as spam",
      "cue": "fake",
-     "at": 23,
      "f": 262
     },
     {
@@ -572,14 +570,12 @@
      "v": "20 incomplete forms (unreleased model)",
      "cue": "twenty",
      "drop": true,
-     "at": 39,
      "f": 474
     },
     {
      "k": "WHITE HOUSE",
      "v": "Reporting is \"not optional\"",
      "cue": "White",
-     "at": 52,
      "f": 659
     }
    ]
@@ -817,28 +813,24 @@
      "k": "WHO GETS IT",
      "v": "Every plan, free included",
      "cue": "every",
-     "at": 6,
-     "f": 65
+     "f": 18
     },
     {
      "k": "PAID PLANS",
      "v": "GPT-6 Sol",
      "cue": "Paid",
-     "at": 9,
      "f": 101
     },
     {
      "k": "FREE & GO PLANS",
      "v": "GPT-6 Luna (lighter)",
      "cue": "lighter",
-     "at": 22,
      "f": 271
     },
     {
      "k": "NEW IN ANSWERS",
      "v": "Buttons, calculators, charts",
      "cue": "buttons",
-     "at": 31,
      "f": 405
     }
    ]
@@ -847,7 +839,7 @@
    "name": "story3",
    "audio": "news/week-2026-10-10/en/story3.wav",
    "lead": 14,
-   "frames": 771,
+   "frames": 799,
    "words": [
     {
      "w": "AI",
@@ -1219,25 +1211,22 @@
      "k": "WHY",
      "v": "Memory chips go to AI data centres",
      "cue": "data",
-     "at": 16,
-     "f": 171
+     "f": 18
     },
     {
      "k": "SAME MODELS, INDIA",
      "v": "Up 21% on average",
      "cue": "twenty-one",
      "drop": true,
-     "at": 40,
      "f": 405
     },
     {
      "k": "ONE REDMI 15C: +36%",
      "v": "₹12,499 → ₹16,999",
-     "cue": "seventeen",
+     "part": 2,
      "drop": true,
      "big": true,
-     "at": 63,
-     "f": 672
+     "f": 709
     }
    ]
   },
@@ -1484,14 +1473,12 @@
      "k": "POSTED",
      "v": "722 AI-written papers",
      "cue": "seven",
-     "at": 5,
-     "f": 73
+     "f": 18
     },
     {
      "k": "OPENAI SAYS",
      "v": "About half not fully checked",
      "cue": "half",
-     "at": 16,
      "f": 214
     },
     {
@@ -1499,14 +1486,12 @@
      "v": "3, over one wrong sign",
      "cue": "three",
      "drop": true,
-     "at": 23,
      "f": 313
     },
     {
      "k": "THE LESSON",
      "v": "Check AI's maths",
      "cue": "lesson",
-     "at": 32,
      "f": 421
     }
    ]
@@ -1704,28 +1689,24 @@
      "k": "INDIA'S IT MINISTER",
      "v": "Ashwini Vaishnaw",
      "cue": "minister",
-     "at": 2,
-     "f": 37
+     "f": 18
     },
     {
      "k": "WHEN",
      "v": "Consultation paper within a month",
      "cue": "month",
-     "at": 16,
      "f": 182
     },
     {
      "k": "FOCUS",
      "v": "Safety + deepfakes",
      "cue": "deepfakes",
-     "at": 21,
      "f": 266
     },
     {
      "k": "WHO'S RESPONSIBLE",
      "v": "AI companies, says the minister",
      "cue": "responsibility",
-     "at": 30,
      "f": 372
     }
    ]
@@ -1734,7 +1715,7 @@
    "name": "story6",
    "audio": "news/week-2026-10-10/en/story6.wav",
    "lead": 14,
-   "frames": 678,
+   "frames": 702,
    "words": [
     {
      "w": "Finally,",
@@ -2030,34 +2011,30 @@
    "sources": "Business Today · Outlook Business · Bloomberg",
    "cards": [
     {
-     "k": "TCS",
-     "v": "AI revenue: $3.1B a year",
+     "k": "TCS · AI REVENUE",
+     "v": "$3.1B a year",
      "cue": "billion",
-     "at": 10,
-     "f": 111
+     "f": 18
     },
     {
      "k": "BIG TECH OFFICES (GCCs)",
      "v": "Fewer freshers hired",
      "cue": "freshers",
-     "at": 37,
      "f": 414
     },
     {
      "k": "ONE BANK (BLOOMBERG)",
      "v": "Work that needed 50 engineers",
      "cue": "bank",
-     "at": 40,
      "f": 479
     },
     {
      "k": "NOW",
      "v": "4 to 10 people",
-     "cue": "Now,",
+     "part": 2,
      "drop": true,
      "big": true,
-     "at": 48,
-     "f": 555
+     "f": 595
     }
    ]
   },
@@ -2240,5 +2217,5 @@
    ]
   }
  ],
- "frames": 4698
+ "frames": 4750
 }
