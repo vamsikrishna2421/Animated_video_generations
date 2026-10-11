@@ -372,9 +372,9 @@ const BigNumber: React.FC<{ c: Card; accent: string }> = ({ c, accent }) => {
   if (t < 0 || t > 54) return null;
   const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 40, c.f + 52);
   return (
-    <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${accent}40, rgba(5,8,22,0.94) 62%)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
+    <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${accent}55, transparent 62%), rgba(5,8,22,0.97)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
       <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 6, color: accent }}>{c.k}</div>
-      <div style={{ fontFamily: F.archivo, fontSize: c.v.length > 14 ? 120 : 170, lineHeight: 1, color: B.white, textAlign: "center", padding: "0 50px", transform: `scale(${1.25 - 0.25 * inP})` }}>{c.v}</div>
+      <div style={{ fontFamily: F.archivo, fontSize: c.v.length > 14 ? 96 : 170, lineHeight: 1.05, color: B.white, textAlign: "center", padding: "0 40px", whiteSpace: c.v.length > 14 ? "nowrap" : undefined, transform: `scale(${1.25 - 0.25 * inP})` }}>{c.v}</div>
     </AbsoluteFill>
   );
 };
