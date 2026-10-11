@@ -1,0 +1,272 @@
+{
+ "id": "robotcheckte",
+ "title": "Not a robot: 4 tricks (Telugu audio)",
+ "label": "FACT CHECK",
+ "banner": "How a normal clip becomes \"proof\"",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "musicLift": 1.8,
+ "musicPad": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "captionTop": 1395,
+ "captionSide": 110,
+ "tempo": 1.1,
+ "parler_lang": "te",
+ "captionMode": "phrase",
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "rc_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Hook",
+     "title": "Not a robot",
+     "notes": [
+      [
+       "The woman behind Trump in the viral Oval Office clip",
+       0
+      ],
+      [
+       "Not a robot",
+       1
+      ],
+      [
+       "Susan Dell: charity co-founder, married to Dell's founder (White House, Oct 7, 2026)",
+       2
+      ],
+      [
+       "4 tricks turned a normal clip into \"proof\"",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "01_hook.wav",
+     "text": "వైరల్ అయిన ఓవల్ ఆఫీస్ క్లిప్ లో, ట్రంప్ వెనక నిలబడ్డ ఆ మహిళని చూశారా? [1] ఆమె రోబో కాదు. [2] ఆమె పేరు సూసన్ డెల్, డెల్ కంపెనీ స్థాపకుడి భార్య, ఒక ఛారిటీ ఫౌండేషన్ నడుపుతారు. [3] నాలుగు ట్రిక్స్ తో, ఒక మామూలు క్లిప్ ని ప్రూఫ్ లా మార్చారు.",
+     "show": "See that woman behind Trump in the viral Oval Office clip? [1] She is not a robot. [2] She's Susan Dell, a charity co-founder, married to Dell's founder. [3] Four tricks turned a normal clip into 'proof'.",
+     "pauses": {
+      "1": 0.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "slow",
+   "type": "rc_slow",
+   "tail": 0.6,
+   "lift": true,
+   "drop_cue": 2,
+   "data": {
+    "yt": {
+     "chapter": "Trick 1: slow it down",
+     "title": "Slow motion",
+     "notes": [
+      [
+       "Slow motion makes normal blinks look mechanical",
+       1
+      ],
+      [
+       "Feb 2026: a slowed clip of her went viral; in the C-SPAN original she moves normally (Lead Stories)",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "02_slow.wav",
+     "text": "మొదటి ట్రిక్: స్లో చేయడం. [1] స్లో మోషన్ లో, మామూలుగా కళ్ళు ఆర్పడం కూడా యంత్రంలా కనిపిస్తుంది. [2] ఫిబ్రవరిలో కూడా ఇదే జరిగింది: ఆమె స్లో క్లిప్ ఒకటి వైరల్ అయింది. ఒరిజినల్ వీడియోలో, ఆమె మామూలుగానే కదులుతున్నారు.",
+     "show": "Trick one: slow it down. [1] Slow motion makes normal blinks look mechanical. [2] It happened to her in February: a slowed clip went viral. In the original video, she moves normally."
+    }
+   ]
+  },
+  {
+   "id": "copies",
+   "type": "rc_copies",
+   "tail": 0.5,
+   "lift": true,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Trick 2: copies of copies",
+     "title": "Like a WhatsApp forward",
+     "notes": [
+      [
+       "One 4.5M-view post (as of Oct 11): a phone filming a TV",
+       1
+      ],
+      [
+       "Each copy smears detail, like eyes and expressions",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "03_copies.wav",
+     "text": "రెండో ట్రిక్: కాపీకి కాపీ, వాట్సాప్ ఫార్వర్డ్ లాగా. [1] నలభై ఐదు లక్షల వ్యూస్ ఉన్న ఒక పోస్ట్, టీవీని ఫోన్ తో షూట్ చేసిన వీడియో. [2] ప్రతి కాపీలో, కళ్ళు, ముఖ కవళికలు లాంటి డీటెయిల్ చెదిరిపోతుంది.",
+     "show": "Trick two: copies of copies, like a WhatsApp forward. [1] One post, 4.5 million views, is a phone filming a TV. [2] Each copy smears detail, like eyes and expressions."
+    }
+   ]
+  },
+  {
+   "id": "enhance",
+   "type": "rc_enhance",
+   "tail": 0.6,
+   "lift": true,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Trick 3: AI \"enhance\" filters",
+     "title": "Filters guess detail",
+     "notes": [
+      [
+       "Enhance filters guess detail; a US court refused AI-enhanced video as evidence (2024)",
+       1
+      ],
+      [
+       "One viral compilation: filtered, warped close-ups of her face; shots seconds before look normal",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "04_enhance.wav",
+     "text": "మూడో ట్రిక్: ఎ ఐ ఎన్హాన్స్ ఫిల్టర్లు. [1] ఇవి పోయిన డీటెయిల్ ని తిరిగి తీసుకురావు, ఊహించి గీస్తాయి. అందుకే ఒక అమెరికా కోర్టు, ఎ ఐ ఎన్హాన్స్ చేసిన వీడియోని సాక్ష్యంగా ఒప్పుకోలేదు. [2] ఒక వైరల్ వీడియోలో, ఆమె ముఖం క్లోజప్ షాట్లు ఫిల్టర్ చేసి, వంకరగా ఉన్నాయి. కొన్ని సెకన్ల ముందు షాట్లు మామూలుగానే ఉన్నాయి.",
+     "show": "Trick three: AI 'enhance' filters. [1] They guess detail, they don't recover it; even a US court refused AI-enhanced video as evidence. [2] In one viral compilation, close-ups of her face look filtered and warped; shots seconds before look normal."
+    }
+   ]
+  },
+  {
+   "id": "story",
+   "type": "rc_story",
+   "tail": 0.6,
+   "lift": true,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Trick 4: add a story",
+     "title": "Editing, not proof",
+     "notes": [
+      [
+       "A red circle, and a voice telling you what to see",
+       1
+      ],
+      [
+       "That's editing, not proof",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "05_story.wav",
+     "text": "నాలుగో ట్రిక్: కథ జోడించడం. [1] ఒక ఎర్ర సర్కిల్, ఏం చూడాలో చెప్పే ఒక గొంతు. [2] అది ఎడిటింగ్, ప్రూఫ్ కాదు.",
+     "show": "Trick four: add a story. [1] A red circle, and a voice telling you what to see. [2] That's editing, not proof."
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "type": "rc_check",
+   "tail": 0.7,
+   "data": {
+    "yt": {
+     "chapter": "How to check",
+     "title": "One sign per trick",
+     "notes": [
+      [
+       "Everyone moves like they're underwater: slowed",
+       1
+      ],
+      [
+       "Blur, screen glare, another app's logo: a copy",
+       2
+      ],
+      [
+       "Waxy skin, eyes that change shape: a filter",
+       3
+      ],
+      [
+       "Mute it, ignore the circle: still weird?",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "06_check.wav",
+     "text": "ఈసారి మీ గ్రూప్ లో ఇలాంటిది వస్తే, చెక్ చేయండి: [1] అందరూ నీళ్ళలో కదిలినట్టు ఉంటే, స్లో చేశారు. [2] బ్లర్, స్క్రీన్ మెరుపు, లేదా వేరే యాప్ లోగో ఉంటే, అది కాపీ. [3] మైనంలా మెరిసే చర్మం, ఆకారం మారే కళ్ళు ఉంటే, ఫిల్టర్. [4] సౌండ్ మ్యూట్ చేసి, సర్కిల్ ని పట్టించుకోకుండా చూడండి: ఇంకా వింతగా ఉందా?",
+     "show": "Next time it lands in your group, check: [1] if everyone moves like they're underwater, it's slowed. [2] Blur, glare or another app's logo means a copy. [3] Waxy skin or eyes that change shape mean a filter. [4] Then mute it and ignore the circle: still weird?"
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "rc_close",
+   "tail": 1.2,
+   "outro": true,
+   "drop_cue": 1,
+   "data": {
+    "yt": {
+     "chapter": "Verdict",
+     "title": "Real person, edited clips",
+     "notes": [
+      [
+       "So, is she a robot?",
+       0
+      ],
+      [
+       "No: a real person, in edited clips",
+       1
+      ],
+      [
+       "AI didn't fake her: copies, filters and a voice-over made the \"proof\"",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.32,
+     "file": "07_close.wav",
+     "text": "మరి, ఆమె రోబోనా? [1] కాదు, ఆమె నిజమైన మనిషి, క్లిప్స్ ని ఎడిట్ చేశారు. [2] ఎ ఐ ఆమెని ఫేక్ చేయలేదు: కాపీలు, ఫిల్టర్లు, వాయిస్ ఓవర్ కలిసి ఆ ప్రూఫ్ తయారు చేశాయి. మరిన్ని ఎ ఐ విషయాల కోసం ఫాలో అవ్వండి.",
+     "show": "So, is she a robot? [1] No, she's a real person, in edited clips. [2] AI didn't fake her: copies, filters and a voice-over made the 'proof'. Follow for more AI, explained simply."
+    }
+   ]
+  }
+ ]
+}

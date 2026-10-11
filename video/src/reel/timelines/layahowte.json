@@ -1,0 +1,1507 @@
+{
+ "id": "layahowte",
+ "look": "classic",
+ "topic": "",
+ "banner": "Free AI that decides, not writes",
+ "musicVol": [
+  0.55,
+  0.95
+ ],
+ "title": "Laya, hands-on (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "HANDS-ON",
+ "fps": 30,
+ "musicLift": 1.8,
+ "musicDrops": [
+  [
+   739,
+   763
+  ]
+ ],
+ "musicBoosts": [
+  [
+   1186,
+   1534,
+   1.3
+  ],
+  [
+   2148,
+   2496,
+   1.3
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 2789,
+ "music": "reel/layahowte/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "lh_hook",
+   "data": {
+    "yt": {
+     "chapter": "Hook",
+     "title": "An AI that can't write",
+     "notes": [
+      [
+       "It never writes text; it answers fixed questions",
+       0
+      ],
+      [
+       "32,138 GitHub stars in 3 weeks (as of Oct 10)",
+       1
+      ],
+      [
+       "What it's good at, and what its own page admits",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 0,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_01.wav",
+     "from": 9,
+     "frames": 305,
+     "words": [
+      {
+       "w": "This",
+       "from": 13,
+       "to": 19
+      },
+      {
+       "w": "free",
+       "from": 19,
+       "to": 24
+      },
+      {
+       "w": "AI",
+       "from": 24,
+       "to": 28
+      },
+      {
+       "w": "can't",
+       "from": 28,
+       "to": 35
+      },
+      {
+       "w": "write",
+       "from": 35,
+       "to": 42
+      },
+      {
+       "w": "a",
+       "from": 42,
+       "to": 44
+      },
+      {
+       "w": "single",
+       "from": 44,
+       "to": 52
+      },
+      {
+       "w": "sentence.",
+       "from": 52,
+       "to": 90
+      },
+      {
+       "w": "Yet",
+       "from": 90,
+       "to": 98
+      },
+      {
+       "w": "32,000",
+       "from": 98,
+       "to": 112
+      },
+      {
+       "w": "developers",
+       "from": 112,
+       "to": 139
+      },
+      {
+       "w": "gave",
+       "from": 139,
+       "to": 149
+      },
+      {
+       "w": "it",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "a",
+       "from": 155,
+       "to": 159
+      },
+      {
+       "w": "star",
+       "from": 159,
+       "to": 173
+      },
+      {
+       "w": "in",
+       "from": 173,
+       "to": 179
+      },
+      {
+       "w": "3",
+       "from": 179,
+       "to": 184
+      },
+      {
+       "w": "weeks.",
+       "from": 184,
+       "to": 216
+      },
+      {
+       "w": "Here's",
+       "from": 216,
+       "to": 227
+      },
+      {
+       "w": "what",
+       "from": 227,
+       "to": 234
+      },
+      {
+       "w": "it's",
+       "from": 234,
+       "to": 241
+      },
+      {
+       "w": "good",
+       "from": 241,
+       "to": 253
+      },
+      {
+       "w": "at,",
+       "from": 253,
+       "to": 259
+      },
+      {
+       "w": "and",
+       "from": 259,
+       "to": 265
+      },
+      {
+       "w": "what",
+       "from": 265,
+       "to": 272
+      },
+      {
+       "w": "its",
+       "from": 272,
+       "to": 278
+      },
+      {
+       "w": "own",
+       "from": 278,
+       "to": 284
+      },
+      {
+       "w": "page",
+       "from": 284,
+       "to": 291
+      },
+      {
+       "w": "admits.",
+       "from": 291,
+       "to": 303
+      }
+     ],
+     "cues": {
+      "1": 90,
+      "2": 216
+     }
+    }
+   ]
+  },
+  {
+   "id": "what",
+   "type": "lh_what",
+   "data": {
+    "yt": {
+     "chapter": "What it does",
+     "title": "Fixed questions, one number",
+     "notes": [
+      [
+       "Laya, by Nandakishor (Kerala)",
+       0
+      ],
+      [
+       "Example: 1,000 refund emails a day",
+       1
+      ],
+      [
+       "It answers a fixed question, no reply written",
+       2
+      ],
+      [
+       "Real output: 94% sure (base model, run by us)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 348,
+   "frames": 532,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_02.wav",
+     "from": 0,
+     "frames": 501,
+     "words": [
+      {
+       "w": "It's",
+       "from": 15,
+       "to": 24
+      },
+      {
+       "w": "Laya,",
+       "from": 24,
+       "to": 34
+      },
+      {
+       "w": "by",
+       "from": 34,
+       "to": 44
+      },
+      {
+       "w": "Nandakishor",
+       "from": 44,
+       "to": 65
+      },
+      {
+       "w": "from",
+       "from": 65,
+       "to": 73
+      },
+      {
+       "w": "Kerala.",
+       "from": 73,
+       "to": 87
+      },
+      {
+       "w": "Picture",
+       "from": 87,
+       "to": 110
+      },
+      {
+       "w": "1,000",
+       "from": 110,
+       "to": 121
+      },
+      {
+       "w": "emails",
+       "from": 121,
+       "to": 133
+      },
+      {
+       "w": "a",
+       "from": 133,
+       "to": 137
+      },
+      {
+       "w": "day",
+       "from": 137,
+       "to": 144
+      },
+      {
+       "w": "like",
+       "from": 144,
+       "to": 153
+      },
+      {
+       "w": "'We",
+       "from": 153,
+       "to": 166
+      },
+      {
+       "w": "were",
+       "from": 166,
+       "to": 175
+      },
+      {
+       "w": "billed",
+       "from": 175,
+       "to": 187
+      },
+      {
+       "w": "twice,",
+       "from": 187,
+       "to": 200
+      },
+      {
+       "w": "please",
+       "from": 200,
+       "to": 212
+      },
+      {
+       "w": "refund.'",
+       "from": 212,
+       "to": 240
+      },
+      {
+       "w": "Laya",
+       "from": 240,
+       "to": 261
+      },
+      {
+       "w": "doesn't",
+       "from": 261,
+       "to": 270
+      },
+      {
+       "w": "write",
+       "from": 270,
+       "to": 278
+      },
+      {
+       "w": "replies.",
+       "from": 278,
+       "to": 307
+      },
+      {
+       "w": "It",
+       "from": 307,
+       "to": 310
+      },
+      {
+       "w": "answers",
+       "from": 310,
+       "to": 320
+      },
+      {
+       "w": "a",
+       "from": 320,
+       "to": 323
+      },
+      {
+       "w": "fixed",
+       "from": 323,
+       "to": 330
+      },
+      {
+       "w": "question:",
+       "from": 330,
+       "to": 343
+      },
+      {
+       "w": "is",
+       "from": 343,
+       "to": 352
+      },
+      {
+       "w": "this",
+       "from": 352,
+       "to": 367
+      },
+      {
+       "w": "a",
+       "from": 367,
+       "to": 369
+      },
+      {
+       "w": "refund",
+       "from": 369,
+       "to": 378
+      },
+      {
+       "w": "request?",
+       "from": 378,
+       "to": 415
+      },
+      {
+       "w": "We",
+       "from": 415,
+       "to": 423
+      },
+      {
+       "w": "ran",
+       "from": 423,
+       "to": 435
+      },
+      {
+       "w": "it:",
+       "from": 435,
+       "to": 457
+      },
+      {
+       "w": "94%",
+       "from": 457,
+       "to": 469
+      },
+      {
+       "w": "sure.",
+       "from": 469,
+       "to": 486
+      }
+     ],
+     "cues": {
+      "1": 87,
+      "2": 240,
+      "3": 415
+     }
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "type": "lh_kinds",
+   "data": {
+    "yt": {
+     "chapter": "3 kinds of questions",
+     "title": "Pick one, score, yes/no",
+     "notes": [
+      [
+       "Pick one: which team? (tech support 95%)",
+       1
+      ],
+      [
+       "Score: how urgent, 1 to 5? (2, 58%)",
+       2
+      ],
+      [
+       "Yes or no: phishing? (1.00)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 880,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_03.wav",
+     "from": 0,
+     "frames": 267,
+     "words": [
+      {
+       "w": "Three",
+       "from": 1,
+       "to": 12
+      },
+      {
+       "w": "kinds",
+       "from": 12,
+       "to": 22
+      },
+      {
+       "w": "of",
+       "from": 22,
+       "to": 28
+      },
+      {
+       "w": "questions.",
+       "from": 28,
+       "to": 48
+      },
+      {
+       "w": "Pick",
+       "from": 48,
+       "to": 55
+      },
+      {
+       "w": "one:",
+       "from": 55,
+       "to": 81
+      },
+      {
+       "w": "which",
+       "from": 81,
+       "to": 89
+      },
+      {
+       "w": "team",
+       "from": 89,
+       "to": 96
+      },
+      {
+       "w": "gets",
+       "from": 96,
+       "to": 108
+      },
+      {
+       "w": "this",
+       "from": 108,
+       "to": 115
+      },
+      {
+       "w": "ticket?",
+       "from": 115,
+       "to": 127
+      },
+      {
+       "w": "Score:",
+       "from": 127,
+       "to": 151
+      },
+      {
+       "w": "how",
+       "from": 151,
+       "to": 164
+      },
+      {
+       "w": "urgent,",
+       "from": 164,
+       "to": 176
+      },
+      {
+       "w": "one",
+       "from": 176,
+       "to": 186
+      },
+      {
+       "w": "to",
+       "from": 186,
+       "to": 190
+      },
+      {
+       "w": "five?",
+       "from": 190,
+       "to": 199
+      },
+      {
+       "w": "Yes",
+       "from": 199,
+       "to": 213
+      },
+      {
+       "w": "or",
+       "from": 213,
+       "to": 216
+      },
+      {
+       "w": "no:",
+       "from": 216,
+       "to": 220
+      },
+      {
+       "w": "is",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "this",
+       "from": 224,
+       "to": 238
+      },
+      {
+       "w": "email",
+       "from": 238,
+       "to": 245
+      },
+      {
+       "w": "phishing?",
+       "from": 245,
+       "to": 256
+      }
+     ],
+     "cues": {
+      "1": 48,
+      "2": 127,
+      "3": 199
+     }
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "lh_why",
+   "data": {
+    "yt": {
+     "chapter": "Why use it",
+     "title": "Fast, free, no rambling",
+     "notes": [
+      [
+       "~33 ms a question on a cloud GPU (his page)",
+       1
+      ],
+      [
+       "Free, open source (Apache-2.0)",
+       2
+      ],
+      [
+       "It can be wrong, but it can't ramble",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 1186,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_04.wav",
+     "from": 0,
+     "frames": 313,
+     "words": [
+      {
+       "w": "Here's",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "why",
+       "from": 6,
+       "to": 9
+      },
+      {
+       "w": "people",
+       "from": 9,
+       "to": 14
+      },
+      {
+       "w": "use",
+       "from": 14,
+       "to": 17
+      },
+      {
+       "w": "it:",
+       "from": 17,
+       "to": 19
+      },
+      {
+       "w": "it's",
+       "from": 19,
+       "to": 37
+      },
+      {
+       "w": "fast,",
+       "from": 37,
+       "to": 61
+      },
+      {
+       "w": "about",
+       "from": 61,
+       "to": 71
+      },
+      {
+       "w": "33",
+       "from": 71,
+       "to": 75
+      },
+      {
+       "w": "milliseconds",
+       "from": 75,
+       "to": 101
+      },
+      {
+       "w": "a",
+       "from": 101,
+       "to": 104
+      },
+      {
+       "w": "question",
+       "from": 104,
+       "to": 118
+      },
+      {
+       "w": "on",
+       "from": 118,
+       "to": 123
+      },
+      {
+       "w": "a",
+       "from": 123,
+       "to": 126
+      },
+      {
+       "w": "cloud",
+       "from": 126,
+       "to": 136
+      },
+      {
+       "w": "GPU.",
+       "from": 136,
+       "to": 168
+      },
+      {
+       "w": "It's",
+       "from": 168,
+       "to": 173
+      },
+      {
+       "w": "free",
+       "from": 173,
+       "to": 179
+      },
+      {
+       "w": "and",
+       "from": 179,
+       "to": 183
+      },
+      {
+       "w": "open",
+       "from": 183,
+       "to": 199
+      },
+      {
+       "w": "source.",
+       "from": 199,
+       "to": 208
+      },
+      {
+       "w": "And",
+       "from": 208,
+       "to": 213
+      },
+      {
+       "w": "since",
+       "from": 213,
+       "to": 220
+      },
+      {
+       "w": "it",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "never",
+       "from": 224,
+       "to": 231
+      },
+      {
+       "w": "writes,",
+       "from": 231,
+       "to": 241
+      },
+      {
+       "w": "it",
+       "from": 241,
+       "to": 245
+      },
+      {
+       "w": "can",
+       "from": 245,
+       "to": 249
+      },
+      {
+       "w": "be",
+       "from": 249,
+       "to": 261
+      },
+      {
+       "w": "wrong,",
+       "from": 261,
+       "to": 276
+      },
+      {
+       "w": "but",
+       "from": 276,
+       "to": 281
+      },
+      {
+       "w": "it",
+       "from": 281,
+       "to": 285
+      },
+      {
+       "w": "can't",
+       "from": 285,
+       "to": 292
+      },
+      {
+       "w": "ramble.",
+       "from": 292,
+       "to": 302
+      }
+     ],
+     "cues": {
+      "1": 19,
+      "2": 168,
+      "3": 208
+     }
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "type": "lh_honest",
+   "data": {
+    "yt": {
+     "chapter": "The catch",
+     "title": "From his own page",
+     "notes": [
+      [
+       "Great on what it was trained on (spam 99%)",
+       1
+      ],
+      [
+       "New business tasks: 36% out of the box vs 46% for always guessing the most common answer; 77% after training (his reported number)",
+       1
+      ],
+      [
+       "20+ options: Jev (paid) does better",
+       2
+      ],
+      [
+       "Telugu: 22% on a 20-option test (English 71%)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 1534,
+   "frames": 614,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_05.wav",
+     "from": 0,
+     "frames": 571,
+     "words": [
+      {
+       "w": "The",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "catch,",
+       "from": 8,
+       "to": 21
+      },
+      {
+       "w": "from",
+       "from": 21,
+       "to": 31
+      },
+      {
+       "w": "his",
+       "from": 31,
+       "to": 39
+      },
+      {
+       "w": "own",
+       "from": 39,
+       "to": 46
+      },
+      {
+       "w": "page:",
+       "from": 46,
+       "to": 68
+      },
+      {
+       "w": "it's",
+       "from": 68,
+       "to": 76
+      },
+      {
+       "w": "great",
+       "from": 76,
+       "to": 86
+      },
+      {
+       "w": "at",
+       "from": 86,
+       "to": 99
+      },
+      {
+       "w": "what",
+       "from": 99,
+       "to": 107
+      },
+      {
+       "w": "it",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "was",
+       "from": 112,
+       "to": 119
+      },
+      {
+       "w": "trained",
+       "from": 119,
+       "to": 132
+      },
+      {
+       "w": "on,",
+       "from": 132,
+       "to": 139
+      },
+      {
+       "w": "like",
+       "from": 139,
+       "to": 147
+      },
+      {
+       "w": "spam,",
+       "from": 147,
+       "to": 157
+      },
+      {
+       "w": "but",
+       "from": 157,
+       "to": 182
+      },
+      {
+       "w": "on",
+       "from": 182,
+       "to": 188
+      },
+      {
+       "w": "new",
+       "from": 188,
+       "to": 194
+      },
+      {
+       "w": "business",
+       "from": 194,
+       "to": 209
+      },
+      {
+       "w": "tasks",
+       "from": 209,
+       "to": 224
+      },
+      {
+       "w": "it's",
+       "from": 224,
+       "to": 232
+      },
+      {
+       "w": "worse",
+       "from": 232,
+       "to": 242
+      },
+      {
+       "w": "than",
+       "from": 242,
+       "to": 251
+      },
+      {
+       "w": "guessing",
+       "from": 251,
+       "to": 266
+      },
+      {
+       "w": "the",
+       "from": 266,
+       "to": 296
+      },
+      {
+       "w": "most",
+       "from": 296,
+       "to": 304
+      },
+      {
+       "w": "common",
+       "from": 304,
+       "to": 316
+      },
+      {
+       "w": "answer,",
+       "from": 316,
+       "to": 329
+      },
+      {
+       "w": "until",
+       "from": 329,
+       "to": 339
+      },
+      {
+       "w": "you",
+       "from": 339,
+       "to": 346
+      },
+      {
+       "w": "train",
+       "from": 346,
+       "to": 356
+      },
+      {
+       "w": "it",
+       "from": 356,
+       "to": 361
+      },
+      {
+       "w": "on",
+       "from": 361,
+       "to": 366
+      },
+      {
+       "w": "your",
+       "from": 366,
+       "to": 374
+      },
+      {
+       "w": "examples.",
+       "from": 374,
+       "to": 401
+      },
+      {
+       "w": "With",
+       "from": 401,
+       "to": 408
+      },
+      {
+       "w": "many",
+       "from": 408,
+       "to": 416
+      },
+      {
+       "w": "options,",
+       "from": 416,
+       "to": 429
+      },
+      {
+       "w": "the",
+       "from": 429,
+       "to": 434
+      },
+      {
+       "w": "paid",
+       "from": 434,
+       "to": 441
+      },
+      {
+       "w": "rival",
+       "from": 441,
+       "to": 450
+      },
+      {
+       "w": "Jev",
+       "from": 450,
+       "to": 456
+      },
+      {
+       "w": "does",
+       "from": 456,
+       "to": 463
+      },
+      {
+       "w": "better.",
+       "from": 463,
+       "to": 484
+      },
+      {
+       "w": "And",
+       "from": 484,
+       "to": 490
+      },
+      {
+       "w": "in",
+       "from": 490,
+       "to": 494
+      },
+      {
+       "w": "Telugu,",
+       "from": 494,
+       "to": 513
+      },
+      {
+       "w": "it",
+       "from": 513,
+       "to": 517
+      },
+      {
+       "w": "gets",
+       "from": 517,
+       "to": 524
+      },
+      {
+       "w": "about",
+       "from": 524,
+       "to": 533
+      },
+      {
+       "w": "one",
+       "from": 533,
+       "to": 538
+      },
+      {
+       "w": "in",
+       "from": 538,
+       "to": 543
+      },
+      {
+       "w": "five",
+       "from": 543,
+       "to": 550
+      },
+      {
+       "w": "right.",
+       "from": 550,
+       "to": 560
+      }
+     ],
+     "cues": {
+      "1": 68,
+      "2": 401,
+      "3": 484
+     }
+    }
+   ]
+  },
+  {
+   "id": "verdict",
+   "type": "lh_verdict",
+   "data": {
+    "yt": {
+     "chapter": "Which one?",
+     "title": "Laya, Jev or not yet",
+     "notes": [
+      [
+       "English, few options, examples to train on: Laya",
+       1
+      ],
+      [
+       "Many options or no time to train: Jev (paid)",
+       2
+      ],
+      [
+       "Telugu: not yet",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 2148,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_06.wav",
+     "from": 0,
+     "frames": 308,
+     "words": [
+      {
+       "w": "So:",
+       "from": 16,
+       "to": 38
+      },
+      {
+       "w": "English,",
+       "from": 38,
+       "to": 54
+      },
+      {
+       "w": "a",
+       "from": 54,
+       "to": 57
+      },
+      {
+       "w": "few",
+       "from": 57,
+       "to": 63
+      },
+      {
+       "w": "options,",
+       "from": 63,
+       "to": 75
+      },
+      {
+       "w": "and",
+       "from": 75,
+       "to": 80
+      },
+      {
+       "w": "examples",
+       "from": 80,
+       "to": 93
+      },
+      {
+       "w": "to",
+       "from": 93,
+       "to": 97
+      },
+      {
+       "w": "train",
+       "from": 97,
+       "to": 123
+      },
+      {
+       "w": "it",
+       "from": 123,
+       "to": 128
+      },
+      {
+       "w": "on?",
+       "from": 128,
+       "to": 133
+      },
+      {
+       "w": "Laya.",
+       "from": 133,
+       "to": 160
+      },
+      {
+       "w": "Many",
+       "from": 160,
+       "to": 167
+      },
+      {
+       "w": "options,",
+       "from": 167,
+       "to": 180
+      },
+      {
+       "w": "or",
+       "from": 180,
+       "to": 184
+      },
+      {
+       "w": "no",
+       "from": 184,
+       "to": 188
+      },
+      {
+       "w": "time",
+       "from": 188,
+       "to": 195
+      },
+      {
+       "w": "to",
+       "from": 195,
+       "to": 199
+      },
+      {
+       "w": "train?",
+       "from": 199,
+       "to": 224
+      },
+      {
+       "w": "Jev.",
+       "from": 224,
+       "to": 245
+      },
+      {
+       "w": "Telugu?",
+       "from": 245,
+       "to": 279
+      },
+      {
+       "w": "Not",
+       "from": 279,
+       "to": 287
+      },
+      {
+       "w": "yet.",
+       "from": 287,
+       "to": 297
+      }
+     ],
+     "cues": {
+      "1": 38,
+      "2": 160,
+      "3": 245
+     }
+    }
+   ]
+  },
+  {
+   "id": "try",
+   "type": "lh_try",
+   "data": {
+    "yt": {
+     "chapter": "Try it",
+     "title": "pip install laya",
+     "notes": [
+      [
+       "pip install laya, then a few lines of Python",
+       1
+      ],
+      [
+       "Not a coder? Send this to whoever runs AI at your company",
+       2
+      ],
+      [
+       "github.com/NandhaKishorM/laya",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "captionTop": 1395,
+    "captionSide": 110
+   },
+   "from": 2495,
+   "frames": 282,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/layahowte/line_07.wav",
+     "from": 0,
+     "frames": 237,
+     "words": [
+      {
+       "w": "Developers:",
+       "from": 1,
+       "to": 15
+      },
+      {
+       "w": "pip",
+       "from": 15,
+       "to": 25
+      },
+      {
+       "w": "install",
+       "from": 25,
+       "to": 35
+      },
+      {
+       "w": "laya.",
+       "from": 35,
+       "to": 43
+      },
+      {
+       "w": "Not",
+       "from": 43,
+       "to": 61
+      },
+      {
+       "w": "a",
+       "from": 61,
+       "to": 64
+      },
+      {
+       "w": "coder?",
+       "from": 64,
+       "to": 73
+      },
+      {
+       "w": "Send",
+       "from": 73,
+       "to": 93
+      },
+      {
+       "w": "this",
+       "from": 93,
+       "to": 99
+      },
+      {
+       "w": "to",
+       "from": 99,
+       "to": 103
+      },
+      {
+       "w": "whoever",
+       "from": 103,
+       "to": 113
+      },
+      {
+       "w": "runs",
+       "from": 113,
+       "to": 120
+      },
+      {
+       "w": "AI",
+       "from": 120,
+       "to": 124
+      },
+      {
+       "w": "at",
+       "from": 124,
+       "to": 128
+      },
+      {
+       "w": "your",
+       "from": 128,
+       "to": 134
+      },
+      {
+       "w": "company.",
+       "from": 134,
+       "to": 146
+      },
+      {
+       "w": "And",
+       "from": 146,
+       "to": 171
+      },
+      {
+       "w": "follow",
+       "from": 171,
+       "to": 182
+      },
+      {
+       "w": "for",
+       "from": 182,
+       "to": 189
+      },
+      {
+       "w": "more",
+       "from": 189,
+       "to": 196
+      },
+      {
+       "w": "free",
+       "from": 196,
+       "to": 204
+      },
+      {
+       "w": "AI",
+       "from": 204,
+       "to": 214
+      },
+      {
+       "w": "tools.",
+       "from": 214,
+       "to": 225
+      }
+     ],
+     "cues": {
+      "1": 15,
+      "2": 43,
+      "3": 146
+     }
+    }
+   ]
+  }
+ ]
+}
