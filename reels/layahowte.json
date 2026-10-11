@@ -42,7 +42,7 @@
        1
       ],
       [
-       "What it's good at, and what its own page admits",
+       "Does it work in Telugu? Answer at the end",
        2
       ]
      ]
@@ -53,8 +53,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "01_hook.wav",
-     "text": "ఈ ఫ్రీ ఎ ఐ, ఒక్క వాక్యం కూడా రాయలేదు. [1] అయినా మూడు వారాల్లో ముప్పై రెండు వేల మంది డెవలపర్లు దీనికి స్టార్ ఇచ్చారు. [2] ఇది దేనిలో బాగుందో, దీని సొంత పేజీ ఏం ఒప్పుకుంటుందో చూద్దాం.",
-     "show": "This free AI can't write a single sentence. [1] Yet 32,000 developers gave it a star in 3 weeks. [2] Here's what it's good at, and what its own page admits.",
+     "text": "ఈ ఫ్రీ ఎ ఐ, ఒక్క వాక్యం కూడా రాయదు. [1] అయినా మూడు వారాల్లో ముప్పై రెండు వేల మంది డెవలపర్లు దీనికి స్టార్ ఇచ్చారు. [2] తెలుగులో పనిచేస్తుందా? అది చివర్లో చెప్తా.",
+     "show": "This free AI doesn't write a single sentence. [1] Yet 32,000 developers gave it a star in 3 weeks. [2] Does it work in Telugu? I'll tell you at the end.",
      "pauses": {
       "1": 0.25
      }
@@ -65,7 +65,6 @@
    "id": "what",
    "type": "lh_what",
    "tail": 0.6,
-   "drop_cue": 3,
    "data": {
     "yt": {
      "chapter": "What it does",
@@ -129,8 +128,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "03_kinds.wav",
-     "text": "ఇది మూడు రకాల ప్రశ్నలకు జవాబిస్తుంది. [1] ఒకటి ఎంచుకోవడం: ఈ టికెట్ ఏ టీమ్ కి వెళ్ళాలి? [2] స్కోర్: ఎంత అర్జెంట్, ఒకటి నుంచి ఐదు? [3] అవునా కాదా: ఈ ఈమెయిల్ ఫిషింగా?",
-     "show": "Three kinds of questions. [1] Pick one: which team gets this ticket? [2] Score: how urgent, one to five? [3] Yes or no: is this email phishing?"
+     "text": "ఇది మూడు రకాల ప్రశ్నలకు జవాబిస్తుంది. [1] ఒకటి ఎంచుకోవడం: ఈ టికెట్ ఏ టీమ్ కి వెళ్ళాలి? [2] స్కోర్: ఎంత అర్జెంట్, ఒకటి నుంచి ఐదు? [3] అవునా కాదా: ఈ ఈమెయిల్ మోసపు లింక్ మెయిలా?",
+     "show": "Three kinds of questions. [1] Pick one: which team gets this ticket? [2] Score: how urgent, one to five? [3] Yes or no: is this a scam (phishing) email?"
     }
    ]
   },
@@ -164,8 +163,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "04_why.wav",
-     "text": "ఎందుకు వాడాలి? [1] స్పీడ్: క్లౌడ్ జి పి యు మీద ఒక్కో ప్రశ్నకి సుమారు ముప్పై మూడు మిల్లీసెకన్లు. [2] ఇది ఫ్రీ, ఓపెన్ సోర్స్. [3] ఇది ఏమీ రాయదు కాబట్టి, తప్పు చెప్పొచ్చు కానీ, అనవసరంగా సాగదీయదు.",
-     "show": "Here's why people use it: [1] it's fast, about 33 milliseconds a question on a cloud GPU. [2] It's free and open source. [3] And since it never writes, it can be wrong, but it can't ramble."
+     "text": "దీన్ని ఎందుకు వాడతారంటే, [1] రెప్పపాటు కన్నా వేగం: క్లౌడ్ జి పి యు మీద ఒక్కో ప్రశ్నకి సుమారు ముప్పై మూడు మిల్లీసెకన్లు. [2] ఇది ఫ్రీ, ఓపెన్ సోర్స్. [3] ఇది ఏమీ రాయదు కాబట్టి, తప్పు చెప్పొచ్చు కానీ, అనవసరంగా సాగదీయదు.",
+     "show": "Here's why people use it: [1] faster than a blink, about 33 milliseconds a question on a cloud GPU. [2] It's free and open source. [3] And since it never writes, it can be wrong, but it can't ramble."
     }
    ]
   },
@@ -173,6 +172,8 @@
    "id": "catch",
    "type": "lh_honest",
    "tail": 0.8,
+   "lift": true,
+   "drop_cue": 3,
    "data": {
     "yt": {
      "chapter": "The catch",
@@ -212,6 +213,7 @@
    "type": "lh_verdict",
    "tail": 0.6,
    "boost": 1.3,
+   "lift": true,
    "data": {
     "yt": {
      "chapter": "Which one?",
@@ -247,6 +249,7 @@
    "type": "lh_try",
    "tail": 1.2,
    "outro": true,
+   "lift": true,
    "data": {
     "yt": {
      "chapter": "Try it",
@@ -257,7 +260,7 @@
        1
       ],
       [
-       "Not a coder? Send this to whoever runs AI at your company",
+       "Not a coder? Share this with a developer friend",
        2
       ],
       [
@@ -266,15 +269,16 @@
       ]
      ]
     },
-    "handle": "@ai_maastaaru_telugu"
+    "handle": "@ai_maastaaru_telugu",
+    "notCoder": "not a coder? share this with a developer friend"
    },
    "lines": [
     {
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "07_try.wav",
-     "text": "డెవలపర్లు: [1] పిప్ ఇన్స్టాల్ లయ. [2] కోడర్ కాదా? మీ కంపెనీలో ఎ ఐ చూసుకునే వాళ్లకు దీన్ని పంపండి. [3] మరిన్ని ఫ్రీ ఎ ఐ టూల్స్ కోసం ఫాలో అవ్వండి.",
-     "show": "Developers: [1] pip install laya. [2] Not a coder? Send this to whoever runs AI at your company. [3] And follow for more free AI tools."
+     "text": "డెవలపర్లు: [1] పిప్ ఇన్స్టాల్ లయ. [2] కోడర్ కాదా? మీ డెవలపర్ ఫ్రెండ్ కి షేర్ చేయండి. [3] మరిన్ని ఫ్రీ ఎ ఐ టూల్స్ కోసం ఫాలో అవ్వండి.",
+     "show": "Developers: [1] pip install laya. [2] Not a coder? Share this with a developer friend. [3] And follow for more free AI tools."
     }
    ]
   }

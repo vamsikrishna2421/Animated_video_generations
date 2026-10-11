@@ -50,7 +50,7 @@ export const phraseGroups = (words: Word[]) => {
   words.forEach((w, i) => {
     cur.push(w);
     const rest = words.length - i - 1, next = words[i + 1];
-    if (/[.!?]$/.test(w.w) || (/[,:;]$/.test(w.w) && len(cur) >= 16 && rest > 2) || (next && len(cur) + next.w.length + 1 > 42 && rest > 2)) {
+    if (/[.!?]["'”’)]*$/.test(w.w) || (/[,:;]$/.test(w.w) && len(cur) >= 16 && rest > 2) || (next && len(cur) + next.w.length + 1 > 42 && rest > 2)) {
       out.push(cur);
       cur = [];
     }

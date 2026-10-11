@@ -1,5 +1,5 @@
 import React from "react";
-import { Ctx, Pt, rng, stroke, circlePts, clamp, easeOut, seg, lerp } from "./crayon";
+import { Ctx, Pt, rng, stroke, circlePts, clamp, easeOut, easeIn, seg, lerp } from "./crayon";
 import { COL } from "./scenes";
 import { CrayonCanvas } from "./CrayonCanvas";
 import { background, hand, fade } from "./AttentionCrayon";
@@ -82,7 +82,8 @@ const LhHook: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2);
   return (
     <>
-      <Sfx at={0} src="reel/sfx_boom.wav" vol={0.7} />
+      <Sfx at={0} src="reel/sfx_boom.wav" vol={1} />
+      <Sfx at={0} src="audio/sfx_whoosh.wav" vol={0.55} />
       <Sfx at={22} src="audio/sfx_pop.wav" vol={0.5} />
       <Sfx at={c1} src="audio/sfx_chaching.wav" vol={0.45} />
       <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.4} />
@@ -90,7 +91,7 @@ const LhHook: React.FC<SP> = ({ cue }) => {
         background(c, W, H, boil);
         const r = rng(3100 + boil);
         chatBubble(c, 60, 320, 470, 560, r, seg(f, 0, 70), 1);
-        answerCard(c, 560, 380, 460, 420, r, "refund request?", "YES · 94%", seg(f, 18, 28));
+        answerCard(c, 560, 380, 460, 420, r, "refund request?", "YES · 94% sure", seg(f, 18, 28));
         if (f >= 18) stamp(c, "1 answer", 790, 880, 54, COL.yellow, seg(f, 24, 32), r, -0.05);
         if (f >= c1) {
           const p = fade(f, c1, 10);
@@ -160,7 +161,7 @@ const LhKinds: React.FC<SP> = ({ cue }) => {
         background(c, W, H, boil);
         const r = rng(3300 + boil);
         hand(c, "3 kinds of questions", W / 2, 350, 80, COL.yellow, seg(f, 0, 14), r, -0.02, "center");
-        label(c, "real outputs, run by us", W / 2, 400, 40, COL.cream, handF, seg(f, 8, 18));
+        label(c, "real outputs (how sure it is), run by us", W / 2, 400, 40, COL.cream, handF, seg(f, 8, 18));
         if (f >= c1) {
           const p = fade(f, c1, 10);
           card(c, 70, 430, 940, 290, r, p, COL.cream);
@@ -183,7 +184,7 @@ const LhKinds: React.FC<SP> = ({ cue }) => {
             c.restore();
             label(c, String(i + 1), 220 + i * 110, 980, 42, on ? "#fff" : GREY, caveat, p);
           }
-          label(c, "→ 2 (58%)", 760, 984, 56, COL.orange, caveat, seg(f, c2 + 10, c2 + 18), "left");
+          label(c, "→ 2 (58% sure)", 720, 984, 52, COL.orange, caveat, seg(f, c2 + 10, c2 + 18), "left");
         }
         if (f >= c3) {
           const p = fade(f, c3, 10);
@@ -193,7 +194,7 @@ const LhKinds: React.FC<SP> = ({ cue }) => {
           c.save(); c.globalAlpha = clamp(p * 1.5); c.fillStyle = "#fff"; c.fillRect(160, 1230, 130, 76); c.restore();
           stroke(c, [[160, 1230], [225, 1272], [290, 1230]], COL.ink, 4, r, { passes: 1, alpha: 0.7 * p });
           stroke(c, [[320, 1200], [320, 1262], [340, 1286], [362, 1266]], GREY, 6, r, { passes: 2, alpha: p });
-          stamp(c, "YES · 1.00", 700, 1278, 64, COL.red, seg(f, c3 + 10, c3 + 18), r, -0.05);
+          stamp(c, "YES · 100% sure", 700, 1278, 60, COL.red, seg(f, c3 + 10, c3 + 18), r, -0.05);
         }
       }} />
     </>
@@ -223,14 +224,14 @@ const LhWhy: React.FC<SP> = ({ cue }) => {
           stroke(c, [[230, 560], [230 + Math.cos(a) * 80, 560 + Math.sin(a) * 80]], COL.red, 8, r, { passes: 2, alpha: p });
           label(c, "33 ms", 390, 580, 120, COL.yellow, caveat, p, "left");
           label(c, "a question on a cloud GPU (his page)", 396, 636, 36, COL.pale, handF, p, "left");
-          label(c, "faster than a blink", 396, 684, 46, COL.cream, caveat, seg(f, c1 + 10, c1 + 20), "left");
+          label(c, "1,000 emails: about 33 seconds", 396, 690, 52, COL.yellow, caveat, seg(f, c1 + 10, c1 + 20), "left");
         }
         if (f >= c2) {
           const p = fade(f, c2, 10);
           card(c, 90, 740, 900, 230, r, p, COL.cream);
           tag(c, "FREE", 230, 820, 64, COL.green, INK, -0.04, p);
           label(c, "open source (Apache-2.0)", 360, 832, 54, INK, caveat, p, "left");
-          label(c, "on a 4-core CPU: 0.2 to 0.6 s per question (his page)", 130, 922, 38, GREY, handF, p, "left");
+          label(c, "4-core CPU: 0.2 to 0.6 s a question (his page)", 130, 922, 42, GREY, caveat, p, "left");
         }
         if (f >= c3) {
           const p = fade(f, c3, 10);
@@ -247,42 +248,43 @@ const LhWhy: React.FC<SP> = ({ cue }) => {
   );
 };
 
-// ---------- 5 THE CATCH (from his own page) ----------
+// ---------- 5 THE CATCH (from his own page): two screens ----------
 const LhHonest: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.4} />
-      <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.4} />
+      <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.4} />
       <Sfx at={c3} src="audio/sfx_pop.wav" vol={0.4} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3600 + boil);
         hand(c, "the catch", W / 2, 345, 90, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
         label(c, "(from his own page)", W / 2, 400, 44, COL.cream, caveat, seg(f, 6, 16));
-        if (f >= c1) {
-          const p = fade(f, c1, 10);
-          tag(c, "trained on spam: 99% right", 300, 462, 40, COL.green, INK, -0.03, p);
-          label(c, "new business tasks (typed-decisions test):", 90, 530, 38, COL.pale, handF, seg(f, c1 + 10, c1 + 18), "left");
-          bar(c, 90, 600, 640, 48, 0.36, COL.red, "out of the box", "36%", seg(f, c1 + 10, c1 + 24), r);
-          bar(c, 90, 716, 640, 48, 0.77, COL.green, "after training (his reported number)", "77%", seg(f, c1 + 24, c1 + 38), r);
-          const bx = 90 + 640 * 0.46, q = seg(f, c1 + 16, c1 + 26);
-          c.save(); c.globalAlpha = clamp(q * 1.5); c.setLineDash([14, 12]); c.strokeStyle = COL.yellow; c.lineWidth = 5;
-          c.beginPath(); c.moveTo(bx, 592); c.lineTo(bx, 654); c.moveTo(bx, 712); c.lineTo(bx, 772); c.stroke(); c.restore();
-          label(c, "always guess the most common answer: 46%", bx - 200, 808, 36, COL.yellow, caveat, q, "left");
+        const outA = easeIn(seg(f, c2 - 8, c2 + 4)), inB = 1 - easeOut(seg(f, c2 - 2, c2 + 10));
+        if (f >= c1 && outA < 1) {   // screen A slides out to the left when the voice moves on
+          c.save(); c.translate(-W * outA, 0);
+          tag(c, "trained on spam: 99% right", W / 2, 484, 50, COL.green, INK, -0.03, fade(f, c1, 10));
+          label(c, "new business tasks (% right):", 90, 586, 48, COL.cream, caveat, fade(f, c1 + 8, 10), "left");
+          bar(c, 90, 666, 640, 56, 0.36, COL.red, "out of the box", "36%", seg(f, c1 + 10, c1 + 24), r);
+          bar(c, 90, 816, 640, 56, 0.46, COL.yellow, "always guessing the most common answer", "46%", seg(f, c1 + 18, c1 + 32), r);
+          bar(c, 90, 966, 640, 56, 0.77, COL.green, "after training on your examples", "77%", seg(f, c1 + 28, c1 + 42), r);
+          label(c, "(his reported number)", 90, 1076, 40, COL.pale, caveat, seg(f, c1 + 34, c1 + 44), "left");
+          label(c, "worse than guessing, until you train it", W / 2, 1176, fitSize(c, "worse than guessing, until you train it", 940, 58, caveat), COL.yellow, caveat, seg(f, c1 + 40, c1 + 52));
+          c.restore();
         }
-        if (f >= c2) {
-          const p = fade(f, c2, 10);
-          card(c, 90, 840, 900, 130, r, p, COL.cream);
-          label(c, "20+ answer options?", 130, 898, 52, INK, caveat, p, "left");
-          label(c, "→ Jev (paid, by TypeSafe) does better", 300, 950, 44, COL.orange, caveat, p, "left");
-        }
-        if (f >= c3) {
-          const p = fade(f, c3, 10);
-          label(c, "20-option test (random guess: 5%)", 90, 1030, 38, COL.pale, handF, p, "left");
-          bar(c, 90, 1100, 640, 52, 0.71, COL.green, "English", "71%", seg(f, c3, c3 + 14), r);
-          bar(c, 90, 1226, 640, 52, 0.22, COL.orange, "Telugu", "22%", seg(f, c3 + 6, c3 + 20), r);
-          label(c, "about 1 in 5", 560, 1356, 50, COL.orange, caveat, seg(f, c3 + 18, c3 + 26), "left");
+        if (f >= c2 - 2) {   // screen B slides in from the right
+          c.save(); c.translate(W * inB, 0);
+          card(c, 70, 460, 940, 200, r, 1, COL.cream);
+          label(c, "20+ answer options?", 110, 540, 60, INK, caveat, 1, "left");
+          label(c, "→ Jev (a paid rival, by TypeSafe) does better", 110, 614, fitSize(c, "→ Jev (a paid rival, by TypeSafe) does better", 860, 48, caveat), COL.orange, caveat, 1, "left");
+          if (f >= c3) {
+            label(c, "20-option test (a random guess gets 5%):", 90, 760, 46, COL.cream, caveat, fade(f, c3, 10), "left");
+            bar(c, 90, 860, 640, 60, 0.71, COL.green, "English", "71%", seg(f, c3, c3 + 14), r);
+            bar(c, 90, 1010, 640, 60, 0.22, COL.orange, "Telugu", "22%", seg(f, c3 + 6, c3 + 20), r);
+            label(c, "about 1 in 5", W / 2, 1180, 76, COL.orange, caveat, seg(f, c3 + 18, c3 + 26));
+          }
+          c.restore();
         }
       }} />
     </>
@@ -348,8 +350,8 @@ const LhTry: React.FC<SP> = ({ s, cue }) => {
           label(c, "→ 0.94", 820, 1086, 56, "#b45309", caveat, seg(f, c1 + 34, c1 + 42), "left");
         }
         if (f >= c2) {
-          const p = fade(f, c2, 10);
-          label(c, "not a coder? send this to whoever runs AI at your company", W / 2, 1168, fitSize(c, "not a coder? send this to whoever runs AI at your company", 960, 44, caveat), COL.cream, caveat, p);
+          const p = fade(f, c2, 10), t: string = s.data.notCoder ?? "not a coder? send this to whoever runs AI at your company";
+          label(c, t, W / 2, 1168, fitSize(c, t, 960, 46, caveat), COL.cream, caveat, p);
         }
         if (f >= c3) {
           const p = fade(f, c3, 12);
