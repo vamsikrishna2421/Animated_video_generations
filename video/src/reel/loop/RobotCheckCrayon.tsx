@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
+import { continueRender, delayRender, staticFile } from "remotion";
 import { Ctx, Pt, rng, stroke, circlePts, clamp, easeOut, seg, lerp } from "./crayon";
 import { COL } from "./scenes";
 import { CrayonCanvas } from "./CrayonCanvas";
@@ -17,6 +18,36 @@ const SKIN = "#e9c4a0";
 const DRESS = "#c2410c";
 const SUIT = "#334155";
 const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
+
+// The official White House photo of the Oct 7, 2026 Oval Office event (US government work), cropped to the adults
+// behind the desk. Shown unaltered: only scaled, framed and slowly pushed in.
+const PHOTO = "reel/photos/wh_oval_2026-10-07.jpg";
+const usePhoto = (src: string) => {
+  const [handle] = useState(() => delayRender("photo " + src));
+  const [img, setImg] = useState<HTMLImageElement | null>(null);
+  useLayoutEffect(() => {
+    const im = new Image();
+    im.onload = () => { setImg(im); continueRender(handle); };
+    im.onerror = () => continueRender(handle);
+    im.src = staticFile(src);
+  }, [handle, src]);
+  return img;
+};
+
+// Photo print with a white border; `zoom` pushes in toward (fx, fy) in image fractions.
+const photoCard = (c: Ctx, img: HTMLImageElement | null, x: number, y: number, w: number, r: () => number, p: number, zoom = 1, fx = 0.5, fy = 0.5, rot = -0.015) => {
+  if (!img || p <= 0) return;
+  const h = w * img.height / img.width, b = 14;
+  c.save(); c.globalAlpha = clamp(p * 1.4);
+  c.translate(x + w / 2, y + h / 2); c.rotate(rot); c.translate(-w / 2, -h / 2);
+  c.fillStyle = "rgba(4,8,40,0.4)"; c.fillRect(-b + 10, -b + 12, w + 2 * b, h + 2 * b);
+  c.fillStyle = "#fbf8f0"; c.fillRect(-b, -b, w + 2 * b, h + 2 * b);
+  c.beginPath(); c.rect(0, 0, w, h); c.clip();
+  const zw = w * zoom, zh = h * zoom;
+  c.drawImage(img, -(zw - w) * fx, -(zh - h) * fy, zw, zh);
+  c.restore();
+  void r;
+};
 
 // Faceless standing figure (head + shoulders + body), the generic "person in the clip".
 const figure = (c: Ctx, x: number, y: number, s: number, r: () => number, body = DRESS, a = 1) => {
@@ -169,7 +200,8 @@ const title = (c: Ctx, n: string, t: string, f: number, r: () => number) => {
 };
 
 // ---------- 1 HOOK ----------
-const RcHook: React.FC<SP> = ({ cue }) => {
+const RcHook: React.FC<SP> = ({ s: sc, cue }) => {
+  const img = usePhoto(PHOTO);
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
@@ -186,21 +218,19 @@ const RcHook: React.FC<SP> = ({ cue }) => {
         if (out > 0) {
           tag(c, "FACT CHECK", W / 2, 296, 40, COL.orange, "#fff", -0.03, seg(f, 0, 6) * out);
           c.save(); c.globalAlpha = out; hand(c, "NOT A ROBOT", W / 2, 408, 110, COL.yellow, seg(f, 0, 12), r, -0.02, "center"); c.restore();
-          const [sx, sy, sw, sh] = phone(c, 330, 450, 420, 600, r, out);
-          eventPic(c, sx, sy, sw, sh, r, out);
-          ([["robot?!", 190, 600, COL.red, -0.08, 6]] as const).forEach(([t, x, y, col, rot, at], i) => {
-            const p = seg(f, at, at + 40) * out;
-            comment(c, t, x, y, col, Math.min(p, 0.5), rot);
-            const k = seg(f, c1 + i * 4, c1 + 8 + i * 4);   // crossed out when the voice says "not a robot"
-            if (k > 0) stroke(c, [[x - 110, y - 20 - 30], [x - 110 + 220 * k, y - 20 - 30 - 10 * k]], COL.red, 12, r, { passes: 2, alpha: 0.95 * out });
-          });
+          photoCard(c, img, 130, 456, 820, r, out, 1 + 0.12 * easeOut(seg(f, 0, sc.frames)), 0.38, 0.35);
+          label(c, "Photo: The White House · Oct 7, 2026", 150, 1156, 38, COL.cream, handF, out * (1 - fade(f, c2 - 6, 8)), "left");
+          const p = seg(f, 6, 46) * out;
+          comment(c, "robot?!", 250, 560, COL.red, Math.min(p, 0.5), -0.08);
+          const k = seg(f, c1, c1 + 8);   // crossed out when the voice says "not a robot"
+          if (k > 0) stroke(c, [[148, 526], [148 + 210 * k, 526 - 14 * k]], COL.red, 12, r, { passes: 2, alpha: 0.95 * out });
           if (f >= c2) {
-            const p = fade(f, c2, 10) * out;
-            card(c, 90, 1080, 900, 290, r, p, COL.cream);
-            label(c, "Susan Dell", 130, 1162, 84, INK, caveat, p, "left");
-            label(c, "charity co-founder; her husband founded Dell (laptops)", 130, 1236, fitSize(c, "charity co-founder; her husband founded Dell (laptops)", 820, 52, caveat), INK, caveat, p, "left");
-            label(c, "Source: White House · Oct 7, 2026", 130, 1314, 48, GREY, caveat, p, "left");
-            tag(c, "real video", 830, 1130, 46, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
+            const q = fade(f, c2, 10) * out;
+            card(c, 90, 1140, 900, 240, r, q, COL.cream);
+            label(c, "Susan Dell", 130, 1214, 80, INK, caveat, q, "left");
+            label(c, "charity co-founder; her husband founded Dell (laptops)", 130, 1284, fitSize(c, "charity co-founder; her husband founded Dell (laptops)", 820, 50, caveat), INK, caveat, q, "left");
+            label(c, "in red, beside the President · photo: The White House", 130, 1348, fitSize(c, "in red, beside the President · photo: The White House", 820, 42, caveat), GREY, caveat, q, "left");
+            tag(c, "real photo", 840, 1180, 46, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
           }
         }
         if (f >= c3) {
@@ -420,6 +450,7 @@ const RcCheck: React.FC<SP> = ({ cue }) => {
 // ---------- 7 VERDICT + CTA ----------
 const RcClose: React.FC<SP> = ({ s, cue }) => {
   const handle: string = s.data.handle ?? "@ai_maastaaru";
+  const img = usePhoto(PHOTO);
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
@@ -429,23 +460,22 @@ const RcClose: React.FC<SP> = ({ s, cue }) => {
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4700 + boil);
-        stamp(c, "REAL PERSON", W / 2, 480, 124, COL.green, seg(f, c1, c1 + 8), r, -0.05);
-        label(c, "edited clips", W / 2, 610, 76, COL.yellow, caveat, seg(f, c1 + 10, c1 + 20));
+        photoCard(c, img, 250, 262, 580, r, seg(f, 0, 8), 1.06, 0.38, 0.35, 0.02);
+        stamp(c, "REAL PERSON", W / 2, 730, 116, COL.green, seg(f, c1, c1 + 8), r, -0.05);
+        label(c, "edited clips", W / 2, 840, 70, COL.yellow, caveat, seg(f, c1 + 10, c1 + 20));
         if (f >= c2) {
           const p = fade(f, c2, 12);
-          card(c, 70, 670, 940, 250, r, p, COL.cream);
-          label(c, "slow motion, copies, filters", W / 2, 768, 64, INK, caveat, p);
-          label(c, "and a voice-over made the \"proof\"", W / 2, 852, 60, INK, caveat, seg(f, c2 + 8, c2 + 20));
+          card(c, 70, 880, 940, 200, r, p, COL.cream);
+          label(c, "slow motion, copies, filters", W / 2, 960, 60, INK, caveat, p);
+          label(c, "and a voice-over made the \"proof\"", W / 2, 1038, 56, INK, caveat, seg(f, c2 + 8, c2 + 20));
         }
         if (f >= c3) {
           const p = fade(f, c3, 12);
-          label(c, "send this to the group", W / 2, 1010, 62, COL.cream, caveat, p);
-          label(c, "that sent you the clip", W / 2, 1078, 62, COL.cream, caveat, p);
-          label(c, "sources in the caption", W / 2, 1150, 48, COL.pale, caveat, seg(f, c3 + 10, c3 + 20));
+          label(c, "send this to the group that sent you the clip", W / 2, 1150, fitSize(c, "send this to the group that sent you the clip", 960, 58, caveat), COL.cream, caveat, p);
+          label(c, "sources in the caption", W / 2, 1212, 46, COL.pale, caveat, seg(f, c3 + 10, c3 + 20));
           c.save(); c.globalAlpha = easeOut(seg(f, c3 + 24, c3 + 36));
           c.font = caveat(handle.length > 16 ? 76 : 88); c.textAlign = "center"; c.fillStyle = COL.yellow;
-          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1280);
-          c.shadowBlur = 0; c.font = handF(44); c.fillStyle = COL.cream; c.fillText("AI, explained simply", W / 2, 1340);
+          c.shadowColor = COL.orange; c.shadowBlur = 24; c.fillText(handle, W / 2, 1320);
           c.restore();
         }
       }} />
