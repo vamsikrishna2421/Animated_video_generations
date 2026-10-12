@@ -22,6 +22,8 @@ const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
 // The official White House photo of the Oct 7, 2026 Oval Office event (US government work), cropped to the adults
 // behind the desk. Shown unaltered: only scaled, framed and slowly pushed in.
 const PHOTO = "reel/photos/wh_oval_2026-10-07.jpg";
+// A frame of the White House's own video of the same event (its YouTube thumbnail), cropped above the WH banner.
+const FRAME = "reel/photos/wh_video_2026-10-07.jpg";
 const usePhoto = (src: string) => {
   const [handle] = useState(() => delayRender("photo " + src));
   const [img, setImg] = useState<HTMLImageElement | null>(null);
@@ -201,7 +203,7 @@ const title = (c: Ctx, n: string, t: string, f: number, r: () => number) => {
 
 // ---------- 1 HOOK ----------
 const RcHook: React.FC<SP> = ({ s: sc, cue }) => {
-  const img = usePhoto(PHOTO);
+  const img = usePhoto(FRAME);
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
@@ -218,8 +220,8 @@ const RcHook: React.FC<SP> = ({ s: sc, cue }) => {
         if (out > 0) {
           tag(c, "FACT CHECK", W / 2, 296, 40, COL.orange, "#fff", -0.03, seg(f, 0, 6) * out);
           c.save(); c.globalAlpha = out; hand(c, "NOT A ROBOT", W / 2, 408, 110, COL.yellow, seg(f, 0, 12), r, -0.02, "center"); c.restore();
-          photoCard(c, img, 130, 456, 820, r, out, 1 + 0.12 * easeOut(seg(f, 0, sc.frames)), 0.38, 0.35);
-          label(c, "Photo: The White House · Oct 7, 2026", 150, 1156, 38, COL.cream, handF, out * (1 - fade(f, c2 - 6, 8)), "left");
+          photoCard(c, img, 150, 456, 780, r, out, 1 + 0.10 * easeOut(seg(f, 0, sc.frames)), 0.7, 0.3);
+          label(c, "White House video · Oct 7, 2026", 160, 1150, 38, COL.cream, handF, out * (1 - fade(f, c2 - 6, 8)), "left");
           const p = seg(f, 6, 46) * out;
           comment(c, "robot?!", 250, 560, COL.red, Math.min(p, 0.5), -0.08);
           const k = seg(f, c1, c1 + 8);   // crossed out when the voice says "not a robot"
@@ -229,8 +231,8 @@ const RcHook: React.FC<SP> = ({ s: sc, cue }) => {
             card(c, 90, 1140, 900, 240, r, q, COL.cream);
             label(c, "Susan Dell", 130, 1214, 80, INK, caveat, q, "left");
             label(c, "charity co-founder; her husband founded Dell (laptops)", 130, 1284, fitSize(c, "charity co-founder; her husband founded Dell (laptops)", 820, 50, caveat), INK, caveat, q, "left");
-            label(c, "in red, beside the President · photo: The White House", 130, 1348, fitSize(c, "in red, beside the President · photo: The White House", 820, 42, caveat), GREY, caveat, q, "left");
-            tag(c, "real photo", 840, 1180, 46, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
+            label(c, "in red, beside the President · White House video", 130, 1348, fitSize(c, "in red, beside the President · White House video", 820, 42, caveat), GREY, caveat, q, "left");
+            tag(c, "real footage", 830, 1180, 46, COL.green, INK, 0.05, seg(f, c2 + 8, c2 + 16) * out);
           }
         }
         if (f >= c3) {
