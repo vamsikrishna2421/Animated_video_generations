@@ -23,7 +23,7 @@ const Caption: React.FC<{ title?: string; sub?: string; dur: number; pos?: "top"
   return (
     <div style={{ position: "absolute", left: 60, right: 60, textAlign: "center", ...style, opacity: s * out, transform: `translateY(${(1 - s) * 30}px)` }}>
       <div style={{ display: "inline-block", background: "rgba(8,8,8,0.72)", borderRadius: 22, padding: "18px 34px 20px", boxShadow: "0 12px 40px rgba(0,0,0,0.5)" }}>
-        <div style={{ fontFamily: BEBAS, fontSize: 92, lineHeight: 0.95, color: "#fff", letterSpacing: 1 }}>{title}</div>
+        <div style={{ fontFamily: BEBAS, fontSize: 92, lineHeight: 0.95, color: "#fff", letterSpacing: 1, whiteSpace: "pre-line" }}>{title}</div>
         {sub ? <div style={{ fontFamily: SANS, fontWeight: 600, fontSize: 36, color: "#d0d0d0", marginTop: 8 }}>{sub}</div> : null}
       </div>
     </div>
@@ -40,15 +40,17 @@ const camAt = (cam: Cam[] | undefined, t: number) => {
 const Desk: React.FC<{ seg: Seg; src: string; url: string }> = ({ seg, src, url }) => {   // cont: same shot continues, no entrance
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const W = 1000, H = 563, X = 40, Y = 700;
+  // A square camera window onto the 16:9 desktop recording: at zoom 1 it shows the full height and pans across.
+  const W = 1040, H = 1000, X = 20, Y = 520;
+  const SH = H, SW = (H * 1920) / 1080;
   const { s, x, y } = camAt(seg.cam, f / fps);
-  const tx = Math.min(0, Math.max(W - W * s, W / 2 - x * W * s));
-  const ty = Math.min(0, Math.max(H - H * s, H / 2 - y * H * s));
+  const tx = Math.min(0, Math.max(W - SW * s, W / 2 - x * SW * s));
+  const ty = Math.min(0, Math.max(H - SH * s, H / 2 - y * SH * s));
   const start = Math.round((seg.src0 ?? 0) * fps);
   const rise = seg.cont ? 1 : spring({ frame: f, fps, config: { damping: 18 } });
   return (
     <AbsoluteFill style={{ background: "#050505" }}>
-      <OffthreadVideo src={staticFile(src)} startFrom={start} muted style={{ position: "absolute", height: 1920, width: 3413, left: -1166, top: 0, filter: "blur(38px) brightness(0.32) saturate(1.2)" }} />
+      <OffthreadVideo src={staticFile(src)} startFrom={start} muted style={{ position: "absolute", height: 1920, width: 3413, left: -1166, top: 0, filter: "blur(38px) brightness(0.3) saturate(1.2)" }} />
       <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 1920, background: "radial-gradient(ellipse at 50% 52%, rgba(229,9,20,0.16), rgba(0,0,0,0) 60%)" }} />
       <div style={{ position: "absolute", left: X, top: Y - 46, width: W, transform: `translateY(${(1 - rise) * 60}px) scale(${0.96 + 0.04 * rise})`, opacity: rise, borderRadius: 18, overflow: "hidden", boxShadow: "0 30px 80px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.12)" }}>
         <div style={{ height: 46, background: "#202020", display: "flex", alignItems: "center", gap: 10, padding: "0 18px" }}>
@@ -56,8 +58,8 @@ const Desk: React.FC<{ seg: Seg; src: string; url: string }> = ({ seg, src, url 
           <span style={{ marginLeft: 18, flex: 1, height: 28, borderRadius: 14, background: "#121212", color: "#a0a0a0", fontFamily: SANS, fontSize: 18, display: "flex", alignItems: "center", paddingLeft: 16 }}>{url}</span>
         </div>
         <div style={{ position: "relative", width: W, height: H, overflow: "hidden", background: "#141414" }}>
-          <div style={{ position: "absolute", left: 0, top: 0, width: W, height: H, transformOrigin: "0 0", transform: `translate(${tx}px, ${ty}px) scale(${s})` }}>
-            <OffthreadVideo src={staticFile(src)} startFrom={start} muted style={{ width: W, height: H }} />
+          <div style={{ position: "absolute", left: 0, top: 0, width: SW, height: SH, transformOrigin: "0 0", transform: `translate(${tx}px, ${ty}px) scale(${s})` }}>
+            <OffthreadVideo src={staticFile(src)} startFrom={start} muted style={{ width: SW, height: SH }} />
           </div>
         </div>
       </div>
