@@ -8,11 +8,30 @@ const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const lerp = (a, b, k) => a + (b - a) * k;
 
 (async () => {
-  const phone = mode === "phone";
+  const phone = mode === "phone" || mode === "intro";
+  if (mode === "intro") {
+    // Same phone intro with another name (shows the one-line edit in config.js). NAME env var, default PRIYA.
+    process.env.__NAME = process.env.NAME || "PRIYA";
+  }
   const { browser, page } = await open(phone
     ? { url: "http://127.0.0.1:8765/", width: 432, height: 768, scale: 2.5, mobile: true }
-    : { url: "http://127.0.0.1:8765/", width: 1280, height: 720, scale: 1.5 });
+    : { url: "http://127.0.0.1:8765/", width: 1280, height: 720, scale: 2 });
   await hideUI(page);
+  if (mode === "intro") {
+    await page.evaluate((n) => {   // rebuild the wordmark with the new name, exactly as config.js would
+      const wm = document.getElementById("wordmark");
+      const letters = [...n], mid = (letters.length - 1) / 2;
+      wm.innerHTML = "";
+      letters.forEach((ch, i) => {
+        const s = document.createElement("span");
+        s.textContent = ch === " " ? "\u00a0" : ch;
+        const d = Math.abs(i - mid) / Math.max(1, mid);
+        s.style.setProperty("--sy", (1 + 0.22 * d * d).toFixed(3));
+        s.style.setProperty("--d", Math.round(Math.abs(i - mid) * 55) + "ms");
+        wm.appendChild(s);
+      });
+    }, process.env.__NAME);
+  }
   const ff = spawn(FFD + "/ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", String(FPS), "-i", "-",
     "-c:v", "libx264", "-preset", "medium", "-crf", "15", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out], { env: { ...process.env, LD_LIBRARY_PATH: FFD }, stdio: ["pipe", "inherit", "inherit"] });
   let frames = 0;
@@ -60,7 +79,10 @@ const lerp = (a, b, k) => a + (b - a) * k;
     P.rip = null;
   };
 
-  if (phone) {
+  if (mode === "intro") {
+    await page.evaluate(() => window.__site.playIntro(false));
+    await run(3600);
+  } else if (phone) {
     await page.evaluate(() => window.__site.playIntro(false));
     await run(3700);                                          // the name intro
     await run(800);                                           // profiles settle

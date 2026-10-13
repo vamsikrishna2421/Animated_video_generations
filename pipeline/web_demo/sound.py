@@ -96,7 +96,7 @@ def swell(dur):
     t = np.linspace(0, 1, n)
     nz = highpass(rng.standard_normal(n).astype(np.float32), 2500) * 0.6
     tone = np.sin(2 * np.pi * np.cumsum(40 + 50 * t) / SR) * 0.5
-    return ((nz + tone) * t ** 2.5).astype(np.float32)
+    return ((nz + tone) * (0.25 + 0.75 * t ** 1.5)).astype(np.float32)
 
 
 def rumble(dur):
@@ -123,8 +123,18 @@ def click():
 
 def kick():
     t = np.arange(int(0.45 * SR)) / SR
-    f = 45 + 95 * np.exp(-t * 30)
-    return (np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7)).astype(np.float32)
+    f = 50 + 110 * np.exp(-t * 30)
+    body = np.tanh(2.6 * np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7)) / np.tanh(2.6)   # saturated: harmonics carry on small speakers
+    tick = highpass(rng.standard_normal(len(t)).astype(np.float32), 2500) * np.exp(-t * 220) * 0.6
+    return (body * 0.9 + tick).astype(np.float32)
+
+
+def snap():
+    """Bright transient on the name landing: a clap-like noise burst plus a short high ping."""
+    t = np.arange(int(0.35 * SR)) / SR
+    nz = highpass(rng.standard_normal(len(t)).astype(np.float32), 1800) * (np.exp(-t * 38) + 0.4 * np.exp(-np.maximum(t - 0.012, 0) * 45) * (t > 0.012))
+    ping = np.sin(2 * np.pi * 2349 * t) * np.exp(-t * 14) * 0.35 + np.sin(2 * np.pi * 1174.7 * t) * np.exp(-t * 9) * 0.35
+    return (nz * 0.8 + ping).astype(np.float32)
 
 
 def hat():
@@ -155,14 +165,17 @@ def main(out, cues_path):
     total = C["total"]
     mus = np.zeros((2, int(total * SR) + SR), np.float32)
     sfx = np.zeros_like(mus)
-    # intro sting
-    place(sfx, swell(C["hit"]), 0.0, 0.8)
-    place(sfx, boom(), C["hit"], 0.95)
-    place(sfx, shimmer(C["zoom"] - C["shimmer"] + 0.25), C["shimmer"], 2.0)
-    place(sfx, rumble(C["land"] - C["hit"]), C["hit"], 0.7)
-    place(sfx, pad_chord(C["land"] - C["hit"] + 0.3, 73.42 * 2), C["hit"] + 0.05, 0.55)   # no thin gap after the hit
-    place(sfx, whoosh(1.15, True), C["zoom"], 1.15)
-    place(sfx, impact(), C["land"], 0.6)
+    # intro stings (the name intro plays twice: the real name, then the renamed one)
+    for st in C["stings"]:
+        place(sfx, swell(st["hit"] - st["start"]), st["start"], 1.0)
+        place(sfx, boom(), st["hit"], 0.95)
+        place(sfx, snap(), st["hit"], 0.8)
+        place(sfx, pad_chord(st["land"] - st["hit"] + 0.3, 73.42 * 2), st["hit"] + 0.05, 0.95)
+        place(sfx, rumble(st["land"] - st["hit"]), st["hit"], 0.95)
+        place(sfx, shimmer(st["zoom"] - st["shimmer"] + 0.25), st["shimmer"], 2.0)
+        place(sfx, whoosh(1.15, True), st["zoom"], 1.15)
+        if st["land"] < C["end"] - 0.1:
+            place(sfx, impact(), st["land"], 0.6)
     # the bed
     bpm, beat = 100, 0.6
     t0, t1 = C["bed_start"], C["bed_end"]
@@ -186,8 +199,11 @@ def main(out, cues_path):
                 place(mus, hat(), tb + beat / 2, 0.22, pan=0.3)
         t += bar
         k += 1
-    # ducking around the end-card riser: the bed drops out, the riser fills
-    place(sfx, whoosh(C["end"] - C["riser"], True) * np.linspace(0.3, 1.2, int((C["end"] - C["riser"]) * SR)).astype(np.float32), C["riser"], 0.7)
+    for a, b in zip(C.get("rattle", [])[::2], C.get("rattle", [])[1::2]):
+        tt = a
+        while tt < b:
+            place(sfx, click(), tt, 0.35)
+            tt += 0.05
     for c in C["cuts"]:
         place(sfx, impact(), c, 0.55)
     for c in C["clicks"]:

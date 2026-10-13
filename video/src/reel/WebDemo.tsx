@@ -4,8 +4,9 @@ import { Fonts } from "../components/Fonts";
 // Website demo reel (9:16): screen recordings of a web template made frame by frame in a browser. Phone recordings
 // play full screen; the desktop recording sits in a browser window with camera moves; an end card points to the code.
 export type Cam = { t: number; s: number; x: number; y: number };   // seconds into the segment, zoom, focus (0-1)
-export type Seg = { kind: "phone" | "desk" | "end"; dur: number; src0?: number; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean };
-export type WebDemoProps = { phone: string; desk: string; audio: string; url: string; handle: string; segs: Seg[]; end: { big: string; lines: string[]; cta: string } };
+export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number };
+export type CodeEdit = { file: string; lines: string[]; line: number; from: string; to: string };
+export type WebDemoProps = { phone: string; desk: string; audio: string; url: string; handle: string; segs: Seg[]; code?: CodeEdit; end: { big: string; lines: string[]; cta: string } };
 export const webDemoDuration = (p: WebDemoProps) => Math.round(p.segs.reduce((a, s) => a + s.dur, 0) * 30);
 
 const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -13,13 +14,13 @@ const SANS = "Inter, 'DejaVu Sans', sans-serif";
 const BEBAS = "'Bebas Neue', Impact, sans-serif";
 const RED = "#e50914";
 
-const Caption: React.FC<{ title?: string; sub?: string; dur: number; pos?: "top" | "bottom" }> = ({ title, sub, dur, pos = "bottom" }) => {
+const Caption: React.FC<{ title?: string; sub?: string; dur: number; pos?: "top" | "bottom"; y?: number; instant?: boolean }> = ({ title, sub, dur, pos = "bottom", y, instant }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   if (!title) return null;
-  const s = spring({ frame: f - 4, fps, config: { damping: 16, mass: 0.7 } });
+  const s = instant ? 1 : spring({ frame: f - 4, fps, config: { damping: 16, mass: 0.7 } });   // the hook caption is up on frame 0
   const out = interpolate(f, [dur * fps - 8, dur * fps], [1, 0], cl);
-  const style: React.CSSProperties = pos === "top" ? { top: 170 } : { bottom: 250 };
+  const style: React.CSSProperties = y != null ? { top: y } : pos === "top" ? { top: 170 } : { bottom: 250 };
   return (
     <div style={{ position: "absolute", left: 60, right: 60, textAlign: "center", ...style, opacity: s * out, transform: `translateY(${(1 - s) * 30}px)` }}>
       <div style={{ display: "inline-block", background: "rgba(8,8,8,0.72)", borderRadius: 22, padding: "18px 34px 20px", boxShadow: "0 12px 40px rgba(0,0,0,0.5)" }}>
@@ -61,6 +62,78 @@ const Desk: React.FC<{ seg: Seg; src: string; url: string }> = ({ seg, src, url 
           <div style={{ position: "absolute", left: 0, top: 0, width: SW, height: SH, transformOrigin: "0 0", transform: `translate(${tx}px, ${ty}px) scale(${s})` }}>
             <OffthreadVideo src={staticFile(src)} startFrom={start} muted style={{ width: SW, height: SH }} />
           </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+
+// Full-screen close-up of the desktop recording (9:16 crop that pans and zooms), with a small "laptop view" tag.
+const DeskFull: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const W = 1080, H = 1920, SH = H, SW = (H * 1920) / 1080;
+  const { s, x, y } = camAt(seg.cam, f / fps);
+  const tx = Math.min(0, Math.max(W - SW * s, W / 2 - x * SW * s));
+  const ty = Math.min(0, Math.max(H - SH * s, H / 2 - y * SH * s));
+  return (
+    <AbsoluteFill style={{ background: "#141414", overflow: "hidden" }}>
+      {seg.clip ? (
+        // pre-cropped along the camera path by pipeline/web_demo/closeups.py (sharp, and light for the renderer)
+        <OffthreadVideo src={staticFile(seg.clip)} muted style={{ width: W, height: H }} />
+      ) : (
+        <div style={{ position: "absolute", left: 0, top: 0, width: SW, height: SH, transformOrigin: "0 0", transform: `translate(${tx}px, ${ty}px) scale(${s})` }}>
+          <OffthreadVideo src={staticFile(src)} startFrom={Math.round((seg.src0 ?? 0) * fps)} muted style={{ width: SW, height: SH }} />
+        </div>
+      )}
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.45) 100%)" }} />
+      {seg.tag ? (
+        <div style={{ position: "absolute", left: 40, bottom: 120, display: "flex", alignItems: "center", gap: 14, background: "rgba(10,10,10,0.78)", border: "2px solid rgba(255,255,255,0.25)", borderRadius: 999, padding: "12px 26px" }}>
+          <svg width="40" height="30" viewBox="0 0 40 30"><rect x="6" y="2" width="28" height="19" rx="2" fill="none" stroke="#fff" strokeWidth="3" /><path d="M1 25h38l-3 4H4z" fill="#fff" /></svg>
+          <span style={{ fontFamily: SANS, fontWeight: 800, fontSize: 34, color: "#fff", letterSpacing: 2 }}>{seg.tag}</span>
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
+// The one-line edit: config.js in a code editor, the name is deleted and retyped.
+const Code: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const t = f / fps;
+  const del0 = 0.7, del1 = del0 + 0.05 * code.from.length, typ1 = del1 + 0.25 + 0.09 * code.to.length;
+  let shown = code.from;
+  if (t >= del0 && t < del1) shown = code.from.slice(0, Math.max(0, code.from.length - Math.floor((t - del0) / 0.05)));
+  else if (t >= del1) shown = code.to.slice(0, Math.max(0, Math.min(code.to.length, Math.floor((t - del1 - 0.25) / 0.09) + 1)));
+  const saved = t > typ1 + 0.35;
+  const blink = Math.floor(t * 2.4) % 2 === 0 || (t > del0 && t < typ1);
+  const rise = spring({ frame: f, fps, config: { damping: 18 } });
+  const MONO = "'DejaVu Sans Mono', 'Space Mono', monospace";
+  const colour = (ln: string) => {
+    if (ln.trim().startsWith("//")) return <span style={{ color: "#6a9955" }}>{ln}</span>;
+    return ln.split(/("[^"]*")/).map((part, i) => <span key={i} style={{ color: part.startsWith('"') ? "#ce9178" : /^\s*[a-z]+:/.test(part) ? "#9cdcfe" : "#d4d4d4" }}>{part}</span>);
+  };
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, #1c1c24 0%, #050505 70%)" }}>
+      <div style={{ position: "absolute", left: 40, right: 40, top: 560, borderRadius: 20, overflow: "hidden", background: "#1e1e1e", boxShadow: "0 30px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.1)", transform: `translateY(${(1 - rise) * 50}px)`, opacity: rise }}>
+        <div style={{ height: 64, background: "#2d2d2d", display: "flex", alignItems: "center", padding: "0 24px", gap: 12 }}>
+          {["#ff5f57", "#febc2e", "#28c840"].map((c) => <span key={c} style={{ width: 16, height: 16, borderRadius: 8, background: c }} />)}
+          <span style={{ marginLeft: 20, fontFamily: SANS, fontWeight: 600, fontSize: 28, color: "#ddd" }}>{code.file}{saved ? "" : " ●"}</span>
+          {saved ? <span style={{ marginLeft: "auto", fontFamily: SANS, fontWeight: 800, fontSize: 26, color: "#46d369" }}>saved</span> : null}
+        </div>
+        <div style={{ padding: "30px 30px 38px", fontFamily: MONO, fontSize: 38, lineHeight: 1.55, whiteSpace: "pre" }}>
+          {code.lines.map((ln, i) => {
+            const hot = i === code.line;
+            const body = hot ? ln.replace(`"${code.from}"`, `"${shown}${blink ? "|" : " "}"`) : ln;
+            return (
+              <div key={i} style={{ display: "flex", background: hot ? "rgba(229,9,20,0.18)" : "transparent", borderLeft: hot ? "6px solid #e50914" : "6px solid transparent", paddingLeft: 12 }}>
+                <span style={{ width: 52, color: "#5a5a5a", flexShrink: 0 }}>{i + 1}</span>
+                <span>{colour(body)}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </AbsoluteFill>
@@ -115,9 +188,13 @@ export const WebDemo: React.FC<WebDemoProps> = (p) => {
         return (
           <Sequence key={i} from={from} durationInFrames={len}>
             <Cut first={i === 0 || !!seg.cont}>
-              {seg.kind === "phone" ? <Phone seg={seg} src={p.phone} /> : seg.kind === "desk" ? <Desk seg={seg} src={p.desk} url={p.url} /> : <End end={p.end} handle={p.handle} dur={seg.dur} />}
+              {seg.kind === "phone" ? <Phone seg={seg} src={seg.src ?? p.phone} />
+                : seg.kind === "desk" ? <Desk seg={seg} src={p.desk} url={p.url} />
+                : seg.kind === "deskfull" ? <DeskFull seg={seg} src={p.desk} />
+                : seg.kind === "code" && p.code ? <Code seg={seg} code={p.code} />
+                : <End end={p.end} handle={p.handle} dur={seg.dur} />}
             </Cut>
-            <Caption title={seg.title} sub={seg.sub} dur={seg.dur} pos={seg.pos} />
+            <Caption title={seg.title} sub={seg.sub} dur={seg.dur} pos={seg.pos} y={seg.y} instant={i === 0} />
           </Sequence>
         );
       })}
@@ -130,7 +207,7 @@ export const WebDemo: React.FC<WebDemoProps> = (p) => {
 const Cut: React.FC<{ first: boolean; children: React.ReactNode }> = ({ first, children }) => {
   const f = useCurrentFrame();
   if (first) return <AbsoluteFill>{children}</AbsoluteFill>;
-  const s = interpolate(f, [0, 7], [1.06, 1], { ...cl, easing: Easing.out(Easing.cubic) });
+  const s = interpolate(f, [0, 7], [1.035, 1], { ...cl, easing: Easing.out(Easing.cubic) });
   const flash = interpolate(f, [0, 5], [0.35, 0], cl);
   return (
     <AbsoluteFill style={{ transform: `scale(${s})` }}>

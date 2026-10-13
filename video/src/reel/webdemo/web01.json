@@ -8,149 +8,114 @@
     {
       "kind": "phone",
       "src0": 0.0,
-      "dur": 4.5,
-      "title": "Your portfolio,\nNetflix-style",
-      "sub": "it opens with your name",
+      "dur": 3.6,
+      "title": "Free Netflix-style\nportfolio",
+      "sub": "the intro is your name",
       "pos": "top"
     },
     {
       "kind": "phone",
-      "src0": 4.5,
-      "dur": 2.7,
-      "title": "Visitors pick who they are",
-      "pos": "bottom",
+      "src0": 3.6,
+      "dur": 3.6,
+      "title": "Visitors pick\nwho they are",
+      "pos": "top",
       "cont": true
     },
     {
-      "kind": "desk",
-      "src0": 0.6,
-      "dur": 4.5,
-      "title": "Your work, as shows",
-      "sub": "hover for the details",
+      "kind": "deskfull",
+      "src0": 2.6,
+      "dur": 2.4,
+      "tag": "LAPTOP VIEW",
+      "title": "Cards open\non hover",
       "pos": "top",
       "cam": [
         {
           "t": 0,
           "s": 1,
-          "x": 0.28,
+          "x": 0.3,
           "y": 0.5
         },
         {
-          "t": 1.6,
+          "t": 1.0,
+          "s": 1.05,
+          "x": 0.33,
+          "y": 0.62
+        },
+        {
+          "t": 2.4,
+          "s": 1.05,
+          "x": 0.33,
+          "y": 0.62
+        }
+      ],
+      "clip": "web/01/close_2.mp4"
+    },
+    {
+      "kind": "deskfull",
+      "src0": 7.0,
+      "dur": 3.6,
+      "tag": "LAPTOP VIEW",
+      "title": "A numbered\nwatch list",
+      "pos": "top",
+      "cam": [
+        {
+          "t": 0,
           "s": 1,
-          "x": 0.62,
-          "y": 0.5
+          "x": 0.55,
+          "y": 0.32
+        },
+        {
+          "t": 0.6,
+          "s": 1,
+          "x": 0.6,
+          "y": 0.32
+        },
+        {
+          "t": 1.9,
+          "s": 1,
+          "x": 0.6,
+          "y": 0.32
         },
         {
           "t": 2.3,
           "s": 1,
-          "x": 0.42,
-          "y": 0.6
-        },
-        {
-          "t": 3.1,
-          "s": 1.25,
-          "x": 0.33,
-          "y": 0.63
-        },
-        {
-          "t": 4.5,
-          "s": 1.25,
-          "x": 0.33,
-          "y": 0.63
-        }
-      ]
-    },
-    {
-      "kind": "desk",
-      "src0": 5.1,
-      "dur": 5.7,
-      "title": "A numbered watch list",
-      "sub": "rows that scroll",
-      "pos": "top",
-      "cont": true,
-      "cam": [
-        {
-          "t": 0,
-          "s": 1.25,
-          "x": 0.33,
-          "y": 0.63
-        },
-        {
-          "t": 0.8,
-          "s": 1,
-          "x": 0.45,
-          "y": 0.5
-        },
-        {
-          "t": 2.4,
-          "s": 1.2,
-          "x": 0.6,
-          "y": 0.35
-        },
-        {
-          "t": 3.2,
-          "s": 1.2,
-          "x": 0.6,
-          "y": 0.35
-        },
-        {
-          "t": 3.9,
-          "s": 1.15,
-          "x": 0.85,
-          "y": 0.4
-        },
-        {
-          "t": 5.7,
-          "s": 1,
-          "x": 0.7,
-          "y": 0.42
-        }
-      ]
-    },
-    {
-      "kind": "desk",
-      "src0": 12.2,
-      "dur": 3.0,
-      "title": "Click: the full story",
-      "pos": "top",
-      "cam": [
-        {
-          "t": 0,
-          "s": 1.2,
           "x": 0.84,
           "y": 0.36
         },
         {
-          "t": 0.9,
-          "s": 1.2,
-          "x": 0.84,
+          "t": 3.6,
+          "s": 1,
+          "x": 0.8,
           "y": 0.36
-        },
-        {
-          "t": 1.45,
-          "s": 1,
-          "x": 0.46,
-          "y": 0.52
-        },
-        {
-          "t": 3.0,
-          "s": 1,
-          "x": 0.46,
-          "y": 0.52
         }
-      ]
+      ],
+      "clip": "web/01/close_3.mp4"
     },
     {
       "kind": "phone",
-      "src0": 7.6,
-      "dur": 3.6,
-      "title": "Works on phones too",
-      "pos": "bottom"
+      "src0": 11.8,
+      "dur": 2.4,
+      "title": "Tap: the\nfull story",
+      "pos": "top",
+      "y": 1330
+    },
+    {
+      "kind": "code",
+      "dur": 3.0,
+      "title": "Change one line...",
+      "pos": "top"
+    },
+    {
+      "kind": "phone",
+      "src": "web/01/intro_priya.mp4",
+      "src0": 0.0,
+      "dur": 3.0,
+      "title": "...it's yours",
+      "pos": "top"
     },
     {
       "kind": "end",
-      "dur": 3.4
+      "dur": 3.0
     }
   ],
   "end": {
@@ -158,8 +123,23 @@
     "lines": [
       "Free template",
       "HTML, CSS and JavaScript",
-      "no frameworks, no build step"
+      "made with an AI coding assistant"
     ],
-    "cta": "Code: link in the pinned comment"
+    "cta": "Code: link in bio"
+  },
+  "code": {
+    "file": "config.js",
+    "line": 2,
+    "from": "VAMSI KRISHNA",
+    "to": "PRIYA",
+    "lines": [
+      "// everything on the page lives here",
+      "window.PORTFOLIO = {",
+      "  name: \"VAMSI KRISHNA\",",
+      "  accent: \"#e50914\",",
+      "  profiles: [\"Recruiter\", \"Developer\"],",
+      "  rows: [ /* your projects */ ]",
+      "};"
+    ]
   }
 }
