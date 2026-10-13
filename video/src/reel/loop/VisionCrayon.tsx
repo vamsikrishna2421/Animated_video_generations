@@ -331,7 +331,7 @@ const CvFilters: React.FC<SP> = ({ cue }) => {
               print(o, im.fV, 195, 1190, 150, p, 0, { hard: true, border: 0 });
               label(o, "each looks for one thing,", 630, 1225, 46, INK, handF, p);
               label(o, "like this edge", 630, 1298, 64, COL.orange, caveat, p);
-              label(o, "a real one from this AI (learned, not drawn)", 630, 1352, 30, GREY, handF, seg(f, ce + 10, ce + 20));
+              label(o, "a real one: learned, not drawn", 630, 1356, 40, GREY, handF, seg(f, ce + 10, ce + 20));
             }
           }
         });
@@ -366,8 +366,8 @@ const CvLayers: React.FC<SP> = ({ cue }) => {
       <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.35} />
       <Sfx at={c3} src="audio/sfx_success.wav" vol={0.4} />
       <Sfx at={c4} src="audio/sfx_whoosh.wav" vol={0.35} />
-      <Sfx at={c5} src="reel/sfx_boom.wav" vol={0.7} />
-      <Sfx at={c5 + 3} src="audio/gag_boing.wav" vol={0.35} />
+      <Sfx at={c5} src="reel/sfx_boom.wav" vol={1.0} />
+      <Sfx at={c5 + 3} src="audio/gag_boing.wav" vol={0.45} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3200 + boil);
@@ -405,12 +405,12 @@ const CvLayers: React.FC<SP> = ({ cue }) => {
               const q = flip ? fade(f, c5, 5) : seg(f, c3, c3 + 8);
               label(c, flip ? "banana 99.99%" : "golden retriever 99.8%", 600, 510, flip ? 82 : 66, flip ? COL.red : "#15803d", caveat, q);
               if (flip) banana(c, 905, 452, 0.62, r, q);
-              else label(c, "(learned from 1.28 million labelled photos)", 600, 552, 30, GREY, handF, seg(f, c3 + 8, c3 + 16));
+              else label(c, "learned from 1.28M labelled photos", 600, 556, 40, GREY, handF, seg(f, c3 + 8, c3 + 16));
             } else label(c, "answer: ?", 600, 510, 66, GREY, caveat, p);
           }
           if (f >= c4) hand(c, "nudge the numbers a shade…", W / 2, 1335, 62, COL.yellow, seg(f, c4 + 2, c4 + 16), r, -0.02, "center");
         }
-        label(c, "(simplified)", 1000, 1290, 34, COL.pale, handF, seg(f, 6, 16), "right");
+        label(c, "(simplified)", 1000, 1292, 42, COL.pale, handF, seg(f, 6, 16), "right");
       }} />
     </>
   );
