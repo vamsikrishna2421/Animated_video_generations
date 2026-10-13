@@ -320,7 +320,7 @@ const CvFilters: React.FC<SP> = ({ cue }) => {
   return (
     <>
       <Sfx at={4} src="audio/sfx_whoosh.wav" vol={0.3} />
-      <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
+      <Sfx at={Math.round(c1 + (c2 - c1) * 0.4)} src="audio/sfx_pop.wav" vol={0.45} />
       <Sfx at={c2} src="audio/sfx_success.wav" vol={0.4} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
@@ -337,13 +337,14 @@ const CvFilters: React.FC<SP> = ({ cue }) => {
           stroke(o, rrectPts(wx, wy, cw, cw), COL.yellow, 9, r, { passes: 2, alpha: 0.95 });
           tag(o, "pattern-finder", wx + cw / 2, wy - 22, 38, COL.yellow, INK, -0.03, seg(f, 6, 14));
           hand(o, "tiny pattern-finders slide over it", W / 2, 1100, 60, COL.cream, seg(f, 8, 22), r, -0.02, "center");
-          if (f >= c1) {
-            const p = fade(f, c1, 8);
+          const ce = Math.round(c1 + (c2 - c1) * 0.4);   // "each looking for one thing"
+          if (f >= ce) {
+            const p = fade(f, ce, 8);
             if (card(o, 150, 1150, 780, 230, r, p)) {
               print(o, im.fV, 195, 1190, 150, p, 0, { hard: true, border: 0 });
               label(o, "each looks for one thing,", 630, 1225, 46, INK, handF, p);
               label(o, "like this edge", 630, 1298, 64, COL.orange, caveat, p);
-              label(o, "a real one from this AI (learned, not drawn)", 630, 1352, 30, GREY, handF, seg(f, c1 + 10, c1 + 20));
+              label(o, "a real one from this AI (learned, not drawn)", 630, 1352, 30, GREY, handF, seg(f, ce + 10, ce + 20));
             }
           }
         });
