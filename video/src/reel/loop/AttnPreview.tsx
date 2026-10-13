@@ -7,6 +7,7 @@ import { WORDS_SCENES } from "./WordsCrayon";
 import { PROFILE_SCENES } from "./ProfileCrayon";
 import { LAYA_SCENES } from "./LayaCrayon";
 import { ROBOT_SCENES } from "./RobotCheckCrayon";
+import { VISION_SCENES } from "./VisionCrayon";
 import CHEAP_PREVIEW from "./cheap_preview.json";
 
 // Dev-only: every EP27 scene with evenly spaced cues (no audio) for look checks.
@@ -119,6 +120,23 @@ export const RobotPreview: React.FC = () => (
       const Comp = ROBOT_SCENES[t] as unknown as React.FC<any>;
       const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
       const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 5);
+      return (
+        <Sequence key={t} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
+          <Comp s={s} cue={cue} line={() => s.lines[0]} />
+        </Sequence>
+      );
+    })}
+  </AbsoluteFill>
+);
+
+// Dev preview of the EP29 computer-vision scenes (cues at n/5 of each scene).
+const VORDER = ["cv_hook", "cv_pixels", "cv_filters", "cv_layers", "cv_quiz", "cv_why", "cv_close"] as const;
+export const VisionPreview: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    {VORDER.map((t, i) => {
+      const Comp = VISION_SCENES[t] as unknown as React.FC<any>;
+      const s = { id: t, data: { handle: "@ai_maastaaru" }, frames: ATTN_PREVIEW_SCENE, lines: [{ from: 0, frames: ATTN_PREVIEW_SCENE }] };
+      const cue = (n: number) => Math.round(ATTN_PREVIEW_SCENE * n / 6);
       return (
         <Sequence key={t} from={i * ATTN_PREVIEW_SCENE} durationInFrames={ATTN_PREVIEW_SCENE}>
           <Comp s={s} cue={cue} line={() => s.lines[0]} />

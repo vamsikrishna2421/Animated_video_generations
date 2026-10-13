@@ -1,0 +1,302 @@
+{
+ "id": "ep29v1",
+ "title": "How AI sees a photo",
+ "label": "EP 29",
+ "banner": "How AI sees a photo",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  1.15
+ ],
+ "musicLift": 2.3,
+ "musicPad": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "tempo": 1.2,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "cv_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Dog → banana",
+     "title": "A dog the AI calls a banana",
+     "notes": [
+      [
+       "A free photo AI (ResNet-50), run by us: banana, 99.99% sure",
+       0
+      ],
+      [
+       "Before we touched the photo: golden retriever, 99.8%",
+       1
+      ],
+      [
+       "Colours changed by 1 out of 255: same to your eye",
+       2
+      ],
+      [
+       "It only sees numbers, and we pushed the right ones",
+       3
+      ],
+      [
+       "Would ChatGPT fall for it? (at the end)",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "01_hook.wav",
+     "text": "This photo AI says this dog is a banana, ninety nine point nine nine percent sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed the right ones. [4] Would ChatGPT fall for it? Stay to the end to find out.",
+     "show": "This photo AI says this dog is a banana, 99.99% sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed the right ones. [4] Would ChatGPT fall for it? Stay to the end to find out.",
+     "tts": "This photo A.I. says this dog is a banana, ninety nine point nine nine percent sure. Before we touched it: golden retriever. We changed its colours by a shade you can't see. It only sees numbers, and we pushed the right ones. Would Chat G P T fall for it? Stay to the end to find out."
+    }
+   ]
+  },
+  {
+   "id": "pixels",
+   "type": "cv_pixels",
+   "tail": 0.3,
+   "drop_cue": 3,
+   "data": {
+    "yt": {
+     "chapter": "Pixels",
+     "title": "A photo is numbers",
+     "notes": [
+      [
+       "A photo is a grid of pixels",
+       0
+      ],
+      [
+       "Each pixel = 3 numbers (red, green, blue), 0 to 255",
+       1
+      ],
+      [
+       "This 224 × 224 photo: 150,528 numbers; a 12 MP phone photo: about 36 million",
+       2
+      ],
+      [
+       "Not one of them says 'dog'",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "02_pixels.wav",
+     "text": "A photo is a grid of pixels, [1] and each pixel is three numbers: red, green and blue, from zero to two hundred and fifty five. [2] This small photo is a hundred and fifty thousand numbers; a phone photo, tens of millions. [3] And not one of them says 'dog'.",
+     "show": "A photo is a grid of pixels, [1] and each pixel is three numbers: red, green and blue, from 0 to 255. [2] This small photo is 150,000 numbers; a phone photo, tens of millions. [3] And not one of them says 'dog'.",
+     "tts": "A photo is a grid of pixels, and each pixel is three numbers: red, green and blue, from zero to two hundred and fifty five. This small photo is a hundred and fifty thousand numbers; a phone photo, tens of millions. And not one of them says dog.",
+     "pauses": {
+      "3": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "id": "patterns",
+   "type": "cv_filters",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Patterns",
+     "title": "Pattern-finders (filters)",
+     "notes": [
+      [
+       "Tiny pattern-finders slide over the numbers, each looking for one thing (learned from 1.28 million labelled photos)",
+       1
+      ],
+      [
+       "Where one matches, that spot lights up (real responses, brightened)",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "03_patterns.wav",
+     "text": "So it hunts for patterns: [1] tiny pattern-finders slide over the numbers, each looking for one thing, like an edge. [2] Where one matches, that spot lights up.",
+     "show": "So it hunts for patterns: [1] tiny pattern-finders slide over the numbers, each looking for one thing, like an edge. [2] Where one matches, that spot lights up.",
+     "tts": "So it hunts for patterns: tiny pattern finders slide over the numbers, each looking for one thing, like an edge. Where one matches, that spot lights up."
+    }
+   ]
+  },
+  {
+   "id": "layers",
+   "type": "cv_layers",
+   "tail": 0.3,
+   "lift": true,
+   "drop_cue": 4,
+   "data": {
+    "yt": {
+     "chapter": "Layers",
+     "title": "Edges → parts → face → answer",
+     "notes": [
+      [
+       "Edges build parts (eyes, ears)",
+       0
+      ],
+      [
+       "Parts build a face",
+       1
+      ],
+      [
+       "Out comes an answer: golden retriever",
+       3
+      ],
+      [
+       "Nudge the numbers a shade: banana",
+       4
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "04_layers.wav",
+     "text": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes 'banana'.",
+     "show": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes 'banana'.",
+     "tts": "Layer by layer, edges build parts, like eyes and ears, parts build a face, and out comes an answer: golden retriever. Nudge the numbers a shade, and out comes banana.",
+     "pauses": {
+      "4": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "cv_quiz",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Random change: dog or banana?",
+     "notes": [
+      [
+       "Nudge just as many numbers, just as tiny, but randomly",
+       1
+      ],
+      [
+       "Still a dog: random nudges don't fool it (5 random tries, all dog)",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "05_quiz.wav",
+     "text": "Your turn: [1] nudge just as many numbers, just as tiny, but randomly. Dog or banana? <pause 2> [2] Still a dog: random nudges don't fool it.",
+     "show": "Your turn: [1] nudge just as many numbers, just as tiny, but randomly. Dog or banana? <pause 2> [2] Still a dog: random nudges don't fool it.",
+     "tts": "Your turn: nudge just as many numbers, just as tiny, but randomly. Dog, or banana?",
+     "file2": "05_quiz_answer.wav",
+     "tts2": "Still a dog, random nudges don't fool it.",
+     "pause": 2.0,
+     "gap": 0.1
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "cv_why",
+   "tail": 0.3,
+   "lift": true,
+   "drop_cue": 3,
+   "data": {
+    "yt": {
+     "chapter": "Why it worked",
+     "title": "Tiny pushes, all the same way",
+     "notes": [
+      [
+       "The AI is free to download, so we looked inside it",
+       1
+      ],
+      [
+       "122,204 of 150,528 numbers moved by just 1, toward 'banana'",
+       2
+      ],
+      [
+       "Every push aimed at 'banana', so they add up; random pushes point every way and cancel out",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "06_why.wav",
+     "text": "So why did ours work? [1] Anyone can download this AI, so we looked inside it for the way each number should move toward 'banana'. [2] About a hundred and twenty thousand numbers moved by just one. [3] Every push was aimed at 'banana', so they add up. Random pushes point every way and cancel out.",
+     "show": "So why did ours work? [1] Anyone can download this AI, so we looked inside it for the way each number should move toward 'banana'. [2] About 120,000 numbers moved by just 1. [3] Every push was aimed at 'banana', so they add up. Random pushes point every way and cancel out.",
+     "tts": "So why did ours work? Anyone can download this A.I., so we looked inside it, for the way each number should move toward banana. About a hundred and twenty thousand numbers moved by just one. Every push was aimed at banana, so they add up. Random pushes point every way, and cancel out.",
+     "pauses": {
+      "3": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "cv_close",
+   "tail": 1.2,
+   "outro": true,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Would ChatGPT fall for it?",
+     "title": "Probably not: aimed at one AI",
+     "notes": [
+      [
+       "Probably not: we aimed at this one AI; ChatGPT is closed",
+       1
+      ],
+      [
+       "4 other photo AIs on the banana file: still dog; saved as a JPEG: dog again",
+       1
+      ],
+      [
+       "99.99% sure, and still wrong; chatbots don't even show a number. Double-check what matters",
+       2
+      ],
+      [
+       "Next: how AI learns good manners (EP30)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "07_close.wav",
+     "text": "So, would ChatGPT fall for it? [1] Probably not: we aimed at this one AI, and ChatGPT is closed. Four other photo AIs still said dog, and a JPEG save broke the trick. [2] But ninety nine point nine nine percent sure, and still wrong. Chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it.",
+     "show": "So, would ChatGPT fall for it? [1] Probably not: we aimed at this one AI, and ChatGPT is closed. Four other photo AIs still said dog, and a JPEG save broke the trick. [2] But 99.99% sure, and still wrong. Chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it.",
+     "tts": "So, would Chat G P T fall for it? Probably not: we aimed at this one A.I., and Chat G P T is closed. Four other photo A.I.s still said dog, and a jay peg save broke the trick. But ninety nine point nine nine percent sure, and still wrong. Chatbots don't even show a number, so double check what matters. Next: how A.I. learns good manners. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}
