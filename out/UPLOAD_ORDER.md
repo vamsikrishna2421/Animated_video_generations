@@ -34,7 +34,7 @@ Already posted: `out/posted/`.
 | 027 | ep26 | Overfitting vs Underfitting | ready |
 | 028 | ep27 | Transformers Part 1 Attention | ready |
 | 029 | ep28 | Transformers Part 2 Inside a Transformer | ready |
-| 030 | ep29 | How AI Sees a Photo (Computer Vision) | rendering soon |
+| 030 | ep29 | How AI Sees a Photo (Computer Vision) | ready |
 | 031 | ep30 | RLHF: How AI Learns Good Manners | ready |
 | 032 | q03 | Quiz #3: Episodes 21–30 | ready |
 | 033 | ep31 | Fine-tuning Deep Dive: LoRA | ready |
