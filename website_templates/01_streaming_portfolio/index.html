@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="A streaming-style portfolio: name intro, profile picker and show rows.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 1. Intro: your name, then a rush of light -->
+  <section id="intro" aria-label="Intro">
+    <div class="wordmark" id="wordmark"></div>
+    <div class="streaks" id="streaks"></div>
+    <button class="sound-btn" id="soundBtn" type="button" aria-label="Replay intro with sound">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+      <span>Sound on</span>
+    </button>
+    <button class="skip-btn" id="skipBtn" type="button">Skip</button>
+  </section>
+
+  <!-- 2. Who's watching? -->
+  <section id="profiles" aria-label="Choose a profile">
+    <h1>Who's watching?</h1>
+    <ul class="profile-list" id="profileList"></ul>
+    <button class="manage" type="button">Manage profiles</button>
+  </section>
+
+  <!-- 3. The home page -->
+  <div id="app" hidden>
+    <header class="nav" id="nav">
+      <a class="logo" href="#" id="navLogo"></a>
+      <nav class="links" aria-label="Sections">
+        <a href="#" class="active">Home</a>
+        <a href="#row-1">Episodes</a>
+        <a href="#row-3">Specials</a>
+        <a href="#row-4">Behind the scenes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.4-2h-4.8a2.5 2.5 0 0 0 2.4 2zm7-6V11a7 7 0 0 0-5.5-6.8V3a1.5 1.5 0 0 0-3 0v1.2A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+        <span class="avatar" id="navAvatar"></span>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="kicker"><span class="kicker-logo" id="kickerLogo"></span><span id="heroKicker"></span></div>
+        <h2 class="hero-title" id="heroTitle"></h2>
+        <div class="meta" id="heroMeta"></div>
+        <p class="hero-text" id="heroText"></p>
+        <div class="buttons">
+          <a class="btn btn-play" id="heroPlay" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>Play
+          </a>
+          <button class="btn btn-more" id="heroMore" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 7v6h-2v-6h2zm0-4v2h-2V7h2z"/></svg>More info
+          </button>
+        </div>
+      </div>
+      <div class="rating" id="heroRating"></div>
+    </section>
+
+    <main class="rows" id="rows"></main>
+
+    <footer class="footer" id="contact">
+      <h3>Get in touch</h3>
+      <div class="socials" id="socials"></div>
+      <p class="fine">Template: HTML, CSS and JavaScript, no frameworks. Not affiliated with any streaming service.</p>
+    </footer>
+  </div>
+
+  <!-- More-info modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
+      <div class="modal-art" id="modalArt"><h3 id="modalTitle"></h3></div>
+      <div class="modal-body">
+        <div class="meta" id="modalMeta"></div>
+        <p id="modalText"></p>
+        <div class="tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
