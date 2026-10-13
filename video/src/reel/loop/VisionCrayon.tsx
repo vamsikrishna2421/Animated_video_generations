@@ -550,7 +550,7 @@ const CvClose: React.FC<SP> = ({ s, cue }) => {
         // [1] probably not: aimed at one AI, ChatGPT is closed, 4 others said dog, a JPEG save broke it
         group(c, 1 - fade(f, c2 - 4, 8), (o) => {
           hand(o, "would ChatGPT fall for it?", W / 2, 350, 70, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
-          stamp(o, "PROBABLY NOT", W / 2, 488, 92, "#15803d", fade(f, c1, 8), r, -0.04);
+          stamp(o, "PROBABLY NOT", W / 2, 488, 92, "#4ade80", fade(f, c1, 8), r, -0.04);
           if (f >= ca) {
             const p = seg(f, ca, ca + 10);
             print(o, im.banana, 120, 570, 104, p, -0.04, { border: 5 });
