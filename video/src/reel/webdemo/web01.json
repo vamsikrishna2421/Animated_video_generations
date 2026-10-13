@@ -5,16 +5,161 @@
   "url": "yourname.github.io",
   "handle": "@ai_maastaaru",
   "segs": [
-    { "kind": "phone", "src0": 0.0, "dur": 4.5, "title": "Your portfolio, Netflix-style", "sub": "it opens with your name", "pos": "top" },
-    { "kind": "phone", "src0": 4.5, "dur": 2.9, "title": "Visitors pick who they are", "pos": "bottom", "cont": true },
-    { "kind": "desk", "src0": 0.6, "dur": 4.5, "title": "Your work, as shows", "sub": "hover for the details", "pos": "top",
-      "cam": [{ "t": 0, "s": 1, "x": 0.5, "y": 0.5 }, { "t": 2.2, "s": 1, "x": 0.5, "y": 0.55 }, { "t": 3.1, "s": 1.6, "x": 0.36, "y": 0.62 }, { "t": 4.5, "s": 1.6, "x": 0.36, "y": 0.62 }] },
-    { "kind": "desk", "src0": 5.1, "dur": 5.3, "title": "A numbered watch list", "sub": "rows that scroll", "pos": "top", "cont": true,
-      "cam": [{ "t": 0, "s": 1.6, "x": 0.36, "y": 0.62 }, { "t": 0.8, "s": 1, "x": 0.5, "y": 0.5 }, { "t": 2.4, "s": 1.5, "x": 0.6, "y": 0.32 }, { "t": 3.2, "s": 1.5, "x": 0.6, "y": 0.32 }, { "t": 3.9, "s": 1.35, "x": 0.82, "y": 0.38 }, { "t": 5.3, "s": 1.25, "x": 0.7, "y": 0.38 }] },
-    { "kind": "desk", "src0": 12.2, "dur": 3.0, "title": "Click: the full story", "pos": "top",
-      "cam": [{ "t": 0, "s": 1.4, "x": 0.82, "y": 0.36 }, { "t": 0.9, "s": 1.4, "x": 0.85, "y": 0.36 }, { "t": 1.4, "s": 1.12, "x": 0.5, "y": 0.52 }, { "t": 3.0, "s": 1.12, "x": 0.5, "y": 0.52 }] },
-    { "kind": "phone", "src0": 7.6, "dur": 3.8, "title": "Works on phones too", "pos": "bottom" },
-    { "kind": "end", "dur": 3.4 }
+    {
+      "kind": "phone",
+      "src0": 0.0,
+      "dur": 4.5,
+      "title": "Your portfolio,\nNetflix-style",
+      "sub": "it opens with your name",
+      "pos": "top"
+    },
+    {
+      "kind": "phone",
+      "src0": 4.5,
+      "dur": 2.7,
+      "title": "Visitors pick who they are",
+      "pos": "bottom",
+      "cont": true
+    },
+    {
+      "kind": "desk",
+      "src0": 0.6,
+      "dur": 4.5,
+      "title": "Your work, as shows",
+      "sub": "hover for the details",
+      "pos": "top",
+      "cam": [
+        {
+          "t": 0,
+          "s": 1,
+          "x": 0.28,
+          "y": 0.5
+        },
+        {
+          "t": 1.6,
+          "s": 1,
+          "x": 0.62,
+          "y": 0.5
+        },
+        {
+          "t": 2.3,
+          "s": 1,
+          "x": 0.42,
+          "y": 0.6
+        },
+        {
+          "t": 3.1,
+          "s": 1.25,
+          "x": 0.33,
+          "y": 0.63
+        },
+        {
+          "t": 4.5,
+          "s": 1.25,
+          "x": 0.33,
+          "y": 0.63
+        }
+      ]
+    },
+    {
+      "kind": "desk",
+      "src0": 5.1,
+      "dur": 5.7,
+      "title": "A numbered watch list",
+      "sub": "rows that scroll",
+      "pos": "top",
+      "cont": true,
+      "cam": [
+        {
+          "t": 0,
+          "s": 1.25,
+          "x": 0.33,
+          "y": 0.63
+        },
+        {
+          "t": 0.8,
+          "s": 1,
+          "x": 0.45,
+          "y": 0.5
+        },
+        {
+          "t": 2.4,
+          "s": 1.2,
+          "x": 0.6,
+          "y": 0.35
+        },
+        {
+          "t": 3.2,
+          "s": 1.2,
+          "x": 0.6,
+          "y": 0.35
+        },
+        {
+          "t": 3.9,
+          "s": 1.15,
+          "x": 0.85,
+          "y": 0.4
+        },
+        {
+          "t": 5.7,
+          "s": 1,
+          "x": 0.7,
+          "y": 0.42
+        }
+      ]
+    },
+    {
+      "kind": "desk",
+      "src0": 12.2,
+      "dur": 3.0,
+      "title": "Click: the full story",
+      "pos": "top",
+      "cam": [
+        {
+          "t": 0,
+          "s": 1.2,
+          "x": 0.84,
+          "y": 0.36
+        },
+        {
+          "t": 0.9,
+          "s": 1.2,
+          "x": 0.84,
+          "y": 0.36
+        },
+        {
+          "t": 1.45,
+          "s": 1,
+          "x": 0.46,
+          "y": 0.52
+        },
+        {
+          "t": 3.0,
+          "s": 1,
+          "x": 0.46,
+          "y": 0.52
+        }
+      ]
+    },
+    {
+      "kind": "phone",
+      "src0": 7.6,
+      "dur": 3.6,
+      "title": "Works on phones too",
+      "pos": "bottom"
+    },
+    {
+      "kind": "end",
+      "dur": 3.4
+    }
   ],
-  "end": { "big": "YOUR NAME", "lines": ["Free template", "HTML, CSS and JavaScript", "no frameworks, no build step"], "cta": "Code: link in the pinned comment" }
+  "end": {
+    "big": "YOUR NAME",
+    "lines": [
+      "Free template",
+      "HTML, CSS and JavaScript",
+      "no frameworks, no build step"
+    ],
+    "cta": "Code: link in the pinned comment"
+  }
 }

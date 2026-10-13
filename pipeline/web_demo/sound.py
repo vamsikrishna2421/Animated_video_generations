@@ -99,6 +99,23 @@ def swell(dur):
     return ((nz + tone) * t ** 2.5).astype(np.float32)
 
 
+def rumble(dur):
+    """Low filtered noise plus a 41 Hz drone that swells under the intro zoom."""
+    n = int(dur * SR)
+    t = np.linspace(0, 1, n)
+    nz = onepole_lp(onepole_lp(rng.standard_normal(n).astype(np.float32), 180), 180) * 3.0
+    drone = np.sin(2 * np.pi * 41 * np.arange(n) / SR) * 0.6 + np.sin(2 * np.pi * 82 * np.arange(n) / SR) * 0.25
+    return ((nz + drone) * (t ** 1.6) * (1 - np.clip((t - 0.92) / 0.08, 0, 1))).astype(np.float32)
+
+
+def pluck(dur, f):
+    """A short bright pluck for mid-range presence on phone speakers."""
+    t = np.arange(int(dur * SR)) / SR
+    ph = 2 * np.pi * f * t
+    s = (2 * ((ph / (2 * np.pi)) % 1) - 1) * 0.5 + np.sin(ph) * 0.5
+    return (onepole_lp(s.astype(np.float32), 2600) * np.exp(-t * 9)).astype(np.float32)
+
+
 def click():
     t = np.arange(int(0.05 * SR)) / SR
     return (np.sin(2 * np.pi * 1900 * t) * np.exp(-t * 160) * 0.5 + highpass(rng.standard_normal(len(t)).astype(np.float32), 3000) * np.exp(-t * 300) * 0.25).astype(np.float32)
@@ -141,8 +158,10 @@ def main(out, cues_path):
     # intro sting
     place(sfx, swell(C["hit"]), 0.0, 0.8)
     place(sfx, boom(), C["hit"], 0.95)
-    place(sfx, shimmer(C["zoom"] - C["shimmer"] + 0.25), C["shimmer"], 1.1)
-    place(sfx, whoosh(1.15, True), C["zoom"], 0.8)
+    place(sfx, shimmer(C["zoom"] - C["shimmer"] + 0.25), C["shimmer"], 2.0)
+    place(sfx, rumble(C["land"] - C["hit"]), C["hit"], 0.7)
+    place(sfx, pad_chord(C["land"] - C["hit"] + 0.3, 73.42 * 2), C["hit"] + 0.05, 0.55)   # no thin gap after the hit
+    place(sfx, whoosh(1.15, True), C["zoom"], 1.15)
     place(sfx, impact(), C["land"], 0.6)
     # the bed
     bpm, beat = 100, 0.6
@@ -157,7 +176,9 @@ def main(out, cues_path):
         for b in range(8):                                      # eighth-note bass pulse
             tb = t + b * beat / 2
             if tb < t1:
-                place(mus, bass_note(beat / 2 * 0.9, r), tb, 0.55 if b % 2 == 0 else 0.35)
+                place(mus, bass_note(beat / 2 * 0.9, r), tb, 0.4 if b % 2 == 0 else 0.26)
+                arp = [r * 4, r * 4 * 1.189, r * 4 * 1.5, r * 8][b % 4]
+                place(mus, pluck(beat / 2, arp), tb, 0.32, pan=(-0.35 if b % 2 else 0.35))
         for b in range(4):
             tb = t + b * beat
             if tb < t1:
@@ -172,8 +193,8 @@ def main(out, cues_path):
     for c in C["clicks"]:
         place(sfx, click(), c, 0.6)
     place(sfx, boom(3.0, 80, 30), C["end"], 0.9)
-    place(sfx, shimmer(2.2), C["end"] + 0.1, 0.5)
-    place(sfx, pad_chord(total - C["end"] + 0.2, 73.42 * 2), C["end"] + 0.05, 0.5)
+    place(sfx, shimmer(2.2), C["end"] + 0.1, 0.8)
+    place(sfx, pad_chord(total - C["end"] + 0.2, 73.42 * 2), C["end"] + 0.05, 0.85)
     # fade the bed out just before the end card, then a short tail
     fade = np.ones(mus.shape[1], np.float32)
     a, b = int((C["end"] - 0.25) * SR), int(C["end"] * SR)
