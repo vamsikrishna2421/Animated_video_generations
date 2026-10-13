@@ -17,12 +17,12 @@ In this episode:
 
 Chapters:
 0:00 A dog the AI calls a banana
-0:19 A photo is numbers
-0:36 Pattern-finders (filters)
-0:46 Layers: edges, parts, an answer
-0:57 Your turn: random change, dog or banana?
-1:09 Why the aimed change worked
-1:28 Would ChatGPT fall for it?
+0:15 A photo is numbers
+0:31 Pattern-finders (filters)
+0:41 Layers: edges, parts, an answer
+0:53 Your turn: random change, dog or banana?
+1:04 Why the aimed change worked
+1:23 It only fooled this one AI
 
 How we tested (all free models, run by us): the photo is "Golden Retriever 88.JPG" by Mtlchung, CC0 (Wikimedia Commons), cropped to the 224 × 224 pixels the AI takes. The AI is ResNet-50 (microsoft/resnet-50, Apache-2.0, trained on ImageNet's 1.28 million labelled photos). The banana file comes from a targeted gradient attack (projected gradient descent, 80 steps) that may move each pixel value by at most 1 out of 255. Transfer check on the banana file: google/vit-base-patch16-224, microsoft/resnet-18, facebook/convnext-tiny-224 and microsoft/swin-tiny-patch4-window7-224 all say golden retriever. JPEG check: saved at quality 75 to 95, ResNet-50 says golden retriever again. The light-up maps are real first-layer responses, brightened so you can see them.
 Background: Goodfellow, Shlens & Szegedy (2014), "Explaining and Harnessing Adversarial Examples".
