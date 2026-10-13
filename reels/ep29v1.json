@@ -16,6 +16,7 @@
  "musicPad": true,
  "beatSnap": true,
  "hideTimerInHook": true,
+ "hideTimer": true,
  "tempo": 1.2,
  "parler_lang": "en",
  "scenes": [
@@ -41,12 +42,8 @@
        2
       ],
       [
-       "It only sees numbers, and we pushed the right ones",
+       "It only sees numbers, and we pushed them the right way",
        3
-      ],
-      [
-       "Would ChatGPT fall for it? (at the end)",
-       4
       ]
      ]
     }
@@ -56,9 +53,9 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "01_hook.wav",
-     "text": "This dog is a banana, says this photo AI, ninety nine point nine nine percent sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed the right ones. [4] Would ChatGPT fall for it? Stay to the end to find out.",
-     "show": "This dog is a banana, says this photo AI, 99.99% sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed the right ones. [4] Would ChatGPT fall for it? Stay to the end to find out.",
-     "tts": "This dog is a banana, says this photo A.I., ninety nine point nine nine percent sure. Before we touched it: golden retriever. We changed its colours by a shade you can't see. It only sees numbers, and we pushed the right ones. Would chat gee pee tee fall for it? Stay to the end to find out."
+     "text": "This dog is a banana, says this AI, ninety nine point nine nine percent sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed them the right way.",
+     "show": "This dog is a banana, says this AI, 99.99% sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed them the right way.",
+     "tts": "This dog is a banana, says this A.I., ninety nine point nine nine percent sure. Before we touched it: golden retriever. We changed its colours by a shade you can't see. It only sees numbers, and we pushed them the right way."
     }
    ]
   },
@@ -142,7 +139,8 @@
    "type": "cv_layers",
    "tail": 0.3,
    "lift": true,
-   "drop_cue": 4,
+   "drop_cue": 5,
+   "boost": 1.3,
    "data": {
     "yt": {
      "chapter": "Layers",
@@ -162,7 +160,7 @@
       ],
       [
        "Nudge the numbers a shade: banana",
-       4
+       5
       ]
      ]
     }
@@ -172,11 +170,11 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "04_layers.wav",
-     "text": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes 'banana'.",
-     "show": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes 'banana'.",
+     "text": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes [5] 'banana'.",
+     "show": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes [5] 'banana'.",
      "tts": "Layer by layer, edges build parts, like eyes and ears, parts build a face, and out comes an answer: golden retriever. Nudge the numbers a shade, and out comes banana.",
      "pauses": {
-      "4": 0.3
+      "5": 0.3
      }
     }
    ]
@@ -185,6 +183,11 @@
    "id": "quiz",
    "type": "cv_quiz",
    "tail": 0.3,
+   "duck": [
+    3,
+    2,
+    0.15
+   ],
    "data": {
     "yt": {
      "chapter": "Your turn",
@@ -206,8 +209,8 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "05_quiz.wav",
-     "text": "Your turn: [1] what if we nudge just as many numbers, just as tiny, but randomly? Dog or banana? <pause 2> [2] Still a dog: random nudges don't fool it.",
-     "show": "Your turn: [1] what if we nudge just as many numbers, just as tiny, but randomly? Dog or banana? <pause 2> [2] Still a dog: random nudges don't fool it.",
+     "text": "Your turn: [1] what if we nudge just as many numbers, just as tiny, but randomly? Dog or banana? [3] <pause 2> [2] Still a dog: random nudges don't fool it.",
+     "show": "Your turn: [1] what if we nudge just as many numbers, just as tiny, but randomly? Dog or banana? [3] <pause 2> [2] Still a dog: random nudges don't fool it.",
      "tts": "Your turn: what if we nudge just as many numbers, just as tiny, but randomly? Dog, or banana?",
      "file2": "05_quiz_answer.wav",
      "tts2": "Still a dog, random nudges don't fool it.",
@@ -222,6 +225,7 @@
    "tail": 0.3,
    "lift": true,
    "drop_cue": 3,
+   "boost": 1.3,
    "data": {
     "yt": {
      "chapter": "Why it worked",
@@ -264,15 +268,15 @@
    "lift": true,
    "data": {
     "yt": {
-     "chapter": "Would ChatGPT fall for it?",
-     "title": "Probably not: aimed at one AI",
+     "chapter": "Only this one AI was fooled",
+     "title": "Aimed at one AI; a JPEG save breaks it",
      "notes": [
       [
-       "Probably not: we aimed at this one AI; ChatGPT is closed",
-       1
+       "It only fooled this one AI (ResNet-50)",
+       0
       ],
       [
-       "4 other photo AIs on the banana file: still dog; saved as a JPEG: dog again",
+       "4 other AI models on the banana file: still dog; saved as a JPEG: dog again",
        1
       ],
       [
@@ -292,9 +296,9 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "07_close.wav",
-     "text": "So, would ChatGPT fall for it? [1] Probably not: we aimed at this one AI, and ChatGPT is closed. Four other photo AIs still said dog, and a JPEG save broke the trick. [2] But ninety nine point nine nine percent sure, and still wrong. Chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it.",
-     "show": "So, would ChatGPT fall for it? [1] Probably not: we aimed at this one AI, and ChatGPT is closed. Four other photo AIs still said dog, and a JPEG save broke the trick. [2] But 99.99% sure, and still wrong. Chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it.",
-     "tts": "So, would chat gee pee tee fall for it? Probably not: we aimed at this one A.I., and chat gee pee tee is closed. Four other photo A.I.s still said dog, and a jay peg save broke the trick. But ninety nine point nine nine percent sure, and still wrong. Chatbots don't even show a number, so double check what matters. Next: how A.I. learns good manners. Follow, so you don't miss it."
+     "text": "It only fooled this one AI: [1] four other AI models still said dog, and saving it as a JPEG broke the trick. [2] But ninety nine point nine nine percent sure, and still wrong. And chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it.",
+     "show": "It only fooled this one AI: [1] four other AI models still said dog, and saving it as a JPEG broke the trick. [2] But 99.99% sure, and still wrong. And chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it.",
+     "tts": "It only fooled this one A.I.: four other A.I. models still said dog, and saving it as a jay peg broke the trick. But ninety nine point nine nine percent sure, and still wrong. And chatbots don't even show a number, so double check what matters. Next: how A.I. learns good manners. Follow, so you don't miss it."
     }
    ]
   }

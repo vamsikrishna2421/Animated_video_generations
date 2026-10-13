@@ -151,8 +151,8 @@ const chip = (c: Ctx, text: string, x: number, y: number, w: number, p: number, 
 
 // Small "banana?" print pinned top-left: keeps the hook's question in view through the lesson.
 const pinBanana = (c: Ctx, img: HTMLImageElement | undefined, r: () => number) => {
-  print(c, img, 40, 298, 116, 1, -0.09, { border: 6 });
-  tag(c, "banana?", 98, 448, 30, COL.red, "#fff", -0.06, 1);
+  print(c, img, 34, 292, 140, 1, -0.09, { border: 7 });
+  tag(c, "banana?", 104, 470, 38, COL.red, "#fff", -0.06, 1);
   void r;
 };
 
@@ -171,7 +171,7 @@ const thumb = (c: Ctx, x: number, y: number, s: number, up: boolean, col: string
 
 // ---------- 1 HOOK ----------
 const CvHook: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   const im = usePhotos(["dog", "banana", "banana224"]);
   return (
     <>
@@ -180,7 +180,6 @@ const CvHook: React.FC<SP> = ({ cue }) => {
       <Sfx at={c1} src="audio/sfx_whoosh.wav" vol={0.5} />
       <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.45} />
       <Sfx at={c3} src="reel/sfx_boom.wav" vol={0.5} />
-      <Sfx at={c4} src="audio/sfx_whoosh.wav" vol={0.4} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
         const r = rng(2900 + boil);
@@ -204,7 +203,7 @@ const CvHook: React.FC<SP> = ({ cue }) => {
         stamp(c, "BANANA", bx + bw * 0.5, by + bw * 0.42, lerp(150, 100, m), COL.red, clamp(0.4 + f / 8), r, -0.14);
         banana(c, bx + bw - 40, by + 40, lerp(1.3, 0.9, m), r, clamp(0.5 + f / 10));
         tag(c, "AI: 99.99% sure", bx + bw / 2, by + bw + 78, lerp(72, 50, m), COL.yellow, INK, 0.02, 1);
-        if (m < 1) label(c, "ResNet-50 · a free photo AI · run by us", W / 2, 1210, 44, COL.pale, handF, clamp(seg(f, 3, 12) - m));
+        if (m < 1) label(c, "ResNet-50 · a free photo AI · run by us", W / 2, 1215, 52, COL.cream, handF, clamp(seg(f, 3, 12) - m));
         // c1: the untouched photo
         if (f >= c1 - 4) {
           const ax = lerp(-500, 50, m);
@@ -225,20 +224,8 @@ const CvHook: React.FC<SP> = ({ cue }) => {
         }
         if (f >= c3) {
           c.save(); c.globalAlpha = fade(f, c3, 6) * 0.9; c.fillStyle = COL.deep; c.fillRect(0, 1040, W, 300); c.restore();
-          group(c, 1 - fade(f, c4 - 2, 6), (o) => {
-            hand(o, "it only sees numbers,", W / 2, 1150, 70, COL.yellow, seg(f, c3 + 4, c3 + 18), r, -0.02, "center");
-            hand(o, "and we pushed the right ones", W / 2, 1240, 60, COL.cream, seg(f, c3 + 22, c3 + 38), r, -0.02, "center");
-          });
-        }
-        // c4: the open loop, as a sticky note
-        if (f >= c4) {
-          const p = easeOut(seg(f, c4, c4 + 10));
-          c.save(); c.translate(W / 2, 1185); c.rotate(-0.035); c.scale(p, p);
-          c.fillStyle = "rgba(4,8,40,0.35)"; c.fillRect(-330 + 10, -95 + 12, 660, 190);
-          c.fillStyle = COL.yellow; c.fillRect(-330, -95, 660, 190);
-          c.font = caveat(66); c.textAlign = "center"; c.fillStyle = INK; c.fillText("would ChatGPT fall for it?", 0, -8);
-          c.font = handF(46); c.fillStyle = "#7c2d12"; c.fillText("→ at the end", 0, 60);
-          c.restore();
+          hand(c, "it only sees numbers,", W / 2, 1150, 70, COL.yellow, seg(f, c3 + 4, c3 + 18), r, -0.02, "center");
+          hand(c, "and we pushed them the right way", W / 2, 1240, 60, COL.cream, seg(f, c3 + 22, c3 + 38), r, -0.02, "center");
         }
       }} />
     </>
@@ -369,7 +356,7 @@ const CvFilters: React.FC<SP> = ({ cue }) => {
 
 // ---------- 4 LAYERS ----------
 const CvLayers: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4), c5 = cue(5);
   const at = [0, Math.round(c1 * 0.45), c1];
   const im = usePhotos(["dog", "banana", "fV", "fH"]);
   return (
@@ -378,8 +365,9 @@ const CvLayers: React.FC<SP> = ({ cue }) => {
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.35} />
       <Sfx at={c3} src="audio/sfx_success.wav" vol={0.4} />
-      <Sfx at={c4} src="reel/sfx_boom.wav" vol={0.55} />
-      <Sfx at={c4 + 3} src="audio/gag_boing.wav" vol={0.3} />
+      <Sfx at={c4} src="audio/sfx_whoosh.wav" vol={0.35} />
+      <Sfx at={c5} src="reel/sfx_boom.wav" vol={0.7} />
+      <Sfx at={c5 + 3} src="audio/gag_boing.wav" vol={0.35} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3200 + boil);
@@ -409,17 +397,18 @@ const CvLayers: React.FC<SP> = ({ cue }) => {
         });
         // the answer, on top
         if (f >= c2) {
-          const p = seg(f, c2, c2 + 8), flip = f >= c4;
+          const p = seg(f, c2, c2 + 8), flip = f >= c5;
           arrow(c, [90, 680], [90, 470], -30, COL.yellow, 7, p, r);
           if (card(c, 120, 400, 840, 170, r, p, flip ? "#ffe4e6" : "#e8f5e1")) {
             print(c, flip ? im.banana : im.dog, 150, 418, 134, p, -0.03, { border: 5 });
             if (f >= c3) {
-              const q = flip ? fade(f, c4, 6) : seg(f, c3, c3 + 8);
+              const q = flip ? fade(f, c5, 5) : seg(f, c3, c3 + 8);
               label(c, flip ? "banana 99.99%" : "golden retriever 99.8%", 600, 510, flip ? 82 : 66, flip ? COL.red : "#15803d", caveat, q);
               if (flip) banana(c, 905, 452, 0.62, r, q);
+              else label(c, "(learned from 1.28 million labelled photos)", 600, 552, 30, GREY, handF, seg(f, c3 + 8, c3 + 16));
             } else label(c, "answer: ?", 600, 510, 66, GREY, caveat, p);
           }
-          if (flip) hand(c, "nudge the numbers a shade…", W / 2, 1335, 62, COL.yellow, seg(f, c4 + 4, c4 + 18), r, -0.02, "center");
+          if (f >= c4) hand(c, "nudge the numbers a shade…", W / 2, 1335, 62, COL.yellow, seg(f, c4 + 2, c4 + 16), r, -0.02, "center");
         }
         label(c, "(simplified)", 1000, 1290, 34, COL.pale, handF, seg(f, 6, 16), "right");
       }} />
@@ -492,7 +481,7 @@ const CvWhy: React.FC<SP> = ({ cue }) => {
               label(c, String(moved >= 1 ? ROW_AFTER[i] : v), x, 660, 70, col, caveat, q);
             });
             label(c, "which way for 'banana'?", W / 2, 722, 44, INK, handF, seg(f, c1 + 14, c1 + 24) * (1 - seg(f, c2, c2 + 4)));
-            label(c, "122,204 numbers moved by just 1", W / 2, 722, 48, COL.red, caveat, seg(f, c2 + 4, c2 + 12));
+            label(c, "122,204 numbers moved by just 1", W / 2, 726, 58, COL.red, caveat, seg(f, c2 + 4, c2 + 12));
           }
         }
         // c3: aimed pushes add up; random ones cancel
@@ -520,62 +509,48 @@ const CvWhy: React.FC<SP> = ({ cue }) => {
 
 // ---------- 7 CLOSE ----------
 const OTHERS = ["ViT", "ResNet-18", "ConvNeXt", "Swin"];
-const lock = (c: Ctx, x: number, y: number, s: number, r: () => number, p: number) => {
-  if (p <= 0) return;
-  const k = easeOut(p) * s;
-  c.save(); c.translate(x, y); c.scale(k, k);
-  c.lineWidth = 12; c.strokeStyle = "#cbd5e1"; c.beginPath(); c.arc(0, -22, 26, Math.PI, 0); c.stroke();
-  c.fillStyle = COL.yellow; rrect(c, -40, -22, 80, 62, 10); c.fill();
-  c.fillStyle = COL.ink; c.beginPath(); c.arc(0, 4, 8, 0, 7); c.fill(); c.fillRect(-3, 6, 6, 18);
-  c.restore();
-  void r;
-};
 const CvClose: React.FC<SP> = ({ s, cue }) => {
   const handle: string = s.data.handle ?? "@ai_maastaaru";
   const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
-  const span = c2 - c1, ca = Math.round(c1 + span * 0.14), cm = Math.round(c1 + span * 0.44), cj = Math.round(c1 + span * 0.76);   // aimed/closed, models, JPEG
+  const cj = Math.round(c1 + (c2 - c1) * 0.55);   // "saving it as a JPEG broke the trick"
   const im = usePhotos(["banana"]);
   return (
     <>
-      <Sfx at={c1} src="reel/sfx_boom.wav" vol={0.45} />
-      <Sfx at={ca} src="audio/sfx_pop.wav" vol={0.35} />
-      {OTHERS.map((_, i) => <Sfx key={i} at={cm + i * 4} src="audio/sfx_pop.wav" vol={0.28} />)}
+      <Sfx at={4} src="audio/sfx_pop.wav" vol={0.35} />
+      {OTHERS.map((_, i) => <Sfx key={i} at={c1 + i * 4} src="audio/sfx_pop.wav" vol={0.28} />)}
       <Sfx at={cj} src="audio/sfx_pop.wav" vol={0.4} />
-      <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.4} />
+      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.5} />
       <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.4} />
       <Sfx at={c4} src="audio/sfx_success.wav" vol={0.3} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3700 + boil);
-        // [1] probably not: aimed at one AI, ChatGPT is closed, 4 others said dog, a JPEG save broke it
+        // [0] it only fooled this one AI; [1] four other AI models still said dog; a JPEG save broke it
         group(c, 1 - fade(f, c2 - 4, 8), (o) => {
-          hand(o, "would ChatGPT fall for it?", W / 2, 350, 70, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
-          stamp(o, "PROBABLY NOT", W / 2, 488, 92, "#4ade80", fade(f, c1, 8), r, -0.04);
-          if (f >= ca) {
-            const p = seg(f, ca, ca + 10);
-            print(o, im.banana, 120, 570, 104, p, -0.04, { border: 5 });
-            label(o, "aimed at this one AI", 250, 640, 46, COL.cream, caveat, p, "left");
-            lock(o, 690, 625, 0.8, r, seg(f, ca + 6, ca + 14));
-            label(o, "ChatGPT: closed", 740, 640, 46, COL.cream, caveat, seg(f, ca + 8, ca + 16), "left");
+          hand(o, "it only fooled this one AI", W / 2, 350, 72, COL.yellow, seg(f, 0, 12), r, -0.02, "center");
+          if (card(o, 110, 400, 860, 220, r, seg(f, 4, 12), "#ffe4e6")) {
+            print(o, im.banana, 140, 420, 180, seg(f, 4, 12), -0.03, { border: 6 });
+            label(o, "ResNet-50", 600, 485, 46, GREY, handF, seg(f, 6, 14));
+            label(o, "banana 99.99%", 600, 565, 72, COL.red, caveat, seg(f, 8, 16));
           }
           OTHERS.forEach((name, i) => {
-            const p = seg(f, cm + i * 4, cm + i * 4 + 10), x = 110 + (i % 2) * 450, y = 720 + Math.floor(i / 2) * 165;
+            const p = seg(f, c1 + i * 4, c1 + i * 4 + 10), x = 110 + (i % 2) * 450, y = 670 + Math.floor(i / 2) * 165;
             if (!card(o, x, y, 410, 145, r, p)) return;
             print(o, im.banana, x + 16, y + 16, 112, p, -0.02, { border: 4 });
             label(o, name, x + 268, y + 58, 40, GREY, handF, p);
             label(o, "dog ✓", x + 268, y + 118, 58, "#15803d", caveat, p);
           });
-          label(o, "4 other photo AIs, same banana file", W / 2, 1090, 40, COL.cream, handF, seg(f, cm + 18, cm + 28));
-          tag(o, "saved as a JPEG → dog again", W / 2, 1180, 50, COL.cream, INK, -0.02, seg(f, cj, cj + 10));
+          label(o, "4 other AI models, same banana file", W / 2, 1040, 44, COL.cream, handF, seg(f, c1 + 18, c1 + 28));
+          tag(o, "saved as a JPEG → dog again", W / 2, 1135, 54, COL.cream, INK, -0.02, seg(f, cj, cj + 10));
         });
-        // [2] sure isn't right; chatbots show no number at all
+        // [2] sure isn't right; chatbots don't even show a number
         if (f >= c2 - 4) {
           group(c, fade(f, c2 - 4, 8) * (1 - fade(f, c3 - 4, 8)), (o) => {
             print(o, im.banana, 340, 380, 400, 1, 0.02);
             tag(o, "banana 99.99%", W / 2, 870, 56, COL.yellow, INK, 0.02, 1);
-            stamp(o, "SURE ≠ RIGHT", W / 2, 640, 104, COL.red, fade(f, c2 + 4, 8), r, -0.06);
-            hand(o, "chatbots don't even show a number", W / 2, 1010, 58, COL.cream, seg(f, c2 + 16, c2 + 30), r, -0.02, "center");
-            hand(o, "double-check what matters", W / 2, 1110, 70, COL.yellow, seg(f, c2 + 34, c2 + 50), r, -0.02, "center");
+            stamp(o, "SURE ≠ RIGHT", W / 2, 640, 104, COL.red, fade(f, c2 + 2, 8), r, -0.06);
+            hand(o, "chatbots don't even show a number", W / 2, 1010, 58, COL.cream, seg(f, c2 + 30, c2 + 44), r, -0.02, "center");
+            hand(o, "double-check what matters", W / 2, 1110, 70, COL.yellow, seg(f, c2 + 50, c2 + 66), r, -0.02, "center");
           });
         }
         if (f >= c3 - 4) {

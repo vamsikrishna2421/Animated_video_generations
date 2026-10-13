@@ -11,9 +11,9 @@ Episode 29 of AI From Scratch: how AI sees a photo (computer vision)
 - Your turn, answered: nudge just as many numbers, just as tiny, but randomly, and it still says dog (5 tries out of 5)
 - Why ours worked: the AI is free to download, so we looked inside it and moved 122,204 of the 150,528 numbers by exactly 1, each one toward "banana". Pushes that all aim the same way add up; random ones cancel out
 
-Would ChatGPT fall for it? Probably not: we aimed at this one AI, and ChatGPT is closed. Four other free photo AIs still said dog, and saving the photo as a JPEG broke the trick. But "99.99% sure" was still wrong, and chatbots don't show a number at all. Double-check what matters.
+It only fooled this one AI: four other free AI models still said dog, and saving the photo as a JPEG broke the trick. (We couldn't aim it at ChatGPT: it's closed, so nobody outside can look inside it.) But "99.99% sure" was still wrong, and chatbots don't even show a number. Double-check what matters.
 
-What do you double-check when an AI reads a photo for you? Comment below.
+Tried the banana photo in ChatGPT or Google Lens? Tell us what it said.
 
 Next: how AI learns good manners (RLHF).
 Follow @ai_maastaaru for the full series.

@@ -16,6 +16,7 @@
  "musicPad": true,
  "beatSnap": true,
  "hideTimerInHook": true,
+ "hideTimer": true,
  "tempo": 1.1,
  "parler_lang": "te",
  "captionMode": "phrase",
@@ -43,12 +44,8 @@
        2
       ],
       [
-       "It only sees numbers, and we pushed the right ones",
+       "It only sees numbers, and we pushed them the right way",
        3
-      ],
-      [
-       "Would ChatGPT fall for it? (at the end)",
-       4
       ]
      ]
     }
@@ -58,8 +55,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "01_hook.wav",
-     "text": "ఈ కుక్క ఒక అరటిపండు అంటోంది ఈ ఫోటో ఎ ఐ, దాదాపు వంద శాతం ష్యూర్ గా. [1] మేము ఫోటోని ముట్టుకోక ముందు, అది గోల్డెన్ రిట్రీవర్ అంది. [2] మీ కంటికి తెలియనంత కొంచెం, రంగులు మార్చాం. [3] అది కేవలం నంబర్లే చూస్తుంది, మేము సరైన నంబర్లని నెట్టాం. [4] మరి చాట్ జి పి టి కూడా మోసపోతుందా, చివరి వరకు చూసి తెలుసుకోండి.",
-     "show": "This dog is a banana, says this photo AI, 99.99% sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed the right ones. [4] Would ChatGPT fall for it? Stay to the end to find out."
+     "text": "ఈ కుక్క ఒక అరటిపండు అంటోంది ఈ ఎ ఐ, దాదాపు వంద శాతం ష్యూర్ గా. [1] మేము ఫోటోని ముట్టుకోక ముందు, అది గోల్డెన్ రిట్రీవర్ అంది. [2] మీ కంటికి తెలియనంత కొంచెం, రంగులు మార్చాం. [3] అది కేవలం నంబర్లే చూస్తుంది, మేము వాటిని సరైన దిశలో నెట్టాం.",
+     "show": "This dog is a banana, says this AI, 99.99% sure. [1] Before we touched it: golden retriever. [2] We changed its colours by a shade you can't see. [3] It only sees numbers, and we pushed them the right way."
     }
    ]
   },
@@ -141,7 +138,8 @@
    "type": "cv_layers",
    "tail": 0.3,
    "lift": true,
-   "drop_cue": 4,
+   "drop_cue": 5,
+   "boost": 1.3,
    "data": {
     "yt": {
      "chapter": "Layers",
@@ -161,7 +159,7 @@
       ],
       [
        "Nudge the numbers a shade: banana",
-       4
+       5
       ]
      ]
     }
@@ -171,10 +169,10 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "04_layers.wav",
-     "text": "లేయర్ తర్వాత లేయర్, ఎడ్జెస్ కలిసి కళ్ళు, చెవులు లాంటి భాగాలు అవుతాయి. [1] ఆ భాగాలు కలిసి ముఖం అవుతుంది. [2] చివరికి ఒక సమాధానం వస్తుంది: [3] గోల్డెన్ రిట్రీవర్. [4] నంబర్లని కొంచెం నెడితే, అరటిపండు వస్తుంది.",
-     "show": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes 'banana'.",
+     "text": "లేయర్ తర్వాత లేయర్, ఎడ్జెస్ కలిసి కళ్ళు, చెవులు లాంటి భాగాలు అవుతాయి. [1] ఆ భాగాలు కలిసి ముఖం అవుతుంది. [2] చివరికి ఒక సమాధానం వస్తుంది: [3] గోల్డెన్ రిట్రీవర్. [4] నంబర్లని కొంచెం నెడితే, [5] అరటిపండు వస్తుంది.",
+     "show": "Layer by layer, edges build parts like eyes and ears, [1] parts build a face, [2] and out comes an answer: [3] golden retriever. [4] Nudge the numbers a shade, and out comes [5] 'banana'.",
      "pauses": {
-      "4": 0.3
+      "5": 0.3
      }
     }
    ]
@@ -183,6 +181,11 @@
    "id": "quiz",
    "type": "cv_quiz",
    "tail": 0.3,
+   "duck": [
+    3,
+    2,
+    0.15
+   ],
    "data": {
     "yt": {
      "chapter": "Your turn",
@@ -204,8 +207,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "05_quiz.wav",
-     "text": "ఇప్పుడు మీ వంతు: [1] అన్ని నంబర్లనే, అంతే కొంచెం, కానీ రాండమ్ గా నెడితే? కుక్కా, అరటిపండా? <pause 2> [2] ఇంకా కుక్కే, రాండమ్ గా నెడితే అది మోసపోదు.",
-     "show": "Your turn: [1] what if we nudge just as many numbers, just as tiny, but randomly? Dog or banana? <pause 2> [2] Still a dog: random nudges don't fool it.",
+     "text": "ఇప్పుడు మీ వంతు: [1] అన్ని నంబర్లనే, అంతే కొంచెం, కానీ రాండమ్ గా నెడితే? కుక్కా, అరటిపండా? [3] <pause 2> [2] ఇంకా కుక్కే, రాండమ్ గా నెడితే అది మోసపోదు.",
+     "show": "Your turn: [1] what if we nudge just as many numbers, just as tiny, but randomly? Dog or banana? [3] <pause 2> [2] Still a dog: random nudges don't fool it.",
      "tts": "ఇప్పుడు మీ వంతు: అన్ని నంబర్లనే, అంతే కొంచెం, కానీ రాండమ్ గా నెడితే? కుక్కా, అరటిపండా?",
      "file2": "05_quiz_answer.wav",
      "tts2": "ఇంకా కుక్కే, రాండమ్ గా నెడితే అది మోసపోదు.",
@@ -220,6 +223,7 @@
    "tail": 0.3,
    "lift": true,
    "drop_cue": 3,
+   "boost": 1.3,
    "data": {
     "yt": {
      "chapter": "Why it worked",
@@ -261,15 +265,15 @@
    "lift": true,
    "data": {
     "yt": {
-     "chapter": "Would ChatGPT fall for it?",
-     "title": "Probably not: aimed at one AI",
+     "chapter": "Only this one AI was fooled",
+     "title": "Aimed at one AI; a JPEG save breaks it",
      "notes": [
       [
-       "Probably not: we aimed at this one AI; ChatGPT is closed",
-       1
+       "It only fooled this one AI (ResNet-50)",
+       0
       ],
       [
-       "4 other photo AIs on the banana file: still dog; saved as a JPEG: dog again",
+       "4 other AI models on the banana file: still dog; saved as a JPEG: dog again",
        1
       ],
       [
@@ -289,8 +293,8 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "07_close.wav",
-     "text": "మరి చాట్ జి పి టి మోసపోతుందా? [1] బహుశా లేదు: మేము గురి పెట్టింది ఈ ఒక్క ఎ ఐ కే, చాట్ జి పి టి క్లోజ్డ్. ఇంకో నాలుగు ఫోటో ఎ ఐ లు కుక్క అనే చెప్పాయి, జె పెగ్ గా సేవ్ చేస్తే ట్రిక్ పని చేయలేదు. [2] కానీ దాదాపు వంద శాతం ష్యూర్, అయినా తప్పు. చాట్ బాట్లు అసలు నంబరే చూపించవు, అందుకే ముఖ్యమైనవి మీరే చెక్ చేసుకోండి. [3] నెక్స్ట్: ఎ ఐ మంచి పద్ధతులు ఎలా నేర్చుకుంటుంది. [4] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
-     "show": "So, would ChatGPT fall for it? [1] Probably not: we aimed at this one AI, and ChatGPT is closed. Four other photo AIs still said dog, and a JPEG save broke the trick. [2] But 99.99% sure, and still wrong. Chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it."
+     "text": "ఇది ఈ ఒక్క ఎ ఐ నే మోసం చేసింది. [1] ఇంకో నాలుగు ఎ ఐ మోడల్స్ కుక్క అనే చెప్పాయి, ఫోటోని జె పెగ్ గా సేవ్ చేస్తే ట్రిక్ పని చేయలేదు. [2] కానీ దాదాపు వంద శాతం ష్యూర్, అయినా తప్పు. చాట్ బాట్లు అసలు నంబరే చూపించవు, అందుకే ముఖ్యమైనవి మీరే చెక్ చేసుకోండి. [3] నెక్స్ట్: ఎ ఐ మంచి పద్ధతులు ఎలా నేర్చుకుంటుంది. [4] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "show": "It only fooled this one AI: [1] four other AI models still said dog, and saving it as a JPEG broke the trick. [2] But 99.99% sure, and still wrong. And chatbots don't even show a number, so double-check what matters. [3] Next: how AI learns good manners. [4] Follow, so you don't miss it."
     }
    ]
   }

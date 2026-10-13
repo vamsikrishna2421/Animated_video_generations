@@ -5,7 +5,7 @@ UPLOAD: 030 (YouTube, two uploads; 16:9 regular videos, not Shorts)
 This AI Is 99.99% Sure This Dog Is a Banana: How AI Really Sees a Photo | AI From Scratch Ep 29
 
 === DESCRIPTION ===
-A free photo AI looked at a golden retriever and said "golden retriever, 99.8%". We changed the photo's colours by a shade you can't see, and now it says "banana, 99.99% sure". Here is how AI actually sees a photo (computer vision), why that trick worked, and whether ChatGPT would fall for it. We ran every test ourselves.
+A free photo AI looked at a golden retriever and said "golden retriever, 99.8%". We changed the photo's colours by a shade you can't see, and now it says "banana, 99.99% sure". Here is how AI actually sees a photo (computer vision), why that trick worked, and why it fooled only that one AI. We ran every test ourselves.
 
 In this episode:
 - Pixels: a photo is a grid of pixels, and each pixel is 3 numbers (red, green, blue, from 0 to 255). Our small photo is 150,528 numbers; a 12 MP phone photo is about 36 million. Not one of them says "dog"
@@ -13,7 +13,7 @@ In this episode:
 - Layers: edges build parts (eyes, ears), parts build a face, and out comes an answer: "golden retriever"
 - Your turn: nudge just as many numbers, just as tiny, but randomly. Dog or banana? (Still dog, 5 tries out of 5)
 - Why ours worked: the AI is free to download, so we looked inside it and moved 122,204 of its 150,528 input numbers by exactly 1, each toward "banana". Pushes that all aim the same way add up; random ones cancel out
-- Would ChatGPT fall for it? Probably not: we aimed at this one AI, and ChatGPT is closed. Four other free photo AIs still said dog, and saving the photo as a JPEG broke the trick. But 99.99% sure was still wrong, and chatbots don't even show a number, so double-check what matters
+- It only fooled this one AI: four other free AI models still said dog, and saving the photo as a JPEG broke the trick (we couldn't aim it at ChatGPT, which is closed). But 99.99% sure was still wrong, and chatbots don't even show a number, so double-check what matters
 
 Chapters:
 0:00 A dog the AI calls a banana
@@ -41,7 +41,7 @@ We ran all of it ourselves on one free photo: ResNet-50 said "golden retriever 9
 Ee AI ki Kukka = Banana (99.99% Sure)! AI Photo ni Ela Chustundi? Computer Vision in Telugu | AI From Scratch Ep 29
 
 === DESCRIPTION ===
-Oka free photo AI golden retriever photo ni chusi "golden retriever, 99.8%" ani cheppindi. Mee kantiki teliyananta konchem rangulu marchaam, ippudu adi "banana, 99.99% sure" antondi! AI photo ni asalu ela chustundi (computer vision), ee trick enduku pani chesindi, ChatGPT kuda mosapotundaa: anni meme test chesam.
+Oka free photo AI golden retriever photo ni chusi "golden retriever, 99.8%" ani cheppindi. Mee kantiki teliyananta konchem rangulu marchaam, ippudu adi "banana, 99.99% sure" antondi! AI photo ni asalu ela chustundi (computer vision), ee trick enduku pani chesindi, inka adi okka AI ne enduku mosam chesindi: anni meme test chesam.
 
 Ee episode lo:
 - Pixels: photo ante pixels grid; prathi pixel 3 numbers (red, green, blue, 0 nunchi 255). Maa chinna photo lo 150,528 numbers; 12 MP phone photo lo daadaapu 3.6 kotla numbers. Vaatilo okkati kuda "kukka" ani cheppadu
@@ -49,7 +49,7 @@ Ee episode lo:
 - Layers: edges kalisi kallu, chevulu; avi kalisi mukham; chivariki answer: "golden retriever"
 - Mee vantu: anni numbers ni ante konchem, kaani random ga nedithe? (Inka kukke, 5 ki 5 saarlu)
 - Maadi enduku pani chesindi: ee AI ni evaraina download cheyochu, anduke daani lopaliki chusi 122,204 numbers ni okkokkati 1 matrame "banana" vaipu marchaam. Anni oke vaipu guri pedithe kalisi peddavi avutayi; random pushes cancel aipotayi
-- ChatGPT mosapotundaa? Bahusha ledu: memu guri pettindi ee okka AI ke, ChatGPT closed. Inko 4 free photo AIs kukka ane cheppayi; JPEG ga save chesthe trick pani cheyaledu. Kaani 99.99% sure ayina tappu, chatbots number e chupinchavu: mukhyamainavi meere check chesukondi
+- Idi ee okka AI ni matrame mosam chesindi: inko 4 free AI models kukka ane cheppayi; JPEG ga save chesthe trick pani cheyaledu (ChatGPT closed, daaniki guri pettalem). Kaani 99.99% sure ayina tappu, chatbots number e chupinchavu: mukhyamainavi meere check chesukondi
 
 Chapters:
 (TE chapters below are filled from the Telugu timeline)
