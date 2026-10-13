@@ -197,6 +197,13 @@ def main(out, cues_path):
             if tb < t1:
                 place(mus, kick(), tb, 0.75 if b % 2 == 0 else 0.45)
                 place(mus, hat(), tb + beat / 2, 0.22, pan=0.3)
+        if "lift" in C and C["lift"][0] <= t < C["lift"][1]:
+            for b in range(16):
+                tb = t + b * beat / 4
+                if tb < min(t1, C["lift"][1]):
+                    place(mus, hat(), tb, 0.16 if b % 2 else 0.24, pan=(-0.4 if b % 4 == 1 else 0.4))
+                    if b % 2 == 0:
+                        place(mus, pluck(beat / 4, [r * 8, r * 8 * 1.189, r * 8 * 1.5, r * 16][(b // 2) % 4]), tb, 0.22, pan=0.2)
         t += bar
         k += 1
     for a, b in zip(C.get("rattle", [])[::2], C.get("rattle", [])[1::2]):
@@ -204,6 +211,11 @@ def main(out, cues_path):
         while tt < b:
             place(sfx, click(), tt, 0.35)
             tt += 0.05
+    if "lift_riser" in C:
+        place(sfx, whoosh(C["lift"][0] - C["lift_riser"], True), C["lift_riser"], 0.9)
+    if "stab" in C:
+        place(sfx, impact(), C["stab"], 0.75)
+        place(sfx, snap(), C["stab"], 0.6)
     for c in C["cuts"]:
         place(sfx, impact(), c, 0.55)
     for c in C["clicks"]:
@@ -211,6 +223,14 @@ def main(out, cues_path):
     place(sfx, boom(3.0, 80, 30), C["end"], 0.9)
     place(sfx, shimmer(2.2), C["end"] + 0.1, 0.8)
     place(sfx, pad_chord(total - C["end"] + 0.2, 73.42 * 2), C["end"] + 0.05, 0.85)
+    # the arc: the bed sits lower through the feature tour and steps up for the lift
+    if "lift" in C:
+        g = np.ones(mus.shape[1], np.float32) * 0.8
+        a, b = int(C["lift"][0] * SR), int(C["lift"][1] * SR)
+        ramp = int(0.3 * SR)
+        g[a - ramp:a] = np.linspace(0.8, 1.2, ramp)
+        g[a:b] = 1.2
+        mus *= g
     # fade the bed out just before the end card, then a short tail
     fade = np.ones(mus.shape[1], np.float32)
     a, b = int((C["end"] - 0.25) * SR), int(C["end"] * SR)

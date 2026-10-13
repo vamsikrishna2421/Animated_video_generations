@@ -10,7 +10,7 @@
       "src0": 0.0,
       "dur": 3.6,
       "title": "Free Netflix-style\nportfolio",
-      "sub": "the intro is your name",
+      "sub": "built with AI · the intro is your name",
       "pos": "top"
     },
     {
@@ -52,8 +52,8 @@
     },
     {
       "kind": "deskfull",
-      "src0": 7.0,
-      "dur": 3.6,
+      "src0": 7.9,
+      "dur": 2.4,
       "tag": "LAPTOP VIEW",
       "title": "A numbered\nwatch list",
       "pos": "top",
@@ -61,31 +61,25 @@
         {
           "t": 0,
           "s": 1,
-          "x": 0.55,
+          "x": 0.6,
           "y": 0.32
         },
         {
-          "t": 0.6,
+          "t": 0.8,
           "s": 1,
           "x": 0.6,
           "y": 0.32
         },
         {
-          "t": 1.9,
-          "s": 1,
-          "x": 0.6,
-          "y": 0.32
-        },
-        {
-          "t": 2.3,
+          "t": 1.3,
           "s": 1,
           "x": 0.84,
           "y": 0.36
         },
         {
-          "t": 3.6,
+          "t": 2.4,
           "s": 1,
-          "x": 0.8,
+          "x": 0.82,
           "y": 0.36
         }
       ],
@@ -95,14 +89,15 @@
       "kind": "phone",
       "src0": 11.8,
       "dur": 2.4,
-      "title": "Tap: the\nfull story",
+      "title": "Tap: the full story",
       "pos": "top",
-      "y": 1330
+      "y": 1260,
+      "tag": "PHONE VIEW"
     },
     {
       "kind": "code",
       "dur": 3.0,
-      "title": "Change one line...",
+      "title": "Edit one file...",
       "pos": "top"
     },
     {
@@ -110,12 +105,12 @@
       "src": "web/01/intro_priya.mp4",
       "src0": 0.0,
       "dur": 3.0,
-      "title": "...it's yours",
+      "title": "...the intro is yours",
       "pos": "top"
     },
     {
       "kind": "end",
-      "dur": 3.0
+      "dur": 3.6
     }
   ],
   "end": {
@@ -123,23 +118,24 @@
     "lines": [
       "Free template",
       "HTML, CSS and JavaScript",
-      "made with an AI coding assistant"
+      "built with an AI coding assistant"
     ],
     "cta": "Code: link in bio"
   },
   "code": {
     "file": "config.js",
-    "line": 2,
+    "line": 1,
     "from": "VAMSI KRISHNA",
     "to": "PRIYA",
     "lines": [
-      "// everything on the page lives here",
       "window.PORTFOLIO = {",
       "  name: \"VAMSI KRISHNA\",",
       "  accent: \"#e50914\",",
-      "  profiles: [\"Recruiter\", \"Developer\"],",
-      "  rows: [ /* your projects */ ]",
-      "};"
+      "  profiles: [",
+      "    { name: \"Recruiter\", color: \"#e50914\" },",
+      "    { name: \"Developer\", color: \"#1f6feb\" },",
+      "    ...",
+      "  ],"
     ]
   }
 }

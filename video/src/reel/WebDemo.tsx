@@ -25,7 +25,7 @@ const Caption: React.FC<{ title?: string; sub?: string; dur: number; pos?: "top"
     <div style={{ position: "absolute", left: 60, right: 60, textAlign: "center", ...style, opacity: s * out, transform: `translateY(${(1 - s) * 30}px)` }}>
       <div style={{ display: "inline-block", background: "rgba(8,8,8,0.72)", borderRadius: 22, padding: "18px 34px 20px", boxShadow: "0 12px 40px rgba(0,0,0,0.5)" }}>
         <div style={{ fontFamily: BEBAS, fontSize: 92, lineHeight: 0.95, color: "#fff", letterSpacing: 1, whiteSpace: "pre-line" }}>{title}</div>
-        {sub ? <div style={{ fontFamily: SANS, fontWeight: 600, fontSize: 36, color: "#d0d0d0", marginTop: 8 }}>{sub}</div> : null}
+        {sub ? <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 46, color: "#f0f0f0", marginTop: 10 }}>{sub}</div> : null}
       </div>
     </div>
   );
@@ -88,13 +88,24 @@ const DeskFull: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
         </div>
       )}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.45) 100%)" }} />
-      {seg.tag ? (
-        <div style={{ position: "absolute", left: 40, bottom: 120, display: "flex", alignItems: "center", gap: 14, background: "rgba(10,10,10,0.78)", border: "2px solid rgba(255,255,255,0.25)", borderRadius: 999, padding: "12px 26px" }}>
-          <svg width="40" height="30" viewBox="0 0 40 30"><rect x="6" y="2" width="28" height="19" rx="2" fill="none" stroke="#fff" strokeWidth="3" /><path d="M1 25h38l-3 4H4z" fill="#fff" /></svg>
-          <span style={{ fontFamily: SANS, fontWeight: 800, fontSize: 34, color: "#fff", letterSpacing: 2 }}>{seg.tag}</span>
-        </div>
-      ) : null}
+      <Tag seg={seg} />
     </AbsoluteFill>
+  );
+};
+
+const Tag: React.FC<{ seg: Seg }> = ({ seg }) => {
+  if (!seg.tag) return null;
+  const phone = seg.tag.startsWith("PHONE");
+  const top = seg.y != null ? seg.y - 100 : 440;
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, top, display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 14, background: "rgba(229,9,20,0.92)", borderRadius: 999, padding: "10px 26px", boxShadow: "0 8px 24px rgba(0,0,0,0.45)" }}>
+        {phone
+          ? <svg width="22" height="34" viewBox="0 0 22 34"><rect x="2" y="2" width="18" height="30" rx="4" fill="none" stroke="#fff" strokeWidth="3" /><circle cx="11" cy="27" r="1.8" fill="#fff" /></svg>
+          : <svg width="40" height="30" viewBox="0 0 40 30"><rect x="6" y="2" width="28" height="19" rx="2" fill="none" stroke="#fff" strokeWidth="3" /><path d="M1 25h38l-3 4H4z" fill="#fff" /></svg>}
+        <span style={{ fontFamily: SANS, fontWeight: 800, fontSize: 32, color: "#fff", letterSpacing: 2 }}>{seg.tag}</span>
+      </div>
+    </div>
   );
 };
 
@@ -123,7 +134,7 @@ const Code: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
           <span style={{ marginLeft: 20, fontFamily: SANS, fontWeight: 600, fontSize: 28, color: "#ddd" }}>{code.file}{saved ? "" : " ●"}</span>
           {saved ? <span style={{ marginLeft: "auto", fontFamily: SANS, fontWeight: 800, fontSize: 26, color: "#46d369" }}>saved</span> : null}
         </div>
-        <div style={{ padding: "30px 30px 38px", fontFamily: MONO, fontSize: 38, lineHeight: 1.55, whiteSpace: "pre" }}>
+        <div style={{ padding: "30px 26px 38px", fontFamily: MONO, fontSize: 33, lineHeight: 1.6, whiteSpace: "pre" }}>
           {code.lines.map((ln, i) => {
             const hot = i === code.line;
             const body = hot ? ln.replace(`"${code.from}"`, `"${shown}${blink ? "|" : " "}"`) : ln;
@@ -142,7 +153,12 @@ const Code: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
 
 const Phone: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
   const { fps } = useVideoConfig();
-  return <OffthreadVideo src={staticFile(src)} startFrom={Math.round((seg.src0 ?? 0) * fps)} muted style={{ width: 1080, height: 1920 }} />;
+  return (
+    <AbsoluteFill>
+      <OffthreadVideo src={staticFile(src)} startFrom={Math.round((seg.src0 ?? 0) * fps)} muted style={{ width: 1080, height: 1920 }} />
+      <Tag seg={seg} />
+    </AbsoluteFill>
+  );
 };
 
 const End: React.FC<{ end: WebDemoProps["end"]; handle: string; dur: number }> = ({ end, handle, dur }) => {
@@ -150,9 +166,8 @@ const End: React.FC<{ end: WebDemoProps["end"]; handle: string; dur: number }> =
   const { fps } = useVideoConfig();
   const letters = [...end.big];
   const mid = (letters.length - 1) / 2;
-  const fadeOut = interpolate(f, [dur * fps - 10, dur * fps], [1, 0.9], cl);
   return (
-    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 38%, #2a0306 0%, #000 62%)", alignItems: "center", opacity: fadeOut }}>
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 38%, #2a0306 0%, #000 62%)", alignItems: "center" }}>
       <div style={{ position: "absolute", top: 520, display: "flex", fontFamily: BEBAS, fontSize: 210, color: RED, lineHeight: 1, filter: "drop-shadow(0 0 30px rgba(229,9,20,0.55))" }}>
         {letters.map((ch, i) => {
           const d = Math.abs(i - mid);
@@ -167,10 +182,10 @@ const End: React.FC<{ end: WebDemoProps["end"]; handle: string; dur: number }> =
           return <div key={i} style={{ fontFamily: SANS, fontWeight: i === 0 ? 800 : 600, fontSize: i === 0 ? 64 : 42, color: i === 0 ? "#fff" : "#cfcfcf", marginTop: i === 0 ? 0 : 18, opacity: k, transform: `translateY(${(1 - k) * 24}px)` }}>{l}</div>;
         })}
       </div>
-      <div style={{ position: "absolute", top: 1180, opacity: spring({ frame: f - 30, fps, config: { damping: 18 } }) }}>
-        <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 46, color: "#000", background: "#fff", borderRadius: 999, padding: "20px 46px" }}>{end.cta}</div>
+      <div style={{ position: "absolute", top: 1180, opacity: spring({ frame: f, fps, config: { damping: 14 } }), transform: `scale(${1.25 - 0.25 * spring({ frame: f, fps, config: { damping: 12 } })})` }}>
+        <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 54, color: "#000", background: "#fff", borderRadius: 999, padding: "22px 52px" }}>{end.cta}</div>
       </div>
-      <div style={{ position: "absolute", bottom: 300, fontFamily: SANS, fontWeight: 800, fontSize: 48, color: "#fff", opacity: spring({ frame: f - 38, fps, config: { damping: 18 } }) }}>{handle}</div>
+      <div style={{ position: "absolute", top: 1330, fontFamily: SANS, fontWeight: 800, fontSize: 48, color: "#fff", opacity: spring({ frame: f - 6, fps, config: { damping: 18 } }) }}>{handle}</div>
     </AbsoluteFill>
   );
 };
