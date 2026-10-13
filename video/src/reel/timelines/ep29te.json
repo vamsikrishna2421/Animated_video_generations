@@ -1,0 +1,1679 @@
+{
+ "id": "ep29te",
+ "look": "classic",
+ "topic": "",
+ "banner": "How AI sees a photo",
+ "musicVol": [
+  0.5,
+  1.15
+ ],
+ "title": "How AI sees a photo (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP 29",
+ "fps": 30,
+ "musicLift": 2.3,
+ "musicDrops": [
+  [
+   760,
+   784
+  ],
+  [
+   1508,
+   1532
+  ],
+  [
+   1718,
+   1792,
+   0.15
+  ],
+  [
+   2149,
+   2173
+  ]
+ ],
+ "musicBoosts": [
+  [
+   1227,
+   1575,
+   1.3
+  ],
+  [
+   1882,
+   2475,
+   1.3
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 3116,
+ "music": "reel/ep29te/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "cv_hook",
+   "data": {
+    "yt": {
+     "chapter": "Dog → banana",
+     "title": "A dog the AI calls a banana",
+     "notes": [
+      [
+       "A free photo AI (ResNet-50), run by us: banana, 99.99% sure",
+       0
+      ],
+      [
+       "Before we touched the photo: golden retriever, 99.8%",
+       1
+      ],
+      [
+       "Colours changed by 1 out of 255: same to your eye",
+       2
+      ],
+      [
+       "It only sees numbers, and we pushed them the right way",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 0,
+   "frames": 430,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_01.wav",
+     "from": 9,
+     "frames": 395,
+     "words": [
+      {
+       "w": "This",
+       "from": 10,
+       "to": 16
+      },
+      {
+       "w": "dog",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "is",
+       "from": 21,
+       "to": 25
+      },
+      {
+       "w": "a",
+       "from": 25,
+       "to": 27
+      },
+      {
+       "w": "banana,",
+       "from": 27,
+       "to": 37
+      },
+      {
+       "w": "says",
+       "from": 37,
+       "to": 43
+      },
+      {
+       "w": "this",
+       "from": 43,
+       "to": 49
+      },
+      {
+       "w": "AI,",
+       "from": 49,
+       "to": 66
+      },
+      {
+       "w": "99.99%",
+       "from": 66,
+       "to": 75
+      },
+      {
+       "w": "sure.",
+       "from": 75,
+       "to": 82
+      },
+      {
+       "w": "Before",
+       "from": 82,
+       "to": 97
+      },
+      {
+       "w": "we",
+       "from": 97,
+       "to": 101
+      },
+      {
+       "w": "touched",
+       "from": 101,
+       "to": 113
+      },
+      {
+       "w": "it:",
+       "from": 113,
+       "to": 118
+      },
+      {
+       "w": "golden",
+       "from": 118,
+       "to": 154
+      },
+      {
+       "w": "retriever.",
+       "from": 154,
+       "to": 182
+      },
+      {
+       "w": "We",
+       "from": 182,
+       "to": 184
+      },
+      {
+       "w": "changed",
+       "from": 184,
+       "to": 263
+      },
+      {
+       "w": "its",
+       "from": 263,
+       "to": 286
+      },
+      {
+       "w": "colours",
+       "from": 286,
+       "to": 293
+      },
+      {
+       "w": "by",
+       "from": 293,
+       "to": 295
+      },
+      {
+       "w": "a",
+       "from": 295,
+       "to": 297
+      },
+      {
+       "w": "shade",
+       "from": 297,
+       "to": 302
+      },
+      {
+       "w": "you",
+       "from": 302,
+       "to": 306
+      },
+      {
+       "w": "can't",
+       "from": 306,
+       "to": 311
+      },
+      {
+       "w": "see.",
+       "from": 311,
+       "to": 315
+      },
+      {
+       "w": "It",
+       "from": 315,
+       "to": 319
+      },
+      {
+       "w": "only",
+       "from": 319,
+       "to": 324
+      },
+      {
+       "w": "sees",
+       "from": 324,
+       "to": 338
+      },
+      {
+       "w": "numbers,",
+       "from": 338,
+       "to": 348
+      },
+      {
+       "w": "and",
+       "from": 348,
+       "to": 352
+      },
+      {
+       "w": "we",
+       "from": 352,
+       "to": 355
+      },
+      {
+       "w": "pushed",
+       "from": 355,
+       "to": 363
+      },
+      {
+       "w": "them",
+       "from": 363,
+       "to": 368
+      },
+      {
+       "w": "the",
+       "from": 368,
+       "to": 373
+      },
+      {
+       "w": "right",
+       "from": 373,
+       "to": 379
+      },
+      {
+       "w": "way.",
+       "from": 379,
+       "to": 384
+      }
+     ],
+     "cues": {
+      "1": 82,
+      "2": 182,
+      "3": 315
+     }
+    }
+   ]
+  },
+  {
+   "id": "pixels",
+   "type": "cv_pixels",
+   "data": {
+    "yt": {
+     "chapter": "Pixels",
+     "title": "A photo is numbers",
+     "notes": [
+      [
+       "A photo is a grid of pixels",
+       0
+      ],
+      [
+       "Each pixel = 3 numbers (red, green, blue), 0 to 255",
+       1
+      ],
+      [
+       "This 224 × 224 photo: 150,528 numbers; a 12 MP phone photo: about 36 million",
+       2
+      ],
+      [
+       "Not one of them says 'dog'",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 430,
+   "frames": 450,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_02.wav",
+     "from": 0,
+     "frames": 417,
+     "words": [
+      {
+       "w": "A",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "photo",
+       "from": 15,
+       "to": 27
+      },
+      {
+       "w": "is",
+       "from": 27,
+       "to": 33
+      },
+      {
+       "w": "a",
+       "from": 33,
+       "to": 37
+      },
+      {
+       "w": "grid",
+       "from": 37,
+       "to": 55
+      },
+      {
+       "w": "of",
+       "from": 55,
+       "to": 61
+      },
+      {
+       "w": "pixels,",
+       "from": 61,
+       "to": 97
+      },
+      {
+       "w": "and",
+       "from": 97,
+       "to": 104
+      },
+      {
+       "w": "each",
+       "from": 104,
+       "to": 112
+      },
+      {
+       "w": "pixel",
+       "from": 112,
+       "to": 122
+      },
+      {
+       "w": "is",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "three",
+       "from": 127,
+       "to": 146
+      },
+      {
+       "w": "numbers:",
+       "from": 146,
+       "to": 161
+      },
+      {
+       "w": "red,",
+       "from": 161,
+       "to": 179
+      },
+      {
+       "w": "green",
+       "from": 179,
+       "to": 189
+      },
+      {
+       "w": "and",
+       "from": 189,
+       "to": 195
+      },
+      {
+       "w": "blue,",
+       "from": 195,
+       "to": 205
+      },
+      {
+       "w": "from",
+       "from": 205,
+       "to": 213
+      },
+      {
+       "w": "0",
+       "from": 213,
+       "to": 217
+      },
+      {
+       "w": "to",
+       "from": 217,
+       "to": 222
+      },
+      {
+       "w": "255.",
+       "from": 222,
+       "to": 239
+      },
+      {
+       "w": "This",
+       "from": 239,
+       "to": 245
+      },
+      {
+       "w": "small",
+       "from": 245,
+       "to": 252
+      },
+      {
+       "w": "photo",
+       "from": 252,
+       "to": 259
+      },
+      {
+       "w": "is",
+       "from": 259,
+       "to": 262
+      },
+      {
+       "w": "150,000",
+       "from": 262,
+       "to": 271
+      },
+      {
+       "w": "numbers;",
+       "from": 271,
+       "to": 282
+      },
+      {
+       "w": "a",
+       "from": 282,
+       "to": 284
+      },
+      {
+       "w": "phone",
+       "from": 284,
+       "to": 300
+      },
+      {
+       "w": "photo,",
+       "from": 300,
+       "to": 308
+      },
+      {
+       "w": "tens",
+       "from": 308,
+       "to": 318
+      },
+      {
+       "w": "of",
+       "from": 318,
+       "to": 321
+      },
+      {
+       "w": "millions.",
+       "from": 321,
+       "to": 354
+      },
+      {
+       "w": "And",
+       "from": 354,
+       "to": 360
+      },
+      {
+       "w": "not",
+       "from": 360,
+       "to": 366
+      },
+      {
+       "w": "one",
+       "from": 366,
+       "to": 372
+      },
+      {
+       "w": "of",
+       "from": 372,
+       "to": 377
+      },
+      {
+       "w": "them",
+       "from": 377,
+       "to": 384
+      },
+      {
+       "w": "says",
+       "from": 384,
+       "to": 392
+      },
+      {
+       "w": "'dog'.",
+       "from": 392,
+       "to": 403
+      }
+     ],
+     "cues": {
+      "1": 97,
+      "2": 239,
+      "3": 354
+     }
+    }
+   ]
+  },
+  {
+   "id": "patterns",
+   "type": "cv_filters",
+   "data": {
+    "yt": {
+     "chapter": "Patterns",
+     "title": "Pattern-finders (filters)",
+     "notes": [
+      [
+       "Tiny pattern-finders slide over the numbers, each looking for one thing (learned from 1.28 million labelled photos)",
+       1
+      ],
+      [
+       "Where one matches, that spot lights up (real responses, brightened)",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 880,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_03.wav",
+     "from": 0,
+     "frames": 321,
+     "words": [
+      {
+       "w": "So",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "it",
+       "from": 5,
+       "to": 9
+      },
+      {
+       "w": "hunts",
+       "from": 9,
+       "to": 16
+      },
+      {
+       "w": "for",
+       "from": 16,
+       "to": 22
+      },
+      {
+       "w": "patterns:",
+       "from": 22,
+       "to": 35
+      },
+      {
+       "w": "tiny",
+       "from": 35,
+       "to": 41
+      },
+      {
+       "w": "pattern-finders",
+       "from": 41,
+       "to": 68
+      },
+      {
+       "w": "slide",
+       "from": 68,
+       "to": 75
+      },
+      {
+       "w": "over",
+       "from": 75,
+       "to": 84
+      },
+      {
+       "w": "the",
+       "from": 84,
+       "to": 89
+      },
+      {
+       "w": "numbers,",
+       "from": 89,
+       "to": 99
+      },
+      {
+       "w": "each",
+       "from": 99,
+       "to": 119
+      },
+      {
+       "w": "looking",
+       "from": 119,
+       "to": 128
+      },
+      {
+       "w": "for",
+       "from": 128,
+       "to": 144
+      },
+      {
+       "w": "one",
+       "from": 144,
+       "to": 167
+      },
+      {
+       "w": "thing,",
+       "from": 167,
+       "to": 195
+      },
+      {
+       "w": "like",
+       "from": 195,
+       "to": 222
+      },
+      {
+       "w": "an",
+       "from": 222,
+       "to": 260
+      },
+      {
+       "w": "edge.",
+       "from": 260,
+       "to": 267
+      },
+      {
+       "w": "Where",
+       "from": 267,
+       "to": 273
+      },
+      {
+       "w": "one",
+       "from": 273,
+       "to": 278
+      },
+      {
+       "w": "matches,",
+       "from": 278,
+       "to": 287
+      },
+      {
+       "w": "that",
+       "from": 287,
+       "to": 293
+      },
+      {
+       "w": "spot",
+       "from": 293,
+       "to": 304
+      },
+      {
+       "w": "lights",
+       "from": 304,
+       "to": 312
+      },
+      {
+       "w": "up.",
+       "from": 312,
+       "to": 316
+      }
+     ],
+     "cues": {
+      "1": 35,
+      "2": 267
+     }
+    }
+   ]
+  },
+  {
+   "id": "layers",
+   "type": "cv_layers",
+   "data": {
+    "yt": {
+     "chapter": "Layers",
+     "title": "Edges → parts → face → answer",
+     "notes": [
+      [
+       "Edges build parts (eyes, ears)",
+       0
+      ],
+      [
+       "Parts build a face",
+       1
+      ],
+      [
+       "Out comes an answer: golden retriever",
+       3
+      ],
+      [
+       "Nudge the numbers a shade: banana",
+       5
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1227,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_04.wav",
+     "from": 0,
+     "frames": 329,
+     "words": [
+      {
+       "w": "Layer",
+       "from": 2,
+       "to": 12
+      },
+      {
+       "w": "by",
+       "from": 12,
+       "to": 17
+      },
+      {
+       "w": "layer,",
+       "from": 17,
+       "to": 29
+      },
+      {
+       "w": "edges",
+       "from": 29,
+       "to": 45
+      },
+      {
+       "w": "build",
+       "from": 45,
+       "to": 67
+      },
+      {
+       "w": "parts",
+       "from": 67,
+       "to": 85
+      },
+      {
+       "w": "like",
+       "from": 85,
+       "to": 94
+      },
+      {
+       "w": "eyes",
+       "from": 94,
+       "to": 102
+      },
+      {
+       "w": "and",
+       "from": 102,
+       "to": 109
+      },
+      {
+       "w": "ears,",
+       "from": 109,
+       "to": 119
+      },
+      {
+       "w": "parts",
+       "from": 119,
+       "to": 140
+      },
+      {
+       "w": "build",
+       "from": 140,
+       "to": 151
+      },
+      {
+       "w": "a",
+       "from": 151,
+       "to": 155
+      },
+      {
+       "w": "face,",
+       "from": 155,
+       "to": 167
+      },
+      {
+       "w": "and",
+       "from": 167,
+       "to": 182
+      },
+      {
+       "w": "out",
+       "from": 182,
+       "to": 188
+      },
+      {
+       "w": "comes",
+       "from": 188,
+       "to": 197
+      },
+      {
+       "w": "an",
+       "from": 197,
+       "to": 202
+      },
+      {
+       "w": "answer:",
+       "from": 202,
+       "to": 213
+      },
+      {
+       "w": "golden",
+       "from": 213,
+       "to": 239
+      },
+      {
+       "w": "retriever.",
+       "from": 239,
+       "to": 265
+      },
+      {
+       "w": "Nudge",
+       "from": 265,
+       "to": 270
+      },
+      {
+       "w": "the",
+       "from": 270,
+       "to": 273
+      },
+      {
+       "w": "numbers",
+       "from": 273,
+       "to": 279
+      },
+      {
+       "w": "a",
+       "from": 279,
+       "to": 280
+      },
+      {
+       "w": "shade,",
+       "from": 280,
+       "to": 285
+      },
+      {
+       "w": "and",
+       "from": 285,
+       "to": 288
+      },
+      {
+       "w": "out",
+       "from": 288,
+       "to": 300
+      },
+      {
+       "w": "comes",
+       "from": 300,
+       "to": 305
+      },
+      {
+       "w": "'banana'.",
+       "from": 305,
+       "to": 329
+      }
+     ],
+     "cues": {
+      "1": 119,
+      "2": 167,
+      "3": 213,
+      "4": 265,
+      "5": 305
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "cv_quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Random change: dog or banana?",
+     "notes": [
+      [
+       "What if we nudge just as many numbers, just as tiny, but randomly?",
+       1
+      ],
+      [
+       "Still a dog: random nudges don't fool it (5 random tries, all dog)",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1575,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_05.wav",
+     "from": 0,
+     "frames": 282,
+     "words": [
+      {
+       "w": "Your",
+       "from": 5,
+       "to": 15
+      },
+      {
+       "w": "turn:",
+       "from": 15,
+       "to": 33
+      },
+      {
+       "w": "what",
+       "from": 33,
+       "to": 38
+      },
+      {
+       "w": "if",
+       "from": 38,
+       "to": 41
+      },
+      {
+       "w": "we",
+       "from": 41,
+       "to": 44
+      },
+      {
+       "w": "nudge",
+       "from": 44,
+       "to": 50
+      },
+      {
+       "w": "just",
+       "from": 50,
+       "to": 55
+      },
+      {
+       "w": "as",
+       "from": 55,
+       "to": 58
+      },
+      {
+       "w": "many",
+       "from": 58,
+       "to": 63
+      },
+      {
+       "w": "numbers,",
+       "from": 63,
+       "to": 72
+      },
+      {
+       "w": "just",
+       "from": 72,
+       "to": 77
+      },
+      {
+       "w": "as",
+       "from": 77,
+       "to": 80
+      },
+      {
+       "w": "tiny,",
+       "from": 80,
+       "to": 87
+      },
+      {
+       "w": "but",
+       "from": 87,
+       "to": 91
+      },
+      {
+       "w": "randomly?",
+       "from": 91,
+       "to": 118
+      },
+      {
+       "w": "Dog",
+       "from": 118,
+       "to": 132
+      },
+      {
+       "w": "or",
+       "from": 132,
+       "to": 135
+      },
+      {
+       "w": "banana?",
+       "from": 135,
+       "to": 143
+      },
+      {
+       "w": "Still",
+       "from": 217,
+       "to": 224
+      },
+      {
+       "w": "a",
+       "from": 224,
+       "to": 227
+      },
+      {
+       "w": "dog:",
+       "from": 227,
+       "to": 233
+      },
+      {
+       "w": "random",
+       "from": 233,
+       "to": 243
+      },
+      {
+       "w": "nudges",
+       "from": 243,
+       "to": 252
+      },
+      {
+       "w": "don't",
+       "from": 252,
+       "to": 259
+      },
+      {
+       "w": "fool",
+       "from": 259,
+       "to": 266
+      },
+      {
+       "w": "it.",
+       "from": 266,
+       "to": 271
+      }
+     ],
+     "cues": {
+      "1": 33,
+      "3": 143,
+      "2": 217
+     }
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "cv_why",
+   "data": {
+    "yt": {
+     "chapter": "Why it worked",
+     "title": "Tiny pushes, all the same way",
+     "notes": [
+      [
+       "The AI is free to download, so we looked inside it",
+       1
+      ],
+      [
+       "122,204 of 150,528 numbers moved by just 1, toward 'banana'",
+       2
+      ],
+      [
+       "Every push aimed at 'banana', so they add up; random pushes point every way and cancel out",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1882,
+   "frames": 593,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_06.wav",
+     "from": 0,
+     "frames": 564,
+     "words": [
+      {
+       "w": "So",
+       "from": 3,
+       "to": 5
+      },
+      {
+       "w": "why",
+       "from": 5,
+       "to": 13
+      },
+      {
+       "w": "did",
+       "from": 13,
+       "to": 16
+      },
+      {
+       "w": "ours",
+       "from": 16,
+       "to": 47
+      },
+      {
+       "w": "work?",
+       "from": 47,
+       "to": 51
+      },
+      {
+       "w": "Anyone",
+       "from": 51,
+       "to": 56
+      },
+      {
+       "w": "can",
+       "from": 56,
+       "to": 59
+      },
+      {
+       "w": "download",
+       "from": 59,
+       "to": 71
+      },
+      {
+       "w": "this",
+       "from": 71,
+       "to": 75
+      },
+      {
+       "w": "AI,",
+       "from": 75,
+       "to": 78
+      },
+      {
+       "w": "so",
+       "from": 78,
+       "to": 80
+      },
+      {
+       "w": "we",
+       "from": 80,
+       "to": 82
+      },
+      {
+       "w": "looked",
+       "from": 82,
+       "to": 87
+      },
+      {
+       "w": "inside",
+       "from": 87,
+       "to": 92
+      },
+      {
+       "w": "it",
+       "from": 92,
+       "to": 94
+      },
+      {
+       "w": "for",
+       "from": 94,
+       "to": 101
+      },
+      {
+       "w": "the",
+       "from": 101,
+       "to": 119
+      },
+      {
+       "w": "way",
+       "from": 119,
+       "to": 122
+      },
+      {
+       "w": "each",
+       "from": 122,
+       "to": 125
+      },
+      {
+       "w": "number",
+       "from": 125,
+       "to": 135
+      },
+      {
+       "w": "should",
+       "from": 135,
+       "to": 140
+      },
+      {
+       "w": "move",
+       "from": 140,
+       "to": 158
+      },
+      {
+       "w": "toward",
+       "from": 158,
+       "to": 167
+      },
+      {
+       "w": "'banana'.",
+       "from": 167,
+       "to": 190
+      },
+      {
+       "w": "About",
+       "from": 190,
+       "to": 199
+      },
+      {
+       "w": "120,000",
+       "from": 199,
+       "to": 220
+      },
+      {
+       "w": "numbers",
+       "from": 220,
+       "to": 255
+      },
+      {
+       "w": "moved",
+       "from": 255,
+       "to": 261
+      },
+      {
+       "w": "by",
+       "from": 261,
+       "to": 264
+      },
+      {
+       "w": "just",
+       "from": 264,
+       "to": 288
+      },
+      {
+       "w": "1.",
+       "from": 288,
+       "to": 291
+      },
+      {
+       "w": "Every",
+       "from": 291,
+       "to": 296
+      },
+      {
+       "w": "push",
+       "from": 296,
+       "to": 300
+      },
+      {
+       "w": "was",
+       "from": 300,
+       "to": 304
+      },
+      {
+       "w": "aimed",
+       "from": 304,
+       "to": 309
+      },
+      {
+       "w": "at",
+       "from": 309,
+       "to": 312
+      },
+      {
+       "w": "'banana',",
+       "from": 312,
+       "to": 324
+      },
+      {
+       "w": "so",
+       "from": 324,
+       "to": 327
+      },
+      {
+       "w": "they",
+       "from": 327,
+       "to": 331
+      },
+      {
+       "w": "add",
+       "from": 331,
+       "to": 334
+      },
+      {
+       "w": "up.",
+       "from": 334,
+       "to": 338
+      },
+      {
+       "w": "Random",
+       "from": 338,
+       "to": 344
+      },
+      {
+       "w": "pushes",
+       "from": 344,
+       "to": 350
+      },
+      {
+       "w": "point",
+       "from": 350,
+       "to": 367
+      },
+      {
+       "w": "every",
+       "from": 367,
+       "to": 386
+      },
+      {
+       "w": "way",
+       "from": 386,
+       "to": 389
+      },
+      {
+       "w": "and",
+       "from": 389,
+       "to": 435
+      },
+      {
+       "w": "cancel",
+       "from": 435,
+       "to": 496
+      },
+      {
+       "w": "out.",
+       "from": 496,
+       "to": 527
+      }
+     ],
+     "cues": {
+      "1": 51,
+      "2": 190,
+      "3": 291
+     }
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "cv_close",
+   "data": {
+    "yt": {
+     "chapter": "Only this one AI was fooled",
+     "title": "Aimed at one AI; a JPEG save breaks it",
+     "notes": [
+      [
+       "It only fooled this one AI (ResNet-50)",
+       0
+      ],
+      [
+       "4 other AI models on the banana file: still dog; saved as a JPEG: dog again",
+       1
+      ],
+      [
+       "99.99% sure, and still wrong; chatbots don't even show a number. Double-check what matters",
+       2
+      ],
+      [
+       "Next: how AI learns good manners (EP30)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 2475,
+   "frames": 629,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep29te/line_07.wav",
+     "from": 0,
+     "frames": 584,
+     "words": [
+      {
+       "w": "It",
+       "from": 2,
+       "to": 4
+      },
+      {
+       "w": "only",
+       "from": 4,
+       "to": 9
+      },
+      {
+       "w": "fooled",
+       "from": 9,
+       "to": 14
+      },
+      {
+       "w": "this",
+       "from": 14,
+       "to": 29
+      },
+      {
+       "w": "one",
+       "from": 29,
+       "to": 33
+      },
+      {
+       "w": "AI",
+       "from": 33,
+       "to": 35
+      },
+      {
+       "w": "model:",
+       "from": 35,
+       "to": 70
+      },
+      {
+       "w": "four",
+       "from": 70,
+       "to": 75
+      },
+      {
+       "w": "other",
+       "from": 75,
+       "to": 86
+      },
+      {
+       "w": "models",
+       "from": 86,
+       "to": 94
+      },
+      {
+       "w": "still",
+       "from": 94,
+       "to": 101
+      },
+      {
+       "w": "said",
+       "from": 101,
+       "to": 115
+      },
+      {
+       "w": "dog,",
+       "from": 115,
+       "to": 121
+      },
+      {
+       "w": "and",
+       "from": 121,
+       "to": 126
+      },
+      {
+       "w": "saving",
+       "from": 126,
+       "to": 143
+      },
+      {
+       "w": "it",
+       "from": 143,
+       "to": 147
+      },
+      {
+       "w": "as",
+       "from": 147,
+       "to": 150
+      },
+      {
+       "w": "a",
+       "from": 150,
+       "to": 152
+      },
+      {
+       "w": "JPEG",
+       "from": 152,
+       "to": 165
+      },
+      {
+       "w": "broke",
+       "from": 165,
+       "to": 172
+      },
+      {
+       "w": "the",
+       "from": 172,
+       "to": 181
+      },
+      {
+       "w": "trick.",
+       "from": 181,
+       "to": 189
+      },
+      {
+       "w": "But",
+       "from": 189,
+       "to": 197
+      },
+      {
+       "w": "99.99%",
+       "from": 197,
+       "to": 208
+      },
+      {
+       "w": "sure,",
+       "from": 208,
+       "to": 214
+      },
+      {
+       "w": "and",
+       "from": 214,
+       "to": 228
+      },
+      {
+       "w": "still",
+       "from": 228,
+       "to": 234
+      },
+      {
+       "w": "wrong.",
+       "from": 234,
+       "to": 241
+      },
+      {
+       "w": "And",
+       "from": 241,
+       "to": 245
+      },
+      {
+       "w": "chatbots",
+       "from": 245,
+       "to": 264
+      },
+      {
+       "w": "don't",
+       "from": 264,
+       "to": 274
+      },
+      {
+       "w": "even",
+       "from": 274,
+       "to": 303
+      },
+      {
+       "w": "show",
+       "from": 303,
+       "to": 308
+      },
+      {
+       "w": "a",
+       "from": 308,
+       "to": 329
+      },
+      {
+       "w": "number,",
+       "from": 329,
+       "to": 374
+      },
+      {
+       "w": "so",
+       "from": 374,
+       "to": 419
+      },
+      {
+       "w": "double-check",
+       "from": 419,
+       "to": 432
+      },
+      {
+       "w": "what",
+       "from": 432,
+       "to": 437
+      },
+      {
+       "w": "matters.",
+       "from": 437,
+       "to": 446
+      },
+      {
+       "w": "Next:",
+       "from": 446,
+       "to": 468
+      },
+      {
+       "w": "how",
+       "from": 468,
+       "to": 475
+      },
+      {
+       "w": "AI",
+       "from": 475,
+       "to": 480
+      },
+      {
+       "w": "learns",
+       "from": 480,
+       "to": 492
+      },
+      {
+       "w": "good",
+       "from": 492,
+       "to": 501
+      },
+      {
+       "w": "manners.",
+       "from": 501,
+       "to": 525
+      },
+      {
+       "w": "Follow,",
+       "from": 525,
+       "to": 547
+      },
+      {
+       "w": "so",
+       "from": 547,
+       "to": 550
+      },
+      {
+       "w": "you",
+       "from": 550,
+       "to": 553
+      },
+      {
+       "w": "don't",
+       "from": 553,
+       "to": 559
+      },
+      {
+       "w": "miss",
+       "from": 559,
+       "to": 570
+      },
+      {
+       "w": "it.",
+       "from": 570,
+       "to": 573
+      }
+     ],
+     "cues": {
+      "1": 70,
+      "2": 189,
+      "3": 446,
+      "4": 525
+     }
+    }
+   ]
+  }
+ ]
+}
