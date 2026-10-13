@@ -1,0 +1,65 @@
+UPLOAD: 030 (YouTube, two uploads; 16:9 regular videos, not Shorts)
+
+########## ENGLISH: 030_ep29_yt_en.mp4 ##########
+=== TITLE ===
+This AI Is 99.99% Sure This Dog Is a Banana: How AI Really Sees a Photo | AI From Scratch Ep 29
+
+=== DESCRIPTION ===
+A free photo AI looked at a golden retriever and said "golden retriever, 99.8%". We changed the photo's colours by a shade you can't see, and now it says "banana, 99.99% sure". Here is how AI actually sees a photo (computer vision), why that trick worked, and whether ChatGPT would fall for it. We ran every test ourselves.
+
+In this episode:
+- Pixels: a photo is a grid of pixels, and each pixel is 3 numbers (red, green, blue, from 0 to 255). Our small photo is 150,528 numbers; a 12 MP phone photo is about 36 million. Not one of them says "dog"
+- Patterns: tiny pattern-finders (called filters) slide over the numbers, each looking for one thing, like an edge. You see two real ones from the AI, and what they light up on our photo
+- Layers: edges build parts (eyes, ears), parts build a face, and out comes an answer: "golden retriever"
+- Your turn: nudge just as many numbers, just as tiny, but randomly. Dog or banana? (Still dog, 5 tries out of 5)
+- Why ours worked: the AI is free to download, so we looked inside it and moved 122,204 of its 150,528 input numbers by exactly 1, each toward "banana". Pushes that all aim the same way add up; random ones cancel out
+- Would ChatGPT fall for it? Probably not: we aimed at this one AI, and ChatGPT is closed. Four other free photo AIs still said dog, and saving the photo as a JPEG broke the trick. But 99.99% sure was still wrong, and chatbots don't even show a number, so double-check what matters
+
+Chapters:
+0:00 A dog the AI calls a banana
+0:19 A photo is numbers
+0:36 Pattern-finders (filters)
+0:46 Layers: edges, parts, an answer
+0:57 Your turn: random change, dog or banana?
+1:09 Why the aimed change worked
+1:28 Would ChatGPT fall for it?
+
+How we tested (all free models, run by us): the photo is "Golden Retriever 88.JPG" by Mtlchung, CC0 (Wikimedia Commons), cropped to the 224 × 224 pixels the AI takes. The AI is ResNet-50 (microsoft/resnet-50, Apache-2.0, trained on ImageNet's 1.28 million labelled photos). The banana file comes from a targeted gradient attack (projected gradient descent, 80 steps) that may move each pixel value by at most 1 out of 255. Transfer check on the banana file: google/vit-base-patch16-224, microsoft/resnet-18, facebook/convnext-tiny-224 and microsoft/swin-tiny-patch4-window7-224 all say golden retriever. JPEG check: saved at quality 75 to 95, ResNet-50 says golden retriever again. The light-up maps are real first-layer responses, brightened so you can see them.
+Background: Goodfellow, Shlens & Szegedy (2014), "Explaining and Harnessing Adversarial Examples".
+
+Previous episode: How AI turns words into numbers (Transformers, Part 2).
+Next: how AI learns good manners (RLHF).
+Subscribe for the full AI From Scratch series.
+
+#ComputerVision #AI #MachineLearning #ChatGPT #LearnAI #AIForBeginners
+
+=== PINNED_COMMENT ===
+We ran all of it ourselves on one free photo: ResNet-50 said "golden retriever 99.8%", and after the aimed change, "banana" at over 99.99%. Random changes of the same size: dog every time. What should we test next?
+
+########## TELUGU: 030_ep29_yt_te.mp4 ##########
+=== TITLE ===
+Ee AI ki Kukka = Banana (99.99% Sure)! AI Photo ni Ela Chustundi? Computer Vision in Telugu | AI From Scratch Ep 29
+
+=== DESCRIPTION ===
+Oka free photo AI golden retriever photo ni chusi "golden retriever, 99.8%" ani cheppindi. Mee kantiki teliyananta konchem rangulu marchaam, ippudu adi "banana, 99.99% sure" antondi! AI photo ni asalu ela chustundi (computer vision), ee trick enduku pani chesindi, ChatGPT kuda mosapotundaa: anni meme test chesam.
+
+Ee episode lo:
+- Pixels: photo ante pixels grid; prathi pixel 3 numbers (red, green, blue, 0 nunchi 255). Maa chinna photo lo 150,528 numbers; 12 MP phone photo lo daadaapu 3.6 kotla numbers. Vaatilo okkati kuda "kukka" ani cheppadu
+- Patterns: chinna pattern-finders (filters) numbers meeda jaarutu okkokkati okka daani kosam chustundi, udaharanaki edge
+- Layers: edges kalisi kallu, chevulu; avi kalisi mukham; chivariki answer: "golden retriever"
+- Mee vantu: anni numbers ni ante konchem, kaani random ga nedithe? (Inka kukke, 5 ki 5 saarlu)
+- Maadi enduku pani chesindi: ee AI ni evaraina download cheyochu, anduke daani lopaliki chusi 122,204 numbers ni okkokkati 1 matrame "banana" vaipu marchaam. Anni oke vaipu guri pedithe kalisi peddavi avutayi; random pushes cancel aipotayi
+- ChatGPT mosapotundaa? Bahusha ledu: memu guri pettindi ee okka AI ke, ChatGPT closed. Inko 4 free photo AIs kukka ane cheppayi; JPEG ga save chesthe trick pani cheyaledu. Kaani 99.99% sure ayina tappu, chatbots number e chupinchavu: mukhyamainavi meere check chesukondi
+
+Chapters:
+(TE chapters below are filled from the Telugu timeline)
+
+Sources: English description lo unnayi (photo: Mtlchung, CC0; models: ResNet-50 and four other free photo AIs, run by us).
+
+Next: AI manchi paddhatulu ela nerchukuntundi (RLHF).
+Subscribe cheyyandi: AI From Scratch, Telugu lo.
+
+#AIinTelugu #TeluguAI #ComputerVision #LearnAI #TeluguTech
+
+=== PINNED_COMMENT ===
+Antha meme free photo tho run chesam: ResNet-50 "golden retriever 99.8%"; guri petti marchaka "banana" 99.99% paiga. Random ga ade size lo marchithe prathi saari kukke. Next emi test cheyyamantaru?
