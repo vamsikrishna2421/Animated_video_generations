@@ -1,0 +1,38 @@
+UPLOAD: 030
+VIDEO: 030_ep29_how_ai_sees_a_photo.mp4  (crayon-style episode; replaces the older lesson-format 030_ep29_computer_vision.mp4)
+
+=== CAPTION ===
+A photo AI is 99.99% sure this dog is a banana. Before we touched the photo, it said "golden retriever". We changed its colours by a shade you can't see. Here's how AI actually sees a photo, and why that worked.
+
+Episode 29 of AI From Scratch: how AI sees a photo (computer vision)
+- Pixels: a photo is a grid of pixels, each one 3 numbers (red, green, blue, 0 to 255). Our small photo is 150,528 numbers; a 12 MP phone photo is about 36 million. Not one of them says "dog"
+- Patterns: tiny pattern-finders (called filters) slide over the numbers, each looking for one thing, like an edge. This AI learned its filters from 1.28 million labelled photos
+- Layers: edges build parts (eyes, ears), parts build a face, and out comes an answer: "golden retriever"
+- Your turn, answered: nudge just as many numbers, just as tiny, but randomly, and it still says dog (5 tries out of 5)
+- Why ours worked: the AI is free to download, so we looked inside it and moved 122,204 of the 150,528 numbers by exactly 1, each one toward "banana". Pushes that all aim the same way add up; random ones cancel out
+
+Would ChatGPT fall for it? Probably not: we aimed at this one AI, and ChatGPT is closed. Four other free photo AIs still said dog, and saving the photo as a JPEG broke the trick. But "99.99% sure" was still wrong, and chatbots don't show a number at all. Double-check what matters.
+
+What do you double-check when an AI reads a photo for you? Comment below.
+
+Next: how AI learns good manners (RLHF).
+Follow @ai_maastaaru for the full series.
+
+=== HASHTAGS ===
+#ComputerVision #AI #MachineLearning #LearnAI #AIForBeginners #ChatGPT
+
+=== PINNED_COMMENT ===
+We ran all of it ourselves on one free photo: ResNet-50 said "golden retriever 99.8%", and after the aimed change, "banana" at over 99.99%. Random changes of the same size: dog every time. What should we test next?
+
+=== COVER ===
+Crayon page: the golden retriever photo stamped "BANANA", tag "AI: 99.99% sure"
+
+=== ALT_TEXT ===
+Hand-drawn crayon-style reel: a photo AI calls a dog a banana after tiny, aimed pixel changes. It shows a photo as numbers, edge-finding filters and their real responses, layers building up to a label, why aimed changes add up while random ones cancel, and why the trick did not carry over to other AIs.
+
+=== SOURCES (for comments) ===
+Photo: "Golden Retriever 88.JPG" by Mtlchung, CC0 (Wikimedia Commons), cropped to the 224 × 224 pixels the AI was given.
+Models (free, run by us): microsoft/resnet-50 (Apache-2.0; trained on ImageNet-1k, 1.28 million labelled photos). Transfer check: google/vit-base-patch16-224, microsoft/resnet-18, facebook/convnext-tiny-224, microsoft/swin-tiny-patch4-window7-224 all still say golden retriever on the banana file.
+The banana file: a targeted gradient attack (projected gradient descent, 80 steps) with every pixel value allowed to move by at most 1 out of 255; 122,204 of the 150,528 values moved by 1, the rest stayed. ResNet-50 then says banana at over 99.99%. Random ±1 changes to the same share of values (5 tries): golden retriever every time. The banana file saved as JPEG (quality 75 to 95): golden retriever again.
+Light-up maps: real first-layer responses of ResNet-50 on the photo, brightened so they are visible.
+Background reading: Goodfellow, Shlens & Szegedy (2014), "Explaining and Harnessing Adversarial Examples".
