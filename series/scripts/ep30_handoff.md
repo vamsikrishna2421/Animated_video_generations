@@ -28,6 +28,12 @@ supercomputer").
   ("naa business ideani chala unique andi... ekkada, Antarctica lo"). The v2 Telugu lines are romanized: convert them
   to Telugu script (keep English tech words in Telugu letters, e.g. ఏఐ, బిజినెస్) before voicing.
 
+- The creator finds their cloned voice weak. Voice design (`/v1/voice-design`, model `voice-design-1`) returns 402
+  until API credit is added. Free alternative that works: the channel's existing narrator as an inline reference
+  (`fish_tts.py --ref video/public/reel/ep29v1/src/01_hook.wav --ref-text "<its words>"`, Telugu: `ep29te`); the
+  English test line transcribed perfectly ("selling ice in Antarctica"). Fish's public library is mostly clones of
+  real people (politicians, actors, cricketers): do not use those.
+
 ## Build
 Same crayon format as EP25-EP29: specs `reels/ep30v1.json` / `reels/ep30te.json` (copy the shape of
 `reels/ep29v1.json`), a scenes file like `video/src/reel/loop/VisionCrayon.tsx`, `pipeline/reel_build.py`, render
