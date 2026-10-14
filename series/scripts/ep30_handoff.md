@@ -34,6 +34,11 @@ supercomputer").
   English test line transcribed perfectly ("selling ice in Antarctica"). Fish's public library is mostly clones of
   real people (politicians, actors, cricketers): do not use those.
 
+## Decision (14 Oct 2026)
+- English narration: Fish `s2.1-pro-free` with the channel narrator as the reference clip (creator approved the sound).
+- Telugu narration: stays on the local Parler voice (`pipeline/parler_tts_local.py`, Telugu script, sentence-level
+  re-takes). The creator judged Fish's Telugu below the existing Telugu reels, even in pure Telugu.
+
 ## Build
 Same crayon format as EP25-EP29: specs `reels/ep30v1.json` / `reels/ep30te.json` (copy the shape of
 `reels/ep29v1.json`), a scenes file like `video/src/reel/loop/VisionCrayon.tsx`, `pipeline/reel_build.py`, render
