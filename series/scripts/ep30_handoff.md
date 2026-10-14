@@ -18,6 +18,16 @@ supercomputer").
 - Inline tags for the audio arc: `[emphasis]`, `[pause]`, `[laugh]`, `[whisper]` (square brackets, free text).
 - Keep the usual ASR checks (misheard words = mispronounced words), but the creator asked not to chase small slips.
 
+## Fish test results (14 Oct 2026)
+- Key works (authenticated 200). Account voices: "Vamsi Voice" `05d44b87ad9b40818e7f5df1177656a7` (private, the
+  creator's clone, trained on English) and "Bujji voice" (public; not used unless it is the creator's own recording).
+- `s2.1-pro-free` works with the cloned voice. `drama-3-preview` returns 402: API credit is 0 and is billed apart from
+  the app plan (top up at fish.audio/app/developers).
+- English test line: clean; Whisper heard "ice" as "eyes" once (write "ice" with emphasis or re-roll).
+- Telugu must be in Telugu script: the romanized line came out as babble, the Telugu-script line was recognisable
+  ("naa business ideani chala unique andi... ekkada, Antarctica lo"). The v2 Telugu lines are romanized: convert them
+  to Telugu script (keep English tech words in Telugu letters, e.g. ఏఐ, బిజినెస్) before voicing.
+
 ## Build
 Same crayon format as EP25-EP29: specs `reels/ep30v1.json` / `reels/ep30te.json` (copy the shape of
 `reels/ep29v1.json`), a scenes file like `video/src/reel/loop/VisionCrayon.tsx`, `pipeline/reel_build.py`, render
