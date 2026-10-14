@@ -176,70 +176,80 @@ def main(out, cues_path):
         place(sfx, whoosh(1.15, True), st["zoom"], 1.15)
         if st["land"] < C["end"] - 0.1:
             place(sfx, impact(), st["land"], 0.6)
-    # the bed
+    # the bed: one window (bed_start..bed_end), or several ("beds": [[a, b], ...]) so it can come back under the end card
     bpm, beat = 100, 0.6
-    t0, t1 = C["bed_start"], C["bed_end"]
     roots = [73.42, 58.27, 87.31, 65.41]                       # D, Bb, F, C
     bar = 4 * beat
+    beds = C.get("beds") or [[C["bed_start"], C["bed_end"]]]
+    lifts = C.get("lifts") or ([C["lift"]] if "lift" in C else [])
     k = 0
-    t = t0
-    while t < t1:
-        r = roots[(k // 2) % 4]
-        place(mus, pad_chord(min(bar + 0.6, t1 - t + 0.6), r * 2), t, 0.55)
-        for b in range(8):                                      # eighth-note bass pulse
-            tb = t + b * beat / 2
-            if tb < t1:
-                place(mus, bass_note(beat / 2 * 0.9, r), tb, 0.4 if b % 2 == 0 else 0.26)
-                arp = [r * 4, r * 4 * 1.189, r * 4 * 1.5, r * 8][b % 4]
-                place(mus, pluck(beat / 2, arp), tb, 0.32, pan=(-0.35 if b % 2 else 0.35))
-        for b in range(4):
-            tb = t + b * beat
-            if tb < t1:
-                place(mus, kick(), tb, 0.75 if b % 2 == 0 else 0.45)
-                place(mus, hat(), tb + beat / 2, 0.22, pan=0.3)
-        if "lift" in C and C["lift"][0] <= t < C["lift"][1]:
-            for b in range(16):
-                tb = t + b * beat / 4
-                if tb < min(t1, C["lift"][1]):
-                    place(mus, hat(), tb, 0.16 if b % 2 else 0.24, pan=(-0.4 if b % 4 == 1 else 0.4))
-                    if b % 2 == 0:
-                        place(mus, pluck(beat / 4, [r * 8, r * 8 * 1.189, r * 8 * 1.5, r * 16][(b // 2) % 4]), tb, 0.22, pan=0.2)
-        t += bar
-        k += 1
+    for t0, t1 in beds:
+        t = t0
+        while t < t1:
+            r = roots[(k // 2) % 4]
+            place(mus, pad_chord(min(bar + 0.6, t1 - t + 0.6), r * 2), t, 0.55)
+            for b in range(8):                                      # eighth-note bass pulse
+                tb = t + b * beat / 2
+                if tb < t1:
+                    place(mus, bass_note(beat / 2 * 0.9, r), tb, 0.4 if b % 2 == 0 else 0.26)
+                    arp = [r * 4, r * 4 * 1.189, r * 4 * 1.5, r * 8][b % 4]
+                    place(mus, pluck(beat / 2, arp), tb, 0.32, pan=(-0.35 if b % 2 else 0.35))
+            for b in range(4):
+                tb = t + b * beat
+                if tb < t1:
+                    place(mus, kick(), tb, 0.75 if b % 2 == 0 else 0.45)
+                    place(mus, hat(), tb + beat / 2, 0.22, pan=0.3)
+            lw = next((w for w in lifts if w[0] <= t < w[1]), None)
+            if lw:
+                for b in range(16):
+                    tb = t + b * beat / 4
+                    if tb < min(t1, lw[1]):
+                        place(mus, hat(), tb, 0.16 if b % 2 else 0.24, pan=(-0.4 if b % 4 == 1 else 0.4))
+                        if b % 2 == 0:
+                            place(mus, pluck(beat / 4, [r * 8, r * 8 * 1.189, r * 8 * 1.5, r * 16][(b // 2) % 4]), tb, 0.22, pan=0.2)
+            t += bar
+            k += 1
     for a, b in zip(C.get("rattle", [])[::2], C.get("rattle", [])[1::2]):
         tt = a
         while tt < b:
             place(sfx, click(), tt, 0.35)
             tt += 0.05
     if "lift_riser" in C:
-        place(sfx, whoosh(C["lift"][0] - C["lift_riser"], True), C["lift_riser"], 0.9)
+        place(sfx, whoosh(lifts[0][0] - C["lift_riser"], True), C["lift_riser"], 0.9)
     if "stab" in C:
         place(sfx, impact(), C["stab"], 0.75)
         place(sfx, snap(), C["stab"], 0.6)
     for c in C["cuts"]:
         place(sfx, impact(), c, 0.55)
+        if C.get("snaps"):
+            place(sfx, snap(), c, 0.3)                         # mid-range attack so the hit survives a phone speaker
     for c in C["clicks"]:
         place(sfx, click(), c, 0.6)
     place(sfx, boom(3.0, 80, 30), C["end"], 0.9)
+    if C.get("snaps"):
+        place(sfx, snap(), C["end"], 0.7)
     place(sfx, shimmer(2.2), C["end"] + 0.1, 0.8)
     place(sfx, pad_chord(total - C["end"] + 0.2, 73.42 * 2), C["end"] + 0.05, 0.85)
-    # the arc: the bed sits lower through the feature tour and steps up for the lift
-    if "lift" in C:
+    # the arc: the bed sits lower through the feature tour and steps up for each lift ("lift_gain" per window)
+    if lifts:
         g = np.ones(mus.shape[1], np.float32) * 0.8
-        a, b = int(C["lift"][0] * SR), int(C["lift"][1] * SR)
-        ramp = int(0.3 * SR)
-        g[a - ramp:a] = np.linspace(0.8, 1.2, ramp)
-        g[a:b] = 1.2
+        for i, (la, lb) in enumerate(lifts):
+            a, b = int(la * SR), int(lb * SR)
+            hi = (C.get("lift_gain") or [1.2] * len(lifts))[i]
+            ramp = int(0.3 * SR)
+            g[max(0, a - ramp):a] = np.linspace(0.8, hi, a - max(0, a - ramp))
+            g[a:b] = hi
         mus *= g
-    # fade the bed out just before the end card, then a short tail
-    fade = np.ones(mus.shape[1], np.float32)
-    a, b = int((C["end"] - 0.25) * SR), int(C["end"] * SR)
-    fade[a:b] = np.linspace(1, 0.15, b - a)
-    fade[b:] = 0.15
-    mus *= fade
+    if not C.get("hold_end"):
+        # fade the bed out just before the end card, then a short tail
+        fade = np.ones(mus.shape[1], np.float32)
+        a, b = int((C["end"] - 0.25) * SR), int(C["end"] * SR)
+        fade[a:b] = np.linspace(1, 0.15, b - a)
+        fade[b:] = 0.15
+        mus *= fade
     mix = mus + sfx
     mix = mix[:, : int(total * SR)]
-    tail = int(0.6 * SR)
+    tail = int((0.12 if C.get("hold_end") else 0.6) * SR)   # hold_end: the music stays up under the call to action
     mix[:, -tail:] *= np.linspace(1, 0, tail)
     peak = np.abs(mix).max()
     mix = np.tanh(mix / peak * 1.4) / np.tanh(1.4) * 0.89        # gentle soft-clip, peak about -1 dB

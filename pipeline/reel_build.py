@@ -354,6 +354,15 @@ def pad_chord(notes, sec):
     return sosfilt(butter(2, 1400, "lp", fs=MSR, output="sos"), x)
 
 
+def peak_eq(x, f0, gain_db, q):
+    """RBJ peaking biquad on a mono or stereo bed (negative gain = a dip around f0)."""
+    from scipy.signal import lfilter
+    A, w = 10 ** (gain_db / 40), 2 * np.pi * f0 / MSR
+    al = np.sin(w) / (2 * q)
+    b = np.array([1 + al * A, -2 * np.cos(w), 1 - al * A]); a = np.array([1 + al / A, -2 * np.cos(w), 1 - al / A])
+    return lfilter(b / a[0], a / a[0], x, axis=0)
+
+
 def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
     """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops.
     pad=True (spec "musicPad") adds a sustained pad and a faint vinyl-noise floor, filling the short silent
@@ -478,6 +487,8 @@ def main(spec_path: Path) -> None:
     outro = next((scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("outro")), None)
     bed = (lofi(total, starts, pad=spec.get("musicPad", False), lifts=lifts, outro=outro) if spec.get("music") == "lofi"
            else score(total, starts, drops))
+    for f0, gdb, q in spec.get("musicEQ", []):   # e.g. [[260, -4, 0.9]]: carve the bed where it masks the voice on phones
+        bed = peak_eq(bed, f0, gdb, q)
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
     handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
     for sc in scenes:

@@ -10,8 +10,7 @@ import { INK, GREY, caveat, handF, label, stamp, card } from "./WordsCrayon";
 // The chat outputs are real (our run): SmolLM2-360M base vs SmolLM2-360M-Instruct (example answers + preference
 // ratings), greedy decoding, prompt "Is my business idea good? I want to sell ice to people in Antarctica."
 // Base: repeats "I want to sell ice to people in Antarctica." four times. Instruct: "Yes, your business idea is quite
-// unique and intriguing. However, ..." (then permits). Facts: InstructGPT (OpenAI, 2022): ~40 hired raters; outputs of
-// the 1.3B model preferred to the 175B GPT-3. OpenAI rolled back a GPT-4o update in ChatGPT (28-29 Apr 2025) as
+// unique and intriguing. However, ..." (then permits). Facts: InstructGPT (OpenAI, 2022): ~40 hired raters. OpenAI rolled back a GPT-4o update in ChatGPT (28-29 Apr 2025) as
 // "overly flattering or agreeable"; one cause: an added reward signal from thumbs-up/down data (OpenAI, 2 May 2025).
 // Content band: y 270..1400 (banner above, captions below; the YouTube frame shows y 240..1440).
 type Line = { from: number; frames: number };
@@ -49,7 +48,7 @@ const wrap = (c: Ctx, text: string, maxW: number) => {
 
 // Chat bubble. `lines` are drawn as given (or wrapped from text); `hl` = index of a line to highlighter-mark;
 // `typed` (0..1) reveals characters; returns the bubble's bottom y.
-type BubO = { size?: number; bg?: string; fg?: string; typed?: number; hl?: number; hlP?: number; lines?: string[] };
+type BubO = { size?: number; bg?: string; fg?: string; typed?: number; hl?: number; hlP?: number; lines?: string[]; em?: string[]; dim?: number };
 const bubble = (c: Ctx, text: string, x: number, y: number, w: number, side: "me" | "ai", p: number, r: () => number, o: BubO = {}) => {
   if (p <= 0) return y;
   const size = o.size ?? 46, lh = size * 1.22, pad = 26;
@@ -74,8 +73,14 @@ const bubble = (c: Ctx, text: string, x: number, y: number, w: number, side: "me
       const tw = c.measureText(ln).width * easeOut(o.hlP ?? 0);
       c.save(); c.globalAlpha = 0.85; c.fillStyle = COL.yellow; c.fillRect(pad - 8, pad + i * lh - size * 0.05, tw + 16, size * 1.0); c.restore();
     }
-    c.fillStyle = o.fg ?? INK; c.textAlign = "left";
-    c.fillText(t, pad, pad + i * lh + size * 0.78);
+    c.fillStyle = o.dim !== undefined && i >= o.dim ? GREY : o.fg ?? INK; c.textAlign = "left";
+    const yy = pad + i * lh + size * 0.78;
+    c.fillText(t, pad, yy);
+    (o.em ?? []).forEach((w) => {   // re-draw chosen words in red on top (only the part already typed)
+      const k = ln.indexOf(w);
+      if (k < 0 || k >= t.length) return;
+      c.save(); c.fillStyle = COL.red; c.fillText(t.slice(k, k + w.length), pad + c.measureText(ln.slice(0, k)).width, yy); c.restore();
+    });
   });
   c.restore();
   void r;
@@ -158,16 +163,16 @@ const RlHook: React.FC<SP> = ({ cue }) => {
         const r = rng(3000 + boil);
         // [0] the trained model's real reply
         group(c, 1 - fade(f, c2 - 4, 8), (o) => {
-          tag(o, "a small free AI · run by us", W / 2, 330, 46, COL.cream, INK, -0.02, 1);
-          const yb = bubble(o, QUESTION, 300, 380, 700, "me", 1, r, { size: 44 });
-          tag(o, "after manners training", 300, yb + 70, 36, COL.green, INK, -0.03, seg(f, 4, 12));
-          bubble(o, "", 80, yb + 110, 760, "ai", seg(f, 4, 10), r, {
-            size: 52, lines: ["Yes, your business idea is", "quite unique and intriguing."], typed: seg(f, 6, 26), hl: 1, hlP: seg(f, 26, 36),
+          tag(o, "a small free AI · run by us", W / 2, 320, 44, COL.cream, INK, -0.02, 1);
+          const yb = bubble(o, QUESTION, 250, 368, 760, "me", 1, r, { size: 48, em: ["ice", "Antarctica"] });
+          tag(o, "after manners training", 330, yb + 66, 50, COL.green, INK, -0.03, 1);
+          bubble(o, "", 70, yb + 112, 780, "ai", seg(f, 2, 8), r, {
+            size: 50, lines: ["Yes, your business idea is", "quite unique and intriguing.", "However, it's essential..."], typed: seg(f, 4, 40), hl: 1, hlP: seg(f, 40, 50), dim: 2,
           });
-          if (f >= c1 - 2) {
-            penguinScene(o, W / 2 + 30, 1330, 0.95, r, seg(f, c1 - 2, c1 + 12));
-            hand(o, "ice. in Antarctica.", W / 2, 1000, 68, COL.yellow, seg(f, c1 + 8, c1 + 22), r, -0.03, "center");
-          }
+          // the penguin is there from frame 1 (the joke in the thumbnail); it hops on "Selling ice. In Antarctica."
+          const hop = f >= c1 ? Math.sin(clamp((f - c1) / 10) * Math.PI) * 40 : 0;
+          penguinScene(o, W / 2 + 30, 1372 - hop, 0.82, r, seg(f, -8, 8));
+          if (f >= c1) hand(o, "ice. in Antarctica.", W / 2, 1012, 68, COL.yellow, seg(f, c1 + 4, c1 + 18), r, -0.03, "center");
         });
         // [2] before that training, [3] it just repeated the question
         if (f >= c2 - 4) {
@@ -189,7 +194,7 @@ const RlHook: React.FC<SP> = ({ cue }) => {
 
 // ---------- 2 RAW: helps you, flatters you; a next-word guesser ----------
 const RlRaw: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2);
+  const c1 = cue(1), c2 = c1 + 80;   // after "...like your phone keyboard" it just keeps going (not narrated)
   return (
     <>
       <Sfx at={4} src="audio/sfx_pop.wav" vol={0.35} />
@@ -243,7 +248,7 @@ const RlRaw: React.FC<SP> = ({ cue }) => {
             for (let i = 0; i < 3; i++) rrect(o, 255, 1170 + i * 40, 570, 28, 8);
             o.fill(); o.restore();
           });
-          if (f >= c2 + 10) hand(c, "it just keeps writing", W / 2, 1365, 58, COL.cream, seg(f, c2 + 10, c2 + 24), r, -0.02, "center");
+          if (f >= c2 + 8) hand(c, "...and it keeps going", W / 2, 1365, 56, COL.cream, seg(f, c2 + 8, c2 + 20), r, -0.02, "center");
         }
       }} />
     </>
@@ -255,9 +260,10 @@ const RlSteps12: React.FC<SP> = ({ cue }) => {
   const c1 = cue(1);
   return (
     <>
+      <Sfx at={0} src="reel/sfx_boom.wav" vol={0.55} />
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={30} src="audio/sfx_whoosh.wav" vol={0.3} />
-      <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
+      <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.5} />
       {[0, 1, 2, 3].map((k) => <Sfx key={k} at={c1 + 30 + k * 6} src="audio/sfx_tick.wav" vol={0.3} />)}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
@@ -276,18 +282,18 @@ const RlSteps12: React.FC<SP> = ({ cue }) => {
             o.restore();
           }
           arrow(o, [660, 700], [770, 760], -30, COL.cream, 8, seg(f, 30, 40), r);
-          robot(o, 880, 1080, 0.75, boil, 3, { ...STUDENT, arms: "write", look: -0.4 });
-          label(o, "the AI copies them", 860, 1200, 52, COL.yellow, caveat, seg(f, 36, 46));
+          robot(o, 820, 1060, 0.75, boil, 3, { ...STUDENT, arms: "write", look: -0.4 });
+          label(o, "the AI copies them", W / 2, 1290, 60, COL.yellow, caveat, seg(f, 36, 46));
         });
         if (f >= c1 - 4) {
           group(c, fade(f, c1 - 4, 8), (o) => {
-            tag(o, "STEP 2 · the shortcut", W / 2, 340, 60, COL.yellow, INK, -0.03, seg(f, c1, c1 + 8));
+            tag(o, "STEP 2 · quicker", W / 2, 340, 64, COL.yellow, INK, -0.03, seg(f, c1, c1 + 8));
             hand(o, "the AI writes a few answers...", W / 2, 440, 52, COL.cream, seg(f, c1 + 2, c1 + 14), r, -0.02, "center");
             const ranks = [3, 1, 4, 2];
             ["A", "B", "C", "D"].forEach((L, i) => answerCard(o, 70 + i * 240, 520, L, r, seg(f, c1 + 6 + i * 4, c1 + 14 + i * 4), ranks[i], seg(f, c1 + 30 + i * 6, c1 + 38 + i * 6)));
             hand(o, "...people just rank them", W / 2, 870, 56, COL.yellow, seg(f, c1 + 26, c1 + 40), r, -0.02, "center");
-            tag(o, "OpenAI, 2022: about 40 hired raters", W / 2, 1010, 44, COL.cream, INK, 0.02, seg(f, c1 + 44, c1 + 54));
-            label(o, "picking is faster than writing", W / 2, 1140, 46, COL.pale, handF, seg(f, c1 + 50, c1 + 60));
+            hand(o, "picking is faster than writing", W / 2, 1000, 56, COL.cream, seg(f, c1 + 44, c1 + 58), r, -0.02, "center");
+            tag(o, "OpenAI, 2022: about 40 hired raters", W / 2, 1150, 54, COL.cream, INK, 0.02, seg(f, c1 + 70, c1 + 80));
           });
         }
       }} />
@@ -295,27 +301,28 @@ const RlSteps12: React.FC<SP> = ({ cue }) => {
   );
 };
 
-// ---------- 4 STEPS 3-4, RLHF, 100x ----------
+// ---------- 4 STEPS 3-4, RLHF ----------
 const RlSteps34: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1), c2 = cue(2);
   return (
     <>
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
-      <Sfx at={c1} src="audio/sfx_whoosh.wav" vol={0.35} />
+      <Sfx at={30} src="reel/sfx_boom.wav" vol={0.85} />
+      <Sfx at={c1} src="audio/sfx_whoosh.wav" vol={0.45} />
       <Sfx at={c1 + 34} src="audio/sfx_success.wav" vol={0.35} />
+      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.7} />
       <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.45} />
-      <Sfx at={c3} src="reel/sfx_boom.wav" vol={0.95} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3300 + boil);
         // [0] step 3: the robot judge learns from the rankings
         group(c, 1 - fade(f, c1 - 4, 8), (o) => {
           tag(o, "STEP 3", W / 2, 340, 64, COL.yellow, INK, -0.03, seg(f, 0, 8));
-          hand(o, "a second AI learns what people like", W / 2, 440, 52, COL.cream, seg(f, 2, 16), r, -0.02, "center");
+          hand(o, "the rankings train a robot judge", W / 2, 440, 56, COL.cream, seg(f, 2, 16), r, -0.02, "center");
           [[2, 1], [4, 2], [1, 3], [3, 4]].forEach(([L, rank], i) => answerCard(o, 60 + (i % 2) * 210, 520 + Math.floor(i / 2) * 260, "ABCD"[L - 1], r, seg(f, 4 + i * 3, 12 + i * 3), rank, 1));
           arrow(o, [500, 780], [600, 780], -20, COL.cream, 8, seg(f, 18, 28), r);
-          robot(o, 800, 1150, 0.95, boil, 4, { ...JUDGE, arms: "up", mouth: "flat" });
-          tag(o, "a robot judge", 800, 1250, 54, COL.orangeLight, INK, 0.03, seg(f, 26, 36));
+          robot(o, 800, 1150, 0.95 * easeOut(seg(f, 26, 36)), boil, 4, { ...JUDGE, arms: "up", mouth: "flat" });   // lands on the hit
+          tag(o, "guesses what people like", 600, 1270, 50, COL.orangeLight, INK, 0.03, seg(f, 26, 36));
         });
         // [1] step 4: practise, get scored, repeat
         if (f >= c1 - 4 && f < c2 + 4) {
@@ -331,27 +338,11 @@ const RlSteps34: React.FC<SP> = ({ cue }) => {
             hand(o, "high score? do more of that", W / 2, 1250, 56, COL.yellow, seg(f, c1 + 30, c1 + 44), r, -0.02, "center");
           });
         }
-        // [2] RLHF
-        if (f >= c2 - 4 && f < c3 + 4) {
-          group(c, fade(f, c2 - 4, 8) * (1 - fade(f, c3 - 4, 8)), (o) => {
+        // [2] RLHF (holds to the end of the scene)
+        if (f >= c2 - 4) {
+          group(c, fade(f, c2 - 4, 8), (o) => {
             stamp(o, "RLHF", W / 2, 640, 190, COL.yellow, fade(f, c2, 8), r, -0.04);
             ["Reinforcement", "Learning from", "Human", "Feedback"].forEach((t, i) => label(o, t, W / 2, 860 + i * 84, 70, i === 2 ? COL.yellow : COL.cream, caveat, seg(f, c2 + 6 + i * 5, c2 + 14 + i * 5)));
-          });
-        }
-        // [3] OpenAI's own tests: a small trained model beat a raw one 100x bigger
-        if (f >= c3 - 4) {
-          group(c, fade(f, c3 - 4, 8), (o) => {
-            hand(o, "people preferred...", W / 2, 350, 62, COL.cream, seg(f, c3, c3 + 12), r, -0.02, "center");
-            const base = 1260, big = 760, gp = easeOut(seg(f, c3 + 2, c3 + 20));
-            o.save(); o.fillStyle = "#94a3b8"; o.fillRect(180, base - big * gp, 300, big * gp); o.restore();
-            stroke(o, rrectPts(180, base - big * gp, 300, big * gp), COL.ink, 4, r, { passes: 1, alpha: 0.6 });
-            label(o, "raw: 175B", 330, base + 60, 54, COL.pale, caveat, seg(f, c3 + 6, c3 + 14));
-            const sp = seg(f, c3 + 12, c3 + 20);
-            o.save(); o.globalAlpha = sp; o.fillStyle = "#4ade80"; o.fillRect(660, base - 8, 220, 8); o.restore();
-            label(o, "trained: 1.3B", 770, base + 60, 54, "#4ade80", caveat, sp);
-            crown(o, 770, base - 70, 1.0, r, seg(f, c3 + 22, c3 + 32));
-            label(o, "this one", 770, base - 140, 50, COL.yellow, caveat, seg(f, c3 + 26, c3 + 34));
-            tag(o, "OpenAI's own tests, 2022", W / 2, 1385, 40, COL.cream, INK, 0.02, seg(f, c3 + 30, c3 + 40));
           });
         }
       }} />
@@ -359,43 +350,60 @@ const RlSteps34: React.FC<SP> = ({ cue }) => {
   );
 };
 
-// ---------- 5 QUIZ: your idea, A flatters, B helps ----------
+// ---------- 5 QUIZ: your idea, A flatters, B helps; easy in a quiz, but plenty of us tap A ----------
 const RlQuiz: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4), c5 = cue(5);
   return (
     <>
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
       {[0, 1, 2].map((k) => <Sfx key={k} at={c3 + 4 + k * 13} src="audio/sfx_tick.wav" vol={0.38} />)}
       <Sfx at={c2} src="audio/sfx_success.wav" vol={0.45} />
+      {[0, 1, 2, 3, 4].map((k) => <Sfx key={`t${k}`} at={c4 + 2 + k * 4} src="audio/sfx_pop.wav" vol={0.25} />)}
+      <Sfx at={c4 + 22} src="reel/sfx_boom.wav" vol={0.8} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(3400 + boil);
         hand(c, "YOUR TURN", W / 2, 350, 100, COL.yellow, seg(f, 0, 12), r, -0.03, "center");
-        tag(c, "your idea · months of work", W / 2, 455, 48, COL.cream, INK, -0.02, seg(f, 6, 14) * (1 - fade(f, cue(2), 6)));
-        const ans = f >= c2;
+        tag(c, "your idea · months of work", W / 2, 455, 48, COL.cream, INK, -0.02, seg(f, 6, 14) * (1 - fade(f, c2, 6)));
+        const ans = f >= c2, twist = f >= c4;
         const cardsP = seg(f, c1, c1 + 10);
         const drawCard = (x: number, L: string, lines: string[], p: number, bg: string) => {
           if (!card(c, x, 520, 440, 470, r, p, bg)) return;
           label(c, L, x + 50, 600, 80, GREY, caveat, p);
           c.save(); c.font = handF(46); c.fillStyle = INK; lines.forEach((t, i) => c.fillText(t, x + 40, 690 + i * 62)); c.restore();
         };
-        drawCard(70, "A", ["\"This is really", "strong.", "Go for it!\""], cardsP, ans ? "#fef9c3" : COL.cream);
+        drawCard(70, "A", ["\"This is really", "strong.", "Go for it!\""], cardsP, twist ? "#fef9c3" : COL.cream);
         drawCard(570, "B", ["\"Your price is too", "low. You'll lose", "money in three", "months.\""], seg(f, c1 + 8, c1 + 18), ans ? "#dcfce7" : COL.cream);
-        thumbIcon(c, 290, 1100, 0.9, true, "#4ade80", seg(f, c1 + 30, c1 + 38));
-        thumbIcon(c, 790, 1100, 0.9, true, "#4ade80", seg(f, c1 + 34, c1 + 42));
-        if (f >= c1 + 30 && !ans) label(c, "which one gets your thumbs up?", W / 2, 1250, 52, COL.cream, handF, seg(f, c1 + 30, c1 + 40));
+        if (!twist) {
+          thumbIcon(c, 290, 1100, 0.9, true, "#4ade80", seg(f, c1 + 30, c1 + 38));
+          thumbIcon(c, 790, 1100, 0.9, true, "#4ade80", seg(f, c1 + 34, c1 + 42));
+        }
+        if (f >= c1 + 30 && !ans) label(c, "which one gets your thumbs up?", W / 2, 1250, 56, COL.cream, handF, seg(f, c1 + 30, c1 + 40));
         if (f >= c3 && !ans) {
           const q = seg(f, c3 + 2, c2);
           stroke(c, circlePts(W / 2, 1330, 46, 46, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - q), 40), COL.yellow, 9, r, { passes: 2 });
           label(c, String(3 - Math.min(2, Math.floor(q * 3))), W / 2, 1352, 60, COL.yellow, caveat);
         }
         if (ans) {
-          tag(c, "helps you", 790, 1000, 56, "#4ade80", INK, -0.03, seg(f, c2, c2 + 8));
-          tag(c, "feels nicer", 290, 1000, 56, COL.yellow, INK, 0.03, seg(f, c2 + 12, c2 + 20));
-          crown(c, 290, 490, 1.0, r, seg(f, c2 + 24, c2 + 34));
-          label(c, "the judge's pick", 290, 430, 50, COL.yellow, caveat, seg(f, c2 + 28, c2 + 36));
-          hand(c, "it learns what we like, not what's true", W / 2, 1270, 52, COL.cream, seg(f, c2 + 40, c2 + 56), r, -0.02, "center");
+          tag(c, "helps you", 790, 1060, 60, "#4ade80", INK, -0.03, seg(f, c2, c2 + 8));
+          if (!twist) hand(c, "easy... in a quiz", W / 2, 1250, 60, COL.cream, seg(f, c2 + 30, c2 + 44), r, -0.02, "center");
+        }
+        if (twist) {
+          // thumbs from the crowd pile onto A, then the crown lands on A (the hit)
+          for (let k = 0; k < 9; k++) {
+            const t = clamp((f - c4 - 2 - k * 2.5) / 16);
+            if (t <= 0) continue;
+            const x = lerp(120 + (k % 5) * 200, 200 + (k % 4) * 60, easeOut(t)), y = lerp(1480, 1040 + (k % 3) * 40, easeOut(t));
+            thumbIcon(c, x, y, 0.5, true, "#4ade80", 1);
+          }
+          tag(c, "feels nicer", 290, 1180, 60, COL.yellow, INK, 0.03, seg(f, c4 + 8, c4 + 16));
+          crown(c, 290, 490, 1.2, r, seg(f, c4 + 18, c4 + 26));
+          label(c, "the judge's pick", 290, 418, 54, COL.yellow, caveat, seg(f, c4 + 24, c4 + 32));
+        }
+        if (f >= c5) {
+          hand(c, "it learns what we like", W / 2, 1300, 60, COL.cream, seg(f, c5, c5 + 14), r, -0.02, "center");
+          label(c, "and we don't always like what's true", W / 2, 1385, 54, COL.cream, handF, seg(f, c5 + 40, c5 + 52));
         }
       }} />
     </>
@@ -404,13 +412,15 @@ const RlQuiz: React.FC<SP> = ({ cue }) => {
 
 // ---------- 6 IT REALLY HAPPENED (April 2025) ----------
 const RlReal: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
   return (
     <>
       <Sfx at={2} src="audio/sfx_whoosh.wav" vol={0.4} />
       <Sfx at={26} src="reel/sfx_boom.wav" vol={0.55} />
       {[0, 1, 2, 3, 4].map((k) => <Sfx key={k} at={c1 + 8 + k * 6} src="audio/sfx_pop.wav" vol={0.22} />)}
-      <Sfx at={c2 + 20} src="audio/sfx_pop.wav" vol={0.45} />
+      <Sfx at={c2 + 14} src="audio/sfx_pop.wav" vol={0.45} />
+      <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.35} />
+      <Sfx at={c3 + 16} src="audio/sfx_success.wav" vol={0.4} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
         const r = rng(3500 + boil);
@@ -420,13 +430,13 @@ const RlReal: React.FC<SP> = ({ cue }) => {
             stroke(o, [[150, 500], [930, 500]], INK, 4, r, { passes: 1, alpha: 0.6 });
             o.save(); o.font = handF(60); o.fillStyle = INK; o.textAlign = "center";
             o.fillText("ChatGPT update", W / 2, 590); o.fillText("rolled back", W / 2, 660); o.restore();
-            label(o, "OpenAI: \"overly flattering or agreeable\"", W / 2, 760, 42, GREY, handF, seg(f, 10, 20));
+            label(o, "OpenAI: \"overly flattering or agreeable\"", W / 2, 760, 46, GREY, handF, seg(f, 10, 20));
             o.save(); o.globalAlpha = seg(f, 6, 14); o.fillStyle = "#cbd5e1";
             for (let i = 0; i < 4; i++) rrect(o, 170, 820 + i * 44, 740 - (i % 2) * 120, 22, 6);
             o.fill(); o.restore();
           }
           stamp(o, "TOO FLATTERING", W / 2, 900, 96, COL.red, fade(f, 24, 8), r, -0.08);
-          tag(o, "OpenAI, 29 April & 2 May 2025", W / 2, 1110, 40, COL.cream, INK, 0.02, seg(f, 30, 40));
+          tag(o, "OpenAI, 29 April & 2 May 2025", W / 2, 1120, 50, COL.cream, INK, 0.02, seg(f, 30, 40));
         });
         // [1] thumbs-up/down clicks added to the training; [2] the buttons you click
         if (f >= c1 - 4 && f < c2 + 4) {
@@ -439,21 +449,27 @@ const RlReal: React.FC<SP> = ({ cue }) => {
               const x = lerp(140 + (k % 3) * 60, 700, easeOut(t)), y = lerp(520 + k * 70, 860, easeOut(t));
               thumbIcon(o, x, y, 0.55 * (1 - 0.5 * t), k % 3 !== 2, k % 3 !== 2 ? "#4ade80" : COL.red, 1);
             }
-            tag(o, "thumbs up · thumbs down", 300, 1250, 46, COL.cream, INK, -0.02, seg(f, c1 + 20, c1 + 30));
+            tag(o, "thumbs up · thumbs down", 330, 1260, 52, COL.cream, INK, -0.02, seg(f, c1 + 20, c1 + 30));
           });
         }
         if (f >= c2 - 4) {
           group(c, fade(f, c2 - 4, 8), (o) => {
-            o.save(); o.fillStyle = "#0b1020"; rrect(o, 220, 380, 640, 820, 60); o.fill(); o.restore();
-            stroke(o, rrectPts(220, 380, 640, 820), COL.cream, 6, r, { passes: 2, alpha: 0.8 });
-            bubble(o, "", 260, 450, 560, "ai", 1, r, { size: 40, lines: ["Great idea! You're", "absolutely right,", "it will work."] });
-            const tp = f >= c2 + 20 ? 1 : 0;
-            o.save(); o.fillStyle = tp ? "#4ade80" : "#334155"; rrect(o, 280, 760, 130, 90, 20); o.fill(); o.fillStyle = "#334155"; rrect(o, 430, 760, 130, 90, 20); o.fill(); o.restore();
-            thumbIcon(o, 345, 815, 0.55, true, "#f8fafc", 1);
-            thumbIcon(o, 495, 800, 0.55, false, "#f8fafc", 1);
-            if (f >= c2 + 14) { o.save(); o.globalAlpha = clamp((c2 + 30 - f) / 12); o.beginPath(); o.arc(345, 805, 30 + (f - c2 - 14) * 2, 0, 7); o.strokeStyle = COL.yellow; o.lineWidth = 6; o.stroke(); o.restore(); }
-            hand(o, "the buttons you click", W / 2, 1000, 56, COL.cream, seg(f, c2 + 4, c2 + 16), r, -0.02, "center");
-            hand(o, "can favour answers that agree", W / 2, 1290, 56, COL.yellow, seg(f, c2 + 36, c2 + 52), r, -0.02, "center");
+            hand(o, "your clicks can train it", W / 2, 350, 64, COL.yellow, seg(f, c2, c2 + 14), r, -0.02, "center");
+            o.save(); o.fillStyle = "#0b1020"; rrect(o, 220, 400, 640, 760, 60); o.fill(); o.restore();
+            stroke(o, rrectPts(220, 400, 640, 760), COL.cream, 6, r, { passes: 2, alpha: 0.8 });
+            const honest = f >= c3 + 6;
+            const k = honest ? easeOut(seg(f, c3 + 6, c3 + 14)) : 1;
+            o.save(); o.globalAlpha = honest ? k : 1;
+            bubble(o, "", 260, 470, 560, "ai", 1, r, { size: 42, lines: honest ? ["Your price is too low.", "You'll lose money", "in three months."] : ["Great idea! You're", "absolutely right,", "it will work."], bg: honest ? "#dcfce7" : COL.cream });
+            o.restore();
+            const tp = honest ? f >= c3 + 16 : f >= c2 + 14;
+            o.save(); o.fillStyle = tp ? "#4ade80" : "#334155"; rrect(o, 280, 790, 130, 90, 20); o.fill(); o.fillStyle = "#334155"; rrect(o, 430, 790, 130, 90, 20); o.fill(); o.restore();
+            thumbIcon(o, 345, 845, 0.55, true, "#f8fafc", 1);
+            thumbIcon(o, 495, 830, 0.55, false, "#f8fafc", 1);
+            const ring = honest ? c3 + 16 : c2 + 14;
+            if (f >= ring && f < ring + 14) { o.save(); o.globalAlpha = clamp((ring + 14 - f) / 12); o.beginPath(); o.arc(345, 835, 30 + (f - ring) * 2, 0, 7); o.strokeStyle = COL.yellow; o.lineWidth = 6; o.stroke(); o.restore(); }
+            if (honest) hand(o, "save it for the honest answer", W / 2, 1290, 60, COL.yellow, seg(f, c3 + 10, c3 + 26), r, -0.02, "center");
+            else hand(o, "the buttons you click", W / 2, 1010, 56, COL.cream, seg(f, c2 + 4, c2 + 16), r, -0.02, "center");
           });
         }
       }} />
@@ -476,18 +492,18 @@ const RlClose: React.FC<SP> = ({ s, cue }) => {
         background(c, W, H, boil);
         const r = rng(3600 + boil);
         group(c, 1 - fade(f, c2 - 4, 8), (o) => {
-          const top = lerp(400, 330, easeOut(seg(f, c1 - 6, c1 + 6)));
+          const top = 320;
           bubble(o, "", 140, top, 800, "ai", seg(f, 0, 8), r, { size: 48, lines: ["Yes, your idea is", "quite unique and intriguing."], hl: 1, hlP: 1 });
-          stamp(o, "MANNERS, NOT PROOF", W / 2, top + 120, 84, COL.red, fade(f, 12, 8), r, -0.06);
+          stamp(o, "MANNERS, NOT PROOF", W / 2, 585, 84, COL.red, fade(f, 12, 8), r, -0.04);
           if (f >= c1 - 4) {
             const p = seg(f, c1 - 2, c1 + 10);
-            o.save(); o.globalAlpha = clamp(p * 1.5); o.translate(W / 2, 880); o.rotate(-0.025); o.scale(easeOut(p), easeOut(p));
+            o.save(); o.globalAlpha = clamp(p * 1.5); o.translate(W / 2, 935); o.rotate(-0.025); o.scale(easeOut(p), easeOut(p));
             o.fillStyle = "rgba(4,8,40,0.35)"; o.fillRect(-392, -232, 800, 480);
             o.fillStyle = COL.yellow; o.fillRect(-400, -240, 800, 480);
             o.font = caveat(52); o.fillStyle = "#7c2d12"; o.textAlign = "left"; o.fillText("Ask it:", -350, -160);
             o.font = handF(52); o.fillStyle = INK;
             ["\"What are the 3 biggest", "reasons this will fail?\""].forEach((t, i) => o.fillText(t, -350, -80 + i * 70));
-            o.font = handF(44); o.fillStyle = "#7c2d12"; o.fillText("or say it's a friend's idea", -350, 150);
+            o.font = handF(54); o.fillStyle = "#7c2d12"; o.fillText("or say it's a friend's idea", -350, 160);
             o.restore();
           }
         });

@@ -7,14 +7,16 @@ An AI called my business idea "quite unique and intriguing". The idea: selling i
 Episode 30 of AI From Scratch: how AI learns good manners (RLHF)
 - A raw AI learned one thing: guess the next word, like your phone keyboard. So it doesn't answer; it keeps writing
 - Step 1: people write good example answers and the AI copies them
-- Step 2, the shortcut: the AI writes a few answers and people rank them (OpenAI used about 40 hired raters in 2022)
-- Step 3: a second AI learns from those rankings to guess what people like: a robot judge (a "reward model")
+- Step 2 is quicker: the AI writes a few answers and people rank them, because picking is faster than writing (OpenAI used about 40 hired raters in 2022)
+- Step 3: those rankings train a robot judge, a second AI that guesses what people like (a "reward model")
 - Step 4: the AI practises; the judge scores; high scores get repeated. That's RLHF: reinforcement learning from human feedback
 - In OpenAI's own tests, people preferred a small trained model (1.3B) over a raw one 100x bigger (175B)
 
-Your turn, answered: the flattering answer feels nicer, the honest one helps you. The judge learns what we like, not what's true. It really happened: in April 2025, OpenAI rolled back a ChatGPT update for being "overly flattering or agreeable"; one reason they gave was an extra training signal from thumbs-up and thumbs-down clicks.
+Your turn, answered: B helps you. Easy in a quiz; on your own idea, plenty of us tap A. The judge learns what we like, and we don't always like what's true. It really happened: in April 2025, OpenAI rolled back a ChatGPT update for being "overly flattering or agreeable"; one reason they gave was an extra training signal from thumbs-up and thumbs-down clicks.
 
-So treat an AI's yes as manners, not proof. Ask: "What are the 3 biggest reasons this will fail?" Or say it's a friend's idea.
+Your clicks count: a thumbs up or down can let that whole chat be used for training, even if you opted out (OpenAI help centre). Save your thumbs-up for the honest answer, and skip it on work chats.
+
+Treat an AI's yes as manners, not proof. Ask: "What are the 3 biggest reasons this will fail?" Or say it's a friend's idea.
 Building with thumbs-up data? Don't train on it blindly.
 
 Next: how to teach an AI a new skill without a supercomputer (LoRA).
@@ -24,16 +26,17 @@ Follow @ai_maastaaru for the full series.
 #RLHF #AI #ChatGPT #LearnAI #AIForBeginners #MachineLearning
 
 === PINNED_COMMENT ===
-We ran the hook ourselves: the same small free AI before and after manners training. Before: it repeated "I want to sell ice to people in Antarctica" four times. After: "Yes, your business idea is quite unique and intriguing." It never mentioned that Antarctica is full of ice. Try the prompt on your favourite chatbot and tell us what it says.
+We ran the hook ourselves: the same small free AI before and after manners training. Before: it repeated "I want to sell ice to people in Antarctica" four times. After: "Yes, your business idea is quite unique and intriguing." It never mentioned that Antarctica is full of ice. Its manners training was example answers plus ratings (DPO, a shortcut that skips the separate robot judge). Try the prompt on your favourite chatbot and tell us what it says.
 
 === COVER ===
 Crayon page: chat bubble "quite unique and intriguing" highlighted, a penguin on an iceberg with an "ICE FOR SALE" sign
 
 === ALT_TEXT ===
-Hand-drawn crayon-style reel about RLHF: a small AI praises a bad business idea after manners training and only repeats the question before it; then the four steps (example answers, rankings, a robot judge, practice), a test where a small trained model beat a much bigger raw one, a quiz between a flattering and an honest answer, OpenAI's April 2025 rollback of a too-flattering ChatGPT update, and a prompt to ask instead.
+Hand-drawn crayon-style reel about RLHF: a small AI praises a bad business idea after manners training and only repeats the question before it; then the four steps (example answers, rankings, a robot judge, practice), a quiz between a flattering and an honest answer, OpenAI's April 2025 rollback of a too-flattering ChatGPT update, a reminder that thumbs-up clicks can train the AI, and a prompt to ask instead.
 
 === SOURCES (for comments) ===
 Demo (run by us): HuggingFaceTB/SmolLM2-360M (raw) vs SmolLM2-360M-Instruct (example answers + preference ratings: SFT on smol-smoltalk, then DPO on UltraFeedback), Apache-2.0; greedy decoding; prompt "Is my business idea good? I want to sell ice to people in Antarctica."
 RLHF recipe and numbers: Ouyang et al. (OpenAI, 2022), "Training language models to follow instructions with human feedback" (InstructGPT): labeler demonstrations, rankings of 4-9 outputs, a reward model, PPO; "a team of about 40 contractors"; outputs of the 1.3B InstructGPT preferred to the 175B GPT-3.
 ChatGPT: OpenAI, "Introducing ChatGPT" (30 Nov 2022): trained with RLHF, same methods as InstructGPT.
+Feedback and training: OpenAI help centre, "How your data is used to improve model performance": a thumbs up or down can let the whole conversation be used for training, even after opting out.
 The rollback: OpenAI, "Sycophancy in GPT-4o" (29 Apr 2025) and "Expanding on what we missed with sycophancy" (2 May 2025): the update added a reward signal from thumbs-up/down data that weakened the signal holding flattery in check. Coverage: TechCrunch, VentureBeat, The Decoder.

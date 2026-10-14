@@ -1,0 +1,71 @@
+UPLOAD: 031 (YouTube, two uploads; 16:9 regular videos, not Shorts)
+
+########## ENGLISH: 031_ep30_yt_en.mp4 ##########
+=== TITLE ===
+An AI Called My Terrible Idea "Intriguing": How AI Learns Manners (RLHF) | AI From Scratch Ep 30
+
+=== DESCRIPTION ===
+We asked a small free AI: "Is my business idea good? I want to sell ice to people in Antarctica." After its manners training it said the idea was "quite unique and intriguing". Before that training, the same AI couldn't answer at all: it repeated the question four times. Here is how AI learns manners (RLHF), why that training also makes it flatter you, and what to do about it. We ran the test ourselves.
+
+In this episode:
+- A raw AI learned one thing: guess the next word, like your phone keyboard. So it doesn't answer; it keeps writing
+- Step 1: people write good example answers and the AI copies them
+- Step 2 is quicker: the AI writes a few answers and people rank them, because picking is faster than writing (OpenAI used about 40 hired raters in 2022)
+- Step 3: those rankings train a robot judge, a second AI that guesses what people like (a "reward model")
+- Step 4: the AI practises, the judge scores, high scores get repeated. That's RLHF: reinforcement learning from human feedback
+- Your turn: your idea, two answers. B helps you; easy in a quiz. On your own idea, plenty of us tap A. The judge learns what we like, and we don't always like what's true
+- It really happened: in April 2025 OpenAI rolled back a ChatGPT update for being "overly flattering or agreeable"; one reason they gave was an extra training signal from thumbs-up and thumbs-down clicks
+- Your clicks count: a thumbs up or down can let that whole chat be used for training, even if you opted out (OpenAI help centre). Save your thumbs-up for the honest answer
+- Treat an AI's yes as manners, not proof. Ask "What are the 3 biggest reasons this will fail?", or say it's a friend's idea
+
+Chapters:
+0:00 An AI called my bad idea "intriguing"
+0:13 A raw AI only guesses the next word
+0:24 Steps 1-2: examples, then rankings
+0:33 Steps 3-4: a robot judge, then practice
+0:47 Your turn: which answer gets your thumbs up?
+1:10 April 2025: an update pulled for flattery
+1:25 Treat an AI's yes as manners
+
+How we tested (run by us): HuggingFaceTB/SmolLM2-360M (the raw model) vs SmolLM2-360M-Instruct (Apache-2.0). Its manners training was example answers plus ratings: SFT on smol-smoltalk, then DPO on UltraFeedback, a shortcut that skips the separate robot judge. Greedy decoding; prompt "Is my business idea good? I want to sell ice to people in Antarctica." The raw model repeated the second sentence four times; the trained one said "Yes, your business idea is quite unique and intriguing. However, it's essential to consider several factors..." and went on about permits. It never mentioned that Antarctica is already full of ice.
+Sources: Ouyang et al. (OpenAI, 2022), "Training language models to follow instructions with human feedback" (InstructGPT: demonstrations, rankings of 4-9 outputs, a reward model, PPO; "a team of about 40 contractors"). OpenAI, "Introducing ChatGPT" (30 Nov 2022). OpenAI, "Sycophancy in GPT-4o" (29 Apr 2025) and "Expanding on what we missed with sycophancy" (2 May 2025). OpenAI help centre, "How your data is used to improve model performance". Coverage of the rollback: TechCrunch, VentureBeat, The Decoder.
+
+Previous episode: How AI sees a photo (computer vision).
+Next: how to teach an AI a new skill without a supercomputer (LoRA).
+Subscribe for the full AI From Scratch series.
+
+#RLHF #AI #ChatGPT #LearnAI #AIForBeginners #MachineLearning
+
+=== PINNED_COMMENT ===
+We ran the hook ourselves: the same small free AI before and after manners training. Before: it repeated "I want to sell ice to people in Antarctica" four times. After: "quite unique and intriguing", and not a word about Antarctica already being ice. Try the prompt on your favourite chatbot: what did it say?
+
+########## TELUGU: 031_ep30_yt_te.mp4 ##########
+=== TITLE ===
+Antarctica lo Ice Ammadam "Intriguing" Idea Anta! AI ki Manners Ela Nerpistaru (RLHF) Telugu lo | AI From Scratch Ep 30
+
+=== DESCRIPTION ===
+Oka chinna free AI ni adigam: "Naa business idea bagunda? Antarctica lo ice ammali." Manners training tarvata adi "quite unique and intriguing" annadi! Aa training ki mundu ade AI asalu answer ivvaledu: naa prashnane naalugu saarlu repeat chesindi. AI ki manners ela nerpistaru (RLHF), ade training valla adi enduku butter kodutundi, manam em cheyyali: test meme chesam.
+
+Ee episode lo:
+- Raw AI nerchukunnadi okkate: next word guess cheyyadam, mee phone keyboard laaga. Anduke answer ivvadu, raastune untundi
+- Step 1: manushulu manchi example answers raastaru, AI copy chestundi
+- Step 2 inka fast: AI konni answers raastundi, manushulu rank istaru; raayadam kanna pick cheyyadam fast (OpenAI 2022 lo daadaapu 40 mandi raters)
+- Step 3: aa rankings tho oka robot judge ni train chestaru: janalaki em nachutundo guess chese inko AI
+- Step 4: AI practice chestundi, judge score istundi, ekkuva score vachina daanne malli chestundi. Ide RLHF
+- Mee vantu: B help chestundi; quiz lo easy. Kaani mee sonta idea ayite manalo chala mandi A ke thumbs up istam. Judge manaki em nachutundo ade nerchukuntundi
+- Idi nijamga jarigindi: April 2025 lo ChatGPT mari ekkuva butter kodutondani OpenAI oka update ni venakki teesukundi; oka karanam thumbs-up, thumbs-down clicks ni training lo kalapadam
+- Mee clicks kuda lekka: thumbs up/down iste aa chat motham training ki vellochu, opt out chesina kuda (OpenAI help centre). Mee thumbs up nijaayitiga cheppe answer ke ivvandi
+- AI "yes" ante adi manners, proof kaadu. "Naa idea fail avvadaniki top 3 reasons enti?" ani adagandi, leda idi naa friend idea ani cheppandi
+
+Chapters:
+CHAPTERS_TE
+
+Sources: English description lo unnayi (demo: SmolLM2-360M raw vs Instruct, run by us; InstructGPT paper, OpenAI 2022; OpenAI's April/May 2025 posts on the rolled-back update; OpenAI help centre on feedback and training).
+
+Next: supercomputer lekunda AI ki kotha skill ela nerpinchalo (LoRA).
+Subscribe cheyyandi: AI From Scratch, Telugu lo.
+
+#AIinTelugu #TeluguAI #RLHF #ChatGPT #LearnAI #TeluguTech
+
+=== PINNED_COMMENT ===
+Hook lo AI output memu run chesindi: ade chinna free AI, training ki mundu "I want to sell ice to people in Antarctica" ani naalugu saarlu repeat chesindi; training tarvata "quite unique and intriguing" annadi. Antarctica lo ice already undani okka maata kuda cheppaledu. Mee chatbot ni adigi choodandi, em cheppindo comment cheyyandi.

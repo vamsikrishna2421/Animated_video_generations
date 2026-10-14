@@ -1,6 +1,6 @@
 # Voice EP30 English with Fish (free model), steered by the channel narrator (an EP29 line as the reference clip).
 # Each take is checked by Whisper against key phrases; up to 4 takes per line, best kept.
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep30/voice_en.py [scene ...]
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep30/voice_en.py [scene | scene:file2 ...]
 import json
 import re
 import sys
@@ -18,11 +18,11 @@ REF_TEXT = ("This dog is a banana, says this AI, 99.99% sure. Before we touched 
 PATS = {
     ("hook", "file"): [r"business idea", r"unique and intriguing", r"selling ice", r"antarctica", r"manners training", r"couldn'?t even answer", r"repeated my words", r"four times"],
     ("raw", "file"): [r"helps you", r"flatters you", r"stay till the end", r"train it yourself", r"raw (ai|a\.i\.)", r"next word", r"phone keyboard", r"keeps writing"],
-    ("steps12", "file"): [r"step one", r"example answers", r"copies them", r"step two", r"shortcut", r"rank them"],
-    ("steps34", "file"): [r"step three", r"rankings", r"robot judge", r"step four", r"practi[sc]es", r"high score", r"again and again", r"r\.? ?l\.? ?h\.? ?f|rlhf", r"human feedback", r"open ?ai", r"hundred times bigger|100 times bigger"],
+    ("steps12", "file"): [r"step (one|1)", r"example answers", r"copies them", r"step (two|2)", r"quicker", r"rank them"],
+    ("steps34", "file"): [r"step (three|3)", r"rankings", r"robot judge", r"guesses what people like", r"step (four|4)", r"practi[sc]es", r"high score", r"r\.? ?l\.? ?h\.? ?f|rlhf", r"human feedback"],
     ("quiz", "file"): [r"your turn", r"your idea", r"months", r"really strong", r"go for it", r"price is too low", r"lose money", r"three months|3 months", r"thumbs up"],
-    ("quiz", "file2"): [r"helps you", r"feels nicer", r"what we like", r"what'?s true"],
-    ("real", "file"): [r"just theory", r"april", r"twenty[- ]?five|2025", r"open ?ai", r"chat ?gpt|chat g\.?p\.?t", r"too flattering", r"thumbs[- ]up", r"thumbs[- ]down", r"buttons", r"agree with you"],
+    ("quiz", "file2"): [r"helps you", r"easy in a quiz", r"for real", r"own idea", r"tap a,? instead", r"what we like", r"don'?t always like", r"what'?s true"],
+    ("real", "file"): [r"really happened", r"april", r"twenty[- ]?five|2025", r"open ?ai", r"chat ?gpt|chat g\.?p\.?t", r"too flattering", r"thumbs[- ]up", r"thumbs[- ]down", r"clicks can train", r"honest answer"],
     ("close", "file"): [r"manners,? not proof", r"three biggest reasons|3 biggest reasons", r"fail", r"friend'?s idea", r"new skill", r"supercomputer", r"follow"],
 }
 ASR = None
@@ -42,12 +42,12 @@ def main(only):
     src = ROOT / "video/public/reel" / spec["id"] / "src"
     src.mkdir(parents=True, exist_ok=True)
     for sc in spec["scenes"]:
-        if only and sc["id"] not in only:
+        if only and sc["id"] not in {o.split(":")[0] for o in only}:
             continue
         line = sc["lines"][0]
         for key, tkey in (("file", "tts"), ("file2", "tts2")):
-            if key not in line:
-                continue
+            if key not in line or (only and sc["id"] not in only and f"{sc['id']}:{key}" not in only):
+                continue   # "quiz:file2" re-voices only the second take of that scene
             text, pats, out = line[tkey], PATS[(sc["id"], key)], src / line[key]
             best = None
             for k in range(4):

@@ -9,15 +9,16 @@ const lerp = (a, b, k) => a + (b - a) * k;
 
 (async () => {
   const phone = mode === "phone" || mode === "intro";
-  if (mode === "intro") {
+  const desk2x = mode === "desk";
+  if (mode === "intro" || mode === "deskintro") {
     // Same phone intro with another name (shows the one-line edit in config.js). NAME env var, default PRIYA.
     process.env.__NAME = process.env.NAME || "PRIYA";
   }
   const { browser, page } = await open(phone
     ? { url: "http://127.0.0.1:8765/", width: 432, height: 768, scale: 2.5, mobile: true }
-    : { url: "http://127.0.0.1:8765/", width: 1280, height: 720, scale: 2 });
+    : { url: "http://127.0.0.1:8765/", width: 1280, height: 720, scale: desk2x ? 2 : 1.5 });
   await hideUI(page);
-  if (mode === "intro") {
+  if (mode === "intro" || mode === "deskintro") {
     await page.evaluate((n) => {   // rebuild the wordmark with the new name, exactly as config.js would
       const wm = document.getElementById("wordmark");
       const letters = [...n], mid = (letters.length - 1) / 2;
@@ -35,16 +36,23 @@ const lerp = (a, b, k) => a + (b - a) * k;
   const ff = spawn(FFD + "/ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", String(FPS), "-i", "-",
     "-c:v", "libx264", "-preset", "medium", "-crf", "15", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out], { env: { ...process.env, LD_LIBRARY_PATH: FFD }, stdio: ["pipe", "inherit", "inherit"] });
   let frames = 0;
-  // pointer: arrow cursor on desktop, a fingertip dot on the phone
-  await page.evaluate((phone) => {
+  // pointer: arrow cursor on desktop, a fingertip dot on the phone. The laptop reel shows the desktop recording small,
+  // so "deskflow" gets a bigger arrow and a bold ring on every click.
+  await page.evaluate(([phone, big]) => {
     const c = document.getElementById("__cursor");
+    if (big) {
+      const sv = c.querySelector("svg");
+      sv.setAttribute("width", "46"); sv.setAttribute("height", "46");
+      c.style.width = "46px"; c.style.height = "46px";
+      c.querySelector("i").style.cssText = "position:absolute;left:-26px;top:-26px;width:52px;height:52px;border-radius:50%;box-sizing:border-box;border:6px solid #fff;box-shadow:0 0 0 4px rgba(229,9,20,.95),0 0 22px rgba(229,9,20,.7);transform:scale(0);opacity:0;";
+    }
     if (phone) {
       c.innerHTML = "<b></b><i></i>";
       c.querySelector("b").style.cssText = "position:absolute;left:-19px;top:-19px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.42);border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 10px rgba(0,0,0,.45);";
       c.querySelector("i").style.cssText = "position:absolute;left:-19px;top:-19px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.6);transform:scale(0);opacity:0;";
       c.style.filter = "none";
     }
-  }, phone);
+  }, [phone, mode === "deskflow"]);
   let P = { x: -80, y: -80, vis: 0, rip: null };
   const setP = async () => {
     await page.evaluate(([x, y, vis, rip, phone]) => {
@@ -52,13 +60,15 @@ const lerp = (a, b, k) => a + (b - a) * k;
       c.style.left = (phone ? x : x - 4) + "px"; c.style.top = (phone ? y : y - 2) + "px";
       c.style.opacity = String(vis);
       const r = c.querySelector("i");
-      if (rip == null) { r.style.opacity = 0; } else { r.style.opacity = String(0.9 * (1 - rip)); r.style.transform = `scale(${0.5 + rip * 1.8})`; }
+      if (rip == null) { r.style.opacity = 0; } else { r.style.opacity = String(0.95 * (1 - rip * rip)); r.style.transform = `scale(${0.5 + rip * 1.8})`; }
     }, [P.x, P.y, P.vis, P.rip, phone]);
     if (P.vis > 0.5) await page.mouse.move(P.x, P.y);
   };
+  const log = [];
   const shot = async () => {
     await setP();
     ff.stdin.write(await page.screenshot({ type: "jpeg", quality: 92 }));
+    log.push([+P.x.toFixed(1), +P.y.toFixed(1), +P.vis.toFixed(2), P.rip == null ? null : +P.rip.toFixed(2)]);
     frames++;
   };
   const run = async (ms, fn) => {
@@ -79,9 +89,44 @@ const lerp = (a, b, k) => a + (b - a) * k;
     P.rip = null;
   };
 
-  if (mode === "intro") {
+  if (mode === "intro" || mode === "deskintro") {
     await page.evaluate(() => window.__site.playIntro(false));
     await run(3600);
+  } else if (mode === "deskflow") {
+    // desktop: the name intro, pick a profile, the home page, a card, the numbered row, a pop-up
+    P = { x: 1180, y: 700, vis: 0, rip: null };
+    await page.evaluate(() => window.__site.playIntro(false));
+    await run(3700);
+    await run(700);
+    let t = await box(".profile >> nth=0");
+    await run(250, (k) => { P.vis = k; });
+    await moveTo({ x: t.x, y: t.y - 20 }, 700);
+    await run(300);
+    await press(".profile >> nth=0");
+    await run(1700);
+    await scrollY(250, 900);
+    t = await box("#row-0 .card >> nth=1");
+    await moveTo(t, 800);
+    await run(1400);
+    await moveTo({ x: t.x + 60, y: 690 }, 400);
+    const y1 = await page.evaluate(() => document.querySelector("#row-1").getBoundingClientRect().top + window.scrollY - 110);
+    await scrollY(y1, 1000);
+    t = await box("#row-1 .card >> nth=2");
+    await moveTo(t, 600);
+    await run(900);
+    const ar = await box("#row-1 .arrow.right");
+    await moveTo(ar, 500);
+    await press("#row-1 .arrow.right");
+    await run(800);
+    await moveTo({ x: 900, y: 600 }, 300);
+    const y2 = await page.evaluate(() => document.querySelector("#row-2").getBoundingClientRect().top + window.scrollY - 110);
+    await scrollY(y2, 800);
+    t = await box("#row-2 .card >> nth=4");
+    await moveTo(t, 600);
+    await run(600);
+    await press("#row-2 .card >> nth=4");
+    await moveTo({ x: 1150, y: 640 }, 500);
+    await run(1600);
   } else if (phone) {
     await page.evaluate(() => window.__site.playIntro(false));
     await run(3700);                                          // the name intro
@@ -138,6 +183,7 @@ const lerp = (a, b, k) => a + (b - a) * k;
   }
   ff.stdin.end();
   await new Promise((r) => ff.on("close", r));
+  require("fs").writeFileSync(out.replace(/\.mp4$/, ".pointer.json"), JSON.stringify({ fps: FPS, viewport: phone ? [432, 768] : [1280, 720], frames: log }));
   await browser.close();
   console.log(`${mode}: ${frames} frames, ${(frames / FPS).toFixed(2)} s -> ${out}`);
 })().catch((e) => { console.error(e); process.exit(1); });

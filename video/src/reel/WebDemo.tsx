@@ -4,7 +4,10 @@ import { Fonts } from "../components/Fonts";
 // Website demo reel (9:16): screen recordings of a web template made frame by frame in a browser. Phone recordings
 // play full screen; the desktop recording sits in a browser window with camera moves; an end card points to the code.
 export type Cam = { t: number; s: number; x: number; y: number };   // seconds into the segment, zoom, focus (0-1)
-export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number };
+// A callout labels what the laptop shot is about: a pill pinned to a point on the screen recording (u, v: 0-1 of the
+// recording), drawn in screen space so it stays big when the camera pushes in. y = fixed pill height on the canvas.
+export type Callout = { t0: number; t1: number; text: string; sub?: string; u: number; v: number; y: number };
+export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[] };
 export type CodeEdit = { file: string; lines: string[]; line: number; from: string; to: string };
 export type WebDemoProps = { phone: string; desk: string; audio: string; url: string; handle: string; segs: Seg[]; code?: CodeEdit; end: { big: string; lines: string[]; cta: string } };
 export const webDemoDuration = (p: WebDemoProps) => Math.round(p.segs.reduce((a, s) => a + s.dur, 0) * 30);
@@ -151,6 +154,130 @@ const Code: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
   );
 };
 
+// A laptop on a dark stage; the screen plays a desktop recording (or the config.js edit). `open` swings the lid up
+// at the start; `lcam` pushes the camera in (s = zoom, x/y = focus point on the 1080 x 1920 canvas, 0-1).
+const LW = 920, LH = 518, LX = 80, LY = 700;     // screen (inside the bezel) on the canvas
+const LaptopFrame: React.FC<{ seg: Seg; children: React.ReactNode }> = ({ seg, children }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const t = f / fps;
+  const lid = seg.open ? interpolate(t, [0, 0.75], [88, 0], { ...cl, easing: Easing.out(Easing.cubic) }) : 0;
+  const glow = seg.open ? interpolate(t, [0.1, 0.8], [0, 1], cl) : 1;
+  const leak = seg.open ? interpolate(t, [0, 0.35, 0.9], [1, 1, 0], cl) : 0;   // red light from the gap under the lid, frame 1 on
+  const { s, x, y } = camAt(seg.lcam, t);
+  const tx = 540 - x * 1080 * s, ty = 960 - y * 1920 * s;
+  const B = 30;   // bezel
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 46%, #2a1013 0%, #0a0607 55%, #050505 100%)" }}>
+      <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transformOrigin: "0 0", transform: `translate(${tx}px, ${ty}px) scale(${s})` }}>
+        {/* floor glow and shadow; on a closed lid the red light leaks out along the hinge */}
+        <div style={{ position: "absolute", left: 60, top: LY + LH + 40, width: 960, height: 160, borderRadius: "50%", background: "radial-gradient(ellipse at 50% 40%, rgba(229,9,20,0.28), rgba(0,0,0,0) 70%)", filter: "blur(10px)", opacity: Math.max(glow, 0.8 * leak) }} />
+        <div style={{ position: "absolute", left: 40, top: LY + LH + B - 150, width: 1000, height: 260, borderRadius: "50%", background: "radial-gradient(ellipse at 50% 60%, rgba(255,40,50,0.85), rgba(229,9,20,0.35) 35%, rgba(0,0,0,0) 70%)", filter: "blur(16px)", opacity: leak }} />
+        <div style={{ position: "absolute", left: 30, top: LY + LH + B + 46, width: 1020, height: 60, borderRadius: "50%", background: "rgba(0,0,0,0.75)", filter: "blur(18px)" }} />
+        {/* base: deck seen from slightly above, then the front edge */}
+        <div style={{ position: "absolute", left: 0, top: LY + LH + B + 4, width: 1080, height: 42, background: "linear-gradient(180deg, #3a3d44 0%, #23252b 100%)", clipPath: "polygon(5% 0, 95% 0, 100% 70%, 0 70%)" }} />
+        <div style={{ position: "absolute", left: 0, top: LY + LH + B + 33, width: 1080, height: 14, background: "linear-gradient(180deg, #5a5f6a, #1b1c20)", borderRadius: "0 0 18px 18px", boxShadow: "0 -1px 0 rgba(255,255,255,0.18)" }} />
+        <div style={{ position: "absolute", left: 470, top: LY + LH + B + 4, width: 140, height: 10, background: "#16171b", borderRadius: "0 0 10px 10px" }} />
+        {/* lid */}
+        <div style={{ position: "absolute", left: LX - B, top: LY - B, width: LW + 2 * B, height: LH + 2 * B + 4, perspective: 1600, perspectiveOrigin: "50% 100%" }}>
+          <div style={{ width: "100%", height: "100%", transformOrigin: "50% 100%", transform: `rotateX(${lid}deg)`, background: "linear-gradient(180deg, #34363d, #17181c)", borderRadius: 26, boxShadow: "0 0 0 2px #4a4d56 inset, 0 2px 0 0 rgba(255,255,255,0.10) inset, 0 0 0 1px rgba(255,255,255,0.14), 0 0 60px rgba(229,9,20,0.22), 0 20px 60px rgba(0,0,0,0.6)" }}>
+            <div style={{ position: "absolute", left: B, top: B, width: LW, height: LH, background: "#000", overflow: "hidden", borderRadius: 6, opacity: glow }}>
+              {children}
+              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(115deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 38%)", pointerEvents: "none" }} />
+            </div>
+            <div style={{ position: "absolute", left: "50%", top: 11, width: 8, height: 8, marginLeft: -4, borderRadius: 4, background: "#0d0e10", boxShadow: "0 0 0 2px #2c2e33" }} />
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const Callouts: React.FC<{ seg: Seg }> = ({ seg }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const t = f / fps;
+  if (!seg.callouts) return null;
+  const { s, x, y } = camAt(seg.lcam, t);
+  const tx = 540 - x * 1080 * s, ty = 960 - y * 1920 * s;
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {seg.callouts.map((c, i) => {
+        if (t < c.t0 - 0.05 || t > c.t1 + 0.3) return null;
+        const k = spring({ frame: f - Math.round(c.t0 * fps), fps, config: { damping: 14, mass: 0.6 } });
+        const out = interpolate(t, [c.t1, c.t1 + 0.25], [1, 0], cl);
+        const ax = tx + (LX + c.u * LW) * s, ay = ty + (LY + c.v * LH) * s;   // the anchor on screen
+        const cx = 540 + Math.max(-300, Math.min(300, ax - 540)), above = c.y < ay;   // pill centre (kept on screen)
+        const y0 = above ? c.y + (c.sub ? 148 : 98) : c.y, y1 = above ? ay - 18 : ay + 18;
+        return (
+          <div key={i} style={{ position: "absolute", inset: 0, opacity: out }}>
+            <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
+              <line x1={cx} y1={y0} x2={cx + (ax - cx) * k} y2={y0 + (y1 - y0) * k} stroke="#fff" strokeWidth={6} strokeLinecap="round" />
+              <circle cx={ax} cy={ay} r={18 * k} fill="none" stroke="#fff" strokeWidth={6} />
+            </svg>
+            <div style={{ position: "absolute", top: c.y, left: 0, right: 0, display: "flex", justifyContent: "center", transform: `translateX(${cx - 540}px) scale(${0.6 + 0.4 * k})`, opacity: k }}>
+              <div style={{ background: RED, borderRadius: 18, padding: "10px 30px 12px", boxShadow: "0 10px 30px rgba(0,0,0,0.55)", textAlign: "center" }}>
+                <div style={{ fontFamily: BEBAS, fontSize: 76, lineHeight: 1, color: "#fff", letterSpacing: 1 }}>{c.text}</div>
+                {c.sub ? <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 38, color: "#fff", marginTop: 4 }}>{c.sub}</div> : null}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+const LaptopVideo: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
+  const { fps } = useVideoConfig();
+  return (
+    <LaptopFrame seg={seg}>
+      <OffthreadVideo src={staticFile(src)} startFrom={Math.round((seg.src0 ?? 0) * fps)} muted style={{ width: LW, height: LH }} />
+    </LaptopFrame>
+  );
+};
+
+// The config.js edit, drawn at screen size on the laptop.
+const LaptopCode: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const t = f / fps;
+  const del0 = 0.7, del1 = del0 + 0.05 * code.from.length, typ1 = del1 + 0.25 + 0.09 * code.to.length;
+  let shown = code.from;
+  if (t >= del0 && t < del1) shown = code.from.slice(0, Math.max(0, code.from.length - Math.floor((t - del0) / 0.05)));
+  else if (t >= del1) shown = code.to.slice(0, Math.max(0, Math.min(code.to.length, Math.floor((t - del1 - 0.25) / 0.09) + 1)));
+  const saved = t > typ1 + 0.35;
+  const blink = Math.floor(t * 2.4) % 2 === 0 || (t > del0 && t < typ1);
+  const MONO = "'DejaVu Sans Mono', 'Space Mono', monospace";
+  const colour = (ln: string) => {
+    if (ln.trim().startsWith("//")) return <span style={{ color: "#6a9955" }}>{ln}</span>;
+    return ln.split(/("[^"]*")/).map((part, i) => <span key={i} style={{ color: part.startsWith('"') ? "#ce9178" : /^\s*[a-z]+:/.test(part) ? "#9cdcfe" : "#d4d4d4" }}>{part}</span>);
+  };
+  return (
+    <LaptopFrame seg={seg}>
+      <div style={{ width: LW, height: LH, background: "#1e1e1e" }}>
+        <div style={{ height: 40, background: "#2d2d2d", display: "flex", alignItems: "center", padding: "0 16px", gap: 9 }}>
+          {["#ff5f57", "#febc2e", "#28c840"].map((c) => <span key={c} style={{ width: 12, height: 12, borderRadius: 6, background: c }} />)}
+          <span style={{ marginLeft: 14, fontFamily: SANS, fontWeight: 600, fontSize: 20, color: "#ddd" }}>{code.file}{saved ? "" : " ●"}</span>
+          {saved ? <span style={{ marginLeft: "auto", fontFamily: SANS, fontWeight: 800, fontSize: 19, color: "#46d369" }}>saved</span> : null}
+        </div>
+        <div style={{ padding: "22px 20px", fontFamily: MONO, fontSize: 27, lineHeight: 1.6, whiteSpace: "pre" }}>
+          {code.lines.map((ln, i) => {
+            const hot = i === code.line;
+            const body = hot ? ln.replace(`"${code.from}"`, `"${shown}${blink ? "|" : " "}"`) : ln;
+            return (
+              <div key={i} style={{ display: "flex", background: hot ? "rgba(229,9,20,0.2)" : "transparent", borderLeft: hot ? "5px solid #e50914" : "5px solid transparent", paddingLeft: 10 }}>
+                <span style={{ width: 40, color: "#5a5a5a", flexShrink: 0 }}>{i + 1}</span>
+                <span>{colour(body)}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </LaptopFrame>
+  );
+};
+
 const Phone: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
   const { fps } = useVideoConfig();
   return (
@@ -207,8 +334,11 @@ export const WebDemo: React.FC<WebDemoProps> = (p) => {
                 : seg.kind === "desk" ? <Desk seg={seg} src={p.desk} url={p.url} />
                 : seg.kind === "deskfull" ? <DeskFull seg={seg} src={p.desk} />
                 : seg.kind === "code" && p.code ? <Code seg={seg} code={p.code} />
+                : seg.kind === "laptop" ? <LaptopVideo seg={seg} src={seg.src ?? p.desk} />
+                : seg.kind === "laptopcode" && p.code ? <LaptopCode seg={seg} code={p.code} />
                 : <End end={p.end} handle={p.handle} dur={seg.dur} />}
             </Cut>
+            <Callouts seg={seg} />
             <Caption title={seg.title} sub={seg.sub} dur={seg.dur} pos={seg.pos} y={seg.y} instant={i === 0} />
           </Sequence>
         );
