@@ -1,0 +1,296 @@
+{
+ "id": "ep30v1",
+ "title": "How AI learns good manners",
+ "label": "EP 30",
+ "banner": "How AI learns manners",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  1.15
+ ],
+ "musicLift": 2.3,
+ "musicPad": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.2,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "rl_hook",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "Ice in Antarctica",
+     "title": "An AI called my bad idea 'intriguing'",
+     "notes": [
+      [
+       "A small free AI, after manners training: 'quite unique and intriguing'",
+       0
+      ],
+      [
+       "The idea: selling ice in Antarctica",
+       1
+      ],
+      [
+       "Before that training it couldn't answer at all",
+       2
+      ],
+      [
+       "It just repeated my words, four times (real output, run by us)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "01_hook.wav",
+     "text": "An AI called my business idea 'quite unique and intriguing'. [1] My idea? Selling ice. In Antarctica. [2] And before its manners training? It couldn't even answer. [3] It just repeated my words. Four times.",
+     "show": "An AI called my business idea 'quite unique and intriguing'. [1] My idea? Selling ice. In Antarctica. [2] And before its manners training? It couldn't even answer. [3] It just repeated my words. Four times.",
+     "tts": "An AI called my business idea, quite unique and intriguing. My idea? Selling ice. In Antarctica. And before its manners training? It couldn't even answer. It just repeated my words. Four times.",
+     "pauses": {
+      "1": 0.25
+     }
+    }
+   ]
+  },
+  {
+   "id": "raw",
+   "type": "rl_raw",
+   "tail": 0.3,
+   "data": {
+    "yt": {
+     "chapter": "A raw AI",
+     "title": "A raw AI only guesses the next word",
+     "notes": [
+      [
+       "This kind of training is why AI helps you, and why it flatters you",
+       0
+      ],
+      [
+       "A raw AI learned one thing: guess the next word, like your phone keyboard",
+       1
+      ],
+      [
+       "So it doesn't answer; it just keeps writing",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "02_raw.wav",
+     "text": "This kind of training is why AI helps you, and why it flatters you. Stay till the end: you'll train it yourself. [1] A raw AI only learned one thing: guess the next word, like your phone keyboard. [2] So it doesn't answer you. It just keeps writing.",
+     "show": "This kind of training is why AI helps you, and why it flatters you. Stay till the end: you'll train it yourself. [1] A raw AI only learned one thing: guess the next word, like your phone keyboard. [2] So it doesn't answer you. It just keeps writing.",
+     "tts": "This kind of training is why AI helps you, and why it flatters you. Stay till the end: you'll train it yourself. A raw AI only learned one thing: guess the next word, like your phone keyboard. So it doesn't answer you. It just keeps writing."
+    }
+   ]
+  },
+  {
+   "id": "steps12",
+   "type": "rl_steps12",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Steps 1-2",
+     "title": "Examples, then rankings",
+     "notes": [
+      [
+       "Step 1: people write good example answers; the AI copies them",
+       0
+      ],
+      [
+       "Step 2, the shortcut: the AI writes a few answers, people rank them (OpenAI, 2022: about 40 hired raters)",
+       1
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "03_steps12.wav",
+     "text": "Step one: people write good example answers, and the AI copies them. [1] Step two, the shortcut: the AI writes a few answers, and people just rank them.",
+     "show": "Step one: people write good example answers, and the AI copies them. [1] Step two, the shortcut: the AI writes a few answers, and people just rank them.",
+     "tts": "Step one: people write good example answers, and the AI copies them. Step two, the shortcut: the AI writes a few answers, and people just rank them."
+    }
+   ]
+  },
+  {
+   "id": "steps34",
+   "type": "rl_steps34",
+   "tail": 0.3,
+   "lift": true,
+   "drop_cue": 3,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "Steps 3-4",
+     "title": "A robot judge, then practice",
+     "notes": [
+      [
+       "Step 3: a second AI learns from the rankings to guess what people like: a robot judge (reward model)",
+       0
+      ],
+      [
+       "Step 4: the AI practises; the judge scores; high scores get repeated",
+       1
+      ],
+      [
+       "That's RLHF: reinforcement learning from human feedback",
+       2
+      ],
+      [
+       "OpenAI's own tests (2022): people preferred a small trained model (1.3B) over a raw one 100x bigger (175B)",
+       3
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "04_steps34.wav",
+     "text": "Step three: a second AI learns from those rankings to guess what people will like. A robot judge. [1] Step four: the AI practises, and the judge scores. High score? Do more of that. Again and again. [2] That's RLHF: reinforcement learning from human feedback. [3] In OpenAI's own tests, people preferred a small trained model over a raw one a hundred times bigger.",
+     "show": "Step three: a second AI learns from those rankings to guess what people will like. A robot judge. [1] Step four: the AI practises, and the judge scores. High score? Do more of that. Again and again. [2] That's RLHF: reinforcement learning from human feedback. [3] In OpenAI's own tests, people preferred a small trained model over a raw one 100 times bigger.",
+     "tts": "Step three: a second AI learns from those rankings, to guess what people will like. A robot judge. Step four: the AI practises, and the judge scores. High score? Do more of that. Again, and again. That's R L H F: reinforcement learning from human feedback. In OpenAI's own tests, people preferred a small trained model over a raw one a hundred times bigger.",
+     "pauses": {
+      "3": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "rl_quiz",
+   "tail": 0.3,
+   "duck": [
+    3,
+    2,
+    0.15
+   ],
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Your idea: which answer gets your thumbs up?",
+     "notes": [
+      [
+       "Your idea, months of work",
+       0
+      ],
+      [
+       "A: 'This is really strong. Go for it!'  B: 'Your price is too low. You'll lose money in three months.'",
+       1
+      ],
+      [
+       "B helps you. A feels nicer. The judge learns what we like, not what's true",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "05_quiz.wav",
+     "text": "Your turn. It's your idea. You've worked on it for months. [1] A: 'This is really strong. Go for it!' B: 'Your price is too low. You'll lose money in three months.' Which one gets your thumbs up? [3] <pause 1.5> [2] B helps you. A feels nicer. The judge learns what we like, not what's true.",
+     "show": "Your turn. It's your idea. You've worked on it for months. [1] A: 'This is really strong. Go for it!' B: 'Your price is too low. You'll lose money in three months.' Which one gets your thumbs up? [3] <pause 1.5> [2] B helps you. A feels nicer. The judge learns what we like, not what's true.",
+     "tts": "Your turn. It's your idea. You've worked on it for months. A: This is really strong. Go for it! B: Your price is too low. You'll lose money in three months. Which one gets your thumbs up?",
+     "file2": "05_quiz_answer.wav",
+     "tts2": "B helps you. A feels nicer. The judge learns what we like, not what's true.",
+     "pause": 1.5,
+     "gap": 0.1
+    }
+   ]
+  },
+  {
+   "id": "real",
+   "type": "rl_real",
+   "tail": 0.3,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "It really happened",
+     "title": "April 2025: an update pulled for flattery",
+     "notes": [
+      [
+       "April 2025: OpenAI rolled back a GPT-4o update in ChatGPT for being 'overly flattering or agreeable'",
+       0
+      ],
+      [
+       "One reason they gave: an extra reward signal from thumbs-up / thumbs-down clicks",
+       1
+      ],
+      [
+       "Those clicks can favour answers that agree with you",
+       2
+      ]
+     ]
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "06_real.wav",
+     "text": "That's not just theory. In April twenty twenty-five, OpenAI pulled a ChatGPT update for being too flattering. [1] One reason, OpenAI said: they'd added thumbs-up and thumbs-down clicks to the training. [2] The buttons under every answer. The ones you click. They can favour answers that agree with you.",
+     "show": "That's not just theory. In April 2025, OpenAI pulled a ChatGPT update for being too flattering. [1] One reason, OpenAI said: they'd added thumbs-up and thumbs-down clicks to the training. [2] The buttons under every answer. The ones you click. They can favour answers that agree with you.",
+     "tts": "That's not just theory. In April twenty twenty-five, OpenAI pulled a ChatGPT update for being too flattering. One reason, OpenAI said: they'd added thumbs up, and thumbs down clicks to the training. The buttons under every answer. The ones you click. They can favour answers that agree with you."
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "rl_close",
+   "tail": 1.2,
+   "outro": true,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Manners, not proof",
+     "title": "Treat an AI's yes as manners",
+     "notes": [
+      [
+       "An AI's yes is manners, not proof",
+       0
+      ],
+      [
+       "Ask: 'What are the 3 biggest reasons this will fail?' Or say it's a friend's idea",
+       1
+      ],
+      [
+       "Next: teaching an AI a new skill without a supercomputer (LoRA)",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "07_close.wav",
+     "text": "So treat an AI's yes as manners, not proof. [1] Ask: 'What are the three biggest reasons this will fail?' Or say it's a friend's idea. [2] Next: how to teach an AI a new skill without a supercomputer. [3] Follow, so you don't miss it.",
+     "show": "So treat an AI's yes as manners, not proof. [1] Ask: 'What are the 3 biggest reasons this will fail?' Or say it's a friend's idea. [2] Next: how to teach an AI a new skill without a supercomputer. [3] Follow, so you don't miss it.",
+     "tts": "So treat an AI's yes as manners, not proof. Ask: what are the three biggest reasons this will fail? Or say it's a friend's idea. Next: how to teach an AI a new skill, without a supercomputer. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}
