@@ -9,8 +9,8 @@
  "lead": 0.3,
  "music": "lofi",
  "musicVol": [
-  0.36,
-  1.15
+  0.42,
+  1.3
  ],
  "musicEQ": [
   [
@@ -21,6 +21,7 @@
  ],
  "musicLift": 2.3,
  "musicPad": true,
+ "hardCuts": true,
  "beatSnap": true,
  "hideTimerInHook": true,
  "hideTimer": true,
@@ -106,6 +107,7 @@
    "type": "rl_steps12",
    "tail": 0.3,
    "lift": true,
+   "boost": 1.1,
    "data": {
     "yt": {
      "chapter": "Steps 1-2",
@@ -138,7 +140,7 @@
    "type": "rl_steps34",
    "tail": 0.3,
    "lift": true,
-   "boost": 1.3,
+   "boost": 1.2,
    "data": {
     "yt": {
      "chapter": "Steps 3-4",
@@ -179,6 +181,8 @@
     2,
     0.15
    ],
+   "boost": 1.3,
+   "layer": 4,
    "data": {
     "yt": {
      "chapter": "Your turn",
@@ -214,7 +218,10 @@
      "file2": "05_quiz_answer.wav",
      "tts2": "B helps you. Easy in a quiz. But for real, on your own idea? Plenty of us tap A instead. The judge learns what we like. And we don't always like what's true.",
      "pause": 1.5,
-     "gap": 0.1
+     "gap": 0.1,
+     "pauses": {
+      "4": 0.5
+     }
     }
    ]
   },

@@ -690,9 +690,10 @@ const SceneWrap: React.FC<{ s: Scene; first: boolean; noCaptions?: boolean }> = 
   };
   const line = (i: number) => s.lines[Math.min(i, s.lines.length - 1)];
   const Comp = SCENES[s.type];
-  const inP = first ? 1 : interpolate(f, [0, 5], [0, 1], cl);
+  const inK = first ? 1 : interpolate(f, [0, 5], [0, 1], cl);
+  const inP = s.data?.hardCuts ? 1 : inK;   // data.hardCuts: a hard cut with the punch-in, no fade through an empty frame
   return (
-    <AbsoluteFill style={{ opacity: inP, transform: `scale(${first ? 1 : 1.12 - 0.12 * inP})` }}>
+    <AbsoluteFill style={{ opacity: inP, transform: `scale(${first ? 1 : 1.12 - 0.12 * inK})` }}>
       {Comp ? <Comp s={s} cue={cue} line={line} /> : null}
       {(s.data.memes ?? []).map((m: Meme, i: number) => (
         <Sticker key={i} m={m} at={m.line !== undefined ? line(m.line).from + 4 : m.at !== undefined ? cue(m.at) : 0} />

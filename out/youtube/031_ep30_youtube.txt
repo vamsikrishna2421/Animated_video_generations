@@ -20,14 +20,14 @@ In this episode:
 
 Chapters:
 0:00 An AI called my bad idea "intriguing"
-0:13 A raw AI only guesses the next word
-0:24 Steps 1-2: examples, then rankings
+0:14 A raw AI only guesses the next word
+0:25 Steps 1-2: examples, then rankings
 0:33 Steps 3-4: a robot judge, then practice
-0:47 Your turn: which answer gets your thumbs up?
-1:10 April 2025: an update pulled for flattery
-1:25 Treat an AI's yes as manners
+0:48 Your turn: which answer gets your thumbs up?
+1:12 April 2025: an update pulled for flattery
+1:26 Treat an AI's yes as manners
 
-How we tested (run by us): HuggingFaceTB/SmolLM2-360M (the raw model) vs SmolLM2-360M-Instruct (Apache-2.0). Its manners training was example answers plus ratings: SFT on smol-smoltalk, then DPO on UltraFeedback, a shortcut that skips the separate robot judge. Greedy decoding; prompt "Is my business idea good? I want to sell ice to people in Antarctica." The raw model repeated the second sentence four times; the trained one said "Yes, your business idea is quite unique and intriguing. However, it's essential to consider several factors..." and went on about permits. It never mentioned that Antarctica is already full of ice.
+How we tested (run by us): HuggingFaceTB/SmolLM2-360M (the raw model) vs SmolLM2-360M-Instruct (Apache-2.0). Its manners training was example answers plus preference ratings made by another AI: SFT on smol-smoltalk, then DPO on UltraFeedback (rated by GPT-4), a shortcut cousin of the steps in the video with no separate robot judge. Greedy decoding; prompt "Is my business idea good? I want to sell ice to people in Antarctica." The raw model repeated the second sentence four times; the trained one said "Yes, your business idea is quite unique and intriguing. However, it's essential to consider several factors..." and went on about permits. It never mentioned that Antarctica is already full of ice.
 Sources: Ouyang et al. (OpenAI, 2022), "Training language models to follow instructions with human feedback" (InstructGPT: demonstrations, rankings of 4-9 outputs, a reward model, PPO; "a team of about 40 contractors"). OpenAI, "Introducing ChatGPT" (30 Nov 2022). OpenAI, "Sycophancy in GPT-4o" (29 Apr 2025) and "Expanding on what we missed with sycophancy" (2 May 2025). OpenAI help centre, "How your data is used to improve model performance". Coverage of the rollback: TechCrunch, VentureBeat, The Decoder.
 
 Previous episode: How AI sees a photo (computer vision).
@@ -58,7 +58,13 @@ Ee episode lo:
 - AI "yes" ante adi manners, proof kaadu. "Naa idea fail avvadaniki top 3 reasons enti?" ani adagandi, leda idi naa friend idea ani cheppandi
 
 Chapters:
-CHAPTERS_TE
+0:00 AI ki naa idea 'intriguing' anta!
+0:14 Raw AI: next word guess matrame
+0:26 Steps 1-2: examples, rankings
+0:37 Steps 3-4: robot judge, practice
+0:53 Mee vantu: ye answer ki thumbs up?
+1:18 April 2025: flattery valla venakki teesukunna update
+1:36 AI 'yes' = manners, proof kaadu
 
 Sources: English description lo unnayi (demo: SmolLM2-360M raw vs Instruct, run by us; InstructGPT paper, OpenAI 2022; OpenAI's April/May 2025 posts on the rolled-back update; OpenAI help centre on feedback and training).
 

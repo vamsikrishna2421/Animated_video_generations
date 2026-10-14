@@ -363,12 +363,13 @@ def peak_eq(x, f0, gain_db, q):
     return lfilter(b / a[0], a / a[0], x, axis=0)
 
 
-def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
+def lofi(total, scene_starts, pad=False, lifts=(), outro=None, layers=()):
     """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops.
     pad=True (spec "musicPad") adds a sustained pad and a faint vinyl-noise floor, filling the short silent
     hole at the end of every bar (the keys stop before the bar line), which is audible once the bed is turned up.
     lifts: times (s) that get a riser into a soft hit (a lift into a reveal). outro: time (s) from which a brighter
-    layer (arpeggio + double-time hats) plays, so the bed itself rises into the call to action."""
+    layer (arpeggio + double-time hats) plays, so the bed itself rises into the call to action. layers: extra (start, end)
+    windows for that brighter layer (e.g. from a quiz reveal to the end of its scene)."""
     n = int(total * MSR)
     mix = np.zeros(n)
     beat = 60 / 88
@@ -396,10 +397,10 @@ def lofi(total, scene_starts, pad=False, lifts=(), outro=None):
         place(mix, riser(1.2) * 0.3, max(0.0, t - 1.2))
         place(mix, kick808(42, 0.9, 2.0) * 0.55, t)
         place(mix, boom(1.2) * 0.35, t)
-    if outro is not None:
+    if outro is not None or layers:
         t0, b = 0.0, 0
         while t0 < total:
-            if t0 >= outro - 1e-6:
+            if (outro is not None and t0 >= outro - 1e-6) or any(a - 1e-6 <= t0 < e for a, e in layers):
                 ch = chords[b % 4]
                 for k in range(8):
                     place(mix, keys(ch[k % 4] + 12, beat * 0.6) * 0.32, t0 + k * beat / 2)
@@ -485,7 +486,14 @@ def main(spec_path: Path) -> None:
     starts = [s["from"] / FPS for s in scenes]
     lifts = [scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("lift")]
     outro = next((scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("outro")), None)
-    bed = (lofi(total, starts, pad=spec.get("musicPad", False), lifts=lifts, outro=outro) if spec.get("music") == "lofi"
+    # "layer": <cue> on a scene = the brighter bed layer from that cue (snapped to the nearest bar) to the end of the scene
+    beat_bar = 4 * 60 / 88
+    layers = []
+    for i, sc in enumerate(spec["scenes"]):
+        if sc.get("layer") is not None and str(sc["layer"]) in scenes[i]["lines"][0]["cues"]:
+            a = (scenes[i]["from"] + scenes[i]["lines"][0]["cues"][str(sc["layer"])]) / FPS
+            layers.append((np.round(a / beat_bar) * beat_bar, (scenes[i]["from"] + scenes[i]["frames"]) / FPS))
+    bed = (lofi(total, starts, pad=spec.get("musicPad", False), lifts=lifts, outro=outro, layers=layers) if spec.get("music") == "lofi"
            else score(total, starts, drops))
     for f0, gdb, q in spec.get("musicEQ", []):   # e.g. [[260, -4, 0.9]]: carve the bed where it masks the voice on phones
         bed = peak_eq(bed, f0, gdb, q)
@@ -495,6 +503,8 @@ def main(spec_path: Path) -> None:
         sc.setdefault("data", {})["handle"] = handle
         if spec.get("captionMode"):
             sc["data"]["captionMode"] = spec["captionMode"]
+        if spec.get("hardCuts"):   # scenes cut in at full opacity (no fade through an empty frame)
+            sc["data"]["hardCuts"] = True
         for k in ("captionTop", "captionSide"):   # caption block position (Instagram safe zone)
             if spec.get(k) is not None:
                 sc["data"][k] = spec[k]

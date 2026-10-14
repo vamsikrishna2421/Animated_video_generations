@@ -5,7 +5,7 @@ from pathlib import Path
 
 R = Path(__file__).resolve().parents[2] / "reels"
 BASE = {"label": "EP 30", "banner": "How AI learns manners", "topic": "", "look": "classic", "gap": 0.3, "lead": 0.3,
-        "music": "lofi", "musicVol": [0.36, 1.15], "musicEQ": [[260, -4, 0.9]], "musicLift": 2.3, "musicPad": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True}
+        "music": "lofi", "musicVol": [0.42, 1.3], "musicEQ": [[260, -4, 0.9]], "musicLift": 2.3, "musicPad": True, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True}
 
 # (id, type, scene flags, yt, show (English captions, [n] cues), tts (English, spoken form), te (Telugu, [n] cues), extra)
 SC = [
@@ -21,19 +21,19 @@ SC = [
      "This kind of training is why AI helps you, and why it flatters you. Stay till the end: you'll train it yourself. A raw AI only learned one thing: guess the next word, like your phone keyboard.",
      "ఇలాంటి ట్రైనింగ్ వల్లే ఎ ఐ హెల్ప్ చేస్తుంది, బటర్ కూడా కొడుతుంది. చివరి వరకు చూడండి, మీరే ట్రైన్ చేస్తారు. [1] రా ఎ ఐ నేర్చుకున్నది ఒక్కటే: నెక్స్ట్ వర్డ్ గెస్ చేయడం, మీ ఫోన్ కీబోర్డ్ లాగా.",
      {"end_en": 11.95, "end_te": 13.3}),
-    ("steps12", "rl_steps12", {"tail": 0.3, "lift": True},
+    ("steps12", "rl_steps12", {"tail": 0.3, "lift": True, "boost": 1.1},
      {"chapter": "Steps 1-2", "title": "Examples, then rankings", "notes": [["Step 1: people write good example answers; the AI copies them", 0], ["Step 2 is quicker: the AI writes a few answers, people rank them; picking is faster than writing (OpenAI, 2022: about 40 hired raters)", 1]]},
      "Step one: people write good example answers, and the AI copies them. [1] Step two is quicker: the AI writes a few answers, and people just rank them.",
      "Step one: people write good example answers, and the AI copies them. Step two is quicker: the AI writes a few answers, and people just rank them.",
      "స్టెప్ వన్: మనుషులు మంచి ఎగ్జాంపుల్ ఆన్సర్స్ రాస్తారు, ఎ ఐ వాటిని కాపీ చేస్తుంది. [1] స్టెప్ టూ ఇంకా ఫాస్ట్: ఎ ఐ కొన్ని ఆన్సర్స్ రాస్తుంది, మనుషులు వాటికి ర్యాంక్ ఇస్తారు, అంతే.",
      {}),
-    ("steps34", "rl_steps34", {"tail": 0.3, "lift": True, "boost": 1.3},
+    ("steps34", "rl_steps34", {"tail": 0.3, "lift": True, "boost": 1.2},
      {"chapter": "Steps 3-4", "title": "A robot judge, then practice", "notes": [["Step 3: the rankings train a robot judge, a second AI that guesses what people like (a reward model)", 0], ["Step 4: the AI practises; the judge scores; high scores get repeated", 1], ["That's RLHF: reinforcement learning from human feedback", 2]]},
      "Step three: those rankings train a robot judge, a second AI that guesses what people like. [1] Step four: the AI practises, and the judge scores. High score? Do more of that. [2] That's RLHF: reinforcement learning from human feedback.",
      "Step three: those rankings train a robot judge, a second AI that guesses what people like. Step four: the AI practises, and the judge scores. High score? Do more of that. That's R L H F: reinforcement learning from human feedback.",
      "స్టెప్ త్రీ: ఆ ర్యాంకింగ్స్ తో ఒక రోబో జడ్జ్ ని ట్రైన్ చేస్తారు. అది ఇంకో ఎ ఐ, జనాలకి ఏ ఆన్సర్ నచ్చుతుందో గెస్ చేస్తుంది. [1] స్టెప్ ఫోర్: ఎ ఐ ప్రాక్టీస్ చేస్తుంది, జడ్జ్ స్కోర్ ఇస్తుంది. స్కోర్ ఎక్కువ వస్తే, ఇంకా అలాగే చేస్తుంది. [2] ఇదే ఆర్ ఎల్ హెచ్ ఎఫ్, అంటే మనుషుల ఫీడ్బ్యాక్ తో నేర్చుకోవడం.",
      {}),
-    ("quiz", "rl_quiz", {"tail": 0.3, "duck": [3, 2, 0.15]},
+    ("quiz", "rl_quiz", {"tail": 0.3, "duck": [3, 2, 0.15], "boost": 1.3, "layer": 4},
      {"chapter": "Your turn", "title": "Your idea: which answer gets your thumbs up?", "notes": [["Your idea, months of work", 0], ["A: 'This is really strong. Go for it!'  B: 'Your price is too low. You'll lose money in three months.'", 1], ["B helps you. Easy in a quiz; on your own idea, plenty of us tap A", 2], ["The judge learns what we like, and we don't always like what's true", 5]]},
      "Your turn. It's your idea. You've worked on it for months. [1] A: 'This is really strong. Go for it!' B: 'Your price is too low. You'll lose money in three months.' Which one gets your thumbs up? [3] <pause 1.5> [2] B helps you. Easy in a quiz. But for real, on your own idea? [4] Plenty of us tap A instead. [5] The judge learns what we like. And we don't always like what's true.",
      None,
@@ -42,7 +42,7 @@ SC = [
       "file2": "05_quiz_answer.wav", "tts2": "B helps you. Easy in a quiz. But for real, on your own idea? Plenty of us tap A instead. The judge learns what we like. And we don't always like what's true.",
       "te_tts": "ఇప్పుడు మీ వంతు. ఇది మీ ఐడియా. నెలల తరబడి దాని మీద పని చేస్తున్నారు. ఎ: ఇది చాలా స్ట్రాంగ్ ఐడియా, గో అహెడ్! బి: మీ ప్రైస్ చాలా తక్కువ, మూడు నెలల్లో నష్టపోతారు. మీరు దేనికి థంబ్స్ అప్ ఇస్తారు?",
       "te_tts2": "బి మీకు హెల్ప్ చేస్తుంది. క్విజ్ లో ఇది ఈజీ. కానీ నిజంగా, మీ సొంత ఐడియా అయితే? మనలో చాలా మంది ఎ కే థంబ్స్ అప్ ఇస్తాం. అందుకే జడ్జ్, మనకి ఏం నచ్చుతుందో అదే నేర్చుకుంటుంది. కానీ నిజం మనకి కొన్నిసార్లు నచ్చదు.",
-      "pause": 1.5, "gap": 0.1}),
+      "pause": 1.5, "gap": 0.1, "pauses": {"4": 0.5}}),
     ("real", "rl_real", {"tail": 0.3, "lift": True},
      {"chapter": "It really happened", "title": "April 2025: an update pulled for flattery", "notes": [["April 2025: OpenAI rolled back a GPT-4o update in ChatGPT for being 'overly flattering or agreeable'", 0], ["One reason they gave: an extra reward signal from thumbs-up / thumbs-down clicks", 1], ["A thumbs up or down can send that chat into training, even if you opted out (OpenAI help centre)", 2], ["So save your thumbs-up for the honest answer", 3]]},
      "It really happened. In April 2025, OpenAI pulled a ChatGPT update for being too flattering. [1] One reason, OpenAI said: they'd added thumbs-up and thumbs-down clicks to the training. [2] So yes, your clicks can train it. [3] Save your thumbs-up for the honest answer.",
