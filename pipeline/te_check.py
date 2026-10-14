@@ -21,7 +21,10 @@ ASR = WhisperModel("small", device="cpu", compute_type="int8", cpu_threads=4)
 
 def judge(path, text):
     a, sr = sf.read(str(path))
-    dur = len(a) / sr
+    a = a.mean(axis=1) if a.ndim > 1 else a
+    hop = int(0.02 * sr)
+    rms = np.sqrt((a[:len(a) // hop * hop].reshape(-1, hop) ** 2).mean(axis=1))
+    dur = max(0.1, (rms > 0.03 * np.percentile(rms, 95)).sum() * 0.02)   # voiced time: pauses can't hide a dropped sentence
     segs, _ = ASR.transcribe(str(path), language="hi", vad_filter=True)
     h = " ".join(s.text.strip() for s in segs)
     letters = [ch for ch in h if ch.isalpha()]
@@ -31,8 +34,8 @@ def judge(path, text):
     toks = h.split()
     babble = (bool(re.search(r"([^\s.,!?।])\1\1", h)) or doubles(h) > doubles(text)
               or any(toks.count(t) >= 4 for t in set(toks) if len(toks) >= 4))   # e.g. a run of one hallucinated token
-    ok = bool(h) and dev >= 0.9 and not babble and 7.0 <= rate <= 14.5
-    return ok, (ok, dev, -abs(rate - 12.0)), f"dev {dev:.2f} rate {rate:.1f} {'BABBLE ' if babble else ''}| {h[:140]}"
+    ok = bool(h) and dev >= 0.9 and not babble and 11.0 <= rate <= 21.0   # chars per voiced second (good takes: ~16-19)
+    return ok, (ok, dev, -abs(rate - 17.5)), f"dev {dev:.2f} rate {rate:.1f} {'BABBLE ' if babble else ''}| {h[:140]}"
 
 
 def revoice(out, text, tmp_dir):

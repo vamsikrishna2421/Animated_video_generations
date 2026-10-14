@@ -82,10 +82,25 @@ def transcript(wav, lang):
     try:
         from faster_whisper import WhisperModel
         m = WhisperModel("small", device="cpu", compute_type="int8")
+        if lang == "te":   # Whisper stalls or babbles on Telugu: a phonetic (Devanagari) pass in 15-s windows instead
+            from faster_whisper.audio import decode_audio
+            a, out = decode_audio(str(wav), sampling_rate=16000), []
+            for t0 in range(0, len(a) // 16000 + 1, 15):
+                segs, _ = m.transcribe(a[t0 * 16000:(t0 + 15) * 16000], language="hi", vad_filter=True)
+                out += [(round(t0 + s.start, 1), round(t0 + s.end, 1), s.text.strip()) for s in segs]
+            return out
         segs, _ = m.transcribe(str(wav), language=lang, vad_filter=True)
         return [(round(s.start, 1), round(s.end, 1), s.text.strip()) for s in segs]
     except Exception as e:  # noqa: BLE001
         return [(0, 0, f"(transcript unavailable: {e})")]
+
+
+def voice_spans(wav):
+    """Speech spans from a voice-activity check (for languages the transcript can't time reliably)."""
+    from faster_whisper.audio import decode_audio
+    from faster_whisper.vad import VadOptions, get_speech_timestamps
+    a = decode_audio(str(wav), sampling_rate=16000)
+    return [(t["start"] / 16000, t["end"] / 16000, "") for t in get_speech_timestamps(a, VadOptions(min_silence_duration_ms=300))]
 
 
 def audio_report(wav, dur, cut_t, speech):
@@ -166,11 +181,12 @@ def main():
     speech = transcript(wav, a.lang)
     cut_t = cuts(video, dur)
     import librosa.display  # noqa: F401
-    rep, fig = audio_report(wav, dur, cut_t, speech)
+    rep, fig = audio_report(wav, dur, cut_t, speech if a.lang == "en" else voice_spans(wav))
     fig.savefig(out / "audio.png", dpi=80)
     wav.unlink()
     words = sum(len(s[2].split()) for s in speech)
-    lines = [f"# Review pack: {video.name}", "", f"- Duration: {dur:.1f} s · speech pace: {words / max(1, dur) * 60:.0f} words/min",
+    pace = f"{words / max(1, dur) * 60:.0f} words/min" if a.lang == "en" else "n/a (levels use a voice-activity check)"
+    lines = [f"# Review pack: {video.name}", "", f"- Duration: {dur:.1f} s · speech pace: {pace}",
              f"- Cuts: {rep['cuts']} (one every {rep['avg_shot_s']} s) · cuts landing on a beat: {rep['cuts_on_beat']}",
              f"- Music: ~{rep['tempo_bpm']} BPM, beat strength {rep['beat_strength']} (1.0 = no pulse, 2+ = clear groove)",
              f"- Levels: voice {rep['voice_level_db']} dB vs music-only stretches {rep['music_only_level_db']} dB · loudness range {rep['loudness_range_db']} dB",
