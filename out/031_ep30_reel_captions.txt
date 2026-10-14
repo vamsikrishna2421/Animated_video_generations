@@ -10,7 +10,7 @@ Episode 30 of AI From Scratch: how AI learns good manners (RLHF)
 - Step 2 is quicker: the AI writes a few answers and people rank them, because picking is faster than writing (OpenAI used about 40 hired raters in 2022)
 - Step 3: those rankings train a robot judge, a second AI that guesses what people like (a "reward model")
 - Step 4: the AI practises; the judge scores; high scores get repeated. That's RLHF: reinforcement learning from human feedback
-- In OpenAI's own tests, people preferred a small trained model (1.3B) over a raw one 100x bigger (175B)
+- In OpenAI's own tests, people preferred a small trained model (1.3B) over a raw one more than 100x bigger (175B)
 
 Your turn, answered: B helps you. Easy in a quiz; on your own idea, plenty of us tap A. The judge learns what we like, and we don't always like what's true. It really happened: in April 2025, OpenAI rolled back a ChatGPT update for being "overly flattering or agreeable"; one reason they gave was an extra training signal from thumbs-up and thumbs-down clicks.
 
