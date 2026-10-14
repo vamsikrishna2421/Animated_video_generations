@@ -1,0 +1,1884 @@
+{
+ "id": "ep30v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "How AI learns manners",
+ "musicVol": [
+  0.5,
+  1.15
+ ],
+ "title": "How AI learns good manners",
+ "handle": "@ai_maastaaru",
+ "label": "EP 30",
+ "fps": 30,
+ "musicLift": 2.3,
+ "musicDrops": [
+  [
+   1559,
+   1583
+  ],
+  [
+   2086,
+   2142,
+   0.15
+  ]
+ ],
+ "musicBoosts": [
+  [
+   1084,
+   1759,
+   1.3
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 3224,
+ "music": "reel/ep30v1/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "rl_hook",
+   "data": {
+    "yt": {
+     "chapter": "Ice in Antarctica",
+     "title": "An AI called my bad idea 'intriguing'",
+     "notes": [
+      [
+       "A small free AI, after manners training: 'quite unique and intriguing'",
+       0
+      ],
+      [
+       "The idea: selling ice in Antarctica",
+       1
+      ],
+      [
+       "Before that training it couldn't answer at all",
+       2
+      ],
+      [
+       "It just repeated my words, four times (real output, run by us)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 0,
+   "frames": 409,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_01.wav",
+     "from": 9,
+     "frames": 365,
+     "words": [
+      {
+       "w": "An",
+       "from": 12,
+       "to": 16
+      },
+      {
+       "w": "AI",
+       "from": 16,
+       "to": 20
+      },
+      {
+       "w": "called",
+       "from": 20,
+       "to": 29
+      },
+      {
+       "w": "my",
+       "from": 29,
+       "to": 33
+      },
+      {
+       "w": "business",
+       "from": 33,
+       "to": 45
+      },
+      {
+       "w": "idea",
+       "from": 45,
+       "to": 51
+      },
+      {
+       "w": "'quite",
+       "from": 51,
+       "to": 61
+      },
+      {
+       "w": "unique",
+       "from": 61,
+       "to": 77
+      },
+      {
+       "w": "and",
+       "from": 77,
+       "to": 82
+      },
+      {
+       "w": "intriguing'.",
+       "from": 82,
+       "to": 111
+      },
+      {
+       "w": "My",
+       "from": 111,
+       "to": 133
+      },
+      {
+       "w": "idea?",
+       "from": 133,
+       "to": 141
+      },
+      {
+       "w": "Selling",
+       "from": 141,
+       "to": 161
+      },
+      {
+       "w": "ice.",
+       "from": 161,
+       "to": 168
+      },
+      {
+       "w": "In",
+       "from": 168,
+       "to": 172
+      },
+      {
+       "w": "Antarctica.",
+       "from": 172,
+       "to": 197
+      },
+      {
+       "w": "And",
+       "from": 197,
+       "to": 202
+      },
+      {
+       "w": "before",
+       "from": 202,
+       "to": 224
+      },
+      {
+       "w": "its",
+       "from": 224,
+       "to": 229
+      },
+      {
+       "w": "manners",
+       "from": 229,
+       "to": 240
+      },
+      {
+       "w": "training?",
+       "from": 240,
+       "to": 253
+      },
+      {
+       "w": "It",
+       "from": 253,
+       "to": 257
+      },
+      {
+       "w": "couldn't",
+       "from": 257,
+       "to": 276
+      },
+      {
+       "w": "even",
+       "from": 276,
+       "to": 283
+      },
+      {
+       "w": "answer.",
+       "from": 283,
+       "to": 293
+      },
+      {
+       "w": "It",
+       "from": 293,
+       "to": 297
+      },
+      {
+       "w": "just",
+       "from": 297,
+       "to": 312
+      },
+      {
+       "w": "repeated",
+       "from": 312,
+       "to": 324
+      },
+      {
+       "w": "my",
+       "from": 324,
+       "to": 327
+      },
+      {
+       "w": "words.",
+       "from": 327,
+       "to": 337
+      },
+      {
+       "w": "Four",
+       "from": 337,
+       "to": 354
+      },
+      {
+       "w": "times.",
+       "from": 354,
+       "to": 364
+      }
+     ],
+     "cues": {
+      "1": 111,
+      "2": 197,
+      "3": 293
+     }
+    }
+   ]
+  },
+  {
+   "id": "raw",
+   "type": "rl_raw",
+   "data": {
+    "yt": {
+     "chapter": "A raw AI",
+     "title": "A raw AI only guesses the next word",
+     "notes": [
+      [
+       "This kind of training is why AI helps you, and why it flatters you",
+       0
+      ],
+      [
+       "A raw AI learned one thing: guess the next word, like your phone keyboard",
+       1
+      ],
+      [
+       "So it doesn't answer; it just keeps writing",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 409,
+   "frames": 389,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_02.wav",
+     "from": 0,
+     "frames": 371,
+     "words": [
+      {
+       "w": "This",
+       "from": 2,
+       "to": 7
+      },
+      {
+       "w": "kind",
+       "from": 7,
+       "to": 12
+      },
+      {
+       "w": "of",
+       "from": 12,
+       "to": 16
+      },
+      {
+       "w": "training",
+       "from": 16,
+       "to": 30
+      },
+      {
+       "w": "is",
+       "from": 30,
+       "to": 33
+      },
+      {
+       "w": "why",
+       "from": 33,
+       "to": 37
+      },
+      {
+       "w": "AI",
+       "from": 37,
+       "to": 40
+      },
+      {
+       "w": "helps",
+       "from": 40,
+       "to": 47
+      },
+      {
+       "w": "you,",
+       "from": 47,
+       "to": 52
+      },
+      {
+       "w": "and",
+       "from": 52,
+       "to": 57
+      },
+      {
+       "w": "why",
+       "from": 57,
+       "to": 61
+      },
+      {
+       "w": "it",
+       "from": 61,
+       "to": 64
+      },
+      {
+       "w": "flatters",
+       "from": 64,
+       "to": 79
+      },
+      {
+       "w": "you.",
+       "from": 79,
+       "to": 89
+      },
+      {
+       "w": "Stay",
+       "from": 89,
+       "to": 95
+      },
+      {
+       "w": "till",
+       "from": 95,
+       "to": 115
+      },
+      {
+       "w": "the",
+       "from": 115,
+       "to": 119
+      },
+      {
+       "w": "end:",
+       "from": 119,
+       "to": 125
+      },
+      {
+       "w": "you'll",
+       "from": 125,
+       "to": 132
+      },
+      {
+       "w": "train",
+       "from": 132,
+       "to": 150
+      },
+      {
+       "w": "it",
+       "from": 150,
+       "to": 153
+      },
+      {
+       "w": "yourself.",
+       "from": 153,
+       "to": 164
+      },
+      {
+       "w": "A",
+       "from": 164,
+       "to": 183
+      },
+      {
+       "w": "raw",
+       "from": 183,
+       "to": 187
+      },
+      {
+       "w": "AI",
+       "from": 187,
+       "to": 190
+      },
+      {
+       "w": "only",
+       "from": 190,
+       "to": 196
+      },
+      {
+       "w": "learned",
+       "from": 196,
+       "to": 204
+      },
+      {
+       "w": "one",
+       "from": 204,
+       "to": 209
+      },
+      {
+       "w": "thing:",
+       "from": 209,
+       "to": 216
+      },
+      {
+       "w": "guess",
+       "from": 216,
+       "to": 223
+      },
+      {
+       "w": "the",
+       "from": 223,
+       "to": 227
+      },
+      {
+       "w": "next",
+       "from": 227,
+       "to": 246
+      },
+      {
+       "w": "word,",
+       "from": 246,
+       "to": 253
+      },
+      {
+       "w": "like",
+       "from": 253,
+       "to": 258
+      },
+      {
+       "w": "your",
+       "from": 258,
+       "to": 264
+      },
+      {
+       "w": "phone",
+       "from": 264,
+       "to": 276
+      },
+      {
+       "w": "keyboard.",
+       "from": 276,
+       "to": 287
+      },
+      {
+       "w": "So",
+       "from": 287,
+       "to": 290
+      },
+      {
+       "w": "it",
+       "from": 290,
+       "to": 293
+      },
+      {
+       "w": "doesn't",
+       "from": 293,
+       "to": 313
+      },
+      {
+       "w": "answer",
+       "from": 313,
+       "to": 320
+      },
+      {
+       "w": "you.",
+       "from": 320,
+       "to": 326
+      },
+      {
+       "w": "It",
+       "from": 326,
+       "to": 329
+      },
+      {
+       "w": "just",
+       "from": 329,
+       "to": 341
+      },
+      {
+       "w": "keeps",
+       "from": 341,
+       "to": 348
+      },
+      {
+       "w": "writing.",
+       "from": 348,
+       "to": 362
+      }
+     ],
+     "cues": {
+      "1": 164,
+      "2": 287
+     }
+    }
+   ]
+  },
+  {
+   "id": "steps12",
+   "type": "rl_steps12",
+   "data": {
+    "yt": {
+     "chapter": "Steps 1-2",
+     "title": "Examples, then rankings",
+     "notes": [
+      [
+       "Step 1: people write good example answers; the AI copies them",
+       0
+      ],
+      [
+       "Step 2, the shortcut: the AI writes a few answers, people rank them (OpenAI, 2022: about 40 hired raters)",
+       1
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 798,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_03.wav",
+     "from": 0,
+     "frames": 267,
+     "words": [
+      {
+       "w": "Step",
+       "from": 3,
+       "to": 9
+      },
+      {
+       "w": "one:",
+       "from": 9,
+       "to": 15
+      },
+      {
+       "w": "people",
+       "from": 15,
+       "to": 33
+      },
+      {
+       "w": "write",
+       "from": 33,
+       "to": 40
+      },
+      {
+       "w": "good",
+       "from": 40,
+       "to": 51
+      },
+      {
+       "w": "example",
+       "from": 51,
+       "to": 60
+      },
+      {
+       "w": "answers,",
+       "from": 60,
+       "to": 70
+      },
+      {
+       "w": "and",
+       "from": 70,
+       "to": 84
+      },
+      {
+       "w": "the",
+       "from": 84,
+       "to": 89
+      },
+      {
+       "w": "AI",
+       "from": 89,
+       "to": 92
+      },
+      {
+       "w": "copies",
+       "from": 92,
+       "to": 100
+      },
+      {
+       "w": "them.",
+       "from": 100,
+       "to": 107
+      },
+      {
+       "w": "Step",
+       "from": 107,
+       "to": 132
+      },
+      {
+       "w": "two,",
+       "from": 132,
+       "to": 142
+      },
+      {
+       "w": "the",
+       "from": 142,
+       "to": 156
+      },
+      {
+       "w": "shortcut:",
+       "from": 156,
+       "to": 184
+      },
+      {
+       "w": "the",
+       "from": 184,
+       "to": 188
+      },
+      {
+       "w": "AI",
+       "from": 188,
+       "to": 192
+      },
+      {
+       "w": "writes",
+       "from": 192,
+       "to": 200
+      },
+      {
+       "w": "a",
+       "from": 200,
+       "to": 202
+      },
+      {
+       "w": "few",
+       "from": 202,
+       "to": 206
+      },
+      {
+       "w": "answers,",
+       "from": 206,
+       "to": 217
+      },
+      {
+       "w": "and",
+       "from": 217,
+       "to": 228
+      },
+      {
+       "w": "people",
+       "from": 228,
+       "to": 236
+      },
+      {
+       "w": "just",
+       "from": 236,
+       "to": 241
+      },
+      {
+       "w": "rank",
+       "from": 241,
+       "to": 251
+      },
+      {
+       "w": "them.",
+       "from": 251,
+       "to": 257
+      }
+     ],
+     "cues": {
+      "1": 107
+     }
+    }
+   ]
+  },
+  {
+   "id": "steps34",
+   "type": "rl_steps34",
+   "data": {
+    "yt": {
+     "chapter": "Steps 3-4",
+     "title": "A robot judge, then practice",
+     "notes": [
+      [
+       "Step 3: a second AI learns from the rankings to guess what people like: a robot judge (reward model)",
+       0
+      ],
+      [
+       "Step 4: the AI practises; the judge scores; high scores get repeated",
+       1
+      ],
+      [
+       "That's RLHF: reinforcement learning from human feedback",
+       2
+      ],
+      [
+       "OpenAI's own tests (2022): people preferred a small trained model (1.3B) over a raw one 100x bigger (175B)",
+       3
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1084,
+   "frames": 675,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_04.wav",
+     "from": 0,
+     "frames": 656,
+     "words": [
+      {
+       "w": "Step",
+       "from": 3,
+       "to": 15
+      },
+      {
+       "w": "three:",
+       "from": 15,
+       "to": 34
+      },
+      {
+       "w": "a",
+       "from": 34,
+       "to": 36
+      },
+      {
+       "w": "second",
+       "from": 36,
+       "to": 45
+      },
+      {
+       "w": "AI",
+       "from": 45,
+       "to": 48
+      },
+      {
+       "w": "learns",
+       "from": 48,
+       "to": 61
+      },
+      {
+       "w": "from",
+       "from": 61,
+       "to": 67
+      },
+      {
+       "w": "those",
+       "from": 67,
+       "to": 74
+      },
+      {
+       "w": "rankings",
+       "from": 74,
+       "to": 85
+      },
+      {
+       "w": "to",
+       "from": 85,
+       "to": 100
+      },
+      {
+       "w": "guess",
+       "from": 100,
+       "to": 107
+      },
+      {
+       "w": "what",
+       "from": 107,
+       "to": 117
+      },
+      {
+       "w": "people",
+       "from": 117,
+       "to": 125
+      },
+      {
+       "w": "will",
+       "from": 125,
+       "to": 144
+      },
+      {
+       "w": "like.",
+       "from": 144,
+       "to": 151
+      },
+      {
+       "w": "A",
+       "from": 151,
+       "to": 154
+      },
+      {
+       "w": "robot",
+       "from": 154,
+       "to": 180
+      },
+      {
+       "w": "judge.",
+       "from": 180,
+       "to": 201
+      },
+      {
+       "w": "Step",
+       "from": 201,
+       "to": 207
+      },
+      {
+       "w": "four:",
+       "from": 207,
+       "to": 214
+      },
+      {
+       "w": "the",
+       "from": 214,
+       "to": 219
+      },
+      {
+       "w": "AI",
+       "from": 219,
+       "to": 222
+      },
+      {
+       "w": "practises,",
+       "from": 222,
+       "to": 243
+      },
+      {
+       "w": "and",
+       "from": 243,
+       "to": 248
+      },
+      {
+       "w": "the",
+       "from": 248,
+       "to": 252
+      },
+      {
+       "w": "judge",
+       "from": 252,
+       "to": 274
+      },
+      {
+       "w": "scores.",
+       "from": 274,
+       "to": 291
+      },
+      {
+       "w": "High",
+       "from": 291,
+       "to": 297
+      },
+      {
+       "w": "score?",
+       "from": 297,
+       "to": 305
+      },
+      {
+       "w": "Do",
+       "from": 305,
+       "to": 321
+      },
+      {
+       "w": "more",
+       "from": 321,
+       "to": 327
+      },
+      {
+       "w": "of",
+       "from": 327,
+       "to": 338
+      },
+      {
+       "w": "that.",
+       "from": 338,
+       "to": 357
+      },
+      {
+       "w": "Again",
+       "from": 357,
+       "to": 364
+      },
+      {
+       "w": "and",
+       "from": 364,
+       "to": 369
+      },
+      {
+       "w": "again.",
+       "from": 369,
+       "to": 377
+      },
+      {
+       "w": "That's",
+       "from": 377,
+       "to": 390
+      },
+      {
+       "w": "RLHF:",
+       "from": 390,
+       "to": 410
+      },
+      {
+       "w": "reinforcement",
+       "from": 410,
+       "to": 427
+      },
+      {
+       "w": "learning",
+       "from": 427,
+       "to": 444
+      },
+      {
+       "w": "from",
+       "from": 444,
+       "to": 450
+      },
+      {
+       "w": "human",
+       "from": 450,
+       "to": 457
+      },
+      {
+       "w": "feedback.",
+       "from": 457,
+       "to": 499
+      },
+      {
+       "w": "In",
+       "from": 499,
+       "to": 503
+      },
+      {
+       "w": "OpenAI's",
+       "from": 503,
+       "to": 514
+      },
+      {
+       "w": "own",
+       "from": 514,
+       "to": 519
+      },
+      {
+       "w": "tests,",
+       "from": 519,
+       "to": 543
+      },
+      {
+       "w": "people",
+       "from": 543,
+       "to": 552
+      },
+      {
+       "w": "preferred",
+       "from": 552,
+       "to": 564
+      },
+      {
+       "w": "a",
+       "from": 564,
+       "to": 567
+      },
+      {
+       "w": "small",
+       "from": 567,
+       "to": 578
+      },
+      {
+       "w": "trained",
+       "from": 578,
+       "to": 588
+      },
+      {
+       "w": "model",
+       "from": 588,
+       "to": 601
+      },
+      {
+       "w": "over",
+       "from": 601,
+       "to": 607
+      },
+      {
+       "w": "a",
+       "from": 607,
+       "to": 610
+      },
+      {
+       "w": "raw",
+       "from": 610,
+       "to": 615
+      },
+      {
+       "w": "one",
+       "from": 615,
+       "to": 627
+      },
+      {
+       "w": "100",
+       "from": 627,
+       "to": 632
+      },
+      {
+       "w": "times",
+       "from": 632,
+       "to": 640
+      },
+      {
+       "w": "bigger.",
+       "from": 640,
+       "to": 650
+      }
+     ],
+     "cues": {
+      "1": 201,
+      "2": 377,
+      "3": 499
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "rl_quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Your idea: which answer gets your thumbs up?",
+     "notes": [
+      [
+       "Your idea, months of work",
+       0
+      ],
+      [
+       "A: 'This is really strong. Go for it!'  B: 'Your price is too low. You'll lose money in three months.'",
+       1
+      ],
+      [
+       "B helps you. A feels nicer. The judge learns what we like, not what's true",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 1759,
+   "frames": 552,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_05.wav",
+     "from": 0,
+     "frames": 525,
+     "words": [
+      {
+       "w": "Your",
+       "from": 3,
+       "to": 9
+      },
+      {
+       "w": "turn.",
+       "from": 9,
+       "to": 23
+      },
+      {
+       "w": "It's",
+       "from": 23,
+       "to": 28
+      },
+      {
+       "w": "your",
+       "from": 28,
+       "to": 34
+      },
+      {
+       "w": "idea.",
+       "from": 34,
+       "to": 40
+      },
+      {
+       "w": "You've",
+       "from": 40,
+       "to": 59
+      },
+      {
+       "w": "worked",
+       "from": 59,
+       "to": 66
+      },
+      {
+       "w": "on",
+       "from": 66,
+       "to": 70
+      },
+      {
+       "w": "it",
+       "from": 70,
+       "to": 73
+      },
+      {
+       "w": "for",
+       "from": 73,
+       "to": 81
+      },
+      {
+       "w": "months.",
+       "from": 81,
+       "to": 125
+      },
+      {
+       "w": "A:",
+       "from": 125,
+       "to": 129
+      },
+      {
+       "w": "'This",
+       "from": 129,
+       "to": 135
+      },
+      {
+       "w": "is",
+       "from": 135,
+       "to": 138
+      },
+      {
+       "w": "really",
+       "from": 138,
+       "to": 145
+      },
+      {
+       "w": "strong.",
+       "from": 145,
+       "to": 164
+      },
+      {
+       "w": "Go",
+       "from": 164,
+       "to": 167
+      },
+      {
+       "w": "for",
+       "from": 167,
+       "to": 186
+      },
+      {
+       "w": "it!'",
+       "from": 186,
+       "to": 201
+      },
+      {
+       "w": "B:",
+       "from": 201,
+       "to": 204
+      },
+      {
+       "w": "'Your",
+       "from": 204,
+       "to": 211
+      },
+      {
+       "w": "price",
+       "from": 211,
+       "to": 217
+      },
+      {
+       "w": "is",
+       "from": 217,
+       "to": 220
+      },
+      {
+       "w": "too",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "low.",
+       "from": 224,
+       "to": 229
+      },
+      {
+       "w": "You'll",
+       "from": 229,
+       "to": 245
+      },
+      {
+       "w": "lose",
+       "from": 245,
+       "to": 251
+      },
+      {
+       "w": "money",
+       "from": 251,
+       "to": 257
+      },
+      {
+       "w": "in",
+       "from": 257,
+       "to": 260
+      },
+      {
+       "w": "three",
+       "from": 260,
+       "to": 266
+      },
+      {
+       "w": "months.'",
+       "from": 266,
+       "to": 294
+      },
+      {
+       "w": "Which",
+       "from": 294,
+       "to": 300
+      },
+      {
+       "w": "one",
+       "from": 300,
+       "to": 305
+      },
+      {
+       "w": "gets",
+       "from": 305,
+       "to": 310
+      },
+      {
+       "w": "your",
+       "from": 310,
+       "to": 315
+      },
+      {
+       "w": "thumbs",
+       "from": 315,
+       "to": 323
+      },
+      {
+       "w": "up?",
+       "from": 323,
+       "to": 327
+      },
+      {
+       "w": "B",
+       "from": 383,
+       "to": 385
+      },
+      {
+       "w": "helps",
+       "from": 385,
+       "to": 393
+      },
+      {
+       "w": "you.",
+       "from": 393,
+       "to": 400
+      },
+      {
+       "w": "A",
+       "from": 400,
+       "to": 402
+      },
+      {
+       "w": "feels",
+       "from": 402,
+       "to": 421
+      },
+      {
+       "w": "nicer.",
+       "from": 421,
+       "to": 430
+      },
+      {
+       "w": "The",
+       "from": 430,
+       "to": 435
+      },
+      {
+       "w": "judge",
+       "from": 435,
+       "to": 458
+      },
+      {
+       "w": "learns",
+       "from": 458,
+       "to": 467
+      },
+      {
+       "w": "what",
+       "from": 467,
+       "to": 474
+      },
+      {
+       "w": "we",
+       "from": 474,
+       "to": 478
+      },
+      {
+       "w": "like,",
+       "from": 478,
+       "to": 485
+      },
+      {
+       "w": "not",
+       "from": 485,
+       "to": 500
+      },
+      {
+       "w": "what's",
+       "from": 500,
+       "to": 509
+      },
+      {
+       "w": "true.",
+       "from": 509,
+       "to": 517
+      }
+     ],
+     "cues": {
+      "1": 125,
+      "3": 327,
+      "2": 383
+     }
+    }
+   ]
+  },
+  {
+   "id": "real",
+   "type": "rl_real",
+   "data": {
+    "yt": {
+     "chapter": "It really happened",
+     "title": "April 2025: an update pulled for flattery",
+     "notes": [
+      [
+       "April 2025: OpenAI rolled back a GPT-4o update in ChatGPT for being 'overly flattering or agreeable'",
+       0
+      ],
+      [
+       "One reason they gave: an extra reward signal from thumbs-up / thumbs-down clicks",
+       1
+      ],
+      [
+       "Those clicks can favour answers that agree with you",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2311,
+   "frames": 491,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_06.wav",
+     "from": 0,
+     "frames": 459,
+     "words": [
+      {
+       "w": "That's",
+       "from": 3,
+       "to": 11
+      },
+      {
+       "w": "not",
+       "from": 11,
+       "to": 20
+      },
+      {
+       "w": "just",
+       "from": 20,
+       "to": 31
+      },
+      {
+       "w": "theory.",
+       "from": 31,
+       "to": 56
+      },
+      {
+       "w": "In",
+       "from": 56,
+       "to": 60
+      },
+      {
+       "w": "April",
+       "from": 60,
+       "to": 67
+      },
+      {
+       "w": "2025,",
+       "from": 67,
+       "to": 75
+      },
+      {
+       "w": "OpenAI",
+       "from": 75,
+       "to": 84
+      },
+      {
+       "w": "pulled",
+       "from": 84,
+       "to": 103
+      },
+      {
+       "w": "a",
+       "from": 103,
+       "to": 105
+      },
+      {
+       "w": "ChatGPT",
+       "from": 105,
+       "to": 115
+      },
+      {
+       "w": "update",
+       "from": 115,
+       "to": 124
+      },
+      {
+       "w": "for",
+       "from": 124,
+       "to": 133
+      },
+      {
+       "w": "being",
+       "from": 133,
+       "to": 141
+      },
+      {
+       "w": "too",
+       "from": 141,
+       "to": 157
+      },
+      {
+       "w": "flattering.",
+       "from": 157,
+       "to": 175
+      },
+      {
+       "w": "One",
+       "from": 175,
+       "to": 180
+      },
+      {
+       "w": "reason,",
+       "from": 180,
+       "to": 204
+      },
+      {
+       "w": "OpenAI",
+       "from": 204,
+       "to": 211
+      },
+      {
+       "w": "said:",
+       "from": 211,
+       "to": 224
+      },
+      {
+       "w": "they'd",
+       "from": 224,
+       "to": 232
+      },
+      {
+       "w": "added",
+       "from": 232,
+       "to": 238
+      },
+      {
+       "w": "thumbs-up",
+       "from": 238,
+       "to": 258
+      },
+      {
+       "w": "and",
+       "from": 258,
+       "to": 268
+      },
+      {
+       "w": "thumbs-down",
+       "from": 268,
+       "to": 289
+      },
+      {
+       "w": "clicks",
+       "from": 289,
+       "to": 296
+      },
+      {
+       "w": "to",
+       "from": 296,
+       "to": 299
+      },
+      {
+       "w": "the",
+       "from": 299,
+       "to": 304
+      },
+      {
+       "w": "training.",
+       "from": 304,
+       "to": 314
+      },
+      {
+       "w": "The",
+       "from": 314,
+       "to": 319
+      },
+      {
+       "w": "buttons",
+       "from": 319,
+       "to": 340
+      },
+      {
+       "w": "under",
+       "from": 340,
+       "to": 346
+      },
+      {
+       "w": "every",
+       "from": 346,
+       "to": 353
+      },
+      {
+       "w": "answer.",
+       "from": 353,
+       "to": 361
+      },
+      {
+       "w": "The",
+       "from": 361,
+       "to": 366
+      },
+      {
+       "w": "ones",
+       "from": 366,
+       "to": 380
+      },
+      {
+       "w": "you",
+       "from": 380,
+       "to": 384
+      },
+      {
+       "w": "click.",
+       "from": 384,
+       "to": 392
+      },
+      {
+       "w": "They",
+       "from": 392,
+       "to": 409
+      },
+      {
+       "w": "can",
+       "from": 409,
+       "to": 413
+      },
+      {
+       "w": "favour",
+       "from": 413,
+       "to": 421
+      },
+      {
+       "w": "answers",
+       "from": 421,
+       "to": 429
+      },
+      {
+       "w": "that",
+       "from": 429,
+       "to": 435
+      },
+      {
+       "w": "agree",
+       "from": 435,
+       "to": 441
+      },
+      {
+       "w": "with",
+       "from": 441,
+       "to": 446
+      },
+      {
+       "w": "you.",
+       "from": 446,
+       "to": 452
+      }
+     ],
+     "cues": {
+      "1": 175,
+      "2": 314
+     }
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "rl_close",
+   "data": {
+    "yt": {
+     "chapter": "Manners, not proof",
+     "title": "Treat an AI's yes as manners",
+     "notes": [
+      [
+       "An AI's yes is manners, not proof",
+       0
+      ],
+      [
+       "Ask: 'What are the 3 biggest reasons this will fail?' Or say it's a friend's idea",
+       1
+      ],
+      [
+       "Next: teaching an AI a new skill without a supercomputer (LoRA)",
+       2
+      ]
+     ]
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "from": 2802,
+   "frames": 410,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep30v1/line_07.wav",
+     "from": 0,
+     "frames": 365,
+     "words": [
+      {
+       "w": "So",
+       "from": 4,
+       "to": 7
+      },
+      {
+       "w": "treat",
+       "from": 7,
+       "to": 21
+      },
+      {
+       "w": "an",
+       "from": 21,
+       "to": 25
+      },
+      {
+       "w": "AI's",
+       "from": 25,
+       "to": 30
+      },
+      {
+       "w": "yes",
+       "from": 30,
+       "to": 34
+      },
+      {
+       "w": "as",
+       "from": 34,
+       "to": 38
+      },
+      {
+       "w": "manners,",
+       "from": 38,
+       "to": 51
+      },
+      {
+       "w": "not",
+       "from": 51,
+       "to": 55
+      },
+      {
+       "w": "proof.",
+       "from": 55,
+       "to": 77
+      },
+      {
+       "w": "Ask:",
+       "from": 77,
+       "to": 107
+      },
+      {
+       "w": "'What",
+       "from": 107,
+       "to": 114
+      },
+      {
+       "w": "are",
+       "from": 114,
+       "to": 122
+      },
+      {
+       "w": "the",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "3",
+       "from": 127,
+       "to": 129
+      },
+      {
+       "w": "biggest",
+       "from": 129,
+       "to": 138
+      },
+      {
+       "w": "reasons",
+       "from": 138,
+       "to": 147
+      },
+      {
+       "w": "this",
+       "from": 147,
+       "to": 153
+      },
+      {
+       "w": "will",
+       "from": 153,
+       "to": 159
+      },
+      {
+       "w": "fail?'",
+       "from": 159,
+       "to": 175
+      },
+      {
+       "w": "Or",
+       "from": 175,
+       "to": 179
+      },
+      {
+       "w": "say",
+       "from": 179,
+       "to": 183
+      },
+      {
+       "w": "it's",
+       "from": 183,
+       "to": 189
+      },
+      {
+       "w": "a",
+       "from": 189,
+       "to": 191
+      },
+      {
+       "w": "friend's",
+       "from": 191,
+       "to": 201
+      },
+      {
+       "w": "idea.",
+       "from": 201,
+       "to": 208
+      },
+      {
+       "w": "Next:",
+       "from": 208,
+       "to": 238
+      },
+      {
+       "w": "how",
+       "from": 238,
+       "to": 243
+      },
+      {
+       "w": "to",
+       "from": 243,
+       "to": 246
+      },
+      {
+       "w": "teach",
+       "from": 246,
+       "to": 252
+      },
+      {
+       "w": "an",
+       "from": 252,
+       "to": 256
+      },
+      {
+       "w": "AI",
+       "from": 256,
+       "to": 259
+      },
+      {
+       "w": "a",
+       "from": 259,
+       "to": 261
+      },
+      {
+       "w": "new",
+       "from": 261,
+       "to": 265
+      },
+      {
+       "w": "skill",
+       "from": 265,
+       "to": 272
+      },
+      {
+       "w": "without",
+       "from": 272,
+       "to": 289
+      },
+      {
+       "w": "a",
+       "from": 289,
+       "to": 291
+      },
+      {
+       "w": "supercomputer.",
+       "from": 291,
+       "to": 307
+      },
+      {
+       "w": "Follow,",
+       "from": 307,
+       "to": 326
+      },
+      {
+       "w": "so",
+       "from": 326,
+       "to": 329
+      },
+      {
+       "w": "you",
+       "from": 329,
+       "to": 341
+      },
+      {
+       "w": "don't",
+       "from": 341,
+       "to": 348
+      },
+      {
+       "w": "miss",
+       "from": 348,
+       "to": 353
+      },
+      {
+       "w": "it.",
+       "from": 353,
+       "to": 358
+      }
+     ],
+     "cues": {
+      "1": 77,
+      "2": 208,
+      "3": 307
+     }
+    }
+   ]
+  }
+ ]
+}
