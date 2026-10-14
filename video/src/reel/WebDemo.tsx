@@ -6,8 +6,9 @@ import { Fonts } from "../components/Fonts";
 export type Cam = { t: number; s: number; x: number; y: number };   // seconds into the segment, zoom, focus (0-1)
 // A callout labels what the laptop shot is about: a pill pinned to a point on the screen recording (u, v: 0-1 of the
 // recording), drawn in screen space so it stays big when the camera pushes in. y = fixed pill height on the canvas.
-export type Callout = { t0: number; t1: number; text: string; sub?: string; u: number; v: number; y: number };
-export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[] };
+// path: the anchor moving with the page (e.g. during a scroll); lineUntil: hide the pointer once its target is gone.
+export type Callout = { t0: number; t1: number; text: string; sub?: string; u: number; v: number; y: number; path?: { t: number; u: number; v: number }[]; lineUntil?: number };
+export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[]; scrim?: number };
 export type CodeEdit = { file: string; lines: string[]; line: number; from: string; to: string };
 export type WebDemoProps = { phone: string; desk: string; audio: string; url: string; handle: string; segs: Seg[]; code?: CodeEdit; end: { big: string; lines: string[]; cta: string } };
 export const webDemoDuration = (p: WebDemoProps) => Math.round(p.segs.reduce((a, s) => a + s.dur, 0) * 30);
@@ -189,6 +190,8 @@ const LaptopFrame: React.FC<{ seg: Seg; children: React.ReactNode }> = ({ seg, c
           </div>
         </div>
       </div>
+      {/* seg.scrim: pushed in, the site fills the frame; dim its top so its big titles don't read as part of the caption */}
+      {seg.scrim ? <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1000, background: "linear-gradient(180deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.72) 55%, rgba(0,0,0,0) 100%)", opacity: seg.scrim * interpolate(s, [1.25, 1.8], [0, 1], cl), pointerEvents: "none" }} /> : null}
     </AbsoluteFill>
   );
 };
@@ -206,19 +209,22 @@ const Callouts: React.FC<{ seg: Seg }> = ({ seg }) => {
         if (t < c.t0 - 0.05 || t > c.t1 + 0.3) return null;
         const k = spring({ frame: f - Math.round(c.t0 * fps), fps, config: { damping: 14, mass: 0.6 } });
         const out = interpolate(t, [c.t1, c.t1 + 0.25], [1, 0], cl);
-        const ax = tx + (LX + c.u * LW) * s, ay = ty + (LY + c.v * LH) * s;   // the anchor on screen
+        const pu = c.path ? interpolate(t, c.path.map((k) => k.t), c.path.map((k) => k.u), { ...cl, easing: Easing.inOut(Easing.cubic) }) : c.u;
+        const pv = c.path ? interpolate(t, c.path.map((k) => k.t), c.path.map((k) => k.v), { ...cl, easing: Easing.inOut(Easing.cubic) }) : c.v;
+        const ax = tx + (LX + pu * LW) * s, ay = ty + (LY + pv * LH) * s;   // the anchor on screen
+        const lk = c.lineUntil != null ? k * interpolate(t, [c.lineUntil - 0.15, c.lineUntil], [1, 0], cl) : k;
         const cx = 540 + Math.max(-300, Math.min(300, ax - 540)), above = c.y < ay;   // pill centre (kept on screen)
-        const y0 = above ? c.y + (c.sub ? 148 : 98) : c.y, y1 = above ? ay - 18 : ay + 18;
+        const y0 = above ? c.y + (c.sub ? 156 : 98) : c.y, y1 = above ? ay - 18 : ay + 18;
         return (
           <div key={i} style={{ position: "absolute", inset: 0, opacity: out }}>
             <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
-              <line x1={cx} y1={y0} x2={cx + (ax - cx) * k} y2={y0 + (y1 - y0) * k} stroke="#fff" strokeWidth={6} strokeLinecap="round" />
-              <circle cx={ax} cy={ay} r={18 * k} fill="none" stroke="#fff" strokeWidth={6} />
+              <line x1={cx} y1={y0} x2={cx + (ax - cx) * lk} y2={y0 + (y1 - y0) * lk} stroke="#fff" strokeWidth={6} strokeLinecap="round" opacity={lk > 0.01 ? 1 : 0} />
+              <circle cx={ax} cy={ay} r={18 * lk} fill="none" stroke="#fff" strokeWidth={6} opacity={lk > 0.01 ? 1 : 0} />
             </svg>
             <div style={{ position: "absolute", top: c.y, left: 0, right: 0, display: "flex", justifyContent: "center", transform: `translateX(${cx - 540}px) scale(${0.6 + 0.4 * k})`, opacity: k }}>
               <div style={{ background: RED, borderRadius: 18, padding: "10px 30px 12px", boxShadow: "0 10px 30px rgba(0,0,0,0.55)", textAlign: "center" }}>
                 <div style={{ fontFamily: BEBAS, fontSize: 76, lineHeight: 1, color: "#fff", letterSpacing: 1 }}>{c.text}</div>
-                {c.sub ? <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 38, color: "#fff", marginTop: 4 }}>{c.sub}</div> : null}
+                {c.sub ? <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 44, color: "#fff", marginTop: 4 }}>{c.sub}</div> : null}
               </div>
             </div>
           </div>

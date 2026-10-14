@@ -90,13 +90,13 @@ def shimmer(dur, freqs=(146.83, 220.0, 293.66, 349.23, 440.0, 587.33)):
     return (s * trem * swell).astype(np.float32)
 
 
-def swell(dur):
-    """A reversed-cymbal style rise into the first hit, so the reel never opens on dead air."""
+def swell(dur, floor=0.25):
+    """A reversed-cymbal style rise into the first hit, so the reel never opens on dead air (floor = level at the start)."""
     n = int(dur * SR)
     t = np.linspace(0, 1, n)
     nz = highpass(rng.standard_normal(n).astype(np.float32), 2500) * 0.6
     tone = np.sin(2 * np.pi * np.cumsum(40 + 50 * t) / SR) * 0.5
-    return ((nz + tone) * (0.25 + 0.75 * t ** 1.5)).astype(np.float32)
+    return ((nz + tone) * (floor + (1 - floor) * t ** 1.5)).astype(np.float32)
 
 
 def rumble(dur):
@@ -167,7 +167,7 @@ def main(out, cues_path):
     sfx = np.zeros_like(mus)
     # intro stings (the name intro plays twice: the real name, then the renamed one)
     for st in C["stings"]:
-        place(sfx, swell(st["hit"] - st["start"]), st["start"], 1.0)
+        place(sfx, swell(st["hit"] - st["start"], st.get("floor", 0.25)), st["start"], 1.0)
         place(sfx, boom(), st["hit"], 0.95)
         place(sfx, snap(), st["hit"], 0.8)
         place(sfx, pad_chord(st["land"] - st["hit"] + 0.3, 73.42 * 2), st["hit"] + 0.05, 0.95)
@@ -182,6 +182,7 @@ def main(out, cues_path):
     bar = 4 * beat
     beds = C.get("beds") or [[C["bed_start"], C["bed_end"]]]
     lifts = C.get("lifts") or ([C["lift"]] if "lift" in C else [])
+    steps = C.get("steps", [])   # a mid-range pluck layer (0.5-3 kHz) that lifts the middle of the tour a notch
     k = 0
     for t0, t1 in beds:
         t = t0
@@ -199,6 +200,12 @@ def main(out, cues_path):
                 if tb < t1:
                     place(mus, kick(), tb, 0.75 if b % 2 == 0 else 0.45)
                     place(mus, hat(), tb + beat / 2, 0.22, pan=0.3)
+            sw = next((w for w in steps if w[0] <= t < w[1]), None)
+            if sw:
+                for b in range(8):
+                    tb = t + b * beat / 2
+                    if tb < min(t1, sw[1]):
+                        place(mus, pluck(beat / 2, [r * 8, r * 8 * 1.5, r * 8 * 1.189, r * 16][b % 4]), tb, 0.28, pan=(0.3 if b % 2 else -0.3))
             lw = next((w for w in lifts if w[0] <= t < w[1]), None)
             if lw:
                 for b in range(16):
@@ -231,13 +238,16 @@ def main(out, cues_path):
     place(sfx, shimmer(2.2), C["end"] + 0.1, 0.8)
     place(sfx, pad_chord(total - C["end"] + 0.2, 73.42 * 2), C["end"] + 0.05, 0.85)
     # the arc: the bed sits lower through the feature tour and steps up for each lift ("lift_gain" per window)
-    if lifts:
-        g = np.ones(mus.shape[1], np.float32) * 0.8
+    if lifts or steps:
+        base = C.get("bed_gain", 0.8)
+        g = np.ones(mus.shape[1], np.float32) * base
+        for la, lb in steps:
+            g[int(la * SR):int(lb * SR)] = C.get("step_gain", 0.95)
         for i, (la, lb) in enumerate(lifts):
             a, b = int(la * SR), int(lb * SR)
             hi = (C.get("lift_gain") or [1.2] * len(lifts))[i]
             ramp = int(0.3 * SR)
-            g[max(0, a - ramp):a] = np.linspace(0.8, hi, a - max(0, a - ramp))
+            g[max(0, a - ramp):a] = np.linspace(g[max(0, a - ramp)], hi, a - max(0, a - ramp))
             g[a:b] = hi
         mus *= g
     if not C.get("hold_end"):
