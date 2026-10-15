@@ -23,6 +23,9 @@ import { CompareProps, CompareReel, compareDuration } from "./reel/Compare";
 import { WebDemo, WebDemoProps, webDemoDuration } from "./reel/WebDemo";
 import web01 from "./reel/webdemo/web01.json";
 import web01Laptop from "./reel/webdemo/web01_laptop.json";
+import web01HookA from "./reel/webdemo/web01_hookA.json";
+import web01HookB from "./reel/webdemo/web01_hookB.json";
+import web01HookC from "./reel/webdemo/web01_hookC.json";
 import { BrandShowreel, CaptionsDemo, FollowOutro, SHOWREEL_LEN, SubscribeOutro } from "./brand/Showreel";
 import ep00v2Timeline from "./reel/timelines/ep00v2.json";
 import { LogoSting } from "./brand/Logo";
@@ -102,6 +105,10 @@ export const RemotionRoot: React.FC = () => (
       defaultProps={web01 as unknown as Record<string, unknown>} calculateMetadata={({ props }) => ({ durationInFrames: webDemoDuration(props as unknown as WebDemoProps) })} />
     <Composition id="WebDemo-01-Laptop" component={WebDemo as unknown as React.FC<Record<string, unknown>>} durationInFrames={webDemoDuration(web01Laptop as unknown as WebDemoProps)} fps={30} width={1080} height={1920}
       defaultProps={web01Laptop as unknown as Record<string, unknown>} calculateMetadata={({ props }) => ({ durationInFrames: webDemoDuration(props as unknown as WebDemoProps) })} />
+    {([["A", web01HookA], ["B", web01HookB], ["C", web01HookC]] as const).map(([k, d]) => (
+      <Composition key={k} id={`WebDemo-01-Hook${k}`} component={WebDemo as unknown as React.FC<Record<string, unknown>>} durationInFrames={webDemoDuration(d as unknown as WebDemoProps)} fps={30} width={1080} height={1920}
+        defaultProps={d as unknown as Record<string, unknown>} calculateMetadata={({ props }) => ({ durationInFrames: webDemoDuration(props as unknown as WebDemoProps) })} />
+    ))}
     <Composition id="Brand-Showreel" component={BrandShowreel} durationInFrames={SHOWREEL_LEN} fps={30} width={1080} height={1920} />
     <Composition id="Brand-Sting" component={LogoSting as unknown as React.FC<Record<string, unknown>>} durationInFrames={90} fps={30} width={1080} height={1920} defaultProps={{ dark: true, tagline: "AI, explained simply." }} />
     <Composition id="Brand-Sting-Light" component={LogoSting as unknown as React.FC<Record<string, unknown>>} durationInFrames={90} fps={30} width={1080} height={1920} defaultProps={{ dark: false, tagline: "AI, explained simply." }} />

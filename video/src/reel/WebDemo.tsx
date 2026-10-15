@@ -8,7 +8,7 @@ export type Cam = { t: number; s: number; x: number; y: number };   // seconds i
 // recording), drawn in screen space so it stays big when the camera pushes in. y = fixed pill height on the canvas.
 // path: the anchor moving with the page (e.g. during a scroll); lineUntil: hide the pointer once its target is gone.
 export type Callout = { t0: number; t1: number; text: string; sub?: string; u: number; v: number; y: number; path?: { t: number; u: number; v: number }[]; lineUntil?: number };
-export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[]; scrim?: number };
+export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[]; scrim?: number; codeT0?: number };
 export type CodeEdit = { file: string; lines: string[]; line: number; from: string; to: string };
 export type WebDemoProps = { phone: string; desk: string; audio: string; url: string; handle: string; segs: Seg[]; code?: CodeEdit; end: { big: string; lines: string[]; cta: string } };
 export const webDemoDuration = (p: WebDemoProps) => Math.round(p.segs.reduce((a, s) => a + s.dur, 0) * 30);
@@ -247,7 +247,7 @@ const LaptopVideo: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
 const LaptopCode: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const t = f / fps;
+  const t = f / fps + (seg.codeT0 ?? 0);   // codeT0: start the edit part-way (a hook that opens mid-typing)
   const del0 = 0.7, del1 = del0 + 0.05 * code.from.length, typ1 = del1 + 0.25 + 0.09 * code.to.length;
   let shown = code.from;
   if (t >= del0 && t < del1) shown = code.from.slice(0, Math.max(0, code.from.length - Math.floor((t - del0) / 0.05)));

@@ -1,0 +1,235 @@
+{
+  "phone": "web/01/phone.mp4",
+  "desk": "web/01/deskflow.mp4",
+  "audio": "web/01/sound_hookC.wav",
+  "url": "yourname.github.io",
+  "handle": "@ai_maastaaru",
+  "code": {
+    "file": "config.js",
+    "line": 1,
+    "from": "VAMSI KRISHNA",
+    "to": "PRIYA",
+    "lines": [
+      "window.PORTFOLIO = {",
+      "  name: \"VAMSI KRISHNA\",",
+      "  accent: \"#e50914\",",
+      "  profiles: [ ... ],",
+      "  rows: [ ... ],",
+      "  items: {",
+      "    ep29: { title: \"How AI Sees a Photo\",",
+      "      image: \"assets/ep29.jpg\", ... },"
+    ]
+  },
+  "end": {
+    "big": "YOUR NAME",
+    "lines": [
+      "Free to use (MIT licence)",
+      "Edit config.js + add your images",
+      "Host it free on GitHub Pages"
+    ],
+    "cta": "Get the template: link in bio"
+  },
+  "segs": [
+    {
+      "kind": "laptop",
+      "src0": 9.6,
+      "dur": 2.4,
+      "scrim": 1,
+      "lcam": [
+        {
+          "t": 0,
+          "s": 2.35,
+          "x": 0.3467,
+          "y": 0.548
+        },
+        {
+          "t": 1.4,
+          "s": 2.6,
+          "x": 0.3467,
+          "y": 0.5561
+        },
+        {
+          "t": 2.4,
+          "s": 2.6,
+          "x": 0.3467,
+          "y": 0.5561
+        }
+      ],
+      "title": "I asked AI for a\nNetflix portfolio",
+      "pos": "top",
+      "sub": "it built this",
+      "src": "web/01/deskflow.mp4"
+    },
+    {
+      "kind": "laptop",
+      "src": "web/01/deskintro_yourname.mp4",
+      "src0": 1.0,
+      "dur": 2.4,
+      "lcam": [
+        {
+          "t": 0,
+          "s": 1.45,
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "t": 2.4,
+          "s": 1.75,
+          "x": 0.5,
+          "y": 0.47
+        }
+      ],
+      "title": "The intro is\nyour name",
+      "pos": "top"
+    },
+    {
+      "kind": "laptop",
+      "src0": 4.6,
+      "dur": 2.4,
+      "lcam": [
+        {
+          "t": 0,
+          "s": 2.3,
+          "x": 0.5,
+          "y": 0.4887
+        },
+        {
+          "t": 0.6,
+          "s": 2.3,
+          "x": 0.5,
+          "y": 0.4887
+        },
+        {
+          "t": 0.95,
+          "s": 2.7,
+          "x": 0.3552,
+          "y": 0.4995
+        },
+        {
+          "t": 2.4,
+          "s": 2.7,
+          "x": 0.3552,
+          "y": 0.4995
+        }
+      ],
+      "callouts": [
+        {
+          "t0": 1.15,
+          "t1": 2.35,
+          "text": "RECRUITER",
+          "sub": "rows greet their pick",
+          "u": 0.313,
+          "v": 0.47,
+          "y": 1170,
+          "lineUntil": 2.3
+        }
+      ],
+      "title": "Visitors pick\nwho they are",
+      "pos": "top",
+      "src": "web/01/deskflow.mp4"
+    },
+    {
+      "kind": "laptop",
+      "src0": 17.4,
+      "dur": 2.4,
+      "lcam": [
+        {
+          "t": 0,
+          "s": 2.4,
+          "x": 0.8237,
+          "y": 0.4428
+        },
+        {
+          "t": 0.55,
+          "s": 2.4,
+          "x": 0.8237,
+          "y": 0.4428
+        },
+        {
+          "t": 1.2,
+          "s": 1.5,
+          "x": 0.5,
+          "y": 0.5373
+        },
+        {
+          "t": 2.4,
+          "s": 1.55,
+          "x": 0.5,
+          "y": 0.5426
+        }
+      ],
+      "callouts": [
+        {
+          "t0": 1.0,
+          "t1": 2.35,
+          "text": "YOUR PROJECT",
+          "sub": "story, tags, links",
+          "u": 0.35,
+          "v": 0.69,
+          "y": 1290
+        }
+      ],
+      "title": "Click: the\nfull story",
+      "pos": "top",
+      "src": "web/01/deskflow.mp4"
+    },
+    {
+      "kind": "laptopcode",
+      "dur": 2.4,
+      "codeT0": 0.5,
+      "lcam": [
+        {
+          "t": 0,
+          "s": 1.9,
+          "x": 0.3637,
+          "y": 0.4374
+        },
+        {
+          "t": 2.4,
+          "s": 1.95,
+          "x": 0.3637,
+          "y": 0.4374
+        }
+      ],
+      "callouts": [
+        {
+          "t0": 0.1,
+          "t1": 2.3,
+          "text": "YOUR NAME",
+          "u": 0.42,
+          "v": 0.245,
+          "y": 600
+        }
+      ],
+      "title": "Edit one file",
+      "pos": "top"
+    },
+    {
+      "kind": "laptop",
+      "src": "web/01/deskintro_priya.mp4",
+      "src0": 1.0,
+      "dur": 2.4,
+      "lcam": [
+        {
+          "t": 0,
+          "s": 1.3,
+          "x": 0.5,
+          "y": 0.47
+        },
+        {
+          "t": 2.4,
+          "s": 1.6,
+          "x": 0.5,
+          "y": 0.47
+        }
+      ],
+      "title": "Free template",
+      "pos": "top",
+      "sub": "the code is in the bio"
+    },
+    {
+      "kind": "end",
+      "dur": 3.0
+    }
+  ]
+}
