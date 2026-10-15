@@ -8,7 +8,7 @@ export type Cam = { t: number; s: number; x: number; y: number };   // seconds i
 // recording), drawn in screen space so it stays big when the camera pushes in. y = fixed pill height on the canvas.
 // path: the anchor moving with the page (e.g. during a scroll); lineUntil: hide the pointer once its target is gone.
 export type Callout = { t0: number; t1: number; text: string; sub?: string; u: number; v: number; y: number; path?: { t: number; u: number; v: number }[]; lineUntil?: number };
-export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[]; scrim?: number; codeT0?: number };
+export type Seg = { kind: "phone" | "desk" | "deskfull" | "code" | "end" | "laptop" | "laptopcode" | "laptopchat"; dur: number; src0?: number; src?: string; clip?: string; title?: string; sub?: string; cam?: Cam[]; pos?: "top" | "bottom"; cont?: boolean; tag?: string; y?: number; open?: boolean; lcam?: Cam[]; callouts?: Callout[]; scrim?: number; codeT0?: number; chat?: { prompt: string; reply: string } };
 export type CodeEdit = { file: string; lines: string[]; line: number; from: string; to: string };
 export type WebDemoProps = { phone: string; desk: string; audio: string; url: string; handle: string; segs: Seg[]; code?: CodeEdit; end: { big: string; lines: string[]; cta: string } };
 export const webDemoDuration = (p: WebDemoProps) => Math.round(p.segs.reduce((a, s) => a + s.dur, 0) * 30);
@@ -244,6 +244,37 @@ const LaptopVideo: React.FC<{ seg: Seg; src: string }> = ({ seg, src }) => {
 };
 
 // The config.js edit, drawn at screen size on the laptop.
+// The request typed into a plain, unbranded chat window on the laptop, then the assistant's first reply line.
+const LaptopChat: React.FC<{ seg: Seg }> = ({ seg }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const t = f / fps;
+  const chat = seg.chat ?? { prompt: "", reply: "" };
+  const typed = chat.prompt.slice(0, Math.round(interpolate(t, [0.1, 1.5], [0, chat.prompt.length], cl)));
+  const sent = t > 1.6;
+  const dots = ".".repeat(1 + (Math.floor(t * 4) % 3));
+  return (
+    <LaptopFrame seg={seg}>
+      <div style={{ width: LW, height: LH, background: "#1f1f1f", fontFamily: SANS, position: "relative" }}>
+        <div style={{ height: 40, background: "#2a2a2a", display: "flex", alignItems: "center", padding: "0 16px", gap: 9 }}>
+          {["#ff5f57", "#febc2e", "#28c840"].map((c) => <span key={c} style={{ width: 12, height: 12, borderRadius: 6, background: c }} />)}
+          <span style={{ marginLeft: 14, fontWeight: 600, fontSize: 18, color: "#bbb" }}>AI coding assistant</span>
+        </div>
+        {sent ? (
+          <div style={{ position: "absolute", right: 60, top: 64, maxWidth: 680, background: "#3a3a3a", color: "#f2f2f2", borderRadius: 18, padding: "14px 20px", fontSize: 28, lineHeight: 1.35 }}>{chat.prompt}</div>
+        ) : (
+          <div style={{ position: "absolute", left: 60, right: 60, top: 96, background: "#2d2d2d", border: "2px solid #4a4a4a", borderRadius: 22, padding: "20px 24px", color: "#f2f2f2", fontSize: 34, lineHeight: 1.35, minHeight: 200 }}>
+            {typed}<span style={{ opacity: Math.floor(t * 3) % 2 ? 0 : 1 }}>|</span>
+          </div>
+        )}
+        {sent ? (
+          <div style={{ position: "absolute", left: 60, top: 330, maxWidth: 700, color: "#e8e8e8", fontSize: 32, lineHeight: 1.35, opacity: interpolate(t, [1.7, 1.9], [0, 1], cl) }}>{chat.reply}{dots}</div>
+        ) : null}
+      </div>
+    </LaptopFrame>
+  );
+};
+
 const LaptopCode: React.FC<{ seg: Seg; code: CodeEdit }> = ({ seg, code }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -342,6 +373,7 @@ export const WebDemo: React.FC<WebDemoProps> = (p) => {
                 : seg.kind === "code" && p.code ? <Code seg={seg} code={p.code} />
                 : seg.kind === "laptop" ? <LaptopVideo seg={seg} src={seg.src ?? p.desk} />
                 : seg.kind === "laptopcode" && p.code ? <LaptopCode seg={seg} code={p.code} />
+                : seg.kind === "laptopchat" ? <LaptopChat seg={seg} />
                 : <End end={p.end} handle={p.handle} dur={seg.dur} />}
             </Cut>
             <Callouts seg={seg} />

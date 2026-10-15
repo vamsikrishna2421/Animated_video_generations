@@ -20,13 +20,13 @@ def K(t, s, u=None, v=None):
 # numbered row -> card click 17.95 s -> pop-up), deskintro_yourname.mp4 / deskintro_priya.mp4 (the name intro;
 # letters land by 1.0 s, zoom-through from 2.1 s).
 SHOT = {
-    "yourname": {"kind": "laptop", "src": "web/01/deskintro_yourname.mp4", "src0": 1.0, "dur": 2.4,
-                 "lcam": [K(0, 1.45), K(2.4, 1.75)], "sting": 0.0},
+    "yourname": {"kind": "laptop", "src": "web/01/deskintro_yourname.mp4", "src0": 0.6, "dur": 2.4,
+                 "lcam": [K(0, 1.4), K(2.4, 1.9)], "sting": 0.0},
     "priya": {"kind": "laptop", "src": "web/01/deskintro_priya.mp4", "src0": 1.0, "dur": 2.4,
               "lcam": [K(0, 1.3), K(2.4, 1.6)], "sting": 0.0},
     "profiles": {"kind": "laptop", "src0": 4.6, "dur": 2.4,
                  "lcam": [K(0, 2.3, 0.5, 0.46), K(0.6, 2.3, 0.5, 0.46), K(0.95, 2.7, 0.33, 0.5), K(2.4, 2.7, 0.33, 0.5)],
-                 "callouts": [{"t0": 1.15, "t1": 2.35, "text": "RECRUITER", "sub": "rows greet their pick", "u": 0.313, "v": 0.47, "y": 1170, "lineUntil": 2.3}],
+                 "callouts": [{"t0": 1.15, "t1": 2.35, "text": "RECRUITER", "sub": "their name on the rows", "u": 0.313, "v": 0.47, "y": 1170, "lineUntil": 2.3}],
                  "clicks": [5.81 - 4.6]},
     "hover": {"kind": "laptop", "src0": 9.6, "dur": 2.4, "scrim": 1,
               "lcam": [K(0, 2.35, 0.32, 0.68), K(1.4, 2.6, 0.32, 0.71), K(2.4, 2.6, 0.32, 0.71)]},
@@ -39,32 +39,36 @@ SHOT = {
              "lcam": [K(0, 1.9, 0.34, 0.27), K(2.4, 1.95, 0.34, 0.27)],
              "callouts": [{"t0": 0.1, "t1": 2.3, "text": "YOUR NAME", "u": 0.42, "v": 0.245, "y": 600}],
              "rattle": [0.2, 0.85], "clicks": [1.1, 1.19, 1.28, 1.37, 1.46, 1.9]},
+    "prompt": {"kind": "laptopchat", "dur": 2.4,
+               "chat": {"prompt": "Make me a Netflix-style portfolio site. Open with my name in that red font, then \"Who's watching?\", then my projects as rows of shows.",
+                        "reply": "On it: the name intro, the profile picker, the rows"},
+               "lcam": [K(0, 1.22, 0.5, 0.42), K(2.4, 1.32, 0.5, 0.42)], "rattle": [0.1, 1.5], "clicks": [1.6]},
     "end": {"kind": "end", "dur": 3.0},
 }
 
 VARIANTS = {
-    # A: the payoff first (Meta's note): a red "YOUR NAME" intro on frame 1, framed as a result
+    # A: the payoff first (Meta's note): the "YOUR NAME" letters landing on frame 1, framed as a result
     "A": [("yourname", "Make recruiters\nbinge your work", "free Netflix-style portfolio"),
-          ("profiles", "Visitors pick\nwho they are", None),
-          ("hover", "Each project\n= a show", "cards open on hover"),
-          ("popup", "Click: the\nfull story", None),
-          ("code", "Type any name...", None),
-          ("priya", "...it's their\nintro now", None),
+          ("profiles", "Recruiters get\na welcome", None),
+          ("hover", "Your projects,\nas shows", "hover on a laptop, tap on a phone"),
+          ("popup", "One click: the\nwhole project", None),
+          ("code", "Type your name...", None),
+          ("priya", "...now it's\nyour intro", None),
           ("end", None, None)],
     # B: the magic moment first (the swap every viewer panel liked): typing a name, then that name's intro
     "B": [("code", "Type your name...", None),
           ("priya", "...get a Netflix-\nstyle intro", "free portfolio template"),
-          ("profiles", "Visitors pick\nwho they are", None),
-          ("hover", "Each project\n= a show", "cards open on hover"),
-          ("popup", "Click: the\nfull story", None),
+          ("profiles", "Recruiters get\na welcome", None),
+          ("hover", "Your projects,\nas shows", "hover on a laptop, tap on a phone"),
+          ("popup", "One click: the\nwhole project", None),
           ("end", None, None)],
-    # C: motion first plus the page's own angle (AI): a card already opening on frame 1
-    "C": [("hover", "I asked AI for a\nNetflix portfolio", "it built this"),
+    # C: the page's own angle, shown honestly: the request typed to an AI assistant, then what it built
+    "C": [("prompt", "I asked AI for a\nNetflix portfolio...", None),
+          ("hover", "...it built this", "free to use"),
           ("yourname", "The intro is\nyour name", None),
-          ("profiles", "Visitors pick\nwho they are", None),
-          ("popup", "Click: the\nfull story", None),
+          ("profiles", "Recruiters get\na welcome", None),
           ("code", "Edit one file", None),
-          ("priya", "Free template", "the code is in the bio"),
+          ("priya", "Free template", "link in bio"),
           ("end", None, None)],
 }
 
@@ -82,7 +86,7 @@ def build(name, plan):
             s["src"] = BASE["desk"]
         segs.append(s)
         if sting is not None:   # the name intro lands on a boom (the swell starts just before the cut)
-            cues["stings"].append({"start": max(0.0, t - 0.6), "hit": round(t + 0.04, 3), "shimmer": round(t + 0.4, 3),
+            cues["stings"].append({"start": max(0.0, t - (1.8 if i == 1 else 0.6)), "hit": round(t + 0.04, 3), "shimmer": round(t + 0.4, 3),
                                    "zoom": round(t + 1.1, 3), "land": round(t + s["dur"], 3), **({"floor": 0.6} if t == 0 else {})})
         elif i > 0 and s["kind"] != "end":
             cues["cuts"].append(round(t, 3))
@@ -96,16 +100,18 @@ def build(name, plan):
     # coincides with a sting's landing impact is not doubled
     beds, a = [], first_bed
     for st in cues["stings"]:
-        if st["start"] > a + 0.3:
+        if st["hit"] <= a + 0.1:      # the opening name intro: the bed starts after it
+            continue
+        if st["start"] > a + 1.0:     # play the bed up to the swell (skip windows under 1 s)
             beds.append([a, st["start"]])
-            a = round(st["hit"] - 0.04, 3)
+        a = round(st["hit"] - 0.04, 3)
     beds += [[a, round(end_at - 0.2, 3)], [end_at, t]]
     lands = [st["land"] for st in cues["stings"]]
     cues["cuts"] = [c for c in cues["cuts"] if all(abs(c - x) > 0.05 for x in lands)]
     cues.update({"total": t, "end": end_at, "stab": round(end_at + 2.0, 3), "beds": beds,
                  "steps": [[first_bed, round(first_bed + (end_at - first_bed) / 2, 3)]],
                  "lifts": [[round(first_bed + (end_at - first_bed) / 2, 3), end_at - 0.2], [end_at, t]],
-                 "lift_gain": [1.2, 1.4], "bed_gain": 0.9, "step_gain": 1.05})
+                 "lift_gain": [1.2, 1.4], "bed_gain": 0.9, "step_gain": 1.05, "risers": [[round(end_at - 1.2, 3), end_at]]})
     if first_bed == 0.0:   # no name intro to open on: a hit in the first second anyway
         cues["cuts"].insert(0, 0.02)
     demo = copy.deepcopy(BASE)

@@ -223,6 +223,8 @@ def main(out, cues_path):
             tt += 0.05
     if "lift_riser" in C:
         place(sfx, whoosh(lifts[0][0] - C["lift_riser"], True), C["lift_riser"], 0.9)
+    for a, b in C.get("risers", []):   # a whoosh that rises into a cut (e.g. the end card)
+        place(sfx, whoosh(b - a, True), a, 0.8)
     if "stab" in C:
         place(sfx, impact(), C["stab"], 0.75)
         place(sfx, snap(), C["stab"], 0.6)

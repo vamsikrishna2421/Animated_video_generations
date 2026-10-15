@@ -31,6 +31,30 @@
   },
   "segs": [
     {
+      "kind": "laptopchat",
+      "dur": 2.4,
+      "chat": {
+        "prompt": "Make me a Netflix-style portfolio site. Open with my name in that red font, then \"Who's watching?\", then my projects as rows of shows.",
+        "reply": "On it: the name intro, the profile picker, the rows"
+      },
+      "lcam": [
+        {
+          "t": 0,
+          "s": 1.22,
+          "x": 0.5,
+          "y": 0.4779
+        },
+        {
+          "t": 2.4,
+          "s": 1.32,
+          "x": 0.5,
+          "y": 0.4779
+        }
+      ],
+      "title": "I asked AI for a\nNetflix portfolio...",
+      "pos": "top"
+    },
+    {
       "kind": "laptop",
       "src0": 9.6,
       "dur": 2.4,
@@ -55,26 +79,26 @@
           "y": 0.5561
         }
       ],
-      "title": "I asked AI for a\nNetflix portfolio",
+      "title": "...it built this",
       "pos": "top",
-      "sub": "it built this",
+      "sub": "free to use",
       "src": "web/01/deskflow.mp4"
     },
     {
       "kind": "laptop",
       "src": "web/01/deskintro_yourname.mp4",
-      "src0": 1.0,
+      "src0": 0.6,
       "dur": 2.4,
       "lcam": [
         {
           "t": 0,
-          "s": 1.45,
+          "s": 1.4,
           "x": 0.5,
           "y": 0.47
         },
         {
           "t": 2.4,
-          "s": 1.75,
+          "s": 1.9,
           "x": 0.5,
           "y": 0.47
         }
@@ -117,59 +141,14 @@
           "t0": 1.15,
           "t1": 2.35,
           "text": "RECRUITER",
-          "sub": "rows greet their pick",
+          "sub": "their name on the rows",
           "u": 0.313,
           "v": 0.47,
           "y": 1170,
           "lineUntil": 2.3
         }
       ],
-      "title": "Visitors pick\nwho they are",
-      "pos": "top",
-      "src": "web/01/deskflow.mp4"
-    },
-    {
-      "kind": "laptop",
-      "src0": 17.4,
-      "dur": 2.4,
-      "lcam": [
-        {
-          "t": 0,
-          "s": 2.4,
-          "x": 0.8237,
-          "y": 0.4428
-        },
-        {
-          "t": 0.55,
-          "s": 2.4,
-          "x": 0.8237,
-          "y": 0.4428
-        },
-        {
-          "t": 1.2,
-          "s": 1.5,
-          "x": 0.5,
-          "y": 0.5373
-        },
-        {
-          "t": 2.4,
-          "s": 1.55,
-          "x": 0.5,
-          "y": 0.5426
-        }
-      ],
-      "callouts": [
-        {
-          "t0": 1.0,
-          "t1": 2.35,
-          "text": "YOUR PROJECT",
-          "sub": "story, tags, links",
-          "u": 0.35,
-          "v": 0.69,
-          "y": 1290
-        }
-      ],
-      "title": "Click: the\nfull story",
+      "title": "Recruiters get\na welcome",
       "pos": "top",
       "src": "web/01/deskflow.mp4"
     },
@@ -225,7 +204,7 @@
       ],
       "title": "Free template",
       "pos": "top",
-      "sub": "the code is in the bio"
+      "sub": "link in bio"
     },
     {
       "kind": "end",
