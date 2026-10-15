@@ -26,7 +26,7 @@ SHOT = {
               "lcam": [K(0, 1.3), K(2.4, 1.6)], "sting": 0.0},
     "profiles": {"kind": "laptop", "src0": 4.6, "dur": 2.4,
                  "lcam": [K(0, 2.3, 0.5, 0.46), K(0.6, 2.3, 0.5, 0.46), K(0.95, 2.7, 0.33, 0.5), K(2.4, 2.7, 0.33, 0.5)],
-                 "callouts": [{"t0": 1.15, "t1": 2.35, "text": "RECRUITER", "sub": "their name on the rows", "u": 0.313, "v": 0.47, "y": 1170, "lineUntil": 2.3}],
+                 "callouts": [{"t0": 1.15, "t1": 2.25, "text": "RECRUITER", "sub": "their own profile", "u": 0.313, "v": 0.47, "y": 1170, "lineUntil": 1.75}],
                  "clicks": [5.81 - 4.6]},
     "hover": {"kind": "laptop", "src0": 9.6, "dur": 2.4, "scrim": 1,
               "lcam": [K(0, 2.35, 0.32, 0.68), K(1.4, 2.6, 0.32, 0.71), K(2.4, 2.6, 0.32, 0.71)]},
@@ -39,10 +39,11 @@ SHOT = {
              "lcam": [K(0, 1.9, 0.34, 0.27), K(2.4, 1.95, 0.34, 0.27)],
              "callouts": [{"t0": 0.1, "t1": 2.3, "text": "YOUR NAME", "u": 0.42, "v": 0.245, "y": 600}],
              "rattle": [0.2, 0.85], "clicks": [1.1, 1.19, 1.28, 1.37, 1.46, 1.9]},
-    "prompt": {"kind": "laptopchat", "dur": 2.4,
+    "prompt": {"kind": "laptopchat", "dur": 3.0,
                "chat": {"prompt": "Make me a Netflix-style portfolio site. Open with my name in that red font, then \"Who's watching?\", then my projects as rows of shows.",
                         "reply": "On it: the name intro, the profile picker, the rows"},
-               "lcam": [K(0, 1.22, 0.5, 0.42), K(2.4, 1.32, 0.5, 0.42)], "rattle": [0.1, 1.5], "clicks": [1.6]},
+               "lcam": [K(0, 1.22, 0.5, 0.42), K(3.0, 1.34, 0.5, 0.42)], "rattle": [0.1, 1.5], "clicks": [1.6]},
+    "home": {"kind": "laptop", "src0": 6.3, "dur": 2.4, "scrim": 1, "lcam": [K(0, 1.25, 0.5, 0.42), K(2.4, 1.45, 0.5, 0.4)]},
     "end": {"kind": "end", "dur": 3.0},
 }
 
@@ -64,7 +65,7 @@ VARIANTS = {
           ("end", None, None)],
     # C: the page's own angle, shown honestly: the request typed to an AI assistant, then what it built
     "C": [("prompt", "I asked AI for a\nNetflix portfolio...", None),
-          ("hover", "...it built this", "free to use"),
+          ("home", "...it built this", "after a few rounds of fixes"),
           ("yourname", "The intro is\nyour name", None),
           ("profiles", "Recruiters get\na welcome", None),
           ("code", "Edit one file", None),
@@ -86,8 +87,10 @@ def build(name, plan):
             s["src"] = BASE["desk"]
         segs.append(s)
         if sting is not None:   # the name intro lands on a boom (the swell starts just before the cut)
-            cues["stings"].append({"start": max(0.0, t - (1.8 if i == 1 else 0.6)), "hit": round(t + 0.04, 3), "shimmer": round(t + 0.4, 3),
-                                   "zoom": round(t + 1.1, 3), "land": round(t + s["dur"], 3), **({"floor": 0.6} if t == 0 else {})})
+            if i == 1:   # right after the opening shot: build from frame 1, with a bright riser on top
+                cues.setdefault("risers", []).append([0.05, round(t, 3)])
+            cues["stings"].append({"start": 0.0 if i == 1 else max(0.0, t - 0.6), "hit": round(t + 0.04, 3), "shimmer": round(t + 0.4, 3),
+                                   "zoom": round(t + 1.1, 3), "land": round(t + s["dur"], 3), **({"floor": 0.6} if t == 0 else {"floor": 0.45} if i == 1 else {})})
         elif i > 0 and s["kind"] != "end":
             cues["cuts"].append(round(t, 3))
         cues["clicks"] += [round(t + c, 3) for c in clicks]
@@ -111,11 +114,12 @@ def build(name, plan):
     cues.update({"total": t, "end": end_at, "stab": round(end_at + 2.0, 3), "beds": beds,
                  "steps": [[first_bed, round(first_bed + (end_at - first_bed) / 2, 3)]],
                  "lifts": [[round(first_bed + (end_at - first_bed) / 2, 3), end_at - 0.2], [end_at, t]],
-                 "lift_gain": [1.2, 1.4], "bed_gain": 0.9, "step_gain": 1.05, "risers": [[round(end_at - 1.2, 3), end_at]]})
+                 "lift_gain": [1.2, 1.4], "bed_gain": 0.9, "step_gain": 1.05, "risers": cues.get("risers", []) + [[round(end_at - 1.2, 3), end_at]]})
     if first_bed == 0.0:   # no name intro to open on: a hit in the first second anyway
         cues["cuts"].insert(0, 0.02)
     demo = copy.deepcopy(BASE)
     demo["segs"], demo["audio"] = segs, f"web/01/sound_hook{name}.wav"
+    demo["end"]["lines"] = ["Free and open source", "Edit config.js + add your images", "Host it free on GitHub Pages"]
     (ROOT / f"video/src/reel/webdemo/web01_hook{name}.json").write_text(json.dumps(demo, ensure_ascii=False, indent=2))
     cf = ROOT / f"pipeline/web_demo/cues_hook{name}.json"
     cf.write_text(json.dumps(cues, indent=1))

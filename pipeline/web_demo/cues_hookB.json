@@ -1,11 +1,12 @@
 {
  "stings": [
   {
-   "start": 0.5999999999999999,
+   "start": 0.0,
    "hit": 2.44,
    "shimmer": 2.8,
    "zoom": 3.5,
-   "land": 4.8
+   "land": 4.8,
+   "floor": 0.45
   }
  ],
  "cuts": [
@@ -29,6 +30,16 @@
  ],
  "snaps": true,
  "hold_end": true,
+ "risers": [
+  [
+   0.05,
+   2.4
+  ],
+  [
+   10.8,
+   12.0
+  ]
+ ],
  "total": 15.0,
  "end": 12.0,
  "stab": 14.0,
@@ -63,11 +74,5 @@
   1.4
  ],
  "bed_gain": 0.9,
- "step_gain": 1.05,
- "risers": [
-  [
-   10.8,
-   12.0
-  ]
- ]
+ "step_gain": 1.05
 }

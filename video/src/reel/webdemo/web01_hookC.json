@@ -23,7 +23,7 @@
   "end": {
     "big": "YOUR NAME",
     "lines": [
-      "Free to use (MIT licence)",
+      "Free and open source",
       "Edit config.js + add your images",
       "Host it free on GitHub Pages"
     ],
@@ -32,7 +32,7 @@
   "segs": [
     {
       "kind": "laptopchat",
-      "dur": 2.4,
+      "dur": 3.0,
       "chat": {
         "prompt": "Make me a Netflix-style portfolio site. Open with my name in that red font, then \"Who's watching?\", then my projects as rows of shows.",
         "reply": "On it: the name intro, the profile picker, the rows"
@@ -45,8 +45,8 @@
           "y": 0.4779
         },
         {
-          "t": 2.4,
-          "s": 1.32,
+          "t": 3.0,
+          "s": 1.34,
           "x": 0.5,
           "y": 0.4779
         }
@@ -56,32 +56,26 @@
     },
     {
       "kind": "laptop",
-      "src0": 9.6,
+      "src0": 6.3,
       "dur": 2.4,
       "scrim": 1,
       "lcam": [
         {
           "t": 0,
-          "s": 2.35,
-          "x": 0.3467,
-          "y": 0.548
-        },
-        {
-          "t": 1.4,
-          "s": 2.6,
-          "x": 0.3467,
-          "y": 0.5561
+          "s": 1.25,
+          "x": 0.5,
+          "y": 0.4779
         },
         {
           "t": 2.4,
-          "s": 2.6,
-          "x": 0.3467,
-          "y": 0.5561
+          "s": 1.45,
+          "x": 0.5,
+          "y": 0.4725
         }
       ],
       "title": "...it built this",
       "pos": "top",
-      "sub": "free to use",
+      "sub": "after a few rounds of fixes",
       "src": "web/01/deskflow.mp4"
     },
     {
@@ -139,13 +133,13 @@
       "callouts": [
         {
           "t0": 1.15,
-          "t1": 2.35,
+          "t1": 2.25,
           "text": "RECRUITER",
-          "sub": "their name on the rows",
+          "sub": "their own profile",
           "u": 0.313,
           "v": 0.47,
           "y": 1170,
-          "lineUntil": 2.3
+          "lineUntil": 1.75
         }
       ],
       "title": "Recruiters get\na welcome",
