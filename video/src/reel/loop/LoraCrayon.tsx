@@ -147,8 +147,8 @@ const LoHook: React.FC<SP> = ({ s, cue }) => {
         tag(c, "SmolLM2-360M by Hugging Face · tested by us", W / 2, 318, 42, COL.cream, INK, -0.02, 1);
         // [0]-[2] our prompt, a WhatsApp order and the model's real reply (the order copied back)
         group(c, 1 - fade(f, c3 - 4, 8), (o) => {
-          label(o, "our prompt: “Turn this WhatsApp order into an order slip:", W / 2, 394, 35, COL.pale, handF, 1);
-          label(o, "JSON with name, phone, items (item, qty) and address.”", W / 2, 436, 35, COL.pale, handF, 1);
+          label(o, "our prompt: “Turn this WhatsApp order into an order slip:", W / 2, 394, 37, COL.cream, handF, 1);
+          label(o, "JSON with name, phone, items (item, qty) and address.”", W / 2, 438, 37, COL.cream, handF, 1);
           const yb = bubble(o, d.order, 160, 464, 860, "me", 1, r, { size: 40, bg: WA_GREEN });
           bubble(o, "", 60, yb + 34, 860, "ai", seg(f, 4, 10), r, { size: 38, lines: d.beforeLines, typed: seg(f, 6, copied - 2), bg: "#e5e7eb", fg: "#475569" });
           if (f >= copied) stamp(o, "COPIED BACK", W / 2, 918, 58, COL.red, fade(f, copied, 6), r, -0.05);
@@ -196,7 +196,7 @@ const LoHook: React.FC<SP> = ({ s, cue }) => {
           if (f >= c4 + 12) {
             tag(c, n.miss, W / 2, 1318, 44, COL.cream, INK, -0.01, seg(f, c4 + 12, c4 + 18));
             c.save(); c.globalAlpha = fade(f, c4 + 18, 8);
-            label(c, "made-up orders · real chats are messier", W / 2, 1392, 38, COL.pale, handF, 1);
+            label(c, "made-up orders · real chats are messier", W / 2, 1394, 44, COL.yellow, caveat, 1);
             c.restore();
           }
         }
@@ -266,7 +266,7 @@ const LoTrick: React.FC<SP> = ({ s, cue }) => {
         group(c, 1 - fade(f, c2 - 4, 8), (o) => {
           hand(o, f < c1 ? "1. freeze the original" : "2. stick on notes, train only the notes", W / 2, 440, 54, COL.cream, f < c1 ? seg(f, -4, 10) : seg(f, c1, c1 + 14), r, -0.02, "center");
           book(o, 140, 500, 800, 560, r, seg(f, -6, 6), seg(f, 14, 26), seg(f, c1 + 4, c1 + 40));
-          if (f >= pct) stamp(o, `the notes: ${n.pct}% of the numbers`, W / 2, 1200, 60, "#16a34a", fade(f, pct, 8), r, -0.04);
+          if (f >= pct) stamp(o, `the notes: ${n.pct}% of the numbers`, W / 2, 1200, 60, COL.yellow, fade(f, pct, 8), r, -0.04);
         });
         if (f >= c2 - 4 && f < c3 + 4) {
           group(c, fade(f, c2 - 4, 8) * (1 - fade(f, c3 - 4, 8)), (o) => {
@@ -301,10 +301,10 @@ const LoQuiz: React.FC<SP> = ({ cue }) => {
     <>
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
-      {[0, 1, 2].map((k) => <Sfx key={k} at={c3 + 4 + k * 13} src="audio/sfx_tick.wav" vol={0.38} />)}
+      {[0, 1, 2].map((k) => <Sfx key={k} at={Math.round(c3 + 4 + k * Math.max(10, (c2 - c3 - 16) / 3))} src="audio/sfx_tick.wav" vol={0.38} />)}
       <Sfx at={c2 - 8} src="audio/sfx_snap.wav" vol={0.6} />
       <Sfx at={c2 - 8} src="reel/sfx_boom.wav" vol={0.5} />
-      <Sfx at={c4} src="audio/sfx_success.wav" vol={0.45} />
+      <Sfx at={c4} src="audio/sfx_success.wav" vol={0.35} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4400 + boil);
@@ -329,10 +329,7 @@ const LoQuiz: React.FC<SP> = ({ cue }) => {
           tag(c, "retrain every week", 290, 1010, 50, COL.red, INK, 0.03, seg(f, c2 + 10, c2 + 18));
           tag(c, "always this week's", 790, 1010, 50, "#4ade80", INK, -0.03, seg(f, c2 + 4, c2 + 12));
         }
-        if (f >= c4) {
-          hand(c, "changing facts: put them in the prompt", W / 2, 1190, 54, COL.cream, seg(f, c4, c4 + 12), r, -0.02, "center");
-          hand(c, "skills & style: LoRA", W / 2, 1290, 62, COL.yellow, seg(f, c4 + 14, c4 + 28), r, -0.02, "center");
-        }
+
       }} />
     </>
   );
