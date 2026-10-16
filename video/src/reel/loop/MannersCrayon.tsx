@@ -24,7 +24,7 @@ const ECHO = "I want to sell ice to people in Antarctica.";
 
 // Draw a group at opacity a (offscreen, so helpers that set their own alpha fade together). Not nestable.
 const OFF: { cv?: HTMLCanvasElement } = {};
-const group = (c: Ctx, a: number, fn: (o: Ctx) => void) => {
+export const group = (c: Ctx, a: number, fn: (o: Ctx) => void) => {
   if (a <= 0) return;
   if (a >= 1) { fn(c); return; }
   const W = c.canvas.width, H = c.canvas.height;
@@ -35,7 +35,7 @@ const group = (c: Ctx, a: number, fn: (o: Ctx) => void) => {
   c.save(); c.globalAlpha = a; c.drawImage(OFF.cv, 0, 0); c.restore();
 };
 
-const wrap = (c: Ctx, text: string, maxW: number) => {
+export const wrap = (c: Ctx, text: string, maxW: number) => {
   const out: string[] = [];
   let cur = "";
   text.split(" ").forEach((w) => {
@@ -49,7 +49,7 @@ const wrap = (c: Ctx, text: string, maxW: number) => {
 // Chat bubble. `lines` are drawn as given (or wrapped from text); `hl` = index of a line to highlighter-mark;
 // `typed` (0..1) reveals characters; returns the bubble's bottom y.
 type BubO = { size?: number; bg?: string; fg?: string; typed?: number; hl?: number; hlP?: number; lines?: string[]; em?: string[]; dim?: number };
-const bubble = (c: Ctx, text: string, x: number, y: number, w: number, side: "me" | "ai", p: number, r: () => number, o: BubO = {}) => {
+export const bubble = (c: Ctx, text: string, x: number, y: number, w: number, side: "me" | "ai", p: number, r: () => number, o: BubO = {}) => {
   if (p <= 0) return y;
   const size = o.size ?? 46, lh = size * 1.22, pad = 26;
   c.save(); c.font = handF(size);
@@ -112,7 +112,7 @@ const penguinScene = (c: Ctx, x: number, y: number, s: number, r: () => number, 
   c.restore();
 };
 
-const thumbIcon = (c: Ctx, x: number, y: number, s: number, up: boolean, col: string, p: number) => {
+export const thumbIcon = (c: Ctx, x: number, y: number, s: number, up: boolean, col: string, p: number) => {
   if (p <= 0) return;
   const k = easeOut(p) * s;
   c.save(); c.translate(x, y); c.scale(k, up ? k : -k);
@@ -123,7 +123,7 @@ const thumbIcon = (c: Ctx, x: number, y: number, s: number, up: boolean, col: st
   c.restore();
 };
 
-const crown = (c: Ctx, x: number, y: number, s: number, r: () => number, p: number) => {
+export const crown = (c: Ctx, x: number, y: number, s: number, r: () => number, p: number) => {
   if (p <= 0) return;
   const k = easeOut(p) * s;
   c.save(); c.translate(x, y); c.scale(k, k);

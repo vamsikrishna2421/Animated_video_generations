@@ -1,0 +1,546 @@
+{
+ "before": [
+  {
+   "msg": "fatima here. need 2 kg potatoes, dal 2 kg, 1kg curd. address: villa 21, sunrise homes, madhapur. ph 72729 49088",
+   "gold": {
+    "name": "Fatima",
+    "phone": "7272949088",
+    "items": [
+     {
+      "item": "potatoes",
+      "qty": "2 kg"
+     },
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     },
+     {
+      "item": "curd",
+      "qty": "1 kg"
+     }
+    ],
+    "address": "villa 21, Sunrise Homes, Madhapur"
+   },
+   "out": "Order: Fatima here. Need 2 kg of potatoes, 2 kg of dal, 1 kg of curd. Address: Villa 21, Sunrise Homes, Madhapur. Phone: 72729 49088",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "hi pls send onions 1kg, milk 1 L to room 9, My Home Avatar, Guntur. Arjun 86279 94001",
+   "gold": {
+    "name": "Arjun",
+    "phone": "8627994001",
+    "items": [
+     {
+      "item": "onions",
+      "qty": "1 kg"
+     },
+     {
+      "item": "milk",
+      "qty": "1 L"
+     }
+    ],
+    "address": "room 9, My Home Avatar, Guntur"
+   },
+   "out": "Order: Hi, please send onions 1kg, milk 1 L to room 9, My Home Avatar, Guntur. Arjun 86279 94001",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "Hello, this is Manoj (6106131044). Please send dal 2 kgs. Address door 7, Vasavi Enclave, Gachibowli",
+   "gold": {
+    "name": "Manoj",
+    "phone": "6106131044",
+    "items": [
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     }
+    ],
+    "address": "door 7, Vasavi Enclave, Gachibowli"
+   },
+   "out": "Order: Hello, this is Manoj (6106131044). Please send dal 2 kgs. Address door 7, Vasavi Enclave, Gachibowli",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "hi sir pls send 1 kgs potatoes, bananas 2 dozen to flat 1104, Balaji Complex, Gachibowli. Rajesh 9236939642",
+   "gold": {
+    "name": "Rajesh",
+    "phone": "9236939642",
+    "items": [
+     {
+      "item": "potatoes",
+      "qty": "1 kg"
+     },
+     {
+      "item": "bananas",
+      "qty": "2 dozen"
+     }
+    ],
+    "address": "flat 1104, Balaji Complex, Gachibowli"
+   },
+   "out": "Flat 1104, Balaji Complex, Gachibowli, 9236939642, 1 Kg Potatoes, 2 Dozen Bananas, 1104 Balaji Complex, Gachibowli, 9236939642",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "Good morning! Can you deliver tomatoes - 1 kg, potatoes - 2 kg and samosas - 50 by 7pm? flat 302, Ganga Apartments, Ameerpet. Name: Anjali, mobile 07021360065",
+   "gold": {
+    "name": "Anjali",
+    "phone": "7021360065",
+    "items": [
+     {
+      "item": "tomatoes",
+      "qty": "1 kg"
+     },
+     {
+      "item": "potatoes",
+      "qty": "2 kg"
+     },
+     {
+      "item": "samosas",
+      "qty": "50"
+     }
+    ],
+    "address": "flat 302, Ganga Apartments, Ameerpet"
+   },
+   "out": "Flat 302, Ganga Apartments, Ameerpet, Anjali, 07021360065",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "hi pls send milk 500 ml, 2 kg dal and 1 bunch coriander to room 9, Ganga Apartments, Kukatpally. Naveen +918687158288",
+   "gold": {
+    "name": "Naveen",
+    "phone": "8687158288",
+    "items": [
+     {
+      "item": "milk",
+      "qty": "500 ml"
+     },
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     },
+     {
+      "item": "coriander",
+      "qty": "1 bunch"
+     }
+    ],
+    "address": "room 9, Ganga Apartments, Kukatpally"
+   },
+   "out": "Order: Hi, please send milk 500 ml, 2 kg dal and 1 bunch coriander to room 9, Ganga Apartments, Kukatpally. Naveen +918687158288",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "Swathi here. need apples - 2 kgs, eggs 1dozen + 2 bunches coriander. address: villa 21, Sri Krishna Nilayam, Ameerpet. ph 76179 62094",
+   "gold": {
+    "name": "Swathi",
+    "phone": "7617962094",
+    "items": [
+     {
+      "item": "apples",
+      "qty": "2 kg"
+     },
+     {
+      "item": "eggs",
+      "qty": "1 dozen"
+     },
+     {
+      "item": "coriander",
+      "qty": "2 bunches"
+     }
+    ],
+    "address": "villa 21, Sri Krishna Nilayam, Ameerpet"
+   },
+   "out": "Order: Swathi here. need apples - 2 kgs, eggs 1 dozen + 2 bunches coriander. address: villa 21, Sri Krishna Nilayam, Ameerpet. ph 76179 62094",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "Hello, this is Rahul (08038659334). Please send dal - 1kg. Address room 9, Vasavi Enclave, Dilsukhnagar",
+   "gold": {
+    "name": "Rahul",
+    "phone": "8038659334",
+    "items": [
+     {
+      "item": "dal",
+      "qty": "1 kg"
+     }
+    ],
+    "address": "room 9, Vasavi Enclave, Dilsukhnagar"
+   },
+   "out": "Order: Hello, this is Rahul (08038659334). Please send dal - 1kg. Address room 9, Vasavi Enclave, Dilsukhnagar",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "Hello, this is Deepa (67767 09266). Please send dal - 2 kg. Address villa 21, Royal Heights, Ameerpet",
+   "gold": {
+    "name": "Deepa",
+    "phone": "6776709266",
+    "items": [
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     }
+    ],
+    "address": "villa 21, Royal Heights, Ameerpet"
+   },
+   "out": "Order: Hello, this is Deepa (67767 09266). Please send dal - 2 kg. Address villa 21, Royal Heights, Ameerpet",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "hello, this is harish (+91 73414 35536). please send curd - 1 kg. address flat 1104, balaji complex, warangal",
+   "gold": {
+    "name": "Harish",
+    "phone": "7341435536",
+    "items": [
+     {
+      "item": "curd",
+      "qty": "1 kg"
+     }
+    ],
+    "address": "flat 1104, Balaji Complex, Warangal"
+   },
+   "out": "Order: hello, this is harish (+91 73414 35536). please send curd - 1 kg. address flat 1104, balaji complex, warangal",
+   "score": {
+    "valid": 0,
+    "name": 0,
+    "phone": 0,
+    "address": 0,
+    "items": 0,
+    "all": 0
+   }
+  }
+ ],
+ "after": [
+  {
+   "msg": "fatima here. need 2 kg potatoes, dal 2 kg, 1kg curd. address: villa 21, sunrise homes, madhapur. ph 72729 49088",
+   "gold": {
+    "name": "Fatima",
+    "phone": "7272949088",
+    "items": [
+     {
+      "item": "potatoes",
+      "qty": "2 kg"
+     },
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     },
+     {
+      "item": "curd",
+      "qty": "1 kg"
+     }
+    ],
+    "address": "villa 21, Sunrise Homes, Madhapur"
+   },
+   "out": "{\"name\": \"Fatima\", \"phone\": \"7272949088\", \"items\": [{\"item\": \"potatoes\", \"qty\": \"2 kg\"}, {\"item\": \"dal\", \"qty\": \"2 kg\"}, {\"item\": \"curd\", \"qty\": \"1 kg\"}], \"address\": \"villa 21, Sunrise Homes, Madhapur\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "hi pls send onions 1kg, milk 1 L to room 9, My Home Avatar, Guntur. Arjun 86279 94001",
+   "gold": {
+    "name": "Arjun",
+    "phone": "8627994001",
+    "items": [
+     {
+      "item": "onions",
+      "qty": "1 kg"
+     },
+     {
+      "item": "milk",
+      "qty": "1 L"
+     }
+    ],
+    "address": "room 9, My Home Avatar, Guntur"
+   },
+   "out": "{\"name\": \"Arjun\", \"phone\": \"8627994001\", \"items\": [{\"item\": \"onions\", \"qty\": \"1 kg\"}, {\"item\": \"milk\", \"qty\": \"1 L\"}], \"address\": \"room 9, My Home Avatar, Guntur\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "Hello, this is Manoj (6106131044). Please send dal 2 kgs. Address door 7, Vasavi Enclave, Gachibowli",
+   "gold": {
+    "name": "Manoj",
+    "phone": "6106131044",
+    "items": [
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     }
+    ],
+    "address": "door 7, Vasavi Enclave, Gachibowli"
+   },
+   "out": "{\"name\": \"Manoj\", \"phone\": \"6106131044\", \"items\": [{\"item\": \"dal\", \"qty\": \"2 kg\"}], \"address\": \"door 7, Vasavi Enclave, Gachibowli\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "hi sir pls send 1 kgs potatoes, bananas 2 dozen to flat 1104, Balaji Complex, Gachibowli. Rajesh 9236939642",
+   "gold": {
+    "name": "Rajesh",
+    "phone": "9236939642",
+    "items": [
+     {
+      "item": "potatoes",
+      "qty": "1 kg"
+     },
+     {
+      "item": "bananas",
+      "qty": "2 dozen"
+     }
+    ],
+    "address": "flat 1104, Balaji Complex, Gachibowli"
+   },
+   "out": "{\"name\": \"Rajesh\", \"phone\": \"9236939642\", \"items\": [{\"item\": \"potatoes\", \"qty\": \"1 kg\"}, {\"item\": \"bananas\", \"qty\": \"2 dozen\"}], \"address\": \"flat 1104, Balaji Complex, Gachibowli\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "Good morning! Can you deliver tomatoes - 1 kg, potatoes - 2 kg and samosas - 50 by 7pm? flat 302, Ganga Apartments, Ameerpet. Name: Anjali, mobile 07021360065",
+   "gold": {
+    "name": "Anjali",
+    "phone": "7021360065",
+    "items": [
+     {
+      "item": "tomatoes",
+      "qty": "1 kg"
+     },
+     {
+      "item": "potatoes",
+      "qty": "2 kg"
+     },
+     {
+      "item": "samosas",
+      "qty": "50"
+     }
+    ],
+    "address": "flat 302, Ganga Apartments, Ameerpet"
+   },
+   "out": "{\"name\": \"Anjali\", \"phone\": \"7021360065\", \"items\": [{\"item\": \"tomatoes\", \"qty\": \"1 kg\"}, {\"item\": \"potatoes\", \"qty\": \"2 kg\"}, {\"item\": \"samosas\", \"qty\": \"50\"}], \"address\": \"flat 302, Ganga Apartments, Ameerpet\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "hi pls send milk 500 ml, 2 kg dal and 1 bunch coriander to room 9, Ganga Apartments, Kukatpally. Naveen +918687158288",
+   "gold": {
+    "name": "Naveen",
+    "phone": "8687158288",
+    "items": [
+     {
+      "item": "milk",
+      "qty": "500 ml"
+     },
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     },
+     {
+      "item": "coriander",
+      "qty": "1 bunch"
+     }
+    ],
+    "address": "room 9, Ganga Apartments, Kukatpally"
+   },
+   "out": "{\"name\": \"Naveen\", \"phone\": \"8687158288\", \"items\": [{\"item\": \"milk\", \"qty\": \"500 ml\"}, {\"item\": \"dal\", \"qty\": \"2 kg\"}, {\"item\": \"coriander\", \"qty\": \"1 bunch\"}], \"address\": \"room 9, Ganga Apartments, Kukatpally\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "Swathi here. need apples - 2 kgs, eggs 1dozen + 2 bunches coriander. address: villa 21, Sri Krishna Nilayam, Ameerpet. ph 76179 62094",
+   "gold": {
+    "name": "Swathi",
+    "phone": "7617962094",
+    "items": [
+     {
+      "item": "apples",
+      "qty": "2 kg"
+     },
+     {
+      "item": "eggs",
+      "qty": "1 dozen"
+     },
+     {
+      "item": "coriander",
+      "qty": "2 bunches"
+     }
+    ],
+    "address": "villa 21, Sri Krishna Nilayam, Ameerpet"
+   },
+   "out": "{\"name\": \"Swathi\", \"phone\": \"7617962094\", \"items\": [{\"item\": \"apples\", \"qty\": \"2 kg\"}, {\"item\": \"eggs\", \"qty\": \"1 dozen + 2 bunches coriander\"}, {\"item\": \"coriander\", \"qty\": \"2 dozen\"}], \"address\": \"villa 21, Sri Krishna Nilayam, Ameerpet\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 0,
+    "all": 0
+   }
+  },
+  {
+   "msg": "Hello, this is Rahul (08038659334). Please send dal - 1kg. Address room 9, Vasavi Enclave, Dilsukhnagar",
+   "gold": {
+    "name": "Rahul",
+    "phone": "8038659334",
+    "items": [
+     {
+      "item": "dal",
+      "qty": "1 kg"
+     }
+    ],
+    "address": "room 9, Vasavi Enclave, Dilsukhnagar"
+   },
+   "out": "{\"name\": \"Rahul\", \"phone\": \"8038659334\", \"items\": [{\"item\": \"dal\", \"qty\": \"1 kg\"}], \"address\": \"room 9, Vasavi Enclave, Dilsukhnagar\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "Hello, this is Deepa (67767 09266). Please send dal - 2 kg. Address villa 21, Royal Heights, Ameerpet",
+   "gold": {
+    "name": "Deepa",
+    "phone": "6776709266",
+    "items": [
+     {
+      "item": "dal",
+      "qty": "2 kg"
+     }
+    ],
+    "address": "villa 21, Royal Heights, Ameerpet"
+   },
+   "out": "{\"name\": \"Deepa\", \"phone\": \"6776709266\", \"items\": [{\"item\": \"dal\", \"qty\": \"2 kg\"}], \"address\": \"villa 21, Royal Heights, Ameerpet\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 1,
+    "address": 1,
+    "items": 1,
+    "all": 1
+   }
+  },
+  {
+   "msg": "hello, this is harish (+91 73414 35536). please send curd - 1 kg. address flat 1104, balaji complex, warangal",
+   "gold": {
+    "name": "Harish",
+    "phone": "7341435536",
+    "items": [
+     {
+      "item": "curd",
+      "qty": "1 kg"
+     }
+    ],
+    "address": "flat 1104, Balaji Complex, Warangal"
+   },
+   "out": "{\"name\": \"Harish\", \"phone\": \"734143536\", \"items\": [{\"item\": \"curd\", \"qty\": \"1 kg\"}], \"address\": \"flat 1104, Balaji Complex, Warangal\"}",
+   "score": {
+    "valid": 1,
+    "name": 1,
+    "phone": 0,
+    "address": 1,
+    "items": 1,
+    "all": 0
+   }
+  }
+ ]
+}
