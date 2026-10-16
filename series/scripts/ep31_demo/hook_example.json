@@ -1,0 +1,36 @@
+{
+ "msg": "hi pls send onions 1kg, milk 1 L to flat 302, Sai Residency, Kukatpally. Arjun 55555 01234",
+ "gold": {
+  "name": "Arjun",
+  "phone": "5555501234",
+  "items": [
+   {
+    "item": "onions",
+    "qty": "1 kg"
+   },
+   {
+    "item": "milk",
+    "qty": "1 L"
+   }
+  ],
+  "address": "flat 302, Sai Residency, Kukatpally"
+ },
+ "before": "Order: Hi, please send onions 1kg, milk 1 L to flat 302, Sai Residency, Kukatpally. Arjun 55555 01234",
+ "after": "{\"name\": \"Arjun\", \"phone\": \"5555501234\", \"items\": [{\"item\": \"onions\", \"qty\": \"1 kg\"}, {\"item\": \"milk\", \"qty\": \"1 L\"}], \"address\": \"flat 302, Sai Residency, Kukatpally\"}",
+ "score_before": {
+  "valid": 0,
+  "name": 0,
+  "phone": 0,
+  "address": 0,
+  "items": 0,
+  "all": 0
+ },
+ "score_after": {
+  "valid": 1,
+  "name": 1,
+  "phone": 1,
+  "address": 1,
+  "items": 1,
+  "all": 1
+ }
+}

@@ -1,0 +1,41 @@
+UPLOAD: 033
+VIDEO: 033_ep31_teach_an_ai_a_new_skill_lora.mp4  (crayon-style episode, 89 s; replaces the older lesson-format 033_ep31_fine_tuning_deep_dive_lora.mp4; send copy: 033_ep31_teach_an_ai_a_new_skill_lora_ig.mp4)
+
+=== CAPTION ===
+We asked a tiny free AI to turn WhatsApp orders into neat order slips: name, phone, items, address. It just copied them back. 0 out of 30. A better prompt with two examples got 16. Then we taught it with LoRA on 240 made-up orders: 14 minutes on 4 CPU cores, no GPU. 27 out of 30 perfect, on orders it never saw.
+
+Episode 31 of AI From Scratch: teach an AI a new skill without a supercomputer (LoRA)
+- Why a tiny model and not ChatGPT? It's free, runs on your own computer, and your customers' details never leave it
+- Normal training changes every number inside the model (360 million in ours), and every new skill means a whole new copy
+- LoRA's trick: freeze the original, stick a few new numbers on top (like sticky notes in a textbook), train only those
+- In our test the notes were 1.2% of the numbers, saved as a 9 MB skill file next to a 724 MB model
+- Apple says its iPhone AI works the same way: one model, a small skill file for each feature
+
+Your turn, answered: B, give it the list. Prices that change every week go in with the question, not into LoRA notes: you'd retrain every week, and it can still misremember a price. LoRA is for skills and style.
+
+Before you train anything: 1) prompt first (two examples took ours from 0 to 16), 2) facts that keep changing? put them in the prompt, 3) a skill the prompt can't nail? a small LoRA. Then check its work: 3 of our 30 slips were still wrong (one phone number, two item lists).
+
+Bigger models work too: QLoRA (Dettmers et al., 2023) fine-tuned a 65-billion-parameter model on a single 48 GB GPU.
+
+Next: how AI finds the right page in your documents (RAG, part 2).
+Follow @ai_maastaaru for the full series.
+
+=== HASHTAGS ===
+#LoRA #FineTuning #AI #LearnAI #AIForBeginners #SmallBusiness
+
+=== PINNED_COMMENT ===
+How we ran it: SmolLM2-360M-Instruct (Hugging Face, Apache-2.0). Prompt: "Turn this WhatsApp order into an order slip: JSON with name, phone, items (item, qty) and address." The orders were made up by us, so real chats will be messier. 240 training orders, 2 passes, LoRA rank 8 on every layer (1.2% of the numbers), 14 minutes on 4 CPU cores, no GPU. Tested on 30 new orders: plain prompt 0/30, two worked examples in the prompt 16/30, LoRA 27/30, about 7 seconds per order on the same CPU. We didn't test a big chatbot on these 30; the point of a tiny model is free, private and yours. The order in the video is one more run with a made-up phone number (55555 01234). LoRA needs a model whose weights you can train: an open model, or a service that offers fine-tuning. What skill would you teach a small AI?
+
+=== COVER ===
+Crayon page: the scoreboard "perfect slips: plain prompt 0, two examples 16, LoRA 27" under the filled ORDER SLIP
+
+=== ALT_TEXT ===
+Hand-drawn crayon-style reel about LoRA: a small free AI copies WhatsApp orders back instead of writing order slips (0 of 30), does better with two examples in the prompt (16), and after 14 minutes of LoRA training on a normal CPU gets 27 of 30. Then why a small model (free, private), why normal training is heavy, LoRA's sticky-note trick (1.2% of the numbers, a 9 MB skill file), a quiz about weekly prices, Apple's per-feature skill files, and a checklist: prompt first, give changing facts each time, LoRA for skills, check its work.
+
+=== SOURCES (for comments) ===
+Demo (run by us): HuggingFaceTB/SmolLM2-360M-Instruct, Apache-2.0. Synthetic WhatsApp-style orders (Indian names, Hyderabad/AP addresses, mixed quantity spellings); 240 to train, 30 new ones to test; "perfect" = name, phone, every item with its quantity and the address all exactly right. LoRA rank 8 on all linear layers, 2 passes, 14 minutes on 4 CPU cores. Plain prompt 0/30 (it mostly copied the order back), two worked examples in the prompt 16/30, LoRA 27/30 (the same with the skill file saved in 16-bit, 8.7 MB; the model file is 723.7 MB).
+LoRA: Hu et al. (Microsoft), "LoRA: Low-Rank Adaptation of Large Language Models", arXiv 2106.09685 (ICLR 2022): the pretrained weights stay frozen; small trainable low-rank matrices are added.
+Apple: "Introducing Apple's On-Device and Server Foundation Models" (Apple Machine Learning Research, 10 Jun 2024): "Apple Intelligence includes a broad set of adapters, each fine-tuned for a specific feature."
+QLoRA: Dettmers et al., arXiv 2305.14314 (2023): a 65B model fine-tuned on a single 48 GB GPU (regular 16-bit fine-tuning needs more than 780 GB of GPU memory).
+Prompt first, then context, then fine-tuning: OpenAI, "Optimizing LLM accuracy"; Google Cloud model tuning docs ("start with prompting").
+Model: SmolLM2 (Allal et al., 2025), Hugging Face.

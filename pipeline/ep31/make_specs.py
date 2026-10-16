@@ -9,35 +9,37 @@ ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 DEMO = ROOT / "series/scripts/ep31_demo"
 RES = json.loads((DEMO / "results.json").read_text())
-SAMPLES = json.loads((DEMO / "samples.json").read_text())
-SAMPLE = 1   # the test order shown in the hook (one the base model failed and the LoRA model got exactly right)
 
-N = {"before": RES["before"]["all"], "after": RES["after"]["all"], "test": RES["test_examples"],
+AFTER = RES.get("after_16bit", RES["after"])   # scores with the skill file saved in 16-bit (what we show and ship)
+N = {"before": RES["before"]["all"], "after": AFTER["all"], "test": RES["test_examples"], "train": RES["train_examples"],
      "minutes": round(RES["train_seconds"] / 60), "pct": f"{RES['trainable_pct']:.1f}",
-     "adapterMB": f"{RES['adapter_mb']:.0f}", "modelMB": f"{RES['model_mb']:.0f}", "params": "360 million"}
+     "adapterMB": f"{RES.get('adapter16_mb', RES['adapter_mb']):.0f}", "modelMB": f"{RES['model_mb']:.0f}", "params": "360 million",
+     "fewShot": RES["few_shot_untrained"]["all"]}
+_miss_phone, _miss_items = RES["test_examples"] - AFTER["phone"], RES["test_examples"] - AFTER["items"]
+N["miss"] = (f"{N['test'] - N['after']} wrong: " + ", ".join(x for x in [
+    f"{_miss_phone} phone number" + ("s" if _miss_phone > 1 else "") if _miss_phone else "",
+    f"{_miss_items} item list" + ("s" if _miss_items > 1 else "") if _miss_items else "",
+    f"{N['test'] - AFTER['name']} name" if N["test"] - AFTER["name"] else "",
+    f"{N['test'] - AFTER['address']} address" if N["test"] - AFTER["address"] else ""] if x))
 
 
-def hook_data():
-    b, a = SAMPLES["before"][SAMPLE], SAMPLES["after"][SAMPLE]
-    assert b["msg"] == a["msg"] and a["score"]["all"] == 1 and b["score"]["all"] == 0
-    raw = " ".join(b["out"].split())
+def hook_data():   # the order in the hook: its own run (pipeline/ep31/hook_example.py), a phone number no phone can have
+    ex = json.loads((DEMO / "hook_example.json").read_text())
+    assert ex["score_before"]["all"] == 0 and ex["score_after"]["all"] == 1
+    raw = " ".join(ex["before"].split())
     words, lines, cur = raw.split(" "), [], ""
-    for w in words:   # the base model's real reply, cut into a few bubble lines
-        if len(cur) + len(w) + 1 > 34:
+    for w in words:   # the base model's real reply, cut into bubble lines
+        if len(cur) + len(w) + 1 > 40:
             lines.append(cur)
             cur = w
-            if len(lines) == 4:
-                break
         else:
             cur = (cur + " " + w).strip()
-    cut = len(lines) == 4
-    if not cut and cur:
+    if cur:
         lines.append(cur)
-    if cut:
-        lines[-1] = lines[-1] + " …"
-    g = json.loads(a["out"]) if a["out"].strip().startswith("{") else a["gold"]
+    g = json.loads(ex["after"])
     slip = {"name": g["name"], "phone": g["phone"], "items": [f"{i['item']} · {i['qty']}" for i in g["items"]], "address": g["address"]}
-    return {"order": a["msg"], "beforeLines": lines, "slip": slip, "n": N}
+    L = RES["losses"]
+    return {"order": ex["msg"], "beforeLines": lines, "slip": slip, "n": N, "losses": [[i + 1, L[i]] for i in range(4, len(L), 5)]}
 
 
 BASE = {"label": "EP 31", "banner": "Teach an AI a new skill", "topic": "", "look": "classic", "gap": 0.3, "lead": 0.3,
@@ -71,9 +73,10 @@ def fill(s, te=False):
     if s is None:
         return None
     m = {"TEST": str(N["test"]), "BEFORE": str(N["before"]), "AFTER": str(N["after"]), "MIN": str(N["minutes"]),
-         "MB": N["adapterMB"], "MODEL_MB": N["modelMB"]}
+         "MB": N["adapterMB"], "MODEL_MB": N["modelMB"], "TRAIN": str(N["train"]), "FEW": str(N["fewShot"]), "MISS": N["miss"]}
     if te:
-        m.update({"TEST": te_num(N["test"]), "AFTER": te_num(N["after"]), "MIN": te_num(N["minutes"]), "MB": te_num(int(N["adapterMB"]))})
+        m.update({"TEST": te_num(N["test"]), "AFTER": te_num(N["after"]), "MIN": te_num(N["minutes"]), "MB": te_num(int(N["adapterMB"])),
+                  "FEW": te_num(N["fewShot"])})
     for k in sorted(m, key=len, reverse=True):
         s = s.replace("{" + k + "}", m[k])
     return s
@@ -81,7 +84,7 @@ def fill(s, te=False):
 
 def fill_spoken(s):   # numbers as words for the English TTS text
     m = {"TEST": en_num(N["test"]), "BEFORE": en_num(N["before"]), "AFTER": en_num(N["after"]), "MIN": en_num(N["minutes"]),
-         "MB": en_num(int(N["adapterMB"])), "MODEL_MB": N["modelMB"]}
+         "MB": en_num(int(N["adapterMB"])), "MODEL_MB": N["modelMB"], "FEW": en_num(N["fewShot"])}
     for k in sorted(m, key=len, reverse=True):
         s = s.replace("{" + k + "}", m[k])
     return re.sub(r"([.?!] )([a-z])", lambda g: g.group(1) + g.group(2).upper(), s)
@@ -89,60 +92,53 @@ def fill_spoken(s):   # numbers as words for the English TTS text
 
 # (id, type, scene flags, yt, show (English captions, [n] cues), tts (English, spoken form), te (Telugu, [n] cues), extra)
 SC = [
-    ("hook", "lo_hook", {"tail": 0.3, "drop_cue": 3},
-     {"chapter": "0 out of {TEST}", "title": "A free AI that couldn't read a WhatsApp order", "notes": [["A small free AI: turn a WhatsApp order into an order slip", 0], ["{BEFORE} out of {TEST} usable (real run, ours)", 1], ["{MIN} minutes of LoRA training, 4 CPU cores, no GPU", 2], ["{AFTER} out of {TEST} perfect on orders it never saw", 3]]},
-     "We asked this free AI to turn WhatsApp orders into order slips. It just copied them back. [1] Zero out of {TEST}. [2] So we taught it with 240 examples. {MIN} minutes, on four ordinary CPU cores. No GPU. [3] Now? {AFTER} out of {TEST}, perfect. Here's the trick.",
-     "We asked this free AI to turn WhatsApp orders into order slips. It just copied them back. Zero out of {TEST}. So we taught it with two hundred and forty examples. {MIN} minutes, on four ordinary CPU cores. No GPU. Now? {AFTER} out of {TEST}, perfect. Here's the trick.",
-     "ఈ ఫ్రీ ఎ ఐ కి వాట్సాప్ ఆర్డర్స్ ని ఆర్డర్ స్లిప్స్ గా మార్చమని చెప్పాం. అది వాటినే మళ్ళీ కాపీ చేసి ఇచ్చింది. [1] {TEST} లో సున్నా. [2] అందుకే రెండు వందల నలభై ఎగ్జాంపుల్స్ తో నేర్పించాం. {MIN} నిమిషాలు, నాలుగు మామూలు సి పి యు కోర్స్ మీద. జి పి యు లేదు. [3] ఇప్పుడు? {TEST} లో {AFTER}, పర్ఫెక్ట్. ఆ ట్రిక్ ఏంటో చూడండి.",
-     {"pauses": {"3": 0.35}}),
-    ("hard", "lo_hard", {"tail": 0.3, "lift": True, "boost": 1.1},
-     {"chapter": "Why training is hard", "title": "Normal training changes every number", "notes": [["Normal training changes every number inside the model; ours has about 360 million", 0], ["The big ones have hundreds of billions: servers full of AI chips", 1], ["Even a 7B model needs over 100 GB of GPU memory to fully fine-tune (about 16-18 bytes per parameter)", 2]]},
-     "Normally, teaching an AI changes every number inside it. Ours has 360 million. [1] The big ones have hundreds of billions. Training those takes servers full of AI chips. [2] Even a 7-billion model needs over 100 GB of chip memory to train.",
-     "Normally, teaching an AI changes every number inside it. Ours has three hundred and sixty million. The big ones have hundreds of billions. Training those takes servers full of AI chips. Even a seven billion model needs over a hundred gigabytes of chip memory to train.",
-     "మామూలుగా, ఎ ఐ కి ఏదైనా నేర్పిస్తే, దాని లోపల ఉన్న ప్రతి నంబర్ మారుతుంది. మాది ముప్పై ఆరు కోట్ల నంబర్స్. [1] పెద్ద మోడల్స్ లో వేల కోట్ల నంబర్స్ ఉంటాయి. వాటిని ట్రైన్ చేయాలంటే, సర్వర్ల నిండా ఎ ఐ చిప్స్ కావాలి. [2] ఏడు వందల కోట్ల నంబర్స్ ఉన్న మోడల్ కి కూడా, ట్రైనింగ్ కి వంద జి బి కి పైగా చిప్ మెమరీ కావాలి.",
+    ("hook", "lo_hook", {"tail": 0.3, "drop_cue": 4, "boost": 1.2},
+     {"chapter": "0, then 16, then 27", "title": "A tiny free AI that copied orders back", "notes": [["A tiny free AI (SmolLM2-360M by Hugging Face): turn a WhatsApp order into a slip with name, phone, items, address", 0], ["Plain prompt: it copied the order back, {BEFORE} out of {TEST} (real run, ours)", 1], ["A better prompt with two worked examples: {FEW} out of {TEST}", 2], ["LoRA training on {TRAIN} made-up orders: {MIN} minutes on 4 CPU cores (a cloud machine), no graphics card (GPU)", 3], ["{AFTER} out of {TEST} perfect on new orders it never saw ({MISS}); orders are made up, real chats are messier", 4]]},
+     "We asked a tiny free AI to turn WhatsApp orders into neat slips. It just copied them back. [1] Zero out of {TEST}. [2] A better prompt, with two examples? {FEW}. [3] Then we trained it on {TRAIN} made-up orders. {MIN} minutes, no graphics card. [4] {AFTER} out of {TEST}, on new orders it never saw.",
+     "We asked a tiny free AI to turn WhatsApp orders into neat slips. It just copied them back. Zero out of {TEST}. A better prompt, with two examples? {FEW}. Then we trained it on two hundred and forty made-up orders. {MIN} minutes, no graphics card. {AFTER} out of {TEST}, on new orders it never saw.",
+     "ఒక చిన్న ఫ్రీ ఎ ఐ కి, వాట్సాప్ ఆర్డర్స్ ని నీట్ స్లిప్స్ గా మార్చమని చెప్పాం. అది ఆర్డర్ నే మళ్ళీ కాపీ చేసి ఇచ్చింది. [1] {TEST} కి సున్నా. [2] రెండు ఎగ్జాంపుల్స్ తో మంచి ప్రాంప్ట్ ఇస్తే? {FEW}. [3] తర్వాత, రెండు వందల నలభై డమ్మీ ఆర్డర్స్ తో ట్రైన్ చేశాం. {MIN} నిమిషాలు, గ్రాఫిక్స్ కార్డ్ లేకుండా. [4] అది ఎప్పుడూ చూడని కొత్త ఆర్డర్స్ లో, {TEST} లో {AFTER} పర్ఫెక్ట్ గా వచ్చాయి.",
+     {"pauses": {"4": 0.35}}),
+    ("why", "lo_why", {"tail": 0.3, "lift": True},
+     {"chapter": "Why not just ask ChatGPT?", "title": "Free, on your computer, data stays with you", "notes": [["Why not a big chatbot? A tiny model is free, runs on your own computer (no per-message bill), and customer details never leave it", 0]]},
+     "Why not just ask ChatGPT? This one's free, runs on your own computer, and customer details never leave it.",
+     "Why not just ask Chat G P T? This one's free, runs on your own computer, and customer details never leave it.",
+     "చాట్ జి పి టి నే ఎందుకు అడగకూడదు? ఇది ఫ్రీ, మీ సొంత కంప్యూటర్ లోనే నడుస్తుంది, మీ కస్టమర్ల డీటెయిల్స్ బయటికి వెళ్ళవు.",
+     {}),
+    ("hard", "lo_hard", {"tail": 0.3, "lift": True},
+     {"chapter": "Why training is heavy", "title": "Normal training changes every number", "notes": [["Normal training (full fine-tuning) changes every number inside the model: all 360 million of ours", 0], ["Every new skill means retraining all of them and saving a whole new copy (724 MB here; hundreds of GB for big models)", 1]]},
+     "Normal training changes every one of its 360 million numbers. [1] And every new skill needs a whole new copy.",
+     "Normal training changes every one of its three hundred and sixty million numbers. And every new skill needs a whole new copy.",
+     "మామూలుగా, ఎ ఐ కి ఏదైనా నేర్పిస్తే, దాని లోపల ప్రతి ఒక్క నంబర్ మారుతుంది. ఈ మోడల్ లో త్రీ హండ్రెడ్ సిక్స్టీ మిలియన్ ఉన్నాయి. [1] ప్రతి కొత్త స్కిల్ కి, మోడల్ మొత్తం కొత్త కాపీ కావాలి.",
      {}),
     ("trick", "lo_trick", {"tail": 0.3, "lift": True, "boost": 1.2, "drop_cue": 2},
-     {"chapter": "The LoRA trick", "title": "Freeze the original, train sticky notes", "notes": [["LoRA (Low-Rank Adaptation, Microsoft, 2021): freeze the original numbers", 0], ["Add thin strips of new numbers (like sticky notes in a textbook) and train only those", 1], ["In our test: {PCT}% of the numbers", 2], ["The skill is its own file: {MB} MB, next to the {MODEL_MB} MB model", 3]]},
-     "LoRA's trick: freeze the original. [1] Clip on thin strips of new numbers, like sticky notes in a textbook, and train only those. [2] In our test, that's 1.2% of the numbers. [3] And the skill saves as its own small file: {MB} MB, next to a {MODEL_MB} MB model.",
-     "Lora's trick: freeze the original. Clip on thin strips of new numbers, like sticky notes in a textbook, and train only those. In our test, that's one point two percent of the numbers. And the skill saves as its own small file: {MB} megabytes, next to a {MODEL_MB} megabyte model.",
-     "లోరా ట్రిక్: ఒరిజినల్ ని ఫ్రీజ్ చేయండి. [1] దాని మీద కొత్త నంబర్స్ ఉన్న సన్నని స్ట్రిప్స్ అతికించండి, టెక్స్ట్ బుక్ లో స్టిక్కీ నోట్స్ లాగా. వాటినే ట్రైన్ చేయండి. [2] మా టెస్ట్ లో, అది కేవలం ఒకటి పాయింట్ రెండు పర్సెంట్ నంబర్స్. [3] కొత్త స్కిల్, సెపరేట్ చిన్న ఫైల్ గా సేవ్ అవుతుంది: {MB} ఎం బి. మోడల్ ఏమో ఏడు వందల ఇరవై నాలుగు ఎం బి.",
+     {"chapter": "The LoRA trick", "title": "Freeze the original, train sticky notes", "notes": [["The trick is called LoRA (Low-Rank Adaptation, Microsoft, 2021): freeze the original numbers", 0], ["Add a few new numbers on top (like sticky notes in a textbook) and train only those: {PCT}% of the numbers in ours", 1], ["Each skill is its own file: {MB} MB (16-bit), next to the {MODEL_MB} MB model", 2], ["Apple says its on-device model plugs in a small LoRA adapter per feature (Apple ML Research, 2024)", 3]]},
+     "The trick is called LoRA: freeze the original. [1] Add a few new numbers on top, like sticky notes in a textbook, and train only the notes. [2] Each skill is its own {MB} MB file, a short WhatsApp video. The model? {MODEL_MB} MB, a movie. [3] Apple says its iPhone AI does this: one model, a small skill file per feature.",
+     "The trick is called Lora: freeze the original. Add a few new numbers on top, like sticky notes in a textbook, and train only the notes. Each skill is its own {MB} megabyte file, a short WhatsApp video. The model? {MODEL_MB} megabytes, a movie. Apple says its iPhone AI does this: one model, a small skill file per feature.",
+     "ఈ ట్రిక్ పేరు లోరా: ఒరిజినల్ ని ఫ్రీజ్ చేస్తాం. [1] దాని మీద కొన్ని కొత్త నంబర్స్ అతికిస్తాం, టెక్స్ట్ బుక్ మీద స్టిక్కీ నోట్స్ లాగా. ఆ నోట్స్ నే ట్రైన్ చేస్తాం. [2] ప్రతి స్కిల్ ఒక సెపరేట్ నైన్ ఎం బి ఫైల్, ఒక చిన్న వాట్సాప్ వీడియో అంత. మోడల్ ఏమో సెవెన్ ట్వెంటీ ఫోర్ ఎం బి, ఒక సినిమా అంత. [3] యాపిల్ చెప్పింది, వాళ్ళ ఐఫోన్ ఎ ఐ కూడా ఇలాగే: ఒకే మోడల్, ప్రతి ఫీచర్ కి ఒక చిన్న స్కిల్ ఫైల్.",
      {}),
-    ("quiz", "lo_quiz", {"tail": 0.3, "duck": [3, 2, 0.15], "boost": 1.3, "layer": 4},
-     {"chapter": "Your turn", "title": "Prices change weekly: LoRA or hand it the list?", "notes": [["Your shop's prices change every week", 0], ["A: train a LoRA on this week's price list. B: hand the AI the price list with every question", 1], ["B: a LoRA bakes in old prices", 2], ["LoRA for skills and style; facts that change go in with each question (that's RAG, next episode)", 4]]},
-     "Your turn. Your shop's prices change every week. [1] A: train a LoRA on this week's price list. B: hand the AI the price list with every question. Which one? [3] <pause 1.5> [2] B. A LoRA would bake in old prices. [4] LoRA for skills and style. Facts that change? Give them to the AI each time.",
+    ("quiz", "lo_quiz", {"tail": 0.3, "duck": [3, 2, 0.15], "boost": 1.3, "layer": 2},
+     {"chapter": "Your turn", "title": "Prices change weekly: LoRA or hand it the list?", "notes": [["Your shop's prices change every week", 0], ["A: train LoRA notes on this week's prices. B: give it the price list with every question", 1], ["B: LoRA notes would need retraining every week and can still misremember a price. LoRA is for skills and style, not facts that keep changing (those go in with the question: RAG, next episode)", 2]]},
+     "Your turn. Your shop's prices change every week. [1] A: train LoRA notes on this week's prices. B: give it the price list with every question. Which one? [3] <pause 1.5> [2] The answer is B: give it the list. LoRA notes would need retraining every week, and can still misremember a price.",
      None,
-     "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. [1] ఎ: ఈ వారం ప్రైస్ లిస్ట్ మీద లోరా ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఎ ఐ కి ఇవ్వడం. ఏది కరెక్ట్? [3] <pause 1.5> [2] బి. లోరా పాత ధరలనే గుర్తుపెట్టుకుంటుంది. [4] స్కిల్స్, స్టైల్ కి లోరా. మారే ఫ్యాక్ట్స్ ని, ప్రతిసారి ఎ ఐ కి ఇవ్వండి.",
-     {"tts": "Your turn. Your shop's prices change every week. A: train a Lora on this week's price list. B: hand the AI the price list with every question. Which one?",
-      "file2": "04_quiz_answer.wav", "tts2": "B. A Lora would bake in old prices. Lora for skills and style. Facts that change? Give them to the AI each time.",
-      "te_tts": "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. ఎ: ఈ వారం ప్రైస్ లిస్ట్ మీద లోరా ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఎ ఐ కి ఇవ్వడం. ఏది కరెక్ట్?",
-      "te_tts2": "బి. లోరా పాత ధరలనే గుర్తుపెట్టుకుంటుంది. స్కిల్స్, స్టైల్ కి లోరా. మారే ఫ్యాక్ట్స్ ని, ప్రతిసారి ఎ ఐ కి ఇవ్వండి.",
-      "pause": 1.5, "gap": 0.1, "pauses": {"4": 0.4}}),
-    ("swap", "lo_swap", {"tail": 0.3, "lift": True},
-     {"chapter": "One model, many skills", "title": "Swap skill files in a second", "notes": [["One base model can carry many small skill files (orders, your shop's tone, quizzes from notes)", 0], ["Swap them in a second; servers swap them per request", 1]]},
-     "And one model can carry many skill files: orders, your shop's tone, quizzes from class notes. [1] Swap them in a second.",
-     "And one model can carry many skill files: orders, your shop's tone, quizzes from class notes. Swap them in a second.",
-     "ఒకే మోడల్ కి చాలా స్కిల్ ఫైల్స్ ఉండొచ్చు: ఆర్డర్స్ కి ఒకటి, మీ షాప్ టోన్ కి ఒకటి, క్లాస్ నోట్స్ నుంచి క్విజ్ లకి ఒకటి. [1] సెకనులో మార్చేయొచ్చు.",
-     {}),
-    ("real", "lo_real", {"tail": 0.3, "lift": True, "drop_cue": 2},
-     {"chapter": "It's everywhere", "title": "Phones, image styles, a 65B model on one GPU", "notes": [["Apple says its on-device model plugs in small LoRA adapters, one per feature (Apple ML Research, 2024)", 0], ["Image AIs learn a style from one small LoRA file (a few MB to a few hundred MB)", 1], ["QLoRA (Dettmers et al., 2023): a 65B model fine-tuned on a single 48 GB GPU", 2]]},
-     "This isn't just a lab trick. Apple says its phone AI plugs in small adapters like these, one per feature. [1] Image AIs learn a new drawing style from one small file. [2] And a cousin called QLoRA fine-tuned a 65-billion model on a single GPU.",
-     "This isn't just a lab trick. Apple says its phone AI plugs in small adapters like these, one per feature. Image AIs learn a new drawing style from one small file. And a cousin called Q Lora fine-tuned a sixty-five billion model on a single GPU.",
-     "ఇది ల్యాబ్ ట్రిక్ మాత్రమే కాదు. యాపిల్ చెప్పింది, వాళ్ళ ఫోన్ ఎ ఐ, ఒక్కో ఫీచర్ కి ఒక్కో చిన్న అడాప్టర్ వాడుతుంది అని. [1] ఇమేజ్ ఎ ఐ లు, ఒక చిన్న ఫైల్ తో కొత్త డ్రాయింగ్ స్టైల్ నేర్చుకుంటాయి. [2] క్యూ లోరా అనే దాని కజిన్ తో, రీసెర్చర్లు ఒక అరవై ఐదు బిలియన్ మోడల్ ని, ఒక్క జి పి యు మీద ఫైన్ ట్యూన్ చేశారు.",
-     {}),
-    ("close", "lo_close", {"tail": 1.2, "outro": True, "lift": True},
-     {"chapter": "Prompt, look up, then LoRA", "title": "Before you train anything", "notes": [["1. Try a good prompt", 0], ["2. Facts that change? Give them each time", 0], ["3. A skill or a style? A small LoRA (ours: {MIN} min, {MB} MB)", 0], ["Next: how AI finds the right page in your documents (RAG, part 2)", 1]]},
-     "So before you train anything: try a good prompt. Facts that change? Give them each time. A skill or a style? A small LoRA. [1] Next: how AI finds the right page in your documents. [2] Follow, so you don't miss it.",
-     "So before you train anything: try a good prompt. Facts that change? Give them each time. A skill or a style? A small Lora. Next: how AI finds the right page in your documents. Follow, so you don't miss it.",
-     "అందుకే, ఏదైనా ట్రైన్ చేసే ముందు: ముందు మంచి ప్రాంప్ట్ ట్రై చేయండి. మారే ఫ్యాక్ట్స్? ప్రతిసారి ఇవ్వండి. స్కిల్ లేదా స్టైల్? ఒక చిన్న లోరా. [1] తర్వాతి ఎపిసోడ్ లో: మీ డాక్యుమెంట్స్ లో సరైన పేజీని ఎ ఐ ఎలా వెతుకుతుందో చూద్దాం. [2] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. [1] ఎ: ఈ వారం ధరల మీద లోరా నోట్స్ ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఇవ్వడం. ఏది కరెక్ట్? [3] <pause 1.5> [2] ఆన్సర్ బి: లిస్ట్ ఇవ్వండి. లోరా నోట్స్ అయితే ప్రతి వారం మళ్ళీ ట్రైన్ చేయాలి, అయినా ఒక ధర తప్పుగా గుర్తుపెట్టుకోవచ్చు.",
+     {"tts": "Your turn. Your shop's prices change every week. A: train Lora notes on this week's prices. B: give it the price list with every question. Which one?",
+      "file2": "05_quiz_answer.wav", "tts2": "The answer is B: give it the list. Lora notes would need retraining every week, and can still misremember a price.",
+      "te_tts": "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. ఎ: ఈ వారం ధరల మీద లోరా నోట్స్ ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఇవ్వడం. ఏది కరెక్ట్?",
+      "te_tts2": "ఆన్సర్ బి: లిస్ట్ ఇవ్వండి. లోరా నోట్స్ అయితే ప్రతి వారం మళ్ళీ ట్రైన్ చేయాలి, అయినా ఒక ధర తప్పుగా గుర్తుపెట్టుకోవచ్చు.",
+      "pause": 1.5, "gap": 0.1}),
+    ("close", "lo_close", {"tail": 1.2, "outro": True, "lift": True, "boost": 1.5},
+     {"chapter": "Prompt first, then LoRA", "title": "Before you train anything", "notes": [["1. Prompt first (two examples: {BEFORE} -> {FEW} out of {TEST})  2. Facts that keep changing? Put them in the prompt  3. A skill the prompt can't nail? A small LoRA. Then check its work: we still got 3 wrong", 0], ["Next: how AI finds the right page in your documents (RAG, part 2)", 1]]},
+     "So: prompt first. Facts that keep changing? Put them in the prompt. A skill the prompt can't nail? A small LoRA. Then check its work: we still got 3 wrong. [1] Next: how AI finds the right page in your documents. [2] Follow, so you don't miss it.",
+     "So: prompt first. Facts that keep changing? Put them in the prompt. A skill the prompt can't nail? A small Lora. Then check its work: we still got three wrong. Next: how AI finds the right page in your documents. Follow, so you don't miss it.",
+     "అందుకే: మొదట ప్రాంప్ట్. మారుతూ ఉండే ఫ్యాక్ట్స్? ప్రాంప్ట్ లోనే ఇవ్వండి. ప్రాంప్ట్ తో రాని స్కిల్? ఒక చిన్న లోరా. తర్వాత అది ఇచ్చిన ఆన్సర్స్ చెక్ చేయండి: మాది కూడా మూడు తప్పులు చేసింది. [1] తర్వాతి ఎపిసోడ్ లో: మీ డాక్యుమెంట్స్ లో సరైన పేజీని ఎ ఐ ఎలా వెతుకుతుందో చూద్దాం. [2] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
      {}),
 ]
 
 # Spoken form of the English captions (numbers as words), used for word timing where it differs from `show`.
 SPOKEN = {
-    "hook": "We asked this free AI to turn WhatsApp orders into order slips. It just copied them back. [1] Zero out of {TEST}. [2] So we taught it with two hundred and forty examples. {MIN} minutes, on four ordinary CPU cores. No GPU. [3] Now? {AFTER} out of {TEST}, perfect. Here's the trick.",
-    "hard": "Normally, teaching an AI changes every number inside it. Ours has three hundred and sixty million. [1] The big ones have hundreds of billions. Training those takes servers full of AI chips. [2] Even a seven billion model needs over a hundred gigabytes of chip memory to train.",
-    "trick": "LoRA's trick: freeze the original. [1] Clip on thin strips of new numbers, like sticky notes in a textbook, and train only those. [2] In our test, that's one point two percent of the numbers. [3] And the skill saves as its own small file: {MB} megabytes, next to a {MODEL_MB} megabyte model.",
-    "real": "This isn't just a lab trick. Apple says its phone AI plugs in small adapters like these, one per feature. [1] Image AIs learn a new drawing style from one small file. [2] And a cousin called QLoRA fine-tuned a sixty-five billion model on a single GPU.",
+    "hook": "We asked a tiny free AI to turn WhatsApp orders into neat slips. It just copied them back. [1] Zero out of {TEST}. [2] A better prompt, with two examples? {FEW}. [3] Then we trained it on two hundred and forty made-up orders. {MIN} minutes, no graphics card. [4] {AFTER} out of {TEST}, on new orders it never saw.",
+    "hard": "Normal training changes every one of its three hundred and sixty million numbers. [1] And every new skill needs a whole new copy.",
+    "trick": "The trick is called LoRA: freeze the original. [1] Add a few new numbers on top, like sticky notes in a textbook, and train only the notes. [2] Each skill is its own {MB} megabyte file, a short WhatsApp video. The model? {MODEL_MB} megabytes, a movie. [3] Apple says its iPhone AI does this: one model, a small skill file per feature.",
 }
 
 

@@ -13,7 +13,7 @@ import { group, wrap, bubble, crown } from "./MannersCrayon";
 type Line = { from: number; frames: number; words?: { w: string; from: number; to: number }[] };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
-type Nums = { before: number; after: number; test: number; minutes: number; pct: string; adapterMB: string; modelMB: string; params: string };
+type Nums = { before: number; after: number; test: number; train: number; minutes: number; pct: string; adapterMB: string; modelMB: string; params: string; miss: string; fewShot?: number };
 
 const STUDENT: RobotOpts = { body: COL.light, accent: COL.yellow };
 const WA_GREEN = "#d9fdd3";
@@ -96,102 +96,145 @@ const book = (c: Ctx, x: number, y: number, w: number, h: number, r: () => numbe
   c.restore();
 };
 
-const fileIcon = (c: Ctx, x: number, y: number, w: number, h: number, col: string, title: string, sub: string, r: () => number, p: number) => {
+const fileIcon = (c: Ctx, x: number, y: number, w: number, h: number, col: string, title: string, sub: string, r: () => number, p: number, sub2?: string) => {
   if (p <= 0) return;
   const k = easeOut(p);
   c.save(); c.translate(x, y + h); c.scale(k, k); c.translate(0, -h);
-  c.fillStyle = col; c.beginPath(); c.moveTo(-w / 2, 0); c.lineTo(w / 2 - 30, 0); c.lineTo(w / 2, 30); c.lineTo(w / 2, h); c.lineTo(-w / 2, h); c.closePath(); c.fill();
-  stroke(c, [[-w / 2, 0], [w / 2 - 30, 0], [w / 2, 30], [w / 2, h], [-w / 2, h], [-w / 2, 0]], INK, 4, r, { passes: 1, alpha: 0.5 });
+  const e = Math.min(30, w * 0.3);   // the folded corner
+  c.fillStyle = col; c.beginPath(); c.moveTo(-w / 2, 0); c.lineTo(w / 2 - e, 0); c.lineTo(w / 2, e); c.lineTo(w / 2, h); c.lineTo(-w / 2, h); c.closePath(); c.fill();
+  stroke(c, [[-w / 2, 0], [w / 2 - e, 0], [w / 2, e], [w / 2, h], [-w / 2, h], [-w / 2, 0]], INK, 4, r, { passes: 1, alpha: 0.5 });
   c.restore();
   label(c, title, x, y + h + 62, 56, COL.cream, caveat, p);
   label(c, sub, x, y + h + 112, 40, COL.pale, handF, p);
+  if (sub2) label(c, sub2, x, y + h + 160, 38, COL.yellow, handF, p);
 };
 
-// ---------- 1 HOOK: the order it couldn't read, then the slip it writes after N minutes of LoRA ----------
+// The frame (scene-relative) where a caption word is spoken: the first match at or after `after`
+const wordAt = (s: Scene, re: RegExp, after = 0, fallback = 0) => {
+  const w = (s.lines[0]?.words ?? []).find((x) => x.from >= after && re.test(x.w.replace(/[^\w%.]/g, "")));
+  return w ? w.from : fallback;
+};
+
+// ---------- 1 HOOK: plain prompt 0/30 (it copies the order back), two examples 16/30, LoRA 27/30: a scoreboard ----------
 const LoHook: React.FC<SP> = ({ s, cue }) => {
   const n = nums(s);
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
   const d = s.data;
+  const copied = Math.min(c1 - 6, 46);   // the reply has typed out: stamp it
+  const mins = wordAt(s, /^minutes$/i, c3, c3 + 60);   // "14 minutes": the stopwatch lands on the word
+  const tick = Math.max(4, (mins - c3 - 12) / 6);
+  const rows: { label: string; v: number; at: number; col: string }[] = [
+    { label: "plain prompt", v: n.before, at: c1, col: COL.red },
+    { label: "prompt + 2 examples", v: n.fewShot ?? 0, at: c2, col: COL.orange },
+    { label: `LoRA, ${n.minutes} min`, v: n.after, at: c4, col: "#16a34a" },
+  ];
   return (
     <>
       <Sfx at={0} src="reel/sfx_boom.wav" vol={0.8} />
       <Sfx at={0} src="audio/sfx_snap.wav" vol={0.5} />
-      <Sfx at={c1} src="audio/gag_bonk.wav" vol={0.45} />
-      <Sfx at={c2} src="audio/sfx_whoosh.wav" vol={0.45} />
-      {[0, 1, 2, 3, 4, 5].map((k) => <Sfx key={k} at={c2 + 10 + k * 6} src="audio/sfx_tick.wav" vol={0.3} />)}
-      <Sfx at={c3} src="reel/sfx_boom.wav" vol={0.7} />
-      <Sfx at={c3} src="audio/sfx_snap.wav" vol={0.55} />
+      <Sfx at={copied} src="audio/gag_bonk.wav" vol={0.4} />
+      <Sfx at={c1} src="reel/sfx_boom.wav" vol={0.6} />
+      <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.5} />
+      <Sfx at={c2} src="audio/sfx_snap.wav" vol={0.45} />
+      <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.45} />
+      {[0, 1, 2, 3, 4, 5].map((k) => <Sfx key={k} at={Math.round(c3 + 8 + k * tick)} src="audio/sfx_tick.wav" vol={0.28} />)}
+      <Sfx at={mins} src="audio/sfx_snap.wav" vol={0.5} />
+      <Sfx at={c4} src="reel/sfx_boom.wav" vol={0.75} />
+      <Sfx at={c4} src="audio/sfx_snap.wav" vol={0.55} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
         const r = rng(4000 + boil);
-        tag(c, "a small free AI · run by us", W / 2, 318, 50, COL.cream, INK, -0.02, 1);
-        // [0] the WhatsApp order and the model's real "before" reply; [1] 0 / 30
-        group(c, 1 - fade(f, c2 - 4, 8), (o) => {
-          const yb = bubble(o, d.order, 200, 372, 820, "me", 1, r, { size: 44, bg: WA_GREEN });
-          robot(o, 170, yb + 250, 0.6, boil, 1, { ...STUDENT, arms: "down", mouth: "o", eyes: "wide" });
-          bubble(o, "", 300, yb + 70, 720, "ai", seg(f, 4, 10), r, { size: 38, lines: d.beforeLines, typed: seg(f, 6, 40), bg: "#e5e7eb", fg: "#475569" });
-          if (f >= c1) stamp(o, `${n.before} / ${n.test} usable`, W / 2, 1270, 92, COL.red, fade(f, c1, 8), r, -0.06);
+        tag(c, "SmolLM2-360M by Hugging Face · tested by us", W / 2, 318, 42, COL.cream, INK, -0.02, 1);
+        // [0]-[2] our prompt, a WhatsApp order and the model's real reply (the order copied back)
+        group(c, 1 - fade(f, c3 - 4, 8), (o) => {
+          label(o, "our prompt: “Turn this WhatsApp order into an order slip:", W / 2, 394, 35, COL.pale, handF, 1);
+          label(o, "JSON with name, phone, items (item, qty) and address.”", W / 2, 436, 35, COL.pale, handF, 1);
+          const yb = bubble(o, d.order, 160, 464, 860, "me", 1, r, { size: 40, bg: WA_GREEN });
+          bubble(o, "", 60, yb + 34, 860, "ai", seg(f, 4, 10), r, { size: 38, lines: d.beforeLines, typed: seg(f, 6, copied - 2), bg: "#e5e7eb", fg: "#475569" });
+          if (f >= copied) stamp(o, "COPIED BACK", W / 2, 918, 58, COL.red, fade(f, copied, 6), r, -0.05);
         });
-        // [2] N minutes on a laptop, no GPU
-        if (f >= c2 - 4 && f < c3 + 4) {
-          group(c, fade(f, c2 - 4, 8) * (1 - fade(f, c3 - 4, 8)), (o) => {
-            laptop(o, W / 2, 820, 1.55, r, seg(f, c2, c2 + 10), (sc) => {
-              sc.font = handF(30); sc.fillStyle = "#86efac"; sc.textAlign = "left";
-              const steps = Math.min(8, Math.floor((f - c2) / 5));
-              for (let i = 0; i < steps; i++) sc.fillText(`step ${(i + 1) * 15}  loss ${(0.9 / (i + 1.4)).toFixed(3)}`, -180, -96 + i * 28);
-            });
-            stopwatch(o, 820, 470, 110, seg(f, c2 + 6, c3 - 6), `${n.minutes} min`, r, seg(f, c2 + 4, c2 + 12));
-            tag(o, "4 CPU cores · no GPU", W / 2, 1180, 56, COL.yellow, INK, -0.03, seg(f, c2 + 14, c2 + 22));
+        // [3] training: the real log, a stopwatch landing on "minutes"
+        if (f >= c3 - 4 && f < c4 + 4) {
+          group(c, fade(f, c3 - 4, 8) * (1 - fade(f, c4 - 4, 8)), (o) => {
+            o.fillStyle = "#0b1020"; rrect(o, 110, 400, 620, 420, 22); o.fill();
+            stroke(o, rrectPts(110, 400, 620, 420), COL.cream, 4, r, { passes: 1, alpha: 0.6 });
+            o.font = handF(42); o.textAlign = "left";
+            const L: [number, number][] = d.losses;
+            const k = Math.min(L.length, Math.floor(seg(f, c3 + 6, mins) * L.length + 0.001));
+            const first = Math.max(0, k - 6);
+            o.fillStyle = COL.pale; o.fillText("training: error going down", 150, 462);
+            o.fillStyle = "#86efac";
+            for (let i = first; i < k; i++) o.fillText(`step ${L[i][0]}   error ${L[i][1].toFixed(3)}`, 150, 522 + (i - first) * 50);
+            stopwatch(o, 880, 560, 120, seg(f, c3 + 6, mins), `${n.minutes} min`, r, seg(f, c3 + 4, c3 + 12));
+            tag(o, "trained on 4 CPU cores · no graphics card", W / 2, 890, 48, COL.yellow, INK, -0.02, seg(f, c3 + 10, c3 + 18));
           });
         }
-        // [3] the slip it writes now, n.after / n.test
-        if (f >= c3 - 4) {
-          group(c, fade(f, c3 - 4, 8), (o) => {
-            bubble(o, d.order, 200, 372, 820, "me", 1, r, { size: 36, bg: WA_GREEN });
-            orderSlip(o, 150, 640, 780, d.slip, seg(f, c3, c3 + 40), r);
-            stamp(o, `${n.after} / ${n.test}`, 840, 1300, 120, "#16a34a", fade(f, c3 + 30, 8), r, -0.1);
+        // [4] the slip it writes now
+        if (f >= c4 - 4) {
+          group(c, fade(f, c4 - 4, 8), (o) => {
+            orderSlip(o, 180, 372, 720, d.slip, seg(f, c4, c4 + 30), r);
           });
+        }
+        // the scoreboard: perfect slips out of 30 new orders
+        if (f >= c1 - 2) {
+          const a0 = fade(f, c1 - 2, 6);
+          c.save(); c.globalAlpha = a0;
+          label(c, `perfect slips, out of ${n.test} new orders`, W / 2, 982, 42, COL.cream, handF, 1);
+          c.restore();
+          rows.forEach((row, i) => {
+            if (f < row.at - 2) return;
+            const q = fade(f, row.at - 2, 6), y = 1030 + i * 90;
+            c.save(); c.globalAlpha = q;
+            c.font = caveat(46); c.fillStyle = i === 2 ? COL.yellow : COL.cream; c.textAlign = "right"; c.fillText(row.label, 450, y + 44);
+            c.fillStyle = "rgba(255,255,255,0.12)"; rrect(c, 470, y, 500, 64, 12); c.fill();
+            const wv = 500 * (row.v / n.test) * easeOut(seg(f, row.at, row.at + 12));
+            if (wv > 2) { c.fillStyle = row.col; rrect(c, 470, y, wv, 64, 12); c.fill(); }
+            c.font = caveat(60); c.fillStyle = COL.cream; c.textAlign = "left";
+            c.fillText(String(row.v), 480 + Math.max(wv, 0) + 6, y + 52);
+            c.restore();
+          });
+          if (f >= c4 + 12) {
+            tag(c, n.miss, W / 2, 1318, 44, COL.cream, INK, -0.01, seg(f, c4 + 12, c4 + 18));
+            c.save(); c.globalAlpha = fade(f, c4 + 18, 8);
+            label(c, "made-up orders · real chats are messier", W / 2, 1392, 38, COL.pale, handF, 1);
+            c.restore();
+          }
         }
       }} />
     </>
   );
 };
 
-// ---------- 2 WHY IT'S HARD: change every number; big models need racks of chips ----------
+// ---------- 3 WHY TRAINING IS HEAVY: every number changes; every skill = a whole new copy ----------
 const LoHard: React.FC<SP> = ({ s, cue }) => {
   const n = nums(s);
-  const c1 = cue(1), c2 = cue(2);
+  const c1 = cue(1);
   return (
     <>
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={c1} src="audio/sfx_whoosh.wav" vol={0.4} />
-      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.6} />
+      {[0, 1, 2].map((k) => <Sfx key={k} at={c1 + 6 + k * 8} src="reel/sfx_boom.wav" vol={0.32} />)}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4100 + boil);
         group(c, 1 - fade(f, c1 - 4, 8), (o) => {
           hand(o, "normal training changes EVERY number", W / 2, 350, 56, COL.cream, seg(f, -6, 10), r, -0.02, "center");
-          const total = 14 * 10, shown = Math.floor(total * easeOut(seg(f, 4, 40)));
+          const total = 14 * 10, shown = Math.floor(total * easeOut(seg(f, 4, 30)));
+          const rr = rng(Math.floor(f / 3));   // every number keeps changing
           for (let i = 0; i < shown; i++) {
             const gx = 120 + (i % 14) * 60, gy = 430 + Math.floor(i / 14) * 60;
-            o.fillStyle = i % 7 === 0 ? COL.orangeLight : COL.pale; o.fillRect(gx, gy, 50, 50);
+            o.fillStyle = f > 30 && rr() < 0.5 ? COL.orangeLight : COL.pale; o.fillRect(gx, gy, 50, 50);
           }
-          tag(o, `ours: about ${n.params} numbers`, W / 2, 1100, 56, COL.yellow, INK, -0.02, seg(f, 20, 30));
-          label(o, "the big ones: hundreds of billions", W / 2, 1230, 52, COL.cream, handF, seg(f, 34, 46));
+          tag(o, `${n.params} numbers: every one changes`, W / 2, 1130, 54, COL.yellow, INK, -0.02, seg(f, 18, 28));
         });
         if (f >= c1 - 4) {
           group(c, fade(f, c1 - 4, 8), (o) => {
-            for (let k = 0; k < 3; k++) {   // a rack of GPU boxes
-              const x = 200 + k * 240, y = 470;
-              o.fillStyle = "#111827"; rrect(o, x, y, 200, 520, 16); o.fill();
-              for (let j = 0; j < 6; j++) {
-                const on = seg(f, c1 + 4 + (k * 6 + j) * 1.5, c1 + 8 + (k * 6 + j) * 1.5);
-                o.fillStyle = on > 0 ? "#22c55e" : "#374151"; rrect(o, x + 20, y + 24 + j * 82, 160, 60, 8); o.fill();
-                o.fillStyle = "#0b1020"; o.fillRect(x + 36, y + 44 + j * 82, 90, 20);
-              }
-            }
-            hand(o, "servers full of AI chips", W / 2, 370, 60, COL.yellow, seg(f, c1, c1 + 14), r, -0.02, "center");
-            if (f >= c2) tag(o, "a 7B model: 100+ GB of chip memory to train", W / 2, 1150, 48, COL.cream, INK, 0.02, seg(f, c2, c2 + 10));
+            hand(o, "every new skill = a whole new copy", W / 2, 370, 56, COL.cream, seg(f, c1, c1 + 12), r, -0.02, "center");
+            ["orders", "replies", "summaries"].forEach((t, k) => {
+              const q = seg(f, c1 + 6 + k * 8, c1 + 14 + k * 8);
+              fileIcon(o, 230 + k * 310, 470, 230, 430, "#93c5fd", `${n.modelMB} MB`, t, r, q);
+            });
+            tag(o, "heavy to train, heavy to store", W / 2, 1230, 50, COL.yellow, INK, 0.02, seg(f, c1 + 30, c1 + 38));
           });
         }
       }} />
@@ -199,66 +242,53 @@ const LoHard: React.FC<SP> = ({ s, cue }) => {
   );
 };
 
-// ---------- 3 THE TRICK: freeze the book, add sticky notes, train only the notes ----------
+// ---------- 4 THE TRICK: freeze the book, add sticky notes, train only the notes; a small file per skill; Apple ----------
 const LoTrick: React.FC<SP> = ({ s, cue }) => {
   const n = nums(s);
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const pct = wordAt(s, /^notes$/i, c1 + 20, c1 + 70) + 12;   // "...train only the notes": the 1.2% stamp
+  const feats = ["summaries", "writing tools", "replies"];
   return (
     <>
-      <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
+      <Sfx at={0} src="audio/sfx_whoosh.wav" vol={0.45} />
+      <Sfx at={4} src="audio/sfx_snap.wav" vol={0.4} />
       <Sfx at={20} src="audio/sfx_tick.wav" vol={0.4} />
       {[0, 1, 2, 3].map((k) => <Sfx key={k} at={c1 + 6 + k * 8} src="audio/sfx_pop.wav" vol={0.3} />)}
-      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.7} />
-      <Sfx at={c2} src="audio/sfx_snap.wav" vol={0.5} />
-      <Sfx at={c3} src="audio/sfx_success.wav" vol={0.45} />
+      <Sfx at={pct} src="audio/sfx_snap.wav" vol={0.45} />
+      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.6} />
+      <Sfx at={c2} src="audio/sfx_snap.wav" vol={0.45} />
+      <Sfx at={c3} src="audio/sfx_whoosh.wav" vol={0.4} />
+      {[0, 1, 2].map((k) => <Sfx key={"f" + k} at={c3 + 10 + k * 10} src="audio/sfx_pop.wav" vol={0.32} />)}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4200 + boil);
-        tag(c, "LoRA", W / 2, 330, 72, COL.yellow, INK, -0.03, seg(f, -6, 4));
-        group(c, 1 - fade(f, c3 - 4, 8), (o) => {
-          hand(o, f < c1 ? "1. freeze the original" : "2. add sticky notes, train only them", W / 2, 440, 54, COL.cream, f < c1 ? seg(f, -4, 10) : seg(f, c1, c1 + 14), r, -0.02, "center");
+        if (f < c3 + 4) tag(c, "the trick: LoRA", W / 2, 330, 64, COL.yellow, INK, -0.03, seg(f, -6, 4) * (1 - fade(f, c3 - 4, 8)));
+        group(c, 1 - fade(f, c2 - 4, 8), (o) => {
+          hand(o, f < c1 ? "1. freeze the original" : "2. stick on notes, train only the notes", W / 2, 440, 54, COL.cream, f < c1 ? seg(f, -4, 10) : seg(f, c1, c1 + 14), r, -0.02, "center");
           book(o, 140, 500, 800, 560, r, seg(f, -6, 6), seg(f, 14, 26), seg(f, c1 + 4, c1 + 40));
-          if (f >= c2) {
-            stamp(o, `${n.pct}% of the numbers`, W / 2, 1200, 88, "#16a34a", fade(f, c2, 8), r, -0.05);
-          }
+          if (f >= pct) stamp(o, `the notes: ${n.pct}% of the numbers`, W / 2, 1200, 60, "#16a34a", fade(f, pct, 8), r, -0.04);
         });
-        if (f >= c3 - 4) {
-          group(c, fade(f, c3 - 4, 8), (o) => {
-            hand(o, "the new skill = a small file", W / 2, 440, 56, COL.cream, seg(f, c3, c3 + 14), r, -0.02, "center");
+        if (f >= c2 - 4 && f < c3 + 4) {
+          group(c, fade(f, c2 - 4, 8) * (1 - fade(f, c3 - 4, 8)), (o) => {
+            hand(o, "each skill = its own small file", W / 2, 440, 56, COL.cream, seg(f, c2, c2 + 14), r, -0.02, "center");
             const big = 560, k = Math.sqrt(parseFloat(n.adapterMB) / parseFloat(n.modelMB));   // areas to scale
-            fileIcon(o, 300, 560 + big * (1 - k), 300 * k, big * k, "#fde047", `${n.adapterMB} MB`, "the skill", r, seg(f, c3 + 6, c3 + 16));
-            fileIcon(o, 700, 560, 300, big, "#93c5fd", `${n.modelMB} MB`, "the model", r, seg(f, c3 + 12, c3 + 22));
+            fileIcon(o, 290, 540 + big * (1 - k), 300 * k, big * k, "#fde047", `${n.adapterMB} MB`, "the notes", r, seg(f, c2 + 6, c2 + 16), "≈ a short WhatsApp video");
+            fileIcon(o, 740, 540, 300, big, "#93c5fd", `${n.modelMB} MB`, "the model", r, seg(f, c2 + 12, c2 + 22), "≈ a movie");
           });
         }
-      }} />
-    </>
-  );
-};
-
-// ---------- 4 SWAP: one model, many skill files ----------
-const LoSwap: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1);
-  const skills = ["orders", "shop's tone", "quizzes from notes"];
-  return (
-    <>
-      <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
-      {[0, 1, 2].map((k) => <Sfx key={k} at={12 + k * 22} src="audio/sfx_whoosh.wav" vol={0.3} />)}
-      <Sfx at={c1} src="audio/sfx_success.wav" vol={0.4} />
-      <CrayonCanvas draw={(c, W, H, f, boil) => {
-        background(c, W, H, boil);
-        const r = rng(4300 + boil);
-        hand(c, "one model, many skill files", W / 2, 360, 60, COL.yellow, seg(f, -6, 8), r, -0.02, "center");
-        robot(c, W / 2, 1060, 1.0, boil, 3, { ...STUDENT, arms: "up", mouth: "grin", eyes: "happy" });
-        const active = Math.min(2, Math.floor(Math.max(0, f - 12) / 22));
-        skills.forEach((t, i) => {
-          const x = 200 + i * 340, inSlot = i === active;
-          const y = inSlot ? lerp(520, 720, easeOut(seg(f, 12 + i * 22, 22 + i * 22))) : 520;
-          c.save(); c.translate(x, y); c.rotate((i - 1) * 0.06);
-          c.fillStyle = inSlot ? "#fde047" : "#fef9c3"; c.fillRect(-130, -60, 260, 120);
-          c.restore();
-          label(c, t, x, y + 14, 46, INK, caveat, 1);
-        });
-        if (f >= c1) tag(c, "swap in a second", W / 2, 1300, 56, COL.cream, INK, 0.02, seg(f, c1, c1 + 10));
+        if (f >= c3 - 4) {
+          group(c, fade(f, c3 - 4, 8), (o) => {   // Apple: one model, a small skill file per feature
+            hand(o, "Apple: one model, many skill files", W / 2, 360, 58, COL.yellow, seg(f, c3 - 2, c3 + 10), r, -0.02, "center");
+            o.fillStyle = "#0b1020"; rrect(o, 300, 430, 480, 780, 54); o.fill();
+            stroke(o, rrectPts(300, 430, 480, 780), COL.cream, 6, r, { passes: 2, alpha: 0.8 });
+            feats.forEach((t, i) => {
+              const q = seg(f, c3 + 8 + i * 10, c3 + 16 + i * 10);
+              o.save(); o.globalAlpha = q; o.fillStyle = "#fde047"; o.fillRect(350, 520 + i * 180, 380, 130); o.restore();
+              label(o, t, 540, 600 + i * 180, 58, INK, caveat, q);
+            });
+            tag(o, "Apple Machine Learning Research, 2024", W / 2, 1290, 40, COL.cream, INK, -0.02, seg(f, c3 + 30, c3 + 40));
+          });
+        }
       }} />
     </>
   );
@@ -266,28 +296,28 @@ const LoSwap: React.FC<SP> = ({ cue }) => {
 
 // ---------- 5 QUIZ: prices change every week; LoRA or hand it the list? ----------
 const LoQuiz: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = cue(4);
+  const c1 = cue(1), c2 = cue(2), c3 = cue(3), c4 = c2 + 45;   // the rule shows under the answer
   return (
     <>
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
       {[0, 1, 2].map((k) => <Sfx key={k} at={c3 + 4 + k * 13} src="audio/sfx_tick.wav" vol={0.38} />)}
-      <Sfx at={c2} src="audio/sfx_snap.wav" vol={0.7} />
-      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.7} />
+      <Sfx at={c2 - 8} src="audio/sfx_snap.wav" vol={0.6} />
+      <Sfx at={c2 - 8} src="reel/sfx_boom.wav" vol={0.5} />
       <Sfx at={c4} src="audio/sfx_success.wav" vol={0.45} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4400 + boil);
         hand(c, "YOUR TURN", W / 2, 350, 100, COL.yellow, seg(f, -8, 6), r, -0.03, "center");
         tag(c, "your shop's prices change every week", W / 2, 455, 46, COL.cream, INK, -0.02, seg(f, 6, 14));
-        const ans = f >= c2;
+        const ans = f >= c2 - 8;   // the reveal hits just before the voice says the answer
         const drawCard = (x: number, L: string, lines: string[], p: number, bg: string) => {
           if (!card(c, x, 520, 440, 430, r, p, bg)) return;
           label(c, L, x + 50, 600, 80, GREY, caveat, p);
           c.save(); c.font = handF(44); c.fillStyle = INK; lines.forEach((t, i) => c.fillText(t, x + 40, 690 + i * 60)); c.restore();
         };
-        drawCard(70, "A", ["Train a LoRA", "on this week's", "price list"], seg(f, c1, c1 + 10), ans ? "#fee2e2" : COL.cream);
-        drawCard(570, "B", ["Hand it the", "price list with", "every question"], seg(f, c1 + 8, c1 + 18), ans ? "#dcfce7" : COL.cream);
+        drawCard(70, "A", ["Train LoRA notes", "on this week's", "prices"], seg(f, c1, c1 + 10), ans ? "#fee2e2" : COL.cream);
+        drawCard(570, "B", ["Give it the", "price list with", "every question"], seg(f, c1 + 8, c1 + 18), ans ? "#dcfce7" : COL.cream);
         if (f >= c3 && !ans) {
           const q = seg(f, c3 + 2, c2);
           c.save(); c.globalAlpha = 0.85; c.beginPath(); c.arc(W / 2, 1110, 92, 0, 7); c.fillStyle = COL.navy; c.fill(); c.restore();
@@ -295,88 +325,74 @@ const LoQuiz: React.FC<SP> = ({ cue }) => {
           label(c, String(3 - Math.min(2, Math.floor(q * 3))), W / 2, 1156, 130, COL.yellow, caveat);
         }
         if (ans) {
-          crown(c, 790, 490, 1.2, r, seg(f, c2, c2 + 8));
-          tag(c, "old prices baked in", 290, 1010, 50, COL.red, INK, 0.03, seg(f, c2 + 10, c2 + 18));
+          crown(c, 900, 530, 1.1, r, seg(f, c2, c2 + 8));
+          tag(c, "retrain every week", 290, 1010, 50, COL.red, INK, 0.03, seg(f, c2 + 10, c2 + 18));
           tag(c, "always this week's", 790, 1010, 50, "#4ade80", INK, -0.03, seg(f, c2 + 4, c2 + 12));
         }
         if (f >= c4) {
-          hand(c, "skills & style: LoRA", W / 2, 1190, 62, COL.yellow, seg(f, c4, c4 + 12), r, -0.02, "center");
-          hand(c, "facts that change: give them each time", W / 2, 1290, 54, COL.cream, seg(f, c4 + 14, c4 + 28), r, -0.02, "center");
+          hand(c, "changing facts: put them in the prompt", W / 2, 1190, 54, COL.cream, seg(f, c4, c4 + 12), r, -0.02, "center");
+          hand(c, "skills & style: LoRA", W / 2, 1290, 62, COL.yellow, seg(f, c4 + 14, c4 + 28), r, -0.02, "center");
         }
       }} />
     </>
   );
 };
 
-// ---------- 6 IT'S REAL: phones, image styles, a 65B model on one GPU ----------
-const LoReal: React.FC<SP> = ({ cue }) => {
-  const c1 = cue(1), c2 = cue(2);
+// ---------- 2 WHY A TINY MODEL: free, on your own computer, customer details stay with you ----------
+const LoWhy: React.FC<SP> = ({ s }) => {
+  const t = [wordAt(s, /^free$/i, 0, 30), wordAt(s, /^runs$/i, 0, 45), wordAt(s, /^customers/i, 0, 60)];
+  const items = ["free", "runs on your own computer", "customer details stay with you"];
   return (
     <>
       <Sfx at={2} src="audio/sfx_whoosh.wav" vol={0.4} />
-      <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.45} />
-      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.65} />
-      <Sfx at={c2} src="audio/sfx_snap.wav" vol={0.5} />
+      {t.map((x, k) => <Sfx key={k} at={x} src="audio/sfx_pop.wav" vol={0.42} />)}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
         const r = rng(4500 + boil);
-        group(c, 1 - fade(f, c1 - 4, 8), (o) => {   // a phone with small adapter cards
-          o.fillStyle = "#0b1020"; rrect(o, 340, 420, 400, 760, 50); o.fill();
-          stroke(o, rrectPts(340, 420, 400, 760), COL.cream, 6, r, { passes: 2, alpha: 0.8 });
-          ["summaries", "writing tools", "replies"].forEach((t, i) => {
-            const q = seg(f, 6 + i * 6, 14 + i * 6);
-            o.save(); o.globalAlpha = q; o.fillStyle = "#fde047"; o.fillRect(390, 520 + i * 160, 300, 110); o.restore();
-            label(o, t, 540, 590 + i * 160, 46, INK, caveat, q);
-          });
-          tag(o, "Apple: a small adapter per feature", W / 2, 1290, 48, COL.cream, INK, -0.02, seg(f, 10, 20));
+        hand(c, "why not just ask ChatGPT?", W / 2, 360, 66, COL.yellow, seg(f, -6, 8), r, -0.02, "center");
+        laptop(c, W / 2, 660, 1.2, r, seg(f, -4, 6), (sc) => {
+          sc.strokeStyle = COL.yellow; sc.lineWidth = 12; sc.beginPath(); sc.arc(0, -30, 34, Math.PI, 0); sc.stroke();
+          sc.fillStyle = COL.yellow; rrect(sc, -52, -30, 104, 84, 12); sc.fill();
+          sc.fillStyle = INK; sc.beginPath(); sc.arc(0, 4, 11, 0, 7); sc.fill();
         });
-        if (f >= c1 - 4 && f < c2 + 4) {
-          group(c, fade(f, c1 - 4, 8) * (1 - fade(f, c2 - 4, 8)), (o) => {   // image styles as small files
-            ["#f472b6", "#60a5fa", "#facc15", "#34d399"].forEach((col, i) => {
-              const q = seg(f, c1 + 2 + i * 4, c1 + 10 + i * 4);
-              if (!card(o, 110 + (i % 2) * 440, 440 + Math.floor(i / 2) * 400, 420, 360, r, q, col)) return;
-            });
-            hand(o, "image AIs learn a style from a small file", W / 2, 360, 50, COL.yellow, seg(f, c1, c1 + 14), r, -0.02, "center");
-          });
-        }
-        if (f >= c2 - 4) {
-          group(c, fade(f, c2 - 4, 8), (o) => {
-            o.fillStyle = "#111827"; rrect(o, 240, 600, 600, 300, 30); o.fill();
-            o.fillStyle = "#22c55e"; for (let i = 0; i < 8; i++) o.fillRect(290 + i * 64, 640, 40, 220);
-            label(o, "1 GPU", W / 2, 990, 90, COL.cream, caveat, seg(f, c2 + 4, c2 + 12));
-            stamp(o, "65B model, fine-tuned", W / 2, 470, 76, COL.yellow, fade(f, c2 + 8, 8), r, -0.04);
-            tag(o, "QLoRA (Dettmers et al., 2023)", W / 2, 1120, 46, COL.cream, INK, 0.02, seg(f, c2 + 14, c2 + 24));
-          });
-        }
+        items.forEach((txt, k) => {
+          const q = seg(f, t[k] - 2, t[k] + 6);
+          if (q <= 0) return;
+          tag(c, "\u2713 " + txt, W / 2, 1000 + k * 120, 52, k === 2 ? "#4ade80" : COL.cream, INK, (k - 1) * 0.02, q);
+        });
       }} />
     </>
   );
 };
 
-// ---------- 7 CLOSE: prompt first, look facts up, LoRA for skills; next; follow ----------
+// ---------- 6 CLOSE: prompt first, facts in the prompt, LoRA for a skill the prompt can't nail, check its work; next; follow ----------
 const LoClose: React.FC<SP> = ({ s, cue }) => {
   const n = nums(s);
   const handle: string = s.data.handle ?? "@ai_maastaaru";
   const c1 = cue(1), c2 = cue(2);
-  const steps = ["try a good prompt", "facts that change? give them each time", "a skill or a style? a small LoRA"];
+  const steps = ["prompt first", "changing facts? put them in the prompt", "a skill it can't nail? a small LoRA"];
+  const at = [4, wordAt(s, /^Facts$/i, 0, 40), wordAt(s, /^skill$/i, 30, 90)];
+  const chk = wordAt(s, /^check$/i, 60, c1 - 50);
   return (
     <>
-      <Sfx at={2} src="audio/sfx_pop.wav" vol={0.35} />
-      {[0, 1, 2].map((k) => <Sfx key={k} at={8 + k * 16} src="audio/sfx_pop.wav" vol={0.35} />)}
+      {at.map((x, k) => <Sfx key={"s" + k} at={x} src="audio/sfx_pop.wav" vol={0.4} />)}
+      <Sfx at={chk} src="audio/sfx_snap.wav" vol={0.5} />
       <Sfx at={c1} src="audio/sfx_whoosh.wav" vol={0.4} />
-      <Sfx at={c2} src="audio/sfx_success.wav" vol={0.3} />
+      <Sfx at={c2} src="reel/sfx_boom.wav" vol={0.5} />
+      <Sfx at={c2} src="audio/sfx_success.wav" vol={0.35} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(4600 + boil);
         group(c, 1 - fade(f, c1 - 4, 8), (o) => {
           hand(o, "before you train anything:", W / 2, 360, 62, COL.cream, seg(f, -6, 8), r, -0.02, "center");
           steps.forEach((t, i) => {
-            const q = seg(f, 8 + i * 16, 18 + i * 16);
+            const q = seg(f, at[i] - 2, at[i] + 8);
             if (!card(o, 110, 450 + i * 250, 860, 200, r, q, i === 2 ? "#fde047" : COL.cream)) return;
             label(o, String(i + 1), 180, 575 + i * 250, 90, GREY, caveat, q);
-            label(o, t, 590, 568 + i * 250, t.length > 30 ? 44 : 50, INK, caveat, q);
+            label(o, t, 590, i === 0 ? 545 : 568 + i * 250, t.length > 30 ? 46 : 56, INK, caveat, q);
+            if (i === 0 && n.fewShot !== undefined) label(o, `2 examples took ours from ${n.before} to ${n.fewShot}`, 590, 612, 42, GREY, caveat, q);
           });
-          stamp(o, `ours: ${n.minutes} min · ${n.adapterMB} MB`, W / 2, 1290, 66, "#16a34a", fade(f, 64, 8), r, -0.04);
+          stamp(o, `check its work: ours got ${n.test - n.after} wrong`, W / 2, 1290, 60, "#16a34a", fade(f, chk, 8), r, -0.04);
         });
         if (f >= c1 - 4) {
           group(c, fade(f, c1 - 4, 8), (o) => {
@@ -399,6 +415,6 @@ const LoClose: React.FC<SP> = ({ s, cue }) => {
 };
 
 export const LORA_SCENES = {
-  lo_hook: LoHook, lo_hard: LoHard, lo_trick: LoTrick, lo_swap: LoSwap, lo_quiz: LoQuiz, lo_real: LoReal, lo_close: LoClose,
+  lo_hook: LoHook, lo_why: LoWhy, lo_hard: LoHard, lo_trick: LoTrick, lo_quiz: LoQuiz, lo_close: LoClose,
 };
 void arrow;

@@ -455,6 +455,7 @@ def main(spec_path: Path) -> None:
         scenes.append({"id": sc["id"], "type": sc["type"], "data": sc.get("data", {}), "from": round(s_from * FPS),
                        "frames": round((t - s_from) * FPS), "lines": lines})
     total = t + 0.4
+    scenes[-1]["frames"] = round(total * FPS) - scenes[-1]["from"]   # the last scene holds to the end (no empty last frames)
     # "drop_cue": k (or a list of cues) on a scene = a short music drop right before that cue (the key number), released on the cue
     # "duck": [cue_a, cue_b, gain] = the bed sits at `gain` between two cues (e.g. under a command the viewer must hear exactly)
     mdrops = []

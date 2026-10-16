@@ -1,0 +1,1682 @@
+{
+ "id": "ep31v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Teach an AI a new skill",
+ "musicVol": [
+  0.42,
+  1.3
+ ],
+ "title": "Teach an AI a new skill (LoRA)",
+ "handle": "@ai_maastaaru",
+ "label": "EP 31",
+ "fps": 30,
+ "musicLift": 2.3,
+ "musicDrops": [
+  [
+   446,
+   470
+  ],
+  [
+   1257,
+   1281
+  ],
+  [
+   1914,
+   1971,
+   0.15
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   573,
+   1.2
+  ],
+  [
+   1023,
+   1658,
+   1.2
+  ],
+  [
+   1658,
+   2189,
+   1.3
+  ],
+  [
+   2189,
+   2658,
+   1.5
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 2658,
+ "music": "reel/ep31v1/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "lo_hook",
+   "data": {
+    "yt": {
+     "chapter": "0, then 16, then 27",
+     "title": "A tiny free AI that copied orders back",
+     "notes": [
+      [
+       "A tiny free AI (SmolLM2-360M by Hugging Face): turn a WhatsApp order into a slip with name, phone, items, address",
+       0
+      ],
+      [
+       "Plain prompt: it copied the order back, 0 out of 30 (real run, ours)",
+       1
+      ],
+      [
+       "A better prompt with two worked examples: 16 out of 30",
+       2
+      ],
+      [
+       "LoRA training on 240 made-up orders: 14 minutes on 4 CPU cores (a cloud machine), no graphics card (GPU)",
+       3
+      ],
+      [
+       "27 out of 30 perfect on new orders it never saw (3 wrong: 1 phone number, 2 item lists); orders are made up, real chats are messier",
+       4
+      ]
+     ]
+    },
+    "n": {
+     "before": 0,
+     "after": 27,
+     "test": 30,
+     "train": 240,
+     "minutes": 14,
+     "pct": "1.2",
+     "adapterMB": "9",
+     "modelMB": "724",
+     "params": "360 million",
+     "fewShot": 16,
+     "miss": "3 wrong: 1 phone number, 2 item lists"
+    },
+    "order": "hi pls send onions 1kg, milk 1 L to flat 302, Sai Residency, Kukatpally. Arjun 55555 01234",
+    "beforeLines": [
+     "Order: Hi, please send onions 1kg, milk",
+     "1 L to flat 302, Sai Residency,",
+     "Kukatpally. Arjun 55555 01234"
+    ],
+    "slip": {
+     "name": "Arjun",
+     "phone": "5555501234",
+     "items": [
+      "onions · 1 kg",
+      "milk · 1 L"
+     ],
+     "address": "flat 302, Sai Residency, Kukatpally"
+    },
+    "losses": [
+     [
+      5,
+      0.2252
+     ],
+     [
+      10,
+      0.2033
+     ],
+     [
+      15,
+      0.0909
+     ],
+     [
+      20,
+      0.072
+     ],
+     [
+      25,
+      0.0739
+     ],
+     [
+      30,
+      0.026
+     ],
+     [
+      35,
+      0.0308
+     ],
+     [
+      40,
+      0.0098
+     ],
+     [
+      45,
+      0.1001
+     ],
+     [
+      50,
+      0.0772
+     ],
+     [
+      55,
+      0.0118
+     ],
+     [
+      60,
+      0.004
+     ]
+    ],
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 573,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep31v1/line_01.wav",
+     "from": 9,
+     "frames": 533,
+     "words": [
+      {
+       "w": "We",
+       "from": 14,
+       "to": 18
+      },
+      {
+       "w": "asked",
+       "from": 18,
+       "to": 26
+      },
+      {
+       "w": "a",
+       "from": 26,
+       "to": 33
+      },
+      {
+       "w": "tiny",
+       "from": 33,
+       "to": 39
+      },
+      {
+       "w": "free",
+       "from": 39,
+       "to": 46
+      },
+      {
+       "w": "AI",
+       "from": 46,
+       "to": 50
+      },
+      {
+       "w": "to",
+       "from": 50,
+       "to": 54
+      },
+      {
+       "w": "turn",
+       "from": 54,
+       "to": 61
+      },
+      {
+       "w": "WhatsApp",
+       "from": 61,
+       "to": 74
+      },
+      {
+       "w": "orders",
+       "from": 74,
+       "to": 83
+      },
+      {
+       "w": "into",
+       "from": 83,
+       "to": 90
+      },
+      {
+       "w": "neat",
+       "from": 90,
+       "to": 97
+      },
+      {
+       "w": "slips.",
+       "from": 97,
+       "to": 106
+      },
+      {
+       "w": "It",
+       "from": 106,
+       "to": 110
+      },
+      {
+       "w": "just",
+       "from": 110,
+       "to": 117
+      },
+      {
+       "w": "copied",
+       "from": 117,
+       "to": 141
+      },
+      {
+       "w": "them",
+       "from": 141,
+       "to": 151
+      },
+      {
+       "w": "back.",
+       "from": 151,
+       "to": 159
+      },
+      {
+       "w": "Zero",
+       "from": 159,
+       "to": 176
+      },
+      {
+       "w": "out",
+       "from": 176,
+       "to": 182
+      },
+      {
+       "w": "of",
+       "from": 182,
+       "to": 186
+      },
+      {
+       "w": "30.",
+       "from": 186,
+       "to": 195
+      },
+      {
+       "w": "A",
+       "from": 195,
+       "to": 208
+      },
+      {
+       "w": "better",
+       "from": 208,
+       "to": 217
+      },
+      {
+       "w": "prompt,",
+       "from": 217,
+       "to": 239
+      },
+      {
+       "w": "with",
+       "from": 239,
+       "to": 246
+      },
+      {
+       "w": "two",
+       "from": 246,
+       "to": 252
+      },
+      {
+       "w": "examples?",
+       "from": 252,
+       "to": 286
+      },
+      {
+       "w": "16.",
+       "from": 286,
+       "to": 291
+      },
+      {
+       "w": "Then",
+       "from": 291,
+       "to": 300
+      },
+      {
+       "w": "we",
+       "from": 300,
+       "to": 309
+      },
+      {
+       "w": "trained",
+       "from": 309,
+       "to": 322
+      },
+      {
+       "w": "it",
+       "from": 322,
+       "to": 327
+      },
+      {
+       "w": "on",
+       "from": 327,
+       "to": 333
+      },
+      {
+       "w": "240",
+       "from": 333,
+       "to": 339
+      },
+      {
+       "w": "made-up",
+       "from": 339,
+       "to": 357
+      },
+      {
+       "w": "orders.",
+       "from": 357,
+       "to": 387
+      },
+      {
+       "w": "14",
+       "from": 387,
+       "to": 392
+      },
+      {
+       "w": "minutes,",
+       "from": 392,
+       "to": 412
+      },
+      {
+       "w": "no",
+       "from": 412,
+       "to": 417
+      },
+      {
+       "w": "graphics",
+       "from": 417,
+       "to": 449
+      },
+      {
+       "w": "card.",
+       "from": 449,
+       "to": 470
+      },
+      {
+       "w": "27",
+       "from": 470,
+       "to": 474
+      },
+      {
+       "w": "out",
+       "from": 474,
+       "to": 480
+      },
+      {
+       "w": "of",
+       "from": 480,
+       "to": 484
+      },
+      {
+       "w": "30,",
+       "from": 484,
+       "to": 498
+      },
+      {
+       "w": "on",
+       "from": 498,
+       "to": 502
+      },
+      {
+       "w": "new",
+       "from": 502,
+       "to": 507
+      },
+      {
+       "w": "orders",
+       "from": 507,
+       "to": 517
+      },
+      {
+       "w": "it",
+       "from": 517,
+       "to": 521
+      },
+      {
+       "w": "never",
+       "from": 521,
+       "to": 529
+      },
+      {
+       "w": "saw.",
+       "from": 529,
+       "to": 536
+      }
+     ],
+     "cues": {
+      "1": 159,
+      "2": 195,
+      "3": 291,
+      "4": 470
+     }
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "lo_why",
+   "data": {
+    "yt": {
+     "chapter": "Why not just ask ChatGPT?",
+     "title": "Free, on your computer, data stays with you",
+     "notes": [
+      [
+       "Why not a big chatbot? A tiny model is free, runs on your own computer (no per-message bill), and customer details never leave it",
+       0
+      ]
+     ]
+    },
+    "n": {
+     "before": 0,
+     "after": 27,
+     "test": 30,
+     "train": 240,
+     "minutes": 14,
+     "pct": "1.2",
+     "adapterMB": "9",
+     "modelMB": "724",
+     "params": "360 million",
+     "fewShot": 16,
+     "miss": "3 wrong: 1 phone number, 2 item lists"
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 573,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep31v1/line_02.wav",
+     "from": 0,
+     "frames": 197,
+     "words": [
+      {
+       "w": "Why",
+       "from": 3,
+       "to": 9
+      },
+      {
+       "w": "not",
+       "from": 9,
+       "to": 14
+      },
+      {
+       "w": "just",
+       "from": 14,
+       "to": 21
+      },
+      {
+       "w": "ask",
+       "from": 21,
+       "to": 27
+      },
+      {
+       "w": "ChatGPT?",
+       "from": 27,
+       "to": 44
+      },
+      {
+       "w": "This",
+       "from": 44,
+       "to": 52
+      },
+      {
+       "w": "one's",
+       "from": 52,
+       "to": 73
+      },
+      {
+       "w": "free,",
+       "from": 73,
+       "to": 81
+      },
+      {
+       "w": "runs",
+       "from": 81,
+       "to": 88
+      },
+      {
+       "w": "on",
+       "from": 88,
+       "to": 98
+      },
+      {
+       "w": "your",
+       "from": 98,
+       "to": 105
+      },
+      {
+       "w": "own",
+       "from": 105,
+       "to": 111
+      },
+      {
+       "w": "computer,",
+       "from": 111,
+       "to": 125
+      },
+      {
+       "w": "and",
+       "from": 125,
+       "to": 131
+      },
+      {
+       "w": "customer",
+       "from": 131,
+       "to": 154
+      },
+      {
+       "w": "details",
+       "from": 154,
+       "to": 165
+      },
+      {
+       "w": "never",
+       "from": 165,
+       "to": 174
+      },
+      {
+       "w": "leave",
+       "from": 174,
+       "to": 182
+      },
+      {
+       "w": "it.",
+       "from": 182,
+       "to": 188
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "hard",
+   "type": "lo_hard",
+   "data": {
+    "yt": {
+     "chapter": "Why training is heavy",
+     "title": "Normal training changes every number",
+     "notes": [
+      [
+       "Normal training (full fine-tuning) changes every number inside the model: all 360 million of ours",
+       0
+      ],
+      [
+       "Every new skill means retraining all of them and saving a whole new copy (724 MB here; hundreds of GB for big models)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "before": 0,
+     "after": 27,
+     "test": 30,
+     "train": 240,
+     "minutes": 14,
+     "pct": "1.2",
+     "adapterMB": "9",
+     "modelMB": "724",
+     "params": "360 million",
+     "fewShot": 16,
+     "miss": "3 wrong: 1 phone number, 2 item lists"
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 798,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep31v1/line_03.wav",
+     "from": 0,
+     "frames": 200,
+     "words": [
+      {
+       "w": "Normal",
+       "from": 3,
+       "to": 15
+      },
+      {
+       "w": "training",
+       "from": 15,
+       "to": 31
+      },
+      {
+       "w": "changes",
+       "from": 31,
+       "to": 45
+      },
+      {
+       "w": "every",
+       "from": 45,
+       "to": 56
+      },
+      {
+       "w": "one",
+       "from": 56,
+       "to": 63
+      },
+      {
+       "w": "of",
+       "from": 63,
+       "to": 69
+      },
+      {
+       "w": "its",
+       "from": 69,
+       "to": 76
+      },
+      {
+       "w": "360",
+       "from": 76,
+       "to": 83
+      },
+      {
+       "w": "million",
+       "from": 83,
+       "to": 97
+      },
+      {
+       "w": "numbers.",
+       "from": 97,
+       "to": 113
+      },
+      {
+       "w": "And",
+       "from": 113,
+       "to": 129
+      },
+      {
+       "w": "every",
+       "from": 129,
+       "to": 137
+      },
+      {
+       "w": "new",
+       "from": 137,
+       "to": 143
+      },
+      {
+       "w": "skill",
+       "from": 143,
+       "to": 151
+      },
+      {
+       "w": "needs",
+       "from": 151,
+       "to": 164
+      },
+      {
+       "w": "a",
+       "from": 164,
+       "to": 167
+      },
+      {
+       "w": "whole",
+       "from": 167,
+       "to": 175
+      },
+      {
+       "w": "new",
+       "from": 175,
+       "to": 180
+      },
+      {
+       "w": "copy.",
+       "from": 180,
+       "to": 188
+      }
+     ],
+     "cues": {
+      "1": 113
+     }
+    }
+   ]
+  },
+  {
+   "id": "trick",
+   "type": "lo_trick",
+   "data": {
+    "yt": {
+     "chapter": "The LoRA trick",
+     "title": "Freeze the original, train sticky notes",
+     "notes": [
+      [
+       "The trick is called LoRA (Low-Rank Adaptation, Microsoft, 2021): freeze the original numbers",
+       0
+      ],
+      [
+       "Add a few new numbers on top (like sticky notes in a textbook) and train only those: 1.2% of the numbers in ours",
+       1
+      ],
+      [
+       "Each skill is its own file: 9 MB (16-bit), next to the 724 MB model",
+       2
+      ],
+      [
+       "Apple says its on-device model plugs in a small LoRA adapter per feature (Apple ML Research, 2024)",
+       3
+      ]
+     ]
+    },
+    "n": {
+     "before": 0,
+     "after": 27,
+     "test": 30,
+     "train": 240,
+     "minutes": 14,
+     "pct": "1.2",
+     "adapterMB": "9",
+     "modelMB": "724",
+     "params": "360 million",
+     "fewShot": 16,
+     "miss": "3 wrong: 1 phone number, 2 item lists"
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 1023,
+   "frames": 635,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep31v1/line_04.wav",
+     "from": 0,
+     "frames": 617,
+     "words": [
+      {
+       "w": "The",
+       "from": 3,
+       "to": 9
+      },
+      {
+       "w": "trick",
+       "from": 9,
+       "to": 20
+      },
+      {
+       "w": "is",
+       "from": 20,
+       "to": 24
+      },
+      {
+       "w": "called",
+       "from": 24,
+       "to": 37
+      },
+      {
+       "w": "LoRA:",
+       "from": 37,
+       "to": 56
+      },
+      {
+       "w": "freeze",
+       "from": 56,
+       "to": 66
+      },
+      {
+       "w": "the",
+       "from": 66,
+       "to": 87
+      },
+      {
+       "w": "original.",
+       "from": 87,
+       "to": 100
+      },
+      {
+       "w": "Add",
+       "from": 100,
+       "to": 105
+      },
+      {
+       "w": "a",
+       "from": 105,
+       "to": 108
+      },
+      {
+       "w": "few",
+       "from": 108,
+       "to": 113
+      },
+      {
+       "w": "new",
+       "from": 113,
+       "to": 119
+      },
+      {
+       "w": "numbers",
+       "from": 119,
+       "to": 139
+      },
+      {
+       "w": "on",
+       "from": 139,
+       "to": 148
+      },
+      {
+       "w": "top,",
+       "from": 148,
+       "to": 154
+      },
+      {
+       "w": "like",
+       "from": 154,
+       "to": 161
+      },
+      {
+       "w": "sticky",
+       "from": 161,
+       "to": 170
+      },
+      {
+       "w": "notes",
+       "from": 170,
+       "to": 189
+      },
+      {
+       "w": "in",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "a",
+       "from": 193,
+       "to": 196
+      },
+      {
+       "w": "textbook,",
+       "from": 196,
+       "to": 209
+      },
+      {
+       "w": "and",
+       "from": 209,
+       "to": 214
+      },
+      {
+       "w": "train",
+       "from": 214,
+       "to": 231
+      },
+      {
+       "w": "only",
+       "from": 231,
+       "to": 237
+      },
+      {
+       "w": "the",
+       "from": 237,
+       "to": 243
+      },
+      {
+       "w": "notes.",
+       "from": 243,
+       "to": 258
+      },
+      {
+       "w": "Each",
+       "from": 258,
+       "to": 266
+      },
+      {
+       "w": "skill",
+       "from": 266,
+       "to": 275
+      },
+      {
+       "w": "is",
+       "from": 275,
+       "to": 280
+      },
+      {
+       "w": "its",
+       "from": 280,
+       "to": 286
+      },
+      {
+       "w": "own",
+       "from": 286,
+       "to": 308
+      },
+      {
+       "w": "9",
+       "from": 308,
+       "to": 311
+      },
+      {
+       "w": "MB",
+       "from": 311,
+       "to": 319
+      },
+      {
+       "w": "file,",
+       "from": 319,
+       "to": 333
+      },
+      {
+       "w": "a",
+       "from": 333,
+       "to": 336
+      },
+      {
+       "w": "short",
+       "from": 336,
+       "to": 364
+      },
+      {
+       "w": "WhatsApp",
+       "from": 364,
+       "to": 385
+      },
+      {
+       "w": "video.",
+       "from": 385,
+       "to": 396
+      },
+      {
+       "w": "The",
+       "from": 396,
+       "to": 402
+      },
+      {
+       "w": "model?",
+       "from": 402,
+       "to": 413
+      },
+      {
+       "w": "724",
+       "from": 413,
+       "to": 419
+      },
+      {
+       "w": "MB,",
+       "from": 419,
+       "to": 439
+      },
+      {
+       "w": "a",
+       "from": 439,
+       "to": 442
+      },
+      {
+       "w": "movie.",
+       "from": 442,
+       "to": 484
+      },
+      {
+       "w": "Apple",
+       "from": 484,
+       "to": 492
+      },
+      {
+       "w": "says",
+       "from": 492,
+       "to": 498
+      },
+      {
+       "w": "its",
+       "from": 498,
+       "to": 504
+      },
+      {
+       "w": "iPhone",
+       "from": 504,
+       "to": 513
+      },
+      {
+       "w": "AI",
+       "from": 513,
+       "to": 517
+      },
+      {
+       "w": "does",
+       "from": 517,
+       "to": 524
+      },
+      {
+       "w": "this:",
+       "from": 524,
+       "to": 548
+      },
+      {
+       "w": "one",
+       "from": 548,
+       "to": 553
+      },
+      {
+       "w": "model,",
+       "from": 553,
+       "to": 562
+      },
+      {
+       "w": "a",
+       "from": 562,
+       "to": 571
+      },
+      {
+       "w": "small",
+       "from": 571,
+       "to": 579
+      },
+      {
+       "w": "skill",
+       "from": 579,
+       "to": 587
+      },
+      {
+       "w": "file",
+       "from": 587,
+       "to": 593
+      },
+      {
+       "w": "per",
+       "from": 593,
+       "to": 599
+      },
+      {
+       "w": "feature.",
+       "from": 599,
+       "to": 611
+      }
+     ],
+     "cues": {
+      "1": 100,
+      "2": 258,
+      "3": 484
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "lo_quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Prices change weekly: LoRA or hand it the list?",
+     "notes": [
+      [
+       "Your shop's prices change every week",
+       0
+      ],
+      [
+       "A: train LoRA notes on this week's prices. B: give it the price list with every question",
+       1
+      ],
+      [
+       "B: LoRA notes would need retraining every week and can still misremember a price. LoRA is for skills and style, not facts that keep changing (those go in with the question: RAG, next episode)",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "before": 0,
+     "after": 27,
+     "test": 30,
+     "train": 240,
+     "minutes": 14,
+     "pct": "1.2",
+     "adapterMB": "9",
+     "modelMB": "724",
+     "params": "360 million",
+     "fewShot": 16,
+     "miss": "3 wrong: 1 phone number, 2 item lists"
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 1658,
+   "frames": 531,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep31v1/line_05.wav",
+     "from": 0,
+     "frames": 504,
+     "words": [
+      {
+       "w": "Your",
+       "from": 2,
+       "to": 9
+      },
+      {
+       "w": "turn.",
+       "from": 9,
+       "to": 28
+      },
+      {
+       "w": "Your",
+       "from": 28,
+       "to": 35
+      },
+      {
+       "w": "shop's",
+       "from": 35,
+       "to": 43
+      },
+      {
+       "w": "prices",
+       "from": 43,
+       "to": 52
+      },
+      {
+       "w": "change",
+       "from": 52,
+       "to": 61
+      },
+      {
+       "w": "every",
+       "from": 61,
+       "to": 68
+      },
+      {
+       "w": "week.",
+       "from": 68,
+       "to": 76
+      },
+      {
+       "w": "A:",
+       "from": 76,
+       "to": 92
+      },
+      {
+       "w": "train",
+       "from": 92,
+       "to": 111
+      },
+      {
+       "w": "LoRA",
+       "from": 111,
+       "to": 117
+      },
+      {
+       "w": "notes",
+       "from": 117,
+       "to": 125
+      },
+      {
+       "w": "on",
+       "from": 125,
+       "to": 128
+      },
+      {
+       "w": "this",
+       "from": 128,
+       "to": 135
+      },
+      {
+       "w": "week's",
+       "from": 135,
+       "to": 143
+      },
+      {
+       "w": "prices.",
+       "from": 143,
+       "to": 153
+      },
+      {
+       "w": "B:",
+       "from": 153,
+       "to": 157
+      },
+      {
+       "w": "give",
+       "from": 157,
+       "to": 178
+      },
+      {
+       "w": "it",
+       "from": 178,
+       "to": 190
+      },
+      {
+       "w": "the",
+       "from": 190,
+       "to": 195
+      },
+      {
+       "w": "price",
+       "from": 195,
+       "to": 202
+      },
+      {
+       "w": "list",
+       "from": 202,
+       "to": 208
+      },
+      {
+       "w": "with",
+       "from": 208,
+       "to": 214
+      },
+      {
+       "w": "every",
+       "from": 214,
+       "to": 222
+      },
+      {
+       "w": "question.",
+       "from": 222,
+       "to": 234
+      },
+      {
+       "w": "Which",
+       "from": 234,
+       "to": 250
+      },
+      {
+       "w": "one?",
+       "from": 250,
+       "to": 256
+      },
+      {
+       "w": "The",
+       "from": 313,
+       "to": 318
+      },
+      {
+       "w": "answer",
+       "from": 318,
+       "to": 327
+      },
+      {
+       "w": "is",
+       "from": 327,
+       "to": 331
+      },
+      {
+       "w": "B:",
+       "from": 331,
+       "to": 334
+      },
+      {
+       "w": "give",
+       "from": 334,
+       "to": 341
+      },
+      {
+       "w": "it",
+       "from": 341,
+       "to": 355
+      },
+      {
+       "w": "the",
+       "from": 355,
+       "to": 360
+      },
+      {
+       "w": "list.",
+       "from": 360,
+       "to": 368
+      },
+      {
+       "w": "LoRA",
+       "from": 368,
+       "to": 391
+      },
+      {
+       "w": "notes",
+       "from": 391,
+       "to": 398
+      },
+      {
+       "w": "would",
+       "from": 398,
+       "to": 406
+      },
+      {
+       "w": "need",
+       "from": 406,
+       "to": 412
+      },
+      {
+       "w": "retraining",
+       "from": 412,
+       "to": 425
+      },
+      {
+       "w": "every",
+       "from": 425,
+       "to": 433
+      },
+      {
+       "w": "week,",
+       "from": 433,
+       "to": 440
+      },
+      {
+       "w": "and",
+       "from": 440,
+       "to": 456
+      },
+      {
+       "w": "can",
+       "from": 456,
+       "to": 461
+      },
+      {
+       "w": "still",
+       "from": 461,
+       "to": 468
+      },
+      {
+       "w": "misremember",
+       "from": 468,
+       "to": 483
+      },
+      {
+       "w": "a",
+       "from": 483,
+       "to": 485
+      },
+      {
+       "w": "price.",
+       "from": 485,
+       "to": 494
+      }
+     ],
+     "cues": {
+      "1": 76,
+      "3": 256,
+      "2": 313
+     }
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "lo_close",
+   "data": {
+    "yt": {
+     "chapter": "Prompt first, then LoRA",
+     "title": "Before you train anything",
+     "notes": [
+      [
+       "1. Prompt first (two examples: 0 -> 16 out of 30)  2. Facts that keep changing? Put them in the prompt  3. A skill the prompt can't nail? A small LoRA. Then check its work: we still got 3 wrong",
+       0
+      ],
+      [
+       "Next: how AI finds the right page in your documents (RAG, part 2)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "before": 0,
+     "after": 27,
+     "test": 30,
+     "train": 240,
+     "minutes": 14,
+     "pct": "1.2",
+     "adapterMB": "9",
+     "modelMB": "724",
+     "params": "360 million",
+     "fewShot": 16,
+     "miss": "3 wrong: 1 phone number, 2 item lists"
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 2189,
+   "frames": 469,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep31v1/line_06.wav",
+     "from": 0,
+     "frames": 412,
+     "words": [
+      {
+       "w": "So:",
+       "from": 3,
+       "to": 7
+      },
+      {
+       "w": "prompt",
+       "from": 7,
+       "to": 22
+      },
+      {
+       "w": "first.",
+       "from": 22,
+       "to": 47
+      },
+      {
+       "w": "Facts",
+       "from": 47,
+       "to": 53
+      },
+      {
+       "w": "that",
+       "from": 53,
+       "to": 59
+      },
+      {
+       "w": "keep",
+       "from": 59,
+       "to": 67
+      },
+      {
+       "w": "changing?",
+       "from": 67,
+       "to": 88
+      },
+      {
+       "w": "Put",
+       "from": 88,
+       "to": 92
+      },
+      {
+       "w": "them",
+       "from": 92,
+       "to": 98
+      },
+      {
+       "w": "in",
+       "from": 98,
+       "to": 101
+      },
+      {
+       "w": "the",
+       "from": 101,
+       "to": 120
+      },
+      {
+       "w": "prompt.",
+       "from": 120,
+       "to": 128
+      },
+      {
+       "w": "A",
+       "from": 128,
+       "to": 130
+      },
+      {
+       "w": "skill",
+       "from": 130,
+       "to": 136
+      },
+      {
+       "w": "the",
+       "from": 136,
+       "to": 141
+      },
+      {
+       "w": "prompt",
+       "from": 141,
+       "to": 151
+      },
+      {
+       "w": "can't",
+       "from": 151,
+       "to": 167
+      },
+      {
+       "w": "nail?",
+       "from": 167,
+       "to": 173
+      },
+      {
+       "w": "A",
+       "from": 173,
+       "to": 175
+      },
+      {
+       "w": "small",
+       "from": 175,
+       "to": 181
+      },
+      {
+       "w": "LoRA.",
+       "from": 181,
+       "to": 198
+      },
+      {
+       "w": "Then",
+       "from": 198,
+       "to": 203
+      },
+      {
+       "w": "check",
+       "from": 203,
+       "to": 209
+      },
+      {
+       "w": "its",
+       "from": 209,
+       "to": 213
+      },
+      {
+       "w": "work:",
+       "from": 213,
+       "to": 230
+      },
+      {
+       "w": "we",
+       "from": 230,
+       "to": 234
+      },
+      {
+       "w": "still",
+       "from": 234,
+       "to": 240
+      },
+      {
+       "w": "got",
+       "from": 240,
+       "to": 244
+      },
+      {
+       "w": "3",
+       "from": 244,
+       "to": 252
+      },
+      {
+       "w": "wrong.",
+       "from": 252,
+       "to": 259
+      },
+      {
+       "w": "Next:",
+       "from": 259,
+       "to": 298
+      },
+      {
+       "w": "how",
+       "from": 298,
+       "to": 302
+      },
+      {
+       "w": "AI",
+       "from": 302,
+       "to": 305
+      },
+      {
+       "w": "finds",
+       "from": 305,
+       "to": 311
+      },
+      {
+       "w": "the",
+       "from": 311,
+       "to": 315
+      },
+      {
+       "w": "right",
+       "from": 315,
+       "to": 322
+      },
+      {
+       "w": "page",
+       "from": 322,
+       "to": 327
+      },
+      {
+       "w": "in",
+       "from": 327,
+       "to": 334
+      },
+      {
+       "w": "your",
+       "from": 334,
+       "to": 339
+      },
+      {
+       "w": "documents.",
+       "from": 339,
+       "to": 350
+      },
+      {
+       "w": "Follow,",
+       "from": 350,
+       "to": 374
+      },
+      {
+       "w": "so",
+       "from": 374,
+       "to": 378
+      },
+      {
+       "w": "you",
+       "from": 378,
+       "to": 389
+      },
+      {
+       "w": "don't",
+       "from": 389,
+       "to": 395
+      },
+      {
+       "w": "miss",
+       "from": 395,
+       "to": 400
+      },
+      {
+       "w": "it.",
+       "from": 400,
+       "to": 404
+      }
+     ],
+     "cues": {
+      "1": 259,
+      "2": 350
+     }
+    }
+   ]
+  }
+ ]
+}

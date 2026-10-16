@@ -89,5 +89,52 @@
   0.0025,
   0.0025,
   0.004
- ]
+ ],
+ "few_shot_untrained": {
+  "valid": 30,
+  "name": 28,
+  "phone": 30,
+  "address": 22,
+  "items": 21,
+  "all": 16
+ },
+ "few_shot_examples": [
+  {
+   "msg": "onions - 3 kg to flat 302, green park apts, dilsukhnagar pls. ravi, +919162021832. cash on delivery",
+   "ans": {
+    "name": "Ravi",
+    "phone": "9162021832",
+    "items": [
+     {
+      "item": "onions",
+      "qty": "3 kg"
+     }
+    ],
+    "address": "flat 302, Green Park Apts, Dilsukhnagar"
+   }
+  },
+  {
+   "msg": "hi ji pls send 500 g curd to flat 5B, My Home Avatar, Warangal. Kavya 60653 35659",
+   "ans": {
+    "name": "Kavya",
+    "phone": "6065335659",
+    "items": [
+     {
+      "item": "curd",
+      "qty": "500 g"
+     }
+    ],
+    "address": "flat 5B, My Home Avatar, Warangal"
+   }
+  }
+ ],
+ "after_16bit": {
+  "valid": 30,
+  "name": 30,
+  "phone": 29,
+  "address": 30,
+  "items": 28,
+  "all": 27
+ },
+ "adapter16_mb": 8.7
 }

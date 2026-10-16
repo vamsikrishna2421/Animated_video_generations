@@ -1,0 +1,38 @@
+UPLOAD: 033 (YouTube, two uploads; 16:9 regular videos, not Shorts)
+
+########## ENGLISH: 033_ep31_yt_en.mp4 ##########
+=== TITLE ===
+We Taught a Tiny Free AI a New Skill in 14 Minutes, No GPU (LoRA) | AI From Scratch Ep 31
+
+=== DESCRIPTION ===
+We asked a tiny free AI to turn WhatsApp orders into neat order slips: name, phone, items, address. It just copied them back: 0 out of 30. A better prompt with two examples got 16. Then we taught it with LoRA on 240 made-up orders, 14 minutes on 4 CPU cores with no GPU, and it got 27 out of 30 perfect on orders it had never seen. Here is how LoRA works, when to use it, and when not to. We ran every test ourselves.
+
+In this episode:
+- The scoreboard: plain prompt 0/30, prompt with two examples 16/30, LoRA 27/30 (3 wrong: one phone number, two item lists, so check its work)
+- Why a tiny model and not ChatGPT? It's free, runs on your own computer, and your customers' details never leave it
+- Normal training changes every number inside the model (360 million in ours), and every new skill means a whole new copy
+- LoRA's trick: freeze the original, stick a few new numbers on top (like sticky notes in a textbook), train only those
+- In our test the notes were 1.2% of the numbers, saved as a 9 MB skill file next to a 724 MB model
+- Apple says its iPhone AI works the same way: one model, a small skill file for each feature
+- Your turn: your shop's prices change every week. Train LoRA notes on them, or give it the price list with every question? B, give it the list: LoRA notes would need retraining every week and can still misremember a price. LoRA is for skills and style, not facts that keep changing
+- Before you train anything: prompt first, put changing facts in the prompt, use a small LoRA for a skill the prompt can't nail, and check its work
+
+Chapters:
+0:00 0, then 16, then 27
+0:19 Why not just ask ChatGPT?
+0:26 Why training is heavy
+0:34 The LoRA trick
+0:55 Your turn: LoRA or hand it the list?
+1:13 Prompt first, then LoRA
+
+How we tested (run by us): HuggingFaceTB/SmolLM2-360M-Instruct (Apache-2.0). Prompt: "Turn this WhatsApp order into an order slip: JSON with name, phone, items (item, qty) and address." Synthetic WhatsApp-style orders we generated (Indian names, Hyderabad/AP addresses, mixed spellings like "2kg" and "1doz"); 240 to train, 30 new ones to test. "Perfect" means the name, the phone number, every item with its quantity, and the address are all exactly right. LoRA rank 8 on all linear layers (4.34M trainable numbers of 361.8M, 1.2%), 2 passes, 60 steps, 14 minutes on 4 CPU cores. The skill file is 8.7 MB in 16-bit (17.4 MB in 32-bit; same 27/30 either way); the model file is 723.7 MB. Real customer chats are messier than our made-up ones. About 7 seconds per order on the same CPU. The order shown in the video is one more run through both models, with a phone number no phone can have (55555 01234). We didn't test a big chatbot on these 30 orders.
+Sources: Hu et al. (Microsoft), "LoRA: Low-Rank Adaptation of Large Language Models", arXiv 2106.09685 (ICLR 2022). Apple Machine Learning Research, "Introducing Apple's On-Device and Server Foundation Models" (10 Jun 2024): "a broad set of adapters, each fine-tuned for a specific feature". Dettmers et al., "QLoRA: Efficient Finetuning of Quantized LLMs", arXiv 2305.14314 (2023): a 65B model fine-tuned on a single 48 GB GPU. OpenAI, "Optimizing LLM accuracy" (prompting first; context for facts, fine-tuning for format and style). Allal et al. (2025), SmolLM2.
+
+Previous episode: How AI learns good manners (RLHF).
+Next: how AI finds the right page in your documents (RAG, part 2).
+Subscribe for the full AI From Scratch series.
+
+#LoRA #FineTuning #AI #LearnAI #AIForBeginners #MachineLearning
+
+=== PINNED_COMMENT ===
+Scoreboard from our own run, 30 new orders: plain prompt 0, two examples in the prompt 16, LoRA 27 (14 minutes, no GPU). What skill would you teach a small AI: replies in your shop's style, bill summaries, something else?

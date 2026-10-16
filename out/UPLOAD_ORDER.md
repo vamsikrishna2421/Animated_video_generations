@@ -37,7 +37,7 @@ Already posted: `out/posted/`.
 | 030 | ep29 | How AI Sees a Photo (Computer Vision) | ready |
 | 031 | ep30 | How AI Learns Good Manners (RLHF) | ready |
 | 032 | q03 | Quiz #3: Episodes 21–30 | ready |
-| 033 | ep31 | Fine-tuning Deep Dive: LoRA | ready |
+| 033 | ep31 | Teach an AI a New Skill Without a Supercomputer (LoRA) | ready |
 | 034 | ep32 | RAG, Part 2: Chunking, Vector Databases and Reranking | ready |
 | 035 | ep33 | RAG, Part 3: Hybrid Search and Measuring Quality | ready |
 | 036 | ep34 | Open vs Closed AI Models | ready |

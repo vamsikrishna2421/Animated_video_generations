@@ -1,0 +1,31 @@
+UPLOAD: 033 (Telugu page)
+VIDEO: 033_ep31_insta_te.mp4  (send copy: 033_ep31_insta_te_ig.mp4)
+
+=== CAPTION ===
+Oka chinna free AI ki WhatsApp orders ni neat order slips ga (peru, phone, items, address) maarchamani cheppaam. Adi order ne malli copy chesi ichindi: 30 ki 0. Rendu examples tho manchi prompt iste 16. Taruvaata 240 dummy orders tho LoRA train chesaam: 14 nimishaalu, 4 CPU cores, GPU lekunda. Adi eppudu choodani kotha orders lo 30 lo 27 perfect ga vachaayi.
+
+Episode 31 of AI From Scratch, Telugu lo: supercomputer lekunda AI ki kotha skill ela nerpinchaali (LoRA)
+- ChatGPT enduku kaadu? Chinna model free, mee sonta computer lone nadustundi, mee customers details bayatiki vellavu
+- Maamuluga training lo model lopala numbers anni maarutaayi (maa daantlo 360 million), prati kotha skill ki model mottam kotha copy kaavaali
+- LoRA trick: original ni freeze chestaam, daani meeda konni kotha numbers (textbook meeda sticky notes laaga) atikistaam, avi maatrame train chestaam
+- Maa test lo aa notes mottam numbers lo 1.2% maatrame; 9 MB skill file, model emo 724 MB
+- Apple cheppindi: vaalla iPhone AI kuda ilaage, oke model, prati feature ki oka chinna skill file
+
+Mee vantu, answer: B, list ivvandi. Prati vaaram maare dharalu prashna tho paatu ivvaali, LoRA notes lo kaadu: prati vaaram malli train cheyyaali, ayinaa oka dhara tappuga gurtupettukovachu. LoRA skills, style kosam.
+
+Edaina train chese mundu: 1) modata prompt (rendu examples tho maadi 0 nunchi 16), 2) maarutoo unde facts? prompt lone ivvandi, 3) prompt tho raani skill? oka chinna LoRA. Taruvaata adi ichina answers check cheyyandi: maa 30 lo inkaa 3 tappu (oka phone number, rendu item lists).
+
+Next: mee documents lo sariaina page ni AI ela vetukutundi (RAG, part 2).
+Follow @ai_maastaaru_telugu
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AIFromScratch #LoRA #FineTuning #LearnAI #TeluguTech
+
+=== PINNED_COMMENT ===
+Memu ela run chesaam: SmolLM2-360M-Instruct (Hugging Face, Apache-2.0), English orders (ee model English maatrame baaga artham chesukuntundi). Orders anni memu tayaaru chesina dummy orders; nijam chats inka messy ga untaayi. 240 orders tho training, 14 nimishaalu, 4 CPU cores. 30 kotha orders meeda test: plain prompt 0/30, rendu examples tho prompt 16/30, LoRA 27/30 (okko order ki daadaapu 7 seconds). Video lo order inko run, phone number kaavalane fake (55555 01234). Meeru chinna AI ki e skill nerpistaru? Comment cheyyandi.
+
+=== COVER ===
+Crayon page: scoreboard "perfect slips: plain prompt 0, two examples 16, LoRA 27" under the filled ORDER SLIP (English visuals)
+
+=== ALT_TEXT ===
+Hand-drawn crayon-style reel (Telugu voice, English visuals) about LoRA: a small free AI copies WhatsApp orders back (0 of 30), does better with two examples in the prompt (16), and after 14 minutes of LoRA training on a normal CPU gets 27 of 30. Then why a small model, why normal training is heavy, LoRA's sticky-note trick (1.2% of the numbers, a 9 MB skill file), a quiz about weekly prices, Apple's per-feature skill files, and a checklist.
