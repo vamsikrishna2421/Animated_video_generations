@@ -3,6 +3,14 @@
 Promised by EP30's outro ("Next: how to teach an AI a new skill without a supercomputer"). Crayon style, real demo.
 Next (EP32, syllabus): RAG part 2, how AI finds the right page in your documents.
 
+Telugu render review (v4): "oka chinna LoRA" came out close to a Hindi swear word ("loda": the Telugu r flapped to a d),
+so every Telugu LoRA is now written "లారా" ("Laara", the sound the English voice uses) and the close says "LoRA file";
+scores are said in English with a pause before each ("sixteen vachaayi", "thirty lo twenty seven"); English captions now
+follow the Telugu voice (cues sit on the real sentence starts: pipeline/reel_build.py `sentence_cues`); every Telugu
+sentence take is levelled before joining (the hook started soft). Also fixed: te_check named takes by position, so a new
+sentence could overwrite an old take in te_chunks (EP31 caught it: the trick would have repeated the Apple sentence);
+takes are now named by a hash of their text, and the colliding cache entries were dropped and re-voiced.
+
 v3 -> v4 (render review of the first English cut): the 20 s after the quiz lost both viewers ("B" was masked by the
 reveal hit, the Apple line came after "don't use LoRA here", and "So" didn't follow) -> the answer is said aloud ("The
 answer is B: give it the list"), the hit lands 8 frames before it, Apple moved up to the file-size beat, and the close is
@@ -61,20 +69,20 @@ item with its quantity, and the address all exactly right.
 
 ## Telugu (romanized; visuals in English)
 1. Oka chinna free AI ki, WhatsApp orders ni neat slips ga maarchamani cheppaam. Adi order ne malli copy chesi ichindi.
-2. Muppai ki sunna.
-3. Rendu examples tho manchi prompt iste? Padahaaru.
-4. Taruvaata, rendu vandala nalabhai dummy orders tho train chesaam. Padnaalugu nimishaalu, graphics card lekunda.
-5. Adi eppudu choodani kotha orders lo, muppai lo iravai edu perfect ga vachaayi.
+2. Thirty ki zero.
+3. Rendu examples tho manchi prompt iste? Sixteen vachaayi.
+4. Taruvaata, two forty dummy orders tho train chesaam. Padnaalugu nimishaalu, graphics card lekunda.
+5. Adi eppudu choodani kotha orders meeda? Thirty lo twenty seven perfect ga vachaayi.
 6. ChatGPT ne enduku adagakoodadu? Idi free, mee sonta computer lone nadustundi, mee customers details bayatiki vellavu.
 7. Maamuluga, AI ki edaina nerpiste, daani lopala prati okka number maarutundi. Ee model lo three hundred sixty million unnaayi.
 8. Prati kotha skill ki, model mottam kotha copy kaavaali.
-9. Ee trick peru LoRA: original ni freeze chestaam.
+9. Ee trick peru LoRA (said "Laara"): original ni freeze chestaam.
 10. Daani meeda konni kotha numbers atikistaam, textbook meeda sticky notes laaga. Aa notes ne train chestaam.
 11. Prati skill oka separate nine MB file, oka chinna WhatsApp video antha. Model emo seven twenty four MB, oka cinema antha.
 12. Apple cheppindi, vaalla iPhone AI kuda ilaage: oke model, prati feature ki oka chinna skill file.
-13. Ippudu mee vantu. Mee shop lo dharalu prati vaaram maarutaayi. A: ee vaaram dharala meeda LoRA notes train cheyyadam. B: prati prashna tho paatu price list ivvadam. Edi correct?
-14. Answer B: list ivvandi. LoRA notes ayite prati vaaram malli train cheyyaali, ayinaa oka dhara tappuga gurtupettukovachu.
-15. Anduke: modata prompt. Maarutoo unde facts? Prompt lone ivvandi. Prompt tho raani skill? Oka chinna LoRA. Taruvaata adi ichina answers check cheyyandi: maadi kuda moodu tappulu chesindi.
+13. Ippudu mee vantu. Mee shop lo dharalu prati vaaram maarutaayi. A: ee vaaram dharala meeda Laara notes train cheyyadam. B: prati prashna tho paatu price list ivvadam. Edi correct?
+14. Answer B: list ivvandi. Laara notes ayite prati vaaram malli train cheyyaali, ayinaa oka dhara tappuga gurtupettukovachu.
+15. Anduke: modata prompt. Maarutoo unde facts? Prompt lone ivvandi. Prompt tho raani skill? Oka chinna Laara file. Taruvaata adi ichina answers check cheyyandi: maadi kuda moodu tappulu chesindi.
 16. Taruvaati episode lo: mee documents lo sariaina page ni AI ela vetukutundo chooddam.
 17. Miss avvakunda follow avvandi.
 

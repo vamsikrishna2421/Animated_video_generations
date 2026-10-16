@@ -3,6 +3,7 @@
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/te_check.py reels/ep30te.json [scene ...] [--force scene[:file2] ...]
 # --force re-voices a line whose text changed (the old take would be judged against the new text). Chosen sentence
 # takes are cached by text (te_chunks/cache.json), so an edited line only re-voices the sentences that changed.
+import hashlib
 import json
 import re
 import sys
@@ -49,7 +50,7 @@ def revoice(out, text, tmp_dir):
             print(f"  chunk {i}: reused {cache[ch]}", flush=True)
             best = (None, tmp_dir / cache[ch])
         for k in range(0 if best else 3):
-            tmp = tmp_dir / f"{out.stem}_{i:02d}_{k}.wav"
+            tmp = tmp_dir / f"{out.stem}_{hashlib.md5(ch.encode()).hexdigest()[:8]}_{k}.wav"   # named by text: a take never overwrites another sentence's
             say("te", ch, tmp)
             ok, score, info = judge(tmp, ch)
             print(f"  chunk {i} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
@@ -63,7 +64,18 @@ def revoice(out, text, tmp_dir):
         nz = np.where(np.abs(a) > 0.01)[0]
         a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.08 * sr)] if len(nz) else a
         pieces += [a, np.zeros(int(0.35 * sr))]
-    sf.write(out, np.concatenate(pieces).astype(np.float32), sr)
+    # every sentence at the same speech loudness (a soft first sentence made a soft hook)
+    def speech_rms(x):
+        v = x[np.abs(x) > 0.02 * (np.abs(x).max() + 1e-9)]
+        return np.sqrt(np.mean(v ** 2)) if len(v) else 0.0
+    levels = [speech_rms(x) for x in pieces[0::2]]
+    target = float(np.median([v for v in levels if v > 0])) if any(levels) else 0.0
+    for i, v in enumerate(levels):
+        if v > 0 and target > 0:
+            pieces[2 * i] = pieces[2 * i] * min(3.0, target / v)
+    joined = np.concatenate(pieces)
+    joined = joined / max(1.0, float(np.abs(joined).max()) / 0.98)
+    sf.write(out, joined.astype(np.float32), sr)
 
 
 def main(spec_path, only, force):

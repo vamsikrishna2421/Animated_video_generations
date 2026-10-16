@@ -147,8 +147,9 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "01_hook.wav",
-     "text": "ఒక చిన్న ఫ్రీ ఎ ఐ కి, వాట్సాప్ ఆర్డర్స్ ని నీట్ స్లిప్స్ గా మార్చమని చెప్పాం. అది ఆర్డర్ నే మళ్ళీ కాపీ చేసి ఇచ్చింది. [1] ముప్పై కి సున్నా. [2] రెండు ఎగ్జాంపుల్స్ తో మంచి ప్రాంప్ట్ ఇస్తే? పదహారు. [3] తర్వాత, రెండు వందల నలభై డమ్మీ ఆర్డర్స్ తో ట్రైన్ చేశాం. పద్నాలుగు నిమిషాలు, గ్రాఫిక్స్ కార్డ్ లేకుండా. [4] అది ఎప్పుడూ చూడని కొత్త ఆర్డర్స్ లో, ముప్పై లో ఇరవై ఏడు పర్ఫెక్ట్ గా వచ్చాయి.",
+     "text": "ఒక చిన్న ఫ్రీ ఎ ఐ కి, వాట్సాప్ ఆర్డర్స్ ని నీట్ స్లిప్స్ గా మార్చమని చెప్పాం. అది ఆర్డర్ నే మళ్ళీ కాపీ చేసి ఇచ్చింది. [1] థర్టీ కి జీరో. [2] రెండు ఎగ్జాంపుల్స్ తో మంచి ప్రాంప్ట్ ఇస్తే? సిక్స్టీన్ వచ్చాయి. [3] తర్వాత, టూ ఫార్టీ డమ్మీ ఆర్డర్స్ తో ట్రైన్ చేశాం. పద్నాలుగు నిమిషాలు, గ్రాఫిక్స్ కార్డ్ లేకుండా. అది ఎప్పుడూ చూడని కొత్త ఆర్డర్స్ మీద? [4] థర్టీ లో ట్వెంటీ సెవెన్ పర్ఫెక్ట్ గా వచ్చాయి.",
      "show": "We asked a tiny free AI to turn WhatsApp orders into neat slips. It just copied them back. [1] Zero out of 30. [2] A better prompt, with two examples? 16. [3] Then we trained it on 240 made-up orders. 14 minutes, no graphics card. [4] 27 out of 30, on new orders it never saw.",
+     "sentence_cues": true,
      "pauses": {
       "4": 0.35
      }
@@ -191,7 +192,8 @@
      "maxgap": 0.32,
      "file": "02_why.wav",
      "text": "చాట్ జి పి టి నే ఎందుకు అడగకూడదు? ఇది ఫ్రీ, మీ సొంత కంప్యూటర్ లోనే నడుస్తుంది, మీ కస్టమర్ల డీటెయిల్స్ బయటికి వెళ్ళవు.",
-     "show": "Why not just ask ChatGPT? This one's free, runs on your own computer, and customer details never leave it."
+     "show": "Why not just ask ChatGPT? This one's free, runs on your own computer, and customer details never leave it.",
+     "sentence_cues": true
     }
    ]
   },
@@ -235,7 +237,8 @@
      "maxgap": 0.32,
      "file": "03_hard.wav",
      "text": "మామూలుగా, ఎ ఐ కి ఏదైనా నేర్పిస్తే, దాని లోపల ప్రతి ఒక్క నంబర్ మారుతుంది. ఈ మోడల్ లో త్రీ హండ్రెడ్ సిక్స్టీ మిలియన్ ఉన్నాయి. [1] ప్రతి కొత్త స్కిల్ కి, మోడల్ మొత్తం కొత్త కాపీ కావాలి.",
-     "show": "Normal training changes every one of its 360 million numbers. [1] And every new skill needs a whole new copy."
+     "show": "Normal training changes every one of its 360-million numbers. [1] And every new skill needs a whole new copy.",
+     "sentence_cues": true
     }
    ]
   },
@@ -288,8 +291,9 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "04_trick.wav",
-     "text": "ఈ ట్రిక్ పేరు లోరా: ఒరిజినల్ ని ఫ్రీజ్ చేస్తాం. [1] దాని మీద కొన్ని కొత్త నంబర్స్ అతికిస్తాం, టెక్స్ట్ బుక్ మీద స్టిక్కీ నోట్స్ లాగా. ఆ నోట్స్ నే ట్రైన్ చేస్తాం. [2] ప్రతి స్కిల్ ఒక సెపరేట్ నైన్ ఎం బి ఫైల్, ఒక చిన్న వాట్సాప్ వీడియో అంత. మోడల్ ఏమో సెవెన్ ట్వెంటీ ఫోర్ ఎం బి, ఒక సినిమా అంత. [3] యాపిల్ చెప్పింది, వాళ్ళ ఐఫోన్ ఎ ఐ కూడా ఇలాగే: ఒకే మోడల్, ప్రతి ఫీచర్ కి ఒక చిన్న స్కిల్ ఫైల్.",
-     "show": "The trick is called LoRA: freeze the original. [1] Add a few new numbers on top, like sticky notes in a textbook, and train only the notes. [2] Each skill is its own 9 MB file, a short WhatsApp video. The model? 724 MB, a movie. [3] Apple says its iPhone AI does this: one model, a small skill file per feature."
+     "text": "ఈ ట్రిక్ పేరు లారా: ఒరిజినల్ ని ఫ్రీజ్ చేస్తాం. [1] దాని మీద కొన్ని కొత్త నంబర్స్ అతికిస్తాం, టెక్స్ట్ బుక్ మీద స్టిక్కీ నోట్స్ లాగా. ఆ నోట్స్ నే ట్రైన్ చేస్తాం. [2] ప్రతి స్కిల్ ఒక సెపరేట్ నైన్ ఎం బి ఫైల్, ఒక చిన్న వాట్సాప్ వీడియో అంత. మోడల్ ఏమో సెవెన్ ట్వెంటీ ఫోర్ ఎం బి, ఒక సినిమా అంత. [3] యాపిల్ చెప్పింది, వాళ్ళ ఐఫోన్ ఎ ఐ కూడా ఇలాగే: ఒకే మోడల్, ప్రతి ఫీచర్ కి ఒక చిన్న స్కిల్ ఫైల్.",
+     "show": "The trick is called LoRA: freeze the original. [1] Add a few new numbers on top, like sticky notes in a textbook, and train only the notes. [2] Each skill is its own 9 MB file, a short WhatsApp video. The model? 724 MB, a movie. [3] Apple says its iPhone AI does this: one model, a small skill file per feature.",
+     "sentence_cues": true
     }
    ]
   },
@@ -342,11 +346,12 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "05_quiz.wav",
-     "text": "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. [1] ఎ: ఈ వారం ధరల మీద లోరా నోట్స్ ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఇవ్వడం. ఏది కరెక్ట్? [3] <pause 2.0> [2] ఆన్సర్ బి: లిస్ట్ ఇవ్వండి. లోరా నోట్స్ అయితే ప్రతి వారం మళ్ళీ ట్రైన్ చేయాలి, అయినా ఒక ధర తప్పుగా గుర్తుపెట్టుకోవచ్చు.",
+     "text": "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. [1] ఎ: ఈ వారం ధరల మీద లారా నోట్స్ ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఇవ్వడం. ఏది కరెక్ట్? [3] <pause 2.0> [2] ఆన్సర్ బి: లిస్ట్ ఇవ్వండి. లారా నోట్స్ అయితే ప్రతి వారం మళ్ళీ ట్రైన్ చేయాలి, అయినా ఒక ధర తప్పుగా గుర్తుపెట్టుకోవచ్చు.",
      "show": "Your turn. Your shop's prices change every week. [1] A: train LoRA notes on this week's prices. B: give it the price list with every question. Which one? [3] <pause 2.0> [2] The answer is B: give it the list. LoRA notes would need retraining every week, and can still misremember a price.",
-     "tts": "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. ఎ: ఈ వారం ధరల మీద లోరా నోట్స్ ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఇవ్వడం. ఏది కరెక్ట్?",
+     "sentence_cues": true,
+     "tts": "ఇప్పుడు మీ వంతు. మీ షాప్ లో ధరలు ప్రతి వారం మారుతాయి. ఎ: ఈ వారం ధరల మీద లారా నోట్స్ ట్రైన్ చేయడం. బి: ప్రతి ప్రశ్నతో పాటు ప్రైస్ లిస్ట్ ఇవ్వడం. ఏది కరెక్ట్?",
      "file2": "05_quiz_answer.wav",
-     "tts2": "ఆన్సర్ బి: లిస్ట్ ఇవ్వండి. లోరా నోట్స్ అయితే ప్రతి వారం మళ్ళీ ట్రైన్ చేయాలి, అయినా ఒక ధర తప్పుగా గుర్తుపెట్టుకోవచ్చు.",
+     "tts2": "ఆన్సర్ బి: లిస్ట్ ఇవ్వండి. లారా నోట్స్ అయితే ప్రతి వారం మళ్ళీ ట్రైన్ చేయాలి, అయినా ఒక ధర తప్పుగా గుర్తుపెట్టుకోవచ్చు.",
      "pause": 2.0,
      "gap": 0.1
     }
@@ -394,8 +399,9 @@
      "who": "maastaaru",
      "maxgap": 0.32,
      "file": "06_close.wav",
-     "text": "అందుకే: మొదట ప్రాంప్ట్. మారుతూ ఉండే ఫ్యాక్ట్స్? ప్రాంప్ట్ లోనే ఇవ్వండి. ప్రాంప్ట్ తో రాని స్కిల్? ఒక చిన్న లోరా. తర్వాత అది ఇచ్చిన ఆన్సర్స్ చెక్ చేయండి: మాది కూడా మూడు తప్పులు చేసింది. [1] తర్వాతి ఎపిసోడ్ లో: మీ డాక్యుమెంట్స్ లో సరైన పేజీని ఎ ఐ ఎలా వెతుకుతుందో చూద్దాం. [2] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
-     "show": "So: prompt first. Facts that keep changing? Put them in the prompt. A skill the prompt can't nail? A small LoRA. Then check its work: we still got 3 wrong. [1] Next: how AI finds the right page in your documents. [2] Follow, so you don't miss it."
+     "text": "అందుకే: మొదట ప్రాంప్ట్. మారుతూ ఉండే ఫ్యాక్ట్స్? ప్రాంప్ట్ లోనే ఇవ్వండి. ప్రాంప్ట్ తో రాని స్కిల్? ఒక చిన్న లారా ఫైల్. తర్వాత అది ఇచ్చిన ఆన్సర్స్ చెక్ చేయండి: మాది కూడా మూడు తప్పులు చేసింది. [1] తర్వాతి ఎపిసోడ్ లో: మీ డాక్యుమెంట్స్ లో సరైన పేజీని ఎ ఐ ఎలా వెతుకుతుందో చూద్దాం. [2] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
+     "show": "So: prompt first. Facts that keep changing? Put them in the prompt. A skill the prompt can't nail? A small LoRA. Then check its work: we still got 3 wrong. [1] Next: how AI finds the right page in your documents. [2] Follow, so you don't miss it.",
+     "sentence_cues": true
     }
    ]
   }

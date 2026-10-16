@@ -152,6 +152,44 @@ def tighten(a, sr, maxgap):
 TEMPO = 1.0  # spec-level "tempo" overrides; >1 = faster delivery, pitch kept
 
 
+def tighten_map(a, sr, maxgap):
+    """Where a sample of `a` lands after tighten(a, sr, maxgap) (same spans, same cuts)."""
+    spans = voiced_spans(a, sr, floor=0.008 * (np.abs(a).max() / 0.9 + 1e-9))
+    marks, removed, prev_end = [], 0, None
+    for s0, e0 in spans:
+        s_i, e_i = int(s0 * sr), int(e0 * sr)
+        if prev_end is not None:
+            removed += max(0, (s_i - prev_end) - min(s_i - prev_end, int(maxgap * sr)))
+        marks.append((s_i, removed))
+        prev_end = e_i
+    if len(spans) < 2:
+        return lambda x: x
+    def f(x):
+        s_i, rem = min(marks, key=lambda m: abs(m[0] - x))
+        return max(0, x - rem)
+    return f
+
+
+def parler_sentence_starts(text, rid, sr):
+    """Sample offsets of each sentence take inside a pipeline/te_check.py line (takes trimmed to 30 ms before / 80 ms after
+    the speech and joined with 0.35 s of silence), from the takes cached in te_chunks; None if a take is missing."""
+    from parler_tts_local import chunks as p_chunks, sentences as p_sentences
+    tdir = ROOT / "video" / "public" / "reel" / rid / "te_chunks"
+    cache = json.loads((tdir / "cache.json").read_text()) if (tdir / "cache.json").exists() else {}
+    starts, pos = [], 0
+    for piece in [c for x in p_sentences(text) for c in p_chunks(x)]:
+        f = cache.get(piece)
+        if not f or not (tdir / f).exists():
+            return None
+        c, csr = sf.read(tdir / f)
+        c = c.mean(axis=1) if c.ndim > 1 else c
+        nz = np.where(np.abs(c) > 0.01)[0]
+        n = len(c[max(0, nz[0] - int(0.03 * csr)): nz[-1] + int(0.08 * csr)]) if len(nz) else len(c)
+        starts.append(int((pos + int(0.03 * csr)) * sr / csr))
+        pos += n + int(0.35 * csr)
+    return starts
+
+
 def stretch(a, sr, tempo):
     """Pitch-preserving speed change (ffmpeg atempo) to remove drag from slow takes."""
     if abs(tempo - 1) < 1e-3:
@@ -171,7 +209,7 @@ def file_line(line, rid):
     audio by character length, so captions follow the real delivery, pauses included."""
     src = ROOT / "video" / "public" / "reel" / rid / "src"
     parts = [line["file"]] + ([line["file2"]] if line.get("file2") else [])
-    audio, sr = [], None
+    audio, sr, sent_starts = [], None, []
     for k, f in enumerate(parts):
         a, sr = sf.read(src / f)
         a = a.mean(axis=1) if a.ndim > 1 else a
@@ -181,7 +219,13 @@ def file_line(line, rid):
         if line.get("start" + sfx):  # drop an unwanted opening part (e.g. a name) from the take
             a = a[int(line["start" + sfx] * sr):]
         nz = np.where(np.abs(a) > 0.01)[0]
-        a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.1 * sr)]
+        lead = max(0, nz[0] - int(0.03 * sr))
+        a = a[lead: nz[-1] + int(0.1 * sr)]
+        if line.get("sentence_cues"):   # Parler lines: exact sentence starts, carried through the same trim/tighten/tempo
+            ptxt = line.get("tts" if k == 0 else "tts2") or re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", line["text"])).strip()
+            raw = parler_sentence_starts(ptxt, rid, sr)
+            tm = tighten_map(a, sr, line.get("maxgap", 0.3))
+            sent_starts.append(None if raw is None else [tm(max(0, x - lead)) / sr / line.get("tempo", TEMPO) for x in raw])
         a = tighten(a, sr, line.get("maxgap", 0.3))
         a = stretch(a, sr, line.get("tempo", TEMPO))
         audio.append(a)
@@ -230,6 +274,16 @@ def file_line(line, rid):
         frac = {n: sum(sw[:i]) / ssum for i, n in marks.items()}
         for n, x in frac.items():
             cues[n] = at(x)
+        part_i = len([1 for bb in bounds if bb[0] < b0])
+        starts = sent_starts[part_i] if line.get("sentence_cues") and part_i < len(sent_starts) else None
+        if starts:   # a cue after a sentence end = where the next sentence take starts (not a guess from letter counts)
+            from parler_tts_local import chunks as p_chunks, sentences as p_sentences
+            for i, n in marks.items():
+                k = len([c for x in p_sentences(" ".join(words[:i])) for c in p_chunks(x)])
+                if 0 < k < len(starts):
+                    cues[n] = b0 / sr + starts[k]
+        elif line.get("sentence_cues"):
+            print("  sentence cues: takes not found in te_chunks, kept letter timing")
         # Captions: if "show" carries the same [n] markers, each caption segment is pinned between those cues,
         # so a translated caption follows the spoken phrase order instead of drifting across the whole line.
         stoks = (shw if shw is not None else " ".join(words)).split()
