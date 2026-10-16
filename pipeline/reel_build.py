@@ -171,7 +171,7 @@ def tighten_map(a, sr, maxgap):
 
 
 def parler_sentence_starts(text, rid, sr):
-    """Sample offsets of each sentence take inside a pipeline/te_check.py line (takes trimmed to 30 ms before / 80 ms after
+    """Sample offsets of each sentence take inside a pipeline/te_check.py line (takes trimmed to 60 ms before / 80 ms after
     the speech and joined with 0.35 s of silence), from the takes cached in te_chunks; None if a take is missing."""
     from parler_tts_local import chunks as p_chunks, sentences as p_sentences
     tdir = ROOT / "video" / "public" / "reel" / rid / "te_chunks"
@@ -184,8 +184,8 @@ def parler_sentence_starts(text, rid, sr):
         c, csr = sf.read(tdir / f)
         c = c.mean(axis=1) if c.ndim > 1 else c
         nz = np.where(np.abs(c) > 0.01)[0]
-        n = len(c[max(0, nz[0] - int(0.03 * csr)): nz[-1] + int(0.08 * csr)]) if len(nz) else len(c)
-        starts.append(int((pos + int(0.03 * csr)) * sr / csr))
+        n = len(c[max(0, nz[0] - int(0.06 * csr)): nz[-1] + int(0.08 * csr)]) if len(nz) else len(c)
+        starts.append(int((pos + min(int(0.06 * csr), nz[0] if len(nz) else 0)) * sr / csr))
         pos += n + int(0.35 * csr)
     return starts
 

@@ -62,7 +62,7 @@ def revoice(out, text, tmp_dir):
         cache_f.write_text(json.dumps(cache, ensure_ascii=False, indent=1))
         a, sr = sf.read(str(best[1]))
         nz = np.where(np.abs(a) > 0.01)[0]
-        a = a[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.08 * sr)] if len(nz) else a
+        a = a[max(0, nz[0] - int(0.06 * sr)): nz[-1] + int(0.08 * sr)] if len(nz) else a   # 60 ms keeps soft onsets (th, s)
         pieces += [a, np.zeros(int(0.35 * sr))]
     # every sentence at the same speech loudness (a soft first sentence made a soft hook)
     def speech_rms(x):
