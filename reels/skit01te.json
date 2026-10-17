@@ -1,0 +1,372 @@
+{
+ "id": "skit01te",
+ "title": "The AI that remembered the wrong price (Telugu audio)",
+ "label": "SKIT",
+ "banner": "The AI that remembered the wrong price",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.2,
+ "music": "lofi",
+ "musicVol": [
+  0.34,
+  1.1
+ ],
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.05,
+ "parler_lang": "te",
+ "captionMode": "phrase",
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "sk_a",
+   "type": "sk_shop",
+   "tail": 0.2,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "slam",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "bill",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "board",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "notes",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "flashback",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 11
+     }
+    ],
+    "yt": {
+     "chapter": "Who trained the shop AI?",
+     "title": "Who trained the shop AI?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "ఎ ఐ! కాలనీ మొత్తం నన్ను మోసగాడు అంటోంది!",
+     "show": "AI! The whole colony is calling me a cheat!",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "విచిత్రం. నేను అందరికీ సరైన ధరే వేశాను.",
+     "show": "Strange. I billed everyone the right price.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "టమాటాలు?",
+     "show": "Tomatoes?",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "కిలో అరవై.",
+     "show": "Sixty.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "ఈ వారం కిలో నలభై!",
+     "show": "They're FORTY this week!",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "నా నోట్స్ లో అలా లేదు.",
+     "show": "Not in my notes.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "ఏ నోట్స్?",
+     "show": "What notes?",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "మీ మేనల్లుడు నాకు ట్రైన్ చేసిన నోట్స్. జూన్ లో.",
+     "show": "The notes your nephew trained into me. In June.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "జూన్ ఆ?!",
+     "show": "JUNE?!",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "మీరే అన్నారు, ఒక్కసారి ట్రైన్ చెయ్, గుర్తుంచుకుంటుంది అని.",
+     "show": "You told him, train it once, it'll remember.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "జూన్ ధరలు ఎంతమందికి వేశావు?",
+     "show": "How many customers got June prices?",
+     "maxgap": 0.25,
+     "gap": 0.14
+    }
+   ]
+  },
+  {
+   "id": "sk_b",
+   "type": "sk_shop",
+   "tail": 0.2,
+   "drop_cue": 1,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "bills",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "mondays",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "pin",
+      "n": 16
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "refunds",
+      "n": 17
+     }
+    ],
+    "yt": {
+     "chapter": "Everyone got June prices",
+     "title": "Everyone got June prices",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "జూన్ నుంచి? [1] అందరికీ.",
+     "show": "Since June? [1] Everyone.",
+     "maxgap": 0.25,
+     "gap": 0.14,
+     "pauses": {
+      "1": 0.55
+     }
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "సరి చెయ్.",
+     "show": "Fix it.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "ప్రతి సోమవారం నన్ను మళ్ళీ ట్రైన్ చేయండి. అయినా అరవై అనొచ్చు.",
+     "show": "Retrain me every Monday. I might still say sixty.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "లేదంటే?",
+     "show": "Or?",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "ధరల బోర్డు ఫోటో పిన్ చేయండి. ప్రతి బిల్లుకు ముందు చదువుతాను.",
+     "show": "Pin the price board. I'll read it before every bill.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "17_ai.wav",
+     "text": "టమాటాలు నలభై. ఇంకా నాలుగు నెలల రిఫండ్లు ఉన్నాయి.",
+     "show": "Tomatoes forty. Four months of refunds to go.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    }
+   ]
+  },
+  {
+   "id": "sk_c",
+   "type": "sk_shop",
+   "tail": 0.9,
+   "lift": true,
+   "outro": true,
+   "music_stop": 0.45,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 18
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "training",
+      "n": 19
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "freeze",
+      "n": 20
+     }
+    ],
+    "yt": {
+     "chapter": "Mug it up",
+     "title": "Mug it up",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "18_ravi.wav",
+     "text": "సరే. ఇప్పుడు ఇది రట్టా కొట్టు.",
+     "show": "Fine. Now mug it up.",
+     "maxgap": 0.25,
+     "gap": 0.14
+    },
+    {
+     "who": "ai",
+     "file": "19_ai.wav",
+     "text": "కొత్త నోట్స్ ట్రైన్ అవుతున్నాయి. టమాటాలు నలభై. [1] ఎప్పటికీ.",
+     "show": "Training new notes. Tomatoes forty. [1] Forever.",
+     "maxgap": 0.25,
+     "gap": 0.14,
+     "pauses": {
+      "1": 0.35
+     }
+    },
+    {
+     "who": "ravi",
+     "file": "20_ravi.wav",
+     "text": "వద్దు! వద్దు! వద్దు!",
+     "show": "NOOOO!",
+     "maxgap": 0.25,
+     "gap": 0.14
+    }
+   ]
+  }
+ ]
+}

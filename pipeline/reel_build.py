@@ -35,6 +35,8 @@ SPEAKERS = {
     "commentator": dict(voice="bm_george", speed=1.1, lang="en-gb", name="Commentary", color="#34D399", fx="radio"),
     "trailer": dict(voice="am_onyx", speed=0.9, lang="en-us", name="", color="#F43F5E", fx="trailer"),
     "filmy": dict(voice="hm_omega", speed=0.95, lang="hi", name="Filmy mode", color="#F43F5E", fx="trailer"),
+    "ravi": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Ravi anna", color="#FBBF24"),   # skit characters (file takes)
+    "ai": dict(voice="af_heart", speed=1.0, lang="en-us", name="Shop AI", color="#67E8F9"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 
@@ -522,6 +524,9 @@ def main(spec_path: Path) -> None:
             if str(k) in cues:
                 at = sc["from"] + cues[str(k)]
                 mdrops.append([max(0, at - round(0.8 * FPS)), at])
+        if spec_sc.get("music_stop") is not None and sc["lines"]:
+            last = sc["lines"][-1]
+            mdrops.append([sc["from"] + last["from"] + round(spec_sc["music_stop"] * last["frames"]), round(total * FPS) + FPS])
         if spec_sc.get("duck"):
             a, b, g = spec_sc["duck"]
             if str(a) in cues and str(b) in cues:

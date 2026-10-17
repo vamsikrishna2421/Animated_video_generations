@@ -1,0 +1,936 @@
+{
+ "id": "skit01v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "The AI that remembered the wrong price",
+ "musicVol": [
+  0.34,
+  1.1
+ ],
+ "title": "The AI that remembered the wrong price",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   699,
+   723
+  ],
+  [
+   1338,
+   1445
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1415,
+ "music": "reel/skit01v1/score.wav",
+ "scenes": [
+  {
+   "id": "sk_a",
+   "type": "sk_shop",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "slam",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "bill",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "board",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "notes",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "flashback",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 11
+     }
+    ],
+    "yt": {
+     "chapter": "Who trained the shop AI?",
+     "title": "Who trained the shop AI?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 675,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_01.wav",
+     "from": 6,
+     "frames": 101,
+     "words": [
+      {
+       "w": "AI!",
+       "from": 13,
+       "to": 17
+      },
+      {
+       "w": "The",
+       "from": 17,
+       "to": 21
+      },
+      {
+       "w": "whole",
+       "from": 21,
+       "to": 47
+      },
+      {
+       "w": "colony",
+       "from": 47,
+       "to": 58
+      },
+      {
+       "w": "is",
+       "from": 58,
+       "to": 61
+      },
+      {
+       "w": "calling",
+       "from": 61,
+       "to": 73
+      },
+      {
+       "w": "me",
+       "from": 73,
+       "to": 76
+      },
+      {
+       "w": "a",
+       "from": 76,
+       "to": 78
+      },
+      {
+       "w": "cheat!",
+       "from": 78,
+       "to": 89
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_02.wav",
+     "from": 111,
+     "frames": 83,
+     "words": [
+      {
+       "w": "Strange.",
+       "from": 117,
+       "to": 139
+      },
+      {
+       "w": "I",
+       "from": 139,
+       "to": 142
+      },
+      {
+       "w": "billed",
+       "from": 142,
+       "to": 149
+      },
+      {
+       "w": "everyone",
+       "from": 149,
+       "to": 159
+      },
+      {
+       "w": "the",
+       "from": 159,
+       "to": 163
+      },
+      {
+       "w": "right",
+       "from": 163,
+       "to": 170
+      },
+      {
+       "w": "price.",
+       "from": 170,
+       "to": 182
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_03.wav",
+     "from": 198,
+     "frames": 33,
+     "words": [
+      {
+       "w": "Tomatoes?",
+       "from": 204,
+       "to": 216
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_04.wav",
+     "from": 235,
+     "frames": 18,
+     "words": [
+      {
+       "w": "Sixty.",
+       "from": 239,
+       "to": 249
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_05.wav",
+     "from": 257,
+     "frames": 44,
+     "words": [
+      {
+       "w": "They're",
+       "from": 262,
+       "to": 269
+      },
+      {
+       "w": "FORTY",
+       "from": 269,
+       "to": 275
+      },
+      {
+       "w": "this",
+       "from": 275,
+       "to": 279
+      },
+      {
+       "w": "week!",
+       "from": 279,
+       "to": 285
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_06.wav",
+     "from": 306,
+     "frames": 33,
+     "words": [
+      {
+       "w": "Not",
+       "from": 307,
+       "to": 312
+      },
+      {
+       "w": "in",
+       "from": 312,
+       "to": 315
+      },
+      {
+       "w": "my",
+       "from": 315,
+       "to": 319
+      },
+      {
+       "w": "notes.",
+       "from": 319,
+       "to": 327
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_07.wav",
+     "from": 343,
+     "frames": 39,
+     "words": [
+      {
+       "w": "What",
+       "from": 350,
+       "to": 358
+      },
+      {
+       "w": "notes?",
+       "from": 358,
+       "to": 368
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_08.wav",
+     "from": 386,
+     "frames": 83,
+     "words": [
+      {
+       "w": "The",
+       "from": 388,
+       "to": 393
+      },
+      {
+       "w": "notes",
+       "from": 393,
+       "to": 408
+      },
+      {
+       "w": "your",
+       "from": 408,
+       "to": 414
+      },
+      {
+       "w": "nephew",
+       "from": 414,
+       "to": 422
+      },
+      {
+       "w": "trained",
+       "from": 422,
+       "to": 431
+      },
+      {
+       "w": "into",
+       "from": 431,
+       "to": 437
+      },
+      {
+       "w": "me.",
+       "from": 437,
+       "to": 451
+      },
+      {
+       "w": "In",
+       "from": 451,
+       "to": 455
+      },
+      {
+       "w": "June.",
+       "from": 455,
+       "to": 462
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_09.wav",
+     "from": 473,
+     "frames": 29,
+     "words": [
+      {
+       "w": "JUNE?!",
+       "from": 476,
+       "to": 488
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_10.wav",
+     "from": 506,
+     "frames": 75,
+     "words": [
+      {
+       "w": "You",
+       "from": 507,
+       "to": 511
+      },
+      {
+       "w": "told",
+       "from": 511,
+       "to": 517
+      },
+      {
+       "w": "him,",
+       "from": 517,
+       "to": 522
+      },
+      {
+       "w": "train",
+       "from": 522,
+       "to": 536
+      },
+      {
+       "w": "it",
+       "from": 536,
+       "to": 543
+      },
+      {
+       "w": "once,",
+       "from": 543,
+       "to": 558
+      },
+      {
+       "w": "it'll",
+       "from": 558,
+       "to": 564
+      },
+      {
+       "w": "remember.",
+       "from": 564,
+       "to": 575
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_11.wav",
+     "from": 584,
+     "frames": 65,
+     "words": [
+      {
+       "w": "How",
+       "from": 592,
+       "to": 597
+      },
+      {
+       "w": "many",
+       "from": 597,
+       "to": 603
+      },
+      {
+       "w": "customers",
+       "from": 603,
+       "to": 616
+      },
+      {
+       "w": "got",
+       "from": 616,
+       "to": 621
+      },
+      {
+       "w": "June",
+       "from": 621,
+       "to": 627
+      },
+      {
+       "w": "prices?",
+       "from": 627,
+       "to": 637
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "sk_b",
+   "type": "sk_shop",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "bills",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "mondays",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "pin",
+      "n": 16
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "refunds",
+      "n": 17
+     }
+    ],
+    "yt": {
+     "chapter": "Everyone got June prices",
+     "title": "Everyone got June prices",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 675,
+   "frames": 450,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_12.wav",
+     "from": 0,
+     "frames": 65,
+     "words": [
+      {
+       "w": "Since",
+       "from": 5,
+       "to": 17
+      },
+      {
+       "w": "June?",
+       "from": 17,
+       "to": 48
+      },
+      {
+       "w": "Everyone.",
+       "from": 48,
+       "to": 59
+      }
+     ],
+     "cues": {
+      "1": 48
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_13.wav",
+     "from": 69,
+     "frames": 30,
+     "words": [
+      {
+       "w": "Fix",
+       "from": 77,
+       "to": 81
+      },
+      {
+       "w": "it.",
+       "from": 81,
+       "to": 85
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_14.wav",
+     "from": 104,
+     "frames": 92,
+     "words": [
+      {
+       "w": "Retrain",
+       "from": 108,
+       "to": 117
+      },
+      {
+       "w": "me",
+       "from": 117,
+       "to": 121
+      },
+      {
+       "w": "every",
+       "from": 121,
+       "to": 128
+      },
+      {
+       "w": "Monday.",
+       "from": 128,
+       "to": 138
+      },
+      {
+       "w": "I",
+       "from": 138,
+       "to": 141
+      },
+      {
+       "w": "might",
+       "from": 141,
+       "to": 156
+      },
+      {
+       "w": "still",
+       "from": 156,
+       "to": 168
+      },
+      {
+       "w": "say",
+       "from": 168,
+       "to": 173
+      },
+      {
+       "w": "sixty.",
+       "from": 173,
+       "to": 190
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_15.wav",
+     "from": 200,
+     "frames": 32,
+     "words": [
+      {
+       "w": "Or?",
+       "from": 207,
+       "to": 215
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_16.wav",
+     "from": 235,
+     "frames": 90,
+     "words": [
+      {
+       "w": "Pin",
+       "from": 239,
+       "to": 243
+      },
+      {
+       "w": "the",
+       "from": 243,
+       "to": 248
+      },
+      {
+       "w": "price",
+       "from": 248,
+       "to": 254
+      },
+      {
+       "w": "board.",
+       "from": 254,
+       "to": 276
+      },
+      {
+       "w": "I'll",
+       "from": 276,
+       "to": 282
+      },
+      {
+       "w": "read",
+       "from": 282,
+       "to": 287
+      },
+      {
+       "w": "it",
+       "from": 287,
+       "to": 295
+      },
+      {
+       "w": "before",
+       "from": 295,
+       "to": 303
+      },
+      {
+       "w": "every",
+       "from": 303,
+       "to": 310
+      },
+      {
+       "w": "bill.",
+       "from": 310,
+       "to": 316
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_17.wav",
+     "from": 329,
+     "frames": 96,
+     "words": [
+      {
+       "w": "Tomatoes",
+       "from": 332,
+       "to": 342
+      },
+      {
+       "w": "forty.",
+       "from": 342,
+       "to": 354
+      },
+      {
+       "w": "Four",
+       "from": 354,
+       "to": 371
+      },
+      {
+       "w": "months",
+       "from": 371,
+       "to": 379
+      },
+      {
+       "w": "of",
+       "from": 379,
+       "to": 386
+      },
+      {
+       "w": "refunds",
+       "from": 386,
+       "to": 395
+      },
+      {
+       "w": "to",
+       "from": 395,
+       "to": 405
+      },
+      {
+       "w": "go.",
+       "from": 405,
+       "to": 409
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "sk_c",
+   "type": "sk_shop",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 18
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "training",
+      "n": 19
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "freeze",
+      "n": 20
+     }
+    ],
+    "yt": {
+     "chapter": "Mug it up",
+     "title": "Mug it up",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "hardCuts": true
+   },
+   "from": 1125,
+   "frames": 290,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_18.wav",
+     "from": 0,
+     "frames": 76,
+     "words": [
+      {
+       "w": "Fine.",
+       "from": 8,
+       "to": 37
+      },
+      {
+       "w": "Now",
+       "from": 37,
+       "to": 43
+      },
+      {
+       "w": "mug",
+       "from": 43,
+       "to": 49
+      },
+      {
+       "w": "it",
+       "from": 49,
+       "to": 54
+      },
+      {
+       "w": "up.",
+       "from": 54,
+       "to": 60
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit01v1/line_19.wav",
+     "from": 80,
+     "frames": 101,
+     "words": [
+      {
+       "w": "Training",
+       "from": 82,
+       "to": 93
+      },
+      {
+       "w": "new",
+       "from": 93,
+       "to": 97
+      },
+      {
+       "w": "notes.",
+       "from": 97,
+       "to": 106
+      },
+      {
+       "w": "Tomatoes",
+       "from": 106,
+       "to": 129
+      },
+      {
+       "w": "forty.",
+       "from": 129,
+       "to": 141
+      },
+      {
+       "w": "Forever.",
+       "from": 141,
+       "to": 173
+      }
+     ],
+     "cues": {
+      "1": 141
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit01v1/line_20.wav",
+     "from": 185,
+     "frames": 62,
+     "words": [
+      {
+       "w": "NOOOO!",
+       "from": 190,
+       "to": 231
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}
