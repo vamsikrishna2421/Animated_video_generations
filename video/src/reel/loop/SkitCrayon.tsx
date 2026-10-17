@@ -11,7 +11,7 @@ import { bubble } from "./MannersCrayon";
 // and the shop's AI on a phone propped against the till. Shot/reverse-shot: every line cuts to its speaker (or the wide
 // shot); each beat brings its prop (s.data.beats, one per line). World coordinates = the wide shot.
 type Word = { w: string; from: number; to: number };
-type Line = { from: number; frames: number; words?: Word[] };
+type Line = { from: number; frames: number; words?: Word[]; cues?: Record<string, number> };
 type Beat = { who: "ravi" | "ai"; shot: "ravi" | "ai" | "wide"; prop: string; n: number };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
@@ -27,7 +27,7 @@ const RAVI: Record<number, [Mood, Arms]> = {
   1: ["yell", "slam"], 2: ["angry", "rest"], 3: ["sus", "rest"], 4: ["angry", "fist"], 5: ["yell", "point"], 6: ["angry", "rest"],
   7: ["confused", "shrug"], 8: ["shock", "rest"], 9: ["shock", "up"], 10: ["happy", "thumb"], 11: ["worried", "rest"],
   12: ["sad", "rest"], 13: ["sad", "rest"], 14: ["sad", "rest"], 15: ["hope", "rest"], 16: ["hope", "phone"], 17: ["sad", "rest"],
-  18: ["smug", "fold"], 19: ["smug", "fold"], 20: ["panic", "lunge"],
+  18: ["smug", "point"], 19: ["smug", "fold"], 20: ["panic", "lunge"],
 };
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
   wide: { z: 1.1, x: 548, y: 790 }, ravi: { z: 1.6, x: 495, y: 715 }, ai: { z: 2.05, x: 800, y: 880 }, board: { z: 1.25, x: 390, y: 700 },
@@ -251,6 +251,8 @@ const wordFrame = (ln: Line, re: RegExp, fallback: number) => {
   const w = (ln.words ?? []).find((x) => re.test(x.w.replace(/[^\w]/g, "")));
   return w ? w.from : fallback;
 };
+// a line's [n] cue (follows the spoken word in either language), else the English word, else a fallback
+const cueAt = (ln: Line, n: number, re: RegExp, fallback: number) => ln.cues?.[String(n)] ?? wordFrame(ln, re, fallback);
 
 // ---------- the scene (all three parts of the skit use it) ----------
 const SkShop: React.FC<SP> = ({ s }) => {
@@ -266,12 +268,13 @@ const SkShop: React.FC<SP> = ({ s }) => {
     if (b.prop === "board") sfx.push(<Sfx key={"a" + i} at={at + 2} src="audio/sfx_pop.wav" vol={0.45} />);
     if (b.prop === "notes") [0, 1, 2].forEach((k) => sfx.push(<Sfx key={"n" + i + k} at={at + 6 + k * 7} src="audio/sfx_pop.wav" vol={0.35} />));
     if (b.prop === "flashback") sfx.push(<Sfx key={"a" + i} at={at - 2} src="audio/sfx_whoosh.wav" vol={0.5} />);
-    if (b.prop === "bills") { const e = wordFrame(l, /^Everyone$/i, at + Math.round(l.frames * 0.55)); sfx.push(<Sfx key={"a" + i} at={e} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={"b" + i} at={e} src="audio/sfx_whoosh.wav" vol={0.5} />); }
+    if (b.prop === "bills") { const e = cueAt(l, 1, /^Everyone$/i, at + Math.round(l.frames * 0.55)); sfx.push(<Sfx key={"a" + i} at={e} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={"b" + i} at={e} src="audio/sfx_whoosh.wav" vol={0.5} />); }
     if (b.prop === "mondays") [0, 1, 2].forEach((k) => sfx.push(<Sfx key={"m" + i + k} at={at + 8 + k * 9} src="audio/sfx_tick.wav" vol={0.35} />));
     if (b.prop === "pin") { const fl = at + Math.round(l.frames * 0.35); sfx.push(<Sfx key={"a" + i} at={fl} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={"b" + i} at={fl + 10} src="audio/sfx_pop.wav" vol={0.45} />); }
     if (b.prop === "refunds") [0, 1, 2, 3].forEach((k) => sfx.push(<Sfx key={"r" + i + k} at={at + 10 + k * 8} src="audio/sfx_tick.wav" vol={0.3} />));
-    if (b.prop === "training") { const e = wordFrame(l, /^Forever$/i, at + Math.round(l.frames * 0.8)); sfx.push(<Sfx key={"a" + i} at={at} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={"b" + i} at={e} src="audio/sfx_snap.wav" vol={0.6} />); }
-    if (b.prop === "freeze") { const fz = at + Math.round(l.frames * 0.45); sfx.push(<Sfx key={"a" + i} at={fz} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={"b" + i} at={fz} src="audio/sfx_snap.wav" vol={0.7} />); }
+    if (b.prop === "toss") sfx.push(<Sfx key={"a" + i} at={at + Math.round(l.frames * 0.3)} src="audio/sfx_whoosh.wav" vol={0.5} />);
+    if (b.prop === "training") { const e = cueAt(l, 1, /^Forever$/i, at + Math.round(l.frames * 0.8)); sfx.push(<Sfx key={"a" + i} at={at} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={"b" + i} at={e} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={"c" + i} at={e} src="reel/sfx_boom.wav" vol={0.8} />); }
+    if (b.prop === "freeze") { const fz = cueAt(l, 1, /^NOOOO$/i, at + Math.round(l.frames * 0.45)); sfx.push(<Sfx key={"a" + i} at={fz} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={"b" + i} at={fz} src="audio/sfx_snap.wav" vol={0.7} />); }
   });
   return (
     <>
@@ -279,7 +282,7 @@ const SkShop: React.FC<SP> = ({ s }) => {
       <CrayonCanvas draw={(c, W, H, f0, boil0) => {
         let i = idx(f0);
         const b0 = beats[i], l0 = ls[i];
-        const freezeAt = b0.prop === "freeze" ? l0.from + Math.round(l0.frames * 0.45) : Infinity;
+        const freezeAt = b0.prop === "freeze" ? cueAt(l0, 1, /^NOOOO$/i, l0.from + Math.round(l0.frames * 0.45)) : Infinity;
         const f = Math.min(f0, freezeAt), boil = f0 >= freezeAt ? 0 : boil0;
         i = idx(f);
         const b = beats[i], ln = ls[i];
@@ -287,7 +290,11 @@ const SkShop: React.FC<SP> = ({ s }) => {
         const r = rng(7100 + boil);
         const talkOf = (who: string) => b.who === who && (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         // camera: cut to the speaker's shot each line, slow push-in, shake on the slam / the freeze
-        const sh = SHOTS[b.prop === "board" ? "board" : b.prop === "freeze" ? "lunge" : b.shot] ?? SHOTS.wide;
+        let sh = SHOTS[b.prop === "board" ? "board" : b.prop === "freeze" ? "lunge" : b.shot] ?? SHOTS.wide;
+        if (b.n === 1) {   // the hook: punch in on Ravi as he says "cheat"
+          const q = easeOut(seg(p, 0.55, 0.68)), t = SHOTS.ravi;
+          sh = { z: sh.z + (t.z - sh.z) * q, x: sh.x + (t.x - sh.x) * q, y: sh.y + (t.y - sh.y) * q };
+        }
         const z = sh.z * (1 + 0.035 * p);
         const shake = (b.prop === "slam" && p < 0.16 ? 9 : 0) + (f0 >= freezeAt ? Math.max(0, 1 - (f0 - freezeAt) / 12) * 14 : 0);
         const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
@@ -316,10 +323,13 @@ const SkShop: React.FC<SP> = ({ s }) => {
           sticky(c, 935, 980, -0.06, ["Onion", "₹45"], n === 8 ? seg(p, 0.35, 0.5) : 1);
           c.restore();
         }
-        const pinned = n > 16 || (n === 16 && p > 0.45);
-        if (pinned) {   // the price board photo pinned above the AI
+        // the price board photo pinned above the AI; on "mug it up" Ravi yanks it off and tosses it (the AI can't read it now)
+        const toss = n === 18 ? easeOut(seg(p, 0.3, 0.6)) : n > 18 ? 1 : 0;
+        if (n >= 18) { c.beginPath(); c.arc(800, 626, 9, 0, 7); c.fillStyle = COL.red; c.fill(); }   // the empty pin
+        const pinned = (n === 16 && p > 0.45) || n === 17 || (n === 18 && toss < 1);
+        if (pinned) {
           const k = n === 16 ? easeOut(seg(p, 0.45, 0.6)) : 1;
-          c.save(); c.translate(800, 690); c.rotate(-0.06); c.scale(k, k);
+          c.save(); c.translate(800 - 620 * toss, 690 - 260 * toss + 700 * toss * toss); c.rotate(-0.06 - 2.4 * toss); c.scale(k, k);
           c.fillStyle = "#fff"; c.fillRect(-90, -70, 180, 150);
           c.fillStyle = "#1f3a2e"; c.fillRect(-78, -58, 156, 108);
           c.font = caveat(22); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText("TODAY'S PRICES", 0, -32);
@@ -340,7 +350,7 @@ const SkShop: React.FC<SP> = ({ s }) => {
           }
         }
         if (n === 12) {   // bills since June: the stack shoots up past the ceiling
-          const e = wordFrame(ln, /^Everyone$/i, ln.from + Math.round(ln.frames * 0.55));
+          const e = cueAt(ln, 1, /^Everyone$/i, ln.from + Math.round(ln.frames * 0.55));
           const q = easeOut(seg(f, e - 2, e + 14));
           for (let k = 0; k < 40; k++) {
             const y = COUNTER - 14 - k * 22 * q * 1.6;
@@ -358,19 +368,21 @@ const SkShop: React.FC<SP> = ({ s }) => {
           c.restore();
           if (p > 0.55) stamp(c, "₹60?", 640, 930, 52, COL.red, seg(p, 0.55, 0.65), r, -0.15);
         }
-        if (n === 17) {   // refund slips spewing out of the phone
+        if (n === 17) {   // refund slips spewing out of the phone (big enough to read: viewer note)
           const q = seg(p, 0.1, 1);
-          for (let k = 0; k < Math.floor(q * 12); k++) {
-            const x = 650 + (k % 4) * 100, y = 1110 - Math.floor(k / 4) * 34;
-            c.save(); c.translate(x, y); c.rotate((k % 2 ? 1 : -1) * 0.12);
-            c.fillStyle = "#fffdf4"; c.fillRect(-60, -18, 120, 36);
-            c.font = handF(22); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("REFUND ₹20", 0, 8);
+          for (let k = 0; k < Math.floor(q * 9); k++) {
+            const x = 660 + (k % 3) * 150, y = 1120 - Math.floor(k / 3) * 56;
+            c.save(); c.translate(x, y); c.rotate((k % 2 ? 1 : -1) * 0.1);
+            c.fillStyle = "#fffdf4"; c.fillRect(-72, -24, 144, 48);
+            c.strokeStyle = "rgba(0,0,0,0.25)"; c.lineWidth = 2; c.strokeRect(-72, -24, 144, 48);
+            c.font = handF(30); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("REFUND ₹20", 0, 10);
             c.restore();
           }
         }
         // the AI
         const train = n === 19 ? seg(p, 0.05, 0.75) : undefined;
-        const forever = n === 19 ? seg(f, wordFrame(ln, /^Forever$/i, ln.from + Math.round(ln.frames * 0.8)), wordFrame(ln, /^Forever$/i, ln.from + Math.round(ln.frames * 0.8)) + 8) : n === 20 ? 1 : undefined;
+        const fe = n === 19 ? cueAt(ln, 1, /^Forever$/i, ln.from + Math.round(ln.frames * 0.8)) : 0;
+        const forever = n === 19 ? seg(f, fe, fe + 8) : n === 20 ? 1 : undefined;
         phone(c, talkOf("ai"), f, r, { train: n === 20 ? 1 : train, forever, happy: n === 19 && p > 0.8 });
         c.restore();
         // screen-space overlays

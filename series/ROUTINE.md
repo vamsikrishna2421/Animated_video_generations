@@ -86,3 +86,7 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - Captions follow the Telugu voice through `sentence_cues`; check the cue times in the review pack.
 - Quarters within about 1.5 dB = flat audio: add lifts, a drop before the key number, a rise at the end.
 - Misheard words in the review-pack transcript are mispronounced words: reword or re-voice them.
+- Parler can drop a one-word sentence ("ఏఐ!" vanished from skit 01's first line): keep a short call inside the phrase
+  ("ఏ ఐ, కాలనీ మొత్తం..."). Parler also won't hold a long scream; join takes if a line needs one.
+- After a build, check where each `pauses` silence landed (voiced spans or the transcript): it must sit at the sentence
+  end before its cue word, not inside the sentence.

@@ -46,10 +46,11 @@ type Line = { who: string; name: string; color: string; sub?: string | null; aud
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
 // Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last ~28% into the CTA), plus a hit in the first second.
 // tl.musicDrops = [from, to, gain?] frame windows where the bed drops out just before a key number (gain 0.12), or ducks under a line.
-// tl.musicBoosts = [from, to, gain] windows where the bed sits louder (a lift through the middle).
+// tl.musicBoosts = [from, to, gain] windows where the bed sits louder (a lift through the middle); [from, to, gain, 1] ramps
+// from 1 to gain across the window (a build into a punchline).
 const musicArc = (tl: ReelTimeline, f: number) => {
   const dip = (tl.musicDrops ?? []).reduce((g, [a, b, k = 0.12]) => g * interpolate(f, [a - 4, a + 2, b, b + 3], [1, k, k, 1], cl), 1)
-    * (tl.musicBoosts ?? []).reduce((g, [a, b, k]) => (b - a > 60 ? g * interpolate(f, [a - 20, a + 20, b - 20, b + 20], [1, k, k, 1], cl) : g), 1);
+    * (tl.musicBoosts ?? []).reduce((g, [a, b, k, ramp]) => (ramp ? g * interpolate(f, [a, b], [1, k], cl) : b - a > 60 ? g * interpolate(f, [a - 20, a + 20, b - 20, b + 20], [1, k, k, 1], cl) : g), 1);
   if (!tl.musicLift) return dip;
   const end = tl.totalFrames, lift = Math.max(12 * tl.fps, 0.28 * end);  // rises through the quiz, the recap and the CTA
   const hit = interpolate(f, [0, 0.6 * tl.fps, 2.0 * tl.fps], [2.1, 2.1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });

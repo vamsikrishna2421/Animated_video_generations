@@ -9,14 +9,22 @@
  "lead": 0.2,
  "music": "lofi",
  "musicVol": [
-  0.34,
+  0.45,
   1.1
  ],
+ "musicFade": 0.05,
+ "endPad": 0.3,
+ "captionMode": "phrase",
  "musicEQ": [
   [
    260,
    -4,
    0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
   ]
  ],
  "musicPad": true,
@@ -118,8 +126,8 @@
     {
      "who": "ai",
      "file": "02_ai.wav",
-     "text": "Strange. I billed everyone the right price.",
-     "show": "Strange. I billed everyone the right price.",
+     "text": "Strange. I charged everyone the right price.",
+     "show": "Strange. I charged everyone the right price.",
      "maxgap": 0.25,
      "gap": 0.14
     },
@@ -129,7 +137,8 @@
      "text": "Tomatoes?",
      "show": "Tomatoes?",
      "maxgap": 0.25,
-     "gap": 0.14
+     "gap": 0.14,
+     "tts": "Tomaatoes?"
     },
     {
      "who": "ai",
@@ -202,8 +211,10 @@
   {
    "id": "sk_b",
    "type": "sk_shop",
-   "tail": 0.2,
+   "tail": 0.0,
    "drop_cue": 1,
+   "lift": true,
+   "boost": 1.25,
    "data": {
     "beats": [
      {
@@ -288,34 +299,43 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "Pin the price board. I'll read it before every bill.",
-     "show": "Pin the price board. I'll read it before every bill.",
+     "text": "Show me the price board. I'll read it before every bill.",
+     "show": "Show me the price board. I'll read it before every bill.",
      "maxgap": 0.25,
      "gap": 0.14
     },
     {
      "who": "ai",
      "file": "17_ai.wav",
-     "text": "Tomatoes forty. Four months of refunds to go.",
-     "show": "Tomatoes forty. Four months of refunds to go.",
+     "text": "Tomatoes forty. [1] Four months of refunds to go.",
+     "show": "Tomatoes forty. [1] Four months of refunds to go.",
      "maxgap": 0.25,
-     "gap": 0.14
+     "gap": 0.14,
+     "pauses": {
+      "1": 0.3
+     }
     }
    ]
   },
   {
    "id": "sk_c",
    "type": "sk_shop",
-   "tail": 0.9,
+   "tail": 0.0,
    "lift": true,
    "outro": true,
-   "music_stop": 0.45,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
+   "rise": 1.8,
    "data": {
     "beats": [
      {
       "who": "ravi",
       "shot": "ravi",
-      "prop": "",
+      "prop": "toss",
       "n": 18
      },
      {
@@ -355,17 +375,17 @@
      "maxgap": 0.25,
      "gap": 0.14,
      "pauses": {
-      "1": 0.35
+      "1": 0.75
      }
     },
     {
      "who": "ravi",
      "file": "20_ravi.wav",
-     "text": "NOOOO!",
-     "show": "NOOOO!",
+     "text": "No, no, no, [1] NOOOO!",
+     "show": "No, no, no, [1] NOOOO!",
      "maxgap": 0.25,
-     "gap": 0.14,
-     "tts": "No! No! Noooo!"
+     "gap": 0.05,
+     "tts": "No, no, no, NOOOOOOOO!"
     }
    ]
   }

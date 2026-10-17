@@ -316,13 +316,35 @@ def file_line(line, rid):
             continue
         t = cues[int(n)]
         hop = int(0.02 * sr)
-        lo, hi = max(0, int((t - 0.35) * sr)), min(len(a) - hop, int((t + 0.1) * sr))
-        cand = range(lo, max(lo + 1, hi), hop)
-        ins = min(cand, key=lambda i: float(np.sqrt(np.mean(a[i:i + hop] ** 2))))
+        rms = lambda i: float(np.sqrt(np.mean(a[i:i + hop] ** 2)))
+        thr = 0.1 * max(rms(i) for i in range(0, len(a) - hop, hop))
+        # The cue is a letter-count guess; the pause goes in the longest quiet run within 0.6 s of it (a sentence end
+        # is longer than a gap between words: skit 01's guess fell inside "forty" and the pause split "Tomatoes | forty").
+        lo, hi = max(0, int((t - 0.6) * sr)), min(len(a) - hop, int((t + 0.6) * sr))
+        gaps, g0 = [], None
+        for i in range(lo, hi, hop):
+            if rms(i) < thr:
+                g0 = i if g0 is None else g0
+            elif g0 is not None:
+                gaps.append((g0, i))
+                g0 = None
+        if g0 is not None and hi < len(a) - hop:   # a quiet run that continues past the window still counts
+            gaps.append((g0, hi))
+        gaps = [g for g in gaps if g[1] - g[0] >= int(0.06 * sr) and g[0] > hop]
+        if gaps:
+            g = max(gaps, key=lambda g: g[1] - g[0])
+            ins = (g[0] + g[1]) // 2
+        else:
+            cand = range(max(0, int((t - 0.35) * sr)), max(int((t - 0.35) * sr) + 1, min(len(a) - hop, int((t + 0.1) * sr))), hop)
+            ins = min(cand, key=rms)
         ti = ins / sr
         a = np.concatenate([a[:ins], np.zeros(int(sec * sr)), a[ins:]])
         out = [(w, s0 + sec if s0 >= ti else s0, e0 + sec if e0 > ti else e0) for w, s0, e0 in out]
         cues = {k: (v + sec if v >= ti - 1e-6 else v) for k, v in cues.items()}
+        k = ins + int(sec * sr)   # the paused cue = the first voiced 20 ms after the silence (the word it announces)
+        while k < min(len(a) - hop, ins + int((sec + 0.5) * sr)) and rms(k) < thr:
+            k += hop
+        cues[int(n)] = k / sr
     return a, sr, out, cues
 
 
@@ -419,7 +441,7 @@ def peak_eq(x, f0, gain_db, q):
     return lfilter(b / a[0], a / a[0], x, axis=0)
 
 
-def lofi(total, scene_starts, pad=False, lifts=(), outro=None, layers=()):
+def lofi(total, scene_starts, pad=False, lifts=(), outro=None, layers=(), fade=0.8):
     """Calm lo-fi bed for 'decent' reels: soft kick + rim, mellow keys, no scratches or drops.
     pad=True (spec "musicPad") adds a sustained pad and a faint vinyl-noise floor, filling the short silent
     hole at the end of every bar (the keys stop before the bar line), which is audible once the bed is turned up.
@@ -466,7 +488,7 @@ def lofi(total, scene_starts, pad=False, lifts=(), outro=None, layers=()):
             b += 1
     st = np.stack([mix, np.roll(mix, int(0.02 * MSR))], axis=1)
     st = np.tanh(st / norm * 1.2) / np.tanh(1.2)
-    fo = int(0.8 * MSR)
+    fo = max(1, int(fade * MSR))   # spec "musicFade": a looping skit ends on a hard stop
     st[-fo:] *= np.linspace(1, 0, fo)[:, None]
     return st * 0.8
 
@@ -510,7 +532,7 @@ def main(spec_path: Path) -> None:
             t = max(t, np.ceil((t - 0.12) / beat) * beat)
         scenes.append({"id": sc["id"], "type": sc["type"], "data": sc.get("data", {}), "from": round(s_from * FPS),
                        "frames": round((t - s_from) * FPS), "lines": lines})
-    total = t + 0.4
+    total = t + spec.get("endPad", 0.4)
     scenes[-1]["frames"] = round(total * FPS) - scenes[-1]["from"]   # the last scene holds to the end (no empty last frames)
     # "drop_cue": k (or a list of cues) on a scene = a short music drop right before that cue (the key number), released on the cue
     # "duck": [cue_a, cue_b, gain] = the bed sits at `gain` between two cues (e.g. under a command the viewer must hear exactly)
@@ -523,6 +545,11 @@ def main(spec_path: Path) -> None:
         for k in (dc if isinstance(dc, list) else [dc] if dc is not None else []):
             if str(k) in cues:
                 at = sc["from"] + cues[str(k)]
+                mdrops.append([max(0, at - round(0.8 * FPS)), at])
+        for li, k in spec_sc.get("drop_at", []):   # [[line index in the scene, cue], ...]: the drop before a later line's cue
+            lc = sc["lines"][li]["cues"] if li < len(sc["lines"]) else {}
+            if str(k) in lc:
+                at = sc["from"] + lc[str(k)]
                 mdrops.append([max(0, at - round(0.8 * FPS)), at])
         if spec_sc.get("music_stop") is not None and sc["lines"]:
             last = sc["lines"][-1]
@@ -541,6 +568,10 @@ def main(spec_path: Path) -> None:
                 mboosts[-1][1] = sc["from"] + sc["frames"]
             else:
                 mboosts.append([sc["from"], sc["from"] + sc["frames"], g])
+    # "rise": g on a scene = the bed ramps from 1 at the scene start to g at its end (a build into the punchline)
+    for spec_sc, sc in zip(spec["scenes"], scenes):
+        if spec_sc.get("rise"):
+            mboosts.append([sc["from"], sc["from"] + sc["frames"], float(spec_sc["rise"]), 1])
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     starts = [s["from"] / FPS for s in scenes]
@@ -553,7 +584,7 @@ def main(spec_path: Path) -> None:
         if sc.get("layer") is not None and str(sc["layer"]) in scenes[i]["lines"][0]["cues"]:
             a = (scenes[i]["from"] + scenes[i]["lines"][0]["cues"][str(sc["layer"])]) / FPS
             layers.append((np.round(a / beat_bar) * beat_bar, (scenes[i]["from"] + scenes[i]["frames"]) / FPS))
-    bed = (lofi(total, starts, pad=spec.get("musicPad", False), lifts=lifts, outro=outro, layers=layers) if spec.get("music") == "lofi"
+    bed = (lofi(total, starts, pad=spec.get("musicPad", False), lifts=lifts, outro=outro, layers=layers, fade=spec.get("musicFade", 0.8)) if spec.get("music") == "lofi"
            else score(total, starts, drops))
     for f0, gdb, q in spec.get("musicEQ", []):   # e.g. [[260, -4, 0.9]]: carve the bed where it masks the voice on phones
         bed = peak_eq(bed, f0, gdb, q)
