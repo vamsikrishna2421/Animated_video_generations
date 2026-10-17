@@ -17,26 +17,32 @@
    704
   ],
   [
-   1256,
-   1280
+   1276,
+   1300
   ]
  ],
  "musicBoosts": [
   [
    657,
-   1104,
+   1125,
    1.25
   ],
   [
-   1105,
-   1403,
-   1.8,
+   1125,
+   1424,
+   1.5,
+   1
+  ],
+  [
+   1300,
+   1424,
+   1.5,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1403,
+ "totalFrames": 1424,
  "music": "reel/skit01v1/score.wav",
  "scenes": [
   {
@@ -569,7 +575,7 @@
     "hardCuts": true
    },
    "from": 657,
-   "frames": 447,
+   "frames": 468,
    "lines": [
     {
      "who": "ai",
@@ -852,8 +858,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1105,
-   "frames": 298,
+   "from": 1125,
+   "frames": 299,
    "lines": [
     {
      "who": "ravi",
@@ -943,11 +949,11 @@
      "sub": null,
      "audio": "reel/skit01v1/line_20.wav",
      "from": 197,
-     "frames": 91,
+     "frames": 92,
      "words": [
       {
        "w": "No,",
-       "from": 201,
+       "from": 202,
        "to": 213
       },
       {
@@ -958,16 +964,16 @@
       {
        "w": "no,",
        "from": 236,
-       "to": 252
+       "to": 253
       },
       {
        "w": "NOOOO!",
-       "from": 252,
-       "to": 272
+       "from": 253,
+       "to": 273
       }
      ],
      "cues": {
-      "1": 252
+      "1": 253
      }
     }
    ]

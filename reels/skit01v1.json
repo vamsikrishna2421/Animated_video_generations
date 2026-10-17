@@ -310,7 +310,7 @@
      "text": "Tomatoes forty. [1] Four months of refunds to go.",
      "show": "Tomatoes forty. [1] Four months of refunds to go.",
      "maxgap": 0.25,
-     "gap": 0.14,
+     "gap": 0.7,
      "pauses": {
       "1": 0.3
      }
@@ -329,7 +329,12 @@
      1
     ]
    ],
-   "rise": 1.8,
+   "rise": 1.5,
+   "swell": [
+    1,
+    1,
+    1.5
+   ],
    "data": {
     "beats": [
      {
@@ -385,7 +390,8 @@
      "show": "No, no, no, [1] NOOOO!",
      "maxgap": 0.25,
      "gap": 0.05,
-     "tts": "No, no, no, NOOOOOOOO!"
+     "tts": "No, no, no, NOOOOOOOO!",
+     "gain_db": 3
     }
    ]
   }

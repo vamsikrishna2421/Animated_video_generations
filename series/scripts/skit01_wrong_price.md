@@ -5,6 +5,12 @@ shot, 1-3 s lines, every reply makes it worse, a rescue, and a last line that un
 video (it loops); the call to action lives in the caption. Ours teaches EP31's lesson through the plot: facts that change
 belong in what the AI reads each time; training ("mugging up") freezes them.
 
+Second render review (v3 final): both viewers said the ending now lands and loops; they asked for the scream to be the
+loudest moment (now +3 dB, the bed swells under the last seconds; the join between the two scream takes is faded) and,
+in Telugu, a beat after the refunds line (0.8 s), a longer silence before ఎప్పటికీ (0.9 s; reads as a 0.7 s gap) and
+"బట్టీ పట్టు" instead of "రట్టా కొట్టు" (sounded Hindi; the recogniser got nothing from it). English keeps a ~1.2 s beat
+after the refunds line (the viewers liked the full second there).
+
 v2 -> v3 (render review of the first cut): both viewers said "Since June?... Everyone." is the best moment and the ending
 the weakest (crammed, quiet, then a 2.5 s fade on a frozen frame). Now: the 1.3 s gap after the refunds line is gone and a
 0.75 s silence sits before "Forever." (the music drops out, a hit lands on the word); Ravi yanks the pinned board photo off
@@ -22,7 +28,7 @@ v1 -> v2 (viewer script review): the middle was "a lecture in costume" (options 
 rescue looked like more work than training ("send the list with every question") -> "Pin the price board. I'll read it
 before every bill."; retraining's real flaw said (it may still be wrong), not just that it's a chore; bigger stakes in line
 1 ("the whole colony is calling me a cheat"); the nephew did the training (believable); "everyone got June prices" now
-matches the ending ("four months of refunds to go"); "remember" -> "mug it up" (Telugu: ratta kottu) so the punchline is
+matches the ending ("four months of refunds to go"); "remember" -> "mug it up" (Telugu: ratta kottu, later batti pattu) so the punchline is
 about training, not memory; no "LoRA" word inside the skit (viewers asked "who's Lora?"); no comment-bait in the caption.
 
 Characters: RAVI ANNA, kirana shop owner, Hyderabad (crayon human). The shop's AI: the channel's student robot on a phone
@@ -55,6 +61,6 @@ Caption (draft): "Ravi anna's nephew trained the shop AI on June prices. It's Oc
 reads every time (a pinned price list). Training is for skills and style, not this week's tomatoes. Full episode: EP 31
 (LoRA). Which price would your AI get wrong?"
 
-Telugu: same beats; Ravi anna in Telugu ("Ippudu ratta kottu."), the AI in Telugu; English on-screen text.
+Telugu: same beats; Ravi anna in Telugu ("Ippudu idi batti pattu."), the AI in Telugu; English on-screen text.
 Sound: hit on line 1, a lift into "Since June?", silence before "Everyone." and "Forever.", the bed builds from line 18
 to the scream, hard stop 0.35 s after it.

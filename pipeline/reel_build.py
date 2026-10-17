@@ -515,7 +515,8 @@ def main(spec_path: Path) -> None:
             else:
                 a, sr, words, cues = synth_line(kokoro, line, sp)
             a = fx(a, sr, sp.get("fx"))
-            a = np.tanh(a * (10 ** (-15 / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9)) * 1.2) / np.tanh(1.2)  # equal loudness after effects
+            lvl = -15 + line.get("gain_db", 0)   # "gain_db": a line meant to stand out (a scream) sits above the rest
+            a = np.tanh(a * (10 ** (lvl / 20) / (np.sqrt(np.mean(a ** 2)) + 1e-9)) * 1.2) / np.tanh(1.2)  # equal loudness after effects
             n += 1
             sf.write(out / f"line_{n:02d}.wav", a.astype(np.float32), sr)
             dur = len(a) / sr
@@ -568,10 +569,16 @@ def main(spec_path: Path) -> None:
                 mboosts[-1][1] = sc["from"] + sc["frames"]
             else:
                 mboosts.append([sc["from"], sc["from"] + sc["frames"], g])
-    # "rise": g on a scene = the bed ramps from 1 at the scene start to g at its end (a build into the punchline)
+    # "rise": g on a scene = the bed ramps from 1 at the scene start to g at its end (a build into the punchline);
+    # "swell": [line index, cue, g] = a second ramp from that cue to the scene end (the bed swells under the payoff)
     for spec_sc, sc in zip(spec["scenes"], scenes):
         if spec_sc.get("rise"):
             mboosts.append([sc["from"], sc["from"] + sc["frames"], float(spec_sc["rise"]), 1])
+        if spec_sc.get("swell"):
+            li, k, g = spec_sc["swell"]
+            lc = sc["lines"][li]["cues"] if li < len(sc["lines"]) else {}
+            if str(k) in lc:
+                mboosts.append([sc["from"] + lc[str(k)], sc["from"] + sc["frames"], float(g), 1])
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     starts = [s["from"] / FPS for s in scenes]
