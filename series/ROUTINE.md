@@ -109,3 +109,5 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   in 1.5 s, then 4 s of a still frame, and all four viewers drifted there).
 - A visual that answers a phrase (a list reordering, a row appearing) needs its own cue on that phrase, not a fixed
   offset from an earlier cue (EP32: the guarantee list reordered while the voice was still on the sentence before).
+- Never run Parler (`te_check.py`, `te_verify.py`) during a render: the container's memory limit kills Parler and the
+  render's ffmpeg without an error message (EP32 lost a render and two re-voices). Check the output file's time.
