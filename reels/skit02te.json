@@ -9,11 +9,11 @@
  "lead": 0.15,
  "music": "lofi",
  "musicVol": [
-  0.42,
-  1.1
+  0.4,
+  0.75
  ],
  "musicFade": 0.05,
- "endPad": 0.3,
+ "endPad": 0.65,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -87,7 +87,8 @@
      "text": "అమ్మా! నేనే, చిన్నుని! నా ఫోన్ పోయింది, ఫ్రెండ్ ఫోన్ నుంచి చేస్తున్నా!",
      "show": "Amma! It's me, Chinnu! I lost my phone, this is a friend's!",
      "maxgap": 0.3,
-     "gap": 0.26
+     "gap": 0.26,
+     "gain_db": -1.5
     },
     {
      "who": "amma",
@@ -103,7 +104,8 @@
      "text": "యాక్సిడెంట్ అయ్యింది! అర్జెంట్ గా యాభై వేలు కావాలి!",
      "show": "I had an accident! I need fifty thousand, right now!",
      "maxgap": 0.3,
-     "gap": 0.26
+     "gap": 0.26,
+     "gain_db": -1.5
     },
     {
      "who": "chinnu",
@@ -111,7 +113,7 @@
      "text": "అమ్మా, అది నేను కాదు!",
      "show": "Amma, that's not me!",
      "maxgap": 0.3,
-     "gap": 0.26
+     "gap": 0.45
     },
     {
      "who": "caller",
@@ -119,7 +121,8 @@
      "text": "నాన్నకి చెప్పకు! ఈ నంబర్ కి పంపించు!",
      "show": "Don't tell Nanna! Send it to this number!",
      "maxgap": 0.3,
-     "gap": 0.26
+     "gap": 0.26,
+     "gain_db": -1.5
     },
     {
      "who": "amma",
@@ -135,7 +138,7 @@
    "id": "sk2_b",
    "type": "sk_home",
    "tail": 0.1,
-   "lift": true,
+   "lift": 0.55,
    "pre": 0.35,
    "data": {
     "beats": [
@@ -218,8 +221,9 @@
    "id": "sk2_c",
    "type": "sk_home",
    "tail": 0.15,
-   "boost": 0.45,
+   "boost": 0.3,
    "drop_cue": 1,
+   "pre": 0.5,
    "data": {
     "beats": [
      {
@@ -262,7 +266,8 @@
      "gap": 0.26,
      "pauses": {
       "1": 0.55
-     }
+     },
+     "gain_db": -1.5
     },
     {
      "who": "amma",
@@ -270,7 +275,8 @@
      "text": "రాంగ్ ఆన్సర్!",
      "show": "Wrong answer.",
      "maxgap": 0.3,
-     "gap": 0.6
+     "gap": 0.6,
+     "gain_db": 3
     }
    ]
   },
@@ -279,7 +285,7 @@
    "type": "sk_home",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.0,
+   "boost": 0.85,
    "data": {
     "beats": [
      {
@@ -331,10 +337,10 @@
      "who": "chinnu",
      "file": "17_chinnu.wav",
      "text": "కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్.",
-     "show": "Cut the call. Then ring my saved number.",
+     "show": "Cut the call. Then call my saved number.",
      "maxgap": 0.3,
-     "gap": 1.2,
-     "gain_db": 2
+     "gap": 1.9,
+     "gain_db": 1
     },
     {
      "who": "amma",

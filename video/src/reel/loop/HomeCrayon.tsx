@@ -37,7 +37,7 @@ const CHINNU: Record<number, [Mood, Pose, number]> = {
 };
 // camera per line: "wide", "both", "amma", "chinnu" (push-ins around a face), "insert" (the reels -> voice copy cutaway)
 const SHOT: Record<number, string> = {
-  1: "wide", 2: "both", 3: "wide", 4: "chinnu", 5: "wide", 6: "amma", 7: "insert", 8: "amma", 9: "chinnu", 10: "amma", 11: "chinnu",
+  1: "wide", 2: "both", 3: "wide", 4: "both", 5: "wide", 6: "amma", 7: "insert", 8: "amma", 9: "chinnu", 10: "amma", 11: "chinnu",
   12: "amma", 13: "both", 14: "amma", 15: "chinnu", 16: "amma", 17: "both", 18: "wide",
 };
 const CAM: Record<string, { z: number; x: number; y: number }> = {
@@ -106,12 +106,14 @@ const phoneProp = (c: Ctx, x: number, y: number, rot: number, glow: boolean) => 
   c.restore();
 };
 const plate = (c: Ctx, x: number, y: number, bitten: boolean) => {
+  c.save(); c.translate(x, y); c.scale(1.3, 1.3); c.translate(-x, -y);   // big enough to read as dosa on a phone
   c.beginPath(); c.ellipse(x, y, 84, 22, 0, 0, 7); c.fillStyle = "#cbd5e1"; c.fill();
   c.beginPath(); c.ellipse(x, y - 4, 70, 15, 0, 0, 7); c.fillStyle = "#e2e8f0"; c.fill();
   // a folded dosa
   c.beginPath(); c.moveTo(x - 66, y - 6); c.quadraticCurveTo(x, y - 46, x + 66, y - 6); c.closePath(); c.fillStyle = "#d97706"; c.fill();
   c.beginPath(); c.moveTo(x - 58, y - 8); c.quadraticCurveTo(x, y - 36, x + 58, y - 8); c.closePath(); c.fillStyle = "#f59e0b"; c.fill();
   if (bitten) { c.beginPath(); c.arc(x + 58, y - 14, 14, 0, 7); c.fillStyle = "#e2e8f0"; c.fill(); }
+  c.restore();
 };
 
 const head = (c: Ctx, who: "amma" | "chinnu", m: Mood, talk: boolean, look: number, r: () => number, f: number) => {
@@ -221,7 +223,7 @@ const person = (c: Ctx, who: "amma" | "chinnu", m: Mood, pose: Pose, look: numbe
     if (pose === "mouth") { l = [[-170, 190], [-60, 170]]; phoneAt = [-50, 120]; rr = [[150, 120], [62, -60]]; }
     if (pose === "ear") { l = [[-190, 60], [-110, -100]]; phoneAt = [-104, -150]; }
   } else {
-    if (pose === "bite") { l = [[-170, 200], [-60, 250]]; rr = [[165, 120], [70, -40]]; plateAt = [-30, 240]; }
+    if (pose === "bite") { l = [[-170, 200], [-60, 250]]; rr = [[165, 120], [70, -40]]; plateAt = [-40, 262]; }
     if (pose === "plate" || pose === "point" || pose === "shh" || pose === "thumb") { l = [[-170, 200], [-60, 250]]; rr = [[170, 200], [60, 250]]; plateAt = [0, 250]; }
     if (pose === "point") { l = [[-215, 60], [-330, -20]]; lx = "point"; plateAt = [60, 250]; rr = [[170, 200], [90, 250]]; }
     if (pose === "open") { l = [[-210, 170], [-260, 100]]; rr = [[210, 170], [260, 100]]; }
@@ -241,7 +243,7 @@ const person = (c: Ctx, who: "amma" | "chinnu", m: Mood, pose: Pose, look: numbe
 };
 
 // ---------- the call screen (screen space, top) ----------
-type Call = { mode: "ring" | "call" | "ended" | "contact" | "incoming"; secs: number; muted: boolean; talk: number; banner: number; flags: number; glitch: number; shake: number };
+type Call = { mode: "ring" | "call" | "ended" | "contact" | "incoming"; secs: number; muted: boolean; talk: number; banner: number; flags: number; glitch: number; shake: number; mutePop?: number; unmute?: boolean };
 const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
   const x = 110, y = 215, w = W - 220, h = 270 + (k.banner > 0 ? 84 * easeOut(k.banner) : 0);
   c.save();
@@ -252,7 +254,9 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
     c.font = SANS(64); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("C", x + 110, y + 158);
     c.textAlign = "left"; c.font = SANS(58); c.fillText("Chinnu", x + 210, y + 118);
     c.font = SANS(34, 600); c.fillStyle = "#86efac"; c.fillText("✓ saved · my number", x + 212, y + 170);
-    c.font = SANS(28, 500); c.fillStyle = "#94a3b8"; c.fillText("cut the call, ring this number", x + 212, y + 214);
+    c.font = SANS(30, 500); c.fillStyle = "#94a3b8"; c.fillText("cut the call, call back here", x + 212, y + 214);
+    c.fillStyle = "#dc2626"; rrect(c, x + 30, y + h + 20, w - 60, 72, 20); c.fill();   // forwards lose the caption: the helpline in the video
+    c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Already sent money? Call 1930", x + w / 2, y + h + 70); c.textAlign = "left";
     c.restore(); return;
   }
   const ring = k.mode === "ring" || k.mode === "incoming";
@@ -266,7 +270,7 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
   c.font = SANS(30, 500); c.fillStyle = "#94a3b8";
   const sub = ring ? "incoming call · +91 ••••• ••742" : k.mode === "ended" ? "call ended" : `on speaker · 00:${String(Math.floor(k.secs)).padStart(2, "0")}`;
   c.fillText(sub, x + 192, y + 146);
-  if (k.muted) { c.fillStyle = "#dc2626"; rrect(c, x + w - 196, y + 26, 166, 54, 27); c.fill(); c.font = SANS(30); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("MUTED", x + w - 113, y + 64); c.textAlign = "left"; }
+  if (k.muted) { c.fillStyle = "#dc2626"; rrect(c, x + w - 236, y + 20, 206, 66, 33); c.fill(); c.font = SANS(38); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("🔇 MUTED", x + w - 133, y + 66); c.textAlign = "left"; }
   // the caller's sound wave (red and jagged when the cloned voice breaks)
   const bars = k.mode === "incoming" ? 20 : 34;   // room for the answer / decline buttons
   for (let i = 0; i < bars; i++) {
@@ -287,6 +291,14 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
     c.restore();
   }
   c.restore();
+  const mp = k.mutePop ?? 0;
+  if (mp > 0 && mp < 1) {   // the tap: a big MUTED pops over the card, then settles in the corner
+    const q = Math.sin(Math.PI * mp);
+    c.save(); c.translate(W / 2, y + h / 2); c.scale(0.7 + 0.5 * q, 0.7 + 0.5 * q); c.globalAlpha = Math.min(1, q * 1.6);
+    c.fillStyle = "#dc2626"; rrect(c, -230, -62, 460, 124, 62); c.fill();
+    c.font = SANS(76); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(k.unmute ? "UNMUTED" : "🔇 MUTED", 0, 26);
+    c.restore();
+  }
   if (k.banner > 0) {   // inside the card, under the sound wave (it covered faces as a floating banner)
     const q = easeOut(k.banner);
     c.save(); c.globalAlpha = q; c.fillStyle = "#dc2626"; rrect(c, x + 40, y + 262, w - 80, 70, 16); c.fill();
@@ -296,7 +308,11 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
     ["new number", "urgent", "secret", "money now"].forEach((t, i) => {
       const q = clamp(k.flags - i);
       if (q <= 0) return;
-      tag(c, `🚩 ${t}`, 300 + (i % 2) * 480, 1290 + Math.floor(i / 2) * 76, 46, "#fee2e2", "#991b1b", (i % 2 ? 1 : -1) * 0.02, q);
+      const cx = 290 + (i % 2) * 500, cy = 1300 + Math.floor(i / 2) * 84, k2 = easeOut(q);
+      c.save(); c.translate(cx, cy); c.rotate((i % 2 ? 1 : -1) * 0.02); c.scale(k2, k2);
+      c.fillStyle = "#dc2626"; rrect(c, -220, -36, 440, 72, 36); c.fill();
+      c.font = SANS(44); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(`🚩 ${t}`, 0, 15);
+      c.restore();
     });
   }
 };
@@ -316,7 +332,7 @@ const insert = (c: Ctx, W: number, H: number, p: number, f: number, r: () => num
     c.font = handF(34); c.fillStyle = INK; c.textAlign = "left"; c.fillText(`🎤 ${t}`, -20, yy + 80);
   });
   c.restore();
-  label(c, "his reels", 250, 1270, 56, INK, caveat, seg(p, 0, 0.15));
+  label(c, "his reels", 250, 1290, 76, INK, caveat, seg(p, 0, 0.15));
   // sound waves pulled across into the copy machine
   const pull = seg(p, 0.1, 0.7);
   for (let k = 0; k < 3; k++) {
@@ -328,7 +344,7 @@ const insert = (c: Ctx, W: number, H: number, p: number, f: number, r: () => num
     if (pull > 0) stroke(c, pts, ["#ec4899", "#f59e0b", "#3b82f6"][k], 9, r, { passes: 1, alpha: 0.9 });
   }
   robot(c, 860, 900, 0.9, boil, 9, { body: "#e2e8f0", accent: "#ef4444", eyes: "open" } as any);
-  label(c, "copy machine", 860, 1270, 52, INK, caveat, seg(p, 0.25, 0.4));
+  label(c, "voice copier", 840, 1290, 76, INK, caveat, seg(p, 0.25, 0.4));
   if (p > 0.6) {
     const q = easeOut(seg(p, 0.6, 0.8));
     c.save(); c.translate(W / 2, 470); c.rotate(-0.04); c.scale(q, q);
@@ -361,11 +377,12 @@ const SkHome: React.FC<SP> = ({ s }) => {
     if (b.prop === "mute" || b.prop === "unmute") sfx.push(<Sfx key={"a" + i} at={at - 6} src="audio/sfx_tick.wav" vol={0.55} />);
     if (b.prop === "flags") [0, 1, 2, 3].forEach((k) => sfx.push(<Sfx key={"f" + i + k} at={at + 4 + k * Math.round(l.frames / 5)} src="audio/sfx_pop.wav" vol={0.35} />));
     if (b.prop === "reels") sfx.push(<Sfx key={"a" + i} at={at - 14} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={"b" + i} at={at + Math.round(l.frames * 0.62)} src="audio/sfx_snap.wav" vol={0.5} />);
-    if (b.prop === "glitch") { const g = cueAt(l, 1, /^Amma$/i, at + Math.round(l.frames * 0.3)); sfx.push(<Sfx key={"a" + i} at={g - 12} src="reel/sfx_glitch.wav" vol={0.5} />); }
-    if (b.prop === "hangup") sfx.push(<Sfx key={"a" + i} at={end(l) - 2} src="reel/sfx_hangup.wav" vol={0.6} />, <Sfx key={"b" + i} at={end(l) - 2} src="reel/sfx_boom.wav" vol={0.95} />);
+    if (b.prop === "glitch") { const g = cueAt(l, 1, /^Amma$/i, at + Math.round(l.frames * 0.3)); sfx.push(<Sfx key={"a" + i} at={g - 14} src="reel/sfx_glitch.wav" vol={0.4} />); }
+    if (b.prop === "hangup") sfx.push(<Sfx key={"a" + i} at={end(l) + 2} src="reel/sfx_hangup.wav" vol={0.7} />, <Sfx key={"b" + i} at={end(l) + 2} src="reel/sfx_boom.wav" vol={1} />,
+      <Sfx key={"c" + i} at={end(l) + 2} src="audio/gag_bonk.wav" vol={0.6} />);   // the biggest hit of the skit
     if (b.prop === "plan") sfx.push(<Sfx key={"a" + i} at={at + 6} src="audio/sfx_pop.wav" vol={0.4} />);
-    if (b.prop === "saved") sfx.push(<Sfx key={"a" + i} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_success.wav" vol={0.4} />);
-    if (b.prop === "nextday") sfx.push(<Sfx key={"a" + i} at={at - 30} src="audio/sfx_whoosh.wav" vol={0.4} />, <Sfx key={"b" + i} at={at - 20} src="reel/sfx_buzz.wav" vol={0.6} />,
+    if (b.prop === "saved") sfx.push(<Sfx key={"a" + i} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_success.wav" vol={0.22} />);
+    if (b.prop === "nextday") sfx.push(<Sfx key={"a" + i} at={at - 53} src="audio/sfx_whoosh.wav" vol={0.4} />, <Sfx key={"b" + i} at={at - 22} src="reel/sfx_buzz.wav" vol={0.6} />,
       <Sfx key={"c" + i} at={end(l)} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={"d" + i} at={end(l)} src="audio/sfx_snap.wav" vol={0.5} />);
   });
   return (
@@ -394,7 +411,8 @@ const SkHome: React.FC<SP> = ({ s }) => {
         if (n === 2) { const q = easeOut(seg(p, 0, 0.6)); cam = { z: prev.z + (cam.z - prev.z) * q, x: prev.x + (cam.x - prev.x) * q, y: prev.y + (cam.y - prev.y) * q }; }
         if (n === 14) { const q = easeOut(seg(p, 0.1, 0.3)); cam = { ...cam, z: cam.z * (1 + 0.12 * q) }; }
         const z = cam.z * (1 + 0.03 * p);
-        const glitchOn = n === 13 ? seg(f, cueAt(ln, 1, /^Amma$/i, ln.from + ln.frames * 0.3) - 12, cueAt(ln, 1, /^Amma$/i, ln.from + ln.frames * 0.3) + 6) : 0;
+        const gAt = n === 13 ? cueAt(ln, 1, /^Amma$/i, ln.from + ln.frames * 0.3) : 0;   // the caller's voice breaks in the pause, before "Amma, no time!"
+        const glitchOn = n === 13 ? seg(f, gAt - 14, gAt - 2) : 0;
         const shake = glitchOn > 0 && glitchOn < 1 ? 8 : (n === 14 && p > 0.9 ? 10 : 0) + (f0 >= freezeAt ? Math.max(0, 1 - (f0 - freezeAt) / 10) * 12 : 0);
         const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
         const lastIsNext = lastB.prop === "nextday";
@@ -409,17 +427,19 @@ const SkHome: React.FC<SP> = ({ s }) => {
         const [cm, cp, clook] = CHINNU[n] ?? ["worried", "plate", -1];
         const amLook = n === 2 ? (p > 0.25 ? 1 : 2) : alook;
         person(c, "amma", am, ap, amLook, talkOf("amma"), p, f, r, { glow: n <= 14 || n === 18 });
-        person(c, "chinnu", n === 2 && p < 0.25 ? "chew" : cm, cp, clook, talkOf("chinnu"), p, f, r, { bite: n >= 2 });
+        const chMood = n === 1 ? (p > 0.42 ? "shock" : "chew") : n === 2 && p < 0.25 ? "shock" : cm;   // he freezes mid-bite on "It's me, Chinnu!"
+        person(c, "chinnu", chMood as Mood, cp, n === 1 && p > 0.42 ? -1 : clook, talkOf("chinnu"), p, f, r, { bite: n >= 2 });
         sofaFront(c, r);
         c.restore();
         // the call screen
         const secs = ((s as any).from ?? 0) / 30 + f / 30;
         if (n <= 14) {
           const muted = (n >= 4 && n <= 11) || (n === 12 && p < 0.15);
-          const g13 = n === 13 ? glitchOn * (1 - seg(f, cueAt(ln, 1, /^Amma$/i, ln.from) + 30, cueAt(ln, 1, /^Amma$/i, ln.from) + 40)) : 0;
-          const ended = n === 14 && f >= end(ln) - 2;
+          const g13 = n === 13 ? glitchOn * (1 - seg(f, gAt + 20, gAt + 30)) : 0;
+          const ended = n === 14 && f >= end(ln) + 2;   // the hang-up lands just after "Wrong answer."
           callCard(c, W, f, {
-            mode: n === 1 && p < 0.08 ? "ring" : ended ? "ended" : "call", secs, muted, talk: callerTalk,
+            mode: n === 1 && f < 4 ? "ring" : ended ? "ended" : "call", secs, muted, talk: callerTalk,
+            mutePop: n === 4 ? seg(f, ln.from - 6, ln.from + 22) : n === 12 ? seg(f, ln.from - 4, ln.from + 18) : 0, unmute: n === 12,
             banner: n === 3 ? seg(p, 0.45, 0.6) : n >= 4 && n <= 6 ? 1 : 0,
             flags: n === 5 ? seg(p, 0.05, 0.95) * 4 : n === 6 ? 4 : 0,
             glitch: g13 > 0 && g13 < 1 ? 1 : n === 13 && g13 >= 1 ? 0.6 : 0, shake: g13 > 0 && g13 < 1 ? 1 : 0,
@@ -434,8 +454,12 @@ const SkHome: React.FC<SP> = ({ s }) => {
         if (s.id === "sk2_a" && n <= 2) {
           const out = n === 2 ? 1 - seg(p, 0.6, 0.9) : 1;
           c.save(); c.globalAlpha = out;
-          tag(c, "Her son is sitting RIGHT HERE ↓", 600, 545, 54, COL.yellow, INK, -0.02, seg(f, 0, 5));
-          tag(c, "CHINNU (her son)", 790, 1010, 40, "#fff", INK, 0.03, seg(f, 4, 10));
+          const q = easeOut(seg(f, 0, 5));
+          c.save(); c.translate(660, 560); c.rotate(-0.03); c.scale(q, q);
+          c.fillStyle = COL.yellow; rrect(c, -300, -66, 600, 132, 22); c.fill();
+          c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center";
+          c.fillText("Her son CHINNU is", 0, -12); c.fillText("sitting RIGHT HERE ↓", 0, 40);
+          c.restore();
           c.restore();
         }
         if (n === 15) {   // the plan, on a sticky note
@@ -448,8 +472,12 @@ const SkHome: React.FC<SP> = ({ s }) => {
         }
         if (next) {   // NEXT DAY
           const l18 = ls[ls.length - 1];
-          const q = seg(f, nextAt, nextAt + 6) * (1 - seg(f, l18.from + 6, l18.from + 14));
-          if (q > 0) stamp(c, "NEXT DAY", W / 2, 800, 130, COL.red, q, r, -0.08);
+          const q = seg(f, nextAt, nextAt + 5) * (1 - seg(f, nextAt + 32, nextAt + 38));   // a second on screen, then the buzz
+          if (q > 0) {
+            c.save(); c.globalAlpha = 0.35 * q; c.fillStyle = "#fff7e6"; c.fillRect(0, 0, W, H); c.restore();
+            stamp(c, "NEXT DAY", W / 2, 820, 170, COL.red, q, r, -0.08);
+          }
+          void l18;
         }
         if (f0 >= freezeAt) {   // the freeze frame, then the loop snaps back to the ring
           c.save(); c.globalAlpha = 0.25; c.fillStyle = "#1e1b4b"; c.fillRect(0, 0, W, H); c.restore();
@@ -458,6 +486,8 @@ const SkHome: React.FC<SP> = ({ s }) => {
           c.font = caveat(170); c.textAlign = "center"; c.lineWidth = 14; c.strokeStyle = INK; c.strokeText("Code word?", 0, 0);
           c.fillStyle = COL.yellow; c.fillText("Code word?", 0, 0);
           c.restore();
+          c.save(); c.globalAlpha = k; c.fillStyle = "#dc2626"; rrect(c, 120, 1300, W - 240, 80, 22); c.fill();
+          c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Already sent money? Call 1930", W / 2, 1354); c.restore();
         }
       }} />
     </>

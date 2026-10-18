@@ -490,9 +490,10 @@ def lofi(total, scene_starts, pad=False, lifts=(), outro=None, layers=(), fade=0
         b += 1
     norm = np.max(np.abs(mix)) + 1e-9   # level set by the bed itself, so lifts and the outro layer do not push it down
     for t in lifts:
-        place(mix, riser(1.2) * 0.3, max(0.0, t - 1.2))
-        place(mix, kick808(42, 0.9, 2.0) * 0.55, t)
-        place(mix, boom(1.2) * 0.35, t)
+        t, g = t if isinstance(t, tuple) else (t, 1.0)   # (time, gain): a numeric "lift" on a scene sets its loudness
+        place(mix, riser(1.2) * 0.3 * g, max(0.0, t - 1.2))
+        place(mix, kick808(42, 0.9, 2.0) * 0.55 * g, t)
+        place(mix, boom(1.2) * 0.35 * g, t)
     if outro is not None or layers:
         t0, b = 0.0, 0
         while t0 < total:
@@ -602,7 +603,7 @@ def main(spec_path: Path) -> None:
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
     sf.write(out.parent / "sfx_riser.wav", (riser(1.2) * 0.8).astype(np.float32), MSR)   # a lift into a mid-scene reveal (scene SFX)
     starts = [s["from"] / FPS for s in scenes]
-    lifts = [scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("lift")]
+    lifts = [(scenes[i]["from"] / FPS, 1.0 if sc["lift"] is True else float(sc["lift"])) for i, sc in enumerate(spec["scenes"]) if sc.get("lift")]
     outro = next((scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("outro")), None)
     # "layer": <cue> on a scene = the brighter bed layer from that cue (snapped to the nearest bar) to the end of the scene
     beat_bar = 4 * 60 / 88

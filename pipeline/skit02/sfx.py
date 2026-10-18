@@ -46,9 +46,9 @@ def buzz():   # two vibration pulses
     return carrier * gate * 0.8
 
 
-def glitch():   # bit-crushed stutter + static, 0.7 s
+def glitch():   # bit-crushed stutter + static, 0.4 s (it has to fit the caller's pause)
     rng = np.random.default_rng(7)
-    n = int(0.7 * SR)
+    n = int(0.4 * SR)
     t = np.arange(n) / SR
     x = np.sign(np.sin(2 * np.pi * 220 * t * (1 + 0.5 * np.sin(2 * np.pi * 9 * t)))) * 0.35
     x += rng.normal(0, 0.25, n)

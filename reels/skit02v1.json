@@ -9,11 +9,11 @@
  "lead": 0.15,
  "music": "lofi",
  "musicVol": [
-  0.42,
-  1.1
+  0.4,
+  0.75
  ],
  "musicFade": 0.05,
- "endPad": 0.3,
+ "endPad": 0.65,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -86,7 +86,8 @@
      "text": "Amma! It's me, Chinnu! I lost my phone, this is a friend's!",
      "show": "Amma! It's me, Chinnu! I lost my phone, this is a friend's!",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "gain_db": -1.5
     },
     {
      "who": "amma",
@@ -102,7 +103,8 @@
      "text": "I had an accident! I need fifty thousand, right now!",
      "show": "I had an accident! I need fifty thousand, right now!",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "gain_db": -1.5
     },
     {
      "who": "chinnu",
@@ -110,7 +112,7 @@
      "text": "Amma, that's not me!",
      "show": "Amma, that's not me!",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.4
     },
     {
      "who": "caller",
@@ -118,7 +120,8 @@
      "text": "Don't tell Nanna! Send it to this number!",
      "show": "Don't tell Nanna! Send it to this number!",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "gain_db": -1.5
     },
     {
      "who": "amma",
@@ -134,7 +137,7 @@
    "id": "sk2_b",
    "type": "sk_home",
    "tail": 0.1,
-   "lift": true,
+   "lift": 0.55,
    "pre": 0.35,
    "data": {
     "beats": [
@@ -218,8 +221,9 @@
    "id": "sk2_c",
    "type": "sk_home",
    "tail": 0.15,
-   "boost": 0.45,
+   "boost": 0.3,
    "drop_cue": 1,
+   "pre": 0.5,
    "data": {
     "beats": [
      {
@@ -262,7 +266,8 @@
      "gap": 0.16,
      "pauses": {
       "1": 0.45
-     }
+     },
+     "gain_db": -1.5
     },
     {
      "who": "amma",
@@ -270,7 +275,8 @@
      "text": "Wrong answer.",
      "show": "Wrong answer.",
      "maxgap": 0.25,
-     "gap": 0.5
+     "gap": 0.5,
+     "gain_db": 3
     }
    ]
   },
@@ -279,7 +285,7 @@
    "type": "sk_home",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.0,
+   "boost": 0.85,
    "data": {
     "beats": [
      {
@@ -330,11 +336,11 @@
     {
      "who": "chinnu",
      "file": "17_chinnu.wav",
-     "text": "Cut the call. Then ring my saved number.",
-     "show": "Cut the call. Then ring my saved number.",
+     "text": "Cut the call. Then call my saved number.",
+     "show": "Cut the call. Then call my saved number.",
      "maxgap": 0.25,
-     "gap": 1.2,
-     "gain_db": 2
+     "gap": 1.9,
+     "gain_db": 1
     },
     {
      "who": "amma",

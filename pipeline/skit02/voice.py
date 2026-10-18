@@ -78,14 +78,14 @@ def judge(path, text, lang):
 
 
 def phone(path):
-    """The caller comes out of a phone speaker: band-limited 220-5000 Hz with a little saturation (light, so the voice
-    still reads as Chinnu's: viewer note)."""
+    """The caller comes out of a phone speaker: band-limited 300-4000 Hz with a little saturation (still Chinnu's
+    voice, but the two Chinnus must be told apart: render review)."""
     from scipy.signal import butter, sosfilt
     a, sr = sf.read(path)
     a = a.mean(axis=1) if a.ndim > 1 else a
-    x = sosfilt(butter(2, [220, 5000], "bp", fs=sr, output="sos"), a)
-    x = x + 0.2 * sosfilt(butter(2, [1500, 3500], "bp", fs=sr, output="sos"), x)
-    x = np.tanh(x / (np.abs(x).max() + 1e-9) * 1.3) / np.tanh(1.3)
+    x = sosfilt(butter(2, [300, 4000], "bp", fs=sr, output="sos"), a)
+    x = x + 0.3 * sosfilt(butter(2, [1500, 3200], "bp", fs=sr, output="sos"), x)
+    x = np.tanh(x / (np.abs(x).max() + 1e-9) * 1.5) / np.tanh(1.5)
     sf.write(path, (x * 0.9).astype(np.float32), sr)
 
 
