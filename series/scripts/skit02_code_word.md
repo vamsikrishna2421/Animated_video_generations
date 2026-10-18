@@ -1,4 +1,4 @@
-# Skit 02 "The call in my own voice" — script v2 (after the viewer script review)
+# Skit 02 "The call in my own voice" — script v3 (as voiced, after the render review)
 
 Format: a relatable home moment with an AI twist (one wide sitcom frame on the sofa + phone-screen inserts; not skit 01's
 shot/reverse-shot). Cast: AMMA (~55, sharp), CHINNU (~22, her son, eating dosa), the CALLER (Chinnu's voice, cloned,
@@ -24,6 +24,20 @@ Hook options (first frame + first line):
 2. Black screen, a crying voice note: "Amma, I'm in trouble..." then the reveal that the son is in the room.
    (Slower: the wrong thing only lands at 3 s.)
 3. Chinnu to camera: "My mom just got a call from me. I was sitting next to her." (A POV caption hook; tells, doesn't show.)
+
+v2 -> v3 (render review, English + Telugu panels; both would send it to family, "Just pretend" -> "Kanna..." -> "Wrong
+answer." is the best 10 s): the biggest hit was the lift into the insert, not the punchline -> that lift 5 dB down,
+"Wrong answer." +3 dB with the hit and the hang-up click just after the word, the caller lines 1.5 dB down (measured:
+"Wrong answer." is now the loudest moment); NEXT DAY flashed past and looked like a glitch -> held about 1 s, big, then
+the buzz, then the line, then a 0.6 s freeze; MUTED went unnoticed -> a big pop when Amma taps it, in a two-shot; the red
+flags were tiny handwriting -> big print chips; "Already sent money? Call 1930" on the contact card and the freeze frame
+(a forwarded video loses its caption); a breath between the real Chinnu and the caller, a little more phone tone; the
+music lower between lines and nearly out through the bluff, a longer hush before "Kanna..."; the call card reads "on
+speaker" as soon as he talks; a printed frame-1 sticker "Her son CHINNU is sitting RIGHT HERE"; the plate visible and
+Chinnu freezing mid-bite. Misheard words fixed on the way: "AI copied it" (heard "Hey/Pay I": the lift's kick on the
+word; the voice now starts 0.35 s after the cut), "Hang up" (heard "Hanna"/"Hena") -> "Cut the call", then "ring" (heard
+"bring") -> "Then call my saved number". Telugu: a looped take ("బూద బూద బూద") and two weak ones re-voiced after a
+strict per-line check; the glitch moved into the caller's pause so "అమ్మా, టైం లేదు!" is audible.
 
 v1 -> v2 (viewer script review: with sound off both viewers scrolled past; with sound on the hook worked and "Just
 pretend" -> "Kanna..." -> "Wrong answer." was the best 10 s; after the hang-up it turned into a lecture):
@@ -53,7 +67,7 @@ hit on "Wrong answer."; red flags stay up through line 6; contact card "Chinnu �
 | 14 | Amma | Wrong answer. | taps the red button; biggest hit; "CALL ENDED" |
 | 15 | Chinnu | Tonight we pick a real one. Not in the family group! | |
 | 16 | Amma | And if I forget it? | |
-| 17 | Chinnu | Cut the call. Then ring my saved number. | contact card "Chinnu ✓ saved" |
+| 17 | Chinnu | Cut the call. Then call my saved number. | contact card "Chinnu ✓ saved" |
 | 18 | Amma | (NEXT DAY; the phone buzzes "Unknown number"; she picks up, smiling) Code word? | freeze; loops to frame 1 |
 
 Telugu (same beats; English on-screen text):
