@@ -271,7 +271,7 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
   c.font = SANS(30, 500); c.fillStyle = "#94a3b8";
   const sub = ring ? "incoming call · +91 ••••• ••742" : k.mode === "ended" ? "call ended" : `on speaker · 00:${String(Math.floor(k.secs)).padStart(2, "0")}`;
   c.fillText(sub, x + 192, y + 146);
-  if (k.muted) { c.fillStyle = "#dc2626"; rrect(c, x + w - 236, y + 20, 206, 66, 33); c.fill(); c.font = SANS(38); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("🔇 MUTED", x + w - 133, y + 66); c.textAlign = "left"; }
+  if (k.muted) { c.fillStyle = "#dc2626"; rrect(c, x + w - 236, y + 112, 206, 62, 31); c.fill(); c.font = SANS(36); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("🔇 MUTED", x + w - 133, y + 155); c.textAlign = "left"; }   // beside the status line, clear of the title
   // the caller's sound wave (red and jagged when the cloned voice breaks)
   const bars = k.mode === "incoming" ? 20 : 34;   // room for the answer / decline buttons
   for (let i = 0; i < bars; i++) {
@@ -464,6 +464,10 @@ const SkHome: React.FC<SP> = ({ s }) => {
           c.fillText("Her son CHINNU is", 0, -12); c.fillText("sitting RIGHT HERE ↓", 0, 40);
           c.restore();
           c.restore();
+        }
+        if (n === 14 && f >= end(ln) + 2) {   // the punchline stays readable through the hit (the caption is gone by then)
+          const q = seg(f, end(ln) + 2, end(ln) + 6);
+          stamp(c, "WRONG ANSWER.", W / 2, 1180, 110, COL.red, q, r, -0.06);
         }
         if (n === 15) {   // the plan, on a sticky note
           const q = seg(p, 0.05, 0.2);
