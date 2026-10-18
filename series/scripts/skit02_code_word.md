@@ -36,7 +36,9 @@ music lower between lines and nearly out through the bluff, a longer hush before
 speaker" as soon as he talks; a printed frame-1 sticker "Her son CHINNU is sitting RIGHT HERE"; the plate visible and
 Chinnu freezing mid-bite. Misheard words fixed on the way: "AI copied it" (heard "Hey/Pay I": the lift's kick on the
 word; the voice now starts 0.35 s after the cut), "Hang up" (heard "Hanna"/"Hena") -> "Cut the call", then "ring" (heard
-"bring") -> "Then call my saved number". Telugu: a looped take ("బూద బూద బూద") and two weak ones re-voiced after a
+"bring") -> "Then call my saved number"; at the final check "Cut the call" still read "Cut the code" (the video's
+key word) -> "Disconnect. Then call my saved number."; MUTED now pops in the caller's last beat, before Chinnu speaks;
+1930 labelled "cyber crime helpline". Telugu: a looped take ("బూద బూద బూద") and two weak ones re-voiced after a
 strict per-line check; the glitch moved into the caller's pause so "అమ్మా, టైం లేదు!" is audible.
 
 v1 -> v2 (viewer script review: with sound off both viewers scrolled past; with sound on the hook worked and "Just
@@ -67,7 +69,7 @@ hit on "Wrong answer."; red flags stay up through line 6; contact card "Chinnu �
 | 14 | Amma | Wrong answer. | taps the red button; biggest hit; "CALL ENDED" |
 | 15 | Chinnu | Tonight we pick a real one. Not in the family group! | |
 | 16 | Amma | And if I forget it? | |
-| 17 | Chinnu | Cut the call. Then call my saved number. | contact card "Chinnu ✓ saved" |
+| 17 | Chinnu | Disconnect. Then call my saved number. | contact card "Chinnu ✓ saved" |
 | 18 | Amma | (NEXT DAY; the phone buzzes "Unknown number"; she picks up, smiling) Code word? | freeze; loops to frame 1 |
 
 Telugu (same beats; English on-screen text):

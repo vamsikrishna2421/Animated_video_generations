@@ -26,7 +26,7 @@ LINES = [
     ("amma", "hangup", "Wrong answer.", "రాంగ్ ఆన్సర్!"),
     ("chinnu", "plan", "Tonight we pick a real one. Not in the family group!", "ఈ రాత్రే అసలు కోడ్ వర్డ్ పెట్టుకుందాం. ఫ్యామిలీ గ్రూప్ లో మాత్రం పెట్టొద్దు!"),
     ("amma", "", "And if I forget it?", "మర్చిపోతే?"),
-    ("chinnu", "saved", "Cut the call. Then call my saved number.", "కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్."),   # "Hang up." was heard "Hanna"/"Hena"
+    ("chinnu", "saved", "Disconnect. Then call my saved number.", "కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్."),   # "Hang up." was heard "Hanna"/"Hena"
     ("amma", "nextday", "Code word?", "కోడ్ వర్డ్?"),
 ]
 # Sound: a hit with the first ring; the bed builds under the scam (rise), drops out before "Kanna..." (drop_at), the

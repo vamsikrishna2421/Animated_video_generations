@@ -254,9 +254,10 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
     c.font = SANS(64); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("C", x + 110, y + 158);
     c.textAlign = "left"; c.font = SANS(58); c.fillText("Chinnu", x + 210, y + 118);
     c.font = SANS(34, 600); c.fillStyle = "#86efac"; c.fillText("✓ saved · my number", x + 212, y + 170);
-    c.font = SANS(30, 500); c.fillStyle = "#94a3b8"; c.fillText("cut the call, call back here", x + 212, y + 214);
-    c.fillStyle = "#dc2626"; rrect(c, x + 30, y + h + 20, w - 60, 72, 20); c.fill();   // forwards lose the caption: the helpline in the video
-    c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Already sent money? Call 1930", x + w / 2, y + h + 70); c.textAlign = "left";
+    c.font = SANS(30, 500); c.fillStyle = "#94a3b8"; c.fillText("disconnect, call back here", x + 212, y + 214);
+    c.fillStyle = "#dc2626"; rrect(c, x + 30, y + h + 20, w - 60, 104, 20); c.fill();   // forwards lose the caption: the helpline in the video
+    c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Already sent money? Call 1930", x + w / 2, y + h + 66);
+    c.font = SANS(28, 600); c.fillText("(cyber crime helpline)", x + w / 2, y + h + 104); c.textAlign = "left";
     c.restore(); return;
   }
   const ring = k.mode === "ring" || k.mode === "incoming";
@@ -374,7 +375,7 @@ const SkHome: React.FC<SP> = ({ s }) => {
     if (b.prop === "ring") sfx.push(<Sfx key={"a" + i} at={0} src="reel/sfx_ring1.wav" vol={0.3} />, <Sfx key={"b" + i} at={0} src="reel/sfx_boom.wav" vol={0.55} />);
     if (b.prop === "turn") sfx.push(<Sfx key={"a" + i} at={at - 4} src="audio/sfx_whoosh.wav" vol={0.3} />);
     if (b.prop === "money") sfx.push(<Sfx key={"a" + i} at={at + Math.round(l.frames * 0.55)} src="audio/sfx_chaching.wav" vol={0.35} />);
-    if (b.prop === "mute" || b.prop === "unmute") sfx.push(<Sfx key={"a" + i} at={at - 6} src="audio/sfx_tick.wav" vol={0.55} />);
+    if (b.prop === "mute" || b.prop === "unmute") sfx.push(<Sfx key={"a" + i} at={at - (b.prop === "mute" ? 12 : 6)} src="audio/sfx_tick.wav" vol={0.55} />);
     if (b.prop === "flags") [0, 1, 2, 3].forEach((k) => sfx.push(<Sfx key={"f" + i + k} at={at + 4 + k * Math.round(l.frames / 5)} src="audio/sfx_pop.wav" vol={0.35} />));
     if (b.prop === "reels") sfx.push(<Sfx key={"a" + i} at={at - 14} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={"b" + i} at={at + Math.round(l.frames * 0.62)} src="audio/sfx_snap.wav" vol={0.5} />);
     if (b.prop === "glitch") { const g = cueAt(l, 1, /^Amma$/i, at + Math.round(l.frames * 0.3)); sfx.push(<Sfx key={"a" + i} at={g - 14} src="reel/sfx_glitch.wav" vol={0.4} />); }
@@ -423,7 +424,9 @@ const SkHome: React.FC<SP> = ({ s }) => {
         c.save();
         c.translate(540 + sx, 960 + sy); c.scale(z, z); c.translate(-cam.x, -cam.y);
         room(c, r, day);
-        const [am, ap, alook] = next && n !== 18 ? ["sus", "phone", 2] as [Mood, Pose, number] : AMMA[n] ?? ["worried", "phone", 0];
+        const muteLine = ls[beats.findIndex((x) => x.prop === "mute")];
+        const muteAt = muteLine ? muteLine.from - 12 : Infinity;   // she taps MUTE in the caller's last beat, before Chinnu speaks
+        const [am, ap, alook] = next && n !== 18 ? ["sus", "phone", 2] as [Mood, Pose, number] : n === 3 && f >= muteAt ? ["stern", "tap", 2] as [Mood, Pose, number] : AMMA[n] ?? ["worried", "phone", 0];
         const [cm, cp, clook] = CHINNU[n] ?? ["worried", "plate", -1];
         const amLook = n === 2 ? (p > 0.25 ? 1 : 2) : alook;
         person(c, "amma", am, ap, amLook, talkOf("amma"), p, f, r, { glow: n <= 14 || n === 18 });
@@ -434,12 +437,12 @@ const SkHome: React.FC<SP> = ({ s }) => {
         // the call screen
         const secs = ((s as any).from ?? 0) / 30 + f / 30;
         if (n <= 14) {
-          const muted = (n >= 4 && n <= 11) || (n === 12 && p < 0.15);
+          const muted = (n >= 4 && n <= 11) || (n === 12 && p < 0.15) || (n === 3 && f >= muteAt);
           const g13 = n === 13 ? glitchOn * (1 - seg(f, gAt + 20, gAt + 30)) : 0;
           const ended = n === 14 && f >= end(ln) + 2;   // the hang-up lands just after "Wrong answer."
           callCard(c, W, f, {
             mode: n === 1 && f < 4 ? "ring" : ended ? "ended" : "call", secs, muted, talk: callerTalk,
-            mutePop: n === 4 ? seg(f, ln.from - 6, ln.from + 22) : n === 12 ? seg(f, ln.from - 4, ln.from + 18) : 0, unmute: n === 12,
+            mutePop: n === 3 || n === 4 ? seg(f, muteAt, muteAt + 28) : n === 12 ? seg(f, ln.from - 4, ln.from + 18) : 0, unmute: n === 12,
             banner: n === 3 ? seg(p, 0.45, 0.6) : n >= 4 && n <= 6 ? 1 : 0,
             flags: n === 5 ? seg(p, 0.05, 0.95) * 4 : n === 6 ? 4 : 0,
             glitch: g13 > 0 && g13 < 1 ? 1 : n === 13 && g13 >= 1 ? 0.6 : 0, shake: g13 > 0 && g13 < 1 ? 1 : 0,
@@ -486,8 +489,9 @@ const SkHome: React.FC<SP> = ({ s }) => {
           c.font = caveat(170); c.textAlign = "center"; c.lineWidth = 14; c.strokeStyle = INK; c.strokeText("Code word?", 0, 0);
           c.fillStyle = COL.yellow; c.fillText("Code word?", 0, 0);
           c.restore();
-          c.save(); c.globalAlpha = k; c.fillStyle = "#dc2626"; rrect(c, 120, 1300, W - 240, 80, 22); c.fill();
-          c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Already sent money? Call 1930", W / 2, 1354); c.restore();
+          c.save(); c.globalAlpha = k; c.fillStyle = "#dc2626"; rrect(c, 120, 1290, W - 240, 112, 22); c.fill();
+          c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("Already sent money? Call 1930", W / 2, 1338);
+          c.font = SANS(28, 600); c.fillText("(cyber crime helpline)", W / 2, 1378); c.restore();
         }
       }} />
     </>
