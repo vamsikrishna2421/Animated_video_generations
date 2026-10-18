@@ -136,6 +136,7 @@
    "type": "sk_home",
    "tail": 0.1,
    "lift": true,
+   "pre": 0.35,
    "data": {
     "beats": [
      {
@@ -278,7 +279,7 @@
    "type": "sk_home",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.0,
    "data": {
     "beats": [
      {
@@ -330,9 +331,10 @@
      "who": "chinnu",
      "file": "17_chinnu.wav",
      "text": "కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్.",
-     "show": "Hang up. Call my saved number.",
+     "show": "Cut the call. Then ring my saved number.",
      "maxgap": 0.3,
-     "gap": 1.2
+     "gap": 1.2,
+     "gain_db": 2
     },
     {
      "who": "amma",

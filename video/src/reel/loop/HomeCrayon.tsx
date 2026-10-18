@@ -252,7 +252,7 @@ const callCard = (c: Ctx, W: number, f: number, k: Call, r: () => number) => {
     c.font = SANS(64); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("C", x + 110, y + 158);
     c.textAlign = "left"; c.font = SANS(58); c.fillText("Chinnu", x + 210, y + 118);
     c.font = SANS(34, 600); c.fillStyle = "#86efac"; c.fillText("✓ saved · my number", x + 212, y + 170);
-    c.font = SANS(28, 500); c.fillStyle = "#94a3b8"; c.fillText("hang up, call back here", x + 212, y + 214);
+    c.font = SANS(28, 500); c.fillStyle = "#94a3b8"; c.fillText("cut the call, ring this number", x + 212, y + 214);
     c.restore(); return;
   }
   const ring = k.mode === "ring" || k.mode === "incoming";
@@ -360,7 +360,7 @@ const SkHome: React.FC<SP> = ({ s }) => {
     if (b.prop === "money") sfx.push(<Sfx key={"a" + i} at={at + Math.round(l.frames * 0.55)} src="audio/sfx_chaching.wav" vol={0.35} />);
     if (b.prop === "mute" || b.prop === "unmute") sfx.push(<Sfx key={"a" + i} at={at - 6} src="audio/sfx_tick.wav" vol={0.55} />);
     if (b.prop === "flags") [0, 1, 2, 3].forEach((k) => sfx.push(<Sfx key={"f" + i + k} at={at + 4 + k * Math.round(l.frames / 5)} src="audio/sfx_pop.wav" vol={0.35} />));
-    if (b.prop === "reels") sfx.push(<Sfx key={"a" + i} at={at - 3} src="audio/sfx_whoosh.wav" vol={0.45} />, <Sfx key={"b" + i} at={at + Math.round(l.frames * 0.62)} src="audio/sfx_snap.wav" vol={0.5} />);
+    if (b.prop === "reels") sfx.push(<Sfx key={"a" + i} at={at - 14} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={"b" + i} at={at + Math.round(l.frames * 0.62)} src="audio/sfx_snap.wav" vol={0.5} />);
     if (b.prop === "glitch") { const g = cueAt(l, 1, /^Amma$/i, at + Math.round(l.frames * 0.3)); sfx.push(<Sfx key={"a" + i} at={g - 12} src="reel/sfx_glitch.wav" vol={0.5} />); }
     if (b.prop === "hangup") sfx.push(<Sfx key={"a" + i} at={end(l) - 2} src="reel/sfx_hangup.wav" vol={0.6} />, <Sfx key={"b" + i} at={end(l) - 2} src="reel/sfx_boom.wav" vol={0.95} />);
     if (b.prop === "plan") sfx.push(<Sfx key={"a" + i} at={at + 6} src="audio/sfx_pop.wav" vol={0.4} />);

@@ -53,7 +53,7 @@ hit on "Wrong answer."; red flags stay up through line 6; contact card "Chinnu �
 | 14 | Amma | Wrong answer. | taps the red button; biggest hit; "CALL ENDED" |
 | 15 | Chinnu | Tonight we pick a real one. Not in the family group! | |
 | 16 | Amma | And if I forget it? | |
-| 17 | Chinnu | Hang up. Call my saved number. | contact card "Chinnu ✓ saved" |
+| 17 | Chinnu | Cut the call. Then ring my saved number. | contact card "Chinnu ✓ saved" |
 | 18 | Amma | (NEXT DAY; the phone buzzes "Unknown number"; she picks up, smiling) Code word? | freeze; loops to frame 1 |
 
 Telugu (same beats; English on-screen text):

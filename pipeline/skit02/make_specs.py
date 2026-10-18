@@ -26,17 +26,17 @@ LINES = [
     ("amma", "hangup", "Wrong answer.", "రాంగ్ ఆన్సర్!"),
     ("chinnu", "plan", "Tonight we pick a real one. Not in the family group!", "ఈ రాత్రే అసలు కోడ్ వర్డ్ పెట్టుకుందాం. ఫ్యామిలీ గ్రూప్ లో మాత్రం పెట్టొద్దు!"),
     ("amma", "", "And if I forget it?", "మర్చిపోతే?"),
-    ("chinnu", "saved", "Hang up. Call my saved number.", "కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్."),
+    ("chinnu", "saved", "Cut the call. Then ring my saved number.", "కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్."),   # "Hang up." was heard "Hanna"/"Hena"
     ("amma", "nextday", "Code word?", "కోడ్ వర్డ్?"),
 ]
 # Sound: a hit with the first ring; the bed builds under the scam (rise), drops out before "Kanna..." (drop_at), the
 # biggest hit on "Wrong answer." (the scene's own boom), a lift into the plan, a hard stop after the last "Code word?"
 SCENES = [("sk2_a", 0, 6, {"rise": 1.35, "tail": 0.1}),
-          ("sk2_b", 6, 11, {"lift": True, "tail": 0.1}),
+          ("sk2_b", 6, 11, {"lift": True, "pre": 0.35, "tail": 0.1}),   # the lift's kick covered "A.I." ("Pay I copied it")
           ("sk2_c", 11, 14, {"boost": 0.45, "drop_cue": 1, "tail": 0.15}),   # the bluff: quiet, the bed drops out before "Kanna..."
-          ("sk2_d", 14, 18, {"outro": True, "boost": 1.2, "tail": 0.0})]   # no lift boom here: "Wrong answer." stays the biggest hit
+          ("sk2_d", 14, 18, {"outro": True, "boost": 1.0, "tail": 0.0})]   # no lift boom here: "Wrong answer." stays the biggest hit
 PAUSES = {"en": {13: {"1": 0.45}}, "te": {13: {"1": 0.55}}}   # the caller hesitates after "Code word?"
-TTS_EN = {}
+TTS_EN = {7: "A.I. copied it. From my reels."}   # "AI copied it" was heard "Hey, I copied it" (render review)
 YT = {"sk2_a": "A call in his own voice", "sk2_b": "AI copied it", "sk2_c": "The code word", "sk2_d": "Next day"}
 
 
@@ -66,6 +66,8 @@ def spec(lang):
                 ln["tts"] = TTS_EN[i + 1]
             if (i + 1) in PAUSES[lang]:
                 ln["pauses"] = PAUSES[lang][i + 1]
+            if i == 16:
+                ln["gain_db"] = 2   # the key instruction sits a little above the plan's brighter bed
             lines.append(ln)
             beats.append({"who": who, "prop": prop, "n": i + 1})
         data = {"beats": beats, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}

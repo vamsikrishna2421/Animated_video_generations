@@ -1,0 +1,964 @@
+{
+ "id": "skit02te",
+ "look": "classic",
+ "topic": "",
+ "banner": "The call in my own voice",
+ "musicVol": [
+  0.42,
+  1.1
+ ],
+ "title": "The call in my own voice (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   734,
+   758
+  ]
+ ],
+ "musicBoosts": [
+  [
+   757,
+   1002,
+   0.45
+  ],
+  [
+   1002,
+   1314,
+   1.0
+  ],
+  [
+   0,
+   430,
+   1.35,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1314,
+ "music": "reel/skit02te/score.wav",
+ "scenes": [
+  {
+   "id": "sk2_a",
+   "type": "sk_home",
+   "data": {
+    "beats": [
+     {
+      "who": "caller",
+      "prop": "ring",
+      "n": 1
+     },
+     {
+      "who": "amma",
+      "prop": "turn",
+      "n": 2
+     },
+     {
+      "who": "caller",
+      "prop": "money",
+      "n": 3
+     },
+     {
+      "who": "chinnu",
+      "prop": "mute",
+      "n": 4
+     },
+     {
+      "who": "caller",
+      "prop": "flags",
+      "n": 5
+     },
+     {
+      "who": "amma",
+      "prop": "whisper",
+      "n": 6
+     }
+    ],
+    "yt": {
+     "chapter": "A call in his own voice",
+     "title": "A call in his own voice",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 430,
+   "lines": [
+    {
+     "who": "caller",
+     "name": "Unknown number",
+     "color": "#F87171",
+     "sub": null,
+     "audio": "reel/skit02te/line_01.wav",
+     "from": 4,
+     "frames": 122,
+     "words": [
+      {
+       "w": "Amma!",
+       "from": 5,
+       "to": 14
+      },
+      {
+       "w": "It's",
+       "from": 14,
+       "to": 31
+      },
+      {
+       "w": "me,",
+       "from": 31,
+       "to": 43
+      },
+      {
+       "w": "Chinnu!",
+       "from": 43,
+       "to": 63
+      },
+      {
+       "w": "I",
+       "from": 63,
+       "to": 66
+      },
+      {
+       "w": "lost",
+       "from": 66,
+       "to": 73
+      },
+      {
+       "w": "my",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "phone,",
+       "from": 78,
+       "to": 91
+      },
+      {
+       "w": "this",
+       "from": 91,
+       "to": 98
+      },
+      {
+       "w": "is",
+       "from": 98,
+       "to": 102
+      },
+      {
+       "w": "a",
+       "from": 102,
+       "to": 105
+      },
+      {
+       "w": "friend's!",
+       "from": 105,
+       "to": 123
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_02.wav",
+     "from": 135,
+     "frames": 16,
+     "words": [
+      {
+       "w": "Chinnu?",
+       "from": 137,
+       "to": 151
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "caller",
+     "name": "Unknown number",
+     "color": "#F87171",
+     "sub": null,
+     "audio": "reel/skit02te/line_03.wav",
+     "from": 158,
+     "frames": 83,
+     "words": [
+      {
+       "w": "I",
+       "from": 160,
+       "to": 162
+      },
+      {
+       "w": "had",
+       "from": 162,
+       "to": 168
+      },
+      {
+       "w": "an",
+       "from": 168,
+       "to": 172
+      },
+      {
+       "w": "accident!",
+       "from": 172,
+       "to": 195
+      },
+      {
+       "w": "I",
+       "from": 195,
+       "to": 198
+      },
+      {
+       "w": "need",
+       "from": 198,
+       "to": 205
+      },
+      {
+       "w": "fifty",
+       "from": 205,
+       "to": 213
+      },
+      {
+       "w": "thousand,",
+       "from": 213,
+       "to": 227
+      },
+      {
+       "w": "right",
+       "from": 227,
+       "to": 235
+      },
+      {
+       "w": "now!",
+       "from": 235,
+       "to": 242
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit02te/line_04.wav",
+     "from": 250,
+     "frames": 41,
+     "words": [
+      {
+       "w": "Amma,",
+       "from": 251,
+       "to": 266
+      },
+      {
+       "w": "that's",
+       "from": 266,
+       "to": 278
+      },
+      {
+       "w": "not",
+       "from": 278,
+       "to": 284
+      },
+      {
+       "w": "me!",
+       "from": 284,
+       "to": 291
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "caller",
+     "name": "Unknown number",
+     "color": "#F87171",
+     "sub": null,
+     "audio": "reel/skit02te/line_05.wav",
+     "from": 299,
+     "frames": 70,
+     "words": [
+      {
+       "w": "Don't",
+       "from": 299,
+       "to": 308
+      },
+      {
+       "w": "tell",
+       "from": 308,
+       "to": 315
+      },
+      {
+       "w": "Nanna!",
+       "from": 315,
+       "to": 335
+      },
+      {
+       "w": "Send",
+       "from": 335,
+       "to": 342
+      },
+      {
+       "w": "it",
+       "from": 342,
+       "to": 346
+      },
+      {
+       "w": "to",
+       "from": 346,
+       "to": 350
+      },
+      {
+       "w": "this",
+       "from": 350,
+       "to": 357
+      },
+      {
+       "w": "number!",
+       "from": 357,
+       "to": 369
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_06.wav",
+     "from": 377,
+     "frames": 36,
+     "words": [
+      {
+       "w": "But",
+       "from": 378,
+       "to": 383
+      },
+      {
+       "w": "it's",
+       "from": 383,
+       "to": 397
+      },
+      {
+       "w": "YOUR",
+       "from": 397,
+       "to": 404
+      },
+      {
+       "w": "voice!",
+       "from": 404,
+       "to": 413
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "sk2_b",
+   "type": "sk_home",
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "reels",
+      "n": 7
+     },
+     {
+      "who": "amma",
+      "prop": "",
+      "n": 8
+     },
+     {
+      "who": "chinnu",
+      "prop": "",
+      "n": 9
+     },
+     {
+      "who": "amma",
+      "prop": "",
+      "n": 10
+     },
+     {
+      "who": "chinnu",
+      "prop": "",
+      "n": 11
+     }
+    ],
+    "yt": {
+     "chapter": "AI copied it",
+     "title": "AI copied it",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 430,
+   "frames": 327,
+   "lines": [
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit02te/line_07.wav",
+     "from": 10,
+     "frames": 90,
+     "words": [
+      {
+       "w": "AI",
+       "from": 13,
+       "to": 20
+      },
+      {
+       "w": "copied",
+       "from": 20,
+       "to": 36
+      },
+      {
+       "w": "it.",
+       "from": 36,
+       "to": 45
+      },
+      {
+       "w": "From",
+       "from": 45,
+       "to": 56
+      },
+      {
+       "w": "my",
+       "from": 56,
+       "to": 73
+      },
+      {
+       "w": "reels.",
+       "from": 73,
+       "to": 97
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_08.wav",
+     "from": 109,
+     "frames": 57,
+     "words": [
+      {
+       "w": "Then",
+       "from": 110,
+       "to": 116
+      },
+      {
+       "w": "how",
+       "from": 116,
+       "to": 122
+      },
+      {
+       "w": "will",
+       "from": 122,
+       "to": 128
+      },
+      {
+       "w": "I",
+       "from": 128,
+       "to": 131
+      },
+      {
+       "w": "ever",
+       "from": 131,
+       "to": 138
+      },
+      {
+       "w": "know",
+       "from": 138,
+       "to": 144
+      },
+      {
+       "w": "it's",
+       "from": 144,
+       "to": 151
+      },
+      {
+       "w": "you?",
+       "from": 151,
+       "to": 162
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit02te/line_09.wav",
+     "from": 173,
+     "frames": 43,
+     "words": [
+      {
+       "w": "Ask",
+       "from": 174,
+       "to": 180
+      },
+      {
+       "w": "for",
+       "from": 180,
+       "to": 191
+      },
+      {
+       "w": "our",
+       "from": 191,
+       "to": 197
+      },
+      {
+       "w": "code",
+       "from": 197,
+       "to": 204
+      },
+      {
+       "w": "word.",
+       "from": 204,
+       "to": 212
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_10.wav",
+     "from": 224,
+     "frames": 45,
+     "words": [
+      {
+       "w": "We",
+       "from": 227,
+       "to": 231
+      },
+      {
+       "w": "have",
+       "from": 231,
+       "to": 244
+      },
+      {
+       "w": "a",
+       "from": 244,
+       "to": 247
+      },
+      {
+       "w": "code",
+       "from": 247,
+       "to": 254
+      },
+      {
+       "w": "word?",
+       "from": 254,
+       "to": 263
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit02te/line_11.wav",
+     "from": 276,
+     "frames": 35,
+     "words": [
+      {
+       "w": "Just",
+       "from": 280,
+       "to": 292
+      },
+      {
+       "w": "pretend!",
+       "from": 292,
+       "to": 307
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "sk2_c",
+   "type": "sk_home",
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "unmute",
+      "n": 12
+     },
+     {
+      "who": "caller",
+      "prop": "glitch",
+      "n": 13
+     },
+     {
+      "who": "amma",
+      "prop": "hangup",
+      "n": 14
+     }
+    ],
+    "yt": {
+     "chapter": "The code word",
+     "title": "The code word",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 757,
+   "frames": 245,
+   "lines": [
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_12.wav",
+     "from": 0,
+     "frames": 66,
+     "words": [
+      {
+       "w": "Kanna...",
+       "from": 1,
+       "to": 23
+      },
+      {
+       "w": "what's",
+       "from": 23,
+       "to": 35
+      },
+      {
+       "w": "our",
+       "from": 35,
+       "to": 39
+      },
+      {
+       "w": "code",
+       "from": 39,
+       "to": 45
+      },
+      {
+       "w": "word?",
+       "from": 45,
+       "to": 52
+      }
+     ],
+     "cues": {
+      "1": 1
+     }
+    },
+    {
+     "who": "caller",
+     "name": "Unknown number",
+     "color": "#F87171",
+     "sub": null,
+     "audio": "reel/skit02te/line_13.wav",
+     "from": 74,
+     "frames": 108,
+     "words": [
+      {
+       "w": "Code",
+       "from": 75,
+       "to": 82
+      },
+      {
+       "w": "word?",
+       "from": 82,
+       "to": 117
+      },
+      {
+       "w": "Amma,",
+       "from": 117,
+       "to": 131
+      },
+      {
+       "w": "no",
+       "from": 131,
+       "to": 136
+      },
+      {
+       "w": "time!",
+       "from": 136,
+       "to": 160
+      },
+      {
+       "w": "Just",
+       "from": 160,
+       "to": 168
+      },
+      {
+       "w": "send",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "w": "it!",
+       "from": 176,
+       "to": 182
+      }
+     ],
+     "cues": {
+      "1": 114
+     }
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_14.wav",
+     "from": 190,
+     "frames": 23,
+     "words": [
+      {
+       "w": "Wrong",
+       "from": 192,
+       "to": 199
+      },
+      {
+       "w": "answer.",
+       "from": 199,
+       "to": 209
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "sk2_d",
+   "type": "sk_home",
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "plan",
+      "n": 15
+     },
+     {
+      "who": "amma",
+      "prop": "",
+      "n": 16
+     },
+     {
+      "who": "chinnu",
+      "prop": "saved",
+      "n": 17
+     },
+     {
+      "who": "amma",
+      "prop": "nextday",
+      "n": 18
+     }
+    ],
+    "yt": {
+     "chapter": "Next day",
+     "title": "Next day",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1002,
+   "frames": 312,
+   "lines": [
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit02te/line_15.wav",
+     "from": 0,
+     "frames": 130,
+     "words": [
+      {
+       "w": "Tonight",
+       "from": 1,
+       "to": 24
+      },
+      {
+       "w": "we",
+       "from": 24,
+       "to": 30
+      },
+      {
+       "w": "pick",
+       "from": 30,
+       "to": 45
+      },
+      {
+       "w": "a",
+       "from": 45,
+       "to": 49
+      },
+      {
+       "w": "real",
+       "from": 49,
+       "to": 59
+      },
+      {
+       "w": "one.",
+       "from": 59,
+       "to": 80
+      },
+      {
+       "w": "Not",
+       "from": 80,
+       "to": 88
+      },
+      {
+       "w": "in",
+       "from": 88,
+       "to": 94
+      },
+      {
+       "w": "the",
+       "from": 94,
+       "to": 102
+      },
+      {
+       "w": "family",
+       "from": 102,
+       "to": 116
+      },
+      {
+       "w": "group!",
+       "from": 116,
+       "to": 130
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_16.wav",
+     "from": 138,
+     "frames": 25,
+     "words": [
+      {
+       "w": "And",
+       "from": 140,
+       "to": 144
+      },
+      {
+       "w": "if",
+       "from": 144,
+       "to": 147
+      },
+      {
+       "w": "I",
+       "from": 147,
+       "to": 149
+      },
+      {
+       "w": "forget",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "it?",
+       "from": 155,
+       "to": 159
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/skit02te/line_17.wav",
+     "from": 171,
+     "frames": 77,
+     "words": [
+      {
+       "w": "Cut",
+       "from": 172,
+       "to": 182
+      },
+      {
+       "w": "the",
+       "from": 182,
+       "to": 189
+      },
+      {
+       "w": "call.",
+       "from": 189,
+       "to": 199
+      },
+      {
+       "w": "Then",
+       "from": 199,
+       "to": 207
+      },
+      {
+       "w": "ring",
+       "from": 207,
+       "to": 215
+      },
+      {
+       "w": "my",
+       "from": 215,
+       "to": 220
+      },
+      {
+       "w": "saved",
+       "from": 220,
+       "to": 230
+      },
+      {
+       "w": "number.",
+       "from": 230,
+       "to": 244
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit02te/line_18.wav",
+     "from": 284,
+     "frames": 17,
+     "words": [
+      {
+       "w": "Code",
+       "from": 285,
+       "to": 291
+      },
+      {
+       "w": "word?",
+       "from": 291,
+       "to": 297
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}

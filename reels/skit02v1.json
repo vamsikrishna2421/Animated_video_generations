@@ -135,6 +135,7 @@
    "type": "sk_home",
    "tail": 0.1,
    "lift": true,
+   "pre": 0.35,
    "data": {
     "beats": [
      {
@@ -176,7 +177,8 @@
      "text": "AI copied it. From my reels.",
      "show": "AI copied it. From my reels.",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "tts": "A.I. copied it. From my reels."
     },
     {
      "who": "amma",
@@ -277,7 +279,7 @@
    "type": "sk_home",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.0,
    "data": {
     "beats": [
      {
@@ -328,10 +330,11 @@
     {
      "who": "chinnu",
      "file": "17_chinnu.wav",
-     "text": "Hang up. Call my saved number.",
-     "show": "Hang up. Call my saved number.",
+     "text": "Cut the call. Then ring my saved number.",
+     "show": "Cut the call. Then ring my saved number.",
      "maxgap": 0.25,
-     "gap": 1.2
+     "gap": 1.2,
+     "gain_db": 2
     },
     {
      "who": "amma",
