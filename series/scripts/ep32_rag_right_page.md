@@ -44,6 +44,13 @@ headings crown -> riser at 0.3; "Your turn" ("Your ton") started on the lift's k
 the cut; "codes" ("calls") -> a two-step duck (tip 0.4, next-episode line 0.65) with the swell from "Follow".
 Telugu sync: cues inside a sentence had snapped to the next sentence (the AI's made-up answer appeared with "the manual
 says no"; the 18 and the 13 came a sentence late) -> placed by letters inside their own sentence take.
+Fourth render review (English): "codes" still dropped in the full-file transcript -> one 0.4 duck from the tip
+through "codes", the swell from "Follow"; the meaning-search row shows on "meaning search" and the scoreboard holds
+1 s (the hook's answer card was up 0.7 s); the guarantee list reorders on "moved" (Telugu: on "రిటర్న్స్ పేజీ ని
+తీసి"), not during "a bigger AI still reads the wrong page"; music-only holds after the scoreboard, the headings 25
+and the re-ranker result (the middle was one level); the re-ranker caveats bigger, the top-3 line shortened ("AI reads
+the top 3? meaning search alone: 30/30"); "Your turn" -> "Now, your turn" (the two-word take read as "Your ton",
+even alone; matches the Telugu "ఇప్పుడు మీ వంతు").
 
 v3 -> v4 (second render review, English + Telugu): the cost line says the number and the reason ("whole chapters also
 scored 25, but sent six times the text, and AI services charge by the word"; Telugu ends on "ప్రతి పదానికీ డబ్బు కట్టాలి");
@@ -89,7 +96,7 @@ Telugu: all nine wording fixes; 252 words (was 283).
 | 5 | Step one: cut it into pieces. Every 40 words, even mid-sentence: 13 out of 30. Overlap them: 20. Cut at headings: 25. | scissors; rows: torn 40-word cards (13), overlapping cards (20), heading + paragraph cards (25, crown); small print "single sentences: 16/30, they lose what 'it' means" |
 | 6 | Step two: store each piece as numbers for its meaning, in a vector database, a library sorted by meaning. Your question becomes numbers too, and the nearest pieces come out. | pieces -> number strips -> shelves labelled by topic (water & care, battery, camera, warranty); the question's dot lands on "water & care", nearest pieces glow; small print "vector databases like FAISS (Meta) search millions" |
 | 7 | Step three: a re-ranker reads your question beside each top piece, and reorders them. First-place misses: 5 became 3. | top pieces list; a robot with a magnifier reads each beside the question; cards reorder; scoreboard bar "+ re-ranker 27"; small print "slower: 74 ms vs under 1 ms a question · meaning search alone had it in the top 3 for 30/30" |
-| 8 | Your turn. Your AI reads only the first piece, and the right page keeps coming second. What helps more: a bigger AI, or a re-ranker? The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved “guarantee” from the returns page to the warranty page. | YOUR TURN; A / B cards; 1.5 s countdown, music drops; crown on B; "How long is the guarantee?": #1 Returns and replacements -> Warranty period (tick) |
+| 8 | Now, your turn. Your AI reads only the first piece, and the right page keeps coming second. What helps more: a bigger AI, or a re-ranker? The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved “guarantee” from the returns page to the warranty page. | YOUR TURN; A / B cards; 1.5 s countdown, music drops; crown on B; "How long is the guarantee?": #1 Returns and replacements -> Warranty period (tick) |
 | 9 | So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact error codes. Follow, so you don't miss it. | checklist; tip card "chatbot + your PDF? ask it to quote the lines it used"; NEXT "when meaning search misses exact codes, like E-42 (+ how to test your search)"; handle to the last frame |
 
 ## Telugu (Telugu script, as voiced; visuals and captions in English)

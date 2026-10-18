@@ -10,7 +10,7 @@ import { group, wrap, bubble, crown } from "./MannersCrayon";
 // EP32 "How AI finds the right page" (RAG part 2: chunking, vector databases, re-ranking), crayon style. The demo is
 // real (our run, pipeline/ep32/rag_demo.py + answer_demo.py; numbers in s.data.n): a made-up 45-section phone manual,
 // 30 everyday questions, keyword search vs meaning search vs meaning search + a re-ranker. Content band: y 270..1400.
-type Line = { from: number; frames: number; words?: { w: string; from: number; to: number }[] };
+type Line = { from: number; frames: number; words?: { w: string; from: number; to: number }[]; cues?: Record<string, number> };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Nums = { kw: number; mean: number; rr: number; test: number; w40: number; w40o: number; sent: number; sec: number; miss: number; missm: number; top3: number; chap: number; ratio: number; rrms: number; wchap: number; wsec: number };
@@ -199,10 +199,12 @@ const RgHook: React.FC<SP> = ({ s, cue }) => {
 const RgScore: React.FC<SP> = ({ s, cue }) => {
   const n = nums(s), d = s.data;
   const c1 = cue(1), c2 = cue(2);
+  const cm = s.lines.some((l) => l.cues?.["3"] !== undefined) ? cue(3) : c2;   // when the voice says meaning search
   return (
     <>
       <Sfx at={2} src="audio/sfx_whoosh.wav" vol={0.35} />
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.5} />
+      {cm < c2 - 6 && <Sfx at={cm} src="audio/sfx_pop.wav" vol={0.35} />}
       <Sfx at={c2 - 2} src="reel/sfx_boom.wav" vol={0.6} />
       <Sfx at={c2 - 2} src="audio/sfx_snap.wav" vol={0.5} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
@@ -218,7 +220,7 @@ const RgScore: React.FC<SP> = ({ s, cue }) => {
         }
         label(c, `right page first, out of ${n.test}`, W / 2, 610, 46, COL.cream, handF, seg(f, 8, 16));
         scoreRow(c, 650, "keyword search", n.kw, n.test, COL.orange, f >= c1 - 2 ? fade(f, c1 - 2, 6) : 0, seg(f, c1, c1 + 12));
-        scoreRow(c, 742, "meaning search", n.mean, n.test, "#16a34a", f >= c2 - 2 ? fade(f, c2 - 2, 6) : 0, seg(f, c2, c2 + 12), COL.yellow);
+        scoreRow(c, 742, "meaning search", n.mean, n.test, "#16a34a", f >= cm - 2 ? fade(f, cm - 2, 6) : 0, seg(f, c2, c2 + 12), COL.yellow);
         if (f >= c2 + 4) {
           pageCard(c, 90, 880, 900, d.right.title, d.right.body, r, seg(f, c2 + 4, c2 + 12), { mark: "tick", markP: seg(f, c2 + 10, c2 + 18), maxLines: 2, bg: "#ecfdf5" });
           tag(c, "what meaning search found for “shower”", W / 2, 872, 38, "#86efac", INK, 0.02, seg(f, c2 + 8, c2 + 16));
@@ -488,9 +490,9 @@ const RgRerank: React.FC<SP> = ({ s, cue }) => {
           c.fillStyle = COL.cream; c.fillText("→", 540, 1160);
           c.restore();
           if (f >= c2 - 2) { c.save(); c.globalAlpha = fade(f, c2 - 2, 6); c.font = caveat(130); c.textAlign = "center"; c.fillStyle = GREEN; c.fillText(String(n.miss), 700, 1165); c.restore(); }
-          label(c, "(2 more right first time, out of 30: a small test)", W / 2, 1205, 34, COL.pale, handF, seg(f, c2 + 6, c2 + 14));
-          tag(c, "slower: ~80 ms vs under 1 ms a question", W / 2, 1262, 40, COL.cream, INK, -0.01, seg(f, c2 + 10, c2 + 18));
-          tag(c, `if the AI reads the top 3: meaning search alone had it ${n.top3}/${n.test}`, W / 2, 1330, 38, COL.cream, INK, 0.01, seg(f, c2 + 18, c2 + 26));
+          label(c, "(2 more right first time, out of 30: a small test)", W / 2, 1210, 40, COL.pale, handF, seg(f, c2 + 6, c2 + 14));
+          tag(c, "slower: ~80 ms vs under 1 ms a question", W / 2, 1276, 46, COL.cream, INK, -0.01, seg(f, c2 + 10, c2 + 18));
+          tag(c, `AI reads the top 3? meaning search alone: ${n.top3}/${n.test}`, W / 2, 1352, 46, COL.cream, INK, 0.01, seg(f, c2 + 18, c2 + 26));
         }
       }} />
     </>
@@ -501,6 +503,7 @@ const RgRerank: React.FC<SP> = ({ s, cue }) => {
 const RgQuiz: React.FC<SP> = ({ s, cue }) => {
   const g = s.data.rr.g;
   const c1 = cue(1), c2 = cue(2), c3 = cue(3);
+  const c4 = s.lines.some((l) => l.cues?.["4"] !== undefined) ? cue(4) : c2 + 26;   // when the voice says it moved the page
   return (
     <>
       <Sfx at={2} src="audio/sfx_pop.wav" vol={0.4} />
@@ -508,8 +511,8 @@ const RgQuiz: React.FC<SP> = ({ s, cue }) => {
       {[0, 1, 2].map((k) => <Sfx key={k} at={Math.round(c3 + 4 + k * Math.max(10, (c2 - c3 - 16) / 3))} src="audio/sfx_tick.wav" vol={0.38} />)}
       <Sfx at={c2 - 8} src="audio/sfx_snap.wav" vol={0.6} />
       <Sfx at={c2 - 8} src="reel/sfx_boom.wav" vol={0.5} />
-      <Sfx at={c2 + 30} src="audio/sfx_whoosh.wav" vol={0.4} />
-      <Sfx at={c2 + 42} src="audio/sfx_success.wav" vol={0.35} />
+      <Sfx at={c4 + 4} src="audio/sfx_whoosh.wav" vol={0.4} />
+      <Sfx at={c4 + 16} src="audio/sfx_success.wav" vol={0.35} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(5500 + boil);
@@ -535,7 +538,7 @@ const RgQuiz: React.FC<SP> = ({ s, cue }) => {
           tag(c, "a bigger AI still reads the wrong page", W / 2, 960, 50, COL.red, "#fff", -0.02, seg(f, c2 + 6, c2 + 14));
           // the real example: "How long is the guarantee?"
           label(c, `“${g.q}”`, W / 2, 1040, 46, COL.cream, handF, seg(f, c2 + 14, c2 + 22));
-          const sw = easeOut(seg(f, c2 + 30, c2 + 42));
+          const sw = easeOut(seg(f, c4 + 4, c4 + 16));
           [g.quick[0], g.quick[1]].forEach((t: string, i: number) => {
             const right = t === g.reranked[0];
             const y = lerp(1080 + i * 100, 1080 + (right ? 0 : 1) * 100, sw);

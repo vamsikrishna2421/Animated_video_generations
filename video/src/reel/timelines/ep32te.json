@@ -18,24 +18,19 @@
    524
   ],
   [
-   2175,
-   2213,
+   2237,
+   2275,
    0.3
   ],
   [
-   2482,
-   2545,
+   2584,
+   2647,
    0.05
   ],
   [
-   3060,
-   3175,
+   3162,
+   3414,
    0.4
-  ],
-  [
-   3175,
-   3312,
-   0.65
   ]
  ],
  "musicBoosts": [
@@ -46,39 +41,39 @@
   ],
   [
    348,
-   555,
+   593,
    1.2
   ],
   [
-   1350,
-   1657,
+   1391,
+   1718,
    1.3
   ],
   [
-   1657,
-   1967,
+   1718,
+   2028,
    0.7
   ],
   [
-   1966,
-   2229,
+   2028,
+   2332,
    0.8
   ],
   [
-   2823,
-   3401,
+   2925,
+   3503,
    1.5
   ],
   [
-   3312,
-   3401,
+   3414,
+   3503,
    1.2,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 3401,
+ "totalFrames": 3503,
  "music": "reel/ep32te/score.wav",
  "scenes": [
   {
@@ -346,7 +341,7 @@
     "hardCuts": true
    },
    "from": 348,
-   "frames": 207,
+   "frames": 245,
    "lines": [
     {
      "who": "maastaaru",
@@ -400,16 +395,16 @@
       {
        "w": "18.",
        "from": 106,
-       "to": 118
+       "to": 122
       },
       {
        "w": "Meaning",
-       "from": 118,
-       "to": 140
+       "from": 122,
+       "to": 142
       },
       {
        "w": "search,",
-       "from": 140,
+       "from": 142,
        "to": 153
       },
       {
@@ -420,6 +415,7 @@
      ],
      "cues": {
       "1": 111,
+      "3": 134,
       "2": 176
      }
     }
@@ -526,7 +522,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 555,
+   "from": 593,
    "frames": 410,
    "lines": [
     {
@@ -784,8 +780,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 965,
-   "frames": 385,
+   "from": 1003,
+   "frames": 388,
    "lines": [
     {
      "who": "maastaaru",
@@ -1042,8 +1038,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1350,
-   "frames": 307,
+   "from": 1391,
+   "frames": 327,
    "lines": [
     {
      "who": "maastaaru",
@@ -1223,7 +1219,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1657,
+   "from": 1718,
    "frames": 310,
    "lines": [
     {
@@ -1493,8 +1489,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1966,
-   "frames": 263,
+   "from": 2028,
+   "frames": 304,
    "lines": [
     {
      "who": "maastaaru",
@@ -1714,7 +1710,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 2230,
+   "from": 2332,
    "frames": 593,
    "lines": [
     {
@@ -1854,118 +1850,119 @@
       {
        "w": "The",
        "from": 315,
-       "to": 322
+       "to": 324
       },
       {
        "w": "re-ranker.",
-       "from": 322,
-       "to": 346
-      },
-      {
-       "w": "Why?",
-       "from": 346,
+       "from": 324,
        "to": 354
       },
       {
-       "w": "A",
+       "w": "Why?",
        "from": 354,
-       "to": 358
+       "to": 364
+      },
+      {
+       "w": "A",
+       "from": 364,
+       "to": 368
       },
       {
        "w": "bigger",
-       "from": 358,
-       "to": 369
-      },
-      {
-       "w": "AI",
-       "from": 369,
-       "to": 374
-      },
-      {
-       "w": "still",
-       "from": 374,
+       "from": 368,
        "to": 383
       },
       {
-       "w": "reads",
+       "w": "AI",
        "from": 383,
-       "to": 401
+       "to": 389
+      },
+      {
+       "w": "still",
+       "from": 389,
+       "to": 409
+      },
+      {
+       "w": "reads",
+       "from": 409,
+       "to": 433
       },
       {
        "w": "the",
-       "from": 401,
-       "to": 407
+       "from": 433,
+       "to": 441
       },
       {
        "w": "wrong",
-       "from": 407,
-       "to": 417
+       "from": 441,
+       "to": 454
       },
       {
        "w": "page.",
-       "from": 417,
-       "to": 437
+       "from": 454,
+       "to": 474
       },
       {
        "w": "Ours",
-       "from": 437,
-       "to": 446
+       "from": 474,
+       "to": 485
       },
       {
        "w": "moved",
-       "from": 446,
-       "to": 455
+       "from": 485,
+       "to": 492
       },
       {
        "w": "“guarantee”",
-       "from": 455,
-       "to": 483
+       "from": 492,
+       "to": 505
       },
       {
        "w": "from",
-       "from": 483,
-       "to": 491
-      },
-      {
-       "w": "the",
-       "from": 491,
-       "to": 497
-      },
-      {
-       "w": "returns",
-       "from": 497,
+       "from": 505,
        "to": 510
       },
       {
-       "w": "page",
-       "from": 510,
-       "to": 526
-      },
-      {
-       "w": "to",
-       "from": 526,
-       "to": 530
-      },
-      {
        "w": "the",
-       "from": 530,
+       "from": 510,
+       "to": 515
+      },
+      {
+       "w": "returns",
+       "from": 515,
+       "to": 531
+      },
+      {
+       "w": "page",
+       "from": 531,
        "to": 537
       },
       {
-       "w": "warranty",
+       "w": "to",
        "from": 537,
-       "to": 551
+       "to": 540
+      },
+      {
+       "w": "the",
+       "from": 540,
+       "to": 544
+      },
+      {
+       "w": "warranty",
+       "from": 544,
+       "to": 554
       },
       {
        "w": "page.",
-       "from": 551,
+       "from": 554,
        "to": 561
       }
      ],
      "cues": {
       "1": 167,
       "3": 252,
-      "2": 315
+      "2": 315,
+      "4": 478
      }
     }
    ]
@@ -2015,7 +2012,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 2823,
+   "from": 2925,
    "frames": 578,
    "lines": [
     {
