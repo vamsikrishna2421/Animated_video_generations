@@ -384,7 +384,8 @@ const RgShelf: React.FC<SP> = ({ s, cue }) => {
   return (
     <>
       <Sfx at={2} src="audio/sfx_whoosh.wav" vol={0.4} />
-      {[0, 1, 2, 3].map((k) => <Sfx key={k} at={10 + k * 6} src="audio/sfx_tick.wav" vol={0.3} />)}
+      {[0, 1, 2, 3].map((k) => <Sfx key={k} at={16 + k * 21} src="audio/sfx_tick.wav" vol={0.3} />)}
+      {lib - 4 > 60 && <Sfx at={40} src="audio/sfx_pop.wav" vol={0.35} />}
       <Sfx at={lib} src="audio/sfx_pop.wav" vol={0.45} />
       <Sfx at={c1} src="audio/sfx_whoosh.wav" vol={0.45} />
       <Sfx at={c1 + 22} src="audio/sfx_snap.wav" vol={0.5} />
@@ -415,7 +416,7 @@ const RgShelf: React.FC<SP> = ({ s, cue }) => {
           c.font = caveat(46); c.fillStyle = COL.cream; c.textAlign = "right"; c.fillText(sh.t, 1000, y + 80);
           c.restore();
           for (let j = 0; j < 7; j++) {
-            const q = seg(f, 16 + k * 4 + j * 1.5, 24 + k * 4 + j * 1.5);
+            const q = seg(f, 16 + (k * 7 + j) * 3, 24 + (k * 7 + j) * 3);
             if (q <= 0) continue;
             const glow = k === 0 && f >= c1 + 24 && j < 3;
             c.save(); c.globalAlpha = q; c.fillStyle = sh.col; rrect(c, 160 + j * 86, y + 90 - 70 * easeOut(q), 64, 70, 6); c.fill();
@@ -423,6 +424,7 @@ const RgShelf: React.FC<SP> = ({ s, cue }) => {
             c.restore();
           }
         });
+        if (lib - 4 > 60) tag(c, "the PDF trick is at the end ↓", W / 2, 1310, 42, "#fde68a", INK, 0.03, seg(f, 40, 48) * (1 - seg(f, lib - 6, lib)));
         tag(c, "a library sorted by meaning", W / 2, 1300, 50, COL.cream, INK, -0.02, seg(f, lib, lib + 8));
         if (f >= c1 - 4) {
           // the question becomes numbers and flies to its shelf

@@ -51,6 +51,12 @@ through "codes", the swell from "Follow"; the meaning-search row shows on "meani
 and the re-ranker result (the middle was one level); the re-ranker caveats bigger, the top-3 line shortened ("AI reads
 the top 3? meaning search alone: 30/30"); "Your turn" -> "Now, your turn" (the two-word take read as "Your ton",
 even alone; matches the Telugu "ఇప్పుడు మీ వంతు").
+Telugu render review: "రిటర్న్స్ పేజీ ని తీసి" (took the returns page out) -> "కిందకి దించి" (moved it down; the
+screen shows it at #2); captions pinned to the measured Telugu sentence starts (they ran ~0.3 s early); step 2, where
+all four viewers drifted: the shelves fill one topic at a time while the voice explains (they were full in 1.5 s,
+then 4 s of a still picture), a "the PDF trick is at the end" reminder until "library", and the bed builds through
+the scene (it was the quietest stretch). Not changed: the PDF trick stays at the end (the tease at 0:24 pays off
+there); "how short is short" and PDFs without headings were asked once each (EP33 covers testing your own search).
 
 v3 -> v4 (second render review, English + Telugu): the cost line says the number and the reason ("whole chapters also
 scored 25, but sent six times the text, and AI services charge by the word"; Telugu ends on "ప్రతి పదానికీ డబ్బు కట్టాలి");

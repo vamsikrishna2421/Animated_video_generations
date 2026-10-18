@@ -103,3 +103,9 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   "Your ton"): give the scene `"pre": 0.35`. A riser under a key word masks it too ("headings" -> "hitting").
 - Test a mix fix without a full render: `npx remotion render src/index.ts <Comp> out.wav --codec=wav` (about 1 min),
   then Whisper on just the windows that were misheard.
+- Every key result needs about 2 s on screen after it is said (EP32: the hook's answer card was up 0.7 s before the
+  cut): give that scene a `tail` of 0.8-1.2 s; the music fills the hold, which also breaks a flat middle.
+- No picture should sit still for 3+ s while the voice explains: spread the build over the line (EP32's shelves filled
+  in 1.5 s, then 4 s of a still frame, and all four viewers drifted there).
+- A visual that answers a phrase (a list reordering, a row appearing) needs its own cue on that phrase, not a fixed
+  offset from an earlier cue (EP32: the guarantee list reordered while the voice was still on the sentence before).

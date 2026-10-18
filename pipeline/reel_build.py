@@ -295,6 +295,13 @@ def file_line(line, rid):
             print("  sentence cues: takes not found in te_chunks, kept letter timing")
         # Captions: if "show" carries the same [n] markers, each caption segment is pinned between those cues,
         # so a translated caption follows the spoken phrase order instead of drifting across the whole line.
+        def inv(x, spans=spans, total=total):   # the share of this part's voiced time before x (the inverse of at)
+            acc = 0.0
+            for s0, e0 in spans:
+                if x <= s0:
+                    break
+                acc += min(x, e0) - s0
+            return acc / max(total, 1e-9)
         stoks = (shw if shw is not None else " ".join(words)).split()
         segs, cur, cut_at = [], [], [0.0]
         for t in stoks:
@@ -302,7 +309,8 @@ def file_line(line, rid):
             if m and int(m.group(1)) in frac and shw is not None:
                 segs.append(cur)
                 cur = []
-                cut_at.append(frac[int(m.group(1))])
+                # pinned at the cue itself (Telugu sentence starts are measured, so the caption no longer runs early)
+                cut_at.append(min(1.0, max(cut_at[-1], inv(cues[int(m.group(1))]))))
             elif not m:
                 cur.append(t)
         segs.append(cur)
