@@ -11,9 +11,10 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
 
 ## Start of every run
 1. `git status` (clean), branch `sample1`, `git pull origin sample1`.
-2. Disk: the writable allowance is small (`df -h /`; "Avail" near 0 means the allowance is spent). Free space by
-   deleting what can be rebuilt: review packs of delivered videos (`out/review/<name>/`), full-size renders whose
-   `_ig` send copy is committed, `/tmp/remotion-*`. Keep voice takes of unfinished work.
+2. Disk: the writable allowance is small (`df -h /`; "Avail" near 0 means the allowance is spent). An episode needs
+   about 1 GB (4 renders + send copies). `pipeline/tools/free_disk.sh "<keep-regex>"` drops the working-tree copies of
+   committed renders (they stay in git and on GitHub, `git status` stays clean; it freed 5 GB on Oct 18). Also delete
+   review packs of delivered videos (`out/review/<name>/`) and `/tmp/remotion-*`. Keep voice takes of unfinished work.
 3. Environment (a container restart wipes `/tmp` and `/dev/shm`; re-create what is missing):
    - Static ffmpeg at `/tmp/claude-0/ffmpeg` (for `make_ig.sh`; it falls back to Remotion's bundled ffmpeg, which
      lacks some filters). `loudnorm.py` and `review_pack.py` use Remotion's ffmpeg.
@@ -29,6 +30,7 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
   two at once break each other (each clears the shared bundle dirs).
 - `node pipeline/tools/stills.cjs <Comp> <dir> <frame...>`: preview stills before a full render.
 - `pipeline/tools/make_ig.sh in.mp4 out_ig.mp4`: ~22 MB send copy (the send limit is 30 MiB).
+- `python3 pipeline/tools/chapters.py <timeline id>`: YouTube chapter list from a timeline (scenes under 10 s merge).
 - `HF_HUB_CACHE=/dev/shm/hf python3 pipeline/review_pack.py <video> [--lang te]` -> `out/review/<name>/`; Telugu also
   `python3 pipeline/te_pack_note.py <video> reels/<id>.json`. Then the `human-viewer` agent reviews the folder.
 - Stopping a stuck job: `pgrep -f "^python3 pipeline/<script>" | xargs kill` (a pattern that also matches your own

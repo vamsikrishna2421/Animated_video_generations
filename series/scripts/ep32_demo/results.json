@@ -1,0 +1,4345 @@
+{
+ "models": {
+  "embedder": "BAAI/bge-small-en-v1.5",
+  "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+ },
+ "manual": {
+  "sections": 45,
+  "chapters": 8,
+  "words": 2239
+ },
+ "runs": {
+  "chapter/keyword": {
+   "chunks": 8,
+   "hit1": 23,
+   "hit3": 28,
+   "of": 30,
+   "avg_words_top3": 872.5,
+   "ms_per_question": 0.1,
+   "index_seconds": null
+  },
+  "chapter/meaning": {
+   "chunks": 8,
+   "hit1": 25,
+   "hit3": 28,
+   "of": 30,
+   "avg_words_top3": 863.9,
+   "ms_per_question": 0.0,
+   "index_seconds": 0.7
+  },
+  "chapter/meaning+rerank": {
+   "chunks": 8,
+   "hit1": 28,
+   "hit3": 30,
+   "of": 30,
+   "avg_words_top3": 881.7,
+   "ms_per_question": 319.7,
+   "index_seconds": 0.7
+  },
+  "section/keyword": {
+   "chunks": 45,
+   "hit1": 18,
+   "hit3": 26,
+   "of": 30,
+   "avg_words_top3": 151.0,
+   "ms_per_question": 0.1,
+   "index_seconds": null
+  },
+  "section/meaning": {
+   "chunks": 45,
+   "hit1": 25,
+   "hit3": 30,
+   "of": 30,
+   "avg_words_top3": 152.1,
+   "ms_per_question": 0.0,
+   "index_seconds": 0.54
+  },
+  "section/meaning+rerank": {
+   "chunks": 45,
+   "hit1": 27,
+   "hit3": 29,
+   "of": 30,
+   "avg_words_top3": 154.2,
+   "ms_per_question": 73.8,
+   "index_seconds": 0.54
+  },
+  "sentence/keyword": {
+   "chunks": 136,
+   "hit1": 11,
+   "hit3": 18,
+   "of": 30,
+   "avg_words_top3": 49.7,
+   "ms_per_question": 0.3,
+   "index_seconds": null
+  },
+  "sentence/meaning": {
+   "chunks": 136,
+   "hit1": 16,
+   "hit3": 26,
+   "of": 30,
+   "avg_words_top3": 47.5,
+   "ms_per_question": 0.0,
+   "index_seconds": 0.83
+  },
+  "sentence/meaning+rerank": {
+   "chunks": 136,
+   "hit1": 20,
+   "hit3": 27,
+   "of": 30,
+   "avg_words_top3": 52.2,
+   "ms_per_question": 42.4,
+   "index_seconds": 0.83
+  },
+  "window40/keyword": {
+   "chunks": 56,
+   "hit1": 11,
+   "hit3": 18,
+   "of": 30,
+   "avg_words_top3": 120.0,
+   "ms_per_question": 0.1,
+   "index_seconds": null
+  },
+  "window40/meaning": {
+   "chunks": 56,
+   "hit1": 13,
+   "hit3": 20,
+   "of": 30,
+   "avg_words_top3": 120.0,
+   "ms_per_question": 0.0,
+   "index_seconds": 0.46
+  },
+  "window40/meaning+rerank": {
+   "chunks": 56,
+   "hit1": 15,
+   "hit3": 20,
+   "of": 30,
+   "avg_words_top3": 120.0,
+   "ms_per_question": 62.3,
+   "index_seconds": 0.46
+  },
+  "window40_overlap20/keyword": {
+   "chunks": 111,
+   "hit1": 12,
+   "hit3": 23,
+   "of": 30,
+   "avg_words_top3": 120.0,
+   "ms_per_question": 0.3,
+   "index_seconds": null
+  },
+  "window40_overlap20/meaning": {
+   "chunks": 111,
+   "hit1": 20,
+   "hit3": 26,
+   "of": 30,
+   "avg_words_top3": 120.0,
+   "ms_per_question": 0.0,
+   "index_seconds": 0.94
+  },
+  "window40_overlap20/meaning+rerank": {
+   "chunks": 111,
+   "hit1": 22,
+   "hit3": 29,
+   "of": 30,
+   "avg_words_top3": 120.0,
+   "ms_per_question": 61.6,
+   "index_seconds": 0.94
+  }
+ },
+ "examples": {
+  "chapter/keyword": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": false,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  ],
+  "chapter/meaning": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": false,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": false,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": false,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  ],
+  "chapter/meaning+rerank": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "Chapter 5: Connections\nWi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.\nMobile hotspot. Mobile hotspot shares your mobile data with other devices su",
+    "top1_secs": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": false,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": true,
+    "top1": "Chapter 3: Display and sound\nScreen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.\nBright",
+    "top1_secs": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Chapter 8: Warranty and service\nWarranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.\nWhat the warranty does not ",
+    "top1_secs": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Chapter 7: Care and durability\nWater and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running w",
+    "top1_secs": [
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Chapter 4: Camera\nTaking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to focus there. The main camera has a 50 MP sensor; photos are saved at 12 MP by default, which gives sharper results in most light.\nNight mode. Night mode takes several",
+    "top1_secs": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": true,
+    "top1": "Chapter 1: Getting started\nWhat's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the b",
+    "top1_secs": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "Chapter 6: Security\nFingerprint unlock. The fingerprint sensor is in the power key. Go to Settings > Security > Fingerprint and touch the key several times with different parts of your finger. You can add up to five fingerprints.\nFace unlock. Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": true,
+    "top1": "Chapter 2: Battery and charging\nCharging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone whi",
+    "top1_secs": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  ],
+  "section/keyword": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "Meteor shower mode. Meteor shower mode is for photographing the night sky. Put the phone on a tripod, point it at a dark part of the sky and tap Start; the camera takes a long exposure of up to four minutes and records the streaks of shooting stars. Turn off the screen flash and avoid city lights.",
+    "top1_secs": [
+     19
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": false,
+    "top1": "Water and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running water. If the phone gets wet, dr",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": false,
+    "top1": "Brightness and eye comfort. Adaptive brightness adjusts the screen to the light around you. Eye comfort mode adds a warm tint that reduces blue light; schedule it from sunset to sunrise in Settings > Display. Dark mode turns most backgrounds black and can save battery.",
+    "top1_secs": [
+     13
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which erases everything on the phone. Back up regularly so you never lose your data this way.",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "Screen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.",
+    "top1_secs": [
+     12
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "Drops and screen protectors. The front glass is strengthened, but a fall onto a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "Face unlock. Face unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": false,
+    "top1": "Wi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a friend, tap it and show the QR code.",
+    "top1_secs": [
+     23
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": false,
+    "top1": "Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "Tap to pay (NFC). The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments above the limit set by your bank.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Safety information. Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect ba",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": false,
+    "top1": "Text size and display size. If the text is too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times.",
+    "top1_secs": [
+     16
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": false,
+    "top1": "Inserting SIM cards. Push the ejector pin into the small hole on the left edge to open the tray. The tray holds two nano-SIM cards, or one nano-SIM and one microSD card of up to 512 GB. Place the cards with the gold contacts facing down and push the tray back in until it clicks. Do not insert a SIM ",
+    "top1_secs": [
+     2
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Moving data from your old phone. Open the Switch app on both phones and keep them close together. The K7 can copy contacts, photos, videos, messages and most app data over a direct Wi-Fi link, so no internet connection is needed. Chat apps keep their own backups: back up your chats in the chat app o",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's location on a map, make it ring at full volume for five minutes even if it is on silent, lock it, or erase it. The phone must be switched on and connected to the internet.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in the sun, where temperatures can go above 60°C.",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you nee",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "Recording videos. Swipe to Video in the Camera app and tap the red button. The K7 records up to 4K at 30 frames per second. Video stabilisation reduces shaking while you walk, and you can take a photo during recording by tapping the white circle.",
+    "top1_secs": [
+     21
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Portrait mode. Portrait mode blurs the background behind a person so they stand out. Stay between half a metre and two metres from your subject. After taking the photo, you can change the blur strength in the Gallery app.",
+    "top1_secs": [
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Before you hand over your phone for repair. Back up your photos, contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and turn off Find My Device so the technician can test the phone.",
+    "top1_secs": [
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Service centres and repair time. Find your nearest authorised service centre in the Support app. Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready.",
+    "top1_secs": [
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush.",
+    "top1_secs": [
+     35
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Face unlock. Face unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To save them to a microSD card instead, open Camera settings > Storage location. You can also turn on cloud backup so copies are kept online.",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": true,
+    "top1": "Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch it off, press and hold the power key and the volume-up key together, then tap Power off. To restart a frozen phone, hold the power key for 15 secon",
+    "top1_secs": [
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "Software updates. The K7 gets security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": true,
+    "top1": "Warranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.",
+    "top1_secs": [
+     38
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect ba",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "section/meaning": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": true,
+    "top1": "Water and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running water. If the phone gets wet, dr",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "Fast charging and heat. The K7 supports 33W fast charging. It is normal for the phone to feel warm while fast charging, especially while playing games or using the camera at the same time. If the battery temperature goes above 45°C, the phone slows down charging automatically until it cools. Remove ",
+    "top1_secs": [
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "Screen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.",
+    "top1_secs": [
+     12
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which erases everything on the phone. Back up regularly so you never lose your data this way.",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "Returns and replacements. If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. Phones without a defect cannot be returned once they are opened. The phone must be in its original box with all accessories and the invoice.",
+    "top1_secs": [
+     40
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "Drops and screen protectors. The front glass is strengthened, but a fall onto a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "Recycling your old phone. Do not throw old phones or batteries in the household bin. Take them to an authorised e-waste collection point or a service centre, where they are recycled safely. Erase your data with a factory reset first.",
+    "top1_secs": [
+     43
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "Mobile hotspot. Mobile hotspot shares your mobile data with other devices such as a laptop or tablet. Go to Settings > Connections > Hotspot, set a name and a password, and turn it on. Up to eight devices can connect at once. Hotspot uses battery quickly, so turn it off when you are done.",
+    "top1_secs": [
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "Text size and display size. If the text is too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times.",
+    "top1_secs": [
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "Tap to pay (NFC). The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments above the limit set by your bank.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Safety information. Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect ba",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "Night mode. Night mode takes several shots in a row and combines them into one brighter, cleaner photo. It switches on automatically in dark scenes; hold the phone still for about three seconds while the moon icon is shown. For the best results, rest the phone on something steady.",
+    "top1_secs": [
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "Using two SIM cards. The K7 supports dual SIM with dual standby: both numbers can receive calls, but only one can be on a call at a time. Choose which SIM is used for mobile data, calls and messages in Settings > SIM manager. Each SIM can be turned off without removing it.",
+    "top1_secs": [
+     26
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Moving data from your old phone. Open the Switch app on both phones and keep them close together. The K7 can copy contacts, photos, videos, messages and most app data over a direct Wi-Fi link, so no internet connection is needed. Chat apps keep their own backups: back up your chats in the chat app o",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's location on a map, make it ring at full volume for five minutes even if it is on silent, lock it, or erase it. The phone must be switched on and connected to the internet.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in the sun, where temperatures can go above 60°C.",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you nee",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": true,
+    "top1": "Do Not Disturb. Do Not Disturb silences calls, messages and notification sounds. Turn it on from quick settings, or schedule it, for example from 10 pm to 7 am. You can allow calls from starred contacts, and a second call from the same number within three minutes always rings.",
+    "top1_secs": [
+     15
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Portrait mode. Portrait mode blurs the background behind a person so they stand out. Stay between half a metre and two metres from your subject. After taking the photo, you can change the blur strength in the Gallery app.",
+    "top1_secs": [
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Before you hand over your phone for repair. Back up your photos, contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and turn off Find My Device so the technician can test the phone.",
+    "top1_secs": [
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Service centres and repair time. Find your nearest authorised service centre in the Support app. Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready.",
+    "top1_secs": [
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush.",
+    "top1_secs": [
+     35
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Face unlock. Face unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To save them to a microSD card instead, open Camera settings > Storage location. You can also turn on cloud backup so copies are kept online.",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": true,
+    "top1": "Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch it off, press and hold the power key and the volume-up key together, then tap Power off. To restart a frozen phone, hold the power key for 15 secon",
+    "top1_secs": [
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "Software updates. The K7 gets security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Charging safety. Use only cables and chargers that are certified and in good condition. Do not charge the phone if the port is wet or dusty; let it dry for at least an hour first. Never use a damaged cable, and do not leave the phone charging on a bed or sofa for long periods.",
+    "top1_secs": [
+     11
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect ba",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "section/meaning+rerank": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": true,
+    "top1": "Water and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running water. If the phone gets wet, dr",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "Fast charging and heat. The K7 supports 33W fast charging. It is normal for the phone to feel warm while fast charging, especially while playing games or using the camera at the same time. If the battery temperature goes above 45°C, the phone slows down charging automatically until it cools. Remove ",
+    "top1_secs": [
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "Screen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading.",
+    "top1_secs": [
+     12
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which erases everything on the phone. Back up regularly so you never lose your data this way.",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": true,
+    "top1": "Warranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status.",
+    "top1_secs": [
+     38
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "Drops and screen protectors. The front glass is strengthened, but a fall onto a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": true,
+    "top1": "Returns and replacements. If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. Phones without a defect cannot be returned once they are opened. The phone must be in its original box with all accessories and the invoice.",
+    "top1_secs": [
+     40
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "Mobile hotspot. Mobile hotspot shares your mobile data with other devices such as a laptop or tablet. Go to Settings > Connections > Hotspot, set a name and a password, and turn it on. Up to eight devices can connect at once. Hotspot uses battery quickly, so turn it off when you are done.",
+    "top1_secs": [
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "Text size and display size. If the text is too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times.",
+    "top1_secs": [
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "Tap to pay (NFC). The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments above the limit set by your bank.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Safety information. Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect ba",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "Night mode. Night mode takes several shots in a row and combines them into one brighter, cleaner photo. It switches on automatically in dark scenes; hold the phone still for about three seconds while the moon icon is shown. For the best results, rest the phone on something steady.",
+    "top1_secs": [
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "Using two SIM cards. The K7 supports dual SIM with dual standby: both numbers can receive calls, but only one can be on a call at a time. Choose which SIM is used for mobile data, calls and messages in Settings > SIM manager. Each SIM can be turned off without removing it.",
+    "top1_secs": [
+     26
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Moving data from your old phone. Open the Switch app on both phones and keep them close together. The K7 can copy contacts, photos, videos, messages and most app data over a direct Wi-Fi link, so no internet connection is needed. Chat apps keep their own backups: back up your chats in the chat app o",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's location on a map, make it ring at full volume for five minutes even if it is on silent, lock it, or erase it. The phone must be switched on and connected to the internet.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in the sun, where temperatures can go above 60°C.",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you nee",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": true,
+    "top1": "Do Not Disturb. Do Not Disturb silences calls, messages and notification sounds. Turn it on from quick settings, or schedule it, for example from 10 pm to 7 am. You can allow calls from starred contacts, and a second call from the same number within three minutes always rings.",
+    "top1_secs": [
+     15
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Portrait mode. Portrait mode blurs the background behind a person so they stand out. Stay between half a metre and two metres from your subject. After taking the photo, you can change the blur strength in the Gallery app.",
+    "top1_secs": [
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Before you hand over your phone for repair. Back up your photos, contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and turn off Find My Device so the technician can test the phone.",
+    "top1_secs": [
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Service centres and repair time. Find your nearest authorised service centre in the Support app. Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready.",
+    "top1_secs": [
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush.",
+    "top1_secs": [
+     35
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Face unlock. Face unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To save them to a microSD card instead, open Camera settings > Storage location. You can also turn on cloud backup so copies are kept online.",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": true,
+    "top1": "Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch it off, press and hold the power key and the volume-up key together, then tap Power off. To restart a frozen phone, hold the power key for 15 secon",
+    "top1_secs": [
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "Software updates. The K7 gets security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Charging safety. Use only cables and chargers that are certified and in good condition. Do not charge the phone if the port is wet or dusty; let it dry for at least an hour first. Never use a damaged cable, and do not leave the phone charging on a bed or sofa for long periods.",
+    "top1_secs": [
+     11
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect ba",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "sentence/keyword": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "Meteor shower mode is for photographing the night sky.",
+    "top1_secs": [
+     19
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": false,
+    "top1": "If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry.",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": false,
+    "top1": "Hotspot uses battery quickly, so turn it off when you are done.",
+    "top1_secs": [
+     24
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": false,
+    "top1": "Placing it on a wireless charging pad will not charge it and can make the back of the phone warm.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password.",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "Never use a damaged cable, and do not leave the phone charging on a bed or sofa for long periods.",
+    "top1_secs": [
+     11
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "Keep at least 20% battery and 5 GB of free storage before updating.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": false,
+    "top1": "The phone must be switched on and connected to the internet.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": false,
+    "top1": "Display size makes buttons and icons bigger too.",
+    "top1_secs": [
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "Every battery wears out slowly.",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": false,
+    "top1": "Every battery wears out slowly.",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": false,
+    "top1": "The tray holds two nano-SIM cards, or one nano-SIM and one microSD card of up to 512 GB.",
+    "top1_secs": [
+     2
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Chat apps keep their own backups: back up your chats in the chat app on the old phone first, then restore them when you sign in on the K7.",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "If you lose your phone, sign in at the Find My Device website from any browser.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket.",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger.",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "Video stabilisation reduces shaking while you walk, and you can take a photo during recording by tapping the white circle.",
+    "top1_secs": [
+     21
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Portrait mode blurs the background behind a person so they stand out.",
+    "top1_secs": [
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Back up your photos, contacts and chats before a repair, because some repairs require a factory reset.",
+    "top1_secs": [
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": false,
+    "top1": "If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase.",
+    "top1_secs": [
+     40
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": false,
+    "top1": "Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "The K7 gets security updates every month and major software updates for three years from launch.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": true,
+    "top1": "The battery and the in-box accessories, such as the cable, are covered for 6 months.",
+    "top1_secs": [
+     38
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Turning on Protect battery stops charging at 85% and helps the battery last longer.",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "sentence/meaning": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry.",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "It is normal for the phone to feel warm while fast charging, especially while playing games or using the camera at the same time.",
+    "top1_secs": [
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes.",
+    "top1_secs": [
+     12
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": false,
+    "top1": "Placing it on a wireless charging pad will not charge it and can make the back of the phone warm.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password.",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase.",
+    "top1_secs": [
+     40
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": false,
+    "top1": "Go to Settings > Wi-Fi, turn it on and tap a network name to connect.",
+    "top1_secs": [
+     23
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "If the text is too small to read comfortably, go to Settings > Display > Font size and drag the slider.",
+    "top1_secs": [
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "Check the current state in Settings > Battery > Battery health.",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": false,
+    "top1": "Dark mode turns most backgrounds black and can save battery.",
+    "top1_secs": [
+     13
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": false,
+    "top1": "You can set a different ringtone for each SIM card and for each contact.",
+    "top1_secs": [
+     14
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Chat apps keep their own backups: back up your chats in the chat app on the old phone first, then restore them when you sign in on the K7.",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "If you lose your phone, sign in at the Find My Device website from any browser.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": false,
+    "top1": "The K7 works best between 0°C and 35°C.",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger.",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "You can allow calls from starred contacts, and a second call from the same number within three minutes always rings.",
+    "top1_secs": [
+     15
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Portrait mode blurs the background behind a person so they stand out.",
+    "top1_secs": [
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Back up your photos, contacts and chats before a repair, because some repairs require a factory reset.",
+    "top1_secs": [
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock.",
+    "top1_secs": [
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Wipe the screen with a soft, slightly damp microfibre cloth.",
+    "top1_secs": [
+     35
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": false,
+    "top1": "To save them to a microSD card instead, open Camera settings > Storage location.",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": true,
+    "top1": "To switch it off, press and hold the power key and the volume-up key together, then tap Power off.",
+    "top1_secs": [
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "The K7 gets security updates every month and major software updates for three years from launch.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Turning on Protect battery stops charging at 85% and helps the battery last longer.",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Every battery wears out slowly.",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "sentence/meaning+rerank": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry.",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "It is normal for the phone to feel warm while fast charging, especially while playing games or using the camera at the same time.",
+    "top1_secs": [
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": false,
+    "top1": "Turn off the screen flash and avoid city lights.",
+    "top1_secs": [
+     19
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": false,
+    "top1": "Placing it on a wireless charging pad will not charge it and can make the back of the phone warm.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password.",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "The battery and the in-box accessories, such as the cable, are covered for 6 months.",
+    "top1_secs": [
+     38
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": true,
+    "top1": "It does not cover cracked or broken screens, liquid damage, damage from dropping the phone, or repairs done by unauthorised shops.",
+    "top1_secs": [
+     39
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "Placing it on a wireless charging pad will not charge it and can make the back of the phone warm.",
+    "top1_secs": [
+     10
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "Mobile hotspot shares your mobile data with other devices such as a laptop or tablet.",
+    "top1_secs": [
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": false,
+    "top1": "Display size makes buttons and icons bigger too.",
+    "top1_secs": [
+     16
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine.",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "Every battery wears out slowly.",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "Night mode takes several shots in a row and combines them into one brighter, cleaner photo.",
+    "top1_secs": [
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "The K7 supports dual SIM with dual standby: both numbers can receive calls, but only one can be on a call at a time.",
+    "top1_secs": [
+     26
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "Chat apps keep their own backups: back up your chats in the chat app on the old phone first, then restore them when you sign in on the K7.",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "If you lose your phone, sign in at the Find My Device website from any browser.",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket.",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger.",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "You can allow calls from starred contacts, and a second call from the same number within three minutes always rings.",
+    "top1_secs": [
+     15
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "Portrait mode blurs the background behind a person so they stand out.",
+    "top1_secs": [
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "Back up your photos, contacts and chats before a repair, because some repairs require a factory reset.",
+    "top1_secs": [
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock.",
+    "top1_secs": [
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": true,
+    "top1": "Wipe the screen with a soft, slightly damp microfibre cloth.",
+    "top1_secs": [
+     35
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "Face unlock uses the front camera to recognise your face.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app.",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears.",
+    "top1_secs": [
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "The K7 gets security updates every month and major software updates for three years from launch.",
+    "top1_secs": [
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": true,
+    "top1": "The battery and the in-box accessories, such as the cable, are covered for 6 months.",
+    "top1_secs": [
+     38
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Turning on Protect battery stops charging at 85% and helps the battery last longer.",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "window40/keyword": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "moon icon is shown. For the best results, rest the phone on something steady. Meteor shower mode. Meteor shower mode is for photographing the night sky. Put the phone on a tripod, point it at a dark part of the",
+    "top1_secs": [
+     18,
+     19
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": false,
+    "top1": "never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry. Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre",
+    "top1_secs": [
+     34,
+     35
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": false,
+    "top1": "it on. Up to eight devices can connect at once. Hotspot uses battery quickly, so turn it off when you are done. Bluetooth. Turn on Bluetooth from quick settings, then go to Settings > Bluetooth > Pair new device and",
+    "top1_secs": [
+     24,
+     25
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge. Charging safety. Use only cables and chargers that are",
+    "top1_secs": [
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "bed or sofa for long periods. Screen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on",
+    "top1_secs": [
+     11,
+     12
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "friend, tap it and show the QR code. Mobile hotspot. Mobile hotspot shares your mobile data with other devices such as a laptop or tablet. Go to Settings > Connections > Hotspot, set a name and a password, and turn",
+    "top1_secs": [
+     23,
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": false,
+    "top1": "pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": false,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": false,
+    "top1": "open the tray. The tray holds two nano-SIM cards, or one nano-SIM and one microSD card of up to 512 GB. Place the cards with the gold contacts facing down and push the tray back in until it clicks. Do",
+    "top1_secs": [
+     2
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": false,
+    "top1": "contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and turn off Find My Device so the technician can test the phone. Recycling your old phone. Do not throw old",
+    "top1_secs": [
+     42,
+     43
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "erases everything on the phone. Back up regularly so you never lose your data this way. Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's",
+    "top1_secs": [
+     31,
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "tap the red button. The K7 records up to 4K at 30 frames per second. Video stabilisation reduces shaking while you walk, and you can take a photo during recording by tapping the white circle. Where photos are saved. Photos",
+    "top1_secs": [
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "sky and tap Start; the camera takes a long exposure of up to four minutes and records the streaks of shooting stars. Turn off the screen flash and avoid city lights. Portrait mode. Portrait mode blurs the background behind a",
+    "top1_secs": [
+     19,
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": false,
+    "top1": "within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos,",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos,",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": false,
+    "top1": "tap the red button. The K7 records up to 4K at 30 frames per second. Video stabilisation reduces shaking while you walk, and you can take a photo during recording by tapping the white circle. Where photos are saved. Photos",
+    "top1_secs": [
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "not insert a SIM card while the phone is charging. Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch",
+    "top1_secs": [
+     2,
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating. Water and dust resistance. The",
+    "top1_secs": [
+     33,
+     34
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": true,
+    "top1": "the sun, where temperatures can go above 60°C. Warranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your",
+    "top1_secs": [
+     37,
+     38
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect battery stops charging at 85% and helps the battery last longer. Wireless charging. The K7",
+    "top1_secs": [
+     9,
+     10
+    ]
+   }
+  ],
+  "window40/meaning": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry. Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre",
+    "top1_secs": [
+     34,
+     35
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "a 10W charger. You can use the phone while it charges. Fast charging and heat. The K7 supports 33W fast charging. It is normal for the phone to feel warm while fast charging, especially while playing games or using the",
+    "top1_secs": [
+     6,
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "bed or sofa for long periods. Screen timeout. To change how long the screen stays on when you are not touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on",
+    "top1_secs": [
+     11,
+     12
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge. Charging safety. Use only cables and chargers that are",
+    "top1_secs": [
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "by unauthorised shops. These repairs can still be done at a service centre for a fee. Returns and replacements. If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. Phones without a defect",
+    "top1_secs": [
+     39,
+     40
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": false,
+    "top1": "so copies are kept online. Wi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a",
+    "top1_secs": [
+     22,
+     23
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": false,
+    "top1": "pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "sharper results in most light. Night mode. Night mode takes several shots in a row and combines them into one brighter, cleaner photo. It switches on automatically in dark scenes; hold the phone still for about three seconds while the",
+    "top1_secs": [
+     17,
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": false,
+    "top1": "open the tray. The tray holds two nano-SIM cards, or one nano-SIM and one microSD card of up to 512 GB. Place the cards with the gold contacts facing down and push the tray back in until it clicks. Do",
+    "top1_secs": [
+     2
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "apps keep their own backups: back up your chats in the chat app on the old phone first, then restore them when you sign in on the K7. A full transfer of 50 GB takes about 40 minutes. Charging the",
+    "top1_secs": [
+     5,
+     6
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "erases everything on the phone. Back up regularly so you never lose your data this way. Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's",
+    "top1_secs": [
+     31,
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "or schedule it, for example from 10 pm to 7 am. You can allow calls from starred contacts, and a second call from the same number within three minutes always rings. Text size and display size. If the text is",
+    "top1_secs": [
+     15,
+     16
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": false,
+    "top1": "person so they stand out. Stay between half a metre and two metres from your subject. After taking the photo, you can change the blur strength in the Gallery app. Recording videos. Swipe to Video in the Camera app and",
+    "top1_secs": [
+     20,
+     21
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": false,
+    "top1": "contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and turn off Find My Device so the technician can test the phone. Recycling your old phone. Do not throw old",
+    "top1_secs": [
+     42,
+     43
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos,",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush. Drops and screen protectors. The front glass is strengthened, but a fall onto",
+    "top1_secs": [
+     35,
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To save them to a microSD card instead, open Camera settings > Storage location. You can also turn on cloud backup",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "not insert a SIM card while the phone is charging. Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch",
+    "top1_secs": [
+     2,
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating. Water and dust resistance. The",
+    "top1_secs": [
+     33,
+     34
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "certified and in good condition. Do not charge the phone if the port is wet or dusty; let it dry for at least an hour first. Never use a damaged cable, and do not leave the phone charging on a",
+    "top1_secs": [
+     11
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery > Battery health. Turning on Protect battery stops charging at 85% and helps the battery last longer. Wireless charging. The K7",
+    "top1_secs": [
+     9,
+     10
+    ]
+   }
+  ],
+  "window40/meaning+rerank": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "moon icon is shown. For the best results, rest the phone on something steady. Meteor shower mode. Meteor shower mode is for photographing the night sky. Put the phone on a tripod, point it at a dark part of the",
+    "top1_secs": [
+     18,
+     19
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "a 10W charger. You can use the phone while it charges. Fast charging and heat. The K7 supports 33W fast charging. It is normal for the phone to feel warm while fast charging, especially while playing games or using the",
+    "top1_secs": [
+     6,
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": false,
+    "top1": "cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush. Drops and screen protectors. The front glass is strengthened, but a fall onto",
+    "top1_secs": [
+     35,
+     36
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge. Charging safety. Use only cables and chargers that are",
+    "top1_secs": [
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": true,
+    "top1": "the sun, where temperatures can go above 60°C. Warranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your",
+    "top1_secs": [
+     37,
+     38
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "cannot be returned once they are opened. The phone must be in its original box with all accessories and the invoice. Service centres and repair time. Find your nearest authorised service centre in the Support app. Most repairs are finished",
+    "top1_secs": [
+     40,
+     41
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "friend, tap it and show the QR code. Mobile hotspot. Mobile hotspot shares your mobile data with other devices such as a laptop or tablet. Go to Settings > Connections > Hotspot, set a name and a password, and turn",
+    "top1_secs": [
+     23,
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": false,
+    "top1": "pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "sharper results in most light. Night mode. Night mode takes several shots in a row and combines them into one brighter, cleaner photo. It switches on automatically in dark scenes; hold the phone still for about three seconds while the",
+    "top1_secs": [
+     17,
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "choose your earphones, speaker or watch. The K7 remembers paired devices and reconnects to them automatically. Using two SIM cards. The K7 supports dual SIM with dual standby: both numbers can receive calls, but only one can be on a",
+    "top1_secs": [
+     25,
+     26
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": false,
+    "top1": "from your old phone. Open the Switch app on both phones and keep them close together. The K7 can copy contacts, photos, videos, messages and most app data over a direct Wi-Fi link, so no internet connection is needed. Chat",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "erases everything on the phone. Back up regularly so you never lose your data this way. Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's",
+    "top1_secs": [
+     31,
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "or schedule it, for example from 10 pm to 7 am. You can allow calls from starred contacts, and a second call from the same number within three minutes always rings. Text size and display size. If the text is",
+    "top1_secs": [
+     15,
+     16
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "sky and tap Start; the camera takes a long exposure of up to four minutes and records the streaks of shooting stars. Turn off the screen flash and avoid city lights. Portrait mode. Portrait mode blurs the background behind a",
+    "top1_secs": [
+     19,
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": false,
+    "top1": "within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos,",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos,",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush. Drops and screen protectors. The front glass is strengthened, but a fall onto",
+    "top1_secs": [
+     35,
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To save them to a microSD card instead, open Camera settings > Storage location. You can also turn on cloud backup",
+    "top1_secs": [
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "not insert a SIM card while the phone is charging. Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch",
+    "top1_secs": [
+     2,
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating. Water and dust resistance. The",
+    "top1_secs": [
+     33,
+     34
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "certified and in good condition. Do not charge the phone if the port is wet or dusty; let it dry for at least an hour first. Never use a damaged cable, and do not leave the phone charging on a",
+    "top1_secs": [
+     11
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   }
+  ],
+  "window40_overlap20/keyword": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": false,
+    "top1": "moon icon is shown. For the best results, rest the phone on something steady. Meteor shower mode. Meteor shower mode is for photographing the night sky. Put the phone on a tripod, point it at a dark part of the",
+    "top1_secs": [
+     18,
+     19
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": false,
+    "top1": "never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry. Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre",
+    "top1_secs": [
+     34,
+     35
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": false,
+    "top1": "Adaptive brightness adjusts the screen to the light around you. Eye comfort mode adds a warm tint that reduces blue light; schedule it from sunset to sunrise in Settings > Display. Dark mode turns most backgrounds black and can save",
+    "top1_secs": [
+     13
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge. Charging safety. Use only cables and chargers that are",
+    "top1_secs": [
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "for at least an hour first. Never use a damaged cable, and do not leave the phone charging on a bed or sofa for long periods. Screen timeout. To change how long the screen stays on when you are not",
+    "top1_secs": [
+     11,
+     12
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": false,
+    "top1": "a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": false,
+    "top1": "as a laptop or tablet. Go to Settings > Connections > Hotspot, set a name and a password, and turn it on. Up to eight devices can connect at once. Hotspot uses battery quickly, so turn it off when you",
+    "top1_secs": [
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": false,
+    "top1": "buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos. Open the Camera app and tap the shutter button, or press a volume key. Tap anywhere on the screen to",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": true,
+    "top1": "Each SIM can be turned off without removing it. Tap to pay (NFC). The K7 has NFC, so you can pay at shop counters by holding the back of the phone near a card machine. Add a card in your",
+    "top1_secs": [
+     26,
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": false,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": false,
+    "top1": "invoice for warranty claims. Inserting SIM cards. Push the ejector pin into the small hole on the left edge to open the tray. The tray holds two nano-SIM cards, or one nano-SIM and one microSD card of up to 512",
+    "top1_secs": [
+     1,
+     2
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": false,
+    "top1": "contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and turn off Find My Device so the technician can test the phone. Recycling your old phone. Do not throw old",
+    "top1_secs": [
+     42,
+     43
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "erases everything on the phone. Back up regularly so you never lose your data this way. Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's",
+    "top1_secs": [
+     31,
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you need the",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "you walk, and you can take a photo during recording by tapping the white circle. Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To",
+    "top1_secs": [
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "sky and tap Start; the camera takes a long exposure of up to four minutes and records the streaks of shooting stars. Turn off the screen flash and avoid city lights. Portrait mode. Portrait mode blurs the background behind a",
+    "top1_secs": [
+     19,
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos, contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "within 5 working days; screen replacements are often done the same day if the part is in stock. You will get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos,",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "a hard floor can still crack it. Use the clear cover from the box and a tempered glass screen protector to lower the risk of damage. A cracked screen should be replaced soon, because glass splinters can cut your fingers.",
+    "top1_secs": [
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": true,
+    "top1": "the key several times with different parts of your finger. You can add up to five fingerprints. Face unlock. Face unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN,",
+    "top1_secs": [
+     29,
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "you walk, and you can take a photo during recording by tapping the white circle. Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To",
+    "top1_secs": [
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "not insert a SIM card while the phone is charging. Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch",
+    "top1_secs": [
+     2,
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "it, or erase it. The phone must be switched on and connected to the internet. Software updates. The K7 gets security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when",
+    "top1_secs": [
+     32,
+     33
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Battery health. Turning on Protect battery stops charging at 85% and helps the battery last longer. Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the",
+    "top1_secs": [
+     9,
+     10
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "Battery health. Turning on Protect battery stops charging at 85% and helps the battery last longer. Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the",
+    "top1_secs": [
+     9,
+     10
+    ]
+   }
+  ],
+  "window40_overlap20/meaning": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": true,
+    "top1": "not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running water. If the phone gets wet, dry it with a soft cloth and do not",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "charging. It is normal for the phone to feel warm while fast charging, especially while playing games or using the camera at the same time. If the battery temperature goes above 45°C, the phone slows down charging automatically until it",
+    "top1_secs": [
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading. Brightness and eye comfort.",
+    "top1_secs": [
+     12,
+     13
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge. Charging safety. Use only cables and chargers that are",
+    "top1_secs": [
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": false,
+    "top1": "by unauthorised shops. These repairs can still be done at a service centre for a fee. Returns and replacements. If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. Phones without a defect",
+    "top1_secs": [
+     39,
+     40
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": true,
+    "top1": "defects only. It does not cover cracked or broken screens, liquid damage, damage from dropping the phone, or repairs done by unauthorised shops. These repairs can still be done at a service centre for a fee. Returns and replacements. If",
+    "top1_secs": [
+     39,
+     40
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": false,
+    "top1": "you have one. Switch it off in hospitals where you are asked to, and do not use it while driving. Contacting support. Call the helpline number printed on your invoice (toll-free, 9 am to 9 pm, every day) or chat",
+    "top1_secs": [
+     44,
+     45
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": false,
+    "top1": "so copies are kept online. Wi-Fi. Go to Settings > Wi-Fi, turn it on and tap a network name to connect. The K7 supports Wi-Fi 6 on 2.4 GHz and 5 GHz networks. To share a saved network with a",
+    "top1_secs": [
+     22,
+     23
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": false,
+    "top1": "pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": false,
+    "top1": "cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "top1_secs": [
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": true,
+    "top1": "out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery >",
+    "top1_secs": [
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "sharper results in most light. Night mode. Night mode takes several shots in a row and combines them into one brighter, cleaner photo. It switches on automatically in dark scenes; hold the phone still for about three seconds while the",
+    "top1_secs": [
+     17,
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "The K7 supports dual SIM with dual standby: both numbers can receive calls, but only one can be on a call at a time. Choose which SIM is used for mobile data, calls and messages in Settings > SIM manager.",
+    "top1_secs": [
+     26
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": true,
+    "top1": "apps keep their own backups: back up your chats in the chat app on the old phone first, then restore them when you sign in on the K7. A full transfer of 50 GB takes about 40 minutes. Charging the",
+    "top1_secs": [
+     5,
+     6
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "erases everything on the phone. Back up regularly so you never lose your data this way. Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's",
+    "top1_secs": [
+     31,
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you need the",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": false,
+    "top1": "or schedule it, for example from 10 pm to 7 am. You can allow calls from starred contacts, and a second call from the same number within three minutes always rings. Text size and display size. If the text is",
+    "top1_secs": [
+     15,
+     16
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "shooting stars. Turn off the screen flash and avoid city lights. Portrait mode. Portrait mode blurs the background behind a person so they stand out. Stay between half a metre and two metres from your subject. After taking the photo,",
+    "top1_secs": [
+     19,
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos, contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "invoice. Service centres and repair time. Find your nearest authorised service centre in the Support app. Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock. You will",
+    "top1_secs": [
+     40,
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush. Drops and screen protectors. The front glass is strengthened, but a fall onto",
+    "top1_secs": [
+     35,
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "you walk, and you can take a photo during recording by tapping the white circle. Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To",
+    "top1_secs": [
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "not insert a SIM card while the phone is charging. Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch",
+    "top1_secs": [
+     2,
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating. Water and dust resistance. The",
+    "top1_secs": [
+     33,
+     34
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": true,
+    "top1": "on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your phone in the Support app to check your warranty status. What the warranty does not cover. The warranty covers manufacturing",
+    "top1_secs": [
+     38,
+     39
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge cycles, which is roughly two to three years of normal use. Check the current state in Settings > Battery >",
+    "top1_secs": [
+     9
+    ]
+   }
+  ],
+  "window40_overlap20/meaning+rerank": [
+   {
+    "q": "Will my phone survive a shower?",
+    "hit1": true,
+    "top1": "not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running water. If the phone gets wet, dry it with a soft cloth and do not",
+    "top1_secs": [
+     34
+    ]
+   },
+   {
+    "q": "My phone gets really hot when I charge it. Is that normal?",
+    "hit1": true,
+    "top1": "charging. It is normal for the phone to feel warm while fast charging, especially while playing games or using the camera at the same time. If the battery temperature goes above 45°C, the phone slows down charging automatically until it",
+    "top1_secs": [
+     7
+    ]
+   },
+   {
+    "q": "How do I stop the screen from going black so quickly?",
+    "hit1": true,
+    "top1": "touching it, go to Settings > Display > Screen timeout and choose from 15 seconds to 10 minutes. Turn on Stay awake while looking to keep the screen on while the front camera sees you reading. Brightness and eye comfort.",
+    "top1_secs": [
+     12,
+     13
+    ]
+   },
+   {
+    "q": "Can I charge it on a wireless pad?",
+    "hit1": true,
+    "top1": "does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge. Charging safety. Use only cables and chargers that are",
+    "top1_secs": [
+     10,
+     11
+    ]
+   },
+   {
+    "q": "I forgot my lock code. What now?",
+    "hit1": true,
+    "top1": "Forgot your PIN or pattern. If you forget your screen lock, enter a wrong PIN five times and tap Forgot PIN to unlock with your account password. If that is not possible, the only option is a factory reset, which",
+    "top1_secs": [
+     31
+    ]
+   },
+   {
+    "q": "How long is the guarantee?",
+    "hit1": true,
+    "top1": "the sun, where temperatures can go above 60°C. Warranty period. The K7 comes with a 12-month warranty from the date on your invoice. The battery and the in-box accessories, such as the cable, are covered for 6 months. Register your",
+    "top1_secs": [
+     37,
+     38
+    ]
+   },
+   {
+    "q": "If I drop it and the glass breaks, is the repair free?",
+    "hit1": true,
+    "top1": "defects only. It does not cover cracked or broken screens, liquid damage, damage from dropping the phone, or repairs done by unauthorised shops. These repairs can still be done at a service centre for a fee. Returns and replacements. If",
+    "top1_secs": [
+     39,
+     40
+    ]
+   },
+   {
+    "q": "Can I give it back if I just don't like it?",
+    "hit1": true,
+    "top1": "the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. Phones without a defect cannot be returned once they are opened. The phone must be in its original box with all accessories and the",
+    "top1_secs": [
+     40
+    ]
+   },
+   {
+    "q": "How do I share my internet with my laptop?",
+    "hit1": true,
+    "top1": "friend, tap it and show the QR code. Mobile hotspot. Mobile hotspot shares your mobile data with other devices such as a laptop or tablet. Go to Settings > Connections > Hotspot, set a name and a password, and turn",
+    "top1_secs": [
+     23,
+     24
+    ]
+   },
+   {
+    "q": "How do I make the letters bigger?",
+    "hit1": true,
+    "top1": "too small to read comfortably, go to Settings > Display > Font size and drag the slider. Display size makes buttons and icons bigger too. Magnification lets you zoom any part of the screen by tapping three times. Taking photos.",
+    "top1_secs": [
+     16,
+     17
+    ]
+   },
+   {
+    "q": "Can I pay at shops with my phone?",
+    "hit1": false,
+    "top1": "pay at shop counters by holding the back of the phone near a card machine. Add a card in your payment app and set it as the default. NFC must be on, and the phone must be unlocked for payments",
+    "top1_secs": [
+     27
+    ]
+   },
+   {
+    "q": "Is it safe near my father's pacemaker?",
+    "hit1": true,
+    "top1": "they are recycled safely. Erase your data with a factory reset first. Safety information. Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if",
+    "top1_secs": [
+     43,
+     44
+    ]
+   },
+   {
+    "q": "How long before the battery wears out?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   },
+   {
+    "q": "My photos come out too dark at night. Any fix?",
+    "hit1": true,
+    "top1": "sharper results in most light. Night mode. Night mode takes several shots in a row and combines them into one brighter, cleaner photo. It switches on automatically in dark scenes; hold the phone still for about three seconds while the",
+    "top1_secs": [
+     17,
+     18
+    ]
+   },
+   {
+    "q": "Can I use two SIM cards?",
+    "hit1": true,
+    "top1": "choose your earphones, speaker or watch. The K7 remembers paired devices and reconnects to them automatically. Using two SIM cards. The K7 supports dual SIM with dual standby: both numbers can receive calls, but only one can be on a",
+    "top1_secs": [
+     25,
+     26
+    ]
+   },
+   {
+    "q": "How do I move my WhatsApp chats from my old phone?",
+    "hit1": false,
+    "top1": "from your old phone. Open the Switch app on both phones and keep them close together. The K7 can copy contacts, photos, videos, messages and most app data over a direct Wi-Fi link, so no internet connection is needed. Chat",
+    "top1_secs": [
+     5
+    ]
+   },
+   {
+    "q": "I lost my phone. How do I find it?",
+    "hit1": true,
+    "top1": "you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's location on a map, make it ring at full volume for five minutes even if it is on silent, lock",
+    "top1_secs": [
+     32
+    ]
+   },
+   {
+    "q": "Does it work in very cold weather?",
+    "hit1": true,
+    "top1": "Operating temperature. The K7 works best between 0°C and 35°C. In freezing weather the battery may drain faster and the phone may switch off early; keep it in an inside pocket. Do not leave it in a parked car in",
+    "top1_secs": [
+     37
+    ]
+   },
+   {
+    "q": "Is there a charger in the box?",
+    "hit1": true,
+    "top1": "cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you need the",
+    "top1_secs": [
+     1
+    ]
+   },
+   {
+    "q": "How do I stop calls ringing during a meeting?",
+    "hit1": true,
+    "top1": "each contact. Do Not Disturb. Do Not Disturb silences calls, messages and notification sounds. Turn it on from quick settings, or schedule it, for example from 10 pm to 7 am. You can allow calls from starred contacts, and a",
+    "top1_secs": [
+     14,
+     15
+    ]
+   },
+   {
+    "q": "How do I blur the background behind someone?",
+    "hit1": true,
+    "top1": "shooting stars. Turn off the screen flash and avoid city lights. Portrait mode. Portrait mode blurs the background behind a person so they stand out. Stay between half a metre and two metres from your subject. After taking the photo,",
+    "top1_secs": [
+     19,
+     20
+    ]
+   },
+   {
+    "q": "Should I save my photos before giving the phone for repair?",
+    "hit1": true,
+    "top1": "get an SMS when your phone is ready. Before you hand over your phone for repair. Back up your photos, contacts and chats before a repair, because some repairs require a factory reset. Remove your SIM and microSD cards, and",
+    "top1_secs": [
+     41,
+     42
+    ]
+   },
+   {
+    "q": "How many days does a repair take?",
+    "hit1": true,
+    "top1": "invoice. Service centres and repair time. Find your nearest authorised service centre in the Support app. Most repairs are finished within 5 working days; screen replacements are often done the same day if the part is in stock. You will",
+    "top1_secs": [
+     40,
+     41
+    ]
+   },
+   {
+    "q": "What should I clean the screen with?",
+    "hit1": false,
+    "top1": "cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush. Drops and screen protectors. The front glass is strengthened, but a fall onto",
+    "top1_secs": [
+     35,
+     36
+    ]
+   },
+   {
+    "q": "Can I unlock it with my face?",
+    "hit1": false,
+    "top1": "unlock uses the front camera to recognise your face. It is quick but less secure than a fingerprint or PIN, because a photo or a person who looks like you may unlock it. Face unlock cannot be used for payments.",
+    "top1_secs": [
+     30
+    ]
+   },
+   {
+    "q": "Where are my photos stored?",
+    "hit1": true,
+    "top1": "you walk, and you can take a photo during recording by tapping the white circle. Where photos are saved. Photos and videos are saved to the phone's internal storage, in the DCIM folder, and appear in the Gallery app. To",
+    "top1_secs": [
+     21,
+     22
+    ]
+   },
+   {
+    "q": "How do I switch the phone off completely?",
+    "hit1": false,
+    "top1": "not insert a SIM card while the phone is charging. Turning the phone on and off. To switch the phone on, press and hold the power key on the right edge for three seconds until the logo appears. To switch",
+    "top1_secs": [
+     2,
+     3
+    ]
+   },
+   {
+    "q": "For how many years will it get new software?",
+    "hit1": true,
+    "top1": "security updates every month and major software updates for three years from launch. Updates download over Wi-Fi and install when you restart. Keep at least 20% battery and 5 GB of free storage before updating. Water and dust resistance. The",
+    "top1_secs": [
+     33,
+     34
+    ]
+   },
+   {
+    "q": "Is the charging cable covered if it stops working?",
+    "hit1": false,
+    "top1": "Battery health. Turning on Protect battery stops charging at 85% and helps the battery last longer. Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the",
+    "top1_secs": [
+     9,
+     10
+    ]
+   },
+   {
+    "q": "How do I make the battery last on a long bus trip?",
+    "hit1": false,
+    "top1": "running and can stretch the last 10% of charge to about five hours. Battery health and lifespan. Every battery wears out slowly. The K7 battery is designed to keep at least 80% of its original capacity after 800 full charge",
+    "top1_secs": [
+     8,
+     9
+    ]
+   }
+  ]
+ },
+ "total_seconds": 20.6
+}

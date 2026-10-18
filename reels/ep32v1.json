@@ -1,0 +1,753 @@
+{
+ "id": "ep32v1",
+ "title": "How AI finds the right page (RAG part 2)",
+ "label": "EP 32",
+ "banner": "How AI finds the right page",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.3,
+ "lead": 0.3,
+ "music": "lofi",
+ "musicVol": [
+  0.36,
+  1.2
+ ],
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ]
+ ],
+ "musicLift": 2.3,
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.25,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "rg_hook",
+   "tail": 0.2,
+   "boost": 1.3,
+   "data": {
+    "yt": {
+     "chapter": "“Will my phone survive a shower?”",
+     "title": "Keyword search found meteor shower mode",
+     "notes": [
+      [
+       "Our test: an AI helper over a made-up 45-section phone manual (the K7), with 30 everyday questions",
+       0
+      ],
+      [
+       "Keyword search matched the word “shower” and returned the camera's meteor shower mode: the word, not the meaning",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "q": "Will my phone survive a shower?",
+    "wrong": {
+     "title": "Meteor shower mode",
+     "body": "for photographing the night sky… records the streaks of shooting stars."
+    },
+    "right": {
+     "title": "Water and dust resistance",
+     "body": "It is not waterproof. Do not take it into the shower…"
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "01_hook.wav",
+     "text": "We gave an AI our phone's manual: \"Will my phone survive a shower?\" Its search pulled up the camera's meteor shower mode. [1] It matched the word, not the meaning.",
+     "show": "We gave an AI our phone's manual: “Will my phone survive a shower?” Its search pulled up the camera's meteor shower mode. [1] It matched the word, not the meaning.",
+     "tts": "We gave an AI our phone's manual: \"Will my phone survive a shower?\" Its search pulled up the camera's meteor shower mode. It matched the word, not the meaning."
+    }
+   ]
+  },
+  {
+   "id": "score",
+   "type": "rg_score",
+   "tail": 0.2,
+   "drop_cue": 2,
+   "boost": 1.2,
+   "data": {
+    "yt": {
+     "chapter": "Keyword 18/30, meaning 25/30",
+     "title": "Right page first, out of 30",
+     "notes": [
+      [
+       "Right page first: keyword search (BM25) 18/30",
+       1
+      ],
+      [
+       "Meaning search (embeddings, bge-small by BAAI) 25/30",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "q": "Will my phone survive a shower?",
+    "wrong": {
+     "title": "Meteor shower mode",
+     "body": "for photographing the night sky… records the streaks of shooting stars."
+    },
+    "right": {
+     "title": "Water and dust resistance",
+     "body": "It is not waterproof. Do not take it into the shower…"
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "02_score.wav",
+     "text": "thirty everyday questions. Right page first: keyword search, [1] eighteen. Meaning search, [2] twenty-five.",
+     "show": "30 everyday questions. Right page first: keyword search, [1] 18. Meaning search, [2] 25.",
+     "tts": "Thirty everyday questions. Right page first: keyword search, eighteen. Meaning search, twenty-five.",
+     "pauses": {
+      "2": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "id": "guess",
+   "type": "rg_guess",
+   "tail": 0.2,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Why it matters: no page, it guesses",
+     "title": "A made-up refund policy",
+     "notes": [
+      [
+       "With no manual given, our small free AI (SmolLM2-1.7B) answered “Can I give it back if I just don't like it?” with “Yes ... for a refund or exchange”",
+       1
+      ],
+      [
+       "The manual: phones without a defect cannot be returned once they are opened",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "rr": {
+     "q": "Can I give it back if I just don't like it?",
+     "quick": [
+      "Recycling your old phone",
+      "Returns and replacements",
+      "Moving data from your old phone",
+      "Find my phone",
+      "Portrait mode",
+      "Drops and screen protectors",
+      "Before you hand over your phone for repair",
+      "What the warranty does not cover",
+      "Wireless charging",
+      "Safety information"
+     ],
+     "reranked": [
+      "Returns and replacements",
+      "Safety information",
+      "Find my phone",
+      "Wireless charging",
+      "Recycling your old phone",
+      "Drops and screen protectors",
+      "What the warranty does not cover",
+      "Before you hand over your phone for repair",
+      "Moving data from your old phone",
+      "Portrait mode"
+     ],
+     "model": "SmolLM2-1.7B-Instruct",
+     "answer": {
+      "with": "Yes, if the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. However, phones without a defect cannot be returned once they are opened.",
+      "without": "Yes, if you don't like the K7 phone, you can return it to the store or manufacturer for a refund or exchange."
+     },
+     "manual": "Phones without a defect cannot be returned once they are opened.",
+     "g": {
+      "q": "How long is the guarantee?",
+      "quick": [
+       "Returns and replacements",
+       "Warranty period",
+       "Service centres and repair time",
+       "Software updates",
+       "What the warranty does not cover",
+       "Battery health and lifespan",
+       "Safety information",
+       "Screen timeout",
+       "Contacting support",
+       "Moving data from your old phone"
+      ],
+      "reranked": [
+       "Warranty period",
+       "Returns and replacements",
+       "Battery health and lifespan",
+       "Service centres and repair time",
+       "Screen timeout",
+       "Software updates",
+       "Moving data from your old phone",
+       "What the warranty does not cover",
+       "Safety information",
+       "Contacting support"
+      ]
+     }
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "03_guess.wav",
+     "text": "Why it matters: with no page, AI guesses. [1] \"Can I give it back if I just don't like it?\" [3] Our small AI: [4] \"Yes, for a refund.\" [2] The manual says no.",
+     "show": "Why it matters: with no page, AI guesses. [1] “Can I give it back if I just don't like it?” [3] Our small AI: [4] “Yes, for a refund.” [2] The manual says no.",
+     "tts": "Why it matters: with no page, AI guesses. \"Can I give it back if I just don't like it?\" Our small AI: \"Yes, for a refund.\" The manual says no.",
+     "pauses": {
+      "3": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "rg_why",
+   "tail": 0.2,
+   "data": {
+    "yt": {
+     "chapter": "Why not paste the whole manual?",
+     "title": "A short one, sure",
+     "notes": [
+      [
+       "A short document: just paste it into the chat",
+       0
+      ],
+      [
+       "Real manuals run to hundreds of pages. In our test, whole chapters found the right page as often as headings (25/30) but sent 6x the text with every question (paid tools charge by the token)",
+       1
+      ],
+      [
+       "Also: models often miss facts in the middle of long inputs (“Lost in the Middle”, Liu et al., 2023)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "04_why.wav",
+     "text": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent six times the text.",
+     "show": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent 6 times the text.",
+     "tts": "Why not paste the whole manual? A short one, sure. Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent six times the text."
+    }
+   ]
+  },
+  {
+   "id": "cut",
+   "type": "rg_cut",
+   "tail": 0.2,
+   "lift": true,
+   "drop_cue": 3,
+   "layer": 3,
+   "data": {
+    "yt": {
+     "chapter": "Step 1: cut it into pieces",
+     "title": "Cut at headings",
+     "notes": [
+      [
+       "Chunking: cut the document into pieces the search can return",
+       0
+      ],
+      [
+       "Every 40 words, even mid-sentence: meaning search found the right piece first 13/30",
+       1
+      ],
+      [
+       "The same 40-word pieces with a 20-word overlap: 20/30",
+       2
+      ],
+      [
+       "A heading with its paragraph: 25/30 (single sentences: 16/30; they lose what “it” refers to)",
+       3
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "cut": {
+     "w40": "…never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is",
+     "sent": "It is not waterproof.",
+     "sec": "Water and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes… Do not take it into the shower…"
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "05_cut.wav",
+     "text": "Step one: cut it into pieces. Every 40 words, even mid-sentence: [1] thirteen out of thirty. Overlap them: [2] twenty. Cut at headings: [3] twenty-five.",
+     "show": "Step one: cut it into pieces. Every 40 words, even mid-sentence: [1] 13 out of 30. Overlap them: [2] 20. Cut at headings: [3] 25.",
+     "tts": "Step one: cut it into pieces. Every forty words, even mid-sentence: thirteen out of thirty. Overlap them: twenty. Cut at headings: twenty-five.",
+     "pauses": {
+      "3": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "rg_shelf",
+   "tail": 0.2,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Step 2: a vector database",
+     "title": "A library sorted by meaning",
+     "notes": [
+      [
+       "Each piece is stored as numbers that capture its meaning (an embedding, EP 06) in a vector database: a library sorted by meaning",
+       0
+      ],
+      [
+       "Your question becomes numbers too, and the nearest pieces come out (vector databases like FAISS by Meta search millions)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "q": "Will my phone survive a shower?",
+    "wrong": {
+     "title": "Meteor shower mode",
+     "body": "for photographing the night sky… records the streaks of shooting stars."
+    },
+    "right": {
+     "title": "Water and dust resistance",
+     "body": "It is not waterproof. Do not take it into the shower…"
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "06_shelf.wav",
+     "text": "Step two: store each piece as numbers for its meaning, in a vector database, a library sorted by meaning. [1] Your question becomes numbers too, and the nearest pieces come out.",
+     "show": "Step two: store each piece as numbers for its meaning, in a vector database, a library sorted by meaning. [1] Your question becomes numbers too, and the nearest pieces come out.",
+     "tts": "Step two: store each piece as numbers for its meaning, in a vector database, a library sorted by meaning. Your question becomes numbers too, and the nearest pieces come out."
+    }
+   ]
+  },
+  {
+   "id": "rerank",
+   "type": "rg_rerank",
+   "tail": 0.2,
+   "lift": true,
+   "drop_cue": 2,
+   "duck": [
+    2,
+    3,
+    0.3
+   ],
+   "data": {
+    "yt": {
+     "chapter": "Step 3: re-rank",
+     "title": "First-place misses: 5 -> 3",
+     "notes": [
+      [
+       "A re-ranker (a cross-encoder) reads the question beside each top piece and re-orders them: slower (about 80 ms a question on a CPU vs under 1 ms)",
+       1
+      ],
+      [
+       "First-place misses: 5 -> 3 out of 30 (a small test). If the AI reads the top three, meaning search alone already had the right page there 30/30",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "rr": {
+     "q": "Can I give it back if I just don't like it?",
+     "quick": [
+      "Recycling your old phone",
+      "Returns and replacements",
+      "Moving data from your old phone",
+      "Find my phone",
+      "Portrait mode",
+      "Drops and screen protectors",
+      "Before you hand over your phone for repair",
+      "What the warranty does not cover",
+      "Wireless charging",
+      "Safety information"
+     ],
+     "reranked": [
+      "Returns and replacements",
+      "Safety information",
+      "Find my phone",
+      "Wireless charging",
+      "Recycling your old phone",
+      "Drops and screen protectors",
+      "What the warranty does not cover",
+      "Before you hand over your phone for repair",
+      "Moving data from your old phone",
+      "Portrait mode"
+     ],
+     "model": "SmolLM2-1.7B-Instruct",
+     "answer": {
+      "with": "Yes, if the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. However, phones without a defect cannot be returned once they are opened.",
+      "without": "Yes, if you don't like the K7 phone, you can return it to the store or manufacturer for a refund or exchange."
+     },
+     "manual": "Phones without a defect cannot be returned once they are opened.",
+     "g": {
+      "q": "How long is the guarantee?",
+      "quick": [
+       "Returns and replacements",
+       "Warranty period",
+       "Service centres and repair time",
+       "Software updates",
+       "What the warranty does not cover",
+       "Battery health and lifespan",
+       "Safety information",
+       "Screen timeout",
+       "Contacting support",
+       "Moving data from your old phone"
+      ],
+      "reranked": [
+       "Warranty period",
+       "Returns and replacements",
+       "Battery health and lifespan",
+       "Service centres and repair time",
+       "Screen timeout",
+       "Software updates",
+       "Moving data from your old phone",
+       "What the warranty does not cover",
+       "Safety information",
+       "Contacting support"
+      ]
+     }
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "07_rerank.wav",
+     "text": "Step three: a re-ranker [1] reads your question beside each top piece, and reorders them. First-place misses: [2] five became three. [3]",
+     "show": "Step three: a re-ranker [1] reads your question beside each top piece, and reorders them. First-place misses: [2] 5 became 3. [3]",
+     "tts": "Step three: a re-ranker reads your question beside each top piece, and reorders them. First-place misses: five became three. ",
+     "pauses": {
+      "2": 0.25
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "rg_quiz",
+   "tail": 0.2,
+   "duck": [
+    3,
+    2,
+    0.05
+   ],
+   "boost": 1.3,
+   "layer": 2,
+   "lift": true,
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Right page keeps coming second",
+     "notes": [
+      [
+       "Your AI reads only the first piece, and the right page keeps coming second",
+       0
+      ],
+      [
+       "What helps more: a bigger AI, or a re-ranker?",
+       1
+      ],
+      [
+       "The re-ranker: a bigger AI still reads the wrong page. Ours moved “How long is the guarantee?” from the returns page to the warranty page",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "rr": {
+     "q": "Can I give it back if I just don't like it?",
+     "quick": [
+      "Recycling your old phone",
+      "Returns and replacements",
+      "Moving data from your old phone",
+      "Find my phone",
+      "Portrait mode",
+      "Drops and screen protectors",
+      "Before you hand over your phone for repair",
+      "What the warranty does not cover",
+      "Wireless charging",
+      "Safety information"
+     ],
+     "reranked": [
+      "Returns and replacements",
+      "Safety information",
+      "Find my phone",
+      "Wireless charging",
+      "Recycling your old phone",
+      "Drops and screen protectors",
+      "What the warranty does not cover",
+      "Before you hand over your phone for repair",
+      "Moving data from your old phone",
+      "Portrait mode"
+     ],
+     "model": "SmolLM2-1.7B-Instruct",
+     "answer": {
+      "with": "Yes, if the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. However, phones without a defect cannot be returned once they are opened.",
+      "without": "Yes, if you don't like the K7 phone, you can return it to the store or manufacturer for a refund or exchange."
+     },
+     "manual": "Phones without a defect cannot be returned once they are opened.",
+     "g": {
+      "q": "How long is the guarantee?",
+      "quick": [
+       "Returns and replacements",
+       "Warranty period",
+       "Service centres and repair time",
+       "Software updates",
+       "What the warranty does not cover",
+       "Battery health and lifespan",
+       "Safety information",
+       "Screen timeout",
+       "Contacting support",
+       "Moving data from your old phone"
+      ],
+      "reranked": [
+       "Warranty period",
+       "Returns and replacements",
+       "Battery health and lifespan",
+       "Service centres and repair time",
+       "Screen timeout",
+       "Software updates",
+       "Moving data from your old phone",
+       "What the warranty does not cover",
+       "Safety information",
+       "Contacting support"
+      ]
+     }
+    }
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "08_quiz.wav",
+     "text": "Your turn. Your AI reads only the first piece, and the right page keeps coming second. [1] What helps more: a bigger AI, or a re-ranker? [3] <pause 2.0> [2] The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved \"guarantee\" from the returns page to the warranty page.",
+     "show": "Your turn. Your AI reads only the first piece, and the right page keeps coming second. [1] What helps more: a bigger AI, or a re-ranker? [3] <pause 2.0> [2] The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved “guarantee” from the returns page to the warranty page.",
+     "tts": "Your turn. Your AI reads only the first piece, and the right page keeps coming second. What helps more: a bigger AI, or a re-ranker?",
+     "file2": "08_quiz_answer.wav",
+     "tts2": "The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved \"guarantee\" from the returns page to the warranty page.",
+     "pause": 2.0,
+     "gap": 0.1
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "rg_close",
+   "tail": 1.0,
+   "outro": true,
+   "lift": true,
+   "boost": 1.5,
+   "swell": [
+    0,
+    3,
+    1.4
+   ],
+   "data": {
+    "yt": {
+     "chapter": "Paste, cut, search, re-rank",
+     "title": "Make your AI find the right page",
+     "notes": [
+      [
+       "Short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if your bot reads one piece",
+       0
+      ],
+      [
+       "Using a chatbot with your PDF? Ask it to quote the lines it used",
+       0
+      ],
+      [
+       "Next: when meaning search misses exact codes (hybrid search) and how to test your search (RAG, part 3)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "maastaaru",
+     "maxgap": 0.3,
+     "file": "09_close.wav",
+     "text": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact codes. [2] Follow, so you don't miss it.",
+     "show": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact codes. [2] Follow, so you don't miss it.",
+     "tts": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact codes. Follow, so you don't miss it."
+    }
+   ]
+  }
+ ]
+}

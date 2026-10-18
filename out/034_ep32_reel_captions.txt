@@ -1,0 +1,39 @@
+UPLOAD: 034
+VIDEO: 034_ep32_how_ai_finds_the_right_page.mp4  (crayon-style episode, 97 s; replaces the older lesson-format 034_ep32_rag_part_2_chunking_vector_databases_and_reranking.mp4; send copy: 034_ep32_how_ai_finds_the_right_page_ig.mp4, 22 MB)
+
+=== CAPTION ===
+We gave an AI helper our phone's manual and asked: "Will my phone survive a shower?" Its keyword search pulled up the camera's meteor shower mode. It matched the word, not the meaning. On 30 everyday questions, keyword search put the right page first 18 times; meaning search 25.
+
+Episode 32 of AI From Scratch: how AI finds the right page in your documents (RAG, part 2)
+- Why it matters: with no page, AI guesses. Asked "Can I give it back if I just don't like it?", our small free AI said yes, for a refund. The manual says no.
+- A short document? Just paste it. Real manuals run to hundreds of pages; in our test, whole chapters found the right page as often as headings (25/30) but sent 6x the text with every question
+- Step 1, cut it into pieces: every 40 words, even mid-sentence: 13/30. The same pieces overlapping: 20. Cut at headings: 25
+- Step 2, a vector database: each piece stored as numbers for its meaning, a library sorted by meaning; your question finds its shelf
+- Step 3, a re-ranker reads your question beside each top piece and reorders them: first-place misses went from 5 to 3. It's slower (about 80 ms vs under 1 ms a question), so it pays off when the AI reads only one piece (in the top 3, meaning search alone already had the right page 30/30)
+
+Your turn, answered: the re-ranker. If your AI reads only the first piece and the right page keeps coming second, a bigger AI still reads the wrong page. Ours moved "How long is the guarantee?" from the returns page to the warranty page.
+
+Short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used.
+
+Next: when meaning search misses exact codes, like an error number, and how to test your search (RAG, part 3).
+Follow @ai_maastaaru for the full series.
+
+=== HASHTAGS ===
+#RAG #AI #LearnAI #AIForBeginners #VectorDatabase #ChatGPT
+
+=== PINNED_COMMENT ===
+How we tested: a made-up 45-section manual for a made-up phone (2,239 words) and 30 questions written the way people ask. A hit = the piece the search puts first contains the answer sentence. Keyword search = BM25; meaning search = bge-small-en-v1.5 (BAAI, MIT); re-ranker = ms-marco-MiniLM-L6-v2 (Apache-2.0), all free, on a 4-core CPU, no GPU. Answers by SmolLM2-1.7B-Instruct (Hugging Face). With section pieces: keyword 18/30, meaning 25/30, re-ranked 27/30 (in the top 3: 26, 30, 29). 30 questions on one manual is a small test. What document would you want an AI to search for you?
+
+=== COVER ===
+Crayon page: the search box "Will my phone survive a shower?" over the card "Meteor shower mode" stamped WRONG PAGE
+
+=== ALT_TEXT ===
+Hand-drawn crayon-style reel about how AI finds the right page in documents (RAG). A keyword search answers "Will my phone survive a shower?" with the camera's meteor shower mode. Scores on 30 questions: keyword search 18, meaning search 25. With no page, a small AI makes up a refund policy. Then: paste short documents; for big ones cut at headings (13 vs 20 vs 25 out of 30), store pieces as meaning-numbers in a vector database (a library sorted by meaning), and re-rank when the bot reads only one piece (25 to 27). Quiz: the right page keeps coming second, use a re-ranker. Tip: ask your chatbot to quote the lines it used.
+
+=== SOURCES (for comments) ===
+Demo (run by us; pipeline/ep32 in the project): made-up K7 phone manual, 45 sections, 8 chapters, 2,239 words; 30 questions; hit = the first piece contains the answer sentence.
+Right page first, out of 30 (keyword / meaning / meaning + re-ranker): whole chapters 23 / 25 / 28 (about 6x the words); sections 18 / 25 / 27; single sentences 11 / 16 / 20; every 40 words 11 / 13 / 15; every 40 words with a 20-word overlap 12 / 20 / 22.
+Models: BAAI/bge-small-en-v1.5 (MIT, 33.4M parameters), cross-encoder/ms-marco-MiniLM-L6-v2 (Apache-2.0, 22.7M), HuggingFaceTB/SmolLM2-1.7B-Instruct (Apache-2.0). Re-ranking 10 pieces took about 74 ms a question on the CPU; meaning search under 1 ms.
+Retrieve and re-rank: Sentence-Transformers documentation (sbert.net): a fast retriever narrows millions of documents to about 100 candidates; a cross-encoder re-ranker scores each (question, document) pair, more accurately but too slowly for the whole collection.
+Vector database example: FAISS (Meta FAIR), "a library for efficient similarity search and clustering of dense vectors", for sets of vectors of any size.
+Long inputs: Liu et al., "Lost in the Middle: How Language Models Use Long Contexts", arXiv 2307.03172 (2023, TACL): models used information at the start or end of a long input best and often missed it in the middle.

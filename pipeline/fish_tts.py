@@ -42,7 +42,7 @@ def say(text, out, voice=None, model="s2.1-pro-free", speed=None, sample_rate=44
                 f.write(data)
             return out
         except urllib.error.HTTPError as e:
-            if e.code == 429 and k < retries - 1:          # concurrency limit: back off and retry
+            if e.code in (429, 500, 502, 503, 504) and k < retries - 1:   # concurrency limit or a gateway hiccup: back off, retry
                 time.sleep(2 ** (k + 1))
                 continue
             raise RuntimeError(f"Fish Audio HTTP {e.code}: {e.read()[:300].decode(errors='replace')}") from None

@@ -1,0 +1,37 @@
+{
+ "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+ "prompt_with": "Answer the question using only these pieces of the K7 phone manual. Answer in one or two short sentences.\n\n{ctx}\n\nQuestion: {q}",
+ "prompt_without": "Answer the question about the K7 phone in one or two short sentences.\n\nQuestion: {q}",
+ "rows": [
+  {
+   "q": "Will my phone survive a shower?",
+   "pieces": [
+    "Water and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes, such as rain or spilled tea. It is not waterproof. Do not take it into the shower, the bathroom while bathing, a swimming pool or the sea, and never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is completely dry.",
+    "Charging safety. Use only cables and chargers that are certified and in good condition. Do not charge the phone if the port is wet or dusty; let it dry for at least an hour first. Never use a damaged cable, and do not leave the phone charging on a bed or sofa for long periods.",
+    "Cleaning the phone. Wipe the screen with a soft, slightly damp microfibre cloth. Do not use window cleaner, alcohol sprays or rough cloths, which can damage the screen coating. Clean the USB-C port gently with a dry, soft brush."
+   ],
+   "with_pieces": "Yes, your K7 phone can survive a shower. It is rated IP54, which means it is protected against dust and light splashes, such as rain or spilled tea.",
+   "no_pieces": "Yes, your K7 phone can withstand a shower. It has a water-resistant casing and a waterproof design, making it suitable for use in wet environments."
+  },
+  {
+   "q": "Is there a charger in the box?",
+   "pieces": [
+    "What's in the box. Your K7 box contains the phone, a USB-C cable, a SIM ejector pin, a clear back cover and a quick start leaflet. A charger is not included in the box; any USB-C charger rated 5V/2A or higher works, and the K7 charges fastest with a 33W charger. Keep the box and the invoice: you need the invoice for warranty claims.",
+    "Charging the battery. Connect the USB-C cable to the phone and to a wall charger. The battery icon shows a lightning bolt while charging. A full charge from empty takes about 75 minutes with a 33W charger and about 3 hours with a 10W charger. You can use the phone while it charges.",
+    "Wireless charging. The K7 does not support wireless charging. Placing it on a wireless charging pad will not charge it and can make the back of the phone warm. Use the USB-C port to charge."
+   ],
+   "with_pieces": "Yes, there is a USB-C charger included in the K7 phone manual.",
+   "no_pieces": "Yes, the K7 phone has a built-in USB-C charger."
+  },
+  {
+   "q": "Can I give it back if I just don't like it?",
+   "pieces": [
+    "Returns and replacements. If the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. Phones without a defect cannot be returned once they are opened. The phone must be in its original box with all accessories and the invoice.",
+    "Safety information. Keep the phone at least 15 cm away from a pacemaker or other implanted medical device, and do not carry it in a chest pocket if you have one. Switch it off in hospitals where you are asked to, and do not use it while driving.",
+    "Find my phone. If you lose your phone, sign in at the Find My Device website from any browser. You can see the phone's location on a map, make it ring at full volume for five minutes even if it is on silent, lock it, or erase it. The phone must be switched on and connected to the internet."
+   ],
+   "with_pieces": "No, you cannot give the phone back if you don't like it. You must have a manufacturing defect or a problem with the phone itself.",
+   "no_pieces": "Answer: No, the K7 phone cannot be returned if you don't like it."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+UPLOAD: 034 (Telugu page)
+VIDEO: 034_ep32_insta_te.mp4  (crayon-style episode; send copy: 034_ep32_insta_te_ig.mp4, 22 MB)
+
+=== CAPTION ===
+Maa phone manual ni oka AI helper ki ichi "Naa phone shower lo tadiste paadavutundaa?" ani adigaam. Daani keyword search camera lo unna meteor shower mode ni techindi: maata ni pattukundi, artham ni kaadu. 30 maamoolu prashnallo, sariaina page modata vachindi: keyword search 18 saarlu, artham tho vetike meaning search 25.
+
+Episode 32 of AI From Scratch, Telugu lo: mee documents lo sariaina page ni AI ela vetukutundi (RAG, part 2)
+- Enduku mukhyam? Page ivvakapothe AI oohinchi cheptundi. "Nachchakapothe tirigi ivvachchaa?" ante, maa chinna free AI "ivvachchu, refund vastundi" andi. Manual maatram kudaradu antondi.
+- Chinna document? Motham paste cheyyandi. Nijamaina manuals vandala pages; maa test lo motham chapters ichinaa sariaina page anne saarlu dorikindi (25/30), kaani aaru retlu ekkuva text vellindi
+- Step 1, mukkalugaa cut cheyyandi: prati 40 padaalaki, vaakyam madhyalo ainaa: 13/30. Ade mukkalu konchem overlap aithe: 20. Heading daggara cut chesthe: 25
+- Step 2, vector database: prati mukka artham numbers gaa maari, artham prakaaram sardina library laaga untundi; mee prashna tana shelf ni vetukutundi
+- Step 3, re-ranker: mee prashna pakkana prati top mukka ni chadivi varusa maarustundi: modati sthaanam lo tappulu 5 nunchi 3 ki taggaayi. Idi nemmadi (okko prashnaki ~80 ms), anduke AI okka mukke chadivite idi pani chestundi (top 3 lo ayite meaning search okkate 30/30)
+
+Mee vantu, answer: re-ranker. Mee AI modati mukka okkate chadivite, sariaina page eppudu rendo sthaanam lo unte, pedda model ainaa tappu page ne chaduvutundi. Maa re-ranker "guarantee entha kaalam?" prashnaki returns page ni teesi warranty page ni paiki pettindi.
+
+Chinna document? Paste cheyyandi. Peddadi? Headings daggara cut cheyyandi, artham tho vetakandi, bot okka mukke chadivite re-rank cheyyandi. Mee PDF tho chatbot vaadutunte, adi vaadina lines ni choopinchamani adagandi.
+
+Next: artham tho vetike search error codes laanti exact padaalani enduku miss avutundo, mee search ni ela test cheyyaalo (RAG, part 3).
+Follow @ai_maastaaru_telugu
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AIFromScratch #RAG #LearnAI #TeluguTech
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: memu raasina oka dummy phone manual (45 sections, English), 30 prashnalu. Modati mukka lo answer vaakyam unte hit. Keyword search = BM25; meaning search = bge-small-en-v1.5 (BAAI); re-ranker = ms-marco-MiniLM-L6-v2; anni free, 4-core CPU meeda, GPU lekunda. Answers: SmolLM2-1.7B-Instruct (Hugging Face). Sections tho: keyword 18/30, meaning 25/30, re-rank 27/30. Okka manual meeda 30 prashnalu chinna test maatrame. Meeru AI tho e document ni vetakinchukuntaru? Comment cheyyandi.
+
+=== COVER ===
+Crayon page: search box "Will my phone survive a shower?" over the card "Meteor shower mode" stamped WRONG PAGE (English visuals)
