@@ -1,4 +1,4 @@
-# EP33 "We don't sell headaches" (RAG part 3: hybrid search and measuring it) — script v2, for the user's recording
+# EP33 "We don't sell headaches" (RAG part 3: hybrid search and measuring it) — script v2.1 (recorded by the user)
 
 First teaching-skit episode (ROUTINE.md run 1) and the first one voiced by the user: the user records every line, both
 characters, English and (if possible) Telugu; we cut the recording into lines and build the video on it. The AI's lines
@@ -13,6 +13,16 @@ delivery-boy line for the test; Ravi's "Eighteen" counts lost customers; a real 
 20/20, then Ravi switches keyword search off and the next order is E-1203, which is frame 1; the code moved out of
 Ravi's shouted line 1 into the AI's calm line 2. Telugu: "artham emundi", "exact ga", "order ki daggaraga unna",
 "word" for "padam", "meaning search" in line 17, -andi on line 2, "eppudoo"/"okkatee" spelled for long vowels.
+
+v2 -> v2.1 (confirmation pass: "record it after two word changes"): "went home empty-handed"; Telugu 15 "Nannu kotta
+delivery boy laaga test cheyandi" ("test chesinattu" read as "pretend to test"); Ravi's 25 "Why two? Switch one off.";
+Telugu 19 "Ae rendu orders?", 26 "Sarenandi" (a bare "Sare" is curt from the polite AI). Screen: a short chip "Reads 3
+of 15 pages"; MEANING/KEYWORD switches on screen from line 13, so "switch one off" has something to point at; no "Guess"
+prompt; "3 pages per order" under the bars and STILL 3 PAGES on the BOTH bar; the vessels row blames both searches; the
+rule card stays small to the end and greys out BOTH; frame 1's "Out of stock, sorry" pops up as Ravi lifts the phone.
+Record every line; line 15 can go in the edit if lines 15-17 drag. Pinned comment must answer "why not read all 15
+pages?" and say that 20/20 after writing in the exact two misses proves the fix, not the search: a fair test uses new
+orders.
 
 Cast: RAVI ANNA, kirana shop owner, Hyderabad (skit 01). The shop's AI: the channel's student robot on a phone on the
 counter, calm and deadpan; since skit 01 it reads the stock book before every order instead of remembering prices.
@@ -61,7 +71,7 @@ Ravi stays gruff even on his calm lines (7, 14, 23).
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 ★ | Ravi | AI! You told him "out of stock"?! The batteries are right there! | Ravi slams the phone on the counter; phone chat: order "E-1203", reply "Out of stock, sorry"; an arrow to the batteries on the shelf; sticker "The AI said OUT OF STOCK. It's RIGHT THERE"; small tag "EP33 · AI From Scratch" from 2 s |
-| 2 | AI | E-1203 wasn't on the three pages I read. | three stock-book pages fan out: p.15, p.12, p.13, each ✗; "E-1203 is on p.14"; chip "The AI reads 3 of the book's 15 pages per order" |
+| 2 | AI | E-1203 wasn't on the three pages I read. | three stock-book pages fan out: p.15, p.12, p.13, each ✗; "E-1203 is on p.14"; short chip "Reads 3 of 15 pages", up through line 4 |
 | 3 | Ravi | Which three pages?! | |
 | 4 | AI | The three closest to the order. I search by meaning. | insert MEANING SEARCH: pages as dots on a map; the "E-1203" dot lands among look-alike pages full of codes; "To meaning search, codes look alike" |
 | 5 | Ravi | A code has no meaning! It has to match exactly! | |
@@ -72,20 +82,20 @@ Ravi stays gruff even on his calm lines (7, 14, 23).
 | 10 | Ravi | The pain balm is right there! | shelf: "Pain relief balm" |
 | 11 | AI | He never said "balm". | the order's words "something · for · a · headache" against "Pain relief balm": no word in common, red ✗ |
 | 12 | Ravi | So which search do I use?! | |
-| 13 | AI | Both. Merge the two lists. Still three pages. | insert HYBRID SEARCH: the MEANING list and the KEYWORD list slide together; pages near the top of either list rise; big "STILL 3 PAGES" |
+| 13 | AI | Both. Merge the two lists. Still three pages. | insert HYBRID SEARCH: the MEANING list and the KEYWORD list slide together; pages near the top of either list rise; big "STILL 3 PAGES"; two switches appear and stay at the side: MEANING ON, KEYWORD ON |
 | 14 | Ravi | And how do I know it works? | arms crossed |
 | 15 | AI | Test me like a new delivery boy. | a delivery boy sent to houses whose addresses Ravi already knows; ticks |
 | 16 | AI | Twenty orders you already know the answers to. | test sheet "OUR REAL TEST · 20 orders · right item known"; rows tick ✓/✗ |
-| 17 | AI | Meaning only: fifteen out of twenty. Keyword only: thirteen. | bars MEANING 15/20, KEYWORD 13/20, "3 pages read each" |
-| 18 ★ | AI | Both: eighteen. | music drops out before it; bar BOTH 18/20, stamp; chip "Helps most when codes hide in long pages" |
-| 19 | Ravi | Eighteen. So two customers went home empty. Which two? | flat, counting losses; "Guess ↓" |
-| 20 | AI | "Something to wash vessels." And "Ramesh garu's usual." | two red rows: "something to wash vessels: keyword grabbed 'Hand wash' ✗", "Ramesh garu's usual ✗" |
+| 17 | AI | Meaning only: fifteen out of twenty. Keyword only: thirteen. | bars MEANING 15/20, KEYWORD 13/20, "3 pages per order"; lighter phone sound on this line (13 is said once) |
+| 18 ★ | AI | Both: eighteen. | music drops out before it; bar BOTH 18/20 with "STILL 3 PAGES", stamp; chip "Helps most when codes hide in long pages" |
+| 19 | Ravi | Eighteen. So two customers went home empty-handed. Which two? | flat, counting losses |
+| 20 | AI | "Something to wash vessels." And "Ramesh garu's usual." | two red rows: "wash vessels: got Hand wash + Detergent ✗", "Ramesh garu's usual ✗" |
 | 21 | Ravi | Everyone knows those! | Ravi waves at the street |
-| 22 ★ | AI | Everyone except your stock book. | the find bar searches the book: "vessels" not found, "Ramesh" not found; rule card "BOTH. TEST. WRITE IT DOWN." stays up through line 24 |
+| 22 ★ | AI | Everyone except your stock book. | the find bar searches the book: "vessels" not found, "Ramesh" not found; rule card "BOTH. TEST. WRITE IT DOWN." big through line 24, then small in a corner to the end |
 | 23 | Ravi | Written. Test again. | Ravi scribbles "Dishwash bar: for washing vessels" and "Ramesh garu's usual: R-1724" into the book |
 | 24 | AI | Twenty out of twenty. | stamp 20/20 "after writing it down" |
-| 25 | Ravi | Super! Now switch one off. One is enough. | |
-| 26 ★ | AI | Okay. Keyword off. Next order: E-1203. | the KEYWORD switch flips off; order bubble "E-1203"; Ravi lifts the phone to slam it; hard cut to frame 1 (the loop) |
+| 25 | Ravi | Super! Why two? Switch one off. | |
+| 26 ★ | AI | Okay. Keyword off. Next order: E-1203. | the KEYWORD switch flips off and BOTH greys out on the card; order bubble "E-1203", the reply "Out of stock, sorry" pops up as Ravi lifts the phone to slam it (frame 1's chat); hard cut to frame 1 (the loop) |
 
 ## Script (Telugu; on-screen text stays English)
 | # | Who | Telugu | Romanized |
@@ -104,18 +114,18 @@ Ravi stays gruff even on his calm lines (7, 14, 23).
 | 12 | Ravi | మరి ఏ సెర్చ్ వాడాలి?! | Mari ae search vaadaali?! |
 | 13 | AI | రెండూ. రెండు లిస్టులు కలిపి. అయినా మూడు పేజీలే. | Rendoo. Rendu lists kalipi. Ainaa moodu pagese. |
 | 14 | Ravi | పని చేస్తుందని నాకెలా తెలుస్తుంది? | Pani chestundani naakelaa telustundi? |
-| 15 | AI | కొత్త డెలివరీ బాయ్ ని టెస్ట్ చేసినట్టు చేయండి. | Kotta delivery boy ni test chesinattu cheyandi. |
+| 15 | AI | నన్ను కొత్త డెలివరీ బాయ్ లాగా టెస్ట్ చేయండి. | Nannu kotta delivery boy laaga test cheyandi. |
 | 16 | AI | జవాబు ముందే తెలిసిన ఇరవై ఆర్డర్లు ఇవ్వండి. | Javaabu munde telisina iravai orders ivvandi. |
 | 17 | AI | Meaning search మాత్రమే: ఇరవైకి పదిహేను. Keyword మాత్రమే: పదమూడు. | Meaning search maatrame: iravaiki padihenu. Keyword maatrame: padamoodu. |
 | 18 ★ | AI | రెండూ కలిపి: పద్దెనిమిది. | Rendoo kalipi: paddenimidi. |
-| 19 | Ravi | పద్దెనిమిది. అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. ఏ రెండు? | Paddenimidi. Ante iddaru customers utta chetulatho vellaaru. Ae rendu? |
+| 19 | Ravi | పద్దెనిమిది. అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. ఏ రెండు ఆర్డర్లు? | Paddenimidi. Ante iddaru customers utta chetulatho vellaaru. Ae rendu orders? |
 | 20 | AI | "గిన్నెలు కడగడానికి ఏదైనా." ఇంకా "రమేష్ గారు ఎప్పుడూ తీసుకునేది." | "Ginnelu kadagadaaniki edaina." Inkaa "Ramesh garu eppudoo teesukunedi." |
 | 21 | Ravi | అవి అందరికీ తెలుసు! | Avi andariki telusu! |
 | 22 ★ | AI | మీ స్టాక్ బుక్ కి తప్ప. | Mee stock book ki tappa. |
 | 23 | Ravi | రాశా. మళ్ళీ టెస్ట్ చెయ్. | Raashaa. Malli test chey. |
 | 24 | AI | ఇరవైకి ఇరవై. | Iravaiki iravai. |
-| 25 | Ravi | సూపర్! ఇప్పుడు ఒకటి ఆపెయ్. ఒక్కటి చాలు. | Super! Ippudu okati aapey. Okkati chaalu. |
-| 26 ★ | AI | సరే. Keyword ఆఫ్. తర్వాతి ఆర్డర్: E-1203. | Sare. Keyword off. Tarvaati order: E-1203. |
+| 25 | Ravi | సూపర్! రెండు ఎందుకు? ఒకటి ఆపెయ్. | Super! Rendu enduku? Okati aapey. |
+| 26 ★ | AI | సరేనండి. Keyword ఆఫ్. తర్వాతి ఆర్డర్: E-1203. | Sarenandi. Keyword off. Tarvaati order: E-1203. |
 
 ## Recording guide (for the user)
 - Two files: English, then Telugu (Telugu is optional; a language not recorded is voiced with TTS as before).

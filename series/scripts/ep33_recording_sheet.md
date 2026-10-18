@@ -54,7 +54,7 @@ How to record:
 
 **18 ★** AI: Both: eighteen.
 
-**19** RAVI: Eighteen. So two customers went home empty. Which two?
+**19** RAVI: Eighteen. So two customers went home empty-handed. Which two?
 
 **20** AI: "Something to wash vessels." And "Ramesh garu's usual."
 
@@ -66,7 +66,7 @@ How to record:
 
 **24** AI: Twenty out of twenty.
 
-**25** RAVI: Super! Now switch one off. One is enough.
+**25** RAVI: Super! Why two? Switch one off.
 
 **26 ★** AI: Okay. Keyword off. Next order: E-1203.
 
@@ -114,8 +114,8 @@ How to record:
 **14** RAVI: పని చేస్తుందని నాకెలా తెలుస్తుంది?
 &nbsp;&nbsp;&nbsp;&nbsp;_Pani chestundani naakelaa telustundi?_
 
-**15** AI: కొత్త డెలివరీ బాయ్ ని టెస్ట్ చేసినట్టు చేయండి.
-&nbsp;&nbsp;&nbsp;&nbsp;_Kotta delivery boy ni test chesinattu cheyandi._
+**15** AI: నన్ను కొత్త డెలివరీ బాయ్ లాగా టెస్ట్ చేయండి.
+&nbsp;&nbsp;&nbsp;&nbsp;_Nannu kotta delivery boy laaga test cheyandi._
 
 **16** AI: జవాబు ముందే తెలిసిన ఇరవై ఆర్డర్లు ఇవ్వండి.
 &nbsp;&nbsp;&nbsp;&nbsp;_Javaabu munde telisina iravai orders ivvandi._
@@ -126,8 +126,8 @@ How to record:
 **18 ★** AI: రెండూ కలిపి: పద్దెనిమిది.
 &nbsp;&nbsp;&nbsp;&nbsp;_Rendoo kalipi: paddenimidi._
 
-**19** RAVI: పద్దెనిమిది. అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. ఏ రెండు?
-&nbsp;&nbsp;&nbsp;&nbsp;_Paddenimidi. Ante iddaru customers utta chetulatho vellaaru. Ae rendu?_
+**19** RAVI: పద్దెనిమిది. అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. ఏ రెండు ఆర్డర్లు?
+&nbsp;&nbsp;&nbsp;&nbsp;_Paddenimidi. Ante iddaru customers utta chetulatho vellaaru. Ae rendu orders?_
 
 **20** AI: "గిన్నెలు కడగడానికి ఏదైనా." ఇంకా "రమేష్ గారు ఎప్పుడూ తీసుకునేది."
 &nbsp;&nbsp;&nbsp;&nbsp;_"Ginnelu kadagadaaniki edaina." Inkaa "Ramesh garu eppudoo teesukunedi."_
@@ -144,8 +144,8 @@ How to record:
 **24** AI: ఇరవైకి ఇరవై.
 &nbsp;&nbsp;&nbsp;&nbsp;_Iravaiki iravai._
 
-**25** RAVI: సూపర్! ఇప్పుడు ఒకటి ఆపెయ్. ఒక్కటి చాలు.
-&nbsp;&nbsp;&nbsp;&nbsp;_Super! Ippudu okati aapey. Okkati chaalu._
+**25** RAVI: సూపర్! రెండు ఎందుకు? ఒకటి ఆపెయ్.
+&nbsp;&nbsp;&nbsp;&nbsp;_Super! Rendu enduku? Okati aapey._
 
-**26 ★** AI: సరే. Keyword ఆఫ్. తర్వాతి ఆర్డర్: E-1203.
-&nbsp;&nbsp;&nbsp;&nbsp;_Sare. Keyword off. Tarvaati order: E-1203._
+**26 ★** AI: సరేనండి. Keyword ఆఫ్. తర్వాతి ఆర్డర్: E-1203.
+&nbsp;&nbsp;&nbsp;&nbsp;_Sarenandi. Keyword off. Tarvaati order: E-1203._
