@@ -1,12 +1,12 @@
 UPLOAD: 034
-VIDEO: 034_ep32_how_ai_finds_the_right_page.mp4  (crayon-style episode, 97 s; replaces the older lesson-format 034_ep32_rag_part_2_chunking_vector_databases_and_reranking.mp4; send copy: 034_ep32_how_ai_finds_the_right_page_ig.mp4, 22 MB)
+VIDEO: 034_ep32_how_ai_finds_the_right_page.mp4  (crayon-style episode, 101 s; replaces the older lesson-format 034_ep32_rag_part_2_chunking_vector_databases_and_reranking.mp4; send copy: 034_ep32_how_ai_finds_the_right_page_ig.mp4, 22 MB)
 
 === CAPTION ===
 We gave an AI helper our phone's manual and asked: "Will my phone survive a shower?" Its keyword search pulled up the camera's meteor shower mode. It matched the word, not the meaning. On 30 everyday questions, keyword search put the right page first 18 times; meaning search 25.
 
 Episode 32 of AI From Scratch: how AI finds the right page in your documents (RAG, part 2)
 - Why it matters: with no page, AI guesses. Asked "Can I give it back if I just don't like it?", our small free AI said yes, for a refund. The manual says no.
-- A short document? Just paste it. Real manuals run to hundreds of pages; in our test, whole chapters found the right page as often as headings (25/30) but sent 6x the text with every question
+- A short document? Just paste it. Real manuals run to hundreds of pages; in our test, whole chapters found the right page as often as headings (25/30) but sent 6x the text with every question, and AI services charge by the word
 - Step 1, cut it into pieces: every 40 words, even mid-sentence: 13/30. The same pieces overlapping: 20. Cut at headings: 25
 - Step 2, a vector database: each piece stored as numbers for its meaning, a library sorted by meaning; your question finds its shelf
 - Step 3, a re-ranker reads your question beside each top piece and reorders them: first-place misses went from 5 to 3. It's slower (about 80 ms vs under 1 ms a question), so it pays off when the AI reads only one piece (in the top 3, meaning search alone already had the right page 30/30)

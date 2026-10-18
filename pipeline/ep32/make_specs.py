@@ -50,7 +50,7 @@ def rerank_data():   # the re-ranker examples and the answers (real runs)
 
 
 BASE = {"label": "EP 32", "banner": "How AI finds the right page", "topic": "", "look": "classic", "gap": 0.3, "lead": 0.3,
-        "music": "lofi", "musicVol": [0.36, 1.2], "musicEQ": [[260, -4, 0.9]], "musicLift": 2.3, "musicPad": True, "hardCuts": True,
+        "music": "lofi", "musicVol": [0.36, 1.2], "musicEndGain": [0.74, 5], "musicEQ": [[260, -4, 0.9]], "musicLift": 2.3, "musicPad": True, "hardCuts": True,
         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True}
 
 EN_NUM = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten",
@@ -107,35 +107,35 @@ SC = [
      {"pauses": {"2": 0.3}}),
     ("guess", "rg_guess", {"tail": 0.2, "lift": True},
      {"chapter": "Why it matters: no page, it guesses", "title": "A made-up refund policy", "notes": [["With no manual given, our small free AI (SmolLM2-1.7B) answered “Can I give it back if I just don't like it?” with “Yes ... for a refund or exchange”", 1], ["The manual: phones without a defect cannot be returned once they are opened", 2]]},
-     "Why it matters: with no page, AI guesses. [1] “Can I give it back if I just don't like it?” [3] Our small AI: [4] “Yes, for a refund.” [2] The manual says no.",
+     "Why it matters: with no page, AI guesses. [1] “Can I give it back if I just don't like it?” [3] Our small AI: [4] “Yes, for a refund.” [2] The manual says no. [5] Stick around: one trick for your own PDFs.",
      None,
-     "ఇది ఎందుకు ముఖ్యం? పేజీ ఇవ్వకపోతే, ఏఐ ఊహించి చెప్తుంది. [1] \"నచ్చకపోతే తిరిగి ఇవ్వచ్చా?\" అని అడిగితే, [3] మా చిన్న ఏఐ, [4] \"ఇవ్వచ్చు, రిఫండ్ వస్తుంది\" అంది. [2] మాన్యువల్ మాత్రం కుదరదు అంటోంది.",
+     "ఇది ఎందుకు ముఖ్యం? పేజీ ఇవ్వకపోతే, ఏఐ ఊహించి చెప్తుంది. [1] \"నచ్చకపోతే తిరిగి ఇవ్వచ్చా?\" అని అడిగితే, [3] మా చిన్న ఏఐ, [4] \"ఇవ్వచ్చు, రిఫండ్ వస్తుంది\" అంది. [2] మాన్యువల్ మాత్రం కుదరదు అంటోంది. [5] చివర్లో, మీ పీడీఎఫ్ ల కోసం ఒక ట్రిక్ ఉంది.",
      {"pauses": {"3": 0.5}}),
     ("why", "rg_why", {"tail": 0.2},
      {"chapter": "Why not paste the whole manual?", "title": "A short one, sure", "notes": [["A short document: just paste it into the chat", 0], ["Real manuals run to hundreds of pages. In our test, whole chapters found the right page as often as headings ({CHAP}/{TEST}) but sent {RATIO}x the text with every question (paid tools charge by the token)", 1], ["Also: models often miss facts in the middle of long inputs (“Lost in the Middle”, Liu et al., 2023)", 1]]},
-     "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent {RATIO} times the text.",
+     "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters also scored {CHAP}, but sent {RATIO} times the text, and AI services charge by the word.",
      None,
-     "మొత్తం మాన్యువల్ నే ఎందుకు ఇవ్వకూడదు? చిన్నదైతే ఇవ్వచ్చు. [1] కానీ నిజమైన మాన్యువల్స్ వందల పేజీలు. మా టెస్ట్ లో, మొత్తం చాప్టర్లు ఇచ్చినా సరైన పేజీ అన్నే సార్లు దొరికింది, కానీ ఆరు రెట్లు ఎక్కువ టెక్స్ట్ వెళ్ళింది.",
+     "మొత్తం మాన్యువల్ నే ఎందుకు ఇవ్వకూడదు? చిన్నదైతే ఇవ్వచ్చు. [1] కానీ నిజమైన మాన్యువల్స్ వందల పేజీలు. మా టెస్ట్ లో, మొత్తం చాప్టర్లకీ ట్వెంటీ ఫైవ్ వచ్చింది, కానీ ఆరు రెట్లు ఎక్కువ టెక్స్ట్ వెళ్ళింది. ఏఐ సర్వీసుల్లో ప్రతి పదానికీ డబ్బు కట్టాలి.",
      {}),
-    ("cut", "rg_cut", {"tail": 0.2, "lift": True, "drop_cue": 3, "layer": 3},
+    ("cut", "rg_cut", {"tail": 0.2, "lift": True, "layer": 3, "boost": 1.3},
      {"chapter": "Step 1: cut it into pieces", "title": "Cut at headings", "notes": [["Chunking: cut the document into pieces the search can return", 0], ["Every 40 words, even mid-sentence: meaning search found the right piece first {W40}/{TEST}", 1], ["The same 40-word pieces with a 20-word overlap: {W40O}/{TEST}", 2], ["A heading with its paragraph: {SEC}/{TEST} (single sentences: {SENT}/{TEST}; they lose what “it” refers to)", 3]]},
      "Step one: cut it into pieces. Every 40 words, even mid-sentence: [1] {W40} out of {TEST}. Overlap them: [2] {W40O}. Cut at headings: [3] {SEC}.",
      None,
-     "మొదటి స్టెప్: ముక్కలుగా కట్ చేయండి. ప్రతి నలభై పదాలకి, వాక్యం మధ్యలో అయినా కట్ చేస్తే, [1] థర్టీ లో {W40}. ముక్కలు కొంచెం ఓవర్ ల్యాప్ అయితే, [2] {W40O}. హెడింగ్ దగ్గర కట్ చేస్తే, [3] {SEC}.",
+     "మొదటి స్టెప్: ముక్కలుగా కట్ చేయండి. ప్రతి నలభై పదాలకి, వాక్యం మధ్యలో అయినా కట్ చేస్తే, [1] ముప్పై లో {W40}. ముక్కలు కొంచెం ఓవర్ ల్యాప్ అయితే, [2] {W40O}. హెడింగ్ దగ్గర కట్ చేస్తే, [3] {SEC}.",
      {"pauses": {"3": 0.3}}),
-    ("shelf", "rg_shelf", {"tail": 0.2, "lift": True},
+    ("shelf", "rg_shelf", {"tail": 0.2, "lift": True, "boost": 0.7},
      {"chapter": "Step 2: a vector database", "title": "A library sorted by meaning", "notes": [["Each piece is stored as numbers that capture its meaning (an embedding, EP 06) in a vector database: a library sorted by meaning", 0], ["Your question becomes numbers too, and the nearest pieces come out (vector databases like FAISS by Meta search millions)", 1]]},
      "Step two: store each piece as numbers for its meaning, in a vector database, a library sorted by meaning. [1] Your question becomes numbers too, and the nearest pieces come out.",
      None,
      "రెండో స్టెప్: ప్రతి ముక్క అర్థం నంబర్లుగా మారి, ఒక వెక్టర్ డేటాబేస్ లో ఉంటుంది, అర్థం ప్రకారం సర్దిన లైబ్రరీ లాగా. [1] మీ ప్రశ్న కూడా నంబర్లుగా మారుతుంది, దగ్గరగా ఉన్న ముక్కలు బయటకి వస్తాయి.",
      {}),
-    ("rerank", "rg_rerank", {"tail": 0.2, "lift": True, "drop_cue": 2, "duck": [2, 3, 0.3]},
+    ("rerank", "rg_rerank", {"tail": 0.2, "lift": True, "boost": 0.8, "duck": [2, 3, 0.3]},
      {"chapter": "Step 3: re-rank", "title": "First-place misses: {MISSM} -> {MISS}", "notes": [["A re-ranker (a cross-encoder) reads the question beside each top piece and re-orders them: slower (about 80 ms a question on a CPU vs under 1 ms)", 1], ["First-place misses: {MISSM} -> {MISS} out of {TEST} (a small test). If the AI reads the top three, meaning search alone already had the right page there {TOP3}/{TEST}", 2]]},
      "Step three: a re-ranker [1] reads your question beside each top piece, and reorders them. First-place misses: [2] {MISSM} became {MISS}. [3]",
      None,
      "మూడో స్టెప్: రీ ర్యాంకర్. [1] అది మీ ప్రశ్న పక్కన ప్రతి టాప్ ముక్క ని చదివి, వరుస మారుస్తుంది. మొదటి స్థానంలో తప్పులు, [2] ఐదు నుంచి మూడు కి తగ్గాయి. [3]",
      {"pauses": {"2": 0.25}}),
-    ("quiz", "rg_quiz", {"tail": 0.2, "duck": [3, 2, 0.05], "boost": 1.3, "layer": 2, "lift": True},
+    ("quiz", "rg_quiz", {"tail": 0.2, "duck": [3, 2, 0.05], "layer": 2, "lift": True},
      {"chapter": "Your turn", "title": "Right page keeps coming second", "notes": [["Your AI reads only the first piece, and the right page keeps coming second", 0], ["What helps more: a bigger AI, or a re-ranker?", 1], ["The re-ranker: a bigger AI still reads the wrong page. Ours moved “How long is the guarantee?” from the returns page to the warranty page", 2]]},
      "Your turn. Your AI reads only the first piece, and the right page keeps coming second. [1] What helps more: a bigger AI, or a re-ranker? [3] <pause 2.0> [2] The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved “guarantee” from the returns page to the warranty page.",
      None,
@@ -145,9 +145,9 @@ SC = [
       "te_tts": "ఇప్పుడు మీ వంతు. మీ ఏఐ మొదటి ముక్క ఒక్కటే చదువుతుంది, సరైన పేజీ ఎప్పుడూ రెండో స్థానంలో వస్తోంది. ఏది ఎక్కువ సాయం చేస్తుంది: ఇంకా పెద్ద మోడలా, రీ ర్యాంకరా?",
       "te_tts2": "రీ ర్యాంకర్. పెద్ద మోడల్ అయినా తప్పు పేజీ నే చదువుతుంది. మా రీ ర్యాంకర్, \"గ్యారెంటీ ఎంత కాలం?\" అనే ప్రశ్నకి, రిటర్న్స్ పేజీ ని తీసి, వారంటీ పేజీ ని పైకి పెట్టింది.",
       "pause": 2.0, "gap": 0.1}),
-    ("close", "rg_close", {"tail": 1.0, "outro": True, "lift": True, "boost": 1.5, "swell": [0, 3, 1.4]},
+    ("close", "rg_close", {"tail": 1.0, "outro": True, "lift": True, "boost": 1.5, "duck": [3, 1, 0.4], "swell": [0, 1, 1.2]},
      {"chapter": "Paste, cut, search, re-rank", "title": "Make your AI find the right page", "notes": [["Short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if your bot reads one piece", 0], ["Using a chatbot with your PDF? Ask it to quote the lines it used", 0], ["Next: when meaning search misses exact codes (hybrid search) and how to test your search (RAG, part 3)", 1]]},
-     "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact codes. [2] Follow, so you don't miss it.",
+     "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact error codes. [2] Follow, so you don't miss it.",
      None,
      "అంటే: చిన్న డాక్యుమెంట్? మొత్తం పేస్ట్ చేయండి. పెద్దదైతే? హెడింగ్స్ దగ్గర కట్ చేయండి, అర్థంతో వెతకండి, బాట్ ఒక్క ముక్కే చదివితే రీ ర్యాంక్ చేయండి. [3] మీ పీడీఎఫ్ తో చాట్ బాట్ వాడుతుంటే, అది వాడిన లైన్స్ ని చూపించమని అడగండి. [1] తర్వాతి ఎపిసోడ్ లో: అర్థంతో వెతికే సెర్చ్, ఎర్రర్ కోడ్స్ ని ఎందుకు మిస్ అవుతుందో చూద్దాం. [2] మిస్ అవ్వకుండా ఫాలో అవ్వండి.",
      {}),
@@ -167,12 +167,12 @@ def deep_fill(o):
 def spec(lang):
     te = lang == "te"
     s = {"id": "ep32te" if te else "ep32v1", "title": "How AI finds the right page (RAG part 2)" + (" (Telugu audio)" if te else ""), **BASE,
-         "tempo": 1.1 if te else 1.25, "parler_lang": lang}
+         "tempo": 1.15 if te else 1.25, "parler_lang": lang}
     if te:
         s.update({"captionMode": "phrase", "handle": "@ai_maastaaru_telugu"})
     scenes = []
     for i, (sid, typ, flags, yt, show, tts, tel, extra) in enumerate(SC):
-        line = {"who": "maastaaru", "maxgap": 0.32 if te else 0.3, "file": f"{i + 1:02d}_{sid}.wav"}
+        line = {"who": "maastaaru", "maxgap": 0.28 if te else 0.3, "file": f"{i + 1:02d}_{sid}.wav"}
         ex = dict(extra)
         te_tts, te_tts2 = ex.pop("te_tts", None), ex.pop("te_tts2", None)
         show_f = fill(show)
@@ -188,7 +188,7 @@ def spec(lang):
             if "tts2" in ex:
                 ex["tts2"] = fill_spoken(ex["tts2"])
         line.update(ex)
-        data = {"yt": deep_fill(yt), "n": N}
+        data = {"yt": deep_fill(yt), "n": N, "captionSide": 110}
         if sid in ("hook", "score", "shelf"):
             data.update(hook_data())
         if sid == "cut":

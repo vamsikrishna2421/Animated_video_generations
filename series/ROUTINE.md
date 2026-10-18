@@ -33,8 +33,11 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
 - `python3 pipeline/tools/chapters.py <timeline id>`: YouTube chapter list from a timeline (scenes under 10 s merge).
 - `HF_HUB_CACHE=/dev/shm/hf python3 pipeline/review_pack.py <video> [--lang te]` -> `out/review/<name>/`; Telugu also
   `python3 pipeline/te_pack_note.py <video> reels/<id>.json`. Then the `human-viewer` agent reviews the folder.
-- Stopping a stuck job: `pgrep -f "^python3 pipeline/<script>" | xargs kill` (a pattern that also matches your own
-  command line kills your shell).
+- `HF_HUB_CACHE=/dev/shm/hf python3 pipeline/tools/te_verify.py reels/<id>te.json <scenes>`: per-sentence Telugu check;
+  re-voices bad sentences into the cache, then `pipeline/te_check.py ... <scenes> --force <scenes>` rebuilds the lines.
+- Stopping a stuck job: find its PID with `ps -eo pid,args | grep <name> | grep -v grep`, then `kill <PID>`. Never
+  `pkill -f`/`pgrep -f` with a pattern that also appears in your own command line (a comp name, "render.sh",
+  "snapshot_download"): it kills your own shell (exit code 144; it happened three times on Oct 18).
 
 ## Run 1: daily new episode
 1. Topic: the next episode in `series/SYLLABUS.md` after the last crayon episode in `out/upload_queue.json` (after
@@ -92,3 +95,7 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   ("ఏ ఐ, కాలనీ మొత్తం..."). Parler also won't hold a long scream; join takes if a line needs one.
 - After a build, check where each `pauses` silence landed (voiced spans or the transcript): it must sit at the sentence
   end before its cue word, not inside the sentence.
+- The end swell (musicLift + `musicEndGain` + a scene boost) stacks: by the last 10 s the bed can hit full volume
+  under the voice (EP32: "quote" heard as "put" in the PDF tip). `duck` the actionable line, swell from the CTA.
+- Whole-line Whisper on long Telugu takes misses babble: run `pipeline/tools/te_verify.py` on every Telugu scene
+  before the timeline build (EP32 found six bad sentences the line check passed).

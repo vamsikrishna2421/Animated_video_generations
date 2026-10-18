@@ -232,7 +232,7 @@ const RgScore: React.FC<SP> = ({ s, cue }) => {
 // ---------- 3 GUESS: with no page, the AI makes up a refund policy; the manual says no ----------
 const RgGuess: React.FC<SP> = ({ s, cue }) => {
   const d = s.data.rr;
-  const c1 = cue(1), c2 = cue(2), c4 = cue(4);
+  const c1 = cue(1), c2 = cue(2), c4 = cue(4), c5 = cue(5);
   const said = wordAt(s, /^refund$/i, c4, c4 + 20);
   return (
     <>
@@ -241,6 +241,7 @@ const RgGuess: React.FC<SP> = ({ s, cue }) => {
       <Sfx at={said} src="audio/gag_bonk.wav" vol={0.5} />
       <Sfx at={said} src="reel/sfx_boom.wav" vol={0.5} />
       <Sfx at={c2} src="audio/sfx_snap.wav" vol={0.5} />
+      <Sfx at={c5} src="audio/sfx_pop.wav" vol={0.45} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil, COL.deep);
         const r = rng(5100 + boil);
@@ -253,7 +254,7 @@ const RgGuess: React.FC<SP> = ({ s, cue }) => {
         });
         if (f >= c2 - 2) {
           const h = pageCard(c, 90, 960, 900, "The manual: Returns", d.manual, r, seg(f, c2 - 2, c2 + 6), { mark: "tick", markP: seg(f, c2 + 4, c2 + 12), maxLines: 2, bg: "#ecfdf5" });
-          tag(c, "a fix for your own PDFs: at the end", W / 2, 960 + h + 70, 44, COL.yellow, INK, -0.02, seg(f, c2 + 14, c2 + 22));
+          tag(c, "stick around: a trick for your own PDFs", W / 2, 960 + h + 80, 52, COL.yellow, INK, -0.02, seg(f, c5 - 2, c5 + 6));
         }
       }} />
     </>
@@ -286,13 +287,13 @@ const RgWhy: React.FC<SP> = ({ s, cue }) => {
         });
         if (f >= c1 - 4) {
           group(c, fade(f, c1 - 4, 8), (o) => {
-            manual(o, 360, 440, 360, 400, r, seg(f, c1 - 2, c1 + 8), "real ones: hundreds of pages");
+            manual(o, 360, 440, 360, 400, r, seg(f, c1 - 2, c1 + 8), "real ones: 100s of pages");
             // our test: what each question carries to the AI, cut by chapters vs by headings
             const q = seg(f, test - 4, test + 6);
             if (q > 0) {
               label(o, "words sent to the AI with each question (our test)", W / 2, 920, 38, COL.cream, handF, q);
               const bw = 600, mx = Math.max(n.wchap, n.wsec);
-              [{ t: "whole chapters", v: n.wchap, col: COL.orange }, { t: "at headings", v: n.wsec, col: "#16a34a" }].forEach((row, i) => {
+              [{ t: "whole chapters", v: n.wchap, col: COL.orange }, { t: "by section", v: n.wsec, col: "#16a34a" }].forEach((row, i) => {
                 const y = 960 + i * 110, g = easeOut(seg(f, test + i * 6, test + 14 + i * 6));
                 o.save(); o.globalAlpha = q;
                 o.font = caveat(46); o.fillStyle = i === 1 ? COL.yellow : COL.cream; o.textAlign = "right"; o.fillText(row.t, 330, y + 46);
@@ -326,8 +327,9 @@ const RgCut: React.FC<SP> = ({ s, cue }) => {
       {[0, 1, 2].map((k) => <Sfx key={k} at={6 + k * 6} src="audio/sfx_snap.wav" vol={0.32} />)}
       <Sfx at={c1} src="audio/gag_bonk.wav" vol={0.4} />
       <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.45} />
-      <Sfx at={c3 - 2} src="reel/sfx_boom.wav" vol={0.65} />
-      <Sfx at={c3 - 2} src="audio/sfx_snap.wav" vol={0.5} />
+      <Sfx at={c3 - 44} src="reel/sfx_riser.wav" vol={0.7} />
+      <Sfx at={c3 - 8} src="reel/sfx_boom.wav" vol={0.7} />
+      <Sfx at={c3 - 8} src="audio/sfx_snap.wav" vol={0.5} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(5200 + boil);
@@ -342,9 +344,9 @@ const RgCut: React.FC<SP> = ({ s, cue }) => {
         if (f >= rowsIn - 6) {
           group(c, fade(f, rowsIn - 6, 6), (o) => {
             label(o, `meaning search, right piece first, out of ${n.test}`, W / 2, 452, 38, COL.cream, handF, 1);
-            tag(o, "40 words ≈ one section of this manual", 760, 532, 36, COL.cream, INK, 0.02, seg(f, rowsIn, rowsIn + 8));
+            tag(o, "40 words ≈ one section of this manual", W / 2, 518, 46, COL.cream, INK, -0.01, seg(f, rowsIn, rowsIn + 8));
             rows.forEach((row, i) => {
-              const y = 490 + i * 290, q = seg(f, rowsIn - 6 + i * 3, rowsIn + 4 + i * 3);
+              const y = 540 + i * 280, q = seg(f, rowsIn - 6 + i * 3, rowsIn + 4 + i * 3);
               if (q <= 0) return;
               label(o, row.t, 60, y + 40, 50, i === 2 ? COL.yellow : COL.cream, caveat, q, "left");
               if (row.kind === "torn") miniCard(o, 60, y + 64, 620, 150, r, q, { torn: true, text: d.cut.w40, size: 30 });
@@ -362,7 +364,7 @@ const RgCut: React.FC<SP> = ({ s, cue }) => {
                 o.restore();
               }
             });
-            if (f >= c3 + 8) crown(o, 870, 1080, 0.8, r, seg(f, c3 + 8, c3 + 16));
+            if (f >= c3 + 8) crown(o, 870, 1120, 0.8, r, seg(f, c3 + 8, c3 + 16));
             label(o, `single sentences: ${n.sent}/${n.test} (a lone sentence loses what “it” means)`, W / 2, 1385, 32, COL.pale, handF, seg(f, c3 + 10, c3 + 18));
           });
         }
@@ -447,7 +449,8 @@ const RgRerank: React.FC<SP> = ({ s, cue }) => {
       <Sfx at={c1} src="audio/sfx_pop.wav" vol={0.4} />
       <Sfx at={swapAt} src="audio/sfx_whoosh.wav" vol={0.45} />
       <Sfx at={swapAt + 12} src="audio/sfx_snap.wav" vol={0.5} />
-      <Sfx at={c2 - 10} src="reel/sfx_boom.wav" vol={0.6} />
+      <Sfx at={c2 - 46} src="reel/sfx_riser.wav" vol={0.7} />
+      <Sfx at={c2 - 10} src="reel/sfx_boom.wav" vol={0.65} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(5400 + boil);
@@ -485,7 +488,8 @@ const RgRerank: React.FC<SP> = ({ s, cue }) => {
           c.fillStyle = COL.cream; c.fillText("→", 540, 1160);
           c.restore();
           if (f >= c2 - 2) { c.save(); c.globalAlpha = fade(f, c2 - 2, 6); c.font = caveat(130); c.textAlign = "center"; c.fillStyle = GREEN; c.fillText(String(n.miss), 700, 1165); c.restore(); }
-          tag(c, "slower: ~80 ms vs under 1 ms a question", W / 2, 1250, 40, COL.cream, INK, -0.01, seg(f, c2 + 10, c2 + 18));
+          label(c, "(2 more right first time, out of 30: a small test)", W / 2, 1205, 34, COL.pale, handF, seg(f, c2 + 6, c2 + 14));
+          tag(c, "slower: ~80 ms vs under 1 ms a question", W / 2, 1262, 40, COL.cream, INK, -0.01, seg(f, c2 + 10, c2 + 18));
           tag(c, `if the AI reads the top 3: meaning search alone had it ${n.top3}/${n.test}`, W / 2, 1330, 38, COL.cream, INK, 0.01, seg(f, c2 + 18, c2 + 26));
         }
       }} />
@@ -516,7 +520,7 @@ const RgQuiz: React.FC<SP> = ({ s, cue }) => {
         const drawCard = (x: number, L: string, lines: string[], p: number, bg: string) => {
           if (!card(c, x, 570, 440, 330, r, p, bg)) return;
           label(c, L, x + 50, 650, 80, GREY, caveat, p);
-          c.save(); c.font = handF(48); c.fillStyle = INK; lines.forEach((t, i) => c.fillText(t, x + 40, 750 + i * 64)); c.restore();
+          c.save(); c.font = caveat(88); c.fillStyle = INK; c.textAlign = "center"; lines.forEach((t, i) => c.fillText(t, x + 220, 790 + i * 90)); c.restore();
         };
         drawCard(70, "A", ["a bigger AI"], seg(f, c1, c1 + 10), ans ? "#fee2e2" : COL.cream);
         drawCard(570, "B", ["a re-ranker"], seg(f, c1 + 8, c1 + 18), ans ? "#dcfce7" : COL.cream);

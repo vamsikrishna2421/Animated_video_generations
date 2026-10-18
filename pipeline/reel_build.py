@@ -581,6 +581,7 @@ def main(spec_path: Path) -> None:
                 mboosts.append([sc["from"] + lc[str(k)], sc["from"] + sc["frames"], float(g), 1])
     drops = [(scenes[i]["from"] / FPS - 1.2, scenes[i]["from"] / FPS) for i, sc in enumerate(spec["scenes"]) if sc.get("drop")]
     sf.write(out.parent / "sfx_boom.wav", (boom(1.4) * 0.9).astype(np.float32), MSR)
+    sf.write(out.parent / "sfx_riser.wav", (riser(1.2) * 0.8).astype(np.float32), MSR)   # a lift into a mid-scene reveal (scene SFX)
     starts = [s["from"] / FPS for s in scenes]
     lifts = [scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("lift")]
     outro = next((scenes[i]["from"] / FPS for i, sc in enumerate(spec["scenes"]) if sc.get("outro")), None)
@@ -595,6 +596,12 @@ def main(spec_path: Path) -> None:
            else score(total, starts, drops))
     for f0, gdb, q in spec.get("musicEQ", []):   # e.g. [[260, -4, 0.9]]: carve the bed where it masks the voice on phones
         bed = peak_eq(bed, f0, gdb, q)
+    if spec.get("musicEndGain"):   # [start fraction, dB]: the bed itself swells into the ending (the player's volume tops out at 1)
+        f0, gdb = spec["musicEndGain"]
+        g = np.ones(len(bed))
+        i0 = int(f0 * len(bed))
+        g[i0:] = 10 ** (np.linspace(0, gdb, len(bed) - i0) / 20)
+        bed = np.tanh(bed * g[:, None] * 1.1) / np.tanh(1.1) if bed.ndim > 1 else np.tanh(bed * g * 1.1) / np.tanh(1.1)
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
     handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
     for sc in scenes:

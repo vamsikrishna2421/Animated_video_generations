@@ -1,0 +1,77 @@
+UPLOAD: 034 (YouTube, two uploads; 16:9 regular videos, not Shorts)
+
+########## ENGLISH: 034_ep32_yt_en.mp4 ##########
+=== TITLE ===
+"Will My Phone Survive a Shower?" How AI Finds the Right Page (RAG Explained, Tested) | AI From Scratch Ep 32
+
+=== DESCRIPTION ===
+We gave an AI helper a phone manual and asked, "Will my phone survive a shower?" Its keyword search pulled up the camera's meteor shower mode: it matched the word, not the meaning. We ran 30 everyday questions through three kinds of search and four ways of cutting the manual, all with free models on a normal CPU. Here's how AI finds the right page in your documents (RAG), what actually moved the score, and what to do with your own PDFs.
+
+In this episode:
+- Right page first, out of 30: keyword search 18, meaning search 25, meaning search + a re-ranker 27
+- Why it matters: with no page given, our small AI made up a refund policy ("Yes ... for a refund or exchange"); the manual says opened phones without a defect can't be returned
+- A short document? Just paste it. Real manuals run to hundreds of pages; in our test, whole chapters found the right page as often as headings (25/30) but sent 6x the text with every question, and AI services charge by the word
+- Step 1, cut it into pieces: every 40 words, even mid-sentence: 13/30. The same pieces overlapping by 20 words: 20. Cut at headings (a heading with its paragraph): 25. Single sentences: 16 (a lone sentence loses what "it" means)
+- Step 2, a vector database: each piece stored as numbers for its meaning, a library sorted by meaning; your question becomes numbers too and the nearest pieces come out
+- Step 3, a re-ranker reads your question beside each top piece and reorders them: first-place misses went from 5 to 3. It's slower (about 80 ms vs under 1 ms a question on our CPU), so it pays off when the AI reads only one piece; in the top 3, meaning search alone already had the right page 30/30
+- Your turn: your AI reads only the first piece and the right page keeps coming second. A bigger AI, or a re-ranker? The re-ranker: a bigger AI still reads the wrong page. Ours moved "How long is the guarantee?" from the returns page to the warranty page
+- Using a chatbot with your PDF? Ask it to quote the lines it used
+
+Chapters:
+0:00 "Will my phone survive a shower?"
+0:15 Why it matters: no page, it guesses
+0:27 Why not paste the whole manual?
+0:40 Step 1: cut it into pieces
+0:50 Steps 2 and 3: vector database, re-ranker
+1:08 Your turn
+1:25 Paste, cut, search, re-rank
+
+How we tested (run by us): a made-up 45-section user manual for a made-up phone (the "K7", 8 chapters, 2,239 words) and 30 questions written the way people ask. A hit = the piece the search puts first contains that question's answer sentence (strict: a single-sentence piece that answers in other words counts as a miss). Keyword search = BM25; meaning search = BAAI/bge-small-en-v1.5 (MIT, 33.4M parameters); re-ranker = cross-encoder/ms-marco-MiniLM-L6-v2 (Apache-2.0, 22.7M), re-ranking the top 10. All on 4 CPU cores, no GPU. Right page first (keyword / meaning / meaning + re-ranker): whole chapters 23 / 25 / 28; sections 18 / 25 / 27; single sentences 11 / 16 / 20; every 40 words 11 / 13 / 15; every 40 words with a 20-word overlap 12 / 20 / 22. Answers: HuggingFaceTB/SmolLM2-1.7B-Instruct (Apache-2.0); the 360M model from earlier episodes misread the right pages, and the 1.7B still fumbled one of three answers even with the right page, so check what it reads. 30 questions on one manual is a small test.
+Sources: Sentence-Transformers documentation, "Retrieve & Re-Rank" (sbert.net): a fast retriever narrows a large collection to about 100 candidates, then a cross-encoder scores each question-document pair, more accurately but too slowly for the whole collection. FAISS (Meta FAIR, github.com/facebookresearch/faiss): "a library for efficient similarity search and clustering of dense vectors". Liu et al., "Lost in the Middle: How Language Models Use Long Contexts", arXiv 2307.03172 (2023, TACL): models used information at the start or end of a long input best and often missed it in the middle.
+
+Previous episode: teach an AI a new skill without a supercomputer (LoRA).
+Next: when meaning search misses exact codes, like an error number, and how to test your search (RAG, part 3).
+Subscribe for the full AI From Scratch series.
+
+#RAG #AI #LearnAI #VectorDatabase #AIForBeginners #MachineLearning
+
+=== PINNED_COMMENT ===
+Our scoreboard, 30 questions on one made-up manual: keyword search 18, meaning search 25, plus a re-ranker 27. What document would you want an AI to search for you: a manual, your company policies, your notes?
+
+
+########## TELUGU: 034_ep32_yt_te.mp4 ##########
+=== TITLE ===
+"Phone Shower lo Tadiste?" AI Sariaina Page ni Ela Vetukutundi (RAG Telugu lo, Test Chesaam) | AI From Scratch Ep 32
+
+=== DESCRIPTION ===
+Maa phone manual ni oka AI helper ki ichi "Naa phone shower lo tadiste paadavutundaa?" ani adigaam. Daani keyword search camera lo unna meteor shower mode ni techindi: maata ni pattukundi, artham ni kaadu. 30 maamoolu prashnalu, moodu rakaala search, manual ni cut chese naalugu paddhatulu, anni free models tho maamoolu CPU meeda test chesaam. Mee documents lo sariaina page ni AI ela vetukutundo (RAG), score ni nijamgaa edi maarchindo, mee PDFs tho emi cheyyaalo ee video lo.
+
+Ee episode lo:
+- Sariaina page modata, 30 lo: keyword search 18, meaning search 25, re-ranker kalipite 27
+- Enduku mukhyam: page ivvakapothe maa chinna AI oka refund policy ne sontangaa allesindi; manual maatram defect leni phones open chesaaka tirigi teesukoru antondi
+- Chinna document? Paste cheyyandi. Nijamaina manuals vandala pages; maa test lo motham chapters ichinaa sariaina page anne saarlu (25/30) dorikindi, kaani aaru retlu ekkuva text vellindi; AI services lo prati padaanikii dabbu kattaali
+- Step 1, mukkalugaa cut: prati 40 padaalaki, vaakyam madhyalo ainaa: 13/30. Ade mukkalu 20 padaalu overlap aithe: 20. Heading daggara (heading + daani para): 25
+- Step 2, vector database: prati mukka artham numbers gaa, artham prakaaram sardina library laaga; mee prashna kuda numbers gaa maari daggari mukkalu bayataki vastaayi
+- Step 3, re-ranker: modati sthaanam lo tappulu 5 nunchi 3 ki; idi nemmadi (okko prashnaki ~80 ms), anduke AI okka mukke chadivite pani chestundi (top 3 lo meaning search okkate 30/30)
+- Mee vantu: mee AI modati mukka okkate chaduvutundi, sariaina page eppudu rendo sthaanam lo. Pedda model aa, re-ranker aa? Re-ranker: pedda model ainaa tappu page ne chaduvutundi
+- Mee PDF tho chatbot vaadutunte, adi vaadina lines ni choopinchamani adagandi
+
+Chapters:
+0:00 "Phone shower lo tadiste?"
+0:18 Page ivvakapothe AI oohistundi
+0:30 Motham manual enduku ivvakoodadu?
+0:41 Step 1: mukkalugaa cut
+0:52 Steps 2, 3: vector database, re-ranker
+1:11 Mee vantu
+1:31 Paste, cut, search, re-rank
+
+Test details, sources: English description lo unnayi (bge-small-en-v1.5, BAAI; ms-marco-MiniLM-L6-v2; SmolLM2-1.7B-Instruct, Hugging Face; Sentence-Transformers "Retrieve & Re-Rank"; FAISS, Meta; "Lost in the Middle", Liu et al. 2023). Manual, prashnalu memu raasina dummy vi, English lo.
+
+Previous episode: supercomputer lekunda AI ki kotha skill (LoRA).
+Next: artham tho vetike search error codes laanti exact padaalani enduku miss avutundi, mee search ni ela test cheyyaali (RAG, part 3).
+Subscribe cheyyandi: AI From Scratch, Telugu lo.
+
+#AIinTelugu #TeluguAI #RAG #LearnAI #TeluguTech
+
+=== PINNED_COMMENT ===
+Maa scoreboard, okka dummy manual meeda 30 prashnalu: keyword search 18, meaning search 25, re-ranker tho 27. Meeru AI tho e document ni vetakinchukuntaru: manual, company policies, mee notes? Comment cheyyandi.

@@ -1,0 +1,2183 @@
+{
+ "id": "ep32te",
+ "look": "classic",
+ "topic": "",
+ "banner": "How AI finds the right page",
+ "musicVol": [
+  0.36,
+  1.2
+ ],
+ "title": "How AI finds the right page (RAG part 2) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP 32",
+ "fps": 30,
+ "musicLift": 2.3,
+ "musicDrops": [
+  [
+   499,
+   523
+  ],
+  [
+   1504,
+   1528
+  ],
+  [
+   2068,
+   2092
+  ],
+  [
+   2092,
+   2130,
+   0.3
+  ],
+  [
+   2390,
+   2453,
+   0.05
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   348,
+   1.3
+  ],
+  [
+   348,
+   554,
+   1.2
+  ],
+  [
+   2148,
+   2741,
+   1.3
+  ],
+  [
+   2741,
+   3320,
+   1.5
+  ],
+  [
+   2979,
+   3320,
+   1.4,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 3320,
+ "music": "reel/ep32te/score.wav",
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "rg_hook",
+   "data": {
+    "yt": {
+     "chapter": "“Will my phone survive a shower?”",
+     "title": "Keyword search found meteor shower mode",
+     "notes": [
+      [
+       "Our test: an AI helper over a made-up 45-section phone manual (the K7), with 30 everyday questions",
+       0
+      ],
+      [
+       "Keyword search matched the word “shower” and returned the camera's meteor shower mode: the word, not the meaning",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "q": "Will my phone survive a shower?",
+    "wrong": {
+     "title": "Meteor shower mode",
+     "body": "for photographing the night sky… records the streaks of shooting stars."
+    },
+    "right": {
+     "title": "Water and dust resistance",
+     "body": "It is not waterproof. Do not take it into the shower…"
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_01.wav",
+     "from": 9,
+     "frames": 312,
+     "words": [
+      {
+       "w": "We",
+       "from": 10,
+       "to": 15
+      },
+      {
+       "w": "gave",
+       "from": 15,
+       "to": 29
+      },
+      {
+       "w": "an",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "AI",
+       "from": 34,
+       "to": 39
+      },
+      {
+       "w": "our",
+       "from": 39,
+       "to": 46
+      },
+      {
+       "w": "phone's",
+       "from": 46,
+       "to": 60
+      },
+      {
+       "w": "manual:",
+       "from": 60,
+       "to": 74
+      },
+      {
+       "w": "“Will",
+       "from": 74,
+       "to": 93
+      },
+      {
+       "w": "my",
+       "from": 93,
+       "to": 98
+      },
+      {
+       "w": "phone",
+       "from": 98,
+       "to": 108
+      },
+      {
+       "w": "survive",
+       "from": 108,
+       "to": 122
+      },
+      {
+       "w": "a",
+       "from": 122,
+       "to": 126
+      },
+      {
+       "w": "shower?”",
+       "from": 126,
+       "to": 142
+      },
+      {
+       "w": "Its",
+       "from": 142,
+       "to": 157
+      },
+      {
+       "w": "search",
+       "from": 157,
+       "to": 170
+      },
+      {
+       "w": "pulled",
+       "from": 170,
+       "to": 182
+      },
+      {
+       "w": "up",
+       "from": 182,
+       "to": 196
+      },
+      {
+       "w": "the",
+       "from": 196,
+       "to": 203
+      },
+      {
+       "w": "camera's",
+       "from": 203,
+       "to": 219
+      },
+      {
+       "w": "meteor",
+       "from": 219,
+       "to": 231
+      },
+      {
+       "w": "shower",
+       "from": 231,
+       "to": 244
+      },
+      {
+       "w": "mode.",
+       "from": 244,
+       "to": 254
+      },
+      {
+       "w": "It",
+       "from": 254,
+       "to": 258
+      },
+      {
+       "w": "matched",
+       "from": 258,
+       "to": 277
+      },
+      {
+       "w": "the",
+       "from": 277,
+       "to": 282
+      },
+      {
+       "w": "word,",
+       "from": 282,
+       "to": 290
+      },
+      {
+       "w": "not",
+       "from": 290,
+       "to": 295
+      },
+      {
+       "w": "the",
+       "from": 295,
+       "to": 304
+      },
+      {
+       "w": "meaning.",
+       "from": 304,
+       "to": 316
+      }
+     ],
+     "cues": {
+      "1": 272
+     }
+    }
+   ]
+  },
+  {
+   "id": "score",
+   "type": "rg_score",
+   "data": {
+    "yt": {
+     "chapter": "Keyword 18/30, meaning 25/30",
+     "title": "Right page first, out of 30",
+     "notes": [
+      [
+       "Right page first: keyword search (BM25) 18/30",
+       1
+      ],
+      [
+       "Meaning search (embeddings, bge-small by BAAI) 25/30",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "q": "Will my phone survive a shower?",
+    "wrong": {
+     "title": "Meteor shower mode",
+     "body": "for photographing the night sky… records the streaks of shooting stars."
+    },
+    "right": {
+     "title": "Water and dust resistance",
+     "body": "It is not waterproof. Do not take it into the shower…"
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 348,
+   "frames": 206,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_02.wav",
+     "from": 0,
+     "frames": 191,
+     "words": [
+      {
+       "w": "30",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "everyday",
+       "from": 5,
+       "to": 18
+      },
+      {
+       "w": "questions.",
+       "from": 18,
+       "to": 45
+      },
+      {
+       "w": "Right",
+       "from": 45,
+       "to": 54
+      },
+      {
+       "w": "page",
+       "from": 54,
+       "to": 61
+      },
+      {
+       "w": "first:",
+       "from": 61,
+       "to": 71
+      },
+      {
+       "w": "keyword",
+       "from": 71,
+       "to": 93
+      },
+      {
+       "w": "search,",
+       "from": 93,
+       "to": 104
+      },
+      {
+       "w": "18.",
+       "from": 104,
+       "to": 116
+      },
+      {
+       "w": "Meaning",
+       "from": 116,
+       "to": 139
+      },
+      {
+       "w": "search,",
+       "from": 139,
+       "to": 152
+      },
+      {
+       "w": "25.",
+       "from": 152,
+       "to": 187
+      }
+     ],
+     "cues": {
+      "1": 133,
+      "2": 175
+     }
+    }
+   ]
+  },
+  {
+   "id": "guess",
+   "type": "rg_guess",
+   "data": {
+    "yt": {
+     "chapter": "Why it matters: no page, it guesses",
+     "title": "A made-up refund policy",
+     "notes": [
+      [
+       "With no manual given, our small free AI (SmolLM2-1.7B) answered “Can I give it back if I just don't like it?” with “Yes ... for a refund or exchange”",
+       1
+      ],
+      [
+       "The manual: phones without a defect cannot be returned once they are opened",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "rr": {
+     "q": "Can I give it back if I just don't like it?",
+     "quick": [
+      "Recycling your old phone",
+      "Returns and replacements",
+      "Moving data from your old phone",
+      "Find my phone",
+      "Portrait mode",
+      "Drops and screen protectors",
+      "Before you hand over your phone for repair",
+      "What the warranty does not cover",
+      "Wireless charging",
+      "Safety information"
+     ],
+     "reranked": [
+      "Returns and replacements",
+      "Safety information",
+      "Find my phone",
+      "Wireless charging",
+      "Recycling your old phone",
+      "Drops and screen protectors",
+      "What the warranty does not cover",
+      "Before you hand over your phone for repair",
+      "Moving data from your old phone",
+      "Portrait mode"
+     ],
+     "model": "SmolLM2-1.7B-Instruct",
+     "answer": {
+      "with": "Yes, if the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. However, phones without a defect cannot be returned once they are opened.",
+      "without": "Yes, if you don't like the K7 phone, you can return it to the store or manufacturer for a refund or exchange."
+     },
+     "manual": "Phones without a defect cannot be returned once they are opened.",
+     "g": {
+      "q": "How long is the guarantee?",
+      "quick": [
+       "Returns and replacements",
+       "Warranty period",
+       "Service centres and repair time",
+       "Software updates",
+       "What the warranty does not cover",
+       "Battery health and lifespan",
+       "Safety information",
+       "Screen timeout",
+       "Contacting support",
+       "Moving data from your old phone"
+      ],
+      "reranked": [
+       "Warranty period",
+       "Returns and replacements",
+       "Battery health and lifespan",
+       "Service centres and repair time",
+       "Screen timeout",
+       "Software updates",
+       "Moving data from your old phone",
+       "What the warranty does not cover",
+       "Safety information",
+       "Contacting support"
+      ]
+     }
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 554,
+   "frames": 346,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_03.wav",
+     "from": 0,
+     "frames": 317,
+     "words": [
+      {
+       "w": "Why",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "it",
+       "from": 8,
+       "to": 13
+      },
+      {
+       "w": "matters:",
+       "from": 13,
+       "to": 37
+      },
+      {
+       "w": "with",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "no",
+       "from": 45,
+       "to": 50
+      },
+      {
+       "w": "page,",
+       "from": 50,
+       "to": 69
+      },
+      {
+       "w": "AI",
+       "from": 69,
+       "to": 74
+      },
+      {
+       "w": "guesses.",
+       "from": 74,
+       "to": 93
+      },
+      {
+       "w": "“Can",
+       "from": 93,
+       "to": 107
+      },
+      {
+       "w": "I",
+       "from": 107,
+       "to": 109
+      },
+      {
+       "w": "give",
+       "from": 109,
+       "to": 115
+      },
+      {
+       "w": "it",
+       "from": 115,
+       "to": 118
+      },
+      {
+       "w": "back",
+       "from": 118,
+       "to": 124
+      },
+      {
+       "w": "if",
+       "from": 124,
+       "to": 128
+      },
+      {
+       "w": "I",
+       "from": 128,
+       "to": 130
+      },
+      {
+       "w": "just",
+       "from": 130,
+       "to": 136
+      },
+      {
+       "w": "don't",
+       "from": 136,
+       "to": 151
+      },
+      {
+       "w": "like",
+       "from": 151,
+       "to": 157
+      },
+      {
+       "w": "it?”",
+       "from": 157,
+       "to": 163
+      },
+      {
+       "w": "Our",
+       "from": 163,
+       "to": 175
+      },
+      {
+       "w": "small",
+       "from": 175,
+       "to": 182
+      },
+      {
+       "w": "AI:",
+       "from": 182,
+       "to": 187
+      },
+      {
+       "w": "“Yes,",
+       "from": 187,
+       "to": 199
+      },
+      {
+       "w": "for",
+       "from": 199,
+       "to": 216
+      },
+      {
+       "w": "a",
+       "from": 216,
+       "to": 220
+      },
+      {
+       "w": "refund.”",
+       "from": 220,
+       "to": 270
+      },
+      {
+       "w": "The",
+       "from": 270,
+       "to": 278
+      },
+      {
+       "w": "manual",
+       "from": 278,
+       "to": 298
+      },
+      {
+       "w": "says",
+       "from": 298,
+       "to": 309
+      },
+      {
+       "w": "no.",
+       "from": 309,
+       "to": 317
+      }
+     ],
+     "cues": {
+      "1": 103,
+      "3": 265,
+      "4": 265,
+      "2": 265
+     }
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "type": "rg_why",
+   "data": {
+    "yt": {
+     "chapter": "Why not paste the whole manual?",
+     "title": "A short one, sure",
+     "notes": [
+      [
+       "A short document: just paste it into the chat",
+       0
+      ],
+      [
+       "Real manuals run to hundreds of pages. In our test, whole chapters found the right page as often as headings (25/30) but sent 6x the text with every question (paid tools charge by the token)",
+       1
+      ],
+      [
+       "Also: models often miss facts in the middle of long inputs (“Lost in the Middle”, Liu et al., 2023)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 900,
+   "frames": 350,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_04.wav",
+     "from": 0,
+     "frames": 335,
+     "words": [
+      {
+       "w": "Why",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "not",
+       "from": 7,
+       "to": 12
+      },
+      {
+       "w": "paste",
+       "from": 12,
+       "to": 21
+      },
+      {
+       "w": "the",
+       "from": 21,
+       "to": 27
+      },
+      {
+       "w": "whole",
+       "from": 27,
+       "to": 39
+      },
+      {
+       "w": "manual?",
+       "from": 39,
+       "to": 50
+      },
+      {
+       "w": "A",
+       "from": 50,
+       "to": 53
+      },
+      {
+       "w": "short",
+       "from": 53,
+       "to": 69
+      },
+      {
+       "w": "one,",
+       "from": 69,
+       "to": 76
+      },
+      {
+       "w": "sure.",
+       "from": 76,
+       "to": 85
+      },
+      {
+       "w": "Real",
+       "from": 85,
+       "to": 103
+      },
+      {
+       "w": "ones",
+       "from": 103,
+       "to": 119
+      },
+      {
+       "w": "run",
+       "from": 119,
+       "to": 126
+      },
+      {
+       "w": "hundreds",
+       "from": 126,
+       "to": 145
+      },
+      {
+       "w": "of",
+       "from": 145,
+       "to": 150
+      },
+      {
+       "w": "pages.",
+       "from": 150,
+       "to": 170
+      },
+      {
+       "w": "In",
+       "from": 170,
+       "to": 175
+      },
+      {
+       "w": "our",
+       "from": 175,
+       "to": 186
+      },
+      {
+       "w": "test,",
+       "from": 186,
+       "to": 196
+      },
+      {
+       "w": "whole",
+       "from": 196,
+       "to": 206
+      },
+      {
+       "w": "chapters",
+       "from": 206,
+       "to": 221
+      },
+      {
+       "w": "found",
+       "from": 221,
+       "to": 239
+      },
+      {
+       "w": "the",
+       "from": 239,
+       "to": 246
+      },
+      {
+       "w": "page",
+       "from": 246,
+       "to": 254
+      },
+      {
+       "w": "as",
+       "from": 254,
+       "to": 259
+      },
+      {
+       "w": "often,",
+       "from": 259,
+       "to": 271
+      },
+      {
+       "w": "but",
+       "from": 271,
+       "to": 287
+      },
+      {
+       "w": "sent",
+       "from": 287,
+       "to": 301
+      },
+      {
+       "w": "6",
+       "from": 301,
+       "to": 304
+      },
+      {
+       "w": "times",
+       "from": 304,
+       "to": 314
+      },
+      {
+       "w": "the",
+       "from": 314,
+       "to": 321
+      },
+      {
+       "w": "text.",
+       "from": 321,
+       "to": 331
+      }
+     ],
+     "cues": {
+      "1": 94
+     }
+    }
+   ]
+  },
+  {
+   "id": "cut",
+   "type": "rg_cut",
+   "data": {
+    "yt": {
+     "chapter": "Step 1: cut it into pieces",
+     "title": "Cut at headings",
+     "notes": [
+      [
+       "Chunking: cut the document into pieces the search can return",
+       0
+      ],
+      [
+       "Every 40 words, even mid-sentence: meaning search found the right piece first 13/30",
+       1
+      ],
+      [
+       "The same 40-word pieces with a 20-word overlap: 20/30",
+       2
+      ],
+      [
+       "A heading with its paragraph: 25/30 (single sentences: 16/30; they lose what “it” refers to)",
+       3
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "cut": {
+     "w40": "…never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is",
+     "sent": "It is not waterproof.",
+     "sec": "Water and dust resistance. The K7 is rated IP54: it is protected against dust and light splashes… Do not take it into the shower…"
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1250,
+   "frames": 325,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_05.wav",
+     "from": 0,
+     "frames": 294,
+     "words": [
+      {
+       "w": "Step",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "one:",
+       "from": 8,
+       "to": 33
+      },
+      {
+       "w": "cut",
+       "from": 33,
+       "to": 39
+      },
+      {
+       "w": "it",
+       "from": 39,
+       "to": 43
+      },
+      {
+       "w": "into",
+       "from": 43,
+       "to": 51
+      },
+      {
+       "w": "pieces.",
+       "from": 51,
+       "to": 72
+      },
+      {
+       "w": "Every",
+       "from": 72,
+       "to": 81
+      },
+      {
+       "w": "40",
+       "from": 81,
+       "to": 86
+      },
+      {
+       "w": "words,",
+       "from": 86,
+       "to": 105
+      },
+      {
+       "w": "even",
+       "from": 105,
+       "to": 112
+      },
+      {
+       "w": "mid-sentence:",
+       "from": 112,
+       "to": 134
+      },
+      {
+       "w": "13",
+       "from": 134,
+       "to": 140
+      },
+      {
+       "w": "out",
+       "from": 140,
+       "to": 149
+      },
+      {
+       "w": "of",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "30.",
+       "from": 155,
+       "to": 173
+      },
+      {
+       "w": "Overlap",
+       "from": 173,
+       "to": 190
+      },
+      {
+       "w": "them:",
+       "from": 190,
+       "to": 203
+      },
+      {
+       "w": "20.",
+       "from": 203,
+       "to": 215
+      },
+      {
+       "w": "Cut",
+       "from": 215,
+       "to": 231
+      },
+      {
+       "w": "at",
+       "from": 231,
+       "to": 237
+      },
+      {
+       "w": "headings:",
+       "from": 237,
+       "to": 257
+      },
+      {
+       "w": "25.",
+       "from": 257,
+       "to": 290
+      }
+     ],
+     "cues": {
+      "1": 169,
+      "2": 227,
+      "3": 278
+     }
+    }
+   ]
+  },
+  {
+   "id": "shelf",
+   "type": "rg_shelf",
+   "data": {
+    "yt": {
+     "chapter": "Step 2: a vector database",
+     "title": "A library sorted by meaning",
+     "notes": [
+      [
+       "Each piece is stored as numbers that capture its meaning (an embedding, EP 06) in a vector database: a library sorted by meaning",
+       0
+      ],
+      [
+       "Your question becomes numbers too, and the nearest pieces come out (vector databases like FAISS by Meta search millions)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "q": "Will my phone survive a shower?",
+    "wrong": {
+     "title": "Meteor shower mode",
+     "body": "for photographing the night sky… records the streaks of shooting stars."
+    },
+    "right": {
+     "title": "Water and dust resistance",
+     "body": "It is not waterproof. Do not take it into the shower…"
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1575,
+   "frames": 308,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_06.wav",
+     "from": 0,
+     "frames": 293,
+     "words": [
+      {
+       "w": "Step",
+       "from": 2,
+       "to": 8
+      },
+      {
+       "w": "two:",
+       "from": 8,
+       "to": 32
+      },
+      {
+       "w": "store",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "w": "each",
+       "from": 40,
+       "to": 46
+      },
+      {
+       "w": "piece",
+       "from": 46,
+       "to": 54
+      },
+      {
+       "w": "as",
+       "from": 54,
+       "to": 58
+      },
+      {
+       "w": "numbers",
+       "from": 58,
+       "to": 68
+      },
+      {
+       "w": "for",
+       "from": 68,
+       "to": 73
+      },
+      {
+       "w": "its",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "meaning,",
+       "from": 78,
+       "to": 90
+      },
+      {
+       "w": "in",
+       "from": 90,
+       "to": 94
+      },
+      {
+       "w": "a",
+       "from": 94,
+       "to": 96
+      },
+      {
+       "w": "vector",
+       "from": 96,
+       "to": 109
+      },
+      {
+       "w": "database,",
+       "from": 109,
+       "to": 132
+      },
+      {
+       "w": "a",
+       "from": 132,
+       "to": 135
+      },
+      {
+       "w": "library",
+       "from": 135,
+       "to": 149
+      },
+      {
+       "w": "sorted",
+       "from": 149,
+       "to": 158
+      },
+      {
+       "w": "by",
+       "from": 158,
+       "to": 162
+      },
+      {
+       "w": "meaning.",
+       "from": 162,
+       "to": 181
+      },
+      {
+       "w": "Your",
+       "from": 181,
+       "to": 191
+      },
+      {
+       "w": "question",
+       "from": 191,
+       "to": 203
+      },
+      {
+       "w": "becomes",
+       "from": 203,
+       "to": 213
+      },
+      {
+       "w": "numbers",
+       "from": 213,
+       "to": 223
+      },
+      {
+       "w": "too,",
+       "from": 223,
+       "to": 239
+      },
+      {
+       "w": "and",
+       "from": 239,
+       "to": 244
+      },
+      {
+       "w": "the",
+       "from": 244,
+       "to": 250
+      },
+      {
+       "w": "nearest",
+       "from": 250,
+       "to": 260
+      },
+      {
+       "w": "pieces",
+       "from": 260,
+       "to": 268
+      },
+      {
+       "w": "come",
+       "from": 268,
+       "to": 275
+      },
+      {
+       "w": "out.",
+       "from": 275,
+       "to": 281
+      }
+     ],
+     "cues": {
+      "1": 181
+     }
+    }
+   ]
+  },
+  {
+   "id": "rerank",
+   "type": "rg_rerank",
+   "data": {
+    "yt": {
+     "chapter": "Step 3: re-rank",
+     "title": "First-place misses: 5 -> 3",
+     "notes": [
+      [
+       "A re-ranker (a cross-encoder) reads the question beside each top piece and re-orders them: slower (about 80 ms a question on a CPU vs under 1 ms)",
+       1
+      ],
+      [
+       "First-place misses: 5 -> 3 out of 30 (a small test). If the AI reads the top three, meaning search alone already had the right page there 30/30",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "rr": {
+     "q": "Can I give it back if I just don't like it?",
+     "quick": [
+      "Recycling your old phone",
+      "Returns and replacements",
+      "Moving data from your old phone",
+      "Find my phone",
+      "Portrait mode",
+      "Drops and screen protectors",
+      "Before you hand over your phone for repair",
+      "What the warranty does not cover",
+      "Wireless charging",
+      "Safety information"
+     ],
+     "reranked": [
+      "Returns and replacements",
+      "Safety information",
+      "Find my phone",
+      "Wireless charging",
+      "Recycling your old phone",
+      "Drops and screen protectors",
+      "What the warranty does not cover",
+      "Before you hand over your phone for repair",
+      "Moving data from your old phone",
+      "Portrait mode"
+     ],
+     "model": "SmolLM2-1.7B-Instruct",
+     "answer": {
+      "with": "Yes, if the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. However, phones without a defect cannot be returned once they are opened.",
+      "without": "Yes, if you don't like the K7 phone, you can return it to the store or manufacturer for a refund or exchange."
+     },
+     "manual": "Phones without a defect cannot be returned once they are opened.",
+     "g": {
+      "q": "How long is the guarantee?",
+      "quick": [
+       "Returns and replacements",
+       "Warranty period",
+       "Service centres and repair time",
+       "Software updates",
+       "What the warranty does not cover",
+       "Battery health and lifespan",
+       "Safety information",
+       "Screen timeout",
+       "Contacting support",
+       "Moving data from your old phone"
+      ],
+      "reranked": [
+       "Warranty period",
+       "Returns and replacements",
+       "Battery health and lifespan",
+       "Service centres and repair time",
+       "Screen timeout",
+       "Software updates",
+       "Moving data from your old phone",
+       "What the warranty does not cover",
+       "Safety information",
+       "Contacting support"
+      ]
+     }
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1883,
+   "frames": 264,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_07.wav",
+     "from": 0,
+     "frames": 247,
+     "words": [
+      {
+       "w": "Step",
+       "from": 3,
+       "to": 9
+      },
+      {
+       "w": "three:",
+       "from": 9,
+       "to": 37
+      },
+      {
+       "w": "a",
+       "from": 37,
+       "to": 40
+      },
+      {
+       "w": "re-ranker",
+       "from": 40,
+       "to": 61
+      },
+      {
+       "w": "reads",
+       "from": 61,
+       "to": 68
+      },
+      {
+       "w": "your",
+       "from": 68,
+       "to": 75
+      },
+      {
+       "w": "question",
+       "from": 75,
+       "to": 86
+      },
+      {
+       "w": "beside",
+       "from": 86,
+       "to": 108
+      },
+      {
+       "w": "each",
+       "from": 108,
+       "to": 115
+      },
+      {
+       "w": "top",
+       "from": 115,
+       "to": 120
+      },
+      {
+       "w": "piece,",
+       "from": 120,
+       "to": 138
+      },
+      {
+       "w": "and",
+       "from": 138,
+       "to": 143
+      },
+      {
+       "w": "reorders",
+       "from": 143,
+       "to": 165
+      },
+      {
+       "w": "them.",
+       "from": 165,
+       "to": 173
+      },
+      {
+       "w": "First-place",
+       "from": 173,
+       "to": 189
+      },
+      {
+       "w": "misses:",
+       "from": 189,
+       "to": 215
+      },
+      {
+       "w": "5",
+       "from": 215,
+       "to": 220
+      },
+      {
+       "w": "became",
+       "from": 220,
+       "to": 239
+      },
+      {
+       "w": "3.",
+       "from": 239,
+       "to": 247
+      }
+     ],
+     "cues": {
+      "1": 53,
+      "2": 209,
+      "3": 247
+     }
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "type": "rg_quiz",
+   "data": {
+    "yt": {
+     "chapter": "Your turn",
+     "title": "Right page keeps coming second",
+     "notes": [
+      [
+       "Your AI reads only the first piece, and the right page keeps coming second",
+       0
+      ],
+      [
+       "What helps more: a bigger AI, or a re-ranker?",
+       1
+      ],
+      [
+       "The re-ranker: a bigger AI still reads the wrong page. Ours moved “How long is the guarantee?” from the returns page to the warranty page",
+       2
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "rr": {
+     "q": "Can I give it back if I just don't like it?",
+     "quick": [
+      "Recycling your old phone",
+      "Returns and replacements",
+      "Moving data from your old phone",
+      "Find my phone",
+      "Portrait mode",
+      "Drops and screen protectors",
+      "Before you hand over your phone for repair",
+      "What the warranty does not cover",
+      "Wireless charging",
+      "Safety information"
+     ],
+     "reranked": [
+      "Returns and replacements",
+      "Safety information",
+      "Find my phone",
+      "Wireless charging",
+      "Recycling your old phone",
+      "Drops and screen protectors",
+      "What the warranty does not cover",
+      "Before you hand over your phone for repair",
+      "Moving data from your old phone",
+      "Portrait mode"
+     ],
+     "model": "SmolLM2-1.7B-Instruct",
+     "answer": {
+      "with": "Yes, if the phone has a manufacturing defect, you can get a replacement within 7 days of purchase. However, phones without a defect cannot be returned once they are opened.",
+      "without": "Yes, if you don't like the K7 phone, you can return it to the store or manufacturer for a refund or exchange."
+     },
+     "manual": "Phones without a defect cannot be returned once they are opened.",
+     "g": {
+      "q": "How long is the guarantee?",
+      "quick": [
+       "Returns and replacements",
+       "Warranty period",
+       "Service centres and repair time",
+       "Software updates",
+       "What the warranty does not cover",
+       "Battery health and lifespan",
+       "Safety information",
+       "Screen timeout",
+       "Contacting support",
+       "Moving data from your old phone"
+      ],
+      "reranked": [
+       "Warranty period",
+       "Returns and replacements",
+       "Battery health and lifespan",
+       "Service centres and repair time",
+       "Screen timeout",
+       "Software updates",
+       "Moving data from your old phone",
+       "What the warranty does not cover",
+       "Safety information",
+       "Contacting support"
+      ]
+     }
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 2148,
+   "frames": 593,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_08.wav",
+     "from": 0,
+     "frames": 570,
+     "words": [
+      {
+       "w": "Your",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "turn.",
+       "from": 8,
+       "to": 17
+      },
+      {
+       "w": "Your",
+       "from": 17,
+       "to": 31
+      },
+      {
+       "w": "AI",
+       "from": 31,
+       "to": 36
+      },
+      {
+       "w": "reads",
+       "from": 36,
+       "to": 48
+      },
+      {
+       "w": "only",
+       "from": 48,
+       "to": 55
+      },
+      {
+       "w": "the",
+       "from": 55,
+       "to": 60
+      },
+      {
+       "w": "first",
+       "from": 60,
+       "to": 69
+      },
+      {
+       "w": "piece,",
+       "from": 69,
+       "to": 79
+      },
+      {
+       "w": "and",
+       "from": 79,
+       "to": 94
+      },
+      {
+       "w": "the",
+       "from": 94,
+       "to": 100
+      },
+      {
+       "w": "right",
+       "from": 100,
+       "to": 109
+      },
+      {
+       "w": "page",
+       "from": 109,
+       "to": 116
+      },
+      {
+       "w": "keeps",
+       "from": 116,
+       "to": 124
+      },
+      {
+       "w": "coming",
+       "from": 124,
+       "to": 134
+      },
+      {
+       "w": "second.",
+       "from": 134,
+       "to": 159
+      },
+      {
+       "w": "What",
+       "from": 159,
+       "to": 167
+      },
+      {
+       "w": "helps",
+       "from": 167,
+       "to": 177
+      },
+      {
+       "w": "more:",
+       "from": 177,
+       "to": 187
+      },
+      {
+       "w": "a",
+       "from": 187,
+       "to": 199
+      },
+      {
+       "w": "bigger",
+       "from": 199,
+       "to": 210
+      },
+      {
+       "w": "AI,",
+       "from": 210,
+       "to": 216
+      },
+      {
+       "w": "or",
+       "from": 216,
+       "to": 221
+      },
+      {
+       "w": "a",
+       "from": 221,
+       "to": 224
+      },
+      {
+       "w": "re-ranker?",
+       "from": 224,
+       "to": 242
+      },
+      {
+       "w": "The",
+       "from": 305,
+       "to": 311
+      },
+      {
+       "w": "re-ranker.",
+       "from": 311,
+       "to": 336
+      },
+      {
+       "w": "Why?",
+       "from": 336,
+       "to": 344
+      },
+      {
+       "w": "A",
+       "from": 344,
+       "to": 347
+      },
+      {
+       "w": "bigger",
+       "from": 347,
+       "to": 358
+      },
+      {
+       "w": "AI",
+       "from": 358,
+       "to": 363
+      },
+      {
+       "w": "still",
+       "from": 363,
+       "to": 373
+      },
+      {
+       "w": "reads",
+       "from": 373,
+       "to": 390
+      },
+      {
+       "w": "the",
+       "from": 390,
+       "to": 397
+      },
+      {
+       "w": "wrong",
+       "from": 397,
+       "to": 406
+      },
+      {
+       "w": "page.",
+       "from": 406,
+       "to": 427
+      },
+      {
+       "w": "Ours",
+       "from": 427,
+       "to": 435
+      },
+      {
+       "w": "moved",
+       "from": 435,
+       "to": 445
+      },
+      {
+       "w": "“guarantee”",
+       "from": 445,
+       "to": 472
+      },
+      {
+       "w": "from",
+       "from": 472,
+       "to": 480
+      },
+      {
+       "w": "the",
+       "from": 480,
+       "to": 487
+      },
+      {
+       "w": "returns",
+       "from": 487,
+       "to": 499
+      },
+      {
+       "w": "page",
+       "from": 499,
+       "to": 515
+      },
+      {
+       "w": "to",
+       "from": 515,
+       "to": 520
+      },
+      {
+       "w": "the",
+       "from": 520,
+       "to": 526
+      },
+      {
+       "w": "warranty",
+       "from": 526,
+       "to": 541
+      },
+      {
+       "w": "page.",
+       "from": 541,
+       "to": 550
+      }
+     ],
+     "cues": {
+      "1": 156,
+      "3": 242,
+      "2": 305
+     }
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "type": "rg_close",
+   "data": {
+    "yt": {
+     "chapter": "Paste, cut, search, re-rank",
+     "title": "Make your AI find the right page",
+     "notes": [
+      [
+       "Short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if your bot reads one piece",
+       0
+      ],
+      [
+       "Using a chatbot with your PDF? Ask it to quote the lines it used",
+       0
+      ],
+      [
+       "Next: when meaning search misses exact codes (hybrid search) and how to test your search (RAG, part 3)",
+       1
+      ]
+     ]
+    },
+    "n": {
+     "kw": 18,
+     "mean": 25,
+     "rr": 27,
+     "test": 30,
+     "w40": 13,
+     "w40o": 20,
+     "sent": 16,
+     "sec": 25,
+     "top3": 30,
+     "chap": 25,
+     "ratio": 6,
+     "rrms": 74,
+     "missm": 5,
+     "wchap": 864,
+     "wsec": 152,
+     "miss": 3
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 2741,
+   "frames": 579,
+   "lines": [
+    {
+     "who": "maastaaru",
+     "name": "Teacher",
+     "color": "#F59E0B",
+     "sub": null,
+     "audio": "reel/ep32te/line_09.wav",
+     "from": 0,
+     "frames": 528,
+     "words": [
+      {
+       "w": "So:",
+       "from": 2,
+       "to": 8
+      },
+      {
+       "w": "short",
+       "from": 8,
+       "to": 22
+      },
+      {
+       "w": "document?",
+       "from": 22,
+       "to": 52
+      },
+      {
+       "w": "Paste",
+       "from": 52,
+       "to": 67
+      },
+      {
+       "w": "it.",
+       "from": 67,
+       "to": 87
+      },
+      {
+       "w": "Big",
+       "from": 87,
+       "to": 94
+      },
+      {
+       "w": "one?",
+       "from": 94,
+       "to": 110
+      },
+      {
+       "w": "Cut",
+       "from": 110,
+       "to": 116
+      },
+      {
+       "w": "at",
+       "from": 116,
+       "to": 121
+      },
+      {
+       "w": "headings,",
+       "from": 121,
+       "to": 148
+      },
+      {
+       "w": "search",
+       "from": 148,
+       "to": 159
+      },
+      {
+       "w": "by",
+       "from": 159,
+       "to": 175
+      },
+      {
+       "w": "meaning,",
+       "from": 175,
+       "to": 189
+      },
+      {
+       "w": "re-rank",
+       "from": 189,
+       "to": 202
+      },
+      {
+       "w": "if",
+       "from": 202,
+       "to": 207
+      },
+      {
+       "w": "it",
+       "from": 207,
+       "to": 212
+      },
+      {
+       "w": "reads",
+       "from": 212,
+       "to": 222
+      },
+      {
+       "w": "one",
+       "from": 222,
+       "to": 229
+      },
+      {
+       "w": "piece.",
+       "from": 229,
+       "to": 249
+      },
+      {
+       "w": "Using",
+       "from": 249,
+       "to": 257
+      },
+      {
+       "w": "a",
+       "from": 257,
+       "to": 259
+      },
+      {
+       "w": "chatbot",
+       "from": 259,
+       "to": 270
+      },
+      {
+       "w": "with",
+       "from": 270,
+       "to": 276
+      },
+      {
+       "w": "your",
+       "from": 276,
+       "to": 283
+      },
+      {
+       "w": "PDF?",
+       "from": 283,
+       "to": 295
+      },
+      {
+       "w": "Ask",
+       "from": 295,
+       "to": 301
+      },
+      {
+       "w": "it",
+       "from": 301,
+       "to": 305
+      },
+      {
+       "w": "to",
+       "from": 305,
+       "to": 309
+      },
+      {
+       "w": "quote",
+       "from": 309,
+       "to": 316
+      },
+      {
+       "w": "the",
+       "from": 316,
+       "to": 322
+      },
+      {
+       "w": "lines",
+       "from": 322,
+       "to": 329
+      },
+      {
+       "w": "it",
+       "from": 329,
+       "to": 333
+      },
+      {
+       "w": "used.",
+       "from": 333,
+       "to": 341
+      },
+      {
+       "w": "Next:",
+       "from": 341,
+       "to": 364
+      },
+      {
+       "w": "why",
+       "from": 364,
+       "to": 373
+      },
+      {
+       "w": "meaning",
+       "from": 373,
+       "to": 402
+      },
+      {
+       "w": "search",
+       "from": 402,
+       "to": 434
+      },
+      {
+       "w": "misses",
+       "from": 434,
+       "to": 454
+      },
+      {
+       "w": "exact",
+       "from": 454,
+       "to": 469
+      },
+      {
+       "w": "codes.",
+       "from": 469,
+       "to": 493
+      },
+      {
+       "w": "Follow,",
+       "from": 493,
+       "to": 503
+      },
+      {
+       "w": "so",
+       "from": 503,
+       "to": 506
+      },
+      {
+       "w": "you",
+       "from": 506,
+       "to": 511
+      },
+      {
+       "w": "don't",
+       "from": 511,
+       "to": 517
+      },
+      {
+       "w": "miss",
+       "from": 517,
+       "to": 523
+      },
+      {
+       "w": "it.",
+       "from": 523,
+       "to": 528
+      }
+     ],
+     "cues": {
+      "3": 238,
+      "1": 353,
+      "2": 489
+     }
+    }
+   ]
+  }
+ ]
+}

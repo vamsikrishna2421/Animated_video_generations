@@ -12,6 +12,10 @@
   0.36,
   1.2
  ],
+ "musicEndGain": [
+  0.74,
+  5
+ ],
  "musicEQ": [
   [
    260,
@@ -66,6 +70,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "q": "Will my phone survive a shower?",
     "wrong": {
      "title": "Meteor shower mode",
@@ -126,6 +131,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "q": "Will my phone survive a shower?",
     "wrong": {
      "title": "Meteor shower mode",
@@ -188,6 +194,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "rr": {
      "q": "Can I give it back if I just don't like it?",
      "quick": [
@@ -254,9 +261,9 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "03_guess.wav",
-     "text": "Why it matters: with no page, AI guesses. [1] \"Can I give it back if I just don't like it?\" [3] Our small AI: [4] \"Yes, for a refund.\" [2] The manual says no.",
-     "show": "Why it matters: with no page, AI guesses. [1] “Can I give it back if I just don't like it?” [3] Our small AI: [4] “Yes, for a refund.” [2] The manual says no.",
-     "tts": "Why it matters: with no page, AI guesses. \"Can I give it back if I just don't like it?\" Our small AI: \"Yes, for a refund.\" The manual says no.",
+     "text": "Why it matters: with no page, AI guesses. [1] \"Can I give it back if I just don't like it?\" [3] Our small AI: [4] \"Yes, for a refund.\" [2] The manual says no. [5] Stick around: one trick for your own PDFs.",
+     "show": "Why it matters: with no page, AI guesses. [1] “Can I give it back if I just don't like it?” [3] Our small AI: [4] “Yes, for a refund.” [2] The manual says no. [5] Stick around: one trick for your own PDFs.",
+     "tts": "Why it matters: with no page, AI guesses. \"Can I give it back if I just don't like it?\" Our small AI: \"Yes, for a refund.\" The manual says no. Stick around: one trick for your own PDFs.",
      "pauses": {
       "3": 0.5
      }
@@ -303,16 +310,17 @@
      "wchap": 864,
      "wsec": 152,
      "miss": 3
-    }
+    },
+    "captionSide": 110
    },
    "lines": [
     {
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "04_why.wav",
-     "text": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent six times the text.",
-     "show": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent 6 times the text.",
-     "tts": "Why not paste the whole manual? A short one, sure. Real ones run hundreds of pages. In our test, whole chapters found the page as often, but sent six times the text."
+     "text": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent six times the text, and AI services charge by the word.",
+     "show": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent 6 times the text, and AI services charge by the word.",
+     "tts": "Why not paste the whole manual? A short one, sure. Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent six times the text, and AI services charge by the word."
     }
    ]
   },
@@ -321,8 +329,8 @@
    "type": "rg_cut",
    "tail": 0.2,
    "lift": true,
-   "drop_cue": 3,
    "layer": 3,
+   "boost": 1.3,
    "data": {
     "yt": {
      "chapter": "Step 1: cut it into pieces",
@@ -364,6 +372,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "cut": {
      "w40": "…never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is",
      "sent": "It is not waterproof.",
@@ -389,6 +398,7 @@
    "type": "rg_shelf",
    "tail": 0.2,
    "lift": true,
+   "boost": 0.7,
    "data": {
     "yt": {
      "chapter": "Step 2: a vector database",
@@ -422,6 +432,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "q": "Will my phone survive a shower?",
     "wrong": {
      "title": "Meteor shower mode",
@@ -448,7 +459,7 @@
    "type": "rg_rerank",
    "tail": 0.2,
    "lift": true,
-   "drop_cue": 2,
+   "boost": 0.8,
    "duck": [
     2,
     3,
@@ -487,6 +498,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "rr": {
      "q": "Can I give it back if I just don't like it?",
      "quick": [
@@ -571,7 +583,6 @@
     2,
     0.05
    ],
-   "boost": 1.3,
    "layer": 2,
    "lift": true,
    "data": {
@@ -611,6 +622,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "rr": {
      "q": "Can I give it back if I just don't like it?",
      "quick": [
@@ -694,10 +706,15 @@
    "outro": true,
    "lift": true,
    "boost": 1.5,
+   "duck": [
+    3,
+    1,
+    0.4
+   ],
    "swell": [
     0,
-    3,
-    1.4
+    1,
+    1.2
    ],
    "data": {
     "yt": {
@@ -736,6 +753,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "handle": "@ai_maastaaru"
    },
    "lines": [
@@ -743,9 +761,9 @@
      "who": "maastaaru",
      "maxgap": 0.3,
      "file": "09_close.wav",
-     "text": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact codes. [2] Follow, so you don't miss it.",
-     "show": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact codes. [2] Follow, so you don't miss it.",
-     "tts": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact codes. Follow, so you don't miss it."
+     "text": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact error codes. [2] Follow, so you don't miss it.",
+     "show": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact error codes. [2] Follow, so you don't miss it.",
+     "tts": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact error codes. Follow, so you don't miss it."
     }
    ]
   }

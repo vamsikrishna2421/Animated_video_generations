@@ -38,7 +38,7 @@ Already posted: `out/posted/`.
 | 031 | ep30 | How AI Learns Good Manners (RLHF) | ready |
 | 032 | q03 | Quiz #3: Episodes 21–30 | ready |
 | 033 | ep31 | Teach an AI a New Skill Without a Supercomputer (LoRA) | ready |
-| 034 | ep32 | RAG, Part 2: Chunking, Vector Databases and Reranking | ready |
+| 034 | ep32 | How AI Finds the Right Page (RAG, Part 2) | ready |
 | 035 | ep33 | RAG, Part 3: Hybrid Search and Measuring Quality | ready |
 | 036 | ep34 | Open vs Closed AI Models | ready |
 | 037 | ep35 | Small Language Models | ready |

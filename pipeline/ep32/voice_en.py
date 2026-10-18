@@ -18,14 +18,14 @@ REF_TEXT = ("This dog is a banana, says this AI, 99.99% sure. Before we touched 
 PATS = {
     ("hook", "file"): [r"gave an (ai|a\.i\.)", r"phone'?s manual", r"survive a shower", r"pulled up", r"meteor shower mode", r"matched the word", r"not the meaning"],
     ("score", "file"): [r"thirty everyday questions|30 everyday questions", r"right page first", r"keyword search", r"eighteen|18", r"meaning search", r"twenty[- ]five|25"],
-    ("guess", "file"): [r"why it matters", r"no page", r"guesses", r"give it back", r"don'?t like it", r"small (ai|a\.i\.)", r"for a refund", r"manual says no"],
-    ("why", "file"): [r"paste the whole manual", r"short one", r"hundreds of pages", r"in our test", r"whole chapters", r"as often", r"six times|6 times", r"the text"],
+    ("guess", "file"): [r"why it matters", r"no page", r"guesses", r"give it back", r"don'?t like it", r"small (ai|a\.i\.)", r"for a refund", r"manual says no", r"stick around", r"own pdfs|own p\.?d\.?f"],
+    ("why", "file"): [r"paste the whole manual", r"short one", r"hundreds of pages", r"in our test", r"whole chapters", r"also scored", r"twenty[- ]five|25", r"six times|6 times", r"charge by the word"],
     ("cut", "file"): [r"step (one|1)", r"cut it into pieces", r"every forty words|every 40 words", r"mid-?sentence", r"thirteen out of thirty|13 out of 30", r"overlap them", r"twenty|20", r"cut at headings", r"twenty[- ]five|25"],
     ("shelf", "file"): [r"step two", r"numbers for its meaning", r"vector database", r"library sorted by meaning", r"question becomes numbers", r"nearest pieces"],
     ("rerank", "file"): [r"step (three|3)", r"re-?ranker", r"beside each top piece", r"re-?orders them", r"first[- ]place misses", r"five|5", r"three|3"],
     ("quiz", "file"): [r"your turn", r"first piece", r"keeps coming second", r"what helps more", r"bigger (ai|a\.i\.)", r"re-?ranker"],
     ("quiz", "file2"): [r"^\W*the re-?ranker\W+why", r"bigger (ai|a\.i\.),? still reads the wrong page", r"guarantee", r"returns page", r"warranty page"],
-    ("close", "file"): [r"short document", r"paste it", r"big one", r"cut at headings", r"search by meaning", r"re-?rank if it reads one piece", r"chatbot with your pdf|chat ?bot with your p\.?d\.?f", r"quote the lines", r"exact codes", r"follow"],
+    ("close", "file"): [r"short document", r"paste it", r"big one", r"cut at headings", r"search by meaning", r"re-?rank if it reads one piece", r"chatbot with your pdf|chat ?bot with your p\.?d\.?f", r"quote the lines", r"exact error codes", r"follow"],
 }
 ASR = None
 
