@@ -2,7 +2,7 @@
 
 | Run | When (IST) | Makes | Template to copy |
 |---|---|---|---|
-| Daily new episode | 05:59 | the next AI From Scratch episode, 4 formats (Insta EN/TE, YouTube EN/TE) | EP31 (LoRA, queue 033) |
+| Daily new episode | 05:59 | the next AI From Scratch episode as a teaching skit, Insta EN/TE (YouTube: the same files as Shorts) | Skit 01 (the story), EP32 (facts, demo) |
 | Daily creative reel | 17:57 | one original short (30-60 s), EN + TE, built to be shared | Skit 01 "The AI that remembered the wrong price" |
 
 Both runs fire into the same Claude Code session. A run that is still going delays the next one; always finish the
@@ -39,26 +39,62 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
   `pkill -f`/`pgrep -f` with a pattern that also appears in your own command line (a comp name, "render.sh",
   "snapshot_download"): it kills your own shell (exit code 144; it happened three times on Oct 18).
 
-## Run 1: daily new episode
-1. Topic: the next episode in `series/SYLLABUS.md` after the last crayon episode in `out/upload_queue.json` (after
-   EP31/033 comes EP32 "RAG part 2", queue 034). The crayon version replaces the old lesson file in that slot; update
-   the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`.
+## Run 1: daily new episode (a teaching skit)
+From EP33 on, each episode teaches its syllabus topic through a short skit, the way skit 01 taught EP31's lesson
+(Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
+stay as made.
+1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (after
+   EP32/034 comes EP33 "RAG part 3: hybrid search and measuring RAG quality", queue 035). The skit replaces the old
+   lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
-   small real demo (EP30, EP31) and use its measured numbers.
-3. Script EN + TE in `series/scripts/epNN_<slug>.md`: a hook that works in 3 s, the quiz by about 45 s, a practical
-   rule to take away, next-episode tease. Script-stage viewer review; fix before voicing.
-4. Build: `video/src/reel/loop/<Name>Crayon.tsx` (register in `Reel.tsx`), `pipeline/epNN/make_specs.py`
-   (Telugu lines use `sentence_cues`), English voice on Fish with the channel narrator reference
-   (`pipeline/ep31/voice_en.py`), Telugu on Parler (`pipeline/te_check.py`), `pipeline/reel_build.py`.
-5. Render the 4 formats, review packs, render-stage viewer review, fixes, re-render what changed.
-6. Captions, YouTube text with chapters, queue entry, `_ig` copies. Commit (media with `git add -f`; media paths go
-   in `.git/info/exclude`) and push.
-7. Deliver with SendUserFile (status proactive): Insta EN + TE send copies and the caption file, plus 2-3 lines on
+   small real demo (EP30-EP32) and put its measured numbers in the story.
+3. Story before visuals:
+   - Cast: the recurring shop duo, Ravi anna (kirana owner) and the shop's phone AI (the channel's student robot,
+     calm, deadpan). Each episode the AI makes the mistake this topic fixes, so returning viewers know the world. A
+     topic that lives elsewhere moves: home (Amma, Chinnu) for privacy, scams and deepfakes; an office or a college
+     when it is about work or study.
+   - The topic is the plot: its failure mode is the conflict (on screen in frame 1, the stakes in line 1), the
+     technique is the rescue, the last beat is its limit or the next episode's problem. Skit 01: the AI billed June
+     prices (facts trained in go stale) -> "Show me the price board. I'll read it before every bill." (look it up
+     each time) -> "Now mug it up." (training freezes them again).
+   - No "lecture in costume" (the viewers' words for skit 01's first draft): lines of 1-3 s, one idea per line, the
+     AI explains in one sentence at most, the human asks what the viewer would ask ("So which one do I use?").
+   - The teaching beats, each carried by a line and a picture:
+
+     | By | Beat |
+     |---|---|
+     | 3 s | the failure on screen, the stakes said |
+     | ~15 s | why it happened: one crayon insert of the mechanism, cued on the line that names it |
+     | ~30 s | our demo's result on a phone screen, with the measured numbers |
+     | ~40 s | the quiz: a character puts the question to the viewer, options on screen, a 1.5-2 s hold, then the plot answers |
+     | ~50 s | the rescue = the practical rule, said and shown as a big chip (sound-off viewers) |
+     | end | the twist that undoes the rescue or opens the next topic; loops to frame 1; no follow card |
+
+   - 45-75 s. An "EPNN · AI From Scratch" tag stays on screen; the next-episode tease and the call to action go in
+     the caption.
+   - EP33 seed (replace it if a better story comes): the shop AI searches the stock book by meaning and misses an
+     exact item code; keyword search finds it; both together find both kinds; a 20-question test with known answers
+     settles it (hit rates from our own demo).
+4. Script EN + TE in `series/scripts/epNN_<slug>.md` (beat table: who, line, on screen; facts and sources; demo
+   numbers). Script-stage viewer review, also asking: could you explain the idea to a friend now, and which line felt
+   like a lecture? If both viewers would scroll past the hook, write a new one. Fix before voicing.
+5. Build on the skit system: `SkitCrayon.tsx` (shop) or `HomeCrayon.tsx` (home), with the topic's inserts added there
+   or in a new `<Name>Crayon.tsx` (register in `Reel.tsx`); `pipeline/epNN/make_specs.py` and `voice.py` on the
+   `pipeline/skit02/voice.py` pattern (one judged take per line, cached; English on Fish: the AI with the narrator
+   reference, each human with a Parler-made reference clip; Telugu on Parler with the strict judge); SFX on every
+   beat; the audio arc from CLAUDE.md; `pipeline/reel_build.py`.
+6. Render Insta EN + TE (9:16), one at a time; file names as EP32. YouTube takes the same two files as Shorts (no
+   landscape render, no chapters). Review packs, render-stage viewer review, fixes, re-render what changed.
+7. Captions EN + TE (the episode number, the next-episode tease, a comment prompt, a pinned comment with the sources),
+   `out/youtube/NNN_epNN_youtube.txt` (Shorts titles and descriptions), the queue entry (`youtube` lists the two
+   vertical files), `_ig` copies. Commit (media with `git add -f`; media paths go in `.git/info/exclude`) and push.
+8. Deliver with SendUserFile (status proactive): Insta EN + TE send copies and the caption files, plus 2-3 lines on
    what the viewers flagged and what changed.
 
 ## Run 2: daily creative reel
-1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. If the user has shared
-   views, likes or comments for earlier reels, log them there and lean toward what worked.
+1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. The shop cast (Ravi anna
+   and the shop AI) belongs to the episodes now: use other casts and settings so the two daily posts look different.
+   If the user has shared views, likes or comments for earlier reels, log them there and lean toward what worked.
 2. Concept: one real AI idea a normal viewer can use or repeat to a friend, in a format that travels: two-character
    skit, POV, "guess which one is AI", myth vs fact, a one-question challenge, a relatable home/office/shop moment
    with an AI twist. Write 3 hook options (first frame + first line) and keep the strongest.
@@ -72,8 +108,9 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
 4. Script EN + TE (`series/scripts/skitNN_<slug>.md` or `creativeNN_<slug>.md`), script-stage viewer review. If
    both viewers would scroll past the hook, write a new hook.
 5. Build on the skit system: scene types in `video/src/reel/loop/SkitCrayon.tsx` (or a new `<Name>Crayon.tsx`),
-   `pipeline/<id>/make_specs.py`, voices as in `pipeline/skit01/voice.py` (judged takes; English narrator/AI on Fish
-   with the channel reference, other English characters and all Telugu on Parler), SFX on every beat, music arc.
+   `pipeline/<id>/make_specs.py`, voices as in `pipeline/skit02/voice.py` (judged takes; English on Fish: the
+   narrator/AI with the channel reference, other characters with a Parler-made reference clip; all Telugu on Parler),
+   SFX on every beat, music arc.
 6. Render EN + TE, review packs, viewer review, fixes. Post text `out/skits/NN_<slug>_post.txt` (EN + TE captions,
    comment prompt, hashtags, pinned comment), `_ig` copies, log the concept and hook in `series/creative_log.md`,
    commit and push, deliver as in run 1.
