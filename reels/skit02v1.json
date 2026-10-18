@@ -1,0 +1,347 @@
+{
+ "id": "skit02v1",
+ "title": "The call in my own voice",
+ "label": "SKIT",
+ "banner": "The call in my own voice",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  1.1
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.3,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.08,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "sk2_a",
+   "type": "sk_home",
+   "tail": 0.1,
+   "rise": 1.35,
+   "data": {
+    "beats": [
+     {
+      "who": "caller",
+      "prop": "ring",
+      "n": 1
+     },
+     {
+      "who": "amma",
+      "prop": "turn",
+      "n": 2
+     },
+     {
+      "who": "caller",
+      "prop": "money",
+      "n": 3
+     },
+     {
+      "who": "chinnu",
+      "prop": "mute",
+      "n": 4
+     },
+     {
+      "who": "caller",
+      "prop": "flags",
+      "n": 5
+     },
+     {
+      "who": "amma",
+      "prop": "whisper",
+      "n": 6
+     }
+    ],
+    "yt": {
+     "chapter": "A call in his own voice",
+     "title": "A call in his own voice",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "caller",
+     "file": "01_caller.wav",
+     "text": "Amma! It's me, Chinnu! I lost my phone, this is a friend's!",
+     "show": "Amma! It's me, Chinnu! I lost my phone, this is a friend's!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "amma",
+     "file": "02_amma.wav",
+     "text": "Chinnu?",
+     "show": "Chinnu?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "caller",
+     "file": "03_caller.wav",
+     "text": "I had an accident! I need fifty thousand, right now!",
+     "show": "I had an accident! I need fifty thousand, right now!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "chinnu",
+     "file": "04_chinnu.wav",
+     "text": "Amma, that's not me!",
+     "show": "Amma, that's not me!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "caller",
+     "file": "05_caller.wav",
+     "text": "Don't tell Nanna! Send it to this number!",
+     "show": "Don't tell Nanna! Send it to this number!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "amma",
+     "file": "06_amma.wav",
+     "text": "But it's YOUR voice!",
+     "show": "But it's YOUR voice!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    }
+   ]
+  },
+  {
+   "id": "sk2_b",
+   "type": "sk_home",
+   "tail": 0.1,
+   "lift": true,
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "reels",
+      "n": 7
+     },
+     {
+      "who": "amma",
+      "prop": "",
+      "n": 8
+     },
+     {
+      "who": "chinnu",
+      "prop": "",
+      "n": 9
+     },
+     {
+      "who": "amma",
+      "prop": "",
+      "n": 10
+     },
+     {
+      "who": "chinnu",
+      "prop": "",
+      "n": 11
+     }
+    ],
+    "yt": {
+     "chapter": "AI copied it",
+     "title": "AI copied it",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "07_chinnu.wav",
+     "text": "AI copied it. From my reels.",
+     "show": "AI copied it. From my reels.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "amma",
+     "file": "08_amma.wav",
+     "text": "Then how will I ever know it's you?",
+     "show": "Then how will I ever know it's you?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "chinnu",
+     "file": "09_chinnu.wav",
+     "text": "Ask for our code word.",
+     "show": "Ask for our code word.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "amma",
+     "file": "10_amma.wav",
+     "text": "We have a code word?",
+     "show": "We have a code word?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "chinnu",
+     "file": "11_chinnu.wav",
+     "text": "Just pretend!",
+     "show": "Just pretend!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    }
+   ]
+  },
+  {
+   "id": "sk2_c",
+   "type": "sk_home",
+   "tail": 0.15,
+   "boost": 0.45,
+   "drop_cue": 1,
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "unmute",
+      "n": 12
+     },
+     {
+      "who": "caller",
+      "prop": "glitch",
+      "n": 13
+     },
+     {
+      "who": "amma",
+      "prop": "hangup",
+      "n": 14
+     }
+    ],
+    "yt": {
+     "chapter": "The code word",
+     "title": "The code word",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "amma",
+     "file": "12_amma.wav",
+     "text": "[1] Kanna... what's our code word?",
+     "show": "[1] Kanna... what's our code word?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "caller",
+     "file": "13_caller.wav",
+     "text": "Code word? [1] Amma, no time! Just send it!",
+     "show": "Code word? [1] Amma, no time! Just send it!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "pauses": {
+      "1": 0.45
+     }
+    },
+    {
+     "who": "amma",
+     "file": "14_amma.wav",
+     "text": "Wrong answer.",
+     "show": "Wrong answer.",
+     "maxgap": 0.25,
+     "gap": 0.5
+    }
+   ]
+  },
+  {
+   "id": "sk2_d",
+   "type": "sk_home",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "plan",
+      "n": 15
+     },
+     {
+      "who": "amma",
+      "prop": "",
+      "n": 16
+     },
+     {
+      "who": "chinnu",
+      "prop": "saved",
+      "n": 17
+     },
+     {
+      "who": "amma",
+      "prop": "nextday",
+      "n": 18
+     }
+    ],
+    "yt": {
+     "chapter": "Next day",
+     "title": "Next day",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "15_chinnu.wav",
+     "text": "Tonight we pick a real one. Not in the family group!",
+     "show": "Tonight we pick a real one. Not in the family group!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "amma",
+     "file": "16_amma.wav",
+     "text": "And if I forget it?",
+     "show": "And if I forget it?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "chinnu",
+     "file": "17_chinnu.wav",
+     "text": "Hang up. Call my saved number.",
+     "show": "Hang up. Call my saved number.",
+     "maxgap": 0.25,
+     "gap": 1.2
+    },
+    {
+     "who": "amma",
+     "file": "18_amma.wav",
+     "text": "Code word?",
+     "show": "Code word?",
+     "maxgap": 0.25,
+     "gap": 0.05
+    }
+   ]
+  }
+ ]
+}

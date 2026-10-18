@@ -1,6 +1,6 @@
 # Phone sounds for skit 02, synthesised here (original, no samples): a ringtone, a vibration buzz, a digital glitch
 # for the cloned voice failing, and the hang-up beep.
-#   python3 pipeline/skit02/sfx.py  -> video/public/reel/sfx_{ring,buzz,glitch,hangup}.wav
+#   python3 pipeline/skit02/sfx.py  -> video/public/reel/sfx_{ring,ring1,buzz,glitch,hangup}.wav
 from pathlib import Path
 
 import numpy as np
@@ -34,6 +34,10 @@ def ring():   # a bright two-bar marimba-style ringtone, about 1.3 s
     return x / np.abs(x).max() * 0.8
 
 
+def ring1():   # the ringtone's first bar only (0.4 s): the caller's "Amma!" has to land by 0.5 s (viewer note)
+    return ring()[: int(0.42 * SR)] * np.linspace(1, 0.2, int(0.42 * SR))
+
+
 def buzz():   # two vibration pulses
     t = np.arange(int(0.75 * SR)) / SR
     carrier = np.sin(2 * np.pi * 165 * t) * (0.7 + 0.3 * np.sin(2 * np.pi * 330 * t))
@@ -61,6 +65,6 @@ def hangup():   # a short descending beep
 
 
 if __name__ == "__main__":
-    for name, fn in [("ring", ring), ("buzz", buzz), ("glitch", glitch), ("hangup", hangup)]:
+    for name, fn in [("ring", ring), ("ring1", ring1), ("buzz", buzz), ("glitch", glitch), ("hangup", hangup)]:
         sf.write(OUT / f"sfx_{name}.wav", fn().astype(np.float32), SR)
         print("wrote", OUT / f"sfx_{name}.wav")

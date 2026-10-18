@@ -1,4 +1,4 @@
-# Skit 02 "The call in my own voice" — script v1 (for the viewer script review)
+# Skit 02 "The call in my own voice" — script v2 (after the viewer script review)
 
 Format: a relatable home moment with an AI twist (one wide sitcom frame on the sofa + phone-screen inserts; not skit 01's
 shot/reverse-shot). Cast: AMMA (~55, sharp), CHINNU (~22, her son, eating dosa), the CALLER (Chinnu's voice, cloned,
@@ -25,27 +25,36 @@ Hook options (first frame + first line):
    (Slower: the wrong thing only lands at 3 s.)
 3. Chinnu to camera: "My mom just got a call from me. I was sitting next to her." (A POV caption hook; tells, doesn't show.)
 
+v1 -> v2 (viewer script review: with sound off both viewers scrolled past; with sound on the hook worked and "Just
+pretend" -> "Kanna..." -> "Wrong answer." was the best 10 s; after the hang-up it turned into a lecture):
+frame 1 now works without sound: a "CHINNU (her son)" tag, a top caption "Her son is sitting RIGHT HERE." and a big
+"Unknown number" call card; Amma taps MUTE before Chinnu speaks and unmutes for "Kanna..." (on speaker, the scammer
+would have heard the plan); "Not online" -> "Not in the family group"; the plan is three short lines and a NEXT DAY card
+so the last "Code word?" is a real word; caption: "Already sent money? 1930 / cybercrime.gov.in" and no "Comment DONE"
+(people would post their actual word); a lighter phone filter (the caller must clearly be Chinnu's voice); the biggest
+hit on "Wrong answer."; red flags stay up through line 6; contact card "Chinnu ✓ saved". Telugu: "రాంగ్ ఆన్సర్!"
+(was a textbook "తప్పు సమాధానం"), "ఉన్నట్టే అడుగు!" (was a TV-serial "ఉన్నట్టు నటించు"), "ఏ ఐ" with a space.
+
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Caller | Amma! It's me, Chinnu! I lost my phone, this is a friend's! | wide: phone on speaker "Unknown number"; Chinnu beside Amma, freezes mid-bite |
+| 1 | Caller | Amma! It's me, Chinnu! I lost my phone, this is a friend's! | call card "Unknown number" ringing; tag "CHINNU (her son)" on the boy mid-bite; top: "Her son is sitting RIGHT HERE." |
 | 2 | Amma | ...Chinnu? | Amma turns slowly to the real Chinnu |
-| 3 | Caller | I had an accident! I need fifty thousand, right now! | red banner on the call screen "₹50,000 NOW" |
-| 4 | Chinnu | Amma, that's not me! | dosa still in hand |
-| 5 | Caller | Don't tell Nanna! Send it to this number! | three red flags tick on: "new number", "urgent", "secret" |
-| 6 | Amma | But it's YOUR voice! | |
+| 3 | Caller | I had an accident! I need fifty thousand, right now! | call card banner "₹50,000 NOW" |
+| 4 | Chinnu | Amma, that's not me! | Amma taps MUTE first (badge "MUTED") |
+| 5 | Caller | Don't tell Nanna! Send it to this number! | red flags tick on: "new number", "urgent", "secret", "money now" (stay through line 6) |
+| 6 | Amma | (whispers) But it's YOUR voice! | |
 | 7 | Chinnu | AI copied it. From my reels. | insert: his reels; sound waves pulled into a copy machine; "voice copy" |
 | 8 | Amma | Then how will I ever know it's you?! | |
 | 9 | Chinnu | Ask for our code word. | |
 | 10 | Amma | We have a code word? | |
 | 11 | Chinnu | Just pretend! | |
-| 12 | Amma | (sweetly, into the phone) Kanna... what's our code word? | |
+| 12 | Amma | (unmutes; sweetly) Kanna... what's our code word? | music drops out before it |
 | 13 | Caller | Code word? ... Amma, no time! Just send it! | the caller's sound wave glitches; static |
-| 14 | Amma | Wrong answer. | she taps the red button; hit; "call ended" |
-| 15 | Chinnu | Tonight we pick one. Not online. | |
-| 16 | Amma | And if it calls again? | |
-| 17 | Chinnu | Hang up. Call my real number. | contact card "Chinnu (my number) ✓" |
-| 18 | — | (the phone buzzes: Unknown number) | |
-| 19 | Amma | (picks up, smiling) Code word? | freeze; loops to frame 1 |
+| 14 | Amma | Wrong answer. | taps the red button; biggest hit; "CALL ENDED" |
+| 15 | Chinnu | Tonight we pick a real one. Not in the family group! | |
+| 16 | Amma | And if I forget it? | |
+| 17 | Chinnu | Hang up. Call my saved number. | contact card "Chinnu ✓ saved" |
+| 18 | Amma | (NEXT DAY; the phone buzzes "Unknown number"; she picks up, smiling) Code word? | freeze; loops to frame 1 |
 
 Telugu (same beats; English on-screen text):
 1. అమ్మా! నేనే, చిన్నుని! నా ఫోన్ పోయింది, ఫ్రెండ్ ఫోన్ నుంచి చేస్తున్నా!
@@ -54,23 +63,24 @@ Telugu (same beats; English on-screen text):
 4. అమ్మా, అది నేను కాదు!
 5. నాన్నకి చెప్పకు! ఈ నంబర్ కి పంపించు!
 6. అచ్చం నీ గొంతే!
-7. ఏఐ నా గొంతు కాపీ చేసింది. నా రీల్స్ నుంచి.
+7. ఏ ఐ నా గొంతు కాపీ చేసింది. నా రీల్స్ నుంచి.
 8. మరి నువ్వే అని నాకు ఎలా తెలుస్తుంది?
 9. మన కోడ్ వర్డ్ అడుగు.
 10. మనకి కోడ్ వర్డ్ ఉందా?
-11. ఉన్నట్టు నటించు!
+11. ఉన్నట్టే అడుగు!
 12. కన్నా... మన కోడ్ వర్డ్ ఏంటి?
 13. కోడ్ వర్డ్? ... అమ్మా, టైం లేదు! డబ్బులు పంపించు!
-14. తప్పు సమాధానం.
-15. ఈ రాత్రే ఒకటి పెట్టుకుందాం. ఆన్లైన్ లో కాదు.
-16. మళ్ళీ ఫోన్ వస్తే?
-17. కట్ చేసి, నా నంబర్ కి నువ్వే చెయ్.
-18. (phone buzzes)
-19. కోడ్ వర్డ్?
+14. రాంగ్ ఆన్సర్!
+15. ఈ రాత్రే అసలు కోడ్ వర్డ్ పెట్టుకుందాం. ఫ్యామిలీ గ్రూప్ లో మాత్రం పెట్టొద్దు!
+16. మర్చిపోతే?
+17. కట్ చేసి, నా సేవ్ చేసిన నంబర్ కి కాల్ చెయ్.
+18. కోడ్ వర్డ్?
 
-Caption (draft): "Chinnu was sitting right next to Amma when 'he' called asking for ₹50,000. Scammers can copy a voice from short
-clips you post online. Pick a family code word tonight (offline), and if a call sounds like family but feels wrong,
-hang up and call back on the number you know. Comment DONE when your family has one (don't comment the word!)."
+Caption (draft): "Chinnu was sitting right next to Amma when 'he' called asking for ₹50,000. Scammers can copy a voice from
+short clips posted online. Pick a family code word tonight (not in the family group!), and if a call sounds like family
+but feels wrong, hang up and call back on the number you have saved. Already sent money? Call 1930 or report at
+cybercrime.gov.in. Send this to your family group." Comment prompt: "Tag the one in your family who picks up every
+unknown number."
 
 Sound: a ring + hit on frame 1; the caller's lines through a phone filter, panicked; a rising pulse under lines 3-5
 (the pressure), a drop to near silence before "Code word?" (line 12), a glitch + static on line 13, a hit on "Wrong

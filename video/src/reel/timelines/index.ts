@@ -38,4 +38,5 @@ import t36 from "./robotcheck.json";
 import t37 from "./robotcheckte.json";
 import t38 from "./skit01te.json";
 import t39 from "./skit01v1.json";
-export const reels = [t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39];
+import t40 from "./skit02v1.json";
+export const reels = [t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39, t40];
