@@ -138,9 +138,11 @@ def audio_report(wav, dur, cut_t, speech):
     # loudness arc in 4 quarters + the first 3 s
     q = [float(np.mean(db[(t >= dur * k / 4) & (t < dur * (k + 1) / 4)])) for k in range(4)]
     hook = float(np.mean(db[t < 3]))
+    # by energy too: a deliberate silence (the drop before a quiz answer) drags a quarter's average dB far down
+    qe = [float(10 * np.log10(np.mean(10 ** (db[(t >= dur * k / 4) & (t < dur * (k + 1) / 4)] / 10)) + 1e-12)) for k in range(4)]
     rep = {
         "tempo_bpm": round(tempo, 1), "beat_strength": round(pulse, 2), "voice_level_db": round(v_db, 1), "music_only_level_db": round(m_db, 1),
-        "hook_level_db": round(hook, 1), "quarters_db": [round(x, 1) for x in q], "loudness_range_db": round(float(np.percentile(db[db > -60], 95) - np.percentile(db[db > -60], 10)), 1),
+        "hook_level_db": round(hook, 1), "quarters_db": [round(x, 1) for x in q], "quarters_energy_db": [round(x, 1) for x in qe], "loudness_range_db": round(float(np.percentile(db[db > -60], 95) - np.percentile(db[db > -60], 10)), 1),
         "brightness_hz": int(np.median(cent)), "low_end_share": round(low, 3), "silent_gaps": gaps[:12], "cuts": len(cut_t),
         "cuts_on_beat": on_beat, "avg_shot_s": round(dur / max(1, len(cut_t) + 1), 1),
     }
@@ -190,7 +192,7 @@ def main():
              f"- Cuts: {rep['cuts']} (one every {rep['avg_shot_s']} s) · cuts landing on a beat: {rep['cuts_on_beat']}",
              f"- Music: ~{rep['tempo_bpm']} BPM, beat strength {rep['beat_strength']} (1.0 = no pulse, 2+ = clear groove)",
              f"- Levels: voice {rep['voice_level_db']} dB vs music-only stretches {rep['music_only_level_db']} dB · loudness range {rep['loudness_range_db']} dB",
-             f"- Energy arc (avg dB per quarter): {rep['quarters_db']} · first 3 s: {rep['hook_level_db']} dB",
+             f"- Energy arc (avg dB per quarter): {rep['quarters_db']} · by energy: {rep['quarters_energy_db']} · first 3 s: {rep['hook_level_db']} dB",
              f"- Brightness (spectral centroid): {rep['brightness_hz']} Hz · low-end share (<150 Hz): {rep['low_end_share']}",
              f"- Silent gaps > 0.5 s: {rep['silent_gaps'] or 'none'}", "", "## Transcript", ""]
     lines += [f"[{s0:5.1f}-{s1:5.1f}] {txt}" for s0, s1, txt in speech]
