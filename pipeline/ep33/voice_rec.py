@@ -17,12 +17,13 @@ SCRIPT = ROOT / "series/scripts/ep33_hybrid_search.md"
 H = 0.01
 MAX_PAUSE = 0.28          # a pause inside a line longer than this is shortened to it (the take was read slowly)
 KEEP = {1: 0.32, 19: 0.4, 26: 0.32}   # lines whose pauses are part of the joke keep a little more
-INSERT = {18: ("both", 0.45), 25: ("two", 0.22)}   # a beat after this word: the drop before "eighteen"; "Why two?
+INSERT = {18: ("both", 0.45), 25: ("two", 0.15)}   # a beat after this word: the drop before "eighteen"; "Why two?
                                                   # Switch one off" ran together as "why to switch one off"
-LIGHT = {17, 20, 24}                  # numbers, and "vessels" (heard "results" through the full phone sound)
+LIGHT = {13, 17, 20, 24}                # numbers, and "vessels" (heard "results" through the full phone sound)
 DROP_FIRST = set()   # lines whose clip still opens on the name read before the line (fixed in cut_takes for take 1)
 TEMPO = 1.07   # take 1 was read at about 2 words a second; rubberband keeps pitch and formants (reel spec tempo stays 1.0)
 FFMPEG = "/tmp/claude-0/ffmpeg"
+SLOW = {13, 20}   # "Merge" (heard "must") and "vessels" (heard "results") keep their own pace
 
 
 def rms(a):
@@ -164,7 +165,7 @@ def main():
     for n, who, text in table():
         a, SR = sf.read(cut / f"{n:02d}.wav")
         a = a.mean(axis=1) if a.ndim > 1 else a
-        x = stretch(edit(a, n), TEMPO)
+        x = stretch(edit(a, n), 1.0 if n in SLOW else TEMPO)
         if who == "ai":
             x = phone(x, n in LIGHT)
         x = x / max(1.0, np.abs(x).max() / 0.89)

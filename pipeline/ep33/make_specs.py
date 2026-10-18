@@ -45,17 +45,19 @@ SHOW = {n: t.replace("[1] ", "").replace("[2] ", "") for n, (_, _, _, t) in LINE
 SCENES = [("st_a", 1, 3, {"rise": 1.25, "tail": 0.1}),
           ("st_b", 4, 7, {"lift": 0.6, "pre": 0.35, "boost": 0.55, "tail": 0.1}),   # bed lower: it masked "Then use keyword search"
           ("st_c", 8, 12, {"boost": 0.55, "tail": 0.1}),   # boost < 1 = a quieter bed: a dip under the joke
-          ("st_d", 13, 16, {"lift": 0.6, "pre": 0.35, "tail": 0.1}),
-          ("st_e", 17, 18, {"drop_at": [[1, 1]], "tail": 0.9}),   # the drop right before "eighteen" (drop_cue reads the scene's first line)
-          ("st_f", 19, 24, {"boost": 1.1, "tail": 0.15}),
+          ("st_d", 13, 16, {"lift": 0.35, "pre": 0.45, "boost": 0.8, "tail": 0.1}),   # the lift rang over "Merge"
+          ("st_e", 17, 18, {"drop_at": [[1, 1]], "tail": 0.5}),   # the drop right before "eighteen" (drop_cue reads the scene's first line)
+          ("st_f", 19, 24, {"boost": 1.25, "tail": 0.15}),
           ("st_g", 25, 26, {"outro": True, "boost": 1.35, "rise": 1.4, "tail": 0.0})]   # first cut: the last quarter was the quietest
-GAP = {1: 0.25, 8: 0.3, 9: 0.3, 22: 0.25, 24: 0.55}   # seconds after line n (default 0.18); 24: the 20/20 holds
+# seconds after line n (default 0.18). Render review: no room for the payoffs -> a beat after "We don't sell
+# headaches" (9), before "Both: eighteen" (17), either side of "Everyone except your stock book" (21, 22); 24: 20/20 holds
+GAP = {1: 0.25, 8: 0.3, 9: 0.7, 17: 0.75, 21: 0.45, 22: 0.7, 24: 0.55}
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
 
 def spec():
-    s = {"id": "ep33v1", "title": "We don't sell headaches (EP33: hybrid search)", "label": "EP33", "banner": "We don't sell headaches",
+    s = {"id": "ep33v1", "title": "We don't sell headaches (EP33: hybrid search)", "label": "EP33", "banner": "Why the AI said OUT OF STOCK",
          "topic": "", "look": "classic", "gap": 0.18, "lead": 0.15, "music": "lofi", "musicVol": [0.4, 0.75], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True,
          "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1500}
@@ -68,8 +70,8 @@ def spec():
                   "gap": 0.05 if n == 26 else GAP.get(n, 0.18)}
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
             # the fix and the twist build to the loudest stretch
-            g = (-1.0 if who == "ai" else 0.0) + (-1.0 if 8 <= n <= 12 else 0.0) + (1.0 if 21 <= n <= 24 else 0.0)
-            g += {18: 2.0, 25: 2.5, 26: 2.0}.get(n, 0.0)
+            g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
+            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)

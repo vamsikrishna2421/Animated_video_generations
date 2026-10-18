@@ -56,24 +56,24 @@ const paper = (c: Ctx, x: number, y: number, w: number, h: number, rot: number, 
   c.restore();
 };
 const pageCard = (c: Ctx, n: number, x: number, y: number, w: number, rot: number, k: number, r: () => number,
-  o: { cross?: number; glow?: number; hl?: string; dim?: boolean } = {}) => {
+  o: { cross?: number; glow?: number; hl?: string; dim?: boolean; big?: boolean } = {}) => {
   if (k <= 0) return;
-  const rows = PAGES[n] ?? [TOPIC[n]], h = 92 + rows.length * 46;
+  const rows = o.big ? PAGES[n] ?? [TOPIC[n]] : [TOPIC[n]], rh = o.big ? 58 : 60, h = 110 + rows.length * rh;
   c.save(); c.globalAlpha = o.dim ? 0.45 : 1;
   if ((o.glow ?? 0) > 0) { c.save(); c.shadowColor = COL.yellow; c.shadowBlur = 40 * (o.glow ?? 0); c.fillStyle = COL.yellow; rrect(c, x - 10, y - 10, w + 20, h + 20, 20); c.fill(); c.restore(); }
   paper(c, x, y, w, h, rot, easeOut(k));
   c.save(); c.translate(x + w / 2, y + h / 2); c.rotate(rot); c.scale(easeOut(k), easeOut(k)); c.translate(-w / 2, -h / 2);
-  c.font = caveat(44); c.fillStyle = COL.red; c.textAlign = "left"; c.fillText(`p.${n}`, 18, 50);
-  c.font = handF(30); c.fillStyle = INK;
+  c.font = caveat(64); c.fillStyle = COL.red; c.textAlign = "left"; c.fillText(`p.${n}`, 18, 64);
+  c.font = handF(o.big ? 40 : 42); c.fillStyle = INK;
   rows.forEach((t, i) => {
-    if (o.hl && t.startsWith(o.hl)) { c.save(); c.globalAlpha = 0.8; c.fillStyle = COL.yellow; c.fillRect(12, 70 + i * 46, w - 24, 40); c.restore(); c.fillStyle = INK; }
-    c.fillText(t, 20, 100 + i * 46);
+    if (o.hl && t.startsWith(o.hl)) { c.save(); c.globalAlpha = 0.8; c.fillStyle = COL.yellow; c.fillRect(12, 84 + i * rh, w - 24, rh - 6); c.restore(); c.fillStyle = INK; }
+    c.fillText(t, 20, 124 + i * rh);
   });
   c.restore();
   if ((o.cross ?? 0) > 0) {
     const q = o.cross ?? 0;
-    stroke(c, [[x + w * 0.62, y + 18], [x + w * 0.62 + 90 * seg(q, 0, 0.5), y + 18 + 90 * seg(q, 0, 0.5)]], COL.red, 12, r, { passes: 2 });
-    if (q > 0.5) stroke(c, [[x + w * 0.62 + 90, y + 18], [x + w * 0.62 + 90 - 90 * seg(q, 0.5, 1), y + 18 + 90 * seg(q, 0.5, 1)]], COL.red, 12, r, { passes: 2 });
+    stroke(c, [[x + w * 0.55, y + 14], [x + w * 0.55 + 100 * seg(q, 0, 0.5), y + 14 + 100 * seg(q, 0, 0.5)]], COL.red, 14, r, { passes: 2 });
+    if (q > 0.5) stroke(c, [[x + w * 0.55 + 100, y + 14], [x + w * 0.55 + 100 - 100 * seg(q, 0.5, 1), y + 14 + 100 * seg(q, 0.5, 1)]], COL.red, 14, r, { passes: 2 });
   }
   c.restore();
 };
@@ -113,9 +113,9 @@ const bigPhone = (c: Ctx, W: number, H: number, title: string, r: () => number, 
   c.font = handF(30); c.fillStyle = "#475569"; c.fillText(title, 228, 284);
   stroke(c, [[110, 312], [W - 110, 312]], "#cbd5e1", 3, r, { passes: 1 });
 };
-const toggle = (c: Ctx, x: number, y: number, name: string, on: number, k: number) => {
+const toggle = (c: Ctx, x: number, y: number, name: string, on: number, k: number, sc = 1.25) => {
   if (k <= 0) return;
-  c.save(); c.globalAlpha = clamp(k * 1.5);
+  c.save(); c.globalAlpha = clamp(k * 1.5); c.translate(x, y); c.scale(sc, sc); c.translate(-x, -y);
   c.fillStyle = "rgba(15,23,42,0.85)"; rrect(c, x, y, 300, 64, 32); c.fill();
   c.font = handF(30); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText(name, x + 22, y + 43);
   const kx = x + 222;
@@ -127,12 +127,12 @@ const toggle = (c: Ctx, x: number, y: number, name: string, on: number, k: numbe
 const ruleCard = (c: Ctx, x: number, y: number, s: number, k: number, bothOff: number) => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.scale(s * easeOut(k), s * easeOut(k));
-  c.fillStyle = "rgba(4,8,40,0.35)"; rrect(c, -330 + 10, -64 + 12, 660, 128, 26); c.fill();
-  c.fillStyle = COL.yellow; rrect(c, -330, -64, 660, 128, 26); c.fill();
   c.font = caveat(62); c.textAlign = "left";
   const words = ["BOTH.", "TEST.", "WRITE IT DOWN."], gap = 26;
-  const ws = words.map((t) => c.measureText(t).width);
-  let px = -(ws.reduce((a, b) => a + b, 0) + gap * 2) / 2;
+  const ws = words.map((t) => c.measureText(t).width), tw = ws.reduce((a, b) => a + b, 0) + gap * 2;
+  c.fillStyle = "rgba(4,8,40,0.35)"; rrect(c, -tw / 2 - 36 + 10, -64 + 12, tw + 72, 128, 26); c.fill();
+  c.fillStyle = COL.yellow; rrect(c, -tw / 2 - 36, -64, tw + 72, 128, 26); c.fill();
+  let px = -tw / 2;
   words.forEach((t, i) => {
     c.fillStyle = i === 0 && bothOff > 0 ? `rgba(22,21,42,${1 - 0.7 * bothOff})` : INK;
     c.fillText(t, px, 22);
@@ -148,7 +148,7 @@ const bar = (c: Ctx, y: number, label: string, v: number, col: string, k: number
   c.fillStyle = "#e2e8f0"; rrect(c, x0, y, wmax, 78, 16); c.fill();
   c.fillStyle = col; rrect(c, x0, y, Math.max(20, wmax * (v / 20) * q), 78, 16); c.fill();
   c.font = caveat(70); c.fillStyle = INK; c.textAlign = "left"; c.fillText(`${Math.round(v * q)}/20`, x0 + wmax + 20, y + 60);
-  if (note) { c.font = handF(28); c.fillStyle = "#334155"; c.fillText(note, x0 + 12, y + 116); }
+  if (note) { c.font = handF(36); c.fillStyle = "#334155"; c.fillText(note, x0 + 12, y + 122); }
 };
 const houses = (c: Ctx, r: () => number, p: number, boil: number) => {
   const xs = [240, 540, 840], nums = ["No. 12", "No. 7", "No. 31"];
@@ -194,7 +194,7 @@ const StStock: React.FC<SP> = ({ s }) => {
     if (b.prop === "zero") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.35} />, <Sfx key={k("s")} at={end + 1} src="audio/gag_boing.wav" vol={0.55} />);
     if (b.prop === "balm") sfx.push(<Sfx key={k("p")} at={at + 6} src="audio/sfx_pop.wav" vol={0.4} />);
     if (b.prop === "words") [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("x" + q)} at={cue(i, 1, 0.55) + 10 + q * 5} src="audio/sfx_snap.wav" vol={0.2} />));
-    if (b.prop === "hybrid") sfx.push(<Sfx key={k("m")} at={cue(i, 1, 0.3)} src="audio/sfx_whoosh.wav" vol={0.45} />, <Sfx key={k("p")} at={cue(i, 2, 0.7)} src="audio/sfx_pop.wav" vol={0.5} />,
+    if (b.prop === "hybrid") sfx.push(<Sfx key={k("m")} at={cue(i, 1, 0.3) - 10} src="audio/sfx_whoosh.wav" vol={0.28} />,   // on "Merge" it read "Worst" <Sfx key={k("p")} at={cue(i, 2, 0.7)} src="audio/sfx_pop.wav" vol={0.5} />,
       <Sfx key={k("c")} at={cue(i, 2, 0.7) + 10} src="audio/watch_click.wav" vol={0.5} />);
     if (b.prop === "delivery") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("d" + q)} at={at + Math.round(l.frames * (0.32 + q * 0.25))} src="audio/gag_ding.wav" vol={0.2} />));
     if (b.prop === "sheet") [0, 1, 2, 3, 4].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 8 + q * 9} src="audio/sfx_tick.wav" vol={0.16} />));
@@ -229,10 +229,11 @@ const StStock: React.FC<SP> = ({ s }) => {
           bigPhone(c, W, H, titles[b.prop] ?? "", r, f);
           if (b.prop === "pages") {
             const c1 = cu(1, 0.3);
-            [15, 12, 13].forEach((pg, q) => pageCard(c, pg, 120 + q * 280, 420 + q * 30, 300, (q - 1) * 0.06, seg(f, c1 - 6 + q * 3, c1 + q * 3 + 2), r, { cross: seg(f, c1 + 4 + q * 5, c1 + 10 + q * 5) }));
+            tag(c, "It reads 3 of the book's 15 pages", 540, 410, 52, COL.yellow, INK, -0.02, seg(p, 0.02, 0.15));
+            [15, 12, 13].forEach((pg, q) => pageCard(c, pg, 112 + q * 288, 490 + q * 24, 276, (q - 1) * 0.05, seg(f, c1 - 6 + q * 3, c1 + q * 3 + 2), r, { cross: seg(f, c1 + 4 + q * 5, c1 + 10 + q * 5) }));
             const g = seg(f, c1 + 18, c1 + 26);
-            pageCard(c, 14, 300, 900, 480, -0.03, g, r, { glow: g, hl: "E-1203" });
-            if (g > 0.6) tag(c, "E-1203 is on p.14", 540, 1400, 54, COL.yellow, INK, -0.03, seg(f, c1 + 22, c1 + 30));
+            pageCard(c, 14, 170, 810, 740, -0.02, g, r, { glow: g, hl: "E-1203", big: true });
+            if (g > 0.6) tag(c, "E-1203 is on p.14", 540, 1420, 60, COL.yellow, INK, -0.03, seg(f, c1 + 22, c1 + 30));
           }
           if (b.prop === "meaning") {
             c.font = handF(30); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("pages placed by what they're about", 540, 400);
@@ -242,7 +243,7 @@ const StStock: React.FC<SP> = ({ s }) => {
               if (on <= 0) return;
               c.save(); c.globalAlpha = on;
               c.beginPath(); c.arc(x, y, pg === 14 ? 24 : 19, 0, 7); c.fillStyle = [15, 12, 13].includes(pg) ? COL.orange : pg === 14 ? GREEN : "#64748b"; c.fill();
-              c.font = handF(31); c.fillStyle = INK; c.textAlign = "center"; c.fillText(TOPIC[pg], x, y - 30);
+              c.font = handF([15, 12, 13, 14].includes(pg) ? 40 : 34); c.fillStyle = INK; c.textAlign = "center"; c.fillText(TOPIC[pg], x, y - 32);
               c.restore();
             });
             const drop = easeOut(seg(f, ln.from + 18, ln.from + 30));
@@ -254,9 +255,12 @@ const StStock: React.FC<SP> = ({ s }) => {
                 stroke(c, [[qx, qy], [qx + (x - qx) * seg(f, ln.from + 30 + q * 4, ln.from + 38 + q * 4), qy + (yy - qy) * seg(f, ln.from + 30 + q * 4, ln.from + 38 + q * 4)]], COL.orange, 6, r, { passes: 2 });
               });
               if (drop >= 1) { stroke(c, circlePts(MAP[14][0], MAP[14][1], 48, 48), GREEN, 5, r, { passes: 2, alpha: seg(f, c1, c1 + 8) });
-                c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.font = handF(30); c.fillStyle = GREEN; c.textAlign = "center"; c.fillText("the right page: too far", MAP[14][0] + 40, MAP[14][1] + 74); c.restore(); }
+                c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.font = handF(38); c.fillStyle = GREEN; c.textAlign = "center"; c.fillText("the right page: too far", MAP[14][0] + 60, MAP[14][1] + 80); c.restore(); }
             }
-            if (f >= c1) tag(c, "To meaning search, codes look alike", 540, 1330, 46, COL.yellow, INK, -0.02, seg(f, c1, c1 + 8));
+            c.font = handF(34); c.textAlign = "left";
+            c.beginPath(); c.arc(160, 1300, 16, 0, 7); c.fillStyle = COL.orange; c.fill(); c.fillStyle = INK; c.fillText("the 3 pages it reads", 186, 1312);
+            c.beginPath(); c.arc(600, 1300, 18, 0, 7); c.fillStyle = GREEN; c.fill(); c.fillStyle = INK; c.fillText("the right page", 628, 1312);
+            if (f >= c1) tag(c, "To meaning search, codes look alike", 540, 1420, 50, COL.yellow, INK, -0.02, seg(f, c1, c1 + 8));
           }
           if (b.prop === "keyword") {
             c.fillStyle = "#e2e8f0"; rrect(c, 130, 360, 820, 90, 45); c.fill();
@@ -298,8 +302,8 @@ const StStock: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "delivery") houses(c, r, p, boil);
           if (b.prop === "sheet") {
-            c.font = caveat(64); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("OUR REAL TEST", 540, 410);
-            c.font = handF(32); c.fillStyle = "#334155"; c.fillText("20 orders · we know the right item for each", 540, 460);
+            c.font = caveat(84); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("OUR REAL TEST", 540, 420);
+            c.font = handF(36); c.fillStyle = "#334155"; c.fillText("our small demo: 20 orders, right item known", 540, 476);
             SHEET.forEach(([o, a, ok], q) => {
               const y = 530 + q * 92, on = seg(f, ln.from + 4 + q * 5, ln.from + 10 + q * 5);
               if (on <= 0) return;
@@ -314,13 +318,14 @@ const StStock: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "bars" || b.prop === "both") {
             const c1 = b.prop === "bars" ? cu(1, 0.6) : 0, bothAt = b.prop === "both" ? cu(1, 0.45) : Infinity;
-            c.font = handF(32); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("right page among the 3 pages it reads", 540, 400);
+            c.font = caveat(56); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("OUR REAL TEST", 540, 410);
+            c.font = handF(36); c.fillStyle = "#334155"; c.fillText("right page among the 3 pages it reads", 540, 462);
             bar(c, 560, "MEANING only", 15, COL.orange, b.prop === "bars" ? seg(f, ln.from + 2, ln.from + 18) : 1, "3 pages per order");
             bar(c, 800, "KEYWORD only", 13, "#2563eb", b.prop === "bars" ? seg(f, c1 - 4, c1 + 12) : 1, "3 pages per order");
             if (f >= bothAt) {
               bar(c, 1060, "BOTH", 18, GREEN, seg(f, bothAt - 2, bothAt + 10));
               stamp(c, "STILL 3 PAGES", 720, 1238, 46, COL.red, seg(f, bothAt + 6, bothAt + 14), r, -0.05);
-              if (f >= bothAt + 20) tag(c, "helps most when codes hide in long pages", 540, 1400, 40, COL.yellow, INK, -0.02, seg(f, bothAt + 20, bothAt + 28));
+              if (f >= bothAt + 20) tag(c, "helps most when codes hide in long pages", 540, 1420, 50, COL.yellow, INK, -0.02, seg(f, bothAt + 20, bothAt + 28));
             }
           }
           if (b.prop === "rows") {
@@ -351,12 +356,13 @@ const StStock: React.FC<SP> = ({ s }) => {
             if (s2 >= 1) tag(c, "\"Ramesh\": not found", 540, 1010, 44, "#fee2e2", "#991b1b", 0, 1);
           }
           if (b.prop === "stamp") {
-            stamp(c, "20/20", 540, 700, 220, GREEN, seg(f, ln.from + 2, ln.from + 10), r, -0.06);
-            c.font = handF(40); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("after writing the two facts into the book", 540, 960);
+            stamp(c, "20/20", 540, 680, 280, GREEN, seg(f, ln.from + 2, ln.from + 10), r, -0.06);
+            c.font = handF(42); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("after writing the two facts into the book", 540, 950);
+            c.font = handF(36); c.fillStyle = "#64748b"; c.fillText("(a fair re-test also uses new orders)", 540, 1012);
             paper(c, 180, 1040, 720, 230, 0.02, seg(f, ln.from + 6, ln.from + 14));
             if (f > ln.from + 12) { c.font = handF(32); c.fillStyle = COL.red; c.textAlign = "left"; c.fillText("Dishwash bar: for washing vessels", 220, 1130); c.fillText("Ramesh garu's usual: R-1724", 220, 1200); }
           }
-          if (n >= 2 && n <= 4) tag(c, "Reads 3 of 15 pages", 760, 250, 40, COL.yellow, INK, -0.02, n === 2 ? seg(p, 0.05, 0.2) : 1);
+          if (n === 4) tag(c, "reads 3 of 15 pages", 780, 250, 40, COL.yellow, INK, -0.02, 1);
           c.restore();
         } else {
           // ---------- the shop ----------
@@ -378,7 +384,7 @@ const StStock: React.FC<SP> = ({ s }) => {
           const lifted = n === 26 && f >= cu(2, 0.55) + 6;
           ravi(c, mood, lifted ? "phone" : armPose, b.who === "ravi" && talking, p, f, r);
           if (n === 1 && f >= cu(2, 0.6) - 4) { stroke(c, circlePts(124, 830, 96, 76), COL.yellow, 9, r, { passes: 2, alpha: seg(f, cu(2, 0.6) - 4, cu(2, 0.6) + 2) }); tag(c, "E-1203", 124, 725, 40, COL.yellow, INK, -0.05, seg(f, cu(2, 0.6) - 4, cu(2, 0.6) + 4)); }
-          if (n === 10) { stroke(c, circlePts(293, 842, 92, 56), COL.yellow, 8, r, { passes: 2, alpha: seg(p, 0.1, 0.25) }); tag(c, "Pain relief balm", 250, 735, 36, COL.yellow, INK, -0.05, seg(p, 0.12, 0.3)); }
+          if (n === 10) { stroke(c, circlePts(293, 842, 92, 56), COL.yellow, 8, r, { passes: 2, alpha: seg(p, 0.1, 0.25) }); tag(c, "Pain relief balm", 250, 728, 46, COL.yellow, INK, -0.05, seg(p, 0.12, 0.3)); }
           counter(c, r);
           // the stock book on the counter
           c.save(); c.translate(600, 1030); c.rotate(-0.04);
@@ -397,12 +403,12 @@ const StStock: React.FC<SP> = ({ s }) => {
           if (!lifted) phone(c, b.who === "ai" && talking, f, r, {});
           c.restore();
           // screen-space: the order chat (frame 1, the headache order, the last order)
-          if (n === 1) chat(c, 600, 560, 440, seg(f, cu(1, 0.25) - 4, cu(1, 0.25) + 4), [{ who: "c", t: "E-1203", p: 1 }, { who: "ai", t: "Out of stock, sorry", p: seg(f, cu(1, 0.25) + 4, cu(1, 0.25) + 10), col: COL.red }]);
+          if (n === 1) chat(c, 600, 560, 440, 1, [{ who: "c", t: "E-1203", p: 1 }, { who: "ai", t: "Out of stock, sorry", p: 1, col: COL.red }]);
           if (n === 8 || n === 9) chat(c, 400, 330, 640, 1, [{ who: "c", t: "something for a headache", p: n === 9 ? 1 : seg(f, cu(1, 0.35), cu(1, 0.35) + 6) },
             ...(n === 9 ? [{ who: "ai" as const, t: "0 matches", p: seg(p, 0.02, 0.15), col: COL.red }] : [])]);
           if (n === 8 && f >= cu(1, 0.35) + 4) tag(c, "Will KEYWORD search find the pain balm?", 540, 1420, 42, COL.yellow, INK, -0.02, seg(f, cu(1, 0.35) + 4, cu(1, 0.35) + 12));
           if (n === 26) chat(c, 520, 470, 520, seg(f, cu(2, 0.55) - 4, cu(2, 0.55) + 4), [{ who: "c", t: "E-1203", p: 1 }, { who: "ai", t: "Out of stock, sorry", p: seg(f, cu(2, 0.55) + 8, cu(2, 0.55) + 14), col: COL.red }]);
-          if (n === 1 && f < cu(1, 0.25) + 30) {   // frame 1, readable with the sound off
+          if (n === 1 && f < cu(2, 0.6) + 24) {   // frame 1, readable with the sound off; held until the batteries glow
             c.save(); c.translate(W / 2, 400); c.rotate(-0.03);
             c.fillStyle = "rgba(15,23,42,0.82)"; rrect(c, -400, -62, 800, 158, 24); c.fill();
             c.font = caveat(62); c.textAlign = "center"; c.lineWidth = 12; c.strokeStyle = INK;
@@ -415,10 +421,14 @@ const StStock: React.FC<SP> = ({ s }) => {
         if (n === 3) tag(c, "Reads 3 of 15 pages", W / 2, 380, 46, COL.yellow, INK, -0.02, 1);
         if (n >= 14 && b.shot !== "screen") {   // the two switches, from the merge on; the keyword one flips off at the end
           const off = n === 26 ? seg(f, cu(1, 0.3), cu(1, 0.3) + 4) : 0;
-          toggle(c, W - 330, 330, "MEANING", 1, 1); toggle(c, W - 330, 406, "KEYWORD", 1 - off, 1);
+          toggle(c, W - 400, 330, "MEANING", 1, 1); toggle(c, W - 400, 422, "KEYWORD", 1 - off, 1);
+          if (n === 26) {   // the flip, big for a second (the corner pill went unnoticed)
+            const c1 = cu(1, 0.3), k = seg(f, c1 - 4, c1 + 2) * (1 - seg(f, c1 + 30, c1 + 38));
+            if (k > 0) { c.save(); c.fillStyle = `rgba(15,23,42,${0.35 * k})`; c.fillRect(0, 0, W, H); c.restore(); toggle(c, 230, 760, "KEYWORD", 1 - off, k, 2.0); }
+          }
         }
-        if (n >= 22 && n <= 24) ruleCard(c, W / 2, 1440, 1, n === 22 ? seg(f, ln.from + ln.frames - 10, ln.from + ln.frames - 2) : 1, 0);
-        if (n >= 25) ruleCard(c, 240, 362, 0.62, 1, n === 26 ? seg(f, cu(1, 0.3) + 2, cu(1, 0.3) + 10) : 0);
+        if (n >= 22 && n <= 24) ruleCard(c, W / 2, 1380, 1, n === 22 ? seg(f, ln.from + ln.frames - 10, ln.from + ln.frames - 2) : 1, 0);
+        if (n >= 25) ruleCard(c, 290, 362, 0.6, 1, n === 26 ? seg(f, cu(1, 0.3) + 2, cu(1, 0.3) + 10) : 0);
         if (s.id === "st_a" && f < 4) { c.save(); c.globalAlpha = 1 - f / 4; c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
       }} />
     </>
