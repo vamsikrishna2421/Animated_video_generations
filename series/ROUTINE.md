@@ -91,6 +91,21 @@ stay as made.
 8. Deliver with SendUserFile (status proactive): Insta EN + TE send copies and the caption files, plus 2-3 lines on
    what the viewers flagged and what changed.
 
+### Recorded voice (trial from EP33; the user's call on Oct 18)
+The user voices the episode: both characters, English and, if they can, Telugu (a language they skip gets TTS).
+- The script goes to the user only after the demo and the script-stage viewer review: they record once, so the
+  numbers and lines must be final. The recording guide sits in the script file (`series/scripts/ep33_hybrid_search.md`):
+  the line number before each line, 2 s gaps, a slip = say the line again (the last take wins), ★ lines twice, 5 s of
+  room tone first, the original file rather than a WhatsApp voice note.
+- The file arrives attached in chat, through Google Drive (the Drive connector), or uploaded on GitHub into
+  `incoming/` on `sample1` (pull it, then move it out of the tracked tree).
+- Cut: one clip per line at the spoken numbers (Whisper word times; Telugu also by silences), the last clean take,
+  60 ms before the first sound and 100 ms after the last. Clean: high-pass 80 Hz, noise reduction from the room tone,
+  clicks, gentle compression, lines level-matched. The AI's lines go through `phone()` from `pipeline/skit02/voice.py`.
+- A human take is not stretched like TTS: spec `tempo` 1.0 (at most 1.05); tighten gaps instead.
+- While the recording is pending: build the scenes against a TTS guide track (never delivered), and don't start the
+  next episode.
+
 ## Run 2: daily creative reel
 1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. The shop cast (Ravi anna
    and the shop AI) belongs to the episodes now: use other casts and settings so the two daily posts look different.

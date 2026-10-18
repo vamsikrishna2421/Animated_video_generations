@@ -1,0 +1,781 @@
+{
+ "embedder": "BAAI/bge-small-en-v1.5",
+ "items": 114,
+ "page_size": 8,
+ "pieces": 15,
+ "questions": 20,
+ "hit1": {
+  "keyword": 12,
+  "meaning": 12,
+  "hybrid": 14
+ },
+ "hit3": {
+  "keyword": 13,
+  "meaning": 15,
+  "hybrid": 18
+ },
+ "by_kind": {
+  "code": {
+   "keyword": [
+    4,
+    4
+   ],
+   "meaning": [
+    1,
+    4
+   ],
+   "hybrid": [
+    2,
+    4
+   ]
+  },
+  "local name": {
+   "keyword": [
+    4,
+    4
+   ],
+   "meaning": [
+    3,
+    4
+   ],
+   "hybrid": [
+    4,
+    4
+   ]
+  },
+  "meaning": {
+   "keyword": [
+    1,
+    8
+   ],
+   "meaning": [
+    5,
+    8
+   ],
+   "hybrid": [
+    5,
+    8
+   ]
+  },
+  "mixed": {
+   "keyword": [
+    3,
+    3
+   ],
+   "meaning": [
+    3,
+    3
+   ],
+   "hybrid": [
+    3,
+    3
+   ]
+  },
+  "not written anywhere": {
+   "keyword": [
+    0,
+    1
+   ],
+   "meaning": [
+    0,
+    1
+   ],
+   "hybrid": [
+    0,
+    1
+   ]
+  }
+ },
+ "orders": [
+  {
+   "q": "R-1742",
+   "kind": "code",
+   "right": [
+    "R-1742"
+   ],
+   "query_words": [
+    "r",
+    "1742"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "D-0313, one kg",
+   "kind": "code",
+   "right": [
+    "D-0313"
+   ],
+   "query_words": [
+    "d",
+    "0313",
+    "one",
+    "kg"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190",
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "need item H-9905",
+   "kind": "code",
+   "right": [
+    "H-9905"
+   ],
+   "query_words": [
+    "need",
+    "item",
+    "h",
+    "9905"
+   ],
+   "keyword": {
+    "top3": [
+     "B-8840 | Potato chips, 1 packet | Rs 20\nB-8846 | Mixture (namkeen), 200 g | Rs 50\nB-8852 | Soft drink, 750 ml | Rs 40\nB-8859 | Drinking water, 1 L bottle | Rs 20\nB-8863 | Chocolate bar, 1 bar | Rs 40\nH-9901 | Dishwash bar, 200 g | Rs 25\nH-9905 | Dishwash liquid, 500 ml | Rs 99\nH-9910 | Scrub pads, pack of 3 | Rs 30",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "B-8840 | Potato chips, 1 packet | Rs 20\nB-8846 | Mixture (namkeen), 200 g | Rs 50\nB-8852 | Soft drink, 750 ml | Rs 40\nB-8859 | Drinking water, 1 L bottle | Rs 20\nB-8863 | Chocolate bar, 1 bar | Rs 40\nH-9901 | Dishwash bar, 200 g | Rs 25\nH-9905 | Dishwash liquid, 500 ml | Rs 99\nH-9910 | Scrub pads, pack of 3 | Rs 30"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "E-1203",
+   "kind": "code",
+   "right": [
+    "E-1203"
+   ],
+   "query_words": [
+    "e",
+    "1203"
+   ],
+   "keyword": {
+    "top3": [
+     "T-3371 | Face cream, 50 g | Rs 90\nE-1201 | AA batteries, pack of 2 | Rs 40\nE-1203 | AAA batteries, pack of 2 | Rs 40\nE-1210 | LED bulb, 9 W, 1 piece | Rs 99\nE-1216 | Notebook, 200 pages, 1 piece | Rs 60\nE-1223 | Ball pens, pack of 5 | Rs 50\nE-1229 | Pencils, pack of 10 | Rs 45\nE-1235 | White glue, 50 g | Rs 30",
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150",
+     "T-3371 | Face cream, 50 g | Rs 90\nE-1201 | AA batteries, pack of 2 | Rs 40\nE-1203 | AAA batteries, pack of 2 | Rs 40\nE-1210 | LED bulb, 9 W, 1 piece | Rs 99\nE-1216 | Notebook, 200 pages, 1 piece | Rs 60\nE-1223 | Ball pens, pack of 5 | Rs 50\nE-1229 | Pencils, pack of 10 | Rs 45\nE-1235 | White glue, 50 g | Rs 30",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "kothimeera",
+   "kind": "local name",
+   "right": [
+    "V-6624"
+   ],
+   "query_words": [
+    "kothimeera"
+   ],
+   "keyword": {
+    "top3": [
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "gongura pickle",
+   "kind": "local name",
+   "right": [
+    "P-5507"
+   ],
+   "query_words": [
+    "gongura",
+    "pickle"
+   ],
+   "keyword": {
+    "top3": [
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "atukulu half kg",
+   "kind": "local name",
+   "right": [
+    "R-1833"
+   ],
+   "query_words": [
+    "atukulu",
+    "half",
+    "kg"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "karpooram for pooja",
+   "kind": "local name",
+   "right": [
+    "H-9957"
+   ],
+   "query_words": [
+    "karpooram",
+    "pooja"
+   ],
+   "keyword": {
+    "top3": [
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "something to wash vessels",
+   "kind": "meaning",
+   "right": [
+    "H-9901",
+    "H-9905"
+   ],
+   "query_words": [
+    "something",
+    "wash",
+    "vessels"
+   ],
+   "keyword": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "something for a headache",
+   "kind": "meaning",
+   "right": [
+    "T-3353"
+   ],
+   "query_words": [
+    "something",
+    "headache"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "T-3371 | Face cream, 50 g | Rs 90\nE-1201 | AA batteries, pack of 2 | Rs 40\nE-1203 | AAA batteries, pack of 2 | Rs 40\nE-1210 | LED bulb, 9 W, 1 piece | Rs 99\nE-1216 | Notebook, 200 pages, 1 piece | Rs 60\nE-1223 | Ball pens, pack of 5 | Rs 50\nE-1229 | Pencils, pack of 10 | Rs 45\nE-1235 | White glue, 50 g | Rs 30",
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "T-3371 | Face cream, 50 g | Rs 90\nE-1201 | AA batteries, pack of 2 | Rs 40\nE-1203 | AAA batteries, pack of 2 | Rs 40\nE-1210 | LED bulb, 9 W, 1 piece | Rs 99\nE-1216 | Notebook, 200 pages, 1 piece | Rs 60\nE-1223 | Ball pens, pack of 5 | Rs 50\nE-1229 | Pencils, pack of 10 | Rs 45\nE-1235 | White glue, 50 g | Rs 30",
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "keep mosquitoes away at night",
+   "kind": "meaning",
+   "right": [
+    "H-9940",
+    "H-9944"
+   ],
+   "query_words": [
+    "keep",
+    "mosquitoes",
+    "away",
+    "night"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "something to clean my teeth",
+   "kind": "meaning",
+   "right": [
+    "T-3301",
+    "T-3308"
+   ],
+   "query_words": [
+    "something",
+    "clean",
+    "teeth"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "milk powder for tea",
+   "kind": "meaning",
+   "right": [
+    "M-7725"
+   ],
+   "query_words": [
+    "milk",
+    "powder",
+    "tea"
+   ],
+   "keyword": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "power went off, need light",
+   "kind": "meaning",
+   "right": [
+    "E-1252",
+    "H-9968"
+   ],
+   "query_words": [
+    "power",
+    "went",
+    "off",
+    "need",
+    "light"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150",
+     "T-3371 | Face cream, 50 g | Rs 90\nE-1201 | AA batteries, pack of 2 | Rs 40\nE-1203 | AAA batteries, pack of 2 | Rs 40\nE-1210 | LED bulb, 9 W, 1 piece | Rs 99\nE-1216 | Notebook, 200 pages, 1 piece | Rs 60\nE-1223 | Ball pens, pack of 5 | Rs 50\nE-1229 | Pencils, pack of 10 | Rs 45\nE-1235 | White glue, 50 g | Rs 30",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150",
+     "T-3371 | Face cream, 50 g | Rs 90\nE-1201 | AA batteries, pack of 2 | Rs 40\nE-1203 | AAA batteries, pack of 2 | Rs 40\nE-1210 | LED bulb, 9 W, 1 piece | Rs 99\nE-1216 | Notebook, 200 pages, 1 piece | Rs 60\nE-1223 | Ball pens, pack of 5 | Rs 50\nE-1229 | Pencils, pack of 10 | Rs 45\nE-1235 | White glue, 50 g | Rs 30",
+     "V-6602 | Onions, 1 kg | Rs 40\nV-6611 | Tomatoes, 1 kg | Rs 40\nV-6615 | Potatoes, 1 kg | Rs 35\nV-6620 | Green chillies, 250 g | Rs 20\nV-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10\nV-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5\nV-6633 | Ginger, 250 g | Rs 30\nV-6641 | Garlic, 250 g | Rs 50"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "something sweet to put in coffee",
+   "kind": "meaning",
+   "right": [
+    "B-8814",
+    "B-8817"
+   ],
+   "query_words": [
+    "something",
+    "sweet",
+    "put",
+    "coffee"
+   ],
+   "keyword": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "for washing clothes",
+   "kind": "meaning",
+   "right": [
+    "H-9918",
+    "H-9921"
+   ],
+   "query_words": [
+    "washing",
+    "clothes"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "H-9963 | Matchboxes, pack of 10 | Rs 20\nH-9968 | Candles, pack of 6 | Rs 30\nH-9972 | Garbage bags, pack of 30 | Rs 80\nH-9979 | Broom, 1 piece | Rs 90\nH-9983 | Phenyl, 1 L | Rs 70\nT-3301 | Toothpaste, 150 g | Rs 95\nT-3308 | Toothbrush, 1 piece | Rs 30\nT-3315 | Bath soap, 100 g | Rs 40",
+     "H-9918 | Detergent powder, 1 kg | Rs 120\nH-9921 | Detergent bar, 250 g | Rs 30\nH-9927 | Floor cleaner, 1 L | Rs 110\nH-9933 | Toilet cleaner, 500 ml | Rs 95\nH-9940 | Mosquito coil, pack of 10 | Rs 45\nH-9944 | Mosquito repellent refill, 45 ml | Rs 80\nH-9952 | Agarbatti, 1 pack | Rs 30\nH-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "25 kilo rice bag",
+   "kind": "mixed",
+   "right": [
+    "R-1742"
+   ],
+   "query_words": [
+    "25",
+    "kilo",
+    "rice",
+    "bag"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "B-8840 | Potato chips, 1 packet | Rs 20\nB-8846 | Mixture (namkeen), 200 g | Rs 50\nB-8852 | Soft drink, 750 ml | Rs 40\nB-8859 | Drinking water, 1 L bottle | Rs 20\nB-8863 | Chocolate bar, 1 bar | Rs 40\nH-9901 | Dishwash bar, 200 g | Rs 25\nH-9905 | Dishwash liquid, 500 ml | Rs 99\nH-9910 | Scrub pads, pack of 3 | Rs 30"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450\nR-1724 | Sona Masoori rice, 5 kg bag | Rs 320\nR-1750 | Basmati rice, 1 kg | Rs 140\nR-1761 | Idli rice, 5 kg | Rs 260\nR-1738 | Brown rice, 1 kg | Rs 110\nR-1802 | Rava (sooji), 1 kg | Rs 60\nR-1815 | Wheat atta, 10 kg | Rs 450\nR-1820 | Maida, 1 kg | Rs 48",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "one tray eggs",
+   "kind": "mixed",
+   "right": [
+    "M-7740"
+   ],
+   "query_words": [
+    "one",
+    "tray",
+    "eggs"
+   ],
+   "keyword": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42\nM-7746 | Rusk, 300 g | Rs 60\nB-8801 | Tea powder, 250 g | Rs 130\nB-8806 | Coffee powder, 100 g | Rs 120\nB-8814 | Sugar, 1 kg | Rs 46\nB-8817 | Jaggery (bellam), 1 kg | Rs 70\nB-8825 | Glucose biscuits, 1 packet | Rs 10\nB-8831 | Cream biscuits, 1 packet | Rs 30",
+     "V-6650 | Lemons, pack of 4 | Rs 20\nV-6657 | Pudina (mint), 1 bunch | Rs 10\nM-7701 | Milk, 500 ml packet | Rs 30\nM-7703 | Curd, 500 g | Rs 35\nM-7710 | Paneer, 200 g | Rs 90\nM-7718 | Butter, 100 g | Rs 58\nM-7725 | Dairy whitener, 200 g | Rs 110\nM-7731 | Bread, 400 g loaf | Rs 45",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180\nP-5507 | Gongura pickle, 300 g | Rs 140\nP-5512 | Lemon pickle, 300 g | Rs 110\nP-5520 | Tomato pickle, 300 g | Rs 120\nP-5533 | Idli dosa batter, 1 kg | Rs 80\nP-5546 | Upma ready mix, 200 g | Rs 55\nP-5558 | Instant noodles, pack of 4 | Rs 56\nP-5563 | Tomato ketchup, 500 g | Rs 110"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "oil for hair",
+   "kind": "mixed",
+   "right": [
+    "T-3329"
+   ],
+   "query_words": [
+    "oil",
+    "hair"
+   ],
+   "keyword": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65",
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "T-3322 | Shampoo sachets, pack of 10 | Rs 30\nT-3329 | Coconut hair oil, 200 ml | Rs 95\nT-3336 | Talcum powder, 100 g | Rs 70\nT-3340 | Shaving blades, pack of 5 | Rs 50\nT-3347 | Sanitary pads, pack of 8 | Rs 45\nT-3353 | Pain relief balm, 8 g | Rs 40\nT-3360 | Hand wash, 200 ml | Rs 85\nT-3366 | Cotton buds, 1 box | Rs 35",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "Ramesh garu's usual",
+   "kind": "not written anywhere",
+   "right": [
+    "R-1724"
+   ],
+   "query_words": [
+    "ramesh",
+    "garu",
+    "s",
+    "usual"
+   ],
+   "keyword": {
+    "top3": [
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190",
+     "E-1240 | Clear tape, 1 roll | Rs 20\nE-1252 | Torch, 1 piece | Rs 150",
+     "R-1833 | Poha (atukulu), 500 g | Rs 38\nR-1847 | Ragi flour, 1 kg | Rs 70\nR-1852 | Jowar flour, 1 kg | Rs 65\nR-1866 | Vermicelli (semiya), 400 g | Rs 45\nD-0311 | Toor dal (kandi pappu), 1 kg | Rs 160\nD-0313 | Moong dal (pesara pappu), 1 kg | Rs 130\nD-0322 | Chana dal (senaga pappu), 1 kg | Rs 95\nD-0331 | Urad dal (minapa pappu), 1 kg | Rs 140"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "S-4140 | Mustard seeds (aavalu), 100 g | Rs 20\nS-4146 | Cumin seeds (jeelakarra), 100 g | Rs 45\nS-4158 | Tamarind (chinthapandu), 500 g | Rs 90\nS-4163 | Salt, 1 kg | Rs 28\nS-4170 | Black pepper, 50 g | Rs 60\nS-4182 | Hing, 25 g | Rs 55\nS-4191 | Sambar powder, 200 g | Rs 75\nS-4199 | Rasam powder, 100 g | Rs 50",
+     "O-2214 | Sesame oil (nuvvula nune), 500 ml | Rs 160\nO-2223 | Palm oil, 1 L | Rs 110\nO-2236 | Cow ghee, 500 ml | Rs 330\nO-2248 | Mustard oil, 1 L | Rs 175\nS-4107 | Red chilli powder, 200 g | Rs 70\nS-4112 | Turmeric powder, 100 g | Rs 35\nS-4125 | Coriander powder, 200 g | Rs 45\nS-4133 | Garam masala, 100 g | Rs 65",
+     "D-0345 | Masoor dal, 1 kg | Rs 110\nD-0350 | Rajma, 500 g | Rs 90\nD-0362 | Kabuli chana, 1 kg | Rs 120\nD-0377 | Green moong, whole, 1 kg | Rs 125\nD-0381 | Groundnuts (palli), 500 g | Rs 75\nD-0394 | Pesarattu mix, 500 g | Rs 85\nO-2201 | Sunflower oil, 1 L pouch | Rs 155\nO-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,786 @@
+{
+ "embedder": "BAAI/bge-small-en-v1.5",
+ "items": 114,
+ "page_size": 1,
+ "pieces": 114,
+ "questions": 20,
+ "hit1": {
+  "keyword": 11,
+  "meaning": 14,
+  "hybrid": 14
+ },
+ "hit3": {
+  "keyword": 11,
+  "meaning": 17,
+  "hybrid": 17
+ },
+ "by_kind": {
+  "code": {
+   "keyword": [
+    4,
+    4
+   ],
+   "meaning": [
+    4,
+    4
+   ],
+   "hybrid": [
+    4,
+    4
+   ]
+  },
+  "local name": {
+   "keyword": [
+    4,
+    4
+   ],
+   "meaning": [
+    4,
+    4
+   ],
+   "hybrid": [
+    4,
+    4
+   ]
+  },
+  "meaning": {
+   "keyword": [
+    0,
+    8
+   ],
+   "meaning": [
+    3,
+    8
+   ],
+   "hybrid": [
+    3,
+    8
+   ]
+  },
+  "mixed": {
+   "keyword": [
+    3,
+    3
+   ],
+   "meaning": [
+    3,
+    3
+   ],
+   "hybrid": [
+    3,
+    3
+   ]
+  },
+  "not written anywhere": {
+   "keyword": [
+    0,
+    1
+   ],
+   "meaning": [
+    0,
+    1
+   ],
+   "hybrid": [
+    0,
+    1
+   ]
+  }
+ },
+ "orders": [
+  {
+   "q": "R-1742",
+   "kind": "code",
+   "right": [
+    "R-1742"
+   ],
+   "query_words": [
+    "r",
+    "1742"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450",
+     "R-1820 | Maida, 1 kg | Rs 48",
+     "R-1750 | Basmati rice, 1 kg | Rs 140"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450",
+     "S-4182 | Hing, 25 g | Rs 55",
+     "R-1761 | Idli rice, 5 kg | Rs 260"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450",
+     "R-1761 | Idli rice, 5 kg | Rs 260",
+     "R-1802 | Rava (sooji), 1 kg | Rs 60"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "D-0313, one kg",
+   "kind": "code",
+   "right": [
+    "D-0313"
+   ],
+   "query_words": [
+    "d",
+    "0313",
+    "one",
+    "kg"
+   ],
+   "keyword": {
+    "top3": [
+     "D-0313 | Moong dal (pesara pappu), 1 kg | Rs 130",
+     "D-0345 | Masoor dal, 1 kg | Rs 110",
+     "D-0362 | Kabuli chana, 1 kg | Rs 120"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "D-0313 | Moong dal (pesara pappu), 1 kg | Rs 130",
+     "D-0322 | Chana dal (senaga pappu), 1 kg | Rs 95",
+     "D-0311 | Toor dal (kandi pappu), 1 kg | Rs 160"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "D-0313 | Moong dal (pesara pappu), 1 kg | Rs 130",
+     "D-0345 | Masoor dal, 1 kg | Rs 110",
+     "D-0322 | Chana dal (senaga pappu), 1 kg | Rs 95"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "need item H-9905",
+   "kind": "code",
+   "right": [
+    "H-9905"
+   ],
+   "query_words": [
+    "need",
+    "item",
+    "h",
+    "9905"
+   ],
+   "keyword": {
+    "top3": [
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "H-9952 | Agarbatti, 1 pack | Rs 30",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20",
+     "H-9979 | Broom, 1 piece | Rs 90"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "H-9963 | Matchboxes, pack of 10 | Rs 20",
+     "H-9979 | Broom, 1 piece | Rs 90"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "E-1203",
+   "kind": "code",
+   "right": [
+    "E-1203"
+   ],
+   "query_words": [
+    "e",
+    "1203"
+   ],
+   "keyword": {
+    "top3": [
+     "E-1203 | AAA batteries, pack of 2 | Rs 40",
+     "E-1229 | Pencils, pack of 10 | Rs 45",
+     "E-1252 | Torch, 1 piece | Rs 150"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "E-1203 | AAA batteries, pack of 2 | Rs 40",
+     "E-1201 | AA batteries, pack of 2 | Rs 40",
+     "H-9983 | Phenyl, 1 L | Rs 70"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "E-1203 | AAA batteries, pack of 2 | Rs 40",
+     "E-1201 | AA batteries, pack of 2 | Rs 40",
+     "E-1252 | Torch, 1 piece | Rs 150"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "kothimeera",
+   "kind": "local name",
+   "right": [
+    "V-6624"
+   ],
+   "query_words": [
+    "kothimeera"
+   ],
+   "keyword": {
+    "top3": [
+     "V-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "V-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10",
+     "R-1866 | Vermicelli (semiya), 400 g | Rs 45",
+     "H-9957 | Camphor (karpooram), 50 g | Rs 60"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "V-6624 | Kothimeera (coriander leaves), 1 bunch | Rs 10",
+     "R-1866 | Vermicelli (semiya), 400 g | Rs 45",
+     "H-9957 | Camphor (karpooram), 50 g | Rs 60"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "gongura pickle",
+   "kind": "local name",
+   "right": [
+    "P-5507"
+   ],
+   "query_words": [
+    "gongura",
+    "pickle"
+   ],
+   "keyword": {
+    "top3": [
+     "P-5507 | Gongura pickle, 300 g | Rs 140",
+     "P-5512 | Lemon pickle, 300 g | Rs 110",
+     "P-5520 | Tomato pickle, 300 g | Rs 120"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "P-5507 | Gongura pickle, 300 g | Rs 140",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180",
+     "P-5512 | Lemon pickle, 300 g | Rs 110"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "P-5507 | Gongura pickle, 300 g | Rs 140",
+     "P-5512 | Lemon pickle, 300 g | Rs 110",
+     "P-5501 | Mango pickle (avakaya), 500 g | Rs 180"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "atukulu half kg",
+   "kind": "local name",
+   "right": [
+    "R-1833"
+   ],
+   "query_words": [
+    "atukulu",
+    "half",
+    "kg"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38",
+     "R-1820 | Maida, 1 kg | Rs 48",
+     "S-4163 | Salt, 1 kg | Rs 28"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38",
+     "R-1815 | Wheat atta, 10 kg | Rs 450",
+     "R-1820 | Maida, 1 kg | Rs 48"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "R-1833 | Poha (atukulu), 500 g | Rs 38",
+     "R-1820 | Maida, 1 kg | Rs 48",
+     "R-1815 | Wheat atta, 10 kg | Rs 450"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "karpooram for pooja",
+   "kind": "local name",
+   "right": [
+    "H-9957"
+   ],
+   "query_words": [
+    "karpooram",
+    "pooja"
+   ],
+   "keyword": {
+    "top3": [
+     "H-9957 | Camphor (karpooram), 50 g | Rs 60"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "H-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "D-0345 | Masoor dal, 1 kg | Rs 110",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "H-9957 | Camphor (karpooram), 50 g | Rs 60",
+     "D-0345 | Masoor dal, 1 kg | Rs 110",
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "something to wash vessels",
+   "kind": "meaning",
+   "right": [
+    "H-9901",
+    "H-9905"
+   ],
+   "query_words": [
+    "something",
+    "wash",
+    "vessels"
+   ],
+   "keyword": {
+    "top3": [
+     "T-3360 | Hand wash, 200 ml | Rs 85"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "T-3360 | Hand wash, 200 ml | Rs 85",
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "T-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "T-3360 | Hand wash, 200 ml | Rs 85",
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "T-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "something for a headache",
+   "kind": "meaning",
+   "right": [
+    "T-3353"
+   ],
+   "query_words": [
+    "something",
+    "headache"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "T-3353 | Pain relief balm, 8 g | Rs 40",
+     "T-3371 | Face cream, 50 g | Rs 90",
+     "T-3308 | Toothbrush, 1 piece | Rs 30"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "T-3353 | Pain relief balm, 8 g | Rs 40",
+     "T-3371 | Face cream, 50 g | Rs 90",
+     "T-3308 | Toothbrush, 1 piece | Rs 30"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "keep mosquitoes away at night",
+   "kind": "meaning",
+   "right": [
+    "H-9940",
+    "H-9944"
+   ],
+   "query_words": [
+    "keep",
+    "mosquitoes",
+    "away",
+    "night"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "H-9944 | Mosquito repellent refill, 45 ml | Rs 80",
+     "H-9940 | Mosquito coil, pack of 10 | Rs 45",
+     "R-1866 | Vermicelli (semiya), 400 g | Rs 45"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "H-9944 | Mosquito repellent refill, 45 ml | Rs 80",
+     "H-9940 | Mosquito coil, pack of 10 | Rs 45",
+     "R-1866 | Vermicelli (semiya), 400 g | Rs 45"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "something to clean my teeth",
+   "kind": "meaning",
+   "right": [
+    "T-3301",
+    "T-3308"
+   ],
+   "query_words": [
+    "something",
+    "clean",
+    "teeth"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "T-3308 | Toothbrush, 1 piece | Rs 30",
+     "T-3301 | Toothpaste, 150 g | Rs 95",
+     "T-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "T-3308 | Toothbrush, 1 piece | Rs 30",
+     "T-3301 | Toothpaste, 150 g | Rs 95",
+     "T-3315 | Bath soap, 100 g | Rs 40"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "milk powder for tea",
+   "kind": "meaning",
+   "right": [
+    "M-7725"
+   ],
+   "query_words": [
+    "milk",
+    "powder",
+    "tea"
+   ],
+   "keyword": {
+    "top3": [
+     "B-8801 | Tea powder, 250 g | Rs 130",
+     "M-7701 | Milk, 500 ml packet | Rs 30",
+     "S-4112 | Turmeric powder, 100 g | Rs 35"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "B-8801 | Tea powder, 250 g | Rs 130",
+     "M-7701 | Milk, 500 ml packet | Rs 30",
+     "B-8806 | Coffee powder, 100 g | Rs 120"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "B-8801 | Tea powder, 250 g | Rs 130",
+     "M-7701 | Milk, 500 ml packet | Rs 30",
+     "S-4112 | Turmeric powder, 100 g | Rs 35"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "power went off, need light",
+   "kind": "meaning",
+   "right": [
+    "E-1252",
+    "H-9968"
+   ],
+   "query_words": [
+    "power",
+    "went",
+    "off",
+    "need",
+    "light"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "E-1210 | LED bulb, 9 W, 1 piece | Rs 99",
+     "E-1252 | Torch, 1 piece | Rs 150",
+     "E-1203 | AAA batteries, pack of 2 | Rs 40"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "E-1210 | LED bulb, 9 W, 1 piece | Rs 99",
+     "E-1252 | Torch, 1 piece | Rs 150",
+     "E-1203 | AAA batteries, pack of 2 | Rs 40"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "something sweet to put in coffee",
+   "kind": "meaning",
+   "right": [
+    "B-8814",
+    "B-8817"
+   ],
+   "query_words": [
+    "something",
+    "sweet",
+    "put",
+    "coffee"
+   ],
+   "keyword": {
+    "top3": [
+     "B-8806 | Coffee powder, 100 g | Rs 120"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "B-8806 | Coffee powder, 100 g | Rs 120",
+     "B-8852 | Soft drink, 750 ml | Rs 40",
+     "B-8801 | Tea powder, 250 g | Rs 130"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "B-8806 | Coffee powder, 100 g | Rs 120",
+     "B-8852 | Soft drink, 750 ml | Rs 40",
+     "B-8801 | Tea powder, 250 g | Rs 130"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "for washing clothes",
+   "kind": "meaning",
+   "right": [
+    "H-9918",
+    "H-9921"
+   ],
+   "query_words": [
+    "washing",
+    "clothes"
+   ],
+   "keyword": {
+    "top3": [],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "T-3360 | Hand wash, 200 ml | Rs 85",
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "H-9918 | Detergent powder, 1 kg | Rs 120"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "T-3360 | Hand wash, 200 ml | Rs 85",
+     "H-9905 | Dishwash liquid, 500 ml | Rs 99",
+     "H-9918 | Detergent powder, 1 kg | Rs 120"
+    ],
+    "hit1": false
+   }
+  },
+  {
+   "q": "25 kilo rice bag",
+   "kind": "mixed",
+   "right": [
+    "R-1742"
+   ],
+   "query_words": [
+    "25",
+    "kilo",
+    "rice",
+    "bag"
+   ],
+   "keyword": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450",
+     "R-1724 | Sona Masoori rice, 5 kg bag | Rs 320",
+     "S-4182 | Hing, 25 g | Rs 55"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450",
+     "R-1724 | Sona Masoori rice, 5 kg bag | Rs 320",
+     "R-1738 | Brown rice, 1 kg | Rs 110"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "R-1742 | Sona Masoori rice, 25 kg bag | Rs 1450",
+     "R-1724 | Sona Masoori rice, 5 kg bag | Rs 320",
+     "S-4182 | Hing, 25 g | Rs 55"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "one tray eggs",
+   "kind": "mixed",
+   "right": [
+    "M-7740"
+   ],
+   "query_words": [
+    "one",
+    "tray",
+    "eggs"
+   ],
+   "keyword": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42",
+     "V-6602 | Onions, 1 kg | Rs 40",
+     "R-1847 | Ragi flour, 1 kg | Rs 70"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "M-7740 | Eggs, tray of 6 | Rs 42",
+     "V-6602 | Onions, 1 kg | Rs 40",
+     "R-1847 | Ragi flour, 1 kg | Rs 70"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "oil for hair",
+   "kind": "mixed",
+   "right": [
+    "T-3329"
+   ],
+   "query_words": [
+    "oil",
+    "hair"
+   ],
+   "keyword": {
+    "top3": [
+     "T-3329 | Coconut hair oil, 200 ml | Rs 95",
+     "O-2210 | Groundnut oil, 1 L | Rs 190",
+     "O-2223 | Palm oil, 1 L | Rs 110"
+    ],
+    "hit1": true
+   },
+   "meaning": {
+    "top3": [
+     "T-3329 | Coconut hair oil, 200 ml | Rs 95",
+     "O-2248 | Mustard oil, 1 L | Rs 175",
+     "O-2201 | Sunflower oil, 1 L pouch | Rs 155"
+    ],
+    "hit1": true
+   },
+   "hybrid": {
+    "top3": [
+     "T-3329 | Coconut hair oil, 200 ml | Rs 95",
+     "O-2248 | Mustard oil, 1 L | Rs 175",
+     "O-2210 | Groundnut oil, 1 L | Rs 190"
+    ],
+    "hit1": true
+   }
+  },
+  {
+   "q": "Ramesh garu's usual",
+   "kind": "not written anywhere",
+   "right": [
+    "R-1724"
+   ],
+   "query_words": [
+    "ramesh",
+    "garu",
+    "s",
+    "usual"
+   ],
+   "keyword": {
+    "top3": [
+     "S-4163 | Salt, 1 kg | Rs 28",
+     "S-4182 | Hing, 25 g | Rs 55",
+     "S-4112 | Turmeric powder, 100 g | Rs 35"
+    ],
+    "hit1": false
+   },
+   "meaning": {
+    "top3": [
+     "S-4133 | Garam masala, 100 g | Rs 65",
+     "D-0311 | Toor dal (kandi pappu), 1 kg | Rs 160",
+     "V-6628 | Curry leaves (karivepaku), 1 bunch | Rs 5"
+    ],
+    "hit1": false
+   },
+   "hybrid": {
+    "top3": [
+     "S-4133 | Garam masala, 100 g | Rs 65",
+     "S-4163 | Salt, 1 kg | Rs 28",
+     "S-4182 | Hing, 25 g | Rs 55"
+    ],
+    "hit1": false
+   }
+  }
+ ]
+}
