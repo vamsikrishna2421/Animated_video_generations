@@ -63,6 +63,8 @@ lift's riser into step 1 covered "by the word" (heard "world") -> a 1 s hold aft
 moved 8 frames later to land on "moved". The takes alone at 1.25x read "word" as "world" and "re-rank" as "rerun" -> those two English
 lines play at 1.15x and 1.2x; the close's bed came down (boost 1.5 -> 1.2, voice 0.3 s after the lift's kick: "paste it"
 was heard "taste it").
+Final confirmation (English panel): "re-rank" in the recap still read "rerun" at 1.2x -> reworded "add a re-ranker if
+it reads one piece" ("re-ranker" came through every time), checklist card "reads 1 piece? add a re-ranker".
 
 v3 -> v4 (second render review, English + Telugu): the cost line says the number and the reason ("whole chapters also
 scored 25, but sent six times the text, and AI services charge by the word"; Telugu ends on "ప్రతి పదానికీ డబ్బు కట్టాలి");
@@ -109,7 +111,7 @@ Telugu: all nine wording fixes; 252 words (was 283).
 | 6 | Step two: store each piece as numbers for its meaning, in a vector database, a library sorted by meaning. Your question becomes numbers too, and the nearest pieces come out. | pieces -> number strips -> shelves labelled by topic (water & care, battery, camera, warranty); the question's dot lands on "water & care", nearest pieces glow; small print "vector databases like FAISS (Meta) search millions" |
 | 7 | Step three: a re-ranker reads your question beside each top piece, and reorders them. First-place misses: 5 became 3. | top pieces list; a robot with a magnifier reads each beside the question; cards reorder; scoreboard bar "+ re-ranker 27"; small print "slower: 74 ms vs under 1 ms a question · meaning search alone had it in the top 3 for 30/30" |
 | 8 | Now, your turn. Your AI reads only the first piece, and the right page keeps coming second. What helps more: a bigger AI, or a re-ranker? The re-ranker. Why? A bigger AI still reads the wrong page. Ours moved “guarantee” from the returns page to the warranty page. | YOUR TURN; A / B cards; 1.5 s countdown, music drops; crown on B; "How long is the guarantee?": #1 Returns and replacements -> Warranty period (tick) |
-| 9 | So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact error codes. Follow, so you don't miss it. | checklist; tip card "chatbot + your PDF? ask it to quote the lines it used"; NEXT "when meaning search misses exact codes, like E-42 (+ how to test your search)"; handle to the last frame |
+| 9 | So: short document? Paste it. Big one? Cut at headings, search by meaning, add a re-ranker if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact error codes. Follow, so you don't miss it. | checklist; tip card "chatbot + your PDF? ask it to quote the lines it used"; NEXT "when meaning search misses exact codes, like E-42 (+ how to test your search)"; handle to the last frame |
 
 ## Telugu (Telugu script, as voiced; visuals and captions in English)
 1. మేము మా ఫోన్ మాన్యువల్ ని ఒక ఏఐ కి ఇచ్చి, "నా ఫోన్ షవర్ లో తడిస్తే పాడవుతుందా?" అని సెర్చ్ లో టైప్ చేశాం. దాని సెర్చ్ కెమెరా లోని మీటియర్ షవర్ మోడ్ ని తెచ్చింది. అది మాటని పట్టుకుంది, అర్థాన్ని కాదు.

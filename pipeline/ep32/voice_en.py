@@ -25,7 +25,7 @@ PATS = {
     ("rerank", "file"): [r"step (three|3)", r"re-?ranker", r"beside each top piece", r"re-?orders them", r"first[- ]place misses", r"five|5", r"three|3"],
     ("quiz", "file"): [r"your turn", r"first piece", r"keeps coming second", r"what helps more", r"bigger (ai|a\.i\.)", r"re-?ranker"],
     ("quiz", "file2"): [r"^\W*the re-?ranker\W+why", r"bigger (ai|a\.i\.),? still reads the wrong page", r"guarantee", r"returns page", r"warranty page"],
-    ("close", "file"): [r"short document", r"paste it", r"big one", r"cut at headings", r"search by meaning", r"re-?rank if it reads one piece", r"chatbot with your pdf|chat ?bot with your p\.?d\.?f", r"quote the lines", r"exact error codes", r"follow"],
+    ("close", "file"): [r"short document", r"paste it", r"big one", r"cut at headings", r"search by meaning", r"add a re-?ranker if it reads one piece", r"chatbot with your pdf|chat ?bot with your p\.?d\.?f", r"quote the lines", r"exact error codes", r"follow"],
 }
 ASR = None
 

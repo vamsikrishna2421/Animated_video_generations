@@ -561,8 +561,8 @@ const RgQuiz: React.FC<SP> = ({ s, cue }) => {
 const RgClose: React.FC<SP> = ({ s, cue }) => {
   const handle: string = s.data.handle ?? "@ai_maastaaru";
   const c1 = cue(1), c2 = cue(2);
-  const steps = ["short doc? paste it", "big one: cut at headings", "search by meaning", "re-rank if it reads 1 piece"];
-  const at = [2, wordAt(s, /^headings$/i, 0, 40), wordAt(s, /^meaning$/i, 20, 60), wordAt(s, /^re-rank$|^rerank$/i, 30, 80)];
+  const steps = ["short doc? paste it", "big one: cut at headings", "search by meaning", "reads 1 piece? add a re-ranker"];   // "re-rank" alone was heard "rerun"
+  const at = [2, wordAt(s, /^headings$/i, 0, 40), wordAt(s, /^meaning$/i, 20, 60), wordAt(s, /^add$/i, 30, 80)];
   const tip = cue(3);
   return (
     <>

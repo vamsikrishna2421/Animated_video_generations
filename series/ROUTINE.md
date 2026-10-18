@@ -113,3 +113,5 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   render's ffmpeg without an error message (EP32 lost a render and two re-voices). Check the output file's time.
 - Fish takes judged at normal speed can blur after the reel's 1.25x tempo (EP32: "word" -> "world"): judge the
   stretched line (`video/public/reel/<id>/line_NN.wav`), and give a blurred line its own `tempo` (1.15-1.2).
+- A word that is misheard after two fixes (tempo, mix) gets reworded, not re-rolled (EP32: "re-rank" -> "add a
+  re-ranker").
