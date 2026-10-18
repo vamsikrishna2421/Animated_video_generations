@@ -572,9 +572,9 @@ def main(spec_path: Path) -> None:
             last = sc["lines"][-1]
             mdrops.append([sc["from"] + last["from"] + round(spec_sc["music_stop"] * last["frames"]), round(total * FPS) + FPS])
         dk = spec_sc.get("duck") or []
-        for a, b, g in (dk if dk and isinstance(dk[0], list) else [dk] if dk else []):   # one [a, b, g] or a list of them
-            if str(a) in cues and str(b) in cues:
-                mdrops.append([sc["from"] + cues[str(a)], sc["from"] + cues[str(b)], g])
+        for a, b, g, *pad in (dk if dk and isinstance(dk[0], list) else [dk] if dk else []):   # one [a, b, g(, pad s)] or a list
+            if str(a) in cues and str(b) in cues:   # pad: English cues are letter-timed (EP32's cue fell on "codes", not after it)
+                mdrops.append([sc["from"] + cues[str(a)], sc["from"] + cues[str(b)] + round((pad[0] if pad else 0) * FPS), g])
     # "boost": g on a scene = the music bed sits g times louder for that scene (a lift through the middle of the reel);
     # consecutive boosted scenes with the same gain become one window so there is no dip at the cut
     mboosts = []

@@ -513,8 +513,8 @@ const RgQuiz: React.FC<SP> = ({ s, cue }) => {
       {[0, 1, 2].map((k) => <Sfx key={k} at={Math.round(c3 + 4 + k * Math.max(10, (c2 - c3 - 16) / 3))} src="audio/sfx_tick.wav" vol={0.38} />)}
       <Sfx at={c2 - 8} src="audio/sfx_snap.wav" vol={0.6} />
       <Sfx at={c2 - 8} src="reel/sfx_boom.wav" vol={0.5} />
-      <Sfx at={c4 + 4} src="audio/sfx_whoosh.wav" vol={0.4} />
-      <Sfx at={c4 + 16} src="audio/sfx_success.wav" vol={0.35} />
+      <Sfx at={c4 + 10} src="audio/sfx_whoosh.wav" vol={0.3} />
+      <Sfx at={c4 + 26} src="audio/sfx_success.wav" vol={0.35} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         background(c, W, H, boil);
         const r = rng(5500 + boil);
@@ -540,7 +540,7 @@ const RgQuiz: React.FC<SP> = ({ s, cue }) => {
           tag(c, "a bigger AI still reads the wrong page", W / 2, 960, 50, COL.red, "#fff", -0.02, seg(f, c2 + 6, c2 + 14));
           // the real example: "How long is the guarantee?"
           label(c, `“${g.q}”`, W / 2, 1040, 46, COL.cream, handF, seg(f, c2 + 14, c2 + 22));
-          const sw = easeOut(seg(f, c4 + 4, c4 + 16));
+          const sw = easeOut(seg(f, c4 + 12, c4 + 24));
           [g.quick[0], g.quick[1]].forEach((t: string, i: number) => {
             const right = t === g.reranked[0];
             const y = lerp(1080 + i * 100, 1080 + (right ? 0 : 1) * 100, sw);

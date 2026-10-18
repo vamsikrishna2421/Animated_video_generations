@@ -57,6 +57,10 @@ all four viewers drifted: the shelves fill one topic at a time while the voice e
 then 4 s of a still picture), a "the PDF trick is at the end" reminder until "library", and the bed builds through
 the scene (it was the quietest stretch). Not changed: the PDF trick stays at the end (the tease at 0:24 pays off
 there); "how short is short" and PDFs without headings were asked once each (EP33 covers testing your own search).
+Last timing checks (whole-file transcript of the final mix): English cues are placed by letters and ran up to 0.5 s
+early at the ends of lines, so the duck released on "codes" itself -> it holds 0.55 s past cue 2 (English only); the
+lift's riser into step 1 covered "by the word" (heard "world") -> a 1 s hold after the cost line; the guarantee swap
+moved 8 frames later to land on "moved".
 
 v3 -> v4 (second render review, English + Telugu): the cost line says the number and the reason ("whole chapters also
 scored 25, but sent six times the text, and AI services charge by the word"; Telugu ends on "ప్రతి పదానికీ డబ్బు కట్టాలి");
@@ -113,7 +117,7 @@ Telugu: all nine wording fixes; 252 words (was 283).
 5. మొదటి స్టెప్: ముక్కలుగా కట్ చేయండి. ప్రతి నలభై పదాలకి, వాక్యం మధ్యలో అయినా కట్ చేస్తే, ముప్పై లో థర్టీన్. ముక్కలు కొంచెం ఓవర్ ల్యాప్ అయితే, ట్వెంటీ. హెడింగ్ దగ్గర కట్ చేస్తే, ట్వెంటీ ఫైవ్.
 6. రెండో స్టెప్: ప్రతి ముక్క అర్థం నంబర్లుగా మారి, ఒక వెక్టర్ డేటాబేస్ లో ఉంటుంది, అర్థం ప్రకారం సర్దిన లైబ్రరీ లాగా. మీ ప్రశ్న కూడా నంబర్లుగా మారుతుంది, దగ్గరగా ఉన్న ముక్కలు బయటకి వస్తాయి.
 7. మూడో స్టెప్: రీ ర్యాంకర్. అది మీ ప్రశ్న పక్కన ప్రతి టాప్ ముక్క ని చదివి, వరుస మారుస్తుంది. మొదటి స్థానంలో తప్పులు, ఐదు నుంచి మూడు కి తగ్గాయి.
-8. ఇప్పుడు మీ వంతు. మీ ఏఐ మొదటి ముక్క ఒక్కటే చదువుతుంది, సరైన పేజీ ఎప్పుడూ రెండో స్థానంలో వస్తోంది. ఏది ఎక్కువ సాయం చేస్తుంది: ఇంకా పెద్ద మోడలా, రీ ర్యాంకరా? (pause) రీ ర్యాంకర్. పెద్ద మోడల్ అయినా తప్పు పేజీ నే చదువుతుంది. మా రీ ర్యాంకర్, "గ్యారెంటీ ఎంత కాలం?" అనే ప్రశ్నకి, రిటర్న్స్ పేజీ ని తీసి, వారంటీ పేజీ ని పైకి పెట్టింది.
+8. ఇప్పుడు మీ వంతు. మీ ఏఐ మొదటి ముక్క ఒక్కటే చదువుతుంది, సరైన పేజీ ఎప్పుడూ రెండో స్థానంలో వస్తోంది. ఏది ఎక్కువ సాయం చేస్తుంది: ఇంకా పెద్ద మోడలా, రీ ర్యాంకరా? (pause) రీ ర్యాంకర్. పెద్ద మోడల్ అయినా తప్పు పేజీ నే చదువుతుంది. మా రీ ర్యాంకర్, "గ్యారెంటీ ఎంత కాలం?" అనే ప్రశ్నకి, రిటర్న్స్ పేజీ ని కిందకి దించి, వారంటీ పేజీ ని పైకి పెట్టింది.
 9. అంటే: చిన్న డాక్యుమెంట్? మొత్తం పేస్ట్ చేయండి. పెద్దదైతే? హెడింగ్స్ దగ్గర కట్ చేయండి, అర్థంతో వెతకండి, బాట్ ఒక్క ముక్కే చదివితే రీ ర్యాంక్ చేయండి. మీ పీడీఎఫ్ తో చాట్ బాట్ వాడుతుంటే, అది వాడిన లైన్స్ ని చూపించమని అడగండి. తర్వాతి ఎపిసోడ్ లో: అర్థంతో వెతికే సెర్చ్, ఎర్రర్ కోడ్స్ ని ఎందుకు మిస్ అవుతుందో చూద్దాం. మిస్ అవ్వకుండా ఫాలో అవ్వండి.
 
 Telugu notes: no "chunk" word in Telugu ("chanka" is armpit): pieces are ముక్కలు. "AI" is ఏఐ inside a sentence (a

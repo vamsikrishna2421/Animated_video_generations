@@ -111,7 +111,7 @@ SC = [
      None,
      "ఇది ఎందుకు ముఖ్యం? పేజీ ఇవ్వకపోతే, ఏఐ ఊహించి చెప్తుంది. [1] \"నచ్చకపోతే తిరిగి ఇవ్వచ్చా?\" అని అడిగితే, [3] మా చిన్న ఏఐ, [4] \"ఇవ్వచ్చు, రిఫండ్ వస్తుంది\" అంది. [2] మాన్యువల్ మాత్రం కుదరదు అంటోంది. [5] చివర్లో, మీ పీడీఎఫ్ ల కోసం ఒక ట్రిక్ ఉంది.",
      {"pauses": {"3": 0.5}}),
-    ("why", "rg_why", {"tail": 0.2},
+    ("why", "rg_why", {"tail": 1.0},
      {"chapter": "Why not paste the whole manual?", "title": "A short one, sure", "notes": [["A short document: just paste it into the chat", 0], ["Real manuals run to hundreds of pages. In our test, whole chapters found the right page as often as headings ({CHAP}/{TEST}) but sent {RATIO}x the text with every question (paid tools charge by the token)", 1], ["Also: models often miss facts in the middle of long inputs (“Lost in the Middle”, Liu et al., 2023)", 1]]},
      "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters also scored {CHAP}, but sent {RATIO} times the text, and AI services charge by the word.",
      None,
@@ -197,6 +197,8 @@ def spec(lang):
             data["rr"] = rerank_data()
         if sid == "close":
             data["handle"] = "@ai_maastaaru_telugu" if te else "@ai_maastaaru"
+        if sid == "close" and not te:   # English cue 2 is letter-timed and lands on "codes": hold the duck to "Follow"
+            flags = {**flags, "duck": [3, 2, 0.4, 0.55]}
         scenes.append({"id": sid, "type": typ, **flags, "data": data, "lines": [line]})
     s["scenes"] = scenes
     out = R / f"{s['id']}.json"
