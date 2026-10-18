@@ -16,13 +16,13 @@ type Beat = { who: "ravi" | "ai"; shot: "ravi" | "ai" | "wide"; prop: string; n:
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
-const SKIN = "#b9774d", HAIR = "#1c1410", SHIRT = "#2f6fb0", WALL = "#f2d7a0", WOOD = "#98592c";
-const PH = { x: 800, y: 905 };   // the phone on the counter
-const RV = { x: 485, y: 700 };   // Ravi's neck
-const COUNTER = 1010;
+export const SKIN = "#b9774d", HAIR = "#1c1410", SHIRT = "#2f6fb0", WALL = "#f2d7a0", WOOD = "#98592c";
+export const PH = { x: 800, y: 905 };   // the phone on the counter
+export const RV = { x: 485, y: 700 };   // Ravi's neck
+export const COUNTER = 1010;
 
-type Mood = "yell" | "angry" | "sus" | "confused" | "shock" | "worried" | "sad" | "hope" | "smug" | "panic" | "happy";
-type Arms = "rest" | "slam" | "point" | "fist" | "shrug" | "up" | "thumb" | "phone" | "fold" | "lunge";
+export type Mood = "yell" | "angry" | "sus" | "confused" | "shock" | "worried" | "sad" | "hope" | "smug" | "panic" | "happy";
+export type Arms = "rest" | "slam" | "point" | "fist" | "shrug" | "up" | "thumb" | "phone" | "fold" | "lunge";
 const RAVI: Record<number, [Mood, Arms]> = {
   1: ["yell", "slam"], 2: ["angry", "rest"], 3: ["sus", "rest"], 4: ["angry", "fist"], 5: ["yell", "point"], 6: ["angry", "rest"],
   7: ["confused", "shrug"], 8: ["shock", "rest"], 9: ["shock", "up"], 10: ["happy", "thumb"], 11: ["worried", "rest"],
@@ -35,7 +35,7 @@ const SHOTS: Record<string, { z: number; x: number; y: number }> = {
 };
 
 // ---------- the shop ----------
-const shop = (c: Ctx, r: () => number) => {
+export const shop = (c: Ctx, r: () => number) => {
   c.fillStyle = WALL; c.fillRect(-400, 100, 1880, 1400);
   hatch(c, [-200, 100, 1280, COUNTER], ["#e6c27f", "#f7e2b6"], r, { gap: 14, w: 3, alpha: 0.35 });
   // shelves with jars and sacks (right)
@@ -59,7 +59,7 @@ const shop = (c: Ctx, r: () => number) => {
   });
 };
 
-const counter = (c: Ctx, r: () => number) => {
+export const counter = (c: Ctx, r: () => number) => {
   c.fillStyle = WOOD; c.fillRect(-400, COUNTER, 1880, 560);
   c.fillStyle = "#b8743f"; c.fillRect(-400, COUNTER, 1880, 34);
   hatch(c, [-200, COUNTER + 40, 1280, 1500], ["#7a4520", "#b8743f"], r, { angle: 0.04, gap: 22, w: 4, alpha: 0.45 });
@@ -162,7 +162,7 @@ const head = (c: Ctx, m: Mood, talk: boolean, r: () => number) => {
   }
 };
 
-const ravi = (c: Ctx, m: Mood, a: Arms, talk: boolean, p: number, f: number, r: () => number) => {
+export const ravi = (c: Ctx, m: Mood, a: Arms, talk: boolean, p: number, f: number, r: () => number) => {
   const lean = a === "lunge" ? easeOut(seg(p, 0, 0.3)) * 80 : 0;
   const bob = a === "slam" ? Math.max(0, 1 - Math.abs(p - 0.1) * 12) * 14 : 0;
   c.save(); c.translate(RV.x + lean, RV.y + bob); c.rotate(lean / 900);
@@ -181,7 +181,7 @@ const ravi = (c: Ctx, m: Mood, a: Arms, talk: boolean, p: number, f: number, r: 
 };
 
 // ---------- the shop AI on a phone ----------
-const phone = (c: Ctx, talk: boolean, f: number, r: () => number, o: { train?: number; forever?: number; happy?: boolean } = {}) => {
+export const phone = (c: Ctx, talk: boolean, f: number, r: () => number, o: { train?: number; forever?: number; happy?: boolean } = {}) => {
   c.save(); c.translate(PH.x, PH.y); c.rotate(-0.05);
   c.fillStyle = "#475569"; c.beginPath(); c.moveTo(-44, 118); c.lineTo(44, 118); c.lineTo(70, 152); c.lineTo(-70, 152); c.closePath(); c.fill();
   c.fillStyle = "#111827"; rrect(c, -86, -150, 172, 290, 24); c.fill();
@@ -223,7 +223,7 @@ const phone = (c: Ctx, talk: boolean, f: number, r: () => number, o: { train?: n
 };
 
 // ---------- props ----------
-const sticky = (c: Ctx, x: number, y: number, rot: number, lines: string[], p: number) => {
+export const sticky = (c: Ctx, x: number, y: number, rot: number, lines: string[], p: number) => {
   if (p <= 0) return;
   const k = easeOut(p);
   c.save(); c.translate(x, y); c.rotate(rot); c.scale(k, k);
@@ -252,7 +252,7 @@ const wordFrame = (ln: Line, re: RegExp, fallback: number) => {
   return w ? w.from : fallback;
 };
 // a line's [n] cue (follows the spoken word in either language), else the English word, else a fallback
-const cueAt = (ln: Line, n: number, re: RegExp, fallback: number) => ln.cues?.[String(n)] ?? wordFrame(ln, re, fallback);
+export const cueAt = (ln: Line, n: number, re: RegExp, fallback: number) => ln.cues?.[String(n)] ?? wordFrame(ln, re, fallback);
 
 // ---------- the scene (all three parts of the skit use it) ----------
 const SkShop: React.FC<SP> = ({ s }) => {

@@ -1,0 +1,47 @@
+UPLOAD: 035
+VIDEO: 035_ep33_we_dont_sell_headaches.mp4  (teaching skit, 74 s, voiced by the page owner; replaces the older lesson-format 035_ep33_rag_part_3_hybrid_search_and_measuring_quality.mp4; send copy: 035_ep33_we_dont_sell_headaches_ig.mp4, about 22 MB). It loops: the last order is the first frame's order.
+
+=== CAPTION ===
+The shop AI told a customer "out of stock". The batteries were right there.
+
+Episode 33 of AI From Scratch: hybrid search, and how to test your AI search (RAG, part 3)
+- Meaning search finds what you meant, but an exact code like E-1203 can look like every other code to it
+- Keyword search finds the exact word, but "something for a headache" never says "balm": 0 matches
+- Use both (hybrid search): run both searches, merge the two lists, and the AI still reads just 3 pages
+- Our real test, 20 orders we knew the answers to: meaning only 15/20, keyword only 13/20, both 18/20
+- The two misses weren't search problems: "vessels" and "Ramesh garu's usual" were written nowhere in the stock book. Written in: 20/20
+
+How to use this:
+1. Hybrid search is a built-in option in Azure AI Search, Elasticsearch, OpenSearch and Weaviate; in Postgres, pgvector plus full-text search
+2. Before you trust an AI search, test it with about 20 questions you already know the answers to, and run the same test after every change
+3. Write down what "everyone knows": the AI only finds what's written
+
+Next: EP34, open vs closed models. Can Ravi anna own his AI, or only rent it?
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+What does your office's AI search always miss: an exact code, or a question asked in other words?
+
+=== HASHTAGS ===
+#RAG #AI #LearnAI #AIForBeginners #HybridSearch #AIFromScratch
+
+=== PINNED_COMMENT ===
+How we tested (run by us): a made-up 114-line kirana stock book cut into 15 pages of 8 lines, and 20 orders whose right item we knew (4 codes, 4 local names, 8 described in other words, 3 mixed, 1 written nowhere). The AI reads the top 3 pages per order. Meaning search = bge-small-en-v1.5 embeddings, keyword search = BM25, both = reciprocal rank fusion (k = 60). Right page in the 3 read: 15, 13, 18 out of 20; 20/20 after writing the two missing facts in.
+Honest limits: with one item per piece instead of pages, meaning search found every code and hybrid added nothing, so it helps most when codes hide inside longer pieces. And 20/20 after fixing the exact two misses proves the fix, not the search: a fair re-test uses new orders. 20 orders is a small demo, not a benchmark.
+Why only 3 pages? Reading the whole book for every order is slow and costly; RAG hands the AI a few pieces (EP32).
+EP32's manual of full sentences suited meaning search; a stock book of codes and short lines is where it struggles.
+
+=== COVER ===
+Ravi anna slamming the phone on the counter; chat bubble "E-1203" / "Out of stock, sorry"; yellow sticker "It's RIGHT THERE"
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. Ravi anna shouts at his shop AI for telling a customer item E-1203 was out of stock while the batteries hang behind him. The AI's phone screen shows why: it reads 3 of the stock book's 15 pages, picked by meaning, and codes look alike to meaning search. Keyword search finds the exact code but answers "something for a headache" with 0 matches ("We don't sell headaches"). Both searches merged still read 3 pages. A test of 20 known orders: meaning 15, keyword 13, both 18. The two misses were never written in the book; Ravi writes them in and it scores 20/20. Then he switches keyword search off and the next order is E-1203 again.
+
+=== SOURCES (for comments) ===
+Demo (run by us; pipeline/ep33/hybrid_demo.py in the project): 114-line made-up stock book, pages of 8 lines, 20 orders, the AI reads the top 3 pages. Right page in the top 3 (meaning / keyword / both): 15 / 13 / 18; right page first: 12 / 12 / 14; after writing the two missing facts in: 16 / 15 / 20. One item per piece: 17 / 11 / 17 in the top 3 (14 / 11 / 14 first). Models: BAAI/bge-small-en-v1.5 (MIT), BM25, reciprocal rank fusion with k = 60, CPU only.
+Anthropic, "Introducing Contextual Retrieval" (Sep 19, 2024): "While embedding models excel at capturing semantic relationships, they can miss crucial exact matches"; BM25 "is particularly effective for queries that include unique identifiers or technical terms".
+Microsoft Learn, Azure AI Search "Hybrid search overview": runs full-text and vector search in parallel and merges the results with Reciprocal Rank Fusion; "querying over product codes, highly specialized jargon, dates, and people's names, perform better with keyword search because it can identify exact matches".
+Elasticsearch reference: the RRF retriever combines two or more retrievers; rank_constant defaults to 60.
+pgvector README: "Use together with Postgres full-text search for hybrid search"; "You can use Reciprocal Rank Fusion or a cross-encoder to combine results."
+OpenAI file search guide: files are searched "through semantic and keyword search".
+Cormack, Clarke and Büttcher, "Reciprocal Rank Fusion outperforms Condorcet and individual rank learning methods" (SIGIR 2009).

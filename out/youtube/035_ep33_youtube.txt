@@ -1,0 +1,20 @@
+UPLOAD: 035 (YouTube Shorts: upload the same vertical file as Instagram, 035_ep33_we_dont_sell_headaches.mp4, 74 s; no landscape version from EP33 on)
+
+########## ENGLISH ##########
+=== TITLE ===
+"We Don't Sell Headaches": Why AI Search Misses Exact Codes (Hybrid Search, Tested) | AI From Scratch Ep 33 #Shorts
+
+=== DESCRIPTION ===
+Ravi anna's shop AI told a customer "out of stock" while the batteries hung right behind him. It searches the stock book by meaning, and to meaning search, item codes all look alike. Keyword search finds the exact code, but answers "something for a headache" with 0 matches. The fix is both: hybrid search. Then: how to test your own AI search with questions you already know the answers to.
+
+Our real test, 20 orders, the AI reads 3 pages per order: meaning only 15/20, keyword only 13/20, both 18/20. The two misses were written nowhere in the stock book; written in, it scored 20/20.
+
+How to use it: hybrid search is built into Azure AI Search, Elasticsearch, OpenSearch and Weaviate (in Postgres: pgvector plus full-text search). Test with about 20 known questions before you trust it, and after every change. Write down what "everyone knows".
+
+How we tested (run by us): a made-up 114-line stock book in 15 pages of 8 lines; 20 orders (codes, local names, orders described in other words, one written nowhere). Meaning search = bge-small-en-v1.5 (BAAI, MIT), keyword search = BM25, merged with reciprocal rank fusion (k = 60). With one item per piece instead of pages, meaning search found every code and hybrid added nothing: it helps most when codes hide in longer pieces. 20/20 after fixing the two misses proves the fix, not the search. A small demo, not a benchmark.
+Sources: Anthropic, "Introducing Contextual Retrieval" (Sep 2024): embedding models "can miss crucial exact matches"; BM25 helps with "unique identifiers or technical terms". Microsoft Learn, Azure AI Search hybrid search overview: product codes, jargon, dates and names "perform better with keyword search"; results merged with Reciprocal Rank Fusion. pgvector README (hybrid search with Postgres full-text search). Cormack, Clarke and Büttcher, SIGIR 2009 (reciprocal rank fusion).
+
+Next: EP34, open vs closed models.
+
+=== TAGS ===
+hybrid search, RAG, keyword search, semantic search, BM25, embeddings, AI search, AI for beginners, AI From Scratch

@@ -19,7 +19,7 @@ MAX_PAUSE = 0.28          # a pause inside a line longer than this is shortened 
 KEEP = {1: 0.32, 19: 0.4, 26: 0.32}   # lines whose pauses are part of the joke keep a little more
 INSERT = {18: ("both", 0.45), 25: ("two", 0.22)}   # a beat after this word: the drop before "eighteen"; "Why two?
                                                   # Switch one off" ran together as "why to switch one off"
-LIGHT = {17, 24}                      # numbers: a lighter phone sound
+LIGHT = {17, 20, 24}                  # numbers, and "vessels" (heard "results" through the full phone sound)
 DROP_FIRST = set()   # lines whose clip still opens on the name read before the line (fixed in cut_takes for take 1)
 TEMPO = 1.07   # take 1 was read at about 2 words a second; rubberband keeps pitch and formants (reel spec tempo stays 1.0)
 FFMPEG = "/tmp/claude-0/ffmpeg"
