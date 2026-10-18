@@ -320,7 +320,8 @@
      "file": "04_why.wav",
      "text": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent six times the text, and AI services charge by the word.",
      "show": "Why not paste the whole manual? A short one, sure. [1] Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent 6 times the text, and AI services charge by the word.",
-     "tts": "Why not paste the whole manual? A short one, sure. Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent six times the text, and AI services charge by the word."
+     "tts": "Why not paste the whole manual? A short one, sure. Real ones run hundreds of pages. In our test, whole chapters also scored 25, but sent six times the text, and AI services charge by the word.",
+     "tempo": 1.15
     }
    ]
   },
@@ -704,9 +705,10 @@
    "id": "close",
    "type": "rg_close",
    "tail": 1.0,
+   "pre": 0.3,
    "outro": true,
    "lift": true,
-   "boost": 1.5,
+   "boost": 1.2,
    "duck": [
     3,
     2,
@@ -765,7 +767,8 @@
      "file": "09_close.wav",
      "text": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact error codes. [2] Follow, so you don't miss it.",
      "show": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact error codes. [2] Follow, so you don't miss it.",
-     "tts": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact error codes. Follow, so you don't miss it."
+     "tts": "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. Using a chatbot with your PDF? Ask it to quote the lines it used. Next: why meaning search misses exact error codes. Follow, so you don't miss it.",
+     "tempo": 1.2
     }
    ]
   }

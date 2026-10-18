@@ -707,9 +707,10 @@
    "id": "close",
    "type": "rg_close",
    "tail": 1.0,
+   "pre": 0.3,
    "outro": true,
    "lift": true,
-   "boost": 1.5,
+   "boost": 1.2,
    "duck": [
     3,
     2,

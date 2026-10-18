@@ -60,7 +60,9 @@ there); "how short is short" and PDFs without headings were asked once each (EP3
 Last timing checks (whole-file transcript of the final mix): English cues are placed by letters and ran up to 0.5 s
 early at the ends of lines, so the duck released on "codes" itself -> it holds 0.55 s past cue 2 (English only); the
 lift's riser into step 1 covered "by the word" (heard "world") -> a 1 s hold after the cost line; the guarantee swap
-moved 8 frames later to land on "moved".
+moved 8 frames later to land on "moved". The takes alone at 1.25x read "word" as "world" and "re-rank" as "rerun" -> those two English
+lines play at 1.15x and 1.2x; the close's bed came down (boost 1.5 -> 1.2, voice 0.3 s after the lift's kick: "paste it"
+was heard "taste it").
 
 v3 -> v4 (second render review, English + Telugu): the cost line says the number and the reason ("whole chapters also
 scored 25, but sent six times the text, and AI services charge by the word"; Telugu ends on "ప్రతి పదానికీ డబ్బు కట్టాలి");

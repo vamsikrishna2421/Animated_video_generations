@@ -145,7 +145,7 @@ SC = [
       "te_tts": "ఇప్పుడు మీ వంతు. మీ ఏఐ మొదటి ముక్క ఒక్కటే చదువుతుంది, సరైన పేజీ ఎప్పుడూ రెండో స్థానంలో వస్తోంది. ఏది ఎక్కువ సాయం చేస్తుంది: ఇంకా పెద్ద మోడలా, రీ ర్యాంకరా?",
       "te_tts2": "రీ ర్యాంకర్. పెద్ద మోడల్ అయినా తప్పు పేజీ నే చదువుతుంది. మా రీ ర్యాంకర్, \"గ్యారెంటీ ఎంత కాలం?\" అనే ప్రశ్నకి, రిటర్న్స్ పేజీ ని కిందకి దించి, వారంటీ పేజీ ని పైకి పెట్టింది.",
       "pause": 2.0, "gap": 0.1}),
-    ("close", "rg_close", {"tail": 1.0, "outro": True, "lift": True, "boost": 1.5, "duck": [3, 2, 0.4], "swell": [0, 2, 1.2]},
+    ("close", "rg_close", {"tail": 1.0, "pre": 0.3, "outro": True, "lift": True, "boost": 1.2, "duck": [3, 2, 0.4], "swell": [0, 2, 1.2]},
      {"chapter": "Paste, cut, search, re-rank", "title": "Make your AI find the right page", "notes": [["Short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if your bot reads one piece", 0], ["Using a chatbot with your PDF? Ask it to quote the lines it used", 0], ["Next: when meaning search misses exact codes (hybrid search) and how to test your search (RAG, part 3)", 1]]},
      "So: short document? Paste it. Big one? Cut at headings, search by meaning, re-rank if it reads one piece. [3] Using a chatbot with your PDF? Ask it to quote the lines it used. [1] Next: why meaning search misses exact error codes. [2] Follow, so you don't miss it.",
      None,
@@ -199,6 +199,8 @@ def spec(lang):
             data["handle"] = "@ai_maastaaru_telugu" if te else "@ai_maastaaru"
         if sid == "close" and not te:   # English cue 2 is letter-timed and lands on "codes": hold the duck to "Follow"
             flags = {**flags, "duck": [3, 2, 0.4, 0.55]}
+        if not te and sid in ("why", "close"):   # at 1.25x "word" was heard "world" and "re-rank" "rerun" (the takes alone)
+            line["tempo"] = {"why": 1.15, "close": 1.2}[sid]
         scenes.append({"id": sid, "type": typ, **flags, "data": data, "lines": [line]})
     s["scenes"] = scenes
     out = R / f"{s['id']}.json"

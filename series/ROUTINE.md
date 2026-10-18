@@ -111,3 +111,5 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   offset from an earlier cue (EP32: the guarantee list reordered while the voice was still on the sentence before).
 - Never run Parler (`te_check.py`, `te_verify.py`) during a render: the container's memory limit kills Parler and the
   render's ffmpeg without an error message (EP32 lost a render and two re-voices). Check the output file's time.
+- Fish takes judged at normal speed can blur after the reel's 1.25x tempo (EP32: "word" -> "world"): judge the
+  stretched line (`video/public/reel/<id>/line_NN.wav`), and give a blurred line its own `tempo` (1.15-1.2).
