@@ -5,7 +5,8 @@ it gets a phone-speaker sound later.
 
 How to record:
 - Start with 5 seconds of silence.
-- Say the line number in English, wait 1 second, say the line, wait 2 seconds.
+- Say "Line 7, Ravi" (or "Line 7, AI"), wait 1 second, say the line, wait 2 seconds. The pause after the name
+  matters most: with no gap, the cut can start on the name.
 - Slip? Pause and say the line again. The last take is used.
 - ★ lines: say them twice. For the AI, the second take slower, with a longer pause.
 - "E-1203" = "E twelve zero three".

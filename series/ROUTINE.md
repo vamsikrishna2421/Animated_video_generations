@@ -102,7 +102,16 @@ The user voices the episode: both characters, English and, if they can, Telugu (
 - Cut: one clip per line at the spoken numbers (Whisper word times; Telugu also by silences), the last clean take,
   60 ms before the first sound and 100 ms after the last. Clean: high-pass 80 Hz, noise reduction from the room tone,
   clicks, gentle compression, lines level-matched. The AI's lines go through `phone()` from `pipeline/skit02/voice.py`.
-- A human take is not stretched like TTS: spec `tempo` 1.0 (at most 1.05); tighten gaps instead.
+- A human take is not stretched like TTS: spec `tempo` 1.0; `pipeline/ep33/voice_rec.py` shortens long pauses and
+  can speed a slow take a little with rubberband (EP33 take 1: about 2 words a second, 1.07x kept the voice natural).
+- EP33 take 1 lessons: the user read "Line N, Name" (sometimes just "N, Name"); `pipeline/tools/cut_takes.py --script`
+  finds both, aligns each line's words (MMS forced aligner) and skips the name, but a line said right after the name
+  with no pause can still start on it: check every cut line with Whisper and fix the stragglers (`DROP_FIRST`).
+  The phone-filtered AI voice is thin, so the music bed masks it sooner than a TTS voice ("Then use keyword search"
+  read "the new skewered search" until the bed went to 0.55 under that scene); keep effects off the speech (typing
+  ticks on a line's first words masked them).
+- reel_build notes found on the way: `boost` below 1 makes the bed quieter; `drop_cue` reads the scene's first line,
+  so a drop before a later line's cue needs `drop_at: [[line index, cue]]`.
 - While the recording is pending: build the scenes against a TTS guide track (never delivered), and don't start the
   next episode.
 
