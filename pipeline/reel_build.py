@@ -280,10 +280,17 @@ def file_line(line, rid):
         starts = sent_starts[part_i] if line.get("sentence_cues") and part_i < len(sent_starts) else None
         if starts:   # a cue after a sentence end = where the next sentence take starts (not a guess from letter counts)
             from parler_tts_local import chunks as p_chunks, sentences as p_sentences
+            allc = [c for x in p_sentences(" ".join(words)) for c in p_chunks(x)]
             for i, n in marks.items():
-                k = len([c for x in p_sentences(" ".join(words[:i])) for c in p_chunks(x)])
-                if 0 < k < len(starts):
-                    cues[n] = b0 / sr + starts[k]
+                before = [c for x in p_sentences(" ".join(words[:i])) for c in p_chunks(x)]
+                k = len(before)
+                if re.search(r"[.!?।]$", " ".join(words[:i])):
+                    if 0 < k < len(starts):
+                        cues[n] = b0 / sr + starts[k]
+                elif 0 < k <= min(len(starts), len(allc)):   # inside a sentence (EP32: the AI's answer showed with the
+                    s0 = starts[k - 1]                        # next sentence): by letters within that sentence's own take
+                    s1 = starts[k] - line.get("maxgap", 0.3) / line.get("tempo", TEMPO) if k < len(starts) else spans[-1][1] - b0 / sr
+                    cues[n] = b0 / sr + s0 + min(1.0, len(before[-1]) / max(1, len(allc[k - 1]))) * max(0.0, s1 - s0)
         elif line.get("sentence_cues"):
             print("  sentence cues: takes not found in te_chunks, kept letter timing")
         # Captions: if "show" carries the same [n] markers, each caption segment is pinned between those cues,
@@ -505,6 +512,7 @@ def main(spec_path: Path) -> None:
     t, n, scenes = spec.get("lead", 0.25), 0, []
     for si, sc in enumerate(spec["scenes"]):
         s_from = 0.0 if si == 0 else t  # first scene is on screen from frame 0
+        t += sc.get("pre", 0)   # "pre": seconds between the cut (and a lift's hit) and the first line (EP32: "Your turn" -> "Your ton")
         lines = []
         for line in sc["lines"]:
             sp = SPEAKERS[line["who"]]
@@ -555,8 +563,8 @@ def main(spec_path: Path) -> None:
         if spec_sc.get("music_stop") is not None and sc["lines"]:
             last = sc["lines"][-1]
             mdrops.append([sc["from"] + last["from"] + round(spec_sc["music_stop"] * last["frames"]), round(total * FPS) + FPS])
-        if spec_sc.get("duck"):
-            a, b, g = spec_sc["duck"]
+        dk = spec_sc.get("duck") or []
+        for a, b, g in (dk if dk and isinstance(dk[0], list) else [dk] if dk else []):   # one [a, b, g] or a list of them
             if str(a) in cues and str(b) in cues:
                 mdrops.append([sc["from"] + cues[str(a)], sc["from"] + cues[str(b)], g])
     # "boost": g on a scene = the music bed sits g times louder for that scene (a lift through the middle of the reel);

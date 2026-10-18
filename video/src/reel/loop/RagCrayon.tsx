@@ -327,7 +327,7 @@ const RgCut: React.FC<SP> = ({ s, cue }) => {
       {[0, 1, 2].map((k) => <Sfx key={k} at={6 + k * 6} src="audio/sfx_snap.wav" vol={0.32} />)}
       <Sfx at={c1} src="audio/gag_bonk.wav" vol={0.4} />
       <Sfx at={c2} src="audio/sfx_pop.wav" vol={0.45} />
-      <Sfx at={c3 - 44} src="reel/sfx_riser.wav" vol={0.7} />
+      <Sfx at={c3 - 44} src="reel/sfx_riser.wav" vol={0.3} />   {/* at 0.7 it masked "headings" */}
       <Sfx at={c3 - 8} src="reel/sfx_boom.wav" vol={0.7} />
       <Sfx at={c3 - 8} src="audio/sfx_snap.wav" vol={0.5} />
       <CrayonCanvas draw={(c, W, H, f, boil) => {

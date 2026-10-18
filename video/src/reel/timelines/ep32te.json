@@ -14,26 +14,28 @@
  "musicLift": 2.3,
  "musicDrops": [
   [
-   499,
-   523
+   500,
+   524
   ],
   [
-   1504,
-   1528
-  ],
-  [
-   2068,
-   2092
-  ],
-  [
-   2092,
-   2130,
+   2175,
+   2213,
    0.3
   ],
   [
-   2390,
-   2453,
+   2482,
+   2545,
    0.05
+  ],
+  [
+   3060,
+   3175,
+   0.4
+  ],
+  [
+   3175,
+   3312,
+   0.65
   ]
  ],
  "musicBoosts": [
@@ -44,29 +46,39 @@
   ],
   [
    348,
-   554,
+   555,
    1.2
   ],
   [
-   2148,
-   2741,
+   1350,
+   1657,
    1.3
   ],
   [
-   2741,
-   3320,
+   1657,
+   1967,
+   0.7
+  ],
+  [
+   1966,
+   2229,
+   0.8
+  ],
+  [
+   2823,
+   3401,
    1.5
   ],
   [
-   2979,
-   3320,
-   1.4,
+   3312,
+   3401,
+   1.2,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 3320,
+ "totalFrames": 3401,
  "music": "reel/ep32te/score.wav",
  "scenes": [
   {
@@ -105,6 +117,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "q": "Will my phone survive a shower?",
     "wrong": {
      "title": "Meteor shower mode",
@@ -318,6 +331,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "q": "Will my phone survive a shower?",
     "wrong": {
      "title": "Meteor shower mode",
@@ -332,7 +346,7 @@
     "hardCuts": true
    },
    "from": 348,
-   "frames": 206,
+   "frames": 207,
    "lines": [
     {
      "who": "maastaaru",
@@ -341,72 +355,72 @@
      "sub": null,
      "audio": "reel/ep32te/line_02.wav",
      "from": 0,
-     "frames": 191,
+     "frames": 192,
      "words": [
       {
        "w": "30",
-       "from": 1,
-       "to": 5
+       "from": 2,
+       "to": 6
       },
       {
        "w": "everyday",
-       "from": 5,
-       "to": 18
+       "from": 6,
+       "to": 19
       },
       {
        "w": "questions.",
-       "from": 18,
-       "to": 45
+       "from": 19,
+       "to": 46
       },
       {
        "w": "Right",
-       "from": 45,
-       "to": 54
+       "from": 46,
+       "to": 55
       },
       {
        "w": "page",
-       "from": 54,
-       "to": 61
+       "from": 55,
+       "to": 62
       },
       {
        "w": "first:",
-       "from": 61,
-       "to": 71
+       "from": 62,
+       "to": 73
       },
       {
        "w": "keyword",
-       "from": 71,
-       "to": 93
+       "from": 73,
+       "to": 94
       },
       {
        "w": "search,",
-       "from": 93,
-       "to": 104
+       "from": 94,
+       "to": 106
       },
       {
        "w": "18.",
-       "from": 104,
-       "to": 116
+       "from": 106,
+       "to": 118
       },
       {
        "w": "Meaning",
-       "from": 116,
-       "to": 139
+       "from": 118,
+       "to": 140
       },
       {
        "w": "search,",
-       "from": 139,
-       "to": 152
+       "from": 140,
+       "to": 153
       },
       {
        "w": "25.",
-       "from": 152,
-       "to": 187
+       "from": 153,
+       "to": 188
       }
      ],
      "cues": {
-      "1": 133,
-      "2": 175
+      "1": 111,
+      "2": 176
      }
     }
    ]
@@ -447,6 +461,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "rr": {
      "q": "Can I give it back if I just don't like it?",
      "quick": [
@@ -511,8 +526,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 554,
-   "frames": 346,
+   "from": 555,
+   "frames": 410,
    "lines": [
     {
      "who": "maastaaru",
@@ -521,7 +536,7 @@
      "sub": null,
      "audio": "reel/ep32te/line_03.wav",
      "from": 0,
-     "frames": 317,
+     "frames": 395,
      "words": [
       {
        "w": "Why",
@@ -536,149 +551,190 @@
       {
        "w": "matters:",
        "from": 13,
-       "to": 37
+       "to": 47
       },
       {
        "w": "with",
-       "from": 37,
-       "to": 45
+       "from": 47,
+       "to": 55
       },
       {
        "w": "no",
-       "from": 45,
-       "to": 50
+       "from": 55,
+       "to": 60
       },
       {
        "w": "page,",
-       "from": 50,
-       "to": 69
+       "from": 60,
+       "to": 78
       },
       {
        "w": "AI",
-       "from": 69,
-       "to": 74
+       "from": 78,
+       "to": 83
       },
       {
        "w": "guesses.",
-       "from": 74,
-       "to": 93
+       "from": 83,
+       "to": 102
       },
       {
        "w": "“Can",
-       "from": 93,
-       "to": 107
+       "from": 102,
+       "to": 117
       },
       {
        "w": "I",
-       "from": 107,
-       "to": 109
+       "from": 117,
+       "to": 119
       },
       {
        "w": "give",
-       "from": 109,
-       "to": 115
+       "from": 119,
+       "to": 125
       },
       {
        "w": "it",
-       "from": 115,
-       "to": 118
-      },
-      {
-       "w": "back",
-       "from": 118,
-       "to": 124
-      },
-      {
-       "w": "if",
-       "from": 124,
+       "from": 125,
        "to": 128
       },
       {
-       "w": "I",
+       "w": "back",
        "from": 128,
-       "to": 130
+       "to": 134
+      },
+      {
+       "w": "if",
+       "from": 134,
+       "to": 137
+      },
+      {
+       "w": "I",
+       "from": 137,
+       "to": 140
       },
       {
        "w": "just",
-       "from": 130,
-       "to": 136
+       "from": 140,
+       "to": 145
       },
       {
        "w": "don't",
-       "from": 136,
-       "to": 151
+       "from": 145,
+       "to": 160
       },
       {
        "w": "like",
-       "from": 151,
-       "to": 157
+       "from": 160,
+       "to": 166
       },
       {
        "w": "it?”",
-       "from": 157,
-       "to": 163
+       "from": 166,
+       "to": 172
       },
       {
        "w": "Our",
-       "from": 163,
-       "to": 175
+       "from": 172,
+       "to": 198
       },
       {
        "w": "small",
-       "from": 175,
-       "to": 182
+       "from": 198,
+       "to": 205
       },
       {
        "w": "AI:",
-       "from": 182,
-       "to": 187
+       "from": 205,
+       "to": 210
       },
       {
        "w": "“Yes,",
-       "from": 187,
-       "to": 199
+       "from": 210,
+       "to": 222
       },
       {
        "w": "for",
-       "from": 199,
-       "to": 216
+       "from": 222,
+       "to": 239
       },
       {
        "w": "a",
-       "from": 216,
-       "to": 220
+       "from": 239,
+       "to": 243
       },
       {
        "w": "refund.”",
-       "from": 220,
-       "to": 270
+       "from": 243,
+       "to": 279
       },
       {
        "w": "The",
-       "from": 270,
-       "to": 278
+       "from": 279,
+       "to": 287
       },
       {
        "w": "manual",
-       "from": 278,
-       "to": 298
+       "from": 287,
+       "to": 308
       },
       {
        "w": "says",
-       "from": 298,
-       "to": 309
+       "from": 308,
+       "to": 319
       },
       {
        "w": "no.",
-       "from": 309,
-       "to": 317
+       "from": 319,
+       "to": 336
+      },
+      {
+       "w": "Stick",
+       "from": 336,
+       "to": 344
+      },
+      {
+       "w": "around:",
+       "from": 344,
+       "to": 354
+      },
+      {
+       "w": "one",
+       "from": 354,
+       "to": 359
+      },
+      {
+       "w": "trick",
+       "from": 359,
+       "to": 366
+      },
+      {
+       "w": "for",
+       "from": 366,
+       "to": 371
+      },
+      {
+       "w": "your",
+       "from": 371,
+       "to": 378
+      },
+      {
+       "w": "own",
+       "from": 378,
+       "to": 387
+      },
+      {
+       "w": "PDFs.",
+       "from": 387,
+       "to": 394
       }
      ],
      "cues": {
-      "1": 103,
-      "3": 265,
-      "4": 265,
-      "2": 265
+      "1": 111,
+      "3": 195,
+      "4": 212,
+      "2": 273,
+      "5": 331
      }
     }
    ]
@@ -723,12 +779,13 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 900,
-   "frames": 350,
+   "from": 965,
+   "frames": 385,
    "lines": [
     {
      "who": "maastaaru",
@@ -737,7 +794,7 @@
      "sub": null,
      "audio": "reel/ep32te/line_04.wav",
      "from": 0,
-     "frames": 335,
+     "frames": 365,
      "words": [
       {
        "w": "Why",
@@ -757,26 +814,26 @@
       {
        "w": "the",
        "from": 21,
-       "to": 27
+       "to": 26
       },
       {
        "w": "whole",
-       "from": 27,
-       "to": 39
+       "from": 26,
+       "to": 38
       },
       {
        "w": "manual?",
-       "from": 39,
-       "to": 50
+       "from": 38,
+       "to": 49
       },
       {
        "w": "A",
-       "from": 50,
-       "to": 53
+       "from": 49,
+       "to": 52
       },
       {
        "w": "short",
-       "from": 53,
+       "from": 52,
        "to": 69
       },
       {
@@ -787,117 +844,142 @@
       {
        "w": "sure.",
        "from": 76,
-       "to": 85
+       "to": 84
       },
       {
        "w": "Real",
-       "from": 85,
-       "to": 103
+       "from": 84,
+       "to": 101
       },
       {
        "w": "ones",
-       "from": 103,
-       "to": 119
+       "from": 101,
+       "to": 118
       },
       {
        "w": "run",
-       "from": 119,
-       "to": 126
+       "from": 118,
+       "to": 124
       },
       {
        "w": "hundreds",
-       "from": 126,
-       "to": 145
+       "from": 124,
+       "to": 143
       },
       {
        "w": "of",
-       "from": 145,
-       "to": 150
+       "from": 143,
+       "to": 147
       },
       {
        "w": "pages.",
-       "from": 150,
-       "to": 170
+       "from": 147,
+       "to": 158
       },
       {
        "w": "In",
-       "from": 170,
-       "to": 175
+       "from": 158,
+       "to": 171
       },
       {
        "w": "our",
-       "from": 175,
-       "to": 186
+       "from": 171,
+       "to": 177
       },
       {
        "w": "test,",
-       "from": 186,
-       "to": 196
+       "from": 177,
+       "to": 187
       },
       {
        "w": "whole",
-       "from": 196,
-       "to": 206
+       "from": 187,
+       "to": 196
       },
       {
        "w": "chapters",
-       "from": 206,
-       "to": 221
+       "from": 196,
+       "to": 215
       },
       {
-       "w": "found",
-       "from": 221,
-       "to": 239
+       "w": "also",
+       "from": 215,
+       "to": 222
       },
       {
-       "w": "the",
-       "from": 239,
-       "to": 246
+       "w": "scored",
+       "from": 222,
+       "to": 242
       },
       {
-       "w": "page",
-       "from": 246,
-       "to": 254
-      },
-      {
-       "w": "as",
-       "from": 254,
-       "to": 259
-      },
-      {
-       "w": "often,",
-       "from": 259,
-       "to": 271
+       "w": "25,",
+       "from": 242,
+       "to": 249
       },
       {
        "w": "but",
-       "from": 271,
-       "to": 287
+       "from": 249,
+       "to": 255
       },
       {
        "w": "sent",
-       "from": 287,
-       "to": 301
+       "from": 255,
+       "to": 267
       },
       {
        "w": "6",
-       "from": 301,
-       "to": 304
+       "from": 267,
+       "to": 270
       },
       {
        "w": "times",
-       "from": 304,
-       "to": 314
+       "from": 270,
+       "to": 279
       },
       {
        "w": "the",
-       "from": 314,
-       "to": 321
+       "from": 279,
+       "to": 285
       },
       {
-       "w": "text.",
-       "from": 321,
-       "to": 331
+       "w": "text,",
+       "from": 285,
+       "to": 304
+      },
+      {
+       "w": "and",
+       "from": 304,
+       "to": 310
+      },
+      {
+       "w": "AI",
+       "from": 310,
+       "to": 315
+      },
+      {
+       "w": "services",
+       "from": 315,
+       "to": 334
+      },
+      {
+       "w": "charge",
+       "from": 334,
+       "to": 344
+      },
+      {
+       "w": "by",
+       "from": 344,
+       "to": 349
+      },
+      {
+       "w": "the",
+       "from": 349,
+       "to": 355
+      },
+      {
+       "w": "word.",
+       "from": 355,
+       "to": 365
       }
      ],
      "cues": {
@@ -950,6 +1032,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "cut": {
      "w40": "…never put it under running water. If the phone gets wet, dry it with a soft cloth and do not charge it until the port is",
      "sent": "It is not waterproof.",
@@ -959,8 +1042,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1250,
-   "frames": 325,
+   "from": 1350,
+   "frames": 307,
    "lines": [
     {
      "who": "maastaaru",
@@ -969,7 +1052,7 @@
      "sub": null,
      "audio": "reel/ep32te/line_05.wav",
      "from": 0,
-     "frames": 294,
+     "frames": 291,
      "words": [
       {
        "w": "Step",
@@ -979,91 +1062,91 @@
       {
        "w": "one:",
        "from": 8,
-       "to": 33
+       "to": 32
       },
       {
        "w": "cut",
-       "from": 33,
-       "to": 39
+       "from": 32,
+       "to": 38
       },
       {
        "w": "it",
-       "from": 39,
-       "to": 43
+       "from": 38,
+       "to": 42
       },
       {
        "w": "into",
-       "from": 43,
-       "to": 51
+       "from": 42,
+       "to": 49
       },
       {
        "w": "pieces.",
-       "from": 51,
-       "to": 72
+       "from": 49,
+       "to": 69
       },
       {
        "w": "Every",
-       "from": 72,
-       "to": 81
+       "from": 69,
+       "to": 78
       },
       {
        "w": "40",
-       "from": 81,
-       "to": 86
+       "from": 78,
+       "to": 82
       },
       {
        "w": "words,",
-       "from": 86,
-       "to": 105
+       "from": 82,
+       "to": 92
       },
       {
        "w": "even",
-       "from": 105,
-       "to": 112
+       "from": 92,
+       "to": 100
       },
       {
        "w": "mid-sentence:",
-       "from": 112,
-       "to": 134
+       "from": 100,
+       "to": 127
       },
       {
        "w": "13",
-       "from": 134,
-       "to": 140
+       "from": 127,
+       "to": 145
       },
       {
        "w": "out",
-       "from": 140,
-       "to": 149
+       "from": 145,
+       "to": 153
       },
       {
        "w": "of",
-       "from": 149,
-       "to": 155
+       "from": 153,
+       "to": 167
       },
       {
        "w": "30.",
-       "from": 155,
-       "to": 173
+       "from": 167,
+       "to": 176
       },
       {
        "w": "Overlap",
-       "from": 173,
-       "to": 190
+       "from": 176,
+       "to": 192
       },
       {
        "w": "them:",
-       "from": 190,
-       "to": 203
+       "from": 192,
+       "to": 204
       },
       {
        "w": "20.",
-       "from": 203,
-       "to": 215
+       "from": 204,
+       "to": 216
       },
       {
        "w": "Cut",
-       "from": 215,
+       "from": 216,
        "to": 231
       },
       {
@@ -1074,18 +1157,18 @@
       {
        "w": "headings:",
        "from": 237,
-       "to": 257
+       "to": 275
       },
       {
        "w": "25.",
-       "from": 257,
+       "from": 275,
        "to": 290
       }
      ],
      "cues": {
-      "1": 169,
-      "2": 227,
-      "3": 278
+      "1": 132,
+      "2": 207,
+      "3": 274
      }
     }
    ]
@@ -1126,6 +1209,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "q": "Will my phone survive a shower?",
     "wrong": {
      "title": "Meteor shower mode",
@@ -1139,8 +1223,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1575,
-   "frames": 308,
+   "from": 1657,
+   "frames": 310,
    "lines": [
     {
      "who": "maastaaru",
@@ -1149,161 +1233,161 @@
      "sub": null,
      "audio": "reel/ep32te/line_06.wav",
      "from": 0,
-     "frames": 293,
+     "frames": 295,
      "words": [
       {
        "w": "Step",
        "from": 2,
-       "to": 8
+       "to": 9
       },
       {
        "w": "two:",
-       "from": 8,
-       "to": 32
+       "from": 9,
+       "to": 16
       },
       {
        "w": "store",
-       "from": 32,
-       "to": 40
+       "from": 16,
+       "to": 33
       },
       {
        "w": "each",
-       "from": 40,
-       "to": 46
+       "from": 33,
+       "to": 40
       },
       {
        "w": "piece",
-       "from": 46,
-       "to": 54
+       "from": 40,
+       "to": 48
       },
       {
        "w": "as",
-       "from": 54,
-       "to": 58
+       "from": 48,
+       "to": 53
       },
       {
        "w": "numbers",
-       "from": 58,
-       "to": 68
+       "from": 53,
+       "to": 64
       },
       {
        "w": "for",
-       "from": 68,
-       "to": 73
+       "from": 64,
+       "to": 70
       },
       {
        "w": "its",
-       "from": 73,
-       "to": 78
+       "from": 70,
+       "to": 75
       },
       {
        "w": "meaning,",
-       "from": 78,
-       "to": 90
+       "from": 75,
+       "to": 88
       },
       {
        "w": "in",
-       "from": 90,
-       "to": 94
+       "from": 88,
+       "to": 92
       },
       {
        "w": "a",
-       "from": 94,
-       "to": 96
+       "from": 92,
+       "to": 95
       },
       {
        "w": "vector",
-       "from": 96,
-       "to": 109
+       "from": 95,
+       "to": 105
       },
       {
        "w": "database,",
-       "from": 109,
-       "to": 132
+       "from": 105,
+       "to": 130
       },
       {
        "w": "a",
-       "from": 132,
-       "to": 135
+       "from": 130,
+       "to": 133
       },
       {
        "w": "library",
-       "from": 135,
-       "to": 149
+       "from": 133,
+       "to": 144
       },
       {
        "w": "sorted",
-       "from": 149,
-       "to": 158
+       "from": 144,
+       "to": 154
       },
       {
        "w": "by",
-       "from": 158,
-       "to": 162
+       "from": 154,
+       "to": 158
       },
       {
        "w": "meaning.",
-       "from": 162,
-       "to": 181
+       "from": 158,
+       "to": 171
       },
       {
        "w": "Your",
-       "from": 181,
-       "to": 191
+       "from": 171,
+       "to": 186
       },
       {
        "w": "question",
-       "from": 191,
-       "to": 203
+       "from": 186,
+       "to": 198
       },
       {
        "w": "becomes",
-       "from": 203,
-       "to": 213
+       "from": 198,
+       "to": 209
       },
       {
        "w": "numbers",
-       "from": 213,
-       "to": 223
+       "from": 209,
+       "to": 220
       },
       {
        "w": "too,",
-       "from": 223,
-       "to": 239
+       "from": 220,
+       "to": 227
       },
       {
        "w": "and",
-       "from": 239,
-       "to": 244
+       "from": 227,
+       "to": 242
       },
       {
        "w": "the",
-       "from": 244,
-       "to": 250
+       "from": 242,
+       "to": 248
       },
       {
        "w": "nearest",
-       "from": 250,
-       "to": 260
+       "from": 248,
+       "to": 259
       },
       {
        "w": "pieces",
-       "from": 260,
-       "to": 268
+       "from": 259,
+       "to": 269
       },
       {
        "w": "come",
-       "from": 268,
-       "to": 275
+       "from": 269,
+       "to": 276
       },
       {
        "w": "out.",
-       "from": 275,
-       "to": 281
+       "from": 276,
+       "to": 283
       }
      ],
      "cues": {
-      "1": 181
+      "1": 182
      }
     }
    ]
@@ -1344,6 +1428,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "rr": {
      "q": "Can I give it back if I just don't like it?",
      "quick": [
@@ -1408,8 +1493,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1883,
-   "frames": 264,
+   "from": 1966,
+   "frames": 263,
    "lines": [
     {
      "who": "maastaaru",
@@ -1564,6 +1649,7 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "rr": {
      "q": "Can I give it back if I just don't like it?",
      "quick": [
@@ -1628,7 +1714,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 2148,
+   "from": 2230,
    "frames": 593,
    "lines": [
     {
@@ -1637,249 +1723,249 @@
      "color": "#F59E0B",
      "sub": null,
      "audio": "reel/ep32te/line_08.wav",
-     "from": 0,
+     "from": 10,
      "frames": 570,
      "words": [
       {
        "w": "Your",
-       "from": 1,
-       "to": 8
+       "from": 12,
+       "to": 19
       },
       {
        "w": "turn.",
-       "from": 8,
-       "to": 17
+       "from": 19,
+       "to": 27
       },
       {
        "w": "Your",
-       "from": 17,
-       "to": 31
+       "from": 27,
+       "to": 42
       },
       {
        "w": "AI",
-       "from": 31,
-       "to": 36
+       "from": 42,
+       "to": 46
       },
       {
        "w": "reads",
-       "from": 36,
-       "to": 48
+       "from": 46,
+       "to": 58
       },
       {
        "w": "only",
-       "from": 48,
-       "to": 55
+       "from": 58,
+       "to": 65
       },
       {
        "w": "the",
-       "from": 55,
-       "to": 60
+       "from": 65,
+       "to": 71
       },
       {
        "w": "first",
-       "from": 60,
-       "to": 69
-      },
-      {
-       "w": "piece,",
-       "from": 69,
+       "from": 71,
        "to": 79
       },
       {
-       "w": "and",
+       "w": "piece,",
        "from": 79,
-       "to": 94
+       "to": 89
+      },
+      {
+       "w": "and",
+       "from": 89,
+       "to": 105
       },
       {
        "w": "the",
-       "from": 94,
-       "to": 100
+       "from": 105,
+       "to": 111
       },
       {
        "w": "right",
-       "from": 100,
-       "to": 109
+       "from": 111,
+       "to": 119
       },
       {
        "w": "page",
-       "from": 109,
-       "to": 116
+       "from": 119,
+       "to": 126
       },
       {
        "w": "keeps",
-       "from": 116,
-       "to": 124
+       "from": 126,
+       "to": 135
       },
       {
        "w": "coming",
-       "from": 124,
-       "to": 134
+       "from": 135,
+       "to": 145
       },
       {
        "w": "second.",
-       "from": 134,
-       "to": 159
+       "from": 145,
+       "to": 170
       },
       {
        "w": "What",
-       "from": 159,
-       "to": 167
+       "from": 170,
+       "to": 178
       },
       {
        "w": "helps",
-       "from": 167,
-       "to": 177
+       "from": 178,
+       "to": 188
       },
       {
        "w": "more:",
-       "from": 177,
-       "to": 187
+       "from": 188,
+       "to": 197
       },
       {
        "w": "a",
-       "from": 187,
-       "to": 199
+       "from": 197,
+       "to": 209
       },
       {
        "w": "bigger",
-       "from": 199,
-       "to": 210
+       "from": 209,
+       "to": 220
       },
       {
        "w": "AI,",
-       "from": 210,
-       "to": 216
+       "from": 220,
+       "to": 227
       },
       {
        "w": "or",
-       "from": 216,
-       "to": 221
+       "from": 227,
+       "to": 231
       },
       {
        "w": "a",
-       "from": 221,
-       "to": 224
+       "from": 231,
+       "to": 235
       },
       {
        "w": "re-ranker?",
-       "from": 224,
-       "to": 242
+       "from": 235,
+       "to": 252
       },
       {
        "w": "The",
-       "from": 305,
-       "to": 311
+       "from": 315,
+       "to": 322
       },
       {
        "w": "re-ranker.",
-       "from": 311,
-       "to": 336
+       "from": 322,
+       "to": 346
       },
       {
        "w": "Why?",
-       "from": 336,
-       "to": 344
+       "from": 346,
+       "to": 354
       },
       {
        "w": "A",
-       "from": 344,
-       "to": 347
-      },
-      {
-       "w": "bigger",
-       "from": 347,
+       "from": 354,
        "to": 358
       },
       {
-       "w": "AI",
+       "w": "bigger",
        "from": 358,
-       "to": 363
+       "to": 369
+      },
+      {
+       "w": "AI",
+       "from": 369,
+       "to": 374
       },
       {
        "w": "still",
-       "from": 363,
-       "to": 373
+       "from": 374,
+       "to": 383
       },
       {
        "w": "reads",
-       "from": 373,
-       "to": 390
+       "from": 383,
+       "to": 401
       },
       {
        "w": "the",
-       "from": 390,
-       "to": 397
+       "from": 401,
+       "to": 407
       },
       {
        "w": "wrong",
-       "from": 397,
-       "to": 406
+       "from": 407,
+       "to": 417
       },
       {
        "w": "page.",
-       "from": 406,
-       "to": 427
+       "from": 417,
+       "to": 437
       },
       {
        "w": "Ours",
-       "from": 427,
-       "to": 435
+       "from": 437,
+       "to": 446
       },
       {
        "w": "moved",
-       "from": 435,
-       "to": 445
+       "from": 446,
+       "to": 455
       },
       {
        "w": "“guarantee”",
-       "from": 445,
-       "to": 472
+       "from": 455,
+       "to": 483
       },
       {
        "w": "from",
-       "from": 472,
-       "to": 480
+       "from": 483,
+       "to": 491
       },
       {
        "w": "the",
-       "from": 480,
-       "to": 487
+       "from": 491,
+       "to": 497
       },
       {
        "w": "returns",
-       "from": 487,
-       "to": 499
+       "from": 497,
+       "to": 510
       },
       {
        "w": "page",
-       "from": 499,
-       "to": 515
-      },
-      {
-       "w": "to",
-       "from": 515,
-       "to": 520
-      },
-      {
-       "w": "the",
-       "from": 520,
+       "from": 510,
        "to": 526
       },
       {
-       "w": "warranty",
+       "w": "to",
        "from": 526,
-       "to": 541
+       "to": 530
+      },
+      {
+       "w": "the",
+       "from": 530,
+       "to": 537
+      },
+      {
+       "w": "warranty",
+       "from": 537,
+       "to": 551
       },
       {
        "w": "page.",
-       "from": 541,
-       "to": 550
+       "from": 551,
+       "to": 561
       }
      ],
      "cues": {
-      "1": 156,
-      "3": 242,
-      "2": 305
+      "1": 167,
+      "3": 252,
+      "2": 315
      }
     }
    ]
@@ -1924,12 +2010,13 @@
      "wsec": 152,
      "miss": 3
     },
+    "captionSide": 110,
     "handle": "@ai_maastaaru_telugu",
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 2741,
-   "frames": 579,
+   "from": 2823,
+   "frames": 578,
    "lines": [
     {
      "who": "maastaaru",
@@ -1938,242 +2025,247 @@
      "sub": null,
      "audio": "reel/ep32te/line_09.wav",
      "from": 0,
-     "frames": 528,
+     "frames": 527,
      "words": [
       {
        "w": "So:",
-       "from": 2,
+       "from": 1,
        "to": 8
       },
       {
        "w": "short",
        "from": 8,
-       "to": 22
+       "to": 17
       },
       {
        "w": "document?",
-       "from": 22,
-       "to": 52
+       "from": 17,
+       "to": 46
       },
       {
        "w": "Paste",
-       "from": 52,
-       "to": 67
+       "from": 46,
+       "to": 61
       },
       {
        "w": "it.",
-       "from": 67,
-       "to": 87
+       "from": 61,
+       "to": 81
       },
       {
        "w": "Big",
-       "from": 87,
-       "to": 94
+       "from": 81,
+       "to": 87
       },
       {
        "w": "one?",
-       "from": 94,
-       "to": 110
+       "from": 87,
+       "to": 103
       },
       {
        "w": "Cut",
-       "from": 110,
-       "to": 116
+       "from": 103,
+       "to": 110
       },
       {
        "w": "at",
-       "from": 116,
-       "to": 121
+       "from": 110,
+       "to": 115
       },
       {
        "w": "headings,",
-       "from": 121,
-       "to": 148
+       "from": 115,
+       "to": 141
       },
       {
        "w": "search",
-       "from": 148,
-       "to": 159
+       "from": 141,
+       "to": 152
       },
       {
        "w": "by",
-       "from": 159,
-       "to": 175
+       "from": 152,
+       "to": 157
       },
       {
        "w": "meaning,",
-       "from": 175,
-       "to": 189
+       "from": 157,
+       "to": 182
       },
       {
        "w": "re-rank",
-       "from": 189,
-       "to": 202
+       "from": 182,
+       "to": 199
       },
       {
        "w": "if",
-       "from": 202,
-       "to": 207
+       "from": 199,
+       "to": 204
       },
       {
        "w": "it",
-       "from": 207,
-       "to": 212
+       "from": 204,
+       "to": 209
       },
       {
        "w": "reads",
-       "from": 212,
-       "to": 222
+       "from": 209,
+       "to": 218
       },
       {
        "w": "one",
-       "from": 222,
-       "to": 229
+       "from": 218,
+       "to": 225
       },
       {
        "w": "piece.",
-       "from": 229,
-       "to": 249
+       "from": 225,
+       "to": 245
       },
       {
        "w": "Using",
-       "from": 249,
-       "to": 257
+       "from": 245,
+       "to": 253
       },
       {
        "w": "a",
-       "from": 257,
-       "to": 259
+       "from": 253,
+       "to": 256
       },
       {
        "w": "chatbot",
-       "from": 259,
-       "to": 270
+       "from": 256,
+       "to": 266
       },
       {
        "w": "with",
-       "from": 270,
-       "to": 276
+       "from": 266,
+       "to": 272
       },
       {
        "w": "your",
-       "from": 276,
-       "to": 283
+       "from": 272,
+       "to": 279
       },
       {
        "w": "PDF?",
-       "from": 283,
-       "to": 295
+       "from": 279,
+       "to": 285
       },
       {
        "w": "Ask",
-       "from": 295,
-       "to": 301
+       "from": 285,
+       "to": 297
       },
       {
        "w": "it",
+       "from": 297,
+       "to": 301
+      },
+      {
+       "w": "to",
        "from": 301,
        "to": 305
       },
       {
-       "w": "to",
-       "from": 305,
-       "to": 309
-      },
-      {
        "w": "quote",
-       "from": 309,
-       "to": 316
+       "from": 305,
+       "to": 312
       },
       {
        "w": "the",
-       "from": 316,
-       "to": 322
+       "from": 312,
+       "to": 318
       },
       {
        "w": "lines",
-       "from": 322,
-       "to": 329
+       "from": 318,
+       "to": 325
       },
       {
        "w": "it",
-       "from": 329,
-       "to": 333
+       "from": 325,
+       "to": 329
       },
       {
        "w": "used.",
-       "from": 333,
-       "to": 341
+       "from": 329,
+       "to": 337
       },
       {
        "w": "Next:",
-       "from": 341,
-       "to": 364
+       "from": 337,
+       "to": 358
       },
       {
        "w": "why",
-       "from": 364,
-       "to": 373
+       "from": 358,
+       "to": 366
       },
       {
        "w": "meaning",
-       "from": 373,
-       "to": 402
+       "from": 366,
+       "to": 392
       },
       {
        "w": "search",
-       "from": 402,
-       "to": 434
+       "from": 392,
+       "to": 406
       },
       {
        "w": "misses",
-       "from": 434,
-       "to": 454
+       "from": 406,
+       "to": 436
       },
       {
        "w": "exact",
+       "from": 436,
+       "to": 454
+      },
+      {
+       "w": "error",
        "from": 454,
-       "to": 469
+       "to": 466
       },
       {
        "w": "codes.",
-       "from": 469,
+       "from": 466,
        "to": 493
       },
       {
        "w": "Follow,",
        "from": 493,
-       "to": 503
+       "to": 502
       },
       {
        "w": "so",
-       "from": 503,
-       "to": 506
+       "from": 502,
+       "to": 505
       },
       {
        "w": "you",
-       "from": 506,
-       "to": 511
+       "from": 505,
+       "to": 510
       },
       {
        "w": "don't",
-       "from": 511,
+       "from": 510,
        "to": 517
       },
       {
        "w": "miss",
        "from": 517,
-       "to": 523
+       "to": 522
       },
       {
        "w": "it.",
-       "from": 523,
-       "to": 528
+       "from": 522,
+       "to": 527
       }
      ],
      "cues": {
-      "3": 238,
-      "1": 353,
+      "3": 237,
+      "1": 352,
       "2": 489
      }
     }

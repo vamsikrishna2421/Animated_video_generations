@@ -39,6 +39,11 @@ over the last quarter; under the PDF tip the end swell had the music at full vol
 bed ducks under the tip and swells from "Next" into the follow ask; Telugu sentences checked one at a time (the
 whole-line check missed babble): six re-voiced ("ఇది ఎందుకు ముఖ్యం?", "మాన్యువల్ మాత్రం కుదరదు అంటోంది." looped,
 "చిన్నదైతే ఇవ్వచ్చు.", "ముప్పై మామూలు ప్రశ్నలు.", the vector-database sentence, "అంటే: చిన్న డాక్యుమెంట్?").
+Masked words in the English mix (each take was clean alone): "headings" (heard "hitting") under the riser into the
+headings crown -> riser at 0.3; "Your turn" ("Your ton") started on the lift's kick -> the voice starts 0.35 s after
+the cut; "codes" ("calls") -> a two-step duck (tip 0.4, next-episode line 0.65) with the swell from "Follow".
+Telugu sync: cues inside a sentence had snapped to the next sentence (the AI's made-up answer appeared with "the manual
+says no"; the 18 and the 13 came a sentence late) -> placed by letters inside their own sentence take.
 
 v3 -> v4 (second render review, English + Telugu): the cost line says the number and the reason ("whole chapters also
 scored 25, but sent six times the text, and AI services charge by the word"; Telugu ends on "ప్రతి పదానికీ డబ్బు కట్టాలి");

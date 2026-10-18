@@ -99,3 +99,7 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   under the voice (EP32: "quote" heard as "put" in the PDF tip). `duck` the actionable line, swell from the CTA.
 - Whole-line Whisper on long Telugu takes misses babble: run `pipeline/tools/te_verify.py` on every Telugu scene
   before the timeline build (EP32 found six bad sentences the line check passed).
+- A lift's kick lands on the cut: if the line starts on the cut, its first word is masked (EP32 "Your turn" heard
+  "Your ton"): give the scene `"pre": 0.35`. A riser under a key word masks it too ("headings" -> "hitting").
+- Test a mix fix without a full render: `npx remotion render src/index.ts <Comp> out.wav --codec=wav` (about 1 min),
+  then Whisper on just the windows that were misheard.
