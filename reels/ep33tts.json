@@ -32,7 +32,7 @@
  "beatSnap": true,
  "hideTimerInHook": true,
  "hideTimer": true,
- "tempo": 1.1,
+ "tempo": 1.2,
  "captionTop": 1500,
  "scenes": [
   {
@@ -74,7 +74,7 @@
      "file": "01_ravi.wav",
      "text": "AI! [1] You told him \"out of stock\"?! [2] The batteries are right there!",
      "show": "AI! You told him \"out of stock\"?! The batteries are right there!",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.25,
      "tts": "AI! You told him out of stock? The batteries are right there!",
      "gain_db": 1.5
@@ -84,7 +84,7 @@
      "file": "02_ai.wav",
      "text": "E-1203 wasn't on [1] the three pages I read.",
      "show": "E-1203 wasn't on the three pages I read.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "tts": "E twelve zero three wasn't on the three pages I read.",
      "gain_db": -1.0
@@ -94,7 +94,7 @@
      "file": "03_ravi.wav",
      "text": "Which three pages?!",
      "show": "Which three pages?!",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 1.5
     }
@@ -147,7 +147,7 @@
      "file": "04_ai.wav",
      "text": "The three closest to the order. [1] I search by meaning.",
      "show": "The three closest to the order. I search by meaning.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -1.0
     },
@@ -156,7 +156,7 @@
      "file": "05_ravi.wav",
      "text": "A code has no meaning! [1] It has to match exactly!",
      "show": "A code has no meaning! It has to match exactly!",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 1.5
     },
@@ -165,7 +165,7 @@
      "file": "06_ai.wav",
      "text": "Then use keyword search. [1] Exact words only.",
      "show": "Then use keyword search. Exact words only.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -1.0
     },
@@ -174,7 +174,7 @@
      "file": "07_ravi.wav",
      "text": "Good. Only that from now on.",
      "show": "Good. Only that from now on.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "tts": "Good, only that from now on.",
      "gain_db": 1.5
@@ -232,7 +232,7 @@
      "file": "08_ai.wav",
      "text": "Next order: [1] \"something for a headache.\"",
      "show": "Next order: \"something for a headache.\"",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.3,
      "gain_db": -2.0
     },
@@ -241,7 +241,7 @@
      "file": "09_ai.wav",
      "text": "No match. [1] We don't sell headaches.",
      "show": "No match. We don't sell headaches.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.7,
      "gain_db": -2.0
     },
@@ -250,7 +250,7 @@
      "file": "10_ravi.wav",
      "text": "The pain balm is right there!",
      "show": "The headache balm is right there!",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "tts": "The headache balm is right there!",
      "gain_db": 0.5
@@ -260,7 +260,7 @@
      "file": "11_ai.wav",
      "text": "He never said [1] \"balm\".",
      "show": "He never said \"balm\".",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -2.0
     },
@@ -269,7 +269,7 @@
      "file": "12_ravi.wav",
      "text": "So which search do I use?!",
      "show": "So which search do I use?!",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 0.5
     }
@@ -322,7 +322,7 @@
      "file": "13_ai.wav",
      "text": "Both. [1] Merge the two lists. [2] Still three pages.",
      "show": "Both. Merge the two lists. Still three pages.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -1.0
     },
@@ -331,7 +331,7 @@
      "file": "14_ravi.wav",
      "text": "And how do I know it works?",
      "show": "And how do I know it works?",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 1.5
     },
@@ -340,7 +340,7 @@
      "file": "15_ai.wav",
      "text": "Test me like a new delivery boy.",
      "show": "Test me like a new delivery boy.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -1.0
     },
@@ -349,7 +349,7 @@
      "file": "16_ai.wav",
      "text": "Twenty orders you already know the answers to.",
      "show": "Twenty orders you already know the answers to.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -1.0
     }
@@ -393,7 +393,7 @@
      "file": "17_ai.wav",
      "text": "Meaning only: fifteen out of twenty. [1] Keyword only: thirteen.",
      "show": "Meaning only: fifteen out of twenty. Keyword only: thirteen.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.75,
      "gain_db": -1.0
     },
@@ -402,7 +402,7 @@
      "file": "18_ai.wav",
      "text": "Both: [1] eighteen.",
      "show": "Both: eighteen.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "pauses": {
       "1": 0.45
@@ -468,7 +468,7 @@
      "file": "19_ravi.wav",
      "text": "Eighteen. [1] So two customers went home empty-handed. [2] Which two?",
      "show": "Eighteen. So two customers went home empty-handed. Which two?",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 2.1
     },
@@ -477,7 +477,7 @@
      "file": "20_ai.wav",
      "text": "\"Something to wash vessels.\" [1] And \"Ramesh garu's usual.\"",
      "show": "\"Something to wash vessels.\" And \"Ramesh garu's usual.\"",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": -0.4
     },
@@ -486,7 +486,7 @@
      "file": "21_ravi.wav",
      "text": "Everyone knows those!",
      "show": "Everyone knows those!",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.45,
      "gain_db": 3.1
     },
@@ -495,7 +495,7 @@
      "file": "22_ai.wav",
      "text": "Everyone except your stock book.",
      "show": "Everyone except your stock book.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.7,
      "gain_db": 0.6
     },
@@ -504,7 +504,7 @@
      "file": "23_ravi.wav",
      "text": "Written. [1] Test again.",
      "show": "Written. Test again.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 3.1
     },
@@ -513,7 +513,7 @@
      "file": "24_ai.wav",
      "text": "Twenty out of twenty.",
      "show": "Twenty out of twenty.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.55,
      "gain_db": 0.6
     }
@@ -554,7 +554,7 @@
      "file": "25_ravi.wav",
      "text": "Super! [1] Why two? [2] Switch one off.",
      "show": "Super! Why two? Switch one off.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 3.1
     },
@@ -563,7 +563,7 @@
      "file": "26_ai.wav",
      "text": "Okay. [1] Keyword off. [2] Next order: E-1203.",
      "show": "Okay. Keyword off. Next order: E-1203.",
-     "maxgap": 0.35,
+     "maxgap": 0.28,
      "gap": 0.05,
      "tts": "Okay. Keyword off. Next order: E twelve zero three.",
      "gain_db": 1.6

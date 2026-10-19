@@ -98,6 +98,7 @@ TTS_EN = {1: "AI! You told him out of stock? The batteries are right there!", 2:
           26: "Okay. Keyword off. Next order: E twelve zero three."}
 SHOW_TTS = {10: "The headache balm is right there!"}
 PAUSES_TTS = {18: {"1": 0.45}}   # the beat before "eighteen" (the recording had it inserted in the edit)
+# AI voices at 1.1x ran 82 s against the recording's 75 s (Parler's Ravi is slower than the user): 1.2x, tighter pauses
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
@@ -109,7 +110,7 @@ def spec(lang="en"):
          "banner": "Why the AI said OUT OF STOCK",
          "topic": "", "look": "classic", "gap": 0.18, "lead": 0.15, "music": "lofi", "musicVol": [0.4, 0.75], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True,
-         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.05 if te else 1.1 if tts else 1.0, "captionTop": 1500}
+         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.05 if te else 1.2 if tts else 1.0, "captionTop": 1500}
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
     scenes = []
@@ -117,7 +118,7 @@ def spec(lang="en"):
         lines, beats = [], []
         for n in range(a, b + 1):
             who, shot, prop, text = LINES[n]
-            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW_TE.get(n, SHOW[n]) if te else SHOW_TTS.get(n, SHOW[n]) if tts else SHOW[n], "maxgap": 0.3 if te else 0.35,
+            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW_TE.get(n, SHOW[n]) if te else SHOW_TTS.get(n, SHOW[n]) if tts else SHOW[n], "maxgap": 0.3 if te else 0.28 if tts else 0.35,
                   "gap": 0.05 if n == 26 else (te and GAP_TE.get(n)) or GAP.get(n, 0.22 if te else 0.18)}
             if te and TE[n][1]:
                 ln["tts"] = TE[n][1]
