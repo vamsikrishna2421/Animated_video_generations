@@ -1,0 +1,400 @@
+{
+ "id": "skit03v1",
+ "title": "The AI that confessed",
+ "label": "SKIT",
+ "banner": "The AI that confessed",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.75
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.08,
+ "parler_lang": "en",
+ "scenes": [
+  {
+   "id": "c3_a",
+   "type": "sk_class",
+   "tail": 0.1,
+   "rise": 1.3,
+   "data": {
+    "beats": [
+     {
+      "who": "sir",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "priya",
+      "prop": "plead",
+      "n": 2
+     },
+     {
+      "who": "sir",
+      "prop": "smug",
+      "n": 3
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "The AI confessed",
+     "title": "The AI confessed",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "sir",
+     "file": "01_sir.wav",
+     "text": "Zero! The AI confessed. It wrote your essay!",
+     "show": "Zero! The AI confessed. It wrote your essay!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "priya",
+     "file": "02_priya.wav",
+     "text": "Sir, I wrote it myself! At 2 AM!",
+     "show": "Sir, I wrote it myself! At 2 AM!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tts": "Sir, I wrote it myself! At two A.M.!",
+     "gain_db": 0.5
+    },
+    {
+     "who": "sir",
+     "file": "03_sir.wav",
+     "text": "It said yes. Machines don't lie.",
+     "show": "It said yes. Machines don't lie.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "c3_b",
+   "type": "sk_class",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 0.7,
+   "drop_at": [
+    [
+     3,
+     "1"
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "priya",
+      "prop": "point",
+      "n": 4
+     },
+     {
+      "who": "sir",
+      "prop": "write",
+      "n": 5
+     },
+     {
+      "who": "priya",
+      "prop": "newchat",
+      "n": 6
+     },
+     {
+      "who": "bot",
+      "prop": "deny",
+      "n": 7
+     },
+     {
+      "who": "sir",
+      "prop": "shock",
+      "n": 8
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "The test",
+     "title": "The test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "priya",
+     "file": "04_priya.wav",
+     "text": "Then ask it to write one. Right now.",
+     "show": "Then ask it to write one. Right now.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "sir",
+     "file": "05_sir.wav",
+     "text": "Write an essay. My Hometown.",
+     "show": "Write an essay. My Hometown.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tts": "Write an essay. My hometown.",
+     "gain_db": 0.5
+    },
+    {
+     "who": "priya",
+     "file": "06_priya.wav",
+     "text": "New chat. Paste it. Ask.",
+     "show": "New chat. Paste it. Ask.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "bot",
+     "file": "07_bot.wav",
+     "text": "[1] No, I did not write this.",
+     "show": "No, I did not write this.",
+     "maxgap": 0.25,
+     "gap": 0.3
+    },
+    {
+     "who": "sir",
+     "file": "08_sir.wav",
+     "text": "You wrote it ten seconds ago!",
+     "show": "You wrote it ten seconds ago!",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "c3_c",
+   "type": "sk_class",
+   "tail": 0.1,
+   "lift": 0.4,
+   "pre": 0.35,
+   "boost": 0.85,
+   "data": {
+    "beats": [
+     {
+      "who": "bot",
+      "prop": "why",
+      "n": 9
+     },
+     {
+      "who": "sir",
+      "prop": "test",
+      "n": 10
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "Why",
+     "title": "Why",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "bot",
+     "file": "09_bot.wav",
+     "text": "I can't check what I wrote. [1] So I guess.",
+     "show": "I can't check what I wrote. So I guess.",
+     "maxgap": 0.25,
+     "gap": 0.55,
+     "pauses": {
+      "1": 0.35
+     },
+     "gain_db": -1.0
+    },
+    {
+     "who": "sir",
+     "file": "10_sir.wav",
+     "text": "It denied all ten essays it wrote itself?!",
+     "show": "It denied all ten essays it wrote itself?!",
+     "maxgap": 0.25,
+     "gap": 0.7,
+     "tts": "It denied all ten essays it wrote itself?!",
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "c3_d",
+   "type": "sk_class",
+   "tail": 0.1,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "sir",
+      "prop": "how",
+      "n": 11
+     },
+     {
+      "who": "priya",
+      "prop": "history",
+      "n": 12
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "The proof",
+     "title": "The proof",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "sir",
+     "file": "11_sir.wav",
+     "text": "Then how will I know who wrote it?!",
+     "show": "Then how will I know who wrote it?!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "priya",
+     "file": "12_priya.wav",
+     "text": "Check my version history. [1] Or ask me to explain it.",
+     "show": "Check my version history. Or ask me to explain it.",
+     "maxgap": 0.25,
+     "gap": 1.0,
+     "pauses": {
+      "1": 0.3
+     },
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "c3_e",
+   "type": "sk_class",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.2,
+   "rise": 1.35,
+   "drop_at": [
+    [
+     1,
+     "1"
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "sir",
+      "prop": "notes",
+      "n": 13
+     },
+     {
+      "who": "bot",
+      "prop": "notes_yes",
+      "n": 14
+     },
+     {
+      "who": "sir",
+      "prop": "lie",
+      "n": 15
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "Sir's notes",
+     "title": "Sir's notes",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru"
+   },
+   "lines": [
+    {
+     "who": "sir",
+     "file": "13_sir.wav",
+     "text": "Did you write my lecture notes?",
+     "show": "Did you write my lecture notes?",
+     "maxgap": 0.25,
+     "gap": 0.55,
+     "gain_db": 0.5
+    },
+    {
+     "who": "bot",
+     "file": "14_bot.wav",
+     "text": "[1] Yes.",
+     "show": "Yes.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "sir",
+     "file": "15_sir.wav",
+     "text": "I wrote those in 2012! [1] Machines lie!",
+     "show": "I wrote those in 2012! Machines lie!",
+     "maxgap": 0.25,
+     "gap": 0.05,
+     "tts": "I wrote those in twenty twelve! [1] Machines lie!",
+     "pauses": {
+      "1": 0.3
+     },
+     "gain_db": 2.0
+    }
+   ]
+  }
+ ]
+}

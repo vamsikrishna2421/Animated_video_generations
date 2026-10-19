@@ -1,0 +1,969 @@
+{
+ "id": "skit03v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "The AI that confessed",
+ "musicVol": [
+  0.4,
+  0.75
+ ],
+ "title": "The AI that confessed",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   577,
+   601
+  ],
+  [
+   1231,
+   1255
+  ]
+ ],
+ "musicBoosts": [
+  [
+   327,
+   736,
+   0.7
+  ],
+  [
+   736,
+   961,
+   0.85
+  ],
+  [
+   961,
+   1186,
+   1.0
+  ],
+  [
+   1186,
+   1411,
+   1.2
+  ],
+  [
+   0,
+   327,
+   1.3,
+   1
+  ],
+  [
+   1186,
+   1411,
+   1.35,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1411,
+ "music": "reel/skit03v1/score.wav",
+ "scenes": [
+  {
+   "id": "c3_a",
+   "type": "sk_class",
+   "data": {
+    "beats": [
+     {
+      "who": "sir",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "priya",
+      "prop": "plead",
+      "n": 2
+     },
+     {
+      "who": "sir",
+      "prop": "smug",
+      "n": 3
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "The AI confessed",
+     "title": "The AI confessed",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 327,
+   "lines": [
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_01.wav",
+     "from": 4,
+     "frames": 93,
+     "words": [
+      {
+       "w": "Zero!",
+       "from": 5,
+       "to": 13
+      },
+      {
+       "w": "The",
+       "from": 13,
+       "to": 30
+      },
+      {
+       "w": "AI",
+       "from": 30,
+       "to": 34
+      },
+      {
+       "w": "confessed.",
+       "from": 34,
+       "to": 49
+      },
+      {
+       "w": "It",
+       "from": 49,
+       "to": 67
+      },
+      {
+       "w": "wrote",
+       "from": 67,
+       "to": 75
+      },
+      {
+       "w": "your",
+       "from": 75,
+       "to": 82
+      },
+      {
+       "w": "essay!",
+       "from": 82,
+       "to": 91
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "priya",
+     "name": "Priya (you)",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit03v1/line_02.wav",
+     "from": 102,
+     "frames": 127,
+     "words": [
+      {
+       "w": "Sir,",
+       "from": 103,
+       "to": 125
+      },
+      {
+       "w": "I",
+       "from": 125,
+       "to": 130
+      },
+      {
+       "w": "wrote",
+       "from": 130,
+       "to": 146
+      },
+      {
+       "w": "it",
+       "from": 146,
+       "to": 154
+      },
+      {
+       "w": "myself!",
+       "from": 154,
+       "to": 192
+      },
+      {
+       "w": "At",
+       "from": 192,
+       "to": 204
+      },
+      {
+       "w": "2",
+       "from": 204,
+       "to": 210
+      },
+      {
+       "w": "AM!",
+       "from": 210,
+       "to": 224
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_03.wav",
+     "from": 234,
+     "frames": 73,
+     "words": [
+      {
+       "w": "It",
+       "from": 236,
+       "to": 241
+      },
+      {
+       "w": "said",
+       "from": 241,
+       "to": 249
+      },
+      {
+       "w": "yes.",
+       "from": 249,
+       "to": 258
+      },
+      {
+       "w": "Machines",
+       "from": 258,
+       "to": 282
+      },
+      {
+       "w": "don't",
+       "from": 282,
+       "to": 292
+      },
+      {
+       "w": "lie.",
+       "from": 292,
+       "to": 300
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "c3_b",
+   "type": "sk_class",
+   "data": {
+    "beats": [
+     {
+      "who": "priya",
+      "prop": "point",
+      "n": 4
+     },
+     {
+      "who": "sir",
+      "prop": "write",
+      "n": 5
+     },
+     {
+      "who": "priya",
+      "prop": "newchat",
+      "n": 6
+     },
+     {
+      "who": "bot",
+      "prop": "deny",
+      "n": 7
+     },
+     {
+      "who": "sir",
+      "prop": "shock",
+      "n": 8
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "The test",
+     "title": "The test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 327,
+   "frames": 409,
+   "lines": [
+    {
+     "who": "priya",
+     "name": "Priya (you)",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit03v1/line_04.wav",
+     "from": 10,
+     "frames": 91,
+     "words": [
+      {
+       "w": "Then",
+       "from": 12,
+       "to": 24
+      },
+      {
+       "w": "ask",
+       "from": 24,
+       "to": 30
+      },
+      {
+       "w": "it",
+       "from": 30,
+       "to": 36
+      },
+      {
+       "w": "to",
+       "from": 36,
+       "to": 46
+      },
+      {
+       "w": "write",
+       "from": 46,
+       "to": 56
+      },
+      {
+       "w": "one.",
+       "from": 56,
+       "to": 65
+      },
+      {
+       "w": "Right",
+       "from": 65,
+       "to": 86
+      },
+      {
+       "w": "now.",
+       "from": 86,
+       "to": 94
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_05.wav",
+     "from": 106,
+     "frames": 82,
+     "words": [
+      {
+       "w": "Write",
+       "from": 107,
+       "to": 119
+      },
+      {
+       "w": "an",
+       "from": 119,
+       "to": 124
+      },
+      {
+       "w": "essay.",
+       "from": 124,
+       "to": 159
+      },
+      {
+       "w": "My",
+       "from": 159,
+       "to": 165
+      },
+      {
+       "w": "Hometown.",
+       "from": 165,
+       "to": 184
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "priya",
+     "name": "Priya (you)",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit03v1/line_06.wav",
+     "from": 193,
+     "frames": 73,
+     "words": [
+      {
+       "w": "New",
+       "from": 193,
+       "to": 202
+      },
+      {
+       "w": "chat.",
+       "from": 202,
+       "to": 215
+      },
+      {
+       "w": "Paste",
+       "from": 215,
+       "to": 235
+      },
+      {
+       "w": "it.",
+       "from": 235,
+       "to": 251
+      },
+      {
+       "w": "Ask.",
+       "from": 251,
+       "to": 262
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "bot",
+     "name": "AI Chat",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit03v1/line_07.wav",
+     "from": 271,
+     "frames": 57,
+     "words": [
+      {
+       "w": "No,",
+       "from": 274,
+       "to": 280
+      },
+      {
+       "w": "I",
+       "from": 280,
+       "to": 282
+      },
+      {
+       "w": "did",
+       "from": 282,
+       "to": 294
+      },
+      {
+       "w": "not",
+       "from": 294,
+       "to": 299
+      },
+      {
+       "w": "write",
+       "from": 299,
+       "to": 307
+      },
+      {
+       "w": "this.",
+       "from": 307,
+       "to": 319
+      }
+     ],
+     "cues": {
+      "1": 274
+     }
+    },
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_08.wav",
+     "from": 337,
+     "frames": 53,
+     "words": [
+      {
+       "w": "You",
+       "from": 339,
+       "to": 345
+      },
+      {
+       "w": "wrote",
+       "from": 345,
+       "to": 352
+      },
+      {
+       "w": "it",
+       "from": 352,
+       "to": 362
+      },
+      {
+       "w": "ten",
+       "from": 362,
+       "to": 368
+      },
+      {
+       "w": "seconds",
+       "from": 368,
+       "to": 378
+      },
+      {
+       "w": "ago!",
+       "from": 378,
+       "to": 384
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "c3_c",
+   "type": "sk_class",
+   "data": {
+    "beats": [
+     {
+      "who": "bot",
+      "prop": "why",
+      "n": 9
+     },
+     {
+      "who": "sir",
+      "prop": "test",
+      "n": 10
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "Why",
+     "title": "Why",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 736,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "bot",
+     "name": "AI Chat",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit03v1/line_09.wav",
+     "from": 11,
+     "frames": 74,
+     "words": [
+      {
+       "w": "I",
+       "from": 14,
+       "to": 16
+      },
+      {
+       "w": "can't",
+       "from": 16,
+       "to": 23
+      },
+      {
+       "w": "check",
+       "from": 23,
+       "to": 29
+      },
+      {
+       "w": "what",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "I",
+       "from": 34,
+       "to": 36
+      },
+      {
+       "w": "wrote.",
+       "from": 36,
+       "to": 43
+      },
+      {
+       "w": "So",
+       "from": 43,
+       "to": 67
+      },
+      {
+       "w": "I",
+       "from": 67,
+       "to": 69
+      },
+      {
+       "w": "guess.",
+       "from": 69,
+       "to": 76
+      }
+     ],
+     "cues": {
+      "1": 65
+     }
+    },
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_10.wav",
+     "from": 101,
+     "frames": 84,
+     "words": [
+      {
+       "w": "It",
+       "from": 103,
+       "to": 107
+      },
+      {
+       "w": "denied",
+       "from": 107,
+       "to": 117
+      },
+      {
+       "w": "all",
+       "from": 117,
+       "to": 127
+      },
+      {
+       "w": "ten",
+       "from": 127,
+       "to": 132
+      },
+      {
+       "w": "essays",
+       "from": 132,
+       "to": 142
+      },
+      {
+       "w": "it",
+       "from": 142,
+       "to": 146
+      },
+      {
+       "w": "wrote",
+       "from": 146,
+       "to": 160
+      },
+      {
+       "w": "itself?!",
+       "from": 160,
+       "to": 178
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "c3_d",
+   "type": "sk_class",
+   "data": {
+    "beats": [
+     {
+      "who": "sir",
+      "prop": "how",
+      "n": 11
+     },
+     {
+      "who": "priya",
+      "prop": "history",
+      "n": 12
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "The proof",
+     "title": "The proof",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 961,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_11.wav",
+     "from": 0,
+     "frames": 54,
+     "words": [
+      {
+       "w": "Then",
+       "from": 3,
+       "to": 8
+      },
+      {
+       "w": "how",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "will",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "I",
+       "from": 21,
+       "to": 23
+      },
+      {
+       "w": "know",
+       "from": 23,
+       "to": 28
+      },
+      {
+       "w": "who",
+       "from": 28,
+       "to": 36
+      },
+      {
+       "w": "wrote",
+       "from": 36,
+       "to": 42
+      },
+      {
+       "w": "it?!",
+       "from": 42,
+       "to": 47
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "priya",
+     "name": "Priya (you)",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit03v1/line_12.wav",
+     "from": 58,
+     "frames": 129,
+     "words": [
+      {
+       "w": "Check",
+       "from": 59,
+       "to": 71
+      },
+      {
+       "w": "my",
+       "from": 71,
+       "to": 77
+      },
+      {
+       "w": "version",
+       "from": 77,
+       "to": 92
+      },
+      {
+       "w": "history.",
+       "from": 92,
+       "to": 128
+      },
+      {
+       "w": "Or",
+       "from": 128,
+       "to": 134
+      },
+      {
+       "w": "ask",
+       "from": 134,
+       "to": 142
+      },
+      {
+       "w": "me",
+       "from": 142,
+       "to": 148
+      },
+      {
+       "w": "to",
+       "from": 148,
+       "to": 154
+      },
+      {
+       "w": "explain",
+       "from": 154,
+       "to": 170
+      },
+      {
+       "w": "it.",
+       "from": 170,
+       "to": 178
+      }
+     ],
+     "cues": {
+      "1": 127
+     }
+    }
+   ]
+  },
+  {
+   "id": "c3_e",
+   "type": "sk_class",
+   "data": {
+    "beats": [
+     {
+      "who": "sir",
+      "prop": "notes",
+      "n": 13
+     },
+     {
+      "who": "bot",
+      "prop": "notes_yes",
+      "n": 14
+     },
+     {
+      "who": "sir",
+      "prop": "lie",
+      "n": 15
+     }
+    ],
+    "demo": {
+     "model": "a free AI chatbot (Qwen 2.5, 7B), new chat each time",
+     "n_human": 20,
+     "human_no": 20,
+     "n_own": 10,
+     "own_no": 10
+    },
+    "yt": {
+     "chapter": "Sir's notes",
+     "title": "Sir's notes",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1186,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_13.wav",
+     "from": 0,
+     "frames": 49,
+     "words": [
+      {
+       "w": "Did",
+       "from": 0,
+       "to": 6
+      },
+      {
+       "w": "you",
+       "from": 6,
+       "to": 12
+      },
+      {
+       "w": "write",
+       "from": 12,
+       "to": 21
+      },
+      {
+       "w": "my",
+       "from": 21,
+       "to": 26
+      },
+      {
+       "w": "lecture",
+       "from": 26,
+       "to": 38
+      },
+      {
+       "w": "notes?",
+       "from": 38,
+       "to": 48
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "bot",
+     "name": "AI Chat",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/skit03v1/line_14.wav",
+     "from": 65,
+     "frames": 22,
+     "words": [
+      {
+       "w": "Yes.",
+       "from": 69,
+       "to": 75
+      }
+     ],
+     "cues": {
+      "1": 69
+     }
+    },
+    {
+     "who": "sir",
+     "name": "Sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit03v1/line_15.wav",
+     "from": 96,
+     "frames": 112,
+     "words": [
+      {
+       "w": "I",
+       "from": 98,
+       "to": 102
+      },
+      {
+       "w": "wrote",
+       "from": 102,
+       "to": 117
+      },
+      {
+       "w": "those",
+       "from": 117,
+       "to": 133
+      },
+      {
+       "w": "in",
+       "from": 133,
+       "to": 143
+      },
+      {
+       "w": "2012!",
+       "from": 143,
+       "to": 177
+      },
+      {
+       "w": "Machines",
+       "from": 177,
+       "to": 193
+      },
+      {
+       "w": "lie!",
+       "from": 193,
+       "to": 202
+      }
+     ],
+     "cues": {
+      "1": 174
+     }
+    }
+   ]
+  }
+ ]
+}

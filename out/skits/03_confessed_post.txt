@@ -1,0 +1,66 @@
+SKIT 03: "The AI that confessed" (POV skit, about 47 s English / Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/03_confessed.mp4 (English page) · out/skits/03_confessed_te.mp4 (Telugu page)
+Send copies: out/skits/03_confessed_ig.mp4 · out/skits/03_confessed_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on Sir's "Machines lie!" in the same frame as
+the opening, and loops back to "Zero! The AI confessed."; the ask lives in the caption.
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Sir pasted Priya's essay into a chatbot and asked, "You wrote this, right?" It said yes. Zero.
+
+So she had it write an essay, opened a new chat, pasted it in and asked again: "No, I did not write this."
+
+A chatbot can't tell whether it wrote something. Its yes or no is a guess, and OpenAI's own FAQ for teachers says its answers to "did you write this?" are random.
+
+We tested a free AI chatbot: it said "not mine" to all 10 essays it had written minutes earlier.
+
+What actually shows you wrote it: your drafts, your version history (Google Docs and Word keep one), and explaining it in your own words.
+
+=== COMMENT PROMPT ===
+Teacher or boss ever called your own work ChatGPT? Comment ME.
+
+=== HASHTAGS ===
+#AI #ChatGPT #Students #CollegeLife #LearnAI #AIinEducation
+
+=== PINNED_COMMENT ===
+Where this comes from:
+1) OpenAI's educator FAQ (Sept 2023): ChatGPT "has no 'knowledge' of what content could be AI-generated. It will sometimes make up responses to questions like 'did you write this [essay]?'... These responses are random and have no basis in fact." (Reported by Ars Technica, Business Today and Campus Technology.)
+2) It happened: Texas A&M University-Commerce, May 2023 (Washington Post). An instructor pasted his students' essays into ChatGPT and asked whether it wrote them; essays it "claimed" got a zero. The university said no student failed or was barred from graduating; several were cleared; one student showed her Google Docs timestamps.
+3) Our test (Oct 2026): a free open model (Qwen 2.5, 7B) on a laptop, a new chat for every question. It said "not mine" to all 10 school essays it had written minutes earlier, and to all 20 passages people wrote before 1950 (Tagore, Sarojini Naidu, Helen Keller, Austen and others). In 60 answers it never once said yes.
+Yes, some chatbots now remember your own past chats if memory is on. None can check what it wrote for someone else's account. AI-text detectors aren't proof either: OpenAI withdrew its own detector in July 2023 for low accuracy.
+
+=== COVER ===
+POV at a lecturer's desk: his laptop's chat, big, "You wrote this essay, right?" / "Yes, I wrote this essay."; a red 0 and an "AI COPY" stamp on her essay; yellow tag "POV: you wrote it yourself"
+
+=== ALT_TEXT ===
+Crayon-animated POV skit in a college staff room. A lecturer gives a student zero because a chatbot said "Yes, I wrote this essay." She asks him to make the chatbot write an essay, then paste it into a new chat and ask if it wrote it: the chatbot answers "No, I did not write this." It explains it can't check what it wrote, so it guesses. A card shows our test: a free AI chatbot called all 10 essays it wrote "not mine", and OpenAI's own FAQ calls these answers random. The student shows her essay's version history as proof. The lecturer then asks the chatbot about his own lecture notes from 2012; it says "Yes", and he shouts "Machines lie!"
+
+=== SOURCES (for comments) ===
+OpenAI educator FAQ, "Do AI detectors work?" (Sept 2023), as reported by Ars Technica (Sep 8, 2023) and Business Today (Sep 4, 2023): "ChatGPT has no 'knowledge' of what content could be AI-generated..."; "Do AI detectors work? In short, no."
+The Washington Post (May 18, 2023), "A professor accused his class of using ChatGPT, putting diplomas in jeopardy" (Pranshu Verma); The Register (May 17, 2023).
+OpenAI, "New AI classifier for indicating AI-written text" (Jan 31, 2023; withdrawn July 20, 2023 "due to its low rate of accuracy"): it caught 26% of AI-written text and wrongly flagged 9% of human text.
+Our test: pipeline/skit03/confess_demo.py, results in series/scripts/skit03_demo/results.json (Qwen2.5-7B-Instruct, 4-bit, llama.cpp, CPU, temperature 0).
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Sir Priya essay ni chatbot lo paste chesi "Idi nuvve raasaav kadaa?" ani adigaaru. Adi "avunu" andi. Zero.
+
+Priya daanto oka essay raayinchindi, new chat open chesi, adi paste chesi malli adigindi: "Ledu, idi nenu raayaledu."
+
+Chatbot taanu raasindo ledo cheppaledu. Daani "avunu" ainaa "ledu" ainaa guess maatrame. OpenAI teachers kosam raasina FAQ lo kooda, "did you write this?" ki daani answers random ani undi.
+
+Memu oka free AI chatbot ni test chesam: nimishaala mundu adi raasina 10 essays ki 10 kee "naadi kaadu" andi.
+
+Meeru raasaarani nijamga chupinchedi: mee drafts, mee version history (Google Docs, Word lo automatic ga untundi), mariyu mee maatallo explain cheyyadam.
+
+=== COMMENT PROMPT ===
+Meeru sontanga raasindi "ChatGPT tho raasav" ani evaraina annaraa? ME ani comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #ChatGPT #Students #TeluguComedy #LearnAI
+
+=== PINNED_COMMENT ===
+Idi ekkadi nunchi: 1) OpenAI educator FAQ (Sept 2023): ChatGPT ki edi AI raasindo teliyadu; "did you write this?" ki adi icche answers random. 2) Nijamga jarigindi: Texas A&M University-Commerce, May 2023 (Washington Post): oka instructor students essays ni ChatGPT lo paste chesi adigaadu, adi "naadi" annavaatiki zero icchaadu; chaala mandi clear ayyaaru; oka student tana Google Docs timestamps chupinchindi. 3) Maa test: free open model (Qwen 2.5, 7B), prati prashnaki new chat: taanu raasina 10 essays ki 10 kee "naadi kaadu" andi; 60 answers lo okkasaari kooda "avunu" analedu.
+
+=== COVER ===
+Lecturer desk POV: laptop chat lo "You wrote this essay, right?" / "Yes, I wrote this essay."; essay meeda red 0, "AI COPY" stamp; "POV: you wrote it yourself" tag (English visuals)

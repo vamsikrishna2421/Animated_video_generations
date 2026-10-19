@@ -169,6 +169,10 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   three-part Telugu line babbled in all four Parler takes (split it into two takes with `file2`/`tts2`); check each
   line's must-hear words (`MUST` in `pipeline/ep34/voice.py`): the word-hit judge passed "I loan" for "I'll own"; the
   first cut ran 93 s: write the AI's lines short and keep the explaining on screen.
+- Memory (Oct 19, skit 03): files in `/dev/shm` count against the shell's memory limit (about 13.7 GB), so a 7B model
+  in `/dev/shm` plus its llama.cpp process plus Parler got the demo killed. Run one heavy model at a time and delete
+  the other models from `/dev/shm` meanwhile (`/tmp/claude-0/hf_dl.py` puts Parler and Whisper back in a minute). Long
+  demos save results row by row and can resume (`pipeline/skit03/confess_demo.py`).
 - Parler runs words together across a pause: "Why two? Switch one off" -> "why to switch one off", "pain balm" ->
   "paint bomb" in six takes. Re-roll with a word check (the judge's word hit passed both), or reword.
 - Short exclamations get misread ("June?!" came out "Johnny"): give a spoken form in the TTS override.
