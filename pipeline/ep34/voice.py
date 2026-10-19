@@ -32,7 +32,7 @@ MUST = {"en": {1: [("customers",), ("silent",)], 3: [("rent",)], 4: [("orders", 
                16: [("sixty", "566", "66"), ("231", "thirty")], 18: [("delivery",)], 20: [("rent",), ("offline", "off"), ("internet",), ("own",)],
                21: [("test",), ("calculator",)], 22: [("own",)], 23: [("lakh", "lac", "lack", "lakhs"), ("graphics",)], 25: [("renting",)]},
         # Telugu, as the Hindi-decoding judge writes it: line 10's first new take passed the strict judge as gibberish
-        "te": {10: [("फ्री", "फ्रि", "free"), ("तेस्च", "टेस्ट", "तेस्ट", "टेस्च", "test")]}}
+        "te": {8: [("मीरे", "मिरे", "मीरी", "मीर")], 10: [("फ्री", "फ्रि", "free"), ("तेस्च", "टेस्ट", "तेस्ट", "टेस्च", "test")]}}
 
 
 def heard(path, who, n, lang):

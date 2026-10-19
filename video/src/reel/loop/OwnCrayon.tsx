@@ -197,7 +197,7 @@ const StOwn: React.FC<SP> = ({ s }) => {
     if (b.prop === "test") [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 6 + q * 8} src="audio/sfx_tick.wav" vol={0.16} />));
     if (b.prop === "guess") sfx.push(<Sfx key={k("q")} at={at - 4} src="audio/gag_pop.wav" vol={0.35} />);
     if (b.prop === "bars") sfx.push(<Sfx key={k("a")} at={at + 4} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("b")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.4} />,
-      <Sfx key={k("s")} at={end + 1} src="audio/gag_boing.wav" vol={0.5} />);
+      <Sfx key={k("s")} at={end + 1} src="audio/gag_boing.wav" vol={0.75} />);
     if (b.prop === "eighteen") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.5) - 1} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) + 4} src="audio/sfx_success.wav" vol={0.45} />);
     if (b.prop === "stopwatch") [0, 1, 2, 3, 4].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 4 + q * 7} src="audio/sfx_tick.wav" vol={0.2} />));
     if (b.prop === "nodelivery") sfx.push(<Sfx key={k("l")} at={at + 8} src="audio/watch_click.wav" vol={0.5} />);
@@ -300,8 +300,8 @@ const StOwn: React.FC<SP> = ({ s }) => {
           if (b.prop === "gpu") {
             gpuCard(c, 540, 700, 1.15, r, f);
             tag(c, "about ₹25 lakh", 540, 1000, 84, COL.yellow, INK, -0.04, seg(p, 0.1, 0.25));
-            c.font = handF(34); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("a big free brain on one 80 GB card (an H100),", 540, 1140);
-            c.fillText("like OpenAI's gpt-oss-120b runs on", 540, 1192);
+            c.font = handF(42); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("one 80 GB card (an H100)", 540, 1140);
+            c.fillText("runs a big free brain like gpt-oss-120b", 540, 1196);
             tag(c, "120 billion numbers (ours: 7 billion)", 540, 1300, 44, "#e2e8f0", INK, 0, seg(p, 0.3, 0.45));
           }
           c.restore();

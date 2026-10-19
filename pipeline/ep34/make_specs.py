@@ -33,7 +33,7 @@ LINES = {
     20: ("ai", "wide", "rule", "Rent needs internet. [1] Own works offline, data stays home, but you buy the computer."),
     21: ("ai", "wide", "calc", "Your bills? Rent, and test it first. [1] Net down? Calculator."),
     22: ("ravi", "wide", "own", "I don't RENT! I'll own the biggest free brain!"),
-    23: ("ai", "screen", "gpu", "The big ones run on a twenty-five-lakh graphics card."),
+    23: ("ai", "screen", "gpu", "The big ones run on a ₹25 lakh graphics card."),
     24: ("ravi", "ravi", "rentpc", "Then I'll rent a big computer."),
     25: ("ai", "wide", "again", "So... [1] renting again."),
 }
@@ -63,7 +63,7 @@ TE = {
     1: ("అరే ఏఐ, పది మంది కస్టమర్లు వెయిటింగ్, నువ్వు మాట్లాడవేంటి?!", None),
     2: ("ఇంటర్నెట్ లేదండి. మీరు నన్ను అద్దెకు తీసుకున్నారు.", None),
     3: ("ఏంటీ, అద్దెకా?! ఇరవై ఏళ్లు ఈ షాప్ అద్దెకు ఉన్నా. తర్వాత కొనేశా!", None),
-    4: ("నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.", None),
+    4: ("నా బ్రెయిన్ కంపెనీ కంప్యూటర్లలో ఉంటుంది. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.", None),
     5: ("అయితే నేనే సొంత బ్రెయిన్ కొంటా!", None),
     6: ("కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్.", None),   # ChatGPT's maker: on screen only (render review)
     7: ("ఫ్రీగా ఇస్తారా?!", None),
@@ -87,6 +87,10 @@ TE = {
     25: ("అంటే... [1] మళ్ళీ అద్దెకేనండి.", None),
 }
 TE_PART2 = {12: "ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది."}   # in one take Parler babbled all four tries: two takes, joined
+SHOW_TE = {8: "The app is free. You buy the phone."}   # the Telugu joke, not the English one (Telugu render review)
+GAP_TE = {12: 0.2}   # one silence only before "eighteen": the gap after the tomatoes made a second one
+GAIN_TE = {22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0}   # a lift into the ending: the Telugu Q4 came out quieter than Q3
+SCENE_TE = {"st_g": {"boost": 1.5}}
 YT = {"st_a": "He rents his AI", "st_b": "Closed: a rented brain", "st_c": "Open: a free brain", "st_d": "Our bill test",
       "st_e": "18 out of 20: two wrong bills", "st_f": "Rent or own?", "st_g": "Renting again"}
 
@@ -106,8 +110,8 @@ def spec(lang="en"):
         lines, beats = [], []
         for n in range(a, b + 1):
             who, shot, prop, text = LINES[n]
-            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW[n],
-                  "maxgap": 0.28, "gap": GAP.get(n, 0.14)}
+            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW_TE.get(n, SHOW[n]) if te else SHOW[n],
+                  "maxgap": 0.28, "gap": (GAP_TE.get(n) if te else None) or GAP.get(n, 0.14)}
             if te and TE[n][1]:
                 ln["tts"] = TE[n][1]
             if te and n in TE_PART2:
@@ -119,7 +123,7 @@ def spec(lang="en"):
             if n in PAUSES:
                 ln["pauses"] = PAUSES[n]
             # loudness: Ravi's shouts a little above the AI; the result and the last line lifted
-            g = (-1.0 if who == "ai" else 1.5) + {14: 2.0, 25: 1.5}.get(n, 0.0)
+            g = (-1.0 if who == "ai" else 1.5) + {14: 2.0, 25: 1.5}.get(n, 0.0) + (GAIN_TE.get(n, 0.0) if te else 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)
@@ -127,6 +131,8 @@ def spec(lang="en"):
         data = {"beats": beats, "captionTop": 1500, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
         if te:
             data["handle"] = "@ai_maastaaru_telugu"
+        if te:
+            flags = {**flags, **SCENE_TE.get(scid, {})}
         scenes.append({"id": scid, "type": "sk_own", "tail": flags.get("tail", 0.2),
                        **{k: v for k, v in flags.items() if k != "tail"}, "data": data, "lines": lines})
     s["scenes"] = scenes

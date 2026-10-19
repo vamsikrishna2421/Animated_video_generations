@@ -135,7 +135,7 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.",
+     "text": "నా బ్రెయిన్ కంపెనీ కంప్యూటర్లలో ఉంటుంది. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.",
      "show": "My brain is on a company's computers. Your orders go there too. Closed model: pay per question.",
      "maxgap": 0.28,
      "gap": 0.14,
@@ -217,7 +217,7 @@
      "who": "ai",
      "file": "08_ai.wav",
      "text": "యాప్ ఫ్రీ అండి. [1] ఫోన్ మీరే కొనుక్కోవాలి.",
-     "show": "The brain is free. The skull is sold separately.",
+     "show": "The app is free. You buy the phone.",
      "maxgap": 0.28,
      "gap": 0.4,
      "gain_db": -1.0
@@ -300,7 +300,7 @@
      "text": "వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. <pause 0.3> [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.",
      "show": "One gigabyte: one right. Three gigabytes: nine. It added tomatoes nobody ordered.",
      "maxgap": 0.28,
-     "gap": 0.45,
+     "gap": 0.2,
      "tts": "వన్ జీబీ, ఒక్కటే. త్రీ జీబీ, తొమ్మిది.",
      "file2": "12b_ai.wav",
      "tts2": "ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.",
@@ -486,7 +486,7 @@
    "type": "sk_own",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.35,
+   "boost": 1.5,
    "rise": 1.4,
    "data": {
     "beats": [
@@ -531,16 +531,15 @@
      "show": "I don't RENT! I'll own the biggest free brain!",
      "maxgap": 0.28,
      "gap": 0.14,
-     "gain_db": 1.5
+     "gain_db": 2.5
     },
     {
      "who": "ai",
      "file": "23_ai.wav",
      "text": "పెద్దవి పాతిక లక్షల గ్రాఫిక్స్ కార్డ్ మీద నడుస్తాయండి.",
-     "show": "The big ones run on a twenty-five-lakh graphics card.",
+     "show": "The big ones run on a ₹25 lakh graphics card.",
      "maxgap": 0.28,
-     "gap": 0.35,
-     "gain_db": -1.0
+     "gap": 0.35
     },
     {
      "who": "ravi",
@@ -549,7 +548,7 @@
      "show": "Then I'll rent a big computer.",
      "maxgap": 0.28,
      "gap": 0.14,
-     "gain_db": 1.5
+     "gain_db": 2.5
     },
     {
      "who": "ai",
@@ -561,7 +560,7 @@
      "pauses": {
       "1": 0.6
      },
-     "gain_db": 0.5
+     "gain_db": 1.5
     }
    ]
   }
