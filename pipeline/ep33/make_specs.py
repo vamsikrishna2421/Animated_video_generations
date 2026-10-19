@@ -1,4 +1,5 @@
-# EP33 "We don't sell headaches" (RAG part 3: hybrid search and measuring it): writes reels/ep33v1.json (English).
+# EP33 "We don't sell headaches" (RAG part 3: hybrid search and measuring it): writes reels/ep33v1.json (English) and
+# reels/ep33te.json (Telugu: the user recorded English only, so Telugu is voiced on Parler by pipeline/ep33/voice_te.py).
 # The first episode voiced by the user (recorded-voice trial): pipeline/tools/cut_takes.py cut the recording into lines,
 # pipeline/ep33/voice_rec.py edited them into video/public/reel/ep33v1/src/NN_<who>.wav. Lines and their order come from
 # the script (series/scripts/ep33_hybrid_search.md, v2.1); [n] marks the words the pictures wait for.
@@ -52,22 +53,62 @@ SCENES = [("st_a", 1, 3, {"rise": 1.25, "tail": 0.1}),
 # seconds after line n (default 0.18). Render review: no room for the payoffs -> a beat after "We don't sell
 # headaches" (9), before "Both: eighteen" (17), either side of "Everyone except your stock book" (21, 22); 24: 20/20 holds
 GAP = {1: 0.25, 8: 0.3, 9: 0.7, 17: 0.75, 21: 0.45, 22: 0.7, 24: 0.55}
+# Telugu: the script's Telugu table with the same cue marks; "tts" = what Parler is given (codes and English words in
+# Telugu letters, no one-word sentences: Parler drops them, skit 01's lesson)
+TE = {
+    1: ("ఏ ఐ, [1] స్టాక్ లేదని చెప్పావా?! [2] బ్యాటరీలు ఇక్కడే ఉన్నాయి!", None),
+    2: ("E-1203 [1] నేను చదివిన మూడు పేజీల్లో లేదండి.", "ఈ ట్వెల్వ్ జీరో త్రీ, నేను చదివిన మూడు పేజీల్లో లేదండి."),
+    3: ("ఏ మూడు పేజీలు?!", None),
+    4: ("ఆర్డర్ కి దగ్గరగా ఉన్న మూడు. [1] నేను అర్థం బట్టి వెతుకుతాను.", None),
+    5: ("కోడ్ కి అర్థం ఏముంది?! [1] అది ఎగ్జాక్ట్ గా మ్యాచ్ అవ్వాలి!", None),
+    6: ("అయితే keyword search. [1] అదే word ఉంటేనే దొరుకుతుంది.", "అయితే కీవర్డ్ సెర్చ్. అదే వర్డ్ ఉంటేనే దొరుకుతుంది."),
+    7: ("సూపర్, ఇకనుంచి అదే.", None),
+    8: ("తర్వాతి ఆర్డర్: [1] తలనొప్పికి ఏదైనా.", None),
+    9: ("ఒక్కటీ దొరకలేదు. [1] మనం తలనొప్పులు అమ్మం.", None),
+    10: ("పెయిన్ బామ్ ఇక్కడే ఉంది కదా!", None),
+    11: ("ఆయన [1] బామ్ అనలేదు కదండీ.", None),
+    12: ("మరి ఏ సెర్చ్ వాడాలి?!", None),
+    13: ("రెండూ, [1] రెండు లిస్టులు కలిపి. [2] అయినా మూడు పేజీలే.", None),
+    14: ("పని చేస్తుందని నాకెలా తెలుస్తుంది?", None),
+    15: ("నన్ను కొత్త డెలివరీ బాయ్ లాగా టెస్ట్ చేయండి.", None),
+    16: ("జవాబు ముందే తెలిసిన ఇరవై ఆర్డర్లు ఇవ్వండి.", None),
+    17: ("Meaning search మాత్రమే: ఇరవైకి పదిహేను. [1] Keyword మాత్రమే: పదమూడు.", "మీనింగ్ సెర్చ్ మాత్రమే, ఇరవైకి పదిహేను. కీవర్డ్ మాత్రమే, పదమూడు."),
+    18: ("రెండూ కలిపి: [1] పద్దెనిమిది.", "రెండూ కలిపి, పద్దెనిమిది."),
+    19: ("పద్దెనిమిది. [1] అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. [2] ఏ రెండు ఆర్డర్లు?", None),
+    20: ("గిన్నెలు కడగడానికి ఏదైనా. [1] ఇంకా రమేష్ గారు ఎప్పుడూ తీసుకునేది.", None),
+    21: ("అవి అందరికీ తెలుసు!", None),
+    22: ("మీ స్టాక్ బుక్ కి తప్ప.", None),
+    23: ("రాశా, [1] మళ్ళీ టెస్ట్ చెయ్.", None),
+    24: ("ఇరవైకి ఇరవై.", None),
+    25: ("సూపర్, [1] రెండు ఎందుకు? [2] ఒకటి ఆపెయ్.", None),
+    26: ("సరేనండి. [1] Keyword ఆఫ్. [2] తర్వాతి ఆర్డర్: E-1203.", "సరేనండి. కీవర్డ్ ఆఫ్. తర్వాతి ఆర్డర్, ఈ ట్వెల్వ్ జీరో త్రీ."),
+}
+PAUSES_TE = {18: {"1": 0.45}}   # the beat before "eighteen" (the English take had it inserted in the edit)
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
 
-def spec():
-    s = {"id": "ep33v1", "title": "We don't sell headaches (EP33: hybrid search)", "label": "EP33", "banner": "Why the AI said OUT OF STOCK",
+def spec(lang="en"):
+    te = lang == "te"
+    sid = "ep33te" if te else "ep33v1"
+    s = {"id": sid, "title": "We don't sell headaches (EP33: hybrid search)" + (" (Telugu audio)" if te else ""), "label": "EP33",
+         "banner": "Why the AI said OUT OF STOCK",
          "topic": "", "look": "classic", "gap": 0.18, "lead": 0.15, "music": "lofi", "musicVol": [0.4, 0.75], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True,
-         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1500}
+         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.05 if te else 1.0, "captionTop": 1500}
+    if te:
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
     scenes = []
     for scid, a, b, flags in SCENES:
         lines, beats = [], []
         for n in range(a, b + 1):
             who, shot, prop, text = LINES[n]
-            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": text, "show": SHOW[n], "maxgap": 0.35,
-                  "gap": 0.05 if n == 26 else GAP.get(n, 0.18)}
+            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW[n], "maxgap": 0.3 if te else 0.35,
+                  "gap": 0.05 if n == 26 else GAP.get(n, 0.22 if te else 0.18)}
+            if te and TE[n][1]:
+                ln["tts"] = TE[n][1]
+            if te and n in PAUSES_TE:
+                ln["pauses"] = PAUSES_TE[n]
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
             # the fix and the twist build to the loudest stretch
             g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
@@ -77,13 +118,16 @@ def spec():
             lines.append(ln)
             beats.append({"who": who, "shot": shot, "prop": prop, "n": n})
         data = {"beats": beats, "captionTop": 1500, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
+        if te:
+            data["handle"] = "@ai_maastaaru_telugu"
         scenes.append({"id": scid, "type": "sk_stock", "tail": flags.get("tail", 0.2),
                        **{k: v for k, v in flags.items() if k != "tail"}, "data": data, "lines": lines})
     s["scenes"] = scenes
-    out = R / "ep33v1.json"
+    out = R / f"{sid}.json"
     out.write_text(json.dumps(s, ensure_ascii=False, indent=1))
     print("wrote", out)
 
 
 if __name__ == "__main__":
-    spec()
+    spec("en")
+    spec("te")

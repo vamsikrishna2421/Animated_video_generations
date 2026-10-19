@@ -1,0 +1,583 @@
+{
+ "id": "ep33te",
+ "title": "We don't sell headaches (EP33: hybrid search) (Telugu audio)",
+ "label": "EP33",
+ "banner": "Why the AI said OUT OF STOCK",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.18,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.75
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.05,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "st_a",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "rise": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "pages",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Out of stock?",
+     "title": "Out of stock?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "ఏ ఐ, [1] స్టాక్ లేదని చెప్పావా?! [2] బ్యాటరీలు ఇక్కడే ఉన్నాయి!",
+     "show": "AI! You told him \"out of stock\"?! The batteries are right there!",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "E-1203 [1] నేను చదివిన మూడు పేజీల్లో లేదండి.",
+     "show": "E-1203 wasn't on the three pages I read.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "tts": "ఈ ట్వెల్వ్ జీరో త్రీ, నేను చదివిన మూడు పేజీల్లో లేదండి.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "ఏ మూడు పేజీలు?!",
+     "show": "Which three pages?!",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "st_b",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.35,
+   "boost": 0.55,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "meaning",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "codes",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "keyword",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "thumb",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Meaning vs keyword",
+     "title": "Meaning vs keyword",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "ఆర్డర్ కి దగ్గరగా ఉన్న మూడు. [1] నేను అర్థం బట్టి వెతుకుతాను.",
+     "show": "The three closest to the order. I search by meaning.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "కోడ్ కి అర్థం ఏముంది?! [1] అది ఎగ్జాక్ట్ గా మ్యాచ్ అవ్వాలి!",
+     "show": "A code has no meaning! It has to match exactly!",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "అయితే keyword search. [1] అదే word ఉంటేనే దొరుకుతుంది.",
+     "show": "Then use keyword search. Exact words only.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "tts": "అయితే కీవర్డ్ సెర్చ్. అదే వర్డ్ ఉంటేనే దొరుకుతుంది.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "సూపర్, ఇకనుంచి అదే.",
+     "show": "Good. Only that from now on.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "st_c",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "boost": 0.55,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "order",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "zero",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "balm",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "words",
+      "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "We don't sell headaches",
+     "title": "We don't sell headaches",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "తర్వాతి ఆర్డర్: [1] తలనొప్పికి ఏదైనా.",
+     "show": "Next order: \"something for a headache.\"",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "gain_db": -2.0
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "ఒక్కటీ దొరకలేదు. [1] మనం తలనొప్పులు అమ్మం.",
+     "show": "No match. We don't sell headaches.",
+     "maxgap": 0.3,
+     "gap": 0.7,
+     "gain_db": -2.0
+    },
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "పెయిన్ బామ్ ఇక్కడే ఉంది కదా!",
+     "show": "The pain balm is right there!",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "ఆయన [1] బామ్ అనలేదు కదండీ.",
+     "show": "He never said \"balm\".",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": -2.0
+    },
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "మరి ఏ సెర్చ్ వాడాలి?!",
+     "show": "So which search do I use?!",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "st_d",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "lift": 0.35,
+   "pre": 0.45,
+   "boost": 0.8,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "hybrid",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fold",
+      "n": 14
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "delivery",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "sheet",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Both, still 3 pages",
+     "title": "Both, still 3 pages",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "13_ai.wav",
+     "text": "రెండూ, [1] రెండు లిస్టులు కలిపి. [2] అయినా మూడు పేజీలే.",
+     "show": "Both. Merge the two lists. Still three pages.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "14_ravi.wav",
+     "text": "పని చేస్తుందని నాకెలా తెలుస్తుంది?",
+     "show": "And how do I know it works?",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "15_ai.wav",
+     "text": "నన్ను కొత్త డెలివరీ బాయ్ లాగా టెస్ట్ చేయండి.",
+     "show": "Test me like a new delivery boy.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "జవాబు ముందే తెలిసిన ఇరవై ఆర్డర్లు ఇవ్వండి.",
+     "show": "Twenty orders you already know the answers to.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "st_e",
+   "type": "sk_stock",
+   "tail": 0.5,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bars",
+      "n": 17
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "both",
+      "n": 18
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 15, 13, 18",
+     "title": "Our test: 15, 13, 18",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "17_ai.wav",
+     "text": "Meaning search మాత్రమే: ఇరవైకి పదిహేను. [1] Keyword మాత్రమే: పదమూడు.",
+     "show": "Meaning only: fifteen out of twenty. Keyword only: thirteen.",
+     "maxgap": 0.3,
+     "gap": 0.75,
+     "tts": "మీనింగ్ సెర్చ్ మాత్రమే, ఇరవైకి పదిహేను. కీవర్డ్ మాత్రమే, పదమూడు.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "18_ai.wav",
+     "text": "రెండూ కలిపి: [1] పద్దెనిమిది.",
+     "show": "Both: eighteen.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "tts": "రెండూ కలిపి, పద్దెనిమిది.",
+     "pauses": {
+      "1": 0.45
+     },
+     "gain_db": 1.0
+    }
+   ]
+  },
+  {
+   "id": "st_f",
+   "type": "sk_stock",
+   "tail": 0.15,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "lost",
+      "n": 19
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "rows",
+      "n": 20
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "street",
+      "n": 21
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "booksearch",
+      "n": 22
+     },
+     {
+      "who": "ravi",
+      "shot": "book",
+      "prop": "write",
+      "n": 23
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "stamp",
+      "n": 24
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Write it down",
+     "title": "Write it down",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "19_ravi.wav",
+     "text": "పద్దెనిమిది. [1] అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. [2] ఏ రెండు ఆర్డర్లు?",
+     "show": "Eighteen. So two customers went home empty-handed. Which two?",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 2.1
+    },
+    {
+     "who": "ai",
+     "file": "20_ai.wav",
+     "text": "గిన్నెలు కడగడానికి ఏదైనా. [1] ఇంకా రమేష్ గారు ఎప్పుడూ తీసుకునేది.",
+     "show": "\"Something to wash vessels.\" And \"Ramesh garu's usual.\"",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": -0.4
+    },
+    {
+     "who": "ravi",
+     "file": "21_ravi.wav",
+     "text": "అవి అందరికీ తెలుసు!",
+     "show": "Everyone knows those!",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "gain_db": 3.1
+    },
+    {
+     "who": "ai",
+     "file": "22_ai.wav",
+     "text": "మీ స్టాక్ బుక్ కి తప్ప.",
+     "show": "Everyone except your stock book.",
+     "maxgap": 0.3,
+     "gap": 0.7,
+     "gain_db": 0.6
+    },
+    {
+     "who": "ravi",
+     "file": "23_ravi.wav",
+     "text": "రాశా, [1] మళ్ళీ టెస్ట్ చెయ్.",
+     "show": "Written. Test again.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 3.1
+    },
+    {
+     "who": "ai",
+     "file": "24_ai.wav",
+     "text": "ఇరవైకి ఇరవై.",
+     "show": "Twenty out of twenty.",
+     "maxgap": 0.3,
+     "gap": 0.55,
+     "gain_db": 0.6
+    }
+   ]
+  },
+  {
+   "id": "st_g",
+   "type": "sk_stock",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.35,
+   "rise": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "smug",
+      "n": 25
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "switchoff",
+      "n": 26
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "One is enough?",
+     "title": "One is enough?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "25_ravi.wav",
+     "text": "సూపర్, [1] రెండు ఎందుకు? [2] ఒకటి ఆపెయ్.",
+     "show": "Super! Why two? Switch one off.",
+     "maxgap": 0.3,
+     "gap": 0.22,
+     "gain_db": 3.1
+    },
+    {
+     "who": "ai",
+     "file": "26_ai.wav",
+     "text": "సరేనండి. [1] Keyword ఆఫ్. [2] తర్వాతి ఆర్డర్: E-1203.",
+     "show": "Okay. Keyword off. Next order: E-1203.",
+     "maxgap": 0.3,
+     "gap": 0.05,
+     "tts": "సరేనండి. కీవర్డ్ ఆఫ్. తర్వాతి ఆర్డర్, ఈ ట్వెల్వ్ జీరో త్రీ.",
+     "gain_db": 1.6
+    }
+   ]
+  }
+ ]
+}

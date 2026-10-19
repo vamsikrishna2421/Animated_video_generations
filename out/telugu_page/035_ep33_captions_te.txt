@@ -1,0 +1,36 @@
+UPLOAD: 035 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/035_ep33_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/035_ep33_insta_te_ig.mp4, about 22 MB). It loops: the last order is the first frame's order.
+
+=== CAPTION ===
+Shop AI customer ki "out of stock" ani cheppindi. Batteries akkade unnaayi.
+
+AI From Scratch Episode 33: hybrid search, mee AI search ni ela test cheyyali (RAG, part 3)
+- Meaning search meeru adigina ardhaanni pattukuntundi, kaani E-1203 lanti exact code daaniki anni codes laage kanipistundi
+- Keyword search exact word ni pattukuntundi, kaani "talanoppiki edaina" lo "balm" ane maate ledu: 0 matches
+- Rendoo vaadandi (hybrid search): rendu searches, rendu lists kalipi, AI inkaa 3 pages maatrame chaduvutundi
+- Maa real test, javaabu munde telisina 20 orders: meaning maatrame 15/20, keyword maatrame 13/20, rendoo kalipi 18/20
+- Miss ayina rendu search problems kaadu: "vessels", "Ramesh garu usual" stock book lo ekkadaa raayaledu. Raasaaka: 20/20
+
+Ela vaadaali:
+1. Azure AI Search, Elasticsearch, OpenSearch, Weaviate lo hybrid search oka option ga undi; Postgres lo pgvector plus full-text search
+2. AI search ni nammadaaniki mundu, javaabu telisina sumaaru 20 prashnalatho test cheyyandi; prati maarpu tarvaata ade test malli
+3. "Andarikee telusu" anukune vishayaalni raasi pettandi: AI raasina dhaanne kanukkuntundi
+
+Next: EP34, open vs closed models. Ravi anna tana AI ni sontham chesukogalada, leka rent ki maatrame tisukovaala?
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+Mee office AI search eppudoo miss chesedi edi: exact code aa, leka vere maatallo adigina prashna aa?
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #RAG #HybridSearch #LearnAI #AIFromScratch
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: 114 lines unna oka kalpitha kirana stock book, 8 lines chorapuna 15 pages; javaabu munde telisina 20 orders (4 codes, 4 local perlu, 8 vere maatallo, 3 mixed, 1 ekkadaa raayanidi). Prati order ki AI top 3 pages chaduvutundi. Meaning search = bge-small-en-v1.5 embeddings, keyword search = BM25, rendoo = reciprocal rank fusion (k = 60). Chadivina 3 pages lo sariaina page: 15, 13, 18 (20 lo); rendu missing vishayaalu raasaaka 20/20.
+Nijaayitee ga cheppaali: pages badulu okko item ni okko piece ga pedithe, meaning search anni codes ni pattukundi, hybrid valla laabham ledu. Ante codes podugu pages lo daakkunnappude hybrid ekkuva upayogam. Inkaa, miss ayina aa rendinte sari chesi 20/20 ante adi fix ki proof, search ki kaadu: sariaina re-test kotta orders tho cheyyaali. 20 orders chinna demo, benchmark kaadu.
+
+=== COVER ===
+Ravi anna counter meeda phone ni kodutunnaru; chat lo "E-1203" / "Out of stock, sorry"; pasupu sticker "It's RIGHT THERE" (English visuals)
+
+=== SOURCES (for comments) ===
+Same as the English page: out/035_ep33_reel_captions.txt (Anthropic Contextual Retrieval, Sep 2024; Microsoft Learn, Azure AI Search hybrid search overview; Elasticsearch RRF retriever reference; pgvector README; OpenAI file search guide; Cormack, Clarke and Büttcher, SIGIR 2009; our demo pipeline/ep33/hybrid_demo.py).
