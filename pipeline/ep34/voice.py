@@ -77,10 +77,14 @@ def main(lang, only):
                     print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, n)[2]}", flush=True)
                 for k in range(0 if best else 4):
                     tmp = takes / f"{key}_{k}.wav"
-                    if fish:
-                        fish_say(text, str(tmp), ref=str(FISH_REF), ref_text=FISH_REF_TEXT)
-                    else:
-                        say(lang, text, tmp, voice=voice, pause=0.2)
+                    try:
+                        if fish:
+                            fish_say(text, str(tmp), ref=str(FISH_REF), ref_text=FISH_REF_TEXT)
+                        else:
+                            say(lang, text, tmp, voice=voice, pause=0.2)
+                    except RuntimeError as e:   # Fish's gateway errors outlast its own retries some evenings: count it as a failed try
+                        print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
+                        continue
                     trim(tmp)
                     ok, score, info = judge(heard(tmp, who, n, lang), text, lang, n)
                     print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
@@ -88,6 +92,9 @@ def main(lang, only):
                         best = (score, tmp)
                     if ok:
                         break
+                if best is None:
+                    print(f"{n:02d} {who}: NO TAKE (every try failed)", flush=True)
+                    continue
                 if best[0] is not None:   # keep only the chosen take in the cache
                     for f in takes.glob(f"{key}_*.wav"):
                         if f != best[1]:
