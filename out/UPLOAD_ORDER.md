@@ -40,7 +40,7 @@ Already posted: `out/posted/`.
 | 033 | ep31 | Teach an AI a New Skill Without a Supercomputer (LoRA) | ready |
 | 034 | ep32 | How AI Finds the Right Page (RAG, Part 2) | ready |
 | 035 | ep33 | We Don't Sell Headaches (EP33: hybrid search, tested; skit, AI voices) | ready |
-| 036 | ep34 | Rent a Brain or Own One? (EP34: open vs closed models, tested; skit, AI voices) | in progress |
+| 036 | ep34 | Rent a Brain or Own One? (EP34: open vs closed models, tested; skit, AI voices) | ready |
 | 037 | ep35 | Small Language Models | ready |
 | 038 | ep36 | Why AI Runs on GPUs | ready |
 | 039 | ep37 | Quantization: Shrinking AI Models | ready |

@@ -40,7 +40,7 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
   "snapshot_download"): it kills your own shell (exit code 144; it happened three times on Oct 18).
 
 ## Run 1: daily new episode (a teaching skit)
-From EP33 on, each episode teaches its syllabus topic through a short skit, the way skit 01 taught EP31's lesson
+From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and explaining the concept... should be the way going forward"), each episode teaches its syllabus topic through a short skit, the way skit 01 taught EP31's lesson
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (after
@@ -165,6 +165,10 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - TTS sped up by the spec `tempo` (ffmpeg atempo) blurs key words: EP33 at 1.2x read "Keyword off" as "Keyword on",
   "pain relief" as "paint relief", "Test" as "just". Check each line after the build (Whisper on `line_NN.wav` or per
   line on the render) and give a blurred line its own `"tempo": 1.0`.
+- EP34 lessons: Parler's English Ravi said "then" for "ten" in every take (reword away from such words); a long
+  three-part Telugu line babbled in all four Parler takes (split it into two takes with `file2`/`tts2`); check each
+  line's must-hear words (`MUST` in `pipeline/ep34/voice.py`): the word-hit judge passed "I loan" for "I'll own"; the
+  first cut ran 93 s: write the AI's lines short and keep the explaining on screen.
 - Parler runs words together across a pause: "Why two? Switch one off" -> "why to switch one off", "pain balm" ->
   "paint bomb" in six takes. Re-roll with a word check (the judge's word hit passed both), or reword.
 - Short exclamations get misread ("June?!" came out "Johnny"): give a spoken form in the TTS override.
