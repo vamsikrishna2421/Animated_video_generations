@@ -143,7 +143,10 @@ Virality can't be promised. What a run controls: the first second, a reason to k
 payoff worth sharing, a loop, and a caption that asks for a comment.
 
 ## Lessons that cost a re-render (check before rendering)
-- Telugu: any word that can be heard as a swear word (EP31: "LoRA" flapped to "loda"; now written "లారా").
+- Telugu: any word that can be heard as a swear word or a slur (EP31: "LoRA" flapped to "loda"; now written "లారా".
+  EP33: "దొరకలేదు" through the AI's phone filter was heard as "turakaledu"; now "నో మ్యాచ్ అండి").
+  A phone filter on Telugu keeps a low cut near 150 Hz (300 Hz took d vs t and the nasals: "బామ్" -> "bava"),
+  and the takes are judged after the filter, not before (pipeline/ep33/voice_te.py).
   Big numbers in English inside Telugu sentences; a short pause before a key number.
 - Fish can repeat a sentence or add words: judge every take with ASR (word hit, repeats, rate) before using it.
 - Short exclamations get misread ("June?!" came out "Johnny"): give a spoken form in the TTS override.

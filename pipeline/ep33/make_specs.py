@@ -56,7 +56,7 @@ GAP = {1: 0.25, 8: 0.3, 9: 0.7, 17: 0.75, 21: 0.45, 22: 0.7, 24: 0.55}
 # Telugu: the script's Telugu table with the same cue marks; "tts" = what Parler is given (codes and English words in
 # Telugu letters, no one-word sentences: Parler drops them, skit 01's lesson)
 TE = {
-    1: ("ఏ ఐ, [1] స్టాక్ లేదని చెప్పావా?! [2] బ్యాటరీలు ఇక్కడే ఉన్నాయి!", None),
+    1: ("ఏఐ, [1] స్టాక్ లేదని చెప్పావా?! [2] బ్యాటరీలు ఇక్కడే ఉన్నాయి!", None),   # "ఏ ఐ" was heard as "ye ye"
     2: ("E-1203 [1] నేను చదివిన మూడు పేజీల్లో లేదండి.", "ఈ ట్వెల్వ్ జీరో త్రీ, నేను చదివిన మూడు పేజీల్లో లేదండి."),
     3: ("ఏ మూడు పేజీలు?!", None),
     4: ("ఆర్డర్ కి దగ్గరగా ఉన్న మూడు. [1] నేను అర్థం బట్టి వెతుకుతాను.", None),
@@ -64,17 +64,17 @@ TE = {
     6: ("అయితే keyword search. [1] అదే word ఉంటేనే దొరుకుతుంది.", "అయితే కీవర్డ్ సెర్చ్. అదే వర్డ్ ఉంటేనే దొరుకుతుంది."),
     7: ("సూపర్, ఇకనుంచి అదే.", None),
     8: ("తర్వాతి ఆర్డర్: [1] తలనొప్పికి ఏదైనా.", None),
-    9: ("ఒక్కటీ దొరకలేదు. [1] మనం తలనొప్పులు అమ్మం.", None),
+    9: ("నో మ్యాచ్ అండి. [1] మనం తలనొప్పులు అమ్మం.", None),   # never "దొరకలేదు": through the phone it was heard as a slur
     10: ("పెయిన్ బామ్ ఇక్కడే ఉంది కదా!", None),
     11: ("ఆయన [1] బామ్ అనలేదు కదండీ.", None),
     12: ("మరి ఏ సెర్చ్ వాడాలి?!", None),
-    13: ("రెండూ, [1] రెండు లిస్టులు కలిపి. [2] అయినా మూడు పేజీలే.", None),
+    13: ("రెండూ వాడండి. [1] లిస్టులు కలిపేస్తా. [2] అయినా చదివేది మూడు పేజీలే.", None),   # "రెండూ, రెండు" sounded like a stutter
     14: ("పని చేస్తుందని నాకెలా తెలుస్తుంది?", None),
     15: ("నన్ను కొత్త డెలివరీ బాయ్ లాగా టెస్ట్ చేయండి.", None),
-    16: ("జవాబు ముందే తెలిసిన ఇరవై ఆర్డర్లు ఇవ్వండి.", None),
+    16: ("జవాబు తెలిసిన ఇరవై ఆర్డర్లు.", None),   # 16 and 19 cut: 39-56 s dragged
     17: ("Meaning search మాత్రమే: ఇరవైకి పదిహేను. [1] Keyword మాత్రమే: పదమూడు.", "మీనింగ్ సెర్చ్ మాత్రమే, ఇరవైకి పదిహేను. కీవర్డ్ మాత్రమే, పదమూడు."),
     18: ("రెండూ కలిపి: [1] పద్దెనిమిది.", "రెండూ కలిపి, పద్దెనిమిది."),
-    19: ("పద్దెనిమిది. [1] అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. [2] ఏ రెండు ఆర్డర్లు?", None),
+    19: ("పద్దెనిమిది. [1] అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. [2] ఏ రెండు?!", None),
     20: ("గిన్నెలు కడగడానికి ఏదైనా. [1] ఇంకా రమేష్ గారు ఎప్పుడూ తీసుకునేది.", None),
     21: ("అవి అందరికీ తెలుసు!", None),
     22: ("మీ స్టాక్ బుక్ కి తప్ప.", None),
@@ -85,6 +85,8 @@ TE = {
 }
 TE_PART2 = {26: "తర్వాతి ఆర్డర్, ఈ ట్వెల్వ్ జీరో త్రీ."}   # in one take Parler looped the line (7.6 s): two takes, joined
 PAUSES_TE = {18: {"1": 0.45}}   # the beat before "eighteen" (the English take had it inserted in the edit)
+SHOW_TE = {7: "Super. Only that from now on."}   # he says "సూపర్" here and again at 25 (the callback)
+GAP_TE = {11: 0.45}   # render review: air after the "balm" punchline too
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
@@ -104,8 +106,8 @@ def spec(lang="en"):
         lines, beats = [], []
         for n in range(a, b + 1):
             who, shot, prop, text = LINES[n]
-            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW[n], "maxgap": 0.3 if te else 0.35,
-                  "gap": 0.05 if n == 26 else GAP.get(n, 0.22 if te else 0.18)}
+            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW_TE.get(n, SHOW[n]) if te else SHOW[n], "maxgap": 0.3 if te else 0.35,
+                  "gap": 0.05 if n == 26 else (te and GAP_TE.get(n)) or GAP.get(n, 0.22 if te else 0.18)}
             if te and TE[n][1]:
                 ln["tts"] = TE[n][1]
             if te and n in PAUSES_TE:
@@ -114,8 +116,9 @@ def spec(lang="en"):
                 ln.update({"file2": f"{n:02d}b_{who}.wav", "tts2": TE_PART2[n], "pause": 0.3})
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
             # the fix and the twist build to the loudest stretch
-            g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
-            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0)
+            # Telugu: no dip for the AI in the joke (its lines 8, 9, 11 were the quietest in the mix), and 9 lifted
+            g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 and not (te and who == "ai") else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
+            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0) + (1.0 if te and n == 9 else 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)

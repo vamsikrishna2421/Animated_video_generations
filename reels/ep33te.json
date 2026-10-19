@@ -75,7 +75,7 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "ఏ ఐ, [1] స్టాక్ లేదని చెప్పావా?! [2] బ్యాటరీలు ఇక్కడే ఉన్నాయి!",
+     "text": "ఏఐ, [1] స్టాక్ లేదని చెప్పావా?! [2] బ్యాటరీలు ఇక్కడే ఉన్నాయి!",
      "show": "AI! You told him \"out of stock\"?! The batteries are right there!",
      "maxgap": 0.3,
      "gap": 0.25,
@@ -177,7 +177,7 @@
      "who": "ravi",
      "file": "07_ravi.wav",
      "text": "సూపర్, ఇకనుంచి అదే.",
-     "show": "Good. Only that from now on.",
+     "show": "Super. Only that from now on.",
      "maxgap": 0.3,
      "gap": 0.22,
      "gain_db": 1.5
@@ -238,16 +238,15 @@
      "show": "Next order: \"something for a headache.\"",
      "maxgap": 0.3,
      "gap": 0.3,
-     "gain_db": -2.0
+     "gain_db": -1.0
     },
     {
      "who": "ai",
      "file": "09_ai.wav",
-     "text": "ఒక్కటీ దొరకలేదు. [1] మనం తలనొప్పులు అమ్మం.",
+     "text": "నో మ్యాచ్ అండి. [1] మనం తలనొప్పులు అమ్మం.",
      "show": "No match. We don't sell headaches.",
      "maxgap": 0.3,
-     "gap": 0.7,
-     "gain_db": -2.0
+     "gap": 0.7
     },
     {
      "who": "ravi",
@@ -264,8 +263,8 @@
      "text": "ఆయన [1] బామ్ అనలేదు కదండీ.",
      "show": "He never said \"balm\".",
      "maxgap": 0.3,
-     "gap": 0.22,
-     "gain_db": -2.0
+     "gap": 0.45,
+     "gain_db": -1.0
     },
     {
      "who": "ravi",
@@ -324,7 +323,7 @@
     {
      "who": "ai",
      "file": "13_ai.wav",
-     "text": "రెండూ, [1] రెండు లిస్టులు కలిపి. [2] అయినా మూడు పేజీలే.",
+     "text": "రెండూ వాడండి. [1] లిస్టులు కలిపేస్తా. [2] అయినా చదివేది మూడు పేజీలే.",
      "show": "Both. Merge the two lists. Still three pages.",
      "maxgap": 0.3,
      "gap": 0.22,
@@ -351,7 +350,7 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "జవాబు ముందే తెలిసిన ఇరవై ఆర్డర్లు ఇవ్వండి.",
+     "text": "జవాబు తెలిసిన ఇరవై ఆర్డర్లు.",
      "show": "Twenty orders you already know the answers to.",
      "maxgap": 0.3,
      "gap": 0.22,
@@ -474,7 +473,7 @@
     {
      "who": "ravi",
      "file": "19_ravi.wav",
-     "text": "పద్దెనిమిది. [1] అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. [2] ఏ రెండు ఆర్డర్లు?",
+     "text": "పద్దెనిమిది. [1] అంటే ఇద్దరు కస్టమర్లు ఉత్త చేతులతో వెళ్ళారు. [2] ఏ రెండు?!",
      "show": "Eighteen. So two customers went home empty-handed. Which two?",
      "maxgap": 0.3,
      "gap": 0.22,

@@ -28,9 +28,10 @@ Mee office AI search eppudoo miss chesedi edi: exact code aa, leka vere maatallo
 === PINNED_COMMENT ===
 Memu ela test chesaam: 114 lines unna oka kalpitha kirana stock book, 8 lines chorapuna 15 pages; javaabu munde telisina 20 orders (4 codes, 4 local perlu, 8 vere maatallo, 3 mixed, 1 ekkadaa raayanidi). Prati order ki AI top 3 pages chaduvutundi. Meaning search = bge-small-en-v1.5 embeddings, keyword search = BM25, rendoo = reciprocal rank fusion (k = 60). Chadivina 3 pages lo sariaina page: 15, 13, 18 (20 lo); rendu missing vishayaalu raasaaka 20/20.
 Nijaayitee ga cheppaali: pages badulu okko item ni okko piece ga pedithe, meaning search anni codes ni pattukundi, hybrid valla laabham ledu. Ante codes podugu pages lo daakkunnappude hybrid ekkuva upayogam. Inkaa, miss ayina aa rendinte sari chesi 20/20 ante adi fix ki proof, search ki kaadu: sariaina re-test kotta orders tho cheyyaali. 20 orders chinna demo, benchmark kaadu.
+Telugu lo adigite? Maa test English lo: stock book, 20 orders rendoo English. Video lo Ravi anna Telugu maatlaadataaru, kaani AI vetikindi English orders. Mee customers Telugu lo type chesi catalogue English lo unte, keyword search ki common maate undadu (codes tappa), memu vaadina bge-small-en-v1.5 English model maatrame. Multilingual embedding model kaavaali (udaa: BAAI bge-m3, 100+ languages ani BAAI cheptundi); Telugu ki ela pani chestundo mee Telugu orders tho ide 20-orders test chesi choodandi.
 
 === COVER ===
 Ravi anna counter meeda phone ni kodutunnaru; chat lo "E-1203" / "Out of stock, sorry"; pasupu sticker "It's RIGHT THERE" (English visuals)
 
 === SOURCES (for comments) ===
-Same as the English page: out/035_ep33_reel_captions.txt (Anthropic Contextual Retrieval, Sep 2024; Microsoft Learn, Azure AI Search hybrid search overview; Elasticsearch RRF retriever reference; pgvector README; OpenAI file search guide; Cormack, Clarke and Büttcher, SIGIR 2009; our demo pipeline/ep33/hybrid_demo.py).
+Same as the English page: out/035_ep33_reel_captions.txt (Anthropic Contextual Retrieval, Sep 2024; Microsoft Learn, Azure AI Search hybrid search overview; Elasticsearch RRF retriever reference; pgvector README; OpenAI file search guide; Cormack, Clarke and Büttcher, SIGIR 2009; our demo pipeline/ep33/hybrid_demo.py; BAAI bge-m3 model card: "more than 100 working languages").

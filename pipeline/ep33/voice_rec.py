@@ -137,10 +137,12 @@ def stretch(a, tempo):
     return b
 
 
-def phone(a, light=False):
-    """The phone-speaker sound (skit 02's caller filter); light: wider band and less drive, for the numbers."""
+def phone(a, light=False, lo_cut=None):
+    """The phone-speaker sound (skit 02's caller filter); light: wider band and less drive, for the numbers.
+    lo_cut: a lower low cut, for Telugu (its d/t and m/n cues sit below 300 Hz)."""
     from scipy.signal import butter, sosfilt
     lo, hi, drive, mid = (220, 6000, 1.1, 0.15) if light else (300, 4000, 1.5, 0.3)
+    lo = lo_cut or lo
     x = sosfilt(butter(2, [lo, hi], "bp", fs=SR, output="sos"), a)
     x = x + mid * sosfilt(butter(2, [1500, 3200], "bp", fs=SR, output="sos"), x)
     x = np.tanh(x / (np.abs(x).max() + 1e-9) * drive) / np.tanh(drive)

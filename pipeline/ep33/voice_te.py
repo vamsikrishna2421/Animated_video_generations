@@ -2,13 +2,14 @@
 # in skit 01 (Ravi = Prakash, loud and fast; the shop AI = Kiran, calm and flat). Each take is checked with Whisper the
 # strict way (pipeline/tools/te_verify.py's rules: no looped syllables or repeated words, a sane speaking rate) and
 # re-rolled up to 4 times; takes are cached by text + voice, so a changed line only re-voices itself. The AI's lines get
-# the phone-speaker sound, lighter on the numbers, like the English version.
+# a light phone-speaker sound, and their takes are judged after it (what the viewer hears).
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep33/voice_te.py [line numbers ...]
 import hashlib
 import json
 import re
 import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 import numpy as np
@@ -25,7 +26,9 @@ VOICE = {
     "ai": "Kiran speaks in a calm, flat, deadpan monotone, slowly and evenly, like a polite voice assistant. "
           "The recording is very clear, close-up, studio quality, with no background noise.",
 }
-LIGHT = {17, 24}
+# render review: the full phone filter (300-4000 Hz) took the voicing and nasal hum Telugu needs ("దొరకలేదు" was heard
+# as a slur, "బామ్" as "bava", "మీ" as "nee"): every AI line gets the light filter with a 150 Hz low cut
+LO_CUT = 150
 ASR = None
 
 
@@ -55,6 +58,18 @@ def judge(path, text):
     long = len(a) / sr > max(2.8, len(re.sub(r"\s", "", text)) * 0.11)
     ok = bool(h) and dev >= 0.85 and not babble and not long and 9 <= rate <= 23
     return ok, (1 if ok else 0) + dev - abs(rate - 15) / 40, f"dev {dev:.2f} rate {rate:.1f} {'BABBLE ' if babble else ''}{'LONG ' if long else ''}| {h[:110]}"
+
+
+def heard(path, who):
+    """The take as it goes into the reel: the AI's through the phone filter."""
+    if who != "ai":
+        return path
+    import ep33.voice_rec as vr
+    a, sr = sf.read(path)
+    vr.SR = sr
+    out = Path(tempfile.gettempdir()) / "ep33te_judge.wav"
+    sf.write(out, phone(a, True, lo_cut=LO_CUT).astype(np.float32), sr)
+    return out
 
 
 def trim(path):
@@ -93,12 +108,12 @@ def voice_part(n, who, raw, fname, takes, src, only):
             cached = sorted(takes.glob(f"{key}_*.wav"))
             best = (None, cached[0]) if cached and not only else None
             if best:
-                print(f"{n:02d} {who}: cached {cached[0].name}", flush=True)
+                print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who), text)[2]}", flush=True)
             for k in range(0 if best else 4):
                 tmp = takes / f"{key}_{k}.wav"
                 say("te", text, tmp, voice=VOICE[who], pause=0.2)
                 trim(tmp)
-                ok, score, info = judge(tmp, text)
+                ok, score, info = judge(heard(tmp, who), text)
                 print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
                 if best is None or (best[0] is not None and score > best[0]):
                     best = (score, tmp)
@@ -108,13 +123,7 @@ def voice_part(n, who, raw, fname, takes, src, only):
                 for f in takes.glob(f"{key}_*.wav"):
                     if f != best[1]:
                         f.unlink()
-            out = src / fname
-            shutil.copy(best[1], out)
-            if who == "ai":
-                a, sr = sf.read(out)
-                import ep33.voice_rec as vr
-                vr.SR = sr
-                sf.write(out, phone(a, n in LIGHT).astype(np.float32), sr)
+            shutil.copy(heard(best[1], who), src / fname)
 
 
 if __name__ == "__main__":
