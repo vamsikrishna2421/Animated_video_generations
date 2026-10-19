@@ -198,11 +198,10 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. [1] చాట్‌జీపీటీ కంపెనీ కూడా. [2] కానీ చాట్‌జీపీటీని కాదు.",
-     "show": "Some give theirs away: open models. Even ChatGPT's maker. Not ChatGPT itself.",
+     "text": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్.",
+     "show": "Some give theirs away: open models.",
      "maxgap": 0.28,
      "gap": 0.2,
-     "tts": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. చాట్ జీపీటీ కంపెనీ కూడా. కానీ చాట్ జీపీటీని కాదు.",
      "gain_db": -1.0
     },
     {
@@ -298,10 +297,14 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.",
+     "text": "వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. <pause 0.3> [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.",
      "show": "One gigabyte: one right. Three gigabytes: nine. It added tomatoes nobody ordered.",
      "maxgap": 0.28,
      "gap": 0.45,
+     "tts": "వన్ జీబీ, ఒక్కటే. త్రీ జీబీ, తొమ్మిది.",
+     "file2": "12b_ai.wav",
+     "tts2": "ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.",
+     "pause": 0.3,
      "gain_db": -1.0
     },
     {
@@ -354,10 +357,13 @@
     {
      "who": "ai",
      "file": "14_ai.wav",
-     "text": "ఫైవ్ జీబీ, [1] పద్దెనిమిది.",
-     "show": "Five gigabytes: eighteen.",
+     "text": "దాదాపు ఫైవ్ జీబీ, [1] పద్దెనిమిది.",
+     "show": "Almost five gigabytes: eighteen.",
      "maxgap": 0.28,
      "gap": 0.2,
+     "pauses": {
+      "1": 0.6
+     },
      "gain_db": 1.0
     },
     {
@@ -373,7 +379,7 @@
      "who": "ai",
      "file": "16_ai.wav",
      "text": "ఒక బిల్లు, టూ థర్టీ వన్ కి ఫైవ్ సిక్స్టీ సిక్స్ వేసింది.",
-     "show": "One bill: five sixty-six instead of two thirty-one.",
+     "show": "One bill: ₹566 instead of ₹231.",
      "maxgap": 0.28,
      "gap": 0.2,
      "gain_db": -1.0
@@ -458,8 +464,8 @@
     {
      "who": "ai",
      "file": "20_ai.wav",
-     "text": "అద్దెకైతే నెట్ కావాలి. [1] సొంతమైతే నెట్ అక్కర్లేదు, కానీ కంప్యూటర్ మీరే కొనుక్కోవాలి.",
-     "show": "Rent needs internet. Own works offline, but you buy the computer.",
+     "text": "అద్దెకైతే నెట్ కావాలి. [1] సొంతమైతే నెట్ అక్కర్లేదు, డేటా ఇంట్లోనే, కానీ కంప్యూటర్ మీరే కొనుక్కోవాలి.",
+     "show": "Rent needs internet. Own works offline, data stays home, but you buy the computer.",
      "maxgap": 0.28,
      "gap": 0.2,
      "gain_db": -1.0
@@ -548,10 +554,13 @@
     {
      "who": "ai",
      "file": "25_ai.wav",
-     "text": "అంటే... మళ్ళీ అద్దెకేనండి.",
+     "text": "అంటే... [1] మళ్ళీ అద్దెకేనండి.",
      "show": "So... renting again.",
      "maxgap": 0.28,
      "gap": 0.2,
+     "pauses": {
+      "1": 0.6
+     },
      "gain_db": 0.5
     }
    ]
