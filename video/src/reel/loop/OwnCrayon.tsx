@@ -313,26 +313,24 @@ const StOwn: React.FC<SP> = ({ s }) => {
           c.fillStyle = WALL; c.fillRect(0, 0, W, H);
           c.save(); c.translate(W / 2 + sx, 840 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
           shop(c, r);
-          // the shop board: he owns the shop (bought after 20 years of rent)
-          c.save(); c.translate(250, 330); c.rotate(-0.02);
-          c.fillStyle = "#7c2d12"; rrect(c, -170, -46, 340, 92, 10); c.fill();
-          c.font = caveat(40); c.fillStyle = "#fef3c7"; c.textAlign = "center"; c.fillText("RAVI KIRANA", 0, -2); c.font = handF(22); c.fillText("own shop since 2016", 0, 30);
-          c.restore();
-          if (n === 3) stroke(c, circlePts(250, 330, 200, 70), COL.yellow, 8, r, { passes: 2, alpha: seg(p, 0.45, 0.6) });
           const [mood, armPose] = RAVI[n] ?? ["angry", "rest"];
           ravi(c, mood, armPose, b.who === "ravi" && talking, p, f, r);
           counter(c, r);
           if (n === 22 || n === 24) laptop(c, 470, 990, 0.62, n === 22 ? "downloading the\nbiggest free brain..." : "", r);
           phone(c, b.who === "ai" && talking, f, r, {});
-          if (n === 1 || n === 25) {   // the phone can't think: no internet
+          if (n === 1 || n === 25) {   // the phone can't think: no internet (a label big enough to read on a phone)
             c.save(); c.globalAlpha = n === 25 ? seg(p, 0.5, 0.7) : 1;
             c.fillStyle = "#fee2e2"; rrect(c, PH.x - 70, PH.y - 20, 140, 60, 10); c.fill();
-            c.font = handF(22); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("No internet ✕", PH.x, PH.y + 18); c.restore();
+            c.font = handF(22); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("No internet ✕", PH.x, PH.y + 18);
+            c.fillStyle = "#dc2626"; rrect(c, PH.x - 150, PH.y - 250, 300, 76, 18); c.fill();
+            c.beginPath(); c.moveTo(PH.x - 16, PH.y - 176); c.lineTo(PH.x + 16, PH.y - 176); c.lineTo(PH.x, PH.y - 150); c.closePath(); c.fill();
+            c.font = caveat(48); c.fillStyle = "#fff"; c.fillText("NO INTERNET ✕", PH.x, PH.y - 196); c.restore();
           }
           customers(c, n === 1 ? 5 : n === 16 ? 5 + Math.round(2 * seg(p, 0.2, 0.8)) : n === 25 ? 5 : 0, f, r);
           c.restore();
           // screen-space props
-          if (n === 1 && f < ln.from + 80) headline(c, W, "HE DOESN'T OWN HIS AI.", "HE RENTS IT.", 1);
+          if (n === 1 && f < ln.from + 92) headline(c, W, "HE DOESN'T OWN HIS AI.", "HE RENTS IT.", 1);
+          if (n === 3) tag(c, "RAVI KIRANA · own shop since 2016", W / 2, 420, 52, "#7c2d12", "#fef3c7", -0.03, seg(p, 0.4, 0.55));
           if (n === 7) tag(c, "FREE?!", 300, 420, 90, COL.yellow, INK, -0.08, seg(p, 0.05, 0.2));
           if (n === 11) {
             c.save(); c.fillStyle = "rgba(15,23,42,0.82)"; rrect(c, 120, 300, 840, 170, 26); c.fill();

@@ -1,0 +1,38 @@
+UPLOAD: 036 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/036_ep34_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/036_ep34_insta_te_ig.mp4, about 22 MB). It loops: "malli addekenandi" leads back into "meeru nannu addeku teesukunnaaru".
+
+=== CAPTION ===
+Ravi anna ki telisindi: shop AI tanadi kaadu. Addeki teesukunnaaru.
+
+AI From Scratch Episode 34: open vs closed AI models
+- Closed model (chaala apps lo unde AI): daani brain company computers lo untundi; prati question ki dabbu, mee orders vaallaki veltaayi
+- Open model: company brain (weights) ni publish chestundi; download chesi mee computer lo, internet lekunda kooda run cheyochu
+- Maa real test, javaabu telisina 20 WhatsApp orders, internet off, maamoolu 4-core computer: 1 GB, 3 GB, 4.7 GB free brains 1, 9, 18 billulu correct ga vesaayi
+- 18/20 vesina brain kooda ₹231 order ki ₹566 bill vesindi, okko bill ki 15 seconds
+- Download free, run cheyyadam free kaadu: pedda open models ki sumaaru ₹25 lakhs graphics card kaavaali
+
+Ela vaadaali:
+1. Kashtamaina pani, data bayataki vellochu ante adde (closed): internet kaavaali, prati question ki dabbu
+2. Data intlone undaali, leka net sarigga ledu ante sontham (open): Ollama, LM Studio lanti free apps laptop lo open models run chestaayi
+3. Edaina sare, javaabu telisina 20 prashnalatho test cheyyandi (EP33); kooditalaki calculator
+
+Next: EP35, model size, small language models. Brain entha chinnadi ayina billulu veyagaladu?
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+Mee shop billulu evariki ichestaaru: online lo adde brain ki, leka mee laptop lo free brain ki?
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #OpenSourceAI #LearnAI #AIFromScratch
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: 15 items price board, javaabu munde telisina 20 WhatsApp orders. Moodu free open-weights models (Apache 2.0, Hugging Face): Qwen2.5-0.5B-Instruct (1.0 GB), Qwen2.5-1.5B-Instruct (3.1 GB), Qwen2.5-7B-Instruct 4-bit file (4.7 GB, llama.cpp tho). CPU maatrame, 4 cores, graphics card ledu, test appudu internet nundi emi teesukoledu. Correct billulu: 20 lo 1, 9, 18; okko bill ki sumaaru 1.4, 14, 15 seconds. 7B miss chesinavi rendu: "3 biscuits, 1 tea powder, 1 kg sugar" ki ₹566 (correct ₹231), "1 kg each tomato onion potato rice" ki ₹177 (correct ₹167).
+Nijaayitee ga: 20 orders chinna demo, benchmark kaadu. Adde (closed) models ni test cheyyaledu: avi ee computer lo offline run kaavu. Public leaderboards lo best closed models inkaa mundu unnaayi; best open models konni nelalu venaka (Epoch AI, May 2026).
+Open weights ante open source kaadu: Open Source Initiative definition training data vivaraalu, code kooda adugutundi; konni "open" licenses ki shartulu untaayi (Llama: 70 crore+ monthly users unte Meta ni adagaali).
+₹25 lakhs: 80 GB H100 sumaaru $25,000 (Tom's Hardware, Feb 2025); gpt-oss-120b okka 80 GB GPU meeda run avutundi ani OpenAI cheptundi. Cloud lo adde ki gantaku sumaaru $2.80 (Tom's Hardware, Oct 2026).
+
+=== COVER ===
+Ravi anna silent phone ("NO INTERNET") meeda aravutunnaaru, mundu customers queue; headline "HE DOESN'T OWN HIS AI. HE RENTS IT." (English visuals)
+
+=== SOURCES (for comments) ===
+English page laage: out/036_ep34_reel_captions.txt (OpenAI, Google, Anthropic pricing pages; OpenAI gpt-oss; OSI Open Source AI Definition; Llama 3.1 license; Qwen2.5 cards; Ollama, LM Studio; Hugging Face docs; Tom's Hardware; CNBC; Epoch AI; maa demo pipeline/ep34/bill_demo.py).

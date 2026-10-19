@@ -1,0 +1,49 @@
+UPLOAD: 036
+VIDEO: 036_ep34_rent_a_brain_or_own_one.mp4  (teaching skit, about 80 s, AI voices; replaces the older lesson-format 036_ep34_open_vs_closed_ai_models.mp4; send copy: 036_ep34_rent_a_brain_or_own_one_ig.mp4, about 22 MB). It loops: "So... renting again" leads back into "You rent me".
+
+=== CAPTION ===
+Ravi anna found out he doesn't own his shop AI. He rents it.
+
+Episode 34 of AI From Scratch: open vs closed AI models
+- Closed model (the AI in most apps): its brain sits on the company's computers; you pay per question, and your orders go to them
+- Open model: the company publishes the brain (the weights); you download it and run it on your own computer, even offline
+- Our real test, 20 WhatsApp orders with known totals, internet off, a plain 4-core computer: free brains of 1 GB, 3 GB and 4.7 GB got 1, 9 and 18 bills right
+- The 18/20 one still billed ₹566 for a ₹231 order, and took 15 seconds a bill
+- Free to download is not free to run: the big open models run on a graphics card worth about ₹25 lakh
+
+How to use this:
+1. Rent (closed) when the job is hard and the data can leave your shop: it needs internet, and you pay per question
+2. Own (open) when the data must stay home or the internet is patchy: free apps like Ollama and LM Studio run open models on a laptop
+3. Either way, test it on 20 questions you already know the answers to (EP33), and keep a calculator for the adding
+
+Next: EP35, model size and small language models. How small can a brain get and still make the bills?
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Which would you trust with your shop's bills: a rented brain online, or a free one on your own laptop?
+
+=== HASHTAGS ===
+#OpenSourceAI #AI #LearnAI #AIForBeginners #LLM #AIFromScratch
+
+=== PINNED_COMMENT ===
+How we tested (run by us): 20 WhatsApp-style orders against a 15-item price board, totals worked out in advance. Three free open-weights models (Apache 2.0, from Hugging Face): Qwen2.5-0.5B-Instruct (1.0 GB), Qwen2.5-1.5B-Instruct (3.1 GB), and Qwen2.5-7B-Instruct as Qwen's own 4-bit file (4.7 GB, run with llama.cpp, the way laptop apps run it). CPU only, 4 cores, no graphics card, nothing fetched from the internet during the test. Bills right: 1, 9 and 18 of 20, at about 1.4, 14 and 15 seconds a bill. The 7B's two misses: "3 biscuits, 1 tea powder, 1 kg sugar" billed ₹566 (right ₹231), and "1 kg each tomato onion potato rice" billed ₹177 (right ₹167).
+Honest limits: 20 orders is a small demo, not a benchmark. We didn't test rented (closed) models, because they can't run offline on this computer. On public leaderboards the best closed models still lead, and the best open ones trail by a few months (Epoch AI, May 2026).
+Open weights is not the same as open source: the Open Source Initiative's definition also asks for training-data information and code, and some "open" licenses add conditions (Llama: services with 700 million+ monthly users must ask Meta).
+₹25 lakh: an 80 GB H100 is around $25,000 (Tom's Hardware, Feb 2025), and OpenAI says gpt-oss-120b runs on a single 80 GB GPU. Renting one in the cloud costs about $2.80 an hour (Tom's Hardware, Oct 2026).
+
+=== COVER ===
+Ravi anna shouting at the silent shop phone ("NO INTERNET"), a queue of customers in front; headline "HE DOESN'T OWN HIS AI. HE RENTS IT."
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. During a rush, Ravi anna's shop AI goes silent: no internet, and he only rents it. The AI explains closed models (its brain is on a company's computers, orders go there, you pay per question) and open models (the brain is published: download it and run it yourself). Our test of three free brains on a plain computer with the internet off: 1, 9 and 18 of 20 bills right, and the best one still billed ₹566 for a ₹231 order. The rule: rent needs internet; own works offline but you buy the computer; test both first. Ravi wants the biggest free brain, which runs on a ₹25 lakh graphics card. "Then I'll rent a big computer." "So... renting again."
+
+=== SOURCES (for comments) ===
+Demo (run by us): pipeline/ep34/bill_demo.py, data in series/scripts/ep34_demo.
+Closed models are billed per token: OpenAI API pricing ("Prices per 1M tokens"); Google Gemini API pricing ("per 1M tokens in USD"); Anthropic pricing ("MTok: Million tokens").
+OpenAI, "Introducing gpt-oss" (Aug 2025): Apache 2.0; gpt-oss-120b "running efficiently on a single 80 GB GPU", gpt-oss-20b on "edge devices with just 16 GB of memory"; github.com/openai/gpt-oss; The Register, 5 Aug 2025.
+Open Source Initiative, Open Source AI Definition 1.0 (Oct 2024): data information, code and parameters. Llama 3.1 Community License: over 700 million monthly active users "you must request a license from Meta".
+Qwen2.5 model cards and the Qwen blog (19 Sep 2024): Apache 2.0, except the 3B and 72B models.
+Ollama pricing ("Run models locally") and LM Studio pricing ("Run local LLMs on your machine"): free to run models locally.
+Hugging Face docs (LLM optimization): about 2 bytes per parameter at 16-bit, so a 70B model needs about 140 GB.
+Tom's Hardware: H100 "around $25,000 apiece" (15 Feb 2025); about $2.80 per GPU-hour on a one-year contract, citing SemiAnalysis (5 Oct 2026). CNBC (19 Mar 2024): "$25,000 and $40,000 per chip, according to analyst estimates".
+Epoch AI (29 May 2026): open models "lagged frontier closed models by an average of four months".

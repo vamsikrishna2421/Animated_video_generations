@@ -1,0 +1,34 @@
+UPLOAD: 036 (YouTube Shorts: upload the same vertical files as Instagram, 036_ep34_rent_a_brain_or_own_one.mp4 and telugu_page/036_ep34_insta_te.mp4; no landscape version)
+
+########## ENGLISH ##########
+=== TITLE ===
+Rent a Brain or Own One? Open vs Closed AI Models, Tested on a Shop's Bills | AI From Scratch Ep 34 #Shorts
+
+=== DESCRIPTION ===
+Ravi anna's shop AI goes silent in the middle of a rush: no internet, and he finds out he only rents it. A closed model's brain sits on the company's computers: you pay per question and your orders go to them. An open model's brain (its weights) is published, so you can download it and run it yourself, even offline. Free to download is not free to run.
+
+Our real test, 20 WhatsApp orders with known totals, internet off, a plain 4-core computer: free brains of 1 GB, 3 GB and 4.7 GB got 1, 9 and 18 bills right. The 18/20 one still billed ₹566 for a ₹231 order, at 15 seconds a bill.
+
+How to use it: rent (closed) when the job is hard and the data can leave your shop; own (open) when the data must stay home or the internet is patchy (Ollama and LM Studio are free to run models locally). Test either one on 20 questions you already know the answers to.
+
+How we tested (run by us): Qwen2.5-0.5B-Instruct, Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct (Qwen's 4-bit GGUF via llama.cpp), all Apache 2.0, CPU only. Rented models weren't tested (they can't run offline). A small demo, not a benchmark.
+Sources: OpenAI, Google and Anthropic API pricing (per million tokens); OpenAI "Introducing gpt-oss" (Aug 2025: gpt-oss-120b on a single 80 GB GPU); OSI Open Source AI Definition 1.0; Llama 3.1 Community License; Qwen2.5 model cards; Ollama and LM Studio; Tom's Hardware (H100 around $25,000, Feb 2025); Epoch AI (May 2026).
+
+Next: EP35, model size and small language models.
+
+=== TAGS ===
+open source AI, open vs closed models, open weights, local LLM, Ollama, LM Studio, AI for beginners, AI From Scratch
+
+########## TELUGU: telugu_page/036_ep34_insta_te.mp4 (YouTube Shorts, same vertical file) ##########
+=== TITLE ===
+"Malli Addeke": Open vs Closed AI Models, Shop Billulatho Test | AI From Scratch Ep 34 Telugu #Shorts
+
+=== DESCRIPTION ===
+Rush time lo Ravi anna shop AI maatlaadadam aapesindi: internet ledu, adi addeki teesukunnadi ani telisindi. Closed model brain company computers lo untundi: prati question ki dabbu, mee orders vaallaki veltaayi. Open model brain (weights) publish chestaaru: download chesi meere run cheyochu, internet lekunda kooda. Download free, run cheyyadam free kaadu.
+
+Maa real test, javaabu telisina 20 WhatsApp orders, internet off, maamoolu computer: 1 GB, 3 GB, 4.7 GB free brains 1, 9, 18 billulu correct. 18/20 brain kooda ₹231 order ki ₹566 vesindi, okko bill ki 15 seconds.
+
+Ela vaadaali: kashtamaina pani, data bayataki vellochu ante adde (closed); data intlone undaali leka net sarigga ledu ante sontham (open; Ollama, LM Studio free ga local ga run chestaayi). Edaina 20 telisina prashnalatho test cheyyandi.
+Test vivaraalu, sources: English description lo unnaayi.
+
+Next: EP35, model size, small language models.
