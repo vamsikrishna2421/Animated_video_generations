@@ -1,9 +1,10 @@
 # EP34 demo (open vs closed models): can a free open-weights model that Ravi anna owns make his bills? 20 WhatsApp
 # orders against a 15-line price board, totals known in advance (EP33's rule: test with answers you already know).
 # Two Apache-2.0 open models from Hugging Face, run on CPU only (4 cores, no graphics card) with the internet unused
-# (offline mode: nothing is fetched while the test runs). Greedy decoding; the model may show its working, the last
-# "TOTAL: <number>" line is scored, exact rupees. Writes series/scripts/ep34_demo/.
+# (offline mode: nothing is fetched while the test runs). Greedy decoding; the model may show its working. Scored: the
+# last number on the reply's last line that says "total" (the bill it gives), exact rupees. Writes series/scripts/ep34_demo/.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep34/bill_demo.py [model ...]
+#   python3 pipeline/ep34/bill_demo.py --rescore      (score the saved replies again, no model run)
 import json
 import os
 import re
@@ -57,6 +58,25 @@ def check():
         assert total == round(total), text
 
 
+def total(reply):
+    """The bill the model gives: the last number on its last line that mentions a total ("Total: Rs 80 + Rs 78 = Rs 158"
+    -> 158; the first version of this scorer read 80 there)."""
+    lines = [ln for ln in reply.splitlines() if re.search(r"total", ln, flags=re.I)]
+    nums = re.findall(r"\d[\d,]*(?:\.\d+)?", lines[-1]) if lines else []
+    return float(nums[-1].replace(",", "")) if nums else None
+
+
+def rescore():
+    for f in sorted(OUT.glob("results_*.json")):
+        res = json.loads(f.read_text())
+        for row in res["rows"]:
+            row["model_total"] = total(row["reply"])
+            row["ok"] = row["model_total"] is not None and abs(row["model_total"] - row["right_total"]) < 0.01
+        res["right"] = sum(r["ok"] for r in res["rows"])
+        f.write_text(json.dumps(res, indent=1, ensure_ascii=False))
+        print(f"{res['model']}: {res['right']}/{res['of']} right, {res['seconds_per_bill']} s per bill", flush=True)
+
+
 def run(model_id, log):
     tok = AutoTokenizer.from_pretrained(model_id)
     t0 = time.time()
@@ -76,8 +96,7 @@ def run(model_id, log):
             out = model.generate(ids, max_new_tokens=220, do_sample=False)
         dt = time.time() - t1
         reply = tok.decode(out[0, ids.shape[1]:], skip_special_tokens=True)
-        m = re.findall(r"TOTAL:\s*(?:Rs\.?|₹)?\s*([\d,]+(?:\.\d+)?)", reply, flags=re.I)
-        got = float(m[-1].replace(",", "")) if m else None
+        got = total(reply)
         ok = got is not None and abs(got - total) < 0.01
         right += ok
         gen_s += dt
@@ -110,4 +129,4 @@ def main(models):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    rescore() if sys.argv[1:] == ["--rescore"] else main(sys.argv[1:])

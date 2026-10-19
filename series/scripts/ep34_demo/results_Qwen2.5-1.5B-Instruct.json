@@ -1,0 +1,173 @@
+{
+ "model": "Qwen/Qwen2.5-1.5B-Instruct",
+ "parameters": 1543714304,
+ "download_gb": 3.1,
+ "right": 9,
+ "of": 20,
+ "load_seconds": 10.7,
+ "seconds_per_bill": 14.3,
+ "tokens_per_second": 4.5,
+ "cpu_threads": 4,
+ "rows": [
+  {
+   "order": "anna 2 kg tomato, 1 dozen eggs pls",
+   "right_total": 158,
+   "model_total": 158.0,
+   "ok": true,
+   "seconds": 13.7,
+   "reply": "Tomato: 2 kg * Rs 40/kg = Rs 80\nEggs: 1 dozen * Rs 78/dozen = Rs 78\n\nTotal: Rs 80 + Rs 78 = Rs 158"
+  },
+  {
+   "order": "1 kg rice, 1 kg toor dal, 2 milk packets",
+   "right_total": 258,
+   "model_total": 363.0,
+   "ok": false,
+   "seconds": 36.3,
+   "reply": "Tomato: 1 kg x Rs 40 = Rs 40\nOnion: 1 kg x Rs 35 = Rs 35\nPotato: 1 kg x Rs 30 = Rs 30\nRice: 1 kg x Rs 62 = Rs 62\nToor Dal: 1 kg x Rs 140 = Rs 140\n\nTotal for Rice and Toor Dal: Rs 62 + Rs 140 = Rs 202\n\nMilk: 2 x Rs 28 = Rs 56\n\nTotal Bill: Rs 40 + Rs 35 + Rs 30 + Rs 62 + Rs 140 + Rs 56 = Rs 363\n\nTOTAL: Rs 363"
+  },
+  {
+   "order": "3 bath soaps and 1 detergent powder",
+   "right_total": 234,
+   "model_total": 158.0,
+   "ok": false,
+   "seconds": 13.5,
+   "reply": "Bath soap: Rs 38 x 1 = Rs 38  \nDetergent powder: Rs 120 x 1 = Rs 120  \nTotal: Rs 38 + Rs 120 = Rs 158  \n\nTOTAL: Rs 158"
+  },
+  {
+   "order": "half kg sugar and one tea powder",
+   "right_total": 148,
+   "model_total": 148.0,
+   "ok": true,
+   "seconds": 10.5,
+   "reply": "Half kg sugar costs Rs 23 (Rs 46 / 2), and one tea powder costs Rs 125. The total is Rs 148. Total: Rs 148"
+  },
+  {
+   "order": "2 bread 4 biscuits",
+   "right_total": 170,
+   "model_total": 170.0,
+   "ok": true,
+   "seconds": 12.7,
+   "reply": "Bread: Rs 45 x 2 = Rs 90\nBiscuits: Rs 20 x 4 = Rs 80\n\nTotal: Rs 90 + Rs 80 = Rs 170\n\nTOTAL: Rs 170"
+  },
+  {
+   "order": "1 coconut oil, 2 kg onion, 1 kg potato",
+   "right_total": 210,
+   "model_total": 155.0,
+   "ok": false,
+   "seconds": 13.3,
+   "reply": "Coconut Oil: 500 ml x Rs 110 = Rs 55  \nOnion: 2 kg x Rs 35 = Rs 70  \nPotato: 1 kg x Rs 30 = Rs 30  \n\nTotal: Rs 155"
+  },
+  {
+   "order": "2 curd 2 milk",
+   "right_total": 126,
+   "model_total": 210.0,
+   "ok": false,
+   "seconds": 12.5,
+   "reply": "Curd: Rs 35 x 2 = Rs 70  \nMilk: Rs 28 x (500 ml / 1) = Rs 140  \n\nTOTAL: Rs 70 + Rs 140 = Rs 210"
+  },
+  {
+   "order": "5 kg rice please",
+   "right_total": 310,
+   "model_total": 310.0,
+   "ok": true,
+   "seconds": 11.0,
+   "reply": "Total for Rice: 5 kg x Rs 62 = Rs 310\n\nPlease note that I have not included taxes or delivery charges as they were not mentioned in your request.\n\nTOTAL: Rs 310"
+  },
+  {
+   "order": "1 doz eggs, 1 bread, 2 milk, 1 curd",
+   "right_total": 214,
+   "model_total": 126.45,
+   "ok": false,
+   "seconds": 19.3,
+   "reply": "Eggs: 78/12 = Rs 6.50\nBread: 45/1 = Rs 45\nMilk: (2 * 28) / 1000 = Rs 5.60\nCurd: 35/1000 = Rs 0.35\n\nTOTAL: Rs 126.45"
+  },
+  {
+   "order": "2 kg dal and 2 kg sugar",
+   "right_total": 372,
+   "model_total": 486.0,
+   "ok": false,
+   "seconds": 22.7,
+   "reply": "Tomato: 2 × Rs 40 = Rs 80  \nOnion: 2 × Rs 35 = Rs 70  \nPotato: 2 × Rs 30 = Rs 60  \nRice: 1 × Rs 62 = Rs 62  \nToor Dal: 1 × Rs 140 = Rs 140  \nSugar: 2 × Rs 46 = Rs 92  \n\nTOTAL: Rs 486"
+  },
+  {
+   "order": "half kg tomato, 1 kg onion",
+   "right_total": 55,
+   "model_total": 55.0,
+   "ok": true,
+   "seconds": 12.4,
+   "reply": "Tomato: Rs 40 / 1 kg = Rs 20 for half kg\nOnion: Rs 35 / 1 kg = Rs 35\n\nTotal: Rs 20 + Rs 35 = Rs 55"
+  },
+  {
+   "order": "3 biscuits, 1 tea powder, 1 kg sugar",
+   "right_total": 231,
+   "model_total": 191.0,
+   "ok": false,
+   "seconds": 9.1,
+   "reply": "Biscuits: Rs 20  \nTea Powder: Rs 125  \nSugar: Rs 46\n\nTOTAL: Rs 191"
+  },
+  {
+   "order": "2 coconut oil",
+   "right_total": 220,
+   "model_total": 220.0,
+   "ok": true,
+   "seconds": 9.1,
+   "reply": "The cost for 2 coconut oil is Rs 2 × Rs 110 = Rs 220.\n\nTOTAL: Rs 220"
+  },
+  {
+   "order": "1 detergent, 2 soap, 1 kg potato",
+   "right_total": 226,
+   "model_total": 226.0,
+   "ok": true,
+   "seconds": 10.5,
+   "reply": "Detergent: Rs 120  \nSoap: Rs 38 x 2 = Rs 76  \nPotato: Rs 30  \n\nTOTAL: Rs 226"
+  },
+  {
+   "order": "4 milk packets and 2 bread",
+   "right_total": 202,
+   "model_total": 236.0,
+   "ok": false,
+   "seconds": 10.1,
+   "reply": "Milk: 2 * Rs 28 = Rs 56  \nBread: 4 * Rs 45 = Rs 180  \n\nTOTAL: Rs 236"
+  },
+  {
+   "order": "2 dozen eggs",
+   "right_total": 156,
+   "model_total": 156.0,
+   "ok": true,
+   "seconds": 10.9,
+   "reply": "Eggs cost Rs 78 per dozen. For 2 dozen, it will be:\n\n\\( 2 \\times 78 = Rs 156 \\)\n\nTOTAL: Rs 156"
+  },
+  {
+   "order": "1 kg each tomato onion potato rice",
+   "right_total": 167,
+   "model_total": 167.0,
+   "ok": true,
+   "seconds": 21.2,
+   "reply": "Tomato: Rs 40\nOnion: Rs 35\nPotato: Rs 30\nRice: Rs 62\n\nTotal for these items: Rs (40 + 35 + 30 + 62) = Rs 167\n\nPlease note that you have ordered 1 kg each of tomato, onion, and potato, which is not possible as they come in different quantities. Please clarify your order or adjust accordingly."
+  },
+  {
+   "order": "3 kg sugar, 2 tea powder",
+   "right_total": 388,
+   "model_total": 163.0,
+   "ok": false,
+   "seconds": 12.0,
+   "reply": "Sugar: 3 kg * Rs 46/kg = Rs 138\nTea Powder: 2 packets * Rs 125/250g = Rs 25\n\nTOTAL: Rs 163"
+  },
+  {
+   "order": "1 curd 1 bread 5 biscuits",
+   "right_total": 180,
+   "model_total": 100.0,
+   "ok": false,
+   "seconds": 8.0,
+   "reply": "Curd: Rs 35  \nBread: Rs 45  \nBiscuits: Rs 20  \n\nTotal: Rs 100"
+  },
+  {
+   "order": "2 kg rice, 1 kg dal, 1 coconut oil, 2 soaps",
+   "right_total": 450,
+   "model_total": 484.0,
+   "ok": false,
+   "seconds": 18.2,
+   "reply": "Rice: 2 kg * Rs 62/kg = Rs 124\nDal: 1 kg * Rs 140/kg = Rs 140\nCoconut Oil: 1 x Rs 110/500ml = Rs 220\n\nTotal: Rs 124 + Rs 140 + Rs 220 = Rs 484"
+  }
+ ]
+}
