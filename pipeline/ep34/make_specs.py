@@ -14,24 +14,24 @@ LINES = {
     1: ("ravi", "wide", "hook", "AI! Customers waiting and you've gone SILENT?!"),   # Parler said "Then customers" in every take
     2: ("ai", "screen", "rented", "No internet. You rent me, anna. My brain isn't here."),
     3: ("ravi", "ravi", "ownshop", "Rent?! I rented this shop twenty years, then I bought it!"),
-    4: ("ai", "screen", "cloud", "My brain sits on a company's computers. [1] Every order you type goes to them. [2] Closed model: you pay per question."),
+    4: ("ai", "screen", "cloud", "My brain is on a company's computers. [1] Your orders go there too. [2] Closed model: pay per question."),
     5: ("ravi", "ravi", "buy", "Then I'll buy my own brain!"),
-    6: ("ai", "screen", "open", "Some companies give theirs away: open models. [1] Even ChatGPT's maker. [2] Just not ChatGPT."),
+    6: ("ai", "screen", "open", "Some give theirs away: open models. [1] Even ChatGPT's maker. [2] Not ChatGPT itself."),
     7: ("ravi", "ravi", "free", "What, free?!"),
     8: ("ai", "screen", "skull", "The brain is free. [1] The skull is sold separately."),
     9: ("ravi", "ravi", "bills", "Arey, can a free brain make my bills?"),
-    10: ("ai", "screen", "test", "We tested three free ones. [1] Twenty WhatsApp orders, internet off, a plain computer."),
+    10: ("ai", "screen", "test", "We tested three free ones. [1] Twenty WhatsApp orders, internet off."),
     11: ("ravi", "ravi", "guess", "Twenty! It's a computer!"),
-    12: ("ai", "screen", "bars", "One gigabyte: one right. [1] Three gigabytes: nine. [2] It added tomatoes nobody ordered."),
+    12: ("ai", "screen", "bars", "One gigabyte: one right. [1] Three gigabytes: nine. [2] It billed tomatoes nobody ordered."),
     13: ("ravi", "ravi", "biggest", "And the bigger one?"),
     14: ("ai", "screen", "eighteen", "Five gigabytes: [1] eighteen."),
     15: ("ravi", "ravi", "told", "Two wrong bills?!"),
-    16: ("ai", "wide", "stopwatch", "One bill: five sixty-six for a two thirty-one order. [1] And ten customers wait two and a half minutes."),
+    16: ("ai", "wide", "stopwatch", "One bill: five sixty-six instead of two thirty-one. [1] And ten customers wait two and a half minutes."),
     17: ("ravi", "ravi", "laptop", "Then you come into my laptop."),
     18: ("ai", "screen", "nodelivery", "Rented brains don't do home delivery."),
     19: ("ravi", "ravi", "which", "So which one do I use?!"),
-    20: ("ai", "wide", "rule", "Rent: needs internet, pay per question. [1] Own: works offline, your data stays home, you buy the computer."),
-    21: ("ai", "wide", "calc", "Your bills? Rent, and test it on the same twenty. [1] Net down? Calculator."),
+    20: ("ai", "wide", "rule", "Rent needs internet. [1] Own works offline, but you buy the computer."),
+    21: ("ai", "wide", "calc", "Your bills? Rent, and test it first. [1] Net down? Calculator."),
     22: ("ravi", "wide", "own", "I don't RENT! I'll own the biggest free brain!"),
     23: ("ai", "screen", "gpu", "The big ones run on a twenty-five-lakh graphics card."),
     24: ("ravi", "ravi", "rentpc", "Then I'll rent a big computer."),
@@ -41,10 +41,11 @@ SHOW = {n: t.replace("[1] ", "").replace("[2] ", "") for n, (_, _, _, t) in LINE
 # English spoken forms: capitals and hyphens out; a lone first word kept inside its sentence (Parler drops one-word
 # sentences: skit 01's lesson)
 TTS_EN = {1: "AI! Customers waiting and you've gone silent?!", 11: "Twenty, it's a computer!",
-          16: "One bill: five sixty six, for a two thirty one order. And ten customers wait two and a half minutes.",
-          22: "I don't rent! I'll own the biggest free brain!", 23: "The big ones run on a twenty five lakh graphics card."}
+          16: "One bill: five sixty six, instead of two thirty one. And ten customers wait two and a half minutes.",
+          22: "I don't rent! I will own the biggest free brain!", 23: "The big ones run on a twenty five lakh graphics card.",
+          25: "So. Renting again."}   # 22: "I'll own" read "I loan"; 25: the deadpan AI shouted "RENTING AGAIN!"
 # lines whose key word or number must not blur at the reel's tempo (EP33: 1.2x read "Keyword off" as "Keyword on")
-TEMPO_EN = {12: 1.0, 14: 1.0, 16: 1.0, 21: 1.0, 23: 1.0}
+TEMPO_EN = {12: 1.1, 14: 1.0, 16: 1.1, 23: 1.1}
 # Sound (CLAUDE.md arc): the slam's hit in the first second, a lift into each insert, the bed dips while Ravi guesses and
 # drops out right before "eighteen" with a hit on it, a sting after the tomatoes, the bed up for the rule, a riser into
 # the last line, which loops into the opening slam.
@@ -56,12 +57,12 @@ SCENES = [("st_a", 1, 3, {"rise": 1.25, "tail": 0.1}),
           ("st_f", 17, 21, {"boost": 1.2, "tail": 0.15}),
           ("st_g", 22, 25, {"outro": True, "boost": 1.35, "rise": 1.4, "tail": 0.0})]
 # seconds after line n (default 0.18): room after each joke and before the stopwatch
-GAP = {1: 0.25, 8: 0.5, 12: 0.6, 15: 0.3, 18: 0.5, 21: 0.4, 23: 0.4}
+GAP = {1: 0.2, 8: 0.4, 12: 0.45, 15: 0.25, 18: 0.4, 21: 0.3, 23: 0.35}   # the first cut ran 93 s: lines trimmed, gaps tighter, 1.2x
 TE = {
     1: ("అరే ఏఐ, పది మంది కస్టమర్లు వెయిటింగ్, నువ్వు మాట్లాడవేంటి?!", None),
     2: ("ఇంటర్నెట్ లేదండి. మీరు నన్ను అద్దెకు తీసుకున్నారు. నా బ్రెయిన్ ఇక్కడ లేదు.", None),
     3: ("ఏంటీ, అద్దెకా?! ఇరవై ఏళ్లు ఈ షాప్ అద్దెకు ఉన్నా. తర్వాత కొనేశా!", None),
-    4: ("నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీరు టైప్ చేసే ప్రతి ఆర్డర్ వాళ్ళకి వెళ్తుంది. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.", None),
+    4: ("నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.", None),
     5: ("అయితే నేనే సొంత బ్రెయిన్ కొంటా!", None),
     6: ("కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. [1] చాట్‌జీపీటీ కంపెనీ కూడా. [2] కానీ చాట్‌జీపీటీని కాదు.",
         "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. చాట్ జీపీటీ కంపెనీ కూడా. కానీ చాట్ జీపీటీని కాదు."),
@@ -78,8 +79,8 @@ TE = {
     17: ("అయితే నువ్వే నా ల్యాప్‌టాప్ లోకి రా.", "అయితే నువ్వే నా ల్యాప్ టాప్ లోకి రా."),
     18: ("అద్దె బ్రెయిన్ కి హోమ్ డెలివరీ లేదు.", None),   # -ండి dropped on 12, 16, 18: in every line it sounded like a call centre
     19: ("మరి నేను ఏది వాడాలి?!", None),
-    20: ("అద్దెకైతే నెట్ కావాలి, క్వశ్చన్ కి ఇంత. [1] సొంతమైతే నెట్ అక్కర్లేదు, డేటా ఇంట్లోనే, కంప్యూటర్ మీరే కొనుక్కోవాలి.", None),
-    21: ("మీ బిల్లులకి అద్దె బ్రెయినే, అదే ఇరవైతో టెస్ట్ చేసి. [1] నెట్ పోతే, కాలిక్యులేటర్.", None),
+    20: ("అద్దెకైతే నెట్ కావాలి. [1] సొంతమైతే నెట్ అక్కర్లేదు, కానీ కంప్యూటర్ మీరే కొనుక్కోవాలి.", None),
+    21: ("మీ బిల్లులకి అద్దె బ్రెయినే, ముందు టెస్ట్ చేసి. [1] నెట్ పోతే, కాలిక్యులేటర్.", None),
     22: ("నేను అద్దెకు తీసుకోను! పెద్ద ఫ్రీ బ్రెయిన్ నేనే పెట్టుకుంటా!", None),
     23: ("పెద్దవి పాతిక లక్షల గ్రాఫిక్స్ కార్డ్ మీద నడుస్తాయండి.", None),
     24: ("అయితే పెద్ద కంప్యూటర్ అద్దెకు తీసుకుంటా.", None),
@@ -96,7 +97,7 @@ def spec(lang="en"):
          "banner": "Rent a brain or own one?", "topic": "", "look": "classic", "gap": 0.18, "lead": 0.15, "music": "lofi",
          "musicVol": [0.4, 0.75], "musicFade": 0.05, "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
          "musicPad": True, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
-         "tempo": 1.05 if te else 1.15, "captionTop": 1500}
+         "tempo": 1.05 if te else 1.2, "captionTop": 1500}
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
     scenes = []
@@ -105,7 +106,7 @@ def spec(lang="en"):
         for n in range(a, b + 1):
             who, shot, prop, text = LINES[n]
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW[n],
-                  "maxgap": 0.3, "gap": GAP.get(n, 0.22 if te else 0.18)}
+                  "maxgap": 0.28, "gap": GAP.get(n, 0.2 if te else 0.14)}
             if te and TE[n][1]:
                 ln["tts"] = TE[n][1]
             if not te and n in TTS_EN:

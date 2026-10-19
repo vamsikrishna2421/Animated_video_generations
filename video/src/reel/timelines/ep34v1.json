@@ -1,0 +1,1778 @@
+{
+ "id": "ep34v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Rent a brain or own one?",
+ "musicVol": [
+  0.4,
+  0.75
+ ],
+ "title": "Rent a brain or own one? (EP34: open vs closed models)",
+ "handle": "@ai_maastaaru",
+ "label": "EP34",
+ "fps": 30,
+ "musicDrops": [
+  [
+   1537,
+   1561
+  ]
+ ],
+ "musicBoosts": [
+  [
+   348,
+   634,
+   0.6
+  ],
+  [
+   634,
+   1064,
+   0.8
+  ],
+  [
+   1064,
+   1537,
+   0.7
+  ],
+  [
+   1537,
+   1882,
+   1.0
+  ],
+  [
+   1882,
+   2455,
+   1.2
+  ],
+  [
+   2455,
+   2803,
+   1.35
+  ],
+  [
+   0,
+   348,
+   1.25,
+   1
+  ],
+  [
+   2455,
+   2803,
+   1.4,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 2803,
+ "music": "reel/ep34v1/score.wav",
+ "scenes": [
+  {
+   "id": "st_a",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "rented",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "ownshop",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "He rents his AI",
+     "title": "He rents his AI",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_01.wav",
+     "from": 4,
+     "frames": 98,
+     "words": [
+      {
+       "w": "AI!",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "Customers",
+       "from": 14,
+       "to": 47
+      },
+      {
+       "w": "waiting",
+       "from": 47,
+       "to": 57
+      },
+      {
+       "w": "and",
+       "from": 57,
+       "to": 62
+      },
+      {
+       "w": "you've",
+       "from": 62,
+       "to": 71
+      },
+      {
+       "w": "gone",
+       "from": 71,
+       "to": 77
+      },
+      {
+       "w": "SILENT?!",
+       "from": 77,
+       "to": 89
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_02.wav",
+     "from": 110,
+     "frames": 102,
+     "words": [
+      {
+       "w": "No",
+       "from": 113,
+       "to": 117
+      },
+      {
+       "w": "internet.",
+       "from": 117,
+       "to": 128
+      },
+      {
+       "w": "You",
+       "from": 128,
+       "to": 143
+      },
+      {
+       "w": "rent",
+       "from": 143,
+       "to": 149
+      },
+      {
+       "w": "me,",
+       "from": 149,
+       "to": 153
+      },
+      {
+       "w": "anna.",
+       "from": 153,
+       "to": 160
+      },
+      {
+       "w": "My",
+       "from": 160,
+       "to": 173
+      },
+      {
+       "w": "brain",
+       "from": 173,
+       "to": 180
+      },
+      {
+       "w": "isn't",
+       "from": 180,
+       "to": 186
+      },
+      {
+       "w": "here.",
+       "from": 186,
+       "to": 197
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_03.wav",
+     "from": 218,
+     "frames": 111,
+     "words": [
+      {
+       "w": "Rent?!",
+       "from": 219,
+       "to": 227
+      },
+      {
+       "w": "I",
+       "from": 227,
+       "to": 229
+      },
+      {
+       "w": "rented",
+       "from": 229,
+       "to": 258
+      },
+      {
+       "w": "this",
+       "from": 258,
+       "to": 263
+      },
+      {
+       "w": "shop",
+       "from": 263,
+       "to": 268
+      },
+      {
+       "w": "twenty",
+       "from": 268,
+       "to": 280
+      },
+      {
+       "w": "years,",
+       "from": 280,
+       "to": 287
+      },
+      {
+       "w": "then",
+       "from": 287,
+       "to": 301
+      },
+      {
+       "w": "I",
+       "from": 301,
+       "to": 303
+      },
+      {
+       "w": "bought",
+       "from": 303,
+       "to": 310
+      },
+      {
+       "w": "it!",
+       "from": 310,
+       "to": 314
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "st_b",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "cloud",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "buy",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Closed: a rented brain",
+     "title": "Closed: a rented brain",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 348,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_04.wav",
+     "from": 10,
+     "frames": 195,
+     "words": [
+      {
+       "w": "My",
+       "from": 15,
+       "to": 18
+      },
+      {
+       "w": "brain",
+       "from": 18,
+       "to": 24
+      },
+      {
+       "w": "sits",
+       "from": 24,
+       "to": 29
+      },
+      {
+       "w": "on",
+       "from": 29,
+       "to": 42
+      },
+      {
+       "w": "a",
+       "from": 42,
+       "to": 44
+      },
+      {
+       "w": "company's",
+       "from": 44,
+       "to": 55
+      },
+      {
+       "w": "computers.",
+       "from": 55,
+       "to": 85
+      },
+      {
+       "w": "Every",
+       "from": 85,
+       "to": 91
+      },
+      {
+       "w": "order",
+       "from": 91,
+       "to": 98
+      },
+      {
+       "w": "you",
+       "from": 98,
+       "to": 102
+      },
+      {
+       "w": "type",
+       "from": 102,
+       "to": 107
+      },
+      {
+       "w": "goes",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "to",
+       "from": 112,
+       "to": 115
+      },
+      {
+       "w": "them.",
+       "from": 115,
+       "to": 130
+      },
+      {
+       "w": "Closed",
+       "from": 130,
+       "to": 150
+      },
+      {
+       "w": "model:",
+       "from": 150,
+       "to": 162
+      },
+      {
+       "w": "you",
+       "from": 162,
+       "to": 176
+      },
+      {
+       "w": "pay",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "per",
+       "from": 180,
+       "to": 184
+      },
+      {
+       "w": "question.",
+       "from": 184,
+       "to": 199
+      }
+     ],
+     "cues": {
+      "1": 85,
+      "2": 130
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_05.wav",
+     "from": 211,
+     "frames": 55,
+     "words": [
+      {
+       "w": "Then",
+       "from": 217,
+       "to": 223
+      },
+      {
+       "w": "I'll",
+       "from": 223,
+       "to": 230
+      },
+      {
+       "w": "buy",
+       "from": 230,
+       "to": 234
+      },
+      {
+       "w": "my",
+       "from": 234,
+       "to": 238
+      },
+      {
+       "w": "own",
+       "from": 238,
+       "to": 243
+      },
+      {
+       "w": "brain!",
+       "from": 243,
+       "to": 252
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "st_c",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "open",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "free",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "skull",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "bills",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Open: a free brain",
+     "title": "Open: a free brain",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 634,
+   "frames": 430,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_06.wav",
+     "from": 11,
+     "frames": 180,
+     "words": [
+      {
+       "w": "Some",
+       "from": 15,
+       "to": 22
+      },
+      {
+       "w": "companies",
+       "from": 22,
+       "to": 39
+      },
+      {
+       "w": "give",
+       "from": 39,
+       "to": 45
+      },
+      {
+       "w": "theirs",
+       "from": 45,
+       "to": 55
+      },
+      {
+       "w": "away:",
+       "from": 55,
+       "to": 71
+      },
+      {
+       "w": "open",
+       "from": 71,
+       "to": 78
+      },
+      {
+       "w": "models.",
+       "from": 78,
+       "to": 101
+      },
+      {
+       "w": "Even",
+       "from": 101,
+       "to": 107
+      },
+      {
+       "w": "ChatGPT's",
+       "from": 107,
+       "to": 124
+      },
+      {
+       "w": "maker.",
+       "from": 124,
+       "to": 138
+      },
+      {
+       "w": "Just",
+       "from": 138,
+       "to": 160
+      },
+      {
+       "w": "not",
+       "from": 160,
+       "to": 170
+      },
+      {
+       "w": "ChatGPT.",
+       "from": 170,
+       "to": 186
+      }
+     ],
+     "cues": {
+      "1": 101,
+      "2": 138
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_07.wav",
+     "from": 196,
+     "frames": 36,
+     "words": [
+      {
+       "w": "What,",
+       "from": 199,
+       "to": 203
+      },
+      {
+       "w": "free?!",
+       "from": 203,
+       "to": 217
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_08.wav",
+     "from": 237,
+     "frames": 88,
+     "words": [
+      {
+       "w": "The",
+       "from": 241,
+       "to": 245
+      },
+      {
+       "w": "brain",
+       "from": 245,
+       "to": 250
+      },
+      {
+       "w": "is",
+       "from": 250,
+       "to": 253
+      },
+      {
+       "w": "free.",
+       "from": 253,
+       "to": 264
+      },
+      {
+       "w": "The",
+       "from": 264,
+       "to": 278
+      },
+      {
+       "w": "skull",
+       "from": 278,
+       "to": 288
+      },
+      {
+       "w": "is",
+       "from": 288,
+       "to": 291
+      },
+      {
+       "w": "sold",
+       "from": 291,
+       "to": 295
+      },
+      {
+       "w": "separately.",
+       "from": 295,
+       "to": 318
+      }
+     ],
+     "cues": {
+      "1": 264
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_09.wav",
+     "from": 341,
+     "frames": 70,
+     "words": [
+      {
+       "w": "Arey,",
+       "from": 347,
+       "to": 355
+      },
+      {
+       "w": "can",
+       "from": 355,
+       "to": 360
+      },
+      {
+       "w": "a",
+       "from": 360,
+       "to": 363
+      },
+      {
+       "w": "free",
+       "from": 363,
+       "to": 370
+      },
+      {
+       "w": "brain",
+       "from": 370,
+       "to": 377
+      },
+      {
+       "w": "make",
+       "from": 377,
+       "to": 384
+      },
+      {
+       "w": "my",
+       "from": 384,
+       "to": 388
+      },
+      {
+       "w": "bills?",
+       "from": 388,
+       "to": 397
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "st_d",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "guess",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bars",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "biggest",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our bill test",
+     "title": "Our bill test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1064,
+   "frames": 473,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_10.wav",
+     "from": 11,
+     "frames": 145,
+     "words": [
+      {
+       "w": "We",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "tested",
+       "from": 15,
+       "to": 33
+      },
+      {
+       "w": "three",
+       "from": 33,
+       "to": 40
+      },
+      {
+       "w": "free",
+       "from": 40,
+       "to": 45
+      },
+      {
+       "w": "ones.",
+       "from": 45,
+       "to": 67
+      },
+      {
+       "w": "Twenty",
+       "from": 67,
+       "to": 75
+      },
+      {
+       "w": "WhatsApp",
+       "from": 75,
+       "to": 85
+      },
+      {
+       "w": "orders,",
+       "from": 85,
+       "to": 93
+      },
+      {
+       "w": "internet",
+       "from": 93,
+       "to": 111
+      },
+      {
+       "w": "off,",
+       "from": 111,
+       "to": 130
+      },
+      {
+       "w": "a",
+       "from": 130,
+       "to": 132
+      },
+      {
+       "w": "plain",
+       "from": 132,
+       "to": 138
+      },
+      {
+       "w": "computer.",
+       "from": 138,
+       "to": 149
+      }
+     ],
+     "cues": {
+      "1": 67
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_11.wav",
+     "from": 161,
+     "frames": 50,
+     "words": [
+      {
+       "w": "Twenty!",
+       "from": 167,
+       "to": 176
+      },
+      {
+       "w": "It's",
+       "from": 176,
+       "to": 181
+      },
+      {
+       "w": "a",
+       "from": 181,
+       "to": 184
+      },
+      {
+       "w": "computer!",
+       "from": 184,
+       "to": 195
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_12.wav",
+     "from": 216,
+     "frames": 192,
+     "words": [
+      {
+       "w": "One",
+       "from": 217,
+       "to": 223
+      },
+      {
+       "w": "gigabyte:",
+       "from": 223,
+       "to": 239
+      },
+      {
+       "w": "one",
+       "from": 239,
+       "to": 256
+      },
+      {
+       "w": "right.",
+       "from": 256,
+       "to": 280
+      },
+      {
+       "w": "Three",
+       "from": 280,
+       "to": 289
+      },
+      {
+       "w": "gigabytes:",
+       "from": 289,
+       "to": 331
+      },
+      {
+       "w": "nine.",
+       "from": 331,
+       "to": 340
+      },
+      {
+       "w": "It",
+       "from": 340,
+       "to": 345
+      },
+      {
+       "w": "added",
+       "from": 345,
+       "to": 354
+      },
+      {
+       "w": "tomatoes",
+       "from": 354,
+       "to": 374
+      },
+      {
+       "w": "nobody",
+       "from": 374,
+       "to": 385
+      },
+      {
+       "w": "ordered.",
+       "from": 385,
+       "to": 398
+      }
+     ],
+     "cues": {
+      "1": 280,
+      "2": 340
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_13.wav",
+     "from": 426,
+     "frames": 39,
+     "words": [
+      {
+       "w": "And",
+       "from": 432,
+       "to": 436
+      },
+      {
+       "w": "the",
+       "from": 436,
+       "to": 440
+      },
+      {
+       "w": "bigger",
+       "from": 440,
+       "to": 446
+      },
+      {
+       "w": "one?",
+       "from": 446,
+       "to": 451
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "st_e",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "eighteen",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "told",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "stopwatch",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "18 out of 20: two wrong bills",
+     "title": "18 out of 20: two wrong bills",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1537,
+   "frames": 345,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_14.wav",
+     "from": 0,
+     "frames": 61,
+     "words": [
+      {
+       "w": "Five",
+       "from": 4,
+       "to": 10
+      },
+      {
+       "w": "gigabytes:",
+       "from": 10,
+       "to": 24
+      },
+      {
+       "w": "eighteen.",
+       "from": 24,
+       "to": 51
+      }
+     ],
+     "cues": {
+      "1": 24
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_15.wav",
+     "from": 67,
+     "frames": 40,
+     "words": [
+      {
+       "w": "Two",
+       "from": 72,
+       "to": 76
+      },
+      {
+       "w": "wrong",
+       "from": 76,
+       "to": 84
+      },
+      {
+       "w": "bills?!",
+       "from": 84,
+       "to": 93
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_16.wav",
+     "from": 116,
+     "frames": 202,
+     "words": [
+      {
+       "w": "One",
+       "from": 118,
+       "to": 123
+      },
+      {
+       "w": "bill:",
+       "from": 123,
+       "to": 131
+      },
+      {
+       "w": "five",
+       "from": 131,
+       "to": 147
+      },
+      {
+       "w": "sixty-six",
+       "from": 147,
+       "to": 165
+      },
+      {
+       "w": "for",
+       "from": 165,
+       "to": 183
+      },
+      {
+       "w": "a",
+       "from": 183,
+       "to": 185
+      },
+      {
+       "w": "two",
+       "from": 185,
+       "to": 190
+      },
+      {
+       "w": "thirty-one",
+       "from": 190,
+       "to": 205
+      },
+      {
+       "w": "order.",
+       "from": 205,
+       "to": 214
+      },
+      {
+       "w": "And",
+       "from": 214,
+       "to": 219
+      },
+      {
+       "w": "ten",
+       "from": 219,
+       "to": 235
+      },
+      {
+       "w": "customers",
+       "from": 235,
+       "to": 248
+      },
+      {
+       "w": "wait",
+       "from": 248,
+       "to": 259
+      },
+      {
+       "w": "two",
+       "from": 259,
+       "to": 264
+      },
+      {
+       "w": "and",
+       "from": 264,
+       "to": 280
+      },
+      {
+       "w": "a",
+       "from": 280,
+       "to": 283
+      },
+      {
+       "w": "half",
+       "from": 283,
+       "to": 289
+      },
+      {
+       "w": "minutes.",
+       "from": 289,
+       "to": 305
+      }
+     ],
+     "cues": {
+      "1": 214
+     }
+    }
+   ]
+  },
+  {
+   "id": "st_f",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "laptop",
+      "n": 17
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "nodelivery",
+      "n": 18
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 19
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 20
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "calc",
+      "n": 21
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Rent or own?",
+     "title": "Rent or own?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1882,
+   "frames": 573,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_17.wav",
+     "from": 0,
+     "frames": 52,
+     "words": [
+      {
+       "w": "Then",
+       "from": 5,
+       "to": 11
+      },
+      {
+       "w": "you",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "come",
+       "from": 15,
+       "to": 20
+      },
+      {
+       "w": "into",
+       "from": 20,
+       "to": 26
+      },
+      {
+       "w": "my",
+       "from": 26,
+       "to": 29
+      },
+      {
+       "w": "laptop.",
+       "from": 29,
+       "to": 38
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_18.wav",
+     "from": 58,
+     "frames": 62,
+     "words": [
+      {
+       "w": "Rented",
+       "from": 60,
+       "to": 69
+      },
+      {
+       "w": "brains",
+       "from": 69,
+       "to": 78
+      },
+      {
+       "w": "don't",
+       "from": 78,
+       "to": 90
+      },
+      {
+       "w": "do",
+       "from": 90,
+       "to": 94
+      },
+      {
+       "w": "home",
+       "from": 94,
+       "to": 101
+      },
+      {
+       "w": "delivery.",
+       "from": 101,
+       "to": 114
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_19.wav",
+     "from": 135,
+     "frames": 49,
+     "words": [
+      {
+       "w": "So",
+       "from": 141,
+       "to": 144
+      },
+      {
+       "w": "which",
+       "from": 144,
+       "to": 153
+      },
+      {
+       "w": "one",
+       "from": 153,
+       "to": 157
+      },
+      {
+       "w": "do",
+       "from": 157,
+       "to": 160
+      },
+      {
+       "w": "I",
+       "from": 160,
+       "to": 162
+      },
+      {
+       "w": "use?!",
+       "from": 162,
+       "to": 168
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_20.wav",
+     "from": 189,
+     "frames": 187,
+     "words": [
+      {
+       "w": "Rent:",
+       "from": 189,
+       "to": 196
+      },
+      {
+       "w": "needs",
+       "from": 196,
+       "to": 211
+      },
+      {
+       "w": "internet,",
+       "from": 211,
+       "to": 225
+      },
+      {
+       "w": "pay",
+       "from": 225,
+       "to": 236
+      },
+      {
+       "w": "per",
+       "from": 236,
+       "to": 240
+      },
+      {
+       "w": "question.",
+       "from": 240,
+       "to": 266
+      },
+      {
+       "w": "Own:",
+       "from": 266,
+       "to": 281
+      },
+      {
+       "w": "works",
+       "from": 281,
+       "to": 287
+      },
+      {
+       "w": "offline,",
+       "from": 287,
+       "to": 297
+      },
+      {
+       "w": "your",
+       "from": 297,
+       "to": 312
+      },
+      {
+       "w": "data",
+       "from": 312,
+       "to": 317
+      },
+      {
+       "w": "stays",
+       "from": 317,
+       "to": 327
+      },
+      {
+       "w": "home,",
+       "from": 327,
+       "to": 348
+      },
+      {
+       "w": "you",
+       "from": 348,
+       "to": 352
+      },
+      {
+       "w": "buy",
+       "from": 352,
+       "to": 357
+      },
+      {
+       "w": "the",
+       "from": 357,
+       "to": 361
+      },
+      {
+       "w": "computer.",
+       "from": 361,
+       "to": 371
+      }
+     ],
+     "cues": {
+      "1": 266
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_21.wav",
+     "from": 382,
+     "frames": 159,
+     "words": [
+      {
+       "w": "Your",
+       "from": 385,
+       "to": 391
+      },
+      {
+       "w": "bills?",
+       "from": 391,
+       "to": 400
+      },
+      {
+       "w": "Rent,",
+       "from": 400,
+       "to": 420
+      },
+      {
+       "w": "and",
+       "from": 420,
+       "to": 439
+      },
+      {
+       "w": "test",
+       "from": 439,
+       "to": 449
+      },
+      {
+       "w": "it",
+       "from": 449,
+       "to": 453
+      },
+      {
+       "w": "on",
+       "from": 453,
+       "to": 460
+      },
+      {
+       "w": "the",
+       "from": 460,
+       "to": 465
+      },
+      {
+       "w": "same",
+       "from": 465,
+       "to": 472
+      },
+      {
+       "w": "twenty.",
+       "from": 472,
+       "to": 493
+      },
+      {
+       "w": "Net",
+       "from": 493,
+       "to": 503
+      },
+      {
+       "w": "down?",
+       "from": 503,
+       "to": 519
+      },
+      {
+       "w": "Calculator.",
+       "from": 519,
+       "to": 534
+      }
+     ],
+     "cues": {
+      "1": 493
+     }
+    }
+   ]
+  },
+  {
+   "id": "st_g",
+   "type": "sk_own",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "own",
+      "n": 22
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "gpu",
+      "n": 23
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "rentpc",
+      "n": 24
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "again",
+      "n": 25
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Renting again",
+     "title": "Renting again",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 2455,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_22.wav",
+     "from": 0,
+     "frames": 99,
+     "words": [
+      {
+       "w": "I",
+       "from": 7,
+       "to": 9
+      },
+      {
+       "w": "don't",
+       "from": 9,
+       "to": 15
+      },
+      {
+       "w": "RENT!",
+       "from": 15,
+       "to": 48
+      },
+      {
+       "w": "I'll",
+       "from": 48,
+       "to": 53
+      },
+      {
+       "w": "own",
+       "from": 53,
+       "to": 58
+      },
+      {
+       "w": "the",
+       "from": 58,
+       "to": 62
+      },
+      {
+       "w": "biggest",
+       "from": 62,
+       "to": 71
+      },
+      {
+       "w": "free",
+       "from": 71,
+       "to": 77
+      },
+      {
+       "w": "brain!",
+       "from": 77,
+       "to": 84
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_23.wav",
+     "from": 104,
+     "frames": 98,
+     "words": [
+      {
+       "w": "The",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "big",
+       "from": 112,
+       "to": 117
+      },
+      {
+       "w": "ones",
+       "from": 117,
+       "to": 123
+      },
+      {
+       "w": "run",
+       "from": 123,
+       "to": 133
+      },
+      {
+       "w": "on",
+       "from": 133,
+       "to": 136
+      },
+      {
+       "w": "a",
+       "from": 136,
+       "to": 139
+      },
+      {
+       "w": "twenty-five-lakh",
+       "from": 139,
+       "to": 164
+      },
+      {
+       "w": "graphics",
+       "from": 164,
+       "to": 181
+      },
+      {
+       "w": "card.",
+       "from": 181,
+       "to": 195
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep34v1/line_24.wav",
+     "from": 215,
+     "frames": 59,
+     "words": [
+      {
+       "w": "Then",
+       "from": 219,
+       "to": 225
+      },
+      {
+       "w": "I'll",
+       "from": 225,
+       "to": 232
+      },
+      {
+       "w": "rent",
+       "from": 232,
+       "to": 238
+      },
+      {
+       "w": "a",
+       "from": 238,
+       "to": 240
+      },
+      {
+       "w": "big",
+       "from": 240,
+       "to": 246
+      },
+      {
+       "w": "computer.",
+       "from": 246,
+       "to": 258
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep34v1/line_25.wav",
+     "from": 279,
+     "frames": 50,
+     "words": [
+      {
+       "w": "So...",
+       "from": 285,
+       "to": 301
+      },
+      {
+       "w": "renting",
+       "from": 301,
+       "to": 311
+      },
+      {
+       "w": "again.",
+       "from": 311,
+       "to": 319
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}
