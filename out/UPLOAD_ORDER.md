@@ -39,7 +39,7 @@ Already posted: `out/posted/`.
 | 032 | q03 | Quiz #3: Episodes 21–30 | ready |
 | 033 | ep31 | Teach an AI a New Skill Without a Supercomputer (LoRA) | ready |
 | 034 | ep32 | How AI Finds the Right Page (RAG, Part 2) | ready |
-| 035 | ep33 | We Don't Sell Headaches (EP33: hybrid search, tested; skit, recorded voice) | ready (English; Telugu pending) |
+| 035 | ep33 | We Don't Sell Headaches (EP33: hybrid search, tested; skit, recorded voice) | ready |
 | 036 | ep34 | Open vs Closed AI Models | ready |
 | 037 | ep35 | Small Language Models | ready |
 | 038 | ep36 | Why AI Runs on GPUs | ready |
