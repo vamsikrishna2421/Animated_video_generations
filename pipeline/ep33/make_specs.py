@@ -90,8 +90,10 @@ PAUSES_TE = {18: {"1": 0.45}}   # the beat before "eighteen" (the English take h
 SHOW_TE = {7: "Super. Only that from now on."}   # he says "సూపర్" here and again at 25 (the callback)
 GAP_TE = {11: 0.45}   # render review: air after the "balm" punchline too
 GAIN_TE = {9: 1.0, 22: 2.5}   # the joke's payoff, and "మీ స్టాక్ బుక్ కి తప్ప" (clean alone, masked in the mix)
-# English with AI voices: spoken forms for the code, "Good" kept inside the phrase (Parler drops one-word sentences)
-TTS_EN = {2: "E twelve zero three wasn't on the three pages I read.", 7: "Good, only that from now on.",
+# English with AI voices: spoken forms for the code, "Good" kept inside the phrase (Parler drops one-word sentences);
+# 1: the quoted "?!" made Parler add a word; 10: "pain balm" came out "paint bomb" in all four takes
+TTS_EN = {1: "AI! You told him out of stock? The batteries are right there!", 2: "E twelve zero three wasn't on the three pages I read.",
+          7: "Good, only that from now on.", 10: "The pain baam is right there!",
           26: "Okay. Keyword off. Next order: E twelve zero three."}
 PAUSES_TTS = {18: {"1": 0.45}}   # the beat before "eighteen" (the recording had it inserted in the edit)
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
