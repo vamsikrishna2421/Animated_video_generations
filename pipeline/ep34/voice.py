@@ -31,7 +31,8 @@ MUST = {"en": {1: [("customers",), ("silent",)], 3: [("rent",)], 4: [("orders", 
                12: [("one", "1"), ("nine", "9"), ("tomatoes", "tomato")], 14: [("almost",), ("eighteen", "18")], 15: [("two", "2"), ("wrong",)],
                16: [("sixty", "566", "66"), ("231", "thirty")], 18: [("delivery",)], 20: [("rent",), ("offline", "off"), ("internet",), ("own",)],
                21: [("test",), ("calculator",)], 22: [("own",)], 23: [("lakh", "lac", "lack", "lakhs"), ("graphics",)], 25: [("renting",)]},
-        "te": {}}
+        # Telugu, as the Hindi-decoding judge writes it: line 10's first new take passed the strict judge as gibberish
+        "te": {10: [("फ्री", "फ्रि", "free"), ("तेस्च", "टेस्ट", "तेस्ट", "टेस्च", "test")]}}
 
 
 def heard(path, who, n, lang):
@@ -48,8 +49,10 @@ def heard(path, who, n, lang):
 
 def judge(path, text, lang, n):
     ok, score, info = judge_en(path, text, "en") if lang == "en" else judge_te(path, text)
-    words = set(re.findall(r"[a-z0-9]+", info.split("|", 1)[1].lower()))
-    miss = [g[0] for g in MUST[lang].get(n, []) if not any(w in words for w in g)]
+    heard_text = info.split("|", 1)[1].lower()
+    words = set(re.findall(r"[a-z0-9]+", heard_text))
+    # English: whole words; Telugu (written in Devanagari by the judge): a substring will do
+    miss = [g[0] for g in MUST[lang].get(n, []) if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]
     return ok and not miss, score - 0.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
 
 

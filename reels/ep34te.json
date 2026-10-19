@@ -32,7 +32,7 @@
  "beatSnap": true,
  "hideTimerInHook": true,
  "hideTimer": true,
- "tempo": 1.05,
+ "tempo": 1.12,
  "captionTop": 1500,
  "handle": "@ai_maastaaru_telugu",
  "parler_lang": "te",
@@ -87,7 +87,7 @@
      "text": "ఇంటర్నెట్ లేదండి. మీరు నన్ను అద్దెకు తీసుకున్నారు.",
      "show": "No internet. You rent me, anna.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": -1.0
     },
     {
@@ -96,7 +96,7 @@
      "text": "ఏంటీ, అద్దెకా?! ఇరవై ఏళ్లు ఈ షాప్ అద్దెకు ఉన్నా. తర్వాత కొనేశా!",
      "show": "Rent?! I rented this shop twenty years, then I bought it!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     }
    ]
@@ -138,7 +138,7 @@
      "text": "నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.",
      "show": "My brain is on a company's computers. Your orders go there too. Closed model: pay per question.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": -1.0
     },
     {
@@ -147,7 +147,7 @@
      "text": "అయితే నేనే సొంత బ్రెయిన్ కొంటా!",
      "show": "Then I'll buy my own brain!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     }
    ]
@@ -201,7 +201,7 @@
      "text": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్.",
      "show": "Some give theirs away: open models.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": -1.0
     },
     {
@@ -210,7 +210,7 @@
      "text": "ఫ్రీగా ఇస్తారా?!",
      "show": "What, free?!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     },
     {
@@ -226,9 +226,9 @@
      "who": "ravi",
      "file": "09_ravi.wav",
      "text": "అరే, ఫ్రీ బ్రెయిన్ నా బిల్లులు వేస్తుందా?",
-     "show": "Arey, can a free brain make my bills?",
+     "show": "Okay, can a free brain make my bills?",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     }
    ]
@@ -279,10 +279,10 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్, మామూలు కంప్యూటర్.",
+     "text": "మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్.",
      "show": "We tested three free ones. Twenty WhatsApp orders, internet off.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": -1.0
     },
     {
@@ -291,7 +291,7 @@
      "text": "ఇరవై, కంప్యూటర్ కదా!",
      "show": "Twenty! It's a computer!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     },
     {
@@ -313,7 +313,7 @@
      "text": "మరి పెద్దది?",
      "show": "And the bigger one?",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     }
    ]
@@ -360,7 +360,7 @@
      "text": "దాదాపు ఫైవ్ జీబీ, [1] పద్దెనిమిది.",
      "show": "Almost five gigabytes: eighteen.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "pauses": {
       "1": 0.6
      },
@@ -381,7 +381,7 @@
      "text": "ఒక బిల్లు, టూ థర్టీ వన్ కి ఫైవ్ సిక్స్టీ సిక్స్ వేసింది.",
      "show": "One bill: ₹566 instead of ₹231.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": -1.0
     }
    ]
@@ -439,7 +439,7 @@
      "text": "అయితే నువ్వే నా ల్యాప్‌టాప్ లోకి రా.",
      "show": "Then you come into my laptop.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "tts": "అయితే నువ్వే నా ల్యాప్ టాప్ లోకి రా.",
      "gain_db": 1.5
     },
@@ -458,7 +458,7 @@
      "text": "మరి నేను ఏది వాడాలి?!",
      "show": "So which one do I use?!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     },
     {
@@ -467,7 +467,7 @@
      "text": "అద్దెకైతే నెట్ కావాలి. [1] సొంతమైతే నెట్ అక్కర్లేదు, డేటా ఇంట్లోనే, కానీ కంప్యూటర్ మీరే కొనుక్కోవాలి.",
      "show": "Rent needs internet. Own works offline, data stays home, but you buy the computer.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": -1.0
     },
     {
@@ -530,7 +530,7 @@
      "text": "నేను అద్దెకు తీసుకోను! పెద్ద ఫ్రీ బ్రెయిన్ నేనే పెట్టుకుంటా!",
      "show": "I don't RENT! I'll own the biggest free brain!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     },
     {
@@ -548,7 +548,7 @@
      "text": "అయితే పెద్ద కంప్యూటర్ అద్దెకు తీసుకుంటా.",
      "show": "Then I'll rent a big computer.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "gain_db": 1.5
     },
     {
@@ -557,7 +557,7 @@
      "text": "అంటే... [1] మళ్ళీ అద్దెకేనండి.",
      "show": "So... renting again.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.14,
      "pauses": {
       "1": 0.6
      },

@@ -19,7 +19,7 @@ LINES = {
     6: ("ai", "screen", "open", "Some give theirs away: open models."),
     7: ("ravi", "ravi", "free", "What, free?!"),
     8: ("ai", "screen", "skull", "The brain is free. [1] The skull is sold separately."),
-    9: ("ravi", "ravi", "bills", "Arey, can a free brain make my bills?"),
+    9: ("ravi", "ravi", "bills", "Okay, can a free brain make my bills?"),   # "Arey" came out "Airy", then "Arre" as "Or"
     10: ("ai", "screen", "test", "We tested three free ones. [1] Twenty WhatsApp orders, internet off."),
     11: ("ravi", "ravi", "guess", "Twenty! It's a computer!"),
     12: ("ai", "screen", "bars", "One gigabyte: one right. [1] Three gigabytes: nine. [2] It added tomatoes nobody ordered."),
@@ -40,7 +40,7 @@ LINES = {
 SHOW = {n: t.replace("[1] ", "").replace("[2] ", "") for n, (_, _, _, t) in LINES.items()}
 # English spoken forms: capitals and hyphens out; a lone first word kept inside its sentence (Parler drops one-word
 # sentences: skit 01's lesson)
-TTS_EN = {1: "AI! Customers waiting and you've gone silent?!", 9: "Arre, can a free brain make my bills?", 11: "Twenty, it's a computer!",
+TTS_EN = {1: "AI! Customers waiting and you've gone silent?!", 11: "Twenty, it's a computer!",
           16: "One bill: five sixty six, instead of two thirty one.",
           22: "I don't rent! I will own the biggest free brain!", 23: "The big ones run on a twenty five lakh graphics card.",
           25: "So. Renting again."}   # 22: "I'll own" read "I loan"; 25: the deadpan AI shouted "RENTING AGAIN!"
@@ -69,7 +69,7 @@ TE = {
     7: ("ఫ్రీగా ఇస్తారా?!", None),
     8: ("యాప్ ఫ్రీ అండి. [1] ఫోన్ మీరే కొనుక్కోవాలి.", None),   # a SIM means network and recharge: renting
     9: ("అరే, ఫ్రీ బ్రెయిన్ నా బిల్లులు వేస్తుందా?", None),
-    10: ("మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్, మామూలు కంప్యూటర్.", None),
+    10: ("మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్.", None),   # "plain computer" is on screen
     11: ("ఇరవై, కంప్యూటర్ కదా!", None),
     12: ("వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. <pause 0.3> [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.", "వన్ జీబీ, ఒక్కటే. త్రీ జీబీ, తొమ్మిది."),
     13: ("మరి పెద్దది?", None),
@@ -98,7 +98,7 @@ def spec(lang="en"):
          "banner": "Rent a brain or own one?", "topic": "", "look": "classic", "gap": 0.18, "lead": 0.15, "music": "lofi",
          "musicVol": [0.4, 0.75], "musicFade": 0.05, "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
          "musicPad": True, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
-         "tempo": 1.05 if te else 1.2, "captionTop": 1500}
+         "tempo": 1.12 if te else 1.2, "captionTop": 1500}   # Telugu at 1.05 ran 89.6 s
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
     scenes = []
@@ -107,7 +107,7 @@ def spec(lang="en"):
         for n in range(a, b + 1):
             who, shot, prop, text = LINES[n]
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW[n],
-                  "maxgap": 0.28, "gap": GAP.get(n, 0.2 if te else 0.14)}
+                  "maxgap": 0.28, "gap": GAP.get(n, 0.14)}
             if te and TE[n][1]:
                 ln["tts"] = TE[n][1]
             if te and n in TE_PART2:
