@@ -59,6 +59,7 @@ stay as made.
      each time) -> "Now mug it up." (training freezes them again).
    - No "lecture in costume" (the viewers' words for skit 01's first draft): lines of 1-3 s, one idea per line, the
      AI explains in one sentence at most, the human asks what the viewer would ask ("So which one do I use?").
+     Never more than two AI lines in a row: Ravi reacts in between (EP33's four at 0:39-0:51 lost both viewers).
    - The teaching beats, each carried by a line and a picture:
 
      | By | Beat |
@@ -117,6 +118,13 @@ The user voices the episode: both characters, English and, if they can, Telugu (
 - EP33 (Oct 19): delivered, English in the user's take 1, Telugu on Parler. A re-record of English line 1 ("AI!" read
   as "Yeah") may still come: swap it in then (cut_takes `--script`, voice_rec, rebuild, re-render EN, re-deliver); it
   does not hold up EP34. The user plans to record the next episode too, saying "Line N" before every line.
+- Oct 19: the user felt their EP33 take lacked punch and asked for the same episode with AI voices to compare
+  (`reels/ep33tts.json`, `pipeline/ep33/voice_en.py`: skit 01's cast). The viewers split: one preferred the AI voices
+  (the recorded hook read "Yeah, you told him what of stock?"), the other the human take ("a TTS voice on an AI page
+  smells like a content farm"). Both said 0:39-0:51 drags in both versions: the script, not the voice. Their idea: the
+  owner voices Ravi, TTS voices the shop AI. The voice from EP34 on is the user's call. Until they say, make the episode
+  with AI voices as before (deliverable) and send the recording script too; a recording that arrives replaces the
+  voices it covers.
 
 ## Run 2: daily creative reel
 1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. The shop cast (Ravi anna
@@ -152,6 +160,11 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   and the takes are judged after the filter, not before (pipeline/ep33/voice_te.py).
   Big numbers in English inside Telugu sentences; a short pause before a key number.
 - Fish can repeat a sentence or add words: judge every take with ASR (word hit, repeats, rate) before using it.
+- TTS sped up by the spec `tempo` (ffmpeg atempo) blurs key words: EP33 at 1.2x read "Keyword off" as "Keyword on",
+  "pain relief" as "paint relief", "Test" as "just". Check each line after the build (Whisper on `line_NN.wav` or per
+  line on the render) and give a blurred line its own `"tempo": 1.0`.
+- Parler runs words together across a pause: "Why two? Switch one off" -> "why to switch one off", "pain balm" ->
+  "paint bomb" in six takes. Re-roll with a word check (the judge's word hit passed both), or reword.
 - Short exclamations get misread ("June?!" came out "Johnny"): give a spoken form in the TTS override.
 - A hit on the same frame as a key word masks it: land hits about 8 frames earlier.
 - The last scene must hold to the final frame (no empty end frame).
