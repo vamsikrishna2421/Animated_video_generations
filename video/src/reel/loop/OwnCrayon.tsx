@@ -342,12 +342,12 @@ const StOwn: React.FC<SP> = ({ s }) => {
           }
           if (n === 15) bubble(c, 300, 560, "2 wrong?!", 80, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (n === 16) {   // the 18/20 brain's worst bill, then the queue time (15 s a bill x 10 customers)
-            c.save(); c.globalAlpha = 1 - seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 2);
+            c.save(); c.globalAlpha = 1 - seg(p, 0.62, 0.7);
             c.fillStyle = "#fffdf4"; rrect(c, 140, 330, 800, 210, 20); c.fill();
             c.font = handF(36); c.fillStyle = INK; c.textAlign = "left"; c.fillText("3 biscuits, 1 tea powder, 1 kg sugar", 170, 395);
             c.font = caveat(60); c.fillStyle = COL.red; c.fillText("billed ₹566", 170, 480); c.fillStyle = GREEN; c.textAlign = "right"; c.fillText("right ₹231", 910, 480);
             c.restore();
-            const k = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 4);
+            const k = seg(p, 0.62, 0.72);
             stopwatch(c, 820, 470, p, k, r);
             if (k > 0) tag(c, "10 customers = 2.5 minutes", 380, 470, 50, COL.yellow, INK, -0.03, k);
           }

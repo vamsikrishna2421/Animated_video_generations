@@ -77,13 +77,14 @@
      "maxgap": 0.28,
      "gap": 0.2,
      "tts": "AI! Customers waiting and you've gone silent?!",
+     "tempo": 1.25,
      "gain_db": 1.5
     },
     {
      "who": "ai",
      "file": "02_ai.wav",
-     "text": "No internet. You rent me, anna. My brain isn't here.",
-     "show": "No internet. You rent me, anna. My brain isn't here.",
+     "text": "No internet. You rent me, anna.",
+     "show": "No internet. You rent me, anna.",
      "maxgap": 0.28,
      "gap": 0.14,
      "gain_db": -1.0
@@ -95,6 +96,7 @@
      "show": "Rent?! I rented this shop twenty years, then I bought it!",
      "maxgap": 0.28,
      "gap": 0.14,
+     "tempo": 1.1,
      "gain_db": 1.5
     }
    ]
@@ -136,6 +138,7 @@
      "show": "My brain is on a company's computers. Your orders go there too. Closed model: pay per question.",
      "maxgap": 0.28,
      "gap": 0.14,
+     "tempo": 1.05,
      "gain_db": -1.0
     },
     {
@@ -145,6 +148,7 @@
      "show": "Then I'll buy my own brain!",
      "maxgap": 0.28,
      "gap": 0.14,
+     "tempo": 1.25,
      "gain_db": 1.5
     }
    ]
@@ -225,6 +229,7 @@
      "show": "Arey, can a free brain make my bills?",
      "maxgap": 0.28,
      "gap": 0.14,
+     "tempo": 1.25,
      "gain_db": 1.5
     }
    ]
@@ -293,8 +298,8 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "One gigabyte: one right. [1] Three gigabytes: nine. [2] It billed tomatoes nobody ordered.",
-     "show": "One gigabyte: one right. Three gigabytes: nine. It billed tomatoes nobody ordered.",
+     "text": "One gigabyte: one right. [1] Three gigabytes: nine. [2] It added tomatoes nobody ordered.",
+     "show": "One gigabyte: one right. Three gigabytes: nine. It added tomatoes nobody ordered.",
      "maxgap": 0.28,
      "gap": 0.45,
      "tempo": 1.1,
@@ -368,11 +373,11 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "One bill: five sixty-six instead of two thirty-one. [1] And ten customers wait two and a half minutes.",
-     "show": "One bill: five sixty-six instead of two thirty-one. And ten customers wait two and a half minutes.",
+     "text": "One bill: five sixty-six instead of two thirty-one.",
+     "show": "One bill: five sixty-six instead of two thirty-one.",
      "maxgap": 0.28,
      "gap": 0.14,
-     "tts": "One bill: five sixty six, instead of two thirty one. And ten customers wait two and a half minutes.",
+     "tts": "One bill: five sixty six, instead of two thirty one.",
      "tempo": 1.1,
      "gain_db": -1.0
     }
@@ -521,6 +526,7 @@
      "maxgap": 0.28,
      "gap": 0.14,
      "tts": "I don't rent! I will own the biggest free brain!",
+     "tempo": 1.25,
      "gain_db": 1.5
     },
     {
@@ -541,6 +547,7 @@
      "show": "Then I'll rent a big computer.",
      "maxgap": 0.28,
      "gap": 0.14,
+     "tempo": 1.25,
      "gain_db": 1.5
     },
     {

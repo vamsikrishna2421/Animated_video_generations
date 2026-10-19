@@ -12,7 +12,7 @@ R = ROOT / "reels"
 # frame). prop: what the line brings on (OwnCrayon.tsx).
 LINES = {
     1: ("ravi", "wide", "hook", "AI! Customers waiting and you've gone SILENT?!"),   # Parler said "Then customers" in every take
-    2: ("ai", "screen", "rented", "No internet. You rent me, anna. My brain isn't here."),
+    2: ("ai", "screen", "rented", "No internet. You rent me, anna."),
     3: ("ravi", "ravi", "ownshop", "Rent?! I rented this shop twenty years, then I bought it!"),
     4: ("ai", "screen", "cloud", "My brain is on a company's computers. [1] Your orders go there too. [2] Closed model: pay per question."),
     5: ("ravi", "ravi", "buy", "Then I'll buy my own brain!"),
@@ -22,11 +22,11 @@ LINES = {
     9: ("ravi", "ravi", "bills", "Arey, can a free brain make my bills?"),
     10: ("ai", "screen", "test", "We tested three free ones. [1] Twenty WhatsApp orders, internet off."),
     11: ("ravi", "ravi", "guess", "Twenty! It's a computer!"),
-    12: ("ai", "screen", "bars", "One gigabyte: one right. [1] Three gigabytes: nine. [2] It billed tomatoes nobody ordered."),
+    12: ("ai", "screen", "bars", "One gigabyte: one right. [1] Three gigabytes: nine. [2] It added tomatoes nobody ordered."),
     13: ("ravi", "ravi", "biggest", "And the bigger one?"),
     14: ("ai", "screen", "eighteen", "Five gigabytes: [1] eighteen."),
     15: ("ravi", "ravi", "told", "Two wrong bills?!"),
-    16: ("ai", "wide", "stopwatch", "One bill: five sixty-six instead of two thirty-one. [1] And ten customers wait two and a half minutes."),
+    16: ("ai", "wide", "stopwatch", "One bill: five sixty-six instead of two thirty-one."),
     17: ("ravi", "ravi", "laptop", "Then you come into my laptop."),
     18: ("ai", "screen", "nodelivery", "Rented brains don't do home delivery."),
     19: ("ravi", "ravi", "which", "So which one do I use?!"),
@@ -41,11 +41,11 @@ SHOW = {n: t.replace("[1] ", "").replace("[2] ", "") for n, (_, _, _, t) in LINE
 # English spoken forms: capitals and hyphens out; a lone first word kept inside its sentence (Parler drops one-word
 # sentences: skit 01's lesson)
 TTS_EN = {1: "AI! Customers waiting and you've gone silent?!", 11: "Twenty, it's a computer!",
-          16: "One bill: five sixty six, instead of two thirty one. And ten customers wait two and a half minutes.",
+          16: "One bill: five sixty six, instead of two thirty one.",
           22: "I don't rent! I will own the biggest free brain!", 23: "The big ones run on a twenty five lakh graphics card.",
           25: "So. Renting again."}   # 22: "I'll own" read "I loan"; 25: the deadpan AI shouted "RENTING AGAIN!"
 # lines whose key word or number must not blur at the reel's tempo (EP33: 1.2x read "Keyword off" as "Keyword on")
-TEMPO_EN = {12: 1.1, 14: 1.0, 16: 1.1, 23: 1.1}
+TEMPO_EN = {12: 1.1, 14: 1.0, 16: 1.1, 23: 1.1, 1: 1.25, 3: 1.1, 4: 1.05, 5: 1.25, 9: 1.25, 22: 1.25, 24: 1.25}   # Parler's Ravi is slow; 3 "Rent" read "Wrench" and 4 "pay per" read "paper" when faster
 # Sound (CLAUDE.md arc): the slam's hit in the first second, a lift into each insert, the bed dips while Ravi guesses and
 # drops out right before "eighteen" with a hit on it, a sting after the tomatoes, the bed up for the rule, a riser into
 # the last line, which loops into the opening slam.
@@ -60,7 +60,7 @@ SCENES = [("st_a", 1, 3, {"rise": 1.25, "tail": 0.1}),
 GAP = {1: 0.2, 8: 0.4, 12: 0.45, 15: 0.25, 18: 0.4, 21: 0.3, 23: 0.35}   # the first cut ran 93 s: lines trimmed, gaps tighter, 1.2x
 TE = {
     1: ("అరే ఏఐ, పది మంది కస్టమర్లు వెయిటింగ్, నువ్వు మాట్లాడవేంటి?!", None),
-    2: ("ఇంటర్నెట్ లేదండి. మీరు నన్ను అద్దెకు తీసుకున్నారు. నా బ్రెయిన్ ఇక్కడ లేదు.", None),
+    2: ("ఇంటర్నెట్ లేదండి. మీరు నన్ను అద్దెకు తీసుకున్నారు.", None),
     3: ("ఏంటీ, అద్దెకా?! ఇరవై ఏళ్లు ఈ షాప్ అద్దెకు ఉన్నా. తర్వాత కొనేశా!", None),
     4: ("నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీ ఆర్డర్లు అక్కడికే వెళ్తాయి. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత.", None),
     5: ("అయితే నేనే సొంత బ్రెయిన్ కొంటా!", None),
@@ -75,7 +75,7 @@ TE = {
     13: ("మరి పెద్దది?", None),
     14: ("ఫైవ్ జీబీ, [1] పద్దెనిమిది.", None),
     15: ("రెండు తప్పు బిల్లులా?!", None),
-    16: ("ఒక బిల్లు, టూ థర్టీ వన్ కి ఫైవ్ సిక్స్టీ సిక్స్ వేసింది. [1] పది మంది కస్టమర్లకి రెండున్నర నిమిషాలు.", None),
+    16: ("ఒక బిల్లు, టూ థర్టీ వన్ కి ఫైవ్ సిక్స్టీ సిక్స్ వేసింది.", None),   # the queue time is on screen
     17: ("అయితే నువ్వే నా ల్యాప్‌టాప్ లోకి రా.", "అయితే నువ్వే నా ల్యాప్ టాప్ లోకి రా."),
     18: ("అద్దె బ్రెయిన్ కి హోమ్ డెలివరీ లేదు.", None),   # -ండి dropped on 12, 16, 18: in every line it sounded like a call centre
     19: ("మరి నేను ఏది వాడాలి?!", None),
