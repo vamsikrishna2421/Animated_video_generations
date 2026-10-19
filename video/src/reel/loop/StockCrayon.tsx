@@ -98,7 +98,7 @@ const chat = (c: Ctx, x: number, y: number, w: number, k: number, rows: { who: "
   c.restore();
 };
 // the phone opened to full frame: header with the AI's face, white screen below
-const bigPhone = (c: Ctx, W: number, H: number, title: string, r: () => number, f: number) => {
+export const bigPhone = (c: Ctx, W: number, H: number, title: string, r: () => number, f: number) => {
   c.fillStyle = "#0b1220"; rrect(c, 62, 150, W - 124, 1350, 64); c.fill();
   c.fillStyle = "#f8fafc"; rrect(c, 88, 178, W - 176, 1294, 44); c.fill();
   c.fillStyle = COL.orange; rrect(c, 116, 206, 92, 84, 18); c.fill();
@@ -141,7 +141,7 @@ const ruleCard = (c: Ctx, x: number, y: number, s: number, k: number, bothOff: n
   });
   c.restore();
 };
-const bar = (c: Ctx, y: number, label: string, v: number, col: string, k: number, note?: string) => {
+export const bar = (c: Ctx, y: number, label: string, v: number, col: string, k: number, note?: string) => {
   if (k <= 0) return;
   const x0 = 150, wmax = 640, q = easeOut(k);
   c.font = caveat(52); c.fillStyle = INK; c.textAlign = "left"; c.fillText(label, x0, y - 18);

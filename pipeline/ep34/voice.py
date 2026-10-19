@@ -24,11 +24,13 @@ from ep33.voice_te import VOICE as VOICE_TE, LO_CUT, judge as judge_te  # noqa: 
 from ep33.voice_rec import phone  # noqa: E402
 import ep33.voice_rec as vr  # noqa: E402
 
-LIGHT_EN = {13}   # the AI's numbers through the lighter phone sound
+LIGHT_EN = {12, 14, 16, 23}   # the AI's numbers through the lighter phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("customers",), ("silent",)], 4: [("rent",)], 6: [("open",)], 8: [("download",), ("free",)],
-               13: [("one", "1"), ("nine", "9")], 15: [("tomatoes", "tomato")], 17: [("secret",)],
-               19: [("rent",), ("own",), ("test",)], 21: [("eighty", "80"), ("none",)]},
+MUST = {"en": {1: [("customers",), ("silent",)], 3: [("rent",)], 4: [("order",), ("closed",)], 6: [("open",)], 7: [("free",)],
+               8: [("skull",)], 10: [("twenty", "20"), ("internet",)], 11: [("eighteen", "18")],
+               12: [("one", "1"), ("nine", "9"), ("tomatoes", "tomato")], 14: [("eighteen", "18")], 15: [("eighteen", "18")],
+               16: [("fifteen", "15"), ("queue", "cue")], 18: [("delivery",)], 20: [("rent",), ("own",), ("test",)],
+               21: [("calculator",)], 23: [("lakh", "lac", "lack", "lakhs"), ("graphics",)], 25: [("renting",)]},
         "te": {}}
 
 
