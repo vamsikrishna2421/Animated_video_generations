@@ -98,7 +98,10 @@ TTS_EN = {1: "AI! You told him out of stock? The batteries are right there!", 2:
           26: "Okay. Keyword off. Next order: E twelve zero three."}
 SHOW_TTS = {10: "The headache balm is right there!"}
 PAUSES_TTS = {18: {"1": 0.45}}   # the beat before "eighteen" (the recording had it inserted in the edit)
-# AI voices at 1.1x ran 82 s against the recording's 75 s (Parler's Ravi is slower than the user): 1.2x, tighter pauses
+# AI voices at 1.1x ran 82 s against the recording's 75 s (Parler's Ravi is slower than the user): 1.2x, tighter pauses,
+# except lines whose key word blurred at 1.2x in the mix ("which search" -> "such", "Both" -> "Bose", "Test" -> "just",
+# "Keyword off" -> "Keyword on"); at 1.0 they all read right
+TEMPO_TTS = {12: 1.0, 13: 1.0, 18: 1.0, 23: 1.0, 26: 1.0}
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
@@ -128,6 +131,8 @@ def spec(lang="en"):
                 ln["tts"] = TTS_EN[n]
             if tts and n in PAUSES_TTS:
                 ln["pauses"] = PAUSES_TTS[n]
+            if tts and n in TEMPO_TTS:
+                ln["tempo"] = TEMPO_TTS[n]
             if te and n in TE_PART2:
                 ln.update({"file2": f"{n:02d}b_{who}.wav", "tts2": TE_PART2[n], "pause": 0.3})
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,

@@ -22,6 +22,8 @@ from skit01.voice import FISH_REF, FISH_REF_TEXT, VOICE, judge, trim  # noqa: E4
 from ep33.voice_rec import LIGHT, phone  # noqa: E402
 import ep33.voice_rec as vr  # noqa: E402
 
+LIGHT_EN = LIGHT | {18}   # "Both" read "Bose" through the full phone sound
+
 
 def heard(path, who, n):
     """The take as it goes into the reel: the AI's through the phone filter."""
@@ -30,7 +32,7 @@ def heard(path, who, n):
     a, sr = sf.read(path)
     vr.SR = sr
     out = Path(tempfile.gettempdir()) / "ep33tts_judge.wav"
-    sf.write(out, phone(a, n in LIGHT).astype(np.float32), sr)
+    sf.write(out, phone(a, n in LIGHT_EN).astype(np.float32), sr)
     return out
 
 
