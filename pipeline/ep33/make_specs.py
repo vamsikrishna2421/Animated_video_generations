@@ -87,6 +87,7 @@ TE_PART2 = {26: "తర్వాతి ఆర్డర్, ఈ ట్వెల�
 PAUSES_TE = {18: {"1": 0.45}}   # the beat before "eighteen" (the English take had it inserted in the edit)
 SHOW_TE = {7: "Super. Only that from now on."}   # he says "సూపర్" here and again at 25 (the callback)
 GAP_TE = {11: 0.45}   # render review: air after the "balm" punchline too
+GAIN_TE = {9: 1.0, 22: 2.5}   # the joke's payoff, and "మీ స్టాక్ బుక్ కి తప్ప" (clean alone, masked in the mix)
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
@@ -116,9 +117,9 @@ def spec(lang="en"):
                 ln.update({"file2": f"{n:02d}b_{who}.wav", "tts2": TE_PART2[n], "pause": 0.3})
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
             # the fix and the twist build to the loudest stretch
-            # Telugu: no dip for the AI in the joke (its lines 8, 9, 11 were the quietest in the mix), and 9 lifted
+            # Telugu: no dip for the AI in the joke (its lines 8, 9, 11 were the quietest in the mix)
             g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 and not (te and who == "ai") else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
-            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0) + (1.0 if te and n == 9 else 0.0)
+            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0) + (GAIN_TE.get(n, 0.0) if te else 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)
