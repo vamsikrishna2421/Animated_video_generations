@@ -1,4 +1,10 @@
-# EP34 "Rent a brain or own one?" (open vs closed models): script v2 (AI voices)
+# EP34 "Rent a brain or own one?" (open vs closed models): script v2.1 (AI voices)
+
+v2 -> v2.1 (second script review: the hook works for both; the 18/20 was staged as a win, so the rent answer
+contradicted it): Ravi guesses "Twenty!", and the 18 brings "Two wrong bills?!" with the real worst bill (₹566 for a ₹231
+order) and the queue time (10 customers, 2.5 minutes); the rule says what the card says (RENT needs internet, OWN works
+offline); line 6 adds "Just not ChatGPT"; "run on" a ₹25-lakh card, not "need"; the shop board says since 2016; Telugu:
+-ండి dropped on 12, 16, 18, "App free" not "SIM free", "maamoolu computer" in 10, "nene pettukuntaa" in 22.
 
 v1 -> v2 (script review: both viewers gone by 0:03, the rule didn't match the test): "rent" in the first 3 s (sticker
 "HE DOESN'T OWN HIS AI. HE RENTS IT.", line 2 "You rent me"); "closed" said out loud; privacy set up in line 4; a
@@ -45,27 +51,27 @@ Lines of 1-3 s; never more than two AI lines in a row; Ravi asks what the viewer
 |---|---|---|---|
 | 1 | Ravi | AI! Ten customers waiting and you've gone SILENT?! | shop, wide: a queue at the counter; the phone on the counter: "No internet ✕"; Ravi slams the counter; big sticker from frame 1: "HE DOESN'T OWN HIS AI. HE RENTS IT."; tag "EP34 · AI From Scratch" |
 | 2 | AI | No internet. You rent me, anna. My brain isn't here. | the phone: the AI's face, a crossed cloud, a "RENTED" tag |
-| 3 | Ravi | Rent?! I rented this shop for twenty years. Then I bought it! | the shop board: "RAVI KIRANA · own shop since 2006" |
+| 3 | Ravi | Rent?! I rented this shop for twenty years. Then I bought it! | the shop board: "RAVI KIRANA · own shop since 2016" |
 | 4 | AI | My brain sits on a company's computers. [1] Every order you type goes to them. [2] Closed model: you pay per question. | insert: the phone, a tower, a far-off building full of computers; on [1] an order bubble "2 kg tomato, 1 dozen eggs" flies to the building; on [2] a taxi meter "₹ per question" and a padlock "CLOSED: its numbers stay secret" |
 | 5 | Ravi | Then I'll buy my own brain! | |
-| 6 | AI | Some companies give theirs away: open models. [1] Even ChatGPT's maker. | insert OPEN MODELS: a brain made of numbers slides down into a laptop: "OPEN: the numbers are published, download them"; three chips: Llama · Meta, Gemma · Google, gpt-oss · OpenAI ("even ChatGPT's maker") |
+| 6 | AI | Some companies give theirs away: open models. [1] Even ChatGPT's maker. [2] Just not ChatGPT. | insert OPEN MODELS: a brain made of numbers slides down into a laptop: "OPEN: the brain (its weights) is published"; three chips: Llama · Meta, Gemma · Google, gpt-oss · OpenAI ("even ChatGPT's maker"); on [2] "(not ChatGPT itself)" |
 | 7 | Ravi | Free?! | |
 | 8 | AI | The brain is free. [1] The skull is sold separately. | a computer with a big price tag: "free to download ≠ free to run" |
 | 9 | Ravi | Arey, can a free brain make my bills? | |
 | 10 | AI | We tested three free ones. [1] Twenty WhatsApp orders, internet off, a plain computer. | OUR REAL TEST: a stack of WhatsApp orders, each with its right total ticked; Wi-Fi off; "4 cores, no graphics card" |
-| 11 | Ravi | Eighteen! It's a computer! | quiz card: "How many bills right, out of 20? Your guess?"; Ravi's bubble "18" |
+| 11 | Ravi | Twenty! It's a computer! | quiz card: "How many bills right, out of 20? Your guess?"; Ravi's bubble "20!" |
 | 12 | AI | One gigabyte: one right. [1] Three gigabytes: nine. [2] It added tomatoes nobody ordered. | bars: "1 GB free brain 1/20", "3 GB free brain 9/20"; on [2] its real bill: tomato, onion, potato circled red: ₹363, right ₹258 |
-| 13 | Ravi | And the biggest? | |
+| 13 | Ravi | And the bigger one? | |
 | 14 | AI | Five gigabytes: [1] eighteen. | the music drops out before [1]; "4.7 GB free brain 18/20" with a hit |
-| 15 | Ravi | Eighteen! I said eighteen! | |
-| 16 | AI | Fifteen seconds a bill. [1] Your queue is waiting. | a stopwatch "15 s a bill"; the queue grows |
+| 15 | Ravi | Two wrong bills?! | bubble "2 wrong?!" |
+| 16 | AI | One bill: five sixty-six for a two thirty-one order. [1] And ten customers wait two and a half minutes. | its worst bill: "3 biscuits, 1 tea powder, 1 kg sugar: billed ₹566, right ₹231"; on [1] a stopwatch and "10 customers = 2.5 minutes"; the queue grows |
 | 17 | Ravi | Then you come into my laptop. | |
 | 18 | AI | Rented brains don't do home delivery. | the padlock again: "CLOSED: you can't download it" |
 | 19 | Ravi | So which one do I use?! | |
-| 20 | AI | Rent: no computer, pay per question. [1] Own: your data stays home, you buy the computer. [2] Test on twenty bills. | RULE CARD (big, stays): RENT · no computer, pay per question / OWN · data stays home, buy the computer / TEST · 20 bills you know |
-| 21 | AI | Your bills? Rent. [1] Net down? Calculator. | a calculator pops up next to the card |
+| 20 | AI | Rent: needs internet, pay per question. [1] Own: works offline, your data stays home, you buy the computer. | RULE CARD (big, stays): RENT · needs internet, pay per question / OWN · works offline, data stays home, buy the PC |
+| 21 | AI | Your bills? Rent, and test it on the same twenty. [1] Net down? Calculator. | the card adds TEST · on the same 20 bills first; "your bills: RENT + TEST"; a calculator on [1] |
 | 22 | Ravi | I don't RENT! I'll own the biggest free brain! | Ravi opens a laptop |
-| 23 | AI | The big ones need a twenty-five-lakh graphics card. | a graphics card with a price tag "about ₹25 lakh (80 GB, one H100)" |
+| 23 | AI | The big ones run on a twenty-five-lakh graphics card. | a graphics card with a price tag "about ₹25 lakh (80 GB, one H100)" |
 | 24 | Ravi | Then I'll rent a big computer. | |
 | 25 | AI | So... renting again. | the phone's "RENTED" tag again; loops to frame 1 |
 
@@ -77,24 +83,24 @@ Lines of 1-3 s; never more than two AI lines in a row; Ravi asks what the viewer
 | 3 | Ravi | అద్దెకా?! ఇరవై ఏళ్లు ఈ షాప్ అద్దెకు ఉన్నా. తర్వాత కొనేశా! | Addekaa?! Iravai ellu ee shop addeku unnaa. Tarvaata konesaa! |
 | 4 | AI | నా బ్రెయిన్ ఒక కంపెనీ కంప్యూటర్లలో ఉంటుందండి. [1] మీరు టైప్ చేసే ప్రతి ఆర్డర్ వాళ్ళకి వెళ్తుంది. [2] క్లోజ్డ్ మోడల్, క్వశ్చన్ కి ఇంత. | Naa brain oka company computerlalo untundandi. Meeru type chese prati order vaallaki veltundi. Closed model, question ki intha. |
 | 5 | Ravi | అయితే నేనే సొంత బ్రెయిన్ కొంటా! | Ayite nene sontha brain kontaa! |
-| 6 | AI | కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. [1] చాట్‌జీపీటీ కంపెనీ కూడా. | Konni companylu freega istaayandi, open models. ChatGPT company kooda. |
+| 6 | AI | కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. [1] చాట్‌జీపీటీ కంపెనీ కూడా. [2] కానీ చాట్‌జీపీటీని కాదు. | Konni companylu freega istaayandi, open models. ChatGPT company kooda. Kaani ChatGPT ni kaadu. |
 | 7 | Ravi | ఫ్రీగా ఇస్తారా?! | Freega istaaraa?! |
-| 8 | AI | సిమ్ ఫ్రీ అండి. [1] ఫోన్ మీరే కొనుక్కోవాలి. | SIM free andi. Phone meere konukkovaali. |
+| 8 | AI | యాప్ ఫ్రీ అండి. [1] ఫోన్ మీరే కొనుక్కోవాలి. | App free andi. Phone meere konukkovaali. |
 | 9 | Ravi | అరే, ఫ్రీ బ్రెయిన్ నా బిల్లులు వేస్తుందా? | Arey, free brain naa billulu vestundaa? |
-| 10 | AI | మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్. | Moodu free brainlu test chesaamandi. Iravai WhatsApp orders, internet off. |
-| 11 | Ravi | పద్దెనిమిది! కంప్యూటర్ కదా! | Paddenimidi! Computer kadaa! |
-| 12 | AI | వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసిందండి. | One GB, okkate. Three GB, tommidi. Evaroo adagani tamaatalu kooda billulo vesindandi. |
+| 10 | AI | మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్, మామూలు కంప్యూటర్. | Moodu free brainlu test chesaamandi. Iravai WhatsApp orders, internet off, maamoolu computer. |
+| 11 | Ravi | ఇరవై, కంప్యూటర్ కదా! | Iravai, computer kadaa! |
+| 12 | AI | వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది. | One GB, okkate. Three GB, tommidi. Evaroo adagani tamaatalu kooda billulo vesindi. |
 | 13 | Ravi | మరి పెద్దది? | Mari peddadi? |
 | 14 | AI | ఫైవ్ జీబీ, [1] పద్దెనిమిది. | Five GB, paddenimidi. |
-| 15 | Ravi | పద్దెనిమిది! నేను చెప్పానా! | Paddenimidi! Nenu cheppaanaa! |
-| 16 | AI | ఒక్కో బిల్లుకి పదిహేను సెకన్లు. [1] మీ క్యూ వెయిటింగ్ అండి. | Okko billuki padihenu secondlu. Mee queue waiting andi. |
+| 15 | Ravi | రెండు తప్పు బిల్లులా?! | Rendu tappu billulaa?! |
+| 16 | AI | ఒక బిల్లు, టూ థర్టీ వన్ కి ఫైవ్ సిక్స్టీ సిక్స్ వేసింది. [1] పది మంది కస్టమర్లకి రెండున్నర నిమిషాలు. | Oka billu, two thirty one ki five sixty six vesindi. Padi mandi customerlaki rendunnara nimishaalu. |
 | 17 | Ravi | అయితే నువ్వే నా ల్యాప్‌టాప్ లోకి రా. | Ayite nuvve naa laptop loki raa. |
-| 18 | AI | అద్దె బ్రెయిన్ కి హోమ్ డెలివరీ లేదండి. | Adde brain ki home delivery ledandi. |
+| 18 | AI | అద్దె బ్రెయిన్ కి హోమ్ డెలివరీ లేదు. | Adde brain ki home delivery ledu. |
 | 19 | Ravi | మరి నేను ఏది వాడాలి?! | Mari nenu edi vaadaali?! |
-| 20 | AI | అద్దెకైతే, కంప్యూటర్ అక్కర్లేదు, క్వశ్చన్ కి ఇంత. [1] సొంతమైతే, డేటా ఇంట్లోనే, కంప్యూటర్ మీదే. [2] ఇరవై బిల్లులతో టెస్ట్ చేయండి. | Addekaite, computer akkarledu, question ki intha. Sonthamaite, data intlone, computer meede. Iravai billulatho test cheyandi. |
-| 21 | AI | మీ బిల్లులకి అద్దెదే. [1] నెట్ పోతే, కాలిక్యులేటర్. | Mee billulaki addede. Net pote, calculator. |
-| 22 | Ravi | నేను అద్దెకు తీసుకోను! పెద్ద ఫ్రీ బ్రెయిన్ నే సొంతం చేసుకుంటా! | Nenu addeku teesukonu! Pedda free brain ne sontham chesukuntaa! |
-| 23 | AI | పెద్దవాటికి పాతిక లక్షల గ్రాఫిక్స్ కార్డ్ కావాలండి. | Peddavaatiki paatika lakshala graphics card kaavaalandi. |
+| 20 | AI | అద్దెకైతే నెట్ కావాలి, క్వశ్చన్ కి ఇంత. [1] సొంతమైతే నెట్ అక్కర్లేదు, డేటా ఇంట్లోనే, కంప్యూటర్ మీరే కొనుక్కోవాలి. | Addekaite net kaavaali, question ki intha. Sonthamaite net akkarledu, data intlone, computer meere konukkovaali. |
+| 21 | AI | మీ బిల్లులకి అద్దె బ్రెయినే, అదే ఇరవైతో టెస్ట్ చేసి. [1] నెట్ పోతే, కాలిక్యులేటర్. | Mee billulaki adde braine, ade iravaitho test chesi. Net pote, calculator. |
+| 22 | Ravi | నేను అద్దెకు తీసుకోను! పెద్ద ఫ్రీ బ్రెయిన్ నేనే పెట్టుకుంటా! | Nenu addeku teesukonu! Pedda free brain nene pettukuntaa! |
+| 23 | AI | పెద్దవి పాతిక లక్షల గ్రాఫిక్స్ కార్డ్ మీద నడుస్తాయండి. | Peddavi paatika lakshala graphics card meeda nadustaayandi. |
 | 24 | Ravi | అయితే పెద్ద కంప్యూటర్ అద్దెకు తీసుకుంటా. | Ayite pedda computer addeku teesukuntaa. |
 | 25 | AI | అంటే... మళ్ళీ అద్దెకేనండి. | Ante... malli addekenandi. |
 

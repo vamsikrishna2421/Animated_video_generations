@@ -198,11 +198,11 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. [1] చాట్‌జీపీటీ కంపెనీ కూడా.",
-     "show": "Some companies give theirs away: open models. Even ChatGPT's maker.",
+     "text": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. [1] చాట్‌జీపీటీ కంపెనీ కూడా. [2] కానీ చాట్‌జీపీటీని కాదు.",
+     "show": "Some companies give theirs away: open models. Even ChatGPT's maker. Just not ChatGPT.",
      "maxgap": 0.3,
      "gap": 0.22,
-     "tts": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. చాట్ జీపీటీ కంపెనీ కూడా.",
+     "tts": "కొన్ని కంపెనీలు ఫ్రీగా ఇస్తాయండి, ఓపెన్ మోడల్స్. చాట్ జీపీటీ కంపెనీ కూడా. కానీ చాట్ జీపీటీని కాదు.",
      "gain_db": -1.0
     },
     {
@@ -217,7 +217,7 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "సిమ్ ఫ్రీ అండి. [1] ఫోన్ మీరే కొనుక్కోవాలి.",
+     "text": "యాప్ ఫ్రీ అండి. [1] ఫోన్ మీరే కొనుక్కోవాలి.",
      "show": "The brain is free. The skull is sold separately.",
      "maxgap": 0.3,
      "gap": 0.5,
@@ -280,7 +280,7 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్.",
+     "text": "మూడు ఫ్రీ బ్రెయిన్లు టెస్ట్ చేశామండి. [1] ఇరవై వాట్సాప్ ఆర్డర్లు, ఇంటర్నెట్ ఆఫ్, మామూలు కంప్యూటర్.",
      "show": "We tested three free ones. Twenty WhatsApp orders, internet off, a plain computer.",
      "maxgap": 0.3,
      "gap": 0.22,
@@ -289,8 +289,8 @@
     {
      "who": "ravi",
      "file": "11_ravi.wav",
-     "text": "పద్దెనిమిది, కంప్యూటర్ కదా!",
-     "show": "Eighteen! It's a computer!",
+     "text": "ఇరవై, కంప్యూటర్ కదా!",
+     "show": "Twenty! It's a computer!",
      "maxgap": 0.3,
      "gap": 0.22,
      "gain_db": 1.5
@@ -298,7 +298,7 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసిందండి.",
+     "text": "వన్ జీబీ, ఒక్కటే. [1] త్రీ జీబీ, తొమ్మిది. [2] ఎవరూ అడగని టమాటాలు కూడా బిల్లులో వేసింది.",
      "show": "One gigabyte: one right. Three gigabytes: nine. It added tomatoes nobody ordered.",
      "maxgap": 0.3,
      "gap": 0.6,
@@ -308,7 +308,7 @@
      "who": "ravi",
      "file": "13_ravi.wav",
      "text": "మరి పెద్దది?",
-     "show": "And the biggest?",
+     "show": "And the bigger one?",
      "maxgap": 0.3,
      "gap": 0.22,
      "gain_db": 1.5
@@ -344,8 +344,8 @@
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "18 out of 20, 15 s a bill",
-     "title": "18 out of 20, 15 s a bill",
+     "chapter": "18 out of 20: two wrong bills",
+     "title": "18 out of 20: two wrong bills",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -363,8 +363,8 @@
     {
      "who": "ravi",
      "file": "15_ravi.wav",
-     "text": "పద్దెనిమిది, నేను చెప్పానా!",
-     "show": "Eighteen! I said eighteen!",
+     "text": "రెండు తప్పు బిల్లులా?!",
+     "show": "Two wrong bills?!",
      "maxgap": 0.3,
      "gap": 0.3,
      "gain_db": 1.5
@@ -372,8 +372,8 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "ఒక్కో బిల్లుకి పదిహేను సెకన్లు. [1] మీ క్యూ వెయిటింగ్ అండి.",
-     "show": "Fifteen seconds a bill. Your queue is waiting.",
+     "text": "ఒక బిల్లు, టూ థర్టీ వన్ కి ఫైవ్ సిక్స్టీ సిక్స్ వేసింది. [1] పది మంది కస్టమర్లకి రెండున్నర నిమిషాలు.",
+     "show": "One bill: five sixty-six for a two thirty-one order. And ten customers wait two and a half minutes.",
      "maxgap": 0.3,
      "gap": 0.22,
      "gain_db": -1.0
@@ -440,7 +440,7 @@
     {
      "who": "ai",
      "file": "18_ai.wav",
-     "text": "అద్దె బ్రెయిన్ కి హోమ్ డెలివరీ లేదండి.",
+     "text": "అద్దె బ్రెయిన్ కి హోమ్ డెలివరీ లేదు.",
      "show": "Rented brains don't do home delivery.",
      "maxgap": 0.3,
      "gap": 0.5,
@@ -458,8 +458,8 @@
     {
      "who": "ai",
      "file": "20_ai.wav",
-     "text": "అద్దెకైతే, కంప్యూటర్ అక్కర్లేదు, క్వశ్చన్ కి ఇంత. [1] సొంతమైతే, డేటా ఇంట్లోనే, కంప్యూటర్ మీదే. [2] ఇరవై బిల్లులతో టెస్ట్ చేయండి.",
-     "show": "Rent: no computer, pay per question. Own: your data stays home, you buy the computer. Test on twenty bills.",
+     "text": "అద్దెకైతే నెట్ కావాలి, క్వశ్చన్ కి ఇంత. [1] సొంతమైతే నెట్ అక్కర్లేదు, డేటా ఇంట్లోనే, కంప్యూటర్ మీరే కొనుక్కోవాలి.",
+     "show": "Rent: needs internet, pay per question. Own: works offline, your data stays home, you buy the computer.",
      "maxgap": 0.3,
      "gap": 0.22,
      "gain_db": -1.0
@@ -467,8 +467,8 @@
     {
      "who": "ai",
      "file": "21_ai.wav",
-     "text": "మీ బిల్లులకి అద్దెదే. [1] నెట్ పోతే, కాలిక్యులేటర్.",
-     "show": "Your bills? Rent. Net down? Calculator.",
+     "text": "మీ బిల్లులకి అద్దె బ్రెయినే, అదే ఇరవైతో టెస్ట్ చేసి. [1] నెట్ పోతే, కాలిక్యులేటర్.",
+     "show": "Your bills? Rent, and test it on the same twenty. Net down? Calculator.",
      "maxgap": 0.3,
      "gap": 0.4,
      "gain_db": -1.0
@@ -521,7 +521,7 @@
     {
      "who": "ravi",
      "file": "22_ravi.wav",
-     "text": "నేను అద్దెకు తీసుకోను! పెద్ద ఫ్రీ బ్రెయిన్ నే సొంతం చేసుకుంటా!",
+     "text": "నేను అద్దెకు తీసుకోను! పెద్ద ఫ్రీ బ్రెయిన్ నేనే పెట్టుకుంటా!",
      "show": "I don't RENT! I'll own the biggest free brain!",
      "maxgap": 0.3,
      "gap": 0.22,
@@ -530,8 +530,8 @@
     {
      "who": "ai",
      "file": "23_ai.wav",
-     "text": "పెద్దవాటికి పాతిక లక్షల గ్రాఫిక్స్ కార్డ్ కావాలండి.",
-     "show": "The big ones need a twenty-five-lakh graphics card.",
+     "text": "పెద్దవి పాతిక లక్షల గ్రాఫిక్స్ కార్డ్ మీద నడుస్తాయండి.",
+     "show": "The big ones run on a twenty-five-lakh graphics card.",
      "maxgap": 0.3,
      "gap": 0.4,
      "gain_db": -1.0

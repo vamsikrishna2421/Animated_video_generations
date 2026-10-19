@@ -122,8 +122,8 @@ const gpuCard = (c: Ctx, x: number, y: number, s: number, r: () => number, f: nu
   c.font = caveat(46); c.fillStyle = "#e5e7eb"; c.textAlign = "center"; c.fillText("80 GB", 0, 50);
   c.restore();
 };
-const ruleRows: [string, string, string][] = [["RENT", "no computer, pay per question", "#dbeafe"], ["OWN", "data stays home, buy the computer", "#dcfce7"],
-  ["TEST", "20 bills you know the totals of", "#fef9c3"]];
+const ruleRows: [string, string, string][] = [["RENT", "needs internet, pay per question", "#dbeafe"], ["OWN", "works offline, data stays home, buy the PC", "#dcfce7"],
+  ["TEST", "on the same 20 bills first", "#fef9c3"]];
 const ruleCard = (c: Ctx, x: number, y: number, s: number, rows: number[], r: () => number) => {
   if (rows[0] <= 0) return;
   c.save(); c.translate(x, y); c.scale(s, s);
@@ -245,7 +245,7 @@ const StOwn: React.FC<SP> = ({ s }) => {
               c.save(); c.globalAlpha = k; c.fillStyle = "#111827"; rrect(c, 300, 1150, 480, 130, 18); c.fill();
               c.font = caveat(66); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("₹ per question", 540, 1236); c.restore();
               padlock(c, 780, 600, 0.8, k, r);
-              tag(c, "CLOSED: its numbers stay secret", 540, 1380, 42, "#fee2e2", "#991b1b", 0, k);
+              tag(c, "CLOSED: its brain stays secret", 540, 1380, 42, "#fee2e2", "#991b1b", 0, k);
             }
           }
           if (b.prop === "open") {
@@ -253,9 +253,10 @@ const StOwn: React.FC<SP> = ({ s }) => {
             brain(c, 540, 470 + dl * 360, 1 - 0.25 * dl, r);
             if (dl < 1) stroke(c, [[540, 600], [540, 780]], GREEN, 10, r, { passes: 2, alpha: 0.6 });
             laptop(c, 540, 1180, 1.1, "", r, { brain: seg(p, 0.5, 0.6) });
-            tag(c, "OPEN: the numbers are published", 540, 400, 44, "#dcfce7", INK, -0.01, seg(p, 0.02, 0.12));
+            tag(c, "OPEN: the brain (its weights) is published", 540, 400, 42, "#dcfce7", INK, -0.01, seg(p, 0.02, 0.12));
             [["Llama · Meta", 230], ["Gemma · Google", 540], ["gpt-oss · OpenAI", 850]].forEach(([t, x], q) => tag(c, t as string, x as number, 1290, 36, COL.yellow, INK, 0, seg(f, c1 - 6 + q * 6, c1 + 2 + q * 6)));
             if (f >= c1 + 12) { c.font = handF(30); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("even ChatGPT's maker", 850, 1350); }
+            if (f >= cu(2, 0.8) - 4) tag(c, "(not ChatGPT itself)", 850, 1410, 32, "#fee2e2", "#991b1b", 0, seg(f, cu(2, 0.8) - 4, cu(2, 0.8) + 4));
           }
           if (b.prop === "skull") {
             const c1 = cu(1, 0.5);
@@ -299,8 +300,8 @@ const StOwn: React.FC<SP> = ({ s }) => {
           if (b.prop === "gpu") {
             gpuCard(c, 540, 700, 1.15, r, f);
             tag(c, "about ₹25 lakh", 540, 1000, 84, COL.yellow, INK, -0.04, seg(p, 0.1, 0.25));
-            c.font = handF(34); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("one 80 GB graphics card (an H100), for a big free brain", 540, 1140);
-            c.fillText("like OpenAI's gpt-oss-120b", 540, 1192);
+            c.font = handF(34); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("a big free brain on one 80 GB card (an H100),", 540, 1140);
+            c.fillText("like OpenAI's gpt-oss-120b runs on", 540, 1192);
           }
           c.restore();
         } else {
@@ -315,7 +316,7 @@ const StOwn: React.FC<SP> = ({ s }) => {
           // the shop board: he owns the shop (bought after 20 years of rent)
           c.save(); c.translate(250, 330); c.rotate(-0.02);
           c.fillStyle = "#7c2d12"; rrect(c, -170, -46, 340, 92, 10); c.fill();
-          c.font = caveat(40); c.fillStyle = "#fef3c7"; c.textAlign = "center"; c.fillText("RAVI KIRANA", 0, -2); c.font = handF(22); c.fillText("own shop since 2006", 0, 30);
+          c.font = caveat(40); c.fillStyle = "#fef3c7"; c.textAlign = "center"; c.fillText("RAVI KIRANA", 0, -2); c.font = handF(22); c.fillText("own shop since 2016", 0, 30);
           c.restore();
           if (n === 3) stroke(c, circlePts(250, 330, 200, 70), COL.yellow, 8, r, { passes: 2, alpha: seg(p, 0.45, 0.6) });
           const [mood, armPose] = RAVI[n] ?? ["angry", "rest"];
@@ -337,17 +338,27 @@ const StOwn: React.FC<SP> = ({ s }) => {
             c.save(); c.fillStyle = "rgba(15,23,42,0.82)"; rrect(c, 120, 300, 840, 170, 26); c.fill();
             c.font = caveat(56); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("How many bills right, out of 20?", 540, 370);
             c.font = handF(40); c.fillStyle = COL.yellow; c.fillText("Your guess?", 540, 435); c.restore();
-            bubble(c, 300, 600, "18!", 90, seg(p, 0.05, 0.2), COL.yellow);
+            bubble(c, 300, 600, "20!", 90, seg(p, 0.05, 0.2), COL.yellow);
           }
-          if (n === 15) bubble(c, 300, 560, "18 ✓", 90, seg(p, 0.05, 0.2), "#bbf7d0");
-          if (n === 16) stopwatch(c, 820, 470, p, seg(p, 0, 0.12), r);
+          if (n === 15) bubble(c, 300, 560, "2 wrong?!", 80, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
+          if (n === 16) {   // the 18/20 brain's worst bill, then the queue time (15 s a bill x 10 customers)
+            c.save(); c.globalAlpha = 1 - seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 2);
+            c.fillStyle = "#fffdf4"; rrect(c, 140, 330, 800, 210, 20); c.fill();
+            c.font = handF(36); c.fillStyle = INK; c.textAlign = "left"; c.fillText("3 biscuits, 1 tea powder, 1 kg sugar", 170, 395);
+            c.font = caveat(60); c.fillStyle = COL.red; c.fillText("billed ₹566", 170, 480); c.fillStyle = GREEN; c.textAlign = "right"; c.fillText("right ₹231", 910, 480);
+            c.restore();
+            const k = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 4);
+            stopwatch(c, 820, 470, p, k, r);
+            if (k > 0) tag(c, "10 customers = 2.5 minutes", 380, 470, 50, COL.yellow, INK, -0.03, k);
+          }
           if (n === 17) bubble(c, 330, 520, "come into my laptop", 50, seg(p, 0.05, 0.2));
           if (n === 20 || n === 21) ruleCard(c, W / 2, 1180, 1,
-            n === 20 ? [seg(p, 0.02, 0.1), seg(f, cu(1, 0.35) - 4, cu(1, 0.35) + 4), seg(f, cu(2, 0.75) - 4, cu(2, 0.75) + 4)] : [1, 1, 1], r);
-          if (n === 21) { tag(c, "your bills: RENT", 540, 420, 60, COL.yellow, INK, -0.03, seg(p, 0.05, 0.2)); calculator(c, 900, 700, seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 4)); }
+            n === 20 ? [seg(p, 0.02, 0.1), seg(f, cu(1, 0.35) - 4, cu(1, 0.35) + 4), 0] : [1, 1, seg(p, 0.15, 0.3)], r);
+          if (n === 21) { tag(c, "your bills: RENT + TEST", 540, 420, 58, COL.yellow, INK, -0.03, seg(p, 0.05, 0.2)); calculator(c, 900, 700, seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 4)); }
           if (n === 25 && p > 0.3) stamp(c, "RENTED", 540, 520, 110, COL.red, seg(p, 0.3, 0.45), r, -0.08);
         }
         // ---------- chips that stay across lines ----------
+        if (n >= 4 && n <= 9) tag(c, "real test ahead: 20 bills", W - 250, 1440, 34, "#e2e8f0", INK, 0, 1);   // the script review: give a reason to stay
         if (s.id === "st_a" && f < 4) { c.save(); c.globalAlpha = 1 - f / 4; c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
       }} />
     </>

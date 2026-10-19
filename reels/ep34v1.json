@@ -194,8 +194,8 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "Some companies give theirs away: open models. [1] Even ChatGPT's maker.",
-     "show": "Some companies give theirs away: open models. Even ChatGPT's maker.",
+     "text": "Some companies give theirs away: open models. [1] Even ChatGPT's maker. [2] Just not ChatGPT.",
+     "show": "Some companies give theirs away: open models. Even ChatGPT's maker. Just not ChatGPT.",
      "maxgap": 0.3,
      "gap": 0.18,
      "gain_db": -1.0
@@ -283,11 +283,11 @@
     {
      "who": "ravi",
      "file": "11_ravi.wav",
-     "text": "Eighteen! It's a computer!",
-     "show": "Eighteen! It's a computer!",
+     "text": "Twenty! It's a computer!",
+     "show": "Twenty! It's a computer!",
      "maxgap": 0.3,
      "gap": 0.18,
-     "tts": "Eighteen, it's a computer!",
+     "tts": "Twenty, it's a computer!",
      "gain_db": 1.5
     },
     {
@@ -303,8 +303,8 @@
     {
      "who": "ravi",
      "file": "13_ravi.wav",
-     "text": "And the biggest?",
-     "show": "And the biggest?",
+     "text": "And the bigger one?",
+     "show": "And the bigger one?",
      "maxgap": 0.3,
      "gap": 0.18,
      "gain_db": 1.5
@@ -340,8 +340,8 @@
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "18 out of 20, 15 s a bill",
-     "title": "18 out of 20, 15 s a bill",
+     "chapter": "18 out of 20: two wrong bills",
+     "title": "18 out of 20: two wrong bills",
      "notes": []
     }
    },
@@ -359,20 +359,20 @@
     {
      "who": "ravi",
      "file": "15_ravi.wav",
-     "text": "Eighteen! I said eighteen!",
-     "show": "Eighteen! I said eighteen!",
+     "text": "Two wrong bills?!",
+     "show": "Two wrong bills?!",
      "maxgap": 0.3,
      "gap": 0.3,
-     "tts": "Eighteen, I said eighteen!",
      "gain_db": 1.5
     },
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "Fifteen seconds a bill. [1] Your queue is waiting.",
-     "show": "Fifteen seconds a bill. Your queue is waiting.",
+     "text": "One bill: five sixty-six for a two thirty-one order. [1] And ten customers wait two and a half minutes.",
+     "show": "One bill: five sixty-six for a two thirty-one order. And ten customers wait two and a half minutes.",
      "maxgap": 0.3,
      "gap": 0.18,
+     "tts": "One bill: five sixty six, for a two thirty one order. And ten customers wait two and a half minutes.",
      "tempo": 1.0,
      "gain_db": -1.0
     }
@@ -454,8 +454,8 @@
     {
      "who": "ai",
      "file": "20_ai.wav",
-     "text": "Rent: no computer, pay per question. [1] Own: your data stays home, you buy the computer. [2] Test on twenty bills.",
-     "show": "Rent: no computer, pay per question. Own: your data stays home, you buy the computer. Test on twenty bills.",
+     "text": "Rent: needs internet, pay per question. [1] Own: works offline, your data stays home, you buy the computer.",
+     "show": "Rent: needs internet, pay per question. Own: works offline, your data stays home, you buy the computer.",
      "maxgap": 0.3,
      "gap": 0.18,
      "gain_db": -1.0
@@ -463,10 +463,11 @@
     {
      "who": "ai",
      "file": "21_ai.wav",
-     "text": "Your bills? Rent. [1] Net down? Calculator.",
-     "show": "Your bills? Rent. Net down? Calculator.",
+     "text": "Your bills? Rent, and test it on the same twenty. [1] Net down? Calculator.",
+     "show": "Your bills? Rent, and test it on the same twenty. Net down? Calculator.",
      "maxgap": 0.3,
      "gap": 0.4,
+     "tempo": 1.0,
      "gain_db": -1.0
     }
    ]
@@ -526,11 +527,11 @@
     {
      "who": "ai",
      "file": "23_ai.wav",
-     "text": "The big ones need a twenty-five-lakh graphics card.",
-     "show": "The big ones need a twenty-five-lakh graphics card.",
+     "text": "The big ones run on a twenty-five-lakh graphics card.",
+     "show": "The big ones run on a twenty-five-lakh graphics card.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tts": "The big ones need a twenty five lakh graphics card.",
+     "tts": "The big ones run on a twenty five lakh graphics card.",
      "tempo": 1.0,
      "gain_db": -1.0
     },
