@@ -169,6 +169,8 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   three-part Telugu line babbled in all four Parler takes (split it into two takes with `file2`/`tts2`); check each
   line's must-hear words (`MUST` in `pipeline/ep34/voice.py`): the word-hit judge passed "I loan" for "I'll own"; the
   first cut ran 93 s: write the AI's lines short and keep the explaining on screen.
+- A music drop (`drop_cue`/`drop_at`) is 0.8 s long and does not move the lines: for a real silence before a punchline,
+  also give the line before it a gap of about 0.75 s (skit 03: the first cut's drop before "No" sat under the line before).
 - Memory (Oct 19, skit 03): files in `/dev/shm` count against the shell's memory limit (about 13.7 GB), so a 7B model
   in `/dev/shm` plus its llama.cpp process plus Parler got the demo killed. Run one heavy model at a time and delete
   the other models from `/dev/shm` meanwhile (`/tmp/claude-0/hf_dl.py` puts Parler and Whisper back in a minute). Long

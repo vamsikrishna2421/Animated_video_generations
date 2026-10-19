@@ -53,7 +53,9 @@ MUST = {"en": {1: [("zero",), ("confessed", "confess")], 2: [("myself",)], 3: [(
                11: [("know",)], 12: [("version",), ("history",)], 13: [("notes", "note")], 14: [("yes",)],
                15: [("2012", "twenty", "twelve"), ("machines", "machine"), ("lie",)]},
         # Telugu, as the Hindi-decoding judge writes it (line 13's "నువ్వే" came out "नूभे")
-        "te": {8: [("नुव", "नूव", "नुभ", "नूभ")], 11: [("एवर", "येवर", "ऐवर", "एवरु"), ("तेलुस", "टेलुस", "तेलूस", "तेलस", "तलुस")]}}
+        # keys: the line number, or "<n>b" for the second take of a line voiced in two
+        "te": {1: [("ओप्पु", "ओपु", "ओप्प", "ओप", "अप्पु")], 3: [("एप्पु", "एपु", "यप्पु", "यपु", "एपुडु")], 8: [("नुव", "नूव", "नुभ", "नूभ")],
+               12: [("हिस्ट", "हिस्टरी", "हिश्ट")]}}
 
 
 def heard(path, who, lang):
@@ -69,6 +71,7 @@ def heard(path, who, lang):
 
 
 def judge(path, text, lang, n):
+    """n: the line number (int), or "<n>b" for the second take of a two-take line."""
     ok, score, info = judge_en(path, text, "en") if lang == "en" else judge_te(path, text)
     heard_text = info.split("|", 1)[1].lower()
     words = set(re.findall(r"[a-z0-9]+", heard_text))
@@ -102,20 +105,22 @@ def main(lang, only):
             if only and n not in only:
                 continue
             parts = [(line.get("tts") or line["text"], line["file"])] + ([(line["tts2"], line["file2"])] if line.get("file2") else [])
-            for raw, fname in parts:
-                voice_one(lang, n, who, re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", raw)).strip(), fname, src, takes, only)
+            for k, (raw, fname) in enumerate(parts):
+                voice_one(lang, n if k == 0 else f"{n}b", who, re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", raw)).strip(),
+                          fname, src, takes, only)
     print("VOICE_DONE", flush=True)
 
 
 def voice_one(lang, n, who, text, fname, src, takes, only):
     """One take for one text (a line, or one half of a line voiced in two takes)."""
+    tag = f"{n:02d}" if isinstance(n, int) else str(n)
     fish = lang == "en"
     voice = f"fish:{who}" if fish else VOICE_TE[who]
     key = hashlib.md5(f"{voice}|{text}".encode()).hexdigest()[:10]
     cached = sorted(takes.glob(f"{key}_*.wav"))
     best = (None, cached[0]) if cached and not only else None
     if best:
-        print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, lang), text, lang, n)[2]}", flush=True)
+        print(f"{tag} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, lang), text, lang, n)[2]}", flush=True)
     for k in range(0 if best else 4):
         tmp = takes / f"{key}_{k}.wav"
         try:
@@ -125,17 +130,17 @@ def voice_one(lang, n, who, text, fname, src, takes, only):
             else:
                 say(lang, text, tmp, voice=voice, pause=0.2)
         except RuntimeError as e:   # Fish's gateway errors can outlast its own retries: count it as a failed try
-            print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
+            print(f"{tag} {who} try {k}: failed to voice ({e})", flush=True)
             continue
         trim(tmp)
         ok, score, info = judge(heard(tmp, who, lang), text, lang, n)
-        print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
+        print(f"{tag} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
         if best is None or (best[0] is not None and score > best[0]):
             best = (score, tmp)
         if ok:
             break
     if best is None:
-        print(f"{n:02d} {who}: NO TAKE (every try failed)", flush=True)
+        print(f"{tag} {who}: NO TAKE (every try failed)", flush=True)
         return
     if best[0] is not None:   # keep only the chosen take in the cache
         for f in takes.glob(f"{key}_*.wav"):

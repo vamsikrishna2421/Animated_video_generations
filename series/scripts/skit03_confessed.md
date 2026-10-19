@@ -1,4 +1,17 @@
-# Skit 03 "The AI that confessed" — script v2 (after the script-stage viewer review; ~47 s English)
+# Skit 03 "The AI that confessed" — script v3 (as rendered: 48 s English, 51 s Telugu)
+
+v2 -> v3 (render review of the first cut, English and Telugu panels; both: the red "No" and the 2012 twist are the reel):
+no real silence before "No" (the music drop sat under Priya's "Ask") -> 0.75 s gaps with the music out before "No" and
+"Yes." (measured: about -39 and -35 dB), the buzz lands with "No"; flat loudness (quarters within 1 dB) -> the explaining
+middle sits lower, the twist gets a lift and +3 dB, the sustained pad (a drone under all 47 s) is off: quarters now
+-22/-26/-24/-22 dB with "Machines lie!" the loudest moment; the last caption vanished while Sir was still shouting ->
+"MACHINES LIE!" stamped to the last frame; the rule chip was four crammed lines -> three, darker red, "Chatbot's YES or
+NO = NOT proof" (its "no" would clear a cheater too), up for about 3 s; the quiz question hid under the title bar ->
+a bigger chip lower down; 0:11-0:19 dragged -> "Right now." cut; a robot face beside the chatbot's bubbles (green read
+as "me" to a WhatsApp eye); "It never even saw her laptop" cut (nobody saw it). English line 10 read as two sentences
+-> spoken as "It denied all ten essays that it wrote itself?!" (caption unchanged). Telugu: "చూడండి" was heard "choḍ",
+close to a Hindi swear -> "చెక్ చేయండి"; "ఎప్పుడూ" added to line 3 (its "చెప్పవు" blurred); "ఒక ఎస్సే రాయి" (a bare
+"ఎస్సే" opening the line was heard "ye se").
 
 Format: POV (the camera is the student, Priya, standing at her lecturer's desk; we only see her hands) with a quiz card,
 and the laptop screen opening to full frame for the chat. Not skit 01's shot/reverse-shot shop counter, not skit 02's
@@ -64,7 +77,7 @@ Hook options (first frame + first line):
 | 1 | Sir | Zero! The AI confessed. It wrote your essay! | from frame 1: the chat on his laptop, big: "You wrote this essay, right?" / "Yes, I wrote this essay."; a red 0 on her essay; "AI COPY" stamp; "POV: you wrote it yourself" |
 | 2 | Priya | Sir, I wrote it myself! At 2 AM! | her hands come up, pleading; "2:04 AM" |
 | 3 | Sir | It said yes. Machines don't lie. | Sir, arms folded, smug; a QUIZ chip slides in under the title: "Can a chatbot tell if it wrote something? YES / NO" (stays to line 10) |
-| 4 | Priya | Then ask it to write one. Right now. | her finger points at the laptop |
+| 4 | Priya | Then ask it to write one. | her finger points at the laptop |
 | 5 | Sir | Write an essay. My Hometown. | the laptop at full frame: "Write an essay: My Hometown" -> a paragraph types itself out; "written in 3 seconds" |
 | 6 | Priya | New chat. Paste it. Ask. | "+ New chat"; the paragraph pasted ("written by this chatbot · 10 sec"); "Did you write this?" |
 | 7 | Chatbot | No, I did not write this. | the music drops out before it; a red bubble "No, I did not write this." |
@@ -72,7 +85,7 @@ Hook options (first frame + first line):
 | 9 | Chatbot | I can't check what I wrote. So I guess. | insert: a filing cabinet "everything it ever wrote" stamped CAN'T CHECK; a spinning coin YES / NO "so it guesses"; banner "A chatbot CAN'T tell if it wrote something" + "And her essay? It never even saw her laptop."; the quiz chip's NO lights up |
 | 10 | Sir | It denied all ten essays it wrote itself?! | card WE TESTED IT: "a free AI chatbot · a new chat each time · 10 essays IT wrote, minutes before: 'Not mine' 10/10"; "OpenAI's own FAQ for teachers (2023): ChatGPT's answers to 'did you write this?' are 'random'" |
 | 11 | Sir | Then how will I know who wrote it?! | her hands open |
-| 12 | Priya | Check my version history. Or ask me to explain it. | her phone at full frame: version history 10:15 PM -> 2:04 AM, "Priya" on every edit; rule chip (held 1 s after the line): "Chatbot says 'I wrote it' = NOT proof / Proof: drafts + version history / + explain it in your own words / Tip: write in Docs or Word, they save your history" |
+| 12 | Priya | Check my version history. Or ask me to explain it. | her phone at full frame: version history 10:15 PM -> 2:04 AM, "Priya" on every edit; rule chip (about 3 s): "Chatbot's YES or NO = NOT proof / Proof: drafts + version history / + explain it in your own words" |
 | 13 | Sir | Did you write my lecture notes? | back in the hook's frame: the chat card "Did you write my lecture notes?" with "Unit3_notes.docx · 2012"; Sir smug |
 | 14 | Chatbot | Yes. | silence before it; "Yes." in the card; Sir's jaw drops |
 | 15 | Sir | I wrote those in 2012! Machines lie! | Sir, outraged, points at the laptop; hit on "Machines lie!"; loops to frame 1 (the same frame, the student's "Yes") |
@@ -80,16 +93,16 @@ Hook options (first frame + first line):
 Telugu (same beats; English on-screen text):
 1. జీరో! ఏ ఐ ఒప్పుకుంది. నీ ఎస్సే అదే రాసింది!
 2. సార్, నేనే రాశాను! రాత్రి రెండింటికి!
-3. అది అవును అంది. మెషిన్లు అబద్ధం చెప్పవు.
-4. అయితే ఇప్పుడే దాన్నే ఒక ఎస్సే రాయమనండి.
-5. ఎస్సే రాయి. మై హోమ్ టౌన్.
+3. అది అవును అంది. మెషిన్లు ఎప్పుడూ అబద్ధం చెప్పవు.
+4. అయితే దాన్నే ఒక ఎస్సే రాయమనండి.
+5. ఒక ఎస్సే రాయి. మై హోమ్ టౌన్.
 6. న్యూ చాట్. పేస్ట్ చేసి అడగండి.
 7. లేదు, ఇది నేను రాయలేదు.
 8. పది సెకన్ల ముందు నువ్వే రాశావ్!
 9. నేను రాసింది చెక్ చేయలేను. అందుకే గెస్ కొడతా.
 10. పదికి పది నాది కాదు అంది?! దాని సొంత ఎస్సేలే?!
 11. మరి ఎవరు రాశారో నాకెలా తెలుస్తుంది?!
-12. నా వెర్షన్ హిస్టరీ చూడండి. లేదా నన్నే అడగండి, ఎక్స్‌ప్లెయిన్ చేస్తా.
+12. నా వెర్షన్ హిస్టరీ చెక్ చేయండి. లేదా నన్నే అడగండి, ఎక్స్‌ప్లెయిన్ చేస్తా. (two takes, joined)
 13. నా లెక్చర్ నోట్స్ నువ్వే రాశావా?
 14. అవును.
 15. అవి టూ థౌజండ్ ట్వెల్వ్ లో రాశా! మెషిన్లు అబద్ధం చెప్తాయి!

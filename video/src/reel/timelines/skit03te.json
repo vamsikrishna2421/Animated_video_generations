@@ -13,51 +13,51 @@
  "fps": 30,
  "musicDrops": [
   [
-   546,
-   570
+   565,
+   589
   ],
   [
-   1278,
-   1302
+   1335,
+   1359
   ]
  ],
  "musicBoosts": [
   [
-   307,
-   696,
+   0,
+   327,
+   1.15
+  ],
+  [
+   327,
+   982,
    0.7
   ],
   [
-   695,
-   961,
-   0.85
+   982,
+   1268,
+   0.8
   ],
   [
-   961,
-   1227,
-   1.0
-  ],
-  [
-   1227,
-   1467,
-   1.2
+   1268,
+   1524,
+   1.45
   ],
   [
    0,
-   307,
+   327,
    1.3,
    1
   ],
   [
-   1227,
-   1467,
-   1.35,
+   1268,
+   1524,
+   1.5,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1467,
+ "totalFrames": 1524,
  "music": "reel/skit03te/score.wav",
  "scenes": [
   {
@@ -98,7 +98,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 307,
+   "frames": 327,
    "lines": [
     {
      "who": "sir",
@@ -111,12 +111,12 @@
      "words": [
       {
        "w": "Zero!",
-       "from": 8,
-       "to": 18
+       "from": 9,
+       "to": 19
       },
       {
        "w": "The",
-       "from": 18,
+       "from": 19,
        "to": 35
       },
       {
@@ -127,26 +127,26 @@
       {
        "w": "confessed.",
        "from": 40,
-       "to": 76
+       "to": 59
       },
       {
        "w": "It",
-       "from": 76,
-       "to": 80
+       "from": 59,
+       "to": 73
       },
       {
        "w": "wrote",
-       "from": 80,
-       "to": 89
+       "from": 73,
+       "to": 87
       },
       {
        "w": "your",
-       "from": 89,
-       "to": 97
+       "from": 87,
+       "to": 96
       },
       {
        "w": "essay!",
-       "from": 97,
+       "from": 96,
        "to": 108
       }
      ],
@@ -179,11 +179,11 @@
       {
        "w": "it",
        "from": 154,
-       "to": 159
+       "to": 160
       },
       {
        "w": "myself!",
-       "from": 159,
+       "from": 160,
        "to": 185
       },
       {
@@ -199,7 +199,7 @@
       {
        "w": "AM!",
        "from": 194,
-       "to": 201
+       "to": 202
       }
      ],
      "cues": {}
@@ -210,38 +210,38 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit03te/line_03.wav",
-     "from": 212,
-     "frames": 82,
+     "from": 213,
+     "frames": 104,
      "words": [
       {
        "w": "It",
        "from": 213,
-       "to": 219
+       "to": 221
       },
       {
        "w": "said",
-       "from": 219,
-       "to": 230
+       "from": 221,
+       "to": 233
       },
       {
        "w": "yes.",
-       "from": 230,
-       "to": 251
+       "from": 233,
+       "to": 263
       },
       {
        "w": "Machines",
-       "from": 251,
-       "to": 271
+       "from": 263,
+       "to": 285
       },
       {
        "w": "don't",
-       "from": 271,
-       "to": 283
+       "from": 285,
+       "to": 300
       },
       {
        "w": "lie.",
-       "from": 283,
-       "to": 294
+       "from": 300,
+       "to": 313
       }
      ],
      "cues": {}
@@ -295,7 +295,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 307,
+   "from": 327,
    "frames": 389,
    "lines": [
     {
@@ -305,47 +305,37 @@
      "sub": null,
      "audio": "reel/skit03te/line_04.wav",
      "from": 10,
-     "frames": 99,
+     "frames": 71,
      "words": [
       {
        "w": "Then",
-       "from": 11,
-       "to": 20
+       "from": 12,
+       "to": 31
       },
       {
        "w": "ask",
-       "from": 20,
-       "to": 40
+       "from": 31,
+       "to": 41
       },
       {
        "w": "it",
-       "from": 40,
-       "to": 46
+       "from": 41,
+       "to": 48
       },
       {
        "w": "to",
-       "from": 46,
-       "to": 51
+       "from": 48,
+       "to": 55
       },
       {
        "w": "write",
-       "from": 51,
-       "to": 67
+       "from": 55,
+       "to": 70
       },
       {
        "w": "one.",
-       "from": 67,
-       "to": 77
-      },
-      {
-       "w": "Right",
-       "from": 77,
-       "to": 88
-      },
-      {
-       "w": "now.",
-       "from": 88,
-       "to": 97
+       "from": 70,
+       "to": 82
       }
      ],
      "cues": {}
@@ -356,33 +346,33 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit03te/line_05.wav",
-     "from": 116,
-     "frames": 68,
+     "from": 89,
+     "frames": 79,
      "words": [
       {
        "w": "Write",
-       "from": 117,
-       "to": 127
+       "from": 91,
+       "to": 106
       },
       {
        "w": "an",
-       "from": 127,
-       "to": 133
+       "from": 106,
+       "to": 110
       },
       {
        "w": "essay.",
-       "from": 133,
-       "to": 161
+       "from": 110,
+       "to": 121
       },
       {
        "w": "My",
-       "from": 161,
-       "to": 166
+       "from": 121,
+       "to": 144
       },
       {
        "w": "Hometown.",
-       "from": 166,
-       "to": 184
+       "from": 144,
+       "to": 164
       }
      ],
      "cues": {}
@@ -393,33 +383,33 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/skit03te/line_06.wav",
-     "from": 191,
+     "from": 175,
      "frames": 63,
      "words": [
       {
        "w": "New",
-       "from": 192,
-       "to": 199
+       "from": 176,
+       "to": 183
       },
       {
        "w": "chat.",
-       "from": 199,
-       "to": 223
+       "from": 183,
+       "to": 207
       },
       {
        "w": "Paste",
-       "from": 223,
-       "to": 238
+       "from": 207,
+       "to": 222
       },
       {
        "w": "it.",
-       "from": 238,
-       "to": 245
+       "from": 222,
+       "to": 229
       },
       {
        "w": "Ask.",
-       "from": 245,
-       "to": 254
+       "from": 229,
+       "to": 238
       }
      ],
      "cues": {}
@@ -430,42 +420,42 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/skit03te/line_07.wav",
-     "from": 262,
+     "from": 261,
      "frames": 47,
      "words": [
       {
        "w": "No,",
-       "from": 263,
+       "from": 262,
        "to": 268
       },
       {
        "w": "I",
        "from": 268,
-       "to": 280
+       "to": 279
       },
       {
        "w": "did",
-       "from": 280,
-       "to": 286
+       "from": 279,
+       "to": 285
       },
       {
        "w": "not",
-       "from": 286,
+       "from": 285,
        "to": 291
       },
       {
        "w": "write",
        "from": 291,
-       "to": 300
+       "to": 299
       },
       {
        "w": "this.",
-       "from": 300,
+       "from": 299,
        "to": 308
       }
      ],
      "cues": {
-      "1": 263
+      "1": 262
      }
     },
     {
@@ -485,11 +475,11 @@
       {
        "w": "wrote",
        "from": 325,
-       "to": 336
+       "to": 335
       },
       {
        "w": "it",
-       "from": 336,
+       "from": 335,
        "to": 341
       },
       {
@@ -500,12 +490,12 @@
       {
        "w": "seconds",
        "from": 348,
-       "to": 363
+       "to": 362
       },
       {
        "w": "ago!",
-       "from": 363,
-       "to": 372
+       "from": 362,
+       "to": 371
       }
      ],
      "cues": {}
@@ -544,7 +534,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 695,
+   "from": 716,
    "frames": 266,
    "lines": [
     {
@@ -692,8 +682,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 961,
-   "frames": 266,
+   "from": 982,
+   "frames": 286,
    "lines": [
     {
      "who": "sir",
@@ -754,61 +744,61 @@
      "sub": null,
      "audio": "reel/skit03te/line_12.wav",
      "from": 75,
-     "frames": 158,
+     "frames": 154,
      "words": [
       {
        "w": "Check",
        "from": 75,
-       "to": 88
+       "to": 89
       },
       {
        "w": "my",
-       "from": 88,
-       "to": 98
+       "from": 89,
+       "to": 96
       },
       {
        "w": "version",
-       "from": 98,
-       "to": 115
+       "from": 96,
+       "to": 114
       },
       {
        "w": "history.",
-       "from": 115,
-       "to": 167
+       "from": 114,
+       "to": 158
       },
       {
        "w": "Or",
-       "from": 167,
-       "to": 174
+       "from": 158,
+       "to": 164
       },
       {
        "w": "ask",
-       "from": 174,
-       "to": 182
+       "from": 164,
+       "to": 174
       },
       {
        "w": "me",
-       "from": 182,
-       "to": 188
+       "from": 174,
+       "to": 180
       },
       {
        "w": "to",
-       "from": 188,
-       "to": 204
+       "from": 180,
+       "to": 197
       },
       {
        "w": "explain",
-       "from": 204,
-       "to": 220
+       "from": 197,
+       "to": 215
       },
       {
        "w": "it.",
-       "from": 220,
-       "to": 233
+       "from": 215,
+       "to": 228
       }
      ],
      "cues": {
-      "1": 145
+      "1": 150
      }
     }
    ]
@@ -850,8 +840,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1227,
-   "frames": 240,
+   "from": 1268,
+   "frames": 256,
    "lines": [
     {
      "who": "sir",
@@ -859,38 +849,38 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit03te/line_13.wav",
-     "from": 0,
+     "from": 11,
      "frames": 57,
      "words": [
       {
        "w": "Did",
-       "from": 1,
-       "to": 8
+       "from": 11,
+       "to": 18
       },
       {
        "w": "you",
-       "from": 8,
-       "to": 15
-      },
-      {
-       "w": "write",
-       "from": 15,
+       "from": 18,
        "to": 25
       },
       {
-       "w": "my",
+       "w": "write",
        "from": 25,
-       "to": 30
+       "to": 36
+      },
+      {
+       "w": "my",
+       "from": 36,
+       "to": 41
       },
       {
        "w": "lecture",
-       "from": 30,
-       "to": 44
+       "from": 41,
+       "to": 55
       },
       {
        "w": "notes?",
-       "from": 44,
-       "to": 57
+       "from": 55,
+       "to": 67
       }
      ],
      "cues": {}
@@ -901,17 +891,17 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/skit03te/line_14.wav",
-     "from": 73,
+     "from": 90,
      "frames": 20,
      "words": [
       {
        "w": "Yes.",
-       "from": 75,
-       "to": 82
+       "from": 91,
+       "to": 98
       }
      ],
      "cues": {
-      "1": 75
+      "1": 91
      }
     },
     {
@@ -920,47 +910,47 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit03te/line_15.wav",
-     "from": 102,
+     "from": 119,
      "frames": 121,
      "words": [
       {
        "w": "I",
-       "from": 103,
-       "to": 108
+       "from": 120,
+       "to": 124
       },
       {
        "w": "wrote",
-       "from": 108,
-       "to": 128
+       "from": 124,
+       "to": 144
       },
       {
        "w": "those",
-       "from": 128,
-       "to": 145
+       "from": 144,
+       "to": 162
       },
       {
        "w": "in",
-       "from": 145,
-       "to": 152
+       "from": 162,
+       "to": 168
       },
       {
        "w": "2012!",
-       "from": 152,
-       "to": 186
+       "from": 168,
+       "to": 202
       },
       {
        "w": "Machines",
-       "from": 186,
-       "to": 205
+       "from": 202,
+       "to": 221
       },
       {
        "w": "lie!",
-       "from": 205,
-       "to": 219
+       "from": 221,
+       "to": 236
       }
      ],
      "cues": {
-      "1": 179
+      "1": 196
      }
     }
    ]

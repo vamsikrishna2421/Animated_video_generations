@@ -283,6 +283,16 @@ const bubbleT = (c: Ctx, t: string, x: number, y: number, maxW: number, side: "m
   c.restore();
   return y + h;
 };
+// the chatbot's face beside its replies
+const botFace = (c: Ctx, x: number, y: number, s = 1) => {
+  c.save(); c.translate(x, y); c.scale(s, s);
+  c.beginPath(); c.arc(0, 0, 30, 0, 7); c.fillStyle = "#334155"; c.fill();
+  stroke1(c, [[0, -30], [0, -44]], "#94a3b8", 4); c.beginPath(); c.arc(0, -46, 5, 0, 7); c.fillStyle = "#f87171"; c.fill();
+  [-11, 11].forEach((ex) => { c.beginPath(); c.arc(ex, -4, 6, 0, 7); c.fillStyle = "#67e8f9"; c.fill(); });
+  stroke1(c, [[-11, 12], [11, 12]], "#67e8f9", 4);
+  c.restore();
+};
+const stroke1 = (c: Ctx, pts: Pt[], col: string, w: number) => { c.save(); c.strokeStyle = col; c.lineWidth = w; c.lineCap = "round"; c.beginPath(); c.moveTo(pts[0][0], pts[0][1]); pts.slice(1).forEach((q) => c.lineTo(q[0], q[1])); c.stroke(); c.restore(); };
 const typing = (c: Ctx, x: number, y: number, f: number) => {
   c.fillStyle = "#e5e7eb"; rrect(c, x, y, 150, 70, 30); c.fill();
   [0, 1, 2].forEach((k) => { c.beginPath(); c.arc(x + 42 + k * 33, y + 35 - 8 * Math.max(0, Math.sin(f * 0.5 - k)), 10, 0, 7); c.fillStyle = "#6b7280"; c.fill(); });
@@ -307,16 +317,15 @@ const docCard = (c: Ctx, x: number, y: number, w: number, d: { title: string; wh
 const laptopFrame = (c: Ctx, W: number, H: number, r: () => number) => {
   c.fillStyle = "#e7dcc0"; c.fillRect(0, 0, W, H);
   hatch(c, [0, 0, W, H], ["#d8caa6"], r, { gap: 20, w: 3, alpha: 0.4 });
-  c.fillStyle = "#1f2937"; rrect(c, 30, 340, W - 60, 1220, 40); c.fill();
-  c.fillStyle = "#f8fafc"; rrect(c, 60, 370, W - 120, 1160, 22); c.fill();
-  c.fillStyle = "#cbd5e1"; c.beginPath(); c.moveTo(0, 1560); c.lineTo(W, 1560); c.lineTo(W, 1660); c.lineTo(0, 1660); c.fill();
+  c.fillStyle = "#1f2937"; rrect(c, 30, 420, W - 60, 1180, 40); c.fill();
+  c.fillStyle = "#f8fafc"; rrect(c, 60, 450, W - 120, 1120, 22); c.fill();
+  c.fillStyle = "#cbd5e1"; c.beginPath(); c.moveTo(0, 1600); c.lineTo(W, 1600); c.lineTo(W, 1700); c.lineTo(0, 1700); c.fill();
   // the chat app's header
-  c.fillStyle = "#eef2ff"; rrect(c, 60, 370, W - 120, 120, 22); c.fill(); c.fillRect(60, 450, W - 120, 40);
-  c.beginPath(); c.arc(140, 430, 38, 0, 7); c.fillStyle = "#334155"; c.fill();
-  [128, 152].forEach((ex) => { c.beginPath(); c.arc(ex, 424, 7, 0, 7); c.fillStyle = "#67e8f9"; c.fill(); });
-  stroke(c, [[126, 444], [154, 444]], "#67e8f9", 4, r, { passes: 1 });
-  c.font = SANS(46); c.fillStyle = UI; c.textAlign = "left"; c.fillText("AI Chat", 200, 436);
-  c.font = SANS(26, 500); c.fillStyle = "#64748b"; c.fillText("free chatbot", 202, 472);
+  c.fillStyle = "#eef2ff"; rrect(c, 60, 450, W - 120, 120, 22); c.fill(); c.fillRect(60, 530, W - 120, 40);
+  botFace(c, 140, 516, 1.15);
+  c.font = SANS(46); c.fillStyle = UI; c.textAlign = "left"; c.fillText("AI Chat", 200, 516);
+  c.font = SANS(26, 500); c.fillStyle = "#64748b"; c.fillText("free chatbot", 202, 552);
+  void r;
 };
 
 // ---------- the scene ----------
@@ -333,17 +342,18 @@ const quiz = (c: Ctx, W: number, n: number, f: number, ln: Line, r: () => number
   if (n < 3 || n > 10 || (n === 3 && f < endL - 4)) return;
   const k = n === 3 ? easeOut(seg(f, endL - 4, endL + 4)) : 1;
   const ans = n === 10 ? 1 : n === 9 ? easeOut(seg(f, cueAt(ln, 1, ln.from + Math.round(ln.frames * 0.5)) + 14, cueAt(ln, 1, ln.from + Math.round(ln.frames * 0.5)) + 22)) : 0;
-  c.save(); c.globalAlpha = k; c.translate(W / 2, 252); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
-  c.fillStyle = "rgba(15,23,42,0.95)"; rrect(c, -470, -58, 940, 128, 24); c.fill();
-  c.fillStyle = COL.yellow; rrect(c, -446, -40, 120, 44, 12); c.fill();
-  c.font = SANS(28); c.fillStyle = INK; c.textAlign = "center"; c.fillText("QUIZ", -386, -8);
-  c.font = SANS(34); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Can a chatbot tell if it wrote something?", -310, -6);
-  [["YES", -120, "#16a34a"], ["NO", 120, COL.red]].forEach(([t, x, col]) => {
+  c.save(); c.globalAlpha = k; c.translate(W / 2, 312); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
+  c.fillStyle = "rgba(15,23,42,0.95)"; rrect(c, -500, -80, 1000, 168, 26); c.fill();
+  c.fillStyle = COL.yellow; rrect(c, -476, -60, 130, 50, 12); c.fill();
+  c.font = SANS(32); c.fillStyle = INK; c.textAlign = "center"; c.fillText("QUIZ", -411, -24);
+  c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Can a chatbot tell if it", -320, -22);
+  c.fillText("wrote something?", -320, 28);
+  [["YES", 200, "#16a34a"], ["NO", 380, COL.red]].forEach(([t, x, col]) => {
     const isNo = t === "NO", on = isNo ? ans : 0;
     c.save(); c.globalAlpha = k * (isNo ? 1 : 1 - 0.6 * ans);
-    c.fillStyle = on > 0 ? (col as string) : "rgba(255,255,255,0.08)"; rrect(c, (x as number) - 90, 14, 180, 46, 23); c.fill();
-    c.save(); c.lineWidth = 4; c.strokeStyle = col as string; rrect(c, (x as number) - 90, 14, 180, 46, 23); c.stroke(); c.restore();
-    c.font = SANS(32); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(isNo && on > 0.5 ? "NO ✓" : (t as string), x as number, 49);
+    c.fillStyle = on > 0 ? (col as string) : "rgba(255,255,255,0.08)"; rrect(c, (x as number) - 80, -28, 160, 64, 32); c.fill();
+    c.save(); c.lineWidth = 5; c.strokeStyle = col as string; rrect(c, (x as number) - 80, -28, 160, 64, 32); c.stroke(); c.restore();
+    c.font = SANS(38); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(isNo && on > 0.5 ? "NO ✓" : (t as string), x as number, 17);
     c.restore();
   });
   c.restore();
@@ -367,7 +377,7 @@ const SkClass: React.FC<SP> = ({ s }) => {
     if (b.prop === "smug") sfx.push(<Sfx key={"a" + i} at={end(l) - 4} src="audio/sfx_pop.wav" vol={0.3} />);   // the quiz chip
     if (b.prop === "write") sfx.push(<Sfx key={"a" + i} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.28} />);
     if (b.prop === "newchat") sfx.push(<Sfx key={"a" + i} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "deny") sfx.push(<Sfx key={"a" + i} at={at - 4} src="reel/sfx_buzz.wav" vol={0.35} />);
+    if (b.prop === "deny") sfx.push(<Sfx key={"a" + i} at={at} src="reel/sfx_buzz.wav" vol={0.35} />);   // the silence before it stays clean
     if (b.prop === "shock") sfx.push(<Sfx key={"a" + i} at={at - 8} src="reel/sfx_boom.wav" vol={0.6} />);
     if (b.prop === "why") sfx.push(<Sfx key={"a" + i} at={at - 12} src="audio/sfx_whoosh.wav" vol={0.25} />);
     if (b.prop === "test") sfx.push(<Sfx key={"a" + i} at={at - 26} src="audio/sfx_pop.wav" vol={0.35} />);
@@ -399,12 +409,12 @@ const SkClass: React.FC<SP> = ({ s }) => {
           const x = 100, w = W - 200;
           const typed = (t: string, k: number) => (k >= 1 ? t : t.slice(0, Math.floor(t.length * k)) + "|");
           if (b.prop === "write") {   // Sir asks for an essay; it writes one in seconds
-            let y = 520;
+            let y = 600;
             y = bubbleT(c, "Write an essay: My Hometown", x, y, w, "me", 54, seg(f, ln.from - 4, ln.from + 8)) + 30;
             const q = seg(f, ln.from + Math.round(ln.frames * 0.45), end(ln) + 2);
             if (q <= 0) typing(c, x, y, f);
             else {
-              c.save(); c.fillStyle = "#e5e7eb"; rrect(c, x, y, w - 60, 520, 28); c.fill();
+              c.save(); c.fillStyle = "#e5e7eb"; rrect(c, x, y, w - 60, 480, 28); c.fill();
               c.font = SANS(40, 500); c.fillStyle = INK; c.textAlign = "left";
               const t = typed(ESSAY, q), words = t.split(" "); let line = "", yy = y + 66;
               words.forEach((wd) => { const tl = line ? line + " " + wd : wd; if (c.measureText(tl).width > w - 120) { c.fillText(line, x + 30, yy); yy += 54; line = wd; } else line = tl; });
@@ -414,18 +424,19 @@ const SkClass: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "newchat" || b.prop === "deny") {   // a NEW chat (it can't see the old one), the same essay pasted in
             const k0 = b.prop === "newchat" ? easeOut(seg(f, ln.from, ln.from + 8)) : 1;
-            c.save(); c.fillStyle = "#f8fafc"; c.fillRect(60, 490, W - 120, 1030); c.restore();
-            c.save(); c.translate(W - 330, 440); c.scale(0.9 + 0.1 * k0, 0.9 + 0.1 * k0);
+            c.save(); c.fillStyle = "#f8fafc"; c.fillRect(60, 570, W - 120, 990); c.restore();
+            c.save(); c.translate(W - 330, 520); c.scale(0.9 + 0.1 * k0, 0.9 + 0.1 * k0);
             c.fillStyle = b.prop === "newchat" && p < 0.3 ? COL.yellow : "#e0e7ff"; rrect(c, -10, -40, 260, 64, 32); c.fill();
             c.font = SANS(32); c.fillStyle = UI; c.textAlign = "left"; c.fillText("+ New chat", 18, 4); c.restore();
-            let y = 530;
+            let y = 610;
             const pk = b.prop === "newchat" ? seg(f, ln.from + Math.round(ln.frames * 0.3), ln.from + Math.round(ln.frames * 0.45)) : 1;
             y = docCard(c, x + 120, y, w - 120, { title: "pasted: the essay it just wrote", who: "written by this chatbot", year: "10 sec", snippet: ESSAY.slice(0, 40) }, pk) + 26;
             const ak = b.prop === "newchat" ? seg(f, ln.from + Math.round(ln.frames * 0.65), ln.from + Math.round(ln.frames * 0.8)) : 1;
             y = bubbleT(c, "Did you write this?", x, y, w, "me", 56, ak) + 40;
             if (b.prop === "deny") {
               const no = seg(f, ln.from - 2, ln.from + 5);
-              if (no <= 0) typing(c, x, y, f); else bubbleT(c, "No, I did not write this.", x, y, w, "ai", 62, no, COL.red);
+              botFace(c, x + 34, y + 54);
+              if (no <= 0) typing(c, x + 80, y, f); else bubbleT(c, "No, I did not write this.", x + 80, y, w - 80, "ai", 62, no, COL.red);
             } else if (ak >= 1) typing(c, x, y, f);
           }
           quiz(c, W, n, f, ln, r);
@@ -438,31 +449,30 @@ const SkClass: React.FC<SP> = ({ s }) => {
           const k1 = easeOut(seg(f, ln.from - 6, ln.from + 10)), k2 = easeOut(seg(f, c1 - 6, c1 + 10));
           // left: a cabinet of "everything I ever wrote", empty
           c.save(); c.globalAlpha = clamp(k1 * 1.5);
-          c.fillStyle = "#94a3b8"; rrect(c, 120, 330, 380, 470, 18); c.fill();
-          [0, 1, 2].forEach((j) => { c.fillStyle = "#cbd5e1"; rrect(c, 145, 355 + j * 150, 330, 130, 10); c.fill(); c.fillStyle = "#475569"; rrect(c, 270, 405 + j * 150, 80, 22, 8); c.fill(); });
-          label(c, "everything", 310, 880, 60, INK, caveat);
-          label(c, "it ever wrote", 310, 940, 60, INK, caveat);
+          c.fillStyle = "#94a3b8"; rrect(c, 120, 420, 380, 470, 18); c.fill();
+          [0, 1, 2].forEach((j) => { c.fillStyle = "#cbd5e1"; rrect(c, 145, 445 + j * 150, 330, 130, 10); c.fill(); c.fillStyle = "#475569"; rrect(c, 270, 495 + j * 150, 80, 22, 8); c.fill(); });
+          label(c, "everything", 310, 970, 60, INK, caveat);
+          label(c, "it ever wrote", 310, 1030, 60, INK, caveat);
           c.restore();
-          stamp(c, "CAN'T CHECK", 310, 600, 70, COL.red, seg(f, ln.from + 8, ln.from + 14), r, -0.12);
+          stamp(c, "CAN'T CHECK", 310, 690, 70, COL.red, seg(f, ln.from + 8, ln.from + 14), r, -0.12);
           // right: so every answer is a coin toss
           c.save(); c.globalAlpha = clamp(k2 * 1.5);
           const spin = Math.cos(f * 0.3), face = spin > 0;   // never edge-on: it read as a blank line in the stills
-          c.save(); c.translate(770, 600); c.scale(0.45 + 0.55 * Math.abs(spin), 1);
+          c.save(); c.translate(770, 690); c.scale(0.45 + 0.55 * Math.abs(spin), 1);
           c.beginPath(); c.arc(0, 0, 150, 0, 7); c.fillStyle = face ? "#16a34a" : COL.red; c.fill();
-          stroke(c, circlePts(0, 0, 150, 150), INK, 8, r, { passes: 2 });
+          stroke(c, circlePts(0, 0, 150, 150), INK, 8, r, { passes: 2, alpha: 0.55 * clamp(k2 * 1.5) });   // stroke() sets its own alpha
           c.font = SANS(80); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(face ? "YES" : "NO", 0, 28);
           c.restore();
-          label(c, "so it guesses", 770, 880, 64, INK, caveat);
+          label(c, "so it guesses", 770, 970, 64, INK, caveat);
           c.restore();
           // the bottom line, big
           const k3 = easeOut(seg(f, c1 + 14, c1 + 24));
           if (k3 > 0) {
-            c.save(); c.globalAlpha = k3; c.translate(W / 2, 1150); c.rotate(-0.02);
+            c.save(); c.globalAlpha = k3; c.translate(W / 2, 1230); c.rotate(-0.02);
             c.fillStyle = UI; rrect(c, -460, -100, 920, 200, 26); c.fill();
             c.font = SANS(52); c.fillStyle = "#fff"; c.textAlign = "center";
             c.fillText("A chatbot CAN'T tell", 0, -16); c.fillText("if it wrote something", 0, 52);
             c.restore();
-            label(c, "And her essay? It never even saw her laptop.", W / 2, 1310, 46, INK, caveat, k3);
           }
           quiz(c, W, n, f, ln, r);
           return;
@@ -492,15 +502,14 @@ const SkClass: React.FC<SP> = ({ s }) => {
           [[200, 1240], [880, 1260]].forEach(([x, y]) => { c.beginPath(); c.ellipse(x, y + (1 - up) * 500, 46, 70, 0, 0, 7); c.fillStyle = SKIN_P; c.fill(); });
           // the rule, as a big chip over the bottom (sound-off viewers)
           const c1 = cueAt(ln, 1, ln.from + Math.round(ln.frames * 0.45));
-          const kr = easeOut(seg(f, c1 - 4, c1 + 8));
+          const kr = easeOut(seg(f, c1 - 24, c1 - 12));
           if (kr > 0) {
             c.save(); c.globalAlpha = kr; c.translate(W / 2, 1150); c.scale(0.9 + 0.1 * kr, 0.9 + 0.1 * kr);
-            c.fillStyle = "#fef08a"; rrect(c, -480, -180, 960, 370, 26); c.fill();
-            c.save(); c.lineWidth = 6; c.strokeStyle = INK; rrect(c, -480, -180, 960, 370, 26); c.stroke(); c.restore();
-            c.font = SANS(46); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("Chatbot says \"I wrote it\" = NOT proof", 0, -104);
-            c.font = SANS(44); c.fillStyle = INK; c.fillText("Proof: drafts + version history", 0, -30);
-            c.fillText("+ explain it in your own words", 0, 40);
-            c.font = SANS(34, 600); c.fillStyle = "#166534"; c.fillText("Tip: write in Docs or Word, they save your history", 0, 132);
+            c.fillStyle = "#fef08a"; rrect(c, -480, -160, 960, 320, 26); c.fill();
+            c.save(); c.lineWidth = 6; c.strokeStyle = INK; rrect(c, -480, -160, 960, 320, 26); c.stroke(); c.restore();
+            c.font = SANS(52); c.fillStyle = "#b91c1c"; c.textAlign = "center"; c.fillText("Chatbot's YES or NO = NOT proof", 0, -72);
+            c.font = SANS(48); c.fillStyle = INK; c.fillText("Proof: drafts + version history", 0, 10);
+            c.fillText("+ explain it in your own words", 0, 90);
             c.restore();
           }
           return;
@@ -533,7 +542,8 @@ const SkClass: React.FC<SP> = ({ s }) => {
           c.restore();
           if (n <= 3) {
             bubbleT(c, "You wrote this essay, right?", 110, 378, W - 220, "me", 52, 1);
-            bubbleT(c, "Yes, I wrote this essay.", 110, 506, W - 220, "ai", 58, 1, "#16a34a");
+            botFace(c, 146, 560);
+            bubbleT(c, "Yes, I wrote this essay.", 192, 506, W - 300, "ai", 58, 1, "#16a34a");
           } else {   // the twist: his own notes, from 2012 (ten years before ChatGPT)
             bubbleT(c, "Did you write my lecture notes?", 110, 378, W - 220, "me", 50, n === 13 ? seg(p, 0.05, 0.2) : 1);
             c.save(); c.globalAlpha = n === 13 ? seg(p, 0.2, 0.35) : 1;
@@ -542,7 +552,7 @@ const SkClass: React.FC<SP> = ({ s }) => {
             c.fillStyle = COL.red; rrect(c, 790, 502, 164, 52, 26); c.fill();
             c.font = SANS(32); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("2012", 872, 540);
             c.restore();
-            if (n >= 14) bubbleT(c, "Yes.", 110, 600, W - 220, "ai", 64, n === 14 ? seg(f, ln.from, ln.from + 5) : 1, "#16a34a");
+            if (n >= 14) { botFace(c, 146, 650); bubbleT(c, "Yes.", 192, 600, W - 300, "ai", 64, n === 14 ? seg(f, ln.from, ln.from + 5) : 1, "#16a34a"); }
           }
           stroke(c, [[860, 720], [820, 900]], "rgba(15,23,42,0.6)", 6, r, { passes: 1 });   // to the laptop on the desk
         }
@@ -563,10 +573,10 @@ const SkClass: React.FC<SP> = ({ s }) => {
         if (n === 10) {   // our test, as a card: one row, its OWN essays, and OpenAI's own words (script review: one thing to read)
           const k = easeOut(seg(f, ln.from - 28, ln.from - 14));
           c.save(); c.globalAlpha = 0.55 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); c.restore();
-          c.save(); c.globalAlpha = k; c.translate(W / 2, 800); c.scale(0.92 + 0.08 * k, 0.92 + 0.08 * k);
+          c.save(); c.globalAlpha = k; c.translate(W / 2, 850); c.scale(0.92 + 0.08 * k, 0.92 + 0.08 * k);
           c.fillStyle = "#fffdf5"; rrect(c, -480, -440, 960, 860, 30); c.fill();
           c.font = SANS(60); c.fillStyle = INK; c.textAlign = "center"; c.fillText("WE TESTED IT", 0, -350);
-          c.font = SANS(32, 500); c.fillStyle = "#475569"; c.fillText("a free AI chatbot · a new chat each time", 0, -296);
+          c.font = SANS(36, 600); c.fillStyle = "#334155"; c.fillText("a free AI chatbot · a new chat each time", 0, -294);
           c.font = SANS(42); c.fillStyle = INK; c.fillText("10 essays IT wrote, minutes before:", 0, -200);
           const kk = easeOut(seg(f, ln.from - 10, ln.from + 12));
           c.fillStyle = "#e2e8f0"; rrect(c, -420, -160, 840, 110, 20); c.fill();
@@ -586,6 +596,10 @@ const SkClass: React.FC<SP> = ({ s }) => {
           // nothing extra
         }
         quiz(c, W, n, f, ln, r);
+        if (n === 15) {   // the punchline, readable to the last frame (render review: the caption was gone before the end)
+          const c1 = cueAt(ln, 1, ln.from + Math.round(ln.frames * 0.6));
+          stamp(c, "MACHINES LIE!", W / 2, 1210, 120, COL.red, seg(f, c1 - 2, c1 + 4), r, -0.06);
+        }
         if (f0 >= freezeAt) {   // a short freeze on his face, then the loop snaps back to the zero
           c.save(); c.globalAlpha = 0.2; c.fillStyle = "#1e1b4b"; c.fillRect(0, 0, W, H); c.restore();
         }

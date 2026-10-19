@@ -14,9 +14,9 @@ RES = ROOT / "series/scripts/skit03_demo/results.json"
 LINES = [
     ("sir", "hook", "Zero! The AI confessed. It wrote your essay!", "జీరో! ఏ ఐ ఒప్పుకుంది. నీ ఎస్సే అదే రాసింది!"),
     ("priya", "plead", "Sir, I wrote it myself! At 2 AM!", "సార్, నేనే రాశాను! రాత్రి రెండింటికి!"),
-    ("sir", "smug", "It said yes. Machines don't lie.", "అది అవును అంది. మెషిన్లు అబద్ధం చెప్పవు."),   # te: mirrors line 15
-    ("priya", "point", "Then ask it to write one. Right now.", "అయితే ఇప్పుడే దాన్నే ఒక ఎస్సే రాయమనండి."),
-    ("sir", "write", "Write an essay. My Hometown.", "ఎస్సే రాయి. మై హోమ్ టౌన్."),
+    ("sir", "smug", "It said yes. Machines don't lie.", "అది అవును అంది. మెషిన్లు ఎప్పుడూ అబద్ధం చెప్పవు."),   # te: mirrors line 15; "చెప్పవు" alone blurred ("chappoon")
+    ("priya", "point", "Then ask it to write one.", "అయితే దాన్నే ఒక ఎస్సే రాయమనండి."),   # render review: 0:11-0:19 dragged
+    ("sir", "write", "Write an essay. My Hometown.", "ఒక ఎస్సే రాయి. మై హోమ్ టౌన్."),   # te: "ఎస్సే" first in the line was heard "ye se"
     ("priya", "newchat", "New chat. Paste it. Ask.", "న్యూ చాట్. పేస్ట్ చేసి అడగండి."),
     ("bot", "deny", "[1] No, I did not write this.", "[1] లేదు, ఇది నేను రాయలేదు."),   # [1]: the music drops out right before it
     ("sir", "shock", "You wrote it ten seconds ago!", "పది సెకన్ల ముందు నువ్వే రాశావ్!"),
@@ -29,22 +29,25 @@ LINES = [
     ("sir", "lie", "I wrote those in 2012! [1] Machines lie!", "అవి టూ థౌజండ్ ట్వెల్వ్ లో రాశా! [1] మెషిన్లు అబద్ధం చెప్తాయి!"),   # notes from before ChatGPT: its "yes" is a guess too
 ]
 TTS_EN = {2: "Sir, I wrote it myself! At two A.M.!", 5: "Write an essay. My hometown.", 15: "I wrote those in twenty twelve! [1] Machines lie!",
-          10: "It denied all ten essays it wrote itself?!"}   # 10: "its own essays" was heard "its own assays" in four takes
+          10: "It denied all ten essays that it wrote itself?!"}   # 10: "its own essays" was heard "its own assays"; without
+# "that" the line read as two sentences ("It denied all ten essays. It wrote itself.")
 # Sound: a hit on frame 1; the bed builds under the accusation, lifts into the test, drops out right before "No, I did not
 # write this." (the reveal), lifts into the why and the card, sits under the rule, rises into the twist; a hit on "Machines lie."
-SCENES = [("c3_a", 0, 3, {"rise": 1.3, "tail": 0.1}),
+SCENES = [("c3_a", 0, 3, {"boost": 1.15, "rise": 1.3, "tail": 0.1}),
           ("c3_b", 3, 8, {"lift": 0.5, "pre": 0.35, "boost": 0.7, "drop_at": [[3, "1"]], "tail": 0.1}),
-          ("c3_c", 8, 10, {"lift": 0.4, "pre": 0.35, "boost": 0.85, "tail": 0.1}),
-          ("c3_d", 10, 12, {"boost": 1.0, "tail": 0.1}),
-          ("c3_e", 12, 15, {"outro": True, "boost": 1.2, "rise": 1.35, "drop_at": [[1, "1"]], "tail": 0.0})]
-GAP = {7: 0.3, 8: 0.3, 9: 0.55, 10: 0.7, 12: 1.0, 13: 0.55, 14: 0.3}   # 9-10: the test card lands, then time to read it; 12: the rule chip
-# on its own (script review); 13 -> 14: a silence before "Yes."
+          ("c3_c", 8, 10, {"lift": 0.4, "pre": 0.35, "boost": 0.7, "tail": 0.1}),
+          ("c3_d", 10, 12, {"boost": 0.8, "tail": 0.1}),
+          ("c3_e", 12, 15, {"outro": True, "lift": 0.5, "pre": 0.35, "boost": 1.45, "rise": 1.5, "drop_at": [[1, "1"]], "tail": 0.0})]
+# first cut: quarters at -21.3/-21.7/-22.3/-21.5 dB (flat); the explaining middle sits lower now, the twist higher
+GAP = {6: 0.75, 7: 0.3, 8: 0.3, 9: 0.55, 10: 0.7, 12: 1.3, 13: 0.75, 14: 0.3}   # 9-10: the test card lands, then time to read it; 12: the rule chip
+# on its own (script review); 6 -> 7 and 13 -> 14: a real silence before "No" and "Yes." (the first cut's drop before "No"
+# sat under Priya's "Ask")
 PAUSES = {"en": {9: {"1": 0.35}, 12: {"1": 0.3}, 15: {"1": 0.3}}, "te": {9: {"1": 0.4}, 12: {"1": 0.35}, 15: {"1": 0.35}}}
 GAIN = {"bot": -1.0, "sir": 0.5, "priya": 0.5}
-GAIN_LINE = {7: 1.0, 15: 1.5}   # the reveal and the punchline
+GAIN_LINE = {7: 1.0, 15: 2.0}   # the reveal and the punchline
 TEMPO = {"en": 1.08, "te": 1.05}
 # Telugu lines voiced as two takes, joined (EP34: a long three-part line babbled in every Parler take; skit 03's line 12 did too)
-TE_SPLIT = {12: ("నా వెర్షన్ హిస్టరీ చూడండి.", "లేదా నన్నే అడగండి, ఎక్స్‌ప్లెయిన్ చేస్తా.")}
+TE_SPLIT = {12: ("నా వెర్షన్ హిస్టరీ చెక్ చేయండి.", "లేదా నన్నే అడగండి, ఎక్స్‌ప్లెయిన్ చేస్తా.")}   # "చూడండి" was heard "choḍ" (close to a Hindi swear)
 YT = {"c3_a": "The AI confessed", "c3_b": "The test", "c3_c": "Why", "c3_d": "The proof", "c3_e": "Sir's notes"}
 
 
@@ -63,7 +66,7 @@ def spec(lang, D):
     s = {"id": sid, "title": "The AI that confessed" + (" (Telugu audio)" if te else ""), "label": "SKIT",
          "banner": "The AI that confessed", "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15,
          "music": "lofi", "musicVol": [0.4, 0.75], "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase",
-         "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True, "beatSnap": True,
+         "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": False, "hardCuts": True, "beatSnap": True,
          "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang}
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
