@@ -114,6 +114,9 @@ The user voices the episode: both characters, English and, if they can, Telugu (
   so a drop before a later line's cue needs `drop_at: [[line index, cue]]`.
 - While the recording is pending: build the scenes against a TTS guide track (never delivered), and don't start the
   next episode.
+- EP33 (Oct 19): delivered, English in the user's take 1, Telugu on Parler. A re-record of English line 1 ("AI!" read
+  as "Yeah") may still come: swap it in then (cut_takes `--script`, voice_rec, rebuild, re-render EN, re-deliver); it
+  does not hold up EP34. The user plans to record the next episode too, saying "Line N" before every line.
 
 ## Run 2: daily creative reel
 1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. The shop cast (Ravi anna
