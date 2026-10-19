@@ -1,7 +1,7 @@
 # EP33 "We don't sell headaches" (RAG part 3: hybrid search and measuring it): writes reels/ep33v1.json (English) and
 # reels/ep33te.json (Telugu: the user recorded English only, so Telugu is voiced on Parler by pipeline/ep33/voice_te.py),
-# and reels/ep33tts.json: English with AI voices, skit 01's cast (pipeline/ep33/voice_en.py), which the user asked for
-# to compare with their recording.
+# and reels/ep33tts.json: English with AI voices, skit 01's cast (pipeline/ep33/voice_en.py), made to compare with the
+# user's recording; the user picked it (Oct 19), so it is the English 035_ep33_we_dont_sell_headaches.mp4.
 # The first episode voiced by the user (recorded-voice trial): pipeline/tools/cut_takes.py cut the recording into lines,
 # pipeline/ep33/voice_rec.py edited them into video/public/reel/ep33v1/src/NN_<who>.wav. Lines and their order come from
 # the script (series/scripts/ep33_hybrid_search.md, v2.1); [n] marks the words the pictures wait for.

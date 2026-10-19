@@ -92,7 +92,7 @@ stay as made.
 8. Deliver with SendUserFile (status proactive): Insta EN + TE send copies and the caption files, plus 2-3 lines on
    what the viewers flagged and what changed.
 
-### Recorded voice (trial from EP33; the user's call on Oct 18)
+### Recorded voice (trial on EP33 only, Oct 18-19; ended: the user picked the AI voices)
 The user voices the episode: both characters, English and, if they can, Telugu (a language they skip gets TTS).
 - The script goes to the user only after the demo and the script-stage viewer review: they record once, so the
   numbers and lines must be final. The recording guide sits in the script file (`series/scripts/ep33_hybrid_search.md`):
@@ -122,9 +122,11 @@ The user voices the episode: both characters, English and, if they can, Telugu (
   (`reels/ep33tts.json`, `pipeline/ep33/voice_en.py`: skit 01's cast). The viewers split: one preferred the AI voices
   (the recorded hook read "Yeah, you told him what of stock?"), the other the human take ("a TTS voice on an AI page
   smells like a content farm"). Both said 0:39-0:51 drags in both versions: the script, not the voice. Their idea: the
-  owner voices Ravi, TTS voices the shop AI. The voice from EP34 on is the user's call. Until they say, make the episode
-  with AI voices as before (deliverable) and send the recording script too; a recording that arrives replaces the
-  voices it covers.
+  owner voices Ravi, TTS voices the shop AI. The user's call, the same day: "AI voice English is only good". The
+  trial is over: from EP34 on, both languages are voiced with TTS and no script goes out for recording. English as
+  EP33's published cut (`pipeline/ep33/voice_en.py`): Ravi on Parler "Thoma", the shop AI on Fish with the narrator
+  reference through `phone()`, judged per line after the filter and again after the build's tempo. Telugu on Parler
+  as `pipeline/ep33/voice_te.py`.
 
 ## Run 2: daily creative reel
 1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. The shop cast (Ravi anna
