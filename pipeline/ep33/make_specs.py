@@ -107,7 +107,7 @@ PAUSES_TTS = {18: {"1": 0.45}}   # the beat before "eighteen" (the recording had
 # AI voices at 1.1x ran 82 s against the recording's 75 s (Parler's Ravi is slower than the user): 1.2x, tighter pauses,
 # except lines whose key word blurred at 1.2x in the mix ("which search" -> "such", "Both" -> "Bose", "Test" -> "just",
 # "Keyword off" -> "Keyword on"); at 1.0 they all read right
-TEMPO_TTS = {12: 1.0, 13: 1.0, 18: 1.0, 23: 1.0, 26: 1.0}
+TEMPO_TTS = {10: 1.0, 12: 1.0, 13: 1.0, 18: 1.0, 23: 1.0, 26: 1.0}   # 10: "pain relief" -> "paint relief"
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
