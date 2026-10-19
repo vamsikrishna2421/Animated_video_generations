@@ -49,7 +49,7 @@ Lines of 1-3 s; never more than two AI lines in a row; Ravi asks what the viewer
 
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Ravi | AI! Ten customers waiting and you've gone SILENT?! | shop, wide: a queue at the counter; the phone on the counter: "No internet ✕"; Ravi slams the counter; big sticker from frame 1: "HE DOESN'T OWN HIS AI. HE RENTS IT."; tag "EP34 · AI From Scratch" |
+| 1 | Ravi | AI! Customers waiting and you've gone SILENT?! | shop, wide: a queue at the counter; the phone on the counter: "No internet ✕"; Ravi slams the counter; big sticker from frame 1: "HE DOESN'T OWN HIS AI. HE RENTS IT."; tag "EP34 · AI From Scratch" |
 | 2 | AI | No internet. You rent me, anna. My brain isn't here. | the phone: the AI's face, a crossed cloud, a "RENTED" tag |
 | 3 | Ravi | Rent?! I rented this shop for twenty years. Then I bought it! | the shop board: "RAVI KIRANA · own shop since 2016" |
 | 4 | AI | My brain sits on a company's computers. [1] Every order you type goes to them. [2] Closed model: you pay per question. | insert: the phone, a tower, a far-off building full of computers; on [1] an order bubble "2 kg tomato, 1 dozen eggs" flies to the building; on [2] a taxi meter "₹ per question" and a padlock "CLOSED: its numbers stay secret" |

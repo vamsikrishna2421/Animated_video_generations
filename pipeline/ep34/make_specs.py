@@ -11,7 +11,7 @@ R = ROOT / "reels"
 # n: (who, shot, prop, English with cue marks). shot: camera in the shop ("wide", "ravi") or "screen" (the phone fills the
 # frame). prop: what the line brings on (OwnCrayon.tsx).
 LINES = {
-    1: ("ravi", "wide", "hook", "AI! Ten customers waiting and you've gone SILENT?!"),
+    1: ("ravi", "wide", "hook", "AI! Customers waiting and you've gone SILENT?!"),   # Parler said "Then customers" in every take
     2: ("ai", "screen", "rented", "No internet. You rent me, anna. My brain isn't here."),
     3: ("ravi", "ravi", "ownshop", "Rent?! I rented this shop twenty years, then I bought it!"),
     4: ("ai", "screen", "cloud", "My brain sits on a company's computers. [1] Every order you type goes to them. [2] Closed model: you pay per question."),
@@ -40,7 +40,7 @@ LINES = {
 SHOW = {n: t.replace("[1] ", "").replace("[2] ", "") for n, (_, _, _, t) in LINES.items()}
 # English spoken forms: capitals and hyphens out; a lone first word kept inside its sentence (Parler drops one-word
 # sentences: skit 01's lesson)
-TTS_EN = {1: "AI! Ten customers waiting and you've gone silent?!", 11: "Twenty, it's a computer!",
+TTS_EN = {1: "AI! Customers waiting and you've gone silent?!", 11: "Twenty, it's a computer!",
           16: "One bill: five sixty six, for a two thirty one order. And ten customers wait two and a half minutes.",
           22: "I don't rent! I'll own the biggest free brain!", 23: "The big ones run on a twenty five lakh graphics card."}
 # lines whose key word or number must not blur at the reel's tempo (EP33: 1.2x read "Keyword off" as "Keyword on")
