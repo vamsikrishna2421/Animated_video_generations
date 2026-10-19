@@ -1,0 +1,572 @@
+{
+ "id": "ep33tts",
+ "title": "We don't sell headaches (EP33: hybrid search) (AI voices)",
+ "label": "EP33",
+ "banner": "Why the AI said OUT OF STOCK",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.18,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.75
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.1,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "st_a",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "rise": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "pages",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Out of stock?",
+     "title": "Out of stock?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "AI! [1] You told him \"out of stock\"?! [2] The batteries are right there!",
+     "show": "AI! You told him \"out of stock\"?! The batteries are right there!",
+     "maxgap": 0.35,
+     "gap": 0.25,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "E-1203 wasn't on [1] the three pages I read.",
+     "show": "E-1203 wasn't on the three pages I read.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "tts": "E twelve zero three wasn't on the three pages I read.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Which three pages?!",
+     "show": "Which three pages?!",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "st_b",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.35,
+   "boost": 0.55,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "meaning",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "codes",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "keyword",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "thumb",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Meaning vs keyword",
+     "title": "Meaning vs keyword",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "The three closest to the order. [1] I search by meaning.",
+     "show": "The three closest to the order. I search by meaning.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "A code has no meaning! [1] It has to match exactly!",
+     "show": "A code has no meaning! It has to match exactly!",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "Then use keyword search. [1] Exact words only.",
+     "show": "Then use keyword search. Exact words only.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "Good. Only that from now on.",
+     "show": "Good. Only that from now on.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "tts": "Good, only that from now on.",
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "st_c",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "boost": 0.55,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "order",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "zero",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "balm",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "words",
+      "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "We don't sell headaches",
+     "title": "We don't sell headaches",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "Next order: [1] \"something for a headache.\"",
+     "show": "Next order: \"something for a headache.\"",
+     "maxgap": 0.35,
+     "gap": 0.3,
+     "gain_db": -2.0
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "No match. [1] We don't sell headaches.",
+     "show": "No match. We don't sell headaches.",
+     "maxgap": 0.35,
+     "gap": 0.7,
+     "gain_db": -2.0
+    },
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "The pain balm is right there!",
+     "show": "The pain balm is right there!",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "He never said [1] \"balm\".",
+     "show": "He never said \"balm\".",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -2.0
+    },
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "So which search do I use?!",
+     "show": "So which search do I use?!",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "st_d",
+   "type": "sk_stock",
+   "tail": 0.1,
+   "lift": 0.35,
+   "pre": 0.45,
+   "boost": 0.8,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "hybrid",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fold",
+      "n": 14
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "delivery",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "sheet",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Both, still 3 pages",
+     "title": "Both, still 3 pages",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "13_ai.wav",
+     "text": "Both. [1] Merge the two lists. [2] Still three pages.",
+     "show": "Both. Merge the two lists. Still three pages.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "14_ravi.wav",
+     "text": "And how do I know it works?",
+     "show": "And how do I know it works?",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "15_ai.wav",
+     "text": "Test me like a new delivery boy.",
+     "show": "Test me like a new delivery boy.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "Twenty orders you already know the answers to.",
+     "show": "Twenty orders you already know the answers to.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "st_e",
+   "type": "sk_stock",
+   "tail": 0.5,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bars",
+      "n": 17
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "both",
+      "n": 18
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 15, 13, 18",
+     "title": "Our test: 15, 13, 18",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "17_ai.wav",
+     "text": "Meaning only: fifteen out of twenty. [1] Keyword only: thirteen.",
+     "show": "Meaning only: fifteen out of twenty. Keyword only: thirteen.",
+     "maxgap": 0.35,
+     "gap": 0.75,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "18_ai.wav",
+     "text": "Both: [1] eighteen.",
+     "show": "Both: eighteen.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "pauses": {
+      "1": 0.45
+     },
+     "gain_db": 1.0
+    }
+   ]
+  },
+  {
+   "id": "st_f",
+   "type": "sk_stock",
+   "tail": 0.15,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "lost",
+      "n": 19
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "rows",
+      "n": 20
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "street",
+      "n": 21
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "booksearch",
+      "n": 22
+     },
+     {
+      "who": "ravi",
+      "shot": "book",
+      "prop": "write",
+      "n": 23
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "stamp",
+      "n": 24
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Write it down",
+     "title": "Write it down",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "19_ravi.wav",
+     "text": "Eighteen. [1] So two customers went home empty-handed. [2] Which two?",
+     "show": "Eighteen. So two customers went home empty-handed. Which two?",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 2.1
+    },
+    {
+     "who": "ai",
+     "file": "20_ai.wav",
+     "text": "\"Something to wash vessels.\" [1] And \"Ramesh garu's usual.\"",
+     "show": "\"Something to wash vessels.\" And \"Ramesh garu's usual.\"",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": -0.4
+    },
+    {
+     "who": "ravi",
+     "file": "21_ravi.wav",
+     "text": "Everyone knows those!",
+     "show": "Everyone knows those!",
+     "maxgap": 0.35,
+     "gap": 0.45,
+     "gain_db": 3.1
+    },
+    {
+     "who": "ai",
+     "file": "22_ai.wav",
+     "text": "Everyone except your stock book.",
+     "show": "Everyone except your stock book.",
+     "maxgap": 0.35,
+     "gap": 0.7,
+     "gain_db": 0.6
+    },
+    {
+     "who": "ravi",
+     "file": "23_ravi.wav",
+     "text": "Written. [1] Test again.",
+     "show": "Written. Test again.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 3.1
+    },
+    {
+     "who": "ai",
+     "file": "24_ai.wav",
+     "text": "Twenty out of twenty.",
+     "show": "Twenty out of twenty.",
+     "maxgap": 0.35,
+     "gap": 0.55,
+     "gain_db": 0.6
+    }
+   ]
+  },
+  {
+   "id": "st_g",
+   "type": "sk_stock",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.35,
+   "rise": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "smug",
+      "n": 25
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "switchoff",
+      "n": 26
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "One is enough?",
+     "title": "One is enough?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "25_ravi.wav",
+     "text": "Super! [1] Why two? [2] Switch one off.",
+     "show": "Super! Why two? Switch one off.",
+     "maxgap": 0.35,
+     "gap": 0.18,
+     "gain_db": 3.1
+    },
+    {
+     "who": "ai",
+     "file": "26_ai.wav",
+     "text": "Okay. [1] Keyword off. [2] Next order: E-1203.",
+     "show": "Okay. Keyword off. Next order: E-1203.",
+     "maxgap": 0.35,
+     "gap": 0.05,
+     "tts": "Okay. Keyword off. Next order: E twelve zero three.",
+     "gain_db": 1.6
+    }
+   ]
+  }
+ ]
+}

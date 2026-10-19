@@ -1,5 +1,7 @@
 # EP33 "We don't sell headaches" (RAG part 3: hybrid search and measuring it): writes reels/ep33v1.json (English) and
-# reels/ep33te.json (Telugu: the user recorded English only, so Telugu is voiced on Parler by pipeline/ep33/voice_te.py).
+# reels/ep33te.json (Telugu: the user recorded English only, so Telugu is voiced on Parler by pipeline/ep33/voice_te.py),
+# and reels/ep33tts.json: English with AI voices, skit 01's cast (pipeline/ep33/voice_en.py), which the user asked for
+# to compare with their recording.
 # The first episode voiced by the user (recorded-voice trial): pipeline/tools/cut_takes.py cut the recording into lines,
 # pipeline/ep33/voice_rec.py edited them into video/public/reel/ep33v1/src/NN_<who>.wav. Lines and their order come from
 # the script (series/scripts/ep33_hybrid_search.md, v2.1); [n] marks the words the pictures wait for.
@@ -88,18 +90,22 @@ PAUSES_TE = {18: {"1": 0.45}}   # the beat before "eighteen" (the English take h
 SHOW_TE = {7: "Super. Only that from now on."}   # he says "సూపర్" here and again at 25 (the callback)
 GAP_TE = {11: 0.45}   # render review: air after the "balm" punchline too
 GAIN_TE = {9: 1.0, 22: 2.5}   # the joke's payoff, and "మీ స్టాక్ బుక్ కి తప్ప" (clean alone, masked in the mix)
+# English with AI voices: spoken forms for the code, "Good" kept inside the phrase (Parler drops one-word sentences)
+TTS_EN = {2: "E twelve zero three wasn't on the three pages I read.", 7: "Good, only that from now on.",
+          26: "Okay. Keyword off. Next order: E twelve zero three."}
+PAUSES_TTS = {18: {"1": 0.45}}   # the beat before "eighteen" (the recording had it inserted in the edit)
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
 
 
 def spec(lang="en"):
-    te = lang == "te"
-    sid = "ep33te" if te else "ep33v1"
-    s = {"id": sid, "title": "We don't sell headaches (EP33: hybrid search)" + (" (Telugu audio)" if te else ""), "label": "EP33",
+    te, tts = lang == "te", lang == "tts"
+    sid = {"en": "ep33v1", "te": "ep33te", "tts": "ep33tts"}[lang]
+    s = {"id": sid, "title": "We don't sell headaches (EP33: hybrid search)" + {"te": " (Telugu audio)", "tts": " (AI voices)"}.get(lang, ""), "label": "EP33",
          "banner": "Why the AI said OUT OF STOCK",
          "topic": "", "look": "classic", "gap": 0.18, "lead": 0.15, "music": "lofi", "musicVol": [0.4, 0.75], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True,
-         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.05 if te else 1.0, "captionTop": 1500}
+         "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.05 if te else 1.1 if tts else 1.0, "captionTop": 1500}
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
     scenes = []
@@ -113,6 +119,10 @@ def spec(lang="en"):
                 ln["tts"] = TE[n][1]
             if te and n in PAUSES_TE:
                 ln["pauses"] = PAUSES_TE[n]
+            if tts and n in TTS_EN:
+                ln["tts"] = TTS_EN[n]
+            if tts and n in PAUSES_TTS:
+                ln["pauses"] = PAUSES_TTS[n]
             if te and n in TE_PART2:
                 ln.update({"file2": f"{n:02d}b_{who}.wav", "tts2": TE_PART2[n], "pause": 0.3})
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
@@ -138,3 +148,4 @@ def spec(lang="en"):
 if __name__ == "__main__":
     spec("en")
     spec("te")
+    spec("tts")
