@@ -79,7 +79,16 @@ def main(only):
             if only and n not in only:
                 continue
             who = line["who"]
-            text = re.sub(r"\s+", " ", re.sub(r"\[\d+\]", "", line.get("tts") or line["text"])).strip()
+            parts = [(line.get("tts") or line["text"], line["file"])] + ([(line["tts2"], line["file2"])] if line.get("file2") else [])
+            for raw, fname in parts:
+                voice_part(n, who, raw, fname, takes, src, only)
+    print("VOICE_DONE", flush=True)
+
+
+def voice_part(n, who, raw, fname, takes, src, only):
+    if True:
+        if True:
+            text = re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", raw)).strip()
             key = hashlib.md5(f"{VOICE[who]}|{text}".encode()).hexdigest()[:10]
             cached = sorted(takes.glob(f"{key}_*.wav"))
             best = (None, cached[0]) if cached and not only else None
@@ -99,14 +108,13 @@ def main(only):
                 for f in takes.glob(f"{key}_*.wav"):
                     if f != best[1]:
                         f.unlink()
-            out = src / line["file"]
+            out = src / fname
             shutil.copy(best[1], out)
             if who == "ai":
                 a, sr = sf.read(out)
                 import ep33.voice_rec as vr
                 vr.SR = sr
                 sf.write(out, phone(a, n in LIGHT).astype(np.float32), sr)
-    print("VOICE_DONE", flush=True)
 
 
 if __name__ == "__main__":

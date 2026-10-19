@@ -81,8 +81,9 @@ TE = {
     23: ("రాశా, [1] మళ్ళీ టెస్ట్ చెయ్.", None),
     24: ("ఇరవైకి ఇరవై.", None),
     25: ("సూపర్, [1] రెండు ఎందుకు? [2] ఒకటి ఆపెయ్.", None),
-    26: ("సరేనండి. [1] Keyword ఆఫ్. [2] తర్వాతి ఆర్డర్: E-1203.", "సరేనండి. కీవర్డ్ ఆఫ్. తర్వాతి ఆర్డర్, ఈ ట్వెల్వ్ జీరో త్రీ."),
+    26: ("సరేనండి. [1] Keyword ఆఫ్. <pause 0.3> [2] తర్వాతి ఆర్డర్: E-1203.", "సరేనండి. కీవర్డ్ ఆఫ్."),
 }
+TE_PART2 = {26: "తర్వాతి ఆర్డర్, ఈ ట్వెల్వ్ జీరో త్రీ."}   # in one take Parler looped the line (7.6 s): two takes, joined
 PAUSES_TE = {18: {"1": 0.45}}   # the beat before "eighteen" (the English take had it inserted in the edit)
 YT = {"st_a": "Out of stock?", "st_b": "Meaning vs keyword", "st_c": "We don't sell headaches", "st_d": "Both, still 3 pages",
       "st_e": "Our test: 15, 13, 18", "st_f": "Write it down", "st_g": "One is enough?"}
@@ -109,6 +110,8 @@ def spec(lang="en"):
                 ln["tts"] = TE[n][1]
             if te and n in PAUSES_TE:
                 ln["pauses"] = PAUSES_TE[n]
+            if te and n in TE_PART2:
+                ln.update({"file2": f"{n:02d}b_{who}.wav", "tts2": TE_PART2[n], "pause": 0.3})
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
             # the fix and the twist build to the loudest stretch
             g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
