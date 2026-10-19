@@ -1,8 +1,10 @@
 # EP34 demo (open vs closed models): can a free open-weights model that Ravi anna owns make his bills? 20 WhatsApp
 # orders against a 15-line price board, totals known in advance (EP33's rule: test with answers you already know).
-# Two Apache-2.0 open models from Hugging Face, run on CPU only (4 cores, no graphics card) with the internet unused
+# Apache-2.0 open models from Hugging Face, run on CPU only (4 cores, no graphics card) with the internet unused
 # (offline mode: nothing is fetched while the test runs). Greedy decoding; the model may show its working. Scored: the
 # last number on the reply's last line that says "total" (the bill it gives), exact rupees. Writes series/scripts/ep34_demo/.
+# The script review asked for a mid-size model too: Qwen2.5-7B-Instruct as Qwen's own 4-bit GGUF (q4_k_m), run with
+# llama.cpp (pip llama-cpp-python), the way a laptop app like Ollama or LM Studio runs it.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep34/bill_demo.py [model ...]
 #   python3 pipeline/ep34/bill_demo.py --rescore      (score the saved replies again, no model run)
 import json
@@ -20,7 +22,7 @@ from huggingface_hub import snapshot_download  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "series/scripts/ep34_demo"
-MODELS = ["Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct"]
+MODELS = ["Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-7B-Instruct-GGUF"]
 PRICES = [("tomato", "1 kg", 40), ("onion", "1 kg", 35), ("potato", "1 kg", 30), ("rice", "1 kg", 62),
           ("toor dal", "1 kg", 140), ("sugar", "1 kg", 46), ("milk", "500 ml packet", 28), ("curd", "500 g cup", 35),
           ("eggs", "1 dozen", 78), ("bread", "1 packet", 45), ("detergent powder", "1 kg", 120), ("bath soap", "1 bar", 38),
@@ -77,16 +79,54 @@ def rescore():
         print(f"{res['model']}: {res['right']}/{res['of']} right, {res['seconds_per_bill']} s per bill", flush=True)
 
 
+def system_prompt():
+    return ("You are the billing assistant of a small kirana shop in Hyderabad. Price board:\n" + board() +
+            "\nRead the customer's WhatsApp order, work out each item's cost, then give the bill total in rupees. "
+            "End with one line: TOTAL: <number>")
+
+
+def run_gguf(model_id, log):
+    """A 4-bit GGUF through llama.cpp (the split q4_k_m files from the model's own repo)."""
+    from llama_cpp import Llama
+    folder = Path(snapshot_download(model_id, local_files_only=True))
+    parts = sorted(folder.glob("*q4_k_m*.gguf"))
+    t0 = time.time()
+    llm = Llama(model_path=str(parts[0]), n_threads=4, n_ctx=2048, verbose=False, seed=0)
+    load = time.time() - t0
+    rows, right, gen_s, gen_tok = [], 0, 0.0, 0
+    for text, want in ORDERS:
+        t1 = time.time()
+        out = llm.create_chat_completion([{"role": "system", "content": system_prompt()}, {"role": "user", "content": text}],
+                                         temperature=0.0, max_tokens=220)
+        dt = time.time() - t1
+        reply = out["choices"][0]["message"]["content"]
+        got = total(reply)
+        ok = got is not None and abs(got - want) < 0.01
+        right += ok
+        gen_s += dt
+        gen_tok += out["usage"]["completion_tokens"]
+        rows.append({"order": text, "right_total": want, "model_total": got, "ok": ok, "seconds": round(dt, 1), "reply": reply})
+        print(f"  {'OK ' if ok else 'BAD'} {text!r}: {got} (right {want}) {dt:.1f}s", flush=True)
+    size = sum(f.resolve().stat().st_size for f in parts)
+    res = {"model": model_id + " (q4_k_m)", "parameters": 7.6e9, "download_gb": round(size / 1e9, 2), "right": right,
+           "of": len(ORDERS), "load_seconds": round(load, 1), "seconds_per_bill": round(gen_s / len(ORDERS), 1),
+           "tokens_per_second": round(gen_tok / gen_s, 1), "cpu_threads": 4, "rows": rows}
+    log.append(res)
+    print(f"{model_id}: {right}/{len(ORDERS)} right, {res['seconds_per_bill']} s per bill, {res['tokens_per_second']} tokens/s, "
+          f"{res['download_gb']} GB", flush=True)
+    return res
+
+
 def run(model_id, log):
+    if model_id.endswith("-GGUF"):
+        return run_gguf(model_id, log)
     tok = AutoTokenizer.from_pretrained(model_id)
     t0 = time.time()
     model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float32)
     model.eval()
     load = time.time() - t0
     params = sum(p.numel() for p in model.parameters())
-    system = ("You are the billing assistant of a small kirana shop in Hyderabad. Price board:\n" + board() +
-              "\nRead the customer's WhatsApp order, work out each item's cost, then give the bill total in rupees. "
-              "End with one line: TOTAL: <number>")
+    system = system_prompt()
     rows, right, gen_s, gen_tok = [], 0, 0.0, 0
     for text, total in ORDERS:
         msgs = [{"role": "system", "content": system}, {"role": "user", "content": text}]
