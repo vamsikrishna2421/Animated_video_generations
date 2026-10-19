@@ -13,29 +13,34 @@
  "fps": 30,
  "musicDrops": [
   [
-   1457,
-   1481
+   1399,
+   1423
   ]
  ],
  "musicBoosts": [
   [
    288,
-   983,
+   655,
    0.55
   ],
   [
-   983,
-   1310,
+   655,
+   984,
+   0.85
+  ],
+  [
+   984,
+   1251,
    0.8
   ],
   [
-   1534,
-   2045,
+   1473,
+   1984,
    1.25
   ],
   [
-   2045,
-   2294,
+   1984,
+   2233,
    1.35
   ],
   [
@@ -45,15 +50,15 @@
    1
   ],
   [
-   2045,
-   2294,
+   1984,
+   2233,
    1.4,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 2294,
+ "totalFrames": 2233,
  "music": "reel/ep33tts/score.wav",
  "scenes": [
   {
@@ -562,7 +567,7 @@
     "hardCuts": true
    },
    "from": 655,
-   "frames": 328,
+   "frames": 329,
    "lines": [
     {
      "who": "ai",
@@ -659,37 +664,42 @@
      "sub": null,
      "audio": "reel/ep33tts/line_10.wav",
      "from": 157,
-     "frames": 59,
+     "frames": 60,
      "words": [
       {
        "w": "The",
-       "from": 162,
-       "to": 167
+       "from": 160,
+       "to": 164
       },
       {
-       "w": "headache",
-       "from": 167,
-       "to": 176
+       "w": "pain",
+       "from": 164,
+       "to": 169
+      },
+      {
+       "w": "relief",
+       "from": 169,
+       "to": 180
       },
       {
        "w": "balm",
-       "from": 176,
-       "to": 182
-      },
-      {
-       "w": "is",
-       "from": 182,
+       "from": 180,
        "to": 185
       },
       {
-       "w": "right",
+       "w": "is",
        "from": 185,
-       "to": 191
+       "to": 188
+      },
+      {
+       "w": "right",
+       "from": 188,
+       "to": 194
       },
       {
        "w": "there!",
-       "from": 191,
-       "to": 199
+       "from": 194,
+       "to": 201
       }
      ],
      "cues": {}
@@ -700,32 +710,32 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep33tts/line_11.wav",
-     "from": 221,
+     "from": 222,
      "frames": 36,
      "words": [
       {
        "w": "He",
-       "from": 224,
-       "to": 227
+       "from": 225,
+       "to": 228
       },
       {
        "w": "never",
-       "from": 227,
-       "to": 234
+       "from": 228,
+       "to": 235
       },
       {
        "w": "said",
-       "from": 234,
-       "to": 239
+       "from": 235,
+       "to": 240
       },
       {
        "w": "\"balm\".",
-       "from": 239,
-       "to": 248
+       "from": 240,
+       "to": 249
       }
      ],
      "cues": {
-      "1": 239
+      "1": 240
      }
     },
     {
@@ -734,38 +744,38 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep33tts/line_12.wav",
-     "from": 262,
+     "from": 264,
      "frames": 57,
      "words": [
       {
        "w": "So",
-       "from": 268,
-       "to": 272
+       "from": 269,
+       "to": 273
       },
       {
        "w": "which",
-       "from": 272,
-       "to": 279
+       "from": 273,
+       "to": 280
       },
       {
        "w": "search",
-       "from": 279,
-       "to": 287
+       "from": 280,
+       "to": 288
       },
       {
        "w": "do",
-       "from": 287,
-       "to": 290
+       "from": 288,
+       "to": 291
       },
       {
        "w": "I",
-       "from": 290,
-       "to": 293
+       "from": 291,
+       "to": 294
       },
       {
        "w": "use?!",
-       "from": 293,
-       "to": 300
+       "from": 294,
+       "to": 301
       }
      ],
      "cues": {}
@@ -792,12 +802,6 @@
      {
       "who": "ai",
       "shot": "screen",
-      "prop": "delivery",
-      "n": 15
-     },
-     {
-      "who": "ai",
-      "shot": "screen",
       "prop": "sheet",
       "n": 16
      }
@@ -812,8 +816,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 983,
-   "frames": 327,
+   "from": 984,
+   "frames": 267,
    "lines": [
     {
      "who": "ai",
@@ -924,94 +928,47 @@
      "sub": null,
      "audio": "reel/ep33tts/line_15.wav",
      "from": 183,
-     "frames": 54,
-     "words": [
-      {
-       "w": "Test",
-       "from": 186,
-       "to": 196
-      },
-      {
-       "w": "me",
-       "from": 196,
-       "to": 204
-      },
-      {
-       "w": "like",
-       "from": 204,
-       "to": 209
-      },
-      {
-       "w": "a",
-       "from": 209,
-       "to": 212
-      },
-      {
-       "w": "new",
-       "from": 212,
-       "to": 216
-      },
-      {
-       "w": "delivery",
-       "from": 216,
-       "to": 227
-      },
-      {
-       "w": "boy.",
-       "from": 227,
-       "to": 232
-      }
-     ],
-     "cues": {}
-    },
-    {
-     "who": "ai",
-     "name": "Shop AI",
-     "color": "#67E8F9",
-     "sub": null,
-     "audio": "reel/ep33tts/line_16.wav",
-     "from": 242,
      "frames": 76,
      "words": [
       {
        "w": "Twenty",
-       "from": 247,
-       "to": 254
+       "from": 188,
+       "to": 195
       },
       {
        "w": "orders",
-       "from": 254,
-       "to": 262
+       "from": 195,
+       "to": 203
       },
       {
        "w": "you",
-       "from": 262,
-       "to": 266
+       "from": 203,
+       "to": 207
       },
       {
        "w": "already",
-       "from": 266,
-       "to": 278
+       "from": 207,
+       "to": 219
       },
       {
        "w": "know",
-       "from": 278,
-       "to": 283
+       "from": 219,
+       "to": 224
       },
       {
        "w": "the",
-       "from": 283,
-       "to": 288
+       "from": 224,
+       "to": 228
       },
       {
        "w": "answers",
-       "from": 288,
-       "to": 296
+       "from": 228,
+       "to": 237
       },
       {
        "w": "to.",
-       "from": 296,
-       "to": 310
+       "from": 237,
+       "to": 250
       }
      ],
      "cues": {}
@@ -1046,15 +1003,15 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1309,
-   "frames": 225,
+   "from": 1251,
+   "frames": 222,
    "lines": [
     {
      "who": "ai",
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep33tts/line_17.wav",
+     "audio": "reel/ep33tts/line_16.wav",
      "from": 0,
      "frames": 116,
      "words": [
@@ -1113,7 +1070,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep33tts/line_18.wav",
+     "audio": "reel/ep33tts/line_17.wav",
      "from": 139,
      "frames": 52,
      "words": [
@@ -1186,7 +1143,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1534,
+   "from": 1473,
    "frames": 511,
    "lines": [
     {
@@ -1194,7 +1151,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep33tts/line_19.wav",
+     "audio": "reel/ep33tts/line_18.wav",
      "from": 0,
      "frames": 127,
      "words": [
@@ -1254,7 +1211,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep33tts/line_20.wav",
+     "audio": "reel/ep33tts/line_19.wav",
      "from": 133,
      "frames": 100,
      "words": [
@@ -1308,7 +1265,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep33tts/line_21.wav",
+     "audio": "reel/ep33tts/line_20.wav",
      "from": 238,
      "frames": 47,
      "words": [
@@ -1335,7 +1292,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep33tts/line_22.wav",
+     "audio": "reel/ep33tts/line_21.wav",
      "from": 298,
      "frames": 51,
      "words": [
@@ -1372,7 +1329,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep33tts/line_23.wav",
+     "audio": "reel/ep33tts/line_22.wav",
      "from": 370,
      "frames": 68,
      "words": [
@@ -1401,7 +1358,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep33tts/line_24.wav",
+     "audio": "reel/ep33tts/line_23.wav",
      "from": 443,
      "frames": 38,
      "words": [
@@ -1458,7 +1415,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 2045,
+   "from": 1984,
    "frames": 249,
    "lines": [
     {
@@ -1466,7 +1423,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep33tts/line_25.wav",
+     "audio": "reel/ep33tts/line_24.wav",
      "from": 0,
      "frames": 97,
      "words": [
@@ -1511,7 +1468,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep33tts/line_26.wav",
+     "audio": "reel/ep33tts/line_25.wav",
      "from": 103,
      "frames": 131,
      "words": [

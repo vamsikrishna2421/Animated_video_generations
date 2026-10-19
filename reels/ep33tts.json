@@ -77,7 +77,7 @@
      "maxgap": 0.28,
      "gap": 0.25,
      "tts": "AI! You told him out of stock? The batteries are right there!",
-     "gain_db": 1.5
+     "gain_db": 3.0
     },
     {
      "who": "ai",
@@ -185,7 +185,7 @@
    "id": "st_c",
    "type": "sk_stock",
    "tail": 0.1,
-   "boost": 0.55,
+   "boost": 0.85,
    "data": {
     "beats": [
      {
@@ -234,7 +234,7 @@
      "show": "Next order: \"something for a headache.\"",
      "maxgap": 0.28,
      "gap": 0.3,
-     "gain_db": -2.0
+     "gain_db": -1.0
     },
     {
      "who": "ai",
@@ -242,17 +242,16 @@
      "text": "No match. [1] We don't sell headaches.",
      "show": "No match. We don't sell headaches.",
      "maxgap": 0.28,
-     "gap": 0.7,
-     "gain_db": -2.0
+     "gap": 0.7
     },
     {
      "who": "ravi",
      "file": "10_ravi.wav",
      "text": "The pain balm is right there!",
-     "show": "The headache balm is right there!",
+     "show": "The pain relief balm is right there!",
      "maxgap": 0.28,
      "gap": 0.18,
-     "tts": "The headache balm is right there!",
+     "tts": "The pain relief balm is right there!",
      "gain_db": 0.5
     },
     {
@@ -262,7 +261,7 @@
      "show": "He never said \"balm\".",
      "maxgap": 0.28,
      "gap": 0.18,
-     "gain_db": -2.0
+     "gain_db": -1.0
     },
     {
      "who": "ravi",
@@ -300,12 +299,6 @@
      {
       "who": "ai",
       "shot": "screen",
-      "prop": "delivery",
-      "n": 15
-     },
-     {
-      "who": "ai",
-      "shot": "screen",
       "prop": "sheet",
       "n": 16
      }
@@ -336,15 +329,6 @@
      "maxgap": 0.28,
      "gap": 0.18,
      "gain_db": 1.5
-    },
-    {
-     "who": "ai",
-     "file": "15_ai.wav",
-     "text": "Test me like a new delivery boy.",
-     "show": "Test me like a new delivery boy.",
-     "maxgap": 0.28,
-     "gap": 0.18,
-     "gain_db": -1.0
     },
     {
      "who": "ai",
@@ -410,7 +394,7 @@
       "1": 0.45
      },
      "tempo": 1.0,
-     "gain_db": 1.0
+     "gain_db": 3.5
     }
    ]
   },
@@ -482,7 +466,7 @@
      "show": "\"Something to wash vessels.\" And \"Ramesh garu's usual.\"",
      "maxgap": 0.28,
      "gap": 0.18,
-     "gain_db": -0.4
+     "gain_db": 1.6
     },
     {
      "who": "ravi",

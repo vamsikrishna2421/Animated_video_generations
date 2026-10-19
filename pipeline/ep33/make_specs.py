@@ -92,11 +92,17 @@ GAP_TE = {11: 0.45}   # render review: air after the "balm" punchline too
 GAIN_TE = {9: 1.0, 22: 2.5}   # the joke's payoff, and "మీ స్టాక్ బుక్ కి తప్ప" (clean alone, masked in the mix)
 # English with AI voices: spoken forms for the code, "Good" kept inside the phrase (Parler drops one-word sentences);
 # 1: the quoted "?!" made Parler add a word; 10: "pain balm" came out "paint bomb" in six takes (even as "baam"), so
-# this version says "headache balm" (the order was for a headache), caption to match
+# this version says the stock book's "pain relief balm" (a "headache balm" would match a keyword search for "headache")
 TTS_EN = {1: "AI! You told him out of stock? The batteries are right there!", 2: "E twelve zero three wasn't on the three pages I read.",
-          7: "Good, only that from now on.", 10: "The headache balm is right there!",
+          7: "Good, only that from now on.", 10: "The pain relief balm is right there!",
           26: "Okay. Keyword off. Next order: E twelve zero three."}
-SHOW_TTS = {10: "The headache balm is right there!"}
+SHOW_TTS = {10: "The pain relief balm is right there!"}
+# render review of the AI-voiced cut: line 15 goes (39-51 s was four AI lines in a row in both versions); the joke's bed
+# no longer dips (TTS pauses have no room sound, so the gaps felt empty), the joke lines louder; line 20's "wash
+# vessels" was lost under the st_f bed; line 18's "Both" read "Boss"; the hook's first seconds sat below average
+TTS_CUT = {15}
+SCENE_TTS = {"st_c": {"boost": 0.85}}
+GAIN_TTS = {1: 1.5, 9: 1.0, 18: 2.5, 20: 2.0}
 PAUSES_TTS = {18: {"1": 0.45}}   # the beat before "eighteen" (the recording had it inserted in the edit)
 # AI voices at 1.1x ran 82 s against the recording's 75 s (Parler's Ravi is slower than the user): 1.2x, tighter pauses,
 # except lines whose key word blurred at 1.2x in the mix ("which search" -> "such", "Both" -> "Bose", "Test" -> "just",
@@ -120,6 +126,8 @@ def spec(lang="en"):
     for scid, a, b, flags in SCENES:
         lines, beats = [], []
         for n in range(a, b + 1):
+            if tts and n in TTS_CUT:
+                continue
             who, shot, prop, text = LINES[n]
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": TE[n][0] if te else text, "show": SHOW_TE.get(n, SHOW[n]) if te else SHOW_TTS.get(n, SHOW[n]) if tts else SHOW[n], "maxgap": 0.3 if te else 0.28 if tts else 0.35,
                   "gap": 0.05 if n == 26 else (te and GAP_TE.get(n)) or GAP.get(n, 0.22 if te else 0.18)}
@@ -138,8 +146,8 @@ def spec(lang="en"):
             # loudness arc (the first cut's quarters were within 1 dB): the joke sits a little lower, the test lifts,
             # the fix and the twist build to the loudest stretch
             # Telugu: no dip for the AI in the joke (its lines 8, 9, 11 were the quietest in the mix)
-            g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 and not (te and who == "ai") else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
-            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0) + (GAIN_TE.get(n, 0.0) if te else 0.0)
+            g = (-1.0 if who == "ai" else 1.5) + (-1.0 if 8 <= n <= 12 and not ((te or tts) and who == "ai") else 0.0) + (1.0 if 21 <= n <= 24 else 0.0) + (0.6 if n >= 19 else 0.0)   # Ravi's shouts sat level with the AI
+            g += {18: 2.0, 25: 1.0, 26: 2.0}.get(n, 0.0) + (GAIN_TE.get(n, 0.0) if te else GAIN_TTS.get(n, 0.0) if tts else 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)
@@ -147,6 +155,8 @@ def spec(lang="en"):
         data = {"beats": beats, "captionTop": 1500, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
         if te:
             data["handle"] = "@ai_maastaaru_telugu"
+        if tts:
+            flags = {**flags, **SCENE_TTS.get(scid, {})}
         scenes.append({"id": scid, "type": "sk_stock", "tail": flags.get("tail", 0.2),
                        **{k: v for k, v in flags.items() if k != "tail"}, "data": data, "lines": lines})
     s["scenes"] = scenes

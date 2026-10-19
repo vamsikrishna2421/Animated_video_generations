@@ -42,10 +42,9 @@ def main(only):
     takes = src.parent / "takes"
     src.mkdir(parents=True, exist_ok=True)
     takes.mkdir(parents=True, exist_ok=True)
-    n = 0
     for sc in spec["scenes"]:
         for line in sc["lines"]:
-            n += 1
+            n = int(line["file"][:2])   # the script's line number (this version skips some lines)
             if only and n not in only:
                 continue
             who = line["who"]
