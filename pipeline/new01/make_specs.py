@@ -46,11 +46,11 @@ TTS_EN = {3: "It's Sky zero zero one. [1] It says fifty-one times faster than G 
 # a lift into how it works; the quiz's 3-2-1 over the bed; a hit on the cut to the numbers and a drop before "That's a
 # tie"; a swell under the floor plan joke; a rise into the loop.
 SCENES = [("n1_a", (1, 2, 3, 4, 5), {"boost": 1.15, "rise": 1.3, "drop_at": [[4, 9]], "tail": 0.1}),
-          ("n1_b", (6, 7), {"lift": 0.5, "pre": 0.35, "boost": 0.85, "tail": 0.1}),
-          ("n1_c", (10, 11, 12), {"pre": 0.35, "drop_cue": 1, "boost": 1.0, "swell": [2, 1, 1.3], "tail": 0.1}),   # pre: the hit on the cut hid "Point"
-          ("n1_d", (13, 14, 15, 16), {"outro": True, "boost": 1.5, "rise": 1.7, "tail": 0.0})]
+          ("n1_b", (6, 7), {"lift": 0.5, "pre": 0.35, "boost": 1.5, "tail": 0.1}),   # the bed builds through how it works and the quiz
+          ("n1_c", (10, 11, 12), {"pre": 0.35, "drop_cue": 1, "boost": 1.2, "swell": [2, 1, 1.3], "tail": 0.1}),   # pre: the hit on the cut hid "Point"
+          ("n1_d", (13, 14, 15, 16), {"outro": True, "boost": 1.2, "rise": 1.7, "tail": 0.0})]   # ramps compound (the Reel keeps each rise), so less boost here
 GAP = {1: 0.2, 3: 0.3, 4: 0.8, 7: 4.0, 10: 0.4, 11: 0.3, 14: 1.2, 15: 0.2}   # 4: a silent beat before "Um"; 7: the quiz; 14: the rule card
-MAXGAP = {5: (0.45, 0.4)}   # (English, Telugu): keep the pause after "Um" (the hesitation is the joke)
+MAXGAP = {1: (0.35, 0.3), 5: (0.45, 0.4)}   # (English, Telugu): 1: "stop, a new" ran into "stomp a new"; 5: the pause after "Um" is the joke
 GAIN = {"meghana": 0.5, "kiran": 0.0}
 GAIN_LINE = {10: 1.0, 15: 1.0}
 TEMPO = {"en": 1.1, "te": 1.06}
