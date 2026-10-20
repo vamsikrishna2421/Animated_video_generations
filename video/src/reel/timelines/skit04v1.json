@@ -1,0 +1,843 @@
+{
+ "id": "skit04v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "The fancy chai",
+ "musicVol": [
+  0.4,
+  0.78
+ ],
+ "title": "The fancy chai",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   954,
+   978
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   370,
+   1.15
+  ],
+  [
+   370,
+   655,
+   0.8
+  ],
+  [
+   655,
+   1105,
+   0.9
+  ],
+  [
+   1105,
+   1362,
+   1.35
+  ],
+  [
+   0,
+   370,
+   1.3,
+   1
+  ],
+  [
+   1105,
+   1362,
+   1.45,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1362,
+ "music": "reel/skit04v1/score.wav",
+ "scenes": [
+  {
+   "id": "ch_a",
+   "type": "sk_chai",
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "raju",
+      "prop": "fancy",
+      "n": 1
+     },
+     {
+      "who": "babu",
+      "shot": "babu",
+      "prop": "price",
+      "n": 2
+     },
+     {
+      "who": "raju",
+      "shot": "raju",
+      "prop": "normal",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The fancy post",
+     "title": "The fancy post",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 370,
+   "lines": [
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit04v1/line_01.wav",
+     "from": 4,
+     "frames": 160,
+     "words": [
+      {
+       "w": "\"Indulge",
+       "from": 5,
+       "to": 20
+      },
+      {
+       "w": "in",
+       "from": 20,
+       "to": 25
+      },
+      {
+       "w": "the",
+       "from": 25,
+       "to": 32
+      },
+      {
+       "w": "Spice",
+       "from": 32,
+       "to": 42
+      },
+      {
+       "w": "of",
+       "from": 42,
+       "to": 47
+      },
+      {
+       "w": "Life\"?!",
+       "from": 47,
+       "to": 71
+      },
+      {
+       "w": "Babu",
+       "from": 71,
+       "to": 80
+      },
+      {
+       "w": "anna,",
+       "from": 80,
+       "to": 90
+      },
+      {
+       "w": "tea",
+       "from": 90,
+       "to": 105
+      },
+      {
+       "w": "costs",
+       "from": 105,
+       "to": 115
+      },
+      {
+       "w": "two",
+       "from": 115,
+       "to": 125
+      },
+      {
+       "w": "hundred",
+       "from": 125,
+       "to": 139
+      },
+      {
+       "w": "rupees",
+       "from": 139,
+       "to": 151
+      },
+      {
+       "w": "now?!",
+       "from": 151,
+       "to": 161
+      }
+     ],
+     "cues": {
+      "1": 71
+     }
+    },
+    {
+     "who": "babu",
+     "name": "Babu",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/skit04v1/line_02.wav",
+     "from": 171,
+     "frames": 145,
+     "words": [
+      {
+       "w": "Same",
+       "from": 174,
+       "to": 183
+      },
+      {
+       "w": "fifteen",
+       "from": 183,
+       "to": 203
+      },
+      {
+       "w": "rupees!",
+       "from": 203,
+       "to": 234
+      },
+      {
+       "w": "I",
+       "from": 234,
+       "to": 238
+      },
+      {
+       "w": "only",
+       "from": 238,
+       "to": 248
+      },
+      {
+       "w": "told",
+       "from": 248,
+       "to": 257
+      },
+      {
+       "w": "the",
+       "from": 257,
+       "to": 264
+      },
+      {
+       "w": "AI:",
+       "from": 264,
+       "to": 272
+      },
+      {
+       "w": "make",
+       "from": 272,
+       "to": 292
+      },
+      {
+       "w": "it",
+       "from": 292,
+       "to": 298
+      },
+      {
+       "w": "fancy.",
+       "from": 298,
+       "to": 311
+      }
+     ],
+     "cues": {
+      "1": 234
+     }
+    },
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit04v1/line_03.wav",
+     "from": 320,
+     "frames": 41,
+     "words": [
+      {
+       "w": "Then",
+       "from": 322,
+       "to": 330
+      },
+      {
+       "w": "tell",
+       "from": 330,
+       "to": 338
+      },
+      {
+       "w": "it:",
+       "from": 338,
+       "to": 349
+      },
+      {
+       "w": "normal!",
+       "from": 349,
+       "to": 362
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "ch_b",
+   "type": "sk_chai",
+   "data": {
+    "beats": [
+     {
+      "who": "babu",
+      "shot": "phone",
+      "prop": "simple",
+      "n": 4
+     },
+     {
+      "who": "raju",
+      "shot": "raju",
+      "prop": "lovers",
+      "n": 5
+     },
+     {
+      "who": "swathi",
+      "shot": "wide",
+      "prop": "show",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Keep it simple",
+     "title": "Keep it simple",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 370,
+   "frames": 285,
+   "lines": [
+    {
+     "who": "babu",
+     "name": "Babu",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/skit04v1/line_04.wav",
+     "from": 10,
+     "frames": 68,
+     "words": [
+      {
+       "w": "\"Keep",
+       "from": 12,
+       "to": 19
+      },
+      {
+       "w": "it",
+       "from": 19,
+       "to": 23
+      },
+      {
+       "w": "simple\"...",
+       "from": 23,
+       "to": 44
+      },
+      {
+       "w": "\"Hey",
+       "from": 44,
+       "to": 50
+      },
+      {
+       "w": "there,",
+       "from": 50,
+       "to": 59
+      },
+      {
+       "w": "tea",
+       "from": 59,
+       "to": 64
+      },
+      {
+       "w": "lovers!\"",
+       "from": 64,
+       "to": 75
+      }
+     ],
+     "cues": {
+      "1": 44
+     }
+    },
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit04v1/line_05.wav",
+     "from": 84,
+     "frames": 86,
+     "words": [
+      {
+       "w": "Who",
+       "from": 84,
+       "to": 90
+      },
+      {
+       "w": "says",
+       "from": 90,
+       "to": 97
+      },
+      {
+       "w": "\"tea",
+       "from": 97,
+       "to": 104
+      },
+      {
+       "w": "lovers\"?!",
+       "from": 104,
+       "to": 131
+      },
+      {
+       "w": "You",
+       "from": 131,
+       "to": 137
+      },
+      {
+       "w": "call",
+       "from": 137,
+       "to": 144
+      },
+      {
+       "w": "me",
+       "from": 144,
+       "to": 148
+      },
+      {
+       "w": "\"Oi,",
+       "from": 148,
+       "to": 155
+      },
+      {
+       "w": "Raju\"!",
+       "from": 155,
+       "to": 165
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "swathi",
+     "name": "Swathi",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit04v1/line_06.wav",
+     "from": 177,
+     "frames": 88,
+     "words": [
+      {
+       "w": "Nanna,",
+       "from": 178,
+       "to": 188
+      },
+      {
+       "w": "don't",
+       "from": 188,
+       "to": 202
+      },
+      {
+       "w": "tell",
+       "from": 202,
+       "to": 209
+      },
+      {
+       "w": "it",
+       "from": 209,
+       "to": 213
+      },
+      {
+       "w": "how",
+       "from": 213,
+       "to": 222
+      },
+      {
+       "w": "to",
+       "from": 222,
+       "to": 227
+      },
+      {
+       "w": "write.",
+       "from": 227,
+       "to": 236
+      },
+      {
+       "w": "Show",
+       "from": 236,
+       "to": 253
+      },
+      {
+       "w": "it.",
+       "from": 253,
+       "to": 259
+      }
+     ],
+     "cues": {
+      "1": 236
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch_c",
+   "type": "sk_chai",
+   "data": {
+    "beats": [
+     {
+      "who": "swathi",
+      "shot": "phone",
+      "prop": "paste",
+      "n": 8
+     },
+     {
+      "who": "raju",
+      "shot": "phone",
+      "prop": "ten",
+      "n": 9
+     },
+     {
+      "who": "babu",
+      "shot": "babu",
+      "prop": "lastyear",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "His old posts",
+     "title": "His old posts",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 655,
+   "frames": 450,
+   "lines": [
+    {
+     "who": "swathi",
+     "name": "Swathi",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit04v1/line_07.wav",
+     "from": 11,
+     "frames": 174,
+     "words": [
+      {
+       "w": "Paste",
+       "from": 11,
+       "to": 25
+      },
+      {
+       "w": "three",
+       "from": 25,
+       "to": 34
+      },
+      {
+       "w": "of",
+       "from": 34,
+       "to": 39
+      },
+      {
+       "w": "your",
+       "from": 39,
+       "to": 46
+      },
+      {
+       "w": "old",
+       "from": 46,
+       "to": 52
+      },
+      {
+       "w": "posts.",
+       "from": 52,
+       "to": 85
+      },
+      {
+       "w": "Say:",
+       "from": 85,
+       "to": 100
+      },
+      {
+       "w": "write",
+       "from": 100,
+       "to": 109
+      },
+      {
+       "w": "like",
+       "from": 109,
+       "to": 116
+      },
+      {
+       "w": "these,",
+       "from": 116,
+       "to": 137
+      },
+      {
+       "w": "same",
+       "from": 137,
+       "to": 144
+      },
+      {
+       "w": "Telugu-English",
+       "from": 144,
+       "to": 167
+      },
+      {
+       "w": "mix.",
+       "from": 167,
+       "to": 175
+      }
+     ],
+     "cues": {
+      "1": 85
+     }
+    },
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/skit04v1/line_08.wav",
+     "from": 262,
+     "frames": 118,
+     "words": [
+      {
+       "w": "Now",
+       "from": 263,
+       "to": 269
+      },
+      {
+       "w": "that's",
+       "from": 269,
+       "to": 281
+      },
+      {
+       "w": "Babu",
+       "from": 281,
+       "to": 289
+      },
+      {
+       "w": "anna!",
+       "from": 289,
+       "to": 299
+      },
+      {
+       "w": "Ten",
+       "from": 299,
+       "to": 328
+      },
+      {
+       "w": "rupees?!",
+       "from": 328,
+       "to": 353
+      },
+      {
+       "w": "Give",
+       "from": 353,
+       "to": 361
+      },
+      {
+       "w": "me",
+       "from": 361,
+       "to": 366
+      },
+      {
+       "w": "ten!",
+       "from": 366,
+       "to": 374
+      }
+     ],
+     "cues": {
+      "1": 323
+     }
+    },
+    {
+     "who": "babu",
+     "name": "Babu",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/skit04v1/line_09.wav",
+     "from": 389,
+     "frames": 45,
+     "words": [
+      {
+       "w": "That's",
+       "from": 390,
+       "to": 399
+      },
+      {
+       "w": "last",
+       "from": 399,
+       "to": 406
+      },
+      {
+       "w": "year's",
+       "from": 406,
+       "to": 415
+      },
+      {
+       "w": "price!",
+       "from": 415,
+       "to": 428
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "ch_d",
+   "type": "sk_chai",
+   "data": {
+    "beats": [
+     {
+      "who": "swathi",
+      "shot": "phone",
+      "prop": "copies",
+      "n": 11
+     },
+     {
+      "who": "babu",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Today's price",
+     "title": "Today's price",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1105,
+   "frames": 257,
+   "lines": [
+    {
+     "who": "swathi",
+     "name": "Swathi",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit04v1/line_10.wav",
+     "from": 0,
+     "frames": 119,
+     "words": [
+      {
+       "w": "It",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "copies",
+       "from": 5,
+       "to": 16
+      },
+      {
+       "w": "everything",
+       "from": 16,
+       "to": 33
+      },
+      {
+       "w": "in",
+       "from": 33,
+       "to": 38
+      },
+      {
+       "w": "your",
+       "from": 38,
+       "to": 45
+      },
+      {
+       "w": "old",
+       "from": 45,
+       "to": 51
+      },
+      {
+       "w": "posts.",
+       "from": 51,
+       "to": 85
+      },
+      {
+       "w": "Put",
+       "from": 85,
+       "to": 91
+      },
+      {
+       "w": "today's",
+       "from": 91,
+       "to": 103
+      },
+      {
+       "w": "price",
+       "from": 103,
+       "to": 112
+      },
+      {
+       "w": "in.",
+       "from": 112,
+       "to": 118
+      }
+     ],
+     "cues": {
+      "1": 85
+     }
+    },
+    {
+     "who": "babu",
+     "name": "Babu",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/skit04v1/line_11.wav",
+     "from": 149,
+     "frames": 94,
+     "words": [
+      {
+       "w": "Fifteen.",
+       "from": 152,
+       "to": 177
+      },
+      {
+       "w": "Perfect!",
+       "from": 177,
+       "to": 198
+      },
+      {
+       "w": "Now...",
+       "from": 198,
+       "to": 206
+      },
+      {
+       "w": "make",
+       "from": 206,
+       "to": 220
+      },
+      {
+       "w": "it",
+       "from": 220,
+       "to": 228
+      },
+      {
+       "w": "fancy!",
+       "from": 228,
+       "to": 236
+      }
+     ],
+     "cues": {
+      "1": 198
+     }
+    }
+   ]
+  }
+ ]
+}

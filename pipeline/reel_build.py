@@ -43,6 +43,9 @@ SPEAKERS = {
     "sir": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Sir", color="#93C5FD"),   # skit 03 (file takes)
     "priya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Priya (you)", color="#F9A8D4"),
     "bot": dict(voice="af_heart", speed=1.0, lang="en-us", name="AI Chat", color="#67E8F9"),
+    "babu": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Babu", color="#FCD34D"),   # skit 04 (file takes)
+    "raju": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Raju", color="#86EFAC"),
+    "swathi": dict(voice="af_heart", speed=1.0, lang="en-us", name="Swathi", color="#F9A8D4"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

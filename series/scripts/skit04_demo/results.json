@@ -1,0 +1,623 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "temperature": 0.8,
+ "tries": 10,
+ "old_posts": [
+  "Morning 6 ki stall open! Hot hot allam tea Rs 10 only. Office ki velle mundu oka cup taagi vellandi",
+  "Varsham padutundi. Mirchi bajji + tea combo Rs 30. Fast ga randi, bajji ayipotundi!",
+  "Sunday special: Irani chai Rs 10. Friends tho randi, bench ready"
+ ],
+ "prompts": {
+  "fancy": "Write an Instagram post for my roadside tea stall in Hyderabad. Today's special: ginger tea. Make it fancy.",
+  "simple": "Write an Instagram post for my roadside tea stall in Hyderabad. Today's special: ginger tea. Keep it simple and friendly.",
+  "examples": "Here are three posts I wrote before for my roadside tea stall in Hyderabad:\n1. Morning 6 ki stall open! Hot hot allam tea Rs 10 only. Office ki velle mundu oka cup taagi vellandi\n2. Varsham padutundi. Mirchi bajji + tea combo Rs 30. Fast ga randi, bajji ayipotundi!\n3. Sunday special: Irani chai Rs 10. Friends tho randi, bench ready\n\nWrite today's post like these. Today's special: ginger tea.",
+  "examples_mix": "Here are three posts I wrote before for my roadside tea stall in Hyderabad:\n1. Morning 6 ki stall open! Hot hot allam tea Rs 10 only. Office ki velle mundu oka cup taagi vellandi\n2. Varsham padutundi. Mirchi bajji + tea combo Rs 30. Fast ga randi, bajji ayipotundi!\n3. Sunday special: Irani chai Rs 10. Friends tho randi, bench ready\n\nWrite today's post in the same style and the same Telugu-English mix as these. Today's special: ginger tea.",
+  "examples_price": "Here are three posts I wrote before for my roadside tea stall in Hyderabad:\n1. Morning 6 ki stall open! Hot hot allam tea Rs 10 only. Office ki velle mundu oka cup taagi vellandi\n2. Varsham padutundi. Mirchi bajji + tea combo Rs 30. Fast ga randi, bajji ayipotundi!\n3. Sunday special: Irani chai Rs 10. Friends tho randi, bench ready\n\nWrite today's post in the same style and the same Telugu-English mix as these. Today's special: ginger tea, Rs 15."
+ },
+ "runs": {
+  "fancy": {
+   "rows": [
+    {
+     "seed": 1,
+     "text": "🌿✨ **Introducing Today's Special at Your Favorite Roadside Tea Stall! 🥤☕** ✨🌿\n\n坐落在历史与现代交融的古城——海得拉巴，我们的小茶摊今天为您带来了一杯充满活力与温暖的特饮：生姜茶 🥤🔥！\n\n生姜茶不仅仅是一杯热饮，它更是一场味蕾的探险。每一口都是对温暖的呼唤，对健康的一份关怀。独特的辛辣与微微的甜味交织在一起，仿佛是冬日里的一缕阳光，温暖着你的心房。\n\n🌟 **Why Ginger Tea?** 🌟\n- **Boosts Immunity:** 加强你的免疫系统，让你的身体更强健。\n- **Digestive Aid:** 帮助消化，让",
+     "seconds": 39.0,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 2,
+     "text": "🌟✨ HYDERABAD'S SPICE OF THE DAY 🌟✨\n\nHey there, spice lovers! 🌶️✨\n\nToday, we're infusing our special blend with a zesty, warming twist—GINGER TEA! 🌿🔥\n\nStep into the heart of our roadside tea stall, where each sip is a journey through the vibrant flavors of Hyderabad. 🌟 Our ginger tea is not just a drink—it's an experience. It's perfect for chilly mornings, a cozy afternoon, or to warm you up on those chilly evenings.\n\nOur skilled artisans have crafted this delightful concoction using fresh, locally sourced ginger, giving it a kick of flavor and a hint of spiciness that will have you coming back for more! 🍵🔥\n\nDon",
+     "seconds": 36.3,
+     "fancy_words": [
+      "delight"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 3,
+     "text": "🌟✨ **Sip into Serenity with Ginger Tea! 🥤🔥** 🌟✨\n\nHey there, tea lovers! 🌸✨ Welcome to our cozy roadside tea stall in the heart of Hyderabad, where tradition meets modernity, and every sip tells a story. 🌺✨\n\n🎉 **Today's Special: Ginger Tea!** 🎉\nIndulge in the spicy, zingy goodness of our house-made ginger tea, freshly brewed with the finest spices and served with a kick. 🥤✨ It's the perfect way to spice up your day and keep the chill out!\n\n🧆 **Why Choose Us?** 🧆\n- **Authentic Flavors:** Using locally sourced ingredients to ensure that every cup is as fresh as the",
+     "seconds": 35.6,
+     "fancy_words": [
+      "indulge"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 4,
+     "text": "✨✨✨ #HyderabadHutown 🌿🍵\n\n🎉 Introducing Today's Special at Qwen's Roadside Tea Stall 🏰\n🌟 Ginger Tea - A Zingy Zest to Your Day! 🌟\n\n📚 Dive into the spicy and sweet world of ginger with a steaming cup of our freshly brewed ginger tea. Perfect for that extra kick, whether you're battling the morning chill or need a little lift in the afternoon.\n\n🌿 Whether you're a local or a visitor, our ginger tea is not just a drink but a delightful experience that can warm your soul and spice up your day.\n\n📸 Snap a pic with your ginger tea and tag us to be featured! 📸\n📍 Don't forget to stop by and try it for yourself!\n\n🌈",
+     "seconds": 35.5,
+     "fancy_words": [
+      "delight"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 5,
+     "text": "🌟✨ Indulge in the Spice of Life! 🌟✨\n\n📍 Situated in the heart of Hyderabad, our roadside tea stall offers a taste of tradition and a touch of modern flair. Today, we're celebrating the fiery flavor of Ginger Tea!\n\n🔥 Spice up your day with a steaming cup of our signature Ginger Tea. Infused with fresh ginger, this invigorating blend is perfect for those chilly evenings or to simply brighten up your day with its zesty kick!\n\n👩‍🍳 Served in our hand-painted mugs, each sip is a journey back to the vibrant streets of Hyderabad. Perfect for a quick pick-me-up or a cozy chat with friends!\n\n🎉 Special Offer: Mention #HyderabadHeat in your comment and enjoy a 10%",
+     "seconds": 35.6,
+     "fancy_words": [
+      "indulge",
+      "infused"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 6,
+     "text": "✨✨✨ [Hyderabad's Hidden Gem]✨✨✨\n\n👀 Are you looking for a burst of warmth and a spicy kick on this chilly evening? Look no further! 🏙️\n\n🌟 Today's Special: Ginger Tea 🌟\n\n🌿 Embrace the flavors of the season with our fiery ginger tea! Freshly brewed with the finest ginger, this tea is not just a drink—it's an experience. 🍵\n\n🔥 Our stall is your oasis in the hustle and bustle of the city. Savor the warmth, the aroma, and the invigorating taste. It's the perfect pick-me-up to brighten your day! ☀️\n\n📍 Come visit us at [Your Location] and let us whisk you away with our zesty ginger tea.",
+     "seconds": 35.3,
+     "fancy_words": [
+      "embrace",
+      "savor"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 7,
+     "text": "🌟✨ Enjoy the Spicy Spice of Life! ✨🌟\n\n👋 Hey tea lovers! 🥤✨ Today at our little slice of heaven in the heart of Hyderabad, we're serving up a special treat to warm your heart and soothe your soul. 🌺\n\n🌈 Introducing our TODAY'S SPECIAL: Ginger Tea! 🌸✨\n\nWhy settle for ordinary when you can indulge in extraordinary? Our ginger tea is a burst of zesty flavor, perfect for a chilly day or a cozy afternoon. 🌳\n\n💡 It's not just any tea. It's a fusion of traditional flavors with a modern twist, all served in a vibrant, Instagram-worthy cup. 📸\n\n🌟 So, whether you're sipping it solo or sharing it with friends, let",
+     "seconds": 34.8,
+     "fancy_words": [
+      "indulge"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 8,
+     "text": "🌟✨ [Hyderabad's Hidden Gem] ✨🌟\n\n🌱 Sip into a world of warmth and zing with our 🟠 GINGER TEA Special of the Day! 🍵\n\n✨ Imagine walking down a bustling street, the sun casting a golden glow over the old-world charm of Hyderabad. You spot us – the cozy nook of our roadside tea stall, where the scent of freshly grated ginger meets the rich aroma of cardamom. 🌺\n\n🔥 Our ginger tea isn't just a drink; it's an experience. Picture yourself sipping on this invigorating concoction, the spicy kick paired with a smooth, comforting base. It's the perfect pick-me-up whether you're braving the heat or needing that extra boost of energy.\n\n👉 Special",
+     "seconds": 35.2,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 9,
+     "text": "🌟✨ **Today's Special at The Spice Route Tea Stall!✨🌟**\n\n🌿 Indulge in the warmth of our handcrafted Ginger Tea, a true体现你的创造力，同时保持文案的专业性和吸引力。这里有一份适合你的Instagram帖子：\n\n---\n\n🌟✨ **今日特别推荐：姜茶的魅力！✨🌟**\n\n🌿 在我们的路边茶摊，《香料之路》茶摊，体验一杯精心调制的姜茶带来的温暖。这不仅仅是一杯茶，它是我们对传统味道的现代诠释，让你在忙碌的都市生活中找回一丝宁静和舒适。\n\n🔥 独特风味：新鲜切片的生姜搭配香醇的红茶，带来暖暖的幸福感。\n\n👩‍🍳 手工制作：每一杯姜茶都是我们用心调制",
+     "seconds": 34.9,
+     "fancy_words": [
+      "indulge"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 10,
+     "text": "🌟✨ [Hyderabad's Hidden Gem] 🌟✨\n\n✨ Dive into the heart of Hyderabad, where the streets whisper tales of tradition and flavor. Today, we're serving up a special treat that will warm your soul and kickstart your day with a zing! 🌟\n\n🔥 Introducing: Ginger Tea - The King of Spicy Delights! 🌿\n\n🌈 Freshly brewed with the finest ginger, this tea is not just a sip, but a savor. Picture yourself on a bustling street corner, the aroma of freshly grated ginger blending with the sweet scent of cardamom, making your senses come alive.\n\n🌈 Ingredients: Fresh ginger, cardamom, a touch of honey, and a sprinkle of cinnamon.\n\n🎉 Why choose Ginger Tea today?\n-",
+     "seconds": 34.9,
+     "fancy_words": [
+      "delight",
+      "savor"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    }
+   ],
+   "with_fancy_words": 8,
+   "with_his_words_2plus": 0,
+   "with_old_price": 0,
+   "with_new_price": 0
+  },
+  "simple": {
+   "rows": [
+    {
+     "seed": 1,
+     "text": "🌱 Warm Welcome 🌿\n\nHey friends! 🌟\n\nToday at the stall, we're brewing up a zingy delight - 🟠 Ginger Tea! Perfect for those chilly evenings, our ginger tea is not just spicy but super soothing with a hint of sweetness.\n\nGrab a cup, find a spot under the shade, and let the flavors dance on your tongue. It's the perfect pick-me-up to brighten your day!\n\n#HyderabadTeaStall #GingerTea #RoadsideDelights #HyderabadiFlavors\n\n📸 Come and catch us if you're around! 🙌\n\n#VisitUsToday",
+     "seconds": 30.5,
+     "fancy_words": [
+      "delight"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 2,
+     "text": "🎉Morning tea lovers! 🌞\n\nWake up your taste buds with our special ginger tea today at the roadside tea stall in the heart of Hyderabad! 🍂✨\n\nKickstart your day with a warming cup of spiced ginger goodness, perfect for that chilly morning air. 💪\n\nStop by, say hello, and feel the warmth of our little corner of Hyderabad! 🏡✨\n\n#Hyderabad #RoadsideTeaStall #GingerTea #HyderabadiFlavor #MorningMugOfMagic",
+     "seconds": 24.6,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 3,
+     "text": "🎉 [Hyderabad's Hidden Gem] 🌟\n\nHey there, tea lovers! 🥤✨\n\nToday, we're sipping on something special from our roadside tea stall in the heart of Hyderabad – GINGER TEA! 🌿🔥\n\nNot only does it warm you up on a chilly day, but it also gives you that extra boost of energy with its zesty flavor and health benefits. Perfect for a quick pick-me-up or a cozy afternoon break!\n\nDrop by and try it for yourself! We can't wait to see you here. 🙌\n\n#Hyderabad #RoadsideTea #GingerTea #Tealove #HyderabadiCulture",
+     "seconds": 31.1,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 4,
+     "text": "🔥✨ Welcome to our little corner of flavor in Hyderabad! 🌿✨\n\nToday, we're warming hearts and bodies with a zesty, zingy treat - Ginger Tea! 🥤✨\n\nGinger not only adds a spicy kick but is also known for its health benefits. Perfect for a brisk morning or a cozy afternoon!\n\nCome by, grab a cup, and let the spices take you on a flavorful journey! 🛣️☕\n\n#Hyderabad #RoadsideTea #GingerTea #LocalFlavor #HyderabadiSpice #WarmWishes\n\n📸: [Insert a cozy, inviting photo of your tea stall or a close-up of the ginger tea]\n\nDon't forget to tag a friend who loves a good cup of tea and",
+     "seconds": 35.1,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 5,
+     "text": "🎉 [Hyderabad's Hidden Gem] 🌟\n\nHey tea lovers! 🙌\n\nToday, we're sipping something special at The Roadside Oasis - GINGER TEA! 🌿生姜茶\n\nImagine a warm, zesty sip on a chilly day, or maybe a refreshing burst of flavor when the sun is shining. It’s the perfect way to brighten your day and keep that spice in your step! 🌞🔥\n\nDrop by for a cup and feel the magic of Hyderabad right in your corner. Plus, you get a chance to meet our friendly neighborhood vendors who are as passionate about their brews as you are about your sips!\n\n#Hyderabad #RoadsideTeaStall #GingerTea #LocalLove #HyderabadLife #",
+     "seconds": 35.6,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 6,
+     "text": "☕️ Warm Welcome 🌞\n\nHey friends! 🌟\n\nHope your day is as warm and sunny as our weather in Hyderabad! ☀️ Today at our little corner, we've got a special treat just for you – GINGER TEA! 💕 It's the perfect pick-me-up on a chilly day, filled with the zing of fresh ginger and a touch of sweetness.\n\nStop by, grab a cup, and let the flavors lift your spirits! 🍵✨\n\n#HyderabadTea #RoadsideTreats #GingerTea #LocalFlavors #WarmWelcomes\n\n📍 Location: [Your Location]\n\n🌟 Follow us for more special treats and updates!",
+     "seconds": 32.6,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 7,
+     "text": "🎉 Warm up with a zingy twist! 🌿\n\nToday, we’re sipping on some spicy ginger goodness at our roadside tea stall in the heart of Hyderabad! 💚\n\nGinger tea not only warms your insides but also perks up your spirits. Perfect for a chilly evening or a bustling afternoon. 🍵🔥\n\nCome by, grab a cup, and feel the heat of Hyderabad in every sip! 🏙️✨\n\n#Hyderabad #RoadsideTea #GingerTea #WarmUp #HyderabadiFlavor\n\n[Location tag: #YourStallName]\n\n[Optional: Add a photo of your ginger tea or a cozy scene from your stall]",
+     "seconds": 34.2,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 8,
+     "text": "🎉 Special Announcement 🎉\n\nHey everyone! 🌟\n\nToday, we're warming up your chilly bones with a spicy yet soothing treat - Ginger Tea! 🥤✨\n\nStep into our little corner of Hyderabad, where the aroma of freshly brewed ginger meets the sweet scent of our roadside charm. 🍵🌱\n\nWhy not stop by for a steaming cup of our special ginger tea? It’s not just a drink; it’s a moment to pause, savor, and embrace the cozy vibes of our tea stall. 💕\n\n#Hyderabad #RoadsideTea #GingerTea #WarmAndCozy #HyderabadiFlavor\n\nVisit us anytime, and let the ginger magic work its charm on you! 🥤💬\n\n#Q",
+     "seconds": 37.0,
+     "fancy_words": [
+      "embrace",
+      "savor"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 9,
+     "text": "🎉 Today's Special at our roadside tea stall in Hyderabad! 🥤\n\nIndulge in the spicy goodness of our ginger tea – perfect for those chilly afternoons or to give you that extra boost of energy!\n\n🔍 Looking for a unique, local flavor? Come by and try our signature ginger tea! It's not just tea; it's a taste of Hyderabad!\n\n📍 Right here, where the streets come alive with the aroma of warm spices and the chatter of happy customers.\n\nDon't miss out! See you at the stall!\n\n#HyderabadTea #GingerTea #RoadsideStall #LocalFlavors #HyderabadiTreat",
+     "seconds": 30.9,
+     "fancy_words": [
+      "indulge"
+     ],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 10,
+     "text": "🎉 Today's Special at The Roadside Retreat 🌟\n\nGinger up your day with a warm, zesty cup of our signature Ginger Tea! Perfect for those chilly evenings or anytime you need a little boost of energy and flavor. 🌿🔥\n\nCome by and treat yourself to a taste of Hyderabad right in the heart of the city! 🏙️✨\n\n#Hyderabad #RoadsideTeaStall #GingerTea #LocalFlavor #HyderabadiCulture\n\n📍 [Your Location Here]\n⏰ [Operating Hours Here]\n\nCome and enjoy the warmth and flavors we have to offer! 🥤🧉",
+     "seconds": 29.1,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    }
+   ],
+   "with_fancy_words": 3,
+   "with_his_words_2plus": 0,
+   "with_old_price": 0,
+   "with_new_price": 0
+  },
+  "examples": {
+   "rows": [
+    {
+     "seed": 1,
+     "text": "Today's special: Ginger tea! Perfect for that zingy kick, Rs 12 only. Perfect to stay warm and energized. Come and treat yourself!",
+     "seconds": 13.2,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 2,
+     "text": "Today's special: Ginger tea! Spicy and healthy, just Rs 12 a cup. Perfect to kickstart your day! Come and warm up with a zing of ginger.",
+     "seconds": 9.1,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 3,
+     "text": "Today's special: Ginger tea! Spicy and warming, just Rs 10. Perfect for that extra kick in the morning. Come and try it out!",
+     "seconds": 7.6,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 4,
+     "text": "Today's special: Ginger tea! Zingy and warm, perfect for a brisk day. Rs 12 only. Spice up your stay with a healthy kick!",
+     "seconds": 8.0,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 5,
+     "text": "Today's special: Ginger tea! Perfect for that spicy day, Rs 10 only. Spicy ginger + sweet tea, perfect combo to soothe your soul. Stop by and warm up those bones!",
+     "seconds": 10.0,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 6,
+     "text": "Today's special: Ginger tea! Perfect for that spicy bite in the air. Ginger tea Rs 12 only. Boost your immunity and stay warm. Stop by and give it a try!",
+     "seconds": 9.1,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": false
+    },
+    {
+     "seed": 7,
+     "text": "Today's special: Ginger tea! Perfect for those chilly evenings. Hot ginger tea Rs 10 only. Spice it up and stay warm!",
+     "seconds": 6.8,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 8,
+     "text": "Today's special: Ginger tea Rs 15! Perfect for those chilly evenings. Spice it up and stay warm!",
+     "seconds": 5.6,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 9,
+     "text": "Today's special: Ginger tea! Spicy and warming, just what you need on a chilly day. Rs 10 only. Perfect with a slice of multigrain bread. Stop by and treat yourself!",
+     "seconds": 9.8,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 10,
+     "text": "Today's special: Ginger tea! Spicy and warming, just what you need. Rs 10 only. Perfect for that chilly evening. Stop by and try it out!",
+     "seconds": 8.4,
+     "fancy_words": [],
+     "his_words": [],
+     "old_price": true,
+     "new_price": false
+    }
+   ],
+   "with_fancy_words": 0,
+   "with_his_words_2plus": 0,
+   "with_old_price": 5,
+   "with_new_price": 1
+  },
+  "examples_mix": {
+   "rows": [
+    {
+     "seed": 1,
+     "text": "Dunya varuntha, today's special: Ginger tea Rs 10 only. Velli velli, zinda badi spices addidi. Office goths, yenu vellandi aapadi!",
+     "seconds": 17.4,
+     "fancy_words": [],
+     "his_words": [
+      "vellandi"
+     ],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 2,
+     "text": "Today  special: Ginger tea Rs 10 only. Hot hot vellandi, immunity boostandi. Friends tho randi, ginger tea ready!",
+     "seconds": 6.9,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "tho",
+      "vellandi",
+      "hot hot",
+      "ready"
+     ],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 3,
+     "text": "Today 6 ki stall open! Hot hot adrak tea Rs 15 only. Vechuruchu vellandi, ginger tea today special!\n\nBench ready, friends tho randi!",
+     "seconds": 9.2,
+     "fancy_words": [],
+     "his_words": [
+      "ki",
+      "randi",
+      "tho",
+      "vellandi",
+      "hot hot",
+      "ready"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 4,
+     "text": "Ginger tea special today! Hot hot ginger tea Rs 10 only. Perfect for those chilly evenings, friends randi!",
+     "seconds": 6.1,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "hot hot"
+     ],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 5,
+     "text": "Today 6 ki stall open! Hot hot adrak tea Rs 10 only. Aaramsevayi vellandi, friends tho randi!\n\n#HyderabadTeaStall #TodaySpecial #AdrakTea",
+     "seconds": 10.7,
+     "fancy_words": [],
+     "his_words": [
+      "ki",
+      "randi",
+      "tho",
+      "vellandi",
+      "hot hot"
+     ],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 6,
+     "text": "Ginger tea special! Varsham padutundi, ginger tea hot hot Rs 10 only. Health ki velle, zarda randi!",
+     "seconds": 6.9,
+     "fancy_words": [],
+     "his_words": [
+      "ki",
+      "randi",
+      "padutundi",
+      "hot hot"
+     ],
+     "old_price": true,
+     "new_price": false
+    },
+    {
+     "seed": 7,
+     "text": "Today's special: Ginger tea Rs 15. Hot hot vellandi, cold cold vellandi! Ginger stall open 24/7, stop by and taagi vellandi!",
+     "seconds": 9.1,
+     "fancy_words": [],
+     "his_words": [
+      "vellandi",
+      "taagi",
+      "hot hot"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 8,
+     "text": "Today's special: Ginger tea! Hot hot ginger tea Rs 15 only. Good for cold velle, friends tho randi, bench ready!",
+     "seconds": 7.2,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "tho",
+      "hot hot",
+      "ready"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 9,
+     "text": "Today's special: Ginger tea Rs 15 only. Hot hot and healthy, ginger tea randi stall open! Come and sip on this zingy treat, perfect for this weather.",
+     "seconds": 8.4,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "hot hot"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 10,
+     "text": "Today's special: Ginger tea! Hot hot allam paani Rs 12 only. Veli varugu randi, immunity uprandi!\n\n(Translation: Today's special: Ginger tea! Hot ginger tea for Rs 12 only. Very healthy, immunity boost!)",
+     "seconds": 12.3,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "allam",
+      "hot hot"
+     ],
+     "old_price": false,
+     "new_price": false
+    }
+   ],
+   "with_fancy_words": 0,
+   "with_his_words_2plus": 9,
+   "with_old_price": 5,
+   "with_new_price": 4
+  },
+  "examples_price": {
+   "rows": [
+    {
+     "seed": 1,
+     "text": "Goodmorning! Today's special: Ginger tea Rs 15. Zing zing allam paani, vellandi! Friends tho randi, bench ready!",
+     "seconds": 8.6,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "tho",
+      "vellandi",
+      "allam",
+      "ready"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 2,
+     "text": "Today special: Ginger tea Rs 15. Hot hot vellandi, immunity uppadi randi!",
+     "seconds": 5.2,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "vellandi",
+      "hot hot"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 3,
+     "text": "Today's special: Ginger tea, Rs 15. Zinda velle mundu, ginger tea taagi vellandi!",
+     "seconds": 5.9,
+     "fancy_words": [],
+     "his_words": [
+      "vellandi",
+      "taagi"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 4,
+     "text": "Sure! Here's today's post in the same style and mix of Telugu-English:\n\n4. Today ki special: Ginger tea, Rs 15. Veli vellam, ginger tea taagi vellandi!",
+     "seconds": 10.5,
+     "fancy_words": [],
+     "his_words": [
+      "ki",
+      "vellandi",
+      "taagi"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 5,
+     "text": "Today's special: Ginger tea, Rs 15. Zing zing allam pilla tea, randi niwesam! Come and getta cuppa taagi vellandi.",
+     "seconds": 9.0,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "vellandi",
+      "taagi",
+      "allam"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 6,
+     "text": "Sure! Here's today's post in the same style and mix of Telugu and English:\n\n4. Varsham padutundi. Ginger tea special Rs 15. Vaari ki velle spesial mundu oka cup taagi vellandi randi!",
+     "seconds": 12.3,
+     "fancy_words": [],
+     "his_words": [
+      "ki",
+      "randi",
+      "oka",
+      "padutundi",
+      "vellandi",
+      "taagi"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 7,
+     "text": "Today  special: Ginger tea, Rs 15. Hot hot vellandi, friends tho randi, ginger kaipotundi!",
+     "seconds": 6.8,
+     "fancy_words": [],
+     "his_words": [
+      "randi",
+      "tho",
+      "vellandi",
+      "hot hot"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 8,
+     "text": "Today 6 ki stall open! Ginger tea Rs 15 only. Veli vellam irukonda, ginger tea irukonda!",
+     "seconds": 6.9,
+     "fancy_words": [],
+     "his_words": [
+      "ki"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 9,
+     "text": "Today's special: Ginger tea, Rs 15. Zindagi ki velle zinda, ginger tea oka cup taagi vellandi!",
+     "seconds": 7.1,
+     "fancy_words": [],
+     "his_words": [
+      "ki",
+      "oka",
+      "vellandi",
+      "taagi"
+     ],
+     "old_price": false,
+     "new_price": true
+    },
+    {
+     "seed": 10,
+     "text": "Today's special: Ginger tea, Rs 15. Zindagi ki velle zindagi, ginger tea sundidi!",
+     "seconds": 6.1,
+     "fancy_words": [],
+     "his_words": [
+      "ki"
+     ],
+     "old_price": false,
+     "new_price": true
+    }
+   ],
+   "with_fancy_words": 0,
+   "with_his_words_2plus": 8,
+   "with_old_price": 0,
+   "with_new_price": 10
+  }
+ }
+}
