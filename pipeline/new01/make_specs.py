@@ -19,7 +19,7 @@ LINES = {
     3: ("kiran", "card", "launch", "It's SKY-001. [1] It says fifty-one times faster than GPT-6 Astra, and a hundred and fifty times cheaper!",
         "దాని పేరు స్కై జీరో జీరో వన్. | [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!"),
     4: ("meghana", "meghana", "who", "Says who?", "ఎవరు చెప్పారు?"),
-    5: ("kiran", "card", "own", "[9] Um... the company. [1] Their own test.", "[9] అదీ... ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్."),
+    5: ("kiran", "card", "own", "[9] Um... the company. [1] Their own test.", "[9] అదీ, ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్."),
     6: ("meghana", "meghana", "how", "Okay. How is it so fast?", "సరే. అంత ఫాస్ట్ ఎలా?"),
     7: ("kiran", "card", "split", "It says it imagines the shape first. That's the world model. [1] Then it splits it into parts, down to the screws.",
         "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. | [1] తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది."),

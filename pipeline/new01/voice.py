@@ -40,7 +40,7 @@ MUST = {"en": {1: [("stop",), ("part", "parts"), ("four", "4")], 2: [("three", "
                10: [("six", "6"), ("tie",), ("speed",), ("cost",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
                12: [("half",), ("houses", "house")], 13: [("tonight",)], 14: [("waitlist", "wait"), ("price",), ("tested", "test"), ("two", "2"), ("today",)],
                15: [("thousand", "1000"), ("faster",)], 16: [("says",)]},
-        "te": {}}
+        "te": {5: [("अदी", "अदि", "अधी", "अधि")]}}   # Parler drops the opening "అదీ" (the hesitation is the joke)
 
 KEEP = False
 
