@@ -54,7 +54,7 @@ MAXGAP = {1: (0.35, 0.3), 5: (0.45, 0.4)}   # (English, Telugu): 1: "stop, a new
 GAIN = {"meghana": 0.5, "kiran": 0.0}
 GAIN_LINE = {10: 1.0, 15: 1.0}
 TEMPO = {"en": 1.1, "te": 1.06}
-TEMPO_WHO = {"en": {"kiran": 1.2, "meghana": 1.18}}   # Fish takes run long (73 s at 1.1): Kiran is breathless anyway
+TEMPO_WHO = {"en": {"kiran": 1.2, "meghana": 1.18}, "te": {"kiran": 1.14, "meghana": 1.1}}   # Telugu ran 74 s at 1.06   # Fish takes run long (73 s at 1.1): Kiran is breathless anyway
 YT = {"n1_a": "The launch", "n1_b": "How it works", "n1_c": "The numbers", "n1_d": "How to check any launch"}
 MARK = re.compile(r"\[\d+\]\s*")
 

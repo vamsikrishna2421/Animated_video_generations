@@ -40,7 +40,8 @@ MUST = {"en": {1: [("stop",), ("part", "parts"), ("four", "4")], 2: [("three", "
                10: [("six", "6"), ("tie",), ("claim",), ("minutes", "minute"), ("hub",), ("fine",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
                12: [("half",), ("houses", "house")], 13: [("tonight",)], 14: [("waitlist", "wait"), ("price",), ("trust",), ("launch",), ("tested", "test"), ("two", "2"), ("three", "3"), ("today",)],
                15: [("thousand", "1000"), ("faster",)], 16: [("says",)]},
-        "te": {5: [("अदी", "अदि", "अधी", "अधि")], 10: [("सिक्स", "सिक्", "six", "6")]}}   # 10: Parler dropped "పాయింట్ సిక్స్ తేడానా?"   # Parler drops the opening "అదీ" (the hesitation is the joke)
+        "te": {5: [("अदी", "अदि", "अधी", "अधि")], 10: [("सिक्स", "सिक्", "six", "6")],
+               15: [("वेय", "वे यी", "ईवे", "वेइ", "वैय", "वेयी", "वय्य", "1000", "हज़ार", "हजार")]}}   # Whisper splits "వెయ్యి" as "वे यी"   # 10: Parler dropped "పాయింట్ సిక్స్ తేడానా?"   # Parler drops the opening "అదీ" (the hesitation is the joke)
 
 KEEP = False
 

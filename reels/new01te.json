@@ -97,7 +97,8 @@
      "text": "మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో ఒక పార్ట్ డిజైన్ చేసేస్తుంది!",
      "show": "Meghana, stop! A new AI designs a part in four seconds!",
      "maxgap": 0.3,
-     "gap": 0.2
+     "gap": 0.2,
+     "tempo": 1.14
     },
     {
      "who": "meghana",
@@ -106,6 +107,7 @@
      "show": "Four seconds? This one hub took me three hours!",
      "maxgap": 0.3,
      "gap": 0.24,
+     "tempo": 1.1,
      "gain_db": 0.5
     },
     {
@@ -115,6 +117,7 @@
      "show": "It's SKY-001. It says fifty-one times faster than GPT-6 Astra, and a hundred and fifty times cheaper!",
      "maxgap": 0.3,
      "gap": 0.3,
+     "tempo": 1.14,
      "tts": "దాని పేరు స్కై జీరో జీరో వన్.",
      "file2": "03b_kiran.wav",
      "tts2": "జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!",
@@ -127,6 +130,7 @@
      "show": "Says who?",
      "maxgap": 0.3,
      "gap": 0.8,
+     "tempo": 1.1,
      "gain_db": 0.5
     },
     {
@@ -135,7 +139,8 @@
      "text": "[9] అదీ, ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్.",
      "show": "Um... the company. Their own test.",
      "maxgap": 0.4,
-     "gap": 0.24
+     "gap": 0.24,
+     "tempo": 1.14
     }
    ]
   },
@@ -177,6 +182,7 @@
      "show": "Okay. How does it work?",
      "maxgap": 0.3,
      "gap": 0.24,
+     "tempo": 1.1,
      "gain_db": 0.5
     },
     {
@@ -186,6 +192,7 @@
      "show": "It says it imagines the shape first: that's the world model. Then it splits it into parts and draws each one like you do: sketch, stretch, cut. And it's more accurate than all of them!",
      "maxgap": 0.3,
      "gap": 4.0,
+     "tempo": 1.14,
      "tts": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. తర్వాత పార్టులుగా విడదీసి, ఒక్కోటి నువ్వు గీసినట్టే గీస్తుంది.",
      "file2": "07b_kiran.wav",
      "tts2": "స్కెచ్ వేసి, పైకి లాగి, కట్. పైగా అన్నిటికంటే కరెక్ట్ అంట!",
@@ -242,6 +249,7 @@
      "show": "Point six apart? Basically a tie. The real claim: four seconds instead of three minutes. For one hub? Either's fine.",
      "maxgap": 0.3,
      "gap": 0.4,
+     "tempo": 1.1,
      "tts": "పాయింట్ సిక్స్ తేడానా? దాదాపు సేమ్.",
      "file2": "10b_meghana.wav",
      "tts2": "అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. ఒక్క హబ్ కి? ఏదైనా పర్లేదు.",
@@ -255,6 +263,7 @@
      "show": "On floor plans, it matched forty-four percent. GPT-6 Astra got even less.",
      "maxgap": 0.3,
      "gap": 0.3,
+     "tempo": 1.14,
      "tts": "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది.",
      "file2": "11b_kiran.wav",
      "tts2": "జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ.",
@@ -267,6 +276,7 @@
      "show": "Less than half? I'm not living in any of those houses!",
      "maxgap": 0.3,
      "gap": 0.24,
+     "tempo": 1.1,
      "gain_db": 0.5
     }
    ]
@@ -320,7 +330,8 @@
      "text": "ఈ రాత్రే ట్రై చేద్దామా?",
      "show": "Can we try it tonight?",
      "maxgap": 0.3,
-     "gap": 0.24
+     "gap": 0.24,
+     "tempo": 1.14
     },
     {
      "who": "meghana",
@@ -329,6 +340,7 @@
      "show": "Waitlist only, no public price. Before you trust any launch, ask: one, who tested it? Two, against what? Three, can I use it today?",
      "maxgap": 0.3,
      "gap": 1.2,
+     "tempo": 1.1,
      "tts": "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు.",
      "file2": "14b_meghana.wav",
      "tts2": "ఏ లాంచ్ నైనా నమ్మే ముందు అడుగు: ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?",
@@ -342,6 +354,7 @@
      "show": "Wait! Another AI, a thousand times faster!",
      "maxgap": 0.3,
      "gap": 0.2,
+     "tempo": 1.14,
      "gain_db": 1.0
     },
     {
@@ -351,6 +364,7 @@
      "show": "Says who?",
      "maxgap": 0.3,
      "gap": 0.05,
+     "tempo": 1.1,
      "gain_db": 0.5
     }
    ]
