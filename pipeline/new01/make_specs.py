@@ -28,7 +28,7 @@ LINES = {
         "[2] స్కెచ్ వేసి, పైకి లాగి, కట్. [3] పైగా అన్నిటికంటే కరెక్ట్ అంట!"),
     10: ("meghana", "card", "same", "Point six apart? [1] Basically a tie. [2] The real claim: four seconds instead of three minutes. | "
          "[3] For one hub? Either AI is fine.",   # two takes: Fish ran "three minutes for one hub" together (round-2 review)
-         "పాయింట్ సిక్స్ తేడానా? [1] దాదాపు సేమ్. | [2] అసలు క్లెయిమ్ ఏంటంటే, మూడు నిమిషాల బదులు నాలుగు సెకన్లు. [3] ఒక్క హబ్ కి? ఏదైనా పర్లేదు."),   # "ఏ ఏఐ అయినా" babbled in all four takes
+         "పాయింట్ సిక్స్ తేడానా? [1] దాదాపు సేమ్. | [2] అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. [3] ఒక్క హబ్ కి? ఏదైనా పర్లేదు."),   # "ఏంటంటే" and "ఏ ఏఐ అయినా" babbled
     11: ("kiran", "card", "plan", "On floor plans, it matched forty-four percent. [1] GPT-6 Astra got even less.",
          "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు పర్సెంటే మ్యాచ్ అయింది. | [1] జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ."),
     12: ("meghana", "meghana", "house", "Less than half? [1] I'm not living in any of those houses!", "సగం కూడా లేదా? [1] ఆ ఇళ్ళలో దేంట్లోనూ నేను ఉండను!"),
@@ -36,7 +36,7 @@ LINES = {
     14: ("meghana", "wide", "rule", "Waitlist only, no public price. [1] Before you trust any launch, ask: [2] one, who tested it? "
          "[3] Two, against what? [4] Three, can I use it today?",
          "ఇంకా వెయిట్‌లిస్టే. ధర కూడా చెప్పలేదు. | [1] కొత్త ఏఐ వస్తే, నమ్మే ముందు అడుగు: [2] ఒకటి, ఎవరు టెస్ట్ చేశారు? [3] రెండు, దేనితో పోల్చారు? [4] మూడు, ఇప్పుడు వాడగలనా?"),
-    15: ("kiran", "wide", "again", "Wait! [1] Another AI, a thousand times faster!", "ఆగు! [1] ఇంకో ఏఐ వచ్చింది, వెయ్యి రెట్లు ఫాస్ట్ అంట!"),
+    15: ("kiran", "wide", "again", "Wait! [1] Another AI, a thousand times faster!", "ఆగు ఆగు! [1] ఇంకో ఏఐ వచ్చింది, వెయ్యి రెట్లు ఫాస్ట్ అంట!"),
     16: ("meghana", "meghana", "who", "Says who?", "ఎవరు చెప్పారు?"),   # the loop: back to "Meghana, stop!"
 }
 TTS_EN = {3: "It's Sky zero zero one. [1] It says fifty-one times faster than G P T six Astra, and a hundred and fifty times cheaper!",
