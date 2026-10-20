@@ -42,6 +42,12 @@
    "tail": 0.1,
    "boost": 1.15,
    "rise": 1.3,
+   "drop_at": [
+    [
+     4,
+     9
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -86,45 +92,50 @@
     {
      "who": "kiran",
      "file": "01_kiran.wav",
-     "text": "Meghana, stop! [1] A new AI designs a whole wheel in four seconds!",
-     "show": "Meghana, stop! A new AI designs a whole wheel in four seconds!",
-     "maxgap": 0.25,
-     "gap": 0.2
+     "text": "Meghana, stop! [1] A new AI designs a part in four seconds!",
+     "show": "Meghana, stop! A new AI designs a part in four seconds!",
+     "maxgap": 0.2,
+     "gap": 0.2,
+     "tempo": 1.2
     },
     {
      "who": "meghana",
      "file": "02_meghana.wav",
      "text": "Four seconds? This one hub took me three hours!",
      "show": "Four seconds? This one hub took me three hours!",
-     "maxgap": 0.25,
+     "maxgap": 0.2,
      "gap": 0.16,
+     "tempo": 1.14,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "03_kiran.wav",
-     "text": "It's SKY-001. [1] Fifty-one times faster than GPT-6 Astra. A hundred and fifty times cheaper!",
-     "show": "It's SKY-001. Fifty-one times faster than GPT-6 Astra. A hundred and fifty times cheaper!",
-     "maxgap": 0.25,
+     "text": "It's Sky zero zero one. [1] It says fifty-one times faster than G P T six Astra, and a hundred and fifty times cheaper!",
+     "show": "It's SKY-001. It says fifty-one times faster than GPT-6 Astra, and a hundred and fifty times cheaper!",
+     "maxgap": 0.2,
      "gap": 0.3,
-     "tts": "It's Sky zero zero one. [1] Fifty-one times faster than G P T six Astra. A hundred and fifty times cheaper!"
+     "tempo": 1.2,
+     "tts": "It's Sky zero zero one. [1] It says fifty-one times faster than G P T six Astra, and a hundred and fifty times cheaper!"
     },
     {
      "who": "meghana",
      "file": "04_meghana.wav",
      "text": "Says who?",
      "show": "Says who?",
-     "maxgap": 0.25,
-     "gap": 0.16,
+     "maxgap": 0.2,
+     "gap": 0.5,
+     "tempo": 1.14,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "05_kiran.wav",
-     "text": "Um... the company. [1] Their own test.",
+     "text": "[9] Um... the company. [1] Their own test.",
      "show": "Um... the company. Their own test.",
-     "maxgap": 0.25,
-     "gap": 0.16
+     "maxgap": 0.2,
+     "gap": 0.16,
+     "tempo": 1.2
     }
    ]
   },
@@ -175,34 +186,38 @@
      "file": "06_meghana.wav",
      "text": "Okay. How is it so fast?",
      "show": "Okay. How is it so fast?",
-     "maxgap": 0.25,
+     "maxgap": 0.2,
      "gap": 0.16,
+     "tempo": 1.14,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "07_kiran.wav",
-     "text": "It doesn't type CAD code like a chatbot. [1] It imagines the shape, then splits it into parts, down to the screws.",
-     "show": "It doesn't type CAD code like a chatbot. It imagines the shape, then splits it into parts, down to the screws.",
-     "maxgap": 0.25,
-     "gap": 0.3
+     "text": "It says it imagines the shape first. That's the world model. [1] Then it splits it into parts, down to the screws.",
+     "show": "It says it imagines the shape first. That's the world model. Then it splits it into parts, down to the screws.",
+     "maxgap": 0.2,
+     "gap": 0.3,
+     "tempo": 1.2
     },
     {
      "who": "meghana",
      "file": "08_meghana.wav",
      "text": "And each part?",
      "show": "And each part?",
-     "maxgap": 0.25,
+     "maxgap": 0.2,
      "gap": 0.16,
+     "tempo": 1.14,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "09_kiran.wav",
-     "text": "Drawn like you do: [1] sketch, extrude, cut. They call it a world model.",
-     "show": "Drawn like you do: sketch, extrude, cut. They call it a world model.",
-     "maxgap": 0.25,
-     "gap": 3.9
+     "text": "Drawn like you do: [1] sketch, stretch, cut. [2] And it's more accurate than all of them!",
+     "show": "Drawn like you do: sketch, stretch, cut. And it's more accurate than all of them!",
+     "maxgap": 0.2,
+     "gap": 4.3,
+     "tempo": 1.2
     }
    ]
   },
@@ -210,8 +225,13 @@
    "id": "n1_c",
    "type": "sk_lab",
    "tail": 0.1,
-   "drop_cue": 0,
+   "drop_cue": 1,
    "boost": 1.0,
+   "swell": [
+    2,
+    1,
+    1.3
+   ],
    "data": {
     "beats": [
      {
@@ -244,28 +264,31 @@
     {
      "who": "meghana",
      "file": "10_meghana.wav",
-     "text": "Point six apart? [1] That's the same. The win is speed and cost.",
-     "show": "Point six apart? That's the same. The win is speed and cost.",
-     "maxgap": 0.25,
-     "gap": 0.5,
-     "tts": "Point six apart? [1] That's the same. The win is speed and cost.",
+     "text": "Point six apart? [1] That's a tie. Their real claim is [2] speed and cost.",
+     "show": "Point six apart? That's a tie. Their real claim is speed and cost.",
+     "maxgap": 0.2,
+     "gap": 0.4,
+     "tempo": 1.14,
      "gain_db": 1.5
     },
     {
      "who": "kiran",
      "file": "11_kiran.wav",
-     "text": "On floor plans, it matched forty-four percent.",
-     "show": "On floor plans, it matched forty-four percent.",
-     "maxgap": 0.25,
-     "gap": 0.3
+     "text": "On floor plans, it matched forty-four percent. [1] G P T six Astra got even less.",
+     "show": "On floor plans, it matched forty-four percent. GPT-6 Astra got even less.",
+     "maxgap": 0.2,
+     "gap": 0.3,
+     "tempo": 1.2,
+     "tts": "On floor plans, it matched forty-four percent. [1] G P T six Astra got even less."
     },
     {
      "who": "meghana",
      "file": "12_meghana.wav",
-     "text": "Less than half? [1] I'm not living in that house!",
-     "show": "Less than half? I'm not living in that house!",
-     "maxgap": 0.25,
+     "text": "Less than half? [1] I'm not living in any of those houses!",
+     "show": "Less than half? I'm not living in any of those houses!",
+     "maxgap": 0.2,
      "gap": 0.16,
+     "tempo": 1.14,
      "gain_db": 0.5
     }
    ]
@@ -296,6 +319,12 @@
       "shot": "wide",
       "prop": "again",
       "n": 15
+     },
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "who",
+      "n": 16
      }
     ],
     "captionTop": 1500,
@@ -311,26 +340,39 @@
      "file": "13_kiran.wav",
      "text": "Can we try it tonight?",
      "show": "Can we try it tonight?",
-     "maxgap": 0.25,
-     "gap": 0.16
+     "maxgap": 0.2,
+     "gap": 0.16,
+     "tempo": 1.2
     },
     {
      "who": "meghana",
      "file": "14_meghana.wav",
-     "text": "Waitlist only. [1] Ask every launch: who tested it, against what, can I use it today?",
-     "show": "Waitlist only. Ask every launch: who tested it, against what, can I use it today?",
-     "maxgap": 0.25,
+     "text": "Waitlist only. No price yet. [1] Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
+     "show": "Waitlist only. No price yet. Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
+     "maxgap": 0.2,
      "gap": 1.2,
+     "tempo": 1.14,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "15_kiran.wav",
-     "text": "Wait! Another AI, a thousand times faster! [1] Meghana, stop!",
-     "show": "Wait! Another AI, a thousand times faster! Meghana, stop!",
-     "maxgap": 0.25,
-     "gap": 0.05,
+     "text": "Wait! [1] Another AI, a thousand times faster!",
+     "show": "Wait! Another AI, a thousand times faster!",
+     "maxgap": 0.2,
+     "gap": 0.2,
+     "tempo": 1.2,
      "gain_db": 1.0
+    },
+    {
+     "who": "meghana",
+     "file": "16_meghana.wav",
+     "text": "Says who?",
+     "show": "Says who?",
+     "maxgap": 0.2,
+     "gap": 0.05,
+     "tempo": 1.14,
+     "gain_db": 0.5
     }
    ]
   }

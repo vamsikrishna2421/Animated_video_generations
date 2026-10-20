@@ -34,10 +34,12 @@ VOICE_TE = {
              "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
-MUST = {"en": {1: [("stop",), ("wheel",), ("four", "4")], 2: [("three", "3"), ("hours", "hour")], 3: [("fifty", "51"), ("astra",), ("cheaper",)],
-               4: [("says",)], 5: [("company",), ("test",)], 7: [("code",), ("screws", "screw")], 9: [("sketch",), ("extrude",), ("cut",), ("world",)],
-               10: [("six", "0.6", ".6"), ("same",), ("speed",)], 11: [("floor",), ("forty", "44")], 12: [("half",), ("house",)],
-               13: [("tonight",)], 14: [("waitlist", "wait"), ("tested", "test"), ("today",)], 15: [("thousand", "1000"), ("stop",)]},
+MUST = {"en": {1: [("stop",), ("part", "parts"), ("four", "4")], 2: [("three", "3"), ("hours", "hour")],
+               3: [("says",), ("fifty", "51"), ("astra",), ("cheaper",)], 4: [("says",)], 5: [("company",), ("test",)], 6: [("fast",)],
+               7: [("imagines", "imagine"), ("world",), ("screws", "screw")], 8: [("part",)], 9: [("sketch",), ("stretch",), ("cut",), ("accurate",)],
+               10: [("six", "6"), ("tie",), ("speed",), ("cost",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
+               12: [("half",), ("houses", "house")], 13: [("tonight",)], 14: [("waitlist", "wait"), ("price",), ("tested", "test"), ("two", "2"), ("today",)],
+               15: [("thousand", "1000"), ("faster",)], 16: [("says",)]},
         "te": {}}
 
 KEEP = False

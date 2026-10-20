@@ -43,6 +43,12 @@
    "tail": 0.1,
    "boost": 1.15,
    "rise": 1.3,
+   "drop_at": [
+    [
+     4,
+     9
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -88,8 +94,8 @@
     {
      "who": "kiran",
      "file": "01_kiran.wav",
-     "text": "మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో మొత్తం వీల్ డిజైన్ చేస్తుంది!",
-     "show": "Meghana, stop! A new AI designs a whole wheel in four seconds!",
+     "text": "మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో ఒక పార్ట్ డిజైన్ చేసేస్తుంది!",
+     "show": "Meghana, stop! A new AI designs a part in four seconds!",
      "maxgap": 0.3,
      "gap": 0.2
     },
@@ -105,13 +111,13 @@
     {
      "who": "kiran",
      "file": "03_kiran.wav",
-     "text": "దాని పేరు స్కై జీరో జీరో వన్. [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్. నూట యాభై రెట్లు చీప్!",
-     "show": "It's SKY-001. Fifty-one times faster than GPT-6 Astra. A hundred and fifty times cheaper!",
+     "text": "దాని పేరు స్కై జీరో జీరో వన్. <pause 0.3> [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!",
+     "show": "It's SKY-001. It says fifty-one times faster than GPT-6 Astra, and a hundred and fifty times cheaper!",
      "maxgap": 0.3,
      "gap": 0.3,
      "tts": "దాని పేరు స్కై జీరో జీరో వన్.",
      "file2": "03b_kiran.wav",
-     "tts2": "జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్. నూట యాభై రెట్లు చీప్!",
+     "tts2": "జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!",
      "pause": 0.3
     },
     {
@@ -120,13 +126,13 @@
      "text": "ఎవరు చెప్పారు?",
      "show": "Says who?",
      "maxgap": 0.3,
-     "gap": 0.24,
+     "gap": 0.5,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "05_kiran.wav",
-     "text": "అదీ... ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్.",
+     "text": "[9] అదీ... ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్.",
      "show": "Um... the company. Their own test.",
      "maxgap": 0.3,
      "gap": 0.24
@@ -188,13 +194,13 @@
     {
      "who": "kiran",
      "file": "07_kiran.wav",
-     "text": "చాట్‌బాట్ లాగా కోడ్ రాయదు. [1] ముందు షేప్ ఊహిస్తుంది, తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.",
-     "show": "It doesn't type CAD code like a chatbot. It imagines the shape, then splits it into parts, down to the screws.",
+     "text": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. <pause 0.3> [1] తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.",
+     "show": "It says it imagines the shape first. That's the world model. Then it splits it into parts, down to the screws.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "tts": "చాట్‌బాట్ లాగా కోడ్ రాయదు.",
+     "tts": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్.",
      "file2": "07b_kiran.wav",
-     "tts2": "ముందు షేప్ ఊహిస్తుంది, తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.",
+     "tts2": "తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.",
      "pause": 0.3
     },
     {
@@ -209,10 +215,14 @@
     {
      "who": "kiran",
      "file": "09_kiran.wav",
-     "text": "నువ్వు గీసినట్టే: [1] స్కెచ్, ఎక్స్‌ట్రూడ్, కట్. దాన్ని వరల్డ్ మోడల్ అంటారు.",
-     "show": "Drawn like you do: sketch, extrude, cut. They call it a world model.",
+     "text": "నువ్వు గీసినట్టే: [1] స్కెచ్ వేసి, పైకి లాగి, కట్. <pause 0.3> [2] పైగా అన్నిటికంటే కరెక్ట్ అంట!",
+     "show": "Drawn like you do: sketch, stretch, cut. And it's more accurate than all of them!",
      "maxgap": 0.3,
-     "gap": 3.9
+     "gap": 4.3,
+     "tts": "నువ్వు గీసినట్టే: స్కెచ్ వేసి, పైకి లాగి, కట్.",
+     "file2": "09b_kiran.wav",
+     "tts2": "పైగా అన్నిటికంటే కరెక్ట్ అంట!",
+     "pause": 0.3
     }
    ]
   },
@@ -220,8 +230,13 @@
    "id": "n1_c",
    "type": "sk_lab",
    "tail": 0.1,
-   "drop_cue": 0,
+   "drop_cue": 1,
    "boost": 1.0,
+   "swell": [
+    2,
+    1,
+    1.3
+   ],
    "data": {
     "beats": [
      {
@@ -255,25 +270,29 @@
     {
      "who": "meghana",
      "file": "10_meghana.wav",
-     "text": "పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. గెలుపు స్పీడ్ లో, ఖర్చులో.",
-     "show": "Point six apart? That's the same. The win is speed and cost.",
+     "text": "పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. [2] వాళ్ళ అసలు క్లెయిమ్ స్పీడ్, ఖర్చు.",
+     "show": "Point six apart? That's a tie. Their real claim is speed and cost.",
      "maxgap": 0.3,
-     "gap": 0.5,
+     "gap": 0.4,
      "gain_db": 1.5
     },
     {
      "who": "kiran",
      "file": "11_kiran.wav",
-     "text": "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది.",
-     "show": "On floor plans, it matched forty-four percent.",
+     "text": "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది. <pause 0.3> [1] జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ.",
+     "show": "On floor plans, it matched forty-four percent. GPT-6 Astra got even less.",
      "maxgap": 0.3,
-     "gap": 0.3
+     "gap": 0.3,
+     "tts": "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది.",
+     "file2": "11b_kiran.wav",
+     "tts2": "జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ.",
+     "pause": 0.3
     },
     {
      "who": "meghana",
      "file": "12_meghana.wav",
-     "text": "సగం కూడా లేదా? [1] ఆ ఇంట్లో నేను ఉండను!",
-     "show": "Less than half? I'm not living in that house!",
+     "text": "సగం కూడా లేదా? [1] ఆ ఇళ్ళలో దేంట్లోనూ నేను ఉండను!",
+     "show": "Less than half? I'm not living in any of those houses!",
      "maxgap": 0.3,
      "gap": 0.24,
      "gain_db": 0.5
@@ -306,6 +325,12 @@
       "shot": "wide",
       "prop": "again",
       "n": 15
+     },
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "who",
+      "n": 16
      }
     ],
     "captionTop": 1500,
@@ -328,24 +353,33 @@
     {
      "who": "meghana",
      "file": "14_meghana.wav",
-     "text": "వెయిట్‌లిస్ట్ మాత్రమే. [1] ప్రతి లాంచ్ ని అడుగు: ఎవరు టెస్ట్ చేశారు, దేనితో పోల్చారు, ఇప్పుడు వాడగలనా?",
-     "show": "Waitlist only. Ask every launch: who tested it, against what, can I use it today?",
+     "text": "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. <pause 0.3> [1] ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?",
+     "show": "Waitlist only. No price yet. Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
      "maxgap": 0.3,
      "gap": 1.2,
-     "tts": "వెయిట్‌లిస్ట్ మాత్రమే.",
+     "tts": "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు.",
      "file2": "14b_meghana.wav",
-     "tts2": "ప్రతి లాంచ్ ని అడుగు: ఎవరు టెస్ట్ చేశారు, దేనితో పోల్చారు, ఇప్పుడు వాడగలనా?",
+     "tts2": "ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?",
      "pause": 0.3,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "15_kiran.wav",
-     "text": "ఆగు! ఇంకో ఏఐ, వెయ్యి రెట్లు ఫాస్ట్! [1] మేఘన, ఆపు!",
-     "show": "Wait! Another AI, a thousand times faster! Meghana, stop!",
+     "text": "ఆగు! [1] ఇంకో ఏఐ, వెయ్యి రెట్లు ఫాస్ట్ అంట!",
+     "show": "Wait! Another AI, a thousand times faster!",
+     "maxgap": 0.3,
+     "gap": 0.2,
+     "gain_db": 1.0
+    },
+    {
+     "who": "meghana",
+     "file": "16_meghana.wav",
+     "text": "ఎవరు చెప్పారు?",
+     "show": "Says who?",
      "maxgap": 0.3,
      "gap": 0.05,
-     "gain_db": 1.0
+     "gain_db": 0.5
     }
    ]
   }

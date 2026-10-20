@@ -1,4 +1,4 @@
-# NEW IN AI 01: SKY-001, "the first engineering world model" (Skyfall AI, Oct 19, 2026), script v1
+# NEW IN AI 01: SKY-001, "the first engineering world model" (Skyfall AI, Oct 19, 2026), script v2
 
 Track 3 (New in AI) in the skit format the user asked for ("a real-world scene explaining the concept"). The user sent
 the launch post on X (Oct 20) and asked for content on it. The reel explains what launched, what is actually new, what
@@ -22,63 +22,78 @@ his phone.
   stroke-by-stroke, then stretches, cuts, or shapes those sketches" (the way a designer works in CAD). "World model"
   here: a model that imagines how a thing looks and fits together before it exists ("can 'dream' anything in the
   physical world").
-- The company's own tests (skyfall.ai, Oct 19), against GPT-6 Astra (OpenAI's model, launched Sept 3, 2026) and others:
+- The company's own tests (skyfall.ai, Oct 19), against GPT-6 Astra (OpenAI's model) and five other frontier models:
 
-  | Test | SKY-001 | GPT-6 Astra | Best other |
+  | Test | SKY-001 | GPT-6 Astra | Next best in their table |
   |---|---|---|---|
-  | 3D CAD: time per design | 3.9 s | 199 s (51x slower) | |
-  | 3D CAD: cost per design | $0.005 | $0.75 (150x more) | |
-  | 3D CAD: accuracy (IoU, overlap with the reference shape) | 79.7% | 79.1% | Claude Opus 5.5 69.4% |
-  | BIM floor plans: time | 1.22 s | 144.4 s (118x) | |
-  | BIM floor plans: cost | $0.0024 | $0.446 (188x) | |
-  | BIM floor plans: accuracy (IoU) | 43.6% | 40.6% | Gemini 3.8 Flash 42.3% |
+  | 3D CAD parts: time per design | 3.9 s | 199 s (51x slower) | |
+  | 3D CAD parts: cost per design | $0.005 | $0.75 (150x more) | |
+  | 3D CAD parts: shape match (IoU, overlap with the reference shape) | 79.7% | 79.1% | 69.4% |
+  | Floor plans (BIM): time per plan | 1.22 s | 144.4 s (118x) | |
+  | Floor plans (BIM): cost per plan | $0.00237 | $0.4465 (188x) | |
+  | Floor plans (BIM): shape match (IoU) | 43.6% | 40.6% | 42.3% |
 
-  The X post rounds these to "51-125x faster, 150-210x cheaper, higher IoU than all frontier models". The accuracy
-  lead is 0.6 points on CAD and 1.3 points on floor plans; the speed and cost gaps are the real story. No outside
-  group has tested it yet; the benchmarks, prompts and comparisons are Skyfall's.
-- IoU (intersection over union): the overlap between the drawn shape and the right shape, divided by both together.
-  43.6% means less than half of the floor plan lines up with the reference.
+  The site's own summary boxes round the floor-plan figures two ways (118x / 188x, and 119x / 186x from $0.0024 vs
+  $0.446). The X post says "51-125x faster, 150-210x cheaper, higher IoU than all frontier models"; the 125x and 210x
+  are not in the two tables on the site. The shape-match lead is 0.6 points on CAD and 1.3 points on floor plans (where
+  GPT-6 Astra is not even the runner-up); the speed and cost gaps are the real claim. No outside group has tested it
+  yet; the benchmarks, prompts and comparisons are Skyfall's. Who it is for: teams making thousands of CAD parts or
+  plans; for one part, 3 minutes and 75 cents is fine.
+- IoU (intersection over union), said "shape match" on screen: the overlap between the drawn shape and the right shape,
+  divided by both together. 43.6% means less than half of the floor plan lines up with the reference.
 
-## Script (English)
+## Script (English), v2 after the script-stage review
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Kiran | Meghana, stop! [1] A new AI designs a whole wheel in four seconds! | CAD lab at night, clock 11:40; Meghana at a monitor with a half-built wheel hub; Kiran bursts in, phone up; on [1] a wheel assembling itself part by part on his phone |
-| 2 | Meghana | Four seconds? This one hub took me three hours! | her screen: "hub_v7_FINAL_final.cad", "3 h 02 min" |
-| 3 | Kiran | It's SKY-001. [1] Fifty-one times faster than GPT-6 Astra. A hundred and fifty times cheaper! | launch card: "Skyfall AI · SKY-001 · Oct 19 · 'the first engineering world model'"; on [1] "51x faster · 150x cheaper" |
-| 4 | Meghana | Says who? | |
-| 5 | Kiran | Um... the company. [1] Their own test. | stamp on the card: "THEIR OWN TEST" |
+| 1 | Kiran | Meghana, stop! [1] A new AI designs a part in four seconds! | frame 1: headline "AI: 4 SECONDS / HER: 3 HOURS"; CAD lab at night, clock 11:40; Meghana at her monitor; Kiran bursts in, phone up; on [1] his phone (inset) draws a hub: sketch, stretch, holes |
+| 2 | Meghana | Four seconds? This one hub took me three hours! | big tags: "hub_v7_FINAL_final.cad", "3 h 02 min" |
+| 3 | Kiran | It's SKY-001. [1] It says fifty-one times faster than GPT-6 Astra, and a hundred and fifty times cheaper! | launch card: "Skyfall AI · SKY-001 · 'the first engineering world model'"; on [1] "51x faster · 150x cheaper · than GPT-6 Astra, on design tasks" |
+| 4 | Meghana | Says who? | bubble |
+| 5 | Kiran | (music out) Um... the company. [1] Their own test. | a neutral stamp on the card: "THEIR OWN TEST" |
 | 6 | Meghana | Okay. How is it so fast? | |
-| 7 | Kiran | It doesn't type CAD code like a chatbot. [1] It imagines the shape, then splits it into parts, down to the screws. | insert: a photo of a wheel → three rough 3D options at once → one explodes into rim, tyre, hub, bolts |
+| 7 | Kiran | It says it imagines the shape first. That's the world model. [1] Then it splits it into parts, down to the screws. | "1 picture or text → rough 3D shapes" (three rough wheels); tag "world model = imagines the shape first"; on [1] "2 split into parts, down to screws": tyre, rim, hub, bolts fly apart |
 | 8 | Meghana | And each part? | |
-| 9 | Kiran | Drawn like you do: [1] sketch, extrude, cut. They call it a world model. | insert: a circle sketch → extruded into a disc → holes cut; tag "world model = imagines the object before it exists" |
-| (card) | | | QUIZ, held 3 s with a 3-2-1: "Their test, accuracy: SKY-001 79.7% · GPT-6 Astra 79.1%. Clearly better? A) yes B) about the same" |
-| 10 | Meghana | Point six apart? [1] That's the same. The win is speed and cost. | bars: 3.9 s vs 199 s, $0.005 vs $0.75, 79.7% vs 79.1% |
-| 11 | Kiran | On floor plans, it matched forty-four percent. | insert: a floor plan over the right one, the overlap shaded: "IoU 43.6%" |
-| 12 | Meghana | Less than half? [1] I'm not living in that house! | |
-| 13 | Kiran | Can we try it tonight? | |
-| 14 | Meghana | Waitlist only. [1] Ask every launch: who tested it, against what, can I use it today? | rule card: "NEW AI LAUNCH? 1 Who tested it? 2 Against what, on which task? 3 Can I use it today?" |
-| 15 | Kiran | Wait! Another AI, a thousand times faster! [1] Meghana, stop! | his phone pings "NEW AI: 1000x FASTER!!!" (no name, a joke on the hype cycle); cut to frame 1 (loops) |
+| 9 | Kiran | Drawn like you do: [1] sketch, stretch, cut. [2] And it's more accurate than all of them! | a circle sketched → stretched into a disc → holes cut; on [2] "the post also says: 'more accurate than all of them!'" |
+| (card) | | | QUIZ, held about 4 s with a ticking 3-2-1: "YOUR CALL · Shape match, their test: SKY-001 79.7% · GPT-6 Astra 79.1% · A) more accurate B) a tie · comment A or B" |
+| 10 | Meghana | Point six apart? [1] That's a tie. Their real claim is [2] speed and cost. | bars: shape match 79.7 vs 79.1 → "a tie"; on [2] 3.9 s vs 199 s → "51x faster", $0.005 vs $0.75 → "150x cheaper" |
+| 11 | Kiran | On floor plans, it matched forty-four percent. [1] GPT-6 Astra got even less. | the AI's floor plan over the right one; "SKY-001: 44% match"; on [1] "GPT-6 Astra: 41%"; small "their test: 43.6% vs 40.6%" |
+| 12 | Meghana | Less than half? [1] I'm not living in any of those houses! | bubble "Less than half?!" |
+| 13 | Kiran | Can we try it tonight? | bubble "Tonight?" |
+| 14 | Meghana | Waitlist only. No price yet. [1] Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today? | tags "waitlist only · no price yet", "no outside test yet"; on [1] the rule card: "NEW AI LAUNCH? ASK: 1 Who tested it? 2 Against what, on which task? 3 Can I use it today?" |
+| 15 | Kiran | Wait! [1] Another AI, a thousand times faster! | his phone pings "NEW AI: 1000x FASTER!!!" (no name: a joke on the hype cycle) |
+| 16 | Meghana | Says who? | bubble; cut to frame 1 ("Meghana, stop!"), so it loops |
 
-About 50 s. Tag on screen: "NEW IN AI". Caption: the facts with sources, the full table, "comment A or B".
+About 55 s. Tag on screen: "NEW IN AI". Caption: the facts with sources, both tables, who it is for, "comment A or B".
 
-## Script (Telugu; English on-screen text)
-1. కిరణ్: మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో మొత్తం వీల్ డిజైన్ చేస్తుంది!
+Review notes (script stage, two viewers): "Says who? Um... the company" was the best moment for both; the first 3 s
+didn't earn it with the sound off (now a headline on frame 1); the quiz came out of nowhere (Kiran now reads the
+post's own accuracy claim first) and mixed "accuracy" with "IoU" (now "shape match" everywhere); "the win is cost" had
+no price behind it (now "their real claim", and "no price yet"); the house joke mocked the best of a bad lot (now
+"GPT-6 Astra got even less" / "any of those houses"); the chatbot comparison wasn't Skyfall's (dropped); "extrude" →
+their own verb "stretch"; the loop said "Meghana, stop!" twice (now it ends on "Says who?"); Telugu: "చీప్" sounded
+like cheap quality (now "తక్కువ ఖర్చు"), "గెలుపు" was newspaper Telugu, "ప్రతి లాంచ్ ని అడుగు" read as asking the
+launch itself.
+
+## Script (Telugu; English on-screen text), v2
+1. కిరణ్: మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో ఒక పార్ట్ డిజైన్ చేసేస్తుంది!
 2. మేఘన: నాలుగు సెకన్లా? ఈ ఒక్క హబ్ కి నాకు మూడు గంటలు పట్టింది!
-3. కిరణ్: దాని పేరు స్కై జీరో జీరో వన్. [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్. నూట యాభై రెట్లు చీప్!
+3. కిరణ్: దాని పేరు స్కై జీరో జీరో వన్. [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!
 4. మేఘన: ఎవరు చెప్పారు?
 5. కిరణ్: అదీ... ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్.
 6. మేఘన: సరే. అంత ఫాస్ట్ ఎలా?
-7. కిరణ్: చాట్‌బాట్ లాగా కోడ్ రాయదు. [1] ముందు షేప్ ఊహిస్తుంది, తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.
+7. కిరణ్: ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. [1] తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.
 8. మేఘన: మరి ఒక్కో పార్ట్?
-9. కిరణ్: నువ్వు గీసినట్టే: [1] స్కెచ్, ఎక్స్‌ట్రూడ్, కట్. దాన్ని వరల్డ్ మోడల్ అంటారు.
-10. మేఘన: పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. గెలుపు స్పీడ్ లో, ఖర్చులో.
-11. కిరణ్: ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది.
-12. మేఘన: సగం కూడా లేదా? [1] ఆ ఇంట్లో నేను ఉండను!
+9. కిరణ్: నువ్వు గీసినట్టే: [1] స్కెచ్ వేసి, పైకి లాగి, కట్. [2] పైగా అన్నిటికంటే కరెక్ట్ అంట!
+10. మేఘన: పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. [2] వాళ్ళ అసలు క్లెయిమ్ స్పీడ్, ఖర్చు.
+11. కిరణ్: ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది. [1] జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ.
+12. మేఘన: సగం కూడా లేదా? [1] ఆ ఇళ్ళలో దేంట్లోనూ నేను ఉండను!
 13. కిరణ్: ఈ రాత్రే ట్రై చేద్దామా?
-14. మేఘన: వెయిట్‌లిస్ట్ మాత్రమే. [1] ప్రతి లాంచ్ ని అడుగు: ఎవరు టెస్ట్ చేశారు, దేనితో పోల్చారు, ఇప్పుడు వాడగలనా?
-15. కిరణ్: ఆగు! ఇంకో ఏఐ, వెయ్యి రెట్లు ఫాస్ట్! [1] మేఘన, ఆపు!
+14. మేఘన: వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. [1] ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?
+15. కిరణ్: ఆగు! [1] ఇంకో ఏఐ, వెయ్యి రెట్లు ఫాస్ట్ అంట!
+16. మేఘన: ఎవరు చెప్పారు?
 
 ## Sound
-A hit on frame 1 (Kiran bursting in) with a notification ping; the bed builds under the claims; a lift into how it
-works; the quiz's 3-2-1 over the bed, a drop before "Point six apart?" with a hit; up for the floor plan joke; the rule
-card on a beat; pings speeding up into the loop.
+A hit on frame 1 (Kiran bursting in) with a pop; the bed builds under the claims and drops out for a beat before
+"Um... the company"; a bonk on "own"; a lift into how it works; the quiz's ticking 3-2-1 over the bed; a hit on the cut
+to the numbers, the bed out under "Point six apart?" and back on "That's a tie"; a swell under the house joke; the rule
+card on a snap; pops speeding up into the loop and the bed rising to the end.

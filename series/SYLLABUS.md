@@ -165,6 +165,11 @@ When something new launches, explain it in this structure:
 If a new technology needs a fundamental that hasn't been covered yet, that fundamental episode is
 made first (or the same week), and the "New in AI" reel links to it.
 
+Made so far (skit format, a real scene, every number credited to whoever measured it):
+- 01, Oct 20, 2026: SKY-001 (Skyfall AI, "the first engineering world model"): CAD-lab skit, the company's own test
+  read honestly (speed and cost real, accuracy a tie), and the three questions to ask any launch.
+  `series/scripts/new01_sky001.md`, `out/new/01_sky001*`.
+
 ---
 
 ## Track 4: AI News (daily roundup)
