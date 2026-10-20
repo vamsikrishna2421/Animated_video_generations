@@ -237,7 +237,7 @@ const StLab: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
     if (b.shot === "card") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.25} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.5} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.55} />, <Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.5} />);
     if (b.prop === "launch") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.4) - 6} src="audio/sfx_snap.wav" vol={0.4} />);
     if (b.prop === "own") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) - 2} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "split") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={cue(i, 1, 0.5) + q * 8} src="audio/sfx_pop.wav" vol={0.28} />));
@@ -248,7 +248,7 @@ const StLab: React.FC<SP> = ({ s }) => {
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={nx - 100 + q * 30} src="audio/sfx_tick.wav" vol={0.4} />));   // the quiz's 3-2-1
     }
     if (b.prop === "who") sfx.push(<Sfx key={k("b")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "same") sfx.push(<Sfx key={k("h")} at={at - 6} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("t")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
+    if (b.prop === "same") sfx.push(<Sfx key={k("h")} at={at - 14} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("t")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "house") sfx.push(<Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_boing.wav" vol={0.4} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4)} src="audio/sfx_snap.wav" vol={0.4} />);
     if (b.prop === "again") [0, 1, 2, 3, 4].forEach((q) => sfx.push(<Sfx key={k("n" + q)} at={cue(i, 1, 0.2) + Math.round(q * 6 * (1 - q * 0.08))} src="audio/sfx_pop.wav" vol={0.3} />));

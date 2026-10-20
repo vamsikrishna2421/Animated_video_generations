@@ -44,7 +44,7 @@ TTS_EN = {3: "It's Sky zero zero one. [1] It says fifty-one times faster than G 
 # tie"; a swell under the floor plan joke; a rise into the loop.
 SCENES = [("n1_a", (1, 2, 3, 4, 5), {"boost": 1.15, "rise": 1.3, "drop_at": [[4, 9]], "tail": 0.1}),
           ("n1_b", (6, 7, 8, 9), {"lift": 0.5, "pre": 0.35, "boost": 0.85, "tail": 0.1}),
-          ("n1_c", (10, 11, 12), {"drop_cue": 1, "boost": 1.0, "swell": [2, 1, 1.3], "tail": 0.1}),
+          ("n1_c", (10, 11, 12), {"pre": 0.35, "drop_cue": 1, "boost": 1.0, "swell": [2, 1, 1.3], "tail": 0.1}),   # pre: the hit on the cut hid "Point"
           ("n1_d", (13, 14, 15, 16), {"outro": True, "boost": 1.5, "rise": 1.7, "tail": 0.0})]
 GAP = {1: 0.2, 3: 0.3, 4: 0.5, 7: 0.3, 9: 4.3, 10: 0.4, 11: 0.3, 14: 1.2, 15: 0.2}   # 4: a beat before "Um"; 9: the quiz; 14: the rule card
 GAIN = {"meghana": 0.5, "kiran": 0.0}
