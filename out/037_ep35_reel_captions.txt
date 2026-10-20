@@ -1,5 +1,5 @@
 UPLOAD: 037
-VIDEO: 037_ep35_the_brain_that_didnt_fit.mp4  (teaching skit, about 67 s, AI voices; replaces the older lesson-format 037_ep35_small_language_models.mp4; send copy: 037_ep35_the_brain_that_didnt_fit_ig.mp4, about 22 MB). It loops: "Storage full" leads back into "The free brain won't fit in my phone!".
+VIDEO: 037_ep35_the_brain_that_didnt_fit.mp4  (teaching skit, 70 s, AI voices; replaces the older lesson-format 037_ep35_small_language_models.mp4; send copy: 037_ep35_the_brain_that_didnt_fit_ig.mp4, about 22 MB). It loops: "Storage full" leads back into "The free brain won't fit in my phone!".
 
 === CAPTION ===
 Ravi anna wanted the shop's free AI brain inside his phone, so it works without internet. The phone said: storage full.
@@ -7,13 +7,15 @@ Ravi anna wanted the shop's free AI brain inside his phone, so it works without 
 Episode 35 of AI From Scratch: model size and small language models
 - A model's size is its parameters, the numbers it's made of: our big one has 7 billion (a 4.7 GB file), the medium one 1.5 billion (1.1 GB), the tiny one half a billion (0.5 GB)
 - Brains small enough for a phone are called small language models (Meta's Llama 3.2 1B and 3B, Google's Gemma 3 1B, Microsoft's Phi-3-mini, Apple's on-device model)
-- Our real test, 40 shop WhatsApp messages sorted into order / payment / complaint / other: tiny 14 right, medium 39, big 39, and the medium one was 4x faster than the big one
+- Our real test, 40 shop WhatsApp messages sorted into order / payment / complaint / other: tiny 14 right (random guessing gets about 10), medium 39, big 39, and the medium one was 4x faster than the big one
 - On 20 bills the same files made 19, 9 and 2 mistakes
 
 How to use this:
 1. Give each job a pass mark first: sorting messages can live with one miss; a bill can't
 2. Try the sizes on 20 to 40 of your own examples and keep the smallest that passes
 3. For money, no model passed: use a calculator (or a big rented model, tested, EP34)
+
+Try one on your phone: free apps like PocketPal AI (open source) or Google's AI Edge Gallery download a small model once, then run it with no internet. Start with a 1B-size model; it needs about its file size in free storage and in memory (RAM).
 
 Next: EP36, GPUs and AI chips. Why do the giant brains need graphics cards?
 Follow @ai_maastaaru for the full series.
@@ -34,7 +36,7 @@ Small models made for phones: Meta, "Llama 3.2" (Sept 25, 2024): 1B and 3B model
 Ravi anna pointing at his phone: a wall of "Good Morning" sunflowers under a red "Storage full" box; headline "HE WANTS AI WITHOUT INTERNET. IT DOESN'T FIT."
 
 === ALT_TEXT ===
-Crayon-animated skit in a kirana shop. Ravi anna wants the shop's free AI brain inside his phone so it works without internet, but the phone's storage is full of good-morning photos. The AI explains that a brain is made of numbers called parameters, and phone-size ones are small language models. Our test of three sizes sorting 40 shop messages: tiny 14 right (it filed "Happy Diwali" as an order), medium 39, big 39, and the medium one four times faster. On bills, the medium made 9 mistakes and the big one 2. The rule: sorting can live with one miss, so medium; bills can't, so a calculator; test each size on your own job and keep the smallest that passes. Ravi deletes his good-morning photos, the medium brain installs, and the family group sends 52 new ones: storage full again.
+Crayon-animated skit in a kirana shop. Ravi anna wants the shop's free AI brain inside his phone so it works without internet, but the phone's storage is full of good-morning photos. The AI explains that a brain is made of numbers called parameters, and phone-size ones are small language models. Our test of three sizes sorting 40 shop messages: tiny 14 right (it filed "Happy Diwali" as an order), medium 39, big 39, and the medium one four times faster. A quiz asks you to guess the medium score first. On 20 bills, the medium made 9 mistakes and the big one 2. The rule: sorting can live with one miss, so medium; bills can't, so a calculator; test each size on your own job and keep the smallest that passes. Ravi deletes his good-morning photos (1.2 GB free), the medium brain installs with 0.1 GB to spare, and the family group sends 52 new ones: storage full again.
 
 === SOURCES (for comments) ===
 Demo (run by us): pipeline/ep35/sort_demo.py, data in series/scripts/ep35_demo (results_*.json, bills_*.json, messages.json).
@@ -43,3 +45,4 @@ Microsoft Research, "Phi-3 Technical Report: A Highly Capable Language Model Loc
 Apple Machine Learning Research, "Introducing Apple's On-Device and Server Foundation Models" (June 2024) and "Apple Intelligence Foundation Language Models Tech Report 2025".
 Google Developers Blog, "Gemma 3 on mobile and web with Google AI Edge" (2025).
 Qwen2.5 model cards (parameter counts: 0.49B, 1.54B, 7.61B) and Qwen's GGUF files (q4_k_m: 0.49, 1.12, 4.68 GB).
+Phone apps: PocketPal AI (github.com/a-ghorbani/pocketpal-ai, MIT; App Store and Google Play; runs GGUF models offline) and Google AI Edge Gallery (github.com/google-ai-edge/gallery, Apache 2.0; Google Play and App Store; runs models on the device).

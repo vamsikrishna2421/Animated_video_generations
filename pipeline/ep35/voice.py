@@ -2,7 +2,7 @@
 # Parler "Thoma", the shop AI on Fish (the narrator reference) through the phone sound; Telugu on Parler (Ravi = Prakash,
 # the AI = Kiran), the strict judge, the light phone sound. The AI's takes are judged after the phone filter, and MUST
 # lists words a take has to contain.
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep35/voice.py en|te [line numbers ...]
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep35/voice.py en|te [--keep] [line numbers ...]
 import hashlib
 import json
 import re
@@ -29,10 +29,11 @@ MUST = {"en": {1: [("brain",), ("phone",)], 2: [("4", "four"), ("free",)], 3: [(
                4: [("numbers", "number"), ("parameters", "parameter"), ("small",), ("language",)], 5: [("tiniest", "tiny"), ("half",)],
                6: [("forty", "40"), ("fourteen", "14")], 7: [("fourteen", "14"), ("forty", "40")], 8: [("diwali",), ("order",)],
                9: [("kilo", "kg"), ("diwali",), ("medium",)], 10: [("thirty", "39"), ("faster",)], 11: [("medium",), ("bills", "bill")],
-               12: [("nine", "9"), ("two", "2"), ("wrong",)], 13: [("which",)], 14: [("sorting",), ("medium",), ("calculator",)],
+               12: [("twenty", "20"), ("nine", "9"), ("two", "2"), ("wrong",)], 13: [("which",)], 14: [("sorting",), ("medium",), ("calculator",)],
                15: [("medium",), ("delete",), ("photos", "photo")], 16: [("medium",), ("installed", "install")],
                17: [("fifty", "52"), ("mornings", "morning")], 18: [("go",), ("other",), ("storage",), ("full",)]},
-        "te": {}}
+        "te": {1: [("ब्रेन", "ब्रैन", "brain")]}}   # Telugu as the judge writes it (Devanagari): "brain", not "breen". Line 10's
+# "తొమ్మిది" came out "tummidi" in four more takes (v3), so its first take stays (39/40 is on screen as it is said).
 
 
 def heard(path, who, n, lang):
@@ -56,7 +57,7 @@ def judge(path, text, lang, n):
     return ok and not miss, score - 0.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
 
 
-def main(lang, only):
+def main(lang, only, keep=False):
     sid = "ep35v1" if lang == "en" else "ep35te"
     spec = json.loads((ROOT / f"reels/{sid}.json").read_text())
     src = ROOT / f"video/public/reel/{sid}/src"
@@ -75,7 +76,7 @@ def main(lang, only):
                 voice = "fish:narrator" if fish else VOICE_EN[("en", who)] if lang == "en" else VOICE_TE[who]
                 key = hashlib.md5(f"{voice}|{text}".encode()).hexdigest()[:10]
                 cached = sorted(takes.glob(f"{key}_*.wav"))
-                best = (None, cached[0]) if cached and not only else None
+                best = (None, cached[0]) if cached and (keep or not only) else None   # --keep: a part whose text is unchanged keeps its take
                 if best:
                     print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, n)[2]}", flush=True)
                 for k in range(0 if best else 4):
@@ -107,4 +108,4 @@ def main(lang, only):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], {int(x) for x in sys.argv[2:]})
+    main(sys.argv[1], {int(x) for x in sys.argv[2:] if x != "--keep"}, "--keep" in sys.argv)

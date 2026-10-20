@@ -160,7 +160,9 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   EP33: "దొరకలేదు" through the AI's phone filter was heard as "turakaledu"; now "నో మ్యాచ్ అండి").
   A phone filter on Telugu keeps a low cut near 150 Hz (300 Hz took d vs t and the nasals: "బామ్" -> "bava"),
   and the takes are judged after the filter, not before (pipeline/ep33/voice_te.py).
-  Big numbers in English inside Telugu sentences; a short pause before a key number.
+  Numbers inside Telugu sentences: English worked for big ones (EP31-33), but EP35's "ఫోర్టీనా" came out "fortyna"
+  and Telugu number words (పద్నాలుగు, నలభై) came through; check each number in the transcript. A short pause before a
+  key number.
 - Fish can repeat a sentence or add words: judge every take with ASR (word hit, repeats, rate) before using it.
 - TTS sped up by the spec `tempo` (ffmpeg atempo) blurs key words: EP33 at 1.2x read "Keyword off" as "Keyword on",
   "pain relief" as "paint relief", "Test" as "just". Check each line after the build (Whisper on `line_NN.wav` or per
@@ -207,3 +209,11 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   stretched line (`video/public/reel/<id>/line_NN.wav`), and give a blurred line its own `tempo` (1.15-1.2).
 - A word that is misheard after two fixes (tempo, mix) gets reworded, not re-rolled (EP32: "re-rank" -> "add a
   re-ranker").
+- A quiz card is one short line ("MEDIUM: ?/40") with a 3-2-1 count, held 2.5 s or more (the `GAP` after its line):
+  EP35's first card had 16 words for 1.5 s and neither viewer could read it.
+- When one card counts right answers and another counts mistakes, write the unit on every number ("9 wrong") and say
+  "out of 20" in the voice (EP35: the bills bar "TINY 19/20" read as a good score).
+- Numbers on screen must add up across the reel (EP35's first cut: 1 GB free, 41 GB free after deleting the photos,
+  then "free: 1 GB" after 52 more photos).
+- In a Telugu pack the "music-only" level can cover only the music drop (the voice fills almost every second):
+  compare the voice and music stems before boosting the bed (EP35: "15 dB under" was the drop; the stems matched English).

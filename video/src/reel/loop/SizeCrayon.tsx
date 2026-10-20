@@ -57,7 +57,7 @@ const gmGrid = (c: Ctx, x: number, y: number, cols: number, rows: number, w: num
   }
 };
 // the phone's own "storage full" dialog
-const fullDialog = (c: Ctx, x: number, y: number, s: number, k: number, needs = "the free brain needs 4.7 GB") => {
+const fullDialog = (c: Ctx, x: number, y: number, s: number, k: number, needs = "the free brain needs 4.7 GB", free = "free: 1 GB") => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.scale(s * (0.85 + 0.15 * easeOut(k)), s * (0.85 + 0.15 * easeOut(k))); c.globalAlpha = clamp(k * 2);
   c.fillStyle = "rgba(0,0,0,0.25)"; rrect(c, -300 + 8, -120 + 10, 600, 240, 28); c.fill();
@@ -65,23 +65,25 @@ const fullDialog = (c: Ctx, x: number, y: number, s: number, k: number, needs = 
   c.fillStyle = "#dc2626"; rrect(c, -300, -120, 600, 86, 28); c.fill(); c.fillRect(-300, -60, 600, 26);
   c.font = SANS(52); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("⚠ Storage full", 0, -60);
   c.font = SANS(34, 600); c.fillStyle = INK; c.fillText(needs, 0, 22);
-  c.font = SANS(34, 600); c.fillStyle = "#dc2626"; c.fillText("free: 1 GB", 0, 76);
+  c.font = SANS(34, 600); c.fillStyle = "#dc2626"; c.fillText(free, 0, 76);
   c.restore();
 };
-// the storage bar: photos, WhatsApp, apps, free
-const storageBar = (c: Ctx, y: number, photos: number, label = true) => {
+// the storage bar: photos, WhatsApp, apps, the installed brain, free. The numbers add up across the reel: 1 GB free, the
+// good mornings deleted (1.2 free), the medium brain in (0.1 free), 52 more photos (full).
+const gb = (v: number) => (Math.abs(v - Math.round(v)) < 0.05 ? String(Math.round(v)) : v.toFixed(1));
+const storageBar = (c: Ctx, y: number, photos: number, label = true, brain = 0) => {
   const x0 = 140, w = 800, total = 96;
-  const parts: [string, number, string][] = [["Photos", photos, COL.orange], ["WhatsApp", 22, GREEN], ["Apps", 12, "#3b82f6"]];
+  const parts: [string, number, string][] = [["Photos", photos, COL.orange], ["WhatsApp", 22, GREEN], ["Apps", 12, "#3b82f6"], ["Brain", brain, "#a855f7"]];
   c.fillStyle = "#e2e8f0"; rrect(c, x0, y, w, 70, 18); c.fill();
   let x = x0;
   parts.forEach(([, v, col]) => { const ww = w * (v / total); c.fillStyle = col; c.fillRect(x, y, ww, 70); x += ww; });
   if (!label) return;
   c.font = SANS(30, 600); c.textAlign = "left";
-  c.fillStyle = COL.orange; c.fillText(`Photos ${photos} GB`, x0, y + 112);
-  c.fillStyle = GREEN; c.fillText("WhatsApp 22", x0 + 300, y + 112);
-  c.fillStyle = "#3b82f6"; c.fillText("Apps 12", x0 + 520, y + 112);
-  const free = total - photos - 34;
-  c.fillStyle = free <= 1 ? "#dc2626" : GREEN; c.textAlign = "right"; c.fillText(`free ${free} GB`, x0 + w, y + 112);
+  c.fillStyle = COL.orange; c.fillText(`Photos ${gb(photos)} GB`, x0, y + 112);
+  c.fillStyle = GREEN; c.fillText("WhatsApp 22", x0 + 265, y + 112);
+  c.fillStyle = "#3b82f6"; c.fillText("Apps 12", x0 + 490, y + 112);
+  const free = total - photos - 34 - brain;
+  c.fillStyle = free <= 1.05 ? "#dc2626" : GREEN; c.textAlign = "right"; c.fillText(`free ${gb(free)} GB`, x0 + w, y + 112);
 };
 // a jar of numbers (a model's parameters): taller = more numbers
 const jar = (c: Ctx, x: number, yBase: number, h: number, w: number, title: string, sub: string, col: string, k: number, r: () => number) => {
@@ -97,7 +99,7 @@ const jar = (c: Ctx, x: number, yBase: number, h: number, w: number, title: stri
   stroke(c, [[x - w / 2, yBase - h + 20], [x - w / 2, yBase], [x + w / 2, yBase], [x + w / 2, yBase - h + 20]], INK, 6, r, { passes: 2 });
   c.fillStyle = "#94a3b8"; rrect(c, x - w / 2 - 8, yBase - h, w + 16, 26, 8); c.fill();
   c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText(title, x, yBase + 52);
-  c.font = SANS(28, 600); c.fillStyle = "#334155"; c.fillText(sub, x, yBase + 92);
+  c.font = SANS(32, 600); c.fillStyle = "#334155"; sub.split(" · ").forEach((t, i) => c.fillText(t, x, yBase + 92 + i * 38));
   c.restore();
 };
 // the four trays the messages are sorted into
@@ -119,13 +121,14 @@ const chipMsg = (c: Ctx, x: number, y: number, t: string, k: number, bg = "#dcf8
   c.fillStyle = INK; c.textAlign = "center"; c.fillText(t, x, y + 9); c.restore();
 };
 // a result bar out of `of`
-const sizeBar = (c: Ctx, y: number, label: string, v: number, of: number, col: string, k: number, note?: string) => {
+const sizeBar = (c: Ctx, y: number, label: string, v: number, of: number, col: string, k: number, note?: string, unit?: string) => {
   if (k <= 0) return;
-  const x0 = 150, wmax = 600, q = easeOut(k);
+  const x0 = 150, wmax = unit ? 780 : 600, q = easeOut(k);
   c.font = caveat(54); c.fillStyle = INK; c.textAlign = "left"; c.fillText(label, x0, y - 16);
   c.fillStyle = "#e2e8f0"; rrect(c, x0, y, wmax, 80, 16); c.fill();
   c.fillStyle = col; rrect(c, x0, y, Math.max(20, wmax * (v / of) * q), 80, 16); c.fill();
-  c.font = caveat(72); c.fillStyle = INK; c.textAlign = "left"; c.fillText(`${Math.round(v * q)}/${of}`, x0 + wmax + 22, y + 62);
+  if (unit) { c.font = caveat(66); c.fillStyle = col; c.textAlign = "right"; c.fillText(`${Math.round(v * q)} ${unit}`, x0 + wmax, y - 14); }
+  else { c.font = caveat(72); c.fillStyle = INK; c.textAlign = "left"; c.fillText(`${Math.round(v * q)}/${of}`, x0 + wmax + 22, y + 62); }
   if (note) { c.font = handF(34); c.fillStyle = "#334155"; c.fillText(note, x0 + 12, y + 122); }
 };
 const rule = (c: Ctx, x: number, y: number, k: number[]) => {
@@ -164,9 +167,14 @@ const StSize: React.FC<SP> = ({ s }) => {
       <Sfx key={k("k")} at={at + 2} src="audio/sfx_snap.wav" vol={0.45} />);
     if (b.prop === "storage") sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.5) - 4} src="audio/gag_bonk.wav" vol={0.45} />);
     if (b.prop === "jars") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.55) - 4} src="audio/sfx_pop.wav" vol={0.35} />);
-    if (b.prop === "test") [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 8 + q * 9} src="audio/sfx_tick.wav" vol={0.15} />));
+    if (b.prop === "test") {
+      [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 8 + q * 9} src="audio/sfx_tick.wav" vol={0.15} />));
+      sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.6) - 40} src="reel/sfx_riser.wav" vol={0.32} />, <Sfx key={k("o")} at={cue(i, 1, 0.6) + 2} src="audio/gag_bonk.wav" vol={0.32} />);
+    }
+    if (b.prop === "bills") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.35) - 40} src="reel/sfx_riser.wav" vol={0.3} />,
+      <Sfx key={k("o")} at={cue(i, 1, 0.35)} src="audio/gag_bonk.wav" vol={0.3} />, <Sfx key={k("v")} at={cue(i, 2, 0.7)} src="audio/gag_bonk.wav" vol={0.26} />);
     if (b.prop === "diwali") sfx.push(<Sfx key={k("p")} at={at + Math.round(l.frames * 0.55)} src="audio/gag_pop.wav" vol={0.45} />);
-    if (b.prop === "quiz") [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={end + 6 + q * 10} src="audio/sfx_tick.wav" vol={0.3} />));
+    if (b.prop === "quiz") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={end + 6 + q * 24} src="audio/sfx_tick.wav" vol={0.38} />));
     if (b.prop === "bars") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.02) - 6} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("s")} at={cue(i, 3, 0.75) - 4} src="audio/sfx_success.wav" vol={0.35} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 1, 0.5) - 4} src="audio/sfx_snap.wav" vol={0.35} />);
     if (b.prop === "delete") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) + 4} src="audio/sfx_whoosh.wav" vol={0.35} />);
@@ -205,17 +213,17 @@ const StSize: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "jars") {
             const c1 = cu(1, 0.55);
-            jar(c, 260, 980, 200, 170, "TINY", "½ billion · 0.5 GB", COL.red, seg(p, 0.02, 0.14), r);
-            jar(c, 540, 980, 330, 210, "MEDIUM", "1.5 billion · 1.1 GB", GREEN, seg(p, 0.08, 0.2), r);
-            jar(c, 820, 980, 520, 250, "BIG", "7 billion · 4.7 GB", AMBER, seg(p, 0.14, 0.26), r);
-            tag(c, "parameters = the numbers a brain is made of", 540, 400, 38, COL.yellow, INK, -0.01, seg(p, 0.02, 0.12));
-            c.font = handF(30); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("(4-bit files)", 540, 1110);
+            jar(c, 260, 960, 200, 170, "TINY", "½ billion · 0.5 GB", COL.red, seg(f, 0, 8), r);
+            jar(c, 540, 960, 330, 210, "MEDIUM", "1.5 billion · 1.1 GB", GREEN, seg(f, 3, 11), r);
+            jar(c, 820, 960, 520, 250, "BIG", "7 billion · 4.7 GB", AMBER, seg(f, 6, 14), r);
+            tag(c, "parameters = the numbers a brain is made of", 540, 400, 38, COL.yellow, INK, -0.01, seg(f, 0, 8));
+            c.font = handF(30); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("(the three we tested: Qwen2.5, 4-bit files)", 540, 1160);
             if (f >= c1 - 4) {
               const k = seg(f, c1 - 4, c1 + 6);
-              c.save(); c.globalAlpha = k; c.fillStyle = "#0f172a"; rrect(c, 130, 1160, 820, 220, 24); c.fill();
-              c.font = SANS(44); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("Phone-size brains =", 540, 1228);
-              c.fillText("SMALL LANGUAGE MODELS", 540, 1284);
-              c.font = SANS(30, 600); c.fillStyle = "#e2e8f0"; c.fillText("Llama 3.2 1B · Gemma 3 1B · Phi-3-mini", 540, 1340); c.restore();
+              c.save(); c.globalAlpha = k; c.fillStyle = "#0f172a"; rrect(c, 130, 1190, 820, 220, 24); c.fill();
+              c.font = SANS(44); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("Phone-size brains =", 540, 1258);
+              c.fillText("SMALL LANGUAGE MODELS", 540, 1314);
+              c.font = SANS(32, 600); c.fillStyle = "#e2e8f0"; c.fillText("e.g. Llama 3.2 1B · Gemma 3 1B · Qwen2.5 1.5B", 540, 1372); c.restore();
             }
           }
           if (b.prop === "test" || b.prop === "diwali") {
@@ -230,7 +238,7 @@ const StSize: React.FC<SP> = ({ s }) => {
               });
               c.font = handF(30); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("40 messages · the right tray written down first", 540, 460);
               const c1 = cu(1, 0.6);
-              if (f >= c1 - 6) sizeBar(c, 1240, "TINY (0.5 GB)", 14, 40, COL.red, seg(f, c1 - 6, c1 + 12));
+              if (f >= c1 - 6) sizeBar(c, 1240, "TINY (0.5 GB)", 14, 40, COL.red, seg(f, c1 - 6, c1 + 12), f >= c1 + 14 ? "guessing at random gets about 10" : undefined);
             } else {
               const k = seg(p, 0.05, 0.25), land = easeOut(seg(p, 0.3, 0.55));
               chipMsg(c, 540 - 290 * land, 600 + 400 * land, "happy diwali anna and family", k * (1 - 0.3 * land), "#fde68a");
@@ -249,16 +257,16 @@ const StSize: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "bills") {
             const c1 = cu(1, 0.35), c2 = cu(2, 0.7);
-            c.font = handF(34); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("wrong bills, out of 20", 540, 420);
-            sizeBar(c, 520, "TINY", 19, 20, COL.red, seg(p, 0.02, 0.15));
-            sizeBar(c, 740, "MEDIUM", 9, 20, COL.red, seg(f, c1 - 4, c1 + 12));
-            sizeBar(c, 960, "BIG", 2, 20, COL.red, seg(f, c2 - 4, c2 + 12));
+            c.font = SANS(48); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("MISTAKES, out of 20 bills", 540, 425);
+            sizeBar(c, 560, "TINY", 19, 20, COL.red, seg(p, 0.02, 0.15), undefined, "wrong");
+            sizeBar(c, 780, "MEDIUM", 9, 20, COL.red, seg(f, c1 - 4, c1 + 12), undefined, "wrong");
+            sizeBar(c, 1000, "BIG", 2, 20, COL.red, seg(f, c2 - 4, c2 + 12), undefined, "wrong");
             if (f >= c2 + 10) tag(c, "a wrong bill = a cheated customer", 540, 1220, 44, "#fee2e2", "#991b1b", -0.02, seg(f, c2 + 10, c2 + 18));
           }
           if (b.prop === "delete" || b.prop === "installed") {
             const c1 = cu(1, 0.45);
             const gone = b.prop === "delete" ? easeOut(seg(f, c1, endL)) : 1;
-            storageBar(c, 380, Math.round(61 - 40 * gone));
+            storageBar(c, 380, 61 - 0.2 * gone, true, b.prop === "installed" ? 1.1 : 0);
             if (b.prop === "delete") {
               gmGrid(c, 140, 560, 4, 3, 185, 150, 20, 1 - gone);
               for (let q = 0; q < 6; q++) {   // photos flying into the bin
@@ -283,7 +291,7 @@ const StSize: React.FC<SP> = ({ s }) => {
               gm(c, 300 + q * 50 + t * (790 - 300 - q * 50), 420 + t * 540, 110, 88, q);
             }
             tag(c, "52 good mornings → OTHER ✓", 540, 840, 46, "#e0e7ff", INK, -0.02, seg(p, 0.2, 0.32));
-            if (f >= c1 - 4) fullDialog(c, 540, 680, 1.1, seg(f, c1 - 4, c1 + 6), "52 new photos");
+            if (f >= c1 - 4) fullDialog(c, 540, 680, 1.1, seg(f, c1 - 4, c1 + 6), "52 new photos", "free: 0 GB");
           }
           c.restore();
         } else {
@@ -321,14 +329,21 @@ const StSize: React.FC<SP> = ({ s }) => {
           if (n === 7) bubble(c, 300, 560, "14 / 40?!", 90, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (n === 9) {
             if (f < cu(1, 0.6)) bubble(c, 330, 560, "₹ per kilo?!", 70, seg(p, 0.05, 0.2), COL.yellow);
-            if (f > endL + 1) {   // the quiz, held after the line
+            if (f > endL + 1) {   // the quiz, held after the line: one question and a 3-2-1 (the music drops out on the 1)
               const k = easeOut(seg(f, endL + 1, endL + 7));
               c.save(); c.globalAlpha = 0.5 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); c.restore();
               c.save(); c.globalAlpha = k; c.translate(W / 2, 800); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
-              c.fillStyle = "#fffdf5"; rrect(c, -460, -260, 920, 520, 30); c.fill();
-              c.font = SANS(44); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("YOUR GUESS", 0, -170);
-              c.font = SANS(60); c.fillStyle = INK; c.fillText("MEDIUM (1.1 GB):", 0, -70); c.fillText("how many right,", 0, 4); c.fillText("out of 40?", 0, 78);
-              c.font = SANS(36, 600); c.fillStyle = "#475569"; c.fillText("(the tiny one got 14)", 0, 170);
+              c.fillStyle = "#fffdf5"; rrect(c, -460, -300, 920, 600, 30); c.fill();
+              c.font = SANS(48); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("YOUR GUESS", 0, -205);
+              c.font = SANS(104); c.fillStyle = INK; c.fillText("MEDIUM: ?/40", 0, -60);
+              c.font = SANS(40, 600); c.fillStyle = "#475569"; c.fillText("(tiny got 14)", 0, 30);
+              const t = f - endL - 6, q = 3 - Math.floor(t / 24);   // 3, 2, 1: 0.8 s each, with the ticks
+              if (t >= 0 && q >= 1) {
+                const pop = 1 + 0.25 * (1 - clamp((t % 24) / 6));
+                c.save(); c.translate(0, 175); c.scale(pop, pop);
+                c.beginPath(); c.arc(0, 0, 72, 0, 7); c.fillStyle = q === 1 ? COL.red : INK; c.fill();
+                c.font = SANS(96); c.fillStyle = "#fff"; c.fillText(String(q), 0, 34); c.restore();
+              }
               c.restore();
             }
           }
@@ -341,7 +356,7 @@ const StSize: React.FC<SP> = ({ s }) => {
               const t = clamp(k * 8 - q); if (t <= 0) continue;
               c.save(); c.globalAlpha = t; gm(c, 120 + (q % 4) * 220, 300 + Math.floor(q / 4) * 190, 190, 160, q); c.restore();
             }
-            tag(c, "Family group: 52 new photos", W / 2, 720, 50, GREEN, "#fff", -0.02, seg(p, 0.05, 0.2));
+            tag(c, "Family group: 52 new photos", W / 2, 475, 50, GREEN, "#fff", -0.02, seg(p, 0.05, 0.2));
           }
         }
       }} />

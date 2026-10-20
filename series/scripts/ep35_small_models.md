@@ -1,4 +1,4 @@
-# EP35 "The brain that didn't fit" (model size & small language models): script v2, after the script-stage review
+# EP35 "The brain that didn't fit" (model size & small language models): script v3, after the render review
 
 v1 -> v2 (script review, a Telugu viewer and a developer; both: the bills rule contradicted the numbers, the quiz was
 dead, "small language model" was never said; keep the good-morning loop): the rule now has a pass mark per job (sorting:
@@ -12,6 +12,24 @@ three short rows held 3 s; Ravi notices 1.1 GB is more than his 1 GB free before
 files"; the giants' graphics cards stay for EP36. Telugu: "ఏఐ" written whole (a lone "ఏ" reads "which"), "బ్రెయిన్ అంతా
 నంబర్లే" (not "it learned numbers": that read as "it learned to count"), "దీపావళి కేజీ ఎంత?!", "నాలుగు రెట్లు ఫాస్ట్",
 "బిల్లులు వేస్తుంది" (EP34's verb), the test numbers all in English.
+
+v2 -> v3 (render review, the same two viewers; both: the quiz card was gone before anyone could guess, and the bills
+bars read like scores, "TINY 19/20" looked good): the quiz is one line, "MEDIUM: ?/40", held 2.6 s with a 3-2-1 count
+(the music drops out on the 1); the bills card says "MISTAKES, out of 20 bills" and "19 wrong / 9 wrong / 2 wrong", and
+the AI says "Out of twenty, medium got nine wrong. Big got two wrong." (it had sounded like a telegram); the storage
+numbers add up through the ending (1 GB free; the good mornings deleted, 1.2 GB; the medium brain in, 0.1 GB; 52 more
+photos, 0 GB; the bar had shown 41 GB free after the delete); the jars name the three we tested (Qwen2.5) and the chip's
+examples are Llama 3.2 1B, Gemma 3 1B and Qwen2.5 1.5B (Phi-3-mini, 3.8 billion, would not fit in 1 GB); under the
+tiny one's 14, "guessing at random gets about 10"; a riser and a bonk lead into the 14 and into the bills; the jars are
+on screen from the cut (the Telugu cut showed an empty screen for a second); the family-group banner no longer covers
+"STORAGE FULL"; the captions use digits for the numbers ("forty of your | messages" had split). Heard back while
+voicing (misheard = mispronounced): English "Fine, delete" was heard "Find", now "Okay, delete"; "Filed under OTHER" was
+heard "field under", now "Those go in OTHER". Telugu: line 10 now says the medium one is the fast one ("కానీ మీడియం
+నాలుగు రెట్లు వేగంగా చేసింది": "కానీ నాలుగు రెట్లు ఫాస్ట్" read as the big one, and "ఫాస్ట్" came out "forced"); "బ్రేన్"
+in lines 1, 3 and 4 ("బ్రెయిన్" came out "breen"); the test numbers in Telugu words ("ఫోర్టీనా" came out "fortyna");
+"మీడియం: ముప్పై తొమ్మిది కరెక్ట్" (a bare "ముప్పై తొమ్మిది." was dropped in every take). Not changed: the Telugu
+music level (the pack's "15 dB under" measured only the music drop; the voice and music stems sit as in English, within
+1 dB). Final length: English 70 s, Telugu 69 s.
 
 Teaching skit in Ravi anna's shop (cast of skit 01, EP33, EP34). The plot carries the topic:
 - **Failure (frame 1):** Ravi wants the shop AI's free brain (EP34) inside his phone, so it works at the counter with
@@ -67,35 +85,35 @@ Lines of 1-3 s; never more than two AI lines in a row; Ravi asks what the viewer
 | 1 | Ravi | AI! The free brain won't fit in my phone! | shop, wide: a queue; Ravi holds up his phone: a wall of good-morning photos (sunflowers, sunrises) under a red pop-up "Storage full"; sticker "HE WANTS AI WITHOUT INTERNET. IT DOESN'T FIT."; tag "EP35 · AI From Scratch" |
 | 2 | AI | It's 4.7 GB. [1] You have 1 GB free. | the phone at full frame: storage bar, "Photos 61 GB" of good mornings, a sliver "free 1 GB"; the brain file "4.7 GB" bounces off |
 | 3 | Ravi | Those are blessings! Get a smaller brain! | Ravi hugs his phone |
-| 4 | AI | A brain is made of numbers: parameters. [1] Phone-size ones are small language models. | insert: three jars of numbers, BIG "7 billion parameters · 4.7 GB", MEDIUM "1.5 billion · 1.1 GB", TINY "half a billion · 0.5 GB" ("4-bit files"); a phone outline "1 GB free": only TINY fits; on [1] a chip "SMALL LANGUAGE MODELS: Llama 3.2 1B · Gemma 3 1B · Phi-3-mini" |
+| 4 | AI | A brain is made of numbers: parameters. [1] Phone-size ones are small language models. | insert: three jars of numbers, BIG "7 billion · 4.7 GB", MEDIUM "1.5 billion · 1.1 GB", TINY "½ billion · 0.5 GB" ("the three we tested: Qwen2.5, 4-bit files"); on [1] a chip "Phone-size brains = SMALL LANGUAGE MODELS, e.g. Llama 3.2 1B · Gemma 3 1B · Qwen2.5 1.5B" |
 | 5 | Ravi | Then the tiniest! Half a GB! | |
-| 6 | AI | We tested all three on forty of your messages. [1] Tiny one: fourteen right. | the phone: WhatsApp messages dropping into four trays ORDER / PAYMENT / COMPLAINT / OTHER; on [1] TINY 14/40 |
+| 6 | AI | We tested all three on forty of your messages. [1] Tiny one: fourteen right. | the phone: WhatsApp messages dropping into four trays ORDER / PAYMENT / COMPLAINT / OTHER; a riser, then on [1] TINY 14/40 with a bonk, "guessing at random gets about 10" |
 | 7 | Ravi | Fourteen?! Out of forty?! | |
 | 8 | AI | It filed "Happy Diwali" as an order. | "happy diwali anna and family" lands in ORDER, a red ✕ (a real miss from our test) |
-| 9 | Ravi | How much per kilo is Diwali?! [1] And the medium one? | after the line, a QUIZ card: "MEDIUM: how many right, out of 40? Your guess?" (1.5 s, a clock ticks) |
-| 10 | AI | Thirty-nine. [1] Same as the big one. [2] Four times faster. | the music drops out before it; bars TINY 14/40 · MEDIUM 39/40 · BIG 39/40, sizes 0.5 / 1.1 / 4.7 GB; on [2] "4x FASTER" |
+| 9 | Ravi | How much per kilo is Diwali?! [1] And the medium one? | after the line, a QUIZ card: "YOUR GUESS · MEDIUM: ?/40 · (tiny got 14)" with a 3-2-1 count, 2.6 s, a tick on each number |
+| 10 | AI | [1] Thirty-nine. [2] Same as the big one. [3] Four times faster. | the music drops out on the count's 1, a hit on "Thirty-nine"; bars TINY 14/40 · MEDIUM 39/40 · BIG 39/40, sizes 0.5 / 1.1 / 4.7 GB; "= same", then "4x FASTER" |
 | 11 | Ravi | Medium it is! It'll do my bills too! | |
-| 12 | AI | Bills? [1] Medium: nine wrong. [2] Big: two wrong. | card: 20 bills (EP34's test, these files): TINY 19 wrong · MEDIUM 9 wrong · BIG 2 wrong |
+| 12 | AI | Bills? Out of twenty, [1] medium got nine wrong. [2] Big got two wrong. | card "MISTAKES, out of 20 bills" (EP34's test, these files): TINY 19 wrong · MEDIUM 9 wrong · BIG 2 wrong, a riser into the medium one; "a wrong bill = a cheated customer" |
 | 13 | Ravi | So which one do I use?! | |
 | 14 | AI | Sorting? One miss is okay: medium. [1] Bills? No misses allowed: calculator. | rule card, three rows held 3 s: "SORTING: 1 miss OK → MEDIUM ✓" · "BILLS: 0 misses → none passed → CALCULATOR" · "Test each size on YOUR job. Keep the smallest that passes." |
-| 15 | Ravi | Medium is 1.1. I have 1! [1] Fine, delete the good-morning photos. | the phone: photos flying into a bin |
-| 16 | AI | Done. Medium brain installed. | "MEDIUM ✓ 1.1 GB", the storage bar with room |
-| 17 | Ravi | (the phone buzzes: "Family group: 52 new photos") Who sent fifty-two good mornings?! | the bar fills again |
-| 18 | AI | Filed under OTHER. [1] Storage full. | the 52 photos drop into OTHER; "Storage full" pop-up; loops to frame 1 |
+| 15 | Ravi | Medium is 1.1. I have 1! [1] Okay, delete the good-morning photos. | the phone: "MEDIUM needs 1.1 GB · free 1 GB", then the photos fly into a bin: free 1.2 GB |
+| 16 | AI | Done. Medium brain installed. | "MEDIUM ✓ 1.1 GB · works offline", the bar: free 0.1 GB |
+| 17 | Ravi | (the phone buzzes: "Family group: 52 new photos") Who sent fifty-two good mornings?! | 52 good-morning photos pile up over the shop |
+| 18 | AI | Those go in OTHER. [1] Storage full. | the photos drop into OTHER; "Storage full · 52 new photos · free: 0 GB"; loops to frame 1 |
 
 ## Script (Telugu, same beats; English on-screen text)
-1. ఏఐ, ఫ్రీ బ్రెయిన్ నా ఫోన్ లో పట్టట్లేదు!
+1. ఏఐ, ఫ్రీ బ్రేన్ నా ఫోన్ లో పట్టట్లేదు!
 2. అది ఫోర్ పాయింట్ సెవెన్ జీబీ. [1] మీ దగ్గర ఖాళీ వన్ జీబీనే.
-3. అవి దీవెనలు! చిన్న బ్రెయిన్ పెట్టు!
-4. బ్రెయిన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.
+3. అవి దీవెనలు! చిన్న బ్రేన్ పెట్టు!
+4. బ్రేన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.
 5. అయితే అన్నిటికంటే చిన్నది! హాఫ్ జీబీ!
-6. మూడింటినీ మీ ఫార్టీ మెసేజ్ ల మీద టెస్ట్ చేశాం. [1] చిన్నది: ఫోర్టీన్ కరెక్ట్.
-7. ఫోర్టీనా?! ఫార్టీలో?!
+6. మూడింటినీ మీ నలభై మెసేజ్ ల మీద టెస్ట్ చేశాం. [1] చిన్నది: పద్నాలుగే కరెక్ట్.
+7. పద్నాలుగా?! నలభైలో?!
 8. హ్యాపీ దీపావళి ని ఆర్డర్ అనుకుంది.
 9. దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?
-10. థర్టీ నైన్. [1] పెద్దది కూడా అంతే. [2] కానీ నాలుగు రెట్లు ఫాస్ట్.
+10. [1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.
 11. మీడియమే! నా బిల్లులు కూడా వేస్తుంది!
-12. బిల్లులా? [1] మీడియం: తొమ్మిది తప్పులు. [2] పెద్దది: రెండు తప్పులు.
+12. బిల్లులా? ఇరవై బిల్లుల్లో, [1] మీడియం తొమ్మిది తప్పులు చేసింది. [2] పెద్దది రెండు తప్పులు చేసింది.
 13. మరి ఏది వాడాలి?!
 14. మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.
 15. మీడియం వన్ పాయింట్ వన్. నా దగ్గర వన్ ఏ! [1] సరే, గుడ్ మార్నింగ్ ఫోటోలు డిలీట్ చెయ్.
@@ -110,7 +128,7 @@ the quiz holds with a ticking clock, then the music drops out before "Thirty-nin
 into the rule; a whoosh as the photos go; a ding for "installed"; 52 pings speeding up into the "Storage full" hit, into
 the loop.
 
-## Caption (draft)
+## Caption (draft; the final text is in out/037_ep35_reel_captions.txt)
 "Ravi wanted the shop's free AI brain inside his phone. The phone said: storage full. A model's size is how many numbers
 it learned: our big one is 7 billion numbers (4.7 GB), the middle one 1.5 billion (1.1 GB), the tiny one half a billion.
 Brains small enough for a phone are called small language models. We tested all three sizes on 40 shop messages: tiny

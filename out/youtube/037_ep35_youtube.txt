@@ -7,9 +7,10 @@ The AI Brain That Didn't Fit: Small Language Models, Tested on a Shop's Messages
 === DESCRIPTION ===
 Ravi anna wants the shop's free AI brain inside his phone, so it works without internet. The phone's storage is full of good-morning photos. A model's size is its parameters, the numbers it's made of: 7 billion is a 4.7 GB file, 1.5 billion is 1.1 GB, half a billion is 0.5 GB. Brains small enough for a phone are called small language models.
 
-Our real test, 40 shop WhatsApp messages sorted into order / payment / complaint / other: the tiny one got 14 right (it filed "Happy Diwali" as an order), the medium one 39, the big one 39, and the medium one was 4x faster than the big one. On 20 bills: 19, 9 and 2 mistakes.
+Our real test, 40 shop WhatsApp messages sorted into order / payment / complaint / other: the tiny one got 14 right (random guessing gets about 10; it filed "Happy Diwali" as an order), the medium one 39, the big one 39, and the medium one was 4x faster than the big one. On 20 bills: 19, 9 and 2 mistakes.
 
 How to use it: give each job a pass mark (sorting can live with one miss, a bill can't), try the sizes on your own examples, and keep the smallest that passes. For money, use a calculator.
+Try one on your phone: free apps like PocketPal AI (open source) or Google's AI Edge Gallery download a small model once, then run it with no internet. Start with a 1B-size model.
 
 How we tested (run by us): Qwen2.5-Instruct 0.5B, 1.5B and 7B, Qwen's own 4-bit GGUF files, llama.cpp on a laptop CPU, no graphics card. A small demo, not a benchmark.
 Sources: Meta, Llama 3.2 (Sept 2024); Microsoft, Phi-3 technical report (Apr 2024); Apple's foundation-model reports (2024, 2025); Google Developers Blog, Gemma 3 on mobile (2025); Qwen2.5 model cards.
@@ -29,6 +30,7 @@ Internet lekunda pani cheyyalani Ravi anna shop AI free brain ni phone lo pettaa
 Maa real test, 40 shop WhatsApp messages sort cheyyadam: tiny 14 correct ("Happy Diwali" ni order anukundi), medium 39, pedda 39; medium pedda daanikante 4 retlu fast. 20 billullo 19, 9, 2 tappulu.
 
 Ela vaadaali: prati paniki pass mark pettandi (sorting lo okka tappu parledu, billulo kudaradu), mee examples meeda sizes try chesi pass ayye vaatilo chinnadi unchukondi. Dabbu lekkalaki calculator.
+Phone lo try cheyyadaniki: PocketPal AI (open source) leka Google AI Edge Gallery lanti free apps chinna model ni okasari download chesi, internet lekunda run chestaayi. 1B size model tho modalu pettandi.
 Test vivaraalu, sources: English description lo unnaayi.
 
 Next: EP36, GPUs, AI chips.

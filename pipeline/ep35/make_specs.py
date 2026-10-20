@@ -1,5 +1,5 @@
 # EP35 "The brain that didn't fit" (model size & small language models): writes reels/ep35v1.json (English) and
-# reels/ep35te.json (Telugu). Lines come from the script (series/scripts/ep35_small_models.md, v2); [n] marks the words
+# reels/ep35te.json (Telugu). Lines come from the script (series/scripts/ep35_small_models.md, v3); [n] marks the words
 # the pictures wait for. Voices: pipeline/ep35/voice.py (as EP34's). Numbers: our test (series/scripts/ep35_demo).
 #   python3 pipeline/ep35/make_specs.py
 import json
@@ -22,7 +22,7 @@ LINES = {
     9: ("ravi", "ravi", "quiz", "How much per kilo is Diwali?! [1] And the medium one?"),
     10: ("ai", "screen", "bars", "[1] Thirty-nine. [2] Same as the big one. [3] Four times faster."),   # [1]: the music drops out before it
     11: ("ravi", "ravi", "medium", "Medium it is! It'll do my bills too!"),
-    12: ("ai", "screen", "bills", "Bills? [1] Medium: nine wrong. [2] Big: two wrong."),
+    12: ("ai", "screen", "bills", "Bills? Out of twenty, [1] medium got nine wrong. [2] Big got two wrong."),   # "out of what?" (v3)
     13: ("ravi", "ravi", "which", "So which one do I use?!"),
     14: ("ai", "wide", "rule", "Sorting? One miss is okay: medium. [1] Bills? No misses allowed: calculator."),
     15: ("ravi", "screen", "delete", "Medium is 1.1. I have 1! [1] Okay, delete the good-morning photos."),   # "Fine" was heard "Find"
@@ -31,6 +31,9 @@ LINES = {
     18: ("ai", "screen", "full", "Those go in OTHER. [1] Storage full."),   # "Filed under" was heard "field under"
 }
 SHOW = {n: t.replace("[1] ", "").replace("[2] ", "").replace("[3] ", "") for n, (_, _, _, t) in LINES.items()}
+# captions with digits where the line is all numbers (and "forty of your | messages" no longer splits)
+SHOW.update({6: "We tested all three on 40 of your messages. Tiny one: 14 right.", 7: "14?! Out of 40?!",
+             12: "Bills? Out of 20, medium got 9 wrong. Big got 2 wrong.", 17: "Who sent 52 good mornings?!"})
 # English spoken forms: numbers and units in words, capitals out
 TTS_EN = {1: "AI! The free brain won't fit in my phone!", 2: "It's four point seven gigabytes. [1] You have one gigabyte free.",
           5: "Then the tiniest! Half a gigabyte!", 15: "Medium is one point one. I have one! [1] Okay, delete the good morning photos.",
@@ -43,35 +46,35 @@ SCENES = [("sz_a", 1, 3, {"rise": 1.25, "tail": 0.1}),
           ("sz_b", 4, 5, {"lift": 0.6, "pre": 0.35, "boost": 0.6, "tail": 0.1}),
           ("sz_c", 6, 9, {"lift": 0.5, "pre": 0.35, "boost": 0.8, "tail": 0.1}),
           ("sz_d", 10, 13, {"drop_cue": 1, "boost": 1.0, "tail": 0.15}),
-          ("sz_e", 14, 15, {"lift": 0.5, "pre": 0.35, "boost": 1.15, "tail": 0.1}),
+          ("sz_e", 14, 15, {"lift": 0.5, "pre": 0.35, "boost": 1.15, "swell": [1, 1, 1.3], "tail": 0.1}),   # v3: swells from "Okay, delete" into the ending
           ("sz_f", 16, 18, {"outro": True, "boost": 1.35, "rise": 1.4, "tail": 0.0})]
 # seconds after line n (default 0.16): the quiz card's hold after 9; the rule card on its own after 14
-GAP = {1: 0.2, 8: 0.35, 9: 1.5, 10: 0.35, 12: 0.4, 14: 1.0, 16: 0.3, 17: 0.25}
+GAP = {1: 0.2, 8: 0.35, 9: 2.6, 10: 0.35, 12: 0.4, 14: 1.0, 16: 0.3, 17: 0.25}   # 9: the quiz holds for its countdown (v3: 1.5 s was too short to guess)
 TE = {
-    1: "ఏఐ, ఫ్రీ బ్రెయిన్ నా ఫోన్ లో పట్టట్లేదు!",
+    1: "ఏఐ, ఫ్రీ బ్రేన్ నా ఫోన్ లో పట్టట్లేదు!",   # "బ్రెయిన్" came out "breen"
     2: "అది ఫోర్ పాయింట్ సెవెన్ జీబీ. [1] మీ దగ్గర ఖాళీ వన్ జీబీనే.",
-    3: "అవి దీవెనలు! చిన్న బ్రెయిన్ పెట్టు!",
-    4: "బ్రెయిన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.",
+    3: "అవి దీవెనలు! చిన్న బ్రేన్ పెట్టు!",
+    4: "బ్రేన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.",
     5: "అయితే అన్నిటికంటే చిన్నది! హాఫ్ జీబీ!",
     6: "మూడింటినీ మీ నలభై మెసేజ్ ల మీద టెస్ట్ చేశాం. [1] చిన్నది: పద్నాలుగే కరెక్ట్.",   # Telugu numbers: "ఫోర్టీనా" was heard "fortyna"
     7: "పద్నాలుగా?! నలభైలో?!",
     8: "హ్యాపీ దీపావళి ని ఆర్డర్ అనుకుంది.",
     9: "దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?",
-    10: "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",   # a bare "ముప్పై తొమ్మిది." first was dropped in all four takes
+    10: "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.",   # a bare "ముప్పై తొమ్మిది." first was dropped in all four takes; v3: "కానీ నాలుగు రెట్లు ఫాస్ట్" read as the big one, and "ఫాస్ట్" came out "forced"
     11: "మీడియమే! నా బిల్లులు కూడా వేస్తుంది!",
-    12: "బిల్లులా? [1] మీడియం: తొమ్మిది తప్పులు. [2] పెద్దది: రెండు తప్పులు.",
+    12: "బిల్లులా? ఇరవై బిల్లుల్లో, [1] మీడియం తొమ్మిది తప్పులు చేసింది. [2] పెద్దది రెండు తప్పులు చేసింది.",
     13: "మరి ఏది వాడాలి?!",
     14: "మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.",
     15: "మీడియం వన్ పాయింట్ వన్. నా దగ్గర వన్ ఏ! [1] సరే, గుడ్ మార్నింగ్ ఫోటోలు డిలీట్ చెయ్.",
-    16: "అయిపోయింది. మీడియం బ్రెయిన్ ఇన్స్టాల్ అయింది.",
+    16: "అయిపోయింది. మీడియం బ్రెయిన్ ఇన్స్టాల్ అయింది.",   # this take's "brain" was heard right: kept
     17: "యాభై రెండు గుడ్ మార్నింగ్ లు ఎవరు పంపారు?!",
     18: "అవి అదర్ లో పెట్టాను. [1] స్టోరేజ్ ఫుల్.",
 }
 # long Telugu lines voiced as two takes, joined (EP34, skit 03): 12 babbled in all four tries, 14 lost its first half
 TEMPO_TE = {10: 1.0, 12: 1.0}   # the test's numbers at their own pace (the 39 take is fast)
-TE_PART2 = {12: ("బిల్లులా? మీడియం: తొమ్మిది తప్పులు.", "పెద్దది: రెండు తప్పులు."),
+TE_PART2 = {12: ("బిల్లులా? ఇరవై బిల్లుల్లో, మీడియం తొమ్మిది తప్పులు చేసింది.", "పెద్దది రెండు తప్పులు చేసింది."),
             14: ("మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం.", "బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్."),
-            10: ("మీడియం: ముప్పై తొమ్మిది కరెక్ట్.", "పెద్దది కూడా అంతే, కానీ నాలుగు రెట్లు ఫాస్ట్.")}
+            10: ("మీడియం: ముప్పై తొమ్మిది కరెక్ట్.", "పెద్దది కూడా అంతే, కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.")}
 YT = {"sz_a": "The brain won't fit", "sz_b": "Small language models", "sz_c": "Our test: 40 messages", "sz_d": "Medium vs big",
       "sz_e": "Which one to use", "sz_f": "Storage full again"}
 

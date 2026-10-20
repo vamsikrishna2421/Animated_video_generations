@@ -75,7 +75,7 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "ఏఐ, ఫ్రీ బ్రెయిన్ నా ఫోన్ లో పట్టట్లేదు!",
+     "text": "ఏఐ, ఫ్రీ బ్రేన్ నా ఫోన్ లో పట్టట్లేదు!",
      "show": "AI! The free brain won't fit in my phone!",
      "maxgap": 0.28,
      "gap": 0.2,
@@ -93,7 +93,7 @@
     {
      "who": "ravi",
      "file": "03_ravi.wav",
-     "text": "అవి దీవెనలు! చిన్న బ్రెయిన్ పెట్టు!",
+     "text": "అవి దీవెనలు! చిన్న బ్రేన్ పెట్టు!",
      "show": "Those are blessings! Get a smaller brain!",
      "maxgap": 0.28,
      "gap": 0.16,
@@ -135,7 +135,7 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "బ్రెయిన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.",
+     "text": "బ్రేన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.",
      "show": "A brain is made of numbers: parameters. Phone-size ones are small language models.",
      "maxgap": 0.28,
      "gap": 0.16,
@@ -199,7 +199,7 @@
      "who": "ai",
      "file": "06_ai.wav",
      "text": "మూడింటినీ మీ నలభై మెసేజ్ ల మీద టెస్ట్ చేశాం. [1] చిన్నది: పద్నాలుగే కరెక్ట్.",
-     "show": "We tested all three on forty of your messages. Tiny one: fourteen right.",
+     "show": "We tested all three on 40 of your messages. Tiny one: 14 right.",
      "maxgap": 0.28,
      "gap": 0.16,
      "gain_db": -1.0
@@ -208,7 +208,7 @@
      "who": "ravi",
      "file": "07_ravi.wav",
      "text": "పద్నాలుగా?! నలభైలో?!",
-     "show": "Fourteen?! Out of forty?!",
+     "show": "14?! Out of 40?!",
      "maxgap": 0.28,
      "gap": 0.16,
      "gain_db": 1.5
@@ -228,7 +228,7 @@
      "text": "దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?",
      "show": "How much per kilo is Diwali?! And the medium one?",
      "maxgap": 0.28,
-     "gap": 1.5,
+     "gap": 2.6,
      "gain_db": 1.5
     }
    ]
@@ -278,13 +278,13 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",
+     "text": "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.",
      "show": "Thirty-nine. Same as the big one. Four times faster.",
      "maxgap": 0.28,
      "gap": 0.35,
      "tts": "మీడియం: ముప్పై తొమ్మిది కరెక్ట్.",
      "file2": "10b_ai.wav",
-     "tts2": "పెద్దది కూడా అంతే, కానీ నాలుగు రెట్లు ఫాస్ట్.",
+     "tts2": "పెద్దది కూడా అంతే, కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.",
      "pause": 0.3,
      "tempo": 1.0,
      "pauses": {
@@ -304,13 +304,13 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "బిల్లులా? [1] మీడియం: తొమ్మిది తప్పులు. [2] పెద్దది: రెండు తప్పులు.",
-     "show": "Bills? Medium: nine wrong. Big: two wrong.",
+     "text": "బిల్లులా? ఇరవై బిల్లుల్లో, [1] మీడియం తొమ్మిది తప్పులు చేసింది. [2] పెద్దది రెండు తప్పులు చేసింది.",
+     "show": "Bills? Out of 20, medium got 9 wrong. Big got 2 wrong.",
      "maxgap": 0.28,
      "gap": 0.4,
-     "tts": "బిల్లులా? మీడియం: తొమ్మిది తప్పులు.",
+     "tts": "బిల్లులా? ఇరవై బిల్లుల్లో, మీడియం తొమ్మిది తప్పులు చేసింది.",
      "file2": "12b_ai.wav",
-     "tts2": "పెద్దది: రెండు తప్పులు.",
+     "tts2": "పెద్దది రెండు తప్పులు చేసింది.",
      "pause": 0.3,
      "tempo": 1.0,
      "gain_db": -1.0
@@ -333,6 +333,11 @@
    "lift": 0.5,
    "pre": 0.35,
    "boost": 1.15,
+   "swell": [
+    1,
+    1,
+    1.3
+   ],
    "data": {
     "beats": [
      {
@@ -431,7 +436,7 @@
      "who": "ravi",
      "file": "17_ravi.wav",
      "text": "యాభై రెండు గుడ్ మార్నింగ్ లు ఎవరు పంపారు?!",
-     "show": "Who sent fifty-two good mornings?!",
+     "show": "Who sent 52 good mornings?!",
      "maxgap": 0.28,
      "gap": 0.25,
      "gain_db": 1.5
