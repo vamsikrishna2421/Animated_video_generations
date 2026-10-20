@@ -30,7 +30,7 @@ const GREEN = "#16a34a", GREY = "#94a3b8", NAVY = "#1e3a8a";
 
 // ---------- pieces ----------
 // customers in the queue, seen from behind (foreground of the shop shot)
-const customers = (c: Ctx, k: number, f: number, r: () => number) => {
+export const customers = (c: Ctx, k: number, f: number, r: () => number) => {
   const spots: [number, number, string][] = [[130, 1250, "#be185d"], [330, 1290, "#0f766e"], [560, 1265, "#7c3aed"], [770, 1300, "#b45309"],
     [950, 1260, "#2563eb"], [-40, 1300, "#dc2626"], [1120, 1295, "#4d7c0f"]];
   spots.slice(0, k).forEach(([x, y, col], i) => {
@@ -42,7 +42,7 @@ const customers = (c: Ctx, k: number, f: number, r: () => number) => {
   });
 };
 // the dark-backed headline over frame 1 (readable with the sound off)
-const headline = (c: Ctx, W: number, a: string, b: string, k: number) => {
+export const headline = (c: Ctx, W: number, a: string, b: string, k: number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 2); c.translate(W / 2, 380); c.rotate(-0.03);
   c.fillStyle = "rgba(15,23,42,0.85)"; rrect(c, -440, -66, 880, 164, 24); c.fill();
@@ -51,7 +51,7 @@ const headline = (c: Ctx, W: number, a: string, b: string, k: number) => {
   c.strokeText(b, 0, 72); c.fillStyle = COL.yellow; c.fillText(b, 0, 72);
   c.restore();
 };
-const bubble = (c: Ctx, x: number, y: number, t: string, size: number, k: number, col = "#fff", fg = INK) => {
+export const bubble = (c: Ctx, x: number, y: number, t: string, size: number, k: number, col = "#fff", fg = INK) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 2); c.font = caveat(size);
   const w = c.measureText(t).width + size * 0.9, h = size * 1.5;
@@ -67,7 +67,7 @@ const cloudShape = (c: Ctx, x: number, y: number, s: number, col: string) => {
   [[-60, 10, 50], [0, -20, 66], [62, 6, 52], [24, 30, 50], [-30, 34, 46]].forEach(([dx, dy, rr]) => { c.moveTo(x + dx * s + rr * s, y + dy * s); c.arc(x + dx * s, y + dy * s, rr * s, 0, 7); });
   c.fill();
 };
-const xMark = (c: Ctx, x: number, y: number, s: number, k: number, r: () => number) => {
+export const xMark = (c: Ctx, x: number, y: number, s: number, k: number, r: () => number) => {
   if (k <= 0) return;
   stroke(c, [[x - s, y - s], [x - s + 2 * s * seg(k, 0, 0.5), y - s + 2 * s * seg(k, 0, 0.5)]], COL.red, 16, r, { passes: 2 });
   if (k > 0.5) stroke(c, [[x + s, y - s], [x + s - 2 * s * seg(k, 0.5, 1), y - s + 2 * s * seg(k, 0.5, 1)]], COL.red, 16, r, { passes: 2 });
@@ -89,7 +89,7 @@ const building = (c: Ctx, x: number, y: number, r: () => number, f: number) => {
   }
   c.font = handF(28); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("the company's computers", x, y + 110);
 };
-const laptop = (c: Ctx, x: number, y: number, s: number, screen: string, r: () => number, o: { err?: boolean; brain?: number } = {}) => {
+export const laptop = (c: Ctx, x: number, y: number, s: number, screen: string, r: () => number, o: { err?: boolean; brain?: number } = {}) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   c.fillStyle = "#1f2937"; rrect(c, -200, -250, 400, 260, 18); c.fill();
   c.fillStyle = o.err ? "#fee2e2" : "#e0f2fe"; rrect(c, -184, -234, 368, 228, 10); c.fill();
@@ -99,7 +99,7 @@ const laptop = (c: Ctx, x: number, y: number, s: number, screen: string, r: () =
   c.restore();
 };
 // a brain made of numbers (the weights)
-const brain = (c: Ctx, x: number, y: number, s: number, r: () => number) => {
+export const brain = (c: Ctx, x: number, y: number, s: number, r: () => number) => {
   if (s <= 0) return;
   c.save(); c.translate(x, y); c.scale(s, s);
   c.fillStyle = "#f9a8d4"; c.beginPath();

@@ -1,0 +1,173 @@
+{
+ "model": "Qwen/Qwen2.5-0.5B-Instruct-GGUF (q4_k_m)",
+ "parameters": 490000000.0,
+ "download_gb": 0.49,
+ "right": 1,
+ "of": 20,
+ "load_seconds": 0.9,
+ "seconds_per_bill": 0.7,
+ "tokens_per_second": 16.6,
+ "cpu_threads": 4,
+ "rows": [
+  {
+   "order": "anna 2 kg tomato, 1 dozen eggs pls",
+   "right_total": 158,
+   "model_total": 102.0,
+   "ok": false,
+   "seconds": 2.7,
+   "reply": "TOTAL: 102"
+  },
+  {
+   "order": "1 kg rice, 1 kg toor dal, 2 milk packets",
+   "right_total": 258,
+   "model_total": 118.0,
+   "ok": false,
+   "seconds": 1.7,
+   "reply": "1 kg rice: Rs 62\n1 kg toor dal: Rs 140\n2 milk packets: Rs 28 x 2 = Rs 56\nTOTAL: Rs 118"
+  },
+  {
+   "order": "3 bath soaps and 1 detergent powder",
+   "right_total": 234,
+   "model_total": 34.0,
+   "ok": false,
+   "seconds": 0.4,
+   "reply": "TOTAL: 34"
+  },
+  {
+   "order": "half kg sugar and one tea powder",
+   "right_total": 148,
+   "model_total": 125.0,
+   "ok": false,
+   "seconds": 0.4,
+   "reply": "TOTAL: 125"
+  },
+  {
+   "order": "2 bread 4 biscuits",
+   "right_total": 170,
+   "model_total": 180.0,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "TOTAL: 180"
+  },
+  {
+   "order": "1 coconut oil, 2 kg onion, 1 kg potato",
+   "right_total": 210,
+   "model_total": 205.0,
+   "ok": false,
+   "seconds": 1.4,
+   "reply": "120: 140, 120: 35, 120: 35\n\nTOTAL: 205"
+  },
+  {
+   "order": "2 curd 2 milk",
+   "right_total": 126,
+   "model_total": 104.0,
+   "ok": false,
+   "seconds": 0.6,
+   "reply": "TOTAL: 104"
+  },
+  {
+   "order": "5 kg rice please",
+   "right_total": 310,
+   "model_total": null,
+   "ok": false,
+   "seconds": 0.5,
+   "reply": "5 kg rice costs Rs 310."
+  },
+  {
+   "order": "1 doz eggs, 1 bread, 2 milk, 1 curd",
+   "right_total": 214,
+   "model_total": 78.0,
+   "ok": false,
+   "seconds": 0.4,
+   "reply": "TOTAL: 78"
+  },
+  {
+   "order": "2 kg dal and 2 kg sugar",
+   "right_total": 372,
+   "model_total": null,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "142:20"
+  },
+  {
+   "order": "half kg tomato, 1 kg onion",
+   "right_total": 55,
+   "model_total": null,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "120.00"
+  },
+  {
+   "order": "3 biscuits, 1 tea powder, 1 kg sugar",
+   "right_total": 231,
+   "model_total": 35.0,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "TOTAL: 35"
+  },
+  {
+   "order": "2 coconut oil",
+   "right_total": 220,
+   "model_total": 220.0,
+   "ok": true,
+   "seconds": 0.3,
+   "reply": "TOTAL: 220"
+  },
+  {
+   "order": "1 detergent, 2 soap, 1 kg potato",
+   "right_total": 226,
+   "model_total": 122.0,
+   "ok": false,
+   "seconds": 0.4,
+   "reply": "TOTAL: 122"
+  },
+  {
+   "order": "4 milk packets and 2 bread",
+   "right_total": 202,
+   "model_total": 108.0,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "TOTAL: 108"
+  },
+  {
+   "order": "2 dozen eggs",
+   "right_total": 156,
+   "model_total": 220.0,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "TOTAL: 220"
+  },
+  {
+   "order": "1 kg each tomato onion potato rice",
+   "right_total": 167,
+   "model_total": 147.0,
+   "ok": false,
+   "seconds": 2.0,
+   "reply": "1 kg each tomato: Rs 40\n1 kg each onion: Rs 35\n1 kg each potato: Rs 30\n1 kg each rice: Rs 62\n\nTOTAL: Rs 147"
+  },
+  {
+   "order": "3 kg sugar, 2 tea powder",
+   "right_total": 388,
+   "model_total": 380.0,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "TOTAL: 380"
+  },
+  {
+   "order": "1 curd 1 bread 5 biscuits",
+   "right_total": 180,
+   "model_total": 145.0,
+   "ok": false,
+   "seconds": 0.3,
+   "reply": "TOTAL: 145"
+  },
+  {
+   "order": "2 kg rice, 1 kg dal, 1 coconut oil, 2 soaps",
+   "right_total": 450,
+   "model_total": 128.0,
+   "ok": false,
+   "seconds": 0.4,
+   "reply": "TOTAL: 128"
+  }
+ ]
+}

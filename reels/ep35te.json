@@ -1,0 +1,445 @@
+{
+ "id": "ep35te",
+ "title": "The brain that didn't fit (EP35: small language models) (Telugu audio)",
+ "label": "EP35",
+ "banner": "The brain that didn't fit",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.8
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": false,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.12,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "sz_a",
+   "type": "sk_size",
+   "tail": 0.1,
+   "rise": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "storage",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "blessings",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The brain won't fit",
+     "title": "The brain won't fit",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "ఏఐ, ఫ్రీ బ్రెయిన్ నా ఫోన్ లో పట్టట్లేదు!",
+     "show": "AI! The free brain won't fit in my phone!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "అది ఫోర్ పాయింట్ సెవెన్ జీబీ. [1] మీ దగ్గర ఖాళీ వన్ జీబీనే.",
+     "show": "It's 4.7 GB. You have 1 GB free.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "అవి దీవెనలు! చిన్న బ్రెయిన్ పెట్టు!",
+     "show": "Those are blessings! Get a smaller brain!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_b",
+   "type": "sk_size",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.35,
+   "boost": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "jars",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "tiny",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Small language models",
+     "title": "Small language models",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "బ్రెయిన్ అంతా నంబర్లే, పారామీటర్లు. [1] ఫోన్ సైజువి స్మాల్ లాంగ్వేజ్ మోడల్స్.",
+     "show": "A brain is made of numbers: parameters. Phone-size ones are small language models.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "అయితే అన్నిటికంటే చిన్నది! హాఫ్ జీబీ!",
+     "show": "Then the tiniest! Half a GB!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_c",
+   "type": "sk_size",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 0.8,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fourteen",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "diwali",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 40 messages",
+     "title": "Our test: 40 messages",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "మూడింటినీ మీ నలభై మెసేజ్ ల మీద టెస్ట్ చేశాం. [1] చిన్నది: పద్నాలుగే కరెక్ట్.",
+     "show": "We tested all three on forty of your messages. Tiny one: fourteen right.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "పద్నాలుగా?! నలభైలో?!",
+     "show": "Fourteen?! Out of forty?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "హ్యాపీ దీపావళి ని ఆర్డర్ అనుకుంది.",
+     "show": "It filed \"Happy Diwali\" as an order.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?",
+     "show": "How much per kilo is Diwali?! And the medium one?",
+     "maxgap": 0.28,
+     "gap": 1.5,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_d",
+   "type": "sk_size",
+   "tail": 0.15,
+   "drop_cue": 1,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bars",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "medium",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bills",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Medium vs big",
+     "title": "Medium vs big",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "[1] ముప్పై తొమ్మిది. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",
+     "show": "Thirty-nine. Same as the big one. Four times faster.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "pauses": {
+      "2": 0.3
+     },
+     "gain_db": 1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "మీడియమే! నా బిల్లులు కూడా వేస్తుంది!",
+     "show": "Medium it is! It'll do my bills too!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "బిల్లులా? [1] మీడియం: తొమ్మిది తప్పులు. [2] పెద్దది: రెండు తప్పులు.",
+     "show": "Bills? Medium: nine wrong. Big: two wrong.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tts": "బిల్లులా? మీడియం: తొమ్మిది తప్పులు.",
+     "file2": "12b_ai.wav",
+     "tts2": "పెద్దది: రెండు తప్పులు.",
+     "pause": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "మరి ఏది వాడాలి?!",
+     "show": "So which one do I use?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_e",
+   "type": "sk_size",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 1.15,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "screen",
+      "prop": "delete",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which one to use",
+     "title": "Which one to use",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.",
+     "show": "Sorting? One miss is okay: medium. Bills? No misses allowed: calculator.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tts": "మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం.",
+     "file2": "14b_ai.wav",
+     "tts2": "బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.",
+     "pause": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "మీడియం వన్ పాయింట్ వన్. నా దగ్గర వన్ ఏ! [1] సరే, గుడ్ మార్నింగ్ ఫోటోలు డిలీట్ చెయ్.",
+     "show": "Medium is 1.1. I have 1! Fine, delete the good-morning photos.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_f",
+   "type": "sk_size",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.35,
+   "rise": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "installed",
+      "n": 16
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "flood",
+      "n": 17
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "full",
+      "n": 18
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Storage full again",
+     "title": "Storage full again",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "అయిపోయింది. మీడియం బ్రెయిన్ ఇన్స్టాల్ అయింది.",
+     "show": "Done. Medium brain installed.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "17_ravi.wav",
+     "text": "యాభై రెండు గుడ్ మార్నింగ్ లు ఎవరు పంపారు?!",
+     "show": "Who sent fifty-two good mornings?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "18_ai.wav",
+     "text": "అవి అదర్ లో పెట్టాను. [1] స్టోరేజ్ ఫుల్.",
+     "show": "Those go in OTHER. Storage full.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

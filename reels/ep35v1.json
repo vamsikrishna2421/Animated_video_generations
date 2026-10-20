@@ -1,0 +1,448 @@
+{
+ "id": "ep35v1",
+ "title": "The brain that didn't fit (EP35: small language models)",
+ "label": "EP35",
+ "banner": "The brain that didn't fit",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.8
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": false,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.2,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "sz_a",
+   "type": "sk_size",
+   "tail": 0.1,
+   "rise": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "storage",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "blessings",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The brain won't fit",
+     "title": "The brain won't fit",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "AI! The free brain won't fit in my phone!",
+     "show": "AI! The free brain won't fit in my phone!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tts": "AI! The free brain won't fit in my phone!",
+     "tempo": 1.25,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "It's 4.7 GB. [1] You have 1 GB free.",
+     "show": "It's 4.7 GB. You have 1 GB free.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tts": "It's four point seven gigabytes. [1] You have one gigabyte free.",
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Those are blessings! Get a smaller brain!",
+     "show": "Those are blessings! Get a smaller brain!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_b",
+   "type": "sk_size",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.35,
+   "boost": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "jars",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "tiny",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Small language models",
+     "title": "Small language models",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "A brain is made of numbers: parameters. [1] Phone-size ones are small language models.",
+     "show": "A brain is made of numbers: parameters. Phone-size ones are small language models.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "Then the tiniest! Half a GB!",
+     "show": "Then the tiniest! Half a GB!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tts": "Then the tiniest! Half a gigabyte!",
+     "tempo": 1.25,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_c",
+   "type": "sk_size",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 0.8,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fourteen",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "diwali",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 40 messages",
+     "title": "Our test: 40 messages",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "We tested all three on forty of your messages. [1] Tiny one: fourteen right.",
+     "show": "We tested all three on forty of your messages. Tiny one: fourteen right.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "Fourteen?! Out of forty?!",
+     "show": "Fourteen?! Out of forty?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "It filed \"Happy Diwali\" as an order.",
+     "show": "It filed \"Happy Diwali\" as an order.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "How much per kilo is Diwali?! [1] And the medium one?",
+     "show": "How much per kilo is Diwali?! And the medium one?",
+     "maxgap": 0.28,
+     "gap": 1.5,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_d",
+   "type": "sk_size",
+   "tail": 0.15,
+   "drop_cue": 1,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bars",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "medium",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "bills",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Medium vs big",
+     "title": "Medium vs big",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "[1] Thirty-nine. [2] Same as the big one. [3] Four times faster.",
+     "show": "Thirty-nine. Same as the big one. Four times faster.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.0,
+     "pauses": {
+      "2": 0.3
+     },
+     "gain_db": 1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "Medium it is! It'll do my bills too!",
+     "show": "Medium it is! It'll do my bills too!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.25,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "Bills? [1] Medium: nine wrong. [2] Big: two wrong.",
+     "show": "Bills? Medium: nine wrong. Big: two wrong.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.0,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "So which one do I use?!",
+     "show": "So which one do I use?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.25,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_e",
+   "type": "sk_size",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 1.15,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "screen",
+      "prop": "delete",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which one to use",
+     "title": "Which one to use",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "Sorting? One miss is okay: medium. [1] Bills? No misses allowed: calculator.",
+     "show": "Sorting? One miss is okay: medium. Bills? No misses allowed: calculator.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "Medium is 1.1. I have 1! [1] Fine, delete the good-morning photos.",
+     "show": "Medium is 1.1. I have 1! Fine, delete the good-morning photos.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tts": "Medium is one point one. I have one! [1] Fine, delete the good morning photos.",
+     "tempo": 1.2,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "sz_f",
+   "type": "sk_size",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.35,
+   "rise": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "installed",
+      "n": 16
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "flood",
+      "n": 17
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "full",
+      "n": 18
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Storage full again",
+     "title": "Storage full again",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "Done. Medium brain installed.",
+     "show": "Done. Medium brain installed.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "17_ravi.wav",
+     "text": "Who sent fifty-two good mornings?!",
+     "show": "Who sent fifty-two good mornings?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "18_ai.wav",
+     "text": "Those go in OTHER. [1] Storage full.",
+     "show": "Those go in OTHER. Storage full.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tts": "Those go in other. [1] Storage full.",
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

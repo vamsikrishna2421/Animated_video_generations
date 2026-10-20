@@ -41,7 +41,7 @@ Already posted: `out/posted/`.
 | 034 | ep32 | How AI Finds the Right Page (RAG, Part 2) | ready |
 | 035 | ep33 | We Don't Sell Headaches (EP33: hybrid search, tested; skit, AI voices) | ready |
 | 036 | ep34 | Rent a Brain or Own One? (EP34: open vs closed models, tested; skit, AI voices) | ready |
-| 037 | ep35 | Small Language Models | ready |
+| 037 | ep35 | The Brain That Didn't Fit (EP35: small language models, tested; skit, AI voices) | in progress |
 | 038 | ep36 | Why AI Runs on GPUs | ready |
 | 039 | ep37 | Quantization: Shrinking AI Models | ready |
 | 040 | ep38 | How to Run AI on Your Own Laptop | ready |
