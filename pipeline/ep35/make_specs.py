@@ -25,7 +25,7 @@ LINES = {
     12: ("ai", "screen", "bills", "Bills? [1] Medium: nine wrong. [2] Big: two wrong."),
     13: ("ravi", "ravi", "which", "So which one do I use?!"),
     14: ("ai", "wide", "rule", "Sorting? One miss is okay: medium. [1] Bills? No misses allowed: calculator."),
-    15: ("ravi", "screen", "delete", "Medium is 1.1. I have 1! [1] Fine, delete the good-morning photos."),
+    15: ("ravi", "screen", "delete", "Medium is 1.1. I have 1! [1] Okay, delete the good-morning photos."),   # "Fine" was heard "Find"
     16: ("ai", "screen", "installed", "Done. Medium brain installed."),
     17: ("ravi", "wide", "flood", "Who sent fifty-two good mornings?!"),
     18: ("ai", "screen", "full", "Those go in OTHER. [1] Storage full."),   # "Filed under" was heard "field under"
@@ -33,7 +33,7 @@ LINES = {
 SHOW = {n: t.replace("[1] ", "").replace("[2] ", "").replace("[3] ", "") for n, (_, _, _, t) in LINES.items()}
 # English spoken forms: numbers and units in words, capitals out
 TTS_EN = {1: "AI! The free brain won't fit in my phone!", 2: "It's four point seven gigabytes. [1] You have one gigabyte free.",
-          5: "Then the tiniest! Half a gigabyte!", 15: "Medium is one point one. I have one! [1] Fine, delete the good morning photos.",
+          5: "Then the tiniest! Half a gigabyte!", 15: "Medium is one point one. I have one! [1] Okay, delete the good morning photos.",
           18: "Those go in other. [1] Storage full."}
 PAUSES = {10: {"2": 0.3}}   # a beat after "Thirty-nine"
 TEMPO_EN = {2: 1.1, 6: 1.1, 10: 1.0, 12: 1.0, 14: 1.1, 1: 1.25, 3: 1.2, 5: 1.25, 7: 1.2, 9: 1.2, 11: 1.25, 13: 1.25, 15: 1.2, 17: 1.2}
@@ -57,7 +57,7 @@ TE = {
     7: "పద్నాలుగా?! నలభైలో?!",
     8: "హ్యాపీ దీపావళి ని ఆర్డర్ అనుకుంది.",
     9: "దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?",
-    10: "[1] ముప్పై తొమ్మిది. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",
+    10: "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",   # a bare "ముప్పై తొమ్మిది." first was dropped in all four takes
     11: "మీడియమే! నా బిల్లులు కూడా వేస్తుంది!",
     12: "బిల్లులా? [1] మీడియం: తొమ్మిది తప్పులు. [2] పెద్దది: రెండు తప్పులు.",
     13: "మరి ఏది వాడాలి?!",
@@ -68,8 +68,10 @@ TE = {
     18: "అవి అదర్ లో పెట్టాను. [1] స్టోరేజ్ ఫుల్.",
 }
 # long Telugu lines voiced as two takes, joined (EP34, skit 03): 12 babbled in all four tries, 14 lost its first half
+TEMPO_TE = {10: 1.0, 12: 1.0}   # the test's numbers at their own pace (the 39 take is fast)
 TE_PART2 = {12: ("బిల్లులా? మీడియం: తొమ్మిది తప్పులు.", "పెద్దది: రెండు తప్పులు."),
-            14: ("మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం.", "బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.")}
+            14: ("మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం.", "బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్."),
+            10: ("మీడియం: ముప్పై తొమ్మిది కరెక్ట్.", "పెద్దది కూడా అంతే, కానీ నాలుగు రెట్లు ఫాస్ట్.")}
 YT = {"sz_a": "The brain won't fit", "sz_b": "Small language models", "sz_c": "Our test: 40 messages", "sz_d": "Medium vs big",
       "sz_e": "Which one to use", "sz_f": "Storage full again"}
 
@@ -97,6 +99,8 @@ def spec(lang="en"):
                 ln["tts"] = TTS_EN[n]
             if not te and n in TEMPO_EN:
                 ln["tempo"] = TEMPO_EN[n]
+            if te and n in TEMPO_TE:
+                ln["tempo"] = TEMPO_TE[n]
             if n in PAUSES:
                 ln["pauses"] = PAUSES[n]
             # loudness: Ravi a little above the AI; the reveal and the last line lifted

@@ -278,10 +278,15 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "[1] ముప్పై తొమ్మిది. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",
+     "text": "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే. [3] కానీ నాలుగు రెట్లు ఫాస్ట్.",
      "show": "Thirty-nine. Same as the big one. Four times faster.",
      "maxgap": 0.28,
      "gap": 0.35,
+     "tts": "మీడియం: ముప్పై తొమ్మిది కరెక్ట్.",
+     "file2": "10b_ai.wav",
+     "tts2": "పెద్దది కూడా అంతే, కానీ నాలుగు రెట్లు ఫాస్ట్.",
+     "pause": 0.3,
+     "tempo": 1.0,
      "pauses": {
       "2": 0.3
      },
@@ -307,6 +312,7 @@
      "file2": "12b_ai.wav",
      "tts2": "పెద్దది: రెండు తప్పులు.",
      "pause": 0.3,
+     "tempo": 1.0,
      "gain_db": -1.0
     },
     {
@@ -368,7 +374,7 @@
      "who": "ravi",
      "file": "15_ravi.wav",
      "text": "మీడియం వన్ పాయింట్ వన్. నా దగ్గర వన్ ఏ! [1] సరే, గుడ్ మార్నింగ్ ఫోటోలు డిలీట్ చెయ్.",
-     "show": "Medium is 1.1. I have 1! Fine, delete the good-morning photos.",
+     "show": "Medium is 1.1. I have 1! Okay, delete the good-morning photos.",
      "maxgap": 0.28,
      "gap": 0.16,
      "gain_db": 1.5
