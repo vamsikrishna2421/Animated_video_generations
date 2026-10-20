@@ -9,7 +9,9 @@
 
 # Weekly edition (AI WEEKLY)
 
-Every Saturday, covering Sunday-Saturday: `news/week-<saturday>.json`, id `week-<date>`, edition `AI WEEKLY · NN`.
+Every Saturday at 05:59 IST (the Saturday slot of the daily new episode, `series/ROUTINE.md`), covering the 7 days
+before the run: `news/week-<saturday>.json`, id `week-<date>`, edition `AI WEEKLY · NN`. AI WEEKLY 02 (Oct 24) also
+covers Oct 11-17, which never went out (triage in `news/inbox/2026-10-14_triage.md`).
 1. **Collect**: the owner's daily digests (`news/inbox/<date>_muse.md`) plus a sweep of the week (Reuters, TechCrunch,
    The Verge, Bloomberg, Axios; Indian outlets for India stories).
 2. **Verify** as above. Drop repeats of earlier editions unless something new happened this week; check the date of

@@ -2,7 +2,7 @@
 
 | Run | When (IST) | Makes | Template to copy |
 |---|---|---|---|
-| Daily new episode | 05:59 | the next AI From Scratch episode as a teaching skit, Insta EN/TE (YouTube: the same files as Shorts) | Skit 01 (the story), EP32 (facts, demo) |
+| Daily new episode | 05:59 | by weekday: the next syllabus episode as a teaching skit (Sun, Mon, Tue, Wed, Fri), a HOW TO (Thu), AI WEEKLY news (Sat); Insta EN/TE (YouTube: the same files as Shorts) | EP35 (skit, facts, demo), AI Weekly 01 (news) |
 | Daily creative reel | 17:57 | one original short (30-60 s), EN + TE, built to be shared | Skit 01 "The AI that remembered the wrong price" |
 
 Both runs fire into the same Claude Code session. A run that is still going delays the next one; always finish the
@@ -40,12 +40,25 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
   "snapshot_download"): it kills your own shell (exit code 144; it happened three times on Oct 18).
 
 ## Run 1: daily new episode (a teaching skit)
+The day's slot follows the weekday in IST on which the run was fired (a run that starts late keeps its day's slot).
+The user's ask (Oct 20): the daily episode covers the whole syllabus, plus weekly AI news and useful how-tos.
+
+| IST day | Slot | Next item from | Posted |
+|---|---|---|---|
+| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP36 is next (queue 038), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
+| Thu | HOW TO (see "Thursday: HOW TO") | `series/HOWTO.md`, the first "planned" row whose "Needs" are out | the day it is made |
+| Sat | AI WEEKLY (see "Saturday: AI WEEKLY") | `news/README.md`, "Weekly edition" | the day it is made |
+
+At five a week: EP36-EP41 by Oct 28, Season 5 (EP42-EP49) by Nov 9, Season 6 (EP50-EP58) by Nov 22, then UC01-UC24 to
+the end of December.
+
 From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and explaining the concept... should be the way going forward"), each episode teaches its syllabus topic through a short skit, the way skit 01 taught EP31's lesson
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
-1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (after
-   EP32/034 comes EP33 "RAG part 3: hybrid search and measuring RAG quality", queue 035). The skit replaces the old
-   lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`.
+1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
+   remakes run EP33 (035), EP34 (036), EP35 (037); next EP36 "GPUs and AI chips", queue 038). The skit replaces the old
+   lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
+   whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
    small real demo (EP30-EP32) and put its measured numbers in the story.
 3. Story before visuals:
@@ -91,6 +104,28 @@ stay as made.
    vertical files), `_ig` copies. Commit (media with `git add -f`; media paths go in `.git/info/exclude`) and push.
 8. Deliver with SendUserFile (status proactive): Insta EN + TE send copies and the caption files, plus 2-3 lines on
    what the viewers flagged and what changed.
+
+### Thursday: HOW TO
+1. Take the next row of `series/HOWTO.md` (format and rules there) and mark it "in progress".
+2. Do it for real on this machine first: install, run, time it; keep the exact commands and outputs
+   (`series/scripts/howtoNN_<slug>.md`), and check every step against the official docs of the day.
+3. Script EN + TE in the skit world (the result in frame 1, 3-4 real steps, the "save this" card), script-stage
+   viewer review, then build (`<Name>Crayon.tsx`, `pipeline/howtoNN/`), voice, render, review packs, render-stage
+   review and fixes as for an episode.
+4. Files: `out/howto/NN_<slug>.mp4`, `out/howto/telugu/NN_<slug>_te.mp4`, `_ig` copies, and
+   `out/howto/NN_<slug>_post.txt` (EN + TE captions with every command, links, requirements, licences, pinned
+   comment, YouTube Shorts text). Mark the row "done" in `series/HOWTO.md`, commit, push, deliver as in step 8.
+
+### Saturday: AI WEEKLY
+1. Follow `news/README.md` "Weekly edition" for the 7 days before the run: the owner's digests in `news/inbox/`, a
+   sweep of the week, every story confirmed by the company's own page or 2+ reputable outlets, 6-7 stories with a
+   "what it means for you" line each.
+2. AI WEEKLY 02 (Sat Oct 24) also covers Oct 11-17, which never went out: start from `news/inbox/2026-10-14_triage.md`,
+   re-check each item (prices and rollouts move), and keep the biggest stories of the two weeks.
+3. Spec `news/week-<date>.json`, the four renders (`pipeline/render_news.sh`, 9:16 EN/TE and the 16:9 YouTube
+   editions), review packs, viewer review, fixes, `news/week-<date>_post.md`, commit, push, deliver as in step 8.
+   Nothing is posted automatically: the user reviews the delivered reel before posting; flag any story that needs their
+   call in the delivery note.
 
 ### Recorded voice (trial on EP33 only, Oct 18-19; ended: the user picked the AI voices)
 The user voices the episode: both characters, English and, if they can, Telugu (a language they skip gets TTS).

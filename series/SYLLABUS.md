@@ -17,6 +17,11 @@ Suggested weekly rhythm once all four run: 4 fundamentals, 2 use cases, 1 "New i
 daily (news can start as 3x a week). Track 1 always keeps moving, so the foundation stays ahead
 of the use cases.
 
+**Status (Oct 20):** every episode below (EP01-EP58, quizzes, UC01-UC24) exists in the original lesson
+format and is posted in serial order (`out/UPLOAD_ORDER.md`). From EP33 on, the daily new episode remakes
+each one as a teaching skit in its slot, five a week, then the use cases. Thursdays carry a HOW TO
+(Track 6, `series/HOWTO.md`) and Saturdays the AI WEEKLY news (`news/README.md`); see `series/ROUTINE.md`.
+
 ---
 
 ## Track 1: AI From Scratch (fundamentals)
@@ -39,15 +44,15 @@ of the use cases.
 | 09 | Tool use / function calling | done |
 | 10 | AI agents | done |
 | 11 | MCP (Model Context Protocol) | done |
-| 12 | Multimodal AI: how AI sees, hears and speaks | next |
-| 13 | Speech AI: speech-to-text and text-to-speech | |
-| 14 | Image generation, Part 1: how diffusion turns noise into pictures | |
-| 15 | Image & video generation, Part 2: video models and prompting for visuals | |
-| 16 | Reasoning models: when AI "thinks" before answering | |
-| 17 | Memory & context engineering: how assistants remember you | |
-| 18 | Multi-agent systems: teams of AI agents | |
-| 19 | AI coding assistants: how they read and write code | |
-| 20 | AI security: prompt injection and jailbreaks | |
+| 12 | Multimodal AI: how AI sees, hears and speaks | done |
+| 13 | Speech AI: speech-to-text and text-to-speech | done |
+| 14 | Image generation, Part 1: how diffusion turns noise into pictures | done |
+| 15 | Image & video generation, Part 2: video models and prompting for visuals | done |
+| 16 | Reasoning models: when AI "thinks" before answering | done |
+| 17 | Memory & context engineering: how assistants remember you | done |
+| 18 | Multi-agent systems: teams of AI agents | done |
+| 19 | AI coding assistants: how they read and write code | done |
+| 20 | AI security: prompt injection and jailbreaks | done |
 
 ### Season 3: How AI learns (the engine room)
 | EP | Topic |
@@ -175,6 +180,13 @@ why it matters, source name on screen) → "which one matters most to you? comme
 
 **Workflow:** research the last 24 hours → draft the script with sources → you approve →
 render (about 3 minutes) → captions file with source links → upload.
+
+---
+
+## Track 6: HOW TO (hands-on tutorials)
+One a week, on Thursdays: install and use free tools for real (open-weight LLMs on a laptop, local voices,
+offline transcription, videos and websites with Claude, ...), each built on our own run with the exact
+commands. Format, rules and backlog: [`HOWTO.md`](HOWTO.md).
 
 ---
 
