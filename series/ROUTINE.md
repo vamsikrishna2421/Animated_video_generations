@@ -252,3 +252,19 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   then "free: 1 GB" after 52 more photos).
 - In a Telugu pack the "music-only" level can cover only the music drop (the voice fills almost every second):
   compare the voice and music stems before boosting the bed (EP35: "15 dB under" was the drop; the stems matched English).
+- Parler drops the opening word or sentence of a Telugu take and the judge still passes it (NEW IN AI 01: "అదీ," of
+  "అదీ, ఆ కంపెనీనే." and the whole "పాయింట్ సిక్స్ తేడానా?"): give each line's opening word a MUST entry, and read
+  every chosen take's transcript before building. An ellipsis ("అదీ...") made the pause so long the judge threw the
+  takes out as LONG; a comma keeps the hesitation.
+- A hit SFX on a cut hides the first word of the next line (NEW IN AI 01: "Point six apart?" heard as "Int 6 apart"):
+  give that scene `pre` 0.3-0.4 so the hit lands before the voice.
+- `rise` and `swell` stay at their gain after the window (the Reel keeps each ramp), so they multiply into every later
+  scene: plan the later boosts lower, and check the quarter levels in the pack (NEW IN AI 01: three ramps = 4x by the end).
+- A diagram of a score has to show that score (NEW IN AI 01: the floor-plan card showed about 8% overlap for a 43.6%
+  IoU; equal squares offset 22% each way, or 39% sideways, give 0.44).
+- A line Whisper mishears only in the full-pack transcript may be the voice-activity split: transcribe the opening on
+  its own before re-voicing (NEW IN AI 01: "Meghana, STAM" in the pack, "Megana. Stop." alone). A real merge comes
+  from `maxgap` tightening the pause after a short exclamation ("stop, a new" -> "stomp a new"): give that line its
+  own `maxgap`.
+- Fish ran a three-sentence line together ("three minutes for one hub", which clashed with "three hours"): split
+  such a line into two takes with " | " in make_specs (works for English as well as Telugu).
