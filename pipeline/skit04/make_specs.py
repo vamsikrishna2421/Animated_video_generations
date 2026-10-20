@@ -39,9 +39,9 @@ TE_SHOW = {5: "Tea lovers?! You call me \"Orey Raju\"!"}   # the Telugu line say
 SCENES = [("ch_a", (1, 2, 3), {"boost": 1.15, "rise": 1.3, "tail": 0.1}),
           ("ch_b", (4, 5, 6), {"lift": 0.5, "pre": 0.35, "boost": 0.8, "tail": 0.1}),
           ("ch_c", (8, 9, 10), {"lift": 0.5, "pre": 0.35, "boost": 0.9, "drop_at": [[1, "1"]], "tail": 0.1}),
-          ("ch_d", (11, 12), {"outro": True, "boost": 1.45, "rise": 1.6, "tail": 0.0})]   # render review: rise into the loop
+          ("ch_d", (11, 12), {"outro": True, "boost": 1.6, "rise": 1.8, "tail": 0.0})]   # render review: rise into the loop (round 2: still level with the start)
 # seconds after line n (default 0.16 EN / 0.24 TE): the card's hold after 8; the fixed post's read after 11
-GAP = {1: 0.2, 5: 0.25, 8: 3.4, 9: 0.3, 11: 2.0}   # render review: the card's 2.6 s and the Rs 15 post's 1.8 s were too short to read
+GAP = {1: 0.2, 5: 0.25, 8: 3.9, 9: 0.3, 11: 2.0}   # render review: the card's 2.6 s and the Rs 15 post's 1.8 s were too short to read
 PAUSES = {"en": {9: {"1": 0.45}}, "te": {9: {"1": 0.5}}}   # the beat before "Ten rupees" (the drop sits in it)
 GAIN = {"babu": 0.5, "raju": 0.5, "swathi": 0.0}
 GAIN_LINE = {9: 1.5, 12: 1.0}

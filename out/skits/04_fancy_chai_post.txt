@@ -34,7 +34,7 @@ The prompt to copy:
 3. ...
 Write today's post in the same style and the same language mix as these. Today's special: ____, price ____."
 Why it works: Anthropic's prompting guide says "Examples are one of the most reliable ways to steer Claude's output format, tone, and structure", and asks for varied examples so it doesn't "pick up unintended patterns" (like an old price). Google's Gemini guide: "We recommend to always include few-shot examples in your prompts", and warns that with too many examples "the model may start to overfit the response to the examples."
-Our test: a free open model (Qwen2.5 7B, 4-bit, on a laptop CPU), 10 tries per prompt. With his old posts and no price, 5 of 10 wrote last year's Rs 10, 1 made up Rs 12, and 4 wrote Rs 15 by chance (we never gave it). Bigger chatbots write better Telugu-English, but the copying habit is the same, so check prices, dates and offers in anything it writes.
+Our test: a free open model (Qwen2.5 7B, 4-bit, on a laptop CPU), 10 tries per prompt. With his old posts and no price, 6 of 10 wrote a wrong price (5 said last year's Rs 10, 1 made up Rs 12); the 4 that said Rs 15 guessed it, we never typed it. We only tested this small laptop model; Anthropic's and Google's guides warn about this kind of copying, so check prices, dates and offers in anything an AI writes from your examples.
 
 === COVER ===
 Raju (auto driver) holds up a phone at us: a chai stall's post "Indulge in the Spice of Life!" with sparkles; a red bubble "₹200?!"; the stall's board "TEA ₹15" behind
@@ -72,7 +72,7 @@ Reveal mundu meeru em anukunnaru: A (₹15) aa B (₹10) aa? A or B ani comment 
 === PINNED_COMMENT ===
 Copy cheyyadaniki prompt:
 "Here are 3 posts I wrote before: 1. ... 2. ... 3. ... Write today's post in the same style and the same language mix as these. Today's special: ____, price ____."
-Anthropic, Google rendu companies prompting guides lo kooda examples icchi raayinchamani cheptaayi; ekkuva examples isthe vaatine copy chese pramaadam undani Google guide hecharistundi. Maa test: Qwen2.5 7B free model, laptop CPU meeda, okko prompt ki 10 saarlu. Paata posts icchi rate cheppakapote: 10 lo 5 paata Rs 10, 1 Rs 12 ani tane kalpinchindi, 4 Rs 15 (adrushtam koddi). Pedda chatbots Telugu-English inkaa baaga raastaayi, kaani copy chese alavaatu ade: rates, dates, offers eppudu check cheyyandi.
+Anthropic, Google rendu companies prompting guides lo kooda examples icchi raayinchamani cheptaayi; ekkuva examples isthe vaatine copy chese pramaadam undani Google guide hecharistundi. Maa test: Qwen2.5 7B free model, laptop CPU meeda, okko prompt ki 10 saarlu. Paata posts icchi rate cheppakapote: 10 lo 6 tappu rate (5 paata Rs 10, 1 tane Rs 12 kalpinchindi); Rs 15 annavi 4 guess maatrame, memu type cheyyaledu. Memu test chesindi ee chinna laptop model ni maatrame; Anthropic, Google guides kooda ee copying gurinchi hecharistaayi. Rates, dates, offers eppudu check cheyyandi.
 
 === COVER ===
 Phone choopistunna Raju: chai stall post "Indulge in the Spice of Life!", red bubble "₹200?!", venakaala "TEA ₹15" board (English visuals)

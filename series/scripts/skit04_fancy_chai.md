@@ -27,7 +27,12 @@ reply holds about 3 s; the rule chip adds "(works for emails and WhatsApp too)";
 English "is tea two hundred" was heard "is T200" (now "tea costs two hundred"), a bare "Tea lovers?!" lost its "Tea" in
 six takes (now "Who says 'tea lovers'?!"), "Paste" was heard "first" (re-voiced); Telugu "తెలుగు" came out "khelugu"
 (re-voiced). Not changed: the music level (both mixes sit at the same level; the bed under the card is about 4.5 dB below
-the speech). Final: English 48 s, Telugu 43 s.
+the speech). Round 2 (the same viewers: the English cut could go out; the Telugu card ran into voice at both ends, the
+"emails" line was unreadable, the ending only climbed back to the start): the card waits 0.4 s after line 8 and leaves
+before line 9 (3.9 s gap); "comment A or B" and the chip's "works for emails & WhatsApp too" are about twice the size;
+"Rs 15" in the fixed prompt is underlined green; "5 of 10 wrote last year's Rs 10" stays up through Babu's shot; a riser
+and a hit on "fancy!" with a stronger bed rise (line 12 is now the loudest line). Telugu lines 5, 8 and 11 checked one by
+one: fine. Final: English 48 s, Telugu 43 s.
 
 ## Hook options (frame 1 + first line)
 1. Raju holds up Babu's phone, the stall's new post on it, "Indulge in the Spice of Life! ... a taste of tradition and

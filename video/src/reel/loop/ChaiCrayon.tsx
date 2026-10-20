@@ -258,7 +258,7 @@ const phoneFrame = (c: Ctx, W: number, title: string, r: () => number) => {
   stroke(c, [[110, 310], [W - 110, 310]], "#cbd5e1", 3, r, { passes: 1 });
 };
 // a chat bubble: mine (right, green) or the AI's (left, white); returns its bottom; `box` gets the highlighted word's box
-const chatBubble = (c: Ctx, W: number, y: number, text: string, mine: boolean, k: number, size = 38, hl?: string, box?: number[], under?: string, hlCol = "rgba(220,38,38,0.18)") => {
+const chatBubble = (c: Ctx, W: number, y: number, text: string, mine: boolean, k: number, size = 38, hl?: string, box?: number[], under?: string, hlCol = "rgba(220,38,38,0.18)", underCol: string = COL.red) => {
   if (k <= 0) return y;
   c.font = SANS(size, 600);
   const maxW = W - 330, lines = text.split("\n").flatMap((t) => wrap(c, t, maxW));
@@ -281,7 +281,7 @@ const chatBubble = (c: Ctx, W: number, y: number, text: string, mine: boolean, k
       let from = 0;
       while (t.indexOf(under, from) >= 0) {
         const at = t.indexOf(under, from), ux = x + 24 + c.measureText(t.slice(0, at)).width, uw = c.measureText(under).width;
-        c.fillStyle = COL.red; c.fillRect(ux, ty + 6, uw, 5); c.fillStyle = INK; from = at + under.length;
+        c.fillStyle = underCol; c.fillRect(ux, ty + 6, uw, 6); c.fillStyle = INK; from = at + under.length;
       }
     }
   });
@@ -314,11 +314,11 @@ const postCard = (c: Ctx, x: number, y: number, w: number, k: number, r: () => n
 
 // the rule, as a chip above the captions (line 11 to the end)
 const rule = (c: Ctx, W: number) => {
-  c.save(); c.translate(W / 2, 1375);
-  c.fillStyle = "#facc15"; rrect(c, -440, -84, 880, 168, 24); c.fill();
-  c.font = SANS(46); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SHOW 3 old posts", 0, -26);
-  c.font = SANS(38, 600); c.fillText("+ say today's facts", 0, 22);
-  c.font = SANS(30, 600); c.fillStyle = "#713f12"; c.fillText("(works for emails and WhatsApp too)", 0, 66);
+  c.save(); c.translate(W / 2, 1355);
+  c.fillStyle = "#facc15"; rrect(c, -460, -112, 920, 224, 26); c.fill();
+  c.font = SANS(54); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SHOW 3 old posts", 0, -44);
+  c.font = SANS(46, 600); c.fillText("+ say today's facts", 0, 12);
+  c.font = SANS(42, 600); c.fillStyle = "#713f12"; c.fillText("works for emails & WhatsApp too", 0, 76);
   c.restore();
 };
 
@@ -341,12 +341,15 @@ const StChai: React.FC<SP> = ({ s }) => {
     if (b.prop === "paste") {
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={at + 4 + q * 7} src="audio/sfx_pop.wav" vol={0.3} />));
       sfx.push(<Sfx key={k("r")} at={end - 30} src="reel/sfx_riser.wav" vol={0.3} />);
-      [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={end + 6 + q * 30} src="audio/sfx_tick.wav" vol={0.4} />));   // the challenge's 3-2-1
+      [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={end + 18 + q * 30} src="audio/sfx_tick.wav" vol={0.4} />));   // the challenge's 3-2-1
     }
     if (b.prop === "ten") sfx.push(<Sfx key={k("d")} at={at + 1} src="audio/gag_ding.wav" vol={0.42} />, <Sfx key={k("h")} at={cue(i, 1, 0.55) - 8} src="reel/sfx_boom.wav" vol={0.85} />);
     if (b.prop === "lastyear") sfx.push(<Sfx key={k("o")} at={at + 3} src="audio/gag_boing.wav" vol={0.35} />);
     if (b.prop === "copies") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) + 4} src="audio/sfx_success.wav" vol={0.38} />, <Sfx key={k("c")} at={cue(i, 1, 0.5) + 16} src="audio/sfx_snap.wav" vol={0.35} />);
-    if (b.prop === "loop") [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 6 + q * 6} src="audio/sfx_tick.wav" vol={0.2} />));
+    if (b.prop === "loop") {
+      [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 6 + q * 6} src="audio/sfx_tick.wav" vol={0.2} />));
+      sfx.push(<Sfx key={k("r")} at={end - 44} src="reel/sfx_riser.wav" vol={0.42} />, <Sfx key={k("h")} at={end - 8} src="reel/sfx_boom.wav" vol={0.75} />);   // into the loop
+    }
   });
   return (
     <>
@@ -393,7 +396,7 @@ const StChai: React.FC<SP> = ({ s }) => {
                 tag(c, "...and 5 wrote last year's Rs 10", 540, Math.min(y + 175, 1345), 60, "#fee2e2", "#991b1b", 0.02, k);
               }
             } else {
-              let y = chatBubble(c, W, 350, "(my 3 old posts)\n" + ask + ", Rs 15.", true, 1, 30, "Rs 15", undefined, undefined, "rgba(22,163,74,0.22)");
+              let y = chatBubble(c, W, 350, "(my 3 old posts)\n" + ask + ", Rs\u00a015.", true, 1, 34, "Rs 15", undefined, "Rs 15", "rgba(22,163,74,0.22)", GREEN);
               const c1 = cu(1, 0.5);
               const box: number[] = [];
               y = chatBubble(c, W, y, "Goodmorning! Today's special: Ginger tea Rs 15. Zing zing allam paani, vellandi! Friends tho randi, bench ready!", false, seg(f, c1 - 4, c1 + 6), 46, "Rs 15", box, undefined, "rgba(22,163,74,0.22)");
@@ -405,8 +408,9 @@ const StChai: React.FC<SP> = ({ s }) => {
             }
           }
           c.restore();
-          if (n === 8 && f > endL + 1) {   // the challenge, held after the line: the twist's question and a 3-2-1
-            const k = easeOut(seg(f, endL + 1, endL + 7));
+          if (n === 8 && f > endL + 12) {   // the challenge, held after the line: the twist's question and a 3-2-1
+            const next = ls[i + 1] ? ls[i + 1].from : endL + 120;   // it waits 0.4 s after the line and leaves before line 9
+            const k = easeOut(seg(f, endL + 12, endL + 18)) * (1 - seg(f, next - 12, next - 4));
             c.save(); c.globalAlpha = 0.6 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); c.restore();
             c.save(); c.globalAlpha = k; c.translate(W / 2, 800); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
             c.fillStyle = "#fffdf5"; rrect(c, -480, -380, 960, 760, 30); c.fill();
@@ -417,11 +421,11 @@ const StChai: React.FC<SP> = ({ s }) => {
             c.textAlign = "left"; c.font = SANS(64);
             c.fillStyle = "#e0e7ff"; rrect(c, -420, -30, 390, 120, 22); c.fill(); c.fillStyle = INK; c.fillText("A) Rs 15", -385, 52);
             c.fillStyle = "#e0e7ff"; rrect(c, 30, -30, 390, 120, 22); c.fill(); c.fillStyle = INK; c.fillText("B) Rs 10", 65, 52);
-            c.font = SANS(34, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("comment A or B", 0, 140);
-            const t = f - endL - 6, q = 3 - Math.floor(t / 30);
+            c.font = SANS(52, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("comment A or B", 0, 150);
+            const t = f - endL - 18, q = 3 - Math.floor(t / 30);
             if (t >= 0 && q >= 1) {
               const pop = 1 + 0.25 * (1 - clamp((t % 30) / 6));
-              c.save(); c.translate(0, 258); c.scale(pop, pop);
+              c.save(); c.translate(0, 268); c.scale(pop, pop);
               c.beginPath(); c.arc(0, 0, 70, 0, 7); c.fillStyle = q === 1 ? COL.red : INK; c.fill();
               c.font = SANS(92); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(q), 0, 33); c.restore();
             }
@@ -464,8 +468,11 @@ const StChai: React.FC<SP> = ({ s }) => {
               if (f >= c1 + 14) tag(c, "we asked 10 times: 8 came out 5-star", W / 2, 480, 58, "#fef3c7", INK, -0.02, seg(f, c1 + 14, c1 + 22));
             }
           }
-          if (n === 5 && p > 0.25) tag(c, "we asked 10 times: 0 used Babu's words", W / 2, 390, 58, "#fef3c7", INK, -0.02, seg(p, 0.25, 0.35));
-          if (n === 10) bubble(c, 640, 330, "LAST YEAR'S PRICE!", 64, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
+          if (n === 5 && p > 0.25) tag(c, "we asked 10 times: 0 used Babu's words", W / 2, 275, 58, "#fef3c7", INK, -0.02, seg(p, 0.25, 0.35));
+          if (n === 10) {
+            bubble(c, 640, 330, "LAST YEAR'S PRICE!", 64, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
+            tag(c, "our test: 5 of 10 wrote last year's Rs 10", W / 2, 1300, 54, "#fee2e2", "#991b1b", 0.02, 1);
+          }
           if (n === 12) {   // Babu types his next prompt; the rule stays on screen into the loop
             const typed = "...ginger tea, Rs 15. Now make it fancy!";
             const c1 = cu(1, 0.45);
