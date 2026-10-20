@@ -13,7 +13,7 @@
   0.8
  ],
  "musicFade": 0.05,
- "endPad": 0.45,
+ "endPad": 0.8,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -283,7 +283,7 @@
      "who": "ai",
      "file": "10_ai.wav",
      "text": "[1] Thirty-nine. [2] Same as the big one. [3] Four times faster.",
-     "show": "Thirty-nine. Same as the big one. Four times faster.",
+     "show": "39. Same as the big one. 4x faster.",
      "maxgap": 0.28,
      "gap": 0.35,
      "tempo": 1.0,
@@ -389,6 +389,12 @@
    "outro": true,
    "boost": 1.35,
    "rise": 1.4,
+   "drop_at": [
+    [
+     2,
+     1
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -421,8 +427,8 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "Done. Medium brain installed.",
-     "show": "Done. Medium brain installed.",
+     "text": "Done. The smallest one that passed is installed.",
+     "show": "Done. The smallest one that passed is installed.",
      "maxgap": 0.28,
      "gap": 0.3,
      "gain_db": -1.0

@@ -169,10 +169,10 @@ const StSize: React.FC<SP> = ({ s }) => {
     if (b.prop === "jars") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.55) - 4} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "test") {
       [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 8 + q * 9} src="audio/sfx_tick.wav" vol={0.15} />));
-      sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.6) - 40} src="reel/sfx_riser.wav" vol={0.32} />, <Sfx key={k("o")} at={cue(i, 1, 0.6) + 2} src="audio/gag_bonk.wav" vol={0.32} />);
+      sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.6) - 40} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("o")} at={cue(i, 1, 0.6) + 2} src="audio/gag_bonk.wav" vol={0.42} />);
     }
-    if (b.prop === "bills") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.35) - 40} src="reel/sfx_riser.wav" vol={0.3} />,
-      <Sfx key={k("o")} at={cue(i, 1, 0.35)} src="audio/gag_bonk.wav" vol={0.3} />, <Sfx key={k("v")} at={cue(i, 2, 0.7)} src="audio/gag_bonk.wav" vol={0.26} />);
+    if (b.prop === "bills") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.35) - 40} src="reel/sfx_riser.wav" vol={0.42} />,
+      <Sfx key={k("o")} at={cue(i, 1, 0.35)} src="audio/gag_bonk.wav" vol={0.4} />, <Sfx key={k("v")} at={cue(i, 2, 0.7)} src="audio/gag_bonk.wav" vol={0.36} />);
     if (b.prop === "diwali") sfx.push(<Sfx key={k("p")} at={at + Math.round(l.frames * 0.55)} src="audio/gag_pop.wav" vol={0.45} />);
     if (b.prop === "quiz") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={end + 6 + q * 24} src="audio/sfx_tick.wav" vol={0.38} />));
     if (b.prop === "bars") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.02) - 6} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("s")} at={cue(i, 3, 0.75) - 4} src="audio/sfx_success.wav" vol={0.35} />);
@@ -180,7 +180,8 @@ const StSize: React.FC<SP> = ({ s }) => {
     if (b.prop === "delete") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) + 4} src="audio/sfx_whoosh.wav" vol={0.35} />);
     if (b.prop === "installed") sfx.push(<Sfx key={k("i")} at={at + 6} src="audio/gag_ding.wav" vol={0.4} />);
     if (b.prop === "flood") for (let q = 0; q < 9; q++) sfx.push(<Sfx key={k("n" + q)} at={at - 14 + Math.round(30 * Math.sqrt(q / 9) * 2)} src="audio/sfx_pop.wav" vol={0.22} />);
-    if (b.prop === "full") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.55) - 6} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("z")} at={cue(i, 1, 0.55) - 6} src="reel/sfx_buzz.wav" vol={0.3} />);
+    if (b.prop === "full") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.55) - 42} src="reel/sfx_riser.wav" vol={0.4} />,   // into the bed's drop
+      <Sfx key={k("f")} at={cue(i, 1, 0.55) - 6} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("z")} at={cue(i, 1, 0.55) - 6} src="reel/sfx_buzz.wav" vol={0.35} />);
   });
   return (
     <>
@@ -217,7 +218,7 @@ const StSize: React.FC<SP> = ({ s }) => {
             jar(c, 540, 960, 330, 210, "MEDIUM", "1.5 billion · 1.1 GB", GREEN, seg(f, 3, 11), r);
             jar(c, 820, 960, 520, 250, "BIG", "7 billion · 4.7 GB", AMBER, seg(f, 6, 14), r);
             tag(c, "parameters = the numbers a brain is made of", 540, 400, 38, COL.yellow, INK, -0.01, seg(f, 0, 8));
-            c.font = handF(30); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("(the three we tested: Qwen2.5, 4-bit files)", 540, 1160);
+            c.font = SANS(32, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("the three we tested: Qwen2.5, 4-bit files", 540, 1162);
             if (f >= c1 - 4) {
               const k = seg(f, c1 - 4, c1 + 6);
               c.save(); c.globalAlpha = k; c.fillStyle = "#0f172a"; rrect(c, 130, 1190, 820, 220, 24); c.fill();
@@ -238,7 +239,13 @@ const StSize: React.FC<SP> = ({ s }) => {
               });
               c.font = handF(30); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("40 messages · the right tray written down first", 540, 460);
               const c1 = cu(1, 0.6);
-              if (f >= c1 - 6) sizeBar(c, 1240, "TINY (0.5 GB)", 14, 40, COL.red, seg(f, c1 - 6, c1 + 12), f >= c1 + 14 ? "guessing at random gets about 10" : undefined);
+              if (f >= c1 - 6) sizeBar(c, 1240, "TINY (0.5 GB)", 14, 40, COL.red, seg(f, c1 - 6, c1 + 12));
+              if (f >= c1 + 14) {   // what random guessing gets with four trays: 10 of 40
+                const k = seg(f, c1 + 14, c1 + 22), gx = 150 + 600 * (10 / 40);
+                c.save(); c.globalAlpha = k; c.strokeStyle = INK; c.lineWidth = 5; c.setLineDash([12, 8]);
+                c.beginPath(); c.moveTo(gx, 1222); c.lineTo(gx, 1336); c.stroke(); c.setLineDash([]);
+                c.font = SANS(36); c.fillStyle = INK; c.textAlign = "center"; c.fillText("random guess: 10", gx + 40, 1384); c.restore();
+              }
             } else {
               const k = seg(p, 0.05, 0.25), land = easeOut(seg(p, 0.3, 0.55));
               chipMsg(c, 540 - 290 * land, 600 + 400 * land, "happy diwali anna and family", k * (1 - 0.3 * land), "#fde68a");
@@ -292,6 +299,13 @@ const StSize: React.FC<SP> = ({ s }) => {
             }
             tag(c, "52 good mornings → OTHER ✓", 540, 840, 46, "#e0e7ff", INK, -0.02, seg(p, 0.2, 0.32));
             if (f >= c1 - 4) fullDialog(c, 540, 680, 1.1, seg(f, c1 - 4, c1 + 6), "52 new photos", "free: 0 GB");
+            if (f >= c1 + 10) {   // the pointer to the caption's two phone apps, big enough to read on a phone
+              const k = easeOut(seg(f, c1 + 10, c1 + 18));
+              c.save(); c.globalAlpha = k; c.translate(540, 1300); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
+              c.fillStyle = "#dcfce7"; rrect(c, -380, -80, 760, 160, 26); c.fill();
+              c.font = SANS(46); c.fillStyle = "#14532d"; c.textAlign = "center"; c.fillText("TRY IT ON YOUR PHONE", 0, -14);
+              c.font = SANS(38, 600); c.fillText("2 free apps in the caption ↓", 0, 46); c.restore();
+            }
           }
           c.restore();
         } else {

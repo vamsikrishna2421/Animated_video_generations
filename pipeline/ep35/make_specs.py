@@ -26,14 +26,15 @@ LINES = {
     13: ("ravi", "ravi", "which", "So which one do I use?!"),
     14: ("ai", "wide", "rule", "Sorting? One miss is okay: medium. [1] Bills? No misses allowed: calculator."),
     15: ("ravi", "screen", "delete", "Medium is 1.1. I have 1! [1] Okay, delete the good-morning photos."),   # "Fine" was heard "Find"
-    16: ("ai", "screen", "installed", "Done. Medium brain installed."),
+    16: ("ai", "screen", "installed", "Done. The smallest one that passed is installed."),   # v3: the rule said out loud (it was only on the card)
     17: ("ravi", "wide", "flood", "Who sent fifty-two good mornings?!"),
     18: ("ai", "screen", "full", "Those go in OTHER. [1] Storage full."),   # "Filed under" was heard "field under"
 }
 SHOW = {n: t.replace("[1] ", "").replace("[2] ", "").replace("[3] ", "") for n, (_, _, _, t) in LINES.items()}
 # captions with digits where the line is all numbers (and "forty of your | messages" no longer splits)
 SHOW.update({6: "We tested all three on 40 of your messages. Tiny one: 14 right.", 7: "14?! Out of 40?!",
-             12: "Bills? Out of 20, medium got 9 wrong. Big got 2 wrong.", 17: "Who sent 52 good mornings?!"})
+             10: "39. Same as the big one. 4x faster.", 12: "Bills? Out of 20, medium got 9 wrong. Big got 2 wrong.",
+             17: "Who sent 52 good mornings?!"})
 # English spoken forms: numbers and units in words, capitals out
 TTS_EN = {1: "AI! The free brain won't fit in my phone!", 2: "It's four point seven gigabytes. [1] You have one gigabyte free.",
           5: "Then the tiniest! Half a gigabyte!", 15: "Medium is one point one. I have one! [1] Okay, delete the good morning photos.",
@@ -47,7 +48,7 @@ SCENES = [("sz_a", 1, 3, {"rise": 1.25, "tail": 0.1}),
           ("sz_c", 6, 9, {"lift": 0.5, "pre": 0.35, "boost": 0.8, "tail": 0.1}),
           ("sz_d", 10, 13, {"drop_cue": 1, "boost": 1.0, "tail": 0.15}),
           ("sz_e", 14, 15, {"lift": 0.5, "pre": 0.35, "boost": 1.15, "swell": [1, 1, 1.3], "tail": 0.1}),   # v3: swells from "Okay, delete" into the ending
-          ("sz_f", 16, 18, {"outro": True, "boost": 1.35, "rise": 1.4, "tail": 0.0})]
+          ("sz_f", 16, 18, {"outro": True, "boost": 1.35, "rise": 1.4, "drop_at": [[2, 1]], "tail": 0.0})]   # v3: the bed cuts out before the last "Storage full"
 # seconds after line n (default 0.16): the quiz card's hold after 9; the rule card on its own after 14
 GAP = {1: 0.2, 8: 0.35, 9: 2.6, 10: 0.35, 12: 0.4, 14: 1.0, 16: 0.3, 17: 0.25}   # 9: the quiz holds for its countdown (v3: 1.5 s was too short to guess)
 TE = {
@@ -60,21 +61,21 @@ TE = {
     7: "పద్నాలుగా?! నలభైలో?!",
     8: "హ్యాపీ దీపావళి ని ఆర్డర్ అనుకుంది.",
     9: "దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?",
-    10: "[1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.",   # a bare "ముప్పై తొమ్మిది." first was dropped in all four takes; v3: "కానీ నాలుగు రెట్లు ఫాస్ట్" read as the big one, and "ఫాస్ట్" came out "forced"
+    10: "[1] మీడియం: నలభైలో ఒక్కటే తప్పు! [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.",   # v3: "ముప్పై తొమ్మిది" came out "30, 90" in every take, so the reveal is "one wrong out of forty" (39/40 on screen; it also sets up the rule's "one miss is fine"); "కానీ నాలుగు రెట్లు ఫాస్ట్" read as the big one, and "ఫాస్ట్" came out "forced"
     11: "మీడియమే! నా బిల్లులు కూడా వేస్తుంది!",
     12: "బిల్లులా? ఇరవై బిల్లుల్లో, [1] మీడియం తొమ్మిది తప్పులు చేసింది. [2] పెద్దది రెండు తప్పులు చేసింది.",
     13: "మరి ఏది వాడాలి?!",
-    14: "మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.",
+    14: "మెసేజ్ లకి ఒక్క తప్పు పర్లేదు: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.",   # v3: "ఓకే" got swallowed
     15: "మీడియం వన్ పాయింట్ వన్. నా దగ్గర వన్ ఏ! [1] సరే, గుడ్ మార్నింగ్ ఫోటోలు డిలీట్ చెయ్.",
-    16: "అయిపోయింది. మీడియం బ్రెయిన్ ఇన్స్టాల్ అయింది.",   # this take's "brain" was heard right: kept
+    16: "అయిపోయింది. పాస్ అయిన వాటిలో చిన్నది ఇన్స్టాల్ అయింది.",
     17: "యాభై రెండు గుడ్ మార్నింగ్ లు ఎవరు పంపారు?!",
     18: "అవి అదర్ లో పెట్టాను. [1] స్టోరేజ్ ఫుల్.",
 }
 # long Telugu lines voiced as two takes, joined (EP34, skit 03): 12 babbled in all four tries, 14 lost its first half
 TEMPO_TE = {10: 1.0, 12: 1.0}   # the test's numbers at their own pace (the 39 take is fast)
 TE_PART2 = {12: ("బిల్లులా? ఇరవై బిల్లుల్లో, మీడియం తొమ్మిది తప్పులు చేసింది.", "పెద్దది రెండు తప్పులు చేసింది."),
-            14: ("మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం.", "బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్."),
-            10: ("మీడియం: ముప్పై తొమ్మిది కరెక్ట్.", "పెద్దది కూడా అంతే, కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.")}
+            14: ("మెసేజ్ లకి ఒక్క తప్పు పర్లేదు: మీడియం.", "బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్."),
+            10: ("మీడియం: నలభైలో ఒక్కటే తప్పు!", "పెద్దది కూడా అంతే, కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.")}
 YT = {"sz_a": "The brain won't fit", "sz_b": "Small language models", "sz_c": "Our test: 40 messages", "sz_d": "Medium vs big",
       "sz_e": "Which one to use", "sz_f": "Storage full again"}
 
@@ -84,7 +85,7 @@ def spec(lang="en"):
     sid = "ep35te" if te else "ep35v1"
     s = {"id": sid, "title": "The brain that didn't fit (EP35: small language models)" + (" (Telugu audio)" if te else ""), "label": "EP35",
          "banner": "The brain that didn't fit", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.15, "music": "lofi",
-         "musicVol": [0.4, 0.8], "musicFade": 0.05, "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
+         "musicVol": [0.4, 0.8], "musicFade": 0.05, "endPad": 0.8, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
          "musicPad": False, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.12 if te else 1.2, "captionTop": 1500}
     if te:

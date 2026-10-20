@@ -30,10 +30,11 @@ MUST = {"en": {1: [("brain",), ("phone",)], 2: [("4", "four"), ("free",)], 3: [(
                6: [("forty", "40"), ("fourteen", "14")], 7: [("fourteen", "14"), ("forty", "40")], 8: [("diwali",), ("order",)],
                9: [("kilo", "kg"), ("diwali",), ("medium",)], 10: [("thirty", "39"), ("faster",)], 11: [("medium",), ("bills", "bill")],
                12: [("twenty", "20"), ("nine", "9"), ("two", "2"), ("wrong",)], 13: [("which",)], 14: [("sorting",), ("medium",), ("calculator",)],
-               15: [("medium",), ("delete",), ("photos", "photo")], 16: [("medium",), ("installed", "install")],
+               15: [("medium",), ("delete",), ("photos", "photo")], 16: [("smallest",), ("passed", "past", "pass"), ("installed", "install")],
                17: [("fifty", "52"), ("mornings", "morning")], 18: [("go",), ("other",), ("storage",), ("full",)]},
-        "te": {1: [("ब्रेन", "ब्रैन", "brain")]}}   # Telugu as the judge writes it (Devanagari): "brain", not "breen". Line 10's
-# "తొమ్మిది" came out "tummidi" in four more takes (v3), so its first take stays (39/40 is on screen as it is said).
+        "te": {1: [("ब्रेन", "ब्रैन", "brain")], 16: [("पास", "pass")]}}   # Telugu as the judge writes it (Devanagari): "brain",
+# not "breen". Line 10's "ముప్పై తొమ్మిది" came out "30, 90" or "tummidi" in all of eight takes, so line 10 now says
+# "నలభైలో ఒక్కటే తప్పు" (v3; its take was re-rolled until the judge heard "ఒక్కటే").
 
 
 def heard(path, who, n, lang):

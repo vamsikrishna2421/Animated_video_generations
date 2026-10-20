@@ -15,6 +15,10 @@
   [
    1024,
    1048
+  ],
+  [
+   2050,
+   2074
   ]
  ],
  "musicBoosts": [
@@ -40,7 +44,7 @@
   ],
   [
    1882,
-   2099,
+   2139,
    1.35
   ],
   [
@@ -57,14 +61,14 @@
   ],
   [
    1882,
-   2099,
+   2139,
    1.4,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 2099,
+ "totalFrames": 2139,
  "music": "reel/ep35v1/score.wav",
  "scenes": [
   {
@@ -738,48 +742,43 @@
      "frames": 141,
      "words": [
       {
-       "w": "Thirty-nine.",
+       "w": "39.",
        "from": 5,
-       "to": 21
+       "to": 12
       },
       {
        "w": "Same",
+       "from": 12,
+       "to": 21
+      },
+      {
+       "w": "as",
        "from": 21,
        "to": 50
       },
       {
-       "w": "as",
-       "from": 50,
-       "to": 54
-      },
-      {
        "w": "the",
-       "from": 54,
-       "to": 59
+       "from": 50,
+       "to": 57
       },
       {
        "w": "big",
-       "from": 59,
+       "from": 57,
        "to": 64
       },
       {
        "w": "one.",
        "from": 64,
-       "to": 70
+       "to": 73
       },
       {
-       "w": "Four",
-       "from": 70,
-       "to": 91
-      },
-      {
-       "w": "times",
-       "from": 91,
-       "to": 98
+       "w": "4x",
+       "from": 73,
+       "to": 93
       },
       {
        "w": "faster.",
-       "from": 98,
+       "from": 93,
        "to": 116
       }
      ],
@@ -1166,7 +1165,7 @@
     "hardCuts": true
    },
    "from": 1882,
-   "frames": 217,
+   "frames": 257,
    "lines": [
     {
      "who": "ai",
@@ -1175,27 +1174,47 @@
      "sub": null,
      "audio": "reel/ep35v1/line_16.wav",
      "from": 0,
-     "frames": 59,
+     "frames": 88,
      "words": [
       {
        "w": "Done.",
-       "from": 4,
-       "to": 21
+       "from": 3,
+       "to": 8
       },
       {
-       "w": "Medium",
-       "from": 21,
-       "to": 29
+       "w": "The",
+       "from": 8,
+       "to": 22
       },
       {
-       "w": "brain",
-       "from": 29,
-       "to": 35
+       "w": "smallest",
+       "from": 22,
+       "to": 30
+      },
+      {
+       "w": "one",
+       "from": 30,
+       "to": 34
+      },
+      {
+       "w": "that",
+       "from": 34,
+       "to": 38
+      },
+      {
+       "w": "passed",
+       "from": 38,
+       "to": 48
+      },
+      {
+       "w": "is",
+       "from": 48,
+       "to": 57
       },
       {
        "w": "installed.",
-       "from": 35,
-       "to": 52
+       "from": 57,
+       "to": 71
       }
      ],
      "cues": {}
@@ -1206,33 +1225,33 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep35v1/line_17.wav",
-     "from": 68,
+     "from": 97,
      "frames": 61,
      "words": [
       {
        "w": "Who",
-       "from": 74,
-       "to": 80
+       "from": 103,
+       "to": 109
       },
       {
        "w": "sent",
-       "from": 80,
-       "to": 90
+       "from": 109,
+       "to": 119
       },
       {
        "w": "52",
-       "from": 90,
-       "to": 94
+       "from": 119,
+       "to": 123
       },
       {
        "w": "good",
-       "from": 94,
-       "to": 101
+       "from": 123,
+       "to": 130
       },
       {
        "w": "mornings?!",
-       "from": 101,
-       "to": 116
+       "from": 130,
+       "to": 145
       }
      ],
      "cues": {}
@@ -1243,42 +1262,42 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep35v1/line_18.wav",
-     "from": 137,
+     "from": 166,
      "frames": 62,
      "words": [
       {
        "w": "Those",
-       "from": 139,
-       "to": 147
+       "from": 169,
+       "to": 176
       },
       {
        "w": "go",
-       "from": 147,
-       "to": 150
+       "from": 176,
+       "to": 180
       },
       {
        "w": "in",
-       "from": 150,
-       "to": 154
+       "from": 180,
+       "to": 183
       },
       {
        "w": "OTHER.",
-       "from": 154,
-       "to": 163
+       "from": 183,
+       "to": 192
       },
       {
        "w": "Storage",
-       "from": 163,
-       "to": 186
+       "from": 192,
+       "to": 215
       },
       {
        "w": "full.",
-       "from": 186,
-       "to": 193
+       "from": 215,
+       "to": 222
       }
      ],
      "cues": {
-      "1": 163
+      "1": 192
      }
     }
    ]

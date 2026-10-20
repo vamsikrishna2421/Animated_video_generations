@@ -29,7 +29,16 @@ heard "field under", now "Those go in OTHER". Telugu: line 10 now says the mediu
 in lines 1, 3 and 4 ("బ్రెయిన్" came out "breen"); the test numbers in Telugu words ("ఫోర్టీనా" came out "fortyna");
 "మీడియం: ముప్పై తొమ్మిది కరెక్ట్" (a bare "ముప్పై తొమ్మిది." was dropped in every take). Not changed: the Telugu
 music level (the pack's "15 dB under" measured only the music drop; the voice and music stems sit as in English, within
-1 dB). Final length: English 70 s, Telugu 69 s.
+1 dB).
+
+v3, round 2 (the same viewers on the v3 render; both: the round-1 fixes work): Telugu line 10's "ముప్పై తొమ్మిది" came
+out "30, 90" or "tummidi" in eight takes, so it says "మీడియం: నలభైలో ఒక్కటే తప్పు!" (39/40 is on screen, and it sets up
+the rule's "one miss is fine"); "ఒక్క తప్పు ఓకే" lost its "ఓకే", now "ఒక్క తప్పు పర్లేదు"; line 16 says the rule out
+loud, "Done. The smallest one that passed is installed." ("పాస్ అయిన వాటిలో చిన్నది ఇన్స్టాల్ అయింది"; Parler drops the
+opening "అయిపోయింది"); the last "Storage full" gets a sting (the bed swells from "Okay, delete", cuts out before
+"Storage full" under a riser, and a louder hit lands on it); the last frame points to the caption's two free phone apps
+("Try it: 2 free apps in the caption", the end held 0.8 s); random guessing is a dashed marker at 10 on the tiny bar;
+the tested-models line is bigger; the captions show 39 and 4x as digits. Final length: English 71 s, Telugu 70 s.
 
 Teaching skit in Ravi anna's shop (cast of skit 01, EP33, EP34). The plot carries the topic:
 - **Failure (frame 1):** Ravi wants the shop AI's free brain (EP34) inside his phone, so it works at the counter with
@@ -97,9 +106,9 @@ Lines of 1-3 s; never more than two AI lines in a row; Ravi asks what the viewer
 | 13 | Ravi | So which one do I use?! | |
 | 14 | AI | Sorting? One miss is okay: medium. [1] Bills? No misses allowed: calculator. | rule card, three rows held 3 s: "SORTING: 1 miss OK → MEDIUM ✓" · "BILLS: 0 misses → none passed → CALCULATOR" · "Test each size on YOUR job. Keep the smallest that passes." |
 | 15 | Ravi | Medium is 1.1. I have 1! [1] Okay, delete the good-morning photos. | the phone: "MEDIUM needs 1.1 GB · free 1 GB", then the photos fly into a bin: free 1.2 GB |
-| 16 | AI | Done. Medium brain installed. | "MEDIUM ✓ 1.1 GB · works offline", the bar: free 0.1 GB |
+| 16 | AI | Done. The smallest one that passed is installed. | "MEDIUM ✓ 1.1 GB · works offline", the bar: free 0.1 GB |
 | 17 | Ravi | (the phone buzzes: "Family group: 52 new photos") Who sent fifty-two good mornings?! | 52 good-morning photos pile up over the shop |
-| 18 | AI | Those go in OTHER. [1] Storage full. | the photos drop into OTHER; "Storage full · 52 new photos · free: 0 GB"; loops to frame 1 |
+| 18 | AI | Those go in OTHER. [1] Storage full. | the photos drop into OTHER; the bed cuts out under a riser, a hit on "Storage full · 52 new photos · free: 0 GB"; "Try it: 2 free apps in the caption"; loops to frame 1 |
 
 ## Script (Telugu, same beats; English on-screen text)
 1. ఏఐ, ఫ్రీ బ్రేన్ నా ఫోన్ లో పట్టట్లేదు!
@@ -111,13 +120,13 @@ Lines of 1-3 s; never more than two AI lines in a row; Ravi asks what the viewer
 7. పద్నాలుగా?! నలభైలో?!
 8. హ్యాపీ దీపావళి ని ఆర్డర్ అనుకుంది.
 9. దీపావళి కేజీ ఎంత?! [1] మరి మీడియం?
-10. [1] మీడియం: ముప్పై తొమ్మిది కరెక్ట్. [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.
+10. [1] మీడియం: నలభైలో ఒక్కటే తప్పు! [2] పెద్దది కూడా అంతే, [3] కానీ మీడియం నాలుగు రెట్లు వేగంగా చేసింది.
 11. మీడియమే! నా బిల్లులు కూడా వేస్తుంది!
 12. బిల్లులా? ఇరవై బిల్లుల్లో, [1] మీడియం తొమ్మిది తప్పులు చేసింది. [2] పెద్దది రెండు తప్పులు చేసింది.
 13. మరి ఏది వాడాలి?!
-14. మెసేజ్ లకి ఒక్క తప్పు ఓకే: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.
+14. మెసేజ్ లకి ఒక్క తప్పు పర్లేదు: మీడియం. [1] బిల్లులకి ఒక్క తప్పూ కుదరదు: కాలిక్యులేటర్.
 15. మీడియం వన్ పాయింట్ వన్. నా దగ్గర వన్ ఏ! [1] సరే, గుడ్ మార్నింగ్ ఫోటోలు డిలీట్ చెయ్.
-16. అయిపోయింది. మీడియం బ్రెయిన్ ఇన్స్టాల్ అయింది.
+16. అయిపోయింది. పాస్ అయిన వాటిలో చిన్నది ఇన్స్టాల్ అయింది.
 17. యాభై రెండు గుడ్ మార్నింగ్ లు ఎవరు పంపారు?!
 18. అవి అదర్ లో పెట్టాను. [1] స్టోరేజ్ ఫుల్.
 
