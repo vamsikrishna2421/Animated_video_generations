@@ -1,0 +1,338 @@
+{
+ "id": "new01v1",
+ "title": "SKY-001: the first engineering world model?",
+ "label": "NEW IN AI",
+ "banner": "SKY-001: AI that designs parts",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.8
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": false,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.1,
+ "parler_lang": "en",
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "n1_a",
+   "type": "sk_lab",
+   "tail": 0.1,
+   "boost": 1.15,
+   "rise": 1.3,
+   "data": {
+    "beats": [
+     {
+      "who": "kiran",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "hours",
+      "n": 2
+     },
+     {
+      "who": "kiran",
+      "shot": "card",
+      "prop": "launch",
+      "n": 3
+     },
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "who",
+      "n": 4
+     },
+     {
+      "who": "kiran",
+      "shot": "card",
+      "prop": "own",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The launch",
+     "title": "The launch",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "kiran",
+     "file": "01_kiran.wav",
+     "text": "Meghana, stop! [1] A new AI designs a whole wheel in four seconds!",
+     "show": "Meghana, stop! A new AI designs a whole wheel in four seconds!",
+     "maxgap": 0.25,
+     "gap": 0.2
+    },
+    {
+     "who": "meghana",
+     "file": "02_meghana.wav",
+     "text": "Four seconds? This one hub took me three hours!",
+     "show": "Four seconds? This one hub took me three hours!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "kiran",
+     "file": "03_kiran.wav",
+     "text": "It's SKY-001. [1] Fifty-one times faster than GPT-6 Astra. A hundred and fifty times cheaper!",
+     "show": "It's SKY-001. Fifty-one times faster than GPT-6 Astra. A hundred and fifty times cheaper!",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tts": "It's Sky zero zero one. [1] Fifty-one times faster than G P T six Astra. A hundred and fifty times cheaper!"
+    },
+    {
+     "who": "meghana",
+     "file": "04_meghana.wav",
+     "text": "Says who?",
+     "show": "Says who?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "kiran",
+     "file": "05_kiran.wav",
+     "text": "Um... the company. [1] Their own test.",
+     "show": "Um... the company. Their own test.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    }
+   ]
+  },
+  {
+   "id": "n1_b",
+   "type": "sk_lab",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 0.85,
+   "data": {
+    "beats": [
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "how",
+      "n": 6
+     },
+     {
+      "who": "kiran",
+      "shot": "card",
+      "prop": "split",
+      "n": 7
+     },
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "each",
+      "n": 8
+     },
+     {
+      "who": "kiran",
+      "shot": "card",
+      "prop": "sketch",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "How it works",
+     "title": "How it works",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "meghana",
+     "file": "06_meghana.wav",
+     "text": "Okay. How is it so fast?",
+     "show": "Okay. How is it so fast?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "kiran",
+     "file": "07_kiran.wav",
+     "text": "It doesn't type CAD code like a chatbot. [1] It imagines the shape, then splits it into parts, down to the screws.",
+     "show": "It doesn't type CAD code like a chatbot. It imagines the shape, then splits it into parts, down to the screws.",
+     "maxgap": 0.25,
+     "gap": 0.3
+    },
+    {
+     "who": "meghana",
+     "file": "08_meghana.wav",
+     "text": "And each part?",
+     "show": "And each part?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "kiran",
+     "file": "09_kiran.wav",
+     "text": "Drawn like you do: [1] sketch, extrude, cut. They call it a world model.",
+     "show": "Drawn like you do: sketch, extrude, cut. They call it a world model.",
+     "maxgap": 0.25,
+     "gap": 3.9
+    }
+   ]
+  },
+  {
+   "id": "n1_c",
+   "type": "sk_lab",
+   "tail": 0.1,
+   "drop_cue": 0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "meghana",
+      "shot": "card",
+      "prop": "same",
+      "n": 10
+     },
+     {
+      "who": "kiran",
+      "shot": "card",
+      "prop": "plan",
+      "n": 11
+     },
+     {
+      "who": "meghana",
+      "shot": "meghana",
+      "prop": "house",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The numbers",
+     "title": "The numbers",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "meghana",
+     "file": "10_meghana.wav",
+     "text": "Point six apart? [1] That's the same. The win is speed and cost.",
+     "show": "Point six apart? That's the same. The win is speed and cost.",
+     "maxgap": 0.25,
+     "gap": 0.5,
+     "tts": "Point six apart? [1] That's the same. The win is speed and cost.",
+     "gain_db": 1.5
+    },
+    {
+     "who": "kiran",
+     "file": "11_kiran.wav",
+     "text": "On floor plans, it matched forty-four percent.",
+     "show": "On floor plans, it matched forty-four percent.",
+     "maxgap": 0.25,
+     "gap": 0.3
+    },
+    {
+     "who": "meghana",
+     "file": "12_meghana.wav",
+     "text": "Less than half? [1] I'm not living in that house!",
+     "show": "Less than half? I'm not living in that house!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "n1_d",
+   "type": "sk_lab",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.7,
+   "data": {
+    "beats": [
+     {
+      "who": "kiran",
+      "shot": "kiran",
+      "prop": "tonight",
+      "n": 13
+     },
+     {
+      "who": "meghana",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "kiran",
+      "shot": "wide",
+      "prop": "again",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "How to check any launch",
+     "title": "How to check any launch",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "kiran",
+     "file": "13_kiran.wav",
+     "text": "Can we try it tonight?",
+     "show": "Can we try it tonight?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "meghana",
+     "file": "14_meghana.wav",
+     "text": "Waitlist only. [1] Ask every launch: who tested it, against what, can I use it today?",
+     "show": "Waitlist only. Ask every launch: who tested it, against what, can I use it today?",
+     "maxgap": 0.25,
+     "gap": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "kiran",
+     "file": "15_kiran.wav",
+     "text": "Wait! Another AI, a thousand times faster! [1] Meghana, stop!",
+     "show": "Wait! Another AI, a thousand times faster! Meghana, stop!",
+     "maxgap": 0.25,
+     "gap": 0.05,
+     "gain_db": 1.0
+    }
+   ]
+  }
+ ]
+}
