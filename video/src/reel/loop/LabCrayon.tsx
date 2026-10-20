@@ -248,9 +248,9 @@ const StLab: React.FC<SP> = ({ s }) => {
     if (b.prop === "split") {
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={cue(i, 1, 0.3) + q * 8} src="audio/sfx_pop.wav" vol={0.28} />));
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={cue(i, 2, 0.6) + q * 10} src="audio/sfx_tick.wav" vol={0.3} />));
-      sfx.push(<Sfx key={k("r")} at={end - 30} src="reel/sfx_riser.wav" vol={0.28} />);
       const nx = ls[i + 1] ? ls[i + 1].from : s.frames;   // the card leaves as the next line (or the scene) starts
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={nx - 100 + q * 30} src="audio/sfx_tick.wav" vol={0.4} />));   // the quiz's 3-2-1
+      sfx.push(<Sfx key={k("r")} at={nx - 48} src="reel/sfx_riser.wav" vol={0.3} />);   // rising through "1" into the reveal
     }
     if (b.prop === "who") sfx.push(<Sfx key={k("b")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "same") sfx.push(<Sfx key={k("h")} at={at - 14} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("t")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
