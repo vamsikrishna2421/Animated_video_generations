@@ -40,9 +40,10 @@ his phone.
   yet; the benchmarks, prompts and comparisons are Skyfall's. Who it is for: teams making thousands of CAD parts or
   plans; for one part, 3 minutes and 75 cents is fine.
 - IoU (intersection over union), said "shape match" on screen: the overlap between the drawn shape and the right shape,
-  divided by both together. 43.6% means less than half of the floor plan lines up with the reference.
+  divided by both together. For two plans of the same size, 43.6% means about 61% of each overlaps the other; no model
+  in their test reached 50%. (v2 said "less than half of the plan lines up": wrong, fixed after the render review.)
 
-## Script (English), v2 after the script-stage review
+## Script (English), v3 after the script-stage and render-stage reviews (lines 8-9 folded into 7)
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | Kiran | Meghana, stop! [1] A new AI designs a part in four seconds! | frame 1: headline "AI: 4 SECONDS / HER: 3 HOURS"; CAD lab at night, clock 11:40; Meghana at her monitor; Kiran bursts in, phone up; on [1] his phone (inset) draws a hub: sketch, stretch, holes |
@@ -50,20 +51,18 @@ his phone.
 | 3 | Kiran | It's SKY-001. [1] It says fifty-one times faster than GPT-6 Astra, and a hundred and fifty times cheaper! | launch card: "Skyfall AI · SKY-001 · 'the first engineering world model'"; on [1] "51x faster · 150x cheaper · than GPT-6 Astra, on design tasks" |
 | 4 | Meghana | Says who? | bubble |
 | 5 | Kiran | (music out) Um... the company. [1] Their own test. | a neutral stamp on the card: "THEIR OWN TEST" |
-| 6 | Meghana | Okay. How is it so fast? | |
-| 7 | Kiran | It says it imagines the shape first. That's the world model. [1] Then it splits it into parts, down to the screws. | "1 picture or text → rough 3D shapes" (three rough wheels); tag "world model = imagines the shape first"; on [1] "2 split into parts, down to screws": tyre, rim, hub, bolts fly apart |
-| 8 | Meghana | And each part? | |
-| 9 | Kiran | Drawn like you do: [1] sketch, stretch, cut. [2] And it's more accurate than all of them! | a circle sketched → stretched into a disc → holes cut; on [2] "the post also says: 'more accurate than all of them!'" |
-| (card) | | | QUIZ, held about 4 s with a ticking 3-2-1: "YOUR CALL · Shape match, their test: SKY-001 79.7% · GPT-6 Astra 79.1% · A) more accurate B) a tie · comment A or B" |
-| 10 | Meghana | Point six apart? [1] That's a tie. Their real claim is [2] speed and cost. | bars: shape match 79.7 vs 79.1 → "a tie"; on [2] 3.9 s vs 199 s → "51x faster", $0.005 vs $0.75 → "150x cheaper" |
-| 11 | Kiran | On floor plans, it matched forty-four percent. [1] GPT-6 Astra got even less. | the AI's floor plan over the right one; "SKY-001: 44% match"; on [1] "GPT-6 Astra: 41%"; small "their test: 43.6% vs 40.6%" |
+| 6 | Meghana | Okay. How does it work? | |
+| 7 | Kiran | It says it imagines the shape first: that's the world model. [1] Then it splits it into parts and draws each one like you do: [2] sketch, stretch, cut. [3] And it's more accurate than all of them! | "1 picture or text → rough 3D shapes" (three rough wheels) and the tag "world model = imagines the shape first"; on [1] "2 split into parts": tyre, rim, hub, bolts fly apart; on [2] "3 each part drawn like a designer": a circle sketched → stretched into a disc → holes cut; on [3] "the post also says: 'more accurate than all of them!'" |
+| (card) | | | QUIZ, held about 4 s with a ticking 3-2-1: "YOUR CALL · Shape match, their test: (how close its 3D part is to the right one) SKY-001 79.7% · GPT-6 Astra 79.1% · A) more accurate B) a tie · comment A or B" |
+| 10 | Meghana | Point six apart? [1] Basically a tie. [2] The real claim: four seconds instead of three minutes. [3] For one hub? Either's fine. | bars: shape match 79.7 vs 79.1 → "basically a tie"; on [2] 3.9 s vs 199 s → "51x faster", $0.005 vs $0.75 → "150x cheaper"; on [3] "matters at thousands of designs" |
+| 11 | Kiran | On floor plans, it matched forty-four percent. [1] GPT-6 Astra got even less. | two plans of the same size, offset so the overlap really is a 44% shape match; "SKY-001: 44% match"; on [1] "GPT-6 Astra: 41%"; small "shape match = overlap ÷ both plans together · their test: 43.6% vs 40.6% · no model reached 50%" |
 | 12 | Meghana | Less than half? [1] I'm not living in any of those houses! | bubble "Less than half?!" |
 | 13 | Kiran | Can we try it tonight? | bubble "Tonight?" |
-| 14 | Meghana | Waitlist only. No price yet. [1] Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today? | tags "waitlist only · no price yet", "no outside test yet"; on [1] the rule card: "NEW AI LAUNCH? ASK: 1 Who tested it? 2 Against what, on which task? 3 Can I use it today?" |
+| 14 | Meghana | Waitlist only, no public price. [1] Before you trust any launch, ask: [2] one, who tested it? [3] Two, against what? [4] Three, can I use it today? | tags "waitlist only · no price yet", "no outside test yet"; on [1] the rule card "NEW AI LAUNCH? ASK:", each question as it is said, and SKY-001's answer after it: "they did", "their own tasks", "not yet" |
 | 15 | Kiran | Wait! [1] Another AI, a thousand times faster! | his phone pings "NEW AI: 1000x FASTER!!!" (no name: a joke on the hype cycle) |
 | 16 | Meghana | Says who? | bubble; cut to frame 1 ("Meghana, stop!"), so it loops |
 
-About 55 s. Tag on screen: "NEW IN AI". Caption: the facts with sources, both tables, who it is for, "comment A or B".
+About 70 s (Fish takes run long; English at tempo 1.2 for Kiran, 1.18 for Meghana). Tag on screen: "NEW IN AI". Caption: the facts with sources, both tables, who it is for, "comment A or B".
 
 Review notes (script stage, two viewers): "Says who? Um... the company" was the best moment for both; the first 3 s
 didn't earn it with the sound off (now a headline on frame 1); the quiz came out of nowhere (Kiran now reads the
@@ -74,26 +73,33 @@ their own verb "stretch"; the loop said "Meghana, stop!" twice (now it ends on "
 like cheap quality (now "తక్కువ ఖర్చు"), "గెలుపు" was newspaper Telugu, "ప్రతి లాంచ్ ని అడుగు" read as asking the
 launch itself.
 
-## Script (Telugu; English on-screen text), v2
+Render review (v2 render, 68 s): both viewers: "Says who? ...the company" and the loop make the reel; 0:19-0:34 dragged
+(now one Kiran line, "How does it work?" instead of "How is it so fast?", which implied a cause nobody showed); the
+speed/cost bars flashed by (now held under "four seconds instead of three minutes. For one hub? Either's fine.", which
+also says who it is for); the floor-plan drawing showed about 8% overlap for a 44% score (redrawn); the stamp blurred
+into the wheel; the quiz bed went near-silent between beats (the bed's pad is on); "Um" was rushed (a 0.8 s silent beat
+before it, its own pause kept); "Ask any launch" was heard as "launched" (now "Before you trust any launch, ask:"), and
+the rule card answers its questions for SKY-001.
+
+## Script (Telugu; English on-screen text), v3
 1. కిరణ్: మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో ఒక పార్ట్ డిజైన్ చేసేస్తుంది!
 2. మేఘన: నాలుగు సెకన్లా? ఈ ఒక్క హబ్ కి నాకు మూడు గంటలు పట్టింది!
 3. కిరణ్: దాని పేరు స్కై జీరో జీరో వన్. [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!
 4. మేఘన: ఎవరు చెప్పారు?
 5. కిరణ్: అదీ, ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్.
-6. మేఘన: సరే. అంత ఫాస్ట్ ఎలా?
-7. కిరణ్: ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. [1] తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.
-8. మేఘన: మరి ఒక్కో పార్ట్?
-9. కిరణ్: నువ్వు గీసినట్టే: [1] స్కెచ్ వేసి, పైకి లాగి, కట్. [2] పైగా అన్నిటికంటే కరెక్ట్ అంట!
-10. మేఘన: పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. [2] వాళ్ళ అసలు క్లెయిమ్ స్పీడ్, ఖర్చు.
+6. మేఘన: సరే. అది ఎలా పని చేస్తుంది?
+7. కిరణ్: ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. [1] తర్వాత పార్టులుగా విడదీసి, ఒక్కోటి నువ్వు గీసినట్టే గీస్తుంది. [2] స్కెచ్ వేసి, పైకి లాగి, కట్. [3] పైగా అన్నిటికంటే కరెక్ట్ అంట!
+10. మేఘన: పాయింట్ సిక్స్ తేడానా? [1] దాదాపు సేమ్. [2] అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. [3] ఒక్క హబ్ కి? ఏదైనా పర్లేదు.
 11. కిరణ్: ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది. [1] జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ.
 12. మేఘన: సగం కూడా లేదా? [1] ఆ ఇళ్ళలో దేంట్లోనూ నేను ఉండను!
 13. కిరణ్: ఈ రాత్రే ట్రై చేద్దామా?
-14. మేఘన: వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. [1] ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?
+14. మేఘన: వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. [1] ఏ లాంచ్ నైనా నమ్మే ముందు అడుగు: [2] ఒకటి, ఎవరు టెస్ట్ చేశారు? [3] రెండు, దేనితో పోల్చారు? [4] మూడు, ఇప్పుడు వాడగలనా?
 15. కిరణ్: ఆగు! [1] ఇంకో ఏఐ, వెయ్యి రెట్లు ఫాస్ట్ అంట!
 16. మేఘన: ఎవరు చెప్పారు?
 
 ## Sound
-A hit on frame 1 (Kiran bursting in) with a pop; the bed builds under the claims and drops out for a beat before
-"Um... the company"; a bonk on "own"; a lift into how it works; the quiz's ticking 3-2-1 over the bed; a hit on the cut
-to the numbers, the bed out under "Point six apart?" and back on "That's a tie"; a swell under the house joke; the rule
+A hit on frame 1 (Kiran bursting in) with a pop; the bed (with a soft pad, so no stretch goes dead) builds under the
+claims and drops out for a 0.8 s silent beat before "Um... the company"; a bonk on "own"; a lift into how it works; the quiz's ticking 3-2-1 over the bed; a hit on the cut
+to the numbers (the line starts 0.35 s later, so the hit doesn't hide "Point"), the bed out under "Point six apart?"
+and back on "Basically a tie"; a swell under the house joke; the rule
 card on a snap; pops speeding up into the loop and the bed rising to the end.

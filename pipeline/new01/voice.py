@@ -35,10 +35,10 @@ VOICE_TE = {
 }
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
 MUST = {"en": {1: [("stop",), ("part", "parts"), ("four", "4")], 2: [("three", "3"), ("hours", "hour")],
-               3: [("says",), ("fifty", "51"), ("astra",), ("cheaper",)], 4: [("says",)], 5: [("company",), ("test",)], 6: [("fast",)],
-               7: [("imagines", "imagine"), ("world",), ("screws", "screw")], 8: [("part",)], 9: [("sketch",), ("stretch",), ("cut",), ("accurate",)],
-               10: [("six", "6"), ("tie",), ("speed",), ("cost",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
-               12: [("half",), ("houses", "house")], 13: [("tonight",)], 14: [("waitlist", "wait"), ("price",), ("tested", "test"), ("two", "2"), ("today",)],
+               3: [("says",), ("fifty", "51"), ("astra",), ("cheaper",)], 4: [("says",)], 5: [("company",), ("test",)], 6: [("work",)],
+               7: [("imagines", "imagine"), ("world",), ("parts", "part"), ("sketch",), ("stretch",), ("cut",), ("accurate",)],
+               10: [("six", "6"), ("tie",), ("claim",), ("minutes", "minute"), ("hub",), ("fine",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
+               12: [("half",), ("houses", "house")], 13: [("tonight",)], 14: [("waitlist", "wait"), ("price",), ("trust",), ("launch",), ("tested", "test"), ("two", "2"), ("three", "3"), ("today",)],
                15: [("thousand", "1000"), ("faster",)], 16: [("says",)]},
         "te": {5: [("अदी", "अदि", "अधी", "अधि")]}}   # Parler drops the opening "అదీ" (the hesitation is the joke)
 

@@ -20,37 +20,41 @@ LINES = {
         "దాని పేరు స్కై జీరో జీరో వన్. | [1] జీపీటీ సిక్స్ ఆస్ట్రా కంటే యాభై ఒక్క రెట్లు ఫాస్ట్, నూట యాభై రెట్లు తక్కువ ఖర్చు అంట!"),
     4: ("meghana", "meghana", "who", "Says who?", "ఎవరు చెప్పారు?"),
     5: ("kiran", "card", "own", "[9] Um... the company. [1] Their own test.", "[9] అదీ, ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్."),
-    6: ("meghana", "meghana", "how", "Okay. How is it so fast?", "సరే. అంత ఫాస్ట్ ఎలా?"),
-    7: ("kiran", "card", "split", "It says it imagines the shape first. That's the world model. [1] Then it splits it into parts, down to the screws.",
-        "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. | [1] తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది."),
-    8: ("meghana", "meghana", "each", "And each part?", "మరి ఒక్కో పార్ట్?"),
-    9: ("kiran", "card", "sketch", "Drawn like you do: [1] sketch, stretch, cut. [2] And it's more accurate than all of them!",
-        "నువ్వు గీసినట్టే: [1] స్కెచ్ వేసి, పైకి లాగి, కట్. | [2] పైగా అన్నిటికంటే కరెక్ట్ అంట!"),
-    10: ("meghana", "card", "same", "Point six apart? [1] That's a tie. Their real claim is [2] speed and cost.",
-         "పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. [2] వాళ్ళ అసలు క్లెయిమ్ స్పీడ్, ఖర్చు."),
+    6: ("meghana", "meghana", "how", "Okay. How does it work?", "సరే. అది ఎలా పని చేస్తుంది?"),
+    # how it works in one line (render review: 0:19-0:34 dragged); the quiz card holds after it
+    7: ("kiran", "card", "split", "It says it imagines the shape first: that's the world model. [1] Then it splits it into parts and draws each one "
+        "like you do: [2] sketch, stretch, cut. [3] And it's more accurate than all of them!",
+        "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. [1] తర్వాత పార్టులుగా విడదీసి, ఒక్కోటి నువ్వు గీసినట్టే గీస్తుంది. | "
+        "[2] స్కెచ్ వేసి, పైకి లాగి, కట్. [3] పైగా అన్నిటికంటే కరెక్ట్ అంట!"),
+    10: ("meghana", "card", "same", "Point six apart? [1] Basically a tie. [2] The real claim: four seconds instead of three minutes. "
+         "[3] For one hub? Either's fine.",
+         "పాయింట్ సిక్స్ తేడానా? [1] దాదాపు సేమ్. | [2] అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. [3] ఒక్క హబ్ కి? ఏదైనా పర్లేదు."),
     11: ("kiran", "card", "plan", "On floor plans, it matched forty-four percent. [1] GPT-6 Astra got even less.",
          "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది. | [1] జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ."),
     12: ("meghana", "meghana", "house", "Less than half? [1] I'm not living in any of those houses!", "సగం కూడా లేదా? [1] ఆ ఇళ్ళలో దేంట్లోనూ నేను ఉండను!"),
     13: ("kiran", "kiran", "tonight", "Can we try it tonight?", "ఈ రాత్రే ట్రై చేద్దామా?"),
-    14: ("meghana", "wide", "rule", "Waitlist only. No price yet. [1] Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
-         "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. | [1] ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?"),
+    14: ("meghana", "wide", "rule", "Waitlist only, no public price. [1] Before you trust any launch, ask: [2] one, who tested it? "
+         "[3] Two, against what? [4] Three, can I use it today?",
+         "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. | [1] ఏ లాంచ్ నైనా నమ్మే ముందు అడుగు: [2] ఒకటి, ఎవరు టెస్ట్ చేశారు? [3] రెండు, దేనితో పోల్చారు? [4] మూడు, ఇప్పుడు వాడగలనా?"),
     15: ("kiran", "wide", "again", "Wait! [1] Another AI, a thousand times faster!", "ఆగు! [1] ఇంకో ఏఐ, వెయ్యి రెట్లు ఫాస్ట్ అంట!"),
     16: ("meghana", "meghana", "who", "Says who?", "ఎవరు చెప్పారు?"),   # the loop: back to "Meghana, stop!"
 }
 TTS_EN = {3: "It's Sky zero zero one. [1] It says fifty-one times faster than G P T six Astra, and a hundred and fifty times cheaper!",
           11: "On floor plans, it matched forty-four percent. [1] G P T six Astra got even less."}
-# Sound (CLAUDE.md arc): a hit on frame 1; the bed builds under the claims and drops out before "Um... the company";
+# Sound (CLAUDE.md arc): a hit on frame 1; the bed (with its pad, so the quiz never goes dead) builds under the claims
+# and drops out before "Um... the company";
 # a lift into how it works; the quiz's 3-2-1 over the bed; a hit on the cut to the numbers and a drop before "That's a
 # tie"; a swell under the floor plan joke; a rise into the loop.
 SCENES = [("n1_a", (1, 2, 3, 4, 5), {"boost": 1.15, "rise": 1.3, "drop_at": [[4, 9]], "tail": 0.1}),
-          ("n1_b", (6, 7, 8, 9), {"lift": 0.5, "pre": 0.35, "boost": 0.85, "tail": 0.1}),
+          ("n1_b", (6, 7), {"lift": 0.5, "pre": 0.35, "boost": 0.85, "tail": 0.1}),
           ("n1_c", (10, 11, 12), {"pre": 0.35, "drop_cue": 1, "boost": 1.0, "swell": [2, 1, 1.3], "tail": 0.1}),   # pre: the hit on the cut hid "Point"
           ("n1_d", (13, 14, 15, 16), {"outro": True, "boost": 1.5, "rise": 1.7, "tail": 0.0})]
-GAP = {1: 0.2, 3: 0.3, 4: 0.5, 7: 0.3, 9: 4.3, 10: 0.4, 11: 0.3, 14: 1.2, 15: 0.2}   # 4: a beat before "Um"; 9: the quiz; 14: the rule card
+GAP = {1: 0.2, 3: 0.3, 4: 0.8, 7: 4.0, 10: 0.4, 11: 0.3, 14: 1.2, 15: 0.2}   # 4: a silent beat before "Um"; 7: the quiz; 14: the rule card
+MAXGAP = {5: (0.45, 0.4)}   # (English, Telugu): keep the pause after "Um" (the hesitation is the joke)
 GAIN = {"meghana": 0.5, "kiran": 0.0}
 GAIN_LINE = {10: 1.0, 15: 1.0}
 TEMPO = {"en": 1.1, "te": 1.06}
-TEMPO_WHO = {"en": {"kiran": 1.2, "meghana": 1.14}}   # Fish takes run long (73 s at 1.1): Kiran is breathless anyway
+TEMPO_WHO = {"en": {"kiran": 1.2, "meghana": 1.18}}   # Fish takes run long (73 s at 1.1): Kiran is breathless anyway
 YT = {"n1_a": "The launch", "n1_b": "How it works", "n1_c": "The numbers", "n1_d": "How to check any launch"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -61,7 +65,7 @@ def spec(lang):
     s = {"id": sid, "title": "SKY-001: the first engineering world model?" + (" (Telugu audio)" if te else ""), "label": "NEW IN AI",
          "banner": "SKY-001: AI that designs parts", "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15,
          "music": "lofi", "musicVol": [0.4, 0.8], "musicFade": 0.05, "endPad": 0.45, "captionMode": "phrase",
-         "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": False, "hardCuts": True, "beatSnap": True,
+         "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True, "beatSnap": True,
          "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500}
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
@@ -72,7 +76,7 @@ def spec(lang):
         for n in ns:
             who, shot, prop, en, tel = LINES[n]
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else en, "show": MARK.sub("", en).strip(),
-                  "maxgap": 0.3 if te else 0.2, "gap": 0.05 if n == last else GAP.get(n, 0.24 if te else 0.16)}
+                  "maxgap": MAXGAP[n][te] if n in MAXGAP else 0.3 if te else 0.2, "gap": 0.05 if n == last else GAP.get(n, 0.24 if te else 0.16)}
             if who in TEMPO_WHO.get(lang, {}):
                 ln["tempo"] = TEMPO_WHO[lang][who]
             if not te and n in TTS_EN:   # cues are placed by the spoken letters, so the text is the spoken form too

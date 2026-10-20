@@ -27,7 +27,7 @@
    1.0
   ]
  ],
- "musicPad": false,
+ "musicPad": true,
  "hardCuts": true,
  "beatSnap": true,
  "hideTimerInHook": true,
@@ -105,7 +105,7 @@
      "show": "Four seconds? This one hub took me three hours!",
      "maxgap": 0.2,
      "gap": 0.16,
-     "tempo": 1.14,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
@@ -124,8 +124,8 @@
      "text": "Says who?",
      "show": "Says who?",
      "maxgap": 0.2,
-     "gap": 0.5,
-     "tempo": 1.14,
+     "gap": 0.8,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
@@ -133,7 +133,7 @@
      "file": "05_kiran.wav",
      "text": "[9] Um... the company. [1] Their own test.",
      "show": "Um... the company. Their own test.",
-     "maxgap": 0.2,
+     "maxgap": 0.45,
      "gap": 0.16,
      "tempo": 1.2
     }
@@ -159,18 +159,6 @@
       "shot": "card",
       "prop": "split",
       "n": 7
-     },
-     {
-      "who": "meghana",
-      "shot": "meghana",
-      "prop": "each",
-      "n": 8
-     },
-     {
-      "who": "kiran",
-      "shot": "card",
-      "prop": "sketch",
-      "n": 9
      }
     ],
     "captionTop": 1500,
@@ -184,39 +172,20 @@
     {
      "who": "meghana",
      "file": "06_meghana.wav",
-     "text": "Okay. How is it so fast?",
-     "show": "Okay. How is it so fast?",
+     "text": "Okay. How does it work?",
+     "show": "Okay. How does it work?",
      "maxgap": 0.2,
      "gap": 0.16,
-     "tempo": 1.14,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
      "who": "kiran",
      "file": "07_kiran.wav",
-     "text": "It says it imagines the shape first. That's the world model. [1] Then it splits it into parts, down to the screws.",
-     "show": "It says it imagines the shape first. That's the world model. Then it splits it into parts, down to the screws.",
+     "text": "It says it imagines the shape first: that's the world model. [1] Then it splits it into parts and draws each one like you do: [2] sketch, stretch, cut. [3] And it's more accurate than all of them!",
+     "show": "It says it imagines the shape first: that's the world model. Then it splits it into parts and draws each one like you do: sketch, stretch, cut. And it's more accurate than all of them!",
      "maxgap": 0.2,
-     "gap": 0.3,
-     "tempo": 1.2
-    },
-    {
-     "who": "meghana",
-     "file": "08_meghana.wav",
-     "text": "And each part?",
-     "show": "And each part?",
-     "maxgap": 0.2,
-     "gap": 0.16,
-     "tempo": 1.14,
-     "gain_db": 0.5
-    },
-    {
-     "who": "kiran",
-     "file": "09_kiran.wav",
-     "text": "Drawn like you do: [1] sketch, stretch, cut. [2] And it's more accurate than all of them!",
-     "show": "Drawn like you do: sketch, stretch, cut. And it's more accurate than all of them!",
-     "maxgap": 0.2,
-     "gap": 4.3,
+     "gap": 4.0,
      "tempo": 1.2
     }
    ]
@@ -265,11 +234,11 @@
     {
      "who": "meghana",
      "file": "10_meghana.wav",
-     "text": "Point six apart? [1] That's a tie. Their real claim is [2] speed and cost.",
-     "show": "Point six apart? That's a tie. Their real claim is speed and cost.",
+     "text": "Point six apart? [1] Basically a tie. [2] The real claim: four seconds instead of three minutes. [3] For one hub? Either's fine.",
+     "show": "Point six apart? Basically a tie. The real claim: four seconds instead of three minutes. For one hub? Either's fine.",
      "maxgap": 0.2,
      "gap": 0.4,
-     "tempo": 1.14,
+     "tempo": 1.18,
      "gain_db": 1.5
     },
     {
@@ -289,7 +258,7 @@
      "show": "Less than half? I'm not living in any of those houses!",
      "maxgap": 0.2,
      "gap": 0.16,
-     "tempo": 1.14,
+     "tempo": 1.18,
      "gain_db": 0.5
     }
    ]
@@ -348,11 +317,11 @@
     {
      "who": "meghana",
      "file": "14_meghana.wav",
-     "text": "Waitlist only. No price yet. [1] Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
-     "show": "Waitlist only. No price yet. Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
+     "text": "Waitlist only, no public price. [1] Before you trust any launch, ask: [2] one, who tested it? [3] Two, against what? [4] Three, can I use it today?",
+     "show": "Waitlist only, no public price. Before you trust any launch, ask: one, who tested it? Two, against what? Three, can I use it today?",
      "maxgap": 0.2,
      "gap": 1.2,
-     "tempo": 1.14,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
@@ -372,7 +341,7 @@
      "show": "Says who?",
      "maxgap": 0.2,
      "gap": 0.05,
-     "tempo": 1.14,
+     "tempo": 1.18,
      "gain_db": 0.5
     }
    ]

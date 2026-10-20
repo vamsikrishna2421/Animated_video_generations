@@ -15,14 +15,14 @@ Time per design: 3.9 s vs 199 s (51x faster)
 Cost per design: $0.005 vs $0.75 (150x cheaper)
 Shape match: 79.7% vs 79.1% (a tie)
 
-On floor plans: 1.22 s vs 144.4 s, $0.00237 vs $0.4465, and a shape match of 43.6% vs 40.6%. Less than half of the plan lines up, for every model they tested.
+On floor plans: 1.22 s vs 144.4 s, $0.00237 vs $0.4465, and a shape match of 43.6% vs 40.6%. No model in their test reached 50%.
 
-So the real claim is speed and cost. That matters to teams making thousands of parts or plans; for one part, 3 minutes and 75 cents is fine. It's the usual pattern for specialist models: they beat the giants on one narrow job, mostly on speed and cost. It's waitlist only, with no public price and no outside test yet.
+So the real claim is speed and cost. That matters to teams making thousands of parts or plans; for one part, 3 minutes and 75 cents is fine. It's the usual pattern for specialist models: they beat the giants on one narrow job, mostly on speed and cost. Their $0.005 is cost per design in their test, not a price you can pay: it's waitlist only, with no public price and no outside test yet.
 
 Before you believe any AI launch, ask:
-1. Who tested it?
-2. Against what, on which task?
-3. Can I use it today?
+1. Who tested it? (SKY-001: they did)
+2. Against what, on which task? (their own tasks)
+3. Can I use it today? (not yet)
 
 === COMMENT PROMPT ===
 Shape match in their test: SKY-001 79.7%, GPT-6 Astra 79.1%. A) more accurate or B) a tie? Comment A or B.
@@ -37,7 +37,7 @@ Every number is from Skyfall AI's own launch page (skyfall.ai, Oct 19, 2026); no
 Frame 1: the headline "AI: 4 SECONDS / HER: 3 HOURS" over a night-time CAD lab; Kiran bursts in with his phone up (a hub drawing itself, "4 SECONDS!"); Meghana at her monitor
 
 === ALT_TEXT ===
-Crayon-animated skit in an engineering college CAD lab at 11:40 pm. Meghana has spent three hours on one wheel hub. Her classmate Kiran bursts in: a new AI, SKY-001 from Skyfall AI, designs a part in four seconds, 51 times faster and 150 times cheaper than GPT-6 Astra. Meghana asks "Says who?" and Kiran admits it is the company's own test. He explains how it works, per the company: it imagines the shape first (the "world model"), splits it into parts down to the screws, then draws each part with sketch, stretch and cut, and the post says it is more accurate than all of them. A question card asks whether a shape match of 79.7% against 79.1% is more accurate or a tie. Meghana: point six apart is a tie; the real claim is speed and cost. On floor plans it matched 44%, GPT-6 Astra even less, so she won't live in any of those houses. It is waitlist only with no price yet, so she gives the rule: ask who tested it, against what, and whether you can use it today. Kiran's phone pings with another AI, "1000x faster", and Meghana asks "Says who?" again.
+Crayon-animated skit in an engineering college CAD lab at 11:40 pm. Meghana has spent three hours on one wheel hub. Her classmate Kiran bursts in: a new AI, SKY-001 from Skyfall AI, designs a part in four seconds, 51 times faster and 150 times cheaper than GPT-6 Astra. Meghana asks "Says who?" and, after a pause, Kiran admits it is the company's own test. She asks how it works; per the company, it imagines the shape first (the "world model"), splits it into parts, then draws each part with sketch, stretch and cut, and the post says it is more accurate than all of them. A question card asks whether a shape match of 79.7% against 79.1% is more accurate or a tie. Meghana: point six apart is basically a tie; the real claim is four seconds instead of three minutes, and for one hub either is fine. On floor plans it matched 44%, GPT-6 Astra even less, so she won't live in any of those houses. It is waitlist only with no public price, so she gives the rule: before you trust any launch, ask who tested it (they did), against what (their own tasks), and whether you can use it today (not yet). Kiran's phone pings with another AI, "1000x faster", and Meghana asks "Says who?" again.
 
 === SOURCES (for comments) ===
 Skyfall AI, launch page and blog "Introducing SKY-001: The First World Model for Engineering" (skyfall.ai, Oct 19, 2026): the three stages, both test tables, the waitlist.
@@ -56,14 +56,14 @@ Okko design ki time: 3.9 s vs 199 s (51x fast)
 Okko design ki kharchu: $0.005 vs $0.75 (150x takkuva)
 Shape match: 79.7% vs 79.1% (tie)
 
-Floor plans lo: 1.22 s vs 144.4 s, $0.00237 vs $0.4465, shape match 43.6% vs 40.6%. Ae model ki kooda plan lo sagam kooda match avvaledu.
+Floor plans lo: 1.22 s vs 144.4 s, $0.00237 vs $0.4465, shape match 43.6% vs 40.6%. Vaalla test lo ae model kooda 50% ki raaledu.
 
 Ante asalu claim speed, kharchu. Vela parts, plans chese teams ki adi mukhyam; oka part ki 3 nimishalu, 75 cents parledu. Specialist models eppudu ilaage: okka pani meeda pedda models ni gelustaayi, ekkuvaga speed, kharchu lo. Ippudu waitlist maatrame, dhara cheppaledu, bayati test inka jaragaledu.
 
 Ae AI launch nammaka mundu ee moodu adagandi:
-1. Evaru test chesaaru?
-2. Denitho polcharu, ae pani meeda?
-3. Ippude vaadagalana?
+1. Evaru test chesaaru? (SKY-001: vaalle)
+2. Denitho polcharu, ae pani meeda? (vaalla sontha tasks)
+3. Ippude vaadagalana? (inka ledu)
 
 === COMMENT PROMPT ===
 Vaalla test lo shape match: SKY-001 79.7%, GPT-6 Astra 79.1%. A) ekkuva correct aa, B) tie aa? A or B ani comment cheyyandi.

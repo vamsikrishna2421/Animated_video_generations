@@ -27,7 +27,7 @@
    1.0
   ]
  ],
- "musicPad": false,
+ "musicPad": true,
  "hardCuts": true,
  "beatSnap": true,
  "hideTimerInHook": true,
@@ -126,7 +126,7 @@
      "text": "ఎవరు చెప్పారు?",
      "show": "Says who?",
      "maxgap": 0.3,
-     "gap": 0.5,
+     "gap": 0.8,
      "gain_db": 0.5
     },
     {
@@ -134,7 +134,7 @@
      "file": "05_kiran.wav",
      "text": "[9] అదీ, ఆ కంపెనీనే. [1] వాళ్ళ సొంత టెస్ట్.",
      "show": "Um... the company. Their own test.",
-     "maxgap": 0.3,
+     "maxgap": 0.4,
      "gap": 0.24
     }
    ]
@@ -159,18 +159,6 @@
       "shot": "card",
       "prop": "split",
       "n": 7
-     },
-     {
-      "who": "meghana",
-      "shot": "meghana",
-      "prop": "each",
-      "n": 8
-     },
-     {
-      "who": "kiran",
-      "shot": "card",
-      "prop": "sketch",
-      "n": 9
      }
     ],
     "captionTop": 1500,
@@ -185,8 +173,8 @@
     {
      "who": "meghana",
      "file": "06_meghana.wav",
-     "text": "సరే. అంత ఫాస్ట్ ఎలా?",
-     "show": "Okay. How is it so fast?",
+     "text": "సరే. అది ఎలా పని చేస్తుంది?",
+     "show": "Okay. How does it work?",
      "maxgap": 0.3,
      "gap": 0.24,
      "gain_db": 0.5
@@ -194,34 +182,13 @@
     {
      "who": "kiran",
      "file": "07_kiran.wav",
-     "text": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. <pause 0.3> [1] తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.",
-     "show": "It says it imagines the shape first. That's the world model. Then it splits it into parts, down to the screws.",
+     "text": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. [1] తర్వాత పార్టులుగా విడదీసి, ఒక్కోటి నువ్వు గీసినట్టే గీస్తుంది. <pause 0.3> [2] స్కెచ్ వేసి, పైకి లాగి, కట్. [3] పైగా అన్నిటికంటే కరెక్ట్ అంట!",
+     "show": "It says it imagines the shape first: that's the world model. Then it splits it into parts and draws each one like you do: sketch, stretch, cut. And it's more accurate than all of them!",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tts": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్.",
+     "gap": 4.0,
+     "tts": "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. తర్వాత పార్టులుగా విడదీసి, ఒక్కోటి నువ్వు గీసినట్టే గీస్తుంది.",
      "file2": "07b_kiran.wav",
-     "tts2": "తర్వాత స్క్రూల దాకా పార్టులుగా విడదీస్తుంది.",
-     "pause": 0.3
-    },
-    {
-     "who": "meghana",
-     "file": "08_meghana.wav",
-     "text": "మరి ఒక్కో పార్ట్?",
-     "show": "And each part?",
-     "maxgap": 0.3,
-     "gap": 0.24,
-     "gain_db": 0.5
-    },
-    {
-     "who": "kiran",
-     "file": "09_kiran.wav",
-     "text": "నువ్వు గీసినట్టే: [1] స్కెచ్ వేసి, పైకి లాగి, కట్. <pause 0.3> [2] పైగా అన్నిటికంటే కరెక్ట్ అంట!",
-     "show": "Drawn like you do: sketch, stretch, cut. And it's more accurate than all of them!",
-     "maxgap": 0.3,
-     "gap": 4.3,
-     "tts": "నువ్వు గీసినట్టే: స్కెచ్ వేసి, పైకి లాగి, కట్.",
-     "file2": "09b_kiran.wav",
-     "tts2": "పైగా అన్నిటికంటే కరెక్ట్ అంట!",
+     "tts2": "స్కెచ్ వేసి, పైకి లాగి, కట్. పైగా అన్నిటికంటే కరెక్ట్ అంట!",
      "pause": 0.3
     }
    ]
@@ -271,10 +238,14 @@
     {
      "who": "meghana",
      "file": "10_meghana.wav",
-     "text": "పాయింట్ సిక్స్ తేడానా? [1] అది సేమ్. [2] వాళ్ళ అసలు క్లెయిమ్ స్పీడ్, ఖర్చు.",
-     "show": "Point six apart? That's a tie. Their real claim is speed and cost.",
+     "text": "పాయింట్ సిక్స్ తేడానా? [1] దాదాపు సేమ్. <pause 0.3> [2] అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. [3] ఒక్క హబ్ కి? ఏదైనా పర్లేదు.",
+     "show": "Point six apart? Basically a tie. The real claim: four seconds instead of three minutes. For one hub? Either's fine.",
      "maxgap": 0.3,
      "gap": 0.4,
+     "tts": "పాయింట్ సిక్స్ తేడానా? దాదాపు సేమ్.",
+     "file2": "10b_meghana.wav",
+     "tts2": "అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. ఒక్క హబ్ కి? ఏదైనా పర్లేదు.",
+     "pause": 0.3,
      "gain_db": 1.5
     },
     {
@@ -354,13 +325,13 @@
     {
      "who": "meghana",
      "file": "14_meghana.wav",
-     "text": "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. <pause 0.3> [1] ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?",
-     "show": "Waitlist only. No price yet. Ask any launch three things. One: who tested it? Two: against what? Three: can I use it today?",
+     "text": "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు. <pause 0.3> [1] ఏ లాంచ్ నైనా నమ్మే ముందు అడుగు: [2] ఒకటి, ఎవరు టెస్ట్ చేశారు? [3] రెండు, దేనితో పోల్చారు? [4] మూడు, ఇప్పుడు వాడగలనా?",
+     "show": "Waitlist only, no public price. Before you trust any launch, ask: one, who tested it? Two, against what? Three, can I use it today?",
      "maxgap": 0.3,
      "gap": 1.2,
      "tts": "వెయిట్‌లిస్ట్ మాత్రమే. ధర కూడా చెప్పలేదు.",
      "file2": "14b_meghana.wav",
-     "tts2": "ఏ లాంచ్ అయినా ఈ మూడు అడుగు. ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?",
+     "tts2": "ఏ లాంచ్ నైనా నమ్మే ముందు అడుగు: ఒకటి, ఎవరు టెస్ట్ చేశారు? రెండు, దేనితో పోల్చారు? మూడు, ఇప్పుడు వాడగలనా?",
      "pause": 0.3,
      "gain_db": 0.5
     },
