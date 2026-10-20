@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   954,
-   978
+   978,
+   1002
   ]
  ],
  "musicBoosts": [
@@ -30,13 +30,13 @@
   ],
   [
    655,
-   1105,
+   1125,
    0.9
   ],
   [
-   1105,
-   1362,
-   1.35
+   1125,
+   1432,
+   1.45
   ],
   [
    0,
@@ -45,15 +45,15 @@
    1
   ],
   [
-   1105,
-   1362,
-   1.45,
+   1125,
+   1432,
+   1.6,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1362,
+ "totalFrames": 1432,
  "music": "reel/skit04v1/score.wav",
  "scenes": [
   {
@@ -519,7 +519,7 @@
     "hardCuts": true
    },
    "from": 655,
-   "frames": 450,
+   "frames": 470,
    "lines": [
     {
      "who": "swathi",
@@ -606,57 +606,57 @@
      "color": "#86EFAC",
      "sub": null,
      "audio": "reel/skit04v1/line_08.wav",
-     "from": 262,
+     "from": 286,
      "frames": 118,
      "words": [
       {
        "w": "Now",
-       "from": 263,
-       "to": 269
+       "from": 287,
+       "to": 293
       },
       {
        "w": "that's",
-       "from": 269,
-       "to": 281
+       "from": 293,
+       "to": 305
       },
       {
        "w": "Babu",
-       "from": 281,
-       "to": 289
+       "from": 305,
+       "to": 313
       },
       {
        "w": "anna!",
-       "from": 289,
-       "to": 299
+       "from": 313,
+       "to": 323
       },
       {
        "w": "Ten",
-       "from": 299,
-       "to": 328
+       "from": 323,
+       "to": 352
       },
       {
        "w": "rupees?!",
-       "from": 328,
-       "to": 353
+       "from": 352,
+       "to": 377
       },
       {
        "w": "Give",
-       "from": 353,
-       "to": 361
+       "from": 377,
+       "to": 385
       },
       {
        "w": "me",
-       "from": 361,
-       "to": 366
+       "from": 385,
+       "to": 390
       },
       {
        "w": "ten!",
-       "from": 366,
-       "to": 374
+       "from": 390,
+       "to": 398
       }
      ],
      "cues": {
-      "1": 323
+      "1": 347
      }
     },
     {
@@ -665,28 +665,28 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/skit04v1/line_09.wav",
-     "from": 389,
+     "from": 413,
      "frames": 45,
      "words": [
       {
        "w": "That's",
-       "from": 390,
-       "to": 399
+       "from": 414,
+       "to": 423
       },
       {
        "w": "last",
-       "from": 399,
-       "to": 406
+       "from": 423,
+       "to": 430
       },
       {
        "w": "year's",
-       "from": 406,
-       "to": 415
+       "from": 430,
+       "to": 439
       },
       {
        "w": "price!",
-       "from": 415,
-       "to": 428
+       "from": 439,
+       "to": 452
       }
      ],
      "cues": {}
@@ -721,8 +721,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1105,
-   "frames": 257,
+   "from": 1125,
+   "frames": 307,
    "lines": [
     {
      "who": "swathi",
@@ -731,66 +731,71 @@
      "sub": null,
      "audio": "reel/skit04v1/line_10.wav",
      "from": 0,
-     "frames": 119,
+     "frames": 138,
      "words": [
       {
        "w": "It",
-       "from": 1,
-       "to": 5
+       "from": 0,
+       "to": 9
       },
       {
        "w": "copies",
-       "from": 5,
-       "to": 16
-      },
-      {
-       "w": "everything",
-       "from": 16,
-       "to": 33
-      },
-      {
-       "w": "in",
-       "from": 33,
-       "to": 38
+       "from": 9,
+       "to": 22
       },
       {
        "w": "your",
-       "from": 38,
-       "to": 45
+       "from": 22,
+       "to": 31
       },
       {
        "w": "old",
-       "from": 45,
-       "to": 51
+       "from": 31,
+       "to": 38
       },
       {
-       "w": "posts.",
-       "from": 51,
-       "to": 85
+       "w": "posts,",
+       "from": 38,
+       "to": 63
+      },
+      {
+       "w": "old",
+       "from": 63,
+       "to": 70
+      },
+      {
+       "w": "prices",
+       "from": 70,
+       "to": 82
+      },
+      {
+       "w": "too.",
+       "from": 82,
+       "to": 99
       },
       {
        "w": "Put",
-       "from": 85,
-       "to": 91
+       "from": 99,
+       "to": 106
       },
       {
        "w": "today's",
-       "from": 91,
-       "to": 103
+       "from": 106,
+       "to": 120
       },
       {
        "w": "price",
-       "from": 103,
-       "to": 112
+       "from": 120,
+       "to": 131
       },
       {
        "w": "in.",
-       "from": 112,
-       "to": 118
+       "from": 131,
+       "to": 138
       }
      ],
      "cues": {
-      "1": 85
+      "1": 99
      }
     },
     {
@@ -799,42 +804,42 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/skit04v1/line_11.wav",
-     "from": 149,
+     "from": 198,
      "frames": 94,
      "words": [
       {
        "w": "Fifteen.",
-       "from": 152,
-       "to": 177
+       "from": 202,
+       "to": 227
       },
       {
        "w": "Perfect!",
-       "from": 177,
-       "to": 198
+       "from": 227,
+       "to": 248
       },
       {
        "w": "Now...",
-       "from": 198,
-       "to": 206
+       "from": 248,
+       "to": 255
       },
       {
        "w": "make",
-       "from": 206,
-       "to": 220
+       "from": 255,
+       "to": 269
       },
       {
        "w": "it",
-       "from": 220,
-       "to": 228
+       "from": 269,
+       "to": 278
       },
       {
        "w": "fancy!",
-       "from": 228,
-       "to": 236
+       "from": 278,
+       "to": 285
       }
      ],
      "cues": {
-      "1": 198
+      "1": 248
      }
     }
    ]

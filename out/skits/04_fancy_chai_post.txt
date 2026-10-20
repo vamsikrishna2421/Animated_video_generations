@@ -1,4 +1,4 @@
-SKIT 04: "The fancy chai" (street skit with a one-question challenge, DUR_EN English / DUR_TE Telugu, 9:16; also works as a YouTube Short)
+SKIT 04: "The fancy chai" (street skit with a one-question challenge, 48 s English / 43 s Telugu, 9:16; also works as a YouTube Short)
 Files: out/skits/04_fancy_chai.mp4 (English page) · out/skits/04_fancy_chai_te.mp4 (Telugu page)
 Send copies: out/skits/04_fancy_chai_ig.mp4 · out/skits/04_fancy_chai_te_ig.mp4
 Post it as a standalone reel. No follow card inside the video: it ends on Babu typing "Now... make it fancy!", which
@@ -10,7 +10,7 @@ Babu asked AI for a "fancy" post for his chai stall. His customers thought tea w
 
 The fix isn't "keep it simple". Don't tell the AI how to write: show it 3 of your own old posts and say "write like these".
 
-The catch: it copies everything in them, old prices too. So say today's facts in the same message.
+The catch: it copies them, old prices too. So say today's facts in the same message.
 
 Works for office emails and WhatsApp messages too.
 
@@ -34,13 +34,13 @@ The prompt to copy:
 3. ...
 Write today's post in the same style and the same language mix as these. Today's special: ____, price ____."
 Why it works: Anthropic's prompting guide says "Examples are one of the most reliable ways to steer Claude's output format, tone, and structure", and asks for varied examples so it doesn't "pick up unintended patterns" (like an old price). Google's Gemini guide: "We recommend to always include few-shot examples in your prompts", and warns that with too many examples "the model may start to overfit the response to the examples."
-Our test: a free open model (Qwen2.5 7B, 4-bit, on a laptop CPU), 10 tries per prompt. Bigger chatbots write better Telugu-English, but the copying habit is the same, so check prices, dates and offers in anything it writes.
+Our test: a free open model (Qwen2.5 7B, 4-bit, on a laptop CPU), 10 tries per prompt. With his old posts and no price, 5 of 10 wrote last year's Rs 10, 1 made up Rs 12, and 4 wrote Rs 15 by chance (we never gave it). Bigger chatbots write better Telugu-English, but the copying habit is the same, so check prices, dates and offers in anything it writes.
 
 === COVER ===
 Raju (auto driver) holds up a phone at us: a chai stall's post "Indulge in the Spice of Life!" with sparkles; a red bubble "₹200?!"; the stall's board "TEA ₹15" behind
 
 === ALT_TEXT ===
-Crayon-animated street skit at a roadside chai stall in Hyderabad. Raju, an auto driver, reads the stall's new post, "Indulge in the Spice of Life!", and asks if tea costs two hundred rupees now. Babu, the owner, had told the AI to make it fancy. "Keep it simple" gives "Hey there, tea lovers!", which sounds nothing like him. His daughter Swathi has him paste three of his own old posts and ask for the same style and Telugu-English mix. A one-question card asks what price the AI will write: his old posts say Rs 10, today's tea is Rs 15. The reply sounds like Babu but says Rs 10, last year's price. Swathi: it copies everything in your old posts, so put today's price in. The new post says Rs 15, with the rule on screen: show 3 old posts and say today's facts. Babu then types "Now make it fancy!", looping back to the start.
+Crayon-animated street skit at a roadside chai stall in Hyderabad. Raju, an auto driver, reads the stall's new post, "Indulge in the Spice of Life!", and asks if tea costs two hundred rupees now. Babu, the owner, had told the AI to make it fancy. "Keep it simple" gives "Hey there, tea lovers!", which sounds nothing like him. His daughter Swathi has him paste three of his own old posts and ask for the same style and Telugu-English mix. A one-question card asks what price the AI will write: his old posts say Rs 10, today's tea is Rs 15. The reply sounds like Babu but says Rs 10, last year's price. Swathi: it copies your old posts, old prices too, so put today's price in. The new post says Rs 15, with the rule on screen: show 3 old posts and say today's facts. Babu then types "Now make it fancy!", looping back to the start.
 
 === SOURCES (for comments) ===
 Anthropic, Claude docs, "Prompting best practices" (section "Use examples effectively"): platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
@@ -53,7 +53,7 @@ Babu tana chai stall kosam AI ni "fancy" post raayamannadu. Customers tea ippudu
 
 Fix "simple ga raayi" kaadu. AI ki ela raayaalo cheppakandi: mee sontha paata posts moodu choopinchi "ilaage raayi" anandi.
 
-Kaani: vaatilo unnadantaa copy chestundi, paata rate kooda. Anduke eeroju rate (facts) kooda ade message lo cheppandi.
+Kaani: vaatini copy kodutundi, paata rate tho saha. Anduke eeroju rate (facts) kooda ade message lo cheppandi.
 
 Office emails, WhatsApp messages ki kooda idhe trick.
 
@@ -72,7 +72,7 @@ Reveal mundu meeru em anukunnaru: A (₹15) aa B (₹10) aa? A or B ani comment 
 === PINNED_COMMENT ===
 Copy cheyyadaniki prompt:
 "Here are 3 posts I wrote before: 1. ... 2. ... 3. ... Write today's post in the same style and the same language mix as these. Today's special: ____, price ____."
-Anthropic, Google rendu companies prompting guides lo kooda examples icchi raayinchamani cheptaayi; ekkuva examples isthe vaatine copy chese pramaadam undani Google guide hecharistundi. Maa test: Qwen2.5 7B free model, laptop CPU meeda, okko prompt ki 10 saarlu. Pedda chatbots Telugu-English inkaa baaga raastaayi, kaani copy chese alavaatu ade: rates, dates, offers eppudu check cheyyandi.
+Anthropic, Google rendu companies prompting guides lo kooda examples icchi raayinchamani cheptaayi; ekkuva examples isthe vaatine copy chese pramaadam undani Google guide hecharistundi. Maa test: Qwen2.5 7B free model, laptop CPU meeda, okko prompt ki 10 saarlu. Paata posts icchi rate cheppakapote: 10 lo 5 paata Rs 10, 1 Rs 12 ani tane kalpinchindi, 4 Rs 15 (adrushtam koddi). Pedda chatbots Telugu-English inkaa baaga raastaayi, kaani copy chese alavaatu ade: rates, dates, offers eppudu check cheyyandi.
 
 === COVER ===
 Phone choopistunna Raju: chai stall post "Indulge in the Spice of Life!", red bubble "₹200?!", venakaala "TEA ₹15" board (English visuals)

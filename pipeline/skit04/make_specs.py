@@ -24,23 +24,24 @@ LINES = {
         "నీ పాత పోస్టులు మూడు పెట్టు. [1] ఇలాగే, తెలుగు-ఇంగ్లీష్ కలిపి రాయి అను."),
     9: ("raju", "phone", "ten", "Now that's Babu anna! [1] Ten rupees?! Give me ten!", "ఇప్పుడు బాబు అన్నే! [1] పది రూపాయలా?! పది టీలు ఇవ్వు!"),
     10: ("babu", "babu", "lastyear", "That's last year's price!", "అది పోయిన సంవత్సరం రేటు!"),
-    11: ("swathi", "phone", "copies", "It copies everything in your old posts. [1] Put today's price in.",
-         "పాత పోస్టుల్లో ఉన్నదంతా కాపీ కొడుతుంది. [1] ఈరోజు రేటు కూడా చెప్పు."),
+    11: ("swathi", "phone", "copies", "It copies your old posts, old prices too. [1] Put today's price in.",
+         "పాత పోస్టుల్ని కాపీ కొడుతుంది, పాత రేట్లతో సహా. [1] ఈరోజు రేటు కూడా చెప్పు."),   # render review: "copies everything" vs 5 of 10
     12: ("babu", "wide", "loop", "Fifteen. Perfect! [1] Now... make it fancy!", "పదిహేను. పర్ఫెక్ట్! [1] ఇప్పుడు... ఫ్యాన్సీగా రాయి!"),
 }
 TTS_EN = {1: "Indulge in the spice of life?! [1] Babu anna, tea costs two hundred rupees now?!"}   # "is tea two hundred" was heard "is T200"
 # Telugu lines voiced as two takes, joined (EP34, skit 03, EP35: long Telugu lines babble or lose a half in one take)
 TE_SPLIT = {8: ("నీ పాత పోస్టులు మూడు పెట్టు.", "ఇలాగే, తెలుగు-ఇంగ్లీష్ కలిపి రాయి అను."),
-            11: ("పాత పోస్టుల్లో ఉన్నదంతా కాపీ కొడుతుంది.", "ఈరోజు రేటు కూడా చెప్పు.")}
+            11: ("పాత పోస్టుల్ని కాపీ కొడుతుంది, పాత రేట్లతో సహా.", "ఈరోజు రేటు కూడా చెప్పు.")}
+TE_SHOW = {5: "Tea lovers?! You call me \"Orey Raju\"!"}   # the Telugu line says "ఒరేయ్ రాజు"
 # Sound (CLAUDE.md arc): a hit and a bonk on frame 1; the bed builds under the bad posts; a lift into the old posts; the
 # card's 3-2-1 over the bed; a ding as the reply lands ("Now that's Babu anna!"), then the bed drops out in a short pause
 # and a hit lands on "Ten rupees" (the ding and the drop kept apart: script review); up for the fix; a rise into the loop.
 SCENES = [("ch_a", (1, 2, 3), {"boost": 1.15, "rise": 1.3, "tail": 0.1}),
           ("ch_b", (4, 5, 6), {"lift": 0.5, "pre": 0.35, "boost": 0.8, "tail": 0.1}),
           ("ch_c", (8, 9, 10), {"lift": 0.5, "pre": 0.35, "boost": 0.9, "drop_at": [[1, "1"]], "tail": 0.1}),
-          ("ch_d", (11, 12), {"outro": True, "boost": 1.35, "rise": 1.45, "tail": 0.0})]
+          ("ch_d", (11, 12), {"outro": True, "boost": 1.45, "rise": 1.6, "tail": 0.0})]   # render review: rise into the loop
 # seconds after line n (default 0.16 EN / 0.24 TE): the card's hold after 8; the fixed post's read after 11
-GAP = {1: 0.2, 5: 0.25, 8: 2.6, 9: 0.3, 11: 1.0}
+GAP = {1: 0.2, 5: 0.25, 8: 3.4, 9: 0.3, 11: 2.0}   # render review: the card's 2.6 s and the Rs 15 post's 1.8 s were too short to read
 PAUSES = {"en": {9: {"1": 0.45}}, "te": {9: {"1": 0.5}}}   # the beat before "Ten rupees" (the drop sits in it)
 GAIN = {"babu": 0.5, "raju": 0.5, "swathi": 0.0}
 GAIN_LINE = {9: 1.5, 12: 1.0}
@@ -64,7 +65,7 @@ def spec(lang):
         lines, beats = [], []
         for n in ns:
             who, shot, prop, en, tel = LINES[n]
-            show = en.replace("[1] ", "")
+            show = TE_SHOW[n] if te and n in TE_SHOW else en.replace("[1] ", "")
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else en, "show": show,
                   "maxgap": 0.3 if te else 0.25, "gap": 0.05 if n == last else GAP.get(n, 0.24 if te else 0.16)}
             if not te and n in TTS_EN:

@@ -152,7 +152,7 @@
      "who": "raju",
      "file": "05_raju.wav",
      "text": "టీ లవర్సా?! నువ్వు నన్ను \"ఒరేయ్ రాజు\" అంటావ్!",
-     "show": "Who says \"tea lovers\"?! You call me \"Oi, Raju\"!",
+     "show": "Tea lovers?! You call me \"Orey Raju\"!",
      "maxgap": 0.3,
      "gap": 0.25,
      "gain_db": 0.5
@@ -216,7 +216,7 @@
      "text": "నీ పాత పోస్టులు మూడు పెట్టు. [1] ఇలాగే, తెలుగు-ఇంగ్లీష్ కలిపి రాయి అను.",
      "show": "Paste three of your old posts. Say: write like these, same Telugu-English mix.",
      "maxgap": 0.3,
-     "gap": 2.6,
+     "gap": 3.4,
      "tts": "నీ పాత పోస్టులు మూడు పెట్టు.",
      "file2": "08b_swathi.wav",
      "tts2": "ఇలాగే, తెలుగు-ఇంగ్లీష్ కలిపి రాయి అను.",
@@ -250,8 +250,8 @@
    "type": "sk_chai",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.35,
-   "rise": 1.45,
+   "boost": 1.45,
+   "rise": 1.6,
    "data": {
     "beats": [
      {
@@ -279,11 +279,11 @@
     {
      "who": "swathi",
      "file": "11_swathi.wav",
-     "text": "పాత పోస్టుల్లో ఉన్నదంతా కాపీ కొడుతుంది. [1] ఈరోజు రేటు కూడా చెప్పు.",
-     "show": "It copies everything in your old posts. Put today's price in.",
+     "text": "పాత పోస్టుల్ని కాపీ కొడుతుంది, పాత రేట్లతో సహా. [1] ఈరోజు రేటు కూడా చెప్పు.",
+     "show": "It copies your old posts, old prices too. Put today's price in.",
      "maxgap": 0.3,
-     "gap": 1.0,
-     "tts": "పాత పోస్టుల్లో ఉన్నదంతా కాపీ కొడుతుంది.",
+     "gap": 2.0,
+     "tts": "పాత పోస్టుల్ని కాపీ కొడుతుంది, పాత రేట్లతో సహా.",
      "file2": "11b_swathi.wav",
      "tts2": "ఈరోజు రేటు కూడా చెప్పు.",
      "pause": 0.3

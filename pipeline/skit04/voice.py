@@ -3,7 +3,7 @@
 # Telugu on Parler: Babu = Prakash, Raju = Kiran (lively here), Swathi = Lalitha, the strict judge. No AI voice in this
 # reel (the AI is only text on Babu's phone). MUST lists words a take has to contain.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/skit04/voice.py refs
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/skit04/voice.py en|te [line numbers ...]
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/skit04/voice.py en|te [--keep] [line numbers ...]
 import hashlib
 import json
 import re
@@ -42,9 +42,12 @@ VOICE_TE = {
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
 MUST = {"en": {1: [("indulge",), ("costs", "cost"), ("hundred", "200")], 2: [("fifteen", "15"), ("fancy",)], 4: [("simple",), ("lovers", "lover")],
                5: [("tea",), ("lovers", "lover"), ("raju",)], 6: [("show",)], 8: [("paste",), ("three", "3"), ("posts", "post")],
-               9: [("ten", "10")], 10: [("last",), ("price",)], 11: [("copies", "copy"), ("posts", "post"), ("price",)],
+               9: [("ten", "10")], 10: [("last",), ("price",)], 11: [("copies", "copy"), ("old",), ("prices", "price")],
                12: [("fifteen", "15"), ("fancy",)]},
-        "te": {}}
+        "te": {"8b": [("तेलु", "तेलू", "तेलग", "तेल्ग", "telugu")]}}   # Telugu as the judge writes it (Devanagari): "తెలుగు" came out "khelugu"
+
+KEEP = False
+
 
 def heard(path, who, lang):
     """The take as it goes into the reel (no phone sound: nobody here is a machine)."""
@@ -98,7 +101,7 @@ def voice_one(lang, n, who, text, fname, src, takes, only):
     voice = f"fish:{who}" if fish else VOICE_TE[who]
     key = hashlib.md5(f"{voice}|{text}".encode()).hexdigest()[:10]
     cached = sorted(takes.glob(f"{key}_*.wav"))
-    best = (None, cached[0]) if cached and not only else None
+    best = (None, cached[0]) if cached and (KEEP or not only) else None   # --keep: an unchanged part keeps its take
     if best:
         print(f"{tag} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, lang), text, lang, n)[2]}", flush=True)
     for k in range(0 if best else 4):
@@ -133,4 +136,5 @@ if __name__ == "__main__":
     if sys.argv[1] == "refs":
         refs()
     else:
-        main(sys.argv[1], {int(x) for x in sys.argv[2:]})
+        KEEP = "--keep" in sys.argv
+        main(sys.argv[1], {int(x) for x in sys.argv[2:] if x != "--keep"})

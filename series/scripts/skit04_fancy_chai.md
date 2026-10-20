@@ -1,4 +1,4 @@
-# Skit 04 "The fancy chai" (creative reel 04, Oct 20): show the AI your own examples (few-shot prompting), script v2
+# Skit 04 "The fancy chai" (creative reel 04, Oct 20): show the AI your own examples (few-shot prompting), script v2, as rendered
 
 Format: a one-question challenge inside a street moment (new for the week: Oct 17 two-character skit, Oct 18 home moment,
 Oct 19 POV). Cast and setting new: Babu (owner of a roadside chai stall in Hyderabad), Raju (auto driver, his regular),
@@ -17,6 +17,17 @@ posts" ("ఉదాహరణల్లో" was a textbook word); "don't describe y
 described himself); "Ten cups!" became "Give me ten!" (Telugu "పది టీలు": "కప్పులు" could flatten into "frogs");
 "hotel words" became "5-star"; "sounded like Babu" became "used Babu's words" (what we counted); "₹200?!" shows by 1 s;
 Swathi facepalms before the loop cut.
+
+Render review (the same viewers; both: the hook, the Rs 10 twist and the loop land; the card had too many words for its
+time, the stat strips were tiny): the card holds 3.4 s with no voice and 15 words ("Old posts: Rs 10 · Today: Rs 15
+(not typed) · The AI writes... A) Rs 15 B) Rs 10 · comment A or B", one colour for both answers, a 3-2-1 at 1 s each);
+the old posts slide in one by one, bigger, each "Rs 10" underlined; the stat tags are bigger and plainer ("we asked 10
+times: ..."); line 11 says "It copies your old posts, old prices too" (5 of 10 did, not "everything"), and the Rs 15
+reply holds about 3 s; the rule chip adds "(works for emails and WhatsApp too)"; the bed rises more into the last line;
+English "is tea two hundred" was heard "is T200" (now "tea costs two hundred"), a bare "Tea lovers?!" lost its "Tea" in
+six takes (now "Who says 'tea lovers'?!"), "Paste" was heard "first" (re-voiced); Telugu "తెలుగు" came out "khelugu"
+(re-voiced). Not changed: the music level (both mixes sit at the same level; the bed under the card is about 4.5 dB below
+the speech). Final: English 48 s, Telugu 43 s.
 
 ## Hook options (frame 1 + first line)
 1. Raju holds up Babu's phone, the stall's new post on it, "Indulge in the Spice of Life! ... a taste of tradition and
@@ -66,17 +77,17 @@ Facts:
 ## Script (English)
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Raju | "Indulge in the Spice of Life"?! [1] Babu anna, is tea two hundred rupees now?! | street, the stall at dusk; Raju (khaki auto uniform) holds up Babu's phone at us: the post, "Indulge in the Spice of Life! ... a taste of tradition and a touch of modern flair", sparkle doodles; a "₹200?!" bubble by 1 s |
+| 1 | Raju | "Indulge in the Spice of Life"?! [1] Babu anna, tea costs two hundred rupees now?! | street, the stall at dusk; Raju (khaki auto uniform) holds up Babu's phone at us: the post, "Indulge in the Spice of Life! ... a taste of tradition and a touch of modern flair", sparkle doodles; a "₹200?!" bubble by 1 s |
 | 2 | Babu | Same fifteen rupees! [1] I only told the AI: make it fancy. | Babu with the kettle, towel on his shoulder; the stall board "TEA ₹15"; on [1] his prompt "...ginger tea. Make it fancy." and "our test: 8 of 10 tries came out 5-star" |
 | 3 | Raju | Then tell it: normal! | |
 | 4 | Babu | "Keep it simple"... [1] "Hey there, tea lovers!" | the phone: "Keep it simple and friendly." → "[Hyderabad's Hidden Gem] Hey there, tea lovers! Today, we're sipping on something special..." |
-| 5 | Raju | Tea lovers?! You call me "Oi, Raju"! | tag "our test: 0 of 10 used Babu's words" |
+| 5 | Raju | Who says "tea lovers"?! You call me "Oi, Raju"! | tag "our test: 0 of 10 used Babu's words" |
 | 6 | Swathi | Nanna, don't tell it how to write. [1] Show it. | Swathi arrives with college books |
 | 8 | Swathi | Paste three of your old posts. [1] Say: write like these, same Telugu-English mix. | the phone: his three old posts slide in (each "Rs 10" underlined), then on [1] the prompt "Write today's post in the same style and the same Telugu-English mix. Today's special: ginger tea." |
 | 7 | (card, after line 8) | | ONE QUESTION, held 2.6 s with a 3-2-1: "His old posts say Rs 10. Today's tea is Rs 15 (he didn't type it). What price will the AI write? A) ₹15  B) ₹10" (the caption asks "comment A or B") |
 | 9 | Raju | Now that's Babu anna! [1] Ten rupees?! Give me ten! | the reply: "Today special: Ginger tea Rs 10 only. Hot hot vellandi, immunity boostandi. Friends tho randi, ginger tea ready!"; "our test: 9 of 10 used Babu's words"; on [1] "Rs 10" circled red, "5 of 10 copied last year's ₹10" |
 | 10 | Babu | That's last year's price! | Babu, hands up, the kettle forgotten |
-| 11 | Swathi | It copies everything in your old posts. [1] Put today's price in. | the phone: the same prompt + "Rs 15"; on [1] the reply "Goodmorning! Today's special: Ginger tea Rs 15. Zing zing allam paani, vellandi! Friends tho randi, bench ready!" with "Rs 15" circled green, "our test: 10 of 10 said ₹15"; the rule chip "SHOW 3 old posts + say today's facts" stays to the end |
+| 11 | Swathi | It copies your old posts, old prices too. [1] Put today's price in. | the phone: the same prompt + "Rs 15"; on [1] the reply "Goodmorning! Today's special: Ginger tea Rs 15. Zing zing allam paani, vellandi! Friends tho randi, bench ready!" with "Rs 15" circled green, "our test: 10 of 10 said ₹15"; the rule chip "SHOW 3 old posts + say today's facts" stays to the end |
 | 12 | Babu | Fifteen. Perfect! [1] Now... make it fancy! | wide: Babu types (his prompt on the phone inset), Swathi facepalms, Raju gapes; cut to frame 1 (loops) |
 
 The card is numbered 7 (it was after line 6 in v1). Never more than two lines from one person in a row; the AI never
@@ -92,7 +103,7 @@ speaks; 11 voiced lines, about 45 s.
 8. స్వాతి: నీ పాత పోస్టులు మూడు పెట్టు. [1] ఇలాగే, తెలుగు-ఇంగ్లీష్ కలిపి రాయి అను.
 9. రాజు: ఇప్పుడు బాబు అన్నే! [1] పది రూపాయలా?! పది టీలు ఇవ్వు!
 10. బాబు: అది పోయిన సంవత్సరం రేటు!
-11. స్వాతి: పాత పోస్టుల్లో ఉన్నదంతా కాపీ కొడుతుంది. [1] ఈరోజు రేటు కూడా చెప్పు.
+11. స్వాతి: పాత పోస్టుల్ని కాపీ కొడుతుంది, పాత రేట్లతో సహా. [1] ఈరోజు రేటు కూడా చెప్పు.
 12. బాబు: పదిహేను. పర్ఫెక్ట్! [1] ఇప్పుడు... ఫ్యాన్సీగా రాయి!
 
 ## Sound
