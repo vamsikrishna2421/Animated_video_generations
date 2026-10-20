@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
 # n: (who, shot, prop, English, Telugu). shot: "wide", a person's close shot, or "card" (a full-frame insert).
-# Telugu " | " = a line voiced as two takes (joined with a short pause). [9] on line 5 marks its start (the music drop).
+# " | " = a line voiced as two takes (joined with a short pause). [9] on line 5 marks its start (the music drop).
 LINES = {
     1: ("kiran", "wide", "hook", "Meghana, stop! [1] A new AI designs a part in four seconds!",
         "మేఘన, ఆపు! [1] కొత్త ఏఐ నాలుగు సెకన్లలో ఒక పార్ట్ డిజైన్ చేసేస్తుంది!"),
@@ -26,8 +26,8 @@ LINES = {
         "like you do: [2] sketch, stretch, cut. [3] And it's more accurate than all of them!",
         "ముందు షేప్ మొత్తం ఊహిస్తుందంట, అదే వరల్డ్ మోడల్. [1] తర్వాత పార్టులుగా విడదీసి, ఒక్కోటి నువ్వు గీసినట్టే గీస్తుంది. | "
         "[2] స్కెచ్ వేసి, పైకి లాగి, కట్. [3] పైగా అన్నిటికంటే కరెక్ట్ అంట!"),
-    10: ("meghana", "card", "same", "Point six apart? [1] Basically a tie. [2] The real claim: four seconds instead of three minutes. "
-         "[3] For one hub? Either's fine.",
+    10: ("meghana", "card", "same", "Point six apart? [1] Basically a tie. [2] The real claim: four seconds instead of three minutes. | "
+         "[3] For one hub? Either AI is fine.",   # two takes: Fish ran "three minutes for one hub" together (round-2 review)
          "పాయింట్ సిక్స్ తేడానా? [1] దాదాపు సేమ్. | [2] అసలు క్లెయిమ్: మూడు నిమిషాల బదులు నాలుగు సెకన్లు. [3] ఒక్క హబ్ కి? ఏదైనా పర్లేదు."),
     11: ("kiran", "card", "plan", "On floor plans, it matched forty-four percent. [1] GPT-6 Astra got even less.",
          "ఫ్లోర్ ప్లాన్స్ లో నలభై నాలుగు శాతమే మ్యాచ్ అయింది. | [1] జీపీటీ సిక్స్ ఆస్ట్రా కి ఇంకా తక్కువ."),
@@ -75,16 +75,16 @@ def spec(lang):
         lines, beats = [], []
         for n in ns:
             who, shot, prop, en, tel = LINES[n]
-            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else en, "show": MARK.sub("", en).strip(),
+            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else en, "show": MARK.sub("", en).replace(" | ", " ").strip(),
                   "maxgap": MAXGAP[n][te] if n in MAXGAP else 0.3 if te else 0.2, "gap": 0.05 if n == last else GAP.get(n, 0.24 if te else 0.16)}
             if who in TEMPO_WHO.get(lang, {}):
                 ln["tempo"] = TEMPO_WHO[lang][who]
             if not te and n in TTS_EN:   # cues are placed by the spoken letters, so the text is the spoken form too
                 ln["text"] = ln["tts"] = TTS_EN[n]
-            if te and " | " in tel:   # two takes; the text keeps its cues, split where the second take starts
-                p1, p2 = tel.split(" | ")
+            if " | " in ln["text"]:   # two takes; the text keeps its cues, split where the second take starts
+                p1, p2 = ln["text"].split(" | ")
                 ln.update({"text": f"{p1} <pause 0.3> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
-                           "tts2": MARK.sub("", p2).strip(), "pause": 0.3})
+                           "tts2": MARK.sub("", p2).strip(), "pause": 0.3 if te else 0.35})
             g = GAIN[who] + GAIN_LINE.get(n, 0)
             if g:
                 ln["gain_db"] = g

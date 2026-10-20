@@ -226,7 +226,7 @@ const rule = (c: Ctx, W: number, k: number, qs: number[], as: number[]) => {
   ["1  Who tested it?", "2  Against what?", "3  Can I use it today?"].forEach((t, i) => {
     const y = -60 + i * 110;
     if (qs[i] > 0) { c.globalAlpha = clamp(k * 2) * clamp(qs[i]); c.textAlign = "left"; c.font = SANS(48); c.fillStyle = "#f8fafc"; c.fillText(t, -430, y); }
-    if (as[i] > 0) { c.globalAlpha = clamp(k * 2) * clamp(as[i]); c.textAlign = "right"; c.font = handF(54); c.fillStyle = "#fde047"; c.fillText(["they did", "their own tasks", "not yet"][i], 440, y); }
+    if (as[i] > 0) { c.globalAlpha = clamp(k * 2) * clamp(as[i]); c.textAlign = "right"; c.font = handF(54); c.fillStyle = "#fde047"; c.fillText(["they did", "their own pick", "not yet"][i], 440, y); }
   });
   c.restore();
 };
@@ -285,7 +285,7 @@ const StLab: React.FC<SP> = ({ s }) => {
               tag(c, "51x faster", 330, 1150, 80, "#dcfce7", "#14532d", -0.04, k);
               tag(c, "150x cheaper", 760, 1150, 80, "#fef3c7", INK, 0.04, k);
               c.save(); c.globalAlpha = k; c.font = SANS(40, 600); c.fillStyle = "#475569"; c.textAlign = "center";
-              c.fillText("than GPT-6 Astra, on design tasks", W / 2, 1270); c.restore();
+              c.fillText("than GPT-6 Astra (OpenAI), on design tasks", W / 2, 1270); c.restore();
             }
             if (n === 5) { const c2 = cu(1, 0.5); if (f >= c2 - 4) stamp(c, "THEIR OWN TEST", W / 2, 870, 104, "#334155", seg(f, c2 - 4, c2 + 6), r, -0.08); }
           }
@@ -315,8 +315,8 @@ const StLab: React.FC<SP> = ({ s }) => {
               if (f >= c3 - 4) {   // the post's own claim, read out: the quiz asks about it
                 const k = seg(f, c3 - 4, c3 + 6);
                 c.save(); c.globalAlpha = k; c.textAlign = "center";
-                c.font = SANS(38, 600); c.fillStyle = "#64748b"; c.fillText("the post also says:", W / 2, 1220);
-                c.font = handF(60); c.fillStyle = COL.red; c.fillText("\"more accurate than all of them!\"", W / 2, 1310);
+                c.font = SANS(38, 600); c.fillStyle = "#64748b"; c.fillText("the post also says:", W / 2, 1290);   // below the quiz card,
+                c.font = handF(60); c.fillStyle = COL.red; c.fillText("\"more accurate than all of them!\"", W / 2, 1375);   // so it stays theirs
                 c.restore();
               }
             }
@@ -326,16 +326,16 @@ const StLab: React.FC<SP> = ({ s }) => {
             const c1 = cu(1, 0.2), c2 = cu(2, 0.4), c3 = cu(3, 0.8);
             const rows: [string, string, string, number, number, string, number, number][] = [
               ["shape match", "79.7%", "79.1%", 0.797, 0.791, "basically a tie", ln.from, c1],
-              ["time per design", "3.9 s", "199 s", 3.9 / 199, 1, "51x faster", c2 - 8, c2 + 2],
-              ["cost per design", "$0.005", "$0.75", 0.005 / 0.75, 1, "150x cheaper", c2 + 4, c2 + 14]];
+              ["time per design", "3.9 s", "199 s ≈ 3 min", 3.9 / 199, 1, "51x faster", c2 - 8, c2 + 2],
+              ["cost per design, in their test", "$0.005", "$0.75", 0.005 / 0.75, 1, "150x cheaper", c2 + 4, c2 + 14]];
             rows.forEach(([lab, a, bb, va, vb, note, t0, tt], q) => {
               const y = 420 + q * 305, k = seg(f, t0, t0 + 10);
               if (k <= 0) return;
               c.save(); c.globalAlpha = clamp(k * 2);
               c.font = SANS(46); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, 130, y);
               c.font = SANS(36, 600); c.fillStyle = GREEN; c.fillText("SKY-001", 130, y + 70); c.fillStyle = ORANGE; c.fillText("GPT-6 Astra", 130, y + 160);
-              c.fillStyle = GREEN; rrect(c, 390, y + 36, Math.max(14, 400 * va * easeOut(k)), 46, 10); c.fill();
-              c.fillStyle = ORANGE; rrect(c, 390, y + 126, Math.max(14, 400 * vb * easeOut(k)), 46, 10); c.fill();
+              c.fillStyle = GREEN; rrect(c, 390, y + 36, Math.max(14, 300 * va * easeOut(k)), 46, 10); c.fill();
+              c.fillStyle = ORANGE; rrect(c, 390, y + 126, Math.max(14, 300 * vb * easeOut(k)), 46, 10); c.fill();
               c.font = SANS(40); c.fillStyle = INK; c.textAlign = "right"; c.fillText(a, W - 110, y + 72); c.fillText(bb, W - 110, y + 162);
               if (f >= tt) tag(c, note, 640, y + 235, 68, q === 0 ? "#e0e7ff" : "#dcfce7", INK, -0.02, seg(f, tt, tt + 8));
               c.restore();
@@ -354,8 +354,8 @@ const StLab: React.FC<SP> = ({ s }) => {
             c.font = SANS(40, 600); c.textAlign = "left"; c.fillStyle = BLUE; c.fillText("the right plan", 130, 1110); c.fillStyle = ORANGE; c.fillText("the AI's plan", 600, 1110);
             if (f >= tA) tag(c, "SKY-001: 44% match", W / 2, 1200, 62, "#fee2e2", "#991b1b", -0.02, seg(f, tA, tA + 8));
             if (f >= c1 - 4) tag(c, "GPT-6 Astra: 41%", W / 2, 1300, 54, "#ffedd5", "#9a3412", 0.02, seg(f, c1 - 4, c1 + 6));
-            c.font = SANS(30, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
-            c.fillText("shape match = overlap ÷ both plans together", W / 2, 1385); c.fillText("their test: 43.6% vs 40.6% · no model reached 50%", W / 2, 1428);
+            if (f >= c1 + 10) tag(c, "no model reached 50%", W / 2, 1390, 56, "#1e293b", "#f8fafc", -0.01, seg(f, c1 + 10, c1 + 18));
+            c.font = SANS(30, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("shape match, their test: 43.6% vs 40.6%", W / 2, 1446);
           }
         } else {
           // ---------- the lab ----------

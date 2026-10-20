@@ -37,7 +37,7 @@ VOICE_TE = {
 MUST = {"en": {1: [("stop",), ("part", "parts"), ("four", "4")], 2: [("three", "3"), ("hours", "hour")],
                3: [("says",), ("fifty", "51"), ("astra",), ("cheaper",)], 4: [("says",)], 5: [("company",), ("test",)], 6: [("work",)],
                7: [("imagines", "imagine"), ("world",), ("parts", "part"), ("sketch",), ("stretch",), ("cut",), ("accurate",)],
-               10: [("six", "6"), ("tie",), ("claim",), ("minutes", "minute"), ("hub",), ("fine",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
+               10: [("six", "6"), ("tie",), ("claim",), ("minutes", "minute")], "10b": [("hub",), ("ai",), ("fine",)], 11: [("floor",), ("forty", "44"), ("astra",), ("less",)],
                12: [("half",), ("houses", "house")], 13: [("tonight",)], 14: [("waitlist", "wait"), ("price",), ("trust",), ("launch",), ("tested", "test"), ("two", "2"), ("three", "3"), ("today",)],
                15: [("thousand", "1000"), ("faster",)], 16: [("says",)]},
         "te": {5: [("अदी", "अदि", "अधी", "अधि")], 10: [("सिक्स", "सिक्", "six", "6")],
