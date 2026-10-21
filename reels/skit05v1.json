@@ -91,8 +91,8 @@
     {
      "who": "lakshmi",
      "file": "03_lakshmi.wav",
-     "text": "Two hundred phone numbers... [1] into a free chatbot?!",
-     "show": "Two hundred phone numbers... into a free chatbot?!",
+     "text": "Two hundred phone numbers... [1] into a chatbot?!",
+     "show": "Two hundred phone numbers... into a chatbot?!",
      "maxgap": 0.25,
      "gap": 0.16
     }
@@ -104,7 +104,7 @@
    "tail": 0.1,
    "lift": 0.5,
    "pre": 0.3,
-   "boost": 1.5,
+   "boost": 1.7,
    "drop_at": [
     [
      3,
@@ -182,11 +182,11 @@
      "who": "lakshmi",
      "file": "07_lakshmi.wav",
      "text": "If a person reviewed your chat, Google keeps it [1] up to three years. Even after you delete it.",
-     "show": "If a person reviewed your chat, Google keeps it up to three years. Even after you delete it.",
+     "show": "If a person reviewed your chat, Google keeps it <pause 0.8> up to three years. Even after you delete it.",
      "maxgap": 0.25,
      "gap": 0.6,
      "pauses": {
-      "1": 0.45
+      "1": 0.8
      },
      "gain_db": 1.0
     },
@@ -225,7 +225,7 @@
      },
      {
       "who": "arjun",
-      "shot": "sneha",
+      "shot": "laptop",
       "prop": "loop",
       "n": 11
      }

@@ -1,4 +1,4 @@
-# Skit 05 "The client list" (what you paste into a free chatbot isn't private), script v2
+# Skit 05 "The client list" (what you paste into a free chatbot isn't private), script v3
 
 Creative reel 05 (daily run 2, Oct 21, 2026). Format: an office skit with myth-vs-fact cards, loops. Cast: Lakshmi (team
 lead, mid-thirties, kurta, glasses, office ID on a lanyard), Arjun (new joiner, 22, formal shirt, ID card), Sneha (new
@@ -36,7 +36,7 @@ people, so swap names and numbers out before you paste; paste only what you'd pi
 |---|---|---|---|
 | 1 | Lakshmi | Arjun, STOP! Don't press send! | frame 1: big sticker "200 CLIENT PHONE NUMBERS → AN AI CHATBOT"; her hand slams his laptop lid (a beat before her voice); the chat box shows "CLIENTS_FINAL.xlsx · 200 rows", cursor on SEND |
 | 2 | Arjun | It's just our client list! [1] I'm asking the AI to make it neat. | tag "make this list neat" |
-| 3 | Lakshmi | Two hundred phone numbers... [1] into a free chatbot?! | close on her: "200 numbers" tag |
+| 3 | Lakshmi | Two hundred phone numbers... [1] into a chatbot?! | close on her: "200 numbers" tag |
 | 4 | Arjun | Relax! Only me and the AI see it. | card slides in: "MYTH: only me and the AI see it" |
 | 5 | Lakshmi | Your chats can train the AI. [1] And some are read by real people. | the card flips: "FACT: chats can train the AI · some are read by real people" (Google's Gemini privacy page · ChatGPT has a similar switch) |
 | 6 | Arjun | Okay, okay! I'll delete the chat after. | card 2: "MYTH: delete it and it's gone" |
@@ -44,7 +44,7 @@ people, so swap names and numbers out before you paste; paste only what you'd pi
 | 8 | Arjun | Three years?! [1] So I can't use AI at all? | |
 | 9 | Lakshmi | Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you. | his screen: three made-up messy rows ("fake data") and "Excel formula to make them neat?"; the AI answers =PROPER(TRIM(A2)), =SUBSTITUTE(B2," ",""), sort A to Z; "his 200 real rows: neat in Excel, never pasted ✓" |
 | 10 | Lakshmi | Paste only what you'd put up on the notice board. | rule chip: "PASTE ONLY WHAT YOU'D PUT UP ON THE NOTICE BOARD" next to the board |
-| 11 | Arjun | Sneha, STOP! Don't press send! | Sneha's laptop: "SALARY_SHEET.xlsx" pasted into a chatbot; Arjun's hand slams her lid; cut to frame 1 (loops) |
+| 11 | Arjun | Sneha, STOP! Don't press send! | framed like frame 1: Sneha's laptop, "SALARY_SHEET.xlsx" pasted, the cursor on SEND; Arjun's hand slams the lid, STOP!; cut to frame 1 (loops) |
 
 About 40 s. Caption: the office rule (use the company's approved AI account: business plans don't train on your data by
 default), the switches on a personal account ("Improve the model for everyone" in ChatGPT, "Keep Activity" in Gemini,
@@ -59,10 +59,19 @@ quiz-app dings (a dull bonk on the bad news, the deepest hit on "three years", t
 -> "Only me and the AI see it". Telugu: a bare "వాడు!" can be heard as "that fellow!" (now "వాడొచ్చు!"); "నిజంగా
 మనుషులే చదువుతారు", "ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు", "మనుషులు చదివిన చాట్", "పెట్టేదే".
 
+Render review (English, two viewers): both would share it to an office group ("three years" and the salary sheet); both:
+the slam was invisible (a still teal arm, the lid barely moved) and the caption showed "up to three years" before the
+beat. v3: a hand and arm that slam the lid shut with impact lines, the stakes in big bold type, a louder crack; the
+caption breaks at a 0.8 s beat; the ending is framed like frame 1 (Sneha's laptop, Arjun's hand, STOP!); card 1 names
+the off switches (ChatGPT "Improve the model", Gemini "Keep Activity"), card 2 says Gemini; the fact text as big as the
+myth's; "into a chatbot" (not "free": paid personal plans train too); a tag "At work? Use the company's AI account"; the
+bed builds into the cards. Heard back while voicing: "Relax, ma'am" -> "Relax mom" (now "Relax!"), "pin on the notice
+board" -> "been" (now "put up"), Telugu "చాట్స్" -> "charts" (now "మనం టైప్ చేసేది").
+
 ## Script (Telugu; English on-screen text), v2
 1. లక్ష్మి: అర్జున్, ఆగు! సెండ్ నొక్కకు!
 2. అర్జున్: మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడుగుతున్నా.
-3. లక్ష్మి: రెండొందల ఫోన్ నంబర్లు... [1] ఫ్రీ చాట్‌బాట్ లోకా?!
+3. లక్ష్మి: రెండొందల ఫోన్ నంబర్లు... [1] చాట్‌బాట్ లోకా?!
 4. అర్జున్: రిలాక్స్ మేడమ్. నేను, ఏఐ తప్ప ఎవరూ చూడరు.
 5. లక్ష్మి: మనం టైప్ చేసేది ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు. [1] కొన్నిటిని నిజంగా మనుషులే చదువుతారు.
 6. అర్జున్: సరే సరే! తర్వాత చాట్ డిలీట్ చేస్తా.

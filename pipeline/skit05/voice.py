@@ -44,12 +44,12 @@ VOICE_TE = {
              "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
-MUST = {"en": {1: [("arjun",), ("stop",), ("send",)], 2: [("client",), ("list",), ("asking", "ask"), ("neat",)], 3: [("hundred", "200"), ("numbers", "number"), ("chatbot", "chat")],
+MUST = {"en": {1: [("arjun",), ("stop",), ("send",)], 2: [("client",), ("list",), ("asking", "ask"), ("neat",)], 3: [("hundred", "200"), ("numbers", "number"), ("chatbot", "chat", "bot")],
                4: [("relax",), ("only",), ("see",)], 5: [("chats", "chat"), ("train",), ("read",), ("people",)], 6: [("delete",)],
                7: [("person",), ("reviewed",), ("google", "google's"), ("three", "3"), ("years", "year"), ("delete",)], 8: [("three", "3"), ("years", "year"), ("use",)],
                9: [("fake",), ("rows", "row"), ("formula",), ("real",), ("list",)], 10: [("paste",), ("put",), ("notice",), ("board",)], 11: [("sneha",), ("stop",), ("send",)]},
         "te": {1: [("अर्ज", "आर्ज"), ("सेंड", "सेंद", "सेन्ड", "सेंट", "सेन्द")], 3: [("रेंड", "रेंडो", "रेनडो")],
-               5: [("टाइप", "टैप", "ताइप", "टाईप", "type"), ("चदु", "चदू", "चदव"), ("ट्रेनि", "ट्रैनि", "त्रेनि", "त्रैनि", "ट्राइनि", "ट्रीनि", "ट्रेनिं", "trai")],
+               5: [("टाइप", "टैप", "ताइप", "टाईप", "type"), ("चदु", "चदू", "चदव", "चदो", "चदी"), ("ट्रेनि", "ट्रैनि", "त्रेनि", "त्रैनि", "ट्राइनि", "ट्रीनि", "ट्रेनिं", "trai")],
                7: [("मूडे", "मुडे", "मूडेल")], 8: [("मूडे", "मुडे")],
                9: [("वाडो", "वाड़ो", "वाडोच", "वाड उ", "वाडच", "वाड़ु", "वाडु"), ("फेक", "फ़ेक", "फेख", "fake"), ("फार्मु", "फॉर्मु", "फार्मू", "फार्मला", "फाम्ला", "formul")],
                11: [("स्नेह", "सनेह", "स्नेहा"), ("सेंड", "सेंद", "सेन्ड", "सेंट", "सेन्द")]}}   # Telugu as the judge writes it (Devanagari)

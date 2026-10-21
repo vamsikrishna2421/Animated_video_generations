@@ -188,7 +188,8 @@ const person = (c: Ctx, who: Who, at: Pt, m: Mood, a: Arms, talk: boolean, f: nu
 // ---------- the laptop, full frame: the chat box ----------
 const ROWS: [string, string][] = [["Ramesh Kumar", "98480 2xx41"], ["Anitha Reddy", "99490 7xx18"], ["Suresh Babu", "90000 4xx62"], ["Kavya Rao", "87120 6xx05"]];
 const FAKE: [string, string][] = [["client a", "90000 00001"], ["CLIENT b", "9000000002"], ["Client  c", "90 000 00003"]];
-const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "paste" | "fake", k: number, reply: number) => {
+const SALARY: [string, string][] = [["Ramesh Kumar", "₹ 6x,xxx"], ["Anitha Reddy", "₹ 8x,xxx"], ["Suresh Babu", "₹ 5x,xxx"], ["Kavya Rao", "₹ 7x,xxx"]];
+const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "paste" | "fake" | "salary", k: number, reply: number) => {
   c.fillStyle = "#0b1220"; rrect(c, 70, 190, W - 140, 1010, 40); c.fill();                       // the lid
   c.fillStyle = "#f8fafc"; rrect(c, 98, 218, W - 196, 954, 22); c.fill();                        // the screen
   c.fillStyle = "#334155"; c.beginPath(); c.moveTo(40, 1210); c.lineTo(W - 40, 1210); c.lineTo(W + 10, 1330); c.lineTo(-10, 1330); c.closePath(); c.fill();   // the base
@@ -197,13 +198,14 @@ const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "past
   c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText("free plan", 214, 312);
   stroke(c, [[116, 336], [W - 116, 336]], "#cbd5e1", 3, r, { passes: 1 });
   // my message: the prompt, the file chip and the pasted rows
-  if (mode === "paste") {
+  if (mode === "paste" || mode === "salary") {
+    const sal = mode === "salary";
     c.fillStyle = "#dcfce7"; rrect(c, 230, 370, W - 360, 470, 26); c.fill();
-    c.font = SANS(36, 600); c.fillStyle = INK; c.fillText("make this list neat", 262, 420);
+    c.font = SANS(36, 600); c.fillStyle = INK; c.fillText(sal ? "summarise this sheet" : "make this list neat", 262, 420);
     c.fillStyle = "#fff"; rrect(c, 262, 444, 470, 60, 14); c.fill();
-    c.font = SANS(28); c.fillStyle = GREEN; c.fillText("CLIENTS_FINAL.xlsx · 200 rows", 282, 484);
-    ROWS.forEach(([name, num], q) => { c.font = SANS(32, 600); c.fillStyle = INK; c.fillText(name, 262, 560 + q * 62); c.fillText(num, 620, 560 + q * 62); });
-    c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText("+ 196 more rows", 262, 810);
+    c.font = SANS(28); c.fillStyle = GREEN; c.fillText(sal ? "SALARY_SHEET.xlsx · 48 rows" : "CLIENTS_FINAL.xlsx · 200 rows", 282, 484);
+    (sal ? SALARY : ROWS).forEach(([name, num], q) => { c.font = SANS(32, 600); c.fillStyle = INK; c.fillText(name, 262, 560 + q * 62); c.fillText(num, 620, 560 + q * 62); });
+    c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText(sal ? "+ 44 more rows" : "+ 196 more rows", 262, 810);
   } else {   // three made-up rows, typed in, and the question
     c.fillStyle = "#dcfce7"; rrect(c, 230, 370, W - 360, 400, 26); c.fill();
     c.font = SANS(32, 600); c.fillStyle = INK; c.fillText("3 made-up rows, messy like mine:", 262, 418);
@@ -214,17 +216,47 @@ const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "past
   if (reply > 0) {   // the AI's answer: a formula, run on the real list in Excel, on his own laptop
     c.save(); c.globalAlpha = reply;
     c.fillStyle = "#fff"; rrect(c, 130, 800, W - 330, 250, 26); c.fill(); stroke(c, [[130, 800], [W - 200, 800], [W - 200, 1050], [130, 1050], [130, 800]], "#cbd5e1", 3, r, { passes: 1 });
-    c.font = SANS(30, 600); c.fillStyle = INK; c.fillText("Names:  =PROPER(TRIM(A2))", 160, 856);
-    c.fillText("Numbers:  =SUBSTITUTE(B2,\" \",\"\")", 160, 912);
-    c.fillText("Then sort A to Z.", 160, 968);
+    c.font = SANS(36); c.fillStyle = INK; c.fillText("Names:  =PROPER(TRIM(A2))", 160, 860);
+    c.fillText("Numbers:  =SUBSTITUTE(B2,\" \",\"\")", 160, 924);
+    c.font = SANS(34, 600); c.fillText("Then sort A to Z.", 160, 986);
     c.restore();
   }
   // the input box and the SEND button
   c.fillStyle = "#e2e8f0"; rrect(c, 116, 1084, W - 380, 70, 20); c.fill();
   c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText("Message AI chat...", 140, 1130);
-  c.fillStyle = mode === "paste" ? COL.red : GREEN; rrect(c, W - 250, 1084, 140, 70, 20); c.fill();
+  c.fillStyle = mode === "fake" ? GREEN : COL.red; rrect(c, W - 250, 1084, 140, 70, 20); c.fill();
   c.font = SANS(32); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("SEND", W - 180, 1131);
   void f;
+};
+// the stakes, big and bold in the top third (frame 1 and the loop)
+const stakes = (c: Ctx, W: number, a: string, b: string) => {
+  c.save(); c.translate(W / 2, 300); c.rotate(-0.015);
+  c.fillStyle = COL.red; rrect(c, -470, -100, 940, 200, 26); c.fill();
+  c.font = SANS(64); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(a, 0, -14); c.fillText(b, 0, 66);
+  c.restore();
+};
+// a hand slams the laptop shut: t0 = the frame it starts; the lid folds down to its hinge, impact lines, STOP!
+const slamShot = (c: Ctx, W: number, f: number, t0: number, r: () => number, mode: "paste" | "salary", sleeve: string, skin: string, a: string, b: string) => {
+  const slam = seg(f, t0, t0 + 5), shake = slam > 0 && slam < 1 ? 14 : f < t0 + 12 && slam >= 1 ? 8 : 0;
+  c.save(); c.translate((r() - 0.5) * shake, (r() - 0.5) * shake);
+  const fold = 1 - 0.86 * easeOut(slam);
+  c.save(); c.translate(0, 1210); c.scale(1, fold); c.translate(0, -1210);
+  laptopScreen(c, W, f, r, mode, 0, 0);
+  if (slam < 0.3) cursor(c, W - 200, 1104);
+  c.restore();
+  if (slam >= 1) { c.fillStyle = "#0b1220"; rrect(c, 70, 1210 - 1010 * fold, W - 140, 1010 * fold, 20); c.fill(); }   // shut: only the lid's back shows
+  const top = 1210 - 1010 * fold, hx = 640, hy = 160 + (top - 60 - 160) * easeOut(slam);
+  limb(c, [[1250, -120], [1000, hy - 220], [hx, hy]], sleeve, r, 96);
+  c.fillStyle = "#facc15"; c.beginPath(); c.ellipse(hx + 40, hy - 44, 26, 18, -0.6, 0, 7); c.fill();   // a bangle
+  c.beginPath(); c.ellipse(hx, hy + 10, 70, 46, 0, 0, 7); c.fillStyle = skin; c.fill();
+  stroke(c, circlePts(hx, hy + 10, 70, 46), INK, 5, r, { passes: 2, alpha: 0.6 });
+  if (slam >= 1 && f < t0 + 16) {   // impact lines
+    const k = 1 - seg(f, t0 + 5, t0 + 16);
+    [[-1, -0.3], [-1, 0.3], [1, -0.3], [1, 0.3], [0, -1]].forEach(([dx, dy]) => stroke(c, [[hx + dx * 110, hy + dy * 70], [hx + dx * 190, hy + dy * 130]], INK, 10, r, { passes: 1, alpha: k }));
+  }
+  c.restore();
+  stakes(c, W, a, b);
+  if (f >= t0 + 4) stamp(c, "STOP!", 540, 780, 180, COL.red, seg(f, t0 + 4, t0 + 10), r, -0.06);
 };
 // the cursor arrow over SEND
 const cursor = (c: Ctx, x: number, y: number) => {
@@ -234,7 +266,7 @@ const cursor = (c: Ctx, x: number, y: number) => {
 
 // ---------- the myth/fact card (screen space, above the faces) ----------
 // k: in; flip 0 = MYTH side, 1 = FACT side (turns over through edge-on at 0.5)
-const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], src: string, k: number, flip: number, big?: string) => {
+const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], src: string, k: number, flip: number, big?: string, note?: string) => {
   if (k <= 0) return;
   const side = flip < 0.5 ? "myth" : "fact", sx = Math.max(0.02, Math.abs(Math.cos(flip * Math.PI)));
   c.save(); c.globalAlpha = k; c.translate(W / 2, y); c.scale(sx * (0.9 + 0.1 * k), 0.9 + 0.1 * k);
@@ -247,9 +279,10 @@ const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], sr
     c.font = SANS(40, 600); c.fillStyle = "#64748b"; c.fillText("(what most of us think)", 0, 96);
   } else {
     if (big) { c.font = SANS(110); c.fillStyle = GREEN; c.fillText(big, 0, 10); }
-    c.font = SANS(fact.length > 1 && !big ? 50 : 46); c.fillStyle = INK;
-    fact.forEach((t, q) => c.fillText(t, 0, (big ? 74 : -6) + q * (big ? 52 : 64)));
-    c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText(src, 0, 168);
+    c.font = SANS(big ? 46 : 54); c.fillStyle = INK;
+    fact.forEach((t, q) => c.fillText(t, 0, (big ? 74 : -14) + q * (big ? 52 : 64)));
+    if (note) { c.font = SANS(32); c.fillStyle = "#166534"; c.fillText(note, 0, 128); }
+    c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText(src, 0, 172);
   }
   c.restore();
 };
@@ -267,14 +300,14 @@ const rule = (c: Ctx, W: number, k: number) => {
 const StOffice: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
   const ls = s.lines;
-  const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
+  const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - (beats[k]?.prop === "loop" ? 14 : 2)) i = k; }); return i; };
   const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
   const sfx: React.ReactNode[] = [];
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
     if (b.shot === "laptop" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.25} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={k("c")} at={6} src="audio/gag_bonk.wav" vol={0.45} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={1.0} />, <Sfx key={k("c")} at={5} src="audio/gag_bonk.wav" vol={0.6} />);
     if (b.prop === "numbers") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.45) - 2} src="audio/sfx_pop.wav" vol={0.4} />);
     if (b.prop === "myth1" || b.prop === "myth2") sfx.push(<Sfx key={k("m")} at={at + Math.round(l.frames * 0.3)} src="audio/sfx_whoosh.wav" vol={0.32} />);
     if (b.prop === "fact1") sfx.push(<Sfx key={k("f")} at={at + 4} src="audio/gag_bonk.wav" vol={0.38} />, <Sfx key={k("e")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.32} />);
@@ -282,7 +315,8 @@ const StOffice: React.FC<SP> = ({ s }) => {
     if (b.prop === "shock") sfx.push(<Sfx key={k("o")} at={at + 2} src="audio/gag_boing.wav" vol={0.3} />);
     if (b.prop === "swap") { [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={at + 6 + q * 9} src="audio/sfx_tick.wav" vol={0.3} />)); sfx.push(<Sfx key={k("v")} at={cue(i, 1, 0.55)} src="audio/sfx_success.wav" vol={0.4} />); }
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 6)} src="audio/sfx_snap.wav" vol={0.4} />);
-    if (b.prop === "loop") sfx.push(<Sfx key={k("r")} at={at - 40} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("b")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />);
+    if (b.prop === "loop") sfx.push(<Sfx key={k("r")} at={at - 50} src="reel/sfx_riser.wav" vol={0.5} />, <Sfx key={k("a")} at={at - 9} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("b")} at={at - 9} src="audio/sfx_snap.wav" vol={1.0} />,
+      <Sfx key={k("c")} at={at - 8} src="audio/gag_bonk.wav" vol={0.6} />);
   });
   return (
     <>
@@ -296,21 +330,10 @@ const StOffice: React.FC<SP> = ({ s }) => {
         if (b.shot === "laptop") {
           // ---------- Arjun's laptop, full frame ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
-          if (n === 1) {   // frame 1: the list pasted, the cursor on SEND, her hand slams the lid
-            const slam = seg(f, 1, 7), shake = slam > 0 && slam < 1 ? 10 : f < 14 && slam >= 1 ? 6 : 0;
-            c.save(); c.translate((r() - 0.5) * shake, (r() - 0.5) * shake);
-            c.save(); c.translate(0, 1210); c.scale(1, 1 - 0.42 * easeOut(slam)); c.translate(0, -1210);
-            laptopScreen(c, W, f, r, "paste", 0, 0);
-            if (slam < 0.5) cursor(c, W - 200, 1104);
-            c.restore();
-            // her arm and hand from the top right, landing on the lid's top edge
-            const hy = 120 + 440 * easeOut(slam), hx = 760;
-            limb(c, [[1160, -80], [980, hy - 160], [hx, hy]], LOOK.lakshmi.shirt, r, 70);
-            palm(c, hx, hy, LOOK.lakshmi.skin, r);
-            c.restore();
-            tag(c, "200 CLIENT PHONE NUMBERS → AN AI CHATBOT", W / 2, 1430, 50, "#fee2e2", "#991b1b", -0.01, 1);
-            if (f >= 6) stamp(c, "STOP!", 540, 760, 160, COL.red, seg(f, 6, 12), r, -0.06);
-          }
+          // frame 1: the client list pasted, the cursor on SEND, her hand slams the lid (before her voice)
+          if (n === 1) slamShot(c, W, f, 1, r, "paste", LOOK.lakshmi.shirt, LOOK.lakshmi.skin, "200 CLIENT PHONE NUMBERS", "→ AN AI CHATBOT");
+          // the loop: Sneha's salary sheet, Arjun's hand, the same frame
+          if (n === 11) slamShot(c, W, f, ln.from - 12, r, "salary", LOOK.arjun.shirt, LOOK.arjun.skin, "SALARY SHEET, 48 ROWS", "→ AN AI CHATBOT");
           if (n === 9) {   // the fix: three fake rows and a question; the AI's formula; the real list never leaves his laptop
             const c1 = cu(1, 0.55);
             laptopScreen(c, W, f, r, "fake", seg(p, 0.02, 0.4), seg(f, c1 - 20, c1 - 10));
@@ -355,16 +378,16 @@ const StOffice: React.FC<SP> = ({ s }) => {
             const flip = n === 5 ? seg(p, 0, 0.12) : 0, c1 = n === 5 ? cu(1, 0.5) : 0;
             mythCard(c, W, 520, "\"Only me and the AI see it\"",
               n === 5 && f >= c1 ? ["Chats can train the AI.", "Some are read by real people."] : ["Chats can train the AI."],
-              "Google's Gemini privacy page · ChatGPT has a similar switch", easeOut(m1), flip);
+              "sources: Google's Gemini privacy page · OpenAI help center", easeOut(m1), flip, undefined,
+              n === 5 && f >= c1 + 20 ? "Off switch: ChatGPT \"Improve the model\" · Gemini \"Keep Activity\"" : undefined);
           }
           const m2 = n === 6 ? seg(p, 0.3, 0.42) : n === 7 || n === 8 ? 1 : 0;
           if (m2 > 0) {
             const c1 = n === 7 ? cu(1, 0.45) : 0, flip = n === 7 ? seg(f, c1 - 4, c1 + 4) : n === 8 ? 1 : 0;
-            mythCard(c, W, 520, "\"Delete it and it's gone\"", ["reviewed by a person? kept,", "even after you delete it"],
+            mythCard(c, W, 520, "\"Delete it and it's gone\"", ["Gemini chats a person reviewed:", "kept, even after you delete"],
               "Google's Gemini privacy page, Oct 2026", easeOut(m2) * (n === 8 ? 1 - seg(p, 0.7, 0.95) : 1), flip, "UP TO 3 YEARS");
           }
-          if (n === 10) rule(c, W, seg(p, 0.05, 0.18));
-          if (n === 11) { rule(c, W, 1); tag(c, "SALARY_SHEET.xlsx → AN AI CHATBOT", W / 2, 300, 50, "#fee2e2", "#991b1b", 0.01, 1); }
+          if (n === 10) { rule(c, W, seg(p, 0.05, 0.18)); tag(c, "At work? Use the company's AI account", W / 2, 300, 50, "#e0f2fe", "#075985", -0.02, seg(p, 0.4, 0.5)); }
         }
       }} />
     </>
