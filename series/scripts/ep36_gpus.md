@@ -98,7 +98,12 @@ and card memory (not storage); Telugu says 150 crore like the screen and line 4 
 and 9.4-10.9 dB under the AI, so the bed went up about 1 dB and Ravi down 1 dB (now 8-12.6 dB); a crack on top of each
 boom (phone speakers lose the low end); a harder hit on frame 1; the quiz countdown as a tick-tock with a riser; a hit
 on the rule chip. A Telugu take had its second sentence 11 dB under the first (line 16; lines 2, 4 and 10 by 5-8 dB):
-Parler voices each sentence on its own, so voice.py now levels every take per sentence. English 79 s.
+Parler voices each sentence on its own, so voice.py now levels every take per sentence. Final Telugu review (two viewers):
+the Telugu reads conversational and the levels hold; fixed after it: the 0:11 card said "a billion+" after the voice said
+150 crore (now "1.5 billion (150 crore) per word", and the Telugu counter uses crore digits, 1,50,00,00,000); the GPU card
+showed only the 8-core phone against our 4-core test laptop (now both rows); the countdown faded (a stronger riser and a
+hit on the cut to the answer); the end card stays up 0.5 s longer before "Typing..."; the Telugu screens say
+"compressed" like the voice. English 79.5 s, Telugu 79.4 s.
 
 ## Script (Telugu; English on-screen text), v2
 1. రవి: ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!

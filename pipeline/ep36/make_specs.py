@@ -98,7 +98,7 @@ def spec(lang="en"):
                         brk = {8: "11.5 seconds.", 10: "on theirs."}.get(n)
                         if brk and brk in ln["show"]:
                             ln["show"] = ln["show"].replace(brk, brk + " <pause 0.3>", 1)
-                pz = {8: 0.7, 11: 0.9, 16: 0.6}.get(n, 0.3)   # 8, 16: the music drops out in this beat, then the hit ("Four cores", "Typing..."); 11: the queue empties
+                pz = {8: 0.7, 11: 0.9, 16: 1.1}.get(n, 0.3)   # 8, 16: the music drops out in this beat, then the hit ("Four cores", "Typing..."); 11: the queue empties; 16: the answer card stays up
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             # loudness: Ravi a little above the AI; the test result and the last line lifted

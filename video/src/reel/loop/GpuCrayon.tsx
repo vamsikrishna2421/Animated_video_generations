@@ -158,6 +158,8 @@ const rule = (c: Ctx, W: number, k: number[]) => {
 // ---------- the scene ----------
 const StGpu: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
+  const te = (s.data as { handle?: string }).handle === "@ai_maastaaru_telugu";   // Telugu: crore-style digits, the voice's "compressed"
+  const squeezed = te ? "compressed" : "squeezed";
   const ls = s.lines;
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
   const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
@@ -179,7 +181,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
     }
     if (b.prop === "quiz") {
       [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={nx - 100 + q * 15} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
-      sfx.push(<Sfx key={k("r")} at={nx - 60} src="reel/sfx_riser.wav" vol={0.45} />);
+      sfx.push(<Sfx key={k("r")} at={nx - 75} src="reel/sfx_riser.wav" vol={0.7} />, <Sfx key={k("h")} at={nx - 6} src="reel/sfx_boom.wav" vol={0.6} />,
+        <Sfx key={k("c")} at={nx - 6} src="audio/sfx_snap.wav" vol={0.45} />);
     }
     if (b.prop === "test") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.5) - 4} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) + 20} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "card") sfx.push(<Sfx key={k("c")} at={at + 8} src="audio/sfx_snap.wav" vol={0.3} />);
@@ -228,13 +231,13 @@ const StGpu: React.FC<SP> = ({ s }) => {
             }
             const v = Math.round(1.5e9 * easeOut(seg(f, cu(1, 0.3) - 6, endL - 25)));
             c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 140, 1280, W - 280, 150, 24); c.fill();
-            c.font = SANS(64); c.fillStyle = "#facc15"; c.fillText(v.toLocaleString("en-US") + " ×", W / 2, 1362);
+            c.font = SANS(64); c.fillStyle = "#facc15"; c.fillText(v.toLocaleString(te ? "en-IN" : "en-US") + " ×", W / 2, 1362);
             c.font = SANS(34, 600); c.fillStyle = "#e2e8f0"; c.fillText("150 crore · for one word", W / 2, 1410);
           }
           if (b.prop === "workers") {
             for (let q = 0; q < 8; q++) worker(c, 200 + (q % 4) * 230, 520 + Math.floor(q / 4) * 230, 1.3, BLUE, f / 30, r);
             const c1 = cu(1, 0.5);
-            c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center"; c.fillText("a billion+ calculations per word", W / 2, 1030);
+            c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center"; c.fillText("1.5 billion (150 crore) per word", W / 2, 1030);
             c.fillStyle = "#e2e8f0"; rrect(c, 150, 1080, W - 300, 60, 16); c.fill();
             c.fillStyle = BLUE; rrect(c, 150, 1080, 24 + 10 * seg(f, ln.from, endL), 60, 16); c.fill();
             if (f >= c1 - 4) tag(c, "8 workers: way too few", W / 2, 1260, 66, "#fee2e2", "#991b1b", -0.02, seg(f, c1 - 4, c1 + 6));
@@ -269,7 +272,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
               c.font = SANS(46); c.fillStyle = INK; c.textAlign = "center"; c.fillText("gaming laptop GPU (RTX 5060)", W / 2, 860);
               tag(c, "3,328 cores", 330, 1000, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 - 4, c1 + 6));
               tag(c, "8 GB memory", 760, 1000, 68, "#ede9fe", "#4c1d95", 0.03, seg(f, c1 + 8, c1 + 18));
-              tag(c, "phone CPU: 8 cores", W / 2, 1170, 64, "#e2e8f0", INK, 0.01, seg(f, c1 + 16, c1 + 24));
+              tag(c, "phone CPU: 8 cores", W / 2, 1150, 58, "#e2e8f0", INK, 0.01, seg(f, c1 + 16, c1 + 24));
+              tag(c, "our test laptop: 4 cores", W / 2, 1250, 58, "#e2e8f0", INK, -0.01, seg(f, c1 + 22, c1 + 30));
               c.font = SANS(38, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("cores and memory: NVIDIA's spec page", W / 2, 1400);
             }
           }
@@ -283,7 +287,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
             tag(c, "MUST FIT IN CARD MEMORY", W / 2, 420, 60, "#0f172a", "#facc15", -0.01, seg(f, ln.from + 2, ln.from + 10));
             if (f >= c1 + 18) tag(c, "medium brain, 1.1 GB: fits ✓", W / 2, 540, 54, "#dcfce7", "#166534", 0.01, seg(f, c1 + 18, c1 + 24));
             if (f >= c1 + 26) tag(c, "big brain, 15 GB: doesn't fit", W / 2, 640, 54, "#fee2e2", "#991b1b", -0.01, seg(f, c1 + 26, c1 + 32));
-            if (f >= c1 + 34) tag(c, "squeezed, 4.7 GB: fits ✓ (EP37)", W / 2, 740, 54, "#dcfce7", "#166534", 0.01, seg(f, c1 + 34, c1 + 40));
+            if (f >= c1 + 34) tag(c, `${squeezed}, 4.7 GB: fits ✓ (EP37)`, W / 2, 740, 54, "#dcfce7", "#166534", 0.01, seg(f, c1 + 34, c1 + 40));
             c.fillStyle = "#fee2e2"; rrect(c, 600, 955, 360, 420, 20); c.fill();
             c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU: a few workers", 780, 935);
             fitScene(c, 1, seg(f, c1 - 4, c1 + 22), r);
@@ -341,7 +345,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.35, 0.45)]);
           if (n === 13) {
             bubble(c, 320, 560, "FULL SIZE!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");
-            tag(c, "squeezed copy: 4.7 GB (EP35)", 700, 380, 48, "#fff", INK, 0.02, seg(p, 0.45, 0.6));
+            tag(c, `${squeezed} copy: 4.7 GB (EP35)`, 700, 380, 48, "#fff", INK, 0.02, seg(p, 0.45, 0.6));
           }
           if (n === 15) bubble(c, 320, 560, "So?", 96, seg(p, 0.05, 0.2), COL.yellow);
         }
