@@ -1,4 +1,4 @@
-# EP36 "The Diwali rush" (GPUs and AI chips: why hardware decides AI), script v2
+# EP36 "The Diwali rush" (GPUs and AI chips: why hardware decides AI), script v3
 
 Season 4, queue 038 (replaces the old "Why AI Runs on GPUs" lesson in that slot). Ravi anna's shop again (EP33-EP35):
 the shop's phone AI now answers the WhatsApp orders, with EP35's medium brain inside. Diwali evening: 23 orders unread
@@ -49,15 +49,15 @@ the reel claims no measured GPU speed.
 | 5 | Ravi | Like my Diwali stock count? Every kid counting one rack? | bubble "every kid, one rack?" |
 | 6 | AI | Exactly. A GPU: the graphics card from games. [1] Thousands of small cores, all at once. | "CPU: a few big cores" (8 workers) vs "GPU: thousands of small cores" (a grid of dots turning green at once on [1]); "all at once" |
 | 7 | Ravi | But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply? | QUIZ card held ~3 s, 3-2-1: "YOUR CALL · More cores: is a single reply faster? A) no B) yes · comment A or B" |
-| 8 | AI | On our laptop: one core, eleven and a half seconds. [1] Four cores: under four. [2] Each word's work gets split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's work split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
-| 9 | Ravi | Still almost a minute and a half! [1] Do I buy a graphics card? | bubble "still ~1.5 minutes?!" |
+| 8 | AI | On our laptop: one core, eleven and a half seconds. (beat) [1] Four cores: under four. [2] Each word's work gets split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's work split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
+| 9 | Ravi | Twenty-three orders? Still a minute and a half! [1] Do I buy a graphics card? | bubble "still ~1.5 minutes?!" |
 | 10 | AI | For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores. | a wall of graphics cards: "ChatGPT: runs on THEIR graphics cards · you don't need one to use it"; on [1] a gaming laptop GPU (RTX 5060): "3,328 cores", "8 GB memory", "phone CPU: 8 cores" (NVIDIA's spec page) |
 | 11 | Ravi | Sunny! Bring your gaming laptop! | the gaming laptop on the counter, "23 unread" falls to 0; small "illustration: we tested no graphics card" |
 | 12 | AI | For AI, count the workers, not their speed. | rule chip "FOR AI, COUNT THE WORKERS · CPU: a few fast cores · GPU: thousands at once" |
 | 13 | Ravi | Now the big brain! Not the squeezed copy, the full one! | bubble "FULL SIZE!" |
 | 14 | AI | Full size, it's fifteen GB. [1] The card holds eight. | "big brain, full size: 15 GB" pours into a jar "card memory: 8 GB"; on [1] it overflows |
 | 15 | Ravi | So? | |
-| 16 | AI | So the rest goes back to the few workers. [1] Typing... | the overflow runs down to "CPU: 8 workers"; on [1] "typing…" and "23" again; cut to frame 1 (loops) |
+| 16 | AI | It has to fit in the card. [1] The rest goes back to the eight workers. (beat) [2] Typing... | the overflow runs down to "CPU: 8 workers"; on [1] "typing…" and "23" again; cut to frame 1 (loops) |
 
 About 68 s. Tag on screen: "EP36 · AI From Scratch". Caption: EP37 tease (how the same brain shrank to 4.7 GB),
 "try a GPU free: Google Colab (limited)", phones' "AI chips" (NPUs) are small versions of the same idea, comment A or
@@ -76,23 +76,33 @@ openers), "త్వరగా" instead of "ఫాస్ట్" (EP35's "forced")
 Ravi anna, "ఒక్క రిప్లై కూడా", "కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!" ("ఫుల్ ది" sounded like ordering a full bottle),
 "మూడు వేలకు పైగా".
 
+Render review (English, two viewers; both: "For ChatGPT, no" pays off; the minute and a half didn't hold up; the
+ending needed a visible spill and a line to repeat). v3: Ravi says the sum ("Twenty-three orders? Still a minute and a
+half!") and the card labels it "our 4-core laptop: 23 orders ≈ 83 s"; the 15 GB block is drawn to scale against the 8 GB
+jar, the 7 GB that doesn't fit slides to "CPU: 8 workers" under "MUST FIT IN CARD MEMORY", and the AI says "It has to fit
+in the card. The rest goes back to the eight workers." then "Typing..." as its own take; a 0.7 s beat with the music
+out before "Four cores: under four"; louder quiz ticks and a riser; "quiz: B ✓"; bigger notes. Heard back while voicing
+(misheard = mispronounced): "a billion sums" -> "sons" (now "calculations"), "the graphics card games use thousands"
+ran together (now two sentences), "ONE reply" -> "Wondreply" (now "a single reply"), "stock-taking" -> "stock trading"
+(now "stock count"), "more cores" -> "more chorus" (re-rolled until clean). English 75 s, Telugu 74 s.
+
 ## Script (Telugu; English on-screen text), v2
 1. రవి: ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!
 2. ఏఐ: నేను రాసే ప్రతి పదానికి [1] వంద కోట్లకు పైగా మల్టిప్లికేషన్లు.
 3. రవి: అయితే త్వరగా చెయ్! ఈ ఫోన్ లో ఎనిమిది కోర్లు ఉన్నాయి!
-4. ఏఐ: ఎనిమిది మంది పనివాళ్ళు, వంద కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.
+4. ఏఐ: ఎనిమిది మంది పనివాళ్ళు, నూట యాభై కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.
 5. రవి: దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో ర్యాక్ లెక్కపెట్టినట్టా?
 6. ఏఐ: అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.
 7. రవి: కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు. [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?
 8. ఏఐ: మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి.
-9. రవి: ఇంకా దాదాపు నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?
+9. రవి: ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?
 10. ఏఐ: చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.
 11. రవి: సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!
 12. ఏఐ: ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం.
 13. రవి: ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!
 14. ఏఐ: ఫుల్ సైజ్ పదిహేను జీబీ. [1] కార్డ్ లో ఎనిమిదే పడతాయి.
 15. రవి: అయితే?
-16. ఏఐ: అయితే మిగతాది మళ్ళీ ఆ కొద్దిమంది పనివాళ్ళకే. [1] టైపింగ్...
+16. ఏఐ: కార్డ్ లో పట్టాలి. [1] మిగతాది మళ్ళీ ఆ ఎనిమిది మంది పనివాళ్ళకే. [2] టైపింగ్...
 
 ## Sound
 A hit and notification pings on frame 1; the bed builds under the problem; a lift into the workers insert; the quiz's
