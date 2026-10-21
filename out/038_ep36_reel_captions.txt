@@ -1,0 +1,44 @@
+UPLOAD: 038
+VIDEO: 038_ep36_the_diwali_rush.mp4  (teaching skit, 75 s, AI voices; replaces the older lesson-format 038_ep36_why_ai_runs_on_gpus.mp4; send copy: 038_ep36_the_diwali_rush_ig.mp4, about 22 MB). It loops: "Typing..." leads back into "Twenty-three orders waiting, and you're still typing a single reply?!".
+
+=== CAPTION ===
+Diwali evening at Ravi anna's shop: 23 WhatsApp orders waiting, and the shop AI was still typing the first reply.
+
+Episode 36 of AI From Scratch: GPUs and AI chips, why hardware decides AI
+- Every word an AI writes is over a billion small multiplications (EP35's medium brain has 1.5 billion parameters, and a model does about one multiply-add per parameter for every word piece)
+- A CPU has a few fast cores (a phone or laptop: 4 to 16). A graphics card (GPU) has thousands of small ones working at once: a gaming laptop's RTX 5060 has 3,328 cores and 8 GB of memory (NVIDIA's spec page)
+- Our real test, the same small AI writing the same reply on our laptop's CPU: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s. More cores make even one reply faster, because each word's work is split between them. But 23 orders still take about 83 s
+- The brain must fit in the card's memory: the big brain at full size is about 15 GB, and an 8 GB card can't hold it, so the rest runs on the CPU again: slow
+
+What this means for you:
+1. ChatGPT, Gemini and the rest run on the companies' own graphics cards and AI chips. You don't need one to use them
+2. To run AI on your own machine, look at the graphics card and its memory (GB), not the CPU's GHz. The model has to fit in that memory
+3. No graphics card? Google Colab is free to use, though its free GPUs are "heavily restricted" and not guaranteed (Google's own FAQ). Your phone's "AI chip" (NPU) is a small version of the same idea: many small workers at once
+
+Next: EP37, quantization. How the same big brain shrinks from 15 GB to 4.7 GB (the "squeezed copy" Ravi refused).
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+More cores: is a single reply faster? A) no B) yes. Comment A or B before the answer comes.
+
+=== HASHTAGS ===
+#GPU #AI #LearnAI #AIForBeginners #NVIDIA #AIFromScratch
+
+=== PINNED_COMMENT ===
+How we tested (run by us): EP35's medium brain (Qwen2.5-1.5B-Instruct, Apache 2.0, Qwen's own 4-bit GGUF file) with llama.cpp on our laptop's CPU, no graphics card. The same order ("Anna, please send 2 kg rice, 1 litre sunflower oil, 6 eggs and 1 packet of tea powder to flat 302"), the same 55-word-piece reply every time (greedy decoding), the context cleared before each run, median of 3 runs: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s for the whole reply (3.15x faster on 4 cores, not quite 4x: the cores also wait for the numbers to arrive from memory).
+We have no graphics card here, so the scene where Sunny's gaming laptop clears the queue is an illustration, not a measurement.
+GPU numbers: NVIDIA's own spec pages: GeForce RTX 5060 Laptop GPU, 3,328 CUDA cores, 8 GB GDDR7; GeForce RTX 5090 (desktop), 21,760 CUDA cores, 32 GB. The big brain at full size: Qwen2.5-7B-Instruct has 7.61 billion parameters (model card), about 15 GB at 16 bits each; Qwen's 4-bit file of it is 4.68 GB (EP35). "About one multiply-add per parameter per token": Kaplan et al., "Scaling Laws for Neural Language Models" (OpenAI, 2020).
+
+=== COVER ===
+Ravi anna shouting at the counter on Diwali evening, lights strung across the shop; the shop phone shows "typing..." and a red 23; headline "23 ORDERS WAITING. THE AI IS STILL TYPING."
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop on Diwali evening. 23 WhatsApp orders are waiting and the shop AI is still typing one reply. It explains that every word takes over a billion multiplications; Ravi's phone has eight cores, eight workers, and it needs thousands. Ravi compares it to Diwali stock counting with every kid counting one rack; the AI says a GPU, the graphics card from games, has thousands of small cores working at once. A quiz asks whether more cores can speed up a single reply. Our test on a laptop: 1 core 11.5 seconds, 4 cores 3.6, because each word's work is split, though 23 orders still take about 83 seconds. Ravi asks if he should buy a graphics card: not for ChatGPT, which runs on the companies' cards, but to run the AI in the shop a gaming laptop's GPU has over 3,000 cores. Ravi borrows his nephew Sunny's gaming laptop (an illustration; no GPU was tested) and the rule appears: for AI, count the workers, not their speed. Then he asks for the big brain at full size, 15 GB; the card holds 8 GB, so it has to fit, and the rest goes back to the eight slow workers: typing again.
+
+=== SOURCES (for comments) ===
+Demo (run by us): pipeline/ep36/speed_demo.py, results in series/scripts/ep36_demo/results.json.
+NVIDIA, GeForce RTX 50 Series laptops spec page (RTX 5060 Laptop GPU: 3,328 CUDA cores, 8 GB GDDR7) and GeForce RTX 5090 page (21,760 CUDA cores, 32 GB GDDR7).
+Kaplan et al., "Scaling Laws for Neural Language Models" (OpenAI, arXiv 2001.08361, 2020): forward pass about 2N operations per token.
+Qwen2.5 model cards (1.54B and 7.61B parameters) and Qwen's GGUF files (q4_k_m: 1.12 and 4.68 GB).
+Google Colab FAQ (research.google.com/colaboratory/faq.html): "Colab is free of charge to use"; free-tier GPU access "heavily restricted"; resources "not guaranteed and not unlimited".
+llama.cpp: layers that don't fit on the graphics card run on the CPU.

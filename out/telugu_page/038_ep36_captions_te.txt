@@ -1,0 +1,33 @@
+UPLOAD: 038 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/038_ep36_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/038_ep36_insta_te_ig.mp4, about 22 MB). It loops: "typing..." leads back into "iravai moodu orders wait chestunnaayi, nuvvinka okka reply type chestunnaavaa?!".
+
+=== CAPTION ===
+Deepavali saayantram Ravi anna shop lo: 23 WhatsApp orders wait chestunnaayi, shop AI inka modati reply type chestune undi.
+
+AI From Scratch Episode 36: GPUs, AI chips, hardware enduku mukhyam
+- AI raase prati padaaniki vanda kotlaku paiga chinna multiplications (EP35 medium brain lo 1.5 billion parameters; prati padam mukkaki prati parameter ki sumaaru okka multiply-add)
+- CPU lo konni fast cores untaayi (phone/laptop: 4 nunchi 16). Graphics card (GPU) lo velaki velu chinna cores okesaari pani chestaayi: gaming laptop RTX 5060 lo 3,328 cores, 8 GB memory (NVIDIA spec page)
+- Maa real test, ade chinna AI ade reply ni maa laptop CPU meeda: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s. Ekkuva cores tho okka reply kooda twaraga vastundi, endukante prati padam pani cores madhya panchukuntaaru. Kaani 23 orders ki inka sumaaru 83 s
+- Brain card memory lo pattaali: pedda brain full size lo sumaaru 15 GB, 8 GB card lo pattadu, migataadi malli CPU meeda: slow
+
+Meeku idi ante:
+1. ChatGPT, Gemini laantivi aa companies sontha graphics cards, AI chips meeda nadustaayi. Vaatini vaadadaniki meeku card akkarledu
+2. Mee sontha machine meeda AI nadapaalante graphics card, daani memory (GB) choodandi, CPU GHz kaadu. Model aa memory lo pattaali
+3. Graphics card leda? Google Colab free, kaani free GPUs "heavily restricted", guarantee ledu (Google FAQ). Mee phone lo "AI chip" (NPU) kooda ade idea chinna size lo: chaala chinna workers okesaari
+
+Next: EP37, quantization. Ade pedda brain 15 GB nunchi 4.7 GB ki ela tagguthundi (Ravi vaddanna "compress chesindi").
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+Ekkuva cores tho okka reply twaraga vastunda? A) raadu B) vastundi. A or B ani comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #GPU #LearnAI #AIFromScratch
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: EP35 medium brain (Qwen2.5-1.5B-Instruct, Apache 2.0, Qwen di 4-bit GGUF file), llama.cpp tho maa laptop CPU meeda, graphics card ledu. Ade order, prati saari ade reply (greedy), prati run mundu context clear, 3 runs median: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s (4 cores lo 3.15 retlu, 4 retlu kaadu: cores memory nunchi numbers vachevaraku kooda wait chestaayi).
+Ikkada graphics card ledu, anduke Sunny gaming laptop queue clear chese scene oka illustration, measurement kaadu.
+GPU numbers: NVIDIA sontha spec pages (RTX 5060 Laptop GPU: 3,328 CUDA cores, 8 GB; RTX 5090: 21,760 cores, 32 GB). Pedda brain full size: Qwen2.5-7B-Instruct, 7.61 billion parameters, 16 bits lo sumaaru 15 GB; Qwen 4-bit file 4.68 GB (EP35). Sources English caption lo.
+
+=== COVER ===
+Deepavali saayantram shop counter daggara arustunna Ravi anna; phone lo "typing..." , red 23; headline "23 ORDERS WAITING. THE AI IS STILL TYPING." (English visuals)
