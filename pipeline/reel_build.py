@@ -575,11 +575,11 @@ def main(spec_path: Path) -> None:
             if str(k) in cues:
                 at = sc["from"] + cues[str(k)]
                 mdrops.append([max(0, at - round(0.8 * FPS)), at])
-        for li, k in spec_sc.get("drop_at", []):   # [[line index in the scene, cue], ...]: the drop before a later line's cue
-            lc = sc["lines"][li]["cues"] if li < len(sc["lines"]) else {}
+        for li, k, *hold in spec_sc.get("drop_at", []):   # [[line index in the scene, cue(, hold s)], ...]: the drop before a later
+            lc = sc["lines"][li]["cues"] if li < len(sc["lines"]) else {}   # line's cue; `hold` keeps the bed down that long after it
             if str(k) in lc:
                 at = sc["from"] + lc[str(k)]
-                mdrops.append([max(0, at - round(0.8 * FPS)), at])
+                mdrops.append([max(0, at - round(0.8 * FPS)), at + round((hold[0] if hold else 0) * FPS)])
         if spec_sc.get("music_stop") is not None and sc["lines"]:
             last = sc["lines"][-1]
             mdrops.append([sc["from"] + last["from"] + round(spec_sc["music_stop"] * last["frames"]), round(total * FPS) + FPS])

@@ -34,7 +34,7 @@ MUST = {"en": {1: [("twenty", "23"), ("three", "23"), ("orders", "order"), ("typ
                15: [("so",)], 16: [("fit",), ("fast",), ("cpu", "c"), ("workers", "worker")], "16b": [("typing",)]},
         "te": {2: [("मल्टि", "मल्टी", "मल्ति"), ("याभ", "याब", "यभ", "एबा", "भाई", "भै")], 10: [("चाट", "चैट", "चेट", "छाट")], 8: [("पदकों", "पदको", "पद्को", "11", "ग्यारह")], "10b": [("मूडु", "मुडु", "3000")], "8b": [("सेकन", "सेकं", "सकन", "सिकन")],
                14: [("पदिहे", "पदहे", "15")], "16b": [("टाइप", "ताइप", "टैप", "ताईप", "typ")],
-        "11b": [("प्पु", "पुडे", "पुड़े", "अपु", "अप्प", "अप्र", "अप्व"), ("आई पू", "आइपो", "आयिपो", "पोयि", "पोइ", "पोयं", "पूएं")]}}   # Telugu as the judge writes it (Devanagari)
+        "11b": [("प्पु", "पुडे", "पुड़े", "अपु", "अप्प", "अप्र", "अप्व", "अप्ड"), ("आई पू", "आई पो", "आइपो", "आयिपो", "पोयि", "पोइ", "पोई", "पोयं", "पूएं")]}}   # Telugu as the judge writes it (Devanagari)
 
 
 def heard(path, who, n, lang):
@@ -51,8 +51,8 @@ def heard(path, who, n, lang):
 
 def level(path, under=4.0, cap=12.0):
     """Parler voices each sentence on its own and one can come out far quieter (EP36's Telugu line 16: the second
-    sentence 11 dB under the first). A voiced stretch more than `under` dB below the take's median stretch is raised
-    to the median, at most `cap` dB, with 20 ms ramps."""
+    sentence 11 dB under the first). A voiced stretch (0.3 s or longer) more than `under` dB below the take's loudest
+    stretch is raised to 2 dB under it, at most `cap` dB, with 20 ms ramps."""
     x, sr = sf.read(path)
     mono = x.mean(1) if x.ndim > 1 else x
     hop = int(sr * 0.02)
@@ -68,14 +68,15 @@ def level(path, under=4.0, cap=12.0):
             j += 1
         spans.append((i * hop, (j - quiet) * hop))
         i = j
+    spans = [(a, b) for a, b in spans if b - a >= int(0.3 * sr)]
     lv = [20 * np.log10(np.sqrt(np.mean(mono[a:b] ** 2)) + 1e-9) for a, b in spans]
     if len(spans) < 2:
         return
-    med = float(np.median(lv))
+    ref = max(lv)   # not the median: when most stretches are the quiet ones, the median is quiet too
     gain = np.ones(len(mono))
     for (a, b), l in zip(spans, lv):
-        if l < med - under:
-            g = 10 ** (min(cap, med - l) / 20)
+        if l < ref - under:
+            g = 10 ** (min(cap, ref - 2 - l) / 20)
             ramp = min(hop, (b - a) // 4)
             env = np.full(b - a, g)
             env[:ramp] = np.linspace(1, g, ramp)

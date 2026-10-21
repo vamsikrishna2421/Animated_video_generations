@@ -279,7 +279,8 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   entry so the judge retries, and split the English caption at the take boundary with "<pause 0.3>" in `show`.
 - Parler voices each sentence of a take on its own, and one sentence can come out 11 dB under the other (EP36's
   Telugu line 16; the pack's voice-activity check didn't even count it as speech): `level()` in pipeline/ep36/voice.py
-  evens every take per sentence; copy it into new voice scripts.
+  evens every take per sentence against its loudest stretch (a median reference missed line 16, where most
+  stretches were the quiet ones); copy it into new voice scripts.
 - The moment the episode is about needs its own beat: a pause, a big visual, a hit and a spoken reaction (EP36: the GPU
   clearing the queue was a small badge nobody mentioned until Ravi's "Done already?!").
 - A loop ending still has to answer "so do I need it?": put the answer on screen before the last gag (EP36: three of
@@ -289,3 +290,6 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   To stop a render, kill by PID the chain's subshell first, then render.sh, the node remotion process and its
   headless_shell browsers: killing render.sh alone orphans remotion, and a `render; make_ig; pack` chain then runs on a
   half-written mp4. Chain those steps with `&&`.
+- A drop that ends on the cue brings the bed back exactly on the punchline word, and stacked ramps (boost x rise x
+  swell) cap it at full volume (EP36: "Typing" heard as "Type in"): hold the drop through the word with
+  `drop_at: [[line, cue, hold_s]]`. Hits for a line go on the cut, before its first word ("For AI" heard as "O.A.I.").
