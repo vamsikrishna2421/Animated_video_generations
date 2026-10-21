@@ -44,6 +44,7 @@ GAP = {1: 0.2, 5: 0.5, 7: 0.6, 9: 0.6, 10: 0.5}
 PAUSES = {"en": {7: {"1": 0.8}}, "te": {7: {"1": 0.8}}}   # render review: the 0.45 s beat was a blink   # the beat before "three years" (the drop sits in it)
 GAIN = {"lakshmi": 0.0, "arjun": 0.5, "sneha": 0.0}
 GAIN_LINE = {7: 1.0, 11: 1.0}
+GAIN_TE = {10: 0.7, 11: 0.7}   # Telugu: the rising bed sat 7.4 dB under the last two lines
 TEMPO = {"en": 1.08, "te": 1.05}
 YT = {"of_a": "The client list", "of_b": "Myth vs fact", "of_c": "Fake rows, real list"}
 
@@ -73,7 +74,7 @@ def spec(lang):
                 ln.update({"tts": TE_SPLIT[n][0], "file2": f"{n:02d}b_{who}.wav", "tts2": TE_SPLIT[n][1], "pause": 0.3})
             if n in PAUSES[lang]:
                 ln["pauses"] = PAUSES[lang][n]
-            g = GAIN[who] + GAIN_LINE.get(n, 0)
+            g = GAIN[who] + GAIN_LINE.get(n, 0) + (GAIN_TE.get(n, 0) if te else 0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)

@@ -195,7 +195,7 @@ const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "past
   c.fillStyle = "#334155"; c.beginPath(); c.moveTo(40, 1210); c.lineTo(W - 40, 1210); c.lineTo(W + 10, 1330); c.lineTo(-10, 1330); c.closePath(); c.fill();   // the base
   c.fillStyle = "#7c3aed"; rrect(c, 126, 246, 70, 70, 18); c.fill();
   c.font = SANS(40); c.fillStyle = INK; c.textAlign = "left"; c.fillText("AI chat", 214, 280);
-  c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText("free plan", 214, 312);
+  c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText("personal account", 214, 312);
   stroke(c, [[116, 336], [W - 116, 336]], "#cbd5e1", 3, r, { passes: 1 });
   // my message: the prompt, the file chip and the pasted rows
   if (mode === "paste" || mode === "salary") {
@@ -216,8 +216,8 @@ const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "past
   if (reply > 0) {   // the AI's answer: a formula, run on the real list in Excel, on his own laptop
     c.save(); c.globalAlpha = reply;
     c.fillStyle = "#fff"; rrect(c, 130, 800, W - 330, 250, 26); c.fill(); stroke(c, [[130, 800], [W - 200, 800], [W - 200, 1050], [130, 1050], [130, 800]], "#cbd5e1", 3, r, { passes: 1 });
-    c.font = SANS(36); c.fillStyle = INK; c.fillText("Names:  =PROPER(TRIM(A2))", 160, 860);
-    c.fillText("Numbers:  =SUBSTITUTE(B2,\" \",\"\")", 160, 924);
+    c.font = SANS(40); c.fillStyle = INK; c.fillText("Names:  =PROPER(TRIM(A2))", 160, 862);
+    c.fillText("Numbers:  =SUBSTITUTE(B2,\" \",\"\")", 160, 928);
     c.font = SANS(34, 600); c.fillText("Then sort A to Z.", 160, 986);
     c.restore();
   }
@@ -271,9 +271,10 @@ const cursor = (c: Ctx, x: number, y: number) => {
 const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], src: string, k: number, flip: number, big?: string, note?: string) => {
   if (k <= 0) return;
   const side = flip < 0.5 ? "myth" : "fact", sx = Math.max(0.02, Math.abs(Math.cos(flip * Math.PI)));
+  const ext = side === "fact" && note ? 150 : 0;   // room for the off switches
   c.save(); c.globalAlpha = k; c.translate(W / 2, y); c.scale(sx * (0.9 + 0.1 * k), 0.9 + 0.1 * k);
-  c.fillStyle = "#fffdf5"; rrect(c, -470, -190, 940, 380, 30); c.fill();
-  c.lineWidth = 6; c.strokeStyle = side === "myth" ? COL.red : GREEN; rrect(c, -470, -190, 940, 380, 30); c.stroke();
+  c.fillStyle = "#fffdf5"; rrect(c, -470, -190, 940, 380 + ext, 30); c.fill();
+  c.lineWidth = 6; c.strokeStyle = side === "myth" ? COL.red : GREEN; rrect(c, -470, -190, 940, 380 + ext, 30); c.stroke();
   c.fillStyle = side === "myth" ? COL.red : GREEN; rrect(c, -470, -190, 940, 92, 30); c.fill(); c.fillRect(-470, -130, 940, 32);
   c.font = SANS(60); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(side === "myth" ? "MYTH" : "FACT", 0, -122);
   if (side === "myth") {
@@ -283,18 +284,21 @@ const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], sr
     if (big) { c.font = SANS(110); c.fillStyle = GREEN; c.fillText(big, 0, 10); }
     c.font = SANS(big ? 46 : 54); c.fillStyle = INK;
     fact.forEach((t, q) => c.fillText(t, 0, (big ? 74 : -14) + q * (big ? 52 : 64)));
-    if (note) { c.font = SANS(30); c.fillStyle = "#166534"; note.split("\n").forEach((t, q) => c.fillText(t, 0, 96 + q * 38)); }
-    c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText(src, 0, 172);
+    if (note) {
+      c.fillStyle = "#dcfce7"; rrect(c, -440, 84, 880, 188, 20); c.fill();
+      note.split("\n").forEach((t, q) => { c.font = SANS(q === 0 ? 38 : 42); c.fillStyle = "#166534"; c.fillText(t, 0, 132 + q * 56); });
+    }
+    c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText(src, 0, 172 + (note ? 140 : 0));
   }
   c.restore();
 };
 // the rule, as a chip above the captions (line 10 to the end)
 const rule = (c: Ctx, W: number, k: number) => {
   if (k <= 0) return;
-  c.save(); c.globalAlpha = k; c.translate(W / 2, 1370); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
-  c.fillStyle = "#0f172a"; rrect(c, -480, -70, 960, 140, 30); c.fill();
-  c.font = SANS(42); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("PASTE ONLY WHAT YOU'D PUT UP", 0, -12);
-  c.fillText("ON THE NOTICE BOARD", 0, 42);
+  c.save(); c.globalAlpha = k; c.translate(W / 2, 1360); c.rotate(-0.012); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
+  c.fillStyle = "#166534"; rrect(c, -490, -95, 980, 190, 26); c.fill();
+  c.font = SANS(56); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("PASTE ONLY WHAT YOU'D PUT UP", 0, -14);
+  c.fillText("ON THE NOTICE BOARD", 0, 58);
   c.restore();
 };
 
@@ -309,7 +313,8 @@ const StOffice: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
     if (b.shot === "laptop" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.25} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={1.0} />, <Sfx key={k("c")} at={5} src="audio/gag_bonk.wav" vol={0.6} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={1.0} />, <Sfx key={k("c")} at={5} src="audio/gag_bonk.wav" vol={0.85} />,
+      <Sfx key={k("d")} at={4} src="audio/sfx_whoosh.wav" vol={0.5} />);
     if (b.prop === "numbers") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.45) - 2} src="audio/sfx_pop.wav" vol={0.4} />);
     if (b.prop === "myth1" || b.prop === "myth2") sfx.push(<Sfx key={k("m")} at={at + Math.round(l.frames * 0.3)} src="audio/sfx_whoosh.wav" vol={0.32} />);
     if (b.prop === "fact1") sfx.push(<Sfx key={k("f")} at={at + 4} src="audio/gag_bonk.wav" vol={0.38} />, <Sfx key={k("e")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.32} />);
@@ -372,24 +377,24 @@ const StOffice: React.FC<SP> = ({ s }) => {
           if (n === 3) {
             const c1 = cu(1, 0.45);
             tag(c, "200 phone numbers", W / 2, 260, 66, "#fee2e2", "#991b1b", -0.02, seg(p, 0.05, 0.15));
-            if (f >= c1) tag(c, "→ a free chatbot?!", W / 2, 380, 66, "#fff", INK, 0.02, seg(f, c1, c1 + 8));
+            if (f >= c1) tag(c, "→ a chatbot?!", W / 2, 380, 66, "#fff", INK, 0.02, seg(f, c1, c1 + 8));
           }
           // the cards: card 1 on lines 4-5, card 2 on lines 6-8
-          const m1 = n === 4 ? seg(p, 0.3, 0.42) : n === 5 ? 1 : 0;
+          const m1 = n === 4 ? seg(p, 0.3, 0.42) : n === 5 ? 1 : n === 6 ? 1 - seg(p, 0.45, 0.55) : 0;
           if (m1 > 0) {
-            const flip = n === 5 ? seg(p, 0, 0.12) : 0, c1 = n === 5 ? cu(1, 0.5) : 0;
+            const flip = n === 5 ? seg(p, 0, 0.12) : n === 6 ? 1 : 0, c1 = n === 5 ? cu(1, 0.5) : 0;
             mythCard(c, W, 520, "\"Only me and the AI see it\"",
-              n === 5 && f >= c1 ? ["Chats can train the AI.", "Some are read by real people."] : ["Chats can train the AI."],
+              (n === 5 && f >= c1) || n === 6 ? ["Chats can train the AI.", "Some are read by real people."] : ["Chats can train the AI."],
               "sources: Google's Gemini privacy page · OpenAI help center", easeOut(m1), flip, undefined,
-              n === 5 && f >= c1 + 20 ? "off switches: ChatGPT \"Improve the model\",\nGemini \"Keep Activity\"" : undefined);
+              n === 5 && f >= c1 ? "to switch it off:\nChatGPT: \"Improve the model\"\nGemini: \"Keep Activity\"" : n === 6 ? "to switch it off:\nChatGPT: \"Improve the model\"\nGemini: \"Keep Activity\"" : undefined);
           }
-          const m2 = n === 6 ? seg(p, 0.3, 0.42) : n === 7 || n === 8 ? 1 : 0;
+          const m2 = n === 6 ? seg(p, 0.55, 0.67) : n === 7 || n === 8 ? 1 : 0;
           if (m2 > 0) {
             const c1 = n === 7 ? cu(1, 0.45) : 0, flip = n === 7 ? seg(f, c1 - 4, c1 + 4) : n === 8 ? 1 : 0;
             mythCard(c, W, 520, "\"Delete it and it's gone\"", ["Gemini chats a person reviewed:", "kept, even after you delete"],
               "Google's Gemini privacy page, Oct 2026", easeOut(m2) * (n === 8 ? 1 - seg(p, 0.7, 0.95) : 1), flip, "UP TO 3 YEARS");
           }
-          if (n === 10) { rule(c, W, seg(p, 0.05, 0.18)); tag(c, "At work? Use the company's AI account", W / 2, 300, 50, "#e0f2fe", "#075985", -0.02, seg(p, 0.4, 0.5)); }
+          if (n === 10) { rule(c, W, seg(p, 0.05, 0.18)); tag(c, "At work? Use the company's AI account", W / 2, 1190, 54, "#e0f2fe", "#075985", -0.02, seg(p, 0.1, 0.2)); }
         }
       }} />
     </>

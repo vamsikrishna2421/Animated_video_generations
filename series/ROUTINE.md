@@ -293,3 +293,10 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - A drop that ends on the cue brings the bed back exactly on the punchline word, and stacked ramps (boost x rise x
   swell) cap it at full volume (EP36: "Typing" heard as "Type in"): hold the drop through the word with
   `drop_at: [[line, cue, hold_s]]`. Hits for a line go on the cut, before its first word ("For AI" heard as "O.A.I.").
+- Captions in "phrase" mode break only at punctuation (Reel.tsx `phraseChunks`): to hold back a reveal, end the caption
+  phrase before it ("Google keeps it... up to three years"). A "<pause>" in `show` works only on two-take lines; on a
+  single take it printed "<pause 0.8>" on screen (creative 05).
+- Draw a laptop slam as a slam: a thick arm, a hand, impact lines, the lid folded flat, the stakes in a bold block in
+  the top third (creative 05: a still arm read as "a desk lamp"); frame the loop's last beat like frame 1.
+- Fish read "Relax, ma'am" as "Relax mom" and "pin" as "been": drop the honorific, use "put up". Parler Telugu blurred
+  "సెండ్ నొక్కకు" in eight takes ("సెండ్ చెయ్యకు" came through) and "చాట్స్" reads "charts" ("మనం టైప్ చేసేది").
