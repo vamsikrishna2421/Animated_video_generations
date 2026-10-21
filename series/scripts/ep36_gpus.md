@@ -50,14 +50,14 @@ the reel claims no measured GPU speed.
 | 6 | AI | Exactly. A GPU: the graphics card from games. [1] Thousands of small cores, all at once. | "CPU: a few big cores" (8 workers) vs "GPU: thousands of small cores" (a grid of dots turning green at once on [1]); "all at once" |
 | 7 | Ravi | But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply? | QUIZ card held ~3 s, 3-2-1: "YOUR CALL · More cores: is a single reply faster? A) no B) yes · comment A or B" |
 | 8 | AI | On our laptop: one core, eleven and a half seconds. (beat) [1] Four cores: under four. [2] Each word's work gets split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's work split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
-| 9 | Ravi | Twenty-three orders? Still a minute and a half! [1] Do I buy a graphics card? | bubble "still ~1.5 minutes?!" |
+| 9 | Ravi | Twenty-three orders? Still almost a minute and a half! [1] Do I buy a graphics card? | bubble "23 orders = 83 s?!" |
 | 10 | AI | For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores. | a wall of graphics cards: "ChatGPT: runs on THEIR graphics cards · you don't need one to use it"; on [1] a gaming laptop GPU (RTX 5060): "3,328 cores", "8 GB memory", "phone CPU: 8 cores" (NVIDIA's spec page) |
 | 11 | Ravi | Sunny! Bring your gaming laptop! | the gaming laptop on the counter, "23 unread" falls to 0; small "illustration: we tested no graphics card" |
 | 12 | AI | For AI, count the workers, not their speed. | rule chip "FOR AI, COUNT THE WORKERS · CPU: a few fast cores · GPU: thousands at once" |
 | 13 | Ravi | Now the big brain! Not the squeezed copy, the full one! | bubble "FULL SIZE!" |
 | 14 | AI | Full size, it's fifteen GB. [1] The card holds eight. | "big brain, full size: 15 GB" pours into a jar "card memory: 8 GB"; on [1] it overflows |
 | 15 | Ravi | So? | |
-| 16 | AI | It has to fit in the card. [1] The rest goes back to the eight workers. (beat) [2] Typing... | the overflow runs down to "CPU: 8 workers"; on [1] "typing…" and "23" again; cut to frame 1 (loops) |
+| 16 | AI | It has to fit to be fast. [1] The rest goes back to the CPU's few workers. (beat) [2] Typing... | the 7 GB that doesn't fit slides into "CPU: a few workers"; a riser, then a boom on "Typing...", "typing…" and "23" again; cut to frame 1 (loops) |
 
 About 68 s. Tag on screen: "EP36 · AI From Scratch". Caption: EP37 tease (how the same brain shrank to 4.7 GB),
 "try a GPU free: Google Colab (limited)", phones' "AI chips" (NPUs) are small versions of the same idea, comment A or
@@ -93,8 +93,8 @@ ran together (now two sentences), "ONE reply" -> "Wondreply" (now "a single repl
 4. ఏఐ: ఎనిమిది మంది పనివాళ్ళు, నూట యాభై కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.
 5. రవి: దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో ర్యాక్ లెక్కపెట్టినట్టా?
 6. ఏఐ: అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.
-7. రవి: కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు. [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?
-8. ఏఐ: మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి.
+7. రవి: కానీ పది మంది కలిసినా ఒక్క బిల్లు త్వరగా అవ్వదు. (beat) [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?
+8. ఏఐ: మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. (beat) [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కల్ని కోర్లు పంచుకుంటాయి.
 9. రవి: ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?
 10. ఏఐ: చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.
 11. రవి: సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!
@@ -102,7 +102,7 @@ ran together (now two sentences), "ONE reply" -> "Wondreply" (now "a single repl
 13. రవి: ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!
 14. ఏఐ: ఫుల్ సైజ్ పదిహేను జీబీ. [1] కార్డ్ లో ఎనిమిదే పడతాయి.
 15. రవి: అయితే?
-16. ఏఐ: కార్డ్ లో పట్టాలి. [1] మిగతాది మళ్ళీ ఆ ఎనిమిది మంది పనివాళ్ళకే. [2] టైపింగ్...
+16. ఏఐ: వేగంగా కావాలంటే కార్డ్ లో పట్టాలి. [1] మిగతాది మళ్ళీ సీపీయూ లో కొద్దిమంది పనివాళ్ళకే. (beat) [2] టైపింగ్...
 
 ## Sound
 A hit and notification pings on frame 1; the bed builds under the problem; a lift into the workers insert; the quiz's

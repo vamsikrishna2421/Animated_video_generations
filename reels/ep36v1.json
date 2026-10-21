@@ -247,8 +247,8 @@
     {
      "who": "ravi",
      "file": "09_ravi.wav",
-     "text": "Twenty-three orders? Still a minute and a half! [1] Do I buy a graphics card?",
-     "show": "23 orders? Still a minute and a half! Do I buy a graphics card?",
+     "text": "Twenty-three orders? Still almost a minute and a half! [1] Do I buy a graphics card?",
+     "show": "23 orders? Still almost a minute and a half! Do I buy a graphics card?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
@@ -286,6 +286,11 @@
    "outro": true,
    "boost": 1.3,
    "rise": 1.5,
+   "swell": [
+    2,
+    1,
+    1.15
+   ],
    "drop_at": [
     [
      4,
@@ -377,12 +382,12 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "It has to fit in the card. [1] The rest goes back to the eight workers. <pause 0.6> [2] Typing...",
-     "show": "It has to fit in the card. The rest goes back to the eight workers. Typing...",
+     "text": "It has to fit to be fast. [1] The rest goes back to the CPU's few workers. <pause 0.6> [2] Typing...",
+     "show": "It has to fit to be fast. The rest goes back to the CPU's few workers. Typing...",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.16,
-     "tts": "It has to fit in the card. The rest goes back to the eight workers.",
+     "tts": "It has to fit to be fast. The rest goes back to the CPU's few workers.",
      "file2": "16b_ai.wav",
      "tts2": "Typing...",
      "pause": 0.6

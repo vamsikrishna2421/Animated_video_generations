@@ -25,10 +25,10 @@ LINES = {
     6: ("ai", "screen", "gpu", "Exactly. A GPU: the graphics card from games. [1] Thousands of small cores, all at once.",
         "అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి."),
     7: ("ravi", "ravi", "quiz", "But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply?",
-        "కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు. | [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?"),
+        "కానీ పది మంది కలిసినా ఒక్క బిల్లు త్వరగా అవ్వదు. | [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?"),   # "రాయలేరు" was heard "రాలేరు"
     8: ("ai", "screen", "test", "On our laptop: one core, eleven and a half seconds. | [1] Four cores: under four. [2] Each word's work gets split.",   # two takes: a real beat before the reveal
-        "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. | [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి."),
-    9: ("ravi", "ravi", "buy", "Twenty-three orders? Still a minute and a half! [1] Do I buy a graphics card?",
+        "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. | [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కల్ని కోర్లు పంచుకుంటాయి."),
+    9: ("ravi", "ravi", "buy", "Twenty-three orders? Still almost a minute and a half! [1] Do I buy a graphics card?",
         "ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?"),   # the 83 s said out loud (render review)
     10: ("ai", "screen", "card", "For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores.",
          "చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. | [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు."),
@@ -37,8 +37,8 @@ LINES = {
     13: ("ravi", "ravi", "big", "Now the big brain! Not the squeezed copy, the full one!", "ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!"),
     14: ("ai", "screen", "memory", "Full size, it's fifteen GB. [1] The card holds eight.", "ఫుల్ సైజ్ పదిహేను జీబీ. [1] కార్డ్ లో ఎనిమిదే పడతాయి."),
     15: ("ravi", "ravi", "so", "So?", "అయితే?"),
-    16: ("ai", "screen", "slow", "It has to fit in the card. [1] The rest goes back to the eight workers. | [2] Typing...",
-         "కార్డ్ లో పట్టాలి. [1] మిగతాది మళ్ళీ ఆ ఎనిమిది మంది పనివాళ్ళకే. [2] టైపింగ్..."),   # a line to repeat (render review)
+    16: ("ai", "screen", "slow", "It has to fit to be fast. [1] The rest goes back to the CPU's few workers. | [2] Typing...",
+         "వేగంగా కావాలంటే కార్డ్ లో పట్టాలి. [1] మిగతాది మళ్ళీ సీపీయూ లో కొద్దిమంది పనివాళ్ళకే. | [2] టైపింగ్..."),   # a line to repeat; "Typing..." after a beat
 }
 # English spoken forms: numbers and units in words, capitals out
 TTS_EN = {1: "Twenty-three orders waiting, and you're still typing a single reply?!",
@@ -48,7 +48,7 @@ TTS_EN = {1: "Twenty-three orders waiting, and you're still typing a single repl
           14: "Full size, it's fifteen gigabytes. [1] The card holds eight."}
 # captions with digits
 SHOW = {1: "23 orders waiting, and you're still typing a single reply?!", 4: "8 workers, a billion calculations. I need thousands.", 8: "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's work gets split.",
-        9: "23 orders? Still a minute and a half! Do I buy a graphics card?", 10: "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
+        9: "23 orders? Still almost a minute and a half! Do I buy a graphics card?", 10: "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
         14: "Full size, it's 15 GB. The card holds 8."}
 TEMPO_EN = {"ravi": 1.2, "ai": 1.16}
 TEMPO_TE = {"ravi": 1.2, "ai": 1.16}   # Telugu ran 78.9 s at 1.12 / 1.08
@@ -59,7 +59,7 @@ TEMPO_TE = {"ravi": 1.2, "ai": 1.16}   # Telugu ran 78.9 s at 1.12 / 1.08
 SCENES = [("g_a", (1, 2, 3), {"boost": 1.5, "tail": 0.1}),   # music 8-12 dB under the voice (it measured 13-15 here)
           ("g_b", (4, 5, 6, 7), {"lift": 0.8, "pre": 0.35, "boost": 1.35, "tail": 0.1}),
           ("g_c", (8, 9, 10, 11), {"pre": 0.3, "drop_cue": 1, "boost": 1.45, "tail": 0.1}),
-          ("g_d", (12, 13, 14, 15, 16), {"lift": 0.5, "pre": 0.3, "outro": True, "boost": 1.3, "rise": 1.5, "drop_at": [[4, 2]], "tail": 0.0})]   # the drop: before "Typing..."
+          ("g_d", (12, 13, 14, 15, 16), {"lift": 0.5, "pre": 0.3, "outro": True, "boost": 1.3, "rise": 1.5, "swell": [2, 1, 1.15], "drop_at": [[4, 2]], "tail": 0.0})]   # the drop: before "Typing..."
 GAP = {1: 0.2, 7: 3.2, 8: 0.5, 10: 0.3, 11: 0.4, 12: 0.6, 14: 0.25}   # 7: the quiz holds for its 3-2-1; 12: the rule card
 YT = {"g_a": "23 orders, one reply", "g_b": "Workers: CPU vs GPU", "g_c": "Our test: 1 vs 4 cores", "g_d": "Memory: the big brain"}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -87,6 +87,16 @@ def spec(lang="en"):
                 ln["tts"] = TTS_EN[n]
             if " | " in ln["text"]:   # two takes; the text keeps its cues, split where the second take starts
                 p1, p2 = ln["text"].split(" | ")
+                m2 = re.match(r"\[\d+\]", p2.strip())
+                if te and m2 and m2.group(0) in en:   # the caption breaks at the same cue in the English line
+                    a0 = MARK.sub("", en.split(m2.group(0))[0]).replace(" | ", " ").strip()
+                    b0 = MARK.sub("", m2.group(0).join(en.split(m2.group(0))[1:])).replace(" | ", " ").strip()
+                    if n not in SHOW:
+                        ln["show"] = f"{a0} <pause 0.3> {b0}"
+                    else:   # captions with digits: break after the sentence the first take ends on
+                        brk = {8: "11.5 seconds.", 10: "on theirs."}.get(n)
+                        if brk and brk in ln["show"]:
+                            ln["show"] = ln["show"].replace(brk, brk + " <pause 0.3>", 1)
                 pz = {8: 0.7, 16: 0.6}.get(n, 0.3)   # 8, 16: the music drops out in this beat, then the hit ("Four cores", "Typing...")
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})

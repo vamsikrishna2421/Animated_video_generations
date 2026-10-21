@@ -106,7 +106,7 @@ const gamingLaptop = (c: Ctx, k: number, f: number) => {
   c.restore();
 };
 // the card's memory as a jar (8 GB) and the full-size brain as a block drawn to scale (15 GB): `drop` lowers it in,
-// `spill` slides the part that doesn't fit (7 GB) off to the CPU's eight workers
+// `spill` slides the part that doesn't fit (7 GB) off to the CPU's few workers
 const JAR = { x: 400, bottom: 1250, h: 420, w: 340 };
 const fitScene = (c: Ctx, drop: number, spill: number, r: () => number) => {
   const { x, bottom, h, w } = JAR, bh = h * 15 / 8, bw = w - 40;
@@ -119,11 +119,12 @@ const fitScene = (c: Ctx, drop: number, spill: number, r: () => number) => {
   // the part that doesn't fit: above the rim, then sliding to the CPU box
   const above = Math.max(0, cut - yTop);
   if (above > 0) {
-    const sx = 330 * easeOut(spill), sy = 520 * easeOut(spill);
+    const sx = 370 * easeOut(spill), sy = 520 * easeOut(spill);
     c.save(); c.globalAlpha = 0.75; c.fillStyle = "#a855f7"; rrect(c, x - bw / 2 + sx, yTop + sy, bw, above, 18); c.fill(); c.restore();
     c.save(); c.setLineDash([14, 10]); c.strokeStyle = "#991b1b"; c.lineWidth = 5;
     c.strokeRect(x - bw / 2 + sx, yTop + sy, bw, above); c.restore();
-    if (spill < 0.5) { c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("big brain: 15 GB", x, yTop + 60); }
+    if (spill < 0.5) { c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("big brain", x, yTop + 56); c.fillText("15 GB", x, yTop + 104); }
+    else { c.font = SANS(44); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("7 GB", x + sx, yTop + sy + above / 2 + 14); }
   }
   stroke(c, [[x - w / 2, bottom - h], [x - w / 2, bottom], [x + w / 2, bottom], [x + w / 2, bottom - h]], INK, 7, r, { passes: 2 });
   c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText("card memory: 8 GB", x, bottom + 52);
@@ -186,9 +187,11 @@ const StGpu: React.FC<SP> = ({ s }) => {
       for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("f" + q)} at={at + 14 + q * 4} src="audio/sfx_pop.wav" vol={0.18} />);
     }
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
-    if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
+    if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("r")} at={cue(i, 1, 0.5) - 38} src="reel/sfx_riser.wav" vol={0.45} />,
+      <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "slow") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("o")} at={cue(i, 1, 0.35)} src="audio/gag_bonk.wav" vol={0.35} />,
-      <Sfx key={k("r")} at={cue(i, 2, 0.85) - 40} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_boom.wav" vol={0.6} />);
+      <Sfx key={k("r")} at={cue(i, 2, 0.85) - 40} src="reel/sfx_riser.wav" vol={0.5} />, <Sfx key={k("h")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_boom.wav" vol={0.9} />,
+      <Sfx key={k("z")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_buzz.wav" vol={0.3} />);
   });
   return (
     <>
@@ -245,9 +248,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
             if (f >= c1 + 16) tag(c, "3x faster", 760, 1080, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 16, c1 + 24));
             const c2 = cu(2, 0.8);
             if (f >= c1 + 16) tag(c, "quiz: B ✓", 300, 1080, 60, "#fef3c7", INK, 0.03, seg(f, c1 + 16, c1 + 24));
-            if (f >= c2 - 4) tag(c, "each word's work split 4 ways", W / 2, 1190, 54, "#e0e7ff", INK, 0.02, seg(f, c2 - 4, c2 + 6));
-            if (f >= c2 + 4) tag(c, "our 4-core laptop: 23 orders ≈ 83 s", W / 2, 1300, 54, "#fee2e2", "#991b1b", -0.02, seg(f, c2 + 4, c2 + 12));
-            c.font = SANS(34, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
+            if (f >= c2 - 4) tag(c, "our 4-core laptop: 23 orders ≈ 83 s", W / 2, 1250, 56, "#fee2e2", "#991b1b", -0.02, seg(f, c2 - 4, c2 + 6));
+            c.font = SANS(38, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
             c.fillText("EP35's medium brain · no graphics card", W / 2, 1410);
           }
           if (b.prop === "card") {
@@ -262,26 +264,26 @@ const StGpu: React.FC<SP> = ({ s }) => {
               tag(c, "3,328 cores", 330, 1000, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 - 4, c1 + 6));
               tag(c, "8 GB memory", 760, 1000, 68, "#ede9fe", "#4c1d95", 0.03, seg(f, c1 + 8, c1 + 18));
               tag(c, "phone CPU: 8 cores", W / 2, 1170, 64, "#e2e8f0", INK, 0.01, seg(f, c1 + 16, c1 + 24));
-              c.font = SANS(34, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("cores and memory: NVIDIA's spec page", W / 2, 1400);
+              c.font = SANS(38, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("cores and memory: NVIDIA's spec page", W / 2, 1400);
             }
           }
           if (b.prop === "memory") {
             const c1 = cu(1, 0.5);
             fitScene(c, seg(f, ln.from + 4, c1 - 6), 0, r);
-            if (f >= c1) tag(c, "7 GB too big for the card", 760, 560, 52, "#fee2e2", "#991b1b", 0.03, seg(f, c1, c1 + 8));
+            if (f >= c1) tag(c, "7 GB doesn't fit", 775, 640, 54, "#fee2e2", "#991b1b", 0.03, seg(f, c1, c1 + 8));
           }
           if (b.prop === "slow") {
             const c1 = cu(1, 0.35), c2 = cu(2, 0.85);
             tag(c, "MUST FIT IN CARD MEMORY", W / 2, 420, 60, "#0f172a", "#facc15", -0.01, seg(f, ln.from + 2, ln.from + 10));
-            c.fillStyle = "#fee2e2"; rrect(c, 600, 1150, 360, 300, 20); c.fill();
-            c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU: 8 workers", 780, 1130);
+            c.fillStyle = "#fee2e2"; rrect(c, 600, 955, 360, 420, 20); c.fill();
+            c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU: a few workers", 780, 935);
             fitScene(c, 1, seg(f, c1 - 4, c1 + 22), r);
             if (f >= c2 - 4) {
               const k = seg(f, c2 - 4, c2 + 6);
-              c.save(); c.globalAlpha = k; c.fillStyle = "#dcf8c6"; rrect(c, 160, 1340, 420, 90, 30); c.fill();
-              c.font = SANS(44, 600); c.fillStyle = "#166534"; c.textAlign = "center"; c.fillText("typing" + ".".repeat(1 + (Math.floor(f / 8) % 3)), 370, 1400);
-              c.beginPath(); c.arc(700, 1385, 56, 0, 7); c.fillStyle = "#dc2626"; c.fill();
-              c.font = SANS(54); c.fillStyle = "#fff"; c.fillText("23", 700, 1405); c.restore();
+              c.save(); c.globalAlpha = k; c.fillStyle = "#dcf8c6"; rrect(c, 140, 1340, 340, 90, 30); c.fill();
+              c.font = SANS(44, 600); c.fillStyle = "#166534"; c.textAlign = "center"; c.fillText("typing" + ".".repeat(1 + (Math.floor(f / 8) % 3)), 310, 1400);
+              c.beginPath(); c.arc(545, 1385, 52, 0, 7); c.fillStyle = "#dc2626"; c.fill();
+              c.font = SANS(50); c.fillStyle = "#fff"; c.fillText("23", 545, 1403); c.restore();
             }
           }
         } else {

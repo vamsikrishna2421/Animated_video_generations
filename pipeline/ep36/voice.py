@@ -28,12 +28,12 @@ LIGHT_EN = {2, 8, 10, 14}   # the AI's numbers through the lighter phone sound
 MUST = {"en": {1: [("twenty", "23"), ("three", "23"), ("orders", "order"), ("typing",), ("single",), ("reply",)], 2: [("billion",), ("multiplications", "multiplication")],
                3: [("eight", "8"), ("cores", "core")], 4: [("eight", "8"), ("calculations", "calculation"), ("thousands", "thousand")], 5: [("diwali",), ("stock",), ("count",), ("rack",)],
                6: [("graphics",), ("games", "game"), ("thousands", "thousand"), ("once",)], 7: [("helpers", "helper"), ("bill",), ("cores", "core"), ("single",), ("reply",)],
-               8: [("laptop",), ("eleven", "11", "11.5"), ("half",)], "8b": [("four", "4"), ("under",), ("work",), ("split",)], 9: [("twenty", "23"), ("minute",), ("half",), ("graphics",)],
+               8: [("laptop",), ("eleven", "11", "11.5"), ("half",)], "8b": [("four", "4"), ("under",), ("work",), ("split",)], 9: [("twenty", "23"), ("almost",), ("minute",), ("half",), ("graphics",)],
                10: [("chatgpt", "chat", "gpt"), ("theirs",), ("gaming",), ("three", "3000", "3,000")], 11: [("sunny",), ("laptop",)],
                12: [("workers", "worker"), ("speed",)], 13: [("brain",), ("squeezed", "squeeze"), ("full",)], 14: [("fifteen", "15"), ("eight", "8")],
-               15: [("so",)], 16: [("fit",), ("card",), ("eight", "8")], "16b": [("typing",)]},
+               15: [("so",)], 16: [("fit",), ("fast",), ("cpu", "c"), ("workers", "worker")], "16b": [("typing",)]},
         "te": {2: [("मल्टि", "मल्टी", "मल्ति")], 8: [("पदकों", "पदको", "पद्को", "11", "ग्यारह")], 10: [("मूडु", "मुडु", "3000")],
-               14: [("पदिहे", "पदहे", "15")]}}   # Telugu as the judge writes it (Devanagari)
+               14: [("पदिहे", "पदहे", "15")], "16b": [("टाइप", "ताइप", "टैप", "ताईप", "typ")]}}   # Telugu as the judge writes it (Devanagari)
 
 
 def heard(path, who, n, lang):
