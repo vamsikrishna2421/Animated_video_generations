@@ -240,6 +240,7 @@ const slamShot = (c: Ctx, W: number, f: number, t0: number, r: () => number, mod
   const slam = seg(f, t0, t0 + 5), shake = slam > 0 && slam < 1 ? 14 : f < t0 + 12 && slam >= 1 ? 8 : 0;
   c.save(); c.translate((r() - 0.5) * shake, (r() - 0.5) * shake);
   const fold = 1 - 0.86 * easeOut(slam);
+  c.save(); c.translate(540, 900); c.scale(0.88, 0.88); c.translate(-540, -760);   // below the stakes block
   c.save(); c.translate(0, 1210); c.scale(1, fold); c.translate(0, -1210);
   laptopScreen(c, W, f, r, mode, 0, 0);
   if (slam < 0.3) cursor(c, W - 200, 1104);
@@ -254,6 +255,7 @@ const slamShot = (c: Ctx, W: number, f: number, t0: number, r: () => number, mod
     const k = 1 - seg(f, t0 + 5, t0 + 16);
     [[-1, -0.3], [-1, 0.3], [1, -0.3], [1, 0.3], [0, -1]].forEach(([dx, dy]) => stroke(c, [[hx + dx * 110, hy + dy * 70], [hx + dx * 190, hy + dy * 130]], INK, 10, r, { passes: 1, alpha: k }));
   }
+  c.restore();
   c.restore();
   stakes(c, W, a, b);
   if (f >= t0 + 4) stamp(c, "STOP!", 540, 780, 180, COL.red, seg(f, t0 + 4, t0 + 10), r, -0.06);
@@ -281,7 +283,7 @@ const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], sr
     if (big) { c.font = SANS(110); c.fillStyle = GREEN; c.fillText(big, 0, 10); }
     c.font = SANS(big ? 46 : 54); c.fillStyle = INK;
     fact.forEach((t, q) => c.fillText(t, 0, (big ? 74 : -14) + q * (big ? 52 : 64)));
-    if (note) { c.font = SANS(32); c.fillStyle = "#166534"; c.fillText(note, 0, 128); }
+    if (note) { c.font = SANS(30); c.fillStyle = "#166534"; note.split("\n").forEach((t, q) => c.fillText(t, 0, 96 + q * 38)); }
     c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText(src, 0, 172);
   }
   c.restore();
@@ -379,7 +381,7 @@ const StOffice: React.FC<SP> = ({ s }) => {
             mythCard(c, W, 520, "\"Only me and the AI see it\"",
               n === 5 && f >= c1 ? ["Chats can train the AI.", "Some are read by real people."] : ["Chats can train the AI."],
               "sources: Google's Gemini privacy page · OpenAI help center", easeOut(m1), flip, undefined,
-              n === 5 && f >= c1 + 20 ? "Off switch: ChatGPT \"Improve the model\" · Gemini \"Keep Activity\"" : undefined);
+              n === 5 && f >= c1 + 20 ? "off switches: ChatGPT \"Improve the model\",\nGemini \"Keep Activity\"" : undefined);
           }
           const m2 = n === 6 ? seg(p, 0.3, 0.42) : n === 7 || n === 8 ? 1 : 0;
           if (m2 > 0) {

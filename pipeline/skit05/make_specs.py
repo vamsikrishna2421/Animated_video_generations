@@ -31,7 +31,7 @@ LINES = {
 TTS_EN = {}
 TE_SPLIT = {}   # Telugu lines voiced as two takes, joined (long Telugu lines babble or lose a half in one take)
 # line 7's caption breaks at the beat, so "up to three years" isn't on screen before it is said
-SHOW = {7: "If a person reviewed your chat, Google keeps it <pause 0.8> up to three years. Even after you delete it."}
+SHOW = {7: "If a person reviewed your chat, Google keeps it... up to three years. Even after you delete it."}   # captions break at sentence ends
 TE_SHOW = {}
 # Sound (CLAUDE.md arc): a slam on frame 1 with the shout; the bed builds under the argument; a riser and a boing into
 # each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; pops as the names

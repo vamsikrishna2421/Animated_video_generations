@@ -13,31 +13,36 @@
  "fps": 30,
  "musicDrops": [
   [
-   778,
-   802
+   789,
+   813
   ]
  ],
  "musicBoosts": [
   [
    0,
-   1023,
+   348,
    1.5
   ],
   [
-   1023,
-   1430,
+   348,
+   1043,
+   1.7
+  ],
+  [
+   1043,
+   1450,
    1.35
   ],
   [
-   1023,
-   1430,
+   1043,
+   1450,
    1.6,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1430,
+ "totalFrames": 1450,
  "music": "reel/skit05v1/score.wav",
  "scenes": [
   {
@@ -200,47 +205,42 @@
      "sub": null,
      "audio": "reel/skit05v1/line_03.wav",
      "from": 234,
-     "frames": 98,
+     "frames": 91,
      "words": [
       {
        "w": "Two",
-       "from": 234,
+       "from": 235,
        "to": 240
       },
       {
        "w": "hundred",
        "from": 240,
-       "to": 251
+       "to": 250
       },
       {
        "w": "phone",
-       "from": 251,
-       "to": 266
+       "from": 250,
+       "to": 265
       },
       {
        "w": "numbers...",
-       "from": 266,
+       "from": 265,
        "to": 289
       },
       {
        "w": "into",
        "from": 289,
-       "to": 296
+       "to": 295
       },
       {
        "w": "a",
-       "from": 296,
+       "from": 295,
        "to": 298
       },
       {
-       "w": "free",
-       "from": 298,
-       "to": 314
-      },
-      {
        "w": "chatbot?!",
-       "from": 314,
-       "to": 332
+       "from": 298,
+       "to": 319
       }
      ],
      "cues": {
@@ -296,7 +296,7 @@
     "hardCuts": true
    },
    "from": 348,
-   "frames": 675,
+   "frames": 695,
    "lines": [
     {
      "who": "arjun",
@@ -483,7 +483,7 @@
      "sub": null,
      "audio": "reel/skit05v1/line_07.wav",
      "from": 348,
-     "frames": 197,
+     "frames": 208,
      "words": [
       {
        "w": "If",
@@ -503,81 +503,81 @@
       {
        "w": "reviewed",
        "from": 371,
-       "to": 383
+       "to": 382
       },
       {
        "w": "your",
-       "from": 383,
-       "to": 389
+       "from": 382,
+       "to": 388
       },
       {
        "w": "chat,",
-       "from": 389,
-       "to": 401
+       "from": 388,
+       "to": 400
       },
       {
        "w": "Google",
-       "from": 401,
-       "to": 420
+       "from": 400,
+       "to": 419
       },
       {
        "w": "keeps",
-       "from": 420,
-       "to": 455
+       "from": 419,
+       "to": 434
       },
       {
-       "w": "it",
-       "from": 455,
-       "to": 463
+       "w": "it...",
+       "from": 434,
+       "to": 480
       },
       {
        "w": "up",
-       "from": 463,
-       "to": 472
+       "from": 480,
+       "to": 484
       },
       {
        "w": "to",
-       "from": 472,
-       "to": 476
+       "from": 484,
+       "to": 488
       },
       {
        "w": "three",
-       "from": 476,
-       "to": 483
+       "from": 488,
+       "to": 505
       },
       {
        "w": "years.",
-       "from": 483,
-       "to": 502
+       "from": 505,
+       "to": 513
       },
       {
        "w": "Even",
-       "from": 502,
-       "to": 508
-      },
-      {
-       "w": "after",
-       "from": 508,
+       "from": 513,
        "to": 519
       },
       {
-       "w": "you",
+       "w": "after",
        "from": 519,
-       "to": 524
+       "to": 531
+      },
+      {
+       "w": "you",
+       "from": 531,
+       "to": 535
       },
       {
        "w": "delete",
-       "from": 524,
-       "to": 533
+       "from": 535,
+       "to": 544
       },
       {
        "w": "it.",
-       "from": 533,
-       "to": 538
+       "from": 544,
+       "to": 549
       }
      ],
      "cues": {
-      "1": 454
+      "1": 465
      }
     },
     {
@@ -586,57 +586,57 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit05v1/line_08.wav",
-     "from": 563,
+     "from": 573,
      "frames": 98,
      "words": [
       {
        "w": "Three",
-       "from": 568,
-       "to": 580
+       "from": 578,
+       "to": 590
       },
       {
        "w": "years?!",
-       "from": 580,
-       "to": 609
-      },
-      {
-       "w": "So",
-       "from": 609,
-       "to": 615
-      },
-      {
-       "w": "I",
-       "from": 615,
+       "from": 590,
        "to": 619
       },
       {
-       "w": "can't",
+       "w": "So",
        "from": 619,
-       "to": 631
+       "to": 625
+      },
+      {
+       "w": "I",
+       "from": 625,
+       "to": 629
+      },
+      {
+       "w": "can't",
+       "from": 629,
+       "to": 641
       },
       {
        "w": "use",
-       "from": 631,
-       "to": 639
+       "from": 641,
+       "to": 649
       },
       {
        "w": "AI",
-       "from": 639,
-       "to": 645
+       "from": 649,
+       "to": 655
       },
       {
        "w": "at",
-       "from": 645,
-       "to": 651
+       "from": 655,
+       "to": 661
       },
       {
        "w": "all?",
-       "from": 651,
-       "to": 661
+       "from": 661,
+       "to": 671
       }
      ],
      "cues": {
-      "1": 609
+      "1": 619
      }
     }
    ]
@@ -660,7 +660,7 @@
      },
      {
       "who": "arjun",
-      "shot": "sneha",
+      "shot": "laptop",
       "prop": "loop",
       "n": 11
      }
@@ -675,7 +675,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1023,
+   "from": 1043,
    "frames": 407,
    "lines": [
     {
