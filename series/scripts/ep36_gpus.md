@@ -45,11 +45,11 @@ the reel claims no measured GPU speed.
 | 1 | Ravi | Twenty-three orders waiting, and you're still typing ONE reply?! | frame 1: Diwali lights, customers, the phone on the counter with WhatsApp "23 unread · typing…"; sticker "23 ORDERS WAITING. / THE AI IS STILL TYPING." |
 | 2 | AI | Every word I write [1] takes over a billion multiplications. | phone: the word "rice", a pile of × marks, a counter racing to "1,500,000,000 ×", "150 crore · for one word" |
 | 3 | Ravi | Then hurry up! This phone has eight cores! | tag "OCTA-CORE · 2.4 GHz" |
-| 4 | AI | Eight workers, a billion sums. [1] I need thousands. | 8 workers at desks, a progress bar crawling; on [1] "8 workers: way too few" |
+| 4 | AI | Eight workers, a billion calculations. [1] I need thousands. | 8 workers at desks, a progress bar crawling; on [1] "8 workers: way too few" |
 | 5 | Ravi | Like Diwali stock-taking? Every kid counting one rack? | bubble "every kid, one rack?" |
-| 6 | AI | Exactly. A GPU, the graphics card games use: [1] thousands of small cores, all at once. | "CPU: a few big cores" (8 workers) vs "GPU: thousands of small cores" (a grid of dots turning green at once on [1]); "all at once" |
+| 6 | AI | Exactly. A GPU: the graphics card from games. [1] Thousands of small cores, all at once. | "CPU: a few big cores" (8 workers) vs "GPU: thousands of small cores" (a grid of dots turning green at once on [1]); "all at once" |
 | 7 | Ravi | But ten helpers can't write one bill faster. [1] Can more cores speed up ONE reply? | QUIZ card held ~3 s, 3-2-1: "YOUR CALL · More cores: is ONE reply faster? A) no B) yes · comment A or B" |
-| 8 | AI | On our laptop: one core, eleven and a half seconds. [1] Four cores: under four. [2] Each word's sums get split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's sums split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
+| 8 | AI | On our laptop: one core, eleven and a half seconds. [1] Four cores: under four. [2] Each word's work gets split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's work split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
 | 9 | Ravi | Still almost a minute and a half! [1] Do I buy a graphics card? | bubble "still ~1.5 minutes?!" |
 | 10 | AI | For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores. | a wall of graphics cards: "ChatGPT: runs on THEIR graphics cards · you don't need one to use it"; on [1] a gaming laptop GPU (RTX 5060): "3,328 cores", "8 GB memory", "phone CPU: 8 cores" (NVIDIA's spec page) |
 | 11 | Ravi | Sunny! Bring your gaming laptop! | the gaming laptop on the counter, "23 unread" falls to 0; small "illustration: we tested no graphics card" |

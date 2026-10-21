@@ -1,0 +1,1244 @@
+{
+ "id": "ep36v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Why AI runs on GPUs",
+ "musicVol": [
+  0.4,
+  0.8
+ ],
+ "title": "The Diwali rush (EP36: GPUs and AI chips)",
+ "handle": "@ai_maastaaru",
+ "label": "EP36",
+ "fps": 30,
+ "musicDrops": [
+  [
+   1065,
+   1089
+  ],
+  [
+   2102,
+   2126
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   327,
+   1.1
+  ],
+  [
+   327,
+   1002,
+   1.2
+  ],
+  [
+   1002,
+   1657,
+   1.25
+  ],
+  [
+   1657,
+   2164,
+   1.2
+  ],
+  [
+   1657,
+   2164,
+   1.5,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 2164,
+ "music": "reel/ep36v1/score.wav",
+ "scenes": [
+  {
+   "id": "g_a",
+   "type": "sk_gpu",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "billion",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "box",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "23 orders, one reply",
+     "title": "23 orders, one reply",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 327,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_01.wav",
+     "from": 4,
+     "frames": 95,
+     "words": [
+      {
+       "w": "23",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "orders",
+       "from": 15,
+       "to": 23
+      },
+      {
+       "w": "waiting,",
+       "from": 23,
+       "to": 34
+      },
+      {
+       "w": "and",
+       "from": 34,
+       "to": 39
+      },
+      {
+       "w": "you're",
+       "from": 39,
+       "to": 55
+      },
+      {
+       "w": "still",
+       "from": 55,
+       "to": 62
+      },
+      {
+       "w": "typing",
+       "from": 62,
+       "to": 71
+      },
+      {
+       "w": "ONE",
+       "from": 71,
+       "to": 76
+      },
+      {
+       "w": "reply?!",
+       "from": 76,
+       "to": 85
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_02.wav",
+     "from": 106,
+     "frames": 105,
+     "words": [
+      {
+       "w": "Every",
+       "from": 108,
+       "to": 116
+      },
+      {
+       "w": "word",
+       "from": 116,
+       "to": 122
+      },
+      {
+       "w": "I",
+       "from": 122,
+       "to": 125
+      },
+      {
+       "w": "write",
+       "from": 125,
+       "to": 133
+      },
+      {
+       "w": "takes",
+       "from": 133,
+       "to": 140
+      },
+      {
+       "w": "over",
+       "from": 140,
+       "to": 159
+      },
+      {
+       "w": "a",
+       "from": 159,
+       "to": 161
+      },
+      {
+       "w": "billion",
+       "from": 161,
+       "to": 175
+      },
+      {
+       "w": "multiplications.",
+       "from": 175,
+       "to": 197
+      }
+     ],
+     "cues": {
+      "1": 133
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_03.wav",
+     "from": 216,
+     "frames": 89,
+     "words": [
+      {
+       "w": "Then",
+       "from": 222,
+       "to": 227
+      },
+      {
+       "w": "hurry",
+       "from": 227,
+       "to": 236
+      },
+      {
+       "w": "up!",
+       "from": 236,
+       "to": 261
+      },
+      {
+       "w": "This",
+       "from": 261,
+       "to": 265
+      },
+      {
+       "w": "phone",
+       "from": 265,
+       "to": 270
+      },
+      {
+       "w": "has",
+       "from": 270,
+       "to": 273
+      },
+      {
+       "w": "eight",
+       "from": 273,
+       "to": 282
+      },
+      {
+       "w": "cores!",
+       "from": 282,
+       "to": 292
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "g_b",
+   "type": "sk_gpu",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "workers",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "shelves",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "gpu",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Workers: CPU vs GPU",
+     "title": "Workers: CPU vs GPU",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 327,
+   "frames": 675,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_04.wav",
+     "from": 10,
+     "frames": 115,
+     "words": [
+      {
+       "w": "Eight",
+       "from": 11,
+       "to": 21
+      },
+      {
+       "w": "workers,",
+       "from": 21,
+       "to": 37
+      },
+      {
+       "w": "a",
+       "from": 37,
+       "to": 43
+      },
+      {
+       "w": "billion",
+       "from": 43,
+       "to": 51
+      },
+      {
+       "w": "calculations.",
+       "from": 51,
+       "to": 66
+      },
+      {
+       "w": "I",
+       "from": 66,
+       "to": 68
+      },
+      {
+       "w": "need",
+       "from": 68,
+       "to": 89
+      },
+      {
+       "w": "thousands.",
+       "from": 89,
+       "to": 106
+      }
+     ],
+     "cues": {
+      "1": 66
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_05.wav",
+     "from": 130,
+     "frames": 105,
+     "words": [
+      {
+       "w": "Like",
+       "from": 134,
+       "to": 139
+      },
+      {
+       "w": "Diwali",
+       "from": 139,
+       "to": 147
+      },
+      {
+       "w": "stock-taking?",
+       "from": 147,
+       "to": 167
+      },
+      {
+       "w": "Every",
+       "from": 167,
+       "to": 198
+      },
+      {
+       "w": "kid",
+       "from": 198,
+       "to": 202
+      },
+      {
+       "w": "counting",
+       "from": 202,
+       "to": 212
+      },
+      {
+       "w": "one",
+       "from": 212,
+       "to": 217
+      },
+      {
+       "w": "rack?",
+       "from": 217,
+       "to": 223
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_06.wav",
+     "from": 240,
+     "frames": 177,
+     "words": [
+      {
+       "w": "Exactly.",
+       "from": 241,
+       "to": 256
+      },
+      {
+       "w": "A",
+       "from": 256,
+       "to": 268
+      },
+      {
+       "w": "GPU:",
+       "from": 268,
+       "to": 274
+      },
+      {
+       "w": "the",
+       "from": 274,
+       "to": 279
+      },
+      {
+       "w": "graphics",
+       "from": 279,
+       "to": 298
+      },
+      {
+       "w": "card",
+       "from": 298,
+       "to": 304
+      },
+      {
+       "w": "from",
+       "from": 304,
+       "to": 314
+      },
+      {
+       "w": "games.",
+       "from": 314,
+       "to": 327
+      },
+      {
+       "w": "Thousands",
+       "from": 327,
+       "to": 357
+      },
+      {
+       "w": "of",
+       "from": 357,
+       "to": 361
+      },
+      {
+       "w": "small",
+       "from": 361,
+       "to": 373
+      },
+      {
+       "w": "cores,",
+       "from": 373,
+       "to": 382
+      },
+      {
+       "w": "all",
+       "from": 382,
+       "to": 396
+      },
+      {
+       "w": "at",
+       "from": 396,
+       "to": 400
+      },
+      {
+       "w": "once.",
+       "from": 400,
+       "to": 408
+      }
+     ],
+     "cues": {
+      "1": 328
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_07.wav",
+     "from": 423,
+     "frames": 145,
+     "words": [
+      {
+       "w": "But",
+       "from": 427,
+       "to": 432
+      },
+      {
+       "w": "ten",
+       "from": 432,
+       "to": 436
+      },
+      {
+       "w": "helpers",
+       "from": 436,
+       "to": 446
+      },
+      {
+       "w": "can't",
+       "from": 446,
+       "to": 453
+      },
+      {
+       "w": "write",
+       "from": 453,
+       "to": 461
+      },
+      {
+       "w": "one",
+       "from": 461,
+       "to": 465
+      },
+      {
+       "w": "bill",
+       "from": 465,
+       "to": 471
+      },
+      {
+       "w": "faster.",
+       "from": 471,
+       "to": 481
+      },
+      {
+       "w": "Can",
+       "from": 481,
+       "to": 510
+      },
+      {
+       "w": "more",
+       "from": 510,
+       "to": 520
+      },
+      {
+       "w": "cores",
+       "from": 520,
+       "to": 528
+      },
+      {
+       "w": "speed",
+       "from": 528,
+       "to": 535
+      },
+      {
+       "w": "up",
+       "from": 535,
+       "to": 539
+      },
+      {
+       "w": "ONE",
+       "from": 539,
+       "to": 543
+      },
+      {
+       "w": "reply?",
+       "from": 543,
+       "to": 552
+      }
+     ],
+     "cues": {
+      "1": 481
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_c",
+   "type": "sk_gpu",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "buy",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "card",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "sunny",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 1 vs 4 cores",
+     "title": "Our test: 1 vs 4 cores",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1002,
+   "frames": 655,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_08.wav",
+     "from": 9,
+     "frames": 197,
+     "words": [
+      {
+       "w": "On",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "our",
+       "from": 15,
+       "to": 20
+      },
+      {
+       "w": "laptop:",
+       "from": 20,
+       "to": 46
+      },
+      {
+       "w": "1",
+       "from": 46,
+       "to": 49
+      },
+      {
+       "w": "core,",
+       "from": 49,
+       "to": 56
+      },
+      {
+       "w": "11.5",
+       "from": 56,
+       "to": 71
+      },
+      {
+       "w": "seconds.",
+       "from": 71,
+       "to": 82
+      },
+      {
+       "w": "4",
+       "from": 82,
+       "to": 84
+      },
+      {
+       "w": "cores:",
+       "from": 84,
+       "to": 98
+      },
+      {
+       "w": "under",
+       "from": 98,
+       "to": 120
+      },
+      {
+       "w": "4.",
+       "from": 120,
+       "to": 124
+      },
+      {
+       "w": "Each",
+       "from": 124,
+       "to": 143
+      },
+      {
+       "w": "word's",
+       "from": 143,
+       "to": 162
+      },
+      {
+       "w": "work",
+       "from": 162,
+       "to": 168
+      },
+      {
+       "w": "gets",
+       "from": 168,
+       "to": 174
+      },
+      {
+       "w": "split.",
+       "from": 174,
+       "to": 199
+      }
+     ],
+     "cues": {
+      "1": 87,
+      "2": 144
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_09.wav",
+     "from": 221,
+     "frames": 97,
+     "words": [
+      {
+       "w": "Still",
+       "from": 227,
+       "to": 234
+      },
+      {
+       "w": "almost",
+       "from": 234,
+       "to": 242
+      },
+      {
+       "w": "1.5",
+       "from": 242,
+       "to": 246
+      },
+      {
+       "w": "minutes!",
+       "from": 246,
+       "to": 256
+      },
+      {
+       "w": "Do",
+       "from": 256,
+       "to": 259
+      },
+      {
+       "w": "I",
+       "from": 259,
+       "to": 277
+      },
+      {
+       "w": "buy",
+       "from": 277,
+       "to": 282
+      },
+      {
+       "w": "a",
+       "from": 282,
+       "to": 284
+      },
+      {
+       "w": "graphics",
+       "from": 284,
+       "to": 294
+      },
+      {
+       "w": "card?",
+       "from": 294,
+       "to": 304
+      }
+     ],
+     "cues": {
+      "1": 275
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_10.wav",
+     "from": 323,
+     "frames": 230,
+     "words": [
+      {
+       "w": "For",
+       "from": 326,
+       "to": 332
+      },
+      {
+       "w": "ChatGPT,",
+       "from": 332,
+       "to": 349
+      },
+      {
+       "w": "no.",
+       "from": 349,
+       "to": 355
+      },
+      {
+       "w": "That",
+       "from": 355,
+       "to": 370
+      },
+      {
+       "w": "runs",
+       "from": 370,
+       "to": 387
+      },
+      {
+       "w": "on",
+       "from": 387,
+       "to": 392
+      },
+      {
+       "w": "theirs.",
+       "from": 392,
+       "to": 404
+      },
+      {
+       "w": "For",
+       "from": 404,
+       "to": 425
+      },
+      {
+       "w": "me,",
+       "from": 425,
+       "to": 438
+      },
+      {
+       "w": "here:",
+       "from": 438,
+       "to": 456
+      },
+      {
+       "w": "a",
+       "from": 456,
+       "to": 459
+      },
+      {
+       "w": "gaming",
+       "from": 459,
+       "to": 473
+      },
+      {
+       "w": "laptop's",
+       "from": 473,
+       "to": 493
+      },
+      {
+       "w": "GPU,",
+       "from": 493,
+       "to": 509
+      },
+      {
+       "w": "over",
+       "from": 509,
+       "to": 521
+      },
+      {
+       "w": "3,000",
+       "from": 521,
+       "to": 530
+      },
+      {
+       "w": "cores.",
+       "from": 530,
+       "to": 540
+      }
+     ],
+     "cues": {
+      "1": 400
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_11.wav",
+     "from": 562,
+     "frames": 75,
+     "words": [
+      {
+       "w": "Sunny!",
+       "from": 566,
+       "to": 594
+      },
+      {
+       "w": "Bring",
+       "from": 594,
+       "to": 600
+      },
+      {
+       "w": "your",
+       "from": 600,
+       "to": 606
+      },
+      {
+       "w": "gaming",
+       "from": 606,
+       "to": 613
+      },
+      {
+       "w": "laptop!",
+       "from": 613,
+       "to": 621
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "g_d",
+   "type": "sk_gpu",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "big",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "memory",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "so",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "slow",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Memory: the big brain",
+     "title": "Memory: the big brain",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1657,
+   "frames": 507,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_12.wav",
+     "from": 9,
+     "frames": 86,
+     "words": [
+      {
+       "w": "For",
+       "from": 13,
+       "to": 18
+      },
+      {
+       "w": "AI,",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "count",
+       "from": 22,
+       "to": 28
+      },
+      {
+       "w": "the",
+       "from": 28,
+       "to": 38
+      },
+      {
+       "w": "workers,",
+       "from": 38,
+       "to": 52
+      },
+      {
+       "w": "not",
+       "from": 52,
+       "to": 56
+      },
+      {
+       "w": "their",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "w": "speed.",
+       "from": 72,
+       "to": 89
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_13.wav",
+     "from": 119,
+     "frames": 109,
+     "words": [
+      {
+       "w": "Now",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "the",
+       "from": 127,
+       "to": 131
+      },
+      {
+       "w": "big",
+       "from": 131,
+       "to": 135
+      },
+      {
+       "w": "brain!",
+       "from": 135,
+       "to": 166
+      },
+      {
+       "w": "Not",
+       "from": 166,
+       "to": 170
+      },
+      {
+       "w": "the",
+       "from": 170,
+       "to": 174
+      },
+      {
+       "w": "squeezed",
+       "from": 174,
+       "to": 184
+      },
+      {
+       "w": "copy,",
+       "from": 184,
+       "to": 195
+      },
+      {
+       "w": "the",
+       "from": 195,
+       "to": 203
+      },
+      {
+       "w": "full",
+       "from": 203,
+       "to": 209
+      },
+      {
+       "w": "one!",
+       "from": 209,
+       "to": 214
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_14.wav",
+     "from": 233,
+     "frames": 122,
+     "words": [
+      {
+       "w": "Full",
+       "from": 239,
+       "to": 249
+      },
+      {
+       "w": "size,",
+       "from": 249,
+       "to": 270
+      },
+      {
+       "w": "it's",
+       "from": 270,
+       "to": 281
+      },
+      {
+       "w": "15",
+       "from": 281,
+       "to": 285
+      },
+      {
+       "w": "GB.",
+       "from": 285,
+       "to": 291
+      },
+      {
+       "w": "The",
+       "from": 291,
+       "to": 312
+      },
+      {
+       "w": "card",
+       "from": 312,
+       "to": 318
+      },
+      {
+       "w": "holds",
+       "from": 318,
+       "to": 331
+      },
+      {
+       "w": "8.",
+       "from": 331,
+       "to": 335
+      }
+     ],
+     "cues": {
+      "1": 309
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep36v1/line_15.wav",
+     "from": 363,
+     "frames": 28,
+     "words": [
+      {
+       "w": "So?",
+       "from": 369,
+       "to": 376
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep36v1/line_16.wav",
+     "from": 396,
+     "frames": 89,
+     "words": [
+      {
+       "w": "So",
+       "from": 400,
+       "to": 403
+      },
+      {
+       "w": "the",
+       "from": 403,
+       "to": 407
+      },
+      {
+       "w": "rest",
+       "from": 407,
+       "to": 417
+      },
+      {
+       "w": "goes",
+       "from": 417,
+       "to": 426
+      },
+      {
+       "w": "back",
+       "from": 426,
+       "to": 431
+      },
+      {
+       "w": "to",
+       "from": 431,
+       "to": 434
+      },
+      {
+       "w": "the",
+       "from": 434,
+       "to": 443
+      },
+      {
+       "w": "few",
+       "from": 443,
+       "to": 447
+      },
+      {
+       "w": "workers.",
+       "from": 447,
+       "to": 469
+      },
+      {
+       "w": "Typing...",
+       "from": 469,
+       "to": 479
+      }
+     ],
+     "cues": {
+      "1": 469
+     }
+    }
+   ]
+  }
+ ]
+}

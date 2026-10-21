@@ -218,7 +218,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           if (b.prop === "workers") {
             for (let q = 0; q < 8; q++) worker(c, 200 + (q % 4) * 230, 520 + Math.floor(q / 4) * 230, 1.3, BLUE, f / 30, r);
             const c1 = cu(1, 0.5);
-            c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center"; c.fillText("1,500,000,000 sums", W / 2, 1030);
+            c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center"; c.fillText("1,500,000,000 calculations", W / 2, 1030);
             c.fillStyle = "#e2e8f0"; rrect(c, 150, 1080, W - 300, 60, 16); c.fill();
             c.fillStyle = BLUE; rrect(c, 150, 1080, 24 + 10 * seg(f, ln.from, endL), 60, 16); c.fill();
             if (f >= c1 - 4) tag(c, "8 workers: way too few", W / 2, 1260, 66, "#fee2e2", "#991b1b", -0.02, seg(f, c1 - 4, c1 + 6));
@@ -237,10 +237,10 @@ const StGpu: React.FC<SP> = ({ s }) => {
               ["4 cores", 3.6, GREEN, seg(f, c1 - 4, c1 + 14)]]);
             if (f >= c1 + 16) tag(c, "3x faster", 760, 1080, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 16, c1 + 24));
             const c2 = cu(2, 0.8);
-            if (f >= c2 - 4) tag(c, "each word's sums split 4 ways", W / 2, 1190, 54, "#e0e7ff", INK, 0.02, seg(f, c2 - 4, c2 + 6));
+            if (f >= c2 - 4) tag(c, "each word's work split 4 ways", W / 2, 1190, 54, "#e0e7ff", INK, 0.02, seg(f, c2 - 4, c2 + 6));
             if (f >= c2 + 14) tag(c, "23 orders × 3.6 s ≈ 83 s", W / 2, 1300, 62, "#fee2e2", "#991b1b", -0.02, seg(f, c2 + 14, c2 + 22));
             c.font = SANS(30, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
-            c.fillText("the same small AI (EP35's medium brain) · our laptop's CPU, no graphics card", W / 2, 1400);
+            c.fillText("the same small AI (EP35's medium brain)", W / 2, 1385); c.fillText("on our laptop's CPU · no graphics card", W / 2, 1425);
           }
           if (b.prop === "card") {
             const c1 = cu(1, 0.45);
@@ -304,7 +304,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           if (n === 9) bubble(c, 320, 560, "still ~1.5 minutes?!", 70, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (n === 11) {
             bubble(c, 300, 540, "Sunny! Laptop!", 72, seg(p, 0.02, 0.15), COL.yellow);
-            c.font = SANS(30, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("illustration: we tested no graphics card", W / 2, 1440);
+            tag(c, "illustration: we tested no graphics card", W / 2, 1110, 40, "rgba(255,255,255,0.92)", "#475569", 0, seg(p, 0.1, 0.2));
           }
           if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.35, 0.45)]);
           if (n === 13) bubble(c, 320, 560, "FULL SIZE!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");

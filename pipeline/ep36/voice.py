@@ -25,10 +25,10 @@ import ep33.voice_rec as vr  # noqa: E402
 
 LIGHT_EN = {2, 8, 10, 14}   # the AI's numbers through the lighter phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("twenty",), ("three", "23"), ("orders", "order"), ("typing",), ("reply",)], 2: [("billion",), ("multiplications", "multiplication")],
-               3: [("eight", "8"), ("cores", "core")], 4: [("eight", "8"), ("thousands", "thousand")], 5: [("diwali",), ("rack",)],
+MUST = {"en": {1: [("twenty", "23"), ("three", "23"), ("orders", "order"), ("typing",), ("reply",)], 2: [("billion",), ("multiplications", "multiplication")],
+               3: [("eight", "8"), ("cores", "core")], 4: [("eight", "8"), ("calculations", "calculation"), ("thousands", "thousand")], 5: [("diwali",), ("rack",)],
                6: [("graphics",), ("games", "game"), ("thousands", "thousand"), ("once",)], 7: [("helpers", "helper"), ("bill",), ("cores", "core"), ("reply",)],
-               8: [("laptop",), ("eleven", "11", "11.5"), ("half",), ("four", "4"), ("under",), ("split",)], 9: [("minute",), ("half",), ("graphics",)],
+               8: [("laptop",), ("eleven", "11", "11.5"), ("half",), ("four", "4"), ("under",), ("work",), ("split",)], 9: [("minute",), ("half",), ("graphics",)],
                10: [("chatgpt", "chat", "gpt"), ("theirs",), ("gaming",), ("three", "3000", "3,000")], 11: [("sunny",), ("laptop",)],
                12: [("workers", "worker"), ("speed",)], 13: [("brain",), ("squeezed", "squeeze"), ("full",)], 14: [("fifteen", "15"), ("eight", "8")],
                15: [("so",)], 16: [("workers", "worker"), ("typing",)]},
