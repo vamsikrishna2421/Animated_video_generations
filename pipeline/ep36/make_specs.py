@@ -51,7 +51,7 @@ SHOW = {1: "23 orders waiting, and you're still typing a single reply?!", 4: "8 
         9: "23 orders? Still a minute and a half! Do I buy a graphics card?", 10: "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
         14: "Full size, it's 15 GB. The card holds 8."}
 TEMPO_EN = {"ravi": 1.2, "ai": 1.16}
-TEMPO_TE = {"ravi": 1.12, "ai": 1.08}
+TEMPO_TE = {"ravi": 1.2, "ai": 1.16}   # Telugu ran 78.9 s at 1.12 / 1.08
 # Sound (CLAUDE.md arc): a hit and order pings in the first second; a lift into the workers insert; the quiz's 3-2-1
 # over the bed; the bed drops out before "Four cores: under four" with a hit; a success sting as the gaming laptop
 # clears the queue; a snap on the rule; a riser into the overflow and a hit on "Typing...", into the loop. Ramps
