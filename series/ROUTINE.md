@@ -268,3 +268,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   own `maxgap`.
 - Fish ran a three-sentence line together ("three minutes for one hub", which clashed with "three hours"): split
   such a line into two takes with " | " in make_specs (works for English as well as Telugu).
+- Fish mishears plain English words when a homophone exists (EP36: "a billion sums" -> "sons", "ONE reply" ->
+  "Wondreply", "stock-taking" -> "stock trading", "more cores" -> "more chorus"): pick words with no near twin
+  ("calculations", "a single reply", "stock count"), and re-roll a word you can't replace until the transcript is clean.
+- A label for where something lands sits above the landing spot, never under it (EP36: "CPU: 8 workers" vanished under
+  the sliding 7 GB block), and every label on a moving piece fits inside that piece.
+- The last reveal needs its own riser and hit, or the final quarter reads flat in the pack (EP36: a riser and boom into
+  the overflow, a bigger boom on "Typing...").
+- A one-word Telugu take on Parler ("టైపింగ్...") babbles on the first tries ("ఆయ్ పింట్", "పైపిం"): give it a MUST
+  entry so the judge retries, and split the English caption at the take boundary with "<pause 0.3>" in `show`.
