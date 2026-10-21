@@ -304,6 +304,9 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   (the voice dominates), so the arc comes from the hits, the gaps and a drop before the final hit:
   `drop_pre: [[line index, s before the line, length s]]` takes the bed out under the riser so the slam lands on
   silence (creative 05: the closing slam measured 1 dB under the opening one; both viewers heard "no build").
+  A last scene's `boost` lower than the one before dips the bed at the cut (1.35 after 1.7): carry the level, then
+  `rise`. Reading beats that land in the lofi bed's bar-end holes are near silence (-28 to -33 dB): `musicPad`
+  fills them (-23 dB).
 - The Telugu judge: a missed word must cost more than the length flag, or a take that loses the name ("Ajjun") beats a
   clean one 0.05 s over the limit, and voice.py deletes the losers (skit05 voice.py: 1.5 per missed word). Back up a
   kept take before a re-roll; widen MUST spellings from what the judge hears ("नाउटिस", "पट्टगालगे").

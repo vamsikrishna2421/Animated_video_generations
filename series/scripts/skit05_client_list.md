@@ -86,9 +86,10 @@ loop; the Telugu sounds natural, nothing rude. Both: the end didn't hit harder t
 slam 1 dB under the opening one, the quarters within 0.3 dB); "the 3 years is Gemini, what about ChatGPT?"; the
 office-account tag and the off switches went by while they read the subtitle. v3: line 1 says "సెండ్ చెయ్యకు", the same
 words as line 11, so the loop echoes exactly and a swallowed క can't turn "నొక్కకు" into "నొక్కు" (press it); line 10
-"పెట్టగలిగేదే" ("పెట్టేదే" read as "what is already on the board"); a 1 s beat after the rule (the tag and the chip read
-on their own, the subtitle gone before Sneha's laptop); longer beats after the off switches and "never pasted"
-(shorter, bigger); the bed drops out under a louder riser and the last slam is the biggest hit; the pinned comment
+"పెట్టగలిగేదే" ("పెట్టేదే" read as "what is already on the board"); a 0.8 s beat after the rule (the tag and the chip
+read on their own, the subtitle gone before Sneha's laptop); longer beats after the off switches and "never pasted"
+(shorter, bigger); the bed holds the middle's level into the last scene and rises, a pad fills its bar-end holes,
+it drops out under a louder riser and the last slam is the biggest hit; the pinned comment
 answers "does ChatGPT keep it 3 years?" (OpenAI: deleted chats are deleted within 30 days, with exceptions) and "no
 company AI account?".
 

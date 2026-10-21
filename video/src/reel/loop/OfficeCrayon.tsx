@@ -314,7 +314,7 @@ const StOffice: React.FC<SP> = ({ s }) => {
     const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
     if (b.shot === "laptop" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.25} />);
     // the first slam is a hit in the first second; the last one (the loop) is the biggest hit of the reel (render review)
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={0.85} />, <Sfx key={k("c")} at={5} src="audio/gag_bonk.wav" vol={0.75} />,
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={0.8} />, <Sfx key={k("c")} at={5} src="audio/gag_bonk.wav" vol={0.7} />,
       <Sfx key={k("d")} at={4} src="audio/sfx_whoosh.wav" vol={0.5} />);
     if (b.prop === "numbers") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.45) - 2} src="audio/sfx_pop.wav" vol={0.4} />);
     if (b.prop === "myth1" || b.prop === "myth2") sfx.push(<Sfx key={k("m")} at={at + Math.round(l.frames * 0.3)} src="audio/sfx_whoosh.wav" vol={0.32} />);
@@ -323,9 +323,9 @@ const StOffice: React.FC<SP> = ({ s }) => {
     if (b.prop === "shock") sfx.push(<Sfx key={k("o")} at={at + 2} src="audio/gag_boing.wav" vol={0.3} />);
     if (b.prop === "swap") { [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={at + 6 + q * 9} src="audio/sfx_tick.wav" vol={0.3} />)); sfx.push(<Sfx key={k("v")} at={cue(i, 1, 0.55)} src="audio/sfx_success.wav" vol={0.4} />); }
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 6)} src="audio/sfx_snap.wav" vol={0.4} />);
-    if (b.prop === "loop") sfx.push(<Sfx key={k("r")} at={at - 46} src="reel/sfx_riser.wav" vol={0.85} />, <Sfx key={k("w")} at={at - 12} src="audio/sfx_whoosh.wav" vol={0.45} />,
-      <Sfx key={k("a")} at={at - 9} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("e")} at={at - 5} src="reel/sfx_boom.wav" vol={0.45} />, <Sfx key={k("b")} at={at - 9} src="audio/sfx_snap.wav" vol={0.95} />,
-      <Sfx key={k("c")} at={at - 8} src="audio/gag_bonk.wav" vol={0.85} />);
+    if (b.prop === "loop") sfx.push(<Sfx key={k("r")} at={at - 42} src="reel/sfx_riser.wav" vol={0.85} />, <Sfx key={k("w")} at={at - 12} src="audio/sfx_whoosh.wav" vol={0.45} />,
+      <Sfx key={k("a")} at={at - 9} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("e")} at={at - 5} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("b")} at={at - 9} src="audio/sfx_snap.wav" vol={1.0} />,
+      <Sfx key={k("f")} at={at - 8} src="audio/sfx_snap.wav" vol={0.5} />, <Sfx key={k("c")} at={at - 8} src="audio/gag_bonk.wav" vol={0.95} />);
   });
   return (
     <>

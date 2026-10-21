@@ -39,13 +39,13 @@ TE_SHOW = {}
 # the bed out under it, the slam the biggest hit of the reel.
 SCENES = [("of_a", (1, 2, 3), {"pre": 0.35, "boost": 1.5, "tail": 0.1}),   # the slam lands before "Arjun"
           ("of_b", (4, 5, 6, 7, 8), {"lift": 0.5, "pre": 0.3, "boost": 1.7, "drop_at": [[3, "1"]], "tail": 0.1}),   # the bed sat 12-15 dB under the voice; it builds past the opening
-          ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.35, "rise": 1.6, "drop_pre": [[2, 0.3, 0.4]], "tail": 0.0})]   # the bed drops out under the riser, the last slam lands on silence
+          ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.7, "rise": 1.25, "drop_pre": [[2, 0.3, 0.3]], "tail": 0.0})]   # the bed carries on at the middle's level and rises (1.35 dipped 2 dB at the cut); it drops out under the riser, the last slam lands on silence
 # seconds after line n (default 0.16 EN / 0.24 TE): the fact cards' read, the neat table's read
-GAP = {1: 0.2, 5: 0.8, 7: 0.6, 9: 0.8, 10: 1.0}   # Telugu render review: the off switches, "never pasted" and the office-account tag went by unread
+GAP = {1: 0.2, 5: 0.8, 7: 0.6, 9: 0.8, 10: 0.8}   # Telugu render review: the off switches, "never pasted" and the office-account tag went by unread
 PAUSES = {"en": {7: {"1": 0.8}}, "te": {7: {"1": 0.8}}}   # render review: the 0.45 s beat was a blink   # the beat before "three years" (the drop sits in it)
 GAIN = {"lakshmi": 0.0, "arjun": 0.5, "sneha": 0.0}
-GAIN_LINE = {7: 1.0, 11: 1.0}
-GAIN_TE = {10: 0.7, 11: 0.7}   # Telugu: the rising bed sat 7.4 dB under the last two lines
+GAIN_LINE = {7: 1.0, 10: 0.4, 11: 1.0}   # 10: the rising bed sat 7.9 dB under the rule
+GAIN_TE = {10: 1.0, 11: 0.7}   # Telugu: the rising bed sat 7.4-7.8 dB under the last two lines
 TEMPO = {"en": 1.08, "te": 1.05}
 YT = {"of_a": "The client list", "of_b": "Myth vs fact", "of_c": "Fake rows, real list"}
 
@@ -56,7 +56,7 @@ def spec(lang):
     s = {"id": sid, "title": "The client list" + (" (Telugu audio)" if te else ""), "label": "SKIT",
          "banner": "The client list", "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15,
          "music": "lofi", "musicVol": [0.42, 0.82], "musicFade": 0.05, "endPad": 0.45, "captionMode": "phrase",
-         "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": False, "hardCuts": True, "beatSnap": True,
+         "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True, "beatSnap": True,
          "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500}
     if te:
         s["handle"] = "@ai_maastaaru_telugu"

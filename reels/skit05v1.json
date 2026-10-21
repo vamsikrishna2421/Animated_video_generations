@@ -27,7 +27,7 @@
    1.0
   ]
  ],
- "musicPad": false,
+ "musicPad": true,
  "hardCuts": true,
  "beatSnap": true,
  "hideTimerInHook": true,
@@ -207,13 +207,13 @@
    "tail": 0.0,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.35,
-   "rise": 1.6,
+   "boost": 1.7,
+   "rise": 1.25,
    "drop_pre": [
     [
      2,
      0.3,
-     0.4
+     0.3
     ]
    ],
    "data": {
@@ -259,7 +259,8 @@
      "text": "Paste only what you'd put up on the notice board.",
      "show": "Paste only what you'd put up on the notice board.",
      "maxgap": 0.25,
-     "gap": 1.0
+     "gap": 0.8,
+     "gain_db": 0.4
     },
     {
      "who": "arjun",
