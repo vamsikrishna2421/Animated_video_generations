@@ -76,7 +76,7 @@
      "who": "ravi",
      "file": "01_ravi.wav",
      "text": "ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!",
-     "show": "23 orders waiting, and you're still typing ONE reply?!",
+     "show": "23 orders waiting, and you're still typing a single reply?!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.12,
@@ -108,7 +108,7 @@
    "id": "g_b",
    "type": "sk_gpu",
    "tail": 0.1,
-   "lift": 0.5,
+   "lift": 0.8,
    "pre": 0.35,
    "boost": 1.2,
    "data": {
@@ -150,8 +150,8 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "ఎనిమిది మంది పనివాళ్ళు, వంద కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.",
-     "show": "Eight workers, a billion calculations. I need thousands.",
+     "text": "ఎనిమిది మంది పనివాళ్ళు, నూట యాభై కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.",
+     "show": "8 workers, a billion calculations. I need thousands.",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.08,
@@ -161,7 +161,7 @@
      "who": "ravi",
      "file": "05_ravi.wav",
      "text": "దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో ర్యాక్ లెక్కపెట్టినట్టా?",
-     "show": "Like Diwali stock-taking? Every kid counting one rack?",
+     "show": "Like my Diwali stock count? Every kid counting one rack?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12,
@@ -181,9 +181,9 @@
      "who": "ravi",
      "file": "07_ravi.wav",
      "text": "కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు. <pause 0.3> [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?",
-     "show": "But ten helpers can't write one bill faster. Can more cores speed up ONE reply?",
+     "show": "But ten helpers can't write one bill faster. Can more cores speed up a single reply?",
      "maxgap": 0.28,
-     "gap": 3.4,
+     "gap": 3.2,
      "tempo": 1.12,
      "tts": "కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు.",
      "file2": "07b_ravi.wav",
@@ -239,7 +239,7 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. <pause 0.3> [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి.",
+     "text": "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. <pause 0.7> [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి.",
      "show": "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's work gets split.",
      "maxgap": 0.28,
      "gap": 0.5,
@@ -247,14 +247,14 @@
      "tts": "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు.",
      "file2": "08b_ai.wav",
      "tts2": "నాలుగు కోర్లు: నాలుగు లోపే. ప్రతి పదం లెక్కలు పంచుకుంటాయి.",
-     "pause": 0.3,
+     "pause": 0.7,
      "gain_db": 0.5
     },
     {
      "who": "ravi",
      "file": "09_ravi.wav",
-     "text": "ఇంకా దాదాపు నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?",
-     "show": "Still almost 1.5 minutes! Do I buy a graphics card?",
+     "text": "ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?",
+     "show": "23 orders? Still a minute and a half! Do I buy a graphics card?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12,
@@ -293,12 +293,12 @@
    "lift": 0.5,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.45,
    "rise": 1.5,
    "drop_at": [
     [
      4,
-     1
+     2
     ]
    ],
    "data": {
@@ -349,7 +349,7 @@
      "text": "ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం.",
      "show": "For AI, count the workers, not their speed.",
      "maxgap": 0.28,
-     "gap": 0.8,
+     "gap": 0.6,
      "tempo": 1.08,
      "gain_db": -1.0
     },
@@ -386,8 +386,8 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "అయితే మిగతాది మళ్ళీ ఆ కొద్దిమంది పనివాళ్ళకే. [1] టైపింగ్...",
-     "show": "So the rest goes back to the few workers. Typing...",
+     "text": "కార్డ్ లో పట్టాలి. [1] మిగతాది మళ్ళీ ఆ ఎనిమిది మంది పనివాళ్ళకే. [2] టైపింగ్...",
+     "show": "It has to fit in the card. The rest goes back to the eight workers. Typing...",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.08

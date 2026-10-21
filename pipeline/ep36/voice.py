@@ -25,13 +25,13 @@ import ep33.voice_rec as vr  # noqa: E402
 
 LIGHT_EN = {2, 8, 10, 14}   # the AI's numbers through the lighter phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("twenty", "23"), ("three", "23"), ("orders", "order"), ("typing",), ("reply",)], 2: [("billion",), ("multiplications", "multiplication")],
-               3: [("eight", "8"), ("cores", "core")], 4: [("eight", "8"), ("calculations", "calculation"), ("thousands", "thousand")], 5: [("diwali",), ("rack",)],
-               6: [("graphics",), ("games", "game"), ("thousands", "thousand"), ("once",)], 7: [("helpers", "helper"), ("bill",), ("cores", "core"), ("reply",)],
-               8: [("laptop",), ("eleven", "11", "11.5"), ("half",), ("four", "4"), ("under",), ("work",), ("split",)], 9: [("minute",), ("half",), ("graphics",)],
+MUST = {"en": {1: [("twenty", "23"), ("three", "23"), ("orders", "order"), ("typing",), ("single",), ("reply",)], 2: [("billion",), ("multiplications", "multiplication")],
+               3: [("eight", "8"), ("cores", "core")], 4: [("eight", "8"), ("calculations", "calculation"), ("thousands", "thousand")], 5: [("diwali",), ("stock",), ("count",), ("rack",)],
+               6: [("graphics",), ("games", "game"), ("thousands", "thousand"), ("once",)], 7: [("helpers", "helper"), ("bill",), ("cores", "core"), ("single",), ("reply",)],
+               8: [("laptop",), ("eleven", "11", "11.5"), ("half",)], "8b": [("four", "4"), ("under",), ("work",), ("split",)], 9: [("twenty", "23"), ("minute",), ("half",), ("graphics",)],
                10: [("chatgpt", "chat", "gpt"), ("theirs",), ("gaming",), ("three", "3000", "3,000")], 11: [("sunny",), ("laptop",)],
                12: [("workers", "worker"), ("speed",)], 13: [("brain",), ("squeezed", "squeeze"), ("full",)], 14: [("fifteen", "15"), ("eight", "8")],
-               15: [("so",)], 16: [("workers", "worker"), ("typing",)]},
+               15: [("so",)], 16: [("fit",), ("card",), ("eight", "8")], "16b": [("typing",)]},
         "te": {2: [("मल्टि", "मल्टी", "मल्ति")], 8: [("पदकों", "पदको", "पद्को", "11", "ग्यारह")], 10: [("मूडु", "मुडु", "3000")],
                14: [("पदिहे", "पदहे", "15")]}}   # Telugu as the judge writes it (Devanagari)
 
@@ -70,7 +70,8 @@ def main(lang, only, keep=False):
             if only and n not in only:
                 continue
             parts = [(line.get("tts") or line["text"], line["file"])] + ([(line["tts2"], line["file2"])] if line.get("file2") else [])
-            for raw, fname in parts:
+            for pk, (raw, fname) in enumerate(parts):
+                mk = n if pk == 0 else f"{n}b"   # the second take of a two-take line has its own MUST entry
                 text = re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", raw)).strip()
                 fish = lang == "en" and who == "ai"
                 voice = "fish:narrator" if fish else VOICE_EN[("en", who)] if lang == "en" else VOICE_TE[who]
@@ -78,7 +79,7 @@ def main(lang, only, keep=False):
                 cached = sorted(takes.glob(f"{key}_*.wav"))
                 best = (None, cached[0]) if cached and (keep or not only) else None   # --keep: a part whose text is unchanged keeps its take
                 if best:
-                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, n)[2]}", flush=True)
+                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, mk)[2]}", flush=True)
                 for k in range(0 if best else 4):
                     tmp = takes / f"{key}_{k}.wav"
                     try:
@@ -90,7 +91,7 @@ def main(lang, only, keep=False):
                         print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
                         continue
                     trim(tmp)
-                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, n)
+                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, mk)
                     print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
                     if best is None or (best[0] is not None and score > best[0]):
                         best = (score, tmp)

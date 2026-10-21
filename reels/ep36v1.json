@@ -72,12 +72,12 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "Twenty-three orders waiting, and you're still typing one reply?!",
-     "show": "23 orders waiting, and you're still typing ONE reply?!",
+     "text": "Twenty-three orders waiting, and you're still typing a single reply?!",
+     "show": "23 orders waiting, and you're still typing a single reply?!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.2,
-     "tts": "Twenty-three orders waiting, and you're still typing one reply?!",
+     "tts": "Twenty-three orders waiting, and you're still typing a single reply?!",
      "gain_db": 1.5
     },
     {
@@ -87,7 +87,7 @@
      "show": "Every word I write takes over a billion multiplications.",
      "maxgap": 0.28,
      "gap": 0.16,
-     "tempo": 1.12,
+     "tempo": 1.16,
      "gain_db": -1.0
     },
     {
@@ -106,7 +106,7 @@
    "id": "g_b",
    "type": "sk_gpu",
    "tail": 0.1,
-   "lift": 0.5,
+   "lift": 0.8,
    "pre": 0.35,
    "boost": 1.2,
    "data": {
@@ -148,17 +148,17 @@
      "who": "ai",
      "file": "04_ai.wav",
      "text": "Eight workers, a billion calculations. [1] I need thousands.",
-     "show": "Eight workers, a billion calculations. I need thousands.",
+     "show": "8 workers, a billion calculations. I need thousands.",
      "maxgap": 0.28,
      "gap": 0.16,
-     "tempo": 1.12,
+     "tempo": 1.16,
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "05_ravi.wav",
-     "text": "Like Diwali stock-taking? Every kid counting one rack?",
-     "show": "Like Diwali stock-taking? Every kid counting one rack?",
+     "text": "Like my Diwali stock count? Every kid counting one rack?",
+     "show": "Like my Diwali stock count? Every kid counting one rack?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
@@ -171,19 +171,19 @@
      "show": "Exactly. A GPU: the graphics card from games. Thousands of small cores, all at once.",
      "maxgap": 0.28,
      "gap": 0.16,
-     "tempo": 1.12,
+     "tempo": 1.16,
      "tts": "Exactly. A G P U: the graphics card from games. [1] Thousands of small cores, all at once.",
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "But ten helpers can't write one bill faster. [1] Can more cores speed up one reply?",
-     "show": "But ten helpers can't write one bill faster. Can more cores speed up ONE reply?",
+     "text": "But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply?",
+     "show": "But ten helpers can't write one bill faster. Can more cores speed up a single reply?",
      "maxgap": 0.28,
-     "gap": 3.4,
+     "gap": 3.2,
      "tempo": 1.2,
-     "tts": "But ten helpers can't write one bill faster. [1] Can more cores speed up one reply?",
+     "tts": "But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply?",
      "gain_db": 1.5
     }
    ]
@@ -233,18 +233,22 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "On our laptop: one core, eleven and a half seconds. [1] Four cores: under four. [2] Each word's work gets split.",
+     "text": "On our laptop: one core, eleven and a half seconds. <pause 0.7> [1] Four cores: under four. [2] Each word's work gets split.",
      "show": "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's work gets split.",
      "maxgap": 0.28,
      "gap": 0.5,
-     "tempo": 1.12,
+     "tempo": 1.16,
+     "tts": "On our laptop: one core, eleven and a half seconds.",
+     "file2": "08b_ai.wav",
+     "tts2": "Four cores: under four. Each word's work gets split.",
+     "pause": 0.7,
      "gain_db": 0.5
     },
     {
      "who": "ravi",
      "file": "09_ravi.wav",
-     "text": "Still almost a minute and a half! [1] Do I buy a graphics card?",
-     "show": "Still almost 1.5 minutes! Do I buy a graphics card?",
+     "text": "Twenty-three orders? Still a minute and a half! [1] Do I buy a graphics card?",
+     "show": "23 orders? Still a minute and a half! Do I buy a graphics card?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
@@ -257,7 +261,7 @@
      "show": "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
      "maxgap": 0.28,
      "gap": 0.3,
-     "tempo": 1.12,
+     "tempo": 1.16,
      "tts": "For Chat G P T, no. That runs on theirs. [1] For me, here: a gaming laptop's G P U, over three thousand cores.",
      "gain_db": -1.0
     },
@@ -280,12 +284,12 @@
    "lift": 0.5,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.45,
    "rise": 1.5,
    "drop_at": [
     [
      4,
-     1
+     2
     ]
    ],
    "data": {
@@ -335,8 +339,8 @@
      "text": "For AI, count the workers, not their speed.",
      "show": "For AI, count the workers, not their speed.",
      "maxgap": 0.28,
-     "gap": 0.8,
-     "tempo": 1.12,
+     "gap": 0.6,
+     "tempo": 1.16,
      "gain_db": -1.0
     },
     {
@@ -356,7 +360,7 @@
      "show": "Full size, it's 15 GB. The card holds 8.",
      "maxgap": 0.28,
      "gap": 0.25,
-     "tempo": 1.12,
+     "tempo": 1.16,
      "tts": "Full size, it's fifteen gigabytes. [1] The card holds eight.",
      "gain_db": -1.0
     },
@@ -373,11 +377,15 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "So the rest goes back to the few workers. [1] Typing...",
-     "show": "So the rest goes back to the few workers. Typing...",
+     "text": "It has to fit in the card. [1] The rest goes back to the eight workers. <pause 0.6> [2] Typing...",
+     "show": "It has to fit in the card. The rest goes back to the eight workers. Typing...",
      "maxgap": 0.28,
      "gap": 0.16,
-     "tempo": 1.12
+     "tempo": 1.16,
+     "tts": "It has to fit in the card. The rest goes back to the eight workers.",
+     "file2": "16b_ai.wav",
+     "tts2": "Typing...",
+     "pause": 0.6
     }
    ]
   }
