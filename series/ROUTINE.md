@@ -277,3 +277,11 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the overflow, a bigger boom on "Typing...").
 - A one-word Telugu take on Parler ("టైపింగ్...") babbles on the first tries ("ఆయ్ పింట్", "పైపిం"): give it a MUST
   entry so the judge retries, and split the English caption at the take boundary with "<pause 0.3>" in `show`.
+- Parler voices each sentence of a take on its own, and one sentence can come out 11 dB under the other (EP36's
+  Telugu line 16; the pack's voice-activity check didn't even count it as speech): `level()` in pipeline/ep36/voice.py
+  evens every take per sentence; copy it into new voice scripts.
+- The moment the episode is about needs its own beat: a pause, a big visual, a hit and a spoken reaction (EP36: the GPU
+  clearing the queue was a small badge nobody mentioned until Ravi's "Done already?!").
+- A loop ending still has to answer "so do I need it?": put the answer on screen before the last gag (EP36: three of
+  four viewers read the ending as "the GPU failed" until the card "medium brain, 1.1 GB: fits ✓ · big brain, 15 GB:
+  doesn't fit").

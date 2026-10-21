@@ -7,7 +7,7 @@ Why AI Needs a Graphics Card (GPU): 1 Core vs 4 Cores, Tested | AI From Scratch 
 === DESCRIPTION ===
 Diwali evening at Ravi anna's shop: 23 WhatsApp orders waiting, and the shop AI is still typing the first reply. Every word an AI writes is over a billion small multiplications. A CPU has a few fast cores; a graphics card (GPU) has thousands of small ones working at once: a gaming laptop's RTX 5060 has 3,328 cores and 8 GB of memory (NVIDIA's spec page).
 
-Our real test, the same small AI writing the same reply on our laptop's CPU: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s. More cores make even one reply faster, because each word's work is split between them; 23 orders still take about 83 s. And the brain has to fit in the card's memory: the big brain at full size is about 15 GB, an 8 GB card can't hold it, and the rest runs on the CPU again.
+Our real test, the same small AI writing the same reply on our laptop's CPU: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s. More cores make even one reply faster, because each word's work is split between them; 23 orders still take about 83 s. And the brain has to fit in the card's memory: the medium brain we tested is a 1.1 GB file and fits easily, but the big brain at full size is about 15 GB, an 8 GB card can't hold it, and the rest runs on the CPU again.
 
 What it means for you: ChatGPT and the rest run on the companies' own graphics cards and AI chips, so you don't need one to use them. To run AI on your own machine, check the graphics card and its memory (GB), not the CPU's GHz. No card? Google Colab is free to use, with limited, not guaranteed GPU time.
 
@@ -26,7 +26,7 @@ AI ki Graphics Card (GPU) Enduku? 1 Core vs 4 Cores Test | AI From Scratch Ep 36
 === DESCRIPTION ===
 Deepavali saayantram Ravi anna shop lo 23 WhatsApp orders wait chestunnaayi, shop AI inka modati reply type chestondi. AI raase prati padaaniki vanda kotlaku paiga chinna multiplications. CPU lo konni fast cores; graphics card (GPU) lo velaki velu chinna cores okesaari pani chestaayi: gaming laptop RTX 5060 lo 3,328 cores, 8 GB memory (NVIDIA spec page).
 
-Maa real test, ade chinna AI ade reply ni maa laptop CPU meeda: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s. Ekkuva cores tho okka reply kooda twaraga vastundi; 23 orders ki inka sumaaru 83 s. Brain card memory lo pattaali: pedda brain full size 15 GB, 8 GB card lo pattadu, migataadi malli CPU meeda.
+Maa real test, ade chinna AI ade reply ni maa laptop CPU meeda: 1 core 11.5 s, 2 cores 6.3 s, 4 cores 3.6 s. Ekkuva cores tho okka reply kooda twaraga vastundi; 23 orders ki inka sumaaru 83 s. Brain card memory lo pattaali: memu test chesina medium brain 1.1 GB, easy ga pattutundi; pedda brain full size 15 GB, 8 GB card lo pattadu, migataadi malli CPU meeda.
 
 Meeku: ChatGPT laantivi companies cards meeda nadustaayi, vaadadaniki meeku card akkarledu. Mee machine meeda AI kaavaalante graphics card, daani memory (GB) choodandi. Card leda? Google Colab free (GPU time limited, guarantee ledu).
 Test vivaraalu, sources: English description lo unnaayi.

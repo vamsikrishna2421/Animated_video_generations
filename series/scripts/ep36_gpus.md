@@ -49,10 +49,10 @@ the reel claims no measured GPU speed.
 | 5 | Ravi | Like my Diwali stock count? Every kid counting one rack? | bubble "every kid, one rack?" |
 | 6 | AI | Exactly. A GPU: the graphics card from games. [1] Thousands of small cores, all at once. | "CPU: a few big cores" (8 workers) vs "GPU: thousands of small cores" (a grid of dots turning green at once on [1]); "all at once" |
 | 7 | Ravi | But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply? | QUIZ card held ~3 s, 3-2-1: "YOUR CALL · More cores: is a single reply faster? A) no B) yes · comment A or B" |
-| 8 | AI | On our laptop: one core, eleven and a half seconds. (beat) [1] Four cores: under four. [2] Each word's work gets split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's work split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
+| 8 | AI | On our laptop: one core, eleven and a half seconds. (beat) [1] Four cores: under four seconds. [2] Each word's work gets split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's work split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
 | 9 | Ravi | Twenty-three orders? Still almost a minute and a half! [1] Do I buy a graphics card? | bubble "23 orders = 83 s?!" |
 | 10 | AI | For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores. | a wall of graphics cards: "ChatGPT: runs on THEIR graphics cards · you don't need one to use it"; on [1] a gaming laptop GPU (RTX 5060): "3,328 cores", "8 GB memory", "phone CPU: 8 cores" (NVIDIA's spec page) |
-| 11 | Ravi | Sunny! Bring your gaming laptop! | the gaming laptop on the counter, "23 unread" falls to 0; small "illustration: we tested no graphics card" |
+| 11 | Ravi | Sunny! Bring your gaming laptop! (beat) [1] Done already?! | the gaming laptop on the counter; in the beat a big counter runs 23 to 0 with pops and a hit at zero, "Done?!"; "illustration · we didn't test a GPU" |
 | 12 | AI | For AI, count the workers, not their speed. | rule chip "FOR AI, COUNT THE WORKERS · CPU: a few fast cores · GPU: thousands at once" |
 | 13 | Ravi | Now the big brain! Not the squeezed copy, the full one! | bubble "FULL SIZE!" |
 | 14 | AI | Full size, it's fifteen GB. [1] The card holds eight. | "big brain, full size: 15 GB" pours into a jar "card memory: 8 GB"; on [1] it overflows |
@@ -86,18 +86,31 @@ out before "Four cores: under four"; louder quiz ticks and a riser; "quiz: B ✓
 ran together (now two sentences), "ONE reply" -> "Wondreply" (now "a single reply"), "stock-taking" -> "stock trading"
 (now "stock count"), "more cores" -> "more chorus" (re-rolled until clean). English 75 s, Telugu 74 s.
 
+Render review round 3 (English, two viewers) and the Telugu render (two viewers): all four liked the stock count, the
+quiz and the 15 GB block not fitting; three of four read the ending as "the GPU failed" and still asked "so do I need a
+GPU?", and both English viewers said the GPU's win at 0:55 was a tiny badge nobody mentions. v4: Ravi gasps "Done
+already?!" after a beat in which a big counter runs the queue from 23 to 0 with a hit; "illustration · we didn't test a
+GPU"; the ending card answers the question ("MUST FIT IN CARD MEMORY · medium brain, 1.1 GB: fits ✓ · big brain, 15 GB:
+doesn't fit"); "under four seconds" (both languages: "under four what?"); notes for the squeezed copy (4.7 GB, EP35)
+and card memory (not storage); Telugu says 150 crore like the screen and line 4 ("వంద కోట్లకు పైగా" was a second number);
+"ఒక్కో పదం లెక్కల్ని కోర్లన్నీ పంచుకుంటాయి" (spoken, not written). Sound: the music measured 12.6-14.6 dB under Ravi
+and 9.4-10.9 dB under the AI, so the bed went up about 1 dB and Ravi down 1 dB (now 8-12.6 dB); a crack on top of each
+boom (phone speakers lose the low end); a harder hit on frame 1; the quiz countdown as a tick-tock with a riser; a hit
+on the rule chip. A Telugu take had its second sentence 11 dB under the first (line 16; lines 2, 4 and 10 by 5-8 dB):
+Parler voices each sentence on its own, so voice.py now levels every take per sentence. English 79 s.
+
 ## Script (Telugu; English on-screen text), v2
 1. రవి: ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!
-2. ఏఐ: నేను రాసే ప్రతి పదానికి [1] వంద కోట్లకు పైగా మల్టిప్లికేషన్లు.
+2. ఏఐ: నేను రాసే ప్రతి పదానికి [1] నూట యాభై కోట్ల మల్టిప్లికేషన్లు.
 3. రవి: అయితే త్వరగా చెయ్! ఈ ఫోన్ లో ఎనిమిది కోర్లు ఉన్నాయి!
 4. ఏఐ: ఎనిమిది మంది పనివాళ్ళు, నూట యాభై కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.
 5. రవి: దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో ర్యాక్ లెక్కపెట్టినట్టా?
 6. ఏఐ: అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.
 7. రవి: కానీ పది మంది కలిసినా ఒక్క బిల్లు త్వరగా అవ్వదు. (beat) [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?
-8. ఏఐ: మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. (beat) [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కల్ని కోర్లు పంచుకుంటాయి.
+8. ఏఐ: మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. (beat) [1] నాలుగు కోర్లు: నాలుగు సెకన్ల లోపే. [2] ఒక్కో పదం లెక్కల్ని కోర్లన్నీ పంచుకుంటాయి.
 9. రవి: ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?
-10. ఏఐ: చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.
-11. రవి: సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!
+10. ఏఐ: చాట్ జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.
+11. రవి: సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా! (beat) [1] అప్పుడే అయిపోయిందా?!
 12. ఏఐ: ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం.
 13. రవి: ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!
 14. ఏఐ: ఫుల్ సైజ్ పదిహేను జీబీ. [1] కార్డ్ లో ఎనిమిదే పడతాయి.

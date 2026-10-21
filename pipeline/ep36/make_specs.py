@@ -16,7 +16,7 @@ LINES = {
     1: ("ravi", "wide", "hook", "Twenty-three orders waiting, and you're still typing a single reply?!",   # "ONE reply" was heard "Wondreply"
         "ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!"),
     2: ("ai", "screen", "billion", "Every word I write [1] takes over a billion multiplications.",
-        "నేను రాసే ప్రతి పదానికి [1] వంద కోట్లకు పైగా మల్టిప్లికేషన్లు."),
+        "నేను రాసే ప్రతి పదానికి [1] నూట యాభై కోట్ల మల్టిప్లికేషన్లు."),   # one number with the screen and line 4 (render review)
     3: ("ravi", "ravi", "box", "Then hurry up! This phone has eight cores!", "అయితే త్వరగా చెయ్! ఈ ఫోన్ లో ఎనిమిది కోర్లు ఉన్నాయి!"),
     4: ("ai", "screen", "workers", "Eight workers, a billion calculations. [1] I need thousands.",   # "sums" was heard "sons"
         "ఎనిమిది మంది పనివాళ్ళు, నూట యాభై కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి."),   # the counter says 150 crore
@@ -27,11 +27,11 @@ LINES = {
     7: ("ravi", "ravi", "quiz", "But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply?",
         "కానీ పది మంది కలిసినా ఒక్క బిల్లు త్వరగా అవ్వదు. | [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?"),   # "రాయలేరు" was heard "రాలేరు"
     8: ("ai", "screen", "test", "On our laptop: one core, eleven and a half seconds. | [1] Four cores: under four seconds. [2] Each word's work gets split.",   # two takes: a real beat before the reveal
-        "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. | [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కల్ని కోర్లు పంచుకుంటాయి."),
+        "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. | [1] నాలుగు కోర్లు: నాలుగు సెకన్ల లోపే. [2] ఒక్కో పదం లెక్కల్ని కోర్లన్నీ పంచుకుంటాయి."),
     9: ("ravi", "ravi", "buy", "Twenty-three orders? Still almost a minute and a half! [1] Do I buy a graphics card?",
         "ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?"),   # the 83 s said out loud (render review)
     10: ("ai", "screen", "card", "For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores.",
-         "చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. | [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు."),
+         "చాట్ జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. | [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు."),
     11: ("ravi", "wide", "sunny", "Sunny! Bring your gaming laptop! | [1] Done already?!", "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా! | [1] అప్పుడే అయిపోయిందా?!"),   # the queue empties in the beat
     12: ("ai", "wide", "rule", "For AI, count the workers, not their speed.", "ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం."),
     13: ("ravi", "ravi", "big", "Now the big brain! Not the squeezed copy, the full one!", "ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!"),
@@ -47,6 +47,7 @@ TTS_EN = {1: "Twenty-three orders waiting, and you're still typing a single repl
           10: "For Chat G P T, no. That runs on theirs. [1] For me, here: a gaming laptop's G P U, over three thousand cores.",
           14: "Full size, it's fifteen gigabytes. [1] The card holds eight."}
 # captions with digits
+SHOW_TE = {2: "Every word I write takes 150 crore multiplications.", 4: "8 workers, 150 crore calculations. I need thousands."}
 SHOW = {1: "23 orders waiting, and you're still typing a single reply?!", 4: "8 workers, a billion calculations. I need thousands.", 8: "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4 seconds. Each word's work gets split.",
         9: "23 orders? Still almost a minute and a half! Do I buy a graphics card?", 10: "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
         14: "Full size, it's 15 GB. The card holds 8."}
@@ -81,7 +82,7 @@ def spec(lang="en"):
         for n in ns:
             who, shot, prop, en, tel = LINES[n]
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else TTS_EN.get(n, en),
-                  "show": SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()), "maxgap": 0.28, "gap": GAP.get(n, 0.16),
+                  "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()), "maxgap": 0.28, "gap": GAP.get(n, 0.16),
                   "tempo": (TEMPO_TE if te else TEMPO_EN)[who]}
             if not te and n in TTS_EN:
                 ln["tts"] = TTS_EN[n]

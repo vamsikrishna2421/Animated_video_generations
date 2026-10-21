@@ -178,8 +178,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
       [0, 1, 2, 3, 4].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={cue(i, 1, 0.5) + q * 3} src="audio/sfx_pop.wav" vol={0.2} />));
     }
     if (b.prop === "quiz") {
-      [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={nx - 100 + q * 30} src="audio/sfx_tick.wav" vol={0.65} />));
-      sfx.push(<Sfx key={k("r")} at={nx - 48} src="reel/sfx_riser.wav" vol={0.3} />);
+      [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={nx - 100 + q * 15} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
+      sfx.push(<Sfx key={k("r")} at={nx - 60} src="reel/sfx_riser.wav" vol={0.45} />);
     }
     if (b.prop === "test") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.5) - 4} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) + 20} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "card") sfx.push(<Sfx key={k("c")} at={at + 8} src="audio/sfx_snap.wav" vol={0.3} />);
@@ -189,7 +189,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
       sfx.push(<Sfx key={k("h")} at={z} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("c")} at={z} src="audio/sfx_snap.wav" vol={0.5} />,
         <Sfx key={k("s")} at={z + 2} src="audio/sfx_success.wav" vol={0.4} />);
     }
-    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.45} />, <Sfx key={k("h")} at={at + 2} src="reel/sfx_boom.wav" vol={0.55} />, <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("r")} at={cue(i, 1, 0.5) - 38} src="reel/sfx_riser.wav" vol={0.45} />,
       <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("k")} at={cue(i, 1, 0.5) - 2} src="audio/sfx_snap.wav" vol={0.5} />,
       <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
@@ -279,6 +279,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
           if (b.prop === "slow") {
             const c1 = cu(1, 0.35), c2 = cu(2, 0.85);
             tag(c, "MUST FIT IN CARD MEMORY", W / 2, 420, 60, "#0f172a", "#facc15", -0.01, seg(f, ln.from + 2, ln.from + 10));
+            if (f >= c1 + 18) tag(c, "medium brain, 1.1 GB: fits ✓", W / 2, 540, 54, "#dcfce7", "#166534", 0.01, seg(f, c1 + 18, c1 + 24));
+            if (f >= c1 + 26) tag(c, "big brain, 15 GB: doesn't fit", W / 2, 640, 54, "#fee2e2", "#991b1b", -0.01, seg(f, c1 + 26, c1 + 32));
             c.fillStyle = "#fee2e2"; rrect(c, 600, 955, 360, 420, 20); c.fill();
             c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU: a few workers", 780, 935);
             fitScene(c, 1, seg(f, c1 - 4, c1 + 22), r);
@@ -315,7 +317,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           // screen-space props
           if (n === 1) headline(c, W, "23 ORDERS WAITING.", "THE AI IS STILL TYPING.", 1);
           if (n === 3) tag(c, "OCTA-CORE · 2.4 GHz", 300, 520, 56, "#e0e7ff", INK, -0.04, seg(p, 0.1, 0.25));
-          if (n === 5) bubble(c, 320, 560, "every kid, one rack?", 66, seg(p, 0.05, 0.2), COL.yellow);
+          if (n === 5) bubble(c, 330, 560, "every kid, one rack?", 76, seg(p, 0.05, 0.2), COL.yellow);
           if (n === 7) bubble(c, 320, 560, "a single reply?", 76, seg(p, 0.05, 0.2), COL.yellow);
           if (n === 9) bubble(c, 320, 560, "23 orders = 83 s?!", 72, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (n === 11) {
@@ -331,7 +333,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
               c.restore();
               tag(c, left === 0 ? "0 waiting" : "orders waiting", 800, 735, 46, left === 0 ? "#dcfce7" : "#fff", left === 0 ? "#166534" : INK, 0.02, k0);
             }
-            tag(c, "illustration · we didn't test a GPU", W / 2, 1110, 44, "rgba(255,255,255,0.95)", "#334155", 0, seg(p, 0.1, 0.2));
+            tag(c, "illustration · we didn't test a GPU", W / 2, 1110, 50, "rgba(255,255,255,0.95)", "#334155", 0, seg(p, 0.1, 0.2));
           }
           if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.35, 0.45)]);
           if (n === 13) {
