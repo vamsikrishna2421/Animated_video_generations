@@ -306,7 +306,10 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   silence (creative 05: the closing slam measured 1 dB under the opening one; both viewers heard "no build").
   A last scene's `boost` lower than the one before dips the bed at the cut (1.35 after 1.7): carry the level, then
   `rise`. Reading beats that land in the lofi bed's bar-end holes are near silence (-28 to -33 dB): `musicPad`
-  fills them (-23 dB).
+  fills them (-23 dB), and `musicGapGain: 3` raises the bed itself in the gaps (the player's volume tops out at 1, so
+  without it a pause sits no louder than the bed under speech; -20 dB, 8 dB under the voice).
+- A line whose words are already on screen (a rule chip) gets `nocap` (no subtitle): chip + subtitle + tag read as
+  three text blocks and the tag went unread. Put the answer to "and if my company has none?" on screen with the rule.
 - The Telugu judge: a missed word must cost more than the length flag, or a take that loses the name ("Ajjun") beats a
   clean one 0.05 s over the limit, and voice.py deletes the losers (skit05 voice.py: 1.5 per missed word). Back up a
   kept take before a re-roll; widen MUST spellings from what the judge hears ("नाउटिस", "पट्टगालगे").

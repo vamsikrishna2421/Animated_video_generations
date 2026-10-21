@@ -93,6 +93,12 @@ it drops out under a louder riser and the last slam is the biggest hit; the pinn
 answers "does ChatGPT keep it 3 years?" (OpenAI: deleted chats are deleted within 30 days, with exceptions) and "no
 company AI account?".
 
+Second render review (both versions, two viewers): no fix before posting; both: the ending now hits harder than the
+start (quiet, riser, a bigger bang), the Telugu loop repeats word for word, nothing rude. Both tripped on the small
+curly company-account tag, and both wanted more music in the pauses. v4: the tag is a bold block, "AT WORK: USE THE
+COMPANY'S AI ACCOUNT / NO COMPANY ACCOUNT? FAKE ROWS ONLY"; no subtitle under the rule chip (it shows the same words);
+the bed sits 3 dB higher in the pauses.
+
 ## Sound
 A slam (boom + snap) on frame 1 with the shout; the bed builds under the argument; a stamp and a lift into each MYTH
 card, a ding on each FACT flip; the bed drops out right before "three years" with a hit on it; ticks as the fake

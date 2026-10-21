@@ -33,6 +33,7 @@ TE_SPLIT = {}   # Telugu lines voiced as two takes, joined (long Telugu lines ba
 # line 7's caption breaks at the beat, so "up to three years" isn't on screen before it is said
 SHOW = {7: "If a person reviewed your chat, Google keeps it... up to three years. Even after you delete it."}   # captions break at sentence ends
 TE_SHOW = {}
+NOCAP = {10}   # the rule chip shows the line's words; a subtitle under it made three text blocks (second render review)
 # Sound (CLAUDE.md arc): a slam on frame 1 with the shout; the bed builds under the argument; a riser and a boing into
 # each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; ticks as the fake
 # rows go in and a success sting on the formulas; a snap on the rule; a riser into the second slam,
@@ -57,7 +58,8 @@ def spec(lang):
          "banner": "The client list", "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15,
          "music": "lofi", "musicVol": [0.42, 0.82], "musicFade": 0.05, "endPad": 0.45, "captionMode": "phrase",
          "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True, "beatSnap": True,
-         "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500}
+         "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,
+         "musicGapGain": 3.0}   # second render review: the pauses sat 11-13 dB under the voice ("empty on a phone")
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
     scenes = []
@@ -75,6 +77,8 @@ def spec(lang):
                 ln.update({"tts": TE_SPLIT[n][0], "file2": f"{n:02d}b_{who}.wav", "tts2": TE_SPLIT[n][1], "pause": 0.3})
             if n in PAUSES[lang]:
                 ln["pauses"] = PAUSES[lang][n]
+            if n in NOCAP:
+                ln["nocap"] = True
             g = GAIN[who] + GAIN_LINE.get(n, 0) + (GAIN_TE.get(n, 0) if te else 0)
             if g:
                 ln["gain_db"] = g

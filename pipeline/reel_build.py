@@ -556,6 +556,7 @@ def main(spec_path: Path) -> None:
                 "audio": f"reel/{rid}/line_{n:02d}.wav", "from": round((t - s_from) * FPS), "frames": round(dur * FPS),
                 "words": [{"w": w, "from": round((t - s_from + s) * FPS), "to": round((t - s_from + e) * FPS)} for w, s, e in words],
                 "cues": {str(k): round((t - s_from + v) * FPS) for k, v in cues.items()},
+                **({"nocap": True} if line.get("nocap") else {}),   # no subtitle (the screen already shows the same words)
             })
             t += dur + line.get("gap", GAP)
         t += sc.get("tail", 0.25)
@@ -631,6 +632,18 @@ def main(spec_path: Path) -> None:
            else score(total, starts, drops))
     for f0, gdb, q in spec.get("musicEQ", []):   # e.g. [[260, -4, 0.9]]: carve the bed where it masks the voice on phones
         bed = peak_eq(bed, f0, gdb, q)
+    if spec.get("musicGapGain"):   # dB: the bed itself louder where nobody talks (the player's volume tops out at 1, so a gap
+        talk = np.zeros(len(bed))  # could sit no louder than the bed under speech); 4-frame ramps, soft-clipped in the gaps
+        for sc in scenes:
+            for ln in sc["lines"]:
+                a0 = int((sc["from"] + ln["from"] - 2) / FPS * MSR)
+                talk[max(0, a0):max(0, int((sc["from"] + ln["from"] + ln["frames"] + 3) / FPS * MSR))] = 1
+        w = max(1, int(4 / FPS * MSR))
+        cs = np.concatenate([[0], np.cumsum(talk)])
+        k = (cs[np.minimum(np.arange(len(talk)) + w // 2, len(talk))] - cs[np.maximum(np.arange(len(talk)) - w // 2, 0)]) / w
+        gap = (1 - np.clip(k, 0, 1))[:, None] if bed.ndim > 1 else 1 - np.clip(k, 0, 1)
+        lin = bed * 10 ** (float(spec["musicGapGain"]) * gap / 20)
+        bed = lin * (1 - gap) + 0.98 * np.tanh(lin / 0.98) * gap
     if spec.get("musicEndGain"):   # [start fraction, dB]: the bed itself swells into the ending (the player's volume tops out at 1)
         f0, gdb = spec["musicEndGain"]
         g = np.ones(len(bed))

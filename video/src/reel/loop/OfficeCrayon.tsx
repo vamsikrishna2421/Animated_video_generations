@@ -292,6 +292,15 @@ const mythCard = (c: Ctx, W: number, y: number, myth: string, fact: string[], sr
   }
   c.restore();
 };
+// the work answer above the rule (second render review: the curly tag went unread, and "my company has no AI account?")
+const workChip = (c: Ctx, W: number, k: number) => {
+  if (k <= 0) return;
+  c.save(); c.globalAlpha = k; c.translate(W / 2, 1150); c.rotate(0.01); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
+  c.fillStyle = "#075985"; rrect(c, -470, -70, 940, 140, 22); c.fill();
+  c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("AT WORK: USE THE COMPANY'S AI ACCOUNT", 0, -12);
+  c.fillStyle = "#bae6fd"; c.fillText("NO COMPANY ACCOUNT? FAKE ROWS ONLY", 0, 42);
+  c.restore();
+};
 // the rule, as a chip above the captions (line 10 to the end)
 const rule = (c: Ctx, W: number, k: number) => {
   if (k <= 0) return;
@@ -396,7 +405,7 @@ const StOffice: React.FC<SP> = ({ s }) => {
             mythCard(c, W, 520, "\"Delete it and it's gone\"", ["Gemini chats a person reviewed:", "kept, even after you delete"],
               "Google's Gemini privacy page, Oct 2026", easeOut(m2) * (n === 8 ? 1 - seg(p, 0.7, 0.95) : 1), flip, "UP TO 3 YEARS");
           }
-          if (n === 10) { rule(c, W, seg(p, 0.05, 0.18)); tag(c, "At work? Use the company's AI account", W / 2, 1190, 54, "#e0f2fe", "#075985", -0.02, seg(p, 0.1, 0.2)); }
+          if (n === 10) { rule(c, W, seg(p, 0.05, 0.18)); workChip(c, W, seg(p, 0.12, 0.24)); }
         }
       }} />
     </>

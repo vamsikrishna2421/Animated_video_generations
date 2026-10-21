@@ -52,7 +52,7 @@ const cl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const outline = "0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000, 0 8px 30px rgba(0,0,0,0.7)";
 
 type Word = { w: string; from: number; to: number };
-type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number> };
+type Line = { who: string; name: string; color: string; sub?: string | null; audio: string; from: number; frames: number; words: Word[]; cues: Record<string, number>; nocap?: boolean };
 type Scene = { id: string; type: string; data: any; from: number; frames: number; lines: Line[] };
 // Opt-in music arc: tl.musicLift = gain reached at the end (rises over the last ~28% into the CTA), plus a hit in the first second.
 // tl.musicDrops = [from, to, gain?] frame windows where the bed drops out just before a key number (gain 0.12), or ducks under a line.
@@ -666,7 +666,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   const f = useCurrentFrame();
   const classic = useContext(LookCtx) === "classic";
   const l = lineAt(s, f);
-  if (!l) return null;
+  if (!l || l.nocap) return null;   // nocap: the screen already shows the line's words (a rule chip)
   // "phrase" mode (translated captions, e.g. English captions over a Telugu voice): whole phrases, no per-word
   // highlight, because the caption's word order does not follow the spoken word order.
   const phrase = s.data.captionMode === "phrase";
