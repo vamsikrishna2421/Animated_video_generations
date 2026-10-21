@@ -1,0 +1,60 @@
+{
+ "model": "Qwen/Qwen2.5-1.5B-Instruct-GGUF (qwen2.5-1.5b-instruct-q4_k_m.gguf)",
+ "machine": "x86_64, 4 CPU cores, no graphics card",
+ "decoding": "greedy, max 80 tokens, context reset before every run, median of 3",
+ "system": "You are the WhatsApp assistant of a small grocery shop (a kirana shop in Hyderabad). Reply to the customer politely in simple English: confirm each item and say it will be delivered within 30 minutes. No prices.",
+ "order": "Anna, please send 2 kg rice, 1 litre sunflower oil, 6 eggs and 1 packet of tea powder to flat 302.",
+ "rows": [
+  {
+   "cores": 1,
+   "prompt_tokens": 91,
+   "reply_tokens": 55,
+   "reply_words": 38,
+   "read_prompt_s": 3.23,
+   "whole_reply_s": 11.46,
+   "writing_words_per_s": 4.61,
+   "runs_whole_reply_s": [
+    11.59,
+    11.29,
+    11.46
+   ],
+   "reply": "Sure, I'll confirm each item and deliver it within 30 minutes. Here's what you ordered:\n\n- 2 kg rice\n- 1 litre sunflower oil\n- 6 eggs\n- 1 packet of tea powder\n\nThank you for your order!",
+   "speedup_vs_1_core": 1.0,
+   "read_speedup_vs_1_core": 1.0
+  },
+  {
+   "cores": 2,
+   "prompt_tokens": 91,
+   "reply_tokens": 55,
+   "reply_words": 38,
+   "read_prompt_s": 1.64,
+   "whole_reply_s": 6.34,
+   "writing_words_per_s": 8.08,
+   "runs_whole_reply_s": [
+    6.4,
+    6.12,
+    6.34
+   ],
+   "reply": "Sure, I'll confirm each item and deliver it within 30 minutes. Here's what you ordered:\n\n- 2 kg rice\n- 1 litre sunflower oil\n- 6 eggs\n- 1 packet of tea powder\n\nThank you for your order!",
+   "speedup_vs_1_core": 1.81,
+   "read_speedup_vs_1_core": 1.97
+  },
+  {
+   "cores": 4,
+   "prompt_tokens": 91,
+   "reply_tokens": 55,
+   "reply_words": 38,
+   "read_prompt_s": 0.92,
+   "whole_reply_s": 3.64,
+   "writing_words_per_s": 13.98,
+   "runs_whole_reply_s": [
+    3.64,
+    3.7,
+    3.58
+   ],
+   "reply": "Sure, I'll confirm each item and deliver it within 30 minutes. Here's what you ordered:\n\n- 2 kg rice\n- 1 litre sunflower oil\n- 6 eggs\n- 1 packet of tea powder\n\nThank you for your order!",
+   "speedup_vs_1_core": 3.15,
+   "read_speedup_vs_1_core": 3.51
+  }
+ ]
+}
