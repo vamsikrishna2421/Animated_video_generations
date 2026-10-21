@@ -128,7 +128,7 @@ const fitScene = (c: Ctx, drop: number, spill: number, r: () => number, note = f
   }
   stroke(c, [[x - w / 2, bottom - h], [x - w / 2, bottom], [x + w / 2, bottom], [x + w / 2, bottom - h]], INK, 7, r, { passes: 2 });
   c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText("card memory: 8 GB", x, bottom + 52);
-  if (note) { c.font = SANS(34, 600); c.fillStyle = "#64748b"; c.fillText("(the card's own memory, not storage)", x + 40, bottom + 100); }
+  if (note) { c.font = SANS(40); c.fillStyle = "#334155"; c.fillText("(not your phone's storage)", x, bottom + 104); }
 };
 const bars = (c: Ctx, y0: number, rows: [string, number, string, number][]) => {   // [label, seconds, colour, k]
   rows.forEach(([lab, sec, col, k], i) => {
@@ -226,7 +226,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
               const x = 140 + rr() * (W - 280), y = 1240 - Math.pow(rr(), 0.6) * 560;
               c.font = SANS(24 + Math.floor(rr() * 18)); c.fillStyle = ["#334155", BLUE, ORANGE][q % 3]; c.fillText("×", x, y);
             }
-            const v = Math.round(1.5e9 * easeOut(k));
+            const v = Math.round(1.5e9 * easeOut(seg(f, cu(1, 0.3) - 6, endL - 25)));
             c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 140, 1280, W - 280, 150, 24); c.fill();
             c.font = SANS(64); c.fillStyle = "#facc15"; c.fillText(v.toLocaleString("en-US") + " ×", W / 2, 1362);
             c.font = SANS(34, 600); c.fillStyle = "#e2e8f0"; c.fillText("150 crore · for one word", W / 2, 1410);
@@ -253,7 +253,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
               ["4 cores", 3.6, GREEN, seg(f, c1 - 4, c1 + 14)]]);
             if (f >= c1 + 16) tag(c, "3x faster", 760, 1080, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 16, c1 + 24));
             const c2 = cu(2, 0.8);
-            if (f >= c1 + 16) tag(c, "quiz: B ✓", 300, 1080, 60, "#fef3c7", INK, 0.03, seg(f, c1 + 16, c1 + 24));
+            if (f >= c1 + 16) tag(c, "quiz: B ✓", 300, 1080, 72, "#fef3c7", INK, 0.03, seg(f, c1 + 16, c1 + 24));
             if (f >= c2 - 4) tag(c, "our 4-core laptop: 23 orders ≈ 83 s", W / 2, 1250, 56, "#fee2e2", "#991b1b", -0.02, seg(f, c2 - 4, c2 + 6));
             c.font = SANS(38, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
             c.fillText("EP35's medium brain · no graphics card", W / 2, 1410);
@@ -263,7 +263,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
             if (f < c1 - 4) {   // ChatGPT: a data centre full of graphics cards, not yours
               for (let q = 0; q < 12; q++) gpuCard(c, 230 + (q % 3) * 310, 520 + Math.floor(q / 3) * 160, 0.4, f, r);
               tag(c, "ChatGPT: runs on THEIR graphics cards", W / 2, 1230, 54, "#e0e7ff", INK, -0.02, seg(p, 0.05, 0.15));
-              c.font = SANS(40, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("you don't need one to use it", W / 2, 1330);
+              tag(c, "you don't need one to use it", W / 2, 1335, 52, "#dcfce7", "#166534", 0.01, seg(p, 0.12, 0.22));
             } else {
               gpuCard(c, W / 2, 600, 1.2, f, r);
               c.font = SANS(46); c.fillStyle = INK; c.textAlign = "center"; c.fillText("gaming laptop GPU (RTX 5060)", W / 2, 860);
@@ -283,6 +283,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
             tag(c, "MUST FIT IN CARD MEMORY", W / 2, 420, 60, "#0f172a", "#facc15", -0.01, seg(f, ln.from + 2, ln.from + 10));
             if (f >= c1 + 18) tag(c, "medium brain, 1.1 GB: fits ✓", W / 2, 540, 54, "#dcfce7", "#166534", 0.01, seg(f, c1 + 18, c1 + 24));
             if (f >= c1 + 26) tag(c, "big brain, 15 GB: doesn't fit", W / 2, 640, 54, "#fee2e2", "#991b1b", -0.01, seg(f, c1 + 26, c1 + 32));
+            if (f >= c1 + 34) tag(c, "squeezed, 4.7 GB: fits ✓ (EP37)", W / 2, 740, 54, "#dcfce7", "#166534", 0.01, seg(f, c1 + 34, c1 + 40));
             c.fillStyle = "#fee2e2"; rrect(c, 600, 955, 360, 420, 20); c.fill();
             c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU: a few workers", 780, 935);
             fitScene(c, 1, seg(f, c1 - 4, c1 + 22), r);

@@ -60,7 +60,7 @@ TEMPO_TE = {"ravi": 1.2, "ai": 1.16}   # Telugu ran 78.9 s at 1.12 / 1.08
 SCENES = [("g_a", (1, 2, 3), {"boost": 1.5, "tail": 0.1}),   # music 8-12 dB under the voice (it measured 13-15 here)
           ("g_b", (4, 5, 6, 7), {"lift": 0.8, "pre": 0.35, "boost": 1.35, "tail": 0.1}),
           ("g_c", (8, 9, 10, 11), {"pre": 0.3, "drop_cue": 1, "boost": 1.45, "tail": 0.1}),
-          ("g_d", (12, 13, 14, 15, 16), {"lift": 0.5, "pre": 0.3, "outro": True, "boost": 1.3, "rise": 1.5, "swell": [2, 1, 1.15], "drop_at": [[4, 2, 1.5]], "tail": 0.0})]   # the drop: before "Typing...", held through it (the bed came back on the word)
+          ("g_d", (12, 13, 14, 15, 16), {"lift": 0.5, "pre": 0.45, "outro": True, "boost": 1.3, "rise": 1.5, "swell": [2, 1, 1.15], "drop_at": [[4, 2, 1.5]], "tail": 0.0})]   # the drop: before "Typing...", held through it (the bed came back on the word)
 GAP = {1: 0.2, 7: 3.2, 8: 0.5, 10: 0.3, 11: 0.4, 12: 0.6, 14: 0.25}   # 7: the quiz holds for its 3-2-1; 12: the rule card
 YT = {"g_a": "23 orders, one reply", "g_b": "Workers: CPU vs GPU", "g_c": "Our test: 1 vs 4 cores", "g_d": "Memory: the big brain"}
 MARK = re.compile(r"\[\d+\]\s*")
