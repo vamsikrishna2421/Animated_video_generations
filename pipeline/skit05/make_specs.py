@@ -12,7 +12,7 @@ R = ROOT / "reels"
 # n: (who, shot, prop, English, Telugu). shot: "wide", a person's close shot, "laptop" (the screen fills the frame) or
 # "sneha" (the loop's desk). prop: what the line brings on screen (OfficeCrayon.tsx). [1] = a cue inside the line.
 LINES = {
-    1: ("lakshmi", "laptop", "hook", "Arjun, STOP! Don't press send!", "అర్జున్, ఆగు! సెండ్ నొక్కకు!"),
+    1: ("lakshmi", "laptop", "hook", "Arjun, STOP! Don't press send!", "అర్జున్, ఆగు! సెండ్ చెయ్యకు!"),   # Telugu: the same words as line 11, so the loop echoes exactly (render review: "నొక్కకు" with a swallowed క is "నొక్కు", press it)
     2: ("arjun", "arjun", "neat", "It's just our client list! [1] I'm asking the AI to make it neat.",
         "మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడుగుతున్నా."),
     3: ("lakshmi", "lakshmi", "numbers", "Two hundred phone numbers... [1] into a chatbot?!", "రెండొందల ఫోన్ నంబర్లు... [1] చాట్‌బాట్ లోకా?!"),   # not "free": paid personal plans train too
@@ -25,7 +25,7 @@ LINES = {
     8: ("arjun", "arjun", "shock", "Three years?! [1] So I can't use AI at all?", "మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?"),
     9: ("lakshmi", "laptop", "swap", "Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you.",
         "వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే."),   # a fix that still gets the list done (script review)
-    10: ("lakshmi", "wide", "rule", "Paste only what you'd put up on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్."),   # "pin" was heard "been"
+    10: ("lakshmi", "wide", "rule", "Paste only what you'd put up on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టగలిగేదే పేస్ట్ చెయ్."),   # "pin" was heard "been"; Telugu "పెట్టేదే" read as "what is already on the board"
     11: ("arjun", "laptop", "loop", "Sneha, STOP! Don't press send!", "స్నేహా, ఆగు! సెండ్ చెయ్యకు!"),   # Telugu: "సెండ్ నొక్కకు" blurred in 8 takes   # framed like frame 1, so the loop matches
 }
 TTS_EN = {}
@@ -35,12 +35,13 @@ SHOW = {7: "If a person reviewed your chat, Google keeps it... up to three years
 TE_SHOW = {}
 # Sound (CLAUDE.md arc): a slam on frame 1 with the shout; the bed builds under the argument; a riser and a boing into
 # each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; ticks as the fake
-# rows go in and a success sting on the formulas; a snap on the rule; a rise into the second slam.
+# rows go in and a success sting on the formulas; a snap on the rule; a riser into the second slam,
+# the bed out under it, the slam the biggest hit of the reel.
 SCENES = [("of_a", (1, 2, 3), {"pre": 0.35, "boost": 1.5, "tail": 0.1}),   # the slam lands before "Arjun"
           ("of_b", (4, 5, 6, 7, 8), {"lift": 0.5, "pre": 0.3, "boost": 1.7, "drop_at": [[3, "1"]], "tail": 0.1}),   # the bed sat 12-15 dB under the voice; it builds past the opening
-          ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.35, "rise": 1.6, "tail": 0.0})]
+          ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.35, "rise": 1.6, "drop_pre": [[2, 0.3, 0.4]], "tail": 0.0})]   # the bed drops out under the riser, the last slam lands on silence
 # seconds after line n (default 0.16 EN / 0.24 TE): the fact cards' read, the neat table's read
-GAP = {1: 0.2, 5: 0.5, 7: 0.6, 9: 0.6, 10: 0.5}
+GAP = {1: 0.2, 5: 0.8, 7: 0.6, 9: 0.8, 10: 1.0}   # Telugu render review: the off switches, "never pasted" and the office-account tag went by unread
 PAUSES = {"en": {7: {"1": 0.8}}, "te": {7: {"1": 0.8}}}   # render review: the 0.45 s beat was a blink   # the beat before "three years" (the drop sits in it)
 GAIN = {"lakshmi": 0.0, "arjun": 0.5, "sneha": 0.0}
 GAIN_LINE = {7: 1.0, 11: 1.0}

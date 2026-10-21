@@ -300,3 +300,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the top third (creative 05: a still arm read as "a desk lamp"); frame the loop's last beat like frame 1.
 - Fish read "Relax, ma'am" as "Relax mom" and "pin" as "been": drop the honorific, use "put up". Parler Telugu blurred
   "సెండ్ నొక్కకు" in eight takes ("సెండ్ చెయ్యకు" came through) and "చాట్స్" reads "charts" ("మనం టైప్ చేసేది").
+- A loop's last hit must be its biggest. In a speech-dense skit the quarters stay within 1 dB however the bed moves
+  (the voice dominates), so the arc comes from the hits, the gaps and a drop before the final hit:
+  `drop_pre: [[line index, s before the line, length s]]` takes the bed out under the riser so the slam lands on
+  silence (creative 05: the closing slam measured 1 dB under the opening one; both viewers heard "no build").
+- The Telugu judge: a missed word must cost more than the length flag, or a take that loses the name ("Ajjun") beats a
+  clean one 0.05 s over the limit, and voice.py deletes the losers (skit05 voice.py: 1.5 per missed word). Back up a
+  kept take before a re-roll; widen MUST spellings from what the judge hears ("नाउटिस", "पट्टगालगे").
+- A fact about one product makes users of the other one ask "me too?" (Gemini's 3 years: "ChatGPT lo kuda?"): answer
+  it in the pinned comment with that company's own wording.

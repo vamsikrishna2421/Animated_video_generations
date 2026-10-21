@@ -68,8 +68,8 @@ myth's; "into a chatbot" (not "free": paid personal plans train too); a tag "At 
 bed builds into the cards. Heard back while voicing: "Relax, ma'am" -> "Relax mom" (now "Relax!"), "pin on the notice
 board" -> "been" (now "put up"), Telugu "చాట్స్" -> "charts" (now "మనం టైప్ చేసేది").
 
-## Script (Telugu; English on-screen text), v2
-1. లక్ష్మి: అర్జున్, ఆగు! సెండ్ నొక్కకు!
+## Script (Telugu; English on-screen text), v3
+1. లక్ష్మి: అర్జున్, ఆగు! సెండ్ చెయ్యకు!
 2. అర్జున్: మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడుగుతున్నా.
 3. లక్ష్మి: రెండొందల ఫోన్ నంబర్లు... [1] చాట్‌బాట్ లోకా?!
 4. అర్జున్: రిలాక్స్ మేడమ్. నేను, ఏఐ తప్ప ఎవరూ చూడరు.
@@ -78,10 +78,22 @@ board" -> "been" (now "put up"), Telugu "చాట్స్" -> "charts" (now "�
 7. లక్ష్మి: మనుషులు చదివిన చాట్ ని గూగుల్ [1] మూడేళ్ల వరకు ఉంచుతుంది. డిలీట్ చేసినా సరే.
 8. అర్జున్: మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?
 9. లక్ష్మి: వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే.
-10. లక్ష్మి: నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్.
+10. లక్ష్మి: నోటీస్ బోర్డ్ మీద పెట్టగలిగేదే పేస్ట్ చెయ్.
 11. అర్జున్: స్నేహా, ఆగు! సెండ్ చెయ్యకు!
+
+Render review (Telugu, two viewers): both stopped at the slam and would share it for "మూడేళ్ల వరకు" and the salary-sheet
+loop; the Telugu sounds natural, nothing rude. Both: the end didn't hit harder than the start (measured: the closing
+slam 1 dB under the opening one, the quarters within 0.3 dB); "the 3 years is Gemini, what about ChatGPT?"; the
+office-account tag and the off switches went by while they read the subtitle. v3: line 1 says "సెండ్ చెయ్యకు", the same
+words as line 11, so the loop echoes exactly and a swallowed క can't turn "నొక్కకు" into "నొక్కు" (press it); line 10
+"పెట్టగలిగేదే" ("పెట్టేదే" read as "what is already on the board"); a 1 s beat after the rule (the tag and the chip read
+on their own, the subtitle gone before Sneha's laptop); longer beats after the off switches and "never pasted"
+(shorter, bigger); the bed drops out under a louder riser and the last slam is the biggest hit; the pinned comment
+answers "does ChatGPT keep it 3 years?" (OpenAI: deleted chats are deleted within 30 days, with exceptions) and "no
+company AI account?".
 
 ## Sound
 A slam (boom + snap) on frame 1 with the shout; the bed builds under the argument; a stamp and a lift into each MYTH
 card, a ding on each FACT flip; the bed drops out right before "three years" with a hit on it; ticks as the fake
-rows go in and a success sting on the formulas; a snap on the rule chip; a rise into the second slam, which loops into the first.
+rows go in and a success sting on the formulas; a snap on the rule chip; a riser into the second slam, the bed out
+for 0.4 s under it, the biggest hit of the reel on the slam, which loops into the first.

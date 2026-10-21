@@ -583,6 +583,10 @@ def main(spec_path: Path) -> None:
             if str(k) in lc:
                 at = sc["from"] + lc[str(k)]
                 mdrops.append([max(0, at - round(0.8 * FPS)), at + round((hold[0] if hold else 0) * FPS)])
+        for li, end_s, len_s in spec_sc.get("drop_pre", []):   # [[line index, s before the line, length s], ...]: the bed drops
+            if li < len(sc["lines"]):                           # out just before a line (under a riser, so the hit lands on silence)
+                at = sc["from"] + sc["lines"][li]["from"] - round(end_s * FPS)
+                mdrops.append([max(0, at - round(len_s * FPS)), at])
         if spec_sc.get("music_stop") is not None and sc["lines"]:
             last = sc["lines"][-1]
             mdrops.append([sc["from"] + last["from"] + round(spec_sc["music_stop"] * last["frames"]), round(total * FPS) + FPS])

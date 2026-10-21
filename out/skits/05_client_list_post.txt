@@ -28,6 +28,8 @@ Tag the Arjun in your office. What's the worst thing you've seen someone paste i
 === PINNED_COMMENT ===
 The 30-second check before you paste: names? phone numbers? salaries? passwords or OTPs? Aadhaar or PAN? client details? If yes, swap them for fake ones or don't paste.
 The formula from the video, for a messy list: names =PROPER(TRIM(A2)), numbers =SUBSTITUTE(B2," ",""), then sort A to Z.
+"Does ChatGPT keep it 3 years too?" No, the 3 years is Google's rule for Gemini. OpenAI's help center: a deleted ChatGPT chat is scheduled for permanent deletion within 30 days, unless it was already de-identified (separated from your account) or OpenAI must keep it for security or legal reasons. With "Improve the model for everyone" on, your chats can be used for training. Same fix either way: fake rows.
+"No company AI account at my office?" Use fake rows, switch training off (or use a temporary chat), and ask your manager or IT before any client data goes into a chatbot.
 Facts: Google, Gemini Apps Privacy Hub (support.google.com/gemini/answer/13594961, updated Oct 19, 2026): "Please don't enter confidential information that you wouldn't want a reviewer to see"; "A subset of chats are reviewed by human reviewers"; reviewed chats "are not deleted when you delete your activity" and are kept up to three years; turning off "Keep Activity" stops future chats being reviewed (those chats are kept 72 hours). OpenAI help center: saved chats follow the "Improve the model for everyone" setting; temporary chats aren't used to improve the models (a copy may be kept up to 30 days for safety).
 
 === COVER ===
@@ -38,7 +40,7 @@ Crayon-animated office skit. Arjun, a new joiner, is about to send his company's
 
 === SOURCES (for comments) ===
 Google, Gemini Apps Privacy Hub: support.google.com/gemini/answer/13594961 (checked Oct 21, 2026; page updated Oct 19, 2026)
-OpenAI help center, "Temporary Chat FAQ" and "Data Controls FAQ" (help.openai.com)
+OpenAI help center, "Temporary Chat FAQ", "Data Controls FAQ" and "Deleting and archiving chats in ChatGPT" (help.openai.com; the 30-day deletion wording checked Oct 21, 2026 via the help center's search listing, the page itself refuses automated fetches)
 OpenAI, business data privacy: openai.com/business-data ("We don't train our models on your organization's data by default")
 Google Workspace, generative AI privacy: workspace.google.com/security/ai-privacy
 
@@ -66,7 +68,9 @@ Mee office lo Arjun ni tag cheyyandi. Chatbot lo evaraina paste chesina worst vi
 === PINNED_COMMENT ===
 Paste chese mundu 30 seconds check: perlu? phone numbers? salaries? passwords, OTPs? Aadhaar, PAN? client details? Unte fake vaati tho maarchandi, leda paste cheyyakandi.
 Video lo formula: names =PROPER(TRIM(A2)), numbers =SUBSTITUTE(B2," ",""), taruvaata A to Z sort.
-Facts, sources: English caption lo unnaayi (Google Gemini Apps Privacy Hub, Oct 19, 2026 update; OpenAI help center).
+"ChatGPT lo kuda 3 years aa?" Kaadu, 3 years Google (Gemini) rule. OpenAI help center prakaram delete chesina ChatGPT chat 30 rojullo permanent ga delete avutundi; mundee de-identify chesina data, leda security/legal kosam unchaalsina data tappa. "Improve the model for everyone" on lo unte mee chats training ki vaadochu. Fix okkate: fake rows.
+"Maa office lo company AI account ledu, mari?" Fake rows vaadandi, training off cheyyandi (leda temporary chat), client data paste chese mundu manager ni leda IT ni adagandi.
+Facts, sources: English pinned comment lo unnaayi (Google Gemini Apps Privacy Hub, Oct 19, 2026 update; OpenAI help center).
 
 === COVER ===
 Team lead chethi to laptop lid slam; screen meeda "CLIENTS_FINAL.xlsx · 200 rows", SEND meeda cursor; red "STOP!"; sticker "200 CLIENT PHONE NUMBERS → AN AI CHATBOT" (English visuals)

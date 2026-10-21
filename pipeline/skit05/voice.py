@@ -51,7 +51,7 @@ MUST = {"en": {1: [("arjun",), ("stop",), ("send",)], 2: [("client",), ("list",)
                4: [("relax",), ("only",), ("see",)], 5: [("chats", "chat"), ("train",), ("read",), ("people",)], 6: [("delete",)],
                7: [("person",), ("reviewed",), ("google", "google's"), ("three", "3"), ("years", "year"), ("delete",)], 8: [("three", "3"), ("years", "year"), ("use",)],
                9: [("fake",), ("rows", "row"), ("formula",), ("real",), ("list",)], 10: [("paste",), ("put",), ("notice",), ("board",)], 11: [("sneha",), ("stop",), ("send",)]},
-        "te": {1: [("अर्ज", "आर्ज"), ("सेंड", "सेंद", "सेन्ड", "सेंट", "सेन्द")], 3: [("रेंड", "रेंडो", "रेनडो", "रेंद", "रिन्द")],
+        "te": {1: [("अर्ज", "आर्ज"), ("सेंड", "सेंद", "सेन्ड", "सेंट", "सेन्द", "संद"), ("चैए", "चेय", "चेए", "चैय", "चय", "चेक", "चैक", "चई", "चए")], 10: [("नोटि", "नोटी", "नॉटि", "नाउटि", "नोदि"), ("बोर्ड", "बोड", "बोर्"), ("गलि", "गली", "गले", "कलि", "गल्ग", "गलग", "गाल", "गेल"), ("पेस्ट", "पेस्त", "पेष्ट")], 3: [("रेंड", "रेंडो", "रेनडो", "रेंद", "रिन्द")],
                5: [("टाइप", "टैप", "ताइप", "टाईप", "type"), ("चदु", "चदू", "चदव", "चदो", "चदी"), ("ट्रेनि", "ट्रैनि", "त्रेनि", "त्रैनि", "ट्राइनि", "ट्रीनि", "ट्रेनिं", "trai")],
                7: [("मूडे", "मुडे", "मूडेल")], 8: [("मूडे", "मुडे")],
                9: [("वाडो", "वाड़ो", "वाडोच", "वाड उ", "वाडच", "वाड़ु", "वाडु"), ("फेक", "फ़ेक", "फेख", "fake"), ("फार्मु", "फॉर्मु", "फार्मू", "फार्मला", "फाम्ला", "formul")],
@@ -113,7 +113,9 @@ def judge(path, text, lang, n):
     heard_text = info.split("|", 1)[1].lower()
     words = set(re.findall(r"[a-z0-9]+", heard_text))
     miss = [g[0] for g in MUST[lang].get(n, []) if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]
-    return ok and not miss, score - 0.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
+    # a missed word costs more than the judge's own pass (+1): a take with every word a hair over the length limit
+    # beats one that passed but lost a word (Telugu line 1 kept "Ajjun" over a clean, 2.85 s "Arjun")
+    return ok and not miss, score - 1.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
 
 
 def refs():

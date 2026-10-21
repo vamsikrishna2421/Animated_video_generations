@@ -76,7 +76,7 @@
     {
      "who": "lakshmi",
      "file": "01_lakshmi.wav",
-     "text": "అర్జున్, ఆగు! సెండ్ నొక్కకు!",
+     "text": "అర్జున్, ఆగు! సెండ్ చెయ్యకు!",
      "show": "Arjun, STOP! Don't press send!",
      "maxgap": 0.3,
      "gap": 0.2
@@ -170,7 +170,7 @@
      "text": "మనం టైప్ చేసేది ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు. [1] కొన్నిటిని నిజంగా మనుషులే చదువుతారు.",
      "show": "Your chats can train the AI. And some are read by real people.",
      "maxgap": 0.3,
-     "gap": 0.5
+     "gap": 0.8
     },
     {
      "who": "arjun",
@@ -212,6 +212,13 @@
    "outro": true,
    "boost": 1.35,
    "rise": 1.6,
+   "drop_pre": [
+    [
+     2,
+     0.3,
+     0.4
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -248,15 +255,15 @@
      "text": "వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే.",
      "show": "Use it! Paste three fake rows, ask for the formula. Your real list stays with you.",
      "maxgap": 0.3,
-     "gap": 0.6
+     "gap": 0.8
     },
     {
      "who": "lakshmi",
      "file": "10_lakshmi.wav",
-     "text": "నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్.",
+     "text": "నోటీస్ బోర్డ్ మీద పెట్టగలిగేదే పేస్ట్ చెయ్.",
      "show": "Paste only what you'd put up on the notice board.",
      "maxgap": 0.3,
-     "gap": 0.5,
+     "gap": 1.0,
      "gain_db": 0.7
     },
     {
