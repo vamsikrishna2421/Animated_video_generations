@@ -1,0 +1,877 @@
+{
+ "id": "skit05v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "The client list",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "title": "The client list",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   778,
+   802
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   348,
+   1.2
+  ],
+  [
+   348,
+   1023,
+   1.0
+  ],
+  [
+   1023,
+   1433,
+   1.35
+  ],
+  [
+   1023,
+   1433,
+   1.6,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1433,
+ "music": "reel/skit05v1/score.wav",
+ "scenes": [
+  {
+   "id": "of_a",
+   "type": "sk_office",
+   "data": {
+    "beats": [
+     {
+      "who": "lakshmi",
+      "shot": "laptop",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "neat",
+      "n": 2
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "numbers",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The client list",
+     "title": "The client list",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit05v1/line_01.wav",
+     "from": 15,
+     "frames": 82,
+     "words": [
+      {
+       "w": "Arjun,",
+       "from": 15,
+       "to": 24
+      },
+      {
+       "w": "STOP!",
+       "from": 24,
+       "to": 44
+      },
+      {
+       "w": "Don't",
+       "from": 44,
+       "to": 61
+      },
+      {
+       "w": "press",
+       "from": 61,
+       "to": 75
+      },
+      {
+       "w": "send!",
+       "from": 75,
+       "to": 91
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit05v1/line_02.wav",
+     "from": 103,
+     "frames": 127,
+     "words": [
+      {
+       "w": "It's",
+       "from": 104,
+       "to": 112
+      },
+      {
+       "w": "just",
+       "from": 112,
+       "to": 121
+      },
+      {
+       "w": "our",
+       "from": 121,
+       "to": 128
+      },
+      {
+       "w": "client",
+       "from": 128,
+       "to": 140
+      },
+      {
+       "w": "list!",
+       "from": 140,
+       "to": 160
+      },
+      {
+       "w": "I'm",
+       "from": 160,
+       "to": 167
+      },
+      {
+       "w": "asking",
+       "from": 167,
+       "to": 179
+      },
+      {
+       "w": "the",
+       "from": 179,
+       "to": 186
+      },
+      {
+       "w": "AI",
+       "from": 186,
+       "to": 192
+      },
+      {
+       "w": "to",
+       "from": 192,
+       "to": 197
+      },
+      {
+       "w": "make",
+       "from": 197,
+       "to": 206
+      },
+      {
+       "w": "it",
+       "from": 206,
+       "to": 211
+      },
+      {
+       "w": "neat.",
+       "from": 211,
+       "to": 221
+      }
+     ],
+     "cues": {
+      "1": 160
+     }
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit05v1/line_03.wav",
+     "from": 234,
+     "frames": 98,
+     "words": [
+      {
+       "w": "Two",
+       "from": 234,
+       "to": 240
+      },
+      {
+       "w": "hundred",
+       "from": 240,
+       "to": 251
+      },
+      {
+       "w": "phone",
+       "from": 251,
+       "to": 266
+      },
+      {
+       "w": "numbers...",
+       "from": 266,
+       "to": 289
+      },
+      {
+       "w": "into",
+       "from": 289,
+       "to": 296
+      },
+      {
+       "w": "a",
+       "from": 296,
+       "to": 298
+      },
+      {
+       "w": "free",
+       "from": 298,
+       "to": 314
+      },
+      {
+       "w": "chatbot?!",
+       "from": 314,
+       "to": 332
+      }
+     ],
+     "cues": {
+      "1": 289
+     }
+    }
+   ]
+  },
+  {
+   "id": "of_b",
+   "type": "sk_office",
+   "data": {
+    "beats": [
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "myth1",
+      "n": 4
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "fact1",
+      "n": 5
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "myth2",
+      "n": 6
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "fact2",
+      "n": 7
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "shock",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Myth vs fact",
+     "title": "Myth vs fact",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 348,
+   "frames": 675,
+   "lines": [
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit05v1/line_04.wav",
+     "from": 9,
+     "frames": 86,
+     "words": [
+      {
+       "w": "Relax!",
+       "from": 10,
+       "to": 24
+      },
+      {
+       "w": "Only",
+       "from": 24,
+       "to": 43
+      },
+      {
+       "w": "me",
+       "from": 43,
+       "to": 49
+      },
+      {
+       "w": "and",
+       "from": 49,
+       "to": 57
+      },
+      {
+       "w": "the",
+       "from": 57,
+       "to": 65
+      },
+      {
+       "w": "AI",
+       "from": 65,
+       "to": 71
+      },
+      {
+       "w": "see",
+       "from": 71,
+       "to": 79
+      },
+      {
+       "w": "it.",
+       "from": 79,
+       "to": 87
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit05v1/line_05.wav",
+     "from": 100,
+     "frames": 135,
+     "words": [
+      {
+       "w": "Your",
+       "from": 100,
+       "to": 112
+      },
+      {
+       "w": "chats",
+       "from": 112,
+       "to": 128
+      },
+      {
+       "w": "can",
+       "from": 128,
+       "to": 135
+      },
+      {
+       "w": "train",
+       "from": 135,
+       "to": 144
+      },
+      {
+       "w": "the",
+       "from": 144,
+       "to": 150
+      },
+      {
+       "w": "AI.",
+       "from": 150,
+       "to": 156
+      },
+      {
+       "w": "And",
+       "from": 156,
+       "to": 171
+      },
+      {
+       "w": "some",
+       "from": 171,
+       "to": 184
+      },
+      {
+       "w": "are",
+       "from": 184,
+       "to": 194
+      },
+      {
+       "w": "read",
+       "from": 194,
+       "to": 202
+      },
+      {
+       "w": "by",
+       "from": 202,
+       "to": 207
+      },
+      {
+       "w": "real",
+       "from": 207,
+       "to": 214
+      },
+      {
+       "w": "people.",
+       "from": 214,
+       "to": 231
+      }
+     ],
+     "cues": {
+      "1": 156
+     }
+    },
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit05v1/line_06.wav",
+     "from": 250,
+     "frames": 93,
+     "words": [
+      {
+       "w": "Okay,",
+       "from": 253,
+       "to": 262
+      },
+      {
+       "w": "okay!",
+       "from": 262,
+       "to": 277
+      },
+      {
+       "w": "I'll",
+       "from": 277,
+       "to": 296
+      },
+      {
+       "w": "delete",
+       "from": 296,
+       "to": 306
+      },
+      {
+       "w": "the",
+       "from": 306,
+       "to": 312
+      },
+      {
+       "w": "chat",
+       "from": 312,
+       "to": 319
+      },
+      {
+       "w": "after.",
+       "from": 319,
+       "to": 337
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit05v1/line_07.wav",
+     "from": 348,
+     "frames": 197,
+     "words": [
+      {
+       "w": "If",
+       "from": 349,
+       "to": 353
+      },
+      {
+       "w": "a",
+       "from": 353,
+       "to": 355
+      },
+      {
+       "w": "person",
+       "from": 355,
+       "to": 371
+      },
+      {
+       "w": "reviewed",
+       "from": 371,
+       "to": 383
+      },
+      {
+       "w": "your",
+       "from": 383,
+       "to": 389
+      },
+      {
+       "w": "chat,",
+       "from": 389,
+       "to": 401
+      },
+      {
+       "w": "Google",
+       "from": 401,
+       "to": 420
+      },
+      {
+       "w": "keeps",
+       "from": 420,
+       "to": 455
+      },
+      {
+       "w": "it",
+       "from": 455,
+       "to": 463
+      },
+      {
+       "w": "up",
+       "from": 463,
+       "to": 472
+      },
+      {
+       "w": "to",
+       "from": 472,
+       "to": 476
+      },
+      {
+       "w": "three",
+       "from": 476,
+       "to": 483
+      },
+      {
+       "w": "years.",
+       "from": 483,
+       "to": 502
+      },
+      {
+       "w": "Even",
+       "from": 502,
+       "to": 508
+      },
+      {
+       "w": "after",
+       "from": 508,
+       "to": 519
+      },
+      {
+       "w": "you",
+       "from": 519,
+       "to": 524
+      },
+      {
+       "w": "delete",
+       "from": 524,
+       "to": 533
+      },
+      {
+       "w": "it.",
+       "from": 533,
+       "to": 538
+      }
+     ],
+     "cues": {
+      "1": 454
+     }
+    },
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit05v1/line_08.wav",
+     "from": 563,
+     "frames": 98,
+     "words": [
+      {
+       "w": "Three",
+       "from": 568,
+       "to": 580
+      },
+      {
+       "w": "years?!",
+       "from": 580,
+       "to": 609
+      },
+      {
+       "w": "So",
+       "from": 609,
+       "to": 615
+      },
+      {
+       "w": "I",
+       "from": 615,
+       "to": 619
+      },
+      {
+       "w": "can't",
+       "from": 619,
+       "to": 631
+      },
+      {
+       "w": "use",
+       "from": 631,
+       "to": 639
+      },
+      {
+       "w": "AI",
+       "from": 639,
+       "to": 645
+      },
+      {
+       "w": "at",
+       "from": 645,
+       "to": 651
+      },
+      {
+       "w": "all?",
+       "from": 651,
+       "to": 661
+      }
+     ],
+     "cues": {
+      "1": 609
+     }
+    }
+   ]
+  },
+  {
+   "id": "of_c",
+   "type": "sk_office",
+   "data": {
+    "beats": [
+     {
+      "who": "lakshmi",
+      "shot": "laptop",
+      "prop": "swap",
+      "n": 9
+     },
+     {
+      "who": "lakshmi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "arjun",
+      "shot": "sneha",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Fake rows, real list",
+     "title": "Fake rows, real list",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1023,
+   "frames": 410,
+   "lines": [
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit05v1/line_09.wav",
+     "from": 9,
+     "frames": 169,
+     "words": [
+      {
+       "w": "Use",
+       "from": 9,
+       "to": 14
+      },
+      {
+       "w": "it!",
+       "from": 14,
+       "to": 19
+      },
+      {
+       "w": "Paste",
+       "from": 19,
+       "to": 35
+      },
+      {
+       "w": "three",
+       "from": 35,
+       "to": 57
+      },
+      {
+       "w": "fake",
+       "from": 57,
+       "to": 63
+      },
+      {
+       "w": "rows,",
+       "from": 63,
+       "to": 80
+      },
+      {
+       "w": "ask",
+       "from": 80,
+       "to": 92
+      },
+      {
+       "w": "for",
+       "from": 92,
+       "to": 97
+      },
+      {
+       "w": "the",
+       "from": 97,
+       "to": 102
+      },
+      {
+       "w": "formula.",
+       "from": 102,
+       "to": 121
+      },
+      {
+       "w": "Your",
+       "from": 121,
+       "to": 128
+      },
+      {
+       "w": "real",
+       "from": 128,
+       "to": 134
+      },
+      {
+       "w": "list",
+       "from": 134,
+       "to": 140
+      },
+      {
+       "w": "stays",
+       "from": 140,
+       "to": 157
+      },
+      {
+       "w": "with",
+       "from": 157,
+       "to": 168
+      },
+      {
+       "w": "you.",
+       "from": 168,
+       "to": 174
+      }
+     ],
+     "cues": {
+      "1": 121
+     }
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit05v1/line_10.wav",
+     "from": 196,
+     "frames": 96,
+     "words": [
+      {
+       "w": "Paste",
+       "from": 198,
+       "to": 214
+      },
+      {
+       "w": "only",
+       "from": 214,
+       "to": 220
+      },
+      {
+       "w": "what",
+       "from": 220,
+       "to": 226
+      },
+      {
+       "w": "you'd",
+       "from": 226,
+       "to": 246
+      },
+      {
+       "w": "pin",
+       "from": 246,
+       "to": 251
+      },
+      {
+       "w": "on",
+       "from": 251,
+       "to": 259
+      },
+      {
+       "w": "the",
+       "from": 259,
+       "to": 264
+      },
+      {
+       "w": "notice",
+       "from": 264,
+       "to": 273
+      },
+      {
+       "w": "board.",
+       "from": 273,
+       "to": 287
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit05v1/line_11.wav",
+     "from": 307,
+     "frames": 88,
+     "words": [
+      {
+       "w": "Sneha,",
+       "from": 310,
+       "to": 322
+      },
+      {
+       "w": "STOP!",
+       "from": 322,
+       "to": 342
+      },
+      {
+       "w": "Don't",
+       "from": 342,
+       "to": 365
+      },
+      {
+       "w": "press",
+       "from": 365,
+       "to": 379
+      },
+      {
+       "w": "send!",
+       "from": 379,
+       "to": 390
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}

@@ -25,10 +25,10 @@ const DESK = 1010;
 const ARJUN: Pt = [400, 870], LAKSHMI: Pt = [790, 700];   // necks (Arjun seated, Lakshmi standing)
 const SNEHA: Pt = [470, 880], ARJUN_UP: Pt = [840, 700];  // the loop: Sneha seated, Arjun standing over her laptop
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
-  wide: { z: 1.0, x: 540, y: 820 }, arjun: { z: 1.45, x: 430, y: 650 }, lakshmi: { z: 1.4, x: 760, y: 520 }, sneha: { z: 1.05, x: 620, y: 790 },
+  wide: { z: 1.0, x: 540, y: 820 }, arjun: { z: 1.45, x: 430, y: 600 }, lakshmi: { z: 1.4, x: 760, y: 440 }, sneha: { z: 1.05, x: 620, y: 790 },
 };
 const POSE: Record<string, Record<number, [Mood, Arms]>> = {
-  lakshmi: { 2: ["stern", "rest"], 3: ["shock", "point"], 4: ["stern", "rest"], 5: ["calm", "point"], 6: ["stern", "rest"], 7: ["stern", "up"], 8: ["calm", "rest"], 10: ["smug", "board"] },
+  lakshmi: { 2: ["stern", "rest"], 3: ["shock", "point"], 4: ["stern", "rest"], 5: ["calm", "point"], 6: ["stern", "rest"], 7: ["stern", "point"], 8: ["calm", "rest"], 10: ["smug", "board"] },
   arjun: { 2: ["confused", "shrug"], 3: ["confused", "rest"], 4: ["smug", "chest"], 5: ["shock", "rest"], 6: ["confused", "shrug"], 7: ["shock", "rest"], 8: ["panic", "up"], 10: ["happy", "type"], 11: ["yell", "slam"] },
   sneha: { 11: ["shock", "type"] },
 };
@@ -274,7 +274,7 @@ const StOffice: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
     if (b.shot === "laptop" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.25} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("b")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={k("c")} at={at + 3} src="audio/gag_bonk.wav" vol={0.45} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={4} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("b")} at={4} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={k("c")} at={6} src="audio/gag_bonk.wav" vol={0.45} />);
     if (b.prop === "numbers") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.45) - 2} src="audio/sfx_pop.wav" vol={0.4} />);
     if (b.prop === "myth1" || b.prop === "myth2") sfx.push(<Sfx key={k("m")} at={at + Math.round(l.frames * 0.3)} src="audio/sfx_whoosh.wav" vol={0.32} />);
     if (b.prop === "fact1") sfx.push(<Sfx key={k("f")} at={at + 4} src="audio/gag_bonk.wav" vol={0.38} />, <Sfx key={k("e")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.32} />);
@@ -297,8 +297,7 @@ const StOffice: React.FC<SP> = ({ s }) => {
           // ---------- Arjun's laptop, full frame ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
           if (n === 1) {   // frame 1: the list pasted, the cursor on SEND, her hand slams the lid
-            tag(c, "200 CLIENT PHONE NUMBERS → AN AI CHATBOT", W / 2, 110, 50, "#fee2e2", "#991b1b", -0.01, 1);
-            const slam = seg(f, ln.from + 3, ln.from + 9), shake = slam > 0 && slam < 1 ? 10 : f < ln.from + 16 && slam >= 1 ? 6 : 0;
+            const slam = seg(f, 1, 7), shake = slam > 0 && slam < 1 ? 10 : f < 14 && slam >= 1 ? 6 : 0;
             c.save(); c.translate((r() - 0.5) * shake, (r() - 0.5) * shake);
             c.save(); c.translate(0, 1210); c.scale(1, 1 - 0.42 * easeOut(slam)); c.translate(0, -1210);
             laptopScreen(c, W, f, r, "paste", 0, 0);
@@ -309,7 +308,8 @@ const StOffice: React.FC<SP> = ({ s }) => {
             limb(c, [[1160, -80], [980, hy - 160], [hx, hy]], LOOK.lakshmi.shirt, r, 70);
             palm(c, hx, hy, LOOK.lakshmi.skin, r);
             c.restore();
-            if (f >= ln.from + 8) stamp(c, "STOP!", 540, 1440, 150, COL.red, seg(f, ln.from + 8, ln.from + 14), r, -0.06);
+            tag(c, "200 CLIENT PHONE NUMBERS → AN AI CHATBOT", W / 2, 1430, 50, "#fee2e2", "#991b1b", -0.01, 1);
+            if (f >= 6) stamp(c, "STOP!", 540, 760, 160, COL.red, seg(f, 6, 12), r, -0.06);
           }
           if (n === 9) {   // the fix: three fake rows and a question; the AI's formula; the real list never leaves his laptop
             const c1 = cu(1, 0.55);
@@ -353,18 +353,18 @@ const StOffice: React.FC<SP> = ({ s }) => {
           const m1 = n === 4 ? seg(p, 0.3, 0.42) : n === 5 ? 1 : 0;
           if (m1 > 0) {
             const flip = n === 5 ? seg(p, 0, 0.12) : 0, c1 = n === 5 ? cu(1, 0.5) : 0;
-            mythCard(c, W, 380, "\"Only me and the AI see it\"",
+            mythCard(c, W, 520, "\"Only me and the AI see it\"",
               n === 5 && f >= c1 ? ["Chats can train the AI.", "Some are read by real people."] : ["Chats can train the AI."],
               "Google's Gemini privacy page · ChatGPT has a similar switch", easeOut(m1), flip);
           }
           const m2 = n === 6 ? seg(p, 0.3, 0.42) : n === 7 || n === 8 ? 1 : 0;
           if (m2 > 0) {
             const c1 = n === 7 ? cu(1, 0.45) : 0, flip = n === 7 ? seg(f, c1 - 4, c1 + 4) : n === 8 ? 1 : 0;
-            mythCard(c, W, 380, "\"Delete it and it's gone\"", ["reviewed by a person? kept,", "even after you delete it"],
+            mythCard(c, W, 520, "\"Delete it and it's gone\"", ["reviewed by a person? kept,", "even after you delete it"],
               "Google's Gemini privacy page, Oct 2026", easeOut(m2) * (n === 8 ? 1 - seg(p, 0.7, 0.95) : 1), flip, "UP TO 3 YEARS");
           }
           if (n === 10) rule(c, W, seg(p, 0.05, 0.18));
-          if (n === 11) rule(c, W, 1);
+          if (n === 11) { rule(c, W, 1); tag(c, "SALARY_SHEET.xlsx → AN AI CHATBOT", W / 2, 300, 50, "#fee2e2", "#991b1b", 0.01, 1); }
         }
       }} />
     </>
