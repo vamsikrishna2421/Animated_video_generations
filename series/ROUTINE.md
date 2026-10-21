@@ -45,7 +45,7 @@ The user's ask (Oct 20): the daily episode covers the whole syllabus, plus weekl
 
 | IST day | Slot | Next item from | Posted |
 |---|---|---|---|
-| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP36 is next (queue 038), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
+| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP37 is next (queue 039), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
 | Thu | HOW TO (see "Thursday: HOW TO") | `series/HOWTO.md`, the first "planned" row whose "Needs" are out | the day it is made |
 | Sat | AI WEEKLY (see "Saturday: AI WEEKLY") | `news/README.md`, "Weekly edition" | the day it is made |
 
@@ -56,7 +56,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037); next EP36 "GPUs and AI chips", queue 038). The skit replaces the old
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038); next EP37 "Quantization", queue 039). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
