@@ -79,7 +79,7 @@ board" -> "been" (now "put up"), Telugu "చాట్స్" -> "charts" (now "�
 8. అర్జున్: మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?
 9. లక్ష్మి: వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే.
 10. లక్ష్మి: నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్.
-11. అర్జున్: స్నేహా, ఆగు! సెండ్ నొక్కకు!
+11. అర్జున్: స్నేహా, ఆగు! సెండ్ చెయ్యకు!
 
 ## Sound
 A slam (boom + snap) on frame 1 with the shout; the bed builds under the argument; a stamp and a lift into each MYTH

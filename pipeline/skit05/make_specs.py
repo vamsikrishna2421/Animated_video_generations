@@ -26,7 +26,7 @@ LINES = {
     9: ("lakshmi", "laptop", "swap", "Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you.",
         "వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే."),   # a fix that still gets the list done (script review)
     10: ("lakshmi", "wide", "rule", "Paste only what you'd put up on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్."),   # "pin" was heard "been"
-    11: ("arjun", "laptop", "loop", "Sneha, STOP! Don't press send!", "స్నేహా, ఆగు! సెండ్ నొక్కకు!"),   # framed like frame 1, so the loop matches
+    11: ("arjun", "laptop", "loop", "Sneha, STOP! Don't press send!", "స్నేహా, ఆగు! సెండ్ చెయ్యకు!"),   # Telugu: "సెండ్ నొక్కకు" blurred in 8 takes   # framed like frame 1, so the loop matches
 }
 TTS_EN = {}
 TE_SPLIT = {}   # Telugu lines voiced as two takes, joined (long Telugu lines babble or lose a half in one take)
