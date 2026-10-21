@@ -91,7 +91,8 @@ quiz and the 15 GB block not fitting; three of four read the ending as "the GPU 
 GPU?", and both English viewers said the GPU's win at 0:55 was a tiny badge nobody mentions. v4: Ravi gasps "Done
 already?!" after a beat in which a big counter runs the queue from 23 to 0 with a hit; "illustration · we didn't test a
 GPU"; the ending card answers the question ("MUST FIT IN CARD MEMORY · medium brain, 1.1 GB: fits ✓ · big brain, 15 GB:
-doesn't fit"); "under four seconds" (both languages: "under four what?"); notes for the squeezed copy (4.7 GB, EP35)
+doesn't fit · squeezed, 4.7 GB: fits ✓ (EP37)", the last row after the final English review: without it the loop said an
+8 GB card can't run the big brain at all); "under four seconds" (both languages: "under four what?"); notes for the squeezed copy (4.7 GB, EP35)
 and card memory (not storage); Telugu says 150 crore like the screen and line 4 ("వంద కోట్లకు పైగా" was a second number);
 "ఒక్కో పదం లెక్కల్ని కోర్లన్నీ పంచుకుంటాయి" (spoken, not written). Sound: the music measured 12.6-14.6 dB under Ravi
 and 9.4-10.9 dB under the AI, so the bed went up about 1 dB and Ravi down 1 dB (now 8-12.6 dB); a crack on top of each
