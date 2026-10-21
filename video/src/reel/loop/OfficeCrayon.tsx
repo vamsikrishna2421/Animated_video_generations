@@ -187,8 +187,8 @@ const person = (c: Ctx, who: Who, at: Pt, m: Mood, a: Arms, talk: boolean, f: nu
 
 // ---------- the laptop, full frame: the chat box ----------
 const ROWS: [string, string][] = [["Ramesh Kumar", "98480 2xx41"], ["Anitha Reddy", "99490 7xx18"], ["Suresh Babu", "90000 4xx62"], ["Kavya Rao", "87120 6xx05"]];
-const SWAP: [string, string][] = [["Client A", ""], ["Client B", ""], ["Client C", ""], ["Client D", ""]];
-const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "paste" | "swap", k: number, reply: number) => {
+const FAKE: [string, string][] = [["client a", "90000 00001"], ["CLIENT b", "9000000002"], ["Client  c", "90 000 00003"]];
+const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "paste" | "fake", k: number, reply: number) => {
   c.fillStyle = "#0b1220"; rrect(c, 70, 190, W - 140, 1010, 40); c.fill();                       // the lid
   c.fillStyle = "#f8fafc"; rrect(c, 98, 218, W - 196, 954, 22); c.fill();                        // the screen
   c.fillStyle = "#334155"; c.beginPath(); c.moveTo(40, 1210); c.lineTo(W - 40, 1210); c.lineTo(W + 10, 1330); c.lineTo(-10, 1330); c.closePath(); c.fill();   // the base
@@ -197,22 +197,26 @@ const laptopScreen = (c: Ctx, W: number, f: number, r: () => number, mode: "past
   c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.fillText("free plan", 214, 312);
   stroke(c, [[116, 336], [W - 116, 336]], "#cbd5e1", 3, r, { passes: 1 });
   // my message: the prompt, the file chip and the pasted rows
-  c.fillStyle = "#dcfce7"; rrect(c, 230, 370, W - 360, 470, 26); c.fill();
-  c.font = SANS(36, 600); c.fillStyle = INK; c.fillText("make this list neat", 262, 420);
-  c.fillStyle = "#fff"; rrect(c, 262, 444, 470, 60, 14); c.fill();
-  c.font = SANS(28); c.fillStyle = GREEN; c.fillText(mode === "paste" ? "CLIENTS_FINAL.xlsx · 200 rows" : "clients_swapped.xlsx · 200 rows", 282, 484);
-  ROWS.forEach(([name, num], q) => {
-    const y = 560 + q * 62, sw = mode === "swap" ? seg(k, q * 0.15, q * 0.15 + 0.3) : 0;
-    c.font = SANS(32, 600); c.fillStyle = INK;
-    c.globalAlpha = 1 - sw; c.fillText(name, 262, y); c.fillText(num, 620, y); c.globalAlpha = 1;
-    if (sw > 0) { c.globalAlpha = sw; c.fillStyle = GREEN; c.fillText(SWAP[q][0], 262, y); c.fillStyle = "#94a3b8"; c.fillText("(number removed)", 560, y); c.globalAlpha = 1; }
-  });
-  c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText("+ 196 more rows", 262, 810);
-  if (reply > 0) {   // the AI's neat table (the swapped list only)
+  if (mode === "paste") {
+    c.fillStyle = "#dcfce7"; rrect(c, 230, 370, W - 360, 470, 26); c.fill();
+    c.font = SANS(36, 600); c.fillStyle = INK; c.fillText("make this list neat", 262, 420);
+    c.fillStyle = "#fff"; rrect(c, 262, 444, 470, 60, 14); c.fill();
+    c.font = SANS(28); c.fillStyle = GREEN; c.fillText("CLIENTS_FINAL.xlsx · 200 rows", 282, 484);
+    ROWS.forEach(([name, num], q) => { c.font = SANS(32, 600); c.fillStyle = INK; c.fillText(name, 262, 560 + q * 62); c.fillText(num, 620, 560 + q * 62); });
+    c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText("+ 196 more rows", 262, 810);
+  } else {   // three made-up rows, typed in, and the question
+    c.fillStyle = "#dcfce7"; rrect(c, 230, 370, W - 360, 400, 26); c.fill();
+    c.font = SANS(32, 600); c.fillStyle = INK; c.fillText("3 made-up rows, messy like mine:", 262, 418);
+    FAKE.forEach(([name, num], q) => { const kk = seg(k, q * 0.2, q * 0.2 + 0.3); c.globalAlpha = kk; c.font = `600 32px "Courier New", monospace`; c.fillText(name, 262, 480 + q * 56); c.fillText(num, 560, 480 + q * 56); c.globalAlpha = 1; });
+    c.globalAlpha = seg(k, 0.6, 0.9); c.font = SANS(32, 600); c.fillText("Excel formula to make them neat?", 262, 690); c.globalAlpha = 1;
+    tag(c, "fake data", W - 230, 400, 34, "#fef3c7", INK, 0.05, seg(k, 0, 0.2));
+  }
+  if (reply > 0) {   // the AI's answer: a formula, run on the real list in Excel, on his own laptop
     c.save(); c.globalAlpha = reply;
-    c.fillStyle = "#fff"; rrect(c, 130, 862, W - 360, 200, 26); c.fill(); stroke(c, [[130, 862], [W - 230, 862], [W - 230, 1062], [130, 1062], [130, 862]], "#cbd5e1", 3, r, { passes: 1 });
-    c.font = SANS(30, 600); c.fillStyle = INK; c.fillText("Done! Your list, neat:", 160, 908);
-    ["#  Client     Status", "1  Client A   Active", "2  Client B   Active"].forEach((t, q) => { c.font = `600 28px "Courier New", monospace`; c.fillText(t, 160, 952 + q * 36); });
+    c.fillStyle = "#fff"; rrect(c, 130, 800, W - 330, 250, 26); c.fill(); stroke(c, [[130, 800], [W - 200, 800], [W - 200, 1050], [130, 1050], [130, 800]], "#cbd5e1", 3, r, { passes: 1 });
+    c.font = SANS(30, 600); c.fillStyle = INK; c.fillText("Names:  =PROPER(TRIM(A2))", 160, 856);
+    c.fillText("Numbers:  =SUBSTITUTE(B2,\" \",\"\")", 160, 912);
+    c.fillText("Then sort A to Z.", 160, 968);
     c.restore();
   }
   // the input box and the SEND button
@@ -272,13 +276,13 @@ const StOffice: React.FC<SP> = ({ s }) => {
     if (b.shot === "laptop" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.25} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("b")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={k("c")} at={at + 3} src="audio/gag_bonk.wav" vol={0.45} />);
     if (b.prop === "numbers") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.45) - 2} src="audio/sfx_pop.wav" vol={0.4} />);
-    if (b.prop === "myth1" || b.prop === "myth2") sfx.push(<Sfx key={k("r")} at={at + Math.round(l.frames * 0.35) - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("m")} at={at + Math.round(l.frames * 0.35)} src="audio/gag_boing.wav" vol={0.35} />);
-    if (b.prop === "fact1") sfx.push(<Sfx key={k("f")} at={at + 2} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("d")} at={at + 6} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("e")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.35} />);
-    if (b.prop === "fact2") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.45) - 4} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("h")} at={cue(i, 1, 0.45) - 2} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("d")} at={cue(i, 1, 0.45) + 2} src="audio/gag_ding.wav" vol={0.35} />);
+    if (b.prop === "myth1" || b.prop === "myth2") sfx.push(<Sfx key={k("m")} at={at + Math.round(l.frames * 0.3)} src="audio/sfx_whoosh.wav" vol={0.32} />);
+    if (b.prop === "fact1") sfx.push(<Sfx key={k("f")} at={at + 4} src="audio/gag_bonk.wav" vol={0.38} />, <Sfx key={k("e")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.32} />);
+    if (b.prop === "fact2") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.45) - 4} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("h")} at={cue(i, 1, 0.45) - 2} src="reel/sfx_boom.wav" vol={0.8} />);
     if (b.prop === "shock") sfx.push(<Sfx key={k("o")} at={at + 2} src="audio/gag_boing.wav" vol={0.3} />);
-    if (b.prop === "swap") { [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={cue(i, 1, 0.45) + q * 5} src="audio/sfx_pop.wav" vol={0.28} />)); sfx.push(<Sfx key={k("v")} at={end - 18} src="audio/sfx_success.wav" vol={0.38} />); }
+    if (b.prop === "swap") { [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={at + 6 + q * 9} src="audio/sfx_tick.wav" vol={0.3} />)); sfx.push(<Sfx key={k("v")} at={cue(i, 1, 0.55)} src="audio/sfx_success.wav" vol={0.4} />); }
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 6)} src="audio/sfx_snap.wav" vol={0.4} />);
-    if (b.prop === "loop") sfx.push(<Sfx key={k("r")} at={at - 40} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("b")} at={at + 1} src="audio/sfx_snap.wav" vol={0.55} />);
+    if (b.prop === "loop") sfx.push(<Sfx key={k("r")} at={at - 40} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("b")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />);
   });
   return (
     <>
@@ -293,6 +297,7 @@ const StOffice: React.FC<SP> = ({ s }) => {
           // ---------- Arjun's laptop, full frame ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
           if (n === 1) {   // frame 1: the list pasted, the cursor on SEND, her hand slams the lid
+            tag(c, "200 CLIENT PHONE NUMBERS → AN AI CHATBOT", W / 2, 110, 50, "#fee2e2", "#991b1b", -0.01, 1);
             const slam = seg(f, ln.from + 3, ln.from + 9), shake = slam > 0 && slam < 1 ? 10 : f < ln.from + 16 && slam >= 1 ? 6 : 0;
             c.save(); c.translate((r() - 0.5) * shake, (r() - 0.5) * shake);
             c.save(); c.translate(0, 1210); c.scale(1, 1 - 0.42 * easeOut(slam)); c.translate(0, -1210);
@@ -306,10 +311,10 @@ const StOffice: React.FC<SP> = ({ s }) => {
             c.restore();
             if (f >= ln.from + 8) stamp(c, "STOP!", 540, 1440, 150, COL.red, seg(f, ln.from + 8, ln.from + 14), r, -0.06);
           }
-          if (n === 9) {   // the fix: the names become Client A, B, C, the numbers go; then the neat table
-            const c1 = cu(1, 0.45);
-            laptopScreen(c, W, f, r, f < c1 - 8 ? "paste" : "swap", seg(f, c1 - 8, c1 + 22), seg(f, ln.from + ln.frames - 30, ln.from + ln.frames - 18));
-            if (f >= ln.from + ln.frames - 18) tag(c, "safe to paste ✓", W / 2, 1300, 60, "#dcfce7", "#166534", -0.02, seg(f, ln.from + ln.frames - 18, ln.from + ln.frames - 10));
+          if (n === 9) {   // the fix: three fake rows and a question; the AI's formula; the real list never leaves his laptop
+            const c1 = cu(1, 0.55);
+            laptopScreen(c, W, f, r, "fake", seg(p, 0.02, 0.4), seg(f, c1 - 20, c1 - 10));
+            if (f >= c1) tag(c, "his 200 real rows: neat in Excel, never pasted ✓", W / 2, 1370, 50, "#dcfce7", "#166534", -0.02, seg(f, c1, c1 + 8));
           }
         } else {
           // ---------- the office ----------
@@ -348,14 +353,14 @@ const StOffice: React.FC<SP> = ({ s }) => {
           const m1 = n === 4 ? seg(p, 0.3, 0.42) : n === 5 ? 1 : 0;
           if (m1 > 0) {
             const flip = n === 5 ? seg(p, 0, 0.12) : 0, c1 = n === 5 ? cu(1, 0.5) : 0;
-            mythCard(c, W, 380, "\"A chatbot is a private diary\"",
+            mythCard(c, W, 380, "\"Only me and the AI see it\"",
               n === 5 && f >= c1 ? ["Chats can train the AI.", "Some are read by real people."] : ["Chats can train the AI."],
-              "Google's Gemini privacy page, Oct 2026", easeOut(m1), flip);
+              "Google's Gemini privacy page · ChatGPT has a similar switch", easeOut(m1), flip);
           }
           const m2 = n === 6 ? seg(p, 0.3, 0.42) : n === 7 || n === 8 ? 1 : 0;
           if (m2 > 0) {
             const c1 = n === 7 ? cu(1, 0.45) : 0, flip = n === 7 ? seg(f, c1 - 4, c1 + 4) : n === 8 ? 1 : 0;
-            mythCard(c, W, 380, "\"Delete it and it's gone\"", ["read by a reviewer? kept,", "even after you delete"],
+            mythCard(c, W, 380, "\"Delete it and it's gone\"", ["reviewed by a person? kept,", "even after you delete it"],
               "Google's Gemini privacy page, Oct 2026", easeOut(m2) * (n === 8 ? 1 - seg(p, 0.7, 0.95) : 1), flip, "UP TO 3 YEARS");
           }
           if (n === 10) rule(c, W, seg(p, 0.05, 0.18));

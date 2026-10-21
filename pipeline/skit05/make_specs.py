@@ -13,19 +13,19 @@ R = ROOT / "reels"
 # "sneha" (the loop's desk). prop: what the line brings on screen (OfficeCrayon.tsx). [1] = a cue inside the line.
 LINES = {
     1: ("lakshmi", "laptop", "hook", "Arjun, STOP! Don't press send!", "అర్జున్, ఆగు! సెండ్ నొక్కకు!"),
-    2: ("arjun", "arjun", "neat", "It's just our client list! [1] I asked the AI to make it neat.",
-        "మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడిగా."),
+    2: ("arjun", "arjun", "neat", "It's just our client list! [1] I'm asking the AI to make it neat.",
+        "మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడుగుతున్నా."),
     3: ("lakshmi", "lakshmi", "numbers", "Two hundred phone numbers... [1] into a free chatbot?!", "రెండొందల ఫోన్ నంబర్లు... [1] ఫ్రీ చాట్‌బాట్ లోకా?!"),
-    4: ("arjun", "arjun", "myth1", "Relax, ma'am. It's private, like my diary.", "రిలాక్స్ మేడమ్. నా డైరీ లాగా ప్రైవేట్."),
-    5: ("lakshmi", "lakshmi", "fact1", "On free chatbots, chats can train the AI. [1] And some chats are read by real people.",
-        "ఫ్రీ చాట్‌బాట్లలో మన చాట్స్ తో ఏఐ ని ట్రైన్ చెయ్యొచ్చు. [1] కొన్ని చాట్స్ ని నిజం మనుషులు చదువుతారు."),
+    4: ("arjun", "arjun", "myth1", "Relax! Only me and the AI see it.", "రిలాక్స్ మేడమ్. నేను, ఏఐ తప్ప ఎవరూ చూడరు."),   # "Relax, ma'am" was heard "Relax mom"
+    5: ("lakshmi", "lakshmi", "fact1", "Your chats can train the AI. [1] And some are read by real people.",
+        "మన చాట్స్ ని ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు. [1] కొన్నిటిని నిజంగా మనుషులే చదువుతారు."),   # not "free": paid personal plans work the same
     6: ("arjun", "arjun", "myth2", "Okay, okay! I'll delete the chat after.", "సరే సరే! తర్వాత చాట్ డిలీట్ చేస్తా."),
-    7: ("lakshmi", "lakshmi", "fact2", "Google's own page: chats a reviewer read [1] stay up to three years. Even after you delete.",
-        "గూగుల్ పేజీనే చెప్తోంది: రివ్యూయర్ చదివిన చాట్స్ [1] మూడేళ్ల వరకు ఉంటాయి. డిలీట్ చేసినా సరే."),
+    7: ("lakshmi", "lakshmi", "fact2", "If a person reviewed your chat, Google keeps it [1] up to three years. Even after you delete it.",
+        "మనుషులు చదివిన చాట్ ని గూగుల్ [1] మూడేళ్ల వరకు ఉంచుతుంది. డిలీట్ చేసినా సరే."),
     8: ("arjun", "arjun", "shock", "Three years?! [1] So I can't use AI at all?", "మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?"),
-    9: ("lakshmi", "laptop", "swap", "Use it! Just swap the details first. [1] Client A, Client B. No numbers.",
-        "వాడు! ముందు వివరాలు మార్చు. [1] క్లయింట్ ఏ, క్లయింట్ బీ. నంబర్లు వద్దు."),
-    10: ("lakshmi", "wide", "rule", "Paste only what you'd pin on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టగలిగేదే పేస్ట్ చెయ్."),
+    9: ("lakshmi", "laptop", "swap", "Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you.",
+        "వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే."),   # a fix that still gets the list done (script review)
+    10: ("lakshmi", "wide", "rule", "Paste only what you'd pin on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్."),
     11: ("arjun", "sneha", "loop", "Sneha, STOP! Don't press send!", "స్నేహా, ఆగు! సెండ్ నొక్కకు!"),
 }
 TTS_EN = {}
@@ -34,7 +34,7 @@ TE_SHOW = {}
 # Sound (CLAUDE.md arc): a slam on frame 1 with the shout; the bed builds under the argument; a riser and a boing into
 # each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; pops as the names
 # turn into Client A, B, C and a success sting on the neat table; a snap on the rule; a rise into the second slam.
-SCENES = [("of_a", (1, 2, 3), {"boost": 1.2, "tail": 0.1}),
+SCENES = [("of_a", (1, 2, 3), {"pre": 0.35, "boost": 1.2, "tail": 0.1}),   # the slam lands before "Arjun"
           ("of_b", (4, 5, 6, 7, 8), {"lift": 0.5, "pre": 0.3, "boost": 1.0, "drop_at": [[3, "1"]], "tail": 0.1}),
           ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.35, "rise": 1.6, "tail": 0.0})]
 # seconds after line n (default 0.16 EN / 0.24 TE): the fact cards' read, the neat table's read
@@ -43,7 +43,7 @@ PAUSES = {"en": {7: {"1": 0.45}}, "te": {7: {"1": 0.5}}}   # the beat before "th
 GAIN = {"lakshmi": 0.0, "arjun": 0.5, "sneha": 0.0}
 GAIN_LINE = {7: 1.0, 11: 1.0}
 TEMPO = {"en": 1.08, "te": 1.05}
-YT = {"of_a": "The client list", "of_b": "Myth vs fact", "of_c": "Swap the details"}
+YT = {"of_a": "The client list", "of_b": "Myth vs fact", "of_c": "Fake rows, real list"}
 
 
 def spec(lang):

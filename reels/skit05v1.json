@@ -40,6 +40,7 @@
    "id": "of_a",
    "type": "sk_office",
    "tail": 0.1,
+   "pre": 0.35,
    "boost": 1.2,
    "data": {
     "beats": [
@@ -81,8 +82,8 @@
     {
      "who": "arjun",
      "file": "02_arjun.wav",
-     "text": "It's just our client list! [1] I asked the AI to make it neat.",
-     "show": "It's just our client list! I asked the AI to make it neat.",
+     "text": "It's just our client list! [1] I'm asking the AI to make it neat.",
+     "show": "It's just our client list! I'm asking the AI to make it neat.",
      "maxgap": 0.25,
      "gap": 0.16,
      "gain_db": 0.5
@@ -154,8 +155,8 @@
     {
      "who": "arjun",
      "file": "04_arjun.wav",
-     "text": "Relax, ma'am. It's private, like my diary.",
-     "show": "Relax, ma'am. It's private, like my diary.",
+     "text": "Relax! Only me and the AI see it.",
+     "show": "Relax! Only me and the AI see it.",
      "maxgap": 0.25,
      "gap": 0.16,
      "gain_db": 0.5
@@ -163,8 +164,8 @@
     {
      "who": "lakshmi",
      "file": "05_lakshmi.wav",
-     "text": "On free chatbots, chats can train the AI. [1] And some chats are read by real people.",
-     "show": "On free chatbots, chats can train the AI. And some chats are read by real people.",
+     "text": "Your chats can train the AI. [1] And some are read by real people.",
+     "show": "Your chats can train the AI. And some are read by real people.",
      "maxgap": 0.25,
      "gap": 0.5
     },
@@ -180,8 +181,8 @@
     {
      "who": "lakshmi",
      "file": "07_lakshmi.wav",
-     "text": "Google's own page: chats a reviewer read [1] stay up to three years. Even after you delete.",
-     "show": "Google's own page: chats a reviewer read stay up to three years. Even after you delete.",
+     "text": "If a person reviewed your chat, Google keeps it [1] up to three years. Even after you delete it.",
+     "show": "If a person reviewed your chat, Google keeps it up to three years. Even after you delete it.",
      "maxgap": 0.25,
      "gap": 0.6,
      "pauses": {
@@ -231,8 +232,8 @@
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "Swap the details",
-     "title": "Swap the details",
+     "chapter": "Fake rows, real list",
+     "title": "Fake rows, real list",
      "notes": []
     }
    },
@@ -240,8 +241,8 @@
     {
      "who": "lakshmi",
      "file": "09_lakshmi.wav",
-     "text": "Use it! Just swap the details first. [1] Client A, Client B. No numbers.",
-     "show": "Use it! Just swap the details first. Client A, Client B. No numbers.",
+     "text": "Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you.",
+     "show": "Use it! Paste three fake rows, ask for the formula. Your real list stays with you.",
      "maxgap": 0.25,
      "gap": 0.6
     },

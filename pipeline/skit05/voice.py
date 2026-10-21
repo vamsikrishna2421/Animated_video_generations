@@ -44,11 +44,12 @@ VOICE_TE = {
              "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
-MUST = {"en": {1: [("arjun",), ("stop",), ("send",)], 2: [("client",), ("list",), ("neat",)], 3: [("hundred", "200"), ("numbers", "number"), ("chatbot", "chat")],
-               4: [("relax",), ("private",), ("diary",)], 5: [("train",), ("read",), ("people",)], 6: [("delete",)],
-               7: [("google", "google's"), ("reviewer",), ("three", "3"), ("years", "year"), ("delete",)], 8: [("three", "3"), ("years", "year"), ("use",)],
-               9: [("swap",), ("details", "detail"), ("client",)], 10: [("paste",), ("notice",), ("board",)], 11: [("sneha",), ("stop",), ("send",)]},
-        "te": {3: [("रेंड", "रेंडो", "रेनडो")], 5: [("चदु", "चदव")], 7: [("मूडे", "मुडे", "मूडेल")], 8: [("मूडे", "मुडे")]}}   # Telugu as the judge writes it (Devanagari)
+MUST = {"en": {1: [("arjun",), ("stop",), ("send",)], 2: [("client",), ("list",), ("asking", "ask"), ("neat",)], 3: [("hundred", "200"), ("numbers", "number"), ("chatbot", "chat")],
+               4: [("relax",), ("only",), ("see",)], 5: [("chats", "chat"), ("train",), ("read",), ("people",)], 6: [("delete",)],
+               7: [("person",), ("reviewed",), ("google", "google's"), ("three", "3"), ("years", "year"), ("delete",)], 8: [("three", "3"), ("years", "year"), ("use",)],
+               9: [("fake",), ("rows", "row"), ("formula",), ("real",), ("list",)], 10: [("paste",), ("notice",), ("board",)], 11: [("sneha",), ("stop",), ("send",)]},
+        "te": {3: [("रेंड", "रेंडो", "रेनडो")], 5: [("चदु", "चदव"), ("ट्रेनि", "ट्रैनि", "ट्रेनिं", "trai")], 7: [("मूडे", "मुडे", "मूडेल")], 8: [("मूडे", "मुडे")],
+               9: [("वाडो", "वाड़ो", "वाडोच"), ("फेक", "फ़ेक", "fake"), ("फार्मु", "फॉर्मु", "फार्मू", "formul")]}}   # Telugu as the judge writes it (Devanagari)
 
 KEEP = False
 

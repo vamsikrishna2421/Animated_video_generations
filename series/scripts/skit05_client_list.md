@@ -1,4 +1,4 @@
-# Skit 05 "The client list" (what you paste into a free chatbot isn't private), script v1
+# Skit 05 "The client list" (what you paste into a free chatbot isn't private), script v2
 
 Creative reel 05 (daily run 2, Oct 21, 2026). Format: an office skit with myth-vs-fact cards, loops. Cast: Lakshmi (team
 lead, mid-thirties, kurta, glasses, office ID on a lanyard), Arjun (new joiner, 22, formal shirt, ID card), Sneha (new
@@ -31,18 +31,18 @@ people, so swap names and numbers out before you paste; paste only what you'd pi
    "You gave our clients' numbers to... whom?" (slower: the stakes need reading)
 3. A MYTH card first, "What you type to a chatbot is private", with a stamp. (a quiz, no story in frame 1)
 
-## Script (English)
+## Script (English), v2 after the script review
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Lakshmi | Arjun, STOP! Don't press send! | frame 1: her hand slams his laptop lid; the chat box shows "CLIENTS_FINAL.xlsx · 200 rows · names, phone numbers", cursor on SEND |
-| 2 | Arjun | It's just our client list! [1] I asked the AI to make it neat. | his screen: "make this list neat" + the pasted rows (blurred names, numbers) |
+| 1 | Lakshmi | Arjun, STOP! Don't press send! | frame 1: big sticker "200 CLIENT PHONE NUMBERS → AN AI CHATBOT"; her hand slams his laptop lid (a beat before her voice); the chat box shows "CLIENTS_FINAL.xlsx · 200 rows", cursor on SEND |
+| 2 | Arjun | It's just our client list! [1] I'm asking the AI to make it neat. | tag "make this list neat" |
 | 3 | Lakshmi | Two hundred phone numbers... [1] into a free chatbot?! | close on her: "200 numbers" tag |
-| 4 | Arjun | Relax, ma'am. It's private, like my diary. | card slides in: "MYTH: a chatbot is a private diary" |
-| 5 | Lakshmi | On free chatbots, chats can train the AI. [1] And some chats are read by real people. | the card flips: "FACT: chats can be used to improve the AI · some are read by human reviewers" (Google's Gemini privacy page) |
+| 4 | Arjun | Relax! Only me and the AI see it. | card slides in: "MYTH: only me and the AI see it" |
+| 5 | Lakshmi | Your chats can train the AI. [1] And some are read by real people. | the card flips: "FACT: chats can train the AI · some are read by real people" (Google's Gemini privacy page · ChatGPT has a similar switch) |
 | 6 | Arjun | Okay, okay! I'll delete the chat after. | card 2: "MYTH: delete it and it's gone" |
-| 7 | Lakshmi | Google's own page: chats a reviewer read [1] stay up to three years. Even after you delete. | the bed drops out before "three years"; card 2 flips: "FACT: read by a reviewer? kept up to 3 years, even after delete" (Google's Gemini privacy page) |
+| 7 | Lakshmi | If a person reviewed your chat, Google keeps it [1] up to three years. Even after you delete it. | the bed drops out before "three years"; card 2 flips: "UP TO 3 YEARS · reviewed by a person? kept, even after you delete it" (Google's Gemini privacy page) |
 | 8 | Arjun | Three years?! [1] So I can't use AI at all? | |
-| 9 | Lakshmi | Use it! Just swap the details first. [1] Client A, Client B. No numbers. | his screen: the names turn into "Client A · Client B · Client C", the numbers vanish; the AI's neat table ✓ |
+| 9 | Lakshmi | Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you. | his screen: three made-up messy rows ("fake data") and "Excel formula to make them neat?"; the AI answers =PROPER(TRIM(A2)), =SUBSTITUTE(B2," ",""), sort A to Z; "his 200 real rows: neat in Excel, never pasted ✓" |
 | 10 | Lakshmi | Paste only what you'd pin on the notice board. | rule chip: "PASTE ONLY WHAT YOU'D PIN ON THE NOTICE BOARD" next to the board |
 | 11 | Arjun | Sneha, STOP! Don't press send! | Sneha's laptop: "SALARY_SHEET.xlsx" pasted into a chatbot; Arjun's hand slams her lid; cut to frame 1 (loops) |
 
@@ -50,17 +50,26 @@ About 40 s. Caption: the office rule (use the company's approved AI account: bus
 default), the switches on a personal account ("Improve the model for everyone" in ChatGPT, "Keep Activity" in Gemini,
 or a temporary chat), the sources, and the comment prompt.
 
-## Script (Telugu; English on-screen text)
+Script review (two viewers): both stopped at the slam and liked "three years" and the salary-sheet loop; both: "Client
+A, no numbers" left nothing to make neat (now three fake rows and a formula, the real list stays on his laptop); "free"
+was wrong for paid personal plans (dropped; the card now says what the voice says); "chats a reviewer read stay" made
+them replay (now "If a person reviewed your chat, Google keeps it up to three years"); "what about ChatGPT?" (the card
+says ChatGPT has a similar switch); frame 1 needed the stakes in big letters and the slam a beat before the voice; fewer
+quiz-app dings (a dull bonk on the bad news, the deepest hit on "three years", the loudest on the last slam); "diary"
+-> "Only me and the AI see it". Telugu: a bare "వాడు!" can be heard as "that fellow!" (now "వాడొచ్చు!"); "నిజంగా
+మనుషులే చదువుతారు", "ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు", "మనుషులు చదివిన చాట్", "పెట్టేదే".
+
+## Script (Telugu; English on-screen text), v2
 1. లక్ష్మి: అర్జున్, ఆగు! సెండ్ నొక్కకు!
-2. అర్జున్: మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడిగా.
+2. అర్జున్: మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడుగుతున్నా.
 3. లక్ష్మి: రెండొందల ఫోన్ నంబర్లు... [1] ఫ్రీ చాట్‌బాట్ లోకా?!
-4. అర్జున్: రిలాక్స్ మేడమ్. నా డైరీ లాగా ప్రైవేట్.
-5. లక్ష్మి: ఫ్రీ చాట్‌బాట్లలో మన చాట్స్ తో ఏఐ ని ట్రైన్ చెయ్యొచ్చు. [1] కొన్ని చాట్స్ ని నిజం మనుషులు చదువుతారు.
+4. అర్జున్: రిలాక్స్ మేడమ్. నేను, ఏఐ తప్ప ఎవరూ చూడరు.
+5. లక్ష్మి: మన చాట్స్ ని ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు. [1] కొన్నిటిని నిజంగా మనుషులే చదువుతారు.
 6. అర్జున్: సరే సరే! తర్వాత చాట్ డిలీట్ చేస్తా.
-7. లక్ష్మి: గూగుల్ పేజీనే చెప్తోంది: రివ్యూయర్ చదివిన చాట్స్ [1] మూడేళ్ల వరకు ఉంటాయి. డిలీట్ చేసినా సరే.
+7. లక్ష్మి: మనుషులు చదివిన చాట్ ని గూగుల్ [1] మూడేళ్ల వరకు ఉంచుతుంది. డిలీట్ చేసినా సరే.
 8. అర్జున్: మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?
-9. లక్ష్మి: వాడు! ముందు వివరాలు మార్చు. [1] క్లయింట్ ఏ, క్లయింట్ బీ. నంబర్లు వద్దు.
-10. లక్ష్మి: నోటీస్ బోర్డ్ మీద పెట్టగలిగేదే పేస్ట్ చెయ్.
+9. లక్ష్మి: వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే.
+10. లక్ష్మి: నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్.
 11. అర్జున్: స్నేహా, ఆగు! సెండ్ నొక్కకు!
 
 ## Sound
