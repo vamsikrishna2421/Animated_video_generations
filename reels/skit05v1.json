@@ -1,0 +1,268 @@
+{
+ "id": "skit05v1",
+ "title": "The client list",
+ "label": "SKIT",
+ "banner": "The client list",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": false,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.08,
+ "parler_lang": "en",
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "of_a",
+   "type": "sk_office",
+   "tail": 0.1,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "lakshmi",
+      "shot": "laptop",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "neat",
+      "n": 2
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "numbers",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The client list",
+     "title": "The client list",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "lakshmi",
+     "file": "01_lakshmi.wav",
+     "text": "Arjun, STOP! Don't press send!",
+     "show": "Arjun, STOP! Don't press send!",
+     "maxgap": 0.25,
+     "gap": 0.2
+    },
+    {
+     "who": "arjun",
+     "file": "02_arjun.wav",
+     "text": "It's just our client list! [1] I asked the AI to make it neat.",
+     "show": "It's just our client list! I asked the AI to make it neat.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "03_lakshmi.wav",
+     "text": "Two hundred phone numbers... [1] into a free chatbot?!",
+     "show": "Two hundred phone numbers... into a free chatbot?!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    }
+   ]
+  },
+  {
+   "id": "of_b",
+   "type": "sk_office",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.3,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     3,
+     "1"
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "myth1",
+      "n": 4
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "fact1",
+      "n": 5
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "myth2",
+      "n": 6
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "fact2",
+      "n": 7
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "shock",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Myth vs fact",
+     "title": "Myth vs fact",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "arjun",
+     "file": "04_arjun.wav",
+     "text": "Relax, ma'am. It's private, like my diary.",
+     "show": "Relax, ma'am. It's private, like my diary.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "05_lakshmi.wav",
+     "text": "On free chatbots, chats can train the AI. [1] And some chats are read by real people.",
+     "show": "On free chatbots, chats can train the AI. And some chats are read by real people.",
+     "maxgap": 0.25,
+     "gap": 0.5
+    },
+    {
+     "who": "arjun",
+     "file": "06_arjun.wav",
+     "text": "Okay, okay! I'll delete the chat after.",
+     "show": "Okay, okay! I'll delete the chat after.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "07_lakshmi.wav",
+     "text": "Google's own page: chats a reviewer read [1] stay up to three years. Even after you delete.",
+     "show": "Google's own page: chats a reviewer read stay up to three years. Even after you delete.",
+     "maxgap": 0.25,
+     "gap": 0.6,
+     "pauses": {
+      "1": 0.45
+     },
+     "gain_db": 1.0
+    },
+    {
+     "who": "arjun",
+     "file": "08_arjun.wav",
+     "text": "Three years?! [1] So I can't use AI at all?",
+     "show": "Three years?! So I can't use AI at all?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "of_c",
+   "type": "sk_office",
+   "tail": 0.0,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.35,
+   "rise": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "lakshmi",
+      "shot": "laptop",
+      "prop": "swap",
+      "n": 9
+     },
+     {
+      "who": "lakshmi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "arjun",
+      "shot": "sneha",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Swap the details",
+     "title": "Swap the details",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "lakshmi",
+     "file": "09_lakshmi.wav",
+     "text": "Use it! Just swap the details first. [1] Client A, Client B. No numbers.",
+     "show": "Use it! Just swap the details first. Client A, Client B. No numbers.",
+     "maxgap": 0.25,
+     "gap": 0.6
+    },
+    {
+     "who": "lakshmi",
+     "file": "10_lakshmi.wav",
+     "text": "Paste only what you'd pin on the notice board.",
+     "show": "Paste only what you'd pin on the notice board.",
+     "maxgap": 0.25,
+     "gap": 0.5
+    },
+    {
+     "who": "arjun",
+     "file": "11_arjun.wav",
+     "text": "Sneha, STOP! Don't press send!",
+     "show": "Sneha, STOP! Don't press send!",
+     "maxgap": 0.25,
+     "gap": 0.05,
+     "gain_db": 1.5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "id": "skit05te",
+ "title": "The client list (Telugu audio)",
+ "label": "SKIT",
+ "banner": "The client list",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": false,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.05,
+ "parler_lang": "te",
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "of_a",
+   "type": "sk_office",
+   "tail": 0.1,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "lakshmi",
+      "shot": "laptop",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "neat",
+      "n": 2
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "numbers",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The client list",
+     "title": "The client list",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "lakshmi",
+     "file": "01_lakshmi.wav",
+     "text": "అర్జున్, ఆగు! సెండ్ నొక్కకు!",
+     "show": "Arjun, STOP! Don't press send!",
+     "maxgap": 0.3,
+     "gap": 0.2
+    },
+    {
+     "who": "arjun",
+     "file": "02_arjun.wav",
+     "text": "మన క్లయింట్ లిస్టే కదా! [1] నీట్ గా చెయ్యమని ఏఐ ని అడిగా.",
+     "show": "It's just our client list! I asked the AI to make it neat.",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "03_lakshmi.wav",
+     "text": "రెండొందల ఫోన్ నంబర్లు... [1] ఫ్రీ చాట్‌బాట్ లోకా?!",
+     "show": "Two hundred phone numbers... into a free chatbot?!",
+     "maxgap": 0.3,
+     "gap": 0.24
+    }
+   ]
+  },
+  {
+   "id": "of_b",
+   "type": "sk_office",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.3,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     3,
+     "1"
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "myth1",
+      "n": 4
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "fact1",
+      "n": 5
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "myth2",
+      "n": 6
+     },
+     {
+      "who": "lakshmi",
+      "shot": "lakshmi",
+      "prop": "fact2",
+      "n": 7
+     },
+     {
+      "who": "arjun",
+      "shot": "arjun",
+      "prop": "shock",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Myth vs fact",
+     "title": "Myth vs fact",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "arjun",
+     "file": "04_arjun.wav",
+     "text": "రిలాక్స్ మేడమ్. నా డైరీ లాగా ప్రైవేట్.",
+     "show": "Relax, ma'am. It's private, like my diary.",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "05_lakshmi.wav",
+     "text": "ఫ్రీ చాట్‌బాట్లలో మన చాట్స్ తో ఏఐ ని ట్రైన్ చెయ్యొచ్చు. [1] కొన్ని చాట్స్ ని నిజం మనుషులు చదువుతారు.",
+     "show": "On free chatbots, chats can train the AI. And some chats are read by real people.",
+     "maxgap": 0.3,
+     "gap": 0.5
+    },
+    {
+     "who": "arjun",
+     "file": "06_arjun.wav",
+     "text": "సరే సరే! తర్వాత చాట్ డిలీట్ చేస్తా.",
+     "show": "Okay, okay! I'll delete the chat after.",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "07_lakshmi.wav",
+     "text": "గూగుల్ పేజీనే చెప్తోంది: రివ్యూయర్ చదివిన చాట్స్ [1] మూడేళ్ల వరకు ఉంటాయి. డిలీట్ చేసినా సరే.",
+     "show": "Google's own page: chats a reviewer read stay up to three years. Even after you delete.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "pauses": {
+      "1": 0.5
+     },
+     "gain_db": 1.0
+    },
+    {
+     "who": "arjun",
+     "file": "08_arjun.wav",
+     "text": "మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?",
+     "show": "Three years?! So I can't use AI at all?",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "of_c",
+   "type": "sk_office",
+   "tail": 0.0,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.35,
+   "rise": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "lakshmi",
+      "shot": "laptop",
+      "prop": "swap",
+      "n": 9
+     },
+     {
+      "who": "lakshmi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "arjun",
+      "shot": "sneha",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Swap the details",
+     "title": "Swap the details",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "lakshmi",
+     "file": "09_lakshmi.wav",
+     "text": "వాడు! ముందు వివరాలు మార్చు. [1] క్లయింట్ ఏ, క్లయింట్ బీ. నంబర్లు వద్దు.",
+     "show": "Use it! Just swap the details first. Client A, Client B. No numbers.",
+     "maxgap": 0.3,
+     "gap": 0.6
+    },
+    {
+     "who": "lakshmi",
+     "file": "10_lakshmi.wav",
+     "text": "నోటీస్ బోర్డ్ మీద పెట్టగలిగేదే పేస్ట్ చెయ్.",
+     "show": "Paste only what you'd pin on the notice board.",
+     "maxgap": 0.3,
+     "gap": 0.5
+    },
+    {
+     "who": "arjun",
+     "file": "11_arjun.wav",
+     "text": "స్నేహా, ఆగు! సెండ్ నొక్కకు!",
+     "show": "Sneha, STOP! Don't press send!",
+     "maxgap": 0.3,
+     "gap": 0.05,
+     "gain_db": 1.5
+    }
+   ]
+  }
+ ]
+}
