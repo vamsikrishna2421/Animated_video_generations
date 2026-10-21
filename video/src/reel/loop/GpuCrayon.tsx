@@ -132,9 +132,9 @@ const bars = (c: Ctx, y0: number, rows: [string, number, string, number][]) => {
   });
 };
 const rule = (c: Ctx, W: number, k: number[]) => {
-  const rows: [string, string][] = [["CPU: a few fast cores", "#e2e8f0"], ["GPU: thousands at once", "#dcfce7"], ["+ check its memory (GB)", "#fef9c3"]];
+  const rows: [string, string][] = [["CPU: a few fast cores", "#e2e8f0"], ["GPU: thousands at once", "#dcfce7"]];
   c.save(); c.translate(W / 2, 1060);
-  c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, -490, -300, 980, 560, 30); c.fill();
+  c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, -490, -300, 980, 430, 30); c.fill();
   c.font = SANS(56); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("FOR AI, COUNT THE WORKERS", 0, -210);
   rows.forEach(([t, bg], i) => {
     const q = k[i] ?? 0; if (q <= 0) return;
@@ -178,7 +178,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
       sfx.push(<Sfx key={k("s")} at={at + 10} src="audio/sfx_success.wav" vol={0.35} />);
       for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("f" + q)} at={at + 14 + q * 4} src="audio/sfx_pop.wav" vol={0.18} />);
     }
-    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 1, 0.55) - 4} src="audio/sfx_snap.wav" vol={0.35} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "slow") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.6) - 40} src="reel/sfx_riser.wav" vol={0.35} />,
       <Sfx key={k("h")} at={cue(i, 1, 0.6) - 4} src="reel/sfx_boom.wav" vol={0.6} />);
@@ -198,7 +198,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           // ---------- the phone, full frame ----------
           const titles: Record<string, string> = {
             billion: "every word I write", workers: "your phone: 8 cores = 8 workers", gpu: "a graphics card (GPU)",
-            test: "our real test: the same reply", card: "a gaming laptop's graphics card", memory: "graphics card memory", slow: "graphics card memory",
+            test: "our real test: the same reply", card: "who needs a graphics card?", memory: "graphics card memory", slow: "graphics card memory",
           };
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
           bigPhone(c, W, H, titles[b.prop] ?? "", r, f);
@@ -213,7 +213,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
             const v = Math.round(1.5e9 * easeOut(k));
             c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 140, 1280, W - 280, 150, 24); c.fill();
             c.font = SANS(64); c.fillStyle = "#facc15"; c.fillText(v.toLocaleString("en-US") + " ×", W / 2, 1362);
-            c.font = SANS(34, 600); c.fillStyle = "#e2e8f0"; c.fillText("(150 crore) for one word", W / 2, 1410);
+            c.font = SANS(34, 600); c.fillStyle = "#e2e8f0"; c.fillText("150 crore · for one word", W / 2, 1410);
           }
           if (b.prop === "workers") {
             for (let q = 0; q < 8; q++) worker(c, 200 + (q % 4) * 230, 520 + Math.floor(q / 4) * 230, 1.3, BLUE, f / 30, r);
@@ -235,17 +235,27 @@ const StGpu: React.FC<SP> = ({ s }) => {
             const c1 = cu(1, 0.5);
             bars(c, 470, [["1 core", 11.5, ORANGE, seg(f, ln.from + 4, ln.from + 22)], ["2 cores", 6.3, "#ca8a04", seg(f, ln.from + 14, ln.from + 32)],
               ["4 cores", 3.6, GREEN, seg(f, c1 - 4, c1 + 14)]]);
-            if (f >= c1 + 16) tag(c, "3x faster", W / 2, 1150, 90, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 16, c1 + 24));
+            if (f >= c1 + 16) tag(c, "3x faster", 760, 1080, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 16, c1 + 24));
+            const c2 = cu(2, 0.8);
+            if (f >= c2 - 4) tag(c, "each word's sums split 4 ways", W / 2, 1190, 54, "#e0e7ff", INK, 0.02, seg(f, c2 - 4, c2 + 6));
+            if (f >= c2 + 14) tag(c, "23 orders × 3.6 s ≈ 83 s", W / 2, 1300, 62, "#fee2e2", "#991b1b", -0.02, seg(f, c2 + 14, c2 + 22));
             c.font = SANS(30, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
-            c.fillText("the same small AI (EP35's medium brain) on a laptop CPU", W / 2, 1290); c.fillText("no graphics card · seconds per reply", W / 2, 1335);
+            c.fillText("the same small AI (EP35's medium brain) · our laptop's CPU, no graphics card", W / 2, 1400);
           }
           if (b.prop === "card") {
-            gpuCard(c, W / 2, 620, 1.2, f, r);
-            c.font = SANS(48); c.fillStyle = INK; c.textAlign = "center"; c.fillText("RTX 5060 laptop GPU", W / 2, 880);
-            tag(c, "3,328 cores", 330, 1020, 80, "#dcfce7", "#14532d", -0.03, seg(p, 0.15, 0.3));
-            tag(c, "8 GB memory", 760, 1020, 68, "#ede9fe", "#4c1d95", 0.03, seg(p, 0.3, 0.45));
-            c.font = SANS(40); c.fillStyle = "#475569"; c.fillText("your phone: 8 cores", W / 2, 1180);
-            c.font = SANS(28, 600); c.fillStyle = "#94a3b8"; c.fillText("cores and memory from NVIDIA's spec page", W / 2, 1400);
+            const c1 = cu(1, 0.45);
+            if (f < c1 - 4) {   // ChatGPT: a data centre full of graphics cards, not yours
+              for (let q = 0; q < 12; q++) gpuCard(c, 230 + (q % 3) * 310, 520 + Math.floor(q / 3) * 160, 0.4, f, r);
+              tag(c, "ChatGPT: runs on THEIR graphics cards", W / 2, 1230, 54, "#e0e7ff", INK, -0.02, seg(p, 0.05, 0.15));
+              c.font = SANS(40, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("you don't need one to use it", W / 2, 1330);
+            } else {
+              gpuCard(c, W / 2, 600, 1.2, f, r);
+              c.font = SANS(46); c.fillStyle = INK; c.textAlign = "center"; c.fillText("gaming laptop GPU (RTX 5060)", W / 2, 860);
+              tag(c, "3,328 cores", 330, 1000, 80, "#dcfce7", "#14532d", -0.03, seg(f, c1 - 4, c1 + 6));
+              tag(c, "8 GB memory", 760, 1000, 68, "#ede9fe", "#4c1d95", 0.03, seg(f, c1 + 8, c1 + 18));
+              c.font = SANS(40); c.fillStyle = "#475569"; c.fillText("phone CPU: 8 cores", W / 2, 1160);
+              c.font = SANS(28, 600); c.fillStyle = "#94a3b8"; c.fillText("cores and memory from NVIDIA's spec page", W / 2, 1400);
+            }
           }
           if (b.prop === "memory" || b.prop === "slow") {
             const c1 = cu(1, 0.5);
@@ -253,8 +263,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
             memJar(c, W / 2 - 80, 1080, pour, o, r);
             tag(c, "big brain, full size: 15 GB", W / 2, 470, 60, "#ede9fe", "#4c1d95", -0.02, 1);
             if (b.prop === "slow") {
-              c.fillStyle = "#fee2e2"; rrect(c, W / 2 + 10, 1150, 300, 120, 20); c.fill();
-              c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU (slow)", W / 2 + 160, 1225);
+              c.fillStyle = "#fee2e2"; rrect(c, W / 2 + 10, 1150, 330, 120, 20); c.fill();
+              c.font = SANS(38); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU: 8 workers", W / 2 + 175, 1225);
               const c2 = cu(1, 0.6);
               if (f >= c2 - 4) {
                 const k = seg(f, c2 - 4, c2 + 6);
@@ -289,12 +299,15 @@ const StGpu: React.FC<SP> = ({ s }) => {
           // screen-space props
           if (n === 1) headline(c, W, "23 ORDERS WAITING.", "THE AI IS STILL TYPING.", 1);
           if (n === 3) tag(c, "OCTA-CORE · 2.4 GHz", 300, 520, 56, "#e0e7ff", INK, -0.04, seg(p, 0.1, 0.25));
-          if (n === 5) bubble(c, 320, 560, "every kid, one shelf?", 64, seg(p, 0.05, 0.2), COL.yellow);
+          if (n === 5) bubble(c, 320, 560, "every kid, one rack?", 66, seg(p, 0.05, 0.2), COL.yellow);
           if (n === 7) bubble(c, 320, 560, "ONE reply?", 84, seg(p, 0.05, 0.2), COL.yellow);
-          if (n === 9) bubble(c, 320, 560, "3x faster!", 84, seg(p, 0.05, 0.2), "#dcfce7", "#14532d");
-          if (n === 11) bubble(c, 300, 540, "Sunny! Laptop!", 72, seg(p, 0.02, 0.15), COL.yellow);
-          if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.2, 0.3), seg(f, cu(1, 0.55) - 4, cu(1, 0.55) + 4)]);
-          if (n === 13) bubble(c, 320, 560, "BIG BRAIN!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");
+          if (n === 9) bubble(c, 320, 560, "still ~1.5 minutes?!", 70, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
+          if (n === 11) {
+            bubble(c, 300, 540, "Sunny! Laptop!", 72, seg(p, 0.02, 0.15), COL.yellow);
+            c.font = SANS(30, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("illustration: we tested no graphics card", W / 2, 1440);
+          }
+          if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.35, 0.45)]);
+          if (n === 13) bubble(c, 320, 560, "FULL SIZE!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");
           if (n === 15) bubble(c, 320, 560, "So?", 96, seg(p, 0.05, 0.2), COL.yellow);
         }
         // the quiz card, held after line 7 (screen space); its 3-2-1 ends as the card leaves
@@ -302,17 +315,17 @@ const StGpu: React.FC<SP> = ({ s }) => {
           const k = easeOut(seg(f, endL + 6, endL + 12)) * (1 - seg(f, next - 10, next - 2));
           c.save(); c.globalAlpha = 0.55 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); c.restore();
           c.save(); c.globalAlpha = k; c.translate(W / 2, 800); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
-          c.fillStyle = "#fffdf5"; rrect(c, -480, -380, 960, 760, 30); c.fill();
+          c.fillStyle = "#fffdf5"; rrect(c, -480, -380, 960, 680, 30); c.fill();
           c.font = SANS(46); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("YOUR CALL", 0, -300);
-          c.font = SANS(62); c.fillStyle = INK; c.fillText("More cores, ONE reply?", 0, -205);
-          c.textAlign = "left"; c.font = SANS(50);
-          c.fillStyle = "#e0e7ff"; rrect(c, -420, -140, 840, 110, 22); c.fill(); c.fillStyle = INK; c.fillText("A)  no change: word by word", -385, -70);
-          c.fillStyle = "#e0e7ff"; rrect(c, -420, -5, 840, 110, 22); c.fill(); c.fillStyle = INK; c.fillText("B)  faster", -385, 65);
-          c.font = SANS(44, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("comment A or B", 0, 175);
+          c.font = SANS(60); c.fillStyle = INK; c.fillText("More cores: is ONE reply faster?", 0, -205);
+          c.textAlign = "left"; c.font = SANS(60);
+          c.fillStyle = "#e0e7ff"; rrect(c, -420, -140, 400, 120, 22); c.fill(); c.fillStyle = INK; c.fillText("A)  no", -370, -62);
+          c.fillStyle = "#e0e7ff"; rrect(c, 20, -140, 400, 120, 22); c.fill(); c.fillStyle = INK; c.fillText("B)  yes", 70, -62);
+          c.font = SANS(44, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("comment A or B", 0, 60);
           const t = f - (next - 100), q = 3 - Math.floor(t / 30);
           if (t >= 0 && q >= 1) {
             const pop = 1 + 0.25 * (1 - clamp((t % 30) / 6));
-            c.save(); c.translate(0, 280); c.scale(pop, pop);
+            c.save(); c.translate(0, 200); c.scale(pop, pop);
             c.beginPath(); c.arc(0, 0, 58, 0, 7); c.fillStyle = q === 1 ? COL.red : INK; c.fill();
             c.font = SANS(78); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(q), 0, 28); c.restore();
           }

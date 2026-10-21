@@ -1,4 +1,4 @@
-# EP36 "The Diwali rush" (GPUs and AI chips: why hardware decides AI), script v1
+# EP36 "The Diwali rush" (GPUs and AI chips: why hardware decides AI), script v2
 
 Season 4, queue 038 (replaces the old "Why AI Runs on GPUs" lesson in that slot). Ravi anna's shop again (EP33-EP35):
 the shop's phone AI now answers the WhatsApp orders, with EP35's medium brain inside. Diwali evening: 23 orders unread
@@ -39,49 +39,63 @@ litre sunflower oil, 6 eggs, 1 packet of tea powder. Thank you for your order!" 
 the small model write 357 for 432: EP34's lesson, so the test reply has no prices.) We have no graphics card here, so
 the reel claims no measured GPU speed.
 
-## Script (English)
+## Script (English), v2 after the script review
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Ravi | Twenty orders waiting, and you're still typing ONE reply?! | frame 1: Diwali lights in the shop, three customers, the phone on the counter showing WhatsApp "23 unread · typing…"; sticker "23 ORDERS WAITING / THE AI IS STILL TYPING" |
-| 2 | AI | Every word I write takes over a billion multiplications. | phone full frame: the word "rice", then a mountain of tiny × marks and a counter racing to "1,500,000,000 ×" |
-| 3 | Ravi | Then hurry up! This phone has eight cores! | Ravi waves the phone box: "OCTA-CORE 2.4 GHz" |
-| 4 | AI | Eight workers, a billion sums. [1] I need thousands. | 8 big workers at a counter, each with a pile of sums; on [1] the pile doesn't shrink |
-| 5 | Ravi | Thousands?! Like Diwali stock-taking, every kid counting one shelf? | bubble "every kid, one shelf?" |
-| 6 | AI | Exactly. A graphics card, a GPU: [1] thousands of small cores, all at once. | the 8 workers vs a stadium of tiny workers (a grid of dots) finishing the pile in one go |
-| 7 | Ravi | But a reply comes word by word. [1] Can more cores make even ONE reply faster? | QUIZ card held ~3 s, 3-2-1: "YOUR CALL · More cores, ONE reply: A) no change, it's word by word B) faster · comment A or B" |
-| 8 | AI | Our test. One core: eleven seconds. [1] Four cores: under four. | phone: "our test: the same reply on 1, 2, 4 CPU cores" bars 11.5 s / 6.3 s / 3.6 s; tag "3x faster" |
-| 9 | Ravi | Three times faster! [1] Then thousands of cores... | |
-| 10 | AI | A gaming laptop's graphics card has three thousand three hundred. | a drawn graphics card: "gaming laptop GPU (RTX 5060): 3,328 cores · 8 GB" beside "phone: 8 cores" |
-| 11 | Ravi | Sunny! Bring your gaming laptop! | the gaming laptop on the counter (RGB keys); "23 unread" drops to 0 as replies fly out |
-| 12 | AI | For AI, count the workers, not their speed. [1] And check the card's memory. | rule chip: "FOR AI, COUNT THE WORKERS · CPU: a few fast cores · GPU: thousands at once · + check its memory (GB)" |
-| 13 | Ravi | Now put in the big brain! The full one! | |
-| 14 | AI | Full size, it's fifteen GB. [1] The card holds eight. | a memory jar "card memory: 8 GB"; the brain (15 GB) pours in and overflows |
+| 1 | Ravi | Twenty-three orders waiting, and you're still typing ONE reply?! | frame 1: Diwali lights, customers, the phone on the counter with WhatsApp "23 unread · typing…"; sticker "23 ORDERS WAITING. / THE AI IS STILL TYPING." |
+| 2 | AI | Every word I write [1] takes over a billion multiplications. | phone: the word "rice", a pile of × marks, a counter racing to "1,500,000,000 ×", "150 crore · for one word" |
+| 3 | Ravi | Then hurry up! This phone has eight cores! | tag "OCTA-CORE · 2.4 GHz" |
+| 4 | AI | Eight workers, a billion sums. [1] I need thousands. | 8 workers at desks, a progress bar crawling; on [1] "8 workers: way too few" |
+| 5 | Ravi | Like Diwali stock-taking? Every kid counting one rack? | bubble "every kid, one rack?" |
+| 6 | AI | Exactly. A GPU, the graphics card games use: [1] thousands of small cores, all at once. | "CPU: a few big cores" (8 workers) vs "GPU: thousands of small cores" (a grid of dots turning green at once on [1]); "all at once" |
+| 7 | Ravi | But ten helpers can't write one bill faster. [1] Can more cores speed up ONE reply? | QUIZ card held ~3 s, 3-2-1: "YOUR CALL · More cores: is ONE reply faster? A) no B) yes · comment A or B" |
+| 8 | AI | On our laptop: one core, eleven and a half seconds. [1] Four cores: under four. [2] Each word's sums get split. | bars 11.5 s / 6.3 s / 3.6 s, "3x faster"; on [2] "each word's sums split 4 ways", then "23 orders × 3.6 s ≈ 83 s" |
+| 9 | Ravi | Still almost a minute and a half! [1] Do I buy a graphics card? | bubble "still ~1.5 minutes?!" |
+| 10 | AI | For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores. | a wall of graphics cards: "ChatGPT: runs on THEIR graphics cards · you don't need one to use it"; on [1] a gaming laptop GPU (RTX 5060): "3,328 cores", "8 GB memory", "phone CPU: 8 cores" (NVIDIA's spec page) |
+| 11 | Ravi | Sunny! Bring your gaming laptop! | the gaming laptop on the counter, "23 unread" falls to 0; small "illustration: we tested no graphics card" |
+| 12 | AI | For AI, count the workers, not their speed. | rule chip "FOR AI, COUNT THE WORKERS · CPU: a few fast cores · GPU: thousands at once" |
+| 13 | Ravi | Now the big brain! Not the squeezed copy, the full one! | bubble "FULL SIZE!" |
+| 14 | AI | Full size, it's fifteen GB. [1] The card holds eight. | "big brain, full size: 15 GB" pours into a jar "card memory: 8 GB"; on [1] it overflows |
 | 15 | Ravi | So? | |
-| 16 | AI | So the rest runs on the slow side. [1] Typing... | the overflow drips to "CPU (slow)"; WhatsApp "23 unread · typing…" again; cut to frame 1 (loops) |
+| 16 | AI | So the rest goes back to the few workers. [1] Typing... | the overflow runs down to "CPU: 8 workers"; on [1] "typing…" and "23" again; cut to frame 1 (loops) |
 
-About 65 s. Tag on screen: "EP36 · AI From Scratch". Caption: EP37 tease (how a 15 GB brain fits in 5 GB), "try a
-GPU free: Google Colab (limited)", comment A or B, sources and our test.
+About 68 s. Tag on screen: "EP36 · AI From Scratch". Caption: EP37 tease (how the same brain shrank to 4.7 GB),
+"try a GPU free: Google Colab (limited)", phones' "AI chips" (NPUs) are small versions of the same idea, comment A or
+B, sources and our test.
 
-## Script (Telugu; English on-screen text)
-1. రవి: ఇరవై ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!
-2. ఏఐ: నేను రాసే ప్రతి పదానికి వంద కోట్లకు పైగా మల్టిప్లికేషన్లు.
+Script review (two viewers): both liked the shop, the octa-core box and the kids counting racks; both: "under four
+seconds" killed the problem (now 23 orders still take about 83 s on 4 cores), the ending was vague, and nobody said
+what to do or buy (now "For ChatGPT, no. That runs on theirs."). Fixed: "Twenty" vs 23; the test ran on our laptop, said
+out loud, and Ravi's word-by-word doubt is answered ("Each word's sums get split"); the quiz is one line and A is
+tempting ("ten helpers can't write one bill faster"); the gaming laptop clearing the queue is labelled an illustration
+(we tested no graphics card); the phone label says "phone CPU"; "the full one" was unclear next to EP35's 4.7 GB (now
+"Not the squeezed copy, the full one!", which sets up EP37); "the slow side" contradicted "a few fast cores" (now "the
+few workers"); the rule chip lost its memory row so the overflow is the reveal; why a graphics card (it's what games
+use). Telugu: "తలో ర్యాక్" ("తలో అర" read as "half each"), "అచ్చం అలాగే!" and "మా ల్యాప్‌టాప్ టెస్ట్ లో" (Parler drops bare
+openers), "త్వరగా" instead of "ఫాస్ట్" (EP35's "forced"), "ఎంతమంది అన్నదే ముఖ్యం" (not the bookish "సంఖ్య"), no "చూడు" to
+Ravi anna, "ఒక్క రిప్లై కూడా", "కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!" ("ఫుల్ ది" sounded like ordering a full bottle),
+"మూడు వేలకు పైగా".
+
+## Script (Telugu; English on-screen text), v2
+1. రవి: ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!
+2. ఏఐ: నేను రాసే ప్రతి పదానికి [1] వంద కోట్లకు పైగా మల్టిప్లికేషన్లు.
 3. రవి: అయితే త్వరగా చెయ్! ఈ ఫోన్ లో ఎనిమిది కోర్లు ఉన్నాయి!
 4. ఏఐ: ఎనిమిది మంది పనివాళ్ళు, వంద కోట్ల లెక్కలు. [1] నాకు వేలమంది కావాలి.
-5. రవి: వేలమందా?! దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో అర లెక్కపెట్టినట్టా?
-6. ఏఐ: అదే. గ్రాఫిక్స్ కార్డ్, అంటే జీపీయూ: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.
-7. రవి: కానీ రిప్లై ఒక్కో పదంగా వస్తుంది కదా. [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై అయినా ఫాస్ట్ అవుతుందా?
-8. ఏఐ: మా టెస్ట్. ఒక్క కోర్: పదకొండు సెకన్లు. [1] నాలుగు కోర్లు: నాలుగు లోపే.
-9. రవి: మూడు రెట్లు ఫాస్ట్! [1] మరి వేల కోర్లు అంటే...
-10. ఏఐ: గేమింగ్ ల్యాప్‌టాప్ గ్రాఫిక్స్ కార్డ్ లో మూడు వేల మూడు వందల కోర్లు.
+5. రవి: దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో ర్యాక్ లెక్కపెట్టినట్టా?
+6. ఏఐ: అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.
+7. రవి: కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు. [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?
+8. ఏఐ: మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి.
+9. రవి: ఇంకా దాదాపు నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?
+10. ఏఐ: చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.
 11. రవి: సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!
-12. ఏఐ: ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, సంఖ్య ముఖ్యం. [1] కార్డ్ మెమరీ కూడా చూడు.
-13. రవి: ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! ఫుల్ ది!
+12. ఏఐ: ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం.
+13. రవి: ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!
 14. ఏఐ: ఫుల్ సైజ్ పదిహేను జీబీ. [1] కార్డ్ లో ఎనిమిదే పడతాయి.
 15. రవి: అయితే?
-16. ఏఐ: మిగతాది స్లో సైడ్ లో నడుస్తుంది. [1] టైపింగ్...
+16. ఏఐ: అయితే మిగతాది మళ్ళీ ఆ కొద్దిమంది పనివాళ్ళకే. [1] టైపింగ్...
 
 ## Sound
 A hit and notification pings on frame 1; the bed builds under the problem; a lift into the workers insert; the quiz's
-3-2-1 over the bed; the bed drops out right before "Four cores: under four" with a hit on it; a rise and a success
-sting as the gaming laptop clears the queue; a snap on the rule chip; a riser into the overflow and a dull hit on
+3-2-1 over the bed; the bed drops out right before "Four cores: under four" with a hit on it; a success sting on the
+measured "3x faster" (the gaming laptop's scene is an illustration, so its sound stays small); a snap on the rule chip; a riser into the overflow and a dull hit on
 "Typing...", into the loop.

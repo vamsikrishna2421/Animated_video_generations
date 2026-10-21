@@ -65,8 +65,8 @@
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "Twenty orders, one reply",
-     "title": "Twenty orders, one reply",
+     "chapter": "23 orders, one reply",
+     "title": "23 orders, one reply",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -75,8 +75,8 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "ఇరవై ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!",
-     "show": "20 orders waiting, and you're still typing ONE reply?!",
+     "text": "ఇరవై మూడు ఆర్డర్లు వెయిట్ చేస్తున్నాయి, నువ్వింకా ఒక్క రిప్లై టైప్ చేస్తున్నావా?!",
+     "show": "23 orders waiting, and you're still typing ONE reply?!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.12,
@@ -160,8 +160,8 @@
     {
      "who": "ravi",
      "file": "05_ravi.wav",
-     "text": "వేలమందా?! దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో అర లెక్కపెట్టినట్టా?",
-     "show": "Thousands?! Like Diwali stock-taking, every kid counting one shelf?",
+     "text": "దీపావళి స్టాక్ లెక్కలో పిల్లలందరూ తలో ర్యాక్ లెక్కపెట్టినట్టా?",
+     "show": "Like Diwali stock-taking? Every kid counting one rack?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12,
@@ -170,8 +170,8 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "అదే. గ్రాఫిక్స్ కార్డ్, అంటే జీపీయూ: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.",
-     "show": "Exactly. A graphics card, a GPU: thousands of small cores, all at once.",
+     "text": "అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి.",
+     "show": "Exactly. A GPU, the graphics card games use: thousands of small cores, all at once.",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.08,
@@ -180,14 +180,14 @@
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "కానీ రిప్లై ఒక్కో పదంగా వస్తుంది కదా. <pause 0.3> [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై అయినా ఫాస్ట్ అవుతుందా?",
-     "show": "But a reply comes word by word. Can more cores make even ONE reply faster?",
+     "text": "కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు. <pause 0.3> [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?",
+     "show": "But ten helpers can't write one bill faster. Can more cores speed up ONE reply?",
      "maxgap": 0.28,
-     "gap": 3.6,
+     "gap": 3.4,
      "tempo": 1.12,
-     "tts": "కానీ రిప్లై ఒక్కో పదంగా వస్తుంది కదా.",
+     "tts": "కానీ పది మంది కలిసి ఒక్క బిల్లు త్వరగా రాయలేరు.",
      "file2": "07b_ravi.wav",
-     "tts2": "ఎక్కువ కోర్లతో ఒక్క రిప్లై అయినా ఫాస్ట్ అవుతుందా?",
+     "tts2": "ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?",
      "pause": 0.3,
      "gain_db": 1.5
     }
@@ -211,7 +211,7 @@
      {
       "who": "ravi",
       "shot": "ravi",
-      "prop": "three",
+      "prop": "buy",
       "n": 9
      },
      {
@@ -239,18 +239,22 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "మా టెస్ట్. ఒక్క కోర్: పదకొండున్నర సెకన్లు. [1] నాలుగు కోర్లు: నాలుగు లోపే.",
-     "show": "Our test. 1 core: 11.5 seconds. 4 cores: under 4.",
+     "text": "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. <pause 0.3> [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కలు పంచుకుంటాయి.",
+     "show": "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's sums get split.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.5,
      "tempo": 1.08,
+     "tts": "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు.",
+     "file2": "08b_ai.wav",
+     "tts2": "నాలుగు కోర్లు: నాలుగు లోపే. ప్రతి పదం లెక్కలు పంచుకుంటాయి.",
+     "pause": 0.3,
      "gain_db": 0.5
     },
     {
      "who": "ravi",
      "file": "09_ravi.wav",
-     "text": "మూడు రెట్లు ఫాస్ట్! [1] మరి వేల కోర్లు అంటే...",
-     "show": "Three times faster! Then thousands of cores...",
+     "text": "ఇంకా దాదాపు నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?",
+     "show": "Still almost 1.5 minutes! Do I buy a graphics card?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12,
@@ -259,11 +263,15 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "గేమింగ్ ల్యాప్‌టాప్ గ్రాఫిక్స్ కార్డ్ లో మూడు వేలకు పైగా కోర్లు.",
-     "show": "A gaming laptop's graphics card has over 3,000.",
+     "text": "చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. <pause 0.3> [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.",
+     "show": "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
      "maxgap": 0.28,
-     "gap": 0.16,
+     "gap": 0.3,
      "tempo": 1.08,
+     "tts": "చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది.",
+     "file2": "10b_ai.wav",
+     "tts2": "నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు.",
+     "pause": 0.3,
      "gain_db": -1.0
     },
     {
@@ -272,7 +280,7 @@
      "text": "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!",
      "show": "Sunny! Bring your gaming laptop!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.4,
      "tempo": 1.12,
      "gain_db": 1.5
     }
@@ -338,18 +346,18 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, సంఖ్య ముఖ్యం. [1] కార్డ్ మెమరీ కూడా చూడు.",
-     "show": "For AI, count the workers, not their speed. And check the card's memory.",
+     "text": "ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం.",
+     "show": "For AI, count the workers, not their speed.",
      "maxgap": 0.28,
-     "gap": 0.9,
+     "gap": 0.8,
      "tempo": 1.08,
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "13_ravi.wav",
-     "text": "ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! ఫుల్ ది!",
-     "show": "Now put in the big brain! The full one!",
+     "text": "ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!",
+     "show": "Now the big brain! Not the squeezed copy, the full one!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12,
@@ -378,8 +386,8 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "మిగతాది స్లో సైడ్ లో నడుస్తుంది. [1] టైపింగ్...",
-     "show": "So the rest runs on the slow side. Typing...",
+     "text": "అయితే మిగతాది మళ్ళీ ఆ కొద్దిమంది పనివాళ్ళకే. [1] టైపింగ్...",
+     "show": "So the rest goes back to the few workers. Typing...",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.08

@@ -63,8 +63,8 @@
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "Twenty orders, one reply",
-     "title": "Twenty orders, one reply",
+     "chapter": "23 orders, one reply",
+     "title": "23 orders, one reply",
      "notes": []
     }
    },
@@ -72,12 +72,12 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "Twenty orders waiting, and you're still typing one reply?!",
-     "show": "20 orders waiting, and you're still typing ONE reply?!",
+     "text": "Twenty-three orders waiting, and you're still typing one reply?!",
+     "show": "23 orders waiting, and you're still typing ONE reply?!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.2,
-     "tts": "Twenty orders waiting, and you're still typing one reply?!",
+     "tts": "Twenty-three orders waiting, and you're still typing one reply?!",
      "gain_db": 1.5
     },
     {
@@ -157,8 +157,8 @@
     {
      "who": "ravi",
      "file": "05_ravi.wav",
-     "text": "Thousands?! Like Diwali stock-taking, every kid counting one shelf?",
-     "show": "Thousands?! Like Diwali stock-taking, every kid counting one shelf?",
+     "text": "Like Diwali stock-taking? Every kid counting one rack?",
+     "show": "Like Diwali stock-taking? Every kid counting one rack?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
@@ -167,23 +167,23 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "Exactly. A graphics card, a G P U: [1] thousands of small cores, all at once.",
-     "show": "Exactly. A graphics card, a GPU: thousands of small cores, all at once.",
+     "text": "Exactly. A G P U, the graphics card games use: [1] thousands of small cores, all at once.",
+     "show": "Exactly. A GPU, the graphics card games use: thousands of small cores, all at once.",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12,
-     "tts": "Exactly. A graphics card, a G P U: [1] thousands of small cores, all at once.",
+     "tts": "Exactly. A G P U, the graphics card games use: [1] thousands of small cores, all at once.",
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "But a reply comes word by word. [1] Can more cores make even one reply faster?",
-     "show": "But a reply comes word by word. Can more cores make even ONE reply faster?",
+     "text": "But ten helpers can't write one bill faster. [1] Can more cores speed up one reply?",
+     "show": "But ten helpers can't write one bill faster. Can more cores speed up ONE reply?",
      "maxgap": 0.28,
-     "gap": 3.6,
+     "gap": 3.4,
      "tempo": 1.2,
-     "tts": "But a reply comes word by word. [1] Can more cores make even one reply faster?",
+     "tts": "But ten helpers can't write one bill faster. [1] Can more cores speed up one reply?",
      "gain_db": 1.5
     }
    ]
@@ -206,7 +206,7 @@
      {
       "who": "ravi",
       "shot": "ravi",
-      "prop": "three",
+      "prop": "buy",
       "n": 9
      },
      {
@@ -233,18 +233,18 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "Our test. One core: eleven and a half seconds. [1] Four cores: under four.",
-     "show": "Our test. 1 core: 11.5 seconds. 4 cores: under 4.",
+     "text": "On our laptop: one core, eleven and a half seconds. [1] Four cores: under four. [2] Each word's sums get split.",
+     "show": "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's sums get split.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.5,
      "tempo": 1.12,
      "gain_db": 0.5
     },
     {
      "who": "ravi",
      "file": "09_ravi.wav",
-     "text": "Three times faster! [1] Then thousands of cores...",
-     "show": "Three times faster! Then thousands of cores...",
+     "text": "Still almost a minute and a half! [1] Do I buy a graphics card?",
+     "show": "Still almost 1.5 minutes! Do I buy a graphics card?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
@@ -253,11 +253,12 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "A gaming laptop's graphics card has over three thousand.",
-     "show": "A gaming laptop's graphics card has over 3,000.",
+     "text": "For Chat G P T, no. That runs on theirs. [1] For me, here: a gaming laptop's G P U, over three thousand cores.",
+     "show": "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
      "maxgap": 0.28,
-     "gap": 0.16,
+     "gap": 0.3,
      "tempo": 1.12,
+     "tts": "For Chat G P T, no. That runs on theirs. [1] For me, here: a gaming laptop's G P U, over three thousand cores.",
      "gain_db": -1.0
     },
     {
@@ -266,7 +267,7 @@
      "text": "Sunny! Bring your gaming laptop!",
      "show": "Sunny! Bring your gaming laptop!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.4,
      "tempo": 1.2,
      "gain_db": 1.5
     }
@@ -331,18 +332,18 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "For AI, count the workers, not their speed. [1] And check the card's memory.",
-     "show": "For AI, count the workers, not their speed. And check the card's memory.",
+     "text": "For AI, count the workers, not their speed.",
+     "show": "For AI, count the workers, not their speed.",
      "maxgap": 0.28,
-     "gap": 0.9,
+     "gap": 0.8,
      "tempo": 1.12,
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "13_ravi.wav",
-     "text": "Now put in the big brain! The full one!",
-     "show": "Now put in the big brain! The full one!",
+     "text": "Now the big brain! Not the squeezed copy, the full one!",
+     "show": "Now the big brain! Not the squeezed copy, the full one!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
@@ -372,8 +373,8 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "So the rest runs on the slow side. [1] Typing...",
-     "show": "So the rest runs on the slow side. Typing...",
+     "text": "So the rest goes back to the few workers. [1] Typing...",
+     "show": "So the rest goes back to the few workers. Typing...",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.12
