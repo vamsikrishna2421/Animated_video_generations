@@ -18,7 +18,7 @@ LINES = {
     3: ("lakshmi", "lakshmi", "numbers", "Two hundred phone numbers... [1] into a free chatbot?!", "రెండొందల ఫోన్ నంబర్లు... [1] ఫ్రీ చాట్‌బాట్ లోకా?!"),
     4: ("arjun", "arjun", "myth1", "Relax! Only me and the AI see it.", "రిలాక్స్ మేడమ్. నేను, ఏఐ తప్ప ఎవరూ చూడరు."),   # "Relax, ma'am" was heard "Relax mom"
     5: ("lakshmi", "lakshmi", "fact1", "Your chats can train the AI. [1] And some are read by real people.",
-        "మన చాట్స్ ని ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు. [1] కొన్నిటిని నిజంగా మనుషులే చదువుతారు."),   # not "free": paid personal plans work the same
+        "మనం టైప్ చేసేది ఏఐ ట్రైనింగ్ కి వాడుకోవచ్చు. [1] కొన్నిటిని నిజంగా మనుషులే చదువుతారు."),   # not "free": paid personal plans work the same; Telugu "చాట్స్" was heard "charts"
     6: ("arjun", "arjun", "myth2", "Okay, okay! I'll delete the chat after.", "సరే సరే! తర్వాత చాట్ డిలీట్ చేస్తా."),
     7: ("lakshmi", "lakshmi", "fact2", "If a person reviewed your chat, Google keeps it [1] up to three years. Even after you delete it.",
         "మనుషులు చదివిన చాట్ ని గూగుల్ [1] మూడేళ్ల వరకు ఉంచుతుంది. డిలీట్ చేసినా సరే."),
