@@ -43,6 +43,9 @@ VOICE_TE = {
     "sneha": "Lalitha speaks in a young, bright, startled voice like a new office joiner, at a natural pace. "
              "The recording is very clear, close-up, studio quality, with no background noise.",
 }
+# per-line Telugu voices: Arjun's quick pace blurred "సెండ్ నొక్కకు" in line 11 (four takes)
+VOICE_TE_LINE = {11: "Kiran speaks in a loud, urgent, very clear voice like a young office worker stopping a colleague, at a moderate pace, "
+                     "saying each word separately. The recording is very clear, close-up, studio quality, with no background noise."}
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
 MUST = {"en": {1: [("arjun",), ("stop",), ("send",)], 2: [("client",), ("list",), ("asking", "ask"), ("neat",)], 3: [("hundred", "200"), ("numbers", "number"), ("chatbot", "chat", "bot")],
                4: [("relax",), ("only",), ("see",)], 5: [("chats", "chat"), ("train",), ("read",), ("people",)], 6: [("delete",)],
@@ -148,7 +151,7 @@ def voice_one(lang, n, who, text, fname, src, takes, only):
     """One take for one text (a line, or one half of a line voiced in two takes)."""
     tag = f"{n:02d}" if isinstance(n, int) else str(n)
     fish = lang == "en"
-    voice = f"fish:{who}" if fish else VOICE_TE[who]
+    voice = f"fish:{who}" if fish else VOICE_TE_LINE.get(n, VOICE_TE[who]) if isinstance(n, int) else VOICE_TE[who]
     key = hashlib.md5(f"{voice}|{text}".encode()).hexdigest()[:10]
     cached = sorted(takes.glob(f"{key}_*.wav"))
     best = (None, cached[0]) if cached and (KEEP or not only) else None   # --keep: an unchanged part keeps its take
