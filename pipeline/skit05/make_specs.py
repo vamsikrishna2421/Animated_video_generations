@@ -1,4 +1,4 @@
-# Skit 05 "The client list" (what you paste into a free chatbot isn't private): writes reels/skit05v1.json (English)
+# Skit 05 "The client list" (what you paste into a chatbot isn't private): writes reels/skit05v1.json (English)
 # and reels/skit05te.json (Telugu). Script: series/scripts/skit05_client_list.md. An office: Lakshmi (team lead), Arjun
 # (new joiner), Sneha (new joiner, last beat); the chatbot is only text on the laptops. Each line its own take
 # (pipeline/skit05/voice.py). n = the script's line number.
@@ -34,8 +34,8 @@ TE_SPLIT = {}   # Telugu lines voiced as two takes, joined (long Telugu lines ba
 SHOW = {7: "If a person reviewed your chat, Google keeps it... up to three years. Even after you delete it."}   # captions break at sentence ends
 TE_SHOW = {}
 # Sound (CLAUDE.md arc): a slam on frame 1 with the shout; the bed builds under the argument; a riser and a boing into
-# each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; pops as the names
-# turn into Client A, B, C and a success sting on the neat table; a snap on the rule; a rise into the second slam.
+# each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; ticks as the fake
+# rows go in and a success sting on the formulas; a snap on the rule; a rise into the second slam.
 SCENES = [("of_a", (1, 2, 3), {"pre": 0.35, "boost": 1.5, "tail": 0.1}),   # the slam lands before "Arjun"
           ("of_b", (4, 5, 6, 7, 8), {"lift": 0.5, "pre": 0.3, "boost": 1.7, "drop_at": [[3, "1"]], "tail": 0.1}),   # the bed sat 12-15 dB under the voice; it builds past the opening
           ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.35, "rise": 1.6, "tail": 0.0})]

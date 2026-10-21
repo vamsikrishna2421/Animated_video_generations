@@ -1,12 +1,12 @@
-# Skit 05 "The client list" (what you paste into a free chatbot isn't private), script v3
+# Skit 05 "The client list" (what you paste into a chatbot isn't private), script v3
 
 Creative reel 05 (daily run 2, Oct 21, 2026). Format: an office skit with myth-vs-fact cards, loops. Cast: Lakshmi (team
 lead, mid-thirties, kurta, glasses, office ID on a lanyard), Arjun (new joiner, 22, formal shirt, ID card), Sneha (new
 joiner, last beat). Setting: an open-plan office in Hyderabad, laptops, a notice board ("TEAM LUNCH FRIDAY",
 "Happy birthday Ramesh"). The chatbot is only text on the laptops; no brand on screen.
 
-One idea a viewer can repeat to a friend: free chatbots can use your chats to improve the AI and some chats are read by
-people, so swap names and numbers out before you paste; paste only what you'd pin on the notice board.
+One idea a viewer can repeat to a friend: chatbots can use your chats to improve the AI and some chats are read by
+people, so paste fake rows, not real names and numbers; paste only what you'd put up on the notice board.
 
 ## Facts (checked Oct 21, 2026)
 - Google, Gemini Apps Privacy Hub (support.google.com/gemini/answer/13594961, "Last updated: October 19, 2026"):
@@ -83,5 +83,5 @@ board" -> "been" (now "put up"), Telugu "చాట్స్" -> "charts" (now "�
 
 ## Sound
 A slam (boom + snap) on frame 1 with the shout; the bed builds under the argument; a stamp and a lift into each MYTH
-card, a ding on each FACT flip; the bed drops out right before "three years" with a hit on it; a light "fixed" sting as
-the names turn into Client A, B, C; a snap on the rule chip; a rise into the second slam, which loops into the first.
+card, a ding on each FACT flip; the bed drops out right before "three years" with a hit on it; ticks as the fake
+rows go in and a success sting on the formulas; a snap on the rule chip; a rise into the second slam, which loops into the first.
