@@ -189,13 +189,15 @@ const StGpu: React.FC<SP> = ({ s }) => {
       sfx.push(<Sfx key={k("h")} at={z} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("c")} at={z} src="audio/sfx_snap.wav" vol={0.5} />,
         <Sfx key={k("s")} at={z + 2} src="audio/sfx_success.wav" vol={0.4} />);
     }
-    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.45} />, <Sfx key={k("h")} at={at + 2} src="reel/sfx_boom.wav" vol={0.55} />, <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
+    // the rule chip's boom lands before the voice (on the first word it masked "For AI")
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 8)} src="reel/sfx_boom.wav" vol={0.55} />,
+      <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("r")} at={cue(i, 1, 0.5) - 38} src="reel/sfx_riser.wav" vol={0.45} />,
       <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("k")} at={cue(i, 1, 0.5) - 2} src="audio/sfx_snap.wav" vol={0.5} />,
       <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "slow") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("o")} at={cue(i, 1, 0.35)} src="audio/gag_bonk.wav" vol={0.35} />,
       <Sfx key={k("r")} at={cue(i, 2, 0.85) - 40} src="reel/sfx_riser.wav" vol={0.5} />, <Sfx key={k("h")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_boom.wav" vol={0.9} />,
-      <Sfx key={k("z")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_buzz.wav" vol={0.3} />, <Sfx key={k("k")} at={cue(i, 2, 0.85) - 4} src="audio/sfx_snap.wav" vol={0.5} />);
+      <Sfx key={k("z")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_buzz.wav" vol={0.3} />, <Sfx key={k("k")} at={cue(i, 2, 0.85) - 8} src="audio/sfx_snap.wav" vol={0.5} />);
   });
   return (
     <>

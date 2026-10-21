@@ -285,3 +285,7 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - A loop ending still has to answer "so do I need it?": put the answer on screen before the last gag (EP36: three of
   four viewers read the ending as "the GPU failed" until the card "medium brain, 1.1 GB: fits ✓ · big brain, 15 GB:
   doesn't fit").
+- Type-check before every render (EP36: a `//` comment pasted mid-line commented out the rest of a `sfx.push(...)`).
+  To stop a render, kill by PID the chain's subshell first, then render.sh, the node remotion process and its
+  headless_shell browsers: killing render.sh alone orphans remotion, and a `render; make_ig; pack` chain then runs on a
+  half-written mp4. Chain those steps with `&&`.
