@@ -1,0 +1,327 @@
+import React from "react";
+import { Ctx, rng, stroke, circlePts, clamp, easeOut, seg } from "./crayon";
+import { COL } from "./scenes";
+import { CrayonCanvas } from "./CrayonCanvas";
+import { rrect, tag, Sfx } from "./DistillCrayon";
+import { INK, caveat, handF } from "./WordsCrayon";
+import { shop, counter, ravi, phone, cueAt, PH, WALL, Mood, Arms } from "./SkitCrayon";
+import { bigPhone } from "./StockCrayon";
+import { customers, headline, bubble } from "./OwnCrayon";
+
+// EP36 "The Diwali rush" (series/scripts/ep36_gpus.md): Ravi anna's shop on Diwali evening. The shop AI (EP35's medium
+// brain in his phone) is still typing one WhatsApp reply with 23 orders unread. Every word is over a billion
+// multiplications; a few fast workers (CPU cores) lose to thousands of small ones at once (a graphics card, a GPU). Our
+// test (series/scripts/ep36_demo): the same reply on 1, 2 and 4 CPU cores, 11.5 s / 6.3 s / 3.6 s. A gaming laptop's
+// GPU has 3,328 cores and 8 GB (NVIDIA's spec page); the full-size big brain is 15 GB, so it doesn't fit: slow again.
+// One beat per line (s.data.beats); n = the line number in the script.
+type Word = { w: string; from: number; to: number };
+type Line = { from: number; frames: number; words?: Word[]; cues?: Record<string, number> };
+type Beat = { who: "ravi" | "ai"; shot: string; prop: string; n: number };
+type Scene = { id: string; data: any; frames: number; lines: Line[] };
+type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
+
+const SHOTS: Record<string, { z: number; x: number; y: number }> = {
+  wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.55, x: 500, y: 720 },
+};
+const RAVI: Record<number, [Mood, Arms]> = {
+  1: ["yell", "point"], 3: ["angry", "phone"], 5: ["confused", "shrug"], 7: ["sus", "fold"], 9: ["happy", "up"], 11: ["yell", "point"],
+  12: ["happy", "thumb"], 13: ["hope", "fist"], 15: ["confused", "shrug"], 16: ["panic", "up"],
+};
+const GREEN = "#16a34a", ORANGE = "#ea580c", BLUE = "#2563eb", PURPLE = "#7c3aed";
+const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
+const LAP = { x: 560, y: 1000 };   // Sunny's gaming laptop on the counter (from line 11)
+
+// ---------- pieces ----------
+const lights = (c: Ctx, f: number) => {   // a string of bulbs along the top of the shop
+  const cols = ["#f59e0b", "#ef4444", "#22c55e", "#3b82f6", "#ec4899"];
+  for (let i = 0; i < 18; i++) {
+    const x = -20 + i * 64, y = 205 + Math.sin(i * 0.9) * 14, on = (Math.floor(f / 8) + i) % 3 !== 0;
+    c.beginPath(); c.arc(x, y, 13, 0, 7); c.fillStyle = on ? cols[i % 5] : "#78716c"; c.fill();
+    if (on) { c.beginPath(); c.arc(x, y, 24, 0, 7); c.fillStyle = "rgba(253,224,71,0.18)"; c.fill(); }
+  }
+};
+const diyas = (c: Ctx, f: number) => {   // two diyas on the counter
+  [[150, 1000], [1000, 1000]].forEach(([x, y], i) => {
+    c.fillStyle = "#b45309"; c.beginPath(); c.ellipse(x, y, 34, 14, 0, 0, Math.PI); c.fill();
+    const fl = 1 + 0.15 * Math.sin(f / 3 + i);
+    c.fillStyle = "#facc15"; c.beginPath(); c.ellipse(x, y - 18 * fl, 8, 18 * fl, 0, 0, 7); c.fill();
+    c.fillStyle = "#fb923c"; c.beginPath(); c.ellipse(x, y - 12 * fl, 4, 9 * fl, 0, 0, 7); c.fill();
+  });
+};
+// the WhatsApp badges over the counter phone (world coordinates): the unread count and "typing…"
+const badges = (c: Ctx, unread: number, typing: boolean, f: number) => {
+  c.save(); c.translate(PH.x, PH.y - 230);
+  if (typing) {
+    c.fillStyle = "#dcf8c6"; rrect(c, -150, -46, 300, 84, 30); c.fill();
+    c.font = SANS(36, 600); c.fillStyle = "#166534"; c.textAlign = "center"; c.fillText("typing" + ".".repeat(1 + (Math.floor(f / 8) % 3)), -6, 8);
+  }
+  if (unread > 0) {
+    c.beginPath(); c.arc(140, -46, 52, 0, 7); c.fillStyle = "#dc2626"; c.fill();
+    c.font = SANS(48); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(unread), 140, -30);
+  }
+  c.restore();
+};
+// a worker (a CPU core): a round head over a desk with a stack of sums
+const worker = (c: Ctx, x: number, y: number, s: number, col: string, busy: number, r: () => number) => {
+  c.save(); c.translate(x, y); c.scale(s, s);
+  c.fillStyle = col; rrect(c, -34, -10, 68, 70, 22); c.fill();
+  c.beginPath(); c.arc(0, -34, 26, 0, 7); c.fillStyle = "#b9774d"; c.fill();
+  stroke(c, circlePts(0, -34, 26, 26), INK, 3, r, { passes: 1, alpha: 0.5 });
+  c.fillStyle = "#94a3b8"; c.fillRect(-60, 58, 120, 14);
+  for (let q = 0; q < 4; q++) { c.fillStyle = "#fff"; c.fillRect(-46 + Math.sin(busy * 9 + q) * 2, 44 - q * 6, 40, 5); }
+  c.restore();
+};
+// thousands of tiny cores: a grid of dots; `done` turns them green
+const dotGrid = (c: Ctx, x: number, y: number, cols: number, rows: number, gap: number, k: number, done: number) => {
+  for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
+    const q = (i + j * cols) / (cols * rows);
+    if (q > k) continue;
+    c.fillStyle = done > 0 ? (q < done ? GREEN : "#93c5fd") : "#93c5fd";
+    c.fillRect(x + i * gap, y + j * gap, gap * 0.7, gap * 0.7);
+  }
+};
+// a graphics card: a green board, two fans, the memory chips
+const gpuCard = (c: Ctx, x: number, y: number, s: number, f: number, r: () => number) => {
+  c.save(); c.translate(x, y); c.scale(s, s);
+  c.fillStyle = "#15803d"; rrect(c, -330, -120, 660, 240, 20); c.fill();
+  c.fillStyle = "#1f2937"; rrect(c, -310, -100, 620, 200, 16); c.fill();
+  [-150, 150].forEach((fx) => {
+    c.beginPath(); c.arc(fx, 0, 82, 0, 7); c.fillStyle = "#111827"; c.fill();
+    for (let b = 0; b < 7; b++) { const a = f / 4 + (b / 7) * Math.PI * 2; stroke(c, [[fx, 0], [fx + Math.cos(a) * 70, Math.sin(a) * 70]], "#6b7280", 10, r, { passes: 1 }); }
+    c.beginPath(); c.arc(fx, 0, 18, 0, 7); c.fillStyle = "#9ca3af"; c.fill();
+  });
+  c.fillStyle = "#ca8a04"; for (let q = 0; q < 14; q++) c.fillRect(-300 + q * 44, 124, 30, 26);   // the gold contacts
+  c.restore();
+};
+// Sunny's gaming laptop on the counter (world coordinates), keys glowing
+const gamingLaptop = (c: Ctx, k: number, f: number) => {
+  if (k <= 0) return;
+  c.save(); c.translate(LAP.x, LAP.y + 40 * (1 - easeOut(k))); c.globalAlpha = clamp(k * 2);
+  c.fillStyle = "#111827"; c.beginPath(); c.moveTo(-170, -10); c.lineTo(170, -10); c.lineTo(190, 14); c.lineTo(-190, 14); c.closePath(); c.fill();
+  const hue = (f * 6) % 360;
+  for (let q = 0; q < 8; q++) { c.fillStyle = `hsl(${(hue + q * 40) % 360}, 90%, 60%)`; c.fillRect(-150 + q * 38, -6, 30, 6); }
+  c.fillStyle = "#1f2937"; rrect(c, -160, -210, 320, 200, 14); c.fill();
+  c.fillStyle = "#0ea5e9"; rrect(c, -146, -196, 292, 172, 8); c.fill();
+  c.font = SANS(26); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("GPU ON", 0, -104);
+  c.restore();
+};
+// the card's memory as a jar: capacity 8 GB, the brain pours in (k), overflows (o)
+const memJar = (c: Ctx, x: number, y: number, k: number, o: number, r: () => number) => {
+  const w = 360, h = 420, fill = Math.min(1, k * 15 / 8);
+  c.save(); c.translate(x, y);
+  c.fillStyle = "rgba(255,255,255,0.8)"; rrect(c, -w / 2, -h, w, h, 30); c.fill();
+  c.fillStyle = PURPLE; c.globalAlpha = 0.6; c.fillRect(-w / 2 + 10, -h * fill + 2, w - 20, h * fill - 12); c.globalAlpha = 1;
+  stroke(c, [[-w / 2, -h], [-w / 2, 0], [w / 2, 0], [w / 2, -h]], INK, 7, r, { passes: 2 });
+  c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText("card memory: 8 GB", 0, 56);
+  if (o > 0) {   // the overflow, spilling over the right rim and down to the slow side
+    c.fillStyle = PURPLE; c.globalAlpha = 0.6;
+    c.beginPath(); c.moveTo(w / 2 - 30, -h); c.quadraticCurveTo(w / 2 + 40, -h - 30, w / 2 + 60, -h + 20);
+    c.lineTo(w / 2 + 60, -h + 20 + 380 * easeOut(o)); c.lineTo(w / 2 + 30, -h + 20 + 380 * easeOut(o)); c.lineTo(w / 2 + 30, -h + 10); c.closePath(); c.fill();
+    c.globalAlpha = 1;
+  }
+  c.restore();
+};
+const bars = (c: Ctx, y0: number, rows: [string, number, string, number][]) => {   // [label, seconds, colour, k]
+  rows.forEach(([lab, sec, col, k], i) => {
+    if (k <= 0) return;
+    const y = y0 + i * 200, x0 = 150, wmax = 760, q = easeOut(k);
+    c.font = caveat(56); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, x0, y - 16);
+    c.fillStyle = "#e2e8f0"; rrect(c, x0, y, wmax, 80, 16); c.fill();
+    c.fillStyle = col; rrect(c, x0, y, Math.max(20, wmax * (sec / 11.5) * q), 80, 16); c.fill();
+    c.font = caveat(66); c.fillStyle = col; c.textAlign = "right"; c.fillText(`${(sec * q).toFixed(1)} s`, x0 + wmax, y - 14);
+  });
+};
+const rule = (c: Ctx, W: number, k: number[]) => {
+  const rows: [string, string][] = [["CPU: a few fast cores", "#e2e8f0"], ["GPU: thousands at once", "#dcfce7"], ["+ check its memory (GB)", "#fef9c3"]];
+  c.save(); c.translate(W / 2, 1060);
+  c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, -490, -300, 980, 560, 30); c.fill();
+  c.font = SANS(56); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("FOR AI, COUNT THE WORKERS", 0, -210);
+  rows.forEach(([t, bg], i) => {
+    const q = k[i] ?? 0; if (q <= 0) return;
+    c.save(); c.globalAlpha = clamp(q * 2);
+    c.fillStyle = bg; rrect(c, -450, -160 + i * 135, 900, 112, 22); c.fill();
+    c.font = SANS(54); c.fillStyle = INK; c.textAlign = "left"; c.fillText(t, -410, -86 + i * 135);
+    c.restore();
+  });
+  c.restore();
+};
+
+// ---------- the scene ----------
+const StGpu: React.FC<SP> = ({ s }) => {
+  const beats: Beat[] = s.data.beats;
+  const ls = s.lines;
+  const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
+  const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
+  const sfx: React.ReactNode[] = [];
+  beats.forEach((b, i) => {
+    const l = ls[i]; if (!l) return;
+    const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
+    const nx = ls[i + 1] ? ls[i + 1].from : s.frames;
+    if (b.shot === "screen") sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.22} />);
+    if (b.prop === "hook") {
+      sfx.push(<Sfx key={k("a")} at={at + 2} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("k")} at={at + 2} src="audio/sfx_snap.wav" vol={0.4} />);
+      [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("n" + q)} at={at + 10 + q * 7} src="audio/sfx_pop.wav" vol={0.22} />));   // orders pinging in
+    }
+    if (b.prop === "billion") for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.3) + q * 3} src="audio/sfx_tick.wav" vol={0.12} />);
+    if (b.prop === "workers") sfx.push(<Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.35} />);
+    if (b.prop === "gpu") {
+      sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.5) - 36} src="reel/sfx_riser.wav" vol={0.35} />);
+      [0, 1, 2, 3, 4].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={cue(i, 1, 0.5) + q * 3} src="audio/sfx_pop.wav" vol={0.2} />));
+    }
+    if (b.prop === "quiz") {
+      [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("q" + q)} at={nx - 100 + q * 30} src="audio/sfx_tick.wav" vol={0.4} />));
+      sfx.push(<Sfx key={k("r")} at={nx - 48} src="reel/sfx_riser.wav" vol={0.3} />);
+    }
+    if (b.prop === "test") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.5) - 4} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) + 20} src="audio/sfx_success.wav" vol={0.3} />);
+    if (b.prop === "card") sfx.push(<Sfx key={k("c")} at={at + 8} src="audio/sfx_snap.wav" vol={0.3} />);
+    if (b.prop === "sunny") {
+      sfx.push(<Sfx key={k("s")} at={at + 10} src="audio/sfx_success.wav" vol={0.35} />);
+      for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("f" + q)} at={at + 14 + q * 4} src="audio/sfx_pop.wav" vol={0.18} />);
+    }
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 1, 0.55) - 4} src="audio/sfx_snap.wav" vol={0.35} />);
+    if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
+    if (b.prop === "slow") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.6) - 40} src="reel/sfx_riser.wav" vol={0.35} />,
+      <Sfx key={k("h")} at={cue(i, 1, 0.6) - 4} src="reel/sfx_boom.wav" vol={0.6} />);
+  });
+  return (
+    <>
+      {sfx}
+      <CrayonCanvas draw={(c, W, H, f, boil) => {
+        const i = idx(f), b = beats[i], ln = ls[i], n = b.n;
+        const p = clamp((f - ln.from) / Math.max(1, ln.frames));
+        const r = rng(9600 + boil);
+        const cu = (k: number, frac: number) => cueAt(ln, k, /^$/, ln.from + Math.round(ln.frames * frac));
+        const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
+        const endL = ln.from + ln.frames;
+        const next = ls[i + 1] ? ls[i + 1].from : s.frames;
+        if (b.shot === "screen") {
+          // ---------- the phone, full frame ----------
+          const titles: Record<string, string> = {
+            billion: "every word I write", workers: "your phone: 8 cores = 8 workers", gpu: "a graphics card (GPU)",
+            test: "our real test: the same reply", card: "a gaming laptop's graphics card", memory: "graphics card memory", slow: "graphics card memory",
+          };
+          c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
+          bigPhone(c, W, H, titles[b.prop] ?? "", r, f);
+          if (b.prop === "billion") {
+            c.font = caveat(150); c.fillStyle = INK; c.textAlign = "center"; c.fillText("rice", W / 2, 520);
+            const k = seg(f, cu(1, 0.3) - 6, endL);
+            const rr = rng(36);
+            for (let q = 0; q < Math.floor(260 * k); q++) {   // the pile of multiplications
+              const x = 140 + rr() * (W - 280), y = 1240 - Math.pow(rr(), 0.6) * 560;
+              c.font = SANS(24 + Math.floor(rr() * 18)); c.fillStyle = ["#334155", BLUE, ORANGE][q % 3]; c.fillText("×", x, y);
+            }
+            const v = Math.round(1.5e9 * easeOut(k));
+            c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 140, 1280, W - 280, 150, 24); c.fill();
+            c.font = SANS(64); c.fillStyle = "#facc15"; c.fillText(v.toLocaleString("en-US") + " ×", W / 2, 1362);
+            c.font = SANS(34, 600); c.fillStyle = "#e2e8f0"; c.fillText("(150 crore) for one word", W / 2, 1410);
+          }
+          if (b.prop === "workers") {
+            for (let q = 0; q < 8; q++) worker(c, 200 + (q % 4) * 230, 520 + Math.floor(q / 4) * 230, 1.3, BLUE, f / 30, r);
+            const c1 = cu(1, 0.5);
+            c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center"; c.fillText("1,500,000,000 sums", W / 2, 1030);
+            c.fillStyle = "#e2e8f0"; rrect(c, 150, 1080, W - 300, 60, 16); c.fill();
+            c.fillStyle = BLUE; rrect(c, 150, 1080, 24 + 10 * seg(f, ln.from, endL), 60, 16); c.fill();
+            if (f >= c1 - 4) tag(c, "8 workers: way too few", W / 2, 1260, 66, "#fee2e2", "#991b1b", -0.02, seg(f, c1 - 4, c1 + 6));
+          }
+          if (b.prop === "gpu") {
+            const c1 = cu(1, 0.5), done = seg(f, c1, c1 + 20);
+            c.font = SANS(40); c.textAlign = "center"; c.fillStyle = BLUE; c.fillText("CPU: a few big cores", W / 2, 400);
+            for (let q = 0; q < 8; q++) worker(c, 240 + q * 86, 500, 0.62, BLUE, f / 30, r);
+            c.fillStyle = GREEN; c.fillText("GPU: thousands of small cores", W / 2, 680);
+            dotGrid(c, 150, 720, 60, 26, 13, 1, done);
+            if (f >= c1 + 14) tag(c, "all at once", W / 2, 1150, 72, "#dcfce7", "#14532d", -0.02, seg(f, c1 + 14, c1 + 22));
+          }
+          if (b.prop === "test") {
+            const c1 = cu(1, 0.5);
+            bars(c, 470, [["1 core", 11.5, ORANGE, seg(f, ln.from + 4, ln.from + 22)], ["2 cores", 6.3, "#ca8a04", seg(f, ln.from + 14, ln.from + 32)],
+              ["4 cores", 3.6, GREEN, seg(f, c1 - 4, c1 + 14)]]);
+            if (f >= c1 + 16) tag(c, "3x faster", W / 2, 1150, 90, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 16, c1 + 24));
+            c.font = SANS(30, 600); c.fillStyle = "#64748b"; c.textAlign = "center";
+            c.fillText("the same small AI (EP35's medium brain) on a laptop CPU", W / 2, 1290); c.fillText("no graphics card · seconds per reply", W / 2, 1335);
+          }
+          if (b.prop === "card") {
+            gpuCard(c, W / 2, 620, 1.2, f, r);
+            c.font = SANS(48); c.fillStyle = INK; c.textAlign = "center"; c.fillText("RTX 5060 laptop GPU", W / 2, 880);
+            tag(c, "3,328 cores", 330, 1020, 80, "#dcfce7", "#14532d", -0.03, seg(p, 0.15, 0.3));
+            tag(c, "8 GB memory", 760, 1020, 68, "#ede9fe", "#4c1d95", 0.03, seg(p, 0.3, 0.45));
+            c.font = SANS(40); c.fillStyle = "#475569"; c.fillText("your phone: 8 cores", W / 2, 1180);
+            c.font = SANS(28, 600); c.fillStyle = "#94a3b8"; c.fillText("cores and memory from NVIDIA's spec page", W / 2, 1400);
+          }
+          if (b.prop === "memory" || b.prop === "slow") {
+            const c1 = cu(1, 0.5);
+            const pour = b.prop === "memory" ? easeOut(seg(f, ln.from + 6, c1)) : 1, o = b.prop === "memory" ? seg(f, c1, endL) : 1;
+            memJar(c, W / 2 - 80, 1080, pour, o, r);
+            tag(c, "big brain, full size: 15 GB", W / 2, 470, 60, "#ede9fe", "#4c1d95", -0.02, 1);
+            if (b.prop === "slow") {
+              c.fillStyle = "#fee2e2"; rrect(c, W / 2 + 10, 1150, 300, 120, 20); c.fill();
+              c.font = SANS(40); c.fillStyle = "#991b1b"; c.textAlign = "center"; c.fillText("CPU (slow)", W / 2 + 160, 1225);
+              const c2 = cu(1, 0.6);
+              if (f >= c2 - 4) {
+                const k = seg(f, c2 - 4, c2 + 6);
+                c.save(); c.globalAlpha = k; c.fillStyle = "#dcf8c6"; rrect(c, 160, 1330, 420, 90, 30); c.fill();
+                c.font = SANS(44, 600); c.fillStyle = "#166534"; c.textAlign = "center"; c.fillText("typing" + ".".repeat(1 + (Math.floor(f / 8) % 3)), 370, 1390);
+                c.beginPath(); c.arc(700, 1370, 56, 0, 7); c.fillStyle = "#dc2626"; c.fill();
+                c.font = SANS(54); c.fillStyle = "#fff"; c.fillText("23", 700, 1390); c.restore();
+              }
+            }
+          }
+        } else {
+          // ---------- the shop ----------
+          const sh = SHOTS[b.shot] ?? SHOTS.wide;
+          const z = sh.z * (1 + 0.03 * p);
+          const shake = (n === 1 && p < 0.14) || (n === 16 && p < 0.2) ? 9 : 0;
+          const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
+          c.fillStyle = WALL; c.fillRect(0, 0, W, H);
+          c.save(); c.translate(W / 2 + sx, 840 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
+          shop(c, r);
+          lights(c, f);
+          const [mood, armPose] = RAVI[n] ?? ["angry", "rest"];
+          ravi(c, mood, armPose, b.who === "ravi" && talking, p, f, r);
+          counter(c, r);
+          diyas(c, f);
+          phone(c, b.who === "ai" && talking, f, r, {});
+          const lap = n >= 11 ? (n === 11 ? seg(p, 0.05, 0.3) : 1) : 0;
+          gamingLaptop(c, lap, f);
+          const unread = n === 11 ? Math.round(23 * (1 - seg(p, 0.25, 0.8))) : n >= 12 && n <= 15 ? 0 : 23;
+          badges(c, unread, n !== 11 && !(n >= 12 && n <= 15), f);
+          customers(c, n === 1 ? 4 : n === 11 ? 3 : n >= 12 ? 1 : 0, f, r);
+          c.restore();
+          // screen-space props
+          if (n === 1) headline(c, W, "23 ORDERS WAITING.", "THE AI IS STILL TYPING.", 1);
+          if (n === 3) tag(c, "OCTA-CORE · 2.4 GHz", 300, 520, 56, "#e0e7ff", INK, -0.04, seg(p, 0.1, 0.25));
+          if (n === 5) bubble(c, 320, 560, "every kid, one shelf?", 64, seg(p, 0.05, 0.2), COL.yellow);
+          if (n === 7) bubble(c, 320, 560, "ONE reply?", 84, seg(p, 0.05, 0.2), COL.yellow);
+          if (n === 9) bubble(c, 320, 560, "3x faster!", 84, seg(p, 0.05, 0.2), "#dcfce7", "#14532d");
+          if (n === 11) bubble(c, 300, 540, "Sunny! Laptop!", 72, seg(p, 0.02, 0.15), COL.yellow);
+          if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.2, 0.3), seg(f, cu(1, 0.55) - 4, cu(1, 0.55) + 4)]);
+          if (n === 13) bubble(c, 320, 560, "BIG BRAIN!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");
+          if (n === 15) bubble(c, 320, 560, "So?", 96, seg(p, 0.05, 0.2), COL.yellow);
+        }
+        // the quiz card, held after line 7 (screen space); its 3-2-1 ends as the card leaves
+        if (b.prop === "quiz" && f > endL + 6) {
+          const k = easeOut(seg(f, endL + 6, endL + 12)) * (1 - seg(f, next - 10, next - 2));
+          c.save(); c.globalAlpha = 0.55 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); c.restore();
+          c.save(); c.globalAlpha = k; c.translate(W / 2, 800); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
+          c.fillStyle = "#fffdf5"; rrect(c, -480, -380, 960, 760, 30); c.fill();
+          c.font = SANS(46); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("YOUR CALL", 0, -300);
+          c.font = SANS(62); c.fillStyle = INK; c.fillText("More cores, ONE reply?", 0, -205);
+          c.textAlign = "left"; c.font = SANS(50);
+          c.fillStyle = "#e0e7ff"; rrect(c, -420, -140, 840, 110, 22); c.fill(); c.fillStyle = INK; c.fillText("A)  no change: word by word", -385, -70);
+          c.fillStyle = "#e0e7ff"; rrect(c, -420, -5, 840, 110, 22); c.fill(); c.fillStyle = INK; c.fillText("B)  faster", -385, 65);
+          c.font = SANS(44, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("comment A or B", 0, 175);
+          const t = f - (next - 100), q = 3 - Math.floor(t / 30);
+          if (t >= 0 && q >= 1) {
+            const pop = 1 + 0.25 * (1 - clamp((t % 30) / 6));
+            c.save(); c.translate(0, 280); c.scale(pop, pop);
+            c.beginPath(); c.arc(0, 0, 58, 0, 7); c.fillStyle = q === 1 ? COL.red : INK; c.fill();
+            c.font = SANS(78); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(q), 0, 28); c.restore();
+          }
+          c.restore();
+        }
+        void handF;
+      }} />
+    </>
+  );
+};
+
+export const GPU_SCENES = { sk_gpu: StGpu };

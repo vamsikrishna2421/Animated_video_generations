@@ -1,0 +1,384 @@
+{
+ "id": "ep36v1",
+ "title": "The Diwali rush (EP36: GPUs and AI chips)",
+ "label": "EP36",
+ "banner": "Why AI runs on GPUs",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.4,
+  0.8
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.15,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "g_a",
+   "type": "sk_gpu",
+   "tail": 0.1,
+   "boost": 1.1,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "billion",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "box",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Twenty orders, one reply",
+     "title": "Twenty orders, one reply",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "Twenty orders waiting, and you're still typing one reply?!",
+     "show": "20 orders waiting, and you're still typing ONE reply?!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.2,
+     "tts": "Twenty orders waiting, and you're still typing one reply?!",
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "Every word I write [1] takes over a billion multiplications.",
+     "show": "Every word I write takes over a billion multiplications.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Then hurry up! This phone has eight cores!",
+     "show": "Then hurry up! This phone has eight cores!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "g_b",
+   "type": "sk_gpu",
+   "tail": 0.1,
+   "lift": 0.5,
+   "pre": 0.35,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "workers",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "shelves",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "gpu",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Workers: CPU vs GPU",
+     "title": "Workers: CPU vs GPU",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "Eight workers, a billion sums. [1] I need thousands.",
+     "show": "Eight workers, a billion sums. I need thousands.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "Thousands?! Like Diwali stock-taking, every kid counting one shelf?",
+     "show": "Thousands?! Like Diwali stock-taking, every kid counting one shelf?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "Exactly. A graphics card, a G P U: [1] thousands of small cores, all at once.",
+     "show": "Exactly. A graphics card, a GPU: thousands of small cores, all at once.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "tts": "Exactly. A graphics card, a G P U: [1] thousands of small cores, all at once.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "But a reply comes word by word. [1] Can more cores make even one reply faster?",
+     "show": "But a reply comes word by word. Can more cores make even ONE reply faster?",
+     "maxgap": 0.28,
+     "gap": 3.6,
+     "tempo": 1.2,
+     "tts": "But a reply comes word by word. [1] Can more cores make even one reply faster?",
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "g_c",
+   "type": "sk_gpu",
+   "tail": 0.1,
+   "pre": 0.3,
+   "drop_cue": 1,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "three",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "card",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "sunny",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 1 vs 4 cores",
+     "title": "Our test: 1 vs 4 cores",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "Our test. One core: eleven and a half seconds. [1] Four cores: under four.",
+     "show": "Our test. 1 core: 11.5 seconds. 4 cores: under 4.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "Three times faster! [1] Then thousands of cores...",
+     "show": "Three times faster! Then thousands of cores...",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "A gaming laptop's graphics card has over three thousand.",
+     "show": "A gaming laptop's graphics card has over 3,000.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "Sunny! Bring your gaming laptop!",
+     "show": "Sunny! Bring your gaming laptop!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    }
+   ]
+  },
+  {
+   "id": "g_d",
+   "type": "sk_gpu",
+   "tail": 0.0,
+   "lift": 0.5,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.2,
+   "rise": 1.5,
+   "drop_at": [
+    [
+     4,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "big",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "memory",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "so",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "slow",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Memory: the big brain",
+     "title": "Memory: the big brain",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "For AI, count the workers, not their speed. [1] And check the card's memory.",
+     "show": "For AI, count the workers, not their speed. And check the card's memory.",
+     "maxgap": 0.28,
+     "gap": 0.9,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "Now put in the big brain! The full one!",
+     "show": "Now put in the big brain! The full one!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "Full size, it's fifteen gigabytes. [1] The card holds eight.",
+     "show": "Full size, it's 15 GB. The card holds 8.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "tts": "Full size, it's fifteen gigabytes. [1] The card holds eight.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "So?",
+     "show": "So?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "So the rest runs on the slow side. [1] Typing...",
+     "show": "So the rest runs on the slow side. Typing...",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12
+    }
+   ]
+  }
+ ]
+}
