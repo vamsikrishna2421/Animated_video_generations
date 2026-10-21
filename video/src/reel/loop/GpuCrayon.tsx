@@ -108,7 +108,7 @@ const gamingLaptop = (c: Ctx, k: number, f: number) => {
 // the card's memory as a jar (8 GB) and the full-size brain as a block drawn to scale (15 GB): `drop` lowers it in,
 // `spill` slides the part that doesn't fit (7 GB) off to the CPU's few workers
 const JAR = { x: 400, bottom: 1250, h: 420, w: 340 };
-const fitScene = (c: Ctx, drop: number, spill: number, r: () => number) => {
+const fitScene = (c: Ctx, drop: number, spill: number, r: () => number, note = false) => {
   const { x, bottom, h, w } = JAR, bh = h * 15 / 8, bw = w - 40;
   c.fillStyle = "rgba(255,255,255,0.85)"; rrect(c, x - w / 2, bottom - h, w, h, 26); c.fill();
   const yTop = bottom - 12 - bh - (1 - easeOut(drop)) * 420;   // the block's top edge
@@ -128,6 +128,7 @@ const fitScene = (c: Ctx, drop: number, spill: number, r: () => number) => {
   }
   stroke(c, [[x - w / 2, bottom - h], [x - w / 2, bottom], [x + w / 2, bottom], [x + w / 2, bottom - h]], INK, 7, r, { passes: 2 });
   c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText("card memory: 8 GB", x, bottom + 52);
+  if (note) { c.font = SANS(34, 600); c.fillStyle = "#64748b"; c.fillText("(the card's own memory, not storage)", x + 40, bottom + 100); }
 };
 const bars = (c: Ctx, y0: number, rows: [string, number, string, number][]) => {   // [label, seconds, colour, k]
   rows.forEach(([lab, sec, col, k], i) => {
@@ -167,7 +168,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
     const nx = ls[i + 1] ? ls[i + 1].from : s.frames;
     if (b.shot === "screen") sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.22} />);
     if (b.prop === "hook") {
-      sfx.push(<Sfx key={k("a")} at={at + 2} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("k")} at={at + 2} src="audio/sfx_snap.wav" vol={0.4} />);
+      sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("k")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />);
       [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("n" + q)} at={at + 10 + q * 7} src="audio/sfx_pop.wav" vol={0.22} />));   // orders pinging in
     }
     if (b.prop === "billion") for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.3) + q * 3} src="audio/sfx_tick.wav" vol={0.12} />);
@@ -183,15 +184,18 @@ const StGpu: React.FC<SP> = ({ s }) => {
     if (b.prop === "test") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.5) - 4} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) + 20} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "card") sfx.push(<Sfx key={k("c")} at={at + 8} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "sunny") {
-      sfx.push(<Sfx key={k("s")} at={at + 10} src="audio/sfx_success.wav" vol={0.35} />);
-      for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("f" + q)} at={at + 14 + q * 4} src="audio/sfx_pop.wav" vol={0.18} />);
+      const z = cue(i, 1, 0.6) - 6;   // the count hits zero just before "Done already?!"
+      for (let q = 0; q < 7; q++) sfx.push(<Sfx key={k("f" + q)} at={z - 20 + q * 3} src="audio/sfx_pop.wav" vol={0.22} />);
+      sfx.push(<Sfx key={k("h")} at={z} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("c")} at={z} src="audio/sfx_snap.wav" vol={0.5} />,
+        <Sfx key={k("s")} at={z + 2} src="audio/sfx_success.wav" vol={0.4} />);
     }
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("b")} at={at + Math.round(l.frames * 0.4)} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "memory") sfx.push(<Sfx key={k("m")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("r")} at={cue(i, 1, 0.5) - 38} src="reel/sfx_riser.wav" vol={0.45} />,
-      <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
+      <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("k")} at={cue(i, 1, 0.5) - 2} src="audio/sfx_snap.wav" vol={0.5} />,
+      <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "slow") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("o")} at={cue(i, 1, 0.35)} src="audio/gag_bonk.wav" vol={0.35} />,
       <Sfx key={k("r")} at={cue(i, 2, 0.85) - 40} src="reel/sfx_riser.wav" vol={0.5} />, <Sfx key={k("h")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_boom.wav" vol={0.9} />,
-      <Sfx key={k("z")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_buzz.wav" vol={0.3} />);
+      <Sfx key={k("z")} at={cue(i, 2, 0.85) - 4} src="reel/sfx_buzz.wav" vol={0.3} />, <Sfx key={k("k")} at={cue(i, 2, 0.85) - 4} src="audio/sfx_snap.wav" vol={0.5} />);
   });
   return (
     <>
@@ -269,7 +273,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "memory") {
             const c1 = cu(1, 0.5);
-            fitScene(c, seg(f, ln.from + 4, c1 - 6), 0, r);
+            fitScene(c, seg(f, ln.from + 4, c1 - 6), 0, r, true);
             if (f >= c1) tag(c, "7 GB doesn't fit", 775, 640, 54, "#fee2e2", "#991b1b", 0.03, seg(f, c1, c1 + 8));
           }
           if (b.prop === "slow") {
@@ -303,7 +307,8 @@ const StGpu: React.FC<SP> = ({ s }) => {
           phone(c, b.who === "ai" && talking, f, r, {});
           const lap = n >= 11 ? (n === 11 ? seg(p, 0.05, 0.3) : 1) : 0;
           gamingLaptop(c, lap, f);
-          const unread = n === 11 ? Math.round(23 * (1 - seg(p, 0.25, 0.8))) : n >= 12 && n <= 15 ? 0 : 23;
+          const z11 = n === 11 ? cu(1, 0.6) - 6 : 0;
+          const unread = n === 11 ? Math.round(23 * (1 - seg(f, z11 - 20, z11))) : n >= 12 && n <= 15 ? 0 : 23;
           badges(c, unread, n !== 11 && !(n >= 12 && n <= 15), f);
           customers(c, n === 1 ? 4 : n === 11 ? 3 : n >= 12 ? 1 : 0, f, r);
           c.restore();
@@ -314,11 +319,25 @@ const StGpu: React.FC<SP> = ({ s }) => {
           if (n === 7) bubble(c, 320, 560, "a single reply?", 76, seg(p, 0.05, 0.2), COL.yellow);
           if (n === 9) bubble(c, 320, 560, "23 orders = 83 s?!", 72, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (n === 11) {
-            bubble(c, 300, 540, "Sunny! Laptop!", 72, seg(p, 0.02, 0.15), COL.yellow);
-            tag(c, "illustration: we tested no graphics card", W / 2, 1110, 48, "rgba(255,255,255,0.95)", "#334155", 0, seg(p, 0.1, 0.2));
+            const c1 = cu(1, 0.6), z = c1 - 6, left = Math.round(23 * (1 - seg(f, z - 20, z)));
+            if (f < c1 - 2) bubble(c, 300, 540, "Sunny! Laptop!", 72, seg(p, 0.02, 0.15), COL.yellow);
+            else bubble(c, 300, 540, "Done?!", 104, seg(f, c1 - 2, c1 + 4), COL.yellow);
+            if (f >= z - 26) {   // the queue empties on the gaming laptop, big, with a hit at zero
+              const k0 = easeOut(seg(f, z - 26, z - 20)), pop = f >= z ? 1 + 0.3 * Math.exp(-(f - z) / 4) : 1;
+              c.save(); c.globalAlpha = k0; c.translate(800, 560); c.scale(pop, pop);
+              c.beginPath(); c.arc(0, 0, 118, 0, 7); c.fillStyle = left === 0 ? "#16a34a" : "#dc2626"; c.fill();
+              c.lineWidth = 8; c.strokeStyle = "#fff"; c.stroke();
+              c.font = SANS(112); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(left), 0, 40);
+              c.restore();
+              tag(c, left === 0 ? "0 waiting" : "orders waiting", 800, 735, 46, left === 0 ? "#dcfce7" : "#fff", left === 0 ? "#166534" : INK, 0.02, k0);
+            }
+            tag(c, "illustration · we didn't test a GPU", W / 2, 1110, 44, "rgba(255,255,255,0.95)", "#334155", 0, seg(p, 0.1, 0.2));
           }
           if (n === 12) rule(c, W, [seg(p, 0.05, 0.15), seg(p, 0.35, 0.45)]);
-          if (n === 13) bubble(c, 320, 560, "FULL SIZE!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");
+          if (n === 13) {
+            bubble(c, 320, 560, "FULL SIZE!", 90, seg(p, 0.05, 0.2), "#ede9fe", "#4c1d95");
+            tag(c, "squeezed copy: 4.7 GB (EP35)", 700, 380, 48, "#fff", INK, 0.02, seg(p, 0.45, 0.6));
+          }
           if (n === 15) bubble(c, 320, 560, "So?", 96, seg(p, 0.05, 0.2), COL.yellow);
         }
         // the quiz card, held after line 7 (screen space); its 3-2-1 ends as the card leaves

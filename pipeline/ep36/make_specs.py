@@ -26,13 +26,13 @@ LINES = {
         "అచ్చం అలాగే! జీపీయూ, గేమ్స్ కి వాడే గ్రాఫిక్స్ కార్డ్: [1] వేల చిన్న కోర్లు, అన్నీ ఒకేసారి."),
     7: ("ravi", "ravi", "quiz", "But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply?",
         "కానీ పది మంది కలిసినా ఒక్క బిల్లు త్వరగా అవ్వదు. | [1] ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?"),   # "రాయలేరు" was heard "రాలేరు"
-    8: ("ai", "screen", "test", "On our laptop: one core, eleven and a half seconds. | [1] Four cores: under four. [2] Each word's work gets split.",   # two takes: a real beat before the reveal
+    8: ("ai", "screen", "test", "On our laptop: one core, eleven and a half seconds. | [1] Four cores: under four seconds. [2] Each word's work gets split.",   # two takes: a real beat before the reveal
         "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. | [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కల్ని కోర్లు పంచుకుంటాయి."),
     9: ("ravi", "ravi", "buy", "Twenty-three orders? Still almost a minute and a half! [1] Do I buy a graphics card?",
         "ఇరవై మూడు ఆర్డర్లు? ఇంకా నిమిషమున్నర! [1] గ్రాఫిక్స్ కార్డ్ కొనాలా?"),   # the 83 s said out loud (render review)
     10: ("ai", "screen", "card", "For ChatGPT, no. That runs on theirs. [1] For me, here: a gaming laptop's GPU, over three thousand cores.",
          "చాట్‌జీపీటీ కి అక్కర్లేదు, అది వాళ్ళ కార్డ్స్ మీద నడుస్తుంది. | [1] నేను ఇక్కడ నడవాలంటే: గేమింగ్ ల్యాప్‌టాప్ జీపీయూ, మూడు వేలకు పైగా కోర్లు."),
-    11: ("ravi", "wide", "sunny", "Sunny! Bring your gaming laptop!", "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!"),
+    11: ("ravi", "wide", "sunny", "Sunny! Bring your gaming laptop! | [1] Done already?!", "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా! | [1] అప్పుడే అయిపోయిందా?!"),   # the queue empties in the beat
     12: ("ai", "wide", "rule", "For AI, count the workers, not their speed.", "ఏఐ కి పనివాళ్ళ స్పీడ్ కాదు, ఎంతమంది అన్నదే ముఖ్యం."),
     13: ("ravi", "ravi", "big", "Now the big brain! Not the squeezed copy, the full one!", "ఇప్పుడు పెద్ద బ్రేన్ పెట్టు! కంప్రెస్ చేసింది కాదు, ఫుల్ సైజ్ ది!"),
     14: ("ai", "screen", "memory", "Full size, it's fifteen GB. [1] The card holds eight.", "ఫుల్ సైజ్ పదిహేను జీబీ. [1] కార్డ్ లో ఎనిమిదే పడతాయి."),
@@ -47,7 +47,7 @@ TTS_EN = {1: "Twenty-three orders waiting, and you're still typing a single repl
           10: "For Chat G P T, no. That runs on theirs. [1] For me, here: a gaming laptop's G P U, over three thousand cores.",
           14: "Full size, it's fifteen gigabytes. [1] The card holds eight."}
 # captions with digits
-SHOW = {1: "23 orders waiting, and you're still typing a single reply?!", 4: "8 workers, a billion calculations. I need thousands.", 8: "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's work gets split.",
+SHOW = {1: "23 orders waiting, and you're still typing a single reply?!", 4: "8 workers, a billion calculations. I need thousands.", 8: "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4 seconds. Each word's work gets split.",
         9: "23 orders? Still almost a minute and a half! Do I buy a graphics card?", 10: "For ChatGPT, no. That runs on theirs. For me, here: a gaming laptop's GPU, over 3,000 cores.",
         14: "Full size, it's 15 GB. The card holds 8."}
 TEMPO_EN = {"ravi": 1.2, "ai": 1.16}
@@ -70,7 +70,7 @@ def spec(lang="en"):
     sid = "ep36te" if te else "ep36v1"
     s = {"id": sid, "title": "The Diwali rush (EP36: GPUs and AI chips)" + (" (Telugu audio)" if te else ""), "label": "EP36",
          "banner": "Why AI runs on GPUs", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.15, "music": "lofi",
-         "musicVol": [0.4, 0.8], "musicFade": 0.05, "endPad": 0.6, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
+         "musicVol": [0.46, 0.9], "musicFade": 0.05, "endPad": 0.6, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
          "musicPad": True, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.12 if te else 1.15, "captionTop": 1500}
     if te:
@@ -97,11 +97,11 @@ def spec(lang="en"):
                         brk = {8: "11.5 seconds.", 10: "on theirs."}.get(n)
                         if brk and brk in ln["show"]:
                             ln["show"] = ln["show"].replace(brk, brk + " <pause 0.3>", 1)
-                pz = {8: 0.7, 16: 0.6}.get(n, 0.3)   # 8, 16: the music drops out in this beat, then the hit ("Four cores", "Typing...")
+                pz = {8: 0.7, 11: 0.9, 16: 0.6}.get(n, 0.3)   # 8, 16: the music drops out in this beat, then the hit ("Four cores", "Typing..."); 11: the queue empties
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             # loudness: Ravi a little above the AI; the test result and the last line lifted
-            g = (-1.0 if who == "ai" else 1.5) + {8: 1.5, 16: 1.0}.get(n, 0.0)
+            g = (-1.0 if who == "ai" else 0.5) + {8: 1.5, 16: 1.0}.get(n, 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)

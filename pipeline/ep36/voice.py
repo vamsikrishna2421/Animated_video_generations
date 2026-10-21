@@ -28,12 +28,13 @@ LIGHT_EN = {2, 8, 10, 14}   # the AI's numbers through the lighter phone sound
 MUST = {"en": {1: [("twenty", "23"), ("three", "23"), ("orders", "order"), ("typing",), ("single",), ("reply",)], 2: [("billion",), ("multiplications", "multiplication")],
                3: [("eight", "8"), ("cores", "core")], 4: [("eight", "8"), ("calculations", "calculation"), ("thousands", "thousand")], 5: [("diwali",), ("stock",), ("count",), ("rack",)],
                6: [("graphics",), ("games", "game"), ("thousands", "thousand"), ("once",)], 7: [("helpers", "helper"), ("bill",), ("cores", "core"), ("single",), ("reply",)],
-               8: [("laptop",), ("eleven", "11", "11.5"), ("half",)], "8b": [("four", "4"), ("under",), ("work",), ("split",)], 9: [("twenty", "23"), ("almost",), ("minute",), ("half",), ("graphics",)],
+               8: [("laptop",), ("eleven", "11", "11.5"), ("half",)], "8b": [("four", "4"), ("under",), ("seconds", "second"), ("work",), ("split",)], "11b": [("done",), ("already",)], 9: [("twenty", "23"), ("almost",), ("minute",), ("half",), ("graphics",)],
                10: [("chatgpt", "chat", "gpt"), ("theirs",), ("gaming",), ("three", "3000", "3,000")], 11: [("sunny",), ("laptop",)],
                12: [("workers", "worker"), ("speed",)], 13: [("brain",), ("squeezed", "squeeze"), ("full",)], 14: [("fifteen", "15"), ("eight", "8")],
                15: [("so",)], 16: [("fit",), ("fast",), ("cpu", "c"), ("workers", "worker")], "16b": [("typing",)]},
         "te": {2: [("मल्टि", "मल्टी", "मल्ति")], 8: [("पदकों", "पदको", "पद्को", "11", "ग्यारह")], "10b": [("मूडु", "मुडु", "3000")],
-               14: [("पदिहे", "पदहे", "15")], "16b": [("टाइप", "ताइप", "टैप", "ताईप", "typ")]}}   # Telugu as the judge writes it (Devanagari)
+               14: [("पदिहे", "पदहे", "15")], "16b": [("टाइप", "ताइप", "टैप", "ताईप", "typ")],
+        "11b": [("प्पु", "पुडे", "पुड़े", "अपु", "अप्प"), ("पोयि", "पोइ", "पोय", "पोई", "पोएं")]}}   # Telugu as the judge writes it (Devanagari)
 
 
 def heard(path, who, n, lang):
@@ -46,6 +47,47 @@ def heard(path, who, n, lang):
     x = phone(a, True, lo_cut=LO_CUT) if lang == "te" else phone(a, n in LIGHT_EN)
     sf.write(out, x.astype(np.float32), sr)
     return out
+
+
+def level(path, under=4.0, cap=12.0):
+    """Parler voices each sentence on its own and one can come out far quieter (EP36's Telugu line 16: the second
+    sentence 11 dB under the first). A voiced stretch more than `under` dB below the take's median stretch is raised
+    to the median, at most `cap` dB, with 20 ms ramps."""
+    x, sr = sf.read(path)
+    mono = x.mean(1) if x.ndim > 1 else x
+    hop = int(sr * 0.02)
+    db = np.array([20 * np.log10(np.sqrt(np.mean(mono[i:i + hop] ** 2)) + 1e-9) for i in range(0, len(mono) - hop, hop)])
+    voiced, spans, i = db > -45, [], 0
+    while i < len(db):   # a stretch ends after 0.16 s under -45 dB
+        if not voiced[i]:
+            i += 1
+            continue
+        j, quiet = i, 0
+        while j < len(db) and quiet < 8:
+            quiet = quiet + 1 if not voiced[j] else 0
+            j += 1
+        spans.append((i * hop, (j - quiet) * hop))
+        i = j
+    lv = [20 * np.log10(np.sqrt(np.mean(mono[a:b] ** 2)) + 1e-9) for a, b in spans]
+    if len(spans) < 2:
+        return
+    med = float(np.median(lv))
+    gain = np.ones(len(mono))
+    for (a, b), l in zip(spans, lv):
+        if l < med - under:
+            g = 10 ** (min(cap, med - l) / 20)
+            ramp = min(hop, (b - a) // 4)
+            env = np.full(b - a, g)
+            env[:ramp] = np.linspace(1, g, ramp)
+            env[len(env) - ramp:] = np.linspace(g, 1, ramp)
+            gain[a:b] = env
+    if np.all(gain == 1):
+        return
+    y = x * (gain[:, None] if x.ndim > 1 else gain)
+    peak = np.max(np.abs(y))
+    if peak > 0.98:
+        y *= 0.98 / peak
+    sf.write(path, y.astype(np.float32), sr)
 
 
 def judge(path, text, lang, n):
@@ -105,6 +147,7 @@ def main(lang, only, keep=False):
                         if f != best[1]:
                             f.unlink()
                 shutil.copy(heard(best[1], who, n, lang), src / fname)
+                level(src / fname)
     print("VOICE_DONE", flush=True)
 
 

@@ -9,8 +9,8 @@
  "lead": 0.15,
  "music": "lofi",
  "musicVol": [
-  0.4,
-  0.8
+  0.46,
+  0.9
  ],
  "musicFade": 0.05,
  "endPad": 0.6,
@@ -80,7 +80,7 @@
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -100,7 +100,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     }
    ]
   },
@@ -165,7 +165,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -189,7 +189,7 @@
      "file2": "07b_ravi.wav",
      "tts2": "ఎక్కువ కోర్లతో ఒక్క రిప్లై కూడా త్వరగా వస్తుందా?",
      "pause": 0.3,
-     "gain_db": 1.5
+     "gain_db": 0.5
     }
    ]
   },
@@ -240,7 +240,7 @@
      "who": "ai",
      "file": "08_ai.wav",
      "text": "మా ల్యాప్‌టాప్ టెస్ట్ లో: ఒక్క కోర్, పదకొండున్నర సెకన్లు. <pause 0.7> [1] నాలుగు కోర్లు: నాలుగు లోపే. [2] ప్రతి పదం లెక్కల్ని కోర్లు పంచుకుంటాయి.",
-     "show": "On our laptop: 1 core, 11.5 seconds. <pause 0.3> 4 cores: under 4. Each word's work gets split.",
+     "show": "On our laptop: 1 core, 11.5 seconds. <pause 0.3> 4 cores: under 4 seconds. Each word's work gets split.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.16,
@@ -258,7 +258,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -277,12 +277,16 @@
     {
      "who": "ravi",
      "file": "11_ravi.wav",
-     "text": "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!",
-     "show": "Sunny! Bring your gaming laptop!",
+     "text": "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా! <pause 0.9> [1] అప్పుడే అయిపోయిందా?!",
+     "show": "Sunny! Bring your gaming laptop! <pause 0.3> Done already?!",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "tts": "సన్నీ! నీ గేమింగ్ ల్యాప్‌టాప్ తీసుకురా!",
+     "file2": "11b_ravi.wav",
+     "tts2": "అప్పుడే అయిపోయిందా?!",
+     "pause": 0.9,
+     "gain_db": 0.5
     }
    ]
   },
@@ -366,7 +370,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -386,7 +390,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",

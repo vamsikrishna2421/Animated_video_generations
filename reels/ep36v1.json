@@ -9,8 +9,8 @@
  "lead": 0.15,
  "music": "lofi",
  "musicVol": [
-  0.4,
-  0.8
+  0.46,
+  0.9
  ],
  "musicFade": 0.05,
  "endPad": 0.6,
@@ -78,7 +78,7 @@
      "gap": 0.2,
      "tempo": 1.2,
      "tts": "Twenty-three orders waiting, and you're still typing a single reply?!",
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -98,7 +98,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     }
    ]
   },
@@ -162,7 +162,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -184,7 +184,7 @@
      "gap": 3.2,
      "tempo": 1.2,
      "tts": "But ten helpers can't write one bill faster. [1] Can more cores speed up a single reply?",
-     "gain_db": 1.5
+     "gain_db": 0.5
     }
    ]
   },
@@ -233,14 +233,14 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "On our laptop: one core, eleven and a half seconds. <pause 0.7> [1] Four cores: under four. [2] Each word's work gets split.",
-     "show": "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4. Each word's work gets split.",
+     "text": "On our laptop: one core, eleven and a half seconds. <pause 0.7> [1] Four cores: under four seconds. [2] Each word's work gets split.",
+     "show": "On our laptop: 1 core, 11.5 seconds. 4 cores: under 4 seconds. Each word's work gets split.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.16,
      "tts": "On our laptop: one core, eleven and a half seconds.",
      "file2": "08b_ai.wav",
-     "tts2": "Four cores: under four. Each word's work gets split.",
+     "tts2": "Four cores: under four seconds. Each word's work gets split.",
      "pause": 0.7,
      "gain_db": 0.5
     },
@@ -252,7 +252,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -268,12 +268,16 @@
     {
      "who": "ravi",
      "file": "11_ravi.wav",
-     "text": "Sunny! Bring your gaming laptop!",
-     "show": "Sunny! Bring your gaming laptop!",
+     "text": "Sunny! Bring your gaming laptop! <pause 0.9> [1] Done already?!",
+     "show": "Sunny! Bring your gaming laptop! Done already?!",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "tts": "Sunny! Bring your gaming laptop!",
+     "file2": "11b_ravi.wav",
+     "tts2": "Done already?!",
+     "pause": 0.9,
+     "gain_db": 0.5
     }
    ]
   },
@@ -356,7 +360,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -377,7 +381,7 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
-     "gain_db": 1.5
+     "gain_db": 0.5
     },
     {
      "who": "ai",
