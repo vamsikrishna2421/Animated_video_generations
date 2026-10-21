@@ -309,7 +309,7 @@ const StGpu: React.FC<SP> = ({ s }) => {
           gamingLaptop(c, lap, f);
           const z11 = n === 11 ? cu(1, 0.6) - 6 : 0;
           const unread = n === 11 ? Math.round(23 * (1 - seg(f, z11 - 20, z11))) : n >= 12 && n <= 15 ? 0 : 23;
-          badges(c, unread, n !== 11 && !(n >= 12 && n <= 15), f);
+          badges(c, n === 11 && f >= z11 - 26 ? 0 : unread, n !== 11 && !(n >= 12 && n <= 15), f);   // the big count takes over
           customers(c, n === 1 ? 4 : n === 11 ? 3 : n >= 12 ? 1 : 0, f, r);
           c.restore();
           // screen-space props

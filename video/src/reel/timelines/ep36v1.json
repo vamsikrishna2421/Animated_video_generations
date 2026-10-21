@@ -4,8 +4,8 @@
  "topic": "",
  "banner": "Why AI runs on GPUs",
  "musicVol": [
-  0.4,
-  0.8
+  0.46,
+  0.9
  ],
  "title": "The Diwali rush (EP36: GPUs and AI chips)",
  "handle": "@ai_maastaaru",
@@ -17,8 +17,8 @@
    1111
   ],
   [
-   2202,
-   2226
+   2304,
+   2328
   ]
  ],
  "musicBoosts": [
@@ -34,30 +34,30 @@
   ],
   [
    982,
-   1698,
+   1800,
    1.45
   ],
   [
-   1698,
-   2264,
+   1800,
+   2367,
    1.3
   ],
   [
-   1698,
-   2264,
+   1800,
+   2367,
    1.5,
    1
   ],
   [
-   1977,
-   2264,
+   2079,
+   2367,
    1.15,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 2264,
+ "totalFrames": 2367,
  "music": "reel/ep36v1/score.wav",
  "scenes": [
   {
@@ -657,7 +657,7 @@
     "hardCuts": true
    },
    "from": 982,
-   "frames": 716,
+   "frames": 818,
    "lines": [
     {
      "who": "ai",
@@ -666,7 +666,7 @@
      "sub": null,
      "audio": "reel/ep36v1/line_08.wav",
      "from": 9,
-     "frames": 212,
+     "frames": 246,
      "words": [
       {
        "w": "On",
@@ -711,47 +711,52 @@
       {
        "w": "cores:",
        "from": 131,
-       "to": 139
+       "to": 137
       },
       {
        "w": "under",
-       "from": 139,
+       "from": 137,
        "to": 154
       },
       {
-       "w": "4.",
+       "w": "4",
        "from": 154,
-       "to": 157
+       "to": 156
+      },
+      {
+       "w": "seconds.",
+       "from": 156,
+       "to": 167
       },
       {
        "w": "Each",
-       "from": 157,
-       "to": 162
+       "from": 167,
+       "to": 175
       },
       {
        "w": "word's",
-       "from": 162,
-       "to": 179
+       "from": 175,
+       "to": 195
       },
       {
        "w": "work",
-       "from": 179,
-       "to": 184
+       "from": 195,
+       "to": 199
       },
       {
        "w": "gets",
-       "from": 184,
-       "to": 193
+       "from": 199,
+       "to": 208
       },
       {
        "w": "split.",
-       "from": 193,
-       "to": 214
+       "from": 208,
+       "to": 226
       }
      ],
      "cues": {
       "1": 129,
-      "2": 161
+      "2": 173
      }
     },
     {
@@ -760,87 +765,87 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep36v1/line_09.wav",
-     "from": 236,
+     "from": 270,
      "frames": 147,
      "words": [
       {
        "w": "23",
-       "from": 237,
-       "to": 240
+       "from": 271,
+       "to": 274
       },
       {
        "w": "orders?",
-       "from": 240,
-       "to": 249
+       "from": 274,
+       "to": 283
       },
       {
        "w": "Still",
-       "from": 249,
-       "to": 255
+       "from": 283,
+       "to": 289
       },
       {
        "w": "almost",
-       "from": 255,
-       "to": 288
+       "from": 289,
+       "to": 322
       },
       {
        "w": "a",
-       "from": 288,
-       "to": 290
+       "from": 322,
+       "to": 324
       },
       {
        "w": "minute",
-       "from": 290,
-       "to": 297
+       "from": 324,
+       "to": 331
       },
       {
        "w": "and",
-       "from": 297,
-       "to": 305
-      },
-      {
-       "w": "a",
-       "from": 305,
-       "to": 307
-      },
-      {
-       "w": "half!",
-       "from": 307,
-       "to": 314
-      },
-      {
-       "w": "Do",
-       "from": 314,
+       "from": 331,
        "to": 339
       },
       {
-       "w": "I",
+       "w": "a",
        "from": 339,
        "to": 341
       },
       {
-       "w": "buy",
+       "w": "half!",
        "from": 341,
-       "to": 345
+       "to": 348
+      },
+      {
+       "w": "Do",
+       "from": 348,
+       "to": 373
+      },
+      {
+       "w": "I",
+       "from": 373,
+       "to": 375
+      },
+      {
+       "w": "buy",
+       "from": 375,
+       "to": 379
       },
       {
        "w": "a",
-       "from": 345,
-       "to": 347
+       "from": 379,
+       "to": 381
       },
       {
        "w": "graphics",
-       "from": 347,
-       "to": 357
+       "from": 381,
+       "to": 391
       },
       {
        "w": "card?",
-       "from": 357,
-       "to": 367
+       "from": 391,
+       "to": 401
       }
      ],
      "cues": {
-      "1": 339
+      "1": 373
      }
     },
     {
@@ -849,97 +854,97 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep36v1/line_10.wav",
-     "from": 387,
+     "from": 421,
      "frames": 221,
      "words": [
       {
        "w": "For",
-       "from": 390,
-       "to": 396
+       "from": 424,
+       "to": 430
       },
       {
        "w": "ChatGPT,",
-       "from": 396,
-       "to": 413
+       "from": 430,
+       "to": 447
       },
       {
        "w": "no.",
-       "from": 413,
-       "to": 419
+       "from": 447,
+       "to": 453
       },
       {
        "w": "That",
-       "from": 419,
-       "to": 443
+       "from": 453,
+       "to": 477
       },
       {
        "w": "runs",
-       "from": 443,
-       "to": 451
+       "from": 477,
+       "to": 485
       },
       {
        "w": "on",
-       "from": 451,
-       "to": 455
+       "from": 485,
+       "to": 489
       },
       {
        "w": "theirs.",
-       "from": 455,
-       "to": 467
-      },
-      {
-       "w": "For",
-       "from": 467,
-       "to": 488
-      },
-      {
-       "w": "me,",
-       "from": 488,
+       "from": 489,
        "to": 501
       },
       {
-       "w": "here:",
+       "w": "For",
        "from": 501,
-       "to": 516
+       "to": 522
       },
       {
-       "w": "a",
-       "from": 516,
-       "to": 519
+       "w": "me,",
+       "from": 522,
+       "to": 534
       },
       {
-       "w": "gaming",
-       "from": 519,
-       "to": 530
-      },
-      {
-       "w": "laptop's",
-       "from": 530,
+       "w": "here:",
+       "from": 534,
        "to": 550
       },
       {
-       "w": "GPU,",
+       "w": "a",
        "from": 550,
-       "to": 565
+       "to": 553
+      },
+      {
+       "w": "gaming",
+       "from": 553,
+       "to": 564
+      },
+      {
+       "w": "laptop's",
+       "from": 564,
+       "to": 584
+      },
+      {
+       "w": "GPU,",
+       "from": 584,
+       "to": 599
       },
       {
        "w": "over",
-       "from": 565,
-       "to": 577
+       "from": 599,
+       "to": 611
       },
       {
        "w": "3,000",
-       "from": 577,
-       "to": 586
+       "from": 611,
+       "to": 620
       },
       {
        "w": "cores.",
-       "from": 586,
-       "to": 597
+       "from": 620,
+       "to": 631
       }
      ],
      "cues": {
-      "1": 464
+      "1": 498
      }
     },
     {
@@ -948,36 +953,48 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep36v1/line_11.wav",
-     "from": 618,
-     "frames": 75,
+     "from": 652,
+     "frames": 135,
      "words": [
       {
        "w": "Sunny!",
-       "from": 622,
-       "to": 650
+       "from": 656,
+       "to": 686
       },
       {
        "w": "Bring",
-       "from": 650,
-       "to": 656
+       "from": 686,
+       "to": 695
       },
       {
        "w": "your",
-       "from": 656,
-       "to": 661
+       "from": 695,
+       "to": 701
       },
       {
        "w": "gaming",
-       "from": 661,
-       "to": 669
+       "from": 701,
+       "to": 711
       },
       {
        "w": "laptop!",
-       "from": 669,
-       "to": 677
+       "from": 756,
+       "to": 762
+      },
+      {
+       "w": "Done",
+       "from": 762,
+       "to": 766
+      },
+      {
+       "w": "already?!",
+       "from": 766,
+       "to": 775
       }
      ],
-     "cues": {}
+     "cues": {
+      "1": 756
+     }
     }
    ]
   },
@@ -1027,8 +1044,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1698,
-   "frames": 566,
+   "from": 1800,
+   "frames": 567,
    "lines": [
     {
      "who": "ai",

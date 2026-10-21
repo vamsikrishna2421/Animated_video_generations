@@ -241,8 +241,7 @@
      "tts": "On our laptop: one core, eleven and a half seconds.",
      "file2": "08b_ai.wav",
      "tts2": "Four cores: under four seconds. Each word's work gets split.",
-     "pause": 0.7,
-     "gain_db": 0.5
+     "pause": 0.7
     },
     {
      "who": "ravi",
@@ -277,7 +276,7 @@
      "file2": "11b_ravi.wav",
      "tts2": "Done already?!",
      "pause": 0.9,
-     "gain_db": 0.5
+     "gain_db": -0.5
     }
    ]
   },
@@ -394,7 +393,8 @@
      "tts": "It has to fit to be fast. The rest goes back to the CPU's few workers.",
      "file2": "16b_ai.wav",
      "tts2": "Typing...",
-     "pause": 0.6
+     "pause": 0.6,
+     "gain_db": 0.8
     }
    ]
   }

@@ -101,7 +101,7 @@ def spec(lang="en"):
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             # loudness: Ravi a little above the AI; the test result and the last line lifted
-            g = (-1.0 if who == "ai" else 0.5) + {8: 1.5, 16: 1.0}.get(n, 0.0)
+            g = (-1.0 if who == "ai" else 0.5) + {8: 1.0, 11: -1.0, 16: 1.8}.get(n, 0.0)   # measured against the bed: 8-12 dB over it
             if g:
                 ln["gain_db"] = g
             lines.append(ln)
