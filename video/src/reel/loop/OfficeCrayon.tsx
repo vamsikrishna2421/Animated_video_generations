@@ -258,7 +258,7 @@ const rule = (c: Ctx, W: number, k: number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = k; c.translate(W / 2, 1370); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
   c.fillStyle = "#0f172a"; rrect(c, -480, -70, 960, 140, 30); c.fill();
-  c.font = SANS(42); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("PASTE ONLY WHAT YOU'D PIN", 0, -12);
+  c.font = SANS(42); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("PASTE ONLY WHAT YOU'D PUT UP", 0, -12);
   c.fillText("ON THE NOTICE BOARD", 0, 42);
   c.restore();
 };

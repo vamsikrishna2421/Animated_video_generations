@@ -25,7 +25,7 @@ LINES = {
     8: ("arjun", "arjun", "shock", "Three years?! [1] So I can't use AI at all?", "మూడేళ్లా?! [1] అయితే ఏఐ వాడకూడదా?"),
     9: ("lakshmi", "laptop", "swap", "Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you.",
         "వాడొచ్చు! మూడు ఫేక్ లైన్లు పెట్టి ఫార్ములా అడుగు. [1] అసలు లిస్ట్ నీ దగ్గరే."),   # a fix that still gets the list done (script review)
-    10: ("lakshmi", "wide", "rule", "Paste only what you'd pin on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్."),
+    10: ("lakshmi", "wide", "rule", "Paste only what you'd put up on the notice board.", "నోటీస్ బోర్డ్ మీద పెట్టేదే పేస్ట్ చెయ్."),   # "pin" was heard "been"
     11: ("arjun", "sneha", "loop", "Sneha, STOP! Don't press send!", "స్నేహా, ఆగు! సెండ్ నొక్కకు!"),
 }
 TTS_EN = {}
@@ -34,8 +34,8 @@ TE_SHOW = {}
 # Sound (CLAUDE.md arc): a slam on frame 1 with the shout; the bed builds under the argument; a riser and a boing into
 # each MYTH card, a ding on each FACT flip; the bed drops out before "three years" with a hit on it; pops as the names
 # turn into Client A, B, C and a success sting on the neat table; a snap on the rule; a rise into the second slam.
-SCENES = [("of_a", (1, 2, 3), {"pre": 0.35, "boost": 1.2, "tail": 0.1}),   # the slam lands before "Arjun"
-          ("of_b", (4, 5, 6, 7, 8), {"lift": 0.5, "pre": 0.3, "boost": 1.0, "drop_at": [[3, "1"]], "tail": 0.1}),
+SCENES = [("of_a", (1, 2, 3), {"pre": 0.35, "boost": 1.5, "tail": 0.1}),   # the slam lands before "Arjun"
+          ("of_b", (4, 5, 6, 7, 8), {"lift": 0.5, "pre": 0.3, "boost": 1.5, "drop_at": [[3, "1"]], "tail": 0.1}),   # the bed sat 12-15 dB under the voice
           ("of_c", (9, 10, 11), {"pre": 0.3, "outro": True, "boost": 1.35, "rise": 1.6, "tail": 0.0})]
 # seconds after line n (default 0.16 EN / 0.24 TE): the fact cards' read, the neat table's read
 GAP = {1: 0.2, 5: 0.5, 7: 0.6, 9: 0.6, 10: 0.5}

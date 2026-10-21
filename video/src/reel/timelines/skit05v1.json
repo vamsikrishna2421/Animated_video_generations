@@ -20,29 +20,24 @@
  "musicBoosts": [
   [
    0,
-   348,
-   1.2
-  ],
-  [
-   348,
    1023,
-   1.0
+   1.5
   ],
   [
    1023,
-   1433,
+   1430,
    1.35
   ],
   [
    1023,
-   1433,
+   1430,
    1.6,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1433,
+ "totalFrames": 1430,
  "music": "reel/skit05v1/score.wav",
  "scenes": [
   {
@@ -681,7 +676,7 @@
     "hardCuts": true
    },
    "from": 1023,
-   "frames": 410,
+   "frames": 407,
    "lines": [
     {
      "who": "lakshmi",
@@ -784,52 +779,57 @@
      "sub": null,
      "audio": "reel/skit05v1/line_10.wav",
      "from": 196,
-     "frames": 96,
+     "frames": 93,
      "words": [
       {
        "w": "Paste",
-       "from": 198,
-       "to": 214
+       "from": 196,
+       "to": 211
       },
       {
        "w": "only",
-       "from": 214,
-       "to": 220
+       "from": 211,
+       "to": 218
       },
       {
        "w": "what",
-       "from": 220,
-       "to": 226
+       "from": 218,
+       "to": 224
       },
       {
        "w": "you'd",
-       "from": 226,
+       "from": 224,
+       "to": 237
+      },
+      {
+       "w": "put",
+       "from": 237,
        "to": 246
       },
       {
-       "w": "pin",
+       "w": "up",
        "from": 246,
-       "to": 251
+       "to": 255
       },
       {
        "w": "on",
-       "from": 251,
+       "from": 255,
        "to": 259
       },
       {
        "w": "the",
        "from": 259,
-       "to": 264
+       "to": 265
       },
       {
        "w": "notice",
-       "from": 264,
-       "to": 273
+       "from": 265,
+       "to": 274
       },
       {
        "w": "board.",
-       "from": 273,
-       "to": 287
+       "from": 274,
+       "to": 283
       }
      ],
      "cues": {}
@@ -840,33 +840,33 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit05v1/line_11.wav",
-     "from": 307,
+     "from": 304,
      "frames": 88,
      "words": [
       {
        "w": "Sneha,",
-       "from": 310,
-       "to": 322
+       "from": 307,
+       "to": 319
       },
       {
        "w": "STOP!",
-       "from": 322,
-       "to": 342
+       "from": 319,
+       "to": 339
       },
       {
        "w": "Don't",
-       "from": 342,
-       "to": 365
+       "from": 339,
+       "to": 362
       },
       {
        "w": "press",
-       "from": 365,
-       "to": 379
+       "from": 362,
+       "to": 376
       },
       {
        "w": "send!",
-       "from": 379,
-       "to": 390
+       "from": 376,
+       "to": 387
       }
      ],
      "cues": {}

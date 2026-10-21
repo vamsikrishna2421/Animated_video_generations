@@ -43,7 +43,7 @@ people, so swap names and numbers out before you paste; paste only what you'd pi
 | 7 | Lakshmi | If a person reviewed your chat, Google keeps it [1] up to three years. Even after you delete it. | the bed drops out before "three years"; card 2 flips: "UP TO 3 YEARS · reviewed by a person? kept, even after you delete it" (Google's Gemini privacy page) |
 | 8 | Arjun | Three years?! [1] So I can't use AI at all? | |
 | 9 | Lakshmi | Use it! Paste three fake rows, ask for the formula. [1] Your real list stays with you. | his screen: three made-up messy rows ("fake data") and "Excel formula to make them neat?"; the AI answers =PROPER(TRIM(A2)), =SUBSTITUTE(B2," ",""), sort A to Z; "his 200 real rows: neat in Excel, never pasted ✓" |
-| 10 | Lakshmi | Paste only what you'd pin on the notice board. | rule chip: "PASTE ONLY WHAT YOU'D PIN ON THE NOTICE BOARD" next to the board |
+| 10 | Lakshmi | Paste only what you'd put up on the notice board. | rule chip: "PASTE ONLY WHAT YOU'D PUT UP ON THE NOTICE BOARD" next to the board |
 | 11 | Arjun | Sneha, STOP! Don't press send! | Sneha's laptop: "SALARY_SHEET.xlsx" pasted into a chatbot; Arjun's hand slams her lid; cut to frame 1 (loops) |
 
 About 40 s. Caption: the office rule (use the company's approved AI account: business plans don't train on your data by
