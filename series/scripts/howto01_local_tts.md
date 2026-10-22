@@ -102,6 +102,16 @@ Instagram's caption can't break it); numbers clashed ("five GB" vs 4.6: now "alm
 line; "once it's loaded"; "21 languages"); the AI spoke to Ravi in the informal register in Telugu (now "-ండి"); no
 verdict (now said); "And then?" cut; frame 1 didn't say it's a voice (now "THIS AI VOICE") and had no hit.
 
+Render review (English, two viewers): both stopped at frame 1 and liked the Telugu offer best ("that one I'd forward");
+both: the music never builds, and the save list was small and gone in a moment. Fixed: the YouTube text carries the code
+(it pointed at "the Instagram caption"); the save card points to the pinned comment for telugu.py; "needs Git" for the
+Telugu install (Windows); "install Python 3.12, tick Add to PATH" (today's python.org download is newer than Kokoro's
+3.10-3.12); "any computer" (one Linux box tested) is now "8 GB of RAM, no graphics card", in both voices; "memory" reads
+RAM on the cards; the code wraps at spaces with line numbers ("compu/ter" read as a typo, "five lines" counted as
+eight); "32 / 313 MB"; the last scene no longer dips at the cut and lifts into "Telugu"; the music drops right out
+under the Telugu voice (0.25 didn't read as a drop); a half-second beat before "About thirty seconds"; the save card
+holds 2.6 s; "English + Telugu" on frame 1.
+
 ## Script (Telugu; English on-screen text), v2 (opens on the Telugu voice; the English demo plays at step 3)
 1. ల్యాప్‌టాప్ (Indic Parler): రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి కొనుగోలు మీద పది శాతం తగ్గింపు.
 2. రవి: నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!

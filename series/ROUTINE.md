@@ -315,3 +315,16 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   kept take before a re-roll; widen MUST spellings from what the judge hears ("नाउटिस", "पट्टगालगे").
 - A fact about one product makes users of the other one ask "me too?" (Gemini's 3 years: "ChatGPT lo kuda?"): answer
   it in the pinned comment with that company's own wording.
+- HOW TO runs (HOW TO 01): a tool you install goes in its own venv (`python3 -m venv --system-site-packages`), so a
+  dependency can't move the pipeline's pinned transformers/torch; check `pip install --dry-run` first. Disk: models go
+  to `/dev/shm/hf` (`HF_HUB_CACHE`), and a container restart wipes them (move a stray `~/.cache/huggingface` model there
+  instead of downloading it twice). Telugu on a canvas needs a Telugu font (`apt-get install fonts-lohit-telu`).
+- A demo line must be true where it was made: our test machine is a server CPU, so "made on a computer", not "on a
+  laptop". Code shown in a reel and pasted in a caption: Instagram strips leading spaces, so no indented blocks (a loop
+  on one line), and the caption, pinned comment, YouTube text and save card must point at the same place.
+- Fish: "two install commands" is heard "to install"; "Parler" comes out "Indikpala" (respell "Parlay", the French
+  sound); an opening phrase can vanish behind the phone filter for the judge but be there in the raw take (check the
+  raw file before re-voicing). Parler Telugu drops a long line's first sentence: split it with " | " (two takes, a
+  `must2` list for the second). A killed voice run leaves its failing take in the cache, and the next full run reuses
+  it: delete that file or re-voice the line by number.
+

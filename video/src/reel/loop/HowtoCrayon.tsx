@@ -67,18 +67,29 @@ const laptop = (c: Ctx, f: number, talk: boolean, te: boolean) => {   // te: it 
 // a full-frame laptop window: title bar, then monospace rows (soft-wrapped at `cols`, a ↪ on the wrapped part).
 // rows: [text, colour, k (0..1 shows it), highlight?]
 type Row = [string, string, number, boolean?];
-const term = (c: Ctx, W: number, title: string, rows: Row[], o: { y0?: number; size?: number; cols?: number; light?: boolean } = {}) => {
+// soft wrap at the last space before `cols` (a hard cut only for a word longer than a row): "compu/ter" read as a typo
+const wrap = (t: string, cols: number) => {
+  const out: string[] = [];
+  let rest = t;
+  while (rest.length > cols) {
+    let k = rest.lastIndexOf(" ", cols);
+    if (k <= cols * 0.4) k = cols;
+    out.push(rest.slice(0, k)); rest = rest.slice(k).replace(/^ /, "");
+  }
+  out.push(rest);
+  return out;
+};
+const term = (c: Ctx, W: number, title: string, rows: Row[], o: { y0?: number; size?: number; cols?: number; light?: boolean; numbers?: boolean } = {}) => {
   const y0 = o.y0 ?? 330, size = o.size ?? 34, cols = o.cols ?? 44, lh = size * 1.42;
   c.fillStyle = o.light ? "#f8fafc" : "#0f172a"; rrect(c, 50, y0 - 90, W - 100, 1120, 26); c.fill();
   c.fillStyle = o.light ? "#e2e8f0" : "#1e293b"; rrect(c, 50, y0 - 90, W - 100, 72, 26); c.fill();
   ["#f87171", "#fbbf24", "#4ade80"].forEach((col, i) => { c.beginPath(); c.arc(98 + i * 40, y0 - 54, 12, 0, 7); c.fillStyle = col; c.fill(); });
   c.font = SANS(32, 600); c.fillStyle = o.light ? "#334155" : "#cbd5e1"; c.textAlign = "center"; c.fillText(title, W / 2, y0 - 42);
-  let y = y0 + 40;
+  let y = y0 + 40, num = 0;
   rows.forEach(([t, col, k, hi]) => {
-    const parts: string[] = [];
-    let rest = t;
-    while (rest.length > cols) { parts.push(rest.slice(0, cols)); rest = rest.slice(cols); }
-    parts.push(rest);
+    const parts = wrap(t, cols);
+    num += 1;
+    if (o.numbers && k > 0) { c.font = MONO(size); c.fillStyle = "#64748b"; c.textAlign = "right"; c.fillText(String(num), 66, y); }
     if (k > 0) {
       const shown = Math.ceil(t.length * clamp(k));   // typed out
       let used = 0;
@@ -86,7 +97,7 @@ const term = (c: Ctx, W: number, title: string, rows: Row[], o: { y0?: number; s
         const vis = p.slice(0, Math.max(0, shown - used)); used += p.length;
         if (hi) { c.fillStyle = "rgba(250,204,21,0.28)"; c.fillRect(70, y + j * lh - size * 0.95, W - 140, lh); }
         c.font = MONO(size); c.fillStyle = col; c.textAlign = "left";
-        c.fillText((j > 0 ? "↪ " : "") + vis, 82, y + j * lh);
+        c.fillText((j > 0 ? "  " : "") + vis, 82, y + j * lh);
       });
     }
     y += parts.length * lh + 8;
@@ -119,9 +130,9 @@ const SAVE: [string, string][] = [
   ["pip install kokoro soundfile", "English: Kokoro"],
   ["sudo apt-get install espeak-ng", "Linux · Windows: the .msi · Mac: brew"],
   ["python speak.py", "5 lines, in the caption"],
-  ["pip install git+https://github.com/huggingface/parler-tts.git", "Telugu: Indic Parler"],
+  ["pip install git+https://github.com/huggingface/parler-tts.git", "Telugu: Indic Parler (needs Git)"],
   ["hf auth login", "then accept the terms on the model page"],
-  ["python telugu.py", "in the caption"],
+  ["python telugu.py", "code in the pinned comment"],
 ];
 const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number) => {
   if (k <= 0) return;
@@ -130,7 +141,7 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number) => {
   c.translate(W / 2, 880); c.scale(0.9 + 0.1 * easeOut(k), 0.9 + 0.1 * easeOut(k));
   c.fillStyle = "#fffdf5"; rrect(c, -500, -560, 1000, 1180, 34); c.fill();
   c.font = SANS(84); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("SAVE THIS ✓", 0, -450);
-  c.font = SANS(36, 600); c.fillStyle = "#475569"; c.fillText("free · offline · every command in the caption", 0, -390);
+  c.font = SANS(34, 600); c.fillStyle = "#475569"; c.fillText("free · offline · every command: caption + pinned comment", 0, -390);
   SAVE.forEach(([cmd, note], i) => {
     const q = clamp((f - f0 - 6 - i * 5) / 6); if (q <= 0) return;
     const y = -320 + i * 148;
@@ -139,7 +150,7 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number) => {
     c.font = SANS(40); c.fillStyle = "#4ade80"; c.textAlign = "left"; c.fillText("✓", -440, y + 66);
     const sz = cmd.length > 40 ? 22 : cmd.length > 30 ? 28 : 34;
     c.font = MONO(sz, 700); c.fillStyle = "#f8fafc"; c.fillText(cmd, -396, y + 50);
-    c.font = SANS(28, 600); c.fillStyle = "#93c5fd"; c.fillText(note, -396, y + 88);
+    c.font = SANS(32, 600); c.fillStyle = "#93c5fd"; c.fillText(note, -396, y + 92);
     c.restore();
   });
   c.restore();
@@ -195,8 +206,8 @@ const StHowto: React.FC<SP> = ({ s }) => {
               ["eSpeak NG text-to-speech: 1.51", "#86efac", seg(p, 0.74, 0.8)],
             ], { y0: 440, size: 38, cols: 40 });
             tag(c, "Windows: the espeak-ng .msi · Mac: brew install espeak-ng", W / 2, 1110, 38, "#fff", "#334155", -0.01, seg(p, 0.5, 0.6));
-            tag(c, "needs Python 3.10-3.12", 330, 1220, 44, "#e0e7ff", INK, 0.02, seg(p, 0.6, 0.7));
-            tag(c, "+ PyTorch on a fresh computer", 760, 1220, 40, "#fef3c7", INK, -0.02, seg(p, 0.7, 0.8));
+            tag(c, "first: Python 3.12 (python.org), then Terminal / Command Prompt", W / 2, 1220, 36, "#e0e7ff", INK, 0.01, seg(p, 0.05, 0.15));
+            tag(c, "+ PyTorch on a fresh computer", W / 2, 1320, 40, "#fef3c7", INK, -0.02, seg(p, 0.7, 0.8));
           }
           if (b.prop === "code") {
             step("STEP 2 · FIVE LINES");
@@ -206,7 +217,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
               ["pipeline = KPipeline(lang_code='a')", "#f8fafc", 1],
               ['text = "Hello! This voice was made on a computer, with no internet."', "#fde68a", 1, hi],
               ["for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)", "#f8fafc", 1],
-            ], { y0: 440, size: 34, cols: 45 });
+            ], { y0: 440, size: 34, cols: 44, numbers: true });
             tag(c, "copy it from the caption", W / 2, 1150, 52, "#dcfce7", "#166534", 0.02, seg(p, 0.08, 0.2));
             if (hi) tag(c, "your words go here", W / 2, 1270, 58, "#fef3c7", INK, -0.02, seg(f, cu(1, 0.55) - 4, cu(1, 0.55) + 6));
           }
@@ -220,7 +231,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
             c.fillStyle = "#334155"; rrect(c, 110, 920, W - 220, 50, 25); c.fill();
             c.fillStyle = PURPLE; rrect(c, 110, 920, Math.max(50, (W - 220) * dl), 50, 25); c.fill();
             c.font = SANS(36, 600); c.fillStyle = "#e2e8f0"; c.textAlign = "center";
-            c.fillText(dl < 1 ? `first run only: downloading the voice ${Math.round(313 * dl)} MB` : "voice downloaded: 313 MB (once)", W / 2, 1020);
+            c.fillText(dl < 1 ? `first run only: downloading the voice ${Math.round(313 * dl)} / 313 MB` : "voice downloaded: 313 MB (once)", W / 2, 1020);
             if (p > 0.68) tag(c, "letters → sounds → 0.wav (4 s of speech)", W / 2, 1160, 52, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.68, 0.76));
           }
           if (b.prop === "endemo" || b.prop === "tedemo") {
@@ -239,7 +250,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
             wifiOff(c, W / 2, 400, 1.6);
             c.font = SANS(52); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("Wi-Fi OFF", W / 2, 560);
             const c1 = cu(1, 0.4);
-            statCard(c, W, 880, "1.2 s", "per 4-second line, once loaded", ["1.2 GB memory · no graphics card", "our test: 4-core Intel Xeon, 2.1 GHz"], GREEN, seg(f, c1 - 4, c1 + 8));
+            statCard(c, W, 880, "1.2 s", "per 4-second line, once loaded", ["1.2 GB RAM · no graphics card", "our test: 4-core Intel Xeon, 2.1 GHz"], GREEN, seg(f, c1 - 4, c1 + 8));
           }
           if (b.prop === "parler") {
             term(c, W, "huggingface.co", [["ai4bharat/indic-parler-tts", "#0f172a", 1]], { size: 40, cols: 40, light: true });
@@ -267,13 +278,13 @@ const StHowto: React.FC<SP> = ({ s }) => {
           if (b.prop === "slow") {
             race(c, W, 520, [seg(p, 0.05, 0.2), seg(p, 0.25, 0.55)]);
             const c1 = cu(1, 0.55);
-            statCard(c, W, 1150, "4.7 GB", "memory for Telugu", ["22 s to load · 3.75 GB download", "free · offline once downloaded"], ORANGE, seg(f, c1 - 4, c1 + 8));
+            statCard(c, W, 1150, "4.7 GB", "RAM for Telugu", ["22 s to load · 3.75 GB download", "free · offline once downloaded"], ORANGE, seg(f, c1 - 4, c1 + 8));
           }
           if (b.prop === "verdict") {
             c.save(); c.translate(W / 2, 830);
             c.fillStyle = "#fffdf5"; rrect(c, -480, -360, 960, 720, 32); c.fill();
             c.font = SANS(64); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("WHICH ONE?", 0, -260);
-            const rows: [string, string, string, number][] = [["English", "Kokoro", "fast · 1.2 GB", 0.05], ["Telugu", "Indic Parler", "slower · 4.7 GB", 0.4]];
+            const rows: [string, string, string, number][] = [["English", "Kokoro", "fast · 1.2 GB RAM", 0.05], ["Telugu", "Indic Parler", "slower · 4.7 GB RAM", 0.4]];
             rows.forEach(([lang, name, note, t0], q) => {
               const k = seg(p, t0, t0 + 0.12); if (k <= 0) return;
               c.save(); c.globalAlpha = clamp(k * 2);
@@ -282,7 +293,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
               c.font = SANS(40, 600); c.fillStyle = "#475569"; c.fillText(note, -400, -55 + q * 190);
               c.restore();
             });
-            if (p > 0.7) { c.font = SANS(44, 600); c.fillStyle = INK; c.textAlign = "center"; c.fillText("8 GB memory · no graphics card · free", 0, 260); }
+            if (p > 0.7) { c.font = SANS(44, 600); c.fillStyle = INK; c.textAlign = "center"; c.fillText("8 GB RAM · no graphics card · free", 0, 240); c.font = SANS(32, 600); c.fillStyle = "#64748b"; c.fillText("we tested one 4-core Linux computer", 0, 296); }
             c.restore();
           }
         } else {
@@ -301,6 +312,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
           if (b.prop === "hook") {
             headline(c, W, "THIS AI VOICE:", "NO INTERNET. FREE.", 1);
             tag(c, "real voice from our test", 300, 1120, 44, "#fff", "#334155", -0.02, seg(p, 0.1, 0.2));
+            tag(c, te ? "Telugu + English" : "English + Telugu", 800, 560, 52, "#fef3c7", INK, 0.04, seg(p, 0.3, 0.45));
           }
           if (b.prop === "who") bubble(c, 330, 560, "Who's talking?!", 76, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "nobody") tag(c, te ? "Telugu: Indic Parler · English: Kokoro" : "KOKORO · a free voice model", W / 2, 520, 50, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.15, 0.3));

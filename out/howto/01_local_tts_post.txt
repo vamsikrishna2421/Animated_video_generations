@@ -9,7 +9,7 @@ reel opens on Indic Parler's Telugu voice (Ravi's Diwali offer). Both voices are
 Chintu's laptop talked with the Wi-Fi off. Make an AI voice on your own computer: free, offline, no subscription.
 
 ENGLISH: Kokoro (free, Apache 2.0)
-1. Python 3.10-3.12. In a terminal:
+1. Install Python 3.12 (python.org/downloads; Windows: tick "Add python.exe to PATH"). Kokoro needs 3.10-3.12. Then in Terminal / Command Prompt:
 pip install kokoro soundfile
 2. espeak-ng. Linux: sudo apt-get install espeak-ng · Windows: the .msi from github.com/espeak-ng/espeak-ng/releases · Mac: not in the official guides; Homebrew has it: brew install espeak-ng (we haven't tried a Mac)
 3. Save these 5 lines as speak.py:
@@ -23,11 +23,11 @@ for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, 
 TELUGU: Indic Parler-TTS by AI4Bharat (free, Apache 2.0): the steps and the code are in the pinned comment.
 
 Our test (a 4-core Intel Xeon at 2.1 GHz, no graphics card):
-English: a 4-second line in 1.2 s once loaded (1.2 GB memory)
-Telugu: a 5.6-second line in about 30 s (4.7 GB memory)
-You need: 8 GB of memory; about 2 GB of disk for Kokoro, 6 GB for Indic Parler (pip also fetches PyTorch the first time).
+English: a 4-second line in 1.2 s once loaded (1.2 GB RAM)
+Telugu: a 5.6-second line in about 30 s (4.7 GB RAM)
+You need: 8 GB of RAM; about 2 GB of disk for Kokoro, 6 GB for Indic Parler (pip also fetches PyTorch the first time).
 
-If it breaks: "espeak-ng not found" → step 2 · Python 3.13 → use 3.12 · the Telugu model says gated or 401 → accept its terms and run hf auth login.
+If it breaks: "espeak-ng not found" → step 2 · Python 3.13 or newer → install 3.12 · "git not found" → install Git (git-scm.com) · the Telugu model says gated or 401 → accept its terms and run hf auth login.
 Never share your Hugging Face token.
 
 Save this for later. Next HOW TO (Oct 29): a free AI chatbot on your laptop.
@@ -39,7 +39,8 @@ What's the first thing you'd make your computer say? English or Telugu?
 
 === PINNED_COMMENT ===
 TELUGU VOICE: Indic Parler-TTS (AI4Bharat, Apache 2.0, 21 languages incl. Telugu; Telugu voices: Lalitha, Prakash, Kiran)
-1. pip install git+https://github.com/huggingface/parler-tts.git
+1. Needs Git (git-scm.com; Windows doesn't have it by default). Then:
+pip install git+https://github.com/huggingface/parler-tts.git
 2. Free Hugging Face account → open huggingface.co/ai4bharat/indic-parler-tts → accept the terms → in a terminal: hf auth login
 3. Save as telugu.py:
 import torch
@@ -71,7 +72,22 @@ Ravi cancels his paid app. A "save this" card lists every command.
 
 === YOUTUBE SHORTS ===
 Title: Make an AI voice on your laptop, free and offline (Kokoro + Indic Parler-TTS) #shorts
-Description: An AI voice on your own computer, no internet, no subscription. English: Kokoro (Apache 2.0): pip install kokoro soundfile, espeak-ng, five lines of Python. Telugu: Indic Parler-TTS by AI4Bharat (Apache 2.0; free Hugging Face login, accept the terms). Our test on a 4-core CPU, no graphics card: 1.2 s for a 4-second English line; about 30 s for a 5.6-second Telugu line. Every command: in the pinned comment and the Instagram caption. Next HOW TO: a free AI chatbot on your laptop.
+Description:
+An AI voice on your own computer: no internet, no subscription.
+ENGLISH, Kokoro (Apache 2.0). Python 3.12, then:
+pip install kokoro soundfile
+espeak-ng: Linux: sudo apt-get install espeak-ng · Windows: the .msi from github.com/espeak-ng/espeak-ng/releases · Mac: brew install espeak-ng (not in the official guides; untested by us)
+speak.py:
+from kokoro import KPipeline
+import soundfile as sf
+pipeline = KPipeline(lang_code='a')
+text = "Hello! This voice was made on a computer, with no internet."
+for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
+Run: python speak.py (the first run downloads 313 MB)
+TELUGU, Indic Parler-TTS by AI4Bharat (Apache 2.0; free Hugging Face login, accept the terms, needs Git): the code is in the pinned comment.
+Our test (a 4-core Intel Xeon, no graphics card): 1.2 s for a 4-second English line once loaded (1.2 GB RAM); about 30 s for a 5.6-second Telugu line (4.7 GB RAM). You need 8 GB of RAM.
+Next HOW TO: a free AI chatbot on your laptop.
+YouTube pinned comment: the PINNED_COMMENT text above (the Telugu code).
 
 ########## TELUGU (@ai_maastaaru_telugu) ##########
 === CAPTION ===
@@ -80,7 +96,7 @@ Chintu laptop Wi-Fi off lo kooda maatladindi. Mee computer lo AI voice: free, of
 TELUGU: Indic Parler-TTS (AI4Bharat, free, Apache 2.0): steps, code pinned comment lo.
 
 ENGLISH: Kokoro (free, Apache 2.0)
-1. Python 3.10-3.12. Terminal lo:
+1. Python 3.12 install cheyyandi (python.org/downloads; Windows lo "Add python.exe to PATH" tick cheyyandi). Kokoro ki 3.10-3.12 kavali. Taruvaata Terminal / Command Prompt lo:
 pip install kokoro soundfile
 2. espeak-ng. Linux: sudo apt-get install espeak-ng · Windows: github.com/espeak-ng/espeak-ng/releases lo .msi · Mac: official guides lo ledu; Homebrew lo undi: brew install espeak-ng (memu Mac lo try cheyyaledu)
 3. Ee 5 lines speak.py ga save cheyyandi:
@@ -92,11 +108,11 @@ for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, 
 4. python speak.py → 0.wav. Modatisaari voice download avutundi (313 MB); taruvaata internet akkarledu.
 
 Maa test (4-core Intel Xeon 2.1 GHz, graphics card ledu):
-English: 4 seconds line, load ayyaka 1.2 s lo (1.2 GB memory)
-Telugu: 5.6 seconds line, sumaaru 30 s lo (4.7 GB memory)
-Kavalsindi: 8 GB memory; disk Kokoro ki ~2 GB, Indic Parler ki ~6 GB (modatisaari pip PyTorch kooda download chestundi).
+English: 4 seconds line, load ayyaka 1.2 s lo (1.2 GB RAM)
+Telugu: 5.6 seconds line, sumaaru 30 s lo (4.7 GB RAM)
+Kavalsindi: 8 GB RAM; disk Kokoro ki ~2 GB, Indic Parler ki ~6 GB (modatisaari pip PyTorch kooda download chestundi).
 
-Problem vaste: "espeak-ng not found" → step 2 · Python 3.13 → 3.12 vaadandi · Telugu model "gated" leda 401 → model page lo terms accept chesi hf auth login.
+Problem vaste: "espeak-ng not found" → step 2 · Python 3.13 leda kotta version → 3.12 install cheyyandi · "git not found" → Git install (git-scm.com) · Telugu model "gated" leda 401 → model page lo terms accept chesi hf auth login.
 Mee Hugging Face token evariki ivvakandi.
 
 Save cheyyandi. Next HOW TO (Oct 29): mee laptop lo free AI chatbot.
@@ -108,7 +124,8 @@ Mee computer modata emi cheppali? Telugu lo comment cheyyandi!
 
 === PINNED_COMMENT ===
 TELUGU VOICE (Telugu gontu): Indic Parler-TTS (AI4Bharat, Apache 2.0, 21 languages incl. Telugu; Telugu voices: Lalitha, Prakash, Kiran)
-1. pip install git+https://github.com/huggingface/parler-tts.git
+1. Git kavali (git-scm.com; Windows lo default ga undadu). Taruvaata:
+pip install git+https://github.com/huggingface/parler-tts.git
 2. Free Hugging Face account → huggingface.co/ai4bharat/indic-parler-tts open chesi terms accept cheyyandi → terminal lo: hf auth login
 3. telugu.py ga save cheyyandi:
 import torch
@@ -132,7 +149,21 @@ Ravi anna counter meeda Chintu laptop, voice waveform, Wi-Fi off icon; "THIS AI 
 
 === YOUTUBE SHORTS ===
 Title: AI voice mee laptop lo, free & offline (Telugu: Indic Parler-TTS) #shorts
-Description: Internet lekunda, free ga mee computer lo AI voice. Telugu: Indic Parler-TTS (AI4Bharat, Apache 2.0; free Hugging Face login, terms accept). English: Kokoro (Apache 2.0). Maa test (4-core CPU, graphics card ledu): English 4-second line 1.2 s lo; Telugu 5.6-second line sumaaru 30 s lo. Commands anni pinned comment lo. Next HOW TO: mee laptop lo free AI chatbot.
+Description:
+Internet lekunda, free ga mee computer lo AI voice.
+TELUGU: Indic Parler-TTS (AI4Bharat, Apache 2.0; free Hugging Face login, terms accept, Git kavali): code pinned comment lo.
+ENGLISH: Kokoro (Apache 2.0). Python 3.12, taruvaata:
+pip install kokoro soundfile
+espeak-ng: Linux: sudo apt-get install espeak-ng · Windows: github.com/espeak-ng/espeak-ng/releases lo .msi · Mac: brew install espeak-ng
+speak.py:
+from kokoro import KPipeline
+import soundfile as sf
+pipeline = KPipeline(lang_code='a')
+text = "Hello! This voice was made on a computer, with no internet."
+for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
+Maa test (4-core CPU, graphics card ledu): English 4-second line 1.2 s lo (1.2 GB RAM); Telugu 5.6-second line sumaaru 30 s lo (4.7 GB RAM). 8 GB RAM kavali.
+Next HOW TO: mee laptop lo free AI chatbot.
+YouTube pinned comment: paina PINNED_COMMENT (Telugu code).
 
 === SOURCES (for comments) ===
 Kokoro: github.com/hexgrad/kokoro (README: install, espeak-ng, languages; Apache 2.0) · pypi.org/project/kokoro (0.9.4, Python 3.10-3.12)

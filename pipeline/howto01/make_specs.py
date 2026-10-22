@@ -35,7 +35,7 @@ L_EN = [
     ("ravi", "ravi", "myoffer", "That's my Diwali offer! How long did it take?", None),
     ("ai", "laptop", "slow", "About thirty seconds a line, [1] and almost five GB of memory.", "About 30 seconds a line, and almost 5 GB of memory."),
     ("ravi", "ravi", "cancel", "Slow, but free! That app is cancelled!", None),
-    ("ai", "laptop", "verdict", "English: Kokoro. Telugu: Indic Parler. Any computer with eight GB of memory.", "English: Kokoro. Telugu: Indic Parler. Any computer with 8 GB of memory."),
+    ("ai", "laptop", "verdict", "English: Kokoro. Telugu: Indic Parler. Eight GB of RAM, no graphics card.", "English: Kokoro. Telugu: Indic Parler. 8 GB of RAM, no graphics card."),   # "any computer" overclaimed one test machine (render review)
     ("ravi", "wide", "save", "Chintu! Save this!", None),
 ]
 L_TE = [
@@ -57,7 +57,7 @@ L_TE = [
     ("ravi", "ravi", "myoffer", "సరే, ఎంత టైం పడుతుంది?", "Okay, how long does it take?"),
     ("ai", "laptop", "slow", "ఒక్కో లైన్ కి దాదాపు ముప్పై సెకన్లు, [1] దాదాపు ఐదు జీబీ మెమరీ.", "About 30 seconds a line, almost 5 GB of memory."),
     ("ravi", "ravi", "cancel", "నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!", "Slow... but free! That app is cancelled!"),
-    ("ai", "laptop", "verdict", "ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ మెమరీ ఉన్న ఏ కంప్యూటర్ అయినా చాలు.", "English: Kokoro. Telugu: Indic Parler. Any computer with 8 GB of memory."),
+    ("ai", "laptop", "verdict", "ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.", "English: Kokoro. Telugu: Indic Parler. 8 GB of RAM, no graphics card."),
     ("ravi", "wide", "save", "చింటూ! ఇది సేవ్ చెయ్!", "Chintu! Save this!"),
 ]
 DEMO = {HELLO: "series/scripts/howto01_demo/0.wav", OFFER: "series/scripts/howto01_demo/offer_1.wav"}
@@ -65,7 +65,7 @@ DEMO = {HELLO: "series/scripts/howto01_demo/0.wav", OFFER: "series/scripts/howto
 TTS_EN = {"run": "Run it. The first time, it downloads the voice: three hundred and thirteen megabytes.",
           "parler": "For Telugu: Indic Parlay T T S. Free login, accept the terms, [1] then describe the voice in words.",   # "Parler" was heard "Indikpala"; parler is French, "par-lay"
           "slow": "About thirty seconds a line, [1] and almost five gigabytes of memory.",
-          "verdict": "English: Kokoro. Telugu: Indic Parlay. Any computer with eight gigabytes of memory."}
+          "verdict": "English: Kokoro. Telugu: Indic Parlay. Eight gigabytes of RAM, no graphics card."}
 # by prop: groups of words, one of each group must be heard (English: Whisper's words; Telugu: substrings of its Devanagari)
 MUST_EN = {"who": [("talking",), ("wi", "wifi", "wi-fi"), ("off",)], "nobody": [("kokoro", "cocoro", "kokorro", "cocorro"), ("free",), ("voice",), ("laptop",)],
            "pay": [("free",), ("app",), ("month",), ("announcements", "announcement")], "install": [("step",), ("install",), ("only",), ("commands", "command")],
@@ -76,7 +76,7 @@ MUST_EN = {"who": [("talking",), ("wi", "wifi", "wi-fi"), ("off",)], "nobody": [
            "parlour": [("parlour", "parlor", "parler"), ("beauty",)], "french": [("french",), ("speak",), ("listen",)],
            "myoffer": [("diwali",), ("offer",), ("long",)], "slow": [("thirty", "30"), ("line",), ("five", "5"), ("memory",)],
            "cancel": [("slow",), ("free",), ("app",), ("cancelled", "canceled", "cancel")],
-           "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley", "palay", "palae", "pale"), ("eight", "8", "8gb"), ("memory",)], "save": [("chintu",), ("save",)]}
+           "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley", "palay", "palae", "pale"), ("eight", "8", "8gb"), ("ram", "graphics")], "save": [("chintu",), ("save",)]}
 MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ", "फै")], "nobody": [("चिं", "चिन", "चीं")],
            "nobody2": [("पार", "पाल", "parl"), ("कोक", "कोको", "koko")],
            "pay": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "install": [("इंग", "इन्ग", "इंगि"), ("स्टा", "स्टॉ", "stal")],
@@ -85,19 +85,19 @@ MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ
            "telugu": [("तेल", "टेल", "तल"), ("फर", "offer")], "parler": [("पार", "पाल"), ("लॉग", "लोग", "लाग", "login")],
            "parlour": [("पार", "पाल"), ("ब्यू", "बियू", "बू", "ब्यु")], "french": [("फ्रें", "फ्रैं", "फ्रेन", "फ़्रें", "french")],
            "myoffer": [("टैम", "टाइम", "टाईम", "टेम")], "slow": [("मुप", "मुब"), ("जी", "gb")],
-           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("पार", "पाल"), ("जी", "gb")],
+           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("पार", "पाल"), ("र्याम", "रैम", "राम", "ram")],
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05)
 TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
 # Sound (CLAUDE.md arc): a hit and a pop with the laptop's voice on frame 1; keyboard ticks under the terminal screens;
 # a lift into each step; a hit on the offline number; a riser into the Telugu demo with the bed down under it (the
 # payoff); a success sting on "That's my offer!"; a rise into "Save this!" and a hit on the checklist.
 SCENES = {"en": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 10, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "tail": 0.1}),
-                 ("h_c", 10, 20, {"lift": 0.6, "pre": 0.3, "outro": True, "boost": 1.38, "rise": 1.3, "tail": 0.0})],
+                 ("h_c", 10, 20, {"lift": 1.0, "pre": 0.3, "outro": True, "boost": 1.42, "rise": 1.26, "drop_pre": [[6, 0.0, 0.5]], "tail": 0.0})],   # 6: the beat of silence before "About thirty seconds"
           "te": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 11, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "tail": 0.1}),
-                 ("h_c", 11, 20, {"lift": 0.6, "pre": 0.3, "outro": True, "boost": 1.38, "rise": 1.3, "tail": 0.0})]}
-GAP = {"hook": 0.25, "install": 0.6, "code": 0.5, "run": 0.4, "endemo": 0.4, "offline": 0.7, "parler": 0.4, "tedemo": 0.4, "slow": 0.6, "verdict": 0.8}   # the screens' reads
+                 ("h_c", 11, 20, {"lift": 1.0, "pre": 0.3, "outro": True, "boost": 1.42, "rise": 1.26, "drop_pre": [[5, 0.0, 0.5]], "tail": 0.0})]}
+GAP = {"hook": 0.25, "install": 0.6, "code": 0.5, "run": 0.4, "endemo": 0.4, "offline": 0.7, "parler": 0.4, "tedemo": 0.4, "myoffer": 0.5, "slow": 0.6, "verdict": 0.8}   # the screens' reads
 GAIN_PROP = {"parler": 0.3, "french": 1.0, "slow": 1.4, "verdict": 1.0, "save": 0.8}   # the rising last scene: 6.8-7.4 dB over the bed
-DUCK_DEMO = 0.25   # the bed under the laptop's demo lines (the voice is the point)
+DUCK_DEMO = 0.1   # the bed under the laptop's demo lines (the voice is the point; 0.25 didn't read as a drop)
 YT = {"h_a": "The laptop talks, no internet", "h_b": "Kokoro: install, code, run", "h_c": "Telugu: Indic Parler-TTS"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -108,7 +108,7 @@ def spec(lang="en"):
     L = L_TE if te else L_EN
     s = {"id": sid, "title": "HOW TO 01: an AI voice on your laptop, free and offline" + (" (Telugu audio)" if te else ""), "label": "HOW TO 01",
          "banner": "AI voice on your laptop, offline", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.15, "music": "lofi",
-         "musicVol": [0.46, 0.9], "musicFade": 0.05, "endPad": 0.8, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
+         "musicVol": [0.46, 0.9], "musicFade": 0.05, "endPad": 2.6, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]],
          "musicPad": True, "musicGapGain": 3.0, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.12 if te else 1.15, "captionTop": 1500}
     if te:

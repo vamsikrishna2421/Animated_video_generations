@@ -13,7 +13,7 @@
   0.9
  ],
  "musicFade": 0.05,
- "endPad": 0.8,
+ "endPad": 2.6,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -165,7 +165,7 @@
    "duck_lines": [
     [
      0,
-     0.25
+     0.1
     ]
    ]
   },
@@ -378,11 +378,18 @@
    "id": "h_c",
    "type": "sk_howto",
    "tail": 0.0,
-   "lift": 0.6,
+   "lift": 1.0,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.38,
-   "rise": 1.3,
+   "boost": 1.42,
+   "rise": 1.26,
+   "drop_pre": [
+    [
+     6,
+     0.0,
+     0.5
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -571,7 +578,7 @@
      "text": "That's my Diwali offer! How long did it take?",
      "show": "That's my Diwali offer! How long did it take?",
      "maxgap": 0.28,
-     "gap": 0.16,
+     "gap": 0.5,
      "tempo": 1.2,
      "must": [
       [
@@ -642,8 +649,8 @@
     {
      "who": "ai",
      "file": "19_ai.wav",
-     "text": "English: Kokoro. Telugu: Indic Parler. Any computer with eight GB of memory.",
-     "show": "English: Kokoro. Telugu: Indic Parler. Any computer with 8 GB of memory.",
+     "text": "English: Kokoro. Telugu: Indic Parler. Eight GB of RAM, no graphics card.",
+     "show": "English: Kokoro. Telugu: Indic Parler. 8 GB of RAM, no graphics card.",
      "maxgap": 0.28,
      "gap": 0.8,
      "tempo": 1.16,
@@ -675,10 +682,11 @@
        "8gb"
       ],
       [
-       "memory"
+       "ram",
+       "graphics"
       ]
      ],
-     "tts": "English: Kokoro. Telugu: Indic Parlay. Any computer with eight gigabytes of memory."
+     "tts": "English: Kokoro. Telugu: Indic Parlay. Eight gigabytes of RAM, no graphics card."
     },
     {
      "who": "ravi",
@@ -702,7 +710,7 @@
    "duck_lines": [
     [
      4,
-     0.25
+     0.1
     ]
    ]
   }
