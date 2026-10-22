@@ -327,4 +327,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   raw file before re-voicing). Parler Telugu drops a long line's first sentence: split it with " | " (two takes, a
   `must2` list for the second). A killed voice run leaves its failing take in the cache, and the next full run reuses
   it: delete that file or re-voice the line by number.
+- `musicEndGain` lifts the whole bed about 2.8 dB, not just the ending (its tanh normalisation has gain 1.37 on quiet
+  signals): HOW TO 01 Telugu dropped to 6-7 dB voice-over-music on every line. `musicEndRamp: [start fraction, dB]`
+  swells only from the start point (start it where the last explaining line ends; a line under the swell may need a
+  `duck_lines` entry to stay 8 dB clear). Put a lift's hit 0.7 s before a key word (`pre`): at 0.3 s the boom tail
+  and the outro layer blurred "తెలుగు" in the mix while the isolated take was clean.
+- The Telugu judge writes numbers as digits ("30" for ముప్పై): put the digits in the MUST group, or the complete take
+  fails and a take that dropped the number wins by 0.003 points (Parler dropped "ముప్పై సెకన్లు" in 3 of 4 tries).
+  Whisper can also skip the first sentence of a take with a long pause in it: transcribe the halves before re-voicing.
 

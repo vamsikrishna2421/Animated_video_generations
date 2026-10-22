@@ -37,9 +37,9 @@
  "captionTop": 1500,
  "handle": "@ai_maastaaru_telugu",
  "parler_lang": "te",
- "musicEndGain": [
+ "musicEndRamp": [
   0.93,
-  5.0
+  7.0
  ],
  "scenes": [
   {
@@ -92,7 +92,7 @@
      "gap": 0.25,
      "tempo": 1.0,
      "demo": "series/scripts/howto01_demo/offer_1.wav",
-     "gain_db": 2.5
+     "gain_db": 3.0
     },
     {
      "who": "ravi",
@@ -181,7 +181,7 @@
    "duck_lines": [
     [
      0,
-     0.45
+     0.6
     ]
    ]
   },
@@ -653,7 +653,7 @@
        "ram"
       ]
      ],
-     "gain_db": 0.5
+     "gain_db": 1.5
     },
     {
      "who": "ravi",
@@ -676,8 +676,14 @@
        "save"
       ]
      ],
-     "gain_db": 2.3
+     "gain_db": 3.3
     }
+   ],
+   "duck_lines": [
+    [
+     8,
+     0.85
+    ]
    ]
   }
  ]

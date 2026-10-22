@@ -98,11 +98,12 @@ SCENES = {"en": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 10, {"li
 # decays before "మరి నా తెలుగు ఆఫర్?" (it blurred "తెలుగు"); rise 1.4 and END_GAIN_TE: the bed builds into the save card (render review)
 GAP = {"hook": 0.25, "install": 0.6, "code": 0.5, "run": 0.4, "endemo": 0.4, "offline": 0.7, "parler": 0.4, "tedemo": 0.4, "myoffer": 0.5, "slow": 0.6, "verdict": 0.8}   # the screens' reads
 GAIN_PROP = {"parler": 0.3, "french": 1.0, "slow": 1.4, "verdict": 1.0, "save": 0.8}   # the rising last scene: 6.8-7.4 dB over the bed
-GAIN_PROP_TE = {"hook": 2.5, "install": 0.5, "telugu": 1.3, "cancel": 0.5, "verdict": 0.5, "save": 1.0}   # Telugu: 8+ dB over the bed; the hook's
-# demo voice up 2.5 dB (the first 3 s were the quietest of the reel)
-END_GAIN_TE = [0.93, 5.0]   # [fraction of the reel, dB]: the bed swells from the end of the verdict line into the save card
+GAIN_PROP_TE = {"hook": 3.0, "install": 0.5, "telugu": 1.3, "cancel": 0.5, "verdict": 1.5, "save": 2.0}   # Telugu: 8+ dB over the bed; the hook's
+# demo voice up 3 dB (the first 3 s were the quietest of the reel)
+END_GAIN_TE = [0.93, 7.0]   # [fraction of the reel, dB]: the bed swells from the end of the verdict line into the save card
 DUCK_DEMO = 0.1   # the bed under the laptop's demo lines (the voice is the point; 0.25 didn't read as a drop)
-DUCK_HOOK_TE = 0.45   # the Telugu hook (a demo line) on a soft bed: at 0.1 it opened on near-silence (render review)
+DUCK_HOOK_TE = 0.6   # the Telugu hook (a demo line) on a soft bed: at 0.1 it opened on near-silence (render review)
+DUCK_PROP_TE = {"save": 0.85}   # "Save this!" stays 8 dB over the swelling bed
 YT = {"h_a": "The laptop talks, no internet", "h_b": "Kokoro: install, code, run", "h_c": "Telugu: Indic Parler-TTS"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -117,7 +118,7 @@ def spec(lang="en"):
          "musicPad": True, "musicGapGain": 3.0, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.12 if te else 1.15, "captionTop": 1500}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "musicEndGain": END_GAIN_TE})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "musicEndRamp": END_GAIN_TE})
     scenes = []
     for scid, a, b, flags in SCENES[lang]:
         lines, beats = [], []
@@ -149,6 +150,8 @@ def spec(lang="en"):
         demo_i = [i for i, ln in enumerate(lines) if ln["who"] == "laptop"]
         if demo_i:   # the bed sits low under the demo voice
             sc["duck_lines"] = [[i, DUCK_HOOK_TE if te and beats[i]["prop"] == "hook" else DUCK_DEMO] for i in demo_i]
+        if te:
+            sc["duck_lines"] = sc.get("duck_lines", []) + [[i, DUCK_PROP_TE[b["prop"]]] for i, b in enumerate(beats) if b["prop"] in DUCK_PROP_TE]
         scenes.append(sc)
     s["scenes"] = scenes
     out = R / f"{sid}.json"

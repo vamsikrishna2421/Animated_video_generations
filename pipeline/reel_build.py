@@ -655,6 +655,16 @@ def main(spec_path: Path) -> None:
         i0 = int(f0 * len(bed))
         g[i0:] = 10 ** (np.linspace(0, gdb, len(bed) - i0) / 20)
         bed = np.tanh(bed * g[:, None] * 1.1) / np.tanh(1.1) if bed.ndim > 1 else np.tanh(bed * g * 1.1) / np.tanh(1.1)
+    if spec.get("musicEndRamp"):   # [start fraction, dB]: as musicEndGain, but the bed before the swell is untouched (musicEndGain's
+        f0, gdb = spec["musicEndRamp"]   # tanh lifts every quiet stretch ~2.8 dB) and the soft clip fades in with the swell
+        i0 = int(f0 * len(bed))
+        g, w = np.ones(len(bed)), np.zeros(len(bed))
+        g[i0:] = 10 ** (np.linspace(0, gdb, len(bed) - i0) / 20)
+        w[i0:] = np.linspace(0, 1, len(bed) - i0)
+        if bed.ndim > 1:
+            g, w = g[:, None], w[:, None]
+        lin = bed * g
+        bed = lin * (1 - w) + 0.98 * np.tanh(lin / 0.98) * w
     sf.write(out / "score.wav", bed.astype(np.float32), MSR)
     handle = spec.get("handle", "@ai_maastaaru_telugu" if rid.endswith("te") else "@ai_maastaaru")
     for sc in scenes:
