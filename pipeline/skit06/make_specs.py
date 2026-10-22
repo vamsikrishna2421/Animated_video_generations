@@ -23,7 +23,7 @@ LINES = {
     9: ("host", "wide", "timeup", "Time's up! Who's the AI?", "టైం అయిపోయింది! ఎవరది?"),   # Telugu: "ఏఐ ఎవరు" babbled in 4 takes
     10: ("host", "reveal", "reveal", "It's C! A phone in a moustache!", "సి! మీసం పెట్టుకున్న ఫోన్!"),
     11: ("b", "reveal", "sorry", "Sorry! Customer-care habit.", "సారీ సారీ! కస్టమర్ కేర్ అలవాటు!"),
-    12: ("host", "phone", "madeup", "And Ramulu Tiffins? [1] We made it up!", "రాములు టిఫిన్స్? [1] ఆ పేరు మేమే పెట్టాం!"),   # not "it doesn't exist": a web search can't see every shop
+    12: ("host", "phone", "madeup", "And Ramulu Tiffins? [1] We made it up!", "రాములు టిఫిన్స్? [1] ఆ పేరు మేం పెట్టిందే!"),   # not "it doesn't exist": a web search can't see every shop; Telugu "మేమే పెట్టాం" was heard "మేమ్ మేమ్ మేమ్" (render review)
     13: ("c", "phone", "sure", "But I sounded so sure!", "కానీ నేను చాలా ష్యూర్ గా చెప్పానే!"),
     14: ("host", "card", "trap", "That's the trap. [1] Like an exam with no negative marking, [2] it guesses.",
          "అదే ట్రాప్. [1] నెగెటివ్ మార్కులు లేని ఎగ్జామ్ లాగా, [2] ఊహించి చెప్పేస్తుంది."),   # why it guesses (OpenAI, Sep 2025)
@@ -41,7 +41,7 @@ TE_SHOW = {   # English captions on the Telugu reel
     3: "Ramulu Tiffins? Never heard of it.", 4: "I can't confirm that. Please contact the restaurant directly.",
     5: "Six thirty sharp! Their ghee karam dosa is famous!", 6: "So sure! Source?", 7: "Hyderabad Food Guide, page 42.",
     8: "There's no such book!", 9: "Time's up! Who is it?", 10: "C! A phone with a moustache!", 11: "Sorry, sorry! Customer-care habit!",
-    12: "Ramulu Tiffins? We made up that name!", 13: "But I said it so surely!", 14: "That's the trap. Like an exam with no negative marking, it guesses.",
+    12: "Ramulu Tiffins? That name? We made it up!", 13: "But I sounded so sure!", 14: "That's the trap. Like an exam with no negative marking, it guesses.",
     15: "So type this: \"If you're not sure, say I don't know.\" Now, Ramulu Tiffins?", 16: "I don't know.", 17: "At last, it told the truth!",
     18: "Round two!",
 }
@@ -51,12 +51,12 @@ SCENES = [("q_a", (1, 2), {"pre": 0.2, "boost": 1.7, "tail": 0.1}),   # render r
           ("q_b", (3, 4, 5, 6, 7, 8, 9), {"lift": 0.6, "pre": 0.25, "boost": 1.5, "tail": 0.15}),
           ("q_c", (10, 11, 12, 13, 14, 15, 16, 17, 18), {"lift": 1.0, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.3,
                                                           "drop_at": [[2, "1"], [4, "1"]], "tail": 0.0})]   # drops before "We made it up" and "0/10"
-GAP = {5: 0.35, 7: 0.2, 9: 0.4, 14: 1.5, 15: 1.3}   # render review: cut the wait before the reveal   # the gold answer, the buzz, the drumroll, the two cards' reads (script review: "4 s, can't read it")
+GAP = {5: 0.35, 7: 0.2, 9: 0.4, 14: 2.0, 15: 1.3}   # render review: cut the wait before the reveal   # the gold answer, the buzz, the drumroll, the two cards' reads (script review: "4 s, can't read it")
 GAIN = {"host": 0.0, "a": 0.5, "b": 0.3, "c": 0.0}
-GAIN_LINE = {1: 1.5, 13: 1.0, 16: 2.0, 17: 1.8, 18: 4.0}   # the phone-sound lines and "Round two!" over the rising bed sat 6-7.6 dB over it
+GAIN_LINE = {1: 1.5, 13: 1.0, 16: 2.8, 17: 1.8, 18: 4.0}   # the phone-sound lines and "Round two!" over the rising bed sat 6-7.6 dB over it
 PAUSES = {"en": {12: {"1": 0.5}, 14: {"1": 0.45}, 15: {"1": 0.45}}, "te": {12: {"1": 0.5}, 14: {"1": 0.45}, 15: {"1": 0.45}}}   # 15: the rule, a beat, then the re-ask   # a beat of silence (the drops) before "We made it up" and the numbers
-GAIN_TE = {15: 0.5, 18: 0.8}   # Telugu: the rising bed sat 7.4-7.8 dB under them
-END_RAMP = {"en": [0.929, 3.0], "te": [0.943, 5.0]}   # [fraction, dB]: the bed swells from "Finally, an honest answer!" into "Round two!" (render review: the end sagged)
+GAIN_TE = {15: 0.5, 17: 0.9, 18: 0.8}   # Telugu: the rising bed sat 7.4-7.8 dB under them
+END_RAMP = {"en": [0.93, 3.0], "te": [0.942, 5.0]}   # [fraction, dB]: the bed swells from "Finally, an honest answer!" into "Round two!" (render review: the end sagged)
 TEMPO = {"en": 1.08, "te": 1.08}   # Telugu at 1.05 ran 59.6 s
 YT = {"q_a": "Who's the AI?", "q_b": "The surest answer", "q_c": "Let it say I don't know"}
 

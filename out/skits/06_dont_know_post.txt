@@ -14,8 +14,8 @@ The fix, add one line to your question:
 "If you're not sure, say I don't know."
 Anthropic's guide for its own chatbot says the same: give the AI permission to say "I don't know"; it "can drastically reduce false information".
 
-Our real test, a small free AI (Qwen2.5 7B, offline), asked 10 times: "When does Ramulu Tiffins in Ameerpet open on Sunday?"
-Without the line: said "I don't know" 0/10 · still gave a time 8/10 · twice called it "a well-known chain"
+Our real test, a small free AI (Qwen2.5 7B, offline), asked 10 times: "What time does Ramulu Tiffins in Ameerpet, Hyderabad open on Sundays?"
+Without the line: said "I don't know" 0/10 · still gave a time 8/10 (most began "I don't have real-time data access... however, typically 9 or 10 AM") · twice called it "a well-known chain"
 With the line: "I don't know" 10/10 · gave a time 0/10
 And it didn't start refusing what it knows: "In which city is the Charminar?" + the line: Hyderabad, 10/10.
 
@@ -30,7 +30,7 @@ Who did you think was the AI? Comment A, B or C (be honest).
 === PINNED_COMMENT ===
 Copy-paste this at the end of any question: "If you're not sure, say I don't know. If you use a source, give me the link." Then open the link: an AI can cite a page that doesn't say what it claims (EBU/BBC 2025: sourcing problems in 31% of answers).
 "Does it work in ChatGPT / Gemini / Claude?" It's just a line in your question, so you can add it in any chatbot. Anthropic recommends it for Claude; on our small free model it took "I don't know" from 0/10 to 10/10. Most chatbots also let you save standing instructions (custom instructions, saved info), so you don't retype it.
-Was B the AI? No: Vamsi is a delivery rider. "Please contact the restaurant directly" is customer-care habit, and it's also what a careful AI sounds like. The tell was the confident, very specific answer with a made-up source.
+Was B the AI? No: Vamsi is a delivery rider. "Please contact the restaurant directly" is customer-care habit, and it's also what a careful AI sounds like. Real chatbots are often B and C in one reply: our small model mostly said "I don't have real-time data access... however, typically 9 or 10 AM". The tell was the confident, very specific answer with a made-up source.
 Sources: OpenAI, "Why language models hallucinate" (Sep 5, 2025) and the paper arxiv.org/abs/2509.04664 · Anthropic, "Reduce hallucinations": platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations · EBU/BBC News Integrity study, Oct 22, 2025 (reported by Al Jazeera and the BBC) · our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, temperature 0.8, 10 tries per question. Ramulu Tiffins is a name we made up for the test.
 
 === COVER ===
@@ -55,8 +55,8 @@ Fix, mee question chivara okka line add cheyyandi:
 "If you're not sure, say I don't know."
 Anthropic sontha guide kooda ide cheptundi: AI ki "I don't know" ane permission ivvandi; "false information" ni chaala taggistundi.
 
-Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline), 10 saarlu adigaam: "When does Ramulu Tiffins in Ameerpet open on Sunday?"
-Line lekunda: "I don't know" 0/10 · ayina time cheppindi 8/10 · rendu saarlu "a well-known chain" ani kooda annadi
+Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline), 10 saarlu adigaam: "What time does Ramulu Tiffins in Ameerpet, Hyderabad open on Sundays?"
+Line lekunda: "I don't know" 0/10 · ayina time cheppindi 8/10 (chaala saarlu "I don't have real-time data access... however, typically 9 or 10 AM" ani) · rendu saarlu "a well-known chain" ani kooda annadi
 Line tho: "I don't know" 10/10 · time 0/10
 Telisina vaatiki refuse cheyyaledu: "In which city is the Charminar?" + line: Hyderabad, 10/10.
 
@@ -71,7 +71,7 @@ AI evaru ani meeru anukunnaru? A, B leda C comment cheyyandi (nijam cheppandi).
 === PINNED_COMMENT ===
 Mee question chivara idi copy-paste cheyyandi: "If you're not sure, say I don't know. If you use a source, give me the link." Taruvaata aa link open cheyyandi: AI cheppina page lo adi undakapovachhu (EBU/BBC 2025: 31% answers lo sourcing problems).
 "ChatGPT / Gemini / Claude lo pani chestunda?" Idi mee question lo okka line maatrame, ye chatbot lo ayina add cheyyochhu. Anthropic Claude ki recommend chestundi; maa chinna free model lo "I don't know" ni 0/10 nunchi 10/10 ki teesukochhindi. Chaala chatbots lo idi custom instructions / saved info lo save cheyyochhu, prati saari type cheyyakkarledu.
-B AI aa? Kaadu: Vamsi delivery rider. "Please contact the restaurant directly" customer-care alavaatu, careful AI kooda alaane maatladutundi. Asalu clue: chaala confident, chaala specific answer, kalpinchina source tho.
+B AI aa? Kaadu: Vamsi delivery rider. "Please contact the restaurant directly" customer-care alavaatu, careful AI kooda alaane maatladutundi. Nijamaina chatbots tarachu B, C rendu okke reply lo: maa model "I don't have real-time data access... however, typically 9 or 10 AM" ani cheppindi. Asalu clue: chaala confident, chaala specific answer, kalpinchina source tho.
 Sources: OpenAI "Why language models hallucinate" (Sep 5, 2025), arxiv.org/abs/2509.04664 · Anthropic "Reduce hallucinations" (platform.claude.com docs) · EBU/BBC study, Oct 22, 2025 · maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, 10 tries. Ramulu Tiffins memu test kosam pettina peru.
 
 === COVER ===

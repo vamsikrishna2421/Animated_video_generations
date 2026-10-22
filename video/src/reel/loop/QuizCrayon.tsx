@@ -352,19 +352,19 @@ const ruleCard = (c: Ctx, W: number, k: number, k2: number) => {
   c.save(); c.globalAlpha = clamp(k * 2);
   c.fillStyle = "rgba(5,4,15,0.55)"; c.fillRect(0, 0, W, 1920);
   c.translate(W / 2, 820); c.scale(0.92 + 0.08 * easeOut(k), 0.92 + 0.08 * easeOut(k));
-  c.fillStyle = "#fffdf5"; rrect(c, -480, -330, 960, 720, 32); c.fill();
+  c.fillStyle = "#fffdf5"; rrect(c, -480, -330, 960, 770, 32); c.fill();
   c.font = SANS(46, 900); c.fillStyle = GREEN; c.textAlign = "center"; c.fillText("TYPE THIS IN ANY CHATBOT", 0, -250);
   c.fillStyle = "#f1f5f9"; rrect(c, -430, -190, 860, 230, 26); c.fill();
   c.strokeStyle = "#94a3b8"; c.lineWidth = 4; rrect(c, -430, -190, 860, 230, 26); c.stroke();
   c.font = SANS(58, 900); c.fillStyle = INK; c.fillText("\"If you're not sure,", 0, -102); c.fillText("say I don't know.\"", 0, -24);
-  c.font = SANS(34, 800); c.fillStyle = "#b45309"; c.fillText("It helps, not a guarantee: still check anything important.", 0, 330);
+  c.font = SANS(46, 900); c.fillStyle = "#b45309"; c.fillText("It helps. It's not a guarantee:", 0, 338); c.fillText("still check anything important.", 0, 394);
   if (k2 > 0) {
     c.save(); c.globalAlpha = clamp(k2 * 2);
     [["Said \"I don't know\"", "0/10", "10/10"], ["Gave a time", "8/10", "0/10"]].forEach(([lab, was, now], q) => {
       const y = 70 + q * 112;
       c.fillStyle = "#dcfce7"; rrect(c, -430, y, 860, 96, 20); c.fill();
       c.font = SANS(38, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, -404, y + 60);
-      c.font = SANS(40, 800); c.fillStyle = "#94a3b8"; c.textAlign = "right"; c.fillText(`${was} →`, 236, y + 62);
+      c.font = SANS(40, 800); c.fillStyle = "#475569"; c.textAlign = "right"; c.fillText(`${was} →`, 236, y + 62);
       c.font = SANS(62, 900); c.fillStyle = GREEN; c.fillText(now, 414, y + 70);
     });
     c.restore();
@@ -410,9 +410,9 @@ const StQuiz: React.FC<SP> = ({ s }) => {
   if (preReveal) {
     for (let f = 1; f < (upAt >= 0 ? upFrom + 1 : s.frames); f++) {
       const a = Math.ceil(clock(f - 1)), b2 = Math.ceil(clock(f));
-      if (b2 !== a && b2 <= 6) sfx.push(<Sfx key={`tk${f}`} at={f} src="audio/sfx_tick.wav" vol={0.2 + (6 - b2) * 0.06} />);   // louder each second
+      if (b2 !== a && b2 <= 6) sfx.push(<Sfx key={`tk${f}`} at={f} src="audio/sfx_tick.wav" vol={0.26 + (6 - b2) * 0.08} />);   // louder each second
     }
-    if (upAt >= 0) sfx.push(<Sfx key="upr" at={Math.max(0, upFrom - 38)} src="reel/sfx_riser.wav" vol={0.45} />);   // the clock climbs into 0:00
+    if (upAt >= 0) sfx.push(<Sfx key="upr" at={Math.max(0, upFrom - 40)} src="reel/sfx_riser.wav" vol={0.62} />);   // the clock climbs into 0:00
   }
   return (
     <>

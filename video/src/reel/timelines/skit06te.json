@@ -13,12 +13,12 @@
  "fps": 30,
  "musicDrops": [
   [
-   1078,
-   1102
+   1075,
+   1099
   ],
   [
-   1236,
-   1260
+   1228,
+   1252
   ]
  ],
  "musicBoosts": [
@@ -29,19 +29,19 @@
   ],
   [
    286,
-   1759,
+   1767,
    1.5
   ],
   [
    900,
-   1759,
+   1767,
    1.3,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1759,
+ "totalFrames": 1767,
  "music": "reel/skit06te/score.wav",
  "scenes": [
   {
@@ -629,7 +629,7 @@
     "hardCuts": true
    },
    "from": 900,
-   "frames": 859,
+   "frames": 867,
    "lines": [
     {
      "who": "host",
@@ -712,46 +712,51 @@
      "sub": null,
      "audio": "reel/skit06te/line_12.wav",
      "from": 148,
-     "frames": 96,
+     "frames": 88,
      "words": [
       {
        "w": "Ramulu",
        "from": 149,
-       "to": 161
+       "to": 159
       },
       {
        "w": "Tiffins?",
-       "from": 161,
-       "to": 177
+       "from": 159,
+       "to": 173
+      },
+      {
+       "w": "That",
+       "from": 173,
+       "to": 205
+      },
+      {
+       "w": "name?",
+       "from": 205,
+       "to": 214
       },
       {
        "w": "We",
-       "from": 177,
-       "to": 206
+       "from": 214,
+       "to": 218
       },
       {
        "w": "made",
-       "from": 206,
-       "to": 215
+       "from": 218,
+       "to": 226
       },
       {
-       "w": "up",
-       "from": 215,
-       "to": 225
+       "w": "it",
+       "from": 226,
+       "to": 230
       },
       {
-       "w": "that",
-       "from": 225,
-       "to": 233
-      },
-      {
-       "w": "name!",
-       "from": 233,
-       "to": 244
+       "w": "up!",
+       "from": 230,
+       "to": 236
       }
      ],
      "cues": {
-      "1": 202
+      "1": 199
      }
     },
     {
@@ -760,38 +765,33 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit06te/line_13.wav",
-     "from": 251,
+     "from": 244,
      "frames": 61,
      "words": [
       {
        "w": "But",
-       "from": 252,
-       "to": 262
+       "from": 245,
+       "to": 255
       },
       {
        "w": "I",
-       "from": 262,
-       "to": 267
+       "from": 255,
+       "to": 260
       },
       {
-       "w": "said",
-       "from": 267,
-       "to": 279
-      },
-      {
-       "w": "it",
-       "from": 279,
-       "to": 286
+       "w": "sounded",
+       "from": 260,
+       "to": 281
       },
       {
        "w": "so",
-       "from": 286,
-       "to": 293
+       "from": 281,
+       "to": 289
       },
       {
-       "w": "surely!",
-       "from": 293,
-       "to": 312
+       "w": "sure!",
+       "from": 289,
+       "to": 304
       }
      ],
      "cues": {}
@@ -802,73 +802,73 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/skit06te/line_14.wav",
-     "from": 319,
+     "from": 312,
      "frames": 153,
      "words": [
       {
        "w": "That's",
-       "from": 320,
-       "to": 332
+       "from": 312,
+       "to": 324
       },
       {
        "w": "the",
-       "from": 332,
-       "to": 361
+       "from": 324,
+       "to": 354
       },
       {
        "w": "trap.",
-       "from": 361,
-       "to": 372
+       "from": 354,
+       "to": 364
       },
       {
        "w": "Like",
-       "from": 372,
-       "to": 380
+       "from": 364,
+       "to": 373
       },
       {
        "w": "an",
-       "from": 380,
-       "to": 386
+       "from": 373,
+       "to": 378
       },
       {
        "w": "exam",
-       "from": 386,
-       "to": 394
+       "from": 378,
+       "to": 387
       },
       {
        "w": "with",
-       "from": 394,
-       "to": 407
+       "from": 387,
+       "to": 399
       },
       {
        "w": "no",
-       "from": 407,
-       "to": 412
+       "from": 399,
+       "to": 404
       },
       {
        "w": "negative",
-       "from": 412,
-       "to": 435
+       "from": 404,
+       "to": 427
       },
       {
        "w": "marking,",
-       "from": 435,
-       "to": 451
+       "from": 427,
+       "to": 443
       },
       {
        "w": "it",
-       "from": 451,
-       "to": 456
+       "from": 443,
+       "to": 448
       },
       {
        "w": "guesses.",
-       "from": 456,
-       "to": 472
+       "from": 448,
+       "to": 464
       }
      ],
      "cues": {
-      "1": 360,
-      "2": 435
+      "1": 352,
+      "2": 427
      }
     },
     {
@@ -877,82 +877,82 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/skit06te/line_15.wav",
-     "from": 517,
+     "from": 524,
      "frames": 176,
      "words": [
       {
        "w": "So",
-       "from": 517,
-       "to": 522
-      },
-      {
-       "w": "type",
-       "from": 522,
+       "from": 525,
        "to": 530
       },
       {
-       "w": "this:",
+       "w": "type",
        "from": 530,
-       "to": 546
+       "to": 537
+      },
+      {
+       "w": "this:",
+       "from": 537,
+       "to": 554
       },
       {
        "w": "\"If",
-       "from": 546,
-       "to": 553
+       "from": 554,
+       "to": 560
       },
       {
        "w": "you're",
-       "from": 553,
-       "to": 564
+       "from": 560,
+       "to": 571
       },
       {
        "w": "not",
-       "from": 564,
-       "to": 579
+       "from": 571,
+       "to": 586
       },
       {
        "w": "sure,",
-       "from": 579,
-       "to": 588
+       "from": 586,
+       "to": 596
       },
       {
        "w": "say",
-       "from": 588,
-       "to": 594
+       "from": 596,
+       "to": 602
       },
       {
        "w": "I",
-       "from": 594,
-       "to": 607
+       "from": 602,
+       "to": 615
       },
       {
        "w": "don't",
-       "from": 607,
-       "to": 617
+       "from": 615,
+       "to": 624
       },
       {
        "w": "know.\"",
-       "from": 617,
-       "to": 628
+       "from": 624,
+       "to": 635
       },
       {
        "w": "Now,",
-       "from": 628,
-       "to": 657
+       "from": 635,
+       "to": 665
       },
       {
        "w": "Ramulu",
-       "from": 657,
-       "to": 674
+       "from": 665,
+       "to": 681
       },
       {
        "w": "Tiffins?",
-       "from": 674,
-       "to": 688
+       "from": 681,
+       "to": 696
       }
      ],
      "cues": {
-      "1": 650
+      "1": 658
      }
     },
     {
@@ -961,23 +961,23 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/skit06te/line_16.wav",
-     "from": 732,
+     "from": 739,
      "frames": 26,
      "words": [
       {
        "w": "I",
-       "from": 733,
-       "to": 736
+       "from": 740,
+       "to": 744
       },
       {
        "w": "don't",
-       "from": 736,
-       "to": 747
+       "from": 744,
+       "to": 754
       },
       {
        "w": "know.",
-       "from": 747,
-       "to": 757
+       "from": 754,
+       "to": 765
       }
      ],
      "cues": {}
@@ -988,38 +988,38 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/skit06te/line_17.wav",
-     "from": 765,
+     "from": 772,
      "frames": 53,
      "words": [
       {
        "w": "At",
-       "from": 765,
-       "to": 770
+       "from": 773,
+       "to": 778
       },
       {
        "w": "last,",
-       "from": 770,
-       "to": 780
+       "from": 778,
+       "to": 788
       },
       {
        "w": "it",
-       "from": 780,
-       "to": 785
+       "from": 788,
+       "to": 793
       },
       {
        "w": "told",
-       "from": 785,
-       "to": 799
+       "from": 793,
+       "to": 807
       },
       {
        "w": "the",
-       "from": 799,
-       "to": 806
+       "from": 807,
+       "to": 813
       },
       {
        "w": "truth!",
-       "from": 806,
-       "to": 817
+       "from": 813,
+       "to": 825
       }
      ],
      "cues": {}
@@ -1030,18 +1030,18 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/skit06te/line_18.wav",
-     "from": 825,
+     "from": 832,
      "frames": 19,
      "words": [
       {
        "w": "Round",
-       "from": 826,
-       "to": 836
+       "from": 834,
+       "to": 843
       },
       {
        "w": "two!",
-       "from": 836,
-       "to": 844
+       "from": 843,
+       "to": 852
       }
      ],
      "cues": {}
