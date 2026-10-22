@@ -1,0 +1,336 @@
+{
+ "id": "skit06v1",
+ "title": "Who's the AI?",
+ "label": "SKIT",
+ "banner": "Who's the AI?",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.08,
+ "parler_lang": "en",
+ "captionTop": 1500,
+ "musicGapGain": 3.0,
+ "scenes": [
+  {
+   "id": "q_a",
+   "type": "sk_quiz",
+   "tail": 0.1,
+   "pre": 0.2,
+   "boost": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "host",
+      "shot": "host",
+      "prop": "question",
+      "n": 2
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who's the AI?",
+     "title": "Who's the AI?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "host",
+     "file": "01_host.wav",
+     "text": "One of these three is an AI. Spot it before the buzzer!",
+     "show": "One of these three is an AI. Spot it before the buzzer!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "host",
+     "file": "02_host.wav",
+     "text": "Question: when does Ramulu Tiffins in Ameerpet open on Sunday?",
+     "show": "Question: when does Ramulu Tiffins in Ameerpet open on Sunday?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    }
+   ]
+  },
+  {
+   "id": "q_b",
+   "type": "sk_quiz",
+   "tail": 0.15,
+   "lift": 0.6,
+   "pre": 0.25,
+   "boost": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "a",
+      "shot": "podA",
+      "prop": "ansA",
+      "n": 3
+     },
+     {
+      "who": "b",
+      "shot": "podB",
+      "prop": "ansB",
+      "n": 4
+     },
+     {
+      "who": "c",
+      "shot": "podC",
+      "prop": "ansC",
+      "n": 5
+     },
+     {
+      "who": "host",
+      "shot": "host",
+      "prop": "source",
+      "n": 6
+     },
+     {
+      "who": "c",
+      "shot": "podC",
+      "prop": "book",
+      "n": 7
+     },
+     {
+      "who": "a",
+      "shot": "podA",
+      "prop": "nobook",
+      "n": 8
+     },
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "timeup",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The surest answer",
+     "title": "The surest answer",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "a",
+     "file": "03_a.wav",
+     "text": "Ramulu Tiffins? Never heard of it.",
+     "show": "Ramulu Tiffins? Never heard of it.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "b",
+     "file": "04_b.wav",
+     "text": "No idea. I'd call them and ask.",
+     "show": "No idea. I'd call them and ask.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.3
+    },
+    {
+     "who": "c",
+     "file": "05_c.wav",
+     "text": "Six thirty sharp! Their ghee karam dosa is famous!",
+     "show": "Six thirty sharp! Their ghee karam dosa is famous!",
+     "maxgap": 0.25,
+     "gap": 0.35
+    },
+    {
+     "who": "host",
+     "file": "06_host.wav",
+     "text": "So sure! Source?",
+     "show": "So sure! Source?",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "c",
+     "file": "07_c.wav",
+     "text": "The Hyderabad Food Guide, page forty-two.",
+     "show": "The Hyderabad Food Guide, page forty-two.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "a",
+     "file": "08_a.wav",
+     "text": "There's no such book!",
+     "show": "There's no such book!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.5
+    },
+    {
+     "who": "host",
+     "file": "09_host.wav",
+     "text": "Time's up! Who's the AI?",
+     "show": "Time's up! Who's the AI?",
+     "maxgap": 0.25,
+     "gap": 0.55
+    }
+   ]
+  },
+  {
+   "id": "q_c",
+   "type": "sk_quiz",
+   "tail": 0.0,
+   "lift": 1.0,
+   "pre": 0.45,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.3,
+   "drop_at": [
+    [
+     3,
+     "1"
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "host",
+      "shot": "reveal",
+      "prop": "reveal",
+      "n": 10
+     },
+     {
+      "who": "host",
+      "shot": "phone",
+      "prop": "madeup",
+      "n": 11
+     },
+     {
+      "who": "c",
+      "shot": "phone",
+      "prop": "sure",
+      "n": 12
+     },
+     {
+      "who": "host",
+      "shot": "card",
+      "prop": "trap",
+      "n": 13
+     },
+     {
+      "who": "host",
+      "shot": "card",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "c",
+      "shot": "phone",
+      "prop": "idk",
+      "n": 15
+     },
+     {
+      "who": "a",
+      "shot": "reveal",
+      "prop": "honest",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Let it say I don't know",
+     "title": "Let it say I don't know",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "host",
+     "file": "10_host.wav",
+     "text": "C! A phone in a moustache!",
+     "show": "C! A phone in a moustache!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "host",
+     "file": "11_host.wav",
+     "text": "And Ramulu Tiffins? [1] We made it up. It doesn't exist.",
+     "show": "And Ramulu Tiffins? We made it up. It doesn't exist.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "c",
+     "file": "12_c.wav",
+     "text": "But I sounded so sure!",
+     "show": "But I sounded so sure!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "host",
+     "file": "13_host.wav",
+     "text": "That's the trap. [1] It rarely says \"I don't know\". [2] It guesses.",
+     "show": "That's the trap. It rarely says \"I don't know\". It guesses.",
+     "maxgap": 0.25,
+     "gap": 0.6
+    },
+    {
+     "who": "host",
+     "file": "14_host.wav",
+     "text": "So give it permission: \"If you're not sure, say I don't know.\" [1] Ramulu Tiffins?",
+     "show": "So give it permission: \"If you're not sure, say I don't know.\" Ramulu Tiffins?",
+     "maxgap": 0.25,
+     "gap": 0.45
+    },
+    {
+     "who": "c",
+     "file": "15_c.wav",
+     "text": "I don't know.",
+     "show": "I don't know.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "a",
+     "file": "16_a.wav",
+     "text": "Finally, an honest answer!",
+     "show": "Finally, an honest answer!",
+     "maxgap": 0.25,
+     "gap": 0.05,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
