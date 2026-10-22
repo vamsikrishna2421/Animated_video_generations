@@ -90,7 +90,7 @@ refuse what it knows.
 9. హోస్ట్: టైం అయిపోయింది! ఎవరది?   ("ఏఐ ఎవరు" babbled in 4 takes)
 10. హోస్ట్: సి! మీసం పెట్టుకున్న ఫోన్!
 11. వంశీ: సారీ సారీ! కస్టమర్ కేర్ అలవాటు!
-12. హోస్ట్: రాములు టిఫిన్స్? ఆ పేరు మేమే పెట్టాం!
+12. హోస్ట్: రాములు టిఫిన్స్? ఆ పేరు మేం పెట్టిందే!   ("మేమే పెట్టాం" was heard as a repeated "మేమ్")
 13. ఏఐ: కానీ నేను చాలా ష్యూర్ గా చెప్పానే!
 14. హోస్ట్: అదే ట్రాప్. నెగెటివ్ మార్కులు లేని ఎగ్జామ్ లాగా, ఊహించి చెప్పేస్తుంది.
 15. హోస్ట్: అందుకే ఇలా టైప్ చేయండి: "If you're not sure, say I don't know." ఇప్పుడు, రాములు టిఫిన్స్?
@@ -109,6 +109,14 @@ important" on the rule card; the stamp holds through "But I sounded so sure!"; a
 on frame 1, the clock's ticks climb into a riser at 0:00, the bed swells from "Finally" into a hit on "Round two!"; the
 A badge no longer peeks out under the host's subtitle. English: "their ghee" was heard "dergi" and "sharp" "shop" in 8
 takes, so C says "Six thirty AM! Famous for pure ghee karam dosa!".
+
+## Render review (Telugu, two viewers)
+The register and the jokes carried over; the red herring and "negative marks leni exam" landed; no word can be heard as
+a swear word. Flagged: on the twist, "మేమే పెట్టాం" was heard as "మేమ్ మేమ్ మేమ్" (a goat, not a reveal); the rule
+card's caveat was too small to read and the "before" numbers too faint; the test card left too soon; the clock's last
+ticks were lost under the voice. Fixed: line 12 is now "ఆ పేరు మేం పెట్టిందే!" (the final mix transcribes as "aa peru
+mem pettinde"); the caveat is twice the size, the "before" numbers darker, the test card holds longer, and the last ticks
+and the riser are louder. Final: English 56.1 s, Telugu 58.9 s; the voice sits at least 8 dB over the bed on every line.
 
 ## Sound
 A hit and a sting on frame 1; the clock ticks only in its last seconds (it speeds up to reach 0:00 on "Time's up"); a
