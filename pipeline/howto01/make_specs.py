@@ -82,11 +82,12 @@ MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ
            "pay": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "install": [("इंग", "इन्ग", "इंगि"), ("पै", "पाइ", "पाय", "pyth", "पेथ"), ("स्टा", "स्टॉ", "stal")],
            "type": [("टैप", "टाइप", "ताइप", "टाईप", "टेप")], "code": [("प्श", "प्ष", "caption"), ("कॉप", "काप", "कोप", "copy")],
            "run": [("डाउ", "डौ", "down"), ("बी", "mb")], "after": [("टर", "टार")], "offline": [("लोड", "लोड़", "लोर"), ("सेक", "सैक")],
-           "telugu": [("तेल", "टेल", "तल"), ("फर", "offer")], "parler": [("पार", "पाल"), ("लॉग", "लोग", "लाग", "login")],
+           "telugu": [("तेल", "टेल"), ("फर", "offer")], "parler": [("पार", "पाल"), ("लॉग", "लोग", "लाग", "login")],
            "parlour": [("पार", "पाल"), ("ब्यू", "बियू", "बू", "ब्यु")], "french": [("फ्रें", "फ्रैं", "फ्रेन", "फ़्रें", "french")],
            "myoffer": [("टैम", "टाइम", "टाईम", "टेम")], "slow": [("मुप", "मुब", "मूप", "मोप", "30"), ("जी", "gb"), ("याम", "राम", "रैम", "रेम", "ram")],
-           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("पार", "पाल"), ("र्याम", "रैम", "राम", "ram")],
-           "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05)
+           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("तेल", "टेल"), ("पार", "पाल"), ("र्याम", "रैम", "राम", "ram")],
+           "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05);
+# "Telugu" itself must be heard "तेल"/"टेल": takes heard "थिलगो"/"तिलगु" said "తిల్గో" (second render review)
 TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
 # Sound (CLAUDE.md arc): a hit and a pop with the laptop's voice on frame 1; keyboard ticks under the terminal screens;
 # a lift into each step; a hit on the offline number; a riser into the Telugu demo with the bed down under it (the
@@ -129,6 +130,8 @@ def spec(lang="en"):
                   "gap": GAP.get(prop, 0.16), "tempo": TEMPO[who]}
             if who == "laptop":   # the demo file as it came out: no squeeze, no tempo
                 ln.update({"demo": DEMO[text], "maxgap": 2.0, "tempo": 1.0})
+                if te and prop == "endemo":   # the card already shows the quote (second review: on screen twice)
+                    ln["nocap"] = True
             else:
                 ln["must"] = (MUST_TE if te else MUST_EN).get(prop, [])
             if not te and prop in TTS_EN:

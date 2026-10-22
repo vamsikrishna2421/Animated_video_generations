@@ -1,4 +1,5 @@
 import React from "react";
+import { useVideoConfig } from "remotion";
 import { Ctx, rng, stroke, clamp, easeOut, seg } from "./crayon";
 import { COL } from "./scenes";
 import { CrayonCanvas } from "./CrayonCanvas";
@@ -163,6 +164,7 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number) => {
 const StHowto: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
   const te = (s.data as { handle?: string }).handle === "@ai_maastaaru_telugu";
+  const { fps } = useVideoConfig();
   const ls = s.lines;
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
   const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
@@ -208,9 +210,14 @@ const StHowto: React.FC<SP> = ({ s }) => {
               ["$ espeak-ng --version", "#f8fafc", seg(p, 0.66, 0.72)],
               ["eSpeak NG text-to-speech: 1.51", "#86efac", seg(p, 0.74, 0.8)],
             ], { y0: 440, size: 38, cols: 40 });
-            tag(c, "Windows: the espeak-ng .msi · Mac: brew install espeak-ng", W / 2, 1110, 38, "#fff", "#334155", -0.01, seg(p, 0.5, 0.6));
-            tag(c, "first: Python 3.12 (python.org), then Terminal / Command Prompt", W / 2, 1220, 36, "#e0e7ff", INK, 0.01, seg(p, 0.05, 0.15));
-            tag(c, "+ PyTorch on a fresh computer", W / 2, 1320, 40, "#fef3c7", INK, -0.02, seg(p, 0.7, 0.8));
+            if (te) {   // the Telugu voice says "if you have Python": one sticky big enough to read (second render review)
+              tag(c, "FIRST: Python 3.12 · python.org", W / 2, 1150, 58, "#e0e7ff", INK, 0.01, seg(p, 0.02, 0.12));
+              tag(c, "Windows: the espeak-ng .msi · Mac: brew install espeak-ng", W / 2, 1275, 38, "#fff", "#334155", -0.01, seg(p, 0.5, 0.6));
+            } else {
+              tag(c, "Windows: the espeak-ng .msi · Mac: brew install espeak-ng", W / 2, 1110, 38, "#fff", "#334155", -0.01, seg(p, 0.5, 0.6));
+              tag(c, "first: Python 3.12 (python.org), then Terminal / Command Prompt", W / 2, 1220, 36, "#e0e7ff", INK, 0.01, seg(p, 0.05, 0.15));
+              tag(c, "+ PyTorch on a fresh computer", W / 2, 1320, 40, "#fef3c7", INK, -0.02, seg(p, 0.7, 0.8));
+            }
           }
           if (b.prop === "code") {
             step("STEP 2 · FIVE LINES");
@@ -329,7 +336,8 @@ const StHowto: React.FC<SP> = ({ s }) => {
           if (b.prop === "cancel") { bubble(c, 330, 560, "App cancelled!", 84, seg(p, 0.05, 0.2), "#dcfce7", "#166534"); tag(c, "₹ every month ✗", 760, 420, 52, "#fee2e2", "#991b1b", 0.04, seg(p, 0.3, 0.4)); }
           if (b.prop === "save") saveCard(c, W, seg(f, ln.from + 2, ln.from + 10), ln.from + 2, f);
         }
-        if (te && ENG.includes(b.prop)) tag(c, "TELUGU NEXT →", 825, 292, 52, "#ffedd5", "#9a3412", 0.02, b.prop === "install" ? seg(p, 0.0, 0.1) : 1);
+        // a countdown to the Telugu part (the cut at the end of this scene): a "NEXT" up for 26 s wore thin (second review)
+        if (te && ENG.includes(b.prop)) tag(c, `TELUGU IN ${Math.max(1, Math.ceil((s.frames - f) / fps))}s →`, 825, 292, 52, "#ffedd5", "#9a3412", 0.02, b.prop === "install" ? seg(p, 0.0, 0.1) : 1);
         void BLUE; void stroke;
       }} />
     </>

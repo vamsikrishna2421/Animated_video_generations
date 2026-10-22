@@ -139,13 +139,18 @@ holds 2.6 s; "English + Telugu" on frame 1.
 Render review (Telugu, two viewers): both stopped on the Telugu offer at 0:00 (the part they'd forward); both: the
 English middle sags and the sound never rises into "save". Fixed: "సులువు" (easy) is out, "పైథాన్ ఉంటే" in (not easy
 on Windows, and the sticky says Python first); "మెమరీ" is "ర్యామ్" (heard as storage), with the number first, right
-after the drop; the hook's demo voice is 2.5 dB up on a soft bed (the first 3 s were the quietest of the reel, with no
+after the drop; the hook's demo voice is 3 dB up on a soft bed (the first 3 s were the quietest of the reel, with no
 music); the hit before "మరి నా తెలుగు ఆఫర్?" lands 0.7 s before the voice and the bonk moved onto the cut (speech
 recognition heard "తెలుగు" as "dilgo" in the mix; the isolated takes were clean); the bed rises through the last scene
-and swells 5 dB into the save card; "TELUGU NEXT →" rides over the English steps; the laptop shows telugu.py outside
+and swells 7 dB into the save card; "TELUGU IN 26s →" counts down over the English steps; the laptop shows telugu.py outside
 them; "TELUGU + ENGLISH" on frame 1. Captions: Kokoro is English-only, a Notepad "All files" line, "after a 22 s load"
 (telugu.py loads the model on every run), close other apps on 8 GB; the Telugu YouTube text gained the run line and the
 Mac note.
+Second render review (Telugu): the hook, line 5, the tag and the laptop landed; "Telugu" still came out "dilgo"
+(lines 12 and 19: the isolated takes said "తిల్గో"/"తిలుగు", so both were re-voiced until the judge heard "తెలు"); the
+caption's "English maatrame" was false (Kokoro also speaks Hindi, Spanish, French, Japanese...): now "Telugu ledu";
+one big "FIRST: Python 3.12" sticky (the voice relies on it); the tag counts down to the Telugu part; the English
+demo's quote is no longer on screen twice.
 
 ## Sound
 A hit and a pop with the laptop's voice on frame 1 (the hook is the voice itself); keyboard clicks under the terminal
