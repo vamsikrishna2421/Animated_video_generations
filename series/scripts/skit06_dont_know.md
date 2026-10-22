@@ -63,7 +63,7 @@ refuse what it knows.
 | 2 | Host | host | Question: when does Ramulu Tiffins in Ameerpet open on Sunday? | card "When does RAMULU TIFFINS (Ameerpet) open on Sunday?" |
 | 3 | A (Ammamma) | podium A | Ramulu Tiffins? Never heard of it. | bubble "Never heard of it." |
 | 4 | B (Vamsi) | podium B | I can't confirm that. Please contact the restaurant directly. | bubble "I can't confirm that." |
-| 5 | C (AI) | podium C | Six thirty sharp! Their ghee karam dosa is famous! | gold bubble "6:30 SHARP! Famous ghee dosa!" |
+| 5 | C (AI) | podium C | Six thirty AM! Famous for pure ghee karam dosa! | gold bubble "6:30 AM! Famous ghee dosa!" |
 | 6 | Host | host | So sure! Source? | bubble "Source?" |
 | 7 | C | podium C | The Hyderabad Food Guide, page forty-two. | bubble; a wrong-answer buzz after it |
 | 8 | A | podium A | There's no such book! | bubble "No such book!" |
@@ -79,7 +79,7 @@ refuse what it knows.
 | 18 | Host | wide | Round two! | the screens rise (loops to frame 1) |
 
 ## Script (Telugu; English on-screen text), v2
-1. హోస్ట్: ఈ ముగ్గురిలో ఒకరు ఏఐ. బజర్ మోగేలోపు కనిపెట్టండి!
+1. హోస్ట్: ఈ ముగ్గురిలో ఒకరు మనిషి కాదు! బజర్ మోగేలోపు కనిపెట్టండి!   ("ఏఐ" at a sentence end babbled in 4 takes)
 2. హోస్ట్: ప్రశ్న: అమీర్‌పేట్ రాములు టిఫిన్స్ ఆదివారం ఎన్నింటికి తెరుస్తారు?
 3. అమ్మమ్మ: రాములు టిఫిన్సా? ఎప్పుడూ వినలేదమ్మా.
 4. వంశీ: నేను కన్ఫర్మ్ చేయలేనండి. దయచేసి రెస్టారెంట్ ని డైరెక్ట్ గా కాంటాక్ట్ చేయండి.
@@ -87,7 +87,7 @@ refuse what it knows.
 6. హోస్ట్: అబ్బో, ఎంత ష్యూర్! సోర్స్?
 7. ఏఐ: హైదరాబాద్ ఫుడ్ గైడ్, నలభై రెండో పేజీ.
 8. అమ్మమ్మ: అలాంటి పుస్తకమే లేదు!
-9. హోస్ట్: టైం అయిపోయింది! ఏఐ ఎవరు?
+9. హోస్ట్: టైం అయిపోయింది! ఎవరది?   ("ఏఐ ఎవరు" babbled in 4 takes)
 10. హోస్ట్: సి! మీసం పెట్టుకున్న ఫోన్!
 11. వంశీ: సారీ సారీ! కస్టమర్ కేర్ అలవాటు!
 12. హోస్ట్: రాములు టిఫిన్స్? ఆ పేరు మేమే పెట్టాం!
@@ -97,6 +97,18 @@ refuse what it knows.
 16. ఏఐ: నాకు తెలీదు.
 17. అమ్మమ్మ: ఇప్పటికైనా నిజం చెప్పింది!
 18. హోస్ట్: రౌండ్ టూ!
+
+## Render review (English, two viewers)
+The red herring worked (they decided at 0:16 and 0:24, not 0:12); "no negative marking" landed at once; "we made it up"
+was the peak; the reveal and the loop are clean. The test card was the weak spot: the after numbers came too late and
+too briefly, "0 + 8 isn't 10", the small grey text and the italic quote were unreadable, "any chatbot" read as oversold
+without a visible caveat, the stamp vanished at once; the audio arc was flat at the end. Fixed: the rule card shows
+before -> after on the same two measures halfway through the line; the test card says what the other 2 answers did
+("check their website") and quotes the model in plain bold; "It helps, not a guarantee: still check anything
+important" on the rule card; the stamp holds through "But I sounded so sure!"; a beat before the re-ask; a bigger hit
+on frame 1, the clock's ticks climb into a riser at 0:00, the bed swells from "Finally" into a hit on "Round two!"; the
+A badge no longer peeks out under the host's subtitle. English: "their ghee" was heard "dergi" and "sharp" "shop" in 8
+takes, so C says "Six thirty AM! Famous for pure ghee karam dosa!".
 
 ## Sound
 A hit and a sting on frame 1; the clock ticks only in its last seconds (it speeds up to reach 0:00 on "Time's up"); a

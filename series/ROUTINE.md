@@ -338,4 +338,15 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - On a Telugu page "తెలుగు" must sound right: check it in each isolated take (`line_XX.wav`, after tempo), not only in
   the mix. Parler said "తిలుగుకి" mid-sentence in eight takes but cleanly where it opens a sentence, so lead with it;
   and a 1.2x speed-up turned a clean "తెల్గో" into "తిల్గో" (a short word's vowel smears): give that line `tempo` 1.0.
+- A "guess which one is AI" game is solved in seconds if only one answer sounds like a guess (creative 06 script review:
+  both viewers at 0:12): give another contestant AI-sounding words (B's customer-care "I can't confirm that. Please
+  contact the restaurant directly."), and keep the silhouettes and caption labels neutral ("Contestant C", not "AI").
+- A test card must show the same measures before and after, on screen 2 s or more ("0/10 -> 10/10"), say what the
+  rest of the tries did ("0 + 8 isn't 10"), quote the model word for word in a plain font, and carry the caveat.
+- Parler Telugu babbles on "ఏఐ" at the end of a sentence ("ఒకరు ఏఐ.", "ఏఐ ఎవరు?": 8 takes); mid-sentence it is fine.
+  English inside a Telugu line ("If you're not sure, say I don't know") came through clean in one take.
+- RAM: the model cache lives in /dev/shm (RAM). Parler plus a 7B llama.cpp model plus the cache ran out of memory and
+  the LLM run died without an error line; run them one after the other and delete a finished model from /dev/shm.
+- A new reel's media folders (`video/public/reel/<id>/`, `out/skits/NN_*.mp4`) go into `.git/info/exclude` when they
+  are created, or the next `git add -A` commits the voice-take caches.
 
