@@ -63,20 +63,20 @@ L_TE = [
 DEMO = {HELLO: "series/scripts/howto01_demo/0.wav", OFFER: "series/scripts/howto01_demo/offer_1.wav"}
 # English spoken forms (by prop)
 TTS_EN = {"run": "Run it. The first time, it downloads the voice: three hundred and thirteen megabytes.",
-          "parler": "For Telugu: Indic Parler T T S. Free login, accept the terms, [1] then describe the voice in words.",
+          "parler": "For Telugu: Indic Parlay T T S. Free login, accept the terms, [1] then describe the voice in words.",   # "Parler" was heard "Indikpala"; parler is French, "par-lay"
           "slow": "About thirty seconds a line, [1] and almost five gigabytes of memory.",
-          "verdict": "English: Kokoro. Telugu: Indic Parler. Any computer with eight gigabytes of memory."}
+          "verdict": "English: Kokoro. Telugu: Indic Parlay. Any computer with eight gigabytes of memory."}
 # by prop: groups of words, one of each group must be heard (English: Whisper's words; Telugu: substrings of its Devanagari)
 MUST_EN = {"who": [("talking",), ("wi", "wifi", "wi-fi"), ("off",)], "nobody": [("kokoro", "cocoro", "kokorro", "cocorro"), ("free",), ("voice",), ("laptop",)],
            "pay": [("free",), ("app",), ("month",), ("announcements", "announcement")], "install": [("step",), ("install",), ("only",), ("commands", "command")],
            "type": [("type",), ("finger",)], "code": [("copy",), ("caption",), ("five", "5"), ("words", "word")],
            "run": [("run",), ("first",), ("downloads", "download"), ("three", "313"), ("megabytes", "megabyte", "mb")], "after": [("after",), ("internet",)],
            "offline": [("none",), ("loaded", "load"), ("second", "seconds"), ("four", "4"), ("line",)], "telugu": [("customers", "customer"), ("telugu",)],
-           "parler": [("telugu",), ("parler", "parlor", "parla", "parlour"), ("login", "log"), ("terms", "term"), ("describe",), ("voice",)],
+           "parler": [("telugu",), ("parler", "parlor", "parla", "parlour", "parlay", "parle", "parley"), ("login", "log"), ("terms", "term"), ("describe",), ("voice",)],
            "parlour": [("parlour", "parlor", "parler"), ("beauty",)], "french": [("french",), ("speak",), ("listen",)],
            "myoffer": [("diwali",), ("offer",), ("long",)], "slow": [("thirty", "30"), ("line",), ("five", "5"), ("memory",)],
            "cancel": [("slow",), ("free",), ("app",), ("cancelled", "canceled", "cancel")],
-           "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla"), ("eight", "8"), ("memory",)], "save": [("chintu",), ("save",)]}
+           "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley"), ("eight", "8", "8gb"), ("memory",)], "save": [("chintu",), ("save",)]}
 MUST_TE = {"who": [("ऑफर", "आफर", "ओफर", "offer"), ("वाइफ", "वाईफ", "वैफ", "वायफ")], "nobody": [("चिंट", "चिन्ट", "चींट"), ("पार्ल", "पारल", "पालर", "parl"), ("कोको", "कोकु", "koko")],
            "pay": [("फ्री", "फ्रि", "free"), ("याप", "यॉप", "ऐप", "एप")], "install": [("इंग्ली", "इंगली", "इंग्लि"), ("इंस्ट", "इन्स्ट", "इनस्ट"), ("कमां", "कमान", "कमें", "कमां")],
            "type": [("टैप", "टाइप", "ताइप", "टाईप")], "code": [("कैप्श", "कैप्ष", "केप्श", "कप्श", "caption"), ("कॉपी", "कापी", "copy")],
