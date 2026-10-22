@@ -64,6 +64,8 @@ Docs checked on the day: github.com/hexgrad/kokoro (README), pypi.org/project/ko
    The Telugu line is Ravi's own offer (telugu_offer.py, loaded once, three seeds): "రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి
    కొనుగోలు మీద పది శాతం తగ్గింపు." Load 21.8 s; **generate 28.7-30.7 s for 5.5-5.7 s**; 4.7 GB. Seed 1 kept; Whisper
    (Hindi mode): "रवी किराना लो दीपावली आफर प्रत्ति कुनुगोलु मेदा पादिसातन तग्व्म्पु".
+   The caption's telugu.py (no indented lines) ran as published, with only the repo id swapped for the mirror:
+   telugu.wav, 5.49 s.
    Login for the gated Telugu model (huggingface.co/docs/huggingface_hub quick start, v2.2.0): `hf auth login` (a
    browser code, or paste a token from your settings; never show it). espeak-ng on a Mac is in neither guide; Homebrew
    has it (`brew install espeak-ng`, 1.52.0); we haven't tried a Mac.

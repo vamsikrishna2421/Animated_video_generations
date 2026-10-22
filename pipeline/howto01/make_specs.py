@@ -97,6 +97,7 @@ SCENES = {"en": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 10, {"li
                  ("h_c", 11, 20, {"lift": 1.0, "pre": 0.3, "outro": True, "boost": 1.42, "rise": 1.26, "drop_pre": [[5, 0.0, 0.5]], "tail": 0.0})]}
 GAP = {"hook": 0.25, "install": 0.6, "code": 0.5, "run": 0.4, "endemo": 0.4, "offline": 0.7, "parler": 0.4, "tedemo": 0.4, "myoffer": 0.5, "slow": 0.6, "verdict": 0.8}   # the screens' reads
 GAIN_PROP = {"parler": 0.3, "french": 1.0, "slow": 1.4, "verdict": 1.0, "save": 0.8}   # the rising last scene: 6.8-7.4 dB over the bed
+GAIN_PROP_TE = {"install": 0.5, "telugu": 0.8}   # Telugu: 7.3-7.7 dB over the bed
 DUCK_DEMO = 0.1   # the bed under the laptop's demo lines (the voice is the point; 0.25 didn't read as a drop)
 YT = {"h_a": "The laptop talks, no internet", "h_b": "Kokoro: install, code, run", "h_c": "Telugu: Indic Parler-TTS"}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -131,7 +132,7 @@ def spec(lang="en"):
                 p1, p2 = ln["text"].split(" | ")
                 ln.update({"text": f"{p1} <pause 0.25> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": 0.25, "must2": (MUST_TE if te else MUST_EN).get(prop + "2", [])})
-            g = (-1.0 if who == "ai" else 0.5 if who == "ravi" else 0.0) + GAIN_PROP.get(prop, 0.0)
+            g = (-1.0 if who == "ai" else 0.5 if who == "ravi" else 0.0) + GAIN_PROP.get(prop, 0.0) + (GAIN_PROP_TE.get(prop, 0.0) if te else 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)
