@@ -24,9 +24,6 @@ from ep33.voice_rec import phone  # noqa: E402
 import ep33.voice_rec as vr  # noqa: E402
 
 LIGHT_EN = {11, 16}   # the AI's numbers through the lighter phone sound
-# n: groups of words, one word of each group must be heard (the lists live with the lines in make_specs.py)
-from howto01.make_specs import MUST_EN, MUST_TE  # noqa: E402
-MUST = {"en": MUST_EN, "te": MUST_TE}
 
 
 def heard(path, who, n, lang):
@@ -83,12 +80,12 @@ def level(path, under=4.0, cap=12.0):
     sf.write(path, y.astype(np.float32), sr)
 
 
-def judge(path, text, lang, n):
+def judge(path, text, lang, must):
     ok, score, info = judge_en(path, text, "en") if lang == "en" else judge_te(path, text)
     heard_text = info.split("|", 1)[1].lower()
     words = set(re.findall(r"[a-z0-9]+", heard_text))
     # English: whole words; Telugu (written in Devanagari by the judge): a substring will do
-    miss = [g[0] for g in MUST[lang].get(n, []) if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]
+    miss = [g[0] for g in must if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]
     return ok and not miss, score - 1.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
 
 
@@ -118,7 +115,7 @@ def main(lang, only, keep=False):
                 cached = sorted(takes.glob(f"{key}_*.wav"))
                 best = (None, cached[0]) if cached and (keep or not only) else None   # --keep: a part whose text is unchanged keeps its take
                 if best:
-                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, mk)[2]}", flush=True)
+                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, line.get('must', []))[2]}", flush=True)
                 for k in range(0 if best else 4):
                     tmp = takes / f"{key}_{k}.wav"
                     try:
@@ -130,7 +127,7 @@ def main(lang, only, keep=False):
                         print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
                         continue
                     trim(tmp)
-                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, mk)
+                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, line.get('must', []))
                     print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
                     if best is None or (best[0] is not None and score > best[0]):
                         best = (score, tmp)

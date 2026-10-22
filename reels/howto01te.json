@@ -82,41 +82,86 @@
     {
      "who": "laptop",
      "file": "01_laptop.wav",
-     "text": "Hello! This voice was made on a laptop, with no internet.",
-     "show": "Hello! This voice was made on a laptop, with no internet.",
+     "text": "రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి కొనుగోలు మీద పది శాతం తగ్గింపు.",
+     "show": "\"Diwali offer at Ravi Kirana! 10% off every purchase.\"",
      "maxgap": 2.0,
      "gap": 0.25,
      "tempo": 1.0,
-     "demo": "series/scripts/howto01_demo/0.wav"
+     "demo": "series/scripts/howto01_demo/offer_1.wav"
     },
     {
      "who": "ravi",
      "file": "02_ravi.wav",
-     "text": "చింటూ ల్యాప్‌టాప్ లో ఎవరున్నారు?! వైఫై కూడా ఆఫ్!",
-     "show": "Who's inside Chintu's laptop?! The Wi-Fi is off!",
+     "text": "నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!",
+     "show": "Who's announcing my offer?! The Wi-Fi is off!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "ऑफर",
+       "आफर",
+       "ओफर",
+       "offer"
+      ],
+      [
+       "वाइफ",
+       "वाईफ",
+       "वैफ",
+       "वायफ"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "ఎవరూ లేరు. ఫ్రీ వాయిస్ మోడల్, ల్యాప్‌టాప్ లోనే నడుస్తుంది.",
-     "show": "Nobody. A free voice model, running on the laptop itself.",
+     "text": "చింటూ ల్యాప్‌టాప్ అండి. ఫ్రీ వాయిస్ మోడల్స్: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో.",
+     "show": "Chintu's laptop. Free voice models: Indic Parler for Telugu, Kokoro for English.",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.16,
+     "must": [
+      [
+       "चिंट",
+       "चिन्ट",
+       "चींट"
+      ],
+      [
+       "पार्ल",
+       "पारल",
+       "पालर",
+       "parl"
+      ],
+      [
+       "कोको",
+       "कोकु",
+       "koko"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "04_ravi.wav",
-     "text": "ఫ్రీ నా? నా ఆఫర్ అనౌన్స్‌మెంట్ల కోసం ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!",
-     "show": "Free? I pay an app every month for my offer announcements!",
+     "text": "ఫ్రీనా?! నేను ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!",
+     "show": "Free?! I pay an app every month!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "फ्री",
+       "फ्रि",
+       "free"
+      ],
+      [
+       "याप",
+       "यॉप",
+       "ऐप",
+       "एप"
+      ]
+     ],
      "gain_db": 0.5
     }
    ],
@@ -155,15 +200,15 @@
       "n": 7
      },
      {
-      "who": "ravi",
-      "shot": "ravi",
-      "prop": "then",
-      "n": 8
-     },
-     {
       "who": "ai",
       "shot": "laptop",
       "prop": "run",
+      "n": 8
+     },
+     {
+      "who": "laptop",
+      "shot": "laptop",
+      "prop": "endemo",
       "n": 9
      },
      {
@@ -191,52 +236,105 @@
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "మొదటి స్టెప్: ఇన్‌స్టాల్ చెయ్.",
-     "show": "Step one: install it.",
+     "text": "ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.",
+     "show": "First the English one, it's easy. Two install commands.",
      "maxgap": 0.28,
      "gap": 0.6,
      "tempo": 1.16,
+     "must": [
+      [
+       "इंग्ली",
+       "इंगली",
+       "इंग्लि"
+      ],
+      [
+       "इंस्ट",
+       "इन्स्ट",
+       "इनस्ट"
+      ],
+      [
+       "कमां",
+       "कमान",
+       "कमें",
+       "कमां"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "06_ravi.wav",
      "text": "టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!",
-     "show": "Type it?! I type with one finger!",
+     "show": "Type them?! I type with one finger!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "टैप",
+       "टाइप",
+       "ताइप",
+       "टाईप"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "07_ai.wav",
-     "text": "అయితే ఇది కాపీ చెయ్. ఏడు లైన్లు. [1] నీ మాట ఇక్కడ పెట్టు.",
-     "show": "Then copy this. 7 lines. Your sentence goes here.",
+     "text": "క్యాప్షన్ లో నుంచి కాపీ చేయండి. ఐదు లైన్లు. [1] చెప్పాల్సింది ఇక్కడ రాయండి.",
+     "show": "Copy them from the caption. 5 lines. Write your words here.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.16,
+     "must": [
+      [
+       "कैप्श",
+       "कैप्ष",
+       "केप्श",
+       "कप्श",
+       "caption"
+      ],
+      [
+       "कॉपी",
+       "कापी",
+       "copy"
+      ]
+     ],
      "gain_db": -1.0
-    },
-    {
-     "who": "ravi",
-     "file": "08_ravi.wav",
-     "text": "తర్వాత?",
-     "show": "And then?",
-     "maxgap": 0.28,
-     "gap": 0.16,
-     "tempo": 1.2,
-     "gain_db": 0.5
     },
     {
      "who": "ai",
-     "file": "09_ai.wav",
-     "text": "రన్ చెయ్. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.",
+     "file": "08_ai.wav",
+     "text": "రన్ చేయండి. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.",
      "show": "Run it. The first time, it downloads the voice: 313 MB.",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.4,
      "tempo": 1.16,
+     "must": [
+      [
+       "डाउन",
+       "डौन",
+       "down"
+      ],
+      [
+       "एंबी",
+       "एम्बी",
+       "एमबी",
+       "mb"
+      ]
+     ],
      "gain_db": -1.0
+    },
+    {
+     "who": "laptop",
+     "file": "09_laptop.wav",
+     "text": "Hello! This voice was made on a computer, with no internet.",
+     "show": "Hello! This voice was made on a computer, with no internet.",
+     "maxgap": 2.0,
+     "gap": 0.4,
+     "tempo": 1.0,
+     "demo": "series/scripts/howto01_demo/0.wav"
     },
     {
      "who": "ravi",
@@ -246,18 +344,42 @@
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "इंटर",
+       "इन्टर",
+       "अंटर"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "11_ai.wav",
-     "text": "వైఫై ఆఫ్. నాలుగు సెకన్ల మాటకి, ఒకటిన్నర సెకన్ల లోపే.",
-     "show": "Wi-Fi off: under 1.5 seconds for a 4-second sentence.",
+     "text": "అక్కర్లేదండి. లోడ్ అయ్యాక, [1] నాలుగు సెకన్ల లైన్ కి దాదాపు ఒక్క సెకను.",
+     "show": "None. Once it's loaded: about 1 second for a 4-second line.",
      "maxgap": 0.28,
      "gap": 0.7,
      "tempo": 1.16,
+     "must": [
+      [
+       "लोड",
+       "लोड़"
+      ],
+      [
+       "सेकन",
+       "सेकें",
+       "सेकंड"
+      ]
+     ],
      "gain_db": -1.0
     }
+   ],
+   "duck_lines": [
+    [
+     4,
+     0.25
+    ]
    ]
   },
   {
@@ -284,28 +406,46 @@
       "n": 13
      },
      {
-      "who": "laptop",
-      "shot": "laptop",
-      "prop": "tedemo",
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "parlour",
       "n": 14
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "french",
+      "n": 15
      },
      {
       "who": "ravi",
       "shot": "ravi",
-      "prop": "howlong",
-      "n": 15
+      "prop": "myoffer",
+      "n": 16
      },
      {
       "who": "ai",
       "shot": "laptop",
       "prop": "slow",
-      "n": 16
+      "n": 17
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "cancel",
+      "n": 18
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "verdict",
+      "n": 19
      },
      {
       "who": "ravi",
       "shot": "wide",
       "prop": "save",
-      "n": 17
+      "n": 20
      }
     ],
     "captionTop": 1500,
@@ -320,69 +460,199 @@
     {
      "who": "ravi",
      "file": "12_ravi.wav",
-     "text": "కానీ నా కస్టమర్లు తెలుగు మాట్లాడతారు!",
-     "show": "But my customers speak Telugu!",
+     "text": "మరి నా తెలుగు ఆఫర్?",
+     "show": "And my Telugu offer?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "तेलुग",
+       "तेलगु",
+       "टेलुग"
+      ],
+      [
+       "ऑफर",
+       "आफर",
+       "ओफर"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "13_ai.wav",
-     "text": "ఇది తెలుగు మాట్లాడదు. తెలుగుకి ఇండిక్ పార్లర్ టీటీఎస్. [1] గొంతు ఎలా ఉండాలో మాటల్లో చెప్తావు.",
-     "show": "This one doesn't speak Telugu. For Telugu: Indic Parler TTS. You describe the voice in words.",
+     "text": "తెలుగుకి ఇండిక్ పార్లర్. ఫ్రీ లాగిన్, షరతులు ఒప్పుకోండి, [1] గొంతు ఎలా ఉండాలో మాటల్లో రాయండి.",
+     "show": "For Telugu: Indic Parler. Free login, accept the terms, then describe the voice in words.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.16,
+     "must": [
+      [
+       "पार्ल",
+       "पारल",
+       "पालर"
+      ],
+      [
+       "लॉगिन",
+       "लोगिन",
+       "लागिन",
+       "login"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
-     "who": "laptop",
-     "file": "14_laptop.wav",
-     "text": "నమస్కారం! ఈ గొంతు ఇంటర్నెట్ లేకుండా ఒక ల్యాప్‌టాప్ లో తయారైంది.",
-     "show": "\"Namaskaram! This voice was made on a laptop, with no internet.\"",
-     "maxgap": 2.0,
-     "gap": 0.4,
-     "tempo": 1.0,
-     "demo": "series/scripts/howto01_demo/parler_run1.wav"
-    },
-    {
      "who": "ravi",
-     "file": "15_ravi.wav",
-     "text": "తెలుగు! ఎంత టైం పట్టింది?",
-     "show": "Telugu! How long did that take?",
+     "file": "14_ravi.wav",
+     "text": "పార్లర్? బ్యూటీ పార్లరా?",
+     "show": "Parler? Like beauty parlour?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "पार्ल",
+       "पारल",
+       "पालर"
+      ],
+      [
+       "ब्यूटी",
+       "बियूटी",
+       "बूटी",
+       "ब्युटी"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
-     "file": "16_ai.wav",
-     "text": "ఒక్కో వాక్యానికి ఇరవై ఎనిమిది సెకన్లు, ఐదు జీబీ మెమరీ. అయినా ఫ్రీ, ఆఫ్‌లైన్.",
-     "show": "28 seconds a sentence, 5 GB of memory. Still free, offline.",
+     "file": "15_ai.wav",
+     "text": "కాదండి. ఫ్రెంచ్ లో పార్లర్ అంటే మాట్లాడటం.",
+     "show": "No. Parler means \"to speak\" in French.",
      "maxgap": 0.28,
-     "gap": 0.7,
+     "gap": 0.16,
      "tempo": 1.16,
+     "must": [
+      [
+       "फ्रेंच",
+       "फ्रैंच",
+       "फ्रेन्च",
+       "french"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
      "who": "ravi",
-     "file": "17_ravi.wav",
+     "file": "16_ravi.wav",
+     "text": "సరే, ఎంత టైం పడుతుంది?",
+     "show": "Okay, how long does it take?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "must": [
+      [
+       "टैम",
+       "टाइम",
+       "टाईम"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "17_ai.wav",
+     "text": "ఒక్కో లైన్ కి దాదాపు ముప్పై సెకన్లు, [1] దాదాపు ఐదు జీబీ మెమరీ.",
+     "show": "About 30 seconds a line, almost 5 GB of memory.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.16,
+     "must": [
+      [
+       "मुप्प",
+       "मुपै",
+       "मुप्पै"
+      ],
+      [
+       "जीबी",
+       "जी बी",
+       "gb"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "18_ravi.wav",
+     "text": "నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!",
+     "show": "Slow... but free! That app is cancelled!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "must": [
+      [
+       "फ्री",
+       "फ्रि",
+       "free"
+      ],
+      [
+       "याप",
+       "यॉप",
+       "ऐप",
+       "एप"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "19_ai.wav",
+     "text": "ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ మెమరీ ఉన్న ఏ కంప్యూటర్ అయినా చాలు.",
+     "show": "English: Kokoro. Telugu: Indic Parler. Any computer with 8 GB of memory.",
+     "maxgap": 0.28,
+     "gap": 0.8,
+     "tempo": 1.16,
+     "must": [
+      [
+       "कोको",
+       "कोकु"
+      ],
+      [
+       "पार्ल",
+       "पारल",
+       "पालर"
+      ],
+      [
+       "जीबी",
+       "जी बी",
+       "gb"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "20_ravi.wav",
      "text": "చింటూ! ఇది సేవ్ చెయ్!",
      "show": "Chintu! Save this!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "चिंट",
+       "चिन्ट",
+       "चींट"
+      ],
+      [
+       "सेव",
+       "सेफ",
+       "save"
+      ]
+     ],
      "gain_db": 0.5
     }
-   ],
-   "duck_lines": [
-    [
-     2,
-     0.25
-    ]
    ]
   }
  ]

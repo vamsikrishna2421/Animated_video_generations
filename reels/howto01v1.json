@@ -79,8 +79,8 @@
     {
      "who": "laptop",
      "file": "01_laptop.wav",
-     "text": "Hello! This voice was made on a laptop, with no internet.",
-     "show": "Hello! This voice was made on a laptop, with no internet.",
+     "text": "Hello! This voice was made on a computer, with no internet.",
+     "show": "Hello! This voice was made on a computer, with no internet.",
      "maxgap": 2.0,
      "gap": 0.25,
      "tempo": 1.0,
@@ -89,31 +89,76 @@
     {
      "who": "ravi",
      "file": "02_ravi.wav",
-     "text": "Who's inside Chintu's laptop?! The Wi-Fi is off!",
-     "show": "Who's inside Chintu's laptop?! The Wi-Fi is off!",
+     "text": "Who's talking? The Wi-Fi is off!",
+     "show": "Who's talking? The Wi-Fi is off!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "talking"
+      ],
+      [
+       "wi",
+       "wifi",
+       "wi-fi"
+      ],
+      [
+       "off"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "Nobody. A free voice model, running on the laptop itself.",
-     "show": "Nobody. A free voice model, running on the laptop itself.",
+     "text": "Kokoro: a free voice model, running on Chintu's laptop.",
+     "show": "Kokoro: a free voice model, running on Chintu's laptop.",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.16,
+     "must": [
+      [
+       "kokoro",
+       "cocoro",
+       "kokorro",
+       "cocorro"
+      ],
+      [
+       "free"
+      ],
+      [
+       "voice"
+      ],
+      [
+       "laptop"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "04_ravi.wav",
-     "text": "Free? I pay an app every month for my offer announcements!",
-     "show": "Free? I pay an app every month for my offer announcements!",
+     "text": "Free? I pay an app every month for my announcements!",
+     "show": "Free? I pay an app every month for my announcements!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "free"
+      ],
+      [
+       "app"
+      ],
+      [
+       "month"
+      ],
+      [
+       "announcements",
+       "announcement"
+      ]
+     ],
      "gain_db": 0.5
     }
    ],
@@ -152,28 +197,22 @@
       "n": 7
      },
      {
-      "who": "ravi",
-      "shot": "ravi",
-      "prop": "then",
-      "n": 8
-     },
-     {
       "who": "ai",
       "shot": "laptop",
       "prop": "run",
-      "n": 9
+      "n": 8
      },
      {
       "who": "ravi",
       "shot": "ravi",
       "prop": "after",
-      "n": 10
+      "n": 9
      },
      {
       "who": "ai",
       "shot": "laptop",
       "prop": "offline",
-      "n": 11
+      "n": 10
      }
     ],
     "captionTop": 1500,
@@ -187,72 +226,150 @@
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "Step one: install it.",
-     "show": "Step one: install it.",
+     "text": "Step one: install it. Only two commands.",
+     "show": "Step one: install it. Only two commands.",
      "maxgap": 0.28,
      "gap": 0.6,
      "tempo": 1.16,
+     "must": [
+      [
+       "step"
+      ],
+      [
+       "install"
+      ],
+      [
+       "only"
+      ],
+      [
+       "commands",
+       "command"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "06_ravi.wav",
-     "text": "Type it?! I type with one finger!",
-     "show": "Type it?! I type with one finger!",
+     "text": "Type them?! I type with one finger!",
+     "show": "Type them?! I type with one finger!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "type"
+      ],
+      [
+       "finger"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "07_ai.wav",
-     "text": "Then copy this. Seven lines. [1] Your sentence goes here.",
-     "show": "Then copy this. Seven lines. Your sentence goes here.",
+     "text": "Then copy them from the caption. Five lines. [1] Your words go here.",
+     "show": "Then copy them from the caption. 5 lines. Your words go here.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.16,
+     "must": [
+      [
+       "copy"
+      ],
+      [
+       "caption"
+      ],
+      [
+       "five",
+       "5"
+      ],
+      [
+       "words",
+       "word"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
-     "who": "ravi",
-     "file": "08_ravi.wav",
-     "text": "And then?",
-     "show": "And then?",
-     "maxgap": 0.28,
-     "gap": 0.16,
-     "tempo": 1.2,
-     "gain_db": 0.5
-    },
-    {
      "who": "ai",
-     "file": "09_ai.wav",
+     "file": "08_ai.wav",
      "text": "Run it. The first time, it downloads the voice: 313 MB.",
      "show": "Run it. The first time, it downloads the voice: 313 MB.",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.4,
      "tempo": 1.16,
+     "must": [
+      [
+       "run"
+      ],
+      [
+       "first"
+      ],
+      [
+       "downloads",
+       "download"
+      ],
+      [
+       "three",
+       "313"
+      ],
+      [
+       "megabytes",
+       "megabyte",
+       "mb"
+      ]
+     ],
      "tts": "Run it. The first time, it downloads the voice: three hundred and thirteen megabytes.",
      "gain_db": -1.0
     },
     {
      "who": "ravi",
-     "file": "10_ravi.wav",
+     "file": "09_ravi.wav",
      "text": "And after that, no internet?",
      "show": "And after that, no internet?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "after"
+      ],
+      [
+       "internet"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
-     "file": "11_ai.wav",
-     "text": "Wi-Fi off: one point four seconds for a four-second sentence.",
-     "show": "Wi-Fi off: 1.4 seconds for a 4-second sentence.",
+     "file": "10_ai.wav",
+     "text": "None. Once it's loaded: [1] about one second for a four-second line.",
+     "show": "None. Once it's loaded: about 1 second for a 4-second line.",
      "maxgap": 0.28,
      "gap": 0.7,
      "tempo": 1.16,
+     "must": [
+      [
+       "none"
+      ],
+      [
+       "loaded",
+       "load"
+      ],
+      [
+       "second",
+       "seconds"
+      ],
+      [
+       "four",
+       "4"
+      ],
+      [
+       "line"
+      ]
+     ],
      "gain_db": -1.0
     }
    ]
@@ -272,37 +389,61 @@
       "who": "ravi",
       "shot": "ravi",
       "prop": "telugu",
-      "n": 12
+      "n": 11
      },
      {
       "who": "ai",
       "shot": "laptop",
       "prop": "parler",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "parlour",
       "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "french",
+      "n": 14
      },
      {
       "who": "laptop",
       "shot": "laptop",
       "prop": "tedemo",
-      "n": 14
+      "n": 15
      },
      {
       "who": "ravi",
       "shot": "ravi",
-      "prop": "howlong",
-      "n": 15
+      "prop": "myoffer",
+      "n": 16
      },
      {
       "who": "ai",
       "shot": "laptop",
       "prop": "slow",
-      "n": 16
+      "n": 17
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "cancel",
+      "n": 18
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "verdict",
+      "n": 19
      },
      {
       "who": "ravi",
       "shot": "wide",
       "prop": "save",
-      "n": 17
+      "n": 20
      }
     ],
     "captionTop": 1500,
@@ -315,70 +456,241 @@
    "lines": [
     {
      "who": "ravi",
-     "file": "12_ravi.wav",
+     "file": "11_ravi.wav",
      "text": "But my customers speak Telugu!",
      "show": "But my customers speak Telugu!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "customers",
+       "customer"
+      ],
+      [
+       "telugu"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
-     "file": "13_ai.wav",
-     "text": "This one doesn't. For Telugu: Indic Parler TTS. [1] You describe the voice in words.",
-     "show": "This one doesn't. For Telugu: Indic Parler TTS. You describe the voice in words.",
+     "file": "12_ai.wav",
+     "text": "For Telugu: Indic Parler TTS. Free login, accept the terms, [1] then describe the voice in words.",
+     "show": "For Telugu: Indic Parler TTS. Free login, accept the terms, then describe the voice in words.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.16,
-     "tts": "This one doesn't. For Telugu: Indic Parler T T S. [1] You describe the voice in words.",
+     "must": [
+      [
+       "telugu"
+      ],
+      [
+       "parler",
+       "parlor",
+       "parla",
+       "parlour"
+      ],
+      [
+       "login",
+       "log"
+      ],
+      [
+       "terms",
+       "term"
+      ],
+      [
+       "describe"
+      ],
+      [
+       "voice"
+      ]
+     ],
+     "tts": "For Telugu: Indic Parler T T S. Free login, accept the terms, [1] then describe the voice in words.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "Parler? Like beauty parlour?",
+     "show": "Parler? Like beauty parlour?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "must": [
+      [
+       "parlour",
+       "parlor",
+       "parler"
+      ],
+      [
+       "beauty"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "French, for \"to speak\". Listen.",
+     "show": "French, for \"to speak\". Listen.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.16,
+     "must": [
+      [
+       "french"
+      ],
+      [
+       "speak"
+      ],
+      [
+       "listen"
+      ]
+     ],
      "gain_db": -1.0
     },
     {
      "who": "laptop",
-     "file": "14_laptop.wav",
-     "text": "నమస్కారం! ఈ గొంతు ఇంటర్నెట్ లేకుండా ఒక ల్యాప్‌టాప్ లో తయారైంది.",
-     "show": "\"Namaskaram! This voice was made on a laptop, with no internet.\"",
+     "file": "15_laptop.wav",
+     "text": "రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి కొనుగోలు మీద పది శాతం తగ్గింపు.",
+     "show": "\"Diwali offer at Ravi Kirana! 10% off every purchase.\"",
      "maxgap": 2.0,
      "gap": 0.4,
      "tempo": 1.0,
-     "demo": "series/scripts/howto01_demo/parler_run1.wav"
+     "demo": "series/scripts/howto01_demo/offer_1.wav"
     },
     {
      "who": "ravi",
-     "file": "15_ravi.wav",
-     "text": "Telugu! How long did that take?",
-     "show": "Telugu! How long did that take?",
+     "file": "16_ravi.wav",
+     "text": "That's my Diwali offer! How long did it take?",
+     "show": "That's my Diwali offer! How long did it take?",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "diwali"
+      ],
+      [
+       "offer"
+      ],
+      [
+       "long"
+      ]
+     ],
      "gain_db": 0.5
     },
     {
      "who": "ai",
-     "file": "16_ai.wav",
-     "text": "Twenty-eight seconds a sentence, and five GB of memory. Still free, still offline.",
-     "show": "28 seconds a sentence, and 5 GB of memory. Still free, still offline.",
+     "file": "17_ai.wav",
+     "text": "About thirty seconds a line, [1] and almost five GB of memory.",
+     "show": "About 30 seconds a line, and almost 5 GB of memory.",
      "maxgap": 0.28,
-     "gap": 0.7,
+     "gap": 0.6,
      "tempo": 1.16,
-     "tts": "Twenty-eight seconds a sentence, and five gigabytes of memory. Still free, still offline.",
+     "must": [
+      [
+       "thirty",
+       "30"
+      ],
+      [
+       "line"
+      ],
+      [
+       "five",
+       "5"
+      ],
+      [
+       "memory"
+      ]
+     ],
+     "tts": "About thirty seconds a line, [1] and almost five gigabytes of memory.",
      "gain_db": -1.0
     },
     {
      "who": "ravi",
-     "file": "17_ravi.wav",
+     "file": "18_ravi.wav",
+     "text": "Slow, but free! That app is cancelled!",
+     "show": "Slow, but free! That app is cancelled!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "must": [
+      [
+       "slow"
+      ],
+      [
+       "free"
+      ],
+      [
+       "app"
+      ],
+      [
+       "cancelled",
+       "canceled",
+       "cancel"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "19_ai.wav",
+     "text": "English: Kokoro. Telugu: Indic Parler. Any computer with eight GB of memory.",
+     "show": "English: Kokoro. Telugu: Indic Parler. Any computer with 8 GB of memory.",
+     "maxgap": 0.28,
+     "gap": 0.8,
+     "tempo": 1.16,
+     "must": [
+      [
+       "english"
+      ],
+      [
+       "kokoro",
+       "cocoro"
+      ],
+      [
+       "telugu"
+      ],
+      [
+       "parler",
+       "parlor",
+       "parla"
+      ],
+      [
+       "eight",
+       "8"
+      ],
+      [
+       "memory"
+      ]
+     ],
+     "tts": "English: Kokoro. Telugu: Indic Parler. Any computer with eight gigabytes of memory.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "20_ravi.wav",
      "text": "Chintu! Save this!",
      "show": "Chintu! Save this!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.2,
+     "must": [
+      [
+       "chintu"
+      ],
+      [
+       "save"
+      ]
+     ],
      "gain_db": 0.5
     }
    ],
    "duck_lines": [
     [
-     2,
+     4,
      0.25
     ]
    ]

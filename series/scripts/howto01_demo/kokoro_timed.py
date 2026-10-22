@@ -6,7 +6,7 @@ import soundfile as sf
 t1 = time.time()
 pipeline = KPipeline(lang_code='a')
 t2 = time.time()
-text = "Hello! This voice was made on a laptop, with no internet."
+text = "Hello! This voice was made on a computer, with no internet."
 secs, parts = 0.0, []
 for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')):
     parts.append({"graphemes": gs, "phonemes": ps})

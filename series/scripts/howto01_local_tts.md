@@ -1,4 +1,4 @@
-# HOW TO 01 "Make an AI voice on your laptop, free and offline" (local text-to-speech), script v1
+# HOW TO 01 "Make an AI voice on your laptop, free and offline" (local text-to-speech), script v2
 
 Thursday HOW TO (run of Oct 22, 2026). Kokoro for English, Indic Parler-TTS for Telugu. Cast: Ravi anna, the shop AI
 (phone), Chintu's laptop on the counter (the voices in the reel's demo lines are the real files our run made).
@@ -48,50 +48,83 @@ Docs checked on the day: github.com/hexgrad/kokoro (README), pypi.org/project/ko
    the same size as ai4bharat's file): this machine holds no account tokens. Offline, twice: load 18.5-21 s,
    **generate 28 s for 5.1 s of Telugu**, peak memory 4.6 GB. Whisper (Hindi mode) hears "नमस्कारम, इगोंतु अंटरनेट
    लेकुन्द वोका लाप्दोप लो तायार हैंदी" (namaskaram, ee gontu internet lekunda oka laptop lo tayaraindi).
+4b. Take 2 (after the script review: the demo lines must be true and the code must survive an Instagram caption):
+   speak.py with the loop on one line (Instagram strips leading spaces) and "made on a computer" (our test machine is a
+   server CPU, not a laptop):
+   ```python
+   from kokoro import KPipeline
+   import soundfile as sf
+   pipeline = KPipeline(lang_code='a')
+   text = "Hello! This voice was made on a computer, with no internet."
+   for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
+   ```
+   `HF_HUB_OFFLINE=1 python speak.py`: 6.6 s from a cold start; timed twice: load 1.6-1.7 s, **generate 1.1-1.2 s for
+   4.05 s of speech**, 1.2 GB. Output: `0 Hello! This voice was made on a computer, with no internet. həlˈO! ðˌɪs vˈYs
+   wʌz mˌAd ˌɔn ɐ kəmpjˈuTəɹ, wɪð nˈO ˈɪntəɹnˌɛt.` Whisper: "Hello, this voice was made on a computer with no internet."
+   The Telugu line is Ravi's own offer (telugu_offer.py, loaded once, three seeds): "రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి
+   కొనుగోలు మీద పది శాతం తగ్గింపు." Load 21.8 s; **generate 28.7-30.7 s for 5.5-5.7 s**; 4.7 GB. Seed 1 kept; Whisper
+   (Hindi mode): "रवी किराना लो दीपावली आफर प्रत्ति कुनुगोलु मेदा पादिसातन तग्व्म्पु".
+   Login for the gated Telugu model (huggingface.co/docs/huggingface_hub quick start, v2.2.0): `hf auth login` (a
+   browser code, or paste a token from your settings; never show it). espeak-ng on a Mac is in neither guide; Homebrew
+   has it (`brew install espeak-ng`, 1.52.0); we haven't tried a Mac.
 5. On a fresh computer pip also fetches PyTorch first (its size depends on the system; the default Linux build is over
    1 GB). Disk: about 2 GB for Kokoro, about 6 GB for Indic Parler. Memory: 8 GB is comfortable.
 
-## Script (English), v1
+## Script (English), v2 after the script review
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | laptop (Kokoro, our file) | Hello! This voice was made on a laptop, with no internet. | frame 1: Chintu's laptop on the counter, a waveform, Wi-Fi OFF; block "MADE ON THIS LAPTOP · NO INTERNET · FREE" |
-| 2 | Ravi | Who's inside Chintu's laptop?! The Wi-Fi is off! | Ravi leaning over the laptop |
-| 3 | AI | Nobody. A free voice model, running on the laptop itself. | "HOW TO 01" tag |
-| 4 | Ravi | Free? I pay an app every month for my offer announcements! | |
-| 5 | AI | Step one: install it. | terminal: `pip install kokoro soundfile` → "Successfully installed kokoro-0.9.4 ..." (15 s); `sudo apt install espeak-ng` (Windows: the .msi installer); "Python 3.10-3.12" |
-| 6 | Ravi | Type it?! I type with one finger! | |
-| 7 | AI | Then copy this. Seven lines. Your sentence goes here. | speak.py, the text line lit |
-| 8 | Ravi | And then? | |
-| 9 | AI | Run it. The first time, it downloads the voice: 313 MB. | terminal: `python speak.py` → the real output line (letters → sounds) → 0.wav |
-| 10 | Ravi | And after that, no internet? | |
-| 11 | AI | Wi-Fi off: one point four seconds for a four-second sentence. | card: "Wi-Fi OFF · 1.4 s to make 4 s of speech · 1.2 GB memory · no graphics card" |
-| 12 | Ravi | But my customers speak Telugu! | |
-| 13 | AI | This one doesn't. For Telugu: Indic Parler TTS. You describe the voice in words. | model card: "ai4bharat/indic-parler-tts · Apache 2.0 · 21 Indian languages · 3.75 GB · free login"; the description line lit |
-| 14 | laptop (Indic Parler, our file) | నమస్కారం! ఈ గొంతు ఇంటర్నెట్ లేకుండా ఒక ల్యాప్‌టాప్ లో తయారైంది. | caption: "Namaskaram! This voice was made on a laptop, with no internet." |
-| 15 | Ravi | Telugu! How long did that take? | |
-| 16 | AI | Twenty-eight seconds a sentence, and five GB of memory. Still free, still offline. | card: "28 s for 5 s of Telugu · 4.6 GB memory · 3.75 GB download" |
-| 17 | Ravi | Chintu! Save this! | "SAVE THIS" checklist: the commands; "every command in the caption" |
+| 1 | laptop (Kokoro, our file) | Hello! This voice was made on a computer, with no internet. | frame 1: Chintu's laptop on the counter, a waveform, Wi-Fi OFF; block "THIS AI VOICE: NO INTERNET. FREE."; a hit |
+| 2 | Ravi | Who's talking? The Wi-Fi is off! | |
+| 3 | AI | Kokoro: a free voice model, running on Chintu's laptop. | "KOKORO · free · Apache 2.0" |
+| 4 | Ravi | Free? I pay an app every month for my announcements! | |
+| 5 | AI | Step one: two install commands. | "STEP 1": `pip install kokoro soundfile`, `sudo apt-get install espeak-ng`; Windows .msi, Mac (Homebrew); "+ PyTorch on a fresh computer"; Python 3.10-3.12 |
+| 6 | Ravi | Type them?! I type with one finger! | |
+| 7 | AI | Then copy them from the caption. Five lines. [1] Your words go here. | "STEP 2": speak.py, the text line lit |
+| 8 | AI | Run it. The first time, it downloads the voice: 313 MB. | "STEP 3": `python speak.py`, the download, the real output line, 0.wav |
+| 9 | Ravi | And after that, no internet? | |
+| 10 | AI | None. Once it's loaded: [1] about one second for a four-second line. | card: "1.2 s per 4-second line · Wi-Fi off · 1.2 GB memory · our test: 4-core CPU, no graphics card" |
+| 11 | Ravi | But my customers speak Telugu! | |
+| 12 | AI | For Telugu: Indic Parler TTS. Free login, accept the terms, [1] then describe the voice in words. | model card: "Apache 2.0 · 21 languages, Telugu too · 3.75 GB · gated: hf auth login"; the description line lit |
+| 13 | Ravi | Parler? Like beauty parlour? | |
+| 14 | AI | French, for "to speak". Listen. | "parler = to speak (French)" |
+| 15 | laptop (Indic Parler, our file) | రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి కొనుగోలు మీద పది శాతం తగ్గింపు. | caption: "Diwali offer at Ravi Kirana! 10% off every purchase." |
+| 16 | Ravi | That's my Diwali offer! How long did it take? | |
+| 17 | AI | About thirty seconds a line, [1] and almost five GB of memory. | English 1.2 s vs Telugu 30 s; "4.7 GB" |
+| 18 | Ravi | Slow, but free! That app is cancelled! | |
+| 19 | AI | English: Kokoro. Telugu: Indic Parler. Any computer with eight GB of memory. | verdict card |
+| 20 | Ravi | Chintu! Save this! | "SAVE THIS": both models' commands, the login; "every command in the caption" |
 
-## Script (Telugu; English on-screen text), v1
-1. ల్యాప్‌టాప్ (Kokoro): Hello! This voice was made on a laptop, with no internet.
-2. రవి: చింటూ ల్యాప్‌టాప్ లో ఎవరున్నారు?! వైఫై కూడా ఆఫ్!
-3. ఏఐ: ఎవరూ లేరు. ఫ్రీ వాయిస్ మోడల్, ల్యాప్‌టాప్ లోనే నడుస్తుంది.
-4. రవి: ఫ్రీ నా? నా ఆఫర్ అనౌన్స్‌మెంట్ల కోసం ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!
-5. ఏఐ: మొదటి స్టెప్: ఇన్‌స్టాల్ చెయ్.
+Script review (two viewers, one who never typed a command, one who codes): "made on this laptop" wasn't true (our run
+was on a server CPU; both demo lines re-made, "on a computer", the Telugu one is Ravi's offer); nobody said the model's
+name or what computer; the Telugu voice came at 0:45 with no steps behind it (the Telugu page now opens on it, the login
+step is said, the save card carries it); "copy this" from a video (now "from the caption", and the loop is on one line so
+Instagram's caption can't break it); numbers clashed ("five GB" vs 4.6: now "almost five", 4.7 measured on the offer
+line; "once it's loaded"; "21 languages"); the AI spoke to Ravi in the informal register in Telugu (now "-ండి"); no
+verdict (now said); "And then?" cut; frame 1 didn't say it's a voice (now "THIS AI VOICE") and had no hit.
+
+## Script (Telugu; English on-screen text), v2 (opens on the Telugu voice; the English demo plays at step 3)
+1. ల్యాప్‌టాప్ (Indic Parler): రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి కొనుగోలు మీద పది శాతం తగ్గింపు.
+2. రవి: నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!
+3. ఏఐ: చింటూ ల్యాప్‌టాప్ అండి. ఫ్రీ వాయిస్ మోడల్స్: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో.
+4. రవి: ఫ్రీనా?! నేను ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!
+5. ఏఐ: ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.
 6. రవి: టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!
-7. ఏఐ: అయితే ఇది కాపీ చెయ్. ఏడు లైన్లు. నీ మాట ఇక్కడ పెట్టు.
-8. రవి: తర్వాత?
-9. ఏఐ: రన్ చెయ్. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.
+7. ఏఐ: క్యాప్షన్ లో నుంచి కాపీ చేయండి. ఐదు లైన్లు. [1] చెప్పాల్సింది ఇక్కడ రాయండి.
+8. ఏఐ: రన్ చేయండి. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.
+9. ల్యాప్‌టాప్ (Kokoro): Hello! This voice was made on a computer, with no internet.
 10. రవి: ఆ తర్వాత ఇంటర్నెట్ అక్కర్లేదా?
-11. ఏఐ: వైఫై ఆఫ్. నాలుగు సెకన్ల మాటకి, ఒకటిన్నర సెకన్ల లోపే.
-12. రవి: కానీ నా కస్టమర్లు తెలుగు మాట్లాడతారు!
-13. ఏఐ: ఇది తెలుగు మాట్లాడదు. తెలుగుకి ఇండిక్ పార్లర్ టీటీఎస్. గొంతు ఎలా ఉండాలో మాటల్లో చెప్తావు.
-14. ల్యాప్‌టాప్ (Indic Parler): నమస్కారం! ఈ గొంతు ఇంటర్నెట్ లేకుండా ఒక ల్యాప్‌టాప్ లో తయారైంది.
-15. రవి: తెలుగు! ఎంత టైం పట్టింది?
-16. ఏఐ: ఒక్కో వాక్యానికి ఇరవై ఎనిమిది సెకన్లు, ఐదు జీబీ మెమరీ. అయినా ఫ్రీ, ఆఫ్‌లైన్.
-17. రవి: చింటూ! ఇది సేవ్ చెయ్!
+11. ఏఐ: అక్కర్లేదండి. లోడ్ అయ్యాక, [1] నాలుగు సెకన్ల లైన్ కి దాదాపు ఒక్క సెకను.
+12. రవి: మరి నా తెలుగు ఆఫర్?
+13. ఏఐ: తెలుగుకి ఇండిక్ పార్లర్. ఫ్రీ లాగిన్, షరతులు ఒప్పుకోండి, [1] గొంతు ఎలా ఉండాలో మాటల్లో రాయండి.
+14. రవి: పార్లర్? బ్యూటీ పార్లరా?
+15. ఏఐ: కాదండి. ఫ్రెంచ్ లో పార్లర్ అంటే మాట్లాడటం.
+16. రవి: సరే, ఎంత టైం పడుతుంది?
+17. ఏఐ: ఒక్కో లైన్ కి దాదాపు ముప్పై సెకన్లు, [1] దాదాపు ఐదు జీబీ మెమరీ.
+18. రవి: నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!
+19. ఏఐ: ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ మెమరీ ఉన్న ఏ కంప్యూటర్ అయినా చాలు.
+20. రవి: చింటూ! ఇది సేవ్ చెయ్!
 
 ## Sound
-A soft chime and the laptop's voice on frame 1 (the hook is the voice itself); keyboard clicks under the terminal
+A hit and a pop with the laptop's voice on frame 1 (the hook is the voice itself); keyboard clicks under the terminal
 screens; a lift into each step card; a pop on each stat card; the bed drops out under the Telugu demo voice (the
 payoff) and comes back on Ravi's "Telugu!"; a rise into "Save this!" and a snap on the checklist.
