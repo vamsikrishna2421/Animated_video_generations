@@ -108,10 +108,10 @@ const race = (c: Ctx, W: number, y: number, k: number[]) => {
   rows.forEach(([lab, sec, col, note], i) => {
     const q = easeOut(clamp(k[i] ?? 0)); if (q <= 0) return;
     const yy = y + i * 230, wmax = 820;
-    c.font = SANS(48); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, 130, yy - 22);
+    c.font = SANS(48); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(lab, 130, yy - 22);
     c.fillStyle = "#e2e8f0"; rrect(c, 130, yy, wmax, 84, 18); c.fill();
     c.fillStyle = col; rrect(c, 130, yy, Math.max(24, wmax * (sec / 30) * q), 84, 18); c.fill();
-    c.font = SANS(40, 600); c.fillStyle = "#334155"; c.fillText(note, 130, yy + 130);
+    c.font = SANS(40, 600); c.fillStyle = "#cbd5e1"; c.fillText(note, 130, yy + 130);
   });
 };
 // the save card: the commands as a checklist
@@ -184,7 +184,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
         if (b.shot === "laptop") {
           // ---------- the laptop screen, full frame ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
-          const step = (t: string) => { c.font = SANS(40); c.fillStyle = "#facc15"; c.textAlign = "left"; c.fillText(t, 70, 190); };
+          const step = (t: string) => { c.font = SANS(52); c.fillStyle = "#facc15"; c.textAlign = "left"; c.fillText(t, 64, 300); };   // below the title bar
           if (b.prop === "install") {
             step("STEP 1 · INSTALL");
             term(c, W, "Terminal", [
@@ -193,7 +193,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
               ["$ sudo apt-get install espeak-ng", "#f8fafc", seg(p, 0.45, 0.65)],
               ["$ espeak-ng --version", "#f8fafc", seg(p, 0.66, 0.72)],
               ["eSpeak NG text-to-speech: 1.51", "#86efac", seg(p, 0.74, 0.8)],
-            ]);
+            ], { y0: 440, size: 38, cols: 40 });
             tag(c, "Windows: the espeak-ng .msi · Mac: brew install espeak-ng", W / 2, 1110, 38, "#fff", "#334155", -0.01, seg(p, 0.5, 0.6));
             tag(c, "needs Python 3.10-3.12", 330, 1220, 44, "#e0e7ff", INK, 0.02, seg(p, 0.6, 0.7));
             tag(c, "+ PyTorch on a fresh computer", 760, 1220, 40, "#fef3c7", INK, -0.02, seg(p, 0.7, 0.8));
@@ -206,7 +206,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
               ["pipeline = KPipeline(lang_code='a')", "#f8fafc", 1],
               ['text = "Hello! This voice was made on a computer, with no internet."', "#fde68a", 1, hi],
               ["for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)", "#f8fafc", 1],
-            ], { size: 30, cols: 50 });
+            ], { y0: 440, size: 34, cols: 45 });
             tag(c, "copy it from the caption", W / 2, 1150, 52, "#dcfce7", "#166534", 0.02, seg(p, 0.08, 0.2));
             if (hi) tag(c, "your words go here", W / 2, 1270, 58, "#fef3c7", INK, -0.02, seg(f, cu(1, 0.55) - 4, cu(1, 0.55) + 6));
           }
@@ -216,12 +216,12 @@ const StHowto: React.FC<SP> = ({ s }) => {
             term(c, W, "Terminal", [
               ["$ python speak.py", "#f8fafc", seg(p, 0.0, 0.12)],
               ["0 Hello! This voice was made on a computer, with no internet. həlˈO! ðˌɪs vˈYs wʌz mˌAd ˌɔn ɐ kəmpjˈuTəɹ, wɪð nˈO ˈɪntəɹnˌɛt.", "#86efac", seg(p, 0.58, 0.66)],
-            ], { size: 32, cols: 46 });
-            c.fillStyle = "#334155"; rrect(c, 110, 860, W - 220, 50, 25); c.fill();
-            c.fillStyle = PURPLE; rrect(c, 110, 860, Math.max(50, (W - 220) * dl), 50, 25); c.fill();
+            ], { y0: 440, size: 36, cols: 41 });
+            c.fillStyle = "#334155"; rrect(c, 110, 920, W - 220, 50, 25); c.fill();
+            c.fillStyle = PURPLE; rrect(c, 110, 920, Math.max(50, (W - 220) * dl), 50, 25); c.fill();
             c.font = SANS(36, 600); c.fillStyle = "#e2e8f0"; c.textAlign = "center";
-            c.fillText(dl < 1 ? `first run only: downloading the voice ${Math.round(313 * dl)} MB` : "voice downloaded: 313 MB (once)", W / 2, 960);
-            if (p > 0.68) tag(c, "letters → sounds → 0.wav (4 s of speech)", W / 2, 1120, 52, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.68, 0.76));
+            c.fillText(dl < 1 ? `first run only: downloading the voice ${Math.round(313 * dl)} MB` : "voice downloaded: 313 MB (once)", W / 2, 1020);
+            if (p > 0.68) tag(c, "letters → sounds → 0.wav (4 s of speech)", W / 2, 1160, 52, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.68, 0.76));
           }
           if (b.prop === "endemo" || b.prop === "tedemo") {
             const tel = b.prop === "tedemo";
@@ -245,15 +245,15 @@ const StHowto: React.FC<SP> = ({ s }) => {
             term(c, W, "huggingface.co", [["ai4bharat/indic-parler-tts", "#0f172a", 1]], { size: 40, cols: 40, light: true });
             const chips: [string, string][] = [["Apache 2.0", "#dcfce7"], ["21 languages · Telugu ✓", "#e0e7ff"], ["0.9B · 3.75 GB", "#fef3c7"], ["gated: free login", "#fee2e2"]];
             chips.forEach(([t, bg], q) => tag(c, t, q % 2 ? 760 : 320, 520 + Math.floor(q / 2) * 110, 44, bg, INK, q % 2 ? 0.02 : -0.02, seg(p, 0.06 + q * 0.06, 0.14 + q * 0.06)));
-            c.font = MONO(36, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("$ hf auth login", W / 2, 770);
+            c.font = MONO(40, 700); c.fillStyle = "#0f172a"; c.textAlign = "center"; c.fillText("$ hf auth login", W / 2, 770);
             const c1 = cu(1, 0.6);
             c.fillStyle = "#0f172a"; rrect(c, 80, 820, W - 160, 340, 22); c.fill();
             c.font = MONO(30); c.textAlign = "left";
             const desc = 'description = "Lalitha speaks in a clear, friendly voice at a moderate pace. The recording is very clear, with no background noise."';
             const on = f >= c1 - 4;
-            for (let q = 0; q * 52 < desc.length; q++) {
+            for (let q = 0; q * 48 < desc.length; q++) {
               if (on && q < 3) { c.fillStyle = "rgba(250,204,21,0.25)"; c.fillRect(96, 846 + q * 46, W - 192, 44); }
-              c.fillStyle = "#fde68a"; c.fillText(desc.slice(q * 52, q * 52 + 52), 110, 880 + q * 46);
+              c.fillStyle = "#fde68a"; c.fillText(desc.slice(q * 48, q * 48 + 48), 110, 880 + q * 46);
             }
             if (on) tag(c, "you describe the voice in words", W / 2, 1270, 58, "#fef3c7", INK, -0.02, seg(f, c1 - 4, c1 + 6));
           }

@@ -41,7 +41,7 @@ L_EN = [
 L_TE = [
     ("laptop", "wide", "hook", OFFER, OFFER_SHOW),
     ("ravi", "ravi", "who", "నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!", "Who's announcing my offer?! The Wi-Fi is off!"),
-    ("ai", "wide", "nobody", "చింటూ ల్యాప్‌టాప్ అండి. ఫ్రీ వాయిస్ మోడల్స్: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో.", "Chintu's laptop. Free voice models: Indic Parler for Telugu, Kokoro for English."),
+    ("ai", "wide", "nobody", "చింటూ ల్యాప్‌టాప్ అండి. | ఫ్రీ వాయిస్ మోడల్స్: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో.", "Chintu's laptop. <pause 0.25> Free voice models: Indic Parler for Telugu, Kokoro for English."),   # two takes: one take dropped the first sentence
     ("ravi", "ravi", "pay", "ఫ్రీనా?! నేను ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!", "Free?! I pay an app every month!"),
     ("ai", "laptop", "install", "ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.", "First the English one, it's easy. Two install commands."),
     ("ravi", "ravi", "type", "టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!", "Type them?! I type with one finger!"),
@@ -72,29 +72,31 @@ MUST_EN = {"who": [("talking",), ("wi", "wifi", "wi-fi"), ("off",)], "nobody": [
            "type": [("type",), ("finger",)], "code": [("copy",), ("caption",), ("five", "5"), ("words", "word")],
            "run": [("run",), ("first",), ("downloads", "download"), ("three", "313"), ("megabytes", "megabyte", "mb")], "after": [("after",), ("internet",)],
            "offline": [("none",), ("loaded", "load"), ("second", "seconds"), ("four", "4"), ("line",)], "telugu": [("customers", "customer"), ("telugu",)],
-           "parler": [("telugu",), ("parler", "parlor", "parla", "parlour", "parlay", "parle", "parley"), ("login", "log"), ("terms", "term"), ("describe",), ("voice",)],
+           "parler": [("telugu",), ("parler", "parlor", "parla", "parlour", "parlay", "parle", "parley", "palay", "palae", "pale"), ("login", "log"), ("terms", "term"), ("describe",), ("voice",)],
            "parlour": [("parlour", "parlor", "parler"), ("beauty",)], "french": [("french",), ("speak",), ("listen",)],
            "myoffer": [("diwali",), ("offer",), ("long",)], "slow": [("thirty", "30"), ("line",), ("five", "5"), ("memory",)],
            "cancel": [("slow",), ("free",), ("app",), ("cancelled", "canceled", "cancel")],
-           "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley"), ("eight", "8", "8gb"), ("memory",)], "save": [("chintu",), ("save",)]}
-MUST_TE = {"who": [("ऑफर", "आफर", "ओफर", "offer"), ("वाइफ", "वाईफ", "वैफ", "वायफ")], "nobody": [("चिंट", "चिन्ट", "चींट"), ("पार्ल", "पारल", "पालर", "parl"), ("कोको", "कोकु", "koko")],
-           "pay": [("फ्री", "फ्रि", "free"), ("याप", "यॉप", "ऐप", "एप")], "install": [("इंग्ली", "इंगली", "इंग्लि"), ("इंस्ट", "इन्स्ट", "इनस्ट"), ("कमां", "कमान", "कमें", "कमां")],
-           "type": [("टैप", "टाइप", "ताइप", "टाईप")], "code": [("कैप्श", "कैप्ष", "केप्श", "कप्श", "caption"), ("कॉपी", "कापी", "copy")],
-           "run": [("डाउन", "डौन", "down"), ("एंबी", "एम्बी", "एमबी", "mb")], "after": [("इंटर", "इन्टर", "अंटर")], "offline": [("लोड", "लोड़"), ("सेकन", "सेकें", "सेकंड")],
-           "telugu": [("तेलुग", "तेलगु", "टेलुग"), ("ऑफर", "आफर", "ओफर")], "parler": [("पार्ल", "पारल", "पालर"), ("लॉगिन", "लोगिन", "लागिन", "login")],
-           "parlour": [("पार्ल", "पारल", "पालर"), ("ब्यूटी", "बियूटी", "बूटी", "ब्युटी")], "french": [("फ्रेंच", "फ्रैंच", "फ्रेन्च", "french")],
-           "myoffer": [("टैम", "टाइम", "टाईम")], "slow": [("मुप्प", "मुपै", "मुप्पै"), ("जीबी", "जी बी", "gb")],
-           "cancel": [("फ्री", "फ्रि", "free"), ("याप", "यॉप", "ऐप", "एप")], "verdict": [("कोको", "कोकु"), ("पार्ल", "पारल", "पालर"), ("जीबी", "जी बी", "gb")],
-           "save": [("चिंट", "चिन्ट", "चींट"), ("सेव", "सेफ", "save")]}
+           "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley", "palay", "palae", "pale"), ("eight", "8", "8gb"), ("memory",)], "save": [("chintu",), ("save",)]}
+MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ", "फै")], "nobody": [("चिं", "चिन", "चीं")],
+           "nobody2": [("पार", "पाल", "parl"), ("कोक", "कोको", "koko")],
+           "pay": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "install": [("इंग", "इन्ग", "इंगि"), ("स्टा", "स्टॉ", "stal")],
+           "type": [("टैप", "टाइप", "ताइप", "टाईप", "टेप")], "code": [("प्श", "प्ष", "caption"), ("कॉप", "काप", "कोप", "copy")],
+           "run": [("डाउ", "डौ", "down"), ("बी", "mb")], "after": [("टर", "टार")], "offline": [("लोड", "लोड़", "लोर"), ("सेक", "सैक")],
+           "telugu": [("तेल", "टेल", "तल"), ("फर", "offer")], "parler": [("पार", "पाल"), ("लॉग", "लोग", "लाग", "login")],
+           "parlour": [("पार", "पाल"), ("ब्यू", "बियू", "बू", "ब्यु")], "french": [("फ्रें", "फ्रैं", "फ्रेन", "फ़्रें", "french")],
+           "myoffer": [("टैम", "टाइम", "टाईम", "टेम")], "slow": [("मुप", "मुब"), ("जी", "gb")],
+           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("पार", "पाल"), ("जी", "gb")],
+           "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05)
 TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
 # Sound (CLAUDE.md arc): a hit and a pop with the laptop's voice on frame 1; keyboard ticks under the terminal screens;
 # a lift into each step; a hit on the offline number; a riser into the Telugu demo with the bed down under it (the
 # payoff); a success sting on "That's my offer!"; a rise into "Save this!" and a hit on the checklist.
 SCENES = {"en": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 10, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "tail": 0.1}),
-                 ("h_c", 10, 20, {"lift": 0.6, "pre": 0.3, "outro": True, "boost": 1.45, "rise": 1.3, "tail": 0.0})],
+                 ("h_c", 10, 20, {"lift": 0.6, "pre": 0.3, "outro": True, "boost": 1.38, "rise": 1.3, "tail": 0.0})],
           "te": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 11, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "tail": 0.1}),
-                 ("h_c", 11, 20, {"lift": 0.6, "pre": 0.3, "outro": True, "boost": 1.45, "rise": 1.3, "tail": 0.0})]}
+                 ("h_c", 11, 20, {"lift": 0.6, "pre": 0.3, "outro": True, "boost": 1.38, "rise": 1.3, "tail": 0.0})]}
 GAP = {"hook": 0.25, "install": 0.6, "code": 0.5, "run": 0.4, "endemo": 0.4, "offline": 0.7, "parler": 0.4, "tedemo": 0.4, "slow": 0.6, "verdict": 0.8}   # the screens' reads
+GAIN_PROP = {"parler": 0.3, "french": 1.0, "slow": 1.4, "verdict": 1.0, "save": 0.8}   # the rising last scene: 6.8-7.4 dB over the bed
 DUCK_DEMO = 0.25   # the bed under the laptop's demo lines (the voice is the point)
 YT = {"h_a": "The laptop talks, no internet", "h_b": "Kokoro: install, code, run", "h_c": "Telugu: Indic Parler-TTS"}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -125,7 +127,11 @@ def spec(lang="en"):
                 ln["must"] = (MUST_TE if te else MUST_EN).get(prop, [])
             if not te and prop in TTS_EN:
                 ln["tts"] = TTS_EN[prop]
-            g = -1.0 if who == "ai" else 0.5 if who == "ravi" else 0.0
+            if " | " in ln["text"]:   # two takes (Parler drops a long line's first sentence), joined by a short pause
+                p1, p2 = ln["text"].split(" | ")
+                ln.update({"text": f"{p1} <pause 0.25> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
+                           "tts2": MARK.sub("", p2).strip(), "pause": 0.25, "must2": (MUST_TE if te else MUST_EN).get(prop + "2", [])})
+            g = (-1.0 if who == "ai" else 0.5 if who == "ravi" else 0.0) + GAIN_PROP.get(prop, 0.0)
             if g:
                 ln["gain_db"] = g
             lines.append(ln)

@@ -1,0 +1,1336 @@
+{
+ "id": "howto01v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI voice on your laptop, offline",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "title": "HOW TO 01: an AI voice on your laptop, free and offline",
+ "handle": "@ai_maastaaru",
+ "label": "HOW TO 01",
+ "fps": 30,
+ "musicDrops": [
+  [
+   4,
+   106,
+   0.25
+  ],
+  [
+   1490,
+   1645,
+   0.25
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   411,
+   1.5
+  ],
+  [
+   411,
+   1084,
+   1.4
+  ],
+  [
+   1084,
+   2261,
+   1.38
+  ],
+  [
+   1084,
+   2261,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 2261,
+ "music": "reel/howto01v1/score.wav",
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_howto",
+   "data": {
+    "beats": [
+     {
+      "who": "laptop",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "who",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "nobody",
+      "n": 3
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "pay",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The laptop talks, no internet",
+     "title": "The laptop talks, no internet",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 411,
+   "lines": [
+    {
+     "who": "laptop",
+     "name": "Chintu's laptop",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/howto01v1/line_01.wav",
+     "from": 4,
+     "frames": 102,
+     "words": [
+      {
+       "w": "Hello!",
+       "from": 6,
+       "to": 16
+      },
+      {
+       "w": "This",
+       "from": 16,
+       "to": 30
+      },
+      {
+       "w": "voice",
+       "from": 30,
+       "to": 39
+      },
+      {
+       "w": "was",
+       "from": 39,
+       "to": 45
+      },
+      {
+       "w": "made",
+       "from": 45,
+       "to": 52
+      },
+      {
+       "w": "on",
+       "from": 52,
+       "to": 56
+      },
+      {
+       "w": "a",
+       "from": 56,
+       "to": 59
+      },
+      {
+       "w": "computer,",
+       "from": 59,
+       "to": 81
+      },
+      {
+       "w": "with",
+       "from": 81,
+       "to": 88
+      },
+      {
+       "w": "no",
+       "from": 88,
+       "to": 92
+      },
+      {
+       "w": "internet.",
+       "from": 92,
+       "to": 106
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_02.wav",
+     "from": 114,
+     "frames": 75,
+     "words": [
+      {
+       "w": "Who's",
+       "from": 116,
+       "to": 123
+      },
+      {
+       "w": "talking?",
+       "from": 123,
+       "to": 153
+      },
+      {
+       "w": "The",
+       "from": 153,
+       "to": 157
+      },
+      {
+       "w": "Wi-Fi",
+       "from": 157,
+       "to": 164
+      },
+      {
+       "w": "is",
+       "from": 164,
+       "to": 167
+      },
+      {
+       "w": "off!",
+       "from": 167,
+       "to": 173
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_03.wav",
+     "from": 194,
+     "frames": 106,
+     "words": [
+      {
+       "w": "Kokoro:",
+       "from": 195,
+       "to": 206
+      },
+      {
+       "w": "a",
+       "from": 206,
+       "to": 217
+      },
+      {
+       "w": "free",
+       "from": 217,
+       "to": 224
+      },
+      {
+       "w": "voice",
+       "from": 224,
+       "to": 232
+      },
+      {
+       "w": "model,",
+       "from": 232,
+       "to": 242
+      },
+      {
+       "w": "running",
+       "from": 242,
+       "to": 261
+      },
+      {
+       "w": "on",
+       "from": 261,
+       "to": 265
+      },
+      {
+       "w": "Chintu's",
+       "from": 265,
+       "to": 277
+      },
+      {
+       "w": "laptop.",
+       "from": 277,
+       "to": 292
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_04.wav",
+     "from": 306,
+     "frames": 97,
+     "words": [
+      {
+       "w": "Free?",
+       "from": 314,
+       "to": 344
+      },
+      {
+       "w": "I",
+       "from": 344,
+       "to": 346
+      },
+      {
+       "w": "pay",
+       "from": 346,
+       "to": 350
+      },
+      {
+       "w": "an",
+       "from": 350,
+       "to": 353
+      },
+      {
+       "w": "app",
+       "from": 353,
+       "to": 357
+      },
+      {
+       "w": "every",
+       "from": 357,
+       "to": 363
+      },
+      {
+       "w": "month",
+       "from": 363,
+       "to": 369
+      },
+      {
+       "w": "for",
+       "from": 369,
+       "to": 373
+      },
+      {
+       "w": "my",
+       "from": 373,
+       "to": 376
+      },
+      {
+       "w": "announcements!",
+       "from": 376,
+       "to": 391
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_howto",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "install",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "type",
+      "n": 6
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "code",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "run",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "after",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "offline",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Kokoro: install, code, run",
+     "title": "Kokoro: install, code, run",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 411,
+   "frames": 673,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_05.wav",
+     "from": 9,
+     "frames": 81,
+     "words": [
+      {
+       "w": "Step",
+       "from": 15,
+       "to": 23
+      },
+      {
+       "w": "one:",
+       "from": 23,
+       "to": 37
+      },
+      {
+       "w": "install",
+       "from": 37,
+       "to": 49
+      },
+      {
+       "w": "it.",
+       "from": 49,
+       "to": 62
+      },
+      {
+       "w": "Only",
+       "from": 62,
+       "to": 67
+      },
+      {
+       "w": "two",
+       "from": 67,
+       "to": 71
+      },
+      {
+       "w": "commands.",
+       "from": 71,
+       "to": 80
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_06.wav",
+     "from": 108,
+     "frames": 83,
+     "words": [
+      {
+       "w": "Type",
+       "from": 115,
+       "to": 121
+      },
+      {
+       "w": "them?!",
+       "from": 121,
+       "to": 148
+      },
+      {
+       "w": "I",
+       "from": 148,
+       "to": 150
+      },
+      {
+       "w": "type",
+       "from": 150,
+       "to": 156
+      },
+      {
+       "w": "with",
+       "from": 156,
+       "to": 162
+      },
+      {
+       "w": "one",
+       "from": 162,
+       "to": 167
+      },
+      {
+       "w": "finger!",
+       "from": 167,
+       "to": 176
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_07.wav",
+     "from": 196,
+     "frames": 112,
+     "words": [
+      {
+       "w": "Then",
+       "from": 199,
+       "to": 204
+      },
+      {
+       "w": "copy",
+       "from": 204,
+       "to": 209
+      },
+      {
+       "w": "them",
+       "from": 209,
+       "to": 215
+      },
+      {
+       "w": "from",
+       "from": 215,
+       "to": 220
+      },
+      {
+       "w": "the",
+       "from": 220,
+       "to": 225
+      },
+      {
+       "w": "caption.",
+       "from": 225,
+       "to": 251
+      },
+      {
+       "w": "5",
+       "from": 251,
+       "to": 254
+      },
+      {
+       "w": "lines.",
+       "from": 254,
+       "to": 276
+      },
+      {
+       "w": "Your",
+       "from": 276,
+       "to": 281
+      },
+      {
+       "w": "words",
+       "from": 281,
+       "to": 293
+      },
+      {
+       "w": "go",
+       "from": 293,
+       "to": 296
+      },
+      {
+       "w": "here.",
+       "from": 296,
+       "to": 303
+      }
+     ],
+     "cues": {
+      "1": 277
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_08.wav",
+     "from": 323,
+     "frames": 136,
+     "words": [
+      {
+       "w": "Run",
+       "from": 326,
+       "to": 333
+      },
+      {
+       "w": "it.",
+       "from": 333,
+       "to": 350
+      },
+      {
+       "w": "The",
+       "from": 350,
+       "to": 360
+      },
+      {
+       "w": "first",
+       "from": 360,
+       "to": 374
+      },
+      {
+       "w": "time,",
+       "from": 374,
+       "to": 384
+      },
+      {
+       "w": "it",
+       "from": 384,
+       "to": 388
+      },
+      {
+       "w": "downloads",
+       "from": 388,
+       "to": 417
+      },
+      {
+       "w": "the",
+       "from": 417,
+       "to": 424
+      },
+      {
+       "w": "voice:",
+       "from": 424,
+       "to": 439
+      },
+      {
+       "w": "313",
+       "from": 439,
+       "to": 445
+      },
+      {
+       "w": "MB.",
+       "from": 445,
+       "to": 451
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_09.wav",
+     "from": 471,
+     "frames": 48,
+     "words": [
+      {
+       "w": "And",
+       "from": 476,
+       "to": 479
+      },
+      {
+       "w": "after",
+       "from": 479,
+       "to": 485
+      },
+      {
+       "w": "that,",
+       "from": 485,
+       "to": 493
+      },
+      {
+       "w": "no",
+       "from": 493,
+       "to": 496
+      },
+      {
+       "w": "internet?",
+       "from": 496,
+       "to": 505
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_10.wav",
+     "from": 524,
+     "frames": 112,
+     "words": [
+      {
+       "w": "None.",
+       "from": 527,
+       "to": 545
+      },
+      {
+       "w": "Once",
+       "from": 545,
+       "to": 552
+      },
+      {
+       "w": "it's",
+       "from": 552,
+       "to": 558
+      },
+      {
+       "w": "loaded:",
+       "from": 558,
+       "to": 578
+      },
+      {
+       "w": "about",
+       "from": 578,
+       "to": 585
+      },
+      {
+       "w": "1",
+       "from": 585,
+       "to": 588
+      },
+      {
+       "w": "second",
+       "from": 588,
+       "to": 597
+      },
+      {
+       "w": "for",
+       "from": 597,
+       "to": 608
+      },
+      {
+       "w": "a",
+       "from": 608,
+       "to": 610
+      },
+      {
+       "w": "4-second",
+       "from": 610,
+       "to": 622
+      },
+      {
+       "w": "line.",
+       "from": 622,
+       "to": 630
+      }
+     ],
+     "cues": {
+      "1": 575
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_howto",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "telugu",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "parler",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "parlour",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "french",
+      "n": 14
+     },
+     {
+      "who": "laptop",
+      "shot": "laptop",
+      "prop": "tedemo",
+      "n": 15
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "myoffer",
+      "n": 16
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "slow",
+      "n": 17
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "cancel",
+      "n": 18
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "verdict",
+      "n": 19
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "save",
+      "n": 20
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Telugu: Indic Parler-TTS",
+     "title": "Telugu: Indic Parler-TTS",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1084,
+   "frames": 1177,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_11.wav",
+     "from": 9,
+     "frames": 54,
+     "words": [
+      {
+       "w": "But",
+       "from": 11,
+       "to": 16
+      },
+      {
+       "w": "my",
+       "from": 16,
+       "to": 20
+      },
+      {
+       "w": "customers",
+       "from": 20,
+       "to": 33
+      },
+      {
+       "w": "speak",
+       "from": 33,
+       "to": 40
+      },
+      {
+       "w": "Telugu!",
+       "from": 40,
+       "to": 63
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_12.wav",
+     "from": 68,
+     "frames": 187,
+     "words": [
+      {
+       "w": "For",
+       "from": 71,
+       "to": 75
+      },
+      {
+       "w": "Telugu:",
+       "from": 75,
+       "to": 85
+      },
+      {
+       "w": "Indic",
+       "from": 85,
+       "to": 100
+      },
+      {
+       "w": "Parler",
+       "from": 100,
+       "to": 113
+      },
+      {
+       "w": "TTS.",
+       "from": 113,
+       "to": 124
+      },
+      {
+       "w": "Free",
+       "from": 124,
+       "to": 130
+      },
+      {
+       "w": "login,",
+       "from": 130,
+       "to": 152
+      },
+      {
+       "w": "accept",
+       "from": 152,
+       "to": 160
+      },
+      {
+       "w": "the",
+       "from": 160,
+       "to": 171
+      },
+      {
+       "w": "terms,",
+       "from": 171,
+       "to": 184
+      },
+      {
+       "w": "then",
+       "from": 184,
+       "to": 190
+      },
+      {
+       "w": "describe",
+       "from": 190,
+       "to": 216
+      },
+      {
+       "w": "the",
+       "from": 216,
+       "to": 221
+      },
+      {
+       "w": "voice",
+       "from": 221,
+       "to": 228
+      },
+      {
+       "w": "in",
+       "from": 228,
+       "to": 235
+      },
+      {
+       "w": "words.",
+       "from": 235,
+       "to": 243
+      }
+     ],
+     "cues": {
+      "1": 184
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_13.wav",
+     "from": 267,
+     "frames": 71,
+     "words": [
+      {
+       "w": "Parler?",
+       "from": 271,
+       "to": 280
+      },
+      {
+       "w": "Like",
+       "from": 280,
+       "to": 306
+      },
+      {
+       "w": "beauty",
+       "from": 306,
+       "to": 313
+      },
+      {
+       "w": "parlour?",
+       "from": 313,
+       "to": 323
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_14.wav",
+     "from": 343,
+     "frames": 59,
+     "words": [
+      {
+       "w": "French,",
+       "from": 347,
+       "to": 353
+      },
+      {
+       "w": "for",
+       "from": 353,
+       "to": 363
+      },
+      {
+       "w": "\"to",
+       "from": 363,
+       "to": 366
+      },
+      {
+       "w": "speak\".",
+       "from": 366,
+       "to": 388
+      },
+      {
+       "w": "Listen.",
+       "from": 388,
+       "to": 394
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "laptop",
+     "name": "Chintu's laptop",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/howto01v1/line_15.wav",
+     "from": 406,
+     "frames": 155,
+     "words": [
+      {
+       "w": "\"Diwali",
+       "from": 409,
+       "to": 430
+      },
+      {
+       "w": "offer",
+       "from": 430,
+       "to": 452
+      },
+      {
+       "w": "at",
+       "from": 452,
+       "to": 458
+      },
+      {
+       "w": "Ravi",
+       "from": 458,
+       "to": 470
+      },
+      {
+       "w": "Kirana!",
+       "from": 470,
+       "to": 498
+      },
+      {
+       "w": "10%",
+       "from": 498,
+       "to": 507
+      },
+      {
+       "w": "off",
+       "from": 507,
+       "to": 516
+      },
+      {
+       "w": "every",
+       "from": 516,
+       "to": 536
+      },
+      {
+       "w": "purchase.\"",
+       "from": 536,
+       "to": 561
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_16.wav",
+     "from": 573,
+     "frames": 90,
+     "words": [
+      {
+       "w": "That's",
+       "from": 576,
+       "to": 583
+      },
+      {
+       "w": "my",
+       "from": 583,
+       "to": 587
+      },
+      {
+       "w": "Diwali",
+       "from": 587,
+       "to": 594
+      },
+      {
+       "w": "offer!",
+       "from": 594,
+       "to": 602
+      },
+      {
+       "w": "How",
+       "from": 602,
+       "to": 630
+      },
+      {
+       "w": "long",
+       "from": 630,
+       "to": 635
+      },
+      {
+       "w": "did",
+       "from": 635,
+       "to": 639
+      },
+      {
+       "w": "it",
+       "from": 639,
+       "to": 643
+      },
+      {
+       "w": "take?",
+       "from": 643,
+       "to": 649
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_17.wav",
+     "from": 668,
+     "frames": 116,
+     "words": [
+      {
+       "w": "About",
+       "from": 671,
+       "to": 684
+      },
+      {
+       "w": "30",
+       "from": 684,
+       "to": 688
+      },
+      {
+       "w": "seconds",
+       "from": 688,
+       "to": 701
+      },
+      {
+       "w": "a",
+       "from": 701,
+       "to": 704
+      },
+      {
+       "w": "line,",
+       "from": 704,
+       "to": 723
+      },
+      {
+       "w": "and",
+       "from": 723,
+       "to": 729
+      },
+      {
+       "w": "almost",
+       "from": 729,
+       "to": 746
+      },
+      {
+       "w": "5",
+       "from": 746,
+       "to": 749
+      },
+      {
+       "w": "GB",
+       "from": 749,
+       "to": 754
+      },
+      {
+       "w": "of",
+       "from": 754,
+       "to": 759
+      },
+      {
+       "w": "memory.",
+       "from": 759,
+       "to": 775
+      }
+     ],
+     "cues": {
+      "1": 724
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_18.wav",
+     "from": 802,
+     "frames": 92,
+     "words": [
+      {
+       "w": "Slow,",
+       "from": 809,
+       "to": 816
+      },
+      {
+       "w": "but",
+       "from": 816,
+       "to": 825
+      },
+      {
+       "w": "free!",
+       "from": 825,
+       "to": 853
+      },
+      {
+       "w": "That",
+       "from": 853,
+       "to": 858
+      },
+      {
+       "w": "app",
+       "from": 858,
+       "to": 866
+      },
+      {
+       "w": "is",
+       "from": 866,
+       "to": 869
+      },
+      {
+       "w": "cancelled!",
+       "from": 869,
+       "to": 881
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto01v1/line_19.wav",
+     "from": 898,
+     "frames": 160,
+     "words": [
+      {
+       "w": "English:",
+       "from": 899,
+       "to": 921
+      },
+      {
+       "w": "Kokoro.",
+       "from": 921,
+       "to": 941
+      },
+      {
+       "w": "Telugu:",
+       "from": 941,
+       "to": 966
+      },
+      {
+       "w": "Indic",
+       "from": 966,
+       "to": 975
+      },
+      {
+       "w": "Parler.",
+       "from": 975,
+       "to": 995
+      },
+      {
+       "w": "Any",
+       "from": 995,
+       "to": 1001
+      },
+      {
+       "w": "computer",
+       "from": 1001,
+       "to": 1014
+      },
+      {
+       "w": "with",
+       "from": 1014,
+       "to": 1022
+      },
+      {
+       "w": "8",
+       "from": 1022,
+       "to": 1025
+      },
+      {
+       "w": "GB",
+       "from": 1025,
+       "to": 1029
+      },
+      {
+       "w": "of",
+       "from": 1029,
+       "to": 1038
+      },
+      {
+       "w": "memory.",
+       "from": 1038,
+       "to": 1050
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto01v1/line_20.wav",
+     "from": 1082,
+     "frames": 66,
+     "words": [
+      {
+       "w": "Chintu!",
+       "from": 1089,
+       "to": 1096
+      },
+      {
+       "w": "Save",
+       "from": 1096,
+       "to": 1128
+      },
+      {
+       "w": "this!",
+       "from": 1128,
+       "to": 1133
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}

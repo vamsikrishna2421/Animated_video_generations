@@ -115,7 +115,7 @@ def main(lang, only, keep=False):
                 cached = sorted(takes.glob(f"{key}_*.wav"))
                 best = (None, cached[0]) if cached and (keep or not only) else None   # --keep: a part whose text is unchanged keeps its take
                 if best:
-                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, line.get('must', []))[2]}", flush=True)
+                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, line.get('must' if pk == 0 else 'must2', []))[2]}", flush=True)
                 for k in range(0 if best else 4):
                     tmp = takes / f"{key}_{k}.wav"
                     try:
@@ -127,7 +127,7 @@ def main(lang, only, keep=False):
                         print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
                         continue
                     trim(tmp)
-                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, line.get('must', []))
+                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, line.get('must' if pk == 0 else 'must2', []))
                     print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
                     if best is None or (best[0] is not None and score > best[0]):
                         best = (score, tmp)
