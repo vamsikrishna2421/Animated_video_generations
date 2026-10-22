@@ -1,0 +1,389 @@
+{
+ "id": "howto01te",
+ "title": "HOW TO 01: an AI voice on your laptop, free and offline (Telugu audio)",
+ "label": "HOW TO 01",
+ "banner": "AI voice on your laptop, offline",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.8,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.12,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_howto",
+   "tail": 0.1,
+   "boost": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "laptop",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "who",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "nobody",
+      "n": 3
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "pay",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The laptop talks, no internet",
+     "title": "The laptop talks, no internet",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "laptop",
+     "file": "01_laptop.wav",
+     "text": "Hello! This voice was made on a laptop, with no internet.",
+     "show": "Hello! This voice was made on a laptop, with no internet.",
+     "maxgap": 2.0,
+     "gap": 0.25,
+     "tempo": 1.0,
+     "demo": "series/scripts/howto01_demo/0.wav"
+    },
+    {
+     "who": "ravi",
+     "file": "02_ravi.wav",
+     "text": "చింటూ ల్యాప్‌టాప్ లో ఎవరున్నారు?! వైఫై కూడా ఆఫ్!",
+     "show": "Who's inside Chintu's laptop?! The Wi-Fi is off!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "ఎవరూ లేరు. ఫ్రీ వాయిస్ మోడల్, ల్యాప్‌టాప్ లోనే నడుస్తుంది.",
+     "show": "Nobody. A free voice model, running on the laptop itself.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "04_ravi.wav",
+     "text": "ఫ్రీ నా? నా ఆఫర్ అనౌన్స్‌మెంట్ల కోసం ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!",
+     "show": "Free? I pay an app every month for my offer announcements!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    }
+   ],
+   "duck_lines": [
+    [
+     0,
+     0.25
+    ]
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_howto",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.3,
+   "boost": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "install",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "type",
+      "n": 6
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "code",
+      "n": 7
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "then",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "run",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "after",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "offline",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Kokoro: install, code, run",
+     "title": "Kokoro: install, code, run",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "05_ai.wav",
+     "text": "మొదటి స్టెప్: ఇన్‌స్టాల్ చెయ్.",
+     "show": "Step one: install it.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "06_ravi.wav",
+     "text": "టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!",
+     "show": "Type it?! I type with one finger!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "అయితే ఇది కాపీ చెయ్. ఏడు లైన్లు. [1] నీ మాట ఇక్కడ పెట్టు.",
+     "show": "Then copy this. 7 lines. Your sentence goes here.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "08_ravi.wav",
+     "text": "తర్వాత?",
+     "show": "And then?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "రన్ చెయ్. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.",
+     "show": "Run it. The first time, it downloads the voice: 313 MB.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "ఆ తర్వాత ఇంటర్నెట్ అక్కర్లేదా?",
+     "show": "And after that, no internet?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "వైఫై ఆఫ్. నాలుగు సెకన్ల మాటకి, ఒకటిన్నర సెకన్ల లోపే.",
+     "show": "Wi-Fi off: under 1.5 seconds for a 4-second sentence.",
+     "maxgap": 0.28,
+     "gap": 0.7,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_howto",
+   "tail": 0.0,
+   "lift": 0.6,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.45,
+   "rise": 1.3,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "telugu",
+      "n": 12
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "parler",
+      "n": 13
+     },
+     {
+      "who": "laptop",
+      "shot": "laptop",
+      "prop": "tedemo",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "howlong",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "laptop",
+      "prop": "slow",
+      "n": 16
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "save",
+      "n": 17
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Telugu: Indic Parler-TTS",
+     "title": "Telugu: Indic Parler-TTS",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "కానీ నా కస్టమర్లు తెలుగు మాట్లాడతారు!",
+     "show": "But my customers speak Telugu!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "13_ai.wav",
+     "text": "ఇది తెలుగు మాట్లాడదు. తెలుగుకి ఇండిక్ పార్లర్ టీటీఎస్. [1] గొంతు ఎలా ఉండాలో మాటల్లో చెప్తావు.",
+     "show": "This one doesn't speak Telugu. For Telugu: Indic Parler TTS. You describe the voice in words.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "laptop",
+     "file": "14_laptop.wav",
+     "text": "నమస్కారం! ఈ గొంతు ఇంటర్నెట్ లేకుండా ఒక ల్యాప్‌టాప్ లో తయారైంది.",
+     "show": "\"Namaskaram! This voice was made on a laptop, with no internet.\"",
+     "maxgap": 2.0,
+     "gap": 0.4,
+     "tempo": 1.0,
+     "demo": "series/scripts/howto01_demo/parler_run1.wav"
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "తెలుగు! ఎంత టైం పట్టింది?",
+     "show": "Telugu! How long did that take?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "ఒక్కో వాక్యానికి ఇరవై ఎనిమిది సెకన్లు, ఐదు జీబీ మెమరీ. అయినా ఫ్రీ, ఆఫ్‌లైన్.",
+     "show": "28 seconds a sentence, 5 GB of memory. Still free, offline.",
+     "maxgap": 0.28,
+     "gap": 0.7,
+     "tempo": 1.16,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "17_ravi.wav",
+     "text": "చింటూ! ఇది సేవ్ చెయ్!",
+     "show": "Chintu! Save this!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "gain_db": 0.5
+    }
+   ],
+   "duck_lines": [
+    [
+     2,
+     0.25
+    ]
+   ]
+  }
+ ]
+}

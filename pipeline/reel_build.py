@@ -51,6 +51,7 @@ SPEAKERS = {
     "sneha": dict(voice="af_heart", speed=1.0, lang="en-us", name="Sneha", color="#FCD34D"),
     "meghana": dict(voice="af_heart", speed=1.0, lang="en-us", name="Meghana", color="#5EEAD4"),   # new in AI 01 (file takes)
     "kiran": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Kiran", color="#FCA5A5"),
+    "laptop": dict(voice="af_heart", speed=1.0, lang="en-us", name="Chintu's laptop", color="#C4B5FD"),   # HOW TO 01 (our demo files)
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 
@@ -584,6 +585,10 @@ def main(spec_path: Path) -> None:
             if str(k) in lc:
                 at = sc["from"] + lc[str(k)]
                 mdrops.append([max(0, at - round(0.8 * FPS)), at + round((hold[0] if hold else 0) * FPS)])
+        for li, g in spec_sc.get("duck_lines", []):   # [[line index, gain], ...]: the bed sits at `gain` under a whole line
+            if li < len(sc["lines"]):                  # (HOW TO 01: our demo voices are the point)
+                ln = sc["lines"][li]
+                mdrops.append([sc["from"] + ln["from"], sc["from"] + ln["from"] + ln["frames"], g])
         for li, end_s, len_s in spec_sc.get("drop_pre", []):   # [[line index, s before the line, length s], ...]: the bed drops
             if li < len(sc["lines"]):                           # out just before a line (under a riser, so the hit lands on silence)
                 at = sc["from"] + sc["lines"][li]["from"] - round(end_s * FPS)
