@@ -89,6 +89,7 @@ MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05);
 # "Telugu" itself must be heard "तेल"/"टेल": takes heard "थिलगो"/"तिलगु" said "తిల్గో" (second render review)
 TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
+TEMPO_PROP_TE = {"telugu": 1.0}   # "మరి నా తెలుగు ఆఫర్?" at its own speed: sped up 1.2x, "తెలుగు" was heard "తిల్గో"
 # Sound (CLAUDE.md arc): a hit and a pop with the laptop's voice on frame 1; keyboard ticks under the terminal screens;
 # a lift into each step; a hit on the offline number; a riser into the Telugu demo with the bed down under it (the
 # payoff); a success sting on "That's my offer!"; a rise into "Save this!" and a hit on the checklist.
@@ -134,6 +135,8 @@ def spec(lang="en"):
                     ln["nocap"] = True
             else:
                 ln["must"] = (MUST_TE if te else MUST_EN).get(prop, [])
+            if te and prop in TEMPO_PROP_TE:
+                ln["tempo"] = TEMPO_PROP_TE[prop]
             if not te and prop in TTS_EN:
                 ln["tts"] = TTS_EN[prop]
             if " | " in ln["text"]:   # two takes (Parler drops a long line's first sentence), joined by a short pause

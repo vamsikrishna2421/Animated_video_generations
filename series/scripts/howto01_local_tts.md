@@ -149,7 +149,7 @@ Mac note.
 Second render review (Telugu): the hook, line 5, the tag and the laptop landed; "Telugu" still came out "dilgo"
 (lines 12 and 19: the isolated takes said "తిల్గో"/"తిలుగు"; line 12 re-voiced until the judge heard "తెలు"; line 19
 said "తిలుగుకి" mid-sentence in four more takes, so the verdict now opens on Telugu, as lines 3 and 13 do, and the card
-lists Telugu first); the
+lists Telugu first; line 12 plays at its own speed, as at 1.2x "తెలుగు" smeared again); the
 caption's "English maatrame" was false (Kokoro also speaks Hindi, Spanish, French, Japanese...): now "Telugu ledu";
 one big "FIRST: Python 3.12" sticky (the voice relies on it); the tag counts down to the Telugu part; the English
 demo's quote is no longer on screen twice.

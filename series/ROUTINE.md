@@ -335,4 +335,7 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - The Telugu judge writes numbers as digits ("30" for ముప్పై): put the digits in the MUST group, or the complete take
   fails and a take that dropped the number wins by 0.003 points (Parler dropped "ముప్పై సెకన్లు" in 3 of 4 tries).
   Whisper can also skip the first sentence of a take with a long pause in it: transcribe the halves before re-voicing.
+- On a Telugu page "తెలుగు" must sound right: check it in each isolated take (`line_XX.wav`, after tempo), not only in
+  the mix. Parler said "తిలుగుకి" mid-sentence in eight takes but cleanly where it opens a sentence, so lead with it;
+  and a 1.2x speed-up turned a clean "తెల్గో" into "తిల్గో" (a short word's vowel smears): give that line `tempo` 1.0.
 
