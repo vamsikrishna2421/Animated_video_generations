@@ -52,6 +52,11 @@ SPEAKERS = {
     "meghana": dict(voice="af_heart", speed=1.0, lang="en-us", name="Meghana", color="#5EEAD4"),   # new in AI 01 (file takes)
     "kiran": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Kiran", color="#FCA5A5"),
     "laptop": dict(voice="af_heart", speed=1.0, lang="en-us", name="Chintu's laptop", color="#C4B5FD"),   # HOW TO 01 (our demo files)
+    # skit 06 (a quiz show): neutral labels, so the subtitles don't give away which contestant is the AI
+    "host": dict(voice="af_heart", speed=1.0, lang="en-us", name="Host", color="#F9A8D4"),
+    "a": dict(voice="af_heart", speed=1.0, lang="en-us", name="Contestant A", color="#FDE68A"),
+    "b": dict(voice="af_heart", speed=1.0, lang="en-us", name="Contestant B", color="#5EEAD4"),
+    "c": dict(voice="af_heart", speed=1.0, lang="en-us", name="Contestant C", color="#93C5FD"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

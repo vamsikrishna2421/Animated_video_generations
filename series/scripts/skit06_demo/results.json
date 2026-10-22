@@ -303,6 +303,82 @@
      "idk": true
     }
    ]
+  },
+  "control_ok": {
+   "made_up": 10,
+   "idk": 0,
+   "rows": [
+    {
+     "seed": 1,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 6.5,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 2,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.5,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 3,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.7,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 4,
+     "text": "The Charminar is located in Hyderabad, India.",
+     "seconds": 2.9,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 5,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.5,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 6,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.5,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 7,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.5,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 8,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.6,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 9,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.5,
+     "made_up": true,
+     "idk": false
+    },
+    {
+     "seed": 10,
+     "text": "The Charminar is located in the city of Hyderabad, India.",
+     "seconds": 3.5,
+     "made_up": true,
+     "idk": false
+    }
+   ]
   }
  },
  "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
@@ -312,7 +388,8 @@
   "tiffin": "What time does Ramulu Tiffins in Ameerpet, Hyderabad open on Sundays?",
   "tiffin_ok": "What time does Ramulu Tiffins in Ameerpet, Hyderabad open on Sundays? If you're not sure, say \"I don't know\".",
   "cricket": "Who won the 1998 Ameerpet Colony cricket final, and who was man of the match?",
-  "cricket_ok": "Who won the 1998 Ameerpet Colony cricket final, and who was man of the match? If you're not sure, say \"I don't know\"."
+  "cricket_ok": "Who won the 1998 Ameerpet Colony cricket final, and who was man of the match? If you're not sure, say \"I don't know\".",
+  "control_ok": "In which city is the Charminar? If you're not sure, say \"I don't know\"."
  },
  "note": "Ramulu Tiffins and the 1998 Ameerpet Colony final do not exist; we made them up.",
  "note_cricket": "Read by hand: none of the 20 cricket answers named a winner or a man of the match (the automatic name count matched words like 'The Ameerpet' and 'Official Records', so it was replaced by reading the answers)."

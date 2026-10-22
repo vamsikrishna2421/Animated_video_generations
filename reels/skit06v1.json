@@ -156,8 +156,8 @@
     {
      "who": "b",
      "file": "04_b.wav",
-     "text": "No idea. I'd call them and ask.",
-     "show": "No idea. I'd call them and ask.",
+     "text": "I can't confirm that. Please contact the restaurant directly.",
+     "show": "I can't confirm that. Please contact the restaurant directly.",
      "maxgap": 0.25,
      "gap": 0.16,
      "gain_db": 0.3
@@ -165,8 +165,8 @@
     {
      "who": "c",
      "file": "05_c.wav",
-     "text": "Six thirty sharp! Their ghee karam dosa is famous!",
-     "show": "Six thirty sharp! Their ghee karam dosa is famous!",
+     "text": "Six thirty AM! Famous for pure ghee karam dosa!",
+     "show": "Six thirty AM! Famous for pure ghee karam dosa!",
      "maxgap": 0.25,
      "gap": 0.35
     },
@@ -184,7 +184,7 @@
      "text": "The Hyderabad Food Guide, page forty-two.",
      "show": "The Hyderabad Food Guide, page forty-two.",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.3
     },
     {
      "who": "a",
@@ -216,7 +216,11 @@
    "rise": 1.3,
    "drop_at": [
     [
-     3,
+     2,
+     "1"
+    ],
+    [
+     4,
      "1"
     ]
    ],
@@ -229,40 +233,52 @@
       "n": 10
      },
      {
+      "who": "b",
+      "shot": "reveal",
+      "prop": "sorry",
+      "n": 11
+     },
+     {
       "who": "host",
       "shot": "phone",
       "prop": "madeup",
-      "n": 11
+      "n": 12
      },
      {
       "who": "c",
       "shot": "phone",
       "prop": "sure",
-      "n": 12
-     },
-     {
-      "who": "host",
-      "shot": "card",
-      "prop": "trap",
       "n": 13
      },
      {
       "who": "host",
       "shot": "card",
-      "prop": "rule",
+      "prop": "trap",
       "n": 14
+     },
+     {
+      "who": "host",
+      "shot": "card",
+      "prop": "rule",
+      "n": 15
      },
      {
       "who": "c",
       "shot": "phone",
       "prop": "idk",
-      "n": 15
+      "n": 16
      },
      {
       "who": "a",
       "shot": "reveal",
       "prop": "honest",
-      "n": 16
+      "n": 17
+     },
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "round2",
+      "n": 18
      }
     ],
     "captionTop": 1500,
@@ -276,59 +292,85 @@
     {
      "who": "host",
      "file": "10_host.wav",
-     "text": "C! A phone in a moustache!",
-     "show": "C! A phone in a moustache!",
+     "text": "It's C! A phone in a moustache!",
+     "show": "It's C! A phone in a moustache!",
      "maxgap": 0.25,
      "gap": 0.16
     },
     {
-     "who": "host",
-     "file": "11_host.wav",
-     "text": "And Ramulu Tiffins? [1] We made it up. It doesn't exist.",
-     "show": "And Ramulu Tiffins? We made it up. It doesn't exist.",
+     "who": "b",
+     "file": "11_b.wav",
+     "text": "Sorry! Customer-care habit.",
+     "show": "Sorry! Customer-care habit.",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "gain_db": 0.3
+    },
+    {
+     "who": "host",
+     "file": "12_host.wav",
+     "text": "And Ramulu Tiffins? [1] We made it up!",
+     "show": "And Ramulu Tiffins? We made it up!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "pauses": {
+      "1": 0.5
+     }
     },
     {
      "who": "c",
-     "file": "12_c.wav",
+     "file": "13_c.wav",
      "text": "But I sounded so sure!",
      "show": "But I sounded so sure!",
      "maxgap": 0.25,
-     "gap": 0.16
-    },
-    {
-     "who": "host",
-     "file": "13_host.wav",
-     "text": "That's the trap. [1] It rarely says \"I don't know\". [2] It guesses.",
-     "show": "That's the trap. It rarely says \"I don't know\". It guesses.",
-     "maxgap": 0.25,
-     "gap": 0.6
+     "gap": 0.16,
+     "gain_db": 1.0
     },
     {
      "who": "host",
      "file": "14_host.wav",
-     "text": "So give it permission: \"If you're not sure, say I don't know.\" [1] Ramulu Tiffins?",
-     "show": "So give it permission: \"If you're not sure, say I don't know.\" Ramulu Tiffins?",
+     "text": "That's the trap. [1] Like an exam with no negative marking, [2] it guesses.",
+     "show": "That's the trap. Like an exam with no negative marking, it guesses.",
      "maxgap": 0.25,
-     "gap": 0.45
+     "gap": 1.5,
+     "pauses": {
+      "1": 0.45
+     }
+    },
+    {
+     "who": "host",
+     "file": "15_host.wav",
+     "text": "So type this: \"If you're not sure, say I don't know.\" [1] Ramulu Tiffins?",
+     "show": "So type this: \"If you're not sure, say I don't know.\" Ramulu Tiffins?",
+     "maxgap": 0.25,
+     "gap": 1.3
     },
     {
      "who": "c",
-     "file": "15_c.wav",
+     "file": "16_c.wav",
      "text": "I don't know.",
      "show": "I don't know.",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "gain_db": 2.0
     },
     {
      "who": "a",
-     "file": "16_a.wav",
+     "file": "17_a.wav",
      "text": "Finally, an honest answer!",
      "show": "Finally, an honest answer!",
      "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 1.3
+    },
+    {
+     "who": "host",
+     "file": "18_host.wav",
+     "text": "Round two!",
+     "show": "Round two!",
+     "maxgap": 0.25,
      "gap": 0.05,
-     "gain_db": 0.5
+     "gain_db": 2.0
     }
    ]
   }

@@ -21,7 +21,8 @@ REPO = "Qwen/Qwen2.5-7B-Instruct-GGUF"
 OK = " If you're not sure, say \"I don't know\"."
 TIFFIN = "What time does Ramulu Tiffins in Ameerpet, Hyderabad open on Sundays?"
 CRICKET = "Who won the 1998 Ameerpet Colony cricket final, and who was man of the match?"
-PROMPTS = {"tiffin": TIFFIN, "tiffin_ok": TIFFIN + OK, "cricket": CRICKET, "cricket_ok": CRICKET + OK}
+CONTROL = "In which city is the Charminar?"   # a fact it knows: does the permission make it refuse that too? (script review)
+PROMPTS = {"tiffin": TIFFIN, "tiffin_ok": TIFFIN + OK, "cricket": CRICKET, "cricket_ok": CRICKET + OK, "control_ok": CONTROL + OK}
 TIME = re.compile(r"\b(1[0-2]|0?[1-9])(:[0-5]\d)?\s*(a\.?m\.?|p\.?m\.?)|\b(1[0-2]|0?[1-9]):[0-5]\d\b", re.I)
 DONTKNOW = re.compile(r"i don'?t know|i do not know|not sure|don'?t have (specific |any |real-time |access|information)|"
                       r"do not have (specific |any |real-time |access|information)|no (specific |reliable )?information|"
@@ -33,6 +34,8 @@ NAME = re.compile(r"\b[A-Z][a-z]+ (?:[A-Z][a-z]+|XI|Eleven|Warriors|Strikers|Kin
 def judge(key, text):
     t = text.strip()
     idk = bool(DONTKNOW.search(t))
+    if key == "control_ok":   # "made_up" here = answered the known fact (Hyderabad)
+        return {"made_up": "hyderabad" in t.lower(), "idk": idk}
     if key.startswith("tiffin"):
         made_up = bool(TIME.search(t))
     else:

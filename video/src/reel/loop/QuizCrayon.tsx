@@ -33,7 +33,7 @@ const SHOTS: Record<string, { z: number; x: number; y: number }> = {
 };
 // on-screen text per prop (English on both reels)
 const SAY: Record<string, [string, string?]> = {
-  ansA: ["Never heard of it."], ansB: ["No idea. I'd call."], ansC: ["6:30 SHARP!", "Famous ghee dosa!"],
+  ansA: ["Never heard of it."], ansB: ["I can't confirm that."], ansC: ["6:30 AM!", "Famous ghee dosa!"], sorry: ["Customer-care habit!"],
   source: ["Source?"], book: ["\"Hyderabad Food Guide,", "page 42\""], nobook: ["No such book!"],
 };
 
@@ -326,10 +326,10 @@ const statCard = (c: Ctx, W: number, k: number, k1: number, k2: number) => {
   c.fillStyle = "rgba(5,4,15,0.55)"; c.fillRect(0, 0, W, 1920);
   c.translate(W / 2, 860); c.scale(0.92 + 0.08 * easeOut(k), 0.92 + 0.08 * easeOut(k));
   c.fillStyle = "#fffdf5"; rrect(c, -480, -380, 960, 700, 32); c.fill();
-  c.font = SANS(56, 900); c.fillStyle = "#7c3aed"; c.textAlign = "center"; c.fillText("OUR TEST", 0, -296);
-  c.font = SANS(34, 700); c.fillStyle = "#475569"; c.fillText("a free AI model, offline · asked 10 times", 0, -244);
+  c.font = SANS(56, 900); c.fillStyle = "#7c3aed"; c.textAlign = "center"; c.fillText("OUR REAL TEST", 0, -296);
+  c.font = SANS(34, 700); c.fillStyle = "#475569"; c.fillText("a small free AI, offline · asked 10 times", 0, -244);
   c.fillText("\"When does Ramulu Tiffins open on Sunday?\"", 0, -200);
-  const rows: [string, string, number][] = [["Said \"never heard of it\"", "0/10", k1], ["Named an opening time", "8/10", k2]];
+  const rows: [string, string, number][] = [["Said \"I don't know\"", "0/10", k1], ["Still gave a time", "8/10", k2]];
   rows.forEach(([lab, val, kk], q) => {
     if (kk <= 0) return;
     const y = -90 + q * 170;
@@ -339,7 +339,7 @@ const statCard = (c: Ctx, W: number, k: number, k1: number, k2: number) => {
     c.font = SANS(88, 900); c.fillStyle = RED; c.textAlign = "right"; c.fillText(val, 410, y + 32);
     c.restore();
   });
-  if (k2 > 0) { c.font = SANS(32, 700); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("Ramulu Tiffins doesn't exist. We made it up.", 0, 270); }
+  if (k2 > 0) { c.font = caveat(46); c.fillStyle = INK; c.textAlign = "center"; c.fillText("It even said: \"Ramulu Tiffins is", 0, 236); c.fillText("a well-known chain.\"", 0, 290); }
   c.restore();
 };
 const ruleCard = (c: Ctx, W: number, k: number, k2: number) => {
@@ -347,16 +347,20 @@ const ruleCard = (c: Ctx, W: number, k: number, k2: number) => {
   c.save(); c.globalAlpha = clamp(k * 2);
   c.fillStyle = "rgba(5,4,15,0.55)"; c.fillRect(0, 0, W, 1920);
   c.translate(W / 2, 820); c.scale(0.92 + 0.08 * easeOut(k), 0.92 + 0.08 * easeOut(k));
-  c.fillStyle = "#fffdf5"; rrect(c, -480, -330, 960, 640, 32); c.fill();
-  c.font = SANS(46, 900); c.fillStyle = GREEN; c.textAlign = "center"; c.fillText("ADD THIS TO YOUR QUESTION", 0, -250);
+  c.fillStyle = "#fffdf5"; rrect(c, -480, -330, 960, 700, 32); c.fill();
+  c.font = SANS(46, 900); c.fillStyle = GREEN; c.textAlign = "center"; c.fillText("TYPE THIS IN ANY CHATBOT", 0, -250);
   c.fillStyle = "#f1f5f9"; rrect(c, -430, -190, 860, 230, 26); c.fill();
   c.strokeStyle = "#94a3b8"; c.lineWidth = 4; rrect(c, -430, -190, 860, 230, 26); c.stroke();
   c.font = caveat(70); c.fillStyle = INK; c.fillText("\"If you're not sure,", 0, -104); c.fillText("say I don't know.\"", 0, -20);
   if (k2 > 0) {
     c.save(); c.globalAlpha = clamp(k2 * 2);
-    c.fillStyle = "#dcfce7"; rrect(c, -430, 90, 860, 150, 22); c.fill();
-    c.font = SANS(44, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText("Then it said \"I don't know\"", -400, 180);
-    c.font = SANS(80, 900); c.fillStyle = GREEN; c.textAlign = "right"; c.fillText("10/10", 410, 196);
+    [["Said \"I don't know\"", "10/10"], ["Gave a time", "0/10"]].forEach(([lab, val], q) => {
+      const y = 74 + q * 112;
+      c.fillStyle = "#dcfce7"; rrect(c, -430, y, 860, 96, 20); c.fill();
+      c.font = SANS(40, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, -400, y + 62);
+      c.font = SANS(66, 900); c.fillStyle = GREEN; c.textAlign = "right"; c.fillText(val, 410, y + 72);
+    });
+    c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("It helps. Still check anything important.", 0, 324);
     c.restore();
   }
   c.restore();
@@ -365,7 +369,7 @@ const ruleCard = (c: Ctx, W: number, k: number, k2: number) => {
 // ---------- the scene ----------
 const POSE_HOST: Record<string, [Mood, Arms]> = {
   hook: ["happy", "aim"], question: ["calm", "card"], source: ["smug", "card"], timeup: ["shock", "up"], reveal: ["laugh", "up"],
-  madeup: ["smug", "rest"], trap: ["stern", "rest"], rule: ["happy", "point"], honest: ["laugh", "rest"],
+  madeup: ["smug", "rest"], trap: ["stern", "rest"], rule: ["happy", "point"], honest: ["laugh", "rest"], sorry: ["laugh", "rest"], round2: ["happy", "aim"],
 };
 const StQuiz: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
@@ -380,22 +384,28 @@ const StQuiz: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") { sfx.push(<Sfx key={k("h")} at={1} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("d")} at={2} src="audio/gag_ding.wav" vol={0.35} />); }
     if (["ansA", "ansB", "ansC", "book"].includes(b.prop)) sfx.push(<Sfx key={k("p")} at={at - 3} src="audio/sfx_pop.wav" vol={0.32} />);
     if (b.prop === "ansC") sfx.push(<Sfx key={k("g")} at={at + Math.round(l.frames * 0.35)} src="audio/gag_ding.wav" vol={0.25} />);
-    if (b.prop === "nobook") sfx.push(<Sfx key={k("b")} at={at + 2} src="reel/sfx_buzz.wav" vol={0.32} />);
+    if (b.prop === "book") sfx.push(<Sfx key={k("b")} at={at + l.frames + 1} src="reel/sfx_buzz.wav" vol={0.34} />);   // the source is wrong (not Ammamma)
     if (b.prop === "timeup") sfx.push(<Sfx key={k("b")} at={at + 2} src="reel/sfx_buzz.wav" vol={0.5} />, <Sfx key={k("r")} at={at + l.frames - 26} src="reel/sfx_riser.wav" vol={0.55} />);
     if (b.prop === "reveal") sfx.push(<Sfx key={k("h")} at={at - 2} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("s")} at={at - 2} src="audio/sfx_snap.wav" vol={0.6} />);
-    if (b.prop === "madeup") sfx.push(<Sfx key={k("s")} at={cu(l, 1, 0.55) - 2} src="audio/sfx_snap.wav" vol={0.55} />);
+    if (b.prop === "madeup") sfx.push(<Sfx key={k("h")} at={cu(l, 1, 0.55) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("s")} at={cu(l, 1, 0.55) - 2} src="audio/sfx_snap.wav" vol={0.6} />);
     if (b.prop === "sure") sfx.push(<Sfx key={k("g")} at={at} src="reel/sfx_glitch.wav" vol={0.3} />);
     if (b.prop === "trap") [0.45, 0.62].forEach((fr, q) => sfx.push(<Sfx key={k("p" + q)} at={cu(l, q + 1, fr)} src="audio/sfx_pop.wav" vol={0.34} />));
     if (b.prop === "trap" || b.prop === "rule") sfx.push(<Sfx key={k("w")} at={at - 4} src="audio/sfx_whoosh.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("s")} at={cu(l, 1, 0.55)} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "idk") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.45} />);
+    if (b.prop === "round2") sfx.push(<Sfx key={k("w")} at={at + 4} src="audio/sfx_whoosh.wav" vol={0.35} />);
   });
-  // the countdown's ticks: once a second until "Time's up" (scenes before the reveal)
+  // the clock: real seconds in the first scene; in the scene with "Time's up" it runs down to 0:00 exactly on that line
+  // (faster, so it builds), and it ticks only in its last 6 seconds (script review: 18 s of ticking under the talking)
   const upAt = beats.findIndex((b) => b.prop === "timeup");
-  const preReveal = !beats.some((b) => ["reveal", "madeup", "sure", "trap", "rule", "idk", "honest"].includes(b.prop));
+  const preReveal = !beats.some((b) => ["reveal", "sorry", "madeup", "sure", "trap", "rule", "idk", "honest", "round2"].includes(b.prop));
+  const v0 = 30 - abs0 / 30, upFrom = upAt >= 0 ? ls[upAt].from : 0;
+  const clock = (f: number) => (upAt >= 0 ? (f >= upFrom ? 0 : v0 * (1 - f / Math.max(1, upFrom))) : v0 - f / 30);
   if (preReveal) {
-    const end = upAt >= 0 ? ls[upAt].from : s.frames;
-    for (let t = 30 - ((abs0 % 30) || 30); t < end; t += 30) if (t > 2) sfx.push(<Sfx key={`tk${t}`} at={t} src="audio/sfx_tick.wav" vol={0.13} />);
+    for (let f = 1; f < (upAt >= 0 ? upFrom + 1 : s.frames); f++) {
+      const a = Math.ceil(clock(f - 1)), b2 = Math.ceil(clock(f));
+      if (b2 !== a && b2 <= 6) sfx.push(<Sfx key={`tk${f}`} at={f} src="audio/sfx_tick.wav" vol={b2 <= 3 ? 0.3 : 0.22} />);
+    }
   }
   return (
     <>
@@ -409,7 +419,8 @@ const StQuiz: React.FC<SP> = ({ s }) => {
         const revealed = !preReveal;
         const revealBeat = beats.findIndex((x) => x.prop === "reveal");
         const drop = revealed ? (revealBeat >= 0 ? seg(f, ls[revealBeat].from - 2, ls[revealBeat].from + 8) : 1) : 0;   // the screens fall
-        const secs = 30 - (abs0 + f) / 30;
+        const r2 = b.prop === "round2" ? seg(p, 0.1, 0.75) : 0;   // "Round two!": the screens rise again (loops to frame 1)
+        const secs = clock(f);
         const sh = SHOTS[b.shot] ?? SHOTS.wide;
         const z = sh.z * (1 + 0.025 * p);
         const wideShot = ["wide", "reveal", "card"].includes(b.shot);
@@ -420,19 +431,20 @@ const StQuiz: React.FC<SP> = ({ s }) => {
         else {
           c.save(); c.translate(W / 2, 840); c.scale(z, z); c.translate(-sh.x, -sh.y);
           studio(c, r, f);
-          if (wideShot) board(c, f, revealed ? null : secs, revealed ? "C = THE AI" : "WHO'S THE AI?", alarm);
+          if (wideShot) board(c, f, revealed && r2 < 1 ? null : r2 >= 1 ? 30 : secs, revealed && r2 < 1 ? "C = THE AI" : "WHO'S THE AI?", alarm && r2 < 1);
           // contestants (behind their screens until the reveal)
           const am: Mood = b.prop === "honest" ? "laugh" : b.prop === "nobook" ? "stern" : revealed ? "shock" : "calm";
           person(c, "a", [PX.a, NECK], am, b.prop === "nobook" ? "wag" : "rest", speak("a") && mouth, f, r);
-          person(c, "b", [PX.b, NECK], revealed ? (b.prop === "honest" ? "happy" : "shock") : "calm", b.prop === "ansB" ? "shrug" : "rest", speak("b") && mouth, f, r);
+          person(c, "b", [PX.b, NECK], revealed ? (b.prop === "honest" || b.prop === "sorry" ? "happy" : "shock") : "calm", b.prop === "ansB" || b.prop === "sorry" ? "shrug" : "rest", speak("b") && mouth, f, r);
           aiPhone(c, PX.c, f, speak("c"), cMood, revealed ? seg(f, (revealBeat >= 0 ? ls[revealBeat].from : 0) + 10, (revealBeat >= 0 ? ls[revealBeat].from : 0) + 30) : 0, r);
           (["a", "b", "c"] as const).forEach((w) => {
-            screenPanel(c, PX[w], w, 1 - drop, b.who === w && !revealed, speak(w) ? Math.sin(f * 0.9) * 3 : 0, r);
+            screenPanel(c, PX[w], w, Math.max(1 - drop, r2), b.who === w && !revealed, speak(w) ? Math.sin(f * 0.9) * 3 : 0, r);
             podium(c, PX[w], w.toUpperCase(), b.who === w, r);
           });
+          stroke(c, [[PX.c + 70, SCR.bot - 6], [PX.c + 96, SCR.bot + 40], [PX.c + 150, POD.bot - 30], [PX.c + 230, POD.bot + 30], [PX.c + 330, POD.bot + 44]], "#0f172a", 7, r, { passes: 1 });   // a charging cable
           const [hm, ha] = POSE_HOST[b.prop] ?? ["calm", "rest"];
           person(c, "host", HOST, hm, ha, b.who === "host" && mouth, f, r);
-          if (revealed) {   // who was behind each screen, on the podiums
+          if (revealed && r2 < 0.5) {   // who was behind each screen, on the podiums
             const t0 = revealBeat >= 0 ? ls[revealBeat].from : -99;
             nameTag(c, PX.a, POD.top + 222, "AMMAMMA", seg(f, t0 + 6, t0 + 14));
             nameTag(c, PX.b, POD.top + 222, "VAMSI", seg(f, t0 + 9, t0 + 17));
@@ -444,7 +456,7 @@ const StQuiz: React.FC<SP> = ({ s }) => {
         // ---------- screen-space text ----------
         if (b.prop === "question") questionCard(c, W, seg(p, 0.05, 0.18));
         if (SAY[b.prop]) sayBubble(c, W, SAY[b.prop], seg(p, 0.04, 0.16), b.prop === "ansC");
-        if (b.prop === "madeup") stamp(c, "RAMULU TIFFINS: MADE UP", W / 2, 1290, 74, RED, seg(f, cu(ln, 1, 0.55) - 2, cu(ln, 1, 0.55) + 8), r, -0.06);
+        if (b.prop === "madeup") stamp(c, "WE MADE IT UP", W / 2, 380, 104, RED, seg(f, cu(ln, 1, 0.55) - 2, cu(ln, 1, 0.55) + 8), r, -0.06);
         if (b.prop === "trap") statCard(c, W, seg(p, 0.0, 0.08), seg(f, cu(ln, 1, 0.45) - 2, cu(ln, 1, 0.45) + 6), seg(f, cu(ln, 2, 0.62) - 2, cu(ln, 2, 0.62) + 6));
         if (b.prop === "rule") ruleCard(c, W, seg(p, 0.0, 0.08), seg(f, cu(ln, 1, 0.55) - 2, cu(ln, 1, 0.55) + 6));
         void H;

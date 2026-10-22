@@ -71,8 +71,8 @@
     {
      "who": "host",
      "file": "01_host.wav",
-     "text": "ఈ ముగ్గురిలో ఒకరు ఏఐ. బజర్ మోగేలోపు కనిపెట్టండి!",
-     "show": "One of these three is an AI. Spot it before the buzzer!",
+     "text": "ఈ ముగ్గురిలో ఒకరు మనిషి కాదు! బజర్ మోగేలోపు కనిపెట్టండి!",
+     "show": "One of these three isn't human! Spot it before the buzzer!",
      "maxgap": 0.3,
      "gap": 0.24
     },
@@ -159,8 +159,8 @@
     {
      "who": "b",
      "file": "04_b.wav",
-     "text": "తెలీదండి. ఫోన్ చేసి అడుగుతా.",
-     "show": "No idea. I'll call and ask.",
+     "text": "నేను కన్ఫర్మ్ చేయలేనండి. దయచేసి రెస్టారెంట్ ని డైరెక్ట్ గా కాంటాక్ట్ చేయండి.",
+     "show": "I can't confirm that. Please contact the restaurant directly.",
      "maxgap": 0.3,
      "gap": 0.24,
      "gain_db": 0.3
@@ -187,7 +187,7 @@
      "text": "హైదరాబాద్ ఫుడ్ గైడ్, నలభై రెండో పేజీ.",
      "show": "Hyderabad Food Guide, page 42.",
      "maxgap": 0.3,
-     "gap": 0.24
+     "gap": 0.3
     },
     {
      "who": "a",
@@ -201,8 +201,8 @@
     {
      "who": "host",
      "file": "09_host.wav",
-     "text": "టైం అయిపోయింది! ఏఐ ఎవరు?",
-     "show": "Time's up! Who's the AI?",
+     "text": "టైం అయిపోయింది! ఎవరది?",
+     "show": "Time's up! Who is it?",
      "maxgap": 0.3,
      "gap": 0.55
     }
@@ -219,7 +219,11 @@
    "rise": 1.3,
    "drop_at": [
     [
-     3,
+     2,
+     "1"
+    ],
+    [
+     4,
      "1"
     ]
    ],
@@ -232,40 +236,52 @@
       "n": 10
      },
      {
+      "who": "b",
+      "shot": "reveal",
+      "prop": "sorry",
+      "n": 11
+     },
+     {
       "who": "host",
       "shot": "phone",
       "prop": "madeup",
-      "n": 11
+      "n": 12
      },
      {
       "who": "c",
       "shot": "phone",
       "prop": "sure",
-      "n": 12
-     },
-     {
-      "who": "host",
-      "shot": "card",
-      "prop": "trap",
       "n": 13
      },
      {
       "who": "host",
       "shot": "card",
-      "prop": "rule",
+      "prop": "trap",
       "n": 14
+     },
+     {
+      "who": "host",
+      "shot": "card",
+      "prop": "rule",
+      "n": 15
      },
      {
       "who": "c",
       "shot": "phone",
       "prop": "idk",
-      "n": 15
+      "n": 16
      },
      {
       "who": "a",
       "shot": "reveal",
       "prop": "honest",
-      "n": 16
+      "n": 17
+     },
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "round2",
+      "n": 18
      }
     ],
     "captionTop": 1500,
@@ -286,53 +302,79 @@
      "gap": 0.24
     },
     {
-     "who": "host",
-     "file": "11_host.wav",
-     "text": "రాములు టిఫిన్స్? [1] మేమే కల్పించాం. అసలు లేనే లేదు.",
-     "show": "Ramulu Tiffins? We made it up. It doesn't exist.",
+     "who": "b",
+     "file": "11_b.wav",
+     "text": "సారీ సారీ! కస్టమర్ కేర్ అలవాటు!",
+     "show": "Sorry, sorry! Customer-care habit!",
      "maxgap": 0.3,
-     "gap": 0.24
+     "gap": 0.24,
+     "gain_db": 0.3
+    },
+    {
+     "who": "host",
+     "file": "12_host.wav",
+     "text": "రాములు టిఫిన్స్? [1] ఆ పేరు మేమే పెట్టాం!",
+     "show": "Ramulu Tiffins? We made up that name!",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "pauses": {
+      "1": 0.5
+     }
     },
     {
      "who": "c",
-     "file": "12_c.wav",
+     "file": "13_c.wav",
      "text": "కానీ నేను చాలా ష్యూర్ గా చెప్పానే!",
      "show": "But I said it so surely!",
      "maxgap": 0.3,
-     "gap": 0.24
-    },
-    {
-     "who": "host",
-     "file": "13_host.wav",
-     "text": "అదే ట్రాప్. [1] ఏఐ \"తెలీదు\" అని అరుదుగా అంటుంది. [2] ఊహించి చెప్పేస్తుంది.",
-     "show": "That's the trap. AI rarely says \"I don't know\". It guesses.",
-     "maxgap": 0.3,
-     "gap": 0.6
+     "gap": 0.24,
+     "gain_db": 1.0
     },
     {
      "who": "host",
      "file": "14_host.wav",
-     "text": "అందుకే చెప్పండి: \"ష్యూర్ కాకపోతే, తెలీదు అని చెప్పు.\" [1] ఇప్పుడు, రాములు టిఫిన్స్?",
-     "show": "So tell it: \"If you're not sure, say I don't know.\" Now, Ramulu Tiffins?",
+     "text": "అదే ట్రాప్. [1] నెగెటివ్ మార్కులు లేని ఎగ్జామ్ లాగా, [2] ఊహించి చెప్పేస్తుంది.",
+     "show": "That's the trap. Like an exam with no negative marking, it guesses.",
      "maxgap": 0.3,
-     "gap": 0.45
+     "gap": 1.5,
+     "pauses": {
+      "1": 0.45
+     }
+    },
+    {
+     "who": "host",
+     "file": "15_host.wav",
+     "text": "అందుకే ఇలా టైప్ చేయండి: \"If you're not sure, say I don't know.\" [1] ఇప్పుడు, రాములు టిఫిన్స్?",
+     "show": "So type this: \"If you're not sure, say I don't know.\" Now, Ramulu Tiffins?",
+     "maxgap": 0.3,
+     "gap": 1.3
     },
     {
      "who": "c",
-     "file": "15_c.wav",
+     "file": "16_c.wav",
      "text": "నాకు తెలీదు.",
      "show": "I don't know.",
      "maxgap": 0.3,
-     "gap": 0.24
+     "gap": 0.24,
+     "gain_db": 2.0
     },
     {
      "who": "a",
-     "file": "16_a.wav",
-     "text": "హమ్మయ్య, నిజాయితీ జవాబు!",
-     "show": "Finally, an honest answer!",
+     "file": "17_a.wav",
+     "text": "ఇప్పటికైనా నిజం చెప్పింది!",
+     "show": "At last, it told the truth!",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 1.3
+    },
+    {
+     "who": "host",
+     "file": "18_host.wav",
+     "text": "రౌండ్ టూ!",
+     "show": "Round two!",
      "maxgap": 0.3,
      "gap": 0.05,
-     "gain_db": 0.5
+     "gain_db": 2.0
     }
    ]
   }

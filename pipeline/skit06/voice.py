@@ -53,16 +53,18 @@ VOICE_TE = {
          "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 VOICE_TE_LINE = {}
-AFTER_REVEAL = {12, 15}   # the AI's lines once it is a phone on a stool: the phone sound
+AFTER_REVEAL = {13, 16}   # the AI's lines once it is a phone on a stool: the phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
 MUST = {"en": {1: [("ai",), ("spot",), ("buzzer",)], 2: [("ramulu", "ramu", "ramulus", "ramallu"), ("tiffins", "tiffin"), ("sunday",)],
-               3: [("never",), ("heard",)], 4: [("idea",), ("call",)], 5: [("six", "6"), ("thirty", "30"), ("dosa", "dosai", "dosas"), ("famous",)],
-               6: [("sure",), ("source",)], 7: [("hyderabad",), ("guide",), ("forty", "42")], 8: [("book",)], 9: [("time",), ("ai",)],
-               10: [("phone",), ("moustache", "mustache")], 11: [("made",), ("exist", "exists")], 12: [("sure",)],
-               13: [("trap",), ("know",), ("guesses", "guess")], 14: [("permission",), ("sure",), ("know",), ("tiffins", "tiffin")],
-               15: [("know",)], 16: [("honest",), ("answer",)]},
-        "te": {2: [("टिफ", "तिफ", "टिप", "tiff")], 5: [("दोश", "दोस", "दोष", "दोसा")], 7: [("गाइ", "गैड", "गईड", "गाइड", "guide")],
-               11: [("लेद", "लेदु", "लेनी", "लेने")], 13: [("लीद", "लिद", "लीदु")], 14: [("लीद", "लिद", "लीदु")], 15: [("लीद", "लिद", "लीदु")]}}   # Telugu as the judge writes it (Devanagari)
+               3: [("never",), ("heard",)], 4: [("confirm",), ("contact",), ("restaurant",)],
+               5: [("six", "6", "630"), ("thirty", "30", "630"), ("dosa", "dosai", "dosas"), ("famous",)], 6: [("sure",), ("source",)],
+               7: [("hyderabad",), ("guide",), ("forty", "42")], 8: [("book",)], 9: [("time",), ("ai",)], 10: [("phone",), ("moustache", "mustache")],
+               11: [("sorry",), ("customer",), ("habit",)], 12: [("made",)], 13: [("sure",)], 14: [("trap",), ("exam",), ("negative",), ("guesses", "guess")],
+               15: [("type",), ("sure",), ("know",), ("tiffins", "tiffin")], 16: [("know",)], 17: [("honest",), ("answer",)], 18: [("round",), ("two", "2")]},
+        "te": {2: [("टिफ", "तिफ", "टिप", "tiff")], 4: [("कन्फ", "कंफ", "कॉन्फ", "confirm"), ("कॉन्ट", "कांट", "कान्ट", "contact")],
+               5: [("दोश", "दोस", "दोष", "दोसा")], 7: [("गाइ", "गैड", "गईड", "गाइड", "guide")], 11: [("सॉरी", "सारी", "सोरी", "sorry")],
+               14: [("ट्रैप", "ट्राप", "ट्रेप", "trap"), ("एग्ज", "एक्ज", "exam", "एग्जा", "इग्ज")], 15: [("टिफ", "तिफ", "टिप", "tiff")],
+               16: [("लीद", "लिद", "लीदु")], 18: [("राउं", "रौं", "round", "राउन", "रॉउं")]}}   # Telugu as the judge writes it (Devanagari)
 
 KEEP = False
 

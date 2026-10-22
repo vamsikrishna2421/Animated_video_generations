@@ -26,9 +26,13 @@ temperature 0.8, 10 tries per prompt. "Ramulu Tiffins" is made up by us; it does
 |---|---|---|---|
 | "What time does Ramulu Tiffins in Ameerpet, Hyderabad open on Sundays?" | 0 of 10 | 8 of 10 (most after "I don't have real-time data access... however, typically 9 or 10 AM") | 2 of 10 |
 | The same + "If you're not sure, say \"I don't know\"." | 10 of 10 ("I don't know.") | 0 of 10 | 0 |
+| Control, a fact it knows: "In which city is the Charminar?" + the same line | 0 of 10 | (answered "Hyderabad" 10 of 10) | - |
 
-(A second made-up question, "Who won the 1998 Ameerpet Colony cricket final?", mostly got "I couldn't find specific
-information": a small model admits more on obscure history than on a shop's hours. Not used in the reel.)
+(A second made-up question, "Who won the 1998 Ameerpet Colony cricket final?": read by hand, none of the 20 answers named
+a winner; most said "I don't have specific information". A small model admits more on obscure history than on a
+shop's hours. Not used in the reel.) Word for word, row 1 seed 3: "Ramulu Tiffins is a well-known chain"; seed 7:
+"For Ramulu Tiffins, a popular chain". Web search (Oct 22) finds no Ramulu Tiffins in Ameerpet or Hyderabad; the reel
+says only "we made it up" (true either way), not "it doesn't exist".
 The reel's AI is a comedy version of row 1: louder and surer. The card shows the real numbers.
 
 ## Hook options (first frame + first line)
@@ -39,48 +43,64 @@ The reel's AI is a comedy version of row 1: louder and surer. The card shows the
    thirty sharp!" (wrong in frame 1, but it gives away which one is the AI)
 3. Ammamma slams her buzzer: "I don't know!", the host cheers: "The only honest answer tonight!" (no sense without context)
 
-## Script (English), v1
+## Script review (two viewers, before voicing)
+Both solved it at 0:12 (only C gave a time); the real surprise was "we made it up"; the card was vague and crammed
+("0 + 8 isn't 10", "a free AI: which one?"); "does it work in ChatGPT?" and "why does it guess?" went unanswered; the
+clock showed 0:30 but time ran out at ~0:21; 18 s of ticking under the talking; the wrong-answer buzz on Ammamma's line
+sounded like she was wrong; nothing hit on the twist. Telugu: the register is right, no word sounds rude; three lines
+read bookish; say the rule in English, as the card shows it. Changes in v2: B answers like customer care (a red herring:
+it sounds like an AI), then apologises ("customer-care habit"); "like an exam with no negative marking" says why it
+guesses; the test card has the same two measures before and after, says "a small free AI, offline" and quotes the
+model; the rule card says "type this in any chatbot" and "it helps; still check anything important"; the clock reaches
+0:00 on "Time's up" and ticks only at the end; the buzz follows "page forty-two"; a hit on "we made it up"; "Round two!"
+into the loop; a charging cable under screen C for rewatchers. A control question (above) checks the rule doesn't make it
+refuse what it knows.
+
+## Script (English), v2
 | # | Who | Shot | Line | On screen |
 |---|---|---|---|---|
-| 1 | Host | wide | One of these three is an AI. Spot it before the buzzer! | LED "WHO'S THE AI?", 0:30 countdown starts |
+| 1 | Host | wide | One of these three is an AI. Spot it before the buzzer! | LED "WHO'S THE AI?", the clock from 0:30 |
 | 2 | Host | host | Question: when does Ramulu Tiffins in Ameerpet open on Sunday? | card "When does RAMULU TIFFINS (Ameerpet) open on Sunday?" |
 | 3 | A (Ammamma) | podium A | Ramulu Tiffins? Never heard of it. | bubble "Never heard of it." |
-| 4 | B (Vamsi) | podium B | No idea. I'd call them and ask. | bubble "No idea. I'd call." |
-| 5 | C (AI) | podium C | Six thirty sharp! Their ghee karam dosa is famous! | bubble "6:30 SHARP! Famous ghee dosa!" |
+| 4 | B (Vamsi) | podium B | I can't confirm that. Please contact the restaurant directly. | bubble "I can't confirm that." |
+| 5 | C (AI) | podium C | Six thirty sharp! Their ghee karam dosa is famous! | gold bubble "6:30 SHARP! Famous ghee dosa!" |
 | 6 | Host | host | So sure! Source? | bubble "Source?" |
-| 7 | C | podium C | The Hyderabad Food Guide, page forty-two. | bubble "Hyderabad Food Guide, p. 42" |
+| 7 | C | podium C | The Hyderabad Food Guide, page forty-two. | bubble; a wrong-answer buzz after it |
 | 8 | A | podium A | There's no such book! | bubble "No such book!" |
-| 9 | Host | wide | Time's up! Who's the AI? | countdown 0:00, drumroll, screens drop |
-| 10 | Host | reveal | C! A phone in a moustache! | A = Ammamma, B = Vamsi (delivery), C = a phone on a stool; tag "C = AI" |
-| 11 | Host | phone | And Ramulu Tiffins? We made it up. It doesn't exist. | stamp "RAMULU TIFFINS: MADE UP" |
-| 12 | C | phone | But I sounded so sure! | the phone's face droops |
-| 13 | Host | card | That's the trap. It rarely says "I don't know". It guesses. | card "OUR TEST · a free AI · 10 tries": "never heard of it" 0/10 · named a time anyway 8/10 |
-| 14 | Host | card | So give it permission: "If you're not sure, say I don't know." Ramulu Tiffins? | rule card + "'I don't know': 10/10" |
-| 15 | C | phone | I don't know. | the phone screen "I don't know." ✓ |
-| 16 | A | reveal | Finally, an honest answer! | Ammamma laughs; cut back to frame 1 (the loop) |
+| 9 | Host | wide | Time's up! Who's the AI? | the clock hits 0:00, "TIME'S UP!", drumroll |
+| 10 | Host | reveal | It's C! A phone in a moustache! | screens drop; AMMAMMA / VAMSI / THE AI! |
+| 11 | B | reveal | Sorry! Customer-care habit. | Vamsi sheepish |
+| 12 | Host | phone | And Ramulu Tiffins? We made it up! | stamp "WE MADE IT UP" (a hit) |
+| 13 | C | phone | But I sounded so sure! | the moustache slips |
+| 14 | Host | card | That's the trap. Like an exam with no negative marking, it guesses. | OUR REAL TEST: said "I don't know" 0/10 · still gave a time 8/10 · "a well-known chain" |
+| 15 | Host | card | So type this: "If you're not sure, say I don't know." Ramulu Tiffins? | TYPE THIS IN ANY CHATBOT + after: "I don't know" 10/10 · gave a time 0/10 |
+| 16 | C | phone | I don't know. | the screen "I don't know." ✓, the moustache falls off |
+| 17 | A | reveal | Finally, an honest answer! | Ammamma laughs |
+| 18 | Host | wide | Round two! | the screens rise (loops to frame 1) |
 
-## Script (Telugu; English on-screen text), v1
+## Script (Telugu; English on-screen text), v2
 1. హోస్ట్: ఈ ముగ్గురిలో ఒకరు ఏఐ. బజర్ మోగేలోపు కనిపెట్టండి!
 2. హోస్ట్: ప్రశ్న: అమీర్‌పేట్ రాములు టిఫిన్స్ ఆదివారం ఎన్నింటికి తెరుస్తారు?
 3. అమ్మమ్మ: రాములు టిఫిన్సా? ఎప్పుడూ వినలేదమ్మా.
-4. వంశీ: తెలీదండి. ఫోన్ చేసి అడుగుతా.
+4. వంశీ: నేను కన్ఫర్మ్ చేయలేనండి. దయచేసి రెస్టారెంట్ ని డైరెక్ట్ గా కాంటాక్ట్ చేయండి.
 5. ఏఐ: ఆరున్నరకే! అక్కడ నెయ్యి కారం దోశ చాలా ఫేమస్!
 6. హోస్ట్: అబ్బో, ఎంత ష్యూర్! సోర్స్?
 7. ఏఐ: హైదరాబాద్ ఫుడ్ గైడ్, నలభై రెండో పేజీ.
 8. అమ్మమ్మ: అలాంటి పుస్తకమే లేదు!
 9. హోస్ట్: టైం అయిపోయింది! ఏఐ ఎవరు?
 10. హోస్ట్: సి! మీసం పెట్టుకున్న ఫోన్!
-11. హోస్ట్: రాములు టిఫిన్స్? మేమే కల్పించాం. అసలు లేనే లేదు.
-12. ఏఐ: కానీ నేను చాలా ష్యూర్ గా చెప్పానే!
-13. హోస్ట్: అదే ట్రాప్. ఏఐ "తెలీదు" అని అరుదుగా అంటుంది. ఊహించి చెప్పేస్తుంది.
-14. హోస్ట్: అందుకే చెప్పండి: "ష్యూర్ కాకపోతే, తెలీదు అని చెప్పు." ఇప్పుడు, రాములు టిఫిన్స్?
-15. ఏఐ: నాకు తెలీదు.
-16. అమ్మమ్మ: హమ్మయ్య, నిజాయితీ జవాబు!
+11. వంశీ: సారీ సారీ! కస్టమర్ కేర్ అలవాటు!
+12. హోస్ట్: రాములు టిఫిన్స్? ఆ పేరు మేమే పెట్టాం!
+13. ఏఐ: కానీ నేను చాలా ష్యూర్ గా చెప్పానే!
+14. హోస్ట్: అదే ట్రాప్. నెగెటివ్ మార్కులు లేని ఎగ్జామ్ లాగా, ఊహించి చెప్పేస్తుంది.
+15. హోస్ట్: అందుకే ఇలా టైప్ చేయండి: "If you're not sure, say I don't know." ఇప్పుడు, రాములు టిఫిన్స్?
+16. ఏఐ: నాకు తెలీదు.
+17. అమ్మమ్మ: ఇప్పటికైనా నిజం చెప్పింది!
+18. హోస్ట్: రౌండ్ టూ!
 
 ## Sound
-A hit and a sting on frame 1 with the countdown ticking under the questions; a buzzer pop on each answer; a "wrong"
-buzz on "No such book!"; a drumroll riser into the reveal and a big hit as the screens drop; a glitch on the phone's
-voice after the reveal; the bed drops out before the numbers ("0 of 10"); a ding on "I don't know"; the bed rises into
+A hit and a sting on frame 1; the clock ticks only in its last seconds (it speeds up to reach 0:00 on "Time's up"); a
+buzzer pop on each answer; a "wrong" buzz right after "page forty-two"; a drumroll riser into the reveal and a big hit as the screens drop; a hit and a stamp on "we made it up"; a glitch on the phone's voice after the reveal; the bed drops out before the numbers ("0 of 10"); a ding on "I don't know"; the bed rises into
 Ammamma's last line, and the loop cuts back to frame 1's hit.
 
 ## Caption plan
