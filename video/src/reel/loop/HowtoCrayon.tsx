@@ -31,6 +31,9 @@ const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 400) => `${w} ${s}px 'DejaVu Sans Mono', 'Liberation Mono', monospace`;
 const TELUGU = (s: number) => `${s}px 'Lohit Telugu', sans-serif`;
 const LAP = { x: 560, y: 1000 };   // Chintu's laptop on the counter
+// the Kokoro (English) steps; around them the Telugu reel's laptop runs telugu.py, and a "TELUGU NEXT" tag rides over them
+// (Telugu render review: "python speak.py" showed right after telugu.py spoke, and the English middle sagged)
+const ENG = ["install", "type", "code", "run", "endemo", "after", "offline"];
 
 // ---------- pieces ----------
 // a voice waveform: bars that move while `on`
@@ -174,7 +177,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
     if (b.prop === "code") sfx.push(<Sfx key={k("p")} at={at + Math.round(l.frames * 0.6)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "run") sfx.push(<Sfx key={k("s")} at={at + Math.round(l.frames * 0.8)} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "offline") sfx.push(<Sfx key={k("n")} at={at + 2} src="audio/sfx_snap.wav" vol={0.4} />, <Sfx key={k("h")} at={at + Math.round(l.frames * 0.45)} src="reel/sfx_boom.wav" vol={0.55} />);
-    if (b.prop === "telugu") sfx.push(<Sfx key={k("o")} at={at + 2} src="audio/gag_bonk.wav" vol={0.35} />);
+    if (b.prop === "telugu") sfx.push(<Sfx key={k("o")} at={te ? 1 : at + 2} src="audio/gag_bonk.wav" vol={0.35} />);   // Telugu: on the cut, clear of "తెలుగు"
     if (b.prop === "parler") sfx.push(<Sfx key={k("r")} at={at + l.frames - 30} src="reel/sfx_riser.wav" vol={0.4} />);
     if (b.prop === "tedemo") sfx.push(<Sfx key={k("c")} at={at - 3} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "howlong") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_success.wav" vol={0.3} />);
@@ -307,12 +310,13 @@ const StHowto: React.FC<SP> = ({ s }) => {
           ravi(c, mood, armPose, b.who === "ravi" && mouth, p, f, r);
           counter(c, r);
           phone(c, b.who === "ai" && mouth, f, r, {});
-          laptop(c, f, b.who === "laptop" && talking, te && b.prop === "hook");
+          laptop(c, f, b.who === "laptop" && talking, te && !ENG.includes(b.prop));
           c.restore();
           if (b.prop === "hook") {
             headline(c, W, "THIS AI VOICE:", "NO INTERNET. FREE.", 1);
             tag(c, "real voice from our test", 300, 1120, 44, "#fff", "#334155", -0.02, seg(p, 0.1, 0.2));
-            tag(c, te ? "Telugu + English" : "English + Telugu", 800, 560, 52, "#fef3c7", INK, 0.04, seg(p, 0.3, 0.45));
+            if (te) tag(c, "TELUGU + ENGLISH", 790, 560, 60, "#fef3c7", INK, 0.04, seg(f, 0, 3));   // from frame 1 (sound-off viewers)
+            else tag(c, "English + Telugu", 800, 560, 52, "#fef3c7", INK, 0.04, seg(p, 0.3, 0.45));
           }
           if (b.prop === "who") bubble(c, 330, 560, "Who's talking?!", 76, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "nobody") tag(c, te ? "Telugu: Indic Parler · English: Kokoro" : "KOKORO · a free voice model", W / 2, 520, 50, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.15, 0.3));
@@ -325,6 +329,7 @@ const StHowto: React.FC<SP> = ({ s }) => {
           if (b.prop === "cancel") { bubble(c, 330, 560, "App cancelled!", 84, seg(p, 0.05, 0.2), "#dcfce7", "#166534"); tag(c, "₹ every month ✗", 760, 420, 52, "#fee2e2", "#991b1b", 0.04, seg(p, 0.3, 0.4)); }
           if (b.prop === "save") saveCard(c, W, seg(f, ln.from + 2, ln.from + 10), ln.from + 2, f);
         }
+        if (te && ENG.includes(b.prop)) tag(c, "TELUGU NEXT →", 825, 292, 52, "#ffedd5", "#9a3412", 0.02, b.prop === "install" ? seg(p, 0.0, 0.1) : 1);
         void BLUE; void stroke;
       }} />
     </>

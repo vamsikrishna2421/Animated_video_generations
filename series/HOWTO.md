@@ -28,7 +28,7 @@ Run 1). Label on screen: `HOW TO 01`, ... Posted on the day it is made (not in t
 ## Backlog (in order; the run takes the first "planned" row whose "Needs" are out)
 | # | Topic | Our real run | Needs | Status |
 |---|---|---|---|---|
-| 01 | Make an AI voice on your laptop, free and offline (local text-to-speech) | Kokoro (English) and Indic Parler-TTS (Telugu), the voices this page uses: install, one sentence, seconds per sentence on a CPU | EP13 | in progress (Thu Oct 22) |
+| 01 | Make an AI voice on your laptop, free and offline (local text-to-speech) | Kokoro (English) and Indic Parler-TTS (Telugu), the voices this page uses: install, one sentence, seconds per sentence on a CPU | EP13 | done (Thu Oct 22) |
 | 02 | Install a free open-weight LLM on your laptop (Ollama / LM Studio / llama.cpp) | llama.cpp with Qwen2.5 1.5B (4-bit): install, download, chat; tokens per second, RAM used | EP34, EP35, EP37, EP38 | planned (Thu Oct 29) |
 | 03 | Make videos with Claude: how this page's reels are made | this repo: Claude Code writes the script and the animation code, local voices, Remotion renders; minutes per render, what it costs | EP19 | planned (Thu Nov 5) |
 | 04 | Turn any audio or video into text, offline (Whisper) | faster-whisper on a CPU: minutes per hour of audio; how well it does Telugu (honestly) | EP13 | planned |

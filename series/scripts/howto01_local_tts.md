@@ -114,12 +114,12 @@ eight); "32 / 313 MB"; the last scene no longer dips at the cut and lifts into "
 under the Telugu voice (0.25 didn't read as a drop); a half-second beat before "About thirty seconds"; the save card
 holds 2.6 s; "English + Telugu" on frame 1.
 
-## Script (Telugu; English on-screen text), v2 (opens on the Telugu voice; the English demo plays at step 3)
+## Script (Telugu; English on-screen text), v3 as rendered (opens on the Telugu voice; the English demo plays at step 3)
 1. ల్యాప్‌టాప్ (Indic Parler): రవి కిరాణా లో దీపావళి ఆఫర్! ప్రతి కొనుగోలు మీద పది శాతం తగ్గింపు.
 2. రవి: నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!
-3. ఏఐ: చింటూ ల్యాప్‌టాప్ అండి. ఫ్రీ వాయిస్ మోడల్స్: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో.
+3. ఏఐ: చింటూ ల్యాప్‌టాప్ అండి. తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో. రెండూ ఫ్రీ.
 4. రవి: ఫ్రీనా?! నేను ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!
-5. ఏఐ: ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.
+5. ఏఐ: ముందు ఇంగ్లీష్ ది. పైథాన్ ఉంటే, రెండు ఇన్‌స్టాల్ కమాండ్లు.
 6. రవి: టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!
 7. ఏఐ: క్యాప్షన్ లో నుంచి కాపీ చేయండి. ఐదు లైన్లు. [1] చెప్పాల్సింది ఇక్కడ రాయండి.
 8. ఏఐ: రన్ చేయండి. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.
@@ -131,10 +131,21 @@ holds 2.6 s; "English + Telugu" on frame 1.
 14. రవి: పార్లర్? బ్యూటీ పార్లరా?
 15. ఏఐ: కాదండి. ఫ్రెంచ్ లో పార్లర్ అంటే మాట్లాడటం.
 16. రవి: సరే, ఎంత టైం పడుతుంది?
-17. ఏఐ: ఒక్కో లైన్ కి దాదాపు ముప్పై సెకన్లు, [1] దాదాపు ఐదు జీబీ మెమరీ.
+17. ఏఐ: ముప్పై సెకన్లు, ఒక్కో లైన్ కి. [1] దాదాపు ఐదు జీబీ ర్యామ్.
 18. రవి: నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!
-19. ఏఐ: ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ మెమరీ ఉన్న ఏ కంప్యూటర్ అయినా చాలు.
+19. ఏఐ: ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.
 20. రవి: చింటూ! ఇది సేవ్ చెయ్!
+
+Render review (Telugu, two viewers): both stopped on the Telugu offer at 0:00 (the part they'd forward); both: the
+English middle sags and the sound never rises into "save". Fixed: "సులువు" (easy) is out, "పైథాన్ ఉంటే" in (not easy
+on Windows, and the sticky says Python first); "మెమరీ" is "ర్యామ్" (heard as storage), with the number first, right
+after the drop; the hook's demo voice is 2.5 dB up on a soft bed (the first 3 s were the quietest of the reel, with no
+music); the hit before "మరి నా తెలుగు ఆఫర్?" lands 0.7 s before the voice and the bonk moved onto the cut (speech
+recognition heard "తెలుగు" as "dilgo" in the mix; the isolated takes were clean); the bed rises through the last scene
+and swells 5 dB into the save card; "TELUGU NEXT →" rides over the English steps; the laptop shows telugu.py outside
+them; "TELUGU + ENGLISH" on frame 1. Captions: Kokoro is English-only, a Notepad "All files" line, "after a 22 s load"
+(telugu.py loads the model on every run), close other apps on 8 GB; the Telugu YouTube text gained the run line and the
+Mac note.
 
 ## Sound
 A hit and a pop with the laptop's voice on frame 1 (the hook is the voice itself); keyboard clicks under the terminal

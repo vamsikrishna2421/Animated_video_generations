@@ -18,14 +18,15 @@ import soundfile as sf
 pipeline = KPipeline(lang_code='a')
 text = "Hello! This voice was made on a computer, with no internet."
 for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
+Windows: paste them into Notepad, Save as type "All files", name it speak.py. Then type cmd in that folder's address bar and press Enter: Command Prompt opens in that folder.
 4. python speak.py → 0.wav. The first run downloads the voice (313 MB); after that, no internet needed.
 
 TELUGU: Indic Parler-TTS by AI4Bharat (free, Apache 2.0): the steps and the code are in the pinned comment.
 
 Our test (a 4-core Intel Xeon at 2.1 GHz, no graphics card):
 English: a 4-second line in 1.2 s once loaded (1.2 GB RAM)
-Telugu: a 5.6-second line in about 30 s (4.7 GB RAM)
-You need: 8 GB of RAM; about 2 GB of disk for Kokoro, 6 GB for Indic Parler (pip also fetches PyTorch the first time).
+Telugu: a 5.6-second line in about 30 s, after a 22 s model load (telugu.py loads it on every run; 4.7 GB RAM)
+You need: 8 GB of RAM (for Telugu, close Chrome and other apps first); about 2 GB of disk for Kokoro, 6 GB for Indic Parler (pip also fetches PyTorch the first time).
 
 If it breaks: "espeak-ng not found" → step 2 · Python 3.13 or newer → install 3.12 · "git not found" → install Git (git-scm.com) · the Telugu model says gated or 401 → accept its terms and run hf auth login.
 Never share your Hugging Face token.
@@ -83,9 +84,9 @@ import soundfile as sf
 pipeline = KPipeline(lang_code='a')
 text = "Hello! This voice was made on a computer, with no internet."
 for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
-Run: python speak.py (the first run downloads 313 MB)
+Run: python speak.py (the first run downloads 313 MB). Windows: save it from Notepad with Save as type "All files"; type cmd in the folder's address bar to open Command Prompt there.
 TELUGU, Indic Parler-TTS by AI4Bharat (Apache 2.0; free Hugging Face login, accept the terms, needs Git): the code is in the pinned comment.
-Our test (a 4-core Intel Xeon, no graphics card): 1.2 s for a 4-second English line once loaded (1.2 GB RAM); about 30 s for a 5.6-second Telugu line (4.7 GB RAM). You need 8 GB of RAM.
+Our test (a 4-core Intel Xeon, no graphics card): 1.2 s for a 4-second English line once loaded (1.2 GB RAM); about 30 s for a 5.6-second Telugu line after a 22 s model load (4.7 GB RAM). You need 8 GB of RAM (close other apps for Telugu).
 Next HOW TO: a free AI chatbot on your laptop.
 YouTube pinned comment: the PINNED_COMMENT text above (the Telugu code).
 
@@ -95,7 +96,7 @@ Chintu laptop Wi-Fi off lo kooda maatladindi. Mee computer lo AI voice: free, of
 
 TELUGU: Indic Parler-TTS (AI4Bharat, free, Apache 2.0): steps, code pinned comment lo.
 
-ENGLISH: Kokoro (free, Apache 2.0)
+ENGLISH: Kokoro (free, Apache 2.0; English maatrame. Telugu ki pinned comment)
 1. Python 3.12 install cheyyandi (python.org/downloads; Windows lo "Add python.exe to PATH" tick cheyyandi). Kokoro ki 3.10-3.12 kavali. Taruvaata Terminal / Command Prompt lo:
 pip install kokoro soundfile
 2. espeak-ng. Linux: sudo apt-get install espeak-ng · Windows: github.com/espeak-ng/espeak-ng/releases lo .msi · Mac: official guides lo ledu; Homebrew lo undi: brew install espeak-ng (memu Mac lo try cheyyaledu)
@@ -105,12 +106,13 @@ import soundfile as sf
 pipeline = KPipeline(lang_code='a')
 text = "Hello! This voice was made on a computer, with no internet."
 for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
+Windows: Notepad lo paste chesi, Save as type "All files", peru speak.py. Aa folder address bar lo cmd ani type chesi Enter: Command Prompt aa folder lo open avutundi.
 4. python speak.py → 0.wav. Modatisaari voice download avutundi (313 MB); taruvaata internet akkarledu.
 
 Maa test (4-core Intel Xeon 2.1 GHz, graphics card ledu):
 English: 4 seconds line, load ayyaka 1.2 s lo (1.2 GB RAM)
-Telugu: 5.6 seconds line, sumaaru 30 s lo (4.7 GB RAM)
-Kavalsindi: 8 GB RAM; disk Kokoro ki ~2 GB, Indic Parler ki ~6 GB (modatisaari pip PyTorch kooda download chestundi).
+Telugu: 5.6 seconds line, sumaaru 30 s lo; mundu model load ki ~22 s (telugu.py prati run lo load chestundi; 4.7 GB RAM)
+Kavalsindi: 8 GB RAM (Telugu run mundu Chrome, migata apps close cheyyandi); disk Kokoro ki ~2 GB, Indic Parler ki ~6 GB (modatisaari pip PyTorch kooda download chestundi).
 
 Problem vaste: "espeak-ng not found" → step 2 · Python 3.13 leda kotta version → 3.12 install cheyyandi · "git not found" → Git install (git-scm.com) · Telugu model "gated" leda 401 → model page lo terms accept chesi hf auth login.
 Mee Hugging Face token evariki ivvakandi.
@@ -154,14 +156,15 @@ Internet lekunda, free ga mee computer lo AI voice.
 TELUGU: Indic Parler-TTS (AI4Bharat, Apache 2.0; free Hugging Face login, terms accept, Git kavali): code pinned comment lo.
 ENGLISH: Kokoro (Apache 2.0). Python 3.12, taruvaata:
 pip install kokoro soundfile
-espeak-ng: Linux: sudo apt-get install espeak-ng · Windows: github.com/espeak-ng/espeak-ng/releases lo .msi · Mac: brew install espeak-ng
+espeak-ng: Linux: sudo apt-get install espeak-ng · Windows: github.com/espeak-ng/espeak-ng/releases lo .msi · Mac: brew install espeak-ng (memu Mac lo try cheyyaledu)
 speak.py:
 from kokoro import KPipeline
 import soundfile as sf
 pipeline = KPipeline(lang_code='a')
 text = "Hello! This voice was made on a computer, with no internet."
 for i, (gs, ps, audio) in enumerate(pipeline(text, voice='af_heart')): print(i, gs, ps); sf.write(f'{i}.wav', audio, 24000)
-Maa test (4-core CPU, graphics card ledu): English 4-second line 1.2 s lo (1.2 GB RAM); Telugu 5.6-second line sumaaru 30 s lo (4.7 GB RAM). 8 GB RAM kavali.
+Run: python speak.py (modatisaari 313 MB download). Windows: Notepad lo Save as type "All files" tho save cheyyandi; folder address bar lo cmd type chesi Command Prompt open cheyyandi.
+Maa test (4-core CPU, graphics card ledu): English 4-second line 1.2 s lo (1.2 GB RAM); Telugu 5.6-second line sumaaru 30 s lo, model load ki inko ~22 s (4.7 GB RAM). 8 GB RAM kavali (Telugu ki migata apps close cheyyandi).
 Next HOW TO: mee laptop lo free AI chatbot.
 YouTube pinned comment: paina PINNED_COMMENT (Telugu code).
 

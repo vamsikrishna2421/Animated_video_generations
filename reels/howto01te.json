@@ -37,6 +37,10 @@
  "captionTop": 1500,
  "handle": "@ai_maastaaru_telugu",
  "parler_lang": "te",
+ "musicEndGain": [
+  0.93,
+  5.0
+ ],
  "scenes": [
   {
    "id": "h_a",
@@ -87,7 +91,8 @@
      "maxgap": 2.0,
      "gap": 0.25,
      "tempo": 1.0,
-     "demo": "series/scripts/howto01_demo/offer_1.wav"
+     "demo": "series/scripts/howto01_demo/offer_1.wav",
+     "gain_db": 2.5
     },
     {
      "who": "ravi",
@@ -176,7 +181,7 @@
    "duck_lines": [
     [
      0,
-     0.1
+     0.45
     ]
    ]
   },
@@ -244,8 +249,8 @@
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.",
-     "show": "First the English one, it's easy. Two install commands.",
+     "text": "ముందు ఇంగ్లీష్ ది. పైథాన్ ఉంటే, రెండు ఇన్‌స్టాల్ కమాండ్లు.",
+     "show": "First the English one. If you have Python: two install commands.",
      "maxgap": 0.28,
      "gap": 0.6,
      "tempo": 1.16,
@@ -254,6 +259,13 @@
        "इंग",
        "इन्ग",
        "इंगि"
+      ],
+      [
+       "पै",
+       "पाइ",
+       "पाय",
+       "pyth",
+       "पेथ"
       ],
       [
        "स्टा",
@@ -386,10 +398,10 @@
    "type": "sk_howto",
    "tail": 0.0,
    "lift": 1.0,
-   "pre": 0.3,
+   "pre": 0.7,
    "outro": true,
    "boost": 1.42,
-   "rise": 1.26,
+   "rise": 1.4,
    "drop_pre": [
     [
      5,
@@ -482,7 +494,7 @@
        "offer"
       ]
      ],
-     "gain_db": 1.3
+     "gain_db": 1.8
     },
     {
      "who": "ai",
@@ -567,19 +579,28 @@
     {
      "who": "ai",
      "file": "17_ai.wav",
-     "text": "ఒక్కో లైన్ కి దాదాపు ముప్పై సెకన్లు, [1] దాదాపు ఐదు జీబీ మెమరీ.",
-     "show": "About 30 seconds a line, almost 5 GB of memory.",
+     "text": "ముప్పై సెకన్లు, ఒక్కో లైన్ కి. [1] దాదాపు ఐదు జీబీ ర్యామ్.",
+     "show": "30 seconds a line. Almost 5 GB of RAM.",
      "maxgap": 0.28,
      "gap": 0.6,
      "tempo": 1.16,
      "must": [
       [
        "मुप",
-       "मुब"
+       "मुब",
+       "मूप",
+       "मोप"
       ],
       [
        "जी",
        "gb"
+      ],
+      [
+       "याम",
+       "राम",
+       "रैम",
+       "रेम",
+       "ram"
       ]
      ],
      "gain_db": 0.3999999999999999
@@ -605,7 +626,7 @@
        "याब"
       ]
      ],
-     "gain_db": 0.5
+     "gain_db": 1.0
     },
     {
      "who": "ai",
@@ -630,7 +651,8 @@
        "राम",
        "ram"
       ]
-     ]
+     ],
+     "gain_db": 0.5
     },
     {
      "who": "ravi",
@@ -653,7 +675,7 @@
        "save"
       ]
      ],
-     "gain_db": 1.3
+     "gain_db": 2.3
     }
    ]
   }

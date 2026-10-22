@@ -43,7 +43,7 @@ L_TE = [
     ("ravi", "ravi", "who", "నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!", "Who's announcing my offer?! The Wi-Fi is off!"),
     ("ai", "wide", "nobody", "చింటూ ల్యాప్‌టాప్ అండి. | తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో. రెండూ ఫ్రీ.", "Chintu's laptop. <pause 0.25> Indic Parler for Telugu, Kokoro for English. Both free."),   # two takes: Parler dropped the first sentence, then "ఫ్రీ వాయిస్ మోడల్స్" (Ravi answers "free?!", so it goes last)
     ("ravi", "ravi", "pay", "ఫ్రీనా?! నేను ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!", "Free?! I pay an app every month!"),
-    ("ai", "laptop", "install", "ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.", "First the English one, it's easy. Two install commands."),
+    ("ai", "laptop", "install", "ముందు ఇంగ్లీష్ ది. పైథాన్ ఉంటే, రెండు ఇన్‌స్టాల్ కమాండ్లు.", "First the English one. If you have Python: two install commands."),   # not "సులువు" (easy): both render viewers (not on Windows; the sticky says Python first)
     ("ravi", "ravi", "type", "టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!", "Type them?! I type with one finger!"),
     ("ai", "laptop", "code", "క్యాప్షన్ లో నుంచి కాపీ చేయండి. ఐదు లైన్లు. [1] చెప్పాల్సింది ఇక్కడ రాయండి.", "Copy them from the caption. 5 lines. Write your words here."),
     ("ai", "laptop", "run", "రన్ చేయండి. మొదటిసారి వాయిస్ డౌన్‌లోడ్ అవుతుంది: మూడు వందల పదమూడు ఎంబీ.", "Run it. The first time, it downloads the voice: 313 MB."),
@@ -55,7 +55,7 @@ L_TE = [
     ("ravi", "ravi", "parlour", "పార్లర్? బ్యూటీ పార్లరా?", "Parler? Like beauty parlour?"),
     ("ai", "laptop", "french", "కాదండి. ఫ్రెంచ్ లో పార్లర్ అంటే మాట్లాడటం.", "No. Parler means \"to speak\" in French."),
     ("ravi", "ravi", "myoffer", "సరే, ఎంత టైం పడుతుంది?", "Okay, how long does it take?"),
-    ("ai", "laptop", "slow", "ఒక్కో లైన్ కి దాదాపు ముప్పై సెకన్లు, [1] దాదాపు ఐదు జీబీ మెమరీ.", "About 30 seconds a line, almost 5 GB of memory."),
+    ("ai", "laptop", "slow", "ముప్పై సెకన్లు, ఒక్కో లైన్ కి. [1] దాదాపు ఐదు జీబీ ర్యామ్.", "30 seconds a line. Almost 5 GB of RAM."),   # the number right after the drop; RAM, not "మెమరీ" (heard as storage)
     ("ravi", "ravi", "cancel", "నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!", "Slow... but free! That app is cancelled!"),
     ("ai", "laptop", "verdict", "ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.", "English: Kokoro. Telugu: Indic Parler. 8 GB of RAM, no graphics card."),
     ("ravi", "wide", "save", "చింటూ! ఇది సేవ్ చెయ్!", "Chintu! Save this!"),
@@ -79,12 +79,12 @@ MUST_EN = {"who": [("talking",), ("wi", "wifi", "wi-fi"), ("off",)], "nobody": [
            "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley", "palay", "palae", "pale"), ("eight", "8", "8gb"), ("ram", "graphics")], "save": [("chintu",), ("save",)]}
 MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ", "फै")], "nobody": [("चिं", "चिन", "चीं")],
            "nobody2": [("पार", "पाल", "parl"), ("कोक", "कोको", "koko"), ("फ्र", "फिर", "free")],
-           "pay": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "install": [("इंग", "इन्ग", "इंगि"), ("स्टा", "स्टॉ", "stal")],
+           "pay": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "install": [("इंग", "इन्ग", "इंगि"), ("पै", "पाइ", "पाय", "pyth", "पेथ"), ("स्टा", "स्टॉ", "stal")],
            "type": [("टैप", "टाइप", "ताइप", "टाईप", "टेप")], "code": [("प्श", "प्ष", "caption"), ("कॉप", "काप", "कोप", "copy")],
            "run": [("डाउ", "डौ", "down"), ("बी", "mb")], "after": [("टर", "टार")], "offline": [("लोड", "लोड़", "लोर"), ("सेक", "सैक")],
            "telugu": [("तेल", "टेल", "तल"), ("फर", "offer")], "parler": [("पार", "पाल"), ("लॉग", "लोग", "लाग", "login")],
            "parlour": [("पार", "पाल"), ("ब्यू", "बियू", "बू", "ब्यु")], "french": [("फ्रें", "फ्रैं", "फ्रेन", "फ़्रें", "french")],
-           "myoffer": [("टैम", "टाइम", "टाईम", "टेम")], "slow": [("मुप", "मुब"), ("जी", "gb")],
+           "myoffer": [("टैम", "टाइम", "टाईम", "टेम")], "slow": [("मुप", "मुब", "मूप", "मोप"), ("जी", "gb"), ("याम", "राम", "रैम", "रेम", "ram")],
            "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("पार", "पाल"), ("र्याम", "रैम", "राम", "ram")],
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05)
 TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
@@ -94,11 +94,15 @@ TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
 SCENES = {"en": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 10, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "tail": 0.1}),
                  ("h_c", 10, 20, {"lift": 1.0, "pre": 0.3, "outro": True, "boost": 1.42, "rise": 1.26, "drop_pre": [[6, 0.0, 0.5]], "tail": 0.0})],   # 6: the beat of silence before "About thirty seconds"
           "te": [("h_a", 0, 4, {"boost": 1.5, "tail": 0.1}), ("h_b", 4, 11, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "tail": 0.1}),
-                 ("h_c", 11, 20, {"lift": 1.0, "pre": 0.3, "outro": True, "boost": 1.42, "rise": 1.26, "drop_pre": [[5, 0.0, 0.5]], "tail": 0.0})]}
+                 ("h_c", 11, 20, {"lift": 1.0, "pre": 0.7, "outro": True, "boost": 1.42, "rise": 1.4, "drop_pre": [[5, 0.0, 0.5]], "tail": 0.0})]}   # pre 0.7: the hit
+# decays before "మరి నా తెలుగు ఆఫర్?" (it blurred "తెలుగు"); rise 1.4 and END_GAIN_TE: the bed builds into the save card (render review)
 GAP = {"hook": 0.25, "install": 0.6, "code": 0.5, "run": 0.4, "endemo": 0.4, "offline": 0.7, "parler": 0.4, "tedemo": 0.4, "myoffer": 0.5, "slow": 0.6, "verdict": 0.8}   # the screens' reads
 GAIN_PROP = {"parler": 0.3, "french": 1.0, "slow": 1.4, "verdict": 1.0, "save": 0.8}   # the rising last scene: 6.8-7.4 dB over the bed
-GAIN_PROP_TE = {"install": 0.5, "telugu": 0.8}   # Telugu: 7.3-7.7 dB over the bed
+GAIN_PROP_TE = {"hook": 2.5, "install": 0.5, "telugu": 1.3, "cancel": 0.5, "verdict": 0.5, "save": 1.0}   # Telugu: 8+ dB over the bed; the hook's
+# demo voice up 2.5 dB (the first 3 s were the quietest of the reel)
+END_GAIN_TE = [0.93, 5.0]   # [fraction of the reel, dB]: the bed swells from the end of the verdict line into the save card
 DUCK_DEMO = 0.1   # the bed under the laptop's demo lines (the voice is the point; 0.25 didn't read as a drop)
+DUCK_HOOK_TE = 0.45   # the Telugu hook (a demo line) on a soft bed: at 0.1 it opened on near-silence (render review)
 YT = {"h_a": "The laptop talks, no internet", "h_b": "Kokoro: install, code, run", "h_c": "Telugu: Indic Parler-TTS"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -113,7 +117,7 @@ def spec(lang="en"):
          "musicPad": True, "musicGapGain": 3.0, "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.12 if te else 1.15, "captionTop": 1500}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "musicEndGain": END_GAIN_TE})
     scenes = []
     for scid, a, b, flags in SCENES[lang]:
         lines, beats = [], []
@@ -144,7 +148,7 @@ def spec(lang="en"):
               "data": data, "lines": lines}
         demo_i = [i for i, ln in enumerate(lines) if ln["who"] == "laptop"]
         if demo_i:   # the bed sits low under the demo voice
-            sc["duck_lines"] = [[i, DUCK_DEMO] for i in demo_i]
+            sc["duck_lines"] = [[i, DUCK_HOOK_TE if te and beats[i]["prop"] == "hook" else DUCK_DEMO] for i in demo_i]
         scenes.append(sc)
     s["scenes"] = scenes
     out = R / f"{sid}.json"
