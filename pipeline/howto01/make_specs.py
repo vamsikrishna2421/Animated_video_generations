@@ -41,7 +41,7 @@ L_EN = [
 L_TE = [
     ("laptop", "wide", "hook", OFFER, OFFER_SHOW),
     ("ravi", "ravi", "who", "నా ఆఫర్ ఎవరు చెప్తున్నారు?! వైఫై కూడా ఆఫ్!", "Who's announcing my offer?! The Wi-Fi is off!"),
-    ("ai", "wide", "nobody", "చింటూ ల్యాప్‌టాప్ అండి. | ఫ్రీ వాయిస్ మోడల్స్: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో.", "Chintu's laptop. <pause 0.25> Free voice models: Indic Parler for Telugu, Kokoro for English."),   # two takes: one take dropped the first sentence
+    ("ai", "wide", "nobody", "చింటూ ల్యాప్‌టాప్ అండి. | తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో. రెండూ ఫ్రీ.", "Chintu's laptop. <pause 0.25> Indic Parler for Telugu, Kokoro for English. Both free."),   # two takes: Parler dropped the first sentence, then "ఫ్రీ వాయిస్ మోడల్స్" (Ravi answers "free?!", so it goes last)
     ("ravi", "ravi", "pay", "ఫ్రీనా?! నేను ప్రతి నెలా ఒక యాప్ కి కడుతున్నా!", "Free?! I pay an app every month!"),
     ("ai", "laptop", "install", "ముందు ఇంగ్లీష్ ది, సులువు. రెండు ఇన్‌స్టాల్ కమాండ్లు.", "First the English one, it's easy. Two install commands."),
     ("ravi", "ravi", "type", "టైప్ చెయ్యాలా?! నేను ఒక్క వేలితో టైప్ చేస్తా!", "Type them?! I type with one finger!"),
@@ -78,7 +78,7 @@ MUST_EN = {"who": [("talking",), ("wi", "wifi", "wi-fi"), ("off",)], "nobody": [
            "cancel": [("slow",), ("free",), ("app",), ("cancelled", "canceled", "cancel")],
            "verdict": [("english",), ("kokoro", "cocoro"), ("telugu",), ("parler", "parlor", "parla", "parlay", "parle", "parley", "palay", "palae", "pale"), ("eight", "8", "8gb"), ("ram", "graphics")], "save": [("chintu",), ("save",)]}
 MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ", "फै")], "nobody": [("चिं", "चिन", "चीं")],
-           "nobody2": [("पार", "पाल", "parl"), ("कोक", "कोको", "koko")],
+           "nobody2": [("पार", "पाल", "parl"), ("कोक", "कोको", "koko"), ("फ्र", "फिर", "free")],
            "pay": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "install": [("इंग", "इन्ग", "इंगि"), ("स्टा", "स्टॉ", "stal")],
            "type": [("टैप", "टाइप", "ताइप", "टाईप", "टेप")], "code": [("प्श", "प्ष", "caption"), ("कॉप", "काप", "कोप", "copy")],
            "run": [("डाउ", "डौ", "down"), ("बी", "mb")], "after": [("टर", "टार")], "offline": [("लोड", "लोड़", "लोर"), ("सेक", "सैक")],
