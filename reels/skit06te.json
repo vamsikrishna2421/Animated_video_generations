@@ -32,10 +32,14 @@
  "beatSnap": true,
  "hideTimerInHook": true,
  "hideTimer": true,
- "tempo": 1.05,
+ "tempo": 1.08,
  "parler_lang": "te",
  "captionTop": 1500,
  "musicGapGain": 3.0,
+ "musicEndRamp": [
+  0.943,
+  5.0
+ ],
  "handle": "@ai_maastaaru_telugu",
  "scenes": [
   {
@@ -43,7 +47,7 @@
    "type": "sk_quiz",
    "tail": 0.1,
    "pre": 0.2,
-   "boost": 1.5,
+   "boost": 1.7,
    "data": {
     "beats": [
      {
@@ -74,7 +78,8 @@
      "text": "ఈ ముగ్గురిలో ఒకరు మనిషి కాదు! బజర్ మోగేలోపు కనిపెట్టండి!",
      "show": "One of these three isn't human! Spot it before the buzzer!",
      "maxgap": 0.3,
-     "gap": 0.24
+     "gap": 0.24,
+     "gain_db": 1.5
     },
     {
      "who": "host",
@@ -187,7 +192,7 @@
      "text": "హైదరాబాద్ ఫుడ్ గైడ్, నలభై రెండో పేజీ.",
      "show": "Hyderabad Food Guide, page 42.",
      "maxgap": 0.3,
-     "gap": 0.3
+     "gap": 0.2
     },
     {
      "who": "a",
@@ -204,7 +209,7 @@
      "text": "టైం అయిపోయింది! ఎవరది?",
      "show": "Time's up! Who is it?",
      "maxgap": 0.3,
-     "gap": 0.55
+     "gap": 0.4
     }
    ]
   },
@@ -213,7 +218,7 @@
    "type": "sk_quiz",
    "tail": 0.0,
    "lift": 1.0,
-   "pre": 0.45,
+   "pre": 0.35,
    "outro": true,
    "boost": 1.5,
    "rise": 1.3,
@@ -347,7 +352,11 @@
      "text": "అందుకే ఇలా టైప్ చేయండి: \"If you're not sure, say I don't know.\" [1] ఇప్పుడు, రాములు టిఫిన్స్?",
      "show": "So type this: \"If you're not sure, say I don't know.\" Now, Ramulu Tiffins?",
      "maxgap": 0.3,
-     "gap": 1.3
+     "gap": 1.3,
+     "pauses": {
+      "1": 0.45
+     },
+     "gain_db": 0.5
     },
     {
      "who": "c",
@@ -365,7 +374,7 @@
      "show": "At last, it told the truth!",
      "maxgap": 0.3,
      "gap": 0.24,
-     "gain_db": 1.3
+     "gain_db": 2.3
     },
     {
      "who": "host",
@@ -374,7 +383,7 @@
      "show": "Round two!",
      "maxgap": 0.3,
      "gap": 0.05,
-     "gain_db": 2.0
+     "gain_db": 4.8
     }
    ]
   }

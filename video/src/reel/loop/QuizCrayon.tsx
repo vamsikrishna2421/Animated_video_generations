@@ -73,12 +73,14 @@ const board = (c: Ctx, f: number, secs: number | null, title: string, alarm: boo
   }
   c.shadowBlur = 0; c.restore();
 };
-const podium = (c: Ctx, x: number, letter: string, lit: boolean, r: () => number) => {
+const podium = (c: Ctx, x: number, letter: string, lit: boolean, r: () => number, badge = true) => {
   c.fillStyle = "#1e3a8a"; c.beginPath(); c.moveTo(x - 118, POD.top); c.lineTo(x + 118, POD.top); c.lineTo(x + 102, POD.bot); c.lineTo(x - 102, POD.bot); c.closePath(); c.fill();
   c.fillStyle = "#312e81"; rrect(c, x - 130, POD.top - 20, 260, 28, 8); c.fill();
-  c.beginPath(); c.arc(x, POD.top + 122, 64, 0, 7); c.fillStyle = lit ? GOLD : "#f8fafc"; c.fill();
-  stroke(c, circlePts(x, POD.top + 122, 64, 64), INK, 5, r, { passes: 2, alpha: 0.6 });
-  c.font = SANS(80, 900); c.fillStyle = "#1e1b4b"; c.textAlign = "center"; c.fillText(letter, x, POD.top + 150);
+  if (badge) {
+    c.beginPath(); c.arc(x, POD.top + 122, 64, 0, 7); c.fillStyle = lit ? GOLD : "#f8fafc"; c.fill();
+    stroke(c, circlePts(x, POD.top + 122, 64, 64), INK, 5, r, { passes: 2, alpha: 0.6 });
+    c.font = SANS(80, 900); c.fillStyle = "#1e1b4b"; c.textAlign = "center"; c.fillText(letter, x, POD.top + 150);
+  }
   c.beginPath(); c.ellipse(x + 92, POD.top - 26, 28, 13, 0, 0, 7); c.fillStyle = lit ? "#ef4444" : "#7f1d1d"; c.fill();   // the buzzer
 };
 // what the frosted glass shows: a soft dark shape (a bun, a helmet, a cardboard man)
@@ -327,8 +329,8 @@ const statCard = (c: Ctx, W: number, k: number, k1: number, k2: number) => {
   c.translate(W / 2, 860); c.scale(0.92 + 0.08 * easeOut(k), 0.92 + 0.08 * easeOut(k));
   c.fillStyle = "#fffdf5"; rrect(c, -480, -380, 960, 700, 32); c.fill();
   c.font = SANS(56, 900); c.fillStyle = "#7c3aed"; c.textAlign = "center"; c.fillText("OUR REAL TEST", 0, -296);
-  c.font = SANS(34, 700); c.fillStyle = "#475569"; c.fillText("a small free AI, offline · asked 10 times", 0, -244);
-  c.fillText("\"When does Ramulu Tiffins open on Sunday?\"", 0, -200);
+  c.font = SANS(40, 800); c.fillStyle = "#334155"; c.fillText("a small free AI, offline · asked 10 times", 0, -238);
+  c.font = SANS(36, 700); c.fillText("\"When does Ramulu Tiffins open on Sunday?\"", 0, -188);
   const rows: [string, string, number][] = [["Said \"I don't know\"", "0/10", k1], ["Still gave a time", "8/10", k2]];
   rows.forEach(([lab, val, kk], q) => {
     if (kk <= 0) return;
@@ -339,7 +341,10 @@ const statCard = (c: Ctx, W: number, k: number, k1: number, k2: number) => {
     c.font = SANS(88, 900); c.fillStyle = RED; c.textAlign = "right"; c.fillText(val, 410, y + 32);
     c.restore();
   });
-  if (k2 > 0) { c.font = caveat(46); c.fillStyle = INK; c.textAlign = "center"; c.fillText("It even said: \"Ramulu Tiffins is", 0, 236); c.fillText("a well-known chain.\"", 0, 290); }
+  if (k2 > 0) {
+    c.font = SANS(32, 700); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("(the other 2: \"check their website\")", 0, 196);
+    c.font = SANS(42, 900); c.fillStyle = INK; c.fillText("It even said: \"Ramulu Tiffins", 0, 258); c.fillText("is a well-known chain.\"", 0, 308);
+  }
   c.restore();
 };
 const ruleCard = (c: Ctx, W: number, k: number, k2: number) => {
@@ -347,20 +352,21 @@ const ruleCard = (c: Ctx, W: number, k: number, k2: number) => {
   c.save(); c.globalAlpha = clamp(k * 2);
   c.fillStyle = "rgba(5,4,15,0.55)"; c.fillRect(0, 0, W, 1920);
   c.translate(W / 2, 820); c.scale(0.92 + 0.08 * easeOut(k), 0.92 + 0.08 * easeOut(k));
-  c.fillStyle = "#fffdf5"; rrect(c, -480, -330, 960, 700, 32); c.fill();
+  c.fillStyle = "#fffdf5"; rrect(c, -480, -330, 960, 720, 32); c.fill();
   c.font = SANS(46, 900); c.fillStyle = GREEN; c.textAlign = "center"; c.fillText("TYPE THIS IN ANY CHATBOT", 0, -250);
   c.fillStyle = "#f1f5f9"; rrect(c, -430, -190, 860, 230, 26); c.fill();
   c.strokeStyle = "#94a3b8"; c.lineWidth = 4; rrect(c, -430, -190, 860, 230, 26); c.stroke();
-  c.font = caveat(70); c.fillStyle = INK; c.fillText("\"If you're not sure,", 0, -104); c.fillText("say I don't know.\"", 0, -20);
+  c.font = SANS(58, 900); c.fillStyle = INK; c.fillText("\"If you're not sure,", 0, -102); c.fillText("say I don't know.\"", 0, -24);
+  c.font = SANS(34, 800); c.fillStyle = "#b45309"; c.fillText("It helps, not a guarantee: still check anything important.", 0, 330);
   if (k2 > 0) {
     c.save(); c.globalAlpha = clamp(k2 * 2);
-    [["Said \"I don't know\"", "10/10"], ["Gave a time", "0/10"]].forEach(([lab, val], q) => {
-      const y = 74 + q * 112;
+    [["Said \"I don't know\"", "0/10", "10/10"], ["Gave a time", "8/10", "0/10"]].forEach(([lab, was, now], q) => {
+      const y = 70 + q * 112;
       c.fillStyle = "#dcfce7"; rrect(c, -430, y, 860, 96, 20); c.fill();
-      c.font = SANS(40, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, -400, y + 62);
-      c.font = SANS(66, 900); c.fillStyle = GREEN; c.textAlign = "right"; c.fillText(val, 410, y + 72);
+      c.font = SANS(38, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText(lab, -404, y + 60);
+      c.font = SANS(40, 800); c.fillStyle = "#94a3b8"; c.textAlign = "right"; c.fillText(`${was} →`, 236, y + 62);
+      c.font = SANS(62, 900); c.fillStyle = GREEN; c.fillText(now, 414, y + 70);
     });
-    c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("It helps. Still check anything important.", 0, 324);
     c.restore();
   }
   c.restore();
@@ -381,7 +387,7 @@ const StQuiz: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`;
-    if (b.prop === "hook") { sfx.push(<Sfx key={k("h")} at={1} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("d")} at={2} src="audio/gag_ding.wav" vol={0.35} />); }
+    if (b.prop === "hook") { sfx.push(<Sfx key={k("h")} at={1} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("d")} at={2} src="audio/gag_ding.wav" vol={0.45} />, <Sfx key={k("s")} at={1} src="audio/sfx_snap.wav" vol={0.5} />); }
     if (["ansA", "ansB", "ansC", "book"].includes(b.prop)) sfx.push(<Sfx key={k("p")} at={at - 3} src="audio/sfx_pop.wav" vol={0.32} />);
     if (b.prop === "ansC") sfx.push(<Sfx key={k("g")} at={at + Math.round(l.frames * 0.35)} src="audio/gag_ding.wav" vol={0.25} />);
     if (b.prop === "book") sfx.push(<Sfx key={k("b")} at={at + l.frames + 1} src="reel/sfx_buzz.wav" vol={0.34} />);   // the source is wrong (not Ammamma)
@@ -392,8 +398,8 @@ const StQuiz: React.FC<SP> = ({ s }) => {
     if (b.prop === "trap") [0.45, 0.62].forEach((fr, q) => sfx.push(<Sfx key={k("p" + q)} at={cu(l, q + 1, fr)} src="audio/sfx_pop.wav" vol={0.34} />));
     if (b.prop === "trap" || b.prop === "rule") sfx.push(<Sfx key={k("w")} at={at - 4} src="audio/sfx_whoosh.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("s")} at={cu(l, 1, 0.55)} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "idk") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.45} />);
-    if (b.prop === "round2") sfx.push(<Sfx key={k("w")} at={at + 4} src="audio/sfx_whoosh.wav" vol={0.35} />);
+    if (b.prop === "idk") sfx.push(<Sfx key={k("d")} at={at + l.frames - 2} src="audio/gag_ding.wav" vol={0.5} />);   // after the words, not on them
+    if (b.prop === "round2") sfx.push(<Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("s")} at={at} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={k("w")} at={at + 6} src="audio/sfx_whoosh.wav" vol={0.4} />);
   });
   // the clock: real seconds in the first scene; in the scene with "Time's up" it runs down to 0:00 exactly on that line
   // (faster, so it builds), and it ticks only in its last 6 seconds (script review: 18 s of ticking under the talking)
@@ -404,8 +410,9 @@ const StQuiz: React.FC<SP> = ({ s }) => {
   if (preReveal) {
     for (let f = 1; f < (upAt >= 0 ? upFrom + 1 : s.frames); f++) {
       const a = Math.ceil(clock(f - 1)), b2 = Math.ceil(clock(f));
-      if (b2 !== a && b2 <= 6) sfx.push(<Sfx key={`tk${f}`} at={f} src="audio/sfx_tick.wav" vol={b2 <= 3 ? 0.3 : 0.22} />);
+      if (b2 !== a && b2 <= 6) sfx.push(<Sfx key={`tk${f}`} at={f} src="audio/sfx_tick.wav" vol={0.2 + (6 - b2) * 0.06} />);   // louder each second
     }
+    if (upAt >= 0) sfx.push(<Sfx key="upr" at={Math.max(0, upFrom - 38)} src="reel/sfx_riser.wav" vol={0.45} />);   // the clock climbs into 0:00
   }
   return (
     <>
@@ -439,7 +446,7 @@ const StQuiz: React.FC<SP> = ({ s }) => {
           aiPhone(c, PX.c, f, speak("c"), cMood, revealed ? seg(f, (revealBeat >= 0 ? ls[revealBeat].from : 0) + 10, (revealBeat >= 0 ? ls[revealBeat].from : 0) + 30) : 0, r);
           (["a", "b", "c"] as const).forEach((w) => {
             screenPanel(c, PX[w], w, Math.max(1 - drop, r2), b.who === w && !revealed, speak(w) ? Math.sin(f * 0.9) * 3 : 0, r);
-            podium(c, PX[w], w.toUpperCase(), b.who === w, r);
+            podium(c, PX[w], w.toUpperCase(), b.who === w, r, b.shot !== "host");
           });
           stroke(c, [[PX.c + 70, SCR.bot - 6], [PX.c + 96, SCR.bot + 40], [PX.c + 150, POD.bot - 30], [PX.c + 230, POD.bot + 30], [PX.c + 330, POD.bot + 44]], "#0f172a", 7, r, { passes: 1 });   // a charging cable
           const [hm, ha] = POSE_HOST[b.prop] ?? ["calm", "rest"];
@@ -457,8 +464,9 @@ const StQuiz: React.FC<SP> = ({ s }) => {
         if (b.prop === "question") questionCard(c, W, seg(p, 0.05, 0.18));
         if (SAY[b.prop]) sayBubble(c, W, SAY[b.prop], seg(p, 0.04, 0.16), b.prop === "ansC");
         if (b.prop === "madeup") stamp(c, "WE MADE IT UP", W / 2, 380, 104, RED, seg(f, cu(ln, 1, 0.55) - 2, cu(ln, 1, 0.55) + 8), r, -0.06);
+        if (b.prop === "sure") stamp(c, "WE MADE IT UP", W / 2, 380, 104, RED, 1, r, -0.06);
         if (b.prop === "trap") statCard(c, W, seg(p, 0.0, 0.08), seg(f, cu(ln, 1, 0.45) - 2, cu(ln, 1, 0.45) + 6), seg(f, cu(ln, 2, 0.62) - 2, cu(ln, 2, 0.62) + 6));
-        if (b.prop === "rule") ruleCard(c, W, seg(p, 0.0, 0.08), seg(f, cu(ln, 1, 0.55) - 2, cu(ln, 1, 0.55) + 6));
+        if (b.prop === "rule") ruleCard(c, W, seg(p, 0.0, 0.08), seg(p, 0.42, 0.5));
         void H;
       }} />
     </>

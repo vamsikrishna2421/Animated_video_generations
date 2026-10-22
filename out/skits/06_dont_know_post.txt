@@ -1,0 +1,78 @@
+SKIT 06: "Who's the AI?" (quiz-show skit, "guess which one is AI", 55 s English / 59 s Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/06_dont_know.mp4 (English page) · out/skits/06_dont_know_te.mp4 (Telugu page)
+Send copies: out/skits/06_dont_know_ig.mp4 · out/skits/06_dont_know_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on "Round two!" as the screens rise again, framed
+like frame 1, so it loops; the ask lives in the caption.
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Three contestants. One is an AI. It gave the surest answer of the night, about a tiffin centre we made up.
+
+Why it guesses: AI is trained like an exam with no negative marking. A confident guess can score; "I don't know" scores zero. (OpenAI's research, Sep 2025: training and testing "reward guessing over acknowledging uncertainty".)
+
+The fix, add one line to your question:
+"If you're not sure, say I don't know."
+Anthropic's guide for its own chatbot says the same: give the AI permission to say "I don't know"; it "can drastically reduce false information".
+
+Our real test, a small free AI (Qwen2.5 7B, offline), asked 10 times: "When does Ramulu Tiffins in Ameerpet open on Sunday?"
+Without the line: said "I don't know" 0/10 · still gave a time 8/10 · twice called it "a well-known chain"
+With the line: "I don't know" 10/10 · gave a time 0/10
+And it didn't start refusing what it knows: "In which city is the Charminar?" + the line: Hyderabad, 10/10.
+
+It helps; it isn't magic. Big chatbots with web search still get things wrong (EBU/BBC study, Oct 2025: 45% of AI answers about the news had a significant issue). For anything important (medicines, money, train times), open the source yourself.
+
+=== COMMENT PROMPT ===
+Who did you think was the AI? Comment A, B or C (be honest).
+
+=== HASHTAGS ===
+#AI #ChatGPT #AIHallucination #LearnAI #AITips #Hyderabad
+
+=== PINNED_COMMENT ===
+Copy-paste this at the end of any question: "If you're not sure, say I don't know. If you use a source, give me the link." Then open the link: an AI can cite a page that doesn't say what it claims (EBU/BBC 2025: sourcing problems in 31% of answers).
+"Does it work in ChatGPT / Gemini / Claude?" It's just a line in your question, so you can add it in any chatbot. Anthropic recommends it for Claude; on our small free model it took "I don't know" from 0/10 to 10/10. Most chatbots also let you save standing instructions (custom instructions, saved info), so you don't retype it.
+Was B the AI? No: Vamsi is a delivery rider. "Please contact the restaurant directly" is customer-care habit, and it's also what a careful AI sounds like. The tell was the confident, very specific answer with a made-up source.
+Sources: OpenAI, "Why language models hallucinate" (Sep 5, 2025) and the paper arxiv.org/abs/2509.04664 · Anthropic, "Reduce hallucinations": platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations · EBU/BBC News Integrity study, Oct 22, 2025 (reported by Al Jazeera and the BBC) · our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, temperature 0.8, 10 tries per question. Ramulu Tiffins is a name we made up for the test.
+
+=== COVER ===
+A quiz stage under spotlights: an LED board "WHO'S THE AI?" with a 0:30 clock, three frosted screens A, B, C with silhouettes, the host pointing at the camera.
+
+=== ALT_TEXT ===
+Crayon-animated quiz show. Host Meera tells the viewer one of three contestants behind frosted screens is an AI, and a clock starts at 30 seconds. She asks when Ramulu Tiffins in Ameerpet opens on Sunday. A says she has never heard of it; B says he can't confirm and asks to contact the restaurant directly; C answers "six thirty AM, famous for pure ghee karam dosa", and when asked for a source names "the Hyderabad Food Guide, page 42"; A says there's no such book. Time runs out; the screens drop: A is Ammamma, a grandmother, B is Vamsi, a delivery rider ("customer-care habit"), and C is a phone on a stool wearing a cardboard moustache. The host reveals the tiffin centre was made up. A card shows the channel's real test of a small free AI: asked 10 times, it said "I don't know" 0 times and still gave a time 8 times. A second card says to type "If you're not sure, say I don't know" in any chatbot; then it said "I don't know" 10 out of 10 times and gave a time 0 times. Asked again, the phone says "I don't know"; Ammamma laughs, "Finally, an honest answer!", and the host calls "Round two!" as the screens rise again.
+
+=== SOURCES (for comments) ===
+OpenAI, "Why language models hallucinate" (Sep 5, 2025): openai.com/index/why-language-models-hallucinate · paper: Kalai, Nachum, Vempala, Zhang, arxiv.org/abs/2509.04664 ("training and evaluation procedures reward guessing over acknowledging uncertainty")
+Anthropic, "Reduce hallucinations": "Allow Claude to say 'I don't know' ... This technique can drastically reduce false information"; "these techniques ... don't eliminate them entirely. Always validate critical information."
+EBU/BBC News Integrity in AI Assistants study, Oct 22, 2025: 45% of answers with at least one significant issue, 31% sourcing problems, 20% accuracy problems (ChatGPT, Copilot, Gemini, Perplexity; 22 public broadcasters, 18 countries) · Al Jazeera, Oct 22, 2025
+Our test: pipeline/skit06/dontknow_demo.py, series/scripts/skit06_demo/results.json (Oct 22, 2026)
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Mugguru contestants. Andulo okaru AI. Aa raatri andarikante confident answer adi ichhindi, memu kalpinchina tiffin center gurinchi.
+
+Enduku guess chestundi: AI ni negative marks leni exam laaga train chestaaru. Confident guess ki marks raavachhu; "teliyadu" ki zero. (OpenAI research, Sep 2025: training, testing "reward guessing over acknowledging uncertainty".)
+
+Fix, mee question chivara okka line add cheyyandi:
+"If you're not sure, say I don't know."
+Anthropic sontha guide kooda ide cheptundi: AI ki "I don't know" ane permission ivvandi; "false information" ni chaala taggistundi.
+
+Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline), 10 saarlu adigaam: "When does Ramulu Tiffins in Ameerpet open on Sunday?"
+Line lekunda: "I don't know" 0/10 · ayina time cheppindi 8/10 · rendu saarlu "a well-known chain" ani kooda annadi
+Line tho: "I don't know" 10/10 · time 0/10
+Telisina vaatiki refuse cheyyaledu: "In which city is the Charminar?" + line: Hyderabad, 10/10.
+
+Idi help chestundi, magic kaadu. Web search unna pedda chatbots kooda tappulu chestaayi (EBU/BBC study, Oct 2025: news gurinchi AI answers lo 45% lo pedda tappu). Mukhyamaina vishayaalu (mandulu, dabbulu, train timings) source open chesi meere choodandi.
+
+=== COMMENT PROMPT ===
+AI evaru ani meeru anukunnaru? A, B leda C comment cheyyandi (nijam cheppandi).
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #ChatGPT #AIHallucination #LearnAI #Hyderabad
+
+=== PINNED_COMMENT ===
+Mee question chivara idi copy-paste cheyyandi: "If you're not sure, say I don't know. If you use a source, give me the link." Taruvaata aa link open cheyyandi: AI cheppina page lo adi undakapovachhu (EBU/BBC 2025: 31% answers lo sourcing problems).
+"ChatGPT / Gemini / Claude lo pani chestunda?" Idi mee question lo okka line maatrame, ye chatbot lo ayina add cheyyochhu. Anthropic Claude ki recommend chestundi; maa chinna free model lo "I don't know" ni 0/10 nunchi 10/10 ki teesukochhindi. Chaala chatbots lo idi custom instructions / saved info lo save cheyyochhu, prati saari type cheyyakkarledu.
+B AI aa? Kaadu: Vamsi delivery rider. "Please contact the restaurant directly" customer-care alavaatu, careful AI kooda alaane maatladutundi. Asalu clue: chaala confident, chaala specific answer, kalpinchina source tho.
+Sources: OpenAI "Why language models hallucinate" (Sep 5, 2025), arxiv.org/abs/2509.04664 · Anthropic "Reduce hallucinations" (platform.claude.com docs) · EBU/BBC study, Oct 22, 2025 · maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, 10 tries. Ramulu Tiffins memu test kosam pettina peru.
+
+=== COVER ===
+Quiz stage, spotlights: LED board "WHO'S THE AI?" with a 0:30 clock, three frosted screens A, B, C with silhouettes, host pointing at the camera. (English visuals)

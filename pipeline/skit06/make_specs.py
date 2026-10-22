@@ -47,16 +47,17 @@ TE_SHOW = {   # English captions on the Telugu reel
 }
 NOCAP = set()
 # a: the hook and the question; b: the answers to "Time's up"; c: the reveal, the numbers, the fix, the loop
-SCENES = [("q_a", (1, 2), {"pre": 0.2, "boost": 1.5, "tail": 0.1}),
+SCENES = [("q_a", (1, 2), {"pre": 0.2, "boost": 1.7, "tail": 0.1}),   # render review: the first 3 s were no louder than the rest
           ("q_b", (3, 4, 5, 6, 7, 8, 9), {"lift": 0.6, "pre": 0.25, "boost": 1.5, "tail": 0.15}),
-          ("q_c", (10, 11, 12, 13, 14, 15, 16, 17, 18), {"lift": 1.0, "pre": 0.45, "outro": True, "boost": 1.5, "rise": 1.3,
+          ("q_c", (10, 11, 12, 13, 14, 15, 16, 17, 18), {"lift": 1.0, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.3,
                                                           "drop_at": [[2, "1"], [4, "1"]], "tail": 0.0})]   # drops before "We made it up" and "0/10"
-GAP = {5: 0.35, 7: 0.3, 9: 0.55, 14: 1.5, 15: 1.3}   # the gold answer, the buzz, the drumroll, the two cards' reads (script review: "4 s, can't read it")
+GAP = {5: 0.35, 7: 0.2, 9: 0.4, 14: 1.5, 15: 1.3}   # render review: cut the wait before the reveal   # the gold answer, the buzz, the drumroll, the two cards' reads (script review: "4 s, can't read it")
 GAIN = {"host": 0.0, "a": 0.5, "b": 0.3, "c": 0.0}
-GAIN_LINE = {13: 1.0, 16: 2.0, 17: 0.8, 18: 2.0}   # the phone-sound lines and "Round two!" over the rising bed sat 6-7.6 dB over it
-PAUSES = {"en": {12: {"1": 0.5}, 14: {"1": 0.45}}, "te": {12: {"1": 0.5}, 14: {"1": 0.45}}}   # a beat of silence (the drops) before "We made it up" and the numbers
-GAIN_TE = {}
-TEMPO = {"en": 1.08, "te": 1.05}
+GAIN_LINE = {1: 1.5, 13: 1.0, 16: 2.0, 17: 1.8, 18: 4.0}   # the phone-sound lines and "Round two!" over the rising bed sat 6-7.6 dB over it
+PAUSES = {"en": {12: {"1": 0.5}, 14: {"1": 0.45}, 15: {"1": 0.45}}, "te": {12: {"1": 0.5}, 14: {"1": 0.45}, 15: {"1": 0.45}}}   # 15: the rule, a beat, then the re-ask   # a beat of silence (the drops) before "We made it up" and the numbers
+GAIN_TE = {15: 0.5, 18: 0.8}   # Telugu: the rising bed sat 7.4-7.8 dB under them
+END_RAMP = {"en": [0.929, 3.0], "te": [0.943, 5.0]}   # [fraction, dB]: the bed swells from "Finally, an honest answer!" into "Round two!" (render review: the end sagged)
+TEMPO = {"en": 1.08, "te": 1.08}   # Telugu at 1.05 ran 59.6 s
 YT = {"q_a": "Who's the AI?", "q_b": "The surest answer", "q_c": "Let it say I don't know"}
 
 
@@ -69,6 +70,8 @@ def spec(lang):
          "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True, "beatSnap": True,
          "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,
          "musicGapGain": 3.0}
+    if END_RAMP[lang]:
+        s["musicEndRamp"] = END_RAMP[lang]
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
     scenes = []

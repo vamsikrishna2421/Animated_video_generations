@@ -1,0 +1,1052 @@
+{
+ "id": "skit06te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Who's the AI?",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "title": "Who's the AI? (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   1078,
+   1102
+  ],
+  [
+   1236,
+   1260
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   286,
+   1.7
+  ],
+  [
+   286,
+   1759,
+   1.5
+  ],
+  [
+   900,
+   1759,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1759,
+ "music": "reel/skit06te/score.wav",
+ "scenes": [
+  {
+   "id": "q_a",
+   "type": "sk_quiz",
+   "data": {
+    "beats": [
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "host",
+      "shot": "host",
+      "prop": "question",
+      "n": 2
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who's the AI?",
+     "title": "Who's the AI?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_01.wav",
+     "from": 10,
+     "frames": 114,
+     "words": [
+      {
+       "w": "One",
+       "from": 12,
+       "to": 19
+      },
+      {
+       "w": "of",
+       "from": 19,
+       "to": 23
+      },
+      {
+       "w": "these",
+       "from": 23,
+       "to": 41
+      },
+      {
+       "w": "three",
+       "from": 41,
+       "to": 50
+      },
+      {
+       "w": "isn't",
+       "from": 50,
+       "to": 60
+      },
+      {
+       "w": "human!",
+       "from": 60,
+       "to": 82
+      },
+      {
+       "w": "Spot",
+       "from": 82,
+       "to": 90
+      },
+      {
+       "w": "it",
+       "from": 90,
+       "to": 94
+      },
+      {
+       "w": "before",
+       "from": 94,
+       "to": 106
+      },
+      {
+       "w": "the",
+       "from": 106,
+       "to": 112
+      },
+      {
+       "w": "buzzer!",
+       "from": 112,
+       "to": 125
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_02.wav",
+     "from": 132,
+     "frames": 128,
+     "words": [
+      {
+       "w": "Question:",
+       "from": 133,
+       "to": 157
+      },
+      {
+       "w": "when",
+       "from": 157,
+       "to": 165
+      },
+      {
+       "w": "does",
+       "from": 165,
+       "to": 172
+      },
+      {
+       "w": "Ramulu",
+       "from": 172,
+       "to": 191
+      },
+      {
+       "w": "Tiffins",
+       "from": 191,
+       "to": 209
+      },
+      {
+       "w": "in",
+       "from": 209,
+       "to": 214
+      },
+      {
+       "w": "Ameerpet",
+       "from": 214,
+       "to": 232
+      },
+      {
+       "w": "open",
+       "from": 232,
+       "to": 239
+      },
+      {
+       "w": "on",
+       "from": 239,
+       "to": 244
+      },
+      {
+       "w": "Sunday?",
+       "from": 244,
+       "to": 260
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "q_b",
+   "type": "sk_quiz",
+   "data": {
+    "beats": [
+     {
+      "who": "a",
+      "shot": "podA",
+      "prop": "ansA",
+      "n": 3
+     },
+     {
+      "who": "b",
+      "shot": "podB",
+      "prop": "ansB",
+      "n": 4
+     },
+     {
+      "who": "c",
+      "shot": "podC",
+      "prop": "ansC",
+      "n": 5
+     },
+     {
+      "who": "host",
+      "shot": "host",
+      "prop": "source",
+      "n": 6
+     },
+     {
+      "who": "c",
+      "shot": "podC",
+      "prop": "book",
+      "n": 7
+     },
+     {
+      "who": "a",
+      "shot": "podA",
+      "prop": "nobook",
+      "n": 8
+     },
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "timeup",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The surest answer",
+     "title": "The surest answer",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 286,
+   "frames": 614,
+   "lines": [
+    {
+     "who": "a",
+     "name": "Contestant A",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/skit06te/line_03.wav",
+     "from": 8,
+     "frames": 79,
+     "words": [
+      {
+       "w": "Ramulu",
+       "from": 9,
+       "to": 22
+      },
+      {
+       "w": "Tiffins?",
+       "from": 22,
+       "to": 51
+      },
+      {
+       "w": "Never",
+       "from": 51,
+       "to": 62
+      },
+      {
+       "w": "heard",
+       "from": 62,
+       "to": 73
+      },
+      {
+       "w": "of",
+       "from": 73,
+       "to": 79
+      },
+      {
+       "w": "it.",
+       "from": 79,
+       "to": 86
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "b",
+     "name": "Contestant B",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit06te/line_04.wav",
+     "from": 93,
+     "frames": 149,
+     "words": [
+      {
+       "w": "I",
+       "from": 95,
+       "to": 98
+      },
+      {
+       "w": "can't",
+       "from": 98,
+       "to": 109
+      },
+      {
+       "w": "confirm",
+       "from": 109,
+       "to": 124
+      },
+      {
+       "w": "that.",
+       "from": 124,
+       "to": 143
+      },
+      {
+       "w": "Please",
+       "from": 143,
+       "to": 156
+      },
+      {
+       "w": "contact",
+       "from": 156,
+       "to": 180
+      },
+      {
+       "w": "the",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "restaurant",
+       "from": 188,
+       "to": 207
+      },
+      {
+       "w": "directly.",
+       "from": 207,
+       "to": 238
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "c",
+     "name": "Contestant C",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit06te/line_05.wav",
+     "from": 249,
+     "frames": 90,
+     "words": [
+      {
+       "w": "Six",
+       "from": 250,
+       "to": 255
+      },
+      {
+       "w": "thirty",
+       "from": 255,
+       "to": 265
+      },
+      {
+       "w": "sharp!",
+       "from": 265,
+       "to": 284
+      },
+      {
+       "w": "Their",
+       "from": 284,
+       "to": 292
+      },
+      {
+       "w": "ghee",
+       "from": 292,
+       "to": 299
+      },
+      {
+       "w": "karam",
+       "from": 299,
+       "to": 307
+      },
+      {
+       "w": "dosa",
+       "from": 307,
+       "to": 314
+      },
+      {
+       "w": "is",
+       "from": 314,
+       "to": 318
+      },
+      {
+       "w": "famous!",
+       "from": 318,
+       "to": 328
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_06.wav",
+     "from": 350,
+     "frames": 66,
+     "words": [
+      {
+       "w": "So",
+       "from": 352,
+       "to": 358
+      },
+      {
+       "w": "sure!",
+       "from": 358,
+       "to": 371
+      },
+      {
+       "w": "Source?",
+       "from": 371,
+       "to": 409
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "c",
+     "name": "Contestant C",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit06te/line_07.wav",
+     "from": 423,
+     "frames": 68,
+     "words": [
+      {
+       "w": "Hyderabad",
+       "from": 424,
+       "to": 444
+      },
+      {
+       "w": "Food",
+       "from": 444,
+       "to": 452
+      },
+      {
+       "w": "Guide,",
+       "from": 452,
+       "to": 470
+      },
+      {
+       "w": "page",
+       "from": 470,
+       "to": 477
+      },
+      {
+       "w": "42.",
+       "from": 477,
+       "to": 484
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "a",
+     "name": "Contestant A",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/skit06te/line_08.wav",
+     "from": 497,
+     "frames": 38,
+     "words": [
+      {
+       "w": "There's",
+       "from": 497,
+       "to": 511
+      },
+      {
+       "w": "no",
+       "from": 511,
+       "to": 516
+      },
+      {
+       "w": "such",
+       "from": 516,
+       "to": 525
+      },
+      {
+       "w": "book!",
+       "from": 525,
+       "to": 536
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_09.wav",
+     "from": 543,
+     "frames": 52,
+     "words": [
+      {
+       "w": "Time's",
+       "from": 543,
+       "to": 557
+      },
+      {
+       "w": "up!",
+       "from": 557,
+       "to": 564
+      },
+      {
+       "w": "Who",
+       "from": 564,
+       "to": 581
+      },
+      {
+       "w": "is",
+       "from": 581,
+       "to": 587
+      },
+      {
+       "w": "it?",
+       "from": 587,
+       "to": 595
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "q_c",
+   "type": "sk_quiz",
+   "data": {
+    "beats": [
+     {
+      "who": "host",
+      "shot": "reveal",
+      "prop": "reveal",
+      "n": 10
+     },
+     {
+      "who": "b",
+      "shot": "reveal",
+      "prop": "sorry",
+      "n": 11
+     },
+     {
+      "who": "host",
+      "shot": "phone",
+      "prop": "madeup",
+      "n": 12
+     },
+     {
+      "who": "c",
+      "shot": "phone",
+      "prop": "sure",
+      "n": 13
+     },
+     {
+      "who": "host",
+      "shot": "card",
+      "prop": "trap",
+      "n": 14
+     },
+     {
+      "who": "host",
+      "shot": "card",
+      "prop": "rule",
+      "n": 15
+     },
+     {
+      "who": "c",
+      "shot": "phone",
+      "prop": "idk",
+      "n": 16
+     },
+     {
+      "who": "a",
+      "shot": "reveal",
+      "prop": "honest",
+      "n": 17
+     },
+     {
+      "who": "host",
+      "shot": "wide",
+      "prop": "round2",
+      "n": 18
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Let it say I don't know",
+     "title": "Let it say I don't know",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 900,
+   "frames": 859,
+   "lines": [
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_10.wav",
+     "from": 11,
+     "frames": 54,
+     "words": [
+      {
+       "w": "C!",
+       "from": 12,
+       "to": 17
+      },
+      {
+       "w": "A",
+       "from": 17,
+       "to": 20
+      },
+      {
+       "w": "phone",
+       "from": 20,
+       "to": 37
+      },
+      {
+       "w": "with",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "a",
+       "from": 45,
+       "to": 48
+      },
+      {
+       "w": "moustache!",
+       "from": 48,
+       "to": 64
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "b",
+     "name": "Contestant B",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/skit06te/line_11.wav",
+     "from": 72,
+     "frames": 69,
+     "words": [
+      {
+       "w": "Sorry,",
+       "from": 73,
+       "to": 83
+      },
+      {
+       "w": "sorry!",
+       "from": 83,
+       "to": 111
+      },
+      {
+       "w": "Customer-care",
+       "from": 111,
+       "to": 131
+      },
+      {
+       "w": "habit!",
+       "from": 131,
+       "to": 141
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_12.wav",
+     "from": 148,
+     "frames": 96,
+     "words": [
+      {
+       "w": "Ramulu",
+       "from": 149,
+       "to": 161
+      },
+      {
+       "w": "Tiffins?",
+       "from": 161,
+       "to": 177
+      },
+      {
+       "w": "We",
+       "from": 177,
+       "to": 206
+      },
+      {
+       "w": "made",
+       "from": 206,
+       "to": 215
+      },
+      {
+       "w": "up",
+       "from": 215,
+       "to": 225
+      },
+      {
+       "w": "that",
+       "from": 225,
+       "to": 233
+      },
+      {
+       "w": "name!",
+       "from": 233,
+       "to": 244
+      }
+     ],
+     "cues": {
+      "1": 202
+     }
+    },
+    {
+     "who": "c",
+     "name": "Contestant C",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit06te/line_13.wav",
+     "from": 251,
+     "frames": 61,
+     "words": [
+      {
+       "w": "But",
+       "from": 252,
+       "to": 262
+      },
+      {
+       "w": "I",
+       "from": 262,
+       "to": 267
+      },
+      {
+       "w": "said",
+       "from": 267,
+       "to": 279
+      },
+      {
+       "w": "it",
+       "from": 279,
+       "to": 286
+      },
+      {
+       "w": "so",
+       "from": 286,
+       "to": 293
+      },
+      {
+       "w": "surely!",
+       "from": 293,
+       "to": 312
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_14.wav",
+     "from": 319,
+     "frames": 153,
+     "words": [
+      {
+       "w": "That's",
+       "from": 320,
+       "to": 332
+      },
+      {
+       "w": "the",
+       "from": 332,
+       "to": 361
+      },
+      {
+       "w": "trap.",
+       "from": 361,
+       "to": 372
+      },
+      {
+       "w": "Like",
+       "from": 372,
+       "to": 380
+      },
+      {
+       "w": "an",
+       "from": 380,
+       "to": 386
+      },
+      {
+       "w": "exam",
+       "from": 386,
+       "to": 394
+      },
+      {
+       "w": "with",
+       "from": 394,
+       "to": 407
+      },
+      {
+       "w": "no",
+       "from": 407,
+       "to": 412
+      },
+      {
+       "w": "negative",
+       "from": 412,
+       "to": 435
+      },
+      {
+       "w": "marking,",
+       "from": 435,
+       "to": 451
+      },
+      {
+       "w": "it",
+       "from": 451,
+       "to": 456
+      },
+      {
+       "w": "guesses.",
+       "from": 456,
+       "to": 472
+      }
+     ],
+     "cues": {
+      "1": 360,
+      "2": 435
+     }
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_15.wav",
+     "from": 517,
+     "frames": 176,
+     "words": [
+      {
+       "w": "So",
+       "from": 517,
+       "to": 522
+      },
+      {
+       "w": "type",
+       "from": 522,
+       "to": 530
+      },
+      {
+       "w": "this:",
+       "from": 530,
+       "to": 546
+      },
+      {
+       "w": "\"If",
+       "from": 546,
+       "to": 553
+      },
+      {
+       "w": "you're",
+       "from": 553,
+       "to": 564
+      },
+      {
+       "w": "not",
+       "from": 564,
+       "to": 579
+      },
+      {
+       "w": "sure,",
+       "from": 579,
+       "to": 588
+      },
+      {
+       "w": "say",
+       "from": 588,
+       "to": 594
+      },
+      {
+       "w": "I",
+       "from": 594,
+       "to": 607
+      },
+      {
+       "w": "don't",
+       "from": 607,
+       "to": 617
+      },
+      {
+       "w": "know.\"",
+       "from": 617,
+       "to": 628
+      },
+      {
+       "w": "Now,",
+       "from": 628,
+       "to": 657
+      },
+      {
+       "w": "Ramulu",
+       "from": 657,
+       "to": 674
+      },
+      {
+       "w": "Tiffins?",
+       "from": 674,
+       "to": 688
+      }
+     ],
+     "cues": {
+      "1": 650
+     }
+    },
+    {
+     "who": "c",
+     "name": "Contestant C",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/skit06te/line_16.wav",
+     "from": 732,
+     "frames": 26,
+     "words": [
+      {
+       "w": "I",
+       "from": 733,
+       "to": 736
+      },
+      {
+       "w": "don't",
+       "from": 736,
+       "to": 747
+      },
+      {
+       "w": "know.",
+       "from": 747,
+       "to": 757
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "a",
+     "name": "Contestant A",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/skit06te/line_17.wav",
+     "from": 765,
+     "frames": 53,
+     "words": [
+      {
+       "w": "At",
+       "from": 765,
+       "to": 770
+      },
+      {
+       "w": "last,",
+       "from": 770,
+       "to": 780
+      },
+      {
+       "w": "it",
+       "from": 780,
+       "to": 785
+      },
+      {
+       "w": "told",
+       "from": 785,
+       "to": 799
+      },
+      {
+       "w": "the",
+       "from": 799,
+       "to": 806
+      },
+      {
+       "w": "truth!",
+       "from": 806,
+       "to": 817
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "host",
+     "name": "Host",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/skit06te/line_18.wav",
+     "from": 825,
+     "frames": 19,
+     "words": [
+      {
+       "w": "Round",
+       "from": 826,
+       "to": 836
+      },
+      {
+       "w": "two!",
+       "from": 836,
+       "to": 844
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}
