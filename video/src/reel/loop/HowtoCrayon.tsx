@@ -294,11 +294,12 @@ const StHowto: React.FC<SP> = ({ s }) => {
             c.save(); c.translate(W / 2, 830);
             c.fillStyle = "#fffdf5"; rrect(c, -480, -360, 960, 720, 32); c.fill();
             c.font = SANS(64); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("WHICH ONE?", 0, -260);
-            const rows: [string, string, string, number][] = [["English", "Kokoro", "fast · 1.2 GB RAM", 0.05], ["Telugu", "Indic Parler", "slower · 4.7 GB RAM", 0.4]];
-            rows.forEach(([lang, name, note, t0], q) => {
+            const base: [string, string, string][] = [["English", "Kokoro", "fast · 1.2 GB RAM"], ["Telugu", "Indic Parler", "slower · 4.7 GB RAM"]];
+            const rows = (te ? [1, 0] : [0, 1]).map((j, q) => [...base[j], [0.05, 0.4][q], j] as [string, string, string, number, number]);   // in the order the voice says them
+            rows.forEach(([lang, name, note, t0, j], q) => {
               const k = seg(p, t0, t0 + 0.12); if (k <= 0) return;
               c.save(); c.globalAlpha = clamp(k * 2);
-              c.fillStyle = q ? "#ffedd5" : "#dcfce7"; rrect(c, -430, -190 + q * 190, 860, 160, 24); c.fill();
+              c.fillStyle = j ? "#ffedd5" : "#dcfce7"; rrect(c, -430, -190 + q * 190, 860, 160, 24); c.fill();
               c.font = SANS(54); c.fillStyle = INK; c.textAlign = "left"; c.fillText(`${lang} → ${name}`, -400, -105 + q * 190);
               c.font = SANS(40, 600); c.fillStyle = "#475569"; c.fillText(note, -400, -55 + q * 190);
               c.restore();

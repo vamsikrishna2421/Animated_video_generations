@@ -133,7 +133,7 @@ holds 2.6 s; "English + Telugu" on frame 1.
 16. రవి: సరే, ఎంత టైం పడుతుంది?
 17. ఏఐ: ముప్పై సెకన్లు, ఒక్కో లైన్ కి. [1] దాదాపు ఐదు జీబీ ర్యామ్.
 18. రవి: నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!
-19. ఏఐ: ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.
+19. ఏఐ: తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో. ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.
 20. రవి: చింటూ! ఇది సేవ్ చెయ్!
 
 Render review (Telugu, two viewers): both stopped on the Telugu offer at 0:00 (the part they'd forward); both: the
@@ -147,7 +147,9 @@ them; "TELUGU + ENGLISH" on frame 1. Captions: Kokoro is English-only, a Notepad
 (telugu.py loads the model on every run), close other apps on 8 GB; the Telugu YouTube text gained the run line and the
 Mac note.
 Second render review (Telugu): the hook, line 5, the tag and the laptop landed; "Telugu" still came out "dilgo"
-(lines 12 and 19: the isolated takes said "తిల్గో"/"తిలుగు", so both were re-voiced until the judge heard "తెలు"); the
+(lines 12 and 19: the isolated takes said "తిల్గో"/"తిలుగు"; line 12 re-voiced until the judge heard "తెలు"; line 19
+said "తిలుగుకి" mid-sentence in four more takes, so the verdict now opens on Telugu, as lines 3 and 13 do, and the card
+lists Telugu first); the
 caption's "English maatrame" was false (Kokoro also speaks Hindi, Spanish, French, Japanese...): now "Telugu ledu";
 one big "FIRST: Python 3.12" sticky (the voice relies on it); the tag counts down to the Telugu part; the English
 demo's quote is no longer on screen twice.

@@ -57,7 +57,7 @@ L_TE = [
     ("ravi", "ravi", "myoffer", "సరే, ఎంత టైం పడుతుంది?", "Okay, how long does it take?"),
     ("ai", "laptop", "slow", "ముప్పై సెకన్లు, ఒక్కో లైన్ కి. [1] దాదాపు ఐదు జీబీ ర్యామ్.", "30 seconds a line. Almost 5 GB of RAM."),   # the number right after the drop; RAM, not "మెమరీ" (heard as storage)
     ("ravi", "ravi", "cancel", "నెమ్మది... కానీ ఫ్రీ! ఆ యాప్ కట్!", "Slow... but free! That app is cancelled!"),
-    ("ai", "laptop", "verdict", "ఇంగ్లీష్ కి కోకోరో, తెలుగుకి ఇండిక్ పార్లర్. ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.", "English: Kokoro. Telugu: Indic Parler. 8 GB of RAM, no graphics card."),
+    ("ai", "laptop", "verdict", "తెలుగుకి ఇండిక్ పార్లర్, ఇంగ్లీష్ కి కోకోరో. | ఎనిమిది జీబీ ర్యామ్, గ్రాఫిక్స్ కార్డ్ అక్కర్లేదు.", "Telugu: Indic Parler. English: Kokoro. <pause 0.25> 8 GB of RAM, no graphics card."),   # Telugu first: mid-sentence, four takes said "తిలుగుకి"
     ("ravi", "wide", "save", "చింటూ! ఇది సేవ్ చెయ్!", "Chintu! Save this!"),
 ]
 DEMO = {HELLO: "series/scripts/howto01_demo/0.wav", OFFER: "series/scripts/howto01_demo/offer_1.wav"}
@@ -85,7 +85,7 @@ MUST_TE = {"who": [("फर", "offer"), ("फाइ", "फाई", "फ़ाइ
            "telugu": [("तेल", "टेल"), ("फर", "offer")], "parler": [("पार", "पाल"), ("लॉग", "लोग", "लाग", "login")],
            "parlour": [("पार", "पाल"), ("ब्यू", "बियू", "बू", "ब्यु")], "french": [("फ्रें", "फ्रैं", "फ्रेन", "फ़्रें", "french")],
            "myoffer": [("टैम", "टाइम", "टाईम", "टेम")], "slow": [("मुप", "मुब", "मूप", "मोप", "30"), ("जी", "gb"), ("याम", "राम", "रैम", "रेम", "ram")],
-           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("कोक", "कोको"), ("तेल", "टेल"), ("पार", "पाल"), ("र्याम", "रैम", "राम", "ram")],
+           "cancel": [("फ्र", "free"), ("याप", "यॉप", "ऐप", "एप", "याब")], "verdict": [("तेल", "टेल"), ("पार", "पाल"), ("कोक", "को को", "कोको")], "verdict2": [("र्याम", "रैम", "राम", "ram"), ("ग्रा", "ग्रॅ", "graph")],
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}   # short substrings: Whisper's Devanagari for Telugu varies (EP36, skit05);
 # "Telugu" itself must be heard "तेल"/"टेल": takes heard "थिलगो"/"तिलगु" said "తిల్గో" (second render review)
 TEMPO = {"ravi": 1.2, "ai": 1.16, "laptop": 1.0}
