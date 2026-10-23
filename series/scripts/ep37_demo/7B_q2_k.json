@@ -1,0 +1,316 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q2_k)",
+ "size": "7B",
+ "quant": "q2_k",
+ "bits": 2,
+ "parameters": 7610000000.0,
+ "file_gb": 3.02,
+ "files": [
+  "qwen2.5-7b-instruct-q2_k.gguf"
+ ],
+ "load_seconds": 0.7,
+ "download_seconds": 14.3,
+ "machine": "x86_64, 4 CPU cores, no graphics card",
+ "decoding": "greedy (temperature 0), llama.cpp via llama-cpp-python, 4 threads",
+ "sort": {
+  "right": 39,
+  "of": 40,
+  "seconds_per_message": 1.42,
+  "rows": [
+   {
+    "message": "anna 2 kg rice and 1 litre oil pls",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "send 6 eggs and 1 bread to flat 302",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "1 packet tea powder, 2 milk packets",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "can you deliver 5 kg atta by evening",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "need 1 kg sugar urgently",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "2 dozen bananas and 1 coconut please",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "same as last week order, send by 7",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "half kg toor dal, 1 detergent",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "pack 3 soaps and 1 toothpaste, i will collect",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "add 2 curd to my order",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "1 kg onions 1 kg tomatoes",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "send one gas lighter and a matchbox",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "sent 450 on UPI, pls check",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "paid last month balance anna",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "UPI failed, will pay cash in evening",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "how much do I owe you this month?",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "transferred 1200, screenshot attached",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "can I pay on Friday? salary not come",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "money sent to your number, 780",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "please send me this month's bill amount",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "paid 300 cash to your son",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "QR code not working, what is your UPI id?",
+    "right_label": "PAYMENT",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": false
+   },
+   {
+    "message": "the milk you sent yesterday was sour",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "eggs were broken, 3 of them",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "you gave me wrong change, 50 short",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "rice has small stones",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "delivery boy came 2 hours late",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "biscuits packet was expired",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "oil packet was leaking all over my bag",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "you sent sugar instead of salt",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "bread had fungus, very bad",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "your boy was rude to my mother",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "are you open on Sunday?",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "happy diwali anna and family",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "is the shop open till 10 tonight?",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "can I park my bike near your shop for 1 hour?",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "come home, lunch is ready",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "do you have a job for my nephew?",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "what time does the milk van come?",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   },
+   {
+    "message": "thank you anna, see you tomorrow",
+    "right_label": "OTHER",
+    "model_label": "OTHER",
+    "reply": "OTHER",
+    "ok": true
+   }
+  ]
+ },
+ "reply": {
+  "read_prompt_s": 3.87,
+  "whole_reply_s": 11.93,
+  "reply_tokens": 52,
+  "reply_words": 34,
+  "tokens_per_s_writing": 6.33,
+  "words_per_s_writing": 4.22,
+  "runs_whole_reply_s": [
+   11.93,
+   11.82,
+   12.0
+  ],
+  "reply": "Sure, Anna, we will send 2 kg rice, 1 litre sunflower oil, 6 eggs, and 1 packet of tea powder to flat 302. Everything confirmed and will be delivered within 30 minutes. Thank you!"
+ }
+}

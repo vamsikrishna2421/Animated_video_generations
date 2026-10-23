@@ -1,0 +1,484 @@
+{
+ "model": "Qwen/Qwen2.5-1.5B-Instruct-GGUF (q2_k)",
+ "size": "1.5B",
+ "quant": "q2_k",
+ "bits": 2,
+ "parameters": 1540000000.0,
+ "file_gb": 0.75,
+ "files": [
+  "qwen2.5-1.5b-instruct-q2_k.gguf"
+ ],
+ "load_seconds": 0.6,
+ "download_seconds": 6.0,
+ "machine": "x86_64, 4 CPU cores, no graphics card",
+ "decoding": "greedy (temperature 0), llama.cpp via llama-cpp-python, 4 threads",
+ "sort": {
+  "right": 20,
+  "of": 40,
+  "seconds_per_message": 0.3,
+  "rows": [
+   {
+    "message": "anna 2 kg rice and 1 litre oil pls",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "send 6 eggs and 1 bread to flat 302",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "1 packet tea powder, 2 milk packets",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "can you deliver 5 kg atta by evening",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "need 1 kg sugar urgently",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "2 dozen bananas and 1 coconut please",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "same as last week order, send by 7",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "half kg toor dal, 1 detergent",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "pack 3 soaps and 1 toothpaste, i will collect",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "add 2 curd to my order",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "1 kg onions 1 kg tomatoes",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "send one gas lighter and a matchbox",
+    "right_label": "ORDER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": true
+   },
+   {
+    "message": "sent 450 on UPI, pls check",
+    "right_label": "PAYMENT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "paid last month balance anna",
+    "right_label": "PAYMENT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "UPI failed, will pay cash in evening",
+    "right_label": "PAYMENT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "how much do I owe you this month?",
+    "right_label": "PAYMENT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "transferred 1200, screenshot attached",
+    "right_label": "PAYMENT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "can I pay on Friday? salary not come",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "money sent to your number, 780",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "please send me this month's bill amount",
+    "right_label": "PAYMENT",
+    "model_label": "PAYMENT",
+    "reply": "PAYMENT",
+    "ok": true
+   },
+   {
+    "message": "paid 300 cash to your son",
+    "right_label": "PAYMENT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": false
+   },
+   {
+    "message": "QR code not working, what is your UPI id?",
+    "right_label": "PAYMENT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "the milk you sent yesterday was sour",
+    "right_label": "COMPLAINT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "eggs were broken, 3 of them",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "you gave me wrong change, 50 short",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "rice has small stones",
+    "right_label": "COMPLAINT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "delivery boy came 2 hours late",
+    "right_label": "COMPLAINT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "biscuits packet was expired",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "oil packet was leaking all over my bag",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "you sent sugar instead of salt",
+    "right_label": "COMPLAINT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "bread had fungus, very bad",
+    "right_label": "COMPLAINT",
+    "model_label": "COMPLAINT",
+    "reply": "COMPLAINT",
+    "ok": true
+   },
+   {
+    "message": "your boy was rude to my mother",
+    "right_label": "COMPLAINT",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "are you open on Sunday?",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "happy diwali anna and family",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "is the shop open till 10 tonight?",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "can I park my bike near your shop for 1 hour?",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "come home, lunch is ready",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "do you have a job for my nephew?",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "what time does the milk van come?",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   },
+   {
+    "message": "thank you anna, see you tomorrow",
+    "right_label": "OTHER",
+    "model_label": "ORDER",
+    "reply": "ORDER",
+    "ok": false
+   }
+  ]
+ },
+ "bills": {
+  "right": 3,
+  "of": 20,
+  "seconds_per_bill": 4.7,
+  "tokens_per_second": 22.71,
+  "rows": [
+   {
+    "order": "anna 2 kg tomato, 1 dozen eggs pls",
+    "right_total": 158,
+    "model_total": 1000.0,
+    "ok": false,
+    "seconds": 11.4,
+    "reply": "Tom: 2 kg × 40 Rs per kg = 2 × 40 = 80 Rs onion: 1 dozen × 78 Rs = 78 × 1 = 78 Rs potato: 1 × 45 Rs = 45 Rs rice: 1 × 62 Rs = 62 Rs toor dal: 1 × 140 Rs = 140 Rs sugar: 1 × 46 Rs = 46 Rs curd: 1 × 35 Rs = 35 Rs bread: 1 × 45 Rs = 45 Rs detergent powder: 1 × 38 Rs = 38 Rs tea powder: 1 × 125 Rs = 125 Rs coconut oil: 1 × 110 Rs = 110 Rs biscuits: 1 × 20 Rs = 20 Rs\n\nAssistant: TOTAL: 1000 Rs"
+   },
+   {
+    "order": "1 kg rice, 1 kg toor dal, 2 milk packets",
+    "right_total": 258,
+    "model_total": 628.0,
+    "ok": false,
+    "seconds": 6.1,
+    "reply": "1. 1 kg rice: Rs 62 per kg\n   2 kg rice: 62 * 2 = 128\n\n2. 1 kg toor dal: Rs 140 per kg\n   2 kg toor dal: 140 * 2 = 280\n\n3. 2 milk packets: Rs 28 per 500 ml packet\n   2 kg rice: 28 * 500 = 280\n\n4. Total: 128 + 280 + 280 = 628\n\nTOTAL: 628"
+   },
+   {
+    "order": "3 bath soaps and 1 detergent powder",
+    "right_total": 234,
+    "model_total": 158.0,
+    "ok": false,
+    "seconds": 4.4,
+    "reply": "Let's calculate the cost for each item:\n\n1. **Bath soap**: Rs 38 per 1 bar\n   - Cost: Rs 38\n2. **Detergent powder**: Rs 120 per 1 kg\n   - Cost: Rs 120\n\nNow, let's add these costs together:\n\n38 + 120 = 158\n\nThe total cost for the order is Rs 158."
+   },
+   {
+    "order": "half kg sugar and one tea powder",
+    "right_total": 148,
+    "model_total": 145.0,
+    "ok": false,
+    "seconds": 6.0,
+    "reply": "Here is the total cost based on the items:\n\n- Sugar: Rs 40 per kg, so half kg: \\( \\frac{40}{2} = 20 \\) Rs\n- Tea powder: Rs 125 per 250 g, so half kg: \\( \\frac{125}{250} = 0.5 \\) Rs\n\nNow, let's calculate the total cost:\n\n- Sugar: Rs 20\n- Tea powder: Rs 125\n- Total: Rs 20 + Rs 125 = Rs 145\n\nThe total cost is Rs 145."
+   },
+   {
+    "order": "2 bread 4 biscuits",
+    "right_total": 170,
+    "model_total": 170.0,
+    "ok": true,
+    "seconds": 2.7,
+    "reply": "The cost of 2 bread is: 2 × 45 = 90 rupees\nThe cost of 4 biscuits is: 4 × 20 = 80 rupees\nThe total cost: 90 + 80 = 170 rupees"
+   },
+   {
+    "order": "1 coconut oil, 2 kg onion, 1 kg potato",
+    "right_total": 210,
+    "model_total": null,
+    "ok": false,
+    "seconds": 9.2,
+    "reply": "110: Rs 110, 210: Rs 210, 300: Rs 300. 110: Rs 110, 210: Rs 210, 300: Rs 300. 110: Rs 110, 210: Rs 210, 300: Rs 300. 110: Rs 110, 210: Rs 210, 300: Rs 300. 110: Rs 110, 210: Rs 210, 300: Rs 300. 110: Rs 110, 210: Rs 210, 300: Rs 300. 110: Rs 110, 210: Rs 210, "
+   },
+   {
+    "order": "2 curd 2 milk",
+    "right_total": 126,
+    "model_total": 350.0,
+    "ok": false,
+    "seconds": 0.8,
+    "reply": "The bill total is: 350.00 Rs"
+   },
+   {
+    "order": "5 kg rice please",
+    "right_total": 310,
+    "model_total": null,
+    "ok": false,
+    "seconds": 1.1,
+    "reply": "The cost of 5 kg rice is: 5 x 62 = 310 Rs."
+   },
+   {
+    "order": "1 doz eggs, 1 bread, 2 milk, 1 curd",
+    "right_total": 214,
+    "model_total": 100.0,
+    "ok": false,
+    "seconds": 2.2,
+    "reply": "1 eggs: Rs 78, 1 bread: Rs 45, 2 milk: Rs 28, 1 curd: Rs 35. Total: Rs 100."
+   },
+   {
+    "order": "2 kg dal and 2 kg sugar",
+    "right_total": 372,
+    "model_total": null,
+    "ok": false,
+    "seconds": 8.9,
+    "reply": "Tomato: 40 × 2 = 80\nOnion: 35 × 2 = 70\nPotato: 30 × 2 = 60\nTom: 80\nOn: 70\nPot: 60\nTomato: 80\nOnion: 70\nPotato: 60\nTom: 80\nOn: 70\nPot: 60\nTomato: 80\nOn: 70\nPotato: 60\nTom: 80\nOn: 70\nPot: 60\nTom: 80\nOn: 70\nPot: 60\nTom: 80\nOn: 70\nTom: 80\nOn: 70\nPotato: 60\nTomato: 80\nOn: 70\nPot: 60\nTom: 80\nOn: 70\nPot: "
+   },
+   {
+    "order": "half kg tomato, 1 kg onion",
+    "right_total": 55,
+    "model_total": 37.0,
+    "ok": false,
+    "seconds": 2.0,
+    "reply": "Tomato: 40 × 0.5 = 20, Onion: 35 × 0.5 = 17, Total: 20 + 17 = 37."
+   },
+   {
+    "order": "3 biscuits, 1 tea powder, 1 kg sugar",
+    "right_total": 231,
+    "model_total": 91.0,
+    "ok": false,
+    "seconds": 1.5,
+    "reply": "3: Rs 20, 1: Rs 35, 1: Rs 46. Total: Rs 91."
+   },
+   {
+    "order": "2 coconut oil",
+    "right_total": 220,
+    "model_total": 4.4,
+    "ok": false,
+    "seconds": 5.6,
+    "reply": "Let's break it down and calculate the total cost:\n\n1. **Coconut oil:** Rs 110 per 500 ml\n   - Cost per 500 ml: Rs 110\n   - Cost per 1 kg: Rs 110 / 500 ml = Rs 2.20 per 100 g\n\n2. **Total cost per item:** Rs 2.20 per 100 g\n\n3. **Total cost for 2 coconut oil:** Rs 2.20 * 2 = Rs 4.40\n\n**Total:** Rs 4.40"
+   },
+   {
+    "order": "1 detergent, 2 soap, 1 kg potato",
+    "right_total": 226,
+    "model_total": 108.75,
+    "ok": false,
+    "seconds": 5.3,
+    "reply": "Tomato: Rs 40 per kg, 2 kg: 40 * 2 = Rs 80\nCurd: Rs 35 per 500 g, 500 g: Rs 35 * 500 / 1000 = Rs 8.75\nBiscuits: Rs 20 per 1 packet, 1 packet: Rs 20 * 1 = Rs 20\nTotal: Rs 80 + 8.75 + 20 = Rs 108.75"
+   },
+   {
+    "order": "4 milk packets and 2 bread",
+    "right_total": 202,
+    "model_total": 202.0,
+    "ok": true,
+    "seconds": 5.8,
+    "reply": "The total cost for the 4 milk packets and 2 bread is as follows:\n\n- Milk: 4 × Rs 28 per 500 ml packet = Rs 4 × 28 = Rs 112\n- Bread: 2 × Rs 45 per 1 packet = Rs 2 × 45 = Rs 90\n\nNow, add the costs:\n\n- Milk: Rs 112\n- Bread: Rs 90\n\nThe total cost is:\n\n- Total: Rs 112 + Rs 90 = Rs 202\n\nTOTAL: Rs 202"
+   },
+   {
+    "order": "2 dozen eggs",
+    "right_total": 156,
+    "model_total": 156.0,
+    "ok": true,
+    "seconds": 4.8,
+    "reply": "Let's break it down and calculate the cost:\n\n1. **Eggs**: Rs 78 per dozen\n   - Cost per egg: \\( \\frac{78}{12} \\approx 6.5 \\) (Rs)\n   - Cost per dozen: \\( 78 \\)\n\n2. **Total cost**: \\( 78 \\times 2 \\approx 156 \\) (Rs)\n\n**Total**: Rs 156\n\n**Note**: The total cost for 2 dozen eggs is Rs 156."
+   },
+   {
+    "order": "1 kg each tomato onion potato rice",
+    "right_total": 167,
+    "model_total": 157.0,
+    "ok": false,
+    "seconds": 4.2,
+    "reply": "Tomato: Rs 40 x 1 = Rs 40\nOnion: Rs 35 x 1 = Rs 35\nPotato: Rs 30 x 1 = Rs 30\nRice: Rs 62 x 1 = Rs 62\n\nTotal: Rs 40 + Rs 35 + Rs 30 + Rs 62 = Rs 157\n\nTOTAL: Rs 157"
+   },
+   {
+    "order": "3 kg sugar, 2 tea powder",
+    "right_total": 388,
+    "model_total": 250.0,
+    "ok": false,
+    "seconds": 2.0,
+    "reply": "3 x 35 = Rs 95\n2 x 125 = Rs 250\n\nTOTAL: Rs 250\n\nNote: The total cost of the items is Rs 250."
+   },
+   {
+    "order": "1 curd 1 bread 5 biscuits",
+    "right_total": 180,
+    "model_total": 125.0,
+    "ok": false,
+    "seconds": 1.6,
+    "reply": "1 curd: Rs 35, 1 bread: Rs 45, 5 biscuits: Rs 20, 1 TOTAL: 125"
+   },
+   {
+    "order": "2 kg rice, 1 kg dal, 1 coconut oil, 2 soaps",
+    "right_total": 450,
+    "model_total": null,
+    "ok": false,
+    "seconds": 9.0,
+    "reply": "Here is the breakdown of the items and their costs:\n\n- 2 kg rice: 2 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62 = 4 * 62\n- 1 kg dal: 1 * 140 = 1 * 140 = 1 * 140 = 1 * 140 = 1 * 140 = 1 * 140 = 1 * 140 = "
+   }
+  ]
+ },
+ "reply": {
+  "read_prompt_s": 0.85,
+  "whole_reply_s": 2.67,
+  "reply_tokens": 47,
+  "reply_words": 40,
+  "tokens_per_s_writing": 25.38,
+  "words_per_s_writing": 22.07,
+  "runs_whole_reply_s": [
+   2.66,
+   2.67,
+   2.73
+  ],
+  "reply": "Sure, I will be happy to help you out. Please confirm that I will be able to deliver the items as per your request, and I will be ready to do so within 30 minutes. Thank you for your time."
+ }
+}
