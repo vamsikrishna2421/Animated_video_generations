@@ -1,0 +1,1070 @@
+{
+ "id": "ep37v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Quantization",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "title": "The squeezed brain (EP37: Quantization)",
+ "handle": "@ai_maastaaru",
+ "label": "EP37",
+ "fps": 30,
+ "musicDrops": [
+  [
+   935,
+   965
+  ],
+  [
+   1591,
+   1639
+  ],
+  [
+   1552,
+   1582
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   286,
+   1.7
+  ],
+  [
+   286,
+   759,
+   1.45
+  ],
+  [
+   760,
+   1289,
+   1.45
+  ],
+  [
+   1289,
+   1651,
+   1.6
+  ],
+  [
+   1289,
+   1651,
+   1.4,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1651,
+ "music": "reel/ep37v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_squeeze",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "squeeze",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Lunch is ready: ORDER",
+     "title": "Lunch is ready: ORDER",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_01.wav",
+     "from": 4,
+     "frames": 96,
+     "words": [
+      {
+       "w": "My",
+       "from": 10,
+       "to": 13
+      },
+      {
+       "w": "wife",
+       "from": 13,
+       "to": 18
+      },
+      {
+       "w": "says",
+       "from": 18,
+       "to": 27
+      },
+      {
+       "w": "\"lunch",
+       "from": 27,
+       "to": 34
+      },
+      {
+       "w": "is",
+       "from": 34,
+       "to": 37
+      },
+      {
+       "w": "ready\",",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "and",
+       "from": 45,
+       "to": 49
+      },
+      {
+       "w": "you",
+       "from": 49,
+       "to": 61
+      },
+      {
+       "w": "made",
+       "from": 61,
+       "to": 66
+      },
+      {
+       "w": "it",
+       "from": 66,
+       "to": 69
+      },
+      {
+       "w": "an",
+       "from": 69,
+       "to": 77
+      },
+      {
+       "w": "ORDER?!",
+       "from": 77,
+       "to": 85
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_02.wav",
+     "from": 108,
+     "frames": 118,
+     "words": [
+      {
+       "w": "Your",
+       "from": 111,
+       "to": 120
+      },
+      {
+       "w": "phone",
+       "from": 120,
+       "to": 127
+      },
+      {
+       "w": "was",
+       "from": 127,
+       "to": 137
+      },
+      {
+       "w": "full.",
+       "from": 137,
+       "to": 156
+      },
+      {
+       "w": "So",
+       "from": 156,
+       "to": 165
+      },
+      {
+       "w": "I",
+       "from": 165,
+       "to": 167
+      },
+      {
+       "w": "squeezed",
+       "from": 167,
+       "to": 176
+      },
+      {
+       "w": "my",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "brain",
+       "from": 180,
+       "to": 186
+      },
+      {
+       "w": "from",
+       "from": 186,
+       "to": 195
+      },
+      {
+       "w": "4",
+       "from": 195,
+       "to": 197
+      },
+      {
+       "w": "bits",
+       "from": 197,
+       "to": 203
+      },
+      {
+       "w": "to",
+       "from": 203,
+       "to": 213
+      },
+      {
+       "w": "2.",
+       "from": 213,
+       "to": 217
+      }
+     ],
+     "cues": {
+      "1": 154
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_03.wav",
+     "from": 230,
+     "frames": 41,
+     "words": [
+      {
+       "w": "You",
+       "from": 235,
+       "to": 240
+      },
+      {
+       "w": "squeezed",
+       "from": 240,
+       "to": 250
+      },
+      {
+       "w": "it?!",
+       "from": 250,
+       "to": 256
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_squeeze",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "round",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "prices",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "board",
+      "prop": "board4",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "two",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "board",
+      "prop": "board2",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Quantization = rounding",
+     "title": "Quantization = rounding",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 286,
+   "frames": 473,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_04.wav",
+     "from": 10,
+     "frames": 104,
+     "words": [
+      {
+       "w": "It's",
+       "from": 11,
+       "to": 22
+      },
+      {
+       "w": "called",
+       "from": 22,
+       "to": 34
+      },
+      {
+       "w": "quantization:",
+       "from": 34,
+       "to": 64
+      },
+      {
+       "w": "rounding",
+       "from": 64,
+       "to": 75
+      },
+      {
+       "w": "every",
+       "from": 75,
+       "to": 82
+      },
+      {
+       "w": "number",
+       "from": 82,
+       "to": 91
+      },
+      {
+       "w": "in",
+       "from": 91,
+       "to": 95
+      },
+      {
+       "w": "my",
+       "from": 95,
+       "to": 98
+      },
+      {
+       "w": "brain.",
+       "from": 98,
+       "to": 107
+      }
+     ],
+     "cues": {
+      "1": 64
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_05.wav",
+     "from": 119,
+     "frames": 64,
+     "words": [
+      {
+       "w": "Rounding?",
+       "from": 120,
+       "to": 149
+      },
+      {
+       "w": "Like",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "my",
+       "from": 155,
+       "to": 159
+      },
+      {
+       "w": "prices?",
+       "from": 159,
+       "to": 169
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_06.wav",
+     "from": 188,
+     "frames": 133,
+     "words": [
+      {
+       "w": "Full",
+       "from": 192,
+       "to": 198
+      },
+      {
+       "w": "size:",
+       "from": 198,
+       "to": 206
+      },
+      {
+       "w": "right",
+       "from": 206,
+       "to": 227
+      },
+      {
+       "w": "down",
+       "from": 227,
+       "to": 233
+      },
+      {
+       "w": "to",
+       "from": 233,
+       "to": 237
+      },
+      {
+       "w": "the",
+       "from": 237,
+       "to": 242
+      },
+      {
+       "w": "paisa.",
+       "from": 242,
+       "to": 262
+      },
+      {
+       "w": "4-bit:",
+       "from": 262,
+       "to": 280
+      },
+      {
+       "w": "the",
+       "from": 280,
+       "to": 285
+      },
+      {
+       "w": "nearest",
+       "from": 285,
+       "to": 302
+      },
+      {
+       "w": "₹10.",
+       "from": 302,
+       "to": 309
+      }
+     ],
+     "cues": {
+      "1": 245
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_07.wav",
+     "from": 326,
+     "frames": 34,
+     "words": [
+      {
+       "w": "And",
+       "from": 333,
+       "to": 337
+      },
+      {
+       "w": "two-bit?",
+       "from": 337,
+       "to": 345
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_08.wav",
+     "from": 365,
+     "frames": 87,
+     "words": [
+      {
+       "w": "4",
+       "from": 370,
+       "to": 372
+      },
+      {
+       "w": "prices",
+       "from": 372,
+       "to": 379
+      },
+      {
+       "w": "per",
+       "from": 379,
+       "to": 383
+      },
+      {
+       "w": "shelf.",
+       "from": 383,
+       "to": 395
+      },
+      {
+       "w": "Biscuits:",
+       "from": 395,
+       "to": 422
+      },
+      {
+       "w": "free.",
+       "from": 422,
+       "to": 442
+      }
+     ],
+     "cues": {
+      "1": 396
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_squeeze",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 16 vs 4 vs 2 bits",
+     "title": "Our test: 16 vs 4 vs 2 bits",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 760,
+   "frames": 529,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_09.wav",
+     "from": 9,
+     "frames": 120,
+     "words": [
+      {
+       "w": "Full",
+       "from": 16,
+       "to": 22
+      },
+      {
+       "w": "size",
+       "from": 22,
+       "to": 27
+      },
+      {
+       "w": "got",
+       "from": 27,
+       "to": 32
+      },
+      {
+       "w": "1",
+       "from": 32,
+       "to": 34
+      },
+      {
+       "w": "wrong",
+       "from": 34,
+       "to": 41
+      },
+      {
+       "w": "out",
+       "from": 41,
+       "to": 46
+      },
+      {
+       "w": "of",
+       "from": 46,
+       "to": 49
+      },
+      {
+       "w": "40.",
+       "from": 49,
+       "to": 54
+      },
+      {
+       "w": "How",
+       "from": 54,
+       "to": 58
+      },
+      {
+       "w": "many",
+       "from": 58,
+       "to": 80
+      },
+      {
+       "w": "will",
+       "from": 80,
+       "to": 86
+      },
+      {
+       "w": "4-bit",
+       "from": 86,
+       "to": 96
+      },
+      {
+       "w": "get",
+       "from": 96,
+       "to": 104
+      },
+      {
+       "w": "wrong?",
+       "from": 104,
+       "to": 113
+      }
+     ],
+     "cues": {
+      "1": 55
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_10.wav",
+     "from": 207,
+     "frames": 97,
+     "words": [
+      {
+       "w": "Just",
+       "from": 211,
+       "to": 222
+      },
+      {
+       "w": "1.",
+       "from": 222,
+       "to": 237
+      },
+      {
+       "w": "A",
+       "from": 237,
+       "to": 239
+      },
+      {
+       "w": "third",
+       "from": 239,
+       "to": 246
+      },
+      {
+       "w": "of",
+       "from": 246,
+       "to": 249
+      },
+      {
+       "w": "the",
+       "from": 249,
+       "to": 254
+      },
+      {
+       "w": "size,",
+       "from": 254,
+       "to": 261
+      },
+      {
+       "w": "twice",
+       "from": 261,
+       "to": 277
+      },
+      {
+       "w": "as",
+       "from": 277,
+       "to": 280
+      },
+      {
+       "w": "fast.",
+       "from": 280,
+       "to": 295
+      }
+     ],
+     "cues": {
+      "1": 238
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_11.wav",
+     "from": 337,
+     "frames": 53,
+     "words": [
+      {
+       "w": "So",
+       "from": 342,
+       "to": 346
+      },
+      {
+       "w": "which",
+       "from": 346,
+       "to": 353
+      },
+      {
+       "w": "one",
+       "from": 353,
+       "to": 357
+      },
+      {
+       "w": "do",
+       "from": 357,
+       "to": 361
+      },
+      {
+       "w": "I",
+       "from": 361,
+       "to": 363
+      },
+      {
+       "w": "download?",
+       "from": 363,
+       "to": 375
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_12.wav",
+     "from": 395,
+     "frames": 104,
+     "words": [
+      {
+       "w": "The",
+       "from": 397,
+       "to": 402
+      },
+      {
+       "w": "one",
+       "from": 402,
+       "to": 407
+      },
+      {
+       "w": "with",
+       "from": 407,
+       "to": 417
+      },
+      {
+       "w": "Q4",
+       "from": 417,
+       "to": 420
+      },
+      {
+       "w": "in",
+       "from": 420,
+       "to": 428
+      },
+      {
+       "w": "its",
+       "from": 428,
+       "to": 432
+      },
+      {
+       "w": "name.",
+       "from": 432,
+       "to": 448
+      },
+      {
+       "w": "Going",
+       "from": 448,
+       "to": 468
+      },
+      {
+       "w": "back",
+       "from": 468,
+       "to": 474
+      },
+      {
+       "w": "to",
+       "from": 474,
+       "to": 482
+      },
+      {
+       "w": "it",
+       "from": 482,
+       "to": 486
+      },
+      {
+       "w": "now.",
+       "from": 486,
+       "to": 492
+      }
+     ],
+     "cues": {
+      "1": 450
+     },
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_squeeze",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "full",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "choice",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fine",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Full again",
+     "title": "Full again",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1289,
+   "frames": 362,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_13.wav",
+     "from": 14,
+     "frames": 102,
+     "words": [
+      {
+       "w": "Phone's",
+       "from": 18,
+       "to": 33
+      },
+      {
+       "w": "full",
+       "from": 33,
+       "to": 39
+      },
+      {
+       "w": "again!",
+       "from": 39,
+       "to": 72
+      },
+      {
+       "w": "52",
+       "from": 72,
+       "to": 76
+      },
+      {
+       "w": "good-morning",
+       "from": 76,
+       "to": 92
+      },
+      {
+       "w": "photos!",
+       "from": 92,
+       "to": 101
+      }
+     ],
+     "cues": {
+      "1": 69
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_14.wav",
+     "from": 120,
+     "frames": 81,
+     "words": [
+      {
+       "w": "Delete",
+       "from": 125,
+       "to": 137
+      },
+      {
+       "w": "the",
+       "from": 137,
+       "to": 142
+      },
+      {
+       "w": "photos,",
+       "from": 142,
+       "to": 160
+      },
+      {
+       "w": "or",
+       "from": 160,
+       "to": 163
+      },
+      {
+       "w": "I",
+       "from": 163,
+       "to": 166
+      },
+      {
+       "w": "squeeze",
+       "from": 166,
+       "to": 181
+      },
+      {
+       "w": "to",
+       "from": 181,
+       "to": 184
+      },
+      {
+       "w": "2-bit.",
+       "from": 184,
+       "to": 193
+      }
+     ],
+     "cues": {
+      "1": 150
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep37v1/line_15.wav",
+     "from": 207,
+     "frames": 61,
+     "words": [
+      {
+       "w": "Fine...",
+       "from": 211,
+       "to": 245
+      },
+      {
+       "w": "squeeze.",
+       "from": 245,
+       "to": 254
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep37v1/line_16.wav",
+     "from": 278,
+     "frames": 61,
+     "words": [
+      {
+       "w": "Lunch",
+       "from": 281,
+       "to": 290
+      },
+      {
+       "w": "is",
+       "from": 290,
+       "to": 294
+      },
+      {
+       "w": "ready:",
+       "from": 294,
+       "to": 305
+      },
+      {
+       "w": "ORDER.",
+       "from": 305,
+       "to": 334
+      }
+     ],
+     "cues": {
+      "1": 326
+     }
+    }
+   ]
+  }
+ ]
+}

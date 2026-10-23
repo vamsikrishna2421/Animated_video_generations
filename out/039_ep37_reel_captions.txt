@@ -1,0 +1,47 @@
+UPLOAD: 039
+VIDEO: 039_ep37_the_squeezed_brain.mp4  (teaching skit, 55 s, AI voices; replaces the older lesson-format 039_ep37_quantization_shrinking_ai_models.mp4; send copy: 039_ep37_the_squeezed_brain_ig.mp4, about 22 MB). It loops: "Lunch is ready: ORDER." leads back into "My wife says 'lunch is ready', and you made it an ORDER?!".
+
+=== CAPTION ===
+Ravi anna's wife texted "come home, lunch is ready". The shop AI filed it as an ORDER. It had squeezed its own brain to make room on his phone.
+
+Episode 37 of AI From Scratch: quantization, how big AI models fit on small devices
+- An AI model is billions of numbers. Full size, each one is stored with 16 bits: 65,536 possible values (exact to the paisa, in Ravi's terms)
+- Quantization rounds every number to fewer bits: 8 bits = 256 values, 4 bits = 16 (the nearest ₹10), 2 bits = just 4 (₹0, ₹50, ₹100 or ₹150 on each shelf: biscuits become free)
+- Our real test, the same small AI (Qwen2.5 1.5B) sorting 40 of the shop's WhatsApp messages: 16-bit (3.6 GB) 1 wrong · 8-bit (1.9 GB) 1 wrong · 4-bit (1.1 GB) 1 wrong · 2-bit (0.75 GB) 20 wrong (it filed nearly everything as an ORDER, "lunch is ready" included)
+- 4-bit: a third of the size, the same answers, and a WhatsApp reply in 3.4 s instead of 7.5 s (the computer reads every number for every word, so fewer bytes means faster)
+
+What this means for you:
+1. Downloading a model (Ollama, LM Studio, Hugging Face)? Pick the file with Q4 in its name. Q4_K_M is the usual default: Ollama's qwen2.5:7b download is Q4_K_M, 4.7 GB (the same brain is 15.2 GB at 16-bit, too big for EP36's 8 GB card)
+2. Room to spare? Q8 is fine, but in our test it gave the same answers as Q4 at 1.7x the size and 1.6x slower
+3. Using the ChatGPT app? That runs on the company's computers; how they store their model is their choice
+
+The catch: on the hardest job, bills, 4-bit lost a little (16-bit got 13 of 20 bills right, 4-bit 11). And bigger brains take squeezing better: our 7B at 2 bits still sorted 39 of 40.
+
+Next: EP38, running an AI on your own laptop.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+4-bit: how many wrong out of 40? A) 1 B) 10 C) 20. Comment A, B or C before the answer comes.
+
+=== HASHTAGS ===
+#Quantization #AI #LearnAI #LocalLLM #AIForBeginners #AIFromScratch
+
+=== PINNED_COMMENT ===
+How we tested (run by us): Qwen's own GGUF files of Qwen2.5-1.5B-Instruct (Apache 2.0) at 16, 8, 4, 3 and 2 bits, llama.cpp on a 4-core computer (server CPU, no graphics card), greedy decoding. 40 WhatsApp messages with the right label written down first (ORDER / PAYMENT / COMPLAINT / OTHER): 39, 39, 39, 38, 20 right. 20 bills against a 15-line price board: 13, 11, 11, 6, 3 right. The same WhatsApp reply: 7.5 s, 5.3 s, 3.4 s at 16, 8, 4 bits. The big brain (Qwen2.5-7B) at 2 bits, 3.0 GB: 39 of 40 sorted.
+Why is 4-bit a third of the size, not a quarter? The "K" files keep a few parts at more bits (the sizes are Qwen's own files).
+Don't phones run 2-bit AI? Yes, when the model is trained for it: Apple's ~3B on-device model uses "2-bit quantization-aware training" (Apple, 2025), and Google's Gemma 3 27B went from 54 GB to 14.1 GB with quantization-aware training (Google, Apr 2025). Squeezed after training, as in our test, 2 bits broke the small model.
+
+=== COVER ===
+Ravi anna yelling at the counter; above him the phone's sorted messages: "ORDER · come home, lunch is ready" circled in red, "ORDER · the milk you sent yesterday was sour"; a sticker "2-BIT AI: 20 OF 40 WRONG".
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. The shop AI has filed Ravi's wife's message "come home, lunch is ready" and a complaint about sour milk as ORDERs; a sticker says the 2-bit AI got 20 of 40 wrong. The AI explains that the phone was full, so it squeezed its brain from four bits to two. It calls this quantization: rounding every number in its brain. Ravi asks if it's like rounding his prices. On the shop's price board, full size is exact to the paisa (rice ₹61.85), four-bit rounds to the nearest ten rupees (₹60), and two-bit leaves only four prices per shelf, ₹0, 50, 100 or 150, so biscuits become free. A quiz asks how many of 40 messages the 4-bit brain gets wrong, A 1, B 10 or C 20. The test card answers: 16-bit 3.6 GB, 1 wrong; 8-bit 1.9 GB, 1 wrong; 4-bit 1.1 GB, 1 wrong; 2-bit 0.75 GB, 20 wrong; 4-bit is a third of the size and twice as fast. Ravi asks which one to download; a card says pick the Q4 file, Q2 broke the test brain, and the ChatGPT app runs on the company's computers. The AI goes back to 4-bit. Then 52 good-morning photos fill the phone again; the AI offers a choice, delete the photos or squeeze the AI; Ravi picks squeeze, and the AI files "lunch is ready" as an ORDER again.
+
+=== SOURCES (for comments) ===
+Demo (run by us): pipeline/ep37/squeeze_demo.py, results in series/scripts/ep37_demo/ (one JSON per file tested).
+Qwen's GGUF files on Hugging Face: Qwen/Qwen2.5-1.5B-Instruct-GGUF (fp16 3.56 GB, q8_0 1.89, q4_k_m 1.12, q3_k_m 0.92, q2_k 0.75) and Qwen/Qwen2.5-7B-Instruct-GGUF (fp16 15.23 GB, q8_0 8.10, q4_k_m 4.68, q2_k 3.02).
+Ollama library, qwen2.5:7b: "quantization Q4_K_M", 4.7 GB.
+Dettmers and Zettlemoyer, "The case for 4-bit precision: k-bit Inference Scaling Laws" (arXiv 2212.09720, ICML 2023): "4-bit precision is almost universally optimal for total model bits and zero-shot accuracy".
+Dettmers, Lewis, Belkada, Zettlemoyer, "LLM.int8()" (arXiv 2208.07339, 2022): 8-bit inference "without any performance degradation" up to 175B parameters.
+Google Developers Blog, "Gemma 3 QAT models" (Apr 18, 2025): 27B from 54 GB (BF16) to 14.1 GB (int4).
+Apple, "Apple Intelligence Foundation Language Models Tech Report 2025" (machinelearning.apple.com, July 2025): "2-bit quantization-aware training" for the ~3B on-device model.

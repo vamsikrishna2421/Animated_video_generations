@@ -1,0 +1,32 @@
+UPLOAD: 039 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/039_ep37_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/039_ep37_insta_te_ig.mp4, about 22 MB). It loops: "bhojanam ready: order andi." leads back into "maa aavida 'bhojanam ready' ante, adi kooda orderaa?!".
+
+=== CAPTION ===
+Ravi anna aavida "intiki raa, bhojanam ready" ani message pettindi. Shop AI daanni ORDER ga file chesindi. Phone lo place kosam adi tana brain ni compress chesukundi.
+
+AI From Scratch Episode 37: quantization, pedda AI models chinna devices lo ela pattutaayi
+- AI model ante billions of numbers. Full size lo prati number ki 16 bits: 65,536 options (Ravi bhaasha lo: paisa kooda lekke)
+- Quantization prati number ni takkuva bits ki round chestundi: 8 bits = 256, 4 bits = 16 (62 rupees, 60 avutundi), 2 bits = naalugu maatrame (prati rack ki ₹0, 50, 100 leda 150: biscuits free!)
+- Maa real test, ade chinna AI (Qwen2.5 1.5B) shop ki vachina 40 WhatsApp messages sort chesindi: 16-bit (3.6 GB) 1 tappu · 8-bit (1.9 GB) 1 tappu · 4-bit (1.1 GB) 1 tappu · 2-bit (0.75 GB) 20 tappulu (daadaapu anni ORDER ane cheppindi, "bhojanam ready" tho saha)
+- 4-bit: moodo vantu size, ade answers, WhatsApp reply 7.5 s kaadu 3.4 s lo (prati padaaniki computer anni numbers chaduvutundi, takkuva bytes ante ekkuva speed)
+
+Meeku idi ante:
+1. Model download chestunnaaraa (Ollama, LM Studio, Hugging Face)? Peru lo Q4 unna file teeskondi. Q4_K_M sadharana default: Ollama qwen2.5:7b download Q4_K_M, 4.7 GB (ade brain 16-bit lo 15.2 GB, EP36 8 GB card lo pattadu)
+2. Place undaa? Q8 kooda ok, kaani maa test lo Q4 laage ade answers, 1.7 retlu size, 1.6 retlu slow
+3. ChatGPT app vaadutunnaaraa? Adi company computers meeda nadustundi; vaallu model ni ela store chestaaro vaalla nirnayam
+
+Catch: kashtamaina pani, bills lo 4-bit konchem taggindi (20 bills lo 16-bit 13 correct, 4-bit 11). Pedda brains compress ni baaga tattukuntaayi: maa 7B 2 bits lo kooda 40 lo 39 correct.
+
+Next: EP38, mee sontha laptop meeda AI ela nadapaali.
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+4-bit ki 40 lo enni tappulu? A) 1 B) 10 C) 20. Answer raakamunde A, B leda C comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #Quantization #LearnAI #AIFromScratch
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen sontha GGUF files (Qwen2.5-1.5B-Instruct, Apache 2.0) 16, 8, 4, 3, 2 bits lo, llama.cpp tho 4-core computer (server CPU, graphics card ledu), greedy. 40 WhatsApp messages, correct label mundee raasi (ORDER / PAYMENT / COMPLAINT / OTHER): 39, 39, 39, 38, 20 correct. 15 items price board tho 20 bills: 13, 11, 11, 6, 3 correct. Ade WhatsApp reply: 16, 8, 4 bits lo 7.5 s, 5.3 s, 3.4 s. Pedda brain (Qwen2.5-7B) 2 bits lo, 3.0 GB: 40 lo 39.
+4-bit size quarter kaakunda third enduku? "K" files lo konni parts ekkuva bits lo untaayi (sizes Qwen sontha files vi).
+Phones lo 2-bit AI nadustundi kadaa? Avunu, model ni daaniki train chesthe: Apple ~3B on-device model "2-bit quantization-aware training" (Apple, 2025); Google Gemma 3 27B 54 GB nunchi 14.1 GB (Google, Apr 2025). Train ayyaaka compress chesthe, maa test laaga, chinna model 2 bits lo virigipoyindi. Sources English caption lo.

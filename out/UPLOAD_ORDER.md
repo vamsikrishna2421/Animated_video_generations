@@ -43,7 +43,7 @@ Already posted: `out/posted/`.
 | 036 | ep34 | Rent a Brain or Own One? (EP34: open vs closed models, tested; skit, AI voices) | ready |
 | 037 | ep35 | The Brain That Didn't Fit (EP35: small language models, tested; skit, AI voices) | ready |
 | 038 | ep36 | The Diwali Rush (EP36: GPUs and AI chips, tested; skit, AI voices) | ready |
-| 039 | ep37 | Quantization: Shrinking AI Models | ready |
+| 039 | ep37 | The Squeezed Brain (EP37: Quantization, tested; skit, AI voices) | ready |
 | 040 | ep38 | How to Run AI on Your Own Laptop | ready |
 | 041 | ep39 | Where AI Costs Come From | ready |
 | 042 | ep40 | AI Benchmarks: How Models Are Tested | ready |

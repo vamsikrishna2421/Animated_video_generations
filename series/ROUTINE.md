@@ -45,7 +45,7 @@ The user's ask (Oct 20): the daily episode covers the whole syllabus, plus weekl
 
 | IST day | Slot | Next item from | Posted |
 |---|---|---|---|
-| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP37 is next (queue 039), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
+| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP38 is next (queue 040), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
 | Thu | HOW TO (see "Thursday: HOW TO") | `series/HOWTO.md`, the first "planned" row whose "Needs" are out | the day it is made |
 | Sat | AI WEEKLY (see "Saturday: AI WEEKLY") | `news/README.md`, "Weekly edition" | the day it is made |
 
@@ -56,7 +56,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038); next EP37 "Quantization", queue 039). The skit replaces the old
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039); next EP38 "Running AI locally on your laptop", queue 040). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
@@ -349,4 +349,23 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the LLM run died without an error line; run them one after the other and delete a finished model from /dev/shm.
 - A new reel's media folders (`video/public/reel/<id>/`, `out/skits/NN_*.mp4`) go into `.git/info/exclude` when they
   are created, or the next `git add -A` commits the voice-take caches.
+- EP37 lessons: a judge's must-hear list written before hearing a voice is too narrow (the Telugu "ఆవిడ" came back as
+  "अविड़ा", "अविद", "आवविड"; "రౌండ్" as "राून"); when every take fails on spelling, the picker keeps the one with the best
+  base score, and that was the worse take three times (line 1 lost "ఆవిడ", 6b dropped "ఫోర్ బిట్ లో"). Read each
+  failing take's transcript, widen the list, delete the kept take and re-voice. English: Whisper writes "2-bit" for
+  "two-bit", so a "two" must-word fails a clean take; Fish read "paisa" as "Pisa" (a strict "paisa" must-word fixed it)
+  and Parler swallowed "an" ("made it in order"; an "an" must-word fixed it). Parler Telugu garbled "డౌన్‌లోడ్" in four
+  takes ("ఏ ఫైల్ తీసుకోవాలి?" came through) and looped "అరవై రెండు, అరవై అవుతుంది" (one number per sentence).
+- A quoted message inside a shouted line reads as an announcement ("My wife's 'lunch is ready' went in as an ORDER"):
+  give it a verb that frames the quote and a question to rise into ("My wife says 'lunch is ready', and you made it an
+  ORDER?!"). A test card needs the machine on the speed claim ("4-core computer, no GPU") and the catch on screen
+  ("hard job 13 -> 11"), or the result reads as a free lunch. A silent quiz countdown over 3 s loses the viewer: 2.6 s
+  with 0.8 s counts.
+- Levels move when a take is re-voiced (a new length shifts every later line against the bed's bars): re-measure after
+  each rebuild, and keep separate gain tables per language (`GAIN_TE`).
+- Telugu: two terms that open with the same sound blur in a fast exchange ("ఫుల్ సైజ్" / "ఫోర్ బిట్" heard as "ఫూల్
+  బిట్"): use "అసలు సైజ్" for full size. A technical term Parler mangles in Telugu script ("క్వాంటైజేషన్" ->
+  "kontization" in four takes) came out right written in English letters inside the Telugu line ("దీని పేరు
+  Quantization."), as its own take. A boom on the cut still masks a Telugu line's first word ("ఒక్కటే" -> "agar"):
+  half a second early. Make a shop's wall board agree with any price board on screen (EP37: dal ₹120 vs ₹139.75).
 

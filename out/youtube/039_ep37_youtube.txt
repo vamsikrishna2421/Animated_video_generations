@@ -1,0 +1,34 @@
+UPLOAD: 039 (YouTube Shorts: upload the same vertical files as Instagram, 039_ep37_the_squeezed_brain.mp4 and telugu_page/039_ep37_insta_te.mp4; no landscape version)
+
+########## ENGLISH ##########
+=== TITLE ===
+Quantization Explained: We Squeezed an AI to 2 Bits (Tested) | AI From Scratch Ep 37 #Shorts
+
+=== DESCRIPTION ===
+Ravi anna's wife texts "come home, lunch is ready" and the shop AI files it as an ORDER: it squeezed its own brain to make room on his phone. An AI model is billions of numbers; quantization rounds each one to fewer bits. 16 bits gives 65,536 possible values, 4 bits gives 16, 2 bits gives just 4. Like a price board rounded to the nearest ₹10 (fine) or to only four prices per shelf (biscuits become free).
+
+Our real test, the same small AI (Qwen2.5 1.5B) sorting 40 of the shop's WhatsApp messages: 16-bit (3.6 GB) 1 wrong, 8-bit (1.9 GB) 1 wrong, 4-bit (1.1 GB) 1 wrong, 2-bit (0.75 GB) 20 wrong. 4-bit is a third of the size, gives the same answers, and wrote a WhatsApp reply in 3.4 s instead of 7.5 s.
+
+What it means for you: when you download a model (Ollama, LM Studio, Hugging Face), pick the file with Q4 in its name (Ollama's qwen2.5:7b is Q4_K_M, 4.7 GB instead of 15.2 GB). Q8 if you have room (same answers as Q4 in our test, bigger and slower). The catch: on the hardest job (bills) 4-bit lost a little, 11 of 20 right against 13 at full size; bigger models take squeezing better (our 7B at 2 bits still sorted 39 of 40).
+
+How we tested (run by us): Qwen's own GGUF files, llama.cpp on a 4-core computer (no graphics card), greedy decoding, answers written down before the test.
+Sources: Qwen's GGUF files on Hugging Face; Ollama library (qwen2.5:7b); Dettmers and Zettlemoyer, "The case for 4-bit precision" (ICML 2023); Dettmers et al., "LLM.int8()" (2022); Google Developers Blog on Gemma 3 QAT (Apr 2025); Apple Intelligence Foundation Language Models Tech Report 2025.
+
+Next: EP38, running an AI on your own laptop.
+
+=== TAGS ===
+quantization, Q4_K_M, GGUF, 4-bit, 8-bit, model size, local LLM, Ollama, LM Studio, llama.cpp, AI for beginners, AI From Scratch
+
+########## TELUGU: telugu_page/039_ep37_insta_te.mp4 (YouTube Shorts, same vertical file) ##########
+=== TITLE ===
+Quantization Ante Enti? AI ni 2 Bits ki Compress Chesaam (Test) | AI From Scratch Ep 37 Telugu #Shorts
+
+=== DESCRIPTION ===
+Ravi anna aavida "bhojanam ready" ani message pedithe shop AI daanni ORDER ga file chesindi: phone lo place kosam tana brain ni compress chesukundi. AI model ante billions of numbers; quantization prati number ni takkuva bits ki round chestundi. 16 bits lo 65,536 options, 4 bits lo 16, 2 bits lo naalugu maatrame. Price board ni 10 rupees ki round chesinatlu (ok), leda prati rack ki naalugu rates maatrame (biscuits free!).
+
+Maa real test, ade chinna AI (Qwen2.5 1.5B) shop ki vachina 40 WhatsApp messages sort chesindi: 16-bit (3.6 GB) 1 tappu, 8-bit (1.9 GB) 1 tappu, 4-bit (1.1 GB) 1 tappu, 2-bit (0.75 GB) 20 tappulu. 4-bit moodo vantu size, ade answers, reply 7.5 s kaadu 3.4 s.
+
+Meeku: model download chesetappudu peru lo Q4 unna file teeskondi (Ollama qwen2.5:7b Q4_K_M, 15.2 GB kaadu 4.7 GB). Place unte Q8 (maa test lo Q4 laage answers, kaani pedda, slow).
+Test vivaraalu, sources: English description lo unnaayi.
+
+Next: EP38, mee sontha laptop meeda AI.

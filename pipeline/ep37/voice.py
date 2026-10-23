@@ -1,0 +1,178 @@
+# EP37 voices, as EP36's (pipeline/ep36/voice.py): one judged take per line, cached by text + voice. English: Ravi on
+# Parler "Thoma", the shop AI on Fish (the narrator reference) through the phone sound; Telugu on Parler (Ravi = Prakash,
+# the AI = Kiran), the strict judge, the light phone sound. The AI's takes are judged after the phone filter, MUST lists
+# words a take has to contain (a missed word costs 1.5, more than the length flag: skit 05), and every take is levelled
+# per sentence (EP36's `level`).
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep37/voice.py en|te [--keep] [line numbers ...]
+import hashlib
+import json
+import re
+import shutil
+import sys
+import tempfile
+from pathlib import Path
+
+import numpy as np
+import soundfile as sf
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "pipeline"))
+from parler_tts_local import say  # noqa: E402
+from fish_tts import say as fish_say  # noqa: E402
+from skit01.voice import FISH_REF, FISH_REF_TEXT, VOICE as VOICE_EN, judge as judge_en, trim  # noqa: E402
+from ep33.voice_te import VOICE as VOICE_TE, LO_CUT, judge as judge_te  # noqa: E402
+from ep33.voice_rec import phone  # noqa: E402
+import ep33.voice_rec as vr  # noqa: E402
+
+LIGHT_EN = {2, 6, 8, 10, 12, 14}   # the AI's numbers through the lighter phone sound
+# n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
+MUST = {"en": {1: [("wife", "wife's"), ("says", "said"), ("lunch",), ("ready",), ("made",), ("an",), ("order",)], 2: [("phone",), ("full",), ("squeezed", "squeeze"), ("brain",), ("four", "4"), ("two", "2")],
+               3: [("squeezed", "squeeze")], 4: [("quantization", "quantisation"), ("rounding", "round"), ("number", "numbers"), ("brain",)],
+               5: [("rounding", "round"), ("prices", "price")], 6: [("full",), ("down",), ("paisa", "paise"), ("four", "4"), ("nearest",), ("ten", "10"), ("rupees", "rupee")],   # "pisa" was the Tower of Pisa
+               7: [("two", "2"), ("bit",)], 8: [("four", "4"), ("prices", "price"), ("shelf",), ("biscuits", "biscuit"), ("free",)],
+               9: [("full",), ("one", "1"), ("wrong",), ("forty", "40"), ("will",), ("four", "4")], 10: [("just",), ("one", "1"), ("third",), ("size",), ("twice",), ("fast",)],
+               11: [("which",), ("download",)], 12: [("q", "q4", "queue", "cue", "kyu"), ("four", "4", "q4"), ("name",), ("back",)],
+               13: [("phone", "phones"), ("full",), ("fifty", "52"), ("morning",), ("photos", "photo")], 14: [("delete",), ("photos", "photo"), ("squeeze",), ("two", "2"), ("bit",)],
+               15: [("fine",), ("squeeze",)], 16: [("lunch",), ("ready",), ("order",)]},
+        "te": {1: [("अविड", "आवि", "आवड", "आविड", "आवुड", "अवड", "आववि", "अविद", "अवेड", "अवीड"), ("भोज", "बोज", "भोजन"), ("रेडी", "रेडि", "रेड़ी", "रेदी", "रेदि"), ("कूडा", "कुडा", "कोडा", "कूड़ा", "कुड़ा", "कोड़ा", "कुरा"), ("आर्ड", "ऑर्ड", "आर्दर", "अर्दर", "अर्डर", "आरडर", "अर्टर"), ("अनुकु", "अनुको", "अनको", "अनुकून")],
+               2: [("फोन", "फ़ोन", "फून", "फोण", "फों", "फ़ों"), ("निंडि", "निंडी", "निंदि", "निन्डि", "निनडि", "निंड")],
+               "2b": [("ब्रेन", "ब्रैन", "ब्रेइन", "ब्रीन"), ("फोर", "फ़ोर", "फ़ौर", "4"), ("तु", "टू", "तू", "2"), ("कंप्र", "कम्प्र", "कंपर", "कॉम्प", "कोंप", "खमप्र", "खंप्र", "कमप्र", "खम्प")],
+               3: [("कंप्र", "कम्प्र", "कंपर", "कॉम्प", "कोंप", "खमप्र", "खंप्र", "कमप्र", "खम्प"), ("चेशा", "चेसा", "चेश", "चेस")],
+               4: [("दीनि", "दीनी", "दिनी", "दिनि", "तीनी", "तीने"), ("पेरु", "पेरू", "पेर"), ("क्वां", "क्वा", "क्वान", "क्वैं", "क्वें", "क्वन", "quant")],
+               "4b": [("नंबर", "नम्बर", "नंबरु", "नमपर", "नमबर", "नम्पर"), ("राउं", "रौं", "राउन", "रौन", "रौंड", "राउंड", "राू", "रावुं")],
+               5: [("राउं", "रौं", "राउन", "रौन", "रौंड", "राउंड", "राू", "रावुं"), ("रेट", "रेड")],
+               6: [("असलु", "असल", "अस्लु", "असालु"), ("पैसा", "पइसा", "पैस", "पयसा", "पैसे", "पाईसा")],
+               "6b": [("फोर", "फ़ोर", "4", "प्रबिट", "फ्रबिट", "फोर्बिट"), ("बिट", "बित", "भिट", "बिड"), ("बिय", "बीय", "बियं"), ("अरवै", "अरवई", "अरवाई", "अरव", "अर्वा", "आरवा", "60"), ("रूपा", "रुपा", "रूपाय")],
+               7: [("मरि", "मरी", "मर"), ("टू", "तू", "तु", "2"), ("बिट", "बिड", "बिट्", "विट")],
+               8: [("ओक्को", "ओक्कु", "वक्को", "ओको", "ओक्", "वक्"), ("र्याक", "रैक", "र्यक", "रेक", "र्या", "रयाक"), ("नालुग", "नालग", "नालु", "नाल्ग"), ("बिस्क", "बिस्कि", "बिसक"), ("फ्री", "फ़्री", "फ्रि", "फ़्रि")],
+               9: [("असलु", "असल", "अस्लु", "असालु"), ("नलभ", "नलब", "नल्भ", "40"), ("ओक्क", "वक्क", "ओक", "उक", "उक्क")],
+               "9b": [("फोर", "फ़ोर", "4"), ("एन्नि", "एनि", "यन्नि", "येन्नि", "एन्नी", "एनी"), ("तप्प", "तप")],
+               10: [("ओक्क", "वक्क", "ओकट", "ओक"), ("तप्प", "तप")],
+               "10b": [("मूडो", "मूडु", "मुडो", "मूड"), ("वंतु", "वन्तु", "वंत", "वन्त"), ("डबल", "डबुल", "डब्ल", "दबल"), ("स्पीड", "स्पिड", "स्पीट", "स्पीड़", "स्पीद")],
+               11: [("मरि", "मरी", "मर"), ("फैल", "फाइल", "फ़ाइल", "फाईल", "फैइल"), ("तीसु", "तिसु", "तीसो", "तिसो")],
+               12: [("पेरु", "पेरू", "पेर"), ("क्यू", "क्यु", "q", "क्यो"), ("फोर", "फ़ोर", "4")],
+               "12b": [("नेनू", "नेनु"), ("मळ्ळी", "मल्ली", "मळ्ळि", "मल्लि", "मळ्ली", "मल्ल"), ("वेळ्", "वेल्त", "वेळ्तु", "वेल्तु", "वेळ्त", "वेल्")],
+               13: [("फोन", "फ़ोन", "फून", "फों", "फ़ों"), ("निंडि", "निंदि", "निंडी", "निन्डि", "निंड")],
+               "13b": [("याभ", "याब", "यभ", "52"), ("गुड", "गुड्"), ("मार्नि", "मॉर्नि", "मारनि", "मार्न"), ("फोटो", "फ़ोटो", "फोट")],
+               14: [("फोटो", "फ़ोटो", "फोट"), ("डिली", "डीली", "डिलि", "डिलीट"), ("लेकपो", "लेक", "लेकपु"), ("टू", "तू", "तु", "2"), ("बिट", "बिड", "बिट्", "विट")],
+               15: [("सरे", "सरी", "सरें", "सर"), ("कंप्र", "कम्प्र", "कंपर", "कॉम्प", "कोंप", "खमप्र", "खंप्र", "कमप्र", "खम्प")],
+               16: [("भोज", "बोज", "भोजन"), ("रेडी", "रेडि", "रेड़ी", "रेदी", "रेदि"), ("आर्ड", "ऑर्ड", "आडर", "आर्दर", "आरडर", "आर्डर"), ("अंडि", "अंडी", "अन्डि", "अंदि", "अंडे")]}}   # Telugu as the judge writes it (Devanagari)
+
+
+def heard(path, who, n, lang):
+    """The take as it goes into the reel: the AI's through the phone filter."""
+    if who != "ai":
+        return path
+    a, sr = sf.read(path)
+    vr.SR = sr
+    out = Path(tempfile.gettempdir()) / "ep37_judge.wav"
+    x = phone(a, True, lo_cut=LO_CUT) if lang == "te" else phone(a, n in LIGHT_EN)
+    sf.write(out, x.astype(np.float32), sr)
+    return out
+
+
+def level(path, under=4.0, cap=12.0):
+    """Parler voices each sentence on its own and one can come out far quieter (EP36's Telugu line 16: the second
+    sentence 11 dB under the first). A voiced stretch (0.3 s or longer) more than `under` dB below the take's loudest
+    stretch is raised to 2 dB under it, at most `cap` dB, with 20 ms ramps."""
+    x, sr = sf.read(path)
+    mono = x.mean(1) if x.ndim > 1 else x
+    hop = int(sr * 0.02)
+    db = np.array([20 * np.log10(np.sqrt(np.mean(mono[i:i + hop] ** 2)) + 1e-9) for i in range(0, len(mono) - hop, hop)])
+    voiced, spans, i = db > -45, [], 0
+    while i < len(db):   # a stretch ends after 0.16 s under -45 dB
+        if not voiced[i]:
+            i += 1
+            continue
+        j, quiet = i, 0
+        while j < len(db) and quiet < 8:
+            quiet = quiet + 1 if not voiced[j] else 0
+            j += 1
+        spans.append((i * hop, (j - quiet) * hop))
+        i = j
+    spans = [(a, b) for a, b in spans if b - a >= int(0.3 * sr)]
+    lv = [20 * np.log10(np.sqrt(np.mean(mono[a:b] ** 2)) + 1e-9) for a, b in spans]
+    if len(spans) < 2:
+        return
+    ref = max(lv)   # not the median: when most stretches are the quiet ones, the median is quiet too
+    gain = np.ones(len(mono))
+    for (a, b), l in zip(spans, lv):
+        if l < ref - under:
+            g = 10 ** (min(cap, ref - 2 - l) / 20)
+            ramp = min(hop, (b - a) // 4)
+            env = np.full(b - a, g)
+            env[:ramp] = np.linspace(1, g, ramp)
+            env[len(env) - ramp:] = np.linspace(g, 1, ramp)
+            gain[a:b] = env
+    if np.all(gain == 1):
+        return
+    y = x * (gain[:, None] if x.ndim > 1 else gain)
+    peak = np.max(np.abs(y))
+    if peak > 0.98:
+        y *= 0.98 / peak
+    sf.write(path, y.astype(np.float32), sr)
+
+
+def judge(path, text, lang, n):
+    ok, score, info = judge_en(path, text, "en") if lang == "en" else judge_te(path, text)
+    heard_text = info.split("|", 1)[1].lower()
+    words = set(re.findall(r"[a-z0-9]+", heard_text))
+    # English: whole words; Telugu (written in Devanagari by the judge): a substring will do
+    miss = [g[0] for g in MUST[lang].get(n, []) if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]
+    return ok and not miss, score - 1.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
+
+
+def main(lang, only, keep=False):
+    sid = "ep37v1" if lang == "en" else "ep37te"
+    spec = json.loads((ROOT / f"reels/{sid}.json").read_text())
+    src = ROOT / f"video/public/reel/{sid}/src"
+    takes = src.parent / "takes"
+    src.mkdir(parents=True, exist_ok=True)
+    takes.mkdir(parents=True, exist_ok=True)
+    for sc in spec["scenes"]:
+        for line in sc["lines"]:
+            n, who = int(line["file"][:2]), line["who"]
+            if only and n not in only:
+                continue
+            parts = [(line.get("tts") or line["text"], line["file"])] + ([(line["tts2"], line["file2"])] if line.get("file2") else [])
+            for pk, (raw, fname) in enumerate(parts):
+                mk = n if pk == 0 else f"{n}b"   # the second take of a two-take line has its own MUST entry
+                text = re.sub(r"\s+", " ", re.sub(r"\[\d+\]|<pause [\d.]+>", "", raw)).strip()
+                fish = lang == "en" and who == "ai"
+                voice = "fish:narrator" if fish else VOICE_EN[("en", who)] if lang == "en" else VOICE_TE[who]
+                key = hashlib.md5(f"{voice}|{text}".encode()).hexdigest()[:10]
+                cached = sorted(takes.glob(f"{key}_*.wav"))
+                best = (None, cached[0]) if cached and (keep or not only) else None   # --keep: a part whose text is unchanged keeps its take
+                if best:
+                    print(f"{n:02d} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, n, lang), text, lang, mk)[2]}", flush=True)
+                for k in range(0 if best else 4):
+                    tmp = takes / f"{key}_{k}.wav"
+                    try:
+                        if fish:
+                            fish_say(text, str(tmp), ref=str(FISH_REF), ref_text=FISH_REF_TEXT)
+                        else:
+                            say(lang, text, tmp, voice=voice, pause=0.2)
+                    except RuntimeError as e:   # Fish's gateway errors outlast its own retries some evenings: count it as a failed try
+                        print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
+                        continue
+                    trim(tmp)
+                    ok, score, info = judge(heard(tmp, who, n, lang), text, lang, mk)
+                    print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
+                    if best is None or (best[0] is not None and score > best[0]):
+                        best = (score, tmp)
+                    if ok:
+                        break
+                if best is None:
+                    print(f"{n:02d} {who}: NO TAKE (every try failed)", flush=True)
+                    continue
+                if best[0] is not None:   # keep only the chosen take in the cache
+                    for f in takes.glob(f"{key}_*.wav"):
+                        if f != best[1]:
+                            f.unlink()
+                shutil.copy(heard(best[1], who, n, lang), src / fname)
+                level(src / fname)
+    print("VOICE_DONE", flush=True)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1], {int(x) for x in sys.argv[2:] if x != "--keep"}, "--keep" in sys.argv)

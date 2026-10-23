@@ -1,4 +1,4 @@
-# EP37 "The squeezed brain" (Quantization: big models on small devices), script v1
+# EP37 "The squeezed brain" (Quantization: big models on small devices), script v3
 
 Season 4, queue 039 (replaces the old "Quantization: Shrinking AI Models" lesson in that slot). Ravi anna's shop
 (EP33-EP36): the shop's phone AI sorts the WhatsApp messages with EP35's medium brain inside Ravi's phone. His phone
@@ -65,50 +65,98 @@ and 8-bit and 4-bit wrote the WhatsApp reply word for word the same.
 3. A vice squeezing the phone, the AI: "I made myself smaller. Ask me anything." Ravi: "What's two plus two?" "ORDER."
    (no stakes, made up)
 
-## Script (English), v1
+## Script review (two viewers, v1)
+Both: "Biscuits, free" is where it clicks; the sizes and the "or I go two-bit" ending didn't add up. The 1.1 GB brain
+squeezed to 0.75 GB, then "full size 3.6 GB" on the card: so the brain was already 4-bit (say it). "And faster" with no
+number is vendor talk (now measured: twice as fast, 3.4 s against 7.5 s a reply). "Never Q2" clashed with Apple's 2-bit
+phone model and with "never" from one small model (now "Q2 broke me"; the caption says bigger brains take it better: our
+7B at 2 bits still sorted 39 of 40). Nobody said "rounding", the whole idea; "one and a half billion... 65,536 values"
+lost Sandeep (the voice now carries the prices: exact to the paisa, the nearest ten rupees, four prices per shelf; the
+screen keeps the steps). "Four prices for the whole shop" is wrong, each block gets its own scale: "per shelf". The quiz
+counted right answers while the Telugu voice asked for mistakes, and "close enough?" gave it away: now one card in both
+languages, "4-BIT: how many wrong (of 40)? A 1 B 10 C 20", and every card counts mistakes ("2-BIT: 20 OF 40 WRONG" in
+frame 1, two order rows instead of three). "Even the same mistake" (which one?) is cut. "Q4 in the name" of what: the
+chip says "downloading a model (Ollama, LM Studio)? Pick the Q4 file" and answers the ChatGPT users ("the ChatGPT app:
+their computers, their choice"); "Ollama's Q4_K_M, 4.7 GB" (the 7B) left the chip for the caption. The AI goes back to
+Q4 before the photo gag, so "or I squeeze to two-bit" makes sense. Fewer sounds, one big hit on the answer. Telugu:
+"కంప్రెస్" (EP36's word; "కుదించు" was textbook), "రేట్లు" not "విలువలు", "అరవై రెండు, అరవై అవుతుంది" not "దగ్గరి పది
+రూపాయలకి", the AI says మీరు to Ravi ("డిలీట్ చేయండి, లేకపోతే"), "స్పీడ్" said whole, "ర్యాక్" for shelf ("అర" read as
+"half" in EP36).
+
+## Render review (English, two viewers, v2 render)
+Both: the price board is where it clicks ("Biscuits: free" got a laugh); the loop lands and the join is seamless; the
+sizes add up now. Both: the silent countdown ran long (3.6 s of nobody talking), and only "Just one" landed as a hit:
+the final "ORDER" needs the biggest one. Sandeep: "Q4, like the fourth quarter?", the ChatGPT row read as half a
+sentence, the wall of decimals nearly lost him at 0:09, Ravi's hook sounded like an announcement ("My wife's lunch is
+ready. Went in as an order."). Priya: "twice as fast on what?", "what did 4-bit lose?", a footnote too small to read.
+Heard back: "exact the paisa" (the "to" swallowed), "how many thus four-bit". Fixed in v3: the hook says "My wife says
+'lunch is ready', and you made it an ORDER?!"; "right down to the paisa"; "How many will four-bit get wrong?"; one big
+number rounds (0.0371826 to 0.04) instead of ten; the card says "one reply, 4-core computer, no GPU: 3.4 s vs 7.5 s" and
+shows the catch ("hard job (20 bills) 13 -> 11 right"); the chip says "Q4 in the file name = 4-bit" and "using the
+ChatGPT app? nothing to do"; the quiz holds 2.6 s with a 0.8 s count; a stacked hit on the last "ORDER"; the last
+scene's bed lifts (boost 1.6, rise 1.4) with Ravi and the AI raised to stay 8 dB clear. Telugu while voicing: "డౌన్‌లోడ్"
+garbled in four takes (line 11 now "మరి ఏ ఫైల్ తీసుకోవాలి?"); "అరవై రెండు, అరవై అవుతుంది" looped (now "ఫోర్ బిట్ లో
+బియ్యం అరవై రూపాయలు"); the last word "ఆర్డర్" came out "adar" in four takes (now "ఆర్డర్ అండి", a deadpan "order,
+sir"); "ఒక్కటే." alone is a one-word sentence Parler drops (now "ఒక్కటే తప్పు!").
+
+## Script (English), v3
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Ravi | My wife's "lunch is ready" went in as an ORDER?! | frame 1: the order book on the phone, big: "ORDER · come home, lunch is ready" (circled), "ORDER · the milk you sent yesterday was sour", "ORDER · happy diwali anna"; sticker "20 OF 40 MESSAGES SORTED WRONG" |
-| 2 | AI | Your phone was full. [1] So I squeezed my brain to two bits. | the storage bar full; the brain file "1.1 GB" in a vice, squeezed to "0.75 GB"; tag "2-BIT" |
-| 3 | Ravi | Two bits?! | |
-| 4 | AI | My brain is one and a half billion numbers. [1] Full size, each one has sixteen bits. | a wall of numbers; one zooms: 16 cells, "16 bits = 65,536 possible values" |
-| 5 | Ravi | And two bits? | |
-| 6 | AI | Four possible values. [1] That's called quantization. | the 16 cells shrink to 2; the number snaps to the nearest of 4 marks; "QUANTIZATION = fewer bits for every number" |
-| 7 | Ravi | Four values? Like four prices for my whole shop? | the price board: every price snaps to ₹0 / ₹50 / ₹100 / ₹150 |
-| 8 | AI | Yes. Biscuits, free. [1] Four bits gives sixteen: the nearest ten rupees. | biscuits ₹20 -> ₹0 ✗, rice ₹62 -> ₹50 ✗; on [1] the 4-bit board: rice ₹60, sugar ₹50, biscuits ₹20, "close enough?" |
-| 9 | Ravi | Full size sorts thirty-nine of our forty messages. [1] What does four-bit get? | QUIZ held ~3 s with 3-2-1: "YOUR CALL · 4-BIT (nearest ₹10): ?/40 · A) 39 B) 30 C) 20 · comment A, B or C" |
-| 10 | AI | Thirty-nine. Even the same mistake. [1] A third of the size, and faster. | test card "OUR REAL TEST · same brain, 40 WhatsApp messages": 16-bit 3.6 GB 39/40 · 8-bit 1.9 GB 39/40 · 4-bit 1.1 GB 39/40 ✓ · 2-bit 0.75 GB 20/40 (20 wrong); "quiz: A ✓"; on [1] "1/3 the size", "faster" (words per second, measured) |
+| 1 | Ravi | My wife says "lunch is ready", and you made it an ORDER?! | frame 1: the order book on the phone, big: "ORDER · come home, lunch is ready" (circled), "ORDER · the milk you sent yesterday was sour"; sticker "2-BIT AI: 20 OF 40 WRONG" |
+| 2 | AI | Your phone was full. [1] So I squeezed my brain from four bits to two. | storage bar full; the brain file "4-bit · 1.1 GB" in a vice; on [1] it squeezes to "2-bit · 0.75 GB" |
+| 3 | Ravi | You squeezed it?! | |
+| 4 | AI | It's called quantization: [1] rounding every number in my brain. | "QUANTIZATION = ROUNDING"; a wall of numbers ("150 crore numbers"); one zooms, "0.0371826" rounds to "0.04" |
+| 5 | Ravi | Rounding? Like my prices? | the price board slides in |
+| 6 | AI | Full size: right down to the paisa. [1] Four-bit: the nearest ten rupees. | board column "full · 16-bit · 65,536 steps": rice ₹61.85, milk ₹27.60, dal ₹139.75, biscuits ₹19.50; on [1] "4-bit · 16 steps": ₹60, ₹30, ₹140, ₹20 |
+| 7 | Ravi | And two-bit? | |
+| 8 | AI | Four prices per shelf. [1] Biscuits: free. | column "2-bit · 4 steps (₹0/50/100/150)": ₹50, ₹50, ₹150, ₹0; on [1] the ₹0 circled, "FREE?!" |
+| 9 | Ravi | Full size got one wrong out of forty. [1] How many will four-bit get wrong? | QUIZ held ~3 s, 3-2-1: "4-BIT: how many wrong (of 40)? · A 1 · B 10 · C 20 · comment A, B or C" |
+| 10 | AI | Just one. [1] A third of the size, twice as fast. | test card "OUR TEST · same brain, 40 WhatsApp messages": 16-bit 3.6 GB 1 wrong · 8-bit 1.9 GB 1 wrong · 4-bit 1.1 GB 1 wrong ✓ · 2-bit 0.75 GB 20 wrong; "quiz: A ✓"; on [1] "⅓ the size", "2x faster: 3.4 s vs 7.5 s a reply"; a note "4-bit = the brain you installed in EP35" |
 | 11 | Ravi | So which one do I download? | |
-| 12 | AI | Look for Q4 in the name. [1] Never Q2. | rule chip "SQUEEZE TO 4 BITS · look for Q4 in the file name · e.g. Ollama's qwen2.5: Q4_K_M, 4.7 GB · Q2: half wrong" (no subtitle) |
+| 12 | AI | The one with Q4 in its name. [1] Going back to it now. | rule chip "PICK THE Q4 FILE · downloading a model (Ollama, LM Studio)? the Q4 file · Q2 broke our test brain: 20 of 40 wrong · the ChatGPT app: their computers, their choice" (no subtitle); on [1] "restoring Q4 · 1.1 GB ✓" |
 | 13 | Ravi | Phone's full again! [1] Fifty-two good-morning photos! | "storage full", a grid of good-morning forwards (EP35) |
-| 14 | AI | Delete the photos, [1] or I go two-bit. | |
-| 15 | Ravi | ...Squeeze. | Ravi hugging the phone (the photos stay) |
-| 16 | AI | Lunch is ready: [1] ORDER. | the vice; the order book again; cut to frame 1 (loops) |
+| 14 | AI | Delete the photos, [1] or I squeeze to two-bit. | two buttons: "DELETE PHOTOS" / "SQUEEZE THE AI" |
+| 15 | Ravi | Fine... squeeze. | his thumb on "SQUEEZE THE AI" |
+| 16 | AI | Lunch is ready: [1] ORDER. | the vice closes, "2-bit"; the order book again; cut to frame 1 (loops) |
 
-About 55 s. Tag on screen: "EP37 · AI From Scratch". Caption: EP38 tease (running a brain on your own laptop),
-how to spot Q4 in Ollama, LM Studio and Hugging Face, the big brain's sizes (15.2 GB -> 4.7 GB), trained-for-it
-squeezing (Gemma 3 QAT, Apple's 2-bit), comment A, B or C, sources and our test.
+About 50 s. Tag on screen: "EP37 · AI From Scratch". Caption: EP38 tease (running a brain on your own laptop),
+how to spot Q4 (Ollama shows "quantization Q4_K_M", LM Studio and Hugging Face file names say q4_k_m), Q8 if it fits
+(in our test Q8 = Q4 on both jobs, 1.7x bigger, 1.6x slower), the hard job lost a little (bills: 16-bit 13, 4-bit 11 of
+20), bigger brains survive more squeezing (our 7B at 2 bits: 39 of 40), trained-for-it squeezing (Gemma 3 QAT, Apple's
+2-bit), the big brain's sizes (15.2 GB -> 4.7 GB), comment A, B or C, sources and our test.
 
-## Script (Telugu; English on-screen text), v1
-1. రవి: మా ఆవిడ "భోజనం రెడీ" అంటే, అది కూడా ఆర్డరా?!
-2. ఏఐ: ఫోన్ నిండిపోయింది. [1] అందుకే నా బ్రేన్ ని టూ బిట్స్ కి కుదించా.
-3. రవి: టూ బిట్సా?!
-4. ఏఐ: నా బ్రేన్ నూట యాభై కోట్ల నంబర్లు. [1] ఫుల్ సైజ్ లో ఒక్కో నంబర్ కి పదహారు బిట్స్.
-5. రవి: మరి టూ బిట్స్ అంటే?
-6. ఏఐ: నాలుగే విలువలు. [1] దీన్నే క్వాంటైజేషన్ అంటారు.
-7. రవి: నాలుగే రేట్లా? షాప్ మొత్తానికి?
-8. ఏఐ: అవును, బిస్కెట్లు ఫ్రీ. [1] ఫోర్ బిట్స్ అయితే పదహారు: దగ్గరి పది రూపాయలకి.
-9. రవి: ఫుల్ సైజ్ కి నలభైలో ఒక్కటే తప్పు. [1] ఫోర్ బిట్ కి ఎన్ని?
-10. ఏఐ: ఒక్కటే తప్పు. [1] మూడో వంతు సైజ్, ఇంకా వేగం.
-11. రవి: మరి ఏది డౌన్‌లోడ్ చేయాలి?
-12. ఏఐ: పేరులో క్యూ ఫోర్ ఉన్నది. [1] క్యూ టూ వద్దు.
+## Script (Telugu; English on-screen text), v3
+1. రవి: మా ఆవిడ "భోజనం రెడీ" అంటే, అది కూడా ఆర్డర్ అనుకున్నావా?!
+2. ఏఐ: ఫోన్ నిండిపోయింది. [1] అందుకే నా బ్రేన్ ని ఫోర్ బిట్ నుంచి టూ బిట్ కి కంప్రెస్ చేశాను.
+3. రవి: కంప్రెస్ చేశావా?!
+4. ఏఐ: దీని పేరు Quantization. [1] నా బ్రేన్ లో ప్రతి నంబర్ ని రౌండ్ చేయడం.   (the term in English letters: Parler said "kontization" in Telugu script)
+5. రవి: రౌండ్ చేయడమా? నా రేట్ల లాగానా?
+6. ఏఐ: అసలు సైజ్ లో పైసా కూడా లెక్కే. [1] ఫోర్ బిట్ లో బియ్యం అరవై రూపాయలు.
+7. రవి: మరి టూ బిట్?
+8. ఏఐ: ఒక్కో ర్యాక్ కి నాలుగే రేట్లు. [1] బిస్కెట్లు ఫ్రీ!
+9. రవి: అసలు సైజ్ కి నలభైలో ఒక్కటే తప్పు. [1] ఫోర్ బిట్ కి ఎన్ని తప్పులు?
+10. ఏఐ: ఒక్కటే తప్పు! [1] మూడో వంతు సైజ్, డబుల్ స్పీడ్.
+11. రవి: మరి ఏ ఫైల్ తీసుకోవాలి?
+12. ఏఐ: పేరులో క్యూ ఫోర్ ఉన్నది. [1] నేనూ మళ్ళీ దానికే వెళ్తున్నా.
 13. రవి: ఫోన్ మళ్ళీ నిండింది! [1] యాభై రెండు గుడ్ మార్నింగ్ ఫోటోలు!
-14. ఏఐ: ఫోటోలు డిలీట్ చేయి, [1] లేదా నేను టూ బిట్ అవుతా.
-15. రవి: ...కుదించు.
-16. ఏఐ: భోజనం రెడీ: [1] ఆర్డర్.
+14. ఏఐ: ఫోటోలు డిలీట్ చేయండి, [1] లేకపోతే నేను టూ బిట్ కి వెళ్తా.
+15. రవి: సరే... కంప్రెస్ చెయ్.
+16. ఏఐ: భోజనం రెడీ: [1] ఆర్డర్ అండి.
 
-## Sound
-A hit and three pings (orders landing) on frame 1; a squeeze creak and a bonk as the vice closes; a lift into the bits
-insert; a "dink" as each number snaps to its value; the quiz's tick-tock 3-2-1 with a riser, the bed out on the 1; a boom
-and a success sting on "Thirty-nine"; a snap and a boom on the rule chip; a riser into "Squeeze", a crunch on the vice,
-the biggest hit on "ORDER", into the loop.
+## Render review (Telugu, v3 render)
+Sandeep (Telugu at home) and Priya (reading the captions): the price board and "బిస్కెట్లు ఫ్రీ!" is where it clicks,
+the loop lands ("ఆర్డర్ అండి" plays as a shop-boy deadpan), no word sounds rude, and the AI says మీరు to Ravi anna as it
+should; the small grey text can't be read on a phone. Sandeep: "ఫుల్ సైజ్" and "ఫోర్ బిట్" blurred ("ఫూల్ బిట్"), the hook's
+"ఆర్డరా" came back "అడా", the quiz hit masked "ఒక్కటే", "దీన్నే... అంటారు" and "రెండింతల స్పీడ్" sound bookish, the
+storage popup sat over Ravi's face, and the last frame's pose didn't match frame 1. Priya: the shop wall says rice ₹60
+and dal ₹120 while the board said ₹139.75. Fixed (both languages where shared): "అసలు సైజ్" for full size; "అది కూడా
+ఆర్డర్ అనుకున్నావా?!"; "దీని పేరు Quantization." (in Telugu script Parler said "kontization" in four takes); "డబుల్
+స్పీడ్"; the quiz hit half a second earlier; bigger, darker small text (150 crore, the speed line, the catch, the
+footnote); the popup over the counter and the photos beside Ravi; dal ₹119.75, so the wall's prices are the 4-bit column;
+the loop's last pose is frame 1's; a riser into "Biscuits: free" (the flat middle).
+
+## Sound (fewer sounds, after the script review)
+A hit and two pings on frame 1; a squish as the vice closes; a lift into the rounding insert; one ding as the 4-bit
+prices land and a bonk on "Biscuits: free"; the quiz's tick-tock 3-2-1 with a riser, the bed out on the 1; the big hit
+and a success sting on "Just one"; a snap on the rule chip; a riser into "Fine... squeeze", the squish, a glitch and the
+biggest hit on "ORDER", into the loop.

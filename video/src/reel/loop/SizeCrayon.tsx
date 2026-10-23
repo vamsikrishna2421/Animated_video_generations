@@ -50,14 +50,14 @@ const gm = (c: Ctx, x: number, y: number, w: number, h: number, kind: number) =>
   c.font = `700 ${Math.round(h * 0.17)}px Caveat`; c.fillStyle = "#be185d"; c.textAlign = "center"; c.fillText("Good Morning", x + w / 2, y + h * 0.9);
   c.restore();
 };
-const gmGrid = (c: Ctx, x: number, y: number, cols: number, rows: number, w: number, h: number, gap: number, k = 1) => {
+export const gmGrid = (c: Ctx, x: number, y: number, cols: number, rows: number, w: number, h: number, gap: number, k = 1) => {
   for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
     const q = clamp(k * cols * rows - (j * cols + i)); if (q <= 0) continue;
     c.save(); c.globalAlpha = q; gm(c, x + i * (w + gap), y + j * (h + gap), w, h, i + j * 3); c.restore();
   }
 };
 // the phone's own "storage full" dialog
-const fullDialog = (c: Ctx, x: number, y: number, s: number, k: number, needs = "the free brain needs 4.7 GB", free = "free: 1 GB") => {
+export const fullDialog = (c: Ctx, x: number, y: number, s: number, k: number, needs = "the free brain needs 4.7 GB", free = "free: 1 GB") => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.scale(s * (0.85 + 0.15 * easeOut(k)), s * (0.85 + 0.15 * easeOut(k))); c.globalAlpha = clamp(k * 2);
   c.fillStyle = "rgba(0,0,0,0.25)"; rrect(c, -300 + 8, -120 + 10, 600, 240, 28); c.fill();

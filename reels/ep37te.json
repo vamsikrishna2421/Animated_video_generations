@@ -1,0 +1,440 @@
+{
+ "id": "ep37te",
+ "title": "The squeezed brain (EP37: Quantization) (Telugu audio)",
+ "label": "EP37",
+ "banner": "Quantization",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_squeeze",
+   "tail": 0.1,
+   "boost": 1.7,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "squeeze",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Lunch is ready: ORDER",
+     "title": "Lunch is ready: ORDER",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "మా ఆవిడ \"భోజనం రెడీ\" అంటే, అది కూడా ఆర్డర్ అనుకున్నావా?!",
+     "show": "My wife says \"lunch is ready\", and you thought that was an ORDER too?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "ఫోన్ నిండిపోయింది. <pause 0.3> [1] అందుకే నా బ్రేన్ ని ఫోర్ బిట్ నుంచి టూ బిట్ కి కంప్రెస్ చేశాను.",
+     "show": "The phone filled up. So I compressed my brain from 4-bit to 2-bit.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "tts": "ఫోన్ నిండిపోయింది.",
+     "file2": "02b_ai.wav",
+     "tts2": "అందుకే నా బ్రేన్ ని ఫోర్ బిట్ నుంచి టూ బిట్ కి కంప్రెస్ చేశాను.",
+     "pause": 0.3,
+     "gain_db": -0.5
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "కంప్రెస్ చేశావా?!",
+     "show": "You compressed it?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_squeeze",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.35,
+   "boost": 1.45,
+   "duck_lines": [
+    [
+     3,
+     1.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "round",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "prices",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "board",
+      "prop": "board4",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "two",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "board",
+      "prop": "board2",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Quantization = rounding",
+     "title": "Quantization = rounding",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "దీని పేరు Quantization. <pause 0.3> [1] నా బ్రేన్ లో ప్రతి నంబర్ ని రౌండ్ చేయడం.",
+     "show": "Its name is quantization: rounding every number in my brain.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "tts": "దీని పేరు Quantization.",
+     "file2": "04b_ai.wav",
+     "tts2": "నా బ్రేన్ లో ప్రతి నంబర్ ని రౌండ్ చేయడం.",
+     "pause": 0.3,
+     "gain_db": -0.6
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "రౌండ్ చేయడమా? నా రేట్ల లాగానా?",
+     "show": "Rounding? Like my prices?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "అసలు సైజ్ లో పైసా కూడా లెక్కే. <pause 0.3> [1] ఫోర్ బిట్ లో బియ్యం అరవై రూపాయలు.",
+     "show": "Original size: every paisa counts. 4-bit: rice becomes ₹60.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "tts": "అసలు సైజ్ లో పైసా కూడా లెక్కే.",
+     "file2": "06b_ai.wav",
+     "tts2": "ఫోర్ బిట్ లో బియ్యం అరవై రూపాయలు.",
+     "pause": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "మరి టూ బిట్?",
+     "show": "And 2-bit?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": -4.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "ఒక్కో ర్యాక్ కి నాలుగే రేట్లు. [1] బిస్కెట్లు ఫ్రీ!",
+     "show": "Only 4 prices per rack. Biscuits free!",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_squeeze",
+   "tail": 0.1,
+   "pre": 0.3,
+   "boost": 1.45,
+   "drop_pre": [
+    [
+     1,
+     0.05,
+     1.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 16 vs 4 vs 2 bits",
+     "title": "Our test: 16 vs 4 vs 2 bits",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "అసలు సైజ్ కి నలభైలో ఒక్కటే తప్పు. <pause 0.3> [1] ఫోర్ బిట్ కి ఎన్ని తప్పులు?",
+     "show": "Original size: just 1 wrong out of 40. How many wrong for 4-bit?",
+     "maxgap": 0.28,
+     "gap": 2.6,
+     "tempo": 1.15,
+     "tts": "అసలు సైజ్ కి నలభైలో ఒక్కటే తప్పు.",
+     "file2": "09b_ravi.wav",
+     "tts2": "ఫోర్ బిట్ కి ఎన్ని తప్పులు?",
+     "pause": 0.3,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "ఒక్కటే తప్పు! <pause 0.3> [1] మూడో వంతు సైజ్, డబుల్ స్పీడ్.",
+     "show": "Just 1 wrong! A third of the size, double speed.",
+     "maxgap": 0.28,
+     "gap": 1.1,
+     "tempo": 1.1,
+     "tts": "ఒక్కటే తప్పు!",
+     "file2": "10b_ai.wav",
+     "tts2": "మూడో వంతు సైజ్, డబుల్ స్పీడ్.",
+     "pause": 0.3,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "మరి ఏ ఫైల్ తీసుకోవాలి?",
+     "show": "So which file do I take?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "పేరులో క్యూ ఫోర్ ఉన్నది. <pause 0.3> [1] నేనూ మళ్ళీ దానికే వెళ్తున్నా.",
+     "show": "The one with Q4 in its name. Going back to it now.",
+     "maxgap": 0.28,
+     "gap": 0.8,
+     "tempo": 1.1,
+     "nocap": true,
+     "tts": "పేరులో క్యూ ఫోర్ ఉన్నది.",
+     "file2": "12b_ai.wav",
+     "tts2": "నేనూ మళ్ళీ దానికే వెళ్తున్నా.",
+     "pause": 0.3,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_squeeze",
+   "tail": 0.0,
+   "lift": 0.5,
+   "pre": 0.45,
+   "outro": true,
+   "boost": 1.6,
+   "rise": 1.4,
+   "drop_pre": [
+    [
+     3,
+     -0.5,
+     1.0
+    ]
+   ],
+   "drop_at": [
+    [
+     3,
+     "1",
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "full",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "choice",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fine",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Full again",
+     "title": "Full again",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "ఫోన్ మళ్ళీ నిండింది! <pause 0.3> [1] యాభై రెండు గుడ్ మార్నింగ్ ఫోటోలు!",
+     "show": "Phone's full again! 52 good-morning photos!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "tts": "ఫోన్ మళ్ళీ నిండింది!",
+     "file2": "13b_ravi.wav",
+     "tts2": "యాభై రెండు గుడ్ మార్నింగ్ ఫోటోలు!",
+     "pause": 0.3,
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "ఫోటోలు డిలీట్ చేయండి, [1] లేకపోతే నేను టూ బిట్ కి వెళ్తా.",
+     "show": "Delete the photos, or I go to 2-bit.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 1.7999999999999998
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "సరే... కంప్రెస్ చెయ్.",
+     "show": "Fine... compress it.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.15,
+     "gain_db": 2.1
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "భోజనం రెడీ: [1] ఆర్డర్ అండి.",
+     "show": "Lunch is ready: ORDER, sir.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "pauses": {
+      "1": 0.35
+     },
+     "gain_db": -1.0
+    }
+   ]
+  }
+ ]
+}
