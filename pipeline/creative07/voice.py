@@ -160,15 +160,21 @@ def level(path, under=4.0, cap=12.0):
 DIGITS = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "nine": "9", "ten": "10", "forty": "40"}
 
 
+TELUGU = re.compile(r"[\u0C00-\u0C7F]")
+
+
 def judge(path, text, lang, n):
     """n: the line number (int), or "<n>b" for the second take of a two-take line. English: Whisper writes "10" for
-    "ten", so the judge compares against the line with digits (line 1 failed four clean takes at hit 0.67 without)."""
-    if lang == "en":
+    "ten", so the judge compares against the line with digits (line 1 failed four clean takes at hit 0.67 without).
+    An English line inside the Telugu reel (4, 12) gets the English judge: the Telugu one heard a clean "Believe in
+    yourself." as "बीलीग यो स्वफ"."""
+    jl = "en" if lang == "en" or not TELUGU.search(text) else "te"
+    if jl == "en":
         text = re.sub(r"\b(" + "|".join(DIGITS) + r")\b", lambda m: DIGITS[m.group(1).lower()], text, flags=re.I)
-    ok, score, info = judge_en(path, text, "en") if lang == "en" else judge_te(path, text)
+    ok, score, info = judge_en(path, text, "en") if jl == "en" else judge_te(path, text)
     heard_text = info.split("|", 1)[1].lower()
     words = set(re.findall(r"[a-z0-9]+", heard_text))
-    miss = [g[0] for g in must(lang, n, text) if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]
+    miss = [g[0] for g in must(jl, n, text) if not any((w in words) if jl == "en" else (w in heard_text) for w in g)]
     # a missed word costs more than the judge's own pass (+1): a take with every word a hair over the length limit
     # beats one that passed but lost a word (Telugu line 1 kept "Ajjun" over a clean, 2.85 s "Arjun")
     return ok and not miss, score - 1.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
