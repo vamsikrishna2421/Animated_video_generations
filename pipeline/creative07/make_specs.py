@@ -32,7 +32,7 @@ LINES = {
     11: ("ramya", "home", "ouch", "Ouch. But true.", "అబ్బా... కానీ నిజమే."),
     12: ("hr", "split", "again", "Tell me about yourself.", "Tell me about yourself."),   # Telugu too: HR asks in English (English letters)
     13: ("ramya", "split", "specific", "In my internship, I cut billing errors by half.", "నా ఇంటర్న్‌షిప్‌లో బిల్లింగ్ ఎర్రర్స్ సగానికి తగ్గించాను."),
-    14: ("divya", "split", "divya", "AI, how's my answer?", "ఏఐ, నా ఆన్సర్ ఎలా ఉంది?"),   # the end: the loop's line 1 answers her
+    14: ("divya", "split", "divya", "AI, how's my answer?", "కోచ్, నా ఆన్సర్ ఎలా ఉంది?"),   # the end: the loop's line 1 answers her (Telugu: Parler babbled "ఏఐ")
 }
 NUM_EN = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
 NUM_TE = {1: "ఒకటి", 2: "రెండు", 3: "మూడు", 4: "నాలుగు", 5: "ఐదు"}
@@ -44,7 +44,7 @@ SHOW_TE = {1: "Perfect answer! 10 out of 10!", 2: "40 people said exactly this t
            7: "Then how do I find the truth?", 8: "Tell me to be strict.",
            9: "Be a strict but fair interviewer. Give it marks out of 10. My flaws first.",
            10: "{N} out of 10. Not one example. Everyone says hardworking. Not a word about this job.", 11: "Ouch... but it's true.",
-           12: "Tell me about yourself.", 13: "In my internship, I cut billing errors by half.", 14: "AI, how's my answer?"}
+           12: "Tell me about yourself.", 13: "In my internship, I cut billing errors by half.", 14: "Coach, how's my answer?"}
 NOCAP = {9}   # the TYPE THIS card carries line 9
 # a: the hook and the slap; b: why it flatters, the fix; c: the second interview and the loop
 SCENES = [("i_a", (1, 2, 3), {"pre": 0.25, "boost": 1.7, "tail": 0.1}),

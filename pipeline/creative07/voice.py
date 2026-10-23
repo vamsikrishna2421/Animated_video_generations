@@ -85,7 +85,7 @@ MUST = {"en": {1: [("perfect",), ("ten", "10")], 2: [("forty", "40"), ("exact",)
                12: [("टेल", "टैल", "tell", "तेल"), ("सेल्फ", "सेल्फ़", "self", "yourself", "सेल")],
                13: [("इंटर्न", "इंटरन", "intern", "इंटर", "इंटन"), ("बिलि", "बिल्लि", "billing", "बिलिं", "बिल्लिं"), ("एरर", "एर्रर", "इरर", "error", "एरार"),
                     ("सगा", "सग", "सघा")],
-               14: [("एआई", "ए आई", "ai", "एई", "एआइ", "ए.आई", "एय"), ("आन्स", "आंस", "answer", "आन्सर", "अन्स"), ("एला", "येला", "इला", "ऐला")]}}   # Telugu as the judge writes it (Devanagari)
+               14: [("कोच", "coach", "कोछ", "कॊच"), ("आन्स", "आंस", "answer", "आन्सर", "अन्स", "अंस"), ("एला", "येला", "इला", "ऐला")]}}   # Telugu as the judge writes it (Devanagari)
 # English lines inside the Telugu reel (judged by the English judge)
 MUST_TE_EN = {4: [("believe",), ("yourself", "self")], 9: [("strict",), ("fair",), ("interviewer",)], 12: [("tell",), ("yourself",)]}
 # line 10's score is our test's average, rounded (make_specs): its word joins the MUST list from the spec's text
