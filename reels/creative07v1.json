@@ -1,0 +1,359 @@
+{
+ "id": "creative07v1",
+ "title": "Ten out of ten",
+ "label": "SKIT",
+ "banner": "Ten out of ten",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.08,
+ "parler_lang": "en",
+ "captionTop": 1500,
+ "musicGapGain": 3.0,
+ "scenes": [
+  {
+   "id": "i_a",
+   "type": "sk_interview",
+   "tail": 0.1,
+   "pre": 0.25,
+   "boost": 1.7,
+   "data": {
+    "beats": [
+     {
+      "who": "coach",
+      "shot": "split",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "hr",
+      "shot": "split",
+      "prop": "next",
+      "n": 2
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "five",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.9/10",
+     "strict": "2.5/10",
+     "typed": "?/10",
+     "good": "?/10",
+     "say": "4/10",
+     "n": 4,
+     "note": ""
+    },
+    "yt": {
+     "chapter": "Ten out of ten?",
+     "title": "Ten out of ten?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "coach",
+     "file": "01_coach.wav",
+     "text": "Perfect answer! Ten out of ten!",
+     "show": "Perfect answer! 10 out of 10!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "hr",
+     "file": "02_hr.wav",
+     "text": "Forty people gave that exact answer today. Next!",
+     "show": "40 people gave that exact answer today. Next!",
+     "maxgap": 0.25,
+     "gap": 0.35,
+     "gain_db": 0.3
+    },
+    {
+     "who": "ramya",
+     "file": "03_ramya.wav",
+     "text": "Five rejections, and you call it perfect?!",
+     "show": "5 rejections, and you call it perfect?!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.3
+    }
+   ]
+  },
+  {
+   "id": "i_b",
+   "type": "sk_interview",
+   "tail": 0.15,
+   "lift": 0.7,
+   "pre": 0.35,
+   "boost": 1.45,
+   "drop_pre": [
+    [
+     6,
+     0.0,
+     0.6
+    ]
+   ],
+   "drop_at": [
+    [
+     6,
+     "1",
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "amazing",
+      "n": 4
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "why",
+      "n": 5
+     },
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "thumbs",
+      "n": 6
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "truth",
+      "n": 7
+     },
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "strict",
+      "n": 8
+     },
+     {
+      "who": "ramya",
+      "shot": "phone",
+      "prop": "typing",
+      "n": 9
+     },
+     {
+      "who": "strict",
+      "shot": "phone",
+      "prop": "critique",
+      "n": 10
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "ouch",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.9/10",
+     "strict": "2.5/10",
+     "typed": "?/10",
+     "good": "?/10",
+     "say": "4/10",
+     "n": 4,
+     "note": ""
+    },
+    "yt": {
+     "chapter": "Why AI flatters, and the fix",
+     "title": "Why AI flatters, and the fix",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "coach",
+     "file": "04_coach.wav",
+     "text": "You're doing amazing! Believe in yourself!",
+     "show": "You're doing amazing! Believe in yourself!",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "ramya",
+     "file": "05_ramya.wav",
+     "text": "Why do you praise everything?!",
+     "show": "Why do you praise everything?!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.3
+    },
+    {
+     "who": "coach",
+     "file": "06_coach.wav",
+     "text": "People tap thumbs-up when I'm nice. [1] So I learned to be nice.",
+     "show": "People tap thumbs-up when I'm nice. So I learned to be nice.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "ramya",
+     "file": "07_ramya.wav",
+     "text": "Then how do I get the truth?",
+     "show": "Then how do I get the truth?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.3
+    },
+    {
+     "who": "coach",
+     "file": "08_coach.wav",
+     "text": "Tell me to be strict.",
+     "show": "Tell me to be strict.",
+     "maxgap": 0.25,
+     "gap": 0.16
+    },
+    {
+     "who": "ramya",
+     "file": "09_ramya.wav",
+     "text": "Act as a strict interviewer who rejects nine out of ten. [1] Rate it out of ten. Weaknesses first.",
+     "show": "Act as a strict interviewer who rejects nine out of ten. Rate it out of ten. Weaknesses first.",
+     "maxgap": 0.25,
+     "gap": 0.8,
+     "nocap": true,
+     "gain_db": 0.3
+    },
+    {
+     "who": "strict",
+     "file": "10_strict.wav",
+     "text": "Four out of ten. [1] No example. Everyone says hardworking. Nothing about this job.",
+     "show": "4 out of 10. No example. Everyone says hardworking. Nothing about this job.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "pauses": {
+      "1": 0.35
+     }
+    },
+    {
+     "who": "ramya",
+     "file": "11_ramya.wav",
+     "text": "Ouch. But true.",
+     "show": "Ouch. But true.",
+     "maxgap": 0.25,
+     "gap": 2.0,
+     "gain_db": 0.3
+    }
+   ]
+  },
+  {
+   "id": "i_c",
+   "type": "sk_interview",
+   "tail": 0.0,
+   "lift": 0.8,
+   "pre": 0.35,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.3,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "hr",
+      "shot": "split",
+      "prop": "again",
+      "n": 12
+     },
+     {
+      "who": "ramya",
+      "shot": "split",
+      "prop": "specific",
+      "n": 13
+     },
+     {
+      "who": "divya",
+      "shot": "split",
+      "prop": "divya",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.9/10",
+     "strict": "2.5/10",
+     "typed": "?/10",
+     "good": "?/10",
+     "say": "4/10",
+     "n": 4,
+     "note": ""
+    },
+    "yt": {
+     "chapter": "The real interview",
+     "title": "The real interview",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "hr",
+     "file": "12_hr.wav",
+     "text": "Tell me about yourself.",
+     "show": "Tell me about yourself.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "gain_db": 0.3
+    },
+    {
+     "who": "ramya",
+     "file": "13_ramya.wav",
+     "text": "In my internship, I cut billing errors by half.",
+     "show": "In my internship, I cut billing errors by half.",
+     "maxgap": 0.25,
+     "gap": 0.6,
+     "gain_db": 0.3
+    },
+    {
+     "who": "divya",
+     "file": "14_divya.wav",
+     "text": "AI, how's my answer?",
+     "show": "AI, how's my answer?",
+     "maxgap": 0.25,
+     "gap": 0.05,
+     "gain_db": 0.3
+    }
+   ]
+  }
+ ]
+}

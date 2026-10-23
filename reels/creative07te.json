@@ -1,0 +1,363 @@
+{
+ "id": "creative07te",
+ "title": "Ten out of ten (Telugu audio)",
+ "label": "SKIT",
+ "banner": "Ten out of ten",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.08,
+ "parler_lang": "te",
+ "captionTop": 1500,
+ "musicGapGain": 3.0,
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "i_a",
+   "type": "sk_interview",
+   "tail": 0.1,
+   "pre": 0.25,
+   "boost": 1.7,
+   "data": {
+    "beats": [
+     {
+      "who": "coach",
+      "shot": "split",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "hr",
+      "shot": "split",
+      "prop": "next",
+      "n": 2
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "five",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.9/10",
+     "strict": "2.5/10",
+     "typed": "?/10",
+     "good": "?/10",
+     "say": "4/10",
+     "n": 4,
+     "note": ""
+    },
+    "yt": {
+     "chapter": "Ten out of ten?",
+     "title": "Ten out of ten?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "coach",
+     "file": "01_coach.wav",
+     "text": "పర్ఫెక్ట్ ఆన్సర్! పదికి పది!",
+     "show": "Perfect answer! 10 out of 10!",
+     "maxgap": 0.3,
+     "gap": 0.24
+    },
+    {
+     "who": "hr",
+     "file": "02_hr.wav",
+     "text": "ఈ రోజు నలభై మంది సరిగ్గా ఇదే చెప్పారు. నెక్స్ట్!",
+     "show": "40 people said exactly this today. Next!",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "gain_db": 0.3
+    },
+    {
+     "who": "ramya",
+     "file": "03_ramya.wav",
+     "text": "ఐదు రిజెక్షన్లు, నువ్వేమో పర్ఫెక్ట్ అంటావా?!",
+     "show": "5 rejections, and you say perfect?!",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.3
+    }
+   ]
+  },
+  {
+   "id": "i_b",
+   "type": "sk_interview",
+   "tail": 0.15,
+   "lift": 0.7,
+   "pre": 0.35,
+   "boost": 1.45,
+   "drop_pre": [
+    [
+     6,
+     0.0,
+     0.6
+    ]
+   ],
+   "drop_at": [
+    [
+     6,
+     "1",
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "amazing",
+      "n": 4
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "why",
+      "n": 5
+     },
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "thumbs",
+      "n": 6
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "truth",
+      "n": 7
+     },
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "strict",
+      "n": 8
+     },
+     {
+      "who": "ramya",
+      "shot": "phone",
+      "prop": "typing",
+      "n": 9
+     },
+     {
+      "who": "strict",
+      "shot": "phone",
+      "prop": "critique",
+      "n": 10
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "ouch",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.9/10",
+     "strict": "2.5/10",
+     "typed": "?/10",
+     "good": "?/10",
+     "say": "4/10",
+     "n": 4,
+     "note": ""
+    },
+    "yt": {
+     "chapter": "Why AI flatters, and the fix",
+     "title": "Why AI flatters, and the fix",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "coach",
+     "file": "04_coach.wav",
+     "text": "నువ్వు అదరగొడుతున్నావ్! బిలీవ్ ఇన్ యువర్ సెల్ఫ్!",
+     "show": "You're rocking it! Believe in yourself!",
+     "maxgap": 0.3,
+     "gap": 0.24
+    },
+    {
+     "who": "ramya",
+     "file": "05_ramya.wav",
+     "text": "ప్రతిదానికీ ఎందుకు పొగుడుతావ్?!",
+     "show": "Why do you praise everything?!",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.3
+    },
+    {
+     "who": "coach",
+     "file": "06_coach.wav",
+     "text": "నేను మెచ్చుకుంటే జనం లైక్ కొడతారు. [1] అలా పొగడటమే నేర్చుకున్నా.",
+     "show": "When I praise, people hit like. So I learned to praise.",
+     "maxgap": 0.3,
+     "gap": 0.24
+    },
+    {
+     "who": "ramya",
+     "file": "07_ramya.wav",
+     "text": "మరి నిజం ఎలా తెలుస్తుంది?",
+     "show": "Then how do I find the truth?",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.3
+    },
+    {
+     "who": "coach",
+     "file": "08_coach.wav",
+     "text": "స్ట్రిక్ట్ గా ఉండమని చెప్పు.",
+     "show": "Tell me to be strict.",
+     "maxgap": 0.3,
+     "gap": 0.24
+    },
+    {
+     "who": "ramya",
+     "file": "09_ramya.wav",
+     "text": "పదిలో తొమ్మిది మందిని రిజెక్ట్ చేసే స్ట్రిక్ట్ ఇంటర్వ్యూయర్ లా ఉండు. [1] పదికి మార్క్ వెయ్యి. ముందు నా లోపాలు చెప్పు.",
+     "show": "Be a strict interviewer who rejects 9 out of 10. Give it a mark out of 10. My flaws first.",
+     "maxgap": 0.3,
+     "gap": 0.8,
+     "nocap": true,
+     "gain_db": 0.3
+    },
+    {
+     "who": "strict",
+     "file": "10_strict.wav",
+     "text": "పదికి నాలుగు. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు.",
+     "show": "4 out of 10. Not one example. Everyone says hardworking. Not a word about this job.",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "pauses": {
+      "1": 0.35
+     }
+    },
+    {
+     "who": "ramya",
+     "file": "11_ramya.wav",
+     "text": "అబ్బా... కానీ నిజమే.",
+     "show": "Ouch... but it's true.",
+     "maxgap": 0.3,
+     "gap": 2.0,
+     "gain_db": 0.3
+    }
+   ]
+  },
+  {
+   "id": "i_c",
+   "type": "sk_interview",
+   "tail": 0.0,
+   "lift": 0.8,
+   "pre": 0.35,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.3,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "hr",
+      "shot": "split",
+      "prop": "again",
+      "n": 12
+     },
+     {
+      "who": "ramya",
+      "shot": "split",
+      "prop": "specific",
+      "n": 13
+     },
+     {
+      "who": "divya",
+      "shot": "split",
+      "prop": "divya",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.9/10",
+     "strict": "2.5/10",
+     "typed": "?/10",
+     "good": "?/10",
+     "say": "4/10",
+     "n": 4,
+     "note": ""
+    },
+    "yt": {
+     "chapter": "The real interview",
+     "title": "The real interview",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "hr",
+     "file": "12_hr.wav",
+     "text": "టెల్ మీ అబౌట్ యువర్ సెల్ఫ్.",
+     "show": "Tell me about yourself.",
+     "maxgap": 0.3,
+     "gap": 0.24,
+     "gain_db": 0.3
+    },
+    {
+     "who": "ramya",
+     "file": "13_ramya.wav",
+     "text": "నా ఇంటర్న్‌షిప్‌లో బిల్లింగ్ ఎర్రర్స్ సగానికి తగ్గించాను.",
+     "show": "In my internship, I cut billing errors by half.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "gain_db": 0.3
+    },
+    {
+     "who": "divya",
+     "file": "14_divya.wav",
+     "text": "ఏఐ, నా ఆన్సర్ ఎలా ఉంది?",
+     "show": "AI, how's my answer?",
+     "maxgap": 0.3,
+     "gap": 0.05,
+     "gain_db": 0.3
+    }
+   ]
+  }
+ ]
+}
