@@ -49,8 +49,8 @@ REF = {
 VOICE_TE = {
     "ramya": "Lalitha speaks in a young, bright, expressive voice like a fresh graduate, at a natural pace. "
              "The recording is very clear, close-up, studio quality, with no background noise.",
-    "divya": "Lalitha speaks in a young, hopeful, slightly nervous voice like a college student, at a natural pace. "
-             "The recording is very clear, close-up, studio quality, with no background noise.",
+    "divya": "Lalitha speaks in a high-pitched, quick, playful voice like a cheerful teenage girl, at a fast pace. "
+             "The recording is very clear, close-up, studio quality, with no background noise.",   # not Ramya (same speaker)
     "coach": "Kiran speaks in an extremely cheerful, bubbly, enthusiastic voice like a motivational coach, at a lively pace. "
              "The recording is very clear, close-up, studio quality, with no background noise.",
     "strict": "Kiran speaks in a calm, serious, firm voice like a strict examiner, at a measured pace. "
@@ -62,27 +62,26 @@ VOICE_TE_LINE = {}
 APP = {"coach", "strict"}   # the coach is an app on her phone: the light phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
 MUST = {"en": {1: [("perfect",), ("ten", "10")], 2: [("forty", "40"), ("exact",), ("today",), ("next",)],
-               3: [("five", "5"), ("rejections", "rejection"), ("perfect",)], 4: [("amazing",), ("believe",)],
-               5: [("praise",), ("everything",)], 6: [("thumbs", "thumb"), ("nice",), ("learned", "learnt")], 7: [("truth",)],
-               8: [("strict",)], 9: [("strict",), ("interviewer",), ("rejects", "reject"), ("nine", "9"), ("ten", "10"),
-                                     ("weaknesses", "weakness"), ("first",)],
+               3: [("five", "5"), ("rejections", "rejection"), ("perfect",)], 4: [("believe",), ("yourself", "self")],
+               5: [("praise",), ("everything",)], 6: [("thumbs", "thumb"), ("nice",)], 7: [("truth",)],
+               8: [("strict",)], 9: [("strict",), ("fair",), ("interviewer",), ("ten", "10"), ("weaknesses", "weakness"), ("first",)],
                10: [("ten", "10"), ("example",), ("hardworking", "hard"), ("job",)], 11: [("ouch",), ("true",)],
                12: [("tell",), ("yourself",)], 13: [("internship",), ("billing",), ("errors", "error"), ("half",)],
                14: [("ai",), ("answer",)]},
         "te": {1: [("पर्फ", "परफ", "पर्फे", "परफे", "perfect"), ("पदिकि", "पदिक", "पदी", "10")],
                2: [("नलभ", "नलब", "नल्भ", "40"), ("नेक्स", "नेक्स्ट", "next")],
                3: [("ऐदु", "अइदु", "5", "ऐडु", "ऐदू"), ("रिजेक्", "रिजक", "रीजेक्", "रिजेक"), ("पर्फ", "परफ", "perfect")],
-               4: [("अदर", "अदरगो", "अधर"), ("बिली", "बिलि", "believe"), ("सेल्फ", "सेल्फ़", "self", "सेल")],
+               4: [("बिली", "बिलि", "believe"), ("सेल्फ", "सेल्फ़", "self", "सेल")],
                5: [("पोगु", "पोगड", "पोगुडु", "पोगड़")],
-               6: [("मेच्चु", "मेचु", "मेच"), ("लैक", "लाइक", "like", "लाईक"), ("पोगड", "पोगुड", "पोगडट", "पोगड़")],
+               6: [("मेच्चु", "मेचु", "मेच"), ("लैक", "लाइक", "like", "लाईक")],
                7: [("निजम", "निजं", "निज"), ("तेलु", "तेलुस्", "तेलस")], 8: [("स्ट्रिक्ट", "स्ट्रिक", "strict", "स्त्रिक्ट", "स्ट्रिट")],
-               9: [("तोम्मि", "तोमि", "तॊम्मि", "9"), ("रिजेक्", "रिजेक", "reject", "रीजेक"), ("स्ट्रिक्ट", "स्ट्रिक", "strict"),
-                   ("लोपा", "लोप", "लॊपा")],
-               10: [("पदिकि", "पदिक", "10"), ("एग्जा", "एग्ज़ा", "example", "इग्जा", "एक्जा"), ("हार्ड", "हर्ड", "hard"),
-                    ("जॉब", "जाब", "job", "जोब")],
+               9: [("स्ट्रिक्ट", "स्ट्रिक", "strict"), ("फेयर", "फेर", "फ़ेयर", "fair"), ("इंटरव्यू", "इंटर्व्यू", "इंटर", "interview")],
+               "9b": [("पदिकि", "पदिक", "10"), ("मार्कु", "मार्क", "मार्", "mark"), ("लोपा", "लोप", "लॊपा")],
+               10: [("पदिकि", "पदिक", "10"), ("एग्जा", "एग्ज़ा", "example", "इग्जा", "एक्जा")],
+               "10b": [("हार्ड", "हर्ड", "hard"), ("जॉब", "जाब", "job", "जोब")],
                11: [("अब्बा", "अबा", "अब्ब"), ("निजम", "निजं", "निज")], 12: [("टेल", "टैल", "tell"), ("सेल्फ", "सेल्फ़", "self", "yourself")],
                13: [("इंटर्न", "इंटरन", "intern", "इंटर"), ("बिलि", "बिल्लि", "billing", "बिलिं"), ("एरर", "एर्रर", "इरर", "error"), ("सगा", "सग")],
-               14: [("आन्स", "आंस", "answer", "आन्सर"), ("एला", "येला", "इला")]}}   # Telugu as the judge writes it (Devanagari)
+               14: [("एआई", "ए आई", "ai", "एई", "एआइ"), ("आन्स", "आंस", "answer", "आन्सर"), ("एला", "येला", "इला")]}}   # Telugu as the judge writes it (Devanagari)
 # line 10's score is our test's average, rounded (make_specs): its word joins the MUST list from the spec's text
 NUM_MUST = {"en": {"one": ("one", "1"), "two": ("two", "2"), "three": ("three", "3"), "four": ("four", "4"), "five": ("five", "5")},
             "te": {"ఒకటి": ("ओकटि", "ओकटी", "1"), "రెండు": ("रेंडु", "रेंडू", "रेण्डु", "2"), "మూడు": ("मूडु", "मूडू", "मुडु", "3"),

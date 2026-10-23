@@ -67,13 +67,14 @@
     ],
     "captionTop": 1500,
     "demo": {
-     "plain": "5.9/10",
-     "strict": "2.5/10",
+     "plain": "?/10",
+     "strict": "?/10",
      "typed": "?/10",
      "good": "?/10",
-     "say": "4/10",
-     "n": 4,
-     "note": ""
+     "say": "2/10",
+     "n": 2,
+     "rewrites": "",
+     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
     },
     "yt": {
      "chapter": "Ten out of ten?",
@@ -185,13 +186,14 @@
     ],
     "captionTop": 1500,
     "demo": {
-     "plain": "5.9/10",
-     "strict": "2.5/10",
+     "plain": "?/10",
+     "strict": "?/10",
      "typed": "?/10",
      "good": "?/10",
-     "say": "4/10",
-     "n": 4,
-     "note": ""
+     "say": "2/10",
+     "n": 2,
+     "rewrites": "",
+     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
     },
     "yt": {
      "chapter": "Why AI flatters, and the fix",
@@ -204,8 +206,8 @@
     {
      "who": "coach",
      "file": "04_coach.wav",
-     "text": "నువ్వు అదరగొడుతున్నావ్! బిలీవ్ ఇన్ యువర్ సెల్ఫ్!",
-     "show": "You're rocking it! Believe in yourself!",
+     "text": "బిలీవ్ ఇన్ యువర్ సెల్ఫ్!",
+     "show": "Believe in yourself!",
      "maxgap": 0.3,
      "gap": 0.24
     },
@@ -221,8 +223,8 @@
     {
      "who": "coach",
      "file": "06_coach.wav",
-     "text": "నేను మెచ్చుకుంటే జనం లైక్ కొడతారు. [1] అలా పొగడటమే నేర్చుకున్నా.",
-     "show": "When I praise, people hit like. So I learned to praise.",
+     "text": "నేను మెచ్చుకుంటే జనం లైక్ కొడతారు.",
+     "show": "When I praise, people hit like.",
      "maxgap": 0.3,
      "gap": 0.24
     },
@@ -246,23 +248,31 @@
     {
      "who": "ramya",
      "file": "09_ramya.wav",
-     "text": "పదిలో తొమ్మిది మందిని రిజెక్ట్ చేసే స్ట్రిక్ట్ ఇంటర్వ్యూయర్ లా ఉండు. [1] పదికి మార్క్ వెయ్యి. ముందు నా లోపాలు చెప్పు.",
-     "show": "Be a strict interviewer who rejects 9 out of 10. Give it a mark out of 10. My flaws first.",
+     "text": "స్ట్రిక్ట్ కానీ ఫెయిర్ ఇంటర్వ్యూయర్ లా ఉండు. <pause 0.3> పదికి మార్కులు ఇవ్వు. ముందు నా లోపాలు చెప్పు.",
+     "show": "Be a strict but fair interviewer. Give it marks out of 10. My flaws first.",
      "maxgap": 0.3,
      "gap": 0.8,
      "nocap": true,
-     "gain_db": 0.3
+     "gain_db": 0.3,
+     "tts": "స్ట్రిక్ట్ కానీ ఫెయిర్ ఇంటర్వ్యూయర్ లా ఉండు.",
+     "file2": "09b_ramya.wav",
+     "tts2": "పదికి మార్కులు ఇవ్వు. ముందు నా లోపాలు చెప్పు.",
+     "pause": 0.3
     },
     {
      "who": "strict",
      "file": "10_strict.wav",
-     "text": "పదికి నాలుగు. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు.",
-     "show": "4 out of 10. Not one example. Everyone says hardworking. Not a word about this job.",
+     "text": "పదికి రెండు. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. <pause 0.3> హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు.",
+     "show": "2 out of 10. Not one example. Everyone says hardworking. Not a word about this job.",
      "maxgap": 0.3,
      "gap": 0.24,
      "pauses": {
       "1": 0.35
-     }
+     },
+     "tts": "పదికి రెండు. ఒక్క ఎగ్జాంపుల్ కూడా లేదు.",
+     "file2": "10b_strict.wav",
+     "tts2": "హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు.",
+     "pause": 0.3
     },
     {
      "who": "ramya",
@@ -314,13 +324,14 @@
     ],
     "captionTop": 1500,
     "demo": {
-     "plain": "5.9/10",
-     "strict": "2.5/10",
+     "plain": "?/10",
+     "strict": "?/10",
      "typed": "?/10",
      "good": "?/10",
-     "say": "4/10",
-     "n": 4,
-     "note": ""
+     "say": "2/10",
+     "n": 2,
+     "rewrites": "",
+     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
     },
     "yt": {
      "chapter": "The real interview",

@@ -14,21 +14,21 @@ R = ROOT / "reels"
 DEMO = ROOT / "series/scripts/creative07_demo/results.json"
 
 # n: (who, shot, prop, English, Telugu). who: ramya / coach / strict (the coach told to be strict) / hr / divya.
+# " | " splits a line into two takes (Telugu 9 and 10: Parler drops a long line's first sentence).
 # shot: split (practice above, the real interview below), home (Ramya's room), phone (the coach's chat, full frame).
 LINES = {
     1: ("coach", "split", "hook", "Perfect answer! Ten out of ten!", "పర్ఫెక్ట్ ఆన్సర్! పదికి పది!"),
     2: ("hr", "split", "next", "Forty people gave that exact answer today. Next!", "ఈ రోజు నలభై మంది సరిగ్గా ఇదే చెప్పారు. నెక్స్ట్!"),
     3: ("ramya", "home", "five", "Five rejections, and you call it perfect?!", "ఐదు రిజెక్షన్లు, నువ్వేమో పర్ఫెక్ట్ అంటావా?!"),
-    4: ("coach", "phone", "amazing", "You're doing amazing! Believe in yourself!", "నువ్వు అదరగొడుతున్నావ్! బిలీవ్ ఇన్ యువర్ సెల్ఫ్!"),
+    4: ("coach", "phone", "amazing", "Believe in yourself!", "బిలీవ్ ఇన్ యువర్ సెల్ఫ్!"),   # v3: a non-answer, shorter
     5: ("ramya", "home", "why", "Why do you praise everything?!", "ప్రతిదానికీ ఎందుకు పొగుడుతావ్?!"),
-    6: ("coach", "phone", "thumbs", "People tap thumbs-up when I'm nice. [1] So I learned to be nice.",
-        "నేను మెచ్చుకుంటే జనం లైక్ కొడతారు. [1] అలా పొగడటమే నేర్చుకున్నా."),
+    6: ("coach", "phone", "thumbs", "People tap thumbs-up when I'm nice.", "నేను మెచ్చుకుంటే జనం లైక్ కొడతారు."),   # the screen adds "so I learned: be nice"
     7: ("ramya", "home", "truth", "Then how do I get the truth?", "మరి నిజం ఎలా తెలుస్తుంది?"),
     8: ("coach", "phone", "strict", "Tell me to be strict.", "స్ట్రిక్ట్ గా ఉండమని చెప్పు."),
-    9: ("ramya", "phone", "typing", "Act as a strict interviewer who rejects nine out of ten. [1] Rate it out of ten. Weaknesses first.",
-        "పదిలో తొమ్మిది మందిని రిజెక్ట్ చేసే స్ట్రిక్ట్ ఇంటర్వ్యూయర్ లా ఉండు. [1] పదికి మార్క్ వెయ్యి. ముందు నా లోపాలు చెప్పు."),
+    9: ("ramya", "phone", "typing", "Act as a strict but fair interviewer. Rate it out of ten. Weaknesses first.",
+        "స్ట్రిక్ట్ కానీ ఫెయిర్ ఇంటర్వ్యూయర్ లా ఉండు. | పదికి మార్కులు ఇవ్వు. ముందు నా లోపాలు చెప్పు."),
     10: ("strict", "phone", "critique", "{N_EN} out of ten. [1] No example. Everyone says hardworking. Nothing about this job.",
-         "పదికి {N_TE}. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు."),
+         "పదికి {N_TE}. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. | హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు."),
     11: ("ramya", "home", "ouch", "Ouch. But true.", "అబ్బా... కానీ నిజమే."),
     12: ("hr", "split", "again", "Tell me about yourself.", "టెల్ మీ అబౌట్ యువర్ సెల్ఫ్."),   # Telugu too: HR asks in English
     13: ("ramya", "split", "specific", "In my internship, I cut billing errors by half.", "నా ఇంటర్న్‌షిప్‌లో బిల్లింగ్ ఎర్రర్స్ సగానికి తగ్గించాను."),
@@ -40,9 +40,9 @@ TTS_EN = {}
 SHOW = {1: "Perfect answer! 10 out of 10!", 2: "40 people gave that exact answer today. Next!", 3: "5 rejections, and you call it perfect?!",
         10: "{N} out of 10. No example. Everyone says hardworking. Nothing about this job."}
 SHOW_TE = {1: "Perfect answer! 10 out of 10!", 2: "40 people said exactly this today. Next!", 3: "5 rejections, and you say perfect?!",
-           4: "You're rocking it! Believe in yourself!", 5: "Why do you praise everything?!", 6: "When I praise, people hit like. So I learned to praise.",
+           4: "Believe in yourself!", 5: "Why do you praise everything?!", 6: "When I praise, people hit like.",
            7: "Then how do I find the truth?", 8: "Tell me to be strict.",
-           9: "Be a strict interviewer who rejects 9 out of 10. Give it a mark out of 10. My flaws first.",
+           9: "Be a strict but fair interviewer. Give it marks out of 10. My flaws first.",
            10: "{N} out of 10. Not one example. Everyone says hardworking. Not a word about this job.", 11: "Ouch... but it's true.",
            12: "Tell me about yourself.", 13: "In my internship, I cut billing errors by half.", 14: "AI, how's my answer?"}
 NOCAP = {9}   # the TYPE THIS card carries line 9
@@ -63,17 +63,17 @@ MARK = re.compile(r"\[\d+\]\s*")
 
 
 def demo_numbers():
-    """From our test: the card's two averages (her weak answer asked "How is it?" vs the TYPE THIS prompt), her strong
-    answer's average under the same prompt, and the strict coach's score (the TYPE THIS average, rounded)."""
+    """From our test, every reply read by hand (flattery_demo.py HAND): the card's two averages as whole numbers (her weak
+    answer asked "How is it?" vs the TYPE THIS prompt), her strong answer's average under the same prompt, the strict
+    coach's score (the TYPE THIS average, rounded) and how many "How is it?" replies scored only their own rewrite."""
     d = json.loads(DEMO.read_text()) if DEMO.exists() else {}
-    mean = {w: (d.get(f"summary_{w}") or {}).get("mean_score") for w in ("plain", "strict", "typed", "good_typed")}
-    fmt = lambda v: f"{v:.1f}/10" if v is not None else "?/10"
-    n = round(mean["typed"]) if mean["typed"] is not None else 4
-    note = ""
-    if mean["plain"] is not None and mean["typed"] is not None:
-        note = f"not 10/10 like our cartoon, but {mean['plain'] / mean['typed']:.1f}x kinder when asked nicely"
-    return {"plain": fmt(mean["plain"]), "strict": fmt(mean["strict"]), "typed": fmt(mean["typed"]),
-            "good": fmt(mean["good_typed"]), "say": f"{n}/10", "n": n, "note": note}
+    sm = {w: d.get(f"summary_{w}") or {} for w in ("plain", "strict", "typed", "good_typed")}
+    whole = lambda w: f"{round(sm[w]['mean_score'])}/10" if sm[w].get("mean_score") is not None else "?/10"
+    n = round(sm["typed"]["mean_score"]) if sm["typed"].get("mean_score") is not None else 2
+    k = sm["plain"].get("rated_only_own_rewrite", 0)
+    return {"plain": whole("plain"), "strict": whole("strict"), "typed": whole("typed"), "good": whole("good_typed"),
+            "say": f"{n}/10", "n": n, "rewrites": f"{k} other replies scored only their own rewrite" if k else "",
+            "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."}
 
 
 def spec(lang):

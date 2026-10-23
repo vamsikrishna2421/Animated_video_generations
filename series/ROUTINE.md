@@ -369,3 +369,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   Quantization."), as its own take. A boom on the cut still masks a Telugu line's first word ("ఒక్కటే" -> "agar"):
   half a second early. Make a shop's wall board agree with any price board on screen (EP37: dal ₹120 vs ₹139.75).
 
+- Creative 07 lessons (our own tests): read every reply by hand before a number goes on screen. Asked "How is it? Rate
+  it out of 10.", 4 of 10 replies rewrote her answer and scored only their own rewrite ("This version is rated
+  7/10"), and two scored hers in words ("around 4-5", "a **5**"): a first-"N/10" regex reported 5.9, the hand score was
+  4.75 (the script review caught it in results.json). Keep the hand scores and the reason in the demo script (`HAND`).
+- A test model's training cutoff leaks into the result: Qwen2.5 called a 2025 graduation and internship "not a valid
+  year" and docked points for it. In a story set in 2026, the test text says "last year", not the year.
+- A persona prompt can be harsh on everything: "a strict interviewer who rejects 9 out of 10 candidates" gave a strong,
+  specific answer 3/10 for "lacks a personal touch". Before a reel recommends a prompt, run a strong-answer control
+  with the same prompt; a prompt whose score doesn't follow the answer only teaches the viewer to feel bad.

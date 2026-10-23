@@ -88,7 +88,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   else if (m === "sad") stroke(c, circlePts(0, my + 12, 22, 11, Math.PI + 0.3, Math.PI * 2 - 0.3, 10), INK, 6, r, { passes: 2 });
   else stroke(c, [[-16, my], [16, my]], INK, 6, r, { passes: 2 });
 };
-const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: boolean, r: () => number) => {
+const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: boolean, r: () => number, headDy = 0) => {
   const L = LOOK[who];
   c.save(); c.translate(at[0], at[1]); c.scale(L.s * sc, L.s * sc);
   c.save();
@@ -119,7 +119,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
     c.fillStyle = "#f5d0fe"; rrect(c, -40, -76, 80, 152, 10); c.fill();
     c.restore();
   }
-  face(c, who, m, talk, r);
+  c.save(); c.translate(0, headDy); face(c, who, m, talk, r); c.restore();
   c.restore();
 };
 
@@ -154,10 +154,10 @@ const confetti = (c: Ctx, x0: number, y0: number, w: number, h: number, f: numbe
   }
 };
 // the TYPE THIS card, word for word as we tested it (pipeline/creative07/flattery_demo.py CARD); yellow = you fill it in
-const CARD = ["Act as a strict interviewer who rejects 9 out of 10 candidates.", "Job: [your job]", "Question: [the question]",
+const CARD = ["Act as a strict but fair interviewer.", "Job: [your job]", "Question: [the question]",
   "My answer: [paste it]", "Rate it out of 10. List my 3 biggest weaknesses first."];
 const CARD_ROWS: [string, boolean][][] = [
-  [["Act as a strict interviewer who", false]], [["rejects 9 out of 10 candidates.", false]],
+  [["Act as a strict but fair interviewer.", false]],
   [["Job: ", false], ["[your job]", true]], [["Question: ", false], ["[the question]", true]], [["My answer: ", false], ["[paste it]", true]],
   [["Rate it out of 10. List my", false]], [["3 biggest weaknesses first.", false]]];
 // the coach's chat screen, full frame or as a card: `mode` picks what it shows
@@ -215,7 +215,7 @@ const chat = (c: Ctx, W: number, f: number, r: () => number, mode: ChatMode, tal
     c.fillText(line, 140, ly);
     if ((k[1] ?? 0) > 0) {   // the copy-paste card (held through the gap after the line)
       const q = k[1];
-      c.save(); c.globalAlpha = clamp(q * 3); c.fillStyle = "rgba(15,23,42,0.97)"; rrect(c, 70, 370, W - 140, 800, 30); c.fill();
+      c.save(); c.globalAlpha = clamp(q * 3); c.fillStyle = "#0f172a"; rrect(c, 70, 370, W - 140, 800, 30); c.fill();
       c.font = SANS(50); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("TYPE THIS 📋", W / 2, 460);
       c.textAlign = "left";
       CARD_ROWS.forEach((row, i) => {   // [text, filled-in-by-you]
@@ -223,12 +223,12 @@ const chat = (c: Ctx, W: number, f: number, r: () => number, mode: ChatMode, tal
         row.forEach(([t, fill]) => { c.font = SANS(42, fill ? 700 : 600); c.fillStyle = fill ? "#facc15" : "#fff"; c.fillText(t, x, 560 + i * 72); x += c.measureText(t).width; });
       });
       c.font = SANS(30, 600); c.fillStyle = "#94a3b8"; c.textAlign = "center";
-      c.fillText("a new chat can forget it: save it in custom instructions", W / 2, 1120);
+      c.font = SANS(34, 700); c.fillStyle = "#e2e8f0"; c.fillText("copy it from the caption ↓", W / 2, 1120);
       c.restore();
     }
   }
   if (mode === "critique") {
-    msg(400, ["Act as a strict interviewer who", "rejects 9 out of 10 candidates.", "Job: accounts executive ..."], true, 1, 36);
+    msg(400, ["Act as a strict but fair interviewer.", "Job: accounts executive", "My answer: \"Hi, I am Ramya...\""], true, 1, 36);
     c.font = SANS(160); c.fillStyle = "#b91c1c"; c.textAlign = "center"; if ((k[0] ?? 1) > 0) { c.save(); c.globalAlpha = clamp((k[0] ?? 1) * 3); c.fillText(say, W / 2, 840); c.restore(); }
     const rows = te ? ["1. no example of anything you did", "2. everyone says \"hardworking\"", "3. nothing about this job"] : ["1. no example of anything you did", "2. everyone says \"hardworking\"", "3. nothing about this job"];
     rows.forEach((t, i) => {
@@ -303,7 +303,7 @@ const panelLabel = (c: Ctx, x: number, y: number, t: string, col: string) => {
   c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText(t, x + 20, y + 41);
 };
 // the practice panel (top half) and the interview panel (bottom half)
-const practicePanel = (c: Ctx, W: number, f: number, r: () => number, who: Who, praiseK: number, talkAI: boolean, talkMe: boolean, strict = false, label = "PRACTICE · with AI", good = "7/10") => {
+const practicePanel = (c: Ctx, W: number, f: number, r: () => number, who: Who, praiseK: number, talkAI: boolean, talkMe: boolean, strict = false, label = "PRACTICE · with AI", good = "7/10", old = "2/10") => {
   c.save(); c.beginPath(); c.rect(0, 0, W, H2); c.clip();
   pgRoom(c, 0, H2, r, f);
   person(c, who, [300, 640], 0.82, talkMe ? "grin" : "happy", "phone", talkMe, r);
@@ -312,9 +312,11 @@ const practicePanel = (c: Ctx, W: number, f: number, r: () => number, who: Who, 
   c.fillStyle = "#111827"; rrect(c, -170, -300, 340, 560, 40); c.fill();
   c.fillStyle = strict ? "#e2e8f0" : "#fdf4ff"; rrect(c, -150, -280, 300, 520, 28); c.fill();
   coachFace(c, 0, -170, 0.8, strict, talkAI, f, r);
-  if (strict) {
-    c.font = SANS(30, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("her new answer:", 0, -60);
-    c.font = SANS(96); c.fillStyle = GREEN; c.fillText(good, 0, 40); c.font = SANS(28, 600); c.fillStyle = INK; c.fillText("✓ one real example", 0, 100);
+  if (strict) {   // the same strict prompt on her new answer: the old score crossed out
+    c.font = SANS(26, 600); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("same prompt,", 0, -104); c.fillText("new answer:", 0, -74);
+    c.font = SANS(60); c.fillStyle = "#94a3b8"; c.fillText(old, 0, -6);
+    const ow = c.measureText(old).width; stroke(c, [[-ow / 2 - 8, -22], [ow / 2 + 8, -30]], RED, 8, r, { passes: 1 });
+    c.font = SANS(104); c.fillStyle = GREEN; c.fillText(good, 0, 100); c.font = SANS(28, 600); c.fillStyle = INK; c.fillText("✓ one real example", 0, 150);
   }
   else if (praiseK > 0) {
     c.font = SANS(110); c.fillStyle = PINK; c.textAlign = "center"; c.fillText("10/10", 0, 30);
@@ -326,10 +328,10 @@ const practicePanel = (c: Ctx, W: number, f: number, r: () => number, who: Who, 
   panelLabel(c, 40, 250, label, strict ? NAVY : PURPLE);
   c.restore();
 };
-const interviewPanel = (c: Ctx, W: number, f: number, r: () => number, m: Mood, a: Arms, talkHR: boolean, stampK: number, tagT: string | null, tagK: number, chip: string | null, okK: number) => {
+const interviewPanel = (c: Ctx, W: number, f: number, r: () => number, m: Mood, a: Arms, talkHR: boolean, stampK: number, tagT: string | null, tagK: number, chip: string | null, okK: number, nod = 0) => {
   c.save(); c.beginPath(); c.rect(0, H2, W, 1920 - H2); c.clip();
   office(c, H2, 1920 - H2, r);
-  person(c, "hr", [560, H2 + 330], 0.8, m, a, talkHR, r);
+  person(c, "hr", [560, H2 + 330], 0.8, m, a, talkHR, r, nod);
   deskFront(c, H2 + 470, r, stampK, f, okK);
   panelLabel(c, 40, H2 + 90, "REAL INTERVIEW", RED);
   if (chip) {   // the job, so "nothing about this job" has a job
@@ -353,8 +355,8 @@ const StInterview: React.FC<SP> = ({ s }) => {
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
   const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
   const sfx: React.ReactNode[] = [];
-  const D: { plain: string; strict: string; typed: string; good: string; say: string; note: string } =
-    { plain: "?/10", strict: "?/10", typed: "?/10", good: "?/10", say: "4/10", note: "", ...((s.data as { demo?: object }).demo ?? {}) };
+  const D: { plain: string; strict: string; typed: string; good: string; say: string; note: string; rewrites: string } =
+    { plain: "?/10", strict: "?/10", typed: "?/10", good: "?/10", say: "2/10", note: "", rewrites: "", ...((s.data as { demo?: object }).demo ?? {}) };
   const i11 = beats.findIndex((b) => b.n === 11);
   const rowAt = i11 >= 0 ? [ls[i11].from + Math.round(ls[i11].frames * 0.25), ls[i11].from + ls[i11].frames + 4] : [0, 0];
   beats.forEach((b, i) => {
@@ -394,21 +396,32 @@ const StInterview: React.FC<SP> = ({ s }) => {
           const who: Who = n >= 14 ? "divya" : "ramya";
           const strictTop = n === 12 || n === 13;
           practicePanel(c, W, f, r, who, n <= 2 ? 1 : 0, b.who === "coach" && talking, b.who === "divya" && talking, strictTop,
-            strictTop ? "PRACTICE · strict AI" : "PRACTICE · with AI", D.good);
+            strictTop ? "PRACTICE · strict AI" : "PRACTICE · with AI", D.good, D.say);
           const hrMood: Mood = n >= 13 ? "happy" : n === 12 ? "calm" : "stern";
-          const hrArms: Arms = n >= 13 ? "chin" : "fold";
+          const hrArms: Arms = n >= 13 ? "rest" : "fold";   // he unfolds his arms and nods (frame 1 mirrored), no leaning in
+          const nod = n === 13 ? Math.max(0, Math.sin(clamp((f - (endL - 30)) / 24) * Math.PI * 2)) * 14 : 0;
           const stampK = n === 2 ? seg(f, endL - 8, endL) : 0;
           const okAt = n === 13 ? endL - 4 : -1;   // SHORTLISTED lands on the success sting and stays
           const okK = n === 13 ? seg(f, okAt, okAt + 8) : n === 14 ? 1 : 0;
-          const chip = n <= 2 ? "accounts executive · interview #5" : "accounts executive · interview #6";
-          interviewPanel(c, W, f, r, hrMood, hrArms, b.who === "hr" && talking, stampK, n === 13 ? "\"Go on...\"" : null,
-            seg(f, ln.from + 20, ln.from + 30), chip, okK);
-          if (n <= 2) {   // her practice answer, the one forty people gave (read in the first second)
-            c.save(); c.fillStyle = "#fff"; rrect(c, 30, H2 - 78, W - 60, 128, 22); c.fill();
-            stroke(c, [[30, H2 - 78], [W - 30, H2 - 78], [W - 30, H2 + 50], [30, H2 + 50], [30, H2 - 78]], INK, 4, r, { passes: 1, alpha: 0.6 });
-            c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("her answer:", 56, H2 - 40);
-            c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText("\u201cI'm hardworking, a quick learner, a team player.\u201d", W / 2, H2 + 18);
+          interviewPanel(c, W, f, r, hrMood, hrArms, b.who === "hr" && talking, stampK, null, 0, "accounts executive", okK, nod);
+          if (n <= 2) {   // her practice answer, the one forty people gave: the biggest text in frame 1
+            c.save(); c.fillStyle = "#fff"; rrect(c, 24, H2 - 104, W - 48, 176, 24); c.fill();
+            stroke(c, [[24, H2 - 104], [W - 24, H2 - 104], [W - 24, H2 + 72], [24, H2 + 72], [24, H2 - 104]], INK, 5, r, { passes: 1, alpha: 0.7 });
+            c.font = SANS(26, 600); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("her answer:", 50, H2 - 70);
+            c.font = SANS(54); c.fillStyle = INK; c.textAlign = "center";
+            c.fillText("\u201cI'm hardworking, a quick learner,", W / 2, H2 - 8); c.fillText("a team player.\u201d", W / 2, H2 + 54);
             c.restore();
+          }
+          if (n === 14) {   // Divya, named; Ramya's hand (her teal sleeve) lands on the phone: strict prompt first
+            tag(c, "Divya · roommate", 300, 360, 44, "#fef08a", INK, -0.03, seg(p, 0.0, 0.12));
+            const q = easeOut(seg(p, 0.5, 0.68));
+            if (q > 0) {
+              const hx = 1180 - 400 * q, hy = 60 + 500 * q;   // the palm lands on the middle of her screen
+              limb(c, [[1240, -40], [hx + 60, hy - 120], [hx, hy]], LOOK.ramya.top, r, 56);
+              c.beginPath(); c.ellipse(hx, hy, 46, 56, -0.5, 0, 7); c.fillStyle = LOOK.ramya.skin; c.fill();
+              stroke(c, circlePts(hx, hy, 46, 56), INK, 3, r, { passes: 1, alpha: 0.5 });
+              tag(c, "TYPE THIS first!", 760, 900, 46, "#0d9488", "#fff", 0.03, seg(p, 0.62, 0.74));
+            }
           }
           if (n === 13) {   // Ramya's answer as a bubble over the interview panel
             bubble(c, 540, H2 + 640, "\"I cut billing errors by half.\"", 52, seg(p, 0.05, 0.2), "#dcfce7", "#14532d");
@@ -435,17 +448,18 @@ const StInterview: React.FC<SP> = ({ s }) => {
             const k0 = seg(p, 0.02, 0.12);
             c.save(); c.globalAlpha = clamp(k0 * 2); c.fillStyle = "rgba(255,253,245,0.97)"; rrect(c, 70, 230, W - 140, 760, 30); c.fill();
             c.font = SANS(52); c.fillStyle = INK; c.textAlign = "center"; c.fillText("OUR REAL TEST", W / 2, 312);
-            c.font = SANS(32, 600); c.fillStyle = "#475569"; c.fillText("her copy-paste answer · a free AI · 10 tries each", W / 2, 364);
+            c.font = SANS(32, 600); c.fillStyle = "#475569"; c.fillText("same answer · a small free AI, offline · 10 tries each", W / 2, 364);
             const row = (y: number, a1: string, a2: string, col: string, ink: string, kk: number) => {
               if (kk <= 0) return;
               c.save(); c.globalAlpha = clamp(kk * 3);
-              c.fillStyle = col; rrect(c, 110, y, W - 220, 240, 24); c.fill();
-              c.font = SANS(40, 600); c.fillStyle = INK; c.textAlign = "left"; c.fillText(a1, 150, y + 68);
-              c.font = SANS(120); c.fillStyle = ink; c.fillText(a2, 150, y + 200); const nw = c.measureText(a2).width;
-              c.font = SANS(36, 600); c.fillStyle = "#475569"; c.fillText("average", 150 + nw + 24, y + 196); c.restore();
+              c.fillStyle = col; rrect(c, 110, y, W - 220, 226, 24); c.fill();
+              c.font = SANS(40, 600); c.fillStyle = INK; c.textAlign = "left"; c.fillText(a1, 150, y + 62);
+              c.font = SANS(120); c.fillStyle = ink; c.fillText(a2, 150, y + 188); const nw = c.measureText(a2).width;
+              c.font = SANS(36, 600); c.fillStyle = "#475569"; c.fillText("average", 150 + nw + 24, y + 184); c.restore();
             };
-            row(396, "asked \"How is it?\"", D.plain, "#fce7f3", PINK, seg(f, rowAt[0], rowAt[0] + 6));
-            row(660, "asked with TYPE THIS", D.typed, "#e2e8f0", NAVY, seg(f, rowAt[1], rowAt[1] + 6));
+            row(392, "asked \"How is it?\"", D.plain, "#fce7f3", PINK, seg(f, rowAt[0], rowAt[0] + 6));
+            if (D.rewrites && f >= rowAt[0]) { c.font = SANS(26, 600); c.fillStyle = "#9d174d"; c.textAlign = "left"; c.fillText("+ " + D.rewrites, 130, 652); }
+            row(674, "asked with TYPE THIS", D.typed, "#e2e8f0", NAVY, seg(f, rowAt[1], rowAt[1] + 6));
             c.font = SANS(30, 600); c.fillStyle = "#475569"; c.textAlign = "center";
             if (f >= rowAt[1]) c.fillText(D.note, W / 2, 950);
             c.restore();

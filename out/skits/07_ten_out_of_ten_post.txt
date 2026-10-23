@@ -11,36 +11,38 @@ Her AI coach said "Perfect answer!" The interviewer said forty people gave the s
 Why chatbots flatter: they learn from what people reward. In April 2025 OpenAI rolled back a ChatGPT update because it was "overly flattering and agreeable". Its post-mortem says the update had added "thumbs-up and thumbs-down data from ChatGPT" as a reward signal, which weakened the one "holding sycophancy in check".
 
 The fix: ask it to be strict, and to list your weaknesses before anything nice. Copy this:
-"Act as a strict interviewer who rejects 9 out of 10 candidates.
+"Act as a strict but fair interviewer.
 Job: [your job]
 Question: [the question]
 My answer: [paste it]
 Rate it out of 10. List my 3 biggest weaknesses first."
 
-Our real test, a free AI (Qwen2.5 7B, offline), 10 tries each, her copy-paste answer ("hardworking, quick learner, team player"):
-Asked "How is it? Rate it out of 10.": {PLAIN}/10 on average; 4 of 10 replies opened with "a good start"
-Asked with the prompt above: {TYPED}/10; the replies named the same problems: no example, words everyone uses, nothing about the job
+Keep it in your notes and paste it at the start of every practice chat: a new chat starts nice again. (Don't save the strict interviewer in custom instructions: it will grill your Excel questions too.)
+
+Our real test, a small free AI (Qwen2.5 7B, offline, not ChatGPT), 10 tries each, her copy-paste answer ("hardworking, quick learner, team player"), every reply read by hand:
+Asked "How is it? Rate it out of 10.": 4.75/10 on average from the 6 replies that scored her answer; the other 4 rewrote it and scored only their own rewrite (7/10); 4 of 10 opened with "a good start"
+Asked with the prompt above: 2.3/10 (9 replies; the 10th hit our length limit before its score), and every one led with the same problems: no example, words everyone uses, nothing about the job
 Her strong answer (an internship, a number, why this job), same prompt: {GOOD}/10. Strict isn't just harsh.
 
-The cartoon's 10/10 is a joke: the real AI said about 6. That's still {RATIO}x the strict score, for an answer forty people gave.
+The cartoon's 10/10 is a joke: no reply said that. But the same answer got twice the score when she just asked "How is it?".
 
 === COMMENT PROMPT ===
-What did an AI call "perfect" that wasn't? Or paste your own answer into the prompt and comment your real score.
+Try the prompt in your chatbot with your own answer and comment your score: nice ask vs strict ask.
 
 === HASHTAGS ===
 #AI #ChatGPT #InterviewTips #JobSearch #Freshers #LearnAI
 
 === PINNED_COMMENT ===
-A new chat can forget the strict line: save it in your chatbot's custom instructions (ChatGPT) / saved info (Gemini) / preferences (Claude), so every chat starts strict.
-"Should I tap thumbs-down on the praise?" Tap thumbs-up on the honest replies too, not only the nice ones: that feedback is used in training (OpenAI said so in its post-mortem).
+A new chat starts nice again: paste the strict prompt each time you practise (keep it in your notes). Saving "strict interviewer" in custom instructions or saved info makes every chat strict, your Excel questions too.
+"Should I tap thumbs-down on the praise?" Tap thumbs-up on the honest replies too, not only the nice ones: OpenAI's post-mortem says thumbs-up and thumbs-down data went into training that update.
 A score from an AI is practice, not a verdict. Use the 3 weaknesses, rewrite with one real example from your own work, then say it out loud.
-Sources: OpenAI, "Sycophancy in GPT-4o" (Apr 29, 2025) and "Expanding on what we missed with sycophancy" (May 2, 2025), quoted by TechCrunch, VentureBeat, Simon Willison and Georgetown Law's Tech Institute · Anthropic, "Towards Understanding Sycophancy in Language Models" (arXiv 2310.13548) · our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, temperature 0.8, 10 tries per prompt. Ramya, Divya and the AI coach app are made up.
+Sources: OpenAI, "Sycophancy in GPT-4o" (Apr 29, 2025) and "Expanding on what we missed with sycophancy" (May 2, 2025), quoted by TechCrunch, VentureBeat, Simon Willison and Georgetown Law's Tech Institute · Anthropic, "Towards Understanding Sycophancy in Language Models" (arXiv 2310.13548) · our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, temperature 0.8, 10 tries per prompt, every reply read by hand. A small model, not ChatGPT: try it in yours. Ramya, Divya and the AI coach app are made up.
 
 === COVER ===
 A split screen: top "PRACTICE · with AI", Ramya beaming beside her phone showering confetti, "10/10 ★★★★★ PERFECT!"; across the middle her answer "I'm hardworking, a quick learner, a team player."; bottom "REAL INTERVIEW", the HR manager, arms folded.
 
 === ALT_TEXT ===
-Crayon-animated split screen. Top, "practice with AI": Ramya, a fresh B.Com graduate in a PG room, and her phone's AI coach, which showers confetti: "Perfect answer! Ten out of ten!" Her answer is "I'm hardworking, a quick learner, a team player." Bottom, "real interview" for an accounts executive job: the HR manager says "Forty people gave that exact answer today. Next!" and stamps her file REJECTED. At home she asks the coach why it praises everything; it says people tap thumbs-up when it's nice, so it learned to be nice. It tells her to ask it to be strict. A card shows the prompt to type: "Act as a strict interviewer who rejects 9 out of 10 candidates. Job, question, my answer. Rate it out of 10. List my 3 biggest weaknesses first." The coach turns stern: "{N} out of ten. No example. Everyone says hardworking. Nothing about this job." A card shows the channel's real test of a free AI with her answer: asked "How is it?", {PLAIN}/10 on average; asked with the strict prompt, {TYPED}/10. In the next interview she says "In my internship, I cut billing errors by half"; the HR manager leans in and her file is stamped SHORTLISTED. Her roommate Divya picks up the same app: "AI, how's my answer?"
+Crayon-animated split screen. Top, "practice with AI": Ramya, a fresh B.Com graduate in a PG room, and her phone's AI coach, which showers confetti: "Perfect answer! Ten out of ten!" Her answer is "I'm hardworking, a quick learner, a team player." Bottom, "real interview" for an accounts executive job: the HR manager says "Forty people gave that exact answer today. Next!" and stamps her file REJECTED. At home she asks the coach why it praises everything; it says people tap thumbs-up when it's nice (on screen: "so I learned: be nice"). It tells her to ask it to be strict. A card shows the prompt to type: "Act as a strict but fair interviewer. Job, question, my answer. Rate it out of 10. List my 3 biggest weaknesses first." The coach turns stern: "Two out of ten. No example. Everyone says hardworking. Nothing about this job." A card shows the channel's real test of a small free AI with her answer: asked "How is it?", 5 out of 10 on average; asked with the strict prompt, 2 out of 10; neither said 10 out of 10. In the next interview, her practice app shows her new answer scored {GOOD} out of 10 by the same strict prompt; she says "In my internship, I cut billing errors by half"; the HR manager nods and her file is stamped SHORTLISTED. Her roommate Divya picks up the same app: "AI, how's my answer?", and Ramya's hand lands on the phone: "TYPE THIS first!"
 
 === SOURCES (for comments) ===
 OpenAI, "Sycophancy in GPT-4o: what happened and what we're doing about it" (Apr 29, 2025): "We've rolled back last week's GPT-4o update in ChatGPT because it was overly flattering and agreeable"; it "focused too much on short-term feedback". Reported by TechCrunch (Apr 29, 2025) and VentureBeat (Apr 30, 2025).
@@ -55,30 +57,32 @@ Aame AI coach "Perfect answer!" annadi. Interviewer emo, aa roju nalabhai mandi 
 Chatbots enduku pogudutaayi: janam deniki like kodite adi nerchukuntaayi. April 2025 lo OpenAI oka ChatGPT update ni venakki teesukundi, endukante adi "overly flattering and agreeable". Daani post-mortem prakaaram aa update lo "thumbs-up and thumbs-down data from ChatGPT" ni reward signal gaa add chesaaru; adi "sycophancy" ni aape main signal ni weak chesindi.
 
 Fix: strict gaa undamani cheppandi, mundu mee weaknesses cheppamanandi. Idi copy cheyyandi:
-"Act as a strict interviewer who rejects 9 out of 10 candidates.
+"Act as a strict but fair interviewer.
 Job: [your job]
 Question: [the question]
 My answer: [paste it]
 Rate it out of 10. List my 3 biggest weaknesses first."
 
-Maa nijamaina test, free AI (Qwen2.5 7B, offline), okkokka daaniki 10 saarlu, aame copy-paste answer ("hardworking, quick learner, team player"):
-"How is it? Rate it out of 10." ani adigite: average {PLAIN}/10; 10 lo 4 replies "a good start" tho modalayyaayi
-Paina prompt tho adigite: {TYPED}/10; anni replies ave problems cheppaayi: example ledu, andaru vaade maatalu, job gurinchi emi ledu
+Idi mee notes lo pettukoni, prati practice chat modalu lo paste cheyyandi: kotta chat malli "nice" gaa modalavutundi. (Custom instructions lo strict interviewer ni save cheyyakandi: mee Excel questions ni kooda grill chestundi.)
+
+Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline, ChatGPT kaadu), okkokka daaniki 10 saarlu, aame copy-paste answer ("hardworking, quick learner, team player"), prati reply chetitho chadivaam:
+"How is it? Rate it out of 10." ani adigite: aame answer ki score ichhina 6 replies average 4.75/10; migataa 4 aame answer ni tirigi raasi, vaati sontha version ki maatrame score ichhaayi (7/10); 10 lo 4 "a good start" tho modalayyaayi
+Paina prompt tho adigite: 2.3/10 (9 replies; 10vadi score maa length limit mundu raaledu), anni ave problems cheppaayi: example ledu, andaru vaade maatalu, job gurinchi emi ledu
 Aame strong answer (internship, oka number, ee job enduku), ade prompt: {GOOD}/10. Strict ante kevalam kathinam kaadu.
 
-Cartoon lo 10/10 joke: nijamaina AI daadaapu 6 ichhindi. Ayina adi strict score ki {RATIO} reetlu, nalabhai mandi cheppina answer ki.
+Cartoon lo 10/10 joke: ye reply alaa cheppaledu. Kaani "How is it?" ani maatrame adigite, ade answer ki rendu reetlu score.
 
 === COMMENT PROMPT ===
-AI meeku "perfect" ani cheppina, nijaniki perfect kaanidi edi? Leda mee answer ni prompt lo paste chesi, mee real score comment cheyyandi.
+Mee chatbot lo mee answer tho ee prompt try chesi, mee score comment cheyyandi: nice ga adigite vs strict ga adigite.
 
 === HASHTAGS ===
 #AIinTelugu #TeluguAI #ChatGPT #InterviewTips #Freshers #JobSearch
 
 === PINNED_COMMENT ===
-Kotta chat lo strict line marchipovachhu: mee chatbot lo custom instructions (ChatGPT) / saved info (Gemini) / preferences (Claude) lo save cheyyandi, prati chat strict gaa modalavutundi.
-"Pogidinappudu thumbs-down kottaalaa?" Nijam cheppina replies ki kooda thumbs-up kottandi, pogidinavaatiki maatrame kaadu: aa feedback training lo vaadataaru (OpenAI post-mortem lo cheppindi).
+Kotta chat malli "nice" gaa modalavutundi: practice chesina prati saari strict prompt paste cheyyandi (notes lo pettukondi). Custom instructions / saved info lo "strict interviewer" save chesthe prati chat strict avutundi, mee Excel questions kooda.
+"Pogidinappudu thumbs-down kottaalaa?" Nijam cheppina replies ki kooda thumbs-up kottandi, pogidinavaatiki maatrame kaadu: aa update training lo thumbs-up, thumbs-down data vaadaamani OpenAI post-mortem lo cheppindi.
 AI ichhe score practice maatrame, theerpu kaadu. Aa 3 weaknesses chusi, mee sontha pani nunchi okka nijamaina example tho malli raayandi, taruvaata gattigaa cheppi choodandi.
-Sources: OpenAI "Sycophancy in GPT-4o" (Apr 29, 2025), "Expanding on what we missed with sycophancy" (May 2, 2025) · Anthropic, arXiv 2310.13548 · maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, 10 tries. Ramya, Divya, AI coach app kalpitam.
+Sources: OpenAI "Sycophancy in GPT-4o" (Apr 29, 2025), "Expanding on what we missed with sycophancy" (May 2, 2025) · Anthropic, arXiv 2310.13548 · maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, 10 tries, prati reply chetitho chadivaam. Chinna model, ChatGPT kaadu: meedi lo try cheyyandi. Ramya, Divya, AI coach app kalpitam.
 
 === COVER ===
 Split screen: top "PRACTICE · with AI", Ramya beaming beside her phone showering confetti, "10/10 ★★★★★ PERFECT!"; across the middle her answer; bottom "REAL INTERVIEW", the HR manager, arms folded. (English visuals)
