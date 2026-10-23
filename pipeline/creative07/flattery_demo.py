@@ -6,6 +6,7 @@
 #   fair      : the reel's "TYPE THIS" card word for word ("Act as a strict but fair interviewer...", job: accounts
 #               executive, the weak answer pasted in)
 #   good_fair : the same card with a strong, specific answer pasted in (does the score follow the answer?)
+#   good_plain : the strong answer asked "How is it?" (the render review's control)
 # The first run (results_2025.json) said "B.Com in 2025" and tested "Act as a strict interviewer who rejects 9 out of 10
 # candidates": the model thinks 2025 is in the future ("an internship from 2025 is not a valid year"), and that persona
 # was harsh on everything (the strong answer got 3/10 for "lacks a personal touch"). So this run says "last year", and
@@ -50,9 +51,12 @@ def card(answer):
             .replace("[paste it]", f"\"{answer}\""))
 
 
-PROMPTS = {"plain": PROMPTS["plain"], "fair": card(ANSWER), "good_fair": card(GOOD)}   # this run (the first run's
-MAX_TOKENS = {"plain": 320, "fair": 260, "good_fair": 260}                             # prompts: results_2025.json)
-RUN = ["fair", "good_fair", "plain"]   # the uncertain ones first
+PROMPTS = {"plain": PROMPTS["plain"], "fair": card(ANSWER), "good_fair": card(GOOD),   # this run (the first run's
+           "good_plain": PROMPTS["plain"].replace(ANSWER, GOOD)}                         # prompts: results_2025.json)
+MAX_TOKENS = {"plain": 320, "fair": 260, "good_fair": 260, "good_plain": 320}
+# the render review asked for the fourth corner: the strong answer asked "How is it?" (a kinder scale for every answer,
+# or kinder to the weak one?)
+RUN = ["fair", "good_fair", "plain", "good_plain"]
 SEEDS = range(10)
 # read by hand, Oct 23, 2026: (way, seed) -> (score for her answer or None, note); ways in CHECKED were read too and
 # the first "N/10" is the score for her answer in every reply. HAND_2025: the first run (results_2025.json).

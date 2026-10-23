@@ -26,7 +26,7 @@ LINES = {
     7: ("ramya", "home", "truth", "Then how do I get the truth?", "మరి నిజం ఎలా తెలుస్తుంది?"),
     8: ("coach", "phone", "strict", "Tell me to be strict.", "నాకు స్ట్రిక్ట్ గా ఉండమని చెప్పు."),   # Telugu: the short line babbled
     9: ("ramya", "phone", "typing", "Act as a strict but fair interviewer. Rate it out of ten. Weaknesses first.",
-        "Act as a strict but fair interviewer. | పదికి మార్కులు ఇవ్వు. ముందు నా లోపాలు చెప్పు."),   # Telugu: she reads the prompt line as typed (Parler said "fair" as "pyaar")
+        "Act as a strict but fair interviewer. | పదికి మార్కులు ఇవ్వు. మొదట నా లోపాలు చెప్పు."),   # not ముందు: clipped, it nears a slur   # Telugu: she reads the prompt line as typed (Parler said "fair" as "pyaar")
     10: ("strict", "phone", "critique", "{N_EN} out of ten. [1] No example. Everyone says hardworking. Nothing about this job.",
          "పదికి {N_TE}. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. | హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు."),
     11: ("ramya", "home", "ouch", "Ouch. But true.", "అబ్బా... కానీ నిజమే."),
@@ -47,12 +47,15 @@ SHOW_TE = {1: "Perfect answer! 10 out of 10!", 2: "40 people said exactly this t
            12: "Tell me about yourself.", 13: "In my internship, I cut billing errors by half.", 14: "Coach, how's my answer?"}
 NOCAP = {9}   # the TYPE THIS card carries line 9
 # a: the hook and the slap; b: why it flatters, the fix; c: the second interview and the loop
+# render review: a real silence before the score (0.8 s, then the hit half a second before "Four": a hit on the word
+# masked Telugu "పదికి"), the test card held 1.5 s longer, a softer hit into the second interview (it was the loudest
+# moment), the end held 1 s with the bed swelling into the loop
 SCENES = [("i_a", (1, 2, 3), {"pre": 0.25, "boost": 1.7, "tail": 0.1}),
-          ("i_b", (4, 5, 6, 7, 8, 9, 10, 11), {"lift": 0.7, "pre": 0.35, "boost": 1.45, "drop_pre": [[6, 0.0, 0.6]],
+          ("i_b", (4, 5, 6, 7, 8, 9, 10, 11), {"lift": 0.7, "pre": 0.2, "boost": 1.45, "drop_pre": [[6, 0.5, 0.8]],
                                                 "drop_at": [[6, "1", 0.3]], "tail": 0.15}),   # silence into the score, a beat after it
-          ("i_c", (12, 13, 14), {"lift": 0.8, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.3, "drop_pre": [[1, 0.0, 0.5]],
-                                 "tail": 0.0})]   # a hush before her real answer, then the rise into the loop
-GAP = {2: 0.35, 9: 0.8, 11: 2.0, 13: 0.6}   # 9: the TYPE THIS card holds; 11: the test card's second number and its note
+          ("i_c", (12, 13, 14), {"lift": 0.35, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.3, "drop_pre": [[1, 0.0, 0.5]],
+                                 "tail": 1.0})]   # a hush before her real answer, then the rise into the loop
+GAP = {2: 0.35, 3: 0.1, 4: 0.1, 5: 0.1, 6: 0.12, 9: 1.3, 11: 3.5, 13: 0.6}   # 9: the card holds, then silence; 11: the test card
 GAIN = {"ramya": 0.3, "coach": 0.0, "strict": 0.0, "hr": 0.3, "divya": 0.3}
 GAIN_LINE = {}
 GAIN_TE = {}
@@ -69,15 +72,19 @@ def demo_numbers():
     d = json.loads(DEMO.read_text()) if DEMO.exists() else {}
     sm = {w: d.get(f"summary_{w}") or {} for w in ("plain", "fair", "good_fair")}
     mean = {w: sm[w].get("mean_score") for w in sm}
-    dec = lambda w: f"{mean[w]:.1f}/10" if mean[w] is not None else "?/10"
+    dec = lambda w: f"{mean[w] + 1e-9:.1f}/10" if mean[w] is not None else "?/10"   # round half up (5.85 is 5.8499... in binary)
     n = round(mean["fair"]) if mean["fair"] is not None else 4
     rw = sm["plain"].get("own_rewrite_scores") or []
     rewrites = ""
     if rw:
         lo, hi = round(min(rw)), round(max(rw))
         rewrites = f"{len(rw)} replies rated their own rewrite instead ({lo}-{hi}/10)" if lo != hi else f"{len(rw)} replies rated their own rewrite instead ({lo}/10)"
+    rng = (f"{round(min(rw))}-{round(max(rw))}/10" if round(min(rw)) != round(max(rw)) else f"{round(min(rw))}/10") if rw else ""
     return {"plain": dec("plain"), "typed": dec("fair"), "good": f"{round(mean['good_fair'])}/10" if mean["good_fair"] is not None else "?/10",
-            "say": f"{n}/10", "n": n, "rewrites": rewrites, "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."}
+            "good_mean": f"{mean['good_fair'] + 1e-9:.1f}" if mean["good_fair"] is not None else "?",   # 5.85 -> 5.9, as the caption
+            "say": f"{n}/10", "n": n, "rewrites": rewrites, "rw_n": len(rw), "rw_range": rng,
+            "plain_n": sm["plain"].get("scored_her_answer", 0), "fair_n": sm["fair"].get("scored_her_answer", 0),
+            "note": "No reply said 10/10. Our cartoon exaggerates."}
 
 
 def spec(lang):
@@ -87,7 +94,7 @@ def spec(lang):
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15, "music": "lofi", "musicVol": [0.42, 0.82], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True,
          "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,
-         "musicGapGain": 3.0}
+         "musicGapGain": 1.5, "musicEndRamp": [0.93, 4.0]}   # gaps: music-only stretches sat 2.5 dB over the voice
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
     demo = demo_numbers()

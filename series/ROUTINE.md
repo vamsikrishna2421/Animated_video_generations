@@ -378,3 +378,10 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - A persona prompt can be harsh on everything: "a strict interviewer who rejects 9 out of 10 candidates" gave a strong,
   specific answer 3/10 for "lacks a personal touch". Before a reel recommends a prompt, run a strong-answer control
   with the same prompt; a prompt whose score doesn't follow the answer only teaches the viewer to feel bad.
+- Telugu: a word that clips into a slur in a fast take is a swear-word risk: "ముందు" came out "mund" (near ముండ) in
+  the mix; "మొదట" says "first" with no risk. Parler babbled the short "స్ట్రిక్ట్ గా ఉండమని చెప్పు." in five takes ("నాకు"
+  in front fixed it) and said "ఫెయిర్" as "pyaar"; an English line inside the Telugu reel (in English letters) came out
+  clean, and needs the English judge: the Telugu one heard a clean "Believe in yourself." as "बीलीग यो स्वफ".
+- A Telugu judge's must-hear list misses the take the ear accepts ("आइदू रेजेक्षन", "थेलिस्तुन्दी", "पादिकी", "याला"):
+  the picker then keeps the best base score, which twice was the worse take. Back up each plausible take as it lands
+  (the picker deletes the rest) and swap the better one into the cache before the build.

@@ -101,6 +101,18 @@ make sure Divya can't be mistaken for Ramya. Changes:
   phone ("TYPE THIS first!"), so the joke works without the loop.
 - Telugu line 9: "పదికి మార్కులు ఇవ్వు" (not "మార్క్ వెయ్యి": వెయ్యి is also "thousand").
 
+## Render review (human-viewer, v3 render) and what changed
+Both: best hook yet; TYPE THIS is why they'd save it; the honest parts were too small and too fast; the music didn't
+build to the end. Changes: the test card has three rows (the rewrite trap on its own row), the caveat full size, held
+3.5 s; Ramya herself steps in at the end (the corner hand read as "whose?"), the tag is big and holds through a 1 s
+tail with a louder riser and the bed swelling (`musicEndRamp`); a real 0.8 s silence before "Four out of ten" with
+the hit half a second early (on the word it masked Telugu "పదికి"); SHORTLISTED is the loudest hit (a boom under the
+sting) and the hit into the second interview is softer (it was the loudest moment, -6 dB); music in the gaps 1.5 dB
+up instead of 3 (music-only stretches sat 2.5 dB over the voice); the practice panel says "our test: 5.9 average".
+Telugu: "ముందు" became "మొదట" (clipped, "mund" nears a slur); line 9's English half checked clean ("Act as a strict
+but fair interviewer."); "పదికి పది" is clean in the isolated take. Priya's missing control (the strong answer asked
+"How is it?") was run (see Our test).
+
 ## Script (English), v3
 | # | Who | Shot | Line | On screen |
 |---|---|---|---|---|
@@ -114,10 +126,10 @@ make sure Divya can't be mistaken for Ramya. Changes:
 | 8 | Coach | phone | Tell me to be strict. | |
 | 9 | Ramya | phone | Act as a strict but fair interviewer. Rate it out of ten. Weaknesses first. | the prompt typed into the box; the TYPE THIS card (exact prompt, brackets in yellow, "copy it from the caption ↓") |
 | 10 | Coach (strict) | phone | Four out of ten. [1] No example. Everyone says hardworking. Nothing about this job. | the coach turns stern; "N/10"; the three weaknesses as rows |
-| 11 | Ramya | home | Ouch. But true. | OUR REAL TEST (same answer · a small free AI, offline · 10 tries each): asked "How is it?" 5.0/10 average (+ 4 replies rated their own rewrite instead, 7-8/10) · asked with TYPE THIS 3.6/10 average · "Neither said 10/10: our cartoon exaggerates. The gap is real." |
+| 11 | Ramya | home | Ouch. But true. | OUR REAL TEST (her answer · a small free AI, offline · 10 tries each): asked "How is it?" 5.0/10 average, 5 replies · its own row: "+ 4 replies rewrote her answer and scored their own version 7-8/10" · asked with TYPE THIS 3.6/10 average, 9 replies · full size: "No reply said 10/10. Our cartoon exaggerates." (held 3.5 s after her line) |
 | 12 | HR | split | Tell me about yourself. | top "PRACTICE · strict AI": same prompt, new answer: 4/10 crossed out, 6/10, "✓ one real example" |
 | 13 | Ramya | split | In my internship, I cut billing errors by half. | HR unfolds his arms and nods; SHORTLISTED stamp on the success sting |
-| 14 | Divya | split | AI, how's my answer? | top: "Divya · roommate" with the same coach; Ramya's hand lands on the phone, "TYPE THIS first!" (the loop's first line answers her) |
+| 14 | Divya | split | AI, how's my answer? | top: "Divya · roommate" with the same coach; Ramya steps in from the right, shocked, pointing at the phone; a big "TYPE THIS first!" on the divider, held 1 s under a riser into the loop |
 
 About 44-48 s. Caption: the comment prompt ("What did your AI call perfect? Paste the strict prompt and comment your real
 score"), the prompt to copy, the custom-instructions tip, thumbs-up on honest answers, our test, OpenAI's rollback and
