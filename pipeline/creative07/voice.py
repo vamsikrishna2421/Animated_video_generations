@@ -86,14 +86,16 @@ MUST = {"en": {1: [("perfect",), ("ten", "10")], 2: [("forty", "40"), ("exact",)
                13: [("इंटर्न", "इंटरन", "intern", "इंटर", "इंटन"), ("बिलि", "बिल्लि", "billing", "बिलिं", "बिल्लिं"), ("एरर", "एर्रर", "इरर", "error", "एरार"),
                     ("सगा", "सग", "सघा")],
                14: [("एआई", "ए आई", "ai", "एई", "एआइ", "ए.आई", "एय"), ("आन्स", "आंस", "answer", "आन्सर", "अन्स"), ("एला", "येला", "इला", "ऐला")]}}   # Telugu as the judge writes it (Devanagari)
+# English lines inside the Telugu reel (judged by the English judge)
+MUST_TE_EN = {4: [("believe",), ("yourself", "self")], 9: [("strict",), ("fair",), ("interviewer",)], 12: [("tell",), ("yourself",)]}
 # line 10's score is our test's average, rounded (make_specs): its word joins the MUST list from the spec's text
 NUM_MUST = {"en": {"one": ("one", "1"), "two": ("two", "2"), "three": ("three", "3"), "four": ("four", "4"), "five": ("five", "5")},
             "te": {"ఒకటి": ("ओकटि", "ओकटी", "1"), "రెండు": ("रेंडु", "रेंडू", "रेण्डु", "2"), "మూడు": ("मूडु", "मूडू", "मुडु", "3"),
                    "నాలుగు": ("नालुगु", "नालगु", "नालुग", "4"), "ఐదు": ("ऐदु", "अइदु", "ऐडु", "5")}}
 
 
-def must(lang, n, text):
-    groups = list(MUST[lang].get(n, []))
+def must(lang, n, text, te_en=False):
+    groups = list(MUST_TE_EN.get(n, []) if te_en else MUST[lang].get(n, []))
     if n == 10:   # whole words only: "one" is inside "everyone"
         toks = set(re.findall(r"\w+", text.lower() if lang == "en" else text))
         groups += [g for word, g in NUM_MUST[lang].items() if word in toks]
@@ -174,7 +176,7 @@ def judge(path, text, lang, n):
     ok, score, info = judge_en(path, text, "en") if jl == "en" else judge_te(path, text)
     heard_text = info.split("|", 1)[1].lower()
     words = set(re.findall(r"[a-z0-9]+", heard_text))
-    miss = [g[0] for g in must(jl, n, text) if not any((w in words) if jl == "en" else (w in heard_text) for w in g)]
+    miss = [g[0] for g in must(jl, n, text, te_en=lang == "te" and jl == "en") if not any((w in words) if jl == "en" else (w in heard_text) for w in g)]
     # a missed word costs more than the judge's own pass (+1): a take with every word a hair over the length limit
     # beats one that passed but lost a word (Telugu line 1 kept "Ajjun" over a clean, 2.85 s "Arjun")
     return ok and not miss, score - 1.5 * len(miss), info + (f" | MISSING {miss}" if miss else "")
