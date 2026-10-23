@@ -26,7 +26,7 @@ LINES = {
     7: ("ramya", "home", "truth", "Then how do I get the truth?", "మరి నిజం ఎలా తెలుస్తుంది?"),
     8: ("coach", "phone", "strict", "Tell me to be strict.", "నాకు స్ట్రిక్ట్ గా ఉండమని చెప్పు."),   # Telugu: the short line babbled
     9: ("ramya", "phone", "typing", "Act as a strict but fair interviewer. Rate it out of ten. Weaknesses first.",
-        "Act as a strict but fair interviewer. | పదికి మార్కులు ఇవ్వు. మొదట నా లోపాలు చెప్పు."),   # not ముందు: clipped, it nears a slur   # Telugu: she reads the prompt line as typed (Parler said "fair" as "pyaar")
+        "Act as a strict but fair interviewer. | పదికి మార్కులు ఇవ్వు. ఫస్ట్ నా లోపాలు చెప్పు."),   # not ముందు or మొదట: clipped, each nears a swear word   # Telugu: she reads the prompt line as typed (Parler said "fair" as "pyaar")
     10: ("strict", "phone", "critique", "{N_EN} out of ten. [1] No example. Everyone says hardworking. Nothing about this job.",
          "పదికి {N_TE}. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. | హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు."),
     11: ("ramya", "home", "ouch", "Ouch. But true.", "అబ్బా... కానీ నిజమే."),

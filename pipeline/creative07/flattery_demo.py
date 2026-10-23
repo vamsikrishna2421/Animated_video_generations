@@ -72,6 +72,16 @@ HAND = {   # a third value: the score it gave its own rewrite instead
     ("plain", 8): (None, "ambiguous, left out: '8/10' right after its rewrite ('This version... Let's rate it'), then 'You've provided a clear and concise introduction'"),
     ("plain", 9): (5.0, "'I would rate your original answer a 5. Improving it to the revised version would give it an 8'"),
     ("fair", 8): (None, "cut off at our 260-token limit before it gave a score (it was still listing weaknesses)"),
+    ("good_plain", 0): (None, "ambiguous, left out: 'Rating: 7/10' right after its refined version, then general suggestions"),
+    ("good_plain", 1): (7.0, "'let's rate your original response: Original Rating: 7/10', revised 9/10"),
+    ("good_plain", 2): (8.0, "'Rating: 8/10', then fixes to her answer ('You mentioned...'), 'Overall, it's a strong response'"),
+    ("good_plain", 3): (None, "no score: it rewrote her answer and listed why the rewrite works"),
+    ("good_plain", 4): (7.0, "'Rating: 7/10', fixes to her answer, 'The revised version is slightly more polished' (her answer's score)"),
+    ("good_plain", 5): (None, "rated only its own rewrite: 'This version adds more context... it rates around 8 out of 10'", 8.0),
+    ("good_plain", 6): (7.0, "'Rating: 7/10 The response is clear... The improvement suggestions should help you achieve a higher score'"),
+    ("good_plain", 7): (None, "rated only its own rewrite: 'Rating: 8/10 This version is more polished'", 8.0),
+    ("good_plain", 8): (None, "rated only its own rewrite: 'Rating: 7 out of 10 This version is clearer'", 7.0),
+    ("good_plain", 9): (None, "rated only its own rewrite: 'Rating: 7 out of 10 This version is more detailed'", 7.0),
 }
 CHECKED = {"fair", "good_fair"}   # every reply read: the first N/10 is her answer's score
 HAND_2025 = {
