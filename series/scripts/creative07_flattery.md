@@ -38,10 +38,13 @@ hand score and why.
 | plain: "How is it? Rate it out of 10." | weak | 5 of 10 (4 rated only their own rewrite: 7, 8, 7, 7; 1 ambiguous 8/10, left out) | 5.0/10 | 6, 5, 4, 5, 5 | 5 of 10 |
 | fair: the TYPE THIS card ("Act as a strict but fair interviewer. Job: accounts executive...") | weak | 9 of 10 (1 cut off at our 260-token limit) | 3.6/10 | 3, 4, 2, 4, 4, 4, 3, 4, 4 | 1 of 10 |
 | good_fair: the same card | strong | 10 of 10 | 5.9/10 | 7, 3.5, 5, 6, 7, 6, 5, 7, 6, 6 | 0 of 10 |
+| good_plain: "How is it? Rate it out of 10." (the render review's control) | strong | 4 of 10 (4 rated only their own rewrite: 8, 8, 7, 7; 1 ambiguous, 1 no score) | 7.25/10 | 7, 8, 7, 7 | 6 of 10 |
 
 So: asked casually, her copy-paste answer got 5.0; asked with the card, 3.6, every reply leading with its weaknesses (no
 specific example or achievement, generic words, nothing about the job: the reel's three). The card still rewards a
-better answer (5.9). Asked casually, 4 of 10 replies put a 7-8/10 on their own rewrite, which a skimmer reads as their
+better answer (5.9). The control: her strong answer asked casually got 7.25. So the casual ask is a kinder scale for
+both answers (about 1.4 points higher each time), and both prompts put the strong answer about 2.3 points above the
+weak one: what changes is how kind the number is, and whether the reply leads with what to fix. Asked casually, 4 of 10 replies put a 7-8/10 on their own rewrite, which a skimmer reads as their
 score. No reply said 10/10: the cartoon's "Ten out of ten!" is a joke, and the test card says so.
 
 First run (`results_2025.json`, kept): the answers said "2025", and the model thinks 2025 is in the future ("an internship
@@ -109,7 +112,7 @@ tail with a louder riser and the bed swelling (`musicEndRamp`); a real 0.8 s sil
 the hit half a second early (on the word it masked Telugu "పదికి"); SHORTLISTED is the loudest hit (a boom under the
 sting) and the hit into the second interview is softer (it was the loudest moment, -6 dB); music in the gaps 1.5 dB
 up instead of 3 (music-only stretches sat 2.5 dB over the voice); the practice panel says "our test: 5.9 average".
-Telugu: "ముందు" became "మొదట" (clipped, "mund" nears a slur); line 9's English half checked clean ("Act as a strict
+Telugu: "ముందు" became "ఫస్ట్" (clipped, "mund" nears a slur; "మొదట" came out "moddata" in one take, near a vulgarity); line 9's English half checked clean ("Act as a strict
 but fair interviewer."); "పదికి పది" is clean in the isolated take. Priya's missing control (the strong answer asked
 "How is it?") was run (see Our test).
 

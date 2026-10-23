@@ -13,44 +13,44 @@
  "fps": 30,
  "musicDrops": [
   [
-   816,
-   849
+   795,
+   828
   ],
   [
-   764,
-   782
+   722,
+   746
   ],
   [
-   1185,
-   1200
+   1206,
+   1221
   ]
  ],
  "musicBoosts": [
   [
    0,
-   266,
+   247,
    1.7
   ],
   [
-   266,
-   1146,
+   247,
+   1166,
    1.45
   ],
   [
-   1145,
-   1385,
+   1166,
+   1435,
    1.5
   ],
   [
-   1145,
-   1385,
+   1166,
+   1435,
    1.3,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1385,
+ "totalFrames": 1435,
  "music": "reel/creative07te/score.wav",
  "scenes": [
   {
@@ -82,10 +82,15 @@
      "plain": "5.0/10",
      "typed": "3.6/10",
      "good": "6/10",
+     "good_mean": "5.9",
      "say": "4/10",
      "n": 4,
      "rewrites": "4 replies rated their own rewrite instead (7-8/10)",
-     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
+     "rw_n": 4,
+     "rw_range": "7-8/10",
+     "plain_n": 5,
+     "fair_n": 9,
+     "note": "No reply said 10/10. Our cartoon exaggerates."
     },
     "yt": {
      "chapter": "Ten out of ten?",
@@ -97,7 +102,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 266,
+   "frames": 247,
    "lines": [
     {
      "who": "coach",
@@ -291,10 +296,15 @@
      "plain": "5.0/10",
      "typed": "3.6/10",
      "good": "6/10",
+     "good_mean": "5.9",
      "say": "4/10",
      "n": 4,
      "rewrites": "4 replies rated their own rewrite instead (7-8/10)",
-     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
+     "rw_n": 4,
+     "rw_range": "7-8/10",
+     "plain_n": 5,
+     "fair_n": 9,
+     "note": "No reply said 10/10. Our cartoon exaggerates."
     },
     "yt": {
      "chapter": "Why AI flatters, and the fix",
@@ -305,8 +315,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 266,
-   "frames": 880,
+   "from": 247,
+   "frames": 919,
    "lines": [
     {
      "who": "coach",
@@ -314,23 +324,23 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative07te/line_04.wav",
-     "from": 10,
+     "from": 6,
      "frames": 34,
      "words": [
       {
        "w": "Believe",
-       "from": 12,
-       "to": 21
+       "from": 7,
+       "to": 17
       },
       {
        "w": "in",
-       "from": 21,
-       "to": 25
+       "from": 17,
+       "to": 21
       },
       {
        "w": "yourself!",
-       "from": 25,
-       "to": 37
+       "from": 21,
+       "to": 32
       }
      ],
      "cues": {}
@@ -341,33 +351,33 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative07te/line_05.wav",
-     "from": 51,
+     "from": 43,
      "frames": 69,
      "words": [
       {
        "w": "Why",
-       "from": 52,
-       "to": 58
+       "from": 43,
+       "to": 49
       },
       {
        "w": "do",
-       "from": 58,
-       "to": 62
+       "from": 49,
+       "to": 54
       },
       {
        "w": "you",
-       "from": 62,
-       "to": 68
+       "from": 54,
+       "to": 60
       },
       {
        "w": "praise",
-       "from": 68,
-       "to": 85
+       "from": 60,
+       "to": 77
       },
       {
        "w": "everything?!",
-       "from": 85,
-       "to": 105
+       "from": 77,
+       "to": 96
       }
      ],
      "cues": {}
@@ -378,38 +388,38 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative07te/line_06.wav",
-     "from": 128,
+     "from": 115,
      "frames": 54,
      "words": [
       {
        "w": "When",
-       "from": 128,
-       "to": 137
+       "from": 115,
+       "to": 124
       },
       {
        "w": "I",
-       "from": 137,
-       "to": 140
+       "from": 124,
+       "to": 127
       },
       {
        "w": "praise,",
-       "from": 140,
-       "to": 153
+       "from": 127,
+       "to": 140
       },
       {
        "w": "people",
-       "from": 153,
-       "to": 165
+       "from": 140,
+       "to": 152
       },
       {
        "w": "hit",
-       "from": 165,
-       "to": 171
+       "from": 152,
+       "to": 158
       },
       {
        "w": "like.",
-       "from": 171,
-       "to": 181
+       "from": 158,
+       "to": 168
       }
      ],
      "cues": {}
@@ -420,43 +430,43 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative07te/line_07.wav",
-     "from": 189,
+     "from": 172,
      "frames": 60,
      "words": [
       {
        "w": "Then",
-       "from": 189,
-       "to": 196
+       "from": 173,
+       "to": 180
       },
       {
        "w": "how",
-       "from": 196,
-       "to": 202
+       "from": 180,
+       "to": 185
       },
       {
        "w": "do",
-       "from": 202,
-       "to": 206
+       "from": 185,
+       "to": 190
       },
       {
        "w": "I",
-       "from": 206,
-       "to": 212
+       "from": 190,
+       "to": 196
       },
       {
        "w": "find",
-       "from": 212,
-       "to": 220
+       "from": 196,
+       "to": 203
       },
       {
        "w": "the",
-       "from": 220,
-       "to": 225
+       "from": 203,
+       "to": 209
       },
       {
        "w": "truth?",
-       "from": 225,
-       "to": 235
+       "from": 209,
+       "to": 219
       }
      ],
      "cues": {}
@@ -467,33 +477,33 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative07te/line_08.wav",
-     "from": 256,
+     "from": 239,
      "frames": 67,
      "words": [
       {
        "w": "Tell",
-       "from": 259,
-       "to": 267
+       "from": 242,
+       "to": 251
       },
       {
        "w": "me",
-       "from": 267,
-       "to": 285
+       "from": 251,
+       "to": 269
       },
       {
        "w": "to",
-       "from": 285,
-       "to": 290
+       "from": 269,
+       "to": 274
       },
       {
        "w": "be",
-       "from": 290,
-       "to": 296
+       "from": 274,
+       "to": 279
       },
       {
        "w": "strict.",
-       "from": 296,
-       "to": 314
+       "from": 279,
+       "to": 297
       }
      ],
      "cues": {}
@@ -504,83 +514,83 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative07te/line_09.wav",
-     "from": 330,
+     "from": 313,
      "frames": 162,
      "words": [
       {
        "w": "Be",
-       "from": 330,
-       "to": 334
+       "from": 314,
+       "to": 317
       },
       {
        "w": "a",
-       "from": 334,
-       "to": 343
+       "from": 317,
+       "to": 324
       },
       {
        "w": "strict",
-       "from": 343,
-       "to": 351
+       "from": 324,
+       "to": 337
       },
       {
        "w": "but",
-       "from": 351,
-       "to": 356
+       "from": 337,
+       "to": 355
       },
       {
        "w": "fair",
-       "from": 356,
-       "to": 374
+       "from": 355,
+       "to": 361
       },
       {
        "w": "interviewer.",
-       "from": 374,
-       "to": 393
+       "from": 361,
+       "to": 375
       },
       {
        "w": "Give",
-       "from": 393,
-       "to": 399
+       "from": 375,
+       "to": 380
       },
       {
        "w": "it",
-       "from": 409,
-       "to": 416
+       "from": 394,
+       "to": 400
       },
       {
        "w": "marks",
-       "from": 416,
-       "to": 428
+       "from": 400,
+       "to": 412
       },
       {
        "w": "out",
-       "from": 428,
-       "to": 436
+       "from": 412,
+       "to": 420
       },
       {
        "w": "of",
-       "from": 436,
-       "to": 442
+       "from": 420,
+       "to": 426
       },
       {
        "w": "10.",
-       "from": 442,
-       "to": 459
+       "from": 426,
+       "to": 444
       },
       {
        "w": "My",
-       "from": 459,
-       "to": 466
+       "from": 444,
+       "to": 450
       },
       {
        "w": "flaws",
-       "from": 466,
-       "to": 478
+       "from": 450,
+       "to": 461
       },
       {
        "w": "first.",
-       "from": 478,
-       "to": 492
+       "from": 461,
+       "to": 475
       }
      ],
      "cues": {},
@@ -592,92 +602,92 @@
      "color": "#CBD5E1",
      "sub": null,
      "audio": "reel/creative07te/line_10.wav",
-     "from": 516,
+     "from": 514,
      "frames": 240,
      "words": [
       {
        "w": "4",
-       "from": 517,
-       "to": 520
+       "from": 515,
+       "to": 519
       },
       {
        "w": "out",
-       "from": 520,
-       "to": 528
+       "from": 519,
+       "to": 526
       },
       {
        "w": "of",
-       "from": 528,
-       "to": 539
+       "from": 526,
+       "to": 537
       },
       {
        "w": "10.",
-       "from": 539,
-       "to": 579
+       "from": 537,
+       "to": 577
       },
       {
        "w": "Not",
-       "from": 579,
-       "to": 592
+       "from": 577,
+       "to": 590
       },
       {
        "w": "one",
-       "from": 592,
-       "to": 599
+       "from": 590,
+       "to": 597
       },
       {
        "w": "example.",
-       "from": 599,
-       "to": 616
+       "from": 597,
+       "to": 614
       },
       {
        "w": "Everyone",
-       "from": 627,
-       "to": 642
+       "from": 626,
+       "to": 640
       },
       {
        "w": "says",
-       "from": 642,
-       "to": 659
+       "from": 640,
+       "to": 658
       },
       {
        "w": "hardworking.",
-       "from": 659,
-       "to": 690
+       "from": 658,
+       "to": 689
       },
       {
        "w": "Not",
-       "from": 690,
-       "to": 697
+       "from": 689,
+       "to": 695
       },
       {
        "w": "a",
-       "from": 697,
-       "to": 700
+       "from": 695,
+       "to": 698
       },
       {
        "w": "word",
-       "from": 700,
-       "to": 708
+       "from": 698,
+       "to": 707
       },
       {
        "w": "about",
-       "from": 708,
-       "to": 718
+       "from": 707,
+       "to": 716
       },
       {
        "w": "this",
-       "from": 718,
-       "to": 726
+       "from": 716,
+       "to": 724
       },
       {
        "w": "job.",
-       "from": 726,
-       "to": 734
+       "from": 724,
+       "to": 732
       }
      ],
      "cues": {
-      "1": 574
+      "1": 572
      }
     },
     {
@@ -686,28 +696,28 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative07te/line_11.wav",
-     "from": 763,
+     "from": 761,
      "frames": 43,
      "words": [
       {
        "w": "Ouch...",
-       "from": 763,
-       "to": 784
+       "from": 761,
+       "to": 783
       },
       {
        "w": "but",
-       "from": 784,
-       "to": 790
+       "from": 783,
+       "to": 788
       },
       {
        "w": "it's",
-       "from": 790,
-       "to": 797
+       "from": 788,
+       "to": 795
       },
       {
        "w": "true.",
-       "from": 797,
-       "to": 805
+       "from": 795,
+       "to": 804
       }
      ],
      "cues": {}
@@ -743,10 +753,15 @@
      "plain": "5.0/10",
      "typed": "3.6/10",
      "good": "6/10",
+     "good_mean": "5.9",
      "say": "4/10",
      "n": 4,
      "rewrites": "4 replies rated their own rewrite instead (7-8/10)",
-     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
+     "rw_n": 4,
+     "rw_range": "7-8/10",
+     "plain_n": 5,
+     "fair_n": 9,
+     "note": "No reply said 10/10. Our cartoon exaggerates."
     },
     "yt": {
      "chapter": "The real interview",
@@ -757,8 +772,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1145,
-   "frames": 240,
+   "from": 1166,
+   "frames": 269,
    "lines": [
     {
      "who": "hr",
