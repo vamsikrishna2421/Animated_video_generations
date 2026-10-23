@@ -184,7 +184,7 @@ const chat = (c: Ctx, W: number, f: number, r: () => number, mode: ChatMode, tal
   };
   if (mode === "praise" || mode === "amazing") {
     msg(400, ["Tell me about yourself:", "\"I'm hardworking, a quick", "learner, a team player.\""], true, 1, 40);
-    msg(660, mode === "praise" ? ["PERFECT answer! 🎉"] : ["You're doing AMAZING!", "Believe in yourself!"], false, k[0] ?? 1, 52, "#fce7f3");
+    msg(660, mode === "praise" ? ["PERFECT answer! 🎉"] : ["Believe in yourself! ✨"], false, k[0] ?? 1, 52, "#fce7f3");
     c.font = SANS(150); c.fillStyle = PINK; c.textAlign = "center"; if ((k[0] ?? 1) > 0) c.fillText(mode === "praise" ? "10/10" : "💯", W / 2, 1060);
     c.font = SANS(70); c.fillStyle = "#facc15"; if (mode === "praise") c.fillText("★★★★★", W / 2, 1170);
     confetti(c, 100, 360, W - 200, 1100, f, k[0] ?? 1);

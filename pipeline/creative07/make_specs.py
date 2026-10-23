@@ -20,7 +20,7 @@ LINES = {
     1: ("coach", "split", "hook", "Perfect answer! Ten out of ten!", "పర్ఫెక్ట్ ఆన్సర్! పదికి పది!"),
     2: ("hr", "split", "next", "Forty people gave that exact answer today. Next!", "ఈ రోజు నలభై మంది సరిగ్గా ఇదే చెప్పారు. నెక్స్ట్!"),
     3: ("ramya", "home", "five", "Five rejections, and you call it perfect?!", "ఐదు రిజెక్షన్లు, నువ్వేమో పర్ఫెక్ట్ అంటావా?!"),
-    4: ("coach", "phone", "amazing", "Believe in yourself!", "బిలీవ్ ఇన్ యువర్ సెల్ఫ్!"),   # v3: a non-answer, shorter
+    4: ("coach", "phone", "amazing", "Believe in yourself!", "Believe in yourself!"),   # v3: a non-answer; Telugu: English letters (Parler garbled the Telugu spelling)
     5: ("ramya", "home", "why", "Why do you praise everything?!", "ప్రతిదానికీ ఎందుకు పొగుడుతావ్?!"),
     6: ("coach", "phone", "thumbs", "People tap thumbs-up when I'm nice.", "నేను మెచ్చుకుంటే జనం లైక్ కొడతారు."),   # the screen adds "so I learned: be nice"
     7: ("ramya", "home", "truth", "Then how do I get the truth?", "మరి నిజం ఎలా తెలుస్తుంది?"),
@@ -30,7 +30,7 @@ LINES = {
     10: ("strict", "phone", "critique", "{N_EN} out of ten. [1] No example. Everyone says hardworking. Nothing about this job.",
          "పదికి {N_TE}. [1] ఒక్క ఎగ్జాంపుల్ కూడా లేదు. | హార్డ్ వర్కింగ్ అని అందరూ అంటారు. ఈ జాబ్ గురించి ఒక్క మాటా లేదు."),
     11: ("ramya", "home", "ouch", "Ouch. But true.", "అబ్బా... కానీ నిజమే."),
-    12: ("hr", "split", "again", "Tell me about yourself.", "టెల్ మీ అబౌట్ యువర్ సెల్ఫ్."),   # Telugu too: HR asks in English
+    12: ("hr", "split", "again", "Tell me about yourself.", "Tell me about yourself."),   # Telugu too: HR asks in English (English letters)
     13: ("ramya", "split", "specific", "In my internship, I cut billing errors by half.", "నా ఇంటర్న్‌షిప్‌లో బిల్లింగ్ ఎర్రర్స్ సగానికి తగ్గించాను."),
     14: ("divya", "split", "divya", "AI, how's my answer?", "ఏఐ, నా ఆన్సర్ ఎలా ఉంది?"),   # the end: the loop's line 1 answers her
 }

@@ -1,0 +1,872 @@
+{
+ "id": "creative07v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Ten out of ten",
+ "musicVol": [
+  0.42,
+  0.82
+ ],
+ "title": "Ten out of ten",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   814,
+   847
+  ],
+  [
+   762,
+   780
+  ],
+  [
+   1144,
+   1159
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   307,
+   1.7
+  ],
+  [
+   307,
+   1105,
+   1.45
+  ],
+  [
+   1105,
+   1371,
+   1.5
+  ],
+  [
+   1105,
+   1371,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1371,
+ "music": "reel/creative07v1/score.wav",
+ "scenes": [
+  {
+   "id": "i_a",
+   "type": "sk_interview",
+   "data": {
+    "beats": [
+     {
+      "who": "coach",
+      "shot": "split",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "hr",
+      "shot": "split",
+      "prop": "next",
+      "n": 2
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "five",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.0/10",
+     "typed": "3.6/10",
+     "good": "6/10",
+     "say": "4/10",
+     "n": 4,
+     "rewrites": "4 replies rated their own rewrite instead (7-8/10)",
+     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
+    },
+    "yt": {
+     "chapter": "Ten out of ten?",
+     "title": "Ten out of ten?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "coach",
+     "name": "AI Coach",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_01.wav",
+     "from": 12,
+     "frames": 70,
+     "words": [
+      {
+       "w": "Perfect",
+       "from": 13,
+       "to": 26
+      },
+      {
+       "w": "answer!",
+       "from": 26,
+       "to": 47
+      },
+      {
+       "w": "10",
+       "from": 47,
+       "to": 52
+      },
+      {
+       "w": "out",
+       "from": 52,
+       "to": 59
+      },
+      {
+       "w": "of",
+       "from": 59,
+       "to": 64
+      },
+      {
+       "w": "10!",
+       "from": 64,
+       "to": 75
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "hr",
+     "name": "HR",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative07v1/line_02.wav",
+     "from": 87,
+     "frames": 99,
+     "words": [
+      {
+       "w": "40",
+       "from": 89,
+       "to": 93
+      },
+      {
+       "w": "people",
+       "from": 93,
+       "to": 103
+      },
+      {
+       "w": "gave",
+       "from": 103,
+       "to": 119
+      },
+      {
+       "w": "that",
+       "from": 119,
+       "to": 126
+      },
+      {
+       "w": "exact",
+       "from": 126,
+       "to": 135
+      },
+      {
+       "w": "answer",
+       "from": 135,
+       "to": 145
+      },
+      {
+       "w": "today.",
+       "from": 145,
+       "to": 159
+      },
+      {
+       "w": "Next!",
+       "from": 159,
+       "to": 176
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ramya",
+     "name": "Ramya",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_03.wav",
+     "from": 197,
+     "frames": 91,
+     "words": [
+      {
+       "w": "5",
+       "from": 200,
+       "to": 202
+      },
+      {
+       "w": "rejections,",
+       "from": 202,
+       "to": 217
+      },
+      {
+       "w": "and",
+       "from": 217,
+       "to": 228
+      },
+      {
+       "w": "you",
+       "from": 228,
+       "to": 244
+      },
+      {
+       "w": "call",
+       "from": 244,
+       "to": 254
+      },
+      {
+       "w": "it",
+       "from": 254,
+       "to": 258
+      },
+      {
+       "w": "perfect?!",
+       "from": 258,
+       "to": 281
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "i_b",
+   "type": "sk_interview",
+   "data": {
+    "beats": [
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "amazing",
+      "n": 4
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "why",
+      "n": 5
+     },
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "thumbs",
+      "n": 6
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "truth",
+      "n": 7
+     },
+     {
+      "who": "coach",
+      "shot": "phone",
+      "prop": "strict",
+      "n": 8
+     },
+     {
+      "who": "ramya",
+      "shot": "phone",
+      "prop": "typing",
+      "n": 9
+     },
+     {
+      "who": "strict",
+      "shot": "phone",
+      "prop": "critique",
+      "n": 10
+     },
+     {
+      "who": "ramya",
+      "shot": "home",
+      "prop": "ouch",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.0/10",
+     "typed": "3.6/10",
+     "good": "6/10",
+     "say": "4/10",
+     "n": 4,
+     "rewrites": "4 replies rated their own rewrite instead (7-8/10)",
+     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
+    },
+    "yt": {
+     "chapter": "Why AI flatters, and the fix",
+     "title": "Why AI flatters, and the fix",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 307,
+   "frames": 798,
+   "lines": [
+    {
+     "who": "coach",
+     "name": "AI Coach",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_04.wav",
+     "from": 10,
+     "frames": 32,
+     "words": [
+      {
+       "w": "Believe",
+       "from": 14,
+       "to": 23
+      },
+      {
+       "w": "in",
+       "from": 23,
+       "to": 26
+      },
+      {
+       "w": "yourself!",
+       "from": 26,
+       "to": 37
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ramya",
+     "name": "Ramya",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_05.wav",
+     "from": 47,
+     "frames": 63,
+     "words": [
+      {
+       "w": "Why",
+       "from": 47,
+       "to": 54
+      },
+      {
+       "w": "do",
+       "from": 54,
+       "to": 59
+      },
+      {
+       "w": "you",
+       "from": 59,
+       "to": 70
+      },
+      {
+       "w": "praise",
+       "from": 70,
+       "to": 82
+      },
+      {
+       "w": "everything?!",
+       "from": 82,
+       "to": 105
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "coach",
+     "name": "AI Coach",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_06.wav",
+     "from": 114,
+     "frames": 69,
+     "words": [
+      {
+       "w": "People",
+       "from": 115,
+       "to": 124
+      },
+      {
+       "w": "tap",
+       "from": 124,
+       "to": 129
+      },
+      {
+       "w": "thumbs-up",
+       "from": 129,
+       "to": 149
+      },
+      {
+       "w": "when",
+       "from": 149,
+       "to": 163
+      },
+      {
+       "w": "I'm",
+       "from": 163,
+       "to": 168
+      },
+      {
+       "w": "nice.",
+       "from": 168,
+       "to": 176
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ramya",
+     "name": "Ramya",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_07.wav",
+     "from": 189,
+     "frames": 51,
+     "words": [
+      {
+       "w": "Then",
+       "from": 189,
+       "to": 197
+      },
+      {
+       "w": "how",
+       "from": 197,
+       "to": 203
+      },
+      {
+       "w": "do",
+       "from": 203,
+       "to": 208
+      },
+      {
+       "w": "I",
+       "from": 208,
+       "to": 211
+      },
+      {
+       "w": "get",
+       "from": 211,
+       "to": 218
+      },
+      {
+       "w": "the",
+       "from": 218,
+       "to": 228
+      },
+      {
+       "w": "truth?",
+       "from": 228,
+       "to": 239
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "coach",
+     "name": "AI Coach",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_08.wav",
+     "from": 244,
+     "frames": 35,
+     "words": [
+      {
+       "w": "Tell",
+       "from": 245,
+       "to": 250
+      },
+      {
+       "w": "me",
+       "from": 250,
+       "to": 253
+      },
+      {
+       "w": "to",
+       "from": 253,
+       "to": 255
+      },
+      {
+       "w": "be",
+       "from": 255,
+       "to": 258
+      },
+      {
+       "w": "strict.",
+       "from": 258,
+       "to": 272
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ramya",
+     "name": "Ramya",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_09.wav",
+     "from": 284,
+     "frames": 165,
+     "words": [
+      {
+       "w": "Act",
+       "from": 284,
+       "to": 294
+      },
+      {
+       "w": "as",
+       "from": 294,
+       "to": 298
+      },
+      {
+       "w": "a",
+       "from": 298,
+       "to": 301
+      },
+      {
+       "w": "strict",
+       "from": 301,
+       "to": 321
+      },
+      {
+       "w": "but",
+       "from": 321,
+       "to": 333
+      },
+      {
+       "w": "fair",
+       "from": 333,
+       "to": 340
+      },
+      {
+       "w": "interviewer.",
+       "from": 340,
+       "to": 368
+      },
+      {
+       "w": "Rate",
+       "from": 368,
+       "to": 375
+      },
+      {
+       "w": "it",
+       "from": 375,
+       "to": 379
+      },
+      {
+       "w": "out",
+       "from": 379,
+       "to": 384
+      },
+      {
+       "w": "of",
+       "from": 384,
+       "to": 388
+      },
+      {
+       "w": "ten.",
+       "from": 388,
+       "to": 400
+      },
+      {
+       "w": "Weaknesses",
+       "from": 400,
+       "to": 425
+      },
+      {
+       "w": "first.",
+       "from": 425,
+       "to": 440
+      }
+     ],
+     "cues": {},
+     "nocap": true
+    },
+    {
+     "who": "strict",
+     "name": "AI Coach",
+     "color": "#CBD5E1",
+     "sub": null,
+     "audio": "reel/creative07v1/line_10.wav",
+     "from": 473,
+     "frames": 192,
+     "words": [
+      {
+       "w": "4",
+       "from": 477,
+       "to": 481
+      },
+      {
+       "w": "out",
+       "from": 481,
+       "to": 492
+      },
+      {
+       "w": "of",
+       "from": 492,
+       "to": 497
+      },
+      {
+       "w": "10.",
+       "from": 497,
+       "to": 507
+      },
+      {
+       "w": "No",
+       "from": 507,
+       "to": 534
+      },
+      {
+       "w": "example.",
+       "from": 534,
+       "to": 550
+      },
+      {
+       "w": "Everyone",
+       "from": 550,
+       "to": 575
+      },
+      {
+       "w": "says",
+       "from": 575,
+       "to": 583
+      },
+      {
+       "w": "hardworking.",
+       "from": 583,
+       "to": 620
+      },
+      {
+       "w": "Nothing",
+       "from": 620,
+       "to": 633
+      },
+      {
+       "w": "about",
+       "from": 633,
+       "to": 643
+      },
+      {
+       "w": "this",
+       "from": 643,
+       "to": 652
+      },
+      {
+       "w": "job.",
+       "from": 652,
+       "to": 660
+      }
+     ],
+     "cues": {
+      "1": 531
+     }
+    },
+    {
+     "who": "ramya",
+     "name": "Ramya",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_11.wav",
+     "from": 670,
+     "frames": 51,
+     "words": [
+      {
+       "w": "Ouch.",
+       "from": 671,
+       "to": 682
+      },
+      {
+       "w": "But",
+       "from": 682,
+       "to": 698
+      },
+      {
+       "w": "true.",
+       "from": 698,
+       "to": 716
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "i_c",
+   "type": "sk_interview",
+   "data": {
+    "beats": [
+     {
+      "who": "hr",
+      "shot": "split",
+      "prop": "again",
+      "n": 12
+     },
+     {
+      "who": "ramya",
+      "shot": "split",
+      "prop": "specific",
+      "n": 13
+     },
+     {
+      "who": "divya",
+      "shot": "split",
+      "prop": "divya",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "plain": "5.0/10",
+     "typed": "3.6/10",
+     "good": "6/10",
+     "say": "4/10",
+     "n": 4,
+     "rewrites": "4 replies rated their own rewrite instead (7-8/10)",
+     "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."
+    },
+    "yt": {
+     "chapter": "The real interview",
+     "title": "The real interview",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1105,
+   "frames": 266,
+   "lines": [
+    {
+     "who": "hr",
+     "name": "HR",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative07v1/line_12.wav",
+     "from": 11,
+     "frames": 39,
+     "words": [
+      {
+       "w": "Tell",
+       "from": 12,
+       "to": 18
+      },
+      {
+       "w": "me",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "about",
+       "from": 22,
+       "to": 30
+      },
+      {
+       "w": "yourself.",
+       "from": 30,
+       "to": 42
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ramya",
+     "name": "Ramya",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative07v1/line_13.wav",
+     "from": 54,
+     "frames": 112,
+     "words": [
+      {
+       "w": "In",
+       "from": 54,
+       "to": 59
+      },
+      {
+       "w": "my",
+       "from": 59,
+       "to": 64
+      },
+      {
+       "w": "internship,",
+       "from": 64,
+       "to": 100
+      },
+      {
+       "w": "I",
+       "from": 100,
+       "to": 103
+      },
+      {
+       "w": "cut",
+       "from": 103,
+       "to": 110
+      },
+      {
+       "w": "billing",
+       "from": 110,
+       "to": 123
+      },
+      {
+       "w": "errors",
+       "from": 123,
+       "to": 141
+      },
+      {
+       "w": "by",
+       "from": 141,
+       "to": 146
+      },
+      {
+       "w": "half.",
+       "from": 146,
+       "to": 157
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "divya",
+     "name": "Divya",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative07v1/line_14.wav",
+     "from": 184,
+     "frames": 68,
+     "words": [
+      {
+       "w": "AI,",
+       "from": 185,
+       "to": 195
+      },
+      {
+       "w": "how's",
+       "from": 195,
+       "to": 219
+      },
+      {
+       "w": "my",
+       "from": 219,
+       "to": 226
+      },
+      {
+       "w": "answer?",
+       "from": 226,
+       "to": 246
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}

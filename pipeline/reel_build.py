@@ -57,6 +57,12 @@ SPEAKERS = {
     "a": dict(voice="af_heart", speed=1.0, lang="en-us", name="Contestant A", color="#FDE68A"),
     "b": dict(voice="af_heart", speed=1.0, lang="en-us", name="Contestant B", color="#5EEAD4"),
     "c": dict(voice="af_heart", speed=1.0, lang="en-us", name="Contestant C", color="#93C5FD"),
+    # creative 07 (file takes): practice vs the real interview
+    "ramya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Ramya", color="#5EEAD4"),
+    "coach": dict(voice="af_heart", speed=1.0, lang="en-us", name="AI Coach", color="#F9A8D4"),
+    "strict": dict(voice="af_heart", speed=1.0, lang="en-us", name="AI Coach", color="#CBD5E1"),
+    "hr": dict(voice="hm_omega", speed=1.0, lang="en-us", name="HR", color="#FCA5A5"),
+    "divya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Divya", color="#FDE68A"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 
