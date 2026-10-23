@@ -53,8 +53,9 @@ NOCAP = {9}   # the TYPE THIS card carries line 9
 SCENES = [("i_a", (1, 2, 3), {"pre": 0.25, "boost": 1.7, "tail": 0.1}),
           ("i_b", (4, 5, 6, 7, 8, 9, 10, 11), {"lift": 0.7, "pre": 0.2, "boost": 1.45, "drop_pre": [[6, 0.5, 0.8]],
                                                 "drop_at": [[6, "1", 0.3]], "tail": 0.15}),   # silence into the score, a beat after it
-          ("i_c", (12, 13, 14), {"lift": 0.35, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.3, "drop_pre": [[1, 0.0, 0.5]],
-                                 "tail": 1.0})]   # a hush before her real answer, then the rise into the loop
+          ("i_c", (12, 13, 14), {"lift": 0.35, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.3,
+                                 "drop_pre": [[1, 0.0, 0.5], [2, 0.05, 0.45]], "tail": 1.0})]   # a hush before her real answer; a dip
+                                 # under the SHORTLISTED boom's tail so it stands out; then the rise into the loop
 GAP = {2: 0.35, 3: 0.1, 4: 0.1, 5: 0.1, 6: 0.12, 9: 1.3, 11: 3.5, 13: 0.6}   # 9: the card holds, then silence; 11: the test card
 GAIN = {"ramya": 0.3, "coach": 0.0, "strict": 0.0, "hr": 0.3, "divya": 0.3}
 GAIN_LINE = {}
@@ -94,9 +95,10 @@ def spec(lang):
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15, "music": "lofi", "musicVol": [0.42, 0.82], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -4, 0.9], [2400, -3, 1.0]], "musicPad": True, "hardCuts": True,
          "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,
-         "musicGapGain": 1.5, "musicEndRamp": [0.93, 4.0]}   # gaps: music-only stretches sat 2.5 dB over the voice
+         "musicGapGain": 1.5, "musicEndRamp": [0.92, 6.5]}   # gaps: music-only stretches sat 2.5 dB over the voice; a 4 dB swell didn't show
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
+        s["musicEndRamp"] = [0.92, 9.5]   # the Telugu tail sat 3 dB under Divya's line with 6.5 dB
     demo = demo_numbers()
     scenes = []
     last = max(LINES)

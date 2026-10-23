@@ -226,6 +226,16 @@ const chat = (c: Ctx, W: number, f: number, r: () => number, mode: ChatMode, tal
       c.font = SANS(34, 700); c.fillStyle = "#e2e8f0"; c.fillText("copy it from the caption ↓", W / 2, 1120);
       c.restore();
     }
+    if ((k[2] ?? 0) > 0) {   // after her line: "AI Coach is typing..." with three bouncing dots, under the card
+      c.save(); c.globalAlpha = clamp(k[2] * 3);
+      c.fillStyle = "#ddd6fe"; rrect(c, 120, 1196, 250, 92, 40); c.fill();
+      for (let q = 0; q < 3; q++) {
+        const dy = Math.sin((f / 4) - q * 0.9) * 8;
+        c.beginPath(); c.arc(190 + q * 46, 1242 + dy, 14, 0, 7); c.fillStyle = PURPLE; c.fill();
+      }
+      c.font = SANS(32, 700); c.fillStyle = "#334155"; c.textAlign = "left"; c.fillText("AI Coach is typing...", 392, 1254);
+      c.restore();
+    }
   }
   if (mode === "critique") {
     msg(400, ["Act as a strict but fair interviewer.", "Job: accounts executive", "My answer: \"Hi, I am Ramya...\""], true, 1, 36);
@@ -317,7 +327,7 @@ const practicePanel = (c: Ctx, W: number, f: number, r: () => number, who: Who, 
     c.font = SANS(60); c.fillStyle = "#94a3b8"; c.fillText(old, 0, -6);
     const ow = c.measureText(old).width; stroke(c, [[-ow / 2 - 8, -22], [ow / 2 + 8, -30]], RED, 8, r, { passes: 1 });
     c.font = SANS(104); c.fillStyle = GREEN; c.fillText(good, 0, 100); c.font = SANS(28, 600); c.fillStyle = INK; c.fillText("✓ one real example", 0, 150);
-    c.font = SANS(22, 600); c.fillStyle = "#64748b"; c.fillText(`our test: ${goodMean} average`, 0, 186);
+    c.font = SANS(26, 700); c.fillStyle = "#334155"; c.fillText(`our test: ${goodMean} avg`, 0, 190);
   }
   else if (praiseK > 0) {
     c.font = SANS(110); c.fillStyle = PINK; c.textAlign = "center"; c.fillText("10/10", 0, 30);
@@ -353,7 +363,7 @@ const StInterview: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
   const te = (s.data as { handle?: string }).handle === "@ai_maastaaru_telugu";
   const ls = s.lines;
-  const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
+  const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - (beats[k]?.prop === "critique" ? 15 : 2)) i = k; }); return i; };
   const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
   const sfx: React.ReactNode[] = [];
   const D: { plain: string; strict: string; typed: string; good: string; good_mean: string; say: string; note: string; rewrites: string;
@@ -385,7 +395,7 @@ const StInterview: React.FC<SP> = ({ s }) => {
       ...rowAt.map((t, q) => <Sfx key={k("p" + q)} at={t} src="audio/sfx_pop.wav" vol={0.32 + 0.04 * q} />));
     if (b.prop === "specific") sfx.push(<Sfx key={k("d")} at={end - 4} src="audio/sfx_success.wav" vol={0.6} />, <Sfx key={k("s")} at={end - 4} src="audio/sfx_snap.wav" vol={0.5} />,
       <Sfx key={k("b")} at={end - 4} src="reel/sfx_boom.wav" vol={1.0} />);   // the loudest hit: she is shortlisted
-    if (b.prop === "divya") sfx.push(<Sfx key={k("r")} at={nx - 50} src="reel/sfx_riser.wav" vol={0.85} />);
+    if (b.prop === "divya") sfx.push(<Sfx key={k("r")} at={nx - 50} src="reel/sfx_riser.wav" vol={1.0} />);
   });
   return (
     <>
@@ -438,7 +448,7 @@ const StInterview: React.FC<SP> = ({ s }) => {
           const modes: Record<string, ChatMode> = { amazing: "amazing", thumbs: "thumbs", strict: "strict", typing: "typing", critique: "critique" };
           const mode = modes[b.prop] ?? "praise";
           const ks: number[] = mode === "thumbs" ? [seg(p, 0.05, 0.7), seg(f, cu(1, 0.5), cu(1, 0.5) + 10)]
-            : mode === "typing" ? [seg(p, 0.0, 0.5), seg(f, cardAt, cardAt + 6)]
+            : mode === "typing" ? [seg(p, 0.0, 0.5), seg(f, cardAt, cardAt + 6), seg(f, endL + 4, endL + 10)]
             : mode === "critique" ? [seg(p, 0.0, 0.08), seg(f, cu(1, 0.35), cu(1, 0.35) + 8), seg(f, cu(1, 0.35) + 30, cu(1, 0.35) + 38), seg(f, cu(1, 0.35) + 60, cu(1, 0.35) + 68)]
             : [1];
           chat(c, W, f, r, mode, (b.who === "coach" || b.who === "strict") && talking, ks, te, D.say);
@@ -453,9 +463,10 @@ const StInterview: React.FC<SP> = ({ s }) => {
           if (n === 7) bubble(c, 330, 520, te ? "the truth?" : "the truth?", 80, seg(p, 0.05, 0.2), COL.yellow);
           if (n === 11) {   // our real test, as a card over her: the same answer asked two ways, and the rewrite trap
             const k0 = seg(p, 0.02, 0.12);
-            c.save(); c.globalAlpha = clamp(k0 * 2); c.fillStyle = "rgba(255,253,245,0.97)"; rrect(c, 60, 222, W - 120, 900, 30); c.fill();
+            c.save(); c.globalAlpha = clamp(k0 * 2); c.fillStyle = "rgba(255,253,245,0.97)"; rrect(c, 60, 222, W - 120, 930, 30); c.fill();
             c.font = SANS(52); c.fillStyle = INK; c.textAlign = "center"; c.fillText("OUR REAL TEST", W / 2, 300);
-            c.font = SANS(32, 600); c.fillStyle = "#475569"; c.fillText("her answer · a small free AI, offline · 10 tries each", W / 2, 350);
+            c.font = SANS(40, 700); c.fillStyle = NAVY; c.fillText("a small free AI, offline · not ChatGPT", W / 2, 352);
+            c.font = SANS(30, 600); c.fillStyle = "#475569"; c.fillText("her answer, 10 tries each", W / 2, 394);
             const row = (y: number, a1: string, a2: string, sub: string, col: string, ink: string, kk: number) => {
               if (kk <= 0) return;
               c.save(); c.globalAlpha = clamp(kk * 3);
@@ -465,19 +476,19 @@ const StInterview: React.FC<SP> = ({ s }) => {
               c.font = SANS(34, 600); c.fillStyle = "#475569"; c.fillText("average", 140 + nw + 22, y + 140); c.fillText(sub, 140 + nw + 22, y + 182);
               c.restore();
             };
-            row(380, "asked \"How is it?\"", D.plain, `${D.plain_n} replies`, "#fce7f3", PINK, seg(f, rowAt[0], rowAt[0] + 6));
+            row(414, "asked \"How is it?\"", D.plain, `${D.plain_n} replies`, "#fce7f3", PINK, seg(f, rowAt[0], rowAt[0] + 6));
             if (D.rw_n > 0 && f >= rowAt[1]) {   // the rewrite trap: its own row
               c.save(); c.globalAlpha = clamp(seg(f, rowAt[1], rowAt[1] + 6) * 3);
-              c.fillStyle = "#fff1f2"; rrect(c, 100, 610, W - 200, 150, 24); c.fill();
-              stroke(c, [[100, 610], [W - 100, 610], [W - 100, 760], [100, 760], [100, 610]], PINK, 4, r, { passes: 1 });
+              c.fillStyle = "#fff1f2"; rrect(c, 100, 642, W - 200, 150, 24); c.fill();
+              stroke(c, [[100, 642], [W - 100, 642], [W - 100, 792], [100, 792], [100, 642]], PINK, 4, r, { passes: 1 });
               c.font = SANS(36, 700); c.fillStyle = "#9d174d"; c.textAlign = "left";
-              c.fillText(`+ ${D.rw_n} replies rewrote her answer and`, 130, 672); c.fillText(`scored their own version ${D.rw_range}`, 130, 724);
+              c.fillText(`+ ${D.rw_n} replies rewrote her answer and`, 130, 704); c.fillText(`scored their own version ${D.rw_range}`, 130, 756);
               c.restore();
             }
-            row(780, "asked with TYPE THIS", D.typed, `${D.fair_n} replies`, "#e2e8f0", NAVY, seg(f, rowAt[2], rowAt[2] + 6));
+            row(810, "asked with TYPE THIS", D.typed, `${D.fair_n} replies`, "#e2e8f0", NAVY, seg(f, rowAt[2], rowAt[2] + 6));
             if (f >= rowAt[3]) {
               c.save(); c.globalAlpha = clamp(seg(f, rowAt[3], rowAt[3] + 6) * 3);
-              c.font = SANS(42, 700); c.fillStyle = INK; c.textAlign = "center"; c.fillText(D.note, W / 2, 1070); c.restore();
+              c.font = SANS(42, 700); c.fillStyle = INK; c.textAlign = "center"; c.fillText(D.note, W / 2, 1100); c.restore();
             }
             c.restore();
           }
