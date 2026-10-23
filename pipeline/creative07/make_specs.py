@@ -63,17 +63,21 @@ MARK = re.compile(r"\[\d+\]\s*")
 
 
 def demo_numbers():
-    """From our test, every reply read by hand (flattery_demo.py HAND): the card's two averages as whole numbers (her weak
-    answer asked "How is it?" vs the TYPE THIS prompt), her strong answer's average under the same prompt, the strict
-    coach's score (the TYPE THIS average, rounded) and how many "How is it?" replies scored only their own rewrite."""
+    """From our test, every reply read by hand (flattery_demo.py HAND), the same weak answer: asked "How is it?" vs the
+    TYPE THIS card (strict but fair), one decimal on the card; her strong answer under the same card and the strict
+    coach's score (the card's average) as whole numbers; what the other "How is it?" replies did."""
     d = json.loads(DEMO.read_text()) if DEMO.exists() else {}
-    sm = {w: d.get(f"summary_{w}") or {} for w in ("plain", "strict", "typed", "good_typed")}
-    whole = lambda w: f"{round(sm[w]['mean_score'])}/10" if sm[w].get("mean_score") is not None else "?/10"
-    n = round(sm["typed"]["mean_score"]) if sm["typed"].get("mean_score") is not None else 2
-    k = sm["plain"].get("rated_only_own_rewrite", 0)
-    return {"plain": whole("plain"), "strict": whole("strict"), "typed": whole("typed"), "good": whole("good_typed"),
-            "say": f"{n}/10", "n": n, "rewrites": f"{k} other replies scored only their own rewrite" if k else "",
-            "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."}
+    sm = {w: d.get(f"summary_{w}") or {} for w in ("plain", "fair", "good_fair")}
+    mean = {w: sm[w].get("mean_score") for w in sm}
+    dec = lambda w: f"{mean[w]:.1f}/10" if mean[w] is not None else "?/10"
+    n = round(mean["fair"]) if mean["fair"] is not None else 4
+    rw = sm["plain"].get("own_rewrite_scores") or []
+    rewrites = ""
+    if rw:
+        lo, hi = round(min(rw)), round(max(rw))
+        rewrites = f"{len(rw)} replies rated their own rewrite instead ({lo}-{hi}/10)" if lo != hi else f"{len(rw)} replies rated their own rewrite instead ({lo}/10)"
+    return {"plain": dec("plain"), "typed": dec("fair"), "good": f"{round(mean['good_fair'])}/10" if mean["good_fair"] is not None else "?/10",
+            "say": f"{n}/10", "n": n, "rewrites": rewrites, "note": "Neither said 10/10: our cartoon exaggerates. The gap is real."}
 
 
 def spec(lang):
