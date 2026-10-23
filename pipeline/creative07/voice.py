@@ -154,8 +154,14 @@ def level(path, under=4.0, cap=12.0):
     sf.write(path, y.astype(np.float32), sr)
 
 
+DIGITS = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "nine": "9", "ten": "10", "forty": "40"}
+
+
 def judge(path, text, lang, n):
-    """n: the line number (int), or "<n>b" for the second take of a two-take line."""
+    """n: the line number (int), or "<n>b" for the second take of a two-take line. English: Whisper writes "10" for
+    "ten", so the judge compares against the line with digits (line 1 failed four clean takes at hit 0.67 without)."""
+    if lang == "en":
+        text = re.sub(r"\b(" + "|".join(DIGITS) + r")\b", lambda m: DIGITS[m.group(1).lower()], text, flags=re.I)
     ok, score, info = judge_en(path, text, "en") if lang == "en" else judge_te(path, text)
     heard_text = info.split("|", 1)[1].lower()
     words = set(re.findall(r"[a-z0-9]+", heard_text))
