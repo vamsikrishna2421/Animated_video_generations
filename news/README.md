@@ -27,3 +27,22 @@ covers Oct 11-17, which never went out (triage in `news/inbox/2026-10-14_triage.
    YouTube editions (`out/news/<id>-<lang>-yt.mp4`). Review packs and viewer review as for every reel.
 6. **Post file**: `news/week-<date>_post.md` with the triage of the digests, sources, captions (EN/TE) and the
    YouTube text with chapters.
+7. **Lessons from AI WEEKLY 02** (Oct 24; two viewer rounds per language):
+   - Length: about 300 English words for six stories plus hook and outro gives ~2:45; the Telugu voice runs longer
+     (first pass 3:19), so write the Telugu shorter, not faster. Viewers swipe at stories that are not for them:
+     keep a business-only story to one line and put a spoken tease ("Still coming: ...") before the dull middle.
+   - The hook must not give away the last story's number; tease it ("one Indian IT giant does the opposite") and
+     pay it off with a `hush` card (bed silent ~1 s, riser into it, loudest hit on the number) plus a baseline.
+   - Spec keys: `lean: true` (dek fades, no lower third, bigger card text), `beatCuts: 15` (cuts on the bed's beat),
+     story `pause` (gap before a `part: 2` card), `hush` on a big card, `tail` on the outro (the end card starts
+     under the last line, so no 5 s of music after the last word).
+   - Every number needs its owner and its baseline on screen ("13,000 since April", "as many as last year"); cut a
+     stat that has neither (the Anthropic junior-hiring share had no years).
+   - Telugu: cue cards on the first word of each Telugu clause (the verb comes last, so end-of-clause cues land
+     late); keep the same number of sentences in `text` and `tts_te` so the English captions follow the Telugu voice
+     sentence by sentence; spell letter names with long vowels ("ఏ ఐ", "జీ పీ టీ", "పీ హెచ్ పీ"), జెమిని not జెమినై;
+     avoid "పిన్ ని" (heard as "pinni") and "లన్నీ డిలీట్" (heard as "nahin delete"); everyday words over TV-news ones.
+   - English TTS: "chat G P T" (lower-case chat), "Character A.I. has filed", never end a sentence on "A.I." before
+     the next one (the splitter keeps them together, so the pause and the full stop vanish). Check the review-pack
+     transcript and re-voice misheard parts with `pipeline/tools/news_retake.py` (keeps the first take whose
+     transcript has every required word).
