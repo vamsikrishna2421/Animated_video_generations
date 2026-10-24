@@ -248,6 +248,8 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
   const starts = segs.map((s, i) => { const a = at; at += s.frames + (i === 0 ? STING : 0); return a; });
   const total = at;
   const subAbs = starts[starts.length - 1] + segs[segs.length - 1].frames - SUB_LEN;
+  const lastSeg = segs[segs.length - 1];
+  const voiceEnd = starts[starts.length - 1] + (lastSeg.words[lastSeg.words.length - 1]?.e ?? 0) + 6;
   const chapterStarts = starts.slice(1, -1);
   const drops = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => ({ f: starts[segs.indexOf(s)] + c.f, big: !!c.big, hush: !!c.hush })));
   return (
@@ -274,14 +276,15 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
           a `drop` card's number, rising through the last chapter into the subscribe card */}
       <Audio src={A(tl.music ?? "loop_120")} loop loopVolumeCurveBehavior="extend" allowAmplificationDuringRender volume={(fr) => {
         const base = tl.musicBaseYT ?? 0.08, outroS = starts[starts.length - 1], lastS = starts[starts.length - 2];
-        if (fr >= subAbs) return tl.musicBaseYT ? Math.max(0.3, base * 4) : 0.3; // music-only subscribe card: loudest point
+        if (fr >= Math.max(subAbs, voiceEnd)) return tl.musicBaseYT ? Math.max(0.3, base * 4) : 0.3; // music-only subscribe card: loudest point
         if (fr < segs[0].frames) return tl.musicBaseYT ? base * 1.4 : 0.22;
         if (fr >= outroS) return base * interpolate(fr, [outroS, subAbs], [1.15, 1.4], cl);
-        const v = fr >= lastS ? interpolate(fr, [lastS, outroS], [base, base * 1.15], cl) : base * interpolate(fr, [starts[1], lastS], [0.85, 1.05], cl);
+        const v = fr >= lastS ? base * interpolate(fr, [lastS, outroS], [0.9, 1.15], cl) : base * interpolate(fr, [starts[1], lastS], [0.8, 0.9], cl);
         const swell = chapterStarts.reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2.2, 1], cl)), 1);
         return v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0, 0, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
       }} />
-      {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 0.65 : d.big ? 0.5 : 0.35} /></Sequence>)}
+      {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 0.95 : d.big ? 0.5 : 0.35} /></Sequence>)}
+      {drops.filter((d) => d.hush).map((d) => <Sequence key={`r${d.f}`} from={d.f - 86} durationInFrames={50} layout="none"><Audio src={A("riser")} volume={0.4} /></Sequence>)}
       {(segs[0].hits ?? []).map((h) => <Sequence key={`h${h}`} from={h - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.4} /></Sequence>)}
       {chapterStarts.map((s) => <Sequence key={`w${s}`} from={s} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.45} /></Sequence>)}
       {stories.map((s) => (s.cards ?? []).map((c, j) => (

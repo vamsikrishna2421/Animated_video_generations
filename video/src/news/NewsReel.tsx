@@ -489,7 +489,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
       <Backdrop accent={B.rose} />
       <AbsoluteFill style={{ justifyContent: "flex-start", padding: `${(seg.lines ?? []).length > 2 ? 330 : 400}px 70px 0`, opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
         {(seg.lines ?? []).map((parts, li) => {
-          const at = seg.lineAt?.[li] ?? 2 + li * 30; // each hook line appears as its sentence is spoken
+          const at = li === 0 ? 2 : seg.lineAt?.[li] ?? 2 + li * 30; // line 1 on the first frame, the rest as spoken
           const p = prog(f, at - 2, at + 12);
           return (
             <div key={li} style={{ overflow: "hidden", marginBottom: 20 }}>
@@ -505,7 +505,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
         <div style={{ marginTop: 18, fontFamily: F.inter, fontWeight: 800, fontSize: title.length > 8 ? 120 : 150, letterSpacing: -6, color: B.white, lineHeight: 1, textAlign: "center" }}>{title}</div>
         <div style={{ marginTop: 24, fontFamily: F.inter, fontWeight: 800, fontSize: 56, color: B.cyan }}>{range}</div>
       </AbsoluteFill>
-      <Presenter cues={[]} mood="shock" x={900} y={1520} s={0.34} />
+      <Presenter cues={[]} mood="shock" x={985} y={1520} s={0.28} />
       <Caps words={seg.words} bottom={390} size={86} max={3} />
     </AbsoluteFill>
   );
@@ -554,6 +554,8 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
   const storyIdx = stories.indexOf(cur);
   const outroStart = starts[starts.length - 1];
   const followAbs = outroStart + tl.segments[tl.segments.length - 1].frames - FOLLOW_LEN;
+  const outroSeg = tl.segments[tl.segments.length - 1];
+  const voiceEnd = outroStart + (outroSeg.words[outroSeg.words.length - 1]?.e ?? 0) + 6; // the end card may start under the last line
   // `drop` cards duck the bed before their number; `hush` cards cut it to silence for ~1 s (the stop before the key number)
   const drops = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => ({ f: starts[tl.segments.indexOf(s)] + c.f, big: !!c.big, hush: !!c.hush })));
   return (
@@ -576,15 +578,17 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
           Each story cut gets a swell in the gap before its voice; a card with `drop` ducks the bed just before its number. */}
       <Audio src={A(tl.music ?? (tl.look === "broadcast" ? "news_120" : "loop_120"))} loop loopVolumeCurveBehavior="extend" allowAmplificationDuringRender volume={(fr) => {
         const base = tl.musicBase ?? (tl.look === "broadcast" ? 0.15 : 0.08);
-        if (fr >= followAbs) return Math.max(0.8, base * 3.3); // music-only end card: the loudest point of the bed
-        if (fr < starts[1]) return base * 1.4;
+        if (fr >= Math.max(followAbs, voiceEnd)) return Math.max(0.8, base * 3.3); // music-only end card: the loudest point of the bed
+        if (fr < starts[1]) return base * 1.6;
         const lastStory = starts[starts.length - 2];
         if (fr >= outroStart) return base * interpolate(fr, [outroStart, followAbs], [1.15, 1.4], cl); // CTA voice: the bed rises into the follow card
-        const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base, base * 1.15], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.05], cl);
+        // the bed sits lower through the middle stories and climbs through the last story into the CTA
+        const v = fr >= lastStory ? base * interpolate(fr, [lastStory, outroStart], [0.9, 1.15], cl) : base * interpolate(fr, [starts[1], lastStory], [0.8, 0.9], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
         return v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0, 0, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
       }} />
-      {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 0.7 : d.big ? 0.55 : 0.4} /></Sequence>)}
+      {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 1 : d.big ? 0.55 : 0.4} /></Sequence>)}
+      {drops.filter((d) => d.hush).map((d) => <Sequence key={`r${d.f}`} from={d.f - 86} durationInFrames={50} layout="none"><Audio src={A("riser")} volume={0.4} /></Sequence>)}
       <Sequence from={0} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>
       {(tl.segments[0].hits ?? []).map((h) => <Sequence key={`h${h}`} from={h - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.42} /></Sequence>)}
       <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>
