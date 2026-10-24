@@ -10,7 +10,11 @@ unfinished run first. CLAUDE.md applies to both (human-viewer at script and rend
 to `sample1`, no model identifiers in committed files). Never post or publish anywhere: the user posts.
 
 ## Start of every run
-1. `git status` (clean), branch `sample1`, `git pull origin sample1`.
+1. `git status` (clean), branch `sample1`, `git pull origin sample1` (after `free_disk.sh` has dropped renders and the
+   remote has new commits, use the fetch + soft-reset recipe in the lessons: a plain pull rewrites every dropped render).
+1b. Read `BUJJI_CLAUDE_HANDOFF.md` (set up Oct 24: Bujji publishes the reels and posts analytics there). Log any numbers
+   in the creative log / queue, apply one change at a time, and add a `[NEW]` entry (newest first) when a package is
+   pushed. Its notes shape content choices; CLAUDE.md's rules still apply.
 2. Disk: the writable allowance is small (`df -h /`; "Avail" near 0 means the allowance is spent). An episode needs
    about 1 GB (4 renders + send copies). `pipeline/tools/free_disk.sh "<keep-regex>"` drops the working-tree copies of
    committed renders (they stay in git and on GitHub, `git status` stays clean; it freed 5 GB on Oct 18). Also delete
@@ -385,3 +389,16 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 - A Telugu judge's must-hear list misses the take the ear accepts ("आइदू रेजेक्षन", "थेलिस्तुन्दी", "पादिकी", "याला"):
   the picker then keeps the best base score, which twice was the worse take. Back up each plausible take as it lands
   (the picker deletes the rest) and swap the better one into the cache before the build.
+- Creative 08 lessons: the reel's title bar ("SKIT · <banner>") covers y 130-200 of the 1080x1920 frame, so phone
+  headers, card titles and tags start below y 215 (the first stills hid "AI chat", "OUR REAL TEST" and "REWIND").
+  Fish at 1.1-1.14x turned "a big party, or small?" into "oh small" in every build; "or something small?" came through.
+  EP33's Telugu length check (0.11 s a letter, set for a flat AI voice) threw out every shouted or paused character
+  take, so each line burned four Parler tries: creative08/voice.py allows 0.15. Whisper writes "pesarattu" as
+  "Pesara 2" / "Pizarattu" and "four thousand eight hundred rupees" as "Rs 4,800": judge such lines against a digit
+  version and match the dish as part of a word.
+- A demo whose later stage depends on the script (creative 08: the answers it gets after asking) can be stopped at a row
+  count and resumed with new input: rows save one by one and the done ones are skipped.
+- Pulling after free_disk.sh (Oct 24): a fast-forward `git pull` re-wrote the skip-worktree renders (33 queue mp4s),
+  the disk hit 0 and git stopped mid-merge (stray empty mp4s, the new file half-written). Recipe instead: `git fetch
+  origin sample1`, `git diff --name-only HEAD origin/sample1` (what changed), `git reset --soft origin/sample1`, then
+  `git checkout origin/sample1 -- <those files>`. Nothing else in the tree is touched; check `df -h /` before any pull.

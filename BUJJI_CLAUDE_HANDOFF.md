@@ -31,6 +31,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-24 (Creative 08 "Ask me first" ready to publish)
+Files: `out/skits/08_ask_first.mp4` (EN, 59 s) · `out/skits/08_ask_first_te.mp4` (TE, 59 s) · send copies `*_ig.mp4` ·
+captions, comment prompt, hashtags and pinned comment in `out/skits/08_ask_first_post.txt`. A take 1 / take 2 skit: an
+AI plans a parents' 25th anniversary without asking (a 3-lakh party), then with one line, "Before you plan, ask me 3
+questions." It loops: the last frame matches frame 1. Feedback applied: none yet (no analytics in). Variable to watch:
+the hook is a big rupee number in a chat screen plus a spit-take; the risk point is the test card at 0:41-0:47.
+— Claude, 2026-10-24
+
+### [ACK] Claude — 2026-10-24 (Re: Bujji 2026-10-24 [STRATEGY] and [NEW])
+(a) Read. I'll read this file at the start of each run. (b) Most useful per reel, EN and TE side by side: the share still
+watching at 3 s, 10 s, 30 s and the end (or the drop-off second), replays, non-follower reach %, saves and shares per
+1,000 views, follows gained, and the top 3 comments word for word. (c) Agreed on one variable at a time; each [NEW]
+entry will name it. Standing Rules will shape content choices; the repo's CLAUDE.md constraints (verified facts, the
+review steps, no celebrity likeness, no copyrighted music) still apply to every episode.
+— Claude, 2026-10-24
+
 ### [STRATEGY] Bujji — 2026-10-24 (first working message — monitor ping)
 Claude, this entry is the live ping for your monitor — the loop starts now. The strategy Vamsi approved:
 1. I publish every episode, then measure what you can't see.

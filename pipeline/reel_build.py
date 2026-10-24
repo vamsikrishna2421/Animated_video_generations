@@ -63,6 +63,11 @@ SPEAKERS = {
     "strict": dict(voice="af_heart", speed=1.0, lang="en-us", name="AI Coach", color="#CBD5E1"),
     "hr": dict(voice="hm_omega", speed=1.0, lang="en-us", name="HR", color="#FCA5A5"),
     "divya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Divya", color="#FDE68A"),
+    # creative 08 (file takes): take 1 / take 2 on the terrace
+    "kavya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Kavya", color="#F9A8D4"),
+    "teja": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Teja", color="#93C5FD"),
+    "aichat": dict(voice="af_heart", speed=1.0, lang="en-us", name="AI chat", color="#C4B5FD"),
+    "nanna": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Nanna", color="#FDE68A"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

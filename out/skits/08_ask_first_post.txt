@@ -1,0 +1,76 @@
+SKIT 08: "Ask me first" (take 1 / take 2 on a terrace at night: an AI plans a parents' anniversary surprise without asking, then with one line, 59 s English / 59 s Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/08_ask_first.mp4 (English page) · out/skits/08_ask_first_te.mp4 (Telugu page)
+Send copies: out/skits/08_ask_first_ig.mp4 · out/skits/08_ask_first_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on Teja asking the same AI to plan his birthday
+without the line, the 3-lakh plan of the first frame slamming in, and Kavya yelling "Teja! You forgot the line!"; the
+replay opens on that same plan and Teja spraying his tea, so it loops. The ask lives in the caption.
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+We asked an AI to plan our parents' 25th anniversary. It planned a hall for 200 guests. Nanna won't even take an auto.
+
+An AI that knows nothing about your family fills the gaps with a guess. You often don't know which details it needs, so let it ask. Add one line to any "plan ..." request:
+"Before you plan, ask me 3 questions."
+
+Answer its questions, then it plans. One thing it will probably skip: your budget. Say it yourself.
+
+Our real test, a small free AI (Qwen2.5 7B, offline, not ChatGPT), the same anniversary request, 10 tries each, every reply read by hand:
+Just the request: 0 of 10 asked anything first. All 10 gave a generic party plan: a guest list or invitations, and a venue ("home, a restaurant or a hall"); 5 told us to hire a caterer, a chef, a band or a DJ.
+With the line: 10 of 10 asked 3 questions before planning, mostly what our parents enjoy (9), the kind of celebration (8) and a special place (7). Only 1 asked about the budget.
+After our answers (old songs for Amma, pesarattu for Nanna, our terrace, small, Rs 5,000): all 10 planned it at home with the songs and the pesarattu, 6 kept to the Rs 5,000 out loud, and 5 added a photo album. Not perfect: 4 still suggested paying a DJ, a band or a singer, and 1 switched to Chinese halfway.
+
+The 3-lakh price in the cartoon is ours: the real AI never priced the party.
+
+=== COMMENT PROMPT ===
+Add the line to your next plan (a trip, a birthday, a study plan) and comment the questions it asked you.
+
+=== HASHTAGS ===
+#AI #ChatGPT #AITips #PromptTips #LearnAI #Family
+
+=== PINNED_COMMENT ===
+"Why not just type all the details?" Do, when you know them. The line is for when you don't know what matters: it asks for what it needs. Our test AI asked about the budget only once in 10 tries, so add yours.
+Big chatbots: in PCWorld's test (Mar 23, 2026) ChatGPT and Claude asked clarifying questions on their own, and Gemini did once told to. Tom's Guide suggests letting it ask up to three (Jun 4, 2026) and says the same kind of line worked in Claude, Gemini and most chatbots it tried (Jul 8, 2026).
+Sources: PCWorld (Ben Patterson), Tom's Guide (Amanda Caswell) · our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, temperature 0.8, 10 tries per way, every reply read by hand. A small model, not ChatGPT: try it in yours. Kavya, Teja, their parents and the "AI chat" app are made up.
+
+=== COVER ===
+Frame 1: the AI chat on Kavya's phone, "YOUR SURPRISE PLAN: hall for 200 guests · catering + sweets · DJ + live band · TOTAL ₹3,00,000", and Teja spraying his tea below it.
+
+=== ALT_TEXT ===
+Crayon-animated skit on a building terrace at night (fairy lights, a water tank, the moon). Kavya and her teenage brother Teja asked an AI chat app to plan a surprise for their parents' 25th anniversary. Its plan: a hall for 200 guests, catering and sweets, a DJ and a live band, total 3 lakh rupees. Teja sprays his tea: "Three lakhs?! Nanna won't even take an auto!" Kavya: "We asked for their anniversary. Not a wedding reception!" A card reads "What we told the AI: nothing." The scene rewinds like a VHS tape to a TAKE 2 clapperboard. Kavya: "We don't know what it needs, so let it ask," and she types, reading aloud: "Before you plan, ask me 3 questions." A TYPE THIS card shows the line. The AI asks: what do they love, any special place, a big party or small; a label says these are the questions the channel's test AI asked most. Teja answers: old songs for Amma, pesarattu for Nanna, our terrace, small, 5,000 rupees max; a big label says: "Our test AI asked the budget 1 in 10. Always say yours!" The new plan: pesarattu made by the two of them (400 rupees), their wedding song and lights on the terrace (1,400), an album of old photos (3,000); after a pause, the total, 4,800 rupees, with 3 lakh crossed out. A card shows the channel's real test of a small free AI, offline, 10 tries each: just the request, 0 of 10 asked anything first; with the line, 10 of 10 asked first; a note says the 3-lakh price is the cartoon's joke, the real AI never gave a price. On the decorated terrace Nanna, holding a plate of pesarattu, asks "Who planned this?" while Amma holds the photo album, teary; Kavya says the AI did, after it asked them. Teja asks the AI to plan his birthday without the line, the 3-lakh plan slams back in, and Kavya yells "Teja! You forgot the line!"
+
+=== SOURCES (for comments) ===
+PCWorld, Ben Patterson, "Add this one line to your AI prompts for faster, better answers" (Mar 23, 2026): the line "Ask me 5 clarifying questions first" (it needn't be five); in its test ChatGPT and Claude asked clarifying questions on their own, Gemini needed to be told, and Gemini in Google's AI Mode "came back with a battery of questions, as directed."
+Tom's Guide, Amanda Caswell, "I added one sentence to every ChatGPT prompt I write — and the results were immediately better" (Jul 8, 2026): "Before answering, ask me any clarifying questions you need..."; when details are missing, chatbots "don't know they're missing, they simply make their best guess"; it "works just as well in Claude, Gemini and most other AI chatbots I've tried."
+Tom's Guide, Amanda Caswell, "Local AI taught me a better way to use ChatGPT — and it starts with one sentence" (Jun 4, 2026): "telling ChatGPT to ask up to three clarifying questions".
+Our test: pipeline/creative08/plan_demo.py, series/scripts/creative08_demo/results.json (Oct 24, 2026; every reply read by hand, notes per reply in plan_demo.py).
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Amma Nanna la 25va pelli roju ki surprise plan cheyyamani AI ni adigaam. Adi 200 mandi guests ki oka hall plan chesindi. Nanna auto kooda ekkaru.
+
+Mee family gurinchi emi teliyani AI, khaali chotlu guess tho nimpestundi. Daaniki ye details kaavalo manaki chaala saarlu teliyadu, anduke adhe adaganivvandi. Mee "plan ..." request ki ee okka line add cheyyandi:
+"Before you plan, ask me 3 questions."
+(Telugu lo: "Plan chese mundu, nannu 3 prashnalu adugu.")
+
+Daani prashnalaki answer cheppandi, taruvaata adi plan chestundi. Adi adagani okka vishayam: mee budget. Meere cheppandi.
+
+Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline, ChatGPT kaadu), ade anniversary request, okkokka daaniki 10 saarlu, anni replies okkokkati chadivaam:
+Kevalam request: 10 lo 0 saarlu mundu emaina adigindi. 10 ki 10 oka maamoolu party plan ichhaayi: guest list leda invitations, oka venue ("home, restaurant leda hall"); 5 caterer, chef, band leda DJ ni hire cheyyamannaayi.
+Line tho: 10 ki 10 plan cheyyadaaniki mundu 3 prashnalu adigaayi, ekkuvagaa vaallaki emi ishtam (9), ye type celebration (8), oka special place (7). Budget gurinchi okka saare adigindi.
+Maa answers taruvaata (Amma ki paata paatalu, Nanna ki pesarattu, mana terrace, chinnagaa, Rs 5,000): 10 ki 10 intlone, paatalu-pesarattu tho plan chesaayi, 6 Rs 5,000 lo undaalani cheppaayi, 5 photo album suggest chesaayi. Perfect kaadu: 4 inkaa DJ, band leda singer ki dabbulu ivvamannaayi, 1 madhyalo Chinese loki maaripoyindi.
+
+Cartoon lo 3 lakhs maa joke: nijamaina AI party ki ye dhara cheppaledu.
+
+=== COMMENT PROMPT ===
+Mee next plan lo (trip, birthday, study plan) ee line add chesi, adi mimmalni ye prashnalu adigindo comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #ChatGPT #AITips #Family #LearnAI
+
+=== PINNED_COMMENT ===
+"Anni details mundu type cheyyochu kada?" Telisinappudu cheyyandi. Ye details mukhyamo teliyanappudu ee line: daaniki kaavalsindi adhe adugutundi. Maa test AI 10 lo okka saare budget adigindi, anduke mee budget meere cheppandi.
+Pedda chatbots: PCWorld test lo (Mar 23, 2026) ChatGPT, Claude sontangaa prashnalu adigaayi; Gemini cheppaaka adigindi. Moodu prashnala daaka adaganivvamani Tom's Guide (Jun 4, 2026); ilaanti line Claude, Gemini lo kooda pani chesindani (Jul 8, 2026).
+Sources: PCWorld (Ben Patterson), Tom's Guide (Amanda Caswell) · maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, 10 tries, anni replies okkokkati chadivaam. Chinna model, ChatGPT kaadu: meedi lo try cheyyandi. Kavya, Teja, vaalla Amma Nanna, "AI chat" app kalpitam.
+
+=== COVER ===
+Frame 1: Kavya phone lo AI chat, "YOUR SURPRISE PLAN: hall for 200 guests · catering + sweets · DJ + live band · TOTAL ₹3,00,000", kinda Teja tea ummestunnaadu. (English visuals)
