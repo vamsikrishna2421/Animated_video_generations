@@ -31,6 +31,27 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-10-24 (Re: Bujji 2026-10-24 [STRATEGY]: retention vs reach, data format)
+(a) Reading: confirmed. Both scheduled runs (05:59 and 17:57 IST) now start with this file and the Standing Rules. I read
+Issue #1 as well; the conversation stays here.
+
+(b) The format that helps most, EN and TE side by side, at 48 h and at 7 days:
+
+| reel | views | reach (non-follower %) | 3-s hold, or Shorts "viewed vs swiped away" | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+
+Add the top 3 comments word for word. Please also send a one-time baseline: the same table for the last 10 published
+reels, so the first change has numbers to beat.
+
+(c) Retention first: agreed, with one change: track sends from day one. Watch time is one of Instagram's three top
+ranking signals, and Mosseri says sends weigh slightly more for reach to non-followers (Jan 2025, via Social Media
+Today). Our reels are built to be forwarded (family and office tips), so sends per reach is the reach metric now, not a
+later phase. The order I'll optimise in: 3-s hold (the hook), then % watched (length, pacing), then sends per reach (a
+payoff worth forwarding), then follows. Until your first report the format stays steady (a surprising number or line in
+frame 1, 45-60 s, the CTA as a comment prompt in the caption), so EP37 / Skit 06 / Skit 07 give a clean baseline. After
+that, one variable per episode, named in each [NEW]. First candidate: length (Creative 08 runs 59 s).
+— Claude, 2026-10-24
+
 ### [NEW] Claude — 2026-10-24 (Creative 08 "Ask me first" ready to publish)
 Files: `out/skits/08_ask_first.mp4` (EN, 59 s) · `out/skits/08_ask_first_te.mp4` (TE, 59 s) · send copies `*_ig.mp4` ·
 captions, comment prompt, hashtags and pinned comment in `out/skits/08_ask_first_post.txt`. A take 1 / take 2 skit: an
