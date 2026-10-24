@@ -11,11 +11,11 @@ import { browWiggle, doubleTake, ponder, exaggerate, follow, Fumble, FPose, idle
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
-type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean };
+type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean; hush?: boolean };
 type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
-  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[];
+  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[];
 };
 export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase" };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
@@ -419,7 +419,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
         </div>
       </div>
       <div style={{ position: "absolute", top: 455, left: 60, right: 60, fontFamily: F.inter, fontWeight: 600, fontSize: 34, lineHeight: 1.3, color: "rgba(255,255,255,0.82)", opacity: prog(f, 14, 26) * (lean ? 1 - prog(f, 105, 118) : 1), display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dek}</div>
-      <div style={{ position: "absolute", top: 592, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 26, letterSpacing: 1, color: "rgba(255,255,255,0.78)", opacity: prog(f, 20, 32), whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
+      <div style={{ position: "absolute", top: 592, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: lean ? 31 : 26, letterSpacing: 1, color: lean ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.78)", opacity: prog(f, 20, 32), whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       {seg.demo ? (
         <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />
       ) : (
@@ -427,12 +427,12 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
           <AbsoluteFill style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize: "48px 48px", backgroundPosition: `0 ${f * 0.8}px` }} />
           <div style={{ position: "absolute", top: 30, left: 34, fontFamily: F.mono, fontWeight: 700, fontSize: 22, letterSpacing: 4, color: accent }}>{seg.org}</div>
           {!shown.length && (
-            <div style={{ position: "absolute", top: 150, left: 40, right: 40, fontFamily: F.archivo, fontSize: 120, lineHeight: 1, color: "rgba(255,255,255,0.12)", opacity: prog(f, 6, 18) }}>{seg.org}</div>
+            <div style={{ position: "absolute", top: 150, left: 40, right: 40, fontFamily: F.archivo, fontSize: (seg.org ?? "").length > 8 ? 84 : 120, lineHeight: 1, color: "rgba(255,255,255,0.12)", opacity: prog(f, 6, 18) }}>{seg.org}</div>
           )}
           {shown.length > 0 && cur && (
             <div style={{ position: "absolute", top: 120, left: 40, right: 40, transform: `translateY(${(1 - curIn) * 50}px)`, opacity: interpolate(curIn, [0, 0.3], [0, 1], cl) }}>
-              <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 4, color: accent }}>{cur.k}</div>
-              <div style={{ marginTop: 14, fontFamily: F.archivo, fontSize: cur.v.length > 26 ? 66 : 84, lineHeight: 1.05, color: B.white }}>{cur.v}</div>
+              <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: lean ? 38 : 30, letterSpacing: 4, color: accent }}>{cur.k}</div>
+              <div style={{ marginTop: 14, fontFamily: F.archivo, fontSize: lean ? (cur.v.length > 26 ? 76 : 96) : cur.v.length > 26 ? 66 : 84, lineHeight: 1.05, color: B.white }}>{cur.v}</div>
             </div>
           )}
           {!lean && <LowerThird label={seg.tag ?? "NEWS"} headline={(seg.headline ?? []).join(" ")} ticker={ticker} accent={accent} />}
@@ -489,7 +489,8 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
       <Backdrop accent={B.rose} />
       <AbsoluteFill style={{ justifyContent: "flex-start", padding: `${(seg.lines ?? []).length > 2 ? 330 : 400}px 70px 0`, opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
         {(seg.lines ?? []).map((parts, li) => {
-          const p = prog(f, 2 + li * 30, 16 + li * 30);
+          const at = seg.lineAt?.[li] ?? 2 + li * 30; // each hook line appears as its sentence is spoken
+          const p = prog(f, at - 2, at + 12);
           return (
             <div key={li} style={{ overflow: "hidden", marginBottom: 20 }}>
               <div style={{ transform: `translateY(${(1 - p) * 110}%)`, fontFamily: F.inter, fontWeight: 800, fontSize: (seg.lines ?? []).length > 2 ? 96 : 118, letterSpacing: -4, lineHeight: 1.02, color: B.white }}>
@@ -553,7 +554,8 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
   const storyIdx = stories.indexOf(cur);
   const outroStart = starts[starts.length - 1];
   const followAbs = outroStart + tl.segments[tl.segments.length - 1].frames - FOLLOW_LEN;
-  const dropAt = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => starts[tl.segments.indexOf(s)] + c.f));
+  // `drop` cards duck the bed before their number; `hush` cards cut it to silence for ~1 s (the stop before the key number)
+  const drops = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => ({ f: starts[tl.segments.indexOf(s)] + c.f, big: !!c.big, hush: !!c.hush })));
   return (
     <AbsoluteFill style={{ background: B.night }}>
       <BrandFonts />
@@ -577,12 +579,12 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
         if (fr >= followAbs) return Math.max(0.8, base * 3.3); // music-only end card: the loudest point of the bed
         if (fr < starts[1]) return base * 1.4;
         const lastStory = starts[starts.length - 2];
-        if (fr >= outroStart) return base * 1.15; // CTA voice: bed lifted but still ~9 dB under it
+        if (fr >= outroStart) return base * interpolate(fr, [outroStart, followAbs], [1.15, 1.4], cl); // CTA voice: the bed rises into the follow card
         const v = fr >= lastStory ? interpolate(fr, [lastStory, outroStart], [base, base * 1.15], cl) : base * interpolate(fr, [starts[1], lastStory], [0.85, 1.05], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
-        return v * swell * dropAt.reduce((g, d) => g * interpolate(fr, [d - 16, d - 7, d - 1, d + 5], [1, 0.25, 0.25, 1], cl), 1);
+        return v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0, 0, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
       }} />
-      {dropAt.map((d) => <Sequence key={`d${d}`} from={d - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.32} /></Sequence>)}
+      {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 0.7 : d.big ? 0.55 : 0.4} /></Sequence>)}
       <Sequence from={0} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>
       {(tl.segments[0].hits ?? []).map((h) => <Sequence key={`h${h}`} from={h - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.42} /></Sequence>)}
       <Sequence from={Math.max(0, outroStart - 50)} durationInFrames={60} layout="none"><Audio src={A("riser")} volume={0.35} /></Sequence>

@@ -95,6 +95,9 @@ def build(spec_path, lang="en"):
         sf.write(f, a.astype(np.float32), sr)
         ld = lead.get(name, spec.get("storyLead", 8))  # story: room for the cut + headline before the voice
         frames = ld + math.ceil(len(a) / sr * FPS) + tail.get(name, seg.get("tail", spec.get("storyTail", 10)))
+        if spec.get("beatCuts") and name != "outro":  # pad so the next cut lands on a beat of the bed (15 frames = 120 BPM)
+            at = sum(x["frames"] for x in timeline["segments"]) + frames
+            frames += -at % spec["beatCuts"]
         words = word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):
@@ -118,11 +121,18 @@ def build(spec_path, lang="en"):
         if name == "hook":
             entry["lines"] = seg["lines"]
             # sound hits on hook words (an impact lands as the word is spoken); Telugu hits on Telugu words (`hits_te`)
-            if lang != "en" and seg.get("hits_te"):
-                te_words = word_times(a, sr, " ".join(seg[key]) if isinstance(seg[key], list) else seg[key], ld)
+            te_words = word_times(a, sr, " ".join(seg[key]) if isinstance(seg[key], list) else seg[key], ld) if lang != "en" else None
+            if te_words and seg.get("hits_te"):
                 entry["hits"] = [next((w["s"] for w in te_words if h in w["w"]), 0) for h in seg["hits_te"]]
             else:
                 entry["hits"] = [next((w["s"] for w in words if w["w"].lower().startswith(h.lower())), 0) for h in seg.get("hits", [])]
+            # each hook line appears as its sentence starts (in the voice's own language)
+            starts, new = [], True
+            for w in te_words or words:
+                if new:
+                    starts.append(w["s"])
+                new = w["w"].rstrip("\"'").endswith((".", "?", "!"))
+            entry["lineAt"] = starts[:len(seg["lines"])]
         timeline["segments"].append(entry)
         print(name, f"{len(a) / sr:.1f}s", flush=True)
     timeline["frames"] = sum(s["frames"] for s in timeline["segments"])
