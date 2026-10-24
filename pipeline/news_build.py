@@ -79,6 +79,37 @@ def word_times(a, sr, text, lead):
     return out
 
 
+def sentences_of(ws):
+    """Split word dicts into sentences (a word ending in . ? or !)."""
+    out, cur = [], []
+    for w in ws:
+        cur.append(w)
+        if w["w"].rstrip("\"'").endswith((".", "?", "!")):
+            out.append(cur)
+            cur = []
+    return out + ([cur] if cur else [])
+
+
+def aligned_words(a, sr, text, te_text, lead):
+    """English caption words over a Telugu voice: English sentence i spans the time of Telugu sentence i, so captions,
+    cards and voice stay on the same idea (word order inside a sentence still differs). Falls back to spreading the
+    whole text when the sentence counts differ."""
+    en = sentences_of([{"w": w} for w in text.split()])
+    te = sentences_of(word_times(a, sr, te_text, lead))
+    if len(en) != len(te):
+        print(f"  captions: {len(en)} English vs {len(te)} Telugu sentences, spread over the whole take", flush=True)
+        return word_times(a, sr, text, lead)
+    out = []
+    for es, ts in zip(en, te):
+        s0, e0 = ts[0]["s"], ts[-1]["e"]
+        wts = [len(w["w"]) + 1 for w in es]
+        acc = 0
+        for w, k in zip(es, wts):
+            out.append({"w": w["w"], "s": s0 + round((e0 - s0) * acc / sum(wts)), "e": s0 + round((e0 - s0) * (acc + k) / sum(wts))})
+            acc += k
+    return out
+
+
 def build(spec_path, lang="en"):
     spec = json.loads(Path(spec_path).read_text())
     out_dir = ROOT / "video" / "public" / "news" / spec["id"] / lang
@@ -98,7 +129,8 @@ def build(spec_path, lang="en"):
         if spec.get("beatCuts") and name != "outro":  # pad so the next cut lands on a beat of the bed (15 frames = 120 BPM)
             at = sum(x["frames"] for x in timeline["segments"]) + frames
             frames += -at % spec["beatCuts"]
-        words = word_times(a, sr, seg["text"], ld)
+        te_text = (" ".join(seg[key]) if isinstance(seg[key], list) else seg[key]) if lang != "en" else None
+        words = aligned_words(a, sr, seg["text"], te_text, ld) if te_text else word_times(a, sr, seg["text"], ld)
         entry = {"name": name, "audio": f"news/{spec['id']}/{lang}/{name}.wav", "lead": ld, "frames": frames, "words": words}
         if name.startswith("story"):
             entry.update({k: v for k, v in seg.items() if k not in ("text", "tts", "tts_te", "cards", "pause", "tail")})

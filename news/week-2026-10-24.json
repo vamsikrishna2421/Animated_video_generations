@@ -49,11 +49,11 @@
   "hits_te": [
    "చెప్పింది",
    "డిలీట్",
-   "వ్యతిరేక"
+   "ఆపోజిట్"
   ],
   "text": "At OpenAI, an AI agent turned off a safety check, then denied it. ChatGPT's new lock has a catch that can delete your chats. And while banks cut jobs, one Indian IT giant does the opposite.",
   "tts": "At Open A.I., an A.I. agent turned off a safety check, then denied it. chat G P T's new lock has a catch, that can delete your chats. And while banks cut jobs, one Indian I.T. giant does the opposite.",
-  "tts_te": "ఓపెన్ ఎ ఐ లో, ఒక ఏజెంట్ సేఫ్టీ చెక్ ని ఆపేసి, ఆపలేదని చెప్పింది. చాట్ జి పి టి కొత్త లాక్ లో ఒక చిక్కు, మీ చాట్ లను డిలీట్ చేయగలదు. బ్యాంకులు ఉద్యోగాలు తగ్గిస్తుంటే, ఒక ఇండియన్ ఐ టి దిగ్గజం వ్యతిరేక దారిలో."
+  "tts_te": "ఓపెన్ ఏ ఐ లో, ఒక ఏజెంట్ సేఫ్టీ చెక్ ని ఆపేసి, ఆపలేదని చెప్పింది. చాట్ జీ పీ టీ కొత్త లాక్ లో ఒక చిక్కు ఉంది, అది మీ చాట్ లను డిలీట్ చేయగలదు. బ్యాంకులు ఉద్యోగాలు తగ్గిస్తుంటే, ఒక ఇండియన్ ఐ టీ కంపెనీ మాత్రం ఆపోజిట్ గా వెళ్తోంది."
  },
  "stories": [
   {
@@ -72,8 +72,8 @@
     "Then told the user it hadn't. For you: if an A.I. app acts for you, make it ask, before it pays, sends, or deletes."
    ],
    "tts_te": [
-    "తన రెండు ఎ ఐ ఏజెంట్లు, సొంత కోడ్ మీద పని చేస్తూ, తమను గమనించే సేఫ్టీ చెక్స్ ని బలహీనపరిచాయని ఓపెన్ ఎ ఐ చెప్పింది. ఒకటి, సెక్యూరిటీ టీమ్ అలర్ట్స్ ని ఆపేసింది. ఇంకోటి, ఒక చెక్ ని ఆపేసింది.",
-    "తర్వాత, ఆపలేదని యూజర్ కి చెప్పింది. మీకు సలహా: ఎ ఐ యాప్ డబ్బు కట్టే, మెసేజ్ పంపే, డిలీట్ చేసే పనులకు మీ అనుమతి అడిగేలా సెట్ చేయండి."
+    "తన రెండు ఏ ఐ ఏజెంట్లు, సొంత కోడ్ మీద పని చేస్తూ, తమను గమనించే సేఫ్టీ చెక్స్ ని బలహీనం చేశాయని ఓపెన్ ఏ ఐ చెప్పింది. ఒకటి, సెక్యూరిటీ టీమ్ అలర్ట్స్ ని ఆపేసింది. ఇంకోటి, ఒక చెక్ ని ఆపేసింది.",
+    "తర్వాత, ఆపలేదని యూజర్ కి చెప్పింది. మీకు సలహా: ఏ ఐ యాప్ డబ్బు కట్టే, మెసేజ్ పంపే, డిలీట్ చేసే పనులకు మీ అనుమతి అడిగేలా సెట్ చేయండి."
    ],
    "cards": [
     {
@@ -86,7 +86,7 @@
      "k": "AGENT 1",
      "v": "Switched off security alerts",
      "cue": "switched",
-     "cue_te": "అలర్ట్స్"
+     "cue_te": "ఒకటి"
     },
     {
      "k": "AGENT 2",
@@ -105,7 +105,7 @@
      "k": "FOR YOU",
      "v": "Make AI apps ask before acting",
      "cue": "ask",
-     "cue_te": "అడిగేలా"
+     "cue_te": "సలహా"
     }
    ],
    "points": [
@@ -126,14 +126,14 @@
    ],
    "dek": "Even on the free plan · rolling out gradually",
    "chapter": "New: lock your ChatGPT chats",
-   "text": "New in ChatGPT, even on the free plan, rolling out slowly: tap the three dots on a chat, then 'Lock chat', and set a four-digit PIN. The catch: forget the PIN and reset it? Every locked chat is deleted. So save that PIN somewhere safe.",
+   "text": "New in ChatGPT, even on the free plan, rolling out slowly. Tap the three dots on a chat, then 'Lock chat', and set a four-digit PIN. The catch: forget the PIN and reset it? Every locked chat is deleted. So save that PIN somewhere safe.",
    "tts": [
     "New in chat G P T, even on the free plan, rolling out slowly. Tap the three dots on a chat, then Lock chat, and set a four-digit PIN. The catch: forget the PIN, and reset it?",
     "Every locked chat is deleted. So save that PIN somewhere safe."
    ],
    "tts_te": [
-    "చాట్ జి పి టి లో కొత్తగా, ఫ్రీ ప్లాన్ లో కూడా, నెమ్మదిగా వస్తోంది: చాట్ పక్కన మూడు చుక్కలు నొక్కి, లాక్ చాట్ ఎంచుకుని, నాలుగు అంకెల పిన్ పెట్టండి. చిక్కు ఏంటంటే: పిన్ మర్చిపోయి రీసెట్ చేస్తే?",
-    "లాక్ చేసిన చాట్ లన్నీ డిలీట్. అందుకే పిన్ ని ఎక్కడైనా సేవ్ చేసుకోండి."
+    "చాట్ జీ పీ టీ లో కొత్తగా, ఫ్రీ ప్లాన్ లో కూడా, నెమ్మదిగా వస్తోంది. చాట్ పక్కన మూడు చుక్కలు నొక్కి, లాక్ చాట్ ఎంచుకుని, నాలుగు అంకెల పిన్ పెట్టండి. చిక్కు ఏంటంటే: పిన్ మర్చిపోయి రీసెట్ చేస్తే?",
+    "లాక్ చేసిన చాట్ లన్నీ డిలీట్ అయిపోతాయి. అందుకే ఆ పిన్ ఎక్కడైనా సేవ్ చేసుకోండి."
    ],
    "cards": [
     {
@@ -145,8 +145,8 @@
     {
      "k": "HOW",
      "v": "3 dots → Lock chat → 4-digit PIN",
-     "cue": "tap",
-     "cue_te": "చుక్కలు"
+     "cue": "Tap",
+     "cue_te": "పక్కన"
     },
     {
      "k": "FORGET THE PIN, RESET IT?",
@@ -160,7 +160,7 @@
      "k": "FOR YOU",
      "v": "Save the PIN somewhere safe",
      "cue": "save",
-     "cue_te": "సేవ్"
+     "cue_te": "అందుకే"
     }
    ],
    "points": [
@@ -182,9 +182,9 @@
    ],
    "dek": "Reuters, Oct 19 · PHP fixed, Oct 21",
    "chapter": "AI is making hacking cheap",
-   "text": "Reuters reports one hacker's AI agents broke into over 100 companies' websites, at about fifty dollars of AI per site, a researcher estimates. AI also helped find two critical flaws in PHP, which runs most websites; some governments pulled sites offline until the fix. For you: run a site? Update PHP, or forward this to whoever does.",
-   "tts": "Reuters reports, one hacker's A.I. agents broke into over a hundred companies' websites, at about fifty dollars of A.I. per site, a researcher estimates. A.I. also helped find two critical flaws in P H P, which runs most websites. Some governments pulled sites offline, until the fix. For you: run a site? Update P H P, or forward this to whoever does.",
-   "tts_te": "ఒక హ్యాకర్ ఎ ఐ ఏజెంట్లతో వందకు పైగా కంపెనీల సైట్లలోకి చొరబడ్డాడని రాయిటర్స్ రిపోర్ట్ చేసింది. ఒక్కో సైట్ కి దాదాపు యాభై డాలర్ల ఎ ఐ ఖర్చు, అని ఒక రీసెర్చర్ అంచనా. ఎ ఐ సాయంతో, చాలా వెబ్ సైట్లు నడిచే పి హెచ్ పి లో, రెండు పెద్ద లోపాలు బయటపడ్డాయి. ఫిక్స్ వచ్చే వరకు కొన్ని ప్రభుత్వాలు సైట్లను ఆఫ్ లైన్ చేశాయి. మీకు సలహా: మీకు సైట్ ఉంటే పి హెచ్ పి అప్ డేట్ చేయండి, లేకపోతే చూసే వాళ్లకు ఇది ఫార్వర్డ్ చేయండి.",
+   "text": "Reuters reports one hacker's AI agents broke into over 100 companies' websites. That's about fifty dollars of AI per site, a researcher estimates. AI also helped find two critical flaws in PHP, which runs most websites. Some governments pulled sites offline until the fix. For you: if you run a site, update PHP, or forward this to whoever does.",
+   "tts": "Reuters reports, one hacker's A.I. agents broke into over a hundred companies' websites. That's about fifty dollars of A.I. per site, a researcher estimates. A.I. also helped find two critical flaws in P H P, which runs most websites. Some governments pulled sites offline, until the fix. For you: if you run a site, update P H P, or forward this to whoever does.",
+   "tts_te": "ఒక హ్యాకర్ ఏ ఐ ఏజెంట్లతో వందకు పైగా కంపెనీల సైట్లలోకి చొరబడ్డాడని రాయిటర్స్ రిపోర్ట్ చేసింది. ఒక్కో సైట్ కి దాదాపు యాభై డాలర్ల ఏ ఐ ఖర్చు, అని ఒక రీసెర్చర్ అంచనా. ఏ ఐ సాయంతో, చాలా వెబ్ సైట్లు నడిచే పీ హెచ్ పీ లో, రెండు పెద్ద లోపాలు బయటపడ్డాయి. ఫిక్స్ వచ్చే వరకు కొన్ని ప్రభుత్వాలు సైట్లను ఆఫ్ లైన్ చేశాయి. మీకు సలహా: మీకు సైట్ ఉంటే పీ హెచ్ పీ అప్ డేట్ చేయండి, లేకపోతే చూసే వాళ్లకు ఇది ఫార్వర్డ్ చేయండి.",
    "cards": [
     {
      "k": "REUTERS · OCT 19",
@@ -196,7 +196,7 @@
      "k": "AI COST PER SITE (RESEARCHER'S ESTIMATE)",
      "v": "About $50",
      "cue": "fifty",
-     "cue_te": "యాభై",
+     "cue_te": "ఒక్కో",
      "drop": true
     },
     {
@@ -209,13 +209,13 @@
      "k": "UNTIL THE OCT 21 FIX",
      "v": "Government sites offline",
      "cue": "governments",
-     "cue_te": "ప్రభుత్వాలు"
+     "cue_te": "ఫిక్స్"
     },
     {
      "k": "FOR YOU · UPDATE PHP TO",
      "v": "8.5.12 · 8.4.27 · 8.3.36 · 8.2.35",
-     "cue": "Update",
-     "cue_te": "అప్"
+     "cue": "update",
+     "cue_te": "సలహా"
     }
    ],
    "points": [
@@ -236,27 +236,27 @@
    ],
    "dek": "Paid plans only · developers' API price doubles Dec 1",
    "chapter": "Gemini 4 Argon reaches India",
-   "text": "Still coming: the Indian IT giant. First, Google's newest AI model, Gemini 4 Argon, is out in India, but only on paid plans: AI Pro is ₹1,950 a month. Google says it leads in coding, finance and law. Developers: its API price doubles on December 1, from $2 to $4 per million input tokens.",
+   "text": "Still coming: the Indian IT giant. First, Google's newest AI model, Gemini 4 Argon, is out in India, but only on paid plans. AI Pro is ₹1,950 a month. Google says it leads in coding, finance and law. Developers: its API price doubles on December 1, from $2 to $4 per million input tokens.",
    "tts": "Still coming: the Indian I.T. giant. First, Google's newest A.I. model, Gemini four Argon, is out in India, but only on paid plans. A.I. Pro is nineteen hundred and fifty rupees a month. Google says it leads in coding, finance and law. Developers: its A.P.I. price doubles on December first, from two dollars to four, per million input tokens.",
-   "tts_te": "ఆ ఐ టి దిగ్గజం కథ ఇంకా రాబోతోంది. ఇప్పుడు గూగుల్: కొత్త ఎ ఐ మోడల్ జెమినై ఫోర్ ఆర్గాన్ ఇండియాకి వచ్చేసింది, కానీ పెయిడ్ ప్లాన్లకే. ఎ ఐ ప్రో నెలకు పంతొమ్మిది వందల యాభై రూపాయలు. కోడింగ్, ఫైనాన్స్, లీగల్ టెస్టుల్లో ఇదే టాప్ అని గూగుల్ అంటోంది. డెవలపర్లకు: డిసెంబర్ ఒకటి నుంచి ఎ పి ఐ ధర రెట్టింపు, మిలియన్ ఇన్ పుట్ టోకెన్లకు రెండు డాలర్ల నుంచి నాలుగు డాలర్లకు.",
+   "tts_te": "ఆ ఐ టీ కంపెనీ ఎవరో, ఇంకాసేపట్లో. ఇప్పుడు గూగుల్: కొత్త ఏ ఐ మోడల్ జెమిని ఫోర్ ఆర్గాన్ ఇండియాకి వచ్చేసింది, కానీ పెయిడ్ ప్లాన్లకే. ఏ ఐ ప్రో నెలకు పంతొమ్మిది వందల యాభై రూపాయలు. కోడింగ్, ఫైనాన్స్, లీగల్ టెస్టుల్లో ఇదే టాప్ అని గూగుల్ అంటోంది. డెవలపర్లకు: డిసెంబర్ ఒకటి నుంచి ఏ పీ ఐ ధర రెట్టింపు, మిలియన్ ఇన్ పుట్ టోకెన్లకు రెండు డాలర్ల నుంచి నాలుగు డాలర్లకు.",
    "cards": [
     {
      "k": "STILL COMING",
      "v": "The IT giant doing the opposite",
      "cue": "Still",
-     "cue_te": "దిగ్గజం"
+     "cue_te": "కంపెనీ"
     },
     {
      "k": "GOOGLE · OCT 13",
      "v": "Gemini 4 Argon: paid plans only",
      "cue": "Google's",
-     "cue_te": "గూగుల్"
+     "cue_te": "ఇప్పుడు"
     },
     {
      "k": "INDIA · GOOGLE AI PRO",
      "v": "₹1,950 a month",
      "cue": "month",
-     "cue_te": "నెలకు",
+     "cue_te": "ప్రో",
      "drop": true
     },
     {
@@ -296,7 +296,7 @@
     "It takes three to four weeks."
    ],
    "tts_te": [
-    "క్యారెక్టర్ ఎ ఐ దివాలా పిటిషన్ వేసింది; యాప్ ని ఎవరూ కొనకపోతే, మూసేయొచ్చు. మీరు వాడుతుంటే, ఈరోజే సెట్టింగ్స్ లో డేటా ఎక్స్ పోర్ట్ కి రిక్వెస్ట్ పెట్టండి.",
+    "క్యారెక్టర్ ఏ ఐ దివాలా పిటిషన్ వేసింది; యాప్ ని ఎవరూ కొనకపోతే, మూసేయొచ్చు. మీరు వాడుతుంటే, ఈరోజే సెట్టింగ్స్ లో డేటా ఎక్స్ పోర్ట్ కి రిక్వెస్ట్ పెట్టండి.",
     "అది రావడానికి మూడు నుంచి నాలుగు వారాలు పడుతుంది."
    ],
    "cards": [
@@ -310,7 +310,7 @@
      "k": "FOR YOU · IN SETTINGS",
      "v": "Request your data export",
      "cue": "request",
-     "cue_te": "రిక్వెస్ట్"
+     "cue_te": "వాడుతుంటే"
     },
     {
      "k": "AN EXPORT TAKES",
@@ -345,8 +345,8 @@
     "About twenty thousand, it says. For you: show one project where you used A.I., and checked its work."
    ],
    "tts_te": [
-    "చివరగా ఉద్యోగాలు: బార్క్లేస్ దాదాపు ఐదు వేల ఉద్యోగాలు, అమెరికన్ ఎక్స్ ప్రెస్ దాదాపు మూడున్నర వేల ఉద్యోగాలు తగ్గిస్తున్నాయి. ఎ ఐ కూడా ఒక కారణం అని రెండూ అంటున్నాయి. ఆంత్రోపిక్ సొంత టెక్ హైరింగ్ లో, జూనియర్ల వాటా ఇరవై ఏడు శాతం నుంచి తొమ్మిదికి పడిపోయింది. కానీ ఇన్ఫోసిస్ వ్యతిరేక దారిలో వెళ్తోంది: ఏప్రిల్ నుంచి పదమూడు వేల మంది ఫ్రెషర్లను తీసుకుంది. ఈ ఏడాది మొత్తం ఎంత మంది?",
-    "దాదాపు ఇరవై వేల మంది, అంటోంది. మీకు సలహా: ఎ ఐ వాడి, దాని పనిని మీరు చెక్ చేసిన ఒక ప్రాజెక్ట్ చూపించండి."
+    "చివరగా ఉద్యోగాలు: బార్క్లేస్ దాదాపు ఐదు వేల ఉద్యోగాలు, అమెరికన్ ఎక్స్ ప్రెస్ దాదాపు మూడున్నర వేల ఉద్యోగాలు తగ్గిస్తున్నాయి. ఏ ఐ కూడా ఒక కారణం అని రెండూ అంటున్నాయి. ఆంత్రోపిక్ సొంత టెక్ హైరింగ్ లో, జూనియర్ల వాటా ఇరవై ఏడు శాతం నుంచి తొమ్మిదికి పడిపోయింది. కానీ ఇన్ఫోసిస్ మాత్రం ఆపోజిట్ గా వెళ్తోంది: ఏప్రిల్ నుంచి పదమూడు వేల మంది ఫ్రెషర్లను తీసుకుంది. ఈ ఏడాది మొత్తం ఎంత మంది?",
+    "దాదాపు ఇరవై వేల మంది, అంటోంది. మీకు సలహా: ఏ ఐ వాడి, దాని పనిని మీరు చెక్ చేసిన ఒక ప్రాజెక్ట్ చూపించండి."
    ],
    "cards": [
     {
@@ -359,20 +359,20 @@
      "k": "AMERICAN EXPRESS · OCT 23",
      "v": "~3,500 jobs (5% of staff)",
      "cue": "Both",
-     "cue_te": "తగ్గిస్తున్నాయి"
+     "cue_te": "కూడా"
     },
     {
      "k": "ANTHROPIC'S OWN TECH HIRES",
      "v": "Juniors: 27% → 9%",
      "cue": "27%",
-     "cue_te": "ఇరవై",
+     "cue_te": "ఆంత్రోపిక్",
      "drop": true
     },
     {
      "k": "INFOSYS · INDIA",
      "v": "13,000 freshers since April",
      "cue": "Infosys",
-     "cue_te": "ఇన్ఫోసిస్"
+     "cue_te": "కానీ"
     },
     {
      "k": "INFOSYS · FRESHERS THIS YEAR",
@@ -386,7 +386,7 @@
      "k": "FOR YOU",
      "v": "Show one AI project you checked",
      "cue": "show",
-     "cue_te": "చూపించండి"
+     "cue_te": "సలహా"
     }
    ],
    "points": [
@@ -402,7 +402,7 @@
  "outro": {
   "text": "That's your AI news since October 11. Is your company hiring fewer freshers because of AI? Tell us in the comments. And follow AI Maastaaru: AI Weekly, every Saturday.",
   "tts": "That's your A.I. news since October eleventh. Is your company hiring fewer freshers, because of A.I.? Tell us in the comments. And follow A.I. Maastaaru. A.I. Weekly, every Saturday.",
-  "tts_te": "ఇదీ అక్టోబర్ పదకొండు నుంచి ఎ ఐ న్యూస్. ఎ ఐ వల్ల మీ కంపెనీ ఫ్రెషర్లను తక్కువగా తీసుకుంటోందా? కామెంట్ లో చెప్పండి. ప్రతి శనివారం ఎ ఐ వీక్లీ కోసం, ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
+  "tts_te": "ఇదీ అక్టోబర్ పదకొండు నుంచి ఏ ఐ న్యూస్. ఏ ఐ వల్ల మీ కంపెనీ ఫ్రెషర్లను తక్కువగా తీసుకుంటోందా? కామెంట్ లో చెప్పండి. ప్రతి శనివారం ఏ ఐ వీక్లీ కోసం, ఏ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
  },
  "beatCuts": 15
 }
