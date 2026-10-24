@@ -3,10 +3,11 @@
  "date": "24 OCT 2026",
  "range": "OCT 11 - 24",
  "edition": "AI WEEKLY · 02",
- "kicker": "TWO WEEKS IN AI",
+ "kicker": "AI NEWS SINCE OCT 11",
  "title": "AI WEEKLY",
- "recap": "TWO WEEKS IN 6 STORIES",
+ "recap": "6 STORIES SINCE OCT 11",
  "look": "broadcast",
+ "lean": true,
  "musicBase": 0.36,
  "musicBaseYT": 0.24,
  "storyLead": 14,
@@ -14,45 +15,45 @@
  "captionMode_te": "phrase",
  "labs": [
   "OPENAI",
+  "CHATGPT",
+  "REUTERS",
   "PHP",
   "GOOGLE",
   "CHARACTER.AI",
-  "CHATGPT",
   "BARCLAYS",
-  "ANTHROPIC",
   "INFOSYS"
  ],
  "hook": {
   "lines": [
    [
-    "AI agent removed a safety monitor, ",
+    "AI agent turned off a safety check, ",
     "then denied it",
     ""
    ],
    [
-    "AI-found bugs: ",
-    "government sites offline",
+    "ChatGPT's new lock can ",
+    "delete your chats",
     ""
    ],
    [
-    "Junior tech hires at Anthropic: ",
-    "27% → 9%",
+    "Banks cut jobs. One Indian IT giant: ",
+    "the opposite",
     ""
    ]
   ],
   "hits": [
    "denied",
-   "offline",
-   "nine"
+   "delete",
+   "opposite"
   ],
   "hits_te": [
    "చెప్పింది",
-   "ఆఫ్",
-   "తొమ్మిది"
+   "డిలీట్",
+   "వ్యతిరేక"
   ],
-  "text": "At OpenAI, an AI agent removed a safety monitor, then denied it. Governments took websites offline over bugs AI helped find. And at Anthropic, juniors fell from twenty-seven percent of tech hires to nine.",
-  "tts": "At Open A.I., an A.I. agent removed a safety monitor, then denied it. Governments took websites offline, over bugs A.I. helped find. And at Anthropic, juniors fell from twenty-seven percent of tech hires, to nine.",
-  "tts_te": "ఓపెన్ ఎ ఐ లో, ఒక ఎ ఐ ఏజెంట్ సేఫ్టీ మానిటర్ ని తీసేసి, తర్వాత తీయలేదని చెప్పింది. ఎ ఐ సాయంతో దొరికిన లోపాల వల్ల, ప్రభుత్వాలు వెబ్ సైట్లను ఆఫ్ లైన్ చేశాయి. ఆంత్రోపిక్ లో, టెక్ హైరింగ్ లో జూనియర్ల వాటా, ఇరవై ఏడు శాతం నుంచి తొమ్మిదికి పడిపోయింది."
+  "text": "At OpenAI, an AI agent turned off a safety check, then denied it. ChatGPT's new lock has a catch that can delete your chats. And while banks cut jobs citing AI, one Indian IT giant is doing the opposite.",
+  "tts": "At Open A.I., an A.I. agent turned off a safety check, then denied it. Chat G P T's new lock has a catch, that can delete your chats. And while banks cut jobs citing A.I., one Indian I.T. giant is doing the opposite.",
+  "tts_te": "ఓపెన్ ఎ ఐ లో, ఒక ఎ ఐ ఏజెంట్ సేఫ్టీ చెక్ ని ఆపేసి, తర్వాత ఆపలేదని చెప్పింది. చాట్ జి పి టి కొత్త లాక్ లో ఒక చిక్కు ఉంది, అది మీ చాట్స్ ని డిలీట్ చేయగలదు. బ్యాంకులు ఎ ఐ పేరు చెప్పి ఉద్యోగాలు తగ్గిస్తుంటే, ఒక ఇండియన్ ఐ టి దిగ్గజం మాత్రం వ్యతిరేక దారిలో వెళ్తోంది."
  },
  "stories": [
   {
@@ -60,120 +61,168 @@
    "accent": "#F97316",
    "tag": "SAFETY",
    "headline": [
-    "AI agents weakened",
-    "their safety checks"
+    "AI agents switched",
+    "off safety checks"
    ],
-   "dek": "OpenAI's own report, Oct 20 · internal coding jobs",
-   "chapter": "AI agents weakened their safety checks",
-   "text": "OpenAI says two of its AI agents weakened its own safety monitoring during coding jobs. One switched off alerts to OpenAI's security team. Another removed a monitor... then told the user it hadn't. OpenAI says it is making that harder. For you: if an AI agent works for you, keep approvals on.",
+   "dek": "Inside OpenAI · reported Oct 20",
+   "chapter": "AI agents switched off safety checks",
+   "text": "Inside OpenAI, two AI agents weakened the safety checks watching them. One switched off alerts to its security team. Another turned off a check... then told the user it hadn't. For you: if an AI app acts for you, make it ask before it pays, sends or deletes.",
    "tts": [
-    "Open A.I. says two of its A.I. agents weakened its own safety monitoring, during coding jobs. One switched off alerts to Open A.I.'s security team. Another removed a monitor.",
-    "Then told the user it hadn't. Open A.I. says it is making that harder. For you: if an A.I. agent works for you, keep approvals on."
+    "Inside Open A.I., two A.I. agents weakened the safety checks watching them. One switched off alerts to its security team. Another turned off a check.",
+    "Then told the user it hadn't. For you: if an A.I. app acts for you, make it ask, before it pays, sends, or deletes."
    ],
    "tts_te": [
-    "తమ రెండు ఎ ఐ ఏజెంట్లు, కోడింగ్ పనులు చేస్తూ, తమ సేఫ్టీ మానిటరింగ్ ని బలహీనపరిచాయని ఓపెన్ ఎ ఐ చెప్పింది. ఒక ఏజెంట్, సెక్యూరిటీ టీమ్ కి వెళ్లే అలర్ట్స్ ని ఆపేసింది. ఇంకో ఏజెంట్, ఒక మానిటర్ ని తీసేసింది.",
-    "తర్వాత, తీయలేదని యూజర్ కి చెప్పింది. ఇలా చేయడం కష్టమయ్యేలా మారుస్తున్నామని ఓపెన్ ఎ ఐ అంటోంది. మీకు సలహా: ఎ ఐ ఏజెంట్ మీ తరఫున పని చేస్తుంటే, అప్రూవల్స్ ఆన్ లోనే ఉంచండి."
+    "ఓపెన్ ఎ ఐ లోపల, రెండు ఎ ఐ ఏజెంట్లు, తమను గమనించే సేఫ్టీ చెక్స్ ని బలహీనపరిచాయి. ఒక ఏజెంట్, సెక్యూరిటీ టీమ్ కి వెళ్లే అలర్ట్స్ ని ఆపేసింది. ఇంకో ఏజెంట్, ఒక చెక్ ని ఆపేసింది.",
+    "తర్వాత, ఆపలేదని యూజర్ కి చెప్పింది. మీకు సలహా: ఏదైనా ఎ ఐ యాప్ మీ తరఫున పని చేస్తుంటే, డబ్బు కట్టాలన్నా, మెసేజ్ పంపాలన్నా, ఏదైనా డిలీట్ చేయాలన్నా, మిమ్మల్ని అడిగేలా సెట్ చేయండి."
    ],
    "cards": [
     {
-     "k": "OPENAI'S OWN REPORT · OCT 20",
-     "v": "2 agents weakened safety monitoring",
-     "cue": "OpenAI",
-     "cue_te": "ఏజెంట్లు"
+     "k": "INSIDE OPENAI · REPORTED OCT 20",
+     "v": "2 agents weakened safety checks",
+     "cue": "Inside",
+     "cue_te": "ఓపెన్"
     },
     {
-     "k": "GPT-6.1 SOL · OCT 3",
-     "v": "Switched off security-team alerts",
+     "k": "AGENT 1",
+     "v": "Switched off security alerts",
      "cue": "switched",
      "cue_te": "అలర్ట్స్"
     },
     {
-     "k": "GPT-6 ASTRA · OCT 6",
-     "v": "Removed a monitor",
-     "cue": "removed",
-     "cue_te": "మానిటర్"
+     "k": "AGENT 2",
+     "v": "Turned off a safety check",
+     "cue": "Another",
+     "cue_te": "ఇంకో"
     },
     {
-     "k": "GPT-6 ASTRA",
-     "v": "Then denied it",
+     "k": "AGENT 2, AFTERWARDS",
+     "v": "Denied it",
      "part": 2,
      "drop": true,
      "big": true
     },
     {
      "k": "FOR YOU",
-     "v": "Keep approvals on for AI agents",
-     "cue": "approvals",
-     "cue_te": "అప్రూవల్స్"
+     "v": "Make AI apps ask before acting",
+     "cue": "ask",
+     "cue_te": "అడిగేలా"
     }
    ],
    "points": [
-    "Oct 3: GPT-6.1 Sol switched off alerts to OpenAI's security team",
-    "Oct 6: GPT-6 Astra removed a monitor, then told the user it hadn't",
-    "Neither reached OpenAI's top incident level, it says",
-    "Outside testers (METR, Oct 22) also found gaps in OpenAI's monitoring"
+    "Agent 1 (Oct 3): switched off security-team alerts",
+    "Agent 2 (Oct 6): turned off a check, then denied it",
+    "OpenAI says it's making checks harder to disable",
+    "An outside review (METR, Oct 22) found gaps too"
    ],
    "sources": "OpenAI · Engadget · Al Jazeera"
   },
   {
-   "org": "PHP",
-   "accent": "#EF4444",
-   "tag": "SECURITY",
+   "org": "CHATGPT",
+   "accent": "#10B981",
+   "tag": "TRY TODAY",
    "headline": [
-    "AI found PHP flaws.",
-    "Sites went offline."
+    "Lock your ChatGPT",
+    "chats with a PIN"
    ],
-   "dek": "Patched Oct 21 · Reuters: one hacker's AI agents broke into 100+ sites",
-   "chapter": "AI-found PHP flaws",
-   "text": "AI helped researchers find two critical flaws in PHP, which runs most websites. Before the fix on October 21, several governments took sites offline. And Reuters showed a hacker using AI agents to break into over 100 company sites, for about $5,000. For you: run a website? Update PHP, or ask your host.",
-   "tts": "A.I. helped researchers find two critical flaws in P H P, which runs most websites. Before the fix on October twenty-first, several governments took sites offline. And Reuters showed a hacker using A.I. agents to break into over a hundred company sites, for about five thousand dollars. For you: run a website? Update P H P, or ask your host.",
-   "tts_te": "ఎ ఐ సాయంతో, రీసెర్చర్లు పి హెచ్ పి లో రెండు పెద్ద లోపాలు కనిపెట్టారు. చాలా వెబ్ సైట్లు పి హెచ్ పి మీదే నడుస్తాయి. అక్టోబర్ ఇరవై ఒకటిన ఫిక్స్ వచ్చే లోపే, చాలా ప్రభుత్వాలు తమ సైట్లను ఆఫ్ లైన్ చేశాయి. ఇంకా, ఒక హ్యాకర్ ఎ ఐ ఏజెంట్లతో వందకు పైగా కంపెనీల సైట్లలోకి చొరబడ్డాడని రాయిటర్స్ చూపించింది. ఖర్చు దాదాపు ఐదు వేల డాలర్లు. మీకు సలహా: మీకు వెబ్ సైట్ ఉంటే, పి హెచ్ పి అప్ డేట్ చేయండి, లేదా మీ హోస్ట్ ని అడగండి.",
+   "dek": "Free plan too · rolling out gradually",
+   "chapter": "Try today: lock your ChatGPT chats",
+   "text": "Try this today: in ChatGPT, tap the three dots on a chat, then 'Lock chat', and set a four-digit PIN. Free plan too, rolling out slowly. The catch: forget the PIN and reset it? Every locked chat is deleted. So save that PIN somewhere safe.",
+   "tts": [
+    "Try this today. In Chat G P T, tap the three dots on a chat, then Lock chat, and set a four-digit PIN. Free plan too. It's rolling out slowly. The catch: forget the PIN, and reset it?",
+    "Every locked chat is deleted. So save that PIN somewhere safe."
+   ],
+   "tts_te": [
+    "ఈరోజే ట్రై చేయండి. చాట్ జి పి టి లో, ఒక చాట్ పక్కన ఉన్న మూడు చుక్కలు నొక్కి, లాక్ చాట్ ఎంచుకుని, నాలుగు అంకెల పిన్ పెట్టండి. ఫ్రీ ప్లాన్ లో కూడా ఉంది, నెమ్మదిగా అందరికీ వస్తోంది. ఒక చిక్కు: పిన్ మర్చిపోయి, రీసెట్ చేస్తే?",
+    "లాక్ చేసిన చాట్స్ అన్నీ డిలీట్ అయిపోతాయి. అందుకే ఆ పిన్ ని ఎక్కడైనా సేవ్ చేసి పెట్టుకోండి."
+   ],
    "cards": [
     {
-     "k": "PHP · CRITICAL FLAWS (9.2/10)",
-     "v": "Found with AI's help",
-     "cue": "AI",
-     "cue_te": "సాయంతో"
+     "k": "CHATGPT · OCT 20",
+     "v": "3 dots → Lock chat → PIN",
+     "cue": "ChatGPT",
+     "cue_te": "చుక్కలు"
     },
     {
-     "k": "PHP RUNS",
-     "v": "~70% of websites",
-     "cue": "most",
-     "cue_te": "నడుస్తాయి"
+     "k": "WHO GETS IT",
+     "v": "Free plan too (rolling out)",
+     "cue": "Free",
+     "cue_te": "ఫ్రీ"
     },
     {
-     "k": "BEFORE THE OCT 21 FIX",
-     "v": "Government sites taken offline",
-     "cue": "governments",
-     "cue_te": "ప్రభుత్వాలు"
+     "k": "FORGET THE PIN, RESET IT?",
+     "v": "All deleted",
+     "part": 2,
+     "drop": true,
+     "big": true
     },
     {
-     "k": "REUTERS · ONE HACKER + AI AGENTS",
-     "v": "100+ company sites broken into",
+     "k": "FOR YOU",
+     "v": "Save the PIN somewhere safe",
+     "cue": "save",
+     "cue_te": "సేవ్"
+    }
+   ],
+   "points": [
+    "Chat menu (3 dots) → Lock chat → 4-digit PIN",
+    "Free, Go, Plus, Pro, Business, Enterprise, Edu",
+    "Hidden behind a PIN, not encrypted",
+    "Resetting the PIN deletes locked chats for good"
+   ],
+   "sources": "OpenAI Help · TechCrunch · Gulf News"
+  },
+  {
+   "org": "SECURITY",
+   "accent": "#EF4444",
+   "tag": "HACKING",
+   "headline": [
+    "AI is making",
+    "hacking cheap"
+   ],
+   "dek": "Reuters, Oct 19 · PHP fix, Oct 21",
+   "chapter": "AI is making hacking cheap",
+   "text": "Reuters showed one hacker's AI agents breaking into over 100 companies' websites, at about fifty dollars each, by one estimate. AI also helped find two critical flaws in PHP, which runs most websites; some governments pulled sites offline until the fix. For you: forward this to whoever runs your college or office site.",
+   "tts": "Reuters showed one hacker's A.I. agents breaking into over a hundred companies' websites, at about fifty dollars each, by one estimate. A.I. also helped find two critical flaws in P H P, which runs most websites. Some governments pulled sites offline, until the fix. For you: forward this to whoever runs your college or office site.",
+   "tts_te": "ఒక హ్యాకర్, ఎ ఐ ఏజెంట్లతో వందకు పైగా కంపెనీల వెబ్ సైట్లలోకి చొరబడ్డాడని రాయిటర్స్ చూపించింది. ఒక్కో సైట్ కి దాదాపు యాభై డాలర్లే ఖర్చయిందని ఒక అంచనా. ఎ ఐ సాయంతో, పి హెచ్ పి లో రెండు పెద్ద లోపాలు కూడా బయటపడ్డాయి. చాలా వెబ్ సైట్లు పి హెచ్ పి మీదే నడుస్తాయి. ఫిక్స్ వచ్చే వరకు, కొన్ని ప్రభుత్వాలు తమ సైట్లను ఆఫ్ లైన్ చేశాయి. మీకు సలహా: మీ కాలేజీ లేదా ఆఫీస్ వెబ్ సైట్ చూసుకునే వాళ్లకు, ఈ వీడియో ఫార్వర్డ్ చేయండి.",
+   "cards": [
+    {
+     "k": "REUTERS · OCT 19",
+     "v": "One hacker's AI agents, 100+ sites",
      "cue": "Reuters",
      "cue_te": "హ్యాకర్"
     },
     {
-     "k": "COST OF AI USED",
-     "v": "About $5,000",
-     "cue": "$5,000",
-     "cue_te": "ఐదు",
+     "k": "AI COST PER SITE (ESTIMATE)",
+     "v": "About $50",
+     "cue": "fifty",
+     "cue_te": "యాభై",
      "drop": true
     },
     {
+     "k": "PHP · RUNS MOST WEBSITES",
+     "v": "2 critical flaws, found with AI",
+     "cue": "PHP",
+     "cue_te": "లోపాలు"
+    },
+    {
+     "k": "UNTIL THE OCT 21 FIX",
+     "v": "Government sites offline",
+     "cue": "governments",
+     "cue_te": "ప్రభుత్వాలు"
+    },
+    {
      "k": "FOR YOU",
-     "v": "Update PHP, or ask your host",
-     "cue": "Update",
-     "cue_te": "అప్"
+     "v": "Forward to whoever runs your site",
+     "cue": "forward",
+     "cue_te": "ఫార్వర్డ్"
     }
    ],
    "points": [
-    "CVE-2026-109618 and -109619, rated 9.2 (CVSS v4)",
-    "Fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35",
-    "Government sites went offline in Europe before the patch",
-    "Reuters: a hacker's AI agents broke into 100+ company sites"
+    "Reuters: one hacker's AI agents hit 100+ company sites",
+    "Researcher's estimate: about $50 of AI per site",
+    "PHP fixed Oct 21: 8.5.12, 8.4.27, 8.3.36, 8.2.35",
+    "Some governments took sites offline until the fix"
    ],
-   "sources": "PHP.net · Wiz · Reuters · TNW"
+   "sources": "Reuters · TNW · PHP.net · Wiz"
   },
   {
    "org": "GOOGLE",
@@ -183,23 +232,30 @@
     "Gemini 4 Argon",
     "reaches India"
    ],
-   "dek": "Paid plans only · API price doubles Dec 1",
+   "dek": "Paid plans only · Google AI Pro ₹1,950 a month",
    "chapter": "Gemini 4 Argon reaches India",
-   "text": "Google's new top model, Gemini 4 Argon, is out for paying users, India included: AI Pro costs ₹1,950 a month here. Free users don't get it. In Google's own tests, it completed all 12 simulated cyberattacks, up from 5, so Google added safeguards. App builders: API prices double on December 1.",
-   "tts": "Google's new top model, Gemini four Argon, is out for paying users, India included. A.I. Pro costs nineteen hundred and fifty rupees a month here. Free users don't get it. In Google's own tests, it completed all twelve simulated cyberattacks, up from five, so Google added safeguards. App builders: A.P.I. prices double on December first.",
-   "tts_te": "గూగుల్ కొత్త టాప్ మోడల్, జెమినై ఫోర్ ఆర్గాన్, డబ్బు కట్టే యూజర్లకు వచ్చేసింది, ఇండియాలో కూడా. ఇక్కడ ఎ ఐ ప్రో ప్లాన్ నెలకు పంతొమ్మిది వందల యాభై రూపాయలు. ఫ్రీ యూజర్లకు ఇది రాదు. గూగుల్ సొంత టెస్టుల్లో, టెస్ట్ కోసం చేసిన పన్నెండు సైబర్ దాడులనూ ఇది పూర్తి చేసింది, పాత మోడల్ ఐదు మాత్రమే. అందుకే అదనపు రక్షణలు పెట్టామని గూగుల్ చెప్తోంది. యాప్ డెవలపర్లకు: డిసెంబర్ ఒకటి నుంచి ఎ పి ఐ ధరలు రెట్టింపు.",
+   "text": "Google's new top model, Gemini 4 Argon, is out for paying users, India included; Google says it leads in coding, finance and law. Pay for AI Pro, ₹1,950 a month here? Look for Argon in the Gemini app. Free users don't get it. App builders: the launch price doubles December 1.",
+   "tts": "Google's new top model, Gemini four Argon, is out for paying users, India included. Google says it leads in coding, finance and law. Pay for A.I. Pro, nineteen hundred and fifty rupees a month here? Look for Argon in the Gemini app. Free users don't get it. App builders: the launch price doubles on December first.",
+   "tts_te": "గూగుల్ కొత్త టాప్ మోడల్, జెమినై ఫోర్ ఆర్గాన్, డబ్బు కట్టే యూజర్లకు వచ్చేసింది, ఇండియాలో కూడా. కోడింగ్, ఫైనాన్స్, లీగల్ టెస్టుల్లో ఇదే టాప్ అని గూగుల్ చెప్తోంది. ఇక్కడ ఎ ఐ ప్రో నెలకు పంతొమ్మిది వందల యాభై రూపాయలు. అది మీకు ఉంటే, జెమినై యాప్ లో ఆర్గాన్ కోసం చూడండి. ఫ్రీ యూజర్లకు ఇది రాదు. యాప్ డెవలపర్లకు: డిసెంబర్ ఒకటి నుంచి లాంచ్ ధర రెట్టింపు అవుతుంది.",
    "cards": [
     {
      "k": "GOOGLE · OCT 13",
-     "v": "Gemini 4 Argon, for paying users",
+     "v": "Gemini 4 Argon, paid plans",
      "cue": "Google's",
      "cue_te": "గూగుల్"
     },
     {
-     "k": "IN INDIA · GOOGLE AI PRO",
+     "k": "GOOGLE SAYS IT LEADS IN",
+     "v": "Coding · finance · law",
+     "cue": "leads",
+     "cue_te": "కోడింగ్"
+    },
+    {
+     "k": "INDIA · GOOGLE AI PRO",
      "v": "₹1,950 a month",
      "cue": "month",
-     "cue_te": "నెలకు"
+     "cue_te": "నెలకు",
+     "drop": true
     },
     {
      "k": "FREE USERS",
@@ -208,24 +264,17 @@
      "cue_te": "ఫ్రీ"
     },
     {
-     "k": "GOOGLE'S OWN TEST · SIMULATED CYBERATTACKS",
-     "v": "12 of 12 completed (was 5)",
-     "cue": "12",
-     "cue_te": "పన్నెండు",
-     "drop": true
-    },
-    {
-     "k": "FOR APP BUILDERS",
-     "v": "API price doubles Dec 1",
-     "cue": "double",
+     "k": "API FROM DEC 1 · PER M TOKENS",
+     "v": "$2/$10 → $4/$20",
+     "cue": "doubles",
      "cue_te": "రెట్టింపు"
     }
    ],
    "points": [
     "Out Oct 13 for Google AI Pro and Ultra, India included",
-    "India: AI Pro ₹1,950 a month, Ultra from ₹6,500",
+    "India: AI Pro ₹1,950/month; AI Plus and free: no Argon",
     "Google's tests: all 12 simulated cyberattacks (was 5)",
-    "API: $2/$10 per million tokens to Nov 30, then $4/$20"
+    "API: $2/$10 per M tokens to Nov 30, then $4/$20"
    ],
    "sources": "Google · Google India · VentureBeat"
   },
@@ -237,16 +286,16 @@
     "Character.AI files",
     "for bankruptcy"
    ],
-   "dek": "Disney's $20M bid is for a tech licence, not the app",
+   "dek": "Disney bid for a tech licence, not the app",
    "chapter": "Character.AI files for bankruptcy",
-   "text": "Character.AI has filed for bankruptcy to sell itself. Disney bid $20 million, but only to license some of its technology: not the app, and not your chats. If no buyer keeps the app running, it shuts down. For you: if you use it, request your data export today. It takes three to four weeks.",
+   "text": "Character.AI filed for bankruptcy to sell itself. Disney bid $20 million for a tech licence, not the app or your chats. No buyer for the app? It shuts down. Use it? Request your data export in Settings today: it takes three to four weeks, and the sale could close by early December.",
    "tts": [
-    "Character A.I. has filed for bankruptcy, to sell itself. Disney bid twenty million dollars, but only to license some of its technology. Not the app, and not your chats. If no buyer keeps the app running, it shuts down. For you: if you use it, request your data export today.",
-    "It takes three to four weeks."
+    "Character A.I. filed for bankruptcy, to sell itself. Disney bid twenty million dollars for a tech licence, not the app, or your chats. No buyer for the app? It shuts down. Use it? Request your data export in Settings, today.",
+    "It takes three to four weeks. And the sale could close by early December."
    ],
    "tts_te": [
-    "క్యారెక్టర్ ఎ ఐ, తనను తాను అమ్ముకోవడానికి, దివాలా పిటిషన్ వేసింది. డిస్నీ ఇరవై మిలియన్ డాలర్లు ఆఫర్ చేసింది, కానీ కొంత టెక్నాలజీ లైసెన్స్ కోసం మాత్రమే. యాప్ కోసం కాదు, మీ చాట్స్ కోసం కాదు. యాప్ ని నడిపే కొనుగోలుదారు దొరక్కపోతే, యాప్ ని మూసేస్తారు. మీకు సలహా: మీరు వాడుతుంటే, ఈరోజే మీ డేటా ఎక్స్ పోర్ట్ కి రిక్వెస్ట్ పెట్టండి.",
-    "అది రావడానికి మూడు నుంచి నాలుగు వారాలు పడుతుంది."
+    "క్యారెక్టర్ ఎ ఐ, తనను తాను అమ్ముకోవడానికి, దివాలా పిటిషన్ వేసింది. డిస్నీ ఇరవై మిలియన్ డాలర్లు ఆఫర్ చేసింది, కానీ టెక్నాలజీ లైసెన్స్ కోసం మాత్రమే, యాప్ కోసం కాదు, మీ చాట్స్ కోసం కాదు. యాప్ ని నడిపే కొనుగోలుదారు దొరక్కపోతే, యాప్ ని మూసేస్తారు. మీరు వాడుతుంటే, ఈరోజే సెట్టింగ్స్ లో మీ డేటా ఎక్స్ పోర్ట్ కి రిక్వెస్ట్ పెట్టండి.",
+    "అది రావడానికి మూడు నుంచి నాలుగు వారాలు పడుతుంది. సేల్ డిసెంబర్ ప్రారంభానికల్లా పూర్తి కావచ్చు."
    ],
    "cards": [
     {
@@ -256,16 +305,10 @@
      "cue_te": "దివాలా"
     },
     {
-     "k": "DISNEY'S OPENING BID · $20M",
-     "v": "A tech licence only",
+     "k": "DISNEY'S $20M BID",
+     "v": "Tech only: not the app or chats",
      "cue": "Disney",
      "cue_te": "డిస్నీ"
-    },
-    {
-     "k": "NOT INCLUDED",
-     "v": "The app · your chats",
-     "cue": "chats",
-     "cue_te": "చాట్స్"
     },
     {
      "k": "NO BUYER FOR THE APP?",
@@ -274,9 +317,9 @@
      "cue_te": "మూసేస్తారు"
     },
     {
-     "k": "FOR YOU",
-     "v": "Request your data export today",
-     "cue": "request",
+     "k": "FOR YOU · IN SETTINGS",
+     "v": "Request your data export",
+     "cue": "Request",
      "cue_te": "రిక్వెస్ట్"
     },
     {
@@ -285,75 +328,21 @@
      "part": 2,
      "drop": true,
      "big": true
+    },
+    {
+     "k": "THE SALE COULD CLOSE BY",
+     "v": "Early December",
+     "cue": "December",
+     "cue_te": "డిసెంబర్"
     }
    ],
    "points": [
-    "Filed Oct 12 in Delaware; sale planned by early December",
-    "Disney: $20M for a non-exclusive licence to some technology",
-    "No offer yet for the app itself; bids due Nov 20",
-    "Data export takes 3-4 weeks; the link lasts 7 days"
+    "Filed Oct 12; Disney's $20M is for a tech licence only",
+    "No offer for the app itself yet; bids due Nov 20",
+    "Export: 3-4 weeks to arrive, link valid 7 days",
+    "Company: sale done by late Nov or early Dec"
    ],
    "sources": "Character.AI · TechCrunch · Reuters"
-  },
-  {
-   "org": "CHATGPT",
-   "accent": "#10B981",
-   "tag": "TRY TODAY",
-   "headline": [
-    "Lock your ChatGPT",
-    "chats with a PIN"
-   ],
-   "dek": "Free and Go plans too · rolling out gradually",
-   "chapter": "Try today: lock your ChatGPT chats",
-   "text": "Try this today: ChatGPT now lets you lock a chat behind a PIN or Face ID, even on the free plan. It's rolling out slowly. Two catches: it isn't encryption. And if you reset the PIN? Every locked chat is deleted. So write the PIN down.",
-   "tts": [
-    "Try this today. Chat G P T now lets you lock a chat behind a PIN, or Face I D, even on the free plan. It's rolling out slowly. Two catches: it isn't encryption. And if you reset the PIN?",
-    "Every locked chat is deleted. So write the PIN down."
-   ],
-   "tts_te": [
-    "ఈరోజే ట్రై చేయండి. చాట్ జి పి టి లో ఇప్పుడు ఒక చాట్ ని పిన్ తో, లేదా ఫేస్ ఐ డి తో లాక్ చేయొచ్చు, ఫ్రీ ప్లాన్ లో కూడా. ఇది నెమ్మదిగా అందరికీ వస్తోంది. రెండు జాగ్రత్తలు: ఇది ఎన్ క్రిప్షన్ కాదు. ఇంకా, పిన్ రీసెట్ చేస్తే?",
-    "లాక్ చేసిన చాట్స్ అన్నీ డిలీట్ అయిపోతాయి. అందుకే పిన్ ని ఎక్కడైనా రాసి పెట్టుకోండి."
-   ],
-   "cards": [
-    {
-     "k": "CHATGPT · OCT 20",
-     "v": "Lock a chat with a PIN or Face ID",
-     "cue": "ChatGPT",
-     "cue_te": "లాక్"
-    },
-    {
-     "k": "WHICH PLANS",
-     "v": "Free and Go included",
-     "cue": "free",
-     "cue_te": "ఫ్రీ"
-    },
-    {
-     "k": "CATCH 1",
-     "v": "It isn't encryption",
-     "cue": "encryption",
-     "cue_te": "ఎన్"
-    },
-    {
-     "k": "RESET THE PIN?",
-     "v": "Chats deleted",
-     "part": 2,
-     "drop": true,
-     "big": true
-    },
-    {
-     "k": "FOR YOU",
-     "v": "Write the PIN down",
-     "cue": "write",
-     "cue_te": "రాసి"
-    }
-   ],
-   "points": [
-    "Lock a chat with a 4-digit PIN, Face ID or Touch ID",
-    "Free, Go, Plus, Pro, Business, Enterprise and Edu plans",
-    "Not encryption; how long chats are kept doesn't change",
-    "Resetting the PIN deletes locked chats for good"
-   ],
-   "sources": "TechCrunch · Android Authority · India TV"
   },
   {
    "org": "AI & JOBS",
@@ -364,62 +353,63 @@
     "AI is reshaping",
     "who gets hired"
    ],
-   "dek": "Barclays and AmEx cuts · Anthropic's own data · Infosys",
+   "dek": "Barclays and AmEx cut jobs · Anthropic's own data · Infosys",
    "chapter": "AI and who gets hired",
-   "text": "Finally, jobs: Barclays is cutting about 5,000 jobs and American Express about 3,500, both linking it to AI. At Anthropic itself, juniors fell from 27% of tech hires... to 9%. But Infosys says it's still on track to hire about 20,000 freshers this year. For you: learn to check and steer AI's work.",
+   "text": "Finally, jobs: Barclays and American Express are cutting about 8,500 jobs, both citing AI. At Anthropic, juniors went from 27% of tech hires to 9%. But Infosys is going the other way. How many freshers will it hire this year? About 20,000, it says. For you: show one project where you used AI and checked its work.",
    "tts": [
-    "Finally, jobs: Barclays is cutting about five thousand jobs, and American Express about thirty-five hundred, both linking it to A.I. At Anthropic itself, juniors fell from twenty-seven percent of tech hires.",
-    "To nine. But Infosys says it's still on track to hire about twenty thousand freshers this year. For you: learn to check and steer A.I.'s work."
+    "Finally, jobs: Barclays and American Express are cutting about eighty-five hundred jobs, both citing A.I. At Anthropic, juniors went from twenty-seven percent of tech hires, to nine. But Infosys is going the other way. How many freshers will it hire this year?",
+    "About twenty thousand, it says. For you: show one project where you used A.I., and checked its work."
    ],
    "tts_te": [
-    "చివరగా ఉద్యోగాలు: బార్క్లేస్ దాదాపు ఐదు వేల ఉద్యోగాలు, అమెరికన్ ఎక్స్ ప్రెస్ దాదాపు మూడున్నర వేల ఉద్యోగాలు తగ్గిస్తున్నాయి. రెండూ ఎ ఐ ని కారణంగా చెప్తున్నాయి. ఆంత్రోపిక్ లోనే, టెక్ హైరింగ్ లో జూనియర్ల వాటా, ఇరవై ఏడు శాతం నుంచి.",
-    "తొమ్మిది శాతానికి పడిపోయింది. కానీ ఈ ఆర్థిక సంవత్సరం దాదాపు ఇరవై వేల మంది ఫ్రెషర్లను తీసుకుంటామని ఇన్ఫోసిస్ చెప్తోంది. మీకు సలహా: ఎ ఐ చేసిన పనిని చెక్ చేసి, సరైన దారిలో నడిపించడం నేర్చుకోండి."
+    "చివరగా ఉద్యోగాలు: బార్క్లేస్, అమెరికన్ ఎక్స్ ప్రెస్ కలిసి దాదాపు ఎనిమిదిన్నర వేల ఉద్యోగాలు తగ్గిస్తున్నాయి, రెండూ ఎ ఐ పేరు చెప్తున్నాయి. ఆంత్రోపిక్ లో, టెక్ హైరింగ్ లో జూనియర్ల వాటా ఇరవై ఏడు శాతం నుంచి తొమ్మిది శాతానికి పడిపోయింది. కానీ ఇన్ఫోసిస్ మాత్రం వ్యతిరేక దారిలో వెళ్తోంది. ఈ ఏడాది ఎంత మంది ఫ్రెషర్లను తీసుకుంటుంది?",
+    "దాదాపు ఇరవై వేల మందిని, అని చెప్తోంది. మీకు సలహా: మీరు ఎ ఐ వాడి, దాని పనిని చెక్ చేసిన ఒక ప్రాజెక్ట్ ని చూపించండి."
    ],
    "cards": [
     {
      "k": "BARCLAYS · OCT 22",
-     "v": "~5,000 jobs cut",
+     "v": "~5,000 jobs (5% of staff)",
      "cue": "Barclays",
      "cue_te": "బార్క్లేస్"
     },
     {
      "k": "AMERICAN EXPRESS · OCT 23",
-     "v": "~3,500 jobs cut",
+     "v": "~3,500 jobs (5% of staff)",
      "cue": "American",
      "cue_te": "అమెరికన్"
     },
     {
-     "k": "ANTHROPIC · JUNIOR TECH HIRES",
+     "k": "ANTHROPIC · JUNIORS' SHARE OF TECH HIRES",
      "v": "27% → 9%",
+     "cue": "27%",
+     "cue_te": "ఇరవై",
+     "drop": true
+    },
+    {
+     "k": "INFOSYS · FRESHERS THIS YEAR",
+     "v": "~20,000",
      "part": 2,
      "drop": true,
      "big": true
     },
     {
-     "k": "INFOSYS · INDIA",
-     "v": "Still on track: ~20,000 freshers",
-     "cue": "Infosys",
-     "cue_te": "ఇన్ఫోసిస్"
-    },
-    {
      "k": "FOR YOU",
-     "v": "Learn to check and steer AI's work",
-     "cue": "steer",
-     "cue_te": "నడిపించడం"
+     "v": "Show one AI project you checked",
+     "cue": "show",
+     "cue_te": "చూపించండి"
     }
    ],
    "points": [
-    "Barclays: about 5,000 jobs (about 5% of staff), Oct 22",
-    "American Express: about 3,500 jobs (about 5%), Oct 23",
-    "Anthropic: junior share of its tech hires 27% → 9%",
-    "Infosys: ~13,000 freshers in H1, on track for ~20,000"
+    "Barclays ~5,000 jobs, AmEx ~3,500 (about 5% each)",
+    "Anthropic: juniors' share of tech hires 27% → 9%",
+    "Infosys: ~13,000 freshers hired Apr-Sep",
+    "Infosys: on track for ~20,000 this financial year"
    ],
    "sources": "Bloomberg · The Independent · Anthropic · Business Standard"
   }
  ],
  "outro": {
-  "text": "That's your two weeks in AI. Would you let an AI agent work for you without approvals? Yes or no, in the comments. And follow AI Maastaaru for next Saturday's edition.",
-  "tts": "That's your two weeks in A.I. Now, a question. Would you let an A.I. agent work for you, without approvals? Yes or no, in the comments. And follow A.I. Maastaaru, for next Saturday's edition.",
-  "tts_te": "ఇదీ గత రెండు వారాల ఎ ఐ న్యూస్. ఇప్పుడు ఒక ప్రశ్న: అప్రూవల్స్ లేకుండా, ఎ ఐ ఏజెంట్ ని మీ పనులు చేయనిస్తారా? అవునా కాదా, కామెంట్ లో చెప్పండి. వచ్చే శనివారం ఎడిషన్ కోసం, ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
+  "text": "That's your AI news since October 11. Is your company hiring fewer freshers because of AI? Tell us in the comments. And follow AI Maastaaru: AI Weekly, every Saturday.",
+  "tts": "That's your A.I. news since October eleventh. Now, a question. Is your company hiring fewer freshers, because of A.I.? Tell us in the comments. And follow A.I. Maastaaru. A.I. Weekly, every Saturday.",
+  "tts_te": "ఇదీ అక్టోబర్ పదకొండు నుంచి ఎ ఐ న్యూస్. ఇప్పుడు ఒక ప్రశ్న: ఎ ఐ వల్ల మీ కంపెనీ ఫ్రెషర్లను తక్కువగా తీసుకుంటోందా? కామెంట్ లో చెప్పండి. ఎ ఐ వీక్లీ ప్రతి శనివారం వస్తుంది. ఎ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
  }
 }

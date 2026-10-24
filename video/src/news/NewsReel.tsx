@@ -17,7 +17,7 @@ type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[];
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase" };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase" };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 // English captions over a Telugu voice show whole phrases (word order differs); English voice keeps karaoke.
@@ -383,7 +383,8 @@ const BigNumber: React.FC<{ c: Card; accent: string }> = ({ c, accent }) => {
   );
 };
 
-const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: string }> = ({ seg, n, total, ticker }) => {
+// `lean`: fewer layers on screen at once (the dek fades after ~3.5 s, no lower third in the panel)
+const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: string; lean?: boolean }> = ({ seg, n, total, ticker, lean }) => {
   const f = useCurrentFrame();
   const accent = seg.accent ?? B.cyan;
   const cards = seg.cards ?? [];
@@ -417,7 +418,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
           })}
         </div>
       </div>
-      <div style={{ position: "absolute", top: 455, left: 60, right: 60, fontFamily: F.inter, fontWeight: 600, fontSize: 34, lineHeight: 1.3, color: "rgba(255,255,255,0.82)", opacity: prog(f, 14, 26), display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dek}</div>
+      <div style={{ position: "absolute", top: 455, left: 60, right: 60, fontFamily: F.inter, fontWeight: 600, fontSize: 34, lineHeight: 1.3, color: "rgba(255,255,255,0.82)", opacity: prog(f, 14, 26) * (lean ? 1 - prog(f, 105, 118) : 1), display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dek}</div>
       <div style={{ position: "absolute", top: 592, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: 26, letterSpacing: 1, color: "rgba(255,255,255,0.78)", opacity: prog(f, 20, 32), whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       {seg.demo ? (
         <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />
@@ -434,7 +435,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
               <div style={{ marginTop: 14, fontFamily: F.archivo, fontSize: cur.v.length > 26 ? 66 : 84, lineHeight: 1.05, color: B.white }}>{cur.v}</div>
             </div>
           )}
-          <LowerThird label={seg.tag ?? "NEWS"} headline={(seg.headline ?? []).join(" ")} ticker={ticker} accent={accent} />
+          {!lean && <LowerThird label={seg.tag ?? "NEWS"} headline={(seg.headline ?? []).join(" ")} ticker={ticker} accent={accent} />}
         </div>
       )}
       {false && (
@@ -558,7 +559,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <BrandFonts />
       {tl.segments.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} ticker={tl.musicBase ? "" : stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
+          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} lean={tl.lean} ticker={tl.musicBase ? "" : stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
