@@ -419,7 +419,7 @@ const BroadcastStory: React.FC<{ seg: Seg; n: number; total: number; ticker: str
         </div>
       </div>
       <div style={{ position: "absolute", top: 455, left: 60, right: 60, fontFamily: F.inter, fontWeight: 600, fontSize: 34, lineHeight: 1.3, color: "rgba(255,255,255,0.82)", opacity: prog(f, 14, 26) * (lean ? 1 - prog(f, 105, 118) : 1), display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dek}</div>
-      <div style={{ position: "absolute", top: 592, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: lean ? 31 : 26, letterSpacing: 1, color: lean ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.78)", opacity: prog(f, 20, 32), whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
+      <div style={{ position: "absolute", top: 592, left: 60, right: 60, fontFamily: F.mono, fontWeight: 700, fontSize: lean ? Math.min(31, Math.floor(1520 / ((seg.sources ?? "").length + 9))) : 26, letterSpacing: 1, color: lean ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.78)", opacity: prog(f, 20, 32), whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>SOURCES: {seg.sources?.toUpperCase()}</div>
       {seg.demo ? (
         <DemoPanel d={seg.demo} cues={cards.map((c) => c.f)} accent={accent} />
       ) : (
