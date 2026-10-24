@@ -12,9 +12,9 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
 ## Start of every run
 1. `git status` (clean), branch `sample1`, `git pull origin sample1` (after `free_disk.sh` has dropped renders and the
    remote has new commits, use the fetch + soft-reset recipe in the lessons: a plain pull rewrites every dropped render).
-1b. Read `BUJJI_CLAUDE_HANDOFF.md` (set up Oct 24: Bujji publishes the reels and posts analytics there). Log any numbers
-   in the creative log / queue, apply one change at a time, and add a `[NEW]` entry (newest first) when a package is
-   pushed. Its notes shape content choices; CLAUDE.md's rules still apply.
+1b. Bujji handoff: follow CLAUDE.md "Bujji handoff" before anything else. Read all of `BUJJI_CLAUDE_HANDOFF.md`
+   (Standing Rules first), answer each new Bujji entry, log its numbers in `series/creative_log.md` (Results) or the
+   queue, and add a `[NEW]` entry when the run's package is pushed (handoff commits on their own).
 2. Disk: the writable allowance is small (`df -h /`; "Avail" near 0 means the allowance is spent). An episode needs
    about 1 GB (4 renders + send copies). `pipeline/tools/free_disk.sh "<keep-regex>"` drops the working-tree copies of
    committed renders (they stay in git and on GitHub, `git status` stays clean; it freed 5 GB on Oct 18). Also delete
