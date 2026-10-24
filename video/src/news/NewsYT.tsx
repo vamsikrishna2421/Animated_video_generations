@@ -210,7 +210,7 @@ const Chapter: React.FC<{ seg: Seg; n: number; total: number; edition: string }>
   );
 };
 
-const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string }> = ({ seg, stories, name }) => {
+const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string; recap?: string }> = ({ seg, stories, name, recap }) => {
   const f = useCurrentFrame();
   const subAt = seg.frames - SUB_LEN;
   return (
@@ -218,7 +218,7 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string }> = ({ seg, stor
       <Field speed={0.3} />
       {f < subAt ? (
         <div style={{ position: "absolute", top: 110, left: 110, right: 110 }}>
-          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 8, color: B.cyan, marginBottom: 34 }}>THE WEEK IN {stories.length} STORIES</div>
+          <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 8, color: B.cyan, marginBottom: 34 }}>{recap ?? `THE WEEK IN ${stories.length} STORIES`}</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "22px 34px" }}>
             {stories.map((s, i) => {
               const p = prog(f, 4 + i * 3, 16 + i * 3);
@@ -257,7 +257,7 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
       <BrandFonts />
       {segs.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <ColdOpen seg={s} tl={tl} /> : s.name === "outro" ? <Outro seg={s} stories={stories} name={handle === "@ai_maastaaru_telugu" ? "AI Maastaaru Telugu" : "AI Maastaaru"} /> : <Chapter seg={s} n={stories.indexOf(s) + 1} total={stories.length} edition={tl.edition} />}
+          {s.name === "hook" ? <ColdOpen seg={s} tl={tl} /> : s.name === "outro" ? <Outro seg={s} stories={stories} recap={tl.recap} name={handle === "@ai_maastaaru_telugu" ? "AI Maastaaru Telugu" : "AI Maastaaru"} /> : <Chapter seg={s} n={stories.indexOf(s) + 1} total={stories.length} edition={tl.edition} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
