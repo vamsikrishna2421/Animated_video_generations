@@ -117,8 +117,12 @@ def build(spec_path, lang="en"):
             entry["cards"] = cards
         if name == "hook":
             entry["lines"] = seg["lines"]
-            # sound hits on hook words (an impact lands as the word is spoken)
-            entry["hits"] = [next((w["s"] for w in words if w["w"].lower().startswith(h.lower())), 0) for h in seg.get("hits", [])]
+            # sound hits on hook words (an impact lands as the word is spoken); Telugu hits on Telugu words (`hits_te`)
+            if lang != "en" and seg.get("hits_te"):
+                te_words = word_times(a, sr, " ".join(seg[key]) if isinstance(seg[key], list) else seg[key], ld)
+                entry["hits"] = [next((w["s"] for w in te_words if h in w["w"]), 0) for h in seg["hits_te"]]
+            else:
+                entry["hits"] = [next((w["s"] for w in words if w["w"].lower().startswith(h.lower())), 0) for h in seg.get("hits", [])]
         timeline["segments"].append(entry)
         print(name, f"{len(a) / sr:.1f}s", flush=True)
     timeline["frames"] = sum(s["frames"] for s in timeline["segments"])
