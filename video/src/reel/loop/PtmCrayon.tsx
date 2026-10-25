@@ -1,4 +1,5 @@
 import React from "react";
+import { Audio, Sequence, staticFile } from "remotion";
 import { Ctx, Pt, rng, stroke, circlePts, clamp, easeOut, seg } from "./crayon";
 import { CrayonCanvas } from "./CrayonCanvas";
 import { rrect, rrectPts, tag, Sfx } from "./DistillCrayon";
@@ -20,7 +21,7 @@ type Beat = { who: string; shot: string; prop: string; n: number };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "stern" | "calm" | "smile" | "shock" | "yell" | "sheepish" | "happy" | "smug" | "confused" | "sus";
-type Arms = "rest" | "papers" | "point" | "fold" | "phone" | "phoneBig" | "type" | "up" | "palm" | "chin";
+type Arms = "rest" | "papers" | "point" | "fold" | "phone" | "phoneBig" | "phoneUp" | "type" | "up" | "palm" | "chin";
 type Who = "teacher" | "dad" | "kittu";
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
@@ -137,6 +138,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   else if (a === "fold") { l = [[-160, 210], [80, 175]]; rr = [[160, 230], [-80, 195]]; }
   else if (a === "phone") rr = [[182, 220], [118, 120]];
   else if (a === "phoneBig") rr = [[180, 200], [120, 70]];
+  else if (a === "phoneUp") rr = [[120, -100], [0, -260]];
   else if (a === "type") { l = [[-150, 230], [-50, 160]]; rr = [[150, 230], [50, 160]]; }
   else if (a === "up") { l = [[-220, -20], [-112, -196]]; rr = [[220, -20], [112, -196]]; }
   else if (a === "palm") rr = [[200, 120], [250, -20]];
@@ -146,6 +148,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   if (!front) { limb(c, [R, rr[0], rr[1]], who === "teacher" ? "#7f1d1d" : L.top, r); palm(c, rr[1][0], rr[1][1], L.skin, r); }
   if (a === "phone" || a === "type") phoneProp(c, a === "type" ? 0 : 126, a === "type" ? 150 : 60, 1, a === "type" ? 0 : -0.1);
   if (a === "phoneBig") phoneProp(c, 112, -10, 1.55, -0.12);
+  if (a === "phoneUp") phoneProp(c, -30, -360, 1.35, 0.05);
   face(c, who, m, talk, r);
   if (front) { limb(c, [R, rr[0], rr[1]], L.top, r); palm(c, rr[1][0], rr[1][1], L.skin, r); }
   c.restore();
@@ -325,7 +328,7 @@ const studyChip = (c: Ctx, W: number, k: number, labels: number[], rows: number[
   c.restore();
 };
 const POSE: Record<number, Partial<Record<Who, [Mood, Arms]>>> = {
-  1: { teacher: ["stern", "point"], dad: ["shock", "rest"], kittu: ["sheepish", "phoneBig"] },
+  1: { teacher: ["stern", "point"], dad: ["shock", "rest"], kittu: ["sheepish", "phoneUp"] },
   2: { teacher: ["stern", "fold"], dad: ["yell", "point"], kittu: ["sheepish", "phone"] },
   4: { teacher: ["smug", "fold"], dad: ["confused", "rest"], kittu: ["sheepish", "rest"] },
   5: { teacher: ["calm", "fold"], dad: ["yell", "up"], kittu: ["shock", "rest"] },
@@ -355,18 +358,28 @@ const StPtm: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, nx = ls[i + 1] ? ls[i + 1].from : s.frames;
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     if (b.shot === "phone" && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("s")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("s")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />,
+      <Sfx key={k("c")} at={at + 1} src="reel/creative09v1/clap.wav" vol={0.55} />);
     if (b.prop === "copied") sfx.push(<Sfx key={k("c")} at={cueOf(i, 1, 0.7) + 2} src="audio/gag_bonk.wav" vol={0.4} />);
-    if (b.prop === "passed") sfx.push(<Sfx key={k("h")} at={cueOf(i, 1, 0.55)} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("s")} at={cueOf(i, 1, 0.55)} src="audio/sfx_snap.wav" vol={0.5} />);
+    if (b.prop === "passed") sfx.push(<Sfx key={k("h")} at={at + l.frames + 1} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("c")} at={at + l.frames + 1} src="reel/creative09v1/clap.wav" vol={0.6} />);
     if (b.prop === "ban") sfx.push(<Sfx key={k("b")} at={at + 4} src="audio/gag_bonk.wav" vol={0.3} />);
     if (b.prop === "study1" || b.prop === "study2") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.6)} src="audio/gag_ding.wav" vol={0.35} />);
     if (b.prop === "type") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.4)} src="audio/gag_ding.wav" vol={0.3} />);
     if (b.prop === "ask" || b.prop === "ask2") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "solved") sfx.push(<Sfx key={k("s")} at={cueOf(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.45} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.6)} src="reel/sfx_boom.wav" vol={0.6} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.75)} src="reel/sfx_boom.wav" vol={0.5} />);
+    if (b.prop === "solved") sfx.push(<Sfx key={k("s")} at={cueOf(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.45} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.6)} src="reel/sfx_boom.wav" vol={0.6} />,
+      <Sfx key={k("c")} at={cueOf(i, 1, 0.6)} src="reel/creative09v1/clap.wav" vol={0.5} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.75)} src="reel/sfx_boom.wav" vol={0.5} />,
+      <Sfx key={k("c")} at={cueOf(i, 1, 0.75)} src="reel/creative09v1/clap.wav" vol={0.5} />);
     if (b.prop === "push") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "caved") sfx.push(<Sfx key={k("g")} at={at + 2} src="reel/sfx_glitch.wav" vol={0.35} />, <Sfx key={k("o")} at={at + 12} src="audio/gag_bonk.wav" vol={0.4} />);
-    if (b.prop === "explain") sfx.push(<Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.45} />);   // into the drop before his line
+    if (b.prop === "explain") sfx.push(<Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.22} />);   // into the drop before his line
+    if (b.prop === "push") {   // the build: hats and claps from the cut (on the beat) to the pause before the punchline
+      const end = beats.findIndex((q) => q.prop === "loop");
+      const dur = Math.max(30, (end >= 0 && ls[end] ? ls[end].from : s.frames) - 22);
+      sfx.push(<Sequence key={k("perc")} from={0} durationInFrames={dur} layout="none">
+        <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(q: number) => 0.16 + 0.26 * Math.min(1, q / dur)} />
+      </Sequence>);
+    }
   });
   return (
     <>
@@ -413,7 +426,7 @@ const StPtm: React.FC<SP> = ({ s }) => {
           if (b.prop === "passed") tag(c, "AI: 10/10 · Kittu: 2/20", W / 2, 380, 66, "#0f172a", "#facc15", -0.02, seg(f, cu(1, 0.55) - 3, cu(1, 0.55) + 5));
           if (b.prop === "check") {
             const c1 = cu(1, 0.6);
-            if (f < c1) tag(c, `our test: it gave in ${D.caved}/${D.n}`, W / 2, 380, 64, "#0f172a", "#facc15", -0.02, 1);
+            if (f < c1) tag(c, `our test: it gave in ${D.caved}/${D.n}`, W / 2, 308, 86, "#0f172a", "#facc15", -0.02, 1);   // above the board's sum
             else tag(c, "ask step one, not the answer", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(f, c1, c1 + 6));
           }
           if (b.prop === "explain") tag(c, "explain step one: 15% of 240", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.25));
