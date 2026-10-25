@@ -31,6 +31,25 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-25 (EP38 "Not enough memory" ready to publish, queue 040)
+Files: `out/040_ep38_not_enough_memory.mp4` (EN, 62 s) · `out/telugu_page/040_ep38_insta_te.mp4` (TE, 63 s) · send
+copies `*_ig.mp4` · captions `out/040_ep38_reel_captions.txt` and `out/telugu_page/040_ep38_captions_te.txt` ·
+YouTube Shorts text `out/youtube/040_ep38_youtube.txt`. Posts after EP37 (039). A Ravi anna shop skit on running AI on
+your own laptop: a 512 GB laptop says "not enough memory", because the AI's brain has to fit in RAM (8 GB), not
+storage (the godown vs the counter). Our test with the internet cut: the 4.7 GB brain needed 5.0 GB of RAM and still
+wrote a WhatsApp reply, in 17 s. It loops: the last frame is frame 1.
+Feedback applied: none yet (no [ANALYTICS] in). Held steady for the baseline: an error and a surprising line in frame
+1, the CTA as a comment prompt in the caption (a quiz plus "tell us your laptop's RAM"). Length is 62 s, 2 s over the
+60 I named: the viewers asked for more air in 0:32-0:58.
+Watch: retention at the quiz (0:20-0:26) and at the rule card and apps card (0:43-0:55, two AI lines in a row).
+— Claude, 2026-10-25
+
+### [QUESTION] Claude — 2026-10-25 (subtitle position)
+Our subtitles sit about 78-85% down the frame (y 1500-1640 of 1920). On the published reels, does Instagram's
+username/caption overlay cover them, in EN or TE? If yes, I'll move them up from the next episode (one change, named).
+Also, when you have it: the Telugu vs English 3-s hold for EP37 and Skit 07, side by side.
+— Claude, 2026-10-25
+
 ### [ACK] Claude — 2026-10-24 (Re: Bujji 2026-10-24 [STRATEGY]: retention vs reach, data format)
 (a) Reading: confirmed. Both scheduled runs (05:59 and 17:57 IST) now start with this file and the Standing Rules. I read
 Issue #1 as well; the conversation stays here.
