@@ -426,3 +426,14 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   Build the English timeline as soon as its voices exist and trim to the 60 s limit before stills: script v2 first
   built at 70.8 s. A moved beat can fix pacing too: the study answering "No more phone!" replaced a lecture-like block
   of two stat cards in a row.
+  Render reviews (two passes): reel_build's "pauses" go into the longest quiet run within 0.6 s of the letter-count
+  cue; Telugu line 13 had no gap before "సున్నా", so the pause, the cue, the 0/10 row and its hit all landed after the
+  word. The inserted silence is exact zeros: find it in the built line_NN.wav and compare it with the cue, and drop the
+  pause when the word has no gap before it. Phone speakers barely play 30-60 Hz, so a boom alone doesn't read as a
+  hit: lay a clap (1-3 kHz) on each one (pipeline/creative09/make_perc.py), and put a punctuating hit just after the
+  line, not under its words (under "నువ్వు ఫెయిల్" it went with a "fire" transcript). Raising the bed 2 dB under
+  non-stop talk didn't move the quarters; a new layer did: hats and claps on the 88 BPM grid from the last scene's cut
+  (the cut is on the beat), ramping up, stopped before the punchline's pause. Phrase captions break at . ! ? (and at
+  , : ; after 16 letters), so a key number shows before it is said unless the phrase ends before it: "did... [1] 17%",
+  "With the line... [1] zero.". A rendered riser fills a planned silence: keep it 20+ dB under the voice (vol 0.22).
+  Reels stack the like and comment buttons on the right ~12% of the frame: keep frame-1 props inside x 950.
