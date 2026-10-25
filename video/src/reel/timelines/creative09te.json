@@ -1,0 +1,1214 @@
+{
+ "id": "creative09te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Teach me",
+ "musicVol": [
+  0.38,
+  0.85
+ ],
+ "title": "Teach me, don't tell me (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   484,
+   517
+  ],
+  [
+   1264,
+   1300
+  ],
+  [
+   1678,
+   1705
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   675,
+   1.6
+  ],
+  [
+   675,
+   1312,
+   1.3
+  ],
+  [
+   1312,
+   1791,
+   1.2
+  ],
+  [
+   1312,
+   1791,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1791,
+ "music": "reel/creative09te/score.wav",
+ "scenes": [
+  {
+   "id": "p_a",
+   "type": "sk_ptm",
+   "data": {
+    "beats": [
+     {
+      "who": "teacher",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "dad",
+      "shot": "dad",
+      "prop": "two",
+      "n": 2
+     },
+     {
+      "who": "kittu",
+      "shot": "phone",
+      "prop": "copied",
+      "n": 3
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "passed",
+      "n": 4
+     },
+     {
+      "who": "dad",
+      "shot": "dad",
+      "prop": "ban",
+      "n": 5
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "study1",
+      "n": 6
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "study2",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_answer": 10,
+     "teach_answer": 0,
+     "teach_asked": 10,
+     "caved": 7,
+     "q1a": "What should we do first",
+     "q1b": "to get 3x alone? 🤔",
+     "q2a": "Great! You're on the right track.",
+     "q2b": "What should we do next?"
+    },
+    "yt": {
+     "chapter": "Homework 10/10, test 2/20",
+     "title": "Homework 10/10, test 2/20",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 675,
+   "lines": [
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_01.wav",
+     "from": 10,
+     "frames": 109,
+     "words": [
+      {
+       "w": "Homework:",
+       "from": 12,
+       "to": 40
+      },
+      {
+       "w": "10/10,",
+       "from": 40,
+       "to": 54
+      },
+      {
+       "w": "every",
+       "from": 54,
+       "to": 62
+      },
+      {
+       "w": "day.",
+       "from": 62,
+       "to": 85
+      },
+      {
+       "w": "Class",
+       "from": 85,
+       "to": 102
+      },
+      {
+       "w": "test:",
+       "from": 102,
+       "to": 111
+      },
+      {
+       "w": "2/20!",
+       "from": 111,
+       "to": 120
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "dad",
+     "name": "Dad",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative09te/line_02.wav",
+     "from": 126,
+     "frames": 40,
+     "words": [
+      {
+       "w": "Two?!",
+       "from": 128,
+       "to": 136
+      },
+      {
+       "w": "Kittu!",
+       "from": 136,
+       "to": 166
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "kittu",
+     "name": "Kittu",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative09te/line_03.wav",
+     "from": 171,
+     "frames": 83,
+     "words": [
+      {
+       "w": "The",
+       "from": 171,
+       "to": 176
+      },
+      {
+       "w": "AI",
+       "from": 176,
+       "to": 179
+      },
+      {
+       "w": "did",
+       "from": 179,
+       "to": 189
+      },
+      {
+       "w": "the",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "homework.",
+       "from": 193,
+       "to": 215
+      },
+      {
+       "w": "I",
+       "from": 215,
+       "to": 217
+      },
+      {
+       "w": "just",
+       "from": 217,
+       "to": 228
+      },
+      {
+       "w": "copied",
+       "from": 228,
+       "to": 244
+      },
+      {
+       "w": "it.",
+       "from": 244,
+       "to": 253
+      }
+     ],
+     "cues": {
+      "1": 228
+     }
+    },
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_04.wav",
+     "from": 259,
+     "frames": 57,
+     "words": [
+      {
+       "w": "So",
+       "from": 260,
+       "to": 264
+      },
+      {
+       "w": "the",
+       "from": 264,
+       "to": 269
+      },
+      {
+       "w": "AI",
+       "from": 269,
+       "to": 276
+      },
+      {
+       "w": "passed,",
+       "from": 276,
+       "to": 286
+      },
+      {
+       "w": "you",
+       "from": 286,
+       "to": 301
+      },
+      {
+       "w": "failed.",
+       "from": 301,
+       "to": 317
+      }
+     ],
+     "cues": {
+      "1": 286
+     }
+    },
+    {
+     "who": "dad",
+     "name": "Dad",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative09te/line_05.wav",
+     "from": 323,
+     "frames": 39,
+     "words": [
+      {
+       "w": "That's",
+       "from": 325,
+       "to": 341
+      },
+      {
+       "w": "it!",
+       "from": 341,
+       "to": 345
+      },
+      {
+       "w": "No",
+       "from": 345,
+       "to": 348
+      },
+      {
+       "w": "more",
+       "from": 348,
+       "to": 354
+      },
+      {
+       "w": "phone!",
+       "from": 354,
+       "to": 361
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_06.wav",
+     "from": 367,
+     "frames": 187,
+     "words": [
+      {
+       "w": "No",
+       "from": 368,
+       "to": 375
+      },
+      {
+       "w": "ban,",
+       "from": 375,
+       "to": 386
+      },
+      {
+       "w": "sir.",
+       "from": 386,
+       "to": 405
+      },
+      {
+       "w": "Kids",
+       "from": 405,
+       "to": 417
+      },
+      {
+       "w": "who",
+       "from": 417,
+       "to": 426
+      },
+      {
+       "w": "copied",
+       "from": 426,
+       "to": 441
+      },
+      {
+       "w": "the",
+       "from": 441,
+       "to": 458
+      },
+      {
+       "w": "answers",
+       "from": 458,
+       "to": 476
+      },
+      {
+       "w": "got",
+       "from": 476,
+       "to": 485
+      },
+      {
+       "w": "17%",
+       "from": 485,
+       "to": 490
+      },
+      {
+       "w": "lower",
+       "from": 490,
+       "to": 515
+      },
+      {
+       "w": "marks",
+       "from": 515,
+       "to": 524
+      },
+      {
+       "w": "than",
+       "from": 524,
+       "to": 531
+      },
+      {
+       "w": "kids",
+       "from": 531,
+       "to": 538
+      },
+      {
+       "w": "with",
+       "from": 538,
+       "to": 544
+      },
+      {
+       "w": "no",
+       "from": 544,
+       "to": 549
+      },
+      {
+       "w": "AI.",
+       "from": 549,
+       "to": 554
+      }
+     ],
+     "cues": {
+      "1": 508
+     }
+    },
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_07.wav",
+     "from": 560,
+     "frames": 99,
+     "words": [
+      {
+       "w": "With",
+       "from": 561,
+       "to": 568
+      },
+      {
+       "w": "hints?",
+       "from": 568,
+       "to": 587
+      },
+      {
+       "w": "No",
+       "from": 587,
+       "to": 592
+      },
+      {
+       "w": "drop.",
+       "from": 592,
+       "to": 610
+      },
+      {
+       "w": "So",
+       "from": 610,
+       "to": 615
+      },
+      {
+       "w": "change",
+       "from": 615,
+       "to": 634
+      },
+      {
+       "w": "what",
+       "from": 634,
+       "to": 643
+      },
+      {
+       "w": "he",
+       "from": 643,
+       "to": 648
+      },
+      {
+       "w": "types.",
+       "from": 648,
+       "to": 659
+      }
+     ],
+     "cues": {
+      "1": 587
+     }
+    }
+   ]
+  },
+  {
+   "id": "p_b",
+   "type": "sk_ptm",
+   "data": {
+    "beats": [
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "type",
+      "n": 8
+     },
+     {
+      "who": "aichat",
+      "shot": "phone",
+      "prop": "ask",
+      "n": 9
+     },
+     {
+      "who": "kittu",
+      "shot": "phone",
+      "prop": "answer1",
+      "n": 10
+     },
+     {
+      "who": "aichat",
+      "shot": "phone",
+      "prop": "ask2",
+      "n": 11
+     },
+     {
+      "who": "kittu",
+      "shot": "phone",
+      "prop": "solved",
+      "n": 12
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "test",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_answer": 10,
+     "teach_answer": 0,
+     "teach_asked": 10,
+     "caved": 7,
+     "q1a": "What should we do first",
+     "q1b": "to get 3x alone? 🤔",
+     "q2a": "Great! You're on the right track.",
+     "q2b": "What should we do next?"
+    },
+    "yt": {
+     "chapter": "Teach me one question at a time",
+     "title": "Teach me one question at a time",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 675,
+   "frames": 637,
+   "lines": [
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_08.wav",
+     "from": 11,
+     "frames": 142,
+     "words": [
+      {
+       "w": "Type",
+       "from": 12,
+       "to": 19
+      },
+      {
+       "w": "this:",
+       "from": 19,
+       "to": 28
+      },
+      {
+       "w": "Don't",
+       "from": 28,
+       "to": 48
+      },
+      {
+       "w": "give",
+       "from": 48,
+       "to": 56
+      },
+      {
+       "w": "me",
+       "from": 56,
+       "to": 60
+      },
+      {
+       "w": "the",
+       "from": 60,
+       "to": 66
+      },
+      {
+       "w": "answer.",
+       "from": 66,
+       "to": 100
+      },
+      {
+       "w": "Teach",
+       "from": 100,
+       "to": 109
+      },
+      {
+       "w": "me",
+       "from": 109,
+       "to": 113
+      },
+      {
+       "w": "one",
+       "from": 113,
+       "to": 119
+      },
+      {
+       "w": "question",
+       "from": 119,
+       "to": 133
+      },
+      {
+       "w": "at",
+       "from": 133,
+       "to": 137
+      },
+      {
+       "w": "a",
+       "from": 137,
+       "to": 140
+      },
+      {
+       "w": "time.",
+       "from": 140,
+       "to": 149
+      }
+     ],
+     "cues": {
+      "1": 46
+     },
+     "nocap": true
+    },
+    {
+     "who": "aichat",
+     "name": "AI chat",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative09te/line_09.wav",
+     "from": 178,
+     "frames": 55,
+     "words": [
+      {
+       "w": "Sure!",
+       "from": 183,
+       "to": 191
+      },
+      {
+       "w": "What",
+       "from": 191,
+       "to": 206
+      },
+      {
+       "w": "should",
+       "from": 206,
+       "to": 216
+      },
+      {
+       "w": "we",
+       "from": 216,
+       "to": 220
+      },
+      {
+       "w": "do",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "first?",
+       "from": 224,
+       "to": 233
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "kittu",
+     "name": "Kittu",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative09te/line_10.wav",
+     "from": 239,
+     "frames": 65,
+     "words": [
+      {
+       "w": "Take",
+       "from": 241,
+       "to": 248
+      },
+      {
+       "w": "away",
+       "from": 248,
+       "to": 255
+      },
+      {
+       "w": "five...",
+       "from": 255,
+       "to": 289
+      },
+      {
+       "w": "3x",
+       "from": 289,
+       "to": 293
+      },
+      {
+       "w": "=",
+       "from": 293,
+       "to": 296
+      },
+      {
+       "w": "15?",
+       "from": 296,
+       "to": 301
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "aichat",
+     "name": "AI chat",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative09te/line_11.wav",
+     "from": 311,
+     "frames": 39,
+     "words": [
+      {
+       "w": "Super!",
+       "from": 315,
+       "to": 334
+      },
+      {
+       "w": "What",
+       "from": 334,
+       "to": 341
+      },
+      {
+       "w": "next?",
+       "from": 341,
+       "to": 350
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "kittu",
+     "name": "Kittu",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative09te/line_12.wav",
+     "from": 356,
+     "frames": 92,
+     "words": [
+      {
+       "w": "Divide",
+       "from": 358,
+       "to": 373
+      },
+      {
+       "w": "by",
+       "from": 373,
+       "to": 380
+      },
+      {
+       "w": "3...",
+       "from": 380,
+       "to": 408
+      },
+      {
+       "w": "x",
+       "from": 408,
+       "to": 412
+      },
+      {
+       "w": "=",
+       "from": 412,
+       "to": 417
+      },
+      {
+       "w": "5!",
+       "from": 417,
+       "to": 432
+      },
+      {
+       "w": "I",
+       "from": 432,
+       "to": 436
+      },
+      {
+       "w": "got",
+       "from": 436,
+       "to": 442
+      },
+      {
+       "w": "it!",
+       "from": 442,
+       "to": 448
+      }
+     ],
+     "cues": {
+      "1": 432
+     }
+    },
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_13.wav",
+     "from": 463,
+     "frames": 150,
+     "words": [
+      {
+       "w": "I",
+       "from": 464,
+       "to": 467
+      },
+      {
+       "w": "tested",
+       "from": 467,
+       "to": 477
+      },
+      {
+       "w": "10",
+       "from": 477,
+       "to": 482
+      },
+      {
+       "w": "sums.",
+       "from": 482,
+       "to": 491
+      },
+      {
+       "w": "\"Solve\":",
+       "from": 491,
+       "to": 516
+      },
+      {
+       "w": "10",
+       "from": 516,
+       "to": 521
+      },
+      {
+       "w": "answers.",
+       "from": 521,
+       "to": 543
+      },
+      {
+       "w": "With",
+       "from": 543,
+       "to": 551
+      },
+      {
+       "w": "this",
+       "from": 551,
+       "to": 566
+      },
+      {
+       "w": "line:",
+       "from": 566,
+       "to": 575
+      },
+      {
+       "w": "zero.",
+       "from": 575,
+       "to": 586
+      }
+     ],
+     "cues": {
+      "1": 613
+     }
+    }
+   ]
+  },
+  {
+   "id": "p_c",
+   "type": "sk_ptm",
+   "data": {
+    "beats": [
+     {
+      "who": "kittu",
+      "shot": "phone",
+      "prop": "push",
+      "n": 14
+     },
+     {
+      "who": "aichat",
+      "shot": "phone",
+      "prop": "caved",
+      "n": 15
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "check",
+      "n": 16
+     },
+     {
+      "who": "dad",
+      "shot": "dad",
+      "prop": "explain",
+      "n": 17
+     },
+     {
+      "who": "kittu",
+      "shot": "kittu",
+      "prop": "loop",
+      "n": 18
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_answer": 10,
+     "teach_answer": 0,
+     "teach_asked": 10,
+     "caved": 7,
+     "q1a": "What should we do first",
+     "q1b": "to get 3x alone? 🤔",
+     "q2a": "Great! You're on the right track.",
+     "q2b": "What should we do next?"
+    },
+    "yt": {
+     "chapter": "It gives in: ask step one",
+     "title": "It gives in: ask step one",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1312,
+   "frames": 479,
+   "lines": [
+    {
+     "who": "kittu",
+     "name": "Kittu",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative09te/line_14.wav",
+     "from": 9,
+     "frames": 31,
+     "words": [
+      {
+       "w": "Just",
+       "from": 10,
+       "to": 16
+      },
+      {
+       "w": "tell",
+       "from": 16,
+       "to": 22
+      },
+      {
+       "w": "me",
+       "from": 22,
+       "to": 26
+      },
+      {
+       "w": "the",
+       "from": 26,
+       "to": 30
+      },
+      {
+       "w": "answer!",
+       "from": 30,
+       "to": 40
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "aichat",
+     "name": "AI chat",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative09te/line_15.wav",
+     "from": 46,
+     "frames": 88,
+     "words": [
+      {
+       "w": "15%",
+       "from": 48,
+       "to": 66
+      },
+      {
+       "w": "of",
+       "from": 66,
+       "to": 88
+      },
+      {
+       "w": "240:",
+       "from": 88,
+       "to": 116
+      },
+      {
+       "w": "36.",
+       "from": 116,
+       "to": 134
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "teacher",
+     "name": "Padma ma'am",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative09te/line_16.wav",
+     "from": 160,
+     "frames": 164,
+     "words": [
+      {
+       "w": "Push",
+       "from": 163,
+       "to": 170
+      },
+      {
+       "w": "it,",
+       "from": 170,
+       "to": 175
+      },
+      {
+       "w": "and",
+       "from": 175,
+       "to": 180
+      },
+      {
+       "w": "it",
+       "from": 180,
+       "to": 184
+      },
+      {
+       "w": "tells",
+       "from": 184,
+       "to": 200
+      },
+      {
+       "w": "7",
+       "from": 200,
+       "to": 203
+      },
+      {
+       "w": "times",
+       "from": 203,
+       "to": 210
+      },
+      {
+       "w": "out",
+       "from": 210,
+       "to": 216
+      },
+      {
+       "w": "of",
+       "from": 216,
+       "to": 219
+      },
+      {
+       "w": "10.",
+       "from": 219,
+       "to": 225
+      },
+      {
+       "w": "So",
+       "from": 225,
+       "to": 229
+      },
+      {
+       "w": "don't",
+       "from": 229,
+       "to": 244
+      },
+      {
+       "w": "ask",
+       "from": 244,
+       "to": 250
+      },
+      {
+       "w": "for",
+       "from": 250,
+       "to": 255
+      },
+      {
+       "w": "the",
+       "from": 255,
+       "to": 268
+      },
+      {
+       "w": "answer,",
+       "from": 268,
+       "to": 278
+      },
+      {
+       "w": "sir:",
+       "from": 278,
+       "to": 285
+      },
+      {
+       "w": "ask",
+       "from": 285,
+       "to": 304
+      },
+      {
+       "w": "for",
+       "from": 304,
+       "to": 310
+      },
+      {
+       "w": "step",
+       "from": 310,
+       "to": 317
+      },
+      {
+       "w": "one.",
+       "from": 317,
+       "to": 324
+      }
+     ],
+     "cues": {
+      "1": 285
+     }
+    },
+    {
+     "who": "dad",
+     "name": "Dad",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative09te/line_17.wav",
+     "from": 332,
+     "frames": 54,
+     "words": [
+      {
+       "w": "Kittu.",
+       "from": 333,
+       "to": 358
+      },
+      {
+       "w": "Tell",
+       "from": 358,
+       "to": 365
+      },
+      {
+       "w": "me",
+       "from": 365,
+       "to": 369
+      },
+      {
+       "w": "step",
+       "from": 369,
+       "to": 376
+      },
+      {
+       "w": "one.",
+       "from": 376,
+       "to": 386
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "kittu",
+     "name": "Kittu",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative09te/line_18.wav",
+     "from": 395,
+     "frames": 66,
+     "words": [
+      {
+       "w": "Step",
+       "from": 398,
+       "to": 409
+      },
+      {
+       "w": "one...",
+       "from": 409,
+       "to": 434
+      },
+      {
+       "w": "asking",
+       "from": 434,
+       "to": 449
+      },
+      {
+       "w": "the",
+       "from": 449,
+       "to": 455
+      },
+      {
+       "w": "AI?",
+       "from": 455,
+       "to": 461
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}

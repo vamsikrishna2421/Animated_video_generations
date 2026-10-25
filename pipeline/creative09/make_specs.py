@@ -43,7 +43,7 @@ LINES = {
     15: ("aichat", "phone", "caved", "Fifteen percent of two forty is thirty-six.", "రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు."),
     16: ("teacher", "teacher", "check", "It gives in seven times in ten. So don't check answers, sir. [1] Ask step one.",
          "గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేసింది. అందుకే సార్, ఆన్సర్ కాదు, [1] స్టెప్ వన్ అడగండి."),   # "చెప్పేస్తుంది" garbled
-    17: ("dad", "dad", "explain", "Kittu. Explain step one.", "కిట్టూ. స్టెప్ వన్ ఎక్స్ప్లెయిన్ చెయ్యి."),
+    17: ("dad", "dad", "explain", "Kittu. Explain step one.", "కిట్టూ. స్టెప్ వన్ చెప్పు."),   # "ఎక్స్‌ప్లెయిన్ చెయ్యి" came out rushed or garbled
     18: ("kittu", "kittu", "loop", "Step one is... ask the AI?", "స్టెప్ వన్... ఏయ్ ఐ ని అడగడం?"),   # Prakash says "ఏఐ ని" as "ee-ni"
 }
 TTS_EN = {2: "Two?! Kit-too!", 17: "Kit-too. Explain step one."}   # "Kittu" came out "key two" (a long ee); the hyphen keeps it short
@@ -62,11 +62,11 @@ SHOW_TE = {1: "Homework: 10/10, every day. Class test: 2/20!", 2: "Two?! Kittu!"
            13: "I tested 10 sums. \"Solve\": 10 answers. With this line: [1] zero.",
            14: "Just tell me the answer!", 15: "15% of 240: 36.",
            16: "Push it, and it tells 7 times out of 10. So don't ask for the answer, sir: [1] ask for step one.",
-           17: "Kittu. Explain step one.", 18: "Step one... asking the AI?"}
+           17: "Kittu. Tell me step one.", 18: "Step one... asking the AI?"}
 NOCAP = {8}   # the TYPE THIS card carries line 8
 # a: the case (the papers, the confession, the ban, the study); b: the line, the lesson, our test; c: the push, the check, the loop
 SCENES = [("p_a", (1, 2, 3, 4, 5, 6, 7), {"pre": 0.2, "boost": 1.6, "drop_at": [[5, "1", 0.3]], "tail": 0.1}),   # the bed drops out
-          ("p_b", (8, 9, 10, 11, 12, 13), {"lift": 0.9, "pre": 0.35, "boost": 1.3, "drop_at": [[5, "1", 0.4]], "tail": 0.15}),   # before
+          ("p_b", (8, 9, 10, 11, 12, 13), {"lift": 0.9, "pre": 0.35, "boost": 1.3, "drop_at": [[5, "1", 0.4]], "tail": 0.05}),   # before
           ("p_c", (14, 15, 16, 17, 18), {"lift": 0.8, "pre": 0.3, "outro": True, "boost": 1.2, "rise": 1.3, "drop_pre": [[4, 0.05, 0.9]],
                                          "tail": 0.2})]   # 17%, before "zero" and before "Step one is..."
 GAP = {1: 0.2, 2: 0.15, 3: 0.2, 7: 0.25, 8: 0.85, 12: 0.5, 13: 0.75, 15: 0.85, 16: 0.25, 17: 0.3}   # 8: TYPE THIS holds ~4.5 s; 13: the
@@ -75,10 +75,10 @@ GAIN = {"teacher": 0.3, "dad": 0.3, "kittu": 0.3, "aichat": 0.0}
 GAIN_LINE = {2: 0.8, 5: 0.8}   # the dad's yells
 GAIN_TE = {}
 PAUSES = {"en": {6: {"1": 0.3}, 13: {"1": 0.45}}, "te": {6: {"1": 0.3}, 13: {"1": 0.45}}}   # a beat before 17% and before "zero"
-LINE_TEMPO = {"en": {6: 1.18, 8: 1.05, 9: 1.2, 10: 1.2, 11: 1.2, 13: 1.2, 15: 1.2, 16: 1.18}, "te": {8: 1.0}}   # the line to copy near its own speed; the narrator's
+LINE_TEMPO = {"en": {6: 1.18, 8: 1.05, 9: 1.2, 10: 1.2, 11: 1.2, 13: 1.2, 15: 1.2, 16: 1.18}, "te": {6: 1.22, 8: 1.0, 13: 1.2, 16: 1.2, 17: 0.95}}   # te 17: Kiran rushes it   # the line to copy near its own speed; the narrator's
                                                                           # AI lines run slow (the first cut ran 70.8 s)
 LINE_MAXGAP = {"en": {}, "te": {}}
-TEMPO = {"en": 1.15, "te": 1.12}
+TEMPO = {"en": 1.15, "te": 1.16}
 YT = {"p_a": "Homework 10/10, test 2/20", "p_b": "Teach me one question at a time", "p_c": "It gives in: ask step one"}
 MARK = re.compile(r"\[\d+\]\s*")
 # the phone's AI bubbles: the sample chat's real replies (results.json "sample", problem 1), shortened: "What should we do
