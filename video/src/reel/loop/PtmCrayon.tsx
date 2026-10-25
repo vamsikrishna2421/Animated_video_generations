@@ -20,7 +20,7 @@ type Beat = { who: string; shot: string; prop: string; n: number };
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "stern" | "calm" | "smile" | "shock" | "yell" | "sheepish" | "happy" | "smug" | "confused" | "sus";
-type Arms = "rest" | "papers" | "point" | "fold" | "phone" | "type" | "up" | "palm" | "chin";
+type Arms = "rest" | "papers" | "point" | "fold" | "phone" | "phoneBig" | "type" | "up" | "palm" | "chin";
 type Who = "teacher" | "dad" | "kittu";
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
@@ -136,6 +136,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   else if (a === "point") rr = [[220, 30], [320, -110]];
   else if (a === "fold") { l = [[-160, 210], [80, 175]]; rr = [[160, 230], [-80, 195]]; }
   else if (a === "phone") rr = [[182, 220], [118, 120]];
+  else if (a === "phoneBig") rr = [[180, 200], [120, 70]];
   else if (a === "type") { l = [[-150, 230], [-50, 160]]; rr = [[150, 230], [50, 160]]; }
   else if (a === "up") { l = [[-220, -20], [-112, -196]]; rr = [[220, -20], [112, -196]]; }
   else if (a === "palm") rr = [[200, 120], [250, -20]];
@@ -144,19 +145,20 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   const front = a === "chin";
   if (!front) { limb(c, [R, rr[0], rr[1]], who === "teacher" ? "#7f1d1d" : L.top, r); palm(c, rr[1][0], rr[1][1], L.skin, r); }
   if (a === "phone" || a === "type") phoneProp(c, a === "type" ? 0 : 126, a === "type" ? 150 : 60, 1, a === "type" ? 0 : -0.1);
+  if (a === "phoneBig") phoneProp(c, 112, -10, 1.55, -0.12);
   face(c, who, m, talk, r);
   if (front) { limb(c, [R, rr[0], rr[1]], L.top, r); palm(c, rr[1][0], rr[1][1], L.skin, r); }
   c.restore();
 };
 
 // ---------- the classroom ----------
-const room = (c: Ctx, W: number, f: number, r: () => number) => {
+const room = (c: Ctx, W: number, f: number, r: () => number, sum = "3x + 5 = 20") => {
   c.fillStyle = "#cfe3c4"; c.fillRect(-300, 0, W + 600, 1920);
   // the blackboard
   c.fillStyle = "#6b4423"; rrect(c, 70, 250, 760, 380, 14); c.fill();
   c.fillStyle = "#1f3d2e"; rrect(c, 86, 266, 728, 348, 8); c.fill();
   c.font = caveat(56); c.fillStyle = "rgba(248,250,252,0.92)"; c.textAlign = "left";
-  c.fillText("PTM · Class 8-B", 120, 330); c.font = caveat(64); c.fillText("3x + 5 = 20", 140, 430);
+  c.fillText("PTM · Class 8-B", 120, 330); c.font = caveat(64); c.fillText(sum, 140, 430);
   c.font = caveat(44); c.fillStyle = "rgba(253,230,138,0.85)"; c.fillText("show your steps!", 150, 520);
   // a wall clock, a chart, the window
   c.beginPath(); c.arc(940, 330, 64, 0, 7); c.fillStyle = "#fff"; c.fill(); stroke(c, circlePts(940, 330, 64, 64), INK, 5, r, { passes: 1 });
@@ -323,7 +325,7 @@ const studyChip = (c: Ctx, W: number, k: number, labels: number[], rows: number[
   c.restore();
 };
 const POSE: Record<number, Partial<Record<Who, [Mood, Arms]>>> = {
-  1: { teacher: ["stern", "point"], dad: ["shock", "rest"], kittu: ["sheepish", "phone"] },
+  1: { teacher: ["stern", "point"], dad: ["shock", "rest"], kittu: ["sheepish", "phoneBig"] },
   2: { teacher: ["stern", "fold"], dad: ["yell", "point"], kittu: ["sheepish", "phone"] },
   4: { teacher: ["smug", "fold"], dad: ["confused", "rest"], kittu: ["sheepish", "rest"] },
   5: { teacher: ["calm", "fold"], dad: ["yell", "up"], kittu: ["shock", "rest"] },
@@ -332,7 +334,8 @@ const POSE: Record<number, Partial<Record<Who, [Mood, Arms]>>> = {
   13: { teacher: ["smile", "point"], dad: ["happy", "rest"], kittu: ["happy", "rest"] },
   16: { teacher: ["calm", "palm"], dad: ["sus", "fold"], kittu: ["smug", "phone"] },
   17: { teacher: ["sus", "fold"], dad: ["stern", "point"], kittu: ["shock", "phone"] },
-  18: { teacher: ["stern", "fold"], dad: ["sus", "fold"], kittu: ["sheepish", "rest"] },
+  12: { teacher: ["smile", "fold"], dad: ["happy", "rest"], kittu: ["happy", "up"] },
+  18: { teacher: ["stern", "fold"], dad: ["stern", "fold"], kittu: ["sheepish", "rest"] },
 };
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
   wide: { z: 1.0, x: 540, y: 900 }, teacher: { z: 1.45, x: 330, y: 760 }, dad: { z: 1.5, x: 700, y: 820 }, kittu: { z: 1.7, x: 900, y: 880 },
@@ -354,12 +357,12 @@ const StPtm: React.FC<SP> = ({ s }) => {
     if (b.shot === "phone" && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("s")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />);
     if (b.prop === "copied") sfx.push(<Sfx key={k("c")} at={cueOf(i, 1, 0.7) + 2} src="audio/gag_bonk.wav" vol={0.4} />);
-    if (b.prop === "passed") sfx.push(<Sfx key={k("h")} at={cueOf(i, 1, 0.55)} src="reel/sfx_boom.wav" vol={0.45} />, <Sfx key={k("s")} at={cueOf(i, 1, 0.55)} src="audio/sfx_snap.wav" vol={0.35} />);
+    if (b.prop === "passed") sfx.push(<Sfx key={k("h")} at={cueOf(i, 1, 0.55)} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("s")} at={cueOf(i, 1, 0.55)} src="audio/sfx_snap.wav" vol={0.5} />);
     if (b.prop === "ban") sfx.push(<Sfx key={k("b")} at={at + 4} src="audio/gag_bonk.wav" vol={0.3} />);
     if (b.prop === "study1" || b.prop === "study2") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.6)} src="audio/gag_ding.wav" vol={0.35} />);
     if (b.prop === "type") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.4)} src="audio/gag_ding.wav" vol={0.3} />);
     if (b.prop === "ask" || b.prop === "ask2") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "solved") sfx.push(<Sfx key={k("s")} at={cueOf(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.45} />);
+    if (b.prop === "solved") sfx.push(<Sfx key={k("s")} at={cueOf(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.45} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.6)} src="reel/sfx_boom.wav" vol={0.6} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.75)} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "push") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "caved") sfx.push(<Sfx key={k("g")} at={at + 2} src="reel/sfx_glitch.wav" vol={0.35} />, <Sfx key={k("o")} at={at + 12} src="audio/gag_bonk.wav" vol={0.4} />);
@@ -374,7 +377,8 @@ const StPtm: React.FC<SP> = ({ s }) => {
         const r = rng(9900 + boil);
         const cu = (k: number, frac: number) => cueAt(ln, k, /^$/, ln.from + Math.round(ln.frames * frac));
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
-        if (b.shot === "phone") {
+        const faceCut = b.prop === "solved" && f >= cu(1, 0.6);   // "I got it!" on his face, not the phone
+        if (b.shot === "phone" && !faceCut) {
           if (b.prop === "copied") chat(c, W, H, f, r, "copied", [seg(f, ln.from + 4, ln.from + 14), seg(f, cu(1, 0.7), cu(1, 0.7) + 8)], D);
           else if (b.prop === "push" || b.prop === "caved") {
             const k0 = b.prop === "push" ? seg(f, ln.from + 2, ln.from + 10) : 1, k1 = b.prop === "caved" ? seg(f, ln.from + 2, ln.from + 10) : 0;
@@ -387,12 +391,12 @@ const StPtm: React.FC<SP> = ({ s }) => {
           }
         } else {
           // ---------- the classroom ----------
-          const sh = n === 1 ? SHOTS.wide : SHOTS[b.shot] ?? SHOTS.wide;
+          const sh = n === 1 ? SHOTS.wide : faceCut ? SHOTS.kittu : SHOTS[b.shot] ?? SHOTS.wide;
           const z = sh.z * (1 + 0.03 * p);
           const shake = n === 1 && p < 0.12 ? 9 : 0;
           const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
           c.save(); c.translate(W / 2 + sx, 960 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
-          room(c, W, f, r);
+          room(c, W, f, r, n >= 14 ? "15% of 240 = ?" : "3x + 5 = 20");
           const pose = (who: Who): [Mood, Arms] => POSE[n]?.[who] ?? POSE[Math.max(...Object.keys(POSE).map(Number).filter((q) => q <= n))]?.[who] ?? ["calm", "rest"];
           (["teacher", "dad", "kittu"] as Who[]).forEach((who) => {
             const [m, a] = pose(who);
@@ -407,8 +411,13 @@ const StPtm: React.FC<SP> = ({ s }) => {
           if (b.prop === "study2") studyChip(c, W, 1, [1, seg(f, ln.from, ln.from + 8)], [1, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 4)], r);
           if (b.prop === "ban") tag(c, "NO MORE PHONE!", W / 2, 380, 76, "#fee2e2", "#991b1b", -0.04, seg(p, 0.05, 0.2));
           if (b.prop === "passed") tag(c, "AI: 10/10 · Kittu: 2/20", W / 2, 380, 66, "#0f172a", "#facc15", -0.02, seg(f, cu(1, 0.55) - 3, cu(1, 0.55) + 5));
-          if (b.prop === "check") tag(c, "ask step one, not the answer", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 4));
-          if (b.prop === "explain") tag(c, "explain step one", W / 2, 380, 70, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.25));
+          if (b.prop === "check") {
+            const c1 = cu(1, 0.6);
+            if (f < c1) tag(c, `our test: it gave in ${D.caved}/${D.n}`, W / 2, 380, 64, "#0f172a", "#facc15", -0.02, 1);
+            else tag(c, "ask step one, not the answer", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(f, c1, c1 + 6));
+          }
+          if (b.prop === "explain") tag(c, "explain step one: 15% of 240", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.25));
+          if (faceCut) tag(c, "he solved it himself ✓", W / 2, 380, 64, "#dcfce7", "#14532d", -0.02, seg(f, cu(1, 0.6), cu(1, 0.6) + 6));
         }
         void stamp; void caveat; void PURPLE; void easeOut;
       }} />

@@ -23,25 +23,26 @@ LINES = {
     1: ("teacher", "wide", "hook", "Homework: ten out of ten, every day. Class test: two out of twenty!",
         "హోంవర్క్: రోజూ పదికి పది. క్లాస్ టెస్ట్: ఇరవైకి రెండు!"),
     2: ("dad", "dad", "two", "Two?! Kittu!", "రెండా?! కిట్టూ!"),
-    3: ("kittu", "phone", "copied", "The AI did my homework. I just [1] copied.", "హోంవర్క్ ఏఐ చేసింది. నేను [1] కాపీ కొట్టానంతే."),   # "ఏ.ఐ." babbled
+    3: ("kittu", "phone", "copied", "The AI did my homework. I just [1] copied.", "హోంవర్క్ ఏయ్ ఐ చేసింది. నేను [1] కాపీ కొట్టానంతే."),   # "ఏఐ" was swallowed ("dya")   # "ఏ.ఐ." babbled
                                                                                                        # (the dots stretch the vowel)
     4: ("teacher", "teacher", "passed", "So the AI passed. [1] You didn't.", "అంటే ఏఐ పాస్, [1] నువ్వు ఫెయిల్."),
     5: ("dad", "dad", "ban", "That's it! No more phone!", "అంతే! ఇక ఫోన్ బంద్!"),
     6: ("teacher", "teacher", "study1", "Don't ban it. Kids who got AI answers did [1] seventeen percent worse than kids with no AI.",
-        "బంద్ వద్దండి. ఆన్సర్లు కాపీ కొట్టిన పిల్లలకి, ఏఐ లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు."),   # the chip: the study;
+        "బంద్ వద్దండి. ఏఐ చెప్పిన ఆన్సర్లు తీసుకున్న పిల్లలకి, అది లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు."),   # the chip: the study (it measured AI answers, not copying);
         # one ఏఐ, before a consonant: "ఏఐ ఆన్సర్లు" ran into "ee-aansarlu" and two ఏఐ in one long line came out "yeh yeh"
-    7: ("teacher", "teacher", "study2", "Hints? [1] No drop. So change what he types.", "హింట్స్ తో? [1] తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి."),
+    7: ("teacher", "teacher", "study2", "With hints? [1] No drop. So change what he types.", "హింట్స్ తో? [1] తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి."),   # "no AI. Hints? No drop."
+        # ran together into "no AI hints, no drop" (the opposite)
     8: ("teacher", "teacher", "type", "Type this: [1] Don't give me the answer. Teach me one question at a time.",
         "ఇది టైప్ చెయ్యి: [1] Don't give me the answer. Teach me one question at a time."),   # Telugu too: she reads the English card
     9: ("aichat", "phone", "ask", "Sure! What should we do first?", "సరే! ముందు ఏం చేయాలి?"),   # the bubble has the rest
-    10: ("kittu", "phone", "answer1", "Take away the five... three x is fifteen?", "ఫైవ్ తీసేస్తే... త్రీ ఎక్స్ ఫిఫ్టీన్?"),   # he does the step
+    10: ("kittu", "phone", "answer1", "Take away the five... three x is fifteen?", "ఐదు తీసేస్తే... త్రీ ఎక్స్ ఫిఫ్టీన్?"),   # he does the step; "ఫైవ్" came out "pwee"
     11: ("aichat", "phone", "ask2", "Great! What next?", "సూపర్! తర్వాత?"),
-    12: ("kittu", "phone", "solved", "Divide by three... x is five! [1] I got it!", "త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఫైవ్! [1] వచ్చేసింది!"),
+    12: ("kittu", "phone", "solved", "Divide by three... x is five! [1] I got it!", "త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఐదు! [1] వచ్చేసింది!"),
     13: ("teacher", "teacher", "test", "I tested ten sums. \"Solve\": ten answers. With the line: [1] zero.",   # the card names the AI
          "నేను పది లెక్కలు టెస్ట్ చేశా. సాల్వ్ అంటే పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా."),   # Latin "Solve" was read "salva"
     14: ("kittu", "phone", "push", "Just tell me the answer.", "ఆన్సర్ చెప్పెయ్, చాలు!"),
     15: ("aichat", "phone", "caved", "Fifteen percent of two forty is thirty-six.", "రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు."),
-    16: ("teacher", "teacher", "check", "It gives in seven times in ten. So don't check answers, sir. [1] Ask step one.",
+    16: ("teacher", "teacher", "check", "It gave in seven times in ten. So don't check answers, sir. [1] Ask step one.",   # our test's result, not a rule
          "గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేసింది. అందుకే సార్, ఆన్సర్ కాదు, [1] స్టెప్ వన్ అడగండి."),   # "చెప్పేస్తుంది" garbled
     17: ("dad", "dad", "explain", "Kittu. Explain step one.", "కిట్టూ. స్టెప్ వన్ చెప్పు."),   # "ఎక్స్‌ప్లెయిన్ చెయ్యి" came out rushed or garbled
     18: ("kittu", "kittu", "loop", "Step one is... ask the AI?", "స్టెప్ వన్... ఏయ్ ఐ ని అడగడం?"),   # Prakash says "ఏఐ ని" as "ee-ni"
@@ -52,24 +53,26 @@ SHOW = {1: "Homework: 10/10, every day. Class test: 2/20!",
         6: "Don't ban it. Kids who got AI answers did [1] 17% worse than kids with no AI.",
         10: "Take away the 5... 3x = 15?", 12: "Divide by 3... x = 5! [1] I got it!",
         13: "I tested 10 sums. \"Solve\": 10 answers. With the line: [1] zero.",
-        15: "15% of 240 is 36.", 16: "It gives in 7 times in 10. So don't check answers, sir. [1] Ask step one."}
+        7: "With hints? [1] No drop. So change what he types.",
+        15: "15% of 240 is 36.", 16: "It gave in 7 times in 10. So don't check answers, sir. [1] Ask step one."}
 SHOW_TE = {1: "Homework: 10/10, every day. Class test: 2/20!", 2: "Two?! Kittu!", 3: "The AI did the homework. I just [1] copied it.",
            4: "So the AI passed, [1] you failed.", 5: "That's it! No more phone!",
-           6: "No ban, sir. Kids who copied the answers got [1] 17% lower marks than kids with no AI.",
+           6: "No ban, sir. Kids who took the AI's answers got [1] 17% lower marks than kids without it.",
            7: "With hints? [1] No drop. So change what he types.",
            9: "Sure! What should we do first?", 10: "Take away five... 3x = 15?", 11: "Super! What next?",
            12: "Divide by 3... x = 5! [1] I got it!",
            13: "I tested 10 sums. \"Solve\": 10 answers. With this line: [1] zero.",
            14: "Just tell me the answer!", 15: "15% of 240: 36.",
-           16: "Push it, and it tells 7 times out of 10. So don't ask for the answer, sir: [1] ask for step one.",
+           16: "Pushed, it told 7 times out of 10. So not the answer, sir: [1] ask for step one.",
            17: "Kittu. Tell me step one.", 18: "Step one... asking the AI?"}
 NOCAP = {8}   # the TYPE THIS card carries line 8
 # a: the case (the papers, the confession, the ban, the study); b: the line, the lesson, our test; c: the push, the check, the loop
 SCENES = [("p_a", (1, 2, 3, 4, 5, 6, 7), {"pre": 0.2, "boost": 1.6, "drop_at": [[5, "1", 0.3]], "tail": 0.1}),   # the bed drops out
           ("p_b", (8, 9, 10, 11, 12, 13), {"lift": 0.9, "pre": 0.35, "boost": 1.3, "drop_at": [[5, "1", 0.4]], "tail": 0.05}),   # before
-          ("p_c", (14, 15, 16, 17, 18), {"lift": 0.8, "pre": 0.3, "outro": True, "boost": 1.2, "rise": 1.3, "drop_pre": [[4, 0.05, 0.9]],
+          ("p_c", (14, 15, 16, 17, 18), {"lift": 0.8, "pre": 0.3, "outro": True, "boost": 1.5, "rise": 1.3, "drop_pre": [[4, 0.05, 0.9]],
                                          "tail": 0.2})]   # 17%, before "zero" and before "Step one is..."
-GAP = {1: 0.2, 2: 0.15, 3: 0.2, 7: 0.25, 8: 0.85, 12: 0.5, 13: 0.75, 15: 0.85, 16: 0.25, 17: 0.3}   # 8: TYPE THIS holds ~4.5 s; 13: the
+GAP = {1: 0.2, 2: 0.15, 3: 0.2, 6: 0.4, 7: 0.25, 8: 0.5, 12: 0.4, 13: 1.8, 15: 0.4, 16: 0.25, 17: 0.65}   # render review: 13: the 0/10
+                                                                                             # row holds 2 s; 17: a real pause before the punchline   # 8: TYPE THIS holds ~4.5 s; 13: the
                                                                                                    # card holds; 15: the give-in chip
 GAIN = {"teacher": 0.3, "dad": 0.3, "kittu": 0.3, "aichat": 0.0}
 GAIN_LINE = {2: 0.8, 5: 0.8}   # the dad's yells
@@ -101,7 +104,7 @@ def demo_numbers():
 def spec(lang):
     te = lang == "te"
     sid = "creative09te" if te else "creative09v1"
-    s = {"id": sid, "title": "Teach me, don't tell me" + (" (Telugu audio)" if te else ""), "label": "SKIT", "banner": "Teach me",
+    s = {"id": sid, "title": "Teach me, don't tell me" + (" (Telugu audio)" if te else ""), "label": "SKIT", "banner": "AI homework",
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15, "music": "lofi", "musicVol": [0.38, 0.85], "musicFade": 0.05,
          "endPad": 0.35, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]], "musicPad": True, "hardCuts": True,
          "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,

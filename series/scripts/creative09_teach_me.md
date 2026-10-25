@@ -38,6 +38,23 @@ copy; the last beat (step one is "ask the AI") is the joke, and the loop says it
   "ఏఐనే" came out "ye-ine" in creative 08; the review-pack transcript will tell.
 - Priya: "Does Study Mode cave too?" We didn't test it: the pinned comment says so.
 
+## Render review (v2) and what changed (v2.1)
+- Both: the 0/10 row and the 7/10 chip went by in about a second. Now the row lands on "zero" and holds 2 s; line 16
+  shows "our test: it gave in 7/10" while ma'am says it, then "ask step one, not the answer".
+- Both: the board behind ma'am still said "3x + 5 = 20" (the sum he had just solved), so "ask the AI?" read like the v1
+  problem. From the push on, the board says "15% of 240 = ?" and the dad's chip says "explain step one: 15% of 240".
+- No pause before the punchline: a 0.65 s gap (the bed drops out) before "Step one is...".
+- "...no AI. Hints? No drop." ran together (the recogniser heard "no AI hints no drop", the opposite): a 0.4 s gap and
+  "With hints?". "It gives in" became "It gave in": our test's result, not a rule about AI.
+- Frame 1 said nothing about AI: the title bar reads "AI homework" and Kittu holds the phone up, "AI" on its screen.
+- Sound: the bed 2 dB up from the push on (only the planned drop before "zero" moved the quarters); hits on "You
+  didn't." and "I got it!"; the English dad's pauses gated (Priya heard a steady hum: a ~150 Hz tone at about -45 dBFS
+  between his words in the Fish takes).
+- "I got it!" cuts from the phone to his face (35 s of screens and cards otherwise); the dad glares at the punchline.
+- Telugu: line 6 said "copied the answers" (the study measured AI answers, not copying): now "ఏఐ చెప్పిన ఆన్సర్లు
+  తీసుకున్న పిల్లలకి, అది లేని పిల్లల కంటే". "ఏఐ" was swallowed in line 3 ("dya"): "ఏయ్ ఐ". "ఫైవ్" came out "pwee":
+  "ఐదు" in lines 10 and 12. The study chip shows each row's label as its line starts (it sat empty for 2 s).
+
 ## Facts (verified Oct 25)
 - Study: Bastani, Bastani, Sungu, Ge, Kabakcı, Mariman, "Generative AI without guardrails can harm learning: Evidence
   from high school mathematics", PNAS 122(26), 2025 (Wharton summary: knowledge.wharton.upenn.edu/article/without-

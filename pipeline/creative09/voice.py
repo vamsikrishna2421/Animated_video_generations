@@ -77,7 +77,7 @@ MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", 
         "te": {1: [("होम", "हों", "होंव", "homework"), ("पदिक", "पदक", "पदि", "10"), ("टेस्ट", "टेस", "test"), ("इरव", "इर्व", "एरव", "येरव", "20"),
                    ("रेंडु", "रेंड", "रेण्डु", "रेन्डु", "रेंदु", "रेंदू", "रेन्दु", "2")],
                2: [("रेंडा", "रेंड", "रेण्ड", "रेन्ड", "रेंदा", "रेन्दा", "रेंद"), KITTU_TE],
-               3: [("होम", "हों", "homework"), AI_TE, ("कापी", "कॉपी", "copy", "काफी"), ("कोट्ट", "कोट", "कोठ", "कट्ट", "कोत्त")],
+               3: [("होम", "हों", "homework", "कोम"), AI_TE, ("कापी", "कॉपी", "copy", "काफी"), ("कोट्ट", "कोट", "कोठ", "कट्ट", "कोत्त")],
                4: [AI_TE, ("पास", "pass"), ("फेल", "फैल", "fail", "फेयल")],
                5: [("फोन", "फ़ोन", "phone", "फोल"), ("बंद", "बन्द", "बांद", "बन्त", "बंत", "banth", "bandh", "बान्द")],   # "bandh" is heard "bant"
                6: [("बंद", "बन्द", "बांद", "बन्त"), ANS_TE, ("पदिहे", "पदहे", "पदिए", "17", "पदेए", "पदि हे", "पादिज"),
@@ -86,10 +86,10 @@ MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", 
                8: [TYPE_TE, ANS_TE, ("टीच", "teach", "टिच", "तीच", "तीज", "टीज", "पीच"),
                    ("क्वेश्चन", "क्वेस्चन", "question", "क्वेश्टन", "क्वेशन", "कुस्चन", "ख्वस्टन", "क्वेस्ट", "कुस्च", "क्वेस्च")],
                9: [("सरे", "सरी", "सरै"), ("मुंदु", "मुन्दु", "मुंद", "मुंडु")],
-               10: [("फाइव", "फैव", "five", "5", "फाईव", "फीव"), ("तीसे", "तीस", "तिसे", "थीसे", "सीस्ते", "सीसे"), ("फिफ्ट", "फिफ्टीन", "15", "fifteen", "टीन")],
+               10: [("ऐदु", "अइदु", "आइदु", "ऐदू", "अयिदु", "5"), ("तीसे", "तीस", "तिसे", "थीसे", "सीस्ते", "सीसे"), ("फिफ्ट", "फिफ्टीन", "15", "fifteen", "टीन")],
                11: [("सूपर", "सुपर", "super", "सूपर्"), ("तर्वात", "तरवात", "तर्वाता", "तर्वा", "तरुवात")],
                12: [("त्री", "थ्री", "three", "3", "तरी", "त्रि"), ("डिवाइड", "डिवैड", "divide", "दिवाइड", "डिवाईड", "दिवेट", "दिवर्ट", "दिवैट", "डिवेट"),
-                    ("फाइव", "फैव", "five", "5", "फीव"), ("वच्चे", "वचे", "वच्च", "वच्छे")],
+                    ("ऐदु", "अइदु", "आइदु", "ऐदू", "अयिदु", "5"), ("वच्चे", "वचे", "वच्च", "वच्छे")],
                13: [("टेस्ट", "टेस", "test", "तेस्ट", "तस्ट"), ("सॉल्व", "सोल्व", "सॉल्फ", "solve", "साल्व", "सौल्व", "सल्व", "साल"), ("लैन", "लाइन", "line", "लाईन", "लैं", "लाईं", "लाइं"),
                     ("सुन्ना", "सुन्न", "सुना", "0")],
                14: [ANS_TE, ("चाल", "चालु", "चालू")],
@@ -102,9 +102,27 @@ MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", 
 JUDGE_TEXT = {1: "Homework: 10 out of 10, every day. Class test: 2 out of 20!", 2: "Two?! Kit too!", 17: "Kit too. Explain step one.",
               6: "Don't ban it. Kids who got AI answers did 17% worse than kids with no AI.", 10: "Take away the 5... 3x is 15?",
               12: "Divide by 3... x is 5! I got it!", 13: "I tested 10 sums. Solve: 10 answers. With the line: 0.",
-              15: "15% of 240 is 36.", 16: "It gives in 7 times in 10. So don't check answers, sir. Ask step one."}
+              15: "15% of 240 is 36.", 16: "It gave in 7 times in 10. So don't check answers, sir. Ask step one."}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
+
+
+def gate(path, floor_db=-40.0):
+    """Silence the pauses inside a take (20 ms frames under floor_db, with 10 ms fades): the English dad's Fish takes
+    carry a steady ~150 Hz tone (about -45 dBFS) between words (Priya, render review)."""
+    a, sr = sf.read(path)
+    mono = a.mean(axis=1) if a.ndim > 1 else a
+    hop = int(0.02 * sr)
+    n = len(mono) // hop
+    rms = np.sqrt((mono[:n * hop].reshape(n, hop) ** 2).mean(axis=1) + 1e-12)
+    g = (20 * np.log10(rms) > floor_db).astype(float)
+    g = np.maximum(g, np.maximum(np.r_[g[1:], 0], np.r_[0, g[:-1]]))   # keep a frame either side of speech
+    env = np.repeat(g, hop)
+    env = np.r_[env, np.full(len(mono) - len(env), env[-1] if len(env) else 1.0)]
+    k = max(1, int(0.01 * sr))
+    env = np.convolve(env, np.ones(k) / k, mode="same")
+    out = a * (env[:, None] if a.ndim > 1 else env)
+    sf.write(path, out.astype(np.float32), sr)
 
 
 def heard(path, who, lang):
@@ -204,6 +222,8 @@ def voice_one(lang, n, who, text, fname, src, takes, only):
                 f.unlink()
     shutil.copy(heard(best[1], who, lang), src / fname)
     level(src / fname)
+    if lang == "en" and who == "dad":
+        gate(src / fname)
 
 
 if __name__ == "__main__":

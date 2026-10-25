@@ -2,7 +2,7 @@
  "id": "creative09v1",
  "title": "Teach me, don't tell me",
  "label": "SKIT",
- "banner": "Teach me",
+ "banner": "AI homework",
  "topic": "",
  "look": "classic",
  "gap": 0.14,
@@ -170,7 +170,7 @@
      "text": "Don't ban it. Kids who got AI answers did [1] seventeen percent worse than kids with no AI.",
      "show": "Don't ban it. Kids who got AI answers did [1] 17% worse than kids with no AI.",
      "maxgap": 0.25,
-     "gap": 0.16,
+     "gap": 0.4,
      "pauses": {
       "1": 0.3
      },
@@ -180,8 +180,8 @@
     {
      "who": "teacher",
      "file": "07_teacher.wav",
-     "text": "Hints? [1] No drop. So change what he types.",
-     "show": "Hints? [1] No drop. So change what he types.",
+     "text": "With hints? [1] No drop. So change what he types.",
+     "show": "With hints? [1] No drop. So change what he types.",
      "maxgap": 0.25,
      "gap": 0.25,
      "gain_db": 0.3
@@ -266,7 +266,7 @@
      "text": "Type this: [1] Don't give me the answer. Teach me one question at a time.",
      "show": "Type this: [1] Don't give me the answer. Teach me one question at a time.",
      "maxgap": 0.25,
-     "gap": 0.85,
+     "gap": 0.5,
      "tempo": 1.05,
      "nocap": true,
      "gain_db": 0.3
@@ -305,7 +305,7 @@
      "text": "Divide by three... x is five! [1] I got it!",
      "show": "Divide by 3... x = 5! [1] I got it!",
      "maxgap": 0.25,
-     "gap": 0.5,
+     "gap": 0.4,
      "gain_db": 0.3
     },
     {
@@ -314,7 +314,7 @@
      "text": "I tested ten sums. \"Solve\": ten answers. With the line: [1] zero.",
      "show": "I tested 10 sums. \"Solve\": 10 answers. With the line: [1] zero.",
      "maxgap": 0.25,
-     "gap": 0.75,
+     "gap": 1.8,
      "pauses": {
       "1": 0.45
      },
@@ -330,7 +330,7 @@
    "lift": 0.8,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.5,
    "rise": 1.3,
    "drop_pre": [
     [
@@ -406,14 +406,14 @@
      "text": "Fifteen percent of two forty is thirty-six.",
      "show": "15% of 240 is 36.",
      "maxgap": 0.25,
-     "gap": 0.85,
+     "gap": 0.4,
      "tempo": 1.2
     },
     {
      "who": "teacher",
      "file": "16_teacher.wav",
-     "text": "It gives in seven times in ten. So don't check answers, sir. [1] Ask step one.",
-     "show": "It gives in 7 times in 10. So don't check answers, sir. [1] Ask step one.",
+     "text": "It gave in seven times in ten. So don't check answers, sir. [1] Ask step one.",
+     "show": "It gave in 7 times in 10. So don't check answers, sir. [1] Ask step one.",
      "maxgap": 0.25,
      "gap": 0.25,
      "tempo": 1.18,
@@ -425,7 +425,7 @@
      "text": "Kittu. Explain step one.",
      "show": "Kittu. Explain step one.",
      "maxgap": 0.25,
-     "gap": 0.3,
+     "gap": 0.65,
      "tts": "Kit-too. Explain step one.",
      "gain_db": 0.3
     },
