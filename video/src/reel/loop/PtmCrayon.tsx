@@ -300,8 +300,9 @@ const testCard = (c: Ctx, W: number, r: () => number, k: number, rows: number[],
   c.restore();
   void r;
 };
-// the study (lines 6-7, the reason not to ban it): one chip, a row per line
-const studyChip = (c: Ctx, W: number, k: number, rows: number[], r: () => number) => {
+// the study (lines 6-7, the reason not to ban it): one chip, a row per line; a row's label shows with its line (no empty
+// box while she talks) and its number on the cue
+const studyChip = (c: Ctx, W: number, k: number, labels: number[], rows: number[], r: () => number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
   c.fillStyle = "rgba(15,23,42,0.6)"; c.fillRect(0, 0, W, 1920);
@@ -309,16 +310,16 @@ const studyChip = (c: Ctx, W: number, k: number, rows: number[], r: () => number
   stroke(c, rrectPts(60, 340, W - 120, 780), "#facc15", 6, r, { passes: 1 });
   c.font = SANS(46, 800); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("A STUDY OF ~1,000 STUDENTS", W / 2, 430);
   c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.fillText("high-school maths · PNAS, 2025", W / 2, 484);
-  const r2 = (y: number, t1: string, big: string, col: string, sub: string, q: number) => {
+  const r2 = (y: number, t1: string, big: string, col: string, sub: string, ql: number, q: number) => {
+    if (ql > 0) { c.save(); c.globalAlpha = clamp(ql * 3); c.font = SANS(44, 800); c.fillStyle = "#e2e8f0"; c.fillText(t1, W / 2, y); c.restore(); }
     if (q <= 0) return;
     c.save(); c.globalAlpha = clamp(q * 3);
-    c.font = SANS(44, 800); c.fillStyle = "#e2e8f0"; c.fillText(t1, W / 2, y);
     c.font = SANS(110, 900); c.fillStyle = col; c.fillText(big, W / 2, y + 120);
     if (sub) { c.font = SANS(38, 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, W / 2, y + 180); }
     c.restore();
   };
-  r2(590, "kids who got AI answers:", "exam −17%", "#f87171", "vs kids with no AI", rows[0] ?? 0);
-  r2(880, "kids who got AI hints:", "no drop", "#86efac", "", rows[1] ?? 0);
+  r2(590, "kids who got AI answers:", "exam −17%", "#f87171", "vs kids with no AI", labels[0] ?? 0, rows[0] ?? 0);
+  r2(880, "kids who got AI hints:", "no drop", "#86efac", "", labels[1] ?? 0, rows[1] ?? 0);
   c.restore();
 };
 const POSE: Record<number, Partial<Record<Who, [Mood, Arms]>>> = {
@@ -402,8 +403,8 @@ const StPtm: React.FC<SP> = ({ s }) => {
           if (n === 1) papers(c, W, 1, shake, r);
           if (b.prop === "type") typeThis(c, W, r, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 4));
           if (b.prop === "test") testCard(c, W, r, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 4, ln.from + 12), seg(f, cu(1, 0.75) - 4, cu(1, 0.75) + 4), seg(f, cu(1, 0.75) + 14, cu(1, 0.75) + 22)], D);
-          if (b.prop === "study1") studyChip(c, W, seg(f, ln.from, ln.from + 8), [seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 4), 0], r);
-          if (b.prop === "study2") studyChip(c, W, 1, [1, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 4)], r);
+          if (b.prop === "study1") studyChip(c, W, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 4, ln.from + 12), 0], [seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 4), 0], r);
+          if (b.prop === "study2") studyChip(c, W, 1, [1, seg(f, ln.from, ln.from + 8)], [1, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 4)], r);
           if (b.prop === "ban") tag(c, "NO MORE PHONE!", W / 2, 380, 76, "#fee2e2", "#991b1b", -0.04, seg(p, 0.05, 0.2));
           if (b.prop === "passed") tag(c, "AI: 10/10 · Kittu: 2/20", W / 2, 380, 66, "#0f172a", "#facc15", -0.02, seg(f, cu(1, 0.55) - 3, cu(1, 0.55) + 5));
           if (b.prop === "check") tag(c, "ask step one, not the answer", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 4));
