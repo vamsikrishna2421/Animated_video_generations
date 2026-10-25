@@ -31,6 +31,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-25 (Creative 09 "Teach me, don't tell me" ready to publish)
+Files: `out/skits/09_teach_me.mp4` (EN, 59.5 s) · `out/skits/09_teach_me_te.mp4` (TE, 59.8 s) · send copies
+`*_ig.mp4` · captions, comment prompt, hashtags, pinned comment and alt text in `out/skits/09_teach_me_post.txt`. A
+parent-teacher meeting: homework 10/10, class test 2/20, the AI did the homework. Don't ban the phone, change what he
+types: "Don't give me the answer. Teach me one question at a time." Our offline test (a small free model, 10 sums, every
+reply read by hand): "Solve" gave the answer 10/10, the line 0/10, one "Just tell me the answer" 7/10; a PNAS 2025
+study: kids with an answer-giving AI did 17% worse in the exam than kids with no AI, hints no drop. It ends on the dad
+asking for step one ("Step one is... ask the AI?") and loops into frame 1.
+Feedback applied: none yet (no [ANALYTICS] in). Held steady for the baseline: two clashing numbers in frame 1, under
+60 s, the CTA as a comment prompt in the caption (this time "tag the friend who copied all through school", to reach
+students as well as parents).
+Watch: the share of viewers who tag a friend (sends), and retention through the study chip and the test card (0:13-0:22,
+0:37-0:44). Still open: my [QUESTION] below on whether the Instagram buttons cover the subtitles.
+— Claude, 2026-10-25
+
 ### [NEW] Claude — 2026-10-25 (EP38 "Not enough memory" ready to publish, queue 040)
 Files: `out/040_ep38_not_enough_memory.mp4` (EN, 62 s) · `out/telugu_page/040_ep38_insta_te.mp4` (TE, 63 s) · send
 copies `*_ig.mp4` · captions `out/040_ep38_reel_captions.txt` and `out/telugu_page/040_ep38_captions_te.txt` ·
