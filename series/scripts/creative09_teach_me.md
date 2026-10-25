@@ -1,4 +1,4 @@
-# Creative 09 "Teach me, don't tell me" (script v2, Oct 25)
+# Creative 09 "Teach me, don't tell me" (script v2.1 as rendered, Oct 25)
 
 **Format:** a parent-teacher meeting played like a courtroom: the evidence (two papers) slams onto the desk in frame 1,
 the culprit confesses, the teacher rules, then the dad cross-examines. One classroom set, three people, phone-chat
@@ -90,49 +90,49 @@ copy; the last beat (step one is "ask the AI") is the joke, and the loop says it
 Kept 1: two numbers that can't both be true in one frame, the question every parent asks at once (how?), and the
 culprit named by line 3. Both viewers stopped on it (hook 8 and 7 of 10).
 
-## Script (English) · ~55 s
+## Script (English) · 59.5 s as rendered
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Ma'am | Homework: ten out of ten, every day. Class test: two out of twenty! | frame 1: the two papers, 10/10 green, 2/20 red; Kittu's phone says "AI" |
-| 2 | Dad | Two?! Kittu! | |
+| 1 | Ma'am | Homework: ten out of ten, every day. Class test: two out of twenty! | frame 1: the two papers, 10/10 green, 2/20 red; Kittu holds up a phone that says "AI"; title bar "AI homework" |
+| 2 | Dad | Two?! Kittu! |  |
 | 3 | Kittu | The AI did my homework. I just copied. | his phone: "Solve: 3x + 5 = 20" -> the full answer; COPIED stamp |
 | 4 | Ma'am | So the AI passed. You didn't. | a hit; chip "AI: 10/10 · Kittu: 2/20" |
 | 5 | Dad | That's it! No more phone! | chip NO MORE PHONE! |
-| 6 | Ma'am | Don't ban it. In a big study, kids who got AI answers did seventeen percent worse than kids with no AI. | the study chip, row 1 "exam −17% vs kids with no AI" (the bed drops before 17) |
-| 7 | Ma'am | Kids who got hints? No drop. So change what he types. | row 2 "no drop" |
-| 8 | Ma'am | Type this: Don't give me the answer. Teach me one question at a time. | TYPE THIS card, held ~4 s |
-| 9 | AI | Sure! What should we do first, to get three x alone? | the chat: the line pinned on top, then the AI's question |
+| 6 | Ma'am | Don't ban it. Kids who got AI answers did seventeen percent worse than kids with no AI. | the study chip: row 1 label, then "exam −17% vs kids with no AI" on 17 (the bed drops before it) |
+| 7 | Ma'am | With hints? No drop. So change what he types. | row 2 label, then "no drop" |
+| 8 | Ma'am | Type this: Don't give me the answer. Teach me one question at a time. | TYPE THIS card, held ~4.5 s |
+| 9 | AI | Sure! What should we do first? | the chat: the line pinned on top, then the AI's question (its real words, shortened) |
 | 10 | Kittu | Take away the five... three x is fifteen? | his bubble |
-| 11 | AI | Great! What should we do next? | |
-| 12 | Kittu | Divide by three... x is five! I got it! | a hit; chip "he solved it himself ✓" |
-| 13 | Ma'am | I tested a free AI on ten sums. "Solve": ten answers. With the line: zero. | OUR REAL TEST card (the bed drops before "zero") |
-| 14 | Kittu | Just tell me the answer. | a new sum on his phone (15% of 240): the line, its question back, then this |
-| 15 | AI | I understand. Fifteen percent of two forty is thirty-six. | the answer pops; chip "Pushed once: gave in 7/10" |
-| 16 | Ma'am | It gives in seven times out of ten. So don't check his answers, sir. Ask him step one. | chip "ask step one, not the answer" |
-| 17 | Dad | Kittu. Explain step one. | chip "explain step one"; a riser into silence |
-| 18 | Kittu | Step one is... ask the AI? | cut: the replay opens on the papers slamming down |
+| 11 | AI | Great! What next? | "Great! You're on the right track. What should we do next?" (real) |
+| 12 | Kittu | Divide by three... x is five! I got it! | his bubble, then a cut to his face, arms up, a hit; chip "he solved it himself ✓" |
+| 13 | Ma'am | I tested ten sums. "Solve": ten answers. With the line: zero. | OUR REAL TEST card (Qwen 7B, offline, 10 sums); 0/10 lands on "zero" and holds 2 s |
+| 14 | Kittu | Just tell me the answer. | a new sum on his phone (15% of 240): the line, its real question back, then this |
+| 15 | AI | Fifteen percent of two forty is thirty-six. | its real reply "I understand you want the answer directly. 15% of 240 is 36."; chip "Pushed once: gave in 7/10" |
+| 16 | Ma'am | It gave in seven times in ten. So don't check answers, sir. Ask step one. | the board now reads "15% of 240 = ?"; chip "our test: it gave in 7/10", then "ask step one, not the answer" |
+| 17 | Dad | Kittu. Explain step one. | chip "explain step one: 15% of 240"; a 0.65 s gap, the bed out, a riser |
+| 18 | Kittu | Step one is... ask the AI? | the dad glares; cut: the replay opens on the papers slamming down |
 
-## Script (Telugu)
+## Script (Telugu) · 59.9 s as rendered
 | # | Who | Line |
 |---|---|---|
 | 1 | Ma'am | హోంవర్క్: రోజూ పదికి పది. క్లాస్ టెస్ట్: ఇరవైకి రెండు! |
 | 2 | Dad | రెండా?! కిట్టూ! |
-| 3 | Kittu | హోంవర్క్ ఏ.ఐ. చేసింది. నేను కాపీ కొట్టానంతే. |
-| 4 | Ma'am | అంటే ఏ.ఐ. పాస్, నువ్వు ఫెయిల్. |
+| 3 | Kittu | హోంవర్క్ ఏయ్ ఐ చేసింది. నేను కాపీ కొట్టానంతే. |
+| 4 | Ma'am | అంటే ఏఐ పాస్, నువ్వు ఫెయిల్. |
 | 5 | Dad | అంతే! ఇక ఫోన్ బంద్! |
-| 6 | Ma'am | బంద్ వద్దండి. ఒక పెద్ద స్టడీ లో, ఏ.ఐ. ఆన్సర్లు చూసిన పిల్లలకి, ఏ.ఐ. లేని పిల్లల కంటే పదిహేడు పర్సెంట్ తక్కువ మార్కులు. |
-| 7 | Ma'am | హింట్స్ తీసుకున్న పిల్లలకి? తగ్గలేదు. అందుకే, కిట్టు టైప్ చేసేది మార్చండి. |
-| 8 | Ma'am | ఇది టైప్ చెయ్యి: Don't give me the answer. Teach me one question at a time. (she reads the English card) |
-| 9 | AI | సరే! మూడు ఎక్స్ ఒక్కటే మిగలాలంటే, ముందు ఏం చేయాలి? |
-| 10 | Kittu | ఫైవ్ తీసేస్తే... త్రీ ఎక్స్ ఫిఫ్టీన్? |
-| 11 | AI | సూపర్! తర్వాత ఏం చేయాలి? |
-| 12 | Kittu | త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఫైవ్! వచ్చేసింది! |
-| 13 | Ma'am | నేను ఒక ఫ్రీ ఏ.ఐ. ని పది లెక్కలతో టెస్ట్ చేశా. "Solve" అంటే పది ఆన్సర్లు. ఈ లైన్ తో సున్నా. |
+| 6 | Ma'am | బంద్ వద్దండి. ఏఐ చెప్పిన ఆన్సర్లు తీసుకున్న పిల్లలకి, అది లేని పిల్లల కంటే పదిహేడు పర్సెంట్ తక్కువ మార్కులు. |
+| 7 | Ma'am | హింట్స్ తో? తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి. |
+| 8 | Ma'am | ఇది టైప్ చెయ్యి: Don't give me the answer. Teach me one question at a time. |
+| 9 | AI | సరే! ముందు ఏం చేయాలి? |
+| 10 | Kittu | ఐదు తీసేస్తే... త్రీ ఎక్స్ ఫిఫ్టీన్? |
+| 11 | AI | సూపర్! తర్వాత? |
+| 12 | Kittu | త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఐదు! వచ్చేసింది! |
+| 13 | Ma'am | నేను పది లెక్కలు టెస్ట్ చేశా. సాల్వ్ అంటే పది ఆన్సర్లు. ఈ లైన్ తో సున్నా. |
 | 14 | Kittu | ఆన్సర్ చెప్పెయ్, చాలు! |
-| 15 | AI | సరే, అర్థమైంది. రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు. |
-| 16 | Ma'am | గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేస్తుంది. అందుకే ఆన్సర్ కాదండీ, స్టెప్ వన్ అడగండి. |
-| 17 | Dad | కిట్టూ. స్టెప్ వన్ ఎక్స్‌ప్లెయిన్ చెయ్యి. |
-| 18 | Kittu | స్టెప్ వన్... ఏ.ఐ. ని అడగడం? |
+| 15 | AI | రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు. |
+| 16 | Ma'am | గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేసింది. అందుకే సార్, ఆన్సర్ కాదు, స్టెప్ వన్ అడగండి. |
+| 17 | Dad | కిట్టూ. స్టెప్ వన్ చెప్పు. |
+| 18 | Kittu | స్టెప్ వన్... ఏయ్ ఐ ని అడగడం? |
 
 ## Caption ask (draft)
 Before any homework question, type: "Don't give me the answer. Teach me one question at a time." The line gives in if
