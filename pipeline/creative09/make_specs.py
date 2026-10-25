@@ -28,8 +28,8 @@ LINES = {
     4: ("teacher", "teacher", "passed", "So the AI passed. [1] You didn't.", "అంటే ఏఐ పాస్, [1] నువ్వు ఫెయిల్."),
     5: ("dad", "dad", "ban", "That's it! No more phone!", "అంతే! ఇక ఫోన్ బంద్!"),
     6: ("teacher", "teacher", "study1", "Don't ban it. Kids who got AI answers did [1] seventeen percent worse than kids with no AI.",
-        "బంద్ వద్దండి. ఏఐ చెప్పిన ఆన్సర్లు రాసిన పిల్లలకి, ఏఐ లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు."),   # the chip: the study;
-        # "ఏఐ ఆన్సర్లు" ran together into "ee-aansarlu": a consonant after ఏఐ keeps it "ey-ai"
+        "బంద్ వద్దండి. ఆన్సర్లు కాపీ కొట్టిన పిల్లలకి, ఏఐ లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు."),   # the chip: the study;
+        # one ఏఐ, before a consonant: "ఏఐ ఆన్సర్లు" ran into "ee-aansarlu" and two ఏఐ in one long line came out "yeh yeh"
     7: ("teacher", "teacher", "study2", "Hints? [1] No drop. So change what he types.", "హింట్స్ తో? [1] తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి."),
     8: ("teacher", "teacher", "type", "Type this: [1] Don't give me the answer. Teach me one question at a time.",
         "ఇది టైప్ చెయ్యి: [1] Don't give me the answer. Teach me one question at a time."),   # Telugu too: she reads the English card
@@ -55,7 +55,7 @@ SHOW = {1: "Homework: 10/10, every day. Class test: 2/20!",
         15: "15% of 240 is 36.", 16: "It gives in 7 times in 10. So don't check answers, sir. [1] Ask step one."}
 SHOW_TE = {1: "Homework: 10/10, every day. Class test: 2/20!", 2: "Two?! Kittu!", 3: "The AI did the homework. I just [1] copied it.",
            4: "So the AI passed, [1] you failed.", 5: "That's it! No more phone!",
-           6: "No ban, sir. Kids who saw AI answers got [1] 17% lower marks than kids with no AI.",
+           6: "No ban, sir. Kids who copied the answers got [1] 17% lower marks than kids with no AI.",
            7: "With hints? [1] No drop. So change what he types.",
            9: "Sure! What should we do first?", 10: "Take away five... 3x = 15?", 11: "Super! What next?",
            12: "Divide by 3... x = 5! [1] I got it!",
