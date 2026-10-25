@@ -1,7 +1,7 @@
 # Creative 09 voices, one judged take per line, cached by text + voice (a changed line only re-voices itself). English on
-# Fish: Padma ma'am, Srinivas and Bunny = Fish copies of Parler-made reference clips (`refs` makes them once, skit 02's
+# Fish: Padma ma'am, the dad and Kittu = Fish copies of Parler-made reference clips (`refs` makes them once, skit 02's
 # way, with Parler's English speakers); the AI chat app = the channel narrator (EP29's reference), through the light phone
-# sound and judged after it. Telugu on Parler: ma'am = Lalitha (firm), Srinivas = Kiran (loud father), Bunny = Prakash
+# sound and judged after it. Telugu on Parler: ma'am = Lalitha (firm), the dad = Kiran (loud father), Kittu = Prakash
 # (young), the app = Lalitha (calm) through the phone sound (the filter tells ma'am and the app apart). Line 8 reads the
 # English card in both reels (the Telugu reel's starts in Telugu). Every take is levelled per sentence (EP36's `level`).
 # MUST lists words a take has to contain (a missed word costs 1.5).
@@ -37,7 +37,7 @@ REF = {
     "dad": ("Vikas speaks English with an Indian accent in a loud, frustrated and very expressive voice, like a father in his forties, "
             "at a fast pace. The recording is very clear, close-up, with no background noise.",
             "What is this? Every day I ask him, did you finish your homework? And every day he says yes, done, done!"),
-    "bunny": ("Jatin speaks English with an Indian accent in a young, high, nervous and cheeky voice, like a thirteen-year-old "
+    "kittu": ("Jatin speaks English with an Indian accent in a young, high, nervous and cheeky voice, like a thirteen-year-old "
               "schoolboy, at a quick pace. The recording is very clear, close-up, with no background noise.",
               "Sorry, sorry! I didn't think it was a big problem. Everybody in my class does it, I promise, ma'am."),
 }
@@ -49,55 +49,57 @@ VOICE_TE = {
                "The recording is very clear, close-up, studio quality, with no background noise.",
     "dad": "Kiran speaks in a loud, frustrated and very expressive voice like an angry father, at a fast pace. "
            "The recording is very clear, close-up, studio quality, with no background noise.",
-    "bunny": "Prakash speaks in a young, nervous, cheeky and expressive voice like a schoolboy, at a quick pace. "
+    "kittu": "Prakash speaks in a young, nervous, cheeky and expressive voice like a schoolboy, at a quick pace. "
              "The recording is very clear, close-up, studio quality, with no background noise.",
     "aichat": "Lalitha speaks in a calm, clear, polite and friendly voice like a helpful assistant, at a measured pace. "
               "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 APP = {"aichat"}   # the app on his phone: the light phone sound
-# n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
+# n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu: Whisper
+# writes Telugu in Devanagari (Hindi mode) and spells ḍ as द as often as ड, so both are listed.
+KITTU = ("kittu", "kitu", "kittoo", "kitty", "kitto", "kito", "keto", "kidu", "kiddo", "kitoo", "ketu", "kit")   # "Kit-too" is heard "kit too"
+KITTU_TE = ("किट्टू", "किट्टु", "कित्तु", "किट्ट", "किटू", "किट्टो", "कीटू", "किटु", "किट")
+AI_TE = ("आई", "एआई", "ऐआई", "ai", "ए.आई", "एआइ", "ए आई")
+ANS_TE = ("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर", "आनसर")
+STEP_TE = ("स्टेप", "स्टैप", "step", "स्टेब")
 MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", "2"), ("twenty", "20")],
-               2: [("two", "2", "to", "too"), ("bunny", "bunnie", "bunni", "buddy", "bonnie", "bony", "funny")],
-               3: [("ai",), ("homework",), ("copied", "copy")], 4: [("ai",), ("passed", "pass")],
-               5: [("more", "no"), ("phone",)], 6: [("ban",), ("change",), ("types", "type")],
-               7: [("types", "type"), ("solve",), ("answer",)],
+               2: [("two", "2", "to", "too"), KITTU], 3: [("ai",), ("homework",), ("copied", "copy")], 4: [("ai",), ("passed", "pass")],
+               5: [("more", "no"), ("phone",)], 6: [("ban",), ("answers", "answer"), ("seventeen", "17"), ("worse",)],
+               7: [("hints", "hint"), ("drop",), ("change",), ("types", "type")],
                8: [("type",), ("answer",), ("teach",), ("one", "1"), ("question",), ("time",)],
-               9: [("sure",), ("first",), ("three", "3", "3x"), ("alone",)], 10: [("five", "5"), ("away",)],
-               11: [("great",), ("three", "3", "3x"), ("fifteen", "15"), ("next",)],
-               12: [("divide", "divided"), ("three", "3"), ("five", "5"), ("got",)],
-               13: [("tested", "test"), ("ten", "10"), ("solve",), ("answers", "answer"), ("line",), ("zero", "0"), ("questions", "question")],
-               14: [("study",), ("thousand", "1000", "1,000"), ("answers", "answer"), ("exam",), ("seventeen", "17"), ("hints", "hint"), ("drop",)],
-               15: [("tell",), ("answer",)], 16: [("sure",), ("equals", "equal", "is"), ("five", "5")],
-               17: [("explain",), ("step",), ("one", "1"), ("bunny", "bunnie", "bunni", "buddy", "bonnie", "bony", "funny")],
-               18: [("step",), ("one", "1"), ("ask",), ("ai",)]},
-        "te": {1: [("होम", "हों", "होंव", "homework"), ("पदिकि", "पदकि", "पदिक", "पदि", "10"), ("टेस्ट", "टेस", "test"), ("इरवै", "इरव", "इर्व", "20"),
-                   ("रेंडु", "रेंड", "रेण्डु", "रेन्डु", "2")],
-               2: [("रेंडा", "रेंड", "रेण्ड", "रेन्ड"), ("बन्नी", "बनी", "बन्नि", "बनि", "बुन्नी")],
-               3: [("होम", "हों", "homework"), ("आई", "एआई", "ऐआई", "ai", "ए.आई"), ("कापी", "कॉपी", "copy", "काफी")],
-               4: [("आई", "एआई", "ऐआई", "ai", "ए.आई"), ("पास", "pass"), ("फेल", "फैल", "fail", "फेयल")],
+               9: [("sure",), ("first",)], 10: [("five", "5"), ("away",), ("fifteen", "15")],
+               11: [("great",), ("next",)], 12: [("divide", "divided"), ("three", "3"), ("five", "5"), ("got",)],
+               13: [("tested", "test"), ("ten", "10"), ("solve",), ("answers", "answer"), ("line",), ("zero", "0")],
+               14: [("tell",), ("answer",)], 15: [("fifteen", "15"), ("forty", "240"), ("thirty", "36")],
+               16: [("seven", "7"), ("ten", "10"), ("check",), ("answers", "answer"), ("step",), ("one", "1")],
+               17: [KITTU, ("explain",), ("step",)], 18: [("step",), ("one", "1"), ("ask",), ("ai",)]},
+        "te": {1: [("होम", "हों", "होंव", "homework"), ("पदिक", "पदक", "पदि", "10"), ("टेस्ट", "टेस", "test"), ("इरव", "इर्व", "एरव", "येरव", "20"),
+                   ("रेंडु", "रेंड", "रेण्डु", "रेन्डु", "रेंदु", "रेंदू", "रेन्दु", "2")],
+               2: [("रेंडा", "रेंड", "रेण्ड", "रेन्ड", "रेंदा", "रेन्दा", "रेंद"), KITTU_TE],
+               3: [("होम", "हों", "homework"), AI_TE, ("कापी", "कॉपी", "copy", "काफी"), ("कोट्ट", "कोट", "कोठ", "कट्ट", "कोत्त")],
+               4: [AI_TE, ("पास", "pass"), ("फेल", "फैल", "fail", "फेयल")],
                5: [("फोन", "फ़ोन", "phone"), ("बंद", "बन्द", "बांद")],
-               6: [("बैन", "बेन", "ban", "बान"), ("टाइप", "टैप", "type"), ("मार्च", "मार्चं", "मारच")],
-               7: [("सॉल्व", "सोल्व", "सॉल्फ", "solve", "साल्व", "सौल्व", "सल्व"), ("टाइप", "टैप", "type"), ("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर")],
-               8: [("टाइप", "टैप", "type"), ("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर"), ("टीच", "teach", "टिच"),
-                   ("क्वेश्चन", "क्वेस्चन", "question", "क्वेश्टन", "क्वेशन")],
-               9: [("सरे", "सरी", "सरै"), ("मूडु", "मूडू", "मुडु", "मूड", "3"), ("एक्स", "एक्श", "x"), ("मुंदु", "मुन्दु", "मुंद")],
-               10: [("ऐदु", "अइदु", "आइदु", "ऐदू", "5"), ("तीसे", "तीस", "तिसे", "थीसे")],
-               11: [("सूपर", "सुपर", "super", "सूपर्"), ("मूडु", "मूडू", "मुडु", "मूड", "3"), ("पदिहे", "पदहे", "पदिए", "15")],
-               12: [("मूडु", "मूडू", "मुडु", "मूड", "3"), ("भागि", "भाग"), ("ऐदु", "अइदु", "आइदु", "ऐदू", "5"), ("वच्चे", "वचे", "वच्च")],
+               6: [("बंद", "बन्द", "बांद"), ANS_TE, ("पदिहे", "पदहे", "पदिए", "17"),
+                   ("पर्सेंट", "परसेंट", "percent", "पर्सेन्ट", "पर्सेंट्", "पर्सें")],
+               7: [("हिंट", "हिन्ट", "hint"), ("तग्ग", "तगल", "तग", "थग्ग"), ("टाइप", "टैप", "type"), ("मार्च", "मार्चं", "मारच")],
+               8: [("टाइप", "टैप", "type"), ANS_TE, ("टीच", "teach", "टिच"), ("क्वेश्चन", "क्वेस्चन", "question", "क्वेश्टन", "क्वेशन")],
+               9: [("सरे", "सरी", "सरै"), ("मुंदु", "मुन्दु", "मुंद", "मुंडु")],
+               10: [("फाइव", "फैव", "five", "5", "फाईव"), ("तीसे", "तीस", "तिसे", "थीसे"), ("फिफ्ट", "फिफ्टीन", "15", "fifteen")],
+               11: [("सूपर", "सुपर", "super", "सूपर्"), ("तर्वात", "तरवात", "तर्वाता", "तर्वा", "तरुवात")],
+               12: [("त्री", "थ्री", "three", "3"), ("डिवाइड", "डिवैड", "divide", "दिवाइड", "डिवाईड"), ("फाइव", "फैव", "five", "5"), ("वच्चे", "वचे", "वच्च")],
                13: [("टेस्ट", "टेस", "test"), ("सॉल्व", "सोल्व", "सॉल्फ", "solve", "साल्व", "सौल्व", "सल्व"), ("लैन", "लाइन", "line", "लाईन"),
-                    ("सुन्ना", "सुन्न", "सुना", "0"), ("प्रश्न", "प्रशन", "प्रष्न", "प्रस्न")],
-               14: [("स्टडी", "स्टडि", "study"), ("वेय्यि", "वेयि", "वेइ", "1000"), ("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर"),
-                    ("पदिहे", "पदहे", "पदिए", "17"), ("हिंट", "हिन्ट", "hint")],
-               15: [("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर"), ("चाल", "चालु", "चालू")],
-               16: [("सरे", "सरी", "सरै"), ("एक्स", "एक्श", "x"), ("ऐदु", "अइदु", "आइदु", "ऐदू", "5")],
-               17: [("स्टेप", "स्टैप", "step"), ("एक्सप्ले", "एक्सप्लै", "explain", "एक्स्प्ले"), ("बन्नी", "बनी", "बन्नि", "बनि")],
-               18: [("स्टेप", "स्टैप", "step"), ("आई", "एआई", "ऐआई", "ai", "ए.आई"), ("अडग", "अडिग", "अडुग", "अड़ग", "अदग")]}}
+                    ("सुन्ना", "सुन्न", "सुना", "0")],
+               14: [ANS_TE, ("चाल", "चालु", "चालू")],
+               15: [("पदिहे", "पदहे", "पदिए", "15"), ("पर्सेंट", "परसेंट", "percent", "पर्सेन्ट", "पर्सें"),
+                    ("मुप्प", "मुप्पै", "मुप्पइ", "मुप्पय", "36")],
+               16: [("एडु", "येडु", "एडू", "येडू", "एदु", "7"), STEP_TE, ("अडगंड", "अडगण्ड", "अडग", "अदगंड", "अडिगं")],
+               17: [KITTU_TE, STEP_TE, ("एक्सप्ले", "एक्सप्लै", "explain", "एक्स्प्ले")],
+               18: [STEP_TE, AI_TE, ("अडग", "अडिग", "अडुग", "अड़ग", "अदग")]}}
 # lines whose judge text needs digits (Whisper writes "10/10", "3x", "17%")
-JUDGE_TEXT = {1: "Homework: 10 out of 10, every day. Class test: 2 out of 20!", 9: "Sure! What should we do first, to get 3x alone?",
-              11: "Great! Now 3x equals 15. What should we do next?",
-              12: "Divide by 3... x is 5! I got it!", 13: "I tested 10 sums. Solve: 10 answers. With the line: 0. Only questions.",
-              14: "A study of 1000 students found the same: AI that gave answers cut exam marks 17%. Hints? No drop.",
-              16: "Sure! x equals 5."}
+JUDGE_TEXT = {1: "Homework: 10 out of 10, every day. Class test: 2 out of 20!", 2: "Two?! Kit too!", 17: "Kit too. Explain step one.",
+              6: "Don't ban it. Kids who got AI answers did 17% worse than kids with no AI.", 10: "Take away the 5... 3x is 15?",
+              12: "Divide by 3... x is 5! I got it!", 13: "I tested 10 sums. Solve: 10 answers. With the line: 0.",
+              15: "15% of 240 is 36.", 16: "It gives in 7 times in 10. So don't check answers, sir. Ask step one."}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
 

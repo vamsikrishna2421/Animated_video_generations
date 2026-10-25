@@ -48,6 +48,13 @@
    "tail": 0.2,
    "pre": 0.2,
    "boost": 1.6,
+   "drop_at": [
+    [
+     5,
+     "1",
+     0.3
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -63,9 +70,9 @@
       "n": 2
      },
      {
-      "who": "bunny",
-      "shot": "bunny",
-      "prop": "confess",
+      "who": "kittu",
+      "shot": "phone",
+      "prop": "copied",
       "n": 3
      },
      {
@@ -83,13 +90,13 @@
      {
       "who": "teacher",
       "shot": "teacher",
-      "prop": "change",
+      "prop": "study1",
       "n": 6
      },
      {
       "who": "teacher",
-      "shot": "phone",
-      "prop": "copied",
+      "shot": "teacher",
+      "prop": "study2",
       "n": 7
      }
     ],
@@ -102,7 +109,7 @@
      "caved": 7,
      "q1a": "What should we do first",
      "q1b": "to get 3x alone? 🤔",
-     "q2a": "Great! Now 3x = 15.",
+     "q2a": "Great! You're on the right track.",
      "q2b": "What should we do next?"
     },
     "yt": {
@@ -125,26 +132,26 @@
     {
      "who": "dad",
      "file": "02_dad.wav",
-     "text": "రెండా?! బన్నీ!",
-     "show": "Two?! Bunny!",
+     "text": "రెండా?! కిట్టూ!",
+     "show": "Two?! Kittu!",
      "maxgap": 0.3,
      "gap": 0.15,
      "gain_db": 1.1
     },
     {
-     "who": "bunny",
-     "file": "03_bunny.wav",
-     "text": "హోంవర్క్ ఏ.ఐ. చేసింది. నేను కాపీ చేశానంతే.",
-     "show": "The AI did the homework. I just copied.",
+     "who": "kittu",
+     "file": "03_kittu.wav",
+     "text": "హోంవర్క్ ఏఐ చేసింది. నేను [1] కాపీ కొట్టానంతే.",
+     "show": "The AI did the homework. I just [1] copied it.",
      "maxgap": 0.3,
-     "gap": 0.2,
+     "gap": 0.3,
      "gain_db": 0.3
     },
     {
      "who": "teacher",
      "file": "04_teacher.wav",
-     "text": "అంటే ఏ.ఐ. పాస్, నువ్వు ఫెయిల్.",
-     "show": "So the AI passed, you failed.",
+     "text": "అంటే ఏఐ పాస్, [1] నువ్వు ఫెయిల్.",
+     "show": "So the AI passed, [1] you failed.",
      "maxgap": 0.3,
      "gap": 0.2,
      "gain_db": 0.3
@@ -161,19 +168,22 @@
     {
      "who": "teacher",
      "file": "06_teacher.wav",
-     "text": "బ్యాన్ చేయొద్దండి. బన్నీ టైప్ చేసేది మార్చండి.",
-     "show": "Don't ban it, sir. Change what Bunny types.",
+     "text": "బంద్ వద్దండి. ఏఐ ఆన్సర్లు చూసిన పిల్లలకి, ఏఐ లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు.",
+     "show": "No ban, sir. Kids who saw AI answers got [1] 17% lower marks than kids with no AI.",
      "maxgap": 0.3,
      "gap": 0.2,
+     "pauses": {
+      "1": 0.3
+     },
      "gain_db": 0.3
     },
     {
      "who": "teacher",
      "file": "07_teacher.wav",
-     "text": "\"Solve\" అని టైప్ చేస్తాడు, [1] ఆన్సర్ రెడీగా ఇచ్చేస్తుంది.",
-     "show": "He types \"Solve\", [1] it hands him the answer, ready-made.",
+     "text": "హింట్స్ తో? [1] తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి.",
+     "show": "With hints? [1] No drop. So change what he types.",
      "maxgap": 0.3,
-     "gap": 0.6,
+     "gap": 0.3,
      "gain_db": 0.3
     }
    ]
@@ -181,10 +191,17 @@
   {
    "id": "p_b",
    "type": "sk_ptm",
-   "tail": 0.35,
+   "tail": 0.3,
    "lift": 0.9,
    "pre": 0.35,
    "boost": 1.3,
+   "drop_at": [
+    [
+     5,
+     "1",
+     0.4
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -200,7 +217,7 @@
       "n": 9
      },
      {
-      "who": "bunny",
+      "who": "kittu",
       "shot": "phone",
       "prop": "answer1",
       "n": 10
@@ -212,10 +229,16 @@
       "n": 11
      },
      {
-      "who": "bunny",
+      "who": "kittu",
       "shot": "phone",
       "prop": "solved",
       "n": 12
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "test",
+      "n": 13
      }
     ],
     "captionTop": 1500,
@@ -227,7 +250,7 @@
      "caved": 7,
      "q1a": "What should we do first",
      "q1b": "to get 3x alone? 🤔",
-     "q2a": "Great! Now 3x = 15.",
+     "q2a": "Great! You're on the right track.",
      "q2b": "What should we do next?"
     },
     "yt": {
@@ -244,7 +267,7 @@
      "text": "ఇది టైప్ చెయ్యి: [1] Don't give me the answer. Teach me one question at a time.",
      "show": "Type this: Don't give me the answer. Teach me one question at a time.",
      "maxgap": 0.3,
-     "gap": 1.7,
+     "gap": 1.0,
      "tempo": 1.0,
      "nocap": true,
      "gain_db": 0.3
@@ -252,16 +275,16 @@
     {
      "who": "aichat",
      "file": "09_aichat.wav",
-     "text": "సరే! మూడు ఎక్స్ ఒక్కటే మిగలాలంటే, ముందు ఏం చేయాలి?",
-     "show": "Sure! To get 3x alone, what should we do first?",
+     "text": "సరే! ముందు ఏం చేయాలి?",
+     "show": "Sure! What should we do first?",
      "maxgap": 0.3,
      "gap": 0.2
     },
     {
-     "who": "bunny",
-     "file": "10_bunny.wav",
-     "text": "ఐదు తీసేయాలా?",
-     "show": "Take away the five?",
+     "who": "kittu",
+     "file": "10_kittu.wav",
+     "text": "ఫైవ్ తీసేస్తే... త్రీ ఎక్స్ ఫిఫ్టీన్?",
+     "show": "Take away five... 3x = 15?",
      "maxgap": 0.3,
      "gap": 0.2,
      "gain_db": 0.3
@@ -269,18 +292,30 @@
     {
      "who": "aichat",
      "file": "11_aichat.wav",
-     "text": "సూపర్! ఇప్పుడు మూడు ఎక్స్ పదిహేను. తర్వాత ఏం చేయాలి?",
-     "show": "Super! Now 3x = 15. What should we do next?",
+     "text": "సూపర్! తర్వాత?",
+     "show": "Super! What next?",
      "maxgap": 0.3,
      "gap": 0.2
     },
     {
-     "who": "bunny",
-     "file": "12_bunny.wav",
-     "text": "మూడుతో భాగిస్తే... ఎక్స్ ఐదు! [1] వచ్చేసింది!",
+     "who": "kittu",
+     "file": "12_kittu.wav",
+     "text": "త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఫైవ్! [1] వచ్చేసింది!",
      "show": "Divide by 3... x = 5! [1] I got it!",
      "maxgap": 0.3,
-     "gap": 0.7,
+     "gap": 0.6,
+     "gain_db": 0.3
+    },
+    {
+     "who": "teacher",
+     "file": "13_teacher.wav",
+     "text": "నేను పది లెక్కలు టెస్ట్ చేశా. \"Solve\" అంటే పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా.",
+     "show": "I tested 10 sums. \"Solve\": 10 answers. With this line: [1] zero.",
+     "maxgap": 0.3,
+     "gap": 0.8,
+     "pauses": {
+      "1": 0.45
+     },
      "gain_db": 0.3
     }
    ]
@@ -288,54 +323,48 @@
   {
    "id": "p_c",
    "type": "sk_ptm",
-   "tail": 0.4,
+   "tail": 0.2,
    "lift": 0.8,
    "pre": 0.3,
    "outro": true,
    "boost": 1.2,
    "rise": 1.3,
-   "drop_at": [
+   "drop_pre": [
     [
-     0,
-     "1",
-     0.5
+     4,
+     0.05,
+     0.9
     ]
    ],
    "data": {
     "beats": [
      {
-      "who": "teacher",
-      "shot": "teacher",
-      "prop": "test",
-      "n": 13
-     },
-     {
-      "who": "teacher",
-      "shot": "teacher",
-      "prop": "study",
-      "n": 14
-     },
-     {
-      "who": "bunny",
+      "who": "kittu",
       "shot": "phone",
       "prop": "push",
-      "n": 15
+      "n": 14
      },
      {
       "who": "aichat",
       "shot": "phone",
       "prop": "caved",
-      "n": 16
+      "n": 15
      },
      {
       "who": "teacher",
       "shot": "teacher",
+      "prop": "check",
+      "n": 16
+     },
+     {
+      "who": "dad",
+      "shot": "dad",
       "prop": "explain",
       "n": 17
      },
      {
-      "who": "bunny",
-      "shot": "bunny",
+      "who": "kittu",
+      "shot": "kittu",
       "prop": "loop",
       "n": 18
      }
@@ -349,41 +378,20 @@
      "caved": 7,
      "q1a": "What should we do first",
      "q1b": "to get 3x alone? 🤔",
-     "q2a": "Great! Now 3x = 15.",
+     "q2a": "Great! You're on the right track.",
      "q2b": "What should we do next?"
     },
     "yt": {
-     "chapter": "Our test, a study, and step one",
-     "title": "Our test, a study, and step one",
+     "chapter": "It gives in: ask step one",
+     "title": "It gives in: ask step one",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
    },
    "lines": [
     {
-     "who": "teacher",
-     "file": "13_teacher.wav",
-     "text": "నేను పది లెక్కలు టెస్ట్ చేశా. \"Solve\" అంటే పదికి పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా. ప్రశ్నలే అడిగింది.",
-     "show": "I tested 10 sums. \"Solve\": 10 out of 10 answers. With this line: [1] zero. It only asked questions.",
-     "maxgap": 0.3,
-     "gap": 0.9,
-     "pauses": {
-      "1": 0.5
-     },
-     "gain_db": 0.3
-    },
-    {
-     "who": "teacher",
-     "file": "14_teacher.wav",
-     "text": "వెయ్యి మంది స్టూడెంట్స్ మీద ఒక స్టడీ: ఆన్సర్లు ఇచ్చే ఏ.ఐ. తో ఎగ్జామ్ మార్కులు పదిహేడు శాతం తగ్గాయి. [1] హింట్స్ తో తగ్గలేదు.",
-     "show": "A study of 1,000 students: with an AI that gave answers, exam marks fell 17%. [1] With hints, no drop.",
-     "maxgap": 0.3,
-     "gap": 0.7,
-     "gain_db": 0.3
-    },
-    {
-     "who": "bunny",
-     "file": "15_bunny.wav",
+     "who": "kittu",
+     "file": "14_kittu.wav",
      "text": "ఆన్సర్ చెప్పెయ్, చాలు!",
      "show": "Just tell me the answer!",
      "maxgap": 0.3,
@@ -392,25 +400,34 @@
     },
     {
      "who": "aichat",
-     "file": "16_aichat.wav",
-     "text": "సరే! ఎక్స్ ఈక్వల్స్ ఐదు.",
-     "show": "Sure! x = 5.",
+     "file": "15_aichat.wav",
+     "text": "రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు.",
+     "show": "15% of 240: 36.",
      "maxgap": 0.3,
-     "gap": 1.4
+     "gap": 1.0
     },
     {
      "who": "teacher",
-     "file": "17_teacher.wav",
-     "text": "అయితే స్టెప్ వన్ ఎక్స్‌ప్లెయిన్ చెయ్యి, బన్నీ.",
-     "show": "Then explain step one, Bunny.",
+     "file": "16_teacher.wav",
+     "text": "గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేస్తుంది. అందుకే ఆన్సర్ కాదండీ, [1] స్టెప్ వన్ అడగండి.",
+     "show": "Push it, and it tells 7 times out of 10. So don't ask for the answer, sir: [1] ask for step one.",
      "maxgap": 0.3,
      "gap": 0.3,
      "gain_db": 0.3
     },
     {
-     "who": "bunny",
-     "file": "18_bunny.wav",
-     "text": "స్టెప్ వన్... ఏ.ఐ. ని అడగడం?",
+     "who": "dad",
+     "file": "17_dad.wav",
+     "text": "కిట్టూ. స్టెప్ వన్ ఎక్స్‌ప్లెయిన్ చెయ్యి.",
+     "show": "Kittu. Explain step one.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "gain_db": 0.3
+    },
+    {
+     "who": "kittu",
+     "file": "18_kittu.wav",
+     "text": "స్టెప్ వన్... ఏఐ ని అడగడం?",
      "show": "Step one... asking the AI?",
      "maxgap": 0.3,
      "gap": 0.05,

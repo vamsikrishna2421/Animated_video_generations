@@ -68,6 +68,10 @@ SPEAKERS = {
     "teja": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Teja", color="#93C5FD"),
     "aichat": dict(voice="af_heart", speed=1.0, lang="en-us", name="AI chat", color="#C4B5FD"),
     "nanna": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Nanna", color="#FDE68A"),
+    # creative 09 (file takes): the parent-teacher meeting
+    "teacher": dict(voice="af_heart", speed=1.0, lang="en-us", name="Padma ma'am", color="#FCA5A5"),
+    "dad": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Dad", color="#93C5FD"),
+    "kittu": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Kittu", color="#FDE68A"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

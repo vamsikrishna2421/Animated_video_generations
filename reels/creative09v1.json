@@ -32,7 +32,7 @@
  "beatSnap": true,
  "hideTimerInHook": true,
  "hideTimer": true,
- "tempo": 1.1,
+ "tempo": 1.12,
  "parler_lang": "en",
  "captionTop": 1500,
  "musicGapGain": 3.0,
@@ -47,6 +47,13 @@
    "tail": 0.2,
    "pre": 0.2,
    "boost": 1.6,
+   "drop_at": [
+    [
+     5,
+     "1",
+     0.3
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -62,9 +69,9 @@
       "n": 2
      },
      {
-      "who": "bunny",
-      "shot": "bunny",
-      "prop": "confess",
+      "who": "kittu",
+      "shot": "phone",
+      "prop": "copied",
       "n": 3
      },
      {
@@ -82,13 +89,13 @@
      {
       "who": "teacher",
       "shot": "teacher",
-      "prop": "change",
+      "prop": "study1",
       "n": 6
      },
      {
       "who": "teacher",
-      "shot": "phone",
-      "prop": "copied",
+      "shot": "teacher",
+      "prop": "study2",
       "n": 7
      }
     ],
@@ -101,7 +108,7 @@
      "caved": 7,
      "q1a": "What should we do first",
      "q1b": "to get 3x alone? 🤔",
-     "q2a": "Great! Now 3x = 15.",
+     "q2a": "Great! You're on the right track.",
      "q2b": "What should we do next?"
     },
     "yt": {
@@ -123,26 +130,27 @@
     {
      "who": "dad",
      "file": "02_dad.wav",
-     "text": "Two?! Bunny!",
-     "show": "Two?! Bunny!",
+     "text": "Two?! Kittu!",
+     "show": "Two?! Kittu!",
      "maxgap": 0.25,
      "gap": 0.15,
+     "tts": "Two?! Kit-too!",
      "gain_db": 1.1
     },
     {
-     "who": "bunny",
-     "file": "03_bunny.wav",
-     "text": "The AI did my homework. I just copied.",
-     "show": "The AI did my homework. I just copied.",
+     "who": "kittu",
+     "file": "03_kittu.wav",
+     "text": "The AI did my homework. I just [1] copied.",
+     "show": "The AI did my homework. I just [1] copied.",
      "maxgap": 0.25,
-     "gap": 0.16,
+     "gap": 0.3,
      "gain_db": 0.3
     },
     {
      "who": "teacher",
      "file": "04_teacher.wav",
-     "text": "So the AI passed. You didn't.",
-     "show": "So the AI passed. You didn't.",
+     "text": "So the AI passed. [1] You didn't.",
+     "show": "So the AI passed. [1] You didn't.",
      "maxgap": 0.25,
      "gap": 0.16,
      "gain_db": 0.3
@@ -159,19 +167,22 @@
     {
      "who": "teacher",
      "file": "06_teacher.wav",
-     "text": "Don't ban it. Change what he types.",
-     "show": "Don't ban it. Change what he types.",
+     "text": "Don't ban it. Kids who got AI answers did [1] seventeen percent worse than kids with no AI.",
+     "show": "Don't ban it. Kids who got AI answers did [1] 17% worse than kids with no AI.",
      "maxgap": 0.25,
      "gap": 0.16,
+     "pauses": {
+      "1": 0.3
+     },
      "gain_db": 0.3
     },
     {
      "who": "teacher",
      "file": "07_teacher.wav",
-     "text": "He types \"solve\", [1] it hands him the answer.",
-     "show": "He types \"Solve\", [1] it hands him the answer.",
+     "text": "Hints? [1] No drop. So change what he types.",
+     "show": "Hints? [1] No drop. So change what he types.",
      "maxgap": 0.25,
-     "gap": 0.6,
+     "gap": 0.3,
      "gain_db": 0.3
     }
    ]
@@ -179,10 +190,17 @@
   {
    "id": "p_b",
    "type": "sk_ptm",
-   "tail": 0.35,
+   "tail": 0.3,
    "lift": 0.9,
    "pre": 0.35,
    "boost": 1.3,
+   "drop_at": [
+    [
+     5,
+     "1",
+     0.4
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -198,7 +216,7 @@
       "n": 9
      },
      {
-      "who": "bunny",
+      "who": "kittu",
       "shot": "phone",
       "prop": "answer1",
       "n": 10
@@ -210,10 +228,16 @@
       "n": 11
      },
      {
-      "who": "bunny",
+      "who": "kittu",
       "shot": "phone",
       "prop": "solved",
       "n": 12
+     },
+     {
+      "who": "teacher",
+      "shot": "teacher",
+      "prop": "test",
+      "n": 13
      }
     ],
     "captionTop": 1500,
@@ -225,7 +249,7 @@
      "caved": 7,
      "q1a": "What should we do first",
      "q1b": "to get 3x alone? 🤔",
-     "q2a": "Great! Now 3x = 15.",
+     "q2a": "Great! You're on the right track.",
      "q2b": "What should we do next?"
     },
     "yt": {
@@ -241,24 +265,25 @@
      "text": "Type this: [1] Don't give me the answer. Teach me one question at a time.",
      "show": "Type this: [1] Don't give me the answer. Teach me one question at a time.",
      "maxgap": 0.25,
-     "gap": 1.7,
-     "tempo": 1.0,
+     "gap": 1.0,
+     "tempo": 1.05,
      "nocap": true,
      "gain_db": 0.3
     },
     {
      "who": "aichat",
      "file": "09_aichat.wav",
-     "text": "Sure! What should we do first, to get three x alone?",
-     "show": "Sure! What should we do first, to get 3x alone?",
+     "text": "Sure! What should we do first?",
+     "show": "Sure! What should we do first?",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "tempo": 1.2
     },
     {
-     "who": "bunny",
-     "file": "10_bunny.wav",
-     "text": "Take away the five?",
-     "show": "Take away the five?",
+     "who": "kittu",
+     "file": "10_kittu.wav",
+     "text": "Take away the five... three x is fifteen?",
+     "show": "Take away the 5... 3x = 15?",
      "maxgap": 0.25,
      "gap": 0.16,
      "gain_db": 0.3
@@ -266,18 +291,31 @@
     {
      "who": "aichat",
      "file": "11_aichat.wav",
-     "text": "Great! Now three x equals fifteen. What should we do next?",
-     "show": "Great! Now 3x = 15. What should we do next?",
+     "text": "Great! What next?",
+     "show": "Great! What next?",
      "maxgap": 0.25,
-     "gap": 0.16
+     "gap": 0.16,
+     "tempo": 1.2
     },
     {
-     "who": "bunny",
-     "file": "12_bunny.wav",
+     "who": "kittu",
+     "file": "12_kittu.wav",
      "text": "Divide by three... x is five! [1] I got it!",
      "show": "Divide by 3... x = 5! [1] I got it!",
      "maxgap": 0.25,
-     "gap": 0.7,
+     "gap": 0.6,
+     "gain_db": 0.3
+    },
+    {
+     "who": "teacher",
+     "file": "13_teacher.wav",
+     "text": "I tested ten sums. \"Solve\": ten answers. With the line: [1] zero.",
+     "show": "I tested 10 sums. \"Solve\": 10 answers. With the line: [1] zero.",
+     "maxgap": 0.25,
+     "gap": 0.8,
+     "pauses": {
+      "1": 0.45
+     },
      "gain_db": 0.3
     }
    ]
@@ -285,54 +323,48 @@
   {
    "id": "p_c",
    "type": "sk_ptm",
-   "tail": 0.4,
+   "tail": 0.2,
    "lift": 0.8,
    "pre": 0.3,
    "outro": true,
    "boost": 1.2,
    "rise": 1.3,
-   "drop_at": [
+   "drop_pre": [
     [
-     0,
-     "1",
-     0.5
+     4,
+     0.05,
+     0.9
     ]
    ],
    "data": {
     "beats": [
      {
-      "who": "teacher",
-      "shot": "teacher",
-      "prop": "test",
-      "n": 13
-     },
-     {
-      "who": "teacher",
-      "shot": "teacher",
-      "prop": "study",
-      "n": 14
-     },
-     {
-      "who": "bunny",
+      "who": "kittu",
       "shot": "phone",
       "prop": "push",
-      "n": 15
+      "n": 14
      },
      {
       "who": "aichat",
       "shot": "phone",
       "prop": "caved",
-      "n": 16
+      "n": 15
      },
      {
       "who": "teacher",
       "shot": "teacher",
+      "prop": "check",
+      "n": 16
+     },
+     {
+      "who": "dad",
+      "shot": "dad",
       "prop": "explain",
       "n": 17
      },
      {
-      "who": "bunny",
-      "shot": "bunny",
+      "who": "kittu",
+      "shot": "kittu",
       "prop": "loop",
       "n": 18
      }
@@ -346,40 +378,19 @@
      "caved": 7,
      "q1a": "What should we do first",
      "q1b": "to get 3x alone? 🤔",
-     "q2a": "Great! Now 3x = 15.",
+     "q2a": "Great! You're on the right track.",
      "q2b": "What should we do next?"
     },
     "yt": {
-     "chapter": "Our test, a study, and step one",
-     "title": "Our test, a study, and step one",
+     "chapter": "It gives in: ask step one",
+     "title": "It gives in: ask step one",
      "notes": []
     }
    },
    "lines": [
     {
-     "who": "teacher",
-     "file": "13_teacher.wav",
-     "text": "I tested ten sums. \"Solve\": ten answers. With the line: [1] zero. Only questions.",
-     "show": "I tested 10 sums. \"Solve\": 10 answers. With the line: [1] zero. Only questions.",
-     "maxgap": 0.25,
-     "gap": 0.9,
-     "pauses": {
-      "1": 0.5
-     },
-     "gain_db": 0.3
-    },
-    {
-     "who": "teacher",
-     "file": "14_teacher.wav",
-     "text": "A study of a thousand students found the same: AI that gave answers cut exam marks seventeen percent. [1] Hints? No drop.",
-     "show": "A study of 1,000 students found the same: AI that gave answers cut exam marks 17%. [1] Hints? No drop.",
-     "maxgap": 0.25,
-     "gap": 0.7,
-     "gain_db": 0.3
-    },
-    {
-     "who": "bunny",
-     "file": "15_bunny.wav",
+     "who": "kittu",
+     "file": "14_kittu.wav",
      "text": "Just tell me the answer.",
      "show": "Just tell me the answer.",
      "maxgap": 0.25,
@@ -388,24 +399,35 @@
     },
     {
      "who": "aichat",
-     "file": "16_aichat.wav",
-     "text": "Sure! x equals five.",
-     "show": "Sure! x = 5.",
+     "file": "15_aichat.wav",
+     "text": "Fifteen percent of two forty is thirty-six.",
+     "show": "15% of 240 is 36.",
      "maxgap": 0.25,
-     "gap": 1.4
+     "gap": 1.0,
+     "tempo": 1.2
     },
     {
      "who": "teacher",
-     "file": "17_teacher.wav",
-     "text": "Then explain step one, Bunny.",
-     "show": "Then explain step one, Bunny.",
+     "file": "16_teacher.wav",
+     "text": "It gives in seven times in ten. So don't check answers, sir. [1] Ask step one.",
+     "show": "It gives in 7 times in 10. So don't check answers, sir. [1] Ask step one.",
      "maxgap": 0.25,
      "gap": 0.3,
      "gain_db": 0.3
     },
     {
-     "who": "bunny",
-     "file": "18_bunny.wav",
+     "who": "dad",
+     "file": "17_dad.wav",
+     "text": "Kittu. Explain step one.",
+     "show": "Kittu. Explain step one.",
+     "maxgap": 0.25,
+     "gap": 0.35,
+     "tts": "Kit-too. Explain step one.",
+     "gain_db": 0.3
+    },
+    {
+     "who": "kittu",
+     "file": "18_kittu.wav",
      "text": "Step one is... ask the AI?",
      "show": "Step one is... ask the AI?",
      "maxgap": 0.25,

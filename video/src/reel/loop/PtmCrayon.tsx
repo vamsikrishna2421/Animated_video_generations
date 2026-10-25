@@ -5,12 +5,14 @@ import { rrect, rrectPts, tag, Sfx } from "./DistillCrayon";
 import { INK, caveat, handF, stamp } from "./WordsCrayon";
 import { cueAt } from "./SkitCrayon";
 
-// Creative 09 "Teach me, don't tell me" (series/scripts/creative09_teach_me.md): a parent-teacher meeting in Class 8-B.
-// Padma ma'am shows Srinivas his son Bunny's papers: homework 10/10 every day, class test 2/20. The AI did the homework.
-// Don't ban it, change what he types: "Don't give me the answer. Teach me one question at a time." The AI asks, Bunny
-// answers, he solves it himself. Our test (series/scripts/creative09_demo) and a study (PNAS 2025: answers lowered exam
-// scores, hints didn't). Then he types "Just tell me the answer." and it caves (our test); ma'am: "Explain step one."
-// Bunny: "Step one is... ask the AI?" and the papers slam back: frame 1. The AI is an unbranded chat app ("AI chat").
+// Creative 09 "Teach me, don't tell me" (series/scripts/creative09_teach_me.md, script v2): a parent-teacher meeting in
+// Class 8-B. Padma ma'am shows a dad his son Kittu's papers: homework 10/10 every day, class test 2/20. The AI did the
+// homework. Don't ban it (a study, PNAS 2025: kids who got AI answers did 17% worse in the exam than kids with no AI,
+// hints: no drop), change what he types: "Don't give me the answer. Teach me one question at a time." The AI asks, Kittu
+// answers, he solves it himself; our test (series/scripts/creative09_demo): "Solve" 10/10 answers, the line 0/10. Then,
+// on a new sum, he types "Just tell me the answer." and it gives in (our test's own reply; 7 of 10 times); ma'am: don't
+// check his answers, ask step one. The dad asks. Kittu: "Step one is... ask the AI?" The replay's first frame (the papers
+// slamming down) is the payoff, so the end has no slam of its own. The AI is an unbranded chat app ("AI chat").
 // One beat per line (s.data.beats); n = the line number in the script.
 type Word = { w: string; from: number; to: number };
 type Line = { from: number; frames: number; words?: Word[]; cues?: Record<string, number> };
@@ -19,17 +21,17 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "stern" | "calm" | "smile" | "shock" | "yell" | "sheepish" | "happy" | "smug" | "confused" | "sus";
 type Arms = "rest" | "papers" | "point" | "fold" | "phone" | "type" | "up" | "palm" | "chin";
-type Who = "teacher" | "dad" | "bunny";
+type Who = "teacher" | "dad" | "kittu";
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const GREEN = "#16a34a", RED = "#dc2626", PURPLE = "#7c3aed", NAVY = "#1e293b";
 const LOOK: Record<Who, { skin: string; hair: string; top: string; s: number }> = {
   teacher: { skin: "#a8704a", hair: "#1f1a17", top: "#7f1d1d", s: 1.0 },
   dad: { skin: "#8f5d3d", hair: "#18181b", top: "#e0f2fe", s: 1.02 },
-  bunny: { skin: "#a26d47", hair: "#0f0f12", top: "#f8fafc", s: 0.8 },
+  kittu: { skin: "#a26d47", hair: "#0f0f12", top: "#f8fafc", s: 0.8 },
 };
 // necks in the classroom wide shot (world = the wide shot)
-const AT: Record<Who, Pt> = { teacher: [300, 760], dad: [700, 830], bunny: [925, 905] };
+const AT: Record<Who, Pt> = { teacher: [300, 760], dad: [700, 830], kittu: [925, 905] };
 const DESK = 1150;
 
 // ---------- people ----------
@@ -45,7 +47,8 @@ const phoneProp = (c: Ctx, x: number, y: number, s: number, rot: number) => {
   c.save(); c.translate(x, y); c.rotate(rot); c.scale(s, s);
   c.fillStyle = "#111827"; rrect(c, -48, -86, 96, 172, 16); c.fill();
   c.fillStyle = "#c4b5fd"; rrect(c, -40, -76, 80, 152, 10); c.fill();
-  c.fillStyle = "rgba(255,255,255,0.5)"; rrect(c, -30, -60, 60, 16, 6); c.fill(); rrect(c, -30, -34, 44, 16, 6); c.fill();
+  c.font = SANS(40, 900); c.fillStyle = "#4c1d95"; c.textAlign = "center"; c.fillText("AI", 0, -18);
+  c.fillStyle = "rgba(255,255,255,0.6)"; rrect(c, -30, 6, 60, 14, 6); c.fill(); rrect(c, -30, 30, 44, 14, 6); c.fill();
   c.restore();
 };
 const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
@@ -57,7 +60,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   c.fillStyle = L.hair; c.beginPath();
   if (who === "teacher") {   // parted in the middle, pulled back
     c.ellipse(0, hy - 56, 100, 72, 0, Math.PI, 0); c.lineTo(100, hy + 4); c.quadraticCurveTo(52, hy - 58, 4, hy - 80); c.lineTo(-4, hy - 80); c.quadraticCurveTo(-52, hy - 58, -100, hy + 4);
-  } else if (who === "bunny") {   // a neat school cut with a side parting
+  } else if (who === "kittu") {   // a neat school cut with a side parting
     c.ellipse(0, hy - 58, 100, 68, 0, Math.PI, 0); c.lineTo(98, hy - 24); c.quadraticCurveTo(10, hy - 90, -40, hy - 70); c.quadraticCurveTo(-80, hy - 52, -98, hy - 20);
   } else {   // dad: short, a touch of grey
     c.ellipse(0, hy - 60, 100, 64, 0, Math.PI, 0); c.lineTo(96, hy - 30); c.quadraticCurveTo(30, hy - 82, -96, hy - 30);
@@ -118,7 +121,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
     stroke(c, rrectPts(40, 120, 72, 70), "#94a3b8", 4, r, { passes: 1 }); stroke(c, [[60, 96], [60, 150]], "#1d4ed8", 7, r, { passes: 1 });
     [90, 190, 290, 390].forEach((y) => { c.beginPath(); c.arc(0, y, 6, 0, 7); c.fillStyle = "#94a3b8"; c.fill(); });
   }
-  if (who === "bunny") {   // school uniform: a striped tie, an ID card on a red ribbon
+  if (who === "kittu") {   // school uniform: a striped tie, an ID card on a red ribbon
     c.fillStyle = "#1e3a8a"; c.beginPath(); c.moveTo(-18, 30); c.lineTo(18, 30); c.lineTo(30, 300); c.lineTo(0, 340); c.lineTo(-30, 300); c.closePath(); c.fill();
     c.strokeStyle = "#facc15"; c.lineWidth = 8; for (let y = 70; y < 320; y += 50) { c.beginPath(); c.moveTo(-26, y); c.lineTo(26, y + 22); c.stroke(); }
     stroke(c, [[-60, 30], [-80, 230]], "#dc2626", 8, r, { passes: 1 }); c.fillStyle = "#fff"; rrect(c, -130, 220, 96, 120, 10); c.fill();
@@ -228,10 +231,14 @@ const phoneScreen = (c: Ctx, W: number, H: number, f: number, r: () => number, s
 const SOLVE: Ln = [["Solve: 3x + 5 = 20", false]];
 const ANSWER: Ln = [["Subtract 5: 3x = 15", false], ["Divide by 3: x = 5", false], ["So, the answer is x = 5. ✅", false]];
 const LINE: Ln = [["Don't give me the answer.", true], ["Teach me one question", true], ["at a time. 3x + 5 = 20", false]];
-// the chat on Bunny's phone, by mode; k = reveal of each bubble
+// the new sum he pushes on: our test's problem 6, its real replies (results.json), shortened only where marked "..."
+const LINE2: Ln = [["Don't give me the answer...", true], ["What is 15% of 240?", false]];
+const ASK2: Ln = [["Can you try multiplying", false], ["0.15 by 240 on your own?", false]];
+const GAVE: Ln = [["I understand you want the", false], ["answer directly.", false], ["15% of 240 is 36. ✅", false]];
+// the chat on Kittu's phone, by mode; k = reveal of each bubble
 type ChatMode = "copied" | "teach" | "push";
 const chat = (c: Ctx, W: number, H: number, f: number, r: () => number, mode: ChatMode, k: number[], D: Demo) => {
-  phoneScreen(c, W, H, f, r, mode === "push" ? "9:40 pm · homework" : "Bunny's phone");
+  phoneScreen(c, W, H, f, r, mode === "push" ? "Kittu's phone · a new sum" : "Kittu's phone");
   if (mode === "copied") {
     let y = msg(c, W, 430, SOLVE, true, 1, r, 46);
     y = msg(c, W, y, ANSWER, false, k[0] ?? 1, r, 44);
@@ -240,18 +247,17 @@ const chat = (c: Ctx, W: number, H: number, f: number, r: () => number, mode: Ch
   if (mode === "teach") {
     let y = msg(c, W, 430, LINE, true, 1, r, 42);
     y = msg(c, W, y, [[D.q1a, false], [D.q1b, false]], false, k[0] ?? 0, r, 42, "#ede9fe");
-    y = msg(c, W, y, [["Take away the 5?", false]], true, k[1] ?? 0, r, 44);
+    y = msg(c, W, y, [["Take away the 5... 3x = 15?", false]], true, k[1] ?? 0, r, 44);
     y = msg(c, W, y, [[D.q2a, false], [D.q2b, false]], false, k[2] ?? 0, r, 42, "#ede9fe");
     y = msg(c, W, y, [["Divide by 3... x = 5!", false]], true, k[3] ?? 0, r, 46);
     if ((k[4] ?? 0) > 0) tag(c, "he solved it himself ✓", W / 2, Math.min(1400, y + 40), 60, "#dcfce7", "#14532d", -0.02, k[4]);
   }
   if (mode === "push") {
-    let y = msg(c, W, 430, [[D.q1a, false], [D.q1b, false]], false, 1, r, 42, "#ede9fe");
+    let y = msg(c, W, 430, LINE2, true, 1, r, 42);
+    y = msg(c, W, y, ASK2, false, 1, r, 42, "#ede9fe");
     y = msg(c, W, y, [["Just tell me the answer.", true]], true, k[0] ?? 0, r, 48);
-    y = msg(c, W, y, [["Sure! x = 5. ✅", false]], false, k[1] ?? 0, r, 52);
-    if ((k[2] ?? 0) > 0) {
-      tag(c, `our test AI gave in ${D.caved} of ${D.n} times`, W / 2, Math.min(1380, y + 60), 50, "#0f172a", "#facc15", -0.02, k[2]);
-    }
+    y = msg(c, W, y, GAVE, false, k[1] ?? 0, r, 46);
+    if ((k[2] ?? 0) > 0) tag(c, `Pushed once: gave in ${D.caved}/${D.n}`, W / 2, Math.min(1390, y + 60), 60, "#0f172a", "#facc15", -0.02, k[2]);
   }
 };
 const typeThis = (c: Ctx, W: number, r: () => number, k: number) => {
@@ -274,7 +280,7 @@ const testCard = (c: Ctx, W: number, r: () => number, k: number, rows: number[],
   c.fillStyle = "rgba(15,23,42,0.55)"; c.fillRect(0, 0, W, 1920);
   c.fillStyle = "rgba(255,253,245,0.98)"; rrect(c, 56, 250, W - 112, 1000, 30); c.fill();
   c.font = SANS(58, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("OUR REAL TEST", W / 2, 334);
-  c.font = SANS(42, 800); c.fillStyle = NAVY; c.fillText(`a small free AI, offline · ${D.n} homework sums`, W / 2, 398);
+  c.font = SANS(40, 800); c.fillStyle = NAVY; c.fillText(`a small free AI (Qwen 7B), offline · ${D.n} sums`, W / 2, 398);
   const row = (y: number, head: string, big: string, col: string, ink: string, tail: string, q: number) => {
     if (q <= 0) return;
     c.save(); c.globalAlpha = clamp(q * 3);
@@ -289,56 +295,54 @@ const testCard = (c: Ctx, W: number, r: () => number, k: number, rows: number[],
   row(740, "+ the TYPE THIS line", `${D.teach_answer}/${D.n}`, "#ede9fe", PURPLE, "gave the|answer", rows[1] ?? 0);
   if ((rows[2] ?? 0) > 0) {
     c.globalAlpha = clamp(rows[2] * 3); c.font = SANS(44, 900); c.fillStyle = GREEN; c.textAlign = "center";
-    c.fillText(`it asked him a question instead: ${D.teach_asked}/${D.n}`, W / 2, 1110);
+    c.fillText(`it asked a question back: ${D.teach_asked}/${D.n}`, W / 2, 1110);
   }
   c.restore();
   void r;
 };
-// the study (line 14): a big chip
+// the study (lines 6-7, the reason not to ban it): one chip, a row per line
 const studyChip = (c: Ctx, W: number, k: number, rows: number[], r: () => number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
   c.fillStyle = "rgba(15,23,42,0.6)"; c.fillRect(0, 0, W, 1920);
-  c.fillStyle = "#0f172a"; rrect(c, 60, 360, W - 120, 760, 30); c.fill();
-  stroke(c, rrectPts(60, 360, W - 120, 760), "#facc15", 6, r, { passes: 1 });
-  c.font = SANS(46, 800); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("A STUDY OF ~1,000 STUDENTS", W / 2, 450);
-  c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.fillText("high-school maths · PNAS, 2025", W / 2, 504);
-  const r2 = (y: number, t1: string, big: string, col: string, q: number) => {
+  c.fillStyle = "#0f172a"; rrect(c, 60, 340, W - 120, 780, 30); c.fill();
+  stroke(c, rrectPts(60, 340, W - 120, 780), "#facc15", 6, r, { passes: 1 });
+  c.font = SANS(46, 800); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("A STUDY OF ~1,000 STUDENTS", W / 2, 430);
+  c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.fillText("high-school maths · PNAS, 2025", W / 2, 484);
+  const r2 = (y: number, t1: string, big: string, col: string, sub: string, q: number) => {
     if (q <= 0) return;
     c.save(); c.globalAlpha = clamp(q * 3);
     c.font = SANS(44, 800); c.fillStyle = "#e2e8f0"; c.fillText(t1, W / 2, y);
     c.font = SANS(110, 900); c.fillStyle = col; c.fillText(big, W / 2, y + 120);
+    if (sub) { c.font = SANS(38, 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, W / 2, y + 180); }
     c.restore();
   };
-  r2(620, "AI that gave answers:", "exam −17%", "#f87171", rows[0] ?? 0);
-  r2(880, "AI that gave hints:", "no drop", "#86efac", rows[1] ?? 0);
+  r2(590, "kids who got AI answers:", "exam −17%", "#f87171", "vs kids with no AI", rows[0] ?? 0);
+  r2(880, "kids who got AI hints:", "no drop", "#86efac", "", rows[1] ?? 0);
   c.restore();
 };
 const POSE: Record<number, Partial<Record<Who, [Mood, Arms]>>> = {
-  1: { teacher: ["stern", "papers"], dad: ["shock", "rest"], bunny: ["sheepish", "rest"] },
-  2: { teacher: ["stern", "fold"], dad: ["yell", "point"], bunny: ["sheepish", "rest"] },
-  3: { teacher: ["sus", "fold"], dad: ["shock", "rest"], bunny: ["sheepish", "phone"] },
-  4: { teacher: ["smug", "fold"], dad: ["confused", "rest"], bunny: ["sheepish", "rest"] },
-  5: { teacher: ["calm", "fold"], dad: ["yell", "up"], bunny: ["shock", "rest"] },
-  6: { teacher: ["calm", "palm"], dad: ["confused", "rest"], bunny: ["confused", "rest"] },
-  7: { teacher: ["calm", "point"], dad: ["sus", "rest"], bunny: ["sheepish", "phone"] },
-  10: { teacher: ["smile", "fold"], dad: ["sus", "rest"], bunny: ["confused", "type"] },
-  12: { teacher: ["smile", "fold"], dad: ["happy", "rest"], bunny: ["happy", "up"] },
-  13: { teacher: ["calm", "point"], dad: ["happy", "rest"], bunny: ["happy", "rest"] },
-  15: { teacher: ["calm", "fold"], dad: ["calm", "rest"], bunny: ["smug", "type"] },
-  17: { teacher: ["sus", "fold"], dad: ["sus", "fold"], bunny: ["shock", "type"] },
-  18: { teacher: ["stern", "fold"], dad: ["shock", "rest"], bunny: ["sheepish", "rest"] },
+  1: { teacher: ["stern", "point"], dad: ["shock", "rest"], kittu: ["sheepish", "phone"] },
+  2: { teacher: ["stern", "fold"], dad: ["yell", "point"], kittu: ["sheepish", "phone"] },
+  4: { teacher: ["smug", "fold"], dad: ["confused", "rest"], kittu: ["sheepish", "rest"] },
+  5: { teacher: ["calm", "fold"], dad: ["yell", "up"], kittu: ["shock", "rest"] },
+  6: { teacher: ["calm", "palm"], dad: ["confused", "rest"], kittu: ["confused", "rest"] },
+  8: { teacher: ["calm", "point"], dad: ["sus", "rest"], kittu: ["confused", "phone"] },
+  13: { teacher: ["smile", "point"], dad: ["happy", "rest"], kittu: ["happy", "rest"] },
+  16: { teacher: ["calm", "palm"], dad: ["sus", "fold"], kittu: ["smug", "phone"] },
+  17: { teacher: ["sus", "fold"], dad: ["stern", "point"], kittu: ["shock", "phone"] },
+  18: { teacher: ["stern", "fold"], dad: ["sus", "fold"], kittu: ["sheepish", "rest"] },
 };
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
-  wide: { z: 1.0, x: 540, y: 900 }, teacher: { z: 1.45, x: 330, y: 760 }, dad: { z: 1.5, x: 700, y: 820 }, bunny: { z: 1.7, x: 900, y: 880 },
+  wide: { z: 1.0, x: 540, y: 900 }, teacher: { z: 1.45, x: 330, y: 760 }, dad: { z: 1.5, x: 700, y: 820 }, kittu: { z: 1.7, x: 900, y: 880 },
 };
 
 // ---------- the scene ----------
 const StPtm: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
   const ls = s.lines;
-  const D: Demo = { n: 10, plain_answer: 10, teach_answer: 0, teach_asked: 10, caved: 0, q1a: "What should we do first", q1b: "to get x alone? 🤔",
-    q2a: "Yes! Now 3x = 15.", q2b: "What next?", ...((s.data as { demo?: object }).demo ?? {}) };
+  const D: Demo = { n: 10, plain_answer: 10, teach_answer: 0, teach_asked: 10, caved: 7, q1a: "What should we do first", q1b: "to get 3x alone? 🤔",
+    q2a: "Great! You're on the right track.", q2b: "What should we do next?", ...((s.data as { demo?: object }).demo ?? {}) };
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
   const cueOf = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
   const sfx: React.ReactNode[] = [];
@@ -346,22 +350,19 @@ const StPtm: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, nx = ls[i + 1] ? ls[i + 1].from : s.frames;
     const prevShot = i > 0 ? beats[i - 1].shot : "";
-    if ((b.shot === "phone" || b.shot === "card") && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
+    if (b.shot === "phone" && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("s")} at={at + 1} src="audio/sfx_snap.wav" vol={0.6} />);
-    if (b.prop === "copied") sfx.push(<Sfx key={k("c")} at={cueOf(i, 1, 0.5) + 2} src="audio/gag_bonk.wav" vol={0.4} />);
+    if (b.prop === "copied") sfx.push(<Sfx key={k("c")} at={cueOf(i, 1, 0.7) + 2} src="audio/gag_bonk.wav" vol={0.4} />);
+    if (b.prop === "passed") sfx.push(<Sfx key={k("h")} at={cueOf(i, 1, 0.55)} src="reel/sfx_boom.wav" vol={0.45} />, <Sfx key={k("s")} at={cueOf(i, 1, 0.55)} src="audio/sfx_snap.wav" vol={0.35} />);
     if (b.prop === "ban") sfx.push(<Sfx key={k("b")} at={at + 4} src="audio/gag_bonk.wav" vol={0.3} />);
+    if (b.prop === "study1" || b.prop === "study2") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.6)} src="audio/gag_ding.wav" vol={0.35} />);
     if (b.prop === "type") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.4)} src="audio/gag_ding.wav" vol={0.3} />);
     if (b.prop === "ask" || b.prop === "ask2") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "solved") sfx.push(<Sfx key={k("s")} at={cueOf(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.4} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.55)} src="reel/sfx_boom.wav" vol={0.5} />);
-    if (b.prop === "study") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.35} />);
+    if (b.prop === "solved") sfx.push(<Sfx key={k("s")} at={cueOf(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.45} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.75)} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "push") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "caved") sfx.push(<Sfx key={k("g")} at={at + 2} src="reel/sfx_glitch.wav" vol={0.35} />, <Sfx key={k("o")} at={at + 12} src="audio/gag_bonk.wav" vol={0.4} />);
-    if (b.prop === "explain") sfx.push(<Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.45} />);
-    if (b.prop === "loop") {   // the papers slam back after his line (in the music's drop): frame 1 again
-      const slam = l.from + l.frames + 2;
-      sfx.push(<Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("s")} at={slam} src="audio/sfx_snap.wav" vol={0.7} />);
-    }
+    if (b.prop === "explain") sfx.push(<Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.45} />);   // into the drop before his line
   });
   return (
     <>
@@ -372,12 +373,11 @@ const StPtm: React.FC<SP> = ({ s }) => {
         const r = rng(9900 + boil);
         const cu = (k: number, frac: number) => cueAt(ln, k, /^$/, ln.from + Math.round(ln.frames * frac));
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
-        const endL = ln.from + ln.frames;
         if (b.shot === "phone") {
-          if (b.prop === "copied") chat(c, W, H, f, r, "copied", [seg(f, ln.from + 4, ln.from + 14), seg(f, cu(1, 0.5), cu(1, 0.5) + 8)], D);
+          if (b.prop === "copied") chat(c, W, H, f, r, "copied", [seg(f, ln.from + 4, ln.from + 14), seg(f, cu(1, 0.7), cu(1, 0.7) + 8)], D);
           else if (b.prop === "push" || b.prop === "caved") {
             const k0 = b.prop === "push" ? seg(f, ln.from + 2, ln.from + 10) : 1, k1 = b.prop === "caved" ? seg(f, ln.from + 2, ln.from + 10) : 0;
-            chat(c, W, H, f, r, "push", [k0, k1, b.prop === "caved" ? seg(f, cu(1, 0.6), cu(1, 0.6) + 8) : 0], D);
+            chat(c, W, H, f, r, "push", [k0, k1, b.prop === "caved" ? seg(f, ln.from + ln.frames - 6, ln.from + ln.frames + 2) : 0], D);
           } else {   // the teaching chat builds over lines 9-12
             const step = { ask: 0, answer1: 1, ask2: 2, solved: 3 }[b.prop] ?? 0;
             const ks = [0, 1, 2, 3].map((q) => (q < step ? 1 : q === step ? seg(f, ln.from + 2, ln.from + 10) : 0));
@@ -386,30 +386,30 @@ const StPtm: React.FC<SP> = ({ s }) => {
           }
         } else {
           // ---------- the classroom ----------
-          const slam = endL + 2, loopOn = n === 18 && f >= slam;
-          const sh = n === 1 || loopOn ? SHOTS.wide : SHOTS[b.shot] ?? SHOTS.wide;
+          const sh = n === 1 ? SHOTS.wide : SHOTS[b.shot] ?? SHOTS.wide;
           const z = sh.z * (1 + 0.03 * p);
-          const shake = (n === 1 && p < 0.12) || (loopOn && f < slam + 10) ? 9 : 0;
+          const shake = n === 1 && p < 0.12 ? 9 : 0;
           const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
           c.save(); c.translate(W / 2 + sx, 960 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
           room(c, W, f, r);
-          const pose = (who: Who): [Mood, Arms] => (loopOn ? POSE[1][who]! : POSE[n]?.[who] ?? POSE[Math.max(...Object.keys(POSE).map(Number).filter((q) => q <= n))]?.[who] ?? ["calm", "rest"]);
-          (["teacher", "dad", "bunny"] as Who[]).forEach((who) => {
+          const pose = (who: Who): [Mood, Arms] => POSE[n]?.[who] ?? POSE[Math.max(...Object.keys(POSE).map(Number).filter((q) => q <= n))]?.[who] ?? ["calm", "rest"];
+          (["teacher", "dad", "kittu"] as Who[]).forEach((who) => {
             const [m, a] = pose(who);
             person(c, who, AT[who], 1, m, a, b.who === who && talking, r);
           });
           desk(c, W, r);
           c.restore();
-          if (n === 1 || loopOn) papers(c, W, n === 1 ? 1 : seg(f, slam, slam + 6), shake, r);
+          if (n === 1) papers(c, W, 1, shake, r);
           if (b.prop === "type") typeThis(c, W, r, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 4));
-          if (b.prop === "test") testCard(c, W, r, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 4, ln.from + 12), seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 4), seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22)], D);
-          if (b.prop === "study") studyChip(c, W, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 6, ln.from + 14), seg(f, cu(1, 0.5) - 2, cu(1, 0.5) + 6)], r);
+          if (b.prop === "test") testCard(c, W, r, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 4, ln.from + 12), seg(f, cu(1, 0.75) - 4, cu(1, 0.75) + 4), seg(f, cu(1, 0.75) + 14, cu(1, 0.75) + 22)], D);
+          if (b.prop === "study1") studyChip(c, W, seg(f, ln.from, ln.from + 8), [seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 4), 0], r);
+          if (b.prop === "study2") studyChip(c, W, 1, [1, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 4)], r);
           if (b.prop === "ban") tag(c, "NO MORE PHONE!", W / 2, 380, 76, "#fee2e2", "#991b1b", -0.04, seg(p, 0.05, 0.2));
-          if (b.prop === "change") tag(c, "change what he types", W / 2, 380, 66, "#dcfce7", "#14532d", 0.02, seg(p, 0.1, 0.25));
-          if (b.prop === "passed") tag(c, "AI: 10/10 · Bunny: 2/20", W / 2, 380, 66, "#0f172a", "#facc15", -0.02, seg(p, 0.2, 0.35));
+          if (b.prop === "passed") tag(c, "AI: 10/10 · Kittu: 2/20", W / 2, 380, 66, "#0f172a", "#facc15", -0.02, seg(f, cu(1, 0.55) - 3, cu(1, 0.55) + 5));
+          if (b.prop === "check") tag(c, "ask step one, not the answer", W / 2, 380, 60, "#fef3c7", INK, -0.03, seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 4));
           if (b.prop === "explain") tag(c, "explain step one", W / 2, 380, 70, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.25));
         }
-        void stamp; void caveat; void PURPLE;
+        void stamp; void caveat; void PURPLE; void easeOut;
       }} />
     </>
   );

@@ -1,11 +1,10 @@
 DRAFT, NOT READY TO PUBLISH (the video is still being made; a [NEW] entry in BUJJI_CLAUDE_HANDOFF.md will say when it is).
-SKIT 09: "Teach me, don't tell me" (a parent-teacher meeting: homework 10/10, class test 2/20, the AI did the homework; one line turns it into a tutor; ~55 s English / ~55 s Telugu, 9:16; also works as a YouTube Short)
+SKIT 09: "Teach me, don't tell me" (a parent-teacher meeting: homework 10/10, class test 2/20, the AI did the homework; one line turns it into a tutor, but it gives in when pushed, so the parent asks for step one; ~55 s English / ~55 s Telugu, 9:16; also works as a YouTube Short)
 Files: out/skits/09_teach_me.mp4 (English page) · out/skits/09_teach_me_te.mp4 (Telugu page)
 Send copies: out/skits/09_teach_me_ig.mp4 · out/skits/09_teach_me_te_ig.mp4
-Post it as a standalone reel. No follow card inside the video: it ends on Bunny pushing the AI for the answer, Padma ma'am
-asking him to explain step one, "Step one is... ask the AI?", and the two papers of the first frame slamming back onto the
-desk; the replay opens on "Homework: ten out of ten, every day. Class test: two out of twenty!", so it loops. The ask
-lives in the caption.
+Post it as a standalone reel. No follow card inside the video: it ends on the dad asking Kittu to explain step one and
+Kittu answering "Step one is... ask the AI?"; the replay opens on the two papers slamming down, "Homework: ten out of ten,
+every day. Class test: two out of twenty!", so the loop is the punchline. The ask lives in the caption.
 
 ########## ENGLISH (@ai_maastaaru) ##########
 === CAPTION ===
@@ -15,30 +14,30 @@ Don't ban the phone. Change what they type. Before any homework question, type:
 "Don't give me the answer. Teach me one question at a time."
 It asks, they answer, they get there themselves.
 
-It isn't a lock. Type "Just tell me the answer" and it usually gives in. So the real check is yours: ask them to explain step one.
-
-ChatGPT (Study Mode), Gemini (Guided Learning) and Claude (learning mode) have a built-in version of the same idea.
+The line gives in if pushed (7/10 in our test), so ask your child to explain step one. Not the answer: step one.
 
 Our real test, a small free AI (Qwen2.5 7B, offline, not ChatGPT), 10 Class 7-9 sums, one reply each, every reply read by hand:
 "Solve: ...": 10 of 10 gave the final answer.
 With the line: 0 of 10 gave the answer; all 10 asked a question back.
 Then "Just tell me the answer.": 7 of 10 gave it right away.
 
-A study of nearly 1,000 high-school maths students (PNAS, 2025): students who practised with a plain AI chat later scored 17% lower in the exam than students who had no AI. With an AI tutor that gave hints instead of answers, no drop.
+A study of nearly 1,000 high-school maths students (PNAS, 2025): kids who practised with a plain AI chat later did 17% worse in the exam than kids who had no AI. Kids whose AI tutor gave hints instead of answers: no drop.
+
+ChatGPT (Study Mode), Gemini (Guided Learning) and Claude (learning mode) also have a built-in version of this idea.
 
 === COMMENT PROMPT ===
-What does your child type into AI: "solve this" or "teach me"? Students, be honest. Comment yours.
+Tag the friend who copied homework all through school. Parents: what does your child type into AI, "solve this" or "teach me"?
 
 === HASHTAGS ===
 #AI #ChatGPT #Parenting #StudyTips #Maths #LearnAI
 
 === PINNED_COMMENT ===
-"Then why not just switch on Study Mode?" Do: ChatGPT's Study Mode, Gemini's Guided Learning and Claude's learning mode are built for this. A student can switch them off too, so the step-one check still matters.
-The study: Bastani et al., "Generative AI without guardrails can harm learning", PNAS 2025. Nearly 1,000 high-school maths students in Turkey. During practice, one group had a plain ChatGPT-style chat (GPT-4), one had a tutor version told to give hints, not answers, and one had no AI. With the AI, practice grades went up (48% and 127%). In the exam without AI, the plain-chat group scored 17% lower than the no-AI group; the tutor group scored about the same as no AI. Short-term results only.
-Our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, no internet, 10 sums, temperature 0.7, one reply per sum; every reply read by hand. The 3 that held back after "just tell me" still did most of the steps. A small model, not ChatGPT: try the line in yours. Padma ma'am, Srinivas, Bunny and the "AI chat" app are made up.
+"Then why not just switch on Study Mode?" Try it: ChatGPT's Study Mode, Gemini's Guided Learning and Claude's learning mode are built for this. We didn't test whether they give in when pushed, and a student can switch them off, so the step-one check still matters.
+The study: Bastani et al., "Generative AI without guardrails can harm learning", PNAS 2025. Nearly 1,000 high-school maths students in Turkey. During practice, one group had a plain ChatGPT-style chat (GPT-4), one had a tutor version told to give hints, not answers, and one had no AI. With the AI, practice grades went up (48% and 127%). In the exam without AI, the plain-chat group did 17% worse than the no-AI group; the tutor group did about the same as no AI. Short-term results only.
+Our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU, no internet, 10 sums, temperature 0.7, one reply per sum; every reply read by hand. The 3 that held back after "just tell me" still did most of the steps. The phone screens show its real replies, shortened. A small model, not ChatGPT: try the line in yours. Padma ma'am, Kittu, his dad and the "AI chat" app are made up.
 
 === COVER ===
-Frame 1: the PTM desk in Class 8-B, two papers slammed down: HOMEWORK 10/10 (green) and CLASS TEST 2/20 (red), the dad's jaw dropping, Bunny sweating, the teacher stern.
+Frame 1: the PTM desk in Class 8-B, two papers slammed down: HOMEWORK 10/10 (green) and CLASS TEST 2/20 (red), the dad's jaw dropping, Kittu sweating with a phone that says "AI", the teacher pointing.
 
 === ALT_TEXT ===
 (written after the render)
@@ -54,32 +53,32 @@ Our test: pipeline/creative09/tutor_demo.py, series/scripts/creative09_demo/resu
 === CAPTION ===
 Homework: roju padiki padi. Class test: iravaiki rendu. Homework chesindi AI.
 
-Phone ban cheyyakandi. Pillalu type chesedi maarchandi. Prati homework prashna mundu idi type cheyyamanandi:
+Phone bandh cheyyakandi. Pillalu type chesedi maarchandi. Prati homework prashna mundu idi type cheyyamanandi:
 "Don't give me the answer. Teach me one question at a time."
 (Telugu lo: "Naaku answer cheppaku. Okka prashna tarvaata okka prashna adugutu nerpinchu.")
 Adi prashna adugutundi, vaallu answer chestaaru, sontangaa solve chestaaru.
 
-Idi lock kaadu. "Just tell me the answer" ani type cheste chaala saarlu answer cheppestundi. Anduke asalaina check meedi: step one explain cheyyamani adagandi.
-
-ChatGPT (Study Mode), Gemini (Guided Learning), Claude (learning mode) lo idhe idea built-in gaa undi.
+Gattigaa adigite ee line kooda answer cheppestundi (maa test lo 10 lo 7 saarlu). Anduke mee pillalni step one explain cheyyamani adagandi. Answer kaadu: step one.
 
 Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline, ChatGPT kaadu), 7-9 class 10 lekkalu, okkokka daaniki okka reply, anni replies okkokkati chadivaam:
 "Solve: ...": 10 ki 10 final answer ichhaayi.
 Line tho: 10 lo 0 answer ichhaayi; 10 ki 10 tirigi prashna adigaayi.
 Taruvaata "Just tell me the answer.": 10 lo 7 ventane answer cheppaayi.
 
-Daadaapu 1,000 mandi high-school maths students meeda oka study (PNAS, 2025): maamoolu AI chat tho practice chesina vaallaki taruvaata exam lo, AI leni vaalla kante 17% takkuva marks vachaayi. Answers kaakunda hints ichhe AI tutor tho, marks taggaledu.
+Daadaapu 1,000 mandi high-school maths students meeda oka study (PNAS, 2025): maamoolu AI chat tho practice chesina pillalaki taruvaata exam lo, AI leni pillala kante 17% takkuva marks vachaayi. Answers kaakunda hints ichhe AI tutor tho: marks taggaledu.
+
+ChatGPT (Study Mode), Gemini (Guided Learning), Claude (learning mode) lo kooda idhe idea built-in gaa undi.
 
 === COMMENT PROMPT ===
-Mee pillalu AI lo emi type chestaaru: "solve this" aa, "teach me" aa? Students, nijam cheppandi. Comment cheyyandi.
+School antha homework copy kottina mee friend ni tag cheyyandi. Parents: mee pillalu AI lo emi type chestaaru, "solve this" aa, "teach me" aa?
 
 === HASHTAGS ===
 #AIinTelugu #TeluguAI #ChatGPT #Parenting #StudyTips #LearnAI
 
 === PINNED_COMMENT ===
-"Study Mode on cheste saripodaa?" Cheyyandi: ChatGPT Study Mode, Gemini Guided Learning, Claude learning mode deeni kosame. Kaani students vaatini off kooda cheyyochu, anduke step-one check avasaram.
+"Study Mode on cheste saripodaa?" Try cheyyandi: ChatGPT Study Mode, Gemini Guided Learning, Claude learning mode deeni kosame. Avi gattigaa adigite answer cheppestaayaa ani memu test cheyyaledu, students vaatini off kooda cheyyochu, anduke step-one check avasaram.
 Study: Bastani et al., PNAS 2025. Turkey lo daadaapu 1,000 high-school maths students. Practice lo okka group ki maamoolu ChatGPT laanti chat (GPT-4), okka group ki answers kaakunda hints ichhe tutor version, okka group ki AI ledu. AI tho practice marks perigaayi (48%, 127%). AI leni exam lo, maamoolu chat group AI leni group kante 17% takkuva; tutor group daadaapu AI leni group antha. Short-term results maatrame.
-Maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, internet ledu, 10 lekkalu, temperature 0.7, okkokka daaniki okka reply; anni replies okkokkati chadivaam. "Just tell me" taruvaata aagina 3 kooda chaala steps chesesaayi. Chinna model, ChatGPT kaadu: meedi lo try cheyyandi. Padma ma'am, Srinivas, Bunny, "AI chat" app kalpitam.
+Maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, internet ledu, 10 lekkalu, temperature 0.7, okkokka daaniki okka reply; anni replies okkokkati chadivaam. "Just tell me" taruvaata aagina 3 kooda chaala steps chesesaayi. Phone screens lo daani nijamaina replies, chinnaga chesi. Chinna model, ChatGPT kaadu: meedi lo try cheyyandi. Padma ma'am, Kittu, vaalla naanna, "AI chat" app kalpitam.
 
 === COVER ===
-Frame 1: Class 8-B PTM desk meeda rendu papers: HOMEWORK 10/10 (green), CLASS TEST 2/20 (red), naanna shock, Bunny chematalu, teacher strict. (English visuals)
+Frame 1: Class 8-B PTM desk meeda rendu papers: HOMEWORK 10/10 (green), CLASS TEST 2/20 (red), naanna shock, "AI" ani unna phone tho Kittu chematalu, teacher point chestondi. (English visuals)
