@@ -167,7 +167,7 @@ const room = (c: Ctx, W: number, f: number, r: () => number) => {
   c.fillStyle = "#b9a37a"; c.fillRect(-300, 1500, W + 600, 420);
 };
 const desk = (c: Ctx, W: number, r: () => number) => {
-  c.fillStyle = "#8b5a2b"; c.fillRect(-300, DESK, W + 600, 420);
+  c.fillStyle = "#8b5a2b"; c.fillRect(-300, DESK, W + 600, 1100);   // down past the frame: the dad's shirt ends below it
   c.fillStyle = "#a0673a"; c.fillRect(-300, DESK, W + 600, 36);
   stroke(c, [[-200, DESK], [W + 200, DESK]], INK, 5, r, { passes: 2, alpha: 0.6 });
   // a stack of notebooks on the desk, a red 10/10 on top

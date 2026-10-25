@@ -64,20 +64,20 @@ SHOW_TE = {1: "Homework: 10/10, every day. Class test: 2/20!", 2: "Two?! Kittu!"
            17: "Kittu. Explain step one.", 18: "Step one... asking the AI?"}
 NOCAP = {8}   # the TYPE THIS card carries line 8
 # a: the case (the papers, the confession, the ban, the study); b: the line, the lesson, our test; c: the push, the check, the loop
-SCENES = [("p_a", (1, 2, 3, 4, 5, 6, 7), {"pre": 0.2, "boost": 1.6, "drop_at": [[5, "1", 0.3]], "tail": 0.2}),   # the bed drops out
-          ("p_b", (8, 9, 10, 11, 12, 13), {"lift": 0.9, "pre": 0.35, "boost": 1.3, "drop_at": [[5, "1", 0.4]], "tail": 0.3}),   # before
+SCENES = [("p_a", (1, 2, 3, 4, 5, 6, 7), {"pre": 0.2, "boost": 1.6, "drop_at": [[5, "1", 0.3]], "tail": 0.1}),   # the bed drops out
+          ("p_b", (8, 9, 10, 11, 12, 13), {"lift": 0.9, "pre": 0.35, "boost": 1.3, "drop_at": [[5, "1", 0.4]], "tail": 0.15}),   # before
           ("p_c", (14, 15, 16, 17, 18), {"lift": 0.8, "pre": 0.3, "outro": True, "boost": 1.2, "rise": 1.3, "drop_pre": [[4, 0.05, 0.9]],
                                          "tail": 0.2})]   # 17%, before "zero" and before "Step one is..."
-GAP = {1: 0.25, 2: 0.15, 3: 0.3, 7: 0.3, 8: 1.0, 12: 0.6, 13: 0.8, 15: 1.0, 16: 0.3, 17: 0.35}   # 8: TYPE THIS holds ~4.5 s; 13: the
+GAP = {1: 0.2, 2: 0.15, 3: 0.2, 7: 0.25, 8: 0.85, 12: 0.5, 13: 0.75, 15: 0.85, 16: 0.25, 17: 0.3}   # 8: TYPE THIS holds ~4.5 s; 13: the
                                                                                                    # card holds; 15: the give-in chip
 GAIN = {"teacher": 0.3, "dad": 0.3, "kittu": 0.3, "aichat": 0.0}
 GAIN_LINE = {2: 0.8, 5: 0.8}   # the dad's yells
 GAIN_TE = {}
 PAUSES = {"en": {6: {"1": 0.3}, 13: {"1": 0.45}}, "te": {6: {"1": 0.3}, 13: {"1": 0.45}}}   # a beat before 17% and before "zero"
-LINE_TEMPO = {"en": {8: 1.05, 9: 1.2, 11: 1.2, 15: 1.2}, "te": {8: 1.0}}   # the line to copy near its own speed; the narrator's
+LINE_TEMPO = {"en": {6: 1.18, 8: 1.05, 9: 1.2, 10: 1.2, 11: 1.2, 13: 1.2, 15: 1.2, 16: 1.18}, "te": {8: 1.0}}   # the line to copy near its own speed; the narrator's
                                                                           # AI lines run slow (the first cut ran 70.8 s)
 LINE_MAXGAP = {"en": {}, "te": {}}
-TEMPO = {"en": 1.12, "te": 1.12}
+TEMPO = {"en": 1.15, "te": 1.12}
 YT = {"p_a": "Homework 10/10, test 2/20", "p_b": "Teach me one question at a time", "p_c": "It gives in: ask step one"}
 MARK = re.compile(r"\[\d+\]\s*")
 # the phone's AI bubbles: the sample chat's real replies (results.json "sample", problem 1), shortened: "What should we do

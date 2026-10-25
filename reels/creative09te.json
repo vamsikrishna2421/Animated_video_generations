@@ -45,7 +45,7 @@
   {
    "id": "p_a",
    "type": "sk_ptm",
-   "tail": 0.2,
+   "tail": 0.1,
    "pre": 0.2,
    "boost": 1.6,
    "drop_at": [
@@ -126,7 +126,7 @@
      "text": "హోంవర్క్: రోజూ పదికి పది. క్లాస్ టెస్ట్: ఇరవైకి రెండు!",
      "show": "Homework: 10/10, every day. Class test: 2/20!",
      "maxgap": 0.3,
-     "gap": 0.25,
+     "gap": 0.2,
      "gain_db": 0.3
     },
     {
@@ -144,7 +144,7 @@
      "text": "హోంవర్క్ ఏఐ చేసింది. నేను [1] కాపీ కొట్టానంతే.",
      "show": "The AI did the homework. I just [1] copied it.",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.2,
      "gain_db": 0.3
     },
     {
@@ -183,7 +183,7 @@
      "text": "హింట్స్ తో? [1] తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి.",
      "show": "With hints? [1] No drop. So change what he types.",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.25,
      "gain_db": 0.3
     }
    ]
@@ -191,7 +191,7 @@
   {
    "id": "p_b",
    "type": "sk_ptm",
-   "tail": 0.3,
+   "tail": 0.15,
    "lift": 0.9,
    "pre": 0.35,
    "boost": 1.3,
@@ -267,7 +267,7 @@
      "text": "ఇది టైప్ చెయ్యి: [1] Don't give me the answer. Teach me one question at a time.",
      "show": "Type this: Don't give me the answer. Teach me one question at a time.",
      "maxgap": 0.3,
-     "gap": 1.0,
+     "gap": 0.85,
      "tempo": 1.0,
      "nocap": true,
      "gain_db": 0.3
@@ -303,7 +303,7 @@
      "text": "త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఫైవ్! [1] వచ్చేసింది!",
      "show": "Divide by 3... x = 5! [1] I got it!",
      "maxgap": 0.3,
-     "gap": 0.6,
+     "gap": 0.5,
      "gain_db": 0.3
     },
     {
@@ -312,7 +312,7 @@
      "text": "నేను పది లెక్కలు టెస్ట్ చేశా. \"Solve\" అంటే పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా.",
      "show": "I tested 10 sums. \"Solve\": 10 answers. With this line: [1] zero.",
      "maxgap": 0.3,
-     "gap": 0.8,
+     "gap": 0.75,
      "pauses": {
       "1": 0.45
      },
@@ -404,7 +404,7 @@
      "text": "రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు.",
      "show": "15% of 240: 36.",
      "maxgap": 0.3,
-     "gap": 1.0
+     "gap": 0.85
     },
     {
      "who": "teacher",
@@ -412,7 +412,7 @@
      "text": "గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేస్తుంది. అందుకే ఆన్సర్ కాదండీ, [1] స్టెప్ వన్ అడగండి.",
      "show": "Push it, and it tells 7 times out of 10. So don't ask for the answer, sir: [1] ask for step one.",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.25,
      "gain_db": 0.3
     },
     {
@@ -421,7 +421,7 @@
      "text": "కిట్టూ. స్టెప్ వన్ ఎక్స్‌ప్లెయిన్ చెయ్యి.",
      "show": "Kittu. Explain step one.",
      "maxgap": 0.3,
-     "gap": 0.35,
+     "gap": 0.3,
      "gain_db": 0.3
     },
     {
