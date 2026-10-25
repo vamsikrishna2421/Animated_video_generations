@@ -415,3 +415,14 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the built spec's top-level keys before the final render. The bed's level under speech is musicVol[0] x the scene's
   boost/rise (Reel.tsx), so check the voice-over-bed margin per line against score.wav x that, not the pack's
   "music-only" figure (it measures only the gaps).
+- Creative 09 lessons (Oct 25): Parler Telugu and "AI": "ఏ.ఐ." (dots) babbled in Prakash's voice ("ఏఏఏఏ"), and "ఏఐ"
+  before a vowel or "ని" ran together into "ee" ("ఏఐ ఆన్సర్లు", "ఏఐ ని"). Lalitha says "ఏఐ" right before a consonant
+  ("ఏఐ చెప్పిన"); Prakash needs "ఏయ్ ఐ". A Latin word inside a Telugu line comes out mangled ("Solve" -> "salva"): write
+  it in Telugu script ("సాల్వ్"). A zero-width joiner in a Telugu word can trip Parler: leave them out.
+  Fish English said the name "Kittu" as "key two"; "Kit-too" (in the line's `tts`) gave "Kit 2". Whisper writes such a
+  name only when prompted with it: check the take with a prompted decode (the log-prob rises from about -0.9 to -0.45).
+  beatSnap rounds every scene up to the next 0.68 s beat, so trimming a gap inside a scene saves nothing until the
+  scene's natural end crosses a beat line: compare the natural end with the grid (60.7 -> 59.8 s came from 0.1 s tails).
+  Build the English timeline as soon as its voices exist and trim to the 60 s limit before stills: script v2 first
+  built at 70.8 s. A moved beat can fix pacing too: the study answering "No more phone!" replaced a lecture-like block
+  of two stat cards in a row.

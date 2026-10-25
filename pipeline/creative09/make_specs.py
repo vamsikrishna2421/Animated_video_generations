@@ -28,7 +28,8 @@ LINES = {
     4: ("teacher", "teacher", "passed", "So the AI passed. [1] You didn't.", "అంటే ఏఐ పాస్, [1] నువ్వు ఫెయిల్."),
     5: ("dad", "dad", "ban", "That's it! No more phone!", "అంతే! ఇక ఫోన్ బంద్!"),
     6: ("teacher", "teacher", "study1", "Don't ban it. Kids who got AI answers did [1] seventeen percent worse than kids with no AI.",
-        "బంద్ వద్దండి. ఏఐ ఆన్సర్లు చూసిన పిల్లలకి, ఏఐ లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు."),   # the chip: the study
+        "బంద్ వద్దండి. ఏఐ చెప్పిన ఆన్సర్లు రాసిన పిల్లలకి, ఏఐ లేని పిల్లల కంటే [1] పదిహేడు పర్సెంట్ తక్కువ మార్కులు."),   # the chip: the study;
+        # "ఏఐ ఆన్సర్లు" ran together into "ee-aansarlu": a consonant after ఏఐ keeps it "ey-ai"
     7: ("teacher", "teacher", "study2", "Hints? [1] No drop. So change what he types.", "హింట్స్ తో? [1] తగ్గలేదు. అందుకే, టైప్ చేసేది మార్చండి."),
     8: ("teacher", "teacher", "type", "Type this: [1] Don't give me the answer. Teach me one question at a time.",
         "ఇది టైప్ చెయ్యి: [1] Don't give me the answer. Teach me one question at a time."),   # Telugu too: she reads the English card
@@ -37,13 +38,13 @@ LINES = {
     11: ("aichat", "phone", "ask2", "Great! What next?", "సూపర్! తర్వాత?"),
     12: ("kittu", "phone", "solved", "Divide by three... x is five! [1] I got it!", "త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఫైవ్! [1] వచ్చేసింది!"),
     13: ("teacher", "teacher", "test", "I tested ten sums. \"Solve\": ten answers. With the line: [1] zero.",   # the card names the AI
-         "నేను పది లెక్కలు టెస్ట్ చేశా. \"Solve\" అంటే పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా."),
+         "నేను పది లెక్కలు టెస్ట్ చేశా. సాల్వ్ అంటే పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా."),   # Latin "Solve" was read "salva"
     14: ("kittu", "phone", "push", "Just tell me the answer.", "ఆన్సర్ చెప్పెయ్, చాలు!"),
     15: ("aichat", "phone", "caved", "Fifteen percent of two forty is thirty-six.", "రెండు వందల నలభై లో పదిహేను పర్సెంట్, ముప్పై ఆరు."),
     16: ("teacher", "teacher", "check", "It gives in seven times in ten. So don't check answers, sir. [1] Ask step one.",
-         "గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేస్తుంది. అందుకే ఆన్సర్ కాదండీ, [1] స్టెప్ వన్ అడగండి."),
-    17: ("dad", "dad", "explain", "Kittu. Explain step one.", "కిట్టూ. స్టెప్ వన్ ఎక్స్‌ప్లెయిన్ చెయ్యి."),
-    18: ("kittu", "kittu", "loop", "Step one is... ask the AI?", "స్టెప్ వన్... ఏఐ ని అడగడం?"),
+         "గట్టిగా అడిగితే, పదిలో ఏడు సార్లు చెప్పేసింది. అందుకే సార్, ఆన్సర్ కాదు, [1] స్టెప్ వన్ అడగండి."),   # "చెప్పేస్తుంది" garbled
+    17: ("dad", "dad", "explain", "Kittu. Explain step one.", "కిట్టూ. స్టెప్ వన్ ఎక్స్ప్లెయిన్ చెయ్యి."),
+    18: ("kittu", "kittu", "loop", "Step one is... ask the AI?", "స్టెప్ వన్... ఏయ్ ఐ ని అడగడం?"),   # Prakash says "ఏఐ ని" as "ee-ni"
 }
 TTS_EN = {2: "Two?! Kit-too!", 17: "Kit-too. Explain step one."}   # "Kittu" came out "key two" (a long ee); the hyphen keeps it short
 # captions: English in both reels (the Telugu reel's captions follow the Telugu voice through the cues)
