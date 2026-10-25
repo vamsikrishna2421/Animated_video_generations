@@ -55,7 +55,6 @@ VOICE_TE = {
               "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 APP = {"aichat"}   # the app on his phone: the light phone sound
-X = ("x", "ex", "eggs", "axe", "ax", "next")   # Whisper's spellings of the letter x
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count)
 MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", "2"), ("twenty", "20")],
                2: [("two", "2", "to", "too"), ("bunny", "bunnie", "bunni", "buddy", "bonnie", "bony", "funny")],
@@ -63,8 +62,8 @@ MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", 
                5: [("more", "no"), ("phone",)], 6: [("ban",), ("change",), ("types", "type")],
                7: [("types", "type"), ("solve",), ("answer",)],
                8: [("type",), ("answer",), ("teach",), ("one", "1"), ("question",), ("time",)],
-               9: [("sure",), ("first",), X, ("alone",)], 10: [("five", "5"), ("away",)],
-               11: [("three", "3", "3x"), ("fifteen", "15"), ("next",)],
+               9: [("sure",), ("first",), ("three", "3", "3x"), ("alone",)], 10: [("five", "5"), ("away",)],
+               11: [("great",), ("three", "3", "3x"), ("fifteen", "15"), ("next",)],
                12: [("divide", "divided"), ("three", "3"), ("five", "5"), ("got",)],
                13: [("tested", "test"), ("ten", "10"), ("solve",), ("answers", "answer"), ("line",), ("zero", "0"), ("questions", "question")],
                14: [("study",), ("thousand", "1000", "1,000"), ("answers", "answer"), ("exam",), ("seventeen", "17"), ("hints", "hint"), ("drop",)],
@@ -81,9 +80,9 @@ MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", 
                7: [("सॉल्व", "सोल्व", "सॉल्फ", "solve", "साल्व", "सौल्व", "सल्व"), ("टाइप", "टैप", "type"), ("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर")],
                8: [("टाइप", "टैप", "type"), ("आन्सर", "आंसर", "answer", "ऑन्सर", "अन्सर"), ("टीच", "teach", "टिच"),
                    ("क्वेश्चन", "क्वेस्चन", "question", "क्वेश्टन", "क्वेशन")],
-               9: [("सरे", "सरी", "सरै"), ("एक्स", "एक्श", "x"), ("मुंदु", "मुन्दु", "मुंद")],
+               9: [("सरे", "सरी", "सरै"), ("मूडु", "मूडू", "मुडु", "मूड", "3"), ("एक्स", "एक्श", "x"), ("मुंदु", "मुन्दु", "मुंद")],
                10: [("ऐदु", "अइदु", "आइदु", "ऐदू", "5"), ("तीसे", "तीस", "तिसे", "थीसे")],
-               11: [("करेक्ट", "करेक्त", "correct", "कोरेक्ट"), ("मूडु", "मूडू", "मुडु", "मूड", "3"), ("पदिहे", "पदहे", "पदिए", "15")],
+               11: [("सूपर", "सुपर", "super", "सूपर्"), ("मूडु", "मूडू", "मुडु", "मूड", "3"), ("पदिहे", "पदहे", "पदिए", "15")],
                12: [("मूडु", "मूडू", "मुडु", "मूड", "3"), ("भागि", "भाग"), ("ऐदु", "अइदु", "आइदु", "ऐदू", "5"), ("वच्चे", "वचे", "वच्च")],
                13: [("टेस्ट", "टेस", "test"), ("सॉल्व", "सोल्व", "सॉल्फ", "solve", "साल्व", "सौल्व", "सल्व"), ("लैन", "लाइन", "line", "लाईन"),
                     ("सुन्ना", "सुन्न", "सुना", "0"), ("प्रश्न", "प्रशन", "प्रष्न", "प्रस्न")],
@@ -94,7 +93,8 @@ MUST = {"en": {1: [("homework",), ("ten", "10"), ("every",), ("test",), ("two", 
                17: [("स्टेप", "स्टैप", "step"), ("एक्सप्ले", "एक्सप्लै", "explain", "एक्स्प्ले"), ("बन्नी", "बनी", "बन्नि", "बनि")],
                18: [("स्टेप", "स्टैप", "step"), ("आई", "एआई", "ऐआई", "ai", "ए.आई"), ("अडग", "अडिग", "अडुग", "अड़ग", "अदग")]}}
 # lines whose judge text needs digits (Whisper writes "10/10", "3x", "17%")
-JUDGE_TEXT = {1: "Homework: 10 out of 10, every day. Class test: 2 out of 20!", 11: "Yes! Now 3x is 15. What next?",
+JUDGE_TEXT = {1: "Homework: 10 out of 10, every day. Class test: 2 out of 20!", 9: "Sure! What should we do first, to get 3x alone?",
+              11: "Great! Now 3x equals 15. What should we do next?",
               12: "Divide by 3... x is 5! I got it!", 13: "I tested 10 sums. Solve: 10 answers. With the line: 0. Only questions.",
               14: "A study of 1000 students found the same: AI that gave answers cut exam marks 17%. Hints? No drop.",
               16: "Sure! x equals 5."}

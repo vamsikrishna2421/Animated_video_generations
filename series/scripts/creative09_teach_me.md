@@ -52,9 +52,9 @@ culprit named by line 3.
 | 6 | Ma'am | Don't ban it. Change what he types. | chip "change what he types" |
 | 7 | Ma'am | He types "solve", it hands him the answer. | the phone: "Solve: 3x + 5 = 20" -> the full answer; COPIED stamp |
 | 8 | Ma'am | Type this: Don't give me the answer. Teach me one question at a time. | TYPE THIS card, the line in big type, held 2 s |
-| 9 | AI | Sure! What should we do first, to get x alone? | the phone: the line, then the AI's question |
+| 9 | AI | Sure! What should we do first, to get three x alone? | the phone: the line, then the AI's question (its real words: "What should we do first to isolate the term with x?") |
 | 10 | Bunny | Take away the five? | his bubble |
-| 11 | AI | Yes! Now three x is fifteen. What next? | |
+| 11 | AI | Great! Now three x equals fifteen. What should we do next? | (its real words: "Great! ... you get 3x = 15. Now, what should we do next to solve for x?") |
 | 12 | Bunny | Divide by three... x is five! I got it! | chip "he solved it himself ✓" |
 | 13 | Ma'am | I tested ten sums. "Solve": ten answers. With the line: zero. Only questions. | OUR REAL TEST card |
 | 14 | Ma'am | A study of a thousand students found the same: AI that gave answers cut exam marks seventeen percent. Hints? No drop. | the study chip |
@@ -74,9 +74,9 @@ culprit named by line 3.
 | 6 | Ma'am | బ్యాన్ చేయొద్దండి. బన్నీ టైప్ చేసేది మార్చండి. |
 | 7 | Ma'am | "Solve" అని టైప్ చేస్తాడు, ఆన్సర్ రెడీగా ఇచ్చేస్తుంది. |
 | 8 | Ma'am | ఇది టైప్ చెయ్యి: Don't give me the answer. Teach me one question at a time. (she reads the English card) |
-| 9 | AI | సరే! ఎక్స్ ఒక్కటే మిగలాలంటే, ముందు ఏం చేయాలి? |
+| 9 | AI | సరే! మూడు ఎక్స్ ఒక్కటే మిగలాలంటే, ముందు ఏం చేయాలి? |
 | 10 | Bunny | ఐదు తీసేయాలా? |
-| 11 | AI | కరెక్ట్! ఇప్పుడు మూడు ఎక్స్ పదిహేను. తర్వాత? |
+| 11 | AI | సూపర్! ఇప్పుడు మూడు ఎక్స్ పదిహేను. తర్వాత ఏం చేయాలి? |
 | 12 | Bunny | మూడుతో భాగిస్తే... ఎక్స్ ఐదు! వచ్చేసింది! |
 | 13 | Ma'am | నేను పది లెక్కలు టెస్ట్ చేశా. "Solve" అంటే పదికి పది ఆన్సర్లు. ఈ లైన్ తో సున్నా. ప్రశ్నలే అడిగింది. |
 | 14 | Ma'am | వెయ్యి మంది స్టూడెంట్స్ మీద ఒక స్టడీ: ఆన్సర్లు ఇచ్చే ఏ.ఐ. తో ఎగ్జామ్ మార్కులు పదిహేడు శాతం తగ్గాయి. హింట్స్ తో తగ్గలేదు. |

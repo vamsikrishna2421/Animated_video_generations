@@ -28,9 +28,9 @@ LINES = {
         "\"Solve\" అని టైప్ చేస్తాడు, [1] ఆన్సర్ రెడీగా ఇచ్చేస్తుంది."),
     8: ("teacher", "teacher", "type", "Type this: [1] Don't give me the answer. Teach me one question at a time.",
         "ఇది టైప్ చెయ్యి: [1] Don't give me the answer. Teach me one question at a time."),   # Telugu too: she reads the English card
-    9: ("aichat", "phone", "ask", "Sure! What should we do first, to get x alone?", "సరే! ఎక్స్ ఒక్కటే మిగలాలంటే, ముందు ఏం చేయాలి?"),
+    9: ("aichat", "phone", "ask", "Sure! What should we do first, to get three x alone?", "సరే! మూడు ఎక్స్ ఒక్కటే మిగలాలంటే, ముందు ఏం చేయాలి?"),
     10: ("bunny", "phone", "answer1", "Take away the five?", "ఐదు తీసేయాలా?"),
-    11: ("aichat", "phone", "ask2", "Yes! Now three x is fifteen. What next?", "కరెక్ట్! ఇప్పుడు మూడు ఎక్స్ పదిహేను. తర్వాత?"),
+    11: ("aichat", "phone", "ask2", "Great! Now three x equals fifteen. What should we do next?", "సూపర్! ఇప్పుడు మూడు ఎక్స్ పదిహేను. తర్వాత ఏం చేయాలి?"),
     12: ("bunny", "phone", "solved", "Divide by three... x is five! [1] I got it!", "మూడుతో భాగిస్తే... ఎక్స్ ఐదు! [1] వచ్చేసింది!"),
     13: ("teacher", "teacher", "test", "I tested ten sums. \"Solve\": ten answers. With the line: [1] zero. Only questions.",
          "నేను పది లెక్కలు టెస్ట్ చేశా. \"Solve\" అంటే పదికి పది ఆన్సర్లు. ఈ లైన్ తో [1] సున్నా. ప్రశ్నలే అడిగింది."),
@@ -44,14 +44,14 @@ LINES = {
 TTS_EN = {}
 # captions: English in both reels (the Telugu reel's captions follow the Telugu voice through the cues)
 SHOW = {1: "Homework: 10/10, every day. Class test: 2/20!", 7: "He types \"Solve\", [1] it hands him the answer.",
-        9: "Sure! What should we do first, to get x alone?", 11: "Yes! Now 3x = 15. What next?", 12: "Divide by 3... x = 5! [1] I got it!",
+        9: "Sure! What should we do first, to get 3x alone?", 11: "Great! Now 3x = 15. What should we do next?", 12: "Divide by 3... x = 5! [1] I got it!",
         13: "I tested 10 sums. \"Solve\": 10 answers. With the line: [1] zero. Only questions.",
         14: "A study of 1,000 students found the same: AI that gave answers cut exam marks 17%. [1] Hints? No drop.",
         16: "Sure! x = 5."}
 SHOW_TE = {1: "Homework: 10/10, every day. Class test: 2/20!", 2: "Two?! Bunny!", 3: "The AI did the homework. I just copied.",
            4: "So the AI passed, you failed.", 5: "That's it! No more phone!", 6: "Don't ban it, sir. Change what Bunny types.",
            7: "He types \"Solve\", [1] it hands him the answer, ready-made.",
-           9: "Sure! To get x alone, what should we do first?", 10: "Take away the five?", 11: "Correct! Now 3x = 15. Next?",
+           9: "Sure! To get 3x alone, what should we do first?", 10: "Take away the five?", 11: "Super! Now 3x = 15. What should we do next?",
            12: "Divide by 3... x = 5! [1] I got it!",
            13: "I tested 10 sums. \"Solve\": 10 out of 10 answers. With this line: [1] zero. It only asked questions.",
            14: "A study of 1,000 students: with an AI that gave answers, exam marks fell 17%. [1] With hints, no drop.",
