@@ -1,0 +1,49 @@
+UPLOAD: 040
+VIDEO: 040_ep38_not_enough_memory.mp4  (teaching skit, 62 s, AI voices; replaces the older lesson-format 040_ep38_how_to_run_ai_on_your_own_laptop.mp4; send copy: 040_ep38_not_enough_memory_ig.mp4, about 22 MB). It loops: "Bigger godown. Same counter." brings back the NOT ENOUGH MEMORY error, and the replay opens on "Not enough memory?! I paid for 512 GB!".
+
+=== CAPTION ===
+Ravi anna bought a 512 GB laptop for his shop AI. It said "Not enough memory."
+
+Episode 38 of AI From Scratch: running AI on your own laptop
+- Storage (the SSD or hard disk: 256 GB, 512 GB, 1 TB) is the godown: it keeps the brain's file
+- RAM (8 GB, 16 GB) is the counter: to write each word, the AI uses every number in its brain (EP37), so the whole brain has to sit in RAM while it answers
+- Our real test, internet cut (no network at all), on a 4-core cloud computer with no graphics card. RAM each squeezed (4-bit) brain needed while answering: Qwen2.5 1.5B (1.1 GB file) 1.3 GB · 3B (2.1 GB file) 2.3 GB · 7B (4.7 GB file) 5.0 GB. The file, plus a little room to work (more in long chats)
+- With the internet cut, the 7B still wrote a WhatsApp reply, in 17 seconds
+
+What this means for you:
+1. Check your RAM, not your storage. Windows: Settings > System > About > Installed RAM. Mac: Apple menu > About This Mac
+2. Your RAM must hold the brain, its room to work, and the computer itself (Windows, your browser). 8 GB: the 4.7 GB brain only just fits, close the other apps first (we measured the brain's 5.0 GB; we didn't run an 8 GB Windows laptop). 16 GB: room for a 9 GB brain such as Qwen2.5 14B squeezed (Ollama's file; we didn't run this one)
+3. Free apps, no coding: Ollama or LM Studio. Download a brain once (that needs internet); after that it runs offline and your chats stay on your laptop. Ollama: type qwen2.5:7b. LM Studio: search "qwen2.5 7b instruct" and pick the Q4_K_M file
+4. Slower than ChatGPT: 17 s for one reply on our computer (newer laptops are faster)
+5. Want a bigger brain? More RAM, not a bigger disk (and check first whether your laptop's RAM can be upgraded: on many thin laptops it can't)
+
+Next: EP39, why one AI answers in a second and another takes 17: speed, latency and cost per token.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+The 4.7 GB brain needs how much RAM? A) 4.7 GB B) 5 GB C) all 8 GB. Comment before the answer comes. Then tell us your laptop's RAM and we'll tell you which brain fits.
+
+=== HASHTAGS ===
+#LocalAI #RunAILocally #Ollama #LMStudio #LearnAI #AIFromScratch
+
+=== PINNED_COMMENT ===
+How we tested (run by us): Qwen's own 4-bit GGUF files (Q4_K_M) of Qwen2.5-1.5B, 3B and 7B Instruct, llama.cpp on a 4-core computer (server CPU, no graphics card), context 4,096 tokens (Ollama's default), every test in a network namespace with no internet (a lookup of huggingface.co and a connection to 1.1.1.1 both failed first). RAM needed = the most memory each brain held while writing a short reply, every weight loaded once: 1.34, 2.34 and 4.95 GB. The 7B's WhatsApp reply took 16.7 s, about 3 words a second.
+"Why 5 and not 4.7?" The extra is room to work: the chat so far (the context) and working space. Longer chats need more.
+"Private? Offline?" Ollama's FAQ: "Ollama runs locally. We don't see your prompts or data when you run locally." It also offers cloud models, and those use the internet. LM Studio's docs: "Nothing you enter into LM Studio when chatting with LLMs leaves your device." LM Studio is free at home and at work (since July 2025).
+Licences: Qwen2.5 1.5B, 7B and 14B are Apache 2.0; the 3B is under Qwen's research licence (check it before business use).
+
+=== COVER ===
+Frame 1: a new laptop on Ravi anna's counter with a red pop-up "NOT ENOUGH MEMORY · This brain needs 15 GB", its box with a "512 GB" starburst and "8 GB RAM", and Ravi yelling with his hands up.
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. Ravi anna's new laptop shows a red error, "Not enough memory. This brain needs 15 GB," and he yells that he paid for 512 GB. The shop AI explains that 512 GB is storage, the godown that keeps things. For every word it uses every sack of its brain, so they all have to sit on the counter, RAM, and this counter holds 8 GB while its brain is 15: fifteen sacks fall on an eight-slot counter and tumble off. Ravi suggests the squeezed brain, 4.7 GB, and asks how much counter it needs; a quiz card offers 4.7 GB, 5 GB or all 8 GB. The answer is about 5 GB: the file plus room to work; it fits with about 3 GB left for Windows and apps, so close the other apps first. With the internet cut, the AI still wrote a real WhatsApp reply, shown word for word, in 17 seconds, using 5.0 GB of RAM. A rule card says check RAM, not storage, where to find it on Windows and Mac, and that RAM must hold the brain, room to work and the computer: 8 GB, the 4.7 GB brain barely; 16 GB, a 9 GB brain easily. Free apps with no coding, Ollama and LM Studio, download a brain once and then run offline. Ravi announces a 2 TB hard disk for the biggest brain; the AI says "Bigger godown. Same counter," and the error pops up again.
+
+=== SOURCES (for comments) ===
+Demo (run by us): pipeline/ep38/local_demo.py, results in series/scripts/ep38_demo/ (one JSON per brain: RAM, network check, reply).
+Ollama library, qwen2.5 (ollama.com/library/qwen2.5): 1.5b 986 MB, 3b 1.9 GB, 7b 4.7 GB, 14b 9.0 GB, 32b 20 GB.
+Ollama FAQ (docs.ollama.com/faq): "Ollama runs locally. We don't see your prompts or data when you run locally."; default context 4096 tokens; local-only mode turns off cloud features.
+Ollama blog, "Ollama's new app" (Jul 30, 2025): desktop app for macOS and Windows to chat with local models.
+LM Studio docs, offline operation (lmstudio.ai/docs/app/offline): "In general, LM Studio does not require the internet in order to work."; "Nothing you enter into LM Studio when chatting with LLMs leaves your device."
+LM Studio docs, system requirements: "At least 16GB of RAM is recommended" (Windows); on 8 GB Macs "stick to smaller models and modest context sizes".
+LM Studio blog, "free for work" (Jul 8, 2025).
+Qwen2.5 model cards on Hugging Face (licences: 1.5B, 7B, 14B Apache 2.0; 3B qwen-research).

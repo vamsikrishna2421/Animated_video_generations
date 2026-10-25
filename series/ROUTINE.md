@@ -49,7 +49,7 @@ The user's ask (Oct 20): the daily episode covers the whole syllabus, plus weekl
 
 | IST day | Slot | Next item from | Posted |
 |---|---|---|---|
-| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP38 is next (queue 040), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
+| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP39 is next (queue 041), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
 | Thu | HOW TO (see "Thursday: HOW TO") | `series/HOWTO.md`, the first "planned" row whose "Needs" are out | the day it is made |
 | Sat | AI WEEKLY (see "Saturday: AI WEEKLY") | `news/README.md`, "Weekly edition" | the day it is made |
 
@@ -60,7 +60,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039); next EP38 "Running AI locally on your laptop", queue 040). The skit replaces the old
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040); next EP39 "Inference: speed, latency and cost per token", queue 041). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
@@ -402,3 +402,16 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the disk hit 0 and git stopped mid-merge (stray empty mp4s, the new file half-written). Recipe instead: `git fetch
   origin sample1`, `git diff --name-only HEAD origin/sample1` (what changed), `git reset --soft origin/sample1`, then
   `git checkout origin/sample1 -- <those files>`. Nothing else in the tree is touched; check `df -h /` before any pull.
+- EP38 lessons (Oct 25): read the last few episodes' frame 1 and rule cards before picking a hook. EP34 had already
+  used "internet down, the AI went silent" and "own works offline"; EP38's first draft repeated both, so it moved to
+  RAM vs storage. A demo file in /dev/shm with memory-mapping on makes llama.cpp's peak memory count the weights twice
+  (the mapped pages plus its repacked copy: the 7B read 7.9 GB): measure the RAM a model needs in a fresh process with
+  `use_mmap=False` (4.95 GB). In an `unshare -n` namespace /sys/class/net still lists the parent's interfaces; read
+  /proc/net/dev. English judge: Whisper writes "512 GB", "8GB" (one word), "4.7", "15": judge such lines against a digit
+  version (ep38/voice.py `JUDGE_TEXT`) or a clean take scores 0.6. A quiz with one option under the limit and an
+  "about" on the right answer gives itself away (both viewers): make the right answer as plain as the wrong ones.
+  A `# comment` pasted into the middle of a spec line swallows the rest of it: it dropped hardCuts, beatSnap and both
+  timer flags from EP38's spec, and the corner timer showed "1:02" in frame 1. Comments go at the end of a line; print
+  the built spec's top-level keys before the final render. The bed's level under speech is musicVol[0] x the scene's
+  boost/rise (Reel.tsx), so check the voice-over-bed margin per line against score.wav x that, not the pack's
+  "music-only" figure (it measures only the gaps).

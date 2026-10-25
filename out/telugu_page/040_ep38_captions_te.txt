@@ -1,0 +1,36 @@
+UPLOAD: 040 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/040_ep38_insta_te.mp4  (teaching skit, 63 s, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/040_ep38_insta_te_ig.mp4, about 22 MB). It loops: "godaam peddadi, counter ade andi." brings back the NOT ENOUGH MEMORY error, and the replay opens on "memory saripoledaa?! five twelve GB ki dabbulu kattaa!".
+
+=== CAPTION ===
+Ravi anna shop AI kosam 512 GB laptop konnaadu. Adi "Not enough memory" ani cheppindi.
+
+AI From Scratch Episode 38: mee sontha laptop meeda AI
+- Storage (SSD leda hard disk: 256 GB, 512 GB, 1 TB) mana godaam: brain file ni daachi pedutundi
+- RAM (8 GB, 16 GB) counter: prati maata raayadaaniki AI tana brain lo prati number vaadutundi (EP37), anduke answer chestunnantha sepu brain motham RAM lo undaali
+- Maa real test, internet cut chesi (network ye maatram ledu), 4-core cloud computer, graphics card ledu. Prati compress chesina (4-bit) brain ki answer chesetappudu pattina RAM: Qwen2.5 1.5B (1.1 GB file) 1.3 GB · 3B (2.1 GB file) 2.3 GB · 7B (4.7 GB file) 5.0 GB. File, plus pani chese konchem chotu (pedda chats ki inkaa ekkuva)
+- Internet cut chesinaa, 7B oka WhatsApp reply raasindi, 17 seconds lo
+
+Meeku idi ante:
+1. Storage kaadu, RAM choodandi. Windows: Settings > System > About > Installed RAM. Mac: Apple menu > About This Mac
+2. Mee RAM lo brain, daani pani chotu, computer kooda (Windows, browser) pattaali. 8 GB: 4.7 GB brain jast saripotundi, mundu migataa apps close cheyandi (brain ki 5.0 GB ani memu kolichaam; 8 GB Windows laptop meeda test cheyyaledu). 16 GB: 9 GB brain ki chotu untundi, udaaharanaki Qwen2.5 14B compress chesinadi (Ollama file; idi memu run cheyyaledu)
+3. Free apps, coding akkarledu: Ollama leda LM Studio. Brain ni okkasaari download cheyyandi (daaniki internet kaavaali); taruvaata offline lone nadustundi, mee chats mee laptop lone untaayi. Ollama: qwen2.5:7b type cheyyandi. LM Studio: "qwen2.5 7b instruct" search chesi Q4_K_M file teeskondi
+4. ChatGPT kante slow: maa computer lo oka reply ki 17 s (kotha laptops inkaa fast)
+5. Pedda brain kaavaalaa? Pedda disk kaadu, ekkuva RAM (mundu mee laptop RAM penchochaa choodandi: chaala sannani laptops lo kudaradu)
+
+Next: EP39, oka AI okka second lo answer chestundi, inkokati 17 seconds teeskuntundi, enduku: speed, latency, cost per token.
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+4.7 GB brain ki entha RAM kaavaali? A) 4.7 GB B) 5 GB C) motham 8 GB. Answer raakamunde comment cheyyandi. Mee laptop RAM entho cheppandi, ye brain saripotundo memu cheptaam.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #LocalAI #Ollama #LearnAI #AIFromScratch
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen sontha 4-bit GGUF files (Q4_K_M), Qwen2.5-1.5B, 3B, 7B Instruct, llama.cpp tho 4-core computer (server CPU, graphics card ledu), context 4,096 tokens (Ollama default), prati test internet leni network namespace lo (huggingface.co lookup, 1.1.1.1 connection rendoo mundu fail ayyaayi). Short reply raasetappudu prati brain pattina ekkuva memory, prati weight okkasaare load chesi: 1.34, 2.34, 4.95 GB. 7B WhatsApp reply ki 16.7 s, second ki daadaapu 3 maatalu.
+"4.7 kaadu 5 enduku?" Extra chotu pani kosam: ippati daaka chat (context), working space. Pedda chats ki inkaa ekkuva.
+"Private aa? Offline aa?" Ollama FAQ: "Ollama runs locally. We don't see your prompts or data when you run locally." Ollama lo cloud models kooda unnaayi, avi internet vaadataayi. LM Studio docs: "Nothing you enter into LM Studio when chatting with LLMs leaves your device." LM Studio intlo, office lo free (July 2025 nunchi).
+Licences: Qwen2.5 1.5B, 7B, 14B Apache 2.0; 3B Qwen research licence (business ki vaade mundu choodandi).
+
+=== COVER ===
+Frame 1: Ravi anna counter meeda kotha laptop, red pop-up "NOT ENOUGH MEMORY · This brain needs 15 GB", daani box meeda "512 GB" starburst, "8 GB RAM", Ravi chetulu etti arustunnaadu. (English visuals)

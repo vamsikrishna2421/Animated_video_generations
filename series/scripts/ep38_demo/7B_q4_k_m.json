@@ -1,0 +1,249 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "size": "7B",
+ "file_gb": 4.68,
+ "files": [
+  "qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "qwen2.5-7b-instruct-q4_k_m-00002-of-00002.gguf"
+ ],
+ "load_seconds": 18.2,
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "eth0",
+   "ifb0",
+   "ifb1",
+   "lo"
+  ],
+  "offline": true
+ },
+ "context_tokens": 4096,
+ "machine": "x86_64, 4 CPU cores, no graphics card",
+ "decoding": "greedy (temperature 0), llama.cpp via llama-cpp-python, 4 threads",
+ "ram_after_load_gb": {
+  "VmHWM": 7.89,
+  "VmRSS": 7.89,
+  "RssAnon": 3.37,
+  "RssFile": 0.02
+ },
+ "bills": {
+  "right": 18,
+  "of": 20,
+  "seconds_per_bill": 16.2,
+  "tokens_per_second": 4.14,
+  "rows": [
+   {
+    "order": "anna 2 kg tomato, 1 dozen eggs pls",
+    "right_total": 158,
+    "model_total": 158.0,
+    "ok": true,
+    "seconds": 27.3,
+    "reply": "- Tomato: Rs 40 per 1 kg, so 2 kg will be Rs 40 * 2 = Rs 80\n- Eggs: Rs 78 per 1 dozen\n\nTotal: Rs 80 + Rs 78 = Rs 158\nTOTAL: 158"
+   },
+   {
+    "order": "1 kg rice, 1 kg toor dal, 2 milk packets",
+    "right_total": 258,
+    "model_total": 258.0,
+    "ok": true,
+    "seconds": 11.9,
+    "reply": "- 1 kg rice: Rs 62\n- 1 kg toor dal: Rs 140\n- 2 milk packets: 2 x Rs 28 = Rs 56\n\nTOTAL: 258"
+   },
+   {
+    "order": "3 bath soaps and 1 detergent powder",
+    "right_total": 234,
+    "model_total": 234.0,
+    "ok": true,
+    "seconds": 11.3,
+    "reply": "- 3 bath soaps: 3 × Rs 38 = Rs 114\n- 1 detergent powder: 1 × Rs 120 = Rs 120\n\nTOTAL: Rs 234"
+   },
+   {
+    "order": "half kg sugar and one tea powder",
+    "right_total": 148,
+    "model_total": 148.0,
+    "ok": true,
+    "seconds": 12.6,
+    "reply": "Cost of 0.5 kg sugar: Rs 46 * 0.5 = Rs 23\nCost of 250 g tea powder: Rs 125\n\nTOTAL: 23 + 125 = 148"
+   },
+   {
+    "order": "2 bread 4 biscuits",
+    "right_total": 170,
+    "model_total": 170.0,
+    "ok": true,
+    "seconds": 16.3,
+    "reply": "- Bread: Rs 45 per 1 packet\n- Biscuits: Rs 20 per 1 packet\n\nCost for 2 bread packets: 2 * 45 = Rs 90\nCost for 4 biscuits packets: 4 * 20 = Rs 80\n\nTOTAL: 170"
+   },
+   {
+    "order": "1 coconut oil, 2 kg onion, 1 kg potato",
+    "right_total": 210,
+    "model_total": 210.0,
+    "ok": true,
+    "seconds": 14.8,
+    "reply": "- Coconut oil: Rs 110 per 500 ml\n- 2 kg onion: Rs 35 per 1 kg * 2 = Rs 70\n- 1 kg potato: Rs 30 per 1 kg\n\nTotal: Rs 210"
+   },
+   {
+    "order": "2 curd 2 milk",
+    "right_total": 126,
+    "model_total": 126.0,
+    "ok": true,
+    "seconds": 17.0,
+    "reply": "Curd: Rs 35 per 500 g cup\nMilk: Rs 28 per 500 ml packet\n\n2 curd: 2 × 35 = Rs 70\n2 milk: 2 × 28 = Rs 56\n\nTotal: 70 + 56 = 126"
+   },
+   {
+    "order": "5 kg rice please",
+    "right_total": 310,
+    "model_total": 310.0,
+    "ok": true,
+    "seconds": 10.4,
+    "reply": "The cost for 5 kg of rice is Rs 62 per kg. Therefore, the total cost is 5 kg * Rs 62/kg = Rs 310.\n\nTOTAL: 310"
+   },
+   {
+    "order": "1 doz eggs, 1 bread, 2 milk, 1 curd",
+    "right_total": 214,
+    "model_total": 214.0,
+    "ok": true,
+    "seconds": 14.2,
+    "reply": "- 1 dozen eggs: Rs 78\n- 1 packet bread: Rs 45\n- 2 packets milk: Rs 28 * 2 = Rs 56\n- 1 cup curd: Rs 35\n\nTOTAL: 214"
+   },
+   {
+    "order": "2 kg dal and 2 kg sugar",
+    "right_total": 372,
+    "model_total": 372.0,
+    "ok": true,
+    "seconds": 26.5,
+    "reply": "The cost for 2 kg of toor dal is Rs 140 per kg, so for 2 kg it will be Rs 140 * 2 = Rs 280.\n\nThe cost for 2 kg of sugar is Rs 46 per kg, so for 2 kg it will be Rs 46 * 2 = Rs 92.\n\nAdding these amounts together, the total cost is Rs 280 + Rs 92 = Rs 372.\n\nTOTAL: 372"
+   },
+   {
+    "order": "half kg tomato, 1 kg onion",
+    "right_total": 55,
+    "model_total": 55.0,
+    "ok": true,
+    "seconds": 12.0,
+    "reply": "Cost for half kg tomato: Rs 40 / 2 = Rs 20  \nCost for 1 kg onion: Rs 35  \n\nTotal: 20 + 35 = 55  \nTOTAL: 55"
+   },
+   {
+    "order": "3 biscuits, 1 tea powder, 1 kg sugar",
+    "right_total": 231,
+    "model_total": 566.0,
+    "ok": false,
+    "seconds": 22.7,
+    "reply": "- Biscuits: Rs 20 per 1 packet\n- Tea powder: Rs 125 per 250 g, so for 1 kg (which is 4 times 250 g), the cost is 4 * Rs 125 = Rs 500\n- Sugar: Rs 46 per 1 kg\n\nTotal: Rs 20 + Rs 500 + Rs 46 = Rs 566"
+   },
+   {
+    "order": "2 coconut oil",
+    "right_total": 220,
+    "model_total": 220.0,
+    "ok": true,
+    "seconds": 11.4,
+    "reply": "Cost of 1 coconut oil (500 ml) = Rs 110\nSince you ordered 2 coconut oil:\nCost = 2 * Rs 110 = Rs 220\nTOTAL: 220"
+   },
+   {
+    "order": "1 detergent, 2 soap, 1 kg potato",
+    "right_total": 226,
+    "model_total": 226.0,
+    "ok": true,
+    "seconds": 21.7,
+    "reply": "- Detergent powder: Rs 120 per 1 kg\n- Bath soap: Rs 38 per 1 bar\n- Potato: Rs 30 per 1 kg\n\nCost calculation:\n- 1 kg Detergent powder: Rs 120\n- 2 bars Bath soap: Rs 38 * 2 = Rs 76\n- 1 kg Potato: Rs 30\n\nTotal: Rs 226"
+   },
+   {
+    "order": "4 milk packets and 2 bread",
+    "right_total": 202,
+    "model_total": 202.0,
+    "ok": true,
+    "seconds": 16.7,
+    "reply": "- Milk: Rs 28 per 500 ml packet\n  - 4 packets: 28 * 4 = Rs 112\n- Bread: Rs 45 per 1 packet\n  - 2 packets: 45 * 2 = Rs 90\n\nTOTAL: 202"
+   },
+   {
+    "order": "2 dozen eggs",
+    "right_total": 156,
+    "model_total": 156.0,
+    "ok": true,
+    "seconds": 4.6,
+    "reply": "Cost for 2 dozen eggs: Rs 156\nTOTAL: 156"
+   },
+   {
+    "order": "1 kg each tomato onion potato rice",
+    "right_total": 167,
+    "model_total": 177.0,
+    "ok": false,
+    "seconds": 9.2,
+    "reply": "- Tomato: Rs 40\n- Onion: Rs 35\n- Potato: Rs 30\n- Rice: Rs 62\n\nTOTAL: 177"
+   },
+   {
+    "order": "3 kg sugar, 2 tea powder",
+    "right_total": 388,
+    "model_total": 388.0,
+    "ok": true,
+    "seconds": 17.8,
+    "reply": "- Sugar: Rs 46 per 1 kg\n  - 3 kg sugar: Rs 46 * 3 = Rs 138\n\n- Tea powder: Rs 125 per 250 g\n  - 2 tea powder: Rs 125 * 2 = Rs 250\n\nTOTAL: 388"
+   },
+   {
+    "order": "1 curd 1 bread 5 biscuits",
+    "right_total": 180,
+    "model_total": 180.0,
+    "ok": true,
+    "seconds": 20.6,
+    "reply": "Curd: Rs 35 per 500 g cup\nBread: Rs 45 per 1 packet\nBiscuits: Rs 20 per 1 packet\n\nCost:\n- 1 curd: Rs 35\n- 1 bread: Rs 45\n- 5 biscuits: Rs 20 * 5 = Rs 100\n\nTotal: Rs 180"
+   },
+   {
+    "order": "2 kg rice, 1 kg dal, 1 coconut oil, 2 soaps",
+    "right_total": 450,
+    "model_total": 450.0,
+    "ok": true,
+    "seconds": 25.5,
+    "reply": "- Rice: 2 kg * Rs 62 per 1 kg = Rs 124\n- Toor Dal: 1 kg * Rs 140 per 1 kg = Rs 140\n- Coconut Oil: 1 * Rs 110 per 500 ml = Rs 110 (assuming 1 unit is 500 ml)\n- Bath Soap: 2 * Rs 38 per 1 bar = Rs 76\n\nTOTAL: Rs 450"
+   }
+  ]
+ },
+ "reply": {
+  "read_prompt_s": 4.08,
+  "whole_reply_s": 16.69,
+  "reply_tokens": 58,
+  "reply_words": 38,
+  "tokens_per_s_writing": 4.52,
+  "words_per_s_writing": 3.01,
+  "runs_whole_reply_s": [
+   16.63,
+   16.69,
+   17.71
+  ],
+  "reply": "Sure, Anna! Here's your order:\n\n- 2 kg rice\n- 1 litre sunflower oil\n- 6 eggs\n- 1 packet of tea powder\n\nYour order will be delivered to flat 302 within 30 minutes. Thanks for choosing us!"
+ },
+ "ram_peak_gb": {
+  "VmHWM": 8.03,
+  "VmRSS": 8.03,
+  "RssAnon": 3.51,
+  "RssFile": 0.02
+ },
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "eth0",
+   "ifb0",
+   "ifb1",
+   "lo"
+  ],
+  "offline": true
+ },
+ "ram_needed_gb": 4.95,
+ "ram_needed": {
+  "how": "fresh process, mmap off, context 4096, one 40-token reply, then the peak resident memory (VmHWM)",
+  "status_gb": {
+   "VmHWM": 4.95,
+   "VmRSS": 4.95,
+   "RssAnon": 4.93,
+   "RssFile": 0.02,
+   "RssShmem": 0.0
+  },
+  "network": {
+   "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+   "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+   "interfaces": [
+    "lo"
+   ],
+   "offline": true
+  },
+  "reply": "Sure, Anna! Here's your order:\n\n- 2 kg rice\n- 1 litre sunflower oil\n- 6 eggs\n- 1 packet of tea powder\n\nYour order will be"
+ }
+}
