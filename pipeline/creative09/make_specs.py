@@ -70,15 +70,15 @@ NOCAP = {8}   # the TYPE THIS card carries line 8
 SCENES = [("p_a", (1, 2, 3, 4, 5, 6, 7), {"pre": 0.2, "boost": 1.6, "drop_at": [[5, "1", 0.3]], "tail": 0.1}),   # the bed drops out
           ("p_b", (8, 9, 10, 11, 12, 13), {"lift": 0.9, "pre": 0.35, "boost": 1.3, "drop_at": [[5, "1", 0.4]], "tail": 0.05}),   # before
           ("p_c", (14, 15, 16, 17, 18), {"lift": 0.8, "pre": 0.3, "outro": True, "boost": 1.5, "rise": 1.3, "drop_pre": [[4, 0.05, 0.9]],
-                                         "tail": 0.2})]   # 17%, before "zero" and before "Step one is..."
-GAP = {1: 0.2, 2: 0.15, 3: 0.2, 6: 0.4, 7: 0.25, 8: 0.5, 12: 0.4, 13: 1.8, 15: 0.4, 16: 0.25, 17: 0.65}   # render review: 13: the 0/10
+                                         "tail": 0.1})]   # 17%, before "zero" and before "Step one is..."
+GAP = {1: 0.2, 2: 0.15, 3: 0.15, 6: 0.4, 7: 0.25, 8: 0.5, 12: 0.33, 13: 1.8, 15: 0.4, 16: 0.25, 17: 0.65}   # render review: 13: the 0/10
                                                                                              # row holds 2 s; 17: a real pause before the punchline   # 8: TYPE THIS holds ~4.5 s; 13: the
                                                                                                    # card holds; 15: the give-in chip
 GAIN = {"teacher": 0.3, "dad": 0.3, "kittu": 0.3, "aichat": 0.0}
 GAIN_LINE = {2: 0.8, 5: 0.8}   # the dad's yells
 GAIN_TE = {}
 PAUSES = {"en": {6: {"1": 0.3}, 13: {"1": 0.45}}, "te": {6: {"1": 0.3}, 13: {"1": 0.45}}}   # a beat before 17% and before "zero"
-LINE_TEMPO = {"en": {6: 1.18, 8: 1.05, 9: 1.2, 10: 1.2, 11: 1.2, 13: 1.2, 15: 1.2, 16: 1.18}, "te": {6: 1.22, 8: 1.0, 13: 1.2, 16: 1.2, 17: 0.95}}   # te 17: Kiran rushes it   # the line to copy near its own speed; the narrator's
+LINE_TEMPO = {"en": {6: 1.18, 8: 1.05, 9: 1.2, 10: 1.2, 11: 1.2, 13: 1.2, 15: 1.2, 16: 1.18}, "te": {6: 1.22, 8: 1.0, 13: 1.2, 16: 1.26, 17: 0.95}}   # te 17: Kiran rushes it   # the line to copy near its own speed; the narrator's
                                                                           # AI lines run slow (the first cut ran 70.8 s)
 LINE_MAXGAP = {"en": {}, "te": {}}
 TEMPO = {"en": 1.15, "te": 1.16}
@@ -106,7 +106,7 @@ def spec(lang):
     sid = "creative09te" if te else "creative09v1"
     s = {"id": sid, "title": "Teach me, don't tell me" + (" (Telugu audio)" if te else ""), "label": "SKIT", "banner": "AI homework",
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15, "music": "lofi", "musicVol": [0.38, 0.85], "musicFade": 0.05,
-         "endPad": 0.35, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]], "musicPad": True, "hardCuts": True,
+         "endPad": 0.2, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]], "musicPad": True, "hardCuts": True,
          "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,
          "musicGapGain": 3.0, "musicEndRamp": [0.9, 4.0]}
     if te:

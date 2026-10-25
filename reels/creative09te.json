@@ -13,7 +13,7 @@
   0.85
  ],
  "musicFade": 0.05,
- "endPad": 0.35,
+ "endPad": 0.2,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -144,7 +144,7 @@
      "text": "హోంవర్క్ ఏయ్ ఐ చేసింది. నేను [1] కాపీ కొట్టానంతే.",
      "show": "The AI did the homework. I just [1] copied it.",
      "maxgap": 0.3,
-     "gap": 0.2,
+     "gap": 0.15,
      "gain_db": 0.3
     },
     {
@@ -304,7 +304,7 @@
      "text": "త్రీ తో డివైడ్ చేస్తే... ఎక్స్ ఐదు! [1] వచ్చేసింది!",
      "show": "Divide by 3... x = 5! [1] I got it!",
      "maxgap": 0.3,
-     "gap": 0.4,
+     "gap": 0.33,
      "gain_db": 0.3
     },
     {
@@ -325,7 +325,7 @@
   {
    "id": "p_c",
    "type": "sk_ptm",
-   "tail": 0.2,
+   "tail": 0.1,
    "lift": 0.8,
    "pre": 0.3,
    "outro": true,
@@ -415,7 +415,7 @@
      "show": "Pushed, it told 7 times out of 10. So not the answer, sir: [1] ask for step one.",
      "maxgap": 0.3,
      "gap": 0.25,
-     "tempo": 1.2,
+     "tempo": 1.26,
      "gain_db": 0.3
     },
     {
