@@ -63,7 +63,7 @@ NOCAP = set()
 PAUSES = {}
 TEMPO_EN = {"ravi": 1.15, "ai": 1.1}
 TEMPO_TE = {"ravi": 1.15, "ai": 1.1}
-TEMPO_LINE_TE = {7: 1.05, 8: 1.15, 12: 1.15}   # 7: it sounded rushed at 1.15   # the Telugu cut ran 60.3 s: its middle scene a beat shorter
+TEMPO_LINE_TE = {4: 1.16, 7: 1.05, 8: 1.15, 12: 1.15}   # 7: it sounded rushed at 1.15; 4: the first scene a beat shorter (60.4 s)   # the Telugu cut ran 60.3 s: its middle scene a beat shorter
 # Sound (CLAUDE.md arc): a hit, the error buzz and the stopwatch's ticks on frame 1; a ding as WRITE starts; pops as the
 # tokens land; a bonk on each token the bags lift (4 a second); a cha-ching on the bill; a drop before "four to eight" and
 # a cha-ching on the price list; a snap on the rule; a success sting on our test; a riser into the twist, the clock
