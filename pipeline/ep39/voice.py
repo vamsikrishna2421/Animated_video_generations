@@ -118,7 +118,7 @@ def judge(path, text, lang, n):
     heard_text = info.split("|", 1)[1].lower()
     if lang == "te":   # a stutter the judge lets through ("राई राईटाने": a word said twice in a row)
         toks = [w.strip(".,!?।") for w in heard_text.split()]
-        if any(len(a) >= 2 and (a == b or b.startswith(a)) for a, b in zip(toks, toks[1:])):
+        if any((len(a) >= 2 and (a == b or b.startswith(a))) or (len(a) == 1 and b.startswith(a)) for a, b in zip(toks, toks[1:])):   # "उ उको" too
             ok, score, info = False, score - 1.0, info + " | STUTTER"
     words = set(re.findall(r"[a-z0-9]+", heard_text))
     # English: whole words; Telugu (written in Devanagari by the judge): a substring will do
