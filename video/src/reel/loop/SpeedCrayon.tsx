@@ -221,7 +221,7 @@ const StSpeed: React.FC<SP> = ({ s }) => {
       {sfx}
       {first("history") === 0 && percEnd > 30 && (
         <Sequence from={0} durationInFrames={percEnd} layout="none">
-          <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(fr) => 0.14 + 0.26 * clamp(fr / percEnd)} />
+          <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(fr) => 0.1 + 0.2 * clamp(fr / percEnd)} />
         </Sequence>
       )}
       <CrayonCanvas draw={(c, W, H, f, boil) => {

@@ -23,7 +23,7 @@ LINES = {
     5: ("ravi", "ravi", "faster", "Pieces?! [1] Write faster!", "ముక్కలా?! [1] స్పీడ్ గా రాయి!"),
     6: ("ai", "bags", "bags", "For every token, I lift all five bags. [1] On this laptop: four tokens a second.",
         "ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా. | [1] ఈ ల్యాప్టాప్ లో సెకనుకు నాలుగు టోకెన్లు."),   # no zero-width joiners: Parler trips on them
-    7: ("ravi", "ravi", "online", "The online AI replies in one second!", "ఆన్లైన్ ఏయ్ ఐ ఒక్క సెకనులో రిప్లై ఇస్తుంది!"),   # Prakash babbles "ఏఐ"
+    7: ("ravi", "ravi", "online", "The online AI replies in one second!", "ఆన్లైన్ దాంట్లో ఒక్క సెకనులోనే రిప్లై వస్తుంది!"),   # "ఏయ్ ఐ" stretched to "aaa-ee ai"
     8: ("ai", "cloud", "cloud", "Big graphics cards: two hundred tokens a second. [1] But online, every token costs money.",
         "పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు. | [1] కానీ ఆన్లైన్ లో ప్రతి టోకెన్ కీ డబ్బులు."),
     9: ("ravi", "ravi", "money", "Money?! [1] For my message, or its reply?", "డబ్బులా?! [1] నా మెసేజ్ కా, దాని రిప్లై కా?"),
@@ -50,7 +50,7 @@ SHOW = {   # captions with digits; "..." keeps a key number off screen until it 
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     1: "17 seconds for one reply?! The order got cancelled!", 2: "4 seconds to read the order... 13 to write the reply.",
     3: "13 seconds to write that?!", 4: "I write one token at a time. One word, or a piece of a word.", 5: "Pieces?! Write fast!",
-    6: "For every token I lift all 5 sacks. On this laptop, 4 tokens a second.", 7: "The online AI replies in 1 second!",
+    6: "For every token I lift all 5 sacks. On this laptop, 4 tokens a second.", 7: "With the online one, the reply comes in 1 second!",
     8: "Big graphics cards, 200 tokens a second. But online, every token costs money.", 9: "Money?! For my message, or its reply?",
     10: "For both... Each token it writes costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
     12: "35 tokens... Here 12 seconds, online a smaller bill.", 13: "Good! Now first read all his old messages, you'll know him!",
@@ -66,9 +66,9 @@ TEMPO_LINE_TE = {}
 # a cha-ching on the price list; a snap on the rule; a success sting on our test; a riser into the twist, the clock
 # ticking while it reads, the quiz's tick-tock 3-2-1 with a riser, the bed out on the 1, the hit on "Ninety-two", the
 # biggest hit as the chat slams back in (the loop). Only the last scene rises.
-SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 1.35, "tail": 0.05}),   # 0.05: the scene ends a beat earlier (beatSnap)   # render review: the bed never built; the scenes now step up
-          ("s_b", (7, 8, 9, 10, 11, 12), {"lift": 0.8, "pre": 0.25, "boost": 1.45, "drop_at": [[3, "1", 0.3]], "tail": 0.1}),   # a drop before "four to eight"
-          ("s_c", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.3, "outro": True, "boost": 1.55, "rise": 1.35,
+SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 1.25, "tail": 0.05}),   # 0.05: the scene ends a beat earlier (beatSnap)   # render review: the bed never built; the scenes now step up
+          ("s_b", (7, 8, 9, 10, 11, 12), {"lift": 0.8, "pre": 0.25, "boost": 1.35, "drop_at": [[3, "1", 0.3]], "tail": 0.1}),   # a drop before "four to eight"
+          ("s_c", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.3, "outro": True, "boost": 1.2,   # 1.55 + rise 1.35 left the twist's lines 5-8 dB over the bed
                                      "drop_pre": [[3, 0.05, 1.0]], "tail": 1.2})]   # the bed out on the quiz's "1", silence before "Ninety-two"; 1.2 s held on 1:32, then the slam
 GAP = {1: 0.25, 2: 0.2, 4: 0.2, 6: 0.0, 8: 0.2, 10: 0.45, 11: 0.3, 12: 0.4, 13: 0.25, 14: 0.2, 15: 2.45}   # 10: room to read the price chip; 11: the rule chip; 12: the test card; 15: the quiz holds for its 3-2-1
 GAIN = {}
@@ -86,7 +86,7 @@ def spec(lang="en"):
          "musicVol": [0.5, 0.66],   # under speech / in gaps: 0.36 sat 12-18 dB under the voice (CLAUDE.md: 8-12); 0.9 in gaps pumped
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line (the hard switch sounded choppy)
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 1.5, "musicEndRamp": [0.82, 2.5], "hardCuts": True, "beatSnap": True,   # the end swell: into the twist and the loop
+         "musicPad": True, "musicGapGain": 1.5, "musicEndRamp": [0.965, 4.0], "hardCuts": True, "beatSnap": True,   # the end swell: after "Ninety-two seconds", under the held 1:32, into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:
