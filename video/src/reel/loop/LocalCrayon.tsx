@@ -76,7 +76,7 @@ const sack = (c: Ctx, x: number, y: number, w: number, h: number, col: string, t
   c.restore();
 };
 // one small brain sack (1 GB): pink (full size) or lilac (squeezed); `part` < 1 draws a smaller, part-full sack
-const gbSack = (c: Ctx, x: number, y: number, col: string, r: () => number, rot = 0, part = 1) => {
+export const gbSack = (c: Ctx, x: number, y: number, col: string, r: () => number, rot = 0, part = 1) => {
   const h = 78 * (0.55 + 0.45 * part);
   sack(c, x, y, 82, h, col, "", r, rot);
   c.save(); c.translate(x, y - h * 0.5); c.rotate(rot);
@@ -119,7 +119,7 @@ const godown = (c: Ctx, x: number, y: number, w: number, h: number, r: () => num
   c.restore();
 };
 // the counter (RAM): a wooden top with `slots` 1-GB places and its label
-const ramCounter = (c: Ctx, cx: number, y: number, slots: number, title = "RAM · 8 GB") => {
+export const ramCounter = (c: Ctx, cx: number, y: number, slots: number, title = "RAM · 8 GB") => {
   const w = slots * CELL;
   c.save(); c.translate(cx, y);
   c.fillStyle = "#98592c"; rrect(c, -w / 2 - 40, 0, w + 80, 150, 18); c.fill();
@@ -133,7 +133,7 @@ const ramCounter = (c: Ctx, cx: number, y: number, slots: number, title = "RAM �
   c.restore();
 };
 // the sack in counter slot i (0..7); `drop` 0..1 falls in from above
-const slotX = (cx: number, i: number) => cx - 4 * CELL + i * CELL + CELL / 2;
+export const slotX = (cx: number, i: number) => cx - 4 * CELL + i * CELL + CELL / 2;
 // the quiz card (screen space), held in the gap after the line; its 3-2-1 ends as the card leaves
 const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: number) => {
   const k = easeOut(seg(f, endL + 6, endL + 12)) * (1 - seg(f, next - 10, next - 2));
@@ -161,7 +161,7 @@ const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: n
   c.restore();
 };
 // the rule chip (screen space): a title and rows that pop in
-const ruleChip = (c: Ctx, W: number, y: number, title: string, rows: [string, string, string][], k: number[]) => {
+export const ruleChip = (c: Ctx, W: number, y: number, title: string, rows: [string, string, string][], k: number[]) => {
   c.save(); c.translate(W / 2, y);
   const h = 150 + rows.length * 128;
   c.fillStyle = "rgba(15,23,42,0.92)"; rrect(c, -490, -110, 980, h, 30); c.fill();
@@ -177,7 +177,7 @@ const ruleChip = (c: Ctx, W: number, y: number, title: string, rows: [string, st
   c.restore();
 };
 // a row on the phone's test card: a label and a big value, fading in by `k`
-const row = (c: Ctx, y: number, lab: string, val: string, col: string, k: number, bg = "#f1f5f9") => {
+export const row = (c: Ctx, y: number, lab: string, val: string, col: string, k: number, bg = "#f1f5f9") => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
   c.fillStyle = bg; rrect(c, 130, y - 70, 820, 112, 22); c.fill();

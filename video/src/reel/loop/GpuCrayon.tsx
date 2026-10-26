@@ -81,7 +81,7 @@ const dotGrid = (c: Ctx, x: number, y: number, cols: number, rows: number, gap: 
   }
 };
 // a graphics card: a green board, two fans, the memory chips
-const gpuCard = (c: Ctx, x: number, y: number, s: number, f: number, r: () => number) => {
+export const gpuCard = (c: Ctx, x: number, y: number, s: number, f: number, r: () => number) => {
   c.save(); c.translate(x, y); c.scale(s, s);
   c.fillStyle = "#15803d"; rrect(c, -330, -120, 660, 240, 20); c.fill();
   c.fillStyle = "#1f2937"; rrect(c, -310, -100, 620, 200, 16); c.fill();
