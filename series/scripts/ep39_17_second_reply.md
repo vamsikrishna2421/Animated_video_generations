@@ -1,4 +1,4 @@
-# EP39 "The 17-second reply" (Inference: speed, latency and cost per token) · script v2.1 as rendered, Oct 26
+# EP39 "The 17-second reply" (Inference: speed, latency and cost per token) · script v2.2 as rendered, Oct 26
 
 **Slot:** queue 041, replaces the lesson-format `041_ep39_where_ai_costs_come_from.mp4`.
 **Cast / setting:** Ravi anna's kirana shop, the shop AI (the student robot on his phone, calm, deadpan). Since EP38 the
@@ -116,7 +116,7 @@ Kept 1: a familiar pain (waiting on "typing…"), money leaving the shop, and a 
 | 2 | AI | Four seconds to read his order. [1] Thirteen to write the reply. | insert: one bar, 17.6 s long: grey "READ" with "LATENCY = the wait before the first word: 4 s", then on [1] orange "WRITE 13 s" (our test) |
 | 3 | Ravi | Thirteen seconds to write that?! | the reply bubble, word for word |
 | 4 | AI | I write one token at a time, anna. [1] A word, or a piece of one. | insert: the reply fills in token chips, "Sure · , · Anna · ! · Here · 's · your · order"; on [1] "sun·flower = 2 tokens", "3·0·2 = 3 tokens" ringed, counter "58 tokens" |
-| 5 | Ravi | Pieces?! [1] Write faster! | |
+| ~~5~~ | ~~Ravi~~ | ~~Pieces?! Write faster!~~ (cut in render review 2 for the spoken fix) | |
 | 6 | AI | For every token, I lift all five bags. [1] On this laptop: four tokens a second. | insert: EP38's five lilac bags on the counter, all five jump on each token (a bonk each, 4 a second); on [1] "4 tokens a second (our test)" |
 | 7 | Ravi | The online AI replies in one second! | |
 | 8 | AI | Big graphics cards: two hundred tokens a second. [1] But online, every token costs money. | insert: a rack of graphics cards, "Gemini 2.5 Flash: about 200 tokens a second (Artificial Analysis)"; on [1] a bill counting tokens |
@@ -127,7 +127,8 @@ Kept 1: a familiar pain (waiting on "typing…"), money leaving the shop, and a 
 | 13 | Ravi | Better! [1] Now read all his old chats first, so you know him! | Ravi scrolls a month of chat: "30 old orders = 1,788 tokens, 20× the order" |
 | 14 | AI | A whole month? [1] I read it all before my first word. | the grey READ bar grows; the stopwatch reads "first word" |
 | 15 | Ravi | How long?! | after the line, QUIZ card, 3-2-1 held 2 s: "How long before its first word?" A "4 seconds" · B "30 seconds" · C "over a minute"; "comment A, B or C" |
-| 16 | AI | Ninety-two seconds. | the bed out on the count's 1, the hit on "Ninety", "C ✓", the stopwatch stops at 1:32, "first word: 4 s → 92 s", "LATENCY"; then the chat slams back in, "Never mind…" = frame 1 (loops) |
+| 16 | AI | Ninety-two seconds. | out of silence (the bed out on the count's 1); "C ✓ 92 s", the stopwatch at 1:32, "first word: 4 s → 92 s", "LATENCY"; a hit just after the words |
+| 17 | AI | Give me a two-line note about him, [1] not the whole month. | "THE FIX: a 2-line note about him, not the month"; the bed swells; then the chat slams back in, "Never mind…" = frame 1 (loops) |
 
 ## Script (Telugu; on-screen text stays English)
 | # | Who | Telugu | Romanized |
@@ -135,10 +136,10 @@ Kept 1: a familiar pain (waiting on "typing…"), money leaving the shop, and a 
 | 1 | Ravi | ఒక్క రిప్లైకి పదిహేడు సెకన్లా?! [1] ఆర్డర్ క్యాన్సిల్ చేశారు! | Okka reply ki padihedu secanlaa?! Order cancel chesaaru! |
 | 2 | AI | ఆర్డర్ చదవడానికి నాలుగు సెకన్లు. [1] రిప్లై రాయడానికి పదమూడు. | Order chadavadaaniki naalugu secanlu. Reply raayadaaniki padamoodu. |
 | 3 | Ravi | అది రాయడానికి పదమూడు సెకన్లా?! | Adi raayadaaniki padamoodu secanlaa?! |
-| 4 | AI | నేను ఒక్కో టోకెన్ రాస్తానండి. [1] ఒక మాట, లేదా మాటలో ఒక ముక్క. | Nenu okko token raastaanandi. Oka maata, ledaa maatalo oka mukka. |
-| 5 | Ravi | ముక్కలా?! [1] స్పీడ్ గా రాయి! | Mukkalaa?! Speed gaa raayi! |
+| 4 | AI | నేను ఒక్కో టోకెన్ రాస్తానండి. [1] ఒక మాట, లేదా మాటలో చిన్న ముక్క. | Nenu okko token raastaanandi. Oka maata, ledaa maatalo chinna mukka. ("ఒక ముక్క" smeared) |
+| ~~5~~ | ~~Ravi~~ | ~~ముక్కలా?! స్పీడ్ గా రాయి!~~ (cut, as English) | |
 | 6 | AI | ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా. [1] ఈ ల్యాప్‌టాప్ లో సెకనుకు నాలుగు టోకెన్లు. | Prati token ki aidu bastaaloo ettutaa. Ee laptop lo secanuku naalugu tokenlu. |
-| 7 | Ravi | ఆన్‌లైన్ దాంట్లో ఒక్క సెకనులోనే రిప్లై వస్తుంది! | Online daantlo okka secanulone reply vastundi! ("ఏయ్ ఐ" came out stretched) |
+| 7 | Ravi | ఆన్‌లైన్ లో అయితే ఒక్క సెకనులోనే రిప్లై వస్తుంది! | Online lo ayite okka secanulone reply vastundi! ("ఏయ్ ఐ" came out stretched) |
 | 8 | AI | పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు. [1] కానీ ఆన్‌లైన్ లో ప్రతి టోకెన్ కీ డబ్బులు. | Pedda graphics cardulu, secanuku rendondala tokenlu. Kaanee online lo prati token ki dabbulu. |
 | 9 | Ravi | డబ్బులా?! [1] నా మెసేజ్ కా, దాని రిప్లై కా? | Dabbulaa?! Naa message kaa, daani reply kaa? |
 | 10 | AI | రెండిటికీ. [1] అది రాసే ప్రతి టోకెన్ కీ నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ. | Renditikee. Adi raase prati token ki naalugu nunchi enimidi retlu ekkuva. |
@@ -148,6 +149,7 @@ Kept 1: a familiar pain (waiting on "typing…"), money leaving the shop, and a 
 | 14 | AI | నెల మొత్తమా? [1] అదంతా చదివాకే నా మొదటి మాట. | Nela mottamaa? Adantaa chadivaake naa modati maata. |
 | 15 | Ravi | ఎంతసేపు?! | Enthasepu?! |
 | 16 | AI | తొంభై రెండు సెకన్లు. | Tombhai rendu secanlu. |
+| 17 | AI | ఆయన గురించి రెండు లైన్ల నోట్ ఇవ్వండి, [1] నెల మొత్తం కాదు. | Aayana gurinchi rendu lainla note ivvandi, nela mottam kaadu. |
 
 Telugu notes: the voiced text has no zero-width joiners (Parler trips on them): "ఆన్లైన్", "ల్యాప్టాప్", "మెసేజ్లన్నీ".
 
@@ -179,3 +181,14 @@ Next: EP40, how AI models are compared (benchmarks).
 - Telugu (first pack): "ఏయ్ ఐ" stretched into "aaa-ee ai": Ravi's line 7 is now "ఆన్లైన్ దాంట్లో ఒక్క సెకనులోనే రిప్లై
   వస్తుంది!"; line 10 as the English ("అది రాసే ప్రతి టోకెన్ కీ..."). Two Telugu lines run a little faster and the middle
   scene's tail is 0 to keep 59.7 s.
+
+## Render review 2 (English and Telugu) and what changed (v2.2)
+- Both: the fixes landed ("?:??" made the quiz real, both cards readable, the per-token wording right, no pumping).
+  Left: the answer to "so what should Ravi do?" flashed past unsaid, and the middle stayed flat until the quiz. Now the
+  AI says it (line 17, "Give me a two-line note about him, not the whole month.", with THE FIX card); line 5 ("Pieces?!
+  Write faster!") is cut to keep 59.9 s; the twist's bed is 2 dB up (boost 1.5, the lines still 8.4-14.6 dB over it)
+  and swells from "Ninety-two seconds" into the slam; the stopwatch ticks through the 0:03 lull.
+- Telugu ear-check (each line's span of the final mix transcribed on its own): line 2 wobbled on "రాయడానికి" (re-voiced
+  with a stutter check), line 4 "ఒక ముక్క" smeared ("చిన్న ముక్క" now), line 7 "ఆన్లైన్ లో అయితే" (Sandeep) at a calmer pace.
+- Nice-to-haves done: "online: ~1 s, bill ~30% less" on the test card, the test card's header clear of the banner,
+  LATENCY bigger on the first bar, the 3-0-2 ring only once its chips are on screen.
