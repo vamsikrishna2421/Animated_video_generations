@@ -95,9 +95,10 @@ months"), a death sentence in frame 1 the viewer can't explain until 0:08, and t
   hook line: the mix's speech-to-text lost it), thunder and dhan at full volume at 0:00 and on the laddus, the bed swells
   into the TYPE THIS card, a lift into the answer and into the rule, 0.4 s of silence before the laddu thunder, the last
   scene's voices and bed a step up, the percussion builds harder; no sting at the end (the replay's thunder joins it).
-- Telugu: the TYPE THIS card holds about 6.5 s with no caption under it; the questions bubble waits for "డాక్టర్ ని
-  అడగండి"; "ఏఐ ఎక్స్ప్లెయిన్ చేస్తుంది... డాక్టర్ డిసైడ్ చేస్తారు" (spoken Telugu, not newsreader Telugu). Line 7 says the
-  copy-line in Telugu (Parler babbled the long English sentence); the card shows the English to copy.
+- Telugu: the TYPE THIS card holds about 5 s with no caption under it; the questions bubble waits for "డాక్టర్ ని
+  అడగండి"; the rule in spoken Telugu: "అంటే, ఇది ఎక్స్ప్లెయిన్ చేస్తుంది..." / "ఏం చేయాలో డాక్టర్ చెప్తారు." ("ఏఐ"
+  stuttered in Kamala's voice and "డిసైడ్" came out "dish"). Line 7 says the copy-line in Telugu (Parler babbled the
+  long English sentence); the card shows the English to copy.
 - English: "for his diabetes" (the phone says diabetes), "You will live" ("You'll" was swallowed); the caption no longer
   splits "PAST 2 to 3 | months"; the flash at 0:00 is lighter; "change the who" comes in mid-line; the rule chip stays
   up under "So... I'm not dying?".
@@ -132,8 +133,8 @@ months"), a death sentence in frame 1 the viewer can't explain until 0:08, and t
 | 7 | Sravani | డాక్టర్ దగ్గరికి వెళ్ళే ముందు, ఇలా టైప్ చేయాలి: మా తాతయ్యకి సింపుల్ గా చెప్పు, డాక్టర్ కి మూడు ప్రశ్నలు ఇవ్వు. (the card shows the English line) |
 | 8 | AI | ఇది షుగర్ కి రిపోర్ట్ కార్డ్ లాంటిది. ఉండాల్సిన దానికంటే ఎక్కువ, కానీ మరీ ఎక్కువ కాదు. డాక్టర్ ని అడగండి: దీని అర్థం ఆయనకి ఏంటి? |
 | 9 | Sravani | ఆఫ్లైన్ లో ఒక చిన్న ఫ్రీ ఏ ఐ ని పది సార్లు టెస్ట్ చేశా. మూడు మాటలకి: ప్రతిసారీ డాక్టర్ భాష. ఈ లైన్ తో: సున్నా. |
-| 10 | Kamala | అంటే, ఏఐ ఎక్స్ప్లెయిన్ చేస్తుంది... |
-| 11 | Sravani | డాక్టర్ డిసైడ్ చేస్తారు. |
+| 10 | Kamala | అంటే, ఇది ఎక్స్ప్లెయిన్ చేస్తుంది... |
+| 11 | Sravani | ఏం చేయాలో డాక్టర్ చెప్తారు. |
 | 12 | Thathayya | అంటే... నేను బతుకుతానా? |
 | 13 | Sravani | నువ్వు బతుకుతావ్. నీ లడ్డూలే బతకవు. |
 | 14 | Thathayya | ఒక్క చిన్న ప్రశ్న... లడ్డూల గురించి. |
@@ -142,3 +143,10 @@ months"), a death sentence in frame 1 the viewer can't explain until 0:08, and t
 Asking an AI about a report? Before the doctor visit, type: "Explain this to my [72-year-old grandfather] in simple
 words. Then give 3 questions to ask his doctor." Then paste the numbers (hide the name). The AI explains; the doctor
 decides. Comment prompt: "Who reads the reports in your house: you, or the phone?"
+
+## Confirmation pass (v2.1) and what stays
+Telugu timing fixed; no new must-fix. Partly fixed and left (each fix costs a line, and both cuts sit at 60 s): the
+"shorter life expectancy" answer is a note on screen, not spoken; the test card's payoff holds 2.3 s (row 1 waits for
+"zero"); the quarters are within 1 dB by average (the last is the loudest by energy). The 0:08 caption still breaks
+"...over the PAST 2 to 3 | months" (the phrase splitter, not the cue). Telugu line 7 is whole in the mix (checked line
+by line in Hindi mode; the pack's speech-to-text looped).
