@@ -1,0 +1,365 @@
+{
+ "id": "creative10te",
+ "title": "The AI gave me three months (Telugu audio)",
+ "label": "SKIT",
+ "banner": "AI and your report",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.38,
+  0.85
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.45,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.14,
+ "parler_lang": "te",
+ "captionTop": 1500,
+ "musicGapGain": 3.0,
+ "musicEndRamp": [
+  0.9,
+  4.0
+ ],
+ "musicDuckRamp": 9,
+ "handle": "@ai_maastaaru_telugu",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_serial",
+   "tail": 0.1,
+   "boost": 1.6,
+   "drop_pre": [
+    [
+     2,
+     0.05,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "thatha",
+      "shot": "thatha",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "kamala",
+      "shot": "kamala",
+      "prop": "shock",
+      "n": 2
+     },
+     {
+      "who": "sravani",
+      "shot": "wide",
+      "prop": "enter",
+      "n": 3
+     },
+     {
+      "who": "sravani",
+      "shot": "phone",
+      "prop": "past",
+      "n": 4
+     },
+     {
+      "who": "thatha",
+      "shot": "phone",
+      "prop": "jargon",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "The AI gave me three months",
+     "title": "The AI gave me three months",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "thatha",
+     "file": "01_thatha.wav",
+     "text": "ఏ ఐ నాకు రెండు మూడు నెలలే టైం ఇచ్చింది!",
+     "show": "The AI gave me only 2-3 months!",
+     "maxgap": 0.3,
+     "gap": 0.15,
+     "gain_db": 1.1
+    },
+    {
+     "who": "kamala",
+     "file": "02_kamala.wav",
+     "text": "మూడు నెలలా?! మావయ్యా!",
+     "show": "Three months?! Mavayya!",
+     "maxgap": 0.3,
+     "gap": 0.95,
+     "gain_db": 1.1
+    },
+    {
+     "who": "sravani",
+     "file": "03_sravani.wav",
+     "text": "తాతయ్యా, ఫోన్ ఇటివ్వు.",
+     "show": "Thathayya, give me the phone.",
+     "maxgap": 0.3,
+     "gap": 0.2,
+     "gain_db": 0.3
+    },
+    {
+     "who": "sravani",
+     "file": "04_sravani.wav",
+     "text": "గత రెండు మూడు నెలల షుగర్ [1] సగటు అని రాసుంది. ఇది టెస్ట్ తాతయ్యా, కౌంట్ డౌన్ కాదు.",
+     "show": "It says your average sugar over the [1] PAST 2-3 months. It's a test, Thathayya, not a countdown.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "gain_db": 0.3
+    },
+    {
+     "who": "thatha",
+     "file": "05_thatha.wav",
+     "text": "మరి గ్లైకేటెడ్ హీమోగ్లోబిన్ ఏంటి? షార్టర్ లైఫ్ ఎక్స్పెక్టెన్సీ ఏంటి?!",
+     "show": "Then what's \"glycated haemoglobin\"? What's \"shorter life expectancy\"?!",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "gain_db": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_serial",
+   "tail": 0.05,
+   "lift": 0.9,
+   "pre": 0.3,
+   "boost": 1.5,
+   "drop_at": [
+    [
+     3,
+     "1",
+     0.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "who",
+      "n": 6
+     },
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "type",
+      "n": 7
+     },
+     {
+      "who": "aichat",
+      "shot": "phone",
+      "prop": "calm",
+      "n": 8
+     },
+     {
+      "who": "sravani",
+      "shot": "wide",
+      "prop": "test",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "Tell it who's reading",
+     "title": "Tell it who's reading",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "sravani",
+     "file": "06_sravani.wav",
+     "text": "నువ్వు మూడు మాటలే టైప్ చేశావ్, అందుకే డాక్టర్ల కోసం రాసింది. ఎవరు చదువుతున్నారో చెప్పాలి.",
+     "show": "You typed just 3 words, so it wrote for doctors. Tell it who's reading.",
+     "maxgap": 0.3,
+     "gap": 0.2,
+     "gain_db": 0.3
+    },
+    {
+     "who": "sravani",
+     "file": "07_sravani.wav",
+     "text": "డాక్టర్ దగ్గరికి వెళ్ళే ముందు, ఇలా టైప్ చేయాలి: [1] Explain this to my seventy-two-year-old grandfather in simple words. Then give three questions to ask his doctor.",
+     "show": "Before the doctor visit, type this:",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.0,
+     "gain_db": 0.3
+    },
+    {
+     "who": "aichat",
+     "file": "08_aichat.wav",
+     "text": "ఇది షుగర్ కి రిపోర్ట్ కార్డ్ లాంటిది. ఉండాల్సిన దానికంటే ఎక్కువ, కానీ మరీ ఎక్కువ కాదు. [1] డాక్టర్ ని అడగండి: దీని అర్థం ఆయన ఆరోగ్యానికి ఏంటి?",
+     "show": "It's like a report card for sugar: higher than ideal, but not too high. [1] Ask the doctor: what does it mean for his health?",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "tempo": 1.15
+    },
+    {
+     "who": "sravani",
+     "file": "09_sravani.wav",
+     "text": "ఆఫ్లైన్ లో ఒక చిన్న ఫ్రీ ఏ ఐ ని పది సార్లు టెస్ట్ చేశా. మూడు మాటలకి: ప్రతిసారీ డాక్టర్ భాష. ఈ లైన్ తో: [1] సున్నా.",
+     "show": "I tested a small free AI offline 10 times. 3 words: doctor-talk every time. With this line... [1] zero.",
+     "maxgap": 0.3,
+     "gap": 1.4,
+     "pauses": {
+      "1": 0.3
+     },
+     "gain_db": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_serial",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.25,
+   "outro": true,
+   "boost": 1.55,
+   "rise": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "kamala",
+      "shot": "kamala",
+      "prop": "rule1",
+      "n": 10
+     },
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "rule2",
+      "n": 11
+     },
+     {
+      "who": "thatha",
+      "shot": "thatha",
+      "prop": "alive",
+      "n": 12
+     },
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "laddus",
+      "n": 13
+     },
+     {
+      "who": "thatha",
+      "shot": "thatha",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "AI explains, the doctor decides",
+     "title": "AI explains, the doctor decides",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "kamala",
+     "file": "10_kamala.wav",
+     "text": "అంటే, ఏ ఐ వివరిస్తుంది...",
+     "show": "So the AI explains...",
+     "maxgap": 0.3,
+     "gap": 0.05,
+     "gain_db": 0.3
+    },
+    {
+     "who": "sravani",
+     "file": "11_sravani.wav",
+     "text": "డాక్టర్ నిర్ణయిస్తారు.",
+     "show": "...the doctor decides.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "gain_db": 0.3
+    },
+    {
+     "who": "thatha",
+     "file": "12_thatha.wav",
+     "text": "అంటే... నేను బతుకుతానా?",
+     "show": "So... I'll live?",
+     "maxgap": 0.3,
+     "gap": 0.2,
+     "gain_db": 0.3
+    },
+    {
+     "who": "sravani",
+     "file": "13_sravani.wav",
+     "text": "నువ్వు బతుకుతావ్. నీ లడ్డూలే బతకవు.",
+     "show": "You'll live. Your laddus won't.",
+     "maxgap": 0.3,
+     "gap": 1.05,
+     "gain_db": 0.3
+    },
+    {
+     "who": "thatha",
+     "file": "14_thatha.wav",
+     "text": "ఒక్క చిన్న ప్రశ్న... [1] లడ్డూల గురించి.",
+     "show": "One small question... [1] about laddus.",
+     "maxgap": 0.3,
+     "gap": 0.05,
+     "gain_db": 0.3
+    }
+   ]
+  }
+ ]
+}

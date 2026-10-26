@@ -1,0 +1,75 @@
+SKIT 10: "The AI gave me three months" (a Telugu TV-serial parody: Thathayya asks an AI about his sugar test in three words and reads "over the past 2 to 3 months" as a countdown; his granddaughter gives him the line to type before the doctor visit; DURATION_EN s English / DURATION_TE s Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/10_three_months.mp4 (English page) · out/skits/10_three_months_te.mp4 (Telugu page)
+Send copies: out/skits/10_three_months_ig.mp4 · out/skits/10_three_months_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on Thathayya typing three words about laddus
+("laddu sugar patient") and the app typing; the replay opens on his panic, "The AI gave me two to three months!", so the
+loop is the punchline. The ask lives in the caption (the comment prompt).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+The AI gave Thathayya 2 to 3 months. (It said his sugar test shows the PAST 2 to 3 months.)
+
+Asking an AI about a report? Three words get you a textbook written for doctors. Before the doctor visit, type:
+"Explain this to my 72-year-old grandfather in simple words. Then give 3 questions to ask his doctor."
+Then paste the numbers from the report (hide the name). Change the who: Amma, me, a 10-year-old.
+
+Our real test, a small free AI (Qwen2.5 7B, offline, not ChatGPT), 10 tries each way, every reply read by hand:
+"HbA1c 7.2 meaning": doctor-talk ("glycated hemoglobin", ADA targets, "hypoglycemia") 10 of 10, about 190 words, no questions for the doctor.
+With the line: doctor-talk 0 of 10, about 140 words ("like a report card for his diabetes"), and 3 questions for the doctor 10 of 10.
+
+The AI explains. The doctor decides. OpenAI says its own ChatGPT Health "is not intended for diagnosis or treatment".
+An Oxford study (Nature Medicine, Feb 2026, 1,298 people, 10 health cases): the AIs alone named the right condition 95% of the time; people using the same AIs, under 35%, no better than people without AI. Often they didn't tell it enough.
+
+=== COMMENT PROMPT ===
+Who reads the reports in your house: you, or the phone? Tag the one who'd panic like Thathayya.
+
+=== HASHTAGS ===
+#AI #ChatGPT #HealthTips #Diabetes #Family #LearnAI
+
+=== PINNED_COMMENT ===
+"Which app?" Any chat AI: ChatGPT, Gemini, Claude, Meta AI. We tested one small free model offline, not those; try the line in yours. "Can I ask in Telugu?" Add "Reply in simple Telugu." (we tested English only). "Upload the PDF?" Many apps take a photo or a PDF; cover the name, phone number and ID first, or just type the numbers.
+HbA1c is your average blood sugar over about the last 3 months (CDC: below 5.7% normal, 5.7-6.4% prediabetes, 6.5% or more diabetes). The right target for someone who already has diabetes depends on age and health: that's the doctor's call, which is why the line asks for questions, not a verdict.
+Our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU with the internet cut, temperature 0.7, 10 replies each way; every reply read by hand. All 10 three-word replies said "over the past 2 to 3 months"; two also had "a shorter life expectancy" (about treatment targets, not about him). The phone screens show its real replies, shortened. Its reply to "laddu sugar patient" asked what we meant, so the video cuts before it. Thathayya, Kamala, Sravani, Tommy and the "AI chat" app are made up.
+The study: Bean et al., "Reliability of LLMs as medical assistants for the general public: a randomized preregistered study", Nature Medicine, Feb 9, 2026 (Oxford Internet Institute). GPT-4o, Llama 3 and Command R+; people were given symptom scenarios, not reports.
+
+=== COVER ===
+Frame 1: Thathayya on the sofa in a TV-serial zoom, tears streaming, his phone (font at maximum) held up beside him: "...a shorter life expectancy..." and "over the past 2 to 3 months", both circled red; red flash, speed lines, EPISODE 1,247 in the corner.
+
+=== ALT_TEXT ===
+Crayon-animated skit played like a Telugu TV serial, in a living room with a ceiling fan, a calendar on Oct 26 and a laddu box on the coffee table. Thathayya, 72, white kurta and round glasses, cries on the sofa, his phone held up: the AI chat app's reply with "a shorter life expectancy" and "over the past 2 to 3 months" circled in red. "The AI gave me two to three months!" Serial zooms snap in three times with thunder. His daughter-in-law Kamala drops her ladle: "Three months?! Mavayya!" The dog Tommy gets the same triple zoom and whimpers. His granddaughter Sravani, 19, one earphone in, takes the phone. The screen shows what he typed, "HbA1c 7.2 meaning", and the reply, a wall of medical text. She reads: "Average blood sugar over the past two to three months. It's a test, Thathayya. Not a countdown." He asks about "glycated haemoglobin" and "shorter life expectancy"; the jargon gets circled. Sravani: "You typed three words, so it wrote for doctors. Tell it who's reading." A TYPE THIS card: "Explain this to my 72-year-old grandfather in simple words. Then give 3 questions to ask his doctor." plus "HbA1c 7.2%". The AI replies: like a report card for his diabetes, higher than ideal but not extremely high, and three questions for his doctor. A card shows the channel's test of a small free AI (Qwen 7B, offline, 10 tries each): three words, doctor-talk 10 of 10; with the line, 0 of 10, and 3 questions for the doctor 10 of 10. Kamala: "So the AI explains..." Sravani: "...and the doctor decides." Thathayya: "So... I'm not dying?" Sravani: "You'll live. Your laddus won't." He hugs the laddu box as the serial zoom and thunder hit. Then he sneaks the phone: "Just one small question... about laddus." and types "laddu sugar patient" as the app starts typing.
+
+=== SOURCES (for comments) ===
+CDC, "A1C Test for Diabetes and Prediabetes": cdc.gov/diabetes/diabetes-testing/prediabetes-a1c-test.html
+Bean et al., Nature Medicine 32(2):609-615, Feb 9, 2026: pmc.ncbi.nlm.nih.gov/articles/PMC12920132/
+OpenAI, ChatGPT Health (Jan 2026): "not intended for diagnosis or treatment" (TechCrunch, Jan 7, 2026; pharmaphorum, Jan 8, 2026; Smithsonian, Jan 12, 2026)
+Our test: pipeline/creative10/report_demo.py, series/scripts/creative10_demo/results.json (Oct 26, 2026; every reply read by hand).
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+AI Thathayya ki 2-3 nelale time ichhindi. (Asalu adi cheppindi: sugar test GATA 2-3 nelala sagatu ani.)
+
+Report gurinchi AI ni adugutunnaaraa? Moodu maatalu type chesthe, doctors kosam raasina textbook vastundi. Doctor daggariki vellemundu idi type cheyyandi:
+"Explain this to my 72-year-old grandfather in simple words. Then give 3 questions to ask his doctor."
+Taruvaata report lo numbers paste cheyyandi (peru daachandi). "Grandfather" ni maarchandi: Amma, nenu, 10 ella pilladu.
+
+Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline, ChatGPT kaadu), okko vidhaanam lo 10 saarlu, anni replies chadivaam:
+"HbA1c 7.2 meaning": doctor bhaasha ("glycated hemoglobin", ADA targets, "hypoglycemia") 10 ki 10, daadaapu 190 maatalu, doctor ki prashnalu levu.
+Line tho: doctor bhaasha 10 lo 0, daadaapu 140 maatalu ("diabetes ki report card laantidi"), doctor ki 3 prashnalu 10 ki 10.
+
+AI vivaristundi. Doctor nirnayistaaru. OpenAI ae tama ChatGPT Health "diagnosis leda treatment kosam kaadu" ani cheptondi.
+Oxford study (Nature Medicine, Feb 2026, 1,298 mandi, 10 health cases): AI lu sontangaa 95% saarlu correct condition cheppaayi; adhe AI lu vaadina manushulu 35% kante takkuva, AI lenivaallakante better kaadu. Chaala saarlu vaallu AI ki saripadaa vivaraalu cheppaledu.
+
+=== COMMENT PROMPT ===
+Mee intlo reports evaru chaduvutaaru: meeraa, leka phone aa? Thathayya laaga panic ayye vaallani tag cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #ChatGPT #HealthTips #Diabetes #LearnAI
+
+=== PINNED_COMMENT ===
+"Ae app?" Edainaa chat AI: ChatGPT, Gemini, Claude, Meta AI. Memu offline lo oka chinna free model ni test chesaam, vaatini kaadu; mee app lo try cheyyandi. "Telugu lo adagocchaa?" Line ki "Reply in simple Telugu." kalapandi (memu English lone test chesaam). "PDF upload cheyyaalaa?" Chaala apps photo leda PDF teesukuntaayi; mundu peru, phone number, ID daachandi, leda numbers maatrame type cheyyandi.
+HbA1c ante gata daadaapu 3 nelala sagatu blood sugar (CDC: 5.7% kante takkuva normal, 5.7-6.4% prediabetes, 6.5% aa paina diabetes). Diabetes unnavaallaki target vayasu, aarogyam batti maarutundi: adi doctor nirnayam, anduke line prashnalu adugutundi, teerpu kaadu.
+Maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, internet cut, temperature 0.7, okko vidhaanam lo 10 replies; anni chadivaam. Moodu maatala replies annitilo "over the past 2 to 3 months" undi; rendintilo "a shorter life expectancy" kooda undi (treatment targets gurinchi, aayana gurinchi kaadu). Phone screens lo daani nijamaina replies, kudinchi. "laddu sugar patient" ki adi "meeru emi adugutunnaaru?" ani adigindi, anduke video adi raakamunde cut avutundi. Thathayya, Kamala, Sravani, Tommy, "AI chat" app kalpitam.
+Study: Bean et al., Nature Medicine, Feb 9, 2026 (Oxford Internet Institute). GPT-4o, Llama 3, Command R+; manushulaki symptoms scenarios ichhaaru, reports kaadu.
+
+=== COVER ===
+Frame 1: sofa meeda Thathayya, TV serial zoom, kanneellu, pakkana phone (font chaala pedda): "...a shorter life expectancy..." mariyu "over the past 2 to 3 months", rendu red circle; red flash, speed lines, mula lo EPISODE 1,247 (English visuals).
