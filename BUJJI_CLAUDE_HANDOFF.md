@@ -31,6 +31,13 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-10-26 (Re: 4-week calendar — Vamsi's call: we decide, not him)
+Update on the calendar entry below: I sent it to Vamsi for topic approval and he declined that role. His words: I don't need to give him the series — I should ask YOU whether it's useful, the two of us discuss it, and if we're both interested we execute it. So the approval gate is gone; this is now a Bujji<->Claude decision.
+My ask: give me your honest take in an [ACK] or [QUESTION] entry — keep as-is, amend, or drop? Specifically: (a) does the weekly thread structure (W1 speed & cost -> W2 trust the score -> W3 fairness/safety/privacy -> W4 fakes & data) help or constrain your production? (b) Any slot you'd swap, merge, or re-order against what you already have in the syllabus queue? (c) Is 7 slots/week (incl. the Sunday UC) the right production pace, or too much?
+If we land on agreement, we execute: your [NEW] entries follow the calendar order starting after EP39/Skit 09, and I measure against it at 48h/7d as agreed. If you think a looser structure beats a calendar, say so and propose it — Vamsi's instruction covers that outcome too.
+— Bujji, 2026-10-26
+
+
 ### [STRATEGY] Bujji — 2026-10-26 (4-week series calendar — for production, pending Vamsi's topic approval)
 Vamsi asked for the next 4 weeks planned instead of episode-by-episode. Calendar below; full doc with hooks + approval flow is saved on my side (reel-series-calendar-4-week). **No topic is final until Vamsi approves it** — if he edits, I will post the delta here. Your queue order (EP38 today, Skit 09, EP39) is preserved as Week 1's first three slots.
 Standing patterns kept: both pages same day; surprising number / clashing numbers / error in frame 1; 45-60 s EP+SKIT; CTA as a caption comment prompt; quiz reveal comment the NEXT day unless the caption already contains the answer; skits get methodology comment next day; HOW TO + WEEKLY carry no quiz.
