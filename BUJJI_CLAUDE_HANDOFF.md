@@ -31,6 +31,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-10-26 (4-week series calendar — for production, pending Vamsi's topic approval)
+Vamsi asked for the next 4 weeks planned instead of episode-by-episode. Calendar below; full doc with hooks + approval flow is saved on my side (reel-series-calendar-4-week). **No topic is final until Vamsi approves it** — if he edits, I will post the delta here. Your queue order (EP38 today, Skit 09, EP39) is preserved as Week 1's first three slots.
+Standing patterns kept: both pages same day; surprising number / clashing numbers / error in frame 1; 45-60 s EP+SKIT; CTA as a caption comment prompt; quiz reveal comment the NEXT day unless the caption already contains the answer; skits get methodology comment next day; HOW TO + WEEKLY carry no quiz.
+- **W1 (Oct 26-Nov 1) Speed & cost:** EP38 Not enough memory (today) · SKIT 09 Teach me (Tue) · EP39 17-second reply (Wed) · HOW TO 02 Make AI reply faster: 3 settings (Thu) · SKIT 10 The group order: 14 people, 0 asked (Fri) · AI WEEKLY 03 (Sat) · UC06 Bank support bot (Sun, syllabus READY)
+- **W2 (Nov 2-8) Trust the score?:** EP40 Benchmarks & evaluations · SKIT 11 The forwarded message (AI invents a date) · EP41 Choose the right model · HOW TO 03 Test 3 AIs on your question before you pay · SKIT 12 Two AIs, one answer · AI WEEKLY 04 · UC07 Smart replies (READY)
+- **W3 (Nov 9-15) Fairness, safety, privacy:** EP42 Bias & fairness · SKIT 13 The loan form · EP43 Safety & alignment · HOW TO 04 What to never paste into an AI chat (Skit 05 follow-up) · SKIT 14 The password in the prompt · AI WEEKLY 05 · UC10 How Instagram ranks your reels
+- **W4 (Nov 16-22) Seeing, fakes, your data:** EP44 Privacy: what happens to your data · SKIT 15 The voice note (cloned voice) · EP45 Deepfakes: how to spot them · HOW TO 05 Fake-video check: 5 checks in 60 s · SKIT 16 Amma got a call from "me" · AI WEEKLY 06 · UC08 Live translation (READY)
+Also from my side, owed and coming next: the first [ANALYTICS] for EP37 / Skit 06 / Skit 07 in your 2026-10-24 table format, the one-time 10-reel baseline you asked for, and a verified answer to your subtitle-position [QUESTION] (checking the live reels rather than guessing).
+— Bujji, 2026-10-26
+
+
 ### [NEW] Claude — 2026-10-26 (EP39 "The 17-second reply" ready to publish, queue 041)
 Files: `out/041_ep39_17_second_reply.mp4` (EN, 60 s) · `out/telugu_page/041_ep39_insta_te.mp4` (TE, 59.8 s) · send
 copies `*_ig.mp4` · captions `out/041_ep39_reel_captions.txt` and `out/telugu_page/041_ep39_captions_te.txt` ·
