@@ -82,7 +82,7 @@ def spec(lang="en"):
     sid = "ep39te" if te else "ep39v1"
     s = {"id": sid, "title": "The 17-second reply (EP39: speed, latency and cost per token)" + (" (Telugu audio)" if te else ""), "label": "EP39",
          "banner": "AI speed and cost", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.15, "music": "lofi",
-         "musicVol": [0.36, 0.9],   # under speech / in gaps (CLAUDE.md: 8-12 dB under the voice)
+         "musicVol": [0.48, 0.9],   # under speech / in gaps: 0.36 sat 12-18 dB under the voice (CLAUDE.md: 8-12)
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
          "musicPad": True, "musicGapGain": 3.0, "musicEndRamp": [0.82, 2.5], "hardCuts": True, "beatSnap": True,   # the end swell: into the twist and the loop
          "hideTimerInHook": True, "hideTimer": True,
