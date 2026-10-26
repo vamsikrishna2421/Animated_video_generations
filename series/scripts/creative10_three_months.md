@@ -1,4 +1,4 @@
-# Creative 10 "The AI gave me three months" (script v2, Oct 26)
+# Creative 10 "The AI gave me three months" (script v2.1 as rendered, Oct 26)
 
 **Format:** a Telugu TV-serial parody: every shock gets the serial treatment (three snap zooms on the face, a thunder
 crack, "dhan dhan dhan" hits, red and blue flashes), in one living room. Phone-chat inserts (the AI's real replies), a
@@ -34,10 +34,16 @@ is one sentence to copy, for any report.
   (HbA1c 7.2%), ten replies each way, temperature 0.7, the same seed per try. Every reply read by hand.
 
 ## Our test (results.json, every reply read by hand)
-PENDING (the run is going): "HbA1c 7.2 meaning" vs the line + "HbA1c 7.2%". So far (5 of 20): the four words gave
-176-230 words of doctor-talk ("glycated hemoglobin", ADA and EASD targets, "hypoglycemia", "comorbidities", "a shorter
-life expectancy"), every one saying "over the past 2 to 3 months"; with the line, 126-137 words, "like a report card for
-his diabetes", "higher than ideal, but not extremely high", and three questions for the doctor.
+- "HbA1c 7.2 meaning" (three words): 10 of 10 replies in doctor-talk: every one opens on "glycated hemoglobin", most add
+  ADA (and EASD) targets, "hypoglycemia", "mmol/mol", "comorbidities"; two say "a shorter life expectancy" (about who
+  gets a looser target). All 10 say "over the past 2 to 3 months". Median 190 words; none gives questions for the doctor.
+  Only one names a complication (kidney and nerve damage): the planned "scary list" hook didn't survive the test.
+- With the line ("Explain this to my 72-year-old grandfather in simple words. Then give 3 questions to ask his
+  doctor." + "HbA1c 7.2%"): 0 of 10 in doctor-talk ("blood sugar (glucose)" in two is a gloss), median 137 words, "like a
+  report card for his diabetes", "higher than ideal, but not extremely high"; 10 of 10 end on three numbered questions
+  for the doctor, the first always "What does an HbA1c of 7.2% mean for my grandfather's health?".
+- "laddu sugar patient" (the loop): it asked what "patient" meant ("could you please provide more context?"), so the
+  video cuts on "AI chat is typing..." instead of showing a reply it never gave.
 
 ## Hook options
 1. **(kept)** Frame 1: Thathayya on the sofa in a serial zoom, tears, the phone held up: the AI's wall of text with
@@ -76,7 +82,27 @@ months"), a death sentence in frame 1 the viewer can't explain until 0:08, and t
 - Caption: "hide the name before pasting"; the comment questions they'd ask ("Which app?", "Same on ChatGPT?", "Can I type
   in Telugu?") are answered in the pinned comment without claiming what we didn't test.
 
-## Script (English) · v2
+## Render review (v2) and what changed (v2.1)
+- Both: "shorter life expectancy" was circled in frame 1, asked about at 0:15 and never answered. Line 6 now opens on
+  the phone: the phrase is circled and a note says "= patients who get a looser sugar target. NOT a forecast. His
+  target? Ask the doctor." (its real meaning in reply 1), then cuts to Sravani.
+- Both: 0:07-0:47 played like a screen recording. Reaction cutaways: Thathayya on "Not a countdown", on "Then what's
+  glycated haemoglobin?!" (a snap zoom) and listening to the answer.
+- Both: the test card's payoff flashed by and "10/10" read like a rating. Now "10 of 10 replies in doctor-talk" / "0 of
+  10 in doctor-talk" and "+ 3 questions for the doctor: 10 of 10" land together on "zero" and hold 2.3 s; "doctor-talk =
+  'glycated hemoglobin', 'hypoglycemia'..." is on the card; the 3-word questions row is gone.
+- Sound (both; the pack's quarters were within 1 dB): the hits land before the first line (they also masked the Telugu
+  hook line: the mix's speech-to-text lost it), thunder and dhan at full volume at 0:00 and on the laddus, the bed swells
+  into the TYPE THIS card, a lift into the answer and into the rule, 0.4 s of silence before the laddu thunder, the last
+  scene's voices and bed a step up, the percussion builds harder; no sting at the end (the replay's thunder joins it).
+- Telugu: the TYPE THIS card holds about 6.5 s with no caption under it; the questions bubble waits for "డాక్టర్ ని
+  అడగండి"; "ఏఐ ఎక్స్ప్లెయిన్ చేస్తుంది... డాక్టర్ డిసైడ్ చేస్తారు" (spoken Telugu, not newsreader Telugu). Line 7 says the
+  copy-line in Telugu (Parler babbled the long English sentence); the card shows the English to copy.
+- English: "for his diabetes" (the phone says diabetes), "You will live" ("You'll" was swallowed); the caption no longer
+  splits "PAST 2 to 3 | months"; the flash at 0:00 is lighter; "change the who" comes in mid-line; the rule chip stays
+  up under "So... I'm not dying?".
+
+## Script (English) · v2.1 · 59.7 s as rendered
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | Thathayya | The AI gave me two to three months! | frame 1: a serial triple zoom on his face, tears; his phone, huge font: "...a shorter life expectancy..." and "over the past 2 to 3 months", both circled red; thunder 0.1 s in; banner "AI and your report"; EPISODE 1,247 |
@@ -86,15 +112,15 @@ months"), a death sentence in frame 1 the viewer can't explain until 0:08, and t
 | 5 | Thathayya | Then what's "glycated haemoglobin"? And "shorter life expectancy"?! | the jargon circled one by one |
 | 6 | Sravani | You typed three words, so it wrote for doctors. Tell it who's reading. | chip "3 words → it wrote for doctors" |
 | 7 | Sravani | Before the doctor visit, type this: Explain this to my seventy-two-year-old grandfather in simple words. Then give three questions to ask his doctor. | TYPE THIS card for the whole line: the line, "+ HbA1c 7.2%", "(then the report's numbers; hide the name)", late: "change the who: Amma, me, a 10-year-old" |
-| 8 | AI | It's like a report card for his sugar: higher than ideal, but not extremely high. Ask his doctor: what does it mean for his health? | the phone: the line on top, its real reply (try 1) shortened, then its 3 questions |
-| 9 | Sravani | I tested a small free AI ten times. Three words: doctor-talk every time. With the line: zero. Plus three questions for the doctor. | OUR REAL TEST card (Qwen 7B, offline, 10 tries each); rows land on "three words", "zero", "three questions" |
+| 8 | AI | It's like a report card for his diabetes: higher than ideal, but not extremely high. Ask his doctor: what does it mean for his health? | the phone: the line on top, its real reply (try 1) shortened, then its 3 questions |
+| 9 | Sravani | I tested a small free AI ten times. Three words: doctor-talk every time. With the line: zero. | OUR REAL TEST card (Qwen 7B, offline, 10 tries each); rows land on "three words", "zero", "three questions" |
 | 10 | Kamala | So the AI explains... | chip "AI EXPLAINS." |
 | 11 | Sravani | ...and the doctor decides. | chip "AI EXPLAINS. THE DOCTOR DECIDES."; boom and clap |
 | 12 | Thathayya | So... I'm not dying? | |
-| 13 | Sravani | You'll live. Your laddus won't. | the laddu box glows; then he hugs it: triple zoom, thunder |
+| 13 | Sravani | You will live. Your laddus won't. | the laddu box glows; then he hugs it: triple zoom, thunder |
 | 14 | Thathayya | Just one small question... about laddus. | he types "laddu sugar patient" (three words again); its real reply comes back; the replay opens on frame 1 |
 
-## Script (Telugu) · v2, English on-screen text
+## Script (Telugu) · v2.1 · 59.6 s as rendered, English on-screen text
 | # | Who | Line |
 |---|---|---|
 | 1 | Thathayya | ఏ ఐ నాకు రెండు మూడు నెలలే టైం ఇచ్చింది! |
@@ -103,11 +129,11 @@ months"), a death sentence in frame 1 the viewer can't explain until 0:08, and t
 | 4 | Sravani | గత రెండు మూడు నెలల షుగర్ సగటు అని రాసుంది. ఇది టెస్ట్ తాతయ్యా, కౌంట్ డౌన్ కాదు. |
 | 5 | Thathayya | మరి గ్లైకేటెడ్ హీమోగ్లోబిన్ ఏంటి? షార్టర్ లైఫ్ ఎక్స్పెక్టెన్సీ ఏంటి?! |
 | 6 | Sravani | నువ్వు మూడు మాటలే టైప్ చేశావ్, అందుకే డాక్టర్ల కోసం రాసింది. ఎవరు చదువుతున్నారో చెప్పాలి. |
-| 7 | Sravani | డాక్టర్ దగ్గరికి వెళ్ళే ముందు, ఇలా టైప్ చేయాలి: Explain this to my seventy-two-year-old grandfather in simple words. Then give three questions to ask his doctor. |
-| 8 | AI | ఇది షుగర్ కి రిపోర్ట్ కార్డ్ లాంటిది. ఉండాల్సిన దానికంటే ఎక్కువ, కానీ మరీ ఎక్కువ కాదు. డాక్టర్ ని అడగండి: దీని అర్థం ఆయన ఆరోగ్యానికి ఏంటి? |
-| 9 | Sravani | ల్యాప్టాప్ లో చిన్న ఫ్రీ ఏ ఐ ని పది సార్లు టెస్ట్ చేశా. మూడు మాటలకి: ప్రతిసారీ డాక్టర్ భాష. ఈ లైన్ తో: సున్నా. ఇంకా డాక్టర్ కి మూడు ప్రశ్నలు. |
-| 10 | Kamala | అంటే, ఏ ఐ వివరిస్తుంది... |
-| 11 | Sravani | డాక్టర్ నిర్ణయిస్తారు. |
+| 7 | Sravani | డాక్టర్ దగ్గరికి వెళ్ళే ముందు, ఇలా టైప్ చేయాలి: మా తాతయ్యకి సింపుల్ గా చెప్పు, డాక్టర్ కి మూడు ప్రశ్నలు ఇవ్వు. (the card shows the English line) |
+| 8 | AI | ఇది షుగర్ కి రిపోర్ట్ కార్డ్ లాంటిది. ఉండాల్సిన దానికంటే ఎక్కువ, కానీ మరీ ఎక్కువ కాదు. డాక్టర్ ని అడగండి: దీని అర్థం ఆయనకి ఏంటి? |
+| 9 | Sravani | ఆఫ్లైన్ లో ఒక చిన్న ఫ్రీ ఏ ఐ ని పది సార్లు టెస్ట్ చేశా. మూడు మాటలకి: ప్రతిసారీ డాక్టర్ భాష. ఈ లైన్ తో: సున్నా. |
+| 10 | Kamala | అంటే, ఏఐ ఎక్స్ప్లెయిన్ చేస్తుంది... |
+| 11 | Sravani | డాక్టర్ డిసైడ్ చేస్తారు. |
 | 12 | Thathayya | అంటే... నేను బతుకుతానా? |
 | 13 | Sravani | నువ్వు బతుకుతావ్. నీ లడ్డూలే బతకవు. |
 | 14 | Thathayya | ఒక్క చిన్న ప్రశ్న... లడ్డూల గురించి. |

@@ -1,5 +1,6 @@
 # Creative 10: the TV-serial sounds, made here (no library clips): thunder (a crack and a rolling rumble), "dhan" (one
-# orchestra-style hit: a low drum, a tom, a cymbal wash and a minor brass stab), dhan3 (the triple zoom: three hits 0.17 s
+# orchestra-style hit: a low drum, a tom, a cymbal wash and a minor brass stab), thunder_short (the same crack, the rumble
+# gone in about a second: a line follows it), dhan3 (the triple zoom: three hits 0.17 s
 # apart, each a step higher), a dog's whimper (Tommy's zoom), and a tremolo-strings sting (the suspense under the panic).
 # Writes video/public/reel/creative10v1/{thunder,dhan,dhan3,whimper,sting}.wav (both reels use them).
 #   python3 pipeline/creative10/make_sfx.py
@@ -41,12 +42,12 @@ def bp(x, lo_a, hi_a):   # crude band-pass: two one-pole low-passes subtracted
     return lp(lp(x, hi_a), hi_a) - lp(lp(x, lo_a), lo_a)
 
 
-def thunder():
-    t = t_(3.2)
+def thunder(length=3.2, decay=1.1):
+    t = t_(length)
     crack = bp(rng.standard_normal(len(t)), 0.12, 0.6) * np.exp(-t / 0.06)   # about 1-5 kHz: the crack a phone can play
     rumble = bp(rng.standard_normal(len(t)), 0.012, 0.09)   # about 90-650 Hz: the roll (phone speakers barely play 30-60 Hz)
     rolls = 1 + 0.6 * np.sin(2 * np.pi * 1.7 * t + 0.5) * np.sin(2 * np.pi * 0.6 * t)   # the roll comes and goes
-    rumble *= rolls * np.clip(t / 0.08, 0, 1) * np.exp(-t / 1.1)
+    rumble *= rolls * np.clip(t / 0.08, 0, 1) * np.exp(-t / decay)
     return norm(0.6 * norm(crack) + norm(rumble))
 
 
@@ -108,7 +109,7 @@ def sting():
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, x in (("thunder", thunder()), ("dhan", dhan()), ("dhan3", dhan3()), ("whimper", whimper()), ("sting", sting())):
+    for name, x in (("thunder", thunder()), ("thunder_short", thunder(1.6, 0.35)), ("dhan", dhan()), ("dhan3", dhan3()), ("whimper", whimper()), ("sting", sting())):
         fade = np.ones(len(x))
         k = int(0.02 * SR)
         fade[-k:] = np.linspace(1, 0, k)

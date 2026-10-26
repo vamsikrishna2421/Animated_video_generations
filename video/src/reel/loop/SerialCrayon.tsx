@@ -291,8 +291,8 @@ const flashOver = (c: Ctx, W: number, H: number, f: number, at: number, r: () =>
 };
 const thunderFlash = (c: Ctx, W: number, H: number, f: number, at: number) => {
   const d = f - at;
-  if (d < 0 || d > 8) return;
-  c.fillStyle = `rgba(255,255,255,${0.75 * (1 - d / 8)})`; c.fillRect(0, 0, W, H);
+  if (d < 0 || d > 6) return;
+  c.fillStyle = `rgba(255,255,255,${0.45 * (1 - d / 6)})`; c.fillRect(0, 0, W, H);
 };
 const epTag = (c: Ctx, W: number) => {   // the serial's channel bug: a running gag, top right
   c.save(); c.globalAlpha = 0.9; c.fillStyle = "rgba(127,29,29,0.85)"; rrect(c, W - 330, 222, 290, 58, 12); c.fill();
@@ -350,8 +350,8 @@ const WALL: string[] = [
   "- with a shorter life expectancy or",
   "  significant comorbidities...",
 ];
-const JARGON = ["glycated", "hemoglobin,", "glucose", "hypoglycemia", "comorbidities...", "(EASD)..."];
-const wall = (c: Ctx, W: number, y0: number, past: number, circles: number, r: () => number) => {
+const JARGON = ["glycated", "hemoglobin,", "glucose", "hypoglycemia", "(EASD)...", "comorbidities...", "shorter life expectancy"];   // the last: the note explains it
+const wall = (c: Ctx, W: number, y0: number, past: number, circles: number, r: () => number, note = 0) => {
   const size = 36, lh = 52, x = 128;
   c.fillStyle = "#fff"; rrect(c, 106, y0, W - 212, WALL.length * lh + 44, 26); c.fill();
   stroke(c, rrectPts(106, y0, W - 212, WALL.length * lh + 44), "#cbd5e1", 2, r, { passes: 1 });
@@ -375,6 +375,15 @@ const wall = (c: Ctx, W: number, y0: number, past: number, circles: number, r: (
       stroke(c, circlePts(x0 + w / 2, ly - size * 0.32, w / 2 + 16, size * 0.78), RED, 5, r, { passes: 2 });
     });
   });
+  if (note > 0) {   // the answer to "shorter life expectancy" (render review: it was circled and never explained)
+    const ny = y0 + 30 + 12.6 * lh;   // below the phrase it explains (line 11 of the wall), over "comorbidities"
+    c.save(); c.globalAlpha = clamp(note * 3); c.translate(W - 110, ny); c.rotate(-0.04); c.scale(0.9 + 0.1 * easeOut(note), 0.9 + 0.1 * easeOut(note));
+    c.fillStyle = "rgba(4,8,40,0.25)"; rrect(c, -500, -36, 486, 250, 14); c.fill();
+    c.fillStyle = "#fde047"; rrect(c, -508, -46, 486, 250, 14); c.fill();
+    c.font = SANS(34, 800); c.fillStyle = INK; c.textAlign = "left";
+    ["↑ = patients who get a", "looser sugar target.", "NOT a forecast.", "His target? Ask the doctor."].forEach((t, i) => c.fillText(t, -486, 2 + i * 50));
+    c.restore();
+  }
   return y0 + WALL.length * lh + 68;
 };
 // with the line (results.json, line try 1), shortened where marked "..."
@@ -389,7 +398,7 @@ const chat = (c: Ctx, W: number, H: number, f: number, r: () => number, mode: Ch
   phoneScreen(c, W, H, f, r, "Thathayya's phone");
   if (mode === "wall") {
     const y = msg(c, W, 420, [["HbA1c 7.2 meaning", false]], true, 1, r, 46);
-    wall(c, W, y, k[0] ?? 0, k[1] ?? 0, r);
+    wall(c, W, y, k[0] ?? 0, k[1] ?? 0, r, k[2] ?? 0);
   }
   if (mode === "line") {
     let y = msg(c, W, 420, LINE, true, 1, r, 36);
@@ -402,7 +411,7 @@ const chat = (c: Ctx, W: number, H: number, f: number, r: () => number, mode: Ch
       c.save(); c.globalAlpha = clamp(k[0] * 3); c.fillStyle = "#fff"; rrect(c, 106, y, 220, 96, 30); c.fill();
       stroke(c, rrectPts(106, y, 220, 96), "#cbd5e1", 2, r, { passes: 1 });
       [0, 1, 2].forEach((d) => { const up = Math.sin(f / 3 - d) > 0.3 ? 8 : 0; c.beginPath(); c.arc(166 + d * 50, y + 48 - up, 13, 0, 7); c.fillStyle = "#64748b"; c.fill(); });
-      c.font = handF(34); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("AI chat is typing...", 116, y + 150);
+      c.font = handF(46); c.fillStyle = "#475569"; c.textAlign = "left"; c.fillText("AI chat is typing...", 116, y + 160);
       c.restore();
     }
   }
@@ -420,35 +429,35 @@ const typeThis = (c: Ctx, W: number, r: () => number, k: number, k2: number) => 
   ["“Explain this to my", "72-year-old grandfather", "in simple words.", "Then give 3 questions", "to ask his doctor.”"].forEach((t, i) => c.fillText(t, W / 2, 566 + i * 88));
   c.fillStyle = "#1e293b"; rrect(c, 250, 1000, W - 500, 70, 16); c.fill();
   c.font = SANS(40, 800); c.fillStyle = "#86efac"; c.fillText("+ HbA1c 7.2%", W / 2, 1050);
-  c.font = SANS(28, 600); c.fillStyle = "#94a3b8"; c.fillText("(then the report's numbers; hide the name)", W / 2, 1110);
-  if (k2 > 0) { c.globalAlpha = clamp(k * 3) * clamp(k2 * 3); c.font = SANS(36, 700); c.fillStyle = "#fde68a"; c.fillText("change the who: Amma, me, a 10-year-old", W / 2, 1210); }
+  c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.fillText("then the report's numbers (hide the name)", W / 2, 1116);
+  if (k2 > 0) { c.globalAlpha = clamp(k * 3) * clamp(k2 * 3); c.font = SANS(44, 800); c.fillStyle = "#fde68a"; c.fillText("change the who: Amma, me, a 10-year-old", W / 2, 1214); }
   c.restore();
 };
 const testCard = (c: Ctx, W: number, r: () => number, k: number, rows: number[], D: Demo) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 2);
   c.fillStyle = "rgba(15,23,42,0.55)"; c.fillRect(0, 0, W, 1920);
-  c.fillStyle = "rgba(255,253,245,0.98)"; rrect(c, 56, 250, W - 112, 1020, 30); c.fill();
+  c.fillStyle = "rgba(255,253,245,0.98)"; rrect(c, 56, 250, W - 112, 1040, 30); c.fill();
   c.font = SANS(58, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("OUR REAL TEST", W / 2, 334);
-  c.font = SANS(38, 800); c.fillStyle = NAVY; c.fillText(`a small free AI (Qwen 7B), offline · ${D.n} tries each`, W / 2, 396);
-  const row = (y: number, head: string, sub: string, big: string, col: string, ink: string, tail: string, q: number) => {
+  c.font = SANS(36, 800); c.fillStyle = NAVY; c.fillText(`a small free AI (Qwen 7B), offline · ${D.n} tries each`, W / 2, 392);
+  const row = (y: number, head: string, big: string, col: string, ink: string, tail: string, q: number) => {
     if (q <= 0) return;
     c.save(); c.globalAlpha = clamp(q * 3);
-    c.fillStyle = col; rrect(c, 90, y, W - 180, 300, 26); c.fill();
+    c.fillStyle = col; rrect(c, 90, y, W - 180, 270, 26); c.fill();
     c.font = SANS(44, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText(head, 130, y + 66);
-    c.font = SANS(32, 700); c.fillStyle = "#475569"; c.fillText(sub, 130, y + 112);
-    c.font = SANS(130, 900); c.fillStyle = ink; c.fillText(big, 130, y + 254);
-    c.font = SANS(46, 900); c.fillStyle = INK; c.textAlign = "right";
-    tail.split("|").forEach((t, j) => c.fillText(t, W - 130, y + 196 + j * 54));
+    c.font = SANS(118, 900); c.fillStyle = ink; c.fillText(big, 130, y + 210);
+    c.font = SANS(44, 900); c.fillStyle = INK; c.textAlign = "right";
+    tail.split("|").forEach((t, j) => c.fillText(t, W - 130, y + 160 + j * 52));
     c.restore();
   };
-  row(430, "“HbA1c 7.2 meaning”", `3 words · about ${D.plain_words} words back`, `${D.plain_jargon}/${D.n}`, "#fee2e2", RED, "doctor-|talk", rows[0] ?? 0);
-  row(750, "+ the TYPE THIS line", `about ${D.line_words} words back`, `${D.line_jargon}/${D.n}`, "#ede9fe", PURPLE, "doctor-|talk", rows[1] ?? 0);
-  if ((rows[2] ?? 0) > 0) {
-    c.globalAlpha = clamp(rows[2] * 3); c.font = SANS(44, 900); c.fillStyle = GREEN; c.textAlign = "center";
-    c.fillText(`3 questions for the doctor: ${D.line_questions}/${D.n}`, W / 2, 1130);
-    c.font = SANS(32, 700); c.fillStyle = "#475569"; c.fillText(`(3 words: ${D.plain_questions}/${D.n})`, W / 2, 1186);
+  row(430, "“HbA1c 7.2 meaning” (3 words)", `${D.plain_jargon} of ${D.n}`, "#fee2e2", RED, "replies in|doctor-talk", rows[0] ?? 0);
+  row(730, "+ the TYPE THIS line", `${D.line_jargon} of ${D.n}`, "#dcfce7", GREEN, "in doctor-|talk", rows[1] ?? 0);
+  if ((rows[1] ?? 0) > 0) {
+    c.save(); c.globalAlpha = clamp(rows[1] * 3); c.font = SANS(44, 900); c.fillStyle = GREEN; c.textAlign = "center";
+    c.fillText(`+ 3 questions for the doctor: ${D.line_questions} of ${D.n}`, W / 2, 1080); c.restore();
   }
+  c.font = SANS(30, 700); c.fillStyle = "#475569"; c.textAlign = "center";
+  c.fillText("doctor-talk = “glycated hemoglobin”, “hypoglycemia”...", W / 2, 1220);
   c.restore();
   void r;
 };
@@ -470,6 +479,7 @@ const SHOTS: Record<string, { z: number; x: number; y: number }> = {
   dog: { z: 2.3, x: 190, y: 1420 }, laddu: { z: 1.55, x: 560, y: 940 },
 };
 const SHOCK = new Set(["hook", "shock"]);
+const LAD = 12;   // 0.4 s of silence after "Your laddus won't." (the bed drops), then the laddu thunder
 
 // ---------- the scene ----------
 const StSerial: React.FC<SP> = ({ s }) => {
@@ -487,8 +497,8 @@ const StSerial: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, nx = ls[i + 1] ? ls[i + 1].from : s.frames;
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     if (b.shot === "phone" && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("t")} at={3} src={S10 + "thunder.wav"} vol={0.8} />, <Sfx key={k("d")} at={1} src={S10 + "dhan3.wav"} vol={0.75} />,
-      <Sfx key={k("s")} at={4} src={S10 + "sting.wav"} vol={0.35} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("t")} at={1} src={S10 + "thunder_short.wav"} vol={1.0} />, <Sfx key={k("d")} at={0} src={S10 + "dhan3.wav"} vol={0.9} />,
+      <Sfx key={k("s")} at={12} src={S10 + "sting.wav"} vol={0.3} />);   // the loudest hits, before his line (they masked it)
     if (b.prop === "shock") {   // Kamala's zoom, then Tommy's in the gap after her line
       sfx.push(<Sfx key={k("d")} at={at} src={S10 + "dhan3.wav"} vol={0.7} />, <Sfx key={k("c")} at={at + 14} src="audio/gag_bonk.wav" vol={0.35} />);
       sfx.push(<Sfx key={k("dg")} at={end(i) + 2} src={S10 + "dhan.wav"} vol={0.55} />, <Sfx key={k("wh")} at={end(i) + 6} src={S10 + "whimper.wav"} vol={0.5} />);
@@ -497,20 +507,21 @@ const StSerial: React.FC<SP> = ({ s }) => {
     if (b.prop === "jargon") [0.25, 0.5, 0.75].forEach((q, j) => sfx.push(<Sfx key={k("b" + j)} at={at + Math.round(l.frames * q)} src="audio/gag_bonk.wav" vol={0.22} />));
     if (b.prop === "type") sfx.push(<Sfx key={k("d")} at={cueOf(i, 1, 0.25)} src="audio/gag_ding.wav" vol={0.3} />);
     if (b.prop === "calm") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("q")} at={cueOf(i, 1, 0.7)} src="audio/sfx_pop.wav" vol={0.28} />);
-    if (b.prop === "laddus") sfx.push(<Sfx key={k("t")} at={end(i) + 1} src={S10 + "thunder.wav"} vol={0.7} />, <Sfx key={k("d")} at={end(i) + 2} src={S10 + "dhan3.wav"} vol={0.7} />);
+    if (b.prop === "laddus") sfx.push(<Sfx key={k("t")} at={end(i) + LAD + 1} src={S10 + "thunder_short.wav"} vol={1.0} />, <Sfx key={k("d")} at={end(i) + LAD + 2} src={S10 + "dhan3.wav"} vol={0.9} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.3} />, <Sfx key={k("h")} at={cueOf(i, 1, 0.55)} src="reel/sfx_boom.wav" vol={0.5} />,
       <Sfx key={k("c")} at={cueOf(i, 1, 0.55)} src="reel/creative09v1/clap.wav" vol={0.5} />);
-    if (b.prop === "rule1") sfx.push(<Sfx key={k("d")} at={at + Math.round(l.frames * 0.2)} src="audio/gag_ding.wav" vol={0.3} />);
-    if (b.prop === "rule2") sfx.push(<Sfx key={k("h")} at={at + Math.round(l.frames * 0.15)} src="reel/sfx_boom.wav" vol={0.55} />,
-      <Sfx key={k("c")} at={at + Math.round(l.frames * 0.15)} src="reel/creative09v1/clap.wav" vol={0.5} />);
+    if (b.prop === "rule1") sfx.push(<Sfx key={k("d")} at={at - 3} src="audio/gag_ding.wav" vol={0.3} />);   // on the cut, before she speaks:
+    // 20% in, it sat on "ఇది" and the Telugu mix's speech-to-text heard "yeh yeh yeh"
+    if (b.prop === "rule2") sfx.push(<Sfx key={k("h")} at={end(i) + 1} src="reel/sfx_boom.wav" vol={0.55} />,   // after the line: on its
+      <Sfx key={k("c")} at={end(i) + 1} src="reel/creative09v1/clap.wav" vol={0.5} />);                          // first word it hid "డాక్టర్"
     if (b.prop === "loop") {
-      [4, 9, 14].forEach((d, j) => sfx.push(<Sfx key={k("t" + j)} at={at + d} src="audio/sfx_tick.wav" vol={0.3} />));
-      sfx.push(<Sfx key={k("s")} at={nx - 30} src={S10 + "sting.wav"} vol={0.3} />);
+      [4, 9, 14].forEach((d, j) => sfx.push(<Sfx key={k("t" + j)} at={at + d} src="audio/sfx_tick.wav" vol={0.3} />));   // no sting: the
+      void nx;                                                                                                       // replay's thunder
     }
     if (b.prop === "test") {   // the build: hats and claps from the test card to the end
       const dur = Math.max(30, s.frames - at - 10);
       sfx.push(<Sequence key={k("perc")} from={at} durationInFrames={dur} layout="none">
-        <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(q: number) => 0.12 + 0.2 * Math.min(1, q / dur)} />
+        <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(q: number) => 0.14 + 0.3 * Math.min(1, q / dur)} />
       </Sequence>);
     }
   });
@@ -525,28 +536,37 @@ const StSerial: React.FC<SP> = ({ s }) => {
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         const after = f >= end(i);
         const dogBeat = b.prop === "shock" && after;          // Tommy's zoom in the gap after Kamala's line
-        const ladduBeat = b.prop === "laddus" && after;       // the laddu box's zoom in the gap after "Your laddus are."
-        const loopPhone = b.prop === "loop" && f >= cu(1, 0.85);   // the wall comes back as the line ends
-        if ((b.shot === "phone" && !dogBeat) || loopPhone) {
+        const ladduBeat = b.prop === "laddus" && f >= end(i) + LAD;   // the laddu zoom after a beat of silence
+        const loopPhone = b.prop === "loop" && f >= cu(1, 0.85);   // the app starts typing as the line ends
+        // reaction cutaways in the phone stretch (render review: 0:07-0:47 played like a screen recording)
+        let face: { m: Mood; a: Arms; snap: number } | null = null;
+        if (b.prop === "past" && p > 0.72) face = { m: "sheepish", a: "rest", snap: -999 };   // "Not a countdown."
+        if (b.prop === "jargon" && p < 0.4) face = { m: "shock", a: "plead", snap: ln.from };   // "Then what's glycated...?!"
+        if (b.prop === "calm" && p > 0.22 && p < 0.52) face = { m: "calm", a: "rest", snap: -999 };   // listening to the answer
+        const whoPhone = b.prop === "who" && p < 0.45;   // line 6 opens on the phone: the note answers "shorter life expectancy"
+        const te = (s.data as { handle?: string }).handle === "@ai_maastaaru_telugu";
+        const qAt = cu(1, 0.7) + (te ? 10 : 0);   // Telugu: the questions came up while she was still on "not too high"
+        if (((b.shot === "phone" && !dogBeat) || loopPhone || whoPhone) && !face) {
           if (loopPhone) chat(c, W, H, f, r, "laddu", [seg(f, cu(1, 0.85) + 4, cu(1, 0.85) + 12)], D);
           else if (b.prop === "past") chat(c, W, H, f, r, "wall", [seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 10), 0], D);
-          else if (b.prop === "jargon") chat(c, W, H, f, r, "wall", [1, seg(p, 0.15, 0.85)], D);
-          else chat(c, W, H, f, r, "line", [seg(f, ln.from + 2, ln.from + 10), seg(f, cu(1, 0.7) - 2, cu(1, 0.7) + 8)], D);
+          else if (b.prop === "jargon") chat(c, W, H, f, r, "wall", [1, seg(p, 0.42, 0.9), seg(p, 0.72, 0.82)], D);
+          else if (whoPhone) chat(c, W, H, f, r, "wall", [1, 1, 1], D);
+          else chat(c, W, H, f, r, "line", [seg(f, ln.from + 2, ln.from + 10), seg(f, qAt - 2, qAt + 8)], D);
         } else {
           // ---------- the living room ----------
-          const shotKey = dogBeat ? "dog" : ladduBeat ? "laddu" : n === 1 ? "thatha" : b.shot;
+          const shotKey = dogBeat ? "dog" : ladduBeat ? "laddu" : n === 1 || face ? "thatha" : b.shot;
           const sh = SHOTS[shotKey] ?? SHOTS.wide;
-          const zAt = dogBeat || ladduBeat ? end(i) + 1 : SHOCK.has(b.prop) ? ln.from : -999;
+          const zAt = dogBeat ? end(i) + 1 : ladduBeat ? end(i) + LAD + 1 : face ? face.snap : SHOCK.has(b.prop) ? ln.from : -999;
           const tz = triple(f, zAt);
           const z = sh.z * (tz.step >= 0 ? tz.z : 1 + 0.03 * p);
           const shake = tz.step === 3 ? 5 : 0;
           const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
-          const thunderAt = n === 1 ? 3 : ladduBeat ? end(i) + 1 : -999;   // frame 0 stays readable: the flash comes 0.1 s in
+          const thunderAt = n === 1 ? 2 : ladduBeat ? end(i) + LAD + 1 : -999;   // frame 0 stays readable: the flash comes 2 frames in
           const bolt = thunderAt >= 0 ? clamp(1 - (f - thunderAt) / 10) : 0;
           c.save(); c.translate(W / 2 + sx, 960 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
           room(c, W, f, r, bolt);
           const pose = (who: Who): [Mood, Arms] => POSE[n]?.[who] ?? POSE[Math.max(...Object.keys(POSE).map(Number).filter((q) => q <= n))]?.[who] ?? ["calm", "rest"];
-          const [tm, ta] = ladduBeat ? (["shock", "hug"] as [Mood, Arms]) : pose("thatha");
+          const [tm, ta] = ladduBeat ? (["shock", "hug"] as [Mood, Arms]) : face ? ([face.m, face.a] as [Mood, Arms]) : pose("thatha");
           person(c, "thatha", AT.thatha, 1, tm, ta, b.who === "thatha" && talking, r);
           sofaSeat(c);
           const [km, ka] = pose("kamala");
@@ -573,10 +593,11 @@ const StSerial: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "past") tag(c, "a report on the PAST 3 months, not a countdown", W / 2, 380, 52, "#fef3c7", INK, -0.02, 1);
           if (b.prop === "who") tag(c, "3 words → it wrote for doctors", W / 2, 400, 80, "#0f172a", "#facc15", -0.02, seg(p, 0.05, 0.2));
-          if (b.prop === "type") typeThis(c, W, r, seg(f, cu(1, 0.25) - 4, cu(1, 0.25) + 4), seg(f, ln.from + Math.round(ln.frames * 0.8), ln.from + Math.round(ln.frames * 0.8) + 6));
-          if (b.prop === "test") testCard(c, W, r, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 4, ln.from + 12), seg(f, cu(1, 0.55) - 4, cu(1, 0.55) + 4), seg(f, cu(2, 0.8) - 4, cu(2, 0.8) + 4)], D);
-          if (b.prop === "rule1") tag(c, "AI EXPLAINS.", W / 2, 420, 72, "#0f172a", "#facc15", -0.02, seg(p, 0.15, 0.3));
+          if (b.prop === "type") typeThis(c, W, r, seg(f, cu(1, 0.25) - 4, cu(1, 0.25) + 4), seg(f, ln.from + Math.round(ln.frames * 0.5), ln.from + Math.round(ln.frames * 0.5) + 6));
+          if (b.prop === "test") testCard(c, W, r, seg(f, ln.from, ln.from + 8), [seg(f, ln.from + 4, ln.from + 12), seg(f, cu(1, 0.85) - 3, cu(1, 0.85) + 5)], D);
+          if (b.prop === "rule1") tag(c, "AI EXPLAINS.", W / 2, 420, 72, "#0f172a", "#facc15", -0.02, seg(f, ln.from - 3, ln.from + 4));
           if (b.prop === "rule2") tag(c, "AI EXPLAINS. THE DOCTOR DECIDES.", W / 2, 420, 66, "#0f172a", "#facc15", -0.02, seg(p, 0.1, 0.25) * 0.4 + 0.6);
+          if (b.prop === "alive") tag(c, "AI EXPLAINS. THE DOCTOR DECIDES.", W / 2, 400, 54, "#0f172a", "#facc15", -0.02, 1);   // still up
           if (ladduBeat) tag(c, "😱", W / 2 + 230, 520, 90, "rgba(0,0,0,0)", INK, 0, 1);
         }
         void PURPLE; void easeOut;

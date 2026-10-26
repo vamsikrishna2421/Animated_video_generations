@@ -452,3 +452,28 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   sting placed on a cue sits on the key word ("పన్నెండు" vanished under the success sting): put stings after the line.
   When the pack's Telugu transcript is garbage in one stretch, transcribe each line's span of the final mix on its own
   before re-voicing: segment boundaries alone can scramble it.
+- Creative 10 lessons (Oct 26): never `git pull --rebase` (or checkout, merge, `reset --hard`) while free_disk.sh has
+  dropped the out/*.mp4 copies: the rebase cleared their skip-worktree bits, rewrote all 140 of them and filled the
+  disk mid-voicing (the Telugu run died on "No space left"). Bring in remote commits with plumbing instead:
+  `T=$(git merge-tree --write-tree origin/sample1 sample1)`, `git commit-tree $T -p origin/sample1 -F msg`,
+  `git update-ref refs/heads/sample1 <new> <old>`, then update only the changed files' index entries
+  (`git update-index --cacheinfo`) and working copies (`git show <new>:<file> > <file>`). A stuck rebase: kill it by
+  PID, free a little space so it can exit, `git rebase --quit`, `git reset -q`, restore the deleted files from HEAD,
+  then `free_disk.sh "^$"` for the empty mp4 copies. Never run the still renderer while a 7B demo runs: the memory
+  cgroup killed the demo (Parler, faster-whisper and the 7B file all sit in /dev/shm, which counts as memory); the
+  demo resumes from its saved rows. Fish reads a hyphenated Telugu name as two words ("Taata-yya" came out "Tata,
+  yeah"): write it joined ("Tatayya"); "laddus" is heard "ladders": write "laddoos". The test result can change the
+  hook: the plan was a scary complications list, but 9 of 10 three-word replies listed none; all 10 were doctor-talk
+  saying "over the past 2 to 3 months", so the hook became that misread. Write the loop from the real reply too: its
+  answer to "laddu sugar patient" was a request to clarify, so the loop cuts on "AI chat is typing...".
+  Render review: a scary phrase circled in frame 1 must be answered on screen (a note under it); a 40 s stretch of
+  phone and cards needs reaction cutaways every few seconds; show test results as "10 of 10 replies" in words, land
+  the rows together on the key word and hold them 2-3 s (a red "10/10" reads like a rating). Hits on the first line
+  masked it in the Telugu mix: land the opening hits first (a scene "pre") and use a short-tail thunder; a scene-cut
+  lift sits on the next line's first words (no lift, or a "pre"); a ding at 20% of a line sat on "ఇది" and the mix's
+  speech-to-text heard "yeh yeh yeh": put dings on the cut or after the line. "ఏఐ" stuttered in Lalitha's voice too
+  ("yaa yaa yaa"): use "ఇది" or another word. Parler reads a long English sentence in a Telugu voice as babble: say it
+  in Telugu and let the card carry the English to copy; "డిసైడ్" came out "dish": plain Telugu ("ఏం చేయాలో డాక్టర్
+  చెప్తారు"). For Telugu line checks use language="hi" on each line's span of the final mix: language="te" invented
+  words (once a profanity) under the thunder. Set HF_HUB_CACHE=/dev/shm/hf for every script that loads whisper
+  (te_pack_note.py too): without it a 464 MB copy landed on the disk.

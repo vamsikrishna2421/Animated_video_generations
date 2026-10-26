@@ -1,0 +1,1132 @@
+{
+ "id": "creative10te",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI and your report",
+ "musicVol": [
+  0.38,
+  0.85
+ ],
+ "title": "The AI gave me three months (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   149,
+   167
+  ],
+  [
+   1353,
+   1389
+  ],
+  [
+   1668,
+   1680
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   532,
+   1.6
+  ],
+  [
+   532,
+   941,
+   1.4
+  ],
+  [
+   941,
+   1432,
+   1.5
+  ],
+  [
+   1432,
+   1799,
+   1.7
+  ],
+  [
+   782,
+   941,
+   1.3,
+   1
+  ],
+  [
+   1432,
+   1799,
+   1.2,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1799,
+ "music": "reel/creative10te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_serial",
+   "data": {
+    "beats": [
+     {
+      "who": "thatha",
+      "shot": "thatha",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "kamala",
+      "shot": "kamala",
+      "prop": "shock",
+      "n": 2
+     },
+     {
+      "who": "sravani",
+      "shot": "wide",
+      "prop": "enter",
+      "n": 3
+     },
+     {
+      "who": "sravani",
+      "shot": "phone",
+      "prop": "past",
+      "n": 4
+     },
+     {
+      "who": "thatha",
+      "shot": "phone",
+      "prop": "jargon",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "The AI gave me three months",
+     "title": "The AI gave me three months",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 532,
+   "lines": [
+    {
+     "who": "thatha",
+     "name": "Thathayya",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative10te/line_01.wav",
+     "from": 13,
+     "frames": 78,
+     "words": [
+      {
+       "w": "The",
+       "from": 14,
+       "to": 23
+      },
+      {
+       "w": "AI",
+       "from": 23,
+       "to": 29
+      },
+      {
+       "w": "gave",
+       "from": 29,
+       "to": 46
+      },
+      {
+       "w": "me",
+       "from": 46,
+       "to": 52
+      },
+      {
+       "w": "only",
+       "from": 52,
+       "to": 62
+      },
+      {
+       "w": "2-3",
+       "from": 62,
+       "to": 75
+      },
+      {
+       "w": "months!",
+       "from": 75,
+       "to": 92
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "kamala",
+     "name": "Kamala",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative10te/line_02.wav",
+     "from": 96,
+     "frames": 50,
+     "words": [
+      {
+       "w": "Three",
+       "from": 97,
+       "to": 107
+      },
+      {
+       "w": "months?!",
+       "from": 107,
+       "to": 131
+      },
+      {
+       "w": "Mavayya!",
+       "from": 131,
+       "to": 146
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_03.wav",
+     "from": 169,
+     "frames": 40,
+     "words": [
+      {
+       "w": "Thathayya,",
+       "from": 170,
+       "to": 181
+      },
+      {
+       "w": "give",
+       "from": 181,
+       "to": 195
+      },
+      {
+       "w": "me",
+       "from": 195,
+       "to": 198
+      },
+      {
+       "w": "the",
+       "from": 198,
+       "to": 202
+      },
+      {
+       "w": "phone.",
+       "from": 202,
+       "to": 209
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_04.wav",
+     "from": 216,
+     "frames": 152,
+     "words": [
+      {
+       "w": "It",
+       "from": 216,
+       "to": 220
+      },
+      {
+       "w": "says",
+       "from": 220,
+       "to": 227
+      },
+      {
+       "w": "your",
+       "from": 227,
+       "to": 234
+      },
+      {
+       "w": "average",
+       "from": 234,
+       "to": 245
+      },
+      {
+       "w": "sugar",
+       "from": 245,
+       "to": 253
+      },
+      {
+       "w": "over",
+       "from": 253,
+       "to": 260
+      },
+      {
+       "w": "the",
+       "from": 260,
+       "to": 266
+      },
+      {
+       "w": "PAST",
+       "from": 266,
+       "to": 273
+      },
+      {
+       "w": "2-3",
+       "from": 273,
+       "to": 278
+      },
+      {
+       "w": "months.",
+       "from": 278,
+       "to": 289
+      },
+      {
+       "w": "It's",
+       "from": 289,
+       "to": 305
+      },
+      {
+       "w": "a",
+       "from": 305,
+       "to": 308
+      },
+      {
+       "w": "test,",
+       "from": 308,
+       "to": 321
+      },
+      {
+       "w": "Thathayya.",
+       "from": 321,
+       "to": 344
+      },
+      {
+       "w": "Not",
+       "from": 344,
+       "to": 350
+      },
+      {
+       "w": "a",
+       "from": 350,
+       "to": 352
+      },
+      {
+       "w": "countdown.",
+       "from": 352,
+       "to": 368
+      }
+     ],
+     "cues": {
+      "1": 257
+     }
+    },
+    {
+     "who": "thatha",
+     "name": "Thathayya",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative10te/line_05.wav",
+     "from": 377,
+     "frames": 133,
+     "words": [
+      {
+       "w": "Then",
+       "from": 378,
+       "to": 385
+      },
+      {
+       "w": "what's",
+       "from": 385,
+       "to": 395
+      },
+      {
+       "w": "\"glycated",
+       "from": 395,
+       "to": 412
+      },
+      {
+       "w": "haemoglobin\"?",
+       "from": 412,
+       "to": 437
+      },
+      {
+       "w": "What's",
+       "from": 437,
+       "to": 457
+      },
+      {
+       "w": "\"shorter",
+       "from": 457,
+       "to": 479
+      },
+      {
+       "w": "life",
+       "from": 479,
+       "to": 485
+      },
+      {
+       "w": "expectancy\"?!",
+       "from": 485,
+       "to": 510
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_serial",
+   "data": {
+    "beats": [
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "who",
+      "n": 6
+     },
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "type",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "Tell it who's reading",
+     "title": "Tell it who's reading",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 532,
+   "frames": 409,
+   "lines": [
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_06.wav",
+     "from": 0,
+     "frames": 162,
+     "words": [
+      {
+       "w": "You",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "typed",
+       "from": 8,
+       "to": 25
+      },
+      {
+       "w": "just",
+       "from": 25,
+       "to": 35
+      },
+      {
+       "w": "3",
+       "from": 35,
+       "to": 38
+      },
+      {
+       "w": "words,",
+       "from": 38,
+       "to": 63
+      },
+      {
+       "w": "so",
+       "from": 63,
+       "to": 69
+      },
+      {
+       "w": "it",
+       "from": 69,
+       "to": 74
+      },
+      {
+       "w": "wrote",
+       "from": 74,
+       "to": 85
+      },
+      {
+       "w": "for",
+       "from": 85,
+       "to": 93
+      },
+      {
+       "w": "doctors.",
+       "from": 93,
+       "to": 118
+      },
+      {
+       "w": "Tell",
+       "from": 118,
+       "to": 128
+      },
+      {
+       "w": "it",
+       "from": 128,
+       "to": 133
+      },
+      {
+       "w": "who's",
+       "from": 133,
+       "to": 145
+      },
+      {
+       "w": "reading.",
+       "from": 145,
+       "to": 162
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_07.wav",
+     "from": 168,
+     "frames": 199,
+     "words": [
+      {
+       "w": "Before",
+       "from": 179,
+       "to": 197
+      },
+      {
+       "w": "the",
+       "from": 197,
+       "to": 202
+      },
+      {
+       "w": "doctor",
+       "from": 202,
+       "to": 212
+      },
+      {
+       "w": "visit,",
+       "from": 212,
+       "to": 231
+      },
+      {
+       "w": "type",
+       "from": 231,
+       "to": 238
+      },
+      {
+       "w": "this:",
+       "from": 238,
+       "to": 250
+      },
+      {
+       "w": "\"Explain",
+       "from": 250,
+       "to": 269
+      },
+      {
+       "w": "it",
+       "from": 269,
+       "to": 272
+      },
+      {
+       "w": "simply",
+       "from": 272,
+       "to": 278
+      },
+      {
+       "w": "to",
+       "from": 278,
+       "to": 280
+      },
+      {
+       "w": "my",
+       "from": 280,
+       "to": 283
+      },
+      {
+       "w": "grandfather.",
+       "from": 283,
+       "to": 298
+      },
+      {
+       "w": "Give",
+       "from": 298,
+       "to": 321
+      },
+      {
+       "w": "3",
+       "from": 321,
+       "to": 322
+      },
+      {
+       "w": "questions",
+       "from": 322,
+       "to": 336
+      },
+      {
+       "w": "to",
+       "from": 336,
+       "to": 339
+      },
+      {
+       "w": "ask",
+       "from": 339,
+       "to": 342
+      },
+      {
+       "w": "the",
+       "from": 342,
+       "to": 345
+      },
+      {
+       "w": "doctor.\"",
+       "from": 345,
+       "to": 363
+      }
+     ],
+     "cues": {
+      "1": 250
+     },
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_serial",
+   "data": {
+    "beats": [
+     {
+      "who": "aichat",
+      "shot": "phone",
+      "prop": "calm",
+      "n": 8
+     },
+     {
+      "who": "sravani",
+      "shot": "wide",
+      "prop": "test",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 941,
+   "frames": 491,
+   "lines": [
+    {
+     "who": "aichat",
+     "name": "AI chat",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_08.wav",
+     "from": 3,
+     "frames": 218,
+     "words": [
+      {
+       "w": "It's",
+       "from": 4,
+       "to": 13
+      },
+      {
+       "w": "like",
+       "from": 13,
+       "to": 22
+      },
+      {
+       "w": "a",
+       "from": 22,
+       "to": 25
+      },
+      {
+       "w": "report",
+       "from": 25,
+       "to": 41
+      },
+      {
+       "w": "card",
+       "from": 41,
+       "to": 50
+      },
+      {
+       "w": "for",
+       "from": 50,
+       "to": 66
+      },
+      {
+       "w": "sugar:",
+       "from": 66,
+       "to": 78
+      },
+      {
+       "w": "higher",
+       "from": 78,
+       "to": 91
+      },
+      {
+       "w": "than",
+       "from": 91,
+       "to": 100
+      },
+      {
+       "w": "ideal,",
+       "from": 100,
+       "to": 112
+      },
+      {
+       "w": "but",
+       "from": 112,
+       "to": 119
+      },
+      {
+       "w": "not",
+       "from": 119,
+       "to": 126
+      },
+      {
+       "w": "too",
+       "from": 126,
+       "to": 133
+      },
+      {
+       "w": "high.",
+       "from": 133,
+       "to": 152
+      },
+      {
+       "w": "Ask",
+       "from": 152,
+       "to": 157
+      },
+      {
+       "w": "the",
+       "from": 157,
+       "to": 163
+      },
+      {
+       "w": "doctor:",
+       "from": 163,
+       "to": 182
+      },
+      {
+       "w": "what",
+       "from": 182,
+       "to": 190
+      },
+      {
+       "w": "does",
+       "from": 190,
+       "to": 197
+      },
+      {
+       "w": "it",
+       "from": 197,
+       "to": 201
+      },
+      {
+       "w": "mean",
+       "from": 201,
+       "to": 208
+      },
+      {
+       "w": "for",
+       "from": 208,
+       "to": 214
+      },
+      {
+       "w": "him?",
+       "from": 214,
+       "to": 221
+      }
+     ],
+     "cues": {
+      "1": 152
+     }
+    },
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_09.wav",
+     "from": 232,
+     "frames": 215,
+     "words": [
+      {
+       "w": "I",
+       "from": 232,
+       "to": 236
+      },
+      {
+       "w": "tested",
+       "from": 236,
+       "to": 247
+      },
+      {
+       "w": "a",
+       "from": 247,
+       "to": 250
+      },
+      {
+       "w": "small",
+       "from": 250,
+       "to": 260
+      },
+      {
+       "w": "free",
+       "from": 260,
+       "to": 268
+      },
+      {
+       "w": "AI",
+       "from": 268,
+       "to": 273
+      },
+      {
+       "w": "offline",
+       "from": 273,
+       "to": 286
+      },
+      {
+       "w": "10",
+       "from": 286,
+       "to": 297
+      },
+      {
+       "w": "times.",
+       "from": 297,
+       "to": 308
+      },
+      {
+       "w": "3",
+       "from": 308,
+       "to": 312
+      },
+      {
+       "w": "words:",
+       "from": 312,
+       "to": 335
+      },
+      {
+       "w": "doctor-talk",
+       "from": 335,
+       "to": 355
+      },
+      {
+       "w": "every",
+       "from": 355,
+       "to": 371
+      },
+      {
+       "w": "time.",
+       "from": 371,
+       "to": 380
+      },
+      {
+       "w": "With",
+       "from": 380,
+       "to": 388
+      },
+      {
+       "w": "this",
+       "from": 388,
+       "to": 404
+      },
+      {
+       "w": "line...",
+       "from": 404,
+       "to": 417
+      },
+      {
+       "w": "zero.",
+       "from": 417,
+       "to": 447
+      }
+     ],
+     "cues": {
+      "1": 436
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_serial",
+   "data": {
+    "beats": [
+     {
+      "who": "kamala",
+      "shot": "kamala",
+      "prop": "rule1",
+      "n": 10
+     },
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "rule2",
+      "n": 11
+     },
+     {
+      "who": "thatha",
+      "shot": "thatha",
+      "prop": "alive",
+      "n": 12
+     },
+     {
+      "who": "sravani",
+      "shot": "sravani",
+      "prop": "laddus",
+      "n": 13
+     },
+     {
+      "who": "thatha",
+      "shot": "thatha",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "demo": {
+     "n": 10,
+     "plain_jargon": 10,
+     "line_jargon": 0,
+     "plain_questions": 0,
+     "line_questions": 10,
+     "plain_words": 190,
+     "line_words": 140
+    },
+    "yt": {
+     "chapter": "AI explains, the doctor decides",
+     "title": "AI explains, the doctor decides",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1432,
+   "frames": 367,
+   "lines": [
+    {
+     "who": "kamala",
+     "name": "Kamala",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative10te/line_10.wav",
+     "from": 4,
+     "frames": 54,
+     "words": [
+      {
+       "w": "So",
+       "from": 5,
+       "to": 12
+      },
+      {
+       "w": "it",
+       "from": 12,
+       "to": 25
+      },
+      {
+       "w": "explains...",
+       "from": 25,
+       "to": 52
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_11.wav",
+     "from": 60,
+     "frames": 52,
+     "words": [
+      {
+       "w": "...what",
+       "from": 62,
+       "to": 71
+      },
+      {
+       "w": "to",
+       "from": 71,
+       "to": 75
+      },
+      {
+       "w": "do,",
+       "from": 75,
+       "to": 80
+      },
+      {
+       "w": "the",
+       "from": 80,
+       "to": 93
+      },
+      {
+       "w": "doctor",
+       "from": 93,
+       "to": 102
+      },
+      {
+       "w": "decides.",
+       "from": 102,
+       "to": 113
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "thatha",
+     "name": "Thathayya",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative10te/line_12.wav",
+     "from": 123,
+     "frames": 49,
+     "words": [
+      {
+       "w": "So...",
+       "from": 125,
+       "to": 147
+      },
+      {
+       "w": "I'll",
+       "from": 147,
+       "to": 159
+      },
+      {
+       "w": "live?",
+       "from": 159,
+       "to": 172
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sravani",
+     "name": "Sravani",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative10te/line_13.wav",
+     "from": 179,
+     "frames": 64,
+     "words": [
+      {
+       "w": "You'll",
+       "from": 180,
+       "to": 192
+      },
+      {
+       "w": "live.",
+       "from": 192,
+       "to": 211
+      },
+      {
+       "w": "Your",
+       "from": 211,
+       "to": 219
+      },
+      {
+       "w": "laddus",
+       "from": 219,
+       "to": 231
+      },
+      {
+       "w": "won't.",
+       "from": 231,
+       "to": 242
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "thatha",
+     "name": "Thathayya",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative10te/line_14.wav",
+     "from": 275,
+     "frames": 76,
+     "words": [
+      {
+       "w": "One",
+       "from": 277,
+       "to": 282
+      },
+      {
+       "w": "small",
+       "from": 282,
+       "to": 290
+      },
+      {
+       "w": "question...",
+       "from": 290,
+       "to": 329
+      },
+      {
+       "w": "about",
+       "from": 329,
+       "to": 338
+      },
+      {
+       "w": "laddus.",
+       "from": 338,
+       "to": 351
+      }
+     ],
+     "cues": {
+      "1": 329
+     }
+    }
+   ]
+  }
+ ]
+}

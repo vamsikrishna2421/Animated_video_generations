@@ -2,8 +2,8 @@
 # Fish: Thathayya, Kamala and Sravani = Fish copies of Parler-made reference clips (`refs` makes them once, skit 02's way,
 # with Parler's English speakers); the AI chat app = the channel narrator (EP29's reference), through the light phone
 # sound and judged after it. Telugu on Parler: Thathayya = Kiran (old, shaky, dramatic), Kamala = Lalitha (loud, anxious),
-# Sravani = Lalitha (young, dry), the app = Lalitha (calm) through the phone sound. Line 7 reads the English card in both
-# reels (the Telugu reel's starts in Telugu). Every take is levelled per sentence (EP36's `level`).
+# Sravani = Lalitha (young, dry), the app = Lalitha (calm) through the phone sound. Line 7 reads the English card in the English
+# reel; the Telugu reel says it in Telugu while the card shows the English). Every take is levelled per sentence (EP36's `level`).
 # MUST lists words a take has to contain (a missed word costs 1.5).
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/creative10/voice.py refs
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/creative10/voice.py en|te [--keep] [line numbers ...]
@@ -57,28 +57,29 @@ VOICE_TE = {
 APP = {"aichat"}   # the app on his phone: the light phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu: Whisper
 # writes Telugu in Devanagari (Hindi mode); the Telugu groups start loose and are tightened from the first takes.
+TYPE_TE = ("टाइप", "टैप", "type", "ताइप", "ताईप")
+DOC_TE = ("डॉक्टर", "डाक्टर", "doctor", "डोक्टर", "दोक्तर", "डोक्तर", "दाक्तर", "डॉक्टर्", "दोक्टर", "दाक्टर")   # Whisper often writes "दोक्तर"
 LADDU = ("laddus", "laddu", "ladoos", "ladus", "laddoos", "lado", "ladoo", "laddoo", "ladu", "lados", "latus")
 MUST = {"en": {1: [("ai",), ("two", "2"), ("three", "3"), ("months", "month")], 2: [("three", "3"), ("months", "month")],
                3: [("give",), ("that",)], 4: [("average",), ("past",), ("months", "month"), ("test",), ("countdown", "count")],
                5: [("haemoglobin", "hemoglobin"), ("shorter",), ("life",), ("expectancy",)],
                6: [("typed", "type"), ("three", "3"), ("doctors", "doctor"), ("reading",)],
                7: [("doctor",), ("type",), ("explain",), ("seventy", "72"), ("grandfather",), ("simple",), ("questions", "question")],
-               8: [("report",), ("card",), ("sugar",), ("higher",), ("ideal",), ("doctor",), ("health",)],
+               8: [("report",), ("card",), ("diabetes",), ("higher",), ("ideal",), ("doctor",), ("health",)],
                9: [("tested", "test"), ("ten", "10"), ("three", "3"), ("doctor",), ("zero", "0")],
                10: [("ai",), ("explains", "explain")], 11: [("doctor",), ("decides", "decide")], 12: [("dying", "die")],
-               13: [("live",), LADDU], 14: [("question",), LADDU]},
+               13: [("live",), ("will",), LADDU], 14: [("question",), LADDU]},
         "te": {1: [("नेल", "नेला", "नेलले", "नेलल", "नेले", "नलल", "नलले"), ("टाइम", "टैम", "time", "टेम", "ताईम", "ताइम", "ताईं", "ताइं")],
                2: [("नेल", "नेला", "नेलला", "नेलल")], 3: [("फोन", "फ़ोन", "phone", "फो")],
                4: [("टेस्ट", "टेस", "test", "तेस्ट"), ("काउंट", "कौंट", "count", "कांट", "काउन्ट", "काूंट", "काूं", "कांड", "डाउन", "down")],
-               6: [("टाइप", "टैप", "type", "ताइप"), ("डॉक्टर", "डाक्टर", "doctor", "डोक्टर")],
-               7: [("explain", "एक्सप्लेन", "एक्सप्लेइन"), ("grandfather", "ग्रैंडफादर", "ग्रांडफादर", "ग्रेंडफादर", "फादर"),
-                   ("simple", "सिंपल", "सिम्पल"), ("doctor", "डॉक्टर", "डाक्टर")],
-               8: [("रिपोर्ट", "रिपोर्", "report", "रेपोर्ट"), ("डॉक्टर", "डाक्टर", "doctor", "डोक्टर")],
-               9: [("टेस्ट", "टेस", "test", "तेस्ट"), ("सुन्ना", "सुन्न", "सुना", "0"), ("डॉक्टर", "डाक्टर", "doctor", "डोक्टर")],
-               11: [("डॉक्टर", "डाक्टर", "doctor", "डोक्टर")], 13: [("लड्डू", "लड्डु", "लडू", "लड्ड", "लड्")], 14: [("लड्डू", "लड्डु", "लडू", "लड्ड", "लड्")]}}
+               6: [TYPE_TE, DOC_TE],
+               7: [TYPE_TE, ("simple", "सिंपल", "सिम्पल", "सिंपुल", "सिम्पुल", "सिंपूल"), DOC_TE, ("प्रश्न", "प्रश्", "प्रस्न", "प्रशन", "प्रस्ना", "प्रश्नल", "प्रस्नल")],
+               8: [("रिपोर्ट", "रिपोर्", "report", "रेपोर्ट", "रिपोट"), DOC_TE],
+               9: [("टेस्ट", "टेस", "test", "तेस्ट"), ("सुन्ना", "सुन्न", "सुना", "0"), DOC_TE],
+               10: [("एक्सप्ले", "explain", "एक्सप्लें", "एक्सप्लै", "एक्सप्लेन", "एक्स्पलाईं", "एक्स्प्ले", "एक्श्प्ला", "एकस्प्ले"), ("इदि", "इदी", "इधि", "इदे")], 11: [DOC_TE, ("चेप्त", "चप्त", "चेप्ता", "चेप्तार", "चेप्प")], 13: [("लड्डू", "लड्डु", "लडू", "लड्ड", "लड्")], 14: [("लड्डू", "लड्डु", "लडू", "लड्ड", "लड्")]}}
 # lines whose judge text needs digits (Whisper writes "72", "10")
 JUDGE_TEXT = {2: "Three months?! Mavayya!", 3: "Thathayya. Give me that.",
-              4: "Average blood sugar over the past two to three months. It's a test, Thathayya. Not a countdown.",
+              4: "Average blood sugar over the past two to three months. It's a test, Thathayya. Not a countdown.", 13: "You will live. Your laddoos won't.",
               7: "Before the doctor visit, type this: Explain this to my 72-year-old grandfather in simple words. Then give 3 questions to ask his doctor.",
               9: "I tested a small free AI 10 times. 3 words: doctor-talk every time. With the line: 0."}
 TELUGU = re.compile(r"[ఀ-౿]")

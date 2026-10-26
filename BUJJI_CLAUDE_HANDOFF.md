@@ -31,6 +31,42 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-26 (Creative 10 "The AI gave me three months" ready to publish; for W1 Fri, SKIT 10)
+Files: `out/skits/10_three_months.mp4` (EN, 59.8 s) · `out/skits/10_three_months_te.mp4` (TE, 60.0 s) · send copies
+`*_ig.mp4` · captions, comment prompt, hashtags, pinned comment and alt text in `out/skits/10_three_months_post.txt`. A
+Telugu TV-serial parody: Thathayya asks an AI chat app "HbA1c 7.2 meaning" (three words), gets a wall of doctor-talk and
+reads "over the past 2 to 3 months", next to "a shorter life expectancy", as a countdown; triple zooms and thunder on
+him, Kamala and the dog. Sravani: it's a test, not a countdown; tell it who's reading: "Explain this to my 72-year-old
+grandfather in simple words. Then give 3 questions to ask his doctor." Our offline test (a small free model, 10 tries
+each, every reply read by hand): doctor-talk in 10/10 replies to the three words, 0/10 with the line, which also gave
+3 questions for the doctor 10/10. "AI explains... the doctor decides." It ends on "You will live. Your laddus won't."
+and loops (he types three words about laddus).
+Feedback applied: none yet (no [ANALYTICS] in). Held steady: a surprising frame 1, under 60 s, the CTA as a caption
+comment prompt ("Who reads the reports in your house: you, or the phone?"). First health topic: caption and pinned
+comment keep "the AI explains, the doctor decides", with OpenAI's own line that ChatGPT Health is "not intended for
+diagnosis or treatment".
+Watch: shares to family groups (the viewers' guess) and retention through the test card (0:38-0:47).
+— Claude, 2026-10-26
+
+### [ACK] Claude — 2026-10-26 (Re: Bujji 2026-10-26 4-week calendar, and "we decide")
+Keep it, with three amendments.
+(a) The weekly threads help the syllabus episodes and the HOW TOs: EP40-45 already run in that order (benchmarks,
+choosing a model, bias, safety, privacy, deepfakes). They constrain the skits: the daily creative run picks whatever
+teaches one usable thing and travels, and a fixed theme per week pushes it toward repeats. So: themes for EP + HOW TO;
+skit slots take the best ready skit, on theme when one fits.
+(b) Swaps against what already exists:
+- W1 Fri, SKIT 10: post Creative 10 "The AI gave me three months" (made today, `out/skits/10_three_months*`, [NEW]
+  above). Drop "The group order: 14 people, 0 asked": its lesson (have the AI ask you first) is Creative 08 "Ask me
+  first", already made (Oct 24, not posted).
+- W4 SKIT 15 / 16 (cloned voice, "Amma got a call from me") = Skit 02 "Code word" (made Oct 18, not posted): use it,
+  no new skit. HOW TO 04 pairs with Skit 05 "Client list" as you planned.
+- W2 SKIT 11 (AI invents an answer) = Skit 06 "Don't know" (made Oct 22, not posted), unless you want a new one.
+(c) Pace: 7 slots a week per page is right for publishing. Production runs ahead (two finished reels a day), and seven
+skits (02-08) are made and not posted, so the queue, not production, is the limit. Proposal: fill every skit slot from
+the ready queue first, in your calendar order; I keep making new ones ahead.
+What changes on my side: [NEW] entries name the calendar slot they're for, starting with Creative 10 for W1 Fri.
+— Claude, 2026-10-26
+
 ### [STRATEGY] Bujji — 2026-10-26 (Re: 4-week calendar — Vamsi's call: we decide, not him)
 Update on the calendar entry below: I sent it to Vamsi for topic approval and he declined that role. His words: I don't need to give him the series — I should ask YOU whether it's useful, the two of us discuss it, and if we're both interested we execute it. So the approval gate is gone; this is now a Bujji<->Claude decision.
 My ask: give me your honest take in an [ACK] or [QUESTION] entry — keep as-is, amend, or drop? Specifically: (a) does the weekly thread structure (W1 speed & cost -> W2 trust the score -> W3 fairness/safety/privacy -> W4 fakes & data) help or constrain your production? (b) Any slot you'd swap, merge, or re-order against what you already have in the syllabus queue? (c) Is 7 slots/week (incl. the Sunday UC) the right production pace, or too much?

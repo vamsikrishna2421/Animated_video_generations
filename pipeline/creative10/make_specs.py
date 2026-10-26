@@ -32,50 +32,59 @@ LINES = {
         "నువ్వు మూడు మాటలే టైప్ చేశావ్, అందుకే డాక్టర్ల కోసం రాసింది. ఎవరు చదువుతున్నారో చెప్పాలి."),
     7: ("sravani", "sravani", "type", "Before the doctor visit, type this: [1] Explain this to my seventy-two-year-old grandfather in simple words. "
         "Then give three questions to ask his doctor.",
-        "డాక్టర్ దగ్గరికి వెళ్ళే ముందు, ఇలా టైప్ చేయాలి: [1] Explain this to my seventy-two-year-old grandfather in simple words. "
-        "Then give three questions to ask his doctor."),   # Telugu too: she reads the English card
-    8: ("aichat", "phone", "calm", "It's like a report card for his sugar: higher than ideal, but not extremely high. [1] Ask his doctor: what does it mean for his health?",
-        "ఇది షుగర్ కి రిపోర్ట్ కార్డ్ లాంటిది. ఉండాల్సిన దానికంటే ఎక్కువ, కానీ మరీ ఎక్కువ కాదు. [1] డాక్టర్ ని అడగండి: దీని అర్థం ఆయన ఆరోగ్యానికి ఏంటి?"),
+        "డాక్టర్ దగ్గరికి వెళ్ళే ముందు, ఇలా టైప్ చేయాలి: [1] మా తాతయ్యకి సింపుల్ గా చెప్పు, డాక్టర్ కి మూడు ప్రశ్నలు ఇవ్వు."),   # Telugu: she says it in Telugu, the card holds the English line to
+        # copy (Parler babbled the long English sentence in Lalitha's voice)
+    8: ("aichat", "phone", "calm", "It's like a report card for his diabetes: higher than ideal, but not extremely high. [1] Ask his doctor: what does it mean for his health?",
+        "ఇది షుగర్ కి రిపోర్ట్ కార్డ్ లాంటిది. ఉండాల్సిన దానికంటే ఎక్కువ, కానీ మరీ ఎక్కువ కాదు. [1] డాక్టర్ ని అడగండి: దీని అర్థం ఆయనకి ఏంటి?"),
     9: ("sravani", "wide", "test", "I tested a small free AI ten times. Three words: doctor-talk every time. With the line: [1] zero.",
         "ఆఫ్లైన్ లో ఒక చిన్న ఫ్రీ ఏ ఐ ని పది సార్లు టెస్ట్ చేశా. మూడు మాటలకి: ప్రతిసారీ డాక్టర్ భాష. ఈ లైన్ తో: [1] సున్నా."),   # the card's
         # third row (3 questions for the doctor, 10/10) is read, not said: the first cut ran 64 s
-    10: ("kamala", "kamala", "rule1", "So the AI explains...", "అంటే, ఏ ఐ వివరిస్తుంది..."),
-    11: ("sravani", "sravani", "rule2", "...and the doctor decides.", "డాక్టర్ నిర్ణయిస్తారు."),
+    10: ("kamala", "kamala", "rule1", "So the AI explains...", "అంటే, ఇది ఎక్స్ప్లెయిన్ చేస్తుంది..."),   # render review: "వివరిస్తుంది...
+    11: ("sravani", "sravani", "rule2", "...and the doctor decides.", "ఏం చేయాలో డాక్టర్ చెప్తారు."),   # నిర్ణయిస్తారు" was newsreader Telugu,
+    # and Parler said "డిసైడ్" as "dish";
+    # "ఏఐ" stuttered in Kamala's voice ("yaa yaa yaa"): "ఇది" (she points at the phone; the chip says AI)
     12: ("thatha", "thatha", "alive", "So... I'm not dying?", "అంటే... నేను బతుకుతానా?"),
     13: ("sravani", "sravani", "laddus", "You'll live. Your laddus won't.", "నువ్వు బతుకుతావ్. నీ లడ్డూలే బతకవు."),
     14: ("thatha", "thatha", "loop", "Just one small question... [1] about laddus.", "ఒక్క చిన్న ప్రశ్న... [1] లడ్డూల గురించి."),
 }
 TTS_EN = {2: "Three months?! Maa-vayya!", 3: "Tatayya. Give me that.",   # the names as said at home ("Taata-yya" came out "Tata, yeah")
           4: "\"Average blood sugar over the past two to three months.\" It's a test, Tatayya. Not a countdown.",
-          13: "You'll live. Your laddoos won't.", 14: "Just one small question... about laddoos."}   # "laddus" was heard "ladders"
+          13: "You will live. Your laddoos won't.", 14: "Just one small question... about laddoos."}   # "laddus" was heard "ladders";
+          # "You'll live" was heard "You live"
 # captions: English in both reels (the Telugu reel's captions follow the Telugu voice through the cues)
-SHOW = {1: "The AI gave me 2 to 3 months!", 4: "\"Average blood sugar over the [1] PAST 2 to 3 months.\" It's a test, Thathayya. Not a countdown.",
+SHOW = {1: "The AI gave me 2 to 3 months!", 4: "\"Average blood sugar over the PAST 2 to 3 months.\" It's a test, Thathayya. Not a countdown.",
         7: "Before the doctor visit, type this:",
         9: "I tested a small free AI 10 times. 3 words: doctor-talk every time. With the line... [1] zero."}
 SHOW_TE = {1: "The AI gave me only 2-3 months!", 2: "Three months?! Mavayya!", 3: "Thathayya, give me the phone.",
-           4: "It says your average sugar over the [1] PAST 2-3 months. It's a test, Thathayya, not a countdown.",
+           4: "It says your average sugar over the PAST 2-3 months. It's a test, Thathayya. Not a countdown.",
            5: "Then what's \"glycated haemoglobin\"? What's \"shorter life expectancy\"?!",
            6: "You typed just 3 words, so it wrote for doctors. Tell it who's reading.",
-           7: "Before the doctor visit, type this:",
-           8: "It's like a report card for sugar: higher than ideal, but not too high. [1] Ask the doctor: what does it mean for his health?",
+           7: "Before the doctor visit, type this: [1] \"Explain it simply to my grandfather. Give 3 questions to ask the doctor.\"",
+           8: "It's like a report card for sugar: higher than ideal, but not too high. [1] Ask the doctor: what does it mean for him?",
            9: "I tested a small free AI offline 10 times. 3 words: doctor-talk every time. With this line... [1] zero.",
-           10: "So the AI explains...", 11: "...the doctor decides.", 12: "So... I'll live?", 13: "You'll live. Your laddus won't.",
+           10: "So it explains...", 11: "...what to do, the doctor decides.", 12: "So... I'll live?", 13: "You'll live. Your laddus won't.",
            14: "One small question... [1] about laddus."}
-NOCAP = set()
+NOCAP = {7}   # the TYPE THIS card carries line 7 (render review: read the card, not a caption under it)
 # a: the panic and the misread; b: the line, the answer, our test; c: the rule, the laughs, the loop
-SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.6, "drop_pre": [[2, 0.05, 0.6]], "tail": 0.1}),   # the serial bed stops as Sravani walks in
-          ("s_b", (6, 7, 8, 9), {"lift": 0.9, "pre": 0.3, "boost": 1.5, "drop_at": [[3, "1", 0.4]], "tail": 0.05}),   # margins 8-12 dB   # a drop before "zero"
-          ("s_c", (10, 11, 12, 13, 14), {"lift": 0.8, "pre": 0.25, "outro": True, "boost": 1.55, "rise": 1.4, "tail": 0.1})]
-GAP = {1: 0.15, 2: 0.95, 3: 0.2, 4: 0.3, 5: 0.25, 7: 0.5, 8: 0.35, 9: 1.4, 10: 0.05, 11: 0.35, 12: 0.2, 13: 1.05}   # 2: Tommy's zoom;
-                                                                                         # 13: the laddu zoom; 9: the card holds
+SCENES = [("s_a", (1, 2, 3, 4, 5), {"pre": 0.3, "boost": 1.6, "drop_pre": [[2, 0.05, 0.6]], "tail": 0.05}),   # the hits land before
+          # the first line (render review: they masked it); the serial bed stops as Sravani walks in
+          ("s_b", (6, 7), {"pre": 0.0, "boost": 1.4, "swell": [1, "1", 1.3], "tail": 0.05}),   # no lift: its hit sat on line 6's first words   # the bed swells into the card
+          ("s_c", (8, 9), {"lift": 0.5, "pre": 0.1, "boost": 1.5, "drop_at": [[1, "1", 0.4]], "tail": 0.05}),   # a drop before "zero"
+          ("s_d", (10, 11, 12, 13, 14), {"lift": 0.4, "pre": 0.15, "outro": True, "boost": 1.7, "rise": 1.2, "drop_pre": [[4, 0.9, 0.4]],
+                                          "tail": 0.05})]   # the last line sat 5 dB over the bed with rise 1.4 and the end ramp;
+# drop_pre: 0.4 s of no bed right after "Your laddus won't." before the laddu thunder
+GAP = {1: 0.15, 2: 0.85, 3: 0.2, 4: 0.3, 5: 0.25, 7: 0.6, 8: 0.35, 9: 2.0, 10: 0.05, 11: 0.35, 12: 0.2, 13: 1.25}   # 2: Tommy's
+# zoom; 9: the test card holds 3 s on its payoff (render review); 13: 0.4 s of silence, then the laddu zoom
+GAP_TE = {2: 0.75, 7: 1.15, 9: 1.35, 13: 1.1}   # 7: the card holds about 7 s while she says it in Telugu
 GAIN = {"thatha": 0.3, "kamala": 0.3, "sravani": 0.3, "aichat": 0.0}
-GAIN_LINE = {1: 0.8, 2: 0.8}   # the serial yells
-GAIN_TE = {}
+GAIN_LINE = {1: 0.8, 2: 0.8, 10: 2.0, 11: 2.0, 12: 2.0, 13: 2.0, 14: 2.0}   # the serial yells; the last scene a step up with its bed
+# (render review 1: the quarters were flat, -16.5/-16.3/-17.1/-16.8 dB by energy)
+GAIN_TE = {14: 0.6}
 PAUSES = {"en": {9: {"1": 0.35}}, "te": {9: {"1": 0.3}}}   # a beat before "zero"
-LINE_TEMPO = {"en": {4: 1.18, 7: 1.1, 8: 1.2, 9: 1.15}, "te": {7: 1.0, 8: 1.15}}   # the line to copy near its own speed
+LINE_TEMPO = {"en": {4: 1.25, 7: 1.22, 8: 1.24, 9: 1.15}, "te": {4: 1.15, 5: 1.18, 6: 1.18, 7: 1.12, 8: 1.25, 9: 1.2}}   # the first Telugu cut ran 64 s
 LINE_MAXGAP = {"en": {}, "te": {}}
 TEMPO = {"en": 1.12, "te": 1.14}
-YT = {"s_a": "The AI gave me three months", "s_b": "Tell it who's reading", "s_c": "AI explains, the doctor decides"}
+YT = {"s_a": "The AI gave me three months", "s_b": "Tell it who's reading", "s_c": "Our test", "s_d": "AI explains, the doctor decides"}
 MARK = re.compile(r"\[\d+\]\s*")
 
 
@@ -98,9 +107,10 @@ def spec(lang):
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.15, "music": "lofi", "musicVol": [0.38, 0.85], "musicFade": 0.05,
          "endPad": 0.45, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]], "musicPad": True, "hardCuts": True,
          "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": TEMPO[lang], "parler_lang": lang, "captionTop": 1500,
-         "musicGapGain": 3.0, "musicEndRamp": [0.9, 4.0], "musicDuckRamp": 9}
+         "musicGapGain": 3.0, "musicEndRamp": [0.95, 3.0], "musicDuckRamp": 9}
     if te:
         s["handle"] = "@ai_maastaaru_telugu"
+        s["musicEndRamp"] = [0.985, 2.0]   # the Telugu last line ends later: the ramp sat on it (7 dB over the bed)
     demo = demo_numbers()
     scenes = []
     last = max(LINES)
@@ -110,7 +120,7 @@ def spec(lang):
             who, shot, prop, en, tel = LINES[n]
             show = SHOW_TE.get(n, MARK.sub("", en)) if te else SHOW.get(n, en)
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else en, "show": show,
-                  "maxgap": 0.3 if te else 0.25, "gap": 0.05 if n == last else GAP.get(n, 0.2 if te else 0.16)}
+                  "maxgap": 0.3 if te else 0.25, "gap": 0.05 if n == last else (GAP_TE.get(n) if te and n in GAP_TE else GAP.get(n, 0.2 if te else 0.16))}
             if not te and n in TTS_EN:
                 ln["tts"] = TTS_EN[n]
             if n in PAUSES[lang]:
@@ -129,6 +139,8 @@ def spec(lang):
         data = {"beats": beats, "captionTop": 1500, "demo": demo, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
         if te:
             data["handle"] = "@ai_maastaaru_telugu"
+        if te and scid == "s_d":   # Telugu: no swell under "అంటే, ఇది..." (the mix's speech-to-text heard "yeh yeh yeh" there)
+            flags = {k: v for k, v in flags.items() if k != "lift"}
         scenes.append({"id": scid, "type": "sk_serial", "tail": flags.get("tail", 0.2), **{k: v for k, v in flags.items() if k != "tail"},
                        "data": data, "lines": lines})
     s["scenes"] = scenes
