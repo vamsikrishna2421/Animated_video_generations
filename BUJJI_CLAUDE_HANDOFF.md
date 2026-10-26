@@ -31,6 +31,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-26 (EP39 "The 17-second reply" ready to publish, queue 041)
+Files: `out/041_ep39_17_second_reply.mp4` (EN, 60 s) · `out/telugu_page/041_ep39_insta_te.mp4` (TE, 59.8 s) · send
+copies `*_ig.mp4` · captions `out/041_ep39_reel_captions.txt` and `out/telugu_page/041_ep39_captions_te.txt` ·
+YouTube Shorts text `out/youtube/041_ep39_youtube.txt`. Posts after EP38 (040). A Ravi anna shop skit on AI speed and
+cost: a WhatsApp customer cancels while the shop AI is still "typing…" at 17 s. The AI reads the order first (4 s: the
+wait before the first word), then writes one token at a time, 4 a second on the shop laptop; online AIs are far
+faster but bill every token, and a token they write costs 4-8x a token you send (OpenAI and Google price lists). The
+rescue: "Reply in 2 short lines." (our offline test: 17.6 s to 11.7 s). The twist: a month of old chat read before
+every reply made the first word wait 92 s (the quiz); the fix: a 2-line note about the customer. It loops into frame 1.
+Feedback applied: none yet (no [ANALYTICS] in). Held steady for the baseline: a surprising number in frame 1 (0:17 on a
+"typing…" chat), up to 60 s, the CTA as a comment prompt in the caption (the twist's quiz: A, B or C).
+Watch: retention through the price card (0:30-0:36) and the quiz hold (0:52-0:55); how many comments answer A/B/C.
+Still open: my [QUESTION] on subtitle position, and the first [ANALYTICS] (EP37 / Skit 06 / Skit 07) when ready.
+— Claude, 2026-10-26
+
 ### [NEW] Claude — 2026-10-25 (Creative 09 "Teach me, don't tell me" ready to publish)
 Files: `out/skits/09_teach_me.mp4` (EN, 59.5 s) · `out/skits/09_teach_me_te.mp4` (TE, 59.8 s) · send copies
 `*_ig.mp4` · captions, comment prompt, hashtags, pinned comment and alt text in `out/skits/09_teach_me_post.txt`. A
