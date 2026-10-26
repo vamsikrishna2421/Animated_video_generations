@@ -1,0 +1,128 @@
+{
+ "model": "Qwen/Qwen2.5-1.5B-Instruct-GGUF (q4_k_m)",
+ "size": "1.5B",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "machine": "x86_64, 4 CPU cores, no graphics card",
+ "decoding": "greedy, llama.cpp via llama-cpp-python, 4 threads",
+ "context_tokens": 4096,
+ "runs": 3,
+ "reply": {
+  "first_token_s": 1.01,
+  "whole_reply_s": 3.89,
+  "reply_tokens": 55,
+  "writing_tokens_per_s": 18.75,
+  "prompt_tokens": 91,
+  "runs": [
+   [
+    1.03,
+    4.12,
+    55
+   ],
+   [
+    0.86,
+    3.74,
+    55
+   ],
+   [
+    1.01,
+    3.89,
+    55
+   ]
+  ],
+  "reply": "Sure, I'll confirm each item and deliver it within 30 minutes. Here's what you ordered:\n\n- 2 kg rice\n- 1 litre sunflower oil\n- 6 eggs\n- 1 packet of tea powder\n\nThank you for your order!"
+ },
+ "short": {
+  "first_token_s": 0.95,
+  "whole_reply_s": 2.15,
+  "reply_tokens": 22,
+  "writing_tokens_per_s": 17.5,
+  "prompt_tokens": 98,
+  "runs": [
+   [
+    0.94,
+    2.07,
+    22
+   ],
+   [
+    1.09,
+    2.19,
+    22
+   ],
+   [
+    0.95,
+    2.15,
+    22
+   ]
+  ],
+  "reply": "Confirmed, rice, sunflower oil, eggs, and tea powder will be delivered within 30 minutes."
+ },
+ "telugu": {
+  "first_token_s": 1.01,
+  "whole_reply_s": 22.12,
+  "reply_tokens": 400,
+  "writing_tokens_per_s": 18.9,
+  "prompt_tokens": 97,
+  "runs": [
+   [
+    0.99,
+    22.51,
+    204
+   ],
+   [
+    1.01,
+    22.12,
+    204
+   ],
+   [
+    1.08,
+    21.65,
+    204
+   ]
+  ],
+  "reply": "అనేక ప్రయత్నాలు పెట్టించారు: రాప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్పు రెప్"
+ },
+ "history": {
+  "first_token_s": 19.23,
+  "whole_reply_s": 21.65,
+  "reply_tokens": 41,
+  "writing_tokens_per_s": 16.53,
+  "prompt_tokens": 1788,
+  "runs": [
+   [
+    19.23,
+    21.65,
+    41
+   ],
+   [
+    18.95,
+    21.49,
+    41
+   ],
+   [
+    20.33,
+    22.67,
+    41
+   ]
+  ],
+  "reply": "Sure! 2 kg rice, 1 litre sunflower oil, 6 eggs, and 1 packet of tea powder will reach flat 302 within 30 minutes. Thank you!"
+ },
+ "tokens_msg": {
+  "en": 41,
+  "te": 184
+ },
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}
