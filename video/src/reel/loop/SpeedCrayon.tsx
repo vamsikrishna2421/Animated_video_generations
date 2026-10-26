@@ -56,7 +56,7 @@ const stopwatch = (c: Ctx, x: number, y: number, R: number, t: number, r: () => 
   for (let q = 0; q < 12; q++) { const a = (q / 12) * Math.PI * 2; c.fillStyle = INK; c.fillRect(Math.sin(a) * R * 0.74 - 3, -Math.cos(a) * R * 0.74 - 3, 6, 6); }
   const a = ((t % 60) / 60) * Math.PI * 2;
   stroke(c, [[0, 0], [Math.sin(a) * R * 0.7, -Math.cos(a) * R * 0.7]], RED, Math.max(5, R * 0.06), r, { passes: 1 });
-  const m = Math.floor(t / 60), sec = Math.floor(t % 60);
+  const tt = Math.floor(t + 0.2), m = Math.floor(tt / 60), sec = tt % 60;   // 91.83 reads 1:32, 17.62 reads 0:17
   c.font = SANS(Math.round(R * 0.5)); c.fillStyle = INK; c.textAlign = "center";
   c.fillText(`${m}:${String(sec).padStart(2, "0")}`, 0, R * 0.5);
   c.restore();
@@ -98,24 +98,24 @@ const timeBar = (c: Ctx, y: number, read: number, write: number, scale: number, 
 // the reply as token chips (screen space); `n` chips shown; `hl` 0..1 rings "sun|flower" and "3|0|2"
 const tokenChips = (c: Ctx, y0: number, n: number, hl: number, r: () => number) => {
   let x = 100, y = y0;
-  const fs = 44, rowH = 92, spots: Record<string, [number, number, number, number][]> = { sun: [], num: [] };
+  const fs = 42, rowH = 82, spots: Record<string, [number, number, number, number][]> = { sun: [], num: [] };
   c.font = SANS(fs, 600);
   TOKENS.forEach((t, i) => {
     const brk = t.includes("↵"), txt = t.replace(/^ /, "");
     const w = Math.max(30, c.measureText(txt).width) + 22 + (t.startsWith(" ") ? 10 : 0);
     if (x + w > 950) { x = 100; y += rowH; }
     if (i < n) {
-      c.fillStyle = CHIP[i % CHIP.length]; rrect(c, x, y, w, 72, 14); c.fill();
-      c.fillStyle = INK; c.textAlign = "left"; c.fillText(txt, x + 11 + (t.startsWith(" ") ? 10 : 0), y + 52);
+      c.fillStyle = CHIP[i % CHIP.length]; rrect(c, x, y, w, 66, 14); c.fill();
+      c.fillStyle = INK; c.textAlign = "left"; c.fillText(txt, x + 11 + (t.startsWith(" ") ? 10 : 0), y + 48);
     }
-    if (i === 19 || i === 20) spots.sun.push([x, y, w, 72]);
-    if (i >= 44 && i <= 46) spots.num.push([x, y, w, 72]);
+    if (i === 19 || i === 20) spots.sun.push([x, y, w, 66]);
+    if (i >= 44 && i <= 46) spots.num.push([x, y, w, 66]);
     x += w + 8;
     if (brk) { x = 100; y += rowH; }
   });
   if (hl > 0) Object.values(spots).forEach((sp) => {
     if (!sp.length) return;
-    const xa = sp[0][0] - 10, xb = sp[sp.length - 1][0] + sp[sp.length - 1][2] + 10, ya = sp[0][1] + 36;
+    const xa = sp[0][0] - 10, xb = sp[sp.length - 1][0] + sp[sp.length - 1][2] + 10, ya = sp[0][1] + 33;
     stroke(c, circlePts((xa + xb) / 2, ya, (xb - xa) / 2 + 14, 58), RED, 7, r, { passes: 2, alpha: clamp(hl * 2) });
   });
   return y + rowH;
@@ -141,7 +141,7 @@ const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: n
   if (t >= 0 && q >= 1) {
     const pop = 1 + 0.25 * (1 - clamp((t % 24) / 6));
     c.save(); c.translate(0, 470); c.scale(pop, pop);
-    c.beginPath(); c.arc(0, 0, 58, 0, 7); c.fillStyle = q === 1 ? COL.red : INK; c.fill();
+    c.beginPath(); c.arc(0, 0, 58, 0, 7); c.fillStyle = q === 1 ? COL.red : "#2563eb"; c.fill();
     c.font = SANS(78); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(q), 0, 28); c.restore();
   }
   c.restore();
@@ -271,11 +271,11 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           panel(c, W, H, "#1e293b", "THE REPLY, ONE TOKEN AT A TIME");
           const c1 = cu(1, 0.5);
           const shown = Math.min(TOKENS.length, Math.floor(TOKENS.length * seg(f, ln.from + 2, ln.from + ln.frames * 0.8)));
-          const yEnd = tokenChips(c, 400, shown, seg(f, c1 + 2, c1 + 12), r);
+          const yEnd = tokenChips(c, 380, shown, seg(f, c1 + 2, c1 + 12), r);
           c.font = SANS(44); c.fillStyle = "#fde68a"; c.textAlign = "right"; c.fillText(`${shown} tokens`, 940, 370);
-          if (f >= c1 - 2) tag(c, "1 token = a word, or a piece of one", W / 2, Math.min(1300, yEnd + 60), 56, "#fef3c7", INK, -0.02, seg(f, c1 - 2, c1 + 6));
-          if (f >= c1 + 6) tag(c, "sun·flower = 2 tokens", 300, Math.min(1420, yEnd + 170), 56, "#fecaca", "#7f1d1d", -0.03, seg(f, c1 + 6, c1 + 12));
-          if (f >= c1 + 12) tag(c, "3·0·2 = 3 tokens", 760, Math.min(1420, yEnd + 170), 56, "#fecaca", "#7f1d1d", 0.03, seg(f, c1 + 12, c1 + 18));
+          if (f >= c1 - 2) tag(c, "1 token = a word, or a piece of one", W / 2, Math.min(1300, yEnd + 50), 56, "#fef3c7", INK, -0.02, seg(f, c1 - 2, c1 + 6));
+          if (f >= c1 + 6) tag(c, "sun·flower = 2 tokens", 290, Math.min(1430, yEnd + 160), 64, "#fecaca", "#7f1d1d", -0.03, seg(f, c1 + 6, c1 + 12));
+          if (f >= c1 + 12) tag(c, "3·0·2 = 3 tokens", 770, Math.min(1430, yEnd + 160), 64, "#fecaca", "#7f1d1d", 0.03, seg(f, c1 + 12, c1 + 18));
         } else if (b.shot === "bags") {
           // ---------- every token lifts every bag (EP38's counter) ----------
           c.fillStyle = "#3f2a16"; c.fillRect(0, 0, W, H);
@@ -387,7 +387,7 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           c.save(); c.translate(W / 2 + sx, 840 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
           shop(c, r);
           const [mood, armPose] = loopOn ? (["yell", "up"] as [Mood, Arms]) : RAVI[n] ?? ["angry", "rest"];
-          ravi(c, mood, armPose, b.who === "ravi" && talking, p, f, r);
+          ravi(c, mood, armPose, b.who === "ravi" && talking, hookOn ? 1 : p, f, r);
           counter(c, r);
           laptop(c, 250, 1000, 0.72, "4.7 GB brain ✓", r, {});
           phone(c, b.who === "ai" && talking, f, r, {});
@@ -410,7 +410,7 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           if (b.prop === "online") bubble(c, 330, 560, "online AI: 1 second!", 70, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "money") bubble(c, 330, 560, "my message or its reply?", 62, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "rule") {
-            ruleChip(c, W, 330, "ASK FOR SHORT REPLIES", [
+            ruleChip(c, W, 980, "ASK FOR SHORT REPLIES", [
               ["type: Reply in 2 short lines.", "#dcfce7", "#14532d"],
               ["fewer tokens: faster here", "#e2e8f0", INK],
               ["and a smaller bill online", "#fef3c7", INK],

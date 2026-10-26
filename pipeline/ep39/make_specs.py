@@ -40,7 +40,8 @@ LINES = {
 TTS_EN = {}   # English spoken forms
 SHOW = {   # captions with digits; "..." keeps a key number off screen until it is said
     1: "17 seconds for one reply?! He cancelled!", 2: "4 seconds to read his order... 13 to write the reply.",
-    3: "13 seconds to write that?!", 6: "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
+    3: "13 seconds to write that?!", 4: "I write one token at a time. A word, or a piece of one.",   # "time, anna." left "anna." alone on screen
+    6: "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
     7: "The online AI replies in 1 second!", 8: "Big graphics cards: 200 tokens a second. But online, every token costs money.",
     10: "Both... The reply costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
     12: "35 tokens... 12 seconds here. Online, a smaller bill.", 16: "92 seconds.",
