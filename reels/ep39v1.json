@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.82,
-  2.5
+  0.965,
+  4.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -45,7 +45,7 @@
    "id": "s_a",
    "type": "sk_speed",
    "tail": 0.05,
-   "boost": 1.35,
+   "boost": 1.25,
    "data": {
     "beats": [
      {
@@ -161,7 +161,7 @@
    "tail": 0.1,
    "lift": 0.8,
    "pre": 0.25,
-   "boost": 1.45,
+   "boost": 1.35,
    "drop_at": [
     [
      3,
@@ -286,8 +286,7 @@
    "lift": 0.9,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.55,
-   "rise": 1.35,
+   "boost": 1.2,
    "drop_pre": [
     [
      3,

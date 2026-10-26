@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.82,
-  2.5
+  0.965,
+  4.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -47,7 +47,7 @@
    "id": "s_a",
    "type": "sk_speed",
    "tail": 0.05,
-   "boost": 1.35,
+   "boost": 1.25,
    "data": {
     "beats": [
      {
@@ -173,10 +173,10 @@
   {
    "id": "s_b",
    "type": "sk_speed",
-   "tail": 0.1,
+   "tail": 0.0,
    "lift": 0.8,
    "pre": 0.25,
-   "boost": 1.45,
+   "boost": 1.35,
    "drop_at": [
     [
      3,
@@ -249,7 +249,7 @@
      "show": "Big graphics cards, 200 tokens a second. But online, every token costs money.",
      "maxgap": 0.28,
      "gap": 0.2,
-     "tempo": 1.1,
+     "tempo": 1.15,
      "tts": "పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు.",
      "file2": "08b_ai.wav",
      "tts2": "కానీ ఆన్లైన్ లో ప్రతి టోకెన్ కీ డబ్బులు.",
@@ -296,8 +296,8 @@
      "text": "ముప్పై ఐదు టోకెన్లు. <pause 0.25> [1] ఇక్కడ పన్నెండు సెకన్లు, ఆన్లైన్ లో బిల్లు తక్కువ.",
      "show": "35 tokens... Here 12 seconds, online a smaller bill.",
      "maxgap": 0.28,
-     "gap": 0.4,
-     "tempo": 1.1,
+     "gap": 0.3,
+     "tempo": 1.15,
      "tts": "ముప్పై ఐదు టోకెన్లు.",
      "file2": "12b_ai.wav",
      "tts2": "ఇక్కడ పన్నెండు సెకన్లు, ఆన్లైన్ లో బిల్లు తక్కువ.",
@@ -313,8 +313,7 @@
    "lift": 0.9,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.55,
-   "rise": 1.35,
+   "boost": 1.2,
    "drop_pre": [
     [
      3,

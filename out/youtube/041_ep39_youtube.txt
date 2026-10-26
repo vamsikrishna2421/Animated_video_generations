@@ -9,7 +9,7 @@ Ravi anna's shop AI takes 17 seconds to answer a WhatsApp order, and the custome
 
 Our real test, internet cut, on a 4-core computer with no graphics card (Qwen2.5 7B, 4-bit): 4.3 s to read the order, 17.6 s for the 58-token reply. With "Reply in 2 short lines.": 35 tokens, 11.7 s. With a month of old chat in front (1,788 tokens): 92 s before the first word.
 
-Online AIs on big graphics cards are far faster (Gemini 2.5 Flash: about 200 tokens a second, Artificial Analysis), but a bot pays for every token, and the reply's tokens usually cost 4-8x the message's (OpenAI and Google price lists): about 1-2 paise a reply.
+Online AIs on big graphics cards are far faster (Gemini 2.5 Flash: about 200 tokens a second, Artificial Analysis), but a bot pays for every token, and a token it writes usually costs 4-8x a token you send (OpenAI and Google price lists): about ₹10-16 per 1,000 replies like ours.
 
 What it means for you: ask for short replies; don't make the AI read what it doesn't need (a 2-line note about a customer, not the whole chat; a new chat for a new topic). Thinking models also bill their hidden thinking. Telugu takes more tokens than English for the same message (69 vs 37 on GPT-4o's tokenizer).
 
@@ -30,7 +30,7 @@ Ravi anna shop AI oka WhatsApp order ki reply ivvadaaniki 17 seconds teeskundi, 
 
 Maa real test, internet cut chesi, 4-core computer, graphics card ledu (Qwen2.5 7B, 4-bit): order chadavadaaniki 4.3 s, 58 tokens reply ki 17.6 s. "Reply in 2 short lines." tho 35 tokens, 11.7 s. Mundu nela paata chat (1,788 tokens) pedite modati maata ki 92 s.
 
-Online AI lu pedda graphics cards tho chaala fast (Gemini 2.5 Flash: second ki daadaapu 200 tokens, Artificial Analysis), kaani bot prati token ki dabbulu kadutundi, reply tokens saadhaarananga message tokens kante 4-8 retlu ekkuva: oka reply ki 1-2 paise.
+Online AI lu pedda graphics cards tho chaala fast (Gemini 2.5 Flash: second ki daadaapu 200 tokens, Artificial Analysis), kaani bot prati token ki dabbulu kadutundi, AI raase okko token meeru pampe token kante 4-8 retlu ekkuva: 1,000 replies ki daadaapu ₹10-16.
 
 Meeku: chinna replies adagandi; avasaram leni daanni chadivinchakandi (customer gurinchi 2 lines note, kotha topic ki kotha chat). Telugu ki English kante ekkuva tokens (GPT-4o tokenizer lo 69 vs 37).
 Test vivaraalu, sources: English description lo unnaayi.

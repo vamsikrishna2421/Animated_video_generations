@@ -60,7 +60,7 @@ NOCAP = set()
 PAUSES = {}
 TEMPO_EN = {"ravi": 1.15, "ai": 1.1}
 TEMPO_TE = {"ravi": 1.15, "ai": 1.1}
-TEMPO_LINE_TE = {}
+TEMPO_LINE_TE = {8: 1.15, 12: 1.15}   # the Telugu cut ran 60.3 s: its middle scene a beat shorter
 # Sound (CLAUDE.md arc): a hit, the error buzz and the stopwatch's ticks on frame 1; a ding as WRITE starts; pops as the
 # tokens land; a bonk on each token the bags lift (4 a second); a cha-ching on the bill; a drop before "four to eight" and
 # a cha-ching on the price list; a snap on the rule; a success sting on our test; a riser into the twist, the clock
@@ -71,9 +71,10 @@ SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 1.25, "tail": 0.05}),   # 0.05: 
           ("s_c", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.3, "outro": True, "boost": 1.2,   # 1.55 + rise 1.35 left the twist's lines 5-8 dB over the bed
                                      "drop_pre": [[3, 0.05, 1.0]], "tail": 1.2})]   # the bed out on the quiz's "1", silence before "Ninety-two"; 1.2 s held on 1:32, then the slam
 GAP = {1: 0.25, 2: 0.2, 4: 0.2, 6: 0.0, 8: 0.2, 10: 0.45, 11: 0.3, 12: 0.4, 13: 0.25, 14: 0.2, 15: 2.45}   # 10: room to read the price chip; 11: the rule chip; 12: the test card; 15: the quiz holds for its 3-2-1
+GAP_TE = {12: 0.3}
 GAIN = {}
 GAIN_TE = {}
-FLAGS_TE = {}
+FLAGS_TE = {"s_b": {"tail": 0.0}}   # with GAP_TE, the Telugu middle scene ends a beat earlier (60.3 -> 59.7 s)
 YT = {"s_a": "17 seconds for one reply", "s_b": "Which tokens cost more?", "s_c": "The wait before the first word"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -97,7 +98,7 @@ def spec(lang="en"):
         for n in ns:
             who, shot, prop, en, tel = LINES[n]
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": tel if te else TTS_EN.get(n, en),
-                  "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()), "maxgap": 0.28, "gap": GAP.get(n, 0.16),
+                  "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()), "maxgap": 0.28, "gap": (GAP_TE if te else {}).get(n, GAP.get(n, 0.16)),
                   "tempo": TEMPO_LINE_TE.get(n, TEMPO_TE[who]) if te else TEMPO_EN[who]}
             if not te and n in TTS_EN:
                 ln["tts"] = TTS_EN[n]

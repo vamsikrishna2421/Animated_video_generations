@@ -1,4 +1,4 @@
-# EP39 "The 17-second reply" (Inference: speed, latency and cost per token) · script v2, Oct 26
+# EP39 "The 17-second reply" (Inference: speed, latency and cost per token) · script v2.1 as rendered, Oct 26
 
 **Slot:** queue 041, replaces the lesson-format `041_ep39_where_ai_costs_come_from.mp4`.
 **Cast / setting:** Ravi anna's kirana shop, the shop AI (the student robot on his phone, calm, deadpan). Since EP38 the
@@ -24,8 +24,10 @@ clocks (reading, then writing), price per token (the reply costs more), and long
   screen: Gemini 2.5 Flash 8x, GPT-4.1 mini 4x (neither needs to think first; thinking models also bill their hidden
   thinking as output tokens: caption).
 - One reply at those prices (our order: 91 tokens in, 58 out): Gemini 2.5 Flash $0.000172, GPT-4.1 mini $0.000129, so
-  about 1-2 paise a reply at any rate from ₹80 to ₹95 a dollar. With the month of chat in front (1,788 in, 41 out):
-  $0.00064-0.00078, about 5-7 paise: the month is paid for again on every reply (caption).
+  1,000 replies cost about ₹10-16 at any rate from ₹80 to ₹95 a dollar (on screen). Per reply the written part costs
+  2.5-5x the read part for this order (per token 4-8x: the line says "a token it writes"). The short reply (98 in, 35
+  out) cuts the bill 26-32%, not the 40% fewer written tokens. With the month of chat in front (1,788 in, 41 out):
+  $0.00064-0.00078 a reply, 4-6x dearer: the month is paid for again on every reply (caption).
 - ChatGPT's own plans are not billed per token; the API, which a shop's WhatsApp bot uses, is (caption).
 - Artificial Analysis (independent benchmarks, artificialanalysis.ai, Oct 26, 2026): Gemini 2.5 Flash, non-reasoning,
   on Google's API: 198.1 tokens/s, first token after 0.37 s (its default workload: a 10,000-token prompt); the median for
@@ -119,7 +121,7 @@ Kept 1: a familiar pain (waiting on "typing…"), money leaving the shop, and a 
 | 7 | Ravi | The online AI replies in one second! | |
 | 8 | AI | Big graphics cards: two hundred tokens a second. [1] But online, every token costs money. | insert: a rack of graphics cards, "Gemini 2.5 Flash: about 200 tokens a second (Artificial Analysis)"; on [1] a bill counting tokens |
 | 9 | Ravi | Money?! [1] For my message, or its reply? | |
-| 10 | AI | Both. [1] The reply costs four to eight times more. | the price chip: "your message 1×" → "its reply" "8×" (Gemini 2.5 Flash) and "4×" (GPT-4.1 mini) big, dollar prices small; "about 1-2 paise a reply"; a pause to read it |
+| 10 | AI | Both, [1] and a token it writes costs four to eight times more. | the price chip: "your message 1×" → "its reply" "8×" (Gemini 2.5 Flash) and "4×" (GPT-4.1 mini) big, dollar prices small; "about 1-2 paise a reply"; a pause to read it |
 | 11 | Ravi | Then write less! [1] Two short lines! | RULE chip: "ASK FOR SHORT REPLIES" · "type: Reply in 2 short lines." · "fewer tokens: faster here" · "and a smaller bill online" |
 | 12 | AI | Thirty-five tokens. [1] Twelve seconds here. Online, a smaller bill. | OUR TEST card: before "58 tokens · 17.6 s", the short reply word for word, after "35 tokens · 11.7 s"; "still slow on a laptop: the small 1.5B brain 2.2 s, but it dropped the quantities · online about 1 s" |
 | 13 | Ravi | Better! [1] Now read all his old chats first, so you know him! | Ravi scrolls a month of chat: "30 old orders = 1,788 tokens, 20× the order" |
@@ -136,10 +138,10 @@ Kept 1: a familiar pain (waiting on "typing…"), money leaving the shop, and a 
 | 4 | AI | నేను ఒక్కో టోకెన్ రాస్తానండి. [1] ఒక మాట, లేదా మాటలో ఒక ముక్క. | Nenu okko token raastaanandi. Oka maata, ledaa maatalo oka mukka. |
 | 5 | Ravi | ముక్కలా?! [1] స్పీడ్ గా రాయి! | Mukkalaa?! Speed gaa raayi! |
 | 6 | AI | ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా. [1] ఈ ల్యాప్‌టాప్ లో సెకనుకు నాలుగు టోకెన్లు. | Prati token ki aidu bastaaloo ettutaa. Ee laptop lo secanuku naalugu tokenlu. |
-| 7 | Ravi | ఆన్‌లైన్ ఏఐ ఒక్క సెకనులో రిప్లై ఇస్తుంది! | Online AI okka secanulo reply istundi! (voiced "ఏయ్ ఐ") |
+| 7 | Ravi | ఆన్‌లైన్ దాంట్లో ఒక్క సెకనులోనే రిప్లై వస్తుంది! | Online daantlo okka secanulone reply vastundi! ("ఏయ్ ఐ" came out stretched) |
 | 8 | AI | పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు. [1] కానీ ఆన్‌లైన్ లో ప్రతి టోకెన్ కీ డబ్బులు. | Pedda graphics cardulu, secanuku rendondala tokenlu. Kaanee online lo prati token ki dabbulu. |
 | 9 | Ravi | డబ్బులా?! [1] నా మెసేజ్ కా, దాని రిప్లై కా? | Dabbulaa?! Naa message kaa, daani reply kaa? |
-| 10 | AI | రెండిటికీ. [1] రిప్లైకి నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ. | Renditikee. Reply ki naalugu nunchi enimidi retlu ekkuva. |
+| 10 | AI | రెండిటికీ. [1] అది రాసే ప్రతి టోకెన్ కీ నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ. | Renditikee. Adi raase prati token ki naalugu nunchi enimidi retlu ekkuva. |
 | 11 | Ravi | అయితే తక్కువ రాయి! [1] రెండు చిన్న లైన్లు! | Ayite takkuva raayi! Rendu chinna lainlu! |
 | 12 | AI | ముప్పై ఐదు టోకెన్లు. [1] ఇక్కడ పన్నెండు సెకన్లు, ఆన్‌లైన్ లో బిల్లు తక్కువ. | Muppai aidu tokenlu. Ikkada pannendu secanlu, online lo bill takkuva. |
 | 13 | Ravi | బాగుంది! [1] ఇప్పుడు ఆయన పాత మెసేజ్‌లన్నీ ముందు చదువు, ఆయన గురించి తెలుస్తుంది! | Baagundi! Ippudu aayana paata messagelannee mundu chaduvu, aayana gurinchi telustundi! |
@@ -158,3 +160,22 @@ test: 58 → 35 tokens, 17.6 → 11.7 s). And don't make it read what it doesn't
 note, not the whole chat. Telugu: the same message took 69 tokens vs 37 in English (GPT-4o's tokenizer), 184 vs 41 on
 our small open model's.
 Next: EP40, how AI models are compared (benchmarks).
+
+## Render review 1 (English) and what changed (v2.1)
+- Both: the twist is the best part, but the running stopwatch gave the quiz away (0:59 "still reading" = over a minute):
+  the digits now read "?:??" until "Ninety-two seconds"; the 1:32 is held 1.2 s after the line, with the fix on screen
+  ("a 2-line note about him, not the month"), before the chat slams back in.
+- Both: the test card was a wall of numbers: now two big rows (58 tokens · 17.6 s, 35 tokens · 11.7 s) and one big line
+  "still slow on a laptop / online: about 1 s"; the small brain is named by size (1.1 GB) like the 4.7 GB one.
+- Priya: "40% fewer tokens" counted only the reply (the bill falls 26-32%): the row is gone; "the reply costs 4-8x" was
+  per token: line 10 now "Both, and a token it writes costs four to eight times more"; the card says "price of ONE
+  token" and shows "1,000 replies: about ₹10-16" (Sandeep: a cost I can feel).
+- Both: the music sank under every line and jumped up in each gap (pumping), and never built: the bed eases over 0.3 s
+  around each line (reel_build/Reel.tsx `musicDuckRamp`, opt-in), the gap level is lower (0.66, gap gain 1.5 dB), the
+  scenes step up (1.25, 1.35), and the last scene sits 10-12 dB under the voices (1.55 + a rise had left its lines 5-8
+  dB over the bed: the Telugu pack's speech-to-text lost every word there). The quiz's ticks and riser stop on the
+  count's "1", so "Ninety-two" comes out of silence; the hit lands just after the line; the bed swells under the held
+  1:32 into the slam (musicEndRamp from 96.5%).
+- Telugu (first pack): "ఏయ్ ఐ" stretched into "aaa-ee ai": Ravi's line 7 is now "ఆన్లైన్ దాంట్లో ఒక్క సెకనులోనే రిప్లై
+  వస్తుంది!"; line 10 as the English ("అది రాసే ప్రతి టోకెన్ కీ..."). Two Telugu lines run a little faster and the middle
+  scene's tail is 0 to keep 59.7 s.

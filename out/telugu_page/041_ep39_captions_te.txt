@@ -8,7 +8,7 @@ AI From Scratch Episode 39: speed, latency, cost per token
 - Prati AI reply tokens tho tayaaravutundi: oka maata, leda maatalo oka mukka ("sun·flower" 2 tokens, "302" 3 tokens)
 - Rendu clocks: mundu AI mee message motham chaduvutundi (modati maata mundu wait: latency), taruvaata okko token raastundi
 - Maa real test, internet cut chesi, 4-core computer, graphics card ledu, EP37-38 lo compress chesina 7B brain: order chadavadaaniki 4.3 s, taruvaata second ki 4.3 tokens: 58 tokens reply ki 17.6 s
-- Online AI lu pedda graphics cards meeda nadustaayi: Gemini 2.5 Flash second ki daadaapu 200 tokens raastundi (Artificial Analysis). Kaani shop bot prati token ki dabbulu kadutundi, reply tokens saadhaarananga message tokens kante 4-8 retlu ekkuva (OpenAI, Google price lists): oka reply ki daadaapu 1-2 paise
+- Online AI lu pedda graphics cards meeda nadustaayi: Gemini 2.5 Flash second ki daadaapu 200 tokens raastundi (Artificial Analysis). Kaani shop bot prati token ki dabbulu kadutundi, AI raase okko token saadhaarananga meeru pampe token kante 4-8 retlu ekkuva (OpenAI, Google price lists): maa laanti 1,000 replies ki daadaapu ₹10-16
 
 Meeku idi ante:
 1. Fast (online lo takkuva kharchu) replies kaavaalaa? Chinna replies adagandi: "Reply in 2 short lines." Maa test: 58 → 35 tokens, 17.6 → 11.7 s
@@ -28,7 +28,7 @@ Prati reply mundu nela motham paata chat: modati maata ki entha sepu? A) 4 secon
 
 === PINNED_COMMENT ===
 Memu ela test chesaam: Qwen sontha 4-bit GGUF files (Q4_K_M), Qwen2.5-7B-Instruct, 1.5B-Instruct, llama.cpp tho 4-core computer (server CPU, graphics card ledu), greedy, reply token token ga stream chesi, prati test 3 saarlu (median), prati run internet cut chesi. 7B: modati token 4.26 s, motham reply 17.62 s (58 tokens); "Reply in 2 short lines." tho 11.65 s (35 tokens); mundu nela paata chat (30 orders, 1,788 tokens) pedite modati token 91.83 s. Chinna 1.5B brain short reply ni 2.15 s lo raasindi, kaani quantities vadilesindi.
-"Shop ki online AI vaadaalaa?" Online chaala fast (ilaanti reply ki daadaapu okka second), Gemini 2.5 Flash leda GPT-4.1 mini rates lo oka reply ki 1-2 paise; mee customers messages aa company ki veltaayi. Laptop lo prati reply free, private, kaani slow. Edainaa: chinna replies.
+"Shop ki online AI vaadaalaa?" Online chaala fast (ilaanti reply ki daadaapu okka second), Gemini 2.5 Flash leda GPT-4.1 mini rates lo 1,000 replies ki ₹10-16 (mundu nela chat pedite prati reply daadaapu 4-6 retlu ekkuva); mee customers messages aa company ki veltaayi. Laptop lo prati reply free, private, kaani slow. Edainaa: chinna replies.
 Prices, million tokens ki, input → output (Oct 26, 2026): Gemini 2.5 Flash $0.30 → $2.50; GPT-4.1 mini $0.40 → $1.60; GPT-5 mini $0.25 → $2.00 (thinking model). Speed: Artificial Analysis, Google API lo Gemini 2.5 Flash, second ki 198 tokens, modati token 0.37 s.
 
 === COVER ===
