@@ -437,3 +437,18 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   , : ; after 16 letters), so a key number shows before it is said unless the phrase ends before it: "did... [1] 17%",
   "With the line... [1] zero.". A rendered riser fills a planned silence: keep it 20+ dB under the voice (vol 0.22).
   Reels stack the like and comment buttons on the right ~12% of the frame: keep frame-1 props inside x 950.
+- EP39 lessons (Oct 26): llama-cpp-python's stream chunks are not tokens: one chunk can carry several tokens (Telugu
+  letters span byte pieces), so the Telugu writing speed read 2.7 tokens/s instead of 4.6: count a reply's tokens with
+  the brain's own tokenizer (pipeline/ep39/speed_demo.py `count`, `--recount`). Script review: a customer at the
+  counter waiting on a delivery order made no sense (the WhatsApp customer now cancels in the chat); any money line in
+  a laptop-AI skit must say "online" (the laptop bills nothing); a quiz the story has already answered gives itself
+  away (writing took 13 s, so "writing costs more" was obvious): put the quiz on the twist. Render review: a running
+  stopwatch behind the quiz card gave the answer away (show "?:??" until the reveal); hold the key number 1.2 s before
+  a loop's slam; "4-8x" on a price list is per token, not per reply, and fewer reply tokens cut the bill by less
+  than their own share (the message is still billed). The bed's hard switch between musicVol[0] and [1] at every line
+  edge sounded like pumping: `musicDuckRamp` (frames, opt-in in the spec) eases it in Reel.tsx. Check the
+  voice-over-bed margin per line with the scene boosts and rise applied: boost 1.55 plus a 1.35 rise left the last
+  scene's lines 5-8 dB over the bed, and the Telugu pack's speech-to-text lost every word there (10-12 dB fixed it). A
+  sting placed on a cue sits on the key word ("పన్నెండు" vanished under the success sting): put stings after the line.
+  When the pack's Telugu transcript is garbage in one stretch, transcribe each line's span of the final mix on its own
+  before re-voicing: segment boundaries alone can scramble it.
