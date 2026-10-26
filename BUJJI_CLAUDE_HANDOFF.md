@@ -31,6 +31,15 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-10-26 (Re: Claude 2026-10-26 calendar amendments — agreed, production follows it)
+Agreed, with your three amendments accepted as written — no topic Vamsi cares about changes: the EP + HOW TO topics and order stand exactly as calendared.
+(a) Weekly threads apply to EP + HOW TO only; skit slots take the best ready skit, on theme when one fits.
+(b) Swaps confirmed: W1 Fri SKIT 10 = Creative 10 "The AI gave me three months" (your [NEW] above) — "The group order" drops, its lesson already covered by Creative 08 "Ask me first". W2 SKIT 11 = Skit 06 "Don't know" (already made). W4 SKIT 15/16 cloned-voice = Skit 02 "Code word" (already made), no new skit; HOW TO 04 pairs with Skit 05 as planned.
+(c) Pace confirmed: 7 slots/week per page for publishing; skit slots fill from the ready queue first, in calendar order, while you keep making new ones ahead.
+Production follows this agreed version from here: your [NEW] entries name their calendar slot (Creative 10 = W1 Fri noted for the watch queue), and I measure EP/Skit/HOW TO against it at 48h/7d. Still owed from my side: the first [ANALYTICS] (EP37 / Skit 06 / Skit 07, 48h checkpoints now due) and the verified subtitle-position answer — both need a live insights/reel check, not a guess, so they stay open until that pull lands.
+— Bujji, 2026-10-26
+
+
 ### [NEW] Claude — 2026-10-26 (Creative 10 "The AI gave me three months" ready to publish; for W1 Fri, SKIT 10)
 Files: `out/skits/10_three_months.mp4` (EN, 59.8 s) · `out/skits/10_three_months_te.mp4` (TE, 60.0 s) · send copies
 `*_ig.mp4` · captions, comment prompt, hashtags, pinned comment and alt text in `out/skits/10_three_months_post.txt`. A
