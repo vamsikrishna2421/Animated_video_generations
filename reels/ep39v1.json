@@ -9,9 +9,10 @@
  "lead": 0.15,
  "music": "lofi",
  "musicVol": [
-  0.48,
-  0.9
+  0.5,
+  0.66
  ],
+ "musicDuckRamp": 9,
  "musicFade": 0.05,
  "endPad": 0.5,
  "captionMode": "phrase",
@@ -28,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 3.0,
+ "musicGapGain": 1.5,
  "musicEndRamp": [
   0.82,
   2.5
@@ -43,8 +44,8 @@
   {
    "id": "s_a",
    "type": "sk_speed",
-   "tail": 0.1,
-   "boost": 1.6,
+   "tail": 0.05,
+   "boost": 1.35,
    "data": {
     "beats": [
      {
@@ -108,7 +109,7 @@
      "text": "Four seconds to read his order. [1] Thirteen to write the reply.",
      "show": "4 seconds to read his order... 13 to write the reply.",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.2,
      "tempo": 1.1,
      "gain_db": -1.0
     },
@@ -128,7 +129,7 @@
      "text": "I write one token at a time, anna. [1] A word, or a piece of one.",
      "show": "I write one token at a time. A word, or a piece of one.",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.2,
      "tempo": 1.1,
      "gain_db": -1.0
     },
@@ -148,7 +149,7 @@
      "text": "For every token, I lift all five bags. [1] On this laptop: four tokens a second.",
      "show": "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.0,
      "tempo": 1.1,
      "gain_db": -1.0
     }
@@ -160,7 +161,7 @@
    "tail": 0.1,
    "lift": 0.8,
    "pre": 0.25,
-   "boost": 1.3,
+   "boost": 1.45,
    "drop_at": [
     [
      3,
@@ -231,7 +232,7 @@
      "text": "Big graphics cards: two hundred tokens a second. [1] But online, every token costs money.",
      "show": "Big graphics cards: 200 tokens a second. But online, every token costs money.",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.2,
      "tempo": 1.1,
      "gain_db": -1.0
     },
@@ -248,11 +249,12 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "Both. [1] The reply costs four to eight times more.",
-     "show": "Both... The reply costs 4 to 8 times more.",
+     "text": "Both, [1] and a token it writes costs four to eight times more.",
+     "show": "Both... A token it writes costs 4 to 8 times more.",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.45,
      "tempo": 1.1,
+     "tts": "Both, [1] and a token it writes costs four to eight times more.",
      "gain_db": -1.0
     },
     {
@@ -261,7 +263,7 @@
      "text": "Then write less! [1] Two short lines!",
      "show": "Then write less! 2 short lines!",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 0.3,
      "tempo": 1.15,
      "gain_db": 0.5
     },
@@ -271,7 +273,7 @@
      "text": "Thirty-five tokens. [1] Twelve seconds here. Online, a smaller bill.",
      "show": "35 tokens... 12 seconds here. Online, a smaller bill.",
      "maxgap": 0.28,
-     "gap": 0.7,
+     "gap": 0.4,
      "tempo": 1.1,
      "gain_db": -1.0
     }
@@ -280,11 +282,11 @@
   {
    "id": "s_c",
    "type": "sk_speed",
-   "tail": 0.0,
+   "tail": 1.2,
    "lift": 0.9,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.4,
+   "boost": 1.55,
    "rise": 1.35,
    "drop_pre": [
     [
@@ -334,7 +336,7 @@
      "text": "Better! [1] Now read all his old chats first, so you know him!",
      "show": "Better! Now read all his old chats first, so you know him!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.25,
      "tempo": 1.15,
      "gain_db": 0.5
     },

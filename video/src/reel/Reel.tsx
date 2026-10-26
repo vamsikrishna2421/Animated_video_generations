@@ -76,7 +76,23 @@ const musicArc = (tl: ReelTimeline, f: number) => {
   return hit * rise * dip;
 };
 
-export type ReelTimeline = { musicLift?: number; musicDrops?: number[][]; musicBoosts?: number[][]; hideTimerInHook?: boolean; hideTimer?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+export type ReelTimeline = { musicDuckRamp?: number; musicLift?: number; musicDrops?: number[][]; musicBoosts?: number[][]; hideTimerInHook?: boolean; hideTimer?: boolean; id: string; title: string; handle: string; label: string; fps: number; totalFrames: number; music: string; scenes: Scene[]; look?: "rays" | "classic"; topic?: string; banner?: string; musicVol?: number[]; format?: string };
+// the bed's duck under speech: 1 inside a line (bed at musicVol[0]), 0 in a gap (musicVol[1]); with musicDuckRamp (frames)
+// it eases between them instead of switching in one frame (EP39's viewers heard the hard switch as pumping)
+const duckAt = (tl: ReelTimeline, f: number) => {
+  let d = Infinity;
+  for (const s of tl.scenes) for (const l of s.lines) {
+    const a = s.from + l.from - 2, b = s.from + l.from + l.frames + 3;
+    if (f >= a && f < b) return 1;
+    d = Math.min(d, f < a ? a - f : f - b + 1);
+  }
+  const R = tl.musicDuckRamp ?? 0;
+  return R > 0 ? Math.max(0, 1 - d / R) : 0;
+};
+const bedVol = (tl: ReelTimeline, f: number, af: number) => {
+  const [v0, v1] = tl.musicVol ?? [0.22, 0.55];
+  return Math.min(1, (v1 + (v0 - v1) * duckAt(tl, f)) * musicArc(tl, af));
+};
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const useSp = (at: number, damping = 12) => {
@@ -784,7 +800,6 @@ const YTNotes: React.FC<{ s: Scene; idx: number }> = ({ s, idx }) => {
 };
 export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
   const f = useCurrentFrame();
-  const talking = tl.scenes.some((s) => s.lines.some((l) => f >= s.from + l.from - 2 && f < s.from + l.from + l.frames + 3));
   return (
     <LookCtx.Provider value={tl.look ?? "classic"}>
       <AbsoluteFill style={{ background: C.bg }}>
@@ -807,7 +822,7 @@ export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 8, background: "rgba(255,255,255,0.1)" }}>
           <div style={{ width: `${(f / tl.totalFrames) * 100}%`, height: "100%", background: `linear-gradient(90deg, ${C.amber}, ${C.rose})` }} />
         </div>
-        <Audio src={staticFile(tl.music)} volume={(af) => Math.min(1, (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1]) * musicArc(tl, af))} />
+        <Audio src={staticFile(tl.music)} volume={(af) => bedVol(tl, f, af)} />
         {tl.scenes.flatMap((s) =>
           s.lines.map((l, k) => (
             <Sequence key={`${s.id}-${k}`} from={s.from + l.from} durationInFrames={l.frames + 20} layout="none">
@@ -822,7 +837,6 @@ export const ReelYT: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
 
 export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
   const f = useCurrentFrame();
-  const talking = tl.scenes.some((s) => s.lines.some((l) => f >= s.from + l.from - 2 && f < s.from + l.from + l.frames + 3));
   return (
     <LookCtx.Provider value={tl.look ?? "rays"}>
     <AbsoluteFill style={{ background: C.bg }}>
@@ -860,7 +874,7 @@ export const Reel: React.FC<{ tl: ReelTimeline }> = ({ tl }) => {
           </span>
         </div>
       )}
-      <Audio src={staticFile(tl.music)} volume={(af) => Math.min(1, (talking ? (tl.musicVol ?? [0.22, 0.55])[0] : (tl.musicVol ?? [0.22, 0.55])[1]) * musicArc(tl, af))} />
+      <Audio src={staticFile(tl.music)} volume={(af) => bedVol(tl, f, af)} />
       {tl.scenes.flatMap((s) =>
         s.lines.map((l, k) => (
           <Sequence key={`${s.id}-${k}`} from={s.from + l.from} durationInFrames={l.frames + 20} layout="none">

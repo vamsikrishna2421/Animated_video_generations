@@ -9,9 +9,10 @@
  "lead": 0.15,
  "music": "lofi",
  "musicVol": [
-  0.48,
-  0.9
+  0.5,
+  0.66
  ],
+ "musicDuckRamp": 9,
  "musicFade": 0.05,
  "endPad": 0.5,
  "captionMode": "phrase",
@@ -28,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 3.0,
+ "musicGapGain": 1.5,
  "musicEndRamp": [
   0.82,
   2.5
@@ -45,8 +46,8 @@
   {
    "id": "s_a",
    "type": "sk_speed",
-   "tail": 0.1,
-   "boost": 1.6,
+   "tail": 0.05,
+   "boost": 1.35,
    "data": {
     "beats": [
      {
@@ -111,7 +112,7 @@
      "text": "ఆర్డర్ చదవడానికి నాలుగు సెకన్లు. <pause 0.25> [1] రిప్లై రాయడానికి పదమూడు.",
      "show": "4 seconds to read the order... 13 to write the reply.",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.2,
      "tempo": 1.1,
      "tts": "ఆర్డర్ చదవడానికి నాలుగు సెకన్లు.",
      "file2": "02b_ai.wav",
@@ -135,7 +136,7 @@
      "text": "నేను ఒక్కో టోకెన్ రాస్తానండి. <pause 0.25> [1] ఒక మాట, లేదా మాటలో ఒక ముక్క.",
      "show": "I write one token at a time. One word, or a piece of a word.",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.2,
      "tempo": 1.1,
      "tts": "నేను ఒక్కో టోకెన్ రాస్తానండి.",
      "file2": "04b_ai.wav",
@@ -159,7 +160,7 @@
      "text": "ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా. <pause 0.25> [1] ఈ ల్యాప్టాప్ లో సెకనుకు నాలుగు టోకెన్లు.",
      "show": "For every token I lift all 5 sacks. On this laptop, 4 tokens a second.",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.0,
      "tempo": 1.1,
      "tts": "ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా.",
      "file2": "06b_ai.wav",
@@ -175,7 +176,7 @@
    "tail": 0.1,
    "lift": 0.8,
    "pre": 0.25,
-   "boost": 1.3,
+   "boost": 1.45,
    "drop_at": [
     [
      3,
@@ -247,7 +248,7 @@
      "text": "పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు. <pause 0.25> [1] కానీ ఆన్లైన్ లో ప్రతి టోకెన్ కీ డబ్బులు.",
      "show": "Big graphics cards, 200 tokens a second. But online, every token costs money.",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.2,
      "tempo": 1.1,
      "tts": "పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు.",
      "file2": "08b_ai.wav",
@@ -268,14 +269,14 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "రెండిటికీ. <pause 0.25> [1] రిప్లైకి నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ.",
-     "show": "For both... The reply costs 4 to 8 times more.",
+     "text": "రెండిటికీ. <pause 0.25> [1] అది రాసే ప్రతి టోకెన్ కీ నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ.",
+     "show": "For both... Each token it writes costs 4 to 8 times more.",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.45,
      "tempo": 1.1,
      "tts": "రెండిటికీ.",
      "file2": "10b_ai.wav",
-     "tts2": "రిప్లైకి నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ.",
+     "tts2": "అది రాసే ప్రతి టోకెన్ కీ నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ.",
      "pause": 0.25,
      "gain_db": -1.0
     },
@@ -285,7 +286,7 @@
      "text": "అయితే తక్కువ రాయి! [1] రెండు చిన్న లైన్లు!",
      "show": "Then write less! 2 short lines!",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 0.3,
      "tempo": 1.15,
      "gain_db": 0.5
     },
@@ -295,7 +296,7 @@
      "text": "ముప్పై ఐదు టోకెన్లు. <pause 0.25> [1] ఇక్కడ పన్నెండు సెకన్లు, ఆన్లైన్ లో బిల్లు తక్కువ.",
      "show": "35 tokens... Here 12 seconds, online a smaller bill.",
      "maxgap": 0.28,
-     "gap": 0.7,
+     "gap": 0.4,
      "tempo": 1.1,
      "tts": "ముప్పై ఐదు టోకెన్లు.",
      "file2": "12b_ai.wav",
@@ -308,11 +309,11 @@
   {
    "id": "s_c",
    "type": "sk_speed",
-   "tail": 0.0,
+   "tail": 1.2,
    "lift": 0.9,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.4,
+   "boost": 1.55,
    "rise": 1.35,
    "drop_pre": [
     [
@@ -363,7 +364,7 @@
      "text": "బాగుంది! [1] ఇప్పుడు ఆయన పాత మెసేజ్లన్నీ ముందు చదువు, ఆయన గురించి తెలుస్తుంది!",
      "show": "Good! Now first read all his old messages, you'll know him!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.25,
      "tempo": 1.15,
      "gain_db": 0.5
     },

@@ -35,7 +35,7 @@ MUST = {"en": {1: [("seventeen", "17"), ("seconds", "second"), ("reply",), ("can
                7: [("online",), ("replies", "reply"), ("one", "1"), ("second",)],
                8: [("graphics",), ("cards", "card"), ("hundred", "200"), ("online",), ("token",), ("money",)],
                9: [("money",), ("message",), ("reply",)],
-               10: [("both",), ("reply",), ("four", "4"), ("eight", "8"), ("times",), ("more",)],
+               10: [("both",), ("token",), ("writes", "write"), ("four", "4"), ("eight", "8"), ("times",), ("more",)],
                11: [("write",), ("less",), ("two", "2"), ("short",), ("lines", "line")],
                12: [("thirty", "35"), ("tokens", "token"), ("twelve", "12"), ("seconds", "second"), ("online",), ("smaller",), ("bill",)],
                13: [("better",), ("old",), ("chats", "chat"), ("first",), ("know",)],
@@ -103,7 +103,7 @@ def level(path, under=4.0, cap=12.0):
 JUDGE_TEXT = {1: "17 seconds for one reply?! He cancelled!", 2: "4 seconds to read his order. 13 to write the reply.",
               3: "13 seconds to write that?!", 6: "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
               7: "The online AI replies in 1 second!", 8: "Big graphics cards: 200 tokens a second. But online, every token costs money.",
-              10: "Both. The reply costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
+              10: "Both, and a token it writes costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
               12: "35 tokens. 12 seconds here. Online, a smaller bill.", 16: "92 seconds."}
 
 

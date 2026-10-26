@@ -27,6 +27,7 @@ type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
   wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.5, x: 500, y: 720 }, hook: { z: 1.0, x: 540, y: 600 },   // hook: frame 1 and the loop's end
 };
+const HOLD = 36;   // frames the 1:32 is held after "Ninety-two seconds" before the slam (render review: at least 1.2 s)
 const CLAP = "reel/creative09v1/clap.wav";   // bright clap over the booms (phone speakers barely play 30-60 Hz)
 const GREEN = "#16a34a", RED = "#dc2626", LILAC = "#c4b5fd", ORANGE = "#f97316", GREY = "#94a3b8";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
@@ -47,7 +48,7 @@ const RAVI: Record<number, [Mood, Arms]> = {
 
 // ---------- pieces ----------
 // a stopwatch (screen space); `t` seconds
-const stopwatch = (c: Ctx, x: number, y: number, R: number, t: number, r: () => number, hot = true) => {
+const stopwatch = (c: Ctx, x: number, y: number, R: number, t: number, r: () => number, hot = true, hide = false) => {
   c.save(); c.translate(x, y);
   c.fillStyle = "rgba(4,8,40,0.35)"; c.beginPath(); c.arc(8, 10, R, 0, 7); c.fill();
   c.fillStyle = INK; rrect(c, -R * 0.16, -R - R * 0.3, R * 0.32, R * 0.24, 6); c.fill();
@@ -58,7 +59,7 @@ const stopwatch = (c: Ctx, x: number, y: number, R: number, t: number, r: () => 
   stroke(c, [[0, 0], [Math.sin(a) * R * 0.7, -Math.cos(a) * R * 0.7]], RED, Math.max(5, R * 0.06), r, { passes: 1 });
   const tt = Math.floor(t + 0.2), m = Math.floor(tt / 60), sec = tt % 60;   // 91.83 reads 1:32, 17.62 reads 0:17
   c.font = SANS(Math.round(R * 0.5)); c.fillStyle = INK; c.textAlign = "center";
-  c.fillText(`${m}:${String(sec).padStart(2, "0")}`, 0, R * 0.5);
+  c.fillText(hide ? "?:??" : `${m}:${String(sec).padStart(2, "0")}`, 0, R * 0.5);
   c.restore();
 };
 // frame 1's WhatsApp card (screen space, y 225-745): his order, "Shop AI is typing…" with the stopwatch, "Never mind…"
@@ -196,19 +197,19 @@ const StSpeed: React.FC<SP> = ({ s }) => {
     if (b.prop === "tokens") [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={at + 4 + q * 9} src="audio/sfx_pop.wav" vol={0.16} />));
     if (b.prop === "bags") for (let q = 0; at + 6 + q * 30 / TOK_S < nx - 4; q++) sfx.push(<Sfx key={k("b" + q)} at={at + 6 + Math.round(q * 30 / TOK_S)} src="audio/gag_bonk.wav" vol={0.14} />);   // one per token: 4 a second
     if (b.prop === "cloud") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.5) + 2} src="audio/sfx_chaching.wav" vol={0.32} />);
-    if (b.prop === "quiz") {
-      [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - 76 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
-      sfx.push(<Sfx key={k("r")} at={nx - 60} src="reel/sfx_riser.wav" vol={0.5} />, <Sfx key={k("h")} at={nx - 16} src="reel/sfx_boom.wav" vol={0.85} />,
-        <Sfx key={k("c")} at={nx - 16} src={CLAP} vol={0.55} />);   // half a second before the answer
+    if (b.prop === "quiz") {   // render review: nothing silent before "Ninety-two": the ticks and riser stop on the count's "1"
+      [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - 76 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
+      sfx.push(<Sfx key={k("r")} at={nx - 66} src="reel/sfx_riser.wav" vol={0.45} />);
     }
     if (b.prop === "price") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.5)} src="audio/sfx_chaching.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 7)} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 8)} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) + 2} src="audio/sfx_success.wav" vol={0.32} />);
     if (b.prop === "history") sfx.push(<Sfx key={k("s")} at={at + 4} src="audio/sfx_whoosh.wav" vol={0.25} />, <Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.4} />);
     if (b.prop === "wait") for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 4 + q * 12} src="audio/sfx_tick.wav" vol={0.35} />);
-    if (b.prop === "loop") {   // the number lands, then the card slams back in after the line (in the music's drop), into frame 1
-      const slam = l.from + l.frames + 2;
-      sfx.push(<Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
+    if (b.prop === "loop") {   // a hit just after "Ninety-two seconds" (on silence), the 1:32 held, then the chat slams back in = frame 1
+      const end = l.from + l.frames, slam = end + HOLD;
+      sfx.push(<Sfx key={k("n")} at={end + 1} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("m")} at={end + 1} src={CLAP} vol={0.55} />,
+        <Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
         <Sfx key={k("c")} at={slam} src={CLAP} vol={0.6} />, <Sfx key={k("z")} at={slam} src="reel/sfx_buzz.wav" vol={0.5} />);
     }
   });
@@ -231,7 +232,7 @@ const StSpeed: React.FC<SP> = ({ s }) => {
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         const endL = ln.from + ln.frames;
         const next = ls[i + 1] ? ls[i + 1].from : s.frames;
-        const slam = endL + 2, loopOn = b.prop === "loop" && f >= slam;   // the loop's last beat: frame 1 again
+        const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;   // the loop's last beat: frame 1 again
         if ((b.shot === "clock" || b.shot === "wait") && !loopOn) {
           // ---------- the two clocks: READ, then WRITE ----------
           const waitShot = b.shot === "wait";
@@ -253,17 +254,25 @@ const StSpeed: React.FC<SP> = ({ s }) => {
             const a0 = ls[iWait].from, aEnd = ls[iWait + 2] ? ls[iWait + 2].from + 4 : a0 + 120;
             const grow = seg(f, a0 + 6, aEnd);
             const read = T.read + (T.histRead - T.read) * grow;
-            stopwatch(c, W / 2, 600, 170, read, r, true);
+            const reveal = b.prop === "loop";
+            stopwatch(c, W / 2, 600, 170, read, r, true, !reveal);   // render review: the running clock gave the quiz away
             c.font = SANS(40); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("before the first word", W / 2, 830);
-            timeBar(c, 900, read, 0, 860 / Math.max(T.whole, read), 1, 0);
+            timeBar(c, 900, read, 0, 860 / Math.max(T.whole, read), 1, 0);   // fills the width past 17.6 s: long, but no number
             if (b.prop === "wait") tag(c, "30 old orders: 1,788 tokens, 20× the order", W / 2, 1130, 44, "#e2e8f0", INK, -0.02, seg(f, ln.from + 2, ln.from + 10));
             if (b.prop === "quiz") tag(c, "still reading…", W / 2, 1130, 56, "#e2e8f0", INK, 0.02, seg(f, ln.from, ln.from + 6));
-            if (b.prop === "loop") {
+            if (reveal) {
               tag(c, "C ✓  92 s", W / 2, 1150, 90, "#fee2e2", "#991b1b", -0.02, seg(f, ln.from, ln.from + 5));
               tag(c, "first word: 4 s → 92 s", W / 2, 1290, 56, "#fef3c7", INK, 0.01, seg(f, ln.from + 8, ln.from + 14));
               c.save(); c.globalAlpha = seg(f, ln.from + 14, ln.from + 20);
-              c.font = SANS(40); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("LATENCY: the wait before the first word", W / 2, 1410);
+              c.font = SANS(36); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("LATENCY: the wait before the first word", W / 2, 1380);
               c.restore();
+              if (f >= endL + 4) {   // the fix, held with the 1:32 before the slam
+                const kf = seg(f, endL + 4, endL + 10);
+                c.save(); c.globalAlpha = clamp(kf * 2);
+                c.fillStyle = "#dcfce7"; rrect(c, 110, 1406, 860, 84, 20); c.fill();
+                c.font = SANS(36); c.fillStyle = "#14532d"; c.textAlign = "center"; c.fillText("fix: a 2-line note about him, not the month", W / 2, 1460);
+                c.restore();
+              }
             }
           }
         } else if (b.shot === "tokens") {
@@ -323,14 +332,14 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           const kk = seg(f, c1 - 4, c1 + 4);
           c.save(); c.globalAlpha = clamp(seg(f, ln.from + 4, ln.from + 10) * 2);
           c.fillStyle = "#0f172a"; rrect(c, 90, 420, 860, 900, 30); c.fill();
-          c.font = SANS(40); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("price per token", W / 2, 492);
+          c.font = SANS(40); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("price of ONE token", W / 2, 492);
           c.fillStyle = "#1e293b"; rrect(c, 120, 530, 800, 150, 20); c.fill();
-          c.font = SANS(46); c.fillStyle = "#e2e8f0"; c.textAlign = "left"; c.fillText("your message", 150, 622);
+          c.font = SANS(46); c.fillStyle = "#e2e8f0"; c.textAlign = "left"; c.fillText("a token you send", 150, 622);
           c.font = SANS(90); c.textAlign = "right"; c.fillText("1×", 890, 640);
           c.restore();
           if (kk > 0) {
             c.save(); c.globalAlpha = clamp(kk * 2);
-            [["its reply", "Gemini 2.5 Flash", "8×", "$0.30 → $2.50"], ["its reply", "GPT-4.1 mini", "4×", "$0.40 → $1.60"]].forEach(([a2, m, x2, pr], q) => {
+            [["a token it writes", "Gemini 2.5 Flash", "8×", "$0.30 → $2.50"], ["a token it writes", "GPT-4.1 mini", "4×", "$0.40 → $1.60"]].forEach(([a2, m, x2, pr], q) => {
               const yy = 720 + q * 200, kq = seg(f, c1 - 2 + q * 8, c1 + 6 + q * 8);
               if (kq <= 0) return;
               c.save(); c.globalAlpha = clamp(kq * 2);
@@ -343,7 +352,7 @@ const StSpeed: React.FC<SP> = ({ s }) => {
             });
             c.restore();
           }
-          if (f >= c1 + 20) tag(c, "about 1-2 paise a reply", W / 2, 1240, 56, "#dcfce7", "#14532d", -0.02, seg(f, c1 + 20, c1 + 28));
+          if (f >= c1 + 20) tag(c, "1,000 replies: about ₹10-16", W / 2, 1240, 56, "#dcfce7", "#14532d", -0.02, seg(f, c1 + 20, c1 + 28));
           c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("OpenAI and Google price lists, Oct 2026", W / 2, 1380);
         } else if (b.shot === "screen") {
           // ---------- our test: short replies ----------
@@ -352,30 +361,24 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           const c1 = cu(1, 0.5);
           c.font = SANS(44); c.fillStyle = INK; c.textAlign = "center"; c.fillText("OUR REAL TEST", W / 2, 378);
           c.font = SANS(30, 600); c.fillStyle = "#475569"; c.fillText("the 4.7 GB brain · 4-core laptop · offline", W / 2, 420);
-          row(c, 540, "before", "58 tokens · 17.6 s", RED, seg(f, ln.from, ln.from + 8), "#fee2e2");
-          if (f >= ln.from + 4) {
-            c.save(); c.globalAlpha = seg(f, ln.from + 4, ln.from + 10);
-            c.fillStyle = "#e0e7ff"; rrect(c, 160, 610, 760, 76, 18); c.fill();
-            c.font = SANS(38); c.fillStyle = "#3730a3"; c.textAlign = "center"; c.fillText("+ \"Reply in 2 short lines.\"", W / 2, 662);
+          row(c, 580, "before", "58 tokens · 17.6 s", RED, seg(f, ln.from, ln.from + 8), "#fee2e2");
+          row(c, 760, "2 short lines", "35 tokens · 11.7 s", GREEN, seg(f, c1 - 2, c1 + 6), "#dcfce7");
+          if (f >= c1 + 14) {   // render review: this line was too small to read
+            c.save(); c.globalAlpha = seg(f, c1 + 14, c1 + 22);
+            c.fillStyle = "#fef3c7"; rrect(c, 130, 900, 820, 200, 24); c.fill();
+            c.font = SANS(52); c.fillStyle = INK; c.textAlign = "center";
+            c.fillText("still slow on a laptop", W / 2, 978);
+            c.fillText("online: about 1 s", W / 2, 1056);
             c.restore();
           }
-          if (f >= ln.from + 8) {
-            c.save(); c.globalAlpha = seg(f, ln.from + 8, ln.from + 16);
-            c.fillStyle = "#dcf8c6"; rrect(c, 160, 720, 760, 210, 24); c.fill();
-            c.font = SANS(34, 500); c.fillStyle = INK; c.textAlign = "left"; SHORT.forEach((t2, q) => c.fillText(t2, 190, 782 + q * 52));
+          if (f >= c1 + 24) {
+            c.save(); c.globalAlpha = seg(f, c1 + 24, c1 + 32);
+            c.font = SANS(32, 600); c.fillStyle = "#334155"; c.textAlign = "center";
+            c.fillText("a small 1.1 GB brain: 2.2 s,", W / 2, 1170);
+            c.fillText("but it dropped the quantities", W / 2, 1214);
             c.restore();
           }
-          row(c, 1060, "after", "35 tokens · 11.7 s", GREEN, seg(f, c1 - 2, c1 + 6), "#dcfce7");
-          row(c, 1190, "online bill", "40% fewer tokens", INK, seg(f, c1 + 10, c1 + 18), "#fef3c7");
-          if (f >= c1 + 22) {
-            c.save(); c.globalAlpha = seg(f, c1 + 22, c1 + 30);
-            c.fillStyle = "#e2e8f0"; rrect(c, 130, 1272, 820, 104, 20); c.fill();
-            c.font = SANS(30, 600); c.fillStyle = INK; c.textAlign = "center";
-            c.fillText("still slow here: the small 1.5B brain took 2.2 s,", W / 2, 1314);
-            c.fillText("but it dropped the quantities · online: about 1 s", W / 2, 1356);
-            c.restore();
-          }
-          c.font = SANS(26, 600); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("Qwen2.5 7B, 4-bit · replies word for word", W / 2, 1430);
+          c.font = SANS(26, 600); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("the 4.7 GB brain = Qwen2.5 7B, squeezed (EP37) · offline", W / 2, 1430);
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
