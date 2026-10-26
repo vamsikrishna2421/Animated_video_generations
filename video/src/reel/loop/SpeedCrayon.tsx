@@ -189,23 +189,23 @@ const StSpeed: React.FC<SP> = ({ s }) => {
     const insert = !["wide", "ravi", "hook"].includes(b.shot);
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") {
-      sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={at + 1} src={CLAP} vol={0.55} />,
-        <Sfx key={k("z")} at={at + 1} src="reel/sfx_buzz.wav" vol={0.45} />);
+      sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.45} />,
+        <Sfx key={k("z")} at={0} src="reel/sfx_buzz.wav" vol={0.3} />);
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 14 + q * 30} src="audio/sfx_tick.wav" vol={0.5} />));   // the stopwatch
     }
-    if (b.prop === "clock") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.25} />);
-    if (b.prop === "tokens") [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={at + 4 + q * 9} src="audio/sfx_pop.wav" vol={0.16} />));
-    if (b.prop === "bags") for (let q = 0; at + 6 + q * 30 / TOK_S < nx - 4; q++) sfx.push(<Sfx key={k("b" + q)} at={at + 6 + Math.round(q * 30 / TOK_S)} src="audio/gag_bonk.wav" vol={0.14} />);   // one per token: 4 a second
-    if (b.prop === "cloud") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.5) + 2} src="audio/sfx_chaching.wav" vol={0.32} />);
+    if (b.prop === "clock") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 8} src="audio/gag_ding.wav" vol={0.22} />);
+    if (b.prop === "tokens") [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={at + 4 + q * 9} src="audio/sfx_pop.wav" vol={0.1} />));
+    if (b.prop === "bags") for (let q = 0; at + 6 + q * 30 / TOK_S < nx - 4; q++) sfx.push(<Sfx key={k("b" + q)} at={at + 6 + Math.round(q * 30 / TOK_S)} src="audio/gag_bonk.wav" vol={0.1} />);   // one per token: 4 a second
+    if (b.prop === "cloud") sfx.push(<Sfx key={k("c")} at={l.from + l.frames + 1} src="audio/sfx_chaching.wav" vol={0.24} />);
     if (b.prop === "quiz") {   // render review: nothing silent before "Ninety-two": the ticks and riser stop on the count's "1"
       [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - 76 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
       sfx.push(<Sfx key={k("r")} at={nx - 66} src="reel/sfx_riser.wav" vol={0.45} />);
     }
-    if (b.prop === "price") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.5)} src="audio/sfx_chaching.wav" vol={0.3} />);
+    if (b.prop === "price") sfx.push(<Sfx key={k("c")} at={l.from + l.frames + 1} src="audio/sfx_chaching.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 7)} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 8)} src="reel/sfx_boom.wav" vol={0.5} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) + 2} src="audio/sfx_success.wav" vol={0.32} />);
-    if (b.prop === "history") sfx.push(<Sfx key={k("s")} at={at + 4} src="audio/sfx_whoosh.wav" vol={0.25} />, <Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.4} />);
-    if (b.prop === "wait") for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 4 + q * 12} src="audio/sfx_tick.wav" vol={0.35} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("s")} at={l.from + l.frames + 1} src="audio/sfx_success.wav" vol={0.24} />);
+    if (b.prop === "history") sfx.push(<Sfx key={k("s")} at={at - 8} src="audio/sfx_whoosh.wav" vol={0.22} />, <Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.4} />);
+    if (b.prop === "wait") for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 4 + q * 12} src="audio/sfx_tick.wav" vol={0.2} />);
     if (b.prop === "loop") {   // a hit just after "Ninety-two seconds" (on silence), the 1:32 held, then the chat slams back in = frame 1
       const end = l.from + l.frames, slam = end + HOLD;
       sfx.push(<Sfx key={k("n")} at={end + 1} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("m")} at={end + 1} src={CLAP} vol={0.55} />,
