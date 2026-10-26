@@ -26,20 +26,20 @@ import ep33.voice_rec as vr  # noqa: E402
 
 LIGHT_EN = {2, 6, 10, 12, 16}   # the AI's numbers through the lighter phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("seventeen", "17"), ("seconds", "second"), ("reply",), ("walked", "walk")],
+MUST = {"en": {1: [("seventeen", "17"), ("seconds", "second"), ("reply",), ("cancelled", "canceled", "cancel")],
                2: [("four", "4"), ("read",), ("order",), ("thirteen", "13"), ("write",), ("reply",)],
                3: [("thirteen", "13"), ("seconds", "second"), ("write",)],
-               4: [("token", "tokens"), ("time",), ("piece",), ("word",)],
+               4: [("token", "tokens"), ("time",), ("word",), ("piece",)],
                5: [("pieces", "piece"), ("faster",)],
-               6: [("every",), ("token",), ("five", "5"), ("bags", "bag"), ("laptop",), ("four", "4"), ("second",)],
+               6: [("every",), ("token",), ("five", "5"), ("bags", "bag"), ("laptop",), ("four", "4"), ("tokens", "token")],
                7: [("online",), ("replies", "reply"), ("one", "1"), ("second",)],
-               8: [("graphics",), ("cards", "card"), ("bills", "bill"), ("every",), ("token",)],
-               9: [("bills", "bill"), ("words", "word"), ("its",)],
-               10: [("write",), ("four", "4"), ("eight", "8"), ("times",), ("more",)],
+               8: [("graphics",), ("cards", "card"), ("hundred", "200"), ("online",), ("token",), ("money",)],
+               9: [("money",), ("message",), ("reply",)],
+               10: [("both",), ("reply",), ("four", "4"), ("eight", "8"), ("times",), ("more",)],
                11: [("write",), ("less",), ("two", "2"), ("short",), ("lines", "line")],
-               12: [("thirty", "35"), ("tokens", "token"), ("twelve", "12"), ("seconds", "second"), ("smaller",), ("bill",)],
+               12: [("thirty", "35"), ("tokens", "token"), ("twelve", "12"), ("seconds", "second"), ("online",), ("smaller",), ("bill",)],
                13: [("better",), ("old",), ("chats", "chat"), ("first",), ("know",)],
-               14: [("whole",), ("month",), ("first",), ("word",)],
+               14: [("whole",), ("month",), ("read",), ("first",), ("word",)],
                15: [("how",), ("long",)],
                16: [("ninety", "92"), ("two", "92"), ("seconds", "second")]},
         "te": {}}   # Telugu as the judge writes it (Devanagari): filled from the first takes
@@ -100,10 +100,11 @@ def level(path, under=4.0, cap=12.0):
 
 
 # English lines whose judge text needs digits (Whisper writes numbers as digits)
-JUDGE_TEXT = {1: "17 seconds for one reply?! She walked off!", 2: "4 seconds to read the order. 13 to write the reply.",
-              3: "13 seconds to write that?!", 6: "For every token, I lift all 5 bags. On this laptop: 4 a second.",
-              7: "The online AI replies in 1 second!", 10: "The ones I write. 4 to 8 times more.", 11: "Then write less! 2 short lines!",
-              12: "35 tokens. 12 seconds, and a smaller bill.", 16: "92 seconds."}
+JUDGE_TEXT = {1: "17 seconds for one reply?! He cancelled!", 2: "4 seconds to read his order. 13 to write the reply.",
+              3: "13 seconds to write that?!", 6: "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
+              7: "The online AI replies in 1 second!", 8: "Big graphics cards: 200 tokens a second. But online, every token costs money.",
+              10: "Both. The reply costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
+              12: "35 tokens. 12 seconds here. Online, a smaller bill.", 16: "92 seconds."}
 
 
 def judge(path, text, lang, n):

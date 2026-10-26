@@ -1,0 +1,38 @@
+UPLOAD: 041 (YouTube Shorts: upload the same vertical files as Instagram, 041_ep39_17_second_reply.mp4 and telugu_page/041_ep39_insta_te.mp4; no landscape version)
+
+########## ENGLISH ##########
+=== TITLE ===
+Why Is AI Slow? 17-Second Reply vs 1 Second: Tokens, Latency, Cost (Tested) | AI From Scratch Ep 39 #Shorts
+
+=== DESCRIPTION ===
+Ravi anna's shop AI takes 17 seconds to answer a WhatsApp order, and the customer cancels. Two clocks: first the AI reads the whole message (the wait before the first word: latency), then it writes one token at a time (a token is a word or a piece of one: "sun·flower" is 2 tokens, "302" is 3). For every token, our laptop brain lifts its whole brain from memory: 4 tokens a second.
+
+Our real test, internet cut, on a 4-core computer with no graphics card (Qwen2.5 7B, 4-bit): 4.3 s to read the order, 17.6 s for the 58-token reply. With "Reply in 2 short lines.": 35 tokens, 11.7 s. With a month of old chat in front (1,788 tokens): 92 s before the first word.
+
+Online AIs on big graphics cards are far faster (Gemini 2.5 Flash: about 200 tokens a second, Artificial Analysis), but a bot pays for every token, and the reply's tokens usually cost 4-8x the message's (OpenAI and Google price lists): about 1-2 paise a reply.
+
+What it means for you: ask for short replies; don't make the AI read what it doesn't need (a 2-line note about a customer, not the whole chat; a new chat for a new topic). Thinking models also bill their hidden thinking. Telugu takes more tokens than English for the same message (69 vs 37 on GPT-4o's tokenizer).
+
+How we tested (run by us): Qwen's own GGUF files, llama.cpp, greedy, streamed token by token, median of 3 runs, every run offline.
+Sources: OpenAI API pricing; Google Gemini API pricing; Artificial Analysis (Gemini 2.5 Flash); OpenAI "Hello GPT-4o" (tokenizer).
+
+Next: EP40, benchmarks: how AI models are compared.
+
+=== TAGS ===
+AI speed, latency, tokens, cost per token, AI pricing, ChatGPT slow, time to first token, tokens per second, local AI, Qwen2.5, llama.cpp, WhatsApp bot, AI for business, AI for beginners, AI From Scratch
+
+########## TELUGU: telugu_page/041_ep39_insta_te.mp4 (YouTube Shorts, same vertical file) ##########
+=== TITLE ===
+AI Enduku Slow? 17 Seconds Reply: Tokens, Latency, Cost (Test) | AI From Scratch Ep 39 Telugu #Shorts
+
+=== DESCRIPTION ===
+Ravi anna shop AI oka WhatsApp order ki reply ivvadaaniki 17 seconds teeskundi, customer cancel chesaaru. Rendu clocks: mundu AI message motham chaduvutundi (modati maata mundu wait: latency), taruvaata okko token raastundi (token ante oka maata leda maatalo mukka: "sun·flower" 2 tokens, "302" 3). Maa laptop brain prati token ki brain motham memory nunchi etthutundi: second ki 4 tokens.
+
+Maa real test, internet cut chesi, 4-core computer, graphics card ledu (Qwen2.5 7B, 4-bit): order chadavadaaniki 4.3 s, 58 tokens reply ki 17.6 s. "Reply in 2 short lines." tho 35 tokens, 11.7 s. Mundu nela paata chat (1,788 tokens) pedite modati maata ki 92 s.
+
+Online AI lu pedda graphics cards tho chaala fast (Gemini 2.5 Flash: second ki daadaapu 200 tokens, Artificial Analysis), kaani bot prati token ki dabbulu kadutundi, reply tokens saadhaarananga message tokens kante 4-8 retlu ekkuva: oka reply ki 1-2 paise.
+
+Meeku: chinna replies adagandi; avasaram leni daanni chadivinchakandi (customer gurinchi 2 lines note, kotha topic ki kotha chat). Telugu ki English kante ekkuva tokens (GPT-4o tokenizer lo 69 vs 37).
+Test vivaraalu, sources: English description lo unnaayi.
+
+Next: EP40, benchmarks: AI models ni ela compare chestaaru.

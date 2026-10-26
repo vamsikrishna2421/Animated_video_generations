@@ -1,0 +1,35 @@
+UPLOAD: 041 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/041_ep39_insta_te.mp4  (teaching skit, LENGTH_TE s, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/041_ep39_insta_te_ig.mp4, about 22 MB). It loops: "tombhai rendu secanlu." taruvaata customer cancel chesina chat malli vastundi, replay "okka reply ki padihedu secanlaa?!" tho modalavutundi.
+
+=== CAPTION ===
+Okka WhatsApp reply ki 17 seconds. Customer order cancel chesaaru.
+
+AI From Scratch Episode 39: speed, latency, cost per token
+- Prati AI reply tokens tho tayaaravutundi: oka maata, leda maatalo oka mukka ("sun·flower" 2 tokens, "302" 3 tokens)
+- Rendu clocks: mundu AI mee message motham chaduvutundi (modati maata mundu wait: latency), taruvaata okko token raastundi
+- Maa real test, internet cut chesi, 4-core computer, graphics card ledu, EP37-38 lo compress chesina 7B brain: order chadavadaaniki 4.3 s, taruvaata second ki 4.3 tokens: 58 tokens reply ki 17.6 s
+- Online AI lu pedda graphics cards meeda nadustaayi: Gemini 2.5 Flash second ki daadaapu 200 tokens raastundi (Artificial Analysis). Kaani shop bot prati token ki dabbulu kadutundi, reply tokens saadhaarananga message tokens kante 4-8 retlu ekkuva (OpenAI, Google price lists): oka reply ki daadaapu 1-2 paise
+
+Meeku idi ante:
+1. Fast (online lo takkuva kharchu) replies kaavaalaa? Chinna replies adagandi: "Reply in 2 short lines." Maa test: 58 → 35 tokens, 17.6 → 11.7 s
+2. Avasaram leni daanni chadivinchakandi. Nela motham paata chat (1,788 tokens) valla maa AI modati maata ki 92 s aagindi; online lo aa nela kosam prati reply ki malli dabbulu kadataaru. Regular customer gurtu undaalante 2 lines note ivvandi, motham chat kaadu
+3. ChatGPT lo: plans token lekkana bill cheyyavu, kaani pedda answers, pedda chats inkaa time teeskuntaayi. Kotha topic aa? Kotha chat
+4. Thinking models lopala aalochinchina tokens ni kooda output ga bill chestaayi
+5. Telugu ki ekkuva tokens: maa message Telugu lo 69 tokens, English lo 37 (GPT-4o tokenizer); maa chinna open model tokenizer lo 184 vs 41. Ekkuva tokens ante ekkuva time, ekkuva kharchu
+
+Next: EP40, AI models ni ela compare chestaaru: benchmarks.
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+Prati reply mundu nela motham paata chat: modati maata ki entha sepu? A) 4 seconds B) 30 seconds C) oka nimisham paine. Answer raakamunde comment cheyyandi. Mee "typing…" wait lo ekkuva sepu entha?
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AIFromScratch #LearnAI #Tokens #ChatGPT
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen sontha 4-bit GGUF files (Q4_K_M), Qwen2.5-7B-Instruct, 1.5B-Instruct, llama.cpp tho 4-core computer (server CPU, graphics card ledu), greedy, reply token token ga stream chesi, prati test 3 saarlu (median), prati run internet cut chesi. 7B: modati token 4.26 s, motham reply 17.62 s (58 tokens); "Reply in 2 short lines." tho 11.65 s (35 tokens); mundu nela paata chat (30 orders, 1,788 tokens) pedite modati token 91.83 s. Chinna 1.5B brain short reply ni 2.15 s lo raasindi, kaani quantities vadilesindi.
+"Shop ki online AI vaadaalaa?" Online chaala fast (ilaanti reply ki daadaapu okka second), Gemini 2.5 Flash leda GPT-4.1 mini rates lo oka reply ki 1-2 paise; mee customers messages aa company ki veltaayi. Laptop lo prati reply free, private, kaani slow. Edainaa: chinna replies.
+Prices, million tokens ki, input → output (Oct 26, 2026): Gemini 2.5 Flash $0.30 → $2.50; GPT-4.1 mini $0.40 → $1.60; GPT-5 mini $0.25 → $2.00 (thinking model). Speed: Artificial Analysis, Google API lo Gemini 2.5 Flash, second ki 198 tokens, modati token 0.37 s.
+
+=== COVER ===
+Frame 1: Ravi anna counter daggara chetulu etti, paina WhatsApp chat: Suresh order, red stopwatch 0:17 tho "Shop AI is typing…", Suresh taruvaati message "Never mind. I'll order from the other shop." (English visuals)

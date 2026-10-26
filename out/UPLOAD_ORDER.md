@@ -45,7 +45,7 @@ Already posted: `out/posted/`.
 | 038 | ep36 | The Diwali Rush (EP36: GPUs and AI chips, tested; skit, AI voices) | ready |
 | 039 | ep37 | The Squeezed Brain (EP37: Quantization, tested; skit, AI voices) | ready |
 | 040 | ep38 | Not Enough Memory? RAM vs Storage (EP38: Running AI on Your Laptop, tested; skit, AI voices) | ready |
-| 041 | ep39 | Where AI Costs Come From | ready |
+| 041 | ep39 | The 17-Second Reply (EP39: speed, latency and cost per token, tested; skit, AI voices) | in production |
 | 042 | ep40 | AI Benchmarks: How Models Are Tested | ready |
 | 043 | q04 | Quiz #4: Episodes 31–40 | ready |
 | 044 | ep41 | How to Choose the Right AI Model | ready |

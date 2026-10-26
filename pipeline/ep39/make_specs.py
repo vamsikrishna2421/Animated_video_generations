@@ -14,44 +14,45 @@ R = ROOT / "reels"
 # ("clock": the READ/WRITE bar, "tokens": the token chips, "bags": the counter, "cloud": the online AI, "price": the
 # price list, "screen": the phone's test card, "wait": the READ bar growing). prop: what the line brings on (SpeedCrayon.tsx).
 LINES = {
-    1: ("ravi", "wide", "hook", "Seventeen seconds for one reply?! [1] She walked off!", "ఒక్క రిప్లైకి పదిహేడు సెకన్లా?! [1] ఆవిడ వెళ్ళిపోయింది!"),
-    2: ("ai", "clock", "clock", "Four seconds to read the order. [1] Thirteen to write the reply.",
+    1: ("ravi", "wide", "hook", "Seventeen seconds for one reply?! [1] He cancelled!", "ఒక్క రిప్లైకి పదిహేడు సెకన్లా?! [1] ఆర్డర్ క్యాన్సిల్ చేశారు!"),
+    2: ("ai", "clock", "clock", "Four seconds to read his order. [1] Thirteen to write the reply.",
         "ఆర్డర్ చదవడానికి నాలుగు సెకన్లు. | [1] రిప్లై రాయడానికి పదమూడు."),
     3: ("ravi", "ravi", "reply", "Thirteen seconds to write that?!", "అది రాయడానికి పదమూడు సెకన్లా?!"),
-    4: ("ai", "tokens", "tokens", "I write one token at a time, anna. [1] A token is a piece of a word.",
-        "నేను ఒక్కో టోకెన్ రాస్తానండి. | [1] టోకెన్ అంటే మాటలో ఒక ముక్క."),
+    4: ("ai", "tokens", "tokens", "I write one token at a time, anna. [1] A word, or a piece of one.",
+        "నేను ఒక్కో టోకెన్ రాస్తానండి. | [1] ఒక మాట, లేదా మాటలో ఒక ముక్క."),
     5: ("ravi", "ravi", "faster", "Pieces?! [1] Write faster!", "ముక్కలా?! [1] స్పీడ్ గా రాయి!"),
-    6: ("ai", "bags", "bags", "For every token, I lift all five bags. [1] On this laptop: four a second.",
-        "ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా. | [1] ఈ ల్యాప్‌టాప్ లో సెకనుకు నాలుగు."),
-    7: ("ravi", "ravi", "online", "The online AI replies in one second!", "ఆన్‌లైన్ ఏఐ ఒక్క సెకనులో రిప్లై ఇస్తుంది!"),
-    8: ("ai", "cloud", "cloud", "Big graphics cards. [1] And it bills you for every token.",
-        "పెద్ద గ్రాఫిక్స్ కార్డులు. | [1] కానీ ప్రతి టోకెన్ కీ బిల్లు వేస్తుంది."),
-    9: ("ravi", "ravi", "quiz", "Bills?! [1] For my words, or its words?", "బిల్లా?! [1] నా మాటలకా, దాని మాటలకా?"),
-    10: ("ai", "price", "price", "The ones I write. [1] Four to eight times more.", "నేను రాసేవాటికి. | [1] నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ."),
+    6: ("ai", "bags", "bags", "For every token, I lift all five bags. [1] On this laptop: four tokens a second.",
+        "ప్రతి టోకెన్ కీ ఐదు బస్తాలూ ఎత్తుతా. | [1] ఈ ల్యాప్టాప్ లో సెకనుకు నాలుగు టోకెన్లు."),   # no zero-width joiners: Parler trips on them
+    7: ("ravi", "ravi", "online", "The online AI replies in one second!", "ఆన్లైన్ ఏయ్ ఐ ఒక్క సెకనులో రిప్లై ఇస్తుంది!"),   # Prakash babbles "ఏఐ"
+    8: ("ai", "cloud", "cloud", "Big graphics cards: two hundred tokens a second. [1] But online, every token costs money.",
+        "పెద్ద గ్రాఫిక్స్ కార్డులు, సెకనుకు రెండొందల టోకెన్లు. | [1] కానీ ఆన్లైన్ లో ప్రతి టోకెన్ కీ డబ్బులు."),
+    9: ("ravi", "ravi", "money", "Money?! [1] For my message, or its reply?", "డబ్బులా?! [1] నా మెసేజ్ కా, దాని రిప్లై కా?"),
+    10: ("ai", "price", "price", "Both. [1] The reply costs four to eight times more.", "రెండిటికీ. | [1] రిప్లైకి నాలుగు నుంచి ఎనిమిది రెట్లు ఎక్కువ."),
     11: ("ravi", "wide", "rule", "Then write less! [1] Two short lines!", "అయితే తక్కువ రాయి! [1] రెండు చిన్న లైన్లు!"),
-    12: ("ai", "screen", "test", "Thirty-five tokens. [1] Twelve seconds, and a smaller bill.",
-         "ముప్పై ఐదు టోకెన్లు. | [1] పన్నెండు సెకన్లు, బిల్లు కూడా తక్కువ."),
-    13: ("ravi", "wide", "history", "Better! [1] Now read all her old chats first, so you know her!",
-         "బాగుంది! | [1] ఇప్పుడు ఆవిడ పాత చాట్లన్నీ ముందు చదువు, ఆవిడ గురించి తెలుస్తుంది!"),
-    14: ("ai", "wait", "wait", "Then I read the whole month [1] before my first word.", "అయితే నెల మొత్తం చదివాకే [1] నా మొదటి మాట."),
-    15: ("ravi", "wait", "howlong", "How long?!", "ఎంతసేపు?!"),
+    12: ("ai", "screen", "test", "Thirty-five tokens. [1] Twelve seconds here. Online, a smaller bill.",
+         "ముప్పై ఐదు టోకెన్లు. | [1] ఇక్కడ పన్నెండు సెకన్లు, ఆన్లైన్ లో బిల్లు తక్కువ."),
+    13: ("ravi", "wide", "history", "Better! [1] Now read all his old chats first, so you know him!",
+         "బాగుంది! [1] ఇప్పుడు ఆయన పాత మెసేజ్లన్నీ ముందు చదువు, ఆయన గురించి తెలుస్తుంది!"),
+    14: ("ai", "wait", "wait", "A whole month? [1] I read it all before my first word.", "నెల మొత్తమా? | [1] అదంతా చదివాకే నా మొదటి మాట."),
+    15: ("ravi", "wait", "quiz", "How long?!", "ఎంతసేపు?!"),   # the quiz holds after it
     16: ("ai", "wait", "loop", "Ninety-two seconds.", "తొంభై రెండు సెకన్లు."),   # into frame 1 (loops)
 }
 TTS_EN = {}   # English spoken forms
-SHOW = {   # captions with digits
-    1: "17 seconds for one reply?! She walked off!", 2: "4 seconds to read the order. 13 to write the reply.",
-    3: "13 seconds to write that?!", 6: "For every token, I lift all 5 bags. On this laptop: 4 a second.",
-    7: "The online AI replies in 1 second!", 10: "The ones I write. 4 to 8 times more.", 11: "Then write less! 2 short lines!",
-    12: "35 tokens. 12 seconds, and a smaller bill.", 16: "92 seconds.",
+SHOW = {   # captions with digits; "..." keeps a key number off screen until it is said
+    1: "17 seconds for one reply?! He cancelled!", 2: "4 seconds to read his order... 13 to write the reply.",
+    3: "13 seconds to write that?!", 6: "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
+    7: "The online AI replies in 1 second!", 8: "Big graphics cards: 200 tokens a second. But online, every token costs money.",
+    10: "Both... The reply costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
+    12: "35 tokens... 12 seconds here. Online, a smaller bill.", 16: "92 seconds.",
 }
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
-    1: "17 seconds for one reply?! She left!", 2: "4 seconds to read the order. 13 to write the reply.", 3: "13 seconds to write that?!",
-    4: "I write one token at a time. A token is a piece of a word.", 5: "Pieces?! Write fast!",
-    6: "For every token I lift all 5 sacks. On this laptop, 4 a second.", 7: "The online AI replies in 1 second!",
-    8: "Big graphics cards. But it bills you for every token.", 9: "A bill?! For my words, or its words?",
-    10: "For the ones I write. 4 to 8 times more.", 11: "Then write less! 2 short lines!", 12: "35 tokens. 12 seconds, and a smaller bill.",
-    13: "Good! Now first read all her old chats, you'll know her!", 14: "Then only after reading the whole month, my first word.",
-    15: "How long?!", 16: "92 seconds.",
+    1: "17 seconds for one reply?! The order got cancelled!", 2: "4 seconds to read the order... 13 to write the reply.",
+    3: "13 seconds to write that?!", 4: "I write one token at a time. One word, or a piece of a word.", 5: "Pieces?! Write fast!",
+    6: "For every token I lift all 5 sacks. On this laptop, 4 tokens a second.", 7: "The online AI replies in 1 second!",
+    8: "Big graphics cards, 200 tokens a second. But online, every token costs money.", 9: "Money?! For my message, or its reply?",
+    10: "For both... The reply costs 4 to 8 times more.", 11: "Then write less! 2 short lines!",
+    12: "35 tokens... Here 12 seconds, online a smaller bill.", 13: "Good! Now first read all his old messages, you'll know him!",
+    14: "The whole month? Only after reading it all, my first word.", 15: "How long?!", 16: "92 seconds.",
 }
 NOCAP = set()
 PAUSES = {}
@@ -59,15 +60,15 @@ TEMPO_EN = {"ravi": 1.15, "ai": 1.1}
 TEMPO_TE = {"ravi": 1.15, "ai": 1.1}
 TEMPO_LINE_TE = {}
 # Sound (CLAUDE.md arc): a hit, the error buzz and the stopwatch's ticks on frame 1; a ding as WRITE starts; pops as the
-# tokens land; a bonk on each lift of the bags; a cha-ching on the bill; the quiz's tick-tock 3-2-1 with a riser, the bed
-# out on the 1, the hit on the answer; a cha-ching on the price list; a snap on the rule; a success sting on our test; a
-# riser into the twist, the clock ticking while it reads, the bed out before "Ninety-two", the biggest hit as the card
-# slams back in (the loop). Only the last scene rises.
+# tokens land; a bonk on each token the bags lift (4 a second); a cha-ching on the bill; a drop before "four to eight" and
+# a cha-ching on the price list; a snap on the rule; a success sting on our test; a riser into the twist, the clock
+# ticking while it reads, the quiz's tick-tock 3-2-1 with a riser, the bed out on the 1, the hit on "Ninety-two", the
+# biggest hit as the chat slams back in (the loop). Only the last scene rises.
 SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 1.6, "tail": 0.1}),
-          ("s_b", (7, 8, 9, 10, 11, 12), {"lift": 0.8, "pre": 0.25, "boost": 1.3, "drop_pre": [[3, 0.05, 1.0]], "tail": 0.1}),   # the bed out on the quiz's "1", before the answer
+          ("s_b", (7, 8, 9, 10, 11, 12), {"lift": 0.8, "pre": 0.25, "boost": 1.3, "drop_at": [[3, "1", 0.3]], "tail": 0.1}),   # a drop before "four to eight"
           ("s_c", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.3, "outro": True, "boost": 1.4, "rise": 1.35,
-                                     "drop_pre": [[3, 0.05, 0.6]], "tail": 0.0})]   # the bed out before "Ninety-two", the slam after it
-GAP = {1: 0.25, 2: 0.3, 4: 0.3, 6: 0.3, 8: 0.25, 9: 2.45, 10: 0.4, 11: 0.5, 12: 0.7, 13: 0.3, 14: 0.2, 15: 0.5}   # 9: the quiz holds for its 3-2-1; 11: the rule chip; 12: the test card
+                                     "drop_pre": [[3, 0.05, 1.0]], "tail": 0.0})]   # the bed out on the quiz's "1", before "Ninety-two"; the slam after it
+GAP = {1: 0.25, 2: 0.3, 4: 0.3, 6: 0.3, 8: 0.25, 10: 0.6, 11: 0.5, 12: 0.7, 13: 0.3, 14: 0.2, 15: 2.45}   # 10: room to read the price chip; 11: the rule chip; 12: the test card; 15: the quiz holds for its 3-2-1
 GAIN = {}
 GAIN_TE = {}
 FLAGS_TE = {}

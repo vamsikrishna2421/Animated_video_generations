@@ -1,21 +1,23 @@
 import React from "react";
+import { Audio, Sequence, staticFile } from "remotion";
 import { Ctx, rng, stroke, circlePts, clamp, easeOut, seg } from "./crayon";
 import { COL } from "./scenes";
 import { CrayonCanvas } from "./CrayonCanvas";
 import { rrect, tag, Sfx } from "./DistillCrayon";
 import { INK } from "./WordsCrayon";
-import { shop, counter, ravi, phone, cueAt, WALL, HAIR, Mood, Arms } from "./SkitCrayon";
+import { shop, counter, ravi, phone, cueAt, WALL, Mood, Arms } from "./SkitCrayon";
 import { bigPhone } from "./StockCrayon";
 import { bubble, laptop } from "./OwnCrayon";
 import { gbSack, ramCounter, slotX, ruleChip, row } from "./LocalCrayon";
 import { gpuCard } from "./GpuCrayon";
 
-// EP39 "The 17-second reply" (series/scripts/ep39_17_second_reply.md): an aunty walks out while the shop AI is still
-// "typing…" (17 s). Two clocks: it reads the order (4 s), then writes one token (a piece of a word) at a time, and for
-// every token it lifts all five bags of its brain (EP38): 4 a second on the laptop. Online AIs on big graphics cards
-// write 100+ a second but bill every token, and the tokens they write cost 4-8x the tokens they read (the quiz). Rescue:
-// "Reply in 2 short lines." (35 tokens, 11.7 s). Twist: a month of old chat read before every reply: the first word
-// waits 92 s (latency), the aunty walks out again, the loop. Numbers: our test (series/scripts/ep39_demo).
+// EP39 "The 17-second reply" (series/scripts/ep39_17_second_reply.md): a WhatsApp customer cancels while the shop AI is
+// still "typing…" (17 s). Two clocks: it reads the order (4 s: the wait before the first word, latency), then writes one
+// token (a word or a piece of one) at a time, and for every token it lifts all five bags of its brain (EP38): 4 a second
+// on the laptop. Online AIs on big graphics cards write about 200 a second, but every token costs money, the reply's 4-8x
+// the message's. Rescue: "Reply in 2 short lines." (35 tokens, 11.7 s). Twist: a month of old chat read before every
+// reply: the quiz, then "Ninety-two seconds" before the first word; he cancels again, the loop. Numbers: our test
+// (series/scripts/ep39_demo), the OpenAI and Google price lists, Artificial Analysis.
 type Word = { w: string; from: number; to: number };
 type Line = { from: number; frames: number; words?: Word[]; cues?: Record<string, number> };
 type Beat = { who: "ravi" | "ai"; shot: string; prop: string; n: number };
@@ -23,12 +25,13 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
-  wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.5, x: 500, y: 720 }, hook: { z: 1.0, x: 540, y: 640 },   // hook: frame 1 and the loop's end
+  wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.5, x: 500, y: 720 }, hook: { z: 1.0, x: 540, y: 600 },   // hook: frame 1 and the loop's end
 };
+const CLAP = "reel/creative09v1/clap.wav";   // bright clap over the booms (phone speakers barely play 30-60 Hz)
 const GREEN = "#16a34a", RED = "#dc2626", LILAC = "#c4b5fd", ORANGE = "#f97316", GREY = "#94a3b8";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 // our test (series/scripts/ep39_demo/7B.json): seconds to the first token, whole reply
-const T = { read: 4.26, whole: 17.62, shortWhole: 11.65, histRead: 91.83, histWhole: 101.55 };
+const T = { read: 4.26, whole: 17.62, histRead: 91.83 };
 const TOK_S = 4.27;   // writing speed, tokens a second
 // the 7B's reply, split by its own tokenizer (58 tokens; "↵" = a line break, "␣" = a space token)
 const TOKENS = ["Sure", ",", " Anna", "!", " Here", "'s", " your", " order", ":↵↵", "-", "␣", "2", " kg", " rice", "↵", "-", "␣", "1", " litre",
@@ -58,41 +61,29 @@ const stopwatch = (c: Ctx, x: number, y: number, R: number, t: number, r: () => 
   c.fillText(`${m}:${String(sec).padStart(2, "0")}`, 0, R * 0.5);
   c.restore();
 };
-// frame 1's WhatsApp card (screen space, y 225-625): her order, "Shop AI is typing…", the stopwatch
+// frame 1's WhatsApp card (screen space, y 225-745): his order, "Shop AI is typing…" with the stopwatch, "Never mind…"
 const waCard = (c: Ctx, f: number, t: number, k: number, r: () => number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
-  const x = 90, y = 225, w = 860, h = 400;
+  const x = 90, y = 225, w = 860, h = 520;
   c.fillStyle = "rgba(4,8,40,0.35)"; rrect(c, x + 10, y + 12, w, h, 28); c.fill();
   c.fillStyle = "#ece5dd"; rrect(c, x, y, w, h, 28); c.fill();
   c.fillStyle = "#075e54"; rrect(c, x, y, w, 80, 28); c.fill(); c.fillRect(x, y + 50, w, 30);
-  c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Lakshmi aunty", x + 34, y + 54);
-  c.font = SANS(28, 500); c.fillStyle = "#d1fae5"; c.fillText("flat 302", x + 340, y + 54);
-  c.fillStyle = "#fff"; rrect(c, x + 24, y + 100, 600, 150, 20); c.fill();
-  c.font = SANS(32, 500); c.fillStyle = INK; ORDER.forEach((t2, i) => c.fillText(t2, x + 46, y + 146 + i * 42));
-  c.fillStyle = "#dcf8c6"; rrect(c, x + 180, y + 280, 440, 86, 22); c.fill();
-  c.font = SANS(36, 600); c.fillStyle = "#166534"; c.fillText("Shop AI is typing", x + 206, y + 336);
+  c.font = SANS(40); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Suresh", x + 34, y + 54);
+  c.font = SANS(28, 500); c.fillStyle = "#d1fae5"; c.fillText("flat 302", x + 200, y + 54);
+  c.fillStyle = "#fff"; rrect(c, x + 24, y + 96, 600, 150, 20); c.fill();
+  c.font = SANS(32, 500); c.fillStyle = INK; ORDER.forEach((t2, i) => c.fillText(t2, x + 46, y + 142 + i * 42));
+  c.fillStyle = "#dcf8c6"; rrect(c, x + 150, y + 266, 470, 84, 22); c.fill();
+  c.font = SANS(36, 600); c.fillStyle = "#166534"; c.fillText("Shop AI is typing", x + 176, y + 321);
   [0, 1, 2].forEach((q) => {   // the typing dots
     const on = Math.floor(f / 6) % 3 === q;
-    c.beginPath(); c.arc(x + 532 + q * 24, y + 326, on ? 9 : 6, 0, 7); c.fillStyle = on ? "#166534" : "#86efac"; c.fill();
+    c.beginPath(); c.arc(x + 502 + q * 24, y + 311, on ? 9 : 6, 0, 7); c.fillStyle = on ? "#166534" : "#86efac"; c.fill();
   });
+  c.fillStyle = "#fff"; rrect(c, x + 24, y + 370, 640, 124, 20); c.fill();   // he gives up
+  c.font = SANS(36); c.fillStyle = "#991b1b"; c.fillText("Never mind. I'll order", x + 48, y + 420);
+  c.fillText("from the other shop.", x + 48, y + 470);
   c.restore();
-  stopwatch(c, 820, 470, 108, t, r);
-};
-// the aunty, seen from behind, in front of the counter (world space); `walk` 0..1 takes her off to the right
-const aunty = (c: Ctx, walk: number, f: number, r: () => number) => {
-  const x = 800 + easeOut(walk) * 620, y = 1150;
-  const bob = walk > 0 && walk < 1 ? Math.abs(Math.sin(f / 3.5)) * 10 : 0;
-  c.save(); c.translate(x, y - bob); c.rotate(walk > 0 && walk < 1 ? 0.05 : 0);
-  c.fillStyle = "#be185d"; rrect(c, -115, -10, 230, 360, 86); c.fill();   // the saree
-  c.fillStyle = "#facc15"; c.fillRect(-112, 300, 224, 20);   // its border
-  c.fillStyle = "#9d174d"; c.beginPath(); c.moveTo(-104, 10); c.lineTo(30, -6); c.lineTo(-56, 330); c.lineTo(-112, 300); c.closePath(); c.fill();   // the pallu
-  c.beginPath(); c.arc(0, -72, 68, 0, 7); c.fillStyle = HAIR; c.fill();   // her head from behind
-  c.beginPath(); c.arc(0, -34, 36, 0, 7); c.fillStyle = "#0b0907"; c.fill();   // the bun
-  for (let q = 0; q < 6; q++) { c.beginPath(); c.arc(-36 + q * 14, -6 + Math.sin(q * 1.3) * 5, 7, 0, 7); c.fillStyle = "#fff"; c.fill(); }   // jasmine
-  c.fillStyle = "#15803d"; rrect(c, 96, 120, 96, 116, 16); c.fill();   // her cloth bag
-  stroke(c, circlePts(144, 122, 30, 44, Math.PI, Math.PI * 2, 10), "#14532d", 7, r, { passes: 1 });
-  c.restore();
+  stopwatch(c, 830, 470, 104, t, r);
 };
 // one long bar for a reply's time: grey READ, then orange WRITE (screen space); scale = px per second
 const timeBar = (c: Ctx, y: number, read: number, write: number, scale: number, kr: number, kw: number) => {
@@ -137,8 +128,8 @@ const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: n
   c.save(); c.globalAlpha = k; c.translate(W / 2, 820); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
   c.fillStyle = "#fffdf5"; rrect(c, -470, -420, 940, 800, 30); c.fill();
   c.font = SANS(46); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("YOUR CALL", 0, -340);
-  c.font = SANS(64); c.fillStyle = INK; c.fillText("Which tokens cost more?", 0, -250);
-  [["A", "the ones it reads", "(your message)"], ["B", "the ones it writes", "(its reply)"], ["C", "same price", ""]].forEach(([l, t, s2], i) => {
+  c.font = SANS(58); c.fillStyle = INK; c.fillText("How long before its first word?", 0, -250);
+  [["A", "4 seconds", "(same as before)"], ["B", "30 seconds", ""], ["C", "over a minute", ""]].forEach(([l, t, s2], i) => {
     const yy = -190 + i * 150;
     c.fillStyle = "#e0e7ff"; rrect(c, -400, yy, 800, 128, 22); c.fill();
     c.font = SANS(62); c.fillStyle = INK; c.textAlign = "left"; c.fillText(l, -360, yy + 84);
@@ -197,35 +188,41 @@ const StSpeed: React.FC<SP> = ({ s }) => {
     const insert = !["wide", "ravi", "hook"].includes(b.shot);
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") {
-      sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("z")} at={at + 1} src="reel/sfx_buzz.wav" vol={0.45} />);
+      sfx.push(<Sfx key={k("a")} at={at + 1} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={at + 1} src={CLAP} vol={0.55} />,
+        <Sfx key={k("z")} at={at + 1} src="reel/sfx_buzz.wav" vol={0.45} />);
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 14 + q * 30} src="audio/sfx_tick.wav" vol={0.5} />));   // the stopwatch
     }
     if (b.prop === "clock") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.25} />);
     if (b.prop === "tokens") [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={at + 4 + q * 9} src="audio/sfx_pop.wav" vol={0.16} />));
-    if (b.prop === "bags") for (let q = 0; q < 6; q++) sfx.push(<Sfx key={k("b" + q)} at={at + 6 + Math.round(q * 30 / TOK_S)} src="audio/gag_bonk.wav" vol={0.16} />);
+    if (b.prop === "bags") for (let q = 0; at + 6 + q * 30 / TOK_S < nx - 4; q++) sfx.push(<Sfx key={k("b" + q)} at={at + 6 + Math.round(q * 30 / TOK_S)} src="audio/gag_bonk.wav" vol={0.14} />);   // one per token: 4 a second
     if (b.prop === "cloud") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.5) + 2} src="audio/sfx_chaching.wav" vol={0.32} />);
     if (b.prop === "quiz") {
       [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - 76 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
-      sfx.push(<Sfx key={k("r")} at={nx - 60} src="reel/sfx_riser.wav" vol={0.7} />, <Sfx key={k("h")} at={nx - 16} src="reel/sfx_boom.wav" vol={0.85} />,
-        <Sfx key={k("c")} at={nx - 16} src="audio/sfx_snap.wav" vol={0.5} />);   // half a second before the answer
+      sfx.push(<Sfx key={k("r")} at={nx - 60} src="reel/sfx_riser.wav" vol={0.5} />, <Sfx key={k("h")} at={nx - 16} src="reel/sfx_boom.wav" vol={0.85} />,
+        <Sfx key={k("c")} at={nx - 16} src={CLAP} vol={0.55} />);   // half a second before the answer
     }
     if (b.prop === "price") sfx.push(<Sfx key={k("c")} at={cue(i, 1, 0.5)} src="audio/sfx_chaching.wav" vol={0.3} />);
-    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 7)} src="audio/sfx_snap.wav" vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 8)} src="reel/sfx_boom.wav" vol={0.5} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 7)} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 8)} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) + 2} src="audio/sfx_success.wav" vol={0.32} />);
     if (b.prop === "history") sfx.push(<Sfx key={k("s")} at={at + 4} src="audio/sfx_whoosh.wav" vol={0.25} />, <Sfx key={k("r")} at={nx - 34} src="reel/sfx_riser.wav" vol={0.4} />);
     if (b.prop === "wait") for (let q = 0; q < 8; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 4 + q * 12} src="audio/sfx_tick.wav" vol={0.35} />);
-    if (b.prop === "howlong") sfx.push(<Sfx key={k("r")} at={at + 2} src="reel/sfx_riser.wav" vol={0.5} />);
     if (b.prop === "loop") {   // the number lands, then the card slams back in after the line (in the music's drop), into frame 1
       const slam = l.from + l.frames + 2;
-      sfx.push(<Sfx key={k("n")} at={at + 2} src="reel/sfx_boom.wav" vol={0.7} />,
-        <Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
-        <Sfx key={k("z")} at={slam} src="reel/sfx_buzz.wav" vol={0.5} />);
+      sfx.push(<Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
+        <Sfx key={k("c")} at={slam} src={CLAP} vol={0.6} />, <Sfx key={k("z")} at={slam} src="reel/sfx_buzz.wav" vol={0.5} />);
     }
   });
   const iWait = first("wait");
+  // the last scene builds: hats and claps on the bed's 88 BPM grid from its cut (on the beat) to the count's "1", ramping up
+  const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 30 : 0;
   return (
     <>
       {sfx}
+      {first("history") === 0 && percEnd > 30 && (
+        <Sequence from={0} durationInFrames={percEnd} layout="none">
+          <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(fr) => 0.14 + 0.26 * clamp(fr / percEnd)} />
+        </Sequence>
+      )}
       <CrayonCanvas draw={(c, W, H, f, boil) => {
         const i = idx(f), b = beats[i], ln = ls[i], n = b.n;
         const p = clamp((f - ln.from) / Math.max(1, ln.frames));
@@ -245,23 +242,28 @@ const StSpeed: React.FC<SP> = ({ s }) => {
             const tt = kr < 1 ? T.read * kr : T.read + (T.whole - T.read) * kw;
             stopwatch(c, W / 2, 600, 170, tt, r, false);
             timeBar(c, 900, T.read, T.whole - T.read, 860 / T.whole, kr, kw);
-            if (kr > 0) tag(c, "1 · read the order: 4 s", 330, 1130, 52, "#e2e8f0", INK, -0.02, seg(f, ln.from + 2, ln.from + 10));
+            if (kr > 0) {
+              tag(c, "1 · read the order: 4 s", 330, 1130, 52, "#e2e8f0", INK, -0.02, seg(f, ln.from + 2, ln.from + 10));
+              c.font = SANS(32, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText("LATENCY = the wait before the first word", 90, 870);
+            }
             if (kw > 0) tag(c, "2 · write the reply: 13 s", 620, 1250, 52, "#ffedd5", "#9a3412", 0.02, seg(f, c1, c1 + 8));
           } else {
-            // from the start of the wait beat to "Ninety-two": the READ bar grows to 92 s, the bar rescales to fit
+            // from the start of the wait beat to "Ninety-two": the grey READ bar (the wait before the first word) grows from
+            // 4 s to 92 s, the bar rescales to fit; the stopwatch times the first word only
             const a0 = ls[iWait].from, aEnd = ls[iWait + 2] ? ls[iWait + 2].from + 4 : a0 + 120;
             const grow = seg(f, a0 + 6, aEnd);
             const read = T.read + (T.histRead - T.read) * grow;
-            const write = T.histWhole - T.histRead;
-            const total = Math.max(T.whole, read + (b.prop === "loop" ? write : 0));
-            const tt = b.prop === "loop" ? T.histRead : read;
-            stopwatch(c, W / 2, 600, 170, tt, r, true);
-            timeBar(c, 900, read, b.prop === "loop" ? write : 0, 860 / total, 1, b.prop === "loop" ? seg(f, ln.from + 18, ln.from + 30) : 0);
-            if (b.prop === "wait") tag(c, "30 old orders: 1,788 tokens to read first", W / 2, 1130, 46, "#e2e8f0", INK, -0.02, seg(f, ln.from + 2, ln.from + 10));
-            if (b.prop === "howlong") tag(c, "still reading…", W / 2, 1130, 56, "#e2e8f0", INK, 0.02, seg(f, ln.from, ln.from + 6));
+            stopwatch(c, W / 2, 600, 170, read, r, true);
+            c.font = SANS(40); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("before the first word", W / 2, 830);
+            timeBar(c, 900, read, 0, 860 / Math.max(T.whole, read), 1, 0);
+            if (b.prop === "wait") tag(c, "30 old orders: 1,788 tokens, 20× the order", W / 2, 1130, 44, "#e2e8f0", INK, -0.02, seg(f, ln.from + 2, ln.from + 10));
+            if (b.prop === "quiz") tag(c, "still reading…", W / 2, 1130, 56, "#e2e8f0", INK, 0.02, seg(f, ln.from, ln.from + 6));
             if (b.prop === "loop") {
-              tag(c, "92 s before the first word", W / 2, 1130, 64, "#fee2e2", "#991b1b", -0.02, seg(f, ln.from, ln.from + 6));
-              tag(c, "LATENCY = the wait before the first word", W / 2, 1270, 44, "#fef3c7", INK, 0.01, seg(f, ln.from + 10, ln.from + 18));
+              tag(c, "C ✓  92 s", W / 2, 1150, 90, "#fee2e2", "#991b1b", -0.02, seg(f, ln.from, ln.from + 5));
+              tag(c, "first word: 4 s → 92 s", W / 2, 1290, 56, "#fef3c7", INK, 0.01, seg(f, ln.from + 8, ln.from + 14));
+              c.save(); c.globalAlpha = seg(f, ln.from + 14, ln.from + 20);
+              c.font = SANS(40); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("LATENCY: the wait before the first word", W / 2, 1410);
+              c.restore();
             }
           }
         } else if (b.shot === "tokens") {
@@ -271,11 +273,9 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           const shown = Math.min(TOKENS.length, Math.floor(TOKENS.length * seg(f, ln.from + 2, ln.from + ln.frames * 0.8)));
           const yEnd = tokenChips(c, 400, shown, seg(f, c1 + 2, c1 + 12), r);
           c.font = SANS(44); c.fillStyle = "#fde68a"; c.textAlign = "right"; c.fillText(`${shown} tokens`, 940, 370);
-          if (f >= c1 - 2) tag(c, "1 token = a piece of a word", W / 2, Math.min(1380, yEnd + 70), 60, "#fef3c7", INK, -0.02, seg(f, c1 - 2, c1 + 6));
-          if (f >= c1 + 10) {
-            c.font = SANS(34, 600); c.fillStyle = "#fecaca"; c.textAlign = "center";
-            c.fillText("sunflower = 2 tokens · 302 = 3 tokens", W / 2, Math.min(1460, yEnd + 150));
-          }
+          if (f >= c1 - 2) tag(c, "1 token = a word, or a piece of one", W / 2, Math.min(1300, yEnd + 60), 56, "#fef3c7", INK, -0.02, seg(f, c1 - 2, c1 + 6));
+          if (f >= c1 + 6) tag(c, "sun·flower = 2 tokens", 300, Math.min(1420, yEnd + 170), 56, "#fecaca", "#7f1d1d", -0.03, seg(f, c1 + 6, c1 + 12));
+          if (f >= c1 + 12) tag(c, "3·0·2 = 3 tokens", 760, Math.min(1420, yEnd + 170), 56, "#fecaca", "#7f1d1d", 0.03, seg(f, c1 + 12, c1 + 18));
         } else if (b.shot === "bags") {
           // ---------- every token lifts every bag (EP38's counter) ----------
           c.fillStyle = "#3f2a16"; c.fillRect(0, 0, W, H);
@@ -305,40 +305,46 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           const c1 = cu(1, 0.5);
           c.fillStyle = "#1f2937"; rrect(c, 150, 400, 780, 700, 30); c.fill();
           [0, 1, 2].forEach((q) => gpuCard(c, 540, 520 + q * 230, 0.95, f * 3, r));
-          tag(c, "100+ tokens a second", W / 2, 1200, 76, "#dcfce7", "#14532d", -0.02, seg(f, ln.from + 2, ln.from + 10));
-          c.font = SANS(30, 600); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("Artificial Analysis, Oct 2026", W / 2, 1262);
+          tag(c, "about 200 tokens a second", W / 2, 1200, 72, "#dcfce7", "#14532d", -0.02, seg(f, ln.from + 2, ln.from + 10));
+          c.font = SANS(30, 600); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("Gemini 2.5 Flash · Artificial Analysis, Oct 2026", W / 2, 1262);
           if (f >= c1 - 2) {
             const kk = seg(f, c1 - 2, c1 + 6), billed = Math.floor(clamp((f - c1) / 24) * 58);
             c.save(); c.globalAlpha = clamp(kk * 2);
             c.fillStyle = "#fffdf5"; rrect(c, 230, 1300, 620, 150, 22); c.fill();
-            c.font = SANS(48); c.fillStyle = RED; c.textAlign = "center"; c.fillText("BILL: ₹ for every token", W / 2, 1365);
+            c.font = SANS(46); c.fillStyle = RED; c.textAlign = "center"; c.fillText("online: every token costs", W / 2, 1365);
             c.font = SANS(36, 600); c.fillStyle = INK; c.fillText(`tokens billed: ${billed}`, W / 2, 1422);
             c.restore();
           }
         } else if (b.shot === "price") {
-          // ---------- B: the tokens it writes cost more ----------
+          // ---------- both cost; the reply's tokens 4-8x the message's (online) ----------
           panel(c, W, H, "#fffdf5", "");
           const c1 = cu(1, 0.5);
-          tag(c, "B ✓", W / 2, 470, 170, "#dcfce7", "#14532d", -0.03, seg(f, ln.from, ln.from + 5));
-          tag(c, "the tokens it WRITES cost more", W / 2, 640, 58, "#fef3c7", INK, 0.01, seg(f, ln.from + 6, ln.from + 14));
-          if (f >= c1 - 4) {
-            const kk = seg(f, c1 - 4, c1 + 4);
+          tag(c, "online, you pay for BOTH", W / 2, 330, 64, "#e0e7ff", "#3730a3", -0.02, seg(f, ln.from, ln.from + 6));
+          const kk = seg(f, c1 - 4, c1 + 4);
+          c.save(); c.globalAlpha = clamp(seg(f, ln.from + 4, ln.from + 10) * 2);
+          c.fillStyle = "#0f172a"; rrect(c, 90, 420, 860, 900, 30); c.fill();
+          c.font = SANS(40); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("price per token", W / 2, 492);
+          c.fillStyle = "#1e293b"; rrect(c, 120, 530, 800, 150, 20); c.fill();
+          c.font = SANS(46); c.fillStyle = "#e2e8f0"; c.textAlign = "left"; c.fillText("your message", 150, 622);
+          c.font = SANS(90); c.textAlign = "right"; c.fillText("1×", 890, 640);
+          c.restore();
+          if (kk > 0) {
             c.save(); c.globalAlpha = clamp(kk * 2);
-            c.fillStyle = "#0f172a"; rrect(c, 90, 740, 860, 600, 30); c.fill();
-            c.font = SANS(40); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("price per 1 million tokens", W / 2, 812);
-            c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "right"; c.fillText("read", 650, 880); c.fillText("write", 860, 880);
-            [["GPT-5 mini", "$0.25", "$2.00", "8×"], ["Gemini 2.5", "$0.10", "$0.40", "4×"]].forEach(([m, a2, b2, x2], q) => {
-              const yy = 980 + q * 150;
-              c.fillStyle = "#1e293b"; rrect(c, 120, yy - 70, 800, 120, 20); c.fill();
-              c.font = SANS(42); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText(m, 150, yy + 4);
-              if (q === 1) { c.font = SANS(28, 600); c.fillStyle = "#cbd5e1"; c.fillText("Flash-Lite", 150, yy + 38); }
-              c.font = SANS(46); c.textAlign = "right"; c.fillStyle = "#e2e8f0"; c.fillText(a2, 650, yy + 4);
-              c.fillStyle = "#fdba74"; c.fillText(b2, 860, yy + 4);
-              tag(c, x2, 900, yy - 70, 46, RED, "#fff", 0.08, seg(f, c1 + 6 + q * 6, c1 + 12 + q * 6));
+            [["its reply", "Gemini 2.5 Flash", "8×", "$0.30 → $2.50"], ["its reply", "GPT-4.1 mini", "4×", "$0.40 → $1.60"]].forEach(([a2, m, x2, pr], q) => {
+              const yy = 720 + q * 200, kq = seg(f, c1 - 2 + q * 8, c1 + 6 + q * 8);
+              if (kq <= 0) return;
+              c.save(); c.globalAlpha = clamp(kq * 2);
+              c.fillStyle = "#431407"; rrect(c, 120, yy, 800, 170, 20); c.fill();
+              c.font = SANS(46); c.fillStyle = "#fed7aa"; c.textAlign = "left"; c.fillText(a2, 150, yy + 70);
+              c.font = SANS(30, 600); c.fillStyle = "#fdba74"; c.fillText(m, 150, yy + 116);
+              c.font = SANS(24, 500); c.fillStyle = "#cbd5e1"; c.fillText(`per million: ${pr}`, 150, yy + 152);
+              c.font = SANS(120); c.fillStyle = "#fb923c"; c.textAlign = "right"; c.fillText(x2, 890, yy + 128);
+              c.restore();
             });
-            c.font = SANS(28, 600); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("OpenAI and Google price lists, Oct 2026", W / 2, 1300);
             c.restore();
           }
+          if (f >= c1 + 20) tag(c, "about 1-2 paise a reply", W / 2, 1240, 56, "#dcfce7", "#14532d", -0.02, seg(f, c1 + 20, c1 + 28));
+          c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.textAlign = "center"; c.fillText("OpenAI and Google price lists, Oct 2026", W / 2, 1380);
         } else if (b.shot === "screen") {
           // ---------- our test: short replies ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
@@ -360,8 +366,16 @@ const StSpeed: React.FC<SP> = ({ s }) => {
             c.restore();
           }
           row(c, 1060, "after", "35 tokens · 11.7 s", GREEN, seg(f, c1 - 2, c1 + 6), "#dcfce7");
-          row(c, 1200, "online bill", "40% fewer tokens", INK, seg(f, c1 + 10, c1 + 18), "#fef3c7");
-          c.font = SANS(28, 600); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("Qwen2.5 7B, 4-bit · replies word for word", W / 2, 1420);
+          row(c, 1190, "online bill", "40% fewer tokens", INK, seg(f, c1 + 10, c1 + 18), "#fef3c7");
+          if (f >= c1 + 22) {
+            c.save(); c.globalAlpha = seg(f, c1 + 22, c1 + 30);
+            c.fillStyle = "#e2e8f0"; rrect(c, 130, 1272, 820, 104, 20); c.fill();
+            c.font = SANS(30, 600); c.fillStyle = INK; c.textAlign = "center";
+            c.fillText("still slow here: the small 1.5B brain took 2.2 s,", W / 2, 1314);
+            c.fillText("but it dropped the quantities · online: about 1 s", W / 2, 1356);
+            c.restore();
+          }
+          c.font = SANS(26, 600); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("Qwen2.5 7B, 4-bit · replies word for word", W / 2, 1430);
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
@@ -377,10 +391,9 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           counter(c, r);
           laptop(c, 250, 1000, 0.72, "4.7 GB brain ✓", r, {});
           phone(c, b.who === "ai" && talking, f, r, {});
-          if (hookOn) aunty(c, loopOn ? 0 : seg(f, cu(1, 0.45), endL + 6), f, r);   // she turns and walks out on "She walked off!"
           c.restore();
           // screen-space props
-          if (hookOn) waCard(c, f, 17.4, 1, r);   // frame 1, and the loop's last beat
+          if (hookOn) waCard(c, f, 17.4, loopOn ? seg(f, slam, slam + 4) : 1, r);   // frame 1, and the loop's last beat
           if (b.prop === "reply") {   // the 13-second reply, word for word
             const kk = seg(p, 0.02, 0.15);
             if (kk > 0) {
@@ -395,16 +408,17 @@ const StSpeed: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "faster") bubble(c, 330, 560, "write faster!", 84, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "online") bubble(c, 330, 560, "online AI: 1 second!", 70, seg(p, 0.05, 0.2), COL.yellow);
+          if (b.prop === "money") bubble(c, 330, 560, "my message or its reply?", 62, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "rule") {
-            ruleChip(c, W, 330, "SHORT REPLIES = FASTER + CHEAPER", [
+            ruleChip(c, W, 330, "ASK FOR SHORT REPLIES", [
               ["type: Reply in 2 short lines.", "#dcfce7", "#14532d"],
-              ["fewer tokens to write = less waiting", "#e2e8f0", INK],
-              ["online: fewer tokens to pay for", "#fef3c7", INK],
+              ["fewer tokens: faster here", "#e2e8f0", INK],
+              ["and a smaller bill online", "#fef3c7", INK],
             ], [seg(p, 0.05, 0.15), seg(p, 0.35, 0.45), seg(p, 0.55, 0.65)]);
           }
           if (b.prop === "history") {
             chatScroll(c, 520, 240, 430, 640, f, seg(p, 0.02, 0.12));
-            tag(c, "30 old orders = 1,788 tokens", 600, 960, 52, "#fef3c7", INK, -0.02, seg(p, 0.3, 0.42));
+            tag(c, "30 old orders = 1,788 tokens (20× the order)", 560, 960, 44, "#fef3c7", INK, -0.02, seg(p, 0.3, 0.42));
           }
         }
         if (b.prop === "quiz" && f > endL + 6) quizCard(c, W, H, f, endL, next);

@@ -1,0 +1,374 @@
+{
+ "id": "ep39v1",
+ "title": "The 17-second reply (EP39: speed, latency and cost per token)",
+ "label": "EP39",
+ "banner": "AI speed and cost",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.36,
+  0.9
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "musicEndRamp": [
+  0.82,
+  2.5
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_speed",
+   "tail": 0.1,
+   "boost": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "clock",
+      "prop": "clock",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "reply",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "tokens",
+      "prop": "tokens",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "faster",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "bags",
+      "prop": "bags",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "17 seconds for one reply",
+     "title": "17 seconds for one reply",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "Seventeen seconds for one reply?! [1] He cancelled!",
+     "show": "17 seconds for one reply?! He cancelled!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "Four seconds to read his order. [1] Thirteen to write the reply.",
+     "show": "4 seconds to read his order... 13 to write the reply.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Thirteen seconds to write that?!",
+     "show": "13 seconds to write that?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "I write one token at a time, anna. [1] A word, or a piece of one.",
+     "show": "I write one token at a time, anna. A word, or a piece of one.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "Pieces?! [1] Write faster!",
+     "show": "Pieces?! Write faster!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "For every token, I lift all five bags. [1] On this laptop: four tokens a second.",
+     "show": "For every token, I lift all 5 bags. On this laptop: 4 tokens a second.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_speed",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.25,
+   "boost": 1.3,
+   "drop_at": [
+    [
+     3,
+     "1",
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "online",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "cloud",
+      "prop": "cloud",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "money",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "price",
+      "prop": "price",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "test",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which tokens cost more?",
+     "title": "Which tokens cost more?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "The online AI replies in one second!",
+     "show": "The online AI replies in 1 second!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "Big graphics cards: two hundred tokens a second. [1] But online, every token costs money.",
+     "show": "Big graphics cards: 200 tokens a second. But online, every token costs money.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "Money?! [1] For my message, or its reply?",
+     "show": "Money?! For my message, or its reply?",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "Both. [1] The reply costs four to eight times more.",
+     "show": "Both... The reply costs 4 to 8 times more.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "Then write less! [1] Two short lines!",
+     "show": "Then write less! 2 short lines!",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "Thirty-five tokens. [1] Twelve seconds here. Online, a smaller bill.",
+     "show": "35 tokens... 12 seconds here. Online, a smaller bill.",
+     "maxgap": 0.28,
+     "gap": 0.7,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_speed",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.4,
+   "rise": 1.35,
+   "drop_pre": [
+    [
+     3,
+     0.05,
+     1.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "history",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "wait",
+      "prop": "wait",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "wait",
+      "prop": "quiz",
+      "n": 15
+     },
+     {
+      "who": "ai",
+      "shot": "wait",
+      "prop": "loop",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The wait before the first word",
+     "title": "The wait before the first word",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "Better! [1] Now read all his old chats first, so you know him!",
+     "show": "Better! Now read all his old chats first, so you know him!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "A whole month? [1] I read it all before my first word.",
+     "show": "A whole month? I read it all before my first word.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "How long?!",
+     "show": "How long?!",
+     "maxgap": 0.28,
+     "gap": 2.45,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "16_ai.wav",
+     "text": "Ninety-two seconds.",
+     "show": "92 seconds.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    }
+   ]
+  }
+ ]
+}
