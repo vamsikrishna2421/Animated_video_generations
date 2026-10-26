@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.965,
-  4.0
+  0.93,
+  3.5
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -75,12 +75,6 @@
       "n": 4
      },
      {
-      "who": "ravi",
-      "shot": "ravi",
-      "prop": "faster",
-      "n": 5
-     },
-     {
       "who": "ai",
       "shot": "bags",
       "prop": "bags",
@@ -102,7 +96,7 @@
      "text": "ఒక్క రిప్లైకి పదిహేడు సెకన్లా?! [1] ఆర్డర్ క్యాన్సిల్ చేశారు!",
      "show": "17 seconds for one reply?! The order got cancelled!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.12,
      "tempo": 1.15,
      "gain_db": 0.5
     },
@@ -133,26 +127,16 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "నేను ఒక్కో టోకెన్ రాస్తానండి. <pause 0.25> [1] ఒక మాట, లేదా మాటలో ఒక ముక్క.",
-     "show": "I write one token at a time. One word, or a piece of a word.",
+     "text": "నేను ఒక్కో టోకెన్ రాస్తానండి. <pause 0.25> [1] ఒక మాట, లేదా మాటలో చిన్న ముక్క.",
+     "show": "I write one token at a time. One word, or a small piece of a word.",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.1,
      "tts": "నేను ఒక్కో టోకెన్ రాస్తానండి.",
      "file2": "04b_ai.wav",
-     "tts2": "ఒక మాట, లేదా మాటలో ఒక ముక్క.",
+     "tts2": "ఒక మాట, లేదా మాటలో చిన్న ముక్క.",
      "pause": 0.25,
      "gain_db": -1.0
-    },
-    {
-     "who": "ravi",
-     "file": "05_ravi.wav",
-     "text": "ముక్కలా?! [1] స్పీడ్ గా రాయి!",
-     "show": "Pieces?! Write fast!",
-     "maxgap": 0.28,
-     "gap": 0.16,
-     "tempo": 1.15,
-     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -235,11 +219,11 @@
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "ఆన్లైన్ దాంట్లో ఒక్క సెకనులోనే రిప్లై వస్తుంది!",
-     "show": "With the online one, the reply comes in 1 second!",
+     "text": "ఆన్లైన్ లో అయితే ఒక్క సెకనులోనే రిప్లై వస్తుంది!",
+     "show": "Online, the reply comes in 1 second!",
      "maxgap": 0.28,
      "gap": 0.16,
-     "tempo": 1.15,
+     "tempo": 1.05,
      "gain_db": 0.5
     },
     {
@@ -309,11 +293,11 @@
   {
    "id": "s_c",
    "type": "sk_speed",
-   "tail": 1.2,
+   "tail": 0.0,
    "lift": 0.9,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.5,
    "drop_pre": [
     [
      3,
@@ -344,8 +328,14 @@
      {
       "who": "ai",
       "shot": "wait",
-      "prop": "loop",
+      "prop": "reveal",
       "n": 16
+     },
+     {
+      "who": "ai",
+      "shot": "wait",
+      "prop": "loop",
+      "n": 17
      }
     ],
     "captionTop": 1500,
@@ -397,8 +387,22 @@
      "text": "తొంభై రెండు సెకన్లు.",
      "show": "92 seconds.",
      "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "17_ai.wav",
+     "text": "ఆయన గురించి రెండు లైన్ల నోట్ ఇవ్వండి, <pause 0.25> [1] నెల మొత్తం కాదు.",
+     "show": "Give me a 2-line note about him, not the whole month.",
+     "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.1,
+     "tts": "ఆయన గురించి రెండు లైన్ల నోట్ ఇవ్వండి,",
+     "file2": "17b_ai.wav",
+     "tts2": "నెల మొత్తం కాదు.",
+     "pause": 0.25,
      "gain_db": -1.0
     }
    ]

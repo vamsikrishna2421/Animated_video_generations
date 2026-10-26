@@ -41,7 +41,8 @@ MUST = {"en": {1: [("seventeen", "17"), ("seconds", "second"), ("reply",), ("can
                13: [("better",), ("old",), ("chats", "chat"), ("first",), ("know",)],
                14: [("whole",), ("month",), ("read",), ("first",), ("word",)],
                15: [("how",), ("long",)],
-               16: [("ninety", "92"), ("two", "92"), ("seconds", "second")]},
+               16: [("ninety", "92"), ("two", "92"), ("seconds", "second")],
+               17: [("two", "2"), ("line", "lines"), ("note",), ("whole",), ("month",)]},
         "te": {}}   # Telugu as the judge writes it (Devanagari): filled from the first takes
 
 
@@ -115,6 +116,10 @@ def judge(path, text, lang, n):
         if m and float(m.group(1)) >= 0.85 and 9 <= float(m.group(2)) <= 23 and len(a) / sr <= max(2.8, len(re.sub(r"\s", "", text)) * 0.15):
             ok, score, info = True, score + 1, info.replace("LONG ", "")
     heard_text = info.split("|", 1)[1].lower()
+    if lang == "te":   # a stutter the judge lets through ("राई राईटाने": a word said twice in a row)
+        toks = [w.strip(".,!?।") for w in heard_text.split()]
+        if any(len(a) >= 2 and (a == b or b.startswith(a)) for a, b in zip(toks, toks[1:])):
+            ok, score, info = False, score - 1.0, info + " | STUTTER"
     words = set(re.findall(r"[a-z0-9]+", heard_text))
     # English: whole words; Telugu (written in Devanagari by the judge): a substring will do
     miss = [g[0] for g in MUST[lang].get(n, []) if not any((w in words) if lang == "en" else (w in heard_text) for w in g)]

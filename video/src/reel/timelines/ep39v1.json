@@ -13,35 +13,35 @@
  "fps": 30,
  "musicDrops": [
   [
-   995,
-   1028
+   915,
+   948
   ],
   [
-   1662,
-   1692
+   1598,
+   1628
   ]
  ],
  "musicBoosts": [
   [
    0,
-   655,
+   575,
    1.25
   ],
   [
-   655,
-   1353,
+   575,
+   1289,
    1.35
   ],
   [
-   1353,
-   1791,
-   1.2
+   1289,
+   1798,
+   1.5
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1791,
+ "totalFrames": 1798,
  "music": "reel/ep39v1/score.wav",
  "scenes": [
   {
@@ -74,12 +74,6 @@
       "n": 4
      },
      {
-      "who": "ravi",
-      "shot": "ravi",
-      "prop": "faster",
-      "n": 5
-     },
-     {
       "who": "ai",
       "shot": "bags",
       "prop": "bags",
@@ -97,7 +91,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 655,
+   "frames": 575,
    "lines": [
     {
      "who": "ravi",
@@ -154,67 +148,67 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep39v1/line_02.wav",
-     "from": 112,
+     "from": 108,
      "frames": 104,
      "words": [
       {
        "w": "4",
-       "from": 117,
-       "to": 119
+       "from": 113,
+       "to": 115
       },
       {
        "w": "seconds",
-       "from": 119,
-       "to": 129
+       "from": 115,
+       "to": 125
       },
       {
        "w": "to",
-       "from": 129,
-       "to": 137
+       "from": 125,
+       "to": 133
       },
       {
        "w": "read",
-       "from": 137,
-       "to": 143
+       "from": 133,
+       "to": 139
       },
       {
        "w": "his",
-       "from": 143,
-       "to": 152
+       "from": 139,
+       "to": 148
       },
       {
        "w": "order...",
-       "from": 152,
-       "to": 176
+       "from": 148,
+       "to": 172
       },
       {
        "w": "13",
+       "from": 172,
+       "to": 176
+      },
+      {
+       "w": "to",
        "from": 176,
        "to": 180
       },
       {
-       "w": "to",
-       "from": 180,
-       "to": 183
-      },
-      {
        "w": "write",
-       "from": 183,
-       "to": 191
+       "from": 180,
+       "to": 187
       },
       {
        "w": "the",
-       "from": 191,
-       "to": 201
+       "from": 187,
+       "to": 197
       },
       {
        "w": "reply.",
-       "from": 201,
-       "to": 210
+       "from": 197,
+       "to": 206
       }
      ],
      "cues": {
-      "1": 172
+      "1": 169
      }
     },
     {
@@ -223,33 +217,33 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep39v1/line_03.wav",
-     "from": 222,
+     "from": 218,
      "frames": 54,
      "words": [
       {
        "w": "13",
-       "from": 229,
-       "to": 232
+       "from": 225,
+       "to": 229
       },
       {
        "w": "seconds",
-       "from": 232,
-       "to": 242
+       "from": 229,
+       "to": 238
       },
       {
        "w": "to",
-       "from": 242,
-       "to": 245
+       "from": 238,
+       "to": 242
       },
       {
        "w": "write",
-       "from": 245,
-       "to": 253
+       "from": 242,
+       "to": 249
       },
       {
        "w": "that?!",
-       "from": 253,
-       "to": 261
+       "from": 249,
+       "to": 257
       }
      ],
      "cues": {}
@@ -260,111 +254,82 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep39v1/line_04.wav",
-     "from": 280,
+     "from": 276,
      "frames": 130,
      "words": [
       {
        "w": "I",
-       "from": 284,
-       "to": 286
+       "from": 280,
+       "to": 282
       },
       {
        "w": "write",
-       "from": 286,
-       "to": 299
+       "from": 282,
+       "to": 295
       },
       {
        "w": "one",
-       "from": 299,
-       "to": 305
+       "from": 295,
+       "to": 301
       },
       {
        "w": "token",
-       "from": 305,
-       "to": 313
+       "from": 301,
+       "to": 309
       },
       {
        "w": "at",
-       "from": 313,
-       "to": 317
+       "from": 309,
+       "to": 313
       },
       {
        "w": "a",
-       "from": 317,
-       "to": 320
+       "from": 313,
+       "to": 316
       },
       {
        "w": "time.",
-       "from": 320,
-       "to": 328
+       "from": 316,
+       "to": 325
       },
       {
        "w": "A",
-       "from": 328,
-       "to": 335
+       "from": 325,
+       "to": 332
       },
       {
        "w": "word,",
-       "from": 335,
-       "to": 353
+       "from": 332,
+       "to": 350
       },
       {
        "w": "or",
-       "from": 353,
-       "to": 358
+       "from": 350,
+       "to": 354
       },
       {
        "w": "a",
-       "from": 358,
-       "to": 371
+       "from": 354,
+       "to": 367
       },
       {
        "w": "piece",
-       "from": 371,
-       "to": 379
+       "from": 367,
+       "to": 376
       },
       {
        "w": "of",
-       "from": 379,
-       "to": 384
+       "from": 376,
+       "to": 380
       },
       {
        "w": "one.",
-       "from": 384,
-       "to": 391
+       "from": 380,
+       "to": 387
       }
      ],
      "cues": {
-      "1": 336
-     }
-    },
-    {
-     "who": "ravi",
-     "name": "Ravi anna",
-     "color": "#FBBF24",
-     "sub": null,
-     "audio": "reel/ep39v1/line_05.wav",
-     "from": 416,
-     "frames": 68,
-     "words": [
-      {
-       "w": "Pieces?!",
-       "from": 417,
-       "to": 451
-      },
-      {
-       "w": "Write",
-       "from": 451,
-       "to": 460
-      },
-      {
-       "w": "faster!",
-       "from": 460,
-       "to": 468
-      }
-     ],
-     "cues": {
-      "1": 451
+      "1": 332
      }
     },
     {
@@ -372,88 +337,88 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep39v1/line_06.wav",
-     "from": 489,
+     "audio": "reel/ep39v1/line_05.wav",
+     "from": 412,
      "frames": 161,
      "words": [
       {
        "w": "For",
-       "from": 495,
-       "to": 499
+       "from": 418,
+       "to": 423
       },
       {
        "w": "every",
-       "from": 499,
-       "to": 507
+       "from": 423,
+       "to": 430
       },
       {
        "w": "token,",
-       "from": 507,
-       "to": 515
+       "from": 430,
+       "to": 439
       },
       {
        "w": "I",
-       "from": 515,
-       "to": 518
+       "from": 439,
+       "to": 441
       },
       {
        "w": "lift",
-       "from": 518,
-       "to": 531
+       "from": 441,
+       "to": 454
       },
       {
        "w": "all",
-       "from": 531,
-       "to": 541
+       "from": 454,
+       "to": 465
       },
       {
        "w": "5",
-       "from": 541,
-       "to": 544
+       "from": 465,
+       "to": 467
       },
       {
        "w": "bags.",
-       "from": 544,
-       "to": 558
+       "from": 467,
+       "to": 482
       },
       {
        "w": "On",
-       "from": 558,
-       "to": 576
+       "from": 482,
+       "to": 500
       },
       {
        "w": "this",
-       "from": 576,
-       "to": 582
+       "from": 500,
+       "to": 506
       },
       {
        "w": "laptop:",
-       "from": 582,
-       "to": 611
+       "from": 506,
+       "to": 534
       },
       {
        "w": "4",
-       "from": 611,
-       "to": 613
+       "from": 534,
+       "to": 537
       },
       {
        "w": "tokens",
-       "from": 613,
-       "to": 622
+       "from": 537,
+       "to": 545
       },
       {
        "w": "a",
-       "from": 622,
-       "to": 624
+       "from": 545,
+       "to": 547
       },
       {
        "w": "second.",
-       "from": 624,
-       "to": 637
+       "from": 547,
+       "to": 561
       }
      ],
      "cues": {
-      "1": 558
+      "1": 482
      }
     }
    ]
@@ -510,15 +475,15 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 655,
-   "frames": 698,
+   "from": 575,
+   "frames": 714,
    "lines": [
     {
      "who": "ravi",
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep39v1/line_07.wav",
+     "audio": "reel/ep39v1/line_06.wav",
      "from": 8,
      "frames": 77,
      "words": [
@@ -565,7 +530,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep39v1/line_08.wav",
+     "audio": "reel/ep39v1/line_07.wav",
      "from": 89,
      "frames": 157,
      "words": [
@@ -644,7 +609,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep39v1/line_09.wav",
+     "audio": "reel/ep39v1/line_08.wav",
      "from": 252,
      "frames": 86,
      "words": [
@@ -693,7 +658,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep39v1/line_10.wav",
+     "audio": "reel/ep39v1/line_09.wav",
      "from": 343,
      "frames": 111,
      "words": [
@@ -762,7 +727,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep39v1/line_11.wav",
+     "audio": "reel/ep39v1/line_10.wav",
      "from": 467,
      "frames": 81,
      "words": [
@@ -806,7 +771,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep39v1/line_12.wav",
+     "audio": "reel/ep39v1/line_11.wav",
      "from": 557,
      "frames": 126,
      "words": [
@@ -888,8 +853,14 @@
      {
       "who": "ai",
       "shot": "wait",
-      "prop": "loop",
+      "prop": "reveal",
       "n": 16
+     },
+     {
+      "who": "ai",
+      "shot": "wait",
+      "prop": "loop",
+      "n": 17
      }
     ],
     "captionTop": 1500,
@@ -902,15 +873,15 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1353,
-   "frames": 438,
+   "from": 1289,
+   "frames": 509,
    "lines": [
     {
      "who": "ravi",
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep39v1/line_13.wav",
+     "audio": "reel/ep39v1/line_12.wav",
      "from": 9,
      "frames": 124,
      "words": [
@@ -984,7 +955,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep39v1/line_14.wav",
+     "audio": "reel/ep39v1/line_13.wav",
      "from": 141,
      "frames": 92,
      "words": [
@@ -1053,7 +1024,7 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep39v1/line_15.wav",
+     "audio": "reel/ep39v1/line_14.wav",
      "from": 239,
      "frames": 29,
      "words": [
@@ -1075,7 +1046,7 @@
      "name": "Shop AI",
      "color": "#67E8F9",
      "sub": null,
-     "audio": "reel/ep39v1/line_16.wav",
+     "audio": "reel/ep39v1/line_15.wav",
      "from": 341,
      "frames": 41,
      "words": [
@@ -1091,6 +1062,75 @@
       }
      ],
      "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep39v1/line_16.wav",
+     "from": 391,
+     "frames": 98,
+     "words": [
+      {
+       "w": "Give",
+       "from": 392,
+       "to": 399
+      },
+      {
+       "w": "me",
+       "from": 399,
+       "to": 403
+      },
+      {
+       "w": "a",
+       "from": 403,
+       "to": 406
+      },
+      {
+       "w": "2-line",
+       "from": 406,
+       "to": 419
+      },
+      {
+       "w": "note",
+       "from": 419,
+       "to": 425
+      },
+      {
+       "w": "about",
+       "from": 425,
+       "to": 433
+      },
+      {
+       "w": "him,",
+       "from": 433,
+       "to": 440
+      },
+      {
+       "w": "not",
+       "from": 440,
+       "to": 445
+      },
+      {
+       "w": "the",
+       "from": 445,
+       "to": 461
+      },
+      {
+       "w": "whole",
+       "from": 461,
+       "to": 469
+      },
+      {
+       "w": "month.",
+       "from": 469,
+       "to": 479
+      }
+     ],
+     "cues": {
+      "1": 441
+     }
     }
    ]
   }

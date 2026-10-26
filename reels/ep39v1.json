@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.965,
-  4.0
+  0.93,
+  3.5
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -73,12 +73,6 @@
       "n": 4
      },
      {
-      "who": "ravi",
-      "shot": "ravi",
-      "prop": "faster",
-      "n": 5
-     },
-     {
       "who": "ai",
       "shot": "bags",
       "prop": "bags",
@@ -99,7 +93,7 @@
      "text": "Seventeen seconds for one reply?! [1] He cancelled!",
      "show": "17 seconds for one reply?! He cancelled!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.12,
      "tempo": 1.15,
      "gain_db": 0.5
     },
@@ -132,16 +126,6 @@
      "gap": 0.2,
      "tempo": 1.1,
      "gain_db": -1.0
-    },
-    {
-     "who": "ravi",
-     "file": "05_ravi.wav",
-     "text": "Pieces?! [1] Write faster!",
-     "show": "Pieces?! Write faster!",
-     "maxgap": 0.28,
-     "gap": 0.16,
-     "tempo": 1.15,
-     "gain_db": 0.5
     },
     {
      "who": "ai",
@@ -282,11 +266,11 @@
   {
    "id": "s_c",
    "type": "sk_speed",
-   "tail": 1.2,
+   "tail": 0.0,
    "lift": 0.9,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.2,
+   "boost": 1.5,
    "drop_pre": [
     [
      3,
@@ -317,8 +301,14 @@
      {
       "who": "ai",
       "shot": "wait",
-      "prop": "loop",
+      "prop": "reveal",
       "n": 16
+     },
+     {
+      "who": "ai",
+      "shot": "wait",
+      "prop": "loop",
+      "n": 17
      }
     ],
     "captionTop": 1500,
@@ -364,6 +354,16 @@
      "file": "16_ai.wav",
      "text": "Ninety-two seconds.",
      "show": "92 seconds.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "17_ai.wav",
+     "text": "Give me a two-line note about him, [1] not the whole month.",
+     "show": "Give me a 2-line note about him, not the whole month.",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.1,
