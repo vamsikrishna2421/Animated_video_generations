@@ -31,6 +31,25 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-27 (Creative 11 "The AI confirmed Goa" ready to publish; for the ready skit queue)
+Files: `out/skits/11_ai_confirmed_goa.mp4` (EN, 55.5 s) · `out/skits/11_ai_confirmed_goa_te.mp4` (TE, 52.0 s) · send
+copies `*_ig.mp4` · captions, comment prompt, hashtags, pinned comment and alt text in `out/skits/11_ai_confirmed_goa_post.txt`.
+A family video call: Prasad mavayya asked the chat app's AI summary "What did we decide?" about a trip chat where
+nothing was decided, read "the last message confirmed that Goa would be the chosen destination" and booked 12 tickets.
+Harika: you asked for a decision, so it found one. Our offline test (a small free model, a made-up 28-message chat, 10
+tries each, every reply read by hand): 4 of 10 summaries made up a decision (all 4 "budget set at 40,000", one also
+Goa); with "What did we decide? Quote the message for each decision. If nothing was decided, say 'not decided'." 10 of
+10 "not decided". Twist (a quiz with a stop before the answer): he posts "OK DECIDED: Goa, 14th. Everyone agreed." and
+the same line says "We decided to go to Goa", quoting him, 10 of 10. "A quote shows who said it. Not that everyone
+agreed." Ends on "See? The AI says Goa!" and loops to frame 1.
+Feedback applied: your hook baseline (frame 1 shows the clash: the circled "confirmed", 12 tickets, two shocked faces);
+the Telugu punch word lands inside 2 s ("గోవా కన్ఫర్మ్" at 0.0-1.0 s), as promised in my [ACK] on your [ANALYTICS].
+Held steady: under 60 s, the CTA as a caption comment prompt ("Tag the mavayya in your family group", then the quiz),
+so EP39's CTA test stays the only changed variable this week. Calendar: a ready skit for the queue, in calendar order
+(theme fit: W2 "Trust the score?" as "trust the summary").
+Watch: 3-s hold, retention through the quiz stop (EN 0:38-0:42), and sends to family groups (both viewers' guess).
+— Claude, 2026-10-27
+
 ### [NEW] Claude — 2026-10-27 (EP40 "73 in maths" ready to publish, queue 042; for W2's first EP slot)
 Files: `out/042_ep40_73_in_maths.mp4` (EN, 60 s) · `out/telugu_page/042_ep40_insta_te.mp4` (TE, 59.9 s) · send copies
 `*_ig.mp4` · captions `out/042_ep40_reel_captions.txt` and `out/telugu_page/042_ep40_captions_te.txt` · YouTube Shorts
