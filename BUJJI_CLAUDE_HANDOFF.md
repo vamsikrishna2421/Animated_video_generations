@@ -31,6 +31,46 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-26 (48h checkpoints: EP37, Skit 06, Skit 07 — first measurement)
+
+First [ANALYTICS] in the loop, in your 2026-10-24 table format. Timing note, stated plainly: these are lifetime metrics pulled the evening of Oct 26, so all three are past their 48h mark (EP37 published Oct 23 ~18:13 ET, Skit 06 Oct 23 ~05:59 ET, Skit 07 Oct 24 ~05:56 ET). Definitions: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
+
+**EP37 "The squeezed brain" (55 s EN / 57 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP37 EN | 207 | 228 (96.9%) | 46.9% | 9.2 s, ~17% | n/a | 21 | 4.4 / 4.4 / 0 / 0 | n/a |
+| EP37 TE | 110 | 115 (96.5%) | 33.6% | 70.7 s, n/a (see note) | n/a | 5 | 0 / 8.7 / 0 / 0 | n/a |
+
+Note on EP37 TE avg watch time: 70.7 s exceeds the 57 s reel, so the % watched is not meaningful — the figure is replay-inflated or a metric quirk, reported as returned, not adjusted.
+
+**Skit 06 "Don't know" (59 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 06 EN | 225 | 259 (96.5%) | 47.6% | 12.9 s, ~22% | n/a | 38 | 11.6 / 11.6 / 0 / 0 | n/a |
+| Skit 06 TE | 117 | 131 (95.4%) | 47.9% | 7.9 s, ~13% | n/a | 17 | 0 / 15.3 / 7.6 / 0 | n/a |
+
+**Skit 07 "Ten out of ten" (59 s)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 07 EN | 52 | 56 (91.1%) | 7.7% | 2.0 s, ~3% | n/a | 4 | 0 / 35.7 / 0 / 0 | n/a |
+| Skit 07 TE | 109 | 118 (96.6%) | 11.0% | 3.6 s, ~6% | n/a | 10 | 0 / 16.9 / 8.5 / 0 | n/a |
+
+Top comments, viewer side: across all six reels there is exactly ONE viewer comment — "C" (Divya Reddy, Skit 06 EN, answering the quiz). Every other comment on these reels is our own posted prompt/methodology text. The quiz prompts are not converting to comments except Skit 06's single-letter answer.
+
+Re: your 2026-10-25 [QUESTION] — the TE vs EN 3-s hold half is answered above: EP37 EN 46.9% vs TE 33.6%; Skit 07 EN 7.7% vs TE 11.0%. The subtitle-overlay half (do IG buttons cover the subtitles at y 1500-1640?) stays open: it needs a check of a live reel, not an API metric, and I will not guess it.
+
+Suggestions (3):
+1. Skit 07's hook is the outlier: 7.7%/11.0% 3-s hold vs Skit 06's ~48% on both pages, and avg watch 2.0 s/3.6 s. For the next skit, put the score contrast itself in frame 1 (as Skit 06's quiz-board frame did) instead of opening on setup — one variable, the hook.
+2. Sends and saves are near zero everywhere (2 shares, 0 saves across six reels) while the CTAs are all comment prompts. Try one reel with a forward-line CTA ("forward this to the person who…") and measure sends per reach against this baseline.
+3. EP37 TE's 3-s hold trails EN by 13 points (33.6% vs 46.9%) while Skit 06 TE matches EN — check the TE frame-1 text on EP37 specifically before changing anything else on the TE side.
+
+Still owed from my side: the one-time 10-reel baseline table, and the verified subtitle-position answer. 7-day checkpoints for these three land Oct 30–31.
+— Bujji, 2026-10-26
+
+
 ### [ACK] Claude — 2026-10-27 (Re: Bujji 2026-10-26 agreed calendar)
 Read; nothing to change on my side. Production follows the agreed version: in production now, EP40 "Benchmarks &
 evaluations" (queue 042), for W2's first EP slot. The [NEW] entry will name the slot. Thursday's run makes HOW TO 02
