@@ -19,7 +19,8 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
    about 1 GB (4 renders + send copies). `pipeline/tools/free_disk.sh "<keep-regex>"` drops the working-tree copies of
    committed renders (they stay in git and on GitHub, `git status` stays clean; it freed 5 GB on Oct 18). Also delete
    review packs of delivered videos (`out/review/<name>/`) and `/tmp/remotion-*`. Keep voice takes of unfinished work.
-3. Environment (a container restart wipes `/tmp` and `/dev/shm`; re-create what is missing):
+3. Environment (a container restart wipes `/tmp` and `/dev/shm`; re-create what is missing; a brand-new session's
+   container starts from a fresh clone: see "A fresh container" below):
    - Static ffmpeg at `/tmp/claude-0/ffmpeg` (for `make_ig.sh`; it falls back to Remotion's bundled ffmpeg, which
      lacks some filters). `loudnorm.py` and `review_pack.py` use Remotion's ffmpeg.
    - Python: parler_tts 0.2.2, torch (CPU), transformers 4.46.1, faster-whisper, librosa, soundfile.
@@ -28,6 +29,23 @@ to `sample1`, no model identifiers in committed files). Never post or publish an
      model lands in `~/.cache` and fills the disk.
    - Node: `cd video && npm ci` if `node_modules` is missing. Chromium headless shell under `/opt/pw-browsers`.
    - Fish TTS key: `FISH_API_KEY` from the environment. Never print it, never ask for it in chat.
+
+### A fresh container (a new session, Oct 27)
+A new session clones the repo fresh, and nothing outside git survives: every committed render is checked out again
+(9 GB: run `free_disk.sh "^$"` first), `.git/info/exclude` is the default (add the in-progress reel's media folders
+again: `video/public/reel/<id>/`, its `out/*.mp4`), `models/` is empty, and no Python package beyond the system's is
+installed. What the pipeline needed on Oct 27 (Python 3.13, `PIP_BREAK_SYSTEM_PACKAGES=1`):
+`pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu`, then `transformers==4.46.1`,
+`git+https://github.com/huggingface/parler-tts.git` (0.2.2), `faster-whisper "av<16"` (PyAV 19 dropped the
+`metadata_errors` argument faster-whisper 1.2.1 passes), `librosa soundfile scipy sentencepiece kokoro-onnx onnx`,
+and `llama-cpp-python` for demos (built from source, about 10 minutes on 4 cores). `models/kokoro-v1.0-timed.onnx`
+(reel_build imports Kokoro even for file-voiced skits): download `kokoro-v1.0.onnx` and `voices-v1.0.bin` from the
+kokoro-onnx release `model-files-v1.0`, run `pipeline/make_timed_model.py`, delete the untimed file. The static ffmpeg
+from johnvansickle.com to `/tmp/claude-0/ffmpeg`; `cd video && npm ci`. The headless Chromium moved: set
+`CHROME=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell` for
+`render.sh` and `stills.cjs` (their default path was the old build). The two scheduled runs are bound to the session
+they fire into: a session that can no longer start (its source branch gone) gets nothing, so after moving to a new
+session, create the two runs again bound to it (same names, times and prompts) and disable the old ones.
 
 ## Tools
 - `pipeline/tools/render.sh "<Comp>:<out>" ...`: renders in order and loudness-normalises. One render at a time;
@@ -49,7 +67,7 @@ The user's ask (Oct 20): the daily episode covers the whole syllabus, plus weekl
 
 | IST day | Slot | Next item from | Posted |
 |---|---|---|---|
-| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP40 is next (queue 042), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
+| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP41 is next (queue 043), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
 | Thu | HOW TO (see "Thursday: HOW TO") | `series/HOWTO.md`, the first "planned" row whose "Needs" are out | the day it is made |
 | Sat | AI WEEKLY (see "Saturday: AI WEEKLY") | `news/README.md`, "Weekly edition" | the day it is made |
 
@@ -60,7 +78,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041); next EP40 "Benchmarks & evaluations: how models are compared", queue 042). The skit replaces the old
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042); next EP41 "How to choose the right model", queue 043). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
@@ -477,3 +495,17 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   చెప్తారు"). For Telugu line checks use language="hi" on each line's span of the final mix: language="te" invented
   words (once a profanity) under the thunder. Set HF_HUB_CACHE=/dev/shm/hf for every script that loads whisper
   (te_pack_note.py too): without it a 464 MB copy landed on the disk.
+- EP40 lessons (Oct 27): the English judge counts only letters (`re.findall(r"[a-z]+")`), so digits never count and a
+  JUDGE_TEXT with "60 percent" fails a clean "60%" take (Whisper writes the sign): write "60%". The Telugu stutter
+  check flags a word that starts with the previous one, so "ఆ అరవై" failed four clean takes: drop the "ఆ". Parler
+  Telugu babbled "ముప్పై ప్రశ్నలు" three times ("ముప్పై లెక్కలు" came through), rushed a short opener "అలా జరుగుతుంది."
+  into 0.86 s that vanished in the mix ("అవును, అలా..." gives it a run-up), and smears "ఆన్లైన్" at 1.15x (write "ఆన్ లైన్",
+  tempo 1.05; Whisper writes it "अनलेन/अनलिन", so a "लाइन" must-word fails every take). A louder last-scene bed that
+  English survives can bury Telugu: boost 1.6 cost the Telugu rule line two words; keep a per-language boost
+  (FLAGS_TE). A drop_pre with a negative end ([[line, -2.6, 3.5]]) keeps the bed out through the punchline line.
+  A benchmark demo on 4 CPU cores: the 1.5B wrote a GSM8K reply in about 12 s, the 3B in about 2 minutes at a 600-token
+  cap: budget an hour per 30 questions for a 3B. Read every reply: the answer regex scored two wrong candle replies
+  ("L - 8 centimeters shorter") as right. When the demo kills the planned story (no drop on the renamed copy), let our
+  own numbers lead: the viewers caught that 60% on the paper and 55% on the bills put the gap on the squeezed copy and
+  the maker's own test, not on "your shop isn't on that paper". A helper that sets `c.globalAlpha` absolutely ignores an
+  outer fade: pass the fade in as its `k`. Never `pgrep -f` a name that is in your own wait loop (it found itself).

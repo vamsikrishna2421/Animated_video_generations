@@ -1,0 +1,392 @@
+{
+ "id": "ep40te",
+ "title": "73 in maths (EP40: benchmarks and evaluations) (Telugu audio)",
+ "label": "EP40",
+ "banner": "AI benchmarks",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.5,
+ "musicEndRamp": [
+  0.95,
+  3.5
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_bench",
+   "tail": 0.1,
+   "boost": 1.25,
+   "drop_pre": [
+    [
+     3,
+     0.0,
+     1.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "paper",
+      "prop": "paper",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "screen",
+      "prop": "reveal",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "not73",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "73 in maths, 9 wrong bills",
+     "title": "73 in maths, 9 wrong bills",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "మ్యాథ్స్ లో డెబ్బై మూడు, [1] నా ఇరవై బిల్లుల్లో తొమ్మిది తప్పా?!",
+     "show": "73 in maths, and 9 of my 20 bills wrong?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "అది ఫేమస్ మ్యాథ్స్ ఎగ్జామ్ అండి. <pause 0.25> [1] ప్రతి బ్రెయిన్ కీ అదే పేపర్.",
+     "show": "That's the famous maths exam. The same paper for every brain.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "tts": "అది ఫేమస్ మ్యాథ్స్ ఎగ్జామ్ అండి.",
+     "file2": "02b_ai.wav",
+     "tts2": "ప్రతి బ్రెయిన్ కీ అదే పేపర్.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "అయితే ఇక్కడే రాయి! [1] ముప్పై లెక్కలు!",
+     "show": "Then write it right here! 30 sums!",
+     "maxgap": 0.28,
+     "gap": 3.4,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "ముప్పై లో పద్దెనిమిది. <pause 0.25> [1] అరవై శాతం.",
+     "show": "18 out of 30... 60%.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.1,
+     "tts": "ముప్పై లో పద్దెనిమిది.",
+     "file2": "04b_ai.wav",
+     "tts2": "అరవై శాతం.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "డెబ్బై మూడు కాదా?!",
+     "show": "Not 73?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_bench",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.35,
+   "boost": 1.35,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "sizes",
+      "prop": "sizes",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "copied",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "leak",
+      "prop": "leak",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "leak",
+      "prop": "nocopy",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Did it copy the exam?",
+     "title": "Did it copy the exam?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "డెబ్బై మూడు, నా అసలు సైజ్ బ్రెయిన్ కి, మా కంపెనీ టెస్ట్. <pause 0.25> [1] మీ దగ్గర కంప్రెస్ చేసిన బ్రెయిన్, మీ టెస్ట్.",
+     "show": "73 is my full-size brain, my company's test. With you: the compressed brain, your test.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "tts": "డెబ్బై మూడు, నా అసలు సైజ్ బ్రెయిన్ కి, మా కంపెనీ టెస్ట్.",
+     "file2": "06b_ai.wav",
+     "tts2": "మీ దగ్గర కంప్రెస్ చేసిన బ్రెయిన్, మీ టెస్ట్.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "అరవై కూడా కాపీ ఏమో! [1] ఆ పేపర్ ఆన్ లైన్ లో ఉంది!",
+     "show": "Maybe even that 60 is copied! That paper is online!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "అవును, అలా జరుగుతుంది. <pause 0.25> [1] అందుకే అవే లెక్కలు, కొత్త పేర్లు, కొత్త నంబర్లతో.",
+     "show": "Yes, that happens. So: the same sums, new names, new numbers.",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "tts": "అవును, అలా జరుగుతుంది.",
+     "file2": "08b_ai.wav",
+     "tts2": "అందుకే అవే లెక్కలు, కొత్త పేర్లు, కొత్త నంబర్లతో.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "అరవై ఏడు శాతం. <pause 0.25> [1] తగ్గలేదు. కాపీ చేసినట్టు లేదు.",
+     "show": "67%... It didn't drop. No sign of copying.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "tts": "అరవై ఏడు శాతం.",
+     "file2": "09b_ai.wav",
+     "tts2": "తగ్గలేదు. కాపీ చేసినట్టు లేదు.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_bench",
+   "tail": 0.3,
+   "lift": 0.9,
+   "pre": 0.35,
+   "outro": true,
+   "boost": 1.5,
+   "drop_pre": [
+    [
+     5,
+     -2.6,
+     3.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "trust",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "bills",
+      "prop": "bills",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "post",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "study",
+      "prop": "study",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Your own test",
+     "title": "Your own test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "మరి ఏ నంబర్ ని నమ్మాలి?!",
+     "show": "Then which number do I trust?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "మీ నంబరే నమ్మండి. <pause 0.25> [1] ప్రతి బ్రెయిన్ కీ మీ ఇరవై బిల్లులు ఇవ్వండి, సరైన టోటల్స్ రాసి పెట్టి.",
+     "show": "Trust your own number. Give every brain your 20 bills, with the right totals written down.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.05,
+     "nocap": true,
+     "tts": "మీ నంబరే నమ్మండి.",
+     "file2": "11b_ai.wav",
+     "tts2": "ప్రతి బ్రెయిన్ కీ మీ ఇరవై బిల్లులు ఇవ్వండి, సరైన టోటల్స్ రాసి పెట్టి.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "మీ బిల్లుల్లో, [1] పెద్ద బ్రెయిన్ కి ఇరవై లో పద్దెనిమిది.",
+     "show": "In your bills, the big brain got 18 of 20.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "సూపర్! [1] నా టెస్ట్ ని ఆన్ లైన్ లో పెడతా, అన్ని షాపులకీ!",
+     "show": "Super! I'll put my test online, for all the shops!",
+     "maxgap": 0.28,
+     "gap": 0.12,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "అప్పుడు తర్వాతి బ్రెయిన్లు దాన్ని చదివేయొచ్చు. <pause 0.25> [1] మీ టెస్ట్ మీ దగ్గరే ఉంచుకోండి.",
+     "show": "Then the next brains may study it. Keep your test to yourself.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.1,
+     "tts": "అప్పుడు తర్వాతి బ్రెయిన్లు దాన్ని చదివేయొచ్చు.",
+     "file2": "14b_ai.wav",
+     "tts2": "మీ టెస్ట్ మీ దగ్గరే ఉంచుకోండి.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "వంద శాతమా? [1] నా పేపర్ చదివేసింది!",
+     "show": "100%? It studied MY paper!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

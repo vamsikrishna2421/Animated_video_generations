@@ -1,0 +1,37 @@
+UPLOAD: 042 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/042_ep40_insta_te.mp4  (teaching skit, about 60 s, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/042_ep40_insta_te_ig.mp4, about 22 MB). It loops: "vanda shaatamaa? naa paper chadivesindi!" taruvaata frame 1 (73.2% chart, ₹65 bill) malli vastundi, replay "maths lo debbai moodu..." tho modalavutundi.
+
+=== CAPTION ===
+Launch chart lo maths 73%. Ravi anna 20 bills lo 9 tappu.
+
+AI From Scratch Episode 40: benchmarks, AI models ni ela compare chestaaru
+- Benchmark ante oka exam paper, prati AI ki ade paper, answers telisinavi. Qwen2.5-1.5B chart lo "maths 73.2%" ante GSM8K: 1,319 school maths word problems (OpenAI, 2021)
+- Oka score oka brain di, oka padhdhati lo test chesinadi. 73.2 maker sontha test, full-size brain tho. Maa real test, internet cut chesi: ade chinna brain, laptop lo vaade laaga 4-bit ki compress chesindi, maa prompt, aa paper lo modati 30 prashnalu: 30 lo 18, 60%
+- Copy bhayam nijame: aa paper 2021 nunchi online lo undi, exam prashnalu AI lu nerchukune daanilo kalisipovachchu (contamination). Scale AI ee exam ki kotha copy raasi choosindi: konni model families 8% varaku padipoyaayi. Anduke memu check chesaam: ave 30 prashnalu, perlu, numbers maatrame maarchi ("Janet's ducks lay 16 eggs" → "Lakshmi's ducks lay 22 eggs"): 30 lo 20, 67%. Taggaledu, copy chesinattu ledu
+- Ravi sontha test lo (price board tho 20 nijamaina bills, sarain totals mundu raasi): 1.1 GB brain 20 lo 11, 2.1 GB 15, 4.7 GB 18. Chart order nijamaindi. Kaani 9 tappu bills Ravi sontha test lo maatrame kanipinchaayi
+
+Meeku idi ante:
+1. AI ni select cheyyadaaniki leda pay cheyyadaaniki mundu mee pani meeda test cheyyandi: 10-20 nijamaina panulu, sarain answers mundu raasi, prati AI ki ade test
+2. Meeru vaade version, settings tho test cheyyandi (free tier, chinna leda compress chesina model, mee prompt), chart lo unnadi kaadu
+3. Launch chart ante "aa exam lo, maker padhdhati lo ela chesindi". Order ki panikostundi, mee score ki kaadu
+4. Mee test mee daggare unchukondi. Online lo pettina test next AI la training lo kalisipovachchu; appudu adi skill kaadu, memory ni kolustundi
+
+Next: EP41, sarain model ni ela select cheyyaali (fast aa, correct aa? 20 lo 18 techchina brain EP39 lo slow ga unnade).
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+Ade paper Ravi laptop lo: score entha? A) 73%, chart laaga B) 60% C) 30%. Answer raakamunde comment cheyyandi. AI ki mee sontha 10 prashnala test emiti?
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AIFromScratch #LearnAI #AIBenchmarks #LLM
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen sontha 4-bit GGUF file (Q4_K_M), Qwen2.5-1.5B-Instruct, llama.cpp tho 4-core computer (server CPU, graphics card ledu), greedy, prati run internet cut chesi. GSM8K test set lo modati 30 prashnalu, unnadi unnatte, prati daaniki "Solve it step by step, then write the final answer on its own line as: Answer: <number>"; taruvaata ave 30, perlu numbers maatrame maarchi (kotha answers memu lekka katti). Prati reply chetitho chadivaam: paper lo 30 lo 18, maarchina copy lo 30 lo 20. Bill test EP38 di: shop 15 lines price board tho 20 orders, exact totals.
+73.2% enduku kaadu, 60% enduku? Maker full-size brain ni 1,319 prashnala tho, tana padhdhati lo test chesindi; maadi compress chesina file, 30 prashnalu, maa prompt. Veru copy, veru test.
+Sources: English pinned comment lo unnaayi (Qwen2.5 blog, GSM8K, GSM1k, GSM-Symbolic).
+
+=== COVER ===
+Frame 1: Ravi anna counter daggara arustu; pakkana launch chart "1.1 GB brain · MATHS 73.2% ⭐", "2 bread, 4 biscuits: TOTAL ₹65" bill red lo kotti "right: ₹170", "9 of 20 bills wrong". (English visuals)
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop, Telugu audio, English on-screen text: the same pictures as the English reel (see 042_ep40_reel_captions.txt): a 73.2% maths launch chart next to a wrong bill (₹65, right ₹170, 9 of 20 bills wrong); the benchmark exam paper the same for every AI; the quiz (73%, 60% or 30%); our test 18 of 30 = 60% next to the maker's 73.2% for its full-size brain; the full-size brain in the maker's lab and the squeezed one on Ravi's laptop; contamination and the copy check (Janet's ducks 16 eggs → Lakshmi's ducks 22 eggs: 60% → 67%, no sign of copying); the rule card (test it on your own work); Ravi's 20 bills (11, 15, 18); his test posted online and dropping into what AIs learn from, "keep your test private"; a new chart with 100% on Ravi anna's bill test; then back to the first frame.

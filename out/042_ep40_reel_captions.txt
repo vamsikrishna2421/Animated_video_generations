@@ -1,0 +1,46 @@
+UPLOAD: 042
+VIDEO: 042_ep40_73_in_maths.mp4  (teaching skit, about 60 s, AI voices; replaces the older lesson-format 042_ep40_ai_benchmarks_how_models_are_tested.mp4; send copy: 042_ep40_73_in_maths_ig.mp4, about 22 MB). It loops: after "A hundred percent? It studied MY paper!" the scene slams back to frame 1, the 73.2% chart and the ₹65 bill, and the replay opens on "Seventy-three in maths...".
+
+=== CAPTION ===
+73% in maths on its launch chart. 9 of Ravi anna's 20 bills wrong.
+
+Episode 40 of AI From Scratch: benchmarks, how AI models are compared
+- A benchmark is one exam paper, the same for every AI, with known answers. The "maths 73.2%" on Qwen2.5-1.5B's chart is GSM8K: 1,319 school maths word problems (OpenAI, 2021)
+- A score belongs to one brain, tested one way. The 73.2 is the maker's own test of its full-size brain. Our real test, internet cut: the same small brain, squeezed to 4-bit the way people run it on a laptop, our prompt, the first 30 questions of that paper: 18 of 30, 60%
+- Copying is a real worry: the paper has been online since 2021, and exam questions can leak into what AIs learn from (contamination). Scale AI wrote a fresh copy of this exam and found some model families dropping by up to 8%. So we checked ours: the same 30 questions with only the names and numbers changed ("Janet's ducks lay 16 eggs" → "Lakshmi's ducks lay 22 eggs"): 20 of 30, 67%. No drop, no sign of copying
+- On Ravi's own test (20 real bills against his price board, the right totals written down first): 11 of 20 for the 1.1 GB brain, 15 for the 2.1 GB, 18 for the 4.7 GB. The chart's order held. Only his own test showed the 9 wrong bills
+
+What this means for you:
+1. Before you pick or pay for an AI, test it on your own work: 10-20 real tasks, the right answers written down before you start, the same test for every AI
+2. Test the exact version and settings you'll use (a free tier, a small or squeezed model, your own prompt), not the one on the chart
+3. Read a launch chart as "how it did on that exam, run the maker's way". Useful for the order, not for your score
+4. Keep your test to yourself. A test posted online can end up in the next AIs' training data, and then it measures memory, not skill
+
+Next: EP41, how to choose the right model (fast, or right? The 18-of-20 brain is the slow one from EP39).
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+The same paper on Ravi's laptop: its score? A) 73%, like the chart B) 60% C) 30%. Comment before the answer comes. And: what would your own 10-question test for an AI be?
+
+=== HASHTAGS ===
+#AIFromScratch #LearnAI #AIBenchmarks #LLM #AIForBusiness #LocalAI
+
+=== PINNED_COMMENT ===
+How we tested (run by us): Qwen's own 4-bit GGUF file (Q4_K_M) of Qwen2.5-1.5B-Instruct, llama.cpp on a 4-core computer (server CPU, no graphics card), greedy, the internet cut for every run. The first 30 questions of GSM8K's test set, word for word, each with "Solve it step by step, then write the final answer on its own line as: Answer: <number>"; then the same 30 with only the names and numbers changed (new answers worked out by us). Every reply was read by hand: 18 of 30 on the paper, 20 of 30 on the changed copy. The bill test is EP38's: 20 orders against the shop's 15-line price board, exact totals.
+Why 60% and not 73.2%? The maker tested the full-size brain on all 1,319 questions, its own way; ours is the squeezed file, 30 questions, our prompt. Different copy, different test.
+Sources: Qwen2.5 blog and technical report (qwenlm.github.io/blog/qwen2.5-llm, arXiv 2412.15115), GSM8K (OpenAI, arXiv 2110.14168), GSM1k (Scale AI, arXiv 2405.00332), GSM-Symbolic (Apple, arXiv 2410.05229).
+
+=== COVER ===
+Frame 1: Ravi anna yelling at his counter; beside him a launch chart "1.1 GB brain · MATHS 73.2% ⭐" and a bill "2 bread, 4 biscuits: TOTAL ₹65" crossed out in red, "right: ₹170", "9 of 20 bills wrong".
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. Ravi anna yells next to a launch chart that says his new 1.1 GB AI brain scored 73.2% in maths, and a bill for 2 bread and 4 biscuits totalled at 65 rupees, crossed out in red: the right total is 170, and 9 of his 20 bills were wrong. The shop AI explains that 73 is the famous maths exam, GSM8K: one exam paper, the same for every AI, a benchmark; three robots write the same paper at three desks. Ravi slaps 30 questions of the paper on the counter; a quiz asks the score on Ravi's laptop: 73% like the chart, 60%, or 30%. Our real test card: 18 of 30 right, 60%, next to the maker's 73.2% for its full-size brain. The AI explains the 73 was its full-size brain on the maker's test, while Ravi runs it squeezed, on his own test: a score is one brain, tested one way. Ravi suspects copying because the paper has been online since 2021. A card explains contamination: exam questions can leak into what AIs learn from; the copy check changes "Janet's ducks lay 16 eggs" to "Lakshmi's ducks lay 22 eggs". The result: 60% on the paper, 67% with new names and numbers: no drop, no sign of copying. Ravi asks which number to trust. A rule card: test it on your own work, 20 real bills with the right totals written down, the same test for every brain, your copy and your settings. Ravi's 20 bills: the 1.1 GB brain 11, the 2.1 GB brain 15, the 4.7 GB brain 18, the same order as the chart. Ravi posts his bill test online for every shop; the post drops into a pile labelled "what AIs learn from", and a card says keep your test private. A new launch chart slams in: a new brain scores 100% on Ravi anna's bill test. Ravi yells that it studied his paper, and the scene slams back to the first frame.
+
+=== SOURCES (for comments) ===
+Demo (run by us): pipeline/ep40/bench_demo.py, results in series/scripts/ep40_demo/1.5B.json; the bill test: pipeline/ep38/local_demo.py, series/scripts/ep38_demo/.
+Qwen2.5-LLM blog (qwenlm.github.io/blog/qwen2.5-llm/) and Qwen2.5 Technical Report (arXiv 2412.15115), Tables 8-10: GSM8K 73.2 (1.5B), 86.7 (3B), 91.6 (7B).
+GSM8K: Cobbe et al., "Training Verifiers to Solve Math Word Problems" (OpenAI, arXiv 2110.14168); github.com/openai/grade-school-math (MIT licence).
+GSM1k: Zhang et al., "A Careful Examination of Large Language Model Performance on Grade School Arithmetic" (Scale AI, arXiv 2405.00332).
+GSM-Symbolic: Mirzadeh et al. (Apple, arXiv 2410.05229, ICLR 2025).
+Benchmark contamination: Xu et al., arXiv 2406.04244.
+Your own test: Anthropic, "Develop tests" (platform.claude.com); OpenAI, "Model selection" (developers.openai.com).

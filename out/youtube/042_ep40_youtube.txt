@@ -1,0 +1,34 @@
+UPLOAD: 042 (YouTube Shorts: upload the same vertical files as Instagram, 042_ep40_73_in_maths.mp4 and telugu_page/042_ep40_insta_te.mp4; no landscape version)
+
+########## ENGLISH ##########
+=== TITLE ===
+73% in Maths, 9 Wrong Bills: What AI Benchmarks Really Measure (Tested) | AI From Scratch Ep 40 #Shorts
+
+=== DESCRIPTION ===
+Ravi anna put a small AI brain in his shop because its launch chart said "maths 73.2%". It got 9 of his 20 bills wrong. A benchmark is one exam paper, the same for every AI (this one is GSM8K: 1,319 school maths word problems, online since 2021), and a score belongs to one brain tested one way: the 73.2 is the maker's own test of its full-size brain.
+
+Our real test, internet cut, on a 4-core computer (Qwen2.5 1.5B, squeezed to 4-bit as people run it on a laptop): the first 30 questions of that paper, 18 right (60%). Did it copy the paper? Exam questions can leak into training data (contamination; Scale AI's fresh copy of this exam caught some model families dropping by up to 8%), so we changed only the names and numbers: 20 of 30 (67%). No drop, no sign of copying. On Ravi's own 20 bills: 11, 15 and 18 right for the 1.1, 2.1 and 4.7 GB brains: the chart's order, but only his own test showed the wrong bills.
+
+What it means for you: test an AI on your own work before you pick or pay (10-20 real tasks, the right answers written down first, the same test for every AI), on the version and settings you will actually use. And keep that test to yourself: a test posted online can end up in the next AIs' training data.
+
+How we tested (run by us): Qwen's own GGUF file, llama.cpp, greedy, every reply read by hand, every run offline.
+Sources: Qwen2.5 blog and technical report; GSM8K (OpenAI); GSM1k (Scale AI); GSM-Symbolic (Apple).
+
+Next: EP41, how to choose the right model.
+
+=== TAGS ===
+AI benchmarks, LLM benchmark, GSM8K, AI evaluation, eval, contamination, AI test, launch chart, Qwen2.5, local AI, llama.cpp, AI for business, AI for beginners, AI From Scratch
+
+########## TELUGU: telugu_page/042_ep40_insta_te.mp4 (YouTube Shorts, same vertical file) ##########
+=== TITLE ===
+Maths lo 73%, 9 Bills Tappu: AI Benchmarks Ante Emiti? (Test) | AI From Scratch Ep 40 Telugu #Shorts
+
+=== DESCRIPTION ===
+Launch chart lo "maths 73.2%" ani undani Ravi anna shop lo chinna AI brain pettaaru. Adi 20 bills lo 9 tappu chesindi. Benchmark ante oka exam paper, prati AI ki ade (idi GSM8K: 1,319 school maths word problems, 2021 nunchi online lo), oka score oka brain di, oka padhdhati lo test chesinadi: 73.2 maker full-size brain tho chesina sontha test.
+
+Maa real test, internet cut chesi, 4-core computer (Qwen2.5 1.5B, laptop lo laaga 4-bit ki compress chesindi): aa paper lo modati 30 prashnalu, 18 correct (60%). Copy kottindaa? Exam prashnalu training data lo kalisipovachchu (contamination), anduke perlu, numbers maatrame maarchaam: 30 lo 20 (67%). Taggaledu, copy chesinattu ledu. Ravi sontha 20 bills lo: 1.1, 2.1, 4.7 GB brains ki 11, 15, 18.
+
+Meeku: AI ni select leda pay cheyyadaaniki mundu mee pani meeda test cheyyandi (10-20 nijamaina panulu, answers mundu raasi, prati AI ki ade test), meeru vaade version, settings tho. Aa test mee daggare unchukondi.
+Test vivaraalu, sources: English description lo unnaayi.
+
+Next: EP41, sarain model ni ela select cheyyaali.

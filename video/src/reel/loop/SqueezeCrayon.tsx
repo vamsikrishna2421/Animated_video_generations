@@ -61,7 +61,7 @@ const orderBook = (c: Ctx, x: number, y: number, w: number, rows: [string, strin
   c.restore();
 };
 // a file icon for the brain: purple page, a folded corner, the size under it; `sq` squeezes it flat
-const brainFile = (c: Ctx, x: number, y: number, s: number, sq: number, gb: string, r: () => number) => {
+export const brainFile = (c: Ctx, x: number, y: number, s: number, sq: number, gb: string, r: () => number) => {
   const w = 230 * (1 - 0.45 * sq), h = 290 * (1 - 0.12 * sq);
   c.save(); c.translate(x, y); c.scale(s, s);
   c.fillStyle = "#a855f7"; c.beginPath(); c.moveTo(-w / 2, -h / 2); c.lineTo(w / 2 - 50, -h / 2); c.lineTo(w / 2, -h / 2 + 50); c.lineTo(w / 2, h / 2); c.lineTo(-w / 2, h / 2); c.closePath(); c.fill();
@@ -74,7 +74,7 @@ const brainFile = (c: Ctx, x: number, y: number, s: number, sq: number, gb: stri
   c.restore();
 };
 // a C-clamp vice around the file: `close` 0 (open) .. 1 (jaws at the squeezed file's edges)
-const vice = (c: Ctx, x: number, y: number, s: number, close: number, r: () => number) => {
+export const vice = (c: Ctx, x: number, y: number, s: number, close: number, r: () => number) => {
   const gap = 170 - 70 * easeOut(close);
   c.save(); c.translate(x, y); c.scale(s, s);
   c.fillStyle = "#64748b";

@@ -72,7 +72,7 @@ export const xMark = (c: Ctx, x: number, y: number, s: number, k: number, r: () 
   stroke(c, [[x - s, y - s], [x - s + 2 * s * seg(k, 0, 0.5), y - s + 2 * s * seg(k, 0, 0.5)]], COL.red, 16, r, { passes: 2 });
   if (k > 0.5) stroke(c, [[x + s, y - s], [x + s - 2 * s * seg(k, 0.5, 1), y - s + 2 * s * seg(k, 0.5, 1)]], COL.red, 16, r, { passes: 2 });
 };
-const padlock = (c: Ctx, x: number, y: number, s: number, k: number, r: () => number) => {
+export const padlock = (c: Ctx, x: number, y: number, s: number, k: number, r: () => number) => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.scale(s * easeOut(k), s * easeOut(k));
   stroke(c, circlePts(0, -40, 46, 54, Math.PI, 2 * Math.PI, 14), "#475569", 18, r, { passes: 2 });
