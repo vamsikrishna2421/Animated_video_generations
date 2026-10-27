@@ -444,13 +444,25 @@ const StFamily: React.FC<SP> = ({ s }) => {
           c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the chat in this video (we wrote it) · a free AI", W / 2, 360); c.fillText("model on our computer, offline · 10 tries each", W / 2, 404);
           const c1 = cu(1, 0.4);
           const pass = b.prop === "pass";
-          const kr = pass ? 1 : seg(f, ln.from + 2, ln.from + 8), kv = pass ? 1 : seg(f, c1 - 2, c1 + 6);
+          // render review 2 (both): "budget set at 40,000" needs its proof on the card (the chat talked about 40k, nobody
+          // said yes) and the breakdown in big type; "4 of 10" lands on "Four", not before it
+          const kr = pass ? 1 : seg(f, ln.from + 2, ln.from + 8), kv = pass ? 1 : seg(f, c1 + 6, c1 + 12);
           testRow(c, 520, "\"What did we decide?\"", "", RED, "#fee2e2", kr);
           if (kv > 0) { c.save(); c.globalAlpha = clamp(kv * 3); c.font = SANS(60); c.fillStyle = RED; c.textAlign = "left"; c.fillText("4 of 10 made one up", 140, 564); c.restore(); }
-          if (f >= c1 + 6 || pass) {
-            c.save(); c.globalAlpha = pass ? 1 : seg(f, c1 + 6, c1 + 14);
-            c.font = SANS(36, 600); c.fillStyle = "#fecaca"; c.textAlign = "center";
-            c.fillText("all 4: the budget \"set at 40,000\" (nobody agreed)", W / 2, 650); c.fillText("1 of them also: \"Goa confirmed\"", W / 2, 698);
+          if (f >= c1 + 14 || pass) {
+            c.save(); c.globalAlpha = pass ? 1 : seg(f, c1 + 14, c1 + 22);
+            c.textAlign = "center"; c.font = SANS(48); c.fillStyle = "#fecaca"; c.fillText("all 4: \"budget set at 40,000\"", W / 2, 660);
+            c.font = SANS(40, 600); c.fillText("1 of them also: \"Goa confirmed\"", W / 2, 716);
+            c.restore();
+          }
+          if (!pass && kr > 0) {   // the chat on the budget, as in the video's chat: a number talked about, no yes
+            c.save(); c.globalAlpha = clamp(kr * 3);
+            c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the chat on the budget: nobody said yes", W / 2, 784);
+            [["Prasad", "40k max."], ["Lakshmi", "40k for Ooty is plenty."], ["Kiran", "Goa 40k is tight."]].forEach(([who, txt], q) => {
+              const yy = 806 + q * 64; c.font = SANS(34, 600); const tw = c.measureText(`${who}: ${txt}`).width;
+              c.fillStyle = "#fff"; rrect(c, W / 2 - tw / 2 - 22, yy, tw + 44, 52, 14); c.fill();
+              c.fillStyle = INK; c.fillText(`${who}: ${txt}`, W / 2, yy + 38);
+            });
             c.restore();
           }
           if (pass) testRow(c, 850, "with the quote line", "10 of 10: not decided", GREEN, "#dcfce7", seg(f, ln.from, ln.from + 8));

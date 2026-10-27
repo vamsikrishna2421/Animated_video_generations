@@ -81,6 +81,19 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
   (a ఫ/ప spelling, said as Telugu speakers say it); the per-line check of the final mix found no stutter in line 6.
   English: "Confirmed?!" was heard "Confirm?": re-voiced.
 
+## Render review 2 and what changed
+- Landed (both): the quiz hold and placement, the stop and the boom on the answer, frame 1's tiles and "GOA", the Apple
+  card, the pinned comment, English "Confirmed?!". Both would share it; Sandeep would post the English as it was.
+- Both: "budget set at 40,000" needed its proof: the test card shows the chat on the budget (Prasad "40k max.", Lakshmi
+  "40k for Ooty is plenty.", Kiran "Goa 40k is tight.": nobody said yes) and "all 4: 'budget set at 40,000'" in big type.
+  Priya: "4 of 10" came up before "Four": it lands on the word now.
+- Telugu (both): the music in the gaps sat ~12 dB under the voice (English ~3) and the end under the start: louder gaps
+  (musicGapGain 3 dB) and a louder answer scene; the bed still dips under the last line, whose last word it masked.
+  Line 13 "కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే", "అనమనండి" and line 6's "చేశా": the per-line check of the final mix heard
+  each clean (the pack's transcript windows cut them), so no re-voice. Caption 13 lost "only" ("it." sat alone).
+- English: "See? The AI says Goa!" +1.5 dB. The comment prompt no longer says "before the answer shows".
+- Kept (one viewer): 0:19-0:35 at 105 words a minute (Priya would cut 2-3 s; the copy card is the save).
+
 ## Script (English) · ~55 s
 | # | Who | Line | On screen |
 |---|---|---|---|
@@ -114,7 +127,7 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
 | 10 | Prasad | సరే. [1] నేనే ఫిక్స్ చేస్తా! | Fine. I'll fix it myself! |
 | 11 | Harika | ఫిక్స్: గోవా. [1] కోట్: మావయ్య మెసేజ్. | Fixed: Goa. Quote: mavayya's message. |
 | 12 | Lakshmi | అయ్యో, మావయ్యా! | Ayyo, mavayya! |
-| 13 | Harika | కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే. [1] అందరూ ఓకే అన్నారని కాదు. | A quote only shows who said it. Not that everyone said OK. |
+| 13 | Harika | కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే. [1] అందరూ ఓకే అన్నారని కాదు. | A quote shows who said it. Not that everyone said OK. |
 | 14 | Prasad | చూశారా? [1] గోవా కన్ఫర్మ్! | See? Goa confirmed! |
 
 Telugu notes: no "ఏఐ" (Parler stutters on it): "సమ్మరీ"; no "డిసైడ్" (it came out "dish" in Creative 10): "ఫిక్స్" / "నిర్ణయం";

@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 1.5,
+ "musicGapGain": 3.0,
  "musicEndRamp": [
   0.93,
   4.0
@@ -293,7 +293,7 @@
    "type": "sk_family",
    "tail": 0.0,
    "outro": true,
-   "boost": 1.4,
+   "boost": 1.5,
    "rise": 1.25,
    "drop_pre": [
     [
@@ -372,7 +372,7 @@
      "who": "harika",
      "file": "13_harika.wav",
      "text": "కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే. <pause 0.25> [1] అందరూ ఓకే అన్నారని కాదు.",
-     "show": "A quote only shows who said it. Not that everyone said OK.",
+     "show": "A quote shows who said it. Not that everyone said OK.",
      "maxgap": 0.28,
      "gap": 1.0,
      "tempo": 1.08,
@@ -386,7 +386,7 @@
      "who": "prasad",
      "file": "14_prasad.wav",
      "text": "చూశారా? [1] గోవా కన్ఫర్మ్!",
-     "show": "See? Goa confirmed!",
+     "show": "See? The AI says Goa!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.1,

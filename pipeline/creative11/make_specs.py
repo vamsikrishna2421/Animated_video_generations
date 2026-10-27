@@ -44,7 +44,7 @@ SHOW_TE = {
     5: "You asked what we fixed. So it fixed one: Goa.", 6: "I tested our chat 10 times... 4 times it wrote a decision that didn't exist.",
     7: "So how do we check?!", 8: "Tell it to quote the message for each decision. Otherwise: nothing was fixed.",
     9: "10 out of 10: nothing was fixed.", 10: "Fine. I'll fix it myself!", 11: "Fixed: Goa. Quote: mavayya's message.",
-    12: "Ayyo, mavayya!", 13: "A quote only shows who said it. Not that everyone said OK.", 14: "See? Goa confirmed!",
+    12: "Ayyo, mavayya!", 13: "A quote shows who said it. Not that everyone said OK.",   # render review 2: "it." was left alone on a line 14: "See? Goa confirmed!",
 }
 NOCAP = {8}   # the copy card carries its words
 PAUSES = {}
@@ -66,9 +66,9 @@ SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.25, "tail": 0.1}),
                                      "drop_pre": [[0, 0.0, 1.4]], "tail": 0.0})]   # the bed out after the quiz count, before "Decided: Goa"
 GAP = {1: 0.15, 2: 0.15, 3: 0.2, 5: 0.35, 6: 0.4, 8: 0.45, 9: 0.35, 10: 4.8, 11: 0.4, 12: 0.6, 13: 1.0}   # 10: the quiz holds 4.8 s (render review: 3.4 s was read too fast); 12: a beat after "Mavayya!"; 13: the riser into his last line sits in the gap (over "చూశారా?" it smeared the word)
 GAP_TE = {}
-GAIN = {}
+GAIN = {14: 1.5}   # render review 2: "See? The AI says Goa!" a little louder
 GAIN_TE = {}
-FLAGS_TE = {"s_d": {"boost": 1.4, "duck_lines": [[3, 0.6]]}}   # EP40: a louder last-scene bed buried Telugu words; the rising bed
+FLAGS_TE = {"s_d": {"boost": 1.5, "duck_lines": [[3, 0.6]]}}   # EP40: a louder last-scene bed buried Telugu words; the rising bed
 # masked the last word "కన్ఫర్మ్" (the take alone reads clean): the bed dips under that line, the slam after it stays
 YT = {"s_a": "The AI confirmed Goa", "s_b": "Quote the message", "s_c": "He decides", "s_d": "Who said it?"}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -85,8 +85,8 @@ def spec(lang="en"):
          "musicPad": True, "musicGapGain": 1.5, "musicEndRamp": [0.93, 4.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
-    if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te"})
+    if te:   # render review 2: the music in the Telugu gaps sat ~12 dB under the voice (English ~3): louder gaps
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "musicGapGain": 3.0})
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []
