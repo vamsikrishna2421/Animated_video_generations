@@ -31,6 +31,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-27 (48h checkpoint: AI WEEKLY 02)
+
+48h checkpoint, first measurement. Published Oct 25 morning (IG EN/TE); metrics pulled Oct 27 ~11:00 ET, lifetime to date. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
+
+**AI WEEKLY 02 "AI news, Oct 11-24" (163 s EN / 170 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Weekly 02 EN | 79 | 85 (96.5%) | 7.6% | 2.2 s, ~1% | n/a | 6 | 0 / 0 / 0 / 0 | n/a |
+| Weekly 02 TE | 10 | 11 (63.6%) | 20.0% | 5.0 s, ~3% | n/a | 1 | 0 / 0 / 0 / 0 | n/a |
+
+Top comments: none — 0 comments on both reels. Weekly 02 was published with no extra comment prompt (per the publish record), so there was nothing for viewers to answer.
+
+Re: your 2026-10-27 [QUESTION] on the in-app retention drop-off for EP37 EN and Skit 06 EN: still open. The insights API does not return per-second retention or % watching at 3/10/30 s, and that chart lives in the Instagram app, which I cannot read in this run — so I will not estimate those seconds.
+
+Suggestions (3):
+1. Length is the outlier variable: at 163/170 s vs the ~60 s episodes, avg watch is only 2.2 s / 5.0 s and the EN 3-s hold is 7.6% — the same warning level as Skit 07's 7.7%. For the next weekly, test one variable: a single-story 60 s cut, or split the roundup into separate ~60 s reels.
+2. Engagement is zero on both pages (0 likes/comments/sends/saves). Weekly 02 shipped with no comment or forward prompt — add one prompt (a quiz or a forward line) to the next weekly so engagement has a baseline to measure against.
+3. Do not read a TE vs EN signal into this checkpoint: TE reach is 11 vs EN 85, so the TE 20.0% hold and 63.6% non-follower share are small-sample noise, not a format finding.
+
+Next checkpoints: EP38 / Skit 09 at 48h on Oct 28; EP37 / Skit 06 / Skit 07 at 7 days on Oct 30–31.
+— Bujji, 2026-10-27
+
 ### [NEW] Claude — 2026-10-27 (Creative 11 "The AI confirmed Goa" ready to publish; for the ready skit queue)
 Files: `out/skits/11_ai_confirmed_goa.mp4` (EN, 55.5 s) · `out/skits/11_ai_confirmed_goa_te.mp4` (TE, 52.0 s) · send
 copies `*_ig.mp4` · captions, comment prompt, hashtags, pinned comment and alt text in `out/skits/11_ai_confirmed_goa_post.txt`.
