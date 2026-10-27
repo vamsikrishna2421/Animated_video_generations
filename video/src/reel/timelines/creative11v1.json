@@ -13,35 +13,41 @@
  "fps": 30,
  "musicDrops": [
   [
-   624,
-   654
+   643,
+   673
   ],
   [
-   1166,
-   1202
+   1226,
+   1268
   ]
  ],
  "musicBoosts": [
   [
    0,
-   554,
+   573,
    1.25
   ],
   [
-   554,
-   1043,
-   1.35
+   573,
+   1269,
+   1.15
   ],
   [
-   1043,
-   1563,
-   1.75
+   1268,
+   1652,
+   1.5
+  ],
+  [
+   1268,
+   1652,
+   1.25,
+   1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1563,
+ "totalFrames": 1652,
  "music": "reel/creative11v1/score.wav",
  "scenes": [
   {
@@ -91,7 +97,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 554,
+   "frames": 573,
    "lines": [
     {
      "who": "prasad",
@@ -164,31 +170,31 @@
      "sub": null,
      "audio": "reel/creative11v1/line_02.wav",
      "from": 139,
-     "frames": 53,
+     "frames": 61,
      "words": [
       {
        "w": "Confirmed?!",
        "from": 139,
-       "to": 168
+       "to": 173
       },
       {
        "w": "I",
-       "from": 168,
-       "to": 172
+       "from": 173,
+       "to": 177
       },
       {
        "w": "said",
-       "from": 172,
-       "to": 181
+       "from": 177,
+       "to": 187
       },
       {
        "w": "Ooty!",
-       "from": 181,
-       "to": 192
+       "from": 187,
+       "to": 200
       }
      ],
      "cues": {
-      "1": 168
+      "1": 173
      }
     },
     {
@@ -197,52 +203,52 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11v1/line_03.wav",
-     "from": 197,
+     "from": 204,
      "frames": 137,
      "words": [
       {
        "w": "Nobody",
-       "from": 197,
-       "to": 209
+       "from": 204,
+       "to": 216
       },
       {
        "w": "confirmed",
-       "from": 209,
-       "to": 226
+       "from": 216,
+       "to": 234
       },
       {
        "w": "anything,",
-       "from": 226,
-       "to": 247
+       "from": 234,
+       "to": 255
       },
       {
        "w": "mavayya.",
-       "from": 247,
-       "to": 263
+       "from": 255,
+       "to": 271
       },
       {
        "w": "We",
-       "from": 263,
-       "to": 268
+       "from": 271,
+       "to": 276
       },
       {
        "w": "said",
-       "from": 282,
-       "to": 293
+       "from": 290,
+       "to": 300
       },
       {
        "w": "poll",
-       "from": 293,
-       "to": 307
+       "from": 300,
+       "to": 315
       },
       {
        "w": "tomorrow.",
-       "from": 307,
-       "to": 328
+       "from": 315,
+       "to": 336
       }
      ],
      "cues": {
-      "1": 282
+      "1": 290
      }
     },
     {
@@ -251,38 +257,38 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative11v1/line_04.wav",
-     "from": 340,
+     "from": 348,
      "frames": 65,
      "words": [
       {
        "w": "The",
-       "from": 341,
-       "to": 351
+       "from": 348,
+       "to": 359
       },
       {
        "w": "AI",
-       "from": 351,
-       "to": 356
+       "from": 359,
+       "to": 363
       },
       {
        "w": "read",
-       "from": 356,
-       "to": 367
+       "from": 363,
+       "to": 375
       },
       {
        "w": "the",
-       "from": 367,
-       "to": 378
+       "from": 375,
+       "to": 386
       },
       {
        "w": "whole",
-       "from": 378,
-       "to": 388
+       "from": 386,
+       "to": 395
       },
       {
        "w": "chat!",
-       "from": 388,
-       "to": 397
+       "from": 395,
+       "to": 405
       }
      ],
      "cues": {}
@@ -293,62 +299,62 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11v1/line_05.wav",
-     "from": 410,
+     "from": 417,
      "frames": 131,
      "words": [
       {
        "w": "You",
-       "from": 411,
-       "to": 417
+       "from": 418,
+       "to": 425
       },
       {
        "w": "asked",
-       "from": 417,
-       "to": 433
-      },
-      {
-       "w": "what",
-       "from": 433,
+       "from": 425,
        "to": 441
       },
       {
-       "w": "we",
+       "w": "what",
        "from": 441,
-       "to": 446
+       "to": 449
+      },
+      {
+       "w": "we",
+       "from": 449,
+       "to": 454
       },
       {
        "w": "decided.",
-       "from": 446,
-       "to": 464
+       "from": 454,
+       "to": 472
       },
       {
        "w": "So",
-       "from": 480,
-       "to": 485
+       "from": 488,
+       "to": 492
       },
       {
        "w": "it",
-       "from": 485,
-       "to": 490
+       "from": 492,
+       "to": 497
       },
       {
        "w": "picked",
-       "from": 490,
-       "to": 509
+       "from": 497,
+       "to": 516
       },
       {
        "w": "one:",
-       "from": 509,
-       "to": 528
+       "from": 516,
+       "to": 536
       },
       {
        "w": "Goa.",
-       "from": 528,
-       "to": 536
+       "from": 536,
+       "to": 544
       }
      ],
      "cues": {
-      "1": 480
+      "1": 488
      }
     }
    ]
@@ -393,8 +399,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 554,
-   "frames": 489,
+   "from": 573,
+   "frames": 491,
    "lines": [
     {
      "who": "harika",
@@ -641,7 +647,57 @@
       "shot": "type",
       "prop": "quiz",
       "n": 10
-     },
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "He decides",
+     "title": "He decides",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1064,
+   "frames": 205,
+   "lines": [
+    {
+     "who": "prasad",
+     "name": "Prasad mavayya",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative11v1/line_10.wav",
+     "from": 11,
+     "frames": 46,
+     "words": [
+      {
+       "w": "Fine.",
+       "from": 15,
+       "to": 34
+      },
+      {
+       "w": "I'll",
+       "from": 34,
+       "to": 40
+      },
+      {
+       "w": "decide!",
+       "from": 40,
+       "to": 49
+      }
+     ],
+     "cues": {
+      "1": 34
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_family",
+   "data": {
+    "beats": [
      {
       "who": "harika",
       "shot": "reply",
@@ -677,70 +733,41 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1043,
-   "frames": 520,
+   "from": 1268,
+   "frames": 384,
    "lines": [
-    {
-     "who": "prasad",
-     "name": "Prasad mavayya",
-     "color": "#FCD34D",
-     "sub": null,
-     "audio": "reel/creative11v1/line_10.wav",
-     "from": 11,
-     "frames": 46,
-     "words": [
-      {
-       "w": "Fine.",
-       "from": 15,
-       "to": 34
-      },
-      {
-       "w": "I'll",
-       "from": 34,
-       "to": 40
-      },
-      {
-       "w": "decide!",
-       "from": 40,
-       "to": 49
-      }
-     ],
-     "cues": {
-      "1": 34
-     }
-    },
     {
      "who": "harika",
      "name": "Harika",
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11v1/line_11.wav",
-     "from": 159,
+     "from": 0,
      "frames": 98,
      "words": [
       {
        "w": "Decided:",
-       "from": 159,
-       "to": 189
+       "from": 0,
+       "to": 30
       },
       {
        "w": "Goa.",
-       "from": 189,
-       "to": 200
+       "from": 30,
+       "to": 41
       },
       {
        "w": "Quote:",
-       "from": 215,
-       "to": 236
+       "from": 56,
+       "to": 77
       },
       {
        "w": "mavayya.",
-       "from": 236,
-       "to": 249
+       "from": 77,
+       "to": 91
       }
      ],
      "cues": {
-      "1": 215
+      "1": 56
      }
     },
     {
@@ -749,13 +776,13 @@
      "color": "#FDA4AF",
      "sub": null,
      "audio": "reel/creative11v1/line_12.wav",
-     "from": 268,
+     "from": 110,
      "frames": 26,
      "words": [
       {
        "w": "Mavayya!",
-       "from": 268,
-       "to": 294
+       "from": 110,
+       "to": 135
       }
      ],
      "cues": {}
@@ -766,62 +793,62 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11v1/line_13.wav",
-     "from": 298,
+     "from": 153,
      "frames": 116,
      "words": [
       {
        "w": "A",
-       "from": 298,
-       "to": 306
+       "from": 153,
+       "to": 160
       },
       {
        "w": "quote",
-       "from": 306,
-       "to": 317
+       "from": 160,
+       "to": 172
       },
       {
        "w": "shows",
-       "from": 317,
-       "to": 333
+       "from": 172,
+       "to": 187
       },
       {
        "w": "who",
-       "from": 333,
-       "to": 340
+       "from": 187,
+       "to": 195
       },
       {
        "w": "said",
-       "from": 340,
-       "to": 350
+       "from": 195,
+       "to": 205
       },
       {
        "w": "it.",
-       "from": 364,
-       "to": 370
+       "from": 219,
+       "to": 225
       },
       {
        "w": "Not",
-       "from": 370,
-       "to": 376
+       "from": 225,
+       "to": 231
       },
       {
        "w": "that",
-       "from": 376,
-       "to": 384
+       "from": 231,
+       "to": 238
       },
       {
        "w": "everyone",
-       "from": 384,
-       "to": 397
+       "from": 238,
+       "to": 252
       },
       {
        "w": "agreed.",
-       "from": 397,
-       "to": 409
+       "from": 252,
+       "to": 264
       }
      ],
      "cues": {
-      "1": 364
+      "1": 219
      }
     },
     {
@@ -830,37 +857,37 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative11v1/line_14.wav",
-     "from": 426,
+     "from": 290,
      "frames": 74,
      "words": [
       {
        "w": "See?",
-       "from": 430,
-       "to": 448
+       "from": 294,
+       "to": 312
       },
       {
        "w": "The",
-       "from": 448,
-       "to": 455
+       "from": 312,
+       "to": 318
       },
       {
        "w": "AI",
-       "from": 455,
-       "to": 460
+       "from": 318,
+       "to": 324
       },
       {
        "w": "says",
-       "from": 460,
-       "to": 485
+       "from": 324,
+       "to": 349
       },
       {
        "w": "Goa!",
-       "from": 485,
-       "to": 493
+       "from": 349,
+       "to": 357
       }
      ],
      "cues": {
-      "1": 448
+      "1": 312
      }
     }
    ]

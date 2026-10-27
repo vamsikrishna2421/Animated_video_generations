@@ -76,7 +76,7 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
 - Sandeep: frame 1's Lakshmi and Harika were too small and sat on his ticket arm; "GOA" was cut off by the tile edge:
   both tiles bigger on the left wall, the ticket fan inside the tile with a bigger "GOA". The comment prompt leads with
   "tag the mavayya" (the reel shows the quiz answer).
-- Telugu: "కోట్ చేయమనండి" squashed to "cheye-maindi": "కోట్ చేయమని చెప్పండి" (and "అనమని చెప్పండి"); the last word
+- Telugu: "కోట్ చేయమనండి" squashed to "cheye-maindi": "కోట్ చేయమని చెప్పండి" (four takes of "అనమని చెప్పండి" were worse than the first take of "అనమనండి": kept); the last word
   "కన్ఫర్మ్" ended "-rp": another take with "కనఫమ్". Kept: "ఫిక్స్" written "पिक्स" by the recogniser in some lines
   (a ఫ/ప spelling, said as Telugu speakers say it); the per-line check of the final mix found no stutter in line 6.
   English: "Confirmed?!" was heard "Confirm?": re-voiced.
@@ -109,7 +109,7 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
 | 5 | Harika | మనం ఏం ఫిక్స్ చేశాం అని అడిగారు. [1] అందుకే ఒకటి ఫిక్స్ చేసింది: గోవా. | You asked what we fixed. So it fixed one: Goa. |
 | 6 | Harika | మన చాట్ ని పది సార్లు టెస్ట్ చేశా. [1] నాలుగు సార్లు లేని నిర్ణయం రాసింది. | I tested our chat 10 times... 4 times it wrote a decision that didn't exist. |
 | 7 | Lakshmi | మరి ఎలా చెక్ చేయాలి?! | So how do we check?! |
-| 8 | Harika | ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమని చెప్పండి. | Tell it to quote the message for each decision. Otherwise: nothing was fixed. |
+| 8 | Harika | ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి. | Tell it to quote the message for each decision. Otherwise: nothing was fixed. |
 | 9 | Harika | పదికి పది: ఏదీ ఫిక్స్ కాలేదు. | 10 out of 10: nothing was fixed. |
 | 10 | Prasad | సరే. [1] నేనే ఫిక్స్ చేస్తా! | Fine. I'll fix it myself! |
 | 11 | Harika | ఫిక్స్: గోవా. [1] కోట్: మావయ్య మెసేజ్. | Fixed: Goa. Quote: mavayya's message. |

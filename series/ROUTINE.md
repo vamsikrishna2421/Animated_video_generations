@@ -509,3 +509,14 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   own numbers lead: the viewers caught that 60% on the paper and 55% on the bills put the gap on the squeezed copy and
   the maker's own test, not on "your shop isn't on that paper". A helper that sets `c.globalAlpha` absolutely ignores an
   outer fade: pass the fade in as its `k`. Never `pgrep -f` a name that is in your own wait loop (it found itself).
+- Creative 11 lessons (Oct 27): a quiz count timed back from the next line (`next - QEND - 72`) started before the card
+  was up once the gap was 3.4 s: both viewers saw "1" before reading A-B-C. Give a 3-option quiz a 4.8 s hold, bring the
+  card up after the thing it asks about has been on screen, and keep that thing in view (the card above it, undimmed).
+  The hats-and-claps layer is its own `<Audio>`: `musicDrops` don't silence it, so the "stop" before the answer still
+  had hats in it; start that layer at the reveal instead (a texture change where the viewer wants a lift). Speech-dense
+  skit quarters stay within ~1 dB whatever the bed does; viewers hear the arc in the stop, the hit on the cut to the
+  answer, the change of bed layer and a rise into the last line. A test card's headline number next to a circled claim
+  reads as that claim's count: say on the card what the count is made of ("all 4: the budget ... 1 of them: Goa").
+  Telugu "-మనండి" endings compress ("కోట్ చేయమనండి" heard "cheye-maindi"); "చేయమని చెప్పండి" kept "quote" audible. The
+  pack's Telugu transcript showed a stutter ("chese-je-je") that the per-line check of the final mix did not: check
+  per line before re-voicing. Whisper-hi writes ఫ as प in some takes ("pix"); that is its spelling, not the voice.

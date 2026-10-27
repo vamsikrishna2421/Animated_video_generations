@@ -26,7 +26,7 @@ LINES = {
         "మన చాట్ ని పది సార్లు టెస్ట్ చేశా. | [1] నాలుగు సార్లు లేని నిర్ణయం రాసింది."),
     7: ("lakshmi", "spk", "how", "So how do we check?!", "మరి ఎలా చెక్ చేయాలి?!"),
     8: ("harika", "rule", "rule", "Make it quote the message for each decision. | [1] If there's none: not decided.",
-        "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. | [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమని చెప్పండి."),   # render review: "చేయమనండి" squashed to "cheye-maindi"
+        "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. | [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి."),   # render review: "చేయమనండి" squashed "quote" ("cheye-maindi"); four takes of "అనమని చెప్పండి" were worse than the first take
     9: ("harika", "test", "pass", "Ten out of ten: not decided.", "పదికి పది: ఏదీ ఫిక్స్ కాలేదు."),
     10: ("prasad", "type", "quiz", "Fine. [1] I'll decide!", "సరే. [1] నేనే ఫిక్స్ చేస్తా!"),   # the quiz holds after it
     11: ("harika", "reply", "reveal", "Decided: Goa. | [1] Quote: mavayya.", "ఫిక్స్: గోవా. | [1] కోట్: మావయ్య మెసేజ్."),

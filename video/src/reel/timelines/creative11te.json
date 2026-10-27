@@ -17,8 +17,8 @@
    629
   ],
   [
-   1128,
-   1164
+   1165,
+   1207
   ]
  ],
  "musicBoosts": [
@@ -30,18 +30,29 @@
   [
    535,
    1003,
-   1.35
+   1.15
   ],
   [
    1002,
-   1489,
-   1.6
+   1207,
+   1.15
+  ],
+  [
+   1207,
+   1549,
+   1.4
+  ],
+  [
+   1207,
+   1549,
+   1.25,
+   1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1489,
+ "totalFrames": 1549,
  "music": "reel/creative11te/score.wav",
  "scenes": [
   {
@@ -529,76 +540,76 @@
      "sub": null,
      "audio": "reel/creative11te/line_08.wav",
      "from": 206,
-     "frames": 163,
+     "frames": 174,
      "words": [
       {
        "w": "Tell",
-       "from": 208,
+       "from": 207,
        "to": 218
       },
       {
        "w": "it",
        "from": 218,
-       "to": 224
+       "to": 225
       },
       {
        "w": "to",
-       "from": 224,
-       "to": 230
+       "from": 225,
+       "to": 232
       },
       {
        "w": "quote",
-       "from": 230,
-       "to": 249
+       "from": 232,
+       "to": 251
       },
       {
        "w": "the",
-       "from": 249,
-       "to": 257
+       "from": 251,
+       "to": 265
       },
       {
        "w": "message",
-       "from": 257,
-       "to": 273
+       "from": 265,
+       "to": 283
       },
       {
        "w": "for",
-       "from": 273,
-       "to": 281
+       "from": 283,
+       "to": 292
       },
       {
        "w": "each",
-       "from": 291,
-       "to": 299
+       "from": 302,
+       "to": 310
       },
       {
        "w": "decision.",
-       "from": 299,
-       "to": 322
+       "from": 310,
+       "to": 333
       },
       {
        "w": "Otherwise:",
-       "from": 322,
-       "to": 339
+       "from": 333,
+       "to": 350
       },
       {
        "w": "nothing",
-       "from": 339,
-       "to": 352
+       "from": 350,
+       "to": 363
       },
       {
        "w": "was",
-       "from": 352,
-       "to": 358
+       "from": 363,
+       "to": 369
       },
       {
        "w": "fixed.",
-       "from": 358,
-       "to": 369
+       "from": 369,
+       "to": 380
       }
      ],
      "cues": {
-      "1": 291
+      "1": 302
      },
      "nocap": true
     },
@@ -608,43 +619,43 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11te/line_09.wav",
-     "from": 383,
+     "from": 394,
      "frames": 58,
      "words": [
       {
        "w": "10",
-       "from": 384,
-       "to": 388
+       "from": 394,
+       "to": 399
       },
       {
        "w": "out",
-       "from": 388,
-       "to": 394
+       "from": 399,
+       "to": 405
       },
       {
        "w": "of",
-       "from": 394,
-       "to": 398
+       "from": 405,
+       "to": 409
       },
       {
        "w": "10:",
-       "from": 398,
-       "to": 413
+       "from": 409,
+       "to": 424
       },
       {
        "w": "nothing",
-       "from": 413,
-       "to": 425
+       "from": 424,
+       "to": 436
       },
       {
        "w": "was",
-       "from": 425,
-       "to": 431
+       "from": 436,
+       "to": 442
       },
       {
        "w": "fixed.",
-       "from": 431,
-       "to": 441
+       "from": 442,
+       "to": 452
       }
      ],
      "cues": {}
@@ -661,36 +672,12 @@
       "shot": "type",
       "prop": "quiz",
       "n": 10
-     },
-     {
-      "who": "harika",
-      "shot": "reply",
-      "prop": "reveal",
-      "n": 11
-     },
-     {
-      "who": "lakshmi",
-      "shot": "grid",
-      "prop": "yell",
-      "n": 12
-     },
-     {
-      "who": "harika",
-      "shot": "spk",
-      "prop": "who",
-      "n": 13
-     },
-     {
-      "who": "prasad",
-      "shot": "spk",
-      "prop": "loop",
-      "n": 14
      }
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "Who said it?",
-     "title": "Who said it?",
+     "chapter": "He decides",
+     "title": "He decides",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu",
@@ -698,7 +685,7 @@
     "hardCuts": true
    },
    "from": 1002,
-   "frames": 487,
+   "frames": 205,
    "lines": [
     {
      "who": "prasad",
@@ -738,44 +725,89 @@
      "cues": {
       "1": 21
      }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_family",
+   "data": {
+    "beats": [
+     {
+      "who": "harika",
+      "shot": "reply",
+      "prop": "reveal",
+      "n": 11
+     },
+     {
+      "who": "lakshmi",
+      "shot": "grid",
+      "prop": "yell",
+      "n": 12
+     },
+     {
+      "who": "harika",
+      "shot": "spk",
+      "prop": "who",
+      "n": 13
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who said it?",
+     "title": "Who said it?",
+     "notes": []
     },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1207,
+   "frames": 342,
+   "lines": [
     {
      "who": "harika",
      "name": "Harika",
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11te/line_11.wav",
-     "from": 162,
+     "from": 0,
      "frames": 75,
      "words": [
       {
        "w": "Fixed:",
-       "from": 165,
-       "to": 182
+       "from": 2,
+       "to": 19
       },
       {
        "w": "Goa.",
-       "from": 182,
-       "to": 190
+       "from": 19,
+       "to": 27
       },
       {
        "w": "Quote:",
-       "from": 198,
-       "to": 211
+       "from": 35,
+       "to": 49
       },
       {
        "w": "mavayya's",
-       "from": 211,
-       "to": 223
+       "from": 49,
+       "to": 60
       },
       {
        "w": "message.",
-       "from": 223,
-       "to": 233
+       "from": 60,
+       "to": 71
       }
      ],
      "cues": {
-      "1": 198
+      "1": 35
      }
     },
     {
@@ -784,18 +816,18 @@
      "color": "#FDA4AF",
      "sub": null,
      "audio": "reel/creative11te/line_12.wav",
-     "from": 250,
+     "from": 87,
      "frames": 29,
      "words": [
       {
        "w": "Ayyo,",
-       "from": 251,
-       "to": 262
+       "from": 89,
+       "to": 99
       },
       {
        "w": "mavayya!",
-       "from": 262,
-       "to": 278
+       "from": 99,
+       "to": 116
       }
      ],
      "cues": {}
@@ -806,72 +838,72 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative11te/line_13.wav",
-     "from": 283,
+     "from": 134,
      "frames": 119,
      "words": [
       {
        "w": "A",
-       "from": 285,
-       "to": 288
+       "from": 136,
+       "to": 139
       },
       {
        "w": "quote",
-       "from": 288,
-       "to": 302
+       "from": 139,
+       "to": 153
       },
       {
        "w": "only",
-       "from": 302,
-       "to": 311
+       "from": 153,
+       "to": 162
       },
       {
        "w": "shows",
-       "from": 311,
-       "to": 321
+       "from": 162,
+       "to": 172
       },
       {
        "w": "who",
-       "from": 321,
-       "to": 328
+       "from": 172,
+       "to": 179
       },
       {
        "w": "said",
-       "from": 328,
-       "to": 337
+       "from": 179,
+       "to": 188
       },
       {
        "w": "it.",
-       "from": 337,
-       "to": 343
+       "from": 188,
+       "to": 194
       },
       {
        "w": "Not",
-       "from": 352,
-       "to": 359
+       "from": 203,
+       "to": 210
       },
       {
        "w": "that",
-       "from": 359,
-       "to": 368
+       "from": 210,
+       "to": 219
       },
       {
        "w": "everyone",
-       "from": 368,
-       "to": 385
+       "from": 219,
+       "to": 236
       },
       {
        "w": "said",
-       "from": 385,
-       "to": 394
+       "from": 236,
+       "to": 245
       },
       {
        "w": "OK.",
-       "from": 394,
-       "to": 401
+       "from": 245,
+       "to": 252
       }
      ],
      "cues": {
-      "1": 352
+      "1": 203
      }
     },
     {
@@ -880,27 +912,27 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative11te/line_14.wav",
-     "from": 414,
-     "frames": 53,
+     "from": 274,
+     "frames": 49,
      "words": [
       {
        "w": "See?",
-       "from": 415,
-       "to": 423
+       "from": 276,
+       "to": 285
       },
       {
        "w": "Goa",
-       "from": 423,
-       "to": 440
+       "from": 285,
+       "to": 303
       },
       {
        "w": "confirmed!",
-       "from": 440,
-       "to": 456
+       "from": 303,
+       "to": 322
       }
      ],
      "cues": {
-      "1": 426
+      "1": 288
      }
     }
    ]
