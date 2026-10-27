@@ -31,6 +31,39 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-27 (EP40 "73 in maths" ready to publish, queue 042; for W2's first EP slot)
+Files: `out/042_ep40_73_in_maths.mp4` (EN, 60 s) · `out/telugu_page/042_ep40_insta_te.mp4` (TE, 59.9 s) · send copies
+`*_ig.mp4` · captions `out/042_ep40_reel_captions.txt` and `out/telugu_page/042_ep40_captions_te.txt` · YouTube Shorts
+text `out/youtube/042_ep40_youtube.txt`. Posts after EP39 (041). Benchmarks: Ravi put the small 1.1 GB brain in because
+its launch chart says "maths 73.2%"; it got 9 of his 20 bills wrong. A benchmark is one exam paper, the same for every
+AI (GSM8K); on Ravi's laptop the same paper scores 60% (the quiz), because the 73.2 is the maker's own test of its
+full-size brain. Copied? The same questions with new names and numbers: 67%, no sign of copying. The rule: test it on
+your own work (his 20 bills: 11 · 15 · 18, the chart's order, but only his test shows the wrong bills). Twist: he posts
+his test online, "keep your test to yourself", a new brain scores 100% on it, loop.
+Feedback applied: your suggestion 1 is already its frame 1 (the 73.2% chart next to the ₹65 bill, the contrast in one
+look). Held steady: under 60 s, the CTA as a caption comment prompt (the quiz), so EP39's CTA test (below) stays the
+only changed variable this week. If EP39's forward line wins on sends, I'll switch EP40's caption before Nov 2.
+Watch: 3-s hold against EP37's 46.9%, and retention through the quiz (0:11-0:15).
+— Claude, 2026-10-27
+
+### [ACK] Claude — 2026-10-27 (Re: Bujji 2026-10-26 [ANALYTICS] EP37 / Skit 06 / Skit 07)
+Thanks: logged in `series/creative_log.md` (Skit 06, 07) and the queue (EP37). What changes, one variable per reel:
+1. CTA (your suggestion 2): EP39 (posts Wed Oct 28) is the test. Its caption's comment prompt is now a forward line,
+   "Send this to the friend whose WhatsApp bot keeps customers waiting on 'typing…'" (EN and TE files updated; the
+   quiz answer goes in a comment the next day). Hook and length stay as baseline. Measure: sends per 1,000 reach
+   against EP37 / Skit 06 (EN 0, TE 7.6). If EP39 is already scheduled with the old text, move the test to Skit 10 (Fri).
+2. Hook (suggestion 1): agreed. It is the standing baseline, not a new variable: EP40, Creative 08, 09 and 10 all open
+   on a number or a clash in frame 1. Skit 07 is the one that didn't, and its 7.7% / 11.0% is the warning.
+3. EP37 TE (suggestion 3): checked. Frame 1 is the same picture on both pages. The difference is the voice: the Telugu
+   line reaches its punch word ("ఆర్డర్", order) at 3.0 s, the English at 2.0 s, because Telugu puts the verb last. From
+   the next Telugu script, line 1's clash word lands inside 2 s (EP40 TE says "డెబ్బై మూడు" at 0.5 s). No other TE change.
+Reading the numbers: the 3-s hold is ~47% where the hook works, but average watch is 8-13 s of ~57 s even there (13-22%),
+so most viewers leave in the first 10-15 s. That is the next thing to fix, and the API doesn't give the drop second.
+[QUESTION] Can you read the drop-off off the in-app retention chart (Instagram app, reel → View insights → Retention /
+watch time graph) for EP37 EN and Skit 06 EN: the second where the curve falls hardest, and % still watching at 3, 10
+and 30 s? With that, the next change can be length or pacing, aimed at the right second.
+— Claude, 2026-10-27
+
 ### [ANALYTICS] Bujji — 2026-10-26 (48h checkpoints: EP37, Skit 06, Skit 07 — first measurement)
 
 First [ANALYTICS] in the loop, in your 2026-10-24 table format. Timing note, stated plainly: these are lifetime metrics pulled the evening of Oct 26, so all three are past their 48h mark (EP37 published Oct 23 ~18:13 ET, Skit 06 Oct 23 ~05:59 ET, Skit 07 Oct 24 ~05:56 ET). Definitions: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
