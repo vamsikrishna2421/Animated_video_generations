@@ -29,16 +29,20 @@ Run 1). Label on screen: `HOW TO 01`, ... Posted on the day it is made (not in t
 | # | Topic | Our real run | Needs | Status |
 |---|---|---|---|---|
 | 01 | Make an AI voice on your laptop, free and offline (local text-to-speech) | Kokoro (English) and Indic Parler-TTS (Telugu), the voices this page uses: install, one sentence, seconds per sentence on a CPU | EP13 | done (Thu Oct 22) |
-| 02 | Install a free open-weight LLM on your laptop (Ollama / LM Studio / llama.cpp) | llama.cpp with Qwen2.5 1.5B (4-bit): install, download, chat; tokens per second, RAM used | EP34, EP35, EP37, EP38 | planned (Thu Oct 29) |
-| 03 | Make videos with Claude: how this page's reels are made | this repo: Claude Code writes the script and the animation code, local voices, Remotion renders; minutes per render, what it costs | EP19 | planned (Thu Nov 5) |
-| 04 | Turn any audio or video into text, offline (Whisper) | faster-whisper on a CPU: minutes per hour of audio; how well it does Telugu (honestly) | EP13 | planned |
-| 05 | Build a website with Claude | the web templates made in this repo: prompt, preview, publish free | EP19 | planned |
-| 06 | Translate English to Telugu offline | IndicTrans2 (MIT) on a CPU: install, a paragraph, speed and mistakes | EP02, EP13 | planned |
-| 07 | Clean up a noisy voice recording with free AI | a phone recording through a local noise remover (DeepFilterNet), before and after | EP13 | planned |
-| 08 | Make AI pictures on your laptop | a free image model with its licence checked (diffusers or ComfyUI): one picture, minutes on a CPU | EP14 | planned |
-| 09 | Teach a small model a new skill on your laptop (LoRA, step by step) | EP31's real LoRA run as copy-paste steps | EP31 | planned |
-| 10 | Make Claude do a daily job for you (scheduled tasks) | this page's own daily runs: one scheduled task, what it does, how to stop it | EP10, EP19 | planned |
-| 11 | Run an AI model on your phone, offline (PocketPal AI / Google AI Edge Gallery) | needs a 30 s screen recording from the user's phone (we can't run a phone here): ask once, skip until it arrives | EP35 | waiting |
+| 02 | Make AI reply faster: 3 settings (agreed 4-week calendar, W1) | EP39's offline test extended: one question timed with each setting (ask for short replies, a fresh chat instead of a long one, the fast model instead of the thinking one); the app menus checked on the official help pages that day | EP39 | planned (Thu Oct 29) |
+| 03 | Test 3 AIs on your question before you pay (calendar W2) | the same 5 real questions to 3 free models, every answer scored by hand, with the time and the price per 1,000 answers | EP40 | planned (Thu Nov 5) |
+| 04 | What to never paste into an AI chat (calendar W3, Skit 05 follow-up) | the privacy and training settings of the big chat apps, each read on the company's own page that day: what is kept, how to turn training off, a temporary chat | Skit 05 | planned (Thu Nov 12) |
+| 05 | Fake-video check: 5 checks in 60 s (calendar W4) | five checks run on clips we make ourselves (an AI clip and a real one), what each check caught | EP45 | planned (Thu Nov 19) |
+| 06 | Install a free open-weight LLM on your laptop (Ollama / LM Studio / llama.cpp) | llama.cpp with Qwen2.5 1.5B (4-bit): install, download, chat; tokens per second, RAM used | EP34, EP35, EP37, EP38 | planned |
+| 07 | Make videos with Claude: how this page's reels are made | this repo: Claude Code writes the script and the animation code, local voices, Remotion renders; minutes per render, what it costs | EP19 | planned |
+| 08 | Turn any audio or video into text, offline (Whisper) | faster-whisper on a CPU: minutes per hour of audio; how well it does Telugu (honestly) | EP13 | planned |
+| 09 | Build a website with Claude | the web templates made in this repo: prompt, preview, publish free | EP19 | planned |
+| 10 | Translate English to Telugu offline | IndicTrans2 (MIT) on a CPU: install, a paragraph, speed and mistakes | EP02, EP13 | planned |
+| 11 | Clean up a noisy voice recording with free AI | a phone recording through a local noise remover (DeepFilterNet), before and after | EP13 | planned |
+| 12 | Make AI pictures on your laptop | a free image model with its licence checked (diffusers or ComfyUI): one picture, minutes on a CPU | EP14 | planned |
+| 13 | Teach a small model a new skill on your laptop (LoRA, step by step) | EP31's real LoRA run as copy-paste steps | EP31 | planned |
+| 14 | Make Claude do a daily job for you (scheduled tasks) | this page's own daily runs: one scheduled task, what it does, how to stop it | EP10, EP19 | planned |
+| 15 | Run an AI model on your phone, offline (PocketPal AI / Google AI Edge Gallery) | needs a 30 s screen recording from the user's phone (we can't run a phone here): ask once, skip until it arrives | EP35 | waiting |
 
 Season 6 of the syllabus (EP50-58) already builds apps step by step (first API call, chatbot, RAG over PDFs, agent,
 MCP server, voice assistant, deploy), so the backlog stays on tools you install and use, not those builds.

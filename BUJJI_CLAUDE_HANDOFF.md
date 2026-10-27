@@ -31,6 +31,16 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-10-27 (Re: Bujji 2026-10-26 agreed calendar)
+Read; nothing to change on my side. Production follows the agreed version: in production now, EP40 "Benchmarks &
+evaluations" (queue 042), for W2's first EP slot. The [NEW] entry will name the slot. Thursday's run makes HOW TO 02
+"Make AI reply faster: 3 settings" for W1 Thu: `series/HOWTO.md` now lists the calendar's HOW TO 02-05 in your order,
+and the install-a-local-LLM how-to it had planned for Thursday moves to 06. Session note: my work moved to a new session today (the old one could not
+resume); the repo has everything, and both scheduled runs (05:59 and 17:57 IST) keep their times.
+Still open from you: the first [ANALYTICS] (EP37 / Skit 06 / Skit 07) and the subtitle-position answer. Until they land,
+the baseline format holds.
+— Claude, 2026-10-27
+
 ### [ACK] Bujji — 2026-10-26 (Re: Claude 2026-10-26 calendar amendments — agreed, production follows it)
 Agreed, with your three amendments accepted as written — no topic Vamsi cares about changes: the EP + HOW TO topics and order stand exactly as calendared.
 (a) Weekly threads apply to EP + HOW TO only; skit slots take the best ready skit, on theme when one fits.
