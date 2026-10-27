@@ -1,0 +1,372 @@
+{
+ "id": "creative11te",
+ "title": "The AI confirmed Goa (Creative 11: AI summaries) (Telugu audio)",
+ "label": "SKIT",
+ "banner": "AI chat summaries",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.5,
+ "musicEndRamp": [
+  0.9,
+  4.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_family",
+   "tail": 0.1,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "prasad",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "lakshmi",
+      "shot": "spk",
+      "prop": "ooty",
+      "n": 2
+     },
+     {
+      "who": "harika",
+      "shot": "chat",
+      "prop": "poll",
+      "n": 3
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "read",
+      "n": 4
+     },
+     {
+      "who": "harika",
+      "shot": "ask",
+      "prop": "ask",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The AI confirmed Goa",
+     "title": "The AI confirmed Goa",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "prasad",
+     "file": "01_prasad.wav",
+     "text": "గోవా కన్ఫర్మ్ అని సమ్మరీ చెప్పింది! [1] పన్నెండు టికెట్లు బుక్ చేశా!",
+     "show": "The summary said Goa is confirmed! I've booked 12 tickets!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "02_lakshmi.wav",
+     "text": "కన్ఫర్మా?! [1] నేను ఊటీ అన్నాను!",
+     "show": "Confirmed?! I said Ooty!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "03_harika.wav",
+     "text": "ఎవరూ ఏమీ కన్ఫర్మ్ చేయలేదు మావయ్య. <pause 0.25> [1] రేపు పోల్ అన్నాం.",
+     "show": "Nobody confirmed anything, mavayya. We said poll tomorrow.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "tts": "ఎవరూ ఏమీ కన్ఫర్మ్ చేయలేదు మావయ్య.",
+     "file2": "03b_harika.wav",
+     "tts2": "రేపు పోల్ అన్నాం.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "prasad",
+     "file": "04_prasad.wav",
+     "text": "సమ్మరీ మొత్తం చాట్ చదివింది!",
+     "show": "The summary read the whole chat!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "05_harika.wav",
+     "text": "మనం ఏం ఫిక్స్ చేశాం అని అడిగారు. <pause 0.25> [1] అందుకే ఒకటి ఫిక్స్ చేసింది: గోవా.",
+     "show": "You asked what we fixed. So it fixed one: Goa.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.08,
+     "tts": "మనం ఏం ఫిక్స్ చేశాం అని అడిగారు.",
+     "file2": "05b_harika.wav",
+     "tts2": "అందుకే ఒకటి ఫిక్స్ చేసింది: గోవా.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_family",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.35,
+   "boost": 1.35,
+   "drop_at": [
+    [
+     0,
+     "1",
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "harika",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "lakshmi",
+      "shot": "spk",
+      "prop": "how",
+      "n": 7
+     },
+     {
+      "who": "harika",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 8
+     },
+     {
+      "who": "harika",
+      "shot": "test",
+      "prop": "pass",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Quote the message",
+     "title": "Quote the message",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "harika",
+     "file": "06_harika.wav",
+     "text": "మన చాట్ ని పది సార్లు టెస్ట్ చేశా. <pause 0.25> [1] నాలుగు సార్లు లేని నిర్ణయం రాసింది.",
+     "show": "I tested our chat 10 times... 4 times it wrote a decision that didn't exist.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "మన చాట్ ని పది సార్లు టెస్ట్ చేశా.",
+     "file2": "06b_harika.wav",
+     "tts2": "నాలుగు సార్లు లేని నిర్ణయం రాసింది.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "07_lakshmi.wav",
+     "text": "మరి ఎలా చెక్ చేయాలి?!",
+     "show": "So how do we check?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "08_harika.wav",
+     "text": "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమనండి. <pause 0.25> [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి.",
+     "show": "Tell it to quote the message for each decision. Otherwise: nothing was fixed.",
+     "maxgap": 0.28,
+     "gap": 0.45,
+     "tempo": 1.08,
+     "nocap": true,
+     "tts": "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమనండి.",
+     "file2": "08b_harika.wav",
+     "tts2": "లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "09_harika.wav",
+     "text": "పదికి పది: ఏదీ ఫిక్స్ కాలేదు.",
+     "show": "10 out of 10: nothing was fixed.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_family",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.35,
+   "outro": true,
+   "boost": 1.6,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     1.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "prasad",
+      "shot": "type",
+      "prop": "quiz",
+      "n": 10
+     },
+     {
+      "who": "harika",
+      "shot": "reply",
+      "prop": "reveal",
+      "n": 11
+     },
+     {
+      "who": "lakshmi",
+      "shot": "grid",
+      "prop": "yell",
+      "n": 12
+     },
+     {
+      "who": "harika",
+      "shot": "spk",
+      "prop": "who",
+      "n": 13
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who said it?",
+     "title": "Who said it?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "prasad",
+     "file": "10_prasad.wav",
+     "text": "సరే. [1] నేనే ఫిక్స్ చేస్తా!",
+     "show": "Fine. I'll fix it myself!",
+     "maxgap": 0.28,
+     "gap": 3.4,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "11_harika.wav",
+     "text": "ఫిక్స్: గోవా. <pause 0.25> [1] కోట్: మావయ్య మెసేజ్.",
+     "show": "Fixed: Goa. Quote: mavayya's message.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "ఫిక్స్: గోవా.",
+     "file2": "11b_harika.wav",
+     "tts2": "కోట్: మావయ్య మెసేజ్.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "12_lakshmi.wav",
+     "text": "అయ్యో, మావయ్యా!",
+     "show": "Ayyo, mavayya!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "13_harika.wav",
+     "text": "కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే. <pause 0.25> [1] అందరూ ఓకే అన్నారని కాదు.",
+     "show": "A quote only shows who said it. Not that everyone said OK.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే.",
+     "file2": "13b_harika.wav",
+     "tts2": "అందరూ ఓకే అన్నారని కాదు.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "prasad",
+     "file": "14_prasad.wav",
+     "text": "చూశారా? [1] గోవా కన్ఫర్మ్!",
+     "show": "See? Goa confirmed!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

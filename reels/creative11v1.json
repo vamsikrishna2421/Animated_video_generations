@@ -1,0 +1,367 @@
+{
+ "id": "creative11v1",
+ "title": "The AI confirmed Goa (Creative 11: AI summaries)",
+ "label": "SKIT",
+ "banner": "AI chat summaries",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.5,
+ "musicEndRamp": [
+  0.9,
+  4.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_family",
+   "tail": 0.1,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "prasad",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "lakshmi",
+      "shot": "spk",
+      "prop": "ooty",
+      "n": 2
+     },
+     {
+      "who": "harika",
+      "shot": "chat",
+      "prop": "poll",
+      "n": 3
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "read",
+      "n": 4
+     },
+     {
+      "who": "harika",
+      "shot": "ask",
+      "prop": "ask",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The AI confirmed Goa",
+     "title": "The AI confirmed Goa",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "prasad",
+     "file": "01_prasad.wav",
+     "text": "The AI says Goa is confirmed! [1] I've booked twelve tickets!",
+     "show": "The AI says Goa is confirmed! I've booked 12 tickets!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "02_lakshmi.wav",
+     "text": "Confirmed?! [1] I said Ooty!",
+     "show": "Confirmed?! I said Ooty!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "03_harika.wav",
+     "text": "Nobody confirmed anything, mavayya. <pause 0.25> [1] We said poll tomorrow.",
+     "show": "Nobody confirmed anything, mavayya. We said poll tomorrow.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "tts": "Nobody confirmed anything, mavayya.",
+     "file2": "03b_harika.wav",
+     "tts2": "We said poll tomorrow.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "prasad",
+     "file": "04_prasad.wav",
+     "text": "The AI read the whole chat!",
+     "show": "The AI read the whole chat!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "05_harika.wav",
+     "text": "You asked what we decided. <pause 0.25> [1] So it picked one: Goa.",
+     "show": "You asked what we decided. So it picked one: Goa.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.08,
+     "tts": "You asked what we decided.",
+     "file2": "05b_harika.wav",
+     "tts2": "So it picked one: Goa.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_family",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.35,
+   "boost": 1.35,
+   "drop_at": [
+    [
+     0,
+     "1",
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "harika",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "lakshmi",
+      "shot": "spk",
+      "prop": "how",
+      "n": 7
+     },
+     {
+      "who": "harika",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 8
+     },
+     {
+      "who": "harika",
+      "shot": "test",
+      "prop": "pass",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Quote the message",
+     "title": "Quote the message",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "harika",
+     "file": "06_harika.wav",
+     "text": "I tested our chat ten times. <pause 0.25> [1] Four summaries made up a decision.",
+     "show": "I tested our chat 10 times... 4 summaries made up a decision.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "I tested our chat ten times.",
+     "file2": "06b_harika.wav",
+     "tts2": "Four summaries made up a decision.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "07_lakshmi.wav",
+     "text": "So how do we check?!",
+     "show": "So how do we check?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "08_harika.wav",
+     "text": "Make it quote the message for each decision. <pause 0.25> [1] If there's none: not decided.",
+     "show": "Make it quote the message for each decision. If there's none: not decided.",
+     "maxgap": 0.28,
+     "gap": 0.45,
+     "tempo": 1.08,
+     "nocap": true,
+     "tts": "Make it quote the message for each decision.",
+     "file2": "08b_harika.wav",
+     "tts2": "If there's none: not decided.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "09_harika.wav",
+     "text": "Ten out of ten: not decided.",
+     "show": "10 out of 10: not decided.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_family",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.35,
+   "outro": true,
+   "boost": 1.75,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     1.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "prasad",
+      "shot": "type",
+      "prop": "quiz",
+      "n": 10
+     },
+     {
+      "who": "harika",
+      "shot": "reply",
+      "prop": "reveal",
+      "n": 11
+     },
+     {
+      "who": "lakshmi",
+      "shot": "grid",
+      "prop": "yell",
+      "n": 12
+     },
+     {
+      "who": "harika",
+      "shot": "spk",
+      "prop": "who",
+      "n": 13
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who said it?",
+     "title": "Who said it?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "prasad",
+     "file": "10_prasad.wav",
+     "text": "Fine. [1] I'll decide!",
+     "show": "Fine. I'll decide!",
+     "maxgap": 0.28,
+     "gap": 3.4,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "11_harika.wav",
+     "text": "Decided: Goa. <pause 0.25> [1] Quote: mavayya.",
+     "show": "Decided: Goa. Quote: mavayya.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "Decided: Goa.",
+     "file2": "11b_harika.wav",
+     "tts2": "Quote: mavayya.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "lakshmi",
+     "file": "12_lakshmi.wav",
+     "text": "Mavayya!",
+     "show": "Mavayya!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harika",
+     "file": "13_harika.wav",
+     "text": "A quote shows who said it. <pause 0.25> [1] Not that everyone agreed.",
+     "show": "A quote shows who said it. Not that everyone agreed.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "A quote shows who said it.",
+     "file2": "13b_harika.wav",
+     "tts2": "Not that everyone agreed.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "prasad",
+     "file": "14_prasad.wav",
+     "text": "See? [1] The AI says Goa!",
+     "show": "See? The AI says Goa!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

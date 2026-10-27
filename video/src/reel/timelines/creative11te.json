@@ -1,0 +1,909 @@
+{
+ "id": "creative11te",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI chat summaries",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "The AI confirmed Goa (Creative 11: AI summaries) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   599,
+   629
+  ],
+  [
+   1128,
+   1164
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   535,
+   1.25
+  ],
+  [
+   535,
+   1003,
+   1.35
+  ],
+  [
+   1002,
+   1489,
+   1.6
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1489,
+ "music": "reel/creative11te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_family",
+   "data": {
+    "beats": [
+     {
+      "who": "prasad",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "lakshmi",
+      "shot": "spk",
+      "prop": "ooty",
+      "n": 2
+     },
+     {
+      "who": "harika",
+      "shot": "chat",
+      "prop": "poll",
+      "n": 3
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "read",
+      "n": 4
+     },
+     {
+      "who": "harika",
+      "shot": "ask",
+      "prop": "ask",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The AI confirmed Goa",
+     "title": "The AI confirmed Goa",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 535,
+   "lines": [
+    {
+     "who": "prasad",
+     "name": "Prasad mavayya",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative11te/line_01.wav",
+     "from": 4,
+     "frames": 93,
+     "words": [
+      {
+       "w": "The",
+       "from": 9,
+       "to": 14
+      },
+      {
+       "w": "summary",
+       "from": 14,
+       "to": 29
+      },
+      {
+       "w": "said",
+       "from": 29,
+       "to": 36
+      },
+      {
+       "w": "Goa",
+       "from": 36,
+       "to": 41
+      },
+      {
+       "w": "is",
+       "from": 41,
+       "to": 44
+      },
+      {
+       "w": "confirmed!",
+       "from": 44,
+       "to": 68
+      },
+      {
+       "w": "I've",
+       "from": 68,
+       "to": 74
+      },
+      {
+       "w": "booked",
+       "from": 74,
+       "to": 82
+      },
+      {
+       "w": "12",
+       "from": 82,
+       "to": 86
+      },
+      {
+       "w": "tickets!",
+       "from": 86,
+       "to": 97
+      }
+     ],
+     "cues": {
+      "1": 65
+     }
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi pinni",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative11te/line_02.wav",
+     "from": 102,
+     "frames": 60,
+     "words": [
+      {
+       "w": "Confirmed?!",
+       "from": 103,
+       "to": 135
+      },
+      {
+       "w": "I",
+       "from": 135,
+       "to": 139
+      },
+      {
+       "w": "said",
+       "from": 139,
+       "to": 149
+      },
+      {
+       "w": "Ooty!",
+       "from": 149,
+       "to": 161
+      }
+     ],
+     "cues": {
+      "1": 130
+     }
+    },
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_03.wav",
+     "from": 166,
+     "frames": 119,
+     "words": [
+      {
+       "w": "Nobody",
+       "from": 166,
+       "to": 183
+      },
+      {
+       "w": "confirmed",
+       "from": 183,
+       "to": 210
+      },
+      {
+       "w": "anything,",
+       "from": 210,
+       "to": 227
+      },
+      {
+       "w": "mavayya.",
+       "from": 227,
+       "to": 242
+      },
+      {
+       "w": "We",
+       "from": 242,
+       "to": 247
+      },
+      {
+       "w": "said",
+       "from": 256,
+       "to": 263
+      },
+      {
+       "w": "poll",
+       "from": 263,
+       "to": 270
+      },
+      {
+       "w": "tomorrow.",
+       "from": 270,
+       "to": 285
+      }
+     ],
+     "cues": {
+      "1": 256
+     }
+    },
+    {
+     "who": "prasad",
+     "name": "Prasad mavayya",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative11te/line_04.wav",
+     "from": 291,
+     "frames": 50,
+     "words": [
+      {
+       "w": "The",
+       "from": 293,
+       "to": 298
+      },
+      {
+       "w": "summary",
+       "from": 298,
+       "to": 313
+      },
+      {
+       "w": "read",
+       "from": 313,
+       "to": 320
+      },
+      {
+       "w": "the",
+       "from": 320,
+       "to": 325
+      },
+      {
+       "w": "whole",
+       "from": 325,
+       "to": 333
+      },
+      {
+       "w": "chat!",
+       "from": 333,
+       "to": 341
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_05.wav",
+     "from": 346,
+     "frames": 175,
+     "words": [
+      {
+       "w": "You",
+       "from": 353,
+       "to": 363
+      },
+      {
+       "w": "asked",
+       "from": 363,
+       "to": 378
+      },
+      {
+       "w": "what",
+       "from": 378,
+       "to": 390
+      },
+      {
+       "w": "we",
+       "from": 390,
+       "to": 397
+      },
+      {
+       "w": "fixed.",
+       "from": 397,
+       "to": 414
+      },
+      {
+       "w": "So",
+       "from": 436,
+       "to": 443
+      },
+      {
+       "w": "it",
+       "from": 443,
+       "to": 458
+      },
+      {
+       "w": "fixed",
+       "from": 458,
+       "to": 480
+      },
+      {
+       "w": "one:",
+       "from": 480,
+       "to": 492
+      },
+      {
+       "w": "Goa.",
+       "from": 492,
+       "to": 512
+      }
+     ],
+     "cues": {
+      "1": 436
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_family",
+   "data": {
+    "beats": [
+     {
+      "who": "harika",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "lakshmi",
+      "shot": "spk",
+      "prop": "how",
+      "n": 7
+     },
+     {
+      "who": "harika",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 8
+     },
+     {
+      "who": "harika",
+      "shot": "test",
+      "prop": "pass",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Quote the message",
+     "title": "Quote the message",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 535,
+   "frames": 468,
+   "lines": [
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_06.wav",
+     "from": 11,
+     "frames": 140,
+     "words": [
+      {
+       "w": "I",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "tested",
+       "from": 15,
+       "to": 28
+      },
+      {
+       "w": "our",
+       "from": 28,
+       "to": 43
+      },
+      {
+       "w": "chat",
+       "from": 43,
+       "to": 53
+      },
+      {
+       "w": "10",
+       "from": 53,
+       "to": 58
+      },
+      {
+       "w": "times...",
+       "from": 58,
+       "to": 76
+      },
+      {
+       "w": "4",
+       "from": 76,
+       "to": 80
+      },
+      {
+       "w": "times",
+       "from": 88,
+       "to": 96
+      },
+      {
+       "w": "it",
+       "from": 96,
+       "to": 100
+      },
+      {
+       "w": "wrote",
+       "from": 100,
+       "to": 109
+      },
+      {
+       "w": "a",
+       "from": 109,
+       "to": 112
+      },
+      {
+       "w": "decision",
+       "from": 112,
+       "to": 124
+      },
+      {
+       "w": "that",
+       "from": 124,
+       "to": 131
+      },
+      {
+       "w": "didn't",
+       "from": 131,
+       "to": 141
+      },
+      {
+       "w": "exist.",
+       "from": 141,
+       "to": 151
+      }
+     ],
+     "cues": {
+      "1": 88
+     }
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi pinni",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative11te/line_07.wav",
+     "from": 163,
+     "frames": 39,
+     "words": [
+      {
+       "w": "So",
+       "from": 164,
+       "to": 169
+      },
+      {
+       "w": "how",
+       "from": 169,
+       "to": 176
+      },
+      {
+       "w": "do",
+       "from": 176,
+       "to": 182
+      },
+      {
+       "w": "we",
+       "from": 182,
+       "to": 187
+      },
+      {
+       "w": "check?!",
+       "from": 187,
+       "to": 201
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_08.wav",
+     "from": 206,
+     "frames": 163,
+     "words": [
+      {
+       "w": "Tell",
+       "from": 208,
+       "to": 218
+      },
+      {
+       "w": "it",
+       "from": 218,
+       "to": 224
+      },
+      {
+       "w": "to",
+       "from": 224,
+       "to": 230
+      },
+      {
+       "w": "quote",
+       "from": 230,
+       "to": 249
+      },
+      {
+       "w": "the",
+       "from": 249,
+       "to": 257
+      },
+      {
+       "w": "message",
+       "from": 257,
+       "to": 273
+      },
+      {
+       "w": "for",
+       "from": 273,
+       "to": 281
+      },
+      {
+       "w": "each",
+       "from": 291,
+       "to": 299
+      },
+      {
+       "w": "decision.",
+       "from": 299,
+       "to": 322
+      },
+      {
+       "w": "Otherwise:",
+       "from": 322,
+       "to": 339
+      },
+      {
+       "w": "nothing",
+       "from": 339,
+       "to": 352
+      },
+      {
+       "w": "was",
+       "from": 352,
+       "to": 358
+      },
+      {
+       "w": "fixed.",
+       "from": 358,
+       "to": 369
+      }
+     ],
+     "cues": {
+      "1": 291
+     },
+     "nocap": true
+    },
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_09.wav",
+     "from": 383,
+     "frames": 58,
+     "words": [
+      {
+       "w": "10",
+       "from": 384,
+       "to": 388
+      },
+      {
+       "w": "out",
+       "from": 388,
+       "to": 394
+      },
+      {
+       "w": "of",
+       "from": 394,
+       "to": 398
+      },
+      {
+       "w": "10:",
+       "from": 398,
+       "to": 413
+      },
+      {
+       "w": "nothing",
+       "from": 413,
+       "to": 425
+      },
+      {
+       "w": "was",
+       "from": 425,
+       "to": 431
+      },
+      {
+       "w": "fixed.",
+       "from": 431,
+       "to": 441
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_family",
+   "data": {
+    "beats": [
+     {
+      "who": "prasad",
+      "shot": "type",
+      "prop": "quiz",
+      "n": 10
+     },
+     {
+      "who": "harika",
+      "shot": "reply",
+      "prop": "reveal",
+      "n": 11
+     },
+     {
+      "who": "lakshmi",
+      "shot": "grid",
+      "prop": "yell",
+      "n": 12
+     },
+     {
+      "who": "harika",
+      "shot": "spk",
+      "prop": "who",
+      "n": 13
+     },
+     {
+      "who": "prasad",
+      "shot": "spk",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who said it?",
+     "title": "Who said it?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1002,
+   "frames": 487,
+   "lines": [
+    {
+     "who": "prasad",
+     "name": "Prasad mavayya",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative11te/line_10.wav",
+     "from": 11,
+     "frames": 50,
+     "words": [
+      {
+       "w": "Fine.",
+       "from": 13,
+       "to": 22
+      },
+      {
+       "w": "I'll",
+       "from": 22,
+       "to": 38
+      },
+      {
+       "w": "fix",
+       "from": 38,
+       "to": 44
+      },
+      {
+       "w": "it",
+       "from": 44,
+       "to": 48
+      },
+      {
+       "w": "myself!",
+       "from": 48,
+       "to": 60
+      }
+     ],
+     "cues": {
+      "1": 21
+     }
+    },
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_11.wav",
+     "from": 162,
+     "frames": 75,
+     "words": [
+      {
+       "w": "Fixed:",
+       "from": 165,
+       "to": 182
+      },
+      {
+       "w": "Goa.",
+       "from": 182,
+       "to": 190
+      },
+      {
+       "w": "Quote:",
+       "from": 198,
+       "to": 211
+      },
+      {
+       "w": "mavayya's",
+       "from": 211,
+       "to": 223
+      },
+      {
+       "w": "message.",
+       "from": 223,
+       "to": 233
+      }
+     ],
+     "cues": {
+      "1": 198
+     }
+    },
+    {
+     "who": "lakshmi",
+     "name": "Lakshmi pinni",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative11te/line_12.wav",
+     "from": 250,
+     "frames": 29,
+     "words": [
+      {
+       "w": "Ayyo,",
+       "from": 251,
+       "to": 262
+      },
+      {
+       "w": "mavayya!",
+       "from": 262,
+       "to": 278
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "harika",
+     "name": "Harika",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative11te/line_13.wav",
+     "from": 283,
+     "frames": 119,
+     "words": [
+      {
+       "w": "A",
+       "from": 285,
+       "to": 288
+      },
+      {
+       "w": "quote",
+       "from": 288,
+       "to": 302
+      },
+      {
+       "w": "only",
+       "from": 302,
+       "to": 311
+      },
+      {
+       "w": "shows",
+       "from": 311,
+       "to": 321
+      },
+      {
+       "w": "who",
+       "from": 321,
+       "to": 328
+      },
+      {
+       "w": "said",
+       "from": 328,
+       "to": 337
+      },
+      {
+       "w": "it.",
+       "from": 337,
+       "to": 343
+      },
+      {
+       "w": "Not",
+       "from": 352,
+       "to": 359
+      },
+      {
+       "w": "that",
+       "from": 359,
+       "to": 368
+      },
+      {
+       "w": "everyone",
+       "from": 368,
+       "to": 385
+      },
+      {
+       "w": "said",
+       "from": 385,
+       "to": 394
+      },
+      {
+       "w": "OK.",
+       "from": 394,
+       "to": 401
+      }
+     ],
+     "cues": {
+      "1": 352
+     }
+    },
+    {
+     "who": "prasad",
+     "name": "Prasad mavayya",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative11te/line_14.wav",
+     "from": 414,
+     "frames": 53,
+     "words": [
+      {
+       "w": "See?",
+       "from": 415,
+       "to": 423
+      },
+      {
+       "w": "Goa",
+       "from": 423,
+       "to": 440
+      },
+      {
+       "w": "confirmed!",
+       "from": 440,
+       "to": 456
+      }
+     ],
+     "cues": {
+      "1": 426
+     }
+    }
+   ]
+  }
+ ]
+}

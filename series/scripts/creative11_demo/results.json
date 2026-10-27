@@ -1,0 +1,422 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": "no network ([Errno 101] Network is unreachable)",
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 400 tokens",
+ "prompts": {
+  "plain": "Our family WhatsApp group:\n\n[Sun 7:02 pm] Prasad: Family trip this December! Where shall we go?\n[7:03 pm] Lakshmi: Ooty! Kids will love the toy train.\n[7:03 pm] Kiran: Goa da. Beaches.\n[7:04 pm] Prasad: Goa sounds good.\n[7:05 pm] Bhavani: Goa is too hot for amma.\n[7:05 pm] Harika: What about Araku? Close and cheap.\n[7:06 pm] Srinu: Goa Goa Goa\n[7:06 pm] Lakshmi: Ooty is better for kids, I'm telling you.\n[7:08 pm] Prasad: Dates? 14th to 18th?\n[7:09 pm] Bhavani: 14th I have a function. 21st?\n[7:09 pm] Kiran: 21st is fine for me.\n[7:10 pm] Lakshmi: 21st clashes with the kids' exams.\n[7:11 pm] Harika: Let's fix the dates first, then the place.\n[7:12 pm] Prasad: Goa flights are cheap on the 14th.\n[7:12 pm] Srinu: I can do 14th.\n[7:13 pm] Bhavani: I said I have a function on the 14th\n[7:15 pm] Kiran: Budget per family?\n[7:15 pm] Prasad: 40k max.\n[7:16 pm] Lakshmi: 40k for Ooty is plenty.\n[7:16 pm] Kiran: Goa 40k is tight.\n[7:18 pm] Harika: Can we vote? Poll tomorrow?\n[7:18 pm] Srinu: Goa\n[7:19 pm] Bhavani: Let me ask amma first.\n[7:20 pm] Prasad: Goa it is then?\n[7:20 pm] Lakshmi: No! Ooty.\n[7:21 pm] Harika: Not decided yet mavayya. Poll tomorrow.\n[7:22 pm] Kiran: ok poll tomorrow\n[7:23 pm] Prasad: Fine. Good night all\n\nSummarize this chat. What did we decide?",
+  "line": "Our family WhatsApp group:\n\n[Sun 7:02 pm] Prasad: Family trip this December! Where shall we go?\n[7:03 pm] Lakshmi: Ooty! Kids will love the toy train.\n[7:03 pm] Kiran: Goa da. Beaches.\n[7:04 pm] Prasad: Goa sounds good.\n[7:05 pm] Bhavani: Goa is too hot for amma.\n[7:05 pm] Harika: What about Araku? Close and cheap.\n[7:06 pm] Srinu: Goa Goa Goa\n[7:06 pm] Lakshmi: Ooty is better for kids, I'm telling you.\n[7:08 pm] Prasad: Dates? 14th to 18th?\n[7:09 pm] Bhavani: 14th I have a function. 21st?\n[7:09 pm] Kiran: 21st is fine for me.\n[7:10 pm] Lakshmi: 21st clashes with the kids' exams.\n[7:11 pm] Harika: Let's fix the dates first, then the place.\n[7:12 pm] Prasad: Goa flights are cheap on the 14th.\n[7:12 pm] Srinu: I can do 14th.\n[7:13 pm] Bhavani: I said I have a function on the 14th\n[7:15 pm] Kiran: Budget per family?\n[7:15 pm] Prasad: 40k max.\n[7:16 pm] Lakshmi: 40k for Ooty is plenty.\n[7:16 pm] Kiran: Goa 40k is tight.\n[7:18 pm] Harika: Can we vote? Poll tomorrow?\n[7:18 pm] Srinu: Goa\n[7:19 pm] Bhavani: Let me ask amma first.\n[7:20 pm] Prasad: Goa it is then?\n[7:20 pm] Lakshmi: No! Ooty.\n[7:21 pm] Harika: Not decided yet mavayya. Poll tomorrow.\n[7:22 pm] Kiran: ok poll tomorrow\n[7:23 pm] Prasad: Fine. Good night all\n\nWhat did we decide? Quote the message for each decision. If nothing was decided, say \"not decided\".",
+  "loop": "Our family WhatsApp group:\n\n[Sun 7:02 pm] Prasad: Family trip this December! Where shall we go?\n[7:03 pm] Lakshmi: Ooty! Kids will love the toy train.\n[7:03 pm] Kiran: Goa da. Beaches.\n[7:04 pm] Prasad: Goa sounds good.\n[7:05 pm] Bhavani: Goa is too hot for amma.\n[7:05 pm] Harika: What about Araku? Close and cheap.\n[7:06 pm] Srinu: Goa Goa Goa\n[7:06 pm] Lakshmi: Ooty is better for kids, I'm telling you.\n[7:08 pm] Prasad: Dates? 14th to 18th?\n[7:09 pm] Bhavani: 14th I have a function. 21st?\n[7:09 pm] Kiran: 21st is fine for me.\n[7:10 pm] Lakshmi: 21st clashes with the kids' exams.\n[7:11 pm] Harika: Let's fix the dates first, then the place.\n[7:12 pm] Prasad: Goa flights are cheap on the 14th.\n[7:12 pm] Srinu: I can do 14th.\n[7:13 pm] Bhavani: I said I have a function on the 14th\n[7:15 pm] Kiran: Budget per family?\n[7:15 pm] Prasad: 40k max.\n[7:16 pm] Lakshmi: 40k for Ooty is plenty.\n[7:16 pm] Kiran: Goa 40k is tight.\n[7:18 pm] Harika: Can we vote? Poll tomorrow?\n[7:18 pm] Srinu: Goa\n[7:19 pm] Bhavani: Let me ask amma first.\n[7:20 pm] Prasad: Goa it is then?\n[7:20 pm] Lakshmi: No! Ooty.\n[7:21 pm] Harika: Not decided yet mavayya. Poll tomorrow.\n[7:22 pm] Kiran: ok poll tomorrow\n[7:23 pm] Prasad: Fine. Good night all\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.\n\nWhat did we decide? Quote the message for each decision. If nothing was decided, say \"not decided\"."
+ },
+ "rows": [
+  {
+   "way": "plain",
+   "try": 1,
+   "reply": "In this chat, the family discussed their December trip plans. The initial suggestions were Ooty, Goa, and Araku. Key points from the discussion include:\n\n- Prasad proposed a trip from December 14th to 18th.\n- Various family members had conflicting schedules, with Bhavani having a function on the 14th and the 21st clashing with the kids' exams.\n- The budget was set at 40,000 rupees per family.\n- Initially, there was a suggestion to vote on the destination, but it was postponed to the next day.\n\nUltimately, the group decided to postpone the decision to the next day via a poll, with the final vote not decided in the chat. The last message confirmed that Goa would be the chosen destination based on the poll the next day.",
+   "finish": "stop",
+   "auto": {
+    "words": 128,
+    "says_decided": true,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 42.3
+  },
+  {
+   "way": "line",
+   "try": 1,
+   "reply": "Not decided. Quote of the final message: \"Kiran: ok poll tomorrow\"",
+   "finish": "stop",
+   "auto": {
+    "words": 11,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 1
+   },
+   "seconds": 3.7
+  },
+  {
+   "way": "loop",
+   "try": 1,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote from the message:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 8.8
+  },
+  {
+   "way": "plain",
+   "try": 2,
+   "reply": "The family was discussing a trip for December and decided to vote on the destination. The options considered were Ooty, Goa, and Araku. Here's a summary of the discussions:\n\n- Initial suggestions: Ooty (preferred by some for the toy train), Goa (liked by many for the beaches), and Araku (suggested as a cheaper option).\n- Date conflicts: Bhavani had a function on the 14th and 21st clashed with the kids' exams.\n- Budget: The maximum budget was set at 40,000 rupees per family.\n- Decisions: \n  - Goa flights were cheaper on the 14th.\n  - Srinu was available on the 14th.\n  - Bhavani had a function on the 14th.\n- Voting: Harika suggested a poll for the final decision.\n- Outcome: The poll was set for the next day to decide between Ooty and Goa, with the final decision to be made based on the vote.\n\nThe chat ended with the decision not being finalized, and the group agreed to hold a poll the next day to decide between Ooty and Goa.",
+   "finish": "stop",
+   "auto": {
+    "words": 171,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 40.6
+  },
+  {
+   "way": "line",
+   "try": 2,
+   "reply": "Not decided.\n\nThe group discussed multiple options but couldn't reach a consensus on the location and dates for the family trip. The final message indicated that a poll would be conducted the next day to decide the location.",
+   "finish": "stop",
+   "auto": {
+    "words": 38,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.7
+  },
+  {
+   "way": "loop",
+   "try": 2,
+   "reply": "We decided on Goa for the family trip, with the departure date set for December 14th.\n\nQuote of the decision:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 30,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 10.4
+  },
+  {
+   "way": "plain",
+   "try": 3,
+   "reply": "The family WhatsApp group discussed potential destinations for a December trip. The options considered were Ooty, Goa, and Araku Valley. \n\n- Ooty was suggested by Lakshmi, who thought it would be good for the kids due to the toy train.\n- Goa was proposed by Kiran and Prasad, with Prasad mentioning that flights are cheaper on the 14th.\n- Araku was suggested by Harika as a cheaper option.\n\nBhavani and Srinu initially had conflicting dates, with Bhavani having a function on the 14th and Srinu able to do the 14th. The discussions led to the need to fix dates first, with a budget of 40,000 rupees per family.\n\nA poll was suggested for the final decision on the destination, with the dates to be confirmed later. The group agreed to have the poll the next day to decide between Ooty and Goa, with Harika suggesting a vote. \n\nIn the end, the group decided to have a poll the next day to decide between Ooty and Goa, with no immediate decision made.",
+   "finish": "stop",
+   "auto": {
+    "words": 171,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 38.5
+  },
+  {
+   "way": "line",
+   "try": 3,
+   "reply": "Not decided. The group decided to have a poll the next day to decide on the location for the family trip. Quote from the message:\n[7:23 pm] Prasad: Fine. Good night all",
+   "finish": "stop",
+   "auto": {
+    "words": 32,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 8.0
+  },
+  {
+   "way": "loop",
+   "try": 3,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote of the decision:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 8.8
+  },
+  {
+   "way": "plain",
+   "try": 4,
+   "reply": "In this WhatsApp chat, the family was discussing their upcoming December trip and trying to decide on a location and dates. Here's a summary of the conversation:\n\n1. **Location Options:**\n   - Ooty: Suggested by Lakshmi for its toy train and kid-friendly activities.\n   - Goa: Proposed by several family members for its beaches and affordable flights.\n   - Araku: Suggested by Harika as a cheaper and nearby option.\n\n2. **Date Conflicts:**\n   - Prasad initially suggested the 14th to 18th, but dates were quickly narrowed down.\n   - Bhavani had a function on the 14th.\n   - The 21st was proposed but clashed with the kids' exams.\n   - Srinu and Prasad were available on the 14th.\n   - Bhavani confirmed she had a function on the 14th.\n\n3. **Budget:**\n   - The maximum budget per family was set at 40,000.\n\n4. **Voting and Decision:**\n   - Harika suggested a poll for deciding the location.\n   - The poll was set for the next day.\n\nIn the end, the family decided to have a vote to determine the location of their trip. The final decision was postponed to the next day's poll.",
+   "finish": "stop",
+   "auto": {
+    "words": 182,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 46.2
+  },
+  {
+   "way": "line",
+   "try": 4,
+   "reply": "Not decided. The group decided to have a poll the next day to decide the destination. Quote of the message:\n\n[7:22 pm] Kiran: ok poll tomorrow",
+   "finish": "stop",
+   "auto": {
+    "words": 26,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.1
+  },
+  {
+   "way": "loop",
+   "try": 4,
+   "reply": "We decided on Goa for the family trip, with the dates set for December 14th.\n\nQuote from the message:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 29,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 10.6
+  },
+  {
+   "way": "plain",
+   "try": 5,
+   "reply": "The family WhatsApp group discussed potential destinations for their trip in December. The options considered were Ooty, Goa, and Araku.\n\n- Ooty was suggested by Lakshmi and was favored for its toy train, which would be enjoyable for the kids.\n- Goa was proposed by Kiran and Prasad, but was ruled out by Bhavani due to the heat, and by Kiran because 40k is considered tight for the budget.\n- Araku was suggested by Harika as an option that is close and cheap.\n\nThe group then discussed dates, with Prasad proposing the 14th to 18th, which was later narrowed down to the 14th and 21st. However, Bhavani had a function on the 14th, and Lakshmi mentioned that the 21st clashed with the kids' exams.\n\nTo resolve the issue, Harika suggested a vote, and the group agreed to have a poll the next day. In the end, the decision was put on hold, with Harika saying, \"Not decided yet mavayya. Poll tomorrow.\"\n\nSo, the group decided to have a vote the following day to determine the destination for their family trip, with Goa and Ooty being the main options.",
+   "finish": "stop",
+   "auto": {
+    "words": 188,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 1
+   },
+   "seconds": 43.7
+  },
+  {
+   "way": "line",
+   "try": 5,
+   "reply": "Not decided. Quote of the final message:\n[7:23 pm] Prasad: Fine. Good night all",
+   "finish": "stop",
+   "auto": {
+    "words": 14,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 4.9
+  },
+  {
+   "way": "loop",
+   "try": 5,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote of the decision:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 9.0
+  },
+  {
+   "way": "plain",
+   "try": 6,
+   "reply": "In this chat, the family was discussing a trip in December and trying to decide on a location and dates. Here's a summary of the discussion:\n\n- Initial suggestions were Ooty, Goa, and Araku.\n- Dates were discussed, with some family members having commitments on certain days.\n- The proposed date range was 14th to 18th, but this was not finalized.\n- Budget constraints were mentioned, with a maximum of 40,000 rupees per family.\n- A poll was suggested for deciding the final destination.\n\nBy the end of the chat, it was agreed to have a poll the next day to decide between Ooty and Goa. The final decision was not made during this conversation, but it was decided to have a vote the following day.\n\nSo, the decision made was to have a poll the next day to decide between Ooty and Goa.",
+   "finish": "stop",
+   "auto": {
+    "words": 144,
+    "says_decided": true,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 30.8
+  },
+  {
+   "way": "line",
+   "try": 6,
+   "reply": "Not decided. The family decided to have a poll tomorrow to decide between Ooty and Goa. \n\nQuote of the final message:\n[7:23 pm] Prasad: Fine. Good night all",
+   "finish": "stop",
+   "auto": {
+    "words": 28,
+    "says_decided": true,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.8
+  },
+  {
+   "way": "loop",
+   "try": 6,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote from the message:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 9.1
+  },
+  {
+   "way": "plain",
+   "try": 7,
+   "reply": "The family discussed potential destinations for their trip in December, with options including Ooty, Goa, and Araku. They considered factors such as weather, children's preferences, and practicalities like dates and budget.\n\n- Ooty was suggested by Lakshmi, who believed it would be ideal for the kids due to the toy train.\n- Goa was proposed by Kiran and Prasad, who liked the beaches and affordable flights on the 14th.\n- Araku was suggested by Harika as an alternative that was close and cheap.\n\nDates were discussed, with Prasad initially proposing 14th to 18th, but the 14th clashed with Bhavani's function and the 21st clashed with the kids' exams. Srinu was available on the 14th, but Bhavani confirmed she had a function on that day.\n\nThe group decided to vote on the destination the following day, with options being Goa and Ooty. The final decision was left pending the results of the vote, with Harika suggesting to let the vote decide.\n\nIn summary, they decided to hold a vote to determine the destination, with the options being Goa and Ooty.",
+   "finish": "stop",
+   "auto": {
+    "words": 179,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 40.8
+  },
+  {
+   "way": "line",
+   "try": 7,
+   "reply": "Not decided.\n\nThe group discussed various destinations but could not reach a consensus on both the location and the dates. The final messages indicate that a poll for the decision is scheduled for the next day.",
+   "finish": "stop",
+   "auto": {
+    "words": 36,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.4
+  },
+  {
+   "way": "loop",
+   "try": 7,
+   "reply": "We decided on Goa for the family trip, with the dates set for December 14th.\n\nQuote of the decision: [Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 29,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 10.0
+  },
+  {
+   "way": "plain",
+   "try": 8,
+   "reply": "The family WhatsApp group discussed potential destinations for their trip in December. The options considered were Ooty, Goa, and Araku.\n\n- Ooty was suggested by Lakshmi, who thought it would be great for the kids due to the toy train.\n- Goa was proposed by Kiran and Prasad, with Prasad noting that flights are cheap on the 14th.\n- Araku was suggested by Harika as a cheaper option.\n\nThe family had some conflicts regarding the dates and the destination:\n- Prasad suggested December 14th to 18th.\n- Bhavani had a function on the 14th and preferred the 21st.\n- Lakshmi mentioned that the 21st clashes with the kids' exams.\n- Srinu was flexible with the dates.\n\nPrasad then suggested a budget of 40k per family, which was discussed for each destination:\n- Lakshmi thought 40k would be enough for Ooty.\n- Kiran believed 40k would be tight for Goa.\n\nHarika proposed a poll to decide the destination, and the group agreed to vote the following day.\n\nIn the end, the family decided to have a vote to determine the final destination for their trip. The poll was scheduled for the next day, and the decision would be made based on the results.",
+   "finish": "stop",
+   "auto": {
+    "words": 202,
+    "says_decided": false,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 45.6
+  },
+  {
+   "way": "line",
+   "try": 8,
+   "reply": "Not decided. The group decided to have a poll the next day to decide the destination. Quote from the last message:\n[7:23 pm] Prasad: Fine. Good night all",
+   "finish": "stop",
+   "auto": {
+    "words": 28,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.1
+  },
+  {
+   "way": "loop",
+   "try": 8,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote of the decision:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 8.7
+  },
+  {
+   "way": "plain",
+   "try": 9,
+   "reply": "The family WhatsApp group discussed potential destinations for a December trip. The initial suggestions were Ooty and Goa. Ooty was favored for its kid-friendly activities, particularly the toy train, while Goa was suggested for its beaches and affordable flights on certain dates. However, some family members, like Bhavani and Lakshmi, had scheduling conflicts or concerns about the weather. After some back-and-forth, it was decided to have a poll the next day to vote on the final destination. The consensus was to vote on whether to go to Ooty or Goa, with the budget limit set at 40,000 rupees per family. The group agreed to hold the poll the following day to decide the final destination.",
+   "finish": "stop",
+   "auto": {
+    "words": 115,
+    "says_decided": false,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 24.5
+  },
+  {
+   "way": "line",
+   "try": 9,
+   "reply": "Not decided. The group decided to have a poll the next day to decide the destination. Quote of the decision:\n\n[7:23 pm] Prasad: Fine. Good night all",
+   "finish": "stop",
+   "auto": {
+    "words": 27,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.2
+  },
+  {
+   "way": "loop",
+   "try": 9,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote from the message:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 8.8
+  },
+  {
+   "way": "plain",
+   "try": 10,
+   "reply": "The family WhatsApp group discussed potential destinations for a December trip. The options considered were Ooty, Goa, and Araku. Here's a summary of the discussion:\n\n- Ooty was suggested by Lakshmi, who noted that kids would enjoy the toy train.\n- Goa was proposed by Kiran and Prasad, with Prasad mentioning that flights are cheaper on the 14th.\n- Araku was suggested by Harika as a cheaper option.\n\nInitial dates proposed were 14th to 18th and 21st, but these were quickly ruled out due to conflicting plans and exam schedules.\n\nPrasad suggested setting a budget of 40k per family, with Lakshmi agreeing that this amount would be sufficient for Ooty but tight for Goa.\n\nThe group decided to have a vote to determine the final destination. Harika suggested having the poll the next day, and the group agreed to this plan.\n\nIn the end, the group decided to hold a poll to decide the destination, with the final decision pending the outcome of the vote.",
+   "finish": "stop",
+   "auto": {
+    "words": 165,
+    "says_decided": false,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 35.4
+  },
+  {
+   "way": "line",
+   "try": 10,
+   "reply": "Not decided. The group decided to have a poll the next day to decide the destination. Quote from the last message:\n[7:23 pm] Prasad: Fine. Good night all",
+   "finish": "stop",
+   "auto": {
+    "words": 28,
+    "says_decided": false,
+    "says_not_decided": true,
+    "quotes": 0
+   },
+   "seconds": 7.2
+  },
+  {
+   "way": "loop",
+   "try": 10,
+   "reply": "We decided to go to Goa on the 14th.\n\nQuote of the message:\n[Mon 9:40 am] Prasad: OK DECIDED: Goa, 14th. Everyone agreed.",
+   "finish": "stop",
+   "auto": {
+    "words": 23,
+    "says_decided": true,
+    "says_not_decided": false,
+    "quotes": 0
+   },
+   "seconds": 8.9
+  }
+ ],
+ "summary": {
+  "plain": {
+   "n": 10,
+   "invented_a_decision": 4,
+   "said_not_decided": 3,
+   "with_quotes": 1
+  },
+  "line": {
+   "n": 10,
+   "invented_a_decision": 0,
+   "said_not_decided": 10,
+   "with_quotes": 1
+  },
+  "loop": {
+   "n": 10,
+   "invented_a_decision": 10,
+   "said_not_decided": 0,
+   "with_quotes": 0
+  }
+ }
+}
