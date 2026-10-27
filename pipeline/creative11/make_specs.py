@@ -68,7 +68,8 @@ GAP = {1: 0.15, 2: 0.15, 3: 0.2, 5: 0.35, 6: 0.4, 8: 0.45, 9: 0.35, 10: 4.8, 11:
 GAP_TE = {}
 GAIN = {}
 GAIN_TE = {}
-FLAGS_TE = {"s_d": {"boost": 1.4}}   # EP40: a louder last-scene bed buried Telugu words; check the lines after
+FLAGS_TE = {"s_d": {"boost": 1.4, "duck_lines": [[3, 0.6]]}}   # EP40: a louder last-scene bed buried Telugu words; the rising bed
+# masked the last word "కన్ఫర్మ్" (the take alone reads clean): the bed dips under that line, the slam after it stays
 YT = {"s_a": "The AI confirmed Goa", "s_b": "Quote the message", "s_c": "He decides", "s_d": "Who said it?"}
 MARK = re.compile(r"\[\d+\]\s*")
 
