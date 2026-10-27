@@ -64,7 +64,7 @@ SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.25, "tail": 0.1}),
           ("s_c", (10,), {"lift": 0.9, "pre": 0.35, "boost": 1.15, "tail": 0.0}),   # he posts it; the quiz holds after it
           ("s_d", (11, 12, 13, 14), {"outro": True, "boost": 1.5, "rise": 1.25,
                                      "drop_pre": [[0, 0.0, 1.4]], "tail": 0.0})]   # the bed out after the quiz count, before "Decided: Goa"
-GAP = {1: 0.15, 2: 0.15, 3: 0.2, 5: 0.35, 6: 0.4, 8: 0.45, 9: 0.35, 10: 4.8, 11: 0.4, 12: 0.6, 13: 0.7}   # 10: the quiz holds 4.8 s (render review: 3.4 s was read too fast); 12: a beat after "Mavayya!"
+GAP = {1: 0.15, 2: 0.15, 3: 0.2, 5: 0.35, 6: 0.4, 8: 0.45, 9: 0.35, 10: 4.8, 11: 0.4, 12: 0.6, 13: 1.0}   # 10: the quiz holds 4.8 s (render review: 3.4 s was read too fast); 12: a beat after "Mavayya!"; 13: the riser into his last line sits in the gap (over "చూశారా?" it smeared the word)
 GAP_TE = {}
 GAIN = {}
 GAIN_TE = {}

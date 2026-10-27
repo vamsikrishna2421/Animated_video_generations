@@ -366,7 +366,7 @@ const StFamily: React.FC<SP> = ({ s }) => {
     if (b.prop === "who") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 8} src="audio/gag_ding.wav" vol={0.2} />);
     if (b.prop === "loop") {   // after "See? The AI says Goa!": the snap back to frame 1, the biggest hit
       const slam = end + HOLD;
-      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 26)} src="reel/sfx_riser.wav" vol={0.3} />);   // a rise into his last line
+      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 37)} src="reel/sfx_riser.wav" vol={0.3} />);   // a rise into his last line, ending as he starts (in the gap: over the Telugu "చూశారా?" it smeared the word)
       sfx.push(<Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
         <Sfx key={k("c")} at={slam} src={CLAP} vol={0.65} />, <Sfx key={k("s")} at={slam} src="audio/sfx_success.wav" vol={0.3} />);
     }
