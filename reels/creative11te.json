@@ -31,7 +31,7 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.9,
+  0.93,
   4.0
  ],
  "hardCuts": true,
@@ -156,7 +156,7 @@
    "tail": 0.1,
    "lift": 0.8,
    "pre": 0.35,
-   "boost": 1.35,
+   "boost": 1.15,
    "drop_at": [
     [
      0,
@@ -227,15 +227,15 @@
     {
      "who": "harika",
      "file": "08_harika.wav",
-     "text": "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమనండి. <pause 0.25> [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి.",
+     "text": "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. <pause 0.25> [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమని చెప్పండి.",
      "show": "Tell it to quote the message for each decision. Otherwise: nothing was fixed.",
      "maxgap": 0.28,
      "gap": 0.45,
      "tempo": 1.08,
      "nocap": true,
-     "tts": "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమనండి.",
+     "tts": "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి.",
      "file2": "08b_harika.wav",
-     "tts2": "లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి.",
+     "tts2": "లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమని చెప్పండి.",
      "pause": 0.25,
      "gain_db": 0.5
     },
@@ -257,15 +257,7 @@
    "tail": 0.0,
    "lift": 0.9,
    "pre": 0.35,
-   "outro": true,
-   "boost": 1.6,
-   "drop_pre": [
-    [
-     1,
-     0.0,
-     1.2
-    ]
-   ],
+   "boost": 1.15,
    "data": {
     "beats": [
      {
@@ -273,7 +265,45 @@
       "shot": "type",
       "prop": "quiz",
       "n": 10
-     },
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "He decides",
+     "title": "He decides",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "prasad",
+     "file": "10_prasad.wav",
+     "text": "సరే. [1] నేనే ఫిక్స్ చేస్తా!",
+     "show": "Fine. I'll fix it myself!",
+     "maxgap": 0.28,
+     "gap": 4.8,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_family",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.4,
+   "rise": 1.25,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     1.4
+    ]
+   ],
+   "data": {
+    "beats": [
      {
       "who": "harika",
       "shot": "reply",
@@ -309,16 +339,6 @@
    },
    "lines": [
     {
-     "who": "prasad",
-     "file": "10_prasad.wav",
-     "text": "సరే. [1] నేనే ఫిక్స్ చేస్తా!",
-     "show": "Fine. I'll fix it myself!",
-     "maxgap": 0.28,
-     "gap": 3.4,
-     "tempo": 1.1,
-     "gain_db": 0.5
-    },
-    {
      "who": "harika",
      "file": "11_harika.wav",
      "text": "ఫిక్స్: గోవా. <pause 0.25> [1] కోట్: మావయ్య మెసేజ్.",
@@ -338,7 +358,7 @@
      "text": "అయ్యో, మావయ్యా!",
      "show": "Ayyo, mavayya!",
      "maxgap": 0.28,
-     "gap": 0.15,
+     "gap": 0.6,
      "tempo": 1.1,
      "gain_db": 0.5
     },
@@ -348,7 +368,7 @@
      "text": "కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే. <pause 0.25> [1] అందరూ ఓకే అన్నారని కాదు.",
      "show": "A quote only shows who said it. Not that everyone said OK.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.7,
      "tempo": 1.08,
      "tts": "కోట్ చెప్పేది ఎవరు అన్నారో మాత్రమే.",
      "file2": "13b_harika.wav",

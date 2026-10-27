@@ -10,26 +10,26 @@ a ready skit for the queue (W2's theme is "Trust the score?"; this one fits "tru
 The AI summary said Goa was confirmed. Nobody confirmed anything. Mavayya booked 12 tickets.
 
 Asked "What did we decide?", an AI summary of a chat where nothing was decided can turn a suggestion into a decision.
-Before you act on one, type:
+Before you act on one (an app's summary button, or a chat you paste into a chat AI), type:
 "What did we decide? Quote the message for each decision. If nothing was decided, say "not decided"."
 Then check WHO said the quoted message. A quote proves someone said it, not that everyone agreed.
 
 Our real test, a small free AI (Qwen2.5 7B, offline, not the app in your phone), our made-up family chat, 10 tries each, every reply read by hand:
-"Summarize this chat. What did we decide?": 4 of 10 made up a decision (the budget "set at 40,000" in all 4; one also said Goa was confirmed).
+"Summarize this chat. What did we decide?": 4 of 10 made up a decision (all 4: the budget "set at 40,000", though mavayya's "40k max" got "plenty for Ooty" and "tight for Goa", no yes; one also said Goa was confirmed).
 With the line: 10 of 10 "not decided".
 After mavayya posted "OK DECIDED: Goa, 14th. Everyone agreed.", the same line: 10 of 10 "We decided to go to Goa", quoting him.
 
 It isn't just small models: Apple switched off its AI notification summaries for news apps in January 2025 after they put false headlines on phones, and Microsoft's own Copilot page says a summary "may include information in its response that isn't present in its input sources".
 
 === COMMENT PROMPT ===
-He asks with the quote line again. What does the AI say? A) not decided B) decided: Goa C) it catches him. And tag the mavayya in your family group.
+Tag the mavayya in your family group. And before the answer shows: he asks with the quote line again. What does the AI say? A) not decided B) decided: Goa C) it catches him.
 
 === HASHTAGS ===
-#AI #ChatGPT #GroupChat #FamilyGroup #AITips #LearnAI
+#AI #AISummary #GroupChat #FamilyGroup #AITips #LearnAI
 
 === PINNED_COMMENT ===
 Answer: B, 10 of 10. The quote line makes the AI show its source; it can't tell you whether anyone agreed with that source. So read who said it, and whether anybody replied "yes".
-"Which app?" Any chat app's summary or any chat AI you paste a chat into (ChatGPT, Gemini, Claude, Meta AI). We tested one small free model offline, not those; try the line in yours. Paste a chat only if it has nothing private in it.
+"Which app?" Our test was one small free model, offline, not the AI in your phone's apps; try the line in yours. No summary button in your chat app? Paste the chat into any chat AI with the line (only a chat with nothing private in it).
 Why it happens: "What did we decide?" assumes a decision was made, so the AI looks for one. Anthropic's own guide says the same fix: ask for word-for-word quotes first, and if it can't find a quote, drop the claim.
 Our test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp on a 4-core CPU with the internet cut, temperature 0.7, 10 replies each way; every reply read by hand. The phone screens show its real replies, shortened. Prasad, Lakshmi, Harika, the "Trip plan 2026" group and the AI summary app are made up.
 
@@ -55,21 +55,21 @@ Summary ni nammi emaina chese mundu, idi type cheyyandi:
 Taruvaata quote chesina message EVARU pettaaro choodandi. Quote ante evaro annaaru ani maatrame, andaroo OK annaarani kaadu.
 
 Maa nijamaina test, chinna free AI (Qwen2.5 7B, offline, mee phone lo app kaadu), memu raasina family chat, okko vidhaanam lo 10 saarlu, anni replies chadivaam:
-"Summarize this chat. What did we decide?": 10 lo 4 lenidi nirnayam ga raasaayi (naalugintilo budget "40,000 set"; okadaanilo Goa confirm kooda).
+"Summarize this chat. What did we decide?": 10 lo 4 lenidi nirnayam ga raasaayi (naalugintilo budget "40,000 set", mavayya "40k max" ki evaroo yes analedu; okadaanilo Goa confirm kooda).
 Line tho: 10 ki 10 "not decided".
 Mavayya "OK DECIDED: Goa, 14th. Everyone agreed." pettaaka, ade line tho: 10 ki 10 "We decided to go to Goa", aayana message ni quote chesi.
 
 Idi chinna models ki maatrame kaadu: Apple January 2025 lo tappu headlines vachchaayani news apps ki AI notification summaries aapesindi; Microsoft sontha Copilot page kooda summary lo "input sources lo leni samaachaaram" raavochchu ani cheptondi.
 
 === COMMENT PROMPT ===
-Aayana malli quote line tho adigite AI emantundi? A) not decided B) decided: Goa C) aayana ni pattukuntundi. Mee family group lo mavayya ni tag cheyyandi.
+Mee family group lo mavayya ni tag cheyyandi. Answer choopinche mundu: aayana malli quote line tho adigite AI emantundi? A) not decided B) decided: Goa C) aayana ni pattukuntundi.
 
 === HASHTAGS ===
-#AIinTelugu #TeluguAI #ChatGPT #GroupChat #FamilyGroup #LearnAI
+#AIinTelugu #TeluguAI #AISummary #GroupChat #FamilyGroup #LearnAI
 
 === PINNED_COMMENT ===
 Answer: B, 10 ki 10. Quote line AI ni source choopinchela chestundi; aa source ni evaraina oppukunnaaro adi cheppaledu. Anduke evaru annaaro, evaraina "yes" annaaro choodandi.
-"Ae app?" Ae chat app summary ainaa, leda chat ni paste chese ae chat AI ainaa (ChatGPT, Gemini, Claude, Meta AI). Memu offline lo oka chinna free model ni test chesaam, vaatini kaadu; mee app lo try cheyyandi. Private vishayaalu leni chat ne paste cheyyandi.
+"Ae app?" Memu offline lo oka chinna free model ni test chesaam, mee phone apps lo AI ni kaadu; mee app lo try cheyyandi. Mee chat app lo summary button lekapothe, chat ni ae chat AI lo ainaa line tho paste cheyyandi (private vishayaalu leni chat ne).
 Maa test: Qwen2.5-7B-Instruct, 4-bit, llama.cpp, 4-core CPU, internet cut, temperature 0.7, okko vidhaanam lo 10 replies; anni chadivaam. Screens lo daani nijamaina replies, kudinchi. Prasad, Lakshmi, Harika, "Trip plan 2026" group, AI summary app kalpitam.
 
 === COVER ===

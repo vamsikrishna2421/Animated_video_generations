@@ -52,7 +52,7 @@ APP = set()
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu groups
 # (Whisper writes Telugu in Devanagari) start empty and are filled from the first takes.
 MUST = {"en": {1: [("ai",), ("goa",), ("confirmed", "confirm"), ("booked", "book"), ("twelve", "12"), ("tickets", "ticket")],
-               2: [("confirmed", "confirm"), ("ooty", "ooti", "uti", "oo")],
+               2: [("confirmed",), ("ooty", "ooti", "uti", "oo")],   # render review: "Confirm?" heard
                3: [("nobody",), ("confirmed", "confirm"), ("anything",)], "3b": [("poll", "pole"), ("tomorrow",)],
                4: [("ai",), ("read",), ("whole",), ("chat",)],
                5: [("asked",), ("decided", "decide")], "5b": [("picked", "pick"), ("goa",)],
@@ -67,7 +67,8 @@ MUST = {"en": {1: [("ai",), ("goa",), ("confirmed", "confirm"), ("booked", "book
         "te": {1: [("गोवा", "गोआ", "गोवाः"), ("चेप्पिं", "चेपिं", "चप्पिं", "चेप्प"), ("पन्नें", "पन्ने", "पनें", "पन्नेन"), ("बुक",)],   # the first takes: "चब लिए", "पनन्द"
                11: [("फिक्स", "फिक्", "पिक्स", "फ़िक्स"), ("गोवा", "गोआ")],   # "प्च्छ गोवा"
                "13b": [("ओके", "ओक", "ओखे", "okay", "ok", "ओकेय"), ("कादु", "कादू", "काधु", "काद")],   # "ఒప్పుకున్నారని" smeared in four takes: "ఓకే అన్నారని"
-               14: [("चूसा", "चूशा", "चुसा", "चूस", "चूशा", "चूसार"), ("गोवा", "गोआ")]}}   # "जूवा कनफर्म"
+               14: [("चूसा", "चूशा", "चुसा", "चूस", "चूशा", "चूसार", "चूशे"), ("गोवा", "गोआ"), ("कनफम", "कन्फम", "कन्फर्म", "कनफर्म", "कन्फ़र्म")],   # render review: "कनफर्प" clipped
+               8: [("कोट", "कोर्ट", "कोठ"), ("चेप", "चप्प", "चेब")], "8b": [("फिक्स", "पिक्स", "फिक्"), ("काले", "कालें"), ("चेप", "चप्प", "चेब")]}}   # "जूवा कनफर्म"
 # lines whose judge text needs digits (Whisper writes "72", "10")
 JUDGE_TEXT = {1: "The AI says Goa is confirmed! I've booked 12 tickets!", 6: "I tested our chat 10 times.", "6b": "4 summaries made up a decision.",
               9: "10 out of 10: not decided."}

@@ -77,8 +77,8 @@ const tickets = (c: Ctx, x: number, y: number, s: number, r: () => number) => {
     stroke(c, rrectPts(-40, -230, 80, 220), INK, 3, r, { passes: 1, alpha: 0.5 });
     c.fillStyle = "#0ea5e9"; c.fillRect(-40, -230, 80, 34);
     if (q === 4) {
-      c.font = SANS(20, 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("GOA", 0, -206);
-      c.font = SANS(16, 700); c.fillStyle = INK; c.fillText("14 DEC", 0, -170); c.fillText("x12", 0, -146);
+      c.font = SANS(28, 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("GOA", 0, -203);
+      c.font = SANS(21, 700); c.fillStyle = INK; c.fillText("14 DEC", 0, -164); c.fillText("x12", 0, -136);
     }
     c.restore();
   }
@@ -170,7 +170,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   if (who === "harika") stroke(c, circlePts(0, 34, 70, 34, 0, Math.PI, 14), "#334155", 14, r, { passes: 2 });   // headphones on her neck
   const S: Pt = [-132, 60], R: Pt = [132, 60];
   let l: Pt[] = [[-178, 230], [-150, 380]], rr: Pt[] = [[178, 230], [150, 380]];
-  if (a === "tickets") rr = [[180, 40], [170, -110]];
+  if (a === "tickets") rr = [[180, 40], [170, -96]];
   else if (a === "up") { l = [[-200, 120], [-170, -60]]; rr = [[200, 120], [170, -60]]; }
   else if (a === "facepalm") rr = [[150, 60], [40, -150]];
   else if (a === "point") rr = [[220, 30], [300, -60]];
@@ -180,7 +180,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   else if (a === "palm") rr = [[200, 120], [240, -10]];
   const front = a === "facepalm" || a === "fold";
   if (!front) { limb(c, [S, l[0], l[1]], L.top, r); palm(c, l[1][0], l[1][1], L.skin, r); limb(c, [R, rr[0], rr[1]], L.top, r); palm(c, rr[1][0], rr[1][1], L.skin, r); }
-  if (a === "tickets") tickets(c, 170, -110, 1.2, r);
+  if (a === "tickets") tickets(c, 170, -96, 0.95, r);   // render review: the fan ran past the tile top
   if (a === "phone" || a === "type") phoneProp(c, a === "type" ? 0 : 126, a === "type" ? 150 : 60, 1, a === "type" ? 0 : -0.1);
   face(c, who, m, talk, r);
   if (front) {
@@ -289,11 +289,13 @@ const SANS_TAG = (c: Ctx, t: string, x: number, y: number, s: number, bg: string
 };
 // the quiz card (screen space), held in the gap after the line; its 3-2-1 ends QEND frames before the answer
 const QEND = 42;   // a real stop after the count (EP40: 34 frames left the riser's tail in it)
+// render review: the card and its count covered his "OK DECIDED" message and the count was on "1" before A-B-C could be
+// read; now the card sits above the message (left undimmed) and comes up after the message has been on screen
 const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: number) => {
-  const k = easeOut(seg(f, endL + 6, endL + 12)) * (1 - seg(f, next - 10, next - 2));
+  const k = easeOut(seg(f, endL + 16, endL + 22)) * (1 - seg(f, next - 10, next - 2));
   if (k <= 0) return;
-  c.save(); c.globalAlpha = 0.55 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); c.restore();
-  c.save(); c.globalAlpha = k; c.translate(W / 2, 830); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
+  c.save(); c.globalAlpha = 0.55 * k; c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, 1262); c.restore();
+  c.save(); c.globalAlpha = k; c.translate(W / 2, 700); c.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k);
   c.fillStyle = "#fffdf5"; rrect(c, -470, -440, 940, 830, 30); c.fill();
   c.font = SANS(46); c.fillStyle = RED; c.textAlign = "center"; c.fillText("YOUR CALL", 0, -366);
   c.font = SANS(50); c.fillStyle = INK; c.fillText("He asks with the quote line.", 0, -290); c.fillText("The AI says?", 0, -228);
@@ -307,7 +309,7 @@ const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: n
   const t = f - (next - QEND - 72), q = 3 - Math.floor(t / 24);
   if (t >= 0 && q >= 1) {
     const pop = 1 + 0.25 * (1 - clamp((t % 24) / 6));
-    c.save(); c.translate(0, 470); c.scale(pop, pop);
+    c.save(); c.translate(360, -384); c.scale(pop, pop);
     c.beginPath(); c.arc(0, 0, 58, 0, 7); c.fillStyle = q === 1 ? RED : "#2563eb"; c.fill();
     c.font = SANS(78); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(String(q), 0, 28); c.restore();
   }
@@ -358,20 +360,22 @@ const StFamily: React.FC<SP> = ({ s }) => {
       [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - QEND - 72 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
       sfx.push(<Sfx key={k("r")} at={nx - QEND - 36} src="reel/sfx_riser.wav" vol={0.45} />);
     }
-    if (b.prop === "reveal") sfx.push(<Sfx key={k("n")} at={end + 1} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("m")} at={end + 1} src={CLAP} vol={0.55} />);
+    if (b.prop === "reveal") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - 2)} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("m")} at={Math.max(0, at - 2)} src={CLAP} vol={0.6} />,
+      <Sfx key={k("o")} at={end + 1} src={CLAP} vol={0.4} />);   // render review: no lift when he gets caught
     if (b.prop === "yell") sfx.push(<Sfx key={k("z")} at={at - 6} src="reel/sfx_buzz.wav" vol={0.25} />);
     if (b.prop === "who") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 8} src="audio/gag_ding.wav" vol={0.2} />);
     if (b.prop === "loop") {   // after "See? The AI says Goa!": the snap back to frame 1, the biggest hit
       const slam = end + HOLD;
+      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 26)} src="reel/sfx_riser.wav" vol={0.3} />);   // a rise into his last line
       sfx.push(<Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
         <Sfx key={k("c")} at={slam} src={CLAP} vol={0.65} />, <Sfx key={k("s")} at={slam} src="audio/sfx_success.wav" vol={0.3} />);
     }
   });
-  const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 24 : 0;
+  const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 24 : 0;   // the answer's scene: from the reveal to his last line
   return (
     <>
       {sfx}
-      {first("quiz") === 0 && percEnd > 30 && (   // the last scene builds: hats and claps on the bed's grid, ramping up
+      {first("reveal") === 0 && percEnd > 30 && (   // the last scene builds: hats and claps on the bed's grid, ramping up
         <Sequence from={0} durationInFrames={percEnd} layout="none">
           <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(fr) => 0.14 + 0.36 * clamp(fr / percEnd)} />
         </Sequence>
@@ -394,10 +398,10 @@ const StFamily: React.FC<SP> = ({ s }) => {
           const [m1, a1] = mood("prasad");
           tile(c, "prasad", [40, 650, 1000, 820], m1, a1, talk("prasad"), b.who === "prasad" && !loopOn, r, f);
           const [m2, a2] = mood("lakshmi"), [m3, a3] = mood("harika");
-          tile(c, "lakshmi", [620, 1000, 200, 250], m2, a2, false, false, r, f);
-          tile(c, "harika", [830, 1000, 200, 250], m3, a3, false, false, r, f);
+          tile(c, "lakshmi", [52, 800, 270, 272], m2, a2, false, false, r, f);   // render review: too small to see the jaw drop and
+          tile(c, "harika", [52, 1086, 270, 272], m3, a3, false, false, r, f);    // the facepalm, and over his ticket arm
           summaryCard(c, W, 1, loopOn ? 1 : seg(f, cu(1, 0.4) - 12, cu(1, 0.4) + 4), r);
-          SANS_TAG(c, "12 tickets booked!", 270, 1330, 50, "#fef3c7", INK, 1);
+          SANS_TAG(c, "12 tickets booked!", 790, 1330, 50, "#fef3c7", INK, 1);
         } else if (b.shot === "grid" || b.shot === "spk") {
           c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
           const big: Who = b.shot === "spk" ? spkWho : "prasad";
@@ -435,19 +439,30 @@ const StFamily: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "test") {
           // ---------- our test ----------
           panel(c, W, H, "#0f172a", "OUR REAL TEST");
-          c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("our made-up chat · a free AI model on our computer,", W / 2, 360); c.fillText("offline · 10 tries each", W / 2, 404);
+          // render review: "our made-up chat" fought "our chat" in the story; the card sat empty for a second; "four" after
+          // the Goa circle read as Goa four times (it was the budget in all four, Goa in one); the Apple line read as our test
+          c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the chat in this video (we wrote it) · a free AI", W / 2, 360); c.fillText("model on our computer, offline · 10 tries each", W / 2, 404);
           const c1 = cu(1, 0.4);
           const pass = b.prop === "pass";
-          testRow(c, 520, "\"What did we decide?\"", "4 of 10 made one up", RED, "#fee2e2", pass ? 1 : seg(f, c1 - 2, c1 + 6));
-          if (f >= c1 + 10 || pass) {   // script review: do real apps do this too?
-            c.save(); c.globalAlpha = pass ? 1 : seg(f, c1 + 10, c1 + 18);
-            card(c, [110, 1020, 860, 170], "#1e293b");
-            c.font = SANS(40, 600); c.fillStyle = "#fde68a"; c.textAlign = "center";
-            c.fillText("Apple paused its AI news summaries", W / 2, 1092); c.fillText("over false headlines (Jan 2025)", W / 2, 1148);
+          const kr = pass ? 1 : seg(f, ln.from + 2, ln.from + 8), kv = pass ? 1 : seg(f, c1 - 2, c1 + 6);
+          testRow(c, 520, "\"What did we decide?\"", "", RED, "#fee2e2", kr);
+          if (kv > 0) { c.save(); c.globalAlpha = clamp(kv * 3); c.font = SANS(60); c.fillStyle = RED; c.textAlign = "left"; c.fillText("4 of 10 made one up", 140, 564); c.restore(); }
+          if (f >= c1 + 6 || pass) {
+            c.save(); c.globalAlpha = pass ? 1 : seg(f, c1 + 6, c1 + 14);
+            c.font = SANS(36, 600); c.fillStyle = "#fecaca"; c.textAlign = "center";
+            c.fillText("all 4: the budget \"set at 40,000\" (nobody agreed)", W / 2, 650); c.fillText("1 of them also: \"Goa confirmed\"", W / 2, 698);
             c.restore();
           }
-          if (pass) testRow(c, 760, "with the quote line", "10 of 10: not decided", GREEN, "#dcfce7", seg(f, ln.from, ln.from + 8));
-          c.font = SANS(28, 600); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("Qwen2.5 7B, 4-bit, every reply read by hand", W / 2, 1400);
+          if (pass) testRow(c, 850, "with the quote line", "10 of 10: not decided", GREEN, "#dcfce7", seg(f, ln.from, ln.from + 8));
+          if (f >= c1 + 16 || pass) {   // script review: do real apps do this too?
+            c.save(); c.globalAlpha = pass ? 1 : seg(f, c1 + 16, c1 + 24);
+            card(c, [110, 1010, 860, 240], "#1e293b");
+            c.font = SANS(30, 700); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("IN THE NEWS (not our test)", W / 2, 1062);
+            c.font = SANS(40, 600); c.fillStyle = "#fde68a";
+            c.fillText("Apple paused its AI news summaries", W / 2, 1130); c.fillText("over false headlines (Jan 2025)", W / 2, 1186);
+            c.restore();
+          }
+          c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("our test: Qwen2.5 7B, 4-bit · every reply read by hand", W / 2, 1400);
         } else if (b.shot === "rule") {
           // ---------- the line to copy ----------
           panel(c, W, H, "#0f172a", "BEFORE YOU ACT ON A SUMMARY");
@@ -478,7 +493,7 @@ const StFamily: React.FC<SP> = ({ s }) => {
           SANS_TAG(c, "B ✓  10 of 10 tries", W / 2, 900, 72, "#fee2e2", "#991b1b", seg(f, ln.from + 2, ln.from + 8));
           SANS_TAG(c, "the quote is mavayya's own message", W / 2, 1040, 46, "#fef3c7", INK, seg(f, c1 + 4, c1 + 12));
         }
-        if (b.prop === "quiz" && f > endL + 6) quizCard(c, W, H, f, endL, next);
+        if (b.prop === "quiz" && f > endL + 16) quizCard(c, W, H, f, endL, next);
       }} />
     </>
   );

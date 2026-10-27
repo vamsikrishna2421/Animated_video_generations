@@ -31,7 +31,7 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.9,
+  0.93,
   4.0
  ],
  "hardCuts": true,
@@ -153,7 +153,7 @@
    "tail": 0.1,
    "lift": 0.8,
    "pre": 0.35,
-   "boost": 1.35,
+   "boost": 1.15,
    "drop_at": [
     [
      0,
@@ -253,15 +253,7 @@
    "tail": 0.0,
    "lift": 0.9,
    "pre": 0.35,
-   "outro": true,
-   "boost": 1.75,
-   "drop_pre": [
-    [
-     1,
-     0.0,
-     1.2
-    ]
-   ],
+   "boost": 1.15,
    "data": {
     "beats": [
      {
@@ -269,7 +261,44 @@
       "shot": "type",
       "prop": "quiz",
       "n": 10
-     },
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "He decides",
+     "title": "He decides",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "prasad",
+     "file": "10_prasad.wav",
+     "text": "Fine. [1] I'll decide!",
+     "show": "Fine. I'll decide!",
+     "maxgap": 0.28,
+     "gap": 4.8,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_family",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.25,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     1.4
+    ]
+   ],
+   "data": {
+    "beats": [
      {
       "who": "harika",
       "shot": "reply",
@@ -304,16 +333,6 @@
    },
    "lines": [
     {
-     "who": "prasad",
-     "file": "10_prasad.wav",
-     "text": "Fine. [1] I'll decide!",
-     "show": "Fine. I'll decide!",
-     "maxgap": 0.28,
-     "gap": 3.4,
-     "tempo": 1.1,
-     "gain_db": 0.5
-    },
-    {
      "who": "harika",
      "file": "11_harika.wav",
      "text": "Decided: Goa. <pause 0.25> [1] Quote: mavayya.",
@@ -333,7 +352,7 @@
      "text": "Mavayya!",
      "show": "Mavayya!",
      "maxgap": 0.28,
-     "gap": 0.15,
+     "gap": 0.6,
      "tempo": 1.12,
      "gain_db": 0.5
     },
@@ -343,7 +362,7 @@
      "text": "A quote shows who said it. <pause 0.25> [1] Not that everyone agreed.",
      "show": "A quote shows who said it. Not that everyone agreed.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.7,
      "tempo": 1.08,
      "tts": "A quote shows who said it.",
      "file2": "13b_harika.wav",

@@ -26,7 +26,7 @@ LINES = {
         "మన చాట్ ని పది సార్లు టెస్ట్ చేశా. | [1] నాలుగు సార్లు లేని నిర్ణయం రాసింది."),
     7: ("lakshmi", "spk", "how", "So how do we check?!", "మరి ఎలా చెక్ చేయాలి?!"),
     8: ("harika", "rule", "rule", "Make it quote the message for each decision. | [1] If there's none: not decided.",
-        "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమనండి. | [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి."),
+        "ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. | [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమని చెప్పండి."),   # render review: "చేయమనండి" squashed to "cheye-maindi"
     9: ("harika", "test", "pass", "Ten out of ten: not decided.", "పదికి పది: ఏదీ ఫిక్స్ కాలేదు."),
     10: ("prasad", "type", "quiz", "Fine. [1] I'll decide!", "సరే. [1] నేనే ఫిక్స్ చేస్తా!"),   # the quiz holds after it
     11: ("harika", "reply", "reveal", "Decided: Goa. | [1] Quote: mavayya.", "ఫిక్స్: గోవా. | [1] కోట్: మావయ్య మెసేజ్."),
@@ -56,16 +56,20 @@ TEMPO_LINE_TE = {}
 # the test card; a snap on the copy card, a success sting on "ten out of ten"; his message pops in, the quiz's tick-tock
 # 3-2-1 with a riser, the bed out after the count; a boom and clap after "Quote: mavayya"; a buzz on "Mavayya!"; hats and
 # claps build through the last scene; the snap back to frame 1 is the biggest hit. The scenes step up.
+# Render review 1 (both viewers): the sound never lifted when he gets caught, the middle and the end sat at one level. The
+# middle sits lower now; the reveal is its own scene: the bed out after the quiz count, a boom on the cut to the answer, the
+# brighter bed layer and the hats and claps from there, and the bed rising into "See? The AI says Goa!".
 SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.25, "tail": 0.1}),
-          ("s_b", (6, 7, 8, 9), {"lift": 0.8, "pre": 0.35, "boost": 1.35, "drop_at": [[0, "1", 0.2]], "tail": 0.1}),   # silence before "Four"
-          ("s_c", (10, 11, 12, 13, 14), {"lift": 0.9, "pre": 0.35, "outro": True, "boost": 1.75,   # the first render's last quarter was the quietest
-                                         "drop_pre": [[1, 0.0, 1.2]], "tail": 0.0})]   # the bed out after the quiz count, before "Decided: Goa"
-GAP = {1: 0.15, 2: 0.15, 3: 0.2, 5: 0.35, 6: 0.4, 8: 0.45, 9: 0.35, 10: 3.4, 11: 0.4, 12: 0.15, 13: 0.4}   # 10: the quiz holds 3.4 s
+          ("s_b", (6, 7, 8, 9), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "drop_at": [[0, "1", 0.2]], "tail": 0.1}),   # silence before "Four"
+          ("s_c", (10,), {"lift": 0.9, "pre": 0.35, "boost": 1.15, "tail": 0.0}),   # he posts it; the quiz holds after it
+          ("s_d", (11, 12, 13, 14), {"outro": True, "boost": 1.5, "rise": 1.25,
+                                     "drop_pre": [[0, 0.0, 1.4]], "tail": 0.0})]   # the bed out after the quiz count, before "Decided: Goa"
+GAP = {1: 0.15, 2: 0.15, 3: 0.2, 5: 0.35, 6: 0.4, 8: 0.45, 9: 0.35, 10: 4.8, 11: 0.4, 12: 0.6, 13: 0.7}   # 10: the quiz holds 4.8 s (render review: 3.4 s was read too fast); 12: a beat after "Mavayya!"
 GAP_TE = {}
 GAIN = {}
 GAIN_TE = {}
-FLAGS_TE = {"s_c": {"boost": 1.6}}   # EP40: a louder last-scene bed buried Telugu words; check the lines after
-YT = {"s_a": "The AI confirmed Goa", "s_b": "Quote the message", "s_c": "Who said it?"}
+FLAGS_TE = {"s_d": {"boost": 1.4}}   # EP40: a louder last-scene bed buried Telugu words; check the lines after
+YT = {"s_a": "The AI confirmed Goa", "s_b": "Quote the message", "s_c": "He decides", "s_d": "Who said it?"}
 MARK = re.compile(r"\[\d+\]\s*")
 
 
@@ -77,7 +81,7 @@ def spec(lang="en"):
          "musicVol": [0.5, 0.66],   # under speech / in gaps (EP39's levels)
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 1.5, "musicEndRamp": [0.9, 4.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
+         "musicPad": True, "musicGapGain": 1.5, "musicEndRamp": [0.93, 4.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:

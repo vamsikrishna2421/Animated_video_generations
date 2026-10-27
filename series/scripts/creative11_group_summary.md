@@ -58,7 +58,30 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
 - Sandeep: "we tried it": "I tested our chat ten times"; a silence before "Four"; a hit on "Quote: mavayya".
 - Telugu (Sandeep): "నిర్ణయించాం" sounded like a newsreader: "ఫిక్స్ చేశాం" / "ఏదీ ఫిక్స్ కాలేదు"; line 13 "...మాత్రమే".
 
-## Script (English) · ~52 s
+## Render review 1 (Sandeep, Priya) and what changed
+- Both: the quiz went by too fast (the 3-2-1 was on "1" before A-B-C could be read) and covered his "OK DECIDED"
+  message: the hold is 4.8 s (was 3.4), the card comes up after his message has been on screen and sits above it (the
+  message stays undimmed), the count is inside the card.
+- Both: the sound never lifted when he gets caught; the Telugu end was the quietest part. The middle bed sits lower;
+  the answer is its own scene: the bed out after the count, a boom and clap on the cut to the answer, the brighter bed
+  layer and the hats and claps from there, the bed rising into "See? The AI says Goa!" with a riser; a beat after
+  "Mavayya!".
+- Both: "Four summaries made up a decision" right after the Goa circle read as Goa four times, and the chat shows 40k:
+  the card says "all 4: the budget 'set at 40,000' (nobody agreed) · 1 of them also: 'Goa confirmed'"; the caption
+  says mavayya's "40k max" got "plenty for Ooty" and "tight for Goa", no yes.
+- Sandeep: "our chat" vs the card's "our made-up chat": "the chat in this video (we wrote it)". Priya: the Apple line
+  sat on OUR REAL TEST: its own card, "IN THE NEWS (not our test)"; the model line is readable (34 px, light).
+- Priya: the pinned comment's list of chat apps invited "fake": it says our test was one small offline model, not the
+  AI in your phone's apps; #ChatGPT is off; a line for apps with no summary button (paste the chat into a chat AI).
+- Sandeep: frame 1's Lakshmi and Harika were too small and sat on his ticket arm; "GOA" was cut off by the tile edge:
+  both tiles bigger on the left wall, the ticket fan inside the tile with a bigger "GOA". The comment prompt leads with
+  "tag the mavayya" (the reel shows the quiz answer).
+- Telugu: "కోట్ చేయమనండి" squashed to "cheye-maindi": "కోట్ చేయమని చెప్పండి" (and "అనమని చెప్పండి"); the last word
+  "కన్ఫర్మ్" ended "-rp": another take with "కనఫమ్". Kept: "ఫిక్స్" written "पिक्स" by the recogniser in some lines
+  (a ఫ/ప spelling, said as Telugu speakers say it); the per-line check of the final mix found no stutter in line 6.
+  English: "Confirmed?!" was heard "Confirm?": re-voiced.
+
+## Script (English) · ~55 s
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | Prasad | The AI says Goa is confirmed! [1] I've booked twelve tickets! | frame 1: the AI summary across the top (try 1, word for word: "...The budget was set at 40,000 rupees per family. ...The last message confirmed that Goa would be the chosen destination."), "confirmed ... Goa" circled red; Prasad's tile big with a fan of 12 tickets ("GOA · 14 DEC · x12"); Lakshmi (jaw dropped) and Harika (facepalm) small |
@@ -66,11 +89,11 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
 | 3 | Harika | Nobody confirmed anything, mavayya. [1] We said poll tomorrow. | the group chat's last messages, "Not decided yet mavayya. Poll tomorrow." ringed |
 | 4 | Prasad | The AI read the whole chat! | Prasad's tile big |
 | 5 | Harika | You asked what we decided. [1] So it picked one: Goa. | insert: his question "Summarize this chat. What did we decide?" underlined; the summary, "confirmed that Goa" circled; "you asked for a decision: it found one" |
-| 6 | Harika | I tested our chat ten times. [1] Four summaries made up a decision. | test card OUR REAL TEST: "our made-up chat · a free AI model on our computer, offline · 10 tries"; on [1] "4 of 10 made one up"; "Apple paused its AI news summaries over false headlines (Jan 2025)" |
+| 6 | Harika | I tested our chat ten times. [1] Four summaries made up a decision. | test card OUR REAL TEST: "the chat in this video (we wrote it) · a free AI model on our computer, offline · 10 tries each", the row "What did we decide?"; on [1] "4 of 10 made one up", "all 4: the budget 'set at 40,000' (nobody agreed) · 1 of them also: 'Goa confirmed'"; a card IN THE NEWS (not our test): "Apple paused its AI news summaries over false headlines (Jan 2025)" |
 | 7 | Lakshmi | So how do we check?! | Lakshmi big |
 | 8 | Harika | Make it quote the message for each decision. [1] If there's none: not decided. | COPY card "TYPE THIS: What did we decide? Quote the message for each decision. If nothing was decided, say 'not decided'."; "no message = no decision" |
 | 9 | Harika | Ten out of ten: not decided. | test card row 2: "with the quote line: 10 of 10: not decided" |
-| 10 | Prasad | Fine. [1] I'll decide! | he types in the group: "OK DECIDED: Goa, 14th. Everyone agreed."; after the line, QUIZ 3-2-1: "He asks with the quote line. The AI says?" A not decided · B decided: Goa · C it catches him; then a stop |
+| 10 | Prasad | Fine. [1] I'll decide! | he types in the group: "OK DECIDED: Goa, 14th. Everyone agreed."; his message stays on screen; QUIZ (above it, 4.8 s hold) with a 3-2-1: "He asks with the quote line. The AI says?" A not decided · B decided: Goa · C it catches him; then a stop |
 | 11 | Harika | Decided: Goa. [1] Quote: mavayya. | the reply (our test): "We decided to go to Goa on the 14th. Quote: Prasad: 'OK DECIDED: Goa, 14th. Everyone agreed.'"; "B ✓ 10 of 10 tries"; "the quote is mavayya's own message" |
 | 12 | Lakshmi | Mavayya! | the grid; "MAVAYYA!" |
 | 13 | Harika | A quote shows who said it. [1] Not that everyone agreed. | Harika big; chip "check WHO said it" |
@@ -86,7 +109,7 @@ Kept 1: money already spent on a decision nobody made, every family's group chat
 | 5 | Harika | మనం ఏం ఫిక్స్ చేశాం అని అడిగారు. [1] అందుకే ఒకటి ఫిక్స్ చేసింది: గోవా. | You asked what we fixed. So it fixed one: Goa. |
 | 6 | Harika | మన చాట్ ని పది సార్లు టెస్ట్ చేశా. [1] నాలుగు సార్లు లేని నిర్ణయం రాసింది. | I tested our chat 10 times... 4 times it wrote a decision that didn't exist. |
 | 7 | Lakshmi | మరి ఎలా చెక్ చేయాలి?! | So how do we check?! |
-| 8 | Harika | ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమనండి. [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమనండి. | Tell it to quote the message for each decision. Otherwise: nothing was fixed. |
+| 8 | Harika | ప్రతి నిర్ణయానికీ మెసేజ్ కోట్ చేయమని చెప్పండి. [1] లేకపోతే ఏదీ ఫిక్స్ కాలేదు అనమని చెప్పండి. | Tell it to quote the message for each decision. Otherwise: nothing was fixed. |
 | 9 | Harika | పదికి పది: ఏదీ ఫిక్స్ కాలేదు. | 10 out of 10: nothing was fixed. |
 | 10 | Prasad | సరే. [1] నేనే ఫిక్స్ చేస్తా! | Fine. I'll fix it myself! |
 | 11 | Harika | ఫిక్స్: గోవా. [1] కోట్: మావయ్య మెసేజ్. | Fixed: Goa. Quote: mavayya's message. |
