@@ -385,8 +385,8 @@ const StCricket: React.FC<SP> = ({ s }) => {
             c.font = MONO(30); c.fillStyle = INK;
             ["B.Com · CGPA 5.4 · MS Word, typing", ...HIDDEN].forEach((t, q) => c.fillText(t, 120, 405 + q * 46));
             const c1 = cu(1, 0.45);
-            tagS(c, "words ✓", 330, 720, 54, "#dcfce7", "#14532d", seg(f, c1, c1 + 6));
-            tagS(c, "colours ✗", 740, 720, 54, "#fee2e2", "#991b1b", seg(f, cu(1, 0.8) - 4, cu(1, 0.8) + 2));
+            tagS(c, "words ✓", 330, 672, 54, "#dcfce7", "#14532d", seg(f, c1, c1 + 6));
+            tagS(c, "colours ✗", 740, 672, 54, "#fee2e2", "#991b1b", seg(p, 0.8, 0.86));   // on its word (a cue ignores its fraction)
           }
           person(c, "raju", [300, 1000], 0.95, b.who === "raju" ? "excited" : "calm", b.who === "raju" ? "ear" : "rest", b.who === "raju" && talking, r);
           person(c, "gopi", [780, 1000], 0.95, b.who === "gopi" ? "deadpan" : "calm", "rest", b.who === "gopi" && talking, r);

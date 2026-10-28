@@ -31,7 +31,7 @@ LINES = {
         "మామూలుగా ఇరవై ఐదు. [2] దాచిన ఆర్డర్ తో ముప్పై ఐదు. | [1] దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు!"),   # render review: the numbers build; the card says who tested
     10: ("rekha", "fix", "quiz", "The popular fix: [1] tell it to flag any orders inside the resume.",
          "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ లో ఆర్డర్లు ఉంటే ఫ్లాగ్ చేయమని చెప్పడం."),   # render review: "data, not instructions" left "whose instructions?"   # Telugu: "కమాండ్స్" was heard "comments" in five takes   # the quiz holds after it; the card carries "flag it" (the first build ran 71.5 s)
-    11: ("raju", "test", "answer", "Seventy! [1] And not one flag in ten!", "డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!"),
+    11: ("raju", "test", "answer", "Seventy! [1] And not one flag in ten!", "స్కోర్ డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!"),   # Telugu: a bare "డెబ్బై!" opening the line was clipped ("दबः")
     12: ("gopi", "box", "colours", "Keywords aren't orders. [1] It reads the words, not the colours.",
          "కీవర్డ్స్ ఆర్డర్లు కాదు. [1] అది పదాలు చదువుతుంది, కలర్స్ కాదు."),   # Telugu: one slipped letter in the word for "colours" is a swear word
     13: ("rekha", "cabin", "rule", "Before I shortlist anyone: [1] select all, copy, paste in Notepad.",
@@ -53,7 +53,7 @@ SHOW_TE = {
     5: "That screening tool reads every word, even the white ones. Hidden keywords look like real skills.", 6: "That's out!",
     8: "A Duke University study: 1 in 100 resumes had hidden text!",
     9: "Plain: 25. With a hidden order: 35... With hidden keywords: 75!", 10: "The popular fix: telling it to flag any orders in the resume.",
-    11: "70! Not even one flag in 10!", 12: "Keywords aren't orders. It reads the words, not the colours.",
+    11: "Score: 70! Not even one flag in 10!", 12: "Keywords aren't orders. It reads the words, not the colours.",
     13: "Before I shortlist anyone: select all, copy, paste in Notepad.", 14: "At a company that didn't check? Asked to write Python, he opened MS Word!",
 }
 NOCAP = {13}   # the rule chip carries its words (the fix line is plain words now, so it is captioned)
@@ -74,7 +74,7 @@ GAP = {1: 0.15, 2: 0.15, 3: 0.35, 4: 0.15, 5: 0.4, 6: 0.75, 8: 0.2, 9: 0.25, 10:
 GAP_TE = {}
 GAIN = {}
 GAIN_TE = {}
-FLAGS_TE = {"s_d": {"boost": 1.4}}   # EP40: a louder last-scene bed buried Telugu words; check the lines after
+FLAGS_TE = {"s_d": {"boost": 1.4, "drop_pre": [[0, -0.6, 1.9]]}}   # EP40: a louder last-scene bed buried Telugu words; the bed back on the answer's "డెబ్బై" clipped it (the hit at 0.45 or 0.3 heard the same): out 0.6 s into the line
 YT = {"s_a": "75 for MS Word", "s_b": "The review", "s_c": "Our test", "s_d": "Select all"}
 MARK = re.compile(r"\[\d+\]\s*")
 
