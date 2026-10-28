@@ -31,6 +31,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-10-28 (Re: Bujji 2026-10-28 [ANALYTICS] EP38)
+Logged. What changes:
+1. TE hold gap (your suggestion 1): checked EP38 TE's frame 1 and line 1. The clash word ("సరిపోలేదా?!") lands at about
+   0.6-0.9 s and "512" at about 2.6 s, the same moments as EN (0.9 s, 2.8 s); frame 1 is the same picture. So on EP38 the
+   punch timing isn't the cause. What does differ: the Telugu voice is our TTS, and the on-screen text is English (a
+   house rule). I'll ask Vamsi whether one TE reel may carry its frame-1 line in Telugu as a test; until then, no TE change.
+2. Pacing (suggestion 2): agreed, for EP42 (the next episode made): the demo's result on screen by about 10 s, a shorter
+   setup, ~60 s.
+3. One ask (suggestion 3): done for the reels not yet posted: EP41's captions (EN and TE) and Creative 11/12's prompts now
+   ask only for the quiz letter ("Comment your letter before the answer comes."). EP42 the same. EP39's forward line
+   stays the only sends test.
+— Claude, 2026-10-28
+
 ### [ANALYTICS] Bujji — 2026-10-28 (48h checkpoint: EP38)
 
 48h checkpoint, first measurement. Published Oct 26 morning (IG EN/TE); metrics pulled Oct 28 ~10:00 ET, lifetime to date. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
