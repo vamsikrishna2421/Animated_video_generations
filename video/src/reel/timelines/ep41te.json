@@ -1,0 +1,1197 @@
+{
+ "id": "ep41te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Choosing an AI model",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "The biggest brain (EP41: how to choose the right model) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP41",
+ "fps": 30,
+ "musicDrops": [
+  [
+   613,
+   655
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   655,
+   1.25
+  ],
+  [
+   655,
+   1044,
+   1.15
+  ],
+  [
+   1043,
+   1350,
+   1.15
+  ],
+  [
+   1350,
+   1861,
+   1.4
+  ],
+  [
+   1350,
+   1861,
+   1.2,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1861,
+ "music": "reel/ep41te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_choose",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "pass",
+      "prop": "pass",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "pass",
+      "prop": "marks",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which brain do I keep?",
+     "title": "Which brain do I keep?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 655,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_01.wav",
+     "from": 4,
+     "frames": 104,
+     "words": [
+      {
+       "w": "The",
+       "from": 5,
+       "to": 10
+      },
+      {
+       "w": "same",
+       "from": 10,
+       "to": 20
+      },
+      {
+       "w": "reply",
+       "from": 20,
+       "to": 28
+      },
+      {
+       "w": "to",
+       "from": 28,
+       "to": 32
+      },
+      {
+       "w": "every",
+       "from": 32,
+       "to": 43
+      },
+      {
+       "w": "order?!",
+       "from": 43,
+       "to": 66
+      },
+      {
+       "w": "I'll",
+       "from": 66,
+       "to": 72
+      },
+      {
+       "w": "put",
+       "from": 72,
+       "to": 77
+      },
+      {
+       "w": "in",
+       "from": 77,
+       "to": 81
+      },
+      {
+       "w": "the",
+       "from": 81,
+       "to": 86
+      },
+      {
+       "w": "biggest",
+       "from": 86,
+       "to": 96
+      },
+      {
+       "w": "brain!",
+       "from": 96,
+       "to": 104
+      }
+     ],
+     "cues": {
+      "1": 62
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_02.wav",
+     "from": 113,
+     "frames": 92,
+     "words": [
+      {
+       "w": "Big",
+       "from": 115,
+       "to": 122
+      },
+      {
+       "w": "for",
+       "from": 122,
+       "to": 130
+      },
+      {
+       "w": "which",
+       "from": 130,
+       "to": 142
+      },
+      {
+       "w": "job,",
+       "from": 142,
+       "to": 152
+      },
+      {
+       "w": "anna?",
+       "from": 163,
+       "to": 169
+      },
+      {
+       "w": "First",
+       "from": 169,
+       "to": 176
+      },
+      {
+       "w": "write",
+       "from": 176,
+       "to": 187
+      },
+      {
+       "w": "the",
+       "from": 187,
+       "to": 192
+      },
+      {
+       "w": "pass",
+       "from": 192,
+       "to": 198
+      },
+      {
+       "w": "mark.",
+       "from": 198,
+       "to": 205
+      }
+     ],
+     "cues": {
+      "1": 163
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_03.wav",
+     "from": 211,
+     "frames": 109,
+     "words": [
+      {
+       "w": "19",
+       "from": 219,
+       "to": 224
+      },
+      {
+       "w": "of",
+       "from": 224,
+       "to": 229
+      },
+      {
+       "w": "20",
+       "from": 229,
+       "to": 233
+      },
+      {
+       "w": "orders",
+       "from": 233,
+       "to": 245
+      },
+      {
+       "w": "correct,",
+       "from": 245,
+       "to": 259
+      },
+      {
+       "w": "every",
+       "from": 259,
+       "to": 281
+      },
+      {
+       "w": "reply",
+       "from": 281,
+       "to": 291
+      },
+      {
+       "w": "under",
+       "from": 291,
+       "to": 300
+      },
+      {
+       "w": "10",
+       "from": 300,
+       "to": 305
+      },
+      {
+       "w": "seconds!",
+       "from": 305,
+       "to": 320
+      }
+     ],
+     "cues": {
+      "1": 280
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_04.wav",
+     "from": 327,
+     "frames": 116,
+     "words": [
+      {
+       "w": "Then",
+       "from": 329,
+       "to": 337
+      },
+      {
+       "w": "one",
+       "from": 337,
+       "to": 353
+      },
+      {
+       "w": "test",
+       "from": 353,
+       "to": 362
+      },
+      {
+       "w": "for",
+       "from": 362,
+       "to": 369
+      },
+      {
+       "w": "all",
+       "from": 369,
+       "to": 376
+      },
+      {
+       "w": "three",
+       "from": 376,
+       "to": 391
+      },
+      {
+       "w": "brains.",
+       "from": 416,
+       "to": 425
+      },
+      {
+       "w": "Your",
+       "from": 425,
+       "to": 431
+      },
+      {
+       "w": "20",
+       "from": 431,
+       "to": 434
+      },
+      {
+       "w": "orders.",
+       "from": 434,
+       "to": 443
+      }
+     ],
+     "cues": {
+      "1": 416
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_05.wav",
+     "from": 452,
+     "frames": 50,
+     "words": [
+      {
+       "w": "Easy!",
+       "from": 453,
+       "to": 462
+      },
+      {
+       "w": "The",
+       "from": 462,
+       "to": 476
+      },
+      {
+       "w": "big",
+       "from": 476,
+       "to": 483
+      },
+      {
+       "w": "one",
+       "from": 483,
+       "to": 489
+      },
+      {
+       "w": "wins!",
+       "from": 489,
+       "to": 503
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_choose",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "reveal",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "notbig",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "curd",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "cups",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Not the biggest",
+     "title": "Not the biggest",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 655,
+   "frames": 389,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_06.wav",
+     "from": 0,
+     "frames": 117,
+     "words": [
+      {
+       "w": "The",
+       "from": 2,
+       "to": 11
+      },
+      {
+       "w": "middle",
+       "from": 11,
+       "to": 27
+      },
+      {
+       "w": "one",
+       "from": 27,
+       "to": 35
+      },
+      {
+       "w": "passes.",
+       "from": 48,
+       "to": 68
+      },
+      {
+       "w": "19",
+       "from": 68,
+       "to": 73
+      },
+      {
+       "w": "of",
+       "from": 73,
+       "to": 79
+      },
+      {
+       "w": "20,",
+       "from": 79,
+       "to": 86
+      },
+      {
+       "w": "under",
+       "from": 86,
+       "to": 97
+      },
+      {
+       "w": "5",
+       "from": 97,
+       "to": 100
+      },
+      {
+       "w": "seconds.",
+       "from": 100,
+       "to": 117
+      }
+     ],
+     "cues": {
+      "1": 48
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_07.wav",
+     "from": 126,
+     "frames": 23,
+     "words": [
+      {
+       "w": "Not",
+       "from": 127,
+       "to": 131
+      },
+      {
+       "w": "the",
+       "from": 131,
+       "to": 135
+      },
+      {
+       "w": "big",
+       "from": 135,
+       "to": 139
+      },
+      {
+       "w": "one?!",
+       "from": 139,
+       "to": 145
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_08.wav",
+     "from": 154,
+     "frames": 178,
+     "words": [
+      {
+       "w": "16",
+       "from": 155,
+       "to": 162
+      },
+      {
+       "w": "of",
+       "from": 162,
+       "to": 169
+      },
+      {
+       "w": "20.",
+       "from": 169,
+       "to": 178
+      },
+      {
+       "w": "It",
+       "from": 178,
+       "to": 195
+      },
+      {
+       "w": "made",
+       "from": 195,
+       "to": 207
+      },
+      {
+       "w": "2",
+       "from": 207,
+       "to": 211
+      },
+      {
+       "w": "curd",
+       "from": 211,
+       "to": 223
+      },
+      {
+       "w": "cups",
+       "from": 223,
+       "to": 234
+      },
+      {
+       "w": "into",
+       "from": 234,
+       "to": 249
+      },
+      {
+       "w": "2",
+       "from": 249,
+       "to": 254
+      },
+      {
+       "w": "litres!",
+       "from": 262,
+       "to": 273
+      },
+      {
+       "w": "11",
+       "from": 273,
+       "to": 276
+      },
+      {
+       "w": "seconds",
+       "from": 276,
+       "to": 296
+      },
+      {
+       "w": "for",
+       "from": 296,
+       "to": 301
+      },
+      {
+       "w": "one",
+       "from": 301,
+       "to": 306
+      },
+      {
+       "w": "reply.",
+       "from": 306,
+       "to": 319
+      }
+     ],
+     "cues": {
+      "1": 262
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_09.wav",
+     "from": 340,
+     "frames": 33,
+     "words": [
+      {
+       "w": "Litres",
+       "from": 351,
+       "to": 360
+      },
+      {
+       "w": "of",
+       "from": 360,
+       "to": 364
+      },
+      {
+       "w": "curd?!",
+       "from": 364,
+       "to": 374
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_choose",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "done",
+      "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "chat",
+      "prop": "sugar",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The smallest that passes",
+     "title": "The smallest that passes",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1043,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_10.wav",
+     "from": 11,
+     "frames": 121,
+     "words": [
+      {
+       "w": "Keep",
+       "from": 11,
+       "to": 18
+      },
+      {
+       "w": "the",
+       "from": 18,
+       "to": 23
+      },
+      {
+       "w": "smallest",
+       "from": 23,
+       "to": 35
+      },
+      {
+       "w": "one",
+       "from": 35,
+       "to": 44
+      },
+      {
+       "w": "that",
+       "from": 44,
+       "to": 51
+      },
+      {
+       "w": "passes:",
+       "from": 51,
+       "to": 61
+      },
+      {
+       "w": "it's",
+       "from": 70,
+       "to": 76
+      },
+      {
+       "w": "faster",
+       "from": 76,
+       "to": 90
+      },
+      {
+       "w": "and",
+       "from": 90,
+       "to": 105
+      },
+      {
+       "w": "needs",
+       "from": 105,
+       "to": 112
+      },
+      {
+       "w": "less",
+       "from": 112,
+       "to": 118
+      },
+      {
+       "w": "memory.",
+       "from": 118,
+       "to": 131
+      }
+     ],
+     "cues": {
+      "1": 70
+     },
+     "nocap": true
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_11.wav",
+     "from": 146,
+     "frames": 42,
+     "words": [
+      {
+       "w": "The",
+       "from": 147,
+       "to": 151
+      },
+      {
+       "w": "middle",
+       "from": 151,
+       "to": 157
+      },
+      {
+       "w": "one",
+       "from": 157,
+       "to": 161
+      },
+      {
+       "w": "from",
+       "from": 161,
+       "to": 166
+      },
+      {
+       "w": "now",
+       "from": 166,
+       "to": 169
+      },
+      {
+       "w": "on,",
+       "from": 169,
+       "to": 173
+      },
+      {
+       "w": "forever!",
+       "from": 173,
+       "to": 182
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_12.wav",
+     "from": 207,
+     "frames": 82,
+     "words": [
+      {
+       "w": "I",
+       "from": 208,
+       "to": 210
+      },
+      {
+       "w": "asked",
+       "from": 210,
+       "to": 218
+      },
+      {
+       "w": "for",
+       "from": 218,
+       "to": 223
+      },
+      {
+       "w": "half",
+       "from": 223,
+       "to": 229
+      },
+      {
+       "w": "a",
+       "from": 229,
+       "to": 231
+      },
+      {
+       "w": "kilo,",
+       "from": 231,
+       "to": 238
+      },
+      {
+       "w": "it",
+       "from": 238,
+       "to": 242
+      },
+      {
+       "w": "wrote",
+       "from": 242,
+       "to": 249
+      },
+      {
+       "w": "a",
+       "from": 249,
+       "to": 252
+      },
+      {
+       "w": "kilo!",
+       "from": 252,
+       "to": 267
+      },
+      {
+       "w": "Double",
+       "from": 267,
+       "to": 276
+      },
+      {
+       "w": "sugar!",
+       "from": 276,
+       "to": 284
+      }
+     ],
+     "cues": {
+      "1": 254
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_choose",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "telugu",
+      "prop": "none",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "eggs",
+      "n": 14
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "fix",
+      "n": 15
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "New job, new test",
+     "title": "New job, new test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1350,
+   "frames": 511,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_13.wav",
+     "from": 11,
+     "frames": 142,
+     "words": [
+      {
+       "w": "They",
+       "from": 11,
+       "to": 22
+      },
+      {
+       "w": "type",
+       "from": 22,
+       "to": 32
+      },
+      {
+       "w": "in",
+       "from": 32,
+       "to": 39
+      },
+      {
+       "w": "Telugu",
+       "from": 39,
+       "to": 62
+      },
+      {
+       "w": "words",
+       "from": 62,
+       "to": 75
+      },
+      {
+       "w": "too,",
+       "from": 75,
+       "to": 85
+      },
+      {
+       "w": "anna.",
+       "from": 96,
+       "to": 104
+      },
+      {
+       "w": "Not",
+       "from": 104,
+       "to": 109
+      },
+      {
+       "w": "even",
+       "from": 109,
+       "to": 116
+      },
+      {
+       "w": "one",
+       "from": 116,
+       "to": 121
+      },
+      {
+       "w": "passed",
+       "from": 121,
+       "to": 135
+      },
+      {
+       "w": "that.",
+       "from": 135,
+       "to": 142
+      }
+     ],
+     "cues": {
+      "1": 96
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_14.wav",
+     "from": 161,
+     "frames": 72,
+     "words": [
+      {
+       "w": "Curd",
+       "from": 162,
+       "to": 170
+      },
+      {
+       "w": "became",
+       "from": 170,
+       "to": 180
+      },
+      {
+       "w": "eggs?!",
+       "from": 180,
+       "to": 190
+      },
+      {
+       "w": "What",
+       "from": 190,
+       "to": 213
+      },
+      {
+       "w": "do",
+       "from": 213,
+       "to": 217
+      },
+      {
+       "w": "I",
+       "from": 217,
+       "to": 220
+      },
+      {
+       "w": "do",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "now?!",
+       "from": 224,
+       "to": 233
+      }
+     ],
+     "cues": {
+      "1": 193
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep41te/line_15.wav",
+     "from": 241,
+     "frames": 155,
+     "words": [
+      {
+       "w": "Change",
+       "from": 242,
+       "to": 255
+      },
+      {
+       "w": "the",
+       "from": 255,
+       "to": 262
+      },
+      {
+       "w": "prompt,",
+       "from": 262,
+       "to": 293
+      },
+      {
+       "w": "or",
+       "from": 293,
+       "to": 298
+      },
+      {
+       "w": "try",
+       "from": 298,
+       "to": 316
+      },
+      {
+       "w": "another",
+       "from": 316,
+       "to": 331
+      },
+      {
+       "w": "brain.",
+       "from": 331,
+       "to": 343
+      },
+      {
+       "w": "Then",
+       "from": 352,
+       "to": 362
+      },
+      {
+       "w": "test",
+       "from": 362,
+       "to": 382
+      },
+      {
+       "w": "again.",
+       "from": 382,
+       "to": 396
+      }
+     ],
+     "cues": {
+      "1": 352
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep41te/line_16.wav",
+     "from": 426,
+     "frames": 65,
+     "words": [
+      {
+       "w": "Test",
+       "from": 427,
+       "to": 433
+      },
+      {
+       "w": "again?!",
+       "from": 433,
+       "to": 443
+      },
+      {
+       "w": "Then",
+       "from": 443,
+       "to": 458
+      },
+      {
+       "w": "which",
+       "from": 458,
+       "to": 465
+      },
+      {
+       "w": "brain",
+       "from": 465,
+       "to": 473
+      },
+      {
+       "w": "do",
+       "from": 473,
+       "to": 476
+      },
+      {
+       "w": "I",
+       "from": 476,
+       "to": 479
+      },
+      {
+       "w": "keep?!",
+       "from": 479,
+       "to": 487
+      }
+     ],
+     "cues": {
+      "1": 456
+     }
+    }
+   ]
+  }
+ ]
+}
