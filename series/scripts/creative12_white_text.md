@@ -117,7 +117,8 @@ Kept 1: a mismatch you read in one look (MS Word vs a Python job, 75), a format 
   of 9.0 from a previous role", one called the resume "inconsistent" and scored 65): pinned comment.
 - Kept: the voice's "about one in a hundred" (Duke: "at least 1%"; the card and caption say "at least"); the one-ask
   letter prompt (Bujji's EP38 note). Telugu "డెబ్బై!" on the answer was clipped by the hit's tail: the hit is quieter
-  (0.3).
+  (0.3), then, since it read the same at both levels and the take alone said "दबः": "స్కోర్ డెబ్బై!" (a run-up), the bed
+  out 0.6 s into the line.
 
 ## Script (English) · ~60 s
 | # | Who | Line | On screen |
@@ -148,7 +149,7 @@ Kept 1: a mismatch you read in one look (MS Word vs a Python job, 75), a format 
 | 8 | Gopi | డ్యూక్ యూనివర్సిటీ వాళ్ళు చూశారు: [1] వంద రెజ్యూమ్ లలో ఒకదాంట్లో దాచిన అక్షరాలు! | Duke university vaallu choosaaru: vanda resumelalo okadaantlo daachina aksharaalu! |
 | 9 | Rekha | మామూలుగా ఇరవై ఐదు. [2] దాచిన ఆర్డర్ తో ముప్పై ఐదు. [1] దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు! | Maamoolugaa iravai aidu. Daachina order to muppai aidu. Daachina keywords to debbai aidu! |
 | 10 | Rekha | పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ లో ఆర్డర్లు ఉంటే ఫ్లాగ్ చేయమని చెప్పడం. | Popular fix: resume lo orderlu unte flag cheyamani cheppadam. |
-| 11 | Raju | డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు! | Debbai! Padilo okkasaari kooda flag ledu! |
+| 11 | Raju | స్కోర్ డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు! | Score debbai! Padilo okkasaari kooda flag ledu! |
 | 12 | Gopi | కీవర్డ్స్ ఆర్డర్లు కాదు. [1] అది పదాలు చదువుతుంది, కలర్స్ కాదు. | Keywords orderlu kaadu. Adi padaalu chaduvutundi, colours kaadu. |
 | 13 | Rekha | ఎవరినైనా షార్ట్ లిస్ట్ చేసే ముందు: [1] సెలెక్ట్ ఆల్, కాపీ, నోట్ ప్యాడ్ లో పేస్ట్. | Evarinainaa shortlist chese mundu: select all, copy, Notepad lo paste. |
 | 14 | Raju | చెకింగ్ లేని కంపెనీలో? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ తెరిచాడు! | Checking leni company lo? Python raayamante, MS Word terichaadu! |

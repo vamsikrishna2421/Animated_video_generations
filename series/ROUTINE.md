@@ -540,4 +540,9 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the ranges. Fish read "MS Word" as "Mississippi Word" (give "M S Word"); Whisper writes "plain" as "plane" (a
   homophone, not a misread). Telugu: "కమాండ్స్" was heard "comments" (use "ఆర్డర్లు"); "రంగులు" is one slipped letter
   from a swear word ("కలర్స్"); "చెక్ చేయని" was heard "chek chek" in four takes ("చెకింగ్ లేని"); Kiran at full pace
-  merges "ఎంఎస్ వర్డ్": pick the take by its transcript. Scene lengths snap to the beat: a 0.4 s trim can change nothing.
+  merges "ఎంఎస్ వర్డ్": pick the take by its transcript. Scene lengths snap to the beat: a 0.4 s trim can change nothing. A
+  bare number opening a Telugu line ("డెబ్బై!") came out clipped in the take itself ("दबः" on its own): give it a run-up
+  ("స్కోర్ డెబ్బై!"); transcribe the take alone before blaming the mix (two hit levels heard the same). `cueAt` returns
+  the cue when the line has one and ignores its fraction: time a second tag inside a line with `seg(p, ...)`. Every
+  `Sfx` plays 40 frames: a hit 0.3 s before a word still sits under it; lower it for Telugu. A stamp that shows 0.5 s
+  before an in-video slam to frame 1 is missed: let the replay's first frame be the loop and hold the stamp ~1 s.
