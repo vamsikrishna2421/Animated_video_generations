@@ -297,7 +297,7 @@ const StChoose: React.FC<SP> = ({ s }) => {
           ([["1.1 GB", "5 of 20", ln.from], ["2.1 GB", "14 of 20", ln.from + 4], ["4.7 GB", "12 of 20", ln.from + 8]] as [string, string, number][]).forEach(([gb, v, t0], q) =>
             brainRow(c, 540 + q * 160, gb, v + " ✗", "", RED, "#fee2e2", seg(f, t0, t0 + 6)));
           if (f >= c1 - 2) stamp(c, "NONE PASSES", W / 2, 1040, 96, RED, seg(f, c1 - 2, c1 + 6), r, -0.05);
-          tag(c, "picked D? right, for Telugu orders", 640, 1112, 34, "#e0e7ff", "#1e3a8a", 0.02, seg(f, c1 + 4, c1 + 10));
+          tag(c, "picked D? right, for Telugu orders", W / 2, 1118, 44, "#e0e7ff", "#1e3a8a", 0.02, seg(f, c1 + 4, c1 + 10));
           const ke = seg(f, c1 + 10, c1 + 18);
           if (ke > 0) {
             c.save(); c.globalAlpha = clamp(ke * 3);

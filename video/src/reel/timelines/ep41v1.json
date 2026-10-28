@@ -13,29 +13,47 @@
  "fps": 30,
  "musicDrops": [
   [
-   613,
-   655
+   653,
+   695
+  ],
+  [
+   1309,
+   1324
+  ],
+  [
+   1785,
+   1809
   ]
  ],
  "musicBoosts": [
   [
    0,
-   655,
+   695,
    1.25
   ],
   [
-   655,
-   1371,
+   695,
+   1104,
    1.15
   ],
   [
-   1370,
-   1846,
+   1105,
+   1310,
+   1.15
+  ],
+  [
+   1309,
+   1452,
+   1.15
+  ],
+  [
+   1452,
+   1928,
    1.5
   ],
   [
-   1370,
-   1846,
+   1452,
+   1928,
    1.2,
    1
   ]
@@ -43,7 +61,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1846,
+ "totalFrames": 1928,
  "music": "reel/ep41v1/score.wav",
  "scenes": [
   {
@@ -93,7 +111,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 655,
+   "frames": 695,
    "lines": [
     {
      "who": "ravi",
@@ -102,7 +120,7 @@
      "sub": null,
      "audio": "reel/ep41v1/line_01.wav",
      "from": 4,
-     "frames": 109,
+     "frames": 130,
      "words": [
       {
        "w": "Same",
@@ -110,58 +128,58 @@
        "to": 16
       },
       {
-       "w": "reply",
+       "w": "reply,",
        "from": 16,
-       "to": 22
+       "to": 23
       },
       {
-       "w": "to",
-       "from": 22,
-       "to": 25
+       "w": "order",
+       "from": 23,
+       "to": 38
       },
       {
-       "w": "every",
-       "from": 25,
-       "to": 31
+       "w": "after",
+       "from": 38,
+       "to": 44
       },
       {
        "w": "order?!",
-       "from": 31,
-       "to": 40
+       "from": 44,
+       "to": 53
       },
       {
        "w": "I'm",
-       "from": 40,
-       "to": 62
+       "from": 53,
+       "to": 82
       },
       {
        "w": "putting",
-       "from": 62,
-       "to": 71
-      },
-      {
-       "w": "in",
-       "from": 71,
-       "to": 74
-      },
-      {
-       "w": "the",
-       "from": 74,
-       "to": 78
-      },
-      {
-       "w": "biggest",
-       "from": 78,
+       "from": 82,
        "to": 91
       },
       {
-       "w": "brain!",
+       "w": "in",
        "from": 91,
+       "to": 94
+      },
+      {
+       "w": "the",
+       "from": 94,
        "to": 98
+      },
+      {
+       "w": "biggest",
+       "from": 98,
+       "to": 107
+      },
+      {
+       "w": "brain!",
+       "from": 107,
+       "to": 120
       }
      ],
      "cues": {
-      "1": 40
+      "1": 53
      }
     },
     {
@@ -170,62 +188,62 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep41v1/line_02.wav",
-     "from": 118,
+     "from": 139,
      "frames": 94,
      "words": [
       {
        "w": "Biggest",
-       "from": 119,
-       "to": 127
+       "from": 139,
+       "to": 147
       },
       {
        "w": "for",
-       "from": 127,
-       "to": 135
+       "from": 147,
+       "to": 156
       },
       {
        "w": "which",
-       "from": 135,
-       "to": 146
+       "from": 156,
+       "to": 167
       },
       {
        "w": "job,",
-       "from": 146,
-       "to": 155
+       "from": 167,
+       "to": 176
       },
       {
        "w": "anna?",
-       "from": 155,
-       "to": 171
+       "from": 176,
+       "to": 192
       },
       {
        "w": "Write",
-       "from": 171,
-       "to": 180
+       "from": 192,
+       "to": 201
       },
       {
        "w": "the",
-       "from": 180,
-       "to": 184
+       "from": 201,
+       "to": 205
       },
       {
        "w": "pass",
-       "from": 184,
-       "to": 193
+       "from": 205,
+       "to": 214
       },
       {
        "w": "mark",
-       "from": 193,
-       "to": 198
+       "from": 214,
+       "to": 219
       },
       {
        "w": "first.",
-       "from": 198,
-       "to": 205
+       "from": 219,
+       "to": 226
       }
      ],
      "cues": {
-      "1": 171
+      "1": 192
      }
     },
     {
@@ -234,62 +252,67 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep41v1/line_03.wav",
-     "from": 218,
-     "frames": 105,
+     "from": 239,
+     "frames": 124,
      "words": [
       {
        "w": "19",
-       "from": 224,
-       "to": 228
+       "from": 244,
+       "to": 248
       },
       {
        "w": "of",
-       "from": 228,
-       "to": 232
+       "from": 248,
+       "to": 252
       },
       {
        "w": "20",
-       "from": 232,
-       "to": 239
+       "from": 252,
+       "to": 256
       },
       {
        "w": "orders",
-       "from": 239,
-       "to": 249
+       "from": 256,
+       "to": 269
       },
       {
-       "w": "right,",
-       "from": 249,
-       "to": 258
+       "w": "right!",
+       "from": 269,
+       "to": 279
+      },
+      {
+       "w": "And",
+       "from": 279,
+       "to": 306
       },
       {
        "w": "every",
-       "from": 258,
-       "to": 275
+       "from": 306,
+       "to": 314
       },
       {
        "w": "reply",
-       "from": 275,
-       "to": 283
+       "from": 314,
+       "to": 322
       },
       {
        "w": "under",
-       "from": 283,
-       "to": 291
+       "from": 322,
+       "to": 331
       },
       {
        "w": "10",
-       "from": 291,
-       "to": 295
+       "from": 331,
+       "to": 335
       },
       {
        "w": "seconds!",
-       "from": 295,
-       "to": 307
+       "from": 335,
+       "to": 347
       }
      ],
      "cues": {
-      "1": 273
+      "1": 307
      }
     },
     {
@@ -298,62 +321,62 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep41v1/line_04.wav",
-     "from": 329,
+     "from": 369,
      "frames": 104,
      "words": [
       {
        "w": "Then",
-       "from": 334,
-       "to": 340
+       "from": 374,
+       "to": 380
       },
       {
        "w": "all",
-       "from": 340,
-       "to": 345
+       "from": 380,
+       "to": 385
       },
       {
        "w": "three",
-       "from": 345,
-       "to": 357
+       "from": 385,
+       "to": 397
       },
       {
        "w": "brains",
-       "from": 357,
-       "to": 370
+       "from": 397,
+       "to": 411
       },
       {
        "w": "take",
-       "from": 370,
-       "to": 377
+       "from": 411,
+       "to": 417
       },
       {
        "w": "one",
-       "from": 377,
-       "to": 382
+       "from": 417,
+       "to": 422
       },
       {
        "w": "test:",
-       "from": 382,
-       "to": 403
+       "from": 422,
+       "to": 444
       },
       {
        "w": "your",
-       "from": 403,
-       "to": 410
+       "from": 444,
+       "to": 450
       },
       {
        "w": "20",
-       "from": 410,
-       "to": 414
+       "from": 450,
+       "to": 454
       },
       {
        "w": "orders.",
-       "from": 414,
-       "to": 424
+       "from": 454,
+       "to": 464
       }
      ],
      "cues": {
-      "1": 387
+      "1": 427
      }
     },
     {
@@ -362,33 +385,33 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep41v1/line_05.wav",
-     "from": 439,
+     "from": 479,
      "frames": 69,
      "words": [
       {
        "w": "Easy!",
-       "from": 440,
-       "to": 447
+       "from": 480,
+       "to": 487
       },
       {
        "w": "The",
-       "from": 447,
-       "to": 472
+       "from": 487,
+       "to": 512
       },
       {
        "w": "biggest",
-       "from": 472,
-       "to": 481
+       "from": 512,
+       "to": 521
       },
       {
        "w": "one",
-       "from": 481,
-       "to": 486
+       "from": 521,
+       "to": 526
       },
       {
        "w": "wins!",
-       "from": 486,
-       "to": 493
+       "from": 526,
+       "to": 533
       }
      ],
      "cues": {}
@@ -435,7 +458,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 655,
+   "from": 695,
    "frames": 409,
    "lines": [
     {
@@ -678,12 +701,6 @@
       "shot": "wide",
       "prop": "done",
       "n": 11
-     },
-     {
-      "who": "ravi",
-      "shot": "chat",
-      "prop": "sugar",
-      "n": 12
      }
     ],
     "captionTop": 1500,
@@ -696,8 +713,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1064,
-   "frames": 307,
+   "from": 1105,
+   "frames": 205,
    "lines": [
     {
      "who": "ai",
@@ -805,69 +822,96 @@
       }
      ],
      "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_choose",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "chat",
+      "prop": "sugar",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Half a kilo",
+     "title": "Half a kilo",
+     "notes": []
     },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1309,
+   "frames": 143,
+   "lines": [
     {
      "who": "ravi",
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep41v1/line_12.wav",
-     "from": 193,
+     "from": 27,
      "frames": 102,
      "words": [
       {
        "w": "Half",
-       "from": 200,
-       "to": 205
+       "from": 34,
+       "to": 40
       },
       {
        "w": "a",
-       "from": 205,
-       "to": 208
+       "from": 40,
+       "to": 42
       },
       {
        "w": "kilo",
-       "from": 208,
-       "to": 213
+       "from": 42,
+       "to": 47
       },
       {
        "w": "became",
-       "from": 213,
-       "to": 221
+       "from": 47,
+       "to": 55
       },
       {
        "w": "a",
-       "from": 221,
-       "to": 223
+       "from": 55,
+       "to": 57
       },
       {
        "w": "kilo!",
-       "from": 223,
-       "to": 233
+       "from": 57,
+       "to": 68
       },
       {
        "w": "It",
-       "from": 233,
-       "to": 259
+       "from": 68,
+       "to": 93
       },
       {
        "w": "doubled",
-       "from": 259,
-       "to": 268
+       "from": 93,
+       "to": 102
       },
       {
        "w": "the",
-       "from": 268,
-       "to": 272
+       "from": 102,
+       "to": 106
       },
       {
        "w": "sugar!",
-       "from": 272,
-       "to": 280
+       "from": 106,
+       "to": 114
       }
      ],
      "cues": {
-      "1": 233
+      "1": 68
      }
     }
    ]
@@ -912,7 +956,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1370,
+   "from": 1452,
    "frames": 476,
    "lines": [
     {
