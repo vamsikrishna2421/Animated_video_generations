@@ -90,6 +90,10 @@ ORDERS = [
 # Every reply read by hand: (job, brain, order number 1-20) -> True (every item with its quantity) / False, where the
 # word check below reads it wrong. Filled after the run.
 HAND = {("telugu", "1.5B", 1): True,   # "2 kg tomatoes and 1 dozen gudlu": right (the check didn't know the spelling "gudlu")
+        ("replies", "3B", 6): False,   # "Coconut oil, 2 kg onion, 1 kg potato": the coconut oil's "1" left out
+        ("replies", "3B", 17): True,   # "1 kg each of tomato, onion, potato, rice": right
+        ("telugu", "3B", 4): False,   # "Kilo panchadara confirmed": half a kilo ("ara kilo") became a kilo
+        ("telugu", "3B", 11): False,   # "kilo tomatolu": half a kilo became a kilo
         }
 
 
@@ -101,7 +105,8 @@ def auto_ok(reply, items):
         hit = False
         for nm in names:
             for m in re.finditer(re.escape(nm), r):
-                ctx = r[max(0, m.start() - 30):m.start()] + " | " + r[m.end():m.end() + 16]
+                after = re.split(r"[,.;]| and ", r[m.end():m.end() + 16])[0]   # "eggs: 2 dozen", not the next item's number
+                ctx = r[max(0, m.start() - 30):m.start()] + " | " + after
                 if any(re.search(r"(?<![\d.])" + re.escape(q.strip()) + (r"(?![\d.])" if q.strip()[-1].isdigit() else ""), ctx) for q in qtys):
                     hit = True
         if not hit:
