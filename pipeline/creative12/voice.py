@@ -51,7 +51,7 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused: t
 APP = set()
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu groups
 # (Whisper writes Telugu in Devanagari) start empty and are filled from the first takes.
-MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("word",), ("seventy", "75"), ("python",)],
+MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("ms", "m", "s"), ("word",), ("seventy", "75"), ("python",)],
                2: [("seventy", "75"), ("resume",), ("word",), ("typing",)],
                3: [("fishy",), ("review",)],
                4: [("select",), ("notepad", "note"), ("white",), ("hidden",), ("resume",)],
@@ -67,7 +67,7 @@ MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("word",), ("seventy", 
                14: [("bunty", "bunny", "banty", "bunti"), ("interview",), ("python",), ("word",)]},
         "te": {}}
 # lines whose judge text needs digits (Whisper writes "72", "10")
-JUDGE_TEXT = {1: "Bunty, B.Com, MS Word, scored 75 for a Python job!", 2: "75?! His resume says MS Word and typing!",
+JUDGE_TEXT = {1: "Bunty, B Com, M S Word, scored 75 for a Python job!", 2: "75?! His resume says M S Word and typing!",
               8: "About 1 resume in 100 has hidden text, says a Duke study.", 9: "I tested his resume 10 times.",
               "9b": "25 plain, 75 with hidden keywords.", 11: "70! And not one flag in 10!"}
 TELUGU = re.compile(r"[ఀ-౿]")

@@ -40,7 +40,11 @@ LINES = {
     14: ("raju", "interview", "loop", "And Bunty's interview? [1] \"Write Python,\" and he opens MS Word!",
          "మరి బంటీ ఇంటర్వ్యూ? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ ఓపెన్ చేశాడు!"),   # then frame 1 (loops)
 }
-TTS_EN = {}
+TTS_EN = {   # spoken forms: the voice read "MS Word" as "Mississippi Word"
+    1: "Bunty, B Com, M S Word, [1] scored seventy-five for a Python job!",
+    2: "Seventy-five?! [1] His resume says M S Word and typing!",
+    14: "And Bunty's interview? [1] \"Write Python,\" and he opens M S Word!",
+}
 SHOW = {1: "Bunty, B.Com, MS Word, scored 75 for a Python job!", 2: "75?! His resume says MS Word and typing!",
         8: "About 1 resume in 100 has hidden text, says a Duke study.", 9: "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
         11: "70! And not one flag in 10!"}
