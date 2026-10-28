@@ -66,7 +66,7 @@ MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("ms", "m", "s"), ("wor
                13: [("score",), ("match",), ("read",), ("select",)],
                14: [("bunty", "bunny", "banty", "bunti"), ("interview",), ("python",), ("word",)]},
         "te": {8: [("रेज्यू", "रज्यू", "रेजू", "रिज्यू", "रेज़्यू", "रेजु")],   # the first take: "वंदर जुमललू"
-               12: [("कमांड", "कमान्ड", "कमाण्ड", "कमान्"), ("रंग",)],   # the first take: "कमेंट्स" (comments)
+               10: [("आर्डर", "अडर", "आडर", "ऑर्डर", "अर्डर")], 12: [("आर्डर", "अडर", "आडर", "ऑर्डर", "अर्डर"), ("रंग",)],   # "కమాండ్స్" was heard "कमेंट्स" (comments): "ఆర్డర్లు"
                13: [("कपोते", "कपोथे", "कपोटे", "कापोते", "कपोथ", "कपोत")]}}   # the first take: "काखाखा फोटे"
 # lines whose judge text needs digits (Whisper writes "72", "10")
 JUDGE_TEXT = {1: "Bunty, B Com, M S Word, scored 75 for a Python job!", 2: "75?! His resume says M S Word and typing!",

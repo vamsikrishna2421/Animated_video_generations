@@ -30,10 +30,10 @@ LINES = {
     9: ("rekha", "test", "test", "I tested his resume ten times. | [1] Twenty-five plain, seventy-five with hidden keywords.",
         "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా. | [1] మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు."),
     10: ("rekha", "fix", "quiz", "The popular fix: [1] the resume is data, not instructions.",
-         "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు."),   # the quiz holds after it; the card carries "flag it" (the first build ran 71.5 s)
+         "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ డేటా మాత్రమే, ఆర్డర్లు కాదు."),   # Telugu: "కమాండ్స్" was heard "comments" in five takes   # the quiz holds after it; the card carries "flag it" (the first build ran 71.5 s)
     11: ("raju", "test", "answer", "Seventy! [1] And not one flag in ten!", "డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!"),
     12: ("gopi", "box", "colours", "Keywords aren't instructions. [1] It reads the words, not the colours.",
-         "కీవర్డ్స్ కమాండ్స్ కాదు. [1] అది పదాలు చదువుతుంది, రంగులు కాదు."),
+         "కీవర్డ్స్ ఆర్డర్లు కాదు. [1] అది పదాలు చదువుతుంది, రంగులు కాదు."),
     13: ("rekha", "cabin", "rule", "If a score doesn't match what I can read, [1] I select all.",
          "స్కోర్ కి, కనిపించే దానికి మ్యాచ్ కాకపోతే, [1] సెలెక్ట్ ఆల్ చేస్తా."),
     14: ("raju", "interview", "loop", "And Bunty's interview? [1] \"Write Python,\" and he opens MS Word!",
@@ -53,7 +53,7 @@ SHOW_TE = {
     5: "That screening tool reads every word, even the white ones. Hidden keywords look like real skills.", 6: "That's out!",
     8: "Duke University looked: 1 in 100 resumes had hidden letters!",
     9: "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
-    11: "70! Not even one flag in 10!", 12: "Keywords aren't commands. It reads the words, not the colours.",
+    11: "70! Not even one flag in 10!", 12: "Keywords aren't orders. It reads the words, not the colours.",
     13: "If the score doesn't match what I can see, I select all.", 14: "And Bunty's interview? Asked to write Python, he opened MS Word!",
 }
 NOCAP = {10, 13}   # the fix card and the rule chip carry their words
