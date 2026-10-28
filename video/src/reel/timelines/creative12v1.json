@@ -1,0 +1,1023 @@
+{
+ "id": "creative12v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI resume screening",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "Seventy-five for MS Word (Creative 12: hidden text in resumes)",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   344,
+   368
+  ],
+  [
+   1267,
+   1309
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   716,
+   1.25
+  ],
+  [
+   716,
+   1309,
+   1.15
+  ],
+  [
+   1309,
+   1785,
+   1.5
+  ],
+  [
+   1309,
+   1785,
+   1.2,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1785,
+ "music": "reel/creative12v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_cricket",
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "gopi",
+      "shot": "resume",
+      "prop": "resume",
+      "n": 2
+     },
+     {
+      "who": "rekha",
+      "shot": "cabin",
+      "prop": "review",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "75 for MS Word",
+     "title": "75 for MS Word",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 368,
+   "lines": [
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative12v1/line_01.wav",
+     "from": 4,
+     "frames": 123,
+     "words": [
+      {
+       "w": "Bunty,",
+       "from": 5,
+       "to": 20
+      },
+      {
+       "w": "B.Com,",
+       "from": 20,
+       "to": 35
+      },
+      {
+       "w": "MS",
+       "from": 35,
+       "to": 41
+      },
+      {
+       "w": "Word,",
+       "from": 41,
+       "to": 54
+      },
+      {
+       "w": "scored",
+       "from": 54,
+       "to": 77
+      },
+      {
+       "w": "75",
+       "from": 77,
+       "to": 83
+      },
+      {
+       "w": "for",
+       "from": 83,
+       "to": 92
+      },
+      {
+       "w": "a",
+       "from": 92,
+       "to": 96
+      },
+      {
+       "w": "Python",
+       "from": 96,
+       "to": 111
+      },
+      {
+       "w": "job!",
+       "from": 111,
+       "to": 122
+      }
+     ],
+     "cues": {
+      "1": 47
+     }
+    },
+    {
+     "who": "gopi",
+     "name": "Gopi",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative12v1/line_02.wav",
+     "from": 132,
+     "frames": 123,
+     "words": [
+      {
+       "w": "75?!",
+       "from": 135,
+       "to": 146
+      },
+      {
+       "w": "His",
+       "from": 146,
+       "to": 155
+      },
+      {
+       "w": "resume",
+       "from": 155,
+       "to": 180
+      },
+      {
+       "w": "says",
+       "from": 180,
+       "to": 191
+      },
+      {
+       "w": "MS",
+       "from": 191,
+       "to": 201
+      },
+      {
+       "w": "Word",
+       "from": 201,
+       "to": 212
+      },
+      {
+       "w": "and",
+       "from": 212,
+       "to": 221
+      },
+      {
+       "w": "typing!",
+       "from": 221,
+       "to": 250
+      }
+     ],
+     "cues": {
+      "1": 170
+     }
+    },
+    {
+     "who": "rekha",
+     "name": "Rekha madam",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative12v1/line_03.wav",
+     "from": 260,
+     "frames": 83,
+     "words": [
+      {
+       "w": "Something's",
+       "from": 263,
+       "to": 289
+      },
+      {
+       "w": "fishy.",
+       "from": 289,
+       "to": 308
+      },
+      {
+       "w": "I'm",
+       "from": 308,
+       "to": 314
+      },
+      {
+       "w": "taking",
+       "from": 314,
+       "to": 324
+      },
+      {
+       "w": "a",
+       "from": 324,
+       "to": 327
+      },
+      {
+       "w": "review!",
+       "from": 327,
+       "to": 338
+      }
+     ],
+     "cues": {
+      "1": 308
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_cricket",
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "replay",
+      "prop": "replay",
+      "n": 4
+     },
+     {
+      "who": "gopi",
+      "shot": "replay",
+      "prop": "reason",
+      "n": 5
+     },
+     {
+      "who": "rekha",
+      "shot": "verdict",
+      "prop": "out",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The review",
+     "title": "The review",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 368,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative12v1/line_04.wav",
+     "from": 0,
+     "frames": 136,
+     "words": [
+      {
+       "w": "Select",
+       "from": 3,
+       "to": 12
+      },
+      {
+       "w": "all,",
+       "from": 12,
+       "to": 18
+      },
+      {
+       "w": "paste",
+       "from": 18,
+       "to": 33
+      },
+      {
+       "w": "it",
+       "from": 33,
+       "to": 37
+      },
+      {
+       "w": "in",
+       "from": 37,
+       "to": 41
+      },
+      {
+       "w": "Notepad...",
+       "from": 41,
+       "to": 55
+      },
+      {
+       "w": "there!",
+       "from": 55,
+       "to": 69
+      },
+      {
+       "w": "White",
+       "from": 69,
+       "to": 84
+      },
+      {
+       "w": "text,",
+       "from": 84,
+       "to": 108
+      },
+      {
+       "w": "hidden",
+       "from": 108,
+       "to": 117
+      },
+      {
+       "w": "in",
+       "from": 117,
+       "to": 121
+      },
+      {
+       "w": "the",
+       "from": 121,
+       "to": 126
+      },
+      {
+       "w": "resume!",
+       "from": 126,
+       "to": 136
+      }
+     ],
+     "cues": {
+      "1": 55
+     }
+    },
+    {
+     "who": "gopi",
+     "name": "Gopi",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative12v1/line_05.wav",
+     "from": 141,
+     "frames": 161,
+     "words": [
+      {
+       "w": "The",
+       "from": 141,
+       "to": 148
+      },
+      {
+       "w": "AI",
+       "from": 148,
+       "to": 154
+      },
+      {
+       "w": "reads",
+       "from": 154,
+       "to": 165
+      },
+      {
+       "w": "every",
+       "from": 165,
+       "to": 176
+      },
+      {
+       "w": "word,",
+       "from": 176,
+       "to": 187
+      },
+      {
+       "w": "even",
+       "from": 187,
+       "to": 203
+      },
+      {
+       "w": "the",
+       "from": 203,
+       "to": 210
+      },
+      {
+       "w": "white",
+       "from": 210,
+       "to": 222
+      },
+      {
+       "w": "ones.",
+       "from": 236,
+       "to": 244
+      },
+      {
+       "w": "Hidden",
+       "from": 244,
+       "to": 252
+      },
+      {
+       "w": "keywords",
+       "from": 252,
+       "to": 268
+      },
+      {
+       "w": "look",
+       "from": 268,
+       "to": 275
+      },
+      {
+       "w": "like",
+       "from": 275,
+       "to": 281
+      },
+      {
+       "w": "real",
+       "from": 281,
+       "to": 287
+      },
+      {
+       "w": "skills.",
+       "from": 287,
+       "to": 297
+      }
+     ],
+     "cues": {
+      "1": 236
+     }
+    },
+    {
+     "who": "rekha",
+     "name": "Rekha madam",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative12v1/line_06.wav",
+     "from": 308,
+     "frames": 15,
+     "words": [
+      {
+       "w": "Out!",
+       "from": 308,
+       "to": 317
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_cricket",
+   "data": {
+    "beats": [
+     {
+      "who": "gopi",
+      "shot": "duke",
+      "prop": "duke",
+      "n": 8
+     },
+     {
+      "who": "rekha",
+      "shot": "test",
+      "prop": "test",
+      "n": 9
+     },
+     {
+      "who": "rekha",
+      "shot": "fix",
+      "prop": "quiz",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 716,
+   "frames": 593,
+   "lines": [
+    {
+     "who": "gopi",
+     "name": "Gopi",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative12v1/line_07.wav",
+     "from": 11,
+     "frames": 119,
+     "words": [
+      {
+       "w": "About",
+       "from": 11,
+       "to": 20
+      },
+      {
+       "w": "1",
+       "from": 20,
+       "to": 23
+      },
+      {
+       "w": "resume",
+       "from": 23,
+       "to": 34
+      },
+      {
+       "w": "in",
+       "from": 34,
+       "to": 39
+      },
+      {
+       "w": "100",
+       "from": 39,
+       "to": 45
+      },
+      {
+       "w": "has",
+       "from": 45,
+       "to": 52
+      },
+      {
+       "w": "hidden",
+       "from": 52,
+       "to": 69
+      },
+      {
+       "w": "text,",
+       "from": 69,
+       "to": 78
+      },
+      {
+       "w": "says",
+       "from": 78,
+       "to": 101
+      },
+      {
+       "w": "a",
+       "from": 101,
+       "to": 104
+      },
+      {
+       "w": "Duke",
+       "from": 104,
+       "to": 112
+      },
+      {
+       "w": "study.",
+       "from": 112,
+       "to": 129
+      }
+     ],
+     "cues": {
+      "1": 82
+     }
+    },
+    {
+     "who": "rekha",
+     "name": "Rekha madam",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative12v1/line_08.wav",
+     "from": 135,
+     "frames": 189,
+     "words": [
+      {
+       "w": "I",
+       "from": 136,
+       "to": 140
+      },
+      {
+       "w": "tested",
+       "from": 140,
+       "to": 161
+      },
+      {
+       "w": "his",
+       "from": 161,
+       "to": 174
+      },
+      {
+       "w": "resume",
+       "from": 174,
+       "to": 198
+      },
+      {
+       "w": "10",
+       "from": 213,
+       "to": 217
+      },
+      {
+       "w": "times...",
+       "from": 217,
+       "to": 239
+      },
+      {
+       "w": "25",
+       "from": 239,
+       "to": 244
+      },
+      {
+       "w": "plain,",
+       "from": 244,
+       "to": 261
+      },
+      {
+       "w": "75",
+       "from": 261,
+       "to": 269
+      },
+      {
+       "w": "with",
+       "from": 269,
+       "to": 281
+      },
+      {
+       "w": "hidden",
+       "from": 281,
+       "to": 297
+      },
+      {
+       "w": "keywords.",
+       "from": 297,
+       "to": 316
+      }
+     ],
+     "cues": {
+      "1": 213
+     }
+    },
+    {
+     "who": "rekha",
+     "name": "Rekha madam",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative12v1/line_09.wav",
+     "from": 331,
+     "frames": 128,
+     "words": [
+      {
+       "w": "The",
+       "from": 332,
+       "to": 337
+      },
+      {
+       "w": "popular",
+       "from": 337,
+       "to": 349
+      },
+      {
+       "w": "fix:",
+       "from": 349,
+       "to": 372
+      },
+      {
+       "w": "the",
+       "from": 372,
+       "to": 378
+      },
+      {
+       "w": "resume",
+       "from": 378,
+       "to": 388
+      },
+      {
+       "w": "is",
+       "from": 388,
+       "to": 392
+      },
+      {
+       "w": "data,",
+       "from": 392,
+       "to": 405
+      },
+      {
+       "w": "not",
+       "from": 405,
+       "to": 411
+      },
+      {
+       "w": "instructions.",
+       "from": 411,
+       "to": 451
+      }
+     ],
+     "cues": {
+      "1": 372
+     },
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_cricket",
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "test",
+      "prop": "answer",
+      "n": 11
+     },
+     {
+      "who": "gopi",
+      "shot": "box",
+      "prop": "colours",
+      "n": 12
+     },
+     {
+      "who": "rekha",
+      "shot": "cabin",
+      "prop": "rule",
+      "n": 13
+     },
+     {
+      "who": "raju",
+      "shot": "interview",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Select all",
+     "title": "Select all",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1309,
+   "frames": 476,
+   "lines": [
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative12v1/line_10.wav",
+     "from": 0,
+     "frames": 68,
+     "words": [
+      {
+       "w": "70!",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "And",
+       "from": 8,
+       "to": 24
+      },
+      {
+       "w": "not",
+       "from": 24,
+       "to": 32
+      },
+      {
+       "w": "one",
+       "from": 32,
+       "to": 39
+      },
+      {
+       "w": "flag",
+       "from": 39,
+       "to": 48
+      },
+      {
+       "w": "in",
+       "from": 48,
+       "to": 54
+      },
+      {
+       "w": "10!",
+       "from": 54,
+       "to": 61
+      }
+     ],
+     "cues": {
+      "1": 15
+     }
+    },
+    {
+     "who": "gopi",
+     "name": "Gopi",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative12v1/line_11.wav",
+     "from": 74,
+     "frames": 109,
+     "words": [
+      {
+       "w": "Keywords",
+       "from": 74,
+       "to": 86
+      },
+      {
+       "w": "aren't",
+       "from": 86,
+       "to": 95
+      },
+      {
+       "w": "instructions.",
+       "from": 95,
+       "to": 123
+      },
+      {
+       "w": "It",
+       "from": 123,
+       "to": 127
+      },
+      {
+       "w": "reads",
+       "from": 127,
+       "to": 135
+      },
+      {
+       "w": "the",
+       "from": 135,
+       "to": 140
+      },
+      {
+       "w": "words,",
+       "from": 140,
+       "to": 149
+      },
+      {
+       "w": "not",
+       "from": 149,
+       "to": 161
+      },
+      {
+       "w": "the",
+       "from": 161,
+       "to": 166
+      },
+      {
+       "w": "colours.",
+       "from": 166,
+       "to": 178
+      }
+     ],
+     "cues": {
+      "1": 123
+     }
+    },
+    {
+     "who": "rekha",
+     "name": "Rekha madam",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative12v1/line_12.wav",
+     "from": 190,
+     "frames": 118,
+     "words": [
+      {
+       "w": "If",
+       "from": 191,
+       "to": 199
+      },
+      {
+       "w": "a",
+       "from": 199,
+       "to": 207
+      },
+      {
+       "w": "score",
+       "from": 207,
+       "to": 216
+      },
+      {
+       "w": "doesn't",
+       "from": 216,
+       "to": 227
+      },
+      {
+       "w": "match",
+       "from": 227,
+       "to": 241
+      },
+      {
+       "w": "what",
+       "from": 241,
+       "to": 248
+      },
+      {
+       "w": "I",
+       "from": 248,
+       "to": 250
+      },
+      {
+       "w": "can",
+       "from": 250,
+       "to": 256
+      },
+      {
+       "w": "read,",
+       "from": 256,
+       "to": 264
+      },
+      {
+       "w": "I",
+       "from": 264,
+       "to": 276
+      },
+      {
+       "w": "select",
+       "from": 276,
+       "to": 289
+      },
+      {
+       "w": "all.",
+       "from": 289,
+       "to": 303
+      }
+     ],
+     "cues": {
+      "1": 264
+     },
+     "nocap": true
+    },
+    {
+     "who": "raju",
+     "name": "Raju",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative12v1/line_13.wav",
+     "from": 335,
+     "frames": 121,
+     "words": [
+      {
+       "w": "And",
+       "from": 335,
+       "to": 342
+      },
+      {
+       "w": "Bunty's",
+       "from": 342,
+       "to": 354
+      },
+      {
+       "w": "interview?",
+       "from": 354,
+       "to": 378
+      },
+      {
+       "w": "\"Write",
+       "from": 378,
+       "to": 389
+      },
+      {
+       "w": "Python,\"",
+       "from": 389,
+       "to": 414
+      },
+      {
+       "w": "and",
+       "from": 414,
+       "to": 420
+      },
+      {
+       "w": "he",
+       "from": 420,
+       "to": 425
+      },
+      {
+       "w": "opens",
+       "from": 425,
+       "to": 434
+      },
+      {
+       "w": "MS",
+       "from": 434,
+       "to": 439
+      },
+      {
+       "w": "Word!",
+       "from": 439,
+       "to": 448
+      }
+     ],
+     "cues": {
+      "1": 377
+     }
+    }
+   ]
+  }
+ ]
+}

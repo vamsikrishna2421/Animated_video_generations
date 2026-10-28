@@ -25,13 +25,12 @@ LINES = {
     5: ("gopi", "replay", "reason", "The AI reads every word, even the white ones. | [1] Hidden keywords look like real skills.",
         "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా. | [1] దాచిన కీవర్డ్స్ నిజమైన స్కిల్స్ లా కనిపిస్తాయి."),
     6: ("rekha", "verdict", "out", "Out!", "ఇది ఔట్!"),
-    7: ("raju", "box", "anyone", "Does anyone really do this?!", "నిజంగా ఎవరైనా ఇలా చేస్తారా?!"),
     8: ("gopi", "duke", "duke", "About one resume in a hundred has hidden text, [1] says a Duke study.",
         "డ్యూక్ యూనివర్సిటీ వాళ్ళు చూశారు: [1] వంద రెజ్యూమ్ లలో ఒకదాంట్లో దాచిన అక్షరాలు!"),
     9: ("rekha", "test", "test", "I tested his resume ten times. | [1] Twenty-five plain, seventy-five with hidden keywords.",
         "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా. | [1] మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు."),
-    10: ("rekha", "fix", "quiz", "The internet's fix: the resume is data, not instructions. | [1] Flag any instructions inside.",
-         "ఇంటర్నెట్ చెప్పే ఫిక్స్: రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు. | [1] లోపల కమాండ్స్ ఉంటే చెప్పు."),   # the quiz holds after it
+    10: ("rekha", "fix", "quiz", "The popular fix: [1] the resume is data, not instructions.",
+         "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు."),   # the quiz holds after it; the card carries "flag it" (the first build ran 71.5 s)
     11: ("raju", "test", "answer", "Seventy! [1] And not one flag in ten!", "డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!"),
     12: ("gopi", "box", "colours", "Keywords aren't instructions. [1] It reads the words, not the colours.",
          "కీవర్డ్స్ కమాండ్స్ కాదు. [1] అది పదాలు చదువుతుంది, రంగులు కాదు."),
@@ -52,15 +51,15 @@ SHOW_TE = {
     1: "B.Com Bunty, with MS Word, 75 for a Python job!", 2: "75?! His resume has only MS Word and typing!",
     3: "Something's off. I'm taking a review!", 4: "Select all, paste in Notepad... There! White letters, hidden in the resume!",
     5: "That screening tool reads every word, even the white ones. Hidden keywords look like real skills.", 6: "That's out!",
-    7: "Does anyone really do this?!", 8: "Duke University looked: 1 in 100 resumes had hidden letters!",
+    8: "Duke University looked: 1 in 100 resumes had hidden letters!",
     9: "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
     11: "70! Not even one flag in 10!", 12: "Keywords aren't commands. It reads the words, not the colours.",
     13: "If the score doesn't match what I can see, I select all.", 14: "And Bunty's interview? Asked to write Python, he opened MS Word!",
 }
 NOCAP = {10, 13}   # the fix card and the rule chip carry their words
 PAUSES = {}
-TEMPO_EN = {"raju": 1.12, "gopi": 1.06, "rekha": 1.08}
-TEMPO_TE = {"raju": 1.12, "gopi": 1.06, "rekha": 1.08}
+TEMPO_EN = {"raju": 1.25, "gopi": 1.22, "rekha": 1.2}   # the first build ran 71.5 s
+TEMPO_TE = {"raju": 1.18, "gopi": 1.15, "rekha": 1.15}
 TEMPO_LINE_TE = {}
 # Sound (CLAUDE.md arc): a crowd roar, a boom and a clap on frame 1; a siren on "review" and a stop before the replay; a
 # sweep on select all and a hit as the white text shows; the OUT sting; a ding on the study card; the test card's
@@ -68,9 +67,9 @@ TEMPO_LINE_TE = {}
 # building through the last scene; the crowd again and the slam back to frame 1 (the loop). The scenes step up.
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.25, "tail": 0.0}),
           ("s_b", (4, 5, 6), {"boost": 1.25, "drop_pre": [[0, 0.0, 0.8]], "tail": 0.1}),   # a stop before the replay
-          ("s_c", (7, 8, 9, 10), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "tail": 0.0}),
+          ("s_c", (8, 9, 10), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "tail": 0.0}),
           ("s_d", (11, 12, 13, 14), {"outro": True, "boost": 1.5, "rise": 1.2, "drop_pre": [[0, 0.0, 1.4]], "tail": 0.0})]   # the bed out after the quiz count
-GAP = {1: 0.15, 2: 0.2, 3: 0.5, 4: 0.2, 5: 0.25, 6: 0.45, 7: 0.15, 8: 0.25, 9: 0.3, 10: 4.8, 11: 0.25, 12: 0.3, 13: 0.9}   # 10: the quiz holds 4.8 s; 13: the riser into the last line
+GAP = {1: 0.15, 2: 0.15, 3: 0.35, 4: 0.15, 5: 0.2, 6: 0.3, 8: 0.2, 9: 0.25, 10: 4.2, 11: 0.2, 12: 0.25, 13: 0.9}   # 10: the quiz holds 4.2 s (three options); 13: the riser into the last line
 GAP_TE = {}
 GAIN = {}
 GAIN_TE = {}

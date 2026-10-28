@@ -60,12 +60,14 @@ MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("ms", "m", "s"), ("wor
                7: [("anyone",), ("really",)],
                8: [("one", "1"), ("resume",), ("hundred", "100"), ("hidden",), ("duke",)],
                9: [("tested",), ("resume",), ("ten", "10")], "9b": [("twenty", "25"), ("plain",), ("seventy", "75"), ("keywords", "keyword")],
-               10: [("internet",), ("fix",), ("resume",), ("data",), ("instructions",)], "10b": [("flag",), ("instructions",)],
+               10: [("popular",), ("fix",), ("resume",), ("data",), ("instructions",)],
                11: [("seventy", "70"), ("flag",), ("ten", "10")],
                12: [("keywords", "keyword"), ("instructions",), ("words",), ("colours", "colors", "colour", "color")],
                13: [("score",), ("match",), ("read",), ("select",)],
                14: [("bunty", "bunny", "banty", "bunti"), ("interview",), ("python",), ("word",)]},
-        "te": {}}
+        "te": {8: [("रेज्यू", "रज्यू", "रेजू", "रिज्यू", "रेज़्यू", "रेजु")],   # the first take: "वंदर जुमललू"
+               12: [("कमांड", "कमान्ड", "कमाण्ड", "कमान्"), ("रंग",)],   # the first take: "कमेंट्स" (comments)
+               13: [("कपोते", "कपोथे", "कपोटे", "कापोते", "कपोथ", "कपोत")]}}   # the first take: "काखाखा फोटे"
 # lines whose judge text needs digits (Whisper writes "72", "10")
 JUDGE_TEXT = {1: "Bunty, B Com, M S Word, scored 75 for a Python job!", 2: "75?! His resume says M S Word and typing!",
               8: "About 1 resume in 100 has hidden text, says a Duke study.", 9: "I tested his resume 10 times.",

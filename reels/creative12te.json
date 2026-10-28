@@ -85,7 +85,7 @@
      "show": "B.Com Bunty, with MS Word, 75 for a Python job!",
      "maxgap": 0.28,
      "gap": 0.15,
-     "tempo": 1.12,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
@@ -94,8 +94,8 @@
      "text": "డెబ్బై ఐదా?! [1] అతని రెజ్యూమ్ లో ఎంఎస్ వర్డ్, టైపింగ్ మాత్రమే!",
      "show": "75?! His resume has only MS Word and typing!",
      "maxgap": 0.28,
-     "gap": 0.2,
-     "tempo": 1.06,
+     "gap": 0.15,
+     "tempo": 1.15,
      "gain_db": 0.5
     },
     {
@@ -104,8 +104,8 @@
      "text": "ఏదో తేడా ఉంది. [1] రివ్యూ తీసుకుంటా!",
      "show": "Something's off. I'm taking a review!",
      "maxgap": 0.28,
-     "gap": 0.5,
-     "tempo": 1.08,
+     "gap": 0.35,
+     "tempo": 1.15,
      "gain_db": 0.5
     }
    ]
@@ -158,8 +158,8 @@
      "text": "సెలెక్ట్ ఆల్, నోట్ ప్యాడ్ లో పేస్ట్... [1] అదిగో! తెల్ల అక్షరాలు, రెజ్యూమ్ లో దాచాడు!",
      "show": "Select all, paste in Notepad... There! White letters, hidden in the resume!",
      "maxgap": 0.28,
-     "gap": 0.2,
-     "tempo": 1.12,
+     "gap": 0.15,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
@@ -168,8 +168,8 @@
      "text": "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా. <pause 0.25> [1] దాచిన కీవర్డ్స్ నిజమైన స్కిల్స్ లా కనిపిస్తాయి.",
      "show": "That screening tool reads every word, even the white ones. Hidden keywords look like real skills.",
      "maxgap": 0.28,
-     "gap": 0.25,
-     "tempo": 1.06,
+     "gap": 0.2,
+     "tempo": 1.15,
      "tts": "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా.",
      "file2": "05b_gopi.wav",
      "tts2": "దాచిన కీవర్డ్స్ నిజమైన స్కిల్స్ లా కనిపిస్తాయి.",
@@ -182,8 +182,8 @@
      "text": "ఇది ఔట్!",
      "show": "That's out!",
      "maxgap": 0.28,
-     "gap": 0.45,
-     "tempo": 1.08,
+     "gap": 0.3,
+     "tempo": 1.15,
      "gain_db": 0.5
     }
    ]
@@ -197,12 +197,6 @@
    "boost": 1.15,
    "data": {
     "beats": [
-     {
-      "who": "raju",
-      "shot": "box",
-      "prop": "anyone",
-      "n": 7
-     },
      {
       "who": "gopi",
       "shot": "duke",
@@ -232,23 +226,13 @@
    },
    "lines": [
     {
-     "who": "raju",
-     "file": "07_raju.wav",
-     "text": "నిజంగా ఎవరైనా ఇలా చేస్తారా?!",
-     "show": "Does anyone really do this?!",
-     "maxgap": 0.28,
-     "gap": 0.15,
-     "tempo": 1.12,
-     "gain_db": 0.5
-    },
-    {
      "who": "gopi",
      "file": "08_gopi.wav",
      "text": "డ్యూక్ యూనివర్సిటీ వాళ్ళు చూశారు: [1] వంద రెజ్యూమ్ లలో ఒకదాంట్లో దాచిన అక్షరాలు!",
      "show": "Duke University looked: 1 in 100 resumes had hidden letters!",
      "maxgap": 0.28,
-     "gap": 0.25,
-     "tempo": 1.06,
+     "gap": 0.2,
+     "tempo": 1.15,
      "gain_db": 0.5
     },
     {
@@ -257,8 +241,8 @@
      "text": "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా. <pause 0.25> [1] మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు.",
      "show": "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
      "maxgap": 0.28,
-     "gap": 0.3,
-     "tempo": 1.08,
+     "gap": 0.25,
+     "tempo": 1.15,
      "tts": "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా.",
      "file2": "09b_rekha.wav",
      "tts2": "మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు.",
@@ -268,16 +252,12 @@
     {
      "who": "rekha",
      "file": "10_rekha.wav",
-     "text": "ఇంటర్నెట్ చెప్పే ఫిక్స్: రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు. <pause 0.25> [1] లోపల కమాండ్స్ ఉంటే చెప్పు.",
-     "show": "The internet's fix: the resume is data, not instructions. Flag any instructions inside.",
+     "text": "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు.",
+     "show": "The popular fix: the resume is data, not instructions.",
      "maxgap": 0.28,
-     "gap": 4.8,
-     "tempo": 1.08,
+     "gap": 4.2,
+     "tempo": 1.15,
      "nocap": true,
-     "tts": "ఇంటర్నెట్ చెప్పే ఫిక్స్: రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు.",
-     "file2": "10b_rekha.wav",
-     "tts2": "లోపల కమాండ్స్ ఉంటే చెప్పు.",
-     "pause": 0.25,
      "gain_db": 0.5
     }
    ]
@@ -338,8 +318,8 @@
      "text": "డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!",
      "show": "70! Not even one flag in 10!",
      "maxgap": 0.28,
-     "gap": 0.25,
-     "tempo": 1.12,
+     "gap": 0.2,
+     "tempo": 1.18,
      "gain_db": 0.5
     },
     {
@@ -348,8 +328,8 @@
      "text": "కీవర్డ్స్ కమాండ్స్ కాదు. [1] అది పదాలు చదువుతుంది, రంగులు కాదు.",
      "show": "Keywords aren't commands. It reads the words, not the colours.",
      "maxgap": 0.28,
-     "gap": 0.3,
-     "tempo": 1.06,
+     "gap": 0.25,
+     "tempo": 1.15,
      "gain_db": 0.5
     },
     {
@@ -359,7 +339,7 @@
      "show": "If the score doesn't match what I can see, I select all.",
      "maxgap": 0.28,
      "gap": 0.9,
-     "tempo": 1.08,
+     "tempo": 1.15,
      "nocap": true,
      "gain_db": 0.5
     },
@@ -370,7 +350,7 @@
      "show": "And Bunty's interview? Asked to write Python, he opened MS Word!",
      "maxgap": 0.28,
      "gap": 0.16,
-     "tempo": 1.12,
+     "tempo": 1.18,
      "gain_db": 0.5
     }
    ]
