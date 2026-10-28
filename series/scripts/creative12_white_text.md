@@ -96,7 +96,8 @@ Kept 1: a mismatch you read in one look (MS Word vs a Python job, 75), a format 
 - Our own per-line check of the Telugu mix: the crowd hid "బంటీ" (0.32 -> 0.18), the OUT buzz hid "ఇది ఔట్" (the hit
   moves to the cut 0.3 s before the word, the buzz after it), the cha-ching hid "డెబ్బై ఐదు" (moved after the line),
   the answer's boom hid "డెబ్బై" (the last scene starts 0.3 s early with the hit), the boing smeared "ఎంఎస్ వర్డ్ ఓపెన్"
-  (gone; "ఓపెన్" -> "తెరిచాడు"). "రంగులు" -> "కలర్స్": one slipped letter is a swear word.
+  (gone; "ఓపెన్" -> "తెరిచాడు"). "రంగులు" -> "కలర్స్": one slipped letter is a swear word. "చెక్ చేయని" was
+  heard "chek chek" in four takes: "చెకింగ్ లేని".
 - Facts: the 75 and the 70 are the 6th of ten sorted scores (the two middle ones are 72/75 and 65/70): the card says
   "middle of 10 replies" and the pinned comment lists every range ("half of them exactly 75").
 - Captions: "three other made-up candidates"; the order with the fix, scored alone: flagged 1 of 10, the score stayed
@@ -135,7 +136,7 @@ Kept 1: a mismatch you read in one look (MS Word vs a Python job, 75), a format 
 | 11 | Raju | డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు! | Debbai! Padilo okkasaari kooda flag ledu! |
 | 12 | Gopi | కీవర్డ్స్ ఆర్డర్లు కాదు. [1] అది పదాలు చదువుతుంది, కలర్స్ కాదు. | Keywords orderlu kaadu. Adi padaalu chaduvutundi, colours kaadu. |
 | 13 | Rekha | ఎవరినైనా షార్ట్ లిస్ట్ చేసే ముందు: [1] సెలెక్ట్ ఆల్, కాపీ, నోట్ ప్యాడ్ లో పేస్ట్. | Evarinainaa shortlist chese mundu: select all, copy, Notepad lo paste. |
-| 14 | Raju | చెక్ చేయని కంపెనీలో? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ తెరిచాడు! | Check cheyani company lo? Python raayamante, MS Word terichaadu! |
+| 14 | Raju | చెకింగ్ లేని కంపెనీలో? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ తెరిచాడు! | Checking leni company lo? Python raayamante, MS Word terichaadu! |
 
 Telugu notes: line 1's punch number ("డెబ్బై ఐదు") inside 2 s; no "ఏఐ" in voiced text ("ఆ స్క్రీనింగ్ టూల్"); no
 zero-width joiners ("నోట్ ప్యాడ్" with a space); "బంటీ", not "బంటు"; "కలర్స్", not "రంగులు" (one slipped letter is a

@@ -37,7 +37,7 @@ LINES = {
     13: ("rekha", "cabin", "rule", "Before I shortlist anyone: [1] select all, copy, paste in Notepad.",
          "ఎవరినైనా షార్ట్ లిస్ట్ చేసే ముందు: [1] సెలెక్ట్ ఆల్, కాపీ, నోట్ ప్యాడ్ లో పేస్ట్."),   # render review: a rule for every resume, with the copy step
     14: ("raju", "interview", "loop", "And at a company that didn't check? [1] \"Write Python,\" and he opens MS Word!",
-         "చెక్ చేయని కంపెనీలో? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ తెరిచాడు!"),   # render review: OUT, then an interview was a plot hole; now he's caught there too (OUT). Then frame 1 (loops)
+         "చెకింగ్ లేని కంపెనీలో? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ తెరిచాడు!"),   # render review: OUT, then an interview was a plot hole; now he's caught there too (OUT). Telugu: "చెక్ చేయని" was heard "chek chek" in 4 takes. Then frame 1 (loops)
 }
 TTS_EN = {   # spoken forms: the voice read "MS Word" as "Mississippi Word"
     1: "Bunty, B Com, M S Word, [1] scored seventy-five for a Python job!",
