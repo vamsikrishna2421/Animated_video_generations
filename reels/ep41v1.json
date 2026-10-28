@@ -90,8 +90,8 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "Same reply to every order?! [1] I'm putting in the biggest brain!",
-     "show": "Same reply to every order?! I'm putting in the biggest brain!",
+     "text": "Same reply, order after order?! [1] I'm putting in the biggest brain!",
+     "show": "Same reply, order after order?! I'm putting in the biggest brain!",
      "maxgap": 0.28,
      "gap": 0.15,
      "tempo": 1.15,
@@ -110,8 +110,8 @@
     {
      "who": "ravi",
      "file": "03_ravi.wav",
-     "text": "Nineteen of twenty orders right, [1] every reply under ten seconds!",
-     "show": "19 of 20 orders right, every reply under 10 seconds!",
+     "text": "Nineteen of twenty orders right! [1] And every reply under ten seconds!",
+     "show": "19 of 20 orders right! And every reply under 10 seconds!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.15,
@@ -253,12 +253,6 @@
       "shot": "wide",
       "prop": "done",
       "n": 11
-     },
-     {
-      "who": "ravi",
-      "shot": "chat",
-      "prop": "sugar",
-      "n": 12
      }
     ],
     "captionTop": 1500,
@@ -289,7 +283,39 @@
      "gap": 0.45,
      "tempo": 1.15,
      "gain_db": 0.5
-    },
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_choose",
+   "tail": 0.1,
+   "pre": 0.9,
+   "boost": 1.15,
+   "drop_pre": [
+    [
+     0,
+     0.4,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "chat",
+      "prop": "sugar",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Half a kilo",
+     "title": "Half a kilo",
+     "notes": []
+    }
+   },
+   "lines": [
     {
      "who": "ravi",
      "file": "12_ravi.wav",
@@ -311,6 +337,13 @@
    "outro": true,
    "boost": 1.5,
    "rise": 1.2,
+   "drop_pre": [
+    [
+     3,
+     0.0,
+     0.8
+    ]
+   ],
    "data": {
     "beats": [
      {

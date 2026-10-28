@@ -93,8 +93,8 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "అన్ని ఆర్డర్లకీ ఒకటే రిప్లై?! [1] అన్నిటికన్నా పెద్ద బ్రెయిన్ పెడతా!",
-     "show": "The same reply to every order?! I'll put in the biggest brain!",
+     "text": "ఆర్డర్ ఆర్డర్ కీ ఒకటే రిప్లై?! [1] అన్నిటికన్నా పెద్ద బ్రెయిన్ పెడతా!",
+     "show": "The same reply, order after order?! I'll put in the biggest brain!",
      "maxgap": 0.28,
      "gap": 0.15,
      "tempo": 1.15,
@@ -268,12 +268,6 @@
       "shot": "wide",
       "prop": "done",
       "n": 11
-     },
-     {
-      "who": "ravi",
-      "shot": "chat",
-      "prop": "sugar",
-      "n": 12
      }
     ],
     "captionTop": 1500,
@@ -309,7 +303,40 @@
      "gap": 0.45,
      "tempo": 1.15,
      "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_choose",
+   "tail": 0.1,
+   "pre": 0.9,
+   "boost": 1.15,
+   "drop_pre": [
+    [
+     0,
+     0.4,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "chat",
+      "prop": "sugar",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Half a kilo",
+     "title": "Half a kilo",
+     "notes": []
     },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
     {
      "who": "ravi",
      "file": "12_ravi.wav",
@@ -331,6 +358,13 @@
    "outro": true,
    "boost": 1.4,
    "rise": 1.2,
+   "drop_pre": [
+    [
+     3,
+     0.0,
+     0.8
+    ]
+   ],
    "data": {
     "beats": [
      {

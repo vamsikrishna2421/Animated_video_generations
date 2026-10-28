@@ -27,9 +27,9 @@ import ep33.voice_rec as vr  # noqa: E402
 
 LIGHT_EN = {6, 8}   # the AI's numbers through the lighter phone sound
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("same",), ("reply",), ("every",), ("order",), ("biggest",), ("brain",)],
+MUST = {"en": {1: [("same",), ("reply",), ("order",), ("after",), ("biggest",), ("brain",)],
                2: [("biggest",), ("which",), ("job",), ("pass",), ("mark",), ("first",)],
-               3: [("nineteen", "19"), ("twenty", "20"), ("orders", "order"), ("right", "write"), ("reply",), ("ten", "10"), ("seconds", "second")],
+               3: [("nineteen", "19"), ("twenty", "20"), ("orders", "order"), ("right",), ("reply",), ("ten", "10"), ("seconds", "second")],
                4: [("three", "3"), ("brains", "brain"), ("test",), ("twenty", "20"), ("orders",)],
                5: [("easy",), ("biggest",), ("wins", "win")],
                6: [("middle",), ("passed", "pass"), ("nineteen", "19"), ("twenty", "20"), ("five", "5"), ("seconds",)],

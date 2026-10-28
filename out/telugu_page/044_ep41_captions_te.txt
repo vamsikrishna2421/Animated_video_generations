@@ -2,15 +2,15 @@ UPLOAD: 044 (Telugu page, @ai_maastaaru_telugu)
 VIDEO: telugu_page/044_ep41_insta_te.mp4  (teaching skit, about 60 s, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/044_ep41_insta_te_ig.mp4, about 22 MB). It loops: "malli testaa?! mari ae brain unchaali?!" taruvaata frame 1 (moodu orders ki okate reply, pedda brain pattukunna Ravi) malli vastundi.
 
 === CAPTION ===
-Chinna AI prati order ki okate reply ichchindi. Anduke Ravi anna annitikanna pedda brain pattukunnaaru. Tappu prashna.
+Chinna AI order order ki okate reply ichchindi. Anduke Ravi anna annitikanna pedda brain pattukunnaaru. Tappu prashna.
 
 AI From Scratch Episode 41: sarain AI model ni ela select cheyyaali
 - "Pedda" ante pani kaadu. Edi compare chese mundu pass mark raayandi (OpenAI sontha model guide: "Choose acceptance criteria before comparing models"). Ravi di: 20 WhatsApp orders lo 19 lo prati item, quantity correct, prati reply 10 seconds lopu
-- Taruvaata prati brain ki ade test. Maa real test, internet cut chesi, aayana 20 orders, prati reply chetitho chadivaam: 1.1 GB brain 20 lo 8 ("Sure, we'll have those ready for you within 30 minutes." ani malli malli raasindi), 2.1 GB 20 lo 19, prati reply 5 seconds lopu, 4.7 GB 20 lo 16 ("2 curd 2 milk" ni "2 liters of curd and 2 liters of milk" chesindi), oka reply ki 11 seconds
+- Taruvaata prati brain ki ade test. Maa real test, internet cut chesi, aayana 20 orders, prati reply okkokkati chadivaam: 1.1 GB brain 20 lo 8 ("Sure, we'll have those ready for you within 30 minutes." ani malli malli raasindi), 2.1 GB 20 lo 19, prati reply 5 seconds lopu, 4.7 GB 20 lo 16 ("2 curd 2 milk" ni "2 liters of curd and 2 liters of milk" chesindi), oka reply ki 11 seconds
 - Pass ayina vaatilo chinnadi unchandi: adi fast, memory takkuva. Ikkada adi madhyadi, peddadi kaadu
-- Veru pani, veru winner: Ravi bills lo (EP38) peddade best, 20 lo 18. Ayinaa 20 lo 20 kaadu, anduke bills check cheyyaali
+- Vere pani, vere winner: Ravi bills lo (EP38) peddade best, 20 lo 18. Ayinaa 20 lo 20 kaadu, anduke bills check cheyyaali
 - Pani maarite, malli test. Customers Telugu padaalato type chestaaru ("ara kilo panchadara and okati tea podi"), aa 20 orders lo moodintlo okkati kooda pass avvaledu: 20 lo 5, 14, 12. Madhyadi ara kilo ki kilo confirm chesindi; peddadi "2 perugu 2 paalu" ni "2 eggs and 2 bananas" chesindi
-- Edi pass kaakapothe? Prompt maarchandi (udaaharanaki mee items Telugu perlu ivvandi) leda vere brain try cheyyandi, ade test malli cheyyandi
+- Edi pass kaakapothe? Prompt maarchandi (udaaharanaki mee items Telugu perlu ivvandi; idi memu inkaa test cheyyaledu) leda vere brain try cheyyandi, ade test malli cheyyandi
 
 Meeku idi ante:
 1. AI ni select chese mundu, mee paniki "saripotundi" ante emito numbers tho raasi pettandi
@@ -28,7 +28,7 @@ Ravi pass mark ae brain pass avutundi? A) 1.1 GB, fast di B) 2.1 GB C) 4.7 GB, a
 #AIinTelugu #TeluguAI #AIFromScratch #LearnAI #ChooseAI #LLM
 
 === PINNED_COMMENT ===
-Memu ela test chesaam: Qwen sontha 4-bit GGUF files (Q4_K_M), Qwen2.5-1.5B, 3B, 7B-Instruct, llama.cpp tho 4-core computer (graphics card ledu), greedy, prati run internet cut chesi. Pass mark ni test script lo, ae brain run kaakamunde raasaam. Prompt: "You are the WhatsApp assistant of a small grocery shop... confirm each item and say it will be delivered within 30 minutes. No prices. Reply in 2 short lines." 20 orders type chesinattu, taruvaata ave 20 Telugu padaalato (English letters lo). Prati reply chetitho chadivaam; time = poorti reply. Oka machine, oka prompt, 20 orders: veru prompt leda pedda online model ki veru score raavochchu. Adi point: mee numbers mee paniki maatrame.
+Memu ela test chesaam: Qwen sontha 4-bit GGUF files (Q4_K_M), Qwen2.5-1.5B, 3B, 7B-Instruct, llama.cpp tho 4-core computer (graphics card ledu), greedy, prati run internet cut chesi. Pass mark ni test script lo, ae brain run kaakamunde raasaam. Prompt: "You are the WhatsApp assistant of a small grocery shop... confirm each item and say it will be delivered within 30 minutes. No prices. Reply in 2 short lines." 20 orders type chesinattu, taruvaata ave 20 Telugu padaalato (English letters lo). Prati reply okkokkati chadivaam; time = poorti reply. Oka machine, oka prompt, 20 orders: veru prompt leda pedda online model ki veru score raavochchu. Adi point: mee numbers mee paniki maatrame.
 EP39 lo 17 seconds long reply ki; "Reply in 2 short lines." tho 4.7 GB brain ee machine meeda 6-11 seconds lo raastundi.
 Sources: OpenAI, "Model selection" (developers.openai.com); Anthropic, "Choosing the right model" (platform.claude.com/docs).
 

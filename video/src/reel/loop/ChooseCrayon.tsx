@@ -196,12 +196,14 @@ const StChoose: React.FC<SP> = ({ s }) => {
     if (b.prop === "cups") sfx.push(<Sfx key={k("q")} at={at + 2} src="audio/gag_boing.wav" vol={0.22} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 15)} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 16)} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "done") sfx.push(<Sfx key={k("d")} at={end + 4} src="audio/gag_ding.wav" vol={0.3} />);   // the next order arrives
-    if (b.prop === "sugar") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.3) - 6} src="reel/sfx_buzz.wav" vol={0.22} />);
+    if (b.prop === "sugar") sfx.push(<Sfx key={k("p")} at={Math.max(0, at - 27)} src="audio/sfx_pop.wav" vol={0.25} />,   // the order pops in on the cut
+      <Sfx key={k("n")} at={Math.max(0, at - 12)} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("m")} at={Math.max(0, at - 12)} src={CLAP} vol={0.5} />,   // out of the stop: the reply
+      <Sfx key={k("z")} at={cue(i, 1, 0.3) - 6} src="reel/sfx_buzz.wav" vol={0.22} />);
     if (b.prop === "none") sfx.push(<Sfx key={k("g")} at={cue(i, 1, 0.5) - 6} src="reel/sfx_glitch.wav" vol={0.3} />);
     if (b.prop === "fix") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.25} />);
     if (b.prop === "loop") {   // a rise in the gap into his last line, then the slam back to frame 1
       const slam = end + HOLD;
-      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 37)} src="reel/sfx_riser.wav" vol={0.3} />,
+      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 37)} src="reel/sfx_riser.wav" vol={0.45} />,
         <Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
         <Sfx key={k("c")} at={slam} src={CLAP} vol={0.6} />, <Sfx key={k("z")} at={slam} src="reel/sfx_buzz.wav" vol={0.4} />);
     }
@@ -252,6 +254,12 @@ const StChoose: React.FC<SP> = ({ s }) => {
           brainRow(c, 760, "4.7 GB", kC > 0 ? "16 of 20 ✗" : "?", kC2 > 0 ? "slowest 11.1 s ✗" : "", kC > 0 ? RED : "#94a3b8", kC > 0 ? "#fee2e2" : "#f1f5f9", Math.max(k0, kC));
           brainRow(c, 930, "1.1 GB", kA > 0 ? "8 of 20 ✗" : "?", kA > 0 ? "skips the items" : "", kA > 0 ? RED : "#94a3b8", kA > 0 ? "#fee2e2" : "#f1f5f9", Math.max(k0, kA));
           if (rev) tag(c, "B ✓", 480, 586, 64, "#bbf7d0", "#14532d", 0.06, seg(f, ln.from + 8, ln.from + 14));   // between the label and the result
+          if (setup) {   // render review: the card sat still: the replies being read, 0 to 60
+            const nRead = Math.round(60 * seg(f, c1, endL + 8));
+            c.font = SANS(40); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText(`replies read by hand: ${nRead} of 60`, W / 2, 1120);
+            c.fillStyle = "#e2e8f0"; rrect(c, 190, 1150, 700, 26, 13); c.fill();
+            c.fillStyle = GREEN; rrect(c, 190, 1150, Math.max(26, 700 * nRead / 60), 26, 13); c.fill();
+          }
           if (curd) {   // the biggest brain's real reply to "2 curd 2 milk" (series/scripts/ep41_demo/7B.json, order 7)
             const kq = seg(f, ln.from + 4, ln.from + 12);
             if (kq > 0) {
@@ -271,10 +279,10 @@ const StChoose: React.FC<SP> = ({ s }) => {
           c.save(); c.translate(0, 50);
           bigPhone(c, W, H, "WhatsApp · 2.1 GB brain", r, f);
           c.fillStyle = "#ece5dd"; rrect(c, 110, 330, W - 220, 1100, 30); c.fill();
-          waPair(c, 400, "ara kilo panchadara and okati tea podi", ["Kilo panchadara confirmed.", "Tea podi confirmed."], seg(f, ln.from - 8, ln.from - 2), seg(f, ln.from + 2, ln.from + 8));
-          if (f >= ln.from + 6) stroke(c, circlePts(255, 446, 115, 42, 0, Math.PI * 2 * seg(f, ln.from + 6, ln.from + 14), 36), GREEN, 6, r, { passes: 2 });   // "ara kilo"
-          if (f >= ln.from + 10) stroke(c, circlePts(410, 566, 110, 42, 0, Math.PI * 2 * seg(f, ln.from + 10, ln.from + 18), 36), RED, 6, r, { passes: 2 });   // "Kilo"
-          tag(c, "ara kilo = ½ kg", W / 2, 880, 70, "#dcfce7", "#14532d", -0.03, seg(f, ln.from + 8, ln.from + 14));
+          waPair(c, 400, "ara kilo panchadara and okati tea podi", ["Kilo panchadara confirmed.", "Tea podi confirmed."], seg(f, ln.from - 27, ln.from - 23), seg(f, ln.from - 12, ln.from - 9));
+          if (f >= ln.from - 20) stroke(c, circlePts(255, 446, 115, 42, 0, Math.PI * 2 * seg(f, ln.from - 20, ln.from - 12), 36), GREEN, 6, r, { passes: 2 });   // "ara kilo"
+          if (f >= ln.from - 6) stroke(c, circlePts(410, 566, 110, 42, 0, Math.PI * 2 * seg(f, ln.from - 6, ln.from + 4), 36), RED, 6, r, { passes: 2 });   // "Kilo"
+          tag(c, "ara kilo = ½ kg", W / 2, 880, 70, "#dcfce7", "#14532d", -0.03, seg(f, ln.from + 2, ln.from + 8));
           tag(c, "it confirmed 1 kg ✗", W / 2, 1010, 70, "#fee2e2", "#991b1b", 0.02, seg(f, cu(1, 0.3), cu(1, 0.3) + 8));
           c.font = SANS(28, 600); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("our test's real reply (Telugu-typed order 4)", W / 2, 1396);
           c.restore();
@@ -288,12 +296,13 @@ const StChoose: React.FC<SP> = ({ s }) => {
           c.font = SANS(30, 600); c.fillStyle = "#475569"; c.fillText("the same 20 orders in Telugu words · pass: 19", W / 2, 420);
           ([["1.1 GB", "5 of 20", ln.from], ["2.1 GB", "14 of 20", ln.from + 4], ["4.7 GB", "12 of 20", ln.from + 8]] as [string, string, number][]).forEach(([gb, v, t0], q) =>
             brainRow(c, 540 + q * 160, gb, v + " ✗", "", RED, "#fee2e2", seg(f, t0, t0 + 6)));
-          if (f >= c1 - 2) stamp(c, "NONE PASSES", W / 2, 1060, 96, RED, seg(f, c1 - 2, c1 + 6), r, -0.05);
+          if (f >= c1 - 2) stamp(c, "NONE PASSES", W / 2, 1040, 96, RED, seg(f, c1 - 2, c1 + 6), r, -0.05);
+          tag(c, "picked D? right, for Telugu orders", 640, 1112, 34, "#e0e7ff", "#1e3a8a", 0.02, seg(f, c1 + 4, c1 + 10));
           const ke = seg(f, c1 + 10, c1 + 18);
           if (ke > 0) {
             c.save(); c.globalAlpha = clamp(ke * 3);
             c.fillStyle = "#fffdf5"; rrect(c, 130, 1150, 820, 200, 22); c.fill();
-            c.font = SANS(34, 600); c.fillStyle = "#475569"; c.textAlign = "left"; c.fillText("4.7 GB, order \"2 perugu 2 paalu\":", 160, 1206);
+            c.font = SANS(32, 600); c.fillStyle = "#475569"; c.textAlign = "left"; c.fillText("4.7 GB, \"2 perugu (curd) 2 paalu (milk)\":", 160, 1206);
             c.font = SANS(48); c.fillStyle = RED; c.fillText("\"2 eggs and 2 bananas\"", 160, 1290);
             c.restore();
           }
@@ -331,13 +340,14 @@ const StChoose: React.FC<SP> = ({ s }) => {
           if (b.prop === "notbig") bubble(c, 330, 560, "not the biggest?!", 80, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "cups") bubble(c, 540, 480, "litres?!", 96, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "eggs") bubble(c, 330, 560, "perugu = eggs?!", 80, seg(p, 0.05, 0.2), COL.yellow);
-          if (b.prop === "rule") {
+          if (b.prop === "rule" || b.prop === "done") {   // render review: rule 3 and the bills note came too late and left with the line
+            const kr = b.prop === "done" ? 1 : p;
             ruleChip(c, W, 880, "CHOOSE A BRAIN", [
               ["1  write the pass mark first", "#fef3c7", INK],
               ["2  one test for every brain", "#e2e8f0", INK],
               ["3  keep the smallest that passes", "#dcfce7", "#14532d"],
-            ], [seg(p, 0.02, 0.12), seg(p, 0.15, 0.25), seg(p, 0.3, 0.4)]);
-            c.save(); c.globalAlpha = seg(p, 0.55, 0.7);
+            ], [seg(kr, 0, 0.04), seg(kr, 0.02, 0.06), seg(kr, 0.05, 0.12)]);
+            c.save(); c.globalAlpha = seg(kr, 0.3, 0.4);
             c.fillStyle = "rgba(15,23,42,0.92)"; rrect(c, 70, 1330, W - 140, 130, 24); c.fill();
             c.font = SANS(36, 600); c.fillStyle = "#fde68a"; c.textAlign = "center";
             c.fillText("a different job, a different winner:", W / 2, 1384); c.fillText("on bills, the 4.7 GB is best (18 of 20)", W / 2, 1432);

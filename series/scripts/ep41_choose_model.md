@@ -1,4 +1,4 @@
-# EP41 "The biggest brain" (How to choose the right model) · script v2, Oct 28
+# EP41 "The biggest brain" (How to choose the right model) · script v2.1, Oct 28
 
 **Slot:** queue 044, replaces the lesson-format `044_ep41_how_to_choose_the_right_ai_model.mp4`.
 **Cast / setting:** Ravi anna's kirana shop, the shop AI (the student robot on his phone, calm, deadpan). Since EP38 the
@@ -80,18 +80,37 @@ Kept 1: a failure every WhatsApp shop has seen, real replies, and the wrong fix 
 - Priya: EP39's 17 s vs 11 s here: the caption says EP39's 17 s was the long reply; with "Reply in 2 short lines." the
   big brain writes in 6-11 s.
 
-## Script (English) · ~58 s
+## Render review 1 (Sandeep, Priya) and what changed
+- Both: "Same reply to every order" next to "8 of 20": "Same reply, order after order?!" (EN and TE re-voiced), the
+  caption "order after order".
+- Both: the bills reversal never stayed on screen: the rule card shows rows 1-2 at once (said earlier) and row 3 as it
+  is spoken, the note "on bills, the 4.7 GB is best (18 of 20)" from a third of the line, and the card holds through
+  "The middle one, forever!".
+- Both: the second half sat at one level and the sugar twist had no hit: the order pops up on the cut, the bed stops,
+  the reply "Kilo panchadara confirmed." lands with a boom and a clap 0.4 s before Ravi; the bed is out under a louder
+  riser before the last line.
+- Priya: "orders right, every reply" was heard "orders, write every reply": "Nineteen of twenty orders right! And every
+  reply under ten seconds!". "perugu (curd) · paalu (milk)" glossed on the card. The caption marks the Telugu-names
+  prompt "not tested yet".
+- Sandeep: the setup card sat still: "replies read by hand: 0 of 60" counts up with a bar. A chip on the Telugu card:
+  "picked D? right, for Telugu orders". Telugu caption: "okkokkati chadivaam", "vere pani, vere winner".
+- Telugu per-line check of the final mix: line 1's "పెడతా" (heard "prattaa") and 13b's "అవ్వలేదు" (heard
+  "avalagadu") re-voiced; line 4's "vavava" was the window, not the take (the take reads "మీ ఇరవై ఆర్డర్లు").
+- Kept (one viewer): the RAM numbers stay in the caption; "Telugu words are a new job" (Priya: "inputs your test missed")
+  stays, with "then test again" on screen.
+
+## Script (English) · ~60 s
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Ravi | Same reply to every order?! [1] I'm putting in the biggest brain! | frame 1 (above); tag "EP41 · AI From Scratch" |
+| 1 | Ravi | Same reply, order after order?! [1] I'm putting in the biggest brain! | frame 1 (above); tag "EP41 · AI From Scratch" |
 | 2 | AI | Biggest for which job, anna? [1] Write the pass mark first. | insert: a notepad "PASS MARK · written before the test"; small, below: "OpenAI's model guide: 'Choose acceptance criteria before comparing models'" |
-| 3 | Ravi | Nineteen of twenty orders right, [1] every reply under ten seconds! | the notepad fills: "19 of 20 orders: every item + quantity" · on [1] "every reply under 10 s" |
+| 3 | Ravi | Nineteen of twenty orders right! [1] And every reply under ten seconds! | the notepad fills: "19 of 20 orders: every item + quantity" · on [1] "every reply under 10 s" |
 | 4 | AI | Then all three brains take one test: [1] your twenty orders. | OUR REAL TEST card: "the same 20 orders · offline · every reply read"; three brain files 1.1 · 2.1 · 4.7 GB |
 | 5 | Ravi | Easy! The biggest one wins! | after the line, QUIZ (4.8 s, 3-2-1, then a stop): "Which brain passes Ravi's pass mark?" A 1.1 GB · B 2.1 GB · C 4.7 GB (the biggest) · D none of them |
 | 6 | AI | The middle one passed. [1] Nineteen of twenty, all under five seconds. | out of the stop, a hit: the test card, row 2.1 GB "19 of 20 · 4.5 s · PASS ✓", "B ✓" |
 | 7 | Ravi | Not the biggest?! | |
 | 8 | AI | Sixteen of twenty: it turned two curds into two litres! [1] And one reply took eleven seconds. | row 4.7 GB "16 of 20 ✗"; its real reply "2 curd 2 milk → 2 liters of curd and 2 liters of milk" circled; on [1] "slowest 11.1 s ✗"; row 1.1 GB "8 of 20 ✗" |
-| 9 | Ravi | Litres of curd?! | two small curd cups in his hands |
+| 9 | Ravi | Two litres of curd?! | two small curd cups in his hands |
 | 10 | AI | Keep the smallest one that passes: [1] it's faster and needs less memory. | RULE chip "CHOOSE A BRAIN": "1 write the pass mark first" · "2 one test for every brain" · "3 keep the smallest that passes"; under it "a different job, a different winner: on bills, the 4.7 GB is best (18 of 20)" |
 | 11 | Ravi | The middle one, forever! | Ravi taps "2.1 GB" on the laptop; a WhatsApp ding |
 | 12 | Ravi | Half a kilo became a kilo! [1] It doubled the sugar! | the phone: a customer types "ara kilo panchadara and okati tea podi"; the reply "Kilo panchadara confirmed. Tea podi confirmed." with "ara kilo = ½ kg" circled |
@@ -103,7 +122,7 @@ Kept 1: a failure every WhatsApp shop has seen, real replies, and the wrong fix 
 ## Script (Telugu; on-screen text stays English)
 | # | Who | Telugu | Romanized |
 |---|---|---|---|
-| 1 | Ravi | అన్ని ఆర్డర్లకీ ఒకటే రిప్లై?! [1] అన్నిటికన్నా పెద్ద బ్రెయిన్ పెడతా! | Anni orderlakee okate reply?! Annitikanna pedda brain pedataa! |
+| 1 | Ravi | ఆర్డర్ ఆర్డర్ కీ ఒకటే రిప్లై?! [1] అన్నిటికన్నా పెద్ద బ్రెయిన్ పెడతా! | Order order kee okate reply?! Annitikanna pedda brain pedataa! |
 | 2 | AI | ఏ పనికి పెద్దది అన్నా? [1] ముందు పాస్ మార్క్ రాయండి. | Ae paniki peddadi annaa? Mundu pass mark raayandi. |
 | 3 | Ravi | ఇరవై లో పందొమ్మిది ఆర్డర్లు కరెక్ట్, [1] ప్రతి రిప్లై పది సెకన్ల లోపు! | Iravai lo pandommidi orderlu correct, prati reply padi secondla lopu! |
 | 4 | AI | అయితే మూడు బ్రెయిన్లకీ ఒకే టెస్ట్. [1] మీ ఇరవై ఆర్డర్లు. | Ayite moodu brainlakee oke test. Mee iravai orderlu. |

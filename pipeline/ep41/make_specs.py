@@ -14,11 +14,11 @@ R = ROOT / "reels"
 # the pass-mark notepad, "test": the test card, "chat": the shop's WhatsApp, "telugu": the Telugu-typed orders card).
 # prop: what the line brings on (ChooseCrayon.tsx).
 LINES = {
-    1: ("ravi", "wide", "hook", "Same reply to every order?! [1] I'm putting in the biggest brain!",
-        "అన్ని ఆర్డర్లకీ ఒకటే రిప్లై?! [1] అన్నిటికన్నా పెద్ద బ్రెయిన్ పెడతా!"),
+    1: ("ravi", "wide", "hook", "Same reply, order after order?! [1] I'm putting in the biggest brain!",
+        "ఆర్డర్ ఆర్డర్ కీ ఒకటే రిప్లై?! [1] అన్నిటికన్నా పెద్ద బ్రెయిన్ పెడతా!"),   # render review: "every order" clashed with its 8 of 20
     2: ("ai", "pass", "pass", "Biggest for which job, anna? [1] Write the pass mark first.",
         "ఏ పనికి పెద్దది అన్నా? | [1] ముందు పాస్ మార్క్ రాయండి."),
-    3: ("ravi", "pass", "marks", "Nineteen of twenty orders right, [1] every reply under ten seconds!",
+    3: ("ravi", "pass", "marks", "Nineteen of twenty orders right! [1] And every reply under ten seconds!",   # render review: "right, every reply" was heard "write every reply"
         "ఇరవై లో పందొమ్మిది ఆర్డర్లు కరెక్ట్, [1] ప్రతి రిప్లై పది సెకన్ల లోపు!"),
     4: ("ai", "test", "test", "Then all three brains take one test: [1] your twenty orders.",
         "అయితే మూడు బ్రెయిన్లకీ ఒకే టెస్ట్. | [1] మీ ఇరవై ఆర్డర్లు."),
@@ -42,11 +42,11 @@ LINES = {
 }
 TTS_EN = {9: "Two liters of curd?!"}   # spoken forms (Parler reads "liters" more cleanly)
 SHOW = {   # captions with digits
-    3: "19 of 20 orders right, every reply under 10 seconds!", 4: "Then all three brains take one test: your 20 orders.",
+    3: "19 of 20 orders right! And every reply under 10 seconds!", 4: "Then all three brains take one test: your 20 orders.",
     6: "The middle one passed. 19 of 20, all under 5 seconds.", 8: "16 of 20: it turned 2 curds into 2 litres! And one reply took 11 seconds.",
 }
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
-    1: "The same reply to every order?! I'll put in the biggest brain!", 2: "Big for which job, anna? First write the pass mark.",
+    1: "The same reply, order after order?! I'll put in the biggest brain!", 2: "Big for which job, anna? First write the pass mark.",
     3: "19 of 20 orders correct, every reply under 10 seconds!", 4: "Then one test for all three brains. Your 20 orders.",
     5: "Easy! The big one wins!", 6: "The middle one passes. 19 of 20, under 5 seconds.", 7: "Not the big one?!",
     8: "16 of 20. It made 2 curd cups into 2 litres! 11 seconds for one reply.", 9: "Litres of curd?!",
@@ -66,14 +66,17 @@ TEMPO_LINE_TE = {}
 # slam back to frame 1. The scenes step up.
 SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.25, "tail": 0.0}),
           ("s_b", (6, 7, 8, 9), {"boost": 1.15, "drop_pre": [[0, 0.0, 1.4]], "tail": 0.1}),   # the bed out after the quiz count
-          ("s_c", (10, 11, 12), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "tail": 0.1}),
-          ("s_d", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.2, "tail": 0.0})]
+          ("s_c", (10, 11), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "tail": 0.1}),
+          ("s_e", (12,), {"pre": 0.9, "boost": 1.15, "drop_pre": [[0, 0.4, 0.5]], "tail": 0.1}),   # render review: the sugar reply got no hit: the order
+          # comes up on the cut, the bed stops, the reply lands with a hit, then Ravi
+          ("s_d", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.2,
+                                     "drop_pre": [[3, 0.0, 0.8]], "tail": 0.0})]   # render review: no lift into the loop line: the bed out under the riser
 GAP = {1: 0.15, 2: 0.2, 3: 0.2, 4: 0.2, 5: 4.8, 6: 0.25, 7: 0.15, 8: 0.25, 9: 0.25, 10: 0.35, 11: 0.45, 12: 0.25, 13: 0.2, 14: 0.2, 15: 1.0}   # 5: the quiz holds 4.8 s (Creative 11); 15: the riser into the last line sits in the gap
 GAP_TE = {}
 GAIN = {16: 1.0}
 GAIN_TE = {}
 FLAGS_TE = {"s_d": {"boost": 1.4}}   # EP40: a louder last-scene bed buried Telugu words; check the lines after
-YT = {"s_a": "Which brain do I keep?", "s_b": "Not the biggest", "s_c": "The smallest that passes", "s_d": "New job, new test"}
+YT = {"s_a": "Which brain do I keep?", "s_b": "Not the biggest", "s_c": "The smallest that passes", "s_e": "Half a kilo", "s_d": "New job, new test"}
 MARK = re.compile(r"\[\d+\]\s*")
 
 
