@@ -67,7 +67,7 @@ The user's ask (Oct 20): the daily episode covers the whole syllabus, plus weekl
 
 | IST day | Slot | Next item from | Posted |
 |---|---|---|---|
-| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP41 is next (queue 043), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
+| Sun, Mon, Tue, Wed, Fri | Syllabus episode, as a teaching skit (steps 1-8 below) | `series/SYLLABUS.md` order: EP42 is next (queue 045; 043 is the quiz q04), up to EP58 (queue 062); then the use cases UC01-UC24 (queue 064-087), each remade as a skit in its slot. Quiz reels (q04-q06) stay as made. | in serial order (`out/UPLOAD_ORDER.md`) |
 | Thu | HOW TO (see "Thursday: HOW TO") | `series/HOWTO.md`, the first "planned" row whose "Needs" are out | the day it is made |
 | Sat | AI WEEKLY (see "Saturday: AI WEEKLY") | `news/README.md`, "Weekly edition" | the day it is made |
 
@@ -78,7 +78,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042); next EP41 "How to choose the right model", queue 043). The skit replaces the old
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044); next EP42 "Bias & fairness", queue 045, Season 5). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
@@ -521,3 +521,11 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   Telugu "-మనండి" endings compress ("కోట్ చేయమనండి" heard "cheye-maindi"); "చేయమని చెప్పండి" kept "quote" audible. The
   pack's Telugu transcript showed a stutter ("chese-je-je") that the per-line check of the final mix did not: check
   per line before re-voicing. Whisper-hi writes ఫ as प in some takes ("pix"); that is its spelling, not the voice.
+- EP41 lessons (Oct 28): write the demo's pass mark into the script and commit it before any model runs (the episode's
+  rule, shown in our own test). An automatic "item + quantity" check that also reads a few characters after the item
+  passed "Coconut oil, 2 kg onion" on the next item's "2": read only up to the next comma, and read every reply by hand
+  anyway (the big brain's "2 liters of curd" passed the word check). Parler's Ravi said "Litres of curd?!" as "lighters"
+  four times: "Two liters of curd?!" (spelled "liters" for the voice) came out clean. "...orders right, every reply"
+  was heard "write every reply": end the sentence ("right! And every reply..."). The Telugu stutter check flags an
+  intended repeat ("ఆర్డర్ ఆర్డర్ కీ"): pick that take by its transcript. A per-line Telugu window can hallucinate a
+  loop ("మీ వవవవ"): transcribe the take on its own before re-voicing. The quiz's 4.8 s hold also works with four options.
