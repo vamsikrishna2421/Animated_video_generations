@@ -1,0 +1,358 @@
+{
+ "model": "Qwen/Qwen2.5-1.5B-Instruct-GGUF (q4_k_m)",
+ "size": "1.5B",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "offline": true
+ },
+ "pass": {
+  "replies": "every item with its right quantity in at least 19 of the 20 replies, and every reply finished in under 10 seconds (EP39: the customer gave up at 17 s)",
+  "bills": "the right total on all 20 bills (it is money: no wrong bill)"
+ },
+ "system": "You are the WhatsApp assistant of a small grocery shop (a kirana shop in Hyderabad). Reply to the customer politely in simple English: confirm each item and say it will be delivered within 30 minutes. No prices. Reply in 2 short lines.",
+ "decoding": "greedy (temperature 0), max 80 tokens, llama.cpp via llama-cpp-python, 4 threads, context 4096",
+ "replies": {
+  "rows": [
+   {
+    "order": "anna 2 kg tomato, 1 dozen eggs pls",
+    "reply": "Confirmed, 2 kg tomato and 1 dozen eggs will be delivered within 30 minutes.",
+    "seconds": 2.33,
+    "tokens": 20,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 kg rice, 1 kg toor dal, 2 milk packets",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.9,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "3 bath soaps and 1 detergent powder",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.49,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "half kg sugar and one tea powder",
+    "reply": "Sure, half a kilogram of sugar and one tea packet will be delivered within 30 minutes.",
+    "seconds": 2.19,
+    "tokens": 21,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "2 bread 4 biscuits",
+    "reply": "Confirming your order. Bread and biscuits will be delivered within 30 minutes.",
+    "seconds": 1.64,
+    "tokens": 17,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "1 coconut oil, 2 kg onion, 1 kg potato",
+    "reply": "Confirming your order. We will deliver your items within 30 minutes.",
+    "seconds": 1.67,
+    "tokens": 16,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 curd 2 milk",
+    "reply": "Confirming your order. It will be delivered within 30 minutes.",
+    "seconds": 1.5,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "5 kg rice please",
+    "reply": "5 kg rice, will be delivered within 30 minutes.",
+    "seconds": 1.29,
+    "tokens": 13,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 doz eggs, 1 bread, 2 milk, 1 curd",
+    "reply": "Confirming your order. Eggs, bread, milk, and curd will be delivered within 30 minutes.",
+    "seconds": 1.92,
+    "tokens": 23,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 kg dal and 2 kg sugar",
+    "reply": "Confirming your order for 2 kg dal and 2 kg sugar. It will be delivered within 30 minutes.",
+    "seconds": 2.27,
+    "tokens": 25,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "half kg tomato, 1 kg onion",
+    "reply": "Tomato half kg, onion 1 kg. Delivery within 30 minutes.",
+    "seconds": 1.78,
+    "tokens": 17,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "3 biscuits, 1 tea powder, 1 kg sugar",
+    "reply": "Sure, we'll have those ready for you. Your order will be delivered within 30 minutes.",
+    "seconds": 1.78,
+    "tokens": 21,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 coconut oil",
+    "reply": "2 coconut oil will be delivered within 30 minutes.",
+    "seconds": 1.32,
+    "tokens": 12,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 detergent, 2 soap, 1 kg potato",
+    "reply": "Confirming your order. We will deliver your items within 30 minutes.",
+    "seconds": 1.62,
+    "tokens": 16,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "4 milk packets and 2 bread",
+    "reply": "Sure, we'll have those ready in 30 minutes.",
+    "seconds": 1.35,
+    "tokens": 13,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 dozen eggs",
+    "reply": "2 dozen eggs will be delivered within 30 minutes.",
+    "seconds": 1.35,
+    "tokens": 12,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 kg each tomato onion potato rice",
+    "reply": "Confirm your order. We'll deliver within 30 minutes.",
+    "seconds": 1.37,
+    "tokens": 13,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "3 kg sugar, 2 tea powder",
+    "reply": "Sure, we'll have your 3 kg sugar and 2 tea powder ready within 30 minutes.",
+    "seconds": 2.05,
+    "tokens": 22,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 curd 1 bread 5 biscuits",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.59,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 kg rice, 1 kg dal, 1 coconut oil, 2 soaps",
+    "reply": "Sure, we'll have those items ready for you. They'll be delivered within 30 minutes.",
+    "seconds": 1.91,
+    "tokens": 21,
+    "auto_ok": false,
+    "ok": false
+   }
+  ],
+  "right": 8,
+  "of": 20,
+  "slowest_s": 2.33,
+  "median_s": 1.67,
+  "under_10s": 20
+ },
+ "telugu": {
+  "rows": [
+   {
+    "order": "anna 2 kg tomatolu, 1 dozen guddlu pls",
+    "reply": "Confirmed, 2 kg tomatoes and 1 dozen gudlu will be delivered within 30 minutes.",
+    "seconds": 2.2,
+    "tokens": 22,
+    "auto_ok": false,
+    "ok": true
+   },
+   {
+    "order": "1 kg biyyam, 1 kg kandi pappu, 2 paala packets",
+    "reply": "Confirming your order. Your items will be delivered within 30 minutes.",
+    "seconds": 1.73,
+    "tokens": 16,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "3 sabbulu and 1 surf podi",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.98,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "ara kilo panchadara and okati tea podi",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.61,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 bread 4 biscuits",
+    "reply": "Confirming your order. Bread and biscuits will be delivered within 30 minutes.",
+    "seconds": 1.59,
+    "tokens": 17,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "1 kobbari nune, 2 kg ullipayalu, 1 kg bangaladumpa",
+    "reply": "Confirm your order. It will be delivered within 30 minutes.",
+    "seconds": 1.86,
+    "tokens": 14,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 perugu 2 paalu",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.52,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "5 kg biyyam please",
+    "reply": "5 kg biyyam, it will be delivered within 30 minutes.",
+    "seconds": 1.77,
+    "tokens": 16,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 doz guddlu, 1 bread, 2 paalu, 1 perugu",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.55,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 kg pappu and 2 kg panchadara",
+    "reply": "Confirm your order. It will be delivered within 30 minutes.",
+    "seconds": 1.63,
+    "tokens": 14,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "ara kilo tomatolu, 1 kg ullipayalu",
+    "reply": "Sure, we have your items ready. They will be delivered within 30 minutes.",
+    "seconds": 1.82,
+    "tokens": 18,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "3 biscuits, 1 tea podi, 1 kg panchadara",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.64,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 kobbari nune",
+    "reply": "2 kobbari nune will be delivered within 30 minutes.",
+    "seconds": 1.49,
+    "tokens": 15,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 surf, 2 sabbulu, 1 kg bangaladumpa",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.55,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "4 paala packets and 2 bread",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.55,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 dozen guddlu",
+    "reply": "2 dozen guddlu, we will deliver within 30 minutes.",
+    "seconds": 1.46,
+    "tokens": 15,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "tomatolu ullipayalu bangaladumpa biyyam tala okka kilo",
+    "reply": "Tomatolu okka kilo biyyam tala okka kilo. Tum biyyam tala okka kilo biyyam tala okka kilo.",
+    "seconds": 2.88,
+    "tokens": 38,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "3 kg panchadara, 2 tea podi",
+    "reply": "Confirm your order, 3 kg panchadara and 2 tea podi. We will deliver within 30 minutes.",
+    "seconds": 2.19,
+    "tokens": 27,
+    "auto_ok": true,
+    "ok": true
+   },
+   {
+    "order": "1 perugu 1 bread 5 biscuits",
+    "reply": "Sure, we'll have those ready for you within 30 minutes.",
+    "seconds": 1.42,
+    "tokens": 15,
+    "auto_ok": false,
+    "ok": false
+   },
+   {
+    "order": "2 kg biyyam, 1 kg pappu, 1 kobbari nune, 2 sabbulu",
+    "reply": "Confirm your order. It will be delivered within 30 minutes.",
+    "seconds": 1.5,
+    "tokens": 14,
+    "auto_ok": false,
+    "ok": false
+   }
+  ],
+  "right": 5,
+  "of": 20,
+  "slowest_s": 2.88,
+  "median_s": 1.63,
+  "under_10s": 20
+ },
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "offline": true
+ }
+}
