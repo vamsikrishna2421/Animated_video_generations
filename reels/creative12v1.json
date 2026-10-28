@@ -166,7 +166,7 @@
      "text": "The AI reads every word, even the white ones. <pause 0.25> [1] Hidden keywords look like real skills.",
      "show": "The AI reads every word, even the white ones. Hidden keywords look like real skills.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.4,
      "tempo": 1.22,
      "tts": "The AI reads every word, even the white ones.",
      "file2": "05b_gopi.wav",
@@ -180,7 +180,7 @@
      "text": "Out!",
      "show": "Out!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.75,
      "tempo": 1.2,
      "gain_db": 0.5
     }
@@ -229,32 +229,31 @@
      "show": "About 1 resume in 100 has hidden text, says a Duke study.",
      "maxgap": 0.28,
      "gap": 0.2,
-     "tempo": 1.22,
+     "tempo": 1.28,
      "gain_db": 0.5
     },
     {
      "who": "rekha",
      "file": "09_rekha.wav",
-     "text": "I tested his resume ten times. <pause 0.25> [1] Twenty-five plain, seventy-five with hidden keywords.",
-     "show": "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
+     "text": "Plain: twenty-five. [2] Hidden order: thirty-five. <pause 0.25> [1] Hidden keywords: seventy-five!",
+     "show": "Plain: 25. Hidden order: 35... Hidden keywords: 75!",
      "maxgap": 0.28,
      "gap": 0.25,
-     "tempo": 1.2,
-     "tts": "I tested his resume ten times.",
+     "tempo": 1.3,
+     "tts": "Plain: twenty-five. Hidden order: thirty-five.",
      "file2": "09b_rekha.wav",
-     "tts2": "Twenty-five plain, seventy-five with hidden keywords.",
+     "tts2": "Hidden keywords: seventy-five!",
      "pause": 0.25,
      "gain_db": 0.5
     },
     {
      "who": "rekha",
      "file": "10_rekha.wav",
-     "text": "The popular fix: [1] the resume is data, not instructions.",
-     "show": "The popular fix: the resume is data, not instructions.",
+     "text": "The popular fix: [1] tell it to flag any orders inside the resume.",
+     "show": "The popular fix: tell it to flag any orders inside the resume.",
      "maxgap": 0.28,
      "gap": 4.2,
-     "tempo": 1.2,
-     "nocap": true,
+     "tempo": 1.26,
      "gain_db": 0.5
     }
    ]
@@ -264,6 +263,7 @@
    "type": "sk_cricket",
    "tail": 0.0,
    "outro": true,
+   "pre": 0.3,
    "boost": 1.5,
    "rise": 1.2,
    "drop_pre": [
@@ -314,15 +314,15 @@
      "text": "Seventy! [1] And not one flag in ten!",
      "show": "70! And not one flag in 10!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.5,
      "tempo": 1.25,
      "gain_db": 0.5
     },
     {
      "who": "gopi",
      "file": "12_gopi.wav",
-     "text": "Keywords aren't instructions. [1] It reads the words, not the colours.",
-     "show": "Keywords aren't instructions. It reads the words, not the colours.",
+     "text": "Keywords aren't orders. [1] It reads the words, not the colours.",
+     "show": "Keywords aren't orders. It reads the words, not the colours.",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.22,
@@ -331,23 +331,23 @@
     {
      "who": "rekha",
      "file": "13_rekha.wav",
-     "text": "If a score doesn't match what I can read, [1] I select all.",
-     "show": "If a score doesn't match what I can read, I select all.",
+     "text": "Before I shortlist anyone: [1] select all, copy, paste in Notepad.",
+     "show": "Before I shortlist anyone: select all, copy, paste in Notepad.",
      "maxgap": 0.28,
-     "gap": 0.9,
-     "tempo": 1.2,
+     "gap": 0.85,
+     "tempo": 1.32,
      "nocap": true,
      "gain_db": 0.5
     },
     {
      "who": "raju",
      "file": "14_raju.wav",
-     "text": "And Bunty's interview? [1] \"Write Python,\" and he opens M S Word!",
-     "show": "And Bunty's interview? \"Write Python,\" and he opens MS Word!",
+     "text": "And at a company that didn't check? [1] \"Write Python,\" and he opens M S Word!",
+     "show": "And at a company that didn't check? \"Write Python,\" and he opens MS Word!",
      "maxgap": 0.28,
-     "gap": 0.16,
-     "tempo": 1.25,
-     "tts": "And Bunty's interview? \"Write Python,\" and he opens M S Word!",
+     "gap": 0.5,
+     "tempo": 1.3,
+     "tts": "And at a company that didn't check? \"Write Python,\" and he opens M S Word!",
      "gain_db": 0.5
     }
    ]

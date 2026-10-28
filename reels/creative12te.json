@@ -156,7 +156,7 @@
      "who": "raju",
      "file": "04_raju.wav",
      "text": "సెలెక్ట్ ఆల్, నోట్ ప్యాడ్ లో పేస్ట్... [1] అదిగో! తెల్ల అక్షరాలు, రెజ్యూమ్ లో దాచాడు!",
-     "show": "Select all, paste in Notepad... There! White letters, hidden in the resume!",
+     "show": "Select all, paste in Notepad... There! White text, hidden in the resume!",
      "maxgap": 0.28,
      "gap": 0.15,
      "tempo": 1.18,
@@ -168,7 +168,7 @@
      "text": "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా. <pause 0.25> [1] దాచిన కీవర్డ్స్ నిజమైన స్కిల్స్ లా కనిపిస్తాయి.",
      "show": "That screening tool reads every word, even the white ones. Hidden keywords look like real skills.",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.4,
      "tempo": 1.15,
      "tts": "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా.",
      "file2": "05b_gopi.wav",
@@ -182,7 +182,7 @@
      "text": "ఇది ఔట్!",
      "show": "That's out!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.75,
      "tempo": 1.15,
      "gain_db": 0.5
     }
@@ -229,7 +229,7 @@
      "who": "gopi",
      "file": "08_gopi.wav",
      "text": "డ్యూక్ యూనివర్సిటీ వాళ్ళు చూశారు: [1] వంద రెజ్యూమ్ లలో ఒకదాంట్లో దాచిన అక్షరాలు!",
-     "show": "Duke University looked: 1 in 100 resumes had hidden letters!",
+     "show": "A Duke University study: 1 in 100 resumes had hidden text!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.15,
@@ -238,26 +238,25 @@
     {
      "who": "rekha",
      "file": "09_rekha.wav",
-     "text": "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా. <pause 0.25> [1] మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు.",
-     "show": "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
+     "text": "మామూలుగా ఇరవై ఐదు. [2] దాచిన ఆర్డర్ తో ముప్పై ఐదు. <pause 0.25> [1] దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు!",
+     "show": "Plain: 25. With a hidden order: 35... With hidden keywords: 75!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.15,
-     "tts": "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా.",
+     "tts": "మామూలుగా ఇరవై ఐదు. దాచిన ఆర్డర్ తో ముప్పై ఐదు.",
      "file2": "09b_rekha.wav",
-     "tts2": "మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు.",
+     "tts2": "దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు!",
      "pause": 0.25,
      "gain_db": 0.5
     },
     {
      "who": "rekha",
      "file": "10_rekha.wav",
-     "text": "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ డేటా మాత్రమే, ఆర్డర్లు కాదు.",
-     "show": "The popular fix: the resume is data, not instructions.",
+     "text": "పాపులర్ ఫిక్స్: [1] రెజ్యూమ్ లో ఆర్డర్లు ఉంటే ఫ్లాగ్ చేయమని చెప్పడం.",
+     "show": "The popular fix: telling it to flag any orders in the resume.",
      "maxgap": 0.28,
      "gap": 4.2,
      "tempo": 1.15,
-     "nocap": true,
      "gain_db": 0.5
     }
    ]
@@ -267,6 +266,7 @@
    "type": "sk_cricket",
    "tail": 0.0,
    "outro": true,
+   "pre": 0.3,
    "boost": 1.4,
    "rise": 1.2,
    "drop_pre": [
@@ -318,14 +318,14 @@
      "text": "డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!",
      "show": "70! Not even one flag in 10!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.5,
      "tempo": 1.18,
      "gain_db": 0.5
     },
     {
      "who": "gopi",
      "file": "12_gopi.wav",
-     "text": "కీవర్డ్స్ ఆర్డర్లు కాదు. [1] అది పదాలు చదువుతుంది, రంగులు కాదు.",
+     "text": "కీవర్డ్స్ ఆర్డర్లు కాదు. [1] అది పదాలు చదువుతుంది, కలర్స్ కాదు.",
      "show": "Keywords aren't orders. It reads the words, not the colours.",
      "maxgap": 0.28,
      "gap": 0.25,
@@ -335,10 +335,10 @@
     {
      "who": "rekha",
      "file": "13_rekha.wav",
-     "text": "స్కోర్ కి, కనిపించే దానికి మ్యాచ్ కాకపోతే, [1] సెలెక్ట్ ఆల్ చేస్తా.",
-     "show": "If the score doesn't match what I can see, I select all.",
+     "text": "ఎవరినైనా షార్ట్ లిస్ట్ చేసే ముందు: [1] సెలెక్ట్ ఆల్, కాపీ, నోట్ ప్యాడ్ లో పేస్ట్.",
+     "show": "Before I shortlist anyone: select all, copy, paste in Notepad.",
      "maxgap": 0.28,
-     "gap": 0.9,
+     "gap": 0.85,
      "tempo": 1.15,
      "nocap": true,
      "gain_db": 0.5
@@ -346,10 +346,10 @@
     {
      "who": "raju",
      "file": "14_raju.wav",
-     "text": "మరి బంటీ ఇంటర్వ్యూ? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ ఓపెన్ చేశాడు!",
-     "show": "And Bunty's interview? Asked to write Python, he opened MS Word!",
+     "text": "చెక్ చేయని కంపెనీలో? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ తెరిచాడు!",
+     "show": "At a company that didn't check? Asked to write Python, he opened MS Word!",
      "maxgap": 0.28,
-     "gap": 0.16,
+     "gap": 0.5,
      "tempo": 1.18,
      "gain_db": 0.5
     }

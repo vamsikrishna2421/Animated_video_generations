@@ -59,19 +59,22 @@ MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("ms", "m", "s"), ("wor
                6: [("out",)],
                7: [("anyone",), ("really",)],
                8: [("one", "1"), ("resume",), ("hundred", "100"), ("hidden",), ("duke",)],
-               9: [("tested",), ("resume",), ("ten", "10")], "9b": [("twenty", "25"), ("plain",), ("seventy", "75"), ("keywords", "keyword")],
-               10: [("popular",), ("fix",), ("resume",), ("data",), ("instructions",)],
+               9: [("plain", "plane"), ("twenty", "25"), ("order",), ("thirty", "35")], "9b": [("hidden",), ("keywords", "keyword"), ("seventy", "75")],
+               10: [("popular",), ("fix",), ("flag",), ("orders", "order"), ("resume",)],
                11: [("seventy", "70"), ("flag",), ("ten", "10")],
-               12: [("keywords", "keyword"), ("instructions",), ("words",), ("colours", "colors", "colour", "color")],
-               13: [("score",), ("match",), ("read",), ("select",)],
-               14: [("bunty", "bunny", "banty", "bunti"), ("interview",), ("python",), ("word",)]},
+               12: [("keywords", "keyword"), ("orders", "order"), ("words",), ("colours", "colors", "colour", "color")],
+               13: [("shortlist", "short"), ("select",), ("copy",), ("paste",), ("notepad", "note")],
+               14: [("company",), ("check",), ("python",), ("word",)]},
         "te": {8: [("रेज्यू", "रज्यू", "रेजू", "रिज्यू", "रेज़्यू", "रेजु")],   # the first take: "वंदर जुमललू"
-               10: [("आर्डर", "अडर", "आडर", "ऑर्डर", "अर्डर")], 12: [("आर्डर", "अडर", "आडर", "ऑर्डर", "अर्डर"), ("रंग",)],   # "కమాండ్స్" was heard "कमेंट्स" (comments): "ఆర్డర్లు"
-               13: [("कपोते", "कपोथे", "कपोटे", "कापोते", "कपोथ", "कपोत")]}}   # the first take: "काखाखा फोटे"
+               9: [("रव", "इर्व", "25"), ("मुप", "मूप", "35")], "9b": [("डेब्ब", "डब्ब", "देब्ब", "75")],
+               10: [("आर्डर", "अडर", "आडर", "ऑर्डर", "अर्डर"), ("फ्लै", "फ्ला", "फ्ले", "फ्लग")],   # "కమాండ్స్" was heard "कमेंट्स" (comments): "ఆర్డర్లు"
+               12: [("आर्डर", "अडर", "आडर", "ऑर्डर", "अर्डर"), ("कलर", "कलार", "कलूर")],   # "కలర్స్": one slipped letter in the Telugu word for colours is a swear word
+               13: [("शॉर्ट", "शार्ट", "षार्ट", "शोर्ट", "शॉट"), ("लेक्ट",), ("कॉपी", "कापी", "कोपी"), ("पेस्ट", "पेस्त")],
+               14: [("चेक",), ("पैथ", "पाइथ", "पायथ"), ("वर्ड", "वर्ड़", "वड"), ("तेरि", "तेरी", "तरि")]}}
 # lines whose judge text needs digits (Whisper writes "72", "10")
 JUDGE_TEXT = {1: "Bunty, B Com, M S Word, scored 75 for a Python job!", 2: "75?! His resume says M S Word and typing!",
-              8: "About 1 resume in 100 has hidden text, says a Duke study.", 9: "I tested his resume 10 times.",
-              "9b": "25 plain, 75 with hidden keywords.", 11: "70! And not one flag in 10!"}
+              8: "About 1 resume in 100 has hidden text, says a Duke study.", 9: "Plain: 25. Hidden order: 35.",
+              "9b": "Hidden keywords: 75!", 11: "70! And not one flag in 10!"}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
 GATE = set()   # characters whose Fish takes carry a hum between words (filled from the first takes)

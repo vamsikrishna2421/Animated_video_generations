@@ -17,29 +17,29 @@
    368
   ],
   [
-   1267,
-   1309
+   1256,
+   1298
   ]
  ],
  "musicBoosts": [
   [
    0,
-   716,
+   736,
    1.25
   ],
   [
-   716,
-   1309,
+   736,
+   1288,
    1.15
   ],
   [
-   1309,
-   1785,
+   1289,
+   1800,
    1.5
   ],
   [
-   1309,
-   1785,
+   1289,
+   1800,
    1.2,
    1
   ]
@@ -47,7 +47,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1785,
+ "totalFrames": 1800,
  "music": "reel/creative12v1/score.wav",
  "scenes": [
   {
@@ -286,7 +286,7 @@
     "hardCuts": true
    },
    "from": 368,
-   "frames": 348,
+   "frames": 368,
    "lines": [
     {
      "who": "raju",
@@ -462,13 +462,13 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative12v1/line_06.wav",
-     "from": 308,
+     "from": 314,
      "frames": 15,
      "words": [
       {
        "w": "Out!",
-       "from": 308,
-       "to": 317
+       "from": 314,
+       "to": 323
       }
      ],
      "cues": {}
@@ -509,8 +509,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 716,
-   "frames": 593,
+   "from": 736,
+   "frames": 552,
    "lines": [
     {
      "who": "gopi",
@@ -519,7 +519,7 @@
      "sub": null,
      "audio": "reel/creative12v1/line_07.wav",
      "from": 11,
-     "frames": 119,
+     "frames": 113,
      "words": [
       {
        "w": "About",
@@ -534,56 +534,56 @@
       {
        "w": "resume",
        "from": 23,
-       "to": 34
+       "to": 33
       },
       {
        "w": "in",
-       "from": 34,
-       "to": 39
+       "from": 33,
+       "to": 38
       },
       {
        "w": "100",
-       "from": 39,
-       "to": 45
+       "from": 38,
+       "to": 44
       },
       {
        "w": "has",
-       "from": 45,
-       "to": 52
+       "from": 44,
+       "to": 50
       },
       {
        "w": "hidden",
-       "from": 52,
-       "to": 69
+       "from": 50,
+       "to": 66
       },
       {
        "w": "text,",
-       "from": 69,
-       "to": 78
+       "from": 66,
+       "to": 75
       },
       {
        "w": "says",
-       "from": 78,
-       "to": 101
+       "from": 75,
+       "to": 97
       },
       {
        "w": "a",
-       "from": 101,
-       "to": 104
+       "from": 97,
+       "to": 100
       },
       {
        "w": "Duke",
-       "from": 104,
-       "to": 112
+       "from": 100,
+       "to": 108
       },
       {
        "w": "study.",
-       "from": 112,
-       "to": 129
+       "from": 108,
+       "to": 124
       }
      ],
      "cues": {
-      "1": 82
+      "1": 79
      }
     },
     {
@@ -592,72 +592,53 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative12v1/line_08.wav",
-     "from": 135,
-     "frames": 189,
+     "from": 130,
+     "frames": 154,
      "words": [
       {
-       "w": "I",
-       "from": 136,
-       "to": 140
+       "w": "Plain:",
+       "from": 130,
+       "to": 150
       },
       {
-       "w": "tested",
-       "from": 140,
-       "to": 161
+       "w": "25.",
+       "from": 150,
+       "to": 159
       },
       {
-       "w": "his",
-       "from": 161,
-       "to": 174
+       "w": "Hidden",
+       "from": 159,
+       "to": 180
       },
       {
-       "w": "resume",
-       "from": 174,
-       "to": 198
+       "w": "order:",
+       "from": 180,
+       "to": 201
       },
       {
-       "w": "10",
-       "from": 213,
-       "to": 217
+       "w": "35...",
+       "from": 201,
+       "to": 213
       },
       {
-       "w": "times...",
-       "from": 217,
-       "to": 239
+       "w": "Hidden",
+       "from": 222,
+       "to": 240
       },
       {
-       "w": "25",
-       "from": 239,
-       "to": 244
+       "w": "keywords:",
+       "from": 240,
+       "to": 276
       },
       {
-       "w": "plain,",
-       "from": 244,
-       "to": 261
-      },
-      {
-       "w": "75",
-       "from": 261,
-       "to": 269
-      },
-      {
-       "w": "with",
-       "from": 269,
-       "to": 281
-      },
-      {
-       "w": "hidden",
-       "from": 281,
-       "to": 297
-      },
-      {
-       "w": "keywords.",
-       "from": 297,
-       "to": 316
+       "w": "75!",
+       "from": 276,
+       "to": 283
       }
      ],
      "cues": {
-      "1": 213
+      "2": 170,
+      "1": 222
      }
     },
     {
@@ -666,59 +647,73 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative12v1/line_09.wav",
-     "from": 331,
-     "frames": 128,
+     "from": 291,
+     "frames": 132,
      "words": [
       {
        "w": "The",
-       "from": 332,
-       "to": 337
+       "from": 291,
+       "to": 298
       },
       {
        "w": "popular",
-       "from": 337,
-       "to": 349
+       "from": 298,
+       "to": 311
       },
       {
        "w": "fix:",
-       "from": 349,
-       "to": 372
+       "from": 311,
+       "to": 332
+      },
+      {
+       "w": "tell",
+       "from": 332,
+       "to": 340
+      },
+      {
+       "w": "it",
+       "from": 340,
+       "to": 345
+      },
+      {
+       "w": "to",
+       "from": 345,
+       "to": 350
+      },
+      {
+       "w": "flag",
+       "from": 350,
+       "to": 363
+      },
+      {
+       "w": "any",
+       "from": 363,
+       "to": 369
+      },
+      {
+       "w": "orders",
+       "from": 369,
+       "to": 387
+      },
+      {
+       "w": "inside",
+       "from": 387,
+       "to": 398
       },
       {
        "w": "the",
-       "from": 372,
-       "to": 378
-      },
-      {
-       "w": "resume",
-       "from": 378,
-       "to": 388
-      },
-      {
-       "w": "is",
-       "from": 388,
-       "to": 392
-      },
-      {
-       "w": "data,",
-       "from": 392,
+       "from": 398,
        "to": 405
       },
       {
-       "w": "not",
+       "w": "resume.",
        "from": 405,
-       "to": 411
-      },
-      {
-       "w": "instructions.",
-       "from": 411,
-       "to": 451
+       "to": 418
       }
      ],
      "cues": {
-      "1": 372
-     },
-     "nocap": true
+      "1": 332
+     }
     }
    ]
   },
@@ -762,8 +757,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1309,
-   "frames": 476,
+   "from": 1289,
+   "frames": 511,
    "lines": [
     {
      "who": "raju",
@@ -771,47 +766,47 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative12v1/line_10.wav",
-     "from": 0,
+     "from": 9,
      "frames": 68,
      "words": [
       {
        "w": "70!",
-       "from": 1,
-       "to": 8
+       "from": 10,
+       "to": 17
       },
       {
        "w": "And",
-       "from": 8,
-       "to": 24
+       "from": 17,
+       "to": 33
       },
       {
        "w": "not",
-       "from": 24,
-       "to": 32
+       "from": 33,
+       "to": 41
       },
       {
        "w": "one",
-       "from": 32,
-       "to": 39
-      },
-      {
-       "w": "flag",
-       "from": 39,
+       "from": 41,
        "to": 48
       },
       {
-       "w": "in",
+       "w": "flag",
        "from": 48,
-       "to": 54
+       "to": 57
+      },
+      {
+       "w": "in",
+       "from": 57,
+       "to": 63
       },
       {
        "w": "10!",
-       "from": 54,
-       "to": 61
+       "from": 63,
+       "to": 70
       }
      ],
      "cues": {
-      "1": 15
+      "1": 24
      }
     },
     {
@@ -820,62 +815,62 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/creative12v1/line_11.wav",
-     "from": 74,
-     "frames": 109,
+     "from": 92,
+     "frames": 103,
      "words": [
       {
        "w": "Keywords",
-       "from": 74,
-       "to": 86
+       "from": 93,
+       "to": 103
       },
       {
        "w": "aren't",
-       "from": 86,
-       "to": 95
+       "from": 103,
+       "to": 119
       },
       {
-       "w": "instructions.",
-       "from": 95,
-       "to": 123
+       "w": "orders.",
+       "from": 119,
+       "to": 138
       },
       {
        "w": "It",
-       "from": 123,
-       "to": 127
+       "from": 138,
+       "to": 141
       },
       {
        "w": "reads",
-       "from": 127,
-       "to": 135
+       "from": 141,
+       "to": 148
       },
       {
        "w": "the",
-       "from": 135,
-       "to": 140
+       "from": 148,
+       "to": 153
       },
       {
        "w": "words,",
-       "from": 140,
-       "to": 149
+       "from": 153,
+       "to": 170
       },
       {
        "w": "not",
-       "from": 149,
-       "to": 161
+       "from": 170,
+       "to": 174
       },
       {
        "w": "the",
-       "from": 161,
-       "to": 166
+       "from": 174,
+       "to": 179
       },
       {
        "w": "colours.",
-       "from": 166,
-       "to": 178
+       "from": 179,
+       "to": 189
       }
      ],
      "cues": {
-      "1": 123
+      "1": 138
      }
     },
     {
@@ -884,72 +879,62 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative12v1/line_12.wav",
-     "from": 190,
-     "frames": 118,
+     "from": 202,
+     "frames": 134,
      "words": [
       {
-       "w": "If",
-       "from": 191,
-       "to": 199
-      },
-      {
-       "w": "a",
-       "from": 199,
-       "to": 207
-      },
-      {
-       "w": "score",
-       "from": 207,
-       "to": 216
-      },
-      {
-       "w": "doesn't",
-       "from": 216,
-       "to": 227
-      },
-      {
-       "w": "match",
-       "from": 227,
-       "to": 241
-      },
-      {
-       "w": "what",
-       "from": 241,
-       "to": 248
+       "w": "Before",
+       "from": 202,
+       "to": 212
       },
       {
        "w": "I",
-       "from": 248,
-       "to": 250
+       "from": 212,
+       "to": 215
       },
       {
-       "w": "can",
-       "from": 250,
-       "to": 256
+       "w": "shortlist",
+       "from": 215,
+       "to": 229
       },
       {
-       "w": "read,",
-       "from": 256,
-       "to": 264
-      },
-      {
-       "w": "I",
-       "from": 264,
-       "to": 276
+       "w": "anyone:",
+       "from": 229,
+       "to": 245
       },
       {
        "w": "select",
-       "from": 276,
-       "to": 289
+       "from": 245,
+       "to": 265
       },
       {
-       "w": "all.",
-       "from": 289,
-       "to": 303
+       "w": "all,",
+       "from": 265,
+       "to": 278
+      },
+      {
+       "w": "copy,",
+       "from": 278,
+       "to": 295
+      },
+      {
+       "w": "paste",
+       "from": 295,
+       "to": 315
+      },
+      {
+       "w": "in",
+       "from": 315,
+       "to": 319
+      },
+      {
+       "w": "Notepad.",
+       "from": 319,
+       "to": 331
       }
      ],
      "cues": {
-      "1": 264
+      "1": 245
      },
      "nocap": true
     },
@@ -959,62 +944,82 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative12v1/line_13.wav",
-     "from": 335,
-     "frames": 121,
+     "from": 362,
+     "frames": 120,
      "words": [
       {
        "w": "And",
-       "from": 335,
-       "to": 342
+       "from": 362,
+       "to": 367
       },
       {
-       "w": "Bunty's",
-       "from": 342,
-       "to": 354
+       "w": "at",
+       "from": 367,
+       "to": 371
       },
       {
-       "w": "interview?",
-       "from": 354,
-       "to": 378
+       "w": "a",
+       "from": 371,
+       "to": 373
       },
       {
-       "w": "\"Write",
-       "from": 378,
+       "w": "company",
+       "from": 373,
+       "to": 383
+      },
+      {
+       "w": "that",
+       "from": 383,
        "to": 389
       },
       {
-       "w": "Python,\"",
+       "w": "didn't",
        "from": 389,
-       "to": 414
+       "to": 398
+      },
+      {
+       "w": "check?",
+       "from": 398,
+       "to": 417
+      },
+      {
+       "w": "\"Write",
+       "from": 417,
+       "to": 430
+      },
+      {
+       "w": "Python,\"",
+       "from": 430,
+       "to": 449
       },
       {
        "w": "and",
-       "from": 414,
-       "to": 420
+       "from": 449,
+       "to": 454
       },
       {
        "w": "he",
-       "from": 420,
-       "to": 425
+       "from": 454,
+       "to": 458
       },
       {
        "w": "opens",
-       "from": 425,
-       "to": 434
+       "from": 458,
+       "to": 465
       },
       {
        "w": "MS",
-       "from": 434,
-       "to": 439
+       "from": 465,
+       "to": 469
       },
       {
        "w": "Word!",
-       "from": 439,
-       "to": 448
+       "from": 469,
+       "to": 477
       }
      ],
      "cues": {
-      "1": 377
+      "1": 416
      }
     }
    ]
