@@ -1,0 +1,44 @@
+UPLOAD: 044
+VIDEO: 044_ep41_the_biggest_brain.mp4  (teaching skit, about 60 s, AI voices; replaces the older lesson-format 044_ep41_how_to_choose_the_right_ai_model.mp4; send copy: 044_ep41_the_biggest_brain_ig.mp4, about 22 MB). It loops: after "Test again?! Then which brain do I keep?!" the scene slams back to frame 1, three orders with the same canned reply and Ravi holding up the biggest brain.
+
+=== CAPTION ===
+The small AI gave every order the same reply. So Ravi anna grabbed the biggest brain. Wrong question.
+
+Episode 41 of AI From Scratch: how to choose the right AI model
+- "Biggest" isn't a job. Write the pass mark first, before you compare anything (OpenAI's own model guide: "Choose acceptance criteria before comparing models"). Ravi's: 19 of 20 WhatsApp orders with every item and quantity right, every reply under 10 seconds
+- Then the same test for every brain. Our real test, internet cut, his 20 orders, every reply read by hand: the 1.1 GB brain got 8 of 20 (it kept writing "Sure, we'll have those ready for you within 30 minutes."), the 2.1 GB got 19 of 20 with every reply under 5 seconds, the 4.7 GB got 16 of 20 ("2 curd 2 milk" became "2 liters of curd and 2 liters of milk") and one reply took 11 seconds
+- Keep the smallest one that passes: it's faster and needs less memory. Here that's the middle one, not the biggest
+- A different job, a different winner: on Ravi's bills (EP38) the biggest is best, 18 of 20. Still not 20 of 20, so bills still get checked
+- When the job changes, test again. Customers type Telugu words ("ara kilo panchadara and okati tea podi"), and on those 20 orders none of the three passed: 5, 14 and 12 of 20. The middle one confirmed a kilo for half a kilo; the biggest turned "2 perugu 2 paalu" into "2 eggs and 2 bananas"
+- None passes? Change the prompt (for example, give it the Telugu names of your items) or try another brain, then run the same test again
+
+What this means for you:
+1. Before you pick an AI, write down what "good enough" means for your job, with numbers
+2. Give every AI you're considering the same 10-20 real tasks, with the right answers written down first
+3. Keep the smallest, cheapest one that passes. Bigger isn't better at everything
+4. New job, new inputs, new language: test again
+
+Season 4 ends here. Next: EP42 starts Season 5, Responsible AI: bias and fairness.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Which brain passes Ravi's pass mark? A) 1.1 GB, the fast one B) 2.1 GB C) 4.7 GB, the biggest D) none of them. Comment before the answer comes. And: what job would you test an AI on first?
+
+=== HASHTAGS ===
+#AIFromScratch #LearnAI #ChooseAI #LLM #AIForBusiness #LocalAI
+
+=== PINNED_COMMENT ===
+How we tested (run by us): Qwen's own 4-bit GGUF files (Q4_K_M) of Qwen2.5-1.5B, 3B and 7B-Instruct, llama.cpp on a 4-core computer (no graphics card), greedy, the internet cut for every run. The pass mark was written into the test script before any brain ran. The prompt: "You are the WhatsApp assistant of a small grocery shop... confirm each item and say it will be delivered within 30 minutes. No prices. Reply in 2 short lines." 20 orders as typed, then the same 20 with Telugu words in English letters. Every reply read by hand; time = the whole reply. One machine, one prompt, 20 orders: a different prompt or a bigger online model can score differently. That's the point: your numbers belong to your job.
+EP39's 17 seconds was the long reply; with "Reply in 2 short lines." the 4.7 GB brain writes in 6-11 seconds on this machine.
+Sources: OpenAI, "Model selection" (developers.openai.com); Anthropic, "Choosing the right model" (platform.claude.com/docs).
+
+=== COVER ===
+Frame 1: Ravi anna at his counter, arms up, holding a fat "4.7 GB · BIGGEST" brain file; beside him the shop's WhatsApp with three different orders all answered "Sure, we'll have those ready for you within 30 minutes.", circled in red, and "WHICH items??".
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. The shop's WhatsApp shows three different orders, 3 bath soaps and detergent, curd bread and biscuits, milk packets and bread, each answered by the small 1.1 GB AI brain with the same words: "Sure, we'll have those ready for you within 30 minutes." A customer asks "WHICH items??". Ravi anna holds up the biggest brain, 4.7 GB, and says he's putting it in. The shop AI asks: biggest for which job? Write the pass mark first. A notepad, written before the test: 19 of 20 orders right with every item and quantity, every reply under 10 seconds, with OpenAI's line "Choose acceptance criteria before comparing models". All three brains take the same test, Ravi's 20 orders. A quiz asks which brain passes: 1.1 GB, 2.1 GB, 4.7 GB the biggest, or none of them. The answer: the middle one, 19 of 20, every reply under 5 seconds. The biggest got 16 of 20: it turned "2 curd 2 milk" into "2 liters of curd and 2 liters of milk", and one reply took 11 seconds. The small one got 8 of 20. Ravi holds two small curd cups. A rule card: write the pass mark first, one test for every brain, keep the smallest that passes, and a note: on bills, the 4.7 GB is best, 18 of 20. Ravi sets the middle one forever, then a customer types "ara kilo panchadara and okati tea podi" and the reply confirms a kilo of sugar: half a kilo became a kilo. A card of Telugu-typed orders: 5, 14 and 12 of 20, none passes; the biggest turned "2 perugu 2 paalu" into "2 eggs and 2 bananas". The AI: fix the prompt, or try another brain, then test again. Ravi asks which brain he should keep, and the scene slams back to the first frame.
+
+=== SOURCES (for comments) ===
+Demo (run by us): pipeline/ep41/choose_demo.py, results in series/scripts/ep41_demo/ (1.5B.json, 3B.json, 7B.json); the bill test: series/scripts/ep38_demo/.
+OpenAI, "Model selection" (developers.openai.com/api/docs/guides/model-selection): "Choose acceptance criteria before comparing models"; "keep the lightest setting that meets your quality bar".
+Anthropic, "Choosing the right model" (platform.claude.com/docs/en/about-claude/models/choosing-a-model): capabilities, speed and cost; "Create benchmark tests specific to your use case"; "Test with your actual prompts and data."

@@ -1,0 +1,34 @@
+UPLOAD: 044 (YouTube Shorts: upload the same vertical files as Instagram, 044_ep41_the_biggest_brain.mp4 and telugu_page/044_ep41_insta_te.mp4; no landscape version)
+
+########## ENGLISH ##########
+=== TITLE ===
+The Biggest AI Brain Failed Our Shop Test: How to Choose an AI Model (Tested) | AI From Scratch Ep 41 #Shorts
+
+=== DESCRIPTION ===
+Ravi anna's small AI gave every WhatsApp order the same reply, "Sure, we'll have those ready for you within 30 minutes.", so he reached for the biggest brain. Wrong question: biggest for which job? Write the pass mark first (OpenAI's own model guide: "Choose acceptance criteria before comparing models"): 19 of 20 orders with every item and quantity right, every reply under 10 seconds.
+
+Our real test, internet cut, on a 4-core computer (Qwen2.5 1.5B, 3B and 7B, 4-bit, as people run them on a laptop), his 20 orders, every reply read by hand: 8 of 20 for the 1.1 GB brain, 19 of 20 for the 2.1 GB (every reply under 5 s), 16 of 20 for the 4.7 GB ("2 curd 2 milk" became "2 liters of curd and 2 liters of milk", and one reply took 11 s). Keep the smallest one that passes: faster, less memory. On his bills the biggest is best (18 of 20): a different job, a different winner. And when the job changes, test again: on orders typed with Telugu words, none of the three passed (5, 14, 12 of 20).
+
+What it means for you: write down what "good enough" means first, give every AI the same real tasks, keep the smallest one that passes, and test again when the job changes. None passes? Change the prompt or the model, then the same test again.
+
+How we tested (run by us): Qwen's own GGUF files, llama.cpp, greedy, every run offline, the pass mark written into the test before any model ran.
+Sources: OpenAI, "Model selection"; Anthropic, "Choosing the right model".
+
+Next: EP42, bias and fairness (Season 5: Responsible AI).
+
+=== TAGS ===
+choose AI model, which AI to use, model selection, AI evaluation, eval, local AI, Qwen2.5, llama.cpp, WhatsApp bot, AI for business, small language model, AI for beginners, AI From Scratch
+
+########## TELUGU: telugu_page/044_ep41_insta_te.mp4 (YouTube Shorts, same vertical file) ##########
+=== TITLE ===
+Annitikanna Pedda AI Brain Fail: Sarain AI Model Ela Select Cheyyaali? (Test) | AI From Scratch Ep 41 Telugu #Shorts
+
+=== DESCRIPTION ===
+Ravi anna chinna AI prati WhatsApp order ki okate reply ichchindi, anduke aayana annitikanna pedda brain pattukunnaaru. Tappu prashna: ae paniki peddadi? Mundu pass mark raayandi (OpenAI model guide: "Choose acceptance criteria before comparing models"): 20 orders lo 19 lo prati item, quantity correct, prati reply 10 seconds lopu.
+
+Maa real test, internet cut chesi, 4-core computer (Qwen2.5 1.5B, 3B, 7B, 4-bit), aayana 20 orders, prati reply chetitho chadivaam: 1.1 GB 20 lo 8, 2.1 GB 20 lo 19 (5 s lopu), 4.7 GB 20 lo 16 ("2 curd 2 milk" ki "2 liters of curd and 2 liters of milk", oka reply 11 s). Pass ayina vaatilo chinnadi unchandi. Bills lo peddade best (20 lo 18): veru pani, veru winner. Pani maarite malli test: Telugu padaalato type chesina orders lo moodintlo okkati kooda pass avvaledu (5, 14, 12).
+
+Meeku: "saripotundi" ante emito mundu raasi pettandi, prati AI ki ave nijamaina panulu ivvandi, pass ayina vaatilo chinnadi unchandi, pani maarite malli test cheyyandi.
+Test vivaraalu, sources: English description lo unnaayi.
+
+Next: EP42, bias and fairness (Season 5: Responsible AI).

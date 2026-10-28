@@ -1,0 +1,395 @@
+{
+ "id": "ep41v1",
+ "title": "The biggest brain (EP41: how to choose the right model)",
+ "label": "EP41",
+ "banner": "Choosing an AI model",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.5,
+ "musicEndRamp": [
+  0.95,
+  3.5
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_choose",
+   "tail": 0.0,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "pass",
+      "prop": "pass",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "pass",
+      "prop": "marks",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "quiz",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which brain do I keep?",
+     "title": "Which brain do I keep?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "Same reply to every order?! [1] I'm putting in the biggest brain!",
+     "show": "Same reply to every order?! I'm putting in the biggest brain!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "Biggest for which job, anna? [1] Write the pass mark first.",
+     "show": "Biggest for which job, anna? Write the pass mark first.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Nineteen of twenty orders right, [1] every reply under ten seconds!",
+     "show": "19 of 20 orders right, every reply under 10 seconds!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "Then all three brains take one test: [1] your twenty orders.",
+     "show": "Then all three brains take one test: your 20 orders.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "Easy! The biggest one wins!",
+     "show": "Easy! The biggest one wins!",
+     "maxgap": 0.28,
+     "gap": 4.8,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_choose",
+   "tail": 0.1,
+   "boost": 1.15,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     1.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "reveal",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "notbig",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "curd",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "cups",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Not the biggest",
+     "title": "Not the biggest",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "The middle one passed. [1] Nineteen of twenty, all under five seconds.",
+     "show": "The middle one passed. 19 of 20, all under 5 seconds.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "Not the biggest?!",
+     "show": "Not the biggest?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "Sixteen of twenty: it turned two curds into two litres! <pause 0.25> [1] And one reply took eleven seconds.",
+     "show": "16 of 20: it turned 2 curds into 2 litres! And one reply took 11 seconds.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "tts": "Sixteen of twenty: it turned two curds into two litres!",
+     "file2": "08b_ai.wav",
+     "tts2": "And one reply took eleven seconds.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "Litres of curd?!",
+     "show": "Litres of curd?!",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_choose",
+   "tail": 0.1,
+   "lift": 0.8,
+   "pre": 0.35,
+   "boost": 1.15,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "done",
+      "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "chat",
+      "prop": "sugar",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The smallest that passes",
+     "title": "The smallest that passes",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "Keep the smallest one that passes: [1] it's faster and needs less memory.",
+     "show": "Keep the smallest one that passes: it's faster and needs less memory.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.1,
+     "nocap": true,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "The middle one, forever!",
+     "show": "The middle one, forever!",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "Half a kilo became a kilo! [1] It doubled the sugar!",
+     "show": "Half a kilo became a kilo! It doubled the sugar!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_choose",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.35,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "telugu",
+      "prop": "none",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "eggs",
+      "n": 14
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "fix",
+      "n": 15
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 16
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "New job, new test",
+     "title": "New job, new test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "13_ai.wav",
+     "text": "Telugu words are a new job, anna. <pause 0.25> [1] And none of the three passed it.",
+     "show": "Telugu words are a new job, anna. And none of the three passed it.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "tts": "Telugu words are a new job, anna.",
+     "file2": "13b_ai.wav",
+     "tts2": "And none of the three passed it.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "14_ravi.wav",
+     "text": "Perugu became eggs?! [1] So now what?!",
+     "show": "Perugu became eggs?! So now what?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "15_ai.wav",
+     "text": "Fix the prompt, or try another brain. [1] Then test again.",
+     "show": "Fix the prompt, or try another brain. Then test again.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "16_ravi.wav",
+     "text": "Test again?! [1] Then which brain do I keep?!",
+     "show": "Test again?! Then which brain do I keep?!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.15,
+     "gain_db": 1.5
+    }
+   ]
+  }
+ ]
+}
