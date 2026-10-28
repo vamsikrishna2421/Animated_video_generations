@@ -73,7 +73,7 @@ SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.25, "tail": 0.0}),
                                      "drop_pre": [[3, 0.0, 0.8]], "tail": 0.0})]   # render review: no lift into the loop line: the bed out under the riser
 GAP = {1: 0.15, 2: 0.2, 3: 0.2, 4: 0.2, 5: 4.8, 6: 0.25, 7: 0.15, 8: 0.25, 9: 0.25, 10: 0.35, 11: 0.45, 12: 0.25, 13: 0.2, 14: 0.2, 15: 1.0}   # 5: the quiz holds 4.8 s (Creative 11); 15: the riser into the last line sits in the gap
 GAP_TE = {}
-GAIN = {16: 1.0}
+GAIN = {1: 2.0, 16: 1.0}   # 1: the re-voiced hook came out ~3 dB quieter
 GAIN_TE = {}
 FLAGS_TE = {"s_d": {"boost": 1.4}}   # EP40: a louder last-scene bed buried Telugu words; check the lines after
 YT = {"s_a": "Which brain do I keep?", "s_b": "Not the biggest", "s_c": "The smallest that passes", "s_e": "Half a kilo", "s_d": "New job, new test"}
