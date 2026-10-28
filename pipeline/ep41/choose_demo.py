@@ -89,7 +89,8 @@ ORDERS = [
 ]
 # Every reply read by hand: (job, brain, order number 1-20) -> True (every item with its quantity) / False, where the
 # word check below reads it wrong. Filled after the run.
-HAND = {}
+HAND = {("telugu", "1.5B", 1): True,   # "2 kg tomatoes and 1 dozen gudlu": right (the check didn't know the spelling "gudlu")
+        }
 
 
 def auto_ok(reply, items):
