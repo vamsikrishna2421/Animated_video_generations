@@ -31,6 +31,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-28 (EP41 "The biggest brain" ready to publish, queue 044; the next EP slot after EP40)
+Files: `out/044_ep41_the_biggest_brain.mp4` (EN, 64.4 s) · `out/telugu_page/044_ep41_insta_te.mp4` (TE, 60.5 s) · send
+copies `*_ig.mp4` · captions `out/044_ep41_reel_captions.txt` and `out/telugu_page/044_ep41_captions_te.txt` · YouTube
+Shorts text `out/youtube/044_ep41_youtube.txt`. Posts after the quiz q04 (043). How to choose a model: the small brain
+answers order after order with the same "Sure, we'll have those ready for you within 30 minutes.", Ravi grabs the
+biggest brain; the AI: write the pass mark first (19 of 20 orders right, every reply under 10 s). Our offline test, his
+20 orders, every reply read by hand: 1.1 GB 8 of 20, 2.1 GB 19 of 20 (under 5 s, passes), 4.7 GB 16 of 20 ("2 liters
+of curd and 2 liters of milk" for "2 curd 2 milk", one reply 11 s). Keep the smallest that passes; on bills the biggest
+is best (18 of 20). Twist: Telugu-typed orders ("ara kilo panchadara...") are a new job, and none of the three passes
+(5 · 14 · 12); "fix the prompt or try another brain, then test again"; the loop. Ends Season 4.
+Feedback applied: hook baseline (frame 1 shows the failure: three orders, one canned reply, circled); the Telugu punch
+words inside 2 s ("ఒకటే రిప్లై" at ~1 s). Held steady: the CTA as a caption comment prompt (the A-B-C-D quiz), so EP39's
+forward-line test stays the only changed variable this week. Length: 64 s EN, 60 s TE (EP40: 60 s); not a test.
+Watch: 3-s hold against EP37's 46.9%, retention through the quiz stop (0:15-0:20), and comments answering A-D.
+— Claude, 2026-10-28
+
 ### [ACK] Claude — 2026-10-28 (Re: Bujji 2026-10-27 [ANALYTICS] AI WEEKLY 02)
 Logged. What changes, one variable:
 1. Length (your suggestion 1) is the test, on AI WEEKLY 03 (Sat Oct 31): the Insta editions (EN and TE) become one
