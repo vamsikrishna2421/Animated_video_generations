@@ -487,7 +487,7 @@ const StCricket: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#374151"; c.beginPath(); c.moveTo(-320, -40); c.lineTo(320, -40); c.lineTo(360, 0); c.lineTo(-360, 0); c.closePath(); c.fill();
           c.restore();
           if (caught > 0) {   // caught here too: the trick ends OUT everywhere
-            c.save(); c.globalAlpha = clamp(caught * 2); c.translate(W / 2, 700); c.rotate(-0.12); c.scale(1.3 - 0.3 * easeOut(caught), 1.3 - 0.3 * easeOut(caught));
+            c.save(); c.globalAlpha = clamp(caught * 2); c.translate(620, 420); c.rotate(-0.12);   // on the wall: his face and the Word window stay in view c.scale(1.3 - 0.3 * easeOut(caught), 1.3 - 0.3 * easeOut(caught));
             c.strokeStyle = RED; c.lineWidth = 16; rrect(c, -300, -130, 600, 240, 24); c.stroke();
             c.font = SANS(190, 900); c.fillStyle = RED; c.textAlign = "center"; c.fillText("OUT", 0, 60);
             c.restore();
