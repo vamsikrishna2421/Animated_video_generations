@@ -94,6 +94,10 @@ HAND = {("telugu", "1.5B", 1): True,   # "2 kg tomatoes and 1 dozen gudlu": righ
         ("replies", "3B", 17): True,   # "1 kg each of tomato, onion, potato, rice": right
         ("telugu", "3B", 4): False,   # "Kilo panchadara confirmed": half a kilo ("ara kilo") became a kilo
         ("telugu", "3B", 11): False,   # "kilo tomatolu": half a kilo became a kilo
+        ("replies", "7B", 6): False,   # "we'll deliver coconut oil, 2 kg onions...": the coconut oil's "1" left out
+        ("replies", "7B", 7): False,   # "2 liters of curd and 2 liters of milk": units made up (a curd is a 500 g cup, milk a 500 ml packet)
+        ("replies", "7B", 9): False,   # "...two liters of milk...": two 500 ml packets became two litres
+        ("replies", "7B", 17): False,  # "1 kg tomato, 1 kg onion, 1 kg potato, and rice": the rice's 1 kg left out
         }
 
 
