@@ -1,0 +1,379 @@
+{
+ "id": "creative12te",
+ "title": "Seventy-five for MS Word (Creative 12: hidden text in resumes) (Telugu audio)",
+ "label": "SKIT",
+ "banner": "AI resume screening",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "musicEndRamp": [
+  0.93,
+  4.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_cricket",
+   "tail": 0.0,
+   "boost": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "gopi",
+      "shot": "resume",
+      "prop": "resume",
+      "n": 2
+     },
+     {
+      "who": "rekha",
+      "shot": "cabin",
+      "prop": "review",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "75 for MS Word",
+     "title": "75 for MS Word",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "raju",
+     "file": "01_raju.wav",
+     "text": "బీకామ్ బంటీ, ఎంఎస్ వర్డ్ తో, [1] పైథాన్ జాబ్ కి డెబ్బై ఐదు!",
+     "show": "B.Com Bunty, with MS Word, 75 for a Python job!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "gopi",
+     "file": "02_gopi.wav",
+     "text": "డెబ్బై ఐదా?! [1] అతని రెజ్యూమ్ లో ఎంఎస్ వర్డ్, టైపింగ్ మాత్రమే!",
+     "show": "75?! His resume has only MS Word and typing!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.06,
+     "gain_db": 0.5
+    },
+    {
+     "who": "rekha",
+     "file": "03_rekha.wav",
+     "text": "ఏదో తేడా ఉంది. [1] రివ్యూ తీసుకుంటా!",
+     "show": "Something's off. I'm taking a review!",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_cricket",
+   "tail": 0.1,
+   "boost": 1.25,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "replay",
+      "prop": "replay",
+      "n": 4
+     },
+     {
+      "who": "gopi",
+      "shot": "replay",
+      "prop": "reason",
+      "n": 5
+     },
+     {
+      "who": "rekha",
+      "shot": "verdict",
+      "prop": "out",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The review",
+     "title": "The review",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "raju",
+     "file": "04_raju.wav",
+     "text": "సెలెక్ట్ ఆల్, నోట్ ప్యాడ్ లో పేస్ట్... [1] అదిగో! తెల్ల అక్షరాలు, రెజ్యూమ్ లో దాచాడు!",
+     "show": "Select all, paste in Notepad... There! White letters, hidden in the resume!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "gopi",
+     "file": "05_gopi.wav",
+     "text": "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా. <pause 0.25> [1] దాచిన కీవర్డ్స్ నిజమైన స్కిల్స్ లా కనిపిస్తాయి.",
+     "show": "That screening tool reads every word, even the white ones. Hidden keywords look like real skills.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.06,
+     "tts": "ఆ స్క్రీనింగ్ టూల్ ప్రతి పదం చదువుతుంది, తెల్లవి కూడా.",
+     "file2": "05b_gopi.wav",
+     "tts2": "దాచిన కీవర్డ్స్ నిజమైన స్కిల్స్ లా కనిపిస్తాయి.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "rekha",
+     "file": "06_rekha.wav",
+     "text": "ఇది ఔట్!",
+     "show": "That's out!",
+     "maxgap": 0.28,
+     "gap": 0.45,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_cricket",
+   "tail": 0.0,
+   "lift": 0.8,
+   "pre": 0.35,
+   "boost": 1.15,
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "box",
+      "prop": "anyone",
+      "n": 7
+     },
+     {
+      "who": "gopi",
+      "shot": "duke",
+      "prop": "duke",
+      "n": 8
+     },
+     {
+      "who": "rekha",
+      "shot": "test",
+      "prop": "test",
+      "n": 9
+     },
+     {
+      "who": "rekha",
+      "shot": "fix",
+      "prop": "quiz",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "raju",
+     "file": "07_raju.wav",
+     "text": "నిజంగా ఎవరైనా ఇలా చేస్తారా?!",
+     "show": "Does anyone really do this?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "gopi",
+     "file": "08_gopi.wav",
+     "text": "డ్యూక్ యూనివర్సిటీ వాళ్ళు చూశారు: [1] వంద రెజ్యూమ్ లలో ఒకదాంట్లో దాచిన అక్షరాలు!",
+     "show": "Duke University looked: 1 in 100 resumes had hidden letters!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.06,
+     "gain_db": 0.5
+    },
+    {
+     "who": "rekha",
+     "file": "09_rekha.wav",
+     "text": "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా. <pause 0.25> [1] మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు.",
+     "show": "I tested his resume 10 times... 25 plain, 75 with hidden keywords.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.08,
+     "tts": "అతని రెజ్యూమ్ ని పది సార్లు టెస్ట్ చేశా.",
+     "file2": "09b_rekha.wav",
+     "tts2": "మామూలుగా ఇరవై ఐదు, దాచిన కీవర్డ్స్ తో డెబ్బై ఐదు.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "rekha",
+     "file": "10_rekha.wav",
+     "text": "ఇంటర్నెట్ చెప్పే ఫిక్స్: రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు. <pause 0.25> [1] లోపల కమాండ్స్ ఉంటే చెప్పు.",
+     "show": "The internet's fix: the resume is data, not instructions. Flag any instructions inside.",
+     "maxgap": 0.28,
+     "gap": 4.8,
+     "tempo": 1.08,
+     "nocap": true,
+     "tts": "ఇంటర్నెట్ చెప్పే ఫిక్స్: రెజ్యూమ్ డేటా మాత్రమే, కమాండ్స్ కాదు.",
+     "file2": "10b_rekha.wav",
+     "tts2": "లోపల కమాండ్స్ ఉంటే చెప్పు.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_cricket",
+   "tail": 0.0,
+   "outro": true,
+   "boost": 1.4,
+   "rise": 1.2,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     1.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "raju",
+      "shot": "test",
+      "prop": "answer",
+      "n": 11
+     },
+     {
+      "who": "gopi",
+      "shot": "box",
+      "prop": "colours",
+      "n": 12
+     },
+     {
+      "who": "rekha",
+      "shot": "cabin",
+      "prop": "rule",
+      "n": 13
+     },
+     {
+      "who": "raju",
+      "shot": "interview",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Select all",
+     "title": "Select all",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "raju",
+     "file": "11_raju.wav",
+     "text": "డెబ్బై! [1] పదిలో ఒక్కసారి కూడా ఫ్లాగ్ లేదు!",
+     "show": "70! Not even one flag in 10!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "gopi",
+     "file": "12_gopi.wav",
+     "text": "కీవర్డ్స్ కమాండ్స్ కాదు. [1] అది పదాలు చదువుతుంది, రంగులు కాదు.",
+     "show": "Keywords aren't commands. It reads the words, not the colours.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": 0.5
+    },
+    {
+     "who": "rekha",
+     "file": "13_rekha.wav",
+     "text": "స్కోర్ కి, కనిపించే దానికి మ్యాచ్ కాకపోతే, [1] సెలెక్ట్ ఆల్ చేస్తా.",
+     "show": "If the score doesn't match what I can see, I select all.",
+     "maxgap": 0.28,
+     "gap": 0.9,
+     "tempo": 1.08,
+     "nocap": true,
+     "gain_db": 0.5
+    },
+    {
+     "who": "raju",
+     "file": "14_raju.wav",
+     "text": "మరి బంటీ ఇంటర్వ్యూ? [1] పైథాన్ రాయమంటే, ఎంఎస్ వర్డ్ ఓపెన్ చేశాడు!",
+     "show": "And Bunty's interview? Asked to write Python, he opened MS Word!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

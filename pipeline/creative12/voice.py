@@ -51,9 +51,25 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused: t
 APP = set()
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu groups
 # (Whisper writes Telugu in Devanagari) start empty and are filled from the first takes.
-MUST = {"en": {}, "te": {}}
+MUST = {"en": {1: [("bunty", "bunny", "banty", "bunti"), ("word",), ("seventy", "75"), ("python",)],
+               2: [("seventy", "75"), ("resume",), ("word",), ("typing",)],
+               3: [("fishy",), ("review",)],
+               4: [("select",), ("notepad", "note"), ("white",), ("hidden",), ("resume",)],
+               5: [("reads", "read"), ("every",), ("word",), ("white",)], "5b": [("hidden",), ("keywords", "keyword"), ("real",), ("skills",)],
+               6: [("out",)],
+               7: [("anyone",), ("really",)],
+               8: [("one", "1"), ("resume",), ("hundred", "100"), ("hidden",), ("duke",)],
+               9: [("tested",), ("resume",), ("ten", "10")], "9b": [("twenty", "25"), ("plain",), ("seventy", "75"), ("keywords", "keyword")],
+               10: [("internet",), ("fix",), ("resume",), ("data",), ("instructions",)], "10b": [("flag",), ("instructions",)],
+               11: [("seventy", "70"), ("flag",), ("ten", "10")],
+               12: [("keywords", "keyword"), ("instructions",), ("words",), ("colours", "colors", "colour", "color")],
+               13: [("score",), ("match",), ("read",), ("select",)],
+               14: [("bunty", "bunny", "banty", "bunti"), ("interview",), ("python",), ("word",)]},
+        "te": {}}
 # lines whose judge text needs digits (Whisper writes "72", "10")
-JUDGE_TEXT = {}
+JUDGE_TEXT = {1: "Bunty, B.Com, MS Word, scored 75 for a Python job!", 2: "75?! His resume says MS Word and typing!",
+              8: "About 1 resume in 100 has hidden text, says a Duke study.", 9: "I tested his resume 10 times.",
+              "9b": "25 plain, 75 with hidden keywords.", 11: "70! And not one flag in 10!"}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
 GATE = set()   # characters whose Fish takes carry a hum between words (filled from the first takes)

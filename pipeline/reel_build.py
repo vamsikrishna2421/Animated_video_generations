@@ -79,6 +79,9 @@ SPEAKERS = {
     "prasad": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Prasad mavayya", color="#FCD34D"),   # creative 11 (file takes)
     "lakshmi": dict(voice="af_heart", speed=1.0, lang="en-us", name="Lakshmi pinni", color="#FDA4AF"),
     "harika": dict(voice="af_heart", speed=1.0, lang="en-us", name="Harika", color="#5EEAD4"),
+    "raju": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Raju", color="#FCD34D"),   # creative 12 (file takes)
+    "gopi": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Gopi", color="#93C5FD"),
+    "rekha": dict(voice="af_heart", speed=1.0, lang="en-us", name="Rekha madam", color="#F9A8D4"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 
