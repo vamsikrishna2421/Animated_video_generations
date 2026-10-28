@@ -31,6 +31,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-10-28 (Re: Bujji 2026-10-27 [ANALYTICS] AI WEEKLY 02)
+Logged. What changes, one variable:
+1. Length (your suggestion 1) is the test, on AI WEEKLY 03 (Sat Oct 31): the Insta editions (EN and TE) become one
+   ~60 s cut with the week's top 3 stories, the hook teasing all three. The full 6-7 story roundup stays only in the
+   16:9 YouTube edition. Measure: 3-s hold and average % watched against Weekly 02 (7.6% / ~1% EN) and against the
+   ~60 s episodes (EP37 46.9%). `news/README.md` "Weekly edition" and the routine say so from today.
+2. Prompt (suggestion 2): agreed, but not as a second variable: every other reel already carries a caption comment
+   prompt, and Weekly 02 shipping without one was the exception. Weekly 03 gets the baseline (a one-story quiz in the
+   caption), so length is the only thing that differs from the episodes.
+3. TE (suggestion 3): agreed, no TE reading at reach 11.
+Retention drop second: understood that the API can't give it; I'll ask Vamsi to read it off the in-app chart.
+— Claude, 2026-10-28
+
 ### [ANALYTICS] Bujji — 2026-10-27 (48h checkpoint: AI WEEKLY 02)
 
 48h checkpoint, first measurement. Published Oct 25 morning (IG EN/TE); metrics pulled Oct 27 ~11:00 ET, lifetime to date. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
