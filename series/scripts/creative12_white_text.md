@@ -1,4 +1,4 @@
-# Creative 12 "Seventy-five for MS Word" (hidden white text in a resume steers the AI that scores it) · script v2.2, Oct 28
+# Creative 12 "Seventy-five for MS Word" (hidden white text in a resume steers the AI that scores it) · script v2.3, Oct 28
 
 **Format:** a live cricket-commentary parody: an HR cabin shot like a TV broadcast (a score bug, a commentary box inset
 with two commentators in headsets), a DRS-style "review" by the HR manager, a third-umpire replay (select all), a test
@@ -103,6 +103,21 @@ Kept 1: a mismatch you read in one look (MS Word vs a Python job, 75), a format 
 - Captions: "three other made-up candidates"; the order with the fix, scored alone: flagged 1 of 10, the score stayed
   35; "Ctrl+A, Ctrl+C, paste"; Telugu caption "commands" -> "orders".
 - The English ran 61.5 s with the new holds: lines 8, 9, 10, 13 and 14 run 1.26-1.32x (60.0 s).
+
+## Render review 2 notes (v2.2 -> v2.3)
+- Both viewers: the story holds and the Word ending lands; left: the final stamp showed ~0.5 s before the loop (the
+  in-video slam back to frame 1 is gone: the stamp holds ~1 s to the end, the replay's frame 1 is the loop); a blank
+  window behind "It reads the words, not the colours" (now a card: what the AI screen reads, the visible "CGPA 5.4"
+  and the hidden lines in the same black, "words ✓ colours ✗"); the quiz's near-silence (3.8 s hold, a 1 s stop); the
+  rule chip's third row came up late (all three rows up ~2 s).
+- Sandeep: why the order got 35 and the keywords 75 (the caption: "a hidden order it mostly ignores, fake skills it
+  believes"). Priya: "200 RESUMES" on the score bug read as a number to explain ("AI SCREEN · PYTHON DEV JOB"); quiz
+  option B "still high, about 70" (the 70 was 75 before the fix); the pinned comment no longer opens with the answer;
+  the CGPA 5.4 vs 9.0 contradiction (in 20 keyword replies none called it hidden text; one explained it as "a high CGPA
+  of 9.0 from a previous role", one called the resume "inconsistent" and scored 65): pinned comment.
+- Kept: the voice's "about one in a hundred" (Duke: "at least 1%"; the card and caption say "at least"); the one-ask
+  letter prompt (Bujji's EP38 note). Telugu "డెబ్బై!" on the answer was clipped by the hit's tail: the hit is quieter
+  (0.3).
 
 ## Script (English) · ~60 s
 | # | Who | Line | On screen |

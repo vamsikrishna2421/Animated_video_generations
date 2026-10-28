@@ -69,8 +69,8 @@ TEMPO_LINE_EN = {8: 1.28, 9: 1.3, 10: 1.26, 13: 1.32, 14: 1.3}   # the render-re
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.25, "tail": 0.0}),
           ("s_b", (4, 5, 6), {"boost": 1.25, "drop_pre": [[0, 0.0, 0.8]], "tail": 0.1}),   # a stop before the replay
           ("s_c", (8, 9, 10), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "tail": 0.0}),
-          ("s_d", (11, 12, 13, 14), {"outro": True, "pre": 0.3, "boost": 1.5, "rise": 1.2, "drop_pre": [[0, 0.0, 1.4]], "tail": 0.0})]   # the bed out after the quiz count
-GAP = {1: 0.15, 2: 0.15, 3: 0.35, 4: 0.15, 5: 0.4, 6: 0.75, 8: 0.2, 9: 0.25, 10: 4.2, 11: 0.5, 12: 0.25, 13: 0.85, 14: 0.5}   # 5: the OUT hit lands in the gap; 6: OUT holds ~2 s with the roar; 10: the quiz holds 4.2 s (three options); 11: the answer card holds; 13: the riser into the last line; 14: the OUT stamp before the slam
+          ("s_d", (11, 12, 13, 14), {"outro": True, "pre": 0.3, "boost": 1.5, "rise": 1.2, "drop_pre": [[0, 0.0, 1.3]], "tail": 0.0})]   # the bed out after the quiz count (the 1 s stop + the 0.3 s pre)
+GAP = {1: 0.15, 2: 0.15, 3: 0.35, 4: 0.15, 5: 0.4, 6: 0.75, 8: 0.2, 9: 0.25, 10: 3.8, 11: 0.5, 12: 0.25, 13: 1.0, 14: 0.6}   # 5: the OUT hit lands in the gap; 6: OUT holds ~2 s with the roar; 10: the quiz holds 3.8 s (the count, then a 1 s stop; 4.2 read as dead air); 11: the answer card holds; 13: the rule chip holds, the riser into the last line; 14: the OUT stamp holds 1 s to the end
 GAP_TE = {}
 GAIN = {}
 GAIN_TE = {}

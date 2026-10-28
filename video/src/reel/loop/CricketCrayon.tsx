@@ -31,9 +31,8 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string; name: string 
   rekha: { skin: "#b07a52", hair: "#120d0a", top: "#0f766e", name: "Rekha madam" },
   bunty: { skin: "#9c6a45", hair: "#1c1410", top: "#facc15", name: "Bunty" },
 };
-const HOLD = 26;   // frames after the last line before the slam back to frame 1 (the OUT stamp reads first)
 const EARLY: Record<string, number> = { out: 9 };   // beats whose picture (and hit) comes in before the voice: the hit stays off the word
-const QEND = 42;   // the quiz's count ends this many frames before the answer: a real stop (Creative 11)
+const QEND = 30;   // the quiz's count ends this many frames before the answer: a real stop (Creative 11; 1.4 s read as dead air here)
 const CLAP = "reel/creative09v1/clap.wav";
 const CROWD = "reel/creative12v1/crowd.wav", SIREN = "reel/creative12v1/siren.wav";
 // the white text, as Notepad shows it (series/scripts/creative12_demo: score_demo.py KEYWORDS)
@@ -177,7 +176,7 @@ const laptopScore = (c: Ctx, x: number, y: number, s: number, score: string, k: 
   c.restore();
 };
 // the broadcast: a score bug (bottom) and a LIVE tag
-const scoreBug = (c: Ctx, W: number, f: number, text = "AI SCREEN · 200 RESUMES") => {
+const scoreBug = (c: Ctx, W: number, f: number, text = "AI SCREEN · PYTHON DEV JOB") => {
   c.fillStyle = "rgba(15,23,42,0.92)"; rrect(c, 40, 1318, W - 80, 74, 16); c.fill();
   c.fillStyle = Math.floor(f / 15) % 2 ? RED : "#ef4444"; rrect(c, 40, 1318, 130, 74, 16); c.fill();
   c.font = SANS(34, 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("LIVE", 105, 1367);
@@ -241,7 +240,7 @@ const quizCard = (c: Ctx, W: number, H: number, f: number, endL: number, next: n
   c.fillStyle = "#fffdf5"; rrect(c, -470, -440, 940, 830, 30); c.fill();
   c.font = SANS(46); c.fillStyle = RED; c.textAlign = "center"; c.fillText("YOUR CALL", 0, -366);
   c.font = SANS(50); c.fillStyle = INK; c.fillText("With the popular fix,", 0, -290); c.fillText("Bunty's score?", 0, -228);
-  [["A", "back to 25, flagged"], ["B", "still about 70"], ["C", "halfway, 50"]].forEach(([l, t], i) => {
+  [["A", "back to 25, flagged"], ["B", "still high, about 70"], ["C", "halfway, 50"]].forEach(([l, t], i) => {
     const yy = -180 + i * 150;
     c.fillStyle = "#e0e7ff"; rrect(c, -400, yy, 800, 128, 22); c.fill();
     c.font = SANS(62); c.fillStyle = INK; c.textAlign = "left"; c.fillText(l, -360, yy + 84);
@@ -315,14 +314,12 @@ const StCricket: React.FC<SP> = ({ s }) => {
       [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - QEND - 72 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
       sfx.push(<Sfx key={k("r")} at={nx - QEND - 36} src="reel/sfx_riser.wav" vol={0.45} />);
     }
-    if (b.prop === "answer") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - 12)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.7} />, <Sfx key={k("m")} at={Math.max(0, at - 12)} src={CLAP} vol={te ? 0.32 : 0.5} />);   // the scene's pre: the hit before "seventy"
+    if (b.prop === "answer") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - 12)} src="reel/sfx_boom.wav" vol={te ? 0.3 : 0.7} />, <Sfx key={k("m")} at={Math.max(0, at - 12)} src={CLAP} vol={te ? 0.32 : 0.5} />);   // the scene's pre: the hit before "seventy"
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 15)} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - 16)} src="reel/sfx_boom.wav" vol={0.45} />);
-    if (b.prop === "loop") {   // a rise in the gap into the last line; OUT after the words; the crowd and the slam back to frame 1
-      const slam = end + HOLD;
+    if (b.prop === "loop") {   // a rise in the gap into the last line; OUT after the words, held to the end; the replay's frame 1 is the loop
       sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 32)} src="reel/sfx_riser.wav" vol={0.4} />,   // the boing under "MS Word" smeared the Telugu: gone
         <Sfx key={k("o")} at={end + 1} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("z")} at={end + 1} src="reel/sfx_buzz.wav" vol={0.25} />,
-        <Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />,
-        <Sfx key={k("c")} at={slam} src={CLAP} vol={0.6} />, <Sfx key={k("r")} at={slam + 1} src={CROWD} vol={te ? 0.32 : 0.4} />);
+        <Sfx key={k("r")} at={end + 4} src={CROWD} vol={te ? 0.22 : 0.3} />, <Sfx key={k("g")} at={s.frames - 10} src="reel/sfx_glitch.wav" vol={0.35} />);
     }
   });
   const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 30 : 0;
@@ -342,15 +339,14 @@ const StCricket: React.FC<SP> = ({ s }) => {
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         const endL = ln.from + ln.frames;
         const next = ls[i + 1] ? ls[i + 1].from : s.frames;
-        const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
-        const mood = (who: Who, dm: Mood, da: Arms): [Mood, Arms] => (loopOn ? MOODS[1][who] : MOODS[n]?.[who]) ?? [dm, da];
-        if (b.shot === "hook" || loopOn) {
+        const mood = (who: Who, dm: Mood, da: Arms): [Mood, Arms] => MOODS[n]?.[who] ?? [dm, da];
+        if (b.shot === "hook") {
           // ---------- frame 1: the broadcast, the big 75 ----------
           cabin(c, W, H);
           const [m1, a1] = mood("rekha", "shock", "up");
           person(c, "rekha", [250, 900], 0.95, m1, a1, false, r);
           laptopScore(c, 700, 1150, 0.95, "75", 1, r);
-          boxInset(c, f, loopOn ? "" : b.who, r);
+          boxInset(c, f, b.who, r);
           scoreBug(c, W, f, "BUNTY K.  75*  ·  PYTHON DEV JOB");   // render review: a cricket cue in frame 1
         } else if (b.shot === "cabin") {
           // ---------- Rekha in her cabin ----------
@@ -373,7 +369,7 @@ const StCricket: React.FC<SP> = ({ s }) => {
               ["1.  select all (Ctrl + A)", "#fef3c7", INK],
               ["2.  copy, paste into Notepad", "#e2e8f0", INK],
               ["3.  hidden words show up? OUT", "#fee2e2", "#991b1b"],
-            ], [seg(f, c1 - 2, c1 + 6), seg(p, 0.66, 0.74), seg(p, 0.9, 0.98)]);
+            ], [seg(f, c1 - 2, c1 + 6), seg(p, 0.6, 0.66), seg(p, 0.7, 0.76)]);   // render review: all three rows up 2 s+
           }
           if (b.prop !== "review") boxInset(c, f, b.who, r);   // the REVIEW banner runs across the top
           scoreBug(c, W, f);
@@ -383,6 +379,15 @@ const StCricket: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#1e3a8a"; rrect(c, 60, 260, W - 120, 560, 20); c.fill();   // the window onto the "ground": the HR floor
           c.fillStyle = "#93c5fd"; rrect(c, 90, 290, W - 180, 500, 12); c.fill();
           for (let q = 0; q < 6; q++) { c.fillStyle = "#64748b"; rrect(c, 130 + q * 140, 600, 100, 60, 8); c.fill(); }   // desks below
+          if (b.prop === "colours") {   // render review: the window was a blank screen; what the AI reads: every word in the same black
+            c.fillStyle = "#ffffff"; rrect(c, 90, 290, W - 180, 500, 12); c.fill();
+            c.font = SANS(34, 800); c.fillStyle = "#6d28d9"; c.textAlign = "left"; c.fillText("✦ WHAT THE AI SCREEN READS", 120, 345);
+            c.font = MONO(30); c.fillStyle = INK;
+            ["B.Com · CGPA 5.4 · MS Word, typing", ...HIDDEN].forEach((t, q) => c.fillText(t, 120, 405 + q * 46));
+            const c1 = cu(1, 0.45);
+            tagS(c, "words ✓", 330, 720, 54, "#dcfce7", "#14532d", seg(f, c1, c1 + 6));
+            tagS(c, "colours ✗", 740, 720, 54, "#fee2e2", "#991b1b", seg(f, cu(1, 0.8) - 4, cu(1, 0.8) + 2));
+          }
           person(c, "raju", [300, 1000], 0.95, b.who === "raju" ? "excited" : "calm", b.who === "raju" ? "ear" : "rest", b.who === "raju" && talking, r);
           person(c, "gopi", [780, 1000], 0.95, b.who === "gopi" ? "deadpan" : "calm", "rest", b.who === "gopi" && talking, r);
           c.fillStyle = "#334155"; c.fillRect(0, 1180, W, 300);   // the desk
