@@ -12,6 +12,10 @@
 Every Saturday at 05:59 IST (the Saturday slot of the daily new episode, `series/ROUTINE.md`), covering the 7 days
 before the run: `news/week-<saturday>.json`, id `week-<date>`, edition `AI WEEKLY · NN`. AI WEEKLY 02 (Oct 24) also
 covers Oct 11-17, which never went out (triage in `news/inbox/2026-10-14_triage.md`).
+**From AI WEEKLY 03 (Oct 31), Bujji's length test:** Weekly 02 (2:43) held 7.6% of English viewers past 3 s and
+averaged 2.2 s watched. The 9:16 Insta editions (EN and TE) are now one ~60 s cut with the week's top 3 stories (the hook
+teases all three, the last one paid off with the `hush` card); the full 6-7 story roundup goes only into the 16:9
+YouTube edition. The caption carries a comment prompt (a quiz on one story), as every other reel does.
 1. **Collect**: the owner's daily digests (`news/inbox/<date>_muse.md`) plus a sweep of the week (Reuters, TechCrunch,
    The Verge, Bloomberg, Axios; Indian outlets for India stories).
 2. **Verify** as above. Drop repeats of earlier editions unless something new happened this week; check the date of

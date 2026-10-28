@@ -141,7 +141,8 @@ stay as made.
 ### Saturday: AI WEEKLY
 1. Follow `news/README.md` "Weekly edition" for the 7 days before the run: the owner's digests in `news/inbox/`, a
    sweep of the week, every story confirmed by the company's own page or 2+ reputable outlets, 6-7 stories with a
-   "what it means for you" line each.
+   "what it means for you" line each. From AI WEEKLY 03 (Oct 31): the Insta editions are one ~60 s cut with the top 3
+   (Bujji's length test, handoff Oct 28); the full roundup only in the 16:9 YouTube edition; a caption comment prompt.
 2. AI WEEKLY 02 (Sat Oct 24) also covers Oct 11-17, which never went out: start from `news/inbox/2026-10-14_triage.md`,
    re-check each item (prices and rollouts move), and keep the biggest stories of the two weeks.
 3. Spec `news/week-<date>.json`, the four renders (`pipeline/render_news.sh`, 9:16 EN/TE and the 16:9 YouTube
