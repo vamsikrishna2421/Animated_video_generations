@@ -529,3 +529,15 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   was heard "write every reply": end the sentence ("right! And every reply..."). The Telugu stutter check flags an
   intended repeat ("ఆర్డర్ ఆర్డర్ కీ"): pick that take by its transcript. A per-line Telugu window can hallucinate a
   loop ("మీ వవవవ"): transcribe the take on its own before re-voicing. The quiz's 4.8 s hold also works with four options.
+- Creative 12 lessons (Oct 28): a demo can disprove the planned story (a hidden order next to three other resumes never
+  won): add an honest part 2 that matches how real tools work (one resume, a score), commit its ways before it runs, and
+  say in the script which part came after. An SFX on a word is a masked word in Telugu even when the English passes: the
+  per-line check of the Telugu mix found the crowd, the OUT buzz, the cha-ching, the answer's boom and a boing each
+  hiding a word. Put a hit on a cut that comes in before the voice (`EARLY` in CricketCrayon: the picture and the hit
+  0.3 s ahead, a 0.4 s gap before it), a punctuation SFX after the line's end, and a scene's first-line hit inside a
+  `pre`. A fake-consequence ending must not undo the lesson: "OUT, then his interview" read as "it worked somewhere";
+  end with him caught. With ten replies the "median" is the 6th sorted score (72/75 -> 75): say "middle of 10" and list
+  the ranges. Fish read "MS Word" as "Mississippi Word" (give "M S Word"); Whisper writes "plain" as "plane" (a
+  homophone, not a misread). Telugu: "కమాండ్స్" was heard "comments" (use "ఆర్డర్లు"); "రంగులు" is one slipped letter
+  from a swear word ("కలర్స్"); "చెక్ చేయని" was heard "chek chek" in four takes ("చెకింగ్ లేని"); Kiran at full pace
+  merges "ఎంఎస్ వర్డ్": pick the take by its transcript. Scene lengths snap to the beat: a 0.4 s trim can change nothing.
