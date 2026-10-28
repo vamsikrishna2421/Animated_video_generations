@@ -44,7 +44,8 @@ MUST = {"en": {1: [("same",), ("reply",), ("every",), ("order",), ("biggest",), 
                14: [("perugu", "peru", "paruga", "perugo", "peragu"), ("eggs",), ("now",)],
                15: [("prompt",), ("another",), ("brain",), ("test",), ("again",)],
                16: [("test",), ("again",), ("which",), ("brain",), ("keep",)]},
-        "te": {}}   # Telugu: words the judge must hear, as it writes them (Devanagari), added from the first takes
+        "te": {1: [("रिप्ला", "रिप्लै", "रिप्लाई"), ("पेड", "पॆड", "पेट", "पीड", "पेद", "पड़त", "पेत")],   # render check: "పెడతా" was heard "प्रत्ता"
+               "13b": [("लेदु", "लेदू", "लेद", "लेडु", "लेडू")]}}   # render check: "అవ్వలేదు" was heard "अवलगदू"
 
 
 def heard(path, who, n, lang):
