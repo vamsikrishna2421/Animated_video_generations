@@ -301,13 +301,13 @@ const StCricket: React.FC<SP> = ({ s }) => {
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     const insert = !["hook", "cabin", "box"].includes(b.shot);
     if (insert && prevShot !== b.shot && b.prop !== "out") sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.45} />,
-      <Sfx key={k("r")} at={2} src={CROWD} vol={te ? 0.18 : 0.32} />);   // the Telugu name was lost under 0.32
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={0} src={CLAP} vol={te ? 0.28 : 0.45} />,
+      <Sfx key={k("r")} at={2} src={CROWD} vol={te ? 0.1 : 0.32} />);   // the Telugu name was lost under 0.32, then 0.18
     if (b.prop === "resume") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 4} src="audio/gag_ding.wav" vol={0.18} />);
     if (b.prop === "review") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) - 4} src={SIREN} vol={0.3} />);
     if (b.prop === "replay") sfx.push(<Sfx key={k("s")} at={at + 4} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("n")} at={cue(i, 1, 0.45) - 4} src="reel/sfx_boom.wav" vol={0.5} />,
       <Sfx key={k("m")} at={cue(i, 1, 0.45) - 4} src={CLAP} vol={0.35} />);
-    if (b.prop === "out") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - EARLY.out)} src="reel/sfx_boom.wav" vol={0.75} />,   // the buzz on the word hid the Telugu "idi out"
+    if (b.prop === "out") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - EARLY.out)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.75} />,   // its 1.3 s tail is under the word   // the buzz on the word hid the Telugu "idi out"
       <Sfx key={k("z")} at={end + 1} src="reel/sfx_buzz.wav" vol={0.3} />, <Sfx key={k("r")} at={end + 3} src={CROWD} vol={te ? 0.25 : 0.32} />);
     if (b.prop === "duke") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.18} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("c")} at={end + 1} src="audio/sfx_chaching.wav" vol={0.22} />);   // after the 75, not on it
@@ -315,7 +315,7 @@ const StCricket: React.FC<SP> = ({ s }) => {
       [0, 1, 2, 3, 4, 5].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={nx - QEND - 72 + q * 12} src="audio/sfx_tick.wav" vol={q % 2 ? 0.45 : 0.9} />));
       sfx.push(<Sfx key={k("r")} at={nx - QEND - 36} src="reel/sfx_riser.wav" vol={0.45} />);
     }
-    if (b.prop === "answer") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - 12)} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("m")} at={Math.max(0, at - 12)} src={CLAP} vol={0.5} />);   // the scene's pre: the hit before "seventy"
+    if (b.prop === "answer") sfx.push(<Sfx key={k("n")} at={Math.max(0, at - 12)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.7} />, <Sfx key={k("m")} at={Math.max(0, at - 12)} src={CLAP} vol={te ? 0.32 : 0.5} />);   // the scene's pre: the hit before "seventy"
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 15)} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - 16)} src="reel/sfx_boom.wav" vol={0.45} />);
     if (b.prop === "loop") {   // a rise in the gap into the last line; OUT after the words; the crowd and the slam back to frame 1
       const slam = end + HOLD;
