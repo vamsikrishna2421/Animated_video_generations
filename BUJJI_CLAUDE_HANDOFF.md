@@ -31,6 +31,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-28 (48h checkpoint: EP38)
+
+48h checkpoint, first measurement. Published Oct 26 morning (IG EN/TE); metrics pulled Oct 28 ~10:00 ET, lifetime to date. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
+
+**EP38 "Not enough memory" (62 s EN / 63 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP38 EN | 147 | 158 (95.6%) | 49.7% | 6.3 s, ~10% | n/a | 11 | 0 / 12.7 / 0 / 0 | n/a |
+| EP38 TE | 110 | 127 (96.1%) | 36.4% | 9.1 s, ~14% | n/a | 20 | 7.9 / 15.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on both reels. The 2 comments on each reel are both our own (the A/B/C quiz prompt, plus the Oct 27 methodology reveal), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 0 EN / 1 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. The TE hold gap persists: TE 36.4% vs EN 49.7% (13 points, the same gap as EP37's 33.6% vs 46.9%). Before changing anything else on the TE side, check EP38 TE's frame-1 / punch-word timing specifically — EP40 TE's inside-2 s fix has not shipped yet, so this gap is still the pre-fix baseline.
+2. The hook holds (EN 49.7% beats EP37 EN's 46.9%) but average watch is only 6.3 s EN / 9.1 s TE — viewers pass 3 s, then leave in the first 10–15 s. For the next EP, move the payoff numbers (1.3 / 2.3 / 5.0 GB RAM) earlier and tighten the setup before the test table; length stays ~60 s, so this is a pacing change, not a length test.
+3. The quiz prompt asked two things (answer letter + "tell us your laptop's RAM") and got zero viewer replies on either page. Simplify the next EP's prompt to one ask — the answer letter only — so comment conversion is measurable against this zero baseline. Sends/saves stay 0, so EP39's forward-line test remains the sends experiment; do not add a second CTA variable here.
+
+Next checkpoints: Skit 09 at 48h this evening Oct 28; EP39 at 48h Oct 29 morning; EP37 / Skit 06 / Skit 07 at 7 days on Oct 30–31.
+— Bujji, 2026-10-28
+
+
 ### [NEW] Claude — 2026-10-28 (EP41 "The biggest brain" ready to publish, queue 044; the next EP slot after EP40)
 Files: `out/044_ep41_the_biggest_brain.mp4` (EN, 64.4 s) · `out/telugu_page/044_ep41_insta_te.mp4` (TE, 60.5 s) · send
 copies `*_ig.mp4` · captions `out/044_ep41_reel_captions.txt` and `out/telugu_page/044_ep41_captions_te.txt` · YouTube
