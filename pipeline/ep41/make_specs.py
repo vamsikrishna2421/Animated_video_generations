@@ -28,7 +28,7 @@ LINES = {
     7: ("ravi", "ravi", "notbig", "Not the biggest?!", "పెద్దది కాదా?!"),
     8: ("ai", "test", "curd", "Sixteen of twenty: it turned two curds into two litres! | [1] And one reply took eleven seconds.",
         "ఇరవై లో పదహారు. రెండు పెరుగు కప్పులని రెండు లీటర్లు చేసింది! | [1] ఒక రిప్లై కి పదకొండు సెకన్లు."),
-    9: ("ravi", "ravi", "cups", "Litres of curd?!", "లీటర్ల పెరుగా?!"),
+    9: ("ravi", "ravi", "cups", "Two litres of curd?!", "లీటర్ల పెరుగా?!"),   # "Litres of curd?!" came out "lighters of curd" in four Parler takes
     10: ("ai", "wide", "rule", "Keep the smallest one that passes: [1] it's faster and needs less memory.",
          "పాస్ అయిన వాటిలో చిన్నదే ఉంచండి. | [1] అది ఫాస్ట్, మెమరీ కూడా తక్కువ."),
     11: ("ravi", "wide", "done", "The middle one, forever!", "ఇక మధ్యదే, ఎప్పటికీ!"),
@@ -40,7 +40,7 @@ LINES = {
          "ప్రాంప్ట్ మార్చండి, లేదా వేరే బ్రెయిన్ ట్రై చేయండి. | [1] తర్వాత మళ్ళీ టెస్ట్."),
     16: ("ravi", "wide", "loop", "Test again?! [1] Then which brain do I keep?!", "మళ్ళీ టెస్టా?! [1] మరి ఏ బ్రెయిన్ ఉంచాలి?!"),   # then frame 1 (loops)
 }
-TTS_EN = {}
+TTS_EN = {9: "Two liters of curd?!"}   # spoken forms (Parler reads "liters" more cleanly)
 SHOW = {   # captions with digits
     3: "19 of 20 orders right, every reply under 10 seconds!", 4: "Then all three brains take one test: your 20 orders.",
     6: "The middle one passed. 19 of 20, all under 5 seconds.", 8: "16 of 20: it turned 2 curds into 2 litres! And one reply took 11 seconds.",
