@@ -48,7 +48,7 @@ Already posted: `out/posted/`.
 | 041 | ep39 | The 17-Second Reply (EP39: speed, latency and cost per token, tested; skit, AI voices) | ready |
 | 042 | ep40 | 73 in Maths, 9 Wrong Bills (EP40: benchmarks and evaluations, tested; skit, AI voices) | ready |
 | 043 | q04 | Quiz #4: Episodes 31–40 | ready |
-| 044 | ep41 | How to Choose the Right AI Model | ready |
+| 044 | ep41 | The Biggest AI Brain Failed Our Shop Test (EP41: how to choose the right model, tested; skit, AI voices) | ready |
 | 045 | ep42 | Bias in AI | ready |
 | 046 | ep43 | AI Safety and Alignment | ready |
 | 047 | ep44 | AI and Your Privacy | ready |

@@ -56,15 +56,19 @@ const chatCard = (c: Ctx, k: number, ring: number, r: () => number) => {
   c.fillStyle = WA; c.fillRect(x, y, w, 56);
   c.font = SANS(30); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Ravi Kirana · WhatsApp", x + 24, y + 39);
   CANNED.forEach(([order, rep], q) => {
-    const by = y + 70 + q * 136;
-    c.font = SANS(25, 500); const ow = c.measureText(order).width;
-    c.fillStyle = "#fff"; rrect(c, x + 16, by, ow + 32, 40, 12); c.fill();
-    c.fillStyle = INK; c.textAlign = "left"; c.fillText(order, x + 32, by + 28);
-    const rx = x + w - 16 - 470, ry = by + 46;
-    c.fillStyle = "#dcf8c6"; rrect(c, rx, ry, 470, 80, 14); c.fill();
-    c.font = SANS(27, 600); c.fillStyle = INK; rep.forEach((t, i) => c.fillText(t, rx + 18, ry + 32 + i * 33));
-    if (ring > 0) stroke(c, circlePts(rx + 235, ry + 40, 258, 52, 0, Math.PI * 2 * clamp(ring * 3 - q), 40), RED, 6, r, { passes: 2 });
+    const by = y + 66 + q * 116;
+    c.font = SANS(24, 500); const ow = c.measureText(order).width;
+    c.fillStyle = "#fff"; rrect(c, x + 16, by, ow + 30, 36, 12); c.fill();
+    c.fillStyle = INK; c.textAlign = "left"; c.fillText(order, x + 31, by + 26);
+    const rx = x + w - 16 - 450, ry = by + 41;
+    c.fillStyle = "#dcf8c6"; rrect(c, rx, ry, 450, 68, 14); c.fill();
+    c.font = SANS(26, 600); c.fillStyle = INK; rep.forEach((t, i) => c.fillText(t, rx + 16, ry + 28 + i * 30));
+    if (ring > 0) stroke(c, circlePts(rx + 225, ry + 34, 246, 44, 0, Math.PI * 2 * clamp(ring * 3 - q), 40), RED, 6, r, { passes: 2 });
   });
+  // the customer, inside the chat (it sat on Ravi's head as a tag)
+  c.font = SANS(34); const ww = c.measureText("WHICH items??").width;
+  c.fillStyle = "#fee2e2"; rrect(c, x + 16, y + 420, ww + 36, 48, 12); c.fill();
+  c.fillStyle = "#991b1b"; c.textAlign = "left"; c.fillText("WHICH items??", x + 34, y + 456);
   c.restore(); c.restore();
 };
 // frame 1's biggest brain, held up (screen space, x 660-1040, y 240-650)
@@ -74,9 +78,9 @@ const bigCard = (c: Ctx, k: number, r: () => number) => {
   const e = easeOut(clamp(k)); c.translate(850, 440); c.rotate(0.05); c.scale(0.85 + 0.15 * e, 0.85 + 0.15 * e); c.translate(-850, -440);
   c.fillStyle = "rgba(4,8,40,0.35)"; rrect(c, 680, 252, 360, 400, 24); c.fill();
   c.fillStyle = "#fffdf5"; rrect(c, 670, 240, 360, 400, 24); c.fill();
-  brainFile(c, 850, 410, 0.95, 0, "4.7 GB", r);
+  brainFile(c, 850, 385, 0.85, 0, "4.7 GB", r);   // its size label clear of the tag
   c.restore();
-  tag(c, "BIGGEST", 850, 640, 56, "#fde68a", INK, -0.04, k);
+  tag(c, "BIGGEST", 850, 662, 56, "#fde68a", INK, -0.04, k);
 };
 // the pass-mark notepad (screen space), the two marks filling in
 const notepad = (c: Ctx, W: number, f: number, k1: number, k2: number, r: () => number) => {
@@ -179,7 +183,6 @@ const StChoose: React.FC<SP> = ({ s }) => {
       sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.45} />,
         <Sfx key={k("z")} at={2} src="reel/sfx_buzz.wav" vol={0.25} />);
       [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("p" + q)} at={6 + q * 6} src="audio/sfx_pop.wav" vol={0.2} />));
-      sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.45) - 4} src="audio/gag_boing.wav" vol={0.2} />);   // the big brain pops up
     }
     if (b.prop === "pass") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) - 4} src="audio/sfx_snap.wav" vol={0.28} />);
     if (b.prop === "marks") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.16} />, <Sfx key={k("e")} at={cue(i, 1, 0.5) + 2} src="audio/gag_ding.wav" vol={0.16} />);
@@ -248,7 +251,7 @@ const StChoose: React.FC<SP> = ({ s }) => {
           brainRow(c, 590, "2.1 GB", kB > 0 ? "19 of 20 ✓" : "?", kB > 0 ? "slowest 4.5 s · PASS" : "", kB > 0 ? GREEN : "#94a3b8", kB > 0 ? "#dcfce7" : "#f1f5f9", Math.max(k0, kB));
           brainRow(c, 760, "4.7 GB", kC > 0 ? "16 of 20 ✗" : "?", kC2 > 0 ? "slowest 11.1 s ✗" : "", kC > 0 ? RED : "#94a3b8", kC > 0 ? "#fee2e2" : "#f1f5f9", Math.max(k0, kC));
           brainRow(c, 930, "1.1 GB", kA > 0 ? "8 of 20 ✗" : "?", kA > 0 ? "skips the items" : "", kA > 0 ? RED : "#94a3b8", kA > 0 ? "#fee2e2" : "#f1f5f9", Math.max(k0, kA));
-          if (rev) tag(c, "B ✓", 860, 470 + 120, 80, "#dcfce7", "#14532d", 0.06, seg(f, ln.from + 8, ln.from + 14));
+          if (rev) tag(c, "B ✓", 480, 586, 64, "#bbf7d0", "#14532d", 0.06, seg(f, ln.from + 8, ln.from + 14));   // between the label and the result
           if (curd) {   // the biggest brain's real reply to "2 curd 2 milk" (series/scripts/ep41_demo/7B.json, order 7)
             const kq = seg(f, ln.from + 4, ln.from + 12);
             if (kq > 0) {
@@ -322,8 +325,7 @@ const StChoose: React.FC<SP> = ({ s }) => {
           if (hookOn) {
             const kk = loopOn ? seg(f, slam, slam + 4) : 1;
             chatCard(c, kk, loopOn ? 1 : seg(f, 4, 26), r);
-            bigCard(c, loopOn ? kk : seg(f, cu(1, 0.45) - 6, cu(1, 0.45) + 2), r);
-            tag(c, "WHICH items??", 340, 728, 50, "#fee2e2", "#991b1b", -0.03, loopOn ? kk : seg(f, 24, 30));
+            bigCard(c, kk, r);   // held up from frame 1 (the cover)
           }
           if (b.prop === "quiz") bubble(c, 330, 560, "biggest wins!", 84, seg(p, 0.35, 0.5), COL.yellow);
           if (b.prop === "notbig") bubble(c, 330, 560, "not the biggest?!", 80, seg(p, 0.05, 0.2), COL.yellow);

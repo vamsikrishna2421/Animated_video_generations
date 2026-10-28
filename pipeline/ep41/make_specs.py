@@ -56,8 +56,8 @@ SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
 }
 NOCAP = {10}   # the rule chip carries its words
 PAUSES = {}
-TEMPO_EN = {"ravi": 1.15, "ai": 1.1}
-TEMPO_TE = {"ravi": 1.15, "ai": 1.1}
+TEMPO_EN = {"ravi": 1.15, "ai": 1.15}   # first build ran 64 s
+TEMPO_TE = {"ravi": 1.15, "ai": 1.15}
 TEMPO_LINE_TE = {}
 # Sound (CLAUDE.md arc): a hit, the error buzz and three message pops on frame 1; a pen scratch as the pass mark is
 # written; the quiz's tick-tock 3-2-1 with a riser, the bed out after the count, a boom and clap on the cut to the
@@ -68,7 +68,7 @@ SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.25, "tail": 0.0}),
           ("s_b", (6, 7, 8, 9), {"boost": 1.15, "drop_pre": [[0, 0.0, 1.4]], "tail": 0.1}),   # the bed out after the quiz count
           ("s_c", (10, 11, 12), {"lift": 0.8, "pre": 0.35, "boost": 1.15, "tail": 0.1}),
           ("s_d", (13, 14, 15, 16), {"lift": 0.9, "pre": 0.35, "outro": True, "boost": 1.5, "rise": 1.2, "tail": 0.0})]
-GAP = {1: 0.15, 2: 0.2, 3: 0.25, 4: 0.3, 5: 4.8, 6: 0.3, 7: 0.15, 8: 0.3, 9: 0.4, 10: 0.5, 11: 0.6, 12: 0.3, 13: 0.3, 14: 0.25, 15: 1.0}   # 5: the quiz holds 4.8 s (Creative 11); 15: the riser into the last line sits in the gap
+GAP = {1: 0.15, 2: 0.2, 3: 0.2, 4: 0.2, 5: 4.8, 6: 0.25, 7: 0.15, 8: 0.25, 9: 0.25, 10: 0.35, 11: 0.45, 12: 0.25, 13: 0.2, 14: 0.2, 15: 1.0}   # 5: the quiz holds 4.8 s (Creative 11); 15: the riser into the last line sits in the gap
 GAP_TE = {}
 GAIN = {16: 1.0}
 GAIN_TE = {}
