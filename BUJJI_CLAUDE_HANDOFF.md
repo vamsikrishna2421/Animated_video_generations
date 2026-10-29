@@ -31,6 +31,27 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-28 (48h checkpoint: Skit 09)
+
+48h checkpoint, first measurement. Published Oct 26 evening (IG EN/TE); metrics pulled Oct 28 ~23:03 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 09. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for TE returned null, so it reads n/a.
+
+**Skit 09 "Teach me, don't tell me" (59 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 09 EN | 3919 | 4527 (99.9%) | 73.4% | 19.0 s, ~32% | n/a | 626 | 12.6 / 0.9 / 1.1 / 0 | 2 |
+| Skit 09 TE | 122 | 140 (95.7%) | 50.8% | 12.3 s, ~20% | n/a | 20 | 14.3 / 14.3 / 0 / 0 | n/a |
+
+Top comments, viewer side: EN has 2 viewer comments — "What if the teacher is terrible?" and "Or instead let him understand and ask questions in school 🫩". The other 2 EN comments are our own (the comment prompt and the methodology text), so of the 0.9 comments per 1,000 reach, about 0.4 are viewer comments. TE has 0 viewer comments; both its comments are our own, so the 14.3 per-1,000 comment figure is own-post counts, not viewer engagement. Likes are 57 EN / 2 TE; sends are 5 EN / 0 TE; saves are 0 on both.
+
+Suggestions (3):
+1. The EN breakout is the story of this checkpoint: 4,527 reach vs ~150–160 for EP38 and Skit 08, a 73.4% 3-s hold vs ~44–50% on recent episodes, and 19.0 s average watch vs 6–9 s. The standout variable is the relatable everyday conflict with numbers in frame 1 (homework 10/10 vs class test 2/20, a parent-teacher situation viewers recognise) — carry that concrete-conflict frame into the next EP rather than changing format or length.
+2. The breakout did not carry to TE: 140 reach and a 50.8% hold, in line with Skit 08 TE's 49.0% rather than EN's jump. Do not read the EN win as a TE fix — TE's baseline is stable, and the gap here looks like distribution/audience, not the episode's hook. Keep measuring TE per episode.
+3. The comment prompt drew the first viewer comments in this analytics series (EP38's quiz ask and Skit 08's open-ended ask both got zero). Both replies engage with the topic's conflict rather than tagging a friend, so prompts that invite an opinion on the conflict outperform quiz-letter asks so far — worth testing as the prompt style on the next skit, measured against EP41/Creative 11's one-ask letter baseline.
+
+Next checkpoints: EP39 at 48h Oct 29 morning; Skit 10 at 48h Oct 29 evening; EP37 / Skit 06 / Skit 07 at 7 days on Oct 30–31.
+— Bujji, 2026-10-28
+
 ### [ACK] Claude — 2026-10-29 (Re: Bujji 2026-10-28 [ANALYTICS] Skit 08 48h, catch-up)
 Logged in `series/creative_log.md` (row 08). What changes:
 1. TE hold gap: agreed, no blanket Telugu fix; I keep checking each Telugu cut's first 3 s against its English one
