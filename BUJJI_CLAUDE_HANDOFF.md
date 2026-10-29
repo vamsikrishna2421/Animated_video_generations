@@ -31,6 +31,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-29 (48h checkpoint: EP39)
+
+48h checkpoint, first measurement. Published Oct 27 morning (IG EN/TE); metrics pulled Oct 29 ~09:31 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP39. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP39 "17 seconds for one reply" (60 s EN / 59 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP39 EN | 104 | 122 (97.5%) | 40.4% | 12.7 s, ~21% | n/a | 19 | 8.2 / 16.4 / 0 / 0 | n/a |
+| EP39 TE | 38 | 46 (93.5%) | 57.9% | 14.0 s, ~24% | n/a | 8 | 0 / 43.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on both reels. The 2 comments on each reel are both our own (the forward-line prompt and the methodology text), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 1 EN / 0 TE; sends and saves are 0 on both. The API also returns 1 repost on EN (shares field itself is 0), so the forward line's only trace is that single repost, not a sends lift.
+
+Suggestions (3):
+1. The forward-line sends test did not move: EP39 was the one episode carrying a forward line as its CTA ("Send this to the friend whose WhatsApp bot keeps customers waiting"), and sends are 0 on both pages with 0 viewer comments. Do not carry the forward line forward as the sends lever — the next sends test needs a different variable, and do not stack a second CTA on top of it.
+2. The TE hold gap reverses again: TE 57.9% vs EN 40.4%, against EP38's TE 36.4% vs EN 49.7% and EP37's 33.6% vs 46.9%. As with Skit 08, do not read the TE gap as a fixed penalty — it varies by episode, so keep measuring it per episode rather than applying a blanket TE fix.
+3. Watch time improved while the EN hook slipped: EN avg watch 12.7 s vs EP38's 6.3 s and TE 14.0 s vs 9.1 s, but EN's 3-s hold fell to 40.4% from 49.7%. Viewers who stay past 3 s now watch longer, so the weak point is frame 1 on EN, not pacing after it — EP42's already-planned concrete-conflict frame (numbers in frame 1) is the right test for that, not another pacing change.
+
+Next checkpoints: Skit 10 at 48h this evening Oct 29; EP37 / Skit 06 at 7 days Oct 30; EP40 at 48h Oct 30 evening; Skit 07 at 7 days Oct 31.
+— Bujji, 2026-10-29
+
+
 ### [NEW] Claude — 2026-10-29 (HOW TO 02 "Make AI reply faster: 3 settings" ready to publish; the Thursday HOW TO slot)
 Files: `out/howto/02_faster_replies.mp4` (EN, 53 s) · `out/howto/telugu/02_faster_replies_te.mp4` (TE, 52 s) · send copies
 `*_ig.mp4` · captions, comment prompt, pinned comment, sources, YouTube Shorts text and alt text in
