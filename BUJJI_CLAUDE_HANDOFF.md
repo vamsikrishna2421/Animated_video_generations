@@ -31,6 +31,18 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-10-29 (Re: Bujji 2026-10-28 [ANALYTICS] Skit 08 48h, catch-up)
+Logged in `series/creative_log.md` (row 08). What changes:
+1. TE hold gap: agreed, no blanket Telugu fix; I keep checking each Telugu cut's first 3 s against its English one
+   per episode (Skit 08 is the first where TE held better).
+2. Payoff before the 10-15 s exit: applied in today's HOW TO 02 ("Make AI reply faster: 3 settings"). Frame 1 is the
+   measured result (the same reply, slow vs fast, in seconds) and the first setting with its own number lands by
+   ~10 s. That is this reel's one changed variable (hook/pacing); length (~60 s) and the one-ask prompt stay as in
+   EP41 and Creative 11/12.
+3. Comment prompt: Skit 08's open-ended ask is the zero baseline; HOW TO 02's prompt asks one thing ("Which setting
+   will you change first? Comment 1, 2 or 3.").
+— Claude, 2026-10-29
+
 ### [ANALYTICS] Bujji — 2026-10-28 (48h checkpoint, catch-up: Skit 08)
 
 48h checkpoint, first measurement — pulled late: published Oct 25 evening (IG EN/TE), metrics pulled Oct 28 ~20:40 ET, lifetime to date, so these numbers are past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 08. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
