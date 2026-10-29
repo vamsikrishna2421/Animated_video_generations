@@ -1,0 +1,519 @@
+{
+ "id": "howto02te",
+ "title": "HOW TO 02: make AI reply faster, 3 settings (Telugu audio)",
+ "label": "HOW TO 02",
+ "banner": "Make AI reply faster",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "musicFade": 0.05,
+ "endPad": 2.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.12,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "musicEndRamp": [
+  0.93,
+  6.0
+ ],
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_faster",
+   "tail": 0.1,
+   "boost": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "app",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "three",
+      "n": 2
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "71 s for a WhatsApp message",
+     "title": "71 s for a WhatsApp message",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "రెండు లైన్ల వాట్సాప్ మెసేజ్ కి [1] డెబ్బై ఒక్క సెకన్లా?!",
+     "show": "71 seconds for a two-line WhatsApp message?!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.2,
+     "must": [
+      [
+       "सेक",
+       "सैक",
+       "सकन"
+      ]
+     ],
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "మూడు సెట్టింగ్స్ తో, [1] అదే మెసేజ్ ఐదు సెకన్లలో వచ్చింది.",
+     "show": "With three settings, the same message came in 5 seconds.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.16,
+     "must": [
+      [
+       "सेट",
+       "सेटिं",
+       "settings"
+      ]
+     ],
+     "pauses": {
+      "1": 0.3
+     },
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_faster",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.3,
+   "boost": 1.4,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1n",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "thinking",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step2",
+      "n": 6
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Less thinking, short replies",
+     "title": "Less thinking, short replies",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "మొదటిది: థింకింగ్ తగ్గించండి. <pause 0.25> చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో తక్కువ ఎఫర్ట్.",
+     "show": "One: less thinking. <pause 0.25> Instant on ChatGPT, Flash on Gemini, low effort on Claude.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.16,
+     "must": [
+      [
+       "थिं",
+       "थीं",
+       "थिन"
+      ]
+     ],
+     "tts": "మొదటిది: థింకింగ్ తగ్గించండి.",
+     "file2": "03b_ai.wav",
+     "tts2": "చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, క్లాడ్ లో తక్కువ ఎఫర్ట్.",
+     "pause": 0.25,
+     "must2": [
+      [
+       "इन्स",
+       "इंस",
+       "instant"
+      ],
+      [
+       "फ्ला",
+       "फ्लै",
+       "flash"
+      ],
+      [
+       "एफ",
+       "effort"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "టైం: డెబ్బై ఒక్క సెకన్ల నుంచి [1] పదిహేను సెకన్లకి.",
+     "show": "Time: from 71 seconds to 15.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.16,
+     "must": [
+      [
+       "पदि",
+       "15"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "\"షాప్ బంద్\" కి [1] అంత ఆలోచనా?!",
+     "show": "All that thinking, for \"shop closed\"?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.2,
+     "must": [
+      [
+       "बंद",
+       "बन्द",
+       "बांद"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి: <pause 0.25> [1] కీప్ ఇట్ టు టూ షార్ట్ లైన్స్. పదిహేను సెకన్లు, ఐదు అయ్యాయి.",
+     "show": "Second setting: a short reply. Type this: <pause 0.25> \"Keep it to 2 short lines.\" 15 seconds became 5.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.16,
+     "must": [
+      [
+       "रिप्ल",
+       "रिप्लै",
+       "reply"
+      ]
+     ],
+     "tts": "రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి:",
+     "file2": "06b_ai.wav",
+     "tts2": "కీప్ ఇట్ టు టూ షార్ట్ లైన్స్. పదిహేను సెకన్లు, ఐదు అయ్యాయి.",
+     "pause": 0.25,
+     "must2": [
+      [
+       "शॉर्ट",
+       "शार्ट",
+       "शोर्ट",
+       "short"
+      ],
+      [
+       "पदि",
+       "15"
+      ]
+     ],
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_faster",
+   "tail": 0.0,
+   "lift": 1.0,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.42,
+   "rise": 1.26,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step3",
+      "n": 7
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "oldname",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "typename",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "hard",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "save",
+      "n": 11
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "New chat · save this",
+     "title": "New chat · save this",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "మూడోది: కొత్త విషయానికి కొత్త చాట్. <pause 0.25> [1] నెల రోజుల చాట్ లో, అదే పనికి రెండు నిమిషాలు పైనే పట్టింది.",
+     "show": "Third: a new topic, a new chat. <pause 0.25> In a month-long chat, the same job took over 2 minutes.",
+     "maxgap": 0.28,
+     "gap": 0.55,
+     "tempo": 1.16,
+     "must": [
+      [
+       "चाट",
+       "चैट",
+       "chat"
+      ]
+     ],
+     "tts": "మూడోది: కొత్త విషయానికి కొత్త చాట్.",
+     "file2": "07b_ai.wav",
+     "tts2": "నెల రోజుల చాట్ లో, అదే పనికి రెండు నిమిషాలు పైనే పట్టింది.",
+     "pause": 0.25,
+     "must2": [
+      [
+       "नेल",
+       "नेला"
+      ],
+      [
+       "निमि",
+       "निमिष"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "08_ravi.wav",
+     "text": "కానీ పాత చాట్ కి [1] నా షాప్ పేరు తెలుసు!",
+     "show": "But the old chat knew my shop's name!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.2,
+     "must": [
+      [
+       "पेरु",
+       "पेरू",
+       "पेर"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "కొత్త చాట్ లో పేరు రాయండి. [1] ఒక్క లైన్ చాలు.",
+     "show": "Type the name in the new chat. One line is enough.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.16,
+     "must": [
+      [
+       "पेरु",
+       "पेरू",
+       "पेर"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "లెక్కల లాంటి కష్టమైన పనులకే థింకింగ్. <pause 0.25> [1] వాట్సాప్ మెసేజ్ కి ఫాస్ట్ చాలు.",
+     "show": "Thinking is only for hard jobs like maths. <pause 0.25> For a WhatsApp message, fast is enough.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.16,
+     "must": [
+      [
+       "थिं",
+       "थीं",
+       "थिन"
+      ]
+     ],
+     "tts": "లెక్కల లాంటి కష్టమైన పనులకే థింకింగ్.",
+     "file2": "10b_ai.wav",
+     "tts2": "వాట్సాప్ మెసేజ్ కి ఫాస్ట్ చాలు.",
+     "pause": 0.25,
+     "must2": [
+      [
+       "फास्ट",
+       "फ़ास्ट",
+       "fast"
+      ]
+     ],
+     "gain_db": -0.5
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "చింటూ! [1] ఇది సేవ్ చెయ్!",
+     "show": "Chintu! Save this!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "must": [
+      [
+       "चिं",
+       "चिन",
+       "चीं"
+      ],
+      [
+       "सेव",
+       "सेफ",
+       "सेब",
+       "save"
+      ]
+     ],
+     "gain_db": 3.3
+    }
+   ]
+  }
+ ]
+}

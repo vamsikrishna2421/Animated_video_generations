@@ -1,0 +1,550 @@
+{
+ "id": "howto02v1",
+ "title": "HOW TO 02: make AI reply faster, 3 settings",
+ "label": "HOW TO 02",
+ "banner": "Make AI reply faster",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.15,
+ "music": "lofi",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "musicFade": 0.05,
+ "endPad": 2.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -4,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.15,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_faster",
+   "tail": 0.1,
+   "boost": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "app",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "three",
+      "n": 2
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "71 s for a WhatsApp message",
+     "title": "71 s for a WhatsApp message",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "Seventy-one seconds [1] for a two-line WhatsApp message?!",
+     "show": "71 seconds for a two-line WhatsApp message?!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.2,
+     "must": [
+      [
+       "seventy",
+       "71"
+      ],
+      [
+       "seconds",
+       "second"
+      ],
+      [
+       "whatsapp"
+      ],
+      [
+       "message"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "With three settings, [1] the same message took five seconds.",
+     "show": "With three settings, the same message took 5 seconds.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.16,
+     "must": [
+      [
+       "three",
+       "3"
+      ],
+      [
+       "settings",
+       "setting"
+      ],
+      [
+       "five",
+       "5"
+      ],
+      [
+       "seconds",
+       "second"
+      ]
+     ],
+     "pauses": {
+      "1": 0.3
+     },
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_faster",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.3,
+   "boost": 1.4,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1n",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "thinking",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step2",
+      "n": 6
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Less thinking, short replies",
+     "title": "Less thinking, short replies",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "One: less thinking. Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude.",
+     "show": "One: less thinking. Instant on ChatGPT, Flash on Gemini, low effort on Claude.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.16,
+     "must": [
+      [
+       "less"
+      ],
+      [
+       "thinking"
+      ],
+      [
+       "instant"
+      ],
+      [
+       "chatgpt",
+       "chat",
+       "gpt"
+      ],
+      [
+       "flash"
+      ],
+      [
+       "gemini"
+      ],
+      [
+       "low"
+      ],
+      [
+       "claude",
+       "cloud",
+       "clod"
+      ]
+     ],
+     "tts": "One: less thinking. Instant on Chat G P T, Flash on Gemini, low effort on Claude.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "Seventy-one seconds, [1] down to fifteen.",
+     "show": "71 seconds, down to 15.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.16,
+     "must": [
+      [
+       "seventy",
+       "71"
+      ],
+      [
+       "fifteen",
+       "15"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "All that thinking, [1] for \"shop closed\"?!",
+     "show": "All that thinking, for \"shop closed\"?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.2,
+     "must": [
+      [
+       "thinking"
+      ],
+      [
+       "shop"
+      ],
+      [
+       "closed",
+       "close"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
+     "show": "Two: ask for a short reply. \"Keep it to 2 short lines.\" 15 seconds, down to 5.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.16,
+     "must": [
+      [
+       "short"
+      ],
+      [
+       "reply"
+      ],
+      [
+       "lines",
+       "line"
+      ],
+      [
+       "fifteen",
+       "15"
+      ],
+      [
+       "five",
+       "5"
+      ]
+     ],
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_faster",
+   "tail": 0.0,
+   "lift": 1.0,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.42,
+   "rise": 1.26,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step3",
+      "n": 7
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "oldname",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "typename",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "hard",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "save",
+      "n": 11
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "New chat · save this",
+     "title": "New chat · save this",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "Three: new topic, new chat. [1] In a month-long chat, the same job took over two minutes.",
+     "show": "Three: new topic, new chat. In a month-long chat, the same job took over 2 minutes.",
+     "maxgap": 0.28,
+     "gap": 0.55,
+     "tempo": 1.16,
+     "must": [
+      [
+       "new"
+      ],
+      [
+       "chat"
+      ],
+      [
+       "month",
+       "monthlong"
+      ],
+      [
+       "two",
+       "2"
+      ],
+      [
+       "minutes",
+       "minute"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "08_ravi.wav",
+     "text": "But the old chat [1] knew my shop's name!",
+     "show": "But the old chat knew my shop's name!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.2,
+     "must": [
+      [
+       "old"
+      ],
+      [
+       "chat"
+      ],
+      [
+       "shop",
+       "shops"
+      ],
+      [
+       "name"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "So type it in the new chat. [1] One line beats a month of chat.",
+     "show": "So type it in the new chat. One line beats a month of chat.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.16,
+     "must": [
+      [
+       "type"
+      ],
+      [
+       "new"
+      ],
+      [
+       "line"
+      ],
+      [
+       "month"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "Thinking is for hard problems, like maths. [1] For a WhatsApp message, fast is enough.",
+     "show": "Thinking is for hard problems, like maths. For a WhatsApp message, fast is enough.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.16,
+     "must": [
+      [
+       "thinking"
+      ],
+      [
+       "hard"
+      ],
+      [
+       "maths",
+       "math"
+      ],
+      [
+       "whatsapp"
+      ],
+      [
+       "fast"
+      ]
+     ],
+     "gain_db": -0.5
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "Chintu! [1] Save this!",
+     "show": "Chintu! Save this!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.2,
+     "must": [
+      [
+       "chintu",
+       "chintoo"
+      ],
+      [
+       "save"
+      ]
+     ],
+     "gain_db": 1.3
+    }
+   ]
+  }
+ ]
+}

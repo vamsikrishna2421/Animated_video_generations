@@ -1,0 +1,85 @@
+HOW TO 02: "Make AI reply faster: 3 settings" (about EN_S s English / TE_S s Telugu, 9:16; also a YouTube Short)
+Files: out/howto/02_faster_replies.mp4 (English page) · out/howto/telugu/02_faster_replies_te.mp4 (Telugu page)
+Send copies: out/howto/02_faster_replies_ig.mp4 · out/howto/telugu/02_faster_replies_te_ig.mp4
+Post on the day (Thursday HOW TO, not in the serial queue). Frame 1 is the result: the same WhatsApp message, 71 s vs
+5 s in our test. Before posting, open your own ChatGPT, Gemini and Claude apps once: the menu names below were checked
+on Oct 29, 2026, and OpenAI's help pages could not be loaded from our machine (see SOURCES).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Ravi's AI app took 71 seconds to write a two-line WhatsApp message. In our test, three settings got the same message to 5 seconds.
+
+1. Less thinking (the model menu)
+ChatGPT: Instant (on the free plan Instant is the default: just don't tap Think)
+Gemini: a Flash model (if you see a Thinking level, pick the lowest; on the free plan there may be no menu at all)
+Claude: click the model name → Effort → Low (thinking can't be switched off on Claude's current models, only turned down)
+2. Ask for a short reply: add "Keep it to 2 short lines." to your question.
+3. New topic, new chat. Type the one detail it needs (your shop's name) instead of keeping one month-long chat.
+
+Our test: a small free AI (Qwen3-4B, offline, on a 4-core computer). The apps run on big servers and are much faster; what carries over is which settings cost time. The same WhatsApp job, the whole reply, 3 runs each (the middle one):
+thinking on: 71 s → less thinking: 15 s → + a short reply: 5 s
+The same job at the end of a month-long chat (90 messages), thinking on: 132 s. In the apps a long chat slows down less (they keep part of it ready), but it uses more of your limit (Claude's help page).
+Keep thinking for hard jobs: maths, planning, code. For messages and replies, fast is enough.
+
+Apps rename these menus often: if yours looks different, pick the fast or lowest option.
+Save this. Next HOW TO (Nov 5): test 3 AIs on your question before you pay.
+
+#AI #ChatGPT #Gemini #Claude #AITips #LearnAI
+
+=== COMMENT PROMPT ===
+Which app do you use? Comment ChatGPT, Gemini or Claude.
+
+=== PINNED_COMMENT ===
+The exact taps (checked Oct 29, 2026):
+ChatGPT: the model menu → Instant. Free and Go plans: Instant is already on; Think turns deeper reasoning on for one message, so leave it off for quick jobs.
+Gemini: the model menu → Flash. If a "Thinking level" shows at the bottom of the menu, choose the lowest.
+Claude (claude.ai): click the model name next to the send button → Effort → Low. "Higher effort means more thorough responses, but they take longer and use more tokens" (Claude's help page).
+How we tested: Qwen3-4B (Qwen's own 4-bit file, Apache 2.0), llama.cpp, 4 CPU cores, the internet cut, Qwen's recommended settings, 3 runs per setting from an empty cache. The job: "Write a WhatsApp message for my shop's customers: the shop is closed this Sunday for a family function, and open again on Monday at 7 am." Every reply read by hand: all 15 say the shop is closed on Sunday and opens on Monday at 7 am (6 say "this Sunday", the rest "Sunday" or "on Sunday"). Noticed while reading: the short replies were ready to paste; the long ones had "[Your Shop Name]" blanks, "Subject:" lines and notes about the message. With thinking on, asking for a short reply alone was erratic (29, 36 and 90 s): turn thinking down first.
+
+=== SOURCES (for comments) ===
+Claude Help Center: "Change the model, effort, and thinking settings" and "How do usage and length limits work?" (support.claude.com, read Oct 29, 2026).
+Google: Gemini app release notes (gemini.google/release-notes: Jul 21, 2026 "select '3.6 Flash' in the model drop down"; May 19, 2026); 9to5Google, May 17, 2026 (the Thinking level menu).
+OpenAI Help Center: the models in ChatGPT and the release notes (Instant, Medium, High, Extra High in the model menu; Think on Free and Go). The pages refused our fetch on Oct 29; this is their text as search results quoted it, and TechRadar names Instant, Thinking and Pro.
+Our test: pipeline/howto02/speed_settings.py, series/scripts/howto02_demo/results.json (Oct 29, 2026).
+
+=== YOUTUBE SHORTS ===
+Title: Make AI reply faster: 3 settings (71 s → 5 s in our test) #shorts
+Description: The same WhatsApp message: 71 seconds with thinking on, 5 seconds with three settings. 1. Less thinking: ChatGPT Instant, Gemini Flash, Claude Effort Low. 2. "Keep it to 2 short lines." 3. New topic, new chat. Our test: a small free AI offline on a 4-core computer; the apps are faster, the same settings cost time there too. Menus checked Oct 29, 2026.
+
+=== ALT_TEXT ===
+Crayon-animated skit in a kirana shop. Ravi anna shouts at his phone, where an AI chat app is still "Thinking..." about his two-line WhatsApp message; a stamp reads "Same message: 71 s → 5 s" and a tag "Our test: a small free AI, offline". The shop AI on his counter lists three settings. Step 1, less thinking: ChatGPT → Instant (free plan: don't tap Think), Gemini → Flash, Claude → Effort: Low; bars: thinking on 71 s, less thinking 15 s. Ravi: all that thinking, for "shop closed"?! Step 2, a short reply: "Keep it to 2 short lines." is typed into the app and a short reply appears; bars 15 s to 5 s; "all 3 ready to paste". Step 3, new chat: a fresh chat 71 s against a month-long chat of 90 messages 132 s. Ravi: the old chat knew my shop's name; a new chat's first line: "My shop: Ravi Kirana." Thinking is for hard sums and planning; fast for messages. A save card lists the three settings.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Ravi anna AI app rendu lainla WhatsApp message ki 71 secanlu teesukundi. Maa test lo moodu settings tho ade message 5 secanlalo vachchindi.
+
+1. Thinking tagginchandi (model menu)
+ChatGPT: Instant (free plan lo idi default: Think nokkakandi)
+Gemini: Flash model (Thinking level kanipiste, anni kanna takkuvadi; free plan lo menu undakapovachchu)
+Claude: model peru meeda click → Effort → Low (Claude current models lo thinking aapalemu, tagginchagalam anthe)
+2. Chinna reply adagandi: mee prashna tho "Keep it to 2 short lines." ani raayandi.
+3. Kotta vishayaaniki kotta chat. Nela rojula chat badulu, kaavalsina okka detail (mee shop peru) raayandi.
+
+Maa test: chinna free AI (Qwen3-4B, offline, 4-core computer). Apps pedda servers meeda nadustaayi, chaala fast; e settings time teesukuntaayo adi maatram ade. Ade WhatsApp pani, mottham reply, okkodaaniki 3 runs (madhyadi):
+thinking on: 71 s → thinking takkuva: 15 s → + chinna reply: 5 s
+Nela rojula chat (90 messages) chivarlo ade pani, thinking on: 132 s. Apps lo pedda chat antha slow avvadu, kaani mee limit ekkuva vaadutundi (Claude help page).
+Lekkalu, planning, code laanti kashtamaina panulake thinking. Messages, replies ki fast chaalu.
+
+Apps ee menu perlu tarachu maarustaayi: mee app lo verega unte, fast leda takkuva option enchukondi.
+Idi save cheyyandi. Next HOW TO (Nov 5): dabbulu kattamundu mee prashna ni 3 AIs tho test cheyyandi.
+
+#AIinTelugu #TeluguAI #ChatGPT #Gemini #AITips
+
+=== COMMENT PROMPT ===
+Meeru e app vaadataaru? ChatGPT, Gemini leda Claude ani comment cheyyandi.
+
+=== PINNED_COMMENT ===
+Exact taps (Oct 29, 2026 check chesaam):
+ChatGPT: model menu → Instant. Free, Go plans lo Instant already on; Think okka message ki deep reasoning on chestundi, quick panulaki daanni vaddu.
+Gemini: model menu → Flash. Menu kinda "Thinking level" kanipiste, takkuvadi enchukondi.
+Claude (claude.ai): send button pakkana model peru → Effort → Low.
+Memu ela test chesaam: Qwen3-4B (Qwen 4-bit file, Apache 2.0), llama.cpp, 4 CPU cores, internet cut, okko setting ki 3 runs. Anni 15 replies chadivaam: annitlo aadivaaram shop band, somavaaram 7 ki open (6 "this Sunday" annaayi, migataavi "Sunday"). Chinna replies paste cheyyadaaniki ready; peddavaatilo "[Your Shop Name]" khaalilu. Thinking on lo chinna reply okkate adigite 29, 36, 90 s: mundu thinking tagginchandi.
+Sources: English pinned comment lo unnaayi.
+
+=== COVER ===
+Frame 1: Ravi anna arms up behind the counter, his phone "Thinking...", the stamp "SAME MESSAGE: 71 s → 5 s", "OUR TEST · a small free AI, offline" (English visuals).

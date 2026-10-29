@@ -1,4 +1,4 @@
-# HOW TO 02 "Make AI reply faster: 3 settings" · script v1, Oct 29
+# HOW TO 02 "Make AI reply faster: 3 settings" · script v2, Oct 29
 
 Thursday HOW TO (run of Oct 29, 2026; the agreed 4-week calendar, W1). Cast: Ravi anna and the shop AI (phone), a phone
 job: Ravi waits a minute for his AI app to write a two-line WhatsApp message.
@@ -77,36 +77,57 @@ Results (medians of 3; series/scripts/howto02_demo/results.json; the internet cu
 3. Ravi's customer waiting at the counter while the phone thinks.
 Kept 1: the number and the clash (a two-line message, a minute of thinking) in one look; Bujji: the result in frame 1.
 
+## Viewer notes on v1 and what changed (v2)
+- Both: step 1 crammed too much (71, 15, 51, 395 tokens and three menus in one card), "fast mode" is no button's name,
+  and two clocks were mixed (51 s to the first word vs 71/15/5 s whole replies). v2: one clock (the whole reply:
+  71 → 15 → 5, the long chat 132 s); the menus are said out loud ("Instant on ChatGPT, Flash on Gemini, low effort on
+  Claude") in their own line, the result in the next; no token counts on screen; "all 3 ready to paste".
+- Both: frame 1 must say what the test is: "OUR TEST · a small free AI, offline" big from frame 1, voiced at ~0:03
+  ("With three settings, the same message took five seconds" + the tag); the phone shows "Thinking..." with no timer.
+- Priya: Claude's thinking can't be switched off on its current models, so step 1 is "less thinking" (Claude: low
+  effort); free ChatGPT is already on Instant ("free: don't tap Think"); Gemini's free plan may show no model menu
+  (caption); the long chat's seconds carry over least (apps cache chats): "long chats also eat your limit" (Claude's
+  page). The pass mark said "this Sunday": 6 of 15 replies say exactly that, the other 9 "Sunday"/"on Sunday" (a
+  customer reads them the same); the caption says so instead of "all 15 pass".
+- Sandeep (Telugu): "డెబ్బై ఒక్క సెకనా" ends like "just ONE second?!": "సెకన్లా"; line 5 told viewers to type a Telugu
+  line the screen shows in English, and "రెండు" twice ("two: two lines"): the steps are "మొదటిది / రెండో సెట్టింగ్ /
+  మూడోది" and the voice says the English line the screen shows.
+- Comment ask: "1, 2 or 3" told us nothing; v2 asks for the app ("Which app do you use? Comment ChatGPT, Gemini or
+  Claude."), and the pinned comment gives each app's exact taps.
+
 ## Script (English) · ~60 s
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Ravi | Seventy-one seconds [1] for a two-line WhatsApp message?! | frame 1: the app "Thinking... 0:51"; the stamp "SAME MESSAGE · OUR TEST: 71 s → 5 s" |
-| 2 | AI | Three settings, [1] and the same message takes five seconds. | the three steps listed small: 1 fast mode · 2 short reply · 3 new chat |
-| 3 | AI | One: the fast mode, not thinking. [1] It thought for fifty seconds before the first word. | STEP 1 card: thinking ON 71 s · OFF 15 s; "51 s of hidden thinking (395 tokens)"; the menus: "ChatGPT: model menu → Instant · Gemini: model menu → Flash · Claude: model name → Effort → Low" |
-| 4 | Ravi | Fifty seconds of thinking, [1] for "shop closed"?! | bubble |
-| 5 | AI | Two: ask for a short reply. "Keep it to two short lines." [1] Fifteen seconds, down to five. | STEP 2: the typed line; 15 s → 5 s; "ready to send: 3 of 3"; small: "with thinking on, 29-90 s: turn thinking off first" |
-| 6 | AI | Three: new topic, new chat. [1] In a month-long chat, it read for fifty-four seconds first. | STEP 3: "New chat"; reading: fresh 1 s · 90 messages 54 s |
-| 7 | Ravi | But the old chat [1] knew my shop's name! | bubble; the old reply signed "Ravi Kirana" |
-| 8 | AI | So type it in the new chat. [1] One line beats a month of chat. | the new chat's first line: "My shop: Ravi Kirana." |
-| 9 | AI | Thinking is for hard problems, like maths. [1] For a WhatsApp message, fast is enough. | "THINKING: hard sums, planning · FAST: messages, replies"; small: "our test: a small free AI, offline · apps are faster, the same 3 things slow them" |
-| 10 | Ravi | Chintu! [1] Save this! | SAVE THIS card: 1 model menu → the fast one (Instant / Flash / Effort Low) · 2 "Keep it to 2 short lines." · 3 new topic → New chat (+ the one detail) · "our test: 71 s → 5 s" |
+| 1 | Ravi | Seventy-one seconds [1] for a two-line WhatsApp message?! | frame 1: the app "Thinking..." (no timer); the stamp "SAME MESSAGE: 71 s → 5 s"; "OUR TEST · a small free AI, offline" |
+| 2 | AI | With three settings, [1] the same message took five seconds. | the stamp holds; the three steps small: 1 less thinking · 2 short reply · 3 new chat |
+| 3 | AI | One: less thinking. Instant on ChatGPT, Flash on Gemini, [1] low effort on Claude. | STEP 1 · LESS THINKING: three rows "ChatGPT → Instant (free: don't tap Think)" · "Gemini → Flash" · "Claude → Effort: Low" |
+| 4 | AI | Seventy-one seconds, [1] down to fifteen. | bars: thinking on 71 s · off 15 s |
+| 5 | Ravi | All that thinking, [1] for "shop closed"?! | bubble |
+| 6 | AI | Two: ask for a short reply. "Keep it to two short lines." [1] Fifteen seconds, down to five. | STEP 2 · SHORT REPLY: the typed line; bars 15 s → 5 s; "all 3 ready to paste" |
+| 7 | AI | Three: new topic, new chat. [1] In a month-long chat, the same job took over two minutes. | STEP 3 · NEW CHAT: bars "fresh chat 71 s · month-long chat 132 s (thinking on)"; small: "apps keep long chats faster, but they eat your limit" |
+| 8 | Ravi | But the old chat [1] knew my shop's name! | bubble; the old reply signed "Ravi Kirana" |
+| 9 | AI | So type it in the new chat. [1] One line beats a month of chat. | the new chat's first line: "My shop: Ravi Kirana." |
+| 10 | AI | Thinking is for hard problems, like maths. [1] For a WhatsApp message, fast is enough. | "THINKING: hard sums, planning · FAST: messages, replies" |
+| 11 | Ravi | Chintu! [1] Save this! | SAVE THIS card: 1 less thinking (ChatGPT Instant · Gemini Flash · Claude Effort Low) · 2 "Keep it to 2 short lines." · 3 new topic → New chat (+ the one detail) · "our test: 71 s → 5 s · a small free AI, offline · apps are faster" |
 
 ## Script (Telugu; on-screen text stays English)
 | # | Who | Telugu | Romanized |
 |---|---|---|---|
-| 1 | Ravi | రెండు లైన్ల వాట్సాప్ మెసేజ్ కి [1] డెబ్బై ఒక్క సెకనా?! | Rendu lainla WhatsApp message ki debbai okka secanaa?! |
-| 2 | AI | మూడు సెట్టింగ్స్ అండి. [1] అదే మెసేజ్, ఐదు సెకన్లలో. | Moodu settings andi. Ade message, aidu secanlalo. |
-| 3 | AI | ఒకటి: థింకింగ్ కాదు, ఫాస్ట్ మోడ్. [1] మొదటి మాటకి ముందే అది యాభై సెకన్లు ఆలోచించింది. | Okati: thinking kaadu, fast mode. Modati maataki munde adi yaabhai secanlu aalochinchindi. |
-| 4 | Ravi | "షాప్ బంద్" కి [1] యాభై సెకన్ల ఆలోచనా?! | "Shop bandh" ki yaabhai secanla aalochanaa?! |
-| 5 | AI | రెండు: చిన్న రిప్లై అడగండి. "రెండు చిన్న లైన్లు చాలు" అని రాయండి. [1] పదిహేను సెకన్ల నుంచి ఐదుకి. | Rendu: chinna reply adagandi. "Rendu chinna lainlu chaalu" ani raayandi. Padihenu secanla nunchi aiduki. |
-| 6 | AI | మూడు: కొత్త విషయానికి కొత్త చాట్. [1] నెల రోజుల చాట్ లో, ముందు యాభై నాలుగు సెకన్లు చదివింది. | Moodu: kotta vishayaaniki kotta chat. Nela rojula chat lo, mundu yaabhai naalugu secanlu chadivindi. |
-| 7 | Ravi | కానీ పాత చాట్ కి [1] నా షాప్ పేరు తెలుసు! | Kaani paata chat ki naa shop peru telusu! |
-| 8 | AI | కొత్త చాట్ లో పేరు రాయండి. [1] ఒక్క లైన్ చాలు. | Kotta chat lo peru raayandi. Okka line chaalu. |
-| 9 | AI | లెక్కల లాంటి కష్టమైన పనులకే థింకింగ్. [1] వాట్సాప్ మెసేజ్ కి ఫాస్ట్ చాలు. | Lekkala laanti kashtamaina panulake thinking. WhatsApp message ki fast chaalu. |
-| 10 | Ravi | చింటూ! [1] ఇది సేవ్ చెయ్! | Chintoo! Idi save chey! |
+| 1 | Ravi | రెండు లైన్ల వాట్సాప్ మెసేజ్ కి [1] డెబ్బై ఒక్క సెకన్లా?! | Rendu lainla WhatsApp message ki debbai okka secanlaa?! |
+| 2 | AI | మూడు సెట్టింగ్స్ తో, [1] అదే మెసేజ్ ఐదు సెకన్లలో వచ్చింది. | Moodu settings to, ade message aidu secanlalo vachchindi. |
+| 3 | AI | మొదటిది: థింకింగ్ తగ్గించండి. చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో తక్కువ ఎఫర్ట్. | Modatidi: thinking tagginchandi. ChatGPT lo Instant, Gemini lo Flash, Claude lo takkuva effort. |
+| 4 | AI | టైం: డెబ్బై ఒక్క సెకన్ల నుంచి [1] పదిహేను సెకన్లకి. | Time: debbai okka secanla nunchi padihenu secanlaki. |
+| 5 | Ravi | "షాప్ బంద్" కి [1] అంత ఆలోచనా?! | "Shop bandh" ki anta aalochanaa?! |
+| 6 | AI | రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి: [1] కీప్ ఇట్ టు టూ షార్ట్ లైన్స్. పదిహేను సెకన్లు, ఐదు అయ్యాయి. | Rendo setting: chinna reply. Ilaa raayandi: keep it to two short lines. Padihenu secanlu, aidu ayyaayi. |
+| 7 | AI | మూడోది: కొత్త విషయానికి కొత్త చాట్. [1] నెల రోజుల చాట్ లో, అదే పనికి రెండు నిమిషాలు పైనే పట్టింది. | Moododi: kotta vishayaaniki kotta chat. Nela rojula chat lo, ade paniki rendu nimishaalu paine pattindi. |
+| 8 | Ravi | కానీ పాత చాట్ కి [1] నా షాప్ పేరు తెలుసు! | Kaani paata chat ki naa shop peru telusu! |
+| 9 | AI | కొత్త చాట్ లో పేరు రాయండి. [1] ఒక్క లైన్ చాలు. | Kotta chat lo peru raayandi. Okka line chaalu. |
+| 10 | AI | లెక్కల లాంటి కష్టమైన పనులకే థింకింగ్. [1] వాట్సాప్ మెసేజ్ కి ఫాస్ట్ చాలు. | Lekkala laanti kashtamaina panulake thinking. WhatsApp message ki fast chaalu. |
+| 11 | Ravi | చింటూ! [1] ఇది సేవ్ చెయ్! | Chintoo! Idi save chey! |
 
-Telugu notes: the numbers mid-line, never opening a line (Creative 12: a bare opening "డెబ్బై!" was clipped); no "ఏఐ"
-in voiced text; no word one slipped letter away from a swear word.
+Telugu notes: the numbers mid-line, never opening a line (Creative 12: a bare opening "డెబ్బై!" was clipped); "క్లాడ్ లో
+తక్కువ ఎఫర్ట్" (not "లో ఎఫర్ట్": "lo lo"); no "ఏఐ" in voiced text; no zero-width joiners; no word one slipped letter
+away from a swear word.
 
-## Caption ask (draft)
-Which setting will you change first? Comment 1, 2 or 3.
+## Caption ask
+Which app do you use? Comment ChatGPT, Gemini or Claude. (The pinned comment: each app's exact taps.)
