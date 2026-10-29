@@ -159,7 +159,7 @@
    "boost": 1.4,
    "drop_pre": [
     [
-     1,
+     0,
      0.0,
      0.5
     ]
@@ -175,7 +175,7 @@
      {
       "who": "ai",
       "shot": "app",
-      "prop": "step1n",
+      "prop": "step1m",
       "n": 4
      },
      {
@@ -229,10 +229,10 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "One: less thinking. Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude.",
-     "show": "One: less thinking. Instant on ChatGPT, Flash on Gemini, low effort on Claude.",
+     "text": "One: less thinking. [1] Seventy-one seconds, down to fifteen.",
+     "show": "One: less thinking. 71 seconds, down to 15.",
      "maxgap": 0.28,
-     "gap": 0.35,
+     "gap": 0.5,
      "tempo": 1.16,
      "must": [
       [
@@ -241,6 +241,26 @@
       [
        "thinking"
       ],
+      [
+       "seventy",
+       "71"
+      ],
+      [
+       "fifteen",
+       "15"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude.",
+     "show": "Instant on ChatGPT, Flash on Gemini, low effort on Claude.",
+     "maxgap": 0.28,
+     "gap": 0.7,
+     "tempo": 1.16,
+     "must": [
       [
        "instant"
       ],
@@ -264,34 +284,14 @@
        "clod"
       ]
      ],
-     "tts": "One: less thinking. Instant on Chat G P T, Flash on Gemini, low effort on Claude.",
-     "gain_db": -1.0
-    },
-    {
-     "who": "ai",
-     "file": "04_ai.wav",
-     "text": "Seventy-one seconds, [1] down to fifteen.",
-     "show": "71 seconds, down to 15.",
-     "maxgap": 0.28,
-     "gap": 0.5,
-     "tempo": 1.16,
-     "must": [
-      [
-       "seventy",
-       "71"
-      ],
-      [
-       "fifteen",
-       "15"
-      ]
-     ],
+     "tts": "Instant on Chat G P T, Flash on Gemini, low effort on Claude.",
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "05_ravi.wav",
-     "text": "All that thinking, [1] for \"shop closed\"?!",
-     "show": "All that thinking, for \"shop closed\"?!",
+     "text": "All that thinking, [1] just for \"shop closed\"?!",
+     "show": "All that thinking, just for \"shop closed\"?!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.2,

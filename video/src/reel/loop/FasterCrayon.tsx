@@ -168,7 +168,7 @@ const StFaster: React.FC<SP> = ({ s }) => {
     const prev = i > 0 ? beats[i - 1].shot : "";
     if (b.shot === "app" && prev !== "app" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.22} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={1} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("c")} at={1} src="audio/sfx_pop.wav" vol={0.5} />);
-    if (b.prop === "step1n" || b.prop === "step3") sfx.push(<Sfx key={k("n")} at={end + 1} src="audio/sfx_snap.wav" vol={0.35} />);   // after the number, off the words
+    if (b.prop === "step1" || b.prop === "step3") sfx.push(<Sfx key={k("n")} at={end + 1} src="audio/sfx_snap.wav" vol={0.35} />);   // after the number, off the words
     if (b.prop === "step2") sfx.push(<Sfx key={k("s")} at={end + 1} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "typename") sfx.push(<Sfx key={k("p")} at={Math.max(0, at - 4)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "save") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={end + 2} src="reel/sfx_boom.wav" vol={0.7} />,
@@ -197,15 +197,15 @@ const StFaster: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "app") {
           // ---------- the steps, full frame ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
-          if (b.prop === "step1") {
+          if (b.prop === "step1m") {
             stepHead(c, W, 1, "LESS THINKING", 1);
-            appRow(c, W, 460, "ChatGPT", "Instant", "free plan: don't tap Think", GREEN, seg(p, 0.25, 0.35));
-            appRow(c, W, 700, "Gemini", "Flash", "", GREEN, seg(p, 0.5, 0.6));
+            appRow(c, W, 460, "ChatGPT", "Instant", "free plan: don't tap Think", GREEN, seg(p, 0.02, 0.12));
+            appRow(c, W, 700, "Gemini", "Flash", "", GREEN, seg(p, 0.35, 0.45));
             const c1 = cu(1, 0.75);
             appRow(c, W, 900, "Claude", "Effort: Low", "", GREEN, seg(f, c1 - 4, c1 + 4));
             c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("in the model menu · names checked Oct 29, 2026", W / 2, 1160);
           }
-          if (b.prop === "step1n") {
+          if (b.prop === "step1") {
             stepHead(c, W, 1, "LESS THINKING", 1);
             const c1 = cu(1, 0.5);
             bars(c, W, 560, [["thinking on", n.default.whole, RED], ["less thinking", n.nothink.whole, GREEN]], [seg(p, 0.02, 0.3), seg(f, c1 - 2, c1 + 10)], n.default.whole);

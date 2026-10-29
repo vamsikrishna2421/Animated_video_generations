@@ -20,12 +20,12 @@ L = [
      "రెండు లైన్ల వాట్సాప్ మెసేజ్ కి [1] డెబ్బై ఒక్క సెకన్లా?!", "71 seconds for a two-line WhatsApp message?!"),
     ("ai", "wide", "three", "With three settings, [1] the same message took five seconds.",
      "మూడు సెట్టింగ్స్ తో, [1] అదే మెసేజ్ ఐదు సెకన్లలో వచ్చింది.", "With three settings, the same message came in 5 seconds."),
-    ("ai", "app", "step1", "One: less thinking. Instant on ChatGPT, Flash on Gemini, [1] low effort on Claude.",
-     "మొదటిది: థింకింగ్ తగ్గించండి. | చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో తక్కువ ఎఫర్ట్.",
-     "One: less thinking. <pause 0.25> Instant on ChatGPT, Flash on Gemini, low effort on Claude."),
-    ("ai", "app", "step1n", "Seventy-one seconds, [1] down to fifteen.",
-     "టైం: డెబ్బై ఒక్క సెకన్ల నుంచి [1] పదిహేను సెకన్లకి.", "Time: from 71 seconds to 15."),
-    ("ravi", "ravi", "thinking", "All that thinking, [1] for \"shop closed\"?!",
+    ("ai", "app", "step1", "One: less thinking. [1] Seventy-one seconds, down to fifteen.",
+     "మొదటిది: థింకింగ్ తగ్గించండి. | [1] టైం: డెబ్బై ఒక్క సెకన్ల నుంచి పదిహేను సెకన్లకి.",
+     "One: less thinking. <pause 0.25> Time: from 71 seconds to 15."),   # the first setting's number by ~10 s (Bujji); the menus next
+    ("ai", "app", "step1m", "Instant on ChatGPT, Flash on Gemini, [1] low effort on Claude.",
+     "చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో తక్కువ ఎఫర్ట్.", "Instant on ChatGPT, Flash on Gemini, low effort on Claude."),
+    ("ravi", "ravi", "thinking", "All that thinking, [1] just for \"shop closed\"?!",
      "\"షాప్ బంద్\" కి [1] అంత ఆలోచనా?!", "All that thinking, for \"shop closed\"?!"),
     ("ai", "app", "step2", "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
      "రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి: | [1] కీప్ ఇట్ టు టూ షార్ట్ లైన్స్. పదిహేను సెకన్లు, ఐదు అయ్యాయి.",
@@ -42,21 +42,21 @@ L = [
      "Thinking is only for hard jobs like maths. <pause 0.25> For a WhatsApp message, fast is enough."),
     ("ravi", "wide", "save", "Chintu! [1] Save this!", "చింటూ! [1] ఇది సేవ్ చెయ్!", "Chintu! Save this!"),
 ]
-TTS_EN = {"step1": "One: less thinking. Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude."}
+TTS_EN = {"step1m": "Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude."}
 SHOW_EN = {"hook": "71 seconds for a two-line WhatsApp message?!", "three": "With three settings, the same message took 5 seconds.",
-           "step1n": "71 seconds, down to 15.", "step2": "Two: ask for a short reply. \"Keep it to 2 short lines.\" 15 seconds, down to 5.",
+           "step1": "One: less thinking. 71 seconds, down to 15.", "step2": "Two: ask for a short reply. \"Keep it to 2 short lines.\" 15 seconds, down to 5.",
            "step3": "Three: new topic, new chat. In a month-long chat, the same job took over 2 minutes."}
 # by prop: groups of words, one of each group must be heard (English: Whisper's words; Telugu: substrings of its Devanagari)
 MUST_EN = {"hook": [("seventy", "71"), ("seconds", "second"), ("whatsapp",), ("message",)],
            "three": [("three", "3"), ("settings", "setting"), ("five", "5"), ("seconds", "second")],
-           "step1": [("less",), ("thinking",), ("instant",), ("chatgpt", "chat", "gpt"), ("flash",), ("gemini",), ("low",), ("claude", "cloud", "clod")],
-           "step1n": [("seventy", "71"), ("fifteen", "15")], "thinking": [("thinking",), ("shop",), ("closed", "close")],
+           "step1": [("less",), ("thinking",), ("seventy", "71"), ("fifteen", "15")],
+           "step1m": [("instant",), ("chatgpt", "chat", "gpt"), ("flash",), ("gemini",), ("low",), ("claude", "cloud", "clod")], "thinking": [("thinking",), ("shop",), ("closed", "close")],
            "step2": [("short",), ("reply",), ("lines", "line"), ("fifteen", "15"), ("five", "5")],
            "step3": [("new",), ("chat",), ("month", "monthlong"), ("two", "2"), ("minutes", "minute")],
            "oldname": [("old",), ("chat",), ("shop", "shops"), ("name",)], "typename": [("type",), ("new",), ("line",), ("month",)],
            "hard": [("thinking",), ("hard",), ("maths", "math"), ("whatsapp",), ("fast",)], "save": [("chintu", "chintoo"), ("save",)]}
 MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("सेट", "सेटिं", "settings")], "step1": [("थिं", "थीं", "थिन")],
-           "step12": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")], "step1n": [("पदि", "15")],
+           "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")],
            "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "reply")], "step22": [("शॉर्ट", "शार्ट", "शोर्ट", "short"), ("पदि", "15")],
            "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला"), ("निमि", "निमिष")], "oldname": [("पेरु", "पेरू", "पेर")],
            "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन")], "hard2": [("फास्ट", "फ़ास्ट", "fast")],
@@ -65,10 +65,10 @@ TEMPO = {"ravi": 1.2, "ai": 1.16}
 # Sound (CLAUDE.md arc): a hit and a pop on frame 1 with the stamp; a stop before "five seconds"; a lift into each step;
 # a whoosh on each step card; a stop before each step's number; a rise into "Save this!" and a hit on the checklist.
 SCENES = [("h_a", 0, 2, {"boost": 1.5, "tail": 0.1}),
-          ("h_b", 2, 6, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "drop_pre": [[1, 0.0, 0.5]], "tail": 0.1}),   # the beat before "Seventy-one seconds, down to fifteen"
+          ("h_b", 2, 6, {"lift": 0.6, "pre": 0.3, "boost": 1.4, "drop_pre": [[0, 0.0, 0.5]], "tail": 0.1}),   # the beat before "One: less thinking. Seventy-one seconds, down to fifteen"
           ("h_c", 6, 11, {"lift": 1.0, "pre": 0.3, "outro": True, "boost": 1.42, "rise": 1.26, "tail": 0.0})]
 PAUSES = {"three": {"1": 0.3}}   # a beat before "the same message took five seconds"
-GAP = {"hook": 0.2, "three": 0.35, "step1": 0.35, "step1n": 0.5, "thinking": 0.25, "step2": 0.6, "step3": 0.55, "oldname": 0.2,
+GAP = {"hook": 0.2, "three": 0.35, "step1": 0.5, "step1m": 0.7, "thinking": 0.25, "step2": 0.6, "step3": 0.55, "oldname": 0.2,
        "typename": 0.4, "hard": 0.5}
 GAIN_PROP = {"hard": 0.5, "save": 0.8}
 GAIN_PROP_TE = {"hook": 1.0, "save": 2.0}
