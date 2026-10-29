@@ -24,7 +24,7 @@ L = [
      "మొదటిది: థింకింగ్ తగ్గించండి. | [1] టైం: డెబ్బై ఒక్క సెకన్ల నుంచి పదిహేను సెకన్లకి.",
      "One: less thinking. <pause 0.25> Time: from 71 seconds to 15."),   # the first setting's number by ~10 s (Bujji); the menus next
     ("ai", "app", "step1m", "Instant on ChatGPT, Flash on Gemini, [1] low effort on Claude.",
-     "చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో తక్కువ ఎఫర్ట్.", "Instant on ChatGPT, Flash on Gemini, low effort on Claude."),
+     "చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో ఎఫ్ఫర్ట్ తక్కువ.", "Instant on ChatGPT, Flash on Gemini, low effort on Claude."),   # "తక్కువ ఎఫర్ట్" was heard "takva apt" in four takes
     ("ravi", "ravi", "thinking", "All that thinking, [1] just for \"shop closed\"?!",
      "\"షాప్ బంద్\" కి [1] అంత ఆలోచనా?!", "All that thinking, for \"shop closed\"?!"),
     ("ai", "app", "step2", "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
@@ -38,7 +38,7 @@ L = [
     ("ai", "app", "typename", "So type it in the new chat. [1] One line beats a month of chat.",
      "కొత్త చాట్ లో పేరు రాయండి. [1] ఒక్క లైన్ చాలు.", "Type the name in the new chat. One line is enough."),
     ("ai", "wide", "hard", "Thinking is for hard problems, like maths. [1] For a WhatsApp message, fast is enough.",
-     "లెక్కల లాంటి కష్టమైన పనులకే థింకింగ్. | [1] వాట్సాప్ మెసేజ్ కి ఫాస్ట్ చాలు.",
+     "లెక్కల లాంటి కష్టమైన పనులకే థింకింగ్. | [1] వాట్సాప్ మెసేజ్ కి ఫాస్ట్ మోడ్ చాలు.",   # "ఫాస్ట్ చాలు" was heard "fos chaalu" in four takes
      "Thinking is only for hard jobs like maths. <pause 0.25> For a WhatsApp message, fast is enough."),
     ("ravi", "wide", "save", "Chintu! [1] Save this!", "చింటూ! [1] ఇది సేవ్ చెయ్!", "Chintu! Save this!"),
 ]
@@ -58,8 +58,8 @@ MUST_EN = {"hook": [("seventy", "71"), ("seconds", "second"), ("whatsapp",), ("m
 MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("मार्प", "मार्पु", "मारपु", "मार्फ"), ("आइदु", "आईदू", "आएदू", "ऐदु", "5")], "step1": [("थिं", "थीं", "थिन", "तिं", "टिं")],
            "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")],
            "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "रिफल", "reply")], "step22": [("तेर", "तेरा", "तैर"), ("पदि", "15")],
-           "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला"), ("निमि", "निमिष")], "oldname": [("पेरु", "पेरू", "पेर")],
-           "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन", "तिं", "टिं")], "hard2": [("फास्ट", "फ़ास्ट", "fast")],
+           "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला", "नल"), ("निमि", "निमिष", "निशा")], "oldname": [("पेरु", "पेरू", "पेर")],
+           "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन", "तिं", "टिं")], "hard2": [("फास्ट", "फ़ास्ट", "फास", "fast"), ("मोड", "मोड़", "मूड", "mode")],
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}
 TEMPO = {"ravi": 1.2, "ai": 1.16}
 # Sound (CLAUDE.md arc): a hit and a pop on frame 1 with the stamp; a stop before "five seconds"; a lift into each step;
