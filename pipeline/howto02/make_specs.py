@@ -55,11 +55,11 @@ MUST_EN = {"hook": [("seventy", "71"), ("seconds", "second"), ("whatsapp",), ("m
            "step3": [("new",), ("chat",), ("month", "monthlong"), ("two", "2"), ("minutes", "minute")],
            "oldname": [("old",), ("chat",), ("shop", "shops"), ("name",)], "typename": [("type",), ("new",), ("line",), ("month",)],
            "hard": [("thinking",), ("hard",), ("maths", "math"), ("whatsapp",), ("fast",)], "save": [("chintu", "chintoo"), ("save",)]}
-MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("मार्प", "मार्पु", "मारपु", "मार्फ"), ("आइदु", "आईदू", "आएदू", "ऐदु", "5")], "step1": [("थिं", "थीं", "थिन")],
+MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("मार्प", "मार्पु", "मारपु", "मार्फ"), ("आइदु", "आईदू", "आएदू", "ऐदु", "5")], "step1": [("थिं", "थीं", "थिन", "तिं", "टिं")],
            "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")],
            "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "reply")], "step22": [("शॉर्ट", "शार्ट", "शोर्ट", "short"), ("पदि", "15")],
            "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला"), ("निमि", "निमिष")], "oldname": [("पेरु", "पेरू", "पेर")],
-           "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन")], "hard2": [("फास्ट", "फ़ास्ट", "fast")],
+           "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन", "तिं", "टिं")], "hard2": [("फास्ट", "फ़ास्ट", "fast")],
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}
 TEMPO = {"ravi": 1.2, "ai": 1.16}
 # Sound (CLAUDE.md arc): a hit and a pop on frame 1 with the stamp; a stop before "five seconds"; a lift into each step;
