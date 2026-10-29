@@ -15,6 +15,10 @@
   [
    219,
    234
+  ],
+  [
+   968,
+   992
   ]
  ],
  "musicBoosts": [
@@ -25,24 +29,24 @@
   ],
   [
    225,
-   798,
+   839,
    1.4
   ],
   [
-   798,
-   1465,
+   839,
+   1587,
    1.42
   ],
   [
-   798,
-   1465,
+   839,
+   1587,
    1.26,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1465,
+ "totalFrames": 1587,
  "music": "reel/howto02v1/score.wav",
  "scenes": [
   {
@@ -281,7 +285,7 @@
     "hardCuts": true
    },
    "from": 225,
-   "frames": 573,
+   "frames": 614,
    "lines": [
     {
      "who": "ai",
@@ -290,51 +294,52 @@
      "sub": null,
      "audio": "reel/howto02v1/line_03.wav",
      "from": 9,
-     "frames": 138,
+     "frames": 145,
      "words": [
       {
        "w": "One:",
        "from": 13,
-       "to": 31
+       "to": 38
       },
       {
        "w": "less",
-       "from": 31,
-       "to": 42
+       "from": 38,
+       "to": 49
       },
       {
        "w": "thinking.",
-       "from": 42,
-       "to": 70
+       "from": 49,
+       "to": 78
       },
       {
        "w": "71",
-       "from": 70,
-       "to": 74
+       "from": 78,
+       "to": 82
       },
       {
        "w": "seconds,",
-       "from": 74,
-       "to": 98
-      },
-      {
-       "w": "down",
-       "from": 98,
+       "from": 82,
        "to": 105
       },
       {
-       "w": "to",
+       "w": "down",
        "from": 105,
-       "to": 113
+       "to": 112
+      },
+      {
+       "w": "to",
+       "from": 112,
+       "to": 120
       },
       {
        "w": "15.",
-       "from": 113,
-       "to": 141
+       "from": 120,
+       "to": 148
       }
      ],
      "cues": {
-      "1": 64
+      "2": 36,
+      "1": 71
      }
     },
     {
@@ -343,62 +348,62 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/howto02v1/line_04.wav",
-     "from": 162,
+     "from": 169,
      "frames": 125,
      "words": [
       {
        "w": "Instant",
-       "from": 162,
-       "to": 181
+       "from": 169,
+       "to": 188
       },
       {
        "w": "on",
-       "from": 181,
-       "to": 185
+       "from": 188,
+       "to": 192
       },
       {
        "w": "ChatGPT,",
-       "from": 185,
-       "to": 202
+       "from": 192,
+       "to": 210
       },
       {
        "w": "Flash",
-       "from": 202,
-       "to": 222
+       "from": 210,
+       "to": 229
       },
       {
        "w": "on",
-       "from": 222,
-       "to": 226
+       "from": 229,
+       "to": 234
       },
       {
        "w": "Gemini,",
-       "from": 226,
-       "to": 237
+       "from": 234,
+       "to": 245
       },
       {
        "w": "low",
-       "from": 237,
-       "to": 243
+       "from": 245,
+       "to": 250
       },
       {
        "w": "effort",
-       "from": 243,
-       "to": 260
+       "from": 250,
+       "to": 268
       },
       {
        "w": "on",
-       "from": 260,
-       "to": 264
+       "from": 268,
+       "to": 272
       },
       {
        "w": "Claude.",
-       "from": 264,
-       "to": 280
+       "from": 272,
+       "to": 287
       }
      ],
      "cues": {
-      "1": 239
+      "1": 246
      }
     },
     {
@@ -407,47 +412,47 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/howto02v1/line_05.wav",
-     "from": 308,
+     "from": 339,
      "frames": 68,
      "words": [
       {
        "w": "All",
-       "from": 314,
-       "to": 317
+       "from": 346,
+       "to": 349
       },
       {
        "w": "that",
-       "from": 317,
-       "to": 321
+       "from": 349,
+       "to": 353
       },
       {
        "w": "thinking,",
-       "from": 321,
-       "to": 328
+       "from": 353,
+       "to": 360
       },
       {
        "w": "just",
-       "from": 328,
-       "to": 339
+       "from": 360,
+       "to": 370
       },
       {
        "w": "for",
-       "from": 339,
-       "to": 345
+       "from": 370,
+       "to": 377
       },
       {
        "w": "\"shop",
-       "from": 345,
-       "to": 350
+       "from": 377,
+       "to": 381
       },
       {
        "w": "closed\"?!",
-       "from": 350,
-       "to": 361
+       "from": 381,
+       "to": 392
       }
      ],
      "cues": {
-      "1": 329
+      "1": 361
      }
     },
     {
@@ -456,97 +461,98 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/howto02v1/line_06.wav",
-     "from": 383,
-     "frames": 163,
+     "from": 414,
+     "frames": 170,
      "words": [
       {
        "w": "Two:",
-       "from": 386,
-       "to": 391
+       "from": 417,
+       "to": 423
       },
       {
        "w": "ask",
-       "from": 391,
-       "to": 404
+       "from": 423,
+       "to": 443
       },
       {
        "w": "for",
-       "from": 404,
-       "to": 414
+       "from": 443,
+       "to": 453
       },
       {
        "w": "a",
-       "from": 414,
-       "to": 416
+       "from": 453,
+       "to": 455
       },
       {
        "w": "short",
-       "from": 416,
-       "to": 427
+       "from": 455,
+       "to": 466
       },
       {
        "w": "reply.",
-       "from": 427,
-       "to": 444
+       "from": 466,
+       "to": 483
       },
       {
        "w": "\"Keep",
-       "from": 444,
-       "to": 451
+       "from": 483,
+       "to": 490
       },
       {
        "w": "it",
-       "from": 451,
-       "to": 460
+       "from": 490,
+       "to": 499
       },
       {
        "w": "to",
-       "from": 460,
-       "to": 463
-      },
-      {
-       "w": "2",
-       "from": 463,
-       "to": 465
-      },
-      {
-       "w": "short",
-       "from": 465,
-       "to": 472
-      },
-      {
-       "w": "lines.\"",
-       "from": 472,
+       "from": 499,
        "to": 502
       },
       {
-       "w": "15",
+       "w": "2",
        "from": 502,
-       "to": 505
+       "to": 504
+      },
+      {
+       "w": "short",
+       "from": 504,
+       "to": 511
+      },
+      {
+       "w": "lines.\"",
+       "from": 511,
+       "to": 541
+      },
+      {
+       "w": "15",
+       "from": 541,
+       "to": 544
       },
       {
        "w": "seconds,",
-       "from": 505,
-       "to": 526
+       "from": 544,
+       "to": 565
       },
       {
        "w": "down",
-       "from": 526,
-       "to": 532
+       "from": 565,
+       "to": 571
       },
       {
        "w": "to",
-       "from": 532,
-       "to": 535
+       "from": 571,
+       "to": 574
       },
       {
        "w": "5.",
-       "from": 535,
-       "to": 539
+       "from": 574,
+       "to": 578
       }
      ],
      "cues": {
-      "1": 476
+      "2": 438,
+      "1": 515
      }
     }
    ]
@@ -624,8 +630,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 798,
-   "frames": 667,
+   "from": 839,
+   "frames": 748,
    "lines": [
     {
      "who": "ai",
@@ -634,91 +640,93 @@
      "sub": null,
      "audio": "reel/howto02v1/line_07.wav",
      "from": 9,
-     "frames": 158,
+     "frames": 176,
      "words": [
       {
        "w": "Three:",
        "from": 14,
-       "to": 31
+       "to": 39
       },
       {
        "w": "new",
-       "from": 31,
-       "to": 36
+       "from": 39,
+       "to": 44
       },
       {
        "w": "topic,",
-       "from": 36,
-       "to": 52
+       "from": 44,
+       "to": 60
       },
       {
        "w": "new",
-       "from": 52,
-       "to": 57
+       "from": 60,
+       "to": 65
       },
       {
        "w": "chat.",
-       "from": 57,
-       "to": 76
+       "from": 65,
+       "to": 83
       },
       {
        "w": "In",
-       "from": 76,
-       "to": 79
+       "from": 83,
+       "to": 87
       },
       {
        "w": "a",
-       "from": 79,
-       "to": 82
+       "from": 87,
+       "to": 89
       },
       {
        "w": "month-long",
-       "from": 82,
-       "to": 95
+       "from": 89,
+       "to": 103
       },
       {
        "w": "chat,",
-       "from": 95,
-       "to": 112
+       "from": 103,
+       "to": 119
       },
       {
        "w": "the",
-       "from": 112,
-       "to": 116
+       "from": 119,
+       "to": 124
       },
       {
        "w": "same",
-       "from": 116,
-       "to": 123
+       "from": 124,
+       "to": 130
       },
       {
        "w": "job",
-       "from": 123,
-       "to": 127
+       "from": 130,
+       "to": 135
       },
       {
        "w": "took",
-       "from": 127,
-       "to": 140
+       "from": 135,
+       "to": 158
       },
       {
        "w": "over",
-       "from": 140,
-       "to": 146
+       "from": 158,
+       "to": 164
       },
       {
        "w": "2",
-       "from": 146,
-       "to": 148
+       "from": 164,
+       "to": 166
       },
       {
        "w": "minutes.",
-       "from": 148,
-       "to": 159
+       "from": 166,
+       "to": 177
       }
      ],
      "cues": {
-      "1": 75
+      "2": 36,
+      "1": 83,
+      "3": 153
      }
     },
     {
@@ -727,52 +735,52 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/howto02v1/line_08.wav",
-     "from": 184,
+     "from": 202,
      "frames": 65,
      "words": [
       {
        "w": "But",
-       "from": 190,
-       "to": 194
-      },
-      {
-       "w": "the",
-       "from": 194,
-       "to": 198
-      },
-      {
-       "w": "old",
-       "from": 198,
-       "to": 202
-      },
-      {
-       "w": "chat",
-       "from": 202,
-       "to": 207
-      },
-      {
-       "w": "knew",
-       "from": 207,
+       "from": 208,
        "to": 212
       },
       {
-       "w": "my",
+       "w": "the",
        "from": 212,
        "to": 216
       },
       {
-       "w": "shop's",
+       "w": "old",
        "from": 216,
-       "to": 228
+       "to": 220
+      },
+      {
+       "w": "chat",
+       "from": 220,
+       "to": 225
+      },
+      {
+       "w": "knew",
+       "from": 225,
+       "to": 230
+      },
+      {
+       "w": "my",
+       "from": 230,
+       "to": 234
+      },
+      {
+       "w": "shop's",
+       "from": 234,
+       "to": 246
       },
       {
        "w": "name!",
-       "from": 228,
-       "to": 234
+       "from": 246,
+       "to": 252
       }
      ],
      "cues": {
-      "1": 207
+      "1": 225
      }
     },
     {
@@ -781,82 +789,82 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/howto02v1/line_09.wav",
-     "from": 254,
+     "from": 278,
      "frames": 106,
      "words": [
       {
        "w": "So",
-       "from": 259,
-       "to": 263
+       "from": 283,
+       "to": 287
       },
       {
        "w": "type",
-       "from": 263,
-       "to": 268
+       "from": 287,
+       "to": 292
       },
       {
        "w": "it",
-       "from": 268,
-       "to": 272
+       "from": 292,
+       "to": 296
       },
       {
        "w": "in",
-       "from": 272,
-       "to": 279
+       "from": 296,
+       "to": 303
       },
       {
        "w": "the",
-       "from": 279,
-       "to": 283
+       "from": 303,
+       "to": 307
       },
       {
        "w": "new",
-       "from": 283,
-       "to": 288
+       "from": 307,
+       "to": 312
       },
       {
        "w": "chat.",
-       "from": 288,
-       "to": 294
+       "from": 312,
+       "to": 318
       },
       {
        "w": "One",
-       "from": 294,
-       "to": 310
+       "from": 318,
+       "to": 334
       },
       {
        "w": "line",
-       "from": 310,
-       "to": 315
+       "from": 334,
+       "to": 339
       },
       {
        "w": "beats",
-       "from": 315,
-       "to": 322
+       "from": 339,
+       "to": 346
       },
       {
        "w": "a",
-       "from": 322,
-       "to": 324
+       "from": 346,
+       "to": 348
       },
       {
        "w": "month",
-       "from": 324,
-       "to": 335
+       "from": 348,
+       "to": 359
       },
       {
        "w": "of",
-       "from": 335,
-       "to": 338
+       "from": 359,
+       "to": 362
       },
       {
        "w": "chat.",
-       "from": 338,
-       "to": 353
+       "from": 362,
+       "to": 377
       }
      ],
      "cues": {
-      "1": 294
+      "1": 318
      }
     },
     {
@@ -865,82 +873,82 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/howto02v1/line_10.wav",
-     "from": 372,
+     "from": 396,
      "frames": 139,
      "words": [
       {
        "w": "Thinking",
-       "from": 376,
-       "to": 384
+       "from": 400,
+       "to": 408
       },
       {
        "w": "is",
-       "from": 384,
-       "to": 387
+       "from": 408,
+       "to": 411
       },
       {
        "w": "for",
-       "from": 387,
-       "to": 391
+       "from": 411,
+       "to": 415
       },
       {
        "w": "hard",
-       "from": 391,
-       "to": 399
+       "from": 415,
+       "to": 423
       },
       {
        "w": "problems,",
-       "from": 399,
-       "to": 413
+       "from": 423,
+       "to": 437
       },
       {
        "w": "like",
-       "from": 413,
-       "to": 426
+       "from": 437,
+       "to": 450
       },
       {
        "w": "maths.",
-       "from": 426,
-       "to": 433
+       "from": 450,
+       "to": 457
       },
       {
        "w": "For",
-       "from": 433,
-       "to": 451
+       "from": 457,
+       "to": 475
       },
       {
        "w": "a",
-       "from": 451,
-       "to": 453
+       "from": 475,
+       "to": 477
       },
       {
        "w": "WhatsApp",
-       "from": 453,
-       "to": 465
-      },
-      {
-       "w": "message,",
-       "from": 465,
-       "to": 474
-      },
-      {
-       "w": "fast",
-       "from": 474,
+       "from": 477,
        "to": 489
       },
       {
-       "w": "is",
+       "w": "message,",
        "from": 489,
-       "to": 497
+       "to": 498
+      },
+      {
+       "w": "fast",
+       "from": 498,
+       "to": 513
+      },
+      {
+       "w": "is",
+       "from": 513,
+       "to": 521
       },
       {
        "w": "enough.",
-       "from": 497,
-       "to": 505
+       "from": 521,
+       "to": 529
       }
      ],
      "cues": {
-      "1": 433
+      "1": 457
      }
     },
     {
@@ -949,27 +957,27 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/howto02v1/line_11.wav",
-     "from": 526,
+     "from": 565,
      "frames": 58,
      "words": [
       {
        "w": "Chintu!",
-       "from": 529,
-       "to": 536
+       "from": 568,
+       "to": 575
       },
       {
        "w": "Save",
-       "from": 536,
-       "to": 562
+       "from": 575,
+       "to": 601
       },
       {
        "w": "this!",
-       "from": 562,
-       "to": 568
+       "from": 601,
+       "to": 607
       }
      ],
      "cues": {
-      "1": 536
+      "1": 575
      }
     }
    ]

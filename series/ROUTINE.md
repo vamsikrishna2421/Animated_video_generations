@@ -546,3 +546,15 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   the cue when the line has one and ignores its fraction: time a second tag inside a line with `seg(p, ...)`. Every
   `Sfx` plays 40 frames: a hit 0.3 s before a word still sits under it; lower it for Telugu. A stamp that shows 0.5 s
   before an in-video slam to frame 1 is missed: let the replay's first frame be the loop and hold the stamp ~1 s.
+- HOW TO 02 lessons (Oct 29): OpenAI's help pages refuse our fetcher (403) and a browser user agent is a bot-check
+  workaround (refused): quote OpenAI's pages through search results and say so in the caption, or use two reputable
+  outlets. App menu names move monthly: say the date on screen. A thinking model's runs vary a lot (the short ask with
+  thinking on: 29, 36, 90 s): give medians and ranges. Hugging Face rate-limits the shared IP on its xet endpoint (429):
+  `HF_HUB_DISABLE_XET=1` downloads through the plain path. Keep a half-written results file out of git
+  (`.git/info/exclude`) until the run ends. Indic Parler's Kiran can't say English loanwords with f or "effort"
+  ("fast" → "past", "effort" → "apt", "settings" → "sticks", "నిమిషాలు" lost), and an English line in Telugu script
+  babbles: keep those words on screen and voice plain Telugu ("తక్కువ ఆలోచన", "డబుల్ టైం", "తెర మీద ఉన్న లైన్"). A very short
+  Telugu take ("రెండో సెట్టింగ్: చిన్న రిప్లై.") comes out rushed: keep it in a longer take. "మొదటిది" can be heard with a
+  doubled d (a vulgar word): "ఒకటి". The howto voice script deleted rejected tries: keep them (`_tries`) to pick by ear.
+  Parler English read a closing quote and "?!" as a made-up word ("bee-pony"): drop them from the spoken text. Stills
+  before the full render caught a tag over Ravi's eyes and unreadable phone screens.
