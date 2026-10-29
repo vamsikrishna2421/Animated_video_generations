@@ -19,7 +19,7 @@ L = [
     ("ravi", "app", "hook", "Seventy-one seconds [1] for a two-line WhatsApp message?!",
      "రెండు లైన్ల వాట్సాప్ మెసేజ్ కి [1] డెబ్బై ఒక్క సెకన్లా?!", "71 seconds for a two-line WhatsApp message?!"),
     ("ai", "wide", "three", "With three settings, [1] the same message took five seconds.",
-     "మూడు సెట్టింగ్స్ తో, [1] అదే మెసేజ్ ఐదు సెకన్లలో వచ్చింది.", "With three settings, the same message came in 5 seconds."),
+     "మూడు చిన్న మార్పులతో, [1] అదే మెసేజ్ ఐదు సెకన్లలో వచ్చింది.", "With three small changes, the same message came in 5 seconds."),   # "సెట్టింగ్స్" was heard "sticks" in four takes
     ("ai", "app", "step1", "One: less thinking. [1] Seventy-one seconds, down to fifteen.",
      "మొదటిది: థింకింగ్ తగ్గించండి. | [1] టైం: డెబ్బై ఒక్క సెకన్ల నుంచి పదిహేను సెకన్లకి.",
      "One: less thinking. <pause 0.25> Time: from 71 seconds to 15."),   # the first setting's number by ~10 s (Bujji); the menus next
@@ -55,7 +55,7 @@ MUST_EN = {"hook": [("seventy", "71"), ("seconds", "second"), ("whatsapp",), ("m
            "step3": [("new",), ("chat",), ("month", "monthlong"), ("two", "2"), ("minutes", "minute")],
            "oldname": [("old",), ("chat",), ("shop", "shops"), ("name",)], "typename": [("type",), ("new",), ("line",), ("month",)],
            "hard": [("thinking",), ("hard",), ("maths", "math"), ("whatsapp",), ("fast",)], "save": [("chintu", "chintoo"), ("save",)]}
-MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("सेट", "सेटिं", "settings")], "step1": [("थिं", "थीं", "थिन")],
+MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("मार्प", "मार्पु", "मारपु", "मार्फ"), ("आइदु", "आईदू", "आएदू", "ऐदु", "5")], "step1": [("थिं", "थीं", "थिन")],
            "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")],
            "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "reply")], "step22": [("शॉर्ट", "शार्ट", "शोर्ट", "short"), ("पदि", "15")],
            "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला"), ("निमि", "निमिष")], "oldname": [("पेरु", "पेरू", "पेर")],
