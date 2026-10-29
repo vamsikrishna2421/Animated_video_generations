@@ -1,0 +1,356 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 400 tokens",
+ "right_answer": 822.07,
+ "pass_mark": "within ₹1 of ₹822.07 (expr: the expression typed into a calculator)",
+ "prompts": {
+  "plain": "Our restaurant bill: food ₹2,847. Add 5% GST on it, then a 10% tip on the total with GST. We are 4 friends and we split it equally. Reply with just the amount each person pays.",
+  "steps": "Our restaurant bill: food ₹2,847. Add 5% GST on it, then a 10% tip on the total with GST. We are 4 friends and we split it equally. Show the working step by step, then the amount each person pays.",
+  "expr": "Our restaurant bill: food ₹2,847. Add 5% GST on it, then a 10% tip on the total with GST. We are 4 friends and we split it equally. Don't calculate. Write the whole sum as one calculator expression I can type."
+ },
+ "rows": [
+  {
+   "way": "plain",
+   "try": 1,
+   "reply": "₹220.23",
+   "auto": {
+    "amount": 220.23,
+    "pass": false
+   },
+   "seconds": 2.5
+  },
+  {
+   "way": "plain",
+   "try": 2,
+   "reply": "₹965.63",
+   "auto": {
+    "amount": 965.63,
+    "pass": false
+   },
+   "seconds": 1.5
+  },
+  {
+   "way": "plain",
+   "try": 3,
+   "reply": "₹241.25",
+   "auto": {
+    "amount": 241.25,
+    "pass": false
+   },
+   "seconds": 1.0
+  },
+  {
+   "way": "plain",
+   "try": 4,
+   "reply": "₹1,059",
+   "auto": {
+    "amount": 1059.0,
+    "pass": false
+   },
+   "seconds": 0.9
+  },
+  {
+   "way": "plain",
+   "try": 5,
+   "reply": "₹220.23",
+   "auto": {
+    "amount": 220.23,
+    "pass": false
+   },
+   "seconds": 1.0
+  },
+  {
+   "way": "plain",
+   "try": 6,
+   "reply": "₹1,068.25",
+   "auto": {
+    "amount": 1068.25,
+    "pass": false
+   },
+   "seconds": 1.2
+  },
+  {
+   "way": "plain",
+   "try": 7,
+   "reply": "₹1,028.64",
+   "auto": {
+    "amount": 1028.64,
+    "pass": false
+   },
+   "seconds": 1.8
+  },
+  {
+   "way": "plain",
+   "try": 8,
+   "reply": "₹1,138.88",
+   "auto": {
+    "amount": 1138.88,
+    "pass": false
+   },
+   "seconds": 1.2
+  },
+  {
+   "way": "plain",
+   "try": 9,
+   "reply": "₹849.00",
+   "auto": {
+    "amount": 849.0,
+    "pass": false
+   },
+   "seconds": 1.0
+  },
+  {
+   "way": "plain",
+   "try": 10,
+   "reply": "₹886.50",
+   "auto": {
+    "amount": 886.5,
+    "pass": false
+   },
+   "seconds": 0.9
+  },
+  {
+   "way": "steps",
+   "try": 1,
+   "reply": "Certainly! Let's break down the calculation step by step.\n\n### Step 1: Calculate the GST\n- **Restaurant Bill**: ₹2,847\n- **GST (5%)**: \n  \\[\n  \\text{GST} = \\text{Restaurant Bill} \\times \\frac{5}{100} = 2847 \\times 0.05 = ₹142.35\n  \\]\n\n### Step 2: Calculate the Total with GST\n- **Total with GST**: \n  \\[\n  \\text{Total with GST} = \\text{Restaurant Bill} + \\text{GST} = 2847 + 142.35 = ₹2,989.35\n  \\]\n\n### Step 3: Calculate the Tip\n- **Tip (10%)**: \n  \\[\n  \\text{Tip} = \\text{Total with GST} \\times \\frac{10}{100} = 2989.35 \\times 0.10 = ₹298.94\n  \\]\n\n### Step 4: Calculate the Final Total\n- **Final Total**: \n  \\[\n  \\text{Final Total} = \\text{Total with GST} + \\text{Tip} = 2989.35 + 298.94 = ₹3,288.29\n  \\]\n\n### Step 5: Calculate the Amount Each Person Pays\n- **Total to be Split**: ₹3,288.29\n- **Number of Friends**: 4\n- **Amount per Person**: \n  \\[\n  \\text{Amount per Person} = \\frac{\\text{Final Total}}{\\text{Number of Friends}} = \\frac{3288.29}{4} = ₹822",
+   "auto": {
+    "amount": 822.0,
+    "pass": true
+   },
+   "seconds": 55.9
+  },
+  {
+   "way": "steps",
+   "try": 2,
+   "reply": "Sure! Let's break down the calculation step by step.\n\n### Step 1: Calculate the Total Bill with GST\n1. **Original Bill:** ₹2,847\n2. **GST (5%):**\n   \\[\n   \\text{GST} = 2,847 \\times \\frac{5}{100} = 2,847 \\times 0.05 = ₹142.35\n   \\]\n3. **Total Bill with GST:**\n   \\[\n   \\text{Total Bill} = 2,847 + 142.35 = ₹2,989.35\n   \\]\n\n### Step 2: Calculate the Total Bill with Tip\n1. **Total Bill with GST:** ₹2,989.35\n2. **Tip (10%):**\n   \\[\n   \\text{Tip} = 2,989.35 \\times \\frac{10}{100} = 2,989.35 \\times 0.10 = ₹298.935\n   \\]\n3. **Total Bill with Tip:**\n   \\[\n   \\text{Total Bill} = 2,989.35 + 298.935 = ₹3,288.285\n   \\]\n\n### Step 3: Split the Total Bill Equally Among 4 Friends\n1. **Total Bill with Tip:** ₹3,288.285\n2. **Amount per Person:**\n   \\[\n   \\text{Amount per Person} = \\frac{3,288.285}{4} = ₹822.07125\n   \\]\n\n### Final Answer\nEach person should pay approximately **₹822",
+   "auto": {
+    "amount": 822.0,
+    "pass": true
+   },
+   "seconds": 50.4
+  },
+  {
+   "way": "steps",
+   "try": 3,
+   "reply": "Sure, let's break down the calculation step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax) on the food bill\nThe GST rate is 5%.\n\nGST = Food bill amount × GST rate\nGST = ₹2,847 × 5/100\nGST = ₹2,847 × 0.05\nGST = ₹142.35\n\n### Step 2: Calculate the total amount after adding the GST\nTotal amount = Food bill amount + GST\nTotal amount = ₹2,847 + ₹142.35\nTotal amount = ₹2,989.35\n\n### Step 3: Calculate the tip on the total amount\nThe tip rate is 10%.\n\nTip = Total amount × Tip rate\nTip = ₹2,989.35 × 10/100\nTip = ₹2,989.35 × 0.10\nTip = ₹298.94\n\n### Step 4: Calculate the final total amount including the tip\nFinal total amount = Total amount + Tip\nFinal total amount = ₹2,989.35 + ₹298.94\nFinal total amount = ₹3,288.29\n\n### Step 5: Split the final amount equally among 4 friends\nAmount per person = Final total amount / 4\nAmount per person = ₹3,288.29 / 4\nAmount per person = ₹822.07\n\n### Conclusion:\nEach person will pay ₹822.07.",
+   "auto": {
+    "amount": 822.07,
+    "pass": true
+   },
+   "seconds": 44.7
+  },
+  {
+   "way": "steps",
+   "try": 4,
+   "reply": "Certainly! Let's break down the calculation step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax)\nThe GST is 5% of the food bill.\n\n\\[ \\text{GST} = 2847 \\times \\frac{5}{100} = 2847 \\times 0.05 = ₹142.35 \\]\n\n### Step 2: Calculate the Total Bill\nAdd the GST to the food bill.\n\n\\[ \\text{Total Bill} = 2847 + 142.35 = ₹2,989.35 \\]\n\n### Step 3: Calculate the Tip\nThe tip is 10% of the total bill.\n\n\\[ \\text{Tip} = 2989.35 \\times \\frac{10}{100} = 2989.35 \\times 0.10 = ₹298.935 \\]\n\n### Step 4: Calculate the Final Total\nAdd the tip to the total bill.\n\n\\[ \\text{Final Total} = 2989.35 + 298.935 = ₹3,288.285 \\]\n\n### Step 5: Split the Bill Among 4 Friends\nDivide the final total by 4.\n\n\\[ \\text{Each Person's Share} = \\frac{3288.285}{4} = ₹822.07125 \\]\n\nRounding to the nearest paisa (hundredth of a rupee), each person pays:\n\n\\[ ₹822.07 \\]\n\n### Summary:\n- **Total Bill**: ₹2,989.35\n- **Tip**: ₹298.94\n- **Final Total**: ₹3,288.28\n-",
+   "auto": {
+    "amount": 3288.28,
+    "pass": false
+   },
+   "seconds": 51.8
+  },
+  {
+   "way": "steps",
+   "try": 5,
+   "reply": "Sure, let's break down the calculation step by step.\n\n### Step 1: Calculate the GST\nThe GST is 5% of the pre-GST total bill.\n\n\\[ \\text{GST} = 2847 \\times \\frac{5}{100} \\]\n\\[ \\text{GST} = 2847 \\times 0.05 \\]\n\\[ \\text{GST} = 142.35 \\]\n\n### Step 2: Calculate the total bill including GST\n\\[ \\text{Total including GST} = 2847 + 142.35 \\]\n\\[ \\text{Total including GST} = 2989.35 \\]\n\n### Step 3: Calculate the tip\nThe tip is 10% of the total bill including GST.\n\n\\[ \\text{Tip} = 2989.35 \\times \\frac{10}{100} \\]\n\\[ \\text{Tip} = 2989.35 \\times 0.1 \\]\n\\[ \\text{Tip} = 298.94 \\]\n\n### Step 4: Calculate the total amount including tip\n\\[ \\text{Total including Tip} = 2989.35 + 298.94 \\]\n\\[ \\text{Total including Tip} = 3288.29 \\]\n\n### Step 5: Calculate the amount each person pays\nThere are 4 friends splitting the total equally.\n\n\\[ \\text{Amount per person} = \\frac{3288.29}{4} \\]\n\\[ \\text{Amount per person} = 822.0725 \\]\n\n### Final Answer\nEach person should pay approximately **₹822.07** (rounded to two decimal places).",
+   "auto": {
+    "amount": 822.07,
+    "pass": true
+   },
+   "seconds": 49.4
+  },
+  {
+   "way": "steps",
+   "try": 6,
+   "reply": "Certainly! Let's go through the calculations step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax)\nThe GST rate is 5% of the food bill.\n\n\\[ \\text{GST} = \\text{Food bill} \\times 0.05 \\]\n\\[ \\text{GST} = 2847 \\times 0.05 \\]\n\\[ \\text{GST} = 142.35 \\]\n\n### Step 2: Calculate the total bill including GST\n\\[ \\text{Total bill including GST} = \\text{Food bill} + \\text{GST} \\]\n\\[ \\text{Total bill including GST} = 2847 + 142.35 \\]\n\\[ \\text{Total bill including GST} = 2989.35 \\]\n\n### Step 3: Calculate the tip\nThe tip is 10% of the total bill including GST.\n\n\\[ \\text{Tip} = \\text{Total bill including GST} \\times 0.10 \\]\n\\[ \\text{Tip} = 2989.35 \\times 0.10 \\]\n\\[ \\text{Tip} = 298.94 \\]\n\n### Step 4: Calculate the final total bill\n\\[ \\text{Final total bill} = \\text{Total bill including GST} + \\text{Tip} \\]\n\\[ \\text{Final total bill} = 2989.35 + 298.94 \\]\n\\[ \\text{Final total bill} = 3288.29 \\]\n\n### Step 5: Calculate the amount each person pays\nSince there are 4 friends splitting the bill equally:\n\n\\[ \\text{Amount each person pays} = \\frac{\\text{Final total bill}}{4} \\]\n\\[ \\text{Amount each",
+   "auto": {
+    "amount": 4.0,
+    "pass": false
+   },
+   "seconds": 52.6
+  },
+  {
+   "way": "steps",
+   "try": 7,
+   "reply": "Sure, let's break down the calculation step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax)\nThe GST rate is 5%.\n\nGST = Food Bill × GST Rate\nGST = ₹2,847 × 5%\nGST = ₹2,847 × 0.05\nGST = ₹142.35\n\n### Step 2: Calculate the Total Amount with GST\nTotal Amount with GST = Food Bill + GST\nTotal Amount with GST = ₹2,847 + ₹142.35\nTotal Amount with GST = ₹2,989.35\n\n### Step 3: Calculate the Tip\nThe tip rate is 10%.\n\nTip = Total Amount with GST × Tip Rate\nTip = ₹2,989.35 × 10%\nTip = ₹2,989.35 × 0.10\nTip = ₹298.935\n\n### Step 4: Calculate the Total Amount with Tip\nTotal Amount with Tip = Total Amount with GST + Tip\nTotal Amount with Tip = ₹2,989.35 + ₹298.935\nTotal Amount with Tip = ₹3,288.285\n\n### Step 5: Split the Total Amount Equally Among 4 Friends\nEach person's share = Total Amount with Tip / 4\nEach person's share = ₹3,288.285 / 4\nEach person's share = ₹822.07125\n\n### Final Amount Each Person Pays\nEach person pays ₹822.07 (rounded to the nearest cent).\n\nSo, each of the 4 friends will pay ₹822.07.",
+   "auto": {
+    "amount": 822.07,
+    "pass": true
+   },
+   "seconds": 50.4
+  },
+  {
+   "way": "steps",
+   "try": 8,
+   "reply": "Sure, let's break down the calculation step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax)\nGST is 5% of the food bill.\n\n\\[ \\text{GST} = 5\\% \\times ₹2,847 \\]\n\\[ \\text{GST} = 0.05 \\times 2,847 \\]\n\\[ \\text{GST} = ₹142.35 \\]\n\n### Step 2: Calculate the Total Bill with GST\nAdd the GST to the food bill.\n\n\\[ \\text{Total Bill} = ₹2,847 + ₹142.35 \\]\n\\[ \\text{Total Bill} = ₹2,989.35 \\]\n\n### Step 3: Calculate the Tip\nTip is 10% of the total bill with GST.\n\n\\[ \\text{Tip} = 10\\% \\times ₹2,989.35 \\]\n\\[ \\text{Tip} = 0.10 \\times 2,989.35 \\]\n\\[ \\text{Tip} = ₹298.93 \\]\n\n### Step 4: Calculate the Final Total Bill with Tip\nAdd the tip to the total bill with GST.\n\n\\[ \\text{Final Total Bill} = ₹2,989.35 + ₹298.93 \\]\n\\[ \\text{Final Total Bill} = ₹3,288.28 \\]\n\n### Step 5: Calculate Each Person's Share\nThe total bill is to be split equally among 4 friends.\n\n\\[ \\text{Each Person's Share} = \\frac{₹3,288.28}{4} \\]\n\\[ \\text{Each Person's Share} = ₹822.07 \\]\n\n### Conclusion\nEach person will pay ₹822.0",
+   "auto": {
+    "amount": 822.0,
+    "pass": true
+   },
+   "seconds": 50.5
+  },
+  {
+   "way": "steps",
+   "try": 9,
+   "reply": "Sure, let's break down the calculation step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax) on the food bill\n- **Food bill**: ₹2,847\n- **GST rate**: 5%\n\nGST = Food bill × GST rate\nGST = ₹2,847 × 5%\nGST = ₹2,847 × 0.05\nGST = ₹142.35\n\n### Step 2: Add the GST to the food bill to get the total before tip\n- **Total before tip**: Food bill + GST\nTotal before tip = ₹2,847 + ₹142.35\nTotal before tip = ₹2,989.35\n\n### Step 3: Calculate the tip on the total amount\n- **Tip rate**: 10%\n\nTip = Total before tip × Tip rate\nTip = ₹2,989.35 × 10%\nTip = ₹2,989.35 × 0.10\nTip = ₹298.94\n\n### Step 4: Add the tip to the total before tip to get the final amount\n- **Final amount**: Total before tip + Tip\nFinal amount = ₹2,989.35 + ₹298.94\nFinal amount = ₹3,288.29\n\n### Step 5: Split the final amount equally among 4 friends\n- **Amount per person**: Final amount ÷ Number of friends\nAmount per person = ₹3,288.29 ÷ 4\nAmount per person = ₹822.07\n\n### Summary\n- **Total amount including GST and tip**: ₹3,288.29\n- **Amount each person pays**: ₹822.07\n\nSo, each of the",
+   "auto": {
+    "amount": 822.07,
+    "pass": true
+   },
+   "seconds": 51.5
+  },
+  {
+   "way": "steps",
+   "try": 10,
+   "reply": "Sure, let's break down the calculation step by step.\n\n### Step 1: Calculate the GST (Goods and Services Tax)\nThe GST rate is 5%. To find the GST amount, we need to calculate 5% of ₹2,847.\n\n\\[ \\text{GST} = 2,847 \\times \\frac{5}{100} = 2,847 \\times 0.05 = 142.35 \\]\n\n### Step 2: Calculate the Total Amount Including GST\nNow we add the GST to the original amount.\n\n\\[ \\text{Total Amount with GST} = 2,847 + 142.35 = 2,989.35 \\]\n\n### Step 3: Calculate the Tip (10% of the Total Amount)\nNext, we need to find the tip amount, which is 10% of the total amount with GST.\n\n\\[ \\text{Tip} = 2,989.35 \\times \\frac{10}{100} = 2,989.35 \\times 0.10 = 298.935 \\]\n\n### Step 4: Calculate the Total Amount Including the Tip\nFinally, we add the tip to the total amount with GST.\n\n\\[ \\text{Total Amount with Tip} = 2,989.35 + 298.935 = 3,288.285 \\]\n\n### Step 5: Split the Total Amount Among 4 Friends\nTo find out how much each person pays, we divide the total amount by 4.\n\n\\[ \\text{Amount per person} = \\frac{3,288.285}{4} = 822.07125 \\]\n\n### Final Answer:\nEach person will pay",
+   "auto": {
+    "amount": 822.07125,
+    "pass": true
+   },
+   "seconds": 52.3
+  },
+  {
+   "way": "expr",
+   "try": 1,
+   "reply": "To calculate the entire sum including GST and tip, and then splitting it equally among 4 friends, you can use the following expression in a calculator that supports nested operations:\n\n\\((2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1)) / 4\\)\n\nLet's break down the expression:\n1. Calculate the food cost with GST: \\(2847 + (2847 * 0.05)\\)\n2. Add the tip to the total amount from step 1: \\(((2847 + (2847 * 0.05)) * 0.1)\\)\n3. Sum the total cost including GST and tip: \\((2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1))\\)\n4. Split the total cost equally among 4 friends: \\(\\frac{(2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1))}{4}\\)\n\nYou can input this expression directly into a calculator or a programming environment that supports nested operations.",
+   "auto": {
+    "expression": "(2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1))",
+    "value": 3288.28,
+    "pass": false
+   },
+   "seconds": 37.6
+  },
+  {
+   "way": "expr",
+   "try": 2,
+   "reply": "Sure, for the given scenario, you can calculate the total bill and then split it equally among 4 friends using the following expression:\n\n```plaintext\n(2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1)) / 4\n```\n\nYou can type this expression into a calculator or a programming environment to get the result.",
+   "auto": {
+    "expression": "(2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1)) / 4",
+    "value": 822.07,
+    "pass": true
+   },
+   "seconds": 11.9
+  },
+  {
+   "way": "expr",
+   "try": 3,
+   "reply": "Sure, here is the expression you can use in a calculator to get the total sum including GST and tip, and then divided among 4 friends:\n\n`(2847 * 1.05 * 1.1) / 4`\n\nThis expression calculates the total bill including GST (5%) and tip (10%), and then divides it by 4 for each person.",
+   "auto": {
+    "expression": "(2847 * 1.05 * 1.1) / 4",
+    "value": 822.07,
+    "pass": true
+   },
+   "seconds": 10.1
+  },
+  {
+   "way": "expr",
+   "try": 4,
+   "reply": "To calculate the total sum including GST and tip for your restaurant bill and then split it equally among 4 friends, you can use the following expression in a calculator or a programming environment:\n\n```plaintext\n(2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.10)) / 4\n```\n\nThis expression first calculates the total including 5% GST and then adds a 10% tip on the total with GST, and finally divides the total by 4 to split it equally among 4 friends.",
+   "auto": {
+    "expression": "(2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.10)) / 4",
+    "value": 822.07,
+    "pass": true
+   },
+   "seconds": 16.5
+  },
+  {
+   "way": "expr",
+   "try": 5,
+   "reply": "Sure, here's the expression you can type in a calculator to get the total sum:\n\n```\n((2847*1.05*1.1)/4)\n```\n\nThis expression first calculates the total with GST and tip, and then divides it equally among 4 friends.",
+   "auto": {
+    "expression": "((2847*1.05*1.1)/4)",
+    "value": 822.07,
+    "pass": true
+   },
+   "seconds": 7.5
+  },
+  {
+   "way": "expr",
+   "try": 6,
+   "reply": "To calculate the total restaurant bill including GST and tip, and then splitting it among 4 friends, you can use the following expression:\n\n\\((2847 + (2847 * 0.05) + ((2847 + (2847 * 0.05)) * 0.1)) / 4\\)\n\nYou can input this expression into a calculator or a programming environment to get the result.",
+   "auto": {
+    "expression": null,
+    "value": null,
+    "pass": false
+   },
+   "seconds": 11.8
+  },
+  {
+   "way": "expr",
+   "try": 7,
+   "reply": "Sure, let's break down the calculation step by step and then combine it into a single expression:\n\n1. **Food Bill**: ₹2,847\n2. **GST (5%) on Food Bill**: \\( 2847 \\times 0.05 \\)\n3. **Total with GST**: \\( 2847 + (2847 \\times 0.05) \\)\n4. **Tip (10%) on Total with GST**: \\( \\text{Total with GST} \\times 0.10 \\)\n5. **Total including Tip**: \\( \\text{Total with GST} + (\\text{Total with GST} \\times 0.10) \\)\n6. **Split equally among 4 friends**: \\( \\frac{\\text{Total including Tip}}{4} \\)\n\nNow, let's combine these steps into a single calculator expression:\n\n\\[\n\\left( \\left( 2847 \\times 0.05 \\right) + 2847 \\right) \\times 0.10 + \\left( \\left( 2847 \\times 0.05 \\right) + 2847 \\right) \\times 0.10 + \\frac{\\left( \\left( 2847 \\times 0.05 \\right) + 2847 \\right) \\times 0.10 + \\left( \\left( 2847 \\times 0.05 \\right) + 2847 \\right) \\times 0.10 \\right) {4}\n\\]\n\nTo simplify and make it more readable, let's combine the steps into a single calculation:\n\n\\[\n\\left( \\left( 2847 \\times 0.05 \\right) + 2847 \\",
+   "auto": {
+    "expression": "(10/100)",
+    "value": 0.1,
+    "pass": false
+   },
+   "seconds": 50.8
+  },
+  {
+   "way": "expr",
+   "try": 8,
+   "reply": "Sure, here's the expression you can type in a calculator to get the total sum:\n\n```plaintext\n(2847 + (2847 * 0.05) * 1.10) / 4\n```\n\nThis expression first calculates the total including GST and tip, and then divides it equally among the 4 friends.",
+   "auto": {
+    "expression": "(2847 + (2847 * 0.05) * 1.10) / 4",
+    "value": 750.9,
+    "pass": false
+   },
+   "seconds": 8.9
+  },
+  {
+   "way": "expr",
+   "try": 9,
+   "reply": "Sure, here is the calculator expression you can use:\n\n```total=sum(food+food*0.05+food*0.05*1.1)/4```\n\nWhere `food` is ₹2,847. Substitute the value of `food` into the expression to get the total amount.",
+   "auto": {
+    "expression": null,
+    "value": null,
+    "pass": false
+   },
+   "seconds": 8.5
+  },
+  {
+   "way": "expr",
+   "try": 10,
+   "reply": "Sure, here's the expression you can use in a calculator to find the total sum:\n\n```plaintext\n((2847 + (2847 * 0.05)) * 0.10 + 2847) * 4\n```\n\nThis expression first calculates the total including GST, then adds a 10% tip on the total including GST, and finally divides the total by 4 to split it equally among the 4 friends.",
+   "auto": {
+    "expression": "((2847 + (2847 * 0.05)) * 0.10 + 2847) * 4",
+    "value": 12583.74,
+    "pass": false
+   },
+   "seconds": 11.7
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "summary": {
+  "plain": {
+   "n": 10,
+   "right": 0,
+   "hand_read": true
+  },
+  "steps": {
+   "n": 10,
+   "right": 9,
+   "hand_read": true
+  },
+  "expr": {
+   "n": 10,
+   "right": 6,
+   "hand_read": true
+  }
+ }
+}
