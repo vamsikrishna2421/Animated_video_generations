@@ -152,7 +152,25 @@ def run_offline(folder):
 # Smoke test before the run (not recorded): the template, "/no_think" (an empty <think></think>, then the answer) and the
 # prompt counter (a fresh chat 43 tokens; the 30-message chat 677, so the long chat became 90 messages).
 # Read by hand (every answer in results.json): {(condition, seed): {"pass": bool, "why": str}}
-HAND = {}
+HAND = {   # all 15 say closed (this) Sunday and open again Monday at 7 am: all pass. Noted while reading (not a pass mark
+           # fixed before the run): ready to send as written, no placeholder, no "Subject:" line, no note about the message
+    ("default", 1): {"pass": True, "why": "closed on Sunday, Monday at 7:00 AM; a Subject line, [Your Shop Name], a note about the message"},
+    ("default", 2): {"pass": True, "why": "closed on Sunday, Monday at 7:00 AM; a Subject line, placeholders, a note about the message"},
+    ("default", 3): {"pass": True, "why": "this Sunday, Monday at 7:00 AM; a Subject line, placeholders, a note about the message"},
+    ("short", 1): {"pass": True, "why": "closed Sunday, 7 am Monday; ready to send"},
+    ("short", 2): {"pass": True, "why": "closed this Sunday, 7 am Monday; ready to send"},
+    ("short", 3): {"pass": True, "why": "closed this Sunday, Monday at 7 am; ready to send"},
+    ("long", 1): {"pass": True, "why": "closed on Sunday, Monday at 7:00 AM; signed 'Ravi Kirana Team' (the name came from the old chat); ready to send"},
+    ("long", 2): {"pass": True, "why": "closed on Sunday, Monday at 7 am; [Your Shop Name]"},
+    ("long", 3): {"pass": True, "why": "closed on Sunday, Monday at 7 am; signed 'Ravi Kirana'; a note about the message"},
+    ("nothink", 1): {"pass": True, "why": "closed on Sunday, Monday at 7:00 AM; 'Sure! Here's...', placeholders, 'Let me know...'"},
+    ("nothink", 2): {"pass": True, "why": "closed on Sunday, Monday at 7:00 AM; 'Sure! Here's...', [Your Shop Name], 'Let me know...'"},
+    ("nothink", 3): {"pass": True, "why": "closed on Sunday, Monday at 7:00 AM; 'Sure! Here's...', [Your Shop Name], 'Let me know...'"},
+    ("all3", 1): {"pass": True, "why": "closed this Sunday, Monday at 7 am; ready to send"},
+    ("all3", 2): {"pass": True, "why": "closed this Sunday, 7 AM Monday; ready to send"},
+    ("all3", 3): {"pass": True, "why": "closed this Sunday, 7 am Monday; ready to send"},
+}
+READY = {"default": 0, "short": 3, "long": 1, "nothink": 0, "all3": 3}   # of 3, ready to send as written (noted while reading)
 
 
 def summarize():
@@ -165,6 +183,8 @@ def summarize():
         passed = [HAND.get((name, i + 1), {}).get("pass") for i in range(len(runs))]
         out[name] = {"answer_word_s": round(med("first_answer_word_s"), 1), "whole_s": round(med("whole_reply_s"), 1),
                      "thinking_tokens": med("thinking_tokens"), "answer_tokens": med("answer_tokens"),
+                     "reading_s": round(med("first_token_s"), 1), "ready_to_send": f"{READY.get(name, 0)}/{len(runs)}",
+                     "whole_range_s": [min(r["whole_reply_s"] for r in runs), max(r["whole_reply_s"] for r in runs)],
                      "prompt_tokens": row["prompt_tokens"], "passed": f"{sum(p is True for p in passed)}/{len(runs)}"
                      if all(p is not None for p in passed) else "not read yet"}
     res["summary"] = out

@@ -1,0 +1,299 @@
+{
+ "model": "Qwen/Qwen3-4B-GGUF (Qwen3-4B-Q4_K_M.gguf)",
+ "licence": "Apache 2.0",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "machine": "x86_64, 4 CPU cores, no graphics card",
+ "engine": "llama.cpp via llama-cpp-python, 4 threads",
+ "context_tokens": 8192,
+ "max_tokens": 2000,
+ "sampling": {
+  "thinking": {
+   "temperature": 0.6,
+   "top_p": 0.95,
+   "top_k": 20,
+   "min_p": 0.0
+  },
+  "no_thinking": {
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "top_k": 20,
+   "min_p": 0.0
+  }
+ },
+ "job": "Write a WhatsApp message for my shop's customers: the shop is closed this Sunday for a family function, and open again on Monday at 7 am.",
+ "pass_mark": "says closed this Sunday AND open again Monday at 7 am (read by hand)",
+ "rows": {
+  "default": {
+   "thinking_on": true,
+   "prompt_tokens": 39,
+   "messages_in_chat": 1,
+   "runs": [
+    {
+     "first_token_s": 1.43,
+     "first_answer_word_s": 48.16,
+     "whole_reply_s": 65.92,
+     "thinking": "Okay, the user wants to write a WhatsApp message for their shop's customers. The key points are that the shop is closed on Sunday for a family function and open again on Monday at 7 am. Let me start by considering the tone. It should be friendly and clear, since it's a notification to customers.\n\nFirst, I need to mention the closure on Sunday. I should explain the reason briefly, maybe \"family function\" is a bit vague, but it's okay. Then, the reopening on Monday at 7 am. I should make sure the time is clear. Also, maybe add a note about the family function to show it's a personal event, not something too commercial.\n\nI should start with a greeting, maybe \"Hello everyone!\" to keep it casual. Then state the closure and the reason. Then mention the reopening with the time. Maybe add a friendly note about looking forward to seeing them again. Also, include a contact number or website if they want to reach out. But the user didn't mention that, so maybe just the message.\n\nWait, the user didn't specify including contact info, so maybe just the main message. Also, check for any typos. Make sure the time is correct. Use emojis to make it more engaging, like a clock or a smiley. Maybe a checkmark for the reopening. Let me structure it step by step.\n\nStart with a greeting, state the closure, explain the reason, mention the reopening time, and a friendly sign-off. Keep it concise. Maybe add a note about the family function to show it's a personal event. Also, make sure to use line breaks for readability on WhatsApp. Avoid being too formal. Use exclamation points to keep it upbeat. Okay, that should cover it.",
+     "answer": "**Subject: Shop Closure & Reopening Notice**  \n\nHello everyone! 🌟  \n\nOur shop will be **closed on Sunday** for a family function. We’ll be back open on **Monday at 7:00 AM**! 🕒  \n\nThanks for your understanding, and we can’t wait to see you again! 💙  \n\nBest regards,  \n[Your Shop Name]  \n\n*P.S. Let us know if you need assistance or have questions! *  \n\n---  \nThis message is friendly, clear, and includes key details (closure, reopening time, and a note about the family event). Adjust the tone or add emojis if needed! 😊",
+     "thinking_tokens": 358,
+     "answer_tokens": 136,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 0.99,
+     "first_answer_word_s": 51.4,
+     "whole_reply_s": 71.16,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers. The shop is closed on Sunday for a family function and open again on Monday at 7 am. Let me think about how to approach this.\n\nFirst, the message needs to be clear and friendly. Since it's for customers, it should be polite and informative. I should start with a greeting, maybe \"Hi there!\" to keep it casual. Then mention the closure on Sunday, explain the reason (family function), and inform them about the reopening on Monday at 7 am.\n\nI should make sure to include the key details: Sunday closed, Monday open at 7 am. Maybe add a note about the family event to show it's a personal reason, which might make customers feel it's a valid reason. Also, offer assistance if they have questions. Maybe end with a thank you and a contact method like a phone number or website.\n\nWait, the user didn't mention a website or phone number, but maybe they want to include that. Alternatively, just a friendly sign-off. Also, check if the message is concise. WhatsApp messages are usually short, so need to keep it brief but clear. Avoid any markdown, just plain text. Maybe use emojis to make it more friendly, like a smiley or a clock for the time. But not too many.\n\nLet me structure it:\n\n- Greeting\n- Announcement of closure on Sunday\n- Reason (family function)\n- Reopening on Monday at 7 am\n- Offer help if they have questions\n- Thank you and sign-off\n\nCheck for clarity and that all necessary info is included. Make sure the time is specified clearly. Maybe use \"7 AM\" instead of \"7 a.m.\" for consistency. Also, avoid any negative language, just a straightforward message. Make sure the tone is positive and appreciative of their patronage.\n\nI think that's all. Let me put it all together in a concise way.",
+     "answer": "**Subject: Shop Closure & Reopening Notice**  \n\nHi there! 🌟  \n\nOur shop will be **closed on Sunday** for a family function. We’ll be back open again on **Monday at 7:00 AM**.  \n\nThanks for your understanding, and we hope to see you soon! Let us know if you have any questions.  \n\nBest regards,  \n[Your Shop Name]  \n[Contact Info/Website, if applicable]  \n\n---  \n*P.S. Feel free to reach out if you need assistance! We’re here for you!* 😊  \n\n---  \nThis version is friendly, clear, and includes key details without being too lengthy. Adjust the tone or add specifics (like contact info) as needed!",
+     "thinking_tokens": 395,
+     "answer_tokens": 151,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.04,
+     "first_answer_word_s": 54.93,
+     "whole_reply_s": 76.26,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers announcing that it's closed on Sunday for a family function and reopening on Monday at 7 am. Let me start by thinking about the key points they need to convey.\n\nFirst, the main message is that the shop is closed on Sunday. They need to mention the reason: a family function. Then, the reopening is on Monday at 7 am. It's important to make the message friendly and clear.\n\nI should start with a greeting, maybe \"Hi there!\" to keep it casual. Then state the closure date and reason. Use emojis to make it more approachable, like a smiling face or a clock. Also, mention the reopening time clearly. Maybe add a note about checking back for updates if needed. End with a thank you and a contact number in case they have questions.\n\nWait, should I include a specific date? The user didn't mention a specific date, just Sunday. So maybe just \"this Sunday\" is enough. Also, the family function is a personal event, so it's okay to mention that. Avoid any negative connotations; focus on the positive aspect of the family time.\n\nNeed to make sure the message isn't too long. Keep it concise. Also, check for any typos. Maybe use line breaks for readability. Use a friendly tone throughout. Maybe add a note about the reopening time being early, so they can come in early if they need anything.\n\nAlso, include the contact info again at the end in case they have questions. Maybe add a note about the shop being open again on Monday. Make sure the time is clear: 7 am. Maybe use a clock emoji to emphasize the time. Also, maybe add a thank you for their understanding and support. \n\nLet me structure it step by step. Start with a greeting, state the closure, mention the reason, inform about reopening, include the time, add a note about checking back, and end with thanks and contact. That should cover all the necessary points. Let me put that together in a concise way.",
+     "answer": "**Subject:** 🏬 Shop Closure & Reopening Notice  \n\nHi there!  \n\nWe’re closing our doors **this Sunday** for a family function and will be back open **Monday at 7:00 AM**. We’ll be busy catching up with loved ones, so we’ll be back early next week!  \n\nIf you need anything urgent, feel free to reach out. We’re here to help!  \n\nThanks for your understanding & support!  \n[Your Shop Name]  \n[Phone Number]  \n\nP.S. Don’t worry—your favorite items are still in stock! 😊  \n\n---  \nThis message is friendly, clear, and includes key details (closure reason, reopening time, contact info). Emojis add a warm, approachable tone. Let me know if you'd like to adjust the style!",
+     "thinking_tokens": 420,
+     "answer_tokens": 167,
+     "hit_cap": false
+    }
+   ]
+  },
+  "short": {
+   "thinking_on": true,
+   "prompt_tokens": 47,
+   "messages_in_chat": 1,
+   "runs": [
+    {
+     "first_token_s": 1.49,
+     "first_answer_word_s": 87.16,
+     "whole_reply_s": 89.75,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers. The key points are that the shop is closed on Sunday for a family function and open again on Monday at 7 am. They need it to be two short lines.\n\nFirst, I should start with a clear subject. Maybe \"Shop Closure Notice\" to grab attention. Then mention the Sunday closure due to a family event. Next, inform them it's open again on Monday at 7 am. Keep it concise. Make sure the tone is friendly and helpful. Avoid any jargon. Check the length to ensure it's two lines. Let me structure it: \"Dear Customers, Our shop is closed this Sunday for a family event and will reopen at 7 am on Monday. Thank you for your understanding!\" Wait, that's two lines. But maybe \"Dear Customers,\" can be part of the first line. Let me check. \"Dear Customers, Our shop is closed this Sunday for a family event and will reopen at 7 am on Monday. Thank you for your understanding!\" That's two lines. Alternatively, maybe start with \"Shop Closure Notice: This Sunday, our shop is closed for a family event. We'll reopen at 7 am on Monday. Thank you!\" But that's two lines. Maybe the user prefers a more personal touch. \"Dear Customers, Our shop is closed this Sunday for a family event and will reopen at 7 am on Monday. Thank you for your understanding!\" Yes, that's two lines. Alternatively, \"Shop Closure: Sunday is closed for a family event. Open again at 7 am Monday. Thank you!\" But that's two lines. Maybe the first version is better. Let me make sure it's two lines. The user might prefer a friendly and clear message. So final version: \"Dear Customers, Our shop is closed this Sunday for a family event and will reopen at 7 am on Monday. Thank you for your understanding!\" That's two lines. Alternatively, \"Shop is closed Sunday for family event. Open again at 7 am Monday. Thank you!\" That's two lines. Which one is better? The first is more formal, the second more concise. Maybe the second is better for WhatsApp. Let me check again. The user said two short lines. So the second option is two lines. But the first is also two lines. Maybe the second is better. So final message: \"Shop is closed Sunday for family event. Open again at 7 am Monday. Thank you!\" That's two lines. But maybe the user wants a greeting. Maybe start with \"Dear Customers,\". But the user didn't specify. The original instruction says \"write a WhatsApp message for my shop's customers\", so maybe starting with \"Dear Customers\" is better. So the first version. But the user might prefer a more concise message. Let me check the length. \"Dear Customers, Our shop is closed this Sunday for a family event and will reopen at 7 am on Monday. Thank you for your understanding!\" That's two lines. Yes. Alternatively, \"Shop closed Sunday for family event. Open again at 7 am Monday. Thank you!\" That's two lines. Maybe that's better. The user might prefer a more direct message. So I'll go with the second version.",
+     "answer": "\"Shop is closed Sunday for family event. Open again at 7 am Monday. Thank you!\"",
+     "thinking_tokens": 670,
+     "answer_tokens": 20,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.35,
+     "first_answer_word_s": 25.18,
+     "whole_reply_s": 28.56,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers. The key points are that the shop is closed on Sunday for a family function and open again on Monday at 7 am. They want it to be two short lines.\n\nFirst, I need to make sure the message is clear and concise. Starting with a greeting like \"Hi there!\" makes it friendly. Then mention the closure on Sunday due to a family event. Next, inform them it's open again on Monday at 7 am. Need to check the timing and days are correct. Also, maybe add a note about the family event to show it's a personal reason, which might make customers understand the closure is temporary. Keep it positive and helpful. Let me structure it: first line about Sunday closure, second line about Monday opening time. Make sure it's two lines only. Avoid any markdown. Use simple language. Check for any errors. Yeah, that should work.",
+     "answer": "Hi there! Our shop is closed this Sunday for a family event and will reopen at 7 am Monday. Thanks for your understanding!",
+     "thinking_tokens": 191,
+     "answer_tokens": 27,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.53,
+     "first_answer_word_s": 32.82,
+     "whole_reply_s": 35.63,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers. The main points are that the shop is closed on Sunday for a family function and open again on Monday at 7 am. They need it to be two short lines.\n\nFirst, I should start with a friendly greeting. Maybe \"Hi there!\" to keep it casual. Then mention the closure on Sunday. Need to be clear but not too formal. Next, inform them about the reopening on Monday at 7 am. Make sure the time is specified clearly. Also, check if there's a need to mention that the shop is open again, not just the time. Maybe \"Back open Monday at 7am\" is concise. Also, include a note about the family function to explain the closure. Avoid any markdown, just plain text. Keep each line short and to the point. Let me check the example response. It's \"Hi there! Our shop is closed this Sunday for a family function and open again on Monday at 7 am.\" That's two lines. Wait, the user said two short lines. The example is two lines. So that's good. Maybe that's the best way. Make sure the message is clear and friendly. No need for extra info. Just the key points.",
+     "answer": "Hi there! Our shop is closed this Sunday for a family function and open again on Monday at 7 am.",
+     "thinking_tokens": 257,
+     "answer_tokens": 23,
+     "hit_cap": false
+    }
+   ]
+  },
+  "long": {
+   "thinking_on": true,
+   "prompt_tokens": 2151,
+   "messages_in_chat": 91,
+   "runs": [
+    {
+     "first_token_s": 55.05,
+     "first_answer_word_s": 123.59,
+     "whole_reply_s": 131.82,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers announcing that the shop is closed on Sunday for a family function and open again on Monday at 7 am. Let me think about how to structure this.\n\nFirst, the message needs to be clear and friendly. It should inform customers about the closure and the reopening time. The key points are: Sunday closed, family function, Monday open at 7 am. \n\nI should start with a greeting, maybe \"Dear Customers,\" to keep it personal. Then mention the closure on Sunday due to a family event. It's important to apologize for the inconvenience and clarify that the shop will reopen on Monday at 7 am. \n\nI should also add a note about the family function to give context. Maybe something like \"We'll be hosting a family function on Sunday.\" That makes it more specific. \n\nEnd with a thank you and a friendly sign-off. Maybe \"Thanks for your understanding!\" and \"Ravi Kirana Team.\" \n\nCheck the tone: it should be polite, not too formal, but still professional. Avoid any jargon. Make sure the time is clearly stated. Also, confirm that the reopening is at 7 am, which is a specific time. \n\nWait, the user might want to emphasize the reopening time. So \"open again on Monday at 7 am\" is important. Also, maybe add a note about the family function to explain why the closure is happening. \n\nI should make sure the message is concise. Not too long, but includes all necessary info. Maybe use bullet points or emojis if allowed, but since the user hasn't specified, keep it simple. \n\nDouble-check the details: Sunday closed, Monday at 7 am. No typos. Use proper punctuation. Maybe a smiley emoji to keep it friendly. \n\nFinal message: \"Dear Customers, We'll be closed on Sunday for a family function. Back open on Monday at 7 am. Thanks for your understanding! Ravi Kirana Team.\" \n\nThat seems to cover all points. It's clear, friendly, and informative.",
+     "answer": "**Dear Customers,**  \nWe’ll be closed on **Sunday** for a family function. The shop will open again on **Monday at 7:00 AM**. Thanks for your understanding!  \n\n**Ravi Kirana Team** 🌟",
+     "thinking_tokens": 423,
+     "answer_tokens": 51,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 54.51,
+     "first_answer_word_s": 114.22,
+     "whole_reply_s": 122.51,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers. The main points are that the shop is closed on Sunday for a family function and open again on Monday at 7 am. Let me start by addressing the customers politely.\n\nFirst, I need to mention the closure. It's important to be clear and friendly. Maybe start with \"Dear Customers,\" to make it personal. Then state the reason for the closure, which is a family function. I should make it sound like it's a special event, not a negative thing.\n\nNext, inform them that the shop will reopen on Monday at 7 am. It's crucial to highlight the opening time so customers know when to come back. Also, maybe add a note about the family function to show it's a positive event. \n\nI should keep the message concise since WhatsApp messages are usually short. Avoid any technical jargon. Use emojis if appropriate, but maybe not in this case since it's a notice about closure. \n\nCheck if there's any other info needed, like contact details or website, but the user didn't mention that. Just the closure and reopening time. \n\nMake sure the tone is friendly and helpful. Maybe end with a thank you or a friendly sign-off. Also, check for any typos or errors. \n\nSo the message would be something like: \"Dear Customers, Our shop is closed on Sunday for a family function. We'll be open again on Monday at 7 am. Thank you for your understanding!\" That's clear and to the point. Alternatively, maybe add a smiley to keep it friendly. \"Dear Customers, Our shop is closed on Sunday for a family function. We'll be open again on Monday at 7 am. Thank you for your understanding! 😊\" \n\nYes, that works. It's concise, clear, and friendly.",
+     "answer": "**Dear Customers,**  \nOur shop is closed on **Sunday** for a family function. We’ll be open again on **Monday at 7 am**. Thank you for your understanding! 😊  \n\n**Best regards,**  \n[Your Shop Name]",
+     "thinking_tokens": 374,
+     "answer_tokens": 51,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 54.36,
+     "first_answer_word_s": 171.29,
+     "whole_reply_s": 181.94,
+     "thinking": "Okay, the user wants a WhatsApp message for their shop's customers announcing that the shop is closed on Sunday for a family function and reopening on Monday at 7 am. Let me start by understanding the key points here. The main message is that the shop is closed on Sunday, but open again on Monday at 7 am. The user also mentioned a family function, so maybe they want to add a friendly note about that.\n\nFirst, I need to make sure the message is clear and concise. Since it's a WhatsApp message, it should be brief but informative. The customer might be checking the shop's hours, so the key details are the closure and reopening time. Also, including a note about the family function could add a personal touch, showing that the shop is open for business and has events.\n\nI should start with a friendly greeting, maybe \"Hello, dear customers!\" to keep the tone warm. Then state the closure for Sunday, mention the family function, and inform them about the reopening on Monday at 7 am. It's important to mention that the shop is open again on Monday, so customers know they can come back. Also, maybe add a thank you or a note about looking forward to their visits. \n\nWait, the user's previous messages have included phrases like \"Fresh vegetables arrive every morning at 8 am.\" So maybe keeping the same friendly and informative style is good. Also, checking previous examples, the user has used \"Dear customers\" in some messages. Let me check the previous messages. For example, the welcome message was \"Welcome to Ravi Kirana! Order on WhatsApp, delivery in 30 minutes.\" So maybe starting with \"Dear customers\" is appropriate here.\n\nAlso, the user might want to avoid any confusion, so stating the closure and reopening time clearly. Maybe include a note that they can reach out if they have questions. But since the user hasn't asked for a contact number, maybe just a friendly note. Also, the family function is a positive event, so mentioning it could be good for the shop's image.\n\nPutting it all together: \"Dear customers, our shop is closed on Sunday for a family function. We will be open again on Monday at 7 am. Looking forward to serving you! Ravi Kirana.\" That's concise and includes all necessary info. Alternatively, maybe add a line about the family function being a special event. But the user didn't specify details, so keeping it general is better.\n\nAnother version: \"Hello, dear customers! Our shop is closed on Sunday for a family event and will reopen on Monday at 7 am. Thank you for your understanding! Ravi Kirana.\" That's also good. The key is to be clear, friendly, and include the important dates. Also, the user might want to make sure customers know the reopening time is 7 am, which is a bit earlier than usual. So emphasizing that it's open at 7 am is important. Also, the family function is a reason for the closure, so mentioning that adds context.\n\nI think the best approach is to start with a greeting, state the closure and reason, then the reopening time, and a friendly sign-off. The previous examples have used \"Dear customers\" and \"Looking forward to serving you\" or similar. So the final message should be something like: \"Dear customers, our shop is closed on Sunday for a family function. We will be open again on Monday at 7 am. Looking forward to serving you! Ravi Kirana.\" That's clear and matches the style of previous messages.",
+     "answer": "**Dear customers,**  \nOur shop is closed on Sunday for a family function. We will be open again on **Monday at 7 am**. Looking forward to serving you!  \n**Ravi Kirana**  \n\n---  \n*Short, clear, and friendly—perfect for WhatsApp updates!* 🌟",
+     "thinking_tokens": 726,
+     "answer_tokens": 62,
+     "hit_cap": false
+    }
+   ]
+  },
+  "nothink": {
+   "thinking_on": false,
+   "prompt_tokens": 43,
+   "messages_in_chat": 1,
+   "runs": [
+    {
+     "first_token_s": 1.39,
+     "first_answer_word_s": 1.85,
+     "whole_reply_s": 16.11,
+     "thinking": "",
+     "answer": "Sure! Here's a friendly and clear WhatsApp message for your customers:\n\n---\n\n**Subject: Shop Closure Notice**\n\nDear [Customer Name/All Customers],\n\nWe hope you're having a great week!  \n\nOur shop will be **closed on Sunday** for a family function. We'll be back open on **Monday at 7:00 AM** as usual.\n\nWe appreciate your understanding and look forward to seeing you soon!\n\nThank you for your support.\n\nBest regards,  \n[Your Name]  \n[Shop Name]\n\n---\n\nLet me know if you'd like a more casual or formal version!",
+     "thinking_tokens": 0,
+     "answer_tokens": 119,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.48,
+     "first_answer_word_s": 2.0,
+     "whole_reply_s": 13.75,
+     "thinking": "",
+     "answer": "Sure! Here's a friendly and clear WhatsApp message for your customers:\n\n---\n\n📢 **Shop Closure Notice**  \n\nWe're closed on **Sunday** for a family function.  \nWe'll be back open on **Monday at 7:00 AM**.  \n\nThanks for your understanding!  \nWe look forward to seeing you soon!  \n\nBest regards,  \n[Your Shop Name]  \n\n--- \n\nLet me know if you'd like a more casual or formal version!",
+     "thinking_tokens": 0,
+     "answer_tokens": 94,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.54,
+     "first_answer_word_s": 2.03,
+     "whole_reply_s": 15.11,
+     "thinking": "",
+     "answer": "Sure! Here's a friendly and clear WhatsApp message for your customers:\n\n---\n\n**Subject: Shop Closure Notice**\n\nHi there!\n\nWe hope you're all having a great week! Our shop will be **closed on Sunday** for a family function. We'll be back open on **Monday at 7:00 AM**.\n\nThank you for your understanding and support. We look forward to seeing you soon!\n\nBest regards,  \n[Your Shop Name]\n\n---\n\nLet me know if you'd like a more casual or formal version!",
+     "thinking_tokens": 0,
+     "answer_tokens": 106,
+     "hit_cap": false
+    }
+   ]
+  },
+  "all3": {
+   "thinking_on": false,
+   "prompt_tokens": 51,
+   "messages_in_chat": 1,
+   "runs": [
+    {
+     "first_token_s": 1.56,
+     "first_answer_word_s": 2.04,
+     "whole_reply_s": 5.02,
+     "thinking": "",
+     "answer": "We're closed this Sunday for a family event and will reopen Monday at 7 am. Thank you for your understanding!",
+     "thinking_tokens": 0,
+     "answer_tokens": 24,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.67,
+     "first_answer_word_s": 2.21,
+     "whole_reply_s": 4.98,
+     "thinking": "",
+     "answer": "We're closed this Sunday for a family event and will reopen at 7 AM Monday. Thanks for your understanding!",
+     "thinking_tokens": 0,
+     "answer_tokens": 23,
+     "hit_cap": false
+    },
+    {
+     "first_token_s": 1.64,
+     "first_answer_word_s": 2.13,
+     "whole_reply_s": 5.03,
+     "thinking": "",
+     "answer": "We're closed this Sunday for a family event and will reopen at 7 am Monday. Thanks for your understanding!",
+     "thinking_tokens": 0,
+     "answer_tokens": 23,
+     "hit_cap": false
+    }
+   ]
+  }
+ },
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "summary": {
+  "default": {
+   "answer_word_s": 51.4,
+   "whole_s": 71.2,
+   "thinking_tokens": 395,
+   "answer_tokens": 151,
+   "reading_s": 1.0,
+   "ready_to_send": "0/3",
+   "whole_range_s": [
+    65.92,
+    76.26
+   ],
+   "prompt_tokens": 39,
+   "passed": "3/3"
+  },
+  "short": {
+   "answer_word_s": 32.8,
+   "whole_s": 35.6,
+   "thinking_tokens": 257,
+   "answer_tokens": 23,
+   "reading_s": 1.5,
+   "ready_to_send": "3/3",
+   "whole_range_s": [
+    28.56,
+    89.75
+   ],
+   "prompt_tokens": 47,
+   "passed": "3/3"
+  },
+  "long": {
+   "answer_word_s": 123.6,
+   "whole_s": 131.8,
+   "thinking_tokens": 423,
+   "answer_tokens": 51,
+   "reading_s": 54.5,
+   "ready_to_send": "1/3",
+   "whole_range_s": [
+    122.51,
+    181.94
+   ],
+   "prompt_tokens": 2151,
+   "passed": "3/3"
+  },
+  "nothink": {
+   "answer_word_s": 2.0,
+   "whole_s": 15.1,
+   "thinking_tokens": 0,
+   "answer_tokens": 106,
+   "reading_s": 1.5,
+   "ready_to_send": "0/3",
+   "whole_range_s": [
+    13.75,
+    16.11
+   ],
+   "prompt_tokens": 43,
+   "passed": "3/3"
+  },
+  "all3": {
+   "answer_word_s": 2.1,
+   "whole_s": 5.0,
+   "thinking_tokens": 0,
+   "answer_tokens": 23,
+   "reading_s": 1.6,
+   "ready_to_send": "3/3",
+   "whole_range_s": [
+    4.98,
+    5.03
+   ],
+   "prompt_tokens": 51,
+   "passed": "3/3"
+  }
+ }
+}
