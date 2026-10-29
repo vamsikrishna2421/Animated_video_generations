@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   401,
-   416
+   219,
+   234
   ]
  ],
  "musicBoosts": [
@@ -25,24 +25,24 @@
   ],
   [
    225,
-   777,
+   798,
    1.4
   ],
   [
-   777,
-   1444,
+   798,
+   1465,
    1.42
   ],
   [
-   777,
-   1444,
+   798,
+   1465,
    1.26,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
- "totalFrames": 1444,
+ "totalFrames": 1465,
  "music": "reel/howto02v1/score.wav",
  "scenes": [
   {
@@ -227,7 +227,7 @@
      {
       "who": "ai",
       "shot": "app",
-      "prop": "step1n",
+      "prop": "step1m",
       "n": 4
      },
      {
@@ -281,7 +281,7 @@
     "hardCuts": true
    },
    "from": 225,
-   "frames": 552,
+   "frames": 573,
    "lines": [
     {
      "who": "ai",
@@ -290,76 +290,51 @@
      "sub": null,
      "audio": "reel/howto02v1/line_03.wav",
      "from": 9,
-     "frames": 171,
+     "frames": 138,
      "words": [
       {
        "w": "One:",
        "from": 13,
-       "to": 30
+       "to": 31
       },
       {
        "w": "less",
-       "from": 30,
-       "to": 41
+       "from": 31,
+       "to": 42
       },
       {
        "w": "thinking.",
-       "from": 41,
-       "to": 66
+       "from": 42,
+       "to": 70
       },
       {
-       "w": "Instant",
-       "from": 66,
-       "to": 87
+       "w": "71",
+       "from": 70,
+       "to": 74
       },
       {
-       "w": "on",
-       "from": 87,
-       "to": 90
+       "w": "seconds,",
+       "from": 74,
+       "to": 98
       },
       {
-       "w": "ChatGPT,",
-       "from": 90,
-       "to": 114
+       "w": "down",
+       "from": 98,
+       "to": 105
       },
       {
-       "w": "Flash",
-       "from": 114,
-       "to": 120
+       "w": "to",
+       "from": 105,
+       "to": 113
       },
       {
-       "w": "on",
-       "from": 120,
-       "to": 124
-      },
-      {
-       "w": "Gemini,",
-       "from": 124,
-       "to": 133
-      },
-      {
-       "w": "low",
-       "from": 133,
-       "to": 148
-      },
-      {
-       "w": "effort",
-       "from": 148,
-       "to": 156
-      },
-      {
-       "w": "on",
-       "from": 156,
-       "to": 159
-      },
-      {
-       "w": "Claude.",
-       "from": 159,
-       "to": 174
+       "w": "15.",
+       "from": 113,
+       "to": 141
       }
      ],
      "cues": {
-      "1": 133
+      "1": 64
      }
     },
     {
@@ -368,37 +343,62 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/howto02v1/line_04.wav",
-     "from": 191,
-     "frames": 72,
+     "from": 162,
+     "frames": 125,
      "words": [
       {
-       "w": "71",
-       "from": 197,
+       "w": "Instant",
+       "from": 162,
+       "to": 181
+      },
+      {
+       "w": "on",
+       "from": 181,
+       "to": 185
+      },
+      {
+       "w": "ChatGPT,",
+       "from": 185,
        "to": 202
       },
       {
-       "w": "seconds,",
+       "w": "Flash",
        "from": 202,
-       "to": 218
+       "to": 222
       },
       {
-       "w": "down",
-       "from": 218,
-       "to": 238
+       "w": "on",
+       "from": 222,
+       "to": 226
       },
       {
-       "w": "to",
-       "from": 238,
+       "w": "Gemini,",
+       "from": 226,
+       "to": 237
+      },
+      {
+       "w": "low",
+       "from": 237,
        "to": 243
       },
       {
-       "w": "15.",
+       "w": "effort",
        "from": 243,
-       "to": 254
+       "to": 260
+      },
+      {
+       "w": "on",
+       "from": 260,
+       "to": 264
+      },
+      {
+       "w": "Claude.",
+       "from": 264,
+       "to": 280
       }
      ],
      "cues": {
-      "1": 220
+      "1": 239
      }
     },
     {
@@ -407,42 +407,47 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/howto02v1/line_05.wav",
-     "from": 278,
-     "frames": 69,
+     "from": 308,
+     "frames": 68,
      "words": [
       {
        "w": "All",
-       "from": 282,
-       "to": 286
-      },
-      {
-       "w": "that",
-       "from": 286,
-       "to": 292
-      },
-      {
-       "w": "thinking,",
-       "from": 292,
-       "to": 302
-      },
-      {
-       "w": "for",
-       "from": 302,
-       "to": 307
-      },
-      {
-       "w": "\"shop",
-       "from": 307,
+       "from": 314,
        "to": 317
       },
       {
-       "w": "closed\"?!",
+       "w": "that",
        "from": 317,
-       "to": 335
+       "to": 321
+      },
+      {
+       "w": "thinking,",
+       "from": 321,
+       "to": 328
+      },
+      {
+       "w": "just",
+       "from": 328,
+       "to": 339
+      },
+      {
+       "w": "for",
+       "from": 339,
+       "to": 345
+      },
+      {
+       "w": "\"shop",
+       "from": 345,
+       "to": 350
+      },
+      {
+       "w": "closed\"?!",
+       "from": 350,
+       "to": 361
       }
      ],
      "cues": {
-      "1": 302
+      "1": 329
      }
     },
     {
@@ -451,97 +456,97 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/howto02v1/line_06.wav",
-     "from": 354,
+     "from": 383,
      "frames": 163,
      "words": [
       {
        "w": "Two:",
-       "from": 357,
-       "to": 363
+       "from": 386,
+       "to": 391
       },
       {
        "w": "ask",
-       "from": 363,
-       "to": 375
+       "from": 391,
+       "to": 404
       },
       {
        "w": "for",
-       "from": 375,
-       "to": 385
+       "from": 404,
+       "to": 414
       },
       {
        "w": "a",
-       "from": 385,
-       "to": 388
-      },
-      {
-       "w": "short",
-       "from": 388,
-       "to": 398
-      },
-      {
-       "w": "reply.",
-       "from": 398,
+       "from": 414,
        "to": 416
       },
       {
-       "w": "\"Keep",
-       "from": 416,
-       "to": 423
-      },
-      {
-       "w": "it",
-       "from": 423,
-       "to": 431
-      },
-      {
-       "w": "to",
-       "from": 431,
-       "to": 435
-      },
-      {
-       "w": "2",
-       "from": 435,
-       "to": 437
-      },
-      {
        "w": "short",
-       "from": 437,
+       "from": 416,
+       "to": 427
+      },
+      {
+       "w": "reply.",
+       "from": 427,
        "to": 444
       },
       {
-       "w": "lines.\"",
+       "w": "\"Keep",
        "from": 444,
-       "to": 473
+       "to": 451
       },
       {
-       "w": "15",
-       "from": 473,
-       "to": 477
-      },
-      {
-       "w": "seconds,",
-       "from": 477,
-       "to": 498
-      },
-      {
-       "w": "down",
-       "from": 498,
-       "to": 503
+       "w": "it",
+       "from": 451,
+       "to": 460
       },
       {
        "w": "to",
-       "from": 503,
-       "to": 507
+       "from": 460,
+       "to": 463
+      },
+      {
+       "w": "2",
+       "from": 463,
+       "to": 465
+      },
+      {
+       "w": "short",
+       "from": 465,
+       "to": 472
+      },
+      {
+       "w": "lines.\"",
+       "from": 472,
+       "to": 502
+      },
+      {
+       "w": "15",
+       "from": 502,
+       "to": 505
+      },
+      {
+       "w": "seconds,",
+       "from": 505,
+       "to": 526
+      },
+      {
+       "w": "down",
+       "from": 526,
+       "to": 532
+      },
+      {
+       "w": "to",
+       "from": 532,
+       "to": 535
       },
       {
        "w": "5.",
-       "from": 507,
-       "to": 510
+       "from": 535,
+       "to": 539
       }
      ],
      "cues": {
-      "1": 448
+      "1": 476
      }
     }
    ]
@@ -619,7 +624,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 777,
+   "from": 798,
    "frames": 667,
    "lines": [
     {

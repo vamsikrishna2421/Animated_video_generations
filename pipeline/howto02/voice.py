@@ -123,6 +123,8 @@ def main(lang, only, keep=False):
                         print(f"{n:02d} {who} try {k}: failed to voice ({e})", flush=True)
                         continue
                     trim(tmp)
+                    (takes / "_tries").mkdir(exist_ok=True)   # every try kept aside: the picker can keep a worse take than the ear would
+                    shutil.copy(tmp, takes / "_tries" / f"{n:02d}{'b' if pk else ''}_{tmp.name}")
                     ok, score, info = judge(heard(tmp, who, n, lang), text, lang, line.get('must' if pk == 0 else 'must2', []))
                     print(f"{n:02d} {who} try {k}: {'OK' if ok else 'bad'} {info}", flush=True)
                     if best is None or (best[0] is not None and score > best[0]):

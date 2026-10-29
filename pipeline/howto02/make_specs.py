@@ -42,7 +42,8 @@ L = [
      "Thinking is only for hard jobs like maths. <pause 0.25> For a WhatsApp message, fast is enough."),
     ("ravi", "wide", "save", "Chintu! [1] Save this!", "చింటూ! [1] ఇది సేవ్ చెయ్!", "Chintu! Save this!"),
 ]
-TTS_EN = {"step1m": "Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude."}
+TTS_EN = {"step1m": "Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude.",
+          "thinking": "All that thinking, [1] just for shop closed!"}   # the quotes and "?!" came out as a made-up word in two takes
 SHOW_EN = {"hook": "71 seconds for a two-line WhatsApp message?!", "three": "With three settings, the same message took 5 seconds.",
            "step1": "One: less thinking. 71 seconds, down to 15.", "step2": "Two: ask for a short reply. \"Keep it to 2 short lines.\" 15 seconds, down to 5.",
            "step3": "Three: new topic, new chat. In a month-long chat, the same job took over 2 minutes."}

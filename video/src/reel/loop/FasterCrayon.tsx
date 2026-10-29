@@ -65,9 +65,9 @@ const appPhone = (c: Ctx, x: number, y: number, s: number, f: number, o: { mode:
     c.fillStyle = "#e0e7ff"; rrect(c, -290, yy, 480, h, 24); c.fill();
     c.fillStyle = INK; c.textAlign = "left"; rows.forEach((t, i) => c.fillText(t, -270, yy + 48 + i * 42));
   } else if (!o.fresh) {   // "Thinking..." with moving dots (no timer: one clock in the reel, the whole reply)
-    c.fillStyle = "#ede9fe"; rrect(c, -290, yy, 330, 84, 24); c.fill();
-    c.font = SANS(34); c.fillStyle = PURPLE; c.textAlign = "left"; c.fillText("Thinking", -264, yy + 54);
-    [0, 1, 2].forEach((q) => { const a = 0.3 + 0.7 * (Math.floor(f / 6) % 3 === q ? 1 : 0); c.globalAlpha = a; c.beginPath(); c.arc(-90 + q * 26, yy + 44, 8, 0, 7); c.fillStyle = PURPLE; c.fill(); });
+    c.fillStyle = "#ede9fe"; rrect(c, -290, yy, 470, 120, 30); c.fill();
+    c.font = SANS(56); c.fillStyle = PURPLE; c.textAlign = "left"; c.fillText("Thinking", -260, yy + 80);
+    [0, 1, 2].forEach((q) => { const a = 0.3 + 0.7 * (Math.floor(f / 6) % 3 === q ? 1 : 0); c.globalAlpha = a; c.beginPath(); c.arc(0 + q * 40, yy + 62, 12, 0, 7); c.fillStyle = PURPLE; c.fill(); });
     c.globalAlpha = 1;
   }
   // the message box at the bottom (what he types)
@@ -78,12 +78,32 @@ const appPhone = (c: Ctx, x: number, y: number, s: number, f: number, o: { mode:
   } else { c.font = SANS(30, 600); c.fillStyle = "#94a3b8"; c.textAlign = "left"; c.fillText("Message", -260, 474); }
   c.restore();
 };
+// a big chat panel: what he types (and the reply), large enough to read without pausing
+const chatPanel = (c: Ctx, W: number, y: number, typed: string, kept: number, f: number, reply?: string, newChat?: boolean) => {
+  c.fillStyle = "#f8fafc"; rrect(c, 70, y, W - 140, reply ? 700 : 520, 30); c.fill();
+  if (newChat) { c.fillStyle = "#e2e8f0"; rrect(c, 110, y + 36, 360, 76, 38); c.fill(); c.font = SANS(40, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("＋ New chat", 290, y + 88); }
+  c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("you type:", 110, y + (newChat ? 170 : 70));
+  const shown = typed.slice(0, Math.ceil(typed.length * clamp(kept)));
+  c.font = SANS(54, 800); const rows = wrapW(c, shown + (kept < 1 && Math.floor(f / 8) % 2 ? "▍" : ""), W - 260);
+  const ty = y + (newChat ? 190 : 90);
+  c.fillStyle = "#dcf8c6"; rrect(c, 100, ty, W - 200, rows.length * 68 + 40, 24); c.fill();
+  c.fillStyle = INK; rows.forEach((r, i) => c.fillText(r, 130, ty + 64 + i * 68));
+  if (reply) {
+    const ry = ty + rows.length * 68 + 80;
+    c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.fillText("the AI's reply (our test):", 110, ry);
+    c.font = SANS(40, 600); const rr = wrapW(c, reply, W - 280);
+    c.fillStyle = "#e0e7ff"; rrect(c, 100, ry + 20, W - 200, rr.length * 52 + 36, 24); c.fill();
+    c.fillStyle = INK; rr.forEach((r, i) => c.fillText(r, 130, ry + 70 + i * 52));
+  }
+};
 // the result stamp: "SAME MESSAGE: 71 s → 5 s"
-const stamp = (c: Ctx, W: number, y: number, a: number, b: number, k: number) => {
+const stamp = (c: Ctx, W: number, y: number, a: number, b: number, k: number) => {   // the test line inside: a tag below covered Ravi's eyes
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 2); c.translate(W / 2, y); c.rotate(-0.04); const z = 1.25 - 0.25 * easeOut(k); c.scale(z, z);
-  c.fillStyle = "#fffdf5"; rrect(c, -470, -118, 940, 236, 30); c.fill();
-  c.strokeStyle = RED; c.lineWidth = 10; rrect(c, -456, -104, 912, 208, 24); c.stroke();
+  c.fillStyle = "#fffdf5"; rrect(c, -470, -118, 940, 300, 30); c.fill();
+  c.strokeStyle = RED; c.lineWidth = 10; rrect(c, -456, -104, 912, 272, 24); c.stroke();
+  c.fillStyle = "#0f172a"; rrect(c, -380, 98, 760, 58, 16); c.fill();
+  c.font = SANS(36); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText("OUR TEST · a small free AI, offline", 0, 140);
   c.font = SANS(40); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SAME MESSAGE", 0, -42);
   c.font = SANS(108, 900); c.fillStyle = RED; c.textAlign = "right"; c.fillText(sec(a), -60, 70);
   c.fillStyle = INK; c.textAlign = "center"; c.fillText("→", 0, 64);
@@ -188,12 +208,11 @@ const StFaster: React.FC<SP> = ({ s }) => {
         if (b.prop === "hook") {
           // ---------- frame 1: Ravi behind the counter, his phone still "Thinking...", the result stamp ----------
           c.fillStyle = WALL; c.fillRect(0, 0, W, H);
-          c.save(); c.translate(W / 2, 840); c.scale(1.0, 1.0); c.translate(-540, -800);
+          c.save(); c.translate(W / 2, 920); c.scale(1.0, 1.0); c.translate(-540, -800);   // 80 px lower: the stamp clears his face
           shop(c, r); ravi(c, "yell", "up", mouth, p, f, r); counter(c, r);
           c.restore();
-          appPhone(c, 760, 1130, 0.62, f, { mode: "Thinking" });
-          stamp(c, W, 430, n.default.whole, n.all3.whole, 1);
-          tag(c, "OUR TEST · a small free AI, offline", W / 2, 640, 50, "#0f172a", "#f8fafc", 0.01, 1);
+          appPhone(c, 760, 1150, 0.62, f, { mode: "Thinking" });
+          stamp(c, W, 330, n.default.whole, n.all3.whole, 1);
         } else if (b.shot === "app") {
           // ---------- the steps, full frame ----------
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
@@ -214,9 +233,9 @@ const StFaster: React.FC<SP> = ({ s }) => {
           if (b.prop === "step2") {
             stepHead(c, W, 2, "SHORT REPLY", 1);
             const c1 = cu(1, 0.6);
-            appPhone(c, W / 2, 770, 0.5, f, { mode: "Instant", typed: "Keep it to 2 short lines.", kept: seg(p, 0.15, 0.45), reply: f >= c1 ? FAST_REPLY : undefined });
-            bars(c, W, 1150, [["long reply", n.nothink.whole, "#94a3b8"], ["short reply", n.all3.whole, GREEN]], [seg(f, c1 - 4, c1 + 4), seg(f, c1, c1 + 10)], n.default.whole);
-            tag(c, `all ${n.all3.ready.split("/")[0]} ready to paste`, W / 2, 440, 54, "#dcfce7", "#166534", -0.02, seg(f, c1 + 8, c1 + 14));   // above the phone: captions sit from y 1500
+            chatPanel(c, W, 400, "...open again on Monday at 7 am. Keep it to 2 short lines.", seg(p, 0.1, 0.4), f, f >= c1 ? FAST_REPLY : undefined);
+            bars(c, W, 1190, [["long reply", n.nothink.whole, "#94a3b8"], ["short reply", n.all3.whole, GREEN]], [seg(f, c1 - 4, c1 + 4), seg(f, c1, c1 + 10)], n.default.whole);
+            tag(c, `all ${n.all3.ready.split("/")[0]} ready to paste`, W - 250, 1000, 50, "#dcfce7", "#166534", -0.03, seg(f, c1 + 8, c1 + 14));   // captions sit from y 1500
           }
           if (b.prop === "step3") {
             stepHead(c, W, 3, "NEW CHAT", 1);
@@ -230,8 +249,8 @@ const StFaster: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "typename") {
             stepHead(c, W, 3, "NEW CHAT", 1);
-            appPhone(c, W / 2, 1000, 0.62, f, { mode: "Instant", fresh: true, typed: "My shop: Ravi Kirana.", kept: seg(p, 0.05, 0.4) });
-            tag(c, "one line beats a month of chat", W / 2, 450, 58, "#fef3c7", INK, -0.02, seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 6));
+            chatPanel(c, W, 420, "My shop: Ravi Kirana. Write a WhatsApp message: closed this Sunday, open Monday 7 am. Keep it to 2 short lines.", seg(p, 0.05, 0.45), f, undefined, true);
+            tag(c, "one line beats a month of chat", W / 2, 1230, 58, "#fef3c7", INK, -0.02, seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 6));
           }
         } else {
           // ---------- the shop ----------
@@ -246,10 +265,9 @@ const StFaster: React.FC<SP> = ({ s }) => {
           phone(c, b.who === "ai" && mouth, f, r, {});
           c.restore();
           if (b.prop === "three") {
-            stamp(c, W, 430, n.default.whole, n.all3.whole, 1);
+            stamp(c, W, 330, n.default.whole, n.all3.whole, 1);
             const c1 = cu(1, 0.5);
-            ["1 less thinking", "2 short reply", "3 new chat"].forEach((t, q) => tag(c, t, 260 + q * 280, 640, 44, "#fef3c7", INK, q % 2 ? 0.02 : -0.02, seg(f, c1 + q * 5, c1 + 6 + q * 5)));
-            tag(c, "OUR TEST · a small free AI, offline", W / 2, 1180, 44, "#0f172a", "#f8fafc", 0.01, 1);
+            ["1 less thinking", "2 short reply", "3 new chat"].forEach((t, q) => tag(c, t, 220 + q * 320, 1230, 50, "#fef3c7", INK, q % 2 ? 0.02 : -0.02, seg(f, c1 + q * 5, c1 + 6 + q * 5)));   // on the counter: on 640 they covered his face
           }
           if (b.prop === "thinking") bubble(c, 330, 560, "For \"shop closed\"?!", 80, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (b.prop === "oldname") {
