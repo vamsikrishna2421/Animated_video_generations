@@ -1,0 +1,973 @@
+{
+ "id": "howto02v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Make AI reply faster",
+ "musicVol": [
+  0.46,
+  0.9
+ ],
+ "title": "HOW TO 02: make AI reply faster, 3 settings",
+ "handle": "@ai_maastaaru",
+ "label": "HOW TO 02",
+ "fps": 30,
+ "musicDrops": [
+  [
+   401,
+   416
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   225,
+   1.5
+  ],
+  [
+   225,
+   777,
+   1.4
+  ],
+  [
+   777,
+   1444,
+   1.42
+  ],
+  [
+   777,
+   1444,
+   1.26,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1444,
+ "music": "reel/howto02v1/score.wav",
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_faster",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "app",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "three",
+      "n": 2
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "71 s for a WhatsApp message",
+     "title": "71 s for a WhatsApp message",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto02v1/line_01.wav",
+     "from": 4,
+     "frames": 78,
+     "words": [
+      {
+       "w": "71",
+       "from": 8,
+       "to": 13
+      },
+      {
+       "w": "seconds",
+       "from": 13,
+       "to": 24
+      },
+      {
+       "w": "for",
+       "from": 24,
+       "to": 29
+      },
+      {
+       "w": "a",
+       "from": 29,
+       "to": 32
+      },
+      {
+       "w": "two-line",
+       "from": 32,
+       "to": 45
+      },
+      {
+       "w": "WhatsApp",
+       "from": 45,
+       "to": 57
+      },
+      {
+       "w": "message?!",
+       "from": 57,
+       "to": 71
+      }
+     ],
+     "cues": {
+      "1": 32
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_02.wav",
+     "from": 89,
+     "frames": 110,
+     "words": [
+      {
+       "w": "With",
+       "from": 92,
+       "to": 102
+      },
+      {
+       "w": "three",
+       "from": 102,
+       "to": 111
+      },
+      {
+       "w": "settings,",
+       "from": 111,
+       "to": 141
+      },
+      {
+       "w": "the",
+       "from": 141,
+       "to": 145
+      },
+      {
+       "w": "same",
+       "from": 145,
+       "to": 150
+      },
+      {
+       "w": "message",
+       "from": 150,
+       "to": 157
+      },
+      {
+       "w": "took",
+       "from": 157,
+       "to": 173
+      },
+      {
+       "w": "5",
+       "from": 173,
+       "to": 175
+      },
+      {
+       "w": "seconds.",
+       "from": 175,
+       "to": 187
+      }
+     ],
+     "cues": {
+      "1": 138
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_faster",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1n",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "thinking",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step2",
+      "n": 6
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Less thinking, short replies",
+     "title": "Less thinking, short replies",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 225,
+   "frames": 552,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_03.wav",
+     "from": 9,
+     "frames": 171,
+     "words": [
+      {
+       "w": "One:",
+       "from": 13,
+       "to": 30
+      },
+      {
+       "w": "less",
+       "from": 30,
+       "to": 41
+      },
+      {
+       "w": "thinking.",
+       "from": 41,
+       "to": 66
+      },
+      {
+       "w": "Instant",
+       "from": 66,
+       "to": 87
+      },
+      {
+       "w": "on",
+       "from": 87,
+       "to": 90
+      },
+      {
+       "w": "ChatGPT,",
+       "from": 90,
+       "to": 114
+      },
+      {
+       "w": "Flash",
+       "from": 114,
+       "to": 120
+      },
+      {
+       "w": "on",
+       "from": 120,
+       "to": 124
+      },
+      {
+       "w": "Gemini,",
+       "from": 124,
+       "to": 133
+      },
+      {
+       "w": "low",
+       "from": 133,
+       "to": 148
+      },
+      {
+       "w": "effort",
+       "from": 148,
+       "to": 156
+      },
+      {
+       "w": "on",
+       "from": 156,
+       "to": 159
+      },
+      {
+       "w": "Claude.",
+       "from": 159,
+       "to": 174
+      }
+     ],
+     "cues": {
+      "1": 133
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_04.wav",
+     "from": 191,
+     "frames": 72,
+     "words": [
+      {
+       "w": "71",
+       "from": 197,
+       "to": 202
+      },
+      {
+       "w": "seconds,",
+       "from": 202,
+       "to": 218
+      },
+      {
+       "w": "down",
+       "from": 218,
+       "to": 238
+      },
+      {
+       "w": "to",
+       "from": 238,
+       "to": 243
+      },
+      {
+       "w": "15.",
+       "from": 243,
+       "to": 254
+      }
+     ],
+     "cues": {
+      "1": 220
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto02v1/line_05.wav",
+     "from": 278,
+     "frames": 69,
+     "words": [
+      {
+       "w": "All",
+       "from": 282,
+       "to": 286
+      },
+      {
+       "w": "that",
+       "from": 286,
+       "to": 292
+      },
+      {
+       "w": "thinking,",
+       "from": 292,
+       "to": 302
+      },
+      {
+       "w": "for",
+       "from": 302,
+       "to": 307
+      },
+      {
+       "w": "\"shop",
+       "from": 307,
+       "to": 317
+      },
+      {
+       "w": "closed\"?!",
+       "from": 317,
+       "to": 335
+      }
+     ],
+     "cues": {
+      "1": 302
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_06.wav",
+     "from": 354,
+     "frames": 163,
+     "words": [
+      {
+       "w": "Two:",
+       "from": 357,
+       "to": 363
+      },
+      {
+       "w": "ask",
+       "from": 363,
+       "to": 375
+      },
+      {
+       "w": "for",
+       "from": 375,
+       "to": 385
+      },
+      {
+       "w": "a",
+       "from": 385,
+       "to": 388
+      },
+      {
+       "w": "short",
+       "from": 388,
+       "to": 398
+      },
+      {
+       "w": "reply.",
+       "from": 398,
+       "to": 416
+      },
+      {
+       "w": "\"Keep",
+       "from": 416,
+       "to": 423
+      },
+      {
+       "w": "it",
+       "from": 423,
+       "to": 431
+      },
+      {
+       "w": "to",
+       "from": 431,
+       "to": 435
+      },
+      {
+       "w": "2",
+       "from": 435,
+       "to": 437
+      },
+      {
+       "w": "short",
+       "from": 437,
+       "to": 444
+      },
+      {
+       "w": "lines.\"",
+       "from": 444,
+       "to": 473
+      },
+      {
+       "w": "15",
+       "from": 473,
+       "to": 477
+      },
+      {
+       "w": "seconds,",
+       "from": 477,
+       "to": 498
+      },
+      {
+       "w": "down",
+       "from": 498,
+       "to": 503
+      },
+      {
+       "w": "to",
+       "from": 503,
+       "to": 507
+      },
+      {
+       "w": "5.",
+       "from": 507,
+       "to": 510
+      }
+     ],
+     "cues": {
+      "1": 448
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_faster",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step3",
+      "n": 7
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "oldname",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "typename",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "hard",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "save",
+      "n": 11
+     }
+    ],
+    "nums": {
+     "default": {
+      "whole": 71.2,
+      "reading": 1.0,
+      "ready": "0/3"
+     },
+     "short": {
+      "whole": 35.6,
+      "reading": 1.5,
+      "ready": "3/3"
+     },
+     "long": {
+      "whole": 131.8,
+      "reading": 54.5,
+      "ready": "1/3"
+     },
+     "nothink": {
+      "whole": 15.1,
+      "reading": 1.5,
+      "ready": "0/3"
+     },
+     "all3": {
+      "whole": 5.0,
+      "reading": 1.6,
+      "ready": "3/3"
+     }
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "New chat · save this",
+     "title": "New chat · save this",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 777,
+   "frames": 667,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_07.wav",
+     "from": 9,
+     "frames": 158,
+     "words": [
+      {
+       "w": "Three:",
+       "from": 14,
+       "to": 31
+      },
+      {
+       "w": "new",
+       "from": 31,
+       "to": 36
+      },
+      {
+       "w": "topic,",
+       "from": 36,
+       "to": 52
+      },
+      {
+       "w": "new",
+       "from": 52,
+       "to": 57
+      },
+      {
+       "w": "chat.",
+       "from": 57,
+       "to": 76
+      },
+      {
+       "w": "In",
+       "from": 76,
+       "to": 79
+      },
+      {
+       "w": "a",
+       "from": 79,
+       "to": 82
+      },
+      {
+       "w": "month-long",
+       "from": 82,
+       "to": 95
+      },
+      {
+       "w": "chat,",
+       "from": 95,
+       "to": 112
+      },
+      {
+       "w": "the",
+       "from": 112,
+       "to": 116
+      },
+      {
+       "w": "same",
+       "from": 116,
+       "to": 123
+      },
+      {
+       "w": "job",
+       "from": 123,
+       "to": 127
+      },
+      {
+       "w": "took",
+       "from": 127,
+       "to": 140
+      },
+      {
+       "w": "over",
+       "from": 140,
+       "to": 146
+      },
+      {
+       "w": "2",
+       "from": 146,
+       "to": 148
+      },
+      {
+       "w": "minutes.",
+       "from": 148,
+       "to": 159
+      }
+     ],
+     "cues": {
+      "1": 75
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto02v1/line_08.wav",
+     "from": 184,
+     "frames": 65,
+     "words": [
+      {
+       "w": "But",
+       "from": 190,
+       "to": 194
+      },
+      {
+       "w": "the",
+       "from": 194,
+       "to": 198
+      },
+      {
+       "w": "old",
+       "from": 198,
+       "to": 202
+      },
+      {
+       "w": "chat",
+       "from": 202,
+       "to": 207
+      },
+      {
+       "w": "knew",
+       "from": 207,
+       "to": 212
+      },
+      {
+       "w": "my",
+       "from": 212,
+       "to": 216
+      },
+      {
+       "w": "shop's",
+       "from": 216,
+       "to": 228
+      },
+      {
+       "w": "name!",
+       "from": 228,
+       "to": 234
+      }
+     ],
+     "cues": {
+      "1": 207
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_09.wav",
+     "from": 254,
+     "frames": 106,
+     "words": [
+      {
+       "w": "So",
+       "from": 259,
+       "to": 263
+      },
+      {
+       "w": "type",
+       "from": 263,
+       "to": 268
+      },
+      {
+       "w": "it",
+       "from": 268,
+       "to": 272
+      },
+      {
+       "w": "in",
+       "from": 272,
+       "to": 279
+      },
+      {
+       "w": "the",
+       "from": 279,
+       "to": 283
+      },
+      {
+       "w": "new",
+       "from": 283,
+       "to": 288
+      },
+      {
+       "w": "chat.",
+       "from": 288,
+       "to": 294
+      },
+      {
+       "w": "One",
+       "from": 294,
+       "to": 310
+      },
+      {
+       "w": "line",
+       "from": 310,
+       "to": 315
+      },
+      {
+       "w": "beats",
+       "from": 315,
+       "to": 322
+      },
+      {
+       "w": "a",
+       "from": 322,
+       "to": 324
+      },
+      {
+       "w": "month",
+       "from": 324,
+       "to": 335
+      },
+      {
+       "w": "of",
+       "from": 335,
+       "to": 338
+      },
+      {
+       "w": "chat.",
+       "from": 338,
+       "to": 353
+      }
+     ],
+     "cues": {
+      "1": 294
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto02v1/line_10.wav",
+     "from": 372,
+     "frames": 139,
+     "words": [
+      {
+       "w": "Thinking",
+       "from": 376,
+       "to": 384
+      },
+      {
+       "w": "is",
+       "from": 384,
+       "to": 387
+      },
+      {
+       "w": "for",
+       "from": 387,
+       "to": 391
+      },
+      {
+       "w": "hard",
+       "from": 391,
+       "to": 399
+      },
+      {
+       "w": "problems,",
+       "from": 399,
+       "to": 413
+      },
+      {
+       "w": "like",
+       "from": 413,
+       "to": 426
+      },
+      {
+       "w": "maths.",
+       "from": 426,
+       "to": 433
+      },
+      {
+       "w": "For",
+       "from": 433,
+       "to": 451
+      },
+      {
+       "w": "a",
+       "from": 451,
+       "to": 453
+      },
+      {
+       "w": "WhatsApp",
+       "from": 453,
+       "to": 465
+      },
+      {
+       "w": "message,",
+       "from": 465,
+       "to": 474
+      },
+      {
+       "w": "fast",
+       "from": 474,
+       "to": 489
+      },
+      {
+       "w": "is",
+       "from": 489,
+       "to": 497
+      },
+      {
+       "w": "enough.",
+       "from": 497,
+       "to": 505
+      }
+     ],
+     "cues": {
+      "1": 433
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto02v1/line_11.wav",
+     "from": 526,
+     "frames": 58,
+     "words": [
+      {
+       "w": "Chintu!",
+       "from": 529,
+       "to": 536
+      },
+      {
+       "w": "Save",
+       "from": 536,
+       "to": 562
+      },
+      {
+       "w": "this!",
+       "from": 562,
+       "to": 568
+      }
+     ],
+     "cues": {
+      "1": 536
+     }
+    }
+   ]
+  }
+ ]
+}
