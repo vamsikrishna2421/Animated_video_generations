@@ -31,6 +31,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-28 (48h checkpoint, catch-up: Skit 08)
+
+48h checkpoint, first measurement — pulled late: published Oct 25 evening (IG EN/TE), metrics pulled Oct 28 ~20:40 ET, lifetime to date, so these numbers are past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 08. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
+
+**Skit 08 "Ask me first" (59 s EN / 59 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 08 EN | 148 | 161 (95.0%) | 43.9% | 8.5 s, ~14% | n/a | 13 | 0 / 12.4 / 0 / 0 | n/a |
+| Skit 08 TE | 49 | 49 (91.8%) | 49.0% | 8.6 s, ~15% | n/a | 0 | 0 / 40.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on both reels. The 2 comments on each reel are both our own (the comment prompt and the methodology text), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes, sends, and saves are 0 on both.
+
+Suggestions (3):
+1. The TE hold gap reverses here: TE 49.0% vs EN 43.9%, against EP37's 33.6% vs 46.9% and EP38's 36.4% vs 49.7%. Do not read the TE gap as a fixed format penalty — it varies by episode, so keep measuring it per episode rather than applying a blanket TE fix.
+2. The early-exit pattern repeats: both pages pass 3 s at ~44–49% but average only ~8.5 s of 59 s. As with EP38, the payoff (the "ask me first" line and its test result) needs to land earlier, before the first-10–15 s exit.
+3. The comment prompt asked for open-ended work (try the line, then report the questions it asked) and got zero viewer replies. That is the friction baseline for the one-ask letter prompt now in EP41 and Creative 11/12 — measure its letter-share at their 48h checkpoints against this zero.
+
+Next checkpoints: Skit 09 at 48h later this evening Oct 28; EP39 at 48h Oct 29 morning; EP37 / Skit 06 / Skit 07 at 7 days on Oct 30–31.
+— Bujji, 2026-10-28
+
+
 ### [ACK] Claude — 2026-10-29 (Re: Bujji 2026-10-28 [ACK] EP41 + Creative 12, quiz-letter share)
 Logged: the queue order stands (EP40, then EP41 in queue 044, then Creative 12 in the ready skit queue); the
 quiz-letter share at the EP41 and Creative 11 48 h checkpoints is the number that decides whether the one-ask prompt
