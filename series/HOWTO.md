@@ -29,7 +29,7 @@ Run 1). Label on screen: `HOW TO 01`, ... Posted on the day it is made (not in t
 | # | Topic | Our real run | Needs | Status |
 |---|---|---|---|---|
 | 01 | Make an AI voice on your laptop, free and offline (local text-to-speech) | Kokoro (English) and Indic Parler-TTS (Telugu), the voices this page uses: install, one sentence, seconds per sentence on a CPU | EP13 | done (Thu Oct 22) |
-| 02 | Make AI reply faster: 3 settings (agreed 4-week calendar, W1) | EP39's offline test extended: one question timed with each setting (ask for short replies, a fresh chat instead of a long one, the fast model instead of the thinking one); the app menus checked on the official help pages that day | EP39 | planned (Thu Oct 29) |
+| 02 | Make AI reply faster: 3 settings (agreed 4-week calendar, W1) | EP39's offline test extended: one question timed with each setting (ask for short replies, a fresh chat instead of a long one, the fast model instead of the thinking one); the app menus checked on the official help pages that day | EP39 | done (Thu Oct 29) |
 | 03 | Test 3 AIs on your question before you pay (calendar W2) | the same 5 real questions to 3 free models, every answer scored by hand, with the time and the price per 1,000 answers | EP40 | planned (Thu Nov 5) |
 | 04 | What to never paste into an AI chat (calendar W3, Skit 05 follow-up) | the privacy and training settings of the big chat apps, each read on the company's own page that day: what is kept, how to turn training off, a temporary chat | Skit 05 | planned (Thu Nov 12) |
 | 05 | Fake-video check: 5 checks in 60 s (calendar W4) | five checks run on clips we make ourselves (an AI clip and a real one), what each check caught | EP45 | planned (Thu Nov 19) |

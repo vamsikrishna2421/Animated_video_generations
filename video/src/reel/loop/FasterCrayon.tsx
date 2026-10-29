@@ -195,12 +195,12 @@ const StFaster: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, end = l.from + l.frames, k = (key: string) => `${key}${i}`;
     const prev = i > 0 ? beats[i - 1].shot : "";
-    if (b.shot === "app" && prev !== "app" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.22} />);
+    if (b.shot === "app" && prev !== "app" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - (te ? 16 : 10)} src="audio/sfx_whoosh.wav" vol={0.22} />);   // Telugu: done before the first word ("ఒకటి", "కొత్త" smeared at -10)
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={1} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("c")} at={1} src="audio/sfx_pop.wav" vol={0.5} />);
     if (b.prop === "step1" || b.prop === "step3") sfx.push(<Sfx key={k("n")} at={end + 1} src="audio/sfx_snap.wav" vol={0.35} />);   // after the number, off the words
     if (b.prop === "step3") { const c3 = cueAt(l, 3, /^$/, at + Math.round(l.frames * 0.85)); sfx.push(<Sfx key={k("h")} at={c3 - 9} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.5} />); }   // in the beat before the number, after the drop
     if (b.prop === "step2") sfx.push(<Sfx key={k("s")} at={end + 1} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "typename") sfx.push(<Sfx key={k("p")} at={Math.max(0, at - 4)} src="audio/sfx_pop.wav" vol={0.3} />);
+    if (b.prop === "typename" && !te) sfx.push(<Sfx key={k("p")} at={Math.max(0, at - 4)} src="audio/sfx_pop.wav" vol={0.3} />);   // Telugu: on "కొత్త" it glitched the word
     if (b.prop === "save") sfx.push(<Sfx key={k("r")} at={at - 37} src="reel/sfx_riser.wav" vol={0.45} />,   // the 1.2 s riser ends before "Chintu" (at - 30 masked it) <Sfx key={k("h")} at={end + 2} src="reel/sfx_boom.wav" vol={0.7} />,
       <Sfx key={k("n")} at={end + 2} src="audio/sfx_snap.wav" vol={0.5} />);
   });
