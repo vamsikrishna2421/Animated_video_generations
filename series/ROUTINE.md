@@ -78,7 +78,8 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044); next EP42 "Bias & fairness", queue 045, Season 5; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing). The skit replaces the old
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044); next EP42 "Bias & fairness", queue 045, Season 5; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
+   recognises with the numbers in it, as Skit 09's "homework 10/10 vs class test 2/20", which reached 4,527 at a 73% hold). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
 2. Facts from the company's own page or 2+ reputable outlets; vendor benchmarks attributed. Where possible run a
