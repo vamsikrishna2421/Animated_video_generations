@@ -28,8 +28,8 @@ L = [
     ("ravi", "ravi", "thinking", "All that thinking, [1] just for \"shop closed\"?!",
      "\"షాప్ బంద్\" కి [1] అంత ఆలోచనా?!", "All that thinking, for \"shop closed\"?!"),
     ("ai", "app", "step2", "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
-     "రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి: | [1] కీప్ ఇట్ టు టూ షార్ట్ లైన్స్. పదిహేను సెకన్లు, ఐదు అయ్యాయి.",
-     "Second setting: a short reply. Type this: <pause 0.25> \"Keep it to 2 short lines.\" 15 seconds became 5."),
+     "రెండో సెట్టింగ్: చిన్న రిప్లై. | [1] తెర మీద ఉన్న లైన్ రాయండి. పదిహేను సెకన్లు, ఐదు అయ్యాయి.",
+     "Second setting: a short reply. <pause 0.25> Type the line on the screen. 15 seconds became 5."),   # the English line in Telugu script came out as babble; the screen shows it
     ("ai", "app", "step3", "Three: new topic, new chat. [1] In a month-long chat, the same job took over two minutes.",
      "మూడోది: కొత్త విషయానికి కొత్త చాట్. | [1] నెల రోజుల చాట్ లో, అదే పనికి రెండు నిమిషాలు పైనే పట్టింది.",
      "Third: a new topic, a new chat. <pause 0.25> In a month-long chat, the same job took over 2 minutes."),
@@ -57,7 +57,7 @@ MUST_EN = {"hook": [("seventy", "71"), ("seconds", "second"), ("whatsapp",), ("m
            "hard": [("thinking",), ("hard",), ("maths", "math"), ("whatsapp",), ("fast",)], "save": [("chintu", "chintoo"), ("save",)]}
 MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("मार्प", "मार्पु", "मारपु", "मार्फ"), ("आइदु", "आईदू", "आएदू", "ऐदु", "5")], "step1": [("थिं", "थीं", "थिन", "तिं", "टिं")],
            "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")],
-           "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "reply")], "step22": [("शॉर्ट", "शार्ट", "शोर्ट", "short"), ("पदि", "15")],
+           "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "रिफल", "reply")], "step22": [("तेर", "तेरा", "तैर"), ("पदि", "15")],
            "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला"), ("निमि", "निमिष")], "oldname": [("पेरु", "पेरू", "पेर")],
            "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन", "तिं", "टिं")], "hard2": [("फास्ट", "फ़ास्ट", "fast")],
            "save": [("चिं", "चिन", "चीं"), ("सेव", "सेफ", "सेब", "save")]}
