@@ -24,7 +24,7 @@ L = [
      "మొదటిది: థింకింగ్ తగ్గించండి. | [1] టైం: డెబ్బై ఒక్క సెకన్ల నుంచి పదిహేను సెకన్లకి.",
      "One: less thinking. <pause 0.25> Time: from 71 seconds to 15."),   # the first setting's number by ~10 s (Bujji); the menus next
     ("ai", "app", "step1m", "Instant on ChatGPT, Flash on Gemini, [1] low effort on Claude.",
-     "చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో ఎఫ్ఫర్ట్ తక్కువ.", "Instant on ChatGPT, Flash on Gemini, low effort on Claude."),   # "తక్కువ ఎఫర్ట్" was heard "takva apt" in four takes
+     "చాట్ జీపీటీ లో ఇన్స్టంట్, జెమిని లో ఫ్లాష్, [1] క్లాడ్ లో తక్కువ ఆలోచన.", "Instant on ChatGPT, Flash on Gemini, on Claude Effort: Low."),   # the voice can't say "ఎఫర్ట్" (8 takes: "apt", "apwart"): it says "less thinking", the screen and caption name the tap
     ("ravi", "ravi", "thinking", "All that thinking, [1] just for \"shop closed\"?!",
      "\"షాప్ బంద్\" కి [1] అంత ఆలోచనా?!", "All that thinking, for \"shop closed\"?!"),
     ("ai", "app", "step2", "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
@@ -56,7 +56,7 @@ MUST_EN = {"hook": [("seventy", "71"), ("seconds", "second"), ("whatsapp",), ("m
            "oldname": [("old",), ("chat",), ("shop", "shops"), ("name",)], "typename": [("type",), ("new",), ("line",), ("month",)],
            "hard": [("thinking",), ("hard",), ("maths", "math"), ("whatsapp",), ("fast",)], "save": [("chintu", "chintoo"), ("save",)]}
 MUST_TE = {"hook": [("सेक", "सैक", "सकन")], "three": [("मार्प", "मार्पु", "मारपु", "मार्फ"), ("आइदु", "आईदू", "आएदू", "ऐदु", "5")], "step1": [("थिं", "थीं", "थिन", "तिं", "टिं")],
-           "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("एफ", "effort")],
+           "step12": [("पदि", "15")], "step1m": [("इन्स", "इंस", "instant"), ("फ्ला", "फ्लै", "flash"), ("लोच", "लोचन", "आलो")],
            "thinking": [("बंद", "बन्द", "बांद")], "step2": [("रिप्ल", "रिप्लै", "रिफल", "reply")], "step22": [("तेर", "तेरा", "तैर"), ("पदि", "15")],
            "step3": [("चाट", "चैट", "chat")], "step32": [("नेल", "नेला", "नल"), ("निमि", "निमिष", "निशा")], "oldname": [("पेरु", "पेरू", "पेर")],
            "typename": [("पेरु", "पेरू", "पेर")], "hard": [("थिं", "थीं", "थिन", "तिं", "टिं")], "hard2": [("फास्ट", "फ़ास्ट", "फास", "fast"), ("मोड", "मोड़", "मूड", "mode")],
