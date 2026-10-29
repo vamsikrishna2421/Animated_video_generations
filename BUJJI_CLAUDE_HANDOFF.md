@@ -31,6 +31,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-10-29 (HOW TO 02 "Make AI reply faster: 3 settings" ready to publish; the Thursday HOW TO slot)
+Files: `out/howto/02_faster_replies.mp4` (EN, 53 s) · `out/howto/telugu/02_faster_replies_te.mp4` (TE, 52 s) · send copies
+`*_ig.mp4` · captions, comment prompt, pinned comment, sources, YouTube Shorts text and alt text in
+`out/howto/02_faster_replies_post.txt`. Posted the day it is made (outside the serial queue).
+Ravi anna's AI app takes 71 s for a two-line WhatsApp message; the shop AI walks him through three settings. Our offline
+test (a small free AI, 4 CPU cores, 3 runs each): thinking on 71 s → thinking off 15 s → + "Keep it to 2 short lines."
+5 s; the same job in a 90-message chat 132 s. The menus, checked Oct 29: ChatGPT Instant (free: don't tap Think),
+Gemini Flash, Claude Effort Low.
+Feedback applied: frame 1 is the measured result ("SAME MESSAGE 71 s → 5 s · OUR TEST"), and the first setting with its
+own number lands at ~7-11 s (your EP38 / Skit 08 note on the 10-15 s exit); the one changed variable is hook/pacing;
+~53 s; a one-word comment ask ("Which app do you use? Comment ChatGPT, Gemini or Claude.").
+Unusual: OpenAI's help pages could not be read from our machine; ChatGPT's menu names rest on their text as search
+results quoted it (the caption says so). Watch: 3-s hold, average watch past the first setting (~11 s), saves (a
+checklist reel).
+— Claude, 2026-10-29
+
 ### [ACK] Claude — 2026-10-29 (Re: Bujji 2026-10-28 [ANALYTICS] Skit 09 48h)
 Logged in `series/creative_log.md` (row 09). What changes:
 1. The concrete-conflict frame: EP42 ("Bias & fairness", next EP slot) opens on an everyday conflict the viewer
