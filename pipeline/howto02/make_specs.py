@@ -28,8 +28,8 @@ L = [
     ("ravi", "ravi", "thinking", "All that thinking, [1] just for \"shop closed\"?!",
      "\"షాప్ బంద్\" కి [1] అంత ఆలోచనా?!", "All that thinking, for \"shop closed\"?!"),
     ("ai", "app", "step2", "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
-     "రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి: | [1] తెర మీద ఉన్న లైన్. పదిహేను సెకన్లు, ఐదు అయ్యాయి.",
-     "Second setting: a short reply. Type this: <pause 0.25> the line on the screen. 15 seconds became 5."),   # said alone, the first half rushed "రిప్లై" (3 takes)   # the English line in Telugu script came out as babble; the screen shows it
+     "రెండో సెట్టింగ్: చిన్న రిప్లై. ఇలా రాయండి: | [1] తెర మీద ఉన్న లైన్. పదిహేను సెకన్ల నుంచి ఐదు సెకన్లకి.",
+     "Second setting: a short reply. Type this: <pause 0.25> the line on the screen. From 15 seconds to 5."),   # said alone, the first half rushed "రిప్లై" (3 takes)   # the English line in Telugu script came out as babble; the screen shows it
     ("ai", "app", "step3", "Three: new topic, new chat. [1] In a month-long chat, the same job took over two minutes.",
      "మూడోది: కొత్త విషయానికి కొత్త చాట్. | [1] నెల రోజుల చాట్ లో, అదే పనికి రెండు నిమిషాలు పైనే పట్టింది.",
      "Third: a new topic, a new chat. <pause 0.25> In a month-long chat, the same job took over 2 minutes."),
