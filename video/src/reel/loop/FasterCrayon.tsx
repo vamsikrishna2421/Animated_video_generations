@@ -31,6 +31,7 @@ const JOB = "Write a WhatsApp message for my shop's customers: the shop is close
 // our run's real replies (results.json): all three settings, seed 1; the long chat's, seed 1
 const FAST_REPLY = "We're closed this Sunday for a family event and will reopen Monday at 7 am. Thank you for your understanding!";
 const sec = (x: number) => `${Math.round(x)} s`;
+const HI = "Keep it to 2 short lines.";
 
 // ---------- pieces ----------
 // soft-wrapped text lines inside a width (canvas measure)
@@ -79,7 +80,7 @@ const appPhone = (c: Ctx, x: number, y: number, s: number, f: number, o: { mode:
   c.restore();
 };
 // a big chat panel: what he types (and the reply), large enough to read without pausing
-const chatPanel = (c: Ctx, W: number, y: number, typed: string, kept: number, f: number, reply?: string, newChat?: boolean) => {
+const chatPanel = (c: Ctx, W: number, y: number, typed: string, kept: number, f: number, reply?: string, newChat?: boolean, hi = "", hk = 0) => {
   c.fillStyle = "#f8fafc"; rrect(c, 70, y, W - 140, reply ? 700 : 520, 30); c.fill();
   if (newChat) { c.fillStyle = "#e2e8f0"; rrect(c, 110, y + 36, 360, 76, 38); c.fill(); c.font = SANS(40, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("＋ New chat", 290, y + 88); }
   c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("you type:", 110, y + (newChat ? 170 : 70));
@@ -87,7 +88,14 @@ const chatPanel = (c: Ctx, W: number, y: number, typed: string, kept: number, f:
   c.font = SANS(54, 800); const rows = wrapW(c, shown + (kept < 1 && Math.floor(f / 8) % 2 ? "▍" : ""), W - 260);
   const ty = y + (newChat ? 190 : 90);
   c.fillStyle = "#dcf8c6"; rrect(c, 100, ty, W - 200, rows.length * 68 + 40, 24); c.fill();
-  c.fillStyle = INK; rows.forEach((r, i) => c.fillText(r, 130, ty + 64 + i * 68));
+  c.fillStyle = INK; rows.forEach((r, i) => {
+    const j = hi ? r.indexOf(hi.split(" ")[0]) : -1;   // the words to type, lit on their own (render review: "which line?")
+    if (hk > 0 && j >= 0 && kept >= 1) {
+      const x0 = 130 + c.measureText(r.slice(0, j)).width;
+      c.save(); c.globalAlpha = clamp(hk * 2); c.fillStyle = "#facc15"; rrect(c, x0 - 10, ty + 64 + i * 68 - 50, c.measureText(r.slice(j)).width + 20, 66, 12); c.fill(); c.restore();
+    }
+    c.fillStyle = INK; c.fillText(r, 130, ty + 64 + i * 68);
+  });
   if (reply) {
     const ry = ty + rows.length * 68 + 80;
     c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.fillText("the AI's reply (our test):", 110, ry);
@@ -138,7 +146,7 @@ const appRow = (c: Ctx, W: number, y: number, app: string, tap: string, small: s
   c.fillStyle = "#fffdf5"; rrect(c, 80, y, W - 160, small ? 190 : 150, 26); c.fill();
   c.font = SANS(56, 900); c.fillStyle = INK; c.textAlign = "left"; c.fillText(app, 120, y + 92);
   c.font = SANS(56, 900); c.fillStyle = col; c.textAlign = "right"; c.fillText(`→ ${tap}`, W - 120, y + 92);
-  if (small) { c.font = SANS(34, 600); c.fillStyle = "#475569"; c.textAlign = "right"; c.fillText(small, W - 120, y + 150); }
+  if (small) { c.font = SANS(44, 700); c.fillStyle = "#b91c1c"; c.textAlign = "right"; c.fillText(small, W - 120, y + 156); }
   c.restore();
 };
 // the save card: the three settings as a checklist
@@ -151,7 +159,7 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number, n: Record
   c.font = SANS(84); c.fillStyle = COL.red; c.textAlign = "center"; c.fillText("SAVE THIS ✓", 0, -490);
   c.font = SANS(36, 600); c.fillStyle = "#475569"; c.fillText("3 settings for a faster AI reply", 0, -428);
   const rows: [string, string, string][] = [
-    ["1", "Less thinking", "ChatGPT: Instant (free: don't tap Think) · Gemini: Flash · Claude: Effort Low"],
+    ["1", "Instant · Flash · Effort Low", "ChatGPT · Gemini · Claude (free ChatGPT: don't tap Think)"],
     ["2", "\"Keep it to 2 short lines.\"", "type it with your question"],
     ["3", "New topic → New chat", "and type the one detail it needs"],
   ];
@@ -161,8 +169,8 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number, n: Record
     c.save(); c.globalAlpha = q;
     c.fillStyle = "#0f172a"; rrect(c, -460, y, 920, 210, 22); c.fill();
     c.font = SANS(64, 900); c.fillStyle = "#4ade80"; c.textAlign = "left"; c.fillText(num, -430, y + 86);
-    c.font = SANS(52); c.fillStyle = "#f8fafc"; c.fillText(head, -370, y + 84);
-    c.font = SANS(30, 600); c.fillStyle = "#93c5fd";
+    c.font = SANS(54); c.fillStyle = "#f8fafc"; c.fillText(head, -370, y + 84);
+    c.font = SANS(32, 600); c.fillStyle = "#93c5fd";
     wrapW(c, note, 800).forEach((t, j) => c.fillText(t, -370, y + 134 + j * 38));
     c.restore();
   });
@@ -179,6 +187,7 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number, n: Record
 const StFaster: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
   const n: Record<string, Num> = s.data.nums;
+  const te = s.data.handle === "@ai_maastaaru_telugu";
   const ls = s.lines;
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
   const sfx: React.ReactNode[] = [];
@@ -189,9 +198,10 @@ const StFaster: React.FC<SP> = ({ s }) => {
     if (b.shot === "app" && prev !== "app" && b.prop !== "hook") sfx.push(<Sfx key={k("w")} at={at - 10} src="audio/sfx_whoosh.wav" vol={0.22} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={1} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("c")} at={1} src="audio/sfx_pop.wav" vol={0.5} />);
     if (b.prop === "step1" || b.prop === "step3") sfx.push(<Sfx key={k("n")} at={end + 1} src="audio/sfx_snap.wav" vol={0.35} />);   // after the number, off the words
+    if (b.prop === "step3") { const c3 = cueAt(l, 3, /^$/, at + Math.round(l.frames * 0.85)); sfx.push(<Sfx key={k("h")} at={c3 - 9} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.5} />); }   // in the beat before the number, after the drop
     if (b.prop === "step2") sfx.push(<Sfx key={k("s")} at={end + 1} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "typename") sfx.push(<Sfx key={k("p")} at={Math.max(0, at - 4)} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "save") sfx.push(<Sfx key={k("r")} at={at - 30} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={end + 2} src="reel/sfx_boom.wav" vol={0.7} />,
+    if (b.prop === "save") sfx.push(<Sfx key={k("r")} at={at - 37} src="reel/sfx_riser.wav" vol={0.45} />,   // the 1.2 s riser ends before "Chintu" (at - 30 masked it) <Sfx key={k("h")} at={end + 2} src="reel/sfx_boom.wav" vol={0.7} />,
       <Sfx key={k("n")} at={end + 2} src="audio/sfx_snap.wav" vol={0.5} />);
   });
   return (
@@ -222,18 +232,19 @@ const StFaster: React.FC<SP> = ({ s }) => {
             appRow(c, W, 700, "Gemini", "Flash", "", GREEN, seg(p, 0.35, 0.45));
             const c1 = cu(1, 0.75);
             appRow(c, W, 900, "Claude", "Effort: Low", "", GREEN, seg(f, c1 - 4, c1 + 4));
-            c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("in the model menu · names checked Oct 29, 2026", W / 2, 1160);
+            c.font = SANS(42, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("in the model menu · checked Oct 29, 2026", W / 2, 1170);
           }
           if (b.prop === "step1") {
             stepHead(c, W, 1, "LESS THINKING", 1);
             const c1 = cu(1, 0.5);
-            bars(c, W, 560, [["thinking on", n.default.whole, RED], ["less thinking", n.nothink.whole, GREEN]], [seg(p, 0.02, 0.3), seg(f, c1 - 2, c1 + 10)], n.default.whole);
+            bars(c, W, 560, [["thinking on", n.default.whole, RED], ["thinking off (our test)", n.nothink.whole, GREEN]], [seg(p, 0.02, 0.3), seg(f, c1 - 2, c1 + 10)], n.default.whole);
             c.font = SANS(36, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the whole reply · our test, the same message", W / 2, 1060);
           }
           if (b.prop === "step2") {
             stepHead(c, W, 2, "SHORT REPLY", 1);
             const c1 = cu(1, 0.6);
-            chatPanel(c, W, 400, "...open again on Monday at 7 am. Keep it to 2 short lines.", seg(p, 0.1, 0.4), f, f >= c1 ? FAST_REPLY : undefined);
+            const hk = te ? seg(f, c1 - 4, c1 + 4) : seg(p, 0.28, 0.36);   // lit when the voice names it ("the line on the screen" in Telugu)
+            chatPanel(c, W, 400, "...open again on Monday at 7 am. Keep it to 2 short lines.", seg(p, 0.1, 0.4), f, f >= (te ? cu(1, 0.6) + 30 : c1) ? FAST_REPLY : undefined, false, HI, hk);
             bars(c, W, 1190, [["long reply", n.nothink.whole, "#94a3b8"], ["short reply", n.all3.whole, GREEN]], [seg(f, c1 - 4, c1 + 4), seg(f, c1, c1 + 10)], n.default.whole);
             tag(c, `all ${n.all3.ready.split("/")[0]} ready to paste`, W - 250, 1000, 50, "#dcfce7", "#166534", -0.03, seg(f, c1 + 8, c1 + 14));   // captions sit from y 1500
           }
@@ -241,11 +252,11 @@ const StFaster: React.FC<SP> = ({ s }) => {
             stepHead(c, W, 3, "NEW CHAT", 1);
             c.fillStyle = "#fffdf5"; rrect(c, W / 2 - 240, 440, 480, 120, 60); c.fill();
             c.font = SANS(56, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("＋ New chat", W / 2, 520);
-            const c1 = cu(1, 0.5);
-            bars(c, W, 760, [["fresh chat", n.default.whole, GREEN], ["month-long chat (90 messages)", n.long.whole, RED]], [seg(f, c1 - 4, c1 + 4), seg(f, c1, c1 + 12)], n.long.whole);
-            c.font = SANS(34, 600); c.fillStyle = "#cbd5e1"; c.textAlign = "center";
-            c.fillText("the same job, thinking on · our test", W / 2, 1230);
-            c.fillText("apps keep long chats faster, but they eat your limit", W / 2, 1290);
+            const c1 = cu(1, 0.5), c3 = cu(3, 0.85);
+            tag(c, "BOTH WITH THINKING ON", W / 2, 660, 60, "#ede9fe", "#4c1d95", -0.02, seg(f, c1 - 6, c1 + 2));   // render review: 71 came back unexplained
+            bars(c, W, 820, [["fresh chat", n.default.whole, GREEN], ["month-long chat (90 messages)", n.long.whole, RED]], [seg(f, c1 - 4, c1 + 4), seg(f, c3 - 10, c3 - 2)], n.long.whole);
+            c.font = SANS(40, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center";
+            c.fillText("apps keep long chats faster,", W / 2, 1290); c.fillText("but long chats eat your limit", W / 2, 1345);
           }
           if (b.prop === "typename") {
             stepHead(c, W, 3, "NEW CHAT", 1);
@@ -272,17 +283,17 @@ const StFaster: React.FC<SP> = ({ s }) => {
           if (b.prop === "thinking") bubble(c, 330, 560, "For \"shop closed\"?!", 80, seg(p, 0.05, 0.2), "#fee2e2", "#991b1b");
           if (b.prop === "oldname") {
             bubble(c, 330, 560, "It knew my shop!", 84, seg(p, 0.05, 0.2), COL.yellow);
-            c.save(); c.globalAlpha = seg(p, 0.3, 0.45); c.translate(760, 330); c.rotate(0.03);
-            c.fillStyle = "#e0e7ff"; rrect(c, -250, -70, 500, 150, 22); c.fill();
-            c.font = SANS(30, 600); c.fillStyle = INK; c.textAlign = "left";
-            c.fillText("...open again on Monday at 7 am.", -226, -16); c.font = SANS(32, 900); c.fillText("Ravi Kirana Team", -226, 40);
+            c.save(); c.globalAlpha = seg(p, 0.2, 0.35); c.translate(720, 1250); c.rotate(0.02);   // on the counter, big: the signature is the joke
+            c.fillStyle = "#e0e7ff"; rrect(c, -330, -110, 660, 230, 26); c.fill();
+            c.font = SANS(36, 600); c.fillStyle = "#475569"; c.textAlign = "left"; c.fillText("the old chat's reply:", -300, -54);
+            c.font = SANS(40, 600); c.fillStyle = INK; c.fillText("...open again on Monday at 7 am.", -300, 4);
+            c.font = SANS(56, 900); c.fillStyle = "#1d4ed8"; c.fillText("Ravi Kirana Team", -300, 80);
             c.restore();
-            tag(c, "the old chat's reply", 760, 470, 40, "#fff", "#334155", -0.02, seg(p, 0.35, 0.5));
           }
           if (b.prop === "hard") {
             const c1 = cu(1, 0.5);
-            tag(c, "THINKING: hard sums, planning", W / 2, 420, 62, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.05, 0.18));
-            tag(c, "FAST: messages, replies", W / 2, 560, 62, "#dcfce7", "#166534", 0.02, seg(f, c1 - 4, c1 + 6));
+            tag(c, "THINKING: hard sums, planning", W / 2, 1180, 62, "#ede9fe", "#4c1d95", -0.02, seg(p, 0.05, 0.18));   // on the counter, off the price board
+            tag(c, "FAST: messages, replies", W / 2, 1320, 62, "#dcfce7", "#166534", 0.02, seg(f, c1 - 4, c1 + 6));
           }
           if (b.prop === "save") saveCard(c, W, seg(f, endL - 4, endL + 4), endL - 4, f, n);
         }

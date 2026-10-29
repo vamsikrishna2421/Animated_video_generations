@@ -13,7 +13,7 @@
   0.9
  ],
  "musicFade": 0.05,
- "endPad": 2.6,
+ "endPad": 4.0,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -35,6 +35,10 @@
  "hideTimer": true,
  "tempo": 1.15,
  "captionTop": 1500,
+ "musicEndRamp": [
+  0.9,
+  5.0
+ ],
  "scenes": [
   {
    "id": "h_a",
@@ -229,7 +233,7 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "One: less thinking. [1] Seventy-one seconds, down to fifteen.",
+     "text": "One: [2] less thinking. [1] Seventy-one seconds, down to fifteen.",
      "show": "One: less thinking. 71 seconds, down to 15.",
      "maxgap": 0.28,
      "gap": 0.5,
@@ -250,6 +254,10 @@
        "15"
       ]
      ],
+     "pauses": {
+      "2": 0.25,
+      "3": 0.3
+     },
      "gain_db": -1.0
     },
     {
@@ -258,7 +266,7 @@
      "text": "Instant on Chat G P T, Flash on Gemini, [1] low effort on Claude.",
      "show": "Instant on ChatGPT, Flash on Gemini, low effort on Claude.",
      "maxgap": 0.28,
-     "gap": 0.7,
+     "gap": 1.5,
      "tempo": 1.16,
      "must": [
       [
@@ -313,7 +321,7 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "Two: ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
+     "text": "Two: [2] ask for a short reply. \"Keep it to two short lines.\" [1] Fifteen seconds, down to five.",
      "show": "Two: ask for a short reply. \"Keep it to 2 short lines.\" 15 seconds, down to 5.",
      "maxgap": 0.28,
      "gap": 0.6,
@@ -338,6 +346,9 @@
        "5"
       ]
      ],
+     "pauses": {
+      "2": 0.25
+     },
      "gain_db": -1.0
     }
    ]
@@ -351,6 +362,12 @@
    "outro": true,
    "boost": 1.42,
    "rise": 1.26,
+   "drop_at": [
+    [
+     0,
+     3
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -422,7 +439,7 @@
     {
      "who": "ai",
      "file": "07_ai.wav",
-     "text": "Three: new topic, new chat. [1] In a month-long chat, the same job took over two minutes.",
+     "text": "Three: [2] new topic, new chat. [1] In a month-long chat, the same job took [3] over two minutes.",
      "show": "Three: new topic, new chat. In a month-long chat, the same job took over 2 minutes.",
      "maxgap": 0.28,
      "gap": 0.55,
@@ -447,6 +464,10 @@
        "minute"
       ]
      ],
+     "pauses": {
+      "2": 0.25,
+      "3": 0.35
+     },
      "gain_db": -1.0
     },
     {
@@ -455,7 +476,7 @@
      "text": "But the old chat [1] knew my shop's name!",
      "show": "But the old chat knew my shop's name!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.4,
      "tempo": 1.2,
      "must": [
       [
@@ -504,7 +525,7 @@
      "text": "Thinking is for hard problems, like maths. [1] For a WhatsApp message, fast is enough.",
      "show": "Thinking is for hard problems, like maths. For a WhatsApp message, fast is enough.",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 1.0,
      "tempo": 1.16,
      "must": [
       [
