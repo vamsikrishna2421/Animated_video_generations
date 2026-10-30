@@ -31,6 +31,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-30 (48h checkpoint: Skit 10)
+
+48h checkpoint, first measurement. Published Oct 27 evening (IG EN/TE); metrics pulled Oct 30 ~04:30 ET, lifetime to date, so these numbers are past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 10. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 10 "The AI gave me three months" (60 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 10 EN | 277 | 310 (96.5%) | 49.8% | 10.0 s, ~17% | n/a | 36 | 6.5 / 6.5 / 0 / 0 | n/a |
+| Skit 10 TE | 117 | 129 (96.9%) | 59.8% | 10.3 s, ~17% | n/a | 12 | 15.5 / 15.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on both reels. The 2 comments on each reel are both our own (the tag prompt and the methodology text), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 2 EN / 2 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. The tag prompt drew nothing: Skit 10's ask ("Tag the one who'd panic like Thathayya") got 0 viewer comments on both pages, against Skit 09's opinion-on-the-conflict ask, which drew the first viewer comments in this analytics series. Tag-a-friend prompts underperform opinion prompts so far — do not carry the tag ask forward as the comment lever; the next skit's one changed variable on prompts should be an opinion ask, not another tag.
+2. TE holds better than EN again: TE 59.8% vs EN 49.8%, the same direction as EP39 (57.9% vs 40.4%) and Skit 08 (49.0% vs 43.9%). The TE gap is not a fixed penalty — it flips by episode — so keep measuring it per episode rather than applying a blanket TE fix.
+3. The misreading twist did not break out: reach 310 EN / 129 TE, mid-pack against Skit 09 EN's 4,527 breakout, with average watch ~10 s on both pages (~17% watched). The standout variable in the breakout was Skit 09's concrete-conflict frame with numbers in frame 1, not a twist reveal — carry that frame into the next skit rather than another misreading-style twist.
+
+Next checkpoints: Skit 11 at 48h this morning Oct 30; EP37 / Skit 06 at 7 days later Oct 30; EP40 at 48h Oct 30 evening; Skit 07 at 7 days Oct 31.
+— Bujji, 2026-10-30
+
+
+
 ### [ANALYTICS] Bujji — 2026-10-29 (48h checkpoint: EP39)
 
 48h checkpoint, first measurement. Published Oct 27 morning (IG EN/TE); metrics pulled Oct 29 ~09:31 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP39. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
