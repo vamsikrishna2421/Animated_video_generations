@@ -31,6 +31,50 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-30 (7-day checkpoint: Skit 06)
+
+7-day checkpoint, completing Skit 06's measurement cycle. Published Oct 23 morning (IG EN/TE); metrics pulled Oct 30 ~10:02 ET, lifetime to date. No earlier [ANALYTICS] entry covered Skit 06 at 7 days; the 48h checkpoint was 2026-10-26. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 06 "Who's the AI?" (56 s EN / 59 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 06 EN | 228 | 262 (96.2%) | 46.9% | 12.7 s, ~23% | n/a | 38 | 11.5 / 11.5 / 0 / 0 | n/a |
+| Skit 06 TE | 117 | 131 (95.4%) | 47.9% | 7.9 s, ~13% | n/a | 17 | 0 / 15.3 / 7.6 / 0 | n/a |
+
+Top comments, viewer side: still exactly ONE viewer comment after 7 days — "C" on EN (the quiz answer from the 48h entry). TE has 0 viewer comments; its 2 comments are our own (prompt + reveal). The EN comment count of 3 is prompt + reveal + that one viewer answer.
+
+Suggestions (3):
+1. Flat after 48h: EN views 225 → 228 and reach 259 → 262 from the 48h checkpoint, TE unchanged at 117 views / 131 reach. There is effectively no late tail — the 48h number is the final number for this series, so judge episodes at 48h and treat 7-day as confirmation, not a second growth window.
+2. The quiz-letter prompt converts at ~1 viewer comment per episode at best: Skit 06's single "C" in 7 days matches the later pattern (opinion asks drew comments on Skit 09; tag asks drew none on Skit 10/11). Do not revive the letter-guess prompt as the comment lever.
+3. TE hold now matches EN (47.9% vs 46.9%) but TE watch time still trails (7.9 s, ~13% vs 12.7 s, ~23%) — TE viewers who pass 3 s leave earlier. Keep this as a per-episode watch item rather than a blanket TE fix; it varies by episode.
+
+Next checkpoints: EP37 at 7 days this evening Oct 30; EP40 at 48h this evening Oct 30; Skit 07 at 7 days Oct 31.
+— Bujji, 2026-10-30
+
+
+### [ANALYTICS] Bujji — 2026-10-30 (48h checkpoint: Skit 11)
+
+48h checkpoint, first measurement. Published Oct 28 morning (IG EN/TE); metrics pulled Oct 30 ~10:01 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 11. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 11 "The AI confirmed Goa" (55 s EN / 52 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 11 EN | 136 | 143 (95.8%) | 44.9% | 8.9 s, ~16% | n/a | 8 | 0 / 14.0 / 0 / 0 | n/a |
+| Skit 11 TE | 14 | 14 (78.6%) | 7.1% | 7.1 s, ~14% | n/a | 0 | 0 / 142.9 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on both reels. The 2 comments on each reel are both our own (the tag prompt and the Oct 29 quiz-answer reveal), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes, sends and saves are 0 on both.
+
+Suggestions (3):
+1. The tag prompt drew nothing again: Skit 11's ask ("Tag the mavayya in your family group") got 0 viewer comments on both pages, the same result as Skit 10's tag ask. Two tag-prompt episodes, zero viewer comments between them — drop the tag ask as the comment lever; the next skit's one changed variable on prompts should be an opinion ask, as Skit 09's was.
+2. TE collapsed on a tiny base: TE reach 14 vs EN 143, hold 7.1% vs 44.9%. That hold is the lowest in this analytics series, but on 14 reach it is fragile — flag it and keep measuring per episode rather than redesigning the TE cut on this one datapoint.
+3. The summary-check frame did not break out: EN reach 143 and avg watch 8.9 s (~16%) sit mid-pack, well below Skit 09's concrete-conflict breakout (4,527 reach, 19.0 s). The standout variable remains the concrete conflict in frame 1, not a verification-check frame — carry that into the next skit rather than another check-the-summary frame.
+
+Next checkpoints: EP37 at 7 days this evening Oct 30; EP40 at 48h this evening Oct 30; Skit 07 at 7 days Oct 31.
+— Bujji, 2026-10-30
+
+
 ### [ANALYTICS] Bujji — 2026-10-30 (48h checkpoint: Skit 10)
 
 48h checkpoint, first measurement. Published Oct 27 evening (IG EN/TE); metrics pulled Oct 30 ~04:30 ET, lifetime to date, so these numbers are past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 10. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
