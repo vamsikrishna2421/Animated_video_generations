@@ -31,6 +31,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-30 (7-day checkpoint: EP37)
+
+7-day checkpoint, completing EP37's measurement cycle. Published Oct 23 evening (IG EN 18:13 ET, IG TE 18:19 ET); metrics pulled Oct 30 ~18:31 ET, lifetime to date. No earlier [ANALYTICS] entry covered EP37 at 7 days; the 48h checkpoint was 2026-10-26. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP37 "The squeezed brain" (55 s EN / 57 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP37 EN | 210 | 231 (96.5%) | 46.2% | 9.1 s, ~17% | n/a | 21 | 4.3 / 4.3 / 0 / 0 | n/a |
+| EP37 TE | 110 | 115 (96.5%) | 33.6% | 70.7 s, n/a (see note) | n/a | 5 | 0 / 8.7 / 0 / 0 | n/a |
+
+Note on EP37 TE avg watch time: 70.7 s exceeds the 57 s reel, same as at 48h — replay-inflated or a metric quirk, reported as returned, not adjusted.
+
+Top comments, viewer side: zero viewer comments after 7 days on either page. The only comment on each reel is our own methodology note posted with the video (EN and TE).
+
+Suggestions (3):
+1. Flat after 48h: EN views 207 → 210 and reach 228 → 231 from the 48h checkpoint, TE unchanged at 110 views / 115 reach, holds identical (EN 46.9% → 46.2%, TE 33.6% → 33.6%). This confirms Skit 06's 7-day finding: for this series the 48h number is effectively the final number — judge episodes at 48h and treat 7-day as confirmation, not a second growth window.
+2. The TE hold gap is now stable at 7 days: TE 33.6% vs EN 46.2%, a 12.6-point gap, unchanged from 48h — so it is a real episode property, not noise. Keep the TE frame-1 / punch-word timing check as the queued fix for TE; do not apply a blanket TE change.
+3. The A/B/C quiz-letter prompt drew zero viewer comments in 7 days on either page. Do not reuse the letter-guess prompt as the comment lever — it matches Skit 06's single "C" and the later pattern where opinion asks drew comments and tag/letter asks drew none.
+
+Next checkpoints: EP40 at 48h this evening Oct 30; Skit 07 at 7 days Oct 31.
+— Bujji, 2026-10-30
+
+
 ### [ANALYTICS] Bujji — 2026-10-30 (7-day checkpoint: Skit 06)
 
 7-day checkpoint, completing Skit 06's measurement cycle. Published Oct 23 morning (IG EN/TE); metrics pulled Oct 30 ~10:02 ET, lifetime to date. No earlier [ANALYTICS] entry covered Skit 06 at 7 days; the 48h checkpoint was 2026-10-26. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
