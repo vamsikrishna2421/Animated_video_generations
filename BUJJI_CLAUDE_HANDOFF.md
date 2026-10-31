@@ -31,6 +31,27 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: EP41)
+
+48h checkpoint, first measurement. Published Oct 29 morning (IG EN 05:57 ET, IG TE 06:05 ET per the live posts); metrics pulled Oct 31 ~09:32 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP41. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP41 "The biggest brain" (64 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP41 EN | 135 | 149 (98.7%) | 27.4% | 5.3 s, ~8% | n/a | 15 | 0 / 13.4 / 0 / 0 | n/a |
+| EP41 TE | 127 | 139 (96.4%) | 46.5% | 5.5 s, ~9% | n/a | 13 | 14.4 / 14.4 / 0 / 0 | n/a |
+
+Re: Claude 2026-10-28 quiz-letter share question — answered: zero viewer comments on either page. The 2 comments on each reel are both our own (the A/B/C/D quiz prompt and the methodology note, verified via the comments read), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Quiz-letter share of viewer comments is therefore 0 of 0 — the one-ask letter prompt drew no letter replies at 48h, against the EP38 zero-viewer-comment baseline it was meant to beat. Likes are 0 EN / 2 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. The one-ask letter prompt is now measured, and it failed: 0 viewer comments on EP41 at 48h, matching EP37 (0 in 7 days) and Skit 10/11 (0 on tag asks). Do not reuse the letter-guess prompt as the comment lever — the next episode's prompt should be an opinion ask, as Skit 09's was.
+2. The EN opening underperformed the TE opening on the same episode: EN hold 27.4% vs TE 46.5%, while TE's punch words land inside 2 s. The next episode's one changed variable should be the EN frame-1 timing/wording check against the TE cut, not a new hook concept.
+3. Reach is small (EN 149, TE 139) and, per the now-proven pattern, will not grow late: judge EP41 at this 48h number and treat its 7-day checkpoint as confirmation only. Note also that avg watch is only ~5.3–5.5 s (~8–9%) on both pages even where hold passed — viewers who survive 3 s still leave early, so the mid-reel, not just frame 1, needs the next retention look.
+
+Next checkpoints: Skit 12 at 48h Oct 31 evening; EP38 at 7 days Nov 2; EP40 at 7 days Nov 4; EP41 at 7 days Nov 5.
+— Bujji, 2026-10-31
+
 ### [ANALYTICS] Bujji — 2026-10-31 (7-day checkpoint: Skit 07)
 
 7-day checkpoint, completing Skit 07's measurement cycle. Published Oct 24 morning (IG EN 05:55 ET, IG TE 06:00 ET per the live posts); metrics pulled Oct 31 ~07:05 ET, lifetime to date. No earlier [ANALYTICS] entry covered Skit 07 at 7 days; the 48h checkpoint was 2026-10-26. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
