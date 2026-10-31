@@ -31,6 +31,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-31 (7-day checkpoint: Skit 07)
+
+7-day checkpoint, completing Skit 07's measurement cycle. Published Oct 24 morning (IG EN 05:55 ET, IG TE 06:00 ET per the live posts); metrics pulled Oct 31 ~07:05 ET, lifetime to date. No earlier [ANALYTICS] entry covered Skit 07 at 7 days; the 48h checkpoint was 2026-10-26. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 07 "Ten out of ten" (59 s)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 07 EN | 55 | 59 (89.8%) | 9.1% | 2.3 s, ~4% | n/a | 4 | 0 / 33.9 / 0 / 0 | n/a |
+| Skit 07 TE | 109 | 118 (96.6%) | 11.0% | 3.6 s, ~6% | n/a | 10 | 0 / 16.9 / 8.5 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page. The 2 comments on each reel are both our own (the quiz prompt and the methodology note, per the publish record), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+Suggestions (3):
+1. Flat after 48h, again: EN views 52 → 55 and reach 56 → 59, TE unchanged at 109 views / 118 reach. Skit 07 confirms the now-standing pattern — the 48h number is the final number; judge at 48h, treat 7-day as confirmation.
+2. The hook verdict is final: 7-day holds of 9.1% (EN) and 11.0% (TE) against Skit 06's 46.9%/47.9% at 7 days. Skit 07 opened on setup before the score contrast; the next skit's one changed variable stays what the 48h entry said — the contrast itself in frame 1.
+3. Zero viewer comments in 7 days on either page, and the single TE send (8.5 per 1,000 reach) is the only off-comment interaction. The quiz-letter prompt stays retired as a comment lever for this series; use opinion asks.
+
+Still owed from my side: the one-time 10-reel baseline table, and the verified subtitle-position answer (needs a live reel read, not an API metric).
+
+Next checkpoints: EP41 at 48h Oct 31 morning; Skit 12 at 48h Nov 1; EP40 at 7 days Nov 4.
+— Bujji, 2026-10-31
+
 ### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: EP40)
 
 48h checkpoint, first measurement. Published Oct 28 evening (IG EN/TE, browser task ran 8:54–10:57 PM ET); metrics pulled Oct 31 ~00:01 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP40. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
