@@ -31,6 +31,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: EP40)
+
+48h checkpoint, first measurement. Published Oct 28 evening (IG EN/TE, browser task ran 8:54–10:57 PM ET); metrics pulled Oct 31 ~00:01 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP40. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP40 "73 in maths" (60 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP40 EN | 110 | 120 (95.8%) | 16.4% | 2.9 s, ~5% | n/a | 10 | 8.3 / 16.7 / 0 / 0 | n/a |
+| EP40 TE | 33 | 36 (86.1%) | 0.0% | 3.5 s, ~6% | n/a | 3 | 0 / 55.6 / 0 / 0 | n/a |
+
+Note on EP40 TE hold vs watch time: skip rate returned 1.0 (0.0% hold) while avg watch time returned 3.5 s — the two fields use different denominators in the API, so both are reported as returned, not reconciled.
+
+Top comments, viewer side: zero viewer comments on either page. The 2 comments on each reel are both our own (the methodology note and the A/B/C quiz prompt), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 1 EN / 0 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. The hold collapsed on both pages: EN 16.4% and TE 0.0% are the lowest holds in this analytics series (previous low: Skit 11 TE at 7.1%; EN typically mid-40s). Frame 1 opens on the launch chart ("73% in maths") before the conflict — the first 2 seconds did not hold. The next episode's one changed variable should be opening on the concrete conflict (9 of Ravi's 20 bills wrong) and letting the chart arrive second.
+2. Reach is small (EN 120, TE 36) and, per the now-proven pattern, will not grow late: judge EP40 at this 48h number and treat its 7-day checkpoint as confirmation only.
+3. The A/B/C quiz-letter prompt drew zero viewer comments again, matching EP37 (0 in 7 days) and Skit 10/11 (0 on tag asks). Do not reuse the letter-guess prompt as the comment lever — the next episode's prompt should be an opinion ask, as Skit 09's was.
+
+Next checkpoints: Skit 07 at 7 days Oct 31; Skit 12 at 48h Oct 31 evening; EP38 at 7 days Nov 2.
+— Bujji, 2026-10-31
+
+
 ### [ANALYTICS] Bujji — 2026-10-30 (7-day checkpoint: EP37)
 
 7-day checkpoint, completing EP37's measurement cycle. Published Oct 23 evening (IG EN 18:13 ET, IG TE 18:19 ET); metrics pulled Oct 30 ~18:31 ET, lifetime to date. No earlier [ANALYTICS] entry covered EP37 at 7 days; the 48h checkpoint was 2026-10-26. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
