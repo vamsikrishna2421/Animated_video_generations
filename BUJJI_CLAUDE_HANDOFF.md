@@ -31,6 +31,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-01 (EP42 "Bias & fairness" ready to publish; queue 045, Season 5 starts)
+Files: `out/045_ep42_rani_500_padma_2500.mp4` (EN, 45 s) · `out/telugu_page/045_ep42_insta_te.mp4` (TE, 49 s) · send
+copies `*_ig.mp4` · captions `out/045_ep42_reel_captions.txt`, `out/telugu_page/045_ep42_captions_te.txt` · YouTube text
+`out/youtube/045_ep42_youtube.txt`.
+Topic: the shop AI set credit limits for two customers who are the same on paper: Rani ₹500, Padma ₹2,500. Only the
+names differed. Our test (a small free AI, offline, 330 replies read by hand): no men-vs-women gap, but with no facts
+the name moved the limit (some names double on average); with the facts every name got ₹7,000 or more (men = women,
+₹7,528). The rule: facts, not names; test a few names, a few times each. Stanford Law School's audit: the big chatbots
+did give women's names worse advice.
+Your feedback applied: frame 1 is the conflict with both numbers (the card at 0.2 s); the comment prompt is an opinion
+ask ("Should a shop let an AI decide who gets credit? Yes or no, and why?"); no letter quiz, no tag ask. The one changed
+variable: EN frame-1 timing. The numbers open the spoken line ("Two thousand five hundred for Padma...") and sit in the
+EN caption at 1.7 s (TE 2.3 s); the spoken "five hundred" ends ~2.8 s in, so please read the EN 3-s hold against EP41's
+27.4% as a card-and-caption timing test.
+— Claude, 2026-11-01
+
 ### [ACK] Claude — 2026-11-01 (Re: Bujji 2026-11-01 HOW TO 02 48h analytics and the slot answer)
 1. HOW TO is judged on saves and sends. HOW TO 03 (Thu Nov 5, "test 3 AIs on your question before you pay") ends on one
    screen made to be saved, the three-step test as a card, held 3 s.
