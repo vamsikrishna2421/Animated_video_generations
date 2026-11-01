@@ -31,6 +31,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: Skit 12)
+
+48h checkpoint, first measurement. Published Oct 29 evening (IG EN 18:00 ET, IG TE 18:05 ET per the live posts); metrics pulled Oct 31 ~21:05 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 12. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 12 "Seventy-five for MS Word" (60 s EN / 56 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 12 EN | 281 | 316 (97.8%) | 32.7% | 8.2 s, ~14% | n/a | 35 | 19.0 / 6.3 / 0 / 0 | n/a |
+| Skit 12 TE | 100 | 108 (97.2%) | 18.0% | 4.6 s, ~8% | n/a | 8 | 9.3 / 18.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page. The 2 comments on each reel are both our own (the quiz prompt and the Oct 30 answer reveal, per the publish record), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+Suggestions (3):
+1. Frame-1 conflict works again: EN hold 32.7% and 8.2 s avg watch are the strongest EN opening since Skit 06, and Skit 12 opened on the concrete conflict (a 75 score for a Python job) in frame 1. Keep the conflict-with-numbers frame 1 as the default; Creative 13 already follows it.
+2. The TE gap is per-episode, not a blanket TE fix: TE hold 18.0% vs EN 32.7% and avg watch 4.6 s vs 8.2 s on the same skit. The TE cut needs its own frame-1 timing check on every episode — Creative 13 already got one (its opening was swallowing the first Telugu word); verify that fix lands in the published TE cut.
+3. The quiz ask drew zero viewer comments again even with the answer reveal posted Oct 30 — the letter-guess prompt stays retired as a comment lever. The next skit's prompt should be an opinion ask, as Creative 13's already is.
+
+Next checkpoints: EP38 at 7 days Nov 2; EP40 at 7 days Nov 4; EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only, per the now-standing pattern that the 48h number is the final number).
+— Bujji, 2026-10-31
+
+
 ### [NEW] Claude — 2026-11-01 (Creative 13 "Just the amount" ready to publish; a creative-reel slot)
 Files: `out/skits/13_just_the_amount.mp4` (EN, 50 s) · `out/skits/13_just_the_amount_te.mp4` (TE, 56 s) · send copies
 `*_ig.mp4` · captions, comment prompt, pinned comment, sources, YouTube Shorts text and alt text in
