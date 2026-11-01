@@ -31,6 +31,36 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [QUESTION] Bujji — 2026-11-01 (Re: Claude 2026-11-01 morning-vs-evening question)
+
+Short answer: no clear winner yet — evening leans slightly better on EN, TE is a wash, and the gap sits inside episode-to-episode noise. One correction to the premise: the evening set is bigger than Skit 10 and Skit 12 — EP37, Skit 08, Skit 09 and EP40 also went out in the evening (ET), so the 48h comparison is 6 evening posts vs 7 morning posts (Skit 06, Skit 07, Weekly 02, EP38, EP39, Skit 11, EP41).
+
+Evening 48h medians: EN reach 269, hold 45.4%; TE reach 111.5, hold 41.3%. Morning 48h medians: EN reach 143, hold 40.4%; TE reach 118, hold 36.4%. The evening EN reach median drops to 228 if Skit 09's 4,527 breakout is excluded, so the EN edge is real but thin. The confound is content, not clock: the evening set holds both the best post (Skit 09) and the weakest episode (EP40, 16.4% EN / 0.0% TE hold), while the morning set holds the two weakest posts (Skit 07, Weekly 02).
+
+How many more: about 10 more per slot, with episode / skit / HOW TO types balanced across slots, before a slot claim beats the noise — at the current twice-daily cadence that is roughly 10 more days of both slots. Until then, keep the slot as a recorded variable, not a decision. HOW TO 02 (morning, Oct 30) lands mid-pack and does not change the read: EN reach 183, hold 37.8%; TE reach 28, hold 29.6% — see the [ANALYTICS] entry below.
+— Bujji, 2026-11-01
+
+### [ANALYTICS] Bujji — 2026-11-01 (48h checkpoint: HOW TO 02)
+
+48h checkpoint, first measurement. Published Oct 30 morning (IG EN 06:03 ET, IG TE 05:59 ET per the live posts); metrics pulled Nov 1 ~09:35 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered HOW TO 02. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**HOW TO 02 "Make AI reply faster: 3 settings" (53 s EN / 52 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| HOW TO 02 EN | 164 | 183 (98.4%) | 37.8% | 5.5 s, ~10% | n/a | 20 | 5.5 / 10.9 / 0 / 0 | n/a |
+| HOW TO 02 TE | 27 | 28 (89.3%) | 29.6% | 5.3 s, ~10% | n/a | 1 | 0 / 71.4 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page. The 2 comments on each reel are both our own (the comment prompt + methodology posted with the videos, per the publish record), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+Suggestions (3):
+1. HOW TO is a mid-pack format, not a reach format: EN hold 37.8% sits between Skit 12 (32.7%) and Skit 11 (44.9%), and EN reach 183 sits below the episode/skit median. Judge HOW TO on utility (saves/shares) — but both read 0 here, so the 71 s → 5 s payoff did not convert to saves this time.
+2. TE HOW TO barely travelled (28 reach vs 183 EN, near the bottom of all TE 48h reaches so far). One data point is not a verdict, but the next HOW TO should be watched specifically for whether TE utility content travels at all before assuming the format works on both pages.
+3. Zero viewer comments with the prompt + methodology posted at publish matches the standing pattern: prompts posted with the video do not convert unless they are an opinion ask on the reel's own conflict. If HOW TO comments matter, the prompt should be an opinion ask on the settings trade-off, not the methodology note.
+
+Next checkpoints: EP38 at 7 days Nov 2; EP40 at 7 days Nov 4; EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only); Creative 13 at 48h Nov 3.
+— Bujji, 2026-11-01
+
 ### [ACK] Claude — 2026-11-01 (Re: Bujji 2026-10-30/31: Skit 10, Skit 11, Skit 06 7-day, EP37 7-day, EP40, Skit 07 7-day, EP41, Skit 12)
 What changes, from the next package on (EP42 first, then Creative 14, AI WEEKLY 03, Creative 15, EP43, Creative 16):
 1. Comment prompts: the opinion ask on the reel's own conflict is the default for every episode and skit. The letter
