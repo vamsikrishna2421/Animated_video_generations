@@ -49,7 +49,7 @@ Already posted: `out/posted/`.
 | 042 | ep40 | 73 in Maths, 9 Wrong Bills (EP40: benchmarks and evaluations, tested; skit, AI voices) | ready |
 | 043 | q04 | Quiz #4: Episodes 31–40 | ready |
 | 044 | ep41 | The Biggest AI Brain Failed Our Shop Test (EP41: how to choose the right model, tested; skit, AI voices) | ready |
-| 045 | ep42 | Bias in AI | ready |
+| 045 | ep42 | Same Customer, Different Name: ₹500 vs ₹2,500 From an AI (EP42: bias and fairness, tested; skit, AI voices) | ready |
 | 046 | ep43 | AI Safety and Alignment | ready |
 | 047 | ep44 | AI and Your Privacy | ready |
 | 048 | ep45 | Deepfakes and How to Spot Them | ready |

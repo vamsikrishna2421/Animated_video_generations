@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana";
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani";   // rani: EP42's customer (FairCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -31,8 +31,9 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   sneha: { skin: "#b07a52", hair: "#120d0a", top: "#be185d" },
   nikhil: { skin: "#8d5a3b", hair: "#1c1410", top: "#15803d" },
   meghana: { skin: "#9c6a45", hair: "#2b1a10", top: "#d97706" },
+  rani: { skin: "#8d5a3b", hair: "#120d0a", top: "#0d9488" },
 };
-const SEATS: Record<Who, number> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
+const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
 const GUESSES = ["220.23", "965.63", "241.25", "1,059", "220.23", "1,068.25", "1,028.64", "1,138.88", "849.00", "886.50"];
 const STEPS: [string, string][] = [["GST: 2,847 × 0.05", "142.35"], ["2,847 + 142.35", "2,989.35"], ["tip: 2,989.35 × 0.10", "298.94"],
@@ -59,7 +60,7 @@ const palm = (c: Ctx, x: number, y: number, skin: string, r: () => number, rad =
 const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   const L = LOOK[who], hy = -130;
   c.fillStyle = L.hair;
-  if (who === "sneha") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
+  if (who === "sneha" || who === "rani") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
   if (who === "meghana") { c.beginPath(); c.ellipse(0, hy + 6, 114, 124, 0, 0, 7); c.fill(); }   // a bob
   [-1, 1].forEach((s) => { c.beginPath(); c.ellipse(s * 92, hy + 6, 16, 26, 0, 0, 7); c.fillStyle = L.skin; c.fill(); });
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
@@ -67,7 +68,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   c.fillStyle = L.hair; c.beginPath();
   if (who === "nikhil") {   // curly
     for (let q = 0; q < 7; q++) { const a = Math.PI * (1.05 + q * 0.15); c.moveTo(Math.cos(a) * 92 + 30, hy - 40 + Math.sin(a) * 84); c.arc(Math.cos(a) * 92, hy - 40 + Math.sin(a) * 84, 30, 0, 7); }
-  } else if (who === "sneha") {   // parted in the middle
+  } else if (who === "sneha" || who === "rani") {   // parted in the middle
     c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy + 4); c.quadraticCurveTo(52, hy - 58, 4, hy - 80); c.lineTo(-4, hy - 80); c.quadraticCurveTo(-52, hy - 58, -100, hy + 4);
   } else if (who === "meghana") {   // a fringe
     c.ellipse(0, hy - 56, 100, 66, 0, Math.PI, 0); c.lineTo(100, hy - 30); c.lineTo(-100, hy - 30);
@@ -109,7 +110,8 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   } else if (m === "smug") stroke(c, [[-20, my + 2], [6, my + 2], [22, my - 10]], INK, 6, r, { passes: 2 });
   else if (m === "worried" || m === "angry") stroke(c, [[-18, my + 6], [0, my], [18, my + 6]], INK, 6, r, { passes: 2 });
   else stroke(c, [[-16, my], [16, my]], INK, 6, r, { passes: 2 });
-  if (who === "sneha" || who === "meghana") [-1, 1].forEach((sx) => { c.beginPath(); c.arc(sx * 94, hy + 28, 8, 0, 7); c.fillStyle = "#facc15"; c.fill(); });   // earrings
+  if (who === "sneha" || who === "meghana" || who === "rani") [-1, 1].forEach((sx) => { c.beginPath(); c.arc(sx * 94, hy + 28, 8, 0, 7); c.fillStyle = "#facc15"; c.fill(); });   // earrings
+  if (who === "rani") { c.beginPath(); c.arc(0, hy - 62, 9, 0, 7); c.fillStyle = RED; c.fill(); }   // a bindi
 };
 const heldPhone = (c: Ctx, x: number, y: number) => {
   c.save(); c.translate(x, y); c.rotate(-0.12);
@@ -124,7 +126,10 @@ const heldCalc = (c: Ctx, x: number, y: number) => {
   c.fillStyle = "#cbd5e1"; for (let q = 0; q < 9; q++) { rrect(c, -36 + (q % 3) * 26, -18 + Math.floor(q / 3) * 26, 20, 18, 4); c.fill(); }
   c.restore();
 };
-const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: boolean, r: () => number) => {
+export type BillWho = Who;
+export type BillMood = Mood;
+export type BillArms = Arms;
+export const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: boolean, r: () => number) => {
   const L = LOOK[who];
   c.save(); c.translate(at[0], at[1]); c.scale(sc, sc);
   c.save();
@@ -133,6 +138,7 @@ const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, talk: bo
   c.fillStyle = L.top; c.fill(); c.clip();
   if (who === "arjun") { c.fillStyle = "#f8fafc"; c.beginPath(); c.moveTo(-46, 30); c.lineTo(0, 110); c.lineTo(46, 30); c.closePath(); c.fill(); }   // a collar
   if (who === "sneha") { c.fillStyle = "#fbcfe8"; c.fillRect(-200, 300, 400, 22); }   // a kurta's border
+  if (who === "rani") { c.fillStyle = "#facc15"; c.fillRect(-200, 300, 400, 22); c.fillStyle = "#99f6e4"; c.beginPath(); c.moveTo(-150, 30); c.lineTo(-60, 30); c.lineTo(190, 560); c.lineTo(110, 640); c.closePath(); c.fill(); }   // a saree's border and pallu
   if (who === "nikhil") { c.fillStyle = "#bbf7d0"; c.beginPath(); c.arc(0, 220, 54, 0, 7); c.fill(); }   // a T-shirt print
   c.restore();
   stroke(c, [[-140, 34], [-180, 520]], INK, 4, r, { passes: 2, alpha: 0.5 }); stroke(c, [[140, 34], [180, 520]], INK, 4, r, { passes: 2, alpha: 0.5 });
@@ -193,7 +199,7 @@ const table = (c: Ctx, W: number, y: number, r: () => number, bill = true) => {
 const friends = (c: Ctx, n: number, neck: number, sc: number, talker: string, talking: boolean, r: () => number) => {
   (["arjun", "nikhil", "meghana", "sneha"] as Who[]).forEach((w) => {
     const [m, a] = MOODS[n]?.[w] ?? ["calm", "rest"];
-    person(c, w, [SEATS[w], neck], sc, m, a, talker === w && talking, r);
+    person(c, w, [SEATS[w] ?? 0, neck], sc, m, a, talker === w && talking, r);
   });
 };
 // the viewfinder over the inserts (render review: keep the documentary going through the middle): corners, REC, timecode

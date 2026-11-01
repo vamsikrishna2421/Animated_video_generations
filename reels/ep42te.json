@@ -1,0 +1,347 @@
+{
+ "id": "ep42te",
+ "title": "Rani ₹500, Padma ₹2,500 (EP42: bias and fairness) (Telugu audio)",
+ "label": "EP42",
+ "banner": "Bias & fairness",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "musicEndRamp": [
+  0.88,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_fair",
+   "tail": 0.0,
+   "boost": 1.05,
+   "data": {
+    "beats": [
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ravi",
+      "shot": "cards",
+      "prop": "cards",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "cards",
+      "prop": "names",
+      "n": 3
+     },
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "costs",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Rani ₹500, Padma ₹2,500",
+     "title": "Rani ₹500, Padma ₹2,500",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "rani",
+     "file": "01_rani.wav",
+     "text": "పద్మకి రెండున్నర వేలు, [1] నాకు ఐదు వందలా?!",
+     "show": "Padma gets ₹2,500, and I get ₹500?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ravi",
+     "file": "02_ravi.wav",
+     "text": "ఒకే టైలర్ షాప్, ఒకే వయసు! [1] ఎందుకు ఇలా?!",
+     "show": "Same tailor shop, same age! Why like this?!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "పేర్లు మాత్రమే వేరు, అన్నా.",
+     "show": "Only the names are different, anna.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "rani",
+     "file": "04_rani.wav",
+     "text": "అంటే నా పేరుకి రెండు వేలు తగ్గిందా?!",
+     "show": "So my name cut ₹2,000?!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_fair",
+   "tail": 0.0,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "guess",
+      "prop": "guess",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Only the name",
+     "title": "Only the name",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "05_ai.wav",
+     "text": "మీరు ఎలా కడతారో నాకు తెలీదు. <pause 0.25> [1] అందుకే పేరు చూసి ఊహించాను.",
+     "show": "I don't know how you pay. <pause 0.25> So I guessed from the name.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "tts": "మీరు ఎలా కడతారో నాకు తెలీదు.",
+     "file2": "05b_ai.wav",
+     "tts2": "అందుకే పేరు చూసి ఊహించాను.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "మేము ఒక చిన్న యాప్ తో టెస్ట్ చేశాం: ఒకే కస్టమర్, పది పేర్లు. <pause 0.25> [1] కొన్ని పేర్లకి సగటున రెట్టింపు.",
+     "show": "We tested with a small app: same customer, 10 names. <pause 0.25> Some names got double, on average.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "tts": "మేము ఒక చిన్న యాప్ తో టెస్ట్ చేశాం: ఒకే కస్టమర్, పది పేర్లు.",
+     "file2": "06b_ai.wav",
+     "tts2": "కొన్ని పేర్లకి సగటున రెట్టింపు.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_fair",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.3,
+   "boost": 1.35,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
+   "swell": [
+    1,
+    1,
+    1.3
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "khata",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "facts",
+      "prop": "facts",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fair",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "With the facts",
+     "title": "With the facts",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "rani",
+     "file": "07_rani.wav",
+     "text": "అయితే నా ఖాతా చూపించు!",
+     "show": "Then show it my khata!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "వివరాలు ఇస్తే: [1] ప్రతి పేరుకీ ఏడు వేలు పైనే.",
+     "show": "Given the details: every name gets ₹7,000 or more.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "ఇప్పుడు న్యాయంగా ఉంది!",
+     "show": "Now it's fair!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_fair",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.25,
+   "rise": 1.1,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "study",
+      "prop": "study",
+      "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Change only the name",
+     "title": "Change only the name",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "పేర్లు కాదు, వివరాలు ఇవ్వండి. <pause 0.25> [1] కొన్ని పేర్లతో టెస్ట్ చేయండి: ఒక పేరుకి ఎప్పుడూ తక్కువ వస్తే, నా మాట వినకండి.",
+     "show": "Give details, not names. <pause 0.25> Test a few names: if one always gets less, don't listen to me.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.1,
+     "tts": "పేర్లు కాదు, వివరాలు ఇవ్వండి.",
+     "file2": "10b_ai.wav",
+     "tts2": "కొన్ని పేర్లతో టెస్ట్ చేయండి: ఒక పేరుకి ఎప్పుడూ తక్కువ వస్తే, నా మాట వినకండి.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "మనది ఆడవాళ్ళకి తక్కువ ఇవ్వలేదు. <pause 0.25> [1] కానీ ఒక అమెరికా స్టడీ లో, పెద్ద చాట్ బాట్లు ఇచ్చాయి.",
+     "show": "Ours didn't give women less. <pause 0.25> But in an American study, the big chatbots did.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.1,
+     "tts": "మనది ఆడవాళ్ళకి తక్కువ ఇవ్వలేదు.",
+     "file2": "11b_ai.wav",
+     "tts2": "కానీ ఒక అమెరికా స్టడీ లో, పెద్ద చాట్ బాట్లు ఇచ్చాయి.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ మళ్ళీ చూస్తా!",
+     "show": "Even the big ones?! I'll look at every limit again!",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,937 @@
+{
+ "id": "ep42te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Bias & fairness",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "Rani ₹500, Padma ₹2,500 (EP42: bias and fairness) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP42",
+ "fps": 30,
+ "musicDrops": [
+  [
+   787,
+   811
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   368,
+   1.05
+  ],
+  [
+   368,
+   698,
+   1.2
+  ],
+  [
+   698,
+   920,
+   1.35
+  ],
+  [
+   920,
+   1444,
+   1.25
+  ],
+  [
+   811,
+   920,
+   1.3,
+   1
+  ],
+  [
+   920,
+   1444,
+   1.1,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1444,
+ "music": "reel/ep42te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_fair",
+   "data": {
+    "beats": [
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ravi",
+      "shot": "cards",
+      "prop": "cards",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "cards",
+      "prop": "names",
+      "n": 3
+     },
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "costs",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Rani ₹500, Padma ₹2,500",
+     "title": "Rani ₹500, Padma ₹2,500",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 368,
+   "lines": [
+    {
+     "who": "rani",
+     "name": "Rani",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep42te/line_01.wav",
+     "from": 15,
+     "frames": 88,
+     "words": [
+      {
+       "w": "Padma",
+       "from": 16,
+       "to": 28
+      },
+      {
+       "w": "gets",
+       "from": 28,
+       "to": 46
+      },
+      {
+       "w": "₹2,500,",
+       "from": 46,
+       "to": 62
+      },
+      {
+       "w": "and",
+       "from": 62,
+       "to": 77
+      },
+      {
+       "w": "I",
+       "from": 77,
+       "to": 81
+      },
+      {
+       "w": "get",
+       "from": 81,
+       "to": 89
+      },
+      {
+       "w": "₹500?!",
+       "from": 89,
+       "to": 103
+      }
+     ],
+     "cues": {
+      "1": 73
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep42te/line_02.wav",
+     "from": 110,
+     "frames": 86,
+     "words": [
+      {
+       "w": "Same",
+       "from": 111,
+       "to": 118
+      },
+      {
+       "w": "tailor",
+       "from": 118,
+       "to": 127
+      },
+      {
+       "w": "shop,",
+       "from": 127,
+       "to": 135
+      },
+      {
+       "w": "same",
+       "from": 135,
+       "to": 146
+      },
+      {
+       "w": "age!",
+       "from": 146,
+       "to": 153
+      },
+      {
+       "w": "Why",
+       "from": 153,
+       "to": 176
+      },
+      {
+       "w": "like",
+       "from": 176,
+       "to": 183
+      },
+      {
+       "w": "this?!",
+       "from": 183,
+       "to": 192
+      }
+     ],
+     "cues": {
+      "1": 155
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep42te/line_03.wav",
+     "from": 202,
+     "frames": 57,
+     "words": [
+      {
+       "w": "Only",
+       "from": 203,
+       "to": 208
+      },
+      {
+       "w": "the",
+       "from": 208,
+       "to": 211
+      },
+      {
+       "w": "names",
+       "from": 211,
+       "to": 217
+      },
+      {
+       "w": "are",
+       "from": 217,
+       "to": 221
+      },
+      {
+       "w": "different,",
+       "from": 221,
+       "to": 231
+      },
+      {
+       "w": "anna.",
+       "from": 231,
+       "to": 246
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "rani",
+     "name": "Rani",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep42te/line_04.wav",
+     "from": 265,
+     "frames": 92,
+     "words": [
+      {
+       "w": "So",
+       "from": 274,
+       "to": 281
+      },
+      {
+       "w": "my",
+       "from": 281,
+       "to": 297
+      },
+      {
+       "w": "name",
+       "from": 297,
+       "to": 310
+      },
+      {
+       "w": "cut",
+       "from": 310,
+       "to": 330
+      },
+      {
+       "w": "₹2,000?!",
+       "from": 330,
+       "to": 352
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_fair",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "guess",
+      "prop": "guess",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Only the name",
+     "title": "Only the name",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 368,
+   "frames": 330,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep42te/line_05.wav",
+     "from": 0,
+     "frames": 124,
+     "words": [
+      {
+       "w": "I",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "don't",
+       "from": 5,
+       "to": 18
+      },
+      {
+       "w": "know",
+       "from": 18,
+       "to": 29
+      },
+      {
+       "w": "how",
+       "from": 29,
+       "to": 38
+      },
+      {
+       "w": "you",
+       "from": 38,
+       "to": 54
+      },
+      {
+       "w": "pay.",
+       "from": 54,
+       "to": 65
+      },
+      {
+       "w": "So",
+       "from": 74,
+       "to": 79
+      },
+      {
+       "w": "I",
+       "from": 79,
+       "to": 82
+      },
+      {
+       "w": "guessed",
+       "from": 82,
+       "to": 100
+      },
+      {
+       "w": "from",
+       "from": 100,
+       "to": 108
+      },
+      {
+       "w": "the",
+       "from": 108,
+       "to": 115
+      },
+      {
+       "w": "name.",
+       "from": 115,
+       "to": 124
+      }
+     ],
+     "cues": {
+      "1": 74
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep42te/line_06.wav",
+     "from": 132,
+     "frames": 180,
+     "words": [
+      {
+       "w": "We",
+       "from": 132,
+       "to": 137
+      },
+      {
+       "w": "tested",
+       "from": 137,
+       "to": 146
+      },
+      {
+       "w": "with",
+       "from": 146,
+       "to": 153
+      },
+      {
+       "w": "a",
+       "from": 153,
+       "to": 156
+      },
+      {
+       "w": "small",
+       "from": 156,
+       "to": 168
+      },
+      {
+       "w": "app:",
+       "from": 168,
+       "to": 175
+      },
+      {
+       "w": "same",
+       "from": 175,
+       "to": 188
+      },
+      {
+       "w": "customer,",
+       "from": 188,
+       "to": 215
+      },
+      {
+       "w": "10",
+       "from": 215,
+       "to": 219
+      },
+      {
+       "w": "names.",
+       "from": 219,
+       "to": 237
+      },
+      {
+       "w": "Some",
+       "from": 251,
+       "to": 262
+      },
+      {
+       "w": "names",
+       "from": 262,
+       "to": 269
+      },
+      {
+       "w": "got",
+       "from": 269,
+       "to": 274
+      },
+      {
+       "w": "double,",
+       "from": 274,
+       "to": 291
+      },
+      {
+       "w": "on",
+       "from": 291,
+       "to": 295
+      },
+      {
+       "w": "average.",
+       "from": 295,
+       "to": 306
+      }
+     ],
+     "cues": {
+      "1": 251
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_fair",
+   "data": {
+    "beats": [
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "khata",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "facts",
+      "prop": "facts",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "fair",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "With the facts",
+     "title": "With the facts",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 698,
+   "frames": 222,
+   "lines": [
+    {
+     "who": "rani",
+     "name": "Rani",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep42te/line_07.wav",
+     "from": 9,
+     "frames": 56,
+     "words": [
+      {
+       "w": "Then",
+       "from": 12,
+       "to": 22
+      },
+      {
+       "w": "show",
+       "from": 22,
+       "to": 40
+      },
+      {
+       "w": "it",
+       "from": 40,
+       "to": 46
+      },
+      {
+       "w": "my",
+       "from": 46,
+       "to": 52
+      },
+      {
+       "w": "khata!",
+       "from": 52,
+       "to": 65
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep42te/line_08.wav",
+     "from": 74,
+     "frames": 79,
+     "words": [
+      {
+       "w": "Given",
+       "from": 78,
+       "to": 85
+      },
+      {
+       "w": "the",
+       "from": 85,
+       "to": 90
+      },
+      {
+       "w": "details:",
+       "from": 90,
+       "to": 115
+      },
+      {
+       "w": "every",
+       "from": 115,
+       "to": 122
+      },
+      {
+       "w": "name",
+       "from": 122,
+       "to": 128
+      },
+      {
+       "w": "gets",
+       "from": 128,
+       "to": 134
+      },
+      {
+       "w": "₹7,000",
+       "from": 134,
+       "to": 142
+      },
+      {
+       "w": "or",
+       "from": 142,
+       "to": 146
+      },
+      {
+       "w": "more.",
+       "from": 146,
+       "to": 153
+      }
+     ],
+     "cues": {
+      "1": 113
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep42te/line_09.wav",
+     "from": 172,
+     "frames": 39,
+     "words": [
+      {
+       "w": "Now",
+       "from": 172,
+       "to": 181
+      },
+      {
+       "w": "it's",
+       "from": 181,
+       "to": 193
+      },
+      {
+       "w": "fair!",
+       "from": 193,
+       "to": 206
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_fair",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "study",
+      "prop": "study",
+      "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Change only the name",
+     "title": "Change only the name",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 920,
+   "frames": 524,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep42te/line_10.wav",
+     "from": 9,
+     "frames": 206,
+     "words": [
+      {
+       "w": "Give",
+       "from": 10,
+       "to": 17
+      },
+      {
+       "w": "details,",
+       "from": 17,
+       "to": 39
+      },
+      {
+       "w": "not",
+       "from": 39,
+       "to": 44
+      },
+      {
+       "w": "names.",
+       "from": 44,
+       "to": 54
+      },
+      {
+       "w": "Test",
+       "from": 67,
+       "to": 76
+      },
+      {
+       "w": "a",
+       "from": 76,
+       "to": 79
+      },
+      {
+       "w": "few",
+       "from": 79,
+       "to": 85
+      },
+      {
+       "w": "names:",
+       "from": 85,
+       "to": 101
+      },
+      {
+       "w": "if",
+       "from": 101,
+       "to": 106
+      },
+      {
+       "w": "one",
+       "from": 106,
+       "to": 122
+      },
+      {
+       "w": "always",
+       "from": 122,
+       "to": 134
+      },
+      {
+       "w": "gets",
+       "from": 134,
+       "to": 152
+      },
+      {
+       "w": "less,",
+       "from": 152,
+       "to": 165
+      },
+      {
+       "w": "don't",
+       "from": 165,
+       "to": 187
+      },
+      {
+       "w": "listen",
+       "from": 187,
+       "to": 199
+      },
+      {
+       "w": "to",
+       "from": 199,
+       "to": 204
+      },
+      {
+       "w": "me.",
+       "from": 204,
+       "to": 210
+      }
+     ],
+     "cues": {
+      "1": 67
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep42te/line_11.wav",
+     "from": 245,
+     "frames": 165,
+     "words": [
+      {
+       "w": "Ours",
+       "from": 245,
+       "to": 253
+      },
+      {
+       "w": "didn't",
+       "from": 253,
+       "to": 263
+      },
+      {
+       "w": "give",
+       "from": 263,
+       "to": 270
+      },
+      {
+       "w": "women",
+       "from": 270,
+       "to": 287
+      },
+      {
+       "w": "less.",
+       "from": 287,
+       "to": 296
+      },
+      {
+       "w": "But",
+       "from": 316,
+       "to": 322
+      },
+      {
+       "w": "in",
+       "from": 322,
+       "to": 334
+      },
+      {
+       "w": "an",
+       "from": 334,
+       "to": 338
+      },
+      {
+       "w": "American",
+       "from": 338,
+       "to": 356
+      },
+      {
+       "w": "study,",
+       "from": 356,
+       "to": 373
+      },
+      {
+       "w": "the",
+       "from": 373,
+       "to": 379
+      },
+      {
+       "w": "big",
+       "from": 379,
+       "to": 385
+      },
+      {
+       "w": "chatbots",
+       "from": 385,
+       "to": 399
+      },
+      {
+       "w": "did.",
+       "from": 399,
+       "to": 406
+      }
+     ],
+     "cues": {
+      "1": 316
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep42te/line_12.wav",
+     "from": 422,
+     "frames": 82,
+     "words": [
+      {
+       "w": "Even",
+       "from": 423,
+       "to": 429
+      },
+      {
+       "w": "the",
+       "from": 429,
+       "to": 434
+      },
+      {
+       "w": "big",
+       "from": 434,
+       "to": 439
+      },
+      {
+       "w": "ones?!",
+       "from": 439,
+       "to": 465
+      },
+      {
+       "w": "I'll",
+       "from": 465,
+       "to": 471
+      },
+      {
+       "w": "look",
+       "from": 471,
+       "to": 477
+      },
+      {
+       "w": "at",
+       "from": 477,
+       "to": 480
+      },
+      {
+       "w": "every",
+       "from": 480,
+       "to": 488
+      },
+      {
+       "w": "limit",
+       "from": 488,
+       "to": 495
+      },
+      {
+       "w": "again!",
+       "from": 495,
+       "to": 503
+      }
+     ],
+     "cues": {
+      "1": 465
+     }
+    }
+   ]
+  }
+ ]
+}
