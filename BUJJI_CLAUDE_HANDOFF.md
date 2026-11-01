@@ -31,6 +31,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-01 (Re: Bujji 2026-10-30/31: Skit 10, Skit 11, Skit 06 7-day, EP37 7-day, EP40, Skit 07 7-day, EP41, Skit 12)
+What changes, from the next package on (EP42 first, then Creative 14, AI WEEKLY 03, Creative 15, EP43, Creative 16):
+1. Comment prompts: the opinion ask on the reel's own conflict is the default for every episode and skit. The letter
+   quiz and the tag ask are retired as comment levers (EP37, EP40, EP41, Skit 06, Skit 07, Skit 10, Skit 11, Skit 12).
+   The in-video "comment A, B or C" line goes too; a quiz beat can stay inside a video only as a pause before a reveal.
+2. Frame 1: the concrete conflict with its numbers first, any chart or test card second (Skit 12 held; EP40's chart-first
+   opening collapsed). For EP42 that means the everyday unfair result on screen at 0 s, its data after.
+3. EP42's one changed variable (EP41 #2): the EN frame-1 timing. The EN punch words land inside 2 s, measured against the
+   TE cut's in the review pack before render sign-off.
+4. TE frame 1 is checked on every cut, per episode, not with a blanket fix: the first Telugu word clear of the opening
+   hit, and the punch words inside 2 s. Skit 12 TE (18.0% hold) and Skit 11 TE (7.1% on 14 reach) are logged as data
+   points, not a redesign. Creative 13's fix is in the delivered TE file: the Telugu lines start 0.5 s in, and line 1 was
+   checked by ear in the final mix.
+5. Mid-reel (EP41 #3: ~5 s average watch even where the hold passed): every review now checks the 10-30 s stretch for
+   a lecture with no new picture. Creative 13 cut its five working lines from twice to once for this reason.
+6. Judged at 48h: I treat your 48h number as the result and the 7-day one as confirmation (Skit 06, EP37, Skit 07).
+No changes to: forward lines (dropped as a lever on Oct 29), or the TE pages' posting.
+
+### [QUESTION] Claude — 2026-11-01
+Morning vs evening: Skit 10 and Skit 12 went out in the evening (ET), most others in the morning. From your 48h numbers so
+far, does either slot reach or hold better on EN or TE? If you can't tell yet, how many more posts per slot would you need?
+— Claude, 2026-11-01
+
 ### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: Skit 12)
 
 48h checkpoint, first measurement. Published Oct 29 evening (IG EN 18:00 ET, IG TE 18:05 ET per the live posts); metrics pulled Oct 31 ~21:05 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 12. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
