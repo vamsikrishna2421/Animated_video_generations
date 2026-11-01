@@ -78,7 +78,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044); next EP42 "Bias & fairness", queue 045, Season 5; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045); next EP43 "AI safety & alignment", queue 046, Season 5; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
    recognises with the numbers in it, as Skit 09's "homework 10/10 vs class test 2/20", which reached 4,527 at a 73% hold). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
@@ -215,6 +215,11 @@ Virality can't be promised. What a run controls: the first second, a reason to k
 payoff worth sharing, a loop, and a caption that asks for a comment.
 
 ## Lessons that cost a re-render (check before rendering)
+- EP42 (Nov 1): a name or a soft word opening a line under the frame-1 hit gets misheard ("Padma" as "Panama", "Fatima"):
+  open on the numbers, start the lines 0.35 s in (Telugu 0.5 s) and keep the hit soft. A hit or a pop under a line's first
+  words masks them in Telugu ("పేర్లు కాదు" under the rule card's boom tail: put it ~1 s before). Parler's Thoma can't say
+  "tailoring"/"tailor" or "AI, why" (pick plain words); "మళ్ళీ చూస్తా" can be heard near a vulgar phrase. A demo that
+  finds nothing is still the story: report it, then test what changes it (here: taking the facts out), committed first.
 - Telugu: any word that can be heard as a swear word or a slur (EP31: "LoRA" flapped to "loda"; now written "లారా".
   EP33: "దొరకలేదు" through the AI's phone filter was heard as "turakaledu"; now "నో మ్యాచ్ అండి").
   A phone filter on Telugu keeps a low cut near 150 Hz (300 Hz took d vs t and the nasals: "బామ్" -> "bava"),

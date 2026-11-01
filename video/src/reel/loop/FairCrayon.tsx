@@ -109,7 +109,10 @@ const guessWheel = (c: Ctx, W: number, f: number, from: number, stopAt: number, 
   c.restore();
   c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.fillText("THE AI GUESSES", 0, -180);
   c.restore();
-  tag(c, "no facts → a guess from the name", W / 2, 1290, 58, "#fef3c7", INK, -0.02, seg(f, stopAt, stopAt + 8));
+  tag(c, "no facts → a guess from the name", W / 2, 1270, 58, "#fef3c7", INK, -0.02, seg(f, stopAt, stopAt + 8));
+  c.save(); c.globalAlpha = seg(f, stopAt + 14, stopAt + 22);
+  c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("why a name? nobody told it: it picked up", W / 2, 1380); c.fillText("links from the old text it learned from", W / 2, 1424);
+  c.restore();
 };
 // our test's bar chart (screen space): one bar a name
 const bars = (c: Ctx, W: number, f: number, rows: [string, number, boolean?][], max: number, from: number, step: number, col: (v: number, w?: boolean) => string, label: (v: number) => string) => {
@@ -165,7 +168,7 @@ const StFair: React.FC<SP> = ({ s }) => {
     if (b.prop === "cards") sfx.push(<Sfx key={k("p")} at={at - 8} src="audio/sfx_pop.wav" vol={0.2} />, <Sfx key={k("q")} at={at - 3} src="audio/sfx_pop.wav" vol={0.2} />);   // render check: pops on "tailoring" made it "trailer in"
     if (b.prop === "names") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.18} />);
     if (b.prop === "guess") {   // the wheel's ticks, then a thud when it stops on ₹500
-      const stop = cue(i, 1, 0.55);
+      const stop = at + 24;
       for (let q = 0; at + 12 + q * 5 < stop; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 12 + q * 5} src="audio/sfx_tick.wav" vol={te ? 0.1 : 0.2} />);
       sfx.push(<Sfx key={k("n")} at={stop} src="reel/sfx_boom.wav" vol={0.45} />);
     }
@@ -176,7 +179,7 @@ const StFair: React.FC<SP> = ({ s }) => {
       sfx.push(<Sfx key={k("n")} at={c1 - 6} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />, <Sfx key={k("s")} at={end + 1} src="audio/sfx_success.wav" vol={0.5} />,
         <Sfx key={k("c")} at={end + 2} src={CLAP} vol={0.35} />);
     }
-    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 15)} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - 16)} src="reel/sfx_boom.wav" vol={0.5} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - (te ? 30 : 15))} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={Math.max(0, at - (te ? 32 : 16))} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.5} />);   // Telugu: the boom's tail masked "పేర్లు కాదు"
     if (b.prop === "study") sfx.push(<Sfx key={k("g")} at={at + 2} src="reel/sfx_glitch.wav" vol={0.25} />);
     if (b.prop === "loop") {   // a rise into his last line, then the slam back to frame 1
       const slam = end + HOLD;
@@ -208,21 +211,26 @@ const StFair: React.FC<SP> = ({ s }) => {
           if (b.prop === "names") tag(c, "only the names differ", W / 2, 1180, 64, "#fee2e2", "#991b1b", -0.03, seg(f, ln.from + 14, ln.from + 22));
         } else if (b.shot === "guess") {
           // ---------- no facts: a guess from the name ----------
-          guessWheel(c, W, f, ln.from, cu(1, 0.55), r);
+          guessWheel(c, W, f, ln.from, ln.from + 24, r);   // render review: it must land on ₹500 early and hold
         } else if (b.shot === "test") {
           // ---------- our test: the same customer, ten names ----------
-          testCard(c, W, f, "OUR TEST: ONLY THE NAME CHANGES", ["a small free AI, offline · the same customer, no facts", "10 names × 10 tries · the average limit"]);
+          testCard(c, W, f, "OUR TEST: ONLY THE NAME CHANGES", ["a small free AI, offline · the same customer, no facts"]);
+          c.font = SANS(46, 900); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText("AVERAGE OF 10 TRIES A NAME", W / 2, 460);   // render review: ₹850 vs the phone's ₹500 needed this big
           bars(c, W, f, BY_NAME, 1900, ln.from + 4, 4, (v) => (v >= 1400 ? GREEN : "#64748b"), (v) => (v === 850 || v === 1800 ? `₹${v.toLocaleString("en-IN")}` : ""));   // script review: three lines of rupees in 4 s: only the ends
           const c1 = cu(1, 0.4);
-          tag(c, "some names: double", W / 2, 1300, 70, "#fde68a", INK, -0.03, seg(f, c1, c1 + 8));
-          c.save(); c.globalAlpha = seg(f, c1 + 14, c1 + 22);
-          c.font = SANS(36, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center";
-          c.fillText("men's names ₹1,120 · women's ₹1,180: just the name", W / 2, 1410);
+          tag(c, "some names: double", W / 2, 1290, 64, "#fde68a", INK, -0.03, seg(f, c1, c1 + 8));
+          c.save(); c.globalAlpha = seg(f, c1 + 8, c1 + 14);
+          c.font = SANS(40, 800); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("7 of 10 tries: Padma ₹2,500, Rani ₹500", W / 2, 1380);
+          c.restore();
+          c.save(); c.globalAlpha = seg(f, c1 + 16, c1 + 24);
+          c.font = SANS(32, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center";
+          c.fillText("men's names ₹1,120 · women's ₹1,180: just the name", W / 2, 1436);
           c.restore();
         } else if (b.shot === "facts") {
           // ---------- with the facts: every name the same ----------
           testCard(c, W, f, "OUR TEST: WITH HER KHATA", ["the same customer + ₹6,000 a month, 2 years, never late", "10 tries a name · average limit"]);
-          const c1 = cu(1, 0.45);
+          const fair = b.prop === "fair";   // render review: held under "Now it's fair!" too
+          const c1 = fair ? ln.from - 200 : cu(1, 0.45);
           bars(c, W, f, WITH_FACTS.map(([nm, v]) => [nm, v, BY_NAME.find((x) => x[0] === nm)?.[2]] as [string, number, boolean]), 8400, c1 - 2, 2, () => GREEN, (v) => `₹${v.toLocaleString("en-IN")}`);
           tag(c, "men ₹7,528 = women ₹7,528", W / 2, 1310, 66, "#dcfce7", "#14532d", -0.03, seg(f, c1 + 22, c1 + 30));
           c.save(); c.globalAlpha = seg(f, c1 + 26, c1 + 32);
@@ -263,7 +271,7 @@ const StFair: React.FC<SP> = ({ s }) => {
           c.restore();
           // screen-space props
           if (hookOn) limitCard(c, loopOn ? seg(f, slam, slam + 4) : 1, loopOn ? 1 : seg(f, 6, 26), r);
-          if (b.prop === "costs") bubble(c, 330, 520, "my name = -₹2,000?!", 76, seg(p, 0.05, 0.2), COL.yellow);
+          if (b.prop === "costs") bubble(c, 330, 520, "my name = ₹2,000 less?!", 72, seg(p, 0.05, 0.2), COL.yellow);   // render review: the minus was invisible
           if (b.prop === "khata") khata(c, seg(f, ln.from, ln.from + 6));
           if (b.prop === "fair") bubble(c, 600, 520, "fair now!", 84, seg(p, 0.05, 0.2), COL.yellow);
           if (b.prop === "rule") {

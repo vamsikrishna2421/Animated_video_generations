@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 3.0,
+ "musicGapGain": 1.5,
  "musicEndRamp": [
   0.88,
   5.0
@@ -118,7 +118,7 @@
      "who": "rani",
      "file": "04_rani.wav",
      "text": "అంటే నా పేరుకి రెండు వేలు తగ్గిందా?!",
-     "show": "So my name cut ₹2,000?!",
+     "show": "So my name costs me ₹2,000?!",
      "maxgap": 0.28,
      "gap": 0.3,
      "tempo": 1.05,
@@ -158,12 +158,12 @@
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "మీరు ఎలా కడతారో నాకు తెలీదు. <pause 0.25> [1] అందుకే పేరు చూసి ఊహించాను.",
-     "show": "I don't know how you pay. <pause 0.25> So I guessed from the name.",
+     "text": "మీ పేమెంట్స్ నాకు తెలీదు. <pause 0.25> [1] అందుకే పేరు చూసి ఊహించాను.",
+     "show": "I don't know your payments. <pause 0.25> So I guessed from the name.",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.1,
-     "tts": "మీరు ఎలా కడతారో నాకు తెలీదు.",
+     "tts": "మీ పేమెంట్స్ నాకు తెలీదు.",
      "file2": "05b_ai.wav",
      "tts2": "అందుకే పేరు చూసి ఊహించాను.",
      "pause": 0.25,
@@ -219,7 +219,7 @@
      },
      {
       "who": "ravi",
-      "shot": "ravi",
+      "shot": "facts",
       "prop": "fair",
       "n": 9
      }
@@ -334,8 +334,8 @@
     {
      "who": "ravi",
      "file": "12_ravi.wav",
-     "text": "పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ మళ్ళీ చూస్తా!",
-     "show": "Even the big ones?! I'll look at every limit again!",
+     "text": "పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ ఇంకోసారి చూస్తా!",
+     "show": "Even the big ones?! I'll look at every limit once more!",
      "maxgap": 0.28,
      "gap": 0.16,
      "tempo": 1.1,

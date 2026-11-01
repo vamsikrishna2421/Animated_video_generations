@@ -34,7 +34,7 @@ VOICE_TE = {**VOICE_TE0, "rani": "Lalitha speaks loudly and sharply, upset and v
 LIGHT_EN = set()   # the AI's numbers through the lighter phone sound (filled from the script)
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
 MUST = {"en": {1: [("padma",), ("me",), ("two", "2500", "2,500"), ("thousand", "2500", "2,500"), ("five", "500"), ("hundred", "500")],
-               2: [("same",), ("tailoring", "tailor"), ("age",), ("why",)],
+               2: [("same",), ("job",), ("age",), ("why",)],   # "tailoring"/"tailor" came out "trailer in", "till a"
                3: [("only",), ("names", "name"), ("different",)],
                4: [("name",), ("costs", "cost"), ("two", "2000", "2,000"), ("thousand", "2000", "2,000")],
                5: [("know",), ("pay",), ("guessed", "guess"), ("name",)],

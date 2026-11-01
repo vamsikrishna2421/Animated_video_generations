@@ -1,4 +1,4 @@
-# EP42 "Bias & fairness" (Season 5: Responsible AI) · queue 045 · script v2, Nov 1
+# EP42 "Bias & fairness" (Season 5: Responsible AI) · queue 045 · script v3 (as rendered), Nov 1
 
 ## The lesson
 An AI learns from text and decisions people made before, so it can copy their unfairness: the same person can get a
@@ -60,37 +60,53 @@ pay"; "₹7,528 = ₹7,528" says it is the average of 50 replies each; "UDHAAR" 
 "తక్కువ సలహాలు" (fewer advices) and Kiran's "Stanford" (an f) gone ("ఒక అమెరికా స్టడీ"); "మీ పేర్లు" is "పేర్లు".
 English line 7: "khata" was heard "cutter": "Then show it my record!"
 
-## Script (English) · ~55 s · v2
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7); both: the facts card and the wheel's ₹500 went by too fast in English, and "why
+those names?" was never answered. Changed: the with-the-facts card stays under "Now it's fair!" (~3.5 s); the wheel
+lands on ₹500 0.8 s into its line and holds; "my name = ₹2,000 less?!" (the minus was invisible); the bars card says
+"AVERAGE OF 10 TRIES A NAME" in big letters and "7 of 10 tries: Padma ₹2,500, Rani ₹500" (₹850 vs the phone's ₹500
+read as a contradiction); one line on why ("nobody told it: it picked up links from the old text it learned from");
+music in the gaps down (the Telugu gaps ran ~6 dB over the voice: gap gain 3.0 to 1.5). Misheard, fixed on the final
+mixes: English "Padma" opening line 1 ("Panama", "Fatima" under the opening hit: the numbers now open the line, the
+lines start 0.35 s in, the hit softer); "Same tailoring shop" ("trailer in", "till a": "Same job, same age!"); "AI, why"
+("A.I.Y."); "khata" ("cutter": "Then show it my record!"). Telugu: "మళ్ళీ చూస్తా" was heard close to a vulgar phrase
+("ఇంకోసారి చూస్తా"); "మీరు" heard "నీరు" ("మీ పేమెంట్స్"); "చెక్ చేస్తా" stuttered; the rule card's thud masked "పేర్లు
+కాదు" (Telugu: earlier and softer). Not changed: moving the render to out/local/ because the Stanford card names GPT-4
+(that rule is for Claude's own model names; earlier packages name third-party models). The one changed variable (EN
+frame-1 timing): the card shows both numbers at 0.2 s in both cuts and the EN caption carries them at 1.7 s (TE 2.3 s);
+the spoken "five hundred" ends ~2.8 s in, so the change is logged as card and caption timing.
+
+## Script (English) · 45.4 s as rendered
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Rani | Padma gets two thousand five hundred, [1] and I get five hundred?! | frame 1: the counter; the phone "Shop AI · CREDIT LIMIT · Rani ₹500 · Padma ₹2,500" |
-| 2 | Ravi | Same tailoring shop, same age! [1] AI, why?! | the two customer cards: 34, tailoring shop, a regular, the same; the AI's limits ₹500 and ₹2,500 |
-| 3 | AI | Only the names were different, anna. | the names circled; "only the names differ" |
-| 4 | Rani | So my name costs me two thousand?! | Rani: "my name = -₹2,000?!" |
-| 5 | AI | I didn't know how you pay. [1] So I guessed from the name. | a name card "Rani" goes in; a guess wheel spins and stops on ₹500; "no facts → a guess from the name" |
-| 6 | AI | We tested a small free AI: same customer, ten names. [1] Some names got double, on average. | OUR TEST (a small free AI, offline; 10 names × 10 tries, no facts): bars by name, ₹850 to ₹1,800; "some names: double"; "men's names ₹1,120 · women's ₹1,180: just the name" |
-| 7 | Rani | Then show it my record! | her khata slaps onto the counter: ₹6,000 a month · 2 years · never late |
-| 8 | AI | With the facts: [1] every name, seven thousand or more. | a stop, then every name's bar at ₹7,360-₹7,980; "men ₹7,528 = women ₹7,528"; "each the average of 50 replies (yes, exactly equal)" |
-| 9 | Ravi | Now it's fair! | "fair now!" |
-| 10 | AI | Give me facts, not names. / [1] Then test a few names: if one keeps getting less, I don't decide. | RULE: "Before an AI decides about people: 1 give it facts, not names 2 test a few names, a few times each 3 one name keeps getting less? it doesn't decide" |
-| 11 | AI | Ours didn't pick on women. / [1] In a Stanford study, the big chatbots did. | OURS vs THE BIG CHATBOTS: our small AI men ₹1,120 · women ₹1,180; Stanford Law School, 2024: GPT-4 and other chatbots, names swapped: worse advice for women's names; their fix: a real number in the prompt (like Rani's khata) |
-| 12 | Ravi | Even the big ones?! [1] I'm checking every limit again! | "checking every limit!" → frame 1 (the old limits; loops) |
+| 1 | Rani | Two thousand five hundred for Padma, [1] and five hundred for me?! |  |
+| 2 | Ravi | Same job, same age! [1] Why?! |  |
+| 3 | AI | Only the names were different, anna. |  |
+| 4 | Rani | So my name costs me two thousand?! | Rani: "my name = ₹2,000 less?!" |
+| 5 | AI | I didn't know how you pay. [1] So I guessed from the name. | a name card "Rani" goes in; the guess wheel lands on ₹500 at 0.8 s and holds; "no facts → a guess from the name"; "why a name? nobody told it: it picked up links from the old text it learned from" |
+| 6 | AI | We tested a small free AI: same customer, ten names. [1] Some names got double, on average. | OUR TEST: "AVERAGE OF 10 TRIES A NAME" (big); bars by name, ₹850 to ₹1,800; "some names: double"; "7 of 10 tries: Padma ₹2,500, Rani ₹500"; "men's names ₹1,120 · women's ₹1,180: just the name" |
+| 7 | Rani | Then show it my record! |  |
+| 8 | AI | With the facts: [1] every name, seven thousand or more. |  |
+| 9 | Ravi | Now it's fair! | the with-the-facts card held under his line |
+| 10 | AI | Give me facts, not names. / [1] Then test a few names: if one keeps getting less, I don't decide. |  |
+| 11 | AI | Ours didn't pick on women. / [1] In a Stanford study, the big chatbots did. |  |
+| 12 | Ravi | Even the big ones?! [1] I'm checking every limit again! |  |
 
-## Script (Telugu; on-screen text stays English) · v2
+## Script (Telugu; on-screen text stays English) · 49.3 s as rendered
 | # | Who | Telugu |
 |---|---|---|
 | 1 | Rani | పద్మకి రెండున్నర వేలు, [1] నాకు ఐదు వందలా?! |
 | 2 | Ravi | ఒకే టైలర్ షాప్, ఒకే వయసు! [1] ఎందుకు ఇలా?! |
 | 3 | AI | పేర్లు మాత్రమే వేరు, అన్నా. |
 | 4 | Rani | అంటే నా పేరుకి రెండు వేలు తగ్గిందా?! |
-| 5 | AI | మీరు ఎలా కడతారో నాకు తెలీదు. / [1] అందుకే పేరు చూసి ఊహించాను. |
+| 5 | AI | మీ పేమెంట్స్ నాకు తెలీదు. / [1] అందుకే పేరు చూసి ఊహించాను. |
 | 6 | AI | మేము ఒక చిన్న యాప్ తో టెస్ట్ చేశాం: ఒకే కస్టమర్, పది పేర్లు. / [1] కొన్ని పేర్లకి సగటున రెట్టింపు. |
 | 7 | Rani | అయితే నా ఖాతా చూపించు! |
 | 8 | AI | వివరాలు ఇస్తే: [1] ప్రతి పేరుకీ ఏడు వేలు పైనే. |
 | 9 | Ravi | ఇప్పుడు న్యాయంగా ఉంది! |
 | 10 | AI | పేర్లు కాదు, వివరాలు ఇవ్వండి. / [1] కొన్ని పేర్లతో టెస్ట్ చేయండి: ఒక పేరుకి ఎప్పుడూ తక్కువ వస్తే, నా మాట వినకండి. |
 | 11 | AI | మనది ఆడవాళ్ళకి తక్కువ ఇవ్వలేదు. / [1] కానీ ఒక అమెరికా స్టడీ లో, పెద్ద చాట్ బాట్లు ఇచ్చాయి. |
-| 12 | Ravi | పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ మళ్ళీ చెక్ చేస్తా! |
+| 12 | Ravi | పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ ఇంకోసారి చూస్తా! |
 
 Telugu notes: no "ఏఐ" in voiced text; Kiran (the AI) says no English word with an f; numbers mid-line or after a word
 (a bare number opening a line is clipped); no word one slipped letter from a swear word (checked again on the transcripts).

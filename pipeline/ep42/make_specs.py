@@ -14,32 +14,32 @@ R = ROOT / "reels"
 # Stanford card). prop: what the line brings on (FairCrayon.tsx).
 LINES = {
     1: ("rani", "wide", "hook", "Two thousand five hundred for Padma, [1] and five hundred for me?!", "పద్మకి రెండున్నర వేలు, [1] నాకు ఐదు వందలా?!"),   # render check: "Padma" opening the line was heard "Panama", "Fatima" under the hit: the numbers first (inside 2 s)
-    2: ("ravi", "cards", "cards", "The same tailoring shop, same age! [1] Why?!",   # render check: "Same" was heard "Some"; "AI, why" / "Why, AI" ran together ("A.I.Y.", "Y.A.I.")
+    2: ("ravi", "cards", "cards", "Same job, same age! [1] Why?!",   # render check: "Same" was heard "Some"; "AI, why" / "Why, AI" ran together ("A.I.Y.", "Y.A.I.")
         "ఒకే టైలర్ షాప్, ఒకే వయసు! [1] ఎందుకు ఇలా?!"),
     3: ("ai", "cards", "names", "Only the names were different, anna.", "పేర్లు మాత్రమే వేరు, అన్నా."),   # script review: "మీ పేర్లు" sounded like Ravi's own names
     4: ("rani", "wide", "costs", "So my name costs me two thousand?!", "అంటే నా పేరుకి రెండు వేలు తగ్గిందా?!"),
-    5: ("ai", "guess", "guess", "I didn't know how you pay. [1] So I guessed from the name.", "మీరు ఎలా కడతారో నాకు తెలీదు. | [1] అందుకే పేరు చూసి ఊహించాను."),   # script review: "no facts" clashed with "same shop, same age"
+    5: ("ai", "guess", "guess", "I didn't know how you pay. [1] So I guessed from the name.", "మీ పేమెంట్స్ నాకు తెలీదు. | [1] అందుకే పేరు చూసి ఊహించాను."),   # render review: "మీరు" was heard "నీరు" (water)   # script review: "no facts" clashed with "same shop, same age"
     6: ("ai", "test", "test", "We tested a small free AI: same customer, ten names. [1] Some names got double, on average.",
         "మేము ఒక చిన్న యాప్ తో టెస్ట్ చేశాం: ఒకే కస్టమర్, పది పేర్లు. | [1] కొన్ని పేర్లకి సగటున రెట్టింపు."),   # script review: "four times" vs averages of 2x
     7: ("rani", "wide", "khata", "Then show it my record!", "అయితే నా ఖాతా చూపించు!"),   # English: "khata" was heard "cutter"
     8: ("ai", "facts", "facts", "With the facts: [1] every name, seven thousand or more.", "వివరాలు ఇస్తే: [1] ప్రతి పేరుకీ ఏడు వేలు పైనే."),
-    9: ("ravi", "ravi", "fair", "Now it's fair!", "ఇప్పుడు న్యాయంగా ఉంది!"),
+    9: ("ravi", "facts", "fair", "Now it's fair!", "ఇప్పుడు న్యాయంగా ఉంది!"),   # render review: the facts card went by in 2.5 s: it stays under his line
     10: ("ai", "wide", "rule", "Give me facts, not names. | [1] Then test a few names: if one keeps getting less, I don't decide.",
          "పేర్లు కాదు, వివరాలు ఇవ్వండి. | [1] కొన్ని పేర్లతో టెస్ట్ చేయండి: ఒక పేరుకి ఎప్పుడూ తక్కువ వస్తే, నా మాట వినకండి."),   # script review: one reply moves even with the same name: a few tries a name
     11: ("ai", "study", "study", "Ours didn't pick on women. | [1] In a Stanford study, the big chatbots did.",
          "మనది ఆడవాళ్ళకి తక్కువ ఇవ్వలేదు. | [1] కానీ ఒక అమెరికా స్టడీ లో, పెద్ద చాట్ బాట్లు ఇచ్చాయి."),   # script review: it read as a contradiction of our test; Telugu: no "Stanford" (an f) in Kiran's voice
-    12: ("ravi", "wide", "loop", "Even the big ones?! [1] I'm checking every limit again!", "పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ మళ్ళీ చూస్తా!"),   # then frame 1 (the old limits). Telugu: "చెక్ చేస్తా" came out "chekh chekh chestaa"
+    12: ("ravi", "wide", "loop", "Even the big ones?! [1] I'm checking every limit again!", "పెద్దవి కూడానా?! [1] ప్రతి లిమిట్ ఇంకోసారి చూస్తా!"),   # render review: "మళ్ళీ చూస్తా" was heard "mudi/mulli chusta", one slip from a vulgar phrase   # then frame 1 (the old limits). Telugu: "చెక్ చేస్తా" came out "chekh chekh chestaa"
 }
 TTS_EN = {}   # spoken forms
 SHOW = {1: "₹2,500 for Padma, and ₹500 for me?!", 4: "So my name costs me ₹2,000?!", 6: "We tested a small free AI: same customer, 10 names. Some names got double, on average.",
         8: "With the facts: every name, ₹7,000 or more."}
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     1: "Padma gets ₹2,500, and I get ₹500?!", 2: "Same tailor shop, same age! Why like this?!", 3: "Only the names are different, anna.",
-    4: "So my name cut ₹2,000?!", 5: "I don't know how you pay. <pause 0.25> So I guessed from the name.",
+    4: "So my name costs me ₹2,000?!", 5: "I don't know your payments. <pause 0.25> So I guessed from the name.",
     6: "We tested with a small app: same customer, 10 names. <pause 0.25> Some names got double, on average.", 7: "Then show it my khata!",
     8: "Given the details: every name gets ₹7,000 or more.", 9: "Now it's fair!",
     10: "Give details, not names. <pause 0.25> Test a few names: if one always gets less, don't listen to me.",
-    11: "Ours didn't give women less. <pause 0.25> But in an American study, the big chatbots did.", 12: "Even the big ones?! I'll look at every limit again!",
+    11: "Ours didn't give women less. <pause 0.25> But in an American study, the big chatbots did.", 12: "Even the big ones?! I'll look at every limit once more!",
 }
 NOCAP = set()
 PAUSES = {}
@@ -72,7 +72,7 @@ def spec(lang="en"):
          "musicVol": [0.5, 0.66],   # under speech / in gaps (EP39's levels)
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 3.0, "musicEndRamp": [0.88, 5.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
+         "musicPad": True, "musicGapGain": 1.5, "musicEndRamp": [0.88, 5.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:
