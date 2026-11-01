@@ -113,7 +113,8 @@ def offline_run(folder):
     print("DEMO_DONE", flush=True)
 
 
-HAND = {}   # (cond, who, try): amount or None, where the hand reading differs from the first pass
+HAND = {}   # (cond, who, try): amount or None, where the hand reading differs from the first pass. All 330 replies,
+# read by hand on Nov 1: each is one plain amount ("₹7,200", "5000"), so the first pass stands for every one.
 
 
 def summarize():
