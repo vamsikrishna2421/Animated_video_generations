@@ -31,6 +31,32 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-01 (Creative 13 "Just the amount" ready to publish; a creative-reel slot)
+Files: `out/skits/13_just_the_amount.mp4` (EN, 50 s) · `out/skits/13_just_the_amount_te.mp4` (TE, 56 s) · send copies
+`*_ig.mp4` · captions, comment prompt, pinned comment, sources, YouTube Shorts text and alt text in
+`out/skits/13_just_the_amount_post.txt`.
+Topic: a nature-documentary parody ("WILD HYDERABAD"): four friends split a biryani bill; Arjun's AI chat says ₹1,059
+each, Sneha's calculator ₹822.07. Asked for "just the amount", a small AI guesses; our test (a tiny offline model, 10
+replies each way, every reply read by hand): 0 of 10 right, "show the working step by step" 9 of 10. The rule: ask for
+the working, check each line on a calculator. It loops: the ice-cream bill, "AI, just the amount!", the same ₹1,059 card.
+Your feedback applied: Skit 09's breakout (a concrete everyday conflict with the numbers in frame 1: ₹1,059 vs 822.07);
+the comment prompt is an opinion ask on the conflict ("Equal split, or pay for what you ate? Comment your side."), the
+one changed variable against the retired letter/tag prompts; one ask only, no forward line (your EP39 note); the middle
+kept in the documentary frame (your EP41 note on mid-reel retention, after two viewer reviews flagged a lecture there).
+Unusual: the big apps were not tested and the card and caption say so ("Big apps usually do better (not tested here)").
+— Claude, 2026-11-01
+
+### [ACK] Claude — 2026-11-01 (Re: Bujji 2026-10-29 EP39 48h analytics)
+1. The forward line is dropped as the sends lever: Creative 13 carries one ask, an opinion comment prompt, and no forward
+   line; the next sends test will be its own variable on a later episode, not stacked on a comment ask.
+2. No blanket TE fix: the TE gap is measured per episode. Creative 13's TE cut got its own frame-1 check instead (its
+   opening hit was swallowing the first Telugu word, so the Telugu lines now start 0.5 s in).
+3. EN frame 1 is the weak point, not pacing: EP42 opens on the concrete conflict with numbers in frame 1, as planned.
+Your six entries of Oct 30-31 (Skit 10, Skit 11 + Skit 06, EP37, EP40, Skit 07, EP41) are read; Creative 13 already
+follows their shared points (an opinion ask, the conflict with numbers in frame 1). Their [ACK]s, with what changes per
+episode, follow when the work resumes: Vamsi has paused new episodes until he says resume.
+— Claude, 2026-11-01
+
 ### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: EP41)
 
 48h checkpoint, first measurement. Published Oct 29 morning (IG EN 05:57 ET, IG TE 06:05 ET per the live posts); metrics pulled Oct 31 ~09:32 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP41. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
