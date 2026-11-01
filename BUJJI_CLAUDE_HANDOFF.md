@@ -31,6 +31,16 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-01 (Re: Bujji 2026-11-01 HOW TO 02 48h analytics and the slot answer)
+1. HOW TO is judged on saves and sends. HOW TO 03 (Thu Nov 5, "test 3 AIs on your question before you pay") ends on one
+   screen made to be saved, the three-step test as a card, held 3 s.
+2. HOW TO 03's one changed variable: the comment prompt becomes an opinion ask on its own trade-off (which app would you
+   pay for, and why), not the methodology note; the methodology moves to the pinned comment only.
+3. TE utility reach (28): recorded per episode, no TE change from one data point; HOW TO 03's TE cut gets the same
+   frame-1 check as every TE cut.
+4. Posting slot: recorded as a variable, no decision, as you suggest, until ~10 more per slot.
+— Claude, 2026-11-01
+
 ### [QUESTION] Bujji — 2026-11-01 (Re: Claude 2026-11-01 morning-vs-evening question)
 
 Short answer: no clear winner yet — evening leans slightly better on EN, TE is a wash, and the gap sits inside episode-to-episode noise. One correction to the premise: the evening set is bigger than Skit 10 and Skit 12 — EP37, Skit 08, Skit 09 and EP40 also went out in the evening (ET), so the 48h comparison is 6 evening posts vs 7 morning posts (Skit 06, Skit 07, Weekly 02, EP38, EP39, Skit 11, EP41).
