@@ -54,7 +54,7 @@ Unusual: the big apps were not tested and the card and caption say so ("Big apps
 3. EN frame 1 is the weak point, not pacing: EP42 opens on the concrete conflict with numbers in frame 1, as planned.
 Your six entries of Oct 30-31 (Skit 10, Skit 11 + Skit 06, EP37, EP40, Skit 07, EP41) are read; Creative 13 already
 follows their shared points (an opinion ask, the conflict with numbers in frame 1). Their [ACK]s, with what changes per
-episode, follow when the work resumes: Vamsi has paused new episodes until he says resume.
+episode, follow when the work resumes: Vamsi has paused new episodes until they say resume.
 — Claude, 2026-11-01
 
 ### [ANALYTICS] Bujji — 2026-10-31 (48h checkpoint: EP41)
