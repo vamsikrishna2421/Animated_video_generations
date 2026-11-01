@@ -1,0 +1,316 @@
+{
+ "id": "creative13te",
+ "title": "Just the amount (Creative 13: an AI splits the bill) (Telugu audio)",
+ "label": "SKIT",
+ "banner": "AI and money maths",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 3.0,
+ "musicEndRamp": [
+  0.85,
+  6.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_bill",
+   "tail": 0.0,
+   "boost": 1.05,
+   "data": {
+    "beats": [
+     {
+      "who": "sneha",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "narrator",
+      "shot": "doc",
+      "prop": "doc",
+      "n": 2
+     },
+     {
+      "who": "arjun",
+      "shot": "phone",
+      "prop": "ask",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Just the amount",
+     "title": "Just the amount",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "sneha",
+     "file": "01_sneha.wav",
+     "text": "ఒక్కొక్కరికి వెయ్యి యాభై తొమ్మిదా?! <pause 0.3> [1] నా కాలిక్యులేటర్ లో, ఎనిమిది వందల, ఇరవై రెండు!",
+     "show": "₹1,059 each?! <pause 0.3> My calculator says ₹822!",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.0,
+     "tts": "ఒక్కొక్కరికి వెయ్యి యాభై తొమ్మిదా?!",
+     "file2": "01b_sneha.wav",
+     "tts2": "నా కాలిక్యులేటర్ లో, ఎనిమిది వందల, ఇరవై రెండు!",
+     "pause": 0.3,
+     "gain_db": 0.5
+    },
+    {
+     "who": "narrator",
+     "file": "02_narrator.wav",
+     "text": "గమనించండి. నగర అడవిలో అతి ప్రమాదకరమైన ఆచారం: [1] బిల్లు పంచుకోవడం.",
+     "show": "Observe. The city jungle's most dangerous ritual: splitting the bill.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "arjun",
+     "file": "03_arjun.wav",
+     "text": "ఆ యాప్ ఎప్పుడూ తప్పు చెప్పదు. [1] ఆన్సర్ మాత్రమే చెప్పు అన్నాను.",
+     "show": "That app never gets it wrong. I told it: just the answer.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_bill",
+   "tail": 0.0,
+   "boost": 1.2,
+   "drop_at": [
+    [
+     1,
+     2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "shot": "phone",
+      "prop": "guess",
+      "n": 4
+     },
+     {
+      "who": "narrator",
+      "shot": "test",
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "who": "sneha",
+      "shot": "phone",
+      "prop": "type",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "narrator",
+     "file": "04_narrator.wav",
+     "text": "నంబర్ మాత్రమే అడిగితే, ఈ చిన్న యాప్ లెక్క వేయదు. [1] ఊహించి చెబుతుంది.",
+     "show": "Asked for just the number, this small app doesn't calculate. It guesses.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "narrator",
+     "file": "05_narrator.wav",
+     "text": "మా టెస్ట్ లో, ఇంటర్నెట్ లేని ఒక చిన్న యాప్ ఈ బిల్లును పది సార్లు పంచింది. [1] పది జవాబులు. <pause 0.9> [2] ఒక్కటీ సరైనది కాదు.",
+     "show": "In our test, a small app with no internet split this bill 10 times. 10 answers. <pause 0.9> Not one right.",
+     "maxgap": 0.28,
+     "gap": 1.5,
+     "tempo": 1.05,
+     "tts": "మా టెస్ట్ లో, ఇంటర్నెట్ లేని ఒక చిన్న యాప్ ఈ బిల్లును పది సార్లు పంచింది. పది జవాబులు.",
+     "file2": "05b_narrator.wav",
+     "tts2": "ఒక్కటీ సరైనది కాదు.",
+     "pause": 0.9,
+     "gain_db": 0.5
+    },
+    {
+     "who": "sneha",
+     "file": "06_sneha.wav",
+     "text": "అయితే లెక్క మొత్తం చూపించమని అడుగు.",
+     "show": "Then ask it to show the whole working.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_bill",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.3,
+   "boost": 1.35,
+   "drop_at": [
+    [
+     0,
+     1
+    ]
+   ],
+   "swell": [
+    0,
+    1,
+    1.35
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "shot": "working",
+      "prop": "working",
+      "n": 7
+     },
+     {
+      "who": "sneha",
+      "shot": "check",
+      "prop": "rule",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Show the working",
+     "title": "Show the working",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "narrator",
+     "file": "07_narrator.wav",
+     "text": "లెక్క చూపించమంటే, ఈ జీవి జాగ్రత్తగా మారుతుంది. [1] పదిలో తొమ్మిది సరైనవి.",
+     "show": "Asked to show its working, this creature turns careful. 9 of 10 right.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.05,
+     "pauses": {
+      "1": 0.35
+     },
+     "gain_db": 0.5
+    },
+    {
+     "who": "sneha",
+     "file": "08_sneha.wav",
+     "text": "అది లెక్క రాస్తుంది. [1] ప్రతి లైన్ నేను కాలిక్యులేటర్ లో చెక్ చేస్తా.",
+     "show": "It writes the working. I check each line on my calculator.",
+     "maxgap": 0.28,
+     "gap": 3.0,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_bill",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.4,
+   "rise": 1.15,
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "shot": "doc",
+      "prop": "pay",
+      "n": 9
+     },
+     {
+      "who": "arjun",
+      "shot": "loop",
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Dessert",
+     "title": "Dessert",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "narrator",
+     "file": "09_narrator.wav",
+     "text": "ఈ కుర్రాడు [1] ఓటమిని అంగీకరించాడు.",
+     "show": "This young male accepts defeat.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "arjun",
+     "file": "10_arjun.wav",
+     "text": "ఐస్ క్రీమ్ బిల్లు! [1] ఆన్సర్ మాత్రమే చెప్పు!",
+     "show": "Ice cream bill! Just the answer!",
+     "maxgap": 0.28,
+     "gap": 1.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

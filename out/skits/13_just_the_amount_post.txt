@@ -1,0 +1,81 @@
+SKIT 13: "Just the amount" (a nature-documentary parody at a biryani place: Arjun's AI chat says ₹1,059 each, Sneha's calculator says ₹822.07; a whispering narrator watches the ritual through the leaves; asked for just the number, a small AI guesses: our test, 0 of 10 right; made to show its working: 9 of 10; the AI writes the steps, the calculator checks each line; the young male pays; the ice-cream bill comes and he asks for just the amount again; 50 s English / 56 s Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/13_just_the_amount.mp4 (English page) · out/skits/13_just_the_amount_te.mp4 (Telugu page)
+Send copies: out/skits/13_just_the_amount_ig.mp4 · out/skits/13_just_the_amount_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on Arjun's phone flashing "₹1,059 each" for the
+ice-cream bill, the same card as frame 1, so the replay is Sneha's reaction. The one ask lives in the caption: this reel
+tests an opinion question (Bujji's Skit 09 note) instead of a quiz letter.
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+An AI said ₹1,059 each. The calculator said ₹822.07.
+
+Asked for "just the amount", a small AI doesn't work the sum out. It writes a guess.
+Our test: a tiny free AI (Qwen2.5 3B, offline on a 4-core laptop; not ChatGPT, Gemini or Claude), the same bill 10 times:
+"Reply with just the amount each person pays": 0 of 10 right (₹220 to ₹1,139), about 1 second a reply.
+"Show the working step by step": 9 of 10 right, about 50 seconds a reply.
+Big apps usually do better at sums; we didn't test them. The habit works on any app:
+1. For money, type "Show the working step by step."
+2. Check each line on your calculator. A wrong step shows up in the working; a wrong final number on its own doesn't.
+
+The bill: food ₹2,847 + 5% GST, then a 10% tip on the total, split 4 ways = ₹822.07 each.
+Researchers see it too: Apple's GSM-Symbolic study (Oct 2024) found "the performance of all models declines when only the numerical values in the question are altered". Google's own Gemini help page: "Gemini can hallucinate and present inaccurate information as factual."
+
+=== COMMENT PROMPT ===
+Equal split, or pay for what you ate? Comment your side.
+
+=== HASHTAGS ===
+#AI #AITips #LearnAI #Maths #MoneyTips
+
+=== PINNED_COMMENT ===
+Every result (10 replies each way, every reply read by hand; right = within ₹1 of ₹822.07):
+Qwen2.5-3B: just the amount 0 of 10 (₹220.23, ₹965.63, ₹241.25, ₹1,059, ₹220.23, ₹1,068.25, ₹1,028.64, ₹1,138.88, ₹849, ₹886.50) · show the working 9 of 10 (the 10th had the right total and hit our 400-token limit before dividing by 4) · "write it as one calculator expression" 6 of 10 (its misses were wrong formulas: × 4 where it says ÷ 4, the tip on the wrong amount).
+Qwen2.5-1.5B, the smaller one: just the amount 6 of 10, because it ignored "just the amount" and worked it out anyway (4 slips, e.g. 2,847 × 1.05 written as 2,993.35) · show the working 6 of 10 (3 hit the limit, 1 slip: 2,847 + 142.35 written as 3,089.35, the kind of line a calculator check catches) · one expression 5 of 10.
+So what helped was the working, not the bigger model. The working is also slower: about 50 s instead of 1 s on our laptop.
+How we tested: Qwen's own 4-bit files, llama.cpp, 4 CPU cores, the internet cut, temperature 0.7, up to 400 tokens a reply; the test script was committed before it ran. Arjun, Sneha, Nikhil, Meghana and the biryani place are made up.
+
+=== COVER ===
+Frame 1: four friends at a biryani table; Arjun's phone card "✦ AI chat · tiny offline AI · ₹1,059 each" next to Sneha's calculator "822.07"; Sneha's jaw drop; the lower third "WILD HYDERABAD".
+
+=== ALT_TEXT ===
+Crayon-animated skit styled as a wildlife documentary. Four friends sit at a biryani table: Arjun holds his phone, whose AI chat says ₹1,059 each; Sneha holds a calculator showing 822.07 and gasps. A viewfinder with REC, a timecode and leaves in the foreground; a lower third reads "WILD HYDERABAD · four friends · one bill". Arjun's phone shows his message: food ₹2,847, add 5% GST, then a 10% tip on the total, 4 friends, split equally, just the amount; the reply "₹1,059 each" gets a red "A GUESS" stamp, "replied in 1 second, no working", "4 × ₹1,059 = ₹4,236 for a ₹3,288 bill". Our test card: a tiny AI (Qwen 3B) on a laptop with no internet, "just the amount", the same bill 10 times: ten different amounts from ₹220.23 to ₹1,138.88, "0 of 10 RIGHT", right answer ₹822.07, "Big apps usually do better (not tested here). This habit helps on any app:". Arjun types "Show the working step by step." The reply shows five steps: GST 2,847 × 0.05 = 142.35; 2,847 + 142.35 = 2,989.35; tip 2,989.35 × 0.10 = 298.94; 2,989.35 + 298.94 = 3,288.29; 3,288.29 ÷ 4 = 822.07; "Each pays ₹822.07"; a green "9 of 10 RIGHT", "slower: about 50 s, not 1 s". Each line gets a tick as Sneha's calculator checks it. A rule card: money maths with AI: 1. type "Show the working step by step." 2. check each line on a calculator. Back at the table Arjun holds out ₹822 while his friends high-five ("THE YOUNG MALE · paid ₹822.07 · accepts defeat"). A waiter brings an ice-cream bill of ₹480; Arjun asks his AI for just the amount and his phone flashes "₹1,059 each".
+
+=== SOURCES (for comments) ===
+Apple Machine Learning Research, "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models" (machinelearning.apple.com, October 2024; arXiv 2410.05229).
+Google, Gemini Apps Help, "Learn about responses from Gemini Apps" (support.google.com/gemini/answer/16279220, read Oct 29, 2026).
+Our test: pipeline/creative13/bill_demo.py, series/scripts/creative13_demo/ (Oct 29, 2026).
+
+=== YOUTUBE SHORTS ===
+Title: An AI split our bill: ₹1,059 each. The calculator: ₹822 #shorts
+Description: Asked for "just the amount", a small AI guesses. Our test (Qwen2.5 3B, offline): 0 of 10 right; "Show the working step by step": 9 of 10. For money: ask for the working, check each line on a calculator. Big apps usually do better; the habit works on any app.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+AI cheppindi okkokkariki ₹1,059. Calculator cheppindi ₹822.07.
+
+"Just the amount" ani adigite chinna AI lekka veyadu. Oohinchi oka number raastundi.
+Maa test: chinna free AI (Qwen2.5 3B, offline, 4-core laptop; ChatGPT, Gemini, Claude kaadu), ade bill 10 saarlu:
+"Reply with just the amount each person pays": 10 lo 0 sarainavi (₹220 nunchi ₹1,139), okko reply ki dadaapu 1 second.
+"Show the working step by step": 10 lo 9 sarainavi, okko reply ki dadaapu 50 seconds.
+Pedda apps lekkallo saadhaaranamgaa inkaa baagaa chestaayi; vaatini memu test cheyyaledu. Ee alavaatu e app lo ainaa panichestundi:
+1. Dabbu lekkalaki "Show the working step by step." ani type cheyyandi.
+2. Prati line ni mee calculator lo check cheyyandi. Tappu step working lo kanipistundi; okka final number lo kanipinchadu.
+
+Bill: food ₹2,847 + 5% GST, tarvaata total meeda 10% tip, 4 mandiki samaanamgaa = okkokkariki ₹822.07.
+Researchers kooda idi choosaaru: Apple GSM-Symbolic study (Oct 2024): prashna lo numbers maatrame maaristhe anni models performance taggindi. Google Gemini help page: "Gemini can hallucinate and present inaccurate information as factual."
+
+=== COMMENT PROMPT ===
+Equal split aa, leka evaru tinnadi vaalle kattaalaa? Mee side comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AITips #Maths #MoneyTips
+
+=== PINNED_COMMENT ===
+Anni results (okko vidhaanam lo 10 replies, annee chadivaam; ₹822.07 ki ₹1 lopu unte sari):
+Qwen2.5-3B: just the amount 10 lo 0 (₹220.23 nunchi ₹1,138.88) · show the working 10 lo 9 (10vadi lo total sari, 400-token limit ki ÷ 4 mundu aagipoyindi) · okka calculator expression 10 lo 6 (tappulu formula lone: ÷ 4 ani cheppi × 4, tip tappu amount meeda).
+Qwen2.5-1.5B, chinnadi: just the amount 10 lo 6, endukante "just the amount" ni pattinchukokunda lekka vesindi (4 slips) · show the working 10 lo 6 (3 limit ki aagaayi, 1 slip: 2,847 + 142.35 ni 3,089.35 ani raasindi; calculator check idi pattukuntundi) · okka expression 10 lo 5.
+Ante sahaayam chesindi working, pedda model kaadu. Working konchem slow: maa laptop lo 1 s badulu dadaapu 50 s.
+Memu ela test chesaam: Qwen 4-bit files, llama.cpp, 4 CPU cores, internet cut, temperature 0.7, okko reply ki 400 tokens varaku; test script run cheyyaka mundu commit chesaam. Arjun, Sneha, Nikhil, Meghana, biryani place kalpitam.
+Sources: English pinned comment lo unnaayi.
+
+=== COVER ===
+Frame 1: biryani table daggara naluguru friends; Arjun phone card "✦ AI chat · tiny offline AI · ₹1,059 each", pakkana Sneha calculator "822.07"; Sneha shock; "WILD HYDERABAD" lower third (English visuals).

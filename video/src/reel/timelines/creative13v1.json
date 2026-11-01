@@ -1,0 +1,863 @@
+{
+ "id": "creative13v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI and money maths",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "Just the amount (Creative 13: an AI splits the bill)",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   719,
+   743
+  ],
+  [
+   989,
+   1013
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   391,
+   1.05
+  ],
+  [
+   391,
+   900,
+   1.2
+  ],
+  [
+   900,
+   1268,
+   1.35
+  ],
+  [
+   1268,
+   1504,
+   1.7
+  ],
+  [
+   1013,
+   1268,
+   1.35,
+   1
+  ],
+  [
+   1268,
+   1504,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1504,
+ "music": "reel/creative13v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_bill",
+   "data": {
+    "beats": [
+     {
+      "who": "sneha",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "narrator",
+      "shot": "doc",
+      "prop": "doc",
+      "n": 2
+     },
+     {
+      "who": "arjun",
+      "shot": "phone",
+      "prop": "ask",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Just the amount",
+     "title": "Just the amount",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 391,
+   "lines": [
+    {
+     "who": "sneha",
+     "name": "Sneha",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative13v1/line_01.wav",
+     "from": 4,
+     "frames": 109,
+     "words": [
+      {
+       "w": "₹1,059",
+       "from": 7,
+       "to": 24
+      },
+      {
+       "w": "each?",
+       "from": 24,
+       "to": 39
+      },
+      {
+       "w": "My",
+       "from": 39,
+       "to": 46
+      },
+      {
+       "w": "calculator",
+       "from": 46,
+       "to": 82
+      },
+      {
+       "w": "says",
+       "from": 82,
+       "to": 94
+      },
+      {
+       "w": "₹822!",
+       "from": 94,
+       "to": 109
+      }
+     ],
+     "cues": {
+      "1": 58
+     }
+    },
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative13v1/line_02.wav",
+     "from": 121,
+     "frames": 127,
+     "words": [
+      {
+       "w": "Observe.",
+       "from": 122,
+       "to": 148
+      },
+      {
+       "w": "The",
+       "from": 148,
+       "to": 152
+      },
+      {
+       "w": "urban",
+       "from": 152,
+       "to": 158
+      },
+      {
+       "w": "jungle's",
+       "from": 158,
+       "to": 168
+      },
+      {
+       "w": "most",
+       "from": 168,
+       "to": 173
+      },
+      {
+       "w": "dangerous",
+       "from": 173,
+       "to": 189
+      },
+      {
+       "w": "ritual:",
+       "from": 189,
+       "to": 198
+      },
+      {
+       "w": "splitting",
+       "from": 198,
+       "to": 231
+      },
+      {
+       "w": "the",
+       "from": 231,
+       "to": 235
+      },
+      {
+       "w": "bill.",
+       "from": 235,
+       "to": 242
+      }
+     ],
+     "cues": {
+      "1": 198
+     }
+    },
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative13v1/line_03.wav",
+     "from": 257,
+     "frames": 125,
+     "words": [
+      {
+       "w": "The",
+       "from": 258,
+       "to": 265
+      },
+      {
+       "w": "AI",
+       "from": 265,
+       "to": 271
+      },
+      {
+       "w": "is",
+       "from": 271,
+       "to": 276
+      },
+      {
+       "w": "never",
+       "from": 276,
+       "to": 291
+      },
+      {
+       "w": "wrong.",
+       "from": 291,
+       "to": 304
+      },
+      {
+       "w": "I",
+       "from": 304,
+       "to": 307
+      },
+      {
+       "w": "told",
+       "from": 307,
+       "to": 327
+      },
+      {
+       "w": "it:",
+       "from": 327,
+       "to": 334
+      },
+      {
+       "w": "just",
+       "from": 334,
+       "to": 354
+      },
+      {
+       "w": "the",
+       "from": 354,
+       "to": 361
+      },
+      {
+       "w": "amount.",
+       "from": 361,
+       "to": 375
+      }
+     ],
+     "cues": {
+      "1": 304
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_bill",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "shot": "phone",
+      "prop": "guess",
+      "n": 4
+     },
+     {
+      "who": "narrator",
+      "shot": "test",
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "who": "sneha",
+      "shot": "phone",
+      "prop": "type",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 391,
+   "frames": 509,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative13v1/line_04.wav",
+     "from": 0,
+     "frames": 144,
+     "words": [
+      {
+       "w": "When",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "you",
+       "from": 6,
+       "to": 10
+      },
+      {
+       "w": "ask",
+       "from": 10,
+       "to": 14
+      },
+      {
+       "w": "for",
+       "from": 14,
+       "to": 24
+      },
+      {
+       "w": "just",
+       "from": 24,
+       "to": 33
+      },
+      {
+       "w": "the",
+       "from": 33,
+       "to": 37
+      },
+      {
+       "w": "number,",
+       "from": 37,
+       "to": 55
+      },
+      {
+       "w": "this",
+       "from": 55,
+       "to": 67
+      },
+      {
+       "w": "small",
+       "from": 67,
+       "to": 73
+      },
+      {
+       "w": "AI",
+       "from": 73,
+       "to": 76
+      },
+      {
+       "w": "doesn't",
+       "from": 76,
+       "to": 89
+      },
+      {
+       "w": "calculate.",
+       "from": 89,
+       "to": 103
+      },
+      {
+       "w": "It",
+       "from": 103,
+       "to": 122
+      },
+      {
+       "w": "guesses.",
+       "from": 122,
+       "to": 136
+      }
+     ],
+     "cues": {
+      "1": 103
+     }
+    },
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative13v1/line_05.wav",
+     "from": 159,
+     "frames": 235,
+     "words": [
+      {
+       "w": "In",
+       "from": 160,
+       "to": 165
+      },
+      {
+       "w": "our",
+       "from": 165,
+       "to": 171
+      },
+      {
+       "w": "test,",
+       "from": 171,
+       "to": 198
+      },
+      {
+       "w": "a",
+       "from": 198,
+       "to": 201
+      },
+      {
+       "w": "tiny",
+       "from": 201,
+       "to": 209
+      },
+      {
+       "w": "offline",
+       "from": 209,
+       "to": 222
+      },
+      {
+       "w": "AI",
+       "from": 222,
+       "to": 226
+      },
+      {
+       "w": "split",
+       "from": 226,
+       "to": 242
+      },
+      {
+       "w": "this",
+       "from": 242,
+       "to": 250
+      },
+      {
+       "w": "bill",
+       "from": 250,
+       "to": 258
+      },
+      {
+       "w": "10",
+       "from": 258,
+       "to": 263
+      },
+      {
+       "w": "times.",
+       "from": 263,
+       "to": 274
+      },
+      {
+       "w": "10",
+       "from": 274,
+       "to": 300
+      },
+      {
+       "w": "answers.",
+       "from": 300,
+       "to": 314
+      },
+      {
+       "w": "Not",
+       "from": 352,
+       "to": 357
+      },
+      {
+       "w": "a",
+       "from": 357,
+       "to": 359
+      },
+      {
+       "w": "single",
+       "from": 359,
+       "to": 373
+      },
+      {
+       "w": "one",
+       "from": 373,
+       "to": 378
+      },
+      {
+       "w": "right.",
+       "from": 378,
+       "to": 386
+      }
+     ],
+     "cues": {
+      "1": 273,
+      "2": 352
+     }
+    },
+    {
+     "who": "sneha",
+     "name": "Sneha",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative13v1/line_06.wav",
+     "from": 439,
+     "frames": 48,
+     "words": [
+      {
+       "w": "So",
+       "from": 443,
+       "to": 447
+      },
+      {
+       "w": "make",
+       "from": 447,
+       "to": 453
+      },
+      {
+       "w": "it",
+       "from": 453,
+       "to": 456
+      },
+      {
+       "w": "show",
+       "from": 456,
+       "to": 462
+      },
+      {
+       "w": "its",
+       "from": 462,
+       "to": 467
+      },
+      {
+       "w": "working.",
+       "from": 467,
+       "to": 478
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_bill",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "shot": "working",
+      "prop": "working",
+      "n": 7
+     },
+     {
+      "who": "sneha",
+      "shot": "check",
+      "prop": "rule",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Show the working",
+     "title": "Show the working",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 900,
+   "frames": 368,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative13v1/line_07.wav",
+     "from": 9,
+     "frames": 146,
+     "words": [
+      {
+       "w": "Made",
+       "from": 10,
+       "to": 15
+      },
+      {
+       "w": "to",
+       "from": 15,
+       "to": 19
+      },
+      {
+       "w": "show",
+       "from": 19,
+       "to": 25
+      },
+      {
+       "w": "its",
+       "from": 25,
+       "to": 34
+      },
+      {
+       "w": "working,",
+       "from": 34,
+       "to": 62
+      },
+      {
+       "w": "the",
+       "from": 62,
+       "to": 66
+      },
+      {
+       "w": "creature",
+       "from": 66,
+       "to": 77
+      },
+      {
+       "w": "becomes",
+       "from": 77,
+       "to": 86
+      },
+      {
+       "w": "careful.",
+       "from": 86,
+       "to": 120
+      },
+      {
+       "w": "9",
+       "from": 120,
+       "to": 122
+      },
+      {
+       "w": "out",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "of",
+       "from": 127,
+       "to": 130
+      },
+      {
+       "w": "10",
+       "from": 130,
+       "to": 138
+      },
+      {
+       "w": "right.",
+       "from": 138,
+       "to": 146
+      }
+     ],
+     "cues": {
+      "1": 113
+     }
+    },
+    {
+     "who": "sneha",
+     "name": "Sneha",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative13v1/line_08.wav",
+     "from": 173,
+     "frames": 95,
+     "words": [
+      {
+       "w": "It",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "writes",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "the",
+       "from": 188,
+       "to": 200
+      },
+      {
+       "w": "steps.",
+       "from": 200,
+       "to": 222
+      },
+      {
+       "w": "I",
+       "from": 222,
+       "to": 224
+      },
+      {
+       "w": "check",
+       "from": 224,
+       "to": 231
+      },
+      {
+       "w": "each",
+       "from": 231,
+       "to": 237
+      },
+      {
+       "w": "line",
+       "from": 237,
+       "to": 243
+      },
+      {
+       "w": "on",
+       "from": 243,
+       "to": 246
+      },
+      {
+       "w": "my",
+       "from": 246,
+       "to": 250
+      },
+      {
+       "w": "calculator.",
+       "from": 250,
+       "to": 264
+      }
+     ],
+     "cues": {
+      "1": 222
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_bill",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "shot": "doc",
+      "prop": "pay",
+      "n": 9
+     },
+     {
+      "who": "arjun",
+      "shot": "loop",
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Dessert",
+     "title": "Dessert",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1268,
+   "frames": 236,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative13v1/line_09.wav",
+     "from": 9,
+     "frames": 59,
+     "words": [
+      {
+       "w": "The",
+       "from": 15,
+       "to": 19
+      },
+      {
+       "w": "young",
+       "from": 19,
+       "to": 26
+      },
+      {
+       "w": "male",
+       "from": 26,
+       "to": 31
+      },
+      {
+       "w": "accepts",
+       "from": 31,
+       "to": 45
+      },
+      {
+       "w": "defeat.",
+       "from": 45,
+       "to": 60
+      }
+     ],
+     "cues": {
+      "1": 31
+     }
+    },
+    {
+     "who": "arjun",
+     "name": "Arjun",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative13v1/line_10.wav",
+     "from": 83,
+     "frames": 98,
+     "words": [
+      {
+       "w": "Ice",
+       "from": 83,
+       "to": 91
+      },
+      {
+       "w": "cream",
+       "from": 91,
+       "to": 103
+      },
+      {
+       "w": "bill!",
+       "from": 103,
+       "to": 125
+      },
+      {
+       "w": "AI,",
+       "from": 125,
+       "to": 133
+      },
+      {
+       "w": "just",
+       "from": 133,
+       "to": 152
+      },
+      {
+       "w": "the",
+       "from": 152,
+       "to": 160
+      },
+      {
+       "w": "amount!",
+       "from": 160,
+       "to": 176
+      }
+     ],
+     "cues": {
+      "1": 125
+     }
+    }
+   ]
+  }
+ ]
+}
