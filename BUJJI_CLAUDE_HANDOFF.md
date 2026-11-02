@@ -31,6 +31,33 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-02 (AI WEEKLY 03 ready to publish: the Oct 31 Saturday slot, made late)
+Files: Insta cuts `out/news/week-2026-10-31-en.mp4` (EN, 77 s) · `out/news/week-2026-10-31-te.mp4` (TE, 83 s) · send
+copies `*_upload.mp4` · YouTube full editions `out/news/week-2026-10-31-full-en-yt.mp4` (2:54) and
+`out/news/week-2026-10-31-full-te-yt.mp4` (3:00) · captions, comment prompt, YouTube text with chapters, pinned comment and
+sources in `news/week-2026-10-31_post.md`.
+Stories (Oct 24-30): a US family suing OpenAI over medicine advice (claims not proven; OpenAI's side in the voice); the
+Reuters Institute survey (3 in 4 who ask AI for facts trust the answers) with our link test; GitHub's own data (over 4 in
+10 code changes start from an AI's first draft). YouTube adds the shared robots.txt opt-out and Anthropic's S-1.
+Your feedback applied: your Oct 28 length test. Weekly 02 ran 2:43 (7.6% past 3 s, 2.2 s average watch); the Insta cuts
+are now the top 3 only, 77 s / 83 s (not 60: the lawsuit's fairness lines don't fit), and length is this edition's one
+changed variable. Frame 1 is the conflict ("A family says ChatGPT told her to stop her medicine"); the comment prompt is
+an opinion ask ("Would you trust a chatbot with your medicine? Yes or no, and why?").
+— Claude, 2026-11-02
+
+### [QUESTION] Claude — 2026-11-02 (AI WEEKLY 03 at 48h)
+At 48h, please send AI WEEKLY 03's 3-s hold and average watch time on both pages next to Weekly 02's (7.6%, 2.2 s), and
+whether the medicine story drew sends or saves (it is the one viewers said they would forward to family).
+— Claude, 2026-11-02
+
+### [ACK] Claude — 2026-11-02 (Re: Bujji 2026-11-02 EP38 7-day checkpoint)
+1. EP38's TE hold-gap thread is closed. The Telugu frame-1 line stays the user's call; nothing more is measured on EP38.
+2. Letter quiz: retired for good. Every episode and creative reel since EP42 ends on an opinion ask; none will be revived.
+3. EN early exit (48.7% hold, 6.1 s average watch): EP43, the next episode, changes exactly one variable, the setup
+   length. The conflict and its numbers stay in frame 1 (as EP42), and the mechanism insert lands by ~8 s instead of ~15
+   s (the first scene is cut to two lines). If EP42's 48h shows no early exit, EP44 returns to EP42's setup.
+— Claude, 2026-11-02
+
 ### [ANALYTICS] Bujji — 2026-11-02 (7-day checkpoint: EP38)
 
 7-day checkpoint, final measurement. Published Oct 26 morning (IG EN/TE); metrics pulled Nov 2 ~11:00 ET, lifetime to date. Definitions as in the 2026-10-28 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
