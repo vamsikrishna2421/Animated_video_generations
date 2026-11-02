@@ -11,13 +11,13 @@ import { browWiggle, doubleTake, ponder, exaggerate, follow, Fumble, FPose, idle
 
 // Daily AI-news reel (9:16). One timeline per episode/language from pipeline/news_build.py.
 type W = { w: string; s: number; e: number };
-type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean; hush?: boolean };
+type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean; hush?: boolean; hold?: number; quiet?: boolean };
 type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
-  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[];
+  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[]; recap?: string;
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase" };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase"; hookMascot?: boolean };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 // English captions over a Telugu voice show whole phrases (word order differs); English voice keeps karaoke.
@@ -373,12 +373,13 @@ const LowerThird: React.FC<{ label: string; headline: string; ticker: string; ac
 const BigNumber: React.FC<{ c: Card; accent: string }> = ({ c, accent }) => {
   const f = useCurrentFrame();
   const t = f - (c.f - 2);
-  if (t < 0 || t > 74) return null;
-  const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 60, c.f + 72);
+  const hold = c.hold ?? 60; // frames the number stays full-screen before it fades (spec `hold`)
+  if (t < 0 || t > hold + 14) return null;
+  const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + hold, c.f + hold + 12);
   return (
-    <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${accent}55, transparent 62%), rgba(5,8,22,0.97)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
-      <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 6, color: accent }}>{c.k}</div>
-      <div style={{ fontFamily: F.archivo, fontSize: c.v.length > 14 ? 96 : 170, lineHeight: 1.05, color: B.white, textAlign: "center", padding: "0 40px", whiteSpace: c.v.length > 14 ? "nowrap" : undefined, transform: `scale(${1.25 - 0.25 * inP})` }}>{c.v}</div>
+    <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${accent}55, transparent 62%), rgba(5,8,22,1)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
+      <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 36, letterSpacing: 5, lineHeight: 1.35, color: accent, textAlign: "center", padding: "0 110px" }}>{c.k}</div>
+      <div style={{ fontFamily: F.archivo, fontSize: c.v.length > 14 ? 96 : c.v.length > 9 ? 130 : 170, lineHeight: 1.05, color: B.white, textAlign: "center", padding: "0 40px", whiteSpace: c.v.length > 9 ? "nowrap" : undefined, transform: `scale(${1.25 - 0.25 * inP})` }}>{c.v}</div>
     </AbsoluteFill>
   );
 };
@@ -478,7 +479,7 @@ const ScrollLock: React.FC<{ end: number }> = ({ end }) => {
   );
 };
 
-const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string }> = ({ seg, range, kicker = "YOUR WEEK IN AI", title = "AI NEWS" }) => {
+const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string; mascot?: boolean }> = ({ seg, range, kicker = "YOUR WEEK IN AI", title = "AI NEWS", mascot = true }) => {
   const f = useCurrentFrame();
   // the last sentence ("Here's your AI news...") swaps to the title card
   const here = seg.words.find((w, i) => i > 0 && /^here/i.test(w.w));
@@ -505,7 +506,7 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string 
         <div style={{ marginTop: 18, fontFamily: F.inter, fontWeight: 800, fontSize: title.length > 8 ? 120 : 150, letterSpacing: -6, color: B.white, lineHeight: 1, textAlign: "center" }}>{title}</div>
         <div style={{ marginTop: 24, fontFamily: F.inter, fontWeight: 800, fontSize: 56, color: B.cyan }}>{range}</div>
       </AbsoluteFill>
-      <Presenter cues={[]} mood="shock" x={985} y={1520} s={0.28} />
+      {mascot && <Presenter cues={[]} mood="shock" x={985} y={1520} s={0.28} />}
       <Caps words={seg.words} bottom={390} size={86} max={3} />
     </AbsoluteFill>
   );
@@ -525,7 +526,7 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string; recap?: string
             return (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 22, marginBottom: 20, opacity: p, transform: `translateX(${(1 - p) * 80}px)` }}>
                 <div style={{ width: 16, height: 70, borderRadius: 8, background: s.accent }} />
-                <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 44, lineHeight: 1.1, color: B.white }}>{(s.headline ?? []).join(" ")}</div>
+                <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 44, lineHeight: 1.1, color: B.white }}>{s.recap ?? (s.headline ?? []).join(" ")}</div>
               </div>
             );
           })}
@@ -558,12 +559,14 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
   const voiceEnd = outroStart + (outroSeg.words[outroSeg.words.length - 1]?.e ?? 0) + 6; // the end card may start under the last line
   // `drop` cards duck the bed before their number; `hush` cards cut it to silence for ~1 s (the stop before the key number)
   const drops = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => ({ f: starts[tl.segments.indexOf(s)] + c.f, big: !!c.big, hush: !!c.hush })));
+  // `quiet` cards sink the bed under a sombre line for `hold` frames (no impact, no pop)
+  const quiets = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.quiet).map((c) => ({ f: starts[tl.segments.indexOf(s)] + c.f, h: c.hold ?? 150 })));
   return (
     <AbsoluteFill style={{ background: B.night }}>
       <BrandFonts />
       {tl.segments.map((s, i) => (
         <Sequence key={s.name} from={starts[i]} durationInFrames={s.frames}>
-          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} lean={tl.lean} ticker={tl.musicBase ? "" : stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
+          {s.name === "hook" ? <Hook seg={s} range={tl.range} kicker={tl.kicker} title={tl.title} mascot={tl.hookMascot !== false} /> : s.name === "outro" ? <Outro seg={s} stories={stories} handle={handle} recap={tl.recap} /> : tl.look === "broadcast" ? <BroadcastStory seg={s} n={stories.indexOf(s) + 1} total={stories.length} lean={tl.lean} ticker={tl.musicBase ? "" : stories.filter((o) => o !== s).map((o) => (o.headline ?? []).join(" ")).join("   •   ")} /> : <Story seg={s} n={stories.indexOf(s) + 1} total={stories.length} />}
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
@@ -585,7 +588,8 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
         // the bed sits lower through the middle stories and climbs through the last story into the CTA
         const v = fr >= lastStory ? base * interpolate(fr, [lastStory, outroStart], [0.9, 1.15], cl) : base * interpolate(fr, [starts[1], lastStory], [0.8, 0.9], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
-        return v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0, 0, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
+        const hushQ = quiets.reduce((g, q) => g * interpolate(fr, [q.f - 14, q.f, q.f + q.h, q.f + q.h + 24], [1, 0.2, 0.2, 1], cl), 1);
+        return hushQ * v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0.15, 0.15, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
       }} />
       {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 1 : d.big ? 0.55 : 0.4} /></Sequence>)}
       {drops.filter((d) => d.hush).map((d) => <Sequence key={`r${d.f}`} from={d.f - 86} durationInFrames={50} layout="none"><Audio src={A("riser")} volume={0.4} /></Sequence>)}
@@ -595,7 +599,7 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
       <Sequence from={outroStart} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.45} /></Sequence>
       {starts.slice(1).map((s) => <Sequence key={`w${s}`} from={s - 8} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.4} /></Sequence>)}
       {tl.musicBase && starts.slice(1, -1).map((s) => <Sequence key={`st${s}`} from={s + 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.5} /></Sequence>)}
-      {stories.map((s) => (s.cards ?? []).map((c, j) => (
+      {stories.map((s) => (s.cards ?? []).map((c, j) => c.quiet ? null : (
         <Sequence key={`${s.name}${j}`} from={starts[tl.segments.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.35} /></Sequence>
       )))}
       <Sequence from={followAbs + CTA_SFX.follow.click} durationInFrames={30} layout="none"><Audio src={A("click")} volume={0.8} /></Sequence>

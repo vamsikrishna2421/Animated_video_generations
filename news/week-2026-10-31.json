@@ -1,0 +1,239 @@
+{
+ "id": "week-2026-10-31",
+ "date": "31 OCT 2026",
+ "range": "OCT 24 - 30",
+ "edition": "AI WEEKLY · 03",
+ "kicker": "AI NEWS THIS WEEK",
+ "title": "AI WEEKLY",
+ "recap": "TOP 3 · THIS WEEK",
+ "look": "broadcast",
+ "lean": true,
+ "musicBase": 0.36,
+ "musicBaseYT": 0.24,
+ "storyLead": 14,
+ "storyTail": 16,
+ "captionMode_te": "phrase",
+ "labs": [
+  "OPENAI",
+  "REUTERS",
+  "GITHUB"
+ ],
+ "hook": {
+  "lines": [
+   [
+    "A family says ChatGPT told her to ",
+    "stop her medicine",
+    ""
+   ],
+   [
+    "Do people ",
+    "trust AI answers?",
+    ""
+   ],
+   [
+    "GitHub's ",
+    "big number",
+    ""
+   ]
+  ],
+  "hits": [
+   "stop",
+   "trust",
+   "big"
+  ],
+  "hits_te": [
+   "ఆపేయమని",
+   "నమ్ముతున్నారా",
+   "నంబర్"
+  ],
+  "text": "A family says ChatGPT told their daughter to stop her epilepsy medicine. Do people trust AI answers? And GitHub's big number.",
+  "tts": "A family says chat G P T told their daughter to stop her epilepsy medicine. Do people trust A I answers? And Git Hub's big number.",
+  "tts_te": "తమ కూతురికి ఫిట్స్ మందు ఆపేయమని చాట్ జీ పీ టీ చెప్పిందట, అని ఒక కుటుంబం అంటోంది. జనం ఏ ఐ జవాబుల్ని నమ్ముతున్నారా? ఇంకా, గిట్ హబ్ పెద్ద నంబర్."
+ },
+ "stories": [
+  {
+   "org": "OPENAI",
+   "accent": "#EF4444",
+   "tag": "HEALTH",
+   "headline": [
+    "A family sues over",
+    "ChatGPT's medicine advice"
+   ],
+   "dek": "Lawsuit filed Oct 27 · claims not proven",
+   "chapter": "A family sues over ChatGPT's medicine advice",
+   "text": "OpenAI is being sued in the US. The family says it gave her a 25-day plan to stop her medicine, and said: don't tell your doctor. She died in February. Nothing is proven, and OpenAI says it was an older version. Never change a medicine on a chatbot's word.",
+   "tts": [
+    "Open A.I. is being sued in America. The family says it gave her a twenty-five day plan to stop her medicine, and said: don't tell your doctor.",
+    "She died in February.",
+    "Nothing is proven. Open A.I. says it was an older version. Never change a medicine on a chatbot's word."
+   ],
+   "tts_te": [
+    "అమెరికాలో ఓపెన్ ఏ ఐ మీద కేసు పడింది. పాతిక రోజుల్లో మందు ఆపేసే ప్లాన్ ఇచ్చి, డాక్టర్ కి చెప్పొద్దని అది చెప్పిందట, అని కుటుంబం అంటోంది.",
+    "ఫిబ్రవరిలో ఆమె చనిపోయారు.",
+    "ఇంకా ఏదీ రుజువు కాలేదు, అది పాత వెర్షన్ అని ఓపెన్ ఏ ఐ అంటోంది. చాట్ బాట్ చెప్పిందని ఏ మందునీ మార్చొద్దు."
+   ],
+   "pause": 1.2,
+   "cards": [
+    {
+     "k": "LAWSUIT · SAN FRANCISCO · OCT 27",
+     "v": "Family sues OpenAI",
+     "cue": "sued",
+     "cue_te": "కేసు"
+    },
+    {
+     "k": "THEY SAY CHATGPT GAVE HER",
+     "v": "A 25-day plan to stop her epilepsy pills",
+     "cue": "plan",
+     "cue_te": "పాతిక"
+    },
+    {
+     "k": "AND, THEY SAY, TOLD HER",
+     "v": "\"Don't tell your doctor\"",
+     "cue": "don't",
+     "cue_te": "డాక్టర్",
+     "drop": true
+    },
+    {
+     "k": "SHE DIED IN FEBRUARY",
+     "v": "Her family blames the plan",
+     "part": 2,
+     "quiet": true,
+     "hold": 110
+    },
+    {
+     "k": "OPENAI: IT WAS AN OLDER VERSION",
+     "v": "Nothing proven yet",
+     "part": 3
+    },
+    {
+     "k": "THE RULE",
+     "v": "Change a medicine only with your doctor",
+     "cue": "Never",
+     "cue_te": "చాట్"
+    }
+   ],
+   "points": [
+    "Filed Oct 27, San Francisco Superior Court (claims not proven)",
+    "Alleged: a ~25-day plan to stop her epilepsy medicine, and \"don't tell your doctor\"",
+    "She died in February; the examiner: sudden unexpected death in epilepsy",
+    "OpenAI: ChatGPT is \"not a substitute for medical care\"; she used an older version"
+   ],
+   "sources": "KIRO · The New York Times · HLTH · MLex",
+   "recap": "A family sues over ChatGPT's medicine advice"
+  },
+  {
+   "org": "REUTERS INSTITUTE",
+   "accent": "#F59E0B",
+   "tag": "TRUST",
+   "headline": [
+    "3 in 4 trust",
+    "AI's factual answers"
+   ],
+   "dek": "Oct 29 · about 2,000 people in each of 9 countries (India not surveyed)",
+   "chapter": "3 in 4 trust AI's factual answers",
+   "text": "Next, the Reuters Institute, nine countries, not India: three in four who ask AI for facts trust its answers. Our test of a small offline AI, not the big apps: 64 of 78 checkable links were dead. Open the source first.",
+   "tts": "Next, the Reuters Institute, nine countries, not India: three in four who ask A I for facts, trust its answers. Our test of a small offline A I, not the big apps: sixty-four of seventy-eight checkable links were dead. Open the source first.",
+   "tts_te": "తర్వాత, రాయిటర్స్ ఇన్స్టిట్యూట్ సర్వే, తొమ్మిది దేశాలు, ఇండియా లేదు: సమాచారం కోసం ఏ ఐ ని అడిగే వాళ్ళలో, నలుగురిలో ముగ్గురు దాని జవాబులు నమ్ముతున్నారు. పెద్ద యాప్స్ కాదు, ఇంటర్నెట్ లేని ఒక చిన్న ఏ ఐ తో మా టెస్ట్: చెక్ చేయగలిగిన డెబ్బై ఎనిమిది లింకుల్లో అరవై నాలుగు పనిచేయలేదు. ముందు సోర్స్ ఓపెన్ చేయండి.",
+   "cards": [
+    {
+     "k": "REUTERS INSTITUTE · OCT 29 · 9 COUNTRIES, NOT INDIA",
+     "v": "About 2,000 people in each",
+     "cue": "Reuters",
+     "cue_te": "రాయిటర్స్"
+    },
+    {
+     "k": "OF PEOPLE WHO ASK AI FOR FACTS · TRUST ITS ANSWERS",
+     "v": "3 in 4",
+     "cue": "three",
+     "cue_te": "నలుగురిలో",
+     "drop": true,
+     "big": true,
+     "hold": 100
+    },
+    {
+     "k": "OUR TEST · A SMALL OFFLINE AI, NOT A BIG CHAT APP · 150 LINKS, 78 WE COULD CHECK",
+     "v": "64 of 78 dead",
+     "cue": "test",
+     "cue_te": "పెద్ద"
+    },
+    {
+     "k": "BEFORE YOU TRUST IT",
+     "v": "Open the source",
+     "cue": "source",
+     "cue_te": "సోర్స్"
+    }
+   ],
+   "points": [
+    "75% of people who used AI for factual questions trust the answers",
+    "Weekly use of AI chatbots: 34% (2025) to 51% (2026), in the six countries asked both years",
+    "Nine countries, about 2,000 people each, YouGov, Aug-Sep 2026; India not among them",
+    "Our test (Nov 2): a small offline AI wrote 150 links; of the 78 we could check, 64 were dead"
+   ],
+   "sources": "Reuters Institute (Simon, Nielsen, Fletcher) · our test: Creative 14, Oct 30 reel",
+   "recap": "3 in 4 trust AI's factual answers"
+  },
+  {
+   "org": "GITHUB",
+   "accent": "#22C55E",
+   "tag": "CODING",
+   "headline": [
+    "How much code",
+    "starts with AI?"
+   ],
+   "dek": "GitHub Octoverse, Oct 28 · GitHub's own data, Oct 2025 - Sep 2026",
+   "chapter": "How much code starts with AI?",
+   "text": "Finally, GitHub, where coders keep their code. Its own data: how many code changes now start from an AI's first draft? More than four in ten. In March, under two in ten. So learn to check AI's code, line by line.",
+   "tts": [
+    "Finally, Git Hub, where coders keep their code. Its own data: how many code changes now start from an A I's first draft?",
+    "More than four in ten. In March, under two in ten. So, learn to check A I code, line by line."
+   ],
+   "tts_te": [
+    "చివరగా, గిట్ హబ్, కోడర్లు తమ కోడ్ పెట్టుకునే చోటు. దాని సొంత డేటా: ఎన్ని కోడ్ మార్పులు ఏ ఐ రాసిన మొదటి డ్రాఫ్ట్ తో మొదలవుతున్నాయి?",
+    "పదింట్లో నాలుగు కంటే ఎక్కువ. మార్చి లో, పదింట్లో రెండు కూడా లేవు. అందుకే, ఏ ఐ రాసిన కోడ్ ని లైన్ లైన్ గా చెక్ చేయడం నేర్చుకోండి."
+   ],
+   "pause": 1.3,
+   "tail": 40,
+   "cards": [
+    {
+     "k": "GITHUB OCTOVERSE · OCT 28 · ITS OWN DATA (IT SELLS AI CODING TOOLS)",
+     "v": "Where coders keep their code",
+     "cue": "GitHub",
+     "cue_te": "గిట్"
+    },
+    {
+     "k": "CODE CHANGES (PULL REQUESTS) FROM AN AI'S FIRST DRAFT · SEPT 2026 · MARCH: UNDER 2 IN 10",
+     "v": "Over 4 in 10",
+     "part": 2,
+     "drop": true,
+     "big": true,
+     "hush": true,
+     "hold": 150
+    },
+    {
+     "k": "SKILL TO LEARN",
+     "v": "Check AI's code, line by line",
+     "cue": "line",
+     "cue_te": "అందుకే"
+    }
+   ],
+   "points": [
+    "Sept 2026: over 40% of pull requests started with an AI agent's first draft (March: 17%)",
+    "GitHub's own data; it sells AI coding tools"
+   ],
+   "sources": "GitHub Octoverse 2026 · Digit · Analytics India Magazine",
+   "recap": "Over 4 in 10 code changes start with AI (GitHub)"
+  }
+ ],
+ "outro": {
+  "text": "Would you trust a chatbot with your medicine? Tell us in the comments.",
+  "tts": [
+   "Would you trust a chatbot with your medicine?",
+   "Tell us in the comments."
+  ],
+  "tts_te": "మీ మందుల విషయంలో చాట్ బాట్ ని నమ్ముతారా? కామెంట్ లో చెప్పండి.",
+  "tail": 150,
+  "pause": 0.4
+ },
+ "beatCuts": 15,
+ "hookMascot": false
+}

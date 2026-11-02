@@ -12,7 +12,7 @@ SUF=""; [ "$COMP" = NewsYT ] && SUF="-yt"
 OUT="out/news/$ID-$LANG_$SUF.mp4"
 mkdir -p out/news
 python3 -c "import json;tl=json.load(open('video/src/news/timelines/$ID-$LANG_.json'));json.dump({'tl':tl,'handle':'$HANDLE'},open('out/news/.$ID-$LANG_.props.json','w'))"
-B=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell
+B=${CHROME:-/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell}
 (cd video && npx remotion render src/index.ts $COMP "../$OUT" --props="../out/news/.$ID-$LANG_.props.json" --overwrite --browser-executable=$B --concurrency=4 --log=error)
 python3 pipeline/loudnorm.py "$OUT"
 echo "NEWS_DONE $OUT"

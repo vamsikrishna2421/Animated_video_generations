@@ -1,0 +1,359 @@
+{
+ "id": "week-2026-10-31-full",
+ "date": "31 OCT 2026",
+ "range": "OCT 24 - 30",
+ "edition": "AI WEEKLY · 03",
+ "kicker": "AI NEWS THIS WEEK",
+ "title": "AI WEEKLY",
+ "recap": "5 STORIES · THIS WEEK",
+ "look": "broadcast",
+ "lean": true,
+ "musicBase": 0.36,
+ "musicBaseYT": 0.24,
+ "storyLead": 14,
+ "storyTail": 16,
+ "captionMode_te": "phrase",
+ "labs": [
+  "OPENAI",
+  "REUTERS",
+  "GOOGLE",
+  "MICROSOFT",
+  "ANTHROPIC",
+  "GITHUB"
+ ],
+ "hook": {
+  "lines": [
+   [
+    "A family says ChatGPT told her to ",
+    "stop her medicine",
+    ""
+   ],
+   [
+    "Do people ",
+    "trust AI answers?",
+    ""
+   ],
+   [
+    "GitHub's ",
+    "big number",
+    ""
+   ]
+  ],
+  "hits": [
+   "stop",
+   "trust",
+   "big"
+  ],
+  "hits_te": [
+   "ఆపేయమని",
+   "నమ్ముతున్నారా",
+   "నంబర్"
+  ],
+  "text": "A family says ChatGPT told their daughter to stop her epilepsy medicine. Do people trust AI answers? And GitHub's big number.",
+  "tts": "A family says chat G P T told their daughter to stop her epilepsy medicine. Do people trust A I answers? And Git Hub's big number.",
+  "tts_te": "తమ కూతురికి ఫిట్స్ మందు ఆపేయమని చాట్ జీ పీ టీ చెప్పిందట, అని ఒక కుటుంబం అంటోంది. జనం ఏ ఐ జవాబుల్ని నమ్ముతున్నారా? ఇంకా, గిట్ హబ్ పెద్ద నంబర్."
+ },
+ "stories": [
+  {
+   "org": "OPENAI",
+   "accent": "#EF4444",
+   "tag": "HEALTH",
+   "headline": [
+    "A family sues over",
+    "ChatGPT's medicine advice"
+   ],
+   "dek": "Lawsuit filed Oct 27 · claims not proven",
+   "chapter": "A family sues over ChatGPT's medicine advice",
+   "text": "OpenAI is being sued by an American family. They say ChatGPT gave their daughter a 25-day plan to stop her epilepsy medicine, and said: don't tell your doctor. She died in February. Her family blames the plan. Nothing is proven yet. OpenAI says ChatGPT is not a substitute for medical care, and that she used an older version. So: never change a medicine on a chatbot's word. Ask your doctor.",
+   "tts": [
+    "Open A.I. is being sued by an American family. They say chat G P T gave their daughter a twenty-five day plan to stop her epilepsy medicine, and said: don't tell your doctor.",
+    "She died in February. Her family blames the plan.",
+    "Nothing is proven yet. Open A.I. says chat G P T is not a substitute for medical care, and that she used an older version. So: never change a medicine on a chatbot's word. Ask your doctor."
+   ],
+   "tts_te": [
+    "ఒక అమెరికా కుటుంబం ఓపెన్ ఏ ఐ మీద కేసు వేసింది. పాతిక రోజుల్లో ఫిట్స్ మందు ఆపేయమని, డాక్టర్ కి చెప్పొద్దని, చాట్ జీ పీ టీ తమ కూతురికి చెప్పిందట.",
+    "ఫిబ్రవరిలో ఆమె చనిపోయారు. ఆ ప్లాన్ వల్లే అని కుటుంబం అంటోంది.",
+    "ఇంకా ఏదీ రుజువు కాలేదు. చాట్ జీ పీ టీ డాక్టర్ కి బదులు కాదని, ఆమె పాత వెర్షన్ వాడారని ఓపెన్ ఏ ఐ అంటోంది. అందుకే: చాట్ బాట్ చెప్పిందని ఏ మందునీ మార్చొద్దు. మీ డాక్టర్ ని అడగండి."
+   ],
+   "pause": 1.4,
+   "cards": [
+    {
+     "k": "LAWSUIT · SAN FRANCISCO · OCT 27",
+     "v": "Family sues OpenAI",
+     "cue": "sued",
+     "cue_te": "కుటుంబం"
+    },
+    {
+     "k": "THEY SAY CHATGPT TOLD HER",
+     "v": "Stop your epilepsy medicine (over ~25 days)",
+     "cue": "told",
+     "cue_te": "పాతిక"
+    },
+    {
+     "k": "AND, THEY SAY",
+     "v": "\"Don't tell your doctor\"",
+     "cue": "not",
+     "cue_te": "డాక్టర్",
+     "drop": true
+    },
+    {
+     "k": "SHE DIED IN FEBRUARY",
+     "v": "Her family blames the plan",
+     "part": 2,
+     "quiet": true,
+     "hold": 150
+    },
+    {
+     "k": "OPENAI",
+     "v": "\"Not a substitute for medical care\" · she used an older version",
+     "part": 3
+    },
+    {
+     "k": "SO",
+     "v": "Change a medicine only with your doctor",
+     "cue": "never",
+     "cue_te": "అందుకే"
+    }
+   ],
+   "points": [
+    "Filed Oct 27, San Francisco Superior Court (claims not proven)",
+    "Alleged: a ~25-day plan to stop her epilepsy medicine, and \"don't tell your doctor\"",
+    "She died in February; the examiner: sudden unexpected death in epilepsy",
+    "OpenAI: ChatGPT is \"not a substitute for medical care\"; she used an older version"
+   ],
+   "sources": "KIRO · The New York Times · HLTH · MLex",
+   "recap": "A family sues over ChatGPT's medicine advice"
+  },
+  {
+   "org": "REUTERS INSTITUTE",
+   "accent": "#F59E0B",
+   "tag": "TRUST",
+   "headline": [
+    "3 in 4 trust",
+    "AI's factual answers"
+   ],
+   "dek": "Oct 29 · about 2,000 people in each of 9 countries (India not surveyed)",
+   "chapter": "3 in 4 trust AI's factual answers",
+   "text": "A new Reuters Institute survey in nine countries, India not among them. In the six it also asked last year, weekly AI use went from a third to half. And three in four people who ask AI factual questions trust its answers. Before you trust it, open the source. In our own test of a small offline AI, not the big apps, 64 of the 78 links we could check were dead.",
+   "tts": "A new Reuters Institute survey in nine countries, India not among them. In the six it also asked last year, weekly A I use went from a third, to half. And three in four people who ask A I factual questions trust its answers. Before you trust it, open the source. In our own test of a small offline A I, not the big apps, sixty-four of the seventy-eight links we could check were dead.",
+   "tts_te": "రాయిటర్స్ ఇన్స్టిట్యూట్ తొమ్మిది దేశాల్లో చేసిన కొత్త సర్వే, అందులో ఇండియా లేదు. పోయిన ఏడాది కూడా అడిగిన ఆరు దేశాల్లో, ప్రతి వారం ఏ ఐ వాడేవాళ్ళు మూడో వంతు నుంచి సగానికి పెరిగారు. సమాచారం కోసం ఏ ఐ ని అడిగే వాళ్ళలో, నలుగురిలో ముగ్గురు దాని జవాబులు నమ్ముతున్నారు. నమ్మే ముందు, సోర్స్ ఓపెన్ చేయండి. పెద్ద యాప్స్ కాదు, ఇంటర్నెట్ లేని ఒక చిన్న ఏ ఐ తో మా సొంత టెస్ట్ లో, అది రాసిన లింకుల్లో, మేము చెక్ చేయగలిగిన డెబ్బై ఎనిమిదిలో అరవై నాలుగు పనిచేయలేదు.",
+   "cards": [
+    {
+     "k": "REUTERS INSTITUTE · OCT 29 · 9 COUNTRIES, NOT INDIA",
+     "v": "About 2,000 people in each",
+     "cue": "Reuters",
+     "cue_te": "రాయిటర్స్"
+    },
+    {
+     "k": "WEEKLY AI USE · THE 6 COUNTRIES ASKED BOTH YEARS",
+     "v": "34% → 51%",
+     "cue": "six",
+     "cue_te": "ఆరు"
+    },
+    {
+     "k": "OF PEOPLE WHO ASK AI FOR FACTS · TRUST ITS ANSWERS",
+     "v": "3 in 4",
+     "cue": "Three",
+     "cue_te": "నలుగురిలో",
+     "big": true,
+     "hold": 110
+    },
+    {
+     "k": "BEFORE YOU TRUST IT",
+     "v": "Open the source",
+     "cue": "Before",
+     "cue_te": "నమ్మే"
+    },
+    {
+     "k": "OUR TEST · A SMALL OFFLINE AI, NOT A BIG CHAT APP · 150 LINKS, 78 WE COULD CHECK",
+     "v": "64 of 78 dead",
+     "cue": "test",
+     "cue_te": "మా"
+    }
+   ],
+   "points": [
+    "75% of people who used AI for factual questions trust the answers",
+    "Weekly use of AI chatbots: 34% (2025) to 51% (2026), in the six countries asked both years",
+    "Nine countries, about 2,000 people each, YouGov, Aug-Sep 2026; India not among them",
+    "Our test (Nov 2): a small offline AI wrote 150 links; of the 78 we could check, 64 were dead"
+   ],
+   "sources": "Reuters Institute (Simon, Nielsen, Fletcher) · our test: Creative 14, Oct 30 reel",
+   "recap": "3 in 4 trust AI's factual answers"
+  },
+  {
+   "org": "AI TRAINING",
+   "accent": "#8B5CF6",
+   "tag": "YOUR CONTENT",
+   "headline": [
+    "One rule asks AI firms",
+    "not to train on your site"
+   ],
+   "dek": "Oct 30 · Google, Microsoft, OpenAI and Anthropic · robots.txt",
+   "chapter": "One rule asks AI firms not to train on your site",
+   "text": "Still to come: GitHub's number on AI and code. Google, Microsoft, OpenAI and Anthropic will all respect one short rule in a site's robots file: don't train AI on this. Anthropic has started, OpenAI says in the coming months, Microsoft from February 2027, Google early 2027. It's a request, not a lock, and it can't undo past training. Have a blog or a shop site? Add it.",
+   "tts": "Still to come: Git Hub's number on A.I. and code. Google, Microsoft, Open A.I. and Anthropic will all respect one short rule in a site's robots file: don't train A.I. on this. Anthropic has started, Open A.I. says in the coming months, Microsoft from February twenty twenty-seven, and Google early twenty twenty-seven. It's a request, not a lock, and it can't undo past training. Have a blog, or a shop site? Add it.",
+   "tts_te": "ఇంకా రాబోతోంది: ఏ ఐ, కోడ్ మీద గిట్ హబ్ నంబర్. గూగుల్, మైక్రోసాఫ్ట్, ఓపెన్ ఏ ఐ, ఆంత్రోపిక్, వెబ్ సైట్ రోబోట్స్ ఫైల్ లోని ఒక చిన్న రూల్ ని ఫాలో అవుతాయి: దీని మీద ఏ ఐ ని ట్రైన్ చేయొద్దు. ఆంత్రోపిక్ మొదలుపెట్టింది, ఓపెన్ ఏ ఐ రాబోయే నెలల్లో, మైక్రోసాఫ్ట్ రెండు వేల ఇరవై ఏడు ఫిబ్రవరి నుంచి, గూగుల్ రెండు వేల ఇరవై ఏడు మొదట్లో. ఇది ఒక రిక్వెస్ట్ మాత్రమే, తాళం కాదు, పాత ట్రైనింగ్ ని వెనక్కి తీసుకోదు. మీకు బ్లాగ్ లేదా షాప్ వెబ్ సైట్ ఉందా? ఆ రూల్ పెట్టండి.",
+   "cards": [
+    {
+     "k": "STILL TO COME",
+     "v": "GitHub's number on AI and code",
+     "cue": "Still",
+     "cue_te": "ఇంకా"
+    },
+    {
+     "k": "OCT 30 · GOOGLE, MICROSOFT, OPENAI, ANTHROPIC",
+     "v": "One opt-out for AI training",
+     "cue": "Google",
+     "cue_te": "గూగుల్"
+    },
+    {
+     "k": "ADD TO ROBOTS.TXT",
+     "v": "User-Agent: __usage_ai-training  Disallow: /",
+     "cue": "robots",
+     "cue_te": "రోబోట్స్"
+    },
+    {
+     "k": "STARTS",
+     "v": "Anthropic now · OpenAI coming months · Microsoft Feb 2027 · Google early 2027",
+     "cue": "started",
+     "cue_te": "మొదలుపెట్టింది"
+    },
+    {
+     "k": "A REQUEST, NOT A LOCK",
+     "v": "Can't undo past training",
+     "cue": "request",
+     "cue_te": "రిక్వెస్ట్"
+    },
+    {
+     "k": "BLOG OR SHOP SITE?",
+     "v": "Add the rule",
+     "cue": "blog",
+     "cue_te": "మీకు"
+    }
+   ],
+   "points": [
+    "One robots.txt token: __usage_ai-training (with Disallow: /)",
+    "Anthropic has started; OpenAI \"in the coming months\"; Microsoft Feb 1, 2027; Google early 2027",
+    "Training only: it doesn't block crawling or undo past training",
+    "Voluntary: scrapers that don't follow it can ignore it"
+   ],
+   "sources": "Google Search Central · IETF draft (Oct 30) · The Verge",
+   "recap": "One robots.txt rule asks AI firms not to train on your site"
+  },
+  {
+   "org": "ANTHROPIC",
+   "accent": "#64748B",
+   "tag": "BUSINESS",
+   "headline": [
+    "Anthropic files",
+    "to go public"
+   ],
+   "dek": "Public S-1, Oct 26 · Nasdaq: ANT · share count and price not set",
+   "chapter": "Anthropic files to go public",
+   "text": "In business: Anthropic filed to list on the Nasdaq as ANT. Its S-1 filing shows 16.3 billion dollars of revenue in the first half of 2026, about 14 times the year before. It isn't on sale yet: no price or date is set.",
+   "tts": "In business: Anthropic filed to list on the Nasdaq, as A N T. Its S one filing shows sixteen point three billion dollars of revenue in the first half of twenty twenty-six, about fourteen times the year before. It isn't on sale yet: no price or date is set.",
+   "tts_te": "బిజినెస్ లో: ఆంత్రోపిక్ నాస్డాక్ లో ఏ ఎన్ టీ పేరుతో లిస్ట్ అవ్వడానికి ఫైల్ చేసింది. రెండు వేల ఇరవై ఆరు మొదటి ఆరు నెలల్లో పదహారు పాయింట్ మూడు బిలియన్ డాలర్ల రెవెన్యూ, ఏడాది ముందు కంటే దాదాపు పద్నాలుగు రెట్లు. ఇంకా షేర్లు అమ్మకానికి లేవు: ధర, తేదీ ఇంకా ఫిక్స్ కాలేదు.",
+   "cards": [
+    {
+     "k": "PUBLIC S-1 · OCT 26",
+     "v": "Nasdaq: ANT",
+     "cue": "Nasdaq",
+     "cue_te": "నాస్డాక్"
+    },
+    {
+     "k": "REVENUE, JAN-JUN 2026 (S-1) · A YEAR EARLIER: $1.2B",
+     "v": "$16.3 billion",
+     "cue": "shows",
+     "cue_te": "రెండు",
+     "big": true,
+     "hold": 90
+    },
+    {
+     "k": "NOT ON SALE YET",
+     "v": "No price or date set",
+     "cue": "isn't",
+     "cue_te": "షేర్లు"
+    }
+   ],
+   "points": [
+    "Public S-1 filed Oct 26; Nasdaq ticker ANT",
+    "Revenue Jan-Jun 2026: $16.3B (a year earlier: about $1.16B), per the S-1",
+    "Share count, price range and date not set yet"
+   ],
+   "sources": "Reuters · TNW · Bernama",
+   "recap": "Anthropic files to list on Nasdaq as ANT"
+  },
+  {
+   "org": "GITHUB",
+   "accent": "#22C55E",
+   "tag": "CODING",
+   "headline": [
+    "How much code",
+    "starts with AI?"
+   ],
+   "dek": "GitHub Octoverse, Oct 28 · GitHub's own data, Oct 2025 - Sep 2026",
+   "chapter": "How much code starts with AI?",
+   "text": "Finally, GitHub, where coders keep their code. Its own data: India now has 32 million developers there, second only to the US, and added over 10 million this year. Worldwide, how many code changes now start from an AI's first draft? More than four in ten. In March, under two in ten. So learn to check AI's code, line by line, not just write your own.",
+   "tts": [
+    "Finally, Git Hub, where coders keep their code. Its own data: India now has thirty-two million developers there, second only to America, and added over ten million this year. Worldwide, how many code changes now start from an A.I.'s first draft?",
+    "More than four in ten. In March, under two in ten. So, learn to check A I code, line by line, not just write your own."
+   ],
+   "tts_te": [
+    "చివరగా, గిట్ హబ్, కోడర్లు తమ కోడ్ పెట్టుకునే చోటు. దాని సొంత డేటా: అక్కడ ఇండియా డెవలపర్లు ఇప్పుడు మూడు కోట్ల ఇరవై లక్షలు, అమెరికా తర్వాత రెండో స్థానం, ఈ ఏడాదే కోటి మందికి పైగా కొత్తగా చేరారు. ప్రపంచం మొత్తం మీద, ఎన్ని కోడ్ మార్పులు ఏ ఐ రాసిన మొదటి డ్రాఫ్ట్ తో మొదలవుతున్నాయి?",
+    "పదింట్లో నాలుగు కంటే ఎక్కువ. మార్చి లో, పదింట్లో రెండు కూడా లేవు. అందుకే, మీ కోడ్ రాయడమే కాదు, ఏ ఐ రాసిన కోడ్ ని లైన్ లైన్ గా చెక్ చేయడం నేర్చుకోండి."
+   ],
+   "pause": 1.3,
+   "tail": 40,
+   "cards": [
+    {
+     "k": "GITHUB OCTOVERSE · OCT 28 · ITS OWN DATA (IT SELLS AI CODING TOOLS)",
+     "v": "Where coders keep their code",
+     "cue": "GitHub",
+     "cue_te": "గిట్"
+    },
+    {
+     "k": "INDIA ON GITHUB",
+     "v": "32 million developers (#2 after the US)",
+     "cue": "India",
+     "cue_te": "ఇండియా"
+    },
+    {
+     "k": "INDIA, THIS YEAR",
+     "v": "10 million+ new developers",
+     "cue": "added",
+     "cue_te": "కోటి"
+    },
+    {
+     "k": "WORLDWIDE · CODE CHANGES (PULL REQUESTS) FROM AN AI'S FIRST DRAFT · SEPT 2026 · MARCH: UNDER 2 IN 10",
+     "v": "Over 4 in 10",
+     "part": 2,
+     "drop": true,
+     "big": true,
+     "hush": true,
+     "hold": 150
+    },
+    {
+     "k": "SKILL TO LEARN",
+     "v": "Check AI's code, line by line",
+     "cue": "line",
+     "cue_te": "అందుకే"
+    }
+   ],
+   "points": [
+    "India: 32 million developers on GitHub (US 38.3 million); 10 million+ joined this year",
+    "Sept 2026: over 40% of pull requests started with an AI agent's first draft (March: 17%)",
+    "GitHub's own data; it sells AI coding tools"
+   ],
+   "sources": "GitHub Octoverse 2026 · Digit · Analytics India Magazine",
+   "recap": "Over 4 in 10 code changes start with AI (GitHub)"
+  }
+ ],
+ "outro": {
+  "text": "That's your AI week. Would you trust a chatbot with your medicine? Tell us in the comments. And follow AI Maastaaru: AI Weekly, every Saturday.",
+  "tts": "That's your A.I. week. Would you trust a chatbot with your medicine? Tell us in the comments. And follow A.I. Maastaaru. A.I. Weekly, every Saturday.",
+  "tts_te": "ఇదీ ఈ వారం ఏ ఐ న్యూస్. మీ మందుల విషయంలో చాట్ బాట్ ని నమ్ముతారా? కామెంట్ లో చెప్పండి. ప్రతి శనివారం ఏ ఐ వీక్లీ కోసం, ఏ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి.",
+  "tail": 150
+ },
+ "beatCuts": 15,
+ "hookMascot": false
+}

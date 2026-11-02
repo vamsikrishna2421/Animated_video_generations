@@ -1,0 +1,2184 @@
+{
+ "id": "week-2026-10-31-full",
+ "date": "31 OCT 2026",
+ "range": "OCT 24 - 30",
+ "edition": "AI WEEKLY · 03",
+ "kicker": "AI NEWS THIS WEEK",
+ "title": "AI WEEKLY",
+ "recap": "5 STORIES · THIS WEEK",
+ "look": "broadcast",
+ "lean": true,
+ "labs": [
+  "OPENAI",
+  "REUTERS",
+  "GOOGLE",
+  "MICROSOFT",
+  "ANTHROPIC",
+  "GITHUB"
+ ],
+ "musicBase": 0.36,
+ "musicBaseYT": 0.24,
+ "hookMascot": false,
+ "lang": "en",
+ "segments": [
+  {
+   "name": "hook",
+   "audio": "news/week-2026-10-31-full/en/hook.wav",
+   "lead": 4,
+   "frames": 315,
+   "words": [
+    {
+     "w": "A",
+     "s": 11,
+     "e": 14
+    },
+    {
+     "w": "family",
+     "s": 14,
+     "e": 25
+    },
+    {
+     "w": "says",
+     "s": 25,
+     "e": 32
+    },
+    {
+     "w": "ChatGPT",
+     "s": 32,
+     "e": 54
+    },
+    {
+     "w": "told",
+     "s": 54,
+     "e": 61
+    },
+    {
+     "w": "their",
+     "s": 61,
+     "e": 76
+    },
+    {
+     "w": "daughter",
+     "s": 76,
+     "e": 89
+    },
+    {
+     "w": "to",
+     "s": 89,
+     "e": 94
+    },
+    {
+     "w": "stop",
+     "s": 94,
+     "e": 102
+    },
+    {
+     "w": "her",
+     "s": 102,
+     "e": 111
+    },
+    {
+     "w": "epilepsy",
+     "s": 111,
+     "e": 125
+    },
+    {
+     "w": "medicine.",
+     "s": 125,
+     "e": 170
+    },
+    {
+     "w": "Do",
+     "s": 170,
+     "e": 174
+    },
+    {
+     "w": "people",
+     "s": 174,
+     "e": 185
+    },
+    {
+     "w": "trust",
+     "s": 185,
+     "e": 195
+    },
+    {
+     "w": "AI",
+     "s": 195,
+     "e": 199
+    },
+    {
+     "w": "answers?",
+     "s": 199,
+     "e": 238
+    },
+    {
+     "w": "And",
+     "s": 238,
+     "e": 244
+    },
+    {
+     "w": "GitHub's",
+     "s": 244,
+     "e": 258
+    },
+    {
+     "w": "big",
+     "s": 258,
+     "e": 264
+    },
+    {
+     "w": "number.",
+     "s": 264,
+     "e": 277
+    }
+   ],
+   "lines": [
+    [
+     "A family says ChatGPT told her to ",
+     "stop her medicine",
+     ""
+    ],
+    [
+     "Do people ",
+     "trust AI answers?",
+     ""
+    ],
+    [
+     "GitHub's ",
+     "big number",
+     ""
+    ]
+   ],
+   "hits": [
+    94,
+    185,
+    258
+   ],
+   "lineAt": [
+    11,
+    170,
+    238
+   ]
+  },
+  {
+   "name": "story1",
+   "audio": "news/week-2026-10-31-full/en/story1.wav",
+   "lead": 14,
+   "frames": 975,
+   "words": [
+    {
+     "w": "OpenAI",
+     "s": 21,
+     "e": 31
+    },
+    {
+     "w": "is",
+     "s": 31,
+     "e": 35
+    },
+    {
+     "w": "being",
+     "s": 35,
+     "e": 50
+    },
+    {
+     "w": "sued",
+     "s": 50,
+     "e": 57
+    },
+    {
+     "w": "by",
+     "s": 57,
+     "e": 62
+    },
+    {
+     "w": "an",
+     "s": 62,
+     "e": 66
+    },
+    {
+     "w": "American",
+     "s": 66,
+     "e": 78
+    },
+    {
+     "w": "family.",
+     "s": 78,
+     "e": 90
+    },
+    {
+     "w": "They",
+     "s": 90,
+     "e": 97
+    },
+    {
+     "w": "say",
+     "s": 97,
+     "e": 130
+    },
+    {
+     "w": "ChatGPT",
+     "s": 130,
+     "e": 146
+    },
+    {
+     "w": "gave",
+     "s": 146,
+     "e": 157
+    },
+    {
+     "w": "their",
+     "s": 157,
+     "e": 165
+    },
+    {
+     "w": "daughter",
+     "s": 165,
+     "e": 178
+    },
+    {
+     "w": "a",
+     "s": 178,
+     "e": 180
+    },
+    {
+     "w": "25-day",
+     "s": 180,
+     "e": 190
+    },
+    {
+     "w": "plan",
+     "s": 190,
+     "e": 203
+    },
+    {
+     "w": "to",
+     "s": 203,
+     "e": 207
+    },
+    {
+     "w": "stop",
+     "s": 207,
+     "e": 214
+    },
+    {
+     "w": "her",
+     "s": 214,
+     "e": 220
+    },
+    {
+     "w": "epilepsy",
+     "s": 220,
+     "e": 233
+    },
+    {
+     "w": "medicine,",
+     "s": 233,
+     "e": 252
+    },
+    {
+     "w": "and",
+     "s": 252,
+     "e": 257
+    },
+    {
+     "w": "said:",
+     "s": 257,
+     "e": 266
+    },
+    {
+     "w": "don't",
+     "s": 266,
+     "e": 274
+    },
+    {
+     "w": "tell",
+     "s": 274,
+     "e": 310
+    },
+    {
+     "w": "your",
+     "s": 310,
+     "e": 329
+    },
+    {
+     "w": "doctor.",
+     "s": 329,
+     "e": 340
+    },
+    {
+     "w": "She",
+     "s": 340,
+     "e": 345
+    },
+    {
+     "w": "died",
+     "s": 345,
+     "e": 414
+    },
+    {
+     "w": "in",
+     "s": 414,
+     "e": 418
+    },
+    {
+     "w": "February.",
+     "s": 418,
+     "e": 432
+    },
+    {
+     "w": "Her",
+     "s": 432,
+     "e": 438
+    },
+    {
+     "w": "family",
+     "s": 438,
+     "e": 477
+    },
+    {
+     "w": "blames",
+     "s": 477,
+     "e": 486
+    },
+    {
+     "w": "the",
+     "s": 486,
+     "e": 492
+    },
+    {
+     "w": "plan.",
+     "s": 492,
+     "e": 500
+    },
+    {
+     "w": "Nothing",
+     "s": 500,
+     "e": 568
+    },
+    {
+     "w": "is",
+     "s": 568,
+     "e": 572
+    },
+    {
+     "w": "proven",
+     "s": 572,
+     "e": 582
+    },
+    {
+     "w": "yet.",
+     "s": 582,
+     "e": 618
+    },
+    {
+     "w": "OpenAI",
+     "s": 618,
+     "e": 628
+    },
+    {
+     "w": "says",
+     "s": 628,
+     "e": 635
+    },
+    {
+     "w": "ChatGPT",
+     "s": 635,
+     "e": 660
+    },
+    {
+     "w": "is",
+     "s": 660,
+     "e": 665
+    },
+    {
+     "w": "not",
+     "s": 665,
+     "e": 670
+    },
+    {
+     "w": "a",
+     "s": 670,
+     "e": 673
+    },
+    {
+     "w": "substitute",
+     "s": 673,
+     "e": 688
+    },
+    {
+     "w": "for",
+     "s": 688,
+     "e": 694
+    },
+    {
+     "w": "medical",
+     "s": 694,
+     "e": 705
+    },
+    {
+     "w": "care,",
+     "s": 705,
+     "e": 717
+    },
+    {
+     "w": "and",
+     "s": 717,
+     "e": 723
+    },
+    {
+     "w": "that",
+     "s": 723,
+     "e": 730
+    },
+    {
+     "w": "she",
+     "s": 730,
+     "e": 751
+    },
+    {
+     "w": "used",
+     "s": 751,
+     "e": 758
+    },
+    {
+     "w": "an",
+     "s": 758,
+     "e": 763
+    },
+    {
+     "w": "older",
+     "s": 763,
+     "e": 775
+    },
+    {
+     "w": "version.",
+     "s": 775,
+     "e": 788
+    },
+    {
+     "w": "So:",
+     "s": 788,
+     "e": 824
+    },
+    {
+     "w": "never",
+     "s": 824,
+     "e": 836
+    },
+    {
+     "w": "change",
+     "s": 836,
+     "e": 846
+    },
+    {
+     "w": "a",
+     "s": 846,
+     "e": 849
+    },
+    {
+     "w": "medicine",
+     "s": 849,
+     "e": 861
+    },
+    {
+     "w": "on",
+     "s": 861,
+     "e": 865
+    },
+    {
+     "w": "a",
+     "s": 865,
+     "e": 868
+    },
+    {
+     "w": "chatbot's",
+     "s": 868,
+     "e": 882
+    },
+    {
+     "w": "word.",
+     "s": 882,
+     "e": 891
+    },
+    {
+     "w": "Ask",
+     "s": 891,
+     "e": 924
+    },
+    {
+     "w": "your",
+     "s": 924,
+     "e": 931
+    },
+    {
+     "w": "doctor.",
+     "s": 931,
+     "e": 942
+    }
+   ],
+   "org": "OPENAI",
+   "accent": "#EF4444",
+   "tag": "HEALTH",
+   "headline": [
+    "A family sues over",
+    "ChatGPT's medicine advice"
+   ],
+   "dek": "Lawsuit filed Oct 27 · claims not proven",
+   "chapter": "A family sues over ChatGPT's medicine advice",
+   "points": [
+    "Filed Oct 27, San Francisco Superior Court (claims not proven)",
+    "Alleged: a ~25-day plan to stop her epilepsy medicine, and \"don't tell your doctor\"",
+    "She died in February; the examiner: sudden unexpected death in epilepsy",
+    "OpenAI: ChatGPT is \"not a substitute for medical care\"; she used an older version"
+   ],
+   "sources": "KIRO · The New York Times · HLTH · MLex",
+   "recap": "A family sues over ChatGPT's medicine advice",
+   "cards": [
+    {
+     "k": "LAWSUIT · SAN FRANCISCO · OCT 27",
+     "v": "Family sues OpenAI",
+     "cue": "sued",
+     "f": 18
+    },
+    {
+     "k": "THEY SAY CHATGPT TOLD HER",
+     "v": "Stop your epilepsy medicine (over ~25 days)",
+     "cue": "told",
+     "f": 21
+    },
+    {
+     "k": "AND, THEY SAY",
+     "v": "\"Don't tell your doctor\"",
+     "cue": "not",
+     "drop": true,
+     "f": 500
+    },
+    {
+     "k": "SHE DIED IN FEBRUARY",
+     "v": "Her family blames the plan",
+     "part": 2,
+     "quiet": true,
+     "hold": 150,
+     "f": 404
+    },
+    {
+     "k": "OPENAI",
+     "v": "\"Not a substitute for medical care\" · she used an older version",
+     "part": 3,
+     "f": 554
+    },
+    {
+     "k": "SO",
+     "v": "Change a medicine only with your doctor",
+     "cue": "never",
+     "f": 824
+    }
+   ]
+  },
+  {
+   "name": "story2",
+   "audio": "news/week-2026-10-31-full/en/story2.wav",
+   "lead": 14,
+   "frames": 795,
+   "words": [
+    {
+     "w": "A",
+     "s": 22,
+     "e": 24
+    },
+    {
+     "w": "new",
+     "s": 24,
+     "e": 29
+    },
+    {
+     "w": "Reuters",
+     "s": 29,
+     "e": 44
+    },
+    {
+     "w": "Institute",
+     "s": 44,
+     "e": 57
+    },
+    {
+     "w": "survey",
+     "s": 57,
+     "e": 66
+    },
+    {
+     "w": "in",
+     "s": 66,
+     "e": 70
+    },
+    {
+     "w": "nine",
+     "s": 70,
+     "e": 77
+    },
+    {
+     "w": "countries,",
+     "s": 77,
+     "e": 91
+    },
+    {
+     "w": "India",
+     "s": 91,
+     "e": 106
+    },
+    {
+     "w": "not",
+     "s": 106,
+     "e": 111
+    },
+    {
+     "w": "among",
+     "s": 111,
+     "e": 119
+    },
+    {
+     "w": "them.",
+     "s": 119,
+     "e": 160
+    },
+    {
+     "w": "In",
+     "s": 160,
+     "e": 164
+    },
+    {
+     "w": "the",
+     "s": 164,
+     "e": 169
+    },
+    {
+     "w": "six",
+     "s": 169,
+     "e": 175
+    },
+    {
+     "w": "it",
+     "s": 175,
+     "e": 179
+    },
+    {
+     "w": "also",
+     "s": 179,
+     "e": 185
+    },
+    {
+     "w": "asked",
+     "s": 185,
+     "e": 193
+    },
+    {
+     "w": "last",
+     "s": 193,
+     "e": 204
+    },
+    {
+     "w": "year,",
+     "s": 204,
+     "e": 228
+    },
+    {
+     "w": "weekly",
+     "s": 228,
+     "e": 237
+    },
+    {
+     "w": "AI",
+     "s": 237,
+     "e": 241
+    },
+    {
+     "w": "use",
+     "s": 241,
+     "e": 247
+    },
+    {
+     "w": "went",
+     "s": 247,
+     "e": 253
+    },
+    {
+     "w": "from",
+     "s": 253,
+     "e": 265
+    },
+    {
+     "w": "a",
+     "s": 265,
+     "e": 267
+    },
+    {
+     "w": "third",
+     "s": 267,
+     "e": 275
+    },
+    {
+     "w": "to",
+     "s": 275,
+     "e": 279
+    },
+    {
+     "w": "half.",
+     "s": 279,
+     "e": 295
+    },
+    {
+     "w": "And",
+     "s": 295,
+     "e": 331
+    },
+    {
+     "w": "three",
+     "s": 331,
+     "e": 343
+    },
+    {
+     "w": "in",
+     "s": 343,
+     "e": 347
+    },
+    {
+     "w": "four",
+     "s": 347,
+     "e": 353
+    },
+    {
+     "w": "people",
+     "s": 353,
+     "e": 363
+    },
+    {
+     "w": "who",
+     "s": 363,
+     "e": 372
+    },
+    {
+     "w": "ask",
+     "s": 372,
+     "e": 378
+    },
+    {
+     "w": "AI",
+     "s": 378,
+     "e": 387
+    },
+    {
+     "w": "factual",
+     "s": 387,
+     "e": 406
+    },
+    {
+     "w": "questions",
+     "s": 406,
+     "e": 419
+    },
+    {
+     "w": "trust",
+     "s": 419,
+     "e": 434
+    },
+    {
+     "w": "its",
+     "s": 434,
+     "e": 439
+    },
+    {
+     "w": "answers.",
+     "s": 439,
+     "e": 490
+    },
+    {
+     "w": "Before",
+     "s": 490,
+     "e": 500
+    },
+    {
+     "w": "you",
+     "s": 500,
+     "e": 505
+    },
+    {
+     "w": "trust",
+     "s": 505,
+     "e": 519
+    },
+    {
+     "w": "it,",
+     "s": 519,
+     "e": 525
+    },
+    {
+     "w": "open",
+     "s": 525,
+     "e": 531
+    },
+    {
+     "w": "the",
+     "s": 531,
+     "e": 537
+    },
+    {
+     "w": "source.",
+     "s": 537,
+     "e": 575
+    },
+    {
+     "w": "In",
+     "s": 575,
+     "e": 579
+    },
+    {
+     "w": "our",
+     "s": 579,
+     "e": 588
+    },
+    {
+     "w": "own",
+     "s": 588,
+     "e": 593
+    },
+    {
+     "w": "test",
+     "s": 593,
+     "e": 600
+    },
+    {
+     "w": "of",
+     "s": 600,
+     "e": 604
+    },
+    {
+     "w": "a",
+     "s": 604,
+     "e": 606
+    },
+    {
+     "w": "small",
+     "s": 606,
+     "e": 614
+    },
+    {
+     "w": "offline",
+     "s": 614,
+     "e": 625
+    },
+    {
+     "w": "AI,",
+     "s": 625,
+     "e": 640
+    },
+    {
+     "w": "not",
+     "s": 640,
+     "e": 649
+    },
+    {
+     "w": "the",
+     "s": 649,
+     "e": 659
+    },
+    {
+     "w": "big",
+     "s": 659,
+     "e": 674
+    },
+    {
+     "w": "apps,",
+     "s": 674,
+     "e": 682
+    },
+    {
+     "w": "64",
+     "s": 682,
+     "e": 686
+    },
+    {
+     "w": "of",
+     "s": 686,
+     "e": 690
+    },
+    {
+     "w": "the",
+     "s": 690,
+     "e": 695
+    },
+    {
+     "w": "78",
+     "s": 695,
+     "e": 699
+    },
+    {
+     "w": "links",
+     "s": 699,
+     "e": 707
+    },
+    {
+     "w": "we",
+     "s": 707,
+     "e": 711
+    },
+    {
+     "w": "could",
+     "s": 711,
+     "e": 726
+    },
+    {
+     "w": "check",
+     "s": 726,
+     "e": 740
+    },
+    {
+     "w": "were",
+     "s": 740,
+     "e": 746
+    },
+    {
+     "w": "dead.",
+     "s": 746,
+     "e": 760
+    }
+   ],
+   "org": "REUTERS INSTITUTE",
+   "accent": "#F59E0B",
+   "tag": "TRUST",
+   "headline": [
+    "3 in 4 trust",
+    "AI's factual answers"
+   ],
+   "dek": "Oct 29 · about 2,000 people in each of 9 countries (India not surveyed)",
+   "chapter": "Most people trust AI's answers",
+   "points": [
+    "75% of people who used AI for factual questions trust the answers",
+    "Weekly use of AI chatbots: 34% (2025) to 51% (2026), in the six countries asked both years",
+    "Nine countries, about 2,000 people each, YouGov, Aug-Sep 2026; India not among them",
+    "Our test (Nov 2): a small offline AI wrote 150 links; of the 78 we could check, 64 were dead"
+   ],
+   "sources": "Reuters Institute (Simon, Nielsen, Fletcher) · our test: Creative 14, Oct 30 reel",
+   "recap": "3 in 4 trust AI's factual answers",
+   "cards": [
+    {
+     "k": "REUTERS INSTITUTE · OCT 29 · 9 COUNTRIES, NOT INDIA",
+     "v": "About 2,000 people in each",
+     "cue": "Reuters",
+     "f": 18
+    },
+    {
+     "k": "WEEKLY AI USE · THE 6 COUNTRIES ASKED BOTH YEARS",
+     "v": "34% → 51%",
+     "cue": "six",
+     "f": 169
+    },
+    {
+     "k": "OF PEOPLE WHO ASK AI FOR FACTS · TRUST ITS ANSWERS",
+     "v": "3 in 4",
+     "cue": "Three",
+     "big": true,
+     "hold": 110,
+     "f": 331
+    },
+    {
+     "k": "BEFORE YOU TRUST IT",
+     "v": "Open the source",
+     "cue": "Before",
+     "f": 490
+    },
+    {
+     "k": "OUR TEST · A SMALL OFFLINE AI, NOT A BIG CHAT APP · 150 LINKS, 78 WE COULD CHECK",
+     "v": "64 of 78 dead",
+     "cue": "test",
+     "f": 593
+    }
+   ]
+  },
+  {
+   "name": "story3",
+   "audio": "news/week-2026-10-31-full/en/story3.wav",
+   "lead": 14,
+   "frames": 885,
+   "words": [
+    {
+     "w": "Still",
+     "s": 20,
+     "e": 28
+    },
+    {
+     "w": "to",
+     "s": 28,
+     "e": 32
+    },
+    {
+     "w": "come:",
+     "s": 32,
+     "e": 54
+    },
+    {
+     "w": "GitHub's",
+     "s": 54,
+     "e": 66
+    },
+    {
+     "w": "number",
+     "s": 66,
+     "e": 76
+    },
+    {
+     "w": "on",
+     "s": 76,
+     "e": 80
+    },
+    {
+     "w": "AI",
+     "s": 80,
+     "e": 84
+    },
+    {
+     "w": "and",
+     "s": 84,
+     "e": 90
+    },
+    {
+     "w": "code.",
+     "s": 90,
+     "e": 129
+    },
+    {
+     "w": "Google,",
+     "s": 129,
+     "e": 140
+    },
+    {
+     "w": "Microsoft,",
+     "s": 140,
+     "e": 155
+    },
+    {
+     "w": "OpenAI",
+     "s": 155,
+     "e": 192
+    },
+    {
+     "w": "and",
+     "s": 192,
+     "e": 197
+    },
+    {
+     "w": "Anthropic",
+     "s": 197,
+     "e": 221
+    },
+    {
+     "w": "will",
+     "s": 221,
+     "e": 228
+    },
+    {
+     "w": "all",
+     "s": 228,
+     "e": 238
+    },
+    {
+     "w": "respect",
+     "s": 238,
+     "e": 249
+    },
+    {
+     "w": "one",
+     "s": 249,
+     "e": 261
+    },
+    {
+     "w": "short",
+     "s": 261,
+     "e": 269
+    },
+    {
+     "w": "rule",
+     "s": 269,
+     "e": 280
+    },
+    {
+     "w": "in",
+     "s": 280,
+     "e": 290
+    },
+    {
+     "w": "a",
+     "s": 290,
+     "e": 293
+    },
+    {
+     "w": "site's",
+     "s": 293,
+     "e": 302
+    },
+    {
+     "w": "robots",
+     "s": 302,
+     "e": 312
+    },
+    {
+     "w": "file:",
+     "s": 312,
+     "e": 336
+    },
+    {
+     "w": "don't",
+     "s": 336,
+     "e": 344
+    },
+    {
+     "w": "train",
+     "s": 344,
+     "e": 364
+    },
+    {
+     "w": "AI",
+     "s": 364,
+     "e": 368
+    },
+    {
+     "w": "on",
+     "s": 368,
+     "e": 372
+    },
+    {
+     "w": "this.",
+     "s": 372,
+     "e": 405
+    },
+    {
+     "w": "Anthropic",
+     "s": 405,
+     "e": 426
+    },
+    {
+     "w": "has",
+     "s": 426,
+     "e": 431
+    },
+    {
+     "w": "started,",
+     "s": 431,
+     "e": 452
+    },
+    {
+     "w": "OpenAI",
+     "s": 452,
+     "e": 461
+    },
+    {
+     "w": "says",
+     "s": 461,
+     "e": 468
+    },
+    {
+     "w": "in",
+     "s": 468,
+     "e": 472
+    },
+    {
+     "w": "the",
+     "s": 472,
+     "e": 478
+    },
+    {
+     "w": "coming",
+     "s": 478,
+     "e": 487
+    },
+    {
+     "w": "months,",
+     "s": 487,
+     "e": 498
+    },
+    {
+     "w": "Microsoft",
+     "s": 498,
+     "e": 522
+    },
+    {
+     "w": "from",
+     "s": 522,
+     "e": 535
+    },
+    {
+     "w": "February",
+     "s": 535,
+     "e": 547
+    },
+    {
+     "w": "2027,",
+     "s": 547,
+     "e": 556
+    },
+    {
+     "w": "Google",
+     "s": 556,
+     "e": 565
+    },
+    {
+     "w": "early",
+     "s": 565,
+     "e": 593
+    },
+    {
+     "w": "2027.",
+     "s": 593,
+     "e": 601
+    },
+    {
+     "w": "It's",
+     "s": 601,
+     "e": 608
+    },
+    {
+     "w": "a",
+     "s": 608,
+     "e": 610
+    },
+    {
+     "w": "request,",
+     "s": 610,
+     "e": 623
+    },
+    {
+     "w": "not",
+     "s": 623,
+     "e": 628
+    },
+    {
+     "w": "a",
+     "s": 628,
+     "e": 631
+    },
+    {
+     "w": "lock,",
+     "s": 631,
+     "e": 665
+    },
+    {
+     "w": "and",
+     "s": 665,
+     "e": 671
+    },
+    {
+     "w": "it",
+     "s": 671,
+     "e": 675
+    },
+    {
+     "w": "can't",
+     "s": 675,
+     "e": 687
+    },
+    {
+     "w": "undo",
+     "s": 687,
+     "e": 697
+    },
+    {
+     "w": "past",
+     "s": 697,
+     "e": 708
+    },
+    {
+     "w": "training.",
+     "s": 708,
+     "e": 725
+    },
+    {
+     "w": "Have",
+     "s": 725,
+     "e": 732
+    },
+    {
+     "w": "a",
+     "s": 732,
+     "e": 735
+    },
+    {
+     "w": "blog",
+     "s": 735,
+     "e": 769
+    },
+    {
+     "w": "or",
+     "s": 769,
+     "e": 773
+    },
+    {
+     "w": "a",
+     "s": 773,
+     "e": 776
+    },
+    {
+     "w": "shop",
+     "s": 776,
+     "e": 783
+    },
+    {
+     "w": "site?",
+     "s": 783,
+     "e": 798
+    },
+    {
+     "w": "Add",
+     "s": 798,
+     "e": 836
+    },
+    {
+     "w": "it.",
+     "s": 836,
+     "e": 842
+    }
+   ],
+   "org": "AI TRAINING",
+   "accent": "#8B5CF6",
+   "tag": "YOUR CONTENT",
+   "headline": [
+    "One rule asks AI firms",
+    "not to train on your site"
+   ],
+   "dek": "Oct 30 · Google, Microsoft, OpenAI and Anthropic · robots.txt",
+   "chapter": "One rule asks AI firms not to train on your site",
+   "points": [
+    "One robots.txt token: __usage_ai-training (with Disallow: /)",
+    "Anthropic has started; OpenAI \"in the coming months\"; Microsoft Feb 1, 2027; Google early 2027",
+    "Training only: it doesn't block crawling or undo past training",
+    "Voluntary: scrapers that don't follow it can ignore it"
+   ],
+   "sources": "Google Search Central · IETF draft (Oct 30) · The Verge",
+   "recap": "One robots.txt rule asks AI firms not to train on your site",
+   "cards": [
+    {
+     "k": "STILL TO COME",
+     "v": "GitHub's number on AI and code",
+     "cue": "Still",
+     "f": 18
+    },
+    {
+     "k": "OCT 30 · GOOGLE, MICROSOFT, OPENAI, ANTHROPIC",
+     "v": "One opt-out for AI training",
+     "cue": "Google",
+     "f": 129
+    },
+    {
+     "k": "ADD TO ROBOTS.TXT",
+     "v": "User-Agent: __usage_ai-training  Disallow: /",
+     "cue": "robots",
+     "f": 302
+    },
+    {
+     "k": "STARTS",
+     "v": "Anthropic now · OpenAI coming months · Microsoft Feb 2027 · Google early 2027",
+     "cue": "started",
+     "f": 431
+    },
+    {
+     "k": "A REQUEST, NOT A LOCK",
+     "v": "Can't undo past training",
+     "cue": "request",
+     "f": 610
+    },
+    {
+     "k": "BLOG OR SHOP SITE?",
+     "v": "Add the rule",
+     "cue": "blog",
+     "f": 735
+    }
+   ]
+  },
+  {
+   "name": "story4",
+   "audio": "news/week-2026-10-31-full/en/story4.wav",
+   "lead": 14,
+   "frames": 555,
+   "words": [
+    {
+     "w": "In",
+     "s": 21,
+     "e": 26
+    },
+    {
+     "w": "business:",
+     "s": 26,
+     "e": 47
+    },
+    {
+     "w": "Anthropic",
+     "s": 47,
+     "e": 68
+    },
+    {
+     "w": "filed",
+     "s": 68,
+     "e": 77
+    },
+    {
+     "w": "to",
+     "s": 77,
+     "e": 82
+    },
+    {
+     "w": "list",
+     "s": 82,
+     "e": 90
+    },
+    {
+     "w": "on",
+     "s": 90,
+     "e": 125
+    },
+    {
+     "w": "the",
+     "s": 125,
+     "e": 131
+    },
+    {
+     "w": "Nasdaq",
+     "s": 131,
+     "e": 142
+    },
+    {
+     "w": "as",
+     "s": 142,
+     "e": 158
+    },
+    {
+     "w": "ANT.",
+     "s": 158,
+     "e": 166
+    },
+    {
+     "w": "Its",
+     "s": 166,
+     "e": 172
+    },
+    {
+     "w": "S-1",
+     "s": 172,
+     "e": 179
+    },
+    {
+     "w": "filing",
+     "s": 179,
+     "e": 190
+    },
+    {
+     "w": "shows",
+     "s": 190,
+     "e": 199
+    },
+    {
+     "w": "16.3",
+     "s": 199,
+     "e": 207
+    },
+    {
+     "w": "billion",
+     "s": 207,
+     "e": 220
+    },
+    {
+     "w": "dollars",
+     "s": 220,
+     "e": 241
+    },
+    {
+     "w": "of",
+     "s": 241,
+     "e": 246
+    },
+    {
+     "w": "revenue",
+     "s": 246,
+     "e": 258
+    },
+    {
+     "w": "in",
+     "s": 258,
+     "e": 263
+    },
+    {
+     "w": "the",
+     "s": 263,
+     "e": 269
+    },
+    {
+     "w": "first",
+     "s": 269,
+     "e": 285
+    },
+    {
+     "w": "half",
+     "s": 285,
+     "e": 293
+    },
+    {
+     "w": "of",
+     "s": 293,
+     "e": 297
+    },
+    {
+     "w": "2026,",
+     "s": 297,
+     "e": 315
+    },
+    {
+     "w": "about",
+     "s": 315,
+     "e": 324
+    },
+    {
+     "w": "14",
+     "s": 324,
+     "e": 329
+    },
+    {
+     "w": "times",
+     "s": 329,
+     "e": 362
+    },
+    {
+     "w": "the",
+     "s": 362,
+     "e": 372
+    },
+    {
+     "w": "year",
+     "s": 372,
+     "e": 380
+    },
+    {
+     "w": "before.",
+     "s": 380,
+     "e": 392
+    },
+    {
+     "w": "It",
+     "s": 392,
+     "e": 397
+    },
+    {
+     "w": "isn't",
+     "s": 397,
+     "e": 439
+    },
+    {
+     "w": "on",
+     "s": 439,
+     "e": 444
+    },
+    {
+     "w": "sale",
+     "s": 444,
+     "e": 452
+    },
+    {
+     "w": "yet:",
+     "s": 452,
+     "e": 460
+    },
+    {
+     "w": "no",
+     "s": 460,
+     "e": 464
+    },
+    {
+     "w": "price",
+     "s": 464,
+     "e": 484
+    },
+    {
+     "w": "or",
+     "s": 484,
+     "e": 489
+    },
+    {
+     "w": "date",
+     "s": 489,
+     "e": 497
+    },
+    {
+     "w": "is",
+     "s": 497,
+     "e": 502
+    },
+    {
+     "w": "set.",
+     "s": 502,
+     "e": 513
+    }
+   ],
+   "org": "ANTHROPIC",
+   "accent": "#64748B",
+   "tag": "BUSINESS",
+   "headline": [
+    "Anthropic files",
+    "to go public"
+   ],
+   "dek": "Public S-1, Oct 26 · Nasdaq: ANT · share count and price not set",
+   "chapter": "Anthropic files to go public",
+   "points": [
+    "Public S-1 filed Oct 26; Nasdaq ticker ANT",
+    "Revenue Jan-Jun 2026: $16.3B (a year earlier: about $1.16B), per the S-1",
+    "Share count, price range and date not set yet"
+   ],
+   "sources": "Reuters · TNW · Bernama",
+   "recap": "Anthropic files to list on Nasdaq as ANT",
+   "cards": [
+    {
+     "k": "PUBLIC S-1 · OCT 26",
+     "v": "Nasdaq: ANT",
+     "cue": "Nasdaq",
+     "f": 18
+    },
+    {
+     "k": "REVENUE, JAN-JUN 2026 (S-1) · A YEAR EARLIER: $1.2B",
+     "v": "$16.3 billion",
+     "cue": "shows",
+     "big": true,
+     "hold": 90,
+     "f": 190
+    },
+    {
+     "k": "NOT ON SALE YET",
+     "v": "No price or date set",
+     "cue": "isn't",
+     "f": 397
+    }
+   ]
+  },
+  {
+   "name": "story5",
+   "audio": "news/week-2026-10-31-full/en/story5.wav",
+   "lead": 14,
+   "frames": 840,
+   "words": [
+    {
+     "w": "Finally,",
+     "s": 21,
+     "e": 39
+    },
+    {
+     "w": "GitHub,",
+     "s": 39,
+     "e": 49
+    },
+    {
+     "w": "where",
+     "s": 49,
+     "e": 62
+    },
+    {
+     "w": "coders",
+     "s": 62,
+     "e": 71
+    },
+    {
+     "w": "keep",
+     "s": 71,
+     "e": 78
+    },
+    {
+     "w": "their",
+     "s": 78,
+     "e": 85
+    },
+    {
+     "w": "code.",
+     "s": 85,
+     "e": 93
+    },
+    {
+     "w": "Its",
+     "s": 93,
+     "e": 125
+    },
+    {
+     "w": "own",
+     "s": 125,
+     "e": 130
+    },
+    {
+     "w": "data:",
+     "s": 130,
+     "e": 137
+    },
+    {
+     "w": "India",
+     "s": 137,
+     "e": 157
+    },
+    {
+     "w": "now",
+     "s": 157,
+     "e": 162
+    },
+    {
+     "w": "has",
+     "s": 162,
+     "e": 167
+    },
+    {
+     "w": "32",
+     "s": 167,
+     "e": 176
+    },
+    {
+     "w": "million",
+     "s": 176,
+     "e": 186
+    },
+    {
+     "w": "developers",
+     "s": 186,
+     "e": 200
+    },
+    {
+     "w": "there,",
+     "s": 200,
+     "e": 212
+    },
+    {
+     "w": "second",
+     "s": 212,
+     "e": 234
+    },
+    {
+     "w": "only",
+     "s": 234,
+     "e": 240
+    },
+    {
+     "w": "to",
+     "s": 240,
+     "e": 244
+    },
+    {
+     "w": "the",
+     "s": 244,
+     "e": 249
+    },
+    {
+     "w": "US,",
+     "s": 249,
+     "e": 254
+    },
+    {
+     "w": "and",
+     "s": 254,
+     "e": 259
+    },
+    {
+     "w": "added",
+     "s": 259,
+     "e": 297
+    },
+    {
+     "w": "over",
+     "s": 297,
+     "e": 303
+    },
+    {
+     "w": "10",
+     "s": 303,
+     "e": 311
+    },
+    {
+     "w": "million",
+     "s": 311,
+     "e": 321
+    },
+    {
+     "w": "this",
+     "s": 321,
+     "e": 327
+    },
+    {
+     "w": "year.",
+     "s": 327,
+     "e": 339
+    },
+    {
+     "w": "Worldwide,",
+     "s": 339,
+     "e": 381
+    },
+    {
+     "w": "how",
+     "s": 381,
+     "e": 397
+    },
+    {
+     "w": "many",
+     "s": 397,
+     "e": 403
+    },
+    {
+     "w": "code",
+     "s": 403,
+     "e": 413
+    },
+    {
+     "w": "changes",
+     "s": 413,
+     "e": 423
+    },
+    {
+     "w": "now",
+     "s": 423,
+     "e": 428
+    },
+    {
+     "w": "start",
+     "s": 428,
+     "e": 436
+    },
+    {
+     "w": "from",
+     "s": 436,
+     "e": 446
+    },
+    {
+     "w": "an",
+     "s": 446,
+     "e": 450
+    },
+    {
+     "w": "AI's",
+     "s": 450,
+     "e": 456
+    },
+    {
+     "w": "first",
+     "s": 456,
+     "e": 471
+    },
+    {
+     "w": "draft?",
+     "s": 471,
+     "e": 480
+    },
+    {
+     "w": "More",
+     "s": 480,
+     "e": 486
+    },
+    {
+     "w": "than",
+     "s": 486,
+     "e": 549
+    },
+    {
+     "w": "four",
+     "s": 549,
+     "e": 559
+    },
+    {
+     "w": "in",
+     "s": 559,
+     "e": 562
+    },
+    {
+     "w": "ten.",
+     "s": 562,
+     "e": 569
+    },
+    {
+     "w": "In",
+     "s": 569,
+     "e": 573
+    },
+    {
+     "w": "March,",
+     "s": 573,
+     "e": 609
+    },
+    {
+     "w": "under",
+     "s": 609,
+     "e": 617
+    },
+    {
+     "w": "two",
+     "s": 617,
+     "e": 625
+    },
+    {
+     "w": "in",
+     "s": 625,
+     "e": 629
+    },
+    {
+     "w": "ten.",
+     "s": 629,
+     "e": 636
+    },
+    {
+     "w": "So",
+     "s": 636,
+     "e": 639
+    },
+    {
+     "w": "learn",
+     "s": 639,
+     "e": 647
+    },
+    {
+     "w": "to",
+     "s": 647,
+     "e": 678
+    },
+    {
+     "w": "check",
+     "s": 678,
+     "e": 686
+    },
+    {
+     "w": "AI's",
+     "s": 686,
+     "e": 692
+    },
+    {
+     "w": "code,",
+     "s": 692,
+     "e": 705
+    },
+    {
+     "w": "line",
+     "s": 705,
+     "e": 716
+    },
+    {
+     "w": "by",
+     "s": 716,
+     "e": 731
+    },
+    {
+     "w": "line,",
+     "s": 731,
+     "e": 739
+    },
+    {
+     "w": "not",
+     "s": 739,
+     "e": 744
+    },
+    {
+     "w": "just",
+     "s": 744,
+     "e": 759
+    },
+    {
+     "w": "write",
+     "s": 759,
+     "e": 766
+    },
+    {
+     "w": "your",
+     "s": 766,
+     "e": 776
+    },
+    {
+     "w": "own.",
+     "s": 776,
+     "e": 783
+    }
+   ],
+   "org": "GITHUB",
+   "accent": "#22C55E",
+   "tag": "CODING",
+   "headline": [
+    "How much code",
+    "starts with AI?"
+   ],
+   "dek": "GitHub Octoverse, Oct 28 · GitHub's own data, Oct 2025 - Sep 2026",
+   "chapter": "GitHub: India's developers and AI's first drafts",
+   "points": [
+    "India: 32 million developers on GitHub (US 38.3 million)",
+    "India and the US each added 10 million+ this year",
+    "Sept 2026: over 40% of pull requests started with an agent's first draft (March: 17%)",
+    "GitHub's own numbers (it sells AI coding agents)"
+   ],
+   "sources": "GitHub Octoverse 2026 · Digit · Analytics India Magazine",
+   "recap": "Over 4 in 10 code changes start with AI (GitHub)",
+   "cards": [
+    {
+     "k": "GITHUB OCTOVERSE · OCT 28 · ITS OWN DATA (IT SELLS AI CODING TOOLS)",
+     "v": "Where coders keep their code",
+     "cue": "GitHub",
+     "f": 18
+    },
+    {
+     "k": "INDIA ON GITHUB",
+     "v": "32 million developers (#2 after the US)",
+     "cue": "India",
+     "f": 137
+    },
+    {
+     "k": "INDIA, THIS YEAR",
+     "v": "10 million+ new developers",
+     "cue": "added",
+     "f": 259
+    },
+    {
+     "k": "WORLDWIDE · CODE CHANGES (PULL REQUESTS) FROM AN AI'S FIRST DRAFT · SEPT 2026 · MARCH: UNDER 2 IN 10",
+     "v": "Over 4 in 10",
+     "part": 2,
+     "drop": true,
+     "big": true,
+     "hush": true,
+     "hold": 150,
+     "f": 536
+    },
+    {
+     "k": "SKILL TO LEARN",
+     "v": "Check AI's code, line by line",
+     "cue": "line",
+     "f": 705
+    }
+   ]
+  },
+  {
+   "name": "outro",
+   "audio": "news/week-2026-10-31-full/en/outro.wav",
+   "lead": 6,
+   "frames": 489,
+   "words": [
+    {
+     "w": "That's",
+     "s": 14,
+     "e": 23
+    },
+    {
+     "w": "your",
+     "s": 23,
+     "e": 30
+    },
+    {
+     "w": "AI",
+     "s": 30,
+     "e": 34
+    },
+    {
+     "w": "week.",
+     "s": 34,
+     "e": 69
+    },
+    {
+     "w": "Would",
+     "s": 69,
+     "e": 77
+    },
+    {
+     "w": "you",
+     "s": 77,
+     "e": 82
+    },
+    {
+     "w": "trust",
+     "s": 82,
+     "e": 90
+    },
+    {
+     "w": "a",
+     "s": 90,
+     "e": 93
+    },
+    {
+     "w": "chatbot",
+     "s": 93,
+     "e": 104
+    },
+    {
+     "w": "with",
+     "s": 104,
+     "e": 111
+    },
+    {
+     "w": "your",
+     "s": 111,
+     "e": 117
+    },
+    {
+     "w": "medicine?",
+     "s": 117,
+     "e": 157
+    },
+    {
+     "w": "Tell",
+     "s": 157,
+     "e": 164
+    },
+    {
+     "w": "us",
+     "s": 164,
+     "e": 168
+    },
+    {
+     "w": "in",
+     "s": 168,
+     "e": 172
+    },
+    {
+     "w": "the",
+     "s": 172,
+     "e": 177
+    },
+    {
+     "w": "comments.",
+     "s": 177,
+     "e": 219
+    },
+    {
+     "w": "And",
+     "s": 219,
+     "e": 225
+    },
+    {
+     "w": "follow",
+     "s": 225,
+     "e": 234
+    },
+    {
+     "w": "AI",
+     "s": 234,
+     "e": 238
+    },
+    {
+     "w": "Maastaaru:",
+     "s": 238,
+     "e": 281
+    },
+    {
+     "w": "AI",
+     "s": 281,
+     "e": 285
+    },
+    {
+     "w": "Weekly,",
+     "s": 285,
+     "e": 295
+    },
+    {
+     "w": "every",
+     "s": 295,
+     "e": 310
+    },
+    {
+     "w": "Saturday.",
+     "s": 310,
+     "e": 324
+    }
+   ]
+  }
+ ],
+ "frames": 4854
+}

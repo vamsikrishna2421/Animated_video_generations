@@ -189,11 +189,11 @@ const Chapter: React.FC<{ seg: Seg; n: number; total: number; edition: string }>
       </div>
       <Caps words={seg.words} bottom={46} size={58} max={4} />
       {/* full-screen number moments (cards marked big) */}
-      {cards.filter((c) => c.big && f >= c.f - 2 && f <= c.f + 72).map((c, i) => {
-        const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + 60, c.f + 72);
+      {cards.filter((c) => c.big && f >= c.f - 2 && f <= c.f + (c.hold ?? 60) + 12).map((c, i) => {
+        const inP = pop(f, c.f - 2, 10), out = 1 - prog(f, c.f + (c.hold ?? 60), c.f + (c.hold ?? 60) + 12);
         return (
-          <AbsoluteFill key={`big${i}`} style={{ background: `radial-gradient(circle at 50% 45%, ${accent}55, transparent 60%), rgba(3,4,10,0.97)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 20 }}>
-            <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 40, letterSpacing: 8, color: accent }}>{c.k}</div>
+          <AbsoluteFill key={`big${i}`} style={{ background: `radial-gradient(circle at 50% 45%, ${accent}55, transparent 60%), rgba(3,4,10,1)`, opacity: Math.min(1, inP * 1.4) * out, alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 20 }}>
+            <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 36, letterSpacing: 6, lineHeight: 1.35, color: accent, textAlign: "center", padding: "0 160px" }}>{c.k}</div>
             <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 150, letterSpacing: -5, color: B.white, transform: `scale(${1.2 - 0.2 * inP})` }}>{c.v}</div>
           </AbsoluteFill>
         );
@@ -225,7 +225,7 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string; recap?: string }
               return (
                 <div key={i} style={{ display: "flex", gap: 16, alignItems: "center", opacity: p, transform: `translateY(${(1 - p) * 30}px)` }}>
                   <div style={{ width: 10, height: 64, borderRadius: 5, background: s.accent }} />
-                  <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 30, lineHeight: 1.15, color: B.white }}>{(s.headline ?? []).join(" ")}</div>
+                  <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 30, lineHeight: 1.15, color: B.white }}>{s.recap ?? (s.headline ?? []).join(" ")}</div>
                 </div>
               );
             })}
@@ -252,6 +252,7 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
   const voiceEnd = starts[starts.length - 1] + (lastSeg.words[lastSeg.words.length - 1]?.e ?? 0) + 6;
   const chapterStarts = starts.slice(1, -1);
   const drops = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.drop).map((c) => ({ f: starts[segs.indexOf(s)] + c.f, big: !!c.big, hush: !!c.hush })));
+  const quiets = stories.flatMap((s) => (s.cards ?? []).filter((c) => c.quiet).map((c) => ({ f: starts[segs.indexOf(s)] + c.f, h: c.hold ?? 150 })));
   return (
     <AbsoluteFill style={{ background: "#03040A" }}>
       <BrandFonts />
@@ -281,13 +282,14 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
         if (fr >= outroS) return base * interpolate(fr, [outroS, subAbs], [1.15, 1.4], cl);
         const v = fr >= lastS ? base * interpolate(fr, [lastS, outroS], [0.9, 1.15], cl) : base * interpolate(fr, [starts[1], lastS], [0.8, 0.9], cl);
         const swell = chapterStarts.reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2.2, 1], cl)), 1);
-        return v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0, 0, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
+        const hushQ = quiets.reduce((g, q) => g * interpolate(fr, [q.f - 14, q.f, q.f + q.h, q.f + q.h + 24], [1, 0.2, 0.2, 1], cl), 1);
+        return hushQ * v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0.15, 0.15, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);
       }} />
       {drops.map((d) => <Sequence key={`d${d.f}`} from={d.f - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={d.hush ? 0.95 : d.big ? 0.5 : 0.35} /></Sequence>)}
       {drops.filter((d) => d.hush).map((d) => <Sequence key={`r${d.f}`} from={d.f - 86} durationInFrames={50} layout="none"><Audio src={A("riser")} volume={0.4} /></Sequence>)}
       {(segs[0].hits ?? []).map((h) => <Sequence key={`h${h}`} from={h - 2} durationInFrames={40} layout="none"><Audio src={A("impact")} volume={0.4} /></Sequence>)}
       {chapterStarts.map((s) => <Sequence key={`w${s}`} from={s} durationInFrames={30} layout="none"><Audio src={A("whoosh")} volume={0.45} /></Sequence>)}
-      {stories.map((s) => (s.cards ?? []).map((c, j) => (
+      {stories.map((s) => (s.cards ?? []).map((c, j) => c.quiet ? null : (
         <Sequence key={`${s.name}${j}`} from={starts[segs.indexOf(s)] + c.f - 3} durationInFrames={20} layout="none"><Audio src={A("pop")} volume={0.3} /></Sequence>
       )))}
       <Sequence from={subAbs + 30} durationInFrames={30} layout="none"><Audio src={A("click")} volume={0.8} /></Sequence>
