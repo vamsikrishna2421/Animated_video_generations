@@ -55,7 +55,7 @@ APP = set()
 MUST = {"en": {1: [("daughter's", "daughter", "daughters"), ("wedding",), ("card",), ("mother's", "mothers", "mother")],
                2: [("mother's", "mothers", "mother"), ("say", "says")],
                3: [("mother's", "mothers", "mother"), ("dream",), ("wedding",), ("swapna", "sapna", "swapana")],
-               4: [("swapna", "sapna", "swapana"), ("means",), ("dream",), ("translated", "translate"), ("name",)],
+               4: [("swapna", "sapna", "swapana"), ("means",), ("dream",), ("ai", "a.i"), ("translated", "translate"), ("name",)],
                5: [("girl",), ("became",), ("mother",)],
                6: [("tried",), ("card",), ("small",), ("free",), ("twenty", "20")], "6b": [("swapna", "sapna", "swapana"), ("zero", "0"), ("half",), ("grandma", "grandmother"), ("bride",)],
                7: [("tell",), ("keep",), ("names", "name"), ("exactly",)],

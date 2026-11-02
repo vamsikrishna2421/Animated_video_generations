@@ -57,6 +57,10 @@ HAND = {}  # (way, try): {check: True/False, "note": ...} after reading the repl
 #   Friday: plain 9 (try 3 said Thursday), rule 1 (Thursday 5, Saturday 3, Sunday 1)
 #   10:30 in the morning: plain 10 ("10:30 AM"); rule: 9 of 10 wrote "sunrise at 10:30" (ఉదయం read word by word)
 #   the mother's own name (Sarojini) right: plain 3, rule 4
+#   blanks (10, run after the render review): every blank back unchanged 10/10 (names, date, day, time, hall, senders);
+#         "our daughter" right only 4/10 (tries 2, 6, 7, 8; "our mother" 1, 3, 4; "our sister" 5, 10; "our Aunt" 9);
+#         "in the morning" right 2/10 (3, 6; "sunrise" 6, "dawn" 2). Blanks protect the names, not the small words: a
+#         person who reads both still has to check
 #   back: the 10 back-translations into Telugu are garbled (mixed scripts, invented words): no reader could use them to
 #         find the mistake, so the reel doesn't recommend a back-translation check
 

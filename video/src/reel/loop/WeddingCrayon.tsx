@@ -23,7 +23,7 @@ type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const SERIF = (s: number, w = 700) => `${w} ${s}px Georgia, "Times New Roman", serif`;
 const GREEN = "#16a34a", RED = "#dc2626";
-const HOLD = 40;   // frames of the family-group flood before the slam back to frame 1
+const HOLD = 105;   // frames of the family-group flood before the slam back to frame 1 (render review: 40 was too short to read)
 const CLAP = "reel/creative09v1/clap.wav";
 const MOODS: Record<number, Partial<Record<BillWho, [BillMood, BillArms]>>> = {
   2: { bunny: ["shock", "up"], sarojini: ["worried", "phone"] }, 7: { sarojini: ["angry", "phone"], bunny: ["deadpan", "rest"] },
@@ -154,12 +154,13 @@ const StCard: React.FC<SP> = ({ s }) => {
       sfx.push(<Sfx key={k("n")} at={c1 - (te ? 12 : 3)} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.55} />, <Sfx key={k("c")} at={end + 2} src={CLAP} vol={0.3} />);
     }
     if (b.prop === "worse") sfx.push(<Sfx key={k("z")} at={at + 6} src="reel/sfx_buzz.wav" vol={0.25} />, <Sfx key={k("g")} at={end + 1} src="reel/sfx_glitch.wav" vol={0.25} />);
-    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 30)} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - 32)} src="reel/sfx_boom.wav" vol={0.4} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 30)} src={CLAP} vol={0.25} />, <Sfx key={k("h")} at={Math.max(0, at - 32)} src="reel/sfx_boom.wav" vol={0.25} />);   // render review: the rule was louder than the flood
     if (b.prop === "loop") {   // the flood: pings piling up, then the slam back to frame 1
       const slam = end + HOLD;
       sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 37)} src="reel/sfx_riser.wav" vol={0.35} />);
-      FLOOD.forEach((_, q) => sfx.push(<Sfx key={k("p" + q)} at={end + 2 + q * 4} src="audio/sfx_pop.wav" vol={0.22} />));
-      sfx.push(<Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("r")} at={slam + 2} src="reel/sfx_ring1.wav" vol={0.3} />);
+      FLOOD.forEach((_, q) => sfx.push(<Sfx key={k("p" + q)} at={end + 2 + q * 9} src="audio/sfx_pop.wav" vol={0.3} />));
+      sfx.push(<Sfx key={k("f")} at={end + 1} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("c")} at={end + 3} src={CLAP} vol={0.45} />,   // the flood is the biggest hit
+        <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("r")} at={slam + 2} src="reel/sfx_ring1.wav" vol={0.3} />);
     }
   });
   const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 30 : 0;
@@ -189,6 +190,7 @@ const StCard: React.FC<SP> = ({ s }) => {
           if (hook) {   // sound-off: the headline over frame 1
             c.fillStyle = "rgba(15,23,42,0.92)"; rrect(c, 60, 262, W - 120, 140, 26); c.fill();
             c.font = SANS(66, 900); c.fillStyle = "#fde047"; c.textAlign = "center"; c.fillText("AI MARRIED OFF AMMAMMA", W / 2, 356);
+            tag(c, "a real AI reply (our test, try 4)", W / 2, 1400, 44, "#0f172a", "#fde68a", 1);
           } else { live(230); }
           if (b.prop === "name") tag(c, "Swapna = \"dream\"", W / 2, 1370, 64, "#fee2e2", "#991b1b", seg(f, ln.from + 2, ln.from + 10), -0.03);
           if (b.prop === "name") tag(c, "it translated her name", W / 2, 1475, 50, "#0f172a", "#fde68a", seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
@@ -228,12 +230,12 @@ const StCard: React.FC<SP> = ({ s }) => {
           if (b.prop === "test") {
             const c1 = cu(1, 0.5);
             stamp(c, "Swapna's name: 0 of 20", W / 2, 640, 74, RED, seg(f, c1 - 2, c1 + 6), -0.04);
-            tag(c, "Grandma (Ammamma) was the bride: 10 of 20", W / 2, 880, 54, "#fee2e2", "#991b1b", seg(f, c1 + 16, c1 + 24));
+            tag(c, "Grandma was the bride: 10 of 20", W / 2, 880, 52, "#fee2e2", "#991b1b", seg(f, c1 + 16, c1 + 24));
             tag(c, "\"dream\": 11 of 20", W / 2, 1040, 50, "#334155", "#f8fafc", seg(f, c1 + 26, c1 + 34));
           } else {
             c.font = SANS(44, 900); c.fillStyle = "#93c5fd"; c.fillText("+ \"keep every name exactly\" · 10 tries", W / 2, 620);
             const c1 = cu(1, 0.3);
-            const rows: [string, string, number][] = [["Swapna's name", "still 0 of 10", ln.from + 4], ["Friday", "wrong 9 of 10", c1], ["10:30 AM", "\"sunrise at 10:30\": 9 of 10", c1 + 22]];
+            const rows: [string, string, number][] = [["Swapna's name", "still 0 of 10", ln.from + 4], ["Friday", "another day: 9 of 10", c1], ["10:30 AM", "\"sunrise at 10:30\": 9 of 10", c1 + 22]];
             rows.forEach(([a, v, t0], q) => {
               const k = seg(f, t0 - 2, t0 + 6);
               if (k <= 0) return;
@@ -244,6 +246,7 @@ const StCard: React.FC<SP> = ({ s }) => {
               c.restore();
             });
             stamp(c, "WORSE", W / 2, 530, 60, RED, seg(f, ln.from + 2, ln.from + 10), 0.12);
+            tag(c, "udayam = morning, and sunrise", W / 2, 1330, 46, "#fef3c7", "#92400e", seg(f, c1 + 30, c1 + 38));
           }
         } else if (b.shot === "rule") {
           // ---------- the rule: blanks you fill yourself ----------
@@ -262,9 +265,12 @@ const StCard: React.FC<SP> = ({ s }) => {
             if (fill > 0) { c.save(); c.globalAlpha = clamp(fill * 2 - q * 0.25); c.fillStyle = GREEN; c.fillText(blank, x, y); c.restore(); }
             c.fillStyle = INK; c.fillText(z, x + bw + 6, y);
           });
-          tag(c, "1  YOU type the names, date, day and time", W / 2, 1060, 46, "#dcfce7", "#14532d", seg(f, ln.from, ln.from + 8));
-          tag(c, "2  the AI translates only the rest", W / 2, 1210, 46, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.1), cu(1, 0.1) + 8));
-          tag(c, "3  someone who reads both checks it", W / 2, 1360, 46, "#fef3c7", "#92400e", seg(f, cu(1, 0.6) + 22, cu(1, 0.6) + 30));
+          tag(c, "1  YOU type the names, date, day and time", W / 2, 1020, 44, "#dcfce7", "#14532d", seg(f, ln.from, ln.from + 8));
+          tag(c, "2  the AI translates only the rest", W / 2, 1130, 44, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.1), cu(1, 0.1) + 8));
+          tag(c, "3  someone who reads both checks it", W / 2, 1240, 44, "#fef3c7", "#92400e", seg(f, cu(1, 0.6) + 22, cu(1, 0.6) + 30));
+          // render review: the fix, tested too (10 tries with blanks): names kept, the small words still slip
+          tag(c, "our test with blanks: names kept 10 of 10", W / 2, 1350, 36, "#0f172a", "#fde68a", seg(f, cu(1, 0.6) + 30, cu(1, 0.6) + 38));
+          tag(c, "but \"our daughter\" right only 4 of 10", W / 2, 1430, 36, "#0f172a", "#fca5a5", seg(f, cu(1, 0.6) + 36, cu(1, 0.6) + 44));
         } else if (b.shot === "home") {
           // ---------- the living room: Swapna in the doorway, then the family group floods ----------
           livingRoom(c, W, 0, H);
@@ -277,7 +283,7 @@ const StCard: React.FC<SP> = ({ s }) => {
             c.save(); c.globalAlpha = 0.6 * seg(f, endL, endL + 6); c.fillStyle = "#075e54"; c.fillRect(0, 0, W, H); c.restore();
             c.font = SANS(44, 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.globalAlpha = seg(f, endL, endL + 4);
             c.fillText("Family 👨‍👩‍👧 (243)", W / 2, 320); c.globalAlpha = 1;
-            FLOOD.forEach((t, q) => bubble(c, t, q % 2 ? 640 : 440, 430 + q * 140, seg(f, endL + 2 + q * 4, endL + 6 + q * 4), q % 3 === 0));
+            FLOOD.forEach((t, q) => bubble(c, t, q % 2 ? 640 : 440, 430 + q * 140, seg(f, endL + 2 + q * 9, endL + 7 + q * 9), q % 3 === 0));
           }
         }
         void SERIF;

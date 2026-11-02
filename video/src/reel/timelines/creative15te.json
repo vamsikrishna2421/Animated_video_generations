@@ -1,0 +1,901 @@
+{
+ "id": "creative15te",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI translations",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "Ammamma's dream wedding (Creative 15: AI translation) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   705,
+   729
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   593,
+   0.95
+  ],
+  [
+   593,
+   1166,
+   1.2
+  ],
+  [
+   1166,
+   1629,
+   1.4
+  ],
+  [
+   1166,
+   1629,
+   1.15,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1629,
+ "music": "reel/creative15te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_card",
+   "data": {
+    "beats": [
+     {
+      "who": "sarojini",
+      "shot": "card",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "bunny",
+      "shot": "split",
+      "prop": "onair",
+      "n": 2
+     },
+     {
+      "who": "sarojini",
+      "shot": "card",
+      "prop": "dream",
+      "n": 3
+     },
+     {
+      "who": "bunny",
+      "shot": "card",
+      "prop": "name",
+      "n": 4
+     },
+     {
+      "who": "sarojini",
+      "shot": "card",
+      "prop": "girl",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Ammamma's dream wedding",
+     "title": "Ammamma's dream wedding",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 593,
+   "lines": [
+    {
+     "who": "sarojini",
+     "name": "Sarojini",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative15te/line_01.wav",
+     "from": 15,
+     "frames": 137,
+     "words": [
+      {
+       "w": "RJ",
+       "from": 16,
+       "to": 24
+      },
+      {
+       "w": "garu,",
+       "from": 24,
+       "to": 40
+      },
+      {
+       "w": "the",
+       "from": 70,
+       "to": 77
+      },
+      {
+       "w": "chatbot",
+       "from": 77,
+       "to": 97
+      },
+      {
+       "w": "married",
+       "from": 97,
+       "to": 110
+      },
+      {
+       "w": "off",
+       "from": 110,
+       "to": 116
+      },
+      {
+       "w": "my",
+       "from": 116,
+       "to": 121
+      },
+      {
+       "w": "mother!",
+       "from": 121,
+       "to": 134
+      }
+     ],
+     "cues": {
+      "1": 70
+     }
+    },
+    {
+     "who": "bunny",
+     "name": "RJ Bunny",
+     "color": "#A5B4FC",
+     "sub": null,
+     "audio": "reel/creative15te/line_02.wav",
+     "from": 161,
+     "frames": 63,
+     "words": [
+      {
+       "w": "Your",
+       "from": 162,
+       "to": 169
+      },
+      {
+       "w": "mother?!",
+       "from": 169,
+       "to": 199
+      },
+      {
+       "w": "What",
+       "from": 199,
+       "to": 206
+      },
+      {
+       "w": "did",
+       "from": 206,
+       "to": 211
+      },
+      {
+       "w": "it",
+       "from": 211,
+       "to": 215
+      },
+      {
+       "w": "write?",
+       "from": 215,
+       "to": 224
+      }
+     ],
+     "cues": {
+      "1": 202
+     }
+    },
+    {
+     "who": "sarojini",
+     "name": "Sarojini",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative15te/line_03.wav",
+     "from": 232,
+     "frames": 123,
+     "words": [
+      {
+       "w": "\"Our",
+       "from": 240,
+       "to": 247
+      },
+      {
+       "w": "mother's",
+       "from": 247,
+       "to": 259
+      },
+      {
+       "w": "dream",
+       "from": 259,
+       "to": 276
+      },
+      {
+       "w": "wedding",
+       "from": 276,
+       "to": 287
+      },
+      {
+       "w": "with",
+       "from": 287,
+       "to": 293
+      },
+      {
+       "w": "Kalyan.\"",
+       "from": 293,
+       "to": 310
+      },
+      {
+       "w": "Where",
+       "from": 321,
+       "to": 328
+      },
+      {
+       "w": "is",
+       "from": 328,
+       "to": 332
+      },
+      {
+       "w": "our",
+       "from": 332,
+       "to": 337
+      },
+      {
+       "w": "Swapna?",
+       "from": 337,
+       "to": 350
+      }
+     ],
+     "cues": {
+      "1": 321
+     }
+    },
+    {
+     "who": "bunny",
+     "name": "RJ Bunny",
+     "color": "#A5B4FC",
+     "sub": null,
+     "audio": "reel/creative15te/line_04.wav",
+     "from": 364,
+     "frames": 121,
+     "words": [
+      {
+       "w": "Swapna",
+       "from": 365,
+       "to": 382
+      },
+      {
+       "w": "means",
+       "from": 382,
+       "to": 397
+      },
+      {
+       "w": "dream!",
+       "from": 397,
+       "to": 419
+      },
+      {
+       "w": "It",
+       "from": 419,
+       "to": 424
+      },
+      {
+       "w": "translated",
+       "from": 424,
+       "to": 455
+      },
+      {
+       "w": "even",
+       "from": 455,
+       "to": 464
+      },
+      {
+       "w": "her",
+       "from": 464,
+       "to": 471
+      },
+      {
+       "w": "name.",
+       "from": 471,
+       "to": 481
+      }
+     ],
+     "cues": {
+      "1": 418
+     }
+    },
+    {
+     "who": "sarojini",
+     "name": "Sarojini",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative15te/line_05.wav",
+     "from": 494,
+     "frames": 83,
+     "words": [
+      {
+       "w": "\"Our",
+       "from": 503,
+       "to": 513
+      },
+      {
+       "w": "girl\"",
+       "from": 513,
+       "to": 525
+      },
+      {
+       "w": "became",
+       "from": 525,
+       "to": 548
+      },
+      {
+       "w": "\"our",
+       "from": 548,
+       "to": 558
+      },
+      {
+       "w": "mother\"!",
+       "from": 558,
+       "to": 577
+      }
+     ],
+     "cues": {
+      "1": 539
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_card",
+   "data": {
+    "beats": [
+     {
+      "who": "bunny",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "sarojini",
+      "shot": "split",
+      "prop": "keep",
+      "n": 7
+     },
+     {
+      "who": "bunny",
+      "shot": "test",
+      "prop": "worse",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 593,
+   "frames": 573,
+   "lines": [
+    {
+     "who": "bunny",
+     "name": "RJ Bunny",
+     "color": "#A5B4FC",
+     "sub": null,
+     "audio": "reel/creative15te/line_06.wav",
+     "from": 0,
+     "frames": 257,
+     "words": [
+      {
+       "w": "We",
+       "from": 1,
+       "to": 10
+      },
+      {
+       "w": "tried",
+       "from": 10,
+       "to": 19
+      },
+      {
+       "w": "your",
+       "from": 19,
+       "to": 27
+      },
+      {
+       "w": "card",
+       "from": 27,
+       "to": 35
+      },
+      {
+       "w": "20",
+       "from": 35,
+       "to": 39
+      },
+      {
+       "w": "times,",
+       "from": 39,
+       "to": 50
+      },
+      {
+       "w": "on",
+       "from": 50,
+       "to": 55
+      },
+      {
+       "w": "a",
+       "from": 55,
+       "to": 68
+      },
+      {
+       "w": "small",
+       "from": 68,
+       "to": 77
+      },
+      {
+       "w": "free",
+       "from": 77,
+       "to": 88
+      },
+      {
+       "w": "chatbot.",
+       "from": 88,
+       "to": 106
+      },
+      {
+       "w": "Swapna's",
+       "from": 136,
+       "to": 153
+      },
+      {
+       "w": "name:",
+       "from": 153,
+       "to": 161
+      },
+      {
+       "w": "not",
+       "from": 161,
+       "to": 167
+      },
+      {
+       "w": "once!",
+       "from": 167,
+       "to": 175
+      },
+      {
+       "w": "Half",
+       "from": 175,
+       "to": 182
+      },
+      {
+       "w": "the",
+       "from": 182,
+       "to": 201
+      },
+      {
+       "w": "time,",
+       "from": 201,
+       "to": 210
+      },
+      {
+       "w": "Ammamma",
+       "from": 210,
+       "to": 221
+      },
+      {
+       "w": "was",
+       "from": 221,
+       "to": 227
+      },
+      {
+       "w": "the",
+       "from": 227,
+       "to": 232
+      },
+      {
+       "w": "bride!",
+       "from": 232,
+       "to": 242
+      }
+     ],
+     "cues": {
+      "1": 136
+     }
+    },
+    {
+     "who": "sarojini",
+     "name": "Sarojini",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative15te/line_07.wav",
+     "from": 272,
+     "frames": 74,
+     "words": [
+      {
+       "w": "I'll",
+       "from": 273,
+       "to": 279
+      },
+      {
+       "w": "tell",
+       "from": 279,
+       "to": 285
+      },
+      {
+       "w": "it:",
+       "from": 285,
+       "to": 290
+      },
+      {
+       "w": "don't",
+       "from": 290,
+       "to": 297
+      },
+      {
+       "w": "change",
+       "from": 297,
+       "to": 306
+      },
+      {
+       "w": "the",
+       "from": 306,
+       "to": 310
+      },
+      {
+       "w": "names!",
+       "from": 310,
+       "to": 323
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "bunny",
+     "name": "RJ Bunny",
+     "color": "#A5B4FC",
+     "sub": null,
+     "audio": "reel/creative15te/line_08.wav",
+     "from": 353,
+     "frames": 185,
+     "words": [
+      {
+       "w": "We",
+       "from": 355,
+       "to": 359
+      },
+      {
+       "w": "did",
+       "from": 359,
+       "to": 364
+      },
+      {
+       "w": "that",
+       "from": 364,
+       "to": 380
+      },
+      {
+       "w": "too.",
+       "from": 380,
+       "to": 386
+      },
+      {
+       "w": "Even",
+       "from": 386,
+       "to": 393
+      },
+      {
+       "w": "worse!",
+       "from": 393,
+       "to": 402
+      },
+      {
+       "w": "Friday",
+       "from": 422,
+       "to": 434
+      },
+      {
+       "w": "changed",
+       "from": 434,
+       "to": 448
+      },
+      {
+       "w": "9",
+       "from": 448,
+       "to": 452
+      },
+      {
+       "w": "times.",
+       "from": 452,
+       "to": 470
+      },
+      {
+       "w": "Morning",
+       "from": 470,
+       "to": 494
+      },
+      {
+       "w": "(udayam)",
+       "from": 494,
+       "to": 510
+      },
+      {
+       "w": "became",
+       "from": 510,
+       "to": 523
+      },
+      {
+       "w": "sunrise!",
+       "from": 523,
+       "to": 539
+      }
+     ],
+     "cues": {
+      "1": 422
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_card",
+   "data": {
+    "beats": [
+     {
+      "who": "bunny",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 9
+     },
+     {
+      "who": "sarojini",
+      "shot": "split",
+      "prop": "check",
+      "n": 10
+     },
+     {
+      "who": "swapna",
+      "shot": "home",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Fill the blanks yourself",
+     "title": "Fill the blanks yourself",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1166,
+   "frames": 463,
+   "lines": [
+    {
+     "who": "bunny",
+     "name": "RJ Bunny",
+     "color": "#A5B4FC",
+     "sub": null,
+     "audio": "reel/creative15te/line_09.wav",
+     "from": 9,
+     "frames": 161,
+     "words": [
+      {
+       "w": "Leave",
+       "from": 10,
+       "to": 19
+      },
+      {
+       "w": "blanks",
+       "from": 19,
+       "to": 37
+      },
+      {
+       "w": "at",
+       "from": 37,
+       "to": 42
+      },
+      {
+       "w": "the",
+       "from": 42,
+       "to": 48
+      },
+      {
+       "w": "names,",
+       "from": 48,
+       "to": 63
+      },
+      {
+       "w": "date",
+       "from": 63,
+       "to": 71
+      },
+      {
+       "w": "and",
+       "from": 71,
+       "to": 77
+      },
+      {
+       "w": "day.",
+       "from": 77,
+       "to": 84
+      },
+      {
+       "w": "Give",
+       "from": 94,
+       "to": 100
+      },
+      {
+       "w": "the",
+       "from": 100,
+       "to": 104
+      },
+      {
+       "w": "rest",
+       "from": 104,
+       "to": 110
+      },
+      {
+       "w": "to",
+       "from": 110,
+       "to": 113
+      },
+      {
+       "w": "the",
+       "from": 113,
+       "to": 117
+      },
+      {
+       "w": "chatbot,",
+       "from": 117,
+       "to": 132
+      },
+      {
+       "w": "fill",
+       "from": 132,
+       "to": 143
+      },
+      {
+       "w": "the",
+       "from": 143,
+       "to": 147
+      },
+      {
+       "w": "blanks",
+       "from": 147,
+       "to": 155
+      },
+      {
+       "w": "yourself.",
+       "from": 155,
+       "to": 166
+      }
+     ],
+     "cues": {
+      "1": 94
+     }
+    },
+    {
+     "who": "sarojini",
+     "name": "Sarojini",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative15te/line_10.wav",
+     "from": 200,
+     "frames": 142,
+     "words": [
+      {
+       "w": "Before",
+       "from": 211,
+       "to": 220
+      },
+      {
+       "w": "it",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "goes",
+       "from": 224,
+       "to": 231
+      },
+      {
+       "w": "to",
+       "from": 231,
+       "to": 235
+      },
+      {
+       "w": "the",
+       "from": 235,
+       "to": 247
+      },
+      {
+       "w": "family",
+       "from": 247,
+       "to": 256
+      },
+      {
+       "w": "group,",
+       "from": 256,
+       "to": 265
+      },
+      {
+       "w": "Swapna",
+       "from": 283,
+       "to": 296
+      },
+      {
+       "w": "reads",
+       "from": 296,
+       "to": 308
+      },
+      {
+       "w": "it",
+       "from": 308,
+       "to": 314
+      },
+      {
+       "w": "once!",
+       "from": 314,
+       "to": 325
+      }
+     ],
+     "cues": {
+      "1": 283
+     }
+    },
+    {
+     "who": "swapna",
+     "name": "Swapna",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative15te/line_11.wav",
+     "from": 352,
+     "frames": 72,
+     "words": [
+      {
+       "w": "Amma...",
+       "from": 352,
+       "to": 377
+      },
+      {
+       "w": "you",
+       "from": 377,
+       "to": 385
+      },
+      {
+       "w": "already",
+       "from": 385,
+       "to": 400
+      },
+      {
+       "w": "sent",
+       "from": 400,
+       "to": 410
+      },
+      {
+       "w": "it!",
+       "from": 410,
+       "to": 417
+      }
+     ],
+     "cues": {
+      "1": 376
+     }
+    }
+   ]
+  }
+ ]
+}

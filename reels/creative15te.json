@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 1.5,
+ "musicGapGain": 1.2,
  "musicEndRamp": [
   0.85,
   6.0
@@ -93,12 +93,12 @@
     {
      "who": "sarojini",
      "file": "01_sarojini.wav",
-     "text": "ఆర్జే గారూ, మా అమ్మాయి పెళ్ళి కార్డు ని ఇంగ్లీష్ లో రాయమంటే, <pause 0.3> [1] చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది!",
-     "show": "RJ garu, I asked for my daughter's card in English, <pause 0.3> the chatbot married off my mother!",
+     "text": "ఆర్జే గారూ, <pause 0.3> [1] చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది!",
+     "show": "RJ garu, <pause 0.3> the chatbot married off my mother!",
      "maxgap": 0.28,
      "gap": 0.3,
      "tempo": 1.0,
-     "tts": "ఆర్జే గారూ, మా అమ్మాయి పెళ్ళి కార్డు ని ఇంగ్లీష్ లో రాయమంటే,",
+     "tts": "ఆర్జే గారూ,",
      "file2": "01b_sarojini.wav",
      "tts2": "చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది!",
      "pause": 0.3,
@@ -194,14 +194,14 @@
     {
      "who": "bunny",
      "file": "06_bunny.wav",
-     "text": "మీ కార్డు ని ఒక చిన్న ఫ్రీ చాట్ బాట్ తో ఇరవై సార్లు ట్రై చేశాం. <pause 0.6> [1] స్వప్న పేరు ఒక్కసారి కూడా రాలేదు! సగం సార్లు అమ్మమ్మే పెళ్ళికూతురు!",
-     "show": "We tried your card on a small free chatbot, 20 times. <pause 0.3> Swapna's name: not once! Half the time, Ammamma was the bride!",
+     "text": "మీ కార్డు ని ఇరవై సార్లు ట్రై చేశాం, ఒక చిన్న ఫ్రీ చాట్ బాట్ తో. <pause 0.6> [1] స్వప్న పేరు ఒక్కసారి కూడా రాలేదు! సగం సార్లు అమ్మమ్మే బ్రైడ్!",
+     "show": "We tried your card 20 times, on a small free chatbot. <pause 0.3> Swapna's name: not once! Half the time, Ammamma was the bride!",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.0,
-     "tts": "మీ కార్డు ని ఒక చిన్న ఫ్రీ చాట్ బాట్ తో ఇరవై సార్లు ట్రై చేశాం.",
+     "tts": "మీ కార్డు ని ఇరవై సార్లు ట్రై చేశాం, ఒక చిన్న ఫ్రీ చాట్ బాట్ తో.",
      "file2": "06b_bunny.wav",
-     "tts2": "స్వప్న పేరు ఒక్కసారి కూడా రాలేదు! సగం సార్లు అమ్మమ్మే పెళ్ళికూతురు!",
+     "tts2": "స్వప్న పేరు ఒక్కసారి కూడా రాలేదు! సగం సార్లు అమ్మమ్మే బ్రైడ్!",
      "pause": 0.6,
      "gain_db": 0.5
     },
@@ -218,14 +218,14 @@
     {
      "who": "bunny",
      "file": "08_bunny.wav",
-     "text": "అదీ చేశాం. ఇంకా దారుణం! <pause 0.5> [1] శుక్రవారం కాస్తా గురువారం, శనివారం అయిపోయింది. పదిన్నర కాస్తా సన్ రైజ్ అయింది!",
-     "show": "We did that too. Even worse! <pause 0.3> Friday became Thursday, Saturday. 10:30 became sunrise!",
+     "text": "అదీ చేశాం. ఇంకా దారుణం! <pause 0.5> [1] తొమ్మిది సార్లు శుక్రవారం మారిపోయింది. ఉదయం కాస్తా సన్ రైజ్ అయింది!",
+     "show": "We did that too. Even worse! <pause 0.3> Friday changed 9 times. Morning (udayam) became sunrise!",
      "maxgap": 0.28,
      "gap": 0.6,
      "tempo": 1.0,
      "tts": "అదీ చేశాం. ఇంకా దారుణం!",
      "file2": "08b_bunny.wav",
-     "tts2": "శుక్రవారం కాస్తా గురువారం, శనివారం అయిపోయింది. పదిన్నర కాస్తా సన్ రైజ్ అయింది!",
+     "tts2": "తొమ్మిది సార్లు శుక్రవారం మారిపోయింది. ఉదయం కాస్తా సన్ రైజ్ అయింది!",
      "pause": 0.5,
      "gain_db": 0.5
     }
@@ -276,7 +276,7 @@
      "text": "పేర్లు, తేదీ, రోజు దగ్గర ఖాళీ వదలండి. <pause 0.3> [1] మిగతాది చాట్ బాట్ కి ఇచ్చి, ఖాళీలు మీరే నింపండి.",
      "show": "Leave blanks at the names, date and day. <pause 0.3> Give the rest to the chatbot, fill the blanks yourself.",
      "maxgap": 0.28,
-     "gap": 1.6,
+     "gap": 1.0,
      "tempo": 1.0,
      "tts": "పేర్లు, తేదీ, రోజు దగ్గర ఖాళీ వదలండి.",
      "file2": "09b_bunny.wav",

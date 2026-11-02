@@ -13,29 +13,29 @@
  "fps": 30,
  "musicDrops": [
   [
-   652,
-   676
+   673,
+   697
   ]
  ],
  "musicBoosts": [
   [
    0,
-   552,
+   573,
    0.95
   ],
   [
-   552,
-   1084,
+   573,
+   1105,
    1.2
   ],
   [
-   1084,
-   1562,
+   1105,
+   1583,
    1.6
   ],
   [
-   1084,
-   1562,
+   1105,
+   1583,
    1.3,
    1
   ]
@@ -43,7 +43,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1562,
+ "totalFrames": 1583,
  "music": "reel/creative15v1/score.wav",
  "scenes": [
   {
@@ -93,7 +93,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 552,
+   "frames": 573,
    "lines": [
     {
      "who": "sarojini",
@@ -279,46 +279,51 @@
      "sub": null,
      "audio": "reel/creative15v1/line_04.wav",
      "from": 362,
-     "frames": 86,
+     "frames": 112,
      "words": [
       {
        "w": "Swapna",
-       "from": 366,
-       "to": 376
+       "from": 367,
+       "to": 380
       },
       {
        "w": "means",
-       "from": 376,
-       "to": 386
+       "from": 380,
+       "to": 395
       },
       {
        "w": "dream!",
-       "from": 386,
-       "to": 396
+       "from": 395,
+       "to": 418
       },
       {
-       "w": "It",
-       "from": 396,
-       "to": 411
+       "w": "The",
+       "from": 418,
+       "to": 425
+      },
+      {
+       "w": "AI",
+       "from": 425,
+       "to": 431
       },
       {
        "w": "translated",
-       "from": 411,
-       "to": 428
+       "from": 431,
+       "to": 455
       },
       {
        "w": "her",
-       "from": 428,
-       "to": 434
+       "from": 455,
+       "to": 462
       },
       {
        "w": "name.",
-       "from": 434,
-       "to": 443
+       "from": 462,
+       "to": 474
       }
      ],
      "cues": {
-      "1": 396
+      "1": 418
      }
     },
     {
@@ -327,42 +332,42 @@
      "color": "#FDA4AF",
      "sub": null,
      "audio": "reel/creative15v1/line_05.wav",
-     "from": 457,
+     "from": 483,
      "frames": 77,
      "words": [
       {
        "w": "And",
-       "from": 457,
-       "to": 465
+       "from": 483,
+       "to": 490
       },
       {
        "w": "\"our",
-       "from": 465,
-       "to": 474
+       "from": 490,
+       "to": 500
       },
       {
        "w": "girl\"",
-       "from": 474,
-       "to": 486
+       "from": 500,
+       "to": 511
       },
       {
        "w": "became",
-       "from": 486,
-       "to": 504
+       "from": 511,
+       "to": 529
       },
       {
        "w": "\"our",
-       "from": 504,
-       "to": 513
+       "from": 529,
+       "to": 539
       },
       {
        "w": "mother\"!",
-       "from": 513,
-       "to": 530
+       "from": 539,
+       "to": 556
       }
      ],
      "cues": {
-      "1": 486
+      "1": 511
      }
     }
    ]
@@ -401,7 +406,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 552,
+   "from": 573,
    "frames": 532,
    "lines": [
     {
@@ -675,7 +680,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1084,
+   "from": 1105,
    "frames": 478,
    "lines": [
     {

@@ -1,4 +1,4 @@
-# Creative 15 "Ammamma's dream wedding" · script v2, Nov 2 (the Oct 31 creative slot)
+# Creative 15 "Ammamma's dream wedding" · script v3 (as rendered), Nov 2 (the Oct 31 creative slot)
 
 **Format:** a live FM phone-in show: a radio host takes a panicked caller on air; split screen (the studio with the ON
 AIR light | the caller's living room), the wedding card on her phone as inserts. New in the creative log (last 7 days:
@@ -34,6 +34,10 @@ namespace), temperature 0.7. The card (Telugu): "శ్రీ వేంకటే
 
 - The bride's title చి.ల.సౌ. became a person ("Mrs. C.L. Sowmya") in most replies; "మా అమ్మాయి" (our girl) became "our
   mother" or "our sister".
+- The fix, tested after the render review (committed before it ran): the card with blanks ([BRIDE], [GROOM], [DATE],
+  [DAY], [TIME], [HALL], [FROM]), 10 tries: every blank back unchanged 10 of 10, but "our daughter" right only 4 of 10
+  (our mother 3, our sister 2, our aunt 1) and "in the morning" 2 of 10 (sunrise 6, dawn 2). Blanks protect the names; a
+  person who reads both still checks the rest (the rule card shows this).
 - Translating the English back into Telugu gave garbled text (mixed scripts, invented words): no help to someone who
   reads only Telugu, so the reel doesn't recommend it.
 - We didn't test the big apps (caption says so); the rule doesn't depend on which app.
@@ -63,15 +67,30 @@ Telugu, where Parler has one female speaker). Telugu: "చాట్ బాట్
 రాలేదు" (not "స్వప్న రాలేదు", "Swapna didn't come"); "శుక్రవారం కాస్తా గురువారం, శనివారం అయిపోయింది"; "పేర్లు, తేదీ,
 రోజు దగ్గర ఖాళీ వదలండి" (not "దీవెనల లైన్లు", heard as the shlokam).
 
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7) and both would share it to the family group. Both: "Grandma (Ammamma) was the
+bride: 10 of 20" ran off both edges ("10 of 2"); the family-group flood was gone in 3 s; the rule was louder than the
+flood. Priya: the problem was tested 20 times and the fix 0 times; is frame 1 a real reply? Sandeep: "It translated her
+name" was heard "He translated"; why did 10:30 become sunrise? Telugu: line 1 ran 7.5 s (the punch at 5-7 s); "పెళ్ళికూతురు"
+was heard "pilli" (cat); "ఇరవై" got lost; "శనివారం అయిపోయింది" was mumbled; 1.3 s of dead air after the rule; no word
+near a swear word. Changed: the card line shortened ("Grandma was the bride: 10 of 20"); the flood holds 3.5 s, one
+message every 0.3 s, with the biggest boom and clap; the rule's hit halved; the fix tested (blanks: names kept 10 of 10,
+"our daughter" right 4 of 10, on the rule card); "a real AI reply (our test, try 4)" on frame 1; "The AI translated her
+name"; a chip "udayam = morning, and sunrise"; "Friday: another day 9 of 10"; the music in the gaps down (gap gain 1.5 to
+1.2). Telugu: line 1 "ఆర్జే గారూ, | చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది!"; "...అమ్మమ్మే బ్రైడ్!"; "మీ కార్డు ని ఇరవై
+సార్లు ట్రై చేశాం, ఒక చిన్న ఫ్రీ చాట్ బాట్ తో."; "తొమ్మిది సార్లు శుక్రవారం మారిపోయింది. ఉదయం కాస్తా సన్ రైజ్ అయింది!";
+line 10 "స్వప్న ఒకసారి చదువుతుంది" ("చెక్ చేస్తుంది" stuttered in four takes; the first take of the line was a 3.6 s babble
+the judge passed, now caught by must-hear words); the gap after the rule 1.6 to 1.0 s.
+
 ## Script (English) · ~45 s
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | Sarojini | RJ garu, the AI turned my daughter's wedding card [1] into my mother's! | frame 1: her phone, the AI's English card (plain try 4, word for word): "...on the occasion of our mother Ch.L.Sau's dream wedding with Ch.Kalyan...", red circles; "Swapna? not on the card"; headline AI MARRIED OFF AMMAMMA |
 | 2 | Bunny | Your mother's?! [1] What does it say? | the studio (ON AIR) over her living room |
 | 3 | Sarojini | "Our mother's dream wedding with Kalyan." [1] Where is Swapna? | the card, "dream wedding" grows |
-| 4 | Bunny | Swapna means dream! [1] It translated her name. | "స్వప్న (Swapna) = dream" · "it translated her name" |
+| 4 | Bunny | Swapna means dream! [1] The AI translated her name. | "స్వప్న (Swapna) = dream" · "it translated her name" |
 | 5 | Sarojini | And "our girl" [1] became "our mother"! | "మా అమ్మాయి = our girl" → "our mother" |
-| 6 | Bunny | We tried your card on a small free AI, twenty times. / [1] Swapna: zero. Half the time, Ammamma was the bride! | OUR TEST: a small free AI, offline · not the big apps · the same card 20 times; big: Swapna's name 0 of 20; Ammamma was the bride 10 of 20; "dream" 11 of 20 |
+| 6 | Bunny | We tried your card on a small free AI, twenty times. / [1] Swapna: zero. Half the time, Grandma was the bride! | OUR TEST: a small free AI, offline · not the big apps · the same card 20 times; big: Swapna's name 0 of 20; Ammamma was the bride 10 of 20; "dream" 11 of 20 |
 | 7 | Sarojini | I'll tell it: keep the names exactly! | the split, "Keep the names exactly!" |
 | 8 | Bunny | We did. Worse! / [1] Friday went wrong nine times, and ten-thirty became sunrise! | + "keep every name exactly" · 10 tries: Swapna still 0 of 10 · Friday wrong 9 of 10 · "sunrise at 10:30" 9 of 10; WORSE |
 | 9 | Bunny | Leave blanks for the names, date and day. / [1] Let the AI do the rest, then fill them in yourself. | the card with blanks, filled in green (Swapna, Kalyan, Friday 20 Nov 2026, 10:30 AM, Sri Lakshmi Kalyana Mandapam); 1 YOU type the names, date, day and time 2 the AI translates only the rest 3 someone who reads both checks it |
@@ -81,16 +100,16 @@ Telugu, where Parler has one female speaker). Telugu: "చాట్ బాట్
 ## Script (Telugu; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
-| 1 | Sarojini | ఆర్జే గారూ, మా అమ్మాయి పెళ్ళి కార్డు ని ఇంగ్లీష్ లో రాయమంటే, / [1] చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది! |
+| 1 | Sarojini | ఆర్జే గారూ, / [1] చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది! |
 | 2 | Bunny | మీ అమ్మకా?! [1] ఏం రాసింది? |
 | 3 | Sarojini | "అవర్ మదర్స్ డ్రీమ్ వెడ్డింగ్ విత్ కళ్యాణ్". / [1] మా స్వప్న ఎక్కడ? |
 | 4 | Bunny | స్వప్న అంటే డ్రీమ్ కదా! [1] పేరుని కూడా ట్రాన్స్ లేట్ చేసేసింది. |
 | 5 | Sarojini | "మా అమ్మాయి" ని [1] "మా అమ్మ" చేసేసింది! |
-| 6 | Bunny | మీ కార్డు ని ఒక చిన్న ఫ్రీ చాట్ బాట్ తో ఇరవై సార్లు ట్రై చేశాం. / [1] స్వప్న పేరు ఒక్కసారి కూడా రాలేదు! సగం సార్లు అమ్మమ్మే పెళ్ళికూతురు! |
+| 6 | Bunny | మీ కార్డు ని ఇరవై సార్లు ట్రై చేశాం, ఒక చిన్న ఫ్రీ చాట్ బాట్ తో. / [1] స్వప్న పేరు ఒక్కసారి కూడా రాలేదు! సగం సార్లు అమ్మమ్మే బ్రైడ్! |
 | 7 | Sarojini | పేర్లు మార్చొద్దు అని చెప్తా! |
-| 8 | Bunny | అదీ చేశాం. ఇంకా దారుణం! / [1] శుక్రవారం కాస్తా గురువారం, శనివారం అయిపోయింది. పదిన్నర కాస్తా సన్ రైజ్ అయింది! |
+| 8 | Bunny | అదీ చేశాం. ఇంకా దారుణం! / [1] తొమ్మిది సార్లు శుక్రవారం మారిపోయింది. ఉదయం కాస్తా సన్ రైజ్ అయింది! |
 | 9 | Bunny | పేర్లు, తేదీ, రోజు దగ్గర ఖాళీ వదలండి. / [1] మిగతాది చాట్ బాట్ కి ఇచ్చి, ఖాళీలు మీరే నింపండి. |
-| 10 | Sarojini | ఫ్యామిలీ గ్రూప్ లో పెట్టే ముందు, [1] స్వప్న ఒకసారి చెక్ చేస్తుంది! |
+| 10 | Sarojini | ఫ్యామిలీ గ్రూప్ లో పెట్టే ముందు, / [1] స్వప్న ఒకసారి చదువుతుంది! |
 | 11 | Swapna | అమ్మా... [1] నువ్వు ఆల్రెడీ పంపేశావ్! |
 
 Telugu notes: no "ఏఐ" in voiced text ("చాట్ బాట్"); no word one slipped letter from a swear word (to check again on the
