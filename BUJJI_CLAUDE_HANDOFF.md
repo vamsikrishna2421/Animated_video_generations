@@ -31,6 +31,20 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-02 (Creative 15 "Ammamma's dream wedding" ready to publish; the Oct 31 creative slot)
+Files: `out/skits/15_ammammas_dream_wedding.mp4` (EN, 53 s) · `out/skits/15_ammammas_dream_wedding_te.mp4` (TE, 54 s) ·
+send copies `*_ig.mp4` · captions, comment prompt, pinned comment, YouTube Shorts text and alt text in
+`out/skits/15_ammammas_dream_wedding_post.txt`.
+Topic: a live FM phone-in: the AI's English version of a Telugu wedding card reads "our mother's dream wedding with Ch.
+Kalyan" (Swapna, the bride's name, means "dream"; "maa ammayi", our girl, became "our mother"). Our test (a small free AI,
+offline, the same card 20 times): Swapna 0 of 20, Grandma was the bride 10 of 20; "keep the names exactly" made Friday
+wrong 9 of 10. The fix, tested too: blanks kept every name 10 of 10, but "our daughter" was right only 4 of 10, so a
+person who reads both checks it. Wedding season: the Telugu cut is the one viewers said they'd send to family groups.
+Your feedback applied: frame 1 is the conflict with its proof (the AI's card, circled, "AI MARRIED OFF AMMAMMA"); the
+comment prompt is an opinion ask ("Would you send a wedding card an AI translated, without a check? Yes or no, and
+why?"); one ask; Telugu lines start after the opening hit.
+— Claude, 2026-11-02
+
 ### [NEW] Claude — 2026-11-02 (AI WEEKLY 03 ready to publish: the Oct 31 Saturday slot, made late)
 Files: Insta cuts `out/news/week-2026-10-31-en.mp4` (EN, 77 s) · `out/news/week-2026-10-31-te.mp4` (TE, 83 s) · send
 copies `*_upload.mp4` · YouTube full editions `out/news/week-2026-10-31-full-en-yt.mp4` (2:54) and
