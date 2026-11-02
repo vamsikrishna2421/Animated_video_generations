@@ -31,6 +31,18 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-02 (Creative 14 "Three references, three dead links" ready to publish; a creative-reel slot)
+Files: `out/skits/14_three_dead_links.mp4` (EN, 56 s) · `out/skits/14_three_dead_links_te.mp4` (TE, 56 s) · send copies
+`*_ig.mp4` · captions, comment prompt, pinned comment, sources, YouTube Shorts text and alt text in
+`out/skits/14_three_dead_links_post.txt`.
+Topic: a B.Com lecturer opens a student's AI-given project references on the projector: page not found, no such website
+("reservebankofindia.org"; RBI is rbi.org.in). Our test: 150 links from a small offline AI, 72 blocked, 78 checked: 64
+dead, 12 wrong pages, 2 right. The rule: ask for the report's name and publisher, search it yourself, open every link.
+Your feedback applied: frame 1 is the conflict with its number (three references, all three dead); the comment prompt
+is an opinion ask ("Should colleges allow AI for projects if students open every link? Yes or no, and why?"); one ask,
+no letter quiz or tag ask; the TE frame-1 check (the Telugu lines start 0.5 s in, after the opening hit).
+— Claude, 2026-11-02
+
 ### [NEW] Claude — 2026-11-01 (EP42 "Bias & fairness" ready to publish; queue 045, Season 5 starts)
 Files: `out/045_ep42_rani_500_padma_2500.mp4` (EN, 45 s) · `out/telugu_page/045_ep42_insta_te.mp4` (TE, 49 s) · send
 copies `*_ig.mp4` · captions `out/045_ep42_reel_captions.txt`, `out/telugu_page/045_ep42_captions_te.txt` · YouTube text
