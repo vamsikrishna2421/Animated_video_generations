@@ -1,0 +1,396 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 400 tokens",
+ "card": "శ్రీ వేంకటేశ్వర స్వామి కృపతో, మా అమ్మాయి చి.ల.సౌ. స్వప్న వివాహం చి. కళ్యాణ్ తో, 20-11-2026 శుక్రవారం ఉదయం 10:30 గంటలకు, శ్రీ లక్ష్మి కళ్యాణ మండపం, కూకట్ పల్లి, హైదరాబాద్ లో జరుగును. మీరు తప్పక విచ్చేసి వధూవరులను ఆశీర్వదించగలరు. - సరోజినీ, రమణ",
+ "prompts": {
+  "plain": "Translate this wedding invitation into English:\n\nశ్రీ వేంకటేశ్వర స్వామి కృపతో, మా అమ్మాయి చి.ల.సౌ. స్వప్న వివాహం చి. కళ్యాణ్ తో, 20-11-2026 శుక్రవారం ఉదయం 10:30 గంటలకు, శ్రీ లక్ష్మి కళ్యాణ మండపం, కూకట్ పల్లి, హైదరాబాద్ లో జరుగును. మీరు తప్పక విచ్చేసి వధూవరులను ఆశీర్వదించగలరు. - సరోజినీ, రమణ",
+  "rule": "Translate this wedding invitation into English:\n\nశ్రీ వేంకటేశ్వర స్వామి కృపతో, మా అమ్మాయి చి.ల.సౌ. స్వప్న వివాహం చి. కళ్యాణ్ తో, 20-11-2026 శుక్రవారం ఉదయం 10:30 గంటలకు, శ్రీ లక్ష్మి కళ్యాణ మండపం, కూకట్ పల్లి, హైదరాబాద్ లో జరుగును. మీరు తప్పక విచ్చేసి వధూవరులను ఆశీర్వదించగలరు. - సరోజినీ, రమణ\n\nKeep every name, date, time and place exactly as written. Write the names in English letters; don't translate them.",
+  "back": "Translate this into Telugu:\n\n{text}"
+ },
+ "rows": [
+  {
+   "way": "plain",
+   "try": 1,
+   "reply": "Certainly! Here's the translation of the wedding invitation into English:\n\nWith the grace of Sri Venkateshwar Swami, and with the blessings of our mother, Mrs. Ch. L. Sowmya, our dream wedding with Ch. Kalyan will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Kalyan Mandapam, Kukatpalli, Hyderabad. We hope you will grace us with your presence and bless our newlyweds. - Sujini, Ramana",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 41.0
+  },
+  {
+   "way": "plain",
+   "try": 2,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\nWith the kind permission of Sri Venkateshwar Swami, on the occasion of our mother's C.L.S. Soumya's marriage with Ch. Kalyan, the wedding will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Kalyan Mandapam, Koocat Pally, Hyderabad. We sincerely hope you will grace us with your presence to bless the couple. - Sarojini, Ramana",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 27.4
+  },
+  {
+   "way": "plain",
+   "try": 3,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\nWith the grace of Lord Venkateshwar, on behalf of our mother, Mrs. Ch. L. Sow., we are honored to invite you to the marriage of our daughter Ch. Kalyani with Mr. Lakshmi Kalyan on Thursday, November 20, 2026, at 10:30 AM, at Sri Lakshmi Kalyan Mandapam, Koorkat Palli, Hyderabad. We would be honored if you could grace us with your presence and bless the newlyweds. - Sajini, Ramण\n\nNote: There seems to be a typographical error in \"Ramण\" which appears to be a combination of \"Ram\" and a character that doesn't fit properly. It might be a name or a special character intended to be there, but it's not clear without more context.",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 43.4
+  },
+  {
+   "way": "plain",
+   "try": 4,
+   "reply": "With the blessings of Sri Venkateshwar Swami, on the occasion of our mother Ch.L.Sau's dream wedding with Ch.Kalyan, the ceremony will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Kalyan Mandapam, Kukatpally, Hyderabad. We would be honored if you could grace us with your presence and best wishes for the newlyweds. - Sarojini, Ramana",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna"
+    ],
+    "date": true,
+    "time": true,
+    "place": true,
+    "all": false
+   },
+   "seconds": 24.0
+  },
+  {
+   "way": "plain",
+   "try": 5,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\n\"With the blessings of Shri Venkateshwar Swami and on the occasion of our Ammachi's (C.L. Sou) dream wedding with Chilyaani, we cordially invite you to celebrate with us on Friday, November 20, 2026, at 10:30 AM at Shri Lakshmi Chilyaani Mandapam, Kukatpalli, Hyderabad. Your presence and blessings for the happy couple would be highly appreciated. - Soreezini, Ramani\"",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "kalyan",
+     "sarojini",
+     "ramana"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 28.2
+  },
+  {
+   "way": "plain",
+   "try": 6,
+   "reply": "Certainly! Here is the translation of the wedding invitation into English:\n\nWith the grace of Sri Venkateshwar Swami, and with the blessings of our mother, Mrs. Ch.L.Sau, our dream wedding of Ch. Kalyan and Ch. Lakshmi will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Mandapam, Kogota Pally, Hyderabad. We sincerely invite you to grace our wedding. - Sorajini, Ramana",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 24.9
+  },
+  {
+   "way": "plain",
+   "try": 7,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\nWith the blessings of Shri Venkateshwar Swami, on the occasion of our sister Mrs. C.L. Sowmya's wedding to Chalya, the wedding will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Chalya Mandapam, Koottapally, Hyderabad. We would be honored if you could grace us with your presence and bless the bride. - Sujini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "kalyan",
+     "sarojini",
+     "ramana"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 26.2
+  },
+  {
+   "way": "plain",
+   "try": 8,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\n\"With the blessings of Shri Venkateshwar Swami and on behalf of our mother, Mrs. C.L. Sowmya, we invite you to the wedding of our daughter, Chilya and Chilunya, on Friday, November 20, 2026, at 10:30 AM. The ceremony will take place at Sri Lakshmi Chilya Mandapam, Koobat Palli, Hyderabad. Please grace us with your presence and bless the newlyweds. - Sarojini, Ramani\"",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "kalyan",
+     "ramana"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 28.6
+  },
+  {
+   "way": "plain",
+   "try": 9,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\n\"By the grace of Sri Venkateshwar Swami, and with the blessings of our mother, Mrs. C.L. Sowmya, our dream wedding with Mr. Kalyan will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Kalyan Mandapam, Koorkat Pally, Hyderabad. We hope you will make time to grace us with your presence. - Sujini, Ramn\"\n\nIf there are any specific details or names that need further clarification, please let me know!",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 29.8
+  },
+  {
+   "way": "plain",
+   "try": 10,
+   "reply": "Sure, here is the translation of the wedding invitation into English:\n\n\"With the blessings of Sri Venkateshwar Swami, on the occasion of our mother's Mrs. L. S. Swami's dream wedding with Chillyaanthy, on Friday, November 20, 2026, at 10:30 AM, the Sri Lakshmi Chillyaanthy Mandapam, Koorkat Palli, Hyderabad. Please grace us with your presence and bless our wedding. - Srojini, Ramani\"",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "kalyan",
+     "sarojini",
+     "ramana"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 24.6
+  },
+  {
+   "way": "rule",
+   "try": 1,
+   "reply": "Certainly! Here is the translation, keeping every name, date, time, and place exactly as written and writing the names in English letters:\n\nSri Venkateshwar Swami with the grace of, our Ammachi C.L.Sau, Sneha's wedding with Kalyan, 20-11-2026 Thursday at sunrise 10:30, Sri Lakshmi Kalyan Mandapam, Koottapalli, Hyderabad. You are cordially invited to bless the bride. - Sajini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": false,
+    "place": false,
+    "all": false
+   },
+   "seconds": 26.2
+  },
+  {
+   "way": "rule",
+   "try": 2,
+   "reply": "Sure, here is the translation of the wedding invitation, keeping every name, date, time, and place exactly as written and writing the names in English letters:\n\nSri Venkateshwar Swami with grace, our Ammachi C.L.S. Sowmya's wedding with Ch. Kalyani, Sunday, November 20, 2026, sunrise at 10:30, Sri Lakshmi Kalyan Mandapam, Koikat Palli, Hyderabad. You are cordially invited to grace the occasion with your presence. - Sujanee, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": false,
+    "place": false,
+    "all": false
+   },
+   "seconds": 27.5
+  },
+  {
+   "way": "rule",
+   "try": 3,
+   "reply": "Sure, here is the translation of the wedding invitation:\n\nWith the kind permission of Shri Venkateshwar Swami, on the occasion of our mother's C.L.S. Sowmya's dream wedding with Ch. Kalyan, the ceremony will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Kalyan Mandapam, Kotha Palli, Hyderabad. We sincerely invite you to join us and bless the newlyweds. - Sarojini, Ramana",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna"
+    ],
+    "date": true,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 26.0
+  },
+  {
+   "way": "rule",
+   "try": 4,
+   "reply": "Here is the translation of the wedding invitation:\n\nWith the kind permission of Sri Venkateshwar Swami, on the occasion of our Amma's Mrs. L. S. Soumya's dream wedding with Ch. Kalyan, the ceremony will take place on Saturday, November 20, 2026, sunrise at 10:30 AM, at Sri Lakshmi Kalyan Mandapam, Kogota Palli, Hyderabad. We look forward to your kind presence to bless the couple. - Sarojini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "ramana"
+    ],
+    "date": false,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 25.5
+  },
+  {
+   "way": "rule",
+   "try": 5,
+   "reply": "Sure, here is the translation of the wedding invitation, keeping all names, dates, times, and places exactly as written but written in English letters:\n\nSri Venkateshwar Swami with the grace of, our mother Mrs. L.S. Sowmya, and with the grace of, Sri Lakshmi Kalyan Mandap, Cookat Palli, Hyderabad, we will proceed on Thursday, November 20, 2026, sunrise at 10:30, Sri Lakshmi Kalyan Mandap, Cookat Palli, Hyderabad. You are cordially invited to bless the newlyweds. - Sujini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": false,
+    "place": false,
+    "all": false
+   },
+   "seconds": 30.6
+  },
+  {
+   "way": "rule",
+   "try": 6,
+   "reply": "Shri Venkateshwar Swami with kind permission, our Amma, C.L. Sowmya, and her dream, Ch. Kalyan, are getting married with Ch. Kalyan, on 20-11-2026 Thursday at sunrise 10:30 AM, at Sri Lakshmi Kalyan Mandapam, Koogat Palli, Hyderabad. You are most welcome to join us and bless the newlyweds. - Sarojini, Ramana",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna"
+    ],
+    "date": false,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 23.5
+  },
+  {
+   "way": "rule",
+   "try": 7,
+   "reply": "Sure, here is the translation of the wedding invitation while keeping the names, date, time, and place exactly as written, and writing the names in English letters:\n\nSri Venkateshwar Swami with the grace of, our Ammachi C.L.Sau, is having their dream wedding with Ch. Kalyan to, December 20, 2026, Saturday at sunrise 10:30 am, Sri Lakshmi Kalyan Mandapam, Koogat Palli, Hyderabad. Please bless us with your presence and good wishes. - Sajini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 27.6
+  },
+  {
+   "way": "rule",
+   "try": 8,
+   "reply": "Sure, here is the translation of the wedding invitation:\n\nWith the grace of Sri Venkateshwar Swami, on the auspicious occasion of our mother C.L.Sau's dream wedding with Chilyaanthy, 20-11-2026 Thursday at sunrise 10:30, we invite you to celebrate at Sri Lakshmi Chilyaanthy Mandapam, Koocat Palli, Hyderabad. We would be honored if you could bless our newlyweds. - Sarojini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "kalyan",
+     "ramana"
+    ],
+    "date": false,
+    "time": false,
+    "place": false,
+    "all": false
+   },
+   "seconds": 24.7
+  },
+  {
+   "way": "rule",
+   "try": 9,
+   "reply": "Sure, here is the translated wedding invitation:\n\nWith the grace of Shri Venkateshwar Swami, on behalf of our mother Mrs. C.L.S. Swaminathan, their daughter C.Kalyanam and C.Kalyan, the wedding of C.Kalyan and C.Lakshmi will take place on Saturday, November 20, 2026, sunrise at 10:30 am, at Sri Lakshmi Kalyan Mandapam, Kookat Pally, Hyderabad. We eagerly await your blessings. - Sorajini, Ramon",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 26.9
+  },
+  {
+   "way": "rule",
+   "try": 10,
+   "reply": "Sure, here is the translation of the wedding invitation, keeping all names, dates, times, and places exactly as written but writing the names in English letters:\n\nSri Venkateshwar Swami with the grace of, our Aammai C.L.Sau, Swarnam Vivaha with Kalyani, 20-11-2026 Thursday at sunrise 10:30 AM, Sri Lakshmi Kalyana Mandapam, Kukatpalli, Hyderabad. You are cordially invited to bless the newlyweds. - Sajini, Ram",
+   "score": {
+    "names": false,
+    "missing_names": [
+     "swapna",
+     "sarojini",
+     "ramana"
+    ],
+    "date": false,
+    "time": true,
+    "place": false,
+    "all": false
+   },
+   "seconds": 27.6
+  },
+  {
+   "way": "back",
+   "try": 1,
+   "reply": "వ్రాయ శ్రీ వెంకాతేశ్వర స్వామి నుండి మరియు మన మాహితి శ్రీ చీ ల్ సౌమ్యా నుండి, మన సాధారణ వారం చ. కల్యాన్ జత్తాన్ని సుమిని గ్రామంలో స్రీ లక్ష్మి కల్యాన్ మందిపం కూకత్పల్లి, హైదరాబాద్లో ఫియద్ నాలూగు మాంది 20, 2026 వరకు 10:30 సాంద్రం ప్రారంభించబీంది. మనం నుండి వస్తే నాయకాలాన్ని నిధ",
+   "seconds": 92.2
+  },
+  {
+   "way": "back",
+   "try": 2,
+   "reply": "SURE, YNNI వివాహ అంటేస్ అభివృద్ధి కు సాదారణంగా చేయబడిన ప్రాంత అని అంటే:\n\nశ్రీ వెంకేటేశ్వర శ్రీమతి కు సౌమ్య చ. కల్యాణతో వివాహం సెల్వా, డిసెంబరు 20, 2026 రోజు పంధు యార్ ముఖ్యంగా 10:30 సెకన్లలో శ్రీ లక్ష్మి కల్యాణ మండపం, కూచట పల్లీ, హైదరాబాద్ లో సెల్వా. మనం అందిస్తున్నాము మీ నియామకం వ",
+   "seconds": 92.2
+  },
+  {
+   "way": "back",
+   "try": 3,
+   "reply": "Sure, here is the translation of the wedding invitation into Telugu:\n\nసర్వాంశం మ్రుంగవేంకేట్స్వర్ దేవాలయంలో, నామకరణ మండపం రూక్కట పల్లి, హైదరాబాద్లో నామిని నా ముఖ్య మియా మ్రి. చ. ల. సోవ్ నా మంత్రి అంశంలో, నా మంత్రిత్వ ప్రతిపాదన చ. కళయని మా మాసుతిత్వతో స్వాగతం చేసుకోవాలని ప్రతి ఆర్మణం కేంద్రం నాయకాల అవసరం అని ఇన్విట్ చేస్తాం. చ. కళయనీ జీవి",
+   "seconds": 97.1
+  },
+  {
+   "way": "back",
+   "try": 4,
+   "reply": "శ్రీ వెంకటేశ్వర స్వాミ నుండి నిధానం ప్రారంభించి, దాదాపు చి.ల్ సౌ యే రోజులో చి.కాల్యాలను స్వాగతం చేసుకోండి అనే మన్నిక యుద్ధ వారి విబర్తన యొక్క ప్రారంభం యొక్క ప్రారంభం, ఈ యొక్క సంక్లిష్ట శతాబ్ధి 20, 2026 వరకు అరిక్కాల్ప్ప అంతరాల మధ్య 10:30 నాటం రుండు ప్రారంభించబోస్తాయి స్రీ లక్ష",
+   "seconds": 93.3
+  }
+ ]
+}

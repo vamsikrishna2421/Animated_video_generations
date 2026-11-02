@@ -87,6 +87,9 @@ SPEAKERS = {
     "vasudha": dict(voice="af_heart", speed=1.0, lang="en-us", name="Vasudha ma'am", color="#C4B5FD"),   # creative 14 (file takes)
     "charan": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Charan", color="#FDBA74"),
     "harsha": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Harsha", color="#86EFAC"),
+    "sarojini": dict(voice="af_heart", speed=1.0, lang="en-us", name="Sarojini", color="#FDA4AF"),   # Creative 15 (file takes)
+    "bunny": dict(voice="hm_psi", speed=1.0, lang="en-us", name="RJ Bunny", color="#A5B4FC"),
+    "swapna": dict(voice="af_heart", speed=1.0, lang="en-us", name="Swapna", color="#FDE68A"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

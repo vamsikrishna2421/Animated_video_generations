@@ -38,6 +38,19 @@ RULE = PLAIN + ("\n\nKeep every name, date, time and place exactly as written. W
 BACK = "Translate this into Telugu:\n\n{text}"
 TRIES = 10
 HAND = {}  # (way, try): {check: True/False, "note": ...} after reading the reply by hand
+# Read by hand after the run (Nov 2). The automatic place check was too strict (it wanted "Kukatpally" spelled one way);
+# the counts the reel uses are these, from reading all 20 English replies:
+#   bride's name (Swapna) anywhere: plain 0/10, rule 0/10
+#   the card reads as the senders' MOTHER's wedding ("our mother's ... dream wedding with Ch. Kalyan"):
+#     plain tries 2, 4, 5, 10; rule tries 2, 3, 4, 6, 7, 8  -> 10 of 20
+#   "dream" in the text: plain 6, rule 5 -> 11 of 20 (స్వప్న, the bride's name, means "dream")
+#   the bride's title చి.ల.సౌ. became a person ("Mrs. C.L. Sowmya" and similar): most replies of both ways
+#   date 20 November 2026: plain 10, rule 9 (rule 7 said December 20)
+#   Friday: plain 9 (try 3 said Thursday), rule 1 (Thursday 5, Saturday 3, Sunday 1)
+#   10:30 in the morning: plain 10 ("10:30 AM"); rule: 9 of 10 wrote "sunrise at 10:30" (ఉదయం read word by word)
+#   the mother's own name (Sarojini) right: plain 3, rule 4
+#   back: the 10 back-translations into Telugu are garbled (mixed scripts, invented words): no reader could use them to
+#         find the mistake, so the reel doesn't recommend a back-translation check
 
 
 def load(path):
