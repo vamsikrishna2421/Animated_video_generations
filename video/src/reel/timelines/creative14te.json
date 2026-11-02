@@ -1,0 +1,886 @@
+{
+ "id": "creative14te",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI and fake links",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "Three references, three dead links (Creative 14: AI-made links) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   830,
+   854
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   511,
+   1.05
+  ],
+  [
+   511,
+   1146,
+   1.2
+  ],
+  [
+   1147,
+   1698,
+   1.3
+  ],
+  [
+   1147,
+   1698,
+   1.1,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1698,
+ "music": "reel/creative14te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_links",
+   "data": {
+    "beats": [
+     {
+      "who": "vasudha",
+      "shot": "class",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "charan",
+      "shot": "phone",
+      "prop": "phone",
+      "n": 2
+     },
+     {
+      "who": "vasudha",
+      "shot": "typing",
+      "prop": "typing",
+      "n": 3
+     },
+     {
+      "who": "harsha",
+      "shot": "domain",
+      "prop": "domain",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Three dead links",
+     "title": "Three dead links",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 511,
+   "lines": [
+    {
+     "who": "vasudha",
+     "name": "Vasudha ma'am",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative14te/line_01.wav",
+     "from": 15,
+     "frames": 80,
+     "words": [
+      {
+       "w": "3",
+       "from": 16,
+       "to": 20
+      },
+      {
+       "w": "references.",
+       "from": 20,
+       "to": 55
+      },
+      {
+       "w": "All",
+       "from": 55,
+       "to": 64
+      },
+      {
+       "w": "3",
+       "from": 64,
+       "to": 68
+      },
+      {
+       "w": "dead",
+       "from": 68,
+       "to": 79
+      },
+      {
+       "w": "links!",
+       "from": 79,
+       "to": 95
+      }
+     ],
+     "cues": {
+      "1": 55
+     }
+    },
+    {
+     "who": "charan",
+     "name": "Charan",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/creative14te/line_02.wav",
+     "from": 103,
+     "frames": 72,
+     "words": [
+      {
+       "w": "But",
+       "from": 110,
+       "to": 116
+      },
+      {
+       "w": "ma'am,",
+       "from": 116,
+       "to": 131
+      },
+      {
+       "w": "that",
+       "from": 131,
+       "to": 147
+      },
+      {
+       "w": "chatbot",
+       "from": 147,
+       "to": 159
+      },
+      {
+       "w": "gave",
+       "from": 159,
+       "to": 166
+      },
+      {
+       "w": "them!",
+       "from": 166,
+       "to": 174
+      }
+     ],
+     "cues": {
+      "1": 133
+     }
+    },
+    {
+     "who": "vasudha",
+     "name": "Vasudha ma'am",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative14te/line_03.wav",
+     "from": 182,
+     "frames": 131,
+     "words": [
+      {
+       "w": "It",
+       "from": 183,
+       "to": 190
+      },
+      {
+       "w": "guesses",
+       "from": 190,
+       "to": 214
+      },
+      {
+       "w": "even",
+       "from": 214,
+       "to": 225
+      },
+      {
+       "w": "the",
+       "from": 225,
+       "to": 234
+      },
+      {
+       "w": "link.",
+       "from": 234,
+       "to": 251
+      },
+      {
+       "w": "They",
+       "from": 261,
+       "to": 273
+      },
+      {
+       "w": "only",
+       "from": 273,
+       "to": 285
+      },
+      {
+       "w": "look",
+       "from": 285,
+       "to": 296
+      },
+      {
+       "w": "right.",
+       "from": 296,
+       "to": 313
+      }
+     ],
+     "cues": {
+      "1": 261
+     }
+    },
+    {
+     "who": "harsha",
+     "name": "Harsha",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative14te/line_04.wav",
+     "from": 322,
+     "frames": 162,
+     "words": [
+      {
+       "w": "Reserve",
+       "from": 323,
+       "to": 335
+      },
+      {
+       "w": "Bank",
+       "from": 335,
+       "to": 342
+      },
+      {
+       "w": "of",
+       "from": 342,
+       "to": 347
+      },
+      {
+       "w": "India",
+       "from": 347,
+       "to": 361
+      },
+      {
+       "w": "dot",
+       "from": 361,
+       "to": 373
+      },
+      {
+       "w": "org?",
+       "from": 373,
+       "to": 385
+      },
+      {
+       "w": "RBI",
+       "from": 400,
+       "to": 415
+      },
+      {
+       "w": "is",
+       "from": 415,
+       "to": 426
+      },
+      {
+       "w": "rbi.org.in!",
+       "from": 426,
+       "to": 483
+      }
+     ],
+     "cues": {
+      "1": 400
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_links",
+   "data": {
+    "beats": [
+     {
+      "who": "harsha",
+      "shot": "test",
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "who": "harsha",
+      "shot": "test",
+      "prop": "test2",
+      "n": 6
+     },
+     {
+      "who": "charan",
+      "shot": "phone",
+      "prop": "sure",
+      "n": 7
+     },
+     {
+      "who": "harsha",
+      "shot": "phone",
+      "prop": "sure2",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 511,
+   "frames": 635,
+   "lines": [
+    {
+     "who": "harsha",
+     "name": "Harsha",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative14te/line_05.wav",
+     "from": 0,
+     "frames": 164,
+     "words": [
+      {
+       "w": "Last",
+       "from": 1,
+       "to": 10
+      },
+      {
+       "w": "night",
+       "from": 10,
+       "to": 25
+      },
+      {
+       "w": "I",
+       "from": 25,
+       "to": 29
+      },
+      {
+       "w": "tested",
+       "from": 29,
+       "to": 43
+      },
+      {
+       "w": "a",
+       "from": 43,
+       "to": 47
+      },
+      {
+       "w": "small",
+       "from": 47,
+       "to": 58
+      },
+      {
+       "w": "chatbot",
+       "from": 58,
+       "to": 78
+      },
+      {
+       "w": "with",
+       "from": 78,
+       "to": 88
+      },
+      {
+       "w": "no",
+       "from": 88,
+       "to": 94
+      },
+      {
+       "w": "internet:",
+       "from": 94,
+       "to": 116
+      },
+      {
+       "w": "150",
+       "from": 127,
+       "to": 139
+      },
+      {
+       "w": "links.",
+       "from": 139,
+       "to": 160
+      }
+     ],
+     "cues": {
+      "1": 127
+     }
+    },
+    {
+     "who": "harsha",
+     "name": "Harsha",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative14te/line_06.wav",
+     "from": 173,
+     "frames": 196,
+     "words": [
+      {
+       "w": "I",
+       "from": 175,
+       "to": 180
+      },
+      {
+       "w": "could",
+       "from": 180,
+       "to": 193
+      },
+      {
+       "w": "check",
+       "from": 193,
+       "to": 215
+      },
+      {
+       "w": "78:",
+       "from": 215,
+       "to": 232
+      },
+      {
+       "w": "64",
+       "from": 232,
+       "to": 239
+      },
+      {
+       "w": "didn't",
+       "from": 239,
+       "to": 254
+      },
+      {
+       "w": "work,",
+       "from": 254,
+       "to": 279
+      },
+      {
+       "w": "12",
+       "from": 279,
+       "to": 286
+      },
+      {
+       "w": "wrong",
+       "from": 286,
+       "to": 299
+      },
+      {
+       "w": "pages,",
+       "from": 299,
+       "to": 315
+      },
+      {
+       "w": "only",
+       "from": 343,
+       "to": 349
+      },
+      {
+       "w": "2",
+       "from": 349,
+       "to": 352
+      },
+      {
+       "w": "right.",
+       "from": 352,
+       "to": 361
+      }
+     ],
+     "cues": {
+      "1": 343
+     }
+    },
+    {
+     "who": "charan",
+     "name": "Charan",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/creative14te/line_07.wav",
+     "from": 400,
+     "frames": 83,
+     "words": [
+      {
+       "w": "I",
+       "from": 400,
+       "to": 403
+      },
+      {
+       "w": "told",
+       "from": 403,
+       "to": 411
+      },
+      {
+       "w": "it:",
+       "from": 411,
+       "to": 427
+      },
+      {
+       "w": "give",
+       "from": 427,
+       "to": 434
+      },
+      {
+       "w": "only",
+       "from": 434,
+       "to": 441
+      },
+      {
+       "w": "links",
+       "from": 441,
+       "to": 450
+      },
+      {
+       "w": "you're",
+       "from": 450,
+       "to": 469
+      },
+      {
+       "w": "sure",
+       "from": 469,
+       "to": 476
+      },
+      {
+       "w": "of!",
+       "from": 476,
+       "to": 482
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "harsha",
+     "name": "Harsha",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative14te/line_08.wav",
+     "from": 491,
+     "frames": 126,
+     "words": [
+      {
+       "w": "Tried",
+       "from": 492,
+       "to": 502
+      },
+      {
+       "w": "that",
+       "from": 502,
+       "to": 510
+      },
+      {
+       "w": "too.",
+       "from": 510,
+       "to": 518
+      },
+      {
+       "w": "Not",
+       "from": 532,
+       "to": 537
+      },
+      {
+       "w": "once",
+       "from": 537,
+       "to": 544
+      },
+      {
+       "w": "did",
+       "from": 544,
+       "to": 549
+      },
+      {
+       "w": "it",
+       "from": 549,
+       "to": 553
+      },
+      {
+       "w": "say",
+       "from": 553,
+       "to": 558
+      },
+      {
+       "w": "'I",
+       "from": 558,
+       "to": 562
+      },
+      {
+       "w": "don't",
+       "from": 562,
+       "to": 570
+      },
+      {
+       "w": "know'.",
+       "from": 570,
+       "to": 579
+      },
+      {
+       "w": "Nothing",
+       "from": 579,
+       "to": 600
+      },
+      {
+       "w": "changed.",
+       "from": 600,
+       "to": 611
+      }
+     ],
+     "cues": {
+      "1": 532
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_links",
+   "data": {
+    "beats": [
+     {
+      "who": "vasudha",
+      "shot": "study",
+      "prop": "study",
+      "n": 9
+     },
+     {
+      "who": "vasudha",
+      "shot": "class",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "charan",
+      "shot": "class",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Name and publisher",
+     "title": "Name and publisher",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1147,
+   "frames": 551,
+   "lines": [
+    {
+     "who": "vasudha",
+     "name": "Vasudha ma'am",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative14te/line_09.wav",
+     "from": 9,
+     "frames": 208,
+     "words": [
+      {
+       "w": "Big",
+       "from": 10,
+       "to": 20
+      },
+      {
+       "w": "chatbots",
+       "from": 20,
+       "to": 43
+      },
+      {
+       "w": "too:",
+       "from": 43,
+       "to": 65
+      },
+      {
+       "w": "in",
+       "from": 65,
+       "to": 73
+      },
+      {
+       "w": "a",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "2025",
+       "from": 78,
+       "to": 91
+      },
+      {
+       "w": "study,",
+       "from": 91,
+       "to": 109
+      },
+      {
+       "w": "only",
+       "from": 122,
+       "to": 133
+      },
+      {
+       "w": "1",
+       "from": 133,
+       "to": 137
+      },
+      {
+       "w": "reference",
+       "from": 137,
+       "to": 157
+      },
+      {
+       "w": "in",
+       "from": 157,
+       "to": 173
+      },
+      {
+       "w": "4",
+       "from": 173,
+       "to": 177
+      },
+      {
+       "w": "fully",
+       "from": 177,
+       "to": 198
+      },
+      {
+       "w": "right.",
+       "from": 198,
+       "to": 216
+      }
+     ],
+     "cues": {
+      "1": 122
+     }
+    },
+    {
+     "who": "vasudha",
+     "name": "Vasudha ma'am",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative14te/line_10.wav",
+     "from": 229,
+     "frames": 166,
+     "words": [
+      {
+       "w": "Ask",
+       "from": 229,
+       "to": 236
+      },
+      {
+       "w": "the",
+       "from": 236,
+       "to": 242
+      },
+      {
+       "w": "report's",
+       "from": 242,
+       "to": 266
+      },
+      {
+       "w": "name",
+       "from": 266,
+       "to": 274
+      },
+      {
+       "w": "and",
+       "from": 274,
+       "to": 281
+      },
+      {
+       "w": "who",
+       "from": 281,
+       "to": 287
+      },
+      {
+       "w": "published",
+       "from": 287,
+       "to": 303
+      },
+      {
+       "w": "it.",
+       "from": 303,
+       "to": 310
+      },
+      {
+       "w": "Search",
+       "from": 319,
+       "to": 331
+      },
+      {
+       "w": "it",
+       "from": 331,
+       "to": 336
+      },
+      {
+       "w": "yourselves,",
+       "from": 336,
+       "to": 366
+      },
+      {
+       "w": "open",
+       "from": 366,
+       "to": 374
+      },
+      {
+       "w": "every",
+       "from": 374,
+       "to": 385
+      },
+      {
+       "w": "link.",
+       "from": 385,
+       "to": 395
+      }
+     ],
+     "cues": {
+      "1": 319
+     }
+    },
+    {
+     "who": "charan",
+     "name": "Charan",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/creative14te/line_11.wav",
+     "from": 461,
+     "frames": 66,
+     "words": [
+      {
+       "w": "Reference",
+       "from": 462,
+       "to": 477
+      },
+      {
+       "w": "4",
+       "from": 477,
+       "to": 480
+      },
+      {
+       "w": "is",
+       "from": 480,
+       "to": 485
+      },
+      {
+       "w": "fine,",
+       "from": 485,
+       "to": 494
+      },
+      {
+       "w": "ma'am,",
+       "from": 494,
+       "to": 514
+      },
+      {
+       "w": "promise!",
+       "from": 514,
+       "to": 527
+      }
+     ],
+     "cues": {
+      "1": 514
+     }
+    }
+   ]
+  }
+ ]
+}

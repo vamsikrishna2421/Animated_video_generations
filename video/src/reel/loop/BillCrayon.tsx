@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani";   // rani: EP42's customer (FairCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -32,6 +32,9 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   nikhil: { skin: "#8d5a3b", hair: "#1c1410", top: "#15803d" },
   meghana: { skin: "#9c6a45", hair: "#2b1a10", top: "#d97706" },
   rani: { skin: "#8d5a3b", hair: "#120d0a", top: "#0d9488" },
+  vasudha: { skin: "#b07a52", hair: "#3f3f46", top: "#7c3aed" },
+  charan: { skin: "#9c6a45", hair: "#1c1410", top: "#f97316" },
+  harsha: { skin: "#a26d47", hair: "#0f0a08", top: "#0ea5e9" },
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
@@ -66,7 +69,9 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
   stroke(c, circlePts(0, hy, 94, 112), INK, 4, r, { passes: 2, alpha: 0.55 });
   c.fillStyle = L.hair; c.beginPath();
-  if (who === "nikhil") {   // curly
+  if (who === "vasudha") {   // a bun, pulled back, grey streak
+    c.ellipse(0, hy - 118, 46, 40, 0, 0, 7); c.moveTo(100, hy - 30); c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy - 20); c.lineTo(-100, hy - 20);
+  } else if (who === "nikhil" || who === "charan") {   // curly
     for (let q = 0; q < 7; q++) { const a = Math.PI * (1.05 + q * 0.15); c.moveTo(Math.cos(a) * 92 + 30, hy - 40 + Math.sin(a) * 84); c.arc(Math.cos(a) * 92, hy - 40 + Math.sin(a) * 84, 30, 0, 7); }
   } else if (who === "sneha" || who === "rani") {   // parted in the middle
     c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy + 4); c.quadraticCurveTo(52, hy - 58, 4, hy - 80); c.lineTo(-4, hy - 80); c.quadraticCurveTo(-52, hy - 58, -100, hy + 4);
@@ -96,7 +101,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
       stroke(c, [[ex - 15, ey], [ex + 15, ey - 2]], INK, 6, r, { passes: 2 });
     } else { c.beginPath(); c.arc(ex, ey, 9, 0, 7); c.fillStyle = INK; c.fill(); }
   });
-  if (who === "nikhil") {   // glasses
+  if (who === "nikhil" || who === "vasudha") {   // glasses
     [-36, 36].forEach((ex) => stroke(c, rrectPts(ex - 30, hy - 26, 60, 44), INK, 5, r, { passes: 2 }));
     stroke(c, [[-6, hy - 6], [6, hy - 6]], INK, 5, r, { passes: 1 });
   }
@@ -110,7 +115,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   } else if (m === "smug") stroke(c, [[-20, my + 2], [6, my + 2], [22, my - 10]], INK, 6, r, { passes: 2 });
   else if (m === "worried" || m === "angry") stroke(c, [[-18, my + 6], [0, my], [18, my + 6]], INK, 6, r, { passes: 2 });
   else stroke(c, [[-16, my], [16, my]], INK, 6, r, { passes: 2 });
-  if (who === "sneha" || who === "meghana" || who === "rani") [-1, 1].forEach((sx) => { c.beginPath(); c.arc(sx * 94, hy + 28, 8, 0, 7); c.fillStyle = "#facc15"; c.fill(); });   // earrings
+  if (who === "sneha" || who === "meghana" || who === "rani" || who === "vasudha") [-1, 1].forEach((sx) => { c.beginPath(); c.arc(sx * 94, hy + 28, 8, 0, 7); c.fillStyle = "#facc15"; c.fill(); });   // earrings
   if (who === "rani") { c.beginPath(); c.arc(0, hy - 62, 9, 0, 7); c.fillStyle = RED; c.fill(); }   // a bindi
 };
 const heldPhone = (c: Ctx, x: number, y: number) => {

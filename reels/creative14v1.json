@@ -1,0 +1,293 @@
+{
+ "id": "creative14v1",
+ "title": "Three references, three dead links (Creative 14: AI-made links)",
+ "label": "SKIT",
+ "banner": "AI and fake links",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.5,
+ "musicEndRamp": [
+  0.88,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_links",
+   "tail": 0.0,
+   "boost": 1.05,
+   "data": {
+    "beats": [
+     {
+      "who": "vasudha",
+      "shot": "class",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "charan",
+      "shot": "phone",
+      "prop": "phone",
+      "n": 2
+     },
+     {
+      "who": "vasudha",
+      "shot": "typing",
+      "prop": "typing",
+      "n": 3
+     },
+     {
+      "who": "harsha",
+      "shot": "domain",
+      "prop": "domain",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Three dead links",
+     "title": "Three dead links",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "vasudha",
+     "file": "01_vasudha.wav",
+     "text": "Three references, [1] and all three are dead!",
+     "show": "3 references, and all 3 are dead!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "charan",
+     "file": "02_charan.wav",
+     "text": "But madam, [1] the AI gave me those!",
+     "show": "But madam, the AI gave me those!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "vasudha",
+     "file": "03_vasudha.wav",
+     "text": "It writes links like sentences. [1] They only look right.",
+     "show": "It writes links like sentences. They only look right.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harsha",
+     "file": "04_harsha.wav",
+     "text": "Reserve Bank of India dot org? [1] RBI is R B I dot org dot in!",
+     "show": "reservebankofindia.org? RBI is rbi.org.in!",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.25,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_links",
+   "tail": 0.0,
+   "boost": 1.2,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "harsha",
+      "shot": "test",
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "who": "harsha",
+      "shot": "test",
+      "prop": "test2",
+      "n": 6
+     },
+     {
+      "who": "charan",
+      "shot": "phone",
+      "prop": "sure",
+      "n": 7
+     },
+     {
+      "who": "harsha",
+      "shot": "phone",
+      "prop": "sure2",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "harsha",
+     "file": "05_harsha.wav",
+     "text": "I tested a small AI, offline, last night: [1] a hundred and fifty links.",
+     "show": "I tested a small AI, offline, last night: 150 links.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harsha",
+     "file": "06_harsha.wav",
+     "text": "We could check seventy-eight: sixty-four dead, twelve wrong pages, <pause 0.8> [1] and only two right.",
+     "show": "We could check 78: 64 dead, 12 wrong pages, and only 2 right.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.1,
+     "tts": "We could check seventy-eight: sixty-four dead, twelve wrong pages,",
+     "file2": "06b_harsha.wav",
+     "tts2": "and only two right.",
+     "pause": 0.8,
+     "gain_db": 0.5
+    },
+    {
+     "who": "charan",
+     "file": "07_charan.wav",
+     "text": "I told it: only links you're sure about!",
+     "show": "I told it: only links you're sure about!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harsha",
+     "file": "08_harsha.wav",
+     "text": "Tried that. [1] It never said 'not sure'. No better.",
+     "show": "Tried that. It never said 'not sure'. No better.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_links",
+   "tail": 0.0,
+   "lift": 0.9,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.2,
+   "data": {
+    "beats": [
+     {
+      "who": "vasudha",
+      "shot": "study",
+      "prop": "study",
+      "n": 9
+     },
+     {
+      "who": "vasudha",
+      "shot": "class",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "charan",
+      "shot": "class",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Name and publisher",
+     "title": "Name and publisher",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "vasudha",
+     "file": "09_vasudha.wav",
+     "text": "Big chatbots too: in a 2025 study, [1] only one reference in four was fully right.",
+     "show": "Big chatbots too: in a 2025 study, only 1 reference in 4 was fully right.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "vasudha",
+     "file": "10_vasudha.wav",
+     "text": "Ask for the report's name and who published it. <pause 0.3> [1] Search it yourself, and open every link.",
+     "show": "Ask for the report's name and who published it. Search it yourself, and open every link.",
+     "maxgap": 0.28,
+     "gap": 2.2,
+     "tempo": 1.1,
+     "tts": "Ask for the report's name and who published it.",
+     "file2": "10b_vasudha.wav",
+     "tts2": "Search it yourself, and open every link.",
+     "pause": 0.3,
+     "gain_db": 0.5
+    },
+    {
+     "who": "charan",
+     "file": "11_charan.wav",
+     "text": "Reference four is fine, madam, [1] I promise!",
+     "show": "Reference four is fine, madam, I promise!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

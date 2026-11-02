@@ -1,0 +1,73 @@
+SKIT 14: "Three references, three dead links" (a B.Com class: Vasudha ma'am opens Charan's AI-given project references on the projector, one by one: page not found, no such website; the AI writes links like sentences, so they only look right ("reservebankofindia.org"; RBI is rbi.org.in); classmate Harsha's test (our test): a small offline AI, 150 links, we could check 78: 64 dead, 12 wrong pages, only 2 right; "only links you're sure exist" never said "not sure"; a 2025 study of 8 big free chatbots: 1 reference in 4 fully right; the rule: ask for the report's name and who published it, search it yourself, open every link; it loops on his reference four: the 404 of frame 1; about 53 s English / 57 s Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/14_three_dead_links.mp4 (English page) · out/skits/14_three_dead_links_te.mp4 (Telugu page)
+Send copies: out/skits/14_three_dead_links_ig.mp4 · out/skits/14_three_dead_links_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on ma'am clicking Charan's reference four, and the
+replay opens on the same 404. The one ask lives in the caption (an opinion on the conflict).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Three references in a college project. All three dead links. "But madam, the AI gave me those!"
+
+A chat AI writes a link the way it writes a sentence: one likely piece after another. So it can write "reservebankofindia.org" (RBI's real site is rbi.org.in), a page that never existed, or a real site's address pointing at the wrong article.
+Our test: a small AI, offline with no internet, asked for 5 sources for a B.Com project on GST or UPI, 30 times: 150 links, and we tried every one. We could check 78 (the rest were sites that block programs like ours): 64 dead (no such page or no such website), 12 opened the wrong page or an empty one, only 2 were right. Adding "Only give links you are sure exist. If you are not sure, say so." changed nothing: it never once said "not sure".
+Big chatbots do it too: in a 2025 study of 8 free chatbots and 400 references, only 26.5% were fully correct, and 39.8% were wrong or made up.
+
+Before you cite anything an AI gave you:
+1. Type: "Give me 5 reports on GST: name and publisher. No links."
+2. Search for each one yourself.
+3. Open every link before you put it in your project. With web search on, the links are usually real pages, but open them anyway: the page may not say what the AI says it does.
+
+=== COMMENT PROMPT ===
+Should colleges allow AI for projects if students open every link? Yes or no, and why?
+
+=== HASHTAGS ===
+#AI #ChatGPT #Students #CollegeLife #AITips #LearnAI
+
+=== PINNED_COMMENT ===
+How we tested: Qwen2.5-7B-Instruct (Qwen's own 4-bit file), llama.cpp on a 4-core computer, generated with the internet cut, temperature 0.7, 10 replies each way: GST, UPI, and GST + "Only give links you are sure exist. If you are not sure, say so." Then every link was opened from this machine with a plain program (no browser), and every page that answered was read by hand.
+The numbers: 150 links written (124 different ones; "reservebankofindia.org" alone came up 8 times). Dead = a 404, or no such domain in public DNS: 64. Wrong or empty page = it loads, but there's no source there (a Statista link opened a US police survey; two India Today links opened a weekend planner and a cricket story): 12. Right = 2 (an Indian Kanoon search page; the GST portal's front page). Not counted = 72 (sites that refuse a plain program, or didn't connect to us; many of those, like mca.gov.in pages, may or may not exist).
+"Only links you're sure exist": 0 of 10 replies said "not sure"; dead links 24 of 50 (20 without the line).
+Sources: Cabezas-Clavijo and Sidorenko-Bautista, "Assessing the performance of 8 AI chatbots in bibliographic reference retrieval" (arXiv 2505.18059, 2025; Journal of Data and Information Science, 2026); Walters and Wilder, Scientific Reports 13, 14045 (2023): "55% of the GPT-3.5 citations but just 18% of the GPT-4 citations are fabricated."
+Charan, Harsha, Vasudha ma'am and the college are made up.
+
+=== COVER ===
+Frame 1: a college projector showing a 404 over "reservebankofindia.org/research/...", a REFERENCES list with three red ✗; Vasudha ma'am, arms folded; Charan, shocked; the class from behind.
+
+=== ALT_TEXT ===
+Crayon-animated skit in a college classroom. The projector shows a browser: "reservebankofindia.org/research/journal/2019/...pdf", 404, this page doesn't exist; beside it a REFERENCES list with three red crosses. The lecturer, Vasudha ma'am, says three references and all three are dead; the student, Charan, says the AI gave him those, and his phone shows an AI chat answering "Give me 5 links to sources for my GST project" with five links. A card shows how the AI writes a link piece by piece, www. + reservebank + ofindia + .org: looks right, doesn't exist. Two cards: reservebankofindia.org, no such website; rbi.org.in, RBI's real website; in our test it wrote the fake one 8 times. Classmate Harsha's test card: a small AI, offline, no internet, 150 links, we tried every one; we could check 78: 64 dead, 12 wrong or empty pages, 2 right; the other 72 links blocked our test and are not counted. Charan's phone with "Only give links you are sure exist. If you are not sure, say so.": "not sure" 0 of 10, no fewer dead links. A card on a 2025 study of 8 free chatbots and 400 references: fully right 26.5%, wrong or made up 39.8%. A rule card: before you cite an AI link, 1. type "Give me 5 reports on GST: name and publisher. No links." 2. search for each one yourself 3. open every link before you cite it; with web search on, open the links anyway. Charan says his reference four is fine; she clicks it, and the 404 comes back.
+
+=== SOURCES (for comments) ===
+Cabezas-Clavijo, Á. and Sidorenko-Bautista, P., "Assessing the performance of 8 AI chatbots in bibliographic reference retrieval: Grok and DeepSeek outperform ChatGPT, but none are fully accurate" (arXiv 2505.18059, May 23, 2025).
+Walters, W. H. and Wilder, E. I., "Fabrication and errors in the bibliographic citations generated by ChatGPT", Scientific Reports 13, 14045 (Sep 7, 2023; PubMed 37679503).
+Our test: pipeline/creative14/links_demo.py, series/scripts/creative14_demo/7B.json (Nov 2, 2026).
+
+=== YOUTUBE SHORTS ===
+Title: 3 AI references, 3 dead links: we tested 150 AI-written links #shorts
+Description: A small offline AI wrote 150 source links for a college project. We could check 78: 64 dead, 12 wrong pages, only 2 right. Big chatbots do it too (a 2025 study: 1 reference in 4 fully right). Ask for the report's name and publisher, search it yourself, open every link.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+College project lo moodu references. Moodoo panicheyani links. "Kaani madam, aa chat bot ichchinde!"
+
+Chat AI link ni kooda vaakyam laage raastundi: okadaani tarvaata inkokati. Anduke "reservebankofindia.org" laantivi raastundi (RBI asalu site rbi.org.in), leni page, leda asalu site lo vere article ki link.
+Maa test: internet lekunda nadiche chinna AI, B.Com GST leda UPI project ki 5 sources, 30 saarlu: 150 links, annee try chesaam. 78 check cheyagaligaam (migataavi programs ni block chese sites): 64 panicheyaledu (aa page ledu leda aa website ledu), 12 vere page leda khaali page, 2 maatrame correct. "Only give links you are sure exist. If you are not sure, say so." kalipinaa emee maaraledu: okkasaari kooda "teleedu" analedu.
+Pedda chatbots kooda: 2025 study lo 8 free chatbots, 400 references: 26.5% maatrame poortigaa correct, 39.8% tappu leda kalpitam.
+
+AI ichchina daanni cite chese mundu:
+1. Type cheyandi: "Give me 5 reports on GST: name and publisher. No links."
+2. Prati daanni meere vetakandi.
+3. Project lo pette mundu prati link open cheyandi. Web search on lo links saadhaaranamgaa nijamaina pages, ayinaa open cheyandi: AI cheppindi aa page lo undakapovachchu.
+
+=== COMMENT PROMPT ===
+Students prati link open cheste, colleges projects ki AI ni allow cheyyaalaa? Avunu leda kaadu, enduko cheppandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #Students #CollegeLife #AITips
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen2.5-7B-Instruct (Qwen 4-bit file), llama.cpp, 4-core computer, internet cut chesi, temperature 0.7, okko vidhaanam lo 10 replies: GST, UPI, GST + "Only give links you are sure exist. If you are not sure, say so." Taruvaata prati link ni plain program tho open chesaam, answer ichchina prati page chadivaam.
+Numbers: 150 links (124 veru veru; "reservebankofindia.org" okkate 8 saarlu). Dead = 404 leda public DNS lo aa domain ledu: 64. Vere/khaali page: 12. Correct: 2. Count cheyyanivi: 72 (plain program ni block chese sites).
+Sources: English pinned comment lo unnaayi. Charan, Harsha, Vasudha madam, college kalpitam.
+
+=== COVER ===
+Frame 1: college projector meeda "reservebankofindia.org/research/..." 404, REFERENCES lo moodu red ✗; Vasudha madam, Charan shock (English visuals).
