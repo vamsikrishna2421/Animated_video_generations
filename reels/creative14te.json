@@ -14,7 +14,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 1.0,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.88,
-  5.0
+  0.85,
+  6.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -47,7 +47,7 @@
    "id": "s_a",
    "type": "sk_links",
    "tail": 0.0,
-   "boost": 1.05,
+   "boost": 0.95,
    "data": {
     "beats": [
      {
@@ -111,7 +111,7 @@
      "show": "It guesses even the link. <pause 0.3> They only look right.",
      "maxgap": 0.28,
      "gap": 0.3,
-     "tempo": 1.05,
+     "tempo": 1.0,
      "tts": "అది లింక్ ని కూడా ఊహించి రాస్తుంది.",
      "file2": "03b_vasudha.wav",
      "tts2": "చూడటానికే కరెక్ట్ గా ఉంటాయి.",
@@ -121,14 +121,14 @@
     {
      "who": "harsha",
      "file": "04_harsha.wav",
-     "text": "రిజర్వ్ బ్యాంక్ ఆఫ్ ఇండియా డాట్ ఆర్గ్? <pause 0.3> [1] ఆర్ బీ ఐ అంటే ఆర్ బీ ఐ డాట్ ఆర్గ్ డాట్ ఇన్!",
+     "text": "రిజర్వ్ బ్యాంక్ ఆఫ్ ఇండియా డాట్ ఆర్గా? <pause 0.3> [1] ఆర్బీఐ వెబ్ సైట్ ఆర్బీఐ డాట్ ఆర్గ్ డాట్ ఇన్!",
      "show": "Reserve Bank of India dot org? <pause 0.3> RBI is rbi.org.in!",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.05,
-     "tts": "రిజర్వ్ బ్యాంక్ ఆఫ్ ఇండియా డాట్ ఆర్గ్?",
+     "tts": "రిజర్వ్ బ్యాంక్ ఆఫ్ ఇండియా డాట్ ఆర్గా?",
      "file2": "04b_harsha.wav",
-     "tts2": "ఆర్ బీ ఐ అంటే ఆర్ బీ ఐ డాట్ ఆర్గ్ డాట్ ఇన్!",
+     "tts2": "ఆర్బీఐ వెబ్ సైట్ ఆర్బీఐ డాట్ ఆర్గ్ డాట్ ఇన్!",
      "pause": 0.3,
      "gain_db": 0.5
     }
@@ -184,26 +184,26 @@
     {
      "who": "harsha",
      "file": "05_harsha.wav",
-     "text": "నిన్న రాత్రి ఇంటర్నెట్ లేకుండా నడిచే చిన్న చాట్ బాట్ తో టెస్ట్ చేశా: <pause 0.3> [1] నూట యాభై లింకులు.",
-     "show": "Last night I tested a small chatbot with no internet: <pause 0.3> 150 links.",
+     "text": "ఇంటర్నెట్ లేని ఒక చిన్న చాట్ బాట్ తో టెస్ట్ చేశా: నూట యాభై లింకులు. <pause 0.3> [1] డెబ్బై రెండు బ్లాక్ అయ్యాయి, డెబ్బై ఎనిమిది చూశా.",
+     "show": "I tested a small offline chatbot: 150 links. <pause 0.3> 72 were blocked, I checked 78.",
      "maxgap": 0.28,
      "gap": 0.3,
-     "tempo": 1.05,
-     "tts": "నిన్న రాత్రి ఇంటర్నెట్ లేకుండా నడిచే చిన్న చాట్ బాట్ తో టెస్ట్ చేశా:",
+     "tempo": 1.0,
+     "tts": "ఇంటర్నెట్ లేని ఒక చిన్న చాట్ బాట్ తో టెస్ట్ చేశా: నూట యాభై లింకులు.",
      "file2": "05b_harsha.wav",
-     "tts2": "నూట యాభై లింకులు.",
+     "tts2": "డెబ్బై రెండు బ్లాక్ అయ్యాయి, డెబ్బై ఎనిమిది చూశా.",
      "pause": 0.3,
      "gain_db": 0.5
     },
     {
      "who": "harsha",
      "file": "06_harsha.wav",
-     "text": "డెబ్బై ఎనిమిది చెక్ చేయగలిగా: అరవై నాలుగు పనిచేయలేదు, పన్నెండు వేరే పేజీలు, <pause 0.8> [1] రెండే కరెక్ట్.",
-     "show": "I could check 78: 64 didn't work, 12 wrong pages, <pause 0.3> only 2 right.",
+     "text": "అరవై నాలుగు పనిచేయలేదు, పన్నెండు వేరే పేజీలు, <pause 0.8> [1] రెండే కరెక్ట్.",
+     "show": "64 didn't work, 12 wrong pages, <pause 0.8> only 2 right.",
      "maxgap": 0.28,
      "gap": 1.0,
      "tempo": 1.05,
-     "tts": "డెబ్బై ఎనిమిది చెక్ చేయగలిగా: అరవై నాలుగు పనిచేయలేదు, పన్నెండు వేరే పేజీలు,",
+     "tts": "అరవై నాలుగు పనిచేయలేదు, పన్నెండు వేరే పేజీలు,",
      "file2": "06b_harsha.wav",
      "tts2": "రెండే కరెక్ట్.",
      "pause": 0.8,
@@ -239,11 +239,11 @@
    "id": "s_c",
    "type": "sk_links",
    "tail": 0.0,
-   "lift": 0.9,
+   "lift": 1.0,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.3,
-   "rise": 1.1,
+   "boost": 1.45,
+   "rise": 1.15,
    "data": {
     "beats": [
      {
@@ -277,14 +277,14 @@
     {
      "who": "vasudha",
      "file": "09_vasudha.wav",
-     "text": "పెద్ద చాట్ బాట్లు కూడా: రెండు వేల ఇరవై ఐదు స్టడీ లో, <pause 0.3> [1] నాలుగు రిఫరెన్సుల్లో ఒక్కటే పూర్తిగా కరెక్ట్.",
-     "show": "Big chatbots too: in a 2025 study, <pause 0.3> only 1 reference in 4 fully right.",
+     "text": "పెద్ద చాట్ బాట్లు కూడా: పోయిన ఏడాది ఒక స్టడీ లో, <pause 0.3> [1] నాలుగింట్లో ఒకటే సరిగ్గా ఉంది.",
+     "show": "Big chatbots too: in a study last year (2025), <pause 0.3> only 1 in 4 was right.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.05,
-     "tts": "పెద్ద చాట్ బాట్లు కూడా: రెండు వేల ఇరవై ఐదు స్టడీ లో,",
+     "tts": "పెద్ద చాట్ బాట్లు కూడా: పోయిన ఏడాది ఒక స్టడీ లో,",
      "file2": "09b_vasudha.wav",
-     "tts2": "నాలుగు రిఫరెన్సుల్లో ఒక్కటే పూర్తిగా కరెక్ట్.",
+     "tts2": "నాలుగింట్లో ఒకటే సరిగ్గా ఉంది.",
      "pause": 0.3,
      "gain_db": 0.5
     },
@@ -294,7 +294,7 @@
      "text": "రిపోర్ట్ పేరు, ఎవరు పబ్లిష్ చేశారో అడగండి. <pause 0.3> [1] మీరే వెతకండి, ప్రతి లింక్ ఓపెన్ చేయండి.",
      "show": "Ask the report's name and who published it. <pause 0.3> Search it yourselves, open every link.",
      "maxgap": 0.28,
-     "gap": 2.2,
+     "gap": 1.6,
      "tempo": 1.05,
      "tts": "రిపోర్ట్ పేరు, ఎవరు పబ్లిష్ చేశారో అడగండి.",
      "file2": "10b_vasudha.wav",
@@ -305,8 +305,8 @@
     {
      "who": "charan",
      "file": "11_charan.wav",
-     "text": "నాలుగో రిఫరెన్స్ బాగుంది మేడమ్, [1] ప్రామిస్!",
-     "show": "Reference 4 is fine, ma'am, promise!",
+     "text": "రిఫరెన్స్ నంబర్ నాలుగు బాగుంది మేడమ్, [1] ప్రామిస్!",
+     "show": "Reference number 4 is fine, madam, promise!",
      "maxgap": 0.28,
      "gap": 0.3,
      "tempo": 1.05,

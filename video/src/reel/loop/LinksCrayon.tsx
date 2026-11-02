@@ -63,9 +63,9 @@ const page404 = (c: Ctx, url: string, k: number, noSite = false) => {
 };
 // the references slide beside the browser: ✗ per dead link
 const refTally = (c: Ctx, n: number, r: () => number) => {
-  c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 690, 380, 290, 300, 18); c.fill();
+  c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 690, 380, 290, n > 3 ? 370 : 300, 18); c.fill();
   c.font = SANS(30, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("REFERENCES", 835, 428);
-  for (let q = 0; q < 3; q++) {
+  for (let q = 0; q < Math.max(3, n); q++) {
     const y = 486 + q * 70;
     c.font = SANS(28, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "left"; c.fillText(`[${q + 1}]`, 720, y + 10);
     if (q < n) { stroke(c, [[800, y - 18], [840, y + 18]], RED, 9, r, { passes: 2 }); stroke(c, [[840, y - 18], [800, y + 18]], RED, 9, r, { passes: 2 }); }
@@ -131,7 +131,7 @@ const StLinks: React.FC<SP> = ({ s }) => {
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     if (i > 0 && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 12} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") {   // the hit before her first word; a buzz per dead link
-      sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={te ? 0.85 : 0.7} />, <Sfx key={k("z")} at={2} src="reel/sfx_buzz.wav" vol={0.25} />);
+      sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("c")} at={0} src={CLAP} vol={te ? 0.3 : 0.4} />, <Sfx key={k("z")} at={2} src="reel/sfx_buzz.wav" vol={0.25} />);   // render review: no first-second hit above the kick
     }
     if (b.prop === "phone") sfx.push(<Sfx key={k("p")} at={at - 6} src="audio/sfx_pop.wav" vol={0.2} />);
     if (b.prop === "typing") [0, 1, 2, 3].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 6 + q * 9} src="audio/sfx_tick.wav" vol={0.18} />));
@@ -155,7 +155,7 @@ const StLinks: React.FC<SP> = ({ s }) => {
   return (
     <>
       {sfx}
-      {first("rule") === 0 && percEnd > 30 && (   // the last scene builds: hats and claps up to the last line
+      {first("study") === 0 && percEnd > 30 && (   // the last scene opens on the study   // the last scene builds: hats and claps up to the last line
         <Sequence from={0} durationInFrames={percEnd} layout="none">
           <Audio src={staticFile("reel/creative09v1/perc.wav")} volume={(fr) => te ? 0.08 + 0.16 * clamp(fr / percEnd) : 0.12 + 0.3 * clamp(fr / percEnd)} />
         </Sequence>
@@ -174,7 +174,7 @@ const StLinks: React.FC<SP> = ({ s }) => {
           room(c, W, H);
           const hookOn = b.prop === "hook" || loopOn;
           screen(c, () => {
-            if (hookOn) { page404(c, "reservebankofindia.org/research/journal/2019/...pdf", 1); refTally(c, 3, r); }
+            if (hookOn) { page404(c, loopOn ? "mca.gov.in/.../GstHome.htm" : "reservebankofindia.org/research/journal/2019/...pdf", 1); refTally(c, loopOn ? 4 : 3, r); }   // the loop: his reference 4, dead too
             else if (b.prop === "rule") {
               c.fillStyle = "#f8fafc"; c.fillRect(70, 250, 940, 610);
               c.font = SANS(48, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("BEFORE YOU CITE AN AI LINK", W / 2, 340);
@@ -210,8 +210,8 @@ const StLinks: React.FC<SP> = ({ s }) => {
               yy += h + 18;
             });
             c.save(); c.globalAlpha = seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22);
-            c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 160, 840, 760, 70, 20); c.fill();
-            c.font = SANS(34, 700); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("web search on? open the links anyway", W / 2, 888);
+            c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 120, 836, 840, 80, 20); c.fill();
+            c.font = SANS(40, 800); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("web search on? open the links anyway", W / 2, 890);
             c.restore();
           }
           if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, slam, slam + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
@@ -222,7 +222,7 @@ const StLinks: React.FC<SP> = ({ s }) => {
           chatPhone(c, 180, 300, 1.1, sure ? "Give me 5 links for my GST project. Only give links you are sure exist. If you are not sure, say so." : "Give me 5 links to sources for my GST project.",
             ["Here are 5 links to sources you can cite:", ...LINKS], 1);
           if (b.prop === "sure2") {
-            stamp(c, "\"not sure\": 0 of 10", W / 2, 1210, 66, RED, seg(f, ln.from + 4, ln.from + 12), -0.06);
+            stamp(c, "\"not sure\": 0 of 10 replies", W / 2, 1210, 58, RED, seg(f, ln.from + 4, ln.from + 12), -0.06);
             tag(c, "no fewer dead links", 400, 1370, 54, "#fee2e2", "#991b1b", seg(f, cu(1, 0.5), cu(1, 0.5) + 8));
           }
         } else if (b.shot === "typing") {
@@ -252,14 +252,27 @@ const StLinks: React.FC<SP> = ({ s }) => {
             c.restore();
           });
           c.save(); c.globalAlpha = seg(f, cu(1, 0.3) + 10, cu(1, 0.3) + 16);
-          c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("in our test it wrote the fake one 8 times", W / 2, 1140);
+          c.font = SANS(42, 800); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText("in our test it wrote the fake one 8 times", W / 2, 1140);
           c.restore();
         } else if (b.shot === "test") {
           // ---------- our test: 150 links, every one opened ----------
           c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
           c.font = SANS(60, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST", W / 2, 330);
           c.font = SANS(36, 600); c.fillStyle = "#e2e8f0"; c.fillText("a small AI, offline, no internet · 30 asks × 5 links", W / 2, 396);
-          c.font = SANS(40, 800); c.fillStyle = "#f8fafc"; c.fillText("150 links · we tried every one", W / 2, 452);
+          c.font = SANS(40, 800); c.fillStyle = "#f8fafc"; c.fillText("150 links · we opened all 150", W / 2, 452);
+          const c5 = b.prop === "test" ? cu(1, 0.5) : -1e9;   // render review: the 72 said and shown big
+          if (b.prop === "test") {
+            const k72 = seg(f, c5 - 2, c5 + 6);
+            if (k72 > 0) {
+              c.save(); c.globalAlpha = clamp(k72 * 3);
+              c.fillStyle = "#334155"; rrect(c, 110, 560, 860, 170, 24); c.fill();
+              c.font = SANS(64, 900); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("72 blocked our test", W / 2, 640);
+              c.font = SANS(36, 700); c.fillText("(sites that block programs: not counted)", W / 2, 700);
+              c.fillStyle = "#1e3a8a"; rrect(c, 110, 780, 860, 150, 24); c.fill();
+              c.font = SANS(64, 900); c.fillStyle = "#fde68a"; c.fillText("78 we could check", W / 2, 878);
+              c.restore();
+            }
+          }
           const two = b.prop === "test2";
           const c1 = two ? cu(1, 0.7) : 0;
           const rows: [string, number, string, number][] = [["dead (404 / no such site)", 64, RED, two ? ln.from : 1e9], ["wrong or empty page", 12, "#f59e0b", two ? ln.from + 16 : 1e9], ["right", 2, GREEN, two ? c1 : 1e9]];
@@ -275,7 +288,7 @@ const StLinks: React.FC<SP> = ({ s }) => {
             c.font = SANS(60, 900); c.fillStyle = col; c.textAlign = "right"; c.fillText(String(v), 990, y + 54);
           });
           c.save(); c.globalAlpha = two ? seg(f, endL - 6, endL + 2) : 0;
-          c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the other 72 links: the sites blocked our test", W / 2, 1180); c.fillText("(not counted)", W / 2, 1226);
+          c.font = SANS(36, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("+ 72 links the sites blocked: not counted", W / 2, 1200);
           c.restore();
         } else if (b.shot === "study") {
           // ---------- the big chatbots too ----------
@@ -283,22 +296,22 @@ const StLinks: React.FC<SP> = ({ s }) => {
           c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NOT JUST SMALL AIs", W / 2, 350);
           c.fillStyle = "#fffdf5"; rrect(c, 80, 430, W - 160, 620, 28); c.fill();
           c.font = SANS(34, 800); c.fillStyle = "#7c2d12"; c.textAlign = "left"; c.fillText("A 2025 STUDY", 130, 510);
-          c.font = SANS(32, 600); c.fillStyle = "#475569"; c.fillText("8 free chatbots, 400 references asked for:", 130, 562);
-          ([["fully right", 26.5, GREEN, ln.from + 4], ["wrong or made up", 39.8, RED, cu(1, 0.2) - 8]] as [string, number, string, number][]).forEach(([m, v, col, t0], q) => {
+          c.font = SANS(38, 700); c.fillStyle = "#475569"; c.fillText("8 free chatbots, 400 references:", 130, 566);
+          ([["fully right", 26.5, GREEN, ln.from + 4], ["partly right", 33.8, "#f59e0b", ln.from + 10], ["wrong or made up", 39.8, RED, cu(1, 0.2) - 8]] as [string, number, string, number][]).forEach(([m, v, col, t0], q) => {
             const k = seg(f, t0, t0 + 8);
             if (k <= 0) return;
-            const y = 660 + q * 150;
+            const y = 610 + q * 130;   // render review: the other third (partly right) was missing
             c.font = SANS(40, 700); c.fillStyle = INK; c.textAlign = "left"; c.fillText(m, 130, y + 44);
             c.fillStyle = col; rrect(c, 130, y + 64, Math.max(16, 560 * (v / 40) * easeOut(k)), 56, 12); c.fill();
             c.font = SANS(52, 900); c.fillStyle = col; c.textAlign = "left"; c.fillText(`${v}%`, 150 + 560 * (v / 40) * easeOut(k), y + 110);
           });
-          c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("Cabezas-Clavijo & Sidorenko-Bautista, 2025", 130, 1010);
+          c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText("Cabezas-Clavijo & Sidorenko-Bautista, 2025", 130, 1036);
         }
         if (b.who === "harsha" && ["domain", "test", "phone"].includes(b.shot)) {   // Harsha, turned round in his seat
-          c.save(); c.beginPath(); c.rect(700, 1260, 380, 240); c.clip();
-          person(c, "harsha", [900, 1430], 0.55, b.prop === "sure2" ? "smug" : "calm", "rest", talking, r);
+          c.save(); c.beginPath(); c.rect(680, 1220, 400, 280); c.clip();
+          person(c, "harsha", [900, 1450], 0.72, b.prop === "sure2" ? "smug" : "calm", "rest", talking, r);
           c.restore();
-          c.font = SANS(26, 800); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText("HARSHA", 900, 1290);
+          c.font = SANS(30, 800); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText("HARSHA", 900, 1250);
         }
         void stroke; void circlePts;
       }} />

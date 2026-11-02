@@ -13,37 +13,37 @@
  "fps": 30,
  "musicDrops": [
   [
-   750,
-   774
+   792,
+   816
   ]
  ],
  "musicBoosts": [
   [
    0,
    491,
-   1.05
+   0.95
   ],
   [
    491,
-   1043,
+   1105,
    1.2
   ],
   [
-   1043,
-   1578,
-   1.5
+   1105,
+   1668,
+   1.65
   ],
   [
-   1043,
-   1578,
-   1.2,
+   1105,
+   1668,
+   1.3,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1578,
+ "totalFrames": 1668,
  "music": "reel/creative14v1/score.wav",
  "scenes": [
   {
@@ -323,7 +323,7 @@
     "hardCuts": true
    },
    "from": 491,
-   "frames": 552,
+   "frames": 614,
    "lines": [
     {
      "who": "harsha",
@@ -332,61 +332,86 @@
      "sub": null,
      "audio": "reel/creative14v1/line_05.wav",
      "from": 0,
-     "frames": 132,
+     "frames": 221,
      "words": [
       {
        "w": "I",
        "from": 1,
-       "to": 5
+       "to": 6
       },
       {
        "w": "tested",
-       "from": 5,
-       "to": 19
-      },
-      {
-       "w": "a",
-       "from": 19,
+       "from": 6,
        "to": 23
       },
       {
-       "w": "small",
+       "w": "a",
        "from": 23,
-       "to": 36
+       "to": 27
+      },
+      {
+       "w": "small",
+       "from": 27,
+       "to": 42
       },
       {
        "w": "AI,",
-       "from": 36,
-       "to": 49
+       "from": 42,
+       "to": 60
       },
       {
-       "w": "offline,",
-       "from": 49,
-       "to": 74
-      },
-      {
-       "w": "last",
-       "from": 74,
-       "to": 95
-      },
-      {
-       "w": "night:",
-       "from": 95,
-       "to": 109
+       "w": "offline:",
+       "from": 60,
+       "to": 91
       },
       {
        "w": "150",
-       "from": 109,
-       "to": 117
+       "from": 91,
+       "to": 101
       },
       {
        "w": "links.",
-       "from": 117,
-       "to": 131
+       "from": 101,
+       "to": 118
+      },
+      {
+       "w": "72",
+       "from": 127,
+       "to": 134
+      },
+      {
+       "w": "were",
+       "from": 134,
+       "to": 144
+      },
+      {
+       "w": "blocked,",
+       "from": 144,
+       "to": 175
+      },
+      {
+       "w": "so",
+       "from": 175,
+       "to": 181
+      },
+      {
+       "w": "I",
+       "from": 181,
+       "to": 185
+      },
+      {
+       "w": "checked",
+       "from": 185,
+       "to": 206
+      },
+      {
+       "w": "78.",
+       "from": 206,
+       "to": 214
       }
      ],
      "cues": {
-      "1": 78
+      "1": 127
      }
     },
     {
@@ -395,77 +420,57 @@
      "color": "#86EFAC",
      "sub": null,
      "audio": "reel/creative14v1/line_06.wav",
-     "from": 141,
-     "frames": 180,
+     "from": 230,
+     "frames": 139,
      "words": [
       {
-       "w": "We",
-       "from": 142,
-       "to": 148
-      },
-      {
-       "w": "could",
-       "from": 148,
-       "to": 159
-      },
-      {
-       "w": "check",
-       "from": 159,
-       "to": 170
-      },
-      {
-       "w": "78:",
-       "from": 170,
-       "to": 177
-      },
-      {
        "w": "64",
-       "from": 177,
-       "to": 193
+       "from": 231,
+       "to": 238
       },
       {
        "w": "dead,",
-       "from": 193,
-       "to": 204
+       "from": 238,
+       "to": 252
       },
       {
        "w": "12",
-       "from": 204,
-       "to": 209
+       "from": 252,
+       "to": 266
       },
       {
        "w": "wrong",
-       "from": 209,
-       "to": 231
+       "from": 266,
+       "to": 280
       },
       {
        "w": "pages,",
-       "from": 231,
-       "to": 243
+       "from": 280,
+       "to": 296
       },
       {
        "w": "and",
-       "from": 243,
-       "to": 251
+       "from": 325,
+       "to": 333
       },
       {
        "w": "only",
-       "from": 283,
-       "to": 294
+       "from": 333,
+       "to": 343
       },
       {
        "w": "2",
-       "from": 294,
-       "to": 298
+       "from": 343,
+       "to": 348
       },
       {
        "w": "right.",
-       "from": 298,
-       "to": 313
+       "from": 348,
+       "to": 362
       }
      ],
      "cues": {
-      "1": 283
+      "1": 325
      }
     },
     {
@@ -474,48 +479,48 @@
      "color": "#FDBA74",
      "sub": null,
      "audio": "reel/creative14v1/line_07.wav",
-     "from": 351,
+     "from": 398,
      "frames": 79,
      "words": [
       {
        "w": "I",
-       "from": 351,
-       "to": 354
+       "from": 399,
+       "to": 402
       },
       {
        "w": "told",
-       "from": 354,
-       "to": 362
+       "from": 402,
+       "to": 409
       },
       {
        "w": "it:",
-       "from": 362,
-       "to": 367
+       "from": 409,
+       "to": 415
       },
       {
        "w": "only",
-       "from": 367,
-       "to": 385
+       "from": 415,
+       "to": 433
       },
       {
        "w": "links",
-       "from": 385,
-       "to": 394
+       "from": 433,
+       "to": 442
       },
       {
        "w": "you're",
-       "from": 394,
-       "to": 404
+       "from": 442,
+       "to": 452
       },
       {
        "w": "sure",
-       "from": 404,
-       "to": 412
+       "from": 452,
+       "to": 459
       },
       {
        "w": "about!",
-       "from": 412,
-       "to": 422
+       "from": 459,
+       "to": 470
       }
      ],
      "cues": {}
@@ -526,57 +531,62 @@
      "color": "#86EFAC",
      "sub": null,
      "audio": "reel/creative14v1/line_08.wav",
-     "from": 439,
-     "frames": 93,
+     "from": 486,
+     "frames": 107,
      "words": [
       {
-       "w": "Tried",
-       "from": 441,
-       "to": 449
+       "w": "Already",
+       "from": 486,
+       "to": 498
+      },
+      {
+       "w": "tried",
+       "from": 498,
+       "to": 507
       },
       {
        "w": "that.",
-       "from": 449,
-       "to": 468
+       "from": 507,
+       "to": 528
       },
       {
        "w": "It",
-       "from": 468,
-       "to": 472
+       "from": 528,
+       "to": 533
       },
       {
        "w": "never",
-       "from": 472,
-       "to": 480
+       "from": 533,
+       "to": 542
       },
       {
        "w": "said",
-       "from": 480,
-       "to": 487
+       "from": 542,
+       "to": 549
       },
       {
        "w": "'not",
-       "from": 487,
-       "to": 494
+       "from": 549,
+       "to": 557
       },
       {
        "w": "sure'.",
-       "from": 494,
-       "to": 513
+       "from": 557,
+       "to": 576
       },
       {
        "w": "No",
-       "from": 513,
-       "to": 517
+       "from": 576,
+       "to": 581
       },
       {
        "w": "better.",
-       "from": 517,
-       "to": 528
+       "from": 581,
+       "to": 593
       }
      ],
      "cues": {
-      "1": 468
+      "1": 528
      }
     }
    ]
@@ -615,8 +625,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1043,
-   "frames": 535,
+   "from": 1105,
+   "frames": 563,
    "lines": [
     {
      "who": "vasudha",
@@ -625,7 +635,7 @@
      "sub": null,
      "audio": "reel/creative14v1/line_09.wav",
      "from": 9,
-     "frames": 170,
+     "frames": 184,
      "words": [
       {
        "w": "Big",
@@ -635,76 +645,86 @@
       {
        "w": "chatbots",
        "from": 20,
-       "to": 49
+       "to": 37
+      },
+      {
+       "w": "do",
+       "from": 37,
+       "to": 46
+      },
+      {
+       "w": "it",
+       "from": 46,
+       "to": 61
       },
       {
        "w": "too:",
-       "from": 49,
-       "to": 57
+       "from": 61,
+       "to": 69
       },
       {
        "w": "in",
-       "from": 57,
-       "to": 62
-      },
-      {
-       "w": "a",
-       "from": 62,
-       "to": 65
-      },
-      {
-       "w": "2025",
-       "from": 65,
+       "from": 69,
        "to": 73
       },
       {
-       "w": "study,",
+       "w": "a",
        "from": 73,
-       "to": 88
+       "to": 76
+      },
+      {
+       "w": "2025",
+       "from": 76,
+       "to": 84
+      },
+      {
+       "w": "study,",
+       "from": 84,
+       "to": 100
       },
       {
        "w": "only",
-       "from": 88,
-       "to": 107
+       "from": 100,
+       "to": 121
       },
       {
        "w": "1",
-       "from": 107,
-       "to": 111
+       "from": 121,
+       "to": 124
       },
       {
        "w": "reference",
-       "from": 111,
-       "to": 126
+       "from": 124,
+       "to": 139
       },
       {
        "w": "in",
-       "from": 126,
-       "to": 131
+       "from": 139,
+       "to": 144
       },
       {
        "w": "4",
-       "from": 131,
-       "to": 138
+       "from": 144,
+       "to": 147
       },
       {
        "w": "was",
-       "from": 138,
-       "to": 148
+       "from": 147,
+       "to": 157
       },
       {
        "w": "fully",
-       "from": 148,
-       "to": 163
+       "from": 157,
+       "to": 177
       },
       {
        "w": "right.",
-       "from": 163,
-       "to": 174
+       "from": 177,
+       "to": 187
       }
      ],
      "cues": {
-      "1": 81
+      "1": 91
      }
     },
     {
@@ -713,92 +733,92 @@
      "color": "#C4B5FD",
      "sub": null,
      "audio": "reel/creative14v1/line_10.wav",
-     "from": 191,
+     "from": 205,
      "frames": 175,
      "words": [
       {
        "w": "Ask",
-       "from": 191,
-       "to": 197
+       "from": 205,
+       "to": 211
       },
       {
        "w": "for",
-       "from": 197,
-       "to": 214
+       "from": 211,
+       "to": 227
       },
       {
        "w": "the",
-       "from": 214,
-       "to": 220
-      },
-      {
-       "w": "report's",
-       "from": 220,
+       "from": 227,
        "to": 233
       },
       {
-       "w": "name",
+       "w": "report's",
        "from": 233,
-       "to": 241
+       "to": 247
+      },
+      {
+       "w": "name",
+       "from": 247,
+       "to": 254
       },
       {
        "w": "and",
-       "from": 241,
-       "to": 255
+       "from": 254,
+       "to": 268
       },
       {
        "w": "who",
-       "from": 255,
-       "to": 261
+       "from": 268,
+       "to": 274
       },
       {
        "w": "published",
-       "from": 261,
-       "to": 276
+       "from": 274,
+       "to": 289
       },
       {
        "w": "it.",
-       "from": 293,
-       "to": 298
-      },
-      {
-       "w": "Search",
-       "from": 298,
-       "to": 307
-      },
-      {
-       "w": "it",
-       "from": 307,
+       "from": 306,
        "to": 311
       },
       {
-       "w": "yourself,",
+       "w": "Search",
        "from": 311,
-       "to": 332
+       "to": 321
+      },
+      {
+       "w": "it",
+       "from": 321,
+       "to": 324
+      },
+      {
+       "w": "yourself,",
+       "from": 324,
+       "to": 346
       },
       {
        "w": "and",
-       "from": 332,
-       "to": 338
+       "from": 346,
+       "to": 351
       },
       {
        "w": "open",
-       "from": 338,
-       "to": 344
+       "from": 351,
+       "to": 358
       },
       {
        "w": "every",
-       "from": 344,
-       "to": 352
+       "from": 358,
+       "to": 365
       },
       {
        "w": "link.",
-       "from": 352,
-       "to": 360
+       "from": 365,
+       "to": 373
       }
      ],
      "cues": {
-      "1": 293
+      "1": 306
      }
     },
     {
@@ -807,47 +827,47 @@
      "color": "#FDBA74",
      "sub": null,
      "audio": "reel/creative14v1/line_11.wav",
-     "from": 432,
+     "from": 445,
      "frames": 79,
      "words": [
       {
        "w": "Reference",
-       "from": 435,
-       "to": 452
-      },
-      {
-       "w": "four",
-       "from": 452,
-       "to": 460
-      },
-      {
-       "w": "is",
-       "from": 460,
+       "from": 448,
        "to": 465
       },
       {
-       "w": "fine,",
+       "w": "four",
        "from": 465,
-       "to": 476
+       "to": 474
+      },
+      {
+       "w": "is",
+       "from": 474,
+       "to": 479
+      },
+      {
+       "w": "fine,",
+       "from": 479,
+       "to": 489
       },
       {
        "w": "madam,",
-       "from": 476,
-       "to": 492
+       "from": 489,
+       "to": 505
       },
       {
        "w": "I",
-       "from": 492,
-       "to": 495
+       "from": 505,
+       "to": 509
       },
       {
        "w": "promise!",
-       "from": 495,
-       "to": 510
+       "from": 509,
+       "to": 524
       }
      ],
      "cues": {
-      "1": 492
+      "1": 505
      }
     }
    ]

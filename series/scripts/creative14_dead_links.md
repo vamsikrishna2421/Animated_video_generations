@@ -1,4 +1,4 @@
-# Creative 14 "Three references, three dead links" · script v2, Nov 2
+# Creative 14 "Three references, three dead links" · script v3 (as rendered), Nov 2
 
 **Format:** a college moment, live on the projector: a B.Com lecturer opens a student's project references one by one
 in front of the class. New in the creative log (last 7 days: a TV serial, a video call, cricket commentary, a nature
@@ -65,35 +65,50 @@ and publisher. No links."), held 3 s+, and "web search on? open the links anyway
 (a click, the 404 of frame 1). Telugu: "చిన్న యాప్" (a Play Store app) is "ఇంటర్నెట్ లేకుండా నడిచే చిన్న చాట్ బాట్";
 "కల్పించాయి" (provided) is gone; line 3 is "లింక్ ని కూడా ఊహించి రాస్తుంది. చూడటానికే కరెక్ట్ గా ఉంటాయి."
 
-## Script (English) · ~45 s · v2
+## Render review (human-viewer, EN + TE) and what changed
+Sandeep stopped (hook 8, "my viva nightmare", save and share); Priya would scroll most days (5) but saved it for the
+rule card. Both: the 150 / 78 / 72 split had to be said out loud and shown bigger; "and only 2 right" was captioned
+before the stop; the dark middle sagged; the sound had no arc (quarters within 0.7 dB). Changed: Harsha says "Seventy-two
+were blocked, so I checked seventy-eight", and the card shows "72 blocked our test" and "78 we could check" in big type
+before the bars; the caption waits for the stop; "partly right 33.8%" added to the 2025 study (whether those chatbots
+searched the web isn't stated, so we don't say); the scenes step up (0.95, 1.2, 1.65) with a clap on the first hit and
+the build in the last scene; bigger small text ("0 of 10 replies", the 8 fake addresses, the study's line, the web-search
+pill); the loop's 404 shows his reference 4 crossed and holds ~1 s. Misheard, fixed on the final mixes: English "Three
+dead links" ("deadlings": "and all three are dead!"), "ma'am" ("mom": "madam"), "Tried that" ("Try that": "Already tried
+that"), "Big chatbots too" ("Big chat was too"). Telugu: the year ("2005": "పోయిన ఏడాది"), "నాలుగో" ("ఆదిగో": "నంబర్
+నాలుగు"), "ఒక్కటే పూర్తిగా" garbled ("నాలుగింట్లో ఒకటే సరిగ్గా ఉంది"), "లేకుండా" and "చెక్ చేశా" stuttered ("లేని",
+"చూశా"; lines 3 and 5 at natural speed); Harsha's address line: the clearest take kept by hand (Whisper wrote it in
+English, so the Telugu judge scored it 0). No word near a swear word in either cut.
+
+## Script (English) · 55.7 s as rendered
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Vasudha | Three references. [1] Three dead links! | frame 1: the projector, a 404 over "reservebankofindia.org/research/...", REFERENCES ✗ ✗ ✗ |
-| 2 | Charan | But ma'am, [1] the AI gave me those! | Charan's phone: "Give me 5 links to sources for my GST project." and five links |
-| 3 | Vasudha | It writes links like sentences. [1] They only look right. | insert: the AI types a link piece by piece: www. + reservebank + ofindia + .org; "looks right · doesn't exist" |
-| 4 | Harsha | Reserve Bank of India dot org? [1] RBI is R B I dot org dot in! | reservebankofindia.org ✗ no such website · rbi.org.in ✓ RBI's real website; "in our test it wrote the fake one 8 times"; Harsha turned round in his seat |
-| 5 | Harsha | I tested a small AI, offline, last night: [1] a hundred and fifty links. | OUR TEST: a small AI, offline, no internet · 30 asks × 5 links · 150 links, we tried every one |
-| 6 | Harsha | We could check seventy-eight: sixty-four dead, twelve wrong pages, / [1] and only two right. | "we could check 78:" 64 dead (404 / no such site) · 12 wrong or empty page · (a stop) 2 right; "the other 72 links: the sites blocked our test (not counted)" |
-| 7 | Charan | I told it: only links you're sure about! | his phone: "Only give links you are sure exist. If you are not sure, say so." |
-| 8 | Harsha | Tried that. [1] It never said 'not sure'. No better. | "not sure": 0 of 10 · no fewer dead links |
-| 9 | Vasudha | Big chatbots too: in a 2025 study, [1] only one reference in four was fully right. | A 2025 STUDY: 8 free chatbots, 400 references: fully right 26.5% · wrong or made up 39.8% |
-| 10 | Vasudha | Ask for the report's name and who published it. / [1] Search it yourself, and open every link. | BEFORE YOU CITE AN AI LINK: 1 type: "Give me 5 reports on GST: name and publisher. No links." 2 search for each one yourself 3 open every link before you cite it; "web search on? open the links anyway" (held 3 s+) |
-| 11 | Charan | Reference four is fine, ma'am, [1] I promise! | his slide: references 1-3 ✗, reference 4; the click → the 404 of frame 1 (loops) |
+| 1 | Vasudha | Three references, [1] and all three are dead! | frame 1: the projector, a 404 over "reservebankofindia.org/...", REFERENCES ✗ ✗ ✗ |
+| 2 | Charan | But madam, [1] the AI gave me those! |  |
+| 3 | Vasudha | It writes links like sentences. [1] They only look right. |  |
+| 4 | Harsha | Reserve Bank of India dot org? [1] RBI is R B I dot org dot in! |  |
+| 5 | Harsha | I tested a small AI, offline: a hundred and fifty links. / [1] Seventy-two were blocked, so I checked seventy-eight. | OUR TEST: a small AI, offline, no internet · 150 links · we opened all 150; then big: "72 blocked our test (sites that block programs: not counted)" · "78 we could check" |
+| 6 | Harsha | Sixty-four dead, twelve wrong pages, / [1] and only two right. | "we could check 78:" 64 dead (404 / no such site) · 12 wrong or empty page · (a stop) 2 right; "+ 72 links the sites blocked: not counted" |
+| 7 | Charan | I told it: only links you're sure about! |  |
+| 8 | Harsha | Already tried that. [1] It never said 'not sure'. No better. | "not sure": 0 of 10 replies · no fewer dead links |
+| 9 | Vasudha | Big chatbots do it too: in a 2025 study, [1] only one reference in four was fully right. | A 2025 STUDY: 8 free chatbots, 400 references: fully right 26.5% · partly right 33.8% · wrong or made up 39.8% |
+| 10 | Vasudha | Ask for the report's name and who published it. / [1] Search it yourself, and open every link. |  |
+| 11 | Charan | Reference four is fine, madam, [1] I promise! | his slide: references 1-3 ✗, reference 4; the click → a 404 on mca.gov.in/.../GstHome.htm, REFERENCES [1]-[4] ✗, held ~1 s → frame 1 (loops) |
 
-## Script (Telugu; on-screen text stays English) · v2
+## Script (Telugu; on-screen text stays English) · 56.1 s as rendered
 | # | Who | Telugu |
 |---|---|---|
 | 1 | Vasudha | మూడు రిఫరెన్సులు. [1] మూడూ పనిచేయని లింకులు! |
 | 2 | Charan | కానీ మేడమ్, [1] ఆ చాట్ బాట్ ఇచ్చిందే! |
 | 3 | Vasudha | అది లింక్ ని కూడా ఊహించి రాస్తుంది. / [1] చూడటానికే కరెక్ట్ గా ఉంటాయి. |
-| 4 | Harsha | రిజర్వ్ బ్యాంక్ ఆఫ్ ఇండియా డాట్ ఆర్గ్? / [1] ఆర్ బీ ఐ అంటే ఆర్ బీ ఐ డాట్ ఆర్గ్ డాట్ ఇన్! |
-| 5 | Harsha | నిన్న రాత్రి ఇంటర్నెట్ లేకుండా నడిచే చిన్న చాట్ బాట్ తో టెస్ట్ చేశా: / [1] నూట యాభై లింకులు. |
-| 6 | Harsha | డెబ్బై ఎనిమిది చెక్ చేయగలిగా: అరవై నాలుగు పనిచేయలేదు, పన్నెండు వేరే పేజీలు, / [1] రెండే కరెక్ట్. |
+| 4 | Harsha | రిజర్వ్ బ్యాంక్ ఆఫ్ ఇండియా డాట్ ఆర్గా? / [1] ఆర్బీఐ వెబ్ సైట్ ఆర్బీఐ డాట్ ఆర్గ్ డాట్ ఇన్! |
+| 5 | Harsha | ఇంటర్నెట్ లేని ఒక చిన్న చాట్ బాట్ తో టెస్ట్ చేశా: నూట యాభై లింకులు. / [1] డెబ్బై రెండు బ్లాక్ అయ్యాయి, డెబ్బై ఎనిమిది చూశా. |
+| 6 | Harsha | అరవై నాలుగు పనిచేయలేదు, పన్నెండు వేరే పేజీలు, / [1] రెండే కరెక్ట్. |
 | 7 | Charan | నేను చెప్పా: ఖచ్చితంగా ఉన్న లింకులే ఇవ్వు అని! |
 | 8 | Harsha | అదీ ట్రై చేశా. / [1] ఒక్కసారి కూడా తెలీదు అనలేదు. ఏమీ మారలేదు. |
-| 9 | Vasudha | పెద్ద చాట్ బాట్లు కూడా: రెండు వేల ఇరవై ఐదు స్టడీ లో, / [1] నాలుగు రిఫరెన్సుల్లో ఒక్కటే పూర్తిగా కరెక్ట్. |
+| 9 | Vasudha | పెద్ద చాట్ బాట్లు కూడా: పోయిన ఏడాది ఒక స్టడీ లో, / [1] నాలుగింట్లో ఒకటే సరిగ్గా ఉంది. |
 | 10 | Vasudha | రిపోర్ట్ పేరు, ఎవరు పబ్లిష్ చేశారో అడగండి. / [1] మీరే వెతకండి, ప్రతి లింక్ ఓపెన్ చేయండి. |
-| 11 | Charan | నాలుగో రిఫరెన్స్ బాగుంది మేడమ్, [1] ప్రామిస్! |
+| 11 | Charan | రిఫరెన్స్ నంబర్ నాలుగు బాగుంది మేడమ్, [1] ప్రామిస్! |
 
 Telugu notes: no "ఏఐ" in voiced text ("ఆ చాట్ బాట్", "ఒక చిన్న యాప్"); Kiran (Charan) says no English word with an f;
 numbers mid-line; no word one slipped letter from a swear word (checked again on the transcripts).

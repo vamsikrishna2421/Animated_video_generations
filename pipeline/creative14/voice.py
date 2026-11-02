@@ -57,18 +57,20 @@ MUST = {"en": {1: [("three", "3"), ("references", "reference"), ("all",), ("dead
                2: [("ma'am", "maam", "mam", "madam", "mom"), ("gave",)],
                3: [("writes", "write"), ("links", "link"), ("sentences", "sentence"), ("look",), ("right",)],
                4: [("reserve",), ("bank",), ("india",), ("org",), ("rbi", "r")],
-               5: [("tested", "test"), ("small",), ("offline",), ("night",), ("hundred", "150"), ("fifty", "150"), ("links",)],
-               6: [("check",), ("seventy", "78"), ("sixty", "64"), ("dead",), ("twelve", "12"), ("wrong",), ("pages", "page")], "6b": [("only",), ("two", "2"), ("right",)],
+               5: [("tested", "test"), ("small",), ("offline",), ("hundred", "150"), ("fifty", "150"), ("links",)], "5b": [("seventy", "72", "78"), ("blocked", "block"), ("checked", "check")],
+               6: [("sixty", "64"), ("dead",), ("twelve", "12"), ("wrong",), ("pages", "page")], "6b": [("only",), ("two", "2"), ("right",)],
                7: [("told",), ("only",), ("links",), ("sure",)],
-               8: [("tried",), ("never",), ("sure",), ("better",)],
-               9: [("big",), ("chatbots", "chatbot", "chat"), ("2025", "twenty"), ("study",), ("one", "1"), ("four", "4"), ("right",)],
+               8: [("already",), ("tried",), ("never",), ("sure",), ("better",)],
+               9: [("big",), ("chatbots", "chatbot"), ("2025", "twenty"), ("study",), ("one", "1"), ("four", "4"), ("right",)],
                10: [("report", "reports"), ("name",), ("published", "publish")], "10b": [("search",), ("open",), ("every",), ("link",)],
                11: [("reference",), ("four", "4"), ("fine",), ("promise",)]},
-        "te": {5: [("नडि", "नदि", "नडु", "नदु", "नड़ि")], 7: [("नेनु", "नेनू", "नेन"), ("चेप्पा", "चप्पा", "चेपा", "चप्पा"), ("खच्चि", "कच्चि", "खचि", "कचि", "खच्च", "कच्च")]}}   # 5: "లేకుండా" stuttered; 7: the first half went missing
+        "te": {4: [("बैंक", "बांक", "ब्यांक", "बेंक", "ब्यग", "बैङ", "बंक")], "4b": [("डाट", "डॉट", "ड़ाट", "डॉ", "डा")],
+               11: [("नालुगु", "नालगु", "नालुग", "नाल्गु")],
+               5: [("लेनि", "लेनी", "लेन")], "5b": [("चूशा", "चुसा", "चूसा", "चुशा", "चूस")], 7: [("नेनु", "नेनू", "नेन"), ("चेप्पा", "चप्पा", "चेपा", "चप्पा"), ("खच्चि", "कच्चि", "खचि", "कचि", "खच्च", "कच्च")]}}   # 5: "లేకుండా" stuttered; 7: the first half went missing
 # lines whose judge text needs digits (Whisper writes "150", "64")
-JUDGE_TEXT = {1: "3 references, and all 3 are dead!", 5: "I tested a small AI, offline, last night: 150 links.",
-              6: "We could check 78: 64 dead, 12 wrong pages,", "6b": "and only 2 right.",
-              9: "Big chatbots too: in a 2025 study, only 1 reference in 4 was fully right.", 11: "Reference 4 is fine, madam, I promise!"}
+JUDGE_TEXT = {1: "3 references, and all 3 are dead!", 5: "I tested a small AI, offline: 150 links.", "5b": "72 were blocked, so I checked 78.",
+              6: "64 dead, 12 wrong pages,", "6b": "and only 2 right.",
+              9: "Big chatbots do it too: in a 2025 study, only 1 reference in 4 was fully right.", 11: "Reference 4 is fine, madam, I promise!"}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
 GATE = set()   # characters whose Fish takes carry a hum between words (none so far)

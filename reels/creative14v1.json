@@ -14,7 +14,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 1.0,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.5,
  "musicEndRamp": [
-  0.88,
-  5.0
+  0.85,
+  6.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -45,7 +45,7 @@
    "id": "s_a",
    "type": "sk_links",
    "tail": 0.0,
-   "boost": 1.05,
+   "boost": 0.95,
    "data": {
     "beats": [
      {
@@ -172,22 +172,26 @@
     {
      "who": "harsha",
      "file": "05_harsha.wav",
-     "text": "I tested a small AI, offline, last night: [1] a hundred and fifty links.",
-     "show": "I tested a small AI, offline, last night: 150 links.",
+     "text": "I tested a small AI, offline: a hundred and fifty links. <pause 0.3> [1] Seventy-two were blocked, so I checked seventy-eight.",
+     "show": "I tested a small AI, offline: 150 links. <pause 0.3> 72 were blocked, so I checked 78.",
      "maxgap": 0.28,
      "gap": 0.3,
      "tempo": 1.1,
+     "tts": "I tested a small AI, offline: a hundred and fifty links.",
+     "file2": "05b_harsha.wav",
+     "tts2": "Seventy-two were blocked, so I checked seventy-eight.",
+     "pause": 0.3,
      "gain_db": 0.5
     },
     {
      "who": "harsha",
      "file": "06_harsha.wav",
-     "text": "We could check seventy-eight: sixty-four dead, twelve wrong pages, <pause 0.8> [1] and only two right.",
-     "show": "We could check 78: 64 dead, 12 wrong pages, and only 2 right.",
+     "text": "Sixty-four dead, twelve wrong pages, <pause 0.8> [1] and only two right.",
+     "show": "64 dead, 12 wrong pages, <pause 0.8> and only 2 right.",
      "maxgap": 0.28,
      "gap": 1.0,
      "tempo": 1.1,
-     "tts": "We could check seventy-eight: sixty-four dead, twelve wrong pages,",
+     "tts": "Sixty-four dead, twelve wrong pages,",
      "file2": "06b_harsha.wav",
      "tts2": "and only two right.",
      "pause": 0.8,
@@ -206,8 +210,8 @@
     {
      "who": "harsha",
      "file": "08_harsha.wav",
-     "text": "Tried that. [1] It never said 'not sure'. No better.",
-     "show": "Tried that. It never said 'not sure'. No better.",
+     "text": "Already tried that. [1] It never said 'not sure'. No better.",
+     "show": "Already tried that. It never said 'not sure'. No better.",
      "maxgap": 0.28,
      "gap": 0.6,
      "tempo": 1.1,
@@ -219,11 +223,11 @@
    "id": "s_c",
    "type": "sk_links",
    "tail": 0.0,
-   "lift": 0.9,
+   "lift": 1.0,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.5,
-   "rise": 1.2,
+   "boost": 1.65,
+   "rise": 1.3,
    "data": {
     "beats": [
      {
@@ -256,8 +260,8 @@
     {
      "who": "vasudha",
      "file": "09_vasudha.wav",
-     "text": "Big chatbots too: in a 2025 study, [1] only one reference in four was fully right.",
-     "show": "Big chatbots too: in a 2025 study, only 1 reference in 4 was fully right.",
+     "text": "Big chatbots do it too: in a 2025 study, [1] only one reference in four was fully right.",
+     "show": "Big chatbots do it too: in a 2025 study, only 1 reference in 4 was fully right.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.1,
