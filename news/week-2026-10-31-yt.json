@@ -74,7 +74,8 @@
    "tts_te": [
     "ఒక అమెరికా కుటుంబం ఓపెన్ ఏ ఐ మీద కేసు వేసింది. పాతిక రోజుల్లో ఫిట్స్ మందు ఆపేయమని, డాక్టర్ కి చెప్పొద్దని, చాట్ జీ పీ టీ తమ కూతురికి చెప్పిందట.",
     "ఫిబ్రవరిలో ఆమె చనిపోయారు. ఆ ప్లాన్ వల్లే అని కుటుంబం అంటోంది.",
-    "ఇంకా ఏదీ రుజువు కాలేదు. చాట్ జీ పీ టీ డాక్టర్ కి బదులు కాదని, ఆమె పాత వెర్షన్ వాడారని ఓపెన్ ఏ ఐ అంటోంది. అందుకే: చాట్ బాట్ చెప్పిందని ఏ మందునీ మార్చొద్దు. మీ డాక్టర్ ని అడగండి."
+    "ఇంకా ఏదీ రుజువు కాలేదు.",
+    "చాట్ జీ పీ టీ డాక్టర్ కి బదులు కాదని, ఆమె పాత వెర్షన్ వాడారని ఓపెన్ ఏ ఐ అంటోంది. అందుకే: చాట్ బాట్ చెప్పిందని ఏ మందునీ మార్చొద్దు. మీ డాక్టర్ ని అడగండి."
    ],
    "pause": 1.4,
    "cards": [
@@ -87,13 +88,13 @@
     {
      "k": "THEY SAY CHATGPT TOLD HER",
      "v": "Stop your epilepsy medicine (over ~25 days)",
-     "cue": "told",
+     "cue": "gave",
      "cue_te": "పాతిక"
     },
     {
      "k": "AND, THEY SAY",
      "v": "\"Don't tell your doctor\"",
-     "cue": "not",
+     "cue": "doctor",
      "cue_te": "డాక్టర్",
      "drop": true
     },
@@ -169,7 +170,7 @@
      "k": "OUR TEST · A SMALL OFFLINE AI, NOT A BIG CHAT APP · 150 LINKS, 78 WE COULD CHECK",
      "v": "64 of 78 dead",
      "cue": "test",
-     "cue_te": "మా"
+     "cue_te": "పెద్ద"
     }
    ],
    "points": [
@@ -208,10 +209,16 @@
      "cue_te": "గూగుల్"
     },
     {
-     "k": "ADD TO ROBOTS.TXT",
-     "v": "User-Agent: __usage_ai-training  Disallow: /",
+     "k": "ROBOTS.TXT · LINE 1",
+     "v": "User-Agent: __usage_ai‑training",
      "cue": "robots",
      "cue_te": "రోబోట్స్"
+    },
+    {
+     "k": "ROBOTS.TXT · LINE 2",
+     "v": "Disallow: /",
+     "cue": "train",
+     "cue_te": "దీని"
     },
     {
      "k": "STARTS",
@@ -251,9 +258,14 @@
    ],
    "dek": "Public S-1, Oct 26 · Nasdaq: ANT · share count and price not set",
    "chapter": "Anthropic files to go public",
-   "text": "In business: Anthropic filed to list on the Nasdaq as ANT. Its S-1 filing shows 16.3 billion dollars of revenue in the first half of 2026, about 14 times the year before. It isn't on sale yet: no price or date is set.",
-   "tts": "In business: Anthropic filed to list on the Nasdaq, as A N T. Its S one filing shows sixteen point three billion dollars of revenue in the first half of twenty twenty-six, about fourteen times the year before. It isn't on sale yet: no price or date is set.",
-   "tts_te": "బిజినెస్ లో: ఆంత్రోపిక్ నాస్డాక్ లో ఏ ఎన్ టీ పేరుతో లిస్ట్ అవ్వడానికి ఫైల్ చేసింది. రెండు వేల ఇరవై ఆరు మొదటి ఆరు నెలల్లో పదహారు పాయింట్ మూడు బిలియన్ డాలర్ల రెవెన్యూ, ఏడాది ముందు కంటే దాదాపు పద్నాలుగు రెట్లు. ఇంకా షేర్లు అమ్మకానికి లేవు: ధర, తేదీ ఇంకా ఫిక్స్ కాలేదు.",
+   "text": "In business: Anthropic filed to list on the Nasdaq as ANT. Its S-1 filing shows 16.3 billion dollars of revenue in the first half of 2026, about 14 times the year before. It also shows an 80.7 billion dollar net loss, mostly a non-cash charge on its convertible notes. It isn't on sale yet: no price or date is set.",
+   "tts": "In business: Anthropic filed to list on the Nasdaq, as A N T. Its S one filing shows sixteen point three billion dollars of revenue in the first half of twenty twenty-six, about fourteen times the year before. It also shows an eighty point seven billion dollar net loss, mostly a non-cash charge on its convertible notes. It isn't on sale yet: no price or date is set.",
+   "tts_te": [
+    "బిజినెస్ లో: ఆంత్రోపిక్ నాస్డాక్ లో ఏ ఎన్ టీ పేరుతో లిస్ట్ అవ్వడానికి ఫైల్ చేసింది.",
+    "రెండు వేల ఇరవై ఆరు మొదటి ఆరు నెలల్లో పదహారు పాయింట్ మూడు బిలియన్ డాలర్ల రెవెన్యూ, ఏడాది ముందు కంటే దాదాపు పద్నాలుగు రెట్లు.",
+    "ఎనభై పాయింట్ ఏడు బిలియన్ డాలర్ల నష్టం కూడా చూపించింది, అందులో ఎక్కువ భాగం నగదు కాని అకౌంటింగ్ ఖర్చు.",
+    "ఇంకా షేర్లు అమ్మకానికి లేవు: ధర, తేదీ ఇంకా ఫిక్స్ కాలేదు."
+   ],
    "cards": [
     {
      "k": "PUBLIC S-1 · OCT 26",
@@ -270,6 +282,12 @@
      "hold": 90
     },
     {
+     "k": "NET LOSS, JAN-JUN 2026 (S-1)",
+     "v": "$80.7B, mostly a non-cash charge",
+     "cue": "loss",
+     "cue_te": "ఎనభై"
+    },
+    {
      "k": "NOT ON SALE YET",
      "v": "No price or date set",
      "cue": "isn't",
@@ -278,11 +296,13 @@
    ],
    "points": [
     "Public S-1 filed Oct 26; Nasdaq ticker ANT",
-    "Revenue Jan-Jun 2026: $16.3B (a year earlier: about $1.16B), per the S-1",
+    "Revenue Jan-Jun 2026: $16.3B (a year earlier: about $1.16B)",
+    "Net loss Jan-Jun 2026: $80.7B, mostly a ~$72B non-cash charge on convertible notes (Reuters, TNW)",
     "Share count, price range and date not set yet"
    ],
    "sources": "Reuters · TNW · Bernama",
-   "recap": "Anthropic files to list on Nasdaq as ANT"
+   "recap": "Anthropic files to list on Nasdaq as ANT",
+   "pause": 0.5
   },
   {
    "org": "GITHUB",
@@ -294,13 +314,13 @@
    ],
    "dek": "GitHub Octoverse, Oct 28 · GitHub's own data, Oct 2025 - Sep 2026",
    "chapter": "How much code starts with AI?",
-   "text": "Finally, GitHub, where coders keep their code. Its own data: India now has 32 million developers there, second only to the US, and added over 10 million this year. Worldwide, how many code changes now start from an AI's first draft? More than four in ten. In March, under two in ten. So learn to check AI's code, line by line, not just write your own.",
+   "text": "Finally, GitHub, where coders keep their code. Its own data, and it sells AI coding tools: India now has 32 million developers there, second only to the US, and added over 10 million this year. Worldwide, how many code changes now start from an AI's first draft? More than four in ten. In March, under two in ten. So learn to check AI's code, line by line, not just write your own.",
    "tts": [
-    "Finally, Git Hub, where coders keep their code. Its own data: India now has thirty-two million developers there, second only to America, and added over ten million this year. Worldwide, how many code changes now start from an A.I.'s first draft?",
+    "Finally, Git Hub, where coders keep their code. Its own data, and it sells A I coding tools: India now has thirty-two million developers there, second only to America, and added over ten million this year. Worldwide, how many code changes now start from an A.I.'s first draft?",
     "More than four in ten. In March, under two in ten. So, learn to check A I code, line by line, not just write your own."
    ],
    "tts_te": [
-    "చివరగా, గిట్ హబ్, కోడర్లు తమ కోడ్ పెట్టుకునే చోటు. దాని సొంత డేటా: అక్కడ ఇండియా డెవలపర్లు ఇప్పుడు మూడు కోట్ల ఇరవై లక్షలు, అమెరికా తర్వాత రెండో స్థానం, ఈ ఏడాదే కోటి మందికి పైగా కొత్తగా చేరారు. ప్రపంచం మొత్తం మీద, ఎన్ని కోడ్ మార్పులు ఏ ఐ రాసిన మొదటి డ్రాఫ్ట్ తో మొదలవుతున్నాయి?",
+    "చివరగా, గిట్ హబ్, కోడర్లు తమ కోడ్ పెట్టుకునే చోటు. దాని సొంత డేటా, అది ఏ ఐ కోడింగ్ టూల్స్ అమ్ముతుంది: అక్కడ ఇండియా డెవలపర్లు ఇప్పుడు మూడు కోట్ల ఇరవై లక్షలు, అమెరికా తర్వాత రెండో స్థానం, ఈ ఏడాదే కోటి మందికి పైగా కొత్తగా చేరారు. ప్రపంచం మొత్తం మీద, ఎన్ని కోడ్ మార్పులు ఏ ఐ రాసిన మొదటి డ్రాఫ్ట్ తో మొదలవుతున్నాయి?",
     "పదింట్లో నాలుగు కంటే ఎక్కువ. మార్చి లో, పదింట్లో రెండు కూడా లేవు. అందుకే, మీ కోడ్ రాయడమే కాదు, ఏ ఐ రాసిన కోడ్ ని లైన్ లైన్ గా చెక్ చేయడం నేర్చుకోండి."
    ],
    "pause": 1.3,
@@ -352,8 +372,14 @@
  "outro": {
   "text": "That's your AI week. Would you trust a chatbot with your medicine? Tell us in the comments. And follow AI Maastaaru: AI Weekly, every Saturday.",
   "tts": "That's your A.I. week. Would you trust a chatbot with your medicine? Tell us in the comments. And follow A.I. Maastaaru. A.I. Weekly, every Saturday.",
-  "tts_te": "ఇదీ ఈ వారం ఏ ఐ న్యూస్. మీ మందుల విషయంలో చాట్ బాట్ ని నమ్ముతారా? కామెంట్ లో చెప్పండి. ప్రతి శనివారం ఏ ఐ వీక్లీ కోసం, ఏ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి.",
-  "tail": 150
+  "tts_te": [
+   "ఇదీ ఈ వారం ఏ ఐ న్యూస్.",
+   "మీ మందుల విషయంలో చాట్ బాట్ ని నమ్ముతారా?",
+   "కామెంట్ లో చెప్పండి.",
+   "ప్రతి శనివారం ఏ ఐ వీక్లీ కోసం, ఏ ఐ మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
+  ],
+  "tail": 150,
+  "pause": 0.4
  },
  "beatCuts": 15,
  "hookMascot": false
