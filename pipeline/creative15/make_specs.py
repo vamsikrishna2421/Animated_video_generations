@@ -30,7 +30,7 @@ LINES = {
     9: ("bunny", "rule", "rule", "Leave blanks for the names, date and day. | [1] Let the AI do the rest, then fill them in yourself.",
         "పేర్లు, తేదీ, రోజు దగ్గర ఖాళీ వదలండి. | [1] మిగతాది చాట్ బాట్ కి ఇచ్చి, ఖాళీలు మీరే నింపండి."),
     10: ("sarojini", "split", "check", "And Swapna checks it [1] before the family group sees it!",
-         "ఫ్యామిలీ గ్రూప్ లో పెట్టే ముందు, [1] స్వప్న ఒకసారి చెక్ చేస్తుంది!"),
+         "ఫ్యామిలీ గ్రూప్ లో పెట్టే ముందు, | [1] స్వప్న ఒకసారి చదువుతుంది!"),
     11: ("swapna", "home", "loop", "Amma... [1] you already sent it!", "అమ్మా... [1] నువ్వు ఆల్రెడీ పంపేశావ్!"),   # then the family group floods: frame 1 (loops)
 }
 TTS_EN = {}
@@ -42,7 +42,7 @@ SHOW_TE = {
     5: "\"Our girl\" became \"our mother\"!", 6: "We tried your card on a small free chatbot, 20 times. <pause 0.3> Swapna's name: not once! Half the time, Ammamma was the bride!",
     7: "I'll tell it: don't change the names!", 8: "We did that too. Even worse! <pause 0.3> Friday became Thursday, Saturday. 10:30 became sunrise!",
     9: "Leave blanks at the names, date and day. <pause 0.3> Give the rest to the chatbot, fill the blanks yourself.",
-    10: "Before it goes to the family group, Swapna checks it once!", 11: "Amma... you already sent it!",
+    10: "Before it goes to the family group, <pause 0.3> Swapna reads it once!", 11: "Amma... you already sent it!",
 }
 NOCAP = set()
 PAUSES = {}

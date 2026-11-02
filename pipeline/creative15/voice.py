@@ -63,7 +63,8 @@ MUST = {"en": {1: [("daughter's", "daughter", "daughters"), ("wedding",), ("card
                9: [("blanks", "blank"), ("names", "name"), ("date",), ("day",)], "9b": [("rest",), ("fill",), ("yourself",)],
                10: [("swapna", "sapna", "swapana"), ("checks", "check"), ("family",), ("group",)],
                11: [("amma", "ama", "um"), ("already",), ("sent",)]},
-        "te": {}}
+        "te": {10: [("फैमिली", "फामिली", "फ़ैमिली", "फेमिली", "फ्यामिली", "फ़ामिली", "फ्यामली", "फैमली")],
+               "10b": [("स्वप्न", "स्वाप्न", "स्वपना", "स्वाप्ना", "स्वप", "स्वाप", "सप्ना", "स्वब"), ("चदु", "चदूव", "चदव", "चद", "चधु", "चदुव")]}}   # 10: the first take was a 3.6 s babble the judge passed
 JUDGE_TEXT = {6: "We tried your card on a small free AI, 20 times.", "6b": "Swapna: 0. Half the time, Grandma was the bride!",
               "8b": "Friday went wrong 9 times, and 10:30 became sunrise!"}
 TELUGU = re.compile(r"[ఀ-౿]")

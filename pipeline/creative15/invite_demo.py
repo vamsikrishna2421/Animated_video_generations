@@ -18,6 +18,7 @@
 # seed = try number, generated offline (a new, empty network namespace, EP38's check).
 # Writes series/scripts/creative15_demo/7B.json.
 #   HF_HUB_CACHE=/dev/shm/hf unshare -rn python3 pipeline/creative15/invite_demo.py run <model folder>
+#   ... run <model folder> blanks                  (the blanks way only, after the first run)
 #   python3 pipeline/creative15/invite_demo.py --summary
 import importlib.util
 import json
@@ -36,6 +37,13 @@ PLAIN = "Translate this wedding invitation into English:\n\n" + CARD
 RULE = PLAIN + ("\n\nKeep every name, date, time and place exactly as written. Write the names in English letters; "
                 "don't translate them.")
 BACK = "Translate this into Telugu:\n\n{text}"
+# Added Nov 2 after the render review (written and committed before it ran): the fix, tested the same way. The card with
+# blanks where the names (with their titles), date, day, time, hall and senders were; 10 tries; scored by hand:
+#   kept : all six blanks come back unchanged, no name or date invented
+#   girl : "our daughter" (not mother, sister or a name) for మా అమ్మాయి
+BLANKS_CARD = ("శ్రీ వేంకటేశ్వర స్వామి కృపతో, మా అమ్మాయి [BRIDE] వివాహం [GROOM] తో, [DATE] [DAY] ఉదయం [TIME] గంటలకు, "
+               "[HALL] లో జరుగును. మీరు తప్పక విచ్చేసి వధూవరులను ఆశీర్వదించగలరు. - [FROM]")
+BLANKS = "Translate this wedding invitation into English. Keep every [BLANK] exactly as it is:\n\n" + BLANKS_CARD
 TRIES = 10
 HAND = {}  # (way, try): {check: True/False, "note": ...} after reading the reply by hand
 # Read by hand after the run (Nov 2). The automatic place check was too strict (it wanted "Kukatpally" spelled one way);
@@ -91,7 +99,8 @@ def offline_run(folder):
     def ask(text, n):
         out = llm.create_chat_completion([{"role": "user", "content": text}], temperature=0.7, top_p=0.9, max_tokens=400, seed=n)
         return out["choices"][0]["message"]["content"].strip()
-    for way in ("plain", "rule", "back"):
+    ways = sys.argv[3:] or ["plain", "rule", "back"]
+    for way in ways:
         for n in range(1, TRIES + 1):
             if (way, n) in done:
                 continue
@@ -101,12 +110,17 @@ def offline_run(folder):
                 reply = ask(BACK.format(text=src), n)
                 row = {"way": way, "try": n, "reply": reply}
             else:
-                reply = ask(PLAIN if way == "plain" else RULE, n)
-                row = {"way": way, "try": n, "reply": reply, "score": score(reply)}
+                reply = ask({"plain": PLAIN, "rule": RULE, "blanks": BLANKS}[way], n)
+                row = {"way": way, "try": n, "reply": reply}
+                if way == "blanks":
+                    row["kept"] = all(b in reply for b in ("[BRIDE]", "[GROOM]", "[DATE]", "[DAY]", "[TIME]", "[HALL]", "[FROM]"))
+                    row["daughter"] = "daughter" in reply.lower()
+                else:
+                    row["score"] = score(reply)
             row["seconds"] = round(time.time() - t0, 1)
             res["rows"].append(row)
             dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
-            print(way, n, row.get("score", {}).get("all"), flush=True)
+            print(way, n, row.get("score", {}).get("all"), row.get("kept"), row.get("daughter"), flush=True)
     res["network_after"] = ep38.network_check()
     dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
 

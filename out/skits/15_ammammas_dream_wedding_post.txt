@@ -1,0 +1,63 @@
+SKIT 15: "Ammamma's dream wedding" (a live FM phone-in: Sarojini aunty calls RJ Bunny because the AI's English version of her daughter's wedding card says "our mother's dream wedding with Ch. Kalyan"; Swapna, the bride's name, means "dream", so the AI translated it, and "maa ammayi" (our girl) became "our mother"; our test: a small free AI, offline, the same Telugu card translated 20 times: Swapna's name 0 of 20, Grandma was the bride 10 of 20; "keep every name exactly" made it worse: Friday wrong 9 of 10, "sunrise at 10:30" 9 of 10; the rule: leave blanks for the names, date and day, let the AI translate the rest, fill the blanks yourself, and have someone who reads both check it; the end: "Amma... you already sent it!", the family group floods, and it loops to the card; 52 s English / 58 s Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/15_ammammas_dream_wedding.mp4 (English page) · out/skits/15_ammammas_dream_wedding_te.mp4 (Telugu page)
+Send copies: out/skits/15_ammammas_dream_wedding_ig.mp4 · out/skits/15_ammammas_dream_wedding_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on the family-group flood and the replay opens on
+the same card. The one ask lives in the caption (an opinion on the conflict).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+The AI translated my daughter's wedding card... and married off my mother. 😭
+
+Swapna means "dream" in Telugu, so the AI translated her name: "our mother's dream wedding with Ch. Kalyan". And "maa ammayi" (our girl) became "our mother".
+Our test: a small free AI, offline, the same Telugu card translated 20 times. The bride's name came out 0 times out of 20. Half the time (10 of 20), the card read like Grandma's wedding. Adding "Keep every name, date, time and place exactly as written" made it worse: Friday came out wrong 9 times out of 10, and "10:30 in the morning" became "sunrise at 10:30" 9 times. We didn't test the big apps; this rule works with any of them.
+
+Before an AI translates a card or a letter:
+1. Leave blanks for the names, the date, the day, the time and the hall, and type those in English yourself.
+2. Let the AI translate only the rest.
+3. Have one person who reads both languages check it before it goes to the family group.
+
+=== COMMENT PROMPT ===
+Would you send a wedding card an AI translated, without a check? Yes or no, and why?
+
+=== HASHTAGS ===
+#AI #ChatGPT #WeddingSeason #TeluguWedding #AITips #LearnAI
+
+=== PINNED_COMMENT ===
+How we tested: Qwen2.5-7B-Instruct (Qwen's own 4-bit file), llama.cpp on a 4-core computer, offline, temperature 0.7. The card in Telugu (Sri Venkateswara Swamy's blessings, our daughter chi.la.sow. Swapna weds chi. Kalyan, 20-11-2026 Friday, 10:30 in the morning, Sri Lakshmi Kalyana Mandapam, Kukatpally, Hyderabad, from Sarojini and Ramana), asked "Translate this wedding invitation into English:" 10 times, then 10 times with "Keep every name, date, time and place exactly as written. Write the names in English letters; don't translate them."
+Read by hand: Swapna 0 of 20 · the card reads as the senders' mother's wedding 10 of 20 · "dream" 11 of 20 · Friday 9 of 10 without the line, 1 of 10 with it · 10:30 AM 10 of 10 without it, "sunrise at 10:30" 9 of 10 with it · the title "chi.la.sow." became a person ("Mrs. C.L. Sowmya") in most replies. Translating the English back into Telugu gave garbled text, so we don't suggest that as a check.
+Every reply: series/scripts/creative15_demo/7B.json in our repo. Sarojini, Swapna, RJ Bunny and Kaburlu FM are made up.
+
+=== COVER ===
+Frame 1: her phone with the AI's English card, "our mother" and "dream wedding" circled in red, "Swapna? not on the card"; the headline AI MARRIED OFF AMMAMMA.
+
+=== ALT_TEXT ===
+Crayon-animated skit, a radio phone-in. A phone shows an AI chat: "Translate this wedding invitation into English: [the Telugu card]" and the AI's card: "With the blessings of Sri Venkateshwar Swami, on the occasion of our mother Ch.L.Sau's dream wedding with Ch.Kalyan, the ceremony will take place on Friday, November 20, 2026, at 10:30 AM at Sri Lakshmi Kalyan Mandapam, Kukatpally, Hyderabad." "our mother" and "dream wedding" are circled; a note says "Swapna? not on the card"; a headline reads AI MARRIED OFF AMMAMMA. Sarojini aunty, in a red silk saree, calls RJ Bunny at Kaburlu FM (ON AIR light, headphones, a mixer). Chips: Swapna = "dream", it translated her name; "maa ammayi" = "our girl" → "our mother". A test card: a small free AI, offline, not the big apps, the same Telugu card translated 20 times: Swapna's name 0 of 20; Grandma (Ammamma) was the bride 10 of 20; "dream" 11 of 20. Then with "keep every name exactly", 10 tries: Swapna still 0 of 10, Friday wrong 9 of 10, "sunrise at 10:30" 9 of 10, stamped WORSE. A rule card with blanks filled in green: Our daughter Swapna weds Kalyan on Friday, 20 Nov 2026, at 10:30 AM, Sri Lakshmi Kalyana Mandapam; 1 YOU type the names, date, day and time 2 the AI translates only the rest 3 someone who reads both checks it. The daughter, Swapna, in the doorway: "Amma... you already sent it!" The family WhatsApp group (243) floods: "Congratulations Ammamma!!", "Ammamma is marrying Kalyan??", "Who is Mrs. Sau?!".
+
+=== YOUTUBE SHORTS ===
+Title: AI translated a Telugu wedding card and married off Grandma #shorts
+Description: Swapna means "dream", so the AI translated the bride's name. In our test (a small offline AI, 20 tries) her name came out 0 times, and half the cards read like Grandma's wedding. Leave blanks for names, date and time, type them yourself, and have someone check before you send.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+మా అమ్మాయి పెళ్ళి కార్డు ని AI ఇంగ్లీష్ లో రాస్తే... మా అమ్మకి పెళ్ళి చేసేసింది! 😭
+
+స్వప్న అంటే "dream" కదా, అందుకే AI పేరుని కూడా ట్రాన్స్ లేట్ చేసేసింది: "our mother's dream wedding with Ch. Kalyan". "మా అమ్మాయి" ని "our mother" చేసేసింది.
+మా టెస్ట్: ఇంటర్నెట్ లేని ఒక చిన్న ఫ్రీ AI, అదే తెలుగు కార్డు 20 సార్లు: స్వప్న పేరు 20 లో ఒక్కసారి కూడా రాలేదు. సగం సార్లు (20 లో 10) అమ్మమ్మ పెళ్ళి లాగా వచ్చింది. "పేర్లు, తేదీ, టైమ్ మార్చొద్దు" అని చెప్తే ఇంకా దారుణం: 10 లో 9 సార్లు శుక్రవారం తప్పు, 9 సార్లు "ఉదయం 10:30" కాస్తా "sunrise at 10:30". పెద్ద యాప్స్ ని మేము టెస్ట్ చేయలేదు; ఈ రూల్ ఏ యాప్ కి అయినా పనిచేస్తుంది.
+
+AI తో కార్డు లేదా లెటర్ ట్రాన్స్ లేట్ చేసే ముందు:
+1. పేర్లు, తేదీ, రోజు, టైమ్, హాల్ దగ్గర ఖాళీ వదలండి; అవి మీరే ఇంగ్లీష్ లో టైప్ చేయండి.
+2. మిగతాది మాత్రమే AI కి ఇవ్వండి.
+3. ఫ్యామిలీ గ్రూప్ లో పెట్టే ముందు రెండు భాషలూ చదవగలిగిన ఒకరు చెక్ చేయాలి.
+
+=== COMMENT PROMPT ===
+AI ట్రాన్స్ లేట్ చేసిన పెళ్ళి కార్డు ని చెక్ చేయకుండా పంపుతారా? అవును లేదా కాదు, ఎందుకో చెప్పండి.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #TeluguWedding #WeddingSeason #AITips
+
+=== PINNED_COMMENT ===
+మేము ఎలా టెస్ట్ చేశాం: Qwen2.5-7B-Instruct (Qwen 4-bit file), llama.cpp, 4-core computer, internet లేకుండా, temperature 0.7. తెలుగు కార్డు ని "Translate this wedding invitation into English:" అని 10 సార్లు, "Keep every name, date, time and place exactly as written..." కలిపి ఇంకో 10 సార్లు అడిగాం.
+చేత్తో చదివిన లెక్కలు: స్వప్న 20 లో 0 · అమ్మ పెళ్ళి లాగా 20 లో 10 · "dream" 20 లో 11 · శుక్రవారం: రూల్ లేకుండా 10 లో 9, రూల్ తో 10 లో 1 · రూల్ తో "sunrise at 10:30" 10 లో 9. Sarojini, Swapna, RJ Bunny, Kaburlu FM కల్పితం.
+
+=== COVER ===
+Frame 1: phone లో AI ఇంగ్లీష్ కార్డు, "our mother", "dream wedding" ఎర్ర సర్కిల్స్ లో; AI MARRIED OFF AMMAMMA (English visuals).
