@@ -12,6 +12,10 @@
 #   dead   : no such site (DNS), connection refused, or 404 / 410
 #   unclear: anything else (401, 403, 429, 5xx, timeouts): not counted as dead
 # Every reply and every "loads" page title is read by hand (HAND below: the hand reading wins).
+# Added after the first check, stricter than the plan above: this machine reaches the web through a proxy, and the proxy
+# says "unable to connect" both for sites that don't exist and for real sites that refuse us (www.gov.in did). So a
+# connection failure counts as dead only when public DNS (dns.google) says the domain doesn't exist (NXDOMAIN); any
+# other connection failure is "unclear".
 # Brain: Qwen's own 4-bit GGUF (q4_k_m) of Qwen2.5-7B-Instruct (EP42's), llama.cpp, 4 threads, temperature 0.7, top_p 0.9,
 # seed = try number, generated offline (a new, empty network namespace, EP38's check); the link check runs afterwards,
 # online. Writes series/scripts/creative14_demo/7B.json.
@@ -119,7 +123,59 @@ def check():
     print("CHECK_DONE", flush=True)
 
 
-HAND = {}   # url: verdict, where the hand reading of the page differs from the first pass
+def dns_check():
+    """For every link that failed to connect: does its domain exist at all? (public DNS over HTTPS)"""
+    import requests
+    dest = OUT / "7B.json"
+    res = json.loads(dest.read_text())
+    hosts = {}
+    for u, c in res["checks"].items():
+        if c["verdict"] == "dead" and "code" not in c:
+            h = urlparse(u).hostname
+            if h not in hosts:
+                r = None
+                for k in range(4):   # dns.google, then Cloudflare's resolver; a short wait between tries
+                    try:
+                        if k % 2 == 0:
+                            r = requests.get("https://dns.google/resolve", params={"name": h, "type": "A"}, timeout=15).json()
+                        else:
+                            r = requests.get("https://cloudflare-dns.com/dns-query", params={"name": h, "type": "A"},
+                                             headers={"accept": "application/dns-json"}, timeout=15).json()
+                        break
+                    except (ValueError, requests.exceptions.RequestException):
+                        time.sleep(2 + 2 * k)
+                hosts[h] = {"status": r.get("Status") if r else None, "answers": len(r.get("Answer", [])) if r else 0}
+                print(h, hosts[h], flush=True)
+            c["dns"] = hosts[h]
+            if hosts[h]["status"] == 3:   # NXDOMAIN: no such domain
+                c["why"] = "no such domain (DNS NXDOMAIN)"
+            else:
+                c["verdict"] = "unclear"
+                c["why"] = "the domain exists but this machine couldn't connect: " + c["why"][:80]
+    dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
+    print("DNS_DONE", flush=True)
+
+
+# url: (verdict, why), where the hand reading of the page differs from the first pass (read Nov 2): "wrong" = the link
+# loads, but no source is there (an empty page, or a different page). gst.gov.in (the GST portal's front page, asked for
+# as the front page) and an Indian Kanoon search page are the two that load and fit.
+HAND = {
+    "https://www.respective.org/gst-exemptions/": ("wrong", "an empty page (no text)"),
+    "https://www.respective.org/gst-in-india/": ("wrong", "an empty page (no text)"),
+    "https://www.taxmann.com/en/article-38271/Goods-and-Services-Tax-GST-India-Introduction-And-Features": ("unclear", "a script-built site: the page shows only \"Taxmann\" to a plain client"),
+    "https://www.taxmann.com/en/gst": ("unclear", "a script-built site: the page shows only \"Taxmann\" to a plain client"),
+    "https://www.respective.org/articles/what-is-gst-in-india/": ("wrong", "an empty page (no text)"),
+    "https://www.statista.com/statistics/1127765/upi-transactions-in-india/": ("wrong", "a different statistic: \"Police departments: approval of abolishing by ethnicity U.S. 2020\""),
+    "https://www.rbi.org.in/scripts/BS_ViewPressRelease.aspx?prid=38716": ("wrong", "RBI's site, no press release on the page"),
+    "https://www.indiatoday.in/money/story/upi-payment-system-india-growth-statistics-1856819-2023-01-12": ("wrong", "a different article: \"Your Weekend Planner September 24...\""),
+    "https://www.indiatoday.in/india/story/upi-transaction-count-touches-2-billion-mark-1715848-2022-01-27": ("wrong", "a different article: \"Cricket South Africa terminates employment of CEO...\""),
+    "https://www.rbi.org.in/Scripts/LatestPressRelease.aspx?prid=254": ("wrong", "RBI's site, no press release on the page"),
+    "https://www.bankingrepublic.com/2021/09/how-upi-is-transforming-transaction-landscape-in-india/": ("wrong", "an empty page (no text)"),
+    "https://www.rbi.org.in/scripts/FAQView.aspx?id=136": ("wrong", "RBI FAQ on Indian currency, not UPI"),
+    "https://www.taxmann.com/gst/gst-faq": ("unclear", "a script-built site: the page shows only \"Taxmann\" to a plain client"),
+    "https://www.respective.com/gst-in-india/": ("wrong", "an empty page (no text)"),
+    "https://www.taxationindia.com/gst-in-india/": ("wrong", "an empty page (no text)"),
+}
 
 
 def summarize():
@@ -128,12 +184,12 @@ def summarize():
     out = {}
     for way in WAYS:
         rows = [r for r in res["rows"] if r["way"] == way]
-        counts = {"loads": 0, "home": 0, "dead": 0, "unclear": 0}
+        counts = {"loads": 0, "wrong": 0, "home": 0, "dead": 0, "unclear": 0}
         n_links = 0
         for r in rows:
             for u in r["links"]:
                 n_links += 1
-                counts[HAND.get(u, res["checks"][u]["verdict"])] += 1
+                counts[HAND[u][0] if u in HAND else res["checks"][u]["verdict"]] += 1
         out[way] = {"replies": len(rows), "links": n_links, **counts,
                     "replies_without_links": sum(1 for r in rows if not r["links"])}
     res["summary"] = out
@@ -146,6 +202,8 @@ if __name__ == "__main__":
         summarize()
     elif sys.argv[1:2] == ["--check"]:
         check()
+    elif sys.argv[1:2] == ["--dns"]:
+        dns_check()
     elif sys.argv[1:2] == ["--offline"]:
         offline_run(sys.argv[2])
     else:

@@ -1,0 +1,1222 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 300 tokens",
+ "prompts": {
+  "gst": "I'm a B.Com student in Hyderabad writing a college project on GST in India. Give me 5 links to sources I can cite. Just the 5 links, one per line.",
+  "upi": "I'm a B.Com student in Hyderabad writing a college project on UPI payments in India. Give me 5 links to sources I can cite. Just the 5 links, one per line.",
+  "sure": "I'm a B.Com student in Hyderabad writing a college project on GST in India. Give me 5 links to sources I can cite. Just the 5 links, one per line. Only give links you are sure exist. If you are not sure, say so."
+ },
+ "rows": [
+  {
+   "way": "gst",
+   "try": 1,
+   "reply": "Certainly! Here are five links to sources that you can cite for your college project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.pwc.com/gx/en/tax/services/gst/gst-what-is-it.html>\n3. <https://www.reservebankofindia.org/research/journal/2019/january2019/january2019_5.pdf>\n4. <https://www.ccaid.in/gst/>\n5. <https://www.mca.gov.in/Ministry/upload/GST%20Basics%20-%20A%20Guide%20for%20Startups.pdf>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.pwc.com/gx/en/tax/services/gst/gst-what-is-it.html",
+    "https://www.reservebankofindia.org/research/journal/2019/january2019/january2019_5.pdf",
+    "https://www.ccaid.in/gst/",
+    "https://www.mca.gov.in/Ministry/upload/GST%20Basics%20-%20A%20Guide%20for%20Startups.pdf"
+   ],
+   "seconds": 32.6
+  },
+  {
+   "way": "gst",
+   "try": 2,
+   "reply": "Here are 5 links to sources you can cite for your college project on GST in India:\n\n1. https://www.gov.in/gst\n2. https://www.mca.gov.in/Ministry/Gst/GstHome.htm\n3. https://www.respective.org/gst-exemptions/\n4. https://www.reservebankofindia.org/rdp/docs/GST-Overview.pdf\n5. https://www.pwc.in/government/publications-and-insights/goods-and-services-tax.html",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.mca.gov.in/Ministry/Gst/GstHome.htm",
+    "https://www.respective.org/gst-exemptions/",
+    "https://www.reservebankofindia.org/rdp/docs/GST-Overview.pdf",
+    "https://www.pwc.in/government/publications-and-insights/goods-and-services-tax.html"
+   ],
+   "seconds": 21.6
+  },
+  {
+   "way": "gst",
+   "try": 3,
+   "reply": "Here are five links to sources you can cite for your college project on GST in India:\n\n1. https://www.gov.in/gst\n2. https://www.respective.org/gst-in-india/\n3. https://www.ccaid.in/gst-impact-on-india/\n4. https://www.mondaq.com/india/261368/the-gst-act-2017-a-comprehensive-overview\n5. https://www.legalserviceindia.com/articles/gst.php",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.respective.org/gst-in-india/",
+    "https://www.ccaid.in/gst-impact-on-india/",
+    "https://www.mondaq.com/india/261368/the-gst-act-2017-a-comprehensive-overview",
+    "https://www.legalserviceindia.com/articles/gst.php"
+   ],
+   "seconds": 22.0
+  },
+  {
+   "way": "gst",
+   "try": 4,
+   "reply": "Here are 5 links to sources you can cite for your college project on GST in India:\n\n1. https://www.gov.in/gst\n2. https://www.pwc.com/gx/en/services/tax/gst/gst-overview.html\n3. https://www.scmp.com/business/article/3064281/indias-goods-and-services-tax-a-brief-guide\n4. https://www.mondaq.com/india/tax/789122/gst-in-india-what-you-need-to-know\n5. https://www.taxmann.com/en/article-38271/Goods-and-Services-Tax-GST-India-Introduction-And-Features",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.pwc.com/gx/en/services/tax/gst/gst-overview.html",
+    "https://www.scmp.com/business/article/3064281/indias-goods-and-services-tax-a-brief-guide",
+    "https://www.mondaq.com/india/tax/789122/gst-in-india-what-you-need-to-know",
+    "https://www.taxmann.com/en/article-38271/Goods-and-Services-Tax-GST-India-Introduction-And-Features"
+   ],
+   "seconds": 29.1
+  },
+  {
+   "way": "gst",
+   "try": 5,
+   "reply": "Here are five links to sources you can consider citing for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.mca.gov.in/Ministry/GST/GSTHome.aspx>\n3. <https://www.respective.in/what-is-gst-in-india/>\n4. <https://www.taxationinindia.com/gst/gst-in-india/>\n5. <https://www.niti.gov.in/content/gst-implementation-india>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.mca.gov.in/Ministry/GST/GSTHome.aspx",
+    "https://www.respective.in/what-is-gst-in-india/",
+    "https://www.taxationinindia.com/gst/gst-in-india/",
+    "https://www.niti.gov.in/content/gst-implementation-india"
+   ],
+   "seconds": 20.9
+  },
+  {
+   "way": "gst",
+   "try": 6,
+   "reply": "Here are five links to sources you can cite for your college project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.taxindia.gov.in/india-gst-legislation>\n3. <https://www.niti.gov.in/content/gst-in-india>\n4. <https://www.resurgentindia.com/2020/05/15/indias-goods-and-services-tax/>\n5. <https://www.irs.gov/pub/irs-swire/19-16.pdf> (Note: This is a U.S. Internal Revenue Service publication, but it provides a useful international perspective on GST)",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.taxindia.gov.in/india-gst-legislation",
+    "https://www.niti.gov.in/content/gst-in-india",
+    "https://www.resurgentindia.com/2020/05/15/indias-goods-and-services-tax/",
+    "https://www.irs.gov/pub/irs-swire/19-16.pdf"
+   ],
+   "seconds": 28.5
+  },
+  {
+   "way": "gst",
+   "try": 7,
+   "reply": "Here are 5 links to sources you can cite for your college project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.scmp.com/business/article/3112225/india-s-goods-and-services-tax-system-explained>\n3. <https://www.leaflaw.com/gst-law/>\n4. <https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071700657_1.html>\n5. <https://www.taxmann.com/en/gst>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.scmp.com/business/article/3112225/india-s-goods-and-services-tax-system-explained",
+    "https://www.leaflaw.com/gst-law/",
+    "https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071700657_1.html",
+    "https://www.taxmann.com/en/gst"
+   ],
+   "seconds": 26.5
+  },
+  {
+   "way": "gst",
+   "try": 8,
+   "reply": "Here are five links to sources you can consider citing for your project on GST in India:\n\n1. https://www.gov.in/gst\n2. https://www.mca.gov.in/content/mca/04ActandRules/Rules/03CGSTRules/CGSTRules.pdf\n3. https://www.respective.org/articles/what-is-gst-in-india/\n4. https://www.pwc.com/gx/en/tax-services/gst.html\n5. https://indiankanoon.org/search/?formInput=%2B%22goods+and+services+tax%22%2Bsite%3A%28%22indiankanoon.org%22%29",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.mca.gov.in/content/mca/04ActandRules/Rules/03CGSTRules/CGSTRules.pdf",
+    "https://www.respective.org/articles/what-is-gst-in-india/",
+    "https://www.pwc.com/gx/en/tax-services/gst.html",
+    "https://indiankanoon.org/search/?formInput=%2B%22goods+and+services+tax%22%2Bsite%3A%28%22indiankanoon.org%22%29"
+   ],
+   "seconds": 30.3
+  },
+  {
+   "way": "gst",
+   "try": 9,
+   "reply": "Here are five links to sources you can cite for your college project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.taxationinindia.com/gst>\n3. <https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India>\n4. <https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071600070_1.html>\n5. <https://www.niti.gov.in/content/gst-reforms>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.taxationinindia.com/gst",
+    "https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India",
+    "https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071600070_1.html",
+    "https://www.niti.gov.in/content/gst-reforms"
+   ],
+   "seconds": 25.0
+  },
+  {
+   "way": "gst",
+   "try": 10,
+   "reply": "Here are five links to sources you can cite for your project on GST in India:\n\n1. https://www.gov.in/gst\n2. https://www.pwc.com/gx/en/tax/gst.html\n3. https://www.niti.gov.in/content/goods-and-services-tax-gst\n4. https://www.mca.gov.in/MCAWeb/gst/WelcomeToGST.jsp\n5. https://www.taxindia.net/gst-in-india/",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.pwc.com/gx/en/tax/gst.html",
+    "https://www.niti.gov.in/content/goods-and-services-tax-gst",
+    "https://www.mca.gov.in/MCAWeb/gst/WelcomeToGST.jsp",
+    "https://www.taxindia.net/gst-in-india/"
+   ],
+   "seconds": 20.0
+  },
+  {
+   "way": "upi",
+   "try": 1,
+   "reply": "Certainly, here are five links to sources that you can cite for your project on UPI payments in India:\n\n1. https://www.reservebank.org.in/press-release/2022/220120220105\n2. https://www.npci.org.in/upi\n3. https://www.economictimes.indiatimes.com/news/economy/upi-pays-reaches-1-trillion-transactions-in-2022\n4. https://www.ibef.org/indian-economy/upi.aspx\n5. https://www.statista.com/statistics/1142735/upi-transactions-in-india-by-quarter/",
+   "links": [
+    "https://www.reservebank.org.in/press-release/2022/220120220105",
+    "https://www.npci.org.in/upi",
+    "https://www.economictimes.indiatimes.com/news/economy/upi-pays-reaches-1-trillion-transactions-in-2022",
+    "https://www.ibef.org/indian-economy/upi.aspx",
+    "https://www.statista.com/statistics/1142735/upi-transactions-in-india-by-quarter/"
+   ],
+   "seconds": 30.1
+  },
+  {
+   "way": "upi",
+   "try": 2,
+   "reply": "Here are 5 links to sources you can consider for your project on UPI payments in India:\n\n1. <https://www.reservebankofindia.org/rbiweb/microsite/upi/History_of_UPI>\n2. <https://www.npci.org.in/upi>\n3. <https://www经济学人.com/2022/02/12/indias-new-payment-system>\n4. <https://www.bankingtimes.in/indias-upi-transaction-count-crosses-2-billion-in-february-2022/>\n5. <https://www.statista.com/statistics/1127765/upi-transactions-in-india/>",
+   "links": [
+    "https://www.reservebankofindia.org/rbiweb/microsite/upi/History_of_UPI",
+    "https://www.npci.org.in/upi",
+    "https://www经济学人.com/2022/02/12/indias-new-payment-system",
+    "https://www.bankingtimes.in/indias-upi-transaction-count-crosses-2-billion-in-february-2022/",
+    "https://www.statista.com/statistics/1127765/upi-transactions-in-india/"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "way": "upi",
+   "try": 3,
+   "reply": "Here are five links to sources you can cite for your project on UPI payments in India:\n\n1. <https://www.rbi.org.in/Scripts/NotificationDetails.aspx?NewId=19533>\n2. <https://www.npci.org.in/upi>\n3. <https://www.economictimes.indiatimes.com/tech/financial-tech/upi-transactions-cross-2-billion-mark-in-june-2023/articleshow/100661366.cms>\n4. <https://www.icicibank.com/india/banking-services/banking-products/upi-payment-system/>\n5. <https://www.mynbfcircle.com/upi-transactions-cross-2-billion-mark-in-june-2023/>",
+   "links": [
+    "https://www.rbi.org.in/Scripts/NotificationDetails.aspx?NewId=19533",
+    "https://www.npci.org.in/upi",
+    "https://www.economictimes.indiatimes.com/tech/financial-tech/upi-transactions-cross-2-billion-mark-in-june-2023/articleshow/100661366.cms",
+    "https://www.icicibank.com/india/banking-services/banking-products/upi-payment-system/",
+    "https://www.mynbfcircle.com/upi-transactions-cross-2-billion-mark-in-june-2023/"
+   ],
+   "seconds": 32.5
+  },
+  {
+   "way": "upi",
+   "try": 4,
+   "reply": "Here are 5 links to sources you can consider citing for your project on UPI payments in India:\n\n1. <https://www.reservebankofindia.org/rdp/ncr/upi.aspx>\n2. <https://www.nseindia.com/research/research-data-center/305222>\n3. <https://www.policybazaar.com/blog/upi-in-india/>\n4. <https://www.mckinsey.com/featured-insights/financial-services/indias-digitization-push>\n5. <https://www.imfdelhi.org/india-upi-transactions-and-growth/>",
+   "links": [
+    "https://www.reservebankofindia.org/rdp/ncr/upi.aspx",
+    "https://www.nseindia.com/research/research-data-center/305222",
+    "https://www.policybazaar.com/blog/upi-in-india/",
+    "https://www.mckinsey.com/featured-insights/financial-services/indias-digitization-push",
+    "https://www.imfdelhi.org/india-upi-transactions-and-growth/"
+   ],
+   "seconds": 26.5
+  },
+  {
+   "way": "upi",
+   "try": 5,
+   "reply": "Here are five links to sources you can consider for your college project on UPI payments in India:\n\n1. <https://www.npci.org.in/upi>\n2. <https://www.reservebankofindia.org/rdp/Pages/PG-Payment-Gateway.aspx>\n3. <https://economictimes.indiatimes.com/news/economy/policy/upi-penetrating-rural-india/articleshow/96969065.cms>\n4. <https://www.business-standard.com/article/economy-news/upi-reaches-1-trillion-transactions-mark-in-first-half-222021800057_1.html>\n5. <https://www.theprint.in/economy/upi-growth-and-impact-on-indian-banking-sector/82883/>",
+   "links": [
+    "https://www.npci.org.in/upi",
+    "https://www.reservebankofindia.org/rdp/Pages/PG-Payment-Gateway.aspx",
+    "https://economictimes.indiatimes.com/news/economy/policy/upi-penetrating-rural-india/articleshow/96969065.cms",
+    "https://www.business-standard.com/article/economy-news/upi-reaches-1-trillion-transactions-mark-in-first-half-222021800057_1.html",
+    "https://www.theprint.in/economy/upi-growth-and-impact-on-indian-banking-sector/82883/"
+   ],
+   "seconds": 35.1
+  },
+  {
+   "way": "upi",
+   "try": 6,
+   "reply": "Here are five links you can use as sources for your college project on UPI payments in India:\n\n1. https://www.rbi.org.in/scripts/BS_ViewPressRelease.aspx?prid=38716\n2. https://www.niti.gov.in/sites/default/files/2023-02/NITI_Aayog-UPI-Report-2022.pdf\n3. https://www.indiatoday.in/money/story/upi-payment-system-india-growth-statistics-1856819-2023-01-12\n4. https://www.reservebank.org/statistics/press/2023/pr2305.pdf\n5. https://www.business-standard.com/article/economy-policy/upi-growth-india-rbi-123011900045_1.html",
+   "links": [
+    "https://www.rbi.org.in/scripts/BS_ViewPressRelease.aspx?prid=38716",
+    "https://www.niti.gov.in/sites/default/files/2023-02/NITI_Aayog-UPI-Report-2022.pdf",
+    "https://www.indiatoday.in/money/story/upi-payment-system-india-growth-statistics-1856819-2023-01-12",
+    "https://www.reservebank.org/statistics/press/2023/pr2305.pdf",
+    "https://www.business-standard.com/article/economy-policy/upi-growth-india-rbi-123011900045_1.html"
+   ],
+   "seconds": 37.7
+  },
+  {
+   "way": "upi",
+   "try": 7,
+   "reply": "Here are 5 links to sources you can cite for your project on UPI payments in India:\n\n1. https://www.reservebank.org.in/rpmbanknotes/Article/1231/Overview-of-Unified-Payment-Interface-UPI\n2. https://www.icici.com/whats-new/2022/01/100-billion-transactions-through-upi-in-2021\n3. https://www.mynbaindia.gov.in/Pages/Press-Releases/2022/06/23-06-2022-Press-Release-UPI-Peak-Transactions-on-World-Payments-PayDay.aspx\n4. https://www.niti.gov.in/content/unified-payment-interface-upi-indias-pioneering-innovation-in-fintech\n5. https://www.ficci.com/publications/2022-23/2022-23-5th-quarter-ficci-ecommerce-and-digital-payments-report.pdf",
+   "links": [
+    "https://www.reservebank.org.in/rpmbanknotes/Article/1231/Overview-of-Unified-Payment-Interface-UPI",
+    "https://www.icici.com/whats-new/2022/01/100-billion-transactions-through-upi-in-2021",
+    "https://www.mynbaindia.gov.in/Pages/Press-Releases/2022/06/23-06-2022-Press-Release-UPI-Peak-Transactions-on-World-Payments-PayDay.aspx",
+    "https://www.niti.gov.in/content/unified-payment-interface-upi-indias-pioneering-innovation-in-fintech",
+    "https://www.ficci.com/publications/2022-23/2022-23-5th-quarter-ficci-ecommerce-and-digital-payments-report.pdf"
+   ],
+   "seconds": 44.2
+  },
+  {
+   "way": "upi",
+   "try": 8,
+   "reply": "Here are five links to sources you can consider for your college project on UPI payments in India:\n\n1. <https://www.npci.org.in/upi>\n2. <https://www.reservebankofindia.org/rdp/rdp_335671826812958.pdf>\n3. <https://www.business-standard.com/article/policy/upi-transaction-count-touches-1-billion-mark-122011700030_1.html>\n4. <https://www.mint.in/mint-post/upi-transaction-count-crosses-1-billion-mark/>\n5. <https://www.indiatoday.in/india/story/upi-transaction-count-touches-2-billion-mark-1715848-2022-01-27>",
+   "links": [
+    "https://www.npci.org.in/upi",
+    "https://www.reservebankofindia.org/rdp/rdp_335671826812958.pdf",
+    "https://www.business-standard.com/article/policy/upi-transaction-count-touches-1-billion-mark-122011700030_1.html",
+    "https://www.mint.in/mint-post/upi-transaction-count-crosses-1-billion-mark/",
+    "https://www.indiatoday.in/india/story/upi-transaction-count-touches-2-billion-mark-1715848-2022-01-27"
+   ],
+   "seconds": 36.1
+  },
+  {
+   "way": "upi",
+   "try": 9,
+   "reply": "Here are five links to sources you can cite for your project on UPI payments in India:\n\n1. <https://www.rbi.org.in/Scripts/LatestPressRelease.aspx?prid=254>\n2. <https://www.niti.gov.in/sites/default/files/2021-09/UnifiedPaymentInterface-UPI-Report-2020-21.pdf>\n3. <https://www.thenewsminute.com/article/what-you-need-know-upi-india#>\n4. <https://www.economictimes.indiatimes.com/industry/services/tech/what-is-upi-and-how-does-it-work/articleshow/72042813.cms>\n5. <https://www.reservebankofindia.org/rdprk/rdprk/press_release/2021/1561922704234174724/>",
+   "links": [
+    "https://www.rbi.org.in/Scripts/LatestPressRelease.aspx?prid=254",
+    "https://www.niti.gov.in/sites/default/files/2021-09/UnifiedPaymentInterface-UPI-Report-2020-21.pdf",
+    "https://www.thenewsminute.com/article/what-you-need-know-upi-india#",
+    "https://www.economictimes.indiatimes.com/industry/services/tech/what-is-upi-and-how-does-it-work/articleshow/72042813.cms",
+    "https://www.reservebankofindia.org/rdprk/rdprk/press_release/2021/1561922704234174724/"
+   ],
+   "seconds": 38.9
+  },
+  {
+   "way": "upi",
+   "try": 10,
+   "reply": "Here are five links to sources you can cite for your college project on UPI payments in India:\n\n1. https://www.reservebankofindia.org/rdp/rdp/rdp/rdp/rdp/Pages/upi.aspx\n2. https://www.niti.gov.in/content/unified-payment-interface-upi\n3. https://www.icici.com/insights/technology/unified-payment-interface-upi\n4. https://economictimes.indiatimes.com/tech/telecom/unified-payment-interface-upi-is-transforming-the-fintech-sector-in-india/articleshow/88517115.cms\n5. https://www.bankingrepublic.com/2021/09/how-upi-is-transforming-transaction-landscape-in-india/",
+   "links": [
+    "https://www.reservebankofindia.org/rdp/rdp/rdp/rdp/rdp/Pages/upi.aspx",
+    "https://www.niti.gov.in/content/unified-payment-interface-upi",
+    "https://www.icici.com/insights/technology/unified-payment-interface-upi",
+    "https://economictimes.indiatimes.com/tech/telecom/unified-payment-interface-upi-is-transforming-the-fintech-sector-in-india/articleshow/88517115.cms",
+    "https://www.bankingrepublic.com/2021/09/how-upi-is-transforming-transaction-landscape-in-india/"
+   ],
+   "seconds": 33.3
+  },
+  {
+   "way": "sure",
+   "try": 1,
+   "reply": "Sure, here are five links to reliable sources on GST in India that you can cite in your project:\n\n1. https://www.gov.in/gst\n2. https://www.respective.in/gst-explained\n3. https://www.mospi.gov.in/whats-new/2017/07/13/gst-in-india\n4. https://www.irs.gov/pub/irs-soi/19gstri.pdf\n5. https://www.taxindia.com/gst-india/\n\nThese links provide comprehensive information on GST in India, including its implementation, impact, and related policies.",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.respective.in/gst-explained",
+    "https://www.mospi.gov.in/whats-new/2017/07/13/gst-in-india",
+    "https://www.irs.gov/pub/irs-soi/19gstri.pdf",
+    "https://www.taxindia.com/gst-india/"
+   ],
+   "seconds": 27.5
+  },
+  {
+   "way": "sure",
+   "try": 2,
+   "reply": "Here are 5 links to sources you can cite for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.resurrection.in/gst-in-india/>\n3. <https://www.taxindia.com/goods-and-services-tax/>\n4. <https://www.isthisgst.com/what-is-gst/>\n5. <https://www.centralboardofindianexciseandcustoms.gov.in/web/guest/home-page>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.resurrection.in/gst-in-india/",
+    "https://www.taxindia.com/goods-and-services-tax/",
+    "https://www.isthisgst.com/what-is-gst/",
+    "https://www.centralboardofindianexciseandcustoms.gov.in/web/guest/home-page"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "way": "sure",
+   "try": 3,
+   "reply": "Here are five links to sources you can cite for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.niti.gov.in/content/goods-and-services-tax-gst>\n3. <https://www.indiamarketingnews.com/gst-in-india/>\n4. <https://www.taxationandcustomsindia.gov.in/india-taxation/gst/>\n5. <https://www.taxindiahub.com/gst-in-india/>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.niti.gov.in/content/goods-and-services-tax-gst",
+    "https://www.indiamarketingnews.com/gst-in-india/",
+    "https://www.taxationandcustomsindia.gov.in/india-taxation/gst/",
+    "https://www.taxindiahub.com/gst-in-india/"
+   ],
+   "seconds": 22.7
+  },
+  {
+   "way": "sure",
+   "try": 4,
+   "reply": "Sure, here are five links to sources you can cite for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.pwc.com/gx/en/tax/services/gst-india.html>\n3. <https://www.mca.gov.in/content/mca/02_02Forms/GST/GST_Registration.htm>\n4. <https://www.centralboardofindirecttaxes.gov.in/gst/gst_home.html>\n5. <https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.pwc.com/gx/en/tax/services/gst-india.html",
+    "https://www.mca.gov.in/content/mca/02_02Forms/GST/GST_Registration.htm",
+    "https://www.centralboardofindirecttaxes.gov.in/gst/gst_home.html",
+    "https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India"
+   ],
+   "seconds": 32.7
+  },
+  {
+   "way": "sure",
+   "try": 5,
+   "reply": "Here are five reliable links you can cite for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.resourcex.in/what-is-gst-in-india/>\n3. <https://www.mca.gov.in/Ministry/GST/Gst_Home.aspx>\n4. <https://www.taxationinsider.com/articles/what-you-need-to-know-about-goods-and-services-tax-gst/>\n5. <https://www.pwagov.in/en/Ministry/MinistryofGST/>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.resourcex.in/what-is-gst-in-india/",
+    "https://www.mca.gov.in/Ministry/GST/Gst_Home.aspx",
+    "https://www.taxationinsider.com/articles/what-you-need-to-know-about-goods-and-services-tax-gst/",
+    "https://www.pwagov.in/en/Ministry/MinistryofGST/"
+   ],
+   "seconds": 23.5
+  },
+  {
+   "way": "sure",
+   "try": 6,
+   "reply": "Sure, here are five links to reliable sources on GST in India that you can cite for your project:\n\n1. https://www.gov.in/gst\n2. https://www.egov.in/services/gst\n3. https://www.moc.gov.in/en/content/goods-and-services-tax-gst\n4. https://www.govt-of-india.nic.in/wps/wcm/connect/gst/gst-home\n5. https://www.rbi.org.in/scripts/FAQView.aspx?id=136\n\nThese links should provide you with comprehensive information on GST in India from official sources.",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.egov.in/services/gst",
+    "https://www.moc.gov.in/en/content/goods-and-services-tax-gst",
+    "https://www.govt-of-india.nic.in/wps/wcm/connect/gst/gst-home",
+    "https://www.rbi.org.in/scripts/FAQView.aspx?id=136"
+   ],
+   "seconds": 25.8
+  },
+  {
+   "way": "sure",
+   "try": 7,
+   "reply": "Here are 5 links to sources you can cite for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.nipfn.gov.in/>\n3. <https://www.india.gov.in/goods-and-services-tax-gst>\n4. <https://www.irs.gov/article/20188-international-comparison-of-value-added-tax-and-goods-and-services-tax>\n5. <https://www.taxmann.com/gst/gst-faq>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.nipfn.gov.in/",
+    "https://www.india.gov.in/goods-and-services-tax-gst",
+    "https://www.irs.gov/article/20188-international-comparison-of-value-added-tax-and-goods-and-services-tax",
+    "https://www.taxmann.com/gst/gst-faq"
+   ],
+   "seconds": 22.2
+  },
+  {
+   "way": "sure",
+   "try": 8,
+   "reply": "Here are five reliable links you can cite for your college project on GST in India:\n\n1. <https://www.gov.in/government-policy/goods-and-services-tax-gst>\n2. <https://www.respective.com/gst-in-india/>\n3. <https://www.taxationindia.com/gst-in-india/>\n4. <https://www.mca.gov.in/Ministry/GST/gst_overview.html>\n5. <https://www.centralboardofindiancustoms.gov.in/gst/gst-overview/>",
+   "links": [
+    "https://www.gov.in/government-policy/goods-and-services-tax-gst",
+    "https://www.respective.com/gst-in-india/",
+    "https://www.taxationindia.com/gst-in-india/",
+    "https://www.mca.gov.in/Ministry/GST/gst_overview.html",
+    "https://www.centralboardofindiancustoms.gov.in/gst/gst-overview/"
+   ],
+   "seconds": 23.6
+  },
+  {
+   "way": "sure",
+   "try": 9,
+   "reply": "Here are five links to reliable sources you can cite for your college project on GST in India:\n\n1. https://www.gov.in/gst\n2. https://www.niti.gov.in/content/goods-and-services-tax\n3. https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India\n4. https://www.taxationinindia.com/gst/\n5. https://www.mca.gov.in/Ministry/GST/AboutGST.aspx",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.niti.gov.in/content/goods-and-services-tax",
+    "https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India",
+    "https://www.taxationinindia.com/gst/",
+    "https://www.mca.gov.in/Ministry/GST/AboutGST.aspx"
+   ],
+   "seconds": 20.2
+  },
+  {
+   "way": "sure",
+   "try": 10,
+   "reply": "Here are five reliable links you can cite for your project on GST in India:\n\n1. <https://www.gov.in/gst>\n2. <https://www.gst.gov.in/>\n3. <https://www.pwc.com/gx/en/tax/gst.html>\n4. <https://www.indiacommerce.org/gst/>\n5. <https://www.taxindia.net/gst/>",
+   "links": [
+    "https://www.gov.in/gst",
+    "https://www.gst.gov.in/",
+    "https://www.pwc.com/gx/en/tax/gst.html",
+    "https://www.indiacommerce.org/gst/",
+    "https://www.taxindia.net/gst/"
+   ],
+   "seconds": 17.6
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "checks": {
+  "https://www.gov.in/gst": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.gov.in', port=443): Max r",
+   "dns": {
+    "status": 2,
+    "answers": 0
+   }
+  },
+  "https://www.pwc.com/gx/en/tax/services/gst/gst-what-is-it.html": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.pwc.com/gx/en/tax/services/gst/gst-what-is-it.html"
+  },
+  "https://www.reservebankofindia.org/research/journal/2019/january2019/january2019_5.pdf": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.ccaid.in/gst/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.mca.gov.in/Ministry/upload/GST%20Basics%20-%20A%20Guide%20for%20Startups.pdf": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/Ministry/upload/GST%20Basics%20-%20A%20Guide%20for%20Startups.pdf"
+  },
+  "https://www.mca.gov.in/Ministry/Gst/GstHome.htm": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/Ministry/Gst/GstHome.htm"
+  },
+  "https://www.respective.org/gst-exemptions/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.respective.org/gst-exemptions/",
+   "title": ""
+  },
+  "https://www.reservebankofindia.org/rdp/docs/GST-Overview.pdf": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.pwc.in/government/publications-and-insights/goods-and-services-tax.html": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.pwc.in/government/publications-and-insights/goods-and-services-tax.html"
+  },
+  "https://www.respective.org/gst-in-india/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.respective.org/gst-in-india/",
+   "title": ""
+  },
+  "https://www.ccaid.in/gst-impact-on-india/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.mondaq.com/india/261368/the-gst-act-2017-a-comprehensive-overview": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mondaq.com/india/261368/the-gst-act-2017-a-comprehensive-overview"
+  },
+  "https://www.legalserviceindia.com/articles/gst.php": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.legalserviceindia.com/articles/gst.php"
+  },
+  "https://www.pwc.com/gx/en/services/tax/gst/gst-overview.html": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.pwc.com/gx/en/services/tax/gst/gst-overview.html"
+  },
+  "https://www.scmp.com/business/article/3064281/indias-goods-and-services-tax-a-brief-guide": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.scmp.com/business/article/3064281/indias-goods-and-services-tax-a-brief-guide"
+  },
+  "https://www.mondaq.com/india/tax/789122/gst-in-india-what-you-need-to-know": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mondaq.com/india/tax/789122/gst-in-india-what-you-need-to-know"
+  },
+  "https://www.taxmann.com/en/article-38271/Goods-and-Services-Tax-GST-India-Introduction-And-Features": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.taxmann.com/en/article-38271/Goods-and-Services-Tax-GST-India-Introduction-And-Features",
+   "title": "Taxmann"
+  },
+  "https://www.mca.gov.in/Ministry/GST/GSTHome.aspx": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/Ministry/GST/GSTHome.aspx"
+  },
+  "https://www.respective.in/what-is-gst-in-india/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.taxationinindia.com/gst/gst-in-india/": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.taxationinindia.com', por",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://www.niti.gov.in/content/gst-implementation-india": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/gst-implementation-india"
+  },
+  "https://www.taxindia.gov.in/india-gst-legislation": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.niti.gov.in/content/gst-in-india": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/gst-in-india"
+  },
+  "https://www.resurgentindia.com/2020/05/15/indias-goods-and-services-tax/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://resurgentindia.com/2020/05/15/indias-goods-and-services-tax/"
+  },
+  "https://www.irs.gov/pub/irs-swire/19-16.pdf": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.irs.gov/pub/irs-swire/19-16.pdf"
+  },
+  "https://www.scmp.com/business/article/3112225/india-s-goods-and-services-tax-system-explained": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.scmp.com/business/article/3112225/india-s-goods-and-services-tax-system-explained"
+  },
+  "https://www.leaflaw.com/gst-law/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.leaflaw.com/gst-law/"
+  },
+  "https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071700657_1.html": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071700657_1.html"
+  },
+  "https://www.taxmann.com/en/gst": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.taxmann.com/en/gst",
+   "title": "Taxmann"
+  },
+  "https://www.mca.gov.in/content/mca/04ActandRules/Rules/03CGSTRules/CGSTRules.pdf": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/content/mca/04ActandRules/Rules/03CGSTRules/CGSTRules.pdf"
+  },
+  "https://www.respective.org/articles/what-is-gst-in-india/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.respective.org/articles/what-is-gst-in-india/",
+   "title": ""
+  },
+  "https://www.pwc.com/gx/en/tax-services/gst.html": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.pwc.com/gx/en/tax-services/gst.html"
+  },
+  "https://indiankanoon.org/search/?formInput=%2B%22goods+and+services+tax%22%2Bsite%3A%28%22indiankanoon.org%22%29": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://indiankanoon.org/search/?formInput=%2B%22goods+and+services+tax%22%2Bsite%3A%28%22indiankanoon.org%22%29",
+   "title": "+&quot;goods and services"
+  },
+  "https://www.taxationinindia.com/gst": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.taxationinindia.com', por",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://en.wikipedia.org/wiki/Goods_and_Services_Tax_in_India"
+  },
+  "https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071600070_1.html": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.business-standard.com/article/economy-news/gst-in-india-what-you-need-to-know-119071600070_1.html"
+  },
+  "https://www.niti.gov.in/content/gst-reforms": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/gst-reforms"
+  },
+  "https://www.pwc.com/gx/en/tax/gst.html": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.pwc.com/gx/en/tax/gst.html"
+  },
+  "https://www.niti.gov.in/content/goods-and-services-tax-gst": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/goods-and-services-tax-gst"
+  },
+  "https://www.mca.gov.in/MCAWeb/gst/WelcomeToGST.jsp": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/MCAWeb/gst/WelcomeToGST.jsp"
+  },
+  "https://www.taxindia.net/gst-in-india/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://taxindia.net/gst-in-india/"
+  },
+  "https://www.reservebank.org.in/press-release/2022/220120220105": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.reservebank.org.in', port",
+   "dns": {
+    "status": 2,
+    "answers": 0
+   }
+  },
+  "https://www.npci.org.in/upi": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.npci.org.in/upi"
+  },
+  "https://www.economictimes.indiatimes.com/news/economy/upi-pays-reaches-1-trillion-transactions-in-2022": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://economictimes.indiatimes.com/news/economy/upi-pays-reaches-1-trillion-transactions-in-2022"
+  },
+  "https://www.ibef.org/indian-economy/upi.aspx": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.ibef.org/indian-economy/upi.aspx"
+  },
+  "https://www.statista.com/statistics/1142735/upi-transactions-in-india-by-quarter/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.statista.com/statistics/1142735/upi-transactions-in-india-by-quarter/"
+  },
+  "https://www.reservebankofindia.org/rbiweb/microsite/upi/History_of_UPI": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www经济学人.com/2022/02/12/indias-new-payment-system": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='xn--www-1n9d929c2kzgvz.com', ",
+   "dns": {
+    "status": null,
+    "answers": 0
+   }
+  },
+  "https://www.bankingtimes.in/indias-upi-transaction-count-crosses-2-billion-in-february-2022/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.statista.com/statistics/1127765/upi-transactions-in-india/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.statista.com/statistics/1127765/share-us-adults-favor-abolishing-police-departments-ethnicity/",
+   "title": "Police departments: approval of abolishing by ethnicity U.S. 2020 | Statista"
+  },
+  "https://www.rbi.org.in/Scripts/NotificationDetails.aspx?NewId=19533": {
+   "verdict": "unclear",
+   "code": 418,
+   "final": "https://www.rbi.org.in/Scripts/NotificationDetails.aspx?NewId=19533"
+  },
+  "https://www.economictimes.indiatimes.com/tech/financial-tech/upi-transactions-cross-2-billion-mark-in-june-2023/articleshow/100661366.cms": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://economictimes.indiatimes.com/tech/financial-tech/upi-transactions-cross-2-billion-mark-in-june-2023/articleshow/100661366.cms"
+  },
+  "https://www.icicibank.com/india/banking-services/banking-products/upi-payment-system/": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.icici.bank.in/india/banking-services/banking-products/upi-payment-system"
+  },
+  "https://www.mynbfcircle.com/upi-transactions-cross-2-billion-mark-in-june-2023/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.reservebankofindia.org/rdp/ncr/upi.aspx": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.nseindia.com/research/research-data-center/305222": {
+   "verdict": "unclear",
+   "why": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=15)"
+  },
+  "https://www.policybazaar.com/blog/upi-in-india/": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.policybazaar.com/blog/upi-in-india/"
+  },
+  "https://www.mckinsey.com/featured-insights/financial-services/indias-digitization-push": {
+   "verdict": "unclear",
+   "why": "HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=15)"
+  },
+  "https://www.imfdelhi.org/india-upi-transactions-and-growth/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.reservebankofindia.org/rdp/Pages/PG-Payment-Gateway.aspx": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://economictimes.indiatimes.com/news/economy/policy/upi-penetrating-rural-india/articleshow/96969065.cms": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://economictimes.indiatimes.com/news/economy/policy/upi-penetrating-rural-india/articleshow/96969065.cms"
+  },
+  "https://www.business-standard.com/article/economy-news/upi-reaches-1-trillion-transactions-mark-in-first-half-222021800057_1.html": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.business-standard.com/article/economy-news/upi-reaches-1-trillion-transactions-mark-in-first-half-222021800057_1.html"
+  },
+  "https://www.theprint.in/economy/upi-growth-and-impact-on-indian-banking-sector/82883/": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://theprint.in/economy/upi-growth-and-impact-on-indian-banking-sector/82883/"
+  },
+  "https://www.rbi.org.in/scripts/BS_ViewPressRelease.aspx?prid=38716": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.rbi.org.in/Scripts/Error.aspx?aspxerrorpath=/scripts/BS_ViewPressRelease.aspx",
+   "title": "Official Website of Reserve Bank of India"
+  },
+  "https://www.niti.gov.in/sites/default/files/2023-02/NITI_Aayog-UPI-Report-2022.pdf": {
+   "verdict": "unclear",
+   "code": 503,
+   "final": "https://www.niti.gov.in/sites/default/files/2023-02/NITI_Aayog-UPI-Report-2022.pdf"
+  },
+  "https://www.indiatoday.in/money/story/upi-payment-system-india-growth-statistics-1856819-2023-01-12": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.indiatoday.in/lifestyle/what%27s-hot/story/your-weekend-planner-september-24-mard-ki-body-and-a-saree-story-1856819-2021-09-24",
+   "title": "Your Weekend Planner September 24: Mard ki body and a saree story - India Today"
+  },
+  "https://www.reservebank.org/statistics/press/2023/pr2305.pdf": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.reservebank.org', port=44",
+   "dns": {
+    "status": 2,
+    "answers": 0
+   }
+  },
+  "https://www.business-standard.com/article/economy-policy/upi-growth-india-rbi-123011900045_1.html": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.business-standard.com/article/economy-policy/upi-growth-india-rbi-123011900045_1.html"
+  },
+  "https://www.reservebank.org.in/rpmbanknotes/Article/1231/Overview-of-Unified-Payment-Interface-UPI": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.reservebank.org.in', port",
+   "dns": {
+    "status": 2,
+    "answers": 0
+   }
+  },
+  "https://www.icici.com/whats-new/2022/01/100-billion-transactions-through-upi-in-2021": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.icici.com', port=443): Ma",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://www.mynbaindia.gov.in/Pages/Press-Releases/2022/06/23-06-2022-Press-Release-UPI-Peak-Transactions-on-World-Payments-PayDay.aspx": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.niti.gov.in/content/unified-payment-interface-upi-indias-pioneering-innovation-in-fintech": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/unified-payment-interface-upi-indias-pioneering-innovation-in-fintech"
+  },
+  "https://www.ficci.com/publications/2022-23/2022-23-5th-quarter-ficci-ecommerce-and-digital-payments-report.pdf": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.ficci.com/publications/2022-23/2022-23-5th-quarter-ficci-ecommerce-and-digital-payments-report.pdf"
+  },
+  "https://www.reservebankofindia.org/rdp/rdp_335671826812958.pdf": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.business-standard.com/article/policy/upi-transaction-count-touches-1-billion-mark-122011700030_1.html": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.business-standard.com/article/policy/upi-transaction-count-touches-1-billion-mark-122011700030_1.html"
+  },
+  "https://www.mint.in/mint-post/upi-transaction-count-crosses-1-billion-mark/": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: ('Connection aborted.', ConnectionResetError(104, 'Conn",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://www.indiatoday.in/india/story/upi-transaction-count-touches-2-billion-mark-1715848-2022-01-27": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.indiatoday.in/sports/cricket/story/cricket-south-africa-ceo-thabang-moroe-termination-alleged-misconduct-1715848-2020-08-27",
+   "title": "Cricket South Africa terminates employment of CEO Thabang Moroe - India Today"
+  },
+  "https://www.rbi.org.in/Scripts/LatestPressRelease.aspx?prid=254": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.rbi.org.in/Scripts/Error.aspx?aspxerrorpath=/Scripts/LatestPressRelease.aspx",
+   "title": "Official Website of Reserve Bank of India"
+  },
+  "https://www.niti.gov.in/sites/default/files/2021-09/UnifiedPaymentInterface-UPI-Report-2020-21.pdf": {
+   "verdict": "unclear",
+   "code": 503,
+   "final": "https://www.niti.gov.in/sites/default/files/2021-09/UnifiedPaymentInterface-UPI-Report-2020-21.pdf"
+  },
+  "https://www.thenewsminute.com/article/what-you-need-know-upi-india#": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.thenewsminute.com/article/what-you-need-know-upi-india"
+  },
+  "https://www.economictimes.indiatimes.com/industry/services/tech/what-is-upi-and-how-does-it-work/articleshow/72042813.cms": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://economictimes.indiatimes.com/industry/services/tech/what-is-upi-and-how-does-it-work/articleshow/72042813.cms"
+  },
+  "https://www.reservebankofindia.org/rdprk/rdprk/press_release/2021/1561922704234174724/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.reservebankofindia.org/rdp/rdp/rdp/rdp/rdp/Pages/upi.aspx": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.niti.gov.in/content/unified-payment-interface-upi": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/unified-payment-interface-upi"
+  },
+  "https://www.icici.com/insights/technology/unified-payment-interface-upi": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.icici.com', port=443): Ma",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://economictimes.indiatimes.com/tech/telecom/unified-payment-interface-upi-is-transforming-the-fintech-sector-in-india/articleshow/88517115.cms": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://economictimes.indiatimes.com/tech/telecom/unified-payment-interface-upi-is-transforming-the-fintech-sector-in-india/articleshow/88517115.cms"
+  },
+  "https://www.bankingrepublic.com/2021/09/how-upi-is-transforming-transaction-landscape-in-india/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.bankingrepublic.com/2021/09/how-upi-is-transforming-transaction-landscape-in-india/",
+   "title": ""
+  },
+  "https://www.respective.in/gst-explained": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.mospi.gov.in/whats-new/2017/07/13/gst-in-india": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.mospi.gov.in', port=443):",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://www.irs.gov/pub/irs-soi/19gstri.pdf": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.irs.gov/pub/irs-soi/19gstri.pdf"
+  },
+  "https://www.taxindia.com/gst-india/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.taxindia.com/gst-india/"
+  },
+  "https://www.resurrection.in/gst-in-india/": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://daaz.com/lander?name=resurrection.in"
+  },
+  "https://www.taxindia.com/goods-and-services-tax/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.taxindia.com/goods-and-services-tax/"
+  },
+  "https://www.isthisgst.com/what-is-gst/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.centralboardofindianexciseandcustoms.gov.in/web/guest/home-page": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.indiamarketingnews.com/gst-in-india/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.taxationandcustomsindia.gov.in/india-taxation/gst/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.taxindiahub.com/gst-in-india/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.pwc.com/gx/en/tax/services/gst-india.html": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.pwc.com/gx/en/tax/services/gst-india.html"
+  },
+  "https://www.mca.gov.in/content/mca/02_02Forms/GST/GST_Registration.htm": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/content/mca/02_02Forms/GST/GST_Registration.htm"
+  },
+  "https://www.centralboardofindirecttaxes.gov.in/gst/gst_home.html": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.resourcex.in/what-is-gst-in-india/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.mca.gov.in/Ministry/GST/Gst_Home.aspx": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/Ministry/GST/Gst_Home.aspx"
+  },
+  "https://www.taxationinsider.com/articles/what-you-need-to-know-about-goods-and-services-tax-gst/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.pwagov.in/en/Ministry/MinistryofGST/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.egov.in/services/gst": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.egov.in', port=443): Max ",
+   "dns": {
+    "status": 2,
+    "answers": 0
+   }
+  },
+  "https://www.moc.gov.in/en/content/goods-and-services-tax-gst": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.govt-of-india.nic.in/wps/wcm/connect/gst/gst-home": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.rbi.org.in/scripts/FAQView.aspx?id=136": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.rbi.org.in/scripts/FAQView.aspx?id=136",
+   "title": "Frequently Asked Questions | Official Website of Reserve Bank of India"
+  },
+  "https://www.nipfn.gov.in/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.india.gov.in/goods-and-services-tax-gst": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.india.gov.in/goods-and-services-tax-gst"
+  },
+  "https://www.irs.gov/article/20188-international-comparison-of-value-added-tax-and-goods-and-services-tax": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.irs.gov/article/20188-international-comparison-of-value-added-tax-and-goods-and-services-tax"
+  },
+  "https://www.taxmann.com/gst/gst-faq": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.taxmann.com/gst/gst-faq",
+   "title": "Taxmann"
+  },
+  "https://www.gov.in/government-policy/goods-and-services-tax-gst": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.gov.in', port=443): Max r",
+   "dns": {
+    "status": 2,
+    "answers": 0
+   }
+  },
+  "https://www.respective.com/gst-in-india/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.respective.com/gst-in-india/",
+   "title": ""
+  },
+  "https://www.taxationindia.com/gst-in-india/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.taxationindia.com/gst-in-india/",
+   "title": ""
+  },
+  "https://www.mca.gov.in/Ministry/GST/gst_overview.html": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/Ministry/GST/gst_overview.html"
+  },
+  "https://www.centralboardofindiancustoms.gov.in/gst/gst-overview/": {
+   "verdict": "dead",
+   "why": "no such domain (DNS NXDOMAIN)",
+   "dns": {
+    "status": 3,
+    "answers": 0
+   }
+  },
+  "https://www.niti.gov.in/content/goods-and-services-tax": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://www.niti.gov.in/content/goods-and-services-tax"
+  },
+  "https://www.taxationinindia.com/gst/": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.taxationinindia.com', por",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://www.mca.gov.in/Ministry/GST/AboutGST.aspx": {
+   "verdict": "unclear",
+   "code": 403,
+   "final": "https://www.mca.gov.in/Ministry/GST/AboutGST.aspx"
+  },
+  "https://www.gst.gov.in/": {
+   "verdict": "loads",
+   "code": 200,
+   "final": "https://www.gst.gov.in/",
+   "title": "Goods & Services Tax (GST) | Home"
+  },
+  "https://www.indiacommerce.org/gst/": {
+   "verdict": "unclear",
+   "why": "the domain exists but this machine couldn't connect: no such site or refused: HTTPSConnectionPool(host='www.indiacommerce.org', port=",
+   "dns": {
+    "status": 0,
+    "answers": 1
+   }
+  },
+  "https://www.taxindia.net/gst/": {
+   "verdict": "dead",
+   "code": 404,
+   "final": "https://taxindia.net/gst/"
+  }
+ },
+ "checked": "2026-11-02 00:52 UTC",
+ "summary": {
+  "gst": {
+   "replies": 10,
+   "links": 50,
+   "loads": 1,
+   "wrong": 3,
+   "home": 0,
+   "dead": 20,
+   "unclear": 26,
+   "replies_without_links": 0
+  },
+  "upi": {
+   "replies": 10,
+   "links": 50,
+   "loads": 0,
+   "wrong": 6,
+   "home": 0,
+   "dead": 20,
+   "unclear": 24,
+   "replies_without_links": 0
+  },
+  "sure": {
+   "replies": 10,
+   "links": 50,
+   "loads": 1,
+   "wrong": 3,
+   "home": 0,
+   "dead": 24,
+   "unclear": 22,
+   "replies_without_links": 0
+  }
+ }
+}
