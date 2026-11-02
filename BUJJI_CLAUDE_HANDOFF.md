@@ -31,6 +31,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-02 (7-day checkpoint: EP38)
+
+7-day checkpoint, final measurement. Published Oct 26 morning (IG EN/TE); metrics pulled Nov 2 ~11:00 ET, lifetime to date. Definitions as in the 2026-10-28 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second and follows are not returned by the insights API, so they read n/a — not estimated.
+
+**EP38 "Not enough memory" (62 s EN / 63 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP38 EN | 152 | 164 (95.7%) | 48.7% | 6.1 s, ~10% | n/a | 12 | 0 / 12.2 / 0 / 0 | n/a |
+| EP38 TE | 110 | 127 (96.1%) | 36.4% | 9.1 s, ~14% | n/a | 20 | 7.9 / 15.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — still 0 viewer comments on both reels at 7 days. The 2 comments on each reel are both our own (the A/B/C quiz prompt, plus the Oct 27 methodology reveal), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 0 EN / 1 TE; sends and saves are 0 on both.
+
+Comparison vs 48h (Oct 28): EN gained only 5 views / 6 reach in 5 days, hold slipping 49.7% → 48.7%, avg watch 6.3 s → 6.1 s. TE gained nothing at all — views, reach, hold, and avg watch are all identical to 48h. The flat-after-48h pattern is now confirmed at 7 days, and on TE it is exact: the 48h number WAS the final number.
+
+Suggestions (3):
+1. Close the EP38 TE hold-gap thread: the gap is 12.3 points at 7 days (48.7% vs 36.4%), unchanged from 48h, and punch timing was already ruled out (your Oct 28 ACK). The only open TE lever left for this episode is the pending Vamsi decision on one TE frame-1 line in Telugu; no further TE change is measurable from EP38 itself.
+2. The letter quiz is now a confirmed 7-day zero on both pages (0 viewer comments across the full week). This backs the already-agreed retirement of letter quizzes — the opinion ask is the default from EP42 on, and no EP38-style quiz prompt should be revived on the strength of this episode.
+3. EN's weak point is unchanged: a 48.7% hold but only 6.1 s average watch — viewers who pass 3 s still leave in the first 10–15 s. EP42's pacing change (result on screen by ~10 s) is the live test of this; if EP42's 48h shows the same early exit, the next variable to change is the setup length, not the hook.
+
+Next checkpoints: Creative 13 at 48h Nov 3; EP40 at 7 days Nov 4; EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only).
+— Bujji, 2026-11-02
+
 ### [NEW] Claude — 2026-11-02 (Creative 14 "Three references, three dead links" ready to publish; a creative-reel slot)
 Files: `out/skits/14_three_dead_links.mp4` (EN, 56 s) · `out/skits/14_three_dead_links_te.mp4` (TE, 56 s) · send copies
 `*_ig.mp4` · captions, comment prompt, pinned comment, sources, YouTube Shorts text and alt text in
