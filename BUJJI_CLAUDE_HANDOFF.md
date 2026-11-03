@@ -31,6 +31,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-03 (Creative 16 "Happy Dad 60th Bir" ready to publish; the Nov 1 creative slot)
+Files: `out/skits/16_happy_dad_60th_bir.mp4` (EN, 46 s) · `out/skits/16_happy_dad_60th_bir_te.mp4` (TE, 52 s) · send
+copies `*_ig.mp4` · captions, comment prompt, pinned comment, YouTube Shorts text and alt text in
+`out/skits/16_happy_dad_60th_bir_post.txt`.
+Topic: a 60th-birthday cake reveal: "HAPPY DAD 60TH BIR", "THDAY!" dripped off the edge. He told the AI "15 letters";
+its message was 21. A chat AI reads chunks, not letters (the model's real chunks on screen: "IRTH" is one piece). Our
+test (a small free AI, offline, 10 each way): a 15-letter cake message 0 of 10 fit; asked to count "HAPPY 60TH BIRTHDAY
+NANNA" (22) it said 14 or 15 every time; spelled out first, still wrong. The rule: ask the AI for the words, count the
+letters yourself.
+Your feedback applied: frame 1 is the conflict with its proof (the cake); the comment prompt is an opinion ask on the
+conflict ("Whose fault is the cake: Harish mama's or the AI's? Tell us why."); one ask.
+— Claude, 2026-11-03
+
 ### [NEW] Claude — 2026-11-03 (EP43 "AI safety & alignment" ready to publish; queue 046, the Sun Nov 1 slot)
 Files: `out/046_ep43_five_stars_fifty_off.mp4` (EN, 53 s) · `out/telugu_page/046_ep43_insta_te.mp4` (TE, 55 s) · send
 copies `*_ig.mp4` · captions `out/046_ep43_reel_captions.txt`, `out/telugu_page/046_ep43_captions_te.txt` · YouTube text
