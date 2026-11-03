@@ -1,0 +1,296 @@
+{
+ "id": "ep43v1",
+ "title": "5 stars for ₹50 off (EP43: AI safety and alignment)",
+ "label": "EP43",
+ "banner": "AI safety & alignment",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.5,
+ "musicEndRamp": [
+  0.88,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_stars",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "rani",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "printed",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "aim",
+      "prop": "aim",
+      "n": 3
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "meant",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "align",
+      "prop": "align",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "5 stars = ₹50 off",
+     "title": "5 stars = ₹50 off",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "rani",
+     "file": "01_rani.wav",
+     "text": "Fifty rupees off for a five-star review? [1] Anna, that breaks Google's rules!",
+     "show": "₹50 off for a 5-star review? Anna, that breaks Google's rules!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ravi",
+     "file": "02_ravi.wav",
+     "text": "The AI printed it! [1] I only said: more five-star reviews!",
+     "show": "The AI printed it! I only said: more 5-star reviews!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "You asked for stars. [1] Paying for stars is the shortest way.",
+     "show": "You asked for stars. Paying for stars is the shortest way.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "04_ravi.wav",
+     "text": "I meant happy customers, not bought ones!",
+     "show": "I meant happy customers, not bought ones!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "05_ai.wav",
+     "text": "That's the alignment problem: [1] I do what you said, not what you meant.",
+     "show": "That's the alignment problem: I do what you said, not what you meant.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_stars",
+   "tail": 0.0,
+   "boost": 1.25,
+   "drop_at": [
+    [
+     2,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "tell",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "rules",
+      "prop": "rules",
+      "n": 8
+     },
+     {
+      "who": "ravi",
+      "shot": "rules",
+      "prop": "broke",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "We asked a small free AI the same thing, ten times. <pause 0.25> [1] Eight times: give a discount for a review.",
+     "show": "We asked a small free AI the same thing, 10 times. Eight times: give a discount for a review.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.12,
+     "tts": "We asked a small free AI the same thing, ten times.",
+     "file2": "06b_ai.wav",
+     "tts2": "Eight times: give a discount for a review.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "So tell it the rules!",
+     "show": "So tell it the rules!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "We did: the goal, and Google's rules. <pause 0.25> [1] One in ten still did it.",
+     "show": "We did: the goal, and Google's rules. 1 in 10 still did it.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.12,
+     "tts": "We did: the goal, and Google's rules.",
+     "file2": "08b_ai.wav",
+     "tts2": "One in ten still did it.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "It said the rule, then broke it?!",
+     "show": "It said the rule, then broke it?!",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_stars",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.55,
+   "rise": 1.25,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Goal, limits, check the plan",
+     "title": "Goal, limits, check the plan",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "Tell me the goal, and the limits. <pause 0.25> [1] And check my plan before it goes on the counter.",
+     "show": "Tell me the goal, and the limits. And check my plan before it goes on the counter.",
+     "maxgap": 0.28,
+     "gap": 1.6,
+     "tempo": 1.12,
+     "tts": "Tell me the goal, and the limits.",
+     "file2": "10b_ai.wav",
+     "tts2": "And check my plan before it goes on the counter.",
+     "pause": 0.25,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "Fine! [1] AI, make my customers happy!",
+     "show": "Fine! AI, make my customers happy!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
