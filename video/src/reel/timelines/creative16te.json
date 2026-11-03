@@ -1,0 +1,829 @@
+{
+ "id": "creative16te",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI and letter counts",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "title": "Happy Dad 60th Bir (Creative 16: AI can't count letters) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   856,
+   880
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   511,
+   1.0
+  ],
+  [
+   511,
+   1247,
+   1.25
+  ],
+  [
+   1248,
+   1544,
+   1.35
+  ],
+  [
+   1248,
+   1544,
+   1.15,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1544,
+ "music": "reel/creative16te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_cake",
+   "data": {
+    "beats": [
+     {
+      "who": "bindu",
+      "shot": "cake",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "harish",
+      "shot": "phone",
+      "prop": "told",
+      "n": 2
+     },
+     {
+      "who": "thathayya",
+      "shot": "cake",
+      "prop": "bir",
+      "n": 3
+     },
+     {
+      "who": "bindu",
+      "shot": "cake",
+      "prop": "counted",
+      "n": 4
+     },
+     {
+      "who": "harish",
+      "shot": "cake",
+      "prop": "better",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Happy Dad 60th Bir",
+     "title": "Happy Dad 60th Bir",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 511,
+   "lines": [
+    {
+     "who": "bindu",
+     "name": "Bindu",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative16te/line_01.wav",
+     "from": 15,
+     "frames": 77,
+     "words": [
+      {
+       "w": "Happy",
+       "from": 19,
+       "to": 40
+      },
+      {
+       "w": "Dad",
+       "from": 40,
+       "to": 50
+      },
+      {
+       "w": "60th",
+       "from": 50,
+       "to": 60
+      },
+      {
+       "w": "Bir...",
+       "from": 60,
+       "to": 84
+      },
+      {
+       "w": "BIR?!",
+       "from": 84,
+       "to": 92
+      }
+     ],
+     "cues": {
+      "1": 86
+     }
+    },
+    {
+     "who": "harish",
+     "name": "Harish mama",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative16te/line_02.wav",
+     "from": 101,
+     "frames": 134,
+     "words": [
+      {
+       "w": "I",
+       "from": 102,
+       "to": 105
+      },
+      {
+       "w": "told",
+       "from": 105,
+       "to": 113
+      },
+      {
+       "w": "the",
+       "from": 113,
+       "to": 130
+      },
+      {
+       "w": "chatbot:",
+       "from": 130,
+       "to": 156
+      },
+      {
+       "w": "only",
+       "from": 156,
+       "to": 164
+      },
+      {
+       "w": "15",
+       "from": 164,
+       "to": 174
+      },
+      {
+       "w": "letters!",
+       "from": 174,
+       "to": 193
+      },
+      {
+       "w": "It",
+       "from": 193,
+       "to": 211
+      },
+      {
+       "w": "gave",
+       "from": 211,
+       "to": 225
+      },
+      {
+       "w": "this!",
+       "from": 225,
+       "to": 235
+      }
+     ],
+     "cues": {
+      "1": 209
+     }
+    },
+    {
+     "who": "thathayya",
+     "name": "Thathayya",
+     "color": "#E5E7EB",
+     "sub": null,
+     "audio": "reel/creative16te/line_03.wav",
+     "from": 243,
+     "frames": 55,
+     "words": [
+      {
+       "w": "At",
+       "from": 243,
+       "to": 249
+      },
+      {
+       "w": "sixty,",
+       "from": 249,
+       "to": 263
+      },
+      {
+       "w": "I",
+       "from": 263,
+       "to": 267
+      },
+      {
+       "w": "became",
+       "from": 267,
+       "to": 280
+      },
+      {
+       "w": "a",
+       "from": 280,
+       "to": 284
+      },
+      {
+       "w": "Bir?",
+       "from": 284,
+       "to": 294
+      }
+     ],
+     "cues": {
+      "1": 267
+     }
+    },
+    {
+     "who": "bindu",
+     "name": "Bindu",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative16te/line_04.wav",
+     "from": 306,
+     "frames": 95,
+     "words": [
+      {
+       "w": "Mama,",
+       "from": 307,
+       "to": 329
+      },
+      {
+       "w": "that's",
+       "from": 329,
+       "to": 346
+      },
+      {
+       "w": "21!",
+       "from": 346,
+       "to": 359
+      },
+      {
+       "w": "I",
+       "from": 359,
+       "to": 373
+      },
+      {
+       "w": "counted!",
+       "from": 373,
+       "to": 397
+      }
+     ],
+     "cues": {
+      "1": 356
+     }
+    },
+    {
+     "who": "harish",
+     "name": "Harish mama",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative16te/line_05.wav",
+     "from": 411,
+     "frames": 78,
+     "words": [
+      {
+       "w": "The",
+       "from": 412,
+       "to": 419
+      },
+      {
+       "w": "chatbot",
+       "from": 419,
+       "to": 434
+      },
+      {
+       "w": "counts",
+       "from": 434,
+       "to": 451
+      },
+      {
+       "w": "better",
+       "from": 451,
+       "to": 464
+      },
+      {
+       "w": "than",
+       "from": 464,
+       "to": 473
+      },
+      {
+       "w": "me,",
+       "from": 473,
+       "to": 481
+      },
+      {
+       "w": "no?",
+       "from": 481,
+       "to": 488
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_cake",
+   "data": {
+    "beats": [
+     {
+      "who": "bindu",
+      "shot": "chunks",
+      "prop": "chunks",
+      "n": 6
+     },
+     {
+      "who": "bindu",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "harish",
+      "shot": "cake",
+      "prop": "count",
+      "n": 8
+     },
+     {
+      "who": "bindu",
+      "shot": "test",
+      "prop": "count2",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 511,
+   "frames": 736,
+   "lines": [
+    {
+     "who": "bindu",
+     "name": "Bindu",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative16te/line_06.wav",
+     "from": 0,
+     "frames": 160,
+     "words": [
+      {
+       "w": "It",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "sees",
+       "from": 6,
+       "to": 15
+      },
+      {
+       "w": "words",
+       "from": 15,
+       "to": 32
+      },
+      {
+       "w": "in",
+       "from": 32,
+       "to": 41
+      },
+      {
+       "w": "pieces,",
+       "from": 41,
+       "to": 59
+      },
+      {
+       "w": "not",
+       "from": 59,
+       "to": 79
+      },
+      {
+       "w": "letters.",
+       "from": 79,
+       "to": 94
+      },
+      {
+       "w": "To",
+       "from": 94,
+       "to": 109
+      },
+      {
+       "w": "it,",
+       "from": 109,
+       "to": 116
+      },
+      {
+       "w": "IRTH",
+       "from": 116,
+       "to": 124
+      },
+      {
+       "w": "is",
+       "from": 124,
+       "to": 130
+      },
+      {
+       "w": "one",
+       "from": 130,
+       "to": 136
+      },
+      {
+       "w": "sticker.",
+       "from": 136,
+       "to": 156
+      }
+     ],
+     "cues": {
+      "1": 111
+     }
+    },
+    {
+     "who": "bindu",
+     "name": "Bindu",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative16te/line_07.wav",
+     "from": 175,
+     "frames": 234,
+     "words": [
+      {
+       "w": "I",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "asked",
+       "from": 180,
+       "to": 191
+      },
+      {
+       "w": "a",
+       "from": 191,
+       "to": 195
+      },
+      {
+       "w": "small",
+       "from": 195,
+       "to": 216
+      },
+      {
+       "w": "free",
+       "from": 216,
+       "to": 225
+      },
+      {
+       "w": "chatbot",
+       "from": 225,
+       "to": 252
+      },
+      {
+       "w": "10",
+       "from": 252,
+       "to": 258
+      },
+      {
+       "w": "times",
+       "from": 258,
+       "to": 279
+      },
+      {
+       "w": "for",
+       "from": 279,
+       "to": 286
+      },
+      {
+       "w": "a",
+       "from": 286,
+       "to": 294
+      },
+      {
+       "w": "15-letter",
+       "from": 294,
+       "to": 317
+      },
+      {
+       "w": "message.",
+       "from": 317,
+       "to": 338
+      },
+      {
+       "w": "Not",
+       "from": 369,
+       "to": 381
+      },
+      {
+       "w": "one",
+       "from": 381,
+       "to": 394
+      },
+      {
+       "w": "fit.",
+       "from": 394,
+       "to": 409
+      }
+     ],
+     "cues": {
+      "1": 369
+     }
+    },
+    {
+     "who": "harish",
+     "name": "Harish mama",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative16te/line_08.wav",
+     "from": 424,
+     "frames": 50,
+     "words": [
+      {
+       "w": "Then",
+       "from": 425,
+       "to": 432
+      },
+      {
+       "w": "I'll",
+       "from": 432,
+       "to": 449
+      },
+      {
+       "w": "tell",
+       "from": 449,
+       "to": 456
+      },
+      {
+       "w": "it",
+       "from": 456,
+       "to": 460
+      },
+      {
+       "w": "to",
+       "from": 460,
+       "to": 464
+      },
+      {
+       "w": "count!",
+       "from": 464,
+       "to": 474
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "bindu",
+     "name": "Bindu",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative16te/line_09.wav",
+     "from": 482,
+     "frames": 223,
+     "words": [
+      {
+       "w": "Did",
+       "from": 482,
+       "to": 492
+      },
+      {
+       "w": "that:",
+       "from": 492,
+       "to": 517
+      },
+      {
+       "w": "it",
+       "from": 517,
+       "to": 524
+      },
+      {
+       "w": "said",
+       "from": 524,
+       "to": 545
+      },
+      {
+       "w": "14,",
+       "from": 545,
+       "to": 555
+      },
+      {
+       "w": "15.",
+       "from": 555,
+       "to": 564
+      },
+      {
+       "w": "There",
+       "from": 587,
+       "to": 605
+      },
+      {
+       "w": "are",
+       "from": 605,
+       "to": 614
+      },
+      {
+       "w": "22.",
+       "from": 614,
+       "to": 624
+      },
+      {
+       "w": "It",
+       "from": 624,
+       "to": 642
+      },
+      {
+       "w": "even",
+       "from": 642,
+       "to": 654
+      },
+      {
+       "w": "spelled",
+       "from": 654,
+       "to": 676
+      },
+      {
+       "w": "BIRTHARDAY!",
+       "from": 676,
+       "to": 705
+      }
+     ],
+     "cues": {
+      "1": 587
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_cake",
+   "data": {
+    "beats": [
+     {
+      "who": "thathayya",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "thathayya",
+      "shot": "cake",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Count it yourself",
+     "title": "Count it yourself",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1248,
+   "frames": 296,
+   "lines": [
+    {
+     "who": "thathayya",
+     "name": "Thathayya",
+     "color": "#E5E7EB",
+     "sub": null,
+     "audio": "reel/creative16te/line_10.wav",
+     "from": 9,
+     "frames": 115,
+     "words": [
+      {
+       "w": "Ask",
+       "from": 10,
+       "to": 16
+      },
+      {
+       "w": "the",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "chatbot",
+       "from": 21,
+       "to": 31
+      },
+      {
+       "w": "for",
+       "from": 31,
+       "to": 44
+      },
+      {
+       "w": "the",
+       "from": 44,
+       "to": 53
+      },
+      {
+       "w": "words.",
+       "from": 53,
+       "to": 62
+      },
+      {
+       "w": "Count",
+       "from": 73,
+       "to": 81
+      },
+      {
+       "w": "the",
+       "from": 81,
+       "to": 87
+      },
+      {
+       "w": "letters",
+       "from": 87,
+       "to": 99
+      },
+      {
+       "w": "yourself.",
+       "from": 99,
+       "to": 121
+      }
+     ],
+     "cues": {
+      "1": 73
+     }
+    },
+    {
+     "who": "thathayya",
+     "name": "Thathayya",
+     "color": "#E5E7EB",
+     "sub": null,
+     "audio": "reel/creative16te/line_11.wav",
+     "from": 160,
+     "frames": 100,
+     "words": [
+      {
+       "w": "OK,",
+       "from": 164,
+       "to": 169
+      },
+      {
+       "w": "let's",
+       "from": 169,
+       "to": 194
+      },
+      {
+       "w": "cut",
+       "from": 194,
+       "to": 199
+      },
+      {
+       "w": "the",
+       "from": 199,
+       "to": 216
+      },
+      {
+       "w": "cake.",
+       "from": 216,
+       "to": 223
+      },
+      {
+       "w": "Bindu,",
+       "from": 223,
+       "to": 232
+      },
+      {
+       "w": "read",
+       "from": 232,
+       "to": 239
+      },
+      {
+       "w": "it",
+       "from": 239,
+       "to": 243
+      },
+      {
+       "w": "once",
+       "from": 243,
+       "to": 249
+      },
+      {
+       "w": "more!",
+       "from": 249,
+       "to": 257
+      }
+     ],
+     "cues": {
+      "1": 225
+     }
+    }
+   ]
+  }
+ ]
+}
