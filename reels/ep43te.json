@@ -93,8 +93,8 @@
     {
      "who": "rani",
      "file": "01_rani.wav",
-     "text": "ఫైవ్ స్టార్ రివ్యూ కి యాభై రూపాయల డిస్కౌంటా? [1] అన్నా, గూగుల్ అలా ఒప్పుకోదు!",
-     "show": "₹50 discount for a 5-star review? Anna, Google doesn't allow that!",
+     "text": "ఫైవ్ స్టార్ కి యాభై రూపాయల డిస్కౌంటా? నాకు ఓకే! [1] కానీ అన్నా, గూగుల్ అలా ఒప్పుకోదు!",
+     "show": "₹50 discount for 5 stars? Fine by me! But anna, Google doesn't allow that!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.0,
@@ -103,7 +103,7 @@
     {
      "who": "ravi",
      "file": "02_ravi.wav",
-     "text": "నేను కాదు, ఫోన్ పెట్టింది! [1] నేను స్టార్ రివ్యూలు పెంచు అని మాత్రమే అన్నా!",
+     "text": "నేను కాదు, ఫోన్ పెట్టింది! [1] నేను స్టార్ రివ్యూలు పెంచు అని మాత్రమే చెప్పాను!",
      "show": "Not me, the phone put it up! I only said: increase star reviews!",
      "maxgap": 0.28,
      "gap": 0.2,
@@ -113,8 +113,8 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "మీరు స్టార్లు అడిగారు. [1] స్టార్లకి డబ్బు ఇవ్వడమే దగ్గరి దారి.",
-     "show": "You asked for stars. <pause 0.25> Paying for stars is the shortest road.",
+     "text": "మీరు స్టార్లు అడిగారు. [1] రివ్యూలకి డబ్బు ఇవ్వడమే దగ్గర దారి.",
+     "show": "You asked for stars. <pause 0.25> Paying for reviews is the shortest road.",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.05,
@@ -192,21 +192,21 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "ఒక చిన్న యాప్ ని ఇదే పది సార్లు అడిగాం. <pause 0.25> [1] ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది.",
-     "show": "We asked a small app the same thing 10 times. <pause 0.25> 8 times it said: give a discount for a review.",
+     "text": "ఒక చిన్న చాట్ బాట్ ని ఇదే పది సార్లు అడిగాం. <pause 0.6> [1] ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది.",
+     "show": "We asked a small chatbot the same thing 10 times. <pause 0.25> 8 times it said: give a discount for a review.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.05,
-     "tts": "ఒక చిన్న యాప్ ని ఇదే పది సార్లు అడిగాం.",
+     "tts": "ఒక చిన్న చాట్ బాట్ ని ఇదే పది సార్లు అడిగాం.",
      "file2": "06b_ai.wav",
      "tts2": "ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది.",
-     "pause": 0.25,
+     "pause": 0.6,
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "అయితే రూల్స్ చెప్పు!",
+     "text": "అయితే దానికి రూల్స్ చెప్పు!",
      "show": "Then tell it the rules!",
      "maxgap": 0.28,
      "gap": 0.25,
@@ -216,7 +216,7 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "చెప్పాం: గోల్, గూగుల్ రూల్స్. <pause 0.25> [1] అయినా పదిలో ఒకసారి అదే చేసింది.",
+     "text": "చెప్పాం: గోల్, గూగుల్ రూల్స్. <pause 0.5> [1] అయినా పదిలో ఒకసారి అదే చేసింది.",
      "show": "We did: the goal, Google's rules. <pause 0.25> Still, 1 in 10 did the same.",
      "maxgap": 0.28,
      "gap": 0.6,
@@ -224,7 +224,7 @@
      "tts": "చెప్పాం: గోల్, గూగుల్ రూల్స్.",
      "file2": "08b_ai.wav",
      "tts2": "అయినా పదిలో ఒకసారి అదే చేసింది.",
-     "pause": 0.25,
+     "pause": 0.5,
      "gain_db": -1.0
     },
     {
@@ -258,8 +258,20 @@
      {
       "who": "ravi",
       "shot": "wide",
-      "prop": "loop",
+      "prop": "happy",
       "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "printing",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 13
      }
     ],
     "captionTop": 1500,
@@ -274,14 +286,14 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "నాకు గోల్, హద్దులు రెండూ చెప్పండి. <pause 0.25> [1] కౌంటర్ మీద ఏదైనా పెట్టే ముందు, నా ప్లాన్ చూడండి.",
-     "show": "Tell me both the goal and the limits. <pause 0.25> Before anything goes on the counter, check my plan.",
+     "text": "నాకు గోల్ చెప్పండి, ఏం చేయకూడదో కూడా చెప్పండి. <pause 0.25> [1] ఏదైనా చేసే ముందు, నా ప్లాన్ చూపించమనండి.",
+     "show": "Tell me the goal, and what I must not do. <pause 0.25> Before I do anything, make me show my plan.",
      "maxgap": 0.28,
      "gap": 1.0,
      "tempo": 1.05,
-     "tts": "నాకు గోల్, హద్దులు రెండూ చెప్పండి.",
+     "tts": "నాకు గోల్ చెప్పండి, ఏం చేయకూడదో కూడా చెప్పండి.",
      "file2": "10b_ai.wav",
-     "tts2": "కౌంటర్ మీద ఏదైనా పెట్టే ముందు, నా ప్లాన్ చూడండి.",
+     "tts2": "ఏదైనా చేసే ముందు, నా ప్లాన్ చూపించమనండి.",
      "pause": 0.25,
      "gain_db": -1.0
     },
@@ -291,7 +303,27 @@
      "text": "సరే! [1] కస్టమర్లని సంతోషపెట్టు!",
      "show": "Fine! Make the customers happy!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.15,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "ప్రింట్ చేస్తున్నా!",
+     "show": "Printing!",
+     "maxgap": 0.28,
+     "gap": 0.1,
+     "tempo": 1.05,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "ఆగు! ముందు ప్లాన్ చూపిం—",
+     "show": "Wait! Show me the plan fir—",
+     "maxgap": 0.28,
+     "gap": 0.0,
      "tempo": 1.05,
      "gain_db": 0.5
     }

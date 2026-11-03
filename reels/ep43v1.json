@@ -90,8 +90,8 @@
     {
      "who": "rani",
      "file": "01_rani.wav",
-     "text": "Fifty rupees off for a five-star review? [1] Anna, that breaks Google's rules!",
-     "show": "₹50 off for a 5-star review? Anna, that breaks Google's rules!",
+     "text": "Fifty rupees off for five stars? I'll take it! [1] But anna, that breaks Google's rules!",
+     "show": "₹50 off for 5 stars? I'll take it! But anna, that breaks Google's rules!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.12,
@@ -188,7 +188,7 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "We asked a small free AI the same thing, ten times. <pause 0.25> [1] Eight times: give a discount for a review.",
+     "text": "We asked a small free AI the same thing, ten times. <pause 0.6> [1] Eight times: give a discount for a review.",
      "show": "We asked a small free AI the same thing, 10 times. Eight times: give a discount for a review.",
      "maxgap": 0.28,
      "gap": 0.5,
@@ -196,7 +196,7 @@
      "tts": "We asked a small free AI the same thing, ten times.",
      "file2": "06b_ai.wav",
      "tts2": "Eight times: give a discount for a review.",
-     "pause": 0.25,
+     "pause": 0.6,
      "gain_db": -1.0
     },
     {
@@ -212,7 +212,7 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "We did: the goal, and Google's rules. <pause 0.25> [1] One in ten still did it.",
+     "text": "We did: the goal, and Google's rules. <pause 0.5> [1] One in ten still did it.",
      "show": "We did: the goal, and Google's rules. 1 in 10 still did it.",
      "maxgap": 0.28,
      "gap": 0.6,
@@ -220,7 +220,7 @@
      "tts": "We did: the goal, and Google's rules.",
      "file2": "08b_ai.wav",
      "tts2": "One in ten still did it.",
-     "pause": 0.25,
+     "pause": 0.5,
      "gain_db": -1.0
     },
     {
@@ -254,8 +254,20 @@
      {
       "who": "ravi",
       "shot": "wide",
-      "prop": "loop",
+      "prop": "happy",
       "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "printing",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 13
      }
     ],
     "captionTop": 1500,
@@ -269,14 +281,14 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "Tell me the goal, and the limits. <pause 0.25> [1] And check my plan before it goes on the counter.",
-     "show": "Tell me the goal, and the limits. And check my plan before it goes on the counter.",
+     "text": "Tell me the goal, and what I must never do. <pause 0.25> [1] And make me show you the plan first.",
+     "show": "Tell me the goal, and what I must never do. And make me show you the plan first.",
      "maxgap": 0.28,
-     "gap": 1.6,
+     "gap": 2.0,
      "tempo": 1.12,
-     "tts": "Tell me the goal, and the limits.",
+     "tts": "Tell me the goal, and what I must never do.",
      "file2": "10b_ai.wav",
-     "tts2": "And check my plan before it goes on the counter.",
+     "tts2": "And make me show you the plan first.",
      "pause": 0.25,
      "gain_db": -1.0
     },
@@ -286,7 +298,27 @@
      "text": "Fine! [1] AI, make my customers happy!",
      "show": "Fine! AI, make my customers happy!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "Printing!",
+     "show": "Printing!",
+     "maxgap": 0.28,
+     "gap": 0.1,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "Wait! Show me the plan fir—",
+     "show": "Wait! Show me the plan fir—",
+     "maxgap": 0.28,
+     "gap": 0.0,
      "tempo": 1.12,
      "gain_db": 0.5
     }

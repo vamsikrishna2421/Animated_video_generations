@@ -13,36 +13,39 @@ R = ROOT / "reels"
 # ("aim": what you said vs what you meant, "align": the word, "test": our test, "rules": with the goal and the rules).
 # prop: what the line brings on (StarsCrayon.tsx).
 LINES = {
-    1: ("rani", "wide", "hook", "Fifty rupees off for a five-star review? [1] Anna, that breaks Google's rules!",
-        "ఫైవ్ స్టార్ రివ్యూ కి యాభై రూపాయల డిస్కౌంటా? [1] అన్నా, గూగుల్ అలా ఒప్పుకోదు!"),
+    1: ("rani", "wide", "hook", "Fifty rupees off for five stars? I'll take it! [1] But anna, that breaks Google's rules!",   # script review: give her a reason to care
+        "ఫైవ్ స్టార్ కి యాభై రూపాయల డిస్కౌంటా? నాకు ఓకే! [1] కానీ అన్నా, గూగుల్ అలా ఒప్పుకోదు!"),
     2: ("ravi", "wide", "printed", "The AI printed it! [1] I only said: more five-star reviews!",
-        "నేను కాదు, ఫోన్ పెట్టింది! [1] నేను స్టార్ రివ్యూలు పెంచు అని మాత్రమే అన్నా!"),
+        "నేను కాదు, ఫోన్ పెట్టింది! [1] నేను స్టార్ రివ్యూలు పెంచు అని మాత్రమే చెప్పాను!"),
     3: ("ai", "aim", "aim", "You asked for stars. [1] Paying for stars is the shortest way.",
-        "మీరు స్టార్లు అడిగారు. [1] స్టార్లకి డబ్బు ఇవ్వడమే దగ్గరి దారి."),
+        "మీరు స్టార్లు అడిగారు. [1] రివ్యూలకి డబ్బు ఇవ్వడమే దగ్గర దారి."),
     4: ("ravi", "ravi", "meant", "I meant happy customers, not bought ones!", "నాకు కావాల్సింది సంతోషంగా ఉండే కస్టమర్లు, కొన్న స్టార్లు కాదు!"),
     5: ("ai", "align", "align", "That's the alignment problem: [1] I do what you said, not what you meant.",
         "అదే అలైన్మెంట్ సమస్య: [1] మీరు చెప్పింది చేస్తాను, మీరు అనుకున్నది కాదు."),
     6: ("ai", "test", "test", "We asked a small free AI the same thing, ten times. | [1] Eight times: give a discount for a review.",
-        "ఒక చిన్న యాప్ ని ఇదే పది సార్లు అడిగాం. | [1] ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది."),
-    7: ("ravi", "wide", "tell", "So tell it the rules!", "అయితే రూల్స్ చెప్పు!"),
+        "ఒక చిన్న చాట్ బాట్ ని ఇదే పది సార్లు అడిగాం. | [1] ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది."),
+    7: ("ravi", "wide", "tell", "So tell it the rules!", "అయితే దానికి రూల్స్ చెప్పు!"),
     8: ("ai", "rules", "rules", "We did: the goal, and Google's rules. | [1] One in ten still did it.",
         "చెప్పాం: గోల్, గూగుల్ రూల్స్. | [1] అయినా పదిలో ఒకసారి అదే చేసింది."),
     9: ("ravi", "rules", "broke", "It said the rule, then broke it?!", "రూల్ చెప్పి, అదే తప్పు చేసిందా?!"),
-    10: ("ai", "wide", "rule", "Tell me the goal, and the limits. | [1] And check my plan before it goes on the counter.",
-         "నాకు గోల్, హద్దులు రెండూ చెప్పండి. | [1] కౌంటర్ మీద ఏదైనా పెట్టే ముందు, నా ప్లాన్ చూడండి."),
-    11: ("ravi", "wide", "loop", "Fine! [1] AI, make my customers happy!", "సరే! [1] కస్టమర్లని సంతోషపెట్టు!"),   # then the printer: "FREE LADDU FOR EVERY 5★ SMILE!", frame 1 (loops)
+    10: ("ai", "wide", "rule", "Tell me the goal, and what I must never do. | [1] And make me show you the plan first.",   # script review: a prompt to copy on the card
+         "నాకు గోల్ చెప్పండి, ఏం చేయకూడదో కూడా చెప్పండి. | [1] ఏదైనా చేసే ముందు, నా ప్లాన్ చూపించమనండి."),
+    11: ("ravi", "wide", "happy", "Fine! [1] AI, make my customers happy!", "సరే! [1] కస్టమర్లని సంతోషపెట్టు!"),
+    12: ("ai", "wide", "printing", "Printing!", "ప్రింట్ చేస్తున్నా!"),
+    13: ("ravi", "wide", "loop", "Wait! Show me the plan fir—", "ఆగు! ముందు ప్లాన్ చూపిం—"),   # script review: rule 3 is the joke: the printer spits out the ₹50 sign of frame 1 (loops)
 }
 TTS_EN = {}   # spoken forms
-SHOW = {1: "₹50 off for a 5-star review? Anna, that breaks Google's rules!", 2: "The AI printed it! I only said: more 5-star reviews!",
+SHOW = {1: "₹50 off for 5 stars? I'll take it! But anna, that breaks Google's rules!", 2: "The AI printed it! I only said: more 5-star reviews!",
         6: "We asked a small free AI the same thing, 10 times. Eight times: give a discount for a review.",
         8: "We did: the goal, and Google's rules. 1 in 10 still did it."}
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
-    1: "₹50 discount for a 5-star review? Anna, Google doesn't allow that!", 2: "Not me, the phone put it up! I only said: increase star reviews!",
-    3: "You asked for stars. <pause 0.25> Paying for stars is the shortest road.", 4: "What I want is happy customers, not bought stars!",
+    1: "₹50 discount for 5 stars? Fine by me! But anna, Google doesn't allow that!", 2: "Not me, the phone put it up! I only said: increase star reviews!",
+    3: "You asked for stars. <pause 0.25> Paying for reviews is the shortest road.", 4: "What I want is happy customers, not bought stars!",
     5: "That's the alignment problem: <pause 0.25> I do what you said, not what you meant.",
-    6: "We asked a small app the same thing 10 times. <pause 0.25> 8 times it said: give a discount for a review.", 7: "Then tell it the rules!",
+    6: "We asked a small chatbot the same thing 10 times. <pause 0.25> 8 times it said: give a discount for a review.", 7: "Then tell it the rules!",
     8: "We did: the goal, Google's rules. <pause 0.25> Still, 1 in 10 did the same.", 9: "It said the rule, then made the same mistake?!",
-    10: "Tell me both the goal and the limits. <pause 0.25> Before anything goes on the counter, check my plan.", 11: "Fine! Make the customers happy!",
+    10: "Tell me the goal, and what I must not do. <pause 0.25> Before I do anything, make me show my plan.", 11: "Fine! Make the customers happy!",
+    12: "Printing!", 13: "Wait! Show me the plan fir—",
 }
 NOCAP = set()
 PAUSES = {}
@@ -55,8 +58,8 @@ TEMPO_LINE_TE = {}
 # again on the last line and the slam back to frame 1. The scenes step up.
 SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 1.0, "tail": 0.0}),
           ("s_b", (6, 7, 8, 9), {"boost": 1.25, "drop_at": [[2, 1]], "tail": 0.0}),   # out before "one in ten"
-          ("s_c", (10, 11), {"outro": True, "pre": 0.3, "boost": 1.55, "rise": 1.25, "tail": 0.0})]
-GAP = {1: 0.25, 2: 0.2, 3: 0.2, 4: 0.25, 5: 0.4, 6: 0.5, 7: 0.25, 8: 0.6, 9: 0.4, 10: 1.6, 11: 0.3}   # 10: the rule chip holds
+          ("s_c", (10, 11, 12, 13), {"outro": True, "pre": 0.3, "boost": 1.55, "rise": 1.25, "tail": 0.0})]
+GAP = {1: 0.25, 2: 0.2, 3: 0.2, 4: 0.25, 5: 0.4, 6: 0.5, 7: 0.25, 8: 0.6, 9: 0.4, 10: 2.0, 11: 0.15, 12: 0.1, 13: 0.0}   # 10: the prompt card holds 3 s+; 11-13 run together   # 10: the rule chip holds
 GAP_TE = {10: 1.0}
 GAIN = {}
 GAIN_TE = {}
@@ -95,7 +98,7 @@ def spec(lang="en"):
                 ln["pauses"] = PAUSES[n]
             if " | " in ln["text"]:   # two takes; the text keeps its cues, split where the second take starts
                 p1, p2 = ln["text"].split(" | ")
-                pz = 0.25
+                pz = {6: 0.6, 8: 0.5}.get(n, 0.25)   # script review: a pause before "Eight times" and "One in ten"
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             g = (-1.0 if who == "ai" else 0.5) + (GAIN_TE if te else GAIN).get(n, 0.0)

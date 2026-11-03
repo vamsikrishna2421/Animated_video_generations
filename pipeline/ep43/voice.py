@@ -33,7 +33,7 @@ VOICE_TE = {**VOICE_TE0, "rani": "Lalitha speaks loudly and sharply, upset and v
                                  "background noise."}
 LIGHT_EN = set()   # the AI's numbers through the lighter phone sound (filled from the script)
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("fifty", "50"), ("rupees", "rupee"), ("five", "5"), ("star",), ("review",), ("google's", "google", "googles"), ("rules", "rule")],
+MUST = {"en": {1: [("fifty", "50"), ("rupees", "rupee"), ("five", "5"), ("stars", "star"), ("take",), ("google's", "google", "googles"), ("rules", "rule")],
                2: [("ai", "a.i"), ("printed", "print"), ("only",), ("five", "5"), ("star",), ("reviews", "review")],
                3: [("asked", "ask"), ("stars", "star"), ("paying", "pay"), ("shortest", "short")],
                4: [("meant", "mean"), ("happy",), ("customers", "customer"), ("bought",)],
@@ -42,8 +42,8 @@ MUST = {"en": {1: [("fifty", "50"), ("rupees", "rupee"), ("five", "5"), ("star",
                7: [("tell",), ("rules", "rule")],
                8: [("goal",), ("google's", "google", "googles"), ("rules", "rule")], "8b": [("one", "1"), ("ten", "10"), ("still",)],
                9: [("said",), ("rule",), ("broke",)],
-               10: [("goal",), ("limits", "limit")], "10b": [("check",), ("plan",), ("counter",)],
-               11: [("fine",), ("happy",), ("customers", "customer")]},
+               10: [("goal",), ("never",)], "10b": [("show",), ("plan",), ("first",)],
+               11: [("fine",), ("happy",), ("customers", "customer")], 12: [("printing", "print")], 13: [("wait",), ("show",), ("plan",)]},
         "te": {}}
 
 
@@ -102,7 +102,7 @@ def level(path, under=4.0, cap=12.0):
 
 
 # English lines whose judge text needs digits (Whisper writes numbers as digits)
-JUDGE_TEXT = {1: "50 rupees off for a 5-star review? Anna, that breaks Google's rules!", 2: "The AI printed it! I only said: more 5-star reviews!",
+JUDGE_TEXT = {1: "50 rupees off for 5 stars? I'll take it! But anna, that breaks Google's rules!", 2: "The AI printed it! I only said: more 5-star reviews!",
               6: "We asked a small free AI the same thing, 10 times.", "6b": "8 times: give a discount for a review.", "8b": "1 in 10 still did it."}
 
 
