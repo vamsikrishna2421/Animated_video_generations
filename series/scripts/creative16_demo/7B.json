@@ -1,0 +1,358 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 400 tokens",
+ "prompts": {
+  "write": "Write a message for my father's 60th birthday cake. The cake is small: it fits only 15 letters, so the message must be 15 letters or fewer (spaces don't count). Reply with just the message.",
+  "count": "How many letters are in \"HAPPY 60TH BIRTHDAY NANNA\"? Don't count spaces. Reply with just the number.",
+  "spell": "Spell \"HAPPY 60TH BIRTHDAY NANNA\" one character per line, numbered, skipping spaces. Then give the total."
+ },
+ "truth": 22,
+ "rows": [
+  {
+   "way": "write",
+   "try": 1,
+   "reply": "Happy 60th Dad love always x",
+   "score": {
+    "message": "Happy 60th Dad love always x",
+    "chars": 23,
+    "fits": false
+   },
+   "seconds": 4.8
+  },
+  {
+   "way": "write",
+   "try": 2,
+   "reply": "Happy 60th Dad love always",
+   "score": {
+    "message": "Happy 60th Dad love always",
+    "chars": 22,
+    "fits": false
+   },
+   "seconds": 1.6
+  },
+  {
+   "way": "write",
+   "try": 3,
+   "reply": "Happy 60th Dad! Love always.",
+   "score": {
+    "message": "Happy 60th Dad! Love always.",
+    "chars": 24,
+    "fits": false
+   },
+   "seconds": 1.8
+  },
+  {
+   "way": "write",
+   "try": 4,
+   "reply": "Happy dad 60th birthday!",
+   "score": {
+    "message": "Happy dad 60th birthday!",
+    "chars": 21,
+    "fits": false
+   },
+   "seconds": 1.6
+  },
+  {
+   "way": "write",
+   "try": 5,
+   "reply": "Happy 60th Dad! Love sempre",
+   "score": {
+    "message": "Happy 60th Dad! Love sempre",
+    "chars": 23,
+    "fits": false
+   },
+   "seconds": 1.7
+  },
+  {
+   "way": "write",
+   "try": 6,
+   "reply": "Happy dad 60th birthday!",
+   "score": {
+    "message": "Happy dad 60th birthday!",
+    "chars": 21,
+    "fits": false
+   },
+   "seconds": 1.7
+  },
+  {
+   "way": "write",
+   "try": 7,
+   "reply": "Happy dad 60th birthday!",
+   "score": {
+    "message": "Happy dad 60th birthday!",
+    "chars": 21,
+    "fits": false
+   },
+   "seconds": 1.6
+  },
+  {
+   "way": "write",
+   "try": 8,
+   "reply": "Happy dad 60th cake!",
+   "score": {
+    "message": "Happy dad 60th cake!",
+    "chars": 17,
+    "fits": false
+   },
+   "seconds": 1.7
+  },
+  {
+   "way": "write",
+   "try": 9,
+   "reply": "Happy dad 60th birthday!",
+   "score": {
+    "message": "Happy dad 60th birthday!",
+    "chars": 21,
+    "fits": false
+   },
+   "seconds": 1.6
+  },
+  {
+   "way": "write",
+   "try": 10,
+   "reply": "Happy dad 60th birthday!",
+   "score": {
+    "message": "Happy dad 60th birthday!",
+    "chars": 21,
+    "fits": false
+   },
+   "seconds": 1.6
+  },
+  {
+   "way": "count",
+   "try": 1,
+   "reply": "14",
+   "score": {
+    "value": 14,
+    "ok": false
+   },
+   "seconds": 2.0
+  },
+  {
+   "way": "count",
+   "try": 2,
+   "reply": "14",
+   "score": {
+    "value": 14,
+    "ok": false
+   },
+   "seconds": 0.6
+  },
+  {
+   "way": "count",
+   "try": 3,
+   "reply": "14",
+   "score": {
+    "value": 14,
+    "ok": false
+   },
+   "seconds": 0.6
+  },
+  {
+   "way": "count",
+   "try": 4,
+   "reply": "15",
+   "score": {
+    "value": 15,
+    "ok": false
+   },
+   "seconds": 0.7
+  },
+  {
+   "way": "count",
+   "try": 5,
+   "reply": "14",
+   "score": {
+    "value": 14,
+    "ok": false
+   },
+   "seconds": 0.7
+  },
+  {
+   "way": "count",
+   "try": 6,
+   "reply": "15",
+   "score": {
+    "value": 15,
+    "ok": false
+   },
+   "seconds": 0.6
+  },
+  {
+   "way": "count",
+   "try": 7,
+   "reply": "15",
+   "score": {
+    "value": 15,
+    "ok": false
+   },
+   "seconds": 0.6
+  },
+  {
+   "way": "count",
+   "try": 8,
+   "reply": "15",
+   "score": {
+    "value": 15,
+    "ok": false
+   },
+   "seconds": 0.6
+  },
+  {
+   "way": "count",
+   "try": 9,
+   "reply": "15",
+   "score": {
+    "value": 15,
+    "ok": false
+   },
+   "seconds": 0.5
+  },
+  {
+   "way": "count",
+   "try": 10,
+   "reply": "15",
+   "score": {
+    "value": 15,
+    "ok": false
+   },
+   "seconds": 0.5
+  },
+  {
+   "way": "spell",
+   "try": 1,
+   "reply": "Sure, here it is:\n\n1 H\n2 A\n3 P\n4 P\n5 Y\n6 6\n7 0\n8 t\n9 h\n10  B\n11 I\n12 R\n13 T\n14 H\n15 A\n16 R\n17 D\n18 A\n19 Y\n20 N\n21 A\n22 N\n23 A\n\nThe total number of characters, including numbers and letters but excluding spaces, is 23.",
+   "score": {
+    "value": 23,
+    "ok": false,
+    "list": "HAPPY60thBIRTHARDAYNANA",
+    "list_ok": false
+   },
+   "seconds": 21.8
+  },
+  {
+   "way": "spell",
+   "try": 2,
+   "reply": "1\nH\n2\nA\n3\nP\n4\nP\n5\nY\n6\n6\n7\n0\n8\nT\n9\nB\n10\nI\n11\nR\n12\nT\n13\nH\n14\nA\n15\nD\n16\nA\n17\nY\n18\nN\n19\nA\n20\n\nTotal characters: 20",
+   "score": {
+    "value": 20,
+    "ok": false,
+    "list": "HAPPY60TBIRTHADAYNA",
+    "list_ok": false
+   },
+   "seconds": 16.7
+  },
+  {
+   "way": "spell",
+   "try": 3,
+   "reply": "1\nH\n2\nA\n3\nP\n4\nP\n5\nY\n6\n6\n7\n0\n8\nT\n9\nB\n10\nI\n11\nR\n12\nT\n13\nH\n14\nA\n15\nR\n16\nD\n17\nA\n18\nY\n19\nN\n20\nN\n21\nA\n\nTotal: 21 characters",
+   "score": {
+    "value": 21,
+    "ok": false,
+    "list": "HAPPY60TBIRTHARDAYNNA",
+    "list_ok": false
+   },
+   "seconds": 18.3
+  },
+  {
+   "way": "spell",
+   "try": 4,
+   "reply": "Sure, here it is:\n\n1 H\n2 A\n3 P\n4 P\n5 Y\n6 H\n7 A\n8 P\n9 P\n10 Y\n11 6\n12 0\n13 T\n14  B\n15 I\n16 R\n17 T\n18 H\n19 A\n20 R\n21 D\n22 A\n23 Y\n24 N\n25 A\n26 N\n27 A\n\nTotal characters: 27",
+   "score": {
+    "value": 27,
+    "ok": false,
+    "list": "HAPPYHAPPY60TBIRTHARDAYNANA",
+    "list_ok": false
+   },
+   "seconds": 23.1
+  },
+  {
+   "way": "spell",
+   "try": 5,
+   "reply": "1\nH\n2\nA\n3\nP\n4\nP\n5\nY\n6\n6\n7\n0\n8\nT\n9\nB\n10\nI\n11\nR\n12\nT\n13\nH\n14\nA\n15\nN\n16\nN\n17\n\nThe total number of characters is 17.",
+   "score": {
+    "value": 17,
+    "ok": false,
+    "list": "HAPPY60TBIRTHANN",
+    "list_ok": false
+   },
+   "seconds": 16.5
+  },
+  {
+   "way": "spell",
+   "try": 6,
+   "reply": "Sure, here is \"HAPPY 60TH BIRTHDAY NANNA\" spelled out one character per line, numbered, skipping spaces:\n\n1. H\n2. A\n3. P\n4. P\n5. Y\n6. 6\n7. 0\n8. T\n9. H\n10. B\n11. I\n12. R\n13. T\n14. D\n15. A\n16. Y\n17. N\n18. A\n19. N\n20. A\n\nThe total number of characters, excluding spaces, is 20.",
+   "score": {
+    "value": 20,
+    "ok": false,
+    "list": "HAPPY60THBIRTDAYNANA",
+    "list_ok": false
+   },
+   "seconds": 25.2
+  },
+  {
+   "way": "spell",
+   "try": 7,
+   "reply": "1 H\n2 A\n3 P\n4 P\n5 Y\n6 6\n7 0\n8 T\n9 B\n10 I\n11 R\n12 T\n13 H\n14 A\n15 Y\n16 N\n17 A\n\nTotal characters: 17",
+   "score": {
+    "value": 17,
+    "ok": false,
+    "list": "HAPPY60TBIRTHAYNA",
+    "list_ok": false
+   },
+   "seconds": 12.4
+  },
+  {
+   "way": "spell",
+   "try": 8,
+   "reply": "1 H\n2 A\n3 P\n4 P\n5 Y\n6 6\n7 0\n8 t\n9 h\n10  B\n11 I\n12 R\n13 T\n14  B\n15 I\n16 R\n17 T\n18 H\n19 A\n20 R\n21 D\n22 A\n23 Y\n24 N\n25 N\n26 A\n27 A\n28 A\n29 A\n30 14\n\nTotal: 30 characters",
+   "score": {
+    "value": 30,
+    "ok": false,
+    "list": "HAPPY60thBIRTBIRTHARDAYNNAAAA",
+    "list_ok": false
+   },
+   "seconds": 22.9
+  },
+  {
+   "way": "spell",
+   "try": 9,
+   "reply": "1 H\n2 A\n3 P\n4 P\n5 Y\n6 6\n7 0\n8 t\n9 h\n10 B\n11 I\n12 R\n13 T\n14 H\n15 A\n16 R\n17 D\n18 A\n19 Y\n20 N\n21 A\n22 N\n23 A\n24 (total characters: 24)",
+   "score": {
+    "value": 24,
+    "ok": false,
+    "list": "HAPPY60thBIRTHARDAYNANA",
+    "list_ok": false
+   },
+   "seconds": 17.3
+  },
+  {
+   "way": "spell",
+   "try": 10,
+   "reply": "1 H\n2 A\n3 P\n4 P\n5 Y\n6 6\n7 0\n8 T\n9 B\n10 I\n11 R\n12 T\n13 H\n14 A\n15 Y\n16 N\n17 A\n\nThe total number of characters is 17.",
+   "score": {
+    "value": 17,
+    "ok": false,
+    "list": "HAPPY60TBIRTHAYNA",
+    "list_ok": false
+   },
+   "seconds": 14.6
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}
