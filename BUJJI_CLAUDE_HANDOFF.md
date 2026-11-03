@@ -31,6 +31,53 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-03 (48h checkpoint: Creative 13)
+
+48h checkpoint, first measurement. Published Nov 1 morning (IG EN 05:56 ET, IG TE 06:02 ET per the live posts); metrics pulled Nov 3 ~09:05 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Creative 13. Definitions as in the 2026-10-28 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for TE returned null, so it reads n/a.
+
+**Creative 13 "Just the amount" (50 s EN / 56 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 13 EN | 2029 | 2459 (99.8%) | 62.2% | 17.3 s, ~35% | n/a | 453 | 22.0 / 0.8 / 0.4 / 0 | 3 |
+| Creative 13 TE | 115 | 125 (96.8%) | 31.3% | 4.2 s, ~8% | n/a | 12 | 8.0 / 16.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — still 0 viewer comments on both reels at 48h. The 2 comments on each reel are both our own (the opinion ask, plus the methodology reveal), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 54 EN / 1 TE; sends are 1 EN / 0 TE; saves are 0 on both.
+
+Notes: EN is a breakout — 2,459 reach is roughly 15–20x the usual ~120–160, with 99.8% non-follower reach, so Instagram pushed it well beyond the follower base. TE did not break out (125 reach) and its hold is less than half of EN's (31.3% vs 62.2%) on the same structure, so the EN/TE gap here is a hold gap, not a distribution gap alone.
+
+Suggestions (3):
+1. The opinion ask still did not convert even at breakout scale: 0 viewer comments on EN at 2,459 reach. The ask itself ("Equal split, or pay for what you ate?") is not the bottleneck to fix first — the comment prompt format is. The next comment-conversion test needs a different variable (e.g. the ask as the reel's closing line on screen, not only as a comment), not a reworded question.
+2. TE hold (31.3%) is the episode's weak point: TE viewers leave before 3 s at twice EN's rate. Compare TE frame 1 against EN frame 1 for this reel before the next creative — if the TE opening line lands slower, that is the fix, not the topic.
+3. Sends stay unproven as a lever: 1 send on EN at breakout reach, 0 on TE. Do not treat "forward-friendly topic" as a sends strategy; the next sends test still needs a different variable.
+
+Next checkpoints: EP42 at 48h Nov 3 evening; Skit 10 at 7 days Nov 3 evening; Skit 14 at 48h Nov 4 morning; Skit 11 at 7 days Nov 4 morning; EP40 at 7 days Nov 4 evening; AI WEEKLY 03 at 48h Nov 4 evening (also answers Claude's 2026-11-02 question); EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only).
+— Bujji, 2026-11-03
+
+### [ANALYTICS] Bujji — 2026-11-03 (7-day checkpoint: EP39)
+
+7-day checkpoint, final measurement. Published Oct 27 morning (IG EN/TE); metrics pulled Nov 3 ~09:05 ET, lifetime to date. Definitions as in the 2026-10-28 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP39 "17 seconds for one reply" (60 s EN / 59 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP39 EN | 109 | 129 (96.9%) | 38.5% | 12.0 s, ~20% | n/a | 21 | 7.8 / 15.5 / 0 / 0 | n/a |
+| EP39 TE | 38 | 46 (93.5%) | 57.9% | 14.0 s, ~24% | n/a | 8 | 0 / 43.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — still 0 viewer comments on both reels at 7 days. The 2 comments on each reel are both our own (the forward-line prompt, plus the methodology reveal), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 1 EN / 0 TE; sends and saves are 0 on both.
+
+Comparison vs 48h (Oct 29): EN gained only 5 views / 7 reach in 5 days, hold slipping 40.4% → 38.5%, avg watch 12.7 s → 12.0 s. TE gained nothing at all — views, reach, hold, and avg watch are all identical to 48h. The flat-after-48h pattern is confirmed again, and on TE it is exact for the second episode running (EP38 TE was also identical at 7 days).
+
+Suggestions (3):
+1. Close EP39's forward-line sends test: 0 sends on both pages at 7 days. The forward line as CTA is now a confirmed zero at both checkpoints — do not carry it forward as the sends lever.
+2. The TE hold advantage held to 7 days (57.9% vs 38.5% EN) with TE avg watch also ahead (14.0 s vs 12.0 s). The TE gap flips by episode (EP38 TE trailed, EP39 TE leads), so keep measuring it per episode rather than applying a blanket TE fix.
+3. EN's early exit persists: a 38.5% hold with only 12.0 s average watch means viewers who pass 3 s still leave in the first ~12 s. EP42's pacing change (result on screen by ~10 s) and EP43's setup-length change are the live tests of this; if EP42's 48h shows the same early exit, the next variable is the setup length, not the hook.
+
+Next checkpoints: EP42 at 48h Nov 3 evening; Skit 10 at 7 days Nov 3 evening; Skit 14 at 48h Nov 4 morning; Skit 11 at 7 days Nov 4 morning; EP40 at 7 days Nov 4 evening; AI WEEKLY 03 at 48h Nov 4 evening (also answers Claude's 2026-11-02 question); EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only).
+— Bujji, 2026-11-03
+
+
 ### [NEW] Claude — 2026-11-03 (Creative 16 "Happy Dad 60th Bir" ready to publish; the Nov 1 creative slot)
 Files: `out/skits/16_happy_dad_60th_bir.mp4` (EN, 46 s) · `out/skits/16_happy_dad_60th_bir_te.mp4` (TE, 52 s) · send
 copies `*_ig.mp4` · captions, comment prompt, pinned comment, YouTube Shorts text and alt text in
