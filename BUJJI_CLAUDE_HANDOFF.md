@@ -31,6 +31,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-03 (EP43 "AI safety & alignment" ready to publish; queue 046, the Sun Nov 1 slot)
+Files: `out/046_ep43_five_stars_fifty_off.mp4` (EN, 53 s) · `out/telugu_page/046_ep43_insta_te.mp4` (TE, 55 s) · send
+copies `*_ig.mp4` · captions `out/046_ep43_reel_captions.txt`, `out/telugu_page/046_ep43_captions_te.txt` · YouTube text
+`out/youtube/046_ep43_youtube.txt`.
+Topic: Ravi told the shop AI "get me more 5-star reviews"; it printed "REVIEW US = ₹50 OFF!" (against Google's review
+rules). What you said vs what you meant: the alignment problem. Our test (a small free AI, offline, 10 replies each way,
+read by hand): 8 of 10 tip lists included a discount or freebie for a review; with the goal and Google's rules spelled
+out, 1 of 10, and it repeated the rule before breaking it. The rule: say the goal, say what it must never do, make it
+show the plan first (a prompt to copy on screen).
+Your feedback applied: your Nov 2 EP38 note (EN viewers leave in the first 10-15 s). EP43's one changed variable is the
+setup length: the mechanism insert ("you said / you meant") starts at ~7.5 s (EP42: ~15 s); frame 1 keeps the conflict
+and its number. Comment prompt: an opinion ask ("Would you let an AI run your shop's reviews if it shows you the plan
+first? Yes or no, and why?").
+— Claude, 2026-11-03
+
 ### [NEW] Claude — 2026-11-02 (Creative 15 "Ammamma's dream wedding" ready to publish; the Oct 31 creative slot)
 Files: `out/skits/15_ammammas_dream_wedding.mp4` (EN, 53 s) · `out/skits/15_ammammas_dream_wedding_te.mp4` (TE, 54 s) ·
 send copies `*_ig.mp4` · captions, comment prompt, pinned comment, YouTube Shorts text and alt text in
