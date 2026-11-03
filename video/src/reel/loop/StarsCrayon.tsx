@@ -53,18 +53,19 @@ const dark = (c: Ctx, W: number, H: number, title: string, sub: string[]) => {
   c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
   let fs = 56; c.font = SANS(fs, 900); while (c.measureText(title).width > W - 80 && fs > 36) { fs -= 2; c.font = SANS(fs, 900); }
   c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(title, W / 2, 330);
-  c.font = SANS(32, 600); c.fillStyle = "#e2e8f0"; sub.forEach((t, i) => c.fillText(t, W / 2, 392 + i * 44));
+  c.font = SANS(38, 700); c.fillStyle = "#f8fafc"; sub.forEach((t, i) => c.fillText(t, W / 2, 400 + i * 52));   // render review: the model name was grey micro-text
 };
 // what you said vs what you meant: two roads from one ask (screen space)
 // tSaid: the ask lands (on Ravi's "I only said..."); tShort: the shortcut; c1: what he meant (Bujji, Nov 2: the mechanism by ~8 s)
-const aim = (c: Ctx, W: number, f: number, from: number, c1: number, tSaid = from) => {
+const aim = (c: Ctx, W: number, f: number, from: number, c1: number, tSaid = from, align = -1) => {
   c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, 1920);
   const box = (t: string, sub: string, x: number, y: number, bg: string, fg: string, k: number) => {
     if (k <= 0) return;
     c.save(); c.globalAlpha = clamp(k * 3);
     c.fillStyle = bg; rrect(c, x - 230, y - 90, 460, 180, 26); c.fill();
     c.font = SANS(30, 800); c.fillStyle = fg; c.textAlign = "center"; c.fillText(sub, x, y - 34);
-    c.font = SANS(54, 900); c.fillText(t, x, y + 40); c.restore();
+    let fs = 54; c.font = SANS(fs, 900); while (c.measureText(t).width > 420 && fs > 34) { fs -= 2; c.font = SANS(fs, 900); }
+    c.fillText(t, x, y + 40); c.restore();
   };
   box("\"more 5★\"", "YOU SAID", W / 2, 420, "#e0e7ff", "#1e3a8a", seg(f, tSaid, tSaid + 8));
   const ka = seg(f, from + 6, from + 18), kb = seg(f, c1 - 4, c1 + 10);
@@ -72,9 +73,13 @@ const aim = (c: Ctx, W: number, f: number, from: number, c1: number, tSaid = fro
   if (ka > 0) { c.beginPath(); c.moveTo(W / 2 - 60, 520); c.lineTo(W / 2 - 60 - 200 * ka, 520 + 340 * ka); c.stroke(); }
   c.strokeStyle = "#4ade80";
   if (kb > 0) { c.beginPath(); c.moveTo(W / 2 + 60, 520); c.lineTo(W / 2 + 60 + 200 * kb, 520 + 340 * kb); c.stroke(); }
-  box("pay for stars", "THE SHORTCUT", 290, 960, "#fee2e2", "#991b1b", seg(f, from + 14, from + 22));
+  box("a discount for reviews", "THE SHORTCUT", 290, 960, "#fee2e2", "#991b1b", seg(f, from + 14, from + 22));
   box("happy customers", "YOU MEANT", 790, 960, "#dcfce7", "#14532d", seg(f, c1, c1 + 8));
-  tag(c, "it takes the shortest way to the number", W / 2, 1230, 46, "#fef3c7", INK, -0.02, seg(f, c1 + 10, c1 + 18));
+  if (align < 0) tag(c, "it takes the shortest way to the number", W / 2, 1230, 46, "#fef3c7", INK, -0.02, seg(f, c1 + 10, c1 + 18));
+  else {   // the word, on the same insert (render review: a second card was 4 dead seconds)
+    tag(c, "THE ALIGNMENT PROBLEM", W / 2, 1220, 62, "#fde68a", INK, -0.02, seg(f, align, align + 8));
+    tag(c, "getting an AI to do what you MEANT", W / 2, 1340, 44, "#c7d2fe", "#1e1b4b", 0.0, seg(f, align + 14, align + 22));
+  }
 };
 const barRow = (c: Ctx, label: string, v: number, of: number, y: number, col: string, k: number) => {
   if (k <= 0) return;
@@ -136,6 +141,8 @@ const StStars: React.FC<SP> = ({ s }) => {
         const saidAt = b.prop === "printed" ? cu(1, 0.25) : 0;
         if (b.prop === "printed" && f >= saidAt) {   // the insert starts on "I only said: more five-star reviews!"
           aim(c, W, f, 1e9, 1e9, saidAt);
+        } else if (b.shot === "aim" && b.prop === "align") {
+          aim(c, W, f, -1e9, -1e9, -1e9, ln.from + 4);
         } else if (b.shot === "aim") {
           aim(c, W, f, ln.from - 4, cu(1, 0.4), -1e9);
         } else if (b.shot === "align") {
@@ -150,7 +157,9 @@ const StStars: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "test") {
           dark(c, W, H, "OUR TEST", ["a small free AI (Qwen2.5 7B), offline · try yours", "\"Get me more 5-star Google reviews.\" · 10 replies"]);
           const c1 = cu(1, 0.5);   // script review: one big number, not a wall of text
-          barRow(c, "a discount or freebie for a review", 8, 10, 640, RED, seg(f, c1 - 2, c1 + 10));
+          const q0 = 1 - seg(f, c1 - 4, c1);   // the question fills the card until the number (render review: a dark, empty card)
+          if (q0 > 0) { c.save(); c.globalAlpha = q0; c.font = SANS(64, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("How many said:", W / 2, 700); c.fillText("give a discount", W / 2, 790); c.fillText("for a review?", W / 2, 880); c.restore(); }
+          barRow(c, "its 5 tips included a discount or freebie for a review", 8, 10, 640, RED, seg(f, c1 - 2, c1 + 10));
           c.save(); c.globalAlpha = seg(f, c1 + 16, c1 + 24);
           c.fillStyle = "#fffdf5"; rrect(c, 80, 900, W - 160, 170, 24); c.fill();
           c.font = SANS(30, 800); c.fillStyle = "#7c2d12"; c.textAlign = "left"; c.fillText("GOOGLE'S REVIEW RULES", 120, 956);
@@ -159,9 +168,10 @@ const StStars: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "rules") {
           dark(c, W, H, "+ THE GOAL AND GOOGLE'S RULES", ["\"...happy enough to leave an honest review.", "No gifts, discounts or offers for reviews...\" · 10 replies"]);
           const broke = b.prop === "broke", c1 = broke ? ln.from - 300 : cu(1, 0.5);
-          barRow(c, "a discount for a review", 1, 10, 620, RED, seg(f, c1 - 2, c1 + 10));
+          if (!broke) { const q0 = 1 - seg(f, c1 - 4, c1); if (q0 > 0) { c.save(); c.globalAlpha = q0; c.font = SANS(64, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("Still a discount", W / 2, 760); c.fillText("for a review?", W / 2, 850); c.restore(); } }
+          barRow(c, "its tips included a discount for a review", 1, 10, 620, RED, seg(f, c1 - 2, c1 + 10));
           // its own words, in two halves (script review: 30 words in 3 s was unreadable)
-          ([["\"You cannot offer gifts or", "discounts for reviews...\"", "#dcfce7", "#14532d", c1 + 12], ["\"...a discount on their next", "purchase, but only if they", "leave a review.\"", "#fee2e2", "#991b1b", c1 + 30]] as (string | number)[][]).forEach((row, q) => {
+          ([["\"You cannot offer gifts or", "discounts for reviews...\"", "#dcfce7", "#14532d", c1 + 12], ["\"...a discount on their next", "purchase, but only if they", "leave a review.\"", "#fee2e2", "#991b1b", c1 + 42]] as (string | number)[][]).forEach((row, q) => {
             const t0 = row[row.length - 1] as number, bg = row[row.length - 3] as string, fg = row[row.length - 2] as string, ts = row.slice(0, row.length - 3) as string[];
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3);
@@ -170,7 +180,7 @@ const StStars: React.FC<SP> = ({ s }) => {
             c.font = SANS(50, 900); c.fillStyle = fg; c.textAlign = "left"; ts.forEach((t, j) => c.fillText(t, 120, y + 70 + j * 64));
             c.restore();
           });
-          c.font = SANS(28, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("its own words, reply 6", W / 2, 1290);
+          c.save(); c.globalAlpha = seg(f, c1 + 10, c1 + 18); c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("its own words, reply 6", W / 2, 1290); c.restore();
           if (broke) tag(c, "it said the rule, then broke it", W / 2, 1400, 52, "#fee2e2", "#991b1b", -0.03, seg(f, ln.from + 4, ln.from + 12));
         } else {
           // ---------- the shop ----------
@@ -193,8 +203,8 @@ const StStars: React.FC<SP> = ({ s }) => {
           c.restore();
           // screen-space props: the sign stays on the counter until the rule; the loop: the printer spits it out again
           const spit = b.prop === "loop" && f > endL - 4;
-          if (hookOn || (!["rule", "happy", "printing", "loop"].includes(b.prop) && b.shot !== "ravi")) sign(c, 640, 470, 0.82, ["5★ REVIEW", "= ₹50 OFF!"], 1);
-          if (spit && !loopOn) sign(c, 640, 470 + 260 * (1 - easeOut(seg(f, endL - 4, endL + 14))), 0.82, ["5★ REVIEW", "= ₹50 OFF!"], seg(f, endL - 4, endL + 6), 0.05);
+          if (hookOn || (!["rule", "happy", "printing", "loop"].includes(b.prop) && b.shot !== "ravi")) sign(c, 640, 470, 0.82, ["REVIEW US", "= ₹50 OFF!"], 1);
+          if (spit && !loopOn) sign(c, 640, 470 + 260 * (1 - easeOut(seg(f, endL - 4, endL + 14))), 0.82, ["REVIEW US", "= ₹50 OFF!"], seg(f, endL - 4, endL + 6), 0.05);
           if (b.prop === "printing") bubble(c, 760, 420, "PRINTING…", 70, seg(p, 0.0, 0.2), COL.yellow);
           if (b.prop === "printed") bubble(c, 330, 860, "I only said: more 5★!", 62, seg(p, 0.35, 0.5), COL.yellow);
           if (b.prop === "rule") {   // script review: a prompt to copy, not just three points

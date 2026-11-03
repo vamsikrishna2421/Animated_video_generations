@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 1.5,
+ "musicGapGain": 1.1,
  "musicEndRamp": [
   0.88,
   5.0
@@ -74,7 +74,7 @@
      },
      {
       "who": "ai",
-      "shot": "align",
+      "shot": "aim",
       "prop": "align",
       "n": 5
      }
@@ -90,8 +90,8 @@
     {
      "who": "rani",
      "file": "01_rani.wav",
-     "text": "Fifty rupees off for five stars? I'll take it! [1] But anna, that breaks Google's rules!",
-     "show": "₹50 off for 5 stars? I'll take it! But anna, that breaks Google's rules!",
+     "text": "Fifty rupees off for a review? I will take it! [1] But anna, that breaks Google's rules!",
+     "show": "₹50 off for a review? I'll take it! But anna, that breaks Google's rules!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.12,
@@ -110,8 +110,8 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "You asked for stars. [1] Paying for stars is the shortest way.",
-     "show": "You asked for stars. Paying for stars is the shortest way.",
+     "text": "You asked for five stars. [1] A discount for reviews is the shortest way.",
+     "show": "You asked for five stars. A discount for reviews is the shortest way.",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.12,
@@ -145,6 +145,10 @@
    "tail": 0.0,
    "boost": 1.25,
    "drop_at": [
+    [
+     0,
+     1
+    ],
     [
      2,
      1
@@ -188,7 +192,7 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "We asked a small free AI the same thing, ten times. <pause 0.6> [1] Eight times: give a discount for a review.",
+     "text": "We asked a small free AI the same thing, ten times. <pause 0.8> [1] Eight times: give a discount for a review.",
      "show": "We asked a small free AI the same thing, 10 times. Eight times: give a discount for a review.",
      "maxgap": 0.28,
      "gap": 0.5,
@@ -196,7 +200,7 @@
      "tts": "We asked a small free AI the same thing, ten times.",
      "file2": "06b_ai.wav",
      "tts2": "Eight times: give a discount for a review.",
-     "pause": 0.6,
+     "pause": 0.8,
      "gain_db": -1.0
     },
     {
@@ -212,7 +216,7 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "We did: the goal, and Google's rules. <pause 0.5> [1] One in ten still did it.",
+     "text": "We did: the goal, and Google's rules. <pause 0.8> [1] One in ten still did it.",
      "show": "We did: the goal, and Google's rules. 1 in 10 still did it.",
      "maxgap": 0.28,
      "gap": 0.6,
@@ -220,7 +224,7 @@
      "tts": "We did: the goal, and Google's rules.",
      "file2": "08b_ai.wav",
      "tts2": "One in ten still did it.",
-     "pause": 0.5,
+     "pause": 0.8,
      "gain_db": -1.0
     },
     {

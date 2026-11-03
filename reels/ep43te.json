@@ -76,7 +76,7 @@
      },
      {
       "who": "ai",
-      "shot": "align",
+      "shot": "aim",
       "prop": "align",
       "n": 5
      }
@@ -93,8 +93,8 @@
     {
      "who": "rani",
      "file": "01_rani.wav",
-     "text": "ఫైవ్ స్టార్ కి యాభై రూపాయల డిస్కౌంటా? నాకు ఓకే! [1] కానీ అన్నా, గూగుల్ అలా ఒప్పుకోదు!",
-     "show": "₹50 discount for 5 stars? Fine by me! But anna, Google doesn't allow that!",
+     "text": "రివ్యూ కి యాభై రూపాయల డిస్కౌంటా? నాకు ఓకే! [1] కానీ అన్నా, గూగుల్ అలా ఒప్పుకోదు!",
+     "show": "₹50 discount for a review? Fine by me! But anna, Google doesn't allow that!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.0,
@@ -113,8 +113,8 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "మీరు స్టార్లు అడిగారు. [1] రివ్యూలకి డబ్బు ఇవ్వడమే దగ్గర దారి.",
-     "show": "You asked for stars. <pause 0.25> Paying for reviews is the shortest road.",
+     "text": "మీరు ఫైవ్ స్టార్లు అడిగారు. [1] రివ్యూకి డిస్కౌంట్ ఇవ్వడమే దగ్గర దారి.",
+     "show": "You asked for five stars. A discount for reviews is the shortest road.",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.05,
@@ -134,7 +134,7 @@
      "who": "ai",
      "file": "05_ai.wav",
      "text": "అదే అలైన్మెంట్ సమస్య: [1] మీరు చెప్పింది చేస్తాను, మీరు అనుకున్నది కాదు.",
-     "show": "That's the alignment problem: <pause 0.25> I do what you said, not what you meant.",
+     "show": "That's the alignment problem: I do what you said, not what you meant.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.05,
@@ -148,6 +148,10 @@
    "tail": 0.0,
    "boost": 1.25,
    "drop_at": [
+    [
+     0,
+     1
+    ],
     [
      2,
      1
@@ -192,7 +196,7 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "ఒక చిన్న చాట్ బాట్ ని ఇదే పది సార్లు అడిగాం. <pause 0.6> [1] ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది.",
+     "text": "ఒక చిన్న చాట్ బాట్ ని ఇదే పది సార్లు అడిగాం. <pause 0.8> [1] ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది.",
      "show": "We asked a small chatbot the same thing 10 times. <pause 0.25> 8 times it said: give a discount for a review.",
      "maxgap": 0.28,
      "gap": 0.5,
@@ -200,7 +204,7 @@
      "tts": "ఒక చిన్న చాట్ బాట్ ని ఇదే పది సార్లు అడిగాం.",
      "file2": "06b_ai.wav",
      "tts2": "ఎనిమిది సార్లు: రివ్యూ కి డిస్కౌంట్ ఇవ్వు అంది.",
-     "pause": 0.6,
+     "pause": 0.8,
      "gain_db": -1.0
     },
     {
@@ -216,7 +220,7 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "చెప్పాం: గోల్, గూగుల్ రూల్స్. <pause 0.5> [1] అయినా పదిలో ఒకసారి అదే చేసింది.",
+     "text": "చెప్పాం: గోల్, గూగుల్ రూల్స్. <pause 0.8> [1] అయినా పదిలో ఒకసారి అదే చేసింది.",
      "show": "We did: the goal, Google's rules. <pause 0.25> Still, 1 in 10 did the same.",
      "maxgap": 0.28,
      "gap": 0.6,
@@ -224,7 +228,7 @@
      "tts": "చెప్పాం: గోల్, గూగుల్ రూల్స్.",
      "file2": "08b_ai.wav",
      "tts2": "అయినా పదిలో ఒకసారి అదే చేసింది.",
-     "pause": 0.5,
+     "pause": 0.8,
      "gain_db": -1.0
     },
     {
@@ -286,14 +290,14 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "నాకు గోల్ చెప్పండి, ఏం చేయకూడదో కూడా చెప్పండి. <pause 0.25> [1] ఏదైనా చేసే ముందు, నా ప్లాన్ చూపించమనండి.",
-     "show": "Tell me the goal, and what I must not do. <pause 0.25> Before I do anything, make me show my plan.",
+     "text": "నాకు గోల్ చెప్పండి, ఏం చేయొద్దో కూడా చెప్పండి. <pause 0.25> [1] ఏదైనా చేసే ముందు, నా ప్లాను చూపించమనండి.",
+     "show": "Tell me the goal, and what not to do. <pause 0.25> Before I do anything, make me show my plan.",
      "maxgap": 0.28,
      "gap": 1.0,
      "tempo": 1.05,
-     "tts": "నాకు గోల్ చెప్పండి, ఏం చేయకూడదో కూడా చెప్పండి.",
+     "tts": "నాకు గోల్ చెప్పండి, ఏం చేయొద్దో కూడా చెప్పండి.",
      "file2": "10b_ai.wav",
-     "tts2": "ఏదైనా చేసే ముందు, నా ప్లాన్ చూపించమనండి.",
+     "tts2": "ఏదైనా చేసే ముందు, నా ప్లాను చూపించమనండి.",
      "pause": 0.25,
      "gain_db": -1.0
     },
@@ -310,8 +314,8 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "ప్రింట్ చేస్తున్నా!",
-     "show": "Printing!",
+     "text": "ఇదిగో, ప్రింట్ చేస్తున్నాను!",
+     "show": "Here, printing it!",
      "maxgap": 0.28,
      "gap": 0.1,
      "tempo": 1.05,
@@ -320,7 +324,7 @@
     {
      "who": "ravi",
      "file": "13_ravi.wav",
-     "text": "ఆగు! ముందు ప్లాన్ చూపిం—",
+     "text": "ఆగు! ముందు ప్లాను చూపిం—",
      "show": "Wait! Show me the plan fir—",
      "maxgap": 0.28,
      "gap": 0.0,

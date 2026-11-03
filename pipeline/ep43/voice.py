@@ -33,9 +33,9 @@ VOICE_TE = {**VOICE_TE0, "rani": "Lalitha speaks loudly and sharply, upset and v
                                  "background noise."}
 LIGHT_EN = set()   # the AI's numbers through the lighter phone sound (filled from the script)
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
-MUST = {"en": {1: [("fifty", "50"), ("rupees", "rupee"), ("five", "5"), ("stars", "star"), ("take",), ("google's", "google", "googles"), ("rules", "rule")],
+MUST = {"en": {1: [("fifty", "50"), ("rupees", "rupee"), ("review",), ("take",), ("google's", "google", "googles"), ("rules", "rule")],
                2: [("ai", "a.i"), ("printed", "print"), ("only",), ("five", "5"), ("star",), ("reviews", "review")],
-               3: [("asked", "ask"), ("stars", "star"), ("paying", "pay"), ("shortest", "short")],
+               3: [("asked", "ask"), ("five", "5"), ("stars", "star"), ("discount",), ("reviews", "review"), ("shortest", "short")],
                4: [("meant", "mean"), ("happy",), ("customers", "customer"), ("bought",)],
                5: [("alignment",), ("problem",), ("said",), ("meant", "mean")],
                6: [("asked", "ask"), ("small",), ("free",), ("ten", "10")], "6b": [("eight", "8"), ("discount",), ("review",)],
@@ -102,7 +102,7 @@ def level(path, under=4.0, cap=12.0):
 
 
 # English lines whose judge text needs digits (Whisper writes numbers as digits)
-JUDGE_TEXT = {1: "50 rupees off for 5 stars? I'll take it! But anna, that breaks Google's rules!", 2: "The AI printed it! I only said: more 5-star reviews!",
+JUDGE_TEXT = {1: "50 rupees off for a review? I will take it! But anna, that breaks Google's rules!", 3: "You asked for 5 stars. A discount for reviews is the shortest way.", 2: "The AI printed it! I only said: more 5-star reviews!",
               6: "We asked a small free AI the same thing, 10 times.", "6b": "8 times: give a discount for a review.", "8b": "1 in 10 still did it."}
 
 
