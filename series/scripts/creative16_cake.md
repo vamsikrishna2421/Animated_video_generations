@@ -1,4 +1,4 @@
-# Creative 16 "Happy Dad 60th Bir" · script v2, Nov 3 (the Nov 1 creative slot)
+# Creative 16 "Happy Dad 60th Bir" · script v3 (as rendered), Nov 3 (the Nov 1 creative slot)
 
 **Format:** a family birthday cake reveal (the lights go down, the family sings, the cake comes out), then the argument
 around the cake; inserts of the AI chat, the AI's chunks, a test card and a rule card. New in the creative log (last 7
@@ -49,10 +49,23 @@ fits"); the reel ends on "Bindu, read it again!" and cuts straight to frame 1; t
 Telugu: "అది పదాల్ని ముక్కలుగా చూస్తుంది, అక్షరాలుగా కాదు" (not "ముక్కలు ముక్కలుగా", heard as chopping); "పది సార్లు
 అడిగా, పదిహేను అక్షరాల మెసేజ్ ఇవ్వమని" (fifteen and ten apart); "బర్ అయిపోయానా?".
 
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 9 and 7) and would share it; the real chunks with ␣ and "13 chunks · 21 characters"
+checked out. Both: 0:15-0:42 was all cards with 1.5 s of family (it turned into slides); "0 of 10 fit" was gone in a
+second; "Burr / B-I-R / beer" muddled the joke. Sandeep: "THDAY!" too small. Priya: "14 or 15 (10 of 10)" read like 10
+right; the spelled-out total (17 to 30, all wrong) was missing; "count yourself" needed a tool; the last line was squeezed
+before the loop; a 200-300 Hz hum under the voice. Telugu: the boom before "ఒక్కటి కూడా పట్టలేదు" and the riser before the
+end masked words; "ఉన్నవి ఇరవై రెండు" was transcribed near "edava" (an insult). Changed: a family face in the corner of
+every card (Harish shocked at "Zero fit", angry at "count them"); "0 of 10 fit" stays up through his next line; "BURR?!"
+as one word in both lines ("and I'm a Burr"); "THDAY!" big on the board; "it said (wrong, 10 of 10): 14 or 15", "spelled
+out first: still wrong · 17 to 30 · BIRTHARDAY"; "count it: your fingers, or a character counter"; 0.6 s more after the
+last line; the bed cut 3 dB more at 260 Hz; Telugu: the boom earlier and softer, the riser shorter and quieter, "అసలు
+లెక్క ఇరవై రెండు".
+
 ## Script (English) · ~45 s
 | # | Who | Line | On screen |
 |---|---|---|---|
-| 1 | Bindu | Happy Dad sixtieth Bir... [1] BIR?! | frame 1: the party, the cake "HAPPY DAD / 60TH BIR", "THDAY!" dripped onto the board; "the cake fits 15 letters" |
+| 1 | Bindu | Happy Dad sixtieth Bir... [1] BIR?! (voiced "Burr... burr?!") | frame 1: the party, the cake "HAPPY DAD / 60TH BIR", "THDAY!" dripped onto the board; "the cake fits 15 letters" |
 | 2 | Harish | I told the AI: fifteen letters! [1] It gave me this! | his AI chat: "...The cake fits only 15 letters." → "Happy dad 60th birthday!"; "21, not 15" |
 | 3 | Thathayya | Sixty years old, [1] and I'm a Bir. |  |
 | 4 | Bindu | Mama, it's twenty-one! [1] I counted! | "21!" · H·A·P·P·Y·D·A·D·6·0·T·H·B·I·R·T·H·D·A·Y·! |
@@ -75,7 +88,7 @@ Telugu: "అది పదాల్ని ముక్కలుగా చూస�
 | 6 | Bindu | అది పదాల్ని ముక్కలుగా చూస్తుంది, అక్షరాలుగా కాదు. [1] దానికి ఇర్త్ ఒకే స్టిక్కర్. |
 | 7 | Bindu | ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు అడిగా, పదిహేను అక్షరాల మెసేజ్ ఇవ్వమని. / [1] ఒక్కటి కూడా పట్టలేదు. |
 | 8 | Harish | అయితే లెక్కపెట్టమని చెప్తా! |
-| 9 | Bindu | అదీ చేశా: పద్నాలుగు, పదిహేను అంది. / [1] ఉన్నవి ఇరవై రెండు. బర్తార్డే అని స్పెల్లింగ్ కూడా రాసింది! |
+| 9 | Bindu | అదీ చేశా: పద్నాలుగు, పదిహేను అంది. / [1] అసలు లెక్క ఇరవై రెండు. బర్తార్డే అని స్పెల్లింగ్ కూడా రాసింది! |
 | 10 | Thathayya | మాటలు చాట్ బాట్ ని అడుగు. / [1] అక్షరాలు నువ్వే లెక్కపెట్టు. |
 | 11 | Thathayya | సరే, కేక్ కట్ చేద్దాం. [1] బిందూ, ఇంకోసారి చదువు! |
 

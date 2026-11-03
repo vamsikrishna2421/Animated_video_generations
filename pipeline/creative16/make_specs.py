@@ -21,13 +21,13 @@ LINES = {
     6: ("bindu", "chunks", "chunks", "It doesn't see letters. [1] To it, I-R-T-H is one sticker.", "అది పదాల్ని ముక్కలుగా చూస్తుంది, అక్షరాలుగా కాదు. [1] దానికి ఇర్త్ ఒకే స్టిక్కర్."),   # script review: one concrete picture
     7: ("bindu", "test", "test", "I asked a small free AI for a fifteen-letter message, ten times. | [1] Zero fit.",
         "ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు అడిగా, పదిహేను అక్షరాల మెసేజ్ ఇవ్వమని. | [1] ఒక్కటి కూడా పట్టలేదు."),
-    8: ("harish", "cake", "count", "Then I'll make it count them!", "అయితే లెక్కపెట్టమని చెప్తా!"),
+    8: ("harish", "test", "count", "Then I'll make it count them!", "అయితే లెక్కపెట్టమని చెప్తా!"),
     9: ("bindu", "test", "count2", "Tried that: it said fourteen or fifteen. | [1] It's twenty-two. And it spelled birth-ar-day!",
-        "అదీ చేశా: పద్నాలుగు, పదిహేను అంది. | [1] ఉన్నవి ఇరవై రెండు. బర్తార్డే అని స్పెల్లింగ్ కూడా రాసింది!"),   # script review: 6 of 10 said 15, 4 said 14; three tests in a row dragged: two beats
+        "అదీ చేశా: పద్నాలుగు, పదిహేను అంది. | [1] అసలు లెక్క ఇరవై రెండు. బర్తార్డే అని స్పెల్లింగ్ కూడా రాసింది!"),   # script review: 6 of 10 said 15, 4 said 14; three tests in a row dragged: two beats
     10: ("thathayya", "rule", "rule", "Ask the AI for the words. | [1] Count the letters yourself.", "మాటలు చాట్ బాట్ ని అడుగు. | [1] అక్షరాలు నువ్వే లెక్కపెట్టు."),
     11: ("thathayya", "cake", "loop", "Now, cut the cake! [1] Bindu, read it again!", "సరే, కేక్ కట్ చేద్దాం. [1] బిందూ, ఇంకోసారి చదువు!"),   # then frame 1 (loops): script review: no repeated reading before the cut
 }
-TTS_EN = {1: "Happy Dad sixtieth Burr... [1] B, I, R?!"}   # "Bir" was heard "Bill"; spelled out, it lands
+TTS_EN = {1: "Happy Dad sixtieth Burr... [1] burr?!", 3: "Sixty years old, [1] and I'm a Burr."}   # "Bir" was heard "Bill", "beer"; render review: "BIR?!" as one word in both lines
 SHOW = {1: "Happy Dad 60th Bir... BIR?!", 2: "I told the AI: 15 letters! It gave me this!", 4: "Mama, it's 21! I counted!",
         6: "It doesn't see letters. To it, IRTH is one sticker.",
         7: "I asked a small free AI for a 15-letter message, 10 times. <pause 0.3> Zero fit.",
@@ -37,7 +37,7 @@ SHOW_TE = {
     4: "Mama, that's 21! I counted!", 5: "The chatbot counts better than me, no?",
     6: "It sees words in pieces, not letters. To it, IRTH is one sticker.",
     7: "I asked a small free chatbot 10 times for a 15-letter message. <pause 0.3> Not one fit.", 8: "Then I'll tell it to count!",
-    9: "Did that: it said 14, 15. <pause 0.3> There are 22. It even spelled BIRTHARDAY!",
+    9: "Did that: it said 14, 15. <pause 0.3> The real count is 22. It even spelled BIRTHARDAY!",
     10: "Ask the chatbot for the words. <pause 0.3> Count the letters yourself.", 11: "OK, let's cut the cake. Bindu, read it once more!",
 }
 NOCAP = set()
@@ -65,8 +65,8 @@ def spec(lang="en"):
     sid = "creative16te" if te else "creative16v1"
     s = {"id": sid, "title": "Happy Dad 60th Bir (Creative 16: AI can't count letters)" + (" (Telugu audio)" if te else ""), "label": "SKIT",
          "banner": "AI and letter counts", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.5, 0.66], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.0, "captionMode": "phrase",
-         "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 1.2, "musicEndRamp": [0.85, 6.0],
+         "musicVol": [0.5, 0.66], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.6, "captionMode": "phrase",
+         "musicEQ": [[260, -8, 0.9], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 1.2, "musicEndRamp": [0.85, 6.0],
          "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1500}
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.5})

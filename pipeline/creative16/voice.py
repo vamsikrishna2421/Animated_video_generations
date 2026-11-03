@@ -53,9 +53,9 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused: t
 APP = set()
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu groups in
 # Devanagari (Whisper writes Telugu so); every Telugu line gets some (Creative 15: a babble passed without them).
-MUST = {"en": {1: [("happy",), ("dad",), ("sixtieth", "60th"), ("b",), ("r", "are")],
+MUST = {"en": {1: [("happy",), ("dad",), ("sixtieth", "60th"), ("burr", "bir", "bur", "birr", "brr")],
                2: [("told",), ("fifteen", "15"), ("letters", "letter"), ("gave",)],
-               3: [("sixty", "60"), ("years",), ("bir", "burr", "bur", "beer", "bear")],
+               3: [("sixty", "60"), ("years",), ("burr", "bir", "bur", "birr", "brr", "beer", "bear")],
                4: [("mama", "mamma"), ("twenty", "21"), ("counted",)],
                5: [("counts", "count"), ("better",)],
                6: [("see",), ("letters", "letter"), ("one",), ("sticker",)],
@@ -66,7 +66,7 @@ MUST = {"en": {1: [("happy",), ("dad",), ("sixtieth", "60th"), ("b",), ("r", "ar
                11: [("cut",), ("cake",), ("bindu", "bindhu", "bindo"), ("read",), ("again",)]},
         "te": {2: [("पंदिहेनु", "पदिहेनु", "पदहेनु", "पदिनेनु")], 4: [("इरवै", "इरवाई", "इरवय", "इरवा")], 7: [("पदि", "पद्दि")],
                "9b": [("इरवै", "इरवाई", "इरवय", "इरवा")], "10b": [("लेक्क", "लेक", "लैक")]}}
-JUDGE_TEXT = {1: "Happy Dad 60th Burr... B-I-R?!", 2: "I told the AI: 15 letters! It gave me this!", 3: "60 years old, and I'm a Bir.",
+JUDGE_TEXT = {1: "Happy Dad 60th Burr... Burr?!", 2: "I told the AI: 15 letters! It gave me this!", 3: "60 years old, and I'm a Burr.",
               4: "Mama, it's 21! I counted!", 7: "I asked a small free AI for a 15-letter message, 10 times.", "7b": "Zero fit.",
               9: "Tried that: it said 14 or 15.", "9b": "It's 22. And it spelled birth-ar-day!"}
 TELUGU = re.compile(r"[ఀ-౿]")

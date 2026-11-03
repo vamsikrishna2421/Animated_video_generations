@@ -22,7 +22,7 @@ type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const SERIF = (s: number, w = 700) => `${w} ${s}px Georgia, "Times New Roman", serif`;
 const GREEN = "#16a34a", RED = "#dc2626";
-const HOLD = 14;   // frames after the last line before the slam back to frame 1
+const HOLD = 20;   // frames after the last line before the slam back to frame 1
 const CLAP = "reel/creative09v1/clap.wav";
 const MOODS: Record<number, Partial<Record<BillWho, [BillMood, BillArms]>>> = {
   1: { bindu: ["shock", "up"], harish: ["worried", "rest"], thathayya: ["deadpan", "fold"] }, 3: { thathayya: ["smug", "fold"], harish: ["worried", "rest"], bindu: ["happy", "rest"] },
@@ -54,8 +54,8 @@ const cake = (c: Ctx, x: number, y: number, s: number, drip: number) => {
   c.fillStyle = "#be185d"; c.textAlign = "center";
   c.font = SERIF(64, 800); c.fillText("HAPPY DAD", 0, -50);
   c.save(); c.translate(0, 10); c.font = SERIF(64, 800); c.fillText("60TH BIR", 0, 0); c.restore();
-  c.save(); c.globalAlpha = clamp(drip * 2); c.translate(260 + 60 * drip, 150 + 40 * drip); c.rotate(0.25 * drip);
-  c.font = SERIF(50, 800); c.fillStyle = "#be185d"; c.fillText("THDAY!", 0, 0); c.restore();   // fell off the edge
+  c.save(); c.globalAlpha = clamp(drip * 2); c.translate(250, 225); c.rotate(0.08);
+  c.font = SERIF(84, 800); c.fillStyle = "#be185d"; c.fillText("THDAY!", 0, 0); c.restore();   // fell off the edge (render review: bigger, on the board)
   c.restore();
 };
 const tag = (c: Ctx, t: string, x: number, y: number, s: number, bg: string, fg: string, k: number, rot = 0) => {
@@ -114,12 +114,12 @@ const StCake: React.FC<SP> = ({ s }) => {
     if (b.prop === "told") sfx.push(<Sfx key={k("d")} at={at - 4} src="audio/gag_ding.wav" vol={0.22} />);
     if (b.prop === "counted") [0, 3, 6, 9, 12, 15].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 4 + q} src="audio/sfx_tick.wav" vol={0.15} />));
     if (b.prop === "chunks") CHUNKS.forEach((_, q) => sfx.push(<Sfx key={k("p" + q)} at={at + 6 + q * 3} src="audio/sfx_pop.wav" vol={0.12} />));
-    if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - (te ? 8 : 3)} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.55} />); }
+    if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - (te ? 16 : 3)} src="reel/sfx_boom.wav" vol={te ? 0.25 : 0.55} />); }   // Telugu: the boom masked "ఒక్కటి కూడా"
     if (b.prop === "count2") sfx.push(<Sfx key={k("z")} at={end - 8} src="reel/sfx_buzz.wav" vol={0.25} />, <Sfx key={k("c")} at={end + 2} src={CLAP} vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 30)} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - 32)} src="reel/sfx_boom.wav" vol={0.35} />);
     if (b.prop === "loop") {
       const slam = end + HOLD;
-      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 37)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />);
+      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 20)} src="reel/sfx_riser.wav" vol={te ? 0.2 : 0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />);   // render review: the riser buried the rule's last words
     }
   });
   const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 30 : 0;
@@ -183,9 +183,9 @@ const StCake: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
           c.font = SANS(60, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST", W / 2, 300);
           c.font = SANS(38, 700); c.fillStyle = "#f8fafc"; c.fillText("a small free AI, offline · not the big apps", W / 2, 370);
-          if (b.prop === "test") {
+          if (b.prop === "test" || b.prop === "count") {
             c.font = SANS(42, 800); c.fillStyle = "#93c5fd"; c.fillText("\"...the cake fits only 15 letters\" · 10 tries", W / 2, 470);
-            const c1 = cu(1, 0.5);
+            const c1 = b.prop === "count" ? ln.from - 300 : cu(1, 0.5);
             const q0 = 1 - seg(f, c1 - 4, c1);   // stills: an empty card until the number
             if (q0 > 0) { c.save(); c.globalAlpha = q0; c.font = SANS(68, 900); c.fillStyle = "#fde68a"; c.fillText("How many fit", W / 2, 700); c.fillText("in 15 letters?", W / 2, 790); c.restore(); }
             stamp(c, "0 of 10 fit", W / 2, 720, 110, RED, seg(f, c1 - 2, c1 + 6), -0.05);
@@ -193,7 +193,7 @@ const StCake: React.FC<SP> = ({ s }) => {
           } else {
             c.font = SANS(42, 800); c.fillStyle = "#93c5fd"; c.fillText("\"How many letters in", W / 2, 450); c.fillText("HAPPY 60TH BIRTHDAY NANNA?\"", W / 2, 504);
             const c1 = cu(1, 0.3);
-            const rows: [string, string, string, number][] = [["it said", "14 or 15 (10 of 10)", RED, ln.from + 4], ["the real count", "22", GREEN, c1], ["spelled out first", "\"BIRTHARDAY\"", RED, c1 + 26]];
+            const rows: [string, string, string, number][] = [["it said (wrong, 10 of 10)", "14 or 15", RED, ln.from + 4], ["the real count", "22", GREEN, c1], ["spelled out first: still wrong", "17 to 30 · \"BIRTHARDAY\"", RED, c1 + 26]];
             rows.forEach(([a, v, col, t0], q) => {
               const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
               c.save(); c.globalAlpha = clamp(k * 3);
@@ -217,6 +217,16 @@ const StCake: React.FC<SP> = ({ s }) => {
             c.font = SANS(52, 900); c.fillStyle = GREEN; c.fillText("14 ✓ fits", W / 2, 1090);
             c.restore();
           }
+          tag(c, "count it: your fingers, or a character counter", W / 2, 1260, 40, "#0f172a", "#fde68a", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22));
+        }
+        if (!loopOn && ["chunks", "test", "rule"].includes(b.shot)) {   // render review: 27 s of cards with no family: a face reacts in the corner
+          const who: BillWho = b.who === "bindu" ? (b.prop === "count2" || b.prop === "test" ? "harish" : "bindu") : (b.who as BillWho);
+          const md: [BillMood, BillArms] = who === "harish" ? (b.prop === "count" ? ["angry", "phone"] : ["shock", "rest"]) : who === "thathayya" ? ["smug", "fold"] : ["smug", "fold"];
+          c.save(); c.beginPath(); rrect(c, 40, 1240, 240, 230, 28); c.clip();   // below the cards, above the captions
+          c.fillStyle = "#3b2f5c"; c.fillRect(40, 1240, 240, 230);
+          person(c, who, [160, 1395], 0.42, md[0], md[1], b.who === who && talking, r);
+          c.restore();
+          c.strokeStyle = "#fde68a"; c.lineWidth = 6; rrect(c, 40, 1240, 240, 230, 28); c.stroke();
         }
         if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, slam, slam + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
       }} />
