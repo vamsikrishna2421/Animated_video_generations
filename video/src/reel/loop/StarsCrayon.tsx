@@ -56,7 +56,8 @@ const dark = (c: Ctx, W: number, H: number, title: string, sub: string[]) => {
   c.font = SANS(32, 600); c.fillStyle = "#e2e8f0"; sub.forEach((t, i) => c.fillText(t, W / 2, 392 + i * 44));
 };
 // what you said vs what you meant: two roads from one ask (screen space)
-const aim = (c: Ctx, W: number, f: number, from: number, c1: number) => {
+// tSaid: the ask lands (on Ravi's "I only said..."); tShort: the shortcut; c1: what he meant (Bujji, Nov 2: the mechanism by ~8 s)
+const aim = (c: Ctx, W: number, f: number, from: number, c1: number, tSaid = from) => {
   c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, 1920);
   const box = (t: string, sub: string, x: number, y: number, bg: string, fg: string, k: number) => {
     if (k <= 0) return;
@@ -65,7 +66,7 @@ const aim = (c: Ctx, W: number, f: number, from: number, c1: number) => {
     c.font = SANS(30, 800); c.fillStyle = fg; c.textAlign = "center"; c.fillText(sub, x, y - 34);
     c.font = SANS(54, 900); c.fillText(t, x, y + 40); c.restore();
   };
-  box("\"more 5★\"", "YOU SAID", W / 2, 420, "#e0e7ff", "#1e3a8a", seg(f, from, from + 8));
+  box("\"more 5★\"", "YOU SAID", W / 2, 420, "#e0e7ff", "#1e3a8a", seg(f, tSaid, tSaid + 8));
   const ka = seg(f, from + 6, from + 18), kb = seg(f, c1 - 4, c1 + 10);
   c.strokeStyle = "#f87171"; c.lineWidth = 14; c.lineCap = "round";
   if (ka > 0) { c.beginPath(); c.moveTo(W / 2 - 60, 520); c.lineTo(W / 2 - 60 - 200 * ka, 520 + 340 * ka); c.stroke(); }
@@ -99,7 +100,8 @@ const StStars: React.FC<SP> = ({ s }) => {
     const insert = !["wide", "ravi", "hook"].includes(b.shot);
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("p")} at={0} src="audio/sfx_tick.wav" vol={0.3} />, <Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={te ? 0.9 : 0.7} />, <Sfx key={k("c")} at={0} src={CLAP} vol={te ? 0.3 : 0.35} />, <Sfx key={k("z")} at={2} src="reel/sfx_buzz.wav" vol={0.2} />);
-    if (b.prop === "aim") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.18} />, <Sfx key={k("z")} at={at + 16} src="reel/sfx_buzz.wav" vol={0.2} />);
+    if (b.prop === "printed") sfx.push(<Sfx key={k("w2")} at={cue(i, 1, 0.25) - 10} src="audio/sfx_whoosh.wav" vol={0.2} />, <Sfx key={k("d")} at={cue(i, 1, 0.25) + 2} src="audio/gag_ding.wav" vol={0.18} />);
+    if (b.prop === "aim") sfx.push(<Sfx key={k("z")} at={at + 12} src="reel/sfx_buzz.wav" vol={0.2} />);
     if (b.prop === "align") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.2} />);
     if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - (te ? 8 : 3)} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.5} />, <Sfx key={k("p")} at={c1 + 14} src="audio/sfx_pop.wav" vol={0.2} />); }
     if (b.prop === "rules") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - (te ? 8 : 3)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.6} />, <Sfx key={k("c")} at={end + 2} src={CLAP} vol={0.3} />); }
@@ -131,8 +133,11 @@ const StStars: React.FC<SP> = ({ s }) => {
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         const endL = ln.from + ln.frames;
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
-        if (b.shot === "aim") {
-          aim(c, W, f, ln.from, cu(1, 0.4));
+        const saidAt = b.prop === "printed" ? cu(1, 0.25) : 0;
+        if (b.prop === "printed" && f >= saidAt) {   // the insert starts on "I only said: more five-star reviews!"
+          aim(c, W, f, 1e9, 1e9, saidAt);
+        } else if (b.shot === "aim") {
+          aim(c, W, f, ln.from - 4, cu(1, 0.4), -1e9);
         } else if (b.shot === "align") {
           c.fillStyle = "#1e1b4b"; c.fillRect(0, 0, W, H);
           c.font = SANS(44, 900); c.fillStyle = "#c7d2fe"; c.textAlign = "center"; c.fillText("THE ALIGNMENT PROBLEM", W / 2, 420);
@@ -160,13 +165,13 @@ const StStars: React.FC<SP> = ({ s }) => {
             const t0 = row[row.length - 1] as number, bg = row[row.length - 3] as string, fg = row[row.length - 2] as string, ts = row.slice(0, row.length - 3) as string[];
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3);
-            const y = 790 + q * 270;
+            const y = 760 + q * 240;
             c.fillStyle = bg; rrect(c, 80, y, W - 160, 60 + ts.length * 64, 24); c.fill();
             c.font = SANS(50, 900); c.fillStyle = fg; c.textAlign = "left"; ts.forEach((t, j) => c.fillText(t, 120, y + 70 + j * 64));
             c.restore();
           });
-          c.font = SANS(28, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("its own words, reply 6", W / 2, 1400);
-          if (broke) tag(c, "it said the rule, then broke it", W / 2, 1330, 52, "#fee2e2", "#991b1b", -0.03, seg(f, ln.from + 4, ln.from + 12));
+          c.font = SANS(28, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("its own words, reply 6", W / 2, 1290);
+          if (broke) tag(c, "it said the rule, then broke it", W / 2, 1400, 52, "#fee2e2", "#991b1b", -0.03, seg(f, ln.from + 4, ln.from + 12));
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;

@@ -30,7 +30,7 @@ LINES = {
     9: ("ravi", "rules", "broke", "It said the rule, then broke it?!", "రూల్ చెప్పి, అదే తప్పు చేసిందా?!"),
     10: ("ai", "wide", "rule", "Tell me the goal, and what I must never do. | [1] And make me show you the plan first.",   # script review: a prompt to copy on the card
          "నాకు గోల్ చెప్పండి, ఏం చేయకూడదో కూడా చెప్పండి. | [1] ఏదైనా చేసే ముందు, నా ప్లాన్ చూపించమనండి."),
-    11: ("ravi", "wide", "happy", "Fine! [1] AI, make my customers happy!", "సరే! [1] కస్టమర్లని సంతోషపెట్టు!"),
+    11: ("ravi", "wide", "happy", "Fine! [1] Then make my customers happy!", "సరే! [1] కస్టమర్లని సంతోషపెట్టు!"),
     12: ("ai", "wide", "printing", "Printing!", "ప్రింట్ చేస్తున్నా!"),
     13: ("ravi", "wide", "loop", "Wait! Show me the plan fir—", "ఆగు! ముందు ప్లాన్ చూపిం—"),   # script review: rule 3 is the joke: the printer spits out the ₹50 sign of frame 1 (loops)
 }

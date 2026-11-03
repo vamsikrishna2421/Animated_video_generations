@@ -78,7 +78,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045); next EP43 "AI safety & alignment", queue 046, Season 5; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045), EP43 (046); next EP44 "Privacy: what happens to your data", queue 047, Season 5; Bujji's EP38 7-day, Nov 2: EN viewers leave in the first 10-15 s, so EP43 changed the setup length (the mechanism insert by ~8 s): keep it unless EP42's 48h says otherwise; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
    recognises with the numbers in it, as Skit 09's "homework 10/10 vs class test 2/20", which reached 4,527 at a 73% hold). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
@@ -564,3 +564,21 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   doubled d (a vulgar word): "ఒకటి". The howto voice script deleted rejected tries: keep them (`_tries`) to pick by ear.
   Parler English read a closing quote and "?!" as a made-up word ("bee-pony"): drop them from the spoken text. Stills
   before the full render caught a tag over Ravi's eyes and unreadable phone screens.
+- Nov 2-3 lessons (AI WEEKLY 03, Creative 15, EP43):
+  - `render.sh` output paths are relative to `video/`: write `"Reel-x:../out/..."` (a bare `out/...` lands in `video/out/`).
+  - After a plumbing merge, `git read-tree HEAD` clears the skip-worktree flags `free_disk.sh` set, so every dropped
+    render shows as deleted. Put them back with `git update-index --skip-worktree` on each ` D` path, or update only the
+    merged files' index entries.
+  - News cards cue on the first word that *contains* the cue ("not" matched "Nothing"; Telugu "మా" matched inside
+    "సమాచారం"). Check every cue against the first matching word before a render.
+  - The NewsReel big-number card faded after 2.4 s and long values ran off screen: use `hold` (frames), values of
+    9 characters or fewer, `quiet` cards (the bed sinks, no pop) for sombre lines, and `hookMascot: false` when a
+    cheering mascot is wrong for the story.
+  - Parler drops whole sentences from long multi-sentence takes ("Nothing is proven yet", "Tell us below") and loops
+    Telugu sentences: voice fairness lines and CTAs as their own parts, and check each take's transcript.
+  - Give every Telugu line must-hear words: without them a 3.6 s babble passed the judge. "చెక్ చేస్తుంది" stutters
+    in every take (as "చెక్ చేశా" did): use "చదువుతుంది" / "చూస్తుంది".
+  - Canvas text in Telugu script breaks apart in the render font: write Telugu words in English letters on screen
+    ("maa ammayi"), which the rule wants anyway (visuals in English).
+  - Test the fix as well as the problem (Creative 15's blanks: names kept 10 of 10, "our daughter" right 4 of 10): the
+    viewers ask for it, and the honest rule came from it.
