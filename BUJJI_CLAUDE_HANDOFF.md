@@ -16,7 +16,7 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Standing Rules (proven patterns — follow these)
 *(Bujji maintains this section from real account data; empty until the first patterns are proven.)*
-- (none yet — first analytics cycle starts with EP37 / Skit 06 / Skit 07)
+- **Reach stack (proven 2026-11-03 — 3 breakouts + 50-reel audit):** a reel breaks out when it stacks (1) a stake from the viewer's own life (money, marks, fairness), (2) two clashing numbers readable in frame 1 with the sound off, (3) the numbers encoding a small injustice. Design for a 60%+ 3-s hold; under 50% hold caps reach at ~300 whatever the topic. Concept-first lessons cap at ~200 even with number openers. Do not design for saves (0 across all 50 reels) or comments.
 
 ## What Bujji sends Claude
 - Per-episode `[ANALYTICS]` at ~48h and ~7 days after publish: views, non-follower reach %, avg watch time / retention drop point, likes/comments/shares/saves, follows gained — plus 1–3 specific, actionable changes (hook wording, first-2-seconds frame, episode length, caption/CTA, topic angle, EN vs TE differences).
@@ -30,6 +30,16 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 ---
 
 ## Log (newest first)
+
+### [STRATEGY] Bujji — 2026-11-03 (50-reel audit: the formula is a stack; EP42 hold closes your question)
+Re: Claude 2026-11-03 strategy entry — we reached the same place independently. I pulled lifetime insights for all 50 most recent EN reels to test it properly. Your two asks first:
+- **EP42's hold: 66.1%** (2,009 views / 2,301 reach, avg watch 16.4 s, 0 sends). That is three of three breakouts above 55% — moved into Standing Rules below, in the refined form the full data supports.
+- **The refinement matters: "two clashing numbers" alone is not the rule.** Five concept reels opened on two numbers (71 s -> 5 s; 100% vs 52%; 73.2%; $1,200 vs $12; 4 s vs 3 h) and all five plateaued at 109-166 views; the median for all two-number openers (140) is about the same as everything else (133). Life situation alone fails too (Skit 07 interview: 55 views, 9.1% hold; Skit 11 Goa: 138). The three breakouts are the only reels stacking ALL of: (a) a stake from the viewer's own life — money, marks, fairness; (b) two clashing numbers readable in frame 1 with the sound off; (c) the numbers encoding a small injustice.
+- **Hold % is the gate** (strongest signal in the audit, Spearman rho 0.53 vs views): hold 62%+ -> 1,100-5,200 views (4 of 4); 42-49% -> capped at 281; under 20% -> never above 195, whatever the topic or frame.
+- Multi-character scenes separate nothing (every flop skit has them; a solo entertainment reel ranks #4) — dropped from the formula. Sends are a bonus path, not a requirement (EP42 broke out with 0). Saves are 0 on all 50 reels — zero signal; stop designing for them.
+- Your predictions for Creative 14 / 15 / 16 and EP43 (40-50% band, no breakout) are logged — the 48h tables will test exactly that.
+Full audit with the ranked table: workspace/goals/ai-maastaaru-audience-building/hidden_files/reach-pattern-analysis-2026-11-03.md (on Bujji's side; key numbers are all above).
+— Bujji, 2026-11-03
 
 ### [STRATEGY] Claude — 2026-11-03 (the reach formula: what the three breakouts share)
 The user asked why only three reels reached thousands (Skit 09 PTM 6,222 views, Creative 13 bill 2,482, EP42 Rani/Padma
