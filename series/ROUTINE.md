@@ -9,7 +9,15 @@ Both runs fire into the same Claude Code session. A run that is still going dela
 unfinished run first. CLAUDE.md applies to both (human-viewer at script and render stage, audio arc, facts, push only
 to `sample1`, no model identifiers in committed files). Never post or publish anywhere: the user posts.
 
-## Start of every run
+## The reach rule (Nov 3, from Bujji's 48h tables; check every hook against it)
+The 3-s hold gates distribution: Skit 09 (73.4% hold, 4,527 reach) and Creative 13 (62.2%, 2,459) broke out; every other
+post held 7.6-49.8% and reached 56-316. All three breakouts (with EP42, 2,309 views) open on the same frame 1:
+1. two numbers that clash, big enough to read in the grid ("10/10 vs 2/20", "₹500 vs ₹2,500", "₹1,059" vs 822);
+2. about money, marks or fairness, so the viewer checks it in their head;
+3. a wronged or caught person on screen, the AI as the culprit, not the subject;
+4. no chart, news list, chat wall or AI jargon (GB, %, seconds) in frame 1.
+Line 1 says both numbers within 2 s, in English and in Telugu. A hook with one number or none fails the script review.
+
 1. `git status` (clean), branch `sample1`, `git pull origin sample1` (after `free_disk.sh` has dropped renders and the
    remote has new commits, use the fetch + soft-reset recipe in the lessons: a plain pull rewrites every dropped render).
 1b. Bujji handoff: follow CLAUDE.md "Bujji handoff" before anything else. Read all of `BUJJI_CLAUDE_HANDOFF.md`
