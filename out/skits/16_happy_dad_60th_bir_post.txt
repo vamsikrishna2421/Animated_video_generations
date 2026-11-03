@@ -1,0 +1,64 @@
+SKIT 16: "Happy Dad 60th Bir" (a family birthday cake reveal: Thathayya's 60th cake reads "HAPPY DAD 60TH BIR", "THDAY!" dripped off the edge; Harish mama told the AI "15 letters", and its message, "Happy dad 60th birthday!", is 21; Bindu, 13: the AI doesn't see letters, it sees chunks (the model's real chunks of the cake text: H·APP·Y·␣D·AD·␣·6·0·TH·␣B·IRTH·DAY·!, 13 chunks for 21 characters); our test: a small free AI, offline: a 15-letter cake message 0 of 10 fit (17 to 24); "how many letters in HAPPY 60TH BIRTHDAY NANNA?" it said 14 or 15, every time (22); spelled out first, still wrong ("BIRTHARDAY"); the rule: ask the AI for the words, count the letters yourself; "HAPPY 60TH NANNA" = 14, fits; it loops: "Bindu, read it again!" and the cake comes back; English / Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/16_happy_dad_60th_bir.mp4 (English page) · out/skits/16_happy_dad_60th_bir_te.mp4 (Telugu page)
+Send copies: out/skits/16_happy_dad_60th_bir_ig.mp4 · out/skits/16_happy_dad_60th_bir_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on "Bindu, read it again!" and the replay opens on
+the same cake. The one ask lives in the caption (an opinion on the conflict).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+"The cake fits 15 letters," he told the AI. The cake said: HAPPY DAD 60TH BIR. 🎂
+
+A chat AI doesn't see letters. It reads text in chunks: to the model we tested, "HAPPY DAD 60TH BIRTHDAY!" is 13 chunks (H · APP · Y · D · AD · 6 · 0 · TH · B · IRTH · DAY · ! and two spaces), and "IRTH" is one piece. So it can't see how many letters it wrote.
+Our test: a small free AI, offline, asked 10 times for a cake message of 15 letters or fewer: 0 of 10 fit (17 to 24 characters). Asked how many letters are in "HAPPY 60TH BIRTHDAY NANNA" (22), it said 14 or 15, all 10 times. Asked to spell it out first, it got the total wrong 10 times out of 10 and even wrote "BIRTHARDAY". We didn't test the big apps.
+
+For a cake, a form or a bio with a limit:
+1. Ask the AI for a few short ideas.
+2. Count the letters yourself (or paste it into a counter).
+3. Too long? Cut a word and count again. HAPPY 60TH NANNA = 14 ✓
+
+=== COMMENT PROMPT ===
+Whose fault is the cake: Harish mama's or the AI's? Tell us why.
+
+=== HASHTAGS ===
+#AI #ChatGPT #BirthdayCake #AITips #FamilyHumour #LearnAI
+
+=== PINNED_COMMENT ===
+How we tested: Qwen2.5-7B-Instruct (Qwen's own 4-bit file), llama.cpp on a 4-core computer, offline, temperature 0.7, 10 replies each way, every reply read by hand.
+1. "Write a message for my father's 60th birthday cake. The cake is small: it fits only 15 letters, so the message must be 15 letters or fewer (spaces don't count)." 0 of 10 fit: 17 to 24 characters ("Happy dad 60th birthday!", 21, came up 5 times).
+2. "How many letters are in "HAPPY 60TH BIRTHDAY NANNA"? Don't count spaces." The answer is 22 (20 if you don't count the 6 and 0). It said 14 four times and 15 six times.
+3. "Spell it one character per line, numbered, skipping spaces. Then give the total." Totals 17 to 30, 0 of 10 right; the lists themselves were wrong ("BIRTHARDAY", "NANA").
+The chunks on screen are the model's own tokens, read from its tokenizer. OpenAI's help page says the same of its models: they read tokens, about 4 characters of English each. Thathayya, Harish and Bindu are made up.
+
+=== COVER ===
+Frame 1: the party under fairy lights, the cake "HAPPY DAD 60TH BIR" with "THDAY!" dripped onto the board, Bindu pointing, Thathayya deadpan.
+
+=== ALT_TEXT ===
+Crayon-animated skit at a 60th birthday party under fairy lights; the wall banner reads HAPPY 60th THATHAYYA. A pink cake with candles says HAPPY DAD, 60TH BIR, and the letters THDAY! have dripped off the edge onto the board; a tag says the cake fits 15 letters. Bindu, 13, reads it out; Harish mama's phone shows his AI chat: "Write a message for my father's 60th birthday cake. The cake fits only 15 letters." and the reply "Happy dad 60th birthday!", stamped "21, not 15". Thathayya: sixty years old and I'm a Bir. Bindu counts on her fingers: 21. A card, what the AI sees: the cake text cut into the model's chunks: H, APP, Y, space-D, AD, space, 6, 0, TH, space-B, IRTH, DAY, !: 13 chunks, 21 characters; IRTH is one sticker, it never sees I-R-T-H. Our test card: a small free AI, offline, not the big apps: a 15-letter cake message, 10 tries, 0 of 10 fit, 17 to 24 characters; how many letters in HAPPY 60TH BIRTHDAY NANNA: it said 14 or 15 (10 of 10), the real count 22, spelled out first: BIRTHARDAY. A rule card: a cake, a form, a bio? The AI: the words. You: the count. HAPPY 60TH NANNA, 14, fits. Thathayya: now cut the cake, Bindu, read it again; and the cake comes back.
+
+=== YOUTUBE SHORTS ===
+Title: The AI's cake message didn't fit: HAPPY DAD 60TH BIR #shorts
+Description: Told "15 letters", a small offline AI wrote 21. AI reads text in chunks, not letters: in our test it never fit a 15-letter cake (0 of 10) and counted 22 letters as 14 or 15. Ask the AI for the words, count the letters yourself.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+"Cake meeda 15 aksharaale pattaayi" ani AI ki cheppaadu. Cake meeda: HAPPY DAD 60TH BIR. 🎂
+
+Chat AI aksharaalu choodadu: padaalni mukkaluga chadavutundi. Memu test chesina model ki "HAPPY DAD 60TH BIRTHDAY!" 13 mukkalu (H · APP · Y · D · AD · 6 · 0 · TH · B · IRTH · DAY · !), "IRTH" okate mukka. Anduke tanu raasinadaanilo enni aksharaalu unnaayo daaniki teliyadu.
+Maa test: internet leni chinna free AI ni 15 aksharaala lopu cake message 10 saarlu adigaam: okkati kooda pattaledu (17 nunchi 24). "HAPPY 60TH BIRTHDAY NANNA" lo enni (22)? ani adigite 10 saarlu 14 leda 15 annadi. Spelling raayamante kooda tappu: "BIRTHARDAY". Pedda apps ni test cheyyaledu.
+
+Cake, form, bio ki limit unte:
+1. AI ni konni chinna ideas adagandi.
+2. Aksharaalu meere lekkapettandi.
+3. Ekkuva aite oka padam teesesi malli lekkapettandi. HAPPY 60TH NANNA = 14 ✓
+
+=== COMMENT PROMPT ===
+Ee cake tappu evaridi: Harish mama daa, AI daa? Enduko cheppandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #BirthdayCake #AITips #TeluguFamily
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen2.5-7B-Instruct (Qwen 4-bit file), llama.cpp, 4-core computer, internet lekunda, temperature 0.7, okko vidhaanam lo 10 replies, annee chadivaam. 15 aksharaala cake message: 10 lo 0 pattaayi (17-24). "HAPPY 60TH BIRTHDAY NANNA" (22) lo enni? 14 (4 saarlu), 15 (6 saarlu). Spelling raasi lekkapettamante: 10 lo 0, "BIRTHARDAY". Screen meeda mukkalu aa model sontha tokens. Thathayya, Harish, Bindu kalpitam.
+
+=== COVER ===
+Frame 1: party lights, cake meeda "HAPPY DAD 60TH BIR", "THDAY!" board meeda padindi (English visuals).

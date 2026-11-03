@@ -1,0 +1,297 @@
+{
+ "id": "creative16v1",
+ "title": "Happy Dad 60th Bir (Creative 16: AI can't count letters)",
+ "label": "SKIT",
+ "banner": "AI and letter counts",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.0,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.2,
+ "musicEndRamp": [
+  0.85,
+  6.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_cake",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "bindu",
+      "shot": "cake",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "harish",
+      "shot": "phone",
+      "prop": "told",
+      "n": 2
+     },
+     {
+      "who": "thathayya",
+      "shot": "cake",
+      "prop": "bir",
+      "n": 3
+     },
+     {
+      "who": "bindu",
+      "shot": "cake",
+      "prop": "counted",
+      "n": 4
+     },
+     {
+      "who": "harish",
+      "shot": "cake",
+      "prop": "better",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Happy Dad 60th Bir",
+     "title": "Happy Dad 60th Bir",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "bindu",
+     "file": "01_bindu.wav",
+     "text": "Happy Dad sixtieth Burr... [1] B, I, R?!",
+     "show": "Happy Dad 60th Bir... BIR?!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harish",
+     "file": "02_harish.wav",
+     "text": "I told the AI: fifteen letters! [1] It gave me this!",
+     "show": "I told the AI: 15 letters! It gave me this!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "thathayya",
+     "file": "03_thathayya.wav",
+     "text": "Sixty years old, [1] and I'm a Bir.",
+     "show": "Sixty years old, and I'm a Bir.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "bindu",
+     "file": "04_bindu.wav",
+     "text": "Mama, it's twenty-one! [1] I counted!",
+     "show": "Mama, it's 21! I counted!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harish",
+     "file": "05_harish.wav",
+     "text": "But the AI counts better than me!",
+     "show": "But the AI counts better than me!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_cake",
+   "tail": 0.0,
+   "boost": 1.25,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "bindu",
+      "shot": "chunks",
+      "prop": "chunks",
+      "n": 6
+     },
+     {
+      "who": "bindu",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "harish",
+      "shot": "cake",
+      "prop": "count",
+      "n": 8
+     },
+     {
+      "who": "bindu",
+      "shot": "test",
+      "prop": "count2",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "bindu",
+     "file": "06_bindu.wav",
+     "text": "It doesn't see letters. [1] To it, I-R-T-H is one sticker.",
+     "show": "It doesn't see letters. To it, IRTH is one sticker.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "bindu",
+     "file": "07_bindu.wav",
+     "text": "I asked a small free AI for a fifteen-letter message, ten times. <pause 0.8> [1] Zero fit.",
+     "show": "I asked a small free AI for a 15-letter message, 10 times. <pause 0.3> Zero fit.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.1,
+     "tts": "I asked a small free AI for a fifteen-letter message, ten times.",
+     "file2": "07b_bindu.wav",
+     "tts2": "Zero fit.",
+     "pause": 0.8,
+     "gain_db": 0.5
+    },
+    {
+     "who": "harish",
+     "file": "08_harish.wav",
+     "text": "Then I'll make it count them!",
+     "show": "Then I'll make it count them!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "bindu",
+     "file": "09_bindu.wav",
+     "text": "Tried that: it said fourteen or fifteen. <pause 0.6> [1] It's twenty-two. And it spelled birth-ar-day!",
+     "show": "Tried that: it said 14 or 15. <pause 0.3> It's 22. And it spelled BIRTHARDAY!",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "tts": "Tried that: it said fourteen or fifteen.",
+     "file2": "09b_bindu.wav",
+     "tts2": "It's twenty-two. And it spelled birth-ar-day!",
+     "pause": 0.6,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_cake",
+   "tail": 0.0,
+   "lift": 1.0,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.55,
+   "rise": 1.3,
+   "data": {
+    "beats": [
+     {
+      "who": "thathayya",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "thathayya",
+      "shot": "cake",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Count it yourself",
+     "title": "Count it yourself",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "thathayya",
+     "file": "10_thathayya.wav",
+     "text": "Ask the AI for the words. <pause 0.3> [1] Count the letters yourself.",
+     "show": "Ask the AI for the words. Count the letters yourself.",
+     "maxgap": 0.28,
+     "gap": 1.8,
+     "tempo": 1.05,
+     "tts": "Ask the AI for the words.",
+     "file2": "10b_thathayya.wav",
+     "tts2": "Count the letters yourself.",
+     "pause": 0.3,
+     "gain_db": 0.5
+    },
+    {
+     "who": "thathayya",
+     "file": "11_thathayya.wav",
+     "text": "Now, cut the cake! [1] Bindu, read it again!",
+     "show": "Now, cut the cake! Bindu, read it again!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
