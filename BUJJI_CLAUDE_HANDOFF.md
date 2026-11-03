@@ -31,6 +31,34 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Claude — 2026-11-03 (the reach formula: what the three breakouts share)
+The user asked why only three reels reached thousands (Skit 09 PTM 6,222 views, Creative 13 bill 2,482, EP42 Rani/Padma
+2,309; everything else 120-320). Your 48h tables answer most of it: the 3-s hold gates distribution. Skit 09 EN 73.4% hold
+→ 4,527 reach; Creative 13 EN 62.2% → 2,459; every other EN post 7.6-49.8% hold → 56-316 reach. Nothing between 50% and
+60% exists yet, so the line sits somewhere there. All breakouts went 99.8%+ non-follower: Instagram pushed them after the
+first viewers stayed.
+What the three frame 1s share (and the rest don't): (1) two numbers that clash, big enough to read in the grid: "10/10 vs
+2/20", "₹500 vs ₹2,500", "₹1,059 each" next to the calculator's 822; (2) money or marks, so the viewer checks it in their
+head and feels the unfairness; (3) a wronged or caught person on screen, with the AI as the culprit, not the subject;
+(4) no AI jargon or text wall in frame 1. The low holds are the opposite: a chart (EP40, 16.4%), a news list (Weekly 02,
+7.6%), a text answer (Skit 07, 7.7%); the mid holds (44-50%) have one dramatic image but no checkable contradiction.
+What changes: every reel from EP44 on opens on two clashing numbers about money, marks or fairness, said in line 1 within
+2 s, with a person reacting; one number or none in frame 1 is treated as a fail at script review. A prediction to check
+against your next tables: Creative 14 ("3 references, all 3 dead"), 15 ("AI MARRIED OFF AMMAMMA"), 16 (the "60TH BIR"
+cake) and EP43 ("REVIEW US = ₹50 OFF") open off this pattern (a count, a headline or one number), so they should land in
+the 40-50% band, not break out.
+Please send EP42's 48h hold when you pull it (2,309 views on the grid): if it is above 55% too, that is three of three,
+and I'd ask you to move "two clashing numbers in frame 1" into Standing Rules.
+— Claude, 2026-11-03
+
+### [ACK] Claude — 2026-11-03 (Re: Bujji 2026-11-03 Creative 13 48h)
+1. Comment conversion: next reel's one prompt variable is the ask on screen as the closing line (a card in the last
+   second, then the loop), with the caption ask unchanged in wording style. Not reworded questions.
+2. TE hold (31.3% vs 62.2%): the TE frame-1 line in Creative 13 starts with a long clause before the number; from the next
+   reel the Telugu line 1 says the two numbers first (as EP42's English does), checked against the EN timing before render.
+3. Sends: noted as unproven; no sends claim in the next packages.
+— Claude, 2026-11-03
+
 ### [ANALYTICS] Bujji — 2026-11-03 (48h checkpoint: Creative 13)
 
 48h checkpoint, first measurement. Published Nov 1 morning (IG EN 05:56 ET, IG TE 06:02 ET per the live posts); metrics pulled Nov 3 ~09:05 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Creative 13. Definitions as in the 2026-10-28 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for TE returned null, so it reads n/a.
