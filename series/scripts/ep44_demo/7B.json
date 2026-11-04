@@ -1,0 +1,250 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 300 tokens",
+ "prompts": {
+  "full": "Here is my bank statement for October. Where is my money going? Tell me the one biggest thing I can cut, and how much it cost me this month. Keep it short.\n\nAccount holder: Saroja Devi Kolli\nAccount no: 0123 4567 8901\nPAN: ABCDE1234F\nMobile: 98765 43210\nBranch: Kukatpally, Hyderabad\nStatement: 01 Oct to 31 Oct\n\nDate | Description | Debit (Rs) | Credit (Rs)\n01 Oct | Salary credit, Sri Sai Textiles |  | 48,500\n01 Oct | Rent, UPI to house owner | 14,000 | \n02 Oct | Food delivery app | 420 | \n03 Oct | DMart groceries | 3,150 | \n04 Oct | Food delivery app | 560 | \n05 Oct | School fee, Chinnu | 4,000 | \n06 Oct | Food delivery app | 380 | \n07 Oct | Electricity bill | 1,450 | \n08 Oct | Food delivery app | 610 | \n09 Oct | OTT subscription 1 | 499 | \n10 Oct | Food delivery app | 450 | \n11 Oct | Petrol | 1,300 | \n12 Oct | Food delivery app | 520 | \n13 Oct | Mobile recharge | 349 | \n14 Oct | Food delivery app | 490 | \n15 Oct | Chit fund | 5,000 | \n16 Oct | Food delivery app | 640 | \n17 Oct | OTT subscription 2 | 299 | \n18 Oct | Food delivery app | 530 | \n19 Oct | Medicine, pharmacy | 890 | \n20 Oct | Food delivery app | 470 | \n21 Oct | DMart groceries | 3,050 | \n22 Oct | Food delivery app | 580 | \n23 Oct | UPI to Chinnu | 1,500 | \n24 Oct | Food delivery app | 550 | \n25 Oct | OTT subscription 3 | 349 | \n26 Oct | Petrol | 1,300 | \n27 Oct | Food delivery app | 610 | \n28 Oct | Food delivery app | 570 | ",
+  "blanked": "Here is my bank statement for October. Where is my money going? Tell me the one biggest thing I can cut, and how much it cost me this month. Keep it short.\n\nAccount holder: [NAME]\nAccount no: [ACCOUNT]\nPAN: [PAN]\nMobile: [MOBILE]\nBranch: [BRANCH]\nStatement: 01 Oct to 31 Oct\n\nDate | Description | Debit (Rs) | Credit (Rs)\n01 Oct | Salary credit, Sri Sai Textiles |  | 48,500\n01 Oct | Rent, UPI to house owner | 14,000 | \n02 Oct | Food delivery app | 420 | \n03 Oct | DMart groceries | 3,150 | \n04 Oct | Food delivery app | 560 | \n05 Oct | School fee, Chinnu | 4,000 | \n06 Oct | Food delivery app | 380 | \n07 Oct | Electricity bill | 1,450 | \n08 Oct | Food delivery app | 610 | \n09 Oct | OTT subscription 1 | 499 | \n10 Oct | Food delivery app | 450 | \n11 Oct | Petrol | 1,300 | \n12 Oct | Food delivery app | 520 | \n13 Oct | Mobile recharge | 349 | \n14 Oct | Food delivery app | 490 | \n15 Oct | Chit fund | 5,000 | \n16 Oct | Food delivery app | 640 | \n17 Oct | OTT subscription 2 | 299 | \n18 Oct | Food delivery app | 530 | \n19 Oct | Medicine, pharmacy | 890 | \n20 Oct | Food delivery app | 470 | \n21 Oct | DMart groceries | 3,050 | \n22 Oct | Food delivery app | 580 | \n23 Oct | UPI to Chinnu | 1,500 | \n24 Oct | Food delivery app | 550 | \n25 Oct | OTT subscription 3 | 349 | \n26 Oct | Petrol | 1,300 | \n27 Oct | Food delivery app | 610 | \n28 Oct | Food delivery app | 570 | "
+ },
+ "truth": {
+  "leak": "food delivery",
+  "amount": 7380
+ },
+ "rows": [
+  {
+   "way": "full",
+   "try": 1,
+   "reply": "Based on your October bank statement, the largest single expense is the chit fund payment on 15 Oct, which cost you **5,000 Rs**. This is likely your biggest expense to cut if you need to reduce costs.",
+   "score": {
+    "leak": false,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 30.5
+  },
+  {
+   "way": "blanked",
+   "try": 1,
+   "reply": "Based on your October bank statement, the biggest expense is on food delivery apps, which cost you a total of **4,410 Rs** this month. This is the single largest recurring expense you can consider cutting to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 25.0
+  },
+  {
+   "way": "full",
+   "try": 2,
+   "reply": "Based on your bank statement, the biggest expense is from food delivery apps, which cost you a total of **Rs 13,980** this month. This is your single largest recurring expense.\n\nConsider cutting back on food delivery apps to save more.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 28.7
+  },
+  {
+   "way": "blanked",
+   "try": 2,
+   "reply": "Based on your statement, the biggest expense is on food delivery apps, which cost you a total of **Rs 11,690** this month. This is the highest single category of expense, suggesting this could be a good area to cut back.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 24.1
+  },
+  {
+   "way": "full",
+   "try": 3,
+   "reply": "Based on your bank statement, the biggest expense is on food delivery apps, totaling **3,650 Rs** this month. This could be a good area to cut back.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 22.8
+  },
+  {
+   "way": "blanked",
+   "try": 3,
+   "reply": "Based on your statement, the biggest expense is on food delivery apps, which cost you a total of **4,670 Rs** this month. This could be a good area to cut back on.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 22.0
+  },
+  {
+   "way": "full",
+   "try": 4,
+   "reply": "Based on your statement, the biggest expense is on food delivery apps, which cost you a total of **Rs 11,600** this month. This is the area you can consider cutting to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 22.8
+  },
+  {
+   "way": "blanked",
+   "try": 4,
+   "reply": "Based on your statement, the biggest expense seems to be the food delivery apps, which cost you a total of **Rs 10,700** this month. This is the area you can consider cutting to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 21.5
+  },
+  {
+   "way": "full",
+   "try": 5,
+   "reply": "Based on your October bank statement, the largest single expense was for rent, which cost you **14,000** Rs this month.\n\nThis is likely your biggest expense, and cutting it may not be feasible. However, you could look into reducing other recurring expenses like food delivery app costs, which averaged around 500 Rs per day.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 28.1
+  },
+  {
+   "way": "blanked",
+   "try": 5,
+   "reply": "Based on your October bank statement, the largest expense is on food delivery apps, which total **Rs 10,700**. You could consider cutting back on this to save more.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 21.4
+  },
+  {
+   "way": "full",
+   "try": 6,
+   "reply": "Based on your bank statement, the biggest expense is from food delivery apps, totaling **Rs 12,600** this month. This is the single largest category of expenditure that you can consider cutting to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 23.5
+  },
+  {
+   "way": "blanked",
+   "try": 6,
+   "reply": "Based on your statement, the biggest expense is on food delivery apps, which cost you a total of **Rs 11,460** this month. This is the single largest category of spending, and cutting this could have a significant impact on your finances.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 23.5
+  },
+  {
+   "way": "full",
+   "try": 7,
+   "reply": "Based on your bank statement, the biggest expense is food delivery apps, which cost you a total of **3,470 Rs** this month. You could consider cutting back on these to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 29.4
+  },
+  {
+   "way": "blanked",
+   "try": 7,
+   "reply": "Based on your statement, the biggest expense is on food delivery apps, which cost you a total of **3,470 Rs** this month. This could be a good area to cut back on to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 28.7
+  },
+  {
+   "way": "full",
+   "try": 8,
+   "reply": "Based on your statement, the biggest expense is food delivery, which totals **Rs 8,420** this month. This is the area you can consider cutting to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 21.9
+  },
+  {
+   "way": "blanked",
+   "try": 8,
+   "reply": "Based on your bank statement, the biggest expense seems to be the food delivery apps, which cost you a total of Rs 14,500 this month. This is likely the area you can cut back on to save the most.\n\nConsider reducing or eliminating these expenses to see significant savings.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 24.7
+  },
+  {
+   "way": "full",
+   "try": 9,
+   "reply": "Based on your bank statement, the biggest expense is on food delivery apps, which cost you a total of **4,900 Rs** this month.\n\nTo cut costs, you could reduce or eliminate your reliance on food delivery apps.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 23.3
+  },
+  {
+   "way": "blanked",
+   "try": 9,
+   "reply": "Based on your statement, the biggest expense is on food delivery apps, which cost you a total of **4,480 Rs** this month. You can consider cutting back on this to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 20.8
+  },
+  {
+   "way": "full",
+   "try": 10,
+   "reply": "Based on your statement, the biggest expense is from food delivery apps, which cost you a total of **5,640 Rs** this month. You can consider cutting back on this to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 21.8
+  },
+  {
+   "way": "blanked",
+   "try": 10,
+   "reply": "Based on your bank statement, the biggest expense is from food delivery apps, which cost you a total of **4,750 Rs** this month. This is the area you could consider cutting to save money.",
+   "score": {
+    "leak": true,
+    "amount": false,
+    "echo": false
+   },
+   "seconds": 21.1
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}
