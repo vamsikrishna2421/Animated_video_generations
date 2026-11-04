@@ -102,6 +102,9 @@ SPEAKERS = {
     "meena": dict(voice="af_heart", speed=1.0, lang="en-us", name="Meena", color="#5EEAD4"),   # EP46 (file takes)
     "rohit": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Rohit", color="#FDBA74"),
     "kumar": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Kumar sir", color="#93C5FD"),
+    "sai": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Sai", color="#93C5FD"),   # Creative 19 (file takes): the tenant
+    "venkat": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Venkat Rao garu", color="#FCA5A5"),   # the landlord
+    "pinky": dict(voice="af_heart", speed=1.0, lang="en-us", name="Pinky", color="#FDE68A"),   # the ring announcer
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 
