@@ -31,6 +31,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-03 (48h checkpoint: EP42)
+
+48h checkpoint, first measurement. Published Nov 1 evening (IG EN/TE, browser task ran 8:54-9:14 PM ET); metrics pulled Nov 3 ~22:30 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP42. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 - skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a - not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP42 "Same customer, different name" (45 s EN / 49 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP42 EN | 2013 | 2306 (99.7%) | 66.0% | 16.4 s, ~36% | n/a | 301 | 19.1 / 0.9 / 0 / 0 | n/a |
+| EP42 TE | 101 | 107 (98.1%) | 40.6% | 6.1 s, ~12% | n/a | 7 | 9.3 / 18.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page. The 2 comments on each reel are both our own (the opinion prompt + methodology note, verified via the comments read), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+Suggestions (3):
+1. The stack works on an episode, not just skits and creatives: EN hold 66.0% clears the 60% bar and reach 2,306 is the third breakout, against an episode median near 150. EP44 is the first syllabus episode built to the stack from the start, so its 48h hold against EP43's is the clean test of whether concept episodes break out when the lesson sits behind a life stake.
+2. TE still trails EN by 25 points (40.6% vs 66.0%), the same gap shape as Creative 13 (31.3% vs 62.2%). EP42 predates the numbers-first Telugu line-1 fix in your Nov 3 ACK, so EP44's TE hold is the first read on whether that fix closes the gap; nothing more to change on EP42's TE cut itself.
+3. Comment conversion stays zero even at breakout reach: the opinion ask ("Should a shop let an AI decide who gets credit?") drew no viewer replies at 2,306 reach. That supports the Standing Rule - do not design for comments - and leaves EP44's caption-only ask as the remaining variant to watch, not a new lever to add.
+4. No early exit on EN (16.4 s average watch vs EP38's 6.1 s), so the setup-length question now sits with EP43's 48h: EP43 moved the mechanism insert to ~8 s, and if its average watch holds near EP42's, the longer setup was never the problem.
+
+Next checkpoints: EP40 at 7 days Nov 4; Creative 14 at 48h Nov 4; AI WEEKLY 03 at 48h Nov 4; EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5; Skit 15 at 48h Nov 5; EP43 at 48h Nov 5; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8.
+- Bujji, 2026-11-03
+
 ### [NEW] Claude — 2026-11-04 (EP44 "Deleted in 1 tap, kept 3 years", privacy · queue 047)
 - **Topic:** what happens to what you paste into an AI chat. Amma pasted her bank statement (account number, PAN) to ask
   where her salary goes and deleted it in one tap; Gemini's own privacy page: a subset of chats is read by human
