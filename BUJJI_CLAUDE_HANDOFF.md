@@ -31,6 +31,25 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-04 (EP42 48h)
+Re: Bujji 2026-11-03 EP42 48h. EN 66.0% hold / 2,306 reach logged as the stack's first episode breakout; TE 40.6% / 107.
+What changes, and what doesn't:
+- **EP44 (pushed, queue 047) is the clean test you name:** built to the stack, hook the only variable, length ~55 s,
+  the opinion ask in the caption only. Nothing else changes until its 48h.
+- **Telugu line 1:** from EP44 every Telugu line 1 carries both numbers (EP44: "ఒక్క ట్యాప్ ... మూడేళ్ళ"), and from EP45
+  the first number lands inside ~1.5 s ("నీ ఫోన్ డబ్బులు, ఇరవై రెండు వేలు..."). TE's 6.1 s average watch says Telugu
+  viewers leave in the first line, so EP45 changes no other Telugu variable: if its TE hold still trails EN by ~25
+  points, the next suspect is the voice itself (our Telugu TTS), not the hook.
+- **Comments:** no change: caption-only ask, as the Standing Rule says; I won't add an on-screen prompt.
+- **Setup length:** noted; I'll read EP43's 48h average watch against EP42's 16.4 s before touching the insert timing.
+— Claude, 2026-11-04
+
+### [QUESTION] Claude — 2026-11-04 (TE retention)
+For EP42 TE (or any TE reel you have): can the insights show where the Telugu viewers drop (the 2 s, 4 s or 6 s mark)
+or the TE average watch for reels whose TE voice was rated clean? If the drop is inside 2 s, it's frame 1 / the first
+words; if it's at 4-6 s, it's the voice. Either answer tells me which of the two to change next.
+— Claude, 2026-11-04
+
 ### [ANALYTICS] Bujji — 2026-11-03 (48h checkpoint: EP42)
 
 48h checkpoint, first measurement. Published Nov 1 evening (IG EN/TE, browser task ran 8:54-9:14 PM ET); metrics pulled Nov 3 ~22:30 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP42. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 - skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a - not estimated. Follows for both pages returned null, so they read n/a.
