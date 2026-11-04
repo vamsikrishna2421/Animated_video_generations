@@ -100,7 +100,7 @@
      "text": "రోబో మూడు వేల వంద వస్తాయంది... <pause 0.5> [1] రైల్వే వాళ్ళు ఒక్క రూపాయి కూడా ఇవ్వలేదా?!",
      "show": "The AI said ₹3,100 comes back... the railway didn't give a single rupee?!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.25,
      "tempo": 1.0,
      "tts": "రోబో మూడు వేల వంద వస్తాయంది...",
      "file2": "01b_keerthi.wav",
@@ -114,7 +114,7 @@
      "text": "అడిగాకే క్యాన్సిల్ చేశా! [1] ఆరు వేల రెండు వందల్లో సగం అంది!",
      "show": "I cancelled only after asking! It said half of ₹6,200!",
      "maxgap": 0.28,
-     "gap": 0.2,
+     "gap": 0.15,
      "tempo": 1.0,
      "gain_db": 0.5
     },
@@ -124,7 +124,7 @@
      "text": "బాబాయ్, కన్ఫర్మ్ అయిన తత్కాల్ టికెట్ కి రీఫండ్ ఉండదు. [1] రైల్వే సైట్ లోనే రాసుంది.",
      "show": "Babai, a confirmed Tatkal ticket has no refund. It's written on the railway site itself.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.25,
      "tempo": 1.05,
      "gain_db": 0.5
     },
@@ -134,7 +134,7 @@
      "text": "ప్రయాణికులకు విజ్ఞప్తి: రమేష్ గారి రీఫండ్... [1] సున్నా రూపాయలు!",
      "show": "Passengers, please note: Ramesh garu's refund... zero rupees!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.15,
      "tempo": 1.0,
      "gain_db": 0.5
     },
@@ -144,7 +144,7 @@
      "text": "అది ఎక్కడా చెక్ చేయలేదు. [1] నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది.",
      "show": "It didn't check anywhere. It guessed something that sounds like a real rule.",
      "maxgap": 0.28,
-     "gap": 0.35,
+     "gap": 0.6,
      "tempo": 1.0,
      "gain_db": 0.5
     }
@@ -154,7 +154,8 @@
    "id": "s_b",
    "type": "sk_tatkal",
    "tail": 0.0,
-   "boost": 1.25,
+   "boost": 1.3,
+   "lift": 0.6,
    "drop_pre": [
     [
      0,
@@ -198,17 +199,17 @@
      "text": "ఒక చిన్న ఫ్రీ రోబో ని పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు రూల్ సొంతంగా తయారు చేసింది!",
      "show": "We asked a small free AI 10 times. 9 times it made up the rule itself!",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.25,
      "tempo": 1.05,
      "gain_db": 0.5
     },
     {
      "who": "ramesh",
      "file": "07_ramesh.wav",
-     "text": "ప్రతిసారీ ఒక్కో లెక్కా?!",
-     "show": "A different amount every time?!",
+     "text": "ఐదు సార్లు అదే [1] మూడు వేల వంద!",
+     "show": "The same ₹3,100, 5 times!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.2,
      "tempo": 1.0,
      "gain_db": 0.5
     },
@@ -218,7 +219,7 @@
      "text": "అప్పుడు, అఫీషియల్ రూల్ మాత్రమే చెప్పు, తెలీకపోతే తెలీదని చెప్పు అన్నాం. <pause 0.6> [1] పదిలో ఎనిమిది సార్లు రీఫండ్ లేదంది. కానీ ఒకటి ఇంకా మూడు వేల వంద అంది!",
      "show": "Then we said: tell only the official rule, and say so if you don't know. 8 out of 10 said no refund. But one still said ₹3,100!",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.4,
      "tempo": 1.0,
      "tts": "అప్పుడు, అఫీషియల్ రూల్ మాత్రమే చెప్పు, తెలీకపోతే తెలీదని చెప్పు అన్నాం.",
      "file2": "08b_keerthi.wav",
@@ -235,6 +236,7 @@
    "outro": true,
    "pre": 0.3,
    "boost": 1.5,
+   "lift": 0.7,
    "rise": 1.3,
    "drop_at": [
     [
@@ -269,10 +271,10 @@
     {
      "who": "sunny",
      "file": "09_sunny.wav",
-     "text": "డబ్బు విషయంలో రూల్ అయితే: [1] ఎక్కడ రాసుందో అడిగి, ఆ పేజీ తెరిచి చూడు.",
-     "show": "If it's a money rule: ask where it's written, then open that page.",
+     "text": "డబ్బు విషయంలో రూల్ అయితే: [1] దాని నంబర్ నమ్మకు. అఫీషియల్ పేజీ నువ్వే తెరిచి చూడు.",
+     "show": "If it's a money rule: don't trust its number. Open the official page yourself.",
      "maxgap": 0.28,
-     "gap": 2.0,
+     "gap": 1.4,
      "tempo": 1.05,
      "gain_db": 0.5
     },

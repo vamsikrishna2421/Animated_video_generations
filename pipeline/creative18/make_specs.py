@@ -18,37 +18,37 @@ LINES = {
     4: ("ramesh", "wide", "announce", "Passengers, kindly note: Ramesh garu's refund... [1] zero rupees!", "ప్రయాణికులకు విజ్ఞప్తి: రమేష్ గారి రీఫండ్... [1] సున్నా రూపాయలు!"),   # script review: the announcer joke, once
     5: ("keerthi", "how", "how", "It didn't check anything. [1] It made up a rule that sounds real.", "అది ఎక్కడా చెక్ చేయలేదు. [1] నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది."),
     6: ("sunny", "test", "test", "We asked a small free AI the same thing, ten times. [1] Nine times, it made up a rule!", "ఒక చిన్న ఫ్రీ రోబో ని పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు రూల్ సొంతంగా తయారు చేసింది!"),
-    7: ("ramesh", "test", "again", "A different refund every time?!", "ప్రతిసారీ ఒక్కో లెక్కా?!"),
-    8: ("keerthi", "test", "official", "Then we said: only the official rule, and say if you're not sure. | [1] Better: eight of ten. But one still said three thousand one hundred!",   # script review: say the misses
+    7: ("ramesh", "test", "again", "Four different refunds? [1] And five times, three thousand one hundred!", "ఐదు సార్లు అదే [1] మూడు వేల వంద!"),   # render review: "different every time" went against our numbers
+    8: ("keerthi", "test", "official", "Then we said: only the official rule, and say if you're not sure. | [1] Better: eight of ten said no refund. But one still said three thousand one hundred!",   # script review: say the misses
         "అప్పుడు, అఫీషియల్ రూల్ మాత్రమే చెప్పు, తెలీకపోతే తెలీదని చెప్పు అన్నాం. | [1] పదిలో ఎనిమిది సార్లు రీఫండ్ లేదంది. కానీ ఒకటి ఇంకా మూడు వేల వంద అంది!"),
-    9: ("sunny", "wide", "rule", "So for money rules: [1] ask where it's written, and open that page.", "డబ్బు విషయంలో రూల్ అయితే: [1] ఎక్కడ రాసుందో అడిగి, ఆ పేజీ తెరిచి చూడు."),
+    9: ("sunny", "wide", "rule", "So for money rules: [1] don't trust its number. Open the official page yourself.", "డబ్బు విషయంలో రూల్ అయితే: [1] దాని నంబర్ నమ్మకు. అఫీషియల్ పేజీ నువ్వే తెరిచి చూడు."),   # render review: it can invent a link too
     10: ("ramesh", "wide", "loop", "Fine. AI, are you sure? | [1] ...Three thousand one hundred, it says!", "సరే రోబో, నిజమేనా? | [1] ...మూడు వేల వంద, ష్యూర్ అంట!"),   # script review: "are you sure?" runs into frame 1's ₹3,100
 }
-TTS_EN = {3: "Babai, confirmed Tatkal tickets get no refund. [1] It's on I.R.C.T.C.'s own page.",   # the kept take says "Tatkal" (try 2); "Tutt-kaal" was worse 1: "The A.I. said three thousand one hundred back... | [1] I.R.C.T.C. gave zero?!",
+TTS_EN = {3: "Babai, confirmed Tatkal tickets get no refund. [1] It's on I.R.C.T.C.'s own page.",   # the one take heard as "TATKAL" (spellings came out "toot-call", "thutcall") 1: "The A.I. said three thousand one hundred back... | [1] I.R.C.T.C. gave zero?!",
           10: "Fine. A.I., are you sure? | [1] ...Three thousand one hundred, it says!"}
 SHOW = {1: "The AI said ₹3,100 back... IRCTC gave ₹0?!", 2: "I asked it before cancelling! Half of ₹6,200, it said!", 4: "Passengers, kindly note: Ramesh garu's refund... ₹0!",
         6: "We asked a small free AI the same thing, 10 times. 9 times, it made up a rule!",
-        8: "Then we said: only the official rule, and say if you're not sure. Better: 8 of 10. But one still said ₹3,100!", 10: "Fine. AI, are you sure? ...₹3,100, it says!"}
+        8: "Then we said: only the official rule, and say if you're not sure. Better: 8 of 10 said no refund. But one still said ₹3,100!", 7: "4 different refunds? And 5 times, ₹3,100!", 10: "Fine. AI, are you sure? ...₹3,100, it says!"}
 SHOW_TE = {
     1: "The AI said ₹3,100 comes back... the railway didn't give a single rupee?!", 2: "I cancelled only after asking! It said half of ₹6,200!",
     3: "Babai, a confirmed Tatkal ticket has no refund. It's written on the railway site itself.", 4: "Passengers, please note: Ramesh garu's refund... zero rupees!",
     5: "It didn't check anywhere. It guessed something that sounds like a real rule.", 6: "We asked a small free AI 10 times. 9 times it made up the rule itself!",
-    7: "A different amount every time?!", 8: "Then we said: tell only the official rule, and say so if you don't know. 8 out of 10 said no refund. But one still said ₹3,100!",
-    9: "If it's a money rule: ask where it's written, then open that page.", 10: "Fine, AI, is it true? ...₹3,100, sure, it says!",
+    7: "The same ₹3,100, 5 times!", 8: "Then we said: tell only the official rule, and say so if you don't know. 8 out of 10 said no refund. But one still said ₹3,100!",
+    9: "If it's a money rule: don't trust its number. Open the official page yourself.", 10: "Fine, AI, is it true? ...₹3,100, sure, it says!",
 }
 NOCAP = set()
 PAUSES = {}
-TEMPO_EN = {"keerthi": 1.1, "ramesh": 1.08, "sunny": 1.12}
+TEMPO_EN = {"keerthi": 1.15, "ramesh": 1.13, "sunny": 1.16}   # render review: 58-61 s was slow
 TEMPO_TE = {"keerthi": 1.0, "ramesh": 1.0, "sunny": 1.05}
 TEMPO_LINE_TE = {}
 # Sound: the station chime and a hit on "zero" in frame 1; a ding on "Fifty percent"; the chime before IRCTC's words; a
 # boom and a glitch on "made up a rule"; a success sting on "Eight of ten"; the chime and a clap on the rule board; a
 # riser, a ding on "Fifty percent, it says!", the chime and the slam back to frame 1. The scenes step up.
 SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 0.9, "drop_at": [[0, 1], [3, 1]], "tail": 0.0}),   # the bed out before "zero" (line 1) and "zero rupees" (line 4)
-          ("s_b", (6, 7, 8), {"boost": 1.25, "drop_pre": [[0, 0.0, 0.6]], "tail": 0.0}),
-          ("s_c", (9, 10), {"outro": True, "pre": 0.3, "boost": 1.85, "rise": 1.5, "drop_at": [[1, 1]], "tail": 0.0})]
-GAP = {1: 0.3, 2: 0.2, 3: 0.4, 4: 0.25, 5: 0.35, 6: 0.4, 7: 0.25, 8: 0.6, 9: 2.4, 10: 0.0}   # 9: the rule board holds
-GAP_TE = {9: 2.0}
+          ("s_b", (6, 7, 8), {"boost": 1.3, "lift": 0.6, "drop_pre": [[0, 0.0, 0.6]], "tail": 0.0}),   # render review: flat: a lift into the test
+          ("s_c", (9, 10), {"outro": True, "pre": 0.3, "boost": 2.0, "lift": 0.7, "rise": 1.6, "drop_at": [[1, 1]], "tail": 0.0})]
+GAP = {1: 0.25, 2: 0.15, 3: 0.25, 4: 0.15, 5: 0.6, 6: 0.25, 7: 0.2, 8: 0.4, 9: 1.5, 10: 0.0}   # 5: the insert stack holds; 9: the board   # 9: the rule board holds
+GAP_TE = {9: 1.4}
 GAIN = {}
 GAIN_TE = {}
 FLAGS_TE = {"s_c": {"boost": 1.5, "rise": 1.3}}

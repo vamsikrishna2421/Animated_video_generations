@@ -97,8 +97,8 @@
      "text": "The AI said three thousand one hundred back... <pause 0.5> [1] IRCTC gave zero?!",
      "show": "The AI said ₹3,100 back... IRCTC gave ₹0?!",
      "maxgap": 0.28,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.25,
+     "tempo": 1.15,
      "tts": "The AI said three thousand one hundred back...",
      "file2": "01b_keerthi.wav",
      "tts2": "IRCTC gave zero?!",
@@ -111,8 +111,8 @@
      "text": "I asked it before cancelling! [1] Half of six thousand two hundred, it said!",
      "show": "I asked it before cancelling! Half of ₹6,200, it said!",
      "maxgap": 0.28,
-     "gap": 0.2,
-     "tempo": 1.08,
+     "gap": 0.15,
+     "tempo": 1.13,
      "gain_db": 0.5
     },
     {
@@ -121,8 +121,8 @@
      "text": "Babai, confirmed Tatkal tickets get no refund. [1] It's on I.R.C.T.C.'s own page.",
      "show": "Babai, confirmed Tatkal tickets get no refund. It's on IRCTC's own page.",
      "maxgap": 0.28,
-     "gap": 0.4,
-     "tempo": 1.12,
+     "gap": 0.25,
+     "tempo": 1.16,
      "tts": "Babai, confirmed Tatkal tickets get no refund. It's on I.R.C.T.C.'s own page.",
      "gain_db": 0.5
     },
@@ -132,8 +132,8 @@
      "text": "Passengers, kindly note: Ramesh garu's refund... [1] zero rupees!",
      "show": "Passengers, kindly note: Ramesh garu's refund... ₹0!",
      "maxgap": 0.28,
-     "gap": 0.25,
-     "tempo": 1.08,
+     "gap": 0.15,
+     "tempo": 1.13,
      "gain_db": 0.5
     },
     {
@@ -142,8 +142,8 @@
      "text": "It didn't check anything. [1] It made up a rule that sounds real.",
      "show": "It didn't check anything. It made up a rule that sounds real.",
      "maxgap": 0.28,
-     "gap": 0.35,
-     "tempo": 1.1,
+     "gap": 0.6,
+     "tempo": 1.15,
      "gain_db": 0.5
     }
    ]
@@ -152,7 +152,8 @@
    "id": "s_b",
    "type": "sk_tatkal",
    "tail": 0.0,
-   "boost": 1.25,
+   "boost": 1.3,
+   "lift": 0.6,
    "drop_pre": [
     [
      0,
@@ -195,31 +196,31 @@
      "text": "We asked a small free AI the same thing, ten times. [1] Nine times, it made up a rule!",
      "show": "We asked a small free AI the same thing, 10 times. 9 times, it made up a rule!",
      "maxgap": 0.28,
-     "gap": 0.4,
-     "tempo": 1.12,
+     "gap": 0.25,
+     "tempo": 1.16,
      "gain_db": 0.5
     },
     {
      "who": "ramesh",
      "file": "07_ramesh.wav",
-     "text": "A different refund every time?!",
-     "show": "A different refund every time?!",
+     "text": "Four different refunds? [1] And five times, three thousand one hundred!",
+     "show": "4 different refunds? And 5 times, ₹3,100!",
      "maxgap": 0.28,
-     "gap": 0.25,
-     "tempo": 1.08,
+     "gap": 0.2,
+     "tempo": 1.13,
      "gain_db": 0.5
     },
     {
      "who": "keerthi",
      "file": "08_keerthi.wav",
-     "text": "Then we said: only the official rule, and say if you're not sure. <pause 0.6> [1] Better: eight of ten. But one still said three thousand one hundred!",
-     "show": "Then we said: only the official rule, and say if you're not sure. Better: 8 of 10. But one still said ₹3,100!",
+     "text": "Then we said: only the official rule, and say if you're not sure. <pause 0.6> [1] Better: eight of ten said no refund. But one still said three thousand one hundred!",
+     "show": "Then we said: only the official rule, and say if you're not sure. Better: 8 of 10 said no refund. But one still said ₹3,100!",
      "maxgap": 0.28,
-     "gap": 0.6,
-     "tempo": 1.1,
+     "gap": 0.4,
+     "tempo": 1.15,
      "tts": "Then we said: only the official rule, and say if you're not sure.",
      "file2": "08b_keerthi.wav",
-     "tts2": "Better: eight of ten. But one still said three thousand one hundred!",
+     "tts2": "Better: eight of ten said no refund. But one still said three thousand one hundred!",
      "pause": 0.6,
      "gain_db": 0.5
     }
@@ -231,8 +232,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.85,
-   "rise": 1.5,
+   "boost": 2.0,
+   "lift": 0.7,
+   "rise": 1.6,
    "drop_at": [
     [
      1,
@@ -265,11 +267,11 @@
     {
      "who": "sunny",
      "file": "09_sunny.wav",
-     "text": "So for money rules: [1] ask where it's written, and open that page.",
-     "show": "So for money rules: ask where it's written, and open that page.",
+     "text": "So for money rules: [1] don't trust its number. Open the official page yourself.",
+     "show": "So for money rules: don't trust its number. Open the official page yourself.",
      "maxgap": 0.28,
-     "gap": 2.4,
-     "tempo": 1.12,
+     "gap": 1.5,
+     "tempo": 1.16,
      "gain_db": 0.5
     },
     {
@@ -279,7 +281,7 @@
      "show": "Fine. AI, are you sure? ...₹3,100, it says!",
      "maxgap": 0.28,
      "gap": 0.0,
-     "tempo": 1.08,
+     "tempo": 1.13,
      "tts": "Fine. A.I., are you sure?",
      "file2": "10b_ramesh.wav",
      "tts2": "...Three thousand one hundred, it says!",

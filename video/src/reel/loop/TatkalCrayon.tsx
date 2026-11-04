@@ -124,7 +124,7 @@ const StTatkal: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     if (["how", "test"].includes(b.shot) && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("wr")} at={Math.max(0, at - 26)} src="reel/sfx_riser.wav" vol={0.16} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("ch")} at={0} src={CHIME} vol={0.5} />, <Sfx key={k("a")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={te ? 0.8 : 0.9} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.35} />, <Sfx key={k("z")} at={cue(i, 1, 0.5) + 2} src="reel/sfx_buzz.wav" vol={0.25} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("ch")} at={0} src={CHIME} vol={te ? 0.7 : 0.5} />, <Sfx key={k("a")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={te ? 1.0 : 0.9} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.35} />, <Sfx key={k("z")} at={cue(i, 1, 0.5) + 2} src="reel/sfx_buzz.wav" vol={0.25} />);
     if (b.prop === "asked") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.2} />);
     if (b.prop === "irctc") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 6} src="audio/gag_ding.wav" vol={0.2} />);
     if (b.prop === "announce") sfx.push(<Sfx key={k("ch")} at={Math.max(0, at - 22)} src={CHIME} vol={0.5} />, <Sfx key={k("n")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.7} />);   // script review: the announcer joke
@@ -166,7 +166,7 @@ const StTatkal: React.FC<SP> = ({ s }) => {
           return;
         }
         if (b.shot === "test") {
-          dark(c, W, H, "OUR TEST", ["a small free AI on a laptop, offline (Qwen2.5 7B)", "\"4 confirmed Tatkal tickets, ₹6,200. Refund?\" · 10 tries"]);
+          dark(c, W, H, "OUR TEST", ["a small free AI, no internet (Qwen2.5 7B)", "\"4 confirmed Tatkal, ₹6,200: refund?\" · 10 tries"]);
           const off = b.prop === "official";
           if (!off) {
             const c1 = b.prop === "test" ? cu(1, 0.5) : -1e9;
@@ -175,7 +175,7 @@ const StTatkal: React.FC<SP> = ({ s }) => {
             const kc = seg(f, c1 + 16, c1 + 24);
             if (kc > 0) {
               c.save(); c.globalAlpha = kc; c.font = SANS(36, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("its refunds:", W / 2, 940);
-              ["₹930", "₹1,550", "₹3,100", "₹4,650"].forEach((t, q) => { c.fillStyle = "#fde68a"; rrect(c, 70 + q * 240, 970, 220, 96, 16); c.fill(); c.font = SANS(50, 900); c.fillStyle = INK; c.fillText(t, 180 + q * 240, 1036); });
+              ["₹930", "₹1,550", "₹3,100 ×5", "₹4,650"].forEach((t, q) => { c.fillStyle = q === 2 ? "#f87171" : "#fde68a"; rrect(c, 70 + q * 240, 970, 220, 96, 16); c.fill(); let fs = 50; c.font = SANS(fs, 900); while (c.measureText(t).width > 200 && fs > 30) { fs -= 2; c.font = SANS(fs, 900); } c.fillStyle = INK; c.fillText(t, 180 + q * 240, 1036); });   // render review: the same wrong ₹3,100 five times
               c.restore();
             }
             c.save(); c.font = SANS(40, 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("a small AI with no internet: try yours", W / 2, 1180); c.restore();
@@ -218,7 +218,7 @@ const StTatkal: React.FC<SP> = ({ s }) => {
         }
         if (b.prop === "announce") flaps(c, W, 210, "PASSENGERS, KINDLY NOTE", [["RAMESH GARU'S REFUND:", "₹0", "#f87171"]], seg(p, 0, 0.1));
         if (b.prop === "again") tag(c, "a different refund every time?!", W / 2, 520, 56, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.3));
-        if (b.prop === "rule") flaps(c, W, 210, "MONEY RULES: REFUNDS · FEES · FINES", [["THE AI'S NUMBER:", "A GUESS", AMBER], ["ASK IT:", "WHERE WRITTEN?", "#93c5fd"], ["THEN:", "OPEN THAT PAGE", "#4ade80"]], seg(p, 0, 0.1));
+        if (b.prop === "rule") flaps(c, W, 210, "MONEY RULES: REFUNDS · FEES · FINES", [["THE AI'S NUMBER:", "A GUESS", AMBER], ["THE RULE IS ON:", "OFFICIAL PAGE", "#93c5fd"], ["OPEN IT:", "YOURSELF", "#4ade80"]], seg(p, 0, 0.1));   // render review: it can invent a link too
         if (b.prop === "loop" && !loopOn) {
           const c1 = cu(1, 0.6);
           phoneCard(c, 90, 600, 900, "AI Chat", ["\"Are you sure?\""], seg(p, 0.05, 0.2), "#e2e8f0", INK);

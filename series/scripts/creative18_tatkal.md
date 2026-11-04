@@ -1,4 +1,4 @@
-# Creative 18 "₹3,100 Back? ₹0." · script v2, Nov 4 (the Nov 3 creative slot)
+# Creative 18 "₹3,100 Back? ₹0." · script v3 (as rendered), Nov 4 (the Nov 3 creative slot)
 
 **Format:** a railway-station announcement parody at home: every reveal gets the three-note station chime and a
 yellow-on-black split-flap board ("PASSENGERS, KINDLY NOTE"); Babai does the announcer voice when he's upset. Inserts:
@@ -52,7 +52,19 @@ into frame 1's ₹3,100. Telugu: "రోబో" for the AI ("ఏ ఐ" came out "
 ఇవ్వలేదా?!", "నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది", "ప్రతిసారీ ఒక్కో లెక్కా?!", "అఫీషియల్ రూల్ మాత్రమే
 చెప్పు, తెలీకపోతే తెలీదని చెప్పు", "డబ్బు విషయంలో రూల్ అయితే", "సరే రోబో, నిజమేనా?".
 
-## Script (English, v2) · ~55 s
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7); the board with the fare adds up; the rule board is the frame to save; the
+Telugu announcer gag works ("ప్రయాణికులకు విజ్ఞప్తి" is the real station line); "రోబో" and "అడిగాకే" came through clean.
+Both: "a different refund every time" went against our own numbers (₹3,100 five times is the stronger point); the
+0:23-0:45 dark cards dragged; the music was flat; English "Tatkal" was heard "that call". Priya: "ask where it's written"
+fails if it can invent a link; trim toward 50 s. Changed: line 7 "Four different refunds? And five times, three thousand
+one hundred!" (TE "ఐదు సార్లు అదే మూడు వేల వంద!") with "₹3,100 ×5" in red; line 8 "eight of ten said no refund"; line 9
+"don't trust its number. Open the official page yourself." and the board "THE RULE IS ON: OFFICIAL PAGE · OPEN IT:
+YOURSELF"; the insert holds longer; the bed lifts into the test and the ending (boosts 0.9 / 1.3 / 2.0 with lifts);
+faster English tempo and shorter gaps (58.4 s); the Telugu hook louder; the take heard as "Tatkal" kept (spelled forms
+came out "toot-call"). The final mix transcribes "confirmed Tatkal tickets".
+
+## Script (English, v3) · ~58 s
 | # | Who | Line |
 |---|---|---|
 | 1 | keerthi | The AI said three thousand one hundred back... / [1] IRCTC gave zero?! |
@@ -61,23 +73,23 @@ into frame 1's ₹3,100. Telugu: "రోబో" for the AI ("ఏ ఐ" came out "
 | 4 | ramesh | Passengers, kindly note: Ramesh garu's refund... [1] zero rupees! |
 | 5 | keerthi | It didn't check anything. [1] It made up a rule that sounds real. |
 | 6 | sunny | We asked a small free AI the same thing, ten times. [1] Nine times, it made up a rule! |
-| 7 | ramesh | A different refund every time?! |
-| 8 | keerthi | Then we said: only the official rule, and say if you're not sure. / [1] Better: eight of ten. But one still said three thousand one hundred! |
-| 9 | sunny | So for money rules: [1] ask where it's written, and open that page. |
+| 7 | ramesh | Four different refunds? [1] And five times, three thousand one hundred! |
+| 8 | keerthi | Then we said: only the official rule, and say if you're not sure. / [1] Better: eight of ten said no refund. But one still said three thousand one hundred! |
+| 9 | sunny | So for money rules: [1] don't trust its number. Open the official page yourself. |
 | 10 | ramesh | Fine. AI, are you sure? / [1] ...Three thousand one hundred, it says! |
 
-## Script (Telugu, v2; on-screen text stays English)
+## Script (Telugu, v3; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | keerthi | రోబో మూడు వేల వంద వస్తాయంది... / [1] రైల్వే వాళ్ళు ఒక్క రూపాయి కూడా ఇవ్వలేదా?! |
-| 2 | ramesh | క్యాన్సిల్ చేసే ముందే అడిగా! [1] ఆరు వేల రెండు వందల్లో సగం అంది! |
+| 2 | ramesh | అడిగాకే క్యాన్సిల్ చేశా! [1] ఆరు వేల రెండు వందల్లో సగం అంది! |
 | 3 | sunny | బాబాయ్, కన్ఫర్మ్ అయిన తత్కాల్ టికెట్ కి రీఫండ్ ఉండదు. [1] రైల్వే సైట్ లోనే రాసుంది. |
 | 4 | ramesh | ప్రయాణికులకు విజ్ఞప్తి: రమేష్ గారి రీఫండ్... [1] సున్నా రూపాయలు! |
 | 5 | keerthi | అది ఎక్కడా చెక్ చేయలేదు. [1] నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది. |
 | 6 | sunny | ఒక చిన్న ఫ్రీ రోబో ని పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు రూల్ సొంతంగా తయారు చేసింది! |
-| 7 | ramesh | ప్రతిసారీ ఒక్కో లెక్కా?! |
+| 7 | ramesh | ఐదు సార్లు అదే [1] మూడు వేల వంద! |
 | 8 | keerthi | అప్పుడు, అఫీషియల్ రూల్ మాత్రమే చెప్పు, తెలీకపోతే తెలీదని చెప్పు అన్నాం. / [1] పదిలో ఎనిమిది సార్లు రీఫండ్ లేదంది. కానీ ఒకటి ఇంకా మూడు వేల వంద అంది! |
-| 9 | sunny | డబ్బు విషయంలో రూల్ అయితే: [1] ఎక్కడ రాసుందో అడిగి, ఆ పేజీ తెరిచి చూడు. |
+| 9 | sunny | డబ్బు విషయంలో రూల్ అయితే: [1] దాని నంబర్ నమ్మకు. అఫీషియల్ పేజీ నువ్వే తెరిచి చూడు. |
 | 10 | ramesh | సరే రోబో, నిజమేనా? / [1] ...మూడు వేల వంద, ష్యూర్ అంట! |
 
 ## Caption ask (caption only)
