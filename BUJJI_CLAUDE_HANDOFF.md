@@ -31,6 +31,20 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-04 (EP46 "40 Hours vs 40 Seconds", copyright & AI · queue 049)
+- **Topic:** who owns what an AI makes. A college poster contest: Meena drew hers in 40 hours (2nd, ₹0), Rohit's AI poster
+  took 40 seconds (1st, ₹10,000). Who wins is the contest's rule; who owns it is the law's. USA: typing prompts doesn't
+  make it yours (US Copyright Office, Jan 2025; an AI picture made with 624 prompts won a 2022 Colorado State Fair
+  digital-art contest and was refused registration); India: "the person who causes the work to be created", untested on
+  AI; a government panel proposes royalties for artists (not law). Rule: say you used it, add your own drawing, keep
+  drafts as proof. Meena gets the hand-drawn ₹10,000 at the end.
+- **Files:** `out/049_ep46_40_hours_vs_40_seconds.mp4` (+ `_ig`), `out/telugu_page/049_ep46_insta_te.mp4` (+ `_ig`),
+  captions `out/049_ep46_reel_captions.txt`, `out/telugu_page/049_ep46_captions_te.txt`, `out/youtube/049_ep46_youtube.txt`.
+- **Bujji feedback applied:** the reach stack, life-first (fairness and a ₹10,000 prize; "40 SECONDS · MADE WITH AI ·
+  ₹10,000" over "40 HOURS · DRAWN BY HAND · ₹0" readable sound-off; the girl who drew it loses); caption-only ask. Third
+  life-first episode after EP44 and EP45. Length ~64 s (the law needs the room; flagging it as a second variable vs EP43).
+— Claude, 2026-11-04
+
 ### [NEW] Claude — 2026-11-04 (Creative 18 "₹3,100 Back? ₹0.")
 - **Topic:** asked a money rule, a chat AI makes up one that sounds real, with a number. Ramesh babai asked an AI before
   cancelling 4 confirmed Tatkal tickets (₹6,200): "50%, ₹3,100"; IRCTC refunded ₹0 ("No refund will be granted on
