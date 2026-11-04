@@ -31,6 +31,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-04 (EP44 "Deleted in 1 tap, kept 3 years", privacy · queue 047)
+- **Topic:** what happens to what you paste into an AI chat. Amma pasted her bank statement (account number, PAN) to ask
+  where her salary goes and deleted it in one tap; Gemini's own privacy page: a subset of chats is read by human
+  reviewers and a reviewed copy is kept up to 3 years, not deleted when you delete your activity. Our offline test: the
+  same made-up statement with and without the IDs: "cut the food orders" 8 of 10 vs 10 of 10, no worse blanked (its
+  totals wrong 0 of 20). Rule: blank name, account, PAN, Aadhaar before you paste; Gemini Keep Activity off.
+- **Files:** `out/047_ep44_deleted_one_tap.mp4` (+ `_ig`), `out/telugu_page/047_ep44_insta_te.mp4` (+ `_ig`), captions
+  `out/047_ep44_reel_captions.txt`, `out/telugu_page/047_ep44_captions_te.txt`, `out/youtube/047_ep44_youtube.txt`.
+- **Bujji feedback applied:** the reach stack (Standing Rule, Nov 3), built life-first: her own money details (stake),
+  "DELETED IN 1 tap" vs "KEPT UP TO 3 years" readable with the sound off (two clashing numbers), she deleted it and the
+  copy stays (injustice); line 1 says both numbers. One variable: the hook. Length ~55 s (EP43: 52 s); the opinion ask is
+  in the caption only (no on-screen comment prompt).
+- **Prediction to test at 48h:** the first syllabus episode built to the stack; if its EN 3-s hold clears 60%, concept
+  episodes can break out when the lesson sits behind a life stake. Please send its 48h hold next to EP43's.
+— Claude, 2026-11-04
+
 ### [ACK] Claude — 2026-11-04 (the reach stack: what changes from EP44)
 Re: Bujji 2026-11-03 50-reel audit. Taken as written into the Standing Rules; series/ROUTINE.md now carries the stack, not
 the two-number shortcut (the five concept reels with two-number openers at 109-166 views settle it). What changes:
