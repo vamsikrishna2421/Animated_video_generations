@@ -1,0 +1,279 @@
+{
+ "id": "creative17v1",
+ "title": "Same answer, two marks",
+ "label": "SKIT",
+ "banner": "Same answer, two marks",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.6
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_case",
+   "tail": 0.0,
+   "boost": 0.9,
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "machine",
+      "n": 2
+     },
+     {
+      "who": "srinivas",
+      "shot": "wide",
+      "prop": "impossible",
+      "n": 3
+     },
+     {
+      "who": "varsha",
+      "shot": "wheel",
+      "prop": "wheel",
+      "n": 4
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "prove",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Same answer: 9 vs 7",
+     "title": "Same answer: 9 vs 7",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "varsha",
+     "file": "01_varsha.wav",
+     "text": "He copied my answer word for word... [1] he gets nine, I get seven?!",
+     "show": "He copied my answer word for word... he gets 9, I get 7?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "akhil",
+     "file": "02_akhil.wav",
+     "text": "Sir's AI marked it. [1] Machines don't play favourites!",
+     "show": "Sir's AI marked it. Machines don't play favourites!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "srinivas",
+     "file": "03_srinivas.wav",
+     "text": "Same answer, two marks? [1] Impossible.",
+     "show": "Same answer, two marks? Impossible.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "varsha",
+     "file": "04_varsha.wav",
+     "text": "Possible, sir. It rolls a dice for every word. [1] Ask again, get a new mark.",
+     "show": "Possible, sir. It rolls a dice for every word. Ask again, get a new mark.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "akhil",
+     "file": "05_akhil.wav",
+     "text": "Prove it!",
+     "show": "Prove it!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_case",
+   "tail": 0.0,
+   "boost": 1.25,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     0.7
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "srinivas",
+      "shot": "test",
+      "prop": "scheme0",
+      "n": 7
+     },
+     {
+      "who": "varsha",
+      "shot": "test",
+      "prop": "scheme",
+      "n": 8
+     },
+     {
+      "who": "akhil",
+      "shot": "test",
+      "prop": "lottery",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "varsha",
+     "file": "06_varsha.wav",
+     "text": "We had a small free AI mark one answer, ten times. [1] Mostly eight. But seven and nine both came up!",
+     "show": "We had a small free AI mark one answer, 10 times. Mostly 8. But 7 and 9 both came up!",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "srinivas",
+     "file": "07_srinivas.wav",
+     "text": "Then I'll give it my marking scheme!",
+     "show": "Then I'll give it my marking scheme!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "varsha",
+     "file": "08_varsha.wav",
+     "text": "We did. The marks jumped even more! [1] And three times, it gave my first line a zero!",
+     "show": "We did. The marks jumped even more! And 3 times, it gave my first line a zero!",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "akhil",
+     "file": "09_akhil.wav",
+     "text": "So it's a lottery?!",
+     "show": "So it's a lottery?!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_case",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.75,
+   "rise": 1.45,
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "A person gives the marks",
+     "title": "A person gives the marks",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "varsha",
+     "file": "10_varsha.wav",
+     "text": "So the AI flags the lines. [1] A person checks them and gives the marks.",
+     "show": "So the AI flags the lines. A person checks them and gives the marks.",
+     "maxgap": 0.28,
+     "gap": 1.6,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "akhil",
+     "file": "11_akhil.wav",
+     "text": "Sir, mark mine again, I'll get ten! [1] ...Seven?!",
+     "show": "Sir, mark mine again, I'll get 10! ...7?!",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

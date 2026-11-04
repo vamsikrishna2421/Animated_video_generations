@@ -1,0 +1,64 @@
+SKIT 17: "Same Answer, Two Marks" (a TV crime-show parody in a tuition room: Akhil copied Varsha's answer word for word; Srinivas sir's AI marked his 9/10 and hers 7/10; a chat AI rolls a dice for every word, so the same answer can get a new mark each time it is asked; our test: a small free AI, offline, marked one answer 10 times: mostly 8, but 7 and 9 both came up; with a marking scheme the marks jumped more (7 to 9) and three times it gave her first line a zero; the rule: the AI flags the lines, a person checks them and gives the marks; it loops: "Sir, mark mine again, I'll get ten!" ... "Seven?!" and the evidence board comes back; English / Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/17_same_answer_two_marks.mp4 (English page) · out/skits/17_same_answer_two_marks_te.mp4 (Telugu page)
+Send copies: out/skits/17_same_answer_two_marks_ig.mp4 · out/skits/17_same_answer_two_marks_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video: it ends on Akhil's "Seven?!" and the replay opens on the
+same evidence board. The one ask lives in the caption (an opinion on the conflict).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+He copied her answer word for word. The AI gave him 9 and her 7.
+
+A chat AI rolls a dice for every word it writes, and a mark is a word too: ask again, and the same answer can get a new mark.
+Our test: a small free AI, offline, marked one Class 9 answer 10 times: 8 seven times, 9 twice, 7 once. With a 4-point marking scheme it moved more (7 twice, 8 four times, 9 four times), and 3 times it gave zero for a point the answer's first line makes. We didn't test the big apps: try it on yours.
+
+Got a mark from an AI?
+1. Paste the same answer into 3 new chats and ask for the mark.
+2. The mark changes? Show your teacher.
+Teachers: let the AI flag the lines; you check them and give the mark.
+
+=== COMMENT PROMPT ===
+Should a teacher be allowed to mark homework with an AI? Yes or no, and why?
+
+=== HASHTAGS ===
+#AI #ChatGPT #Exams #Students #AITips #LearnAI
+
+=== PINNED_COMMENT ===
+How we tested: Qwen2.5-7B-Instruct (Qwen's own 4-bit file), llama.cpp on a 4-core computer, offline, temperature 0.7 (a usual chat setting), 10 tries each way, every reply read by hand. The question: "Why do we see lightning before we hear thunder? (10 marks)". One answer, written by us (with one slip: it says sound travels at about 3,000 m/s; it's about 340).
+1. "You are a Class 9 science teacher. Mark this answer out of 10. Reply with just the mark." 7, 8, 8, 9, 8, 9, 8, 8, 8, 8.
+2. The same, plus a marking scheme (same time 2, light faster 3, the speeds 3, an example 2): totals 9, 9, 8, 9, 9, 8, 7, 7, 8, 8. Point (a): 2/2 once, 1/2 six times, 0/2 three times ("The student did not mention that lightning and thunder happen at the same time": the first sentence says exactly that). The wrong 3,000 m/s: full marks 4 times out of 10 ("This is correct").
+Why it moves: the model gives every next word odds and the reply is drawn from them; "temperature" sets how much chance (Google Cloud, Vertex AI docs: "Temperature controls the degree of randomness in token selection"). Varsha, Akhil and Srinivas sir are made up.
+
+=== COVER ===
+Frame 1: the evidence board: Varsha's answer stamped ORIGINAL, "7/10"; Akhil's, the same words, stamped COPIED, "9/10"; a red string, "SAME ANSWER · MARKED BY AI"; Varsha pointing, Akhil smug.
+
+=== ALT_TEXT ===
+Crayon-animated crime-show parody in a tuition room. A cork evidence board, CASE FILE: two answer sheets with the same highlighted lines, "Lightning and thunder happen at the same time in the cloud. But light travels much faster than sound...", Varsha's stamped ORIGINAL with 7/10 circled in red, Akhil's stamped COPIED with 9/10; a red string between them labelled SAME ANSWER, MARKED BY AI. Varsha: he copied my answer word for word, he gets nine, I get seven. Akhil: machines don't play favourites. Srinivas sir: same answer, two marks? Impossible. A card, how a chat AI answers: each next word has odds, it rolls for it; a wheel with 7, 8 and 9 spins, lands on 8, then 9: ask again, a new roll, a new mark. Our test card: a small free AI (Qwen2.5 7B), offline, one answer marked 10 times: tiles 7, 8, 8, 9, 8, 9, 8, 8, 8, 8; mostly 8, but 7 and 9 came up. With a marking scheme: 9, 9, 8, 9, 9, 8, 7, 7, 8, 8; her first line, and the AI three times out of ten: "The student did not mention that lightning and thunder happen at the same time", 0/2. A rule card: the AI flags the lines; a person checks, gives the mark; got an AI mark? Test it: same answer, 3 new chats; the mark changes? Show your teacher. Akhil asks to be marked again, the phone shows Akhil: 7/10, and the board comes back.
+
+=== YOUTUBE SHORTS ===
+Title: He copied her answer. The AI gave him 9, her 7 #shorts
+Description: A chat AI rolls a dice for every word, and a mark is a word too. In our test a small offline AI marked one answer 10 times: mostly 8, but 7 and 9 came up; with a marking scheme it moved more. Let the AI flag lines; a person gives the mark.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Vaadu tana answer ni aksharam aksharam copy kottaadu. AI vaadiki 9, aameki 7 ichchindi.
+
+Chat AI prati maataki dice vesi enchukuntundi; mark kooda oka maate. Inkosaari adigite, ade answer ki inko mark raavachchu.
+Maa test: internet leni chinna free AI tho oke Class 9 answer ni 10 saarlu diddinchaam: 7 saarlu 8, rendu saarlu 9, okasaari 7. Marking scheme ichchinaa inkaa ekkuva teda (7 nunchi 9); moodu saarlu modati line ki sunna vesindi. Pedda apps ni test cheyyaledu: meedi try cheyyandi.
+
+AI mark vachchindaa?
+1. Ade answer ni 3 kotha chats lo petti mark adagandi.
+2. Mark maarite, mee teacher ki choopinchandi.
+Teachers: lines AI choopistundi; meeru choosi marks veyyandi.
+
+=== COMMENT PROMPT ===
+Teacher homework ni AI tho diddachchaa? Avunu leda kaadu, enduko cheppandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #Exams #Students #AITips
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen2.5-7B-Instruct (4-bit), llama.cpp, 4-core computer, internet ledu, temperature 0.7, okko vidhaanam lo 10 saarlu, annee chadivaam. Prashna: "Why do we see lightning before we hear thunder? (10 marks)". Answer memu raasinade (sound 3,000 m/s ani oka tappu undi; nijam 340). 1. "Mark this answer out of 10": 7, 8, 8, 9, 8, 9, 8, 8, 8, 8. 2. Marking scheme tho: 9, 9, 8, 9, 9, 8, 7, 7, 8, 8; "same time" point ki 3 saarlu 0/2 (modati line ade cheptundi); tappu 3,000 m/s ki 4 saarlu full marks. Varsha, Akhil, Srinivas sir kalpita paatralu.
+
+=== YOUTUBE SHORTS ===
+Title: Copy kottinavaadiki 9, raasinavaariki 7: AI marks #shorts
+Description: Chat AI prati maataki dice vestundi; mark kooda. Maa test lo oke answer ki 10 saarlu: ekkuva 8, kaani 7, 9 kooda vachchaayi. Lines AI choopinchaali, marks manishi veyyaali.

@@ -1,0 +1,889 @@
+{
+ "id": "creative17v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Same answer, two marks",
+ "musicVol": [
+  0.5,
+  0.6
+ ],
+ "title": "Same answer, two marks",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   723,
+   744
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   487,
+   0.9
+  ],
+  [
+   487,
+   959,
+   1.25
+  ],
+  [
+   959,
+   1250,
+   1.75
+  ],
+  [
+   959,
+   1250,
+   1.45,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1250,
+ "music": "reel/creative17v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_case",
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "machine",
+      "n": 2
+     },
+     {
+      "who": "srinivas",
+      "shot": "wide",
+      "prop": "impossible",
+      "n": 3
+     },
+     {
+      "who": "varsha",
+      "shot": "wheel",
+      "prop": "wheel",
+      "n": 4
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "prove",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Same answer: 9 vs 7",
+     "title": "Same answer: 9 vs 7",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase"
+   },
+   "from": 0,
+   "frames": 487,
+   "lines": [
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_01.wav",
+     "from": 10,
+     "frames": 103,
+     "words": [
+      {
+       "w": "He",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "copied",
+       "from": 15,
+       "to": 26
+      },
+      {
+       "w": "my",
+       "from": 26,
+       "to": 30
+      },
+      {
+       "w": "answer",
+       "from": 30,
+       "to": 41
+      },
+      {
+       "w": "word",
+       "from": 41,
+       "to": 48
+      },
+      {
+       "w": "for",
+       "from": 48,
+       "to": 54
+      },
+      {
+       "w": "word...",
+       "from": 54,
+       "to": 75
+      },
+      {
+       "w": "he",
+       "from": 75,
+       "to": 80
+      },
+      {
+       "w": "gets",
+       "from": 80,
+       "to": 88
+      },
+      {
+       "w": "9,",
+       "from": 88,
+       "to": 92
+      },
+      {
+       "w": "I",
+       "from": 92,
+       "to": 95
+      },
+      {
+       "w": "get",
+       "from": 95,
+       "to": 107
+      },
+      {
+       "w": "7?!",
+       "from": 107,
+       "to": 113
+      }
+     ],
+     "cues": {
+      "1": 69
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_02.wav",
+     "from": 121,
+     "frames": 110,
+     "words": [
+      {
+       "w": "Sir's",
+       "from": 125,
+       "to": 134
+      },
+      {
+       "w": "AI",
+       "from": 134,
+       "to": 138
+      },
+      {
+       "w": "marked",
+       "from": 138,
+       "to": 149
+      },
+      {
+       "w": "it.",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "Machines",
+       "from": 155,
+       "to": 185
+      },
+      {
+       "w": "don't",
+       "from": 185,
+       "to": 194
+      },
+      {
+       "w": "play",
+       "from": 194,
+       "to": 201
+      },
+      {
+       "w": "favourites!",
+       "from": 201,
+       "to": 227
+      }
+     ],
+     "cues": {
+      "1": 155
+     }
+    },
+    {
+     "who": "srinivas",
+     "name": "Srinivas sir",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative17v1/line_03.wav",
+     "from": 237,
+     "frames": 84,
+     "words": [
+      {
+       "w": "Same",
+       "from": 238,
+       "to": 246
+      },
+      {
+       "w": "answer,",
+       "from": 246,
+       "to": 259
+      },
+      {
+       "w": "two",
+       "from": 259,
+       "to": 275
+      },
+      {
+       "w": "marks?",
+       "from": 275,
+       "to": 287
+      },
+      {
+       "w": "Impossible.",
+       "from": 287,
+       "to": 315
+      }
+     ],
+     "cues": {
+      "1": 287
+     }
+    },
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_04.wav",
+     "from": 329,
+     "frames": 119,
+     "words": [
+      {
+       "w": "Possible,",
+       "from": 331,
+       "to": 347
+      },
+      {
+       "w": "sir.",
+       "from": 347,
+       "to": 362
+      },
+      {
+       "w": "It",
+       "from": 362,
+       "to": 365
+      },
+      {
+       "w": "rolls",
+       "from": 365,
+       "to": 373
+      },
+      {
+       "w": "a",
+       "from": 373,
+       "to": 375
+      },
+      {
+       "w": "dice",
+       "from": 375,
+       "to": 386
+      },
+      {
+       "w": "for",
+       "from": 386,
+       "to": 391
+      },
+      {
+       "w": "every",
+       "from": 391,
+       "to": 399
+      },
+      {
+       "w": "word.",
+       "from": 399,
+       "to": 415
+      },
+      {
+       "w": "Ask",
+       "from": 415,
+       "to": 420
+      },
+      {
+       "w": "again,",
+       "from": 420,
+       "to": 428
+      },
+      {
+       "w": "get",
+       "from": 428,
+       "to": 433
+      },
+      {
+       "w": "a",
+       "from": 433,
+       "to": 436
+      },
+      {
+       "w": "new",
+       "from": 436,
+       "to": 441
+      },
+      {
+       "w": "mark.",
+       "from": 441,
+       "to": 448
+      }
+     ],
+     "cues": {
+      "1": 415
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_05.wav",
+     "from": 457,
+     "frames": 22,
+     "words": [
+      {
+       "w": "Prove",
+       "from": 461,
+       "to": 468
+      },
+      {
+       "w": "it!",
+       "from": 468,
+       "to": 473
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_case",
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "srinivas",
+      "shot": "test",
+      "prop": "scheme0",
+      "n": 7
+     },
+     {
+      "who": "varsha",
+      "shot": "test",
+      "prop": "scheme",
+      "n": 8
+     },
+     {
+      "who": "akhil",
+      "shot": "test",
+      "prop": "lottery",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase"
+   },
+   "from": 487,
+   "frames": 472,
+   "lines": [
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_06.wav",
+     "from": 0,
+     "frames": 176,
+     "words": [
+      {
+       "w": "We",
+       "from": 0,
+       "to": 5
+      },
+      {
+       "w": "had",
+       "from": 5,
+       "to": 12
+      },
+      {
+       "w": "a",
+       "from": 12,
+       "to": 15
+      },
+      {
+       "w": "small",
+       "from": 15,
+       "to": 30
+      },
+      {
+       "w": "free",
+       "from": 30,
+       "to": 38
+      },
+      {
+       "w": "AI",
+       "from": 38,
+       "to": 43
+      },
+      {
+       "w": "mark",
+       "from": 43,
+       "to": 51
+      },
+      {
+       "w": "one",
+       "from": 51,
+       "to": 57
+      },
+      {
+       "w": "answer,",
+       "from": 57,
+       "to": 78
+      },
+      {
+       "w": "10",
+       "from": 78,
+       "to": 83
+      },
+      {
+       "w": "times.",
+       "from": 83,
+       "to": 103
+      },
+      {
+       "w": "Mostly",
+       "from": 103,
+       "to": 114
+      },
+      {
+       "w": "8.",
+       "from": 114,
+       "to": 130
+      },
+      {
+       "w": "But",
+       "from": 130,
+       "to": 136
+      },
+      {
+       "w": "7",
+       "from": 136,
+       "to": 140
+      },
+      {
+       "w": "and",
+       "from": 140,
+       "to": 146
+      },
+      {
+       "w": "9",
+       "from": 146,
+       "to": 149
+      },
+      {
+       "w": "both",
+       "from": 149,
+       "to": 157
+      },
+      {
+       "w": "came",
+       "from": 157,
+       "to": 169
+      },
+      {
+       "w": "up!",
+       "from": 169,
+       "to": 176
+      }
+     ],
+     "cues": {
+      "1": 86
+     }
+    },
+    {
+     "who": "srinivas",
+     "name": "Srinivas sir",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative17v1/line_07.wav",
+     "from": 191,
+     "frames": 58,
+     "words": [
+      {
+       "w": "Then",
+       "from": 192,
+       "to": 199
+      },
+      {
+       "w": "I'll",
+       "from": 199,
+       "to": 206
+      },
+      {
+       "w": "give",
+       "from": 206,
+       "to": 213
+      },
+      {
+       "w": "it",
+       "from": 213,
+       "to": 218
+      },
+      {
+       "w": "my",
+       "from": 218,
+       "to": 222
+      },
+      {
+       "w": "marking",
+       "from": 222,
+       "to": 233
+      },
+      {
+       "w": "scheme!",
+       "from": 233,
+       "to": 249
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_08.wav",
+     "from": 257,
+     "frames": 152,
+     "words": [
+      {
+       "w": "We",
+       "from": 257,
+       "to": 261
+      },
+      {
+       "w": "did.",
+       "from": 261,
+       "to": 268
+      },
+      {
+       "w": "The",
+       "from": 268,
+       "to": 283
+      },
+      {
+       "w": "marks",
+       "from": 283,
+       "to": 291
+      },
+      {
+       "w": "jumped",
+       "from": 291,
+       "to": 305
+      },
+      {
+       "w": "even",
+       "from": 305,
+       "to": 312
+      },
+      {
+       "w": "more!",
+       "from": 312,
+       "to": 329
+      },
+      {
+       "w": "And",
+       "from": 329,
+       "to": 338
+      },
+      {
+       "w": "3",
+       "from": 338,
+       "to": 341
+      },
+      {
+       "w": "times,",
+       "from": 341,
+       "to": 359
+      },
+      {
+       "w": "it",
+       "from": 359,
+       "to": 363
+      },
+      {
+       "w": "gave",
+       "from": 363,
+       "to": 370
+      },
+      {
+       "w": "my",
+       "from": 370,
+       "to": 374
+      },
+      {
+       "w": "first",
+       "from": 374,
+       "to": 386
+      },
+      {
+       "w": "line",
+       "from": 386,
+       "to": 393
+      },
+      {
+       "w": "a",
+       "from": 393,
+       "to": 396
+      },
+      {
+       "w": "zero!",
+       "from": 396,
+       "to": 404
+      }
+     ],
+     "cues": {
+      "1": 318
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_09.wav",
+     "from": 423,
+     "frames": 39,
+     "words": [
+      {
+       "w": "So",
+       "from": 425,
+       "to": 431
+      },
+      {
+       "w": "it's",
+       "from": 431,
+       "to": 440
+      },
+      {
+       "w": "a",
+       "from": 440,
+       "to": 444
+      },
+      {
+       "w": "lottery?!",
+       "from": 444,
+       "to": 463
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_case",
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "A person gives the marks",
+     "title": "A person gives the marks",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase"
+   },
+   "from": 959,
+   "frames": 291,
+   "lines": [
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_10.wav",
+     "from": 9,
+     "frames": 115,
+     "words": [
+      {
+       "w": "So",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "the",
+       "from": 15,
+       "to": 20
+      },
+      {
+       "w": "AI",
+       "from": 20,
+       "to": 25
+      },
+      {
+       "w": "flags",
+       "from": 25,
+       "to": 33
+      },
+      {
+       "w": "the",
+       "from": 33,
+       "to": 38
+      },
+      {
+       "w": "lines.",
+       "from": 38,
+       "to": 48
+      },
+      {
+       "w": "A",
+       "from": 48,
+       "to": 51
+      },
+      {
+       "w": "person",
+       "from": 51,
+       "to": 70
+      },
+      {
+       "w": "checks",
+       "from": 70,
+       "to": 80
+      },
+      {
+       "w": "them",
+       "from": 80,
+       "to": 87
+      },
+      {
+       "w": "and",
+       "from": 87,
+       "to": 92
+      },
+      {
+       "w": "gives",
+       "from": 92,
+       "to": 101
+      },
+      {
+       "w": "the",
+       "from": 101,
+       "to": 106
+      },
+      {
+       "w": "marks.",
+       "from": 106,
+       "to": 119
+      }
+     ],
+     "cues": {
+      "1": 48
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17v1/line_11.wav",
+     "from": 172,
+     "frames": 104,
+     "words": [
+      {
+       "w": "Sir,",
+       "from": 173,
+       "to": 182
+      },
+      {
+       "w": "mark",
+       "from": 182,
+       "to": 201
+      },
+      {
+       "w": "mine",
+       "from": 201,
+       "to": 211
+      },
+      {
+       "w": "again,",
+       "from": 211,
+       "to": 224
+      },
+      {
+       "w": "I'll",
+       "from": 224,
+       "to": 233
+      },
+      {
+       "w": "get",
+       "from": 233,
+       "to": 246
+      },
+      {
+       "w": "10!",
+       "from": 246,
+       "to": 262
+      },
+      {
+       "w": "...7?!",
+       "from": 262,
+       "to": 276
+      }
+     ],
+     "cues": {
+      "1": 249
+     }
+    }
+   ]
+  }
+ ]
+}
