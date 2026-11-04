@@ -84,8 +84,8 @@
     {
      "who": "amma",
      "file": "01_amma.wav",
-     "text": "Your phone money, twenty-two thousand... [1] for five and a half lakh in a WEEK?!",
-     "show": "Your phone money, ₹22,000... for ₹5.5 lakh in a WEEK?!",
+     "text": "Twenty-two thousand... [1] for five and a half lakh in a WEEK?!",
+     "show": "₹22,000... for ₹5.5 lakh in a WEEK?!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.1,
@@ -208,7 +208,7 @@
      "text": "PIB Fact Check says fake! [1] So my twenty-two thousand?!",
      "show": "PIB Fact Check says fake! So my ₹22,000?!",
      "maxgap": 0.28,
-     "gap": 0.35,
+     "gap": 0.8,
      "tempo": 1.12,
      "gain_db": 0.5
     }
@@ -222,6 +222,13 @@
    "pre": 0.3,
    "boost": 1.75,
    "rise": 1.45,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     0.6
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -259,11 +266,12 @@
     {
      "who": "chinnu",
      "file": "10_chinnu.wav",
-     "text": "Amma, now the RBI Governor says double your money! [1] ...Money test: fake!",
+     "text": "Amma! Now the R. B. I. Governor says double your money! [1] ...Money test: fake!",
      "show": "Amma, now the RBI Governor says double your money! ...Money test: fake!",
      "maxgap": 0.28,
      "gap": 0.0,
      "tempo": 1.12,
+     "tts": "Amma! Now the R. B. I. Governor says double your money! ...Money test: fake!",
      "gain_db": 0.5
     }
    ]

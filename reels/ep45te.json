@@ -9,8 +9,8 @@
  "lead": 0.5,
  "music": "lofi",
  "musicVol": [
-  0.66,
-  0.9
+  0.5,
+  0.75
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 4.0,
+ "musicGapGain": 2.0,
  "hideTimerInHook": true,
  "hideTimer": true,
  "tempo": 1.0,
@@ -87,11 +87,15 @@
     {
      "who": "amma",
      "file": "01_amma.wav",
-     "text": "నీ ఫోన్ డబ్బులు, ఇరవై రెండు వేలు... [1] వారంలో ఐదున్నర లక్షలకా?!",
-     "show": "Your phone money, ₹22,000... for ₹5.5 lakh in a week?!",
+     "text": "ఇరవై రెండు వేలు కట్టావా? <pause 0.25> [1] వారంలో ఐదున్నర లక్షలకా?!",
+     "show": "You paid ₹22,000... for ₹5.5 lakh in a week?!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.0,
+     "tts": "ఇరవై రెండు వేలు కట్టావా?",
+     "file2": "01b_amma.wav",
+     "tts2": "వారంలో ఐదున్నర లక్షలకా?!",
+     "pause": 0.25,
      "gain_db": 0.5
     },
     {
@@ -212,7 +216,7 @@
      "text": "గవర్నమెంట్ ఫ్యాక్ట్ చెక్: ఫేక్! [1] మరి నా డబ్బులు?!",
      "show": "The government fact check: fake! Then my money?!",
      "maxgap": 0.28,
-     "gap": 0.35,
+     "gap": 0.8,
      "tempo": 1.05,
      "gain_db": 0.5
     }
@@ -226,6 +230,13 @@
    "pre": 0.3,
    "boost": 1.5,
    "rise": 1.3,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     0.6
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -264,7 +275,7 @@
      "who": "chinnu",
      "file": "10_chinnu.wav",
      "text": "అమ్మా, ఇప్పుడు ఆర్ బీ ఐ గవర్నర్ గారు డబ్బు డబుల్ చేస్తారంట! [1] ...మనీ టెస్ట్: ఫేక్!",
-     "show": "Amma, now the RBI Governor will double the money, it seems! ...Money test: fake!",
+     "show": "Amma, now the RBI Governor says he'll double your money! ...Money test: fake!",
      "maxgap": 0.28,
      "gap": 0.0,
      "tempo": 1.05,

@@ -1,0 +1,902 @@
+{
+ "id": "ep45te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Deepfakes: how to spot them",
+ "musicVol": [
+  0.5,
+  0.75
+ ],
+ "title": "₹22,000 for ₹5.5 lakh a week (EP45: Deepfakes) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP45",
+ "fps": 30,
+ "musicDrops": [
+  [
+   1114,
+   1135
+  ],
+  [
+   1232,
+   1250
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   708,
+   0.9
+  ],
+  [
+   708,
+   1241,
+   1.25
+  ],
+  [
+   1241,
+   1517,
+   1.5
+  ],
+  [
+   1241,
+   1517,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1517,
+ "music": "reel/ep45te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_deepfake",
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "video",
+      "n": 2
+     },
+     {
+      "who": "amma",
+      "shot": "amma",
+      "prop": "deepfake",
+      "n": 3
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "lips",
+      "n": 4
+     },
+     {
+      "who": "amma",
+      "shot": "how",
+      "prop": "how",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "₹22,000 for ₹5.5 lakh a week?",
+     "title": "₹22,000 for ₹5.5 lakh a week?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 0,
+   "frames": 708,
+   "lines": [
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/ep45te/line_01.wav",
+     "from": 15,
+     "frames": 117,
+     "words": [
+      {
+       "w": "You",
+       "from": 17,
+       "to": 23
+      },
+      {
+       "w": "paid",
+       "from": 23,
+       "to": 31
+      },
+      {
+       "w": "₹22,000...",
+       "from": 31,
+       "to": 49
+      },
+      {
+       "w": "for",
+       "from": 49,
+       "to": 56
+      },
+      {
+       "w": "₹5.5",
+       "from": 69,
+       "to": 81
+      },
+      {
+       "w": "lakh",
+       "from": 81,
+       "to": 103
+      },
+      {
+       "w": "in",
+       "from": 103,
+       "to": 110
+      },
+      {
+       "w": "a",
+       "from": 110,
+       "to": 115
+      },
+      {
+       "w": "week?!",
+       "from": 115,
+       "to": 132
+      }
+     ],
+     "cues": {
+      "1": 69
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep45te/line_02.wav",
+     "from": 139,
+     "frames": 79,
+     "words": [
+      {
+       "w": "The",
+       "from": 142,
+       "to": 146
+      },
+      {
+       "w": "Finance",
+       "from": 146,
+       "to": 155
+      },
+      {
+       "w": "Minister",
+       "from": 155,
+       "to": 165
+      },
+      {
+       "w": "herself",
+       "from": 165,
+       "to": 174
+      },
+      {
+       "w": "said",
+       "from": 174,
+       "to": 179
+      },
+      {
+       "w": "it!",
+       "from": 179,
+       "to": 183
+      },
+      {
+       "w": "There's",
+       "from": 183,
+       "to": 203
+      },
+      {
+       "w": "a",
+       "from": 203,
+       "to": 205
+      },
+      {
+       "w": "video!",
+       "from": 205,
+       "to": 213
+      }
+     ],
+     "cues": {
+      "1": 183
+     }
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/ep45te/line_03.wav",
+     "from": 224,
+     "frames": 104,
+     "words": [
+      {
+       "w": "Nobody",
+       "from": 226,
+       "to": 237
+      },
+      {
+       "w": "gives",
+       "from": 237,
+       "to": 246
+      },
+      {
+       "w": "lakhs",
+       "from": 246,
+       "to": 256
+      },
+      {
+       "w": "in",
+       "from": 256,
+       "to": 261
+      },
+      {
+       "w": "a",
+       "from": 261,
+       "to": 264
+      },
+      {
+       "w": "week.",
+       "from": 264,
+       "to": 274
+      },
+      {
+       "w": "That's",
+       "from": 274,
+       "to": 294
+      },
+      {
+       "w": "a",
+       "from": 294,
+       "to": 298
+      },
+      {
+       "w": "deepfake.",
+       "from": 298,
+       "to": 322
+      }
+     ],
+     "cues": {
+      "1": 278
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep45te/line_04.wav",
+     "from": 337,
+     "frames": 97,
+     "words": [
+      {
+       "w": "But",
+       "from": 339,
+       "to": 344
+      },
+      {
+       "w": "look,",
+       "from": 344,
+       "to": 361
+      },
+      {
+       "w": "the",
+       "from": 361,
+       "to": 366
+      },
+      {
+       "w": "lips",
+       "from": 366,
+       "to": 372
+      },
+      {
+       "w": "move",
+       "from": 372,
+       "to": 379
+      },
+      {
+       "w": "right!",
+       "from": 379,
+       "to": 388
+      },
+      {
+       "w": "It's",
+       "from": 388,
+       "to": 394
+      },
+      {
+       "w": "exactly",
+       "from": 394,
+       "to": 427
+      },
+      {
+       "w": "her!",
+       "from": 427,
+       "to": 433
+      }
+     ],
+     "cues": {
+      "1": 405
+     }
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/ep45te/line_05.wav",
+     "from": 441,
+     "frames": 255,
+     "words": [
+      {
+       "w": "In",
+       "from": 443,
+       "to": 451
+      },
+      {
+       "w": "new",
+       "from": 451,
+       "to": 456
+      },
+      {
+       "w": "fakes,",
+       "from": 456,
+       "to": 466
+      },
+      {
+       "w": "the",
+       "from": 466,
+       "to": 480
+      },
+      {
+       "w": "lips",
+       "from": 480,
+       "to": 487
+      },
+      {
+       "w": "are",
+       "from": 487,
+       "to": 493
+      },
+      {
+       "w": "right",
+       "from": 493,
+       "to": 501
+      },
+      {
+       "w": "too.",
+       "from": 501,
+       "to": 508
+      },
+      {
+       "w": "They",
+       "from": 508,
+       "to": 515
+      },
+      {
+       "w": "copied",
+       "from": 515,
+       "to": 525
+      },
+      {
+       "w": "her",
+       "from": 545,
+       "to": 552
+      },
+      {
+       "w": "face",
+       "from": 552,
+       "to": 564
+      },
+      {
+       "w": "and",
+       "from": 564,
+       "to": 582
+      },
+      {
+       "w": "voice",
+       "from": 582,
+       "to": 592
+      },
+      {
+       "w": "with",
+       "from": 592,
+       "to": 601
+      },
+      {
+       "w": "a",
+       "from": 601,
+       "to": 604
+      },
+      {
+       "w": "computer",
+       "from": 604,
+       "to": 620
+      },
+      {
+       "w": "and",
+       "from": 620,
+       "to": 627
+      },
+      {
+       "w": "made",
+       "from": 627,
+       "to": 645
+      },
+      {
+       "w": "her",
+       "from": 645,
+       "to": 652
+      },
+      {
+       "w": "say",
+       "from": 652,
+       "to": 659
+      },
+      {
+       "w": "what",
+       "from": 659,
+       "to": 668
+      },
+      {
+       "w": "she",
+       "from": 668,
+       "to": 675
+      },
+      {
+       "w": "never",
+       "from": 675,
+       "to": 685
+      },
+      {
+       "w": "said.",
+       "from": 685,
+       "to": 696
+      }
+     ],
+     "cues": {
+      "1": 545
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_deepfake",
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "shot": "chinnu",
+      "prop": "spot",
+      "n": 6
+     },
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "tests",
+      "n": 7
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "pib",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Two tests",
+     "title": "Two tests",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 708,
+   "frames": 533,
+   "lines": [
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep45te/line_06.wav",
+     "from": 0,
+     "frames": 35,
+     "words": [
+      {
+       "w": "Then",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "how",
+       "from": 6,
+       "to": 11
+      },
+      {
+       "w": "do",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "I",
+       "from": 15,
+       "to": 17
+      },
+      {
+       "w": "recognise",
+       "from": 17,
+       "to": 29
+      },
+      {
+       "w": "one?",
+       "from": 29,
+       "to": 35
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/ep45te/line_07.wav",
+     "from": 42,
+     "frames": 354,
+     "words": [
+      {
+       "w": "First,",
+       "from": 44,
+       "to": 55
+      },
+      {
+       "w": "the",
+       "from": 55,
+       "to": 67
+      },
+      {
+       "w": "money:",
+       "from": 67,
+       "to": 98
+      },
+      {
+       "w": "quick,",
+       "from": 98,
+       "to": 122
+      },
+      {
+       "w": "guaranteed,",
+       "from": 122,
+       "to": 145
+      },
+      {
+       "w": "huge",
+       "from": 145,
+       "to": 153
+      },
+      {
+       "w": "profit",
+       "from": 153,
+       "to": 164
+      },
+      {
+       "w": "means",
+       "from": 164,
+       "to": 174
+      },
+      {
+       "w": "a",
+       "from": 174,
+       "to": 177
+      },
+      {
+       "w": "scam.",
+       "from": 177,
+       "to": 187
+      },
+      {
+       "w": "Then",
+       "from": 211,
+       "to": 219
+      },
+      {
+       "w": "see",
+       "from": 219,
+       "to": 226
+      },
+      {
+       "w": "who",
+       "from": 226,
+       "to": 242
+      },
+      {
+       "w": "posted",
+       "from": 242,
+       "to": 254
+      },
+      {
+       "w": "it:",
+       "from": 254,
+       "to": 261
+      },
+      {
+       "w": "the",
+       "from": 261,
+       "to": 277
+      },
+      {
+       "w": "real",
+       "from": 277,
+       "to": 285
+      },
+      {
+       "w": "page",
+       "from": 285,
+       "to": 298
+      },
+      {
+       "w": "with",
+       "from": 298,
+       "to": 306
+      },
+      {
+       "w": "the",
+       "from": 306,
+       "to": 313
+      },
+      {
+       "w": "blue",
+       "from": 313,
+       "to": 321
+      },
+      {
+       "w": "tick,",
+       "from": 321,
+       "to": 340
+      },
+      {
+       "w": "or",
+       "from": 340,
+       "to": 345
+      },
+      {
+       "w": "PIB",
+       "from": 345,
+       "to": 361
+      },
+      {
+       "w": "Fact",
+       "from": 361,
+       "to": 369
+      },
+      {
+       "w": "Check.",
+       "from": 369,
+       "to": 390
+      }
+     ],
+     "cues": {
+      "1": 211
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep45te/line_08.wav",
+     "from": 427,
+     "frames": 82,
+     "words": [
+      {
+       "w": "The",
+       "from": 430,
+       "to": 435
+      },
+      {
+       "w": "government",
+       "from": 435,
+       "to": 447
+      },
+      {
+       "w": "fact",
+       "from": 447,
+       "to": 465
+      },
+      {
+       "w": "check:",
+       "from": 465,
+       "to": 485
+      },
+      {
+       "w": "fake!",
+       "from": 485,
+       "to": 491
+      },
+      {
+       "w": "Then",
+       "from": 491,
+       "to": 497
+      },
+      {
+       "w": "my",
+       "from": 497,
+       "to": 500
+      },
+      {
+       "w": "money?!",
+       "from": 500,
+       "to": 508
+      }
+     ],
+     "cues": {
+      "1": 490
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_deepfake",
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "call",
+      "n": 9
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Call 1930",
+     "title": "Call 1930",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1241,
+   "frames": 276,
+   "lines": [
+    {
+     "who": "amma",
+     "name": "Amma",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/ep45te/line_09.wav",
+     "from": 9,
+     "frames": 86,
+     "words": [
+      {
+       "w": "Call",
+       "from": 11,
+       "to": 27
+      },
+      {
+       "w": "1930.",
+       "from": 27,
+       "to": 46
+      },
+      {
+       "w": "Right",
+       "from": 46,
+       "to": 65
+      },
+      {
+       "w": "now.",
+       "from": 65,
+       "to": 91
+      }
+     ],
+     "cues": {
+      "1": 66
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep45te/line_10.wav",
+     "from": 122,
+     "frames": 140,
+     "words": [
+      {
+       "w": "Amma,",
+       "from": 122,
+       "to": 129
+      },
+      {
+       "w": "now",
+       "from": 129,
+       "to": 144
+      },
+      {
+       "w": "the",
+       "from": 144,
+       "to": 149
+      },
+      {
+       "w": "RBI",
+       "from": 149,
+       "to": 154
+      },
+      {
+       "w": "Governor",
+       "from": 154,
+       "to": 165
+      },
+      {
+       "w": "says",
+       "from": 165,
+       "to": 171
+      },
+      {
+       "w": "he'll",
+       "from": 171,
+       "to": 182
+      },
+      {
+       "w": "double",
+       "from": 182,
+       "to": 191
+      },
+      {
+       "w": "your",
+       "from": 191,
+       "to": 197
+      },
+      {
+       "w": "money!",
+       "from": 197,
+       "to": 205
+      },
+      {
+       "w": "...Money",
+       "from": 205,
+       "to": 226
+      },
+      {
+       "w": "test:",
+       "from": 226,
+       "to": 233
+      },
+      {
+       "w": "fake!",
+       "from": 233,
+       "to": 255
+      }
+     ],
+     "cues": {
+      "1": 206
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -12,8 +12,8 @@ R = ROOT / "reels"
 # n: (who, shot, prop, English with cue marks, Telugu). shot: the living room ("wide", "amma", "chinnu") or the insert
 # ("how": how a deepfake is made). prop: what the line brings on (DeepfakeCrayon.tsx).
 LINES = {
-    1: ("amma", "wide", "hook", "Your phone money, twenty-two thousand... [1] for five and a half lakh in a WEEK?!",
-        "నీ ఫోన్ డబ్బులు, ఇరవై రెండు వేలు... [1] వారంలో ఐదున్నర లక్షలకా?!"),
+    1: ("amma", "wide", "hook", "Twenty-two thousand... [1] for five and a half lakh in a WEEK?!",   # render review: "WEEK" landed at ~4 s; the receipt says "his phone money"
+        "ఇరవై రెండు వేలు కట్టావా? | [1] వారంలో ఐదున్నర లక్షలకా?!"),   # two takes: Parler dropped the first half 4 of 4   # render review: "నీ ఫోన్ డబ్బులు, ఇరవై రెండు వేలు" came out smeared; the receipt says "his phone money"
     2: ("chinnu", "wide", "video", "The Finance Minister said it! [1] It's on video!", "ఫైనాన్స్ మినిస్టరే చెప్పారు! [1] వీడియో ఉంది!"),
     3: ("amma", "amma", "deepfake", "Nobody gives lakhs in a week, kanna. [1] That's a deepfake.", "వారంలో లక్షలు ఎవరూ ఇవ్వరు రా. [1] అది డీప్ ఫేక్."),
     4: ("chinnu", "wide", "lips", "But look, her lips match! [1] It's really her!", "కానీ చూడు, పెదాలు సరిగ్గా కదులుతున్నాయి! [1] అచ్చం ఆవిడే!"),
@@ -27,14 +27,14 @@ LINES = {
     10: ("chinnu", "wide", "loop", "Amma, now the RBI Governor says double your money! [1] ...Money test: fake!",
          "అమ్మా, ఇప్పుడు ఆర్ బీ ఐ గవర్నర్ గారు డబ్బు డబుల్ చేస్తారంట! [1] ...మనీ టెస్ట్: ఫేక్!"),
 }
-TTS_EN = {9: "Call one nine three zero. [1] Right now.", 5: "New fakes get the lips right too. | [1] An A.I. copied her face and voice from her real speeches, and made her say this."}   # the helpline as people say it   # spoken forms
-SHOW = {1: "Your phone money, ₹22,000... for ₹5.5 lakh in a WEEK?!", 8: "PIB Fact Check says fake! So my ₹22,000?!", 9: "Call 1930. Right now."}
+TTS_EN = {10: "Amma! Now the R. B. I. Governor says double your money! [1] ...Money test: fake!", 9: "Call one nine three zero. [1] Right now.", 5: "New fakes get the lips right too. | [1] An A.I. copied her face and voice from her real speeches, and made her say this."}   # the helpline as people say it   # spoken forms
+SHOW = {1: "₹22,000... for ₹5.5 lakh in a WEEK?!", 8: "PIB Fact Check says fake! So my ₹22,000?!", 9: "Call 1930. Right now."}
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
-    1: "Your phone money, ₹22,000... for ₹5.5 lakh in a week?!", 2: "The Finance Minister herself said it! There's a video!",
+    1: "You paid ₹22,000... for ₹5.5 lakh in a week?!", 2: "The Finance Minister herself said it! There's a video!",
     3: "Nobody gives lakhs in a week. That's a deepfake.", 4: "But look, the lips move right! It's exactly her!",
     5: "In new fakes, the lips are right too. They copied her face and voice with a computer and made her say what she never said.",
     6: "Then how do I recognise one?", 7: "First, the money: quick, guaranteed, huge profit means a scam. Then see who posted it: the real page with the blue tick, or PIB Fact Check.",
-    8: "The government fact check: fake! Then my money?!", 9: "Call 1930. Right now.", 10: "Amma, now the RBI Governor will double the money, it seems! ...Money test: fake!",
+    8: "The government fact check: fake! Then my money?!", 9: "Call 1930. Right now.", 10: "Amma, now the RBI Governor says he'll double your money! ...Money test: fake!",
 }
 NOCAP = set()
 PAUSES = {}
@@ -47,8 +47,8 @@ TEMPO_LINE_TE = {}
 # slam back to frame 1. The scenes step up.
 SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 0.9, "tail": 0.0}),
           ("s_b", (6, 7, 8), {"boost": 1.25, "drop_pre": [[2, 0.0, 0.7]], "tail": 0.0}),   # the bed out for 0.7 s before the verdict
-          ("s_c", (9, 10), {"outro": True, "pre": 0.3, "boost": 1.75, "rise": 1.45, "tail": 0.0})]
-GAP = {1: 0.25, 2: 0.2, 3: 0.3, 4: 0.25, 5: 0.4, 6: 0.25, 7: 1.4, 8: 0.35, 9: 0.9, 10: 0.0}   # 7: the tests card holds; 9: 1930 holds
+          ("s_c", (9, 10), {"outro": True, "pre": 0.3, "boost": 1.75, "rise": 1.45, "drop_pre": [[0, 0.0, 0.6]], "tail": 0.0})]   # render review: a breath before 1930
+GAP = {1: 0.25, 2: 0.2, 3: 0.3, 4: 0.25, 5: 0.4, 6: 0.25, 7: 1.4, 8: 0.8, 9: 0.9, 10: 0.0}   # 7: the tests card holds; 9: 1930 holds
 GAP_TE = {7: 1.0}
 GAIN = {}
 GAIN_TE = {}
@@ -62,10 +62,10 @@ def spec(lang="en"):
     sid = "ep45te" if te else "ep45v1"
     s = {"id": sid, "title": "₹22,000 for ₹5.5 lakh a week (EP45: Deepfakes)" + (" (Telugu audio)" if te else ""), "label": "EP45",
          "banner": "Deepfakes: how to spot them", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.5, 0.6] if not te else [0.66, 0.9],   # under speech / in gaps; round 2: TE bed 11 dB under the voice, EN gaps over it
+         "musicVol": [0.5, 0.6] if not te else [0.5, 0.75],   # EP45 render review: TE music only 5 dB under the voice   # under speech / in gaps; round 2: TE bed 11 dB under the voice, EN gaps over it
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 0.0 if not te else 4.0,   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.86, 7.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
+         "musicPad": True, "musicGapGain": 0.0 if not te else 2.0,   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.86, 7.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:

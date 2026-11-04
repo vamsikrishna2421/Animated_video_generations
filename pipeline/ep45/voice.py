@@ -49,19 +49,19 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused: t
 APP = set()
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count). Telugu groups in
 # Devanagari (Whisper writes Telugu so).
-MUST = {"en": {1: [("phone",), ("money",), ("twenty", "22", "000"), ("lakh", "lac", "lakhs"), ("week",)],
+MUST = {"en": {1: [("twenty", "22", "000"), ("lakh", "lac", "lakhs"), ("week",)],
                2: [("finance",), ("minister",), ("video",)], 3: [("nobody",), ("lakhs", "lakh", "lacs"), ("week",), ("deepfake", "deep")],
                4: [("lips", "lip"), ("match",), ("really",)], 5: [("fakes", "fake"), ("lips", "lip"), ("right",)], "5b": [("ai", "a.i"), ("copied",), ("face",), ("voice",), ("speeches", "speech")],
                6: [("spot",)], 7: [("money",), ("quick",), ("sure",), ("scam",), ("face",)], "7b": [("source",), ("verified",), ("pib", "p.i.b", "p", "fact")],
                8: [("fact",), ("fake",), ("twenty", "22", "000")], 9: [("call",), ("one", "1", "1930"), ("nine", "9", "1930"), ("three", "3", "1930"), ("zero", "0", "1930"), ("now",)],
                10: [("rbi", "r.b.i", "governor"), ("double",), ("money",), ("fake",)]},
-        "te": {1: [("फोन", "फ़ोन", "फों"), ("इरवै", "इरवाई", "इरवय", "इरवा", "उरवा", "यरवा"), ("लक्ष", "लक्श", "लख")],   # Whisper's spellings, first run
+        "te": {1: [("इरवै", "इरवाई", "इरवय", "इरवा", "उरवा", "यरवा", "इरवे", "यरवे"), ("कट्टा", "कटा", "कट्ट", "कटा")], "1b": [("लक्ष", "लक्श", "लख")],   # Whisper's spellings, first run
                2: [("नान्स", "नानस", "नानि", "नांस"), ("वीडियो", "विडियो", "वीटियो", "बीडियो")],
                3: [("लक्ष", "लक्श", "लख"), ("डीप", "दीप")], 4: [("पेदा", "पेद", "पेडा")], 5: [("फेक", "फ़ेक", "फेख")], "5b": [("कंप्यू", "कम्प्यू", "कंपू", "कम्पू", "कमपु", "कुमपी", "कंपु")],
                6: [("गुर्त", "गुरत", "गुर्थ", "मुर्त")], 7: [("डब", "दब"), ("मोसम", "मोसमे", "मोसा")], "7b": [("टिक", "टीक"), ("पेजी", "पेज")],
                8: [("चेक", "चैक"), ("फेक", "फ़ेक", "फेख")], 9: [("नैन", "नाइन", "नाइं", "नें", "1930"), ("जीरो", "ज़ीरो", "जिरो", "1930")],
                10: [("गवर्नर", "गवारनर", "गवरनर", "गवर्णर", "गवनर"), ("डबल", "दबल", "डबुल"), ("फेक", "फ़ेक", "फेख")]}}
-JUDGE_TEXT = {1: "Your phone money, 22,000... for five and a half lakh in a week?!", 8: "PIB Fact Check says fake! So my 22,000?!", 9: "Call 1930. Right now."}
+JUDGE_TEXT = {1: "22,000... for five and a half lakh in a week?!", 8: "PIB Fact Check says fake! So my 22,000?!", 9: "Call 1930. Right now."}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
 GATE = set()   # characters whose Fish takes carry a hum between words (none so far)

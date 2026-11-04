@@ -53,12 +53,14 @@ const vip = (c: Ctx, x: number, y: number, s: number, f: number, talk: boolean) 
   c.fillStyle = "#1e3a8a"; c.beginPath(); c.moveTo(-150, 260); c.quadraticCurveTo(-140, 60, 0, 50); c.quadraticCurveTo(140, 60, 150, 260); c.closePath(); c.fill();   // blazer
   c.fillStyle = "#f8fafc"; c.beginPath(); c.moveTo(-40, 60); c.lineTo(0, 140); c.lineTo(40, 60); c.closePath(); c.fill();
   c.fillStyle = "#111827"; c.beginPath(); c.ellipse(0, -40, 92, 104, 0, 0, 7); c.fill();   // hair
-  c.save(); c.filter = "blur(10px)"; c.fillStyle = "#c08457"; c.beginPath(); c.ellipse(0, -20, 74, 90, 0, 0, 7); c.fill();   // the face, blurred by us
-  c.fillStyle = "#7c2d12"; c.beginPath(); c.ellipse(0, 26, talk && Math.floor(f / 3) % 2 === 0 ? 22 : 16, talk && Math.floor(f / 3) % 2 === 0 ? 12 : 5, 0, 0, 7); c.fill(); c.restore();
+  c.fillStyle = "#c08457"; c.beginPath(); c.ellipse(0, -20, 74, 90, 0, 0, 7); c.fill();   // a generic cartoon face (no likeness)
+  const open = talk && Math.floor(f / 3) % 2 === 0;
+  c.fillStyle = "#7f1d1d"; c.beginPath(); c.ellipse(0, 30, open ? 24 : 20, open ? 14 : 5, 0, 0, 7); c.fill();   // the lips, moving
+  c.save(); c.filter = "blur(8px)"; c.fillStyle = "#1f2937"; c.fillRect(-80, -48, 160, 44); c.restore();   // her eyes, blurred by us
   c.restore();
 };
 // the Sponsored ad on Chinnu's phone (screen space)
-const ad = (c: Ctx, x: number, y: number, w: number, h: number, head: string, sub: string, f: number, talk: boolean, fake: number) => {
+const ad = (c: Ctx, x: number, y: number, w: number, h: number, head: string, sub: string, f: number, talk: boolean, fake: number, madeUp = false) => {
   c.save();
   c.fillStyle = "#0f172a"; rrect(c, x - 10, y - 10, w + 20, h + 20, 30); c.fill();
   c.fillStyle = "#f1f5f9"; rrect(c, x, y, w, h, 22); c.fill();
@@ -66,13 +68,13 @@ const ad = (c: Ctx, x: number, y: number, w: number, h: number, head: string, su
   c.fillStyle = "#cbd5e1"; c.fillRect(x, y + 60, w, h - 60);
   vip(c, x + w / 2, y + h * 0.42, w / 520, f, talk);
   c.restore();
-  c.font = SANS(26, 800); c.fillStyle = "#475569"; c.textAlign = "left"; c.fillText("Sponsored", x + 22, y + 40);
+  if (w >= 500) { c.font = SANS(26, 800); c.fillStyle = "#475569"; c.textAlign = "left"; c.fillText("Sponsored", x + 22, y + 40); }
   c.fillStyle = "rgba(15,23,42,0.88)"; rrect(c, x + 16, y + h - 170, w - 32, 150, 16); c.fill();
   let fs = 44; c.font = SANS(fs, 900); while (c.measureText(head).width > w - 64 && fs > 26) { fs -= 2; c.font = SANS(fs, 900); }
   c.fillStyle = "#fde047"; c.textAlign = "center"; c.fillText(head, x + w / 2, y + h - 112);
   fs = 40; c.font = SANS(fs, 900); while (c.measureText(sub).width > w - 64 && fs > 24) { fs -= 2; c.font = SANS(fs, 900); }
   c.fillStyle = "#f8fafc"; c.fillText(sub, x + w / 2, y + h - 56);
-  c.font = SANS(22, 800); c.fillStyle = "#334155"; c.textAlign = "right"; c.fillText("WE blurred this face", x + w - 20, y + 40);
+  c.font = SANS(w >= 500 ? 28 : 24, 900); c.fillStyle = "#334155"; c.textAlign = w >= 500 ? "right" : "center"; c.fillText(madeUp ? "our made-up example" : "WE blurred her eyes", w >= 500 ? x + w - 20 : x + w / 2, y + 42);
   if (fake > 0) {   // the FAKE stamp (the cover must not sell the scheme)
     c.save(); c.globalAlpha = clamp(fake * 2); c.translate(x + w / 2, y + h * 0.36); c.rotate(-0.2);
     c.strokeStyle = RED; c.lineWidth = 9; rrect(c, -170, -56, 340, 112, 14); c.stroke();
@@ -103,8 +105,8 @@ const clash = (c: Ctx, W: number) => {
     c.fillText(big, x + 226, y0 + 172);
     c.font = SANS(36, 800); c.fillText(sub, x + 226, y0 + 244);
   };
-  box(60, "PAID", "₹22,000", "his savings", "#fee2e2", "#991b1b");
-  box(W - 512, "PROMISED", "₹5,50,000", "in 1 week", "#fef9c3", "#854d0e");
+  box(60, "IN JUST", "1 week", "the ad's promise", "#fee2e2", "#991b1b");   // render review: ₹22,000 three times in frame 1
+  box(W - 512, "PROMISED", "₹5,50,000", "for his ₹22,000", "#fef9c3", "#854d0e");
 };
 const dark = (c: Ctx, W: number, H: number, title: string, sub: string[]) => {
   c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
@@ -188,14 +190,24 @@ const StDeepfake: React.FC<SP> = ({ s }) => {
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         const endL = ln.from + ln.frames;
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
-        if (b.shot === "how") {
-          how(c, W, H, f, cu(1, 0.4) - 4, ln.from);
+        if (b.shot === "how" && f >= cu(1, 0.4) - 4) {
+          how(c, W, H, f, cu(1, 0.4) - 4, -1e9);
           face(c, "chinnu", "shock", 900, 1420, 110, false, f, r);
+          return;
+        }
+        if (b.shot === "how") {   // take 1: still on his zoomed phone, the face test busted (render review: an empty dark card)
+          c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
+          ad(c, 80, 220, 920, 880, "INVEST ₹22,000", "GET ₹5,50,000 IN 1 WEEK", f, true, 0);
+          c.save(); c.globalAlpha = seg(f, ln.from + 2, ln.from + 10); c.translate(W / 2, 1230); c.rotate(-0.05);
+          c.strokeStyle = RED; c.lineWidth = 9; rrect(c, -430, -64, 860, 128, 16); c.stroke();
+          c.font = SANS(64, 900); c.fillStyle = RED; c.textAlign = "center"; c.fillText("FACE TEST: NOT ENOUGH", 0, 22); c.restore();
+          c.save(); c.globalAlpha = seg(f, ln.from + 12, ln.from + 20); c.font = SANS(34, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center";
+          c.fillText("new fakes get the lips right · \"no single tell-tale sign\" (MIT)", W / 2, 1350); c.restore();
           return;
         }
         // ---------- the living room ----------
         const hookOn = b.prop === "hook" || loopOn;
-        const cam = hookOn ? { z: 1.0, x: 540, y: 680 } : CAM[b.shot] ?? CAM.wide;   // frame 1: the two of them lower, under the receipt
+        const cam = hookOn ? { z: 1.0, x: 540, y: 680 } : b.prop === "tests" || b.prop === "pib" ? { z: 0.95, x: 540, y: 600 } : CAM[b.shot] ?? CAM.wide;   // frame 1 and the cards: the two of them lower
         const z = cam.z * (1 + 0.03 * p);
         const shake = (b.prop === "hook" && p < 0.12) || (loopOn && f < slam + 10) ? 9 : 0;
         const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
@@ -227,17 +239,17 @@ const StDeepfake: React.FC<SP> = ({ s }) => {
         if (b.prop === "tests") {   // the two tests (sound-off viewers)
           const k0 = seg(p, 0.0, 0.08), t1 = cu(1, 0.4);
           c.save(); c.globalAlpha = clamp(k0 * 3);
-          c.fillStyle = "rgba(15,23,42,0.95)"; rrect(c, 50, 210, W - 100, 830, 30); c.fill();
-          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("SPOT A DEEPFAKE: TWO TESTS", W / 2, 296);
+          c.fillStyle = "rgba(15,23,42,0.95)"; rrect(c, 40, 196, W - 80, 560, 30); c.fill();   // render review: shorter, the family stays below it
+          c.font = SANS(52, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("SPOT A DEEPFAKE: TWO TESTS", W / 2, 270);
           c.restore();
           ([["1  THE MONEY", "quick, sure, huge returns", "= a scam, whatever the face", ln.from + 4, "#fee2e2", "#991b1b"],
-            ["2  THE SOURCE", "the verified page · PIB Fact Check", "not an ad, not a forward", t1 - 2, "#dcfce7", "#14532d"]] as [string, string, string, number, string, string][]).forEach(([a, bb, cc, t0, bg, fg], q) => {
+            ["2  THE SOURCE", "her blue-tick page · PIB Fact Check", "not a Sponsored ad, not a forward", t1 - 2, "#dcfce7", "#14532d"]] as [string, string, string, number, string, string][]).forEach(([a, bb, cc, t0, bg, fg], q) => {
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3);
-            const y = 340 + q * 330;
-            c.fillStyle = bg; rrect(c, 90, y, W - 180, 290, 24); c.fill();
-            c.font = SANS(50, 900); c.fillStyle = fg; c.textAlign = "left"; c.fillText(a, 130, y + 74);
-            c.font = SANS(44, 800); c.fillStyle = INK; c.fillText(bb, 130, y + 160); c.fillText(cc, 130, y + 226);
+            const y = 300 + q * 228;
+            c.fillStyle = bg; rrect(c, 70, y, W - 140, 210, 24); c.fill();
+            c.font = SANS(46, 900); c.fillStyle = fg; c.textAlign = "left"; c.fillText(a, 106, y + 60);
+            c.font = SANS(40, 800); c.fillStyle = INK; c.fillText(bb, 106, y + 124); c.fillText(cc, 106, y + 178);
             c.restore();
           });
         }
@@ -246,7 +258,7 @@ const StDeepfake: React.FC<SP> = ({ s }) => {
           c.save(); c.globalAlpha = clamp(k * 3); c.translate(W / 2, 560); c.rotate(-0.02);
           c.fillStyle = "#fffdf5"; rrect(c, -420, -260, 840, 520, 28); c.fill();
           c.strokeStyle = "#1e3a8a"; c.lineWidth = 6; rrect(c, -404, -244, 808, 488, 20); c.stroke();
-          c.font = SANS(44, 900); c.fillStyle = "#1e3a8a"; c.textAlign = "center"; c.fillText("PIB FACT CHECK · Apr 16, 2026", 0, -170);
+          c.font = SANS(44, 900); c.fillStyle = "#1e3a8a"; c.textAlign = "center"; c.fillText("PIB FACT CHECK (Govt of India)", 0, -184); c.font = SANS(32, 800); c.fillText("Apr 16, 2026", 0, -136);
           c.font = SANS(40, 800); c.fillStyle = INK; c.fillText("\"₹22,000 → ₹5.5 lakh in a week\"", 0, -90);
           c.save(); c.rotate(-0.08); c.strokeStyle = RED; c.lineWidth = 10; rrect(c, -220, -40, 440, 130, 16); c.stroke();
           c.font = SANS(110, 900); c.fillStyle = RED; c.fillText("FAKE", 0, 66); c.restore();
@@ -262,9 +274,9 @@ const StDeepfake: React.FC<SP> = ({ s }) => {
         }
         if (b.prop === "loop" && !loopOn) {   // the next fake: he runs the money test himself
           const c1 = cu(1, 0.6);
-          ad(c, 200, 220, 680, 760, "RBI GOVERNOR:", "DOUBLE YOUR MONEY IN 30 DAYS", f, f < c1, seg(f, c1, c1 + 8));
-          c.save(); c.globalAlpha = seg(f, c1 + 4, c1 + 12); c.fillStyle = "rgba(255,253,245,0.95)"; rrect(c, 60, 1000, W - 120, 64, 32); c.fill();
-          c.font = SANS(30, 800); c.fillStyle = INK; c.textAlign = "center"; c.fillText("RBI warned about fake videos of its Governor (Nov 2024)", W / 2, 1042); c.restore();
+          ad(c, 200, 220, 680, 760, "RBI GOVERNOR:", "DOUBLE YOUR MONEY IN 30 DAYS", f, f < c1, seg(f, c1, c1 + 8), true);
+          c.save(); c.globalAlpha = seg(f, c1 + 4, c1 + 12); c.fillStyle = "rgba(255,253,245,0.95)"; rrect(c, 50, 996, W - 100, 116, 30); c.fill();
+          c.font = SANS(36, 800); c.fillStyle = INK; c.textAlign = "center"; c.fillText("RBI has warned of fake videos of its", W / 2, 1042); c.fillText("Governor pushing investment schemes (Nov 2024)", W / 2, 1090); c.restore();
         }
         if (FACE[n] && b.shot === "how") face(c, "amma", FACE[n], 900, 1420, 110, false, f, r);
         if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, slam, slam + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }

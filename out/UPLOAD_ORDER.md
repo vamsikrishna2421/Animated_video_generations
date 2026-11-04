@@ -52,7 +52,7 @@ Already posted: `out/posted/`.
 | 045 | ep42 | Same Customer, Different Name: ₹500 vs ₹2,500 From an AI (EP42: bias and fairness, tested; skit, AI voices) | ready |
 | 046 | ep43 | "Get Me More 5-Star Reviews": ₹50 Off, Printed by the AI (EP43: AI safety and alignment, tested; skit, AI voices) | ready |
 | 047 | ep44 | Deleted in 1 Tap, Kept 3 Years? What Happens to Your AI Chats (EP44: Privacy, tested; skit, AI voices) | ready |
-| 048 | ep45 | Deepfakes and How to Spot Them | ready |
+| 048 | ep45 | ₹22,000 for ₹5.5 Lakh in a Week? How to Spot a Deepfake (EP45: Deepfakes; skit, AI voices) | ready |
 | 049 | ep46 | Copyright and AI | ready |
 | 050 | ep47 | Guardrails in Real AI Products | ready |
 | 051 | ep48 | AI Laws Around the World | ready |
