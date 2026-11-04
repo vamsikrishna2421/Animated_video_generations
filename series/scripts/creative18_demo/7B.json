@@ -1,0 +1,266 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 350 tokens",
+ "prompts": {
+  "short": "Explain this clause of my rent agreement in simple words, in 2 lines.\n\n7. Security deposit: The Tenant has paid a security deposit of Rs. 50,000 (Rupees Fifty Thousand only) to the Owner. The deposit shall be refunded without interest at the end of the tenancy, provided the Tenant has completed a minimum lock-in period of eleven (11) months and has given one (1) month's written notice. If the Tenant vacates the premises before completing the lock-in period, the entire deposit shall be forfeited.",
+  "list": "Explain this clause of my rent agreement. List every condition I must meet to get my deposit back, and what happens if I don't.\n\n7. Security deposit: The Tenant has paid a security deposit of Rs. 50,000 (Rupees Fifty Thousand only) to the Owner. The deposit shall be refunded without interest at the end of the tenancy, provided the Tenant has completed a minimum lock-in period of eleven (11) months and has given one (1) month's written notice. If the Tenant vacates the premises before completing the lock-in period, the entire deposit shall be forfeited."
+ },
+ "rows": [
+  {
+   "way": "short",
+   "try": 1,
+   "reply": "You paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of your tenancy if you give one month's notice and stay for at least 11 months. If you leave early, the entire deposit will be kept.",
+   "score": {
+    "lockin": true,
+    "forfeit": false,
+    "notice": true,
+    "safe": false
+   },
+   "seconds": 14.9
+  },
+  {
+   "way": "list",
+   "try": 1,
+   "reply": "Sure, let's break down the conditions of your rent agreement clause regarding the security deposit:\n\n1. **Security Deposit Amount**: You have paid a security deposit of Rs. 50,000 (Rupees Fifty Thousand only) to the Owner.\n\n2. **Refund Condition**: The deposit shall be refunded without interest at the end of the tenancy.\n\n3. **Lock-in Period**: You must complete a minimum lock-in period of eleven (11) months. This means you need to stay in the rental property for at least 11 months.\n\n4. **Notice Period**: You must give one (1) month's written notice before vacating the premises. This notice period is typically provided to give the Owner enough time to find a new tenant.\n\n### Conditions You Must Meet to Get Your Deposit Back:\n\n- **Complete the Lock-in Period**: Stay in the rental property for at least 11 months.\n- **Give One Month's Written Notice**: Provide a written notice at least one month before you plan to vacate the premises.\n\n### What Happens If You Don't Meet These Conditions:\n\n- **Vacate Before Completing the Lock-in Period**: If you vacate the premises before completing the 11-month lock-in period, the entire deposit of Rs. 50,000 will be forfeited. This means the Owner will keep the full deposit amount and will not refund it to you.\n\nIn summary, to get your deposit back, you must adhere to the 11-month lock-in period and provide one month's written notice before vacating the property. If you do not meet these conditions, the entire deposit will be forfeited.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 68.6
+  },
+  {
+   "way": "short",
+   "try": 2,
+   "reply": "The tenant paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if the tenant gives one month's notice and completes at least 11 months. If the tenant leaves before 11 months, the deposit is kept by the owner.",
+   "score": {
+    "lockin": true,
+    "forfeit": false,
+    "notice": true,
+    "safe": false
+   },
+   "seconds": 15.5
+  },
+  {
+   "way": "list",
+   "try": 2,
+   "reply": "Certainly! Based on the clause provided, here are the conditions you must meet to get your deposit back, along with the consequences if you do not meet these conditions:\n\n### Conditions to get your deposit back:\n1. **Minimum Lock-in Period**: You must stay in the rental property for at least 11 months. This is the \"lock-in period.\"\n2. **Written Notice**: You must give the owner at least one (1) month's written notice before vacating the premises. This notice should be given in a timely manner, typically within the final month of your tenancy.\n\n### Consequences if you do not meet these conditions:\n1. **Early Termination**: If you vacate the premises before completing the 11-month lock-in period, you will forfeit the entire security deposit of Rs. 50,000. This means the owner will not return the deposit to you.\n\n### Summary:\n- **Deposit Amount**: Rs. 50,000\n- **Lock-in Period**: 11 months\n- **Notice Requirement**: One (1) month's written notice before vacating the premises\n- **Consequence of Early Termination**: The entire deposit will be forfeited and not returned.\n\nIf you have any questions or need further clarification, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 55.1
+  },
+  {
+   "way": "short",
+   "try": 3,
+   "reply": "The tenant paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if the tenant gives one month's written notice and completes an 11-month lock-in period. If the tenant leaves early, the entire deposit is forfeited.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 15.4
+  },
+  {
+   "way": "list",
+   "try": 3,
+   "reply": "Certainly! Let's break down the conditions you must meet to get your deposit back and the consequences if you do not meet these conditions.\n\n### Conditions to Get Your Deposit Back\n\n1. **Minimum Lock-in Period**: You must stay in the rental property for a minimum of eleven (11) months.\n2. **Written Notice**: You must provide the owner with one (1) month's written notice before vacating the premises.\n\n### Consequences If You Do Not Meet the Conditions\n\n1. **Early Vacancy**: If you vacate the premises before completing the lock-in period (11 months), the entire security deposit of Rs. 50,000 will be forfeited.\n\n### Summary\n\n- **Lock-in Period**: Stay for at least 11 months.\n- **Notice**: Give one month's written notice before moving out.\n- **Deposit Refund**: If both conditions are met, the deposit will be refunded without interest.\n- **No Refund**: If you vacate before completing the 11-month period, the entire deposit will be forfeited.\n\nIf you have any further questions or need clarification on any other part of the agreement, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 50.4
+  },
+  {
+   "way": "short",
+   "try": 4,
+   "reply": "You paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if you give one month's notice and complete at least 11 months. If you leave early, you lose the whole deposit.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 19.3
+  },
+  {
+   "way": "list",
+   "try": 4,
+   "reply": "Certainly! Here is a breakdown of the conditions you must meet to get your deposit back, as well as what happens if you do not meet these conditions:\n\n### Conditions to Get Your Deposit Back:\n1. **Minimum Lock-in Period**: You must complete a minimum lock-in period of **eleven (11) months**.\n2. **Written Notice**: You must give the Owner one (1) month's written notice before vacating the premises.\n\n### Consequences if You Do Not Meet These Conditions:\n1. **Failure to Complete Lock-in Period**: If you vacate the premises before completing the **eleven (11) month** lock-in period, the entire security deposit of **Rs. 50,000 (Rupees Fifty Thousand only)** will be forfeited.\n\n### Summary:\n- **Deposit Refund**: The security deposit of Rs. 50,000 will be refunded without interest at the end of the tenancy.\n- **Lock-in Period**: You must stay in the property for at least eleven (11) months.\n- **Written Notice**: You must provide the Owner with one (1) month's written notice before vacating the premises.\n- **Penalty for Early Termination**: If you vacate before the lock-in period is complete, the entire deposit will be forfeited.\n\nMake sure to comply with these conditions to avoid losing your security deposit.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 97.3
+  },
+  {
+   "way": "short",
+   "try": 5,
+   "reply": "The tenant paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if the tenant gives one month's written notice and stays for at least 11 months. If the tenant leaves early, the whole deposit is forfeited.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 14.9
+  },
+  {
+   "way": "list",
+   "try": 5,
+   "reply": "Certainly! Let's break down the conditions for getting your security deposit back and what happens if you do not meet these conditions:\n\n### Conditions to Get Your Deposit Back:\n1. **Completion of Lock-in Period**: You must stay in the rental property for a minimum of eleven (11) months. This is referred to as the \"lock-in period.\"\n2. **Written Notice**: You must give the landlord at least one (1) month's written notice before you plan to vacate the premises. This notice must be provided in writing, such as via email or formal letter.\n\n### What Happens if You Don't Meet These Conditions:\n1. **Early Termination of Tenancy**: If you vacate the premises before completing the lock-in period (eleven months), the entire security deposit of Rs. 50,000 will be forfeited. This means the landlord will keep the full amount of the deposit as compensation for the early termination of the tenancy.\n\n### Summary:\n- **Security Deposit**: Rs. 50,000\n- **Lock-in Period**: 11 months\n- **Notice Requirement**: 1 month's written notice before vacating the premises\n\nIf you do not meet the conditions (i.e., you vacate before the 11-month period and do not provide the required notice), the entire deposit will be forfeited.\n\nIf you have any further questions or need clarification, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 60.6
+  },
+  {
+   "way": "short",
+   "try": 6,
+   "reply": "You paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if you give one month's notice and stay for at least 11 months. If you leave before 11 months, you lose the whole deposit.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 14.8
+  },
+  {
+   "way": "list",
+   "try": 6,
+   "reply": "Sure, let's break down the conditions you must meet to get your deposit back and what happens if you don't:\n\n### Conditions to Get Your Deposit Back:\n\n1. **Completion of the Minimum Lock-in Period**: You must stay in the rental property for a minimum of 11 months. This means you must not leave the premises until you have met this requirement.\n\n2. **One (1) Month's Written Notice**: You must provide the owner with at least one month's written notice before vacating the premises. This notice should be given in writing and should include your contact information.\n\n### Consequences if You Don't Meet These Conditions:\n\n1. **Vacating Premises Before Completing the Lock-in Period**: If you leave the premises before completing the 11-month lock-in period, the entire security deposit of Rs. 50,000 will be forfeited. This means you will not get any of the deposit back.\n\n### Summary:\n\n- **Security Deposit**: Rs. 50,000\n- **Lock-in Period**: 11 months\n- **Notice Requirement**: One (1) month's written notice before vacating the premises\n- **Consequence of Early Vacancy**: The entire deposit is forfeited if you vacate before the lock-in period is completed.\n\nIf you have any questions or need further clarification, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 56.3
+  },
+  {
+   "way": "short",
+   "try": 7,
+   "reply": "The Tenant paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if the Tenant gives one month's notice and stays for at least 11 months. If the Tenant leaves early, the entire deposit is forfeited.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 14.5
+  },
+  {
+   "way": "list",
+   "try": 7,
+   "reply": "Certainly! The clause you provided outlines the conditions under which you can expect to receive your security deposit back at the end of your tenancy. Here are the specific conditions and what happens if you do not meet them:\n\n1. **Minimum Lock-in Period**: You must complete a minimum lock-in period of eleven (11) months. This means that you must stay in the rental property for at least eleven months without any interruptions.\n\n2. **Notice Period**: You must give one (1) month's written notice before vacating the premises. This gives the landlord sufficient time to prepare for your move-out and ensures that the property is in a condition suitable for the next tenant, if applicable.\n\n### Conditions You Must Meet to Get Your Deposit Back\n\n- **Completion of Lock-in Period**: You must stay in the rental property for at least eleven months.\n- **Written Notice**: You must provide one (1) month's written notice to the landlord before vacating the premises.\n\n### What Happens If You Do Not Meet These Conditions\n\n- **Forfeiture of Deposit**: If you vacate the premises before completing the lock-in period of eleven (11) months, the entire security deposit of Rs. 50,000 will be forfeited. This means you will not receive any part of the deposit back.\n\nIn summary, to get your deposit back, you need to stay for at least eleven months and give one month's notice before moving out. Failing to meet these conditions will result in the complete forfeiture of your deposit.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 63.6
+  },
+  {
+   "way": "short",
+   "try": 8,
+   "reply": "The Tenant paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if the Tenant gives one month's notice and stays for at least 11 months. If the Tenant leaves early, the whole deposit is lost.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 14.8
+  },
+  {
+   "way": "list",
+   "try": 8,
+   "reply": "Certainly! Let's break down the conditions you must meet to get your deposit back, as well as the consequences if you do not meet these conditions.\n\n### Conditions to Get Your Deposit Back:\n\n1. **Minimum Lock-in Period**: You must complete a minimum lock-in period of eleven (11) months. This means you must stay in the rental property for at least 11 months before you can request the return of your deposit.\n\n2. **Written Notice**: You must give the Owner one (1) month's written notice before vacating the premises. This notice should be given at least one month before your intended move-out date.\n\n### Consequences if You Do Not Meet These Conditions:\n\n1. **Vacating Premises Before Lock-in Period**: If you vacate the premises before completing the 11-month lock-in period, you will forfeit the entire security deposit. This means the Owner is entitled to keep the entire Rs. 50,000 (Rupees Fifty Thousand only) you paid as a security deposit.\n\n2. **No Interest**: The deposit will be refunded without interest, regardless of whether you meet the lock-in period and notice requirements.\n\n### Summary:\n\n- **Deposit Refund**: The deposit will be refunded without interest at the end of the tenancy.\n- **Conditions for Refund**: Complete a minimum lock-in period of 11 months and give one (1) month's written notice.\n- **Forfeiture**: If you vacate the premises before the lock-in period is completed, the entire deposit of Rs. 50,000 will be forfeited.\n\nIf you have any further questions or need clarification, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 86.0
+  },
+  {
+   "way": "short",
+   "try": 9,
+   "reply": "The Tenant paid Rs. 50,000 as a security deposit, which will be returned without interest at the end of the tenancy if the Tenant gives one month's notice and stays for at least 11 months. If the Tenant leaves early, the whole deposit is lost.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 14.8
+  },
+  {
+   "way": "list",
+   "try": 9,
+   "reply": "Certainly! Let's break down the conditions you must meet to get your deposit back, as well as what happens if you do not meet these conditions.\n\n### Conditions You Must Meet to Get Your Deposit Back\n\n1. **Lock-In Period**: You must complete a minimum lock-in period of **eleven (11) months**.\n2. **Written Notice**: You must provide the owner with **one (1) month's written notice** before vacating the premises. This notice should be given at least one month prior to your intended move-out date.\n\n### What Happens If You Don't Meet These Conditions\n\n1. **If You Vacate Before Completing the Lock-In Period**: The entire deposit of **Rs. 50,000** will be forfeited. This means you will not receive any part of the deposit back.\n\n### Summary\n\n- **Deposit**: Rs. 50,000\n- **Lock-In Period**: 11 months\n- **Notice**: 1 month's written notice before vacating\n- **Consequence for Early Vacancy**: Full deposit forfeited\n\nIf you have any questions or need further clarification, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 50.5
+  },
+  {
+   "way": "short",
+   "try": 10,
+   "reply": "The Tenant paid Rs. 50,000 as a security deposit. This will be refunded without interest at the end of the tenancy if the Tenant gives one month's written notice and completes at least 11 months in the lease. If the Tenant leaves early, the whole deposit is lost.",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 15.4
+  },
+  {
+   "way": "list",
+   "try": 10,
+   "reply": "Certainly! Let's break down the conditions you must meet to get your deposit back and what happens if you do not meet them:\n\n### Conditions to Get Your Deposit Back\n\n1. **Completion of Minimum Lock-in Period**: You must stay in the premises for a minimum of 11 months. This is referred to as the \"lock-in period.\"\n\n2. **Written Notice**: You must provide the Owner with one (1) month's written notice before vacating the premises. This notice should be given at least one month before your intended move-out date.\n\n### What Happens if You Don't Meet These Conditions\n\n1. **If You Vacate Premises Before Completing the Lock-in Period**:\n   - **Entire Deposit Forfeited**: The entire security deposit of Rs. 50,000 will be forfeited and not refunded to you.\n\n### Summary\n\n- **Lock-in Period**: You must stay for at least 11 months.\n- **Notice**: Provide one (1) month's written notice before vacating the premises.\n\nIf you do not meet these conditions, the entire security deposit will be forfeited, and you will not receive it back.\n\nIf you have any further questions or need clarification on any part of the agreement, feel free to ask!",
+   "score": {
+    "lockin": true,
+    "forfeit": true,
+    "notice": true,
+    "safe": true
+   },
+   "seconds": 54.9
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}

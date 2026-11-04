@@ -36,6 +36,10 @@ WAYS = {"short": f"Explain this clause of my rent agreement in simple words, in 
                  f"what happens if I don't.\n\n{CLAUSE}")}
 TRIES = 10
 HAND = {}  # (way, try): {"lockin": bool, "forfeit": bool, "notice": bool, "note": str} after reading the reply by hand
+# Read by hand after the run (Nov 4): the hypothesis failed. "short" tries 1 and 2 said "the entire deposit will be kept"
+# / "the deposit is kept by the owner" (the automatic flag missed "kept"): forfeiture, said plainly -> safe 10 of 10;
+# "list": 10 of 10. This model kept the lock-in condition and the loss in every 2-line summary. Not used for a reel.
+HAND = {("short", 1): {"forfeit": True, "note": "\"the entire deposit will be kept\""}, ("short", 2): {"forfeit": True, "note": "\"kept by the owner\""}}
 
 
 def load(path):
