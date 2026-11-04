@@ -90,7 +90,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045), EP43 (046); next EP44 "Privacy: what happens to your data", queue 047, Season 5; Bujji's EP38 7-day, Nov 2: EN viewers leave in the first 10-15 s, so EP43 changed the setup length (the mechanism insert by ~8 s): keep it unless EP42's 48h says otherwise; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045), EP43 (046), EP44 (047); next EP45 "Deepfakes and how to spot them", queue 048, Season 5 (home: Amma, Chinnu); from EP44 the hook is built life-first (the reach stack above); Bujji's EP38 7-day, Nov 2: EN viewers leave in the first 10-15 s, so EP43 changed the setup length (the mechanism insert by ~8 s): keep it unless EP42's 48h says otherwise; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
    recognises with the numbers in it, as Skit 09's "homework 10/10 vs class test 2/20", which reached 4,527 at a 73% hold). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
@@ -594,3 +594,16 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     ("maa ammayi"), which the rule wants anyway (visuals in English).
   - Test the fix as well as the problem (Creative 15's blanks: names kept 10 of 10, "our daughter" right 4 of 10): the
     viewers ask for it, and the honest rule came from it.
+- Nov 4 (EP44):
+  - Out of memory: Parler (Telugu voicing) and the 7B GGUF demo can't run at the same time (both models sit in
+    `/dev/shm` and the Parler process holds its own copy): the container restarted mid-run and `/dev/shm` was wiped.
+    Run demos and Telugu voicing one after the other; a demo's JSON resumes where it stopped.
+  - Telugu MUST groups: write them from Whisper's real Devanagari spellings, as short substrings ("गुग" for Google,
+    "मुड" for మూడేళ్ళ, "जेमि" for Gemini). Exact spellings failed good takes on all 4 tries (4 times the voicing time).
+    `pipeline/ep44/repick.py te <lines>` re-judges the saved tries in `takes/_tries` without voicing again.
+  - English "PAN" in a list was heard "pen" / "pay in" (4 of 4); "your PAN" came out right. A three-noun list in
+    Kiran's Telugu voice blurred in 8 of 8 tries: say one word ("నంబర్లు") and put the list on the card.
+  - Telugu: "ముందే" can be heard with a hard ḍ, near a slur (use "...తీసేశాకే"); "ప్రైవసీ" was heard "ప్రవాసి"
+    (a migrant); "చూడకూడనిది" is said of adult content; "చేశాం" alone was heard "చేశావ్" (say "మేం ...").
+  - `musicGapGain` is in dB. The pack's "music-only" level counts the SFX hits when the reel has few gaps (EP44 EN:
+    -12.5 dB was the opening boom and the slam, not the bed).

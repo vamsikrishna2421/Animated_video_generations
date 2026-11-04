@@ -30,7 +30,7 @@ LINES = {
         "నంబర్లు ఉన్నా, లేకపోయినా, ఫుడ్ డెలివరీ తగ్గించమంది! [1] దానికి నీ పాన్ కార్డ్ అక్కర్లేదు."),
     10: ("amma", "amma", "blank", "So I just blank them out?", "అయితే తీసేస్తే సరిపోతుందా?"),
     11: ("chinnu", "wide", "rule", "Your name, your account number, your PAN: [1] blank them out before you paste. | [2] And in Gemini, switch off Keep Activity.",   # "PAN" in a list was heard "pen"; render review: the switch-off tip said out loud and held
-         "పేరు, అకౌంట్, పాన్ కార్డ్: [1] ఇవి తీసేశాకే పేస్ట్ చెయ్. | [2] జెమినీ లో, కీప్ యాక్టివిటీ ఆఫ్ చెయ్."),   # render review: "ముందే" was heard with a hard ḍ, near a slur
+         "నీ పేరు, నంబర్లు: [1] అవి తీసేశాకే పేస్ట్ చెయ్. | [2] జెమినీ లో, కీప్ యాక్టివిటీ ఆఫ్ చెయ్."),   # the three-item list came out blurred in 8 of 8 tries; the card lists them   # render review: "ముందే" was heard with a hard ḍ, near a slur
     12: ("amma", "wide", "photo", "Done! [1] And I'll send the passbook photo too!", "తీసేశా! [1] పాస్ బుక్ ఫోటో కూడా పంపిస్తా!"),
     13: ("chinnu", "wide", "loop", "Amma, the photo has your account numb—", "అమ్మా, ఆ ఫోటోలో నీ అకౌంట్ నంబ—"),
 }
@@ -42,7 +42,7 @@ SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     4: "I only asked where my salary goes!", 5: "It's on Gemini's own page: don't type anything you'd mind someone reading.",
     6: "But without my details, how will it help?", 7: "We tested it. Your statement, 10 times with your numbers, 10 times without them.",
     8: "What happened?", 9: "With or without the numbers, it said: cut food delivery! It doesn't need your PAN card.", 10: "So removing them is enough?",
-    11: "Name, account, PAN card: paste only after removing these. In Gemini, switch off Keep Activity.", 12: "Removed! I'll send the passbook photo too!",
+    11: "Your name, your numbers: paste only after removing them. In Gemini, switch off Keep Activity.", 12: "Removed! I'll send the passbook photo too!",
     13: "Amma, that photo has your account numb—",
 }
 NOCAP = set()
@@ -74,7 +74,7 @@ def spec(lang="en"):
          "musicVol": [0.5, 0.66],   # under speech / in gaps (EP39's levels)
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 0.95 if not te else 2.0,   # render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.88, 5.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
+         "musicPad": True, "musicGapGain": 0.95 if not te else 4.0,   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.88, 5.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:
