@@ -1,0 +1,1096 @@
+{
+ "id": "ep46v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Copyright & AI: who owns it?",
+ "musicVol": [
+  0.5,
+  0.6
+ ],
+ "title": "40 hours vs 40 seconds (EP46: Copyright & AI)",
+ "handle": "@ai_maastaaru",
+ "label": "EP46",
+ "fps": 30,
+ "musicDrops": [
+  [
+   658,
+   682
+  ],
+  [
+   1170,
+   1194
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   895,
+   0.9
+  ],
+  [
+   895,
+   1418,
+   1.2
+  ],
+  [
+   1418,
+   1772,
+   1.85
+  ],
+  [
+   1418,
+   1772,
+   1.5,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1772,
+ "music": "reel/ep46v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_poster",
+   "data": {
+    "beats": [
+     {
+      "who": "meena",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "rohit",
+      "shot": "wide",
+      "prop": "rules",
+      "n": 2
+     },
+     {
+      "who": "kumar",
+      "shot": "wide",
+      "prop": "who",
+      "n": 3
+     },
+     {
+      "who": "rohit",
+      "shot": "wide",
+      "prop": "mine",
+      "n": 4
+     },
+     {
+      "who": "meena",
+      "shot": "card",
+      "prop": "allen",
+      "n": 5
+     },
+     {
+      "who": "rohit",
+      "shot": "wide",
+      "prop": "copy",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "40 hours vs 40 seconds",
+     "title": "40 hours vs 40 seconds",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase"
+   },
+   "from": 0,
+   "frames": 895,
+   "lines": [
+    {
+     "who": "meena",
+     "name": "Meena",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep46v1/line_01.wav",
+     "from": 10,
+     "frames": 123,
+     "words": [
+      {
+       "w": "40",
+       "from": 13,
+       "to": 19
+      },
+      {
+       "w": "hours",
+       "from": 19,
+       "to": 31
+      },
+      {
+       "w": "of",
+       "from": 31,
+       "to": 37
+      },
+      {
+       "w": "drawing...",
+       "from": 37,
+       "to": 65
+      },
+      {
+       "w": "lost",
+       "from": 65,
+       "to": 84
+      },
+      {
+       "w": "to",
+       "from": 84,
+       "to": 90
+      },
+      {
+       "w": "40",
+       "from": 90,
+       "to": 96
+      },
+      {
+       "w": "seconds",
+       "from": 96,
+       "to": 112
+      },
+      {
+       "w": "of",
+       "from": 112,
+       "to": 118
+      },
+      {
+       "w": "AI?!",
+       "from": 118,
+       "to": 129
+      }
+     ],
+     "cues": {
+      "1": 64
+     }
+    },
+    {
+     "who": "rohit",
+     "name": "Rohit",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/ep46v1/line_02.wav",
+     "from": 143,
+     "frames": 99,
+     "words": [
+      {
+       "w": "The",
+       "from": 146,
+       "to": 152
+      },
+      {
+       "w": "rules",
+       "from": 152,
+       "to": 166
+      },
+      {
+       "w": "said",
+       "from": 166,
+       "to": 178
+      },
+      {
+       "w": "original!",
+       "from": 178,
+       "to": 201
+      },
+      {
+       "w": "The",
+       "from": 201,
+       "to": 206
+      },
+      {
+       "w": "AI",
+       "from": 206,
+       "to": 211
+      },
+      {
+       "w": "made",
+       "from": 211,
+       "to": 218
+      },
+      {
+       "w": "it",
+       "from": 218,
+       "to": 222
+      },
+      {
+       "w": "brand",
+       "from": 222,
+       "to": 231
+      },
+      {
+       "w": "new!",
+       "from": 231,
+       "to": 238
+      }
+     ],
+     "cues": {
+      "1": 201
+     }
+    },
+    {
+     "who": "kumar",
+     "name": "Kumar sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/ep46v1/line_03.wav",
+     "from": 248,
+     "frames": 176,
+     "words": [
+      {
+       "w": "Who",
+       "from": 250,
+       "to": 255
+      },
+      {
+       "w": "wins",
+       "from": 255,
+       "to": 261
+      },
+      {
+       "w": "is",
+       "from": 261,
+       "to": 276
+      },
+      {
+       "w": "the",
+       "from": 276,
+       "to": 281
+      },
+      {
+       "w": "contest's",
+       "from": 281,
+       "to": 298
+      },
+      {
+       "w": "rule.",
+       "from": 298,
+       "to": 318
+      },
+      {
+       "w": "Who",
+       "from": 318,
+       "to": 323
+      },
+      {
+       "w": "owns",
+       "from": 323,
+       "to": 329
+      },
+      {
+       "w": "it",
+       "from": 329,
+       "to": 333
+      },
+      {
+       "w": "is",
+       "from": 333,
+       "to": 349
+      },
+      {
+       "w": "the",
+       "from": 349,
+       "to": 354
+      },
+      {
+       "w": "law's.",
+       "from": 354,
+       "to": 387
+      },
+      {
+       "w": "So",
+       "from": 387,
+       "to": 391
+      },
+      {
+       "w": "whose",
+       "from": 391,
+       "to": 398
+      },
+      {
+       "w": "poster",
+       "from": 398,
+       "to": 407
+      },
+      {
+       "w": "is",
+       "from": 407,
+       "to": 410
+      },
+      {
+       "w": "it?",
+       "from": 410,
+       "to": 415
+      }
+     ],
+     "cues": {
+      "1": 318
+     }
+    },
+    {
+     "who": "rohit",
+     "name": "Rohit",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/ep46v1/line_04.wav",
+     "from": 433,
+     "frames": 51,
+     "words": [
+      {
+       "w": "Mine!",
+       "from": 435,
+       "to": 443
+      },
+      {
+       "w": "I",
+       "from": 443,
+       "to": 446
+      },
+      {
+       "w": "typed",
+       "from": 446,
+       "to": 462
+      },
+      {
+       "w": "the",
+       "from": 462,
+       "to": 467
+      },
+      {
+       "w": "prompt!",
+       "from": 467,
+       "to": 478
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "meena",
+     "name": "Meena",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep46v1/line_05.wav",
+     "from": 492,
+     "frames": 334,
+     "words": [
+      {
+       "w": "An",
+       "from": 494,
+       "to": 499
+      },
+      {
+       "w": "American's",
+       "from": 499,
+       "to": 523
+      },
+      {
+       "w": "AI",
+       "from": 523,
+       "to": 528
+      },
+      {
+       "w": "picture",
+       "from": 528,
+       "to": 550
+      },
+      {
+       "w": "won",
+       "from": 550,
+       "to": 557
+      },
+      {
+       "w": "an",
+       "from": 557,
+       "to": 562
+      },
+      {
+       "w": "art",
+       "from": 562,
+       "to": 572
+      },
+      {
+       "w": "contest,",
+       "from": 572,
+       "to": 611
+      },
+      {
+       "w": "with",
+       "from": 611,
+       "to": 619
+      },
+      {
+       "w": "624",
+       "from": 619,
+       "to": 626
+      },
+      {
+       "w": "prompts.",
+       "from": 626,
+       "to": 641
+      },
+      {
+       "w": "The",
+       "from": 641,
+       "to": 647
+      },
+      {
+       "w": "US",
+       "from": 647,
+       "to": 652
+      },
+      {
+       "w": "refused",
+       "from": 682,
+       "to": 699
+      },
+      {
+       "w": "it",
+       "from": 699,
+       "to": 709
+      },
+      {
+       "w": "copyright:",
+       "from": 709,
+       "to": 737
+      },
+      {
+       "w": "he",
+       "from": 737,
+       "to": 744
+      },
+      {
+       "w": "claimed",
+       "from": 744,
+       "to": 774
+      },
+      {
+       "w": "the",
+       "from": 774,
+       "to": 783
+      },
+      {
+       "w": "AI's",
+       "from": 783,
+       "to": 794
+      },
+      {
+       "w": "part",
+       "from": 794,
+       "to": 804
+      },
+      {
+       "w": "too.",
+       "from": 804,
+       "to": 821
+      }
+     ],
+     "cues": {
+      "1": 682
+     }
+    },
+    {
+     "who": "rohit",
+     "name": "Rohit",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/ep46v1/line_06.wav",
+     "from": 840,
+     "frames": 47,
+     "words": [
+      {
+       "w": "So",
+       "from": 843,
+       "to": 847
+      },
+      {
+       "w": "anyone",
+       "from": 847,
+       "to": 857
+      },
+      {
+       "w": "can",
+       "from": 857,
+       "to": 863
+      },
+      {
+       "w": "copy",
+       "from": 863,
+       "to": 870
+      },
+      {
+       "w": "my",
+       "from": 870,
+       "to": 874
+      },
+      {
+       "w": "poster?!",
+       "from": 874,
+       "to": 887
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_poster",
+   "data": {
+    "beats": [
+     {
+      "who": "kumar",
+      "shot": "card",
+      "prop": "us",
+      "n": 7
+     },
+     {
+      "who": "meena",
+      "shot": "wide",
+      "prop": "india",
+      "n": 8
+     },
+     {
+      "who": "kumar",
+      "shot": "card",
+      "prop": "india",
+      "n": 9
+     },
+     {
+      "who": "meena",
+      "shot": "card",
+      "prop": "learned",
+      "n": 10
+     },
+     {
+      "who": "rohit",
+      "shot": "wide",
+      "prop": "cant",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Who owns AI art?",
+     "title": "Who owns AI art?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase"
+   },
+   "from": 895,
+   "frames": 523,
+   "lines": [
+    {
+     "who": "kumar",
+     "name": "Kumar sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/ep46v1/line_07.wav",
+     "from": 0,
+     "frames": 152,
+     "words": [
+      {
+       "w": "In",
+       "from": 0,
+       "to": 4
+      },
+      {
+       "w": "America,",
+       "from": 4,
+       "to": 17
+      },
+      {
+       "w": "the",
+       "from": 17,
+       "to": 32
+      },
+      {
+       "w": "AI's",
+       "from": 32,
+       "to": 39
+      },
+      {
+       "w": "part",
+       "from": 39,
+       "to": 46
+      },
+      {
+       "w": "has",
+       "from": 46,
+       "to": 51
+      },
+      {
+       "w": "no",
+       "from": 51,
+       "to": 55
+      },
+      {
+       "w": "owner.",
+       "from": 55,
+       "to": 65
+      },
+      {
+       "w": "The",
+       "from": 65,
+       "to": 71
+      },
+      {
+       "w": "parts",
+       "from": 71,
+       "to": 90
+      },
+      {
+       "w": "you",
+       "from": 90,
+       "to": 96
+      },
+      {
+       "w": "made",
+       "from": 96,
+       "to": 103
+      },
+      {
+       "w": "yourself,",
+       "from": 103,
+       "to": 116
+      },
+      {
+       "w": "you",
+       "from": 116,
+       "to": 134
+      },
+      {
+       "w": "can",
+       "from": 134,
+       "to": 140
+      },
+      {
+       "w": "own.",
+       "from": 140,
+       "to": 147
+      }
+     ],
+     "cues": {
+      "1": 65
+     }
+    },
+    {
+     "who": "meena",
+     "name": "Meena",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep46v1/line_08.wav",
+     "from": 164,
+     "frames": 43,
+     "words": [
+      {
+       "w": "And",
+       "from": 167,
+       "to": 176
+      },
+      {
+       "w": "in",
+       "from": 176,
+       "to": 188
+      },
+      {
+       "w": "India?",
+       "from": 188,
+       "to": 203
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "kumar",
+     "name": "Kumar sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/ep46v1/line_09.wav",
+     "from": 214,
+     "frames": 151,
+     "words": [
+      {
+       "w": "Our",
+       "from": 214,
+       "to": 220
+      },
+      {
+       "w": "law",
+       "from": 220,
+       "to": 225
+      },
+      {
+       "w": "says:",
+       "from": 225,
+       "to": 234
+      },
+      {
+       "w": "the",
+       "from": 234,
+       "to": 254
+      },
+      {
+       "w": "person",
+       "from": 254,
+       "to": 264
+      },
+      {
+       "w": "who",
+       "from": 264,
+       "to": 269
+      },
+      {
+       "w": "causes",
+       "from": 269,
+       "to": 279
+      },
+      {
+       "w": "it.",
+       "from": 279,
+       "to": 299
+      },
+      {
+       "w": "But",
+       "from": 299,
+       "to": 305
+      },
+      {
+       "w": "no",
+       "from": 305,
+       "to": 309
+      },
+      {
+       "w": "court",
+       "from": 309,
+       "to": 321
+      },
+      {
+       "w": "has",
+       "from": 321,
+       "to": 332
+      },
+      {
+       "w": "tested",
+       "from": 332,
+       "to": 342
+      },
+      {
+       "w": "that",
+       "from": 342,
+       "to": 349
+      },
+      {
+       "w": "on",
+       "from": 349,
+       "to": 353
+      },
+      {
+       "w": "AI.",
+       "from": 353,
+       "to": 358
+      }
+     ],
+     "cues": {
+      "1": 299
+     }
+    },
+    {
+     "who": "meena",
+     "name": "Meena",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/ep46v1/line_10.wav",
+     "from": 380,
+     "frames": 82,
+     "words": [
+      {
+       "w": "And",
+       "from": 381,
+       "to": 387
+      },
+      {
+       "w": "it",
+       "from": 387,
+       "to": 391
+      },
+      {
+       "w": "learned",
+       "from": 391,
+       "to": 401
+      },
+      {
+       "w": "from",
+       "from": 401,
+       "to": 408
+      },
+      {
+       "w": "artists",
+       "from": 408,
+       "to": 419
+      },
+      {
+       "w": "like",
+       "from": 419,
+       "to": 425
+      },
+      {
+       "w": "me,",
+       "from": 425,
+       "to": 431
+      },
+      {
+       "w": "for",
+       "from": 431,
+       "to": 444
+      },
+      {
+       "w": "free!",
+       "from": 444,
+       "to": 457
+      }
+     ],
+     "cues": {
+      "1": 431
+     }
+    },
+    {
+     "who": "rohit",
+     "name": "Rohit",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/ep46v1/line_11.wav",
+     "from": 470,
+     "frames": 45,
+     "words": [
+      {
+       "w": "So",
+       "from": 473,
+       "to": 478
+      },
+      {
+       "w": "I",
+       "from": 478,
+       "to": 482
+      },
+      {
+       "w": "can't",
+       "from": 482,
+       "to": 491
+      },
+      {
+       "w": "use",
+       "from": 491,
+       "to": 498
+      },
+      {
+       "w": "AI",
+       "from": 498,
+       "to": 502
+      },
+      {
+       "w": "at",
+       "from": 502,
+       "to": 507
+      },
+      {
+       "w": "all?",
+       "from": 507,
+       "to": 515
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_poster",
+   "data": {
+    "beats": [
+     {
+      "who": "kumar",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     },
+     {
+      "who": "rohit",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Say so, add your own hand",
+     "title": "Say so, add your own hand",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase"
+   },
+   "from": 1418,
+   "frames": 354,
+   "lines": [
+    {
+     "who": "kumar",
+     "name": "Kumar sir",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/ep46v1/line_12.wav",
+     "from": 9,
+     "frames": 155,
+     "words": [
+      {
+       "w": "Use",
+       "from": 12,
+       "to": 19
+      },
+      {
+       "w": "it,",
+       "from": 19,
+       "to": 38
+      },
+      {
+       "w": "and",
+       "from": 38,
+       "to": 45
+      },
+      {
+       "w": "say",
+       "from": 45,
+       "to": 52
+      },
+      {
+       "w": "so.",
+       "from": 72,
+       "to": 76
+      },
+      {
+       "w": "Add",
+       "from": 76,
+       "to": 80
+      },
+      {
+       "w": "your",
+       "from": 80,
+       "to": 85
+      },
+      {
+       "w": "own",
+       "from": 85,
+       "to": 90
+      },
+      {
+       "w": "drawing,",
+       "from": 90,
+       "to": 99
+      },
+      {
+       "w": "and",
+       "from": 99,
+       "to": 104
+      },
+      {
+       "w": "keep",
+       "from": 104,
+       "to": 119
+      },
+      {
+       "w": "your",
+       "from": 119,
+       "to": 124
+      },
+      {
+       "w": "drafts",
+       "from": 124,
+       "to": 131
+      },
+      {
+       "w": "as",
+       "from": 131,
+       "to": 135
+      },
+      {
+       "w": "proof.",
+       "from": 135,
+       "to": 154
+      }
+     ],
+     "cues": {
+      "1": 72
+     }
+    },
+    {
+     "who": "rohit",
+     "name": "Rohit",
+     "color": "#FDBA74",
+     "sub": null,
+     "audio": "reel/ep46v1/line_13.wav",
+     "from": 236,
+     "frames": 104,
+     "words": [
+      {
+       "w": "An",
+       "from": 236,
+       "to": 241
+      },
+      {
+       "w": "AI-only",
+       "from": 241,
+       "to": 255
+      },
+      {
+       "w": "prize?",
+       "from": 255,
+       "to": 267
+      },
+      {
+       "w": "I'm",
+       "from": 267,
+       "to": 285
+      },
+      {
+       "w": "the",
+       "from": 285,
+       "to": 291
+      },
+      {
+       "w": "only",
+       "from": 291,
+       "to": 300
+      },
+      {
+       "w": "entry:",
+       "from": 300,
+       "to": 318
+      },
+      {
+       "w": "I",
+       "from": 318,
+       "to": 321
+      },
+      {
+       "w": "win",
+       "from": 321,
+       "to": 328
+      },
+      {
+       "w": "again!",
+       "from": 328,
+       "to": 339
+      }
+     ],
+     "cues": {
+      "1": 318
+     }
+    }
+   ]
+  }
+ ]
+}

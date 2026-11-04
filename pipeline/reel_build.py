@@ -99,6 +99,9 @@ SPEAKERS = {
     "ramesh": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Ramesh babai", color="#FCD34D"),   # creative 18 (file takes)
     "keerthi": dict(voice="af_heart", speed=1.0, lang="en-us", name="Keerthi", color="#C4B5FD"),
     "sunny": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Sunny", color="#FCA5A5"),
+    "meena": dict(voice="af_heart", speed=1.0, lang="en-us", name="Meena", color="#5EEAD4"),   # EP46 (file takes)
+    "rohit": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Rohit", color="#FDBA74"),
+    "kumar": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Kumar sir", color="#93C5FD"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

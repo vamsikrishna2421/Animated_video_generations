@@ -1,4 +1,4 @@
-# Creative 18 "₹3,100 Back? ₹0." · script v1, Nov 4 (the Nov 3 creative slot)
+# Creative 18 "₹3,100 Back? ₹0." · script v2, Nov 4 (the Nov 3 creative slot)
 
 **Format:** a railway-station announcement parody at home: every reveal gets the three-note station chime and a
 yellow-on-black split-flap board ("PASSENGERS, KINDLY NOTE"); Babai does the announcer voice when he's upset. Inserts:
@@ -25,8 +25,8 @@ want to cancel them 2 days before the journey. How much refund will I get? Give 
 
 | way | no refund (right) | made up a refund rule | gave a rupee amount | said check the official site |
 |---|---|---|---|---|
-| plain | **1 of 10** | **9 of 10** | 8 of 10: ₹930, ₹1,550, ₹3,100 (4 times), ₹4,650 (twice) | 3 |
-| + "Answer only from the official Indian Railways refund rules. If you are not sure, say so and tell me where to check." | **8 of 10** | 2 of 10 (one: a 5% fee, ₹5,890) | 1 | **10 of 10** |
+| plain | **1 of 10** | **9 of 10** | 8 of 10: ₹930, ₹1,550, ₹3,100 (5 times), ₹4,650 | 3 |
+| + "Answer only from the official Indian Railways refund rules. If you are not sure, say so and tell me where to check." | **8 of 10** (3 with made-up extras) | 2 of 10 | 2: ₹3,100 (50%), ₹5,890 (a 5% fee) | **10 of 10** ("the official website"; IRCTC named once) |
 
 ## Hook options
 1. **(kept)** Frame 1: the split-flap board "AI SAID: ₹3,100 BACK" over "IRCTC REFUND: ₹0.00", Babai's phone with the
@@ -34,36 +34,51 @@ want to cancel them 2 days before the journey. How much refund will I get? Give 
 2. The family at the station with bags and no tickets (they didn't travel: dropped).
 3. Babai doing the announcement voice, "Passengers, kindly note: refund... zero" (second beat instead).
 
-## Script (English) · ~45 s
-| # | Who | Line | On screen |
-|---|---|---|---|
-| 1 | Keerthi | The AI said three thousand one hundred back... [1] IRCTC gave zero?! | frame 1: chime; the board: PASSENGERS, KINDLY NOTE · AI SAID: ₹3,100 BACK · IRCTC REFUND: ₹0.00; his phone: "Refund processed: ₹0.00" |
-| 2 | Babai | I asked it before cancelling! [1] Fifty percent, it said! | his AI chat: "...you should be eligible for a 50% refund... Rs 3,100" |
-| 3 | Sunny | Babai, confirmed Tatkal tickets get no refund. [1] It's on IRCTC's own page. | chime; IRCTC: "No refund will be granted on cancellation of confirmed Tatkal tickets." |
-| 4 | Babai | Then why did it say fifty percent?! |  |
-| 5 | Keerthi | It didn't look it up. [1] It wrote what a refund rule usually sounds like. | insert: HOW IT ANSWERED: no lookup → a rule-shaped guess "50% if 48 hours before" → a number, said like a fact |
-| 6 | Sunny | We asked a small free AI the same thing, ten times. [1] Nine times, it made up a rule! | OUR TEST: a small free AI on a laptop, offline (Qwen2.5 7B) · try yours · right 1 of 10 · made-up rule 9 of 10 · its refunds: ₹930 · ₹1,550 · ₹3,100 · ₹4,650 |
-| 7 | Babai | A different refund every time?! |  |
-| 8 | Keerthi | Then we said: only the official rule, and say if you're not sure. [1] Eight of ten: no refund. And all ten said: check IRCTC. | + "ONLY THE OFFICIAL RULE. NOT SURE? SAY SO.": no refund 8 of 10 · check IRCTC 10 of 10 |
-| 9 | Sunny | So for money rules: [1] ask where it's written, and open that page. | the board: MONEY RULES (refunds, fees, fines): the AI's number = a guess · ask "where is this written?" · open the official page |
-| 10 | Babai | Fine. AI, do I at least get the Tatkal charges back? [1] ...Fifty percent, it says! | his phone: "Yes! You'll get 50% back..." → chime → frame 1 (loops) |
+## Script review (human-viewer, v1) and what changed
+Both would stop (hook 8 and 7): Tatkal plus ₹0 is a family fight everyone has had. Both: line 5 ("what a refund rule
+usually sounds like") was fuzzy and its card a paragraph; line 8 was number soup and claimed "all ten said: check IRCTC"
+(only one named IRCTC); the format was a look, not a joke: nobody did the announcer voice; five chimes got cheesy; want
+silence before "zero". Sandeep: "50% of what?": the fare never showed; Telugu "యాప్" sounded like IRCTC's own app. Priya:
+"it didn't look it up" claims something about an AI we didn't test (ours had no internet); say the misses; why switch from
+the prompt that got 8 of 10 to "open the page"? Their re-read of the replies: plain try 8 nets ₹3,100 (₹3,100 five
+times, ₹4,650 once), and source try 6 also said ₹3,100: corrected above. Changed: frame 1 shows "4 TATKAL TICKETS ·
+₹6,200 · AI SAID (50%): ₹3,100 BACK · IRCTC REFUND: ₹0", ₹0 once; line 1 in two takes with the bed out before "zero";
+line 2 "Half of six thousand two hundred, it said!"; line 4 is Babai's announcer gag ("Passengers, kindly note: Ramesh
+garu's refund... zero rupees!") with the chime; chimes cut to three; line 5 "It didn't check anything. It made up a rule
+that sounds real." over NO LOOKUP → A MADE-UP RULE → A NUMBER: ₹3,100; line 8 "Better: eight of ten. But one still said
+three thousand one hundred!" with "still a refund: ₹3,100 · ₹5,890, 2 of 10" and "all 10: check the official site";
+"a small AI with no internet: try yours"; the loop: "Fine. AI, are you sure?" "...Three thousand one hundred, it says!"
+into frame 1's ₹3,100. Telugu: "రోబో" for the AI ("ఏ ఐ" came out "yeh yeh"), "రైల్వే వాళ్ళు ఒక్క రూపాయి కూడా
+ఇవ్వలేదా?!", "నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది", "ప్రతిసారీ ఒక్కో లెక్కా?!", "అఫీషియల్ రూల్ మాత్రమే
+చెప్పు, తెలీకపోతే తెలీదని చెప్పు", "డబ్బు విషయంలో రూల్ అయితే", "సరే రోబో, నిజమేనా?".
 
-## Script (Telugu; on-screen text stays English)
+## Script (English, v2) · ~55 s
+| # | Who | Line |
+|---|---|---|
+| 1 | keerthi | The AI said three thousand one hundred back... / [1] IRCTC gave zero?! |
+| 2 | ramesh | I asked it before cancelling! [1] Half of six thousand two hundred, it said! |
+| 3 | sunny | Babai, confirmed Tatkal tickets get no refund. [1] It's on IRCTC's own page. |
+| 4 | ramesh | Passengers, kindly note: Ramesh garu's refund... [1] zero rupees! |
+| 5 | keerthi | It didn't check anything. [1] It made up a rule that sounds real. |
+| 6 | sunny | We asked a small free AI the same thing, ten times. [1] Nine times, it made up a rule! |
+| 7 | ramesh | A different refund every time?! |
+| 8 | keerthi | Then we said: only the official rule, and say if you're not sure. / [1] Better: eight of ten. But one still said three thousand one hundred! |
+| 9 | sunny | So for money rules: [1] ask where it's written, and open that page. |
+| 10 | ramesh | Fine. AI, are you sure? / [1] ...Three thousand one hundred, it says! |
+
+## Script (Telugu, v2; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
-| 1 | Keerthi | యాప్ మూడు వేల వంద వస్తాయంది... [1] రైల్వే సున్నా ఇచ్చిందా?! |
-| 2 | Babai | క్యాన్సిల్ చేసే ముందే అడిగా! [1] సగం వస్తుందంది! |
-| 3 | Sunny | బాబాయ్, కన్ఫర్మ్ అయిన తత్కాల్ టికెట్ కి రీఫండ్ ఉండదు. [1] రైల్వే సైట్ లోనే రాసుంది. |
-| 4 | Babai | మరి సగం అని ఎందుకు చెప్పింది?! |
-| 5 | Keerthi | అది ఎక్కడా చూడలేదు. [1] రీఫండ్ రూల్ ఎలా ఉంటుందో, అలా రాసేసింది. |
-| 6 | Sunny | ఒక చిన్న ఫ్రీ యాప్ ని పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు రూల్ సొంతంగా తయారు చేసింది! |
-| 7 | Babai | ప్రతిసారీ వేరే రీఫండా?! |
-| 8 | Keerthi | అప్పుడు, అసలు రూల్ మాత్రమే చెప్పు, తెలియకపోతే చెప్పు అన్నాం. [1] పదిలో ఎనిమిది సార్లు రీఫండ్ లేదంది. |
-| 9 | Sunny | డబ్బుల రూల్స్ కి: [1] ఎక్కడ రాసుందో అడిగి, ఆ పేజీ తెరిచి చూడు. |
-| 10 | Babai | సరే. యాప్, కనీసం తత్కాల్ చార్జీలు వస్తాయా? [1] ...సగం వస్తాయంట! |
-
-Telugu notes: "యాప్" not "చాట్ బాట్" (Creative 17: mangled); "రైల్వే" not "ఐ ఆర్ సి టి సి" in the voice (IRCTC stays on
-the cards); numbers mid-line; "మళ్ళీ" avoided; no word one slipped letter from a swear word (to check on the transcripts).
+| 1 | keerthi | రోబో మూడు వేల వంద వస్తాయంది... / [1] రైల్వే వాళ్ళు ఒక్క రూపాయి కూడా ఇవ్వలేదా?! |
+| 2 | ramesh | క్యాన్సిల్ చేసే ముందే అడిగా! [1] ఆరు వేల రెండు వందల్లో సగం అంది! |
+| 3 | sunny | బాబాయ్, కన్ఫర్మ్ అయిన తత్కాల్ టికెట్ కి రీఫండ్ ఉండదు. [1] రైల్వే సైట్ లోనే రాసుంది. |
+| 4 | ramesh | ప్రయాణికులకు విజ్ఞప్తి: రమేష్ గారి రీఫండ్... [1] సున్నా రూపాయలు! |
+| 5 | keerthi | అది ఎక్కడా చెక్ చేయలేదు. [1] నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది. |
+| 6 | sunny | ఒక చిన్న ఫ్రీ రోబో ని పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు రూల్ సొంతంగా తయారు చేసింది! |
+| 7 | ramesh | ప్రతిసారీ ఒక్కో లెక్కా?! |
+| 8 | keerthi | అప్పుడు, అఫీషియల్ రూల్ మాత్రమే చెప్పు, తెలీకపోతే తెలీదని చెప్పు అన్నాం. / [1] పదిలో ఎనిమిది సార్లు రీఫండ్ లేదంది. కానీ ఒకటి ఇంకా మూడు వేల వంద అంది! |
+| 9 | sunny | డబ్బు విషయంలో రూల్ అయితే: [1] ఎక్కడ రాసుందో అడిగి, ఆ పేజీ తెరిచి చూడు. |
+| 10 | ramesh | సరే రోబో, నిజమేనా? / [1] ...మూడు వేల వంద, ష్యూర్ అంట! |
 
 ## Caption ask (caption only)
 Has an AI ever told you a rule (refund, fine, fee, tax) that turned out wrong? What did it cost you?

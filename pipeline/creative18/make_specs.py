@@ -13,7 +13,7 @@ R = ROOT / "reels"
 LINES = {
     1: ("keerthi", "wide", "hook", "The AI said three thousand one hundred back... | [1] IRCTC gave zero?!",   # script review: a stop before "zero"
         "రోబో మూడు వేల వంద వస్తాయంది... | [1] రైల్వే వాళ్ళు ఒక్క రూపాయి కూడా ఇవ్వలేదా?!"),   # "యాప్" read as IRCTC's own app; "ఏ ఐ" came out "yeh yeh"
-    2: ("ramesh", "wide", "asked", "I asked it before cancelling! [1] Half of six thousand two hundred, it said!", "క్యాన్సిల్ చేసే ముందే అడిగా! [1] ఆరు వేల రెండు వందల్లో సగం అంది!"),   # script review: show the fare so the numbers add up
+    2: ("ramesh", "wide", "asked", "I asked it before cancelling! [1] Half of six thousand two hundred, it said!", "అడిగాకే క్యాన్సిల్ చేశా! [1] ఆరు వేల రెండు వందల్లో సగం అంది!"),   # "ముందే" came out "mude" (EP44: near a slur)   # script review: show the fare so the numbers add up
     3: ("sunny", "wide", "irctc", "Babai, confirmed Tatkal tickets get no refund. [1] It's on IRCTC's own page.", "బాబాయ్, కన్ఫర్మ్ అయిన తత్కాల్ టికెట్ కి రీఫండ్ ఉండదు. [1] రైల్వే సైట్ లోనే రాసుంది."),
     4: ("ramesh", "wide", "announce", "Passengers, kindly note: Ramesh garu's refund... [1] zero rupees!", "ప్రయాణికులకు విజ్ఞప్తి: రమేష్ గారి రీఫండ్... [1] సున్నా రూపాయలు!"),   # script review: the announcer joke, once
     5: ("keerthi", "how", "how", "It didn't check anything. [1] It made up a rule that sounds real.", "అది ఎక్కడా చెక్ చేయలేదు. [1] నిజం రూల్ లా అనిపించేది ఒకటి ఊహించి చెప్పేసింది."),
@@ -24,13 +24,13 @@ LINES = {
     9: ("sunny", "wide", "rule", "So for money rules: [1] ask where it's written, and open that page.", "డబ్బు విషయంలో రూల్ అయితే: [1] ఎక్కడ రాసుందో అడిగి, ఆ పేజీ తెరిచి చూడు."),
     10: ("ramesh", "wide", "loop", "Fine. AI, are you sure? | [1] ...Three thousand one hundred, it says!", "సరే రోబో, నిజమేనా? | [1] ...మూడు వేల వంద, ష్యూర్ అంట!"),   # script review: "are you sure?" runs into frame 1's ₹3,100
 }
-TTS_EN = {3: "Babai, confirmed Tatkal tickets get no refund. [1] It's on I.R.C.T.C.'s own page.", 1: "The A.I. said three thousand one hundred back... | [1] I.R.C.T.C. gave zero?!",
+TTS_EN = {3: "Babai, confirmed Tatkal tickets get no refund. [1] It's on I.R.C.T.C.'s own page.",   # the kept take says "Tatkal" (try 2); "Tutt-kaal" was worse 1: "The A.I. said three thousand one hundred back... | [1] I.R.C.T.C. gave zero?!",
           10: "Fine. A.I., are you sure? | [1] ...Three thousand one hundred, it says!"}
 SHOW = {1: "The AI said ₹3,100 back... IRCTC gave ₹0?!", 2: "I asked it before cancelling! Half of ₹6,200, it said!", 4: "Passengers, kindly note: Ramesh garu's refund... ₹0!",
         6: "We asked a small free AI the same thing, 10 times. 9 times, it made up a rule!",
         8: "Then we said: only the official rule, and say if you're not sure. Better: 8 of 10. But one still said ₹3,100!", 10: "Fine. AI, are you sure? ...₹3,100, it says!"}
 SHOW_TE = {
-    1: "The AI said ₹3,100 comes back... the railway didn't give a single rupee?!", 2: "I asked before cancelling! It said half of ₹6,200!",
+    1: "The AI said ₹3,100 comes back... the railway didn't give a single rupee?!", 2: "I cancelled only after asking! It said half of ₹6,200!",
     3: "Babai, a confirmed Tatkal ticket has no refund. It's written on the railway site itself.", 4: "Passengers, please note: Ramesh garu's refund... zero rupees!",
     5: "It didn't check anywhere. It guessed something that sounds like a real rule.", 6: "We asked a small free AI 10 times. 9 times it made up the rule itself!",
     7: "A different amount every time?!", 8: "Then we said: tell only the official rule, and say so if you don't know. 8 out of 10 said no refund. But one still said ₹3,100!",
