@@ -26,7 +26,7 @@ const RED = "#dc2626", BLUE = "#2563eb", AMBER = "#fbbf24";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 // our test, read by hand (pipeline/creative19/side_demo2.py HAND)
 export const TEST = { landlord: 10, tenant: 9, both: "₹3,000 – ₹7,500", bothN: 10 };
-const QUOTE_L = "\"Yes, it seems fair.\"", QUOTE_T = "\"This seems excessive.\"";
+const QUOTE_L = ["\"Yes, it seems", "fair.\""], QUOTE_T = ["\"This seems", "excessive.\""];   // second pass: two lines, the same size on both phones
 const MOOD: Record<number, Partial<Record<BillWho, [BillMood, BillArms]>>> = {
   1: { sai: ["shock", "up"], venkat: ["smug", "phone"], pinky: ["worried", "rest"] },
   2: { sai: ["angry", "rest"], venkat: ["smug", "phone"], pinky: ["worried", "rest"] },
@@ -206,21 +206,21 @@ const StSides: React.FC<SP> = ({ s }) => {
         if (b.shot === "study") {
           dark(c, W, H, "BETWEEN ROUNDS", "WHY IT SAID YES TO BOTH", [], r);
           const c1 = cu(1, 0.3);
-          card(c, "STANFORD STUDY", "Science journal · March 2026 · 11 chatbots", W / 2, 540, W - 160, 170, "#e0e7ff", "#1e3a8a", seg(f, c1 - 4, c1 + 4));
-          phoneCard(c, 60, 860, W - 120, "Sai's AI, the reason it gave", ["\"₹15,000 seems excessive given", "the actual cost of ₹18,000.\""], seg(f, ln.from + 2, ln.from + 10), BLUE);   // render review: the first take had a half-empty screen
-          card(c, "SIDED WITH THE USER 1.5×", "as often as people did, on the same questions", W / 2, 760, W - 160, 170, "#fee2e2", "#991b1b", seg(f, c1 + 4, c1 + 12));   // render review: one study number
-          card(c, "ON A CLOSE CALL, IT LEANS TO THE ASKER", "", W / 2, 540, W - 160, 130, "#fef3c7", INK, seg(f, ln.from + 2, ln.from + 10) * (1 - seg(f, c1 - 12, c1 - 4)));
+          card(c, "STANFORD STUDY", "Science journal · March 2026 · 11 big chatbots", W / 2, 540, W - 160, 170, "#e0e7ff", "#1e3a8a", seg(f, c1 - 14, c1 - 6));   // second pass: in on "Stanford", not after
+          phoneCard(c, 60, 860, W - 120, "TENANT'S AI: THE REASON IT GAVE", ["\"₹15,000 seems excessive given", "the actual cost of ₹18,000.\""], seg(f, ln.from + 2, ln.from + 10) * (1 - seg(f, c1 - 14, c1 - 6)), BLUE);   // render review: the first take had a half-empty screen; second pass: gone before the study
+          card(c, "SIDED WITH THE USER 1.5×", "as often as people did, on the same questions", W / 2, 780, W - 160, 170, "#fee2e2", "#991b1b", seg(f, c1 - 4, c1 + 4));   // render review: one study number
+          card(c, "ON A CLOSE CALL, IT LEANS TO THE ASKER", "", W / 2, 540, W - 160, 130, "#fef3c7", INK, seg(f, ln.from + 2, ln.from + 10) * (1 - seg(f, c1 - 20, c1 - 14)));
           faceOf("pinky", ["calm", "up"]);
           return;
         }
         if (b.shot === "test") {
           dark(c, W, H, "ROUND 2", "OUR TEST", ["a small AI on our laptop, no internet (Qwen2.5 7B)", "the same flat, the same ₹15,000 cut · 10 tries each"], r);
           const c1 = cu(1, 0.45);
-          const tracks = (y: number, ask: string, col: string) => { c.font = SANS(32, 700); c.fillStyle = col; c.textAlign = "left"; c.fillText(ask, 90, y + 116); };
+          const tracks = (y: number, ask: string, col: string) => { c.font = SANS(40, 800); c.fillStyle = col; c.textAlign = "left"; c.fillText(ask, 90, y + 116); };
           // render review: the bars come in with OUR TEST (empty tracks and the two asks), and fill on the numbers
-          barRow(c, "the landlord asked: \"fair\"", TEST.landlord, 10, 620, "#f87171", Math.max(0.001, seg(f, c1 - 2, c1 + 10)));
+          barRow(c, "landlord asked → \"fair\"", TEST.landlord, 10, 620, "#f87171", Math.max(0.001, seg(f, c1 - 2, c1 + 10)));
           tracks(620, "\"...That's fair, isn't it?\"", "#fca5a5");
-          barRow(c, "the tenant asked: \"excessive\"", TEST.tenant, 10, 860, "#60a5fa", Math.max(0.001, seg(f, c1 + 22, c1 + 34)));   // script review: the AI's own word
+          barRow(c, "tenant asked → \"excessive\" (1: \"unfair\")", TEST.tenant, 10, 860, "#60a5fa", Math.max(0.001, seg(f, c1 + 22, c1 + 34)));   // script review: the AI's own word
           tracks(860, "\"...That's unfair, isn't it?\"", "#93c5fd");
           c.save(); c.globalAlpha = seg(f, c1 + 40, c1 + 48); c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("same AI · same flat · it leaned to the asker", W / 2, 1060); c.restore();
           c.save(); c.font = SANS(40, 800); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("we didn't test the big apps: try yours", W / 2, 1170); c.restore();
@@ -277,8 +277,8 @@ const StSides: React.FC<SP> = ({ s }) => {
         c.restore();
         if (hookOn || b.prop === "fair" || b.prop === "unfair") {   // frame 1: the board (readable with the sound off)
           board(c, W, 240, hookOn ? "MOVING-OUT DAY · 4 YEARS" : "ROUND 1 · MOVING-OUT DAY · 4 YEARS", [["ADVANCE PAID", "₹30,000", "#f8fafc"], ["ADVANCE BACK", "₹15,000", "#f87171"]], 1);   // stills: the banner covered it at 170
-          phoneCard(c, 50, 670, 470, "LANDLORD'S AI", [QUOTE_L], 1, RED, "#fee2e2", "#991b1b");   // render review: whose AI?
-          if (b.prop === "unfair") phoneCard(c, 560, 670, 470, "TENANT'S AI", [QUOTE_T], seg(f, cu(1, 0.5) - 10, cu(1, 0.5) - 2), BLUE);
+          phoneCard(c, 50, 670, 470, "LANDLORD'S AI", QUOTE_L, 1, RED, "#fee2e2", "#991b1b");   // render review: whose AI?
+          if (b.prop === "unfair") phoneCard(c, 560, 670, 470, "TENANT'S AI", QUOTE_T, seg(f, cu(1, 0.5) - 10, cu(1, 0.5) - 2), BLUE);
         }
         if (b.prop === "fair") {   // script review: set up the ₹18,000 (and the damage) before Sai reads it back
           const c1 = cu(1, 0.5);
@@ -288,8 +288,8 @@ const StSides: React.FC<SP> = ({ s }) => {
           tag(c, "REPAINT: ₹18,000", W / 2, 890, 84, AMBER, INK, 0.02, seg(f, ln.from + 6, ln.from + 12) * (1 - seg(f, c1 + 30, c1 + 36)));
         }
         if (b.prop === "both" || b.prop === "how") {   // render review: WINNER held through the next line
-          phoneCard(c, 50, 300, 470, "LANDLORD'S AI", [QUOTE_L], 1, RED, "#fee2e2", "#991b1b");
-          phoneCard(c, 560, 300, 470, "TENANT'S AI", [QUOTE_T], 1, BLUE);
+          phoneCard(c, 50, 300, 470, "LANDLORD'S AI", QUOTE_L, 1, RED, "#fee2e2", "#991b1b");
+          phoneCard(c, 560, 300, 470, "TENANT'S AI", QUOTE_T, 1, BLUE);
           tag(c, "WINNER: BOTH?!", W / 2, 680, 120, AMBER, INK, -0.03, b.prop === "how" ? 1 : seg(f, cu(1, 0.5) - 14, cu(1, 0.5) - 4));
         }
         if (b.prop === "echo") {   // his phone, zoomed: the reason it gave him

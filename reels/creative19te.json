@@ -34,7 +34,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 2.0,
+ "musicGapGain": 5.0,
  "musicEndRamp": [
   0.85,
   6.0
@@ -213,14 +213,14 @@
     {
      "who": "pinky",
      "file": "07_pinky.wav",
-     "text": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మాట్లాడుతుంది. <pause 0.3> [1] పెద్ద చాట్ బాట్లూ ఇంతే.",
-     "show": "When both sides have a point, it speaks for whoever asks. The big chatbots are the same.",
+     "text": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మాట్లాడుతుంది. <pause 0.3> [1] అమెరికా స్టడీ లో, పెద్ద చాట్ బాట్లూ ఇంతే.",
+     "show": "When both sides have a point, it speaks for whoever asks. In an American study, the big chatbots did the same.",
      "maxgap": 0.2,
-     "gap": 0.35,
+     "gap": 1.3,
      "tempo": 1.12,
      "tts": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మాట్లాడుతుంది.",
      "file2": "07b_pinky.wav",
-     "tts2": "పెద్ద చాట్ బాట్లూ ఇంతే.",
+     "tts2": "అమెరికా స్టడీ లో, పెద్ద చాట్ బాట్లూ ఇంతే.",
      "pause": 0.3,
      "gain_db": 0.5
     },
@@ -295,7 +295,7 @@
      "who": "pinky",
      "file": "10_pinky.wav",
      "text": "నేను కరెక్టేనా అని అడక్కండి. <pause 0.4> [1] ఇద్దరూ మీ మీ వైపు ఒకే మెసేజ్ లో రాయండి. తర్వాత ఏది న్యాయం అని అడగండి.",
-     "show": "Don't ask \"am I right?\". Each of you write your side in one message. Then ask what's fair.",
+     "show": "Don't ask \"am I right?\". Each of you writes your side in one message. Then ask what's fair.",
      "maxgap": 0.28,
      "gap": 1.35,
      "tempo": 1.1,
