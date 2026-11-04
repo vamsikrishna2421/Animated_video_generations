@@ -32,6 +32,18 @@ WAYS = {"plain": ASK,
                          "say so and tell me where to check.")}
 TRIES = 10
 HAND = {}  # (way, try): {"zero": bool, "amount": int|None, "check": bool, "note": str} after reading the reply by hand
+# Read by hand after the run (Nov 4). The automatic flags over-count "zero" (a made-up table ending in "No refund" for 12
+# hours matched). By hand:
+#   plain : right (no refund, Rs 0) 1 of 10 (try 2); a made-up refund rule 9 of 10; a rupee amount 8 of 10: Rs 3,100 (50%)
+#           tries 1, 4, 5, 7; Rs 1,550 (25%) try 6; Rs 4,650 (75%) tries 8, 9; Rs 930 (15%) try 10; try 3 a made-up fee table
+#   source: no refund for this case 8 of 10 (try 10 with a made-up exception); wrong 2 of 10 (try 6 "might be eligible for
+#           a partial refund", try 9 a 5% fee, Rs 5,890); all 10 said to check the official website
+# The truth (IRCTC, contents.irctc.co.in/en/eticketCancel.html): "No refund will be granted on cancellation of confirmed
+# Tatkal tickets."
+HAND = {("plain", 3): {"zero": False, "amount": None, "note": "made-up fee table"}, ("plain", 6): {"zero": False, "amount": 1550},
+        ("plain", 7): {"zero": False, "amount": 3100}, ("plain", 8): {"zero": False, "amount": 4650}, ("plain", 9): {"zero": False, "amount": 4650},
+        ("plain", 10): {"zero": False, "amount": 930}, ("source", 6): {"zero": False, "note": "might be eligible for a partial refund"},
+        ("source", 9): {"zero": False, "amount": 5890}}
 
 
 def load(path):
