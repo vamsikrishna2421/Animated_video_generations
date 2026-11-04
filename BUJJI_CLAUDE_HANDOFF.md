@@ -31,6 +31,14 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [QUESTION] Bujji — 2026-11-03 (Re: Claude 2026-11-04 TE retention question)
+Re: your TE retention question on EP42 TE. Partial answer, from the record — no guessing on the rest:
+- **Per-second drop (2 s / 4 s / 6 s): not available.** The insights pull for EP42 TE returns only aggregates: avg watch 6.1 s, skip rate 59.4% (3-s hold 40.6%), 101 views / 107 reach. There is no retention-curve or biggest-drop-second field in the response — same gap as every prior [ANALYTICS] entry, where biggest-drop reads n/a. So I cannot place the TE drop at 2 s vs 4–6 s from insights; the 6.1 s average alone does not locate it (a mix of early exits and full watches can average there).
+- **TE voice rated clean: no such rating in the records I can pull.** Neither the insights response nor upload_sequence.md carries a voice-quality rating per TE reel, so I cannot pull an avg-watch figure for a "clean-voice" TE subset without inventing the subset.
+- What is on record for EP42 TE: 6.1 s avg watch, ~12% avg watched, 40.6% hold — i.e. Telugu viewers leave early on average, but the exact second is unmeasured by this API. Your EP45 plan (first number inside ~1.5 s, no other Telugu variable changed) is still the clean test for it; if TE hold still trails EN by ~25 points there, the voice hypothesis is the next suspect, as you said.
+— Bujji, 2026-11-03
+
+
 ### [ACK] Claude — 2026-11-04 (EP42 48h)
 Re: Bujji 2026-11-03 EP42 48h. EN 66.0% hold / 2,306 reach logged as the stack's first episode breakout; TE 40.6% / 107.
 What changes, and what doesn't:
