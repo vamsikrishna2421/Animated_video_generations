@@ -1,0 +1,331 @@
+{
+ "id": "ep44v1",
+ "title": "Deleted in 1 tap, kept 3 years (EP44: Privacy)",
+ "label": "EP44",
+ "banner": "Privacy: where your data goes",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.95,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_privacy",
+   "tail": 0.0,
+   "boost": 0.9,
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "amma",
+      "shot": "amma",
+      "prop": "ring",
+      "n": 2
+     },
+     {
+      "who": "chinnu",
+      "shot": "where",
+      "prop": "where",
+      "n": 3
+     },
+     {
+      "who": "amma",
+      "shot": "amma",
+      "prop": "salary",
+      "n": 4
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "quote",
+      "n": 5
+     },
+     {
+      "who": "amma",
+      "shot": "amma",
+      "prop": "needs",
+      "n": 6
+     }
+    ],
+    "result": {
+     "full": 8,
+     "blank": 10
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Deleted in 1 tap, kept 3 years",
+     "title": "Deleted in 1 tap, kept 3 years",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "01_chinnu.wav",
+     "text": "One tap to delete, Amma... [1] but if Gemini's reviewers read it, it can stay three years!",
+     "show": "One tap to delete, Amma... but if Gemini's reviewers read it, it can stay 3 years!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "02_amma.wav",
+     "text": "With my account number? [1] And my PAN?!",
+     "show": "With my account number? And my PAN?!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "03_chinnu.wav",
+     "text": "Reviewers at the company read some chats, to improve the AI. [1] That copy isn't deleted when you delete yours.",
+     "show": "Reviewers at the company read some chats, to improve the AI. That copy isn't deleted when you delete yours.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "04_amma.wav",
+     "text": "I only asked where my salary goes!",
+     "show": "I only asked where my salary goes!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "05_chinnu.wav",
+     "text": "Gemini's own privacy page says: [1] don't type what you wouldn't want a reviewer to see.",
+     "show": "Gemini's own privacy page says: don't type what you wouldn't want a reviewer to see.",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "06_amma.wav",
+     "text": "But it needs my details to help me!",
+     "show": "But it needs my details to help me!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_privacy",
+   "tail": 0.0,
+   "boost": 1.25,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "amma",
+      "shot": "test",
+      "prop": "and",
+      "n": 8
+     },
+     {
+      "who": "chinnu",
+      "shot": "test",
+      "prop": "result",
+      "n": 9
+     },
+     {
+      "who": "amma",
+      "shot": "amma",
+      "prop": "blank",
+      "n": 10
+     }
+    ],
+    "result": {
+     "full": 8,
+     "blank": 10
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "07_chinnu.wav",
+     "text": "We tested it. Your statement, ten times with your numbers, <pause 0.25> [1] ten times with them blanked out.",
+     "show": "We tested it. Your statement, ten times with your numbers, ten times with them blanked out.",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "tts": "We tested it. Your statement, ten times with your numbers,",
+     "file2": "07b_chinnu.wav",
+     "tts2": "ten times with them blanked out.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "08_amma.wav",
+     "text": "And?",
+     "show": "And?",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "09_chinnu.wav",
+     "text": "With or without your numbers, it found the food orders. [1] It never needed your PAN.",
+     "show": "With or without your numbers, it found the food orders. It never needed your PAN.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "10_amma.wav",
+     "text": "So I just blank them out?",
+     "show": "So I just blank them out?",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_privacy",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.75,
+   "rise": 1.45,
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "photo",
+      "n": 12
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 13
+     }
+    ],
+    "result": {
+     "full": 8,
+     "blank": 10
+    },
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Blank it before you paste",
+     "title": "Blank it before you paste",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "11_chinnu.wav",
+     "text": "Your name, your account number, your PAN: [1] blank them out before you paste. <pause 0.6> [2] And in Gemini, switch off Keep Activity.",
+     "show": "Your name, your account number, your PAN: blank them out before you paste. And in Gemini, switch off Keep Activity.",
+     "maxgap": 0.28,
+     "gap": 1.6,
+     "tempo": 1.12,
+     "tts": "Your name, your account number, your PAN: blank them out before you paste.",
+     "file2": "11b_chinnu.wav",
+     "tts2": "And in Gemini, switch off Keep Activity.",
+     "pause": 0.6,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "12_amma.wav",
+     "text": "Done! [1] And I'll send the passbook photo too!",
+     "show": "Done! And I'll send the passbook photo too!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "13_chinnu.wav",
+     "text": "Amma, the photo has your account numb—",
+     "show": "Amma, the photo has your account numb—",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

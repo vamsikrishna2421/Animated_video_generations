@@ -1,0 +1,34 @@
+UPLOAD: 047
+VIDEO: 047_ep44_deleted_one_tap.mp4  (teaching skit, about 52 s, AI voices; replaces the older lesson-format file in slot 047; send copy: 047_ep44_deleted_one_tap_ig.mp4). It loops: Chinnu says "Amma, the photo has your account numb—" and it is frame 1 again: the deleted chat, "1 tap" vs "3 years".
+
+=== CAPTION ===
+Amma pasted her bank statement, account number and PAN, into an AI chat to ask where her salary goes. Then she deleted it in one tap. But if a person at the company read it, that copy can stay up to 3 years.
+
+Episode 44 of AI From Scratch: privacy, what happens to your data
+- Google's own Gemini privacy page (Oct 2026): "A subset of chats are reviewed by human reviewers." "Reviewed chats are retained for up to three years," and they are not deleted when you delete your activity
+- The same page: "Please don't enter confidential information that you wouldn't want a reviewer to see"
+- Our test: a small free AI (Qwen2.5 7B), offline, the same made-up October statement 10 times with the IDs and 10 times blanked out. "Cut the food orders" (the right answer): 8 of 10 with the IDs, 10 of 10 blanked. The IDs didn't help it. (Its totals were wrong both ways: always check an AI's maths)
+
+What this means for you:
+1. Before you paste a statement, salary slip or form, blank your name, account number, PAN and Aadhaar: [NAME], [ACCOUNT], [PAN]
+2. A photo, PDF or screenshot carries the numbers too: crop or cover them first
+3. Settings: in Gemini, turn off Keep Activity (your next chats aren't reviewed to improve Google's AI; they're still kept 72 hours), or use a temporary chat. In ChatGPT, turn off "Improve the model for everyone"; deleted chats are removed within 30 days
+
+Next: EP45, deepfakes and how to spot them.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Have you ever pasted your bank statement, Aadhaar or salary slip into an AI chat? Would you now?
+
+=== HASHTAGS ===
+#AIFromScratch #LearnAI #AIPrivacy #DataPrivacy #ResponsibleAI #Gemini
+
+=== PINNED_COMMENT ===
+How we tested (run by us): Qwen's own 4-bit GGUF file (Q4_K_M) of Qwen2.5-7B-Instruct, llama.cpp on a 4-core computer, the internet cut, temperature 0.7, 10 replies each way, every reply read by hand. The ask: "Here is my bank statement for October. Where is my money going? Tell me the one biggest thing I can cut, and how much it cost me this month. Keep it short." The statement is made up (salary ₹48,500; rent, groceries, school fee, chit; 14 food-delivery orders = ₹7,380; the PAN is the Income Tax department's sample). Way 1: with the name, account number, PAN, mobile and branch. Way 2: the same, with [NAME], [ACCOUNT], [PAN], [MOBILE], [BRANCH]. Named food delivery as the one cut: 8 of 10 with the IDs (once the chit fund, once rent), 10 of 10 blanked. Its food-delivery total was wrong in all 20 (₹3,470 to ₹14,500). No reply repeated an ID. One small model: try your own chatbot with a blanked statement.
+Sources: Google, Gemini Apps Privacy Hub (support.google.com/gemini/answer/13594961, updated Oct 26, 2026); OpenAI Help Center (deleted and temporary chats, Data Controls FAQ).
+
+=== COVER ===
+Frame 1: Amma's AI chat with her pasted statement struck through, "Chat deleted ✓"; two chips: DELETED IN "1 tap" (green), KEPT UP TO "3 years, if a person read it" (red); Chinnu pointing, Amma worried.
+
+=== ALT_TEXT ===
+Crayon-animated skit in a living room. Amma's phone shows an AI chat: "Where is my money going? What can I cut?" with her account number 0123 4567 8901 and PAN ABCDE1234F pasted in, struck through, "Chat deleted ✓". Two chips: DELETED IN 1 tap, she thinks it's gone; KEPT UP TO 3 years, if a person read it; Google's own Gemini privacy page (Oct 2026). Chinnu says one tap to delete, but if a person read it, it can stay three years. Amma: with my account number? And my PAN? An insert, where your chat goes: your chat, saved in your account, delete it: gone; some chats, a person reads them; that copy: kept up to 3 years, even after you delete yours. A quote card from the app's privacy page: "Please don't enter confidential information that you wouldn't want a reviewer to see." Our test card: a small free AI (Qwen2.5 7B), offline, 10 tries each: her statement with IDs (made up) and the same, blanked; the right answer: cut the 14 food orders (₹7,380 this month); said "cut the food orders": with her IDs 8 of 10, blanked 10 of 10; no worse without her IDs; its totals were wrong both ways, check its maths. A card: before you paste, blank: your name [NAME], account number [ACCOUNT], PAN [PAN], Aadhaar [AADHAAR]; and switch off: Gemini Keep Activity, ChatGPT "Improve the model for everyone". Amma blanks her statement, then attaches passbook.jpg; Chinnu: "Amma, the photo has your account numb—", and it is the first frame again.

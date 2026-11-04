@@ -17,11 +17,11 @@ type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const SKIN_A = "#a8693f", SKIN_C = "#bb7b4f", HAIR = "#17110d", SAREE = "#15803d", ZARI = "#facc15", TEE = "#f59e0b";
 const WALL = "#d6ebe3", SOFA = "#28466f", FLOOR = "#c49a6c", UI = "#0f172a", SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
-const AM: Pt = [330, 770], CH: Pt = [760, 780];   // necks
-const S = 0.85;                                     // character scale
+export const AM: Pt = [330, 770], CH: Pt = [760, 780];   // necks
+export const S = 0.85;                                     // character scale
 
-type Mood = "worried" | "sus" | "shock" | "stern" | "whisper" | "puzzled" | "sweet" | "smug" | "happy" | "chew" | "panic" | "explain";
-type Pose = "phone" | "tap" | "mouth" | "rest" | "ear" | "bite" | "plate" | "point" | "open" | "shh" | "thumb";
+export type Mood = "worried" | "sus" | "shock" | "stern" | "whisper" | "puzzled" | "sweet" | "smug" | "happy" | "chew" | "panic" | "explain";
+export type Pose = "phone" | "tap" | "mouth" | "rest" | "ear" | "bite" | "plate" | "point" | "open" | "shh" | "thumb";
 // [mood, arms, look] per line; look: where the eyes point (-1 left, 0 ahead, 1 right, 2 down at the phone/plate)
 const AMMA: Record<number, [Mood, Pose, number]> = {
   1: ["worried", "phone", 2], 2: ["sus", "phone", 1], 3: ["shock", "phone", 2], 4: ["stern", "tap", 2], 5: ["stern", "phone", 2],
@@ -45,7 +45,7 @@ const CAM: Record<string, { z: number; x: number; y: number }> = {
 };
 
 // ---------- the room ----------
-const room = (c: Ctx, r: () => number, day: boolean) => {
+export const room = (c: Ctx, r: () => number, day: boolean) => {
   c.fillStyle = WALL; c.fillRect(-600, -200, 2300, 1400);
   hatch(c, [-400, 0, 1500, 1180], ["#c4e0d6", "#e6f4ee"], r, { gap: 16, w: 3, alpha: 0.35 });
   // the window between them: evening (or the next morning)
@@ -75,7 +75,7 @@ const room = (c: Ctx, r: () => number, day: boolean) => {
   c.fillStyle = SOFA; rrect(c, 90, 830, 900, 260, 60); c.fill();
   hatch(c, [100, 840, 980, 1080], ["#1e3a5f", "#35588a"], r, { angle: -0.6, gap: 22, w: 3, alpha: 0.4 });
 };
-const sofaFront = (c: Ctx, r: () => number) => {
+export const sofaFront = (c: Ctx, r: () => number) => {
   c.fillStyle = "#33598c"; rrect(c, 110, 1060, 860, 110, 30); c.fill();
   c.fillStyle = SOFA; rrect(c, 60, 940, 90, 240, 36); c.fill(); rrect(c, 930, 940, 90, 240, 36); c.fill();
   stroke(c, [[130, 1168], [950, 1168]], INK, 5, r, { passes: 2, alpha: 0.5 });
@@ -196,7 +196,7 @@ const head = (c: Ctx, who: "amma" | "chinnu", m: Mood, talk: boolean, look: numb
   c.restore();
 };
 
-const person = (c: Ctx, who: "amma" | "chinnu", m: Mood, pose: Pose, look: number, talk: boolean, p: number, f: number, r: () => number, o: { bite?: boolean; glow?: boolean } = {}) => {
+export const person = (c: Ctx, who: "amma" | "chinnu", m: Mood, pose: Pose, look: number, talk: boolean, p: number, f: number, r: () => number, o: { bite?: boolean; glow?: boolean } = {}) => {
   const [nx, ny] = who === "amma" ? AM : CH;
   const skin = who === "amma" ? SKIN_A : SKIN_C, cloth = who === "amma" ? SAREE : TEE;
   c.save(); c.translate(nx, ny); c.scale(S, S);

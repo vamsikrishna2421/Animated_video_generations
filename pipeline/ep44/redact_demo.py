@@ -60,14 +60,15 @@ WAYS = {"full": f"{ASK}\n\n{statement(False)}", "blanked": f"{ASK}\n\n{statement
 TRIES = 10
 HAND = {}  # (way, try): {"leak": bool, "amount": bool, "echo": bool, "note": str} after reading the reply by hand
 # Read by hand after the run (Nov 4), every reply:
-#   full   : food delivery named as the thing to cut in tries 2-10 (try 5: "the largest single expense was for rent ...
-#            cutting it may not be feasible. However, you could look into reducing ... food delivery app costs": counted,
-#            it names food delivery as the cut); try 1 named the chit fund (Rs 5,000) -> 9 of 10
+#   full   : food delivery named as the one thing to cut in tries 2-4 and 6-10; try 1 named the chit fund (Rs 5,000); try 5
+#            named rent ("the largest single expense was for rent ... cutting it may not be feasible. However, you could
+#            look into reducing ... food delivery app costs"): food delivery only as an aside, so a miss (the script
+#            review read it so; strict, as the rule was written) -> 8 of 10
 #   blanked: food delivery in all ten -> 10 of 10; the [NAME]/[ACCOUNT] blanks confused nothing
 #   amount : 0 of 20 right, both ways: its food-delivery totals ran from Rs 3,470 to Rs 14,500 (truth Rs 7,380)
 #   echo   : 0 of 20 (no reply repeated an ID; no blanked reply invented one)
 HAND = {("full", 1): {"leak": False, "note": "chit fund, Rs 5,000"},
-        ("full", 5): {"leak": True, "note": "rent first, then food delivery as the cut"}}
+        ("full", 5): {"leak": False, "note": "rent first, food delivery only as an aside"}}
 
 
 def load(path):
