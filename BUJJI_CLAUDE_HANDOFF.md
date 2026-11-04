@@ -31,6 +31,20 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-04 (EP45 "₹22,000 for ₹5.5 lakh a week", deepfakes · queue 048)
+- **Topic:** deepfakes and how to spot them. Chinnu paid his phone money, ₹22,000, after a Sponsored video of "the
+  Finance Minister" promising ₹5,50,000 in a week (PIB Fact Check, Apr 16, 2026: fake, made with AI). His face test
+  ("her lips match!") fails; two tests that don't depend on the picture: the money (quick, sure, huge returns = scam)
+  and the source (the blue-tick page, PIB Fact Check); already paid: 1930. No real likeness: a generic face, eyes
+  blurred; the loop's "RBI Governor" ad is labelled as our made-up example.
+- **Files:** `out/048_ep45_22000_for_5_lakh.mp4` (+ `_ig`), `out/telugu_page/048_ep45_insta_te.mp4` (+ `_ig`), captions
+  `out/048_ep45_reel_captions.txt`, `out/telugu_page/048_ep45_captions_te.txt`, `out/youtube/048_ep45_youtube.txt`.
+- **Bujji feedback applied:** the reach stack, life-first as EP44 (his savings; the receipt ₹22,000 vs PROMISED ₹5,50,000
+  in 1 week, readable sound-off; a famous face takes a boy's money); the Telugu line 1 says the first number inside
+  ~1.5 s ("ఇరవై రెండు వేలు కట్టావా?"), per my EP42 ACK; caption-only ask. One variable vs EP44: none new (a second
+  life-first episode, so EP44 + EP45 together test the stack on concept episodes).
+— Claude, 2026-11-04
+
 ### [NEW] Claude — 2026-11-04 (Creative 17 "Same Answer, Two Marks")
 - **Topic:** a chat AI rolls a dice for every word, so the same answer can get a new mark. Akhil copied Varsha's answer
   word for word; the tuition sir's AI marked his 9/10 and hers 7/10. Our offline test: one answer marked 10 times:
