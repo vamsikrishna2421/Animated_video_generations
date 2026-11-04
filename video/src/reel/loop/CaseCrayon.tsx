@@ -19,7 +19,7 @@ type Beat = { who: "varsha" | "akhil" | "srinivas"; shot: string; prop: string; 
 type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
-const HOLD = 16;   // frames of "7/10" before the slam back to frame 1
+const HOLD = 40;   // frames of "7/10" before the slam back to frame 1 (render review: up ~1 s, too short)
 const CLAP = "reel/creative09v1/clap.wav";
 const RED = "#dc2626";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
@@ -79,8 +79,8 @@ const board = (c: Ctx, W: number, f: number, k: number, akhilMark = "9/10") => {
   c.fillStyle = "#0f172a"; rrect(c, -190, -44, 380, 150, 12); c.fill();
   c.font = SANS(44, 900); c.fillStyle = "#fef08a"; c.textAlign = "center"; c.fillText("SAME ANSWER", 0, 6);
   c.font = SANS(44, 900); c.fillStyle = "#f87171"; c.fillText("MARKED BY AI", 0, 74); c.restore();
-  c.save(); c.fillStyle = "#0f172a"; c.fillRect(40, 150, 300, 50); c.font = SANS(32, 900); c.fillStyle = "#f87171"; c.textAlign = "left";
-  c.fillText("● CASE FILE", 60, 186); c.restore();
+  c.save(); c.fillStyle = "#0f172a"; rrect(c, 210, 872, 660, 56, 10); c.fill(); c.font = SANS(34, 900); c.fillStyle = "#f87171"; c.textAlign = "center";   // render review: the crime show didn't show
+  c.fillText("● CASE FILE: THE SAME ANSWER", 540, 912); c.restore();
   void f;
 };
 const dark = (c: Ctx, W: number, H: number, title: string, sub: string[]) => {
@@ -125,8 +125,10 @@ const wheel = (c: Ctx, W: number, f: number, t0: number, c1: number) => {
   c.save(); c.translate(cx, cy); c.rotate(ang);
   c.fillStyle = "#f8fafc"; c.beginPath(); c.moveTo(0, -14); c.lineTo(R - 30, 0); c.lineTo(0, 14); c.closePath(); c.fill();
   c.restore(); c.beginPath(); c.arc(cx, cy, 26, 0, 7); c.fillStyle = "#f8fafc"; c.fill();
-  c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the odds our test showed for one answer: 7 · 8 · 9", W / 2, 1160);
-  tag(c, "ask again → a new roll → a new mark", W / 2, 1236, 46, "#fde68a", INK, -0.02, seg(f, c1, c1 + 8));
+  const l1 = seg(f, t0 + 24, t0 + 28) * (f < c1 ? 1 : 0), l2 = seg(f, c1 + 24, c1 + 28);   // render review: where did it land?
+  if (l1 > 0 || l2 > 0) { c.save(); c.globalAlpha = Math.max(l1, l2); c.font = SANS(60, 900); c.fillStyle = l2 > 0 ? "#4ade80" : "#fbbf24"; c.textAlign = "center"; c.fillText(l2 > 0 ? "this time: 9" : "this time: 8", cx, cy + R + 66); c.restore(); }
+  c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the odds our test showed for one answer: 7 · 8 · 9", W / 2, 1226);
+  tag(c, "ask again → a new roll → maybe a new mark", W / 2, 1290, 44, "#fde68a", INK, -0.02, seg(f, c1, c1 + 8));
 };
 // a face in a corner of the cards (Creative 16's render review: the people stay on screen through the cards)
 const inset = (c: Ctx, who: BillWho, m: [BillMood, BillArms], talk: boolean, r: () => number, y = 1240) => {
@@ -162,7 +164,7 @@ const StCase: React.FC<SP> = ({ s }) => {
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - (te ? 24 : 12))} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - (te ? 26 : 14))} src="reel/sfx_boom.wav" vol={te ? 0.3 : 0.45} />);
     if (b.prop === "loop") {   // the new mark, then the slam back to frame 1
       const slam = end + HOLD, c1 = cue(i, 1, 0.6);
-      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 30)} src="reel/sfx_riser.wav" vol={te ? 0.25 : 0.35} />, <Sfx key={k("d")} at={c1 - 6} src="audio/gag_ding.wav" vol={0.25} />,
+      sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 30)} src="reel/sfx_riser.wav" vol={te ? 0.25 : 0.35} />, <Sfx key={k("d")} at={c1 - 6} src="audio/gag_ding.wav" vol={0.25} />, <Sfx key={k("s")} at={c1} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />,
         <Sfx key={k("g")} at={slam - 8} src="reel/sfx_glitch.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />,
         <Sfx key={k("c")} at={slam} src={CLAP} vol={0.55} />, <Sfx key={k("z")} at={slam} src="reel/sfx_buzz.wav" vol={0.35} />);
     }
@@ -194,7 +196,8 @@ const StCase: React.FC<SP> = ({ s }) => {
           const scheme = b.prop === "scheme" || b.prop === "lottery";
           if (!scheme) {
             tiles(c, W, 560, PLAIN, f, b.prop === "test" ? cu(1, 0.5) - 10 : -1e9, "\"Mark this answer out of 10.\"");
-            if (b.prop === "test") tag(c, "mostly 8, but 7 and 9 came up", W / 2, 900, 50, "#fde68a", INK, -0.02, seg(f, cu(1, 0.5) + 30, cu(1, 0.5) + 38));
+            if (b.prop === "test") tag(c, "mostly 8, but 7 and 9 came up", W / 2, 900, 56, "#fde68a", INK, -0.02, seg(f, cu(1, 0.5) + 30, cu(1, 0.5) + 38));
+            if (b.prop !== "scheme0") { c.save(); c.font = SANS(46, 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("a small AI on a laptop: try it on yours", W / 2, 1080); c.restore(); }   // render review: the caveat was grey micro-text
           } else {
             tiles(c, W, 560, SCHEME, f, b.prop === "scheme" ? ln.from - 8 : -1e9, "+ a 4-point marking scheme");
             const c1 = b.prop === "scheme" ? cu(1, 0.5) : -1e9;
@@ -243,7 +246,7 @@ const StCase: React.FC<SP> = ({ s }) => {
               c.font = SANS(54, 900); c.fillText(bb, 140, y + 124);
               c.restore();
             });
-            const kt = seg(f, t1 + 14, t1 + 22);   // script review: something to test tonight
+            const kt = seg(f, t1, t1 + 8);   // script review: something to test tonight; render review: up 4 s+
             if (kt > 0) {
               c.save(); c.globalAlpha = clamp(kt * 3); c.fillStyle = "#fef3c7"; rrect(c, 100, 730, W - 200, 290, 22); c.fill();
               c.font = SANS(40, 900); c.fillStyle = "#7c2d12"; c.textAlign = "left"; c.fillText("GOT AN AI MARK? TEST IT:", 140, 790);

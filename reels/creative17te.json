@@ -88,7 +88,7 @@
      "who": "varsha",
      "file": "01_varsha.wav",
      "text": "నా ఆన్సర్ అక్షరం అక్షరం కాపీ కొట్టాడు... [1] వాడికి తొమ్మిది, నాకు ఏడేనా?!",
-     "show": "He copied my answer letter for letter... he gets 9, and I get only 7?!",
+     "show": "He copied my answer word for word... he gets 9, and I get only 7?!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.0,
@@ -97,8 +97,8 @@
     {
      "who": "akhil",
      "file": "02_akhil.wav",
-     "text": "సార్ ఫోన్ లో చాట్ బాట్ దిద్దింది. [1] మెషీన్ ఎవరికీ ఫేవర్ చేయదు!",
-     "show": "The chatbot on sir's phone marked it. A machine favours nobody!",
+     "text": "సార్ ఫోన్ లో యాప్ మార్కులు వేసింది. [1] మెషీన్ ఎవరికీ ఫేవర్ చేయదు!",
+     "show": "The app on sir's phone gave the marks. A machine favours nobody!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.05,
@@ -148,6 +148,12 @@
      0.7
     ]
    ],
+   "drop_at": [
+    [
+     2,
+     1
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -187,8 +193,8 @@
     {
      "who": "varsha",
      "file": "06_varsha.wav",
-     "text": "ఒక చిన్న ఫ్రీ చాట్ బాట్ తో, ఒకే ఆన్సర్ ని పది సార్లు దిద్దించాం. [1] ఎక్కువ సార్లు ఎనిమిది. కానీ ఏడూ వచ్చింది, తొమ్మిదీ వచ్చింది!",
-     "show": "We had a small free chatbot mark one answer 10 times. Mostly 8. But 7 came, and 9 came too!",
+     "text": "ఒక చిన్న ఫ్రీ యాప్ తో, ఒకే ఆన్సర్ కి పది సార్లు మార్కులు వేయించాం. [1] ఎక్కువ సార్లు ఎనిమిది. కానీ ఏడూ వచ్చింది, తొమ్మిదీ వచ్చింది!",
+     "show": "We had a small free app mark one answer 10 times. Mostly 8. But 7 came, and 9 came too!",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.0,
@@ -207,11 +213,15 @@
     {
      "who": "varsha",
      "file": "08_varsha.wav",
-     "text": "అదీ చేశాం: ఇంకా ఎక్కువ తేడా! [1] మూడు సార్లు, నా మొదటి లైన్ కి సున్నా వేసింది!",
-     "show": "We did: even more difference! 3 times, it gave my first line a zero!",
+     "text": "అదీ చేశాం: ఇంకా ఎక్కువ తేడా! మూడు సార్లు, నా ఫస్ట్ లైన్ కి... <pause 0.7> [1] సున్నా!",
+     "show": "We did that too: even more difference! 3 times, my first line got... zero!",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.0,
+     "tts": "అదీ చేశాం: ఇంకా ఎక్కువ తేడా! మూడు సార్లు, నా ఫస్ట్ లైన్ కి...",
+     "file2": "08b_varsha.wav",
+     "tts2": "సున్నా!",
+     "pause": 0.7,
      "gain_db": 0.5
     },
     {
@@ -234,6 +244,12 @@
    "pre": 0.3,
    "boost": 1.5,
    "rise": 1.3,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -261,21 +277,25 @@
     {
      "who": "varsha",
      "file": "10_varsha.wav",
-     "text": "అందుకే చాట్ బాట్ లైన్లు చూపిస్తుంది. [1] మనిషి చూసి, మార్కులు వేయాలి.",
-     "show": "That's why the chatbot shows the lines. A person must look, and give the marks.",
+     "text": "యాప్ లైన్లు మాత్రమే చూపించాలి. [1] మనిషి చూసి, మార్కులు వేయాలి.",
+     "show": "The app should only show the lines. A person must look, and give the marks.",
      "maxgap": 0.28,
-     "gap": 1.2,
+     "gap": 2.6,
      "tempo": 1.0,
      "gain_db": 0.5
     },
     {
      "who": "akhil",
      "file": "11_akhil.wav",
-     "text": "సార్, నాది ఇంకోసారి దిద్దండి, పది వస్తుంది! [1] ...ఏడేనా?!",
-     "show": "Sir, mark mine once more, I'll get 10! ...only 7?!",
+     "text": "సార్, నాకు ఇంకోసారి మార్కులు వేయించండి, పది వస్తుంది! <pause 0.7> [1] ...ఏడేనా?!",
+     "show": "Sir, get mine marked once more, I'll get 10! ...only 7?!",
      "maxgap": 0.28,
      "gap": 0.0,
      "tempo": 1.05,
+     "tts": "సార్, నాకు ఇంకోసారి మార్కులు వేయించండి, పది వస్తుంది!",
+     "file2": "11b_akhil.wav",
+     "tts2": "...ఏడేనా?!",
+     "pause": 0.7,
      "gain_db": 0.5
     }
    ]

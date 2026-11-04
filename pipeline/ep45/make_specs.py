@@ -22,7 +22,7 @@ LINES = {
     6: ("chinnu", "chinnu", "spot", "Then how do I ever spot one?", "మరి ఎలా గుర్తుపట్టాలి?"),
     7: ("amma", "wide", "tests", "First, the money: quick, sure, huge returns? A scam, whatever the face. | [1] Then the source: her verified page, or PIB Fact Check.",
         "మొదట, డబ్బు. తొందరగా, గ్యారంటీగా పెద్ద లాభం అంటే మోసమే. | [1] తర్వాత, ఎవరు పెట్టారో చూడు: బ్లూ టిక్ ఉన్న అసలు పేజీ, లేదా పీ ఐ బీ ఫ్యాక్ట్ చెక్."),
-    8: ("chinnu", "wide", "pib", "PIB Fact Check says fake! [1] So my twenty-two thousand?!", "పీ ఐ బీ ఫేక్ అంటోంది! [1] మరి నా ఇరవై రెండు వేలు?!"),
+    8: ("chinnu", "wide", "pib", "PIB Fact Check says fake! [1] So my twenty-two thousand?!", "గవర్నమెంట్ ఫ్యాక్ట్ చెక్: ఫేక్! [1] మరి నా డబ్బులు?!"),   # "పీ ఐ బీ" and "ఇరవై రెండు వేలు" came out garbled 4 of 4 (PIB stays on the card)
     9: ("amma", "wide", "call", "Call 1930. [1] Right now.", "వన్ నైన్ త్రీ జీరో కి కాల్ చెయ్. [1] ఇప్పుడే."),
     10: ("chinnu", "wide", "loop", "Amma, now the RBI Governor says double your money! [1] ...Money test: fake!",
          "అమ్మా, ఇప్పుడు ఆర్ బీ ఐ గవర్నర్ గారు డబ్బు డబుల్ చేస్తారంట! [1] ...మనీ టెస్ట్: ఫేక్!"),
@@ -34,7 +34,7 @@ SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     3: "Nobody gives lakhs in a week. That's a deepfake.", 4: "But look, the lips move right! It's exactly her!",
     5: "In new fakes, the lips are right too. They copied her face and voice with a computer and made her say what she never said.",
     6: "Then how do I recognise one?", 7: "First, the money: quick, guaranteed, huge profit means a scam. Then see who posted it: the real page with the blue tick, or PIB Fact Check.",
-    8: "PIB says fake! Then my ₹22,000?!", 9: "Call 1930. Right now.", 10: "Amma, now the RBI Governor will double the money, it seems! ...Money test: fake!",
+    8: "The government fact check: fake! Then my money?!", 9: "Call 1930. Right now.", 10: "Amma, now the RBI Governor will double the money, it seems! ...Money test: fake!",
 }
 NOCAP = set()
 PAUSES = {}

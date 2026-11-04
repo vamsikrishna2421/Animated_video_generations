@@ -114,8 +114,8 @@
     {
      "who": "varsha",
      "file": "04_varsha.wav",
-     "text": "Possible, sir. It rolls a dice for every word. [1] Ask again, get a new mark.",
-     "show": "Possible, sir. It rolls a dice for every word. Ask again, get a new mark.",
+     "text": "Possible, sir. It rolls a dice for every word. [1] Ask again, you can get a new mark.",
+     "show": "Possible, sir. It rolls a dice for every word. Ask again, you can get a new mark.",
      "maxgap": 0.28,
      "gap": 0.3,
      "tempo": 1.1,
@@ -143,6 +143,12 @@
      2,
      0.0,
      0.7
+    ]
+   ],
+   "drop_at": [
+    [
+     2,
+     1
     ]
    ],
    "data": {
@@ -203,11 +209,15 @@
     {
      "who": "varsha",
      "file": "08_varsha.wav",
-     "text": "We did. The marks jumped even more! [1] And three times, it gave my first line a zero!",
-     "show": "We did. The marks jumped even more! And 3 times, it gave my first line a zero!",
+     "text": "We tried that. Even less steady! And three times, it gave my first line... <pause 0.7> [1] a zero!",
+     "show": "We tried that. Even less steady! And 3 times, it gave my first line... a zero!",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.1,
+     "tts": "We tried that. Even less steady! And three times, it gave my first line...",
+     "file2": "08b_varsha.wav",
+     "tts2": "a zero!",
+     "pause": 0.7,
      "gain_db": 0.5
     },
     {
@@ -228,8 +238,14 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.75,
-   "rise": 1.45,
+   "boost": 1.85,
+   "rise": 1.5,
+   "drop_at": [
+    [
+     1,
+     1
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -259,18 +275,22 @@
      "text": "So the AI flags the lines. [1] A person checks them and gives the marks.",
      "show": "So the AI flags the lines. A person checks them and gives the marks.",
      "maxgap": 0.28,
-     "gap": 1.6,
+     "gap": 3.0,
      "tempo": 1.1,
      "gain_db": 0.5
     },
     {
      "who": "akhil",
      "file": "11_akhil.wav",
-     "text": "Sir, mark mine again, I'll get ten! [1] ...Seven?!",
+     "text": "Sir, mark mine again, I'll get ten! <pause 0.7> [1] ...Seven?!",
      "show": "Sir, mark mine again, I'll get 10! ...7?!",
      "maxgap": 0.28,
      "gap": 0.0,
      "tempo": 1.12,
+     "tts": "Sir, mark mine again, I'll get ten!",
+     "file2": "11b_akhil.wav",
+     "tts2": "...Seven?!",
+     "pause": 0.7,
      "gain_db": 0.5
     }
    ]

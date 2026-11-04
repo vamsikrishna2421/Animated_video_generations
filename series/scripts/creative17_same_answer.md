@@ -1,4 +1,4 @@
-# Creative 17 "Same Answer, Two Marks" · script v2, Nov 4 (the Nov 2 creative slot)
+# Creative 17 "Same Answer, Two Marks" · script v3 (as rendered), Nov 4 (the Nov 2 creative slot)
 
 **Format:** a TV crime-show parody (a CASE FILE title, an evidence board with red string, EXHIBIT tags, a black-and-white
 "reconstruction" with a DRAMATISED label, CASE CLOSED stamp) in a tuition room; inserts of the AI's marks and our test.
@@ -97,3 +97,18 @@ transcripts; no word one slipped letter from a swear word.
 
 ## Caption ask (an opinion on the conflict; caption only)
 Should a teacher be allowed to mark homework with an AI? Yes or no, and why?
+
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 8) and would share it; the 0/2 card next to her own first line is the moment people
+will forward; the loop is clean. Both: the punchlines ("a zero", "Seven?!") landed with no pause and no hit and the 7/10
+card was up ~1 s; the TEST IT box was gone before it could be read; the music had no arc. Priya: "Ask again, get a new
+mark" clashed with seven 8s out of ten; "jumped even more" wasn't what the tiles show; "try it on yours" was grey
+micro-text; the wheel's landing unclear. Sandeep: Telugu "చాట్ బాట్" came out "chatbaad", "దిద్దింది" stuttered, "మొదటి"
+was heard "mudde" (near "ముద్దు", kiss); Telugu line 10 sounded like what the app already does, not a rule. Notes: the
+crime-show dressing didn't show. Changed: "a zero" and "Seven?!" voiced as second takes after a 0.7 s stop with the bed
+out and a hit; the 7/10 card held ~1.3 s; the rule line holds 3 s with the TEST IT box up from its second half; "Ask
+again, you can get a new mark."; "We tried that. Even less steady!"; "a small AI on a laptop: try it on yours" big on the
+test card; "this time: 8" / "this time: 9" under the wheel; a CASE FILE strip under the board; Telugu: "యాప్" for the
+app, "మార్కులు వేసింది / వేయించాం / వేయించండి" for "marked", "నా ఫస్ట్ లైన్ కి... సున్నా!", line 10 "యాప్ లైన్లు
+మాత్రమే చూపించాలి. మనిషి చూసి, మార్కులు వేయాలి."; the caption "word for word". Not changed: the music's quarter levels
+(the voice dominates them; the arc is in the bed and the stops).

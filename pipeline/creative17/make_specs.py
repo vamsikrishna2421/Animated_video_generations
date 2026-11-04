@@ -14,30 +14,30 @@ R = ROOT / "reels"
 LINES = {
     1: ("varsha", "wide", "hook", "He copied my answer word for word... [1] he gets nine, I get seven?!",
         "నా ఆన్సర్ అక్షరం అక్షరం కాపీ కొట్టాడు... [1] వాడికి తొమ్మిది, నాకు ఏడేనా?!"),   # script review: "ఏడా" heard "ఏడ" (where) / "ఏడ్చా"
-    2: ("akhil", "wide", "machine", "Sir's AI marked it. [1] Machines don't play favourites!", "సార్ ఫోన్ లో చాట్ బాట్ దిద్దింది. [1] మెషీన్ ఎవరికీ ఫేవర్ చేయదు!"),   # "పక్షపాతం" is one sound from "పక్షవాతం" (paralysis)
+    2: ("akhil", "wide", "machine", "Sir's AI marked it. [1] Machines don't play favourites!", "సార్ ఫోన్ లో యాప్ మార్కులు వేసింది. [1] మెషీన్ ఎవరికీ ఫేవర్ చేయదు!"),   # "పక్షపాతం" is one sound from "పక్షవాతం" (paralysis)
     3: ("srinivas", "wide", "impossible", "Same answer, two marks? [1] Impossible.", "ఒకే ఆన్సర్ కి రెండు మార్కులా? [1] కుదరదు."),
-    4: ("varsha", "wheel", "wheel", "Possible, sir. It rolls a dice for every word. [1] Ask again, get a new mark.",   # script review: "a little chance" read as "an opportunity"
+    4: ("varsha", "wheel", "wheel", "Possible, sir. It rolls a dice for every word. [1] Ask again, you can get a new mark.",   # render review: a new mark came up about half the time   # script review: "a little chance" read as "an opportunity"
         "అవుతుంది సార్. అది ప్రతి మాటకీ డైస్ వేస్తుంది. [1] ఇంకోసారి అడిగితే, ఇంకో మార్కు."),   # the longer line came out garbled 4 of 4
     5: ("akhil", "wide", "prove", "Prove it!", "ప్రూవ్ చెయ్!"),
     6: ("varsha", "test", "test", "We had a small free AI mark one answer, ten times. [1] Mostly eight. But seven and nine both came up!",   # script review: the bars say mostly 8
-        "ఒక చిన్న ఫ్రీ చాట్ బాట్ తో, ఒకే ఆన్సర్ ని పది సార్లు దిద్దించాం. [1] ఎక్కువ సార్లు ఎనిమిది. కానీ ఏడూ వచ్చింది, తొమ్మిదీ వచ్చింది!"),
+        "ఒక చిన్న ఫ్రీ యాప్ తో, ఒకే ఆన్సర్ కి పది సార్లు మార్కులు వేయించాం. [1] ఎక్కువ సార్లు ఎనిమిది. కానీ ఏడూ వచ్చింది, తొమ్మిదీ వచ్చింది!"),
     7: ("srinivas", "test", "scheme0", "Then I'll give it my marking scheme!", "అయితే, ఏ పాయింట్ కి ఎన్ని మార్కులో దానికి చెప్తా!"),   # "మార్కింగ్ స్కీమ్" came out "markent scheme" 4 of 4
-    8: ("varsha", "test", "scheme", "We did. The marks jumped even more! [1] And three times, it gave my first line a zero!",   # with the scheme: 7 twice, 9 four times
-        "అదీ చేశాం: ఇంకా ఎక్కువ తేడా! [1] మూడు సార్లు, నా మొదటి లైన్ కి సున్నా వేసింది!"),
+    8: ("varsha", "test", "scheme", "We tried that. Even less steady! And three times, it gave my first line... | [1] a zero!",   # render review: "jumped more" wasn't what the tiles show; a stop and a hit before "zero"
+        "అదీ చేశాం: ఇంకా ఎక్కువ తేడా! మూడు సార్లు, నా ఫస్ట్ లైన్ కి... | [1] సున్నా!"),   # "మొదటి" was heard "mudde", near "ముద్దు" (kiss)
     9: ("akhil", "test", "lottery", "So it's a lottery?!", "అంటే ఇది లాటరీనా?!"),
     10: ("varsha", "wide", "rule", "So the AI flags the lines. [1] A person checks them and gives the marks.",   # script review: "points to lines" right after it misread one
-         "అందుకే చాట్ బాట్ లైన్లు చూపిస్తుంది. [1] మనిషి చూసి, మార్కులు వేయాలి."),
-    11: ("akhil", "wide", "loop", "Sir, mark mine again, I'll get ten! [1] ...Seven?!", "సార్, నాది ఇంకోసారి దిద్దండి, పది వస్తుంది! [1] ...ఏడేనా?!"),   # script review: why would he ask with a 9?
+         "యాప్ లైన్లు మాత్రమే చూపించాలి. [1] మనిషి చూసి, మార్కులు వేయాలి."),   # render review: "అందుకే ... చూపిస్తుంది" sounded like what it already does
+    11: ("akhil", "wide", "loop", "Sir, mark mine again, I'll get ten! | [1] ...Seven?!", "సార్, నాకు ఇంకోసారి మార్కులు వేయించండి, పది వస్తుంది! | [1] ...ఏడేనా?!"),   # render review: a stop and a hit before "Seven?!"   # script review: why would he ask with a 9?
 }
 TTS_EN = {}   # spoken forms
 SHOW = {1: "He copied my answer word for word... he gets 9, I get 7?!", 6: "We had a small free AI mark one answer, 10 times. Mostly 8. But 7 and 9 both came up!",
-        8: "We did. The marks jumped even more! And 3 times, it gave my first line a zero!", 11: "Sir, mark mine again, I'll get 10! ...7?!"}
+        8: "We tried that. Even less steady! And 3 times, it gave my first line... a zero!", 11: "Sir, mark mine again, I'll get 10! ...7?!"}
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
-    1: "He copied my answer letter for letter... he gets 9, and I get only 7?!", 2: "The chatbot on sir's phone marked it. A machine favours nobody!",
+    1: "He copied my answer word for word... he gets 9, and I get only 7?!", 2: "The app on sir's phone gave the marks. A machine favours nobody!",
     3: "Two marks for the same answer? Not possible.", 4: "It can happen, sir. It rolls a dice for every word. Ask once more, another mark.",
-    5: "Prove it!", 6: "We had a small free chatbot mark one answer 10 times. Mostly 8. But 7 came, and 9 came too!", 7: "Then I'll tell it how many marks for each point!",
-    8: "We did: even more difference! 3 times, it gave my first line a zero!", 9: "So this is a lottery?!",
-    10: "That's why the chatbot shows the lines. A person must look, and give the marks.", 11: "Sir, mark mine once more, I'll get 10! ...only 7?!",
+    5: "Prove it!", 6: "We had a small free app mark one answer 10 times. Mostly 8. But 7 came, and 9 came too!", 7: "Then I'll tell it how many marks for each point!",
+    8: "We did that too: even more difference! 3 times, my first line got... zero!", 9: "So this is a lottery?!",
+    10: "The app should only show the lines. A person must look, and give the marks.", 11: "Sir, get mine marked once more, I'll get 10! ...only 7?!",
 }
 NOCAP = set()
 PAUSES = {}
@@ -49,10 +49,10 @@ TEMPO_LINE_TE = {}
 # scheme's result, a boom and a glitch on "a zero"; a boom and clap on the rule; hats and claps building through the last
 # scene; a riser, a ding on "Seven?!" and the slam back to frame 1. The scenes step up.
 SCENES = [("s_a", (1, 2, 3, 4, 5), {"boost": 0.9, "tail": 0.0}),
-          ("s_b", (6, 7, 8, 9), {"boost": 1.25, "drop_pre": [[2, 0.0, 0.7]], "tail": 0.0}),   # the bed out for 0.7 s before "We did."
-          ("s_c", (10, 11), {"outro": True, "pre": 0.3, "boost": 1.75, "rise": 1.45, "tail": 0.0})]
-GAP = {1: 0.25, 2: 0.2, 3: 0.3, 4: 0.3, 5: 0.25, 6: 0.5, 7: 0.25, 8: 0.5, 9: 0.3, 10: 1.6, 11: 0.0}   # 10: the rule card holds
-GAP_TE = {10: 1.2}
+          ("s_b", (6, 7, 8, 9), {"boost": 1.25, "drop_pre": [[2, 0.0, 0.7]], "drop_at": [[2, 1]], "tail": 0.0}),   # and out again before "zero"   # the bed out for 0.7 s before "We did."
+          ("s_c", (10, 11), {"outro": True, "pre": 0.3, "boost": 1.85, "rise": 1.5, "drop_at": [[1, 1]], "tail": 0.0})]   # the bed out before "Seven?!"
+GAP = {1: 0.25, 2: 0.2, 3: 0.3, 4: 0.3, 5: 0.25, 6: 0.5, 7: 0.25, 8: 0.5, 9: 0.3, 10: 3.0, 11: 0.0}   # 10: the TEST IT card holds 4 s+   # 10: the rule card holds
+GAP_TE = {10: 2.6}
 GAIN = {}
 GAIN_TE = {}
 FLAGS_TE = {"s_c": {"boost": 1.5, "rise": 1.3}}
@@ -90,7 +90,7 @@ def spec(lang="en"):
                 ln["pauses"] = PAUSES[n]
             if " | " in ln["text"]:   # two takes; the text keeps its cues, split where the second take starts
                 p1, p2 = ln["text"].split(" | ")
-                pz = 0.6 if n == 11 else 0.25
+                pz = {8: 0.7, 11: 0.7}.get(n, 0.25)   # the stop before the punchline
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             g = 0.5 + (GAIN_TE if te else GAIN).get(n, 0.0)
