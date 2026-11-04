@@ -1,0 +1,1113 @@
+{
+ "id": "creative19v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "The AI said we're both right",
+ "musicVol": [
+  0.5,
+  0.6
+ ],
+ "title": "The AI said we're both right",
+ "handle": "@ai_maastaaru",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   19,
+   43
+  ],
+  [
+   400,
+   424
+  ],
+  [
+   637,
+   655
+  ],
+  [
+   1388,
+   1412
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   655,
+   0.9
+  ],
+  [
+   655,
+   1146,
+   1.3
+  ],
+  [
+   1145,
+   1802,
+   2.0
+  ],
+  [
+   1145,
+   1802,
+   1.6,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1802,
+ "music": "reel/creative19v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_sides",
+   "data": {
+    "beats": [
+     {
+      "who": "sai",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "venkat",
+      "shot": "wide",
+      "prop": "fair",
+      "n": 2
+     },
+     {
+      "who": "sai",
+      "shot": "wide",
+      "prop": "unfair",
+      "n": 3
+     },
+     {
+      "who": "pinky",
+      "shot": "wide",
+      "prop": "both",
+      "n": 4
+     },
+     {
+      "who": "venkat",
+      "shot": "wide",
+      "prop": "how",
+      "n": 5
+     },
+     {
+      "who": "sai",
+      "shot": "wide",
+      "prop": "echo",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "₹30,000 advance, ₹15,000 back",
+     "title": "₹30,000 advance, ₹15,000 back",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 655,
+   "lines": [
+    {
+     "who": "sai",
+     "name": "Sai",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative19v1/line_01.wav",
+     "from": 10,
+     "frames": 79,
+     "words": [
+      {
+       "w": "₹30,000",
+       "from": 13,
+       "to": 28
+      },
+      {
+       "w": "advance,",
+       "from": 28,
+       "to": 45
+      },
+      {
+       "w": "₹15,000",
+       "from": 45,
+       "to": 71
+      },
+      {
+       "w": "back?!",
+       "from": 71,
+       "to": 84
+      }
+     ],
+     "cues": {
+      "1": 43
+     }
+    },
+    {
+     "who": "venkat",
+     "name": "Venkat Rao garu",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative19v1/line_02.wav",
+     "from": 95,
+     "frames": 170,
+     "words": [
+      {
+       "w": "Repainting",
+       "from": 95,
+       "to": 113
+      },
+      {
+       "w": "is",
+       "from": 113,
+       "to": 118
+      },
+      {
+       "w": "₹18,000,",
+       "from": 118,
+       "to": 138
+      },
+      {
+       "w": "I",
+       "from": 138,
+       "to": 141
+      },
+      {
+       "w": "cut",
+       "from": 141,
+       "to": 147
+      },
+      {
+       "w": "only",
+       "from": 147,
+       "to": 169
+      },
+      {
+       "w": "₹15,000!",
+       "from": 169,
+       "to": 189
+      },
+      {
+       "w": "Even",
+       "from": 189,
+       "to": 212
+      },
+      {
+       "w": "the",
+       "from": 212,
+       "to": 218
+      },
+      {
+       "w": "AI",
+       "from": 218,
+       "to": 223
+      },
+      {
+       "w": "says",
+       "from": 223,
+       "to": 231
+      },
+      {
+       "w": "it's",
+       "from": 231,
+       "to": 243
+      },
+      {
+       "w": "fair!",
+       "from": 243,
+       "to": 260
+      }
+     ],
+     "cues": {
+      "1": 197
+     }
+    },
+    {
+     "who": "sai",
+     "name": "Sai",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative19v1/line_03.wav",
+     "from": 270,
+     "frames": 78,
+     "words": [
+      {
+       "w": "I",
+       "from": 270,
+       "to": 273
+      },
+      {
+       "w": "asked",
+       "from": 273,
+       "to": 281
+      },
+      {
+       "w": "the",
+       "from": 281,
+       "to": 287
+      },
+      {
+       "w": "same",
+       "from": 287,
+       "to": 294
+      },
+      {
+       "w": "AI.",
+       "from": 294,
+       "to": 300
+      },
+      {
+       "w": "It",
+       "from": 300,
+       "to": 304
+      },
+      {
+       "w": "says",
+       "from": 304,
+       "to": 312
+      },
+      {
+       "w": "it's",
+       "from": 312,
+       "to": 319
+      },
+      {
+       "w": "too",
+       "from": 319,
+       "to": 331
+      },
+      {
+       "w": "much!",
+       "from": 331,
+       "to": 339
+      }
+     ],
+     "cues": {
+      "1": 301
+     }
+    },
+    {
+     "who": "pinky",
+     "name": "Pinky",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative19v1/line_04.wav",
+     "from": 354,
+     "frames": 84,
+     "words": [
+      {
+       "w": "Tatha,",
+       "from": 355,
+       "to": 367
+      },
+      {
+       "w": "the",
+       "from": 367,
+       "to": 373
+      },
+      {
+       "w": "AI",
+       "from": 373,
+       "to": 378
+      },
+      {
+       "w": "says",
+       "from": 378,
+       "to": 386
+      },
+      {
+       "w": "you're",
+       "from": 386,
+       "to": 397
+      },
+      {
+       "w": "BOTH",
+       "from": 397,
+       "to": 405
+      },
+      {
+       "w": "right!",
+       "from": 405,
+       "to": 424
+      },
+      {
+       "w": "Referee?",
+       "from": 424,
+       "to": 438
+      }
+     ],
+     "cues": {
+      "1": 424
+     }
+    },
+    {
+     "who": "venkat",
+     "name": "Venkat Rao garu",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative19v1/line_05.wav",
+     "from": 456,
+     "frames": 50,
+     "words": [
+      {
+       "w": "How",
+       "from": 457,
+       "to": 463
+      },
+      {
+       "w": "can",
+       "from": 463,
+       "to": 469
+      },
+      {
+       "w": "we",
+       "from": 469,
+       "to": 474
+      },
+      {
+       "w": "both",
+       "from": 474,
+       "to": 482
+      },
+      {
+       "w": "be",
+       "from": 482,
+       "to": 486
+      },
+      {
+       "w": "right?!",
+       "from": 486,
+       "to": 499
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "sai",
+     "name": "Sai",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative19v1/line_06.wav",
+     "from": 511,
+     "frames": 113,
+     "words": [
+      {
+       "w": "Wait...",
+       "from": 512,
+       "to": 531
+      },
+      {
+       "w": "₹15,000",
+       "from": 531,
+       "to": 543
+      },
+      {
+       "w": "is",
+       "from": 543,
+       "to": 546
+      },
+      {
+       "w": "too",
+       "from": 546,
+       "to": 554
+      },
+      {
+       "w": "much,",
+       "from": 554,
+       "to": 573
+      },
+      {
+       "w": "because",
+       "from": 573,
+       "to": 586
+      },
+      {
+       "w": "painting",
+       "from": 586,
+       "to": 595
+      },
+      {
+       "w": "costs",
+       "from": 595,
+       "to": 607
+      },
+      {
+       "w": "₹18,000?!",
+       "from": 607,
+       "to": 617
+      }
+     ],
+     "cues": {
+      "1": 572
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_sides",
+   "data": {
+    "beats": [
+     {
+      "who": "pinky",
+      "shot": "study",
+      "prop": "study",
+      "n": 7
+     },
+     {
+      "who": "pinky",
+      "shot": "test",
+      "prop": "test",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 655,
+   "frames": 491,
+   "lines": [
+    {
+     "who": "pinky",
+     "name": "Pinky",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative19v1/line_07.wav",
+     "from": 0,
+     "frames": 224,
+     "words": [
+      {
+       "w": "On",
+       "from": 0,
+       "to": 9
+      },
+      {
+       "w": "a",
+       "from": 9,
+       "to": 13
+      },
+      {
+       "w": "close",
+       "from": 13,
+       "to": 29
+      },
+      {
+       "w": "call,",
+       "from": 29,
+       "to": 40
+      },
+      {
+       "w": "it",
+       "from": 40,
+       "to": 50
+      },
+      {
+       "w": "leans",
+       "from": 50,
+       "to": 61
+      },
+      {
+       "w": "to",
+       "from": 61,
+       "to": 67
+      },
+      {
+       "w": "whoever",
+       "from": 88,
+       "to": 97
+      },
+      {
+       "w": "asks.",
+       "from": 97,
+       "to": 103
+      },
+      {
+       "w": "Stanford",
+       "from": 103,
+       "to": 113
+      },
+      {
+       "w": "tested",
+       "from": 113,
+       "to": 120
+      },
+      {
+       "w": "11",
+       "from": 120,
+       "to": 124
+      },
+      {
+       "w": "chatbots:",
+       "from": 124,
+       "to": 147
+      },
+      {
+       "w": "they",
+       "from": 147,
+       "to": 152
+      },
+      {
+       "w": "took",
+       "from": 152,
+       "to": 158
+      },
+      {
+       "w": "the",
+       "from": 158,
+       "to": 162
+      },
+      {
+       "w": "user's",
+       "from": 162,
+       "to": 170
+      },
+      {
+       "w": "side",
+       "from": 170,
+       "to": 175
+      },
+      {
+       "w": "1.5",
+       "from": 175,
+       "to": 179
+      },
+      {
+       "w": "times",
+       "from": 179,
+       "to": 189
+      },
+      {
+       "w": "as",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "often",
+       "from": 193,
+       "to": 203
+      },
+      {
+       "w": "as",
+       "from": 203,
+       "to": 206
+      },
+      {
+       "w": "people",
+       "from": 206,
+       "to": 213
+      },
+      {
+       "w": "did.",
+       "from": 213,
+       "to": 219
+      }
+     ],
+     "cues": {
+      "1": 88
+     }
+    },
+    {
+     "who": "pinky",
+     "name": "Pinky",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative19v1/line_08.wav",
+     "from": 236,
+     "frames": 227,
+     "words": [
+      {
+       "w": "We",
+       "from": 237,
+       "to": 241
+      },
+      {
+       "w": "tested",
+       "from": 241,
+       "to": 259
+      },
+      {
+       "w": "a",
+       "from": 259,
+       "to": 262
+      },
+      {
+       "w": "small",
+       "from": 262,
+       "to": 271
+      },
+      {
+       "w": "AI",
+       "from": 271,
+       "to": 276
+      },
+      {
+       "w": "on",
+       "from": 276,
+       "to": 280
+      },
+      {
+       "w": "our",
+       "from": 280,
+       "to": 286
+      },
+      {
+       "w": "laptop,",
+       "from": 286,
+       "to": 307
+      },
+      {
+       "w": "10",
+       "from": 307,
+       "to": 311
+      },
+      {
+       "w": "times",
+       "from": 311,
+       "to": 320
+      },
+      {
+       "w": "each.",
+       "from": 340,
+       "to": 346
+      },
+      {
+       "w": "Landlord:",
+       "from": 346,
+       "to": 367
+      },
+      {
+       "w": "\"fair\",",
+       "from": 367,
+       "to": 383
+      },
+      {
+       "w": "10",
+       "from": 383,
+       "to": 387
+      },
+      {
+       "w": "of",
+       "from": 387,
+       "to": 394
+      },
+      {
+       "w": "10.",
+       "from": 394,
+       "to": 407
+      },
+      {
+       "w": "Tenant:",
+       "from": 407,
+       "to": 423
+      },
+      {
+       "w": "\"too",
+       "from": 423,
+       "to": 429
+      },
+      {
+       "w": "much\",",
+       "from": 429,
+       "to": 445
+      },
+      {
+       "w": "9",
+       "from": 445,
+       "to": 447
+      },
+      {
+       "w": "of",
+       "from": 447,
+       "to": 454
+      },
+      {
+       "w": "10.",
+       "from": 454,
+       "to": 459
+      }
+     ],
+     "cues": {
+      "1": 340
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_sides",
+   "data": {
+    "beats": [
+     {
+      "who": "pinky",
+      "shot": "fix",
+      "prop": "fix",
+      "n": 10
+     },
+     {
+      "who": "pinky",
+      "shot": "fix",
+      "prop": "middle",
+      "n": 11
+     },
+     {
+      "who": "venkat",
+      "shot": "wide",
+      "prop": "loop1",
+      "n": 12
+     },
+     {
+      "who": "sai",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Ask it this way",
+     "title": "Ask it this way",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1145,
+   "frames": 657,
+   "lines": [
+    {
+     "who": "pinky",
+     "name": "Pinky",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative19v1/line_09.wav",
+     "from": 9,
+     "frames": 155,
+     "words": [
+      {
+       "w": "So",
+       "from": 12,
+       "to": 17
+      },
+      {
+       "w": "don't",
+       "from": 17,
+       "to": 28
+      },
+      {
+       "w": "ask",
+       "from": 28,
+       "to": 38
+      },
+      {
+       "w": "\"Am",
+       "from": 38,
+       "to": 45
+      },
+      {
+       "w": "I",
+       "from": 45,
+       "to": 49
+      },
+      {
+       "w": "right?\"",
+       "from": 66,
+       "to": 73
+      },
+      {
+       "w": "Each",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "of",
+       "from": 78,
+       "to": 81
+      },
+      {
+       "w": "you",
+       "from": 81,
+       "to": 85
+      },
+      {
+       "w": "writes",
+       "from": 85,
+       "to": 91
+      },
+      {
+       "w": "your",
+       "from": 91,
+       "to": 96
+      },
+      {
+       "w": "side",
+       "from": 96,
+       "to": 100
+      },
+      {
+       "w": "in",
+       "from": 100,
+       "to": 103
+      },
+      {
+       "w": "one",
+       "from": 103,
+       "to": 107
+      },
+      {
+       "w": "message.",
+       "from": 107,
+       "to": 116
+      },
+      {
+       "w": "Then",
+       "from": 116,
+       "to": 132
+      },
+      {
+       "w": "ask",
+       "from": 132,
+       "to": 136
+      },
+      {
+       "w": "what's",
+       "from": 136,
+       "to": 146
+      },
+      {
+       "w": "fair.",
+       "from": 146,
+       "to": 157
+      }
+     ],
+     "cues": {
+      "1": 66
+     }
+    },
+    {
+     "who": "pinky",
+     "name": "Pinky",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative19v1/line_10.wav",
+     "from": 197,
+     "frames": 216,
+     "words": [
+      {
+       "w": "Given",
+       "from": 197,
+       "to": 206
+      },
+      {
+       "w": "both",
+       "from": 206,
+       "to": 219
+      },
+      {
+       "w": "sides,",
+       "from": 219,
+       "to": 229
+      },
+      {
+       "w": "it",
+       "from": 229,
+       "to": 238
+      },
+      {
+       "w": "said:",
+       "from": 267,
+       "to": 276
+      },
+      {
+       "w": "₹3,000",
+       "from": 276,
+       "to": 287
+      },
+      {
+       "w": "to",
+       "from": 287,
+       "to": 295
+      },
+      {
+       "w": "₹7,500,",
+       "from": 295,
+       "to": 307
+      },
+      {
+       "w": "all",
+       "from": 307,
+       "to": 316
+      },
+      {
+       "w": "10",
+       "from": 316,
+       "to": 321
+      },
+      {
+       "w": "times.",
+       "from": 321,
+       "to": 340
+      },
+      {
+       "w": "A",
+       "from": 340,
+       "to": 343
+      },
+      {
+       "w": "suggestion,",
+       "from": 343,
+       "to": 374
+      },
+      {
+       "w": "not",
+       "from": 374,
+       "to": 389
+      },
+      {
+       "w": "a",
+       "from": 389,
+       "to": 392
+      },
+      {
+       "w": "verdict.",
+       "from": 392,
+       "to": 405
+      }
+     ],
+     "cues": {
+      "1": 267
+     }
+    },
+    {
+     "who": "venkat",
+     "name": "Venkat Rao garu",
+     "color": "#FCA5A5",
+     "sub": null,
+     "audio": "reel/creative19v1/line_11.wav",
+     "from": 437,
+     "frames": 116,
+     "words": [
+      {
+       "w": "Fine.",
+       "from": 440,
+       "to": 448
+      },
+      {
+       "w": "AI,",
+       "from": 448,
+       "to": 462
+      },
+      {
+       "w": "I'm",
+       "from": 462,
+       "to": 468
+      },
+      {
+       "w": "right,",
+       "from": 468,
+       "to": 486
+      },
+      {
+       "w": "aren't",
+       "from": 486,
+       "to": 503
+      },
+      {
+       "w": "I?",
+       "from": 503,
+       "to": 508
+      },
+      {
+       "w": "...It",
+       "from": 508,
+       "to": 528
+      },
+      {
+       "w": "says",
+       "from": 528,
+       "to": 540
+      },
+      {
+       "w": "yes!",
+       "from": 540,
+       "to": 547
+      }
+     ],
+     "cues": {
+      "1": 509
+     }
+    },
+    {
+     "who": "sai",
+     "name": "Sai",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative19v1/line_12.wav",
+     "from": 557,
+     "frames": 84,
+     "words": [
+      {
+       "w": "AI,",
+       "from": 558,
+       "to": 564
+      },
+      {
+       "w": "I'm",
+       "from": 564,
+       "to": 569
+      },
+      {
+       "w": "right,",
+       "from": 569,
+       "to": 587
+      },
+      {
+       "w": "aren't",
+       "from": 587,
+       "to": 597
+      },
+      {
+       "w": "I?",
+       "from": 597,
+       "to": 601
+      },
+      {
+       "w": "...Yes",
+       "from": 601,
+       "to": 621
+      },
+      {
+       "w": "for",
+       "from": 621,
+       "to": 626
+      },
+      {
+       "w": "me",
+       "from": 626,
+       "to": 630
+      },
+      {
+       "w": "too!",
+       "from": 630,
+       "to": 637
+      }
+     ],
+     "cues": {
+      "1": 602
+     }
+    }
+   ]
+  }
+ ]
+}

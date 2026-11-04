@@ -618,3 +618,16 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     record it, drop it, test the next idea; never bend a story onto a result that didn't happen.
   - The judge's automatic scores over-count (a made-up table ending in "No refund" scored as right): every reel number
     comes from the hand read, and a second reader (the script review) re-reads every reply.
+- Nov 4 lessons (Creative 19):
+  - From Creative 17 to EP46 the copied make_specs line put `"musicEndRamp"`, `"hardCuts"` and `"beatSnap"` inside a `#`
+    comment, so no end swell and no beat-snapped cuts (one reason the music read flat). After copying a make_specs,
+    print the spec's top-level keys and check every flag you meant is there.
+  - A "does it agree with whoever asks?" (sycophancy) demo needs a close call: with one-sided facts ("nothing is broken")
+    the 7B took the tenant's side whoever asked (demo 1, recorded and dropped); with damage on both sides it told the
+    landlord "fair" 10 of 10 and the tenant "excessive" 9 of 10. Say "on a close call, it leans", not "it always agrees".
+  - Leading prompts ("That's fair, isn't it?") get long hedged replies cut off before the verdict at 350 tokens: end
+    every way with the same "Answer in under 120 words." Store the hand read in the result file (a `hand` field), or
+    a reader of the JSON sees the automatic score (the tenant read 0 of 10 there).
+  - Fish at tempo 1.18-1.24 blurred "sided" to "cited" and "We asked a" to "We ask the": reword with crisp words ("took
+    the user's side", "We tested") instead of slowing down.
+  - Whisper writes Telugu numbers as digits ("ముప్పై వేల" -> "30 वेला"): Telugu MUST groups need the digits too.

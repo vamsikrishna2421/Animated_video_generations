@@ -11,9 +11,9 @@ import { person, BillMood, BillArms, BillWho } from "./BillCrayon";
 // day. Venkat Rao garu (the landlord, the red corner) cut ₹15,000 from Sai's ₹30,000 advance for repainting (4 years:
 // faded paint, 30 nail holes, one wall of a child's crayon drawings). He asked an AI: "fair". Sai asked the same AI:
 // "unfair". Pinky (his granddaughter, the ring announcer): it agrees with whoever asks. Our test (series/scripts/
-// creative19_demo/sides2_7B.json, read by hand): asked by the landlord "fair" LL of 10, by the tenant "unfair" TT of 10;
-// both sides in one message: a middle amount. The fix: don't ask "am I right?", put both sides in one message. The loop:
-// "AI, I'm right, aren't I?" "Yes!" -> the bell, frame 1. Every round gets our own ring bell (audio/sfx_ringbell.wav).
+// creative19_demo/sides2_7B.json, read by hand): asked by the landlord "fair" 10 of 10, by the tenant "excessive" 9 of
+// 10 (8 because a repaint costs ₹18,000); both sides in one message: ₹3,000 to ₹7,500, all 10 under ₹15,000. The fix: don't ask "am I right?", put both sides in one message. The loop:
+// both men ask "AI, I'm right, aren't I?", both get "Yes!" -> the bell, frame 1. Every round gets our own ring bell (audio/sfx_ringbell.wav).
 type Word = { w: string; from: number; to: number };
 type Line = { from: number; frames: number; words?: Word[]; cues?: Record<string, number> };
 type Beat = { who: "sai" | "venkat" | "pinky"; shot: string; prop: string; n: number };
@@ -25,7 +25,7 @@ const CLAP = "reel/creative09v1/clap.wav", BELL = "audio/sfx_ringbell.wav";
 const RED = "#dc2626", BLUE = "#2563eb", AMBER = "#fbbf24";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 // our test, read by hand (pipeline/creative19/side_demo2.py HAND)
-export const TEST = { landlord: 10, tenant: 10, both: "₹3,000 – ₹7,500", bothN: 10 };
+export const TEST = { landlord: 10, tenant: 9, both: "₹3,000 – ₹7,500", bothN: 10 };
 const QUOTE_L = "\"Yes, it seems fair.\"", QUOTE_T = "\"This seems excessive.\"";
 const MOOD: Record<number, Partial<Record<BillWho, [BillMood, BillArms]>>> = {
   1: { sai: ["shock", "up"], venkat: ["smug", "phone"], pinky: ["worried", "rest"] },
@@ -34,10 +34,9 @@ const MOOD: Record<number, Partial<Record<BillWho, [BillMood, BillArms]>>> = {
   4: { sai: ["shock", "rest"], venkat: ["shock", "rest"], pinky: ["excited", "up"] },
   5: { sai: ["deadpan", "fold"], venkat: ["angry", "shrug"], pinky: ["calm", "up"] },
   7: { sai: ["worried", "shrug"], venkat: ["deadpan", "fold"], pinky: ["calm", "rest"] },
-  9: { sai: ["worried", "rest"], venkat: ["angry", "shrug"], pinky: ["calm", "up"] },
-  10: { sai: ["calm", "rest"], venkat: ["calm", "rest"], pinky: ["smug", "up"] },
-  11: { sai: ["happy", "rest"], venkat: ["worried", "rest"], pinky: ["happy", "up"] },
-  12: { sai: ["deadpan", "fold"], venkat: ["excited", "phone"], pinky: ["shock", "rest"] },
+  6: { sai: ["shock", "phone"], venkat: ["deadpan", "fold"], pinky: ["worried", "rest"] },
+  12: { sai: ["deadpan", "fold"], venkat: ["excited", "phone"], pinky: ["deadpan", "fold"] },
+  13: { sai: ["excited", "phone"], venkat: ["shock", "phone"], pinky: ["deadpan", "fold"] },
 };
 const SPOT: Record<string, [number, number, number]> = { venkat: [250, 1200, 0.66], sai: [830, 1200, 0.66], pinky: [540, 1105, 0.5] };
 
@@ -76,10 +75,12 @@ const referee = (c: Ctx, x: number, y: number, up: number, side: "both" | "left"
   c.font = SANS(40, 900); c.fillStyle = "#1e3a8a"; c.textAlign = "center"; c.fillText("AI", 0, -38);
   c.font = SANS(20, 800); c.fillText("REF", 0, -8);
   const arm = (s: number, raised: boolean) => {
-    const a = raised ? -Math.PI / 2 - s * 0.35 : Math.PI / 2 - s * 0.6;
-    const ex = s * 46 + Math.cos(a) * 90, ey = 40 + Math.sin(a) * 90 * (raised ? up : 1);
-    stroke(c, [[s * 46, 40], [ex, ey]], "#f8fafc", 12, r, { passes: 2 });
-    c.fillStyle = s < 0 ? RED : BLUE; c.beginPath(); c.arc(ex, ey, 20, 0, 7); c.fill();
+    const a = raised ? -Math.PI / 2 + s * (0.55 - 0.35 * (1 - up)) : Math.PI / 2 - s * 0.6;   // raised: up and outwards
+    const len = raised ? 90 + 80 * up : 90;
+    const sx0 = s * 50, sy0 = raised ? -60 : 40;
+    const ex = sx0 + Math.cos(a) * len, ey = sy0 + Math.sin(a) * len;
+    stroke(c, [[sx0, sy0], [ex, ey]], "#f8fafc", 14, r, { passes: 2 });
+    c.fillStyle = s < 0 ? RED : BLUE; c.beginPath(); c.arc(ex, ey, raised ? 30 : 20, 0, 7); c.fill();
   };
   arm(-1, side !== "none" && up > 0); arm(1, side === "both" && up > 0);
   c.restore();
@@ -88,15 +89,15 @@ const referee = (c: Ctx, x: number, y: number, up: number, side: "both" | "left"
 const board = (c: Ctx, W: number, y: number, head: string, rows: [string, string, string][], k: number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
-  const h = 110 + rows.length * 150;
+  const h = 100 + rows.length * 150;
   c.fillStyle = "rgba(0,0,0,0.3)"; rrect(c, 48, y + 8, W - 96, h, 22); c.fill();
   c.fillStyle = "#111827"; rrect(c, 40, y, W - 96, h, 22); c.fill();
   c.fillStyle = RED; rrect(c, 40, y, (W - 96) / 2, 14, 6); c.fill(); c.fillStyle = BLUE; rrect(c, 40 + (W - 96) / 2, y, (W - 96) / 2, 14, 6); c.fill();
-  c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(head, W / 2 - 8, y + 70);
+  c.font = SANS(28, 800); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(head, W / 2 - 8, y + 56);   // script review: the header small, the numbers huge
   rows.forEach(([lab, val, col], q) => {
-    const yy = y + 100 + q * 150;
-    c.font = SANS(44, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText(lab, 80, yy + 78);
-    let fs = 112; c.font = SANS(fs, 900); while (c.measureText(val).width > W - 520 && fs > 50) { fs -= 4; c.font = SANS(fs, 900); }
+    const yy = y + 80 + q * 150;
+    c.font = SANS(40, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText(lab, 80, yy + 84);
+    let fs = 130; c.font = SANS(fs, 900); while (c.measureText(val).width > W - 520 && fs > 50) { fs -= 4; c.font = SANS(fs, 900); }
     c.fillStyle = col; c.textAlign = "right"; c.fillText(val, W - 90, yy + 92);
   });
   c.restore();
@@ -117,10 +118,10 @@ const phoneCard = (c: Ctx, x: number, y: number, w: number, title: string, lines
 const dark = (c: Ctx, W: number, H: number, round: string, title: string, sub: string[]) => {
   c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
   c.fillStyle = RED; c.fillRect(0, 0, W / 2, 16); c.fillStyle = BLUE; c.fillRect(W / 2, 0, W / 2, 16);
-  c.font = SANS(36, 900); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(round, W / 2, 230);
+  c.font = SANS(36, 900); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(round, W / 2, 290);   // stills: under the banner at 230
   let fs = 62; c.font = SANS(fs, 900); while (c.measureText(title).width > W - 80 && fs > 36) { fs -= 2; c.font = SANS(fs, 900); }
-  c.fillStyle = "#fde68a"; c.fillText(title, W / 2, 310);
-  c.font = SANS(36, 700); c.fillStyle = "#f8fafc"; sub.forEach((t, i) => c.fillText(t, W / 2, 380 + i * 50));
+  c.fillStyle = "#fde68a"; c.fillText(title, W / 2, 360);
+  c.font = SANS(34, 700); c.fillStyle = "#f8fafc"; sub.forEach((t, i) => c.fillText(t, W / 2, 425 + i * 48));
 };
 const card = (c: Ctx, t: string, sub: string, x: number, y: number, w: number, h: number, bg: string, fg: string, k: number) => {
   if (k <= 0) return;
@@ -169,6 +170,9 @@ const StSides: React.FC<SP> = ({ s }) => {
     if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("b")} at={Math.max(0, at - 20)} src={BELL} vol={0.3} />, <Sfx key={k("n")} at={c1 - 4} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.55} />, <Sfx key={k("g")} at={c1 + 30} src="reel/sfx_glitch.wav" vol={0.2} />); }
     if (b.prop === "fix") sfx.push(<Sfx key={k("b")} at={Math.max(0, at - 20)} src={BELL} vol={0.3} />, <Sfx key={k("h")} at={cue(i, 1, 0.4) - 6} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "middle") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.4) - 8} src="reel/sfx_boom.wav" vol={te ? 0.3 : 0.45} />, <Sfx key={k("a")} at={cue(i, 1, 0.4) + 20} src={CLAP} vol={0.35} />);
+    if (b.prop === "loop1") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.6) - 6} src="audio/gag_ding.wav" vol={0.3} />);
+    if (b.prop === "echo") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5) + 4} src="audio/gag_boing.wav" vol={0.3} />);
+    if (b.prop === "fair") sfx.push(<Sfx key={k("r1")} at={Math.max(0, at - 6)} src={BELL} vol={0.2} />);
     if (b.prop === "loop") {
       const slam = end + HOLD, c1 = cue(i, 1, 0.6);
       sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 30)} src="reel/sfx_riser.wav" vol={te ? 0.25 : 0.35} />, <Sfx key={k("d")} at={c1 - 6} src="audio/gag_ding.wav" vol={0.3} />,
@@ -176,7 +180,7 @@ const StSides: React.FC<SP> = ({ s }) => {
         <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />);
     }
   });
-  const iLoop = first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 30 : 0;
+  const iLoop = first("loop1") >= 0 ? first("loop1") : first("loop"), percEnd = iLoop >= 0 ? ls[iLoop].from - 30 : 0;
   return (
     <>
       {sfx}
@@ -195,19 +199,20 @@ const StSides: React.FC<SP> = ({ s }) => {
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
         const faceOf = (who: BillWho, md: [BillMood, BillArms]) => inset(c, who, md, b.who === who && talking, r);
         if (b.shot === "study") {
-          dark(c, W, H, "BETWEEN ROUNDS", "IT AGREES WITH WHOEVER ASKS", []);
+          dark(c, W, H, "BETWEEN ROUNDS", "WHY IT SAID YES TO BOTH", []);
           const c1 = cu(1, 0.3);
           card(c, "STANFORD STUDY", "Science journal · March 2026 · 11 chatbots", W / 2, 520, W - 160, 170, "#e0e7ff", "#1e3a8a", seg(f, c1 - 10, c1 - 2));
-          card(c, "TOOK THE USER'S SIDE", "49% more often than people did", W / 2, 760, W - 160, 170, "#fee2e2", "#991b1b", seg(f, c1 + 4, c1 + 12));
+          card(c, "SIDED WITH THE USER", "~1.5× as often as people (49% more)", W / 2, 760, W - 160, 170, "#fee2e2", "#991b1b", seg(f, c1 + 4, c1 + 12));   // script review: "49% more" vs our 10 of 10 confused
+          card(c, "ON A CLOSE CALL, IT LEANS TO THE ASKER", "", W / 2, 990, W - 160, 120, "#fef3c7", INK, seg(f, ln.from + 4, ln.from + 12));
           faceOf("pinky", ["calm", "up"]);
           return;
         }
         if (b.shot === "test") {
-          dark(c, W, H, "ROUND 2", "OUR TEST", ["a small free AI, no internet (Qwen2.5 7B)", "the same flat, the same ₹15,000 cut · 10 tries each"]);
+          dark(c, W, H, "ROUND 2", "OUR TEST", ["a small AI on our laptop, no internet (Qwen2.5 7B)", "the same flat, the same ₹15,000 cut · 10 tries each"]);
           const c1 = cu(1, 0.45);
           barRow(c, "asked by the landlord: \"fair\"", TEST.landlord, 10, 620, "#f87171", seg(f, c1 - 2, c1 + 10));
-          barRow(c, "asked by the tenant: \"unfair\"", TEST.tenant, 10, 800, "#60a5fa", seg(f, c1 + 22, c1 + 34));
-          c.save(); c.globalAlpha = seg(f, c1 + 40, c1 + 48); c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("same AI · same facts · it agreed with the asker", W / 2, 990); c.restore();
+          barRow(c, "asked by the tenant: \"excessive\"", TEST.tenant, 10, 800, "#60a5fa", seg(f, c1 + 22, c1 + 34));   // script review: the AI's own word
+          c.save(); c.globalAlpha = seg(f, c1 + 40, c1 + 48); c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("same AI · same flat · it leaned to the asker", W / 2, 990); c.restore();
           c.save(); c.font = SANS(36, 800); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("a small AI with no internet: try yours", W / 2, 1150); c.restore();
           faceOf(b.who as BillWho, b.who === "venkat" ? ["angry", "shrug"] : ["calm", "up"]);
           return;
@@ -223,14 +228,15 @@ const StSides: React.FC<SP> = ({ s }) => {
               c.fillStyle = "#f8fafc"; rrect(c, 70, 560, W - 140, 400, 26); c.fill();
               c.font = SANS(32, 900); c.fillStyle = "#15803d"; c.textAlign = "left"; c.fillText("✓ BOTH SIDES, ONE MESSAGE:", 110, 620);
               c.font = SANS(40, 800); c.fillStyle = INK;
-              ["\"Two people disagree.", "Here is each side: ...", "Give the best case for each,", "then say what is fair.\""].forEach((t, q) => c.fillText(t, 110, 690 + q * 62));
+              ["\"Two people disagree.", "Landlord: ...   Tenant: ...", "Give the best case for each,", "then say what is fair.\""].forEach((t, q) => c.fillText(t, 110, 690 + q * 62));
+              c.font = SANS(34, 900); c.fillStyle = "#1d4ed8"; c.fillText("each of you writes your own side", 110, 935);   // script review: if one writes both, theirs comes out stronger
               c.restore();
             }
           } else {
-            card(c, "✓ BOTH SIDES, ONE MESSAGE", "", W / 2, 600, W - 160, 120, "#dcfce7", "#14532d", 1);
+            card(c, "THE AI, GIVEN BOTH SIDES:", "", W / 2, 600, W - 160, 120, "#dcfce7", "#14532d", 1);   // script review: not a "FAIR CUT" box
             const k2 = seg(f, c1 - 6, c1 + 4);
-            card(c, `FAIR CUT: ${TEST.both}`, `not ₹15,000 · ${TEST.bothN} of 10 split it`, W / 2, 820, W - 120, 200, "#fef3c7", INK, k2);
-            c.save(); c.globalAlpha = seg(f, c1 + 26, c1 + 34); c.font = SANS(40, 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("then you two decide, with your agreement", W / 2, 1010); c.restore();
+            card(c, TEST.both, `all ${TEST.bothN} tries under ₹15,000 · "for the small damage, not a full repaint"`, W / 2, 820, W - 120, 200, "#fef3c7", INK, k2);
+            card(c, "A SUGGESTION, NOT A VERDICT", "you two decide", W / 2, 1040, W - 200, 150, "#e0e7ff", "#1e3a8a", seg(f, c1 + 40, c1 + 48));
           }
           faceOf("pinky", ["smug", "up"]);
           return;
@@ -252,27 +258,42 @@ const StSides: React.FC<SP> = ({ s }) => {
         }
         ring(c, W, r);
         const both = b.prop === "both" ? easeOut(seg(f, cu(1, 0.5) - 14, cu(1, 0.5) - 2)) : 0;
-        const loopRef = b.prop === "loop" && !loopOn ? easeOut(seg(f, cu(1, 0.6) - 8, cu(1, 0.6) + 4)) : 0;
-        referee(c, 540, 1440, b.prop === "both" ? both : loopRef, b.prop === "both" ? "both" : loopRef > 0 ? "left" : "none", r);
+        const refL = b.prop === "loop1" ? easeOut(seg(f, cu(1, 0.6) - 8, cu(1, 0.6) + 4)) : 0;
+        const refB = b.prop === "loop" && !loopOn ? easeOut(seg(f, cu(1, 0.6) - 8, cu(1, 0.6) + 4)) : 0;
+        referee(c, 540, 1300, Math.max(both, refL, refB), both > 0 || refB > 0 ? "both" : refL > 0 ? "left" : "none", r);
         c.restore();
         if (hookOn || b.prop === "fair" || b.prop === "unfair") {   // frame 1: the board (readable with the sound off)
-          board(c, W, 170, "MOVING-OUT DAY · 4 YEARS", [["ADVANCE PAID", "₹30,000", "#f8fafc"], ["ADVANCE BACK", "₹15,000", "#f87171"]], 1);
-          phoneCard(c, 50, 600, 470, "His AI", [QUOTE_L], hookOn ? 1 : 1, RED, "#fee2e2", "#991b1b");
-          if (b.prop === "unfair") phoneCard(c, 560, 600, 470, "Sai's AI", [QUOTE_T], seg(f, cu(1, 0.5) - 10, cu(1, 0.5) - 2), BLUE);
+          board(c, W, 240, hookOn ? "MOVING-OUT DAY · 4 YEARS" : "ROUND 1 · MOVING-OUT DAY · 4 YEARS", [["ADVANCE PAID", "₹30,000", "#f8fafc"], ["ADVANCE BACK", "₹15,000", "#f87171"]], 1);   // stills: the banner covered it at 170
+          phoneCard(c, 50, 670, 470, "His AI", [QUOTE_L], 1, RED, "#fee2e2", "#991b1b");
+          if (b.prop === "unfair") phoneCard(c, 560, 670, 470, "Sai's AI", [QUOTE_T], seg(f, cu(1, 0.5) - 10, cu(1, 0.5) - 2), BLUE);
         }
-        if (b.prop === "hook" || loopOn) tag(c, "ROUND 1", 860, 130, 56, AMBER, INK, 0.04, seg(f, loopOn ? slam : 0, (loopOn ? slam : 0) + 6));
+        if (b.prop === "fair") {   // script review: set up the ₹18,000 (and the damage) before Sai reads it back
+          const c1 = cu(1, 0.5);
+          tag(c, "FADED PAINT", 230, 900, 58, "#fef3c7", INK, -0.04, seg(f, ln.from + 2, ln.from + 8));
+          tag(c, "NAIL HOLES", 560, 860, 58, "#fef3c7", INK, 0.03, seg(f, ln.from + 10, ln.from + 16));
+          tag(c, "CRAYON WALL", 880, 1060, 58, "#fef3c7", INK, -0.03, seg(f, ln.from + 18, ln.from + 24));
+          tag(c, "REPAINT: ₹18,000", W / 2, 990, 84, AMBER, INK, 0.02, seg(f, ln.from + 6, ln.from + 12) * (1 - seg(f, c1 + 30, c1 + 36)));
+        }
         if (b.prop === "both") {
           phoneCard(c, 50, 300, 470, "His AI", [QUOTE_L], 1, RED, "#fee2e2", "#991b1b");
           phoneCard(c, 560, 300, 470, "Sai's AI", [QUOTE_T], 1, BLUE);
-          tag(c, "WINNER: BOTH?!", W / 2, 640, 84, AMBER, INK, -0.03, seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 6));
+          tag(c, "WINNER: BOTH?!", W / 2, 680, 120, AMBER, INK, -0.03, seg(f, cu(1, 0.5) - 14, cu(1, 0.5) - 4));
         }
-        if (b.prop === "how") tag(c, "how can both be right?!", W / 2, 480, 64, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.3));
-        if (b.prop === "echo") phoneCard(c, 300, 360, 480, "Sai's AI", ["It agreed with", "the way he asked"], seg(p, 0.2, 0.35), BLUE);
-        if (b.prop === "who") tag(c, "then who's right?!", W / 2, 480, 64, "#fef3c7", INK, 0.03, seg(p, 0.1, 0.3));
-        if (b.prop === "loop" && !loopOn) {
+        if (b.prop === "how") tag(c, "how can both be right?!", W / 2, 520, 80, "#fef3c7", INK, -0.03, seg(p, 0.1, 0.3));
+        if (b.prop === "echo") {   // his phone, zoomed: the reason it gave him
+          phoneCard(c, 60, 300, W - 120, "Sai's AI", ["\"₹15,000 seems excessive", "given the actual cost", "of ₹18,000.\""], seg(p, 0.0, 0.12), BLUE);
+          tag(c, "15 < 18 ?!", W / 2, 760, 120, "#fee2e2", "#991b1b", -0.05, seg(f, cu(1, 0.5) + 4, cu(1, 0.5) + 12));
+        }
+        if (b.prop === "loop1") {
           const c1 = cu(1, 0.6);
-          phoneCard(c, 50, 360, 560, "His AI", ["\"I'm right, aren't I?\""], seg(p, 0.05, 0.2), RED, "#e2e8f0", INK);
-          phoneCard(c, 50, 580, 560, "His AI", ["\"Yes, you're right!\""], seg(f, c1 - 10, c1 - 2), RED, "#fee2e2", "#991b1b");
+          phoneCard(c, 50, 360, 500, "His AI", ["\"I'm right, aren't I?\""], seg(p, 0.05, 0.2), RED, "#e2e8f0", INK);
+          phoneCard(c, 50, 580, 500, "His AI", ["\"Yes, you're right!\""], seg(f, c1 - 10, c1 - 2), RED, "#fee2e2", "#991b1b");
+        }
+        if (b.prop === "loop" && !loopOn) {   // script review: both of them ask again, both get a yes
+          const c1 = cu(1, 0.6);
+          phoneCard(c, 50, 580, 500, "His AI", ["\"Yes, you're right!\""], 1, RED, "#fee2e2", "#991b1b");
+          phoneCard(c, 530, 360, 500, "Sai's AI", ["\"I'm right, aren't I?\""], seg(p, 0.05, 0.2), BLUE, "#e2e8f0", INK);
+          phoneCard(c, 530, 800, 500, "Sai's AI", ["\"Yes, you're right!\""], seg(f, c1 - 10, c1 - 2), BLUE);
         }
         if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, slam, slam + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
       }} />
