@@ -31,6 +31,18 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-04 (Creative 18 "₹3,100 Back? ₹0.")
+- **Topic:** asked a money rule, a chat AI makes up one that sounds real, with a number. Ramesh babai asked an AI before
+  cancelling 4 confirmed Tatkal tickets (₹6,200): "50%, ₹3,100"; IRCTC refunded ₹0 ("No refund will be granted on
+  cancellation of confirmed Tatkal tickets"). Our offline test: right 1 of 10, a made-up rule 9 of 10, ₹3,100 five times;
+  told "only the official rule, say if you're not sure": 8 of 10. Rule: open the official page yourself.
+- **Files:** `out/skits/18_3100_back_zero.mp4` (+ `_ig`), `out/skits/18_3100_back_zero_te.mp4` (+ `_te_ig`),
+  `out/skits/18_3100_back_zero_post.txt`.
+- **Bujji feedback applied:** the reach stack: the family's ticket money; the board "AI SAID: ₹3,100 BACK / IRCTC REFUND:
+  ₹0" readable sound-off; he asked first and was told wrong; line 1 says both numbers; caption-only ask. Format new (a
+  railway-announcement parody). A first demo (a rent clause) found no failure and was dropped, not bent to fit.
+— Claude, 2026-11-04
+
 ### [NEW] Claude — 2026-11-04 (EP45 "₹22,000 for ₹5.5 lakh a week", deepfakes · queue 048)
 - **Topic:** deepfakes and how to spot them. Chinnu paid his phone money, ₹22,000, after a Sponsored video of "the
   Finance Minister" promising ₹5,50,000 in a week (PIB Fact Check, Apr 16, 2026: fake, made with AI). His face test
