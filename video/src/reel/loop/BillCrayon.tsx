@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -44,6 +44,9 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   varsha: { skin: "#9c6a45", hair: "#120d0a", top: "#0ea5e9" },   // Creative 17 (CaseCrayon.tsx): wrote the answer, a school uniform blue
   akhil: { skin: "#b07a52", hair: "#1c1410", top: "#16a34a" },   // copied it word for word
   srinivas: { skin: "#8d5a3b", hair: "#3f3f46", top: "#f5f5f4" },   // the tuition teacher, a cream shirt, grey hair
+  ramesh: { skin: "#9c6a45", hair: "#9ca3af", top: "#b45309" },   // Creative 18 (TatkalCrayon.tsx): Babai, 55, grey hair, a mustard shirt
+  keerthi: { skin: "#b07a52", hair: "#120d0a", top: "#7c3aed" },   // his niece, 24
+  sunny: { skin: "#a26d47", hair: "#1c1410", top: "#dc2626" },   // his nephew, 15, reads the rules
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
@@ -72,7 +75,7 @@ const palm = (c: Ctx, x: number, y: number, skin: string, r: () => number, rad =
 const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   const L = LOOK[who], hy = -130;
   c.fillStyle = L.hair;
-  if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
+  if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha" || who === "keerthi") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
   if (who === "meghana") { c.beginPath(); c.ellipse(0, hy + 6, 114, 124, 0, 0, 7); c.fill(); }   // a bob
   [-1, 1].forEach((s) => { c.beginPath(); c.ellipse(s * 92, hy + 6, 16, 26, 0, 0, 7); c.fillStyle = L.skin; c.fill(); });
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
@@ -82,7 +85,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
     c.ellipse(0, hy - 118, 46, 40, 0, 0, 7); c.moveTo(100, hy - 30); c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy - 20); c.lineTo(-100, hy - 20);
   } else if (who === "nikhil" || who === "charan" || who === "akhil") {   // curly
     for (let q = 0; q < 7; q++) { const a = Math.PI * (1.05 + q * 0.15); c.moveTo(Math.cos(a) * 92 + 30, hy - 40 + Math.sin(a) * 84); c.arc(Math.cos(a) * 92, hy - 40 + Math.sin(a) * 84, 30, 0, 7); }
-  } else if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha") {   // parted in the middle
+  } else if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha" || who === "keerthi") {   // parted in the middle
     c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy + 4); c.quadraticCurveTo(52, hy - 58, 4, hy - 80); c.lineTo(-4, hy - 80); c.quadraticCurveTo(-52, hy - 58, -100, hy + 4);
   } else if (who === "meghana") {   // a fringe
     c.ellipse(0, hy - 56, 100, 66, 0, Math.PI, 0); c.lineTo(100, hy - 30); c.lineTo(-100, hy - 30);
@@ -110,7 +113,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
       stroke(c, [[ex - 15, ey], [ex + 15, ey - 2]], INK, 6, r, { passes: 2 });
     } else { c.beginPath(); c.arc(ex, ey, 9, 0, 7); c.fillStyle = INK; c.fill(); }
   });
-  if (who === "nikhil" || who === "vasudha" || who === "thathayya" || who === "srinivas") {   // glasses
+  if (who === "nikhil" || who === "vasudha" || who === "thathayya" || who === "srinivas" || who === "ramesh") {   // glasses
     [-36, 36].forEach((ex) => stroke(c, rrectPts(ex - 30, hy - 26, 60, 44), INK, 5, r, { passes: 2 }));
     stroke(c, [[-6, hy - 6], [6, hy - 6]], INK, 5, r, { passes: 1 });
   }
