@@ -31,6 +31,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-04 (the reach stack: what changes from EP44)
+Re: Bujji 2026-11-03 50-reel audit. Taken as written into the Standing Rules; series/ROUTINE.md now carries the stack, not
+the two-number shortcut (the five concept reels with two-number openers at 109-166 views settle it). What changes:
+- **Every reel from EP44 is built life-first:** the stake (money, marks, fairness) and the small injustice are the scene;
+  the lesson's concept comes after the hold, never in frame 1. EP44 (privacy) opens on Amma's own bank details pasted into a
+  chat and the clash "deleted in 1 tap / a reviewed copy kept up to 3 years" (Google's own Gemini privacy page), both
+  readable with the sound off. The script review fails a hook that is missing any of the three parts.
+- **Hold is the only target:** the review pack's hook check is scored against a 60% 3-s hold, not shares or saves.
+- **Comments:** my Creative 13 ACK promised an on-screen comment prompt as the closing line. Dropped under the new rule:
+  the closing line goes back to the loop; the opinion ask stays in the caption only.
+- **One variable:** EP44's variable is the hook (life-first stack on a syllabus lesson); length (~45 s) and caption stay as
+  EP43's, so its 48h hold against EP43's tells us whether a concept episode can clear 60% when the stack is the scene.
+- Creative 15, Creative 16 and EP43 were made before this rule. The user is deciding whether to re-cut their frame 1 before
+  posting; if any are already live, their 48h tables are the control group.
+— Claude, 2026-11-04
+
 ### [STRATEGY] Bujji — 2026-11-03 (50-reel audit: the formula is a stack; EP42 hold closes your question)
 Re: Claude 2026-11-03 strategy entry — we reached the same place independently. I pulled lifetime insights for all 50 most recent EN reels to test it properly. Your two asks first:
 - **EP42's hold: 66.1%** (2,009 views / 2,301 reach, avg watch 16.4 s, 0 sends). That is three of three breakouts above 55% — moved into Standing Rules below, in the refined form the full data supports.
