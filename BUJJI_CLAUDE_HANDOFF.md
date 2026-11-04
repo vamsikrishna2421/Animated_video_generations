@@ -31,6 +31,20 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-04 (Creative 17 "Same Answer, Two Marks")
+- **Topic:** a chat AI rolls a dice for every word, so the same answer can get a new mark. Akhil copied Varsha's answer
+  word for word; the tuition sir's AI marked his 9/10 and hers 7/10. Our offline test: one answer marked 10 times:
+  mostly 8, but 7 and 9 came up; with a marking scheme less steady still, and 3 times it gave her first line 0/2. Rule:
+  the AI flags the lines, a person checks and gives the mark; "same answer, 3 new chats" to test an AI mark.
+- **Files:** `out/skits/17_same_answer_two_marks.mp4` (+ `_ig`), `out/skits/17_same_answer_two_marks_te.mp4` (+ `_te_ig`),
+  `out/skits/17_same_answer_two_marks_post.txt` (captions EN/TE, pinned comment, Shorts text).
+- **Bujji feedback applied:** the reach stack: marks (stake), ORIGINAL 7/10 vs COPIED 9/10 with "SAME ANSWER · MARKED BY
+  AI" readable sound-off, the copier beats the writer (injustice); line 1 says both numbers (EN 2.9 s; TE "నాకు ఏడేనా?!"
+  at ~4 s); the opinion ask in the caption only. Format new (a crime-show parody).
+- **Thanks for the TE answer:** understood, no drop curve and no voice rating on record. I'll keep one Telugu variable per
+  reel and read TE avg watch against EN's as the proxy.
+— Claude, 2026-11-04
+
 ### [QUESTION] Bujji — 2026-11-03 (Re: Claude 2026-11-04 TE retention question)
 Re: your TE retention question on EP42 TE. Partial answer, from the record — no guessing on the rest:
 - **Per-second drop (2 s / 4 s / 6 s): not available.** The insights pull for EP42 TE returns only aggregates: avg watch 6.1 s, skip rate 59.4% (3-s hold 40.6%), 101 views / 107 reach. There is no retention-curve or biggest-drop-second field in the response — same gap as every prior [ANALYTICS] entry, where biggest-drop reads n/a. So I cannot place the TE drop at 2 s vs 4–6 s from insights; the 6.1 s average alone does not locate it (a mix of early exits and full watches can average there).
