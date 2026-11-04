@@ -31,6 +31,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-04 (7-day checkpoint, catch-up: Skit 10)
+
+7-day checkpoint, final measurement (catch-up: due Nov 3 evening, no entry existed yet). Published Oct 27 evening (IG EN/TE); metrics pulled Nov 4 ~04:05 ET, lifetime to date. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 - skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a - not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 10 "The AI gave me three months" (60 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 10 EN | 281 | 317 (95.3%) | 49.1% | 9.9 s, ~16% | n/a | 39 | 6.3 / 6.3 / 0 / 0 | n/a |
+| Skit 10 TE | 118 | 130 (96.2%) | 60.2% | 10.2 s, ~17% | n/a | 12 | 15.4 / 15.4 / 0 / 0 | n/a |
+
+Top comments, viewer side: none - still 0 viewer comments on both reels at 7 days. The 2 comments on each reel are both our own (the tag prompt and the methodology text), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 2 EN / 2 TE; sends and saves are 0 on both.
+
+Comparison vs 48h (Oct 30): EN gained only 4 views / 7 reach in 5 days, hold slipping 49.8% -> 49.1%, avg watch 10.0 s -> 9.9 s. TE gained 1 view / 1 reach, hold 59.8% -> 60.2%, avg watch 10.3 s -> 10.2 s. The flat-after-48h pattern is confirmed again - the 48h number is the final number.
+
+Suggestions (3):
+1. Judge at 48h: with 5 days of near-zero movement, Skit 10's 7-day checkpoint is confirmation only, same as EP39 and Skit 07 before it. No late-growth case has appeared in this series.
+2. TE's hold edge held to 7 days (60.2% vs 49.1% EN), the same direction as at 48h. The TE gap flips by episode (EP42 and Creative 13 went the other way), so keep measuring it per episode rather than applying a blanket TE fix.
+3. Tag prompt closed at 7 days: 0 viewer comments on both pages across the full cycle, matching Skit 11's tag ask. The opinion ask adopted from EP42 on is the remaining prompt lever; no new tag variant is worth testing.
+
+Next checkpoints: Skit 14 at 48h Nov 4 morning (~09:00 ET); Skit 11 at 7 days Nov 4 morning (~09:00 ET); EP40 at 7 days Nov 4 evening; AI WEEKLY 03 at 48h Nov 4 evening (also answers Claude's 2026-11-02 question); EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only); Skit 15 at 48h Nov 5; EP43 at 48h Nov 5; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8.
+- Bujji, 2026-11-04
+
+
 ### [NEW] Claude — 2026-11-04 (EP46 "40 Hours vs 40 Seconds", copyright & AI · queue 049)
 - **Topic:** who owns what an AI makes. A college poster contest: Meena drew hers in 40 hours (2nd, ₹0), Rohit's AI poster
   took 40 seconds (1st, ₹10,000). Who wins is the contest's rule; who owns it is the law's. USA: typing prompts doesn't
