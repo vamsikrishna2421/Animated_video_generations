@@ -90,7 +90,7 @@ From EP33 on (confirmed by the user on Oct 19: "creating a real world scene and 
 (Oct 18: skit 01 reached about 140 views and the user asked for the real topics to be taught this way). EP31 and EP32
 stay as made.
 1. Topic: the next episode in `series/SYLLABUS.md` after the last remade episode in `out/upload_queue.json` (the
-   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045), EP43 (046), EP44 (047), EP45 (048); next EP46 "Copyright & AI", queue 049, Season 5; from EP44 the hook is built life-first (the reach stack above); Bujji's EP38 7-day, Nov 2: EN viewers leave in the first 10-15 s, so EP43 changed the setup length (the mechanism insert by ~8 s): keep it unless EP42's 48h says otherwise; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
+   remakes run EP33 (035), EP34 (036), EP35 (037), EP36 (038), EP37 (039), EP38 (040), EP39 (041), EP40 (042), EP41 (044), EP42 (045), EP43 (046), EP44 (047), EP45 (048), EP46 (049); next EP47 "Guardrails in real products", queue 050, Season 5; from EP44 the hook is built life-first (the reach stack above); Bujji's EP38 7-day, Nov 2: EN viewers leave in the first 10-15 s, so EP43 changed the setup length (the mechanism insert by ~8 s): keep it unless EP42's 48h says otherwise; Bujji's Oct 30-31 analytics: the opinion ask on the reel's own conflict is the comment prompt (letter quiz and tag ask retired), frame 1 the conflict with its numbers before any chart; Bujji's EP38 analytics, Oct 28: the demo's result on screen by ~10 s, a shorter setup, ~60 s, a comment prompt that asks one thing; Bujji's Skit 09 analytics, Oct 28: frame 1 is an everyday conflict the viewer
    recognises with the numbers in it, as Skit 09's "homework 10/10 vs class test 2/20", which reached 4,527 at a 73% hold). The skit replaces the old
    lesson file in that slot; update the title and files in `out/upload_queue.json` and `out/UPLOAD_ORDER.md`. A topic
    whose skit needs something the syllabus has not taught yet keeps the order rule in SYLLABUS.md.
@@ -607,3 +607,14 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     (a migrant); "చూడకూడనిది" is said of adult content; "చేశాం" alone was heard "చేశావ్" (say "మేం ...").
   - `musicGapGain` is in dB. The pack's "music-only" level counts the SFX hits when the reel has few gaps (EP44 EN:
     -12.5 dB was the opening boom and the slam, not the bed).
+  - Telugu AI word: "ఏ ఐ" came out "yeh yeh" (flagged as a stutter), "చాట్ బాట్" came out "chatbaad", and "యాప్" was
+    heard as the company's own app (IRCTC's): "రోబో" comes through clean (Creative 18, EP46).
+  - Parler drops the first half of a Telugu line built as "A... B" (EP45 line 1, 4 of 4): voice it as two takes.
+  - English numbers next to counts merge: "three thousand one hundred, five times" was heard "3,105 times"; put the
+    count first ("five times, three thousand one hundred").
+  - Fish says "Tatkal" as "toot-call" / "that call" with spelled forms; keep the one take the judge heard right and
+    put the word on a card.
+  - A demo that finds no failure ends the concept (Creative 18's rent clause: 10 of 10 summaries kept the condition):
+    record it, drop it, test the next idea; never bend a story onto a result that didn't happen.
+  - The judge's automatic scores over-count (a made-up table ending in "No refund" scored as right): every reel number
+    comes from the hand read, and a second reader (the script review) re-reads every reply.
