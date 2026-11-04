@@ -108,7 +108,7 @@ const tiles = (c: Ctx, W: number, y: number, marks: number[], f: number, t0: num
 // the odds wheel (line 4): segments sized by our test, the needle lands on a new mark each spin
 const wheel = (c: Ctx, W: number, f: number, t0: number, c1: number) => {
   dark(c, W, 1920, "HOW A CHAT AI ANSWERS", ["each next word has odds:", "it rolls for it"]);
-  const cx = W / 2, cy = 900, R = 300;
+  const cx = W / 2, cy = 820, R = 280;
   const segs: [number, number, string][] = [[7, 0.1, "#f87171"], [8, 0.7, "#fbbf24"], [9, 0.2, "#4ade80"]];
   let a0 = -Math.PI / 2;
   segs.forEach(([m, p, col]) => {
@@ -125,16 +125,16 @@ const wheel = (c: Ctx, W: number, f: number, t0: number, c1: number) => {
   c.save(); c.translate(cx, cy); c.rotate(ang);
   c.fillStyle = "#f8fafc"; c.beginPath(); c.moveTo(0, -14); c.lineTo(R - 30, 0); c.lineTo(0, 14); c.closePath(); c.fill();
   c.restore(); c.beginPath(); c.arc(cx, cy, 26, 0, 7); c.fillStyle = "#f8fafc"; c.fill();
-  c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the odds our test showed for one answer: 7 · 8 · 9", W / 2, 1270);
-  tag(c, "ask again → a new roll → a new mark", W / 2, 1350, 48, "#fde68a", INK, -0.02, seg(f, c1, c1 + 8));
+  c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("the odds our test showed for one answer: 7 · 8 · 9", W / 2, 1160);
+  tag(c, "ask again → a new roll → a new mark", W / 2, 1236, 46, "#fde68a", INK, -0.02, seg(f, c1, c1 + 8));
 };
 // a face in a corner of the cards (Creative 16's render review: the people stay on screen through the cards)
-const inset = (c: Ctx, who: BillWho, m: [BillMood, BillArms], talk: boolean, r: () => number) => {
-  c.save(); c.beginPath(); rrect(c, 820, 1240, 220, 210, 28); c.clip();
-  c.fillStyle = "#334155"; c.fillRect(820, 1240, 220, 210);
-  person(c, who, [930, 1390], 0.4, m[0], m[1], talk, r);
+const inset = (c: Ctx, who: BillWho, m: [BillMood, BillArms], talk: boolean, r: () => number, y = 1240) => {
+  c.save(); c.beginPath(); rrect(c, 820, y, 220, 210, 28); c.clip();
+  c.fillStyle = "#334155"; c.fillRect(820, y, 220, 210);
+  person(c, who, [930, y + 150], 0.4, m[0], m[1], talk, r);
   c.restore();
-  c.strokeStyle = "#fde68a"; c.lineWidth = 6; rrect(c, 820, 1240, 220, 210, 28); c.stroke();
+  c.strokeStyle = "#fde68a"; c.lineWidth = 6; rrect(c, 820, y, 220, 210, 28); c.stroke();
 };
 
 // ---------- the scene ----------
@@ -185,10 +185,10 @@ const StCase: React.FC<SP> = ({ s }) => {
         const talking = (ln.words ?? []).some((w) => f >= w.from && f <= w.to) && Math.floor(f / 3) % 2 === 0;
         const endL = ln.from + ln.frames;
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
-        const faceOf = (who: BillWho, md: [BillMood, BillArms]) => inset(c, who, md, b.who === who && talking, r);
+        const faceOf = (who: BillWho, md: [BillMood, BillArms], y = 1240) => inset(c, who, md, b.who === who && talking, r, y);
         if (b.shot === "wheel") {
           wheel(c, W, f, ln.from - 4, cu(1, 0.55));
-          faceOf("akhil", ["shock", "rest"]);
+          faceOf("akhil", ["shock", "rest"], 1286);
         } else if (b.shot === "test") {
           dark(c, W, H, "OUR TEST", ["a small free AI on a laptop, offline (Qwen2.5 7B)", "ONE answer, marked 10 times · try it on yours"]);
           const scheme = b.prop === "scheme" || b.prop === "lottery";

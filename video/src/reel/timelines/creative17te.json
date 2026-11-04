@@ -1,0 +1,954 @@
+{
+ "id": "creative17te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Same answer, two marks",
+ "musicVol": [
+  0.66,
+  0.9
+ ],
+ "title": "Same answer, two marks (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   932,
+   953
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   583,
+   0.9
+  ],
+  [
+   583,
+   1169,
+   1.25
+  ],
+  [
+   1168,
+   1465,
+   1.5
+  ],
+  [
+   1168,
+   1465,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1465,
+ "music": "reel/creative17te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_case",
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "machine",
+      "n": 2
+     },
+     {
+      "who": "srinivas",
+      "shot": "wide",
+      "prop": "impossible",
+      "n": 3
+     },
+     {
+      "who": "varsha",
+      "shot": "wheel",
+      "prop": "wheel",
+      "n": 4
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "prove",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Same answer: 9 vs 7",
+     "title": "Same answer: 9 vs 7",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 0,
+   "frames": 583,
+   "lines": [
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17te/line_01.wav",
+     "from": 15,
+     "frames": 144,
+     "words": [
+      {
+       "w": "He",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "copied",
+       "from": 21,
+       "to": 32
+      },
+      {
+       "w": "my",
+       "from": 32,
+       "to": 37
+      },
+      {
+       "w": "answer",
+       "from": 37,
+       "to": 59
+      },
+      {
+       "w": "letter",
+       "from": 59,
+       "to": 70
+      },
+      {
+       "w": "for",
+       "from": 70,
+       "to": 76
+      },
+      {
+       "w": "letter...",
+       "from": 76,
+       "to": 102
+      },
+      {
+       "w": "he",
+       "from": 102,
+       "to": 107
+      },
+      {
+       "w": "gets",
+       "from": 107,
+       "to": 115
+      },
+      {
+       "w": "9,",
+       "from": 115,
+       "to": 120
+      },
+      {
+       "w": "and",
+       "from": 120,
+       "to": 127
+      },
+      {
+       "w": "I",
+       "from": 127,
+       "to": 134
+      },
+      {
+       "w": "get",
+       "from": 134,
+       "to": 140
+      },
+      {
+       "w": "only",
+       "from": 140,
+       "to": 148
+      },
+      {
+       "w": "7?!",
+       "from": 148,
+       "to": 154
+      }
+     ],
+     "cues": {
+      "1": 102
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17te/line_02.wav",
+     "from": 166,
+     "frames": 113,
+     "words": [
+      {
+       "w": "The",
+       "from": 169,
+       "to": 174
+      },
+      {
+       "w": "chatbot",
+       "from": 174,
+       "to": 189
+      },
+      {
+       "w": "on",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "sir's",
+       "from": 193,
+       "to": 201
+      },
+      {
+       "w": "phone",
+       "from": 201,
+       "to": 209
+      },
+      {
+       "w": "marked",
+       "from": 209,
+       "to": 218
+      },
+      {
+       "w": "it.",
+       "from": 218,
+       "to": 241
+      },
+      {
+       "w": "A",
+       "from": 241,
+       "to": 243
+      },
+      {
+       "w": "machine",
+       "from": 243,
+       "to": 254
+      },
+      {
+       "w": "favours",
+       "from": 254,
+       "to": 264
+      },
+      {
+       "w": "nobody!",
+       "from": 264,
+       "to": 275
+      }
+     ],
+     "cues": {
+      "1": 237
+     }
+    },
+    {
+     "who": "srinivas",
+     "name": "Srinivas sir",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative17te/line_03.wav",
+     "from": 285,
+     "frames": 82,
+     "words": [
+      {
+       "w": "Two",
+       "from": 286,
+       "to": 292
+      },
+      {
+       "w": "marks",
+       "from": 292,
+       "to": 301
+      },
+      {
+       "w": "for",
+       "from": 301,
+       "to": 307
+      },
+      {
+       "w": "the",
+       "from": 307,
+       "to": 312
+      },
+      {
+       "w": "same",
+       "from": 312,
+       "to": 320
+      },
+      {
+       "w": "answer?",
+       "from": 320,
+       "to": 331
+      },
+      {
+       "w": "Not",
+       "from": 331,
+       "to": 337
+      },
+      {
+       "w": "possible.",
+       "from": 337,
+       "to": 362
+      }
+     ],
+     "cues": {
+      "1": 338
+     }
+    },
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17te/line_04.wav",
+     "from": 376,
+     "frames": 167,
+     "words": [
+      {
+       "w": "It",
+       "from": 377,
+       "to": 381
+      },
+      {
+       "w": "can",
+       "from": 381,
+       "to": 387
+      },
+      {
+       "w": "happen,",
+       "from": 387,
+       "to": 409
+      },
+      {
+       "w": "sir.",
+       "from": 409,
+       "to": 416
+      },
+      {
+       "w": "It",
+       "from": 416,
+       "to": 420
+      },
+      {
+       "w": "rolls",
+       "from": 420,
+       "to": 429
+      },
+      {
+       "w": "a",
+       "from": 429,
+       "to": 432
+      },
+      {
+       "w": "dice",
+       "from": 432,
+       "to": 449
+      },
+      {
+       "w": "for",
+       "from": 449,
+       "to": 455
+      },
+      {
+       "w": "every",
+       "from": 455,
+       "to": 468
+      },
+      {
+       "w": "word.",
+       "from": 468,
+       "to": 487
+      },
+      {
+       "w": "Ask",
+       "from": 487,
+       "to": 493
+      },
+      {
+       "w": "once",
+       "from": 493,
+       "to": 500
+      },
+      {
+       "w": "more,",
+       "from": 500,
+       "to": 509
+      },
+      {
+       "w": "another",
+       "from": 509,
+       "to": 525
+      },
+      {
+       "w": "mark.",
+       "from": 525,
+       "to": 539
+      }
+     ],
+     "cues": {
+      "1": 482
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17te/line_05.wav",
+     "from": 551,
+     "frames": 24,
+     "words": [
+      {
+       "w": "Prove",
+       "from": 552,
+       "to": 559
+      },
+      {
+       "w": "it!",
+       "from": 559,
+       "to": 564
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_case",
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "srinivas",
+      "shot": "test",
+      "prop": "scheme0",
+      "n": 7
+     },
+     {
+      "who": "varsha",
+      "shot": "test",
+      "prop": "scheme",
+      "n": 8
+     },
+     {
+      "who": "akhil",
+      "shot": "test",
+      "prop": "lottery",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 583,
+   "frames": 586,
+   "lines": [
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17te/line_06.wav",
+     "from": 0,
+     "frames": 259,
+     "words": [
+      {
+       "w": "We",
+       "from": 2,
+       "to": 8
+      },
+      {
+       "w": "had",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "a",
+       "from": 16,
+       "to": 24
+      },
+      {
+       "w": "small",
+       "from": 24,
+       "to": 36
+      },
+      {
+       "w": "free",
+       "from": 36,
+       "to": 60
+      },
+      {
+       "w": "chatbot",
+       "from": 60,
+       "to": 77
+      },
+      {
+       "w": "mark",
+       "from": 77,
+       "to": 87
+      },
+      {
+       "w": "one",
+       "from": 87,
+       "to": 96
+      },
+      {
+       "w": "answer",
+       "from": 96,
+       "to": 110
+      },
+      {
+       "w": "10",
+       "from": 110,
+       "to": 117
+      },
+      {
+       "w": "times.",
+       "from": 117,
+       "to": 145
+      },
+      {
+       "w": "Mostly",
+       "from": 145,
+       "to": 160
+      },
+      {
+       "w": "8.",
+       "from": 160,
+       "to": 166
+      },
+      {
+       "w": "But",
+       "from": 166,
+       "to": 184
+      },
+      {
+       "w": "7",
+       "from": 184,
+       "to": 194
+      },
+      {
+       "w": "came,",
+       "from": 194,
+       "to": 206
+      },
+      {
+       "w": "and",
+       "from": 206,
+       "to": 223
+      },
+      {
+       "w": "9",
+       "from": 223,
+       "to": 228
+      },
+      {
+       "w": "came",
+       "from": 228,
+       "to": 238
+      },
+      {
+       "w": "too!",
+       "from": 238,
+       "to": 248
+      }
+     ],
+     "cues": {
+      "1": 118
+     }
+    },
+    {
+     "who": "srinivas",
+     "name": "Srinivas sir",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative17te/line_07.wav",
+     "from": 274,
+     "frames": 89,
+     "words": [
+      {
+       "w": "Then",
+       "from": 275,
+       "to": 282
+      },
+      {
+       "w": "I'll",
+       "from": 282,
+       "to": 294
+      },
+      {
+       "w": "tell",
+       "from": 294,
+       "to": 302
+      },
+      {
+       "w": "it",
+       "from": 302,
+       "to": 306
+      },
+      {
+       "w": "how",
+       "from": 306,
+       "to": 312
+      },
+      {
+       "w": "many",
+       "from": 312,
+       "to": 320
+      },
+      {
+       "w": "marks",
+       "from": 320,
+       "to": 329
+      },
+      {
+       "w": "for",
+       "from": 329,
+       "to": 335
+      },
+      {
+       "w": "each",
+       "from": 335,
+       "to": 343
+      },
+      {
+       "w": "point!",
+       "from": 343,
+       "to": 359
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17te/line_08.wav",
+     "from": 370,
+     "frames": 157,
+     "words": [
+      {
+       "w": "We",
+       "from": 371,
+       "to": 377
+      },
+      {
+       "w": "did:",
+       "from": 377,
+       "to": 386
+      },
+      {
+       "w": "even",
+       "from": 386,
+       "to": 403
+      },
+      {
+       "w": "more",
+       "from": 403,
+       "to": 416
+      },
+      {
+       "w": "difference!",
+       "from": 416,
+       "to": 448
+      },
+      {
+       "w": "3",
+       "from": 448,
+       "to": 451
+      },
+      {
+       "w": "times,",
+       "from": 451,
+       "to": 473
+      },
+      {
+       "w": "it",
+       "from": 473,
+       "to": 478
+      },
+      {
+       "w": "gave",
+       "from": 478,
+       "to": 487
+      },
+      {
+       "w": "my",
+       "from": 487,
+       "to": 493
+      },
+      {
+       "w": "first",
+       "from": 493,
+       "to": 504
+      },
+      {
+       "w": "line",
+       "from": 504,
+       "to": 513
+      },
+      {
+       "w": "a",
+       "from": 513,
+       "to": 516
+      },
+      {
+       "w": "zero!",
+       "from": 516,
+       "to": 527
+      }
+     ],
+     "cues": {
+      "1": 441
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17te/line_09.wav",
+     "from": 542,
+     "frames": 35,
+     "words": [
+      {
+       "w": "So",
+       "from": 544,
+       "to": 548
+      },
+      {
+       "w": "this",
+       "from": 548,
+       "to": 554
+      },
+      {
+       "w": "is",
+       "from": 554,
+       "to": 558
+      },
+      {
+       "w": "a",
+       "from": 558,
+       "to": 560
+      },
+      {
+       "w": "lottery?!",
+       "from": 560,
+       "to": 573
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_case",
+   "data": {
+    "beats": [
+     {
+      "who": "varsha",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "akhil",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "A person gives the marks",
+     "title": "A person gives the marks",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase"
+   },
+   "from": 1168,
+   "frames": 297,
+   "lines": [
+    {
+     "who": "varsha",
+     "name": "Varsha",
+     "color": "#7DD3FC",
+     "sub": null,
+     "audio": "reel/creative17te/line_10.wav",
+     "from": 9,
+     "frames": 139,
+     "words": [
+      {
+       "w": "That's",
+       "from": 10,
+       "to": 19
+      },
+      {
+       "w": "why",
+       "from": 19,
+       "to": 34
+      },
+      {
+       "w": "the",
+       "from": 34,
+       "to": 40
+      },
+      {
+       "w": "chatbot",
+       "from": 40,
+       "to": 51
+      },
+      {
+       "w": "shows",
+       "from": 51,
+       "to": 59
+      },
+      {
+       "w": "the",
+       "from": 59,
+       "to": 64
+      },
+      {
+       "w": "lines.",
+       "from": 64,
+       "to": 74
+      },
+      {
+       "w": "A",
+       "from": 74,
+       "to": 85
+      },
+      {
+       "w": "person",
+       "from": 85,
+       "to": 95
+      },
+      {
+       "w": "must",
+       "from": 95,
+       "to": 102
+      },
+      {
+       "w": "look,",
+       "from": 102,
+       "to": 117
+      },
+      {
+       "w": "and",
+       "from": 117,
+       "to": 122
+      },
+      {
+       "w": "give",
+       "from": 122,
+       "to": 129
+      },
+      {
+       "w": "the",
+       "from": 129,
+       "to": 134
+      },
+      {
+       "w": "marks.",
+       "from": 134,
+       "to": 144
+      }
+     ],
+     "cues": {
+      "1": 89
+     }
+    },
+    {
+     "who": "akhil",
+     "name": "Akhil",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative17te/line_11.wav",
+     "from": 184,
+     "frames": 98,
+     "words": [
+      {
+       "w": "Sir,",
+       "from": 185,
+       "to": 192
+      },
+      {
+       "w": "mark",
+       "from": 192,
+       "to": 207
+      },
+      {
+       "w": "mine",
+       "from": 207,
+       "to": 214
+      },
+      {
+       "w": "once",
+       "from": 214,
+       "to": 221
+      },
+      {
+       "w": "more,",
+       "from": 221,
+       "to": 229
+      },
+      {
+       "w": "I'll",
+       "from": 229,
+       "to": 244
+      },
+      {
+       "w": "get",
+       "from": 244,
+       "to": 250
+      },
+      {
+       "w": "10!",
+       "from": 250,
+       "to": 256
+      },
+      {
+       "w": "...only",
+       "from": 256,
+       "to": 276
+      },
+      {
+       "w": "7?!",
+       "from": 276,
+       "to": 282
+      }
+     ],
+     "cues": {
+      "1": 268
+     }
+    }
+   ]
+  }
+ ]
+}

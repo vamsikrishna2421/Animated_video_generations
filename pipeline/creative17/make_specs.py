@@ -17,11 +17,11 @@ LINES = {
     2: ("akhil", "wide", "machine", "Sir's AI marked it. [1] Machines don't play favourites!", "సార్ ఫోన్ లో చాట్ బాట్ దిద్దింది. [1] మెషీన్ ఎవరికీ ఫేవర్ చేయదు!"),   # "పక్షపాతం" is one sound from "పక్షవాతం" (paralysis)
     3: ("srinivas", "wide", "impossible", "Same answer, two marks? [1] Impossible.", "ఒకే ఆన్సర్ కి రెండు మార్కులా? [1] కుదరదు."),
     4: ("varsha", "wheel", "wheel", "Possible, sir. It rolls a dice for every word. [1] Ask again, get a new mark.",   # script review: "a little chance" read as "an opportunity"
-        "కుదురుతుంది సార్. ప్రతి మాటకీ అది డైస్ వేసి ఎంచుకుంటుంది. [1] ఇంకోసారి అడిగితే, ఇంకో మార్కు."),
+        "అవుతుంది సార్. అది ప్రతి మాటకీ డైస్ వేస్తుంది. [1] ఇంకోసారి అడిగితే, ఇంకో మార్కు."),   # the longer line came out garbled 4 of 4
     5: ("akhil", "wide", "prove", "Prove it!", "ప్రూవ్ చెయ్!"),
     6: ("varsha", "test", "test", "We had a small free AI mark one answer, ten times. [1] Mostly eight. But seven and nine both came up!",   # script review: the bars say mostly 8
         "ఒక చిన్న ఫ్రీ చాట్ బాట్ తో, ఒకే ఆన్సర్ ని పది సార్లు దిద్దించాం. [1] ఎక్కువ సార్లు ఎనిమిది. కానీ ఏడూ వచ్చింది, తొమ్మిదీ వచ్చింది!"),
-    7: ("srinivas", "test", "scheme0", "Then I'll give it my marking scheme!", "అయితే నా మార్కింగ్ స్కీమ్ ఇస్తా!"),
+    7: ("srinivas", "test", "scheme0", "Then I'll give it my marking scheme!", "అయితే, ఏ పాయింట్ కి ఎన్ని మార్కులో దానికి చెప్తా!"),   # "మార్కింగ్ స్కీమ్" came out "markent scheme" 4 of 4
     8: ("varsha", "test", "scheme", "We did. The marks jumped even more! [1] And three times, it gave my first line a zero!",   # with the scheme: 7 twice, 9 four times
         "అదీ చేశాం: ఇంకా ఎక్కువ తేడా! [1] మూడు సార్లు, నా మొదటి లైన్ కి సున్నా వేసింది!"),
     9: ("akhil", "test", "lottery", "So it's a lottery?!", "అంటే ఇది లాటరీనా?!"),
@@ -34,8 +34,8 @@ SHOW = {1: "He copied my answer word for word... he gets 9, I get 7?!", 6: "We h
         8: "We did. The marks jumped even more! And 3 times, it gave my first line a zero!", 11: "Sir, mark mine again, I'll get 10! ...7?!"}
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     1: "He copied my answer letter for letter... he gets 9, and I get only 7?!", 2: "The chatbot on sir's phone marked it. A machine favours nobody!",
-    3: "Two marks for the same answer? Not possible.", 4: "It is possible, sir. It rolls a dice for every word. Ask once more, another mark.",
-    5: "Prove it!", 6: "We had a small free chatbot mark one answer 10 times. Mostly 8. But 7 came, and 9 came too!", 7: "Then I'll give it my marking scheme!",
+    3: "Two marks for the same answer? Not possible.", 4: "It can happen, sir. It rolls a dice for every word. Ask once more, another mark.",
+    5: "Prove it!", 6: "We had a small free chatbot mark one answer 10 times. Mostly 8. But 7 came, and 9 came too!", 7: "Then I'll tell it how many marks for each point!",
     8: "We did: even more difference! 3 times, it gave my first line a zero!", 9: "So this is a lottery?!",
     10: "That's why the chatbot shows the lines. A person must look, and give the marks.", 11: "Sir, mark mine once more, I'll get 10! ...only 7?!",
 }

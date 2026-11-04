@@ -1,0 +1,272 @@
+{
+ "id": "ep45v1",
+ "title": "₹22,000 for ₹5.5 lakh a week (EP45: Deepfakes)",
+ "label": "EP45",
+ "banner": "Deepfakes: how to spot them",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.5,
+  0.6
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_deepfake",
+   "tail": 0.0,
+   "boost": 0.9,
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "video",
+      "n": 2
+     },
+     {
+      "who": "amma",
+      "shot": "amma",
+      "prop": "deepfake",
+      "n": 3
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "lips",
+      "n": 4
+     },
+     {
+      "who": "amma",
+      "shot": "how",
+      "prop": "how",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "₹22,000 for ₹5.5 lakh a week?",
+     "title": "₹22,000 for ₹5.5 lakh a week?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "amma",
+     "file": "01_amma.wav",
+     "text": "Your phone money, twenty-two thousand... [1] for five and a half lakh in a WEEK?!",
+     "show": "Your phone money, ₹22,000... for ₹5.5 lakh in a WEEK?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "02_chinnu.wav",
+     "text": "The Finance Minister said it! [1] It's on video!",
+     "show": "The Finance Minister said it! It's on video!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "03_amma.wav",
+     "text": "Nobody gives lakhs in a week, kanna. [1] That's a deepfake.",
+     "show": "Nobody gives lakhs in a week, kanna. That's a deepfake.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "04_chinnu.wav",
+     "text": "But look, her lips match! [1] It's really her!",
+     "show": "But look, her lips match! It's really her!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "05_amma.wav",
+     "text": "New fakes get the lips right too. <pause 0.25> [1] An A.I. copied her face and voice from her real speeches, and made her say this.",
+     "show": "New fakes get the lips right too. An AI copied her face and voice from her real speeches, and made her say this.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.1,
+     "tts": "New fakes get the lips right too.",
+     "file2": "05b_amma.wav",
+     "tts2": "An A.I. copied her face and voice from her real speeches, and made her say this.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_deepfake",
+   "tail": 0.0,
+   "boost": 1.25,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     0.7
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "shot": "chinnu",
+      "prop": "spot",
+      "n": 6
+     },
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "tests",
+      "n": 7
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "pib",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Two tests",
+     "title": "Two tests",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "06_chinnu.wav",
+     "text": "Then how do I ever spot one?",
+     "show": "Then how do I ever spot one?",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "amma",
+     "file": "07_amma.wav",
+     "text": "First, the money: quick, sure, huge returns? A scam, whatever the face. <pause 0.25> [1] Then the source: her verified page, or PIB Fact Check.",
+     "show": "First, the money: quick, sure, huge returns? A scam, whatever the face. Then the source: her verified page, or PIB Fact Check.",
+     "maxgap": 0.28,
+     "gap": 1.4,
+     "tempo": 1.1,
+     "tts": "First, the money: quick, sure, huge returns? A scam, whatever the face.",
+     "file2": "07b_amma.wav",
+     "tts2": "Then the source: her verified page, or PIB Fact Check.",
+     "pause": 0.25,
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "08_chinnu.wav",
+     "text": "PIB Fact Check says fake! [1] So my twenty-two thousand?!",
+     "show": "PIB Fact Check says fake! So my ₹22,000?!",
+     "maxgap": 0.28,
+     "gap": 0.35,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_deepfake",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.75,
+   "rise": 1.45,
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "shot": "wide",
+      "prop": "call",
+      "n": 9
+     },
+     {
+      "who": "chinnu",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Call 1930",
+     "title": "Call 1930",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "amma",
+     "file": "09_amma.wav",
+     "text": "Call one nine three zero. [1] Right now.",
+     "show": "Call 1930. Right now.",
+     "maxgap": 0.28,
+     "gap": 0.9,
+     "tempo": 1.1,
+     "tts": "Call one nine three zero. Right now.",
+     "gain_db": 0.5
+    },
+    {
+     "who": "chinnu",
+     "file": "10_chinnu.wav",
+     "text": "Amma, now the RBI Governor says double your money! [1] ...Money test: fake!",
+     "show": "Amma, now the RBI Governor says double your money! ...Money test: fake!",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
