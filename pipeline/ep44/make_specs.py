@@ -21,7 +21,7 @@ LINES = {
         "కొన్ని చాట్లని కంపెనీ మనుషులు చదువుతారు, చాట్ బాట్ ని బెటర్ చేయడానికి. [1] నువ్వు డిలీట్ చేసినా, ఆ కాపీ పోదు."),
     4: ("amma", "amma", "salary", "I only asked where my salary goes!", "నా జీతం ఎక్కడికి పోతుందో అడిగానంతే!"),
     5: ("chinnu", "wide", "quote", "Gemini's own privacy page says: [1] don't type what you wouldn't want a reviewer to see.",   # script review: "which app?"
-        "జెమినీ సొంత పేజీలోనే ఉంది: [1] ఎవరైనా చదివితే నీకు ఇబ్బంది అనిపించేది టైప్ చేయొద్దు."),   # render review: "ప్రైవసీ" was heard "ప్రవాసి" (a migrant)   # "చూడకూడనిది" is said of adult content
+        "జెమినీ సొంత పేజీలోనే ఉంది: [1] ఎవరైనా చదివితే నీకు ఇబ్బంది అనిపించేది ఏదీ టైప్ చేయకు."),   # round 2: "చేయొద్దు" was swallowed ("చేద్దు")   # render review: "ప్రైవసీ" was heard "ప్రవాసి" (a migrant)   # "చూడకూడనిది" is said of adult content
     6: ("amma", "amma", "needs", "But it needs my details to help me!", "కానీ నా వివరాలు లేకపోతే, అది ఎలా సాయం చేస్తుంది?"),
     7: ("chinnu", "test", "test", "We tested it. Your statement, ten times with your numbers, | [1] ten times with them blanked out.",
         "మేం టెస్ట్ చేశాం. నీ స్టేట్మెంట్, పది సార్లు నీ నంబర్లతో, | [1] పది సార్లు అవి తీసేసి."),
@@ -71,10 +71,10 @@ def spec(lang="en"):
     sid = "ep44te" if te else "ep44v1"
     s = {"id": sid, "title": "Deleted in 1 tap, kept 3 years (EP44: Privacy)" + (" (Telugu audio)" if te else ""), "label": "EP44",
          "banner": "Privacy: where your data goes", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.5, 0.66],   # under speech / in gaps (EP39's levels)
+         "musicVol": [0.5, 0.6] if not te else [0.66, 0.9],   # under speech / in gaps; round 2: TE bed 11 dB under the voice, EN gaps over it
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 0.95 if not te else 4.0,   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.88, 5.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
+         "musicPad": True, "musicGapGain": 0.0 if not te else 4.0,   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.86, 7.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:

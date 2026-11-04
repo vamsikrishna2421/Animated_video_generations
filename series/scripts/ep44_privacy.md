@@ -90,7 +90,7 @@ shows the IDs aren't needed, not what Gemini does).
 | 8 | Amma | And? | the right answer: cut the 14 food orders (₹7,380 this month) |
 | 9 | Chinnu | With or without your numbers, it found the food orders. [1] It never needed your PAN. | said "cut the food orders": with her IDs 8 of 10 · blanked 10 of 10 (one colour) · "no worse without her IDs" · "its totals: wrong every time (0 of 20)" |
 | 10 | Amma | So I just blank them out? |  |
-| 11 | Chinnu | Your name, your account number, your PAN: [1] blank them out before you paste. / [2] And in Gemini, switch off Keep Activity. | BEFORE YOU PASTE, BLANK: your name → [NAME] · account number → [ACCOUNT] · PAN → [PAN] · Aadhaar → [AADHAAR] · AND SWITCH OFF: Gemini → Keep Activity (no human review of your next chats) · ChatGPT → "Improve the model for everyone" (stops training on your chats, not review) |
+| 11 | Chinnu | Your name, your account number, your PAN: [1] blank them out before you paste. / [2] And in Gemini, switch off Keep Activity. | BEFORE YOU PASTE, BLANK: your name → [NAME] · account number → [ACCOUNT] · PAN → [PAN] · Aadhaar → [AADHAAR] · AND SWITCH OFF: Gemini → Keep Activity (your next chats aren't reviewed to train it) · ChatGPT → "Improve the model for everyone" (stops training, not every review) |
 | 12 | Amma | Done! [1] And I'll send the passbook photo too! | her chat: the blanked statement "sent ✓", then "passbook.jpg" attached |
 | 13 | Chinnu | Amma, the photo has your account numb— | the passbook photo full-width, "A/C No: 0123 4567 8901" circled → frame 1 (loops) |
 
@@ -101,13 +101,13 @@ shows the IDs aren't needed, not what Gemini does).
 | 2 | Amma | నా అకౌంట్ నంబరూ? [1] పాన్ కార్డ్ నంబరూ?! |
 | 3 | Chinnu | కొన్ని చాట్లని కంపెనీ మనుషులు చదువుతారు, చాట్ బాట్ ని బెటర్ చేయడానికి. [1] నువ్వు డిలీట్ చేసినా, ఆ కాపీ పోదు. |
 | 4 | Amma | నా జీతం ఎక్కడికి పోతుందో అడిగానంతే! |
-| 5 | Chinnu | జెమినీ సొంత పేజీలోనే ఉంది: [1] ఎవరైనా చదివితే నీకు ఇబ్బంది అనిపించేది టైప్ చేయొద్దు. |
+| 5 | Chinnu | జెమినీ సొంత పేజీలోనే ఉంది: [1] ఎవరైనా చదివితే నీకు ఇబ్బంది అనిపించేది ఏదీ టైప్ చేయకు. |
 | 6 | Amma | కానీ నా వివరాలు లేకపోతే, అది ఎలా సాయం చేస్తుంది? |
 | 7 | Chinnu | మేం టెస్ట్ చేశాం. నీ స్టేట్మెంట్, పది సార్లు నీ నంబర్లతో, / [1] పది సార్లు అవి తీసేసి. |
 | 8 | Amma | ఏమైంది? |
 | 9 | Chinnu | నంబర్లు ఉన్నా, లేకపోయినా, ఫుడ్ డెలివరీ తగ్గించమంది! [1] దానికి నీ పాన్ కార్డ్ అక్కర్లేదు. |
 | 10 | Amma | అయితే తీసేస్తే సరిపోతుందా? |
-| 11 | Chinnu | పేరు, అకౌంట్, పాన్ కార్డ్: [1] ఇవి తీసేశాకే పేస్ట్ చెయ్. / [2] జెమినీ లో, కీప్ యాక్టివిటీ ఆఫ్ చెయ్. |
+| 11 | Chinnu | నీ పేరు, నంబర్లు: [1] అవి తీసేశాకే పేస్ట్ చెయ్. / [2] జెమినీ లో, కీప్ యాక్టివిటీ ఆఫ్ చెయ్. |
 | 12 | Amma | తీసేశా! [1] పాస్ బుక్ ఫోటో కూడా పంపిస్తా! |
 | 13 | Chinnu | అమ్మా, ఆ ఫోటోలో నీ అకౌంట్ నంబ— |
 
@@ -119,3 +119,16 @@ Have you ever pasted your bank statement, Aadhaar or salary slip into an AI chat
 
 ## Next episode
 EP45: Deepfakes and how to spot them.
+
+## Render review, round 2 (EN + TE) and what changed
+Both: the hook (7 and 7), "Gemini's reviewers", one bar colour and the passbook zoom fixed; the switch-off card is the
+one thing they'd screenshot. Still wrong: the Gemini row claimed more than the page ("no human review": the page says
+review "to improve Google services" stops, feedback is still reviewed), the rows were half-size; "0 of 20" too small;
+the ChatGPT line on the insert came in too late to read; the quote header said "the app's"; Telugu line 5 "చేయొద్దు"
+was swallowed (can sound like "type it"); the Telugu bed 11 dB under the voice in the gaps; the English gaps above it.
+Changed: the switch-off rows as big as the blank rows, "your next chats aren't reviewed to train it" and "stops
+training (not every review)"; "its totals: wrong 0 of 20" at the bars' size; the ChatGPT line with the 3-year row;
+"GEMINI'S OWN PRIVACY PAGE"; Telugu line 5 "...ఏదీ టైప్ చేయకు"; the Telugu bed up (musicVol 0.66 / 0.9) and the English
+gap lift off; a longer end swell. Line 7 (Telugu) checked on its own take: "మేం టెస్ట్ చేశాం" is there (the pack's
+transcript skipped it). Not changed: "చదువుతారు" heard "chavutaru" and "ఫుడ్" heard "foot" (not rude; the takes are the
+only clean ones of 8).

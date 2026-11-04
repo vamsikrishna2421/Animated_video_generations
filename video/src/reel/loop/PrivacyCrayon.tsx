@@ -155,8 +155,9 @@ const where = (c: Ctx, W: number, H: number, f: number, t0: number, c1: number) 
   arrow(c, 800, 885, 800, 1010, "#f87171", seg(f, c1 - 10, c1));
   card(c, "THAT COPY: KEPT UP TO 3 YEARS", "even after you delete yours", W / 2, 1110, W - 120, 180, "#fee2e2", "#991b1b", seg(f, c1, c1 + 8));
   c.save(); c.globalAlpha = seg(f, c1 + 8, c1 + 16); c.font = SANS(28, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "left";
-  c.fillText("Google, Gemini Apps Privacy Hub, Oct 2026", 80, 1290);
-  c.fillText("(ChatGPT: deleted chats go within 30 days)", 80, 1332); c.restore();   // render review: "ChatGPT also 3 years?"
+  c.fillText("Google, Gemini Apps Privacy Hub, Oct 2026", 80, 1290); c.restore();
+  c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.font = SANS(38, 800); c.fillStyle = "#bfdbfe"; c.textAlign = "center";   // round 2: with the 3-year row, readable
+  c.fillText("ChatGPT: deleted chats go within 30 days", W / 2, 1240); c.restore();
 };
 const barRow = (c: Ctx, label: string, v: number, of: number, y: number, col: string, k: number) => {
   if (k <= 0) return;
@@ -233,8 +234,8 @@ const StPrivacy: React.FC<SP> = ({ s }) => {
             barRow(c, "with her IDs", res.full, 10, 980, "#93c5fd", seg(f, c0, c0 + 10));   // render review: one colour (8 vs 10 is a tie, not a win)
             barRow(c, "blanked", res.blank, 10, 1130, "#93c5fd", seg(f, c0 + 6, c0 + 16));
             tag(c, "no worse without her IDs", W / 2, 1290, 56, "#fde68a", INK, -0.02, seg(f, cu(1, 0.45), cu(1, 0.45) + 8));
-            c.save(); c.globalAlpha = seg(f, c0 + 20, c0 + 28); c.font = SANS(36, 800); c.fillStyle = "#fca5a5"; c.textAlign = "left";
-            c.fillText("its totals: wrong every time (0 of 20)", 70, 1385); c.fillStyle = "#cbd5e1"; c.font = SANS(32, 700); c.fillText("check an AI's maths yourself", 70, 1430); c.restore();   // render review: the footnote was unreadable
+            c.save(); c.globalAlpha = seg(f, c0 + 20, c0 + 28); c.font = SANS(46, 900); c.fillStyle = "#fca5a5"; c.textAlign = "left";
+            c.fillText("its totals: wrong 0 of 20", 70, 1395); c.fillStyle = "#e2e8f0"; c.font = SANS(34, 700); c.fillText("check an AI's maths yourself", 70, 1440); c.restore();   // round 2: as big as the bars   // render review: the footnote was unreadable
           }
           face(c, "amma", FACE[n] ?? "puzzled", 900, 1420, 110, b.who === "amma" && talking, f, r);
         } else {
@@ -262,7 +263,7 @@ const StPrivacy: React.FC<SP> = ({ s }) => {
             c.save(); c.globalAlpha = clamp(k0 * 3);
             c.fillStyle = "#fffdf5"; rrect(c, 70, 220, W - 140, 520, 28); c.fill();
             c.strokeStyle = "#1e3a8a"; c.lineWidth = 6; rrect(c, 86, 236, W - 172, 488, 20); c.stroke();
-            c.font = SANS(38, 900); c.fillStyle = "#1e3a8a"; c.textAlign = "center"; c.fillText("THE APP'S OWN PRIVACY PAGE:", W / 2, 312);
+            c.font = SANS(38, 900); c.fillStyle = "#1e3a8a"; c.textAlign = "center"; c.fillText("GEMINI'S OWN PRIVACY PAGE:", W / 2, 312);
             c.globalAlpha = clamp(k0 * 3) * clamp(k1 * 3);
             c.font = SANS(56, 900); c.fillStyle = INK;
             ["\"Please don't enter", "confidential information", "that you wouldn't want", "a reviewer to see.\""].forEach((t, q) => c.fillText(t, W / 2, 406 + q * 70));
@@ -273,7 +274,7 @@ const StPrivacy: React.FC<SP> = ({ s }) => {
           if (b.prop === "rule") {   // the rule card (sound-off viewers)
             const k0 = b.prop === "rule" ? seg(p, 0.0, 0.08) : 1;
             c.save(); c.globalAlpha = clamp(k0 * 3);
-            c.fillStyle = "rgba(15,23,42,0.94)"; rrect(c, 60, 200, W - 120, 1000, 30); c.fill();
+            c.fillStyle = "rgba(15,23,42,0.94)"; rrect(c, 50, 200, W - 100, 1000, 30); c.fill();
             c.font = SANS(52, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("BEFORE YOU PASTE, BLANK:", W / 2, 290);
             c.restore();
             const t1 = b.prop === "rule" ? cu(1, 0.4) : -1e9;
@@ -290,11 +291,11 @@ const StPrivacy: React.FC<SP> = ({ s }) => {
             const ks = seg(f, t2, t2 + 8);
             if (ks > 0) {
               c.save(); c.globalAlpha = clamp(ks * 3);
-              c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText("AND SWITCH OFF:", 110, 935);
-              c.font = SANS(42, 800); c.fillStyle = "#f8fafc"; c.fillText("Gemini → Keep Activity", 110, 995);
-              c.font = SANS(30, 700); c.fillStyle = "#cbd5e1"; c.fillText("(no human review of your next chats)", 110, 1035);
-              c.font = SANS(36, 800); c.fillStyle = "#f8fafc"; c.fillText("ChatGPT → \"Improve the model for everyone\"", 110, 1100);
-              c.font = SANS(30, 700); c.fillStyle = "#cbd5e1"; c.fillText("(stops training on your chats, not review)", 110, 1140);
+              c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText("AND SWITCH OFF:", 100, 940);   // round 2: as big as the blank rows, and only what the pages say
+              c.font = SANS(48, 900); c.fillStyle = "#f8fafc"; c.fillText("Gemini → Keep Activity", 100, 1002);
+              c.font = SANS(34, 700); c.fillStyle = "#e2e8f0"; c.fillText("your next chats aren't reviewed to train it", 100, 1046);
+              c.font = SANS(40, 900); c.fillStyle = "#f8fafc"; c.fillText("ChatGPT → \"Improve the model", 100, 1112); c.fillText("for everyone\"", 100, 1156);
+              c.font = SANS(34, 700); c.fillStyle = "#e2e8f0"; c.fillText("stops training (not every review)", 420, 1156);
               c.restore();
             }
           }
