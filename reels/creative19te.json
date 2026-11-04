@@ -9,17 +9,22 @@
  "lead": 0.5,
  "music": "lofi",
  "musicVol": [
-  0.66,
+  0.6,
   0.9
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 0.3,
  "captionMode": "phrase",
  "musicEQ": [
   [
+   180,
+   -4,
+   1.0
+  ],
+  [
    260,
-   -5,
+   -9,
    0.9
   ],
   [
@@ -122,7 +127,7 @@
      "text": "పెయింటింగ్ కి పద్దెనిమిది వేలు, నేను కట్ చేసింది పదిహేను వేలే! [1] చాట్ బాట్ కూడా న్యాయమే అంది!",
      "show": "Painting costs ₹18,000, I cut only ₹15,000! Even the chatbot said it's fair!",
      "maxgap": 0.28,
-     "gap": 0.15,
+     "gap": 0.12,
      "tempo": 1.0,
      "gain_db": 0.5
     },
@@ -130,7 +135,7 @@
      "who": "sai",
      "file": "03_sai.wav",
      "text": "నేనూ అదే చాట్ బాట్ ని అడిగా. [1] చాలా ఎక్కువ అంది!",
-     "show": "I asked the same chatbot. It said it's too much!",
+     "show": "I asked the same chatbot. It said: excessive!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.0,
@@ -142,7 +147,7 @@
      "text": "తాతా, చాట్ బాట్ మీ ఇద్దరూ కరెక్టే అంటోంది! [1] రిఫరీ?",
      "show": "Tatha, the chatbot says you're both right! Referee?",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.45,
      "tempo": 1.05,
      "gain_db": 0.5
     },
@@ -160,9 +165,9 @@
      "who": "sai",
      "file": "06_sai.wav",
      "text": "ఒక్క నిమిషం... పదిహేను వేలు ఎక్కువట, [1] ఎందుకంటే పెయింటింగ్ కి పద్దెనిమిది వేలు అవుతుందట?!",
-     "show": "One minute... ₹15,000 is too much, because painting costs ₹18,000?!",
+     "show": "One minute... ₹15,000 is excessive, because painting costs ₹18,000?!",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.0,
      "gain_db": 0.5
     }
@@ -172,7 +177,7 @@
    "id": "s_b",
    "type": "sk_sides",
    "tail": 0.0,
-   "boost": 1.3,
+   "boost": 0.85,
    "lift": 0.6,
    "drop_pre": [
     [
@@ -208,26 +213,26 @@
     {
      "who": "pinky",
      "file": "07_pinky.wav",
-     "text": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మొగ్గుతుంది. <pause 0.3> [1] స్టాన్ఫర్డ్ టెస్ట్: పదకొండు చాట్ బాట్లు, మనుషుల కంటే ఒకటిన్నర రెట్లు ఎక్కువగా, అడిగిన వాళ్ళ వైపే.",
-     "show": "When both sides have a point, it leans to whoever asks. Stanford's test: 11 chatbots, 1.5 times as often as people, on the asker's side.",
+     "text": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మాట్లాడుతుంది. <pause 0.3> [1] పెద్ద చాట్ బాట్లూ ఇంతే.",
+     "show": "When both sides have a point, it speaks for whoever asks. The big chatbots are the same.",
      "maxgap": 0.2,
-     "gap": 0.4,
-     "tempo": 1.05,
-     "tts": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మొగ్గుతుంది.",
+     "gap": 0.35,
+     "tempo": 1.12,
+     "tts": "రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మాట్లాడుతుంది.",
      "file2": "07b_pinky.wav",
-     "tts2": "స్టాన్ఫర్డ్ టెస్ట్: పదకొండు చాట్ బాట్లు, మనుషుల కంటే ఒకటిన్నర రెట్లు ఎక్కువగా, అడిగిన వాళ్ళ వైపే.",
+     "tts2": "పెద్ద చాట్ బాట్లూ ఇంతే.",
      "pause": 0.3,
      "gain_db": 0.5
     },
     {
      "who": "pinky",
      "file": "08_pinky.wav",
-     "text": "మా లాప్ టాప్ చాట్ బాట్ ని పది సార్లు అడిగాం. <pause 0.35> [1] ఓనర్ అడిగితే న్యాయం, పదికి పది. టెనెంట్ అడిగితే ఎక్కువ, పదికి తొమ్మిది.",
-     "show": "We asked our laptop chatbot 10 times. Asked by the owner: fair, 10 of 10. Asked by the tenant: too much, 9 of 10.",
+     "text": "మా లాప్ టాప్ చాట్ బాట్ ని చెరో పది సార్లు అడిగాం. <pause 0.35> [1] ఓనర్ అడిగితే న్యాయం, పదికి పది. టెనెంట్ అడిగితే ఎక్కువ, పదికి తొమ్మిది.",
+     "show": "We asked our laptop chatbot 10 times each. Asked by the owner: fair, 10 of 10. Asked by the tenant: excessive, 9 of 10.",
      "maxgap": 0.2,
      "gap": 0.9,
-     "tempo": 1.05,
-     "tts": "మా లాప్ టాప్ చాట్ బాట్ ని పది సార్లు అడిగాం.",
+     "tempo": 1.08,
+     "tts": "మా లాప్ టాప్ చాట్ బాట్ ని చెరో పది సార్లు అడిగాం.",
      "file2": "08b_pinky.wav",
      "tts2": "ఓనర్ అడిగితే న్యాయం, పదికి పది. టెనెంట్ అడిగితే ఎక్కువ, పదికి తొమ్మిది.",
      "pause": 0.35,
@@ -241,9 +246,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.5,
-   "lift": 0.7,
-   "rise": 1.3,
+   "boost": 2.0,
+   "lift": 0.8,
+   "rise": 1.6,
    "drop_at": [
     [
      1,
@@ -292,8 +297,8 @@
      "text": "నేను కరెక్టేనా అని అడక్కండి. <pause 0.4> [1] ఇద్దరూ మీ మీ వైపు ఒకే మెసేజ్ లో రాయండి. తర్వాత ఏది న్యాయం అని అడగండి.",
      "show": "Don't ask \"am I right?\". Each of you write your side in one message. Then ask what's fair.",
      "maxgap": 0.28,
-     "gap": 1.1,
-     "tempo": 1.05,
+     "gap": 1.35,
+     "tempo": 1.1,
      "tts": "నేను కరెక్టేనా అని అడక్కండి.",
      "file2": "10b_pinky.wav",
      "tts2": "ఇద్దరూ మీ మీ వైపు ఒకే మెసేజ్ లో రాయండి. తర్వాత ఏది న్యాయం అని అడగండి.",
@@ -303,14 +308,14 @@
     {
      "who": "pinky",
      "file": "11_pinky.wav",
-     "text": "రెండు వైపులూ చెప్తే, అది అంది: <pause 0.75> [1] మూడు నుంచి ఏడున్నర వేలు, పది సార్లూ. అది సలహా మాత్రమే, తీర్పు కాదు.",
-     "show": "Given both sides, it said: ₹3,000 to ₹7,500, all 10 times. It's only a suggestion, not a verdict.",
+     "text": "రెండు వైపులూ చెప్తే, <pause 0.75> [1] ప్రతిసారీ మూడు నుంచి ఏడున్నర వేలు అంది: చిన్న డ్యామేజీకే, మొత్తం పెయింటింగ్ కి కాదు. అది సలహా మాత్రమే, తీర్పు కాదు.",
+     "show": "Given both sides, every time it said ₹3,000 to ₹7,500: only for the small damage, not the whole painting. It's only a suggestion, not a verdict.",
      "maxgap": 0.2,
-     "gap": 0.8,
-     "tempo": 1.05,
-     "tts": "రెండు వైపులూ చెప్తే, అది అంది:",
+     "gap": 0.6,
+     "tempo": 1.1,
+     "tts": "రెండు వైపులూ చెప్తే,",
      "file2": "11b_pinky.wav",
-     "tts2": "మూడు నుంచి ఏడున్నర వేలు, పది సార్లూ. అది సలహా మాత్రమే, తీర్పు కాదు.",
+     "tts2": "ప్రతిసారీ మూడు నుంచి ఏడున్నర వేలు అంది: చిన్న డ్యామేజీకే, మొత్తం పెయింటింగ్ కి కాదు. అది సలహా మాత్రమే, తీర్పు కాదు.",
      "pause": 0.75,
      "gain_db": 0.5
     },

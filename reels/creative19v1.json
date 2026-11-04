@@ -9,17 +9,22 @@
  "lead": 0.35,
  "music": "lofi",
  "musicVol": [
-  0.5,
+  0.42,
   0.6
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 0.3,
  "captionMode": "phrase",
  "musicEQ": [
   [
+   180,
+   -4,
+   1.0
+  ],
+  [
    260,
-   -5,
+   -9,
    0.9
   ],
   [
@@ -119,7 +124,7 @@
      "text": "Repainting is eighteen thousand, I cut only fifteen! [1] Even the A.I. says it's fair!",
      "show": "Repainting is ₹18,000, I cut only ₹15,000! Even the AI says it's fair!",
      "maxgap": 0.28,
-     "gap": 0.15,
+     "gap": 0.12,
      "tempo": 1.12,
      "tts": "Repainting is eighteen thousand, I cut only fifteen! Even the A.I. says it's fair!",
      "gain_db": 0.5
@@ -127,12 +132,12 @@
     {
      "who": "sai",
      "file": "03_sai.wav",
-     "text": "I asked the same A.I. [1] It says it's too much!",
-     "show": "I asked the same AI. It says it's too much!",
+     "text": "I asked the same A.I. [1] It says it's excessive!",
+     "show": "I asked the same AI. It says it's excessive!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.15,
-     "tts": "I asked the same A.I. It says it's too much!",
+     "tts": "I asked the same A.I. It says it's excessive!",
      "gain_db": 0.5
     },
     {
@@ -141,7 +146,7 @@
      "text": "Tatha, the A.I. says you're BOTH right! [1] Referee?",
      "show": "Tatha, the AI says you're BOTH right! Referee?",
      "maxgap": 0.28,
-     "gap": 0.6,
+     "gap": 0.45,
      "tempo": 1.16,
      "tts": "Tatha, the A.I. says you're BOTH right! Referee?",
      "gain_db": 0.5
@@ -159,10 +164,10 @@
     {
      "who": "sai",
      "file": "06_sai.wav",
-     "text": "Wait... fifteen is too much, [1] because painting costs eighteen?!",
-     "show": "Wait... ₹15,000 is too much, because painting costs ₹18,000?!",
+     "text": "Wait... fifteen is excessive, [1] because painting costs eighteen?!",
+     "show": "Wait... ₹15,000 is excessive, because painting costs ₹18,000?!",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.15,
      "gain_db": 0.5
     }
@@ -172,7 +177,7 @@
    "id": "s_b",
    "type": "sk_sides",
    "tail": 0.0,
-   "boost": 1.3,
+   "boost": 1.0,
    "lift": 0.6,
    "drop_pre": [
     [
@@ -210,7 +215,7 @@
      "text": "On a close call, it leans to whoever asks. <pause 0.3> [1] Stanford tested eleven chatbots: they took the user's side one and a half times as often as people did.",
      "show": "On a close call, it leans to whoever asks. Stanford tested 11 chatbots: they took the user's side 1.5 times as often as people did.",
      "maxgap": 0.2,
-     "gap": 0.4,
+     "gap": 0.35,
      "tempo": 1.18,
      "tts": "On a close call, it leans to whoever asks.",
      "file2": "07b_pinky.wav",
@@ -221,14 +226,14 @@
     {
      "who": "pinky",
      "file": "08_pinky.wav",
-     "text": "We tested a small AI on our laptop, ten times each. <pause 0.35> [1] Landlord: \"fair\", ten of ten. Tenant: \"too much\", nine of ten.",
-     "show": "We tested a small AI on our laptop, 10 times each. Landlord: \"fair\", 10 of 10. Tenant: \"too much\", 9 of 10.",
+     "text": "We tested our laptop AI, ten tries each. <pause 0.35> [1] Landlord: \"fair\", ten of ten. Tenant: \"excessive\", nine of ten.",
+     "show": "We tested our laptop AI, 10 tries each. Landlord: \"fair\", 10 of 10. Tenant: \"excessive\", 9 of 10.",
      "maxgap": 0.2,
      "gap": 0.9,
      "tempo": 1.2,
-     "tts": "We tested a small AI on our laptop, ten times each.",
+     "tts": "We tested our laptop AI, ten tries each.",
      "file2": "08b_pinky.wav",
-     "tts2": "Landlord: \"fair\", ten of ten. Tenant: \"too much\", nine of ten.",
+     "tts2": "Landlord: \"fair\", ten of ten. Tenant: \"excessive\", nine of ten.",
      "pause": 0.35,
      "gain_db": 0.5
     }
@@ -240,9 +245,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 2.0,
-   "lift": 0.7,
-   "rise": 1.6,
+   "boost": 2.3,
+   "lift": 0.8,
+   "rise": 1.7,
    "drop_at": [
     [
      1,
@@ -290,7 +295,7 @@
      "text": "So don't ask \"Am I right?\" <pause 0.4> [1] Each of you writes your side in one message. Then ask what's fair.",
      "show": "So don't ask \"Am I right?\" Each of you writes your side in one message. Then ask what's fair.",
      "maxgap": 0.28,
-     "gap": 1.1,
+     "gap": 1.35,
      "tempo": 1.16,
      "tts": "So don't ask \"Am I right?\"",
      "file2": "10b_pinky.wav",
@@ -301,14 +306,14 @@
     {
      "who": "pinky",
      "file": "11_pinky.wav",
-     "text": "Given both sides, it said: <pause 0.75> [1] three thousand to seven and a half thousand, all ten times. A suggestion, not a verdict.",
-     "show": "Given both sides, it said: ₹3,000 to ₹7,500, all 10 times. A suggestion, not a verdict.",
+     "text": "Given both sides, <pause 0.75> [1] every try said three thousand to seven and a half thousand: for the small damage, not a full repaint. Still a suggestion, not a verdict.",
+     "show": "Given both sides, every try said ₹3,000 to ₹7,500: for the small damage, not a full repaint. Still a suggestion, not a verdict.",
      "maxgap": 0.2,
-     "gap": 0.8,
+     "gap": 0.6,
      "tempo": 1.22,
-     "tts": "Given both sides, it said:",
+     "tts": "Given both sides,",
      "file2": "11b_pinky.wav",
-     "tts2": "three thousand to seven and a half thousand, all ten times. A suggestion, not a verdict.",
+     "tts2": "every try said three thousand to seven and a half thousand: for the small damage, not a full repaint. Still a suggestion, not a verdict.",
      "pause": 0.75,
      "gain_db": 0.5
     },

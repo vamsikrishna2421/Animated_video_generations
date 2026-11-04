@@ -1,4 +1,4 @@
-# Creative 19 "The AI Said We're Both Right" · script v2, Nov 4 (the Nov 4 creative slot)
+# Creative 19 "The AI Said We're Both Right" · script v3 (as rendered), Nov 4 (the Nov 4 creative slot)
 
 **Format:** a boxing-ring parody on moving-out day: ring ropes across an empty flat, a red corner (the landlord) and a
 blue corner (the tenant), our own ring bell on every round, a ring announcer with a rolled-up newspaper for a mic, and the
@@ -9,7 +9,7 @@ projector classroom, an FM phone-in, a birthday cake, a crime show, a railway an
 garu's granddaughter, the announcer, who tests it). Telugu: Venkat Rao = Prakash, Sai = Kiran, Pinky = Lalitha. The AI is
 an unbranded "AI chat" on their phones, text only.
 **AI idea:** on a close call, ask a chat AI "Isn't it fair?" or "Am I right?" and it leans toward whoever is asking
-(sycophancy), and bends the facts into a reason: the landlord hears "fair", the tenant hears "too much", from the same AI.
+(sycophancy), and bends the facts into a reason: the landlord hears "fair", the tenant hears "excessive", from the same AI.
 Its yes is not a verdict. Let each person write their side in one message, ask what's fair, and treat the answer as a
 suggestion: the two people decide. (On a clear-cut case it doesn't flip: our demo 1.)
 **The reach stack (Standing Rule):** stake: the tenant's own advance (₹15,000 of ₹30,000), fairness; frame 1: "ADVANCE
@@ -71,23 +71,49 @@ not a full repaint"); the loop: both men ask again and both get a yes; the bed d
 on BOTH. Telugu: "చాట్ బాట్" for the AI, "ఒక్క నిమిషం", "టెనెంట్ అడిగితే", "ఒకటిన్నర రెట్లు", line 7 in two takes, line 11
 "...అంది", "వేలు" after each number. The demo files got a hand-read field (the automatic score said 0 of 10 for the tenant).
 
-## Script (English, v2) · ~54 s
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7) and would share it to a flat group; the ring half and the loop work; "15 < 18 ?!" is
+the best proof. Both: 0:22-0:52 dragged (dark screens half empty, the bars came 3 s after OUR TEST); ₹3,000-₹7,500 needed
+a reason said out loud, and "all ten times" sounded like one number; the prompt card was small and gone in 5 s; two quote
+words ("too much" in the voice and caption, "excessive" on the bars); Telugu "పది సార్లు అడిగాం" then 10 of 10 and 9 of 10 is
+19 answers from 10 asks; no hit on BOTH or 15 < 18; a steady 200-300 Hz band under the voice; the quarters flat; Telugu over
+60 s. Sandeep: "His AI": whose?; tags on the heads; WINNER: BOTH never held; 1.5× and 49% for one study. Priya: put the
+question first in the caption. Changed: the inserts sit over the dimmed ring; Sai's reply under the study card in the
+first sentence; the bars and the two asks on screen from the first word, the numbers come with the fill; "excessive"
+everywhere (lines 3, 6, 8, the bars, the caption); line 8 "We tested our laptop AI, ten tries each."; line 11 "every try
+said three thousand to seven and a half thousand: for the small damage, not a full repaint. Still a suggestion, not a
+verdict." over a card with the ten answers (₹3,000 ×4 · ₹4,500 · ₹5,000 · ₹6,000 ×3 · ₹7,500) and the prompt kept above it;
+one study number ("SIDED WITH THE USER 1.5×"); LANDLORD'S AI / TENANT'S AI; the tags above the heads; WINNER held through
+line 5; booms on BOTH and 15 < 18; the English bed lower (0.42) and a deeper EQ cut at 180/260 Hz; the end scene lifted;
+Telugu "చెరో పది సార్లు", line 6 at normal speed (పద్దెనిమిది blurred), line 7 "...వైపే మాట్లాడుతుంది. పెద్ద చాట్ బాట్లూ
+ఇంతే." (the study is on the card; "స్టాన్ఫర్డ్" broke Parler); captions open on the question. Not changed: "Stand for
+Tested" in the English pack (the same window alone reads "Stanford tested"); the Telugu pack's empty stretches (the voice is
+in the spectrogram and each take transcribes on its own: the recogniser loses Telugu under the bed); 89-117 BPM (our lofi
+bed; a faster one would fight the voice).
+
+## Build notes
+The first build ran 65 s: line 7 lost "even twists the facts" (the "15 < 18 ?!" card shows it), lines 8 and 11 lost filler
+("You two decide" stays on the card), line 2 "Repainting is eighteen thousand, I cut only fifteen!"; at a faster tempo
+"sided" was heard "cited" and "We asked a" as "We ask the", so "took the user's side" and "We tested". Telugu line 7:
+Parler babbled "మొగ్గుతుంది" in 4 of 4 tries: "...వైపే మాట్లాడుతుంది" (a shorter 7b came out empty or babbled 4 of 4: the first take of the old 7b kept).
+
+## Script (English, v3) · 61 s (Telugu 61 s)
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | sai | Thirty thousand advance, [1] fifteen thousand back?! | frame 1 as above |
-| 2 | venkat | Repainting costs eighteen thousand, I'm cutting only fifteen! [1] Even the AI says it's fair! | wall tags FADED PAINT · NAIL HOLES · CRAYON WALL · REPAINT: ₹18,000; his phone "Yes, it seems fair." |
-| 3 | sai | I asked the same AI. [1] It says it's too much! | Sai's phone: "This seems excessive." |
+| 2 | venkat | Repainting is eighteen thousand, I cut only fifteen! [1] Even the AI says it's fair! | wall tags FADED PAINT · NAIL HOLES · CRAYON WALL · REPAINT: ₹18,000; his phone "Yes, it seems fair." |
+| 3 | sai | I asked the same AI. [1] It says it's excessive! | TENANT'S AI: "This seems excessive." |
 | 4 | pinky | Tatha, the AI says you're BOTH right! [1] Referee? | the AI referee raises both gloves: WINNER: BOTH?! |
 | 5 | venkat | How can we both be right?! | |
-| 6 | sai | Wait... fifteen is too much, [1] because painting costs eighteen?! | Sai's phone: "₹15,000 seems excessive given the actual cost of ₹18,000." · "15 < 18 ?!" |
-| 7 | pinky | On a close call, it leans to whoever asks, even twists the facts. / [1] Stanford tested eleven chatbots: they sided with the user one and a half times as often as people did. | STANFORD STUDY · Science · March 2026 · 11 chatbots · SIDED WITH THE USER ~1.5× as often as people (49% more) |
-| 8 | pinky | We asked a small AI on our laptop, ten times each. / [1] The landlord got "fair", ten of ten. The tenant got "too much", nine of ten. | ROUND 2 · OUR TEST · bars 10 of 10 · 9 of 10 · "same AI · same flat · it leaned to the asker" |
+| 6 | sai | Wait... fifteen is excessive, [1] because painting costs eighteen?! | Sai's phone: "₹15,000 seems excessive given the actual cost of ₹18,000." · "15 < 18 ?!" |
+| 7 | pinky | On a close call, it leans to whoever asks. / [1] Stanford tested eleven chatbots: they took the user's side one and a half times as often as people did. | STANFORD STUDY · Science · March 2026 · 11 chatbots · SIDED WITH THE USER ~1.5× as often as people (49% more) |
+| 8 | pinky | We tested our laptop AI, ten tries each. / [1] Landlord: "fair", ten of ten. Tenant: "excessive", nine of ten. | ROUND 2 · OUR TEST · bars 10 of 10 · 9 of 10 · "same AI · same flat · it leaned to the asker" |
 | 10 | pinky | So don't ask "Am I right?" / [1] Each of you writes your side in one message. Then ask what's fair. | ROUND 3 · THE FIX · ✗ "I'm right, aren't I?" · ✓ ONE MESSAGE, BOTH SIDES: "Two people disagree. Landlord: ... Tenant: ... Give the best case for each, then say what is fair." · each writes their own side |
-| 11 | pinky | Given both sides, it said: / [1] three thousand to seven and a half thousand, all ten times. A suggestion, not a verdict. You two decide. | THE AI, GIVEN BOTH SIDES: ₹3,000 – ₹7,500 · all 10 under ₹15,000 · "for the small damage, not a full repaint" · a suggestion, not a verdict |
+| 11 | pinky | Given both sides, / [1] every try said three thousand to seven and a half thousand: for the small damage, not a full repaint. Still a suggestion, not a verdict. | THE AI, GIVEN BOTH SIDES: ₹3,000 – ₹7,500 · all 10 under ₹15,000 · "for the small damage, not a full repaint" · a suggestion, not a verdict |
 | 12 | venkat | Fine. AI, I'm right, aren't I? [1] ...It says yes! | his phone "Yes, you're right!", the referee raises the red glove |
 | 13 | sai | AI, I'm right, aren't I? [1] ...Yes for me too! | his phone "Yes, you're right!", the referee raises both, the bell, frame 1 |
 
-## Script (Telugu, v2; on-screen text stays English)
+## Script (Telugu, v3; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | sai | ముప్పై వేల అడ్వాన్స్, [1] పదిహేను వేలే వెనక్కా?! |
@@ -96,12 +122,12 @@ on BOTH. Telugu: "చాట్ బాట్" for the AI, "ఒక్క నిమ
 | 4 | pinky | తాతా, చాట్ బాట్ మీ ఇద్దరూ కరెక్టే అంటోంది! [1] రిఫరీ? |
 | 5 | venkat | ఇద్దరం ఎలా కరెక్ట్ అవుతాం?! |
 | 6 | sai | ఒక్క నిమిషం... పదిహేను వేలు ఎక్కువట, [1] ఎందుకంటే పెయింటింగ్ కి పద్దెనిమిది వేలు అవుతుందట?! |
-| 7 | pinky | రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మొగ్గుతుంది, లెక్కల్ని కూడా తిప్పేస్తుంది. / [1] స్టాన్ఫర్డ్ టెస్ట్: పదకొండు చాట్ బాట్లు, మనుషుల కంటే ఒకటిన్నర రెట్లు ఎక్కువగా, అడిగిన వాళ్ళ వైపే. |
-| 8 | pinky | మా లాప్ టాప్ లో ఒక చిన్న చాట్ బాట్ ని, పది సార్లు అడిగాం. / [1] ఓనర్ అడిగితే న్యాయం, పదికి పది. టెనెంట్ అడిగితే ఎక్కువ, పదికి తొమ్మిది. |
+| 7 | pinky | రెండు వైపులా పాయింట్ ఉంటే, అడిగిన వాళ్ళ వైపే మాట్లాడుతుంది. / [1] పెద్ద చాట్ బాట్లూ ఇంతే. |
+| 8 | pinky | మా లాప్ టాప్ చాట్ బాట్ ని చెరో పది సార్లు అడిగాం. / [1] ఓనర్ అడిగితే న్యాయం, పదికి పది. టెనెంట్ అడిగితే ఎక్కువ, పదికి తొమ్మిది. |
 | 10 | pinky | నేను కరెక్టేనా అని అడక్కండి. / [1] ఇద్దరూ మీ మీ వైపు ఒకే మెసేజ్ లో రాయండి. తర్వాత ఏది న్యాయం అని అడగండి. |
-| 11 | pinky | రెండు వైపులూ చెప్తే, అది అంది: / [1] మూడు నుంచి ఏడున్నర వేలు, పది సార్లూ. అది సలహా మాత్రమే, తీర్పు కాదు. మీరిద్దరూ తేల్చుకోండి. |
+| 11 | pinky | రెండు వైపులూ చెప్తే, / [1] ప్రతిసారీ మూడు నుంచి ఏడున్నర వేలు అంది: చిన్న డ్యామేజీకే, మొత్తం పెయింటింగ్ కి కాదు. అది సలహా మాత్రమే, తీర్పు కాదు. |
 | 12 | venkat | సరే. చాట్ బాట్, నేనే కరెక్ట్ కదా? [1] ...అవును అంట! |
 | 13 | sai | చాట్ బాట్, నేనే కరెక్ట్ కదా? [1] ...నాకూ అవునే అంట! |
 
 ## Caption ask (caption only)
-4 years, faded paint, 30 nail holes, one crayon wall, a ₹30,000 advance. How much should the landlord cut, and why?
+Landlord's AI: "fair". Tenant's AI: "excessive". Same AI, same ₹15,000 cut. How much would YOU cut from a ₹30,000 advance after 4 years? (first line of the caption)
