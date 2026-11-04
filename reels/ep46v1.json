@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 0.0,
+ "musicGapGain": 2.5,
  "hideTimerInHook": true,
  "hideTimer": true,
  "tempo": 1.0,
@@ -130,21 +130,21 @@
      "text": "Mine! I typed the prompt!",
      "show": "Mine! I typed the prompt!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.2,
      "tempo": 1.12,
      "gain_db": 0.5
     },
     {
      "who": "meena",
      "file": "05_meena.wav",
-     "text": "An American's A.I. picture won an art contest, with six hundred and twenty-four prompts. <pause 0.6> [1] The U.S. refused it copyright: he claimed the A.I.'s part too.",
-     "show": "An American's AI picture won an art contest, with 624 prompts. The US refused it copyright: he claimed the AI's part too.",
+     "text": "An American's A.I. picture won an art contest, with six hundred and twenty-four prompts. <pause 0.6> [1] The Copyright Office refused it: he claimed the A.I.'s part too.",
+     "show": "An American's AI picture won an art contest, with 624 prompts. The Copyright Office refused it: he claimed the AI's part too.",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.1,
      "tts": "An American's A.I. picture won an art contest, with six hundred and twenty-four prompts.",
      "file2": "05b_meena.wav",
-     "tts2": "The U.S. refused it copyright: he claimed the A.I.'s part too.",
+     "tts2": "The Copyright Office refused it: he claimed the A.I.'s part too.",
      "pause": 0.6,
      "gain_db": 0.5
     },
@@ -154,7 +154,7 @@
      "text": "So anyone can copy my poster?!",
      "show": "So anyone can copy my poster?!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.2,
      "tempo": 1.12,
      "gain_db": 0.5
     }
@@ -164,7 +164,8 @@
    "id": "s_b",
    "type": "sk_poster",
    "tail": 0.0,
-   "boost": 1.2,
+   "boost": 1.3,
+   "lift": 0.5,
    "drop_at": [
     [
      2,
@@ -215,10 +216,10 @@
     {
      "who": "kumar",
      "file": "07_kumar.wav",
-     "text": "In America, the AI's part has no owner. [1] The parts you made yourself, you can own.",
-     "show": "In America, the AI's part has no owner. The parts you made yourself, you can own.",
+     "text": "In America, typing prompts doesn't make it yours. Not even six hundred. [1] The parts you made yourself, you can own.",
+     "show": "In America, typing prompts doesn't make it yours. Not even 600. The parts you made yourself, you can own.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.35,
      "tempo": 1.06,
      "gain_db": 0.5
     },
@@ -235,10 +236,10 @@
     {
      "who": "kumar",
      "file": "09_kumar.wav",
-     "text": "Our law says: the person who causes it. [1] But no court has tested that on AI.",
-     "show": "Our law says: the person who causes it. But no court has tested that on AI.",
+     "text": "Our law says: the person who causes it. That could be you. [1] But no court has tested that on AI.",
+     "show": "Our law says: the person who causes it. That could be you. But no court has tested that on AI.",
      "maxgap": 0.28,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.06,
      "gain_db": 0.5
     },
@@ -248,7 +249,7 @@
      "text": "And it learned from artists like me, [1] for free!",
      "show": "And it learned from artists like me, for free!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.25,
      "tempo": 1.1,
      "gain_db": 0.5
     },
@@ -258,7 +259,7 @@
      "text": "So I can't use AI at all?",
      "show": "So I can't use AI at all?",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.2,
      "tempo": 1.12,
      "gain_db": 0.5
     }
@@ -270,7 +271,8 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.85,
+   "boost": 1.9,
+   "lift": 0.6,
    "rise": 1.5,
    "data": {
     "beats": [
@@ -281,10 +283,16 @@
       "n": 12
      },
      {
+      "who": "meena",
+      "shot": "wide",
+      "prop": "notice",
+      "n": 13
+     },
+     {
       "who": "rohit",
       "shot": "wide",
       "prop": "loop",
-      "n": 13
+      "n": 14
      }
     ],
     "captionTop": 1500,
@@ -301,7 +309,7 @@
      "text": "Use it, and say so. <pause 0.4> [1] Add your own drawing, and keep your drafts as proof.",
      "show": "Use it, and say so. Add your own drawing, and keep your drafts as proof.",
      "maxgap": 0.28,
-     "gap": 2.4,
+     "gap": 2.0,
      "tempo": 1.06,
      "tts": "Use it, and say so.",
      "file2": "12b_kumar.wav",
@@ -310,10 +318,20 @@
      "gain_db": 0.5
     },
     {
+     "who": "meena",
+     "file": "13_meena.wav",
+     "text": "Hand-drawn, first prize: ten thousand. [1] Mine!",
+     "show": "Hand-drawn, first prize: ₹10,000. Mine!",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
      "who": "rohit",
-     "file": "13_rohit.wav",
-     "text": "An AI-only prize? I'm the only entry: [1] I win again!",
-     "show": "An AI-only prize? I'm the only entry: I win again!",
+     "file": "14_rohit.wav",
+     "text": "A prize just for AI posters? I'm the only entry: [1] I win again!",
+     "show": "A prize just for AI posters? I'm the only entry: I win again!",
      "maxgap": 0.28,
      "gap": 0.0,
      "tempo": 1.12,

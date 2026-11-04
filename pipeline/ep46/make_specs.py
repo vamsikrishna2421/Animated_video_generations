@@ -17,29 +17,31 @@ LINES = {
     3: ("kumar", "wide", "who", "Who wins is the contest's rule. [1] Who owns it is the law's. So whose poster is it?",   # script review: contest rules vs copyright
         "ఎవరు గెలవాలో పోటీ రూల్స్ చెప్తాయి. [1] ఎవరిదో చట్టం చెప్తుంది. ఆ పోస్టర్ ఎవరిది?"),
     4: ("rohit", "wide", "mine", "Mine! I typed the prompt!", "నాదే! ప్రాంప్ట్ టైప్ చేసింది నేనే!"),
-    5: ("meena", "card", "allen", "An American's AI picture won an art contest, with six hundred and twenty-four prompts. | [1] The US refused it copyright: he claimed the AI's part too.",   # script review: a prize, not the fair; "fair prize" was heard "fair price"
-        "అమెరికాలో ఒక ఆర్టిస్ట్ ఆరొందల ఇరవై నాలుగు ప్రాంప్ట్ లతో ప్రైజ్ గెలిచాడు. | [1] రోబో చేసిన భాగం కూడా తనదే అన్నాడు, కాపీరైట్ ఇవ్వలేదు."),
+    5: ("meena", "card", "allen", "An American's AI picture won an art contest, with six hundred and twenty-four prompts. | [1] The Copyright Office refused it: he claimed the AI's part too.",   # render review: "the US refused" sounded final (he is suing)
+        "అమెరికాలో ఒక ఆర్టిస్ట్ ఆరొందల ఇరవై నాలుగు ప్రాంప్ట్ లతో బహుమతి గెలిచాడు. | [1] రోబో చేసిన భాగం కూడా తనదే అన్నాడు; కాపీరైట్ ఆఫీస్ ఒప్పుకోలేదు."),   # "ప్రైజ్" was heard "price"
     6: ("rohit", "wide", "copy", "So anyone can copy my poster?!", "అంటే నా పోస్టర్ ఎవరైనా కాపీ చేయొచ్చా?!"),
-    7: ("kumar", "card", "us", "In America, the AI's part has no owner. [1] The parts you made yourself, you can own.", "అమెరికాలో, రోబో చేసిన భాగానికి ఓనర్ లేడు. [1] నువ్వు సొంతంగా చేసింది మాత్రం నీది."),
+    7: ("kumar", "card", "us", "In America, typing prompts doesn't make it yours. Not even six hundred. [1] The parts you made yourself, you can own.",   # render review: say the prompt rule out loud
+        "అమెరికాలో, టైప్ చేసినంత మాత్రాన నీది కాదు. [1] నువ్వు సొంతంగా చేసింది మాత్రం నీది."),
     8: ("meena", "wide", "india", "And in India?", "మరి మన దేశంలో?"),
-    9: ("kumar", "card", "india", "Our law says: the person who causes it. [1] But no court has tested that on AI.",   # script review: say what the law says
+    9: ("kumar", "card", "india", "Our law says: the person who causes it. That could be you. [1] But no court has tested that on AI.",   # script review: say what the law says; render review: "is it Rohit's or not?"
         "మన చట్టం, చేయించిన వాళ్ళదే అంటుంది. [1] కానీ రోబో మీద ఏ కోర్టూ తేల్చలేదు."),
     10: ("meena", "card", "learned", "And it learned from artists like me, [1] for free!", "ఆ రోబో నాలాంటి ఆర్టిస్టుల బొమ్మల నుంచే నేర్చుకుంది, [1] ఫ్రీగా!"),
     11: ("rohit", "wide", "cant", "So I can't use AI at all?", "అయితే రోబోని వాడకూడదా?"),
     12: ("kumar", "wide", "rule", "Use it, and say so. | [1] Add your own drawing, and keep your drafts as proof.", "వాడుకో, వాడానని చెప్పు. | [1] నీ చేత్తో కొంచెం గీయి, డ్రాఫ్టులు ప్రూఫ్ గా దాచుకో."),   # script review: "వాడు" sounded like "that fellow"; "చేయి వెయ్" like touching someone
-    13: ("rohit", "wide", "loop", "An AI-only prize? I'm the only entry: [1] I win again!", "రోబో పోస్టర్లకి వేరే ప్రైజా? ఉన్నది నేనొక్కడినే: [1] ప్రైజ్ నాదే!"),
+    13: ("meena", "wide", "notice", "Hand-drawn, first prize: ten thousand. [1] Mine!", "చేత్తో గీసిన వాటిలో మొదటి బహుమతి: పది వేలు! [1] నాదే!"),   # render review: make Meena's win heard
+    14: ("rohit", "wide", "loop", "A prize just for AI posters? I'm the only entry: [1] I win again!", "రోబో పోస్టర్లకి వేరే బహుమతా? ఉన్నది నేనొక్కడినే: [1] బహుమతి నాదే!"),   # "An AI-only" was heard "And AI only"
 }
-TTS_EN = {5: "An American's A.I. picture won an art contest, with six hundred and twenty-four prompts. | [1] The U.S. refused it copyright: he claimed the A.I.'s part too.",
+TTS_EN = {5: "An American's A.I. picture won an art contest, with six hundred and twenty-four prompts. | [1] The Copyright Office refused it: he claimed the A.I.'s part too.",
           1: "Forty hours of drawing... [1] lost to forty seconds of A.I.?!"}
-SHOW = {1: "40 hours of drawing... lost to 40 seconds of AI?!", 5: "An American's AI picture won an art contest, with 624 prompts. The US refused it copyright: he claimed the AI's part too."}
-SHOW_TE = {
-    1: "I drew for 40 hours... and lost to a picture the robot drew in 40 seconds?!", 2: "The rules said original! The robot drew it new!",
+SHOW = {1: "40 hours of drawing... lost to 40 seconds of AI?!", 5: "An American's AI picture won an art contest, with 624 prompts. The Copyright Office refused it: he claimed the AI's part too.", 7: "In America, typing prompts doesn't make it yours. Not even 600. The parts you made yourself, you can own.", 13: "Hand-drawn, first prize: ₹10,000. Mine!"}
+SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu ("AI" on screen, as the cards: render review)
+    1: "I drew for 40 hours... and lost to a picture the AI drew in 40 seconds?!", 2: "The rules said original! The AI drew a new one!",
     3: "The contest rules say who wins. The law says whose it is. Whose poster is it?", 4: "Mine! I'm the one who typed the prompt!",
-    5: "In America an artist won a prize with 624 prompts. He said the robot's part was his too; they refused him copyright.",
-    6: "So anyone can copy my poster?!", 7: "In America, the robot's part has no owner. What you made yourself is yours.", 8: "And in our country?",
-    9: "Our law says: it belongs to whoever had it made. But no court has settled it for the robot.", 10: "That robot learned from the pictures of artists like me, for free!",
-    11: "So I can't use the robot?", 12: "Use it, and say you used it. Draw a little with your own hand, keep your drafts as proof.",
-    13: "A separate prize for robot posters? I'm the only one: the prize is mine!",
+    5: "In America an artist won a prize with 624 prompts. He said the AI's part was his too; the Copyright Office said no.",
+    6: "So anyone can copy my poster?!", 7: "In America, just typing doesn't make it yours. What you made yourself is yours.", 8: "And in our country?",
+    9: "Our law says: whoever had it made. But no court has tested it on AI.", 10: "That AI learned from artists like me, for free!",
+    11: "So I can't use AI?", 12: "Use it, and say you used it. Draw a little yourself, keep your drafts as proof.",
+    13: "Hand-drawn, first prize: ₹10,000! Mine!", 14: "A separate prize for AI posters? I'm the only one: the prize is mine!",
 }
 NOCAP = set()
 PAUSES = {}
@@ -50,9 +52,9 @@ TEMPO_LINE_TE = {}
 # before "six hundred and twenty-four", a boom on "refused"; a drop under "no court has tested that", a lift into the
 # rule; a clap on the rule; a riser and the slam back to frame 1. The scenes step up.
 SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 0.9, "drop_at": [[4, 1]], "tail": 0.0}),
-          ("s_b", (7, 8, 9, 10, 11), {"boost": 1.2, "drop_at": [[2, 1]], "tail": 0.0}),
-          ("s_c", (12, 13), {"outro": True, "pre": 0.3, "boost": 1.85, "rise": 1.5, "tail": 0.0})]
-GAP = {1: 0.3, 2: 0.2, 3: 0.3, 4: 0.25, 5: 0.5, 6: 0.25, 7: 0.4, 8: 0.2, 9: 0.5, 10: 0.3, 11: 0.25, 12: 2.4, 13: 0.0}   # 12: the rule card holds
+          ("s_b", (7, 8, 9, 10, 11), {"boost": 1.3, "lift": 0.5, "drop_at": [[2, 1]], "tail": 0.0}),   # render review: Q2-Q3 flat
+          ("s_c", (12, 13, 14), {"outro": True, "pre": 0.3, "boost": 1.9, "lift": 0.6, "rise": 1.5, "tail": 0.0})]
+GAP = {1: 0.3, 2: 0.2, 3: 0.3, 4: 0.2, 5: 0.4, 6: 0.2, 7: 0.35, 8: 0.2, 9: 0.4, 10: 0.25, 11: 0.2, 12: 2.0, 13: 0.3, 14: 0.0}   # 12: the rule card holds
 GAP_TE = {12: 2.0}
 GAIN = {}
 GAIN_TE = {}
@@ -69,7 +71,7 @@ def spec(lang="en"):
          "musicVol": [0.5, 0.6] if not te else [0.5, 0.75],   # EP45 render review: TE music only 5 dB under the voice   # under speech / in gaps; round 2: TE bed 11 dB under the voice, EN gaps over it
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
          "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase", "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]],
-         "musicPad": True, "musicGapGain": 0.0 if not te else 2.0,   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.86, 7.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
+         "musicPad": True, "musicGapGain": 2.5 if not te else 2.0,   # EP46 render review: EN music 14 dB under in the gaps   # dB in the gaps; render review: EN gaps ~3 dB over the voice, TE 12 dB under "musicEndRamp": [0.86, 7.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam
          "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:

@@ -1,4 +1,4 @@
-# EP46 "Copyright & AI" (Season 5: Responsible AI) · queue 049 · script v2, Nov 4
+# EP46 "Copyright & AI" (Season 5: Responsible AI) · queue 049 · script v3 (as rendered), Nov 4
 
 ## The lesson
 Who owns what an AI makes? In the US, nobody owns the AI's part: copyright needs a human author, and prompts alone
@@ -47,39 +47,57 @@ one or two lines; the rule voiced in two takes and held 2.4 s, "keep your drafts
 "HAND-DRAWN, 1st: ₹10,000"; Telugu: "వాడుకో, వాడానని చెప్పు", "నీ చేత్తో కొంచెం గీయి", "రోబో గీసిన బొమ్మ", "ఆ రోబో",
 "అమెరికాలో ఒక ఆర్టిస్ట్ ఆరొందల ఇరవై నాలుగు ప్రాంప్ట్ లతో ప్రైజ్ గెలిచాడు".
 
-## Script (English, v2) · ~59 s
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7); the 3-point rule card is what they'd save; the loop is clean. Both: "typing
+prompts doesn't make it yours" had to be said out loud (it was a footnote, and it's the answer to Rohit); Meena's
+₹10,000 was only on the board, with no line and no hit, so Rohit got the last word. Sandeep: which row is AI? (tiny
+"made with AI"); blank brown boards at 0:35 and 0:47; "the person who causes it": so is it Rohit's?; the DPIIT card's
+"royalties" read as law. Priya: "the US refused" sounded final (it was the Copyright Office, and he is suing); "An
+AI-only prize" was heard "And AI only"; the English music 14 dB under the voice in the gaps, Q1-Q3 flat. Telugu:
+"ప్రైజ్" heard "price"; captions said "robot" where the cards say AI. Changed: frame 1 "MADE WITH AI / DRAWN BY HAND"
+big; line 5b "The Copyright Office refused it: he claimed the AI's part too."; line 7 "In America, typing prompts
+doesn't make it yours. Not even six hundred. The parts you made yourself, you can own." (USA card: "typing prompts: not
+yours"); line 9 "...the person who causes it. That could be you."; the DPIIT card "A PROPOSAL, NOT LAW YET" big; a new
+line 13 for Meena on the notice, "Hand-drawn, first prize: ten thousand. Mine!" with a hit and a clap; line 14 "A
+prize just for AI posters?"; the boards filled; a louder English bed in the gaps (2.5 dB) and lifts in the middle and the
+end; Telugu "బహుమతి" for the prize, "కాపీరైట్ ఆఫీస్ ఒప్పుకోలేదు", "టైప్ చేసినంత మాత్రాన నీది కాదు", and English "AI"
+in the captions. Not changed: "రోబో" in the Telugu voice ("ఏ ఐ" comes out "yeh yeh").
+
+## Script (English, v3) · ~64 s
 | # | Who | Line |
 |---|---|---|
 | 1 | meena | Forty hours of drawing... [1] lost to forty seconds of AI?! |
 | 2 | rohit | The rules said original! [1] The AI made it brand new! |
 | 3 | kumar | Who wins is the contest's rule. [1] Who owns it is the law's. So whose poster is it? |
 | 4 | rohit | Mine! I typed the prompt! |
-| 5 | meena | An American's AI picture won an art contest, with six hundred and twenty-four prompts. / [1] The US refused it copyright: he claimed the AI's part too. |
+| 5 | meena | An American's AI picture won an art contest, with six hundred and twenty-four prompts. / [1] The Copyright Office refused it: he claimed the AI's part too. |
 | 6 | rohit | So anyone can copy my poster?! |
-| 7 | kumar | In America, the AI's part has no owner. [1] The parts you made yourself, you can own. |
+| 7 | kumar | In America, typing prompts doesn't make it yours. Not even six hundred. [1] The parts you made yourself, you can own. |
 | 8 | meena | And in India? |
-| 9 | kumar | Our law says: the person who causes it. [1] But no court has tested that on AI. |
+| 9 | kumar | Our law says: the person who causes it. That could be you. [1] But no court has tested that on AI. |
 | 10 | meena | And it learned from artists like me, [1] for free! |
 | 11 | rohit | So I can't use AI at all? |
 | 12 | kumar | Use it, and say so. / [1] Add your own drawing, and keep your drafts as proof. |
-| 13 | rohit | An AI-only prize? I'm the only entry: [1] I win again! |
+| 13 | meena | Hand-drawn, first prize: ten thousand. [1] Mine! |
+| 14 | rohit | A prize just for AI posters? I'm the only entry: [1] I win again! |
 
-## Script (Telugu, v2; on-screen text stays English)
+## Script (Telugu, v3; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | meena | నలభై గంటలు గీశాను... [1] నలభై సెకన్లలో రోబో గీసిన బొమ్మకి ఓడిపోయానా?! |
 | 2 | rohit | రూల్స్ లో ఒరిజినల్ అని ఉంది! [1] రోబో కొత్తగా గీసింది! |
 | 3 | kumar | ఎవరు గెలవాలో పోటీ రూల్స్ చెప్తాయి. [1] ఎవరిదో చట్టం చెప్తుంది. ఆ పోస్టర్ ఎవరిది? |
 | 4 | rohit | నాదే! ప్రాంప్ట్ టైప్ చేసింది నేనే! |
-| 5 | meena | అమెరికాలో ఒక ఆర్టిస్ట్ ఆరొందల ఇరవై నాలుగు ప్రాంప్ట్ లతో ప్రైజ్ గెలిచాడు. / [1] రోబో చేసిన భాగం కూడా తనదే అన్నాడు, కాపీరైట్ ఇవ్వలేదు. |
+| 5 | meena | అమెరికాలో ఒక ఆర్టిస్ట్ ఆరొందల ఇరవై నాలుగు ప్రాంప్ట్ లతో బహుమతి గెలిచాడు. / [1] రోబో చేసిన భాగం కూడా తనదే అన్నాడు; కాపీరైట్ ఆఫీస్ ఒప్పుకోలేదు. |
 | 6 | rohit | అంటే నా పోస్టర్ ఎవరైనా కాపీ చేయొచ్చా?! |
-| 7 | kumar | అమెరికాలో, రోబో చేసిన భాగానికి ఓనర్ లేడు. [1] నువ్వు సొంతంగా చేసింది మాత్రం నీది. |
+| 7 | kumar | అమెరికాలో, టైప్ చేసినంత మాత్రాన నీది కాదు. [1] నువ్వు సొంతంగా చేసింది మాత్రం నీది. |
 | 8 | meena | మరి మన దేశంలో? |
 | 9 | kumar | మన చట్టం, చేయించిన వాళ్ళదే అంటుంది. [1] కానీ రోబో మీద ఏ కోర్టూ తేల్చలేదు. |
 | 10 | meena | ఆ రోబో నాలాంటి ఆర్టిస్టుల బొమ్మల నుంచే నేర్చుకుంది, [1] ఫ్రీగా! |
 | 11 | rohit | అయితే రోబోని వాడకూడదా? |
 | 12 | kumar | వాడుకో, వాడానని చెప్పు. / [1] నీ చేత్తో కొంచెం గీయి, డ్రాఫ్టులు ప్రూఫ్ గా దాచుకో. |
-| 13 | rohit | రోబో పోస్టర్లకి వేరే ప్రైజా? ఉన్నది నేనొక్కడినే: [1] ప్రైజ్ నాదే! |
+| 13 | meena | చేత్తో గీసిన వాటిలో మొదటి బహుమతి: పది వేలు! [1] నాదే! |
+| 14 | rohit | రోబో పోస్టర్లకి వేరే బహుమతా? ఉన్నది నేనొక్కడినే: [1] బహుమతి నాదే! |
 
 ## Caption ask (caption only)
 Should an AI-made poster be allowed to win against hand-drawn ones? Yes or no, and why?

@@ -33,7 +33,8 @@ const MOOD: Record<number, Partial<Record<BillWho, [BillMood, BillArms]>>> = {
   8: { meena: ["worried", "rest"], rohit: ["worried", "rest"], kumar: ["calm", "rest"] },
   11: { meena: ["deadpan", "fold"], rohit: ["worried", "shrug"], kumar: ["calm", "rest"] },
   12: { meena: ["happy", "rest"], rohit: ["calm", "rest"], kumar: ["calm", "up"] },
-  13: { meena: ["happy", "up"], rohit: ["excited", "up"], kumar: ["smug", "fold"] },
+  13: { meena: ["happy", "up"], rohit: ["worried", "rest"], kumar: ["happy", "rest"] },
+  14: { meena: ["deadpan", "fold"], rohit: ["excited", "up"], kumar: ["smug", "fold"] },
 };
 const SPOT: Record<string, [number, number, number]> = { meena: [200, 1230, 0.6], kumar: [540, 1170, 0.64], rohit: [880, 1230, 0.6] };
 
@@ -56,10 +57,10 @@ const results = (c: Ctx, W: number, k: number, final = false) => {
       c.textAlign = "left"; c.font = SANS(40, 900); c.fillStyle = INK; c.fillText(`${place}  ${who}`, 130, y + 56);
       c.textAlign = "right"; c.font = SANS(64, 900); c.fillStyle = col; c.fillText(prize, W - 130, y + 66);   // the prize on the name line (stills: it ran into "40 SECONDS")
       c.textAlign = "left"; c.font = SANS(110, 900); c.fillStyle = col; c.fillText(big, 130, y + 180);   // script review: HOURS / SECONDS biggest
-      c.font = SANS(34, 800); c.fillStyle = "#334155"; c.fillText(how, 130, y + 236);
+      c.font = SANS(50, 900); c.fillStyle = INK; c.fillText(how, 130, y + 240);   // render review: which one is AI? say it big
     };
-    row(340, "1st", "ROHIT", "40 SECONDS", "made with AI", "₹10,000", GREEN);
-    row(630, "2nd", "MEENA", "40 HOURS", "drawn by hand", "₹0", RED);
+    row(335, "1st", "ROHIT", "40 SECONDS", "MADE WITH AI", "₹10,000", GREEN);
+    row(625, "2nd", "MEENA", "40 HOURS", "DRAWN BY HAND", "₹0", RED);
   } else {
     c.textAlign = "left";
     c.fillStyle = "#e0e7ff"; rrect(c, 100, 360, W - 200, 230, 18); c.fill();
@@ -100,9 +101,10 @@ const StPoster: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") sfx.push(<Sfx key={k("z")} at={0} src="reel/sfx_buzz.wav" vol={0.35} />, <Sfx key={k("a")} at={2} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.4} />,
       <Sfx key={k("n")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.45} />);
     if (b.prop === "rules") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3) - 10} src="audio/gag_ding.wav" vol={0.2} />);
-    if (b.prop === "allen") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.55} />, <Sfx key={k("z")} at={cue(i, 1, 0.5) + 2} src="reel/sfx_buzz.wav" vol={0.2} />);
+    if (b.prop === "allen") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={te ? 0.7 : 0.9} />, <Sfx key={k("z")} at={cue(i, 1, 0.5) + 2} src="reel/sfx_buzz.wav" vol={0.2} />);
     if (b.prop === "india" && b.shot === "card") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.18} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("r")} at={Math.max(0, at - 28)} src="reel/sfx_riser.wav" vol={0.2} />, <Sfx key={k("h")} at={Math.max(0, at - 6)} src="reel/sfx_boom.wav" vol={te ? 0.3 : 0.45} />, <Sfx key={k("a")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.35} />);
+    if (b.prop === "notice") sfx.push(<Sfx key={k("h")} at={Math.max(0, at - 4)} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.75} />, <Sfx key={k("s")} at={cue(i, 1, 0.5)} src="audio/sfx_success.wav" vol={0.4} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.4} />);   // render review: Meena's win heard
     if (b.prop === "loop") {
       const slam = end + HOLD;
       sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 30)} src="reel/sfx_riser.wav" vol={te ? 0.25 : 0.35} />, <Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/sfx_success.wav" vol={0.3} />,
@@ -138,7 +140,7 @@ const StPoster: React.FC<SP> = ({ s }) => {
         });
         c.restore();
         const hookOn = b.prop === "hook" || loopOn;
-        if (hookOn || ["who", "mine", "copy"].includes(b.prop)) results(c, W, 1);
+        if (hookOn || ["who", "mine", "copy", "cant"].includes(b.prop) || (b.prop === "india" && b.shot === "wide")) results(c, W, 1);   // render review: blank boards at 0:35 and 0:47
         if (b.prop === "rules") {
           results(c, W, 1);
           c.save(); c.translate(W / 2, 760); c.rotate(-0.03); c.globalAlpha = seg(p, 0.1, 0.25);
@@ -152,11 +154,11 @@ const StPoster: React.FC<SP> = ({ s }) => {
           c.globalAlpha = seg(f, cu(1, 0.4), cu(1, 0.4) + 8); c.fillStyle = "#fde68a"; c.fillText("WHO OWNS IT:", 110, 760); c.fillStyle = "#f8fafc"; c.fillText("the law", 140 + c.measureText("WHO OWNS IT:").width, 760);
           c.restore();
         }
-        if (b.prop === "allen") fact(c, W, "A REAL CASE (USA)", ["an AI picture won a digital-art prize", "2022 Colorado State Fair · 624 prompts"], "", seg(f, ln.from, ln.from + 8));
+        if (b.prop === "allen") fact(c, W, "A REAL CASE (USA)", ["an AI picture won a digital-art contest", "2022 Colorado State Fair · 624 prompts"], "", seg(f, ln.from, ln.from + 8));
         if (b.prop === "allen") { const k2 = seg(f, cu(1, 0.4), cu(1, 0.4) + 8); if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.translate(W / 2, 640); c.rotate(-0.05); c.strokeStyle = RED; c.lineWidth = 9; rrect(c, -440, -64, 880, 128, 16); c.stroke(); c.font = SANS(52, 900); c.fillStyle = RED; c.textAlign = "center"; c.fillText("COPYRIGHT: REFUSED", 0, -2); c.font = SANS(30, 800); c.fillText("he claimed the AI-made parts too", 0, 44); c.restore(); } }
-        if (b.prop === "us") fact(c, W, "USA: WHO OWNS IT?", ["the AI's part: nobody", "the parts you made: you"], "US Copyright Office, Jan 2025: \"prompts alone\" aren't authorship", seg(f, ln.from, ln.from + 8));
+        if (b.prop === "us") fact(c, W, "USA: WHO OWNS IT?", ["typing prompts: not yours", "the parts you made: yours"], "US Copyright Office, Jan 2025: \"prompts alone\" are not authorship", seg(f, ln.from, ln.from + 8));
         if (b.prop === "india" && b.shot === "card") fact(c, W, "INDIA: COPYRIGHT ACT, 1957", ["\"the person who causes", "the work to be created\"", "untested on today's AI"], "Sec 2(d)(vi) · the government's paper on AI outputs: not out yet", seg(f, ln.from, ln.from + 8));
-        if (b.prop === "learned") fact(c, W, "INDIA'S PROPOSAL (DPIIT, Dec 2025)", ["AI companies pay royalties", "for training on our work"], "a proposal, not law yet", seg(f, ln.from, ln.from + 8), "#1e293b");
+        if (b.prop === "learned") fact(c, W, "A GOVERNMENT PANEL PROPOSES (Dec 2025)", ["AI companies pay artists", "for training on their work", "A PROPOSAL, NOT LAW YET"], "DPIIT committee, India", seg(f, ln.from, ln.from + 8), "#1e293b");   // render review: "proposal" big
         if (b.prop === "rule") {
           const k0 = seg(p, 0.0, 0.08), t1 = cu(1, 0.4);
           c.save(); c.globalAlpha = clamp(k0 * 3); c.fillStyle = "rgba(15,23,42,0.95)"; rrect(c, 50, 210, W - 100, 720, 30); c.fill();
@@ -169,7 +171,8 @@ const StPoster: React.FC<SP> = ({ s }) => {
             c.fillStyle = fg; c.textAlign = "left"; c.fillText(a, 140, y + 102); c.restore();
           });
         }
-        if (b.prop === "loop" && !loopOn) results(c, W, seg(p, 0.0, 0.1), true);
+        if (b.prop === "notice") results(c, W, seg(p, 0.0, 0.1), true);
+        if (b.prop === "loop" && !loopOn) results(c, W, 1, true);
         if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, slam, slam + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
       }} />
     </>
