@@ -1,0 +1,81 @@
+HOW TO 03: "Test 3 AIs on your question before you pay" (9:16 English / Telugu; also a YouTube Short)
+Files: out/howto/03_test_before_you_pay.mp4 (English page) · out/howto/telugu/03_test_before_you_pay_te.mp4 (Telugu page)
+Send copies: out/howto/03_test_before_you_pay_ig.mp4 · out/howto/telugu/03_test_before_you_pay_te_ig.mp4
+Post on the day (Thursday HOW TO, not in the serial queue). Frame 1 is the result: the same bill, two small free AIs,
+₹428 and ₹518. The three AIs are older small models with open weights (2024), picked because they run on a laptop with
+no internet; the reel says "these small free ones" and "try yours". No plan prices are given (they change by date).
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Same bill, two free AIs: ₹428 and ₹518. Before you pay for an AI plan, test it on YOUR questions. 4 steps:
+
+1. Write 5 questions from your own work, and the right answers first. Decide which ones it must not get wrong (for a shop: the bill, the GST).
+2. Ask each AI the same words, 3 times, in a new chat each time.
+3. Mark every answer yourself: right or wrong.
+4. Keep the one that passes. If none passes a question, take that question to the free apps (ChatGPT, Gemini, Claude...). Pay only if no free one passes, and test the paid one the same way.
+
+Our test: Ravi anna's 5 shop questions, 3 small free AIs on our laptop (offline), 3 tries each, every answer read by hand:
+• SMALL (Qwen2.5 1.5B, 1.1 GB): 8 of 15. Every line of the bill right (186, 290, 42), the total wrong all 3 times (₹428, ₹418, ₹428; right: ₹518).
+• MIDDLE (Phi-3 mini, Microsoft, 2.4 GB): 12 of 15.
+• BIG (Qwen2.5 7B, 4.7 GB): 12 of 15.
+• A 2-line Telugu WhatsApp message: 0 of 9 for all three. Two of the big one's replies even ended with an English "translation" that its Telugu doesn't say.
+So for bills, GST and stock, the middle one was as good as the big one. For Telugu, none of these: that's the question to try on the apps.
+These are small models you can run yourself; the apps are bigger. What carries over is the method.
+
+Save this. Next HOW TO (Nov 12): what to never paste into an AI chat.
+
+#AI #ChatGPT #Gemini #AITips #LearnAI #SmallBusiness
+
+=== COMMENT PROMPT ===
+What's one work question an AI got wrong for you? Drop it in the comments, we'll test it.
+
+=== PINNED_COMMENT ===
+How we tested (Nov 5, 2026): llama.cpp on a 4-core computer, no graphics card, offline; the makers' own 4-bit files: Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct (Apache 2.0), Phi-3-mini-4k-instruct (MIT); temperature 0.7, a fresh chat per question, 3 tries each.
+The 5 questions, answers written first:
+1. "A customer buys 3 kg rice at Rs 62 a kg, 2 litres oil at Rs 145 a litre and 6 eggs at Rs 7 each. What is the total?" → ₹518
+2. "An item costs Rs 1,180 including 18% GST. What is the price before GST, and how much is the GST?" → ₹1,000 and ₹180
+3. "My stock: rice 12 kg, sugar 3 kg, oil 8 litres, dal 2 kg, salt 15 packets. I reorder anything below 5. What do I reorder?" → sugar and dal
+4. "Write a 2-line WhatsApp message in Telugu for my shop's customers: the shop is closed this Sunday, and open again on Monday at 7 am." → real Telugu that says it
+5. "How much did my shop sell last Tuesday?" → it can't know (no figure)
+Marks (right of 3): SMALL bill 0, GST 3, reorder 2, Telugu 0, honest 3 = 8/15 · MIDDLE 3, 3, 3, 0, 3 = 12/15 · BIG 3, 3, 3, 0, 3 = 12/15. None invented a sales figure. On our laptop the answers took about 12 s (SMALL), 24 s (MIDDLE) and 37 s (BIG); the apps are much faster.
+
+=== SOURCES (for comments) ===
+- The models' own pages (Hugging Face): Qwen/Qwen2.5-1.5B-Instruct-GGUF, Qwen/Qwen2.5-7B-Instruct-GGUF ("license: apache-2.0"), microsoft/Phi-3-mini-4k-instruct-gguf ("license: mit").
+- The method is what the AI makers tell developers: OpenAI's model-selection guide ("Choose acceptance criteria before comparing models", "Repeat the comparison across representative tasks"); Anthropic's guide to evals ("Design evals that mirror your real-world task distribution").
+- Our run: series/scripts/howto03_demo/ (every reply, with the hand marks).
+
+=== YOUTUBE SHORTS ===
+Title: Same bill, two free AIs: ₹428 and ₹518. Test before you pay #shorts
+Description: 4 steps to test an AI on your own questions before you pay for a plan. Our test: 3 small free AIs, 5 shop questions, 3 tries each, marked by hand: 8, 12 and 12 of 15, and none could write a Telugu message.
+
+=== ALT_TEXT ===
+Crayon-animated skit in Ravi anna's kirana shop. Two answer cards to the same bill: free AI number 1, 186 + 290 + 42 = ₹428, crossed; free AI number 2, ₹518, ticked; a stamp: Ravi loses ₹90. The shop AI: before you buy an AI plan, test it on your own questions, four steps. Three small free AIs on our laptop: small 1.1 GB, middle 2.4 GB, big 4.7 GB. Step 1, five questions with the answers written first: the bill ₹518, GST on ₹1,180: ₹1,000 + ₹180, what to reorder: sugar and dal, a Telugu message: real Telugu, last Tuesday's sales: can't know; the bill and GST must be exact. Step 2, the same words in a new chat for each AI, three tries each: 5 questions × 3 tries = 15 answers each. Step 3, the marks: small 8, middle 12, big 12 of 15. The small one's bill: every step right, the sum wrong, ₹428, ₹418, ₹428. The Telugu message: the big one's made-up Telugu and an English "translation" its Telugu doesn't say; Telugu 0 of 9. Step 4: the middle one equals the big one, 12 of 15, bills, GST and stock right; Telugu: none passed, that's the question for the free apps. The save card: 5 questions from your work with the answers first; the same words to each AI, a new chat every time; mark it yourself; keep the one that passes, none? try the free apps, then pay, and test the paid one too. Ravi: which brain are you? The shop AI: the small one, 1.1 GB, 8 of 15: ₹428. The first frame comes back.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Oke bill, rendu free AI lu: ₹428, ₹518. AI plan ki dabbulu kattelopu, mee sonta prashnalatho test cheyyandi. 4 steps:
+
+1. Mee pani lonchi 5 prashnalu, sarina javaabulu modata raasi pettukondi. Edi tappu kaakoodado kooda (shop ki: bill, GST).
+2. Prati AI ki ave maatalu, 3 saarlu, prati saari kotta chat lo.
+3. Prati javaabu ki meere marks veyyandi: correct aa, tappa.
+4. Pass ayinade unchukondi. Edi pass kaakapothe, aa prashna free apps (ChatGPT, Gemini, Claude...) ni adagandi. Free app okkati kooda pass kaakapothene dabbulu kattandi; paid daanni kooda ilaage test cheyyandi.
+
+Maa test: Ravi anna 5 shop prashnalu, maa laptop lo 3 chinna free AI lu (internet ledu), okkokati 3 saarlu, annee chadivi marks vesaam:
+• CHINNADI (Qwen2.5 1.5B, 1.1 GB): 15 ki 8. Bill lo prati line correct, total maatram 3 saarlu tappu (₹428, ₹418, ₹428; correct: ₹518).
+• MADHYADI (Phi-3 mini, 2.4 GB): 15 ki 12.
+• PEDDADI (Qwen2.5 7B, 4.7 GB): 15 ki 12.
+• 2 lines Telugu WhatsApp message: moodinti ki 9 ki 0. Peddadi rendu saarlu, daani Telugu lo leni English "translation" kooda raasindi.
+Bills, GST, stock ki madhyadi peddadaanitho samaanam. Telugu ki ivevee kaadu: aa prashna apps tho try cheyyandi.
+
+Save cheyyandi. Next HOW TO (Nov 12): AI chat lo eppudoo paste cheyyakoodanivi.
+
+#AIinTelugu #TeluguAI #AITips #ChatGPT #SmallBusiness
+
+=== COMMENT PROMPT ===
+AI mee pani lo tappu cheppina oka prashna cheppandi. Comment lo raayandi, memu test chestaam.
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: llama.cpp, 4-core computer, internet ledu; Qwen2.5 1.5B, Qwen2.5 7B (Apache 2.0), Phi-3 mini (MIT); prati prashna kotta chat lo, 3 saarlu, annee chetto marks. Marks: CHINNADI 8/15, MADHYADI 12/15, PEDDADI 12/15; Telugu message mooditiki 0/9. Ravi anna, shop AI kalpita paatralu.
+
+=== COVER ===
+Frame 1: two answer cards to the same bill, "₹428 ✗" and "₹518 ✓", the stamp "RAVI LOSES ₹90", Ravi yelling behind the counter.
