@@ -21,7 +21,7 @@ LINES = {
     5: ("vijaya", "wide", "shock", "It can't even say what day the sixteenth is?!", "ఒక తేదీ ఏ రోజో కూడా చెప్పలేదా?!"),
     6: ("tarun", "how", "how", "It doesn't look at a calendar. [1] It writes the day that sounds right.", "అది క్యాలెండర్ చూడదు. [1] తోచిన రోజు పేరు రాసేస్తుంది."),   # "సరిపోయే" read as "the correct day"
     7: ("mohan", "wide", "count", "Then I'll tell it to count properly!", "అయితే సరిగ్గా లెక్కపెట్టమని చెప్తా!"),
-    8: ("tarun", "test", "worse", "We told it to count. [1] It got worse: six right became two.", "లెక్కపెట్టమన్నాం. [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి రెండుకి."),   # script review: one punchline, two numbers
+    8: ("tarun", "test", "worse", "We told it to count. [1] It got worse: six right became two.", "మేము లెక్కపెట్టమన్నాం. | [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి, రెండు కరెక్ట్."),   # script review: one punchline, two numbers
     9: ("vijaya", "wide", "what", "So what do we do now?!", "మరి ఇప్పుడు ఏం చేయాలి?!"),
     10: ("tarun", "rule", "rule", "For any date, [1] open your phone's calendar. The calendar counts. The AI guesses.",
          "ఏ తేదీ అయినా, [1] ఫోన్ లో క్యాలెండర్ తెరవండి. క్యాలెండర్ లెక్కపెడుతుంది, చాట్ బాట్ గెస్ కొడుతుంది."),
@@ -34,7 +34,7 @@ SHOW = {2: "We picked the 16th because it said Sunday! ₹25,000, non-refundable
 SHOW_TE = {1: "The chatbot said Sunday... the calendar says Wednesday!", 2: "We fixed the 16th because it said Sunday! I paid ₹25,000 for a Wednesday, no refund!",
            3: "I asked it myself! \"16th December: Sunday,\" it said.", 4: "We tested a small free chatbot 10 times. Sunday 7 times. Tuesday twice. Wednesday just once.",
            5: "It can't even say what day a date is?!", 6: "It doesn't look at a calendar. It writes whatever day comes to it.", 7: "Then I'll tell it to count properly!",
-           8: "We told it to count. Even worse: from 6 right to 2.", 9: "So what do we do now?!",
+           8: "We told it to count. <pause 0.3> Even worse: from 6 right, to 2 right.", 9: "So what do we do now?!",
            10: "For any date, open the calendar on your phone. The calendar counts, the chatbot guesses.", 11: "OK, let me ask once more... Sunday, it still says!"}
 NOCAP = set()
 PAUSES = {}

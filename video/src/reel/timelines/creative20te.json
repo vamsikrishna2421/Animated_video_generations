@@ -1,0 +1,945 @@
+{
+ "id": "creative20te",
+ "look": "classic",
+ "topic": "",
+ "banner": "The AI said Sunday",
+ "musicVol": [
+  0.6,
+  0.9
+ ],
+ "title": "200 cards say Sunday (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "SKIT",
+ "fps": 30,
+ "musicDrops": [
+  [
+   44,
+   68
+  ],
+  [
+   432,
+   450
+  ],
+  [
+   1393,
+   1417
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   450,
+   1.0
+  ],
+  [
+   450,
+   1105,
+   1.1
+  ],
+  [
+   1105,
+   1468,
+   1.6
+  ],
+  [
+   1105,
+   1468,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1468,
+ "music": "reel/creative20te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_news",
+   "data": {
+    "beats": [
+     {
+      "who": "tarun",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "hall",
+      "n": 2
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "asked",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The AI said Sunday",
+     "title": "The AI said Sunday",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 450,
+   "lines": [
+    {
+     "who": "tarun",
+     "name": "Tarun",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative20te/line_01.wav",
+     "from": 15,
+     "frames": 87,
+     "words": [
+      {
+       "w": "The",
+       "from": 16,
+       "to": 22
+      },
+      {
+       "w": "chatbot",
+       "from": 22,
+       "to": 34
+      },
+      {
+       "w": "said",
+       "from": 34,
+       "to": 42
+      },
+      {
+       "w": "Sunday...",
+       "from": 42,
+       "to": 56
+      },
+      {
+       "w": "the",
+       "from": 68,
+       "to": 73
+      },
+      {
+       "w": "calendar",
+       "from": 73,
+       "to": 83
+      },
+      {
+       "w": "says",
+       "from": 83,
+       "to": 89
+      },
+      {
+       "w": "Wednesday!",
+       "from": 89,
+       "to": 102
+      }
+     ],
+     "cues": {
+      "1": 68
+     }
+    },
+    {
+     "who": "vijaya",
+     "name": "Vijaya atta",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative20te/line_02.wav",
+     "from": 110,
+     "frames": 189,
+     "words": [
+      {
+       "w": "We",
+       "from": 112,
+       "to": 117
+      },
+      {
+       "w": "fixed",
+       "from": 117,
+       "to": 129
+      },
+      {
+       "w": "the",
+       "from": 129,
+       "to": 137
+      },
+      {
+       "w": "16th",
+       "from": 137,
+       "to": 151
+      },
+      {
+       "w": "because",
+       "from": 151,
+       "to": 166
+      },
+      {
+       "w": "it",
+       "from": 166,
+       "to": 172
+      },
+      {
+       "w": "said",
+       "from": 172,
+       "to": 182
+      },
+      {
+       "w": "Sunday!",
+       "from": 182,
+       "to": 208
+      },
+      {
+       "w": "I",
+       "from": 208,
+       "to": 211
+      },
+      {
+       "w": "paid",
+       "from": 211,
+       "to": 221
+      },
+      {
+       "w": "₹25,000",
+       "from": 221,
+       "to": 240
+      },
+      {
+       "w": "for",
+       "from": 240,
+       "to": 248
+      },
+      {
+       "w": "a",
+       "from": 248,
+       "to": 252
+      },
+      {
+       "w": "Wednesday,",
+       "from": 252,
+       "to": 277
+      },
+      {
+       "w": "no",
+       "from": 277,
+       "to": 283
+      },
+      {
+       "w": "refund!",
+       "from": 283,
+       "to": 298
+      }
+     ],
+     "cues": {
+      "1": 187
+     }
+    },
+    {
+     "who": "mohan",
+     "name": "Mohan mama",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative20te/line_03.wav",
+     "from": 304,
+     "frames": 122,
+     "words": [
+      {
+       "w": "I",
+       "from": 306,
+       "to": 309
+      },
+      {
+       "w": "asked",
+       "from": 309,
+       "to": 321
+      },
+      {
+       "w": "it",
+       "from": 321,
+       "to": 327
+      },
+      {
+       "w": "myself!",
+       "from": 327,
+       "to": 352
+      },
+      {
+       "w": "\"16th",
+       "from": 352,
+       "to": 363
+      },
+      {
+       "w": "December:",
+       "from": 363,
+       "to": 383
+      },
+      {
+       "w": "Sunday,\"",
+       "from": 383,
+       "to": 409
+      },
+      {
+       "w": "it",
+       "from": 409,
+       "to": 414
+      },
+      {
+       "w": "said.",
+       "from": 414,
+       "to": 426
+      }
+     ],
+     "cues": {
+      "1": 332
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_news",
+   "data": {
+    "beats": [
+     {
+      "who": "tarun",
+      "shot": "test",
+      "prop": "test",
+      "n": 4
+     },
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "shock",
+      "n": 5
+     },
+     {
+      "who": "tarun",
+      "shot": "how",
+      "prop": "how",
+      "n": 6
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "count",
+      "n": 7
+     },
+     {
+      "who": "tarun",
+      "shot": "test",
+      "prop": "worse",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 450,
+   "frames": 655,
+   "lines": [
+    {
+     "who": "tarun",
+     "name": "Tarun",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative20te/line_04.wav",
+     "from": 0,
+     "frames": 211,
+     "words": [
+      {
+       "w": "We",
+       "from": 2,
+       "to": 7
+      },
+      {
+       "w": "tested",
+       "from": 7,
+       "to": 18
+      },
+      {
+       "w": "a",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "small",
+       "from": 22,
+       "to": 32
+      },
+      {
+       "w": "free",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "w": "chatbot",
+       "from": 40,
+       "to": 59
+      },
+      {
+       "w": "10",
+       "from": 59,
+       "to": 73
+      },
+      {
+       "w": "times.",
+       "from": 73,
+       "to": 85
+      },
+      {
+       "w": "Sunday",
+       "from": 97,
+       "to": 107
+      },
+      {
+       "w": "7",
+       "from": 107,
+       "to": 110
+      },
+      {
+       "w": "times.",
+       "from": 110,
+       "to": 120
+      },
+      {
+       "w": "Tuesday",
+       "from": 120,
+       "to": 145
+      },
+      {
+       "w": "twice.",
+       "from": 145,
+       "to": 155
+      },
+      {
+       "w": "Wednesday",
+       "from": 155,
+       "to": 179
+      },
+      {
+       "w": "just",
+       "from": 179,
+       "to": 186
+      },
+      {
+       "w": "once.",
+       "from": 186,
+       "to": 195
+      }
+     ],
+     "cues": {
+      "1": 97
+     }
+    },
+    {
+     "who": "vijaya",
+     "name": "Vijaya atta",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative20te/line_05.wav",
+     "from": 238,
+     "frames": 77,
+     "words": [
+      {
+       "w": "It",
+       "from": 240,
+       "to": 245
+      },
+      {
+       "w": "can't",
+       "from": 245,
+       "to": 255
+      },
+      {
+       "w": "even",
+       "from": 255,
+       "to": 272
+      },
+      {
+       "w": "say",
+       "from": 272,
+       "to": 279
+      },
+      {
+       "w": "what",
+       "from": 279,
+       "to": 288
+      },
+      {
+       "w": "day",
+       "from": 288,
+       "to": 295
+      },
+      {
+       "w": "a",
+       "from": 295,
+       "to": 298
+      },
+      {
+       "w": "date",
+       "from": 298,
+       "to": 307
+      },
+      {
+       "w": "is?!",
+       "from": 307,
+       "to": 315
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "tarun",
+     "name": "Tarun",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative20te/line_06.wav",
+     "from": 320,
+     "frames": 93,
+     "words": [
+      {
+       "w": "It",
+       "from": 322,
+       "to": 325
+      },
+      {
+       "w": "doesn't",
+       "from": 325,
+       "to": 332
+      },
+      {
+       "w": "look",
+       "from": 332,
+       "to": 337
+      },
+      {
+       "w": "at",
+       "from": 337,
+       "to": 344
+      },
+      {
+       "w": "a",
+       "from": 344,
+       "to": 346
+      },
+      {
+       "w": "calendar.",
+       "from": 346,
+       "to": 364
+      },
+      {
+       "w": "It",
+       "from": 364,
+       "to": 366
+      },
+      {
+       "w": "writes",
+       "from": 366,
+       "to": 373
+      },
+      {
+       "w": "whatever",
+       "from": 373,
+       "to": 381
+      },
+      {
+       "w": "day",
+       "from": 381,
+       "to": 385
+      },
+      {
+       "w": "comes",
+       "from": 385,
+       "to": 391
+      },
+      {
+       "w": "to",
+       "from": 391,
+       "to": 398
+      },
+      {
+       "w": "it.",
+       "from": 398,
+       "to": 401
+      }
+     ],
+     "cues": {
+      "1": 362
+     }
+    },
+    {
+     "who": "mohan",
+     "name": "Mohan mama",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative20te/line_07.wav",
+     "from": 431,
+     "frames": 65,
+     "words": [
+      {
+       "w": "Then",
+       "from": 432,
+       "to": 440
+      },
+      {
+       "w": "I'll",
+       "from": 440,
+       "to": 448
+      },
+      {
+       "w": "tell",
+       "from": 448,
+       "to": 456
+      },
+      {
+       "w": "it",
+       "from": 456,
+       "to": 461
+      },
+      {
+       "w": "to",
+       "from": 461,
+       "to": 466
+      },
+      {
+       "w": "count",
+       "from": 466,
+       "to": 476
+      },
+      {
+       "w": "properly!",
+       "from": 476,
+       "to": 496
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "tarun",
+     "name": "Tarun",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative20te/line_08.wav",
+     "from": 501,
+     "frames": 111,
+     "words": [
+      {
+       "w": "We",
+       "from": 501,
+       "to": 505
+      },
+      {
+       "w": "told",
+       "from": 505,
+       "to": 512
+      },
+      {
+       "w": "it",
+       "from": 512,
+       "to": 516
+      },
+      {
+       "w": "to",
+       "from": 516,
+       "to": 520
+      },
+      {
+       "w": "count.",
+       "from": 520,
+       "to": 530
+      },
+      {
+       "w": "Even",
+       "from": 542,
+       "to": 549
+      },
+      {
+       "w": "worse:",
+       "from": 549,
+       "to": 568
+      },
+      {
+       "w": "from",
+       "from": 568,
+       "to": 575
+      },
+      {
+       "w": "6",
+       "from": 575,
+       "to": 578
+      },
+      {
+       "w": "right,",
+       "from": 578,
+       "to": 588
+      },
+      {
+       "w": "to",
+       "from": 588,
+       "to": 592
+      },
+      {
+       "w": "2",
+       "from": 592,
+       "to": 595
+      },
+      {
+       "w": "right.",
+       "from": 595,
+       "to": 605
+      }
+     ],
+     "cues": {
+      "1": 542
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_news",
+   "data": {
+    "beats": [
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "what",
+      "n": 9
+     },
+     {
+      "who": "tarun",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Open the calendar",
+     "title": "Open the calendar",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1105,
+   "frames": 363,
+   "lines": [
+    {
+     "who": "vijaya",
+     "name": "Vijaya atta",
+     "color": "#F9A8D4",
+     "sub": null,
+     "audio": "reel/creative20te/line_09.wav",
+     "from": 9,
+     "frames": 41,
+     "words": [
+      {
+       "w": "So",
+       "from": 10,
+       "to": 15
+      },
+      {
+       "w": "what",
+       "from": 15,
+       "to": 24
+      },
+      {
+       "w": "do",
+       "from": 24,
+       "to": 29
+      },
+      {
+       "w": "we",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "do",
+       "from": 34,
+       "to": 40
+      },
+      {
+       "w": "now?!",
+       "from": 40,
+       "to": 50
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "tarun",
+     "name": "Tarun",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative20te/line_10.wav",
+     "from": 55,
+     "frames": 147,
+     "words": [
+      {
+       "w": "For",
+       "from": 56,
+       "to": 61
+      },
+      {
+       "w": "any",
+       "from": 61,
+       "to": 66
+      },
+      {
+       "w": "date,",
+       "from": 66,
+       "to": 74
+      },
+      {
+       "w": "open",
+       "from": 74,
+       "to": 81
+      },
+      {
+       "w": "the",
+       "from": 81,
+       "to": 86
+      },
+      {
+       "w": "calendar",
+       "from": 86,
+       "to": 103
+      },
+      {
+       "w": "on",
+       "from": 103,
+       "to": 107
+      },
+      {
+       "w": "your",
+       "from": 107,
+       "to": 114
+      },
+      {
+       "w": "phone.",
+       "from": 114,
+       "to": 133
+      },
+      {
+       "w": "The",
+       "from": 133,
+       "to": 138
+      },
+      {
+       "w": "calendar",
+       "from": 138,
+       "to": 150
+      },
+      {
+       "w": "counts,",
+       "from": 150,
+       "to": 169
+      },
+      {
+       "w": "the",
+       "from": 169,
+       "to": 175
+      },
+      {
+       "w": "chatbot",
+       "from": 175,
+       "to": 185
+      },
+      {
+       "w": "guesses.",
+       "from": 185,
+       "to": 197
+      }
+     ],
+     "cues": {
+      "1": 73
+     }
+    },
+    {
+     "who": "mohan",
+     "name": "Mohan mama",
+     "color": "#93C5FD",
+     "sub": null,
+     "audio": "reel/creative20te/line_11.wav",
+     "from": 240,
+     "frames": 114,
+     "words": [
+      {
+       "w": "OK,",
+       "from": 243,
+       "to": 250
+      },
+      {
+       "w": "let",
+       "from": 250,
+       "to": 263
+      },
+      {
+       "w": "me",
+       "from": 263,
+       "to": 269
+      },
+      {
+       "w": "ask",
+       "from": 269,
+       "to": 277
+      },
+      {
+       "w": "once",
+       "from": 277,
+       "to": 286
+      },
+      {
+       "w": "more...",
+       "from": 312,
+       "to": 322
+      },
+      {
+       "w": "Sunday,",
+       "from": 322,
+       "to": 331
+      },
+      {
+       "w": "it",
+       "from": 331,
+       "to": 335
+      },
+      {
+       "w": "still",
+       "from": 335,
+       "to": 342
+      },
+      {
+       "w": "says!",
+       "from": 342,
+       "to": 349
+      }
+     ],
+     "cues": {
+      "1": 312
+     }
+    }
+   ]
+  }
+ ]
+}
