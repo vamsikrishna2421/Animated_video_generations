@@ -52,19 +52,19 @@ SUN = ("आदि", "आदी", "आधि", "अदि", "अदी")
 WED = ("बुध", "बुद", "बूध", "भूद", "बूद", "भुद", "भूध", "बद")
 MUST = {"en": {1: [("sunday",)], "1b": [("calendar",), ("wednesday",)],
                2: [("picked",), ("sixteenth", "16th", "16"), ("sunday",), ("twenty", "25", "25,000"), ("refundable", "nonrefundable"), ("wednesday",)],
-               3: [("asked",), ("myself",), ("sixteenth", "16th", "16"), ("sunday",)], 4: [("tested",), ("small",), ("free",), ("ten", "10")],
+               3: [("asked",), ("myself",), ("sixteenth", "16th", "16"), ("sunday",)], 4: [("tested",), ("small",), ("offline",), ("ten", "10")],
                "4b": [("sunday",), ("seven", "7"), ("tuesday",), ("two", "2"), ("wednesday",), ("once",)], 5: [("say",), ("day",), ("sixteenth", "16th", "16")],
                6: [("calendar",), ("writes", "write"), ("sounds", "sound"), ("right",)], 7: [("count",), ("properly",)],
-               8: [("count",), ("worse",), ("six", "6"), ("two", "2")], 9: [("what",), ("now",)],
+               8: [("count",), ("worse",), ("six", "6"), ("twenty", "20"), ("two", "2")], 9: [("what",), ("now",)],
                10: [("date",), ("phone",), ("calendar",), ("counts", "count"), ("guesses", "guess")], 11: [("fine",), ("once",)], "11b": [("sunday",)]},
         "te": {1: [("चाट", "चैट", "चार्ट", "चात", "चाड"), SUN], "1b": [CAL, WED], 2: [SUN, ("पदहा", "पद्दा", "पदा", "पदहो", "16"), WED, ("इरवै", "इरवाई", "एरवाई", "यरवा", "25")],
-               3: [("अडि", "अदि", "अड़ि"), ("डिसें", "दिसें", "डिसम", "दिसम"), SUN], 4: [("चिन्न", "चिन"), ("पदि", "10"), ("टेस्ट", "तेस्ट", "टैस", "तेस")],
+               3: [("अडि", "अदि", "अड़ि"), ("डिसें", "दिसें", "डिसम", "दिसम"), SUN], 4: [("इंटर", "इन्टर", "इंतर"), ("चाट", "चात", "चैट", "चार्ट"), ("पदि", "10"), ("टेस्ट", "तेस्ट", "टैस", "तेस")],
                "4b": [SUN, ("एडु", "येडु", "एड़ु", "7"), ("मंग", "मांग"), WED], 5: [("तेदी", "तेधी", "तेदि", "तेदी"), ("रोज",)],
                6: [CAL, ("तोचि", "तोची", "तोच", "तोचे", "चिन"), ("रोज",)], 7: [("सरिग", "सरीग", "सरग"), ("लेक्क", "लेक", "लैक्क", "लेख")],
                8: [("लेक्क", "लेक", "लैक्क", "लेख")], "8b": [("घोर", "गोर"), ("आरु", "आरू", "अरु", "6"), ("रेंड", "रेंद", "रेड", "रिन", "2")], 9: [("चेया", "चेय", "चेइ")],
                10: [("फोन", "फ़ोन", "फोँन", "फोलं"), CAL], 11: [("इंको", "इंक", "इको", "इन्को", "सरे")], "11b": [SUN]}}
 JUDGE_TEXT = {2: "We picked the 16th because it said Sunday! 25,000, non-refundable, for a Wednesday!", 3: 'I asked it myself! "16th December: Sunday."',
-              4: "We tested a small free AI, 10 times.", "4b": "Sunday: 7. Tuesday: 2. Wednesday: once.", 8: "We told it to count. It got worse: 6 right became 2."}
+              4: "We tested a small offline AI, 10 times.", "4b": "Sunday: 7. Tuesday: 2. Wednesday: once.", 8: "We told it to count. It got worse: 6 out of 20 became 2."}
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
 GATE = set()   # characters whose Fish takes carry a hum between words (none so far)

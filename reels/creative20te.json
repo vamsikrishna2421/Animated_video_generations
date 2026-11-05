@@ -14,7 +14,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.3,
+ "endPad": 1.0,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -92,7 +92,7 @@
     {
      "who": "tarun",
      "file": "01_tarun.wav",
-     "text": "చాట్ బాట్ ఆదివారం అంది... <pause 0.35> [1] క్యాలెండర్ లో బుధవారం!",
+     "text": "చాట్ బాట్ ఆదివారం అంది... <pause 0.05> [1] క్యాలెండర్ లో బుధవారం!",
      "show": "The chatbot said Sunday... the calendar says Wednesday!",
      "maxgap": 0.28,
      "gap": 0.25,
@@ -100,8 +100,8 @@
      "tts": "చాట్ బాట్ ఆదివారం అంది...",
      "file2": "01b_tarun.wav",
      "tts2": "క్యాలెండర్ లో బుధవారం!",
-     "pause": 0.35,
-     "gain_db": 0.5
+     "pause": 0.05,
+     "gain_db": 2.0
     },
     {
      "who": "vijaya",
@@ -129,8 +129,8 @@
    "id": "s_b",
    "type": "sk_news",
    "tail": 0.0,
-   "boost": 1.1,
-   "lift": 0.6,
+   "boost": 1.45,
+   "lift": 0.8,
    "drop_pre": [
     [
      0,
@@ -183,12 +183,12 @@
     {
      "who": "tarun",
      "file": "04_tarun.wav",
-     "text": "ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు టెస్ట్ చేశాం. <pause 0.35> [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే.",
-     "show": "We tested a small free chatbot 10 times. Sunday 7 times. Tuesday twice. Wednesday just once.",
+     "text": "ఇంటర్నెట్ లేని చిన్న చాట్ బాట్ తో పది సార్లు టెస్ట్ చేశాం. <pause 0.35> [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే.",
+     "show": "We tested a small chatbot with no internet, 10 times. Sunday 7 times. Tuesday twice. Wednesday just once.",
      "maxgap": 0.28,
      "gap": 0.9,
      "tempo": 1.05,
-     "tts": "ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు టెస్ట్ చేశాం.",
+     "tts": "ఇంటర్నెట్ లేని చిన్న చాట్ బాట్ తో పది సార్లు టెస్ట్ చేశాం.",
      "file2": "04b_tarun.wav",
      "tts2": "ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే.",
      "pause": 0.35,
@@ -230,7 +230,7 @@
      "text": "మేము లెక్కపెట్టమన్నాం. <pause 0.25> [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి, రెండు కరెక్ట్.",
      "show": "We told it to count. <pause 0.3> Even worse: from 6 right, to 2 right.",
      "maxgap": 0.28,
-     "gap": 1.0,
+     "gap": 0.7,
      "tempo": 1.05,
      "tts": "మేము లెక్కపెట్టమన్నాం.",
      "file2": "08b_tarun.wav",
@@ -299,9 +299,9 @@
      "who": "tarun",
      "file": "10_tarun.wav",
      "text": "ఏ తేదీ అయినా, [1] ఫోన్ లో క్యాలెండర్ తెరవండి. క్యాలెండర్ లెక్కపెడుతుంది, చాట్ బాట్ గెస్ కొడుతుంది.",
-     "show": "For any date, open the calendar on your phone. The calendar counts, the chatbot guesses.",
+     "show": "For any date, <pause 0.3> open the calendar on your phone. The calendar counts, the chatbot guesses.",
      "maxgap": 0.28,
-     "gap": 1.3,
+     "gap": 0.5,
      "tempo": 1.05,
      "gain_db": 0.5
     },

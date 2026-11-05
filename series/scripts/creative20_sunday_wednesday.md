@@ -1,4 +1,4 @@
-# Creative 20 "200 Cards Say Sunday" · script v2, Nov 5 (the Nov 5 creative slot)
+# Creative 20 "200 Cards Say Sunday" · script v3 (as rendered), Nov 5 (the Nov 5 creative slot)
 
 **Format:** a breaking-news parody at home: nephew Tarun plays the TV anchor with a steel ladle for a mic, a red
 BREAKING bar and a running ticker at the bottom of the frame, a "LIVE · LIVING ROOM" bug; every reveal gets our own news
@@ -61,17 +61,31 @@ numbers on screen); line 10 "The calendar counts. The AI guesses."; Telugu "త�
 లెక్కపెడుతుంది, చాట్ బాట్ గెస్ కొడుతుంది", line 8 "ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి రెండుకి"; a sting on "Wednesday", a stop before
 "Sunday, it says!"; the caption ask "ask your AI" (both would answer it) and the developer line.
 
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7) and would share it to the family group; the loop joke works. Both: a pause inside
+line 1 put "Wednesday" near 3 s; 15-43 s went to dark half-empty slides and the news parody vanished; a dead gap after
+"The AI guesses." read as the end; "6 right" of how many?; "small free AI" read as free ChatGPT (the screen said offline);
+tiny text (the model line, the receipt ran off its paper). Sandeep: "six right" heard "sixth right"; Telugu "చాట్ బాట్ ని"
+(line 4) came out near a vulgar word. Priya: a blind guess gets about 3 of 20, so counting (2 of 20) was worse than
+guessing; no hit on "Wednesday" or "Sunday: seven"; the second quarter the quietest. Changed: line 1's takes joined with no
+stop and the sting on "Wednesday" (a boom at 0); the test, how and rule cards as TV graphics over the dimmed living room
+with the BREAKING bar; "JUST THE DAY: 6/20" when said, "TOLD TO COUNT: 2/20", "a blind guess: about 3/20"; line 4 "We
+tested a small offline AI"; line 8 "six out of twenty became two"; Telugu line 4 "ఇంటర్నెట్ లేని చిన్న చాట్ బాట్ తో"
+(the take that reads "చాట్"); the gap after line 10 cut; bigger text, the receipt widened; hits on "seven" and "two";
+the middle bed lifted; the Telugu hook +1.5 dB and 1 s after the last word; the caption ask "ask it 3 times, comment all
+3". Not changed: the model name on the test card and in the pinned comment (the open model we ran, as in every demo).
+
 ## Script (English, v2) · ~45 s
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | tarun | The AI said Sunday... / [1] the calendar says Wednesday! | frame 1 as hook 1 |
 | 2 | vijaya | We picked the sixteenth because it said Sunday! [1] Twenty-five thousand, non-refundable, for a Wednesday! | the hall receipt "ADVANCE ₹25,000 · NON-REFUNDABLE · WED 16 DEC" |
 | 3 | mohan | I asked it myself! [1] "Sixteenth December: Sunday." | his phone: "16 December 2026 is a Sunday." |
-| 4 | tarun | We tested a small free AI, ten times. / [1] Sunday: seven. Tuesday: two. Wednesday: once. | OUR TEST: a small offline AI · 10 asks · tiles SUN ×7, TUE ×2, WED ×1 · try yours |
+| 4 | tarun | We tested a small offline AI, ten times. / [1] Sunday: seven. Tuesday: two. Wednesday: once. | OUR TEST: a small offline AI · 10 asks · tiles SUN ×7, TUE ×2, WED ×1 · try yours |
 | 5 | vijaya | It can't even tell the day of a date?! | |
 | 6 | tarun | It doesn't look at a calendar. [1] It writes the day that sounds right. | HOW IT ANSWERS: no calendar inside (a small AI, no tools) → the day that "sounds right" |
 | 7 | mohan | Then I'll tell it to count properly! | |
-| 8 | tarun | We told it to count. [1] It got worse: six right became two. | 20 dates · "just the day": 6 right · "count from 1 Jan": 2 right |
+| 8 | tarun | We told it to count. [1] It got worse: six out of twenty became two. | 20 dates · "just the day": 6 right · "count from 1 Jan": 2 right |
 | 9 | vijaya | So what do we do now?! | |
 | 10 | tarun | For any date, [1] open your phone's calendar. The calendar counts. The AI guesses. | the rule card: DATES & DAYS → THE CALENDAR · the AI's day: a guess |
 | 11 | mohan | Fine, let me ask it once more... / [1] Sunday, it says! | his phone "Sunday!" → frame 1 (loops) |
@@ -82,11 +96,11 @@ numbers on screen); line 10 "The calendar counts. The AI guesses."; Telugu "త�
 | 1 | tarun | చాట్ బాట్ ఆదివారం అంది... / [1] క్యాలెండర్ లో బుధవారం! |
 | 2 | vijaya | ఆదివారం అందనే పదహారో తారీఖు పెట్టాం! [1] బుధవారానికి ఇరవై ఐదు వేలు కట్టేశా, తిరిగి రావు! |
 | 3 | mohan | నేనే అడిగాను! [1] "డిసెంబర్ పదహారో తారీఖు: ఆదివారం" అంది. |
-| 4 | tarun | ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు టెస్ట్ చేశాం. / [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే. |
+| 4 | tarun | ఇంటర్నెట్ లేని చిన్న చాట్ బాట్ తో పది సార్లు టెస్ట్ చేశాం. / [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే. |
 | 5 | vijaya | ఒక తేదీ ఏ రోజో కూడా చెప్పలేదా?! |
 | 6 | tarun | అది క్యాలెండర్ చూడదు. [1] తోచిన రోజు పేరు రాసేస్తుంది. |
 | 7 | mohan | అయితే సరిగ్గా లెక్కపెట్టమని చెప్తా! |
-| 8 | tarun | లెక్కపెట్టమన్నాం. [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి రెండుకి. |
+| 8 | tarun | మేము లెక్కపెట్టమన్నాం. / [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి, రెండు కరెక్ట్. |
 | 9 | vijaya | మరి ఇప్పుడు ఏం చేయాలి?! |
 | 10 | tarun | ఏ తేదీ అయినా, [1] ఫోన్ లో క్యాలెండర్ తెరవండి. క్యాలెండర్ లెక్కపెడుతుంది, చాట్ బాట్ గెస్ కొడుతుంది. |
 | 11 | mohan | సరే, ఇంకోసారి అడుగుతా... / [1] ఆదివారమే అంటోంది! |
@@ -94,4 +108,4 @@ numbers on screen); line 10 "The calendar counts. The AI guesses."; Telugu "త�
 Telugu notes: "చాట్ బాట్" for the AI; no "ముందు" root; "పదహారో తారీఖు" (not "పదహారు ఆదివారం", "sixteen Sundays").
 
 ## Caption ask (a try-it ask: both viewers would answer it)
-Ask your AI app: "What day of the week is 16 December 2026?" Comment its answer. (It's a Wednesday.)
+Ask your AI app 3 times, in a new chat each time: "What day of the week is 16 December 2026?" Comment all 3 answers. (It's a Wednesday.)

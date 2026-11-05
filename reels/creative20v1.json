@@ -89,7 +89,7 @@
     {
      "who": "tarun",
      "file": "01_tarun.wav",
-     "text": "The A.I. said Sunday... <pause 0.35> [1] the calendar says Wednesday!",
+     "text": "The A.I. said Sunday... <pause 0.05> [1] the calendar says Wednesday!",
      "show": "The AI said Sunday... the calendar says Wednesday!",
      "maxgap": 0.28,
      "gap": 0.25,
@@ -97,7 +97,7 @@
      "tts": "The A.I. said Sunday...",
      "file2": "01b_tarun.wav",
      "tts2": "the calendar says Wednesday!",
-     "pause": 0.35,
+     "pause": 0.05,
      "gain_db": 0.5
     },
     {
@@ -126,8 +126,8 @@
    "id": "s_b",
    "type": "sk_news",
    "tail": 0.0,
-   "boost": 1.1,
-   "lift": 0.6,
+   "boost": 1.45,
+   "lift": 0.8,
    "drop_pre": [
     [
      0,
@@ -179,12 +179,12 @@
     {
      "who": "tarun",
      "file": "04_tarun.wav",
-     "text": "We tested a small free A.I., ten times. <pause 0.35> [1] Sunday: seven. Tuesday: two. Wednesday: once.",
-     "show": "We tested a small free AI, 10 times. Sunday: 7. Tuesday: 2. Wednesday: once.",
+     "text": "We tested a small offline A.I., ten times. <pause 0.35> [1] Sunday: seven. Tuesday: two. Wednesday: once.",
+     "show": "We tested a small offline AI, 10 times. Sunday: 7. Tuesday: 2. Wednesday: once.",
      "maxgap": 0.28,
      "gap": 0.9,
      "tempo": 1.15,
-     "tts": "We tested a small free A.I., ten times.",
+     "tts": "We tested a small offline A.I., ten times.",
      "file2": "04b_tarun.wav",
      "tts2": "Sunday: seven. Tuesday: two. Wednesday: once.",
      "pause": 0.35,
@@ -223,10 +223,10 @@
     {
      "who": "tarun",
      "file": "08_tarun.wav",
-     "text": "We told it to count. [1] It got worse: six right became two.",
-     "show": "We told it to count. It got worse: 6 right became 2.",
+     "text": "We told it to count. [1] It got worse: six out of twenty became two.",
+     "show": "We told it to count. It got worse: 6 out of 20 became 2.",
      "maxgap": 0.28,
-     "gap": 1.0,
+     "gap": 0.7,
      "tempo": 1.15,
      "gain_db": 0.5
     }
@@ -292,7 +292,7 @@
      "text": "For any date, [1] open your phone's calendar. The calendar counts. The A.I. guesses.",
      "show": "For any date, open your phone's calendar. The calendar counts. The AI guesses.",
      "maxgap": 0.28,
-     "gap": 1.3,
+     "gap": 0.5,
      "tempo": 1.15,
      "tts": "For any date, open your phone's calendar. The calendar counts. The A.I. guesses.",
      "gain_db": 0.5

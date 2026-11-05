@@ -16,26 +16,26 @@ LINES = {
     2: ("vijaya", "wide", "hall", "We picked the sixteenth because it said Sunday! [1] Twenty-five thousand, non-refundable, for a Wednesday!",
         "ఆదివారం అందనే పదహారో తారీఖు పెట్టాం! [1] బుధవారానికి ఇరవై ఐదు వేలు కట్టేశా, తిరిగి రావు!"),   # script review: what did they lose?
     3: ("mohan", "wide", "asked", "I asked it myself! [1] \"Sixteenth December: Sunday.\"", "నేనే అడిగాను! [1] \"డిసెంబర్ పదహారో తారీఖు: ఆదివారం\" అంది."),
-    4: ("tarun", "test", "test", "We tested a small free AI, ten times. | [1] Sunday: seven. Tuesday: two. Wednesday: once.",   # script review: "that AI" was false
-        "ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు టెస్ట్ చేశాం. | [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే."),
+    4: ("tarun", "test", "test", "We tested a small offline AI, ten times. | [1] Sunday: seven. Tuesday: two. Wednesday: once.",   # script review: "that AI" was false; render review: "free" read as free ChatGPT
+        "ఇంటర్నెట్ లేని చిన్న చాట్ బాట్ తో పది సార్లు టెస్ట్ చేశాం. | [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే."),   # render review: "చాట్ బాట్ ని" came out near a vulgar word
     5: ("vijaya", "wide", "shock", "It can't even say what day the sixteenth is?!", "ఒక తేదీ ఏ రోజో కూడా చెప్పలేదా?!"),
     6: ("tarun", "how", "how", "It doesn't look at a calendar. [1] It writes the day that sounds right.", "అది క్యాలెండర్ చూడదు. [1] తోచిన రోజు పేరు రాసేస్తుంది."),   # "సరిపోయే" read as "the correct day"
     7: ("mohan", "wide", "count", "Then I'll tell it to count properly!", "అయితే సరిగ్గా లెక్కపెట్టమని చెప్తా!"),
-    8: ("tarun", "test", "worse", "We told it to count. [1] It got worse: six right became two.", "మేము లెక్కపెట్టమన్నాం. | [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి, రెండు కరెక్ట్."),   # script review: one punchline, two numbers
+    8: ("tarun", "test", "worse", "We told it to count. [1] It got worse: six out of twenty became two.", "మేము లెక్కపెట్టమన్నాం. | [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి, రెండు కరెక్ట్."),   # script review: one punchline, two numbers   # render review: "six right" was heard "sixth right"
     9: ("vijaya", "wide", "what", "So what do we do now?!", "మరి ఇప్పుడు ఏం చేయాలి?!"),
     10: ("tarun", "rule", "rule", "For any date, [1] open your phone's calendar. The calendar counts. The AI guesses.",
          "ఏ తేదీ అయినా, [1] ఫోన్ లో క్యాలెండర్ తెరవండి. క్యాలెండర్ లెక్కపెడుతుంది, చాట్ బాట్ గెస్ కొడుతుంది."),
     11: ("mohan", "wide", "loop", "Fine, let me ask it once more... | [1] Sunday, it says!", "సరే, ఇంకోసారి అడుగుతా... | [1] ఆదివారమే అంటోంది!"),
 }
-TTS_EN = {1: "The A.I. said Sunday... | [1] the calendar says Wednesday!", 4: "We tested a small free A.I., ten times. | [1] Sunday: seven. Tuesday: two. Wednesday: once.",
+TTS_EN = {1: "The A.I. said Sunday... | [1] the calendar says Wednesday!", 4: "We tested a small offline A.I., ten times. | [1] Sunday: seven. Tuesday: two. Wednesday: once.",
           10: "For any date, [1] open your phone's calendar. The calendar counts. The A.I. guesses."}
 SHOW = {2: "We picked the 16th because it said Sunday! ₹25,000, non-refundable, for a Wednesday!", 3: "I asked it myself! \"16th December: Sunday.\"",
-        4: "We tested a small free AI, 10 times. Sunday: 7. Tuesday: 2. Wednesday: once.", 8: "We told it to count. It got worse: 6 right became 2."}
+        4: "We tested a small offline AI, 10 times. Sunday: 7. Tuesday: 2. Wednesday: once.", 8: "We told it to count. It got worse: 6 out of 20 became 2."}
 SHOW_TE = {1: "The chatbot said Sunday... the calendar says Wednesday!", 2: "We fixed the 16th because it said Sunday! I paid ₹25,000 for a Wednesday, no refund!",
-           3: "I asked it myself! \"16th December: Sunday,\" it said.", 4: "We tested a small free chatbot 10 times. Sunday 7 times. Tuesday twice. Wednesday just once.",
+           3: "I asked it myself! \"16th December: Sunday,\" it said.", 4: "We tested a small chatbot with no internet, 10 times. Sunday 7 times. Tuesday twice. Wednesday just once.",
            5: "It can't even say what day a date is?!", 6: "It doesn't look at a calendar. It writes whatever day comes to it.", 7: "Then I'll tell it to count properly!",
            8: "We told it to count. <pause 0.3> Even worse: from 6 right, to 2 right.", 9: "So what do we do now?!",
-           10: "For any date, open the calendar on your phone. The calendar counts, the chatbot guesses.", 11: "OK, let me ask once more... Sunday, it still says!"}
+           10: "For any date, <pause 0.3> open the calendar on your phone. The calendar counts, the chatbot guesses.", 11: "OK, let me ask once more... Sunday, it still says!"}
 NOCAP = set()
 PAUSES = {}
 TEMPO_EN = {"tarun": 1.15, "vijaya": 1.12, "mohan": 1.12}
@@ -45,12 +45,12 @@ TEMPO_LINE_EN = {}
 # Sound: the news sting at 0 and a hit on "Wednesday"; a ding on his phone; a whoosh and a boom into the test tiles; a
 # glitch on "got worse"; a success sting on the rule; a stop before "Sunday, it says!", the sting and the slam to frame 1.
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.0, "drop_at": [[0, 1]], "tail": 0.0}),
-          ("s_b", (4, 5, 6, 7, 8), {"boost": 1.1, "lift": 0.6, "drop_pre": [[0, 0.0, 0.6]], "tail": 0.0}),
+          ("s_b", (4, 5, 6, 7, 8), {"boost": 1.45, "lift": 0.8, "drop_pre": [[0, 0.0, 0.6]], "tail": 0.0}),   # render review: Q2 the quietest
           ("s_c", (9, 10, 11), {"outro": True, "pre": 0.3, "boost": 2.0, "lift": 0.8, "rise": 1.5, "drop_at": [[2, 1]], "tail": 0.0})]
-GAP = {1: 0.25, 2: 0.2, 3: 0.3, 4: 0.9, 5: 0.15, 6: 0.6, 7: 0.15, 8: 1.0, 9: 0.15, 10: 1.3, 11: 0.0}   # 4, 8: the test cards; 10: the rule card
+GAP = {1: 0.25, 2: 0.2, 3: 0.3, 4: 0.9, 5: 0.15, 6: 0.6, 7: 0.15, 8: 0.7, 9: 0.15, 10: 0.5, 11: 0.0}   # render review: 10's gap read as the end   # 4, 8: the test cards; 10: the rule card
 GAP_TE = {}
 GAIN = {}
-GAIN_TE = {}
+GAIN_TE = {1: 1.5}   # render review: the Telugu hook quieter than Q1
 FLAGS_TE = {"s_c": {"boost": 1.6, "rise": 1.3}}
 MAXGAP = {}
 YT = {"s_a": "The AI said Sunday", "s_b": "Our test", "s_c": "Open the calendar"}
@@ -64,7 +64,7 @@ def spec(lang="en"):
          "banner": "The AI said Sunday", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
          "musicVol": [0.42, 0.6] if not te else [0.6, 0.9],   # render review: the English bed further under the voice   # under speech / in gaps; round 2: TE bed 11 dB under the voice, EN gaps over it
          "musicDuckRamp": 9,   # ease the bed up and down over 0.3 s around each line
-         "musicFade": 0.05, "endPad": 0.3, "captionMode": "phrase", "musicEQ": [[180, -4, 1.0], [260, -9, 0.9], [2400, -5, 1.0]],   # render review: a steady 200-300 Hz band under the voice (a drone; it also hid the Telugu voice from the recogniser)
+         "musicFade": 0.05, "endPad": 0.3 if not te else 1.0, "captionMode": "phrase", "musicEQ": [[180, -4, 1.0], [260, -9, 0.9], [2400, -5, 1.0]],   # render review: a steady 200-300 Hz band under the voice (a drone; it also hid the Telugu voice from the recogniser)
          "musicPad": True, "musicGapGain": 2.0 if not te else 5.0,   # second pass: the Telugu bed 13 dB under in the gaps;   # dB in the gaps (EP46: the English bed sat 14 dB under in the gaps)
          "musicEndRamp": [0.85, 6.0], "hardCuts": True, "beatSnap": True,   # the end swell into the slam (these sat inside the comment above from Creative 17 to EP46)
          "hideTimerInHook": True, "hideTimer": True,
@@ -88,7 +88,7 @@ def spec(lang="en"):
                 ln["pauses"] = PAUSES[n]
             if " | " in ln["text"]:   # two takes; the text keeps its cues, split where the second take starts
                 p1, p2 = ln["text"].split(" | ")
-                pz = {1: 0.35, 4: 0.35, 11: 0.7}.get(n, 0.25)   # 11: the stop before "Sunday, it says!"   # the stop before the punchline
+                pz = {1: 0.05, 4: 0.35, 11: 0.7}.get(n, 0.25)   # 11: the stop before "Sunday, it says!"   # the stop before the punchline
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             g = 0.5 + (GAIN_TE if te else GAIN).get(n, 0.0)

@@ -45,7 +45,7 @@ const room = (c: Ctx, W: number, H: number) => {
   c.font = SANS(18, 700); c.fillStyle = INK; ["M T W T F S S", "14 15 16 17 18 19 20"].forEach((t, q) => c.fillText(t, 910, 980 + q * 30));
   c.strokeStyle = RED; c.lineWidth = 4; c.beginPath(); c.ellipse(897, 1004, 15, 13, 0, 0, 7); c.stroke();   // 16 circled, under W
   c.fillStyle = "#fef3c7"; c.fillRect(40, 950, 260, 70); c.strokeStyle = "#a16207"; c.lineWidth = 3; c.strokeRect(40, 950, 260, 70);   // the card stack (stills: it hid behind her)
-  c.font = SANS(30, 900); c.fillStyle = "#a16207"; c.textAlign = "center"; c.fillText("CARDS ×200", 170, 996);
+  c.font = SANS(36, 900); c.fillStyle = "#a16207"; c.textAlign = "center"; c.fillText("CARDS ×200", 170, 998);
 };
 const breaking = (c: Ctx, W: number, H: number, f: number) => {   // the red bar and the LIVE bug
   c.fillStyle = RED; c.fillRect(0, 1770, W, 90);   // stills: under the captions, not on them
@@ -85,12 +85,17 @@ const phoneCard = (c: Ctx, x: number, y: number, w: number, title: string, lines
   lines.forEach((t, q) => { let fs = 46; c.font = SANS(fs, 900); while (c.measureText(t).width > w - 80 && fs > 26) { fs -= 2; c.font = SANS(fs, 900); } c.fillStyle = fg; c.fillText(t, x + 40, y + 122 + q * 60); });
   c.restore();
 };
-const dark = (c: Ctx, W: number, H: number, title: string, sub: string[]) => {
-  c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
+const dark = (c: Ctx, W: number, H: number, title: string, sub: string[], f = 0, r?: () => number) => {
+  if (r) {   // render review: the parody stays on: TV graphics over the dimmed living room, the BREAKING bar still running
+    room(c, W, H);
+    (["vijaya", "mohan", "tarun"] as BillWho[]).forEach((who) => { const [x, y, sc] = SPOT[who]; person(c, who, [x, y], sc, who === "vijaya" ? "shock" : "calm", who === "vijaya" ? "up" : "rest", false, r); });
+    c.fillStyle = "rgba(15,23,42,0.84)"; c.fillRect(0, 0, W, H);
+    breaking(c, W, H, f);
+  } else { c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H); }
   c.fillStyle = RED; c.fillRect(0, 250, W, 12);
   let fs = 62; c.font = SANS(fs, 900); while (c.measureText(title).width > W - 80 && fs > 36) { fs -= 2; c.font = SANS(fs, 900); }
   c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(title, W / 2, 340);
-  c.font = SANS(36, 700); c.fillStyle = "#f8fafc"; sub.forEach((t, i) => c.fillText(t, W / 2, 405 + i * 50));
+  c.font = SANS(40, 800); c.fillStyle = "#f8fafc"; sub.forEach((t, i) => c.fillText(t, W / 2, 410 + i * 54));
 };
 const card = (c: Ctx, t: string, sub: string, x: number, y: number, w: number, h: number, bg: string, fg: string, k: number) => {
   if (k <= 0) return;
@@ -124,11 +129,11 @@ const StNews: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     if (["test", "how", "rule"].includes(b.shot) && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.3} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("s")} at={0} src={STING} vol={te ? 0.45 : 0.4} />, <Sfx key={k("a")} at={cue(i, 1, 0.5) - 4} src="reel/sfx_boom.wav" vol={te ? 0.85 : 0.8} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.35} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b0")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.45} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) - 6} src={STING} vol={te ? 0.5 : 0.45} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.35} />);   // render review: the sting on "Wednesday"
     if (b.prop === "hall") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 6} src="audio/sfx_chaching.wav" vol={0.3} />);
     if (b.prop === "asked") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) - 6} src="audio/gag_ding.wav" vol={0.25} />);
-    if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("s")} at={Math.max(0, at - 24)} src={STING} vol={0.3} />, ...TILES.map((_, q) => <Sfx key={k("t" + q)} at={c1 + q * 22} src="audio/sfx_tick.wav" vol={0.3} />)); }
-    if (b.prop === "worse") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - 4} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />, <Sfx key={k("g")} at={c1 + 10} src="reel/sfx_glitch.wav" vol={0.25} />); }
+    if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("s")} at={Math.max(0, at - 24)} src={STING} vol={0.3} />, <Sfx key={k("h")} at={c1 - 4} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.6} />, ...TILES.map((_, q) => <Sfx key={k("t" + q)} at={c1 + q * 22} src="audio/sfx_tick.wav" vol={0.3} />)); }   // render review: a hit on "Sunday: seven"
+    if (b.prop === "worse") { const c8 = cue(i, 1, 0.8); sfx.push(<Sfx key={k("n")} at={c8 - 4} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.65} />, <Sfx key={k("g")} at={c8 + 6} src="reel/sfx_glitch.wav" vol={0.25} />); }   // render review: the hit on "two", not after it
     if (b.prop === "rule") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4) - 6} src="audio/sfx_success.wav" vol={0.3} />, <Sfx key={k("a")} at={cue(i, 1, 0.4) + 24} src={CLAP} vol={0.35} />);
     if (b.prop === "loop") {
       const slam = end + HOLD, c1 = cue(i, 1, 0.6);
@@ -155,10 +160,10 @@ const StNews: React.FC<SP> = ({ s }) => {
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
         const faceOf = (who: BillWho, md: [BillMood, BillArms]) => inset(c, who, md, b.who === who && talking, r);
         if (b.shot === "test") {
-          dark(c, W, H, "OUR TEST", ["a small offline AI, no tools (Qwen2.5 7B) · try yours"]);
+          dark(c, W, H, "OUR TEST", ["a small offline AI, no tools (Qwen2.5 7B)", "big apps may differ: try yours"], f, r);
           const c1 = cu(1, 0.45);
           if (b.prop === "test") {
-            c.save(); c.font = SANS(44, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("\"What day of the week is", W / 2, 540); c.fillText("16 December 2026?\" · 10 asks", W / 2, 600); c.restore();
+            c.save(); c.font = SANS(50, 900); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("\"What day of the week is", W / 2, 560); c.fillText("16 December 2026?\" · 10 asks", W / 2, 624); c.restore();
             TILES.forEach(([d, v, ok], q) => {
               const k = seg(f, c1 + q * 22 - 4, c1 + q * 22 + 4); if (k <= 0) return;
               const x = 90 + q * 320;
@@ -171,28 +176,28 @@ const StNews: React.FC<SP> = ({ s }) => {
             c.save(); c.globalAlpha = seg(f, c1 + 60, c1 + 68); c.font = SANS(48, 900); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText("the right day: WEDNESDAY", W / 2, 1080); c.restore();
             faceOf("tarun", ["excited", "up"]);
           } else {   // "worse": two numbers
-            card(c, "20 DATES · \"JUST THE DAY\"", "", W / 2, 520, W - 160, 110, "#1e293b", "#e2e8f0", 1);
-            card(c, "6 RIGHT", "", W / 2, 680, 560, 150, "#fef3c7", INK, seg(f, ln.from + 2, ln.from + 10));
-            card(c, "TOLD TO COUNT: 2 RIGHT", "\"count from 1 January 2026, a Thursday\"", W / 2, 900, W - 120, 200, "#fee2e2", "#991b1b", seg(f, c1 - 4, c1 + 6));
-            tag(c, "worse!", W / 2 + 300, 790, 64, AMBER, INK, 0.06, seg(f, c1 + 8, c1 + 14));
+            card(c, "JUST THE DAY: 6/20", "20 dates, Dec 2026 to Jun 2027", W / 2, 640, W - 120, 190, "#fef3c7", INK, seg(f, c1 - 2, c1 + 6));   // render review: 6 of how many? shown when said
+            card(c, "TOLD TO COUNT: 2/20", "\"count from 1 January 2026, a Thursday\"", W / 2, 880, W - 120, 190, "#fee2e2", "#991b1b", seg(f, cu(1, 0.8) - 4, cu(1, 0.8) + 4));
+            card(c, "a blind guess: about 3/20", "", W / 2, 1090, W - 240, 120, "#1e293b", "#93c5fd", seg(f, cu(1, 0.8) + 14, cu(1, 0.8) + 22));   // render review: a number people can feel
+            tag(c, "worse!", W / 2 + 330, 770, 64, AMBER, INK, 0.06, seg(f, cu(1, 0.8) + 2, cu(1, 0.8) + 8));
             faceOf("mohan", ["shock", "phone"]);
           }
           return;
         }
         if (b.shot === "how") {
-          dark(c, W, H, "HOW IT ANSWERS", ["a small AI with no tools"]);
+          dark(c, W, H, "HOW IT ANSWERS", ["a small AI with no tools"], f, r);
           const c1 = cu(1, 0.4);
-          card(c, "✗ NO CALENDAR INSIDE", "it doesn't count the days", W / 2, 580, W - 160, 170, "#fee2e2", "#991b1b", seg(f, ln.from + 2, ln.from + 10));
-          card(c, "→ THE DAY THAT \"SOUNDS RIGHT\"", "a different one on different asks", W / 2, 820, W - 160, 170, "#fef3c7", INK, seg(f, c1 - 4, c1 + 4));
+          card(c, "✗ NO CALENDAR INSIDE", "it doesn't count the days", W / 2, 600, W - 120, 200, "#fee2e2", "#991b1b", seg(f, ln.from + 2, ln.from + 10));
+          card(c, "→ THE DAY THAT \"SOUNDS RIGHT\"", "a different one on different asks", W / 2, 860, W - 120, 200, "#fef3c7", INK, seg(f, c1 - 4, c1 + 4));
           faceOf("tarun", ["calm", "rest"]);
           return;
         }
         if (b.shot === "rule") {
-          dark(c, W, H, "THE RULE", []);
+          dark(c, W, H, "THE RULE", [], f, r);
           const c1 = cu(1, 0.4);
-          card(c, "DATES & DAYS → YOUR PHONE'S CALENDAR", "it counts", W / 2, 520, W - 100, 180, "#dcfce7", "#14532d", seg(f, c1 - 4, c1 + 4));
-          card(c, "THE AI'S DAY: A GUESS", "check it on the calendar", W / 2, 760, W - 160, 160, "#fee2e2", "#991b1b", seg(f, c1 + 20, c1 + 28));
-          c.save(); c.globalAlpha = seg(f, c1 + 40, c1 + 48); c.font = SANS(36, 700); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("building with AI? work dates out in code", W / 2, 940); c.restore();
+          card(c, "DATES & DAYS → YOUR PHONE'S CALENDAR", "it counts", W / 2, 560, W - 80, 200, "#dcfce7", "#14532d", seg(f, ln.from, ln.from + 8));   // render review: the card sat empty
+          card(c, "THE AI'S DAY: A GUESS", "check it on the calendar", W / 2, 810, W - 120, 200, "#fee2e2", "#991b1b", seg(f, c1 + 20, c1 + 28));
+          c.save(); c.globalAlpha = seg(f, c1 + 40, c1 + 48); c.font = SANS(44, 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("building with AI? work dates out in code", W / 2, 1020); c.restore();
           faceOf("tarun", ["happy", "up"]);
           return;
         }
@@ -221,10 +226,10 @@ const StNews: React.FC<SP> = ({ s }) => {
         }
         if (b.prop === "hall") {
           c.save(); c.globalAlpha = seg(p, 0.05, 0.2); c.translate(W / 2, 600); c.rotate(0.03);
-          c.fillStyle = "#fffdf5"; rrect(c, -360, -190, 720, 380, 18); c.fill(); c.strokeStyle = "#475569"; c.lineWidth = 4; rrect(c, -340, -170, 680, 340, 12); c.stroke();
+          c.fillStyle = "#fffdf5"; rrect(c, -420, -190, 840, 380, 18); c.fill(); c.strokeStyle = "#475569"; c.lineWidth = 4; rrect(c, -400, -170, 800, 340, 12); c.stroke();   // render review: the text ran off the paper
           c.font = SANS(36, 800); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("Function hall · advance receipt", 0, -110);
-          c.font = SANS(84, 900); c.fillStyle = INK; c.fillText("ADVANCE ₹25,000", 0, 0);
-          c.font = SANS(44, 900); c.fillStyle = RED; c.fillText("NON-REFUNDABLE · WED 16 DEC", 0, 90);
+          c.font = SANS(76, 900); c.fillStyle = INK; c.fillText("ADVANCE ₹25,000", 0, 0);
+          c.font = SANS(40, 900); c.fillStyle = RED; c.fillText("NON-REFUNDABLE · WED 16 DEC", 0, 90);
           c.restore();
         }
         if (b.prop === "asked") phoneCard(c, 90, 420, 900, "AI Chat · Mohan's phone", ["\"16 December 2026", "is a Sunday.\""], seg(p, 0.25, 0.4));
