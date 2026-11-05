@@ -1,0 +1,631 @@
+{
+ "id": "howto03te",
+ "title": "HOW TO 03: test 3 AIs before you pay (Telugu audio)",
+ "label": "HOW TO 03",
+ "banner": "Test AIs before you pay",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.6,
+  0.9
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.4,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   180,
+   -4,
+   1.0
+  ],
+  [
+   260,
+   -8,
+   0.9
+  ],
+  [
+   2400,
+   -3,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 4.0,
+ "musicEndRamp": [
+  0.92,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_test",
+   "tail": 0.1,
+   "boost": 1.4,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "app",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "title",
+      "n": 2
+     }
+    ],
+    "board": [
+     {
+      "name": "SMALL",
+      "gb": 1.1,
+      "lic": "Qwen2.5 1.5B · Apache 2.0",
+      "per": {
+       "bill": 0,
+       "gst": 3,
+       "reorder": 2,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 8,
+      "sec": 11.5
+     },
+     {
+      "name": "MIDDLE",
+      "gb": 2.4,
+      "lic": "Phi-3 mini · MIT",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 23.7
+     },
+     {
+      "name": "BIG",
+      "gb": 4.7,
+      "lic": "Qwen2.5 7B · Apache 2.0",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 36.5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "₹428 or ₹518? Same bill",
+     "title": "₹428 or ₹518? Same bill",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "నాలుగొందల ఇరవై ఎనిమిదా? ఐదొందల పద్దెనిమిదా?! [1] ఒకే బిల్లు!",
+     "show": "₹428? ₹518?! The same bill!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.05,
+     "must": [
+      [
+       "नालुग",
+       "नालग",
+       "नालुगों",
+       "नालुगो"
+      ],
+      [
+       "ऐदों",
+       "ऐदो",
+       "ऐदॊ",
+       "आइदों",
+       "ऐदु"
+      ],
+      [
+       "बिल्ल",
+       "बिल"
+      ]
+     ],
+     "gain_db": 1.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "ఏ చాట్ బాట్ ప్లాన్ కైనా డబ్బులు కట్టేలోపు, [1] మీ సొంత ప్రశ్నలతో టెస్ట్ చేయండి. నాలుగు స్టెప్స్.",
+     "show": "Before you pay for any chatbot plan, test it with your own questions. Four steps.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.05,
+     "must": [
+      [
+       "प्लान",
+       "प्लैन"
+      ],
+      [
+       "टेस्ट",
+       "टेस्त"
+      ]
+     ],
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_test",
+   "tail": 0.1,
+   "lift": 0.6,
+   "pre": 0.3,
+   "boost": 1.2,
+   "drop_at": [
+    [
+     4,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step2",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step3",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "small",
+      "n": 6
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "telugu",
+      "n": 7
+     }
+    ],
+    "board": [
+     {
+      "name": "SMALL",
+      "gb": 1.1,
+      "lic": "Qwen2.5 1.5B · Apache 2.0",
+      "per": {
+       "bill": 0,
+       "gst": 3,
+       "reorder": 2,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 8,
+      "sec": 11.5
+     },
+     {
+      "name": "MIDDLE",
+      "gb": 2.4,
+      "lic": "Phi-3 mini · MIT",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 23.7
+     },
+     {
+      "name": "BIG",
+      "gb": 4.7,
+      "lic": "Qwen2.5 7B · Apache 2.0",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 36.5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The four steps",
+     "title": "The four steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "ఒకటి: [2] మీ పనిలోంచి ఐదు ప్రశ్నలు. [1] సరైన జవాబులు మొదట రాసి పెట్టుకోండి, ఏవి తప్పు కాకూడదో కూడా.",
+     "show": "One: five questions from your work. Write the right answers first, and which ones must not be wrong.",
+     "maxgap": 0.28,
+     "gap": 1.2,
+     "tempo": 1.05,
+     "must": [
+      [
+       "ऐदु",
+       "आइदु",
+       "5"
+      ],
+      [
+       "प्रश्न",
+       "प्रश",
+       "प्रष"
+      ],
+      [
+       "जवाब",
+       "जवब"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "రెండు: [2] ప్రతి చాట్ బాట్ కీ అవే మాటలు, [1] మూడు సార్లు, ప్రతిసారీ కొత్త చాట్ లో.",
+     "show": "Two: the same words to each chatbot, three times, a new chat each time.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.05,
+     "must": [
+      [
+       "मूडु",
+       "मूड",
+       "मुडु"
+      ],
+      [
+       "चाट",
+       "चैट",
+       "चार्ट",
+       "चात"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "05_ai.wav",
+     "text": "మూడు: [2] ప్రతి జవాబుకీ మీరే మార్కులు వేయండి. [1] కరెక్టా, తప్పా.",
+     "show": "Three: mark every answer yourself. Right or wrong.",
+     "maxgap": 0.28,
+     "gap": 1.3,
+     "tempo": 1.05,
+     "must": [
+      [
+       "मार्कु",
+       "मार्क",
+       "मारकु"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "06_ravi.wav",
+     "text": "చిన్నది ప్రతి స్టెప్ కరెక్ట్ గా చేసింది... [1] టోటల్ మాత్రం మూడు సార్లూ తప్పు!",
+     "show": "The small one did every step right... but the total was wrong all three times!",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.05,
+     "must": [
+      [
+       "चिन्न",
+       "चिन"
+      ],
+      [
+       "टोटल",
+       "टोटल्",
+       "टोतल"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "మరి తెలుగు మెసేజ్? [1] ఈ చిన్న ఫ్రీ చాట్ బాట్లు: తొమ్మిదికి సున్నా. <pause 0.3> పెద్దది పైగా, దాని తెలుగులో లేనిదే ఇంగ్లీష్ ట్రాన్స్లేషన్ గా రాసింది.",
+     "show": "And the Telugu message? These small free chatbots: 0 of 9. <pause 0.3> The big one even wrote, as an English translation, what its Telugu doesn't say.",
+     "maxgap": 0.28,
+     "gap": 0.9,
+     "tempo": 1.05,
+     "must": [
+      [
+       "तेलुगु",
+       "तेलगु",
+       "तेलुग"
+      ],
+      [
+       "तोम्मि",
+       "तॊम्मि",
+       "तम्मि",
+       "तोमि",
+       "तुम्मि",
+       "9"
+      ],
+      [
+       "सुन्न",
+       "सुना",
+       "सून्न"
+      ]
+     ],
+     "tts": "మరి తెలుగు మెసేజ్? ఈ చిన్న ఫ్రీ చాట్ బాట్లు: తొమ్మిదికి సున్నా.",
+     "file2": "07b_ai.wav",
+     "tts2": "పెద్దది పైగా, దాని తెలుగులో లేనిదే ఇంగ్లీష్ ట్రాన్స్లేషన్ గా రాసింది.",
+     "pause": 0.3,
+     "must2": [
+      [
+       "ट्रान्स",
+       "ट्रांस",
+       "ट्रैन्स",
+       "ट्रान"
+      ],
+      [
+       "इंग्ली",
+       "इंग्लि",
+       "इंगली"
+      ]
+     ],
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_test",
+   "tail": 0.0,
+   "lift": 1.0,
+   "pre": 0.3,
+   "outro": true,
+   "boost": 1.5,
+   "rise": 1.3,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "biggest",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step4",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "save",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "board": [
+     {
+      "name": "SMALL",
+      "gb": 1.1,
+      "lic": "Qwen2.5 1.5B · Apache 2.0",
+      "per": {
+       "bill": 0,
+       "gst": 3,
+       "reorder": 2,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 8,
+      "sec": 11.5
+     },
+     {
+      "name": "MIDDLE",
+      "gb": 2.4,
+      "lic": "Phi-3 mini · MIT",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 23.7
+     },
+     {
+      "name": "BIG",
+      "gb": 4.7,
+      "lic": "Qwen2.5 7B · Apache 2.0",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 36.5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which one to keep",
+     "title": "Which one to keep",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "08_ravi.wav",
+     "text": "అంటే, పెద్దదే గెలుస్తుందా?",
+     "show": "So, the big one wins?",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.05,
+     "must": [
+      [
+       "पेद्द",
+       "पेद",
+       "पॆद्द"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "నాలుగు: [2] మీ టెస్ట్ పాస్ అయినదే ఉంచుకోండి. <pause 0.3> [1] బిల్లులకి, స్టాక్ కి, మధ్యది పెద్దదానితో సమానం. తెలుగుకి, ఏదీ పాస్ కాలేదు.",
+     "show": "Four: keep the one that passes your test. <pause 0.3> For bills and stock, the middle one equals the big one. For Telugu, none passed.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.05,
+     "must": [
+      [
+       "पास"
+      ]
+     ],
+     "tts": "నాలుగు: మీ టెస్ట్ పాస్ అయినదే ఉంచుకోండి.",
+     "file2": "09b_ai.wav",
+     "tts2": "బిల్లులకి, స్టాక్ కి, మధ్యది పెద్దదానితో సమానం. తెలుగుకి, ఏదీ పాస్ కాలేదు.",
+     "pause": 0.3,
+     "must2": [
+      [
+       "मध्य",
+       "मद्य",
+       "मद्ध"
+      ],
+      [
+       "तेलुगु",
+       "तेलगु",
+       "तेलुग"
+      ]
+     ],
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "ఆ తెలుగు ప్రశ్న ఫ్రీ యాప్స్ ని అడగండి. <pause 0.3> [1] ఫ్రీ యాప్ ఒక్కటీ పాస్ కాకపోతేనే డబ్బులు కట్టండి, పెయిడ్ దాన్ని కూడా ఇలాగే టెస్ట్ చేయండి.",
+     "show": "Ask that Telugu question to the free apps. <pause 0.3> Pay only if not one free app passes, and test the paid one the same way.",
+     "maxgap": 0.28,
+     "gap": 1.6,
+     "tempo": 1.05,
+     "must": [
+      [
+       "तेलुगु",
+       "तेलगु",
+       "तेलुग"
+      ],
+      [
+       "फ्री",
+       "फ्रि"
+      ]
+     ],
+     "tts": "ఆ తెలుగు ప్రశ్న ఫ్రీ యాప్స్ ని అడగండి.",
+     "file2": "10b_ai.wav",
+     "tts2": "ఫ్రీ యాప్ ఒక్కటీ పాస్ కాకపోతేనే డబ్బులు కట్టండి, పెయిడ్ దాన్ని కూడా ఇలాగే టెస్ట్ చేయండి.",
+     "pause": 0.3,
+     "must2": [
+      [
+       "पेड",
+       "पेयि",
+       "पेइड"
+      ],
+      [
+       "टेस्ट",
+       "टेस्त"
+      ]
+     ],
+     "gain_db": -0.5
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "ఒక్క నిమిషం... నీది ఏ బ్రెయిన్?",
+     "show": "Wait a minute... which brain is yours?",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.05,
+     "must": [
+      [
+       "ब्रेन",
+       "ब्रैन",
+       "ब्रेयिन",
+       "ब्रेइन"
+      ]
+     ],
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "చిన్నదే. [1] నాలుగొందల ఇరవై ఎనిమిది.",
+     "show": "The small one. ₹428.",
+     "maxgap": 0.28,
+     "gap": 0.16,
+     "tempo": 1.05,
+     "must": [
+      [
+       "चिन्न",
+       "चिन"
+      ],
+      [
+       "नालुग",
+       "नालग",
+       "नालुगों",
+       "नालुगो"
+      ]
+     ],
+     "gain_db": -1.0
+    }
+   ]
+  }
+ ]
+}
