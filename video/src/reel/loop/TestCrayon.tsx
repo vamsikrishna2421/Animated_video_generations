@@ -65,7 +65,9 @@ const stepHead = (c: Ctx, W: number, n: number | string, t: string, k: number) =
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
   c.fillStyle = "#facc15"; c.fillRect(0, 250, W, 110);
-  c.font = SANS(60, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(typeof n === "number" ? `STEP ${n} · ${t}` : t, W / 2, 328);
+  const txt = typeof n === "number" ? `STEP ${n} · ${t}` : t;
+  let fs = 60; c.font = SANS(fs, 900); while (c.measureText(txt).width > W - 60 && fs > 36) { fs -= 2; c.font = SANS(fs, 900); }   // stills: step 4's header was clipped
+  c.fillStyle = INK; c.textAlign = "center"; c.fillText(txt, W / 2, 328);
   c.restore();
 };
 const qList = (c: Ctx, W: number, y: number, f: number, f0: number, step: number) => {
@@ -136,9 +138,9 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number) => {
   c.font = SANS(36, 700); c.fillStyle = "#475569"; c.fillText("test an AI before you pay", 0, -450);
   const rows: [string, string, string][] = [
     ["1", "5 questions from YOUR work", "write the right answers first"],
-    ["2", "the same words to each AI", "a new chat every time"],
-    ["3", "mark ✓ ✗ yourself", "and note the seconds"],
-    ["4", "keep the one that passes", "none? try the free apps, then pay; test the paid one too"],
+    ["2", "the same words to each AI", "3 times, a new chat every time"],
+    ["3", "mark ✓ ✗ yourself", "the must-be-exact ones decide"],
+    ["4", "keep the one that passes", "none passes? try the free apps; pay last"],
   ];
   rows.forEach(([num, head, note], i) => {
     const q = clamp((f - f0 - 6 - i * 6) / 6); if (q <= 0) return;
@@ -195,10 +197,10 @@ const StTest: React.FC<SP> = ({ s }) => {
           c.save(); c.translate(W / 2, 1000); c.translate(-540, -800);
           shop(c, r); ravi(c, "yell", "up", b.prop === "hook" && mouth, p, f, r); counter(c, r);
           c.restore();
-          c.save(); c.font = SANS(40, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SAME BILL · TWO FREE AIs", W / 2, 230); c.restore();
-          answer(c, 40, 260, 490, "FREE AI #1", "₹428", false, 1, false);   // script review: only the two sums, big
-          answer(c, 550, 260, 490, "FREE AI #2", "₹518", true, 1, false);
-          tag(c, "RAVI LOSES ₹90", W / 2, 780, 76, "#fee2e2", "#991b1b", -0.04, 1);
+          c.save(); c.font = SANS(40, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SAME BILL · TWO FREE AIs", W / 2, 290); c.restore();   // stills: under the banner at 230
+          answer(c, 40, 320, 490, "FREE AI #1", "₹428", false, 1, false);   // script review: only the two sums, big
+          answer(c, 550, 320, 490, "FREE AI #2", "₹518", true, 1, false);
+          tag(c, "RAVI LOSES ₹90", W / 2, 1270, 80, "#fee2e2", "#991b1b", -0.04, 1);   // stills: on the counter, not his eyes
           if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, endL + HOLD, endL + HOLD + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
           return;
         }
@@ -236,6 +238,7 @@ const StTest: React.FC<SP> = ({ s }) => {
               c.restore();
               tag(c, "THE TELUGU DOESN'T SAY THIS", W / 2, 1010, 56, "#fee2e2", "#991b1b", -0.03, seg(f, c1 + 30, c1 + 38));
             }
+            if (k > 0) { c.fillStyle = "#1e293b"; c.fillRect(0, 1120, W, 260); }   // stills: the totals showed through
             c.save(); c.globalAlpha = seg(f, c1 + 10, c1 + 18); c.font = SANS(64, 900); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("Telugu: 0 of 9", W / 2, 1210); c.font = SANS(36, 700); c.fillStyle = "#cbd5e1"; c.fillText("3 small free AIs × 3 tries", W / 2, 1270); c.restore();
           }
           if (b.prop === "step4") {
@@ -280,7 +283,7 @@ const StTest: React.FC<SP> = ({ s }) => {
           tag(c, "every step right · the sum wrong", W / 2, 820, 54, "#fee2e2", "#991b1b", -0.02, seg(f, c1 - 4, c1 + 4));
           tag(c, "tries: ₹428 · ₹418 · ₹428", W / 2, 920, 50, "#fef3c7", INK, 0.02, seg(f, c1 + 8, c1 + 14));
         }
-        if (b.prop === "biggest") bubble(c, 330, 560, "Biggest one wins?", 84, seg(p, 0.05, 0.2), COL.yellow);
+        if (b.prop === "biggest") bubble(c, 330, 560, "The big one wins?", 84, seg(p, 0.05, 0.2), COL.yellow);
         if (b.prop === "save") saveCard(c, W, seg(f, ln.from - 4, ln.from + 4), ln.from - 4, f);
         if (b.prop === "which") bubble(c, 330, 560, "Which brain are YOU?", 80, seg(p, 0.05, 0.2), "#e0e7ff");
         if (b.prop === "loop") tag(c, `the shop AI: ${ais[0].name}, ${ais[0].gb} GB · 8 of 15`, W / 2, 470, 56, "#fee2e2", "#991b1b", -0.03, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 4));

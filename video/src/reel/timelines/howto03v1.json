@@ -1,0 +1,1244 @@
+{
+ "id": "howto03v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Test AIs before you pay",
+ "musicVol": [
+  0.44,
+  0.75
+ ],
+ "title": "HOW TO 03: test 3 AIs before you pay",
+ "handle": "@ai_maastaaru",
+ "label": "HOW TO 03",
+ "fps": 30,
+ "musicDrops": [
+  [
+   899,
+   923
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   266,
+   1.4
+  ],
+  [
+   266,
+   1186,
+   1.2
+  ],
+  [
+   1186,
+   1880,
+   1.5
+  ],
+  [
+   1186,
+   1880,
+   1.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "totalFrames": 1880,
+ "music": "reel/howto03v1/score.wav",
+ "scenes": [
+  {
+   "id": "h_a",
+   "type": "sk_test",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "app",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "title",
+      "n": 2
+     }
+    ],
+    "board": [
+     {
+      "name": "SMALL",
+      "gb": 1.1,
+      "lic": "Qwen2.5 1.5B · Apache 2.0",
+      "per": {
+       "bill": 0,
+       "gst": 3,
+       "reorder": 2,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 8,
+      "sec": 11.5
+     },
+     {
+      "name": "MIDDLE",
+      "gb": 2.4,
+      "lic": "Phi-3 mini · MIT",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 23.7
+     },
+     {
+      "name": "BIG",
+      "gb": 4.7,
+      "lic": "Qwen2.5 7B · Apache 2.0",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 36.5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "₹428 or ₹518? Same bill",
+     "title": "₹428 or ₹518? Same bill",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 266,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto03v1/line_01.wav",
+     "from": 10,
+     "frames": 94,
+     "words": [
+      {
+       "w": "₹428,",
+       "from": 16,
+       "to": 26
+      },
+      {
+       "w": "or",
+       "from": 26,
+       "to": 35
+      },
+      {
+       "w": "₹518?!",
+       "from": 35,
+       "to": 48
+      },
+      {
+       "w": "Same",
+       "from": 48,
+       "to": 79
+      },
+      {
+       "w": "bill!",
+       "from": 79,
+       "to": 90
+      }
+     ],
+     "cues": {
+      "1": 79
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_02.wav",
+     "from": 112,
+     "frames": 125,
+     "words": [
+      {
+       "w": "Before",
+       "from": 113,
+       "to": 122
+      },
+      {
+       "w": "you",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "buy",
+       "from": 127,
+       "to": 132
+      },
+      {
+       "w": "an",
+       "from": 132,
+       "to": 136
+      },
+      {
+       "w": "AI",
+       "from": 136,
+       "to": 139
+      },
+      {
+       "w": "plan,",
+       "from": 139,
+       "to": 147
+      },
+      {
+       "w": "test",
+       "from": 147,
+       "to": 153
+      },
+      {
+       "w": "it",
+       "from": 153,
+       "to": 166
+      },
+      {
+       "w": "on",
+       "from": 166,
+       "to": 169
+      },
+      {
+       "w": "your",
+       "from": 169,
+       "to": 176
+      },
+      {
+       "w": "own",
+       "from": 176,
+       "to": 180
+      },
+      {
+       "w": "questions.",
+       "from": 180,
+       "to": 194
+      },
+      {
+       "w": "Four",
+       "from": 194,
+       "to": 200
+      },
+      {
+       "w": "steps.",
+       "from": 200,
+       "to": 228
+      }
+     ],
+     "cues": {
+      "1": 148
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_b",
+   "type": "sk_test",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step1",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step2",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step3",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "small",
+      "n": 6
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "telugu",
+      "n": 7
+     }
+    ],
+    "board": [
+     {
+      "name": "SMALL",
+      "gb": 1.1,
+      "lic": "Qwen2.5 1.5B · Apache 2.0",
+      "per": {
+       "bill": 0,
+       "gst": 3,
+       "reorder": 2,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 8,
+      "sec": 11.5
+     },
+     {
+      "name": "MIDDLE",
+      "gb": 2.4,
+      "lic": "Phi-3 mini · MIT",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 23.7
+     },
+     {
+      "name": "BIG",
+      "gb": 4.7,
+      "lic": "Qwen2.5 7B · Apache 2.0",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 36.5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The four steps",
+     "title": "The four steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 266,
+   "frames": 920,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_03.wav",
+     "from": 9,
+     "frames": 168,
+     "words": [
+      {
+       "w": "One:",
+       "from": 11,
+       "to": 16
+      },
+      {
+       "w": "five",
+       "from": 16,
+       "to": 33
+      },
+      {
+       "w": "questions",
+       "from": 33,
+       "to": 55
+      },
+      {
+       "w": "from",
+       "from": 55,
+       "to": 60
+      },
+      {
+       "w": "your",
+       "from": 60,
+       "to": 65
+      },
+      {
+       "w": "work.",
+       "from": 65,
+       "to": 82
+      },
+      {
+       "w": "Write",
+       "from": 82,
+       "to": 88
+      },
+      {
+       "w": "the",
+       "from": 88,
+       "to": 92
+      },
+      {
+       "w": "right",
+       "from": 92,
+       "to": 98
+      },
+      {
+       "w": "answers",
+       "from": 98,
+       "to": 106
+      },
+      {
+       "w": "first,",
+       "from": 106,
+       "to": 131
+      },
+      {
+       "w": "and",
+       "from": 131,
+       "to": 135
+      },
+      {
+       "w": "which",
+       "from": 135,
+       "to": 141
+      },
+      {
+       "w": "ones",
+       "from": 141,
+       "to": 146
+      },
+      {
+       "w": "it",
+       "from": 146,
+       "to": 148
+      },
+      {
+       "w": "can't",
+       "from": 148,
+       "to": 154
+      },
+      {
+       "w": "get",
+       "from": 154,
+       "to": 158
+      },
+      {
+       "w": "wrong.",
+       "from": 158,
+       "to": 169
+      }
+     ],
+     "cues": {
+      "2": 16,
+      "1": 82
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_04.wav",
+     "from": 213,
+     "frames": 123,
+     "words": [
+      {
+       "w": "Two:",
+       "from": 214,
+       "to": 219
+      },
+      {
+       "w": "the",
+       "from": 219,
+       "to": 232
+      },
+      {
+       "w": "same",
+       "from": 232,
+       "to": 237
+      },
+      {
+       "w": "words",
+       "from": 237,
+       "to": 244
+      },
+      {
+       "w": "to",
+       "from": 244,
+       "to": 251
+      },
+      {
+       "w": "each",
+       "from": 251,
+       "to": 262
+      },
+      {
+       "w": "AI,",
+       "from": 262,
+       "to": 266
+      },
+      {
+       "w": "3",
+       "from": 266,
+       "to": 268
+      },
+      {
+       "w": "times,",
+       "from": 268,
+       "to": 287
+      },
+      {
+       "w": "a",
+       "from": 287,
+       "to": 289
+      },
+      {
+       "w": "new",
+       "from": 289,
+       "to": 303
+      },
+      {
+       "w": "chat",
+       "from": 303,
+       "to": 308
+      },
+      {
+       "w": "each",
+       "from": 308,
+       "to": 313
+      },
+      {
+       "w": "time.",
+       "from": 313,
+       "to": 329
+      }
+     ],
+     "cues": {
+      "2": 219,
+      "1": 265
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_05.wav",
+     "from": 355,
+     "frames": 100,
+     "words": [
+      {
+       "w": "Three:",
+       "from": 360,
+       "to": 377
+      },
+      {
+       "w": "mark",
+       "from": 377,
+       "to": 388
+      },
+      {
+       "w": "every",
+       "from": 388,
+       "to": 395
+      },
+      {
+       "w": "answer",
+       "from": 395,
+       "to": 403
+      },
+      {
+       "w": "yourself.",
+       "from": 403,
+       "to": 427
+      },
+      {
+       "w": "Right",
+       "from": 427,
+       "to": 434
+      },
+      {
+       "w": "or",
+       "from": 434,
+       "to": 438
+      },
+      {
+       "w": "wrong.",
+       "from": 438,
+       "to": 446
+      }
+     ],
+     "cues": {
+      "2": 377,
+      "1": 427
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto03v1/line_06.wav",
+     "from": 493,
+     "frames": 120,
+     "words": [
+      {
+       "w": "The",
+       "from": 497,
+       "to": 501
+      },
+      {
+       "w": "small",
+       "from": 501,
+       "to": 507
+      },
+      {
+       "w": "one",
+       "from": 507,
+       "to": 511
+      },
+      {
+       "w": "did",
+       "from": 511,
+       "to": 515
+      },
+      {
+       "w": "every",
+       "from": 515,
+       "to": 525
+      },
+      {
+       "w": "step",
+       "from": 525,
+       "to": 534
+      },
+      {
+       "w": "right...",
+       "from": 534,
+       "to": 565
+      },
+      {
+       "w": "and",
+       "from": 565,
+       "to": 569
+      },
+      {
+       "w": "added",
+       "from": 569,
+       "to": 575
+      },
+      {
+       "w": "it",
+       "from": 575,
+       "to": 578
+      },
+      {
+       "w": "wrong,",
+       "from": 578,
+       "to": 589
+      },
+      {
+       "w": "3",
+       "from": 589,
+       "to": 592
+      },
+      {
+       "w": "times!",
+       "from": 592,
+       "to": 599
+      }
+     ],
+     "cues": {
+      "1": 541
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_07.wav",
+     "from": 625,
+     "frames": 261,
+     "words": [
+      {
+       "w": "And",
+       "from": 628,
+       "to": 633
+      },
+      {
+       "w": "the",
+       "from": 633,
+       "to": 639
+      },
+      {
+       "w": "Telugu",
+       "from": 639,
+       "to": 648
+      },
+      {
+       "w": "message?",
+       "from": 648,
+       "to": 673
+      },
+      {
+       "w": "These",
+       "from": 673,
+       "to": 685
+      },
+      {
+       "w": "small",
+       "from": 685,
+       "to": 697
+      },
+      {
+       "w": "free",
+       "from": 697,
+       "to": 721
+      },
+      {
+       "w": "ones:",
+       "from": 721,
+       "to": 729
+      },
+      {
+       "w": "0",
+       "from": 729,
+       "to": 732
+      },
+      {
+       "w": "of",
+       "from": 732,
+       "to": 736
+      },
+      {
+       "w": "9.",
+       "from": 736,
+       "to": 740
+      },
+      {
+       "w": "The",
+       "from": 771,
+       "to": 776
+      },
+      {
+       "w": "big",
+       "from": 776,
+       "to": 781
+      },
+      {
+       "w": "one",
+       "from": 781,
+       "to": 786
+      },
+      {
+       "w": "even",
+       "from": 786,
+       "to": 793
+      },
+      {
+       "w": "added",
+       "from": 793,
+       "to": 801
+      },
+      {
+       "w": "an",
+       "from": 801,
+       "to": 808
+      },
+      {
+       "w": "English",
+       "from": 808,
+       "to": 818
+      },
+      {
+       "w": "\"translation\"",
+       "from": 818,
+       "to": 836
+      },
+      {
+       "w": "its",
+       "from": 836,
+       "to": 841
+      },
+      {
+       "w": "Telugu",
+       "from": 841,
+       "to": 856
+      },
+      {
+       "w": "doesn't",
+       "from": 856,
+       "to": 866
+      },
+      {
+       "w": "say.",
+       "from": 866,
+       "to": 877
+      }
+     ],
+     "cues": {
+      "1": 657
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_c",
+   "type": "sk_test",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "biggest",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "app",
+      "prop": "step4",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "save",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "which",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "board": [
+     {
+      "name": "SMALL",
+      "gb": 1.1,
+      "lic": "Qwen2.5 1.5B · Apache 2.0",
+      "per": {
+       "bill": 0,
+       "gst": 3,
+       "reorder": 2,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 8,
+      "sec": 11.5
+     },
+     {
+      "name": "MIDDLE",
+      "gb": 2.4,
+      "lic": "Phi-3 mini · MIT",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 23.7
+     },
+     {
+      "name": "BIG",
+      "gb": 4.7,
+      "lic": "Qwen2.5 7B · Apache 2.0",
+      "per": {
+       "bill": 3,
+       "gst": 3,
+       "reorder": 3,
+       "telugu": 0,
+       "honest": 3
+      },
+      "right": 12,
+      "sec": 36.5
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Which one to keep",
+     "title": "Which one to keep",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1186,
+   "frames": 694,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto03v1/line_08.wav",
+     "from": 9,
+     "frames": 42,
+     "words": [
+      {
+       "w": "So,",
+       "from": 13,
+       "to": 18
+      },
+      {
+       "w": "the",
+       "from": 18,
+       "to": 23
+      },
+      {
+       "w": "big",
+       "from": 23,
+       "to": 27
+      },
+      {
+       "w": "one",
+       "from": 27,
+       "to": 32
+      },
+      {
+       "w": "wins?",
+       "from": 32,
+       "to": 39
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_09.wav",
+     "from": 59,
+     "frames": 203,
+     "words": [
+      {
+       "w": "Four:",
+       "from": 63,
+       "to": 79
+      },
+      {
+       "w": "keep",
+       "from": 79,
+       "to": 84
+      },
+      {
+       "w": "the",
+       "from": 84,
+       "to": 88
+      },
+      {
+       "w": "one",
+       "from": 88,
+       "to": 93
+      },
+      {
+       "w": "that",
+       "from": 93,
+       "to": 102
+      },
+      {
+       "w": "passes.",
+       "from": 102,
+       "to": 110
+      },
+      {
+       "w": "For",
+       "from": 131,
+       "to": 135
+      },
+      {
+       "w": "bills",
+       "from": 135,
+       "to": 142
+      },
+      {
+       "w": "and",
+       "from": 142,
+       "to": 146
+      },
+      {
+       "w": "stock,",
+       "from": 146,
+       "to": 170
+      },
+      {
+       "w": "the",
+       "from": 170,
+       "to": 174
+      },
+      {
+       "w": "middle",
+       "from": 174,
+       "to": 182
+      },
+      {
+       "w": "one",
+       "from": 182,
+       "to": 186
+      },
+      {
+       "w": "tied",
+       "from": 186,
+       "to": 195
+      },
+      {
+       "w": "the",
+       "from": 195,
+       "to": 199
+      },
+      {
+       "w": "big",
+       "from": 199,
+       "to": 204
+      },
+      {
+       "w": "one.",
+       "from": 204,
+       "to": 221
+      },
+      {
+       "w": "For",
+       "from": 221,
+       "to": 225
+      },
+      {
+       "w": "Telugu,",
+       "from": 225,
+       "to": 234
+      },
+      {
+       "w": "none",
+       "from": 234,
+       "to": 244
+      },
+      {
+       "w": "passed.",
+       "from": 244,
+       "to": 253
+      }
+     ],
+     "cues": {
+      "2": 79,
+      "1": 131
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_10.wav",
+     "from": 292,
+     "frames": 197,
+     "words": [
+      {
+       "w": "So",
+       "from": 296,
+       "to": 299
+      },
+      {
+       "w": "take",
+       "from": 299,
+       "to": 305
+      },
+      {
+       "w": "your",
+       "from": 305,
+       "to": 310
+      },
+      {
+       "w": "Telugu",
+       "from": 310,
+       "to": 317
+      },
+      {
+       "w": "question",
+       "from": 317,
+       "to": 327
+      },
+      {
+       "w": "to",
+       "from": 327,
+       "to": 334
+      },
+      {
+       "w": "the",
+       "from": 334,
+       "to": 339
+      },
+      {
+       "w": "free",
+       "from": 339,
+       "to": 348
+      },
+      {
+       "w": "apps.",
+       "from": 348,
+       "to": 354
+      },
+      {
+       "w": "Pay",
+       "from": 379,
+       "to": 384
+      },
+      {
+       "w": "only",
+       "from": 384,
+       "to": 391
+      },
+      {
+       "w": "if",
+       "from": 391,
+       "to": 395
+      },
+      {
+       "w": "none",
+       "from": 395,
+       "to": 402
+      },
+      {
+       "w": "passes,",
+       "from": 402,
+       "to": 412
+      },
+      {
+       "w": "and",
+       "from": 412,
+       "to": 418
+      },
+      {
+       "w": "test",
+       "from": 418,
+       "to": 433
+      },
+      {
+       "w": "the",
+       "from": 433,
+       "to": 438
+      },
+      {
+       "w": "paid",
+       "from": 438,
+       "to": 451
+      },
+      {
+       "w": "one",
+       "from": 451,
+       "to": 456
+      },
+      {
+       "w": "the",
+       "from": 456,
+       "to": 461
+      },
+      {
+       "w": "same",
+       "from": 461,
+       "to": 472
+      },
+      {
+       "w": "way.",
+       "from": 472,
+       "to": 479
+      }
+     ],
+     "cues": {
+      "1": 379
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/howto03v1/line_11.wav",
+     "from": 537,
+     "frames": 73,
+     "words": [
+      {
+       "w": "Wait...",
+       "from": 542,
+       "to": 573
+      },
+      {
+       "w": "which",
+       "from": 573,
+       "to": 580
+      },
+      {
+       "w": "brain",
+       "from": 580,
+       "to": 586
+      },
+      {
+       "w": "are",
+       "from": 586,
+       "to": 590
+      },
+      {
+       "w": "YOU?",
+       "from": 590,
+       "to": 595
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/howto03v1/line_12.wav",
+     "from": 615,
+     "frames": 62,
+     "words": [
+      {
+       "w": "The",
+       "from": 618,
+       "to": 628
+      },
+      {
+       "w": "small",
+       "from": 628,
+       "to": 652
+      },
+      {
+       "w": "one.",
+       "from": 652,
+       "to": 660
+      },
+      {
+       "w": "₹428.",
+       "from": 660,
+       "to": 670
+      }
+     ],
+     "cues": {
+      "1": 651
+     }
+    }
+   ]
+  }
+ ]
+}

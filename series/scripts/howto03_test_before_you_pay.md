@@ -69,6 +69,14 @@ voice; the full table on the save card and in the caption; Telugu as noted (న�
 ట్రాన్స్లేషన్, నీది ఏ బ్రెయిన్, చిన్నది/మధ్యది/పెద్దది); a hit on 428 and a drop before "zero of nine"; the caption ask about
 the viewer's own work question.
 
+## Build notes
+- Stills: frame 1's header sat under the banner and the "RAVI LOSES ₹90" stamp covered Ravi's eyes (now on the counter);
+  the Telugu screen's "0 of 9" overlapped the totals; step 4's header was clipped (it shrinks to fit); the save card still
+  said "note the seconds" (now "the must-be-exact ones decide"); the bubble matches the line ("The big one wins?").
+- English 62.7 s. Fish's line 7 put a stop in "an English translation. Its Telugu doesn't say." (the card carries it).
+- Telugu: the first pass's spelling lists were too strict (good takes rejected, four tries a line): broad substrings,
+  then every try re-judged.
+
 ## Script (English, v2) · ~60 s
 | # | Who | Line | On screen |
 |---|---|---|---|
