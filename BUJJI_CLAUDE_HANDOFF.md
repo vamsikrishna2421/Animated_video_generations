@@ -31,6 +31,25 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-05 (Vamsi's pick: the song-to-animation reel — make our own, better, for the Telugu page)
+
+This one comes straight from Vamsi: he saw this reel, loved it, and asked me to explain it to you because he could not put it into words himself. Source: https://www.instagram.com/reel/DfUffd7pYmg/ by @noddy_ai_ (1,140 followers), posted Nov 4 — 1,215 likes and 824 comments in about a day. That is breakout engagement for a tiny account, and the comments are the tell: "how did you make this", "free or Claude Code?", "how many credits", "explain in Telugu".
+
+What the reel actually is, beat by beat:
+1. It opens as a demo, not as the cartoon: "POWER OF AI" over a laptop screen showing a Claude chat with prompts/code — the flex is "look what AI made".
+2. Then the payoff, full-screen: a flat-design 2D cartoon music video for a Telugu folk-style song. Every lyric line gets a literal visual: a woman in a pink-and-blue sari in a village (houses, palm trees, sunset), holding a chili; a smiling red heart turning yellow; a black-bead necklace with a blue pendant; the man joining her at night under a smiling moon; a rooster crowing at dawn.
+3. The Telugu lyrics sit on screen the whole way, so it reads sound-off and works as sing-along.
+4. It closes with a Telugu voiceover offering the method, and the caption runs a keyword: comment "Music" for the full guide. That value-exchange keyword — a method as the prize, not a quiz answer — is what produced the 824 comments.
+
+The ask: make OUR version of this format, clearly better than the original, for @ai_maastaaru_telugu only.
+- Different song (Vamsi's preference over copying theirs): pick a beloved Telugu song whose lyrics are concrete enough to draw line by line — objects, food, moon, weather, village life. Folk/traditional or very old songs preferred; a commercial film song will likely draw a Content ID claim (we have had one before on the Boss hook step Short: claim only, no block, no reach harm — acceptable, but say so in your reply if you pick one).
+- "Better" means: one visual pun or gag for EVERY lyric line with no filler scenes; the same character design held across every scene; scene changes cut on the lyric line/beat; lyrics on screen in Telugu script throughout; keep the demo wrapper (prompt screen first, "POWER OF AI" framing) because the meta-flex is the hook for an AI-learning audience — but frame 1 must be the strongest animation frame with the hook readable sound-off, not a plain laptop screen. Design for the usual gate: 60%+ 3-s hold. One verse + chorus is enough (roughly 30–60 s); our Weekly data says shorter lifts hold and avg watch.
+- End card + caption: viewers comment a keyword (e.g. పాట / "Song") and get the how-we-made-it follow-up. Note the difference from our retired quiz-letter prompts: those offered an answer and drew zero; this offers a method and drew 824 on a 1.1k-follower account. The follow-up can itself be a Thursday HOW TO episode — that closes the loop and is literally our format.
+- Package as usual in the repo (TE only): 9:16 _ig send copy + post.txt with the caption and keyword wording. Bujji publishes via the watch.
+
+What I need back before production: an [ACK]/[QUESTION] with 2–3 song candidates — name, why its lyrics visualize well, any copyright note — so Vamsi can pick. Song taste is his call; everything after the pick is routine production.
+— Bujji, 2026-11-05
+
 ### [ANALYTICS] Bujji — 2026-11-05 (7-day checkpoint: EP41)
 
 7-day checkpoint, completing EP41's measurement cycle. Published Oct 29 morning (IG EN 05:57 ET, IG TE 06:05 ET per the live posts); metrics pulled Nov 5 ~06:30 ET, lifetime to date, so these numbers are just past the 7-day mark rather than a strict 7-day snapshot. The 48h checkpoint was 2026-10-31. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
