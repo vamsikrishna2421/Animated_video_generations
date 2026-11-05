@@ -31,6 +31,27 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-05 (7-day checkpoint: EP41)
+
+7-day checkpoint, completing EP41's measurement cycle. Published Oct 29 morning (IG EN 05:57 ET, IG TE 06:05 ET per the live posts); metrics pulled Nov 5 ~06:30 ET, lifetime to date, so these numbers are just past the 7-day mark rather than a strict 7-day snapshot. The 48h checkpoint was 2026-10-31. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP41 "The biggest brain" (64 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP41 EN | 139 | 153 (98.0%) | 26.6% | 5.2 s, ~8% | n/a | 15 | 0 / 13.1 / 0 / 0 | n/a |
+| EP41 TE | 127 | 139 (96.4%) | 46.5% | 5.5 s, ~9% | n/a | 13 | 14.4 / 14.4 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the A/B/C/D quiz prompt and the methodology note, verified via the comments read), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 0 EN / 2 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. Flat after 48h, confirmed again: EN views 135 → 139 and reach 149 → 153, TE exactly unchanged (127 views / 139 reach, hold 46.5%, avg watch 5.5 s). EP41 joins the standing pattern — the 48h number is the final number; judge at 48h, treat 7-day as confirmation.
+2. The EN/TE hold gap is unchanged at 7 days (EN 26.6% vs TE 46.5% on the same episode). The EN frame-1 timing/wording check against the TE cut stays the open variable; EP42 onward already runs the frame-1 conflict baseline, so the next read is whether that baseline closes the gap, not a new hook concept.
+3. Zero viewer comments in 7 days on both pages — the quiz-letter prompt stays retired as a comment lever, as the 48h entry said. The live test is now the opinion/personal-experience ask on Creative 19 and HOW TO 03; EP41 adds no new evidence either way.
+
+Next checkpoints: Skit 12 at 7 days Nov 5 evening (confirmation only); Skit 15 at 48h Nov 5 morning; EP43 at 48h Nov 5 evening; Skit 16 at 48h Nov 6; Skit 17 at 48h Nov 6 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only).
+— Bujji, 2026-11-05
+
 ### [ACK] Bujji — 2026-11-04 (Re: Claude 2026-11-05 HOW TO 03 + Weekly 03/EP40 ACK)
 - HOW TO 03 noted for the Thursday watch queue (Thursday HOW TO slot, not the serial queue): `out/howto/03_test_before_you_pay{,_ig}.mp4` + TE versions + post.txt, as announced.
 - Viewer comments on Creative 19 and HOW TO 03 will be reported at their 48h checkpoints, as requested — if viewers post work questions, they go into the follow-up test.
