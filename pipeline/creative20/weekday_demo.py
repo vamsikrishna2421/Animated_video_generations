@@ -4,6 +4,8 @@
 #   plain  : "What day of the week is <date>? Answer with just the day."
 #   counted: the same, plus "Work it out step by step from 1 January 2026, which was a Thursday. End with: Answer: <day>"
 # and the family's date (Wednesday 16 December 2026) asked the plain way 10 times (seeds 1-10).
+# Added after the plain answers came in (committed before these ran): the plain way got 16 December right, and called
+# 8 March 2027 (a Monday) a Sunday, so the reel's date is 8 March 2027: asked the plain way 9 more times (seeds 2-10).
 # Scored automatically (the last weekday name in the reply), then every reply read by hand (HAND below wins).
 # Brain: Qwen's own 4-bit GGUF (q4_k_m) of Qwen2.5-7B-Instruct, llama.cpp, 4 threads, temperature 0.7, top_p 0.9,
 # max 500 tokens, offline (a new, empty network namespace, EP38's check). Writes series/scripts/creative20_demo/days_7B.json.
@@ -25,6 +27,7 @@ DATES = [dt.date(2026, 12, 16), dt.date(2026, 12, 25), dt.date(2027, 1, 9), dt.d
          dt.date(2027, 4, 4), dt.date(2027, 4, 17), dt.date(2027, 4, 29), dt.date(2027, 5, 6), dt.date(2027, 5, 15),
          dt.date(2027, 5, 23), dt.date(2027, 5, 31), dt.date(2027, 6, 7), dt.date(2027, 6, 19), dt.date(2027, 6, 28)]
 FAMILY = dt.date(2026, 12, 16)
+MARCH8 = dt.date(2027, 3, 8)
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 assert DAYS[dt.date(2026, 1, 1).weekday()] == "Thursday"
 
@@ -67,7 +70,7 @@ def offline_run(folder):
     res = json.loads(dest.read_text()) if dest.exists() else {
         "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)", "network": net,
         "settings": "temperature 0.7, top_p 0.9, max 500 tokens, a fresh chat per question", "rows": []}
-    jobs = [("plain", d, 1) for d in DATES] + [("counted", d, 1) for d in DATES] + [("plain", FAMILY, s) for s in range(2, 11)]
+    jobs = [("plain", d, 1) for d in DATES] + [("counted", d, 1) for d in DATES] + [("plain", FAMILY, s) for s in range(2, 11)] + [("plain", MARCH8, s) for s in range(2, 11)]
     done = {(r["way"], r["date"], r["seed"]) for r in res["rows"]}
     for way, d, seed in jobs:
         if (way, d.isoformat(), seed) in done:
@@ -93,6 +96,8 @@ def summary():
         print(way, f"right {sum(right)} of {len(rows)}")
     fam = [r for r in res["rows"] if r["way"] == "plain" and r["date"] == FAMILY.isoformat()]
     print("16 Dec 2026 (a Wednesday), plain, 10 asks:", [HAND.get(("plain", r["date"], r["seed"]), {}).get("day", r["auto_day"]) for r in fam])
+    m8 = [r for r in res["rows"] if r["way"] == "plain" and r["date"] == MARCH8.isoformat()]
+    print("8 Mar 2027 (a Monday), plain, 10 asks:", [HAND.get(("plain", r["date"], r["seed"]), {}).get("day", r["auto_day"]) for r in m8])
 
 
 if __name__ == "__main__":
