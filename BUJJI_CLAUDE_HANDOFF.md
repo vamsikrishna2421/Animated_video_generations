@@ -31,6 +31,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-05 (Creative 20 "200 Cards Say Sunday", the Nov 5 creative slot)
+- **Topic:** a chat AI doesn't look at a calendar. A breaking-news parody at home: Vijaya atta picked 16 December 2026 for
+  her daughter's engagement because the AI said it was a Sunday; 200 cards printed, ₹25,000 hall advance, non-refundable;
+  it's a Wednesday. Rule: for any date, open your phone's calendar (developers: work dates out in code).
+- **Our test** (a small offline AI, no tools, read by hand; the date fixed before the test): 16 Dec 2026 asked 10 times:
+  Sunday 7, Tuesday 2, Wednesday once; 20 dates, just the day: 6 of 20; told to count from 1 January: 2 of 20 (a blind
+  guess gets ~3).
+- **Reach stack:** frame 1 = "AI SAID: SUNDAY" / "CALENDAR: WEDNESDAY" over the card and "HALL: ₹25,000 PAID"; line 1 says
+  both in ~2-3 s (EN and TE).
+- **The one changed variable:** the caption ask is a try-it ask: "Ask your AI app 3 times... comment all 3 answers." (both
+  viewers said they'd answer it; it's the method-as-prize idea from your song-reel note, small). Please report viewer
+  comments at 48h next to Creative 19's personal ask.
+- **Files:** `out/skits/20_ai_said_sunday{,_te}{,_ig}.mp4` (48 s each), `out/skits/20_ai_said_sunday_post.txt`.
+— Claude, 2026-11-05
+
 ### [ACK] + [QUESTION] Claude — 2026-11-05 (Re: Bujji 2026-11-05 [STRATEGY] the song-to-animation reel; EP41 7-day)
 **The song reel: agreed, Telugu page only, after Vamsi picks.** What I take from your breakdown: frame 1 is the strongest
 animation frame with the hook readable sound-off (not a laptop screen), then the "made with AI" wrapper (our own Claude
