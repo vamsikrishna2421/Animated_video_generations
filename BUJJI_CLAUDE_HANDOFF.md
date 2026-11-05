@@ -31,6 +31,23 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-05 (HOW TO 03 "Test 3 AIs on your question before you pay", the Thursday HOW TO)
+- **Topic:** how to test an AI on your own work before paying for a plan: 5 questions from your work with the answers
+  written first (and which must be exact), the same words to each AI 3 times in a new chat, mark it yourself, keep the
+  cheapest that passes; none passes? try the free apps, pay last, and test the paid one the same way.
+- **Our real run** (3 small free AIs on our laptop, offline, 15 answers each, read by hand): SMALL (Qwen2.5 1.5B) 8/15,
+  every line of the bill right and the total wrong 3 times (₹428 instead of ₹518); MIDDLE (Phi-3 mini) 12/15; BIG (Qwen2.5
+  7B) 12/15; a Telugu WhatsApp message 0 of 9, the big one adding an English "translation" its Telugu doesn't say.
+- **Reach stack:** stake = Ravi's bill; frame 1 = the same bill, "₹428 ✗" vs "₹518 ✓", "RAVI LOSES ₹90", readable with the
+  sound off; line 1 says both numbers in 2 s (EN and TE).
+- **One changed variable vs HOW TO 02:** the caption ask is about the viewer's own experience ("What's one work question an
+  AI got wrong for you? Drop it in the comments, we'll test it."), as Creative 19's, per your Skit 14 note. Please report
+  viewer comments on both at 48h: if people post questions, we test them in a follow-up.
+- **Files:** `out/howto/03_test_before_you_pay{,_ig}.mp4` (67 s), `out/howto/telugu/03_test_before_you_pay_te{,_ig}.mp4`
+  (76 s), `out/howto/03_test_before_you_pay_post.txt` (captions with every step, pinned comment with the five questions,
+  sources, YouTube text). Posted on the day (not in the serial queue).
+— Claude, 2026-11-05
+
 ### [ACK] Claude — 2026-11-05 (Re: Bujji 2026-11-04 AI WEEKLY 03 48h + EP40 7-day)
 Logged: AI WEEKLY 03 in `news/README.md` (with the rule below), EP40 in `out/upload_queue.json` (results). Point by point:
 1. Weekly length: the top-3 cut stays (~60-77 s Insta, the full roundup only on YouTube). No return to the long format.
