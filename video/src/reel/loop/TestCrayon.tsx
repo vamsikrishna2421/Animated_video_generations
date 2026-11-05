@@ -124,7 +124,7 @@ const board = (c: Ctx, W: number, y: number, ais: AI[], f: number, f0: number, s
     c.fillStyle = "#f8fafc"; c.fillRect(60, yy, W - 120, 4);
     c.font = SANS(44, 900); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText("right", 90, yy + 80);
     c.font = SANS(28, 700); c.fillStyle = "#94a3b8"; c.fillText("of 15 (5 × 3 tries)", 90, yy + 126);
-    ais.forEach((a, j) => { c.font = SANS(70, 900); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText(`${a.right}`, cx[j], yy + 92); });   // script review: no seconds (a laptop's, not the apps')
+    ais.forEach((a, j) => { c.font = SANS(62, 900); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText(`${a.right}/15`, cx[j], yy + 92); });   // render review: the totals big, held 2 s   // script review: no seconds (a laptop's, not the apps')
   }
   c.restore();
 };
@@ -140,7 +140,7 @@ const saveCard = (c: Ctx, W: number, k: number, f0: number, f: number) => {
     ["1", "5 questions from YOUR work", "write the right answers first"],
     ["2", "the same words to each AI", "3 times, a new chat every time"],
     ["3", "mark ✓ ✗ yourself", "the must-be-exact ones decide"],
-    ["4", "keep the one that passes", "none passes? try the free apps; pay last"],
+    ["4", "keep the cheapest that passes", "a tie? the cheaper · none? free apps, pay last"],
   ];
   rows.forEach(([num, head, note], i) => {
     const q = clamp((f - f0 - 6 - i * 6) / 6); if (q <= 0) return;
@@ -173,7 +173,7 @@ const StTest: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={1} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("c")} at={c1 - 6} src="audio/sfx_pop.wav" vol={0.45} />);
     if (["step1", "step2", "step3", "step4"].includes(b.prop)) sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "step3") QS.forEach((_, q) => sfx.push(<Sfx key={k("t" + q)} at={c1 + q * 8} src="audio/sfx_tick.wav" vol={0.25} />));
-    if (b.prop === "small") sfx.push(<Sfx key={k("b")} at={c1 - 8} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />, <Sfx key={k("z")} at={c1 + 2} src="audio/gag_boing.wav" vol={0.3} />);
+    if (b.prop === "small") sfx.push(<Sfx key={k("b")} at={c1 - 8} src="reel/sfx_boom.wav" vol={te ? 0.7 : 0.85} />, <Sfx key={k("c")} at={c1 - 8} src="reel/creative09v1/clap.wav" vol={0.35} />, <Sfx key={k("z")} at={c1 + 4} src="audio/gag_boing.wav" vol={0.35} />);   // render review: no thud on "added it wrong"
     if (b.prop === "telugu") sfx.push(<Sfx key={k("b")} at={c1 - 8} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.55} />, <Sfx key={k("g")} at={c1 + 40} src="reel/sfx_glitch.wav" vol={0.25} />);
     if (b.prop === "step4") sfx.push(<Sfx key={k("h")} at={c1 - 6} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "save") sfx.push(<Sfx key={k("r")} at={at - 37} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("n")} at={at + 4} src="audio/sfx_snap.wav" vol={0.5} />);
@@ -197,15 +197,22 @@ const StTest: React.FC<SP> = ({ s }) => {
           c.save(); c.translate(W / 2, 1000); c.translate(-540, -800);
           shop(c, r); ravi(c, "yell", "up", b.prop === "hook" && mouth, p, f, r); counter(c, r);
           c.restore();
-          c.save(); c.font = SANS(40, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SAME BILL · TWO FREE AIs", W / 2, 290); c.restore();   // stills: under the banner at 230
-          answer(c, 40, 320, 490, "FREE AI #1", "₹428", false, 1, false);   // script review: only the two sums, big
-          answer(c, 550, 320, 490, "FREE AI #2", "₹518", true, 1, false);
-          tag(c, "RAVI LOSES ₹90", W / 2, 1270, 80, "#fee2e2", "#991b1b", -0.04, 1);   // stills: on the counter, not his eyes
+          c.save(); c.font = SANS(36, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("SAME BILL · 2 SMALL FREE AIs · ON OUR LAPTOP", W / 2, 290); c.restore();   // render review: not the apps
+          const slam = b.prop === "hook" ? 1 + 0.06 * (1 - easeOut(clamp(f / 8))) : 1;   // render review: the cross and the stamp land on the first beat
+          c.save(); c.translate(W / 2, 535); c.scale(slam, slam); c.translate(-W / 2, -535);
+          answer(c, 40, 320, 490, "SMALL FREE AI", "₹428", false, 1, false);   // script review: only the two sums, big
+          answer(c, 550, 320, 490, "MIDDLE FREE AI", "₹518", true, 1, false);
+          c.restore();
+          tag(c, "RAVI LOSES ₹90", W / 2, 1270, 80, "#fee2e2", "#991b1b", -0.04, b.prop === "hook" ? clamp(0.75 + f / 24) : 1);   // stills: on the counter, not his eyes
           if (loopOn) { c.save(); c.globalAlpha = 0.5 * (1 - seg(f, endL + HOLD, endL + HOLD + 8)); c.fillStyle = "#fff"; c.fillRect(0, 0, W, H); c.restore(); }
           return;
         }
         if (b.shot === "app") {
           c.fillStyle = "#1e293b"; c.fillRect(0, 0, W, H);
+          if (b.prop === "title") {   // render review: a dark slide with no Ravi was the swipe point: the shop stays behind
+            c.save(); c.translate(W / 2, 840); c.translate(-540, -800); shop(c, r); ravi(c, "hope", "rest", false, p, f, r); counter(c, r); phone(c, mouth, f, r, {}); c.restore();
+            c.fillStyle = "rgba(15,23,42,0.8)"; c.fillRect(0, 0, W, H);
+          }
           const c1 = cu(1, 0.5);
           if (b.prop === "title") {
             stepHead(c, W, "HOW TO 03", "", 1);
@@ -215,8 +222,8 @@ const StTest: React.FC<SP> = ({ s }) => {
             c.restore();
             const k = seg(f, c1 - 4, c1 + 6);
             ais.forEach((a, j) => { tag(c, `${a.name} ${a.gb} GB`, 200 + j * 340, 960, 40, "#fef3c7", INK, j % 2 ? 0.03 : -0.03, seg(f, c1 + j * 5, c1 + 6 + j * 5));
-              c.save(); c.globalAlpha = seg(f, c1 + j * 5, c1 + 6 + j * 5); c.font = SANS(24, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(a.lic, 200 + j * 340, 1030); c.restore(); });
-            c.save(); c.globalAlpha = k; c.font = SANS(38, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("3 small free AIs, on our laptop, no internet", W / 2, 1130); c.restore();
+              c.save(); c.globalAlpha = seg(f, c1 + j * 5, c1 + 6 + j * 5); c.font = SANS(30, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; a.lic.split(" · ").forEach((t, q) => c.fillText(t, 200 + j * 340, 1040 + q * 38)); c.restore(); });   // render review: the names were too small to read
+            c.save(); c.globalAlpha = seg(f, cu(2, 0.6) - 6, cu(2, 0.6) + 4); c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("not the apps: small AIs, on our laptop", W / 2, 1180); c.restore();
           }
           if (b.prop === "step1") { stepHead(c, W, 1, "YOUR 5 QUESTIONS", 1); qList(c, W, 420, f, ln.from + 4, Math.max(6, Math.round(ln.frames / 7))); }
           if (b.prop === "step2") {
@@ -244,7 +251,7 @@ const StTest: React.FC<SP> = ({ s }) => {
           if (b.prop === "step4") {
             stepHead(c, W, 4, "KEEP THE ONE THAT PASSES", 1);
             [ais[1], ais[2]].forEach((a, j) => {   // script review: v1 picked nothing; no seconds or ₹0 (a laptop's, not the apps')
-              const k = seg(f, c1 - 6 + j * 8, c1 + 2 + j * 8); if (k <= 0) return;
+              const k = seg(f, ln.from + j * 6, ln.from + 8 + j * 6); if (k <= 0) return;   // render review: the screen sat empty
               const x = 70 + j * 480;
               c.save(); c.globalAlpha = clamp(k * 2);
               c.fillStyle = "#fffdf5"; rrect(c, x, 450, 460, 330, 26); c.fill();
@@ -254,13 +261,14 @@ const StTest: React.FC<SP> = ({ s }) => {
               c.font = SANS(30, 800); c.fillStyle = "#14532d"; c.fillText("bills, GST, stock ✓", x + 230, 752);
               c.restore();
             });
-            c.save(); c.globalAlpha = seg(f, c1 + 16, c1 + 24); c.font = SANS(110, 900); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("=", W / 2, 660); c.restore();
+            c.save(); c.globalAlpha = seg(f, ln.from + 14, ln.from + 22); c.font = SANS(110, 900); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("=", W / 2, 660); c.restore();
+            tag(c, "A TIE? KEEP THE CHEAPER: MIDDLE", W / 2, 830, 52, "#dcfce7", "#14532d", -0.02, seg(f, c1 - 2, c1 + 6));   // render review: answer "the big one wins?"
             const kt = seg(f, cu(1, 0.75) - 4, cu(1, 0.75) + 4);
             if (kt > 0) {
               c.save(); c.globalAlpha = kt;
-              c.fillStyle = "#7f1d1d"; rrect(c, 70, 860, W - 140, 200, 26); c.fill();
-              c.font = SANS(52, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("TELUGU: none passed  ✗ ✗ ✗", W / 2, 940);
-              c.font = SANS(36, 700); c.fillStyle = "#fde68a"; c.fillText("→ that's the question for the free apps", W / 2, 1012);
+              c.fillStyle = "#7f1d1d"; rrect(c, 70, 920, W - 140, 200, 26); c.fill();
+              c.font = SANS(52, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("TELUGU: none passed  ✗ ✗ ✗", W / 2, 1000);
+              c.font = SANS(36, 700); c.fillStyle = "#fde68a"; c.fillText("→ that's the question for the free apps", W / 2, 1072);
               c.restore();
             }
           }
@@ -286,7 +294,16 @@ const StTest: React.FC<SP> = ({ s }) => {
         if (b.prop === "biggest") bubble(c, 330, 560, "The big one wins?", 84, seg(p, 0.05, 0.2), COL.yellow);
         if (b.prop === "save") saveCard(c, W, seg(f, ln.from - 4, ln.from + 4), ln.from - 4, f);
         if (b.prop === "which") bubble(c, 330, 560, "Which brain are YOU?", 80, seg(p, 0.05, 0.2), "#e0e7ff");
-        if (b.prop === "loop") tag(c, `the shop AI: ${ais[0].name}, ${ais[0].gb} GB · 8 of 15`, W / 2, 470, 56, "#fee2e2", "#991b1b", -0.03, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 4));
+        if (b.prop === "loop") {   // render review: the chalk tag was unreadable: a big card
+          const k = seg(f, cu(1, 0.4) - 6, cu(1, 0.4) + 2);
+          if (k > 0) {
+            c.save(); c.globalAlpha = clamp(k * 3); c.translate(W / 2, 460); c.rotate(-0.03);
+            c.fillStyle = "#fffdf5"; rrect(c, -420, -150, 840, 300, 30); c.fill(); c.strokeStyle = RED; c.lineWidth = 10; rrect(c, -406, -136, 812, 272, 24); c.stroke();
+            c.font = SANS(40, 900); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText(`THE SHOP AI = ${ais[0].name}`, 0, -66);
+            c.font = SANS(104, 900); c.fillStyle = RED; c.fillText(`${ais[0].right}/15 · ₹428`, 0, 60);
+            c.restore();
+          }
+        }
       }} />
     </>
   );

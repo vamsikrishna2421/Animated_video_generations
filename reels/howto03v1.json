@@ -2,7 +2,7 @@
  "id": "howto03v1",
  "title": "HOW TO 03: test 3 AIs before you pay",
  "label": "HOW TO 03",
- "banner": "Test AIs before you pay",
+ "banner": "Before you pay for an AI plan",
  "topic": "",
  "look": "classic",
  "gap": 0.16,
@@ -12,9 +12,6 @@
   0.44,
   0.75
  ],
- "musicFade": 0.05,
- "endPad": 0.4,
- "captionMode": "phrase",
  "musicEQ": [
   [
    180,
@@ -35,8 +32,8 @@
  "musicPad": true,
  "musicGapGain": 2.0,
  "musicEndRamp": [
-  0.9,
-  5.0
+  0.85,
+  6.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -49,7 +46,7 @@
    "id": "h_a",
    "type": "sk_test",
    "tail": 0.1,
-   "boost": 1.4,
+   "boost": 1.5,
    "data": {
     "beats": [
      {
@@ -144,8 +141,8 @@
     {
      "who": "ai",
      "file": "02_ai.wav",
-     "text": "Before you buy an A.I. plan, [1] test it on your own questions. Four steps.",
-     "show": "Before you buy an AI plan, test it on your own questions. Four steps.",
+     "text": "Before you buy an A.I. plan, [1] test it on your own questions. <pause 0.3> We tried three small free A.I.s, on our laptop.",
+     "show": "Before you buy an AI plan, test it on your own questions. We tried three small free AIs, on our laptop.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.15,
@@ -159,13 +156,27 @@
       [
        "questions",
        "question"
-      ],
-      [
-       "four",
-       "4"
       ]
      ],
-     "tts": "Before you buy an A.I. plan, test it on your own questions. Four steps.",
+     "tts": "Before you buy an A.I. plan, test it on your own questions.",
+     "file2": "02b_ai.wav",
+     "tts2": "We tried three small free A.I.s, on our laptop.",
+     "pause": 0.3,
+     "must2": [
+      [
+       "three",
+       "3"
+      ],
+      [
+       "small"
+      ],
+      [
+       "free"
+      ],
+      [
+       "laptop"
+      ]
+     ],
      "gain_db": -1.0
     }
    ]
@@ -271,8 +282,8 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "One: [2] five questions from your work. [1] Write the right answers first, and which ones it can't get wrong.",
-     "show": "One: five questions from your work. Write the right answers first, and which ones it can't get wrong.",
+     "text": "One: [2] five questions from your work. [1] Write the right answers first, and which ones must be exact.",
+     "show": "One: five questions from your work. Write the right answers first, and which ones must be exact.",
      "maxgap": 0.28,
      "gap": 1.2,
      "tempo": 1.15,
@@ -290,7 +301,7 @@
        "answer"
       ],
       [
-       "wrong"
+       "exact"
       ]
      ],
      "gain_db": -1.0
@@ -327,7 +338,7 @@
      "text": "Three: [2] mark every answer yourself. [1] Right or wrong.",
      "show": "Three: mark every answer yourself. Right or wrong.",
      "maxgap": 0.28,
-     "gap": 1.3,
+     "gap": 1.9,
      "tempo": 1.15,
      "must": [
       [
@@ -370,14 +381,18 @@
     {
      "who": "ai",
      "file": "07_ai.wav",
-     "text": "And the Telugu message? [1] These small free ones: zero of nine. <pause 0.3> The big one even added an English translation its Telugu doesn't say.",
-     "show": "And the Telugu message? These small free ones: 0 of 9. <pause 0.3> The big one even added an English \"translation\" its Telugu doesn't say.",
+     "text": "And the Telugu message? All three of ours: [1] zero of nine. <pause 0.3> The big one even added an English translation that its Telugu doesn't say.",
+     "show": "And the Telugu message? All three of ours: 0 of 9. <pause 0.3> The big one even added an English \"translation\" that its Telugu doesn't say.",
      "maxgap": 0.28,
      "gap": 0.9,
      "tempo": 1.15,
      "must": [
       [
        "telugu"
+      ],
+      [
+       "three",
+       "3"
       ],
       [
        "zero",
@@ -388,9 +403,12 @@
        "9"
       ]
      ],
-     "tts": "And the Telugu message? These small free ones: zero of nine.",
+     "pauses": {
+      "1": 0.55
+     },
+     "tts": "And the Telugu message? All three of ours: zero of nine.",
      "file2": "07b_ai.wav",
-     "tts2": "The big one even added an English translation its Telugu doesn't say.",
+     "tts2": "The big one even added an English translation that its Telugu doesn't say.",
      "pause": 0.3,
      "must2": [
       [
@@ -398,6 +416,9 @@
       ],
       [
        "translation"
+      ],
+      [
+       "that"
       ],
       [
        "telugu"
@@ -411,11 +432,11 @@
    "id": "h_c",
    "type": "sk_test",
    "tail": 0.0,
-   "lift": 1.0,
+   "lift": 1.2,
    "pre": 0.3,
    "outro": true,
-   "boost": 1.5,
-   "rise": 1.3,
+   "boost": 1.85,
+   "rise": 1.4,
    "data": {
     "beats": [
      {
@@ -523,35 +544,40 @@
     {
      "who": "ai",
      "file": "09_ai.wav",
-     "text": "Four: [2] keep the one that passes. <pause 0.3> [1] For bills and stock, the middle one tied the big one. For Telugu, none passed.",
-     "show": "Four: keep the one that passes. For bills and stock, the middle one tied the big one. For Telugu, none passed.",
+     "text": "No. Four: [2] keep the cheapest one that passes. <pause 0.3> [1] The middle one tied the big one, so keep the middle. For Telugu, none passed.",
+     "show": "No. Four: keep the cheapest one that passes. The middle one tied the big one, so keep the middle. For Telugu, none passed.",
      "maxgap": 0.28,
      "gap": 1.0,
      "tempo": 1.15,
      "must": [
       [
+       "no"
+      ],
+      [
        "four",
        "4"
+      ],
+      [
+       "cheapest"
       ],
       [
        "passes",
        "pass"
       ]
      ],
-     "tts": "Four: keep the one that passes.",
+     "tts": "No. Four: keep the cheapest one that passes.",
      "file2": "09b_ai.wav",
-     "tts2": "For bills and stock, the middle one tied the big one. For Telugu, none passed.",
+     "tts2": "The middle one tied the big one, so keep the middle. For Telugu, none passed.",
      "pause": 0.3,
      "must2": [
-      [
-       "bills",
-       "bill"
-      ],
       [
        "middle"
       ],
       [
        "tied"
+      ],
+      [
+       "keep"
       ],
       [
        "telugu"

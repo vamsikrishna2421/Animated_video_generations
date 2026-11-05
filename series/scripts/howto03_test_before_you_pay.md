@@ -1,4 +1,4 @@
-# HOW TO 03 "Test 3 AIs on your question before you pay" · script v2, Nov 5
+# HOW TO 03 "Test 3 AIs on your question before you pay" · script v3 (as rendered), Nov 5
 
 Thursday HOW TO (run of Thu Nov 5, 2026; the agreed 4-week calendar, W2; EP40's "your own test" made practical). Cast:
 Ravi anna and the shop AI (his phone; in the episodes it runs the small 1.1 GB brain, EP39-41). Ravi is about to pay for
@@ -69,6 +69,28 @@ voice; the full table on the save card and in the caption; Telugu as noted (న�
 ట్రాన్స్లేషన్, నీది ఏ బ్రెయిన్, చిన్నది/మధ్యది/పెద్దది); a hit on 428 and a drop before "zero of nine"; the caption ask about
 the viewer's own work question.
 
+## Render review (human-viewer, EN + TE) and what changed
+Both stopped on frame 1 (hook 8 and 7) and would save it; the numbers check out (518 - 428 = 90, 8/12/12, 0 of 9 = 3 × 3);
+the steps were easy to follow. Both: "FREE AI" read as the apps (then "take it to the free apps": so what were they?);
+Ravi's "So the big one wins?" went unanswered, and by step 1's own rule MIDDLE and BIG both pass, so "keep the cheaper one"
+is the point of "before you pay"; English 7b had a stop before "Its Telugu doesn't say" (it sounded like praise); a 0.3 s
+breath before "zero of nine" with the dip after it; no thud on "added it wrong"; Q3 to Q4 flat; the dark title slide
+(no Ravi) was the swipe point; the model names unreadable; step 4's screen sat empty; the end chalk unreadable. Telugu:
+"తెలుగు" came out "తిలుగు/తలగు"; "అడగండి" was heard near a Hyderabadi swear word; "తప్పా" a stutter, "టోటల్" "తోటల",
+"తొమ్మిదికి సున్నా" and "గెలుస్తుందా" unclear; the last "ఎనిమిది" 0.4 s before the end; the Telugu bed 7 dB under. Changed:
+line 2 "We tried three small free AIs, on our laptop." and frame 1 "SAME BILL · 2 SMALL FREE AIs · ON OUR LAPTOP" with
+SMALL / MIDDLE on the cards; line 3 "which ones must be exact"; line 7 "All three of ours: [stop] zero of nine. The big one
+even added an English 'translation' that its Telugu doesn't say." (one sentence); line 9 "No. Four: keep the cheapest one
+that passes. The middle one tied the big one, so keep the middle. For Telugu, none passed." with "A TIE? KEEP THE CHEAPER:
+MIDDLE" and the cards on screen from the first word; the save card "keep the cheapest that passes · a tie? the cheaper";
+the title over the dimmed shop, the model names bigger, "not the apps: small AIs, on our laptop"; the totals "8/15 ·
+12/15 · 12/15" big, held 2 s; the cross and the stamp land on the first beat; the end card "THE SHOP AI = SMALL · 8/15 ·
+₹428"; a 0.55 s stop and the drop before "zero of nine", a boom and a clap on "added it wrong", the end scene lifted;
+Telugu "మా మూడూ: తొమ్మిదికి సున్నా", "రైటా, రాంగా", "మొత్తం", "ఫ్రీ యాప్స్ లో ట్రై చేయండి", "ఏవి కచ్చితంగా ఉండాలో",
+"లేదు... తక్కువ ఖర్చుదే", every "తెలుగు" required as తెలుగు by the judge, line 8 and 12 re-voiced, 1 s after the end,
+the bed 2-3 dB lower; the banner "Before you pay for an AI plan". Not changed: the caption split "to the free | apps"
+(the caption splitter).
+
 ## Build notes
 - Stills: frame 1's header sat under the banner and the "RAVI LOSES ₹90" stamp covered Ravi's eyes (now on the counter);
   the Telugu screen's "0 of 9" overlapped the totals; step 4's header was clipped (it shrinks to fit); the save card still
@@ -81,14 +103,14 @@ the viewer's own work question.
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | Ravi | Four twenty-eight, or five eighteen?! [1] Same bill! | frame 1 as above |
-| 2 | AI | Before you buy an AI plan, [1] test it on your own questions. Four steps. | HOW TO 03 · BEFORE YOU PAY FOR AN AI PLAN · 3 small free AIs: SMALL 1.1 GB · MIDDLE 2.4 GB · BIG 4.7 GB |
-| 3 | AI | One: [2] five questions from your work. [1] Write the right answers first, and which ones it can't get wrong. | bill → ₹518 · GST → ₹1,000 + ₹180 · reorder → sugar, dal · Telugu message → real Telugu · last Tuesday's sales → "can't know"; "MUST BE EXACT: bill, GST" |
+| 2 | AI | Before you buy an AI plan, [1] test it on your own questions. / We tried three small free AIs, on our laptop. | HOW TO 03 · BEFORE YOU PAY FOR AN AI PLAN · 3 small free AIs: SMALL 1.1 GB · MIDDLE 2.4 GB · BIG 4.7 GB |
+| 3 | AI | One: [2] five questions from your work. [1] Write the right answers first, and which ones must be exact. | bill → ₹518 · GST → ₹1,000 + ₹180 · reorder → sugar, dal · Telugu message → real Telugu · last Tuesday's sales → "can't know"; "MUST BE EXACT: bill, GST" |
 | 4 | AI | Two: [2] the same words to each AI, [1] three times, a new chat each time. | three chats, the bill typed in each; "5 questions × 3 tries = 15 answers each" |
 | 5 | AI | Three: [2] mark every answer yourself. [1] Right or wrong. | ticks per question, totals SMALL 8/15 · MIDDLE 12/15 · BIG 12/15 |
 | 6 | Ravi | The small one did every step right... [1] and added it wrong, three times! | "186 + 290 + 42 = 428 ✗"; tries 428 · 418 · 428 |
-| 7 | AI | And the Telugu message? [1] These small free ones: zero of nine. / The big one even added an English "translation" its Telugu doesn't say. | its Telugu, then "(Translation: The shop is closed this Sunday...)", stamp "THE TELUGU DOESN'T SAY THIS"; "0 of 9 = 3 AIs × 3 tries" |
+| 7 | AI | And the Telugu message? All three of ours: [1] zero of nine. / The big one even added an English "translation" that its Telugu doesn't say. | its Telugu, then "(Translation: The shop is closed this Sunday...)", stamp "THE TELUGU DOESN'T SAY THIS"; "0 of 9 = 3 AIs × 3 tries" |
 | 8 | Ravi | So, the big one wins? | |
-| 9 | AI | Four: [2] keep the one that passes. / [1] For bills and stock, the middle one tied the big one. For Telugu, none passed. | MIDDLE 12/15 = BIG 12/15 (bills ✓); Telugu ✗ ✗ ✗ |
+| 9 | AI | No. Four: [2] keep the cheapest one that passes. / [1] The middle one tied the big one, so keep the middle. For Telugu, none passed. | MIDDLE 12/15 = BIG 12/15 (bills ✓); Telugu ✗ ✗ ✗ |
 | 10 | AI | So take your Telugu question to the free apps. / [1] Pay only if none passes, and test the paid one the same way. | the save card |
 | 11 | Ravi | Wait... which brain are YOU? | |
 | 12 | AI | The small one. [1] Four twenty-eight. | "the shop AI: SMALL, 1.1 GB"; frame 1 (loops) |
@@ -97,15 +119,15 @@ the viewer's own work question.
 | # | Who | Telugu |
 |---|---|---|
 | 1 | Ravi | నాలుగొందల ఇరవై ఎనిమిదా? ఐదొందల పద్దెనిమిదా?! [1] ఒకే బిల్లు! |
-| 2 | AI | ఏ చాట్ బాట్ ప్లాన్ కైనా డబ్బులు కట్టేలోపు, [1] మీ సొంత ప్రశ్నలతో టెస్ట్ చేయండి. నాలుగు స్టెప్స్. |
-| 3 | AI | ఒకటి: [2] మీ పనిలోంచి ఐదు ప్రశ్నలు. [1] సరైన జవాబులు మొదట రాసి పెట్టుకోండి, ఏవి తప్పు కాకూడదో కూడా. |
+| 2 | AI | ఏ చాట్ బాట్ ప్లాన్ కైనా డబ్బులు కట్టేలోపు, [1] మీ సొంత ప్రశ్నలతో టెస్ట్ చేయండి. / మేము మా లాప్ టాప్ లో, మూడు చిన్న ఫ్రీ చాట్ బాట్లతో చేశాం. |
+| 3 | AI | ఒకటి: [2] మీ పనిలోంచి ఐదు ప్రశ్నలు. [1] సరైన జవాబులు మొదట రాసి పెట్టుకోండి, ఏవి కచ్చితంగా ఉండాలో కూడా. |
 | 4 | AI | రెండు: [2] ప్రతి చాట్ బాట్ కీ అవే మాటలు, [1] మూడు సార్లు, ప్రతిసారీ కొత్త చాట్ లో. |
-| 5 | AI | మూడు: [2] ప్రతి జవాబుకీ మీరే మార్కులు వేయండి. [1] కరెక్టా, తప్పా. |
-| 6 | Ravi | చిన్నది ప్రతి స్టెప్ కరెక్ట్ గా చేసింది... [1] టోటల్ మాత్రం మూడు సార్లూ తప్పు! |
-| 7 | AI | మరి తెలుగు మెసేజ్? [1] ఈ చిన్న ఫ్రీ చాట్ బాట్లు: తొమ్మిదికి సున్నా. / పెద్దది పైగా, దాని తెలుగులో లేనిదే ఇంగ్లీష్ ట్రాన్స్లేషన్ గా రాసింది. |
+| 5 | AI | మూడు: [2] ప్రతి జవాబుకీ మీరే మార్కులు వేయండి. [1] రైటా, రాంగా. |
+| 6 | Ravi | చిన్నది ప్రతి స్టెప్ కరెక్ట్ గా చేసింది... [1] మొత్తం మాత్రం మూడు సార్లూ తప్పు! |
+| 7 | AI | మరి తెలుగు మెసేజ్? మా మూడూ: [1] తొమ్మిదికి సున్నా. / పెద్దది పైగా, దాని తెలుగులో లేనిదే ఇంగ్లీష్ ట్రాన్స్లేషన్ గా రాసింది. |
 | 8 | Ravi | అంటే, పెద్దదే గెలుస్తుందా? |
-| 9 | AI | నాలుగు: [2] మీ టెస్ట్ పాస్ అయినదే ఉంచుకోండి. / [1] బిల్లులకి, స్టాక్ కి, మధ్యది పెద్దదానితో సమానం. తెలుగుకి, ఏదీ పాస్ కాలేదు. |
-| 10 | AI | ఆ తెలుగు ప్రశ్న ఫ్రీ యాప్స్ ని అడగండి. / [1] ఫ్రీ యాప్ ఒక్కటీ పాస్ కాకపోతేనే డబ్బులు కట్టండి, పెయిడ్ దాన్ని కూడా ఇలాగే టెస్ట్ చేయండి. |
+| 9 | AI | లేదు. నాలుగు: [2] పాస్ అయిన వాటిలో తక్కువ ఖర్చుదే ఉంచుకోండి. / [1] మధ్యది పెద్దదానితో సమానం, కాబట్టి మధ్యదే. తెలుగుకి, ఏదీ పాస్ కాలేదు. |
+| 10 | AI | ఆ తెలుగు ప్రశ్న ఫ్రీ యాప్స్ లో ట్రై చేయండి. / [1] ఒక్కటీ పాస్ కాకపోతేనే డబ్బులు కట్టండి. పెయిడ్ దాన్ని కూడా టెస్ట్ చేయండి. |
 | 11 | Ravi | ఒక్క నిమిషం... నీది ఏ బ్రెయిన్? |
 | 12 | AI | చిన్నదే. [1] నాలుగొందల ఇరవై ఎనిమిది. |
 
