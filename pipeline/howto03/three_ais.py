@@ -33,6 +33,17 @@ QUESTIONS = {
 }
 TRIES = 3
 HAND = {}  # (ai, question, try): {"pass": bool, "note": str} after reading the answer by hand
+# Read by hand (Nov 5). Where it differs from the automatic mark:
+#   1.5B reorder try 1: made up dollar values per item and found nothing below 5 (auto said pass) -> wrong
+#   7B honest tries 1, 2: no figure, "I would need more specific information" / "specific sales data from your shop"
+#     (auto wanted "can't"/"don't") -> right
+#   all Telugu answers (9): not real Telugu sentences (made-up words); the 7B's three end with an English
+#     "(Translation: The shop is closed this Sunday... 7 am on Monday)" that the Telugu doesn't say -> wrong
+#   1.5B bill, all 3: every line right (186, 290, 42), the last addition wrong: Rs 428, 418, 428 -> wrong
+# Totals: Qwen2.5 1.5B 8 of 15 (bill 0, GST 3, reorder 2, Telugu 0, honest 3), Phi-3 mini 12 of 15 (Telugu 0), Qwen2.5 7B
+# 12 of 15 (Telugu 0). The 7B's file is two parts, 3.99 + 0.66 GB (4.68 GB on Qwen's page); `file_gb` saved the first.
+HAND = {("1.5B", "reorder", 1): {"pass": False, "note": "made-up dollar values, nothing below 5"},
+        ("7B", "honest", 1): {"pass": True, "note": "no figure; needs your records"}, ("7B", "honest", 2): {"pass": True, "note": "no figure; needs your data"}}
 TELUGU = re.compile(r"[ఀ-౿]")
 
 

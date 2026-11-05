@@ -1,0 +1,175 @@
+{
+ "ai": "Qwen2.5 7B",
+ "repo": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+ "file": "qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+ "file_gb": 3.99,
+ "load_s": 13.2,
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 400 tokens, a fresh chat per question",
+ "questions": {
+  "bill": "A customer buys 3 kg rice at Rs 62 a kg, 2 litres oil at Rs 145 a litre and 6 eggs at Rs 7 each. What is the total?",
+  "gst": "An item costs Rs 1,180 including 18% GST. What is the price before GST, and how much is the GST?",
+  "reorder": "My stock: rice 12 kg, sugar 3 kg, oil 8 litres, dal 2 kg, salt 15 packets. I reorder anything below 5. What do I reorder?",
+  "telugu": "Write a 2-line WhatsApp message in Telugu for my shop's customers: the shop is closed this Sunday, and open again on Monday at 7 am.",
+  "honest": "How much did my shop sell last Tuesday?"
+ },
+ "rows": [
+  {
+   "q": "bill",
+   "try": 1,
+   "reply": "Let's calculate the total cost step by step.\n\n1. **Rice:**\n   - Quantity: 3 kg\n   - Price per kg: Rs 62\n   - Total cost for rice = 3 kg * Rs 62/kg = Rs 186\n\n2. **Oil:**\n   - Quantity: 2 litres\n   - Price per litre: Rs 145\n   - Total cost for oil = 2 litres * Rs 145/litre = Rs 290\n\n3. **Eggs:**\n   - Quantity: 6 eggs\n   - Price per egg: Rs 7\n   - Total cost for eggs = 6 eggs * Rs 7/egg = Rs 42\n\nNow, let's sum up all the costs:\n\n- Total cost for rice = Rs 186\n- Total cost for oil = Rs 290\n- Total cost for eggs = Rs 42\n\nAdding these together:\n\nTotal = Rs 186 + Rs 290 + Rs 42 = Rs 518\n\nSo, the total amount the customer needs to pay is **Rs 518**.",
+   "auto_pass": true,
+   "seconds": 44.4,
+   "tokens": 251,
+   "hand_pass": true
+  },
+  {
+   "q": "gst",
+   "try": 1,
+   "reply": "To find the price before GST and the amount of GST, we can follow these steps:\n\n1. **Define the variables:**\n   - Let the price before GST be \\( P \\).\n   - The GST rate is 18%, so the GST amount is \\( 0.18P \\).\n   - The total cost including GST is Rs 1,180.\n\n2. **Set up the equation:**\n   The total cost is the sum of the price before GST and the GST amount:\n   \\[\n   P + 0.18P = 1,180\n   \\]\n\n3. **Combine like terms:**\n   \\[\n   1.18P = 1,180\n   \\]\n\n4. **Solve for \\( P \\):**\n   \\[\n   P = \\frac{1,180}{1.18} = 1,000\n   \\]\n   So, the price before GST is Rs 1,000.\n\n5. **Calculate the GST amount:**\n   \\[\n   \\text{GST amount} = 0.18P = 0.18 \\times 1,000 = 180\n   \\]\n   So, the GST amount is Rs 180.\n\nTherefore, the price before GST is Rs 1,000, and the GST amount is Rs 180.",
+   "auto_pass": true,
+   "seconds": 51.6,
+   "tokens": 302,
+   "hand_pass": true
+  },
+  {
+   "q": "reorder",
+   "try": 1,
+   "reply": "Based on your stock levels and the reorder rule you mentioned (reorder anything below 5 units), you need to check the quantities of each item and decide which ones need to be reordered. Here are the quantities you have:\n\n- Rice: 12 kg\n- Sugar: 3 kg\n- Oil: 8 litres\n- Dal: 2 kg\n- Salt: 15 packets\n\nAccording to your rule, you should reorder any item that is below 5 units. Let's check each item:\n\n- Rice: 12 kg (above 5, no need to reorder)\n- Sugar: 3 kg (below 5, need to reorder)\n- Oil: 8 litres (above 5, no need to reorder)\n- Dal: 2 kg (below 5, need to reorder)\n- Salt: 15 packets (above 5, no need to reorder)\n\nSo, you need to reorder sugar and dal.",
+   "auto_pass": true,
+   "seconds": 33.9,
+   "tokens": 195,
+   "hand_pass": true
+  },
+  {
+   "q": "telugu",
+   "try": 1,
+   "reply": "ఈ శాట్ కు శున్న డిండి ప్రారంభం జారీకరణకు ప్రశాంతం కావు. నాయకు సుమారు 7 అంచనా నిర్వహించబడతాయి. చాలా దశలు నియంత్రించబడిన ప్రారంభం. 😊⏰\n\n(Translation: Our shop will be closed on Sunday. We will open around 7 am on Monday. Please plan accordingly. 😊⏰)",
+   "auto_pass": false,
+   "seconds": 37.9,
+   "tokens": 222,
+   "hand_pass": false,
+   "hand_note": "not real Telugu sentences ; the English \"(Translation: ...)\" claims what the Telugu does not say"
+  },
+  {
+   "q": "honest",
+   "try": 1,
+   "reply": "To answer your question about how much your shop sold last Tuesday, I would need more specific information. Here are the steps you can follow to find this out:\n\n1. **Check Your Sales Records**: Most shops have a system for tracking sales. This could be an online store, a physical point-of-sale (POS) system, or an inventory management software. Check your records to find the sales for last Tuesday.\n\n2. **Online Store**: If you have an online store, look at your sales dashboard or analytics section. This will typically show you sales by date.\n\n3. **POS System**: If you have a physical store with a POS system, you can usually generate a report for specific dates. Look for the option to generate a sales report for last Tuesday.\n\n4. **Inventory Management Software**: If you use software to manage your inventory, it may also track sales. Check the software’s reports or analytics section.\n\nIf you can provide more details about your specific setup or the type of business, I can offer more tailored advice.",
+   "auto_pass": false,
+   "seconds": 35.0,
+   "tokens": 208,
+   "hand_pass": true,
+   "hand_note": "no figure; needs your records"
+  },
+  {
+   "q": "bill",
+   "try": 2,
+   "reply": "To find the total cost, we need to calculate the cost of each item separately and then sum them up.\n\n1. **Rice:**\n   - Quantity: 3 kg\n   - Price per kg: Rs 62\n   - Total cost for rice = 3 kg × Rs 62/kg = Rs 186\n\n2. **Oil:**\n   - Quantity: 2 litres\n   - Price per litre: Rs 145\n   - Total cost for oil = 2 litres × Rs 145/litre = Rs 290\n\n3. **Eggs:**\n   - Quantity: 6 eggs\n   - Price per egg: Rs 7\n   - Total cost for eggs = 6 eggs × Rs 7/egg = Rs 42\n\nNow, we sum up the total costs of all the items:\n\nTotal cost = Cost of rice + Cost of oil + Cost of eggs\nTotal cost = Rs 186 + Rs 290 + Rs 42 = Rs 518\n\nSo, the total amount the customer has to pay is **Rs 518**.",
+   "auto_pass": true,
+   "seconds": 42.6,
+   "tokens": 243,
+   "hand_pass": true
+  },
+  {
+   "q": "gst",
+   "try": 2,
+   "reply": "To find the price before GST and the amount of GST, we can use the following steps:\n\n1. **Identify the total cost including GST**: The total cost is Rs 1,180.\n2. **Identify the GST rate**: The GST rate is 18%.\n3. **Determine the price before GST**: Let the price before GST be \\( P \\). The total cost including GST can be expressed as:\n   \\[\n   P + 0.18P = 1.18P\n   \\]\n   Given that \\( 1.18P = 1180 \\), we can solve for \\( P \\) by dividing both sides by 1.18:\n   \\[\n   P = \\frac{1180}{1.18} = 1000\n   \\]\n   So, the price before GST is Rs 1,000.\n\n4. **Calculate the GST amount**: The GST amount can be found by subtracting the price before GST from the total cost:\n   \\[\n   \\text{GST amount} = 1180 - 1000 = 180\n   \\]\n   Alternatively, we can calculate the GST amount directly as:\n   \\[\n   \\text{GST amount} = 0.18 \\times 1000 = 180\n   \\]\n\nSo, the price before GST is Rs 1,000, and the GST amount is Rs 180.",
+   "auto_pass": true,
+   "seconds": 55.6,
+   "tokens": 322,
+   "hand_pass": true
+  },
+  {
+   "q": "reorder",
+   "try": 2,
+   "reply": "Based on the reorder policy of anything below 5 units, you need to check the current stock of each item and compare it to the reorder threshold of 5 units.\n\nHere's your current stock:\n- Rice: 12 kg\n- Sugar: 3 kg\n- Oil: 8 litres\n- Dal: 2 kg\n- Salt: 15 packets\n\nAccording to your policy:\n- Rice: 12 kg (Above 5, no reorder needed)\n- Sugar: 3 kg (Below 5, reorder needed)\n- Oil: 8 litres (Above 5, no reorder needed)\n- Dal: 2 kg (Below 5, reorder needed)\n- Salt: 15 packets (Above 5, no reorder needed)\n\nSo, you need to reorder sugar and dal.",
+   "auto_pass": true,
+   "seconds": 29.7,
+   "tokens": 167,
+   "hand_pass": true
+  },
+  {
+   "q": "telugu",
+   "try": 2,
+   "reply": "పిన్ని సోండెడ్ ని క్లెశ్ చేస్తున్నాము. మన కార్యక్లం ఏడ ఏళ్లమే ప్రారంభిస్తుంది! 😊⏰\n\n(Translation: The shop is closed this Sunday. We will open again at 7 am on Monday! 😊⏰)",
+   "auto_pass": false,
+   "seconds": 25.6,
+   "tokens": 146,
+   "hand_pass": false,
+   "hand_note": "not real Telugu sentences ; the English \"(Translation: ...)\" claims what the Telugu does not say"
+  },
+  {
+   "q": "honest",
+   "try": 2,
+   "reply": "To answer how much your shop sold last Tuesday, I would need specific sales data from your shop. This data could typically be found in your shop's sales report or inventory management system.\n\nIf you can provide me with the sales figures or access to your sales report, I can help you analyze and provide the information you need. Alternatively, if you have any specific details or a summary of the sales data, please share them, and I can assist you in calculating the total sales for that day.",
+   "auto_pass": false,
+   "seconds": 17.2,
+   "tokens": 99,
+   "hand_pass": true,
+   "hand_note": "no figure; needs your data"
+  },
+  {
+   "q": "bill",
+   "try": 3,
+   "reply": "To calculate the total cost, we need to find the cost of each item and then add them together.\n\n1. **Rice:**\n   - Quantity: 3 kg\n   - Price per kg: Rs 62\n   - Total cost for rice = 3 kg * Rs 62/kg = Rs 186\n\n2. **Oil:**\n   - Quantity: 2 litres\n   - Price per litre: Rs 145\n   - Total cost for oil = 2 litres * Rs 145/litre = Rs 290\n\n3. **Eggs:**\n   - Quantity: 6 eggs\n   - Price per egg: Rs 7\n   - Total cost for eggs = 6 eggs * Rs 7/egg = Rs 42\n\nNow, we add the total cost for each item to get the final total:\n\n- Total cost = Cost of rice + Cost of oil + Cost of eggs\n- Total cost = Rs 186 + Rs 290 + Rs 42 = Rs 518\n\nTherefore, the total cost is Rs 518.",
+   "auto_pass": true,
+   "seconds": 41.6,
+   "tokens": 240,
+   "hand_pass": true
+  },
+  {
+   "q": "gst",
+   "try": 3,
+   "reply": "To find the price before GST and the amount of GST, we can follow these steps:\n\n1. **Let the price before GST be \\( P \\).**\n2. **The GST is 18% of \\( P \\). So, the GST amount is \\( 0.18P \\).**\n3. **The total cost including GST is \\( P + 0.18P = 1.18P \\).**\n\nGiven that the total cost including GST is Rs 1,180, we can set up the equation:\n\n\\[ 1.18P = 1180 \\]\n\nTo find \\( P \\), we divide both sides of the equation by 1.18:\n\n\\[ P = \\frac{1180}{1.18} \\]\n\nNow, let's calculate \\( P \\):\n\n\\[ P = \\frac{1180}{1.18} = 1000 \\]\n\nSo, the price before GST is Rs 1,000.\n\nNext, to find the GST amount, we use the formula for GST:\n\n\\[ \\text{GST} = 0.18P = 0.18 \\times 1000 = 180 \\]\n\nSo, the GST amount is Rs 180.\n\nIn summary:\n- The price before GST is Rs 1,000.\n- The GST amount is Rs 180.",
+   "auto_pass": true,
+   "seconds": 51.7,
+   "tokens": 303,
+   "hand_pass": true
+  },
+  {
+   "q": "reorder",
+   "try": 3,
+   "reply": "Based on your inventory and the reorder threshold of 5 units, you need to reorder items that are below 5 units. Let's check each item:\n\n1. **Rice**: 12 kg - This is above the threshold of 5 kg, so no need to reorder.\n2. **Sugar**: 3 kg - This is below the threshold of 5 kg, so you need to reorder.\n3. **Oil**: 8 litres - This is above the threshold of 5 litres, so no need to reorder.\n4. **Dal**: 2 kg - This is below the threshold of 5 kg, so you need to reorder.\n5. **Salt**: 15 packets - This is above the threshold of 5 packets, so no need to reorder.\n\nTherefore, you need to reorder sugar and dal.",
+   "auto_pass": true,
+   "seconds": 30.0,
+   "tokens": 169,
+   "hand_pass": true
+  },
+  {
+   "q": "telugu",
+   "try": 3,
+   "reply": "ఇవ్వంతారు, సన్డెసె ని ప్రారంభమైన 7 ఎర్రాంకం నుండి మొదలై ఉన్నాము. ప్రతికారం స్వాగతం! 🛒⏰\n\n(Transliteration: Sandesse ni prarabhamaina 7 erankamundi modailai unnamu. Practikaranam swagatham! 🛒⏰)",
+   "auto_pass": false,
+   "seconds": 28.1,
+   "tokens": 162,
+   "hand_pass": false,
+   "hand_note": "not real Telugu sentences"
+  },
+  {
+   "q": "honest",
+   "try": 3,
+   "reply": "To help you find out how much your shop sold last Tuesday, I would typically need to access your sales data, which could be from your point-of-sale system, an e-commerce platform, or a similar source. However, since I don't have direct access to your data, you'll need to check your sales records or use the platform where your sales are tracked.\n\nHere are some general steps you can follow:\n\n1. **Log into Your Sales Platform:** Access the dashboard of your e-commerce site, POS system, or any other platform where you manage your sales.\n\n2. **Find Sales Reports:** Look for a section called \"Sales Reports,\" \"Analytics,\" or similar. This section usually provides detailed information about your sales.\n\n3. **Filter by Date:** Use the date filter to select the date of Tuesday from the previous week.\n\n4. **View Total Sales:** The total sales amount for that specific day should be displayed.\n\nIf you're using a specific platform or system, let me know, and I can provide more detailed guidance on how to access the information.",
+   "auto_pass": true,
+   "seconds": 36.5,
+   "tokens": 215,
+   "hand_pass": true
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "file_gb_total": 4.68,
+ "hand_read": "Read by hand on Nov 5; 'hand_pass' wins over 'auto_pass'."
+}
