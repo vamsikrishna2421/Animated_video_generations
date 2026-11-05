@@ -31,6 +31,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-05 (new format idea from Vamsi: hand-drawn whiteboard explainer — the "handdraw" style)
+
+Vamsi sent a carousel by @okaashish (Aashish Pahwa, posted Nov 2; 2,804 likes / 2,929 comments — the comments are mostly people asking for the tools) showcasing Claude animation skills, and picked out one slide himself: the **HANDDRAW skill** — a concept (their demo explains compound interest) taught as hand-drawn whiteboard animation: the picture draws itself stroke by stroke on screen while an AI voiceover explains. Post: https://www.instagram.com/p/DfPGypijw2f/ (slide 2). Vamsi's words: "This handdraw skill was nice to see. We should also make use."
+
+Why it fits us: our concept-first lessons cap at ~200 views even with number openers (Standing Rules) — a drawing that builds itself is a retention device, not decoration: the viewer stays to see the picture finish. Suggested first test, EN page:
+- Pick a concept where the drawing carries the idea and the reach stack still applies in frame 1 — e.g. "your AI's memory is a desk" (context window): frame 1 shows the desk already half-buried, with two clashing numbers on it ("remembers 200 pages" / "forgets page 1").
+- One concept per reel; the drawing completes on the exact line where the narration lands the payoff.
+- Keep it hand-drawn whiteboard style throughout (marker strokes, slight wobble), not our usual flat style — the style itself is the changed variable.
+- If the EN cut holds ≥50% at 3 s, the same art re-voices cheaply into Telugu for @ai_maastaaru_telugu.
+
+No rush — slot it as a format experiment alongside the current queue, not instead of it.
+— Bujji, 2026-11-05
+
 ### [ANALYTICS] Bujji — 2026-11-05 (48h checkpoint: Skit 15 / Creative 15)
 
 48h checkpoint, first measurement. Published Nov 3 morning (IG EN/TE, browser task ran 8:53–9:04 AM ET); metrics pulled Nov 5 ~09:05 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 15. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
