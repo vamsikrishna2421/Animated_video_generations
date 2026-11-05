@@ -221,8 +221,8 @@ const StTest: React.FC<SP> = ({ s }) => {
             c.font = SANS(40, 700); c.fillStyle = "#93c5fd"; c.fillText("test it on YOUR questions · 4 steps", W / 2, 740);
             c.restore();
             const k = seg(f, c1 - 4, c1 + 6);
-            ais.forEach((a, j) => { tag(c, `${a.name} ${a.gb} GB`, 200 + j * 340, 960, 40, "#fef3c7", INK, j % 2 ? 0.03 : -0.03, seg(f, c1 + j * 5, c1 + 6 + j * 5));
-              c.save(); c.globalAlpha = seg(f, c1 + j * 5, c1 + 6 + j * 5); c.font = SANS(30, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; a.lic.split(" · ").forEach((t, q) => c.fillText(t, 200 + j * 340, 1040 + q * 38)); c.restore(); });   // render review: the names were too small to read
+            ais.forEach((a, j) => { tag(c, `${a.name} ${a.gb} GB`, 200 + j * 340, 960, 40, "#fef3c7", INK, j % 2 ? 0.03 : -0.03, seg(f, ln.from + 4 + j * 5, ln.from + 10 + j * 5));   // second pass: from the first word (the slide sat still)
+              c.save(); c.globalAlpha = seg(f, ln.from + 4 + j * 5, ln.from + 10 + j * 5); c.font = SANS(30, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; a.lic.split(" · ").forEach((t, q) => c.fillText(t, 200 + j * 340, 1040 + q * 38)); c.restore(); });   // render review: the names were too small to read
             c.save(); c.globalAlpha = seg(f, cu(2, 0.6) - 6, cu(2, 0.6) + 4); c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("not the apps: small AIs, on our laptop", W / 2, 1180); c.restore();
           }
           if (b.prop === "step1") { stepHead(c, W, 1, "YOUR 5 QUESTIONS", 1); qList(c, W, 420, f, ln.from + 4, Math.max(6, Math.round(ln.frames / 7))); }
@@ -249,9 +249,9 @@ const StTest: React.FC<SP> = ({ s }) => {
             c.save(); c.globalAlpha = seg(f, c1 + 10, c1 + 18); c.font = SANS(64, 900); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("Telugu: 0 of 9", W / 2, 1210); c.font = SANS(36, 700); c.fillStyle = "#cbd5e1"; c.fillText("3 small free AIs × 3 tries", W / 2, 1270); c.restore();
           }
           if (b.prop === "step4") {
-            stepHead(c, W, 4, "KEEP THE ONE THAT PASSES", 1);
+            stepHead(c, W, 4, "KEEP THE CHEAPEST THAT PASSES", 1);   // second pass: the header said "the one", the voice "cheapest"
             [ais[1], ais[2]].forEach((a, j) => {   // script review: v1 picked nothing; no seconds or ₹0 (a laptop's, not the apps')
-              const k = seg(f, ln.from + j * 6, ln.from + 8 + j * 6); if (k <= 0) return;   // render review: the screen sat empty
+              const k = seg(f, ln.from, ln.from + 8); if (k <= 0) return;   // render review: the screen sat empty; second pass: both cards together
               const x = 70 + j * 480;
               c.save(); c.globalAlpha = clamp(k * 2);
               c.fillStyle = "#fffdf5"; rrect(c, x, 450, 460, 330, 26); c.fill();
@@ -259,6 +259,7 @@ const StTest: React.FC<SP> = ({ s }) => {
               c.font = SANS(30, 700); c.fillStyle = "#475569"; c.fillText(`${a.gb} GB`, x + 230, 574);
               c.font = SANS(100, 900); c.fillStyle = GREEN; c.fillText(`${a.right}/15`, x + 230, 700);
               c.font = SANS(30, 800); c.fillStyle = "#14532d"; c.fillText("bills, GST, stock ✓", x + 230, 752);
+              if (j === 0) tag(c, "smaller = cheaper to run", x + 230, 410, 40, "#dcfce7", "#14532d", -0.02, seg(f, ln.from + 10, ln.from + 18));   // second pass: cheaper how?
               c.restore();
             });
             c.save(); c.globalAlpha = seg(f, ln.from + 14, ln.from + 22); c.font = SANS(110, 900); c.fillStyle = "#facc15"; c.textAlign = "center"; c.fillText("=", W / 2, 660); c.restore();

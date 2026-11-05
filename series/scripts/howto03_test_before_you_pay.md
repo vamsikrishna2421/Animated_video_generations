@@ -91,11 +91,21 @@ Telugu "మా మూడూ: తొమ్మిదికి సున్నా",
 the bed 2-3 dB lower; the banner "Before you pay for an AI plan". Not changed: the caption split "to the free | apps"
 (the caption splitter).
 
+## Second render pass (human-viewer) and what changed
+Both: the fixes landed (laptop models said at 0:07, "No... keep the middle", the big totals, the end card, the drop
+before "zero of nine", "రైటా, రాంగా", no "అడగండి"); they'd stop, finish and save. Both: the step 4 header still said "keep
+the one that passes" while the voice said "cheapest" (cheaper how?); the MIDDLE card came before BIG; the title slide
+still sat still. Sandeep: Telugu "మొత్తం" came out "బత్తా". Priya: #ChatGPT #Gemini on a reel that doesn't test them.
+Changed: "KEEP THE CHEAPEST THAT PASSES" with "smaller = cheaper to run" under MIDDLE, both cards together; the title's
+three tags from the first word; Telugu line 6 "లెక్క మాత్రం మూడు సార్లూ తప్పు!"; the Telugu caption says why the middle one
+(cheaper to run); hashtags without app names. Not changed: "తెలుగు" in lines 9-10 (this voice says it fast in every take:
+the one clear take, line 7, is kept); the 200-300 Hz bed (already cut 8 dB; the lofi bed's own chords).
+
 ## Build notes
 - Stills: frame 1's header sat under the banner and the "RAVI LOSES ₹90" stamp covered Ravi's eyes (now on the counter);
   the Telugu screen's "0 of 9" overlapped the totals; step 4's header was clipped (it shrinks to fit); the save card still
   said "note the seconds" (now "the must-be-exact ones decide"); the bubble matches the line ("The big one wins?").
-- English 62.7 s. Fish's line 7 put a stop in "an English translation. Its Telugu doesn't say." (the card carries it).
+- English 62.7 s at the first build (66.8 s as rendered, Telugu 76.5 s). Fish's line 7 put a stop in "an English translation. Its Telugu doesn't say." (the card carries it).
 - Telugu: the first pass's spelling lists were too strict (good takes rejected, four tries a line): broad substrings,
   then every try re-judged.
 
