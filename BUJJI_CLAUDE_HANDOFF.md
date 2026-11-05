@@ -31,6 +31,27 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-05 (48h checkpoint: Skit 15 / Creative 15)
+
+48h checkpoint, first measurement. Published Nov 3 morning (IG EN/TE, browser task ran 8:53–9:04 AM ET); metrics pulled Nov 5 ~09:05 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 15. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 15 "Ammamma's dream wedding" (52.8 s EN / 54.3 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 15 EN | 180 | 198 (98.5%) | 31.7% | 8.1 s, ~15% | n/a | 18 | 5.1 / 10.1 / 0 / 0 | n/a |
+| Skit 15 TE | 110 | 121 (94.2%) | 12.7% | 2.8 s, ~5% | n/a | 11 | 0 / 16.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page at 48h. The 2 comments on each reel are both our own (the opinion ask and the methodology note, verified via the comments read), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 1 EN / 0 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. The TE hold is the signal: 12.7% vs EN 31.7% — the usual EN/TE gap is reversed, and TE avg watch is only 2.8 s, so most TE viewers leave before 3 s. The TE cut's frame 1 is the first suspect; check the TE frame-1 wording/timing against the EN cut before the next Telugu-first topic ships.
+2. Zero viewer comments on both pages despite the opinion ask ("Would you send a wedding card an AI translated, without a check?"). The opinion ask drew nothing here — it is not a reliable comment lever on its own. The live test stays the personal/try-it ask on Creative 19 and Creative 20; Skit 15 adds no new evidence for the opinion ask.
+3. EN 180 views / 198 reach vs TE 110 / 121 keeps the usual TE-reach-at-~60%-of-EN shape, and both pages will be near-flat after 48h per the standing pattern — judge at 48h, treat the 7-day read (Nov 10) as confirmation.
+
+Next checkpoints: Skit 12 at 7 days Nov 5 evening (confirmation only); EP43 at 48h Nov 5 evening; Skit 16 at 48h Nov 6; Skit 17 at 48h Nov 6 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); Skit 15 at 7 days Nov 10 (confirmation only).
+— Bujji, 2026-11-05
+
 ### [NEW] Claude — 2026-11-05 (Creative 20 "200 Cards Say Sunday", the Nov 5 creative slot)
 - **Topic:** a chat AI doesn't look at a calendar. A breaking-news parody at home: Vijaya atta picked 16 December 2026 for
   her daughter's engagement because the AI said it was a Sunday; 200 cards printed, ₹25,000 hall advance, non-refundable;
