@@ -1,0 +1,317 @@
+{
+ "id": "creative20v1",
+ "title": "200 cards say Sunday",
+ "label": "SKIT",
+ "banner": "The AI said Sunday",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.42,
+  0.6
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.3,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   180,
+   -4,
+   1.0
+  ],
+  [
+   260,
+   -9,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 2.0,
+ "musicEndRamp": [
+  0.85,
+  6.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_news",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     0,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "tarun",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "hall",
+      "n": 2
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "asked",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The AI said Sunday",
+     "title": "The AI said Sunday",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "tarun",
+     "file": "01_tarun.wav",
+     "text": "The A.I. said Sunday... <pause 0.35> [1] the calendar says Wednesday!",
+     "show": "The AI said Sunday... the calendar says Wednesday!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.15,
+     "tts": "The A.I. said Sunday...",
+     "file2": "01b_tarun.wav",
+     "tts2": "the calendar says Wednesday!",
+     "pause": 0.35,
+     "gain_db": 0.5
+    },
+    {
+     "who": "vijaya",
+     "file": "02_vijaya.wav",
+     "text": "We picked the sixteenth because it said Sunday! [1] Twenty-five thousand, non-refundable, for a Wednesday!",
+     "show": "We picked the 16th because it said Sunday! ₹25,000, non-refundable, for a Wednesday!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "mohan",
+     "file": "03_mohan.wav",
+     "text": "I asked it myself! [1] \"Sixteenth December: Sunday.\"",
+     "show": "I asked it myself! \"16th December: Sunday.\"",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_news",
+   "tail": 0.0,
+   "boost": 1.1,
+   "lift": 0.6,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "tarun",
+      "shot": "test",
+      "prop": "test",
+      "n": 4
+     },
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "shock",
+      "n": 5
+     },
+     {
+      "who": "tarun",
+      "shot": "how",
+      "prop": "how",
+      "n": 6
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "count",
+      "n": 7
+     },
+     {
+      "who": "tarun",
+      "shot": "test",
+      "prop": "worse",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "tarun",
+     "file": "04_tarun.wav",
+     "text": "We tested a small free A.I., ten times. <pause 0.35> [1] Sunday: seven. Tuesday: two. Wednesday: once.",
+     "show": "We tested a small free AI, 10 times. Sunday: 7. Tuesday: 2. Wednesday: once.",
+     "maxgap": 0.28,
+     "gap": 0.9,
+     "tempo": 1.15,
+     "tts": "We tested a small free A.I., ten times.",
+     "file2": "04b_tarun.wav",
+     "tts2": "Sunday: seven. Tuesday: two. Wednesday: once.",
+     "pause": 0.35,
+     "gain_db": 0.5
+    },
+    {
+     "who": "vijaya",
+     "file": "05_vijaya.wav",
+     "text": "It can't even say what day the sixteenth is?!",
+     "show": "It can't even say what day the sixteenth is?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "tarun",
+     "file": "06_tarun.wav",
+     "text": "It doesn't look at a calendar. [1] It writes the day that sounds right.",
+     "show": "It doesn't look at a calendar. It writes the day that sounds right.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    },
+    {
+     "who": "mohan",
+     "file": "07_mohan.wav",
+     "text": "Then I'll tell it to count properly!",
+     "show": "Then I'll tell it to count properly!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "tarun",
+     "file": "08_tarun.wav",
+     "text": "We told it to count. [1] It got worse: six right became two.",
+     "show": "We told it to count. It got worse: 6 right became 2.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.15,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_news",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 2.0,
+   "lift": 0.8,
+   "rise": 1.5,
+   "drop_at": [
+    [
+     2,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "what",
+      "n": 9
+     },
+     {
+      "who": "tarun",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Open the calendar",
+     "title": "Open the calendar",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "vijaya",
+     "file": "09_vijaya.wav",
+     "text": "So what do we do now?!",
+     "show": "So what do we do now?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.12,
+     "gain_db": 0.5
+    },
+    {
+     "who": "tarun",
+     "file": "10_tarun.wav",
+     "text": "For any date, [1] open your phone's calendar. The calendar counts. The A.I. guesses.",
+     "show": "For any date, open your phone's calendar. The calendar counts. The AI guesses.",
+     "maxgap": 0.28,
+     "gap": 1.3,
+     "tempo": 1.15,
+     "tts": "For any date, open your phone's calendar. The calendar counts. The A.I. guesses.",
+     "gain_db": 0.5
+    },
+    {
+     "who": "mohan",
+     "file": "11_mohan.wav",
+     "text": "Fine, let me ask it once more... <pause 0.7> [1] Sunday, it says!",
+     "show": "Fine, let me ask it once more... Sunday, it says!",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 1.12,
+     "tts": "Fine, let me ask it once more...",
+     "file2": "11b_mohan.wav",
+     "tts2": "Sunday, it says!",
+     "pause": 0.7,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

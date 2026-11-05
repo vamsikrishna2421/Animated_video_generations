@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -53,6 +53,9 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   sai: { skin: "#a26d47", hair: "#1c1410", top: "#2563eb" },   // Creative 19 (SidesCrayon.tsx): the tenant, 27, the blue corner
   venkat: { skin: "#8d5a3b", hair: "#d4d4d8", top: "#b91c1c" },   // Venkat Rao garu, 62, the landlord, the red corner: white hair, a moustache
   pinky: { skin: "#b07a52", hair: "#120d0a", top: "#facc15" },   // his granddaughter, 14, the ring announcer
+  tarun: { skin: "#a26d47", hair: "#1c1410", top: "#0f766e" },   // Creative 20 (NewsCrayon.tsx): the nephew, 19, the "anchor"
+  vijaya: { skin: "#9c6a45", hair: "#27272a", top: "#be185d" },   // Vijaya atta, 52, booked the hall: a bun
+  mohan: { skin: "#8d5a3b", hair: "#a1a1aa", top: "#1d4ed8" },   // Mohan mama, 55, asked the AI: grey hair, glasses
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
@@ -87,7 +90,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
   stroke(c, circlePts(0, hy, 94, 112), INK, 4, r, { passes: 2, alpha: 0.55 });
   c.fillStyle = L.hair; c.beginPath();
-  if (who === "vasudha" || who === "sarojini") {   // a bun, pulled back, grey streak
+  if (who === "vasudha" || who === "sarojini" || who === "vijaya") {   // a bun, pulled back, grey streak
     c.ellipse(0, hy - 118, 46, 40, 0, 0, 7); c.moveTo(100, hy - 30); c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy - 20); c.lineTo(-100, hy - 20);
   } else if (who === "nikhil" || who === "charan" || who === "akhil" || who === "rohit") {   // curly
     for (let q = 0; q < 7; q++) { const a = Math.PI * (1.05 + q * 0.15); c.moveTo(Math.cos(a) * 92 + 30, hy - 40 + Math.sin(a) * 84); c.arc(Math.cos(a) * 92, hy - 40 + Math.sin(a) * 84, 30, 0, 7); }
@@ -119,7 +122,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
       stroke(c, [[ex - 15, ey], [ex + 15, ey - 2]], INK, 6, r, { passes: 2 });
     } else { c.beginPath(); c.arc(ex, ey, 9, 0, 7); c.fillStyle = INK; c.fill(); }
   });
-  if (who === "nikhil" || who === "vasudha" || who === "thathayya" || who === "srinivas" || who === "ramesh" || who === "kumar" || who === "venkat") {   // glasses
+  if (who === "nikhil" || who === "vasudha" || who === "thathayya" || who === "srinivas" || who === "ramesh" || who === "kumar" || who === "venkat" || who === "mohan") {   // glasses
     [-36, 36].forEach((ex) => stroke(c, rrectPts(ex - 30, hy - 26, 60, 44), INK, 5, r, { passes: 2 }));
     stroke(c, [[-6, hy - 6], [6, hy - 6]], INK, 5, r, { passes: 1 });
   }
@@ -134,7 +137,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   } else if (m === "smug") stroke(c, [[-20, my + 2], [6, my + 2], [22, my - 10]], INK, 6, r, { passes: 2 });
   else if (m === "worried" || m === "angry") stroke(c, [[-18, my + 6], [0, my], [18, my + 6]], INK, 6, r, { passes: 2 });
   else stroke(c, [[-16, my], [16, my]], INK, 6, r, { passes: 2 });
-  if (who === "sneha" || who === "meghana" || who === "rani" || who === "vasudha") [-1, 1].forEach((sx) => { c.beginPath(); c.arc(sx * 94, hy + 28, 8, 0, 7); c.fillStyle = "#facc15"; c.fill(); });   // earrings
+  if (who === "sneha" || who === "meghana" || who === "rani" || who === "vasudha" || who === "vijaya") [-1, 1].forEach((sx) => { c.beginPath(); c.arc(sx * 94, hy + 28, 8, 0, 7); c.fillStyle = "#facc15"; c.fill(); });   // earrings
   if (who === "rani") { c.beginPath(); c.arc(0, hy - 62, 9, 0, 7); c.fillStyle = RED; c.fill(); }   // a bindi
 };
 const heldPhone = (c: Ctx, x: number, y: number) => {

@@ -1,0 +1,321 @@
+{
+ "id": "creative20te",
+ "title": "200 cards say Sunday (Telugu audio)",
+ "label": "SKIT",
+ "banner": "The AI said Sunday",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.6,
+  0.9
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.3,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   180,
+   -4,
+   1.0
+  ],
+  [
+   260,
+   -9,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 5.0,
+ "musicEndRamp": [
+  0.85,
+  6.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_news",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     0,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "tarun",
+      "shot": "wide",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "hall",
+      "n": 2
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "asked",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "The AI said Sunday",
+     "title": "The AI said Sunday",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "tarun",
+     "file": "01_tarun.wav",
+     "text": "చాట్ బాట్ ఆదివారం అంది... <pause 0.35> [1] క్యాలెండర్ లో బుధవారం!",
+     "show": "The chatbot said Sunday... the calendar says Wednesday!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.05,
+     "tts": "చాట్ బాట్ ఆదివారం అంది...",
+     "file2": "01b_tarun.wav",
+     "tts2": "క్యాలెండర్ లో బుధవారం!",
+     "pause": 0.35,
+     "gain_db": 0.5
+    },
+    {
+     "who": "vijaya",
+     "file": "02_vijaya.wav",
+     "text": "ఆదివారం అందనే పదహారో తారీఖు పెట్టాం! [1] బుధవారానికి ఇరవై ఐదు వేలు కట్టేశా, తిరిగి రావు!",
+     "show": "We fixed the 16th because it said Sunday! I paid ₹25,000 for a Wednesday, no refund!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    },
+    {
+     "who": "mohan",
+     "file": "03_mohan.wav",
+     "text": "నేనే అడిగాను! [1] \"డిసెంబర్ పదహారో తారీఖు: ఆదివారం\" అంది.",
+     "show": "I asked it myself! \"16th December: Sunday,\" it said.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_news",
+   "tail": 0.0,
+   "boost": 1.1,
+   "lift": 0.6,
+   "drop_pre": [
+    [
+     0,
+     0.0,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "tarun",
+      "shot": "test",
+      "prop": "test",
+      "n": 4
+     },
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "shock",
+      "n": 5
+     },
+     {
+      "who": "tarun",
+      "shot": "how",
+      "prop": "how",
+      "n": 6
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "count",
+      "n": 7
+     },
+     {
+      "who": "tarun",
+      "shot": "test",
+      "prop": "worse",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "tarun",
+     "file": "04_tarun.wav",
+     "text": "ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు టెస్ట్ చేశాం. <pause 0.35> [1] ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే.",
+     "show": "We tested a small free chatbot 10 times. Sunday 7 times. Tuesday twice. Wednesday just once.",
+     "maxgap": 0.28,
+     "gap": 0.9,
+     "tempo": 1.05,
+     "tts": "ఒక చిన్న ఫ్రీ చాట్ బాట్ ని పది సార్లు టెస్ట్ చేశాం.",
+     "file2": "04b_tarun.wav",
+     "tts2": "ఆదివారం ఏడు సార్లు. మంగళవారం రెండు. బుధవారం ఒక్కసారే.",
+     "pause": 0.35,
+     "gain_db": 0.5
+    },
+    {
+     "who": "vijaya",
+     "file": "05_vijaya.wav",
+     "text": "ఒక తేదీ ఏ రోజో కూడా చెప్పలేదా?!",
+     "show": "It can't even say what day a date is?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    },
+    {
+     "who": "tarun",
+     "file": "06_tarun.wav",
+     "text": "అది క్యాలెండర్ చూడదు. [1] తోచిన రోజు పేరు రాసేస్తుంది.",
+     "show": "It doesn't look at a calendar. It writes whatever day comes to it.",
+     "maxgap": 0.28,
+     "gap": 0.6,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "mohan",
+     "file": "07_mohan.wav",
+     "text": "అయితే సరిగ్గా లెక్కపెట్టమని చెప్తా!",
+     "show": "Then I'll tell it to count properly!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    },
+    {
+     "who": "tarun",
+     "file": "08_tarun.wav",
+     "text": "లెక్కపెట్టమన్నాం. [1] ఇంకా ఘోరం: ఆరు కరెక్ట్ నుంచి రెండుకి.",
+     "show": "We told it to count. Even worse: from 6 right to 2.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_news",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.6,
+   "lift": 0.8,
+   "rise": 1.3,
+   "drop_at": [
+    [
+     2,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "vijaya",
+      "shot": "wide",
+      "prop": "what",
+      "n": 9
+     },
+     {
+      "who": "tarun",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "mohan",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Open the calendar",
+     "title": "Open the calendar",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "vijaya",
+     "file": "09_vijaya.wav",
+     "text": "మరి ఇప్పుడు ఏం చేయాలి?!",
+     "show": "So what do we do now?!",
+     "maxgap": 0.28,
+     "gap": 0.15,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    },
+    {
+     "who": "tarun",
+     "file": "10_tarun.wav",
+     "text": "ఏ తేదీ అయినా, [1] ఫోన్ లో క్యాలెండర్ తెరవండి. క్యాలెండర్ లెక్కపెడుతుంది, చాట్ బాట్ గెస్ కొడుతుంది.",
+     "show": "For any date, open the calendar on your phone. The calendar counts, the chatbot guesses.",
+     "maxgap": 0.28,
+     "gap": 1.3,
+     "tempo": 1.05,
+     "gain_db": 0.5
+    },
+    {
+     "who": "mohan",
+     "file": "11_mohan.wav",
+     "text": "సరే, ఇంకోసారి అడుగుతా... <pause 0.7> [1] ఆదివారమే అంటోంది!",
+     "show": "OK, let me ask once more... Sunday, it still says!",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 1.0,
+     "tts": "సరే, ఇంకోసారి అడుగుతా...",
+     "file2": "11b_mohan.wav",
+     "tts2": "ఆదివారమే అంటోంది!",
+     "pause": 0.7,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
