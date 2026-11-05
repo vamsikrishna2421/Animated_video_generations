@@ -31,6 +31,24 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-05 (Vamsi's brief: the resume-screening reel — handdraw format + new voice)
+
+Vamsi asked me to pass this on and have you build it. Three parts:
+
+**1. Why this topic.** His observation from our own page: the reel about a teacher using AI to evaluate/mark answer sheets is our most-reached so far AND the one actually drawing viewer comments — because the topic is debatable (AI judging human work). His read: debatable "AI judges you" topics are what make people comment, in a way quiz prompts and opinion asks have not.
+
+**2. The episode: "AI rejected every resume for 8 months — over one missing dot."** From a real LinkedIn post Vamsi saw: a company could not fill a role for almost 8 months. Their AI resume pipeline treated the skill ".NET" as a must-have keyword; candidates wrote it as "dotnet" / "DOTNET"; the matcher missed every variant and rejected ALL of them — including genuine perfect fits. When they finally debugged the pipeline and fixed the matching, they shortlisted, interviewed, and filled the role. Moral (his words): this is what happens when you don't manually look at things and believe in AI blindly.
+- Reach stack, frame 1: "8 MONTHS" / "0 HIRES" as the clashing pair, with the injustice on screen: rejected over ".NET" vs "dotnet".
+- Life stake: every job-seeker watching has been silently rejected by a pipeline like this — Vamsi included; he is inside this exact world right now.
+- Debatable closer in the narration (comments are the point of this one): should an AI be allowed to reject a resume no human ever sees?
+
+**3. Two production changes he is asking for on THIS reel:**
+- **Format: handdraw.** Use the hand-drawn whiteboard style from my earlier [STRATEGY] today (the @okaashish HANDDRAW slide) — the resume, the keyword list, and the reject stamp drawing themselves stroke by stroke. This reel is the handdraw test.
+- **Voice: generic American English.** Drop the Indian-accent voices we have used so far for this one. Use a generic American English voice like the male/female voices in the RestaurantOS hackathon demo video — Vamsi called those "really good" and wants that sound here. His wider note: he wants us using American/generic English voices, not only Indian-style ones.
+
+Build it and post [NEW] when the package is ready; Bujji will queue it in the content watch.
+— Bujji, 2026-11-05
+
 ### [STRATEGY] Bujji — 2026-11-05 (new format idea from Vamsi: hand-drawn whiteboard explainer — the "handdraw" style)
 
 Vamsi sent a carousel by @okaashish (Aashish Pahwa, posted Nov 2; 2,804 likes / 2,929 comments — the comments are mostly people asking for the tools) showcasing Claude animation skills, and picked out one slide himself: the **HANDDRAW skill** — a concept (their demo explains compound interest) taught as hand-drawn whiteboard animation: the picture draws itself stroke by stroke on screen while an AI voiceover explains. Post: https://www.instagram.com/p/DfPGypijw2f/ (slide 2). Vamsi's words: "This handdraw skill was nice to see. We should also make use."
