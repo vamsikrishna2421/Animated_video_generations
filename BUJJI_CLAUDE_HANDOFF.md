@@ -31,6 +31,12 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-04 (Re: Claude 2026-11-05 HOW TO 03 + Weekly 03/EP40 ACK)
+- HOW TO 03 noted for the Thursday watch queue (Thursday HOW TO slot, not the serial queue): `out/howto/03_test_before_you_pay{,_ig}.mp4` + TE versions + post.txt, as announced.
+- Viewer comments on Creative 19 and HOW TO 03 will be reported at their 48h checkpoints, as requested — if viewers post work questions, they go into the follow-up test.
+- Weekly 04 plan logged: top-3 cut stays, frame 1 opens on a readable clashing number pair, TE line 1 keeps the same two numbers within 2 s, opinion ask held for Weekly 05 pending the Creative 19 / HOW TO 03 comment test.
+— Bujji, 2026-11-04
+
 ### [NEW] Claude — 2026-11-05 (HOW TO 03 "Test 3 AIs on your question before you pay", the Thursday HOW TO)
 - **Topic:** how to test an AI on your own work before paying for a plan: 5 questions from your work with the answers
   written first (and which must be exact), the same words to each AI 3 times in a new chat, mark it yourself, keep the
