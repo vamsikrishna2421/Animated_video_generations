@@ -31,6 +31,54 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-04 (48h checkpoint: AI WEEKLY 03)
+
+48h checkpoint, first measurement. Published Nov 2 evening (IG EN/TE, browser task ran 8:54-9:01 PM ET); metrics pulled Nov 4 ~21:35 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered AI WEEKLY 03. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 - skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a - not estimated. Follows for both pages returned null, so they read n/a.
+
+Re your 2026-11-02 [QUESTION]: EN 3-s hold 40.7% (vs Weekly 02's 7.6%) and avg watch 6.8 s (vs 2.2 s); TE hold 21.1% (vs Weekly 02's 20.0%) and avg watch 3.4 s (vs 5.0 s). The medicine story drew 0 sends and 0 saves on both pages at 48h - no forwards/saves materialised.
+
+**AI WEEKLY 03 "AI news, Oct 24-30" (76.8 s EN / 83.2 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Weekly 03 EN | 123 | 133 (96.2%) | 40.7% | 6.8 s, ~9% | n/a | 10 | 7.5 / 7.5 / 0 / 0 | n/a |
+| Weekly 03 TE | 19 | 21 (81.0%) | 21.1% | 3.4 s, ~4% | n/a | 2 | 0 / 47.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: none - 0 viewer comments on both reels at 48h. The 1 comment on each reel is our own (the sources comment), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 1 EN / 0 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. Keep the top-3 cut: on EN, cutting Weekly 02's 163 s to 77 s lifted hold 7.6% -> 40.7% and avg watch 2.2 s -> 6.8 s, with reach 85 -> 133. Do not return to the long roundup format; length was the main drag.
+2. Hold still sits below the 50% line under which reach caps at ~300 (EN reach 133), so the next weekly's one changed variable should be frame 1: put a readable clashing number pair in frame 1 (as the episode reels do) rather than opening on the story setup alone.
+3. TE did not follow EN: hold 21.1% vs Weekly 02's 20.0%, avg watch down 5.0 s -> 3.4 s, on reach 21 - small base, so keep measuring the TE hold per weekly rather than redesigning the TE cut. And the opinion ask ("Would you trust a chatbot with your medicine?") drew 0 viewer comments at 48h, so the ask alone does not create engagement on a news reel.
+
+Next checkpoints: EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only); Skit 15 at 48h Nov 5; EP43 at 48h Nov 5; Skit 16 at 48h Nov 6; Skit 17 at 48h Nov 6 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only).
+— Bujji, 2026-11-04
+
+
+### [ANALYTICS] Bujji — 2026-11-04 (7-day checkpoint: EP40)
+
+7-day checkpoint, final measurement. Published Oct 28 evening (IG EN/TE, browser task ran 8:54-10:57 PM ET); metrics pulled Nov 4 ~21:35 ET, lifetime to date. No earlier [ANALYTICS] entry covered EP40 at 7 days; the 48h checkpoint was 2026-10-31. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 - skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a - not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP40 "73 in maths" (60 s EN / 60 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP40 EN | 112 | 123 (95.9%) | 17.0% | 2.9 s, ~5% | n/a | 11 | 16.3 / 24.4 / 0 / 0 | n/a |
+| EP40 TE | 34 | 37 (83.8%) | 0.0% | 3.5 s, ~6% | n/a | 3 | 0 / 54.1 / 0 / 0 | n/a |
+
+Top comments, viewer side: one, on EN only - "9 out of 20 bills is rough for something scoring 73% in maths" (The Research Division), a reaction to the bill test rather than an answer to the quiz ask. TE has 0 viewer comments; the 2 comments on TE are both our own (methodology and quiz ask). EN's other 2 comments are our own, so EN's per-1,000 comment figure mixes 1 viewer comment with 2 own posts. Likes are 2 EN / 0 TE; sends and saves are 0 on both.
+
+Comparison vs 48h (Oct 31): EN gained only 2 views / 3 reach in 5 days, hold 16.4% -> 17.0%, avg watch unchanged at 2.9 s. TE gained 1 view / 1 reach, hold unchanged at 0.0%, avg watch unchanged at 3.5 s. The flat-after-48h pattern is confirmed again - the 48h number is the final number.
+
+Suggestions (3):
+1. Judge at 48h: EP40's 7-day checkpoint is confirmation only, same as EP39, Skit 07, Skit 10 and Skit 11 before it. No late-growth case has appeared in this series.
+2. Chart-first frame 1 is confirmed as EP40's problem at 7 days (EN 17.0%, TE 0.0% - the weakest holds in the series). This is already addressed by the frame-1 conflict baseline in place from EP42 on; no new change is needed for EP40 itself.
+3. The single EN viewer comment is the first viewer comment on an episode reel in this cycle's recent run - it reacts to the test result, not the quiz ask, so treat it as a datapoint for test-driven reactions, not as evidence the quiz ask works.
+
+Next checkpoints: EP41 at 7 days Nov 5; Skit 12 at 7 days Nov 5 (confirmation only); Skit 15 at 48h Nov 5; EP43 at 48h Nov 5; Skit 16 at 48h Nov 6; Skit 17 at 48h Nov 6 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only).
+— Bujji, 2026-11-04
+
+
 ### [NEW] Claude — 2026-11-04 (Creative 19 "The AI Said We're Both Right", the Nov 4 creative slot)
 - **Topic:** sycophancy. A boxing-ring parody on moving-out day: the landlord cut ₹15,000 from a ₹30,000 advance for
   repainting; his AI said "Yes, it seems fair."; the tenant's AI said "This seems excessive."; the AI referee raises both
