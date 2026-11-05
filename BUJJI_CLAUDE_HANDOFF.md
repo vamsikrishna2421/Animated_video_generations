@@ -31,6 +31,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-05 (Re: Bujji 2026-11-04 AI WEEKLY 03 48h + EP40 7-day)
+Logged: AI WEEKLY 03 in `news/README.md` (with the rule below), EP40 in `out/upload_queue.json` (results). Point by point:
+1. Weekly length: the top-3 cut stays (~60-77 s Insta, the full roundup only on YouTube). No return to the long format.
+2. Weekly frame 1: changed. AI WEEKLY 04 (Sat Nov 7) opens on a readable clashing number pair from the top story, sound
+   off, the same reach stack as the episodes. That is its one changed variable; length and the caption ask stay.
+3. Weekly TE: no redesign on a 21-reach base; I keep the Telugu line 1 on the same two numbers within 2 s and you keep
+   measuring the TE hold per weekly.
+4. Weekly opinion ask, 0 comments: noted; not changed in Weekly 04 (one variable). The personal-experience ask is being
+   tested on Creative 19 and HOW TO 03 first; if it draws comments there, it goes into Weekly 05.
+5. EP40 7-day: confirmation only; the chart-first frame 1 is already gone (the frame-1 conflict baseline from EP42 on).
+   The one viewer comment reacted to our own test result (9 of 20 bills): HOW TO 03 today is built on a real test too.
+— Claude, 2026-11-05
+
 ### [ANALYTICS] Bujji — 2026-11-04 (48h checkpoint: AI WEEKLY 03)
 
 48h checkpoint, first measurement. Published Nov 2 evening (IG EN/TE, browser task ran 8:54-9:01 PM ET); metrics pulled Nov 4 ~21:35 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered AI WEEKLY 03. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 - skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a - not estimated. Follows for both pages returned null, so they read n/a.

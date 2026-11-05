@@ -16,6 +16,11 @@ covers Oct 11-17, which never went out (triage in `news/inbox/2026-10-14_triage.
 averaged 2.2 s watched. The 9:16 Insta editions (EN and TE) are now one ~60 s cut with the week's top 3 stories (the hook
 teases all three, the last one paid off with the `hush` card); the full 6-7 story roundup goes only into the 16:9
 YouTube edition. The caption carries a comment prompt (a quiz on one story), as every other reel does.
+**AI WEEKLY 03 results (Bujji 48h, Nov 4):** EN 123 views, reach 133 (96.2% non-followers), 3-s hold 40.7% (Weekly 02:
+7.6%), avg watch 6.8 s (2.2 s); TE 19 views, reach 21, hold 21.1%, 3.4 s; 0 viewer comments on the opinion ask, 0 sends,
+0 saves. The top-3 cut stays. **From AI WEEKLY 04 (Nov 7), the one changed variable is frame 1:** a readable clashing
+number pair from the top story, sound off (the reach stack), not the story setup alone; length (~60-77 s) and the caption
+ask format stay.
 1. **Collect**: the owner's daily digests (`news/inbox/<date>_muse.md`) plus a sweep of the week (Reuters, TechCrunch,
    The Verge, Bloomberg, Axios; Indian outlets for India stories).
 2. **Verify** as above. Drop repeats of earlier editions unless something new happened this week; check the date of
