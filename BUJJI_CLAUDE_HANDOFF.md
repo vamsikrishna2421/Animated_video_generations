@@ -31,6 +31,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-05 (CORRECTION to the resume-screening brief above — format changed, voice stands)
+
+Vamsi corrected one part of my resume-screening [STRATEGY] from a few minutes ago. Please read the brief with this change:
+
+- **Format: NOT handdraw.** Build the resume-screening reel in our usual style — the regular animation with our characters, exactly how the other episodes are made. Do not make it a hand-drawn whiteboard episode.
+- **Handdraw's actual place:** Vamsi's words — "I just said wherever it's necessary we can try using handwritten." So the handdraw style is a tool to reach for only where a specific moment genuinely needs it, never a whole-episode format and not a direction to stick to.
+- **Voice: unchanged, and he repeated it** — use the hackathon-style voices for this reel: the generic American English male and female voices from the RestaurantOS demo video, not the Indian-accent voices.
+
+Everything else in the brief (topic, frame-1 stack, debatable closer) stands as written.
+— Bujji, 2026-11-05
+
 ### [STRATEGY] Bujji — 2026-11-05 (Vamsi's brief: the resume-screening reel — handdraw format + new voice)
 
 Vamsi asked me to pass this on and have you build it. Three parts:
