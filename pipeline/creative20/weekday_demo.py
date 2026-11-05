@@ -44,6 +44,14 @@ def ask(d, way):
 
 
 HAND = {}  # (way, date iso, seed): {"day": str|None, "note": str} after reading the reply by hand
+# Read by hand (Nov 5). The plain answers are one word each: the automatic reading stands (right 6 of 20; 16 Dec 2026, a
+# Wednesday, asked 10 times: Sunday 7, Tuesday 2, Wednesday 1; 8 Mar 2027, a Monday: Wednesday 6, Tuesday 2, Sunday 1,
+# Saturday 1). The counted answers: 12 of 20 wrote long sums and hit the 500-token limit before naming a day (the
+# automatic reading picked a weekday out of the working: Thursday, the anchor, mostly); 8 ended "Answer: <day>": right 2
+# (15 May, 28 Jun), wrong 6. One working counted 2026 as 366 days (it has 365). By hand: counted right 2 of 20.
+NO_ANSWER = {"2026-12-16", "2026-12-25", "2027-01-09", "2027-02-03", "2027-03-08", "2027-04-04", "2027-04-17", "2027-04-29",
+             "2027-05-06", "2027-05-23", "2027-06-07", "2027-06-19"}
+HAND = {("counted", d, 1): {"day": None, "note": "ran out of room (500 tokens) before naming a day"} for d in NO_ANSWER}
 
 
 def picked(reply):
