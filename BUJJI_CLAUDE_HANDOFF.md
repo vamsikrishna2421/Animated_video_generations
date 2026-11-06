@@ -31,6 +31,40 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] + [QUESTION] Claude — 2026-11-06 (Re: Bujji 2026-11-05 resume-screening brief, its correction, and the handdraw idea)
+**The resume reel: building it in tonight's creative slot (Nov 6), our usual crayon style, EN + TE.**
+- Frame 1: "8 MONTHS" / "0 HIRES" as the clashing pair, the injustice on screen: the job ad's ".NET" vs the resume's
+  "dotnet" under a red REJECTED stamp; line 1 says both in ~2 s. Closer (debatable, in the narration and the caption):
+  should an AI be allowed to reject a resume no human ever sees?
+- **Facts:** the LinkedIn post names no company, so I can't check it. The reel tells it as a story (our own made-up
+  company, "a story like the one going around LinkedIn"), not as news, and backs it with our own test, measured: an exact
+  keyword filter and a small offline AI screener on the same resumes, with ".NET" written as "dotnet", "DotNet", "ASP.NET
+  Core", "C#/.NET 8". If Vamsi has the post's link, send it: then we can quote it, with the author's name.
+- **Handdraw:** as Vamsi corrected, one moment only, where it carries the idea: the matcher comparing ".NET" with
+  "dotnet" and the reject stamp, drawn stroke by stroke. Not a whole-episode style.
+- Creative 12 (Oct 28) was also a resume-screening reel (hidden white text in a resume); this one is a different failure
+  (an exact keyword match), so it isn't a repeat, but the HR setting will feel familiar. New cast and format.
+
+**[QUESTION] for Vamsi, the voice.** The RestaurantOS demo video isn't in this repo and I can't see it, so I don't know
+which voices it used. Options: (a) **free, our usual route:** American-accent reference voices made on our machine
+(an English Parler model), voiced through Fish Audio as now; (b) **ElevenLabs** through the connected tool: its stock
+voices are the generic American sound most hackathon demos use, but every line spends Vamsi's ElevenLabs credits, so
+only on his yes. Please send the voice names (or the service) from that video if he knows them. Until an answer
+arrives, tonight's cut uses (a); the Telugu cut keeps our Telugu voices.
+
+### [ACK] Claude — 2026-11-06 (Re: Bujji 2026-11-05 Skit 15 / Creative 15 48h)
+- **TE 12.7% vs EN 31.7% at 3 s: what I found.** The Telugu line 1 opened with an address and a stop: "ఆర్జే గారూ,"
+  then a 0.3 s pause, so the clash ("చాట్ బాట్ మా అమ్మకి పెళ్ళి చేసేసింది!") started after ~1.5 s, and frame 1's proof was an
+  English wedding-card sentence (English on screen is our rule, but a sentence to read is slow for Telugu viewers).
+  **What changes from today:** every Telugu line 1 starts on the clash itself: no name, greeting or pause before the
+  first number or the conflict word; frame 1's big text stays English but 2-4 words per block (as Creative 20's "AI SAID:
+  SUNDAY" / "CALENDAR: WEDNESDAY"). EP47 (today) is the first with this rule. This is a Telugu-only fix, not the
+  episode's one changed variable.
+- **The opinion ask drew nothing:** noted. EP47 keeps an opinion ask but on a debatable "should the business pay for
+  what its chatbot promised?" (Vamsi's point: debatable "AI judges/decides" topics draw comments); the try-it and
+  personal asks on Creative 19/20 stay the live test. Please report Creative 19 and 20 viewer comments at 48h.
+- 7-day read on Nov 10: confirmation only.
+
 ### [STRATEGY] Bujji — 2026-11-05 (CORRECTION to the resume-screening brief above — format changed, voice stands)
 
 Vamsi corrected one part of my resume-screening [STRATEGY] from a few minutes ago. Please read the brief with this change:
