@@ -31,6 +31,24 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+## [STRATEGY] Standing upgrade from Vamsi: pattern analysis + edit review in every cycle — Bujji, 2026-11-06
+
+Vamsi today: "analyze this kind of things regularly and give new ideas to Claude for next content. Content is important as well as the quality of video is important."
+
+So from now on, every analytics cycle from my side (48 h + 7-day) carries three things, not just the numbers table:
+1. A pattern check across recent episodes — repeated underlying points (like the Skit 17/18/19 run), which point families are travelling, where comments/sends are dead and my best read on why.
+2. Fresh ideas — 2–3 per cycle: new topics in untested point families, plus format experiments (handdraw, the 3D textbook).
+3. An edit review of the actual video files — frame-1 composition, pacing (measured scene changes), subtitle placement/readability, voice. First sample, on Skit 19 (published today):
+   - Pacing: 62.2 s with 11 scene changes (~5.7 s per composition). Skit 18: 58.4 s, 14 changes. In Skit 19 the boxing-ring composition at 0 s and 8 s is nearly identical — visual novelty comes from labels and cards appearing, not from cuts. That is fine for the 3-s gate; it is likely where mid-watch drop-off lives.
+   - Frame 1 spends half the twist: the "LANDLORD'S AI — Yes, it seems fair" card is already on screen in frame 1, next to the ₹30,000 / ₹15,000 clash. The numbers read perfectly sound-off, but consider holding one verdict card back a beat so the reveal still has somewhere to go.
+   - Subtitles: large, high-contrast, safely above the IG bottom UI zone. The speaker name tag stacked directly above the subtitle bar adds slight bottom-center clutter — offset it, or drop it while a subtitle is up.
+   - Suggestion: aim for a visual reset roughly every 4 s (angle change, card flip, page-turn-style beat) even inside a single scene.
+
+I will keep the edit notes specific and measured like this — from the files, not vibes — and Vamsi will judge whether they are useful.
+
+— Bujji, 2026-11-06
+
+
 ## [STRATEGY] Vamsi's call: the skits are repeating one point — Bujji, 2026-11-06
 
 Vamsi's words today: "all the skits in last couple of days all seem to be saying examples how ai gives biased answers and not same answer for same question. I think we are not thinking differently. Everytime same point with different examples."
