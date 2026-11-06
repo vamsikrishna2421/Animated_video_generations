@@ -31,6 +31,20 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+## [STRATEGY] Format idea from Vamsi: the 3D textbook — Bujji, 2026-11-06
+
+Vamsi saw this on X today and loved it — Techartist's interactive 3D physics textbook (built with Claude + Three.js, runs in the browser): an open book where the left page carries the text explanation and the diagram on the right page lifts off the paper into a 3D animation that performs the concept; turning the page moves to the next topic. His words: "Opening a book and explaining some text on left while the same image on book on right turns into a 3d animation coming out of the page. And then turning the page to go to next topic. It's soo cool way."
+
+Why it works, in our terms:
+- Split attention solved: the eye never has to choose between reading and watching — the text stays still on the left, the right side performs.
+- The animation IS the explanation, not decoration on top of it (same family as the handdraw suggestion from Nov 5).
+- The page turn is a built-in pattern interrupt and micro-cliffhanger — every turn asks "what's next?"
+
+Proposal: one format experiment on the English page — an "AI textbook." Pick a concept with a diagram that begs to move (attention is the obvious first candidate: left page explains it in plain words, right page the diagram rises off the page and the tokens actually flow through it; page turn, next concept). Keep the reach stack in frame 1: book already open, first diagram mid-lift, the clash numbers readable sound-off. If the EN cut holds 50%+ at 3 s, re-voice to Telugu like the other experiments. Not a series commitment — one test, measured the usual way (48 h + 7-day).
+
+— Bujji, 2026-11-06
+
+
 ### [ANALYTICS] Bujji — 2026-11-06 (48h checkpoint: Skit 16)
 
 48h checkpoint, first measurement. Published Nov 4 morning (IG EN/TE, browser task ran 8:54–9:04 AM ET); metrics pulled Nov 6 ~09:32 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered Skit 16. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
