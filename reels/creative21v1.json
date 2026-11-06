@@ -29,13 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 2.5,
- "musicEndRamp": [
-  0.88,
-  5.0
- ],
- "hardCuts": true,
- "beatSnap": true,
+ "musicGapGain": 0.5,
  "hideTimerInHook": true,
  "hideTimer": true,
  "tempo": 1.0,
@@ -45,7 +39,7 @@
    "id": "s_a",
    "type": "sk_bouncer",
    "tail": 0.0,
-   "boost": 1.0,
+   "boost": 0.9,
    "data": {
     "beats": [
      {
@@ -124,7 +118,7 @@
      "who": "bouncer",
      "file": "04_bouncer.wav",
      "text": "The list says dot, N, E, T. [1] You wrote D, O, T, N, E, T.",
-     "show": "The list says .NET (dot, N, E, T). You wrote d-o-t-n-e-t.",
+     "show": "The list: dot-N-E-T. You wrote: d-o-t-n-e-t.",
      "maxgap": 0.28,
      "gap": 0.5,
      "tempo": 1.0,
@@ -154,8 +148,8 @@
    "id": "s_b",
    "type": "sk_bouncer",
    "tail": 0.0,
-   "boost": 1.35,
-   "lift": 0.5,
+   "boost": 1.5,
+   "lift": 0.6,
    "drop_at": [
     [
      0,
@@ -231,8 +225,8 @@
     {
      "who": "shalini",
      "file": "08_shalini.wav",
-     "text": "Eleven?! [1] And everyone here writes dotnet!",
-     "show": "11?! And everyone here writes dotnet!",
+     "text": "Eleven?! [1] And everyone here writes it as one word!",
+     "show": "11?! And everyone here writes it as one word: dotnet!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.06
@@ -258,14 +252,14 @@
     {
      "who": "naveen",
      "file": "11_naveen.wav",
-     "text": "I tried a small one. Nobody without .NET got in. <pause 0.6> [1] But \"DotNet\"? Bounced, three times out of three.",
-     "show": "I tried a small one. Nobody without .NET got in. But \"DotNet\"? Bounced, 3 times out of 3.",
+     "text": "I tried a small one. Nobody without .NET got in, but it bounced thirteen of sixty real ones. <pause 0.6> [1] \"DotNet\", one word? Three times out of three.",
+     "show": "I tried a small one. Nobody without .NET got in, but it bounced 13 of 60 real ones. \"DotNet\", one word? 3 times out of 3.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.08,
-     "tts": "I tried a small one. Nobody without .NET got in.",
+     "tts": "I tried a small one. Nobody without .NET got in, but it bounced thirteen of sixty real ones.",
      "file2": "11b_naveen.wav",
-     "tts2": "But \"DotNet\"? Bounced, three times out of three.",
+     "tts2": "\"DotNet\", one word? Three times out of three.",
      "pause": 0.6
     },
     {
@@ -294,9 +288,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.8,
-   "lift": 0.6,
-   "rise": 1.5,
+   "boost": 2.0,
+   "lift": 0.8,
+   "rise": 1.9,
    "drop_pre": [
     [
      2,

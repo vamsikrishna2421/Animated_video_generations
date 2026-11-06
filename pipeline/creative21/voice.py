@@ -45,15 +45,15 @@ MUST = {"en": {1: [("eight", "8"), ("months",), ("zero", "0"), ("hires", "hire")
                2: [("rejected",), ("list",)], 3: [("five", "5"), ("years",), ("dotnet", "net"), ("exactly",), ("need",)],
                4: [("list",), ("says",), ("wrote",)], 5: [("same",), ("skill",)], 6: [("match",), ("letters", "letter"), ("meaning",)],
                7: [("tested",), ("filter",), ("twenty", "20"), ("ways", "way"), ("eleven", "11"), ("bounced", "bounce")],
-               8: [("eleven", "11"), ("everyone", "everyoneherewrites")], 9: [("familiar",), ("let",), ("in",)],   # 8: Whisper glues "everyone here writes dotnet" into a web address
-               10: [("ai", "a.i"), ("read",), ("meaning",)], 11: [("tried",), ("small",), ("nobody",), ("without",)],
-               "11b": [("bounced", "bounce"), ("three", "3"), ("times",)], 12: [("eight", "8"), ("months",), ("nobody",), ("reject", "rejects"), ("pile",)],
+               8: [("eleven", "11"), ("everyone",), ("one",), ("word",)], 9: [("familiar",), ("let",), ("in",)],   # 8: Whisper glues "everyone here writes dotnet" into a web address
+               10: [("ai", "a.i"), ("read",), ("meaning",)], 11: [("tried",), ("small",), ("nobody",), ("without",), ("thirteen", "13"), ("sixty", "60")],
+               "11b": [("one",), ("word",), ("three", "3"), ("times",)], 12: [("eight", "8"), ("months",), ("nobody",), ("reject", "rejects"), ("pile",)],
                13: [("nobody",), ("asked",)], 14: [("job",), ("hunting",), ("copy",), ("exact",), ("words",), ("letter",)],
                15: [("hiring",), ("twenty", "20"), ("rejects", "reject"), ("week",), ("spelling",), ("list",)],
                16: [("bot",), ("second",), ("human",), ("three", "3"), ("weeks",)], 17: [("next",), ("rejected",)]},
         "te": {}}
 JUDGE_TEXT = {1: "8 months open. Zero hires. Where are the .NET developers?!", 7: "I tested a filter like yours. 20 ways to write .NET. 11 bounced.",
-              8: "11?! And everyone here writes dotnet!", "11b": "But DotNet? Bounced, 3 times out of 3.",
+              8: "11?! And everyone here writes it as one word!", 11: "I tried a small one. Nobody without .NET got in, but it bounced 13 of 60 real ones.", "11b": "DotNet, one word? 3 times out of 3.",
               15: "Hiring? Read 20 rejects every week, and add every spelling to the list.", 16: "A bot that reads you in 1 second... or a human, in 3 weeks?"}
 
 TELUGU = re.compile(r"[ఀ-౿]")

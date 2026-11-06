@@ -29,13 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 2.0,
- "musicEndRamp": [
-  0.88,
-  5.0
- ],
- "hardCuts": true,
- "beatSnap": true,
+ "musicGapGain": 1.0,
  "hideTimerInHook": true,
  "hideTimer": true,
  "tempo": 1.0,
@@ -47,7 +41,7 @@
    "id": "s_a",
    "type": "sk_bouncer",
    "tail": 0.0,
-   "boost": 1.0,
+   "boost": 0.9,
    "data": {
     "beats": [
      {
@@ -117,8 +111,8 @@
     {
      "who": "naveen",
      "file": "03_naveen.wav",
-     "text": "ఐదేళ్ళుగా డాట్ నెట్ లోనే పని చేస్తున్నా! [1] మీకు కావాల్సింది నేనే!",
-     "show": "I've worked on .NET for 5 years! I'm the one you need!",
+     "text": "ఐదేళ్ళ డాట్ నెట్ అనుభవం! [1] మీకు కావాల్సింది నేనే!",
+     "show": "5 years of .NET experience! I'm the one you need!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.04
@@ -126,7 +120,7 @@
     {
      "who": "bouncer",
      "file": "04_bouncer.wav",
-     "text": "లిస్ట్ లో చుక్క, ఎన్, ఈ, టీ. [1] నువ్వు రాసింది డీ, ఓ, టీ, ఎన్, ఈ, టీ.",
+     "text": "లిస్ట్ లో డాట్, ఎన్, ఈ, టీ. [1] నువ్వు రాసింది డీ, ఓ, టీ, ఎన్, ఈ, టీ.",
      "show": "The list says dot, N, E, T. You wrote D, O, T, N, E, T.",
      "maxgap": 0.28,
      "gap": 0.5,
@@ -156,8 +150,8 @@
    "id": "s_b",
    "type": "sk_bouncer",
    "tail": 0.0,
-   "boost": 1.35,
-   "lift": 0.5,
+   "boost": 1.5,
+   "lift": 0.6,
    "drop_at": [
     [
      0,
@@ -234,8 +228,8 @@
     {
      "who": "shalini",
      "file": "08_shalini.wav",
-     "text": "పదకొండా?! [1] ఇక్కడ అందరూ అలాగే రాస్తారు!",
-     "show": "11?! Everyone here writes it that way!",
+     "text": "పదకొండా?! [1] ఇక్కడ అందరూ కలిపే రాస్తారు!",
+     "show": "11?! Everyone here writes it joined: dotnet!",
      "maxgap": 0.28,
      "gap": 0.25,
      "tempo": 1.0
@@ -252,8 +246,8 @@
     {
      "who": "shalini",
      "file": "10_shalini.wav",
-     "text": "అయితే అర్థం చేసుకునే బాట్ పెడదాం!",
-     "show": "Then let's put in a bot that understands meaning!",
+     "text": "అయితే అర్థం చేసుకునే రోబో పెడదాం!",
+     "show": "Then let's put in a robot that understands meaning!",
      "maxgap": 0.28,
      "gap": 0.2,
      "tempo": 1.0
@@ -261,12 +255,12 @@
     {
      "who": "naveen",
      "file": "11_naveen.wav",
-     "text": "చిన్న బాట్ తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు. <pause 0.6> [1] కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్.",
-     "show": "I tried a small bot. Not one person without .NET got in. But \"DotNet\" written joined? Rejected 3 times out of 3.",
+     "text": "చిన్న రోబో తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు. <pause 0.6> [1] కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్.",
+     "show": "I tried a small robot. Not one person without .NET got in. But \"DotNet\" written as one word? Rejected 3 times out of 3.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.04,
-     "tts": "చిన్న బాట్ తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు.",
+     "tts": "చిన్న రోబో తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు.",
      "file2": "11b_naveen.wav",
      "tts2": "కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్.",
      "pause": 0.6
@@ -297,9 +291,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.5,
-   "lift": 0.6,
-   "rise": 1.25,
+   "boost": 1.7,
+   "lift": 0.8,
+   "rise": 1.5,
    "drop_pre": [
     [
      2,
@@ -349,23 +343,23 @@
      "text": "ఉద్యోగం వెతుకుతున్నారా? [1] జాబ్ పోస్ట్ లో ఉన్న మాటలే, అక్షరం మార్చకుండా రాయండి.",
      "show": "Job hunting? Write the job post's own words, without changing a letter.",
      "maxgap": 0.28,
-     "gap": 0.8,
+     "gap": 0.5,
      "tempo": 1.04
     },
     {
      "who": "shalini",
      "file": "15_shalini.wav",
-     "text": "రిక్రూట్ చేస్తున్నారా? [1] ప్రతి వారం ఇరవై రిజెక్ట్ లు మనిషి చదవాలి, ప్రతి స్పెల్లింగ్ లిస్ట్ లో పెట్టాలి.",
-     "show": "Recruiting? Every week a human reads 20 rejects; every spelling goes on the list.",
+     "text": "రిక్రూట్ చేస్తున్నారా? [1] ప్రతి వారం ఇరవై రిజెక్ట్ లు మనిషి చదవాలి.",
+     "show": "Recruiting? Every week a human reads 20 rejects.",
      "maxgap": 0.28,
-     "gap": 1.0,
+     "gap": 0.6,
      "tempo": 1.0
     },
     {
      "who": "shalini",
      "file": "16_shalini.wav",
-     "text": "ఒక్క సెకనులో చదివే బాట్ కావాలా... [1] మూడు వారాలు తీసుకునే మనిషా?",
-     "show": "A bot that reads you in one second... or a human who takes three weeks?",
+     "text": "ఒక్క సెకనులో చదివే రోబో కావాలా... [1] మూడు వారాలు తీసుకునే మనిషా?",
+     "show": "A robot that reads you in one second... or a human who takes three weeks?",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.0

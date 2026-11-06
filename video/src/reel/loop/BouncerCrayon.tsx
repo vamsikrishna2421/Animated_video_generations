@@ -64,21 +64,21 @@ const board = (c: Ctx, k = 1) => {   // frame 1's two numbers
 const versus = (c: Ctx, W: number, k: number, stampK: number) => {   // frame 1's injustice, big
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
-  c.fillStyle = "rgba(0,0,0,0.25)"; rrect(c, 53, 478, 980, 300, 26); c.fill();
-  c.fillStyle = "#fffbeb"; rrect(c, 45, 470, 990, 300, 26); c.fill();
-  c.font = SANS(32, 900); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("THE LIST", 260, 530); c.fillText("HIS RESUME", 810, 530);
-  c.font = SANS(130, 900); c.fillStyle = "#1d4ed8"; c.fillText(".NET", 260, 680);
-  c.fillStyle = "#be123c"; c.fillText("dotnet", 810, 680);
-  c.font = SANS(120, 900); c.fillStyle = INK; c.fillText("≠", 520, 675);
+  c.fillStyle = "rgba(0,0,0,0.25)"; rrect(c, 53, 468, 980, 240, 26); c.fill();
+  c.fillStyle = "#fffbeb"; rrect(c, 45, 460, 990, 240, 26); c.fill();
+  c.font = SANS(30, 900); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("THE LIST", 260, 506); c.fillText("HIS RESUME", 810, 506);
+  c.font = SANS(118, 900); c.fillStyle = "#1d4ed8"; c.fillText(".NET", 260, 640);
+  c.fillStyle = "#be123c"; c.fillText("dotnet", 810, 640);
+  c.font = SANS(110, 900); c.fillStyle = INK; c.fillText("≠", 520, 636);
   c.restore();
-  if (stampK > 0) stamp(c, "REJECTED", 790, 745, RED, stampK, 52, -0.08);   // stills: the stamp hid "dotnet"
+  if (stampK > 0) stamp(c, "REJECTED", 790, 690, RED, stampK, 46, -0.08);   // stills: the stamp hid "dotnet"
 };
 const story = (c: Ctx, k: number) => {   // script review: the 8 months read as fact without it
   if (k <= 0) return;
-  c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(30, 800);
+  c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(38, 800);   // render review: too small
   const t = "a made-up company · inspired by a LinkedIn story";
-  const w = c.measureText(t).width + 40; c.fillStyle = "rgba(15,23,42,0.85)"; rrect(c, 540 - w / 2, 222, w, 50, 14); c.fill();   // stills: the resume hid it at y 455
-  c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(t, 540, 257); c.restore();
+  const w = c.measureText(t).width + 40; c.fillStyle = "rgba(15,23,42,0.85)"; rrect(c, 540 - w / 2, 222, w, 60, 14); c.fill();   // stills: the resume hid it at y 455
+  c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(t, 540, 266); c.restore();
 };
 const bouncer = (c: Ctx, x: number, y: number, sc: number, talk: boolean, arm: "rest" | "stamp" | "clip", ks: number, f: number) => {
   c.save(); c.translate(x, y); c.scale(sc, sc);
@@ -201,14 +201,14 @@ const StBouncer: React.FC<SP> = ({ s }) => {
     const insert = !["wide", "hook"].includes(b.shot);
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={te ? 0.9 : 0.8} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.4} />, <Sfx key={k("z")} at={2} src="reel/sfx_buzz.wav" vol={0.22} />, <Sfx key={k("h")} at={cue(i, 1, 0.4) - 2} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />);
-    if (b.prop === "stamp" || b.prop === "loop") sfx.push(<Sfx key={k("s")} at={b.prop === "loop" ? end + HOLD : at + 4} src="reel/sfx_boom.wav" vol={b.prop === "loop" ? 0.95 : 0.6} />, <Sfx key={k("c")} at={b.prop === "loop" ? end + HOLD : at + 4} src={CLAP} vol={0.45} />);
+    if (b.prop === "stamp" || b.prop === "loop") sfx.push(<Sfx key={k("s")} at={b.prop === "loop" ? end + HOLD : at + 4} src="reel/sfx_boom.wav" vol={b.prop === "loop" ? 1.0 : 0.9} />, <Sfx key={k("c")} at={b.prop === "loop" ? end + HOLD : at + 4} src={CLAP} vol={0.55} />, <Sfx key={k("g")} at={b.prop === "loop" ? end + HOLD : at + 4} src="reel/sfx_buzz.wav" vol={0.3} />);
     if (b.prop === "resume") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.25} />);
-    if (b.prop === "hand") { [0, 6, 12, 18, 24].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 2 + q} src="audio/sfx_tick.wav" vol={0.18} />)); const c1 = cue(i, 1, 0.5); [0, 6, 12, 18, 24].forEach((q) => sfx.push(<Sfx key={k("u" + q)} at={c1 + q} src="audio/sfx_tick.wav" vol={0.18} />)); sfx.push(<Sfx key={k("s")} at={c1 + 48} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("c")} at={c1 + 48} src={CLAP} vol={0.4} />); }
+    if (b.prop === "hand") { [0, 6, 12, 18, 24].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={at + 2 + q} src="audio/sfx_tick.wav" vol={0.18} />)); const c1 = cue(i, 1, 0.5); [0, 6, 12, 18, 24].forEach((q) => sfx.push(<Sfx key={k("u" + q)} at={c1 + q} src="audio/sfx_tick.wav" vol={0.18} />)); sfx.push(<Sfx key={k("s")} at={c1 + 48} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={c1 + 48} src={CLAP} vol={0.4} />); }
     if (b.prop === "letters") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.25} />);
-    if (b.prop === "test") { const c2 = cue(i, 2, 0.75); sfx.push(<Sfx key={k("n")} at={c2 - 3} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.75} />, <Sfx key={k("c")} at={c2 + 6} src={CLAP} vol={0.3} />); }
+    if (b.prop === "test") { const c2 = cue(i, 2, 0.75); sfx.push(<Sfx key={k("n")} at={c2 - 3} src="reel/sfx_boom.wav" vol={te ? 0.7 : 0.95} />, <Sfx key={k("c")} at={c2 + 6} src={CLAP} vol={0.4} />, <Sfx key={k("z")} at={c2 + 2} src="reel/sfx_buzz.wav" vol={0.3} />); }
     if (b.prop === "eleven") sfx.push(<Sfx key={k("g")} at={at + 2} src="reel/sfx_glitch.wav" vol={0.3} />);
     if (b.prop === "fakes") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.25} />);
-    if (b.prop === "ai") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("p")} at={at + 10} src="audio/sfx_pop.wav" vol={0.25} />, ...[0, 10, 20].map((q) => <Sfx key={k("x" + q)} at={c1 + 30 + q} src="reel/sfx_buzz.wav" vol={0.22} />)); }
+    if (b.prop === "ai") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("p")} at={at + 10} src="audio/sfx_pop.wav" vol={0.25} />, ...[0, 10, 20].map((q) => <Sfx key={k("x" + q)} at={c1 + 6 + q} src="reel/sfx_buzz.wav" vol={0.3} />), <Sfx key={k("b")} at={at + 30} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.7} />); }   // the NO stamps; a hit on 13 of 60
     if (b.prop === "asked") sfx.push(<Sfx key={k("z")} at={end} src="reel/sfx_buzz.wav" vol={0.2} />);
     if (b.prop === "seek" || b.prop === "hire") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 10)} src={CLAP} vol={0.35} />, <Sfx key={k("h")} at={Math.max(0, at - 12)} src="reel/sfx_boom.wav" vol={te ? 0.3 : 0.45} />);
     if (b.prop === "question") sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 6)} src="reel/sfx_riser.wav" vol={0.35} />);
@@ -247,10 +247,10 @@ const StBouncer: React.FC<SP> = ({ s }) => {
           const fakes = b.prop === "fakes";
           const c2 = fakes ? ln.from - 600 : cu(2, 0.75);
           SP.forEach((t, j) => {
-            const x = 190 + (j % 4) * 233, y = 520 + Math.floor(j / 4) * 92, bad = j < 11;
+            const x = 168 + (j % 4) * 248, y = 520 + Math.floor(j / 4) * 100, bad = j < 11;   // render review: the grid was too small
             const k = seg(f, (fakes ? ln.from - 600 : ln.from) + j * 1.5, (fakes ? ln.from - 600 : ln.from) + j * 1.5 + 6);
             const red = bad && f >= c2;
-            chip(c, (red ? "✗ " : "") + t, x, y, 220, red ? "#7f1d1d" : "#334155", red ? "#fecaca" : "#e2e8f0", k, 30);
+            chip(c, (red ? "✗ " : "") + t, x, y, 236, red ? "#7f1d1d" : "#334155", red ? "#fecaca" : "#e2e8f0", k, 38);
           });
           barRow(c, "real .NET skills, bounced", 11, 20, 1060, RED, seg(f, c2, c2 + 10));
           if (fakes) {
@@ -260,21 +260,21 @@ const StBouncer: React.FC<SP> = ({ s }) => {
           }
         } else if (b.shot === "ai") {
           dark(c, W, H, "A SMALL FREE AI THAT READS MEANING", ["offline, 3 tries per line"], "#86efac");
-          chip(c, "✓ nobody without .NET got in", W / 2, 560, 900, "#14532d", "#bbf7d0", seg(f, ln.from + 8, ln.from + 16), 44);
-          const c1 = cu(1, 0.3);
-          c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.fillStyle = "#1e293b"; rrect(c, 90, 700, W - 180, 330, 26); c.fill();
-          c.font = SANS(48, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "left"; c.fillText("Skills: \"DotNet\"", 140, 780); c.restore();
-          [0, 1, 2].forEach((q) => stamp(c, "NO", 270 + q * 270, 920, RED, seg(f, c1 + 30 + q * 10, c1 + 38 + q * 10), 84, -0.1 + q * 0.06));
-          barRow(c, "real .NET answers it bounced", 13, 60, 1200, RED, seg(f, c1 + 60, c1 + 70));
-          c.save(); c.globalAlpha = seg(f, c1 + 70, c1 + 78); c.font = SANS(36, 800); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("about 1 in 5", W / 2, 1340); c.restore();
+          chip(c, "✓ nobody without .NET got in", W / 2, 560, 900, "#14532d", "#bbf7d0", seg(f, ln.from + 2, ln.from + 10), 44);
+          const c0 = cu(1, 0.3);
+          barRow(c, "real .NET answers it bounced", 13, 60, 760, RED, seg(f, ln.from + 30, ln.from + 40));
+          c.save(); c.globalAlpha = seg(f, ln.from + 40, ln.from + 48); c.font = SANS(38, 800); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("about 1 in 5", W / 2, 900); c.restore();
+          c.save(); c.globalAlpha = seg(f, ln.from + 4, ln.from + 12); c.fillStyle = "#1e293b"; rrect(c, 90, 960, W - 180, 330, 26); c.fill();
+          c.font = SANS(48, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "left"; c.fillText("Skills: \"DotNet\" (one word)", 140, 1040); c.restore();
+          [0, 1, 2].forEach((q) => stamp(c, "NO", 270 + q * 270, 1180, RED, seg(f, c0 + 6 + q * 10, c0 + 14 + q * 10), 84, -0.1 + q * 0.06));
         } else if (b.shot === "rule") {
           corridor(c, W, H);
           c.fillStyle = "rgba(15,23,42,0.88)"; c.fillRect(0, 0, W, H);
           const kL = seg(f, (b.prop === "seek" ? ln.from : -1e9) + 2, (b.prop === "seek" ? ln.from : -1e9) + 10);
-          const kR = b.prop === "hire" ? seg(f, ln.from + 2, ln.from + 10) : 0;
+          const kR = b.prop === "hire" ? seg(f, ln.from + 2, ln.from + 10) : 0.3;   // the hiring panel waits, dimmed
           const panel = (x: number, head: string, rows: string[], bg: string, k: number) => {
             if (k <= 0) return;
-            c.save(); c.globalAlpha = clamp(k * 3);
+            c.save(); c.globalAlpha = k === 0.3 ? 0.3 : clamp(k * 3);
             c.fillStyle = bg; rrect(c, x, 300, 450, 940, 30); c.fill();
             c.font = SANS(48, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(head, x + 225, 380);
             c.font = SANS(40, 800); rows.forEach((t, q) => c.fillText(t, x + 225, 480 + q * 64));
@@ -295,8 +295,12 @@ const StBouncer: React.FC<SP> = ({ s }) => {
           person(c, "naveen" as BillWho, [440, 1330], 0.6, nm, na, b.who === "naveen" && talking, r);
           const stampNow = hookOn || b.prop === "stamp";
           const ks = hookOn ? (b.prop === "hook" ? seg(f, 0, 6) : seg(f, slam, slam + 6)) : b.prop === "stamp" ? seg(f, ln.from, ln.from + 6) : b.prop === "loop" ? 0 : 1;
-          bouncer(c, 840, 900, 0.85, b.who === "bouncer" && talking, stampNow ? "stamp" : "rest", ks, f);
+          bouncer(c, 840, 1010, 0.8, b.who === "bouncer" && talking, stampNow ? "stamp" : "rest", ks, f);   // render review: the frame-1 card hid his face
           c.restore();
+          if (n <= 6 || n === 12 || n === 16) {
+            const lab = (t: string, x: number, y: number, bg: string) => { c.save(); c.font = SANS(34, 900); const w = c.measureText(t).width + 30; c.fillStyle = bg; rrect(c, x - w / 2, y - 34, w, 48, 12); c.fill(); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(t, x, y); c.restore(); };
+            lab("HR: SHALINI", 190, 1000, "#0f766e"); lab("CANDIDATE: NAVEEN", 450, 1060, "#b45309");
+          }
           if (hookOn) { board(c); versus(c, W, 1, b.prop === "hook" ? seg(f, 0, 8) : seg(f, slam, slam + 8)); }
           if (!hookOn && (n === 2 || n === 3)) story(c, 1);
           if (b.prop === "stamp") resume(c, 560, 640, 0.62, "C#, dotnet (5 yrs)", 1, seg(f, ln.from + 2, ln.from + 10));

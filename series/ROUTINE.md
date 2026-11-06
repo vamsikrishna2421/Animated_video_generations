@@ -643,3 +643,13 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   - A code check written before the run can have slips found only while reading ("feel free" counted as "free", the
     rule's own ₹5,000 not allowed): fix it, re-run it on the same saved replies, keep both results in the file and say
     so in the pinned comment.
+- Nov 6 lessons (Creative 21):
+  - American English voices (Vamsi's ask): reference clips from the Kokoro voices already on the machine
+    (`models/kokoro-v1.0-timed.onnx`: af_heart, am_puck, am_michael), voiced through Fish as usual; every word
+    transcribed clean on the first pass. A background job must be its own command (`setsid nohup ... & disown`): chained
+    after `&&` the whole chain goes to the background and dies with the shell (the first demo launch never ran).
+  - Whisper writes "dotnet" as ".NET" and can glue "everyone here writes dotnet" into one web-address token: a story
+    that hinges on a spelling needs it said ("one word, no dot") and shown, because by ear the two are the same word.
+  - Telugu Parler says "బాట్" as "bod": use "రోబో"; "చుక్క" for a dot reads as a drink in a party scene: say "డాట్".
+  - Gap music: `musicGapGain` 2.5 dB on top of scene boosts 1.5-2.0 put the music-only stretches 6 dB OVER the voice;
+    with boosts that high keep the gap gain near 0.5 and let the scene boosts make the arc.

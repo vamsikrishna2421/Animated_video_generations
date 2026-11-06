@@ -13,45 +13,45 @@
  "fps": 30,
  "musicDrops": [
   [
-   664,
-   688
+   654,
+   678
   ],
   [
-   1061,
-   1085
+   1129,
+   1153
   ],
   [
-   1621,
-   1645
+   1671,
+   1695
   ]
  ],
  "musicBoosts": [
   [
    0,
-   593,
-   1.0
+   583,
+   0.9
   ],
   [
-   593,
-   1329,
-   1.35
+   583,
+   1380,
+   1.5
   ],
   [
-   1330,
-   1827,
-   1.8
+   1380,
+   1878,
+   2.0
   ],
   [
-   1330,
-   1827,
-   1.5,
+   1380,
+   1878,
+   1.9,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1827,
+ "totalFrames": 1878,
  "music": "reel/creative21v1/score.wav",
  "scenes": [
   {
@@ -103,11 +103,10 @@
      "notes": []
     },
     "handle": "@ai_maastaaru",
-    "captionMode": "phrase",
-    "hardCuts": true
+    "captionMode": "phrase"
    },
    "from": 0,
-   "frames": 593,
+   "frames": 583,
    "lines": [
     {
      "who": "shalini",
@@ -284,56 +283,31 @@
       {
        "w": "The",
        "from": 299,
-       "to": 307
+       "to": 310
       },
       {
-       "w": "list",
-       "from": 307,
-       "to": 317
+       "w": "list:",
+       "from": 310,
+       "to": 329
       },
       {
-       "w": "says",
-       "from": 317,
-       "to": 331
-      },
-      {
-       "w": ".NET",
-       "from": 331,
-       "to": 356
-      },
-      {
-       "w": "(dot,",
-       "from": 356,
-       "to": 368
-      },
-      {
-       "w": "N,",
-       "from": 368,
-       "to": 385
-      },
-      {
-       "w": "E,",
-       "from": 385,
-       "to": 391
-      },
-      {
-       "w": "T).",
-       "from": 391,
-       "to": 406
+       "w": "dot-N-E-T.",
+       "from": 329,
+       "to": 384
       },
       {
        "w": "You",
-       "from": 406,
-       "to": 414
+       "from": 384,
+       "to": 400
       },
       {
-       "w": "wrote",
-       "from": 414,
-       "to": 425
+       "w": "wrote:",
+       "from": 400,
+       "to": 418
       },
       {
        "w": "d-o-t-n-e-t.",
-       "from": 425,
+       "from": 418,
        "to": 451
       }
      ],
@@ -469,11 +443,10 @@
      "notes": []
     },
     "handle": "@ai_maastaaru",
-    "captionMode": "phrase",
-    "hardCuts": true
+    "captionMode": "phrase"
    },
-   "from": 593,
-   "frames": 736,
+   "from": 583,
+   "frames": 797,
    "lines": [
     {
      "who": "naveen",
@@ -562,37 +535,57 @@
      "sub": null,
      "audio": "reel/creative21v1/line_08.wav",
      "from": 142,
-     "frames": 77,
+     "frames": 83,
      "words": [
       {
        "w": "11?!",
        "from": 142,
-       "to": 150
+       "to": 149
       },
       {
        "w": "And",
-       "from": 150,
-       "to": 157
+       "from": 149,
+       "to": 154
       },
       {
        "w": "everyone",
-       "from": 157,
-       "to": 180
+       "from": 154,
+       "to": 173
       },
       {
        "w": "here",
-       "from": 180,
-       "to": 188
+       "from": 173,
+       "to": 180
       },
       {
        "w": "writes",
-       "from": 188,
-       "to": 199
+       "from": 180,
+       "to": 189
+      },
+      {
+       "w": "it",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "as",
+       "from": 193,
+       "to": 197
+      },
+      {
+       "w": "one",
+       "from": 197,
+       "to": 202
+      },
+      {
+       "w": "word:",
+       "from": 202,
+       "to": 209
       },
       {
        "w": "dotnet!",
-       "from": 199,
-       "to": 213
+       "from": 209,
+       "to": 220
       }
      ],
      "cues": {
@@ -605,62 +598,62 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative21v1/line_09.wav",
-     "from": 227,
+     "from": 232,
      "frames": 86,
      "words": [
       {
        "w": "And",
-       "from": 228,
-       "to": 233
+       "from": 234,
+       "to": 239
       },
       {
        "w": "\"Not",
-       "from": 233,
-       "to": 244
+       "from": 239,
+       "to": 250
       },
       {
        "w": "familiar",
-       "from": 244,
-       "to": 256
+       "from": 250,
+       "to": 262
       },
       {
        "w": "with",
-       "from": 256,
-       "to": 263
+       "from": 262,
+       "to": 269
       },
       {
        "w": ".NET\"?",
-       "from": 263,
-       "to": 285
+       "from": 269,
+       "to": 291
       },
       {
        "w": "It",
-       "from": 285,
-       "to": 290
-      },
-      {
-       "w": "let",
-       "from": 290,
+       "from": 291,
        "to": 295
       },
       {
-       "w": "that",
+       "w": "let",
        "from": 295,
-       "to": 302
+       "to": 301
+      },
+      {
+       "w": "that",
+       "from": 301,
+       "to": 308
       },
       {
        "w": "one",
-       "from": 302,
-       "to": 307
+       "from": 308,
+       "to": 313
       },
       {
        "w": "in.",
-       "from": 307,
-       "to": 313
+       "from": 313,
+       "to": 319
       }
      ],
      "cues": {
-      "1": 285
+      "1": 291
      }
     },
     {
@@ -669,43 +662,43 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative21v1/line_10.wav",
-     "from": 322,
+     "from": 328,
      "frames": 52,
      "words": [
       {
        "w": "Then",
-       "from": 322,
-       "to": 330
-      },
-      {
-       "w": "let",
-       "from": 330,
+       "from": 328,
        "to": 336
       },
       {
-       "w": "an",
+       "w": "let",
        "from": 336,
-       "to": 341
+       "to": 342
+      },
+      {
+       "w": "an",
+       "from": 342,
+       "to": 347
       },
       {
        "w": "AI",
-       "from": 341,
-       "to": 346
+       "from": 347,
+       "to": 352
       },
       {
        "w": "read",
-       "from": 346,
-       "to": 354
-      },
-      {
-       "w": "the",
-       "from": 354,
+       "from": 352,
        "to": 360
       },
       {
-       "w": "meaning!",
+       "w": "the",
        "from": 360,
-       "to": 374
+       "to": 366
+      },
+      {
+       "w": "meaning!",
+       "from": 366,
+       "to": 380
       }
      ],
      "cues": {}
@@ -716,102 +709,142 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/creative21v1/line_11.wav",
-     "from": 380,
-     "frames": 198,
+     "from": 386,
+     "frames": 266,
      "words": [
       {
        "w": "I",
-       "from": 381,
-       "to": 385
+       "from": 387,
+       "to": 391
       },
       {
        "w": "tried",
-       "from": 385,
-       "to": 395
+       "from": 391,
+       "to": 402
       },
       {
        "w": "a",
-       "from": 395,
-       "to": 399
+       "from": 402,
+       "to": 405
       },
       {
        "w": "small",
-       "from": 399,
-       "to": 410
+       "from": 405,
+       "to": 417
       },
       {
        "w": "one.",
-       "from": 410,
-       "to": 425
+       "from": 417,
+       "to": 431
       },
       {
        "w": "Nobody",
-       "from": 425,
-       "to": 437
+       "from": 431,
+       "to": 444
       },
       {
        "w": "without",
-       "from": 437,
-       "to": 452
+       "from": 444,
+       "to": 459
       },
       {
        "w": ".NET",
-       "from": 452,
-       "to": 461
-      },
-      {
-       "w": "got",
-       "from": 461,
+       "from": 459,
        "to": 468
       },
       {
-       "w": "in.",
-       "from": 492,
-       "to": 497
+       "w": "got",
+       "from": 468,
+       "to": 480
       },
       {
-       "w": "But",
-       "from": 497,
-       "to": 502
+       "w": "in,",
+       "from": 480,
+       "to": 487
       },
       {
-       "w": "\"DotNet\"?",
-       "from": 502,
-       "to": 529
+       "w": "but",
+       "from": 487,
+       "to": 494
       },
       {
-       "w": "Bounced,",
-       "from": 529,
-       "to": 551
+       "w": "it",
+       "from": 494,
+       "to": 504
       },
       {
-       "w": "3",
-       "from": 551,
-       "to": 553
+       "w": "bounced",
+       "from": 504,
+       "to": 519
       },
       {
-       "w": "times",
-       "from": 553,
-       "to": 561
-      },
-      {
-       "w": "out",
-       "from": 561,
-       "to": 570
+       "w": "13",
+       "from": 519,
+       "to": 525
       },
       {
        "w": "of",
+       "from": 525,
+       "to": 530
+      },
+      {
+       "w": "60",
+       "from": 530,
+       "to": 536
+      },
+      {
+       "w": "real",
+       "from": 536,
+       "to": 545
+      },
+      {
+       "w": "ones.",
        "from": 570,
-       "to": 574
+       "to": 578
+      },
+      {
+       "w": "\"DotNet\",",
+       "from": 578,
+       "to": 595
+      },
+      {
+       "w": "one",
+       "from": 595,
+       "to": 601
+      },
+      {
+       "w": "word?",
+       "from": 601,
+       "to": 623
+      },
+      {
+       "w": "3",
+       "from": 623,
+       "to": 626
+      },
+      {
+       "w": "times",
+       "from": 626,
+       "to": 634
+      },
+      {
+       "w": "out",
+       "from": 634,
+       "to": 644
+      },
+      {
+       "w": "of",
+       "from": 644,
+       "to": 648
       },
       {
        "w": "3.",
-       "from": 574,
-       "to": 578
+       "from": 648,
+       "to": 652
       }
      ],
      "cues": {
-      "1": 492
+      "1": 570
      }
     },
     {
@@ -820,57 +853,57 @@
      "color": "#5EEAD4",
      "sub": null,
      "audio": "reel/creative21v1/line_12.wav",
-     "from": 590,
+     "from": 664,
      "frames": 81,
      "words": [
       {
        "w": "So",
-       "from": 591,
-       "to": 595
+       "from": 665,
+       "to": 670
       },
       {
        "w": "for",
-       "from": 595,
-       "to": 602
+       "from": 670,
+       "to": 676
       },
       {
        "w": "8",
-       "from": 602,
-       "to": 605
+       "from": 676,
+       "to": 679
       },
       {
        "w": "months,",
-       "from": 605,
-       "to": 624
+       "from": 679,
+       "to": 698
       },
       {
        "w": "nobody",
-       "from": 624,
-       "to": 635
+       "from": 698,
+       "to": 709
       },
       {
        "w": "read",
-       "from": 635,
-       "to": 643
+       "from": 709,
+       "to": 717
       },
       {
        "w": "the",
-       "from": 643,
-       "to": 650
+       "from": 717,
+       "to": 724
       },
       {
        "w": "reject",
-       "from": 650,
-       "to": 661
+       "from": 724,
+       "to": 735
       },
       {
        "w": "pile?",
-       "from": 661,
-       "to": 671
+       "from": 735,
+       "to": 745
       }
      ],
      "cues": {
-      "1": 627
+      "1": 702
      }
     },
     {
@@ -879,18 +912,18 @@
      "color": "#CBD5E1",
      "sub": null,
      "audio": "reel/creative21v1/line_13.wav",
-     "from": 677,
+     "from": 751,
      "frames": 35,
      "words": [
       {
        "w": "Nobody",
-       "from": 677,
-       "to": 691
+       "from": 751,
+       "to": 765
       },
       {
        "w": "asked.",
-       "from": 691,
-       "to": 705
+       "from": 765,
+       "to": 779
       }
      ],
      "cues": {}
@@ -934,11 +967,10 @@
      "notes": []
     },
     "handle": "@ai_maastaaru",
-    "captionMode": "phrase",
-    "hardCuts": true
+    "captionMode": "phrase"
    },
-   "from": 1330,
-   "frames": 497,
+   "from": 1380,
+   "frames": 498,
    "lines": [
     {
      "who": "naveen",

@@ -1,4 +1,4 @@
-# Creative 21 "Not On The List" (.NET vs dotnet) · script v2, Nov 6 (the Nov 6 creative slot)
+# Creative 21 "Not On The List" (.NET vs dotnet) · script v3 (as rendered), Nov 6 (the Nov 6 creative slot)
 
 **Brief:** Vamsi's, via Bujji (handoff, Nov 5): a story from a LinkedIn post: a company couldn't fill a role for ~8
 months; its resume pipeline treated ".NET" as a must-have keyword, candidates wrote "dotnet", every one was rejected;
@@ -63,7 +63,25 @@ by a LinkedIn story" on lines 2-3; line 4 spells both ("dot, N, E, T" / "D, O, T
 every spelling to the list"; the closer "A bot that reads you in one second... or a human, in three weeks?"; Telugu as
 listed below.
 
-## Script (English, v2) · ~55 s
+## Render review (human-viewer, EN + TE) and what changed
+Both stop on frame 1 (hook 7 and 8) and would share it (office group, team chat); the B.Com tip and "LET IN: Not
+familiar with .NET" landed; the American voices read clean ("feels dubbed" for a kurta aunty, Sandeep; fine for Priya).
+Both: by ear "dotnet" = ".NET" at 0:07, 0:24 and 0:36 ("everyone here writes .NET": so what's the problem?); frame 1's
+card hid the bouncer's face; the made-up-company tag and the 20-chip grid too small; flat energy, the stamps didn't stand
+out; near-empty frames at 0:32 (the AI card) and 0:44 (one rule panel). Priya: "13 of 60" never seen or said, so
+"DotNet 3/3" looked cherry-picked; the either/or closer fights our own "bot + 20 rejects" rule (expect BOTH). Sandeep:
+who is who (Shalini read as a candidate); a stray ")" in a caption. Telugu: "చుక్క" means a drink in a pub skit; "బాట్"
+came out "bod" three times; "అలాగే రాస్తారు": like what?; 71 s, cut the spoken half of the hiring rule and the card holds.
+Changed: "one word" said on lines 8 and 11 ("everyone here writes it as one word", "DotNet, one word? Three times out
+of three"); line 11 says "it bounced thirteen of sixty real ones" and the AI card shows 13/60 big from the start with
+"Skills: DotNet (one word)" and the NO stamps; frame 1's card shorter and the bouncer lower (his face shows); labels HR:
+SHALINI / CANDIDATE: NAVEEN; the tag 38 px; bigger chips; both rule panels on screen from line 14; louder stamp hits
+with a buzz, hits on 11/20 and 13/60; music ~10 dB under speech, the gaps no louder than the voice (a first fix
+overshot to 6 dB over), the middle lifted, a dip before the key numbers, a rise into the close; Telugu "డాట్, ఎన్, ఈ, టీ",
+"రోబో" for the bot, "కలిపే రాస్తారు", "ఐదేళ్ళ డాట్ నెట్ అనుభవం", the hiring line's second half on the card only (67 s);
+the caption ask "BOT, HUMAN or BOTH". Not changed: the either/or line itself (the caption lets "both" in).
+
+## Script (English, v3) · 63 s
 | # | Who | Line |
 |---|---|---|
 | 1 | shalini | Eight months open. [1] Zero hires. [2] Where are the .NET developers?! |
@@ -73,10 +91,10 @@ listed below.
 | 5 | shalini | It's the same skill! |
 | 6 | bouncer | I match letters, [1] not meaning. |
 | 7 | naveen | I tested a filter like yours. [1] Twenty ways to write .NET. [2] Eleven bounced. |
-| 8 | shalini | Eleven?! [1] And everyone here writes dotnet! |
+| 8 | shalini | Eleven?! [1] And everyone here writes it as one word! |
 | 9 | naveen | And "Not familiar with .NET"? [1] It let that one in. |
 | 10 | shalini | Then let an AI read the meaning! |
-| 11 | naveen | I tried a small one. Nobody without .NET got in. / [1] But "DotNet"? Bounced, three times out of three. |
+| 11 | naveen | I tried a small one. Nobody without .NET got in, but it bounced thirteen of sixty real ones. / [1] "DotNet", one word? Three times out of three. |
 | 12 | shalini | So for eight months, [1] nobody read the reject pile? |
 | 13 | bouncer | Nobody asked. |
 | 14 | naveen | Job hunting? [1] Copy the job post's exact words, letter for letter. |
@@ -84,27 +102,27 @@ listed below.
 | 16 | shalini | A bot that reads you in one second... [1] or a human, in three weeks? |
 | 17 | bouncer | Next! [1] Rejected. |
 
-## Script (Telugu, v2; on-screen text stays English)
+## Script (Telugu, v3; on-screen text stays English) · 67 s
 | # | Who | Telugu |
 |---|---|---|
 | 1 | shalini | ఎనిమిది నెలలు! [1] ఒక్కరినీ తీసుకోలేదు! [2] డాట్ నెట్ డెవలపర్స్ ఎక్కడ?! |
 | 2 | bouncer | రిజెక్టెడ్. [1] లిస్ట్ లో లేదు. |
-| 3 | naveen | ఐదేళ్ళుగా డాట్ నెట్ లోనే పని చేస్తున్నా! [1] మీకు కావాల్సింది నేనే! |
-| 4 | bouncer | లిస్ట్ లో చుక్క, ఎన్, ఈ, టీ. [1] నువ్వు రాసింది డీ, ఓ, టీ, ఎన్, ఈ, టీ. |
+| 3 | naveen | ఐదేళ్ళ డాట్ నెట్ అనుభవం! [1] మీకు కావాల్సింది నేనే! |
+| 4 | bouncer | లిస్ట్ లో డాట్, ఎన్, ఈ, టీ. [1] నువ్వు రాసింది డీ, ఓ, టీ, ఎన్, ఈ, టీ. |
 | 5 | shalini | రెండూ ఒకటే కదా! |
 | 6 | bouncer | నేను అక్షరాలు చూస్తా, [1] అర్థం చూడను. |
 | 7 | naveen | మీలాంటి ఫిల్టర్ తో టెస్ట్ చేశా. [1] డాట్ నెట్ ని ఇరవై రకాలుగా రాశా. [2] పదకొండు రిజెక్ట్. |
-| 8 | shalini | పదకొండా?! [1] ఇక్కడ అందరూ అలాగే రాస్తారు! |
+| 8 | shalini | పదకొండా?! [1] ఇక్కడ అందరూ కలిపే రాస్తారు! |
 | 9 | naveen | "నాకు డాట్ నెట్ తెలియదు" అని రాసినవాడు? [1] లోపలికి వెళ్ళిపోయాడు. |
-| 10 | shalini | అయితే అర్థం చేసుకునే బాట్ పెడదాం! |
-| 11 | naveen | చిన్న బాట్ తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు. / [1] కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్. |
+| 10 | shalini | అయితే అర్థం చేసుకునే రోబో పెడదాం! |
+| 11 | naveen | చిన్న రోబో తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు. / [1] కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్. |
 | 12 | shalini | అంటే ఎనిమిది నెలలు, [1] రిజెక్ట్ అయినవి ఎవరూ చదవలేదా? |
 | 13 | bouncer | ఎవరూ అడగలేదు. |
 | 14 | naveen | ఉద్యోగం వెతుకుతున్నారా? [1] జాబ్ పోస్ట్ లో ఉన్న మాటలే, అక్షరం మార్చకుండా రాయండి. |
-| 15 | shalini | రిక్రూట్ చేస్తున్నారా? [1] ప్రతి వారం ఇరవై రిజెక్ట్ లు మనిషి చదవాలి, ప్రతి స్పెల్లింగ్ లిస్ట్ లో పెట్టాలి. |
-| 16 | shalini | ఒక్క సెకనులో చదివే బాట్ కావాలా... [1] మూడు వారాలు తీసుకునే మనిషా? |
+| 15 | shalini | రిక్రూట్ చేస్తున్నారా? [1] ప్రతి వారం ఇరవై రిజెక్ట్ లు మనిషి చదవాలి. |
+| 16 | shalini | ఒక్క సెకనులో చదివే రోబో కావాలా... [1] మూడు వారాలు తీసుకునే మనిషా? |
 | 17 | bouncer | నెక్స్ట్! [1] రిజెక్టెడ్. |
 
 ## Caption ask (the debatable one; Vamsi: "AI judges you" topics draw comments)
-A bot reads your resume in 1 second. A human takes 3 weeks. Which one do you want reading yours? Comment BOT or HUMAN,
-and why. (script review: two-sided, so both answers are fair)
+A bot reads your resume in 1 second. A human takes 3 weeks. Which one do you want reading yours? Comment BOT, HUMAN or BOTH,
+and why. (script review: two-sided; render review: let BOTH in)
