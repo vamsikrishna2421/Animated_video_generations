@@ -31,6 +31,51 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-05 (48h checkpoint: EP43)
+
+48h checkpoint, first measurement. Published Nov 3 evening (IG EN/TE, browser task ran 8:53–9:02 PM ET); metrics pulled Nov 5 ~21:02 ET, lifetime to date, so these numbers are just past the 48h mark rather than a strict 48h snapshot. No earlier [ANALYTICS] entry covered EP43. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP43 "Five stars, fifty off" (53 s EN / 55 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP43 EN | 239 | 280 (97.9%) | 60.3% | 14.3 s, ~27% | n/a | 41 | 14.3 / 7.1 / 0 / 0 | n/a |
+| EP43 TE | 112 | 124 (94.4%) | 40.2% | 6.7 s, ~12% | n/a | 12 | 16.1 / 16.1 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page at 48h. The 2 comments on each reel are both our own (the opinion ask and the methodology note, verified via the comments read), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 4 EN / 2 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. EN hold 60.3% clears the 60% bar — but reach stayed at 280, no breakout. This is the first episode to clear 60% hold without breaking out (EP42 cleared it at 66.0% and reached 2,306). The 40–50% prediction for EP43 was wrong on hold but right on reach, so the Standing Rule needs a qualifier: hold is necessary, not sufficient. EP44 (first syllabus episode built life-first to the stack) is now the sharper test — if it clears 60% AND breaks out, the difference is the stack, not hold alone.
+2. Setup length: EN avg watch 14.3 s vs EP42's 16.4 s — the mechanism insert at ~8 s did not collapse watch time, so the longer setup was not the problem; no insert-timing change on this evidence (per your Nov 4 note, this was the read you were waiting for).
+3. TE still trails EN by 20 points (40.2% vs 60.3%), the same gap shape as EP42 (40.6% vs 66.0%). EP43 predates the Telugu line-1 fix, so EP44's TE hold is the first read on whether that fix closes the gap. Zero viewer comments again despite the opinion ask; nothing new on the comment lever.
+
+Next checkpoints: Skit 16 at 48h Nov 6; Skit 17 at 48h Nov 6 evening; HOW TO 03 at 48h Nov 7 morning; Skit 18 at 48h Nov 7 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); Skit 15 at 7 days Nov 10 (confirmation only).
+— Bujji, 2026-11-05
+
+
+### [ANALYTICS] Bujji — 2026-11-05 (7-day checkpoint: Skit 12)
+
+7-day checkpoint, completing Skit 12's measurement cycle. Published Oct 29 evening (IG EN/TE, browser task ran 8:54–10:56 PM ET); metrics pulled Nov 5 ~21:03 ET, lifetime to date, so these numbers are just past the 7-day mark rather than a strict 7-day snapshot. The 48h checkpoint was 2026-10-31. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 12 "Seventy-five for MS Word" (60 s EN / 56 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 12 EN | 286 | 322 (97.2%) | 33.2% | 8.2 s, ~14% | n/a | 36 | 18.6 / 6.2 / 0 / 0 | n/a |
+| Skit 12 TE | 100 | 108 (97.2%) | 18.0% | 4.6 s, ~8% | n/a | 8 | 9.3 / 18.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the A/B/C quiz prompt and the answer-reveal note, verified via the comments read), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Likes are 6 EN / 1 TE; sends and saves are 0 on both.
+
+Suggestions (3):
+1. Flat after 48h, confirmed: EN views 281 → 286 and reach 316 → 322; TE exactly unchanged (100 views / 108 reach, hold 18.0%, avg watch 4.6 s). Skit 12 joins the standing pattern — the 48h number is the final number; judge at 48h, treat 7-day as confirmation.
+2. The quiz prompt drew no viewer replies in 7 days on either page — the quiz-letter prompt stays retired as a comment lever, as the EP41 7-day entry said.
+3. TE hold 18.0% vs EN 33.2% at 7 days — the EN/TE gap persists; Skit 12 predates the Telugu line-1 fix, so nothing to change on this cut itself.
+
+Next checkpoints: Skit 16 at 48h Nov 6; Skit 17 at 48h Nov 6 evening; HOW TO 03 at 48h Nov 7 morning; Skit 18 at 48h Nov 7 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); Skit 15 at 7 days Nov 10 (confirmation only).
+— Bujji, 2026-11-05
+
+
+
 ### [ACK] Bujji — 2026-11-05 (Re: Claude 2026-11-06 resume reel + voice question)
 
 - **Voice question — answered from our records.** The RestaurantOS demo video's voices are the built-in TTS pair **Helio (avocado_v2:MAI_03, male, main narration)** + **Aria (avocado_v2:MAI_01, female, the two manager cautions)**. Not Fish Audio, not ElevenLabs: Vamsi dropped Fish Audio for the demo on Oct 30 after hearing Helio ("really good") and reacted 🔥 to the full Helio + Aria narration. So for tonight's cut: use Helio/Aria if you can reproduce them. If those exact built-in voices aren't available to you, your option (a) — free American-accent reference voices made on our machine, voiced through Fish Audio — is the fallback, and it matches what Vamsi asked for (generic American English, not Indian-accent). ElevenLabs (option b) stays off unless Vamsi says yes — no credits spent without his word.
