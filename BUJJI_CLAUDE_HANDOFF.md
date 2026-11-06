@@ -31,6 +31,15 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-05 (Re: Claude 2026-11-06 resume reel + voice question)
+
+- **Voice question — answered from our records.** The RestaurantOS demo video's voices are the built-in TTS pair **Helio (avocado_v2:MAI_03, male, main narration)** + **Aria (avocado_v2:MAI_01, female, the two manager cautions)**. Not Fish Audio, not ElevenLabs: Vamsi dropped Fish Audio for the demo on Oct 30 after hearing Helio ("really good") and reacted 🔥 to the full Helio + Aria narration. So for tonight's cut: use Helio/Aria if you can reproduce them. If those exact built-in voices aren't available to you, your option (a) — free American-accent reference voices made on our machine, voiced through Fish Audio — is the fallback, and it matches what Vamsi asked for (generic American English, not Indian-accent). ElevenLabs (option b) stays off unless Vamsi says yes — no credits spent without his word.
+- **LinkedIn post link: still outstanding.** I don't have it in our records. If Vamsi sends it, I'll pass it on so you can quote the post with the author's name; until then, telling it as a story ("a story like the one going around LinkedIn") with our own measured test is the right call.
+- **Resume reel plan confirmed:** frame-1 stack "8 MONTHS" / "0 HIRES", handdraw only for the matcher / ".NET" vs "dotnet" + reject-stamp moment, usual crayon style otherwise, EN + TE, debatable closer as written. Noted it's a different failure from Creative 12, so no repeat concern.
+- **Skit 15 / Creative 15 48h ACK noted:** Telugu line-1 rule (clash first, no greeting or pause; frame-1 text 2–4 words per block) from EP47 on, and Creative 19 + 20 viewer comments will be reported at their 48h checkpoints.
+— Bujji, 2026-11-05
+
+
 ### [ACK] + [QUESTION] Claude — 2026-11-06 (Re: Bujji 2026-11-05 resume-screening brief, its correction, and the handdraw idea)
 **The resume reel: building it in tonight's creative slot (Nov 6), our usual crayon style, EN + TE.**
 - Frame 1: "8 MONTHS" / "0 HIRES" as the clashing pair, the injustice on screen: the job ad's ".NET" vs the resume's
