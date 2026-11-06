@@ -1,0 +1,381 @@
+{
+ "id": "creative21v1",
+ "title": "Not On The List: .NET vs dotnet",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.36,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 2.5,
+ "musicEndRamp": [
+  0.88,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_bouncer",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "shalini",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "stamp",
+      "n": 2
+     },
+     {
+      "who": "naveen",
+      "shot": "wide",
+      "prop": "resume",
+      "n": 3
+     },
+     {
+      "who": "bouncer",
+      "shot": "hand",
+      "prop": "hand",
+      "n": 4
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "same",
+      "n": 5
+     },
+     {
+      "who": "bouncer",
+      "shot": "letters",
+      "prop": "letters",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Rejected: .NET vs dotnet",
+     "title": "Rejected: .NET vs dotnet",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "shalini",
+     "file": "01_shalini.wav",
+     "text": "Eight months open. [1] Zero hires. [2] Where are the .NET developers?!",
+     "show": "8 months open. Zero hires. Where are the .NET developers?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.06
+    },
+    {
+     "who": "bouncer",
+     "file": "02_bouncer.wav",
+     "text": "Rejected. [1] Not on the list.",
+     "show": "Rejected. Not on the list.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.0
+    },
+    {
+     "who": "naveen",
+     "file": "03_naveen.wav",
+     "text": "Five years of dotnet! [1] I'm exactly who you need!",
+     "show": "5 years of dotnet! I'm exactly who you need!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.08
+    },
+    {
+     "who": "bouncer",
+     "file": "04_bouncer.wav",
+     "text": "The list says dot, N, E, T. [1] You wrote D, O, T, N, E, T.",
+     "show": "The list says .NET (dot, N, E, T). You wrote d-o-t-n-e-t.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 1.0,
+     "tts": "The list says dot, N, E, T. You wrote D, O, T, N, E, T."
+    },
+    {
+     "who": "shalini",
+     "file": "05_shalini.wav",
+     "text": "It's the same skill!",
+     "show": "It's the same skill!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.06
+    },
+    {
+     "who": "bouncer",
+     "file": "06_bouncer.wav",
+     "text": "I match letters, [1] not meaning.",
+     "show": "I match letters, not meaning.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_bouncer",
+   "tail": 0.0,
+   "boost": 1.35,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     0,
+     2
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "naveen",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "eleven",
+      "n": 8
+     },
+     {
+      "who": "naveen",
+      "shot": "test",
+      "prop": "fakes",
+      "n": 9
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "smart",
+      "n": 10
+     },
+     {
+      "who": "naveen",
+      "shot": "ai",
+      "prop": "ai",
+      "n": 11
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "pile",
+      "n": 12
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "asked",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "naveen",
+     "file": "07_naveen.wav",
+     "text": "I tested a filter like yours. [1] Twenty ways to write .NET. [2] Eleven bounced.",
+     "show": "I tested a filter like yours. 20 ways to write .NET. 11 bounced.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.08
+    },
+    {
+     "who": "shalini",
+     "file": "08_shalini.wav",
+     "text": "Eleven?! [1] And everyone here writes dotnet!",
+     "show": "11?! And everyone here writes dotnet!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.06
+    },
+    {
+     "who": "naveen",
+     "file": "09_naveen.wav",
+     "text": "And \"Not familiar with .NET\"? [1] It let that one in.",
+     "show": "And \"Not familiar with .NET\"? It let that one in.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.08
+    },
+    {
+     "who": "shalini",
+     "file": "10_shalini.wav",
+     "text": "Then let an AI read the meaning!",
+     "show": "Then let an AI read the meaning!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.06
+    },
+    {
+     "who": "naveen",
+     "file": "11_naveen.wav",
+     "text": "I tried a small one. Nobody without .NET got in. <pause 0.6> [1] But \"DotNet\"? Bounced, three times out of three.",
+     "show": "I tried a small one. Nobody without .NET got in. But \"DotNet\"? Bounced, 3 times out of 3.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "I tried a small one. Nobody without .NET got in.",
+     "file2": "11b_naveen.wav",
+     "tts2": "But \"DotNet\"? Bounced, three times out of three.",
+     "pause": 0.6
+    },
+    {
+     "who": "shalini",
+     "file": "12_shalini.wav",
+     "text": "So for eight months, [1] nobody read the reject pile?",
+     "show": "So for 8 months, nobody read the reject pile?",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.06
+    },
+    {
+     "who": "bouncer",
+     "file": "13_bouncer.wav",
+     "text": "Nobody asked.",
+     "show": "Nobody asked.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_bouncer",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.8,
+   "lift": 0.6,
+   "rise": 1.5,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "naveen",
+      "shot": "rule",
+      "prop": "seek",
+      "n": 14
+     },
+     {
+      "who": "shalini",
+      "shot": "rule",
+      "prop": "hire",
+      "n": 15
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "question",
+      "n": 16
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 17
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Copy the job post's words",
+     "title": "Copy the job post's words",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "naveen",
+     "file": "14_naveen.wav",
+     "text": "Job hunting? [1] Copy the job post's exact words, letter for letter.",
+     "show": "Job hunting? Copy the job post's exact words, letter for letter.",
+     "maxgap": 0.28,
+     "gap": 0.8,
+     "tempo": 1.08
+    },
+    {
+     "who": "shalini",
+     "file": "15_shalini.wav",
+     "text": "Hiring? [1] Read twenty rejects every week, and add every spelling to the list.",
+     "show": "Hiring? Read 20 rejects every week, and add every spelling to the list.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.06
+    },
+    {
+     "who": "shalini",
+     "file": "16_shalini.wav",
+     "text": "A bot that reads you in one second... [1] or a human, in three weeks?",
+     "show": "A bot that reads you in 1 second... or a human, in 3 weeks?",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.06
+    },
+    {
+     "who": "bouncer",
+     "file": "17_bouncer.wav",
+     "text": "Next! [1] Rejected.",
+     "show": "Next! Rejected.",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 1.0
+    }
+   ]
+  }
+ ]
+}

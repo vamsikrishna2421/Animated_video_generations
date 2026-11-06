@@ -103,6 +103,9 @@ SPEAKERS = {
     "rohit": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Rohit", color="#FDBA74"),
     "kumar": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Kumar sir", color="#93C5FD"),
     "sai": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Sai", color="#93C5FD"),   # Creative 19 (file takes): the tenant
+    "shalini": dict(voice="af_heart", speed=1.0, lang="en-us", name="Shalini", color="#5EEAD4"),   # Creative 21 (file takes)
+    "naveen": dict(voice="am_puck", speed=1.0, lang="en-us", name="Naveen", color="#FCD34D"),
+    "bouncer": dict(voice="am_michael", speed=1.0, lang="en-us", name="Screening bot", color="#CBD5E1"),
     "venkat": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Venkat Rao garu", color="#FCA5A5"),   # the landlord
     "pinky": dict(voice="af_heart", speed=1.0, lang="en-us", name="Pinky", color="#FDE68A"),   # the ring announcer
     "tarun": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Tarun", color="#5EEAD4"),   # Creative 20 (file takes): the "anchor"

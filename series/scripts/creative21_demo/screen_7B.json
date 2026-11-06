@@ -1,0 +1,773 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 8 tokens",
+ "ask": "A job needs this must-have skill: .NET (Microsoft's software development platform). Here is the skills line from a candidate's resume: \"{line}\". Does this candidate have .NET experience? Answer with just YES or NO.",
+ "rows": [
+  {
+   "id": "r01",
+   "line": ".NET",
+   "real": true,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 2.9,
+   "hand": "NO"
+  },
+  {
+   "id": "r01",
+   "line": ".NET",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r01",
+   "line": ".NET",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r02",
+   "line": "dotnet",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 2.8,
+   "hand": "YES"
+  },
+  {
+   "id": "r02",
+   "line": "dotnet",
+   "real": true,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.4,
+   "hand": "NO"
+  },
+  {
+   "id": "r02",
+   "line": "dotnet",
+   "real": true,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.8,
+   "hand": "NO"
+  },
+  {
+   "id": "r03",
+   "line": "DotNet",
+   "real": true,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 2.1,
+   "hand": "NO"
+  },
+  {
+   "id": "r03",
+   "line": "DotNet",
+   "real": true,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.5,
+   "hand": "NO"
+  },
+  {
+   "id": "r03",
+   "line": "DotNet",
+   "real": true,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.5,
+   "hand": "NO"
+  },
+  {
+   "id": "r04",
+   "line": "DOTNET",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 1.2,
+   "hand": "YES"
+  },
+  {
+   "id": "r04",
+   "line": "DOTNET",
+   "real": true,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "r04",
+   "line": "DOTNET",
+   "real": true,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "r05",
+   "line": ".Net",
+   "real": true,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 1.2,
+   "hand": "NO"
+  },
+  {
+   "id": "r05",
+   "line": ".Net",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r05",
+   "line": ".Net",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r06",
+   "line": "dot net",
+   "real": true,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 1.1,
+   "hand": "NO"
+  },
+  {
+   "id": "r06",
+   "line": "dot net",
+   "real": true,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "r06",
+   "line": "dot net",
+   "real": true,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "r07",
+   "line": "ASP.NET Core",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.0,
+   "hand": "YES"
+  },
+  {
+   "id": "r07",
+   "line": "ASP.NET Core",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r07",
+   "line": "ASP.NET Core",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r08",
+   "line": "C# / .NET 8",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.2,
+   "hand": "YES"
+  },
+  {
+   "id": "r08",
+   "line": "C# / .NET 8",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r08",
+   "line": "C# / .NET 8",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.4,
+   "hand": "YES"
+  },
+  {
+   "id": "r09",
+   "line": ".NET Framework 4.8",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.2,
+   "hand": "YES"
+  },
+  {
+   "id": "r09",
+   "line": ".NET Framework 4.8",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r09",
+   "line": ".NET Framework 4.8",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r10",
+   "line": "VB.NET",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.0,
+   "hand": "YES"
+  },
+  {
+   "id": "r10",
+   "line": "VB.NET",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r10",
+   "line": "VB.NET",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r11",
+   "line": "Dotnet Core",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 1.1,
+   "hand": "YES"
+  },
+  {
+   "id": "r11",
+   "line": "Dotnet Core",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r11",
+   "line": "Dotnet Core",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r12",
+   "line": "NET 6",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 1.1,
+   "hand": "YES"
+  },
+  {
+   "id": "r12",
+   "line": "NET 6",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r12",
+   "line": "NET 6",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r13",
+   "line": "ASP.NET MVC, Entity Framework",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.2,
+   "hand": "YES"
+  },
+  {
+   "id": "r13",
+   "line": "ASP.NET MVC, Entity Framework",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r13",
+   "line": "ASP.NET MVC, Entity Framework",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r14",
+   "line": "Blazor (.NET)",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.1,
+   "hand": "YES"
+  },
+  {
+   "id": "r14",
+   "line": "Blazor (.NET)",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r14",
+   "line": "Blazor (.NET)",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r15",
+   "line": "C#, dotnet CLI",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 1.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r15",
+   "line": "C#, dotnet CLI",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r15",
+   "line": "C#, dotnet CLI",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r16",
+   "line": "Microsoft .NET",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.1,
+   "hand": "YES"
+  },
+  {
+   "id": "r16",
+   "line": "Microsoft .NET",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r16",
+   "line": "Microsoft .NET",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r17",
+   "line": ".NET MAUI",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 1.2,
+   "hand": "YES"
+  },
+  {
+   "id": "r17",
+   "line": ".NET MAUI",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r17",
+   "line": ".NET MAUI",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r18",
+   "line": "dot-net",
+   "real": true,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 1.1,
+   "hand": "NO"
+  },
+  {
+   "id": "r18",
+   "line": "dot-net",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r18",
+   "line": "dot-net",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r19",
+   "line": "DotNet 7",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 1.2,
+   "hand": "YES"
+  },
+  {
+   "id": "r19",
+   "line": "DotNet 7",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r19",
+   "line": "DotNet 7",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r20",
+   "line": "ASP.Net Web API",
+   "real": true,
+   "try": 1,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 1.1,
+   "hand": "YES"
+  },
+  {
+   "id": "r20",
+   "line": "ASP.Net Web API",
+   "real": true,
+   "try": 2,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "YES"
+  },
+  {
+   "id": "r20",
+   "line": "ASP.Net Web API",
+   "real": true,
+   "try": 3,
+   "reply": "YES",
+   "keyword_pass": false,
+   "seconds": 0.4,
+   "hand": "YES"
+  },
+  {
+   "id": "n01",
+   "line": "Not familiar with .NET",
+   "real": false,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 1.1,
+   "hand": "NO"
+  },
+  {
+   "id": "n01",
+   "line": "Not familiar with .NET",
+   "real": false,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n01",
+   "line": "Not familiar with .NET",
+   "real": false,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n02",
+   "line": "Java, Spring Boot (no .NET)",
+   "real": false,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 1.2,
+   "hand": "NO"
+  },
+  {
+   "id": "n02",
+   "line": "Java, Spring Boot (no .NET)",
+   "real": false,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n02",
+   "line": "Java, Spring Boot (no .NET)",
+   "real": false,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n03",
+   "line": "Python, Django",
+   "real": false,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 1.1,
+   "hand": "NO"
+  },
+  {
+   "id": "n03",
+   "line": "Python, Django",
+   "real": false,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n03",
+   "line": "Python, Django",
+   "real": false,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n04",
+   "line": "Want to learn .NET next year",
+   "real": false,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 1.2,
+   "hand": "NO"
+  },
+  {
+   "id": "n04",
+   "line": "Want to learn .NET next year",
+   "real": false,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n04",
+   "line": "Want to learn .NET next year",
+   "real": false,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": true,
+   "seconds": 0.3,
+   "hand": "NO"
+  },
+  {
+   "id": "n05",
+   "line": "Network engineer (CCNA)",
+   "real": false,
+   "try": 1,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 1.2,
+   "hand": "NO"
+  },
+  {
+   "id": "n05",
+   "line": "Network engineer (CCNA)",
+   "real": false,
+   "try": 2,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.4,
+   "hand": "NO"
+  },
+  {
+   "id": "n05",
+   "line": "Network engineer (CCNA)",
+   "real": false,
+   "try": 3,
+   "reply": "NO",
+   "keyword_pass": false,
+   "seconds": 0.4,
+   "hand": "NO"
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}

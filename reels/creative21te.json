@@ -1,0 +1,385 @@
+{
+ "id": "creative21te",
+ "title": "Not On The List: .NET vs dotnet (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.36,
+  0.66
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 2.0,
+ "musicEndRamp": [
+  0.88,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_bouncer",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "shalini",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "stamp",
+      "n": 2
+     },
+     {
+      "who": "naveen",
+      "shot": "wide",
+      "prop": "resume",
+      "n": 3
+     },
+     {
+      "who": "bouncer",
+      "shot": "hand",
+      "prop": "hand",
+      "n": 4
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "same",
+      "n": 5
+     },
+     {
+      "who": "bouncer",
+      "shot": "letters",
+      "prop": "letters",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Rejected: .NET vs dotnet",
+     "title": "Rejected: .NET vs dotnet",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "shalini",
+     "file": "01_shalini.wav",
+     "text": "ఎనిమిది నెలలు! [1] ఒక్కరినీ తీసుకోలేదు! [2] డాట్ నెట్ డెవలపర్స్ ఎక్కడ?!",
+     "show": "8 months! Not one hired! Where are the .NET developers?!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.0
+    },
+    {
+     "who": "bouncer",
+     "file": "02_bouncer.wav",
+     "text": "రిజెక్టెడ్. [1] లిస్ట్ లో లేదు.",
+     "show": "Rejected. Not on the list.",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 0.98
+    },
+    {
+     "who": "naveen",
+     "file": "03_naveen.wav",
+     "text": "ఐదేళ్ళుగా డాట్ నెట్ లోనే పని చేస్తున్నా! [1] మీకు కావాల్సింది నేనే!",
+     "show": "I've worked on .NET for 5 years! I'm the one you need!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.04
+    },
+    {
+     "who": "bouncer",
+     "file": "04_bouncer.wav",
+     "text": "లిస్ట్ లో చుక్క, ఎన్, ఈ, టీ. [1] నువ్వు రాసింది డీ, ఓ, టీ, ఎన్, ఈ, టీ.",
+     "show": "The list says dot, N, E, T. You wrote D, O, T, N, E, T.",
+     "maxgap": 0.28,
+     "gap": 0.5,
+     "tempo": 0.98
+    },
+    {
+     "who": "shalini",
+     "file": "05_shalini.wav",
+     "text": "రెండూ ఒకటే కదా!",
+     "show": "Both are the same!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.0
+    },
+    {
+     "who": "bouncer",
+     "file": "06_bouncer.wav",
+     "text": "నేను అక్షరాలు చూస్తా, [1] అర్థం చూడను.",
+     "show": "I look at letters, not meaning.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 0.98
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_bouncer",
+   "tail": 0.0,
+   "boost": 1.35,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     0,
+     2
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "naveen",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "eleven",
+      "n": 8
+     },
+     {
+      "who": "naveen",
+      "shot": "test",
+      "prop": "fakes",
+      "n": 9
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "smart",
+      "n": 10
+     },
+     {
+      "who": "naveen",
+      "shot": "ai",
+      "prop": "ai",
+      "n": 11
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "pile",
+      "n": 12
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "asked",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "naveen",
+     "file": "07_naveen.wav",
+     "text": "మీలాంటి ఫిల్టర్ తో టెస్ట్ చేశా. [1] డాట్ నెట్ ని ఇరవై రకాలుగా రాశా. [2] పదకొండు రిజెక్ట్.",
+     "show": "I tested with a filter like yours. I wrote .NET 20 ways. 11 rejected.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.04
+    },
+    {
+     "who": "shalini",
+     "file": "08_shalini.wav",
+     "text": "పదకొండా?! [1] ఇక్కడ అందరూ అలాగే రాస్తారు!",
+     "show": "11?! Everyone here writes it that way!",
+     "maxgap": 0.28,
+     "gap": 0.25,
+     "tempo": 1.0
+    },
+    {
+     "who": "naveen",
+     "file": "09_naveen.wav",
+     "text": "\"నాకు డాట్ నెట్ తెలియదు\" అని రాసినవాడు? [1] లోపలికి వెళ్ళిపోయాడు.",
+     "show": "The one who wrote \"I don't know .NET\"? He walked right in.",
+     "maxgap": 0.28,
+     "gap": 0.3,
+     "tempo": 1.04
+    },
+    {
+     "who": "shalini",
+     "file": "10_shalini.wav",
+     "text": "అయితే అర్థం చేసుకునే బాట్ పెడదాం!",
+     "show": "Then let's put in a bot that understands meaning!",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.0
+    },
+    {
+     "who": "naveen",
+     "file": "11_naveen.wav",
+     "text": "చిన్న బాట్ తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు. <pause 0.6> [1] కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్.",
+     "show": "I tried a small bot. Not one person without .NET got in. But \"DotNet\" written joined? Rejected 3 times out of 3.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.04,
+     "tts": "చిన్న బాట్ తో ట్రై చేశా. డాట్ నెట్ రానివాళ్ళు ఒక్కరూ లోపలికి రాలేదు.",
+     "file2": "11b_naveen.wav",
+     "tts2": "కానీ కలిపి రాసిన డాట్ నెట్? మూడుకి మూడు సార్లు రిజెక్ట్.",
+     "pause": 0.6
+    },
+    {
+     "who": "shalini",
+     "file": "12_shalini.wav",
+     "text": "అంటే ఎనిమిది నెలలు, [1] రిజెక్ట్ అయినవి ఎవరూ చదవలేదా?",
+     "show": "So for 8 months, nobody read the rejected ones?",
+     "maxgap": 0.28,
+     "gap": 0.2,
+     "tempo": 1.0
+    },
+    {
+     "who": "bouncer",
+     "file": "13_bouncer.wav",
+     "text": "ఎవరూ అడగలేదు.",
+     "show": "Nobody asked.",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 0.98
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_bouncer",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.5,
+   "lift": 0.6,
+   "rise": 1.25,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "naveen",
+      "shot": "rule",
+      "prop": "seek",
+      "n": 14
+     },
+     {
+      "who": "shalini",
+      "shot": "rule",
+      "prop": "hire",
+      "n": 15
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "question",
+      "n": 16
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 17
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Copy the job post's words",
+     "title": "Copy the job post's words",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "naveen",
+     "file": "14_naveen.wav",
+     "text": "ఉద్యోగం వెతుకుతున్నారా? [1] జాబ్ పోస్ట్ లో ఉన్న మాటలే, అక్షరం మార్చకుండా రాయండి.",
+     "show": "Job hunting? Write the job post's own words, without changing a letter.",
+     "maxgap": 0.28,
+     "gap": 0.8,
+     "tempo": 1.04
+    },
+    {
+     "who": "shalini",
+     "file": "15_shalini.wav",
+     "text": "రిక్రూట్ చేస్తున్నారా? [1] ప్రతి వారం ఇరవై రిజెక్ట్ లు మనిషి చదవాలి, ప్రతి స్పెల్లింగ్ లిస్ట్ లో పెట్టాలి.",
+     "show": "Recruiting? Every week a human reads 20 rejects; every spelling goes on the list.",
+     "maxgap": 0.28,
+     "gap": 1.0,
+     "tempo": 1.0
+    },
+    {
+     "who": "shalini",
+     "file": "16_shalini.wav",
+     "text": "ఒక్క సెకనులో చదివే బాట్ కావాలా... [1] మూడు వారాలు తీసుకునే మనిషా?",
+     "show": "A bot that reads you in one second... or a human who takes three weeks?",
+     "maxgap": 0.28,
+     "gap": 0.4,
+     "tempo": 1.0
+    },
+    {
+     "who": "bouncer",
+     "file": "17_bouncer.wav",
+     "text": "నెక్స్ట్! [1] రిజెక్టెడ్.",
+     "show": "Next! Rejected.",
+     "maxgap": 0.28,
+     "gap": 0.0,
+     "tempo": 0.98
+    }
+   ]
+  }
+ ]
+}

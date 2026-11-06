@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -57,6 +57,8 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   vijaya: { skin: "#9c6a45", hair: "#27272a", top: "#be185d" },   // Vijaya atta, 52, booked the hall: a bun
   mohan: { skin: "#8d5a3b", hair: "#a1a1aa", top: "#1d4ed8" },   // Mohan mama, 55, asked the AI: grey hair, glasses
   divya: { skin: "#b07a52", hair: "#120d0a", top: "#e11d48" },   // EP47 (GuardCrayon.tsx): the college girl who tricks the shop bot, a rose kurti
+  shalini: { skin: "#a26d47", hair: "#1c1410", top: "#0f766e" },   // Creative 21 (BouncerCrayon.tsx): the HR manager, a teal blazer
+  naveen: { skin: "#8d5a3b", hair: "#0f0a08", top: "#f59e0b" },   // the .NET developer at the rope, a mustard tee
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)

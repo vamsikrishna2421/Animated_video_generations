@@ -1,0 +1,1202 @@
+{
+ "id": "creative21v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.36,
+  0.66
+ ],
+ "title": "Not On The List: .NET vs dotnet",
+ "handle": "@ai_maastaaru",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   664,
+   688
+  ],
+  [
+   1061,
+   1085
+  ],
+  [
+   1621,
+   1645
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   593,
+   1.0
+  ],
+  [
+   593,
+   1329,
+   1.35
+  ],
+  [
+   1330,
+   1827,
+   1.8
+  ],
+  [
+   1330,
+   1827,
+   1.5,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1827,
+ "music": "reel/creative21v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_bouncer",
+   "data": {
+    "beats": [
+     {
+      "who": "shalini",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "stamp",
+      "n": 2
+     },
+     {
+      "who": "naveen",
+      "shot": "wide",
+      "prop": "resume",
+      "n": 3
+     },
+     {
+      "who": "bouncer",
+      "shot": "hand",
+      "prop": "hand",
+      "n": 4
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "same",
+      "n": 5
+     },
+     {
+      "who": "bouncer",
+      "shot": "letters",
+      "prop": "letters",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Rejected: .NET vs dotnet",
+     "title": "Rejected: .NET vs dotnet",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 593,
+   "lines": [
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_01.wav",
+     "from": 10,
+     "frames": 119,
+     "words": [
+      {
+       "w": "8",
+       "from": 10,
+       "to": 14
+      },
+      {
+       "w": "months",
+       "from": 14,
+       "to": 25
+      },
+      {
+       "w": "open.",
+       "from": 25,
+       "to": 34
+      },
+      {
+       "w": "Zero",
+       "from": 34,
+       "to": 49
+      },
+      {
+       "w": "hires.",
+       "from": 49,
+       "to": 60
+      },
+      {
+       "w": "Where",
+       "from": 60,
+       "to": 70
+      },
+      {
+       "w": "are",
+       "from": 70,
+       "to": 85
+      },
+      {
+       "w": "the",
+       "from": 85,
+       "to": 91
+      },
+      {
+       "w": ".NET",
+       "from": 91,
+       "to": 99
+      },
+      {
+       "w": "developers?!",
+       "from": 99,
+       "to": 119
+      }
+     ],
+     "cues": {
+      "1": 46,
+      "2": 64
+     }
+    },
+    {
+     "who": "bouncer",
+     "name": "Screening bot",
+     "color": "#CBD5E1",
+     "sub": null,
+     "audio": "reel/creative21v1/line_02.wav",
+     "from": 137,
+     "frames": 58,
+     "words": [
+      {
+       "w": "Rejected.",
+       "from": 138,
+       "to": 154
+      },
+      {
+       "w": "Not",
+       "from": 154,
+       "to": 170
+      },
+      {
+       "w": "on",
+       "from": 170,
+       "to": 174
+      },
+      {
+       "w": "the",
+       "from": 174,
+       "to": 181
+      },
+      {
+       "w": "list.",
+       "from": 181,
+       "to": 190
+      }
+     ],
+     "cues": {
+      "1": 154
+     }
+    },
+    {
+     "who": "naveen",
+     "name": "Naveen",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative21v1/line_03.wav",
+     "from": 201,
+     "frames": 89,
+     "words": [
+      {
+       "w": "5",
+       "from": 206,
+       "to": 209
+      },
+      {
+       "w": "years",
+       "from": 209,
+       "to": 218
+      },
+      {
+       "w": "of",
+       "from": 218,
+       "to": 223
+      },
+      {
+       "w": "dotnet!",
+       "from": 223,
+       "to": 235
+      },
+      {
+       "w": "I'm",
+       "from": 235,
+       "to": 252
+      },
+      {
+       "w": "exactly",
+       "from": 252,
+       "to": 265
+      },
+      {
+       "w": "who",
+       "from": 265,
+       "to": 271
+      },
+      {
+       "w": "you",
+       "from": 271,
+       "to": 277
+      },
+      {
+       "w": "need!",
+       "from": 277,
+       "to": 286
+      }
+     ],
+     "cues": {
+      "1": 237
+     }
+    },
+    {
+     "who": "bouncer",
+     "name": "Screening bot",
+     "color": "#CBD5E1",
+     "sub": null,
+     "audio": "reel/creative21v1/line_04.wav",
+     "from": 298,
+     "frames": 159,
+     "words": [
+      {
+       "w": "The",
+       "from": 299,
+       "to": 307
+      },
+      {
+       "w": "list",
+       "from": 307,
+       "to": 317
+      },
+      {
+       "w": "says",
+       "from": 317,
+       "to": 331
+      },
+      {
+       "w": ".NET",
+       "from": 331,
+       "to": 356
+      },
+      {
+       "w": "(dot,",
+       "from": 356,
+       "to": 368
+      },
+      {
+       "w": "N,",
+       "from": 368,
+       "to": 385
+      },
+      {
+       "w": "E,",
+       "from": 385,
+       "to": 391
+      },
+      {
+       "w": "T).",
+       "from": 391,
+       "to": 406
+      },
+      {
+       "w": "You",
+       "from": 406,
+       "to": 414
+      },
+      {
+       "w": "wrote",
+       "from": 414,
+       "to": 425
+      },
+      {
+       "w": "d-o-t-n-e-t.",
+       "from": 425,
+       "to": 451
+      }
+     ],
+     "cues": {
+      "1": 387
+     }
+    },
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_05.wav",
+     "from": 472,
+     "frames": 34,
+     "words": [
+      {
+       "w": "It's",
+       "from": 472,
+       "to": 480
+      },
+      {
+       "w": "the",
+       "from": 480,
+       "to": 487
+      },
+      {
+       "w": "same",
+       "from": 487,
+       "to": 494
+      },
+      {
+       "w": "skill!",
+       "from": 494,
+       "to": 506
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "bouncer",
+     "name": "Screening bot",
+     "color": "#CBD5E1",
+     "sub": null,
+     "audio": "reel/creative21v1/line_06.wav",
+     "from": 512,
+     "frames": 59,
+     "words": [
+      {
+       "w": "I",
+       "from": 513,
+       "to": 516
+      },
+      {
+       "w": "match",
+       "from": 516,
+       "to": 526
+      },
+      {
+       "w": "letters,",
+       "from": 526,
+       "to": 540
+      },
+      {
+       "w": "not",
+       "from": 540,
+       "to": 553
+      },
+      {
+       "w": "meaning.",
+       "from": 553,
+       "to": 567
+      }
+     ],
+     "cues": {
+      "1": 540
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_bouncer",
+   "data": {
+    "beats": [
+     {
+      "who": "naveen",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "eleven",
+      "n": 8
+     },
+     {
+      "who": "naveen",
+      "shot": "test",
+      "prop": "fakes",
+      "n": 9
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "smart",
+      "n": 10
+     },
+     {
+      "who": "naveen",
+      "shot": "ai",
+      "prop": "ai",
+      "n": 11
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "pile",
+      "n": 12
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "asked",
+      "n": 13
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 593,
+   "frames": 736,
+   "lines": [
+    {
+     "who": "naveen",
+     "name": "Naveen",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative21v1/line_07.wav",
+     "from": 0,
+     "frames": 133,
+     "words": [
+      {
+       "w": "I",
+       "from": 0,
+       "to": 3
+      },
+      {
+       "w": "tested",
+       "from": 3,
+       "to": 15
+      },
+      {
+       "w": "a",
+       "from": 15,
+       "to": 19
+      },
+      {
+       "w": "filter",
+       "from": 19,
+       "to": 31
+      },
+      {
+       "w": "like",
+       "from": 31,
+       "to": 40
+      },
+      {
+       "w": "yours.",
+       "from": 40,
+       "to": 59
+      },
+      {
+       "w": "20",
+       "from": 59,
+       "to": 65
+      },
+      {
+       "w": "ways",
+       "from": 65,
+       "to": 73
+      },
+      {
+       "w": "to",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "write",
+       "from": 78,
+       "to": 89
+      },
+      {
+       "w": ".NET.",
+       "from": 89,
+       "to": 107
+      },
+      {
+       "w": "11",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "bounced.",
+       "from": 112,
+       "to": 128
+      }
+     ],
+     "cues": {
+      "1": 46,
+      "2": 95
+     }
+    },
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_08.wav",
+     "from": 142,
+     "frames": 77,
+     "words": [
+      {
+       "w": "11?!",
+       "from": 142,
+       "to": 150
+      },
+      {
+       "w": "And",
+       "from": 150,
+       "to": 157
+      },
+      {
+       "w": "everyone",
+       "from": 157,
+       "to": 180
+      },
+      {
+       "w": "here",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "writes",
+       "from": 188,
+       "to": 199
+      },
+      {
+       "w": "dotnet!",
+       "from": 199,
+       "to": 213
+      }
+     ],
+     "cues": {
+      "1": 155
+     }
+    },
+    {
+     "who": "naveen",
+     "name": "Naveen",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative21v1/line_09.wav",
+     "from": 227,
+     "frames": 86,
+     "words": [
+      {
+       "w": "And",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "\"Not",
+       "from": 233,
+       "to": 244
+      },
+      {
+       "w": "familiar",
+       "from": 244,
+       "to": 256
+      },
+      {
+       "w": "with",
+       "from": 256,
+       "to": 263
+      },
+      {
+       "w": ".NET\"?",
+       "from": 263,
+       "to": 285
+      },
+      {
+       "w": "It",
+       "from": 285,
+       "to": 290
+      },
+      {
+       "w": "let",
+       "from": 290,
+       "to": 295
+      },
+      {
+       "w": "that",
+       "from": 295,
+       "to": 302
+      },
+      {
+       "w": "one",
+       "from": 302,
+       "to": 307
+      },
+      {
+       "w": "in.",
+       "from": 307,
+       "to": 313
+      }
+     ],
+     "cues": {
+      "1": 285
+     }
+    },
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_10.wav",
+     "from": 322,
+     "frames": 52,
+     "words": [
+      {
+       "w": "Then",
+       "from": 322,
+       "to": 330
+      },
+      {
+       "w": "let",
+       "from": 330,
+       "to": 336
+      },
+      {
+       "w": "an",
+       "from": 336,
+       "to": 341
+      },
+      {
+       "w": "AI",
+       "from": 341,
+       "to": 346
+      },
+      {
+       "w": "read",
+       "from": 346,
+       "to": 354
+      },
+      {
+       "w": "the",
+       "from": 354,
+       "to": 360
+      },
+      {
+       "w": "meaning!",
+       "from": 360,
+       "to": 374
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "naveen",
+     "name": "Naveen",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative21v1/line_11.wav",
+     "from": 380,
+     "frames": 198,
+     "words": [
+      {
+       "w": "I",
+       "from": 381,
+       "to": 385
+      },
+      {
+       "w": "tried",
+       "from": 385,
+       "to": 395
+      },
+      {
+       "w": "a",
+       "from": 395,
+       "to": 399
+      },
+      {
+       "w": "small",
+       "from": 399,
+       "to": 410
+      },
+      {
+       "w": "one.",
+       "from": 410,
+       "to": 425
+      },
+      {
+       "w": "Nobody",
+       "from": 425,
+       "to": 437
+      },
+      {
+       "w": "without",
+       "from": 437,
+       "to": 452
+      },
+      {
+       "w": ".NET",
+       "from": 452,
+       "to": 461
+      },
+      {
+       "w": "got",
+       "from": 461,
+       "to": 468
+      },
+      {
+       "w": "in.",
+       "from": 492,
+       "to": 497
+      },
+      {
+       "w": "But",
+       "from": 497,
+       "to": 502
+      },
+      {
+       "w": "\"DotNet\"?",
+       "from": 502,
+       "to": 529
+      },
+      {
+       "w": "Bounced,",
+       "from": 529,
+       "to": 551
+      },
+      {
+       "w": "3",
+       "from": 551,
+       "to": 553
+      },
+      {
+       "w": "times",
+       "from": 553,
+       "to": 561
+      },
+      {
+       "w": "out",
+       "from": 561,
+       "to": 570
+      },
+      {
+       "w": "of",
+       "from": 570,
+       "to": 574
+      },
+      {
+       "w": "3.",
+       "from": 574,
+       "to": 578
+      }
+     ],
+     "cues": {
+      "1": 492
+     }
+    },
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_12.wav",
+     "from": 590,
+     "frames": 81,
+     "words": [
+      {
+       "w": "So",
+       "from": 591,
+       "to": 595
+      },
+      {
+       "w": "for",
+       "from": 595,
+       "to": 602
+      },
+      {
+       "w": "8",
+       "from": 602,
+       "to": 605
+      },
+      {
+       "w": "months,",
+       "from": 605,
+       "to": 624
+      },
+      {
+       "w": "nobody",
+       "from": 624,
+       "to": 635
+      },
+      {
+       "w": "read",
+       "from": 635,
+       "to": 643
+      },
+      {
+       "w": "the",
+       "from": 643,
+       "to": 650
+      },
+      {
+       "w": "reject",
+       "from": 650,
+       "to": 661
+      },
+      {
+       "w": "pile?",
+       "from": 661,
+       "to": 671
+      }
+     ],
+     "cues": {
+      "1": 627
+     }
+    },
+    {
+     "who": "bouncer",
+     "name": "Screening bot",
+     "color": "#CBD5E1",
+     "sub": null,
+     "audio": "reel/creative21v1/line_13.wav",
+     "from": 677,
+     "frames": 35,
+     "words": [
+      {
+       "w": "Nobody",
+       "from": 677,
+       "to": 691
+      },
+      {
+       "w": "asked.",
+       "from": 691,
+       "to": 705
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_bouncer",
+   "data": {
+    "beats": [
+     {
+      "who": "naveen",
+      "shot": "rule",
+      "prop": "seek",
+      "n": 14
+     },
+     {
+      "who": "shalini",
+      "shot": "rule",
+      "prop": "hire",
+      "n": 15
+     },
+     {
+      "who": "shalini",
+      "shot": "wide",
+      "prop": "question",
+      "n": 16
+     },
+     {
+      "who": "bouncer",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 17
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Copy the job post's words",
+     "title": "Copy the job post's words",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1330,
+   "frames": 497,
+   "lines": [
+    {
+     "who": "naveen",
+     "name": "Naveen",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/creative21v1/line_14.wav",
+     "from": 9,
+     "frames": 121,
+     "words": [
+      {
+       "w": "Job",
+       "from": 12,
+       "to": 18
+      },
+      {
+       "w": "hunting?",
+       "from": 18,
+       "to": 33
+      },
+      {
+       "w": "Copy",
+       "from": 33,
+       "to": 49
+      },
+      {
+       "w": "the",
+       "from": 49,
+       "to": 56
+      },
+      {
+       "w": "job",
+       "from": 56,
+       "to": 62
+      },
+      {
+       "w": "post's",
+       "from": 62,
+       "to": 73
+      },
+      {
+       "w": "exact",
+       "from": 73,
+       "to": 83
+      },
+      {
+       "w": "words,",
+       "from": 83,
+       "to": 94
+      },
+      {
+       "w": "letter",
+       "from": 94,
+       "to": 110
+      },
+      {
+       "w": "for",
+       "from": 110,
+       "to": 117
+      },
+      {
+       "w": "letter.",
+       "from": 117,
+       "to": 130
+      }
+     ],
+     "cues": {
+      "1": 33
+     }
+    },
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_15.wav",
+     "from": 154,
+     "frames": 131,
+     "words": [
+      {
+       "w": "Hiring?",
+       "from": 155,
+       "to": 167
+      },
+      {
+       "w": "Read",
+       "from": 167,
+       "to": 181
+      },
+      {
+       "w": "20",
+       "from": 181,
+       "to": 186
+      },
+      {
+       "w": "rejects",
+       "from": 186,
+       "to": 198
+      },
+      {
+       "w": "every",
+       "from": 198,
+       "to": 207
+      },
+      {
+       "w": "week,",
+       "from": 207,
+       "to": 216
+      },
+      {
+       "w": "and",
+       "from": 216,
+       "to": 222
+      },
+      {
+       "w": "add",
+       "from": 222,
+       "to": 237
+      },
+      {
+       "w": "every",
+       "from": 237,
+       "to": 247
+      },
+      {
+       "w": "spelling",
+       "from": 247,
+       "to": 260
+      },
+      {
+       "w": "to",
+       "from": 260,
+       "to": 265
+      },
+      {
+       "w": "the",
+       "from": 265,
+       "to": 271
+      },
+      {
+       "w": "list.",
+       "from": 271,
+       "to": 280
+      }
+     ],
+     "cues": {
+      "1": 166
+     }
+    },
+    {
+     "who": "shalini",
+     "name": "Shalini",
+     "color": "#5EEAD4",
+     "sub": null,
+     "audio": "reel/creative21v1/line_16.wav",
+     "from": 315,
+     "frames": 111,
+     "words": [
+      {
+       "w": "A",
+       "from": 315,
+       "to": 318
+      },
+      {
+       "w": "bot",
+       "from": 318,
+       "to": 325
+      },
+      {
+       "w": "that",
+       "from": 325,
+       "to": 333
+      },
+      {
+       "w": "reads",
+       "from": 333,
+       "to": 342
+      },
+      {
+       "w": "you",
+       "from": 342,
+       "to": 349
+      },
+      {
+       "w": "in",
+       "from": 349,
+       "to": 353
+      },
+      {
+       "w": "1",
+       "from": 353,
+       "to": 357
+      },
+      {
+       "w": "second...",
+       "from": 357,
+       "to": 381
+      },
+      {
+       "w": "or",
+       "from": 381,
+       "to": 386
+      },
+      {
+       "w": "a",
+       "from": 386,
+       "to": 389
+      },
+      {
+       "w": "human,",
+       "from": 389,
+       "to": 406
+      },
+      {
+       "w": "in",
+       "from": 406,
+       "to": 411
+      },
+      {
+       "w": "3",
+       "from": 411,
+       "to": 414
+      },
+      {
+       "w": "weeks?",
+       "from": 414,
+       "to": 426
+      }
+     ],
+     "cues": {
+      "1": 379
+     }
+    },
+    {
+     "who": "bouncer",
+     "name": "Screening bot",
+     "color": "#CBD5E1",
+     "sub": null,
+     "audio": "reel/creative21v1/line_17.wav",
+     "from": 438,
+     "frames": 45,
+     "words": [
+      {
+       "w": "Next!",
+       "from": 438,
+       "to": 451
+      },
+      {
+       "w": "Rejected.",
+       "from": 451,
+       "to": 478
+      }
+     ],
+     "cues": {
+      "1": 451
+     }
+    }
+   ]
+  }
+ ]
+}

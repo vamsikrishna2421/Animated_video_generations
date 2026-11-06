@@ -1,0 +1,67 @@
+SKIT 21: "Not On The List" (a nightclub-bouncer parody at an office door: the screening AI is a bouncer bot in sunglasses with a clipboard, "THE LIST: .NET"; Naveen's resume says "dotnet": REJECTED; the job has been open 8 months, 0 hired; a hand-drawn whiteboard moment: ".NET ≠ dotnet"; our test: an exact ".NET" filter bounced 11 of 20 ways to write .NET and let "Not familiar with .NET" in; a small AI reading for meaning let nobody without .NET in, but still bounced "DotNet" 3 times of 3; the rules: job seekers, copy the job post's exact words; hiring, read 20 rejects every week and add every spelling to the list; the closer: a bot that reads you in 1 second, or a human in 3 weeks? It loops: "Next! Rejected." and the stamp lands on frame 1 again. English voices are generic American (Vamsi's ask for this reel); Telugu as usual; 9:16; also works as a YouTube Short)
+Files: out/skits/21_not_on_the_list.mp4 (English page) · out/skits/21_not_on_the_list_te.mp4 (Telugu page)
+Send copies: out/skits/21_not_on_the_list_ig.mp4 · out/skits/21_not_on_the_list_te_ig.mp4
+Post it as a standalone reel. No follow card inside the video; the one ask lives in the caption (BOT or HUMAN).
+The company is made up, inspired by a story going around LinkedIn (no company named there, so we don't present it as news); every number in the reel is from our own test.
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Job open for 8 months. 0 hires. The list said ".NET". Every resume said "dotnet".
+
+A keyword filter compares letters, not meaning: ".NET" and "dotnet" are different strings to it, though Microsoft's own .NET command-line tool is literally called dotnet.
+Our test: 20 ways developers really write .NET, through an exact ".NET" filter: 11 bounced (dotnet, DotNet, DOTNET, .Net, dot net, NET 6, ASP.Net...). And of 5 lines with no .NET skill, it let 3 in, including "Not familiar with .NET".
+A small free AI that reads meaning did better: nobody without .NET got in. But it still bounced real ones 13 times out of 60, "DotNet" 3 times out of 3.
+
+Job hunting: copy the job post's exact words, letter for letter (it says .NET? write .NET; it says B.Com? write B.Com).
+Hiring: read 20 rejects yourself every week, and add every spelling to the list.
+
+(A made-up company, inspired by a story going around LinkedIn. Our test is real.)
+
+=== COMMENT PROMPT ===
+A bot reads your resume in 1 second. A human takes 3 weeks. Which one do you want reading yours? Comment BOT or HUMAN, and why.
+
+=== HASHTAGS ===
+#AI #Jobs #Resume #ATS #Hiring #LearnAI
+
+=== PINNED_COMMENT ===
+How we tested: 25 skills lines, written before the run (20 real .NET: ".NET", "dotnet", "DotNet", "DOTNET", ".Net", "dot net", "ASP.NET Core", "C# / .NET 8", ".NET Framework 4.8", "VB.NET", "Dotnet Core", "NET 6", "ASP.NET MVC, Entity Framework", "Blazor (.NET)", "C#, dotnet CLI", "Microsoft .NET", ".NET MAUI", "dot-net", "DotNet 7", "ASP.Net Web API"; 5 not .NET: "Not familiar with .NET", "Java, Spring Boot (no .NET)", "Python, Django", "Want to learn .NET next year", "Network engineer (CCNA)"). The filter: a plain exact match on ".NET" (code). The AI: Qwen2.5-7B-Instruct (Qwen's own 4-bit file), llama.cpp, a 4-core computer, no internet, temperature 0.7, "Does this candidate have .NET experience? Answer with just YES or NO", 3 tries per line, every reply read: 13 of 60 NO on real lines ("DotNet" 3/3, "dot net" 3/3, "dotnet" 2/3, "DOTNET" 2/3, ".NET" 1/3, ".Net" 1/3, "dot-net" 1/3), 0 of 15 YES on the lines without .NET. Big hiring tools are different; the lesson (look at your reject pile) carries over. Shalini, Naveen and the company are made up.
+
+=== SOURCES (for comments) ===
+- Microsoft Learn, ".NET CLI overview": every command starts with the driver, "dotnet" (learn.microsoft.com/dotnet/core/tools).
+- Our run: series/scripts/creative21_demo/ (every reply, with the hand read).
+
+=== COVER ===
+Frame 1: two black blocks "JOB OPEN: 8 MONTHS" (amber) and "HIRED: 0" (red); a big card "THE LIST: .NET ≠ HIS RESUME: dotnet" with a red REJECTED stamp; the bouncer bot in sunglasses at a velvet rope; Shalini's hands up.
+
+=== ALT_TEXT ===
+Crayon-animated skit at an office door dressed as a nightclub entrance: a velvet rope, a "VIP: INTERVIEWS" sign, a robot bouncer in a black suit and sunglasses with a clipboard reading "THE LIST: .NET, must have". Two blocks: job open, 8 months; hired, 0. A card: the list, .NET; his resume, dotnet; not equal; rejected. Shalini, the HR manager: eight months open, zero hires, where are the .NET developers? The bouncer: rejected, not on the list, stamping Naveen's resume, "Skills: C#, dotnet (5 yrs)". A tag: a made-up company, inspired by a LinkedIn story. Naveen: five years of dotnet, I'm exactly who you need. A hand-drawn whiteboard: the list says ".NET", his resume says "dotnet", not equal, rejected; the bouncer spells both out. Shalini: it's the same skill. A card: a keyword filter checks letters one by one; letters, not meaning. Naveen: I tested a filter like yours, twenty ways to write .NET, eleven bounced; a card of 20 spellings, 11 crossed out. Shalini: eleven? and everyone here writes dotnet. Naveen: "Not familiar with .NET"? it let that one in; lines with no .NET let in, 3 of 5. Shalini: then let an AI read the meaning. A card: a small free AI that reads meaning: nobody without .NET got in; skills "DotNet": no, no, no; real .NET answers it bounced, 13 of 60, about 1 in 5. Shalini: so for eight months nobody read the reject pile? The bouncer: nobody asked. Rule cards: job hunting, copy the job post's exact words (it says .NET, write .NET; it says B.Com, write B.Com); hiring, every week read 20 rejects yourself, add every spelling to the list. Shalini: a bot that reads you in one second, or a human in three weeks? The bouncer: next, rejected; the stamp lands and frame 1 comes back.
+
+=== YOUTUBE SHORTS ===
+Title: Job open 8 months, 0 hires: the list said .NET, every resume said dotnet #shorts
+Description: An exact keyword filter compares letters, not meaning. In our test it bounced 11 of 20 ways to write .NET and let "Not familiar with .NET" in. Job hunting: copy the job post's exact words. Hiring: read your reject pile every week. (A made-up company, inspired by a LinkedIn story; our test is real.)
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Job 8 nelalu open. Okkarinee teesukoledu. List lo ".NET", resumes lo "dotnet".
+
+Keyword filter aksharaalu chustundi, artham kaadu: daaniki ".NET", "dotnet" veru veru. (Microsoft .NET tool peru kooda "dotnet"!)
+Maa test: .NET ni developers raase 20 rakaalu, exact ".NET" filter lo: 11 reject. .NET raani 5 lo 3 lopaliki vellaayi, "Not familiar with .NET" tho saha.
+Artham chese chinna free AI: .NET raanivaallu okkaroo raaledu. Kaani "DotNet" ni moodu ki moodu saarlu reject chesindi.
+
+Udyogam vetukutunnaaraa: job post lo unna maatale, aksharam maarchakunda raayandi.
+Recruit chestunnaaraa: prati vaaram 20 rejects meere chadavandi, prati spelling list lo pettandi.
+
+(Kalpita company, LinkedIn lo vachchina oka katha aadhaaram. Maa test nijam.)
+
+=== COMMENT PROMPT ===
+Bot mee resume ni 1 second lo chaduvutundi. Manishi 3 vaaraalu teesukuntaadu. Mee resume evaru chadavaali? BOT or HUMAN comment cheyyandi, enduko kooda.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #Jobs #Resume #Hiring
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: 25 skills lines (20 nijamaina .NET, 5 .NET kaanivi), run ki mundhe raasaam. Filter: ".NET" exact match (code). AI: Qwen2.5-7B-Instruct (4-bit), llama.cpp, internet ledu, prati line 3 saarlu, annee chadivaam: nijamaina vaatiki 60 lo 13 NO ("DotNet" 3/3), .NET kaani vaatiki 15 lo 0 YES. Shalini, Naveen, company kalpitam.
+
+=== YOUTUBE SHORTS ===
+Title: Job 8 nelalu open, 0 hires: list lo .NET, resumes lo dotnet #shorts
+Description: Keyword filter aksharaalu chustundi, artham kaadu. Maa test lo .NET raase 20 rakaallo 11 reject. Job post lo maatale raayandi; recruiters, reject pile chadavandi.
