@@ -9,7 +9,7 @@
  "lead": 0.5,
  "music": "lofi",
  "musicVol": [
-  0.5,
+  0.36,
   0.66
  ],
  "musicDuckRamp": 9,
@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 1.5,
+ "musicGapGain": 2.0,
  "musicEndRamp": [
   0.88,
   5.0
@@ -148,7 +148,7 @@
      "text": "మీ రూల్స్, ఆమె మెసేజ్, రెండూ ఒకే చాట్ లో వస్తాయి; నాకు తేడా తెలీదు. [1] దాన్నే ప్రాంప్ట్ ఇంజెక్షన్ అంటారు.",
      "show": "Your rules and her message come in the same chat; I can't tell them apart. That's called prompt injection.",
      "maxgap": 0.28,
-     "gap": 0.4,
+     "gap": 0.65,
      "tempo": 1.05,
      "gain_db": -1.0
     },
@@ -158,7 +158,7 @@
      "text": "కెనడాలో, ఒక బాట్ ఇచ్చిన మాటకి [1] ఎయిర్ లైన్ డబ్బు కట్టాల్సి వచ్చింది!",
      "show": "In Canada, an airline had to pay for what its bot promised!",
      "maxgap": 0.28,
-     "gap": 0.25,
+     "gap": 0.4,
      "tempo": 1.0,
      "gain_db": 0.5
     },
@@ -168,7 +168,7 @@
      "text": "ఆ ప్యాసింజర్ నిజాయితీగా అడిగాడు! [1] నువ్వు మోసం చేశావు!",
      "show": "That passenger asked honestly! You cheated!",
      "maxgap": 0.28,
-     "gap": 0.3,
+     "gap": 0.6,
      "tempo": 1.05,
      "gain_db": 0.5
     }
@@ -178,7 +178,7 @@
    "id": "s_b",
    "type": "sk_guard",
    "tail": 0.0,
-   "boost": 1.3,
+   "boost": 1.4,
    "lift": 0.5,
    "drop_at": [
     [
@@ -241,14 +241,14 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "ఒక నిజమైన టెస్ట్ లో, నాలాంటి చిన్న ఫ్రీ బాట్ ఇలాంటి షాప్ నడిపింది. <pause 0.7> [1] ఇరవై ట్రిక్కులు. మూడు పని చేశాయి. ఒక్కటి చాలు.",
+     "text": "ఒక నిజమైన టెస్ట్ లో, నాలాంటి చిన్న ఫ్రీ బాట్ ఇలాంటి షాప్ నడిపింది. <pause 0.7> [1] ఇరవై ట్రిక్కులు. మూడు పని చేశాయి. ఒకటి చాలు.",
      "show": "In a real test, a small free bot like me ran a shop like this. 20 tricks. 3 worked. One is enough.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.05,
      "tts": "ఒక నిజమైన టెస్ట్ లో, నాలాంటి చిన్న ఫ్రీ బాట్ ఇలాంటి షాప్ నడిపింది.",
      "file2": "08b_ai.wav",
-     "tts2": "ఇరవై ట్రిక్కులు. మూడు పని చేశాయి. ఒక్కటి చాలు.",
+     "tts2": "ఇరవై ట్రిక్కులు. మూడు పని చేశాయి. ఒకటి చాలు.",
      "pause": 0.7,
      "gain_db": -1.0
     },
@@ -258,7 +258,7 @@
      "text": "మరి ఏది ఆపుతుంది? [1] గట్టి వార్నింగా? బ్యాన్ చేసిన మాటలా? లేక కోడ్ లో చెక్?",
      "show": "So what stops it? A stronger warning? Banned words? Or a check in code?",
      "maxgap": 0.28,
-     "gap": 2.5,
+     "gap": 3.0,
      "tempo": 1.05,
      "gain_db": 0.5
     },
@@ -275,7 +275,7 @@
     {
      "who": "ai",
      "file": "11_ai.wav",
-     "text": "బ్యాన్ చేసిన మాటలు ఫేక్ డిస్కౌంట్ ని వదిలేశాయి... [1] ఆరుగురు మంచి కస్టమర్లని ఆపేశాయి.",
+     "text": "బ్యాన్ చేసిన మాటలు ఫేక్ డిస్కౌంట్ ని వదిలేశాయి... [1] ఆరు మంది మంచి కస్టమర్లని ఆపేశాయి.",
      "show": "Banned words let the fake discount through... and stopped 6 good customers.",
      "maxgap": 0.28,
      "gap": 0.3,
@@ -295,12 +295,12 @@
     {
      "who": "ai",
      "file": "13_ai.wav",
-     "text": "కోడ్ లో చెక్: లిస్ట్ కి సరిపోని ధర, మీరు ఓకే అనే దాకా ఆగుతుంది. <pause 0.7> [1] ఐదు చీప్ డీల్స్ లో నాలుగు ఆగాయి.",
-     "show": "A check in code: a price that doesn't match the list waits until you say OK. 4 of 5 cheap deals stopped.",
+     "text": "కోడ్ లో చెక్: లిస్ట్ లో లేని ధర, మీరు ఓకే అనే దాకా ఆగుతుంది. <pause 0.7> [1] ఐదు చీప్ డీల్స్ లో నాలుగు ఆగాయి.",
+     "show": "A check in code: a price not on the list waits until you say OK. 4 of 5 cheap deals stopped.",
      "maxgap": 0.28,
      "gap": 0.4,
      "tempo": 1.05,
-     "tts": "కోడ్ లో చెక్: లిస్ట్ కి సరిపోని ధర, మీరు ఓకే అనే దాకా ఆగుతుంది.",
+     "tts": "కోడ్ లో చెక్: లిస్ట్ లో లేని ధర, మీరు ఓకే అనే దాకా ఆగుతుంది.",
      "file2": "13b_ai.wav",
      "tts2": "ఐదు చీప్ డీల్స్ లో నాలుగు ఆగాయి.",
      "pause": 0.7,
@@ -314,8 +314,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.3,
-   "rise": 1.1,
+   "boost": 1.5,
+   "lift": 0.6,
+   "rise": 1.25,
    "drop_pre": [
     [
      1,
@@ -356,10 +357,10 @@
     {
      "who": "ravi",
      "file": "14_ravi.wav",
-     "text": "అంటే గార్డ్ రైల్ బాట్ బయట ఉండాలి: [1] ప్రతి ధర కోడ్ చెక్ చేయాలి, డబ్బు విషయం నా ఓకే తోనే.",
+     "text": "అంటే గార్డ్ రైల్, <pause 0.3> బాట్ బయటే ఉండాలి: [1] ప్రతి ధర కోడ్ చెక్ చేయాలి, డబ్బు విషయం నా ఓకే తోనే.",
      "show": "So the guardrail must be outside the bot: code checks every price, money only with my OK.",
      "maxgap": 0.28,
-     "gap": 1.6,
+     "gap": 0.8,
      "tempo": 1.05,
      "gain_db": 0.5
     },
@@ -376,8 +377,8 @@
     {
      "who": "ai",
      "file": "16_ai.wav",
-     "text": "ఎవరూ కాదు. [1] నేనే లెక్క తప్పు వేశా.",
-     "show": "Nobody. I got the sum wrong myself.",
+     "text": "ఎవరూ కాదు. [1] నాకు లెక్కలు రావు.",
+     "show": "Nobody. I can't do maths.",
      "maxgap": 0.28,
      "gap": 0.0,
      "tempo": 1.05,

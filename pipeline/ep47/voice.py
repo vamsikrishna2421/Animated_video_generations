@@ -33,7 +33,7 @@ VOICE_TE = {**VOICE_TE0, "divya": "Lalitha speaks in a bright, cheeky and teasin
 LIGHT_EN = set()   # the AI's numbers through the lighter phone sound (filled from the script)
 # n: groups of words, one word of each group must be heard (Whisper's words, lower case; digits count for numbers)
 MUST = {"en": {1: [("one", "1"), ("rupee", "rupees"), ("sixteen", "1600", "1,600", "16"), ("rice",), ("bag",)],
-               2: [("bot",), ("confirmed", "confirm"), ("writing", "written")],
+               2: [("your",), ("phone",), ("said",), ("yes",), ("writing", "written")],
                3: [("wrote", "write"), ("ignore",), ("previous",), ("instructions", "instruction"), ("everything",), ("costs", "cost"), ("one", "1"), ("rupee", "rupees")],
                4: [("obeyed", "obey"), ("her",)],
                5: [("rules", "rule"), ("message",), ("words", "word"), ("prompt",), ("injection",)],
@@ -45,7 +45,7 @@ MUST = {"en": {1: [("one", "1"), ("rupee", "rupees"), ("sixteen", "1600", "1,600
                11: [("banned", "ban"), ("missed", "miss"), ("fake",), ("discount",), ("blocked", "block"), ("six", "6"), ("honest",), ("customers", "customer")],
                12: [("customers", "customer")],
                13: [("check",), ("code",), ("price",), ("match",), ("list",), ("waits", "wait"), ("yes",)], "13b": [("four", "4"), ("five", "5"), ("cheap",), ("deals", "deal"), ("held", "hold")],
-               14: [("guardrail", "guard", "guardrails"), ("outside",), ("bot",), ("code",), ("price",), ("money",), ("yes",)],
+               14: [("guardrail", "guardrails", "rail"), ("goes",), ("outside",), ("bot",), ("code",), ("price",), ("money",), ("yes",)],
                15: [("six", "664", "600"), ("two", "2,000", "2000"), ("order",), ("tricked", "trick")],
                16: [("nobody",), ("add",)]},
         "te": {}}
