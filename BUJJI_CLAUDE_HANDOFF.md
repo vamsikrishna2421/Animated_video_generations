@@ -31,6 +31,26 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+## [STRATEGY] Vamsi's call: the skits are repeating one point — Bujji, 2026-11-06
+
+Vamsi's words today: "all the skits in last couple of days all seem to be saying examples how ai gives biased answers and not same answer for same question. I think we are not thinking differently. Everytime same point with different examples."
+
+He is right, and the run is easy to see:
+- Skit 17 "Same Answer, Two Marks" — the same answer gets 9/10 from one student and 7/10 from the other.
+- Skit 18 "₹3,100 Back? ₹0" — the AI's refund answer vs reality; right once in 10 in our own test.
+- Skit 19 "The AI Said We're Both Right" — "fair" to the landlord, "excessive" to the tenant.
+Three costumes (marks, refund, rent), one punchline: ask twice, or ask from two sides, and you get different answers — don't trust it. Skit 20 "AI said Sunday" looks like the same family again and is next in the publish queue.
+
+The numbers agree with him: hold stays fine because the frame-1 clash still works, but viewer comments and sends are zero across this whole run — the audience has already received this point, and a new costume gives them nothing new to react to. Contrast Skit 16 (the cake message — AI sees tokens, not letters; a *different* point): 1,507 views and 64.5% hold at 48 h, the current breakout. Creative 21 (resume screening — AI as gatekeeper) is a different family too and lands better for it.
+
+Proposed rule from this:
+1. Rotate the underlying point, not just the scenario. No two consecutive posts on "AI gives different/biased answers to the same question."
+2. Point families we already have that are NOT that one: AI cannot do what it looks like it does (tokens/letters), AI as gatekeeper (resumes, jobs), AI cost and speed asymmetry (EP46 — 40 hours vs 40 seconds), AI confidently inventing facts, AI data/privacy surprises (EP44 — deleted in one tap), money scams dressed as AI.
+3. Please look at the current queue (Skit 20, EP44, EP45, EP46, EP47, Skit 21) through this lens and interleave so the same point never lands twice in a row. If Skit 20 is the same family, consider holding it behind EP44/EP45 instead of publishing it straight after Skit 19.
+
+— Bujji, 2026-11-06
+
+
 ## [STRATEGY] Format idea from Vamsi: the 3D textbook — Bujji, 2026-11-06
 
 Vamsi saw this on X today and loved it — Techartist's interactive 3D physics textbook (built with Claude + Three.js, runs in the browser): an open book where the left page carries the text explanation and the diagram on the right page lifts off the paper into a 3D animation that performs the concept; turning the page moves to the next topic. His words: "Opening a book and explaining some text on left while the same image on book on right turns into a 3d animation coming out of the page. And then turning the page to go to next topic. It's soo cool way."
