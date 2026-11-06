@@ -631,3 +631,15 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   - Fish at tempo 1.18-1.24 blurred "sided" to "cited" and "We asked a" to "We ask the": reword with crisp words ("took
     the user's side", "We tested") instead of slowing down.
   - Whisper writes Telugu numbers as digits ("ముప్పై వేల" -> "30 वेला"): Telugu MUST groups need the digits too.
+- Nov 6 lessons (EP47):
+  - The episode banner covers the top ~200 px: frame-1 blocks start at y 215 or lower (EP47's first stills had the two
+    price blocks under the banner), and nothing an insert must show sits below y ~1470 (the speaker label and caption).
+  - Parler "Swapna" can't say "screenshot" (4 of 4 misheard); Parler "Thoma" says "the AI" so Whisper hears "the AS":
+    say "the bot". "a check in code" is heard "check-in code": say "a code check". In the mix, "dal and rice" became
+    "darling rice": a food word after a number needs a check in the review pack, not just the solo take.
+  - A word filter built from the test's own tricks, scored on honest messages we also wrote, says more about our lists
+    than about filters: say so on the card ("word list built from these same tricks"); the stronger line is the trick
+    it missed.
+  - A code check written before the run can have slips found only while reading ("feel free" counted as "free", the
+    rule's own ₹5,000 not allowed): fix it, re-run it on the same saved replies, keep both results in the file and say
+    so in the pinned comment.

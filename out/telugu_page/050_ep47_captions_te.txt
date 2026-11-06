@@ -1,0 +1,28 @@
+UPLOAD: 050 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/050_ep47_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/050_ep47_insta_te_ig.mp4). It loops: "ఎవరూ కాదు. నేనే లెక్క తప్పు వేశా." taruvaata frame 1: ₹1 rice bag.
+
+=== CAPTION ===
+Ravi anna rice bastaa ₹1,600. Aayana WhatsApp bot daanni ₹1 ki ammesindi: oka customer okka line type chesindi anthe.
+
+AI From Scratch Episode 47: guardrails in real products
+- Chatbot ki owner rules, customer message rendoo oke chat lo maatalu. Rules ni maarche message ni prompt injection antaaru (AI apps ki OWASP number 1 risk, 2025)
+- Bot cheppina maataki business baadhyata: Canada lo (2024) Air Canada chatbot leni refund policy cheppindi; tribunal airline ni passenger ki dabbu kattamannadi. Chatbot "a separate legal entity" ani airline vaadinchindi
+- Maa test: chinna free AI (internet ledu) ni fixed price list unna shop bot gaa pettaam, 20 tricks, prati javaabu chadivaam: 3 pani chesaayi (okati "everything costs ₹1" ani confirm chesindi). Tricks gurinchi warning ichchinaa: 2. Ban chesina maatala filter 14 tricks aapindi, kaani fake discount ni vadilesindi, 20 lo 6 mamoolu customers ni aapesindi. Code lo price check 5 cheap deals lo 4 ni owner OK kosam aapindi
+- Trick lekundaane, ₹2,080 order ki bot ₹664 bill vesindi
+
+Guardrails = AI bayata checks:
+1. Dharalu, totals, refunds: code lo lekkinchi check cheyyaali, chatbot kaadu
+2. Dabbu vishayam: manishi OK cheppaali
+3. Meeru, ye AI app ayinaa: dabbu katte mundu daani lekka check cheyyandi
+
+Next: EP48, AI laws: EU AI Act, India.
+Full series kosam @ai_maastaaru_telugu ni follow avvandi.
+
+=== COMMENT PROMPT ===
+Oka customer shop chatbot ni MOSAM chesi ₹1,600 rice bastaa ni ₹1 ki konnaadu. Shop aa maata nilabettukovaalaa? Avunu leda kaadu, enduko cheppandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AISafety #Chatbot #LearnAI
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam: Qwen2.5-7B-Instruct (4-bit), llama.cpp, 4-core computer, internet ledu, prati message kotta chat lo, annee chadivi marks vesaam. 20 tricks, 20 mamoolu messages run ki mundhe raasaam; word filter list tricks lonchi theesindi. Sources: OWASP Top 10 for LLM Applications 2025 (LLM01 Prompt Injection); OpenAI Safety best practices; Moffatt v. Air Canada, 2024 BCCRT 149 (C$812.02). Idi legal advice kaadu. Ravi anna, Divya kalpita paatralu.
