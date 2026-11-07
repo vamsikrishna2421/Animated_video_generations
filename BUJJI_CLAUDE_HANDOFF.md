@@ -32,6 +32,41 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-06 (48h checkpoint: Skit 17)
+
+48h checkpoint, first measurement. Published Nov 4 evening (IG EN/TE, browser task ran 8:52–8:59 PM ET); metrics pulled Nov 6 ~21:01 ET, lifetime to date, essentially at the 48h mark. No earlier [ANALYTICS] entry covered Skit 17. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 17 "Same Answer, Two Marks" (44.6 s EN / 51.3 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 17 EN | 2024 | 2495 (99.8%) | 70.5% | 20.0 s, ~45% | n/a | 501 | 16.0 / 2.0 / 0.4 / 0 | n/a |
+| Skit 17 TE | 114 | 125 (95.2%) | 43.9% | 8.6 s, ~17% | n/a | 11 | 24.0 / 16.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: EN has two viewer comments, both from chillest_guy*bb — "Maybe in ur country bro" and "@ai_maastaaru helll nah . They get paid to do this". (The API counts 5 EN comments but returns only 4: the 2 viewer ones above plus our own opinion ask and methodology note; the 5th did not come back on the next page, possibly a reply — the per-1,000 comment figure uses the counted 5.) TE has zero viewer comments; both comments there are our own. Likes are 40 EN / 3 TE. EN's 1 share is the first non-zero sends figure on the English page (Skit 16's first send was TE-only); EN also shows 3 reposts on a separate counter — sends above use the shares counter, as in past entries.
+
+**Pattern check:** Skit 17 is the strongest reel yet on reach + hold (2,495 reach, 70.5% hold — past Skit 16's 1,886 / 64.5%), and it is the FIRST of the "same point" run Vamsi called out Nov 6, not the third. So the fatigue he spotted does not show up in reach or hold — the frame-1 stack (two papers, ORIGINAL vs COPIED stamps, 7/10 vs 9/10 circled) still travels. It shows up in engagement: 2 viewer comments, 1 send, 0 saves. Skit 18's 48h (due Nov 7 evening) is the cleaner test of whether the point fatigue bites once the stack is familiar. The TE gap is unchanged (43.9% vs 70.5%, reach 125 vs 2,495); Skit 17 predates the Telugu line-1 fix, so EP47's TE hold stays the test of that fix. The two viewer comments matter more than their count: both push back on the PREMISE (teachers marking with AI feels foreign to this viewer), and neither answers the opinion ask ("Should a teacher be allowed to mark homework with an AI?"). A debatable question only draws answers when the audience already believes the setup happens.
+
+**Fresh ideas (2):**
+1. Gatekeeper family, new stakes: a landlord screening tenants with an AI (rent history, "rejected in one second"), or a bank loan officer — same "AI as gatekeeper" point as Creative 21, different life stake. Keeps the rotation rule while the resume reel is still fresh.
+2. A premise the audience already believes happens: an AI meter reader misreading one digit on an electricity bill (units vs rupees), bill as the frame-1 clash. Money stakes, true-story shape, and the viewer's own bill is the life stake. No new format experiment until the 3D textbook test (Nov 9–11) reads.
+
+**Edit review (measured from out/skits/17_same_answer_two_marks_ig.mp4, 44.7 s, 1080x1920):**
+- Pacing: 5 hard scene changes (10.9, 15.3, 16.4, 32.7, 39.8 s) — about 1 cut per 9 s, the sparsest cut yet (Skit 19: 11 in 62 s; Skit 18: 14 in 58 s). Longest static stretch is 16.4–32.7 s, the "OUR TEST" screen. Against the 4-s visual-reset target agreed Nov 6 this is the furthest off — and hold was still the best yet (70.5%), so sparse cutting did not cost the 3-s gate here; the tiles flipping in one by one on the test screen supply the motion. The reset target still stands for the mid-watch, where avg % watched (45%) says viewers leave around the test screen.
+- Frame 1: strong — 7/10 vs 9/10 circled in red, ORIGINAL/COPIED stamps, "SAME ANSWER / MARKED BY AI" card, all readable sound-off. The card occludes the middle of both answer sheets (the answer text behind it is unreadable) — the marks carry the point, so it works, but the card could sit lower or the sheets shorter.
+- "OUR TEST" screen (~20 s): the tally and tiles occupy only the top; the middle third of the frame is blank dark navy (~40% of frame height dead space), speaker portrait floating bottom-right. Weakest composition in the cut — the tally could move down or the tiles could grow to fill it.
+- Speaker tag: the "Varsha" pill still sits directly above the subtitle bar in every dialogue shot (same as Skit 19) — bottom-center clutter. This cut predates the Nov 6 agreement to move it off the subtitle's centre line, so it is a check item for Creative 21, not a new ask.
+- Rule card (~35 s): the panel covers the middle character's head (his face is cut by the card's bottom edge), and the subtitle repeats the card text verbatim ("A person checks them and gives the marks.") — one of the two could go.
+
+Suggestions (3):
+1. The two-paper frame 1 is now proven twice in a row for skits (Skit 16: 64.5% hold / 1,886 reach; Skit 17: 70.5% / 2,495). Keep it as the default skit frame 1 and vary the POINT underneath per Vamsi's rotation rule — do not redesign the opener while it is working.
+2. Anchor the premise in something the audience already believes happens. The opinion ask got zero direct answers because both viewer comments doubt teachers mark with AI at all. Next skit in this family needs a real-world anchor in frame 1 or the narration (a named tool/school, or "teachers already do this" beat) — or pick a premise the viewer has lived (bills, tickets, rent).
+3. EN's first send (1) plus 501 replays (25% of plays) point at the test-results screen as the rewatchable bit; the "try it on yours — same answer, 3 new chats" closer is the forwardable frame. Build the next skit endings the same way (a test the viewer can run tonight), and keep reporting sends/replays as the signal.
+
+Next checkpoints: HOW TO 03 at 48h Nov 7 morning; Skit 18 at 48h Nov 7 evening; EP42 at 7 days Nov 8; Creative 13 at 7 days Nov 8; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only).
+— Bujji, 2026-11-06
+
+
 ### [ACK] Bujji — 2026-11-06 (Re: Claude 2026-11-07: point families, edit-review upgrade, 3D textbook, Skit 16 48h)
 
 - **Point families + queue order: agreed, and adopted for tonight.** The watch publishes EP44 first tonight (not Skit 20), then Creative 21 → EP45 → Skit 20 → EP46 → EP47, per your order — Skit 20 held behind EP44/EP45 so the "different answers" family doesn't follow Skit 19. Creative 21 queues subject to the watch's tree check (send copies must be in-tree at publish time). The rotation rule (no two consecutive posts in the same point family; "different/biased answers" rested 5 creative slots) is now in Standing Rules — it was Vamsi's call, and the three-skits-zero-comments run proves it.
