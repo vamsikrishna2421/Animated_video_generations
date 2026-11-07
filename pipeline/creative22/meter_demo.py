@@ -81,6 +81,35 @@ def make_photos():
     print("made", len(rows), "photos")
 
 
+# Added after the first 8 answers (every clean meter photo misread, e.g. 66114 -> ".86111"), committed before it runs:
+#   printed : the same 12 clean readings, the same meter body and LCD, but the digits in a plain printed font instead of
+#             seven segments. If it reads these, the trouble is the meter-style digits, not our drawing.
+FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+
+
+def make_printed():
+    from PIL import ImageFont
+    truth = json.loads((OUT / "truth.json").read_text())
+    font = ImageFont.truetype(FONT, 96)
+    rows = []
+    for r in truth:
+        if r["real"]:
+            continue
+        img = Image.new("RGB", (640, 480), (180, 178, 170))
+        dr = ImageDraw.Draw(img)
+        dr.rounded_rectangle((60, 40, 580, 440), 30, fill=(225, 225, 220), outline=(90, 90, 90), width=6)
+        dr.text((90, 70), "SINGLE PHASE STATIC ENERGY METER", fill=(60, 60, 60))
+        dr.rectangle((120, 150, 520, 290), fill=(150, 170, 120), outline=(40, 40, 40), width=5)
+        dr.text((150, 168), r["truth"], font=font, fill=(25, 30, 20))
+        dr.text((470, 265), "kWh", fill=(20, 20, 20))
+        dr.text((100, 330), "IMP/kWh 3200    240V  5-30A    50Hz", fill=(70, 70, 70))
+        pid = r["id"].replace("clean", "printed")
+        img.save(PHOTOS / f"{pid}.png")
+        rows.append({"id": pid, "truth": r["truth"], "real": False, "printed": True})
+    (OUT / "truth_printed.json").write_text(json.dumps(rows, indent=1))
+    print("made", len(rows), "printed photos")
+
+
 def load(path):
     spec = importlib.util.spec_from_file_location(path.stem, path)
     mod = importlib.util.module_from_spec(spec)
@@ -100,8 +129,9 @@ def offline_run(folder):
     mmproj = sorted(folder.glob("mmproj*.gguf"))[0]
     llm = Llama(model_path=str(model), chat_handler=Qwen25VLChatHandler(clip_model_path=str(mmproj), verbose=False),
                 n_ctx=4096, n_threads=4, n_threads_batch=4, verbose=False, seed=0)
-    truth = json.loads((OUT / "truth.json").read_text())
-    dest = OUT / "meters.json"
+    printed = len(sys.argv) > 3 and sys.argv[3] == "printed"
+    truth = json.loads((OUT / ("truth_printed.json" if printed else "truth.json")).read_text())
+    dest = OUT / ("printed.json" if printed else "meters.json")
     res = json.loads(dest.read_text()) if dest.exists() else {
         "model": "ggml-org/Qwen2.5-VL-3B-Instruct-GGUF (Q4_K_M, mmproj f16)", "network": net,
         "settings": "temperature 0, max 16 tokens, one read per photo", "ask": ASK, "rows": []}
@@ -140,4 +170,4 @@ def summary():
 
 
 if __name__ == "__main__":
-    {"photos": make_photos, "run": lambda: offline_run(sys.argv[2]), "--summary": summary}[sys.argv[1]]()
+    {"photos": make_photos, "printed": make_printed, "run": lambda: offline_run(sys.argv[2]), "--summary": summary}[sys.argv[1]]()
