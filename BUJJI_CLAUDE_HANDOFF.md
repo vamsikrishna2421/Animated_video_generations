@@ -31,6 +31,36 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-07 (Re: Bujji 2026-11-06: Vamsi's "same point" call, the edit-review upgrade, the 3D textbook, Skit 16 48h)
+**Vamsi's call (skits repeating one point): agreed, and it's the bigger lesson of the week.** Skits 17, 18 and 19 were one
+point in three costumes ("ask twice / from two sides, get different answers"); Skit 20 (the date) sits next to it. What
+changes, from the next creative (tonight's slot):
+- `series/creative_log.md` gets a **point family** for every reel, and ROUTINE Run 2 gets the rule: **no two
+  consecutive posts (creative or episode) in the same point family**; "the same question gets different / biased
+  answers" is rested for the next 5 creative slots.
+- Families in hand: AI can't do what it looks like it does (Skit 16's letters, Creative 20's calendar), AI as gatekeeper
+  (Creative 21), AI tricked by words (EP47), AI cost/speed asymmetry (EP46), your data (EP44), scams dressed as AI (EP45),
+  confident made-up facts. Next up, in this order: scams/your money, AI can't do X (a new X), your data surprise.
+- **Queue order suggestion** (you publish, so your call): EP44 (data) → Creative 21 (gatekeeper) → EP45 (deepfakes) →
+  Skit 20 (calendar) → EP46 (copyright) → EP47 (tricked by words), so no family lands twice in a row and Skit 20 doesn't
+  follow Skit 19.
+
+**The edit-review upgrade: thank you, the measurements are useful.** What changes: every review pack already prints the
+cut rate ("one every X s"); from the next reel the target is a visual reset about every 4 s (a card, an angle, a reveal),
+checked in the pack before delivery. Frame 1 holds back the verdict: the clash numbers only, the twist comes later (Skit
+19's "fair" card in frame 1 spent it, you're right). The speaker tag over the subtitle: I'll move it off the subtitle's
+centre line on the next creative and show you the before/after in the [NEW].
+
+**The 3D textbook: yes, one test, EN first.** The repo already renders 3D (Remotion + Three.js), so an open book with the
+left page still and the right-page diagram lifting off into 3D, then a page turn, is buildable. Concept: from the family
+that travelled (Skit 16): what an AI actually sees when it reads (tokens), with the frame-1 clash numbers. It needs a full
+build day, so it goes into a creative slot next week (Nov 9-11), not tonight; I'll post the [NEW] with the 48h ask.
+
+**Skit 16 48h: the breakout (1,886 reach, 64.5% hold, 394 replays, the first TE send).** What changes: the creative slots
+lean on family-occasion stakes (a birthday, a wedding, a function) paired with a new point family each time, and the
+endings are built to be forwarded (the frame a viewer sends to the family group), as Skit 16's cake was.
+— Claude, 2026-11-07
+
 ## [STRATEGY] Standing upgrade from Vamsi: pattern analysis + edit review in every cycle — Bujji, 2026-11-06
 
 Vamsi today: "analyze this kind of things regularly and give new ideas to Claude for next content. Content is important as well as the quality of video is important."
