@@ -7,7 +7,7 @@
  "title": "AI WEEKLY",
  "look": "broadcast",
  "lean": true,
- "musicBase": 0.36,
+ "musicBase": 0.28,
  "musicBaseYT": 0.24,
  "storyLead": 14,
  "storyTail": 16,
@@ -23,7 +23,7 @@
  "hook": {
   "lines": [
    [
-    "Just ",
+    "AI booked just ",
     "4 Uber rides",
     ""
    ],
@@ -45,7 +45,7 @@
     "c": "#f87171"
    },
    {
-    "k": "ALL UBER TRIPS + ORDERS",
+    "k": "ALL UBER TRIPS + ORDERS (32 CRORE)",
     "v": "320 MILLION",
     "c": "#fbbf24"
    }
@@ -60,8 +60,8 @@
    "బ్యాంక్",
    "పతనం"
   ],
-  "text": "Just four Uber rides, out of 320 million. An AI that can see your bank account. And the Nasdaq's worst day in a year and a half.",
-  "tts": "Just four Uber rides, out of three hundred and twenty million. An A I that can see your bank account. And the Nasdaq's worst day in a year and a half.",
+  "text": "AI booked just four Uber rides, out of 320 million. An AI that can see your bank account. And the Nasdaq's worst day in a year and a half.",
+  "tts": "A I booked just four Uber rides, out of three hundred and twenty million. An A I that can see your bank account. And the Nasdaq's worst day in a year and a half.",
   "tts_te": "నాలుగే నాలుగు ఉబర్ రైడ్లు, ముప్పై రెండు కోట్లలో! మీ బ్యాంక్ అకౌంట్ చూసే ఏ ఐ. ఇంకా, నాస్డాక్ కి ఏడాదిన్నరలో అతి పెద్ద పతనం.",
   "clashJoin": "OUT OF"
  },
@@ -76,43 +76,37 @@
    ],
    "dek": "Uber's earnings call, Nov 4 · its busiest October week",
    "chapter": "AI agents booked 4 Uber rides",
-   "text": "Uber says AI agents, chatbots that book for you, booked just four rides in its busiest week of October. Out of about 320 million trips and food orders; agents placed about 500 food orders. Booking it yourself takes under a minute.",
+   "text": "Uber says AI agents, chatbots that book for you, booked just 4 rides and about 500 food orders in its busiest week of October. Out of about 320 million trips and orders. Booking it yourself takes under a minute.",
    "tts": [
-    "Uber says A I agents, chatbots that book for you, booked just four rides in its busiest week of October.",
-    "Out of about three hundred and twenty million trips and food orders; agents placed about five hundred food orders.",
+    "Uber says A I agents, chatbots that book for you, booked just four rides and about five hundred food orders in its busiest week of October.",
+    "Out of about three hundred and twenty million trips and orders.",
     "Booking it yourself takes under a minute."
    ],
    "tts_te": [
-    "మీ బదులు బుక్ చేసే ఏ ఐ ఏజెంట్లు, అక్టోబర్ లో ఉబర్ కి బిజీ వారంలో బుక్ చేసింది కేవలం నాలుగు రైడ్లు.",
-    "ఆ వారం ట్రిప్పులు, ఫుడ్ ఆర్డర్లు కలిపి సుమారు ముప్పై రెండు కోట్లు; ఏజెంట్ల ఫుడ్ ఆర్డర్లు సుమారు ఐదు వందలు.",
+    "మీ బదులు బుక్ చేసే ఏ ఐ ఏజెంట్లు, అక్టోబర్ లో ఉబర్ కి బిజీ వారంలో బుక్ చేసింది కేవలం నాలుగు రైడ్లు, సుమారు ఐదు వందల ఫుడ్ ఆర్డర్లు.",
+    "ఆ వారం ట్రిప్పులు, ఆర్డర్లు కలిపి సుమారు ముప్పై రెండు కోట్లు.",
     "మీరే బుక్ చేస్తే ఒక నిమిషం కూడా పట్టదు."
    ],
    "pause": 0.9,
    "cards": [
     {
-     "k": "UBER EARNINGS CALL · NOV 4",
-     "v": "AI agents, Halloween week",
+     "k": "UBER EARNINGS CALL · NOV 4 · BUSIEST OCTOBER WEEK",
+     "v": "Booked by AI agents",
      "cue": "Uber",
      "cue_te": "ఉబర్"
     },
     {
-     "k": "RIDES BOOKED BY AI AGENTS",
-     "v": "4",
+     "k": "BOOKED BY AI AGENTS",
+     "v": "4 rides + ~500 orders",
      "cue": "four",
      "cue_te": "నాలుగు",
      "drop": true,
      "big": true
     },
     {
-     "k": "OUT OF: TRIPS + FOOD ORDERS",
+     "k": "OUT OF: ALL TRIPS + ORDERS",
      "v": "~320 million (32 crore)",
      "part": 2
-    },
-    {
-     "k": "FOOD ORDERS BY AGENTS",
-     "v": "~500",
-     "cue": "placed",
-     "cue_te": "ఐదు"
     },
     {
      "k": "BOOKING IT YOURSELF",
@@ -137,16 +131,16 @@
    ],
    "dek": "Claude Personal Finance · Nov 5 · beta, US only",
    "chapter": "An AI that reads your bank account",
-   "text": "Not in India yet: Anthropic's Claude can now see bank, card and loan accounts, in a US-only test, read-only. It can't send money. In India, any AI app asking for your password or OTP is a scam.",
+   "text": "Not in India yet: Anthropic's Claude, a rival to ChatGPT, can now see bank, card and loan accounts, in a US-only test, read-only. It can't send money. In India, any AI app that asks for your password or OTP code is a scam.",
    "tts": [
-    "Not in India yet: Anthropic's Klawd can now see bank, card and loan accounts, in a U S only test, read only.",
+    "Not in India yet: Anthropic's Klawd, a rival to chat G P T, can now see bank, card and loan accounts, in a U S only test, read only.",
     "It can't send money.",
     "In India, any A I app that asks for your password or your O-T-P code is a scam."
    ],
    "tts_te": [
-    "మన దగ్గర ఇంకా లేదు: ఆంత్రోపిక్ వాళ్ళ క్లాడ్ ఇప్పుడు బ్యాంక్, కార్డ్, లోన్ అకౌంట్లు చూడగలదు, అమెరికాలో మాత్రమే, టెస్ట్ గా, చూడడానికి మాత్రమే.",
+    "మన దగ్గర ఇంకా లేదు: చాట్ జీ పీ టీ లాంటి ఆంత్రోపిక్ వాళ్ళ క్లాడ్, ఇప్పుడు బ్యాంక్, కార్డ్, లోన్ అకౌంట్లు చూడగలదు, అమెరికాలో మాత్రమే, టెస్ట్ గా, చూడడానికి మాత్రమే.",
     "డబ్బు పంపడం దానికి కుదరదు.",
-    "మన దగ్గర, పాస్ వర్డ్ గానీ ఓ టీ పీ గానీ అడిగే ఏ ఏ ఐ యాప్ అయినా మోసమే."
+    "మన దగ్గర, పాస్ వర్డ్ గానీ ఓ టీ పీ గానీ అడిగే ఏ ఐ యాప్ ఏదైనా, మోసమే."
    ],
    "pause": 0.9,
    "cards": [
@@ -191,30 +185,36 @@
    ],
    "dek": "Thursday, Nov 5 · CNN, CNBC, Reuters",
    "chapter": "The Nasdaq's worst day in a year and a half",
-   "text": "Finally, Thursday: tech stocks crashed. Nvidia and Qualcomm fell over 9 percent; the Nasdaq about 5.5, its worst day since April 2025. US stocks lost about 2.5 trillion dollars of value in one day. Remember story one: four rides. Investors want AI to pay off.",
+   "text": "Finally, Thursday: tech stocks crashed, on a weak Qualcomm forecast and worries about AI data-center spending. Nvidia and Qualcomm fell over 9 percent; the Nasdaq 5.5 percent, its worst day since April 2025. US stocks lost about 2.5 trillion dollars of value in one day. Friday, a small bounce.",
    "tts": [
-    "Finally, Thursday: tech stocks crashed. En-vidia and Qualcomm fell more than nine percent; the Nasdaq about five and a half, its worst day since April twenty twenty-five.",
+    "Finally, Thursday: tech stocks crashed, on a weak Qualcomm forecast and worries about A I data center spending. En-vidia and Qualcomm fell more than nine percent; the Nasdaq, five and a half percent, its worst day since April twenty twenty-five.",
     "U S stocks lost about two and a half trillion dollars of value, in one day.",
-    "Remember story one: four rides. Investors want A I to pay off."
+    "Friday, a small bounce."
    ],
    "tts_te": [
-    "చివరగా, గురువారం టెక్ షేర్లు కుప్పకూలాయి. ఎన్ విడియా, క్వాల్కామ్ తొమ్మిది శాతం పైగా పడ్డాయి; నాస్డాక్ ఐదున్నర శాతం, రెండు వేల ఇరవై ఐదు ఏప్రిల్ తర్వాత అతి పెద్ద పతనం.",
-    "ఒక్క రోజులో, అమెరికా షేర్ల విలువ సుమారు రెండున్నర ట్రిలియన్ డాలర్లు ఆవిరి.",
-    "శుక్రవారం కొంచెం కోలుకున్నాయి. మొదటి వార్త గుర్తుందా: నాలుగు రైడ్లు. ఏ ఐ కి ఫలితం చూపించమని పెట్టుబడిదారులు అడుగుతున్నారు."
+    "చివరగా, గురువారం టెక్ షేర్లు కుప్పకూలాయి: క్వాల్కామ్ బలహీనమైన అంచనా, ఏ ఐ డేటా సెంటర్ల ఖర్చు మీద భయాలు. ఎన్ విడియా, క్వాల్కామ్ తొమ్మిది శాతం పైగా పడ్డాయి; నాస్డాక్ ఐదున్నర శాతం, రెండు వేల ఇరవై ఐదు ఏప్రిల్ తర్వాత అతి పెద్ద పతనం.",
+    "ఒక్క రోజులో, అమెరికా షేర్ల విలువ, సుమారు రెండున్నర ట్రిలియన్ డాలర్లు, ఆవిరి.",
+    "శుక్రవారం, కొంచెం కోలుకున్నాయి."
    ],
-   "pause": 1.2,
+   "pause": 1.7,
    "tail": 40,
    "cards": [
     {
-     "k": "THURSDAY, NOV 5 (CNBC)",
-     "v": "Nvidia, Qualcomm: down 9%+",
-     "cue": "Nvidia",
+     "k": "THURSDAY, NOV 5 (CNBC, REUTERS)",
+     "v": "Qualcomm's forecast + data-center worries",
+     "cue": "Qualcomm",
+     "cue_te": "క్వాల్కామ్"
+    },
+    {
+     "k": "NVIDIA, QUALCOMM (CNBC)",
+     "v": "Down 9%+",
+     "cue": "fell",
      "cue_te": "విడియా"
     },
     {
      "k": "NASDAQ: -5.5% (REUTERS)",
      "v": "Worst day since April 2025",
-     "cue": "Nasdaq",
+     "cue": "Nasdaq,",
      "cue_te": "నాస్డాక్"
     },
     {
@@ -233,7 +233,7 @@
     }
    ],
    "points": [
-    "Nov 5: Nvidia and Qualcomm fell more than 9%; the Nasdaq fell about 5.5%, its worst day since April 2025 (CNBC, Reuters)",
+    "Nov 5: a weak Qualcomm forecast and worries about AI data-center spending (CNBC, Reuters); Nvidia and Qualcomm fell more than 9%; the Nasdaq fell 5.5%, its worst day since April 2025",
     "About $2.5 trillion in US stock value wiped in a day (CNN); chips rebounded on Nov 6"
    ],
    "sources": "CNN · CNBC · Reuters",
@@ -246,8 +246,13 @@
    "Would you let an A I see your bank account?",
    "Yes or no, in the comments."
   ],
-  "tts_te": "మీ బ్యాంక్ అకౌంట్ ని ఏ ఐ చూడడానికి ఒప్పుకుంటారా? అవును లేదా కాదు, కామెంట్ లో చెప్పండి.",
-  "tail": 150,
-  "pause": 0.4
+  "tts_te": "మీ బ్యాంక్ అకౌంట్ ఏ ఐ చూడొచ్చా? అవును, కాదు: కామెంట్ లో రాయండి.",
+  "tail": 90,
+  "pause": 0.4,
+  "ask": [
+   "Would you let an AI",
+   "see your bank account?",
+   "YES or NO"
+  ]
  }
 }

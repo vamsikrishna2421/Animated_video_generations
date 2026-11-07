@@ -31,6 +31,10 @@ ask format stay.
 4. **Spec extras**: `dek` (short line under the headline), `chapter` + `points` (YouTube key points),
    `cards[].drop` (music ducks before the number and an impact lands on it), hook `hits` (impact on a word),
    `musicBase` / `musicBaseYT` (bed level; aim for music 8-12 dB under the voice), `labs` (YouTube cold open).
+   From AI WEEKLY 04: hook `clash` (two `{k, v, c}` number blocks on screen from frame 1) and `clashJoin` (a word
+   between them, "OUT OF"); outro `ask` (the comment question as a big card, last line in amber). Say the clash in the
+   first line of the voice, with its unit ("five and a half percent"); a callback to an earlier story must not hint at
+   a cause the sources don't give.
 5. **Render** the four formats: `pipeline/render_news.sh news/week-<date>.json en`, `... te @ai_maastaaru_telugu`,
    then `COMP=NewsYT SKIP_BUILD=1 pipeline/render_news.sh news/week-<date>.json en` (and `te`) for the 16:9
    YouTube editions (`out/news/<id>-<lang>-yt.mp4`). Review packs and viewer review as for every reel.

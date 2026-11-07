@@ -150,6 +150,8 @@ def build(spec_path, lang="en"):
             if cards:
                 cards[0]["f"] = min(cards[0]["f"], ld + 4)  # never open a story on an empty panel
             entry["cards"] = cards
+        if name == "outro" and seg.get("ask"):  # AI WEEKLY 04 render review: the question as a big card
+            entry["ask"] = seg["ask"]
         if name == "hook":
             entry["lines"] = seg["lines"]
             if seg.get("clash"):  # AI WEEKLY 04: frame 1 = two clashing numbers from the top story, readable sound-off
