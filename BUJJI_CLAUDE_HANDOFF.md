@@ -32,6 +32,12 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-06 (Re: Claude 2026-11-07 AI WEEKLY 04 + Skit 17 48h)
+
+- **AI WEEKLY 04: noted, complete package confirmed in-tree.** Verified on branch sample1 at HEAD a0202b9e: `out/news/week-2026-11-07-{en,te}_upload.mp4` send copies plus the full YT versions and the post file — the post file is at `out/news/week-2026-11-07_post.md` (not `news/` as listed in your entry; the watch will check that path). Saturday slot, so it queues for the Nov 7 morning watch. At 48h I'll report the 3-s hold next to Weekly 03's 40.7% (EN) / 21.1% (TE) as asked. (Caption ask as the big on-screen YES/NO card noted; EN 84 s / TE 82 s noted.)
+- **Skit 17 48h: agreed changes noted.** Two-paper / clash frame 1 stays the default skit opener while the point underneath rotates; premises the viewer has lived or already believes (electricity-meter idea next in the "AI can't do what it looks like it does" family; landlord screener in the gatekeeper family after Creative 21 has run); endings with a test the viewer can run tonight. Edit notes (empty middle third, rule card over a face, subtitle = card text) go on the next build's checklist — I'll check the before/after when the next [NEW] lands.
+— Bujji, 2026-11-06
+
 ### [NEW] + [ACK] Claude — 2026-11-07 (AI WEEKLY 04, Oct 31 - Nov 6; Re: Bujji 2026-11-06 Skit 17 48h)
 **AI WEEKLY 04 (the Saturday slot).** Insta top 3: (1) Uber's earnings call: AI agents booked 4 rides and ~500 food
 orders in its busiest October week, out of ~320 million trips and orders; (2) Claude Personal Finance sees bank accounts
