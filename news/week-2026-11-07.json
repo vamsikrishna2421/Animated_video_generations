@@ -1,0 +1,253 @@
+{
+ "id": "week-2026-11-07",
+ "date": "07 NOV 2026",
+ "range": "OCT 31 - NOV 6",
+ "edition": "AI WEEKLY · 04",
+ "kicker": "AI NEWS THIS WEEK",
+ "title": "AI WEEKLY",
+ "look": "broadcast",
+ "lean": true,
+ "musicBase": 0.36,
+ "musicBaseYT": 0.24,
+ "storyLead": 14,
+ "storyTail": 16,
+ "captionMode_te": "phrase",
+ "beatCuts": 15,
+ "hookMascot": false,
+ "recap": "TOP 3 · THIS WEEK",
+ "labs": [
+  "UBER",
+  "ANTHROPIC",
+  "MARKETS"
+ ],
+ "hook": {
+  "lines": [
+   [
+    "Just ",
+    "4 Uber rides",
+    ""
+   ],
+   [
+    "An AI that sees ",
+    "your bank",
+    ""
+   ],
+   [
+    "The Nasdaq's ",
+    "worst day",
+    ""
+   ]
+  ],
+  "clash": [
+   {
+    "k": "AI AGENTS BOOKED",
+    "v": "4 RIDES",
+    "c": "#f87171"
+   },
+   {
+    "k": "ALL UBER TRIPS + ORDERS",
+    "v": "320 MILLION",
+    "c": "#fbbf24"
+   }
+  ],
+  "hits": [
+   "four",
+   "bank",
+   "worst"
+  ],
+  "hits_te": [
+   "నాలుగే",
+   "బ్యాంక్",
+   "పతనం"
+  ],
+  "text": "Just four Uber rides, out of 320 million. An AI that can see your bank account. And the Nasdaq's worst day in a year and a half.",
+  "tts": "Just four Uber rides, out of three hundred and twenty million. An A I that can see your bank account. And the Nasdaq's worst day in a year and a half.",
+  "tts_te": "నాలుగే నాలుగు ఉబర్ రైడ్లు, ముప్పై రెండు కోట్లలో! మీ బ్యాంక్ అకౌంట్ చూసే ఏ ఐ. ఇంకా, నాస్డాక్ కి ఏడాదిన్నరలో అతి పెద్ద పతనం.",
+  "clashJoin": "OUT OF"
+ },
+ "stories": [
+  {
+   "org": "UBER",
+   "accent": "#F59E0B",
+   "tag": "AI AGENTS",
+   "headline": [
+    "AI agents booked",
+    "4 Uber rides"
+   ],
+   "dek": "Uber's earnings call, Nov 4 · its busiest October week",
+   "chapter": "AI agents booked 4 Uber rides",
+   "text": "Uber says AI agents, chatbots that book for you, booked just four rides in its busiest week of October. Out of about 320 million trips and food orders; agents placed about 500 food orders. Booking it yourself takes under a minute.",
+   "tts": [
+    "Uber says A I agents, chatbots that book for you, booked just four rides in its busiest week of October.",
+    "Out of about three hundred and twenty million trips and food orders; agents placed about five hundred food orders.",
+    "Booking it yourself takes under a minute."
+   ],
+   "tts_te": [
+    "మీ బదులు బుక్ చేసే ఏ ఐ ఏజెంట్లు, అక్టోబర్ లో ఉబర్ కి బిజీ వారంలో బుక్ చేసింది కేవలం నాలుగు రైడ్లు.",
+    "ఆ వారం ట్రిప్పులు, ఫుడ్ ఆర్డర్లు కలిపి సుమారు ముప్పై రెండు కోట్లు; ఏజెంట్ల ఫుడ్ ఆర్డర్లు సుమారు ఐదు వందలు.",
+    "మీరే బుక్ చేస్తే ఒక నిమిషం కూడా పట్టదు."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "UBER EARNINGS CALL · NOV 4",
+     "v": "AI agents, Halloween week",
+     "cue": "Uber",
+     "cue_te": "ఉబర్"
+    },
+    {
+     "k": "RIDES BOOKED BY AI AGENTS",
+     "v": "4",
+     "cue": "four",
+     "cue_te": "నాలుగు",
+     "drop": true,
+     "big": true
+    },
+    {
+     "k": "OUT OF: TRIPS + FOOD ORDERS",
+     "v": "~320 million (32 crore)",
+     "part": 2
+    },
+    {
+     "k": "FOOD ORDERS BY AGENTS",
+     "v": "~500",
+     "cue": "placed",
+     "cue_te": "ఐదు"
+    },
+    {
+     "k": "BOOKING IT YOURSELF",
+     "v": "Under a minute",
+     "part": 3
+    }
+   ],
+   "points": [
+    "Uber's CFO on the Q3 call (Nov 4): AI agents fulfilled 4 rides in Halloween week, out of ~320 million trips and Uber Eats orders; agents placed ~500 Eats orders",
+    "CEO Dara Khosrowshahi: booking in the app takes about 50 seconds; agent traction is \"very, very early and very limited\""
+   ],
+   "sources": "Uber Q3 2026 earnings call · TechCrunch · Thurrott",
+   "recap": "AI agents booked 4 Uber rides (of ~320 million)"
+  },
+  {
+   "org": "ANTHROPIC",
+   "accent": "#A78BFA",
+   "tag": "MONEY",
+   "headline": [
+    "An AI that can see",
+    "your bank account"
+   ],
+   "dek": "Claude Personal Finance · Nov 5 · beta, US only",
+   "chapter": "An AI that reads your bank account",
+   "text": "Not in India yet: Anthropic's Claude can now see bank, card and loan accounts, in a US-only test, read-only. It can't send money. In India, any AI app asking for your password or OTP is a scam.",
+   "tts": [
+    "Not in India yet: Anthropic's Klawd can now see bank, card and loan accounts, in a U S only test, read only.",
+    "It can't send money.",
+    "In India, any A I app that asks for your password or your O-T-P code is a scam."
+   ],
+   "tts_te": [
+    "మన దగ్గర ఇంకా లేదు: ఆంత్రోపిక్ వాళ్ళ క్లాడ్ ఇప్పుడు బ్యాంక్, కార్డ్, లోన్ అకౌంట్లు చూడగలదు, అమెరికాలో మాత్రమే, టెస్ట్ గా, చూడడానికి మాత్రమే.",
+    "డబ్బు పంపడం దానికి కుదరదు.",
+    "మన దగ్గర, పాస్ వర్డ్ గానీ ఓ టీ పీ గానీ అడిగే ఏ ఏ ఐ యాప్ అయినా మోసమే."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "CLAUDE · PERSONAL FINANCE · NOV 5",
+     "v": "Sees bank, card, loan accounts",
+     "cue": "Claude",
+     "cue_te": "క్లాడ్"
+    },
+    {
+     "k": "WHERE",
+     "v": "US only · a test (beta)",
+     "cue": "only",
+     "cue_te": "అమెరికా"
+    },
+    {
+     "k": "ACCESS (READ-ONLY, VIA PLAID)",
+     "v": "Can't send your money",
+     "part": 2
+    },
+    {
+     "k": "IN INDIA",
+     "v": "An AI app asking your OTP = a scam",
+     "part": 3,
+     "drop": true
+    }
+   ],
+   "points": [
+    "Claude Personal Finance (beta, Nov 5): links bank, credit card, loan and investment accounts; Pro, Max and Ultra plans; US only",
+    "Read-only through Plaid, per Anthropic: it can't move, manage or invest money"
+   ],
+   "sources": "Anthropic release notes (Nov 5) · TechCrunch",
+   "recap": "An AI that sees your bank (US only); OTP asks = scam"
+  },
+  {
+   "org": "MARKETS",
+   "accent": "#EF4444",
+   "tag": "AI STOCKS",
+   "headline": [
+    "The Nasdaq's worst day",
+    "in a year and a half"
+   ],
+   "dek": "Thursday, Nov 5 · CNN, CNBC, Reuters",
+   "chapter": "The Nasdaq's worst day in a year and a half",
+   "text": "Finally, Thursday: tech stocks crashed. Nvidia and Qualcomm fell over 9 percent; the Nasdaq about 5.5, its worst day since April 2025. US stocks lost about 2.5 trillion dollars of value in one day. Remember story one: four rides. Investors want AI to pay off.",
+   "tts": [
+    "Finally, Thursday: tech stocks crashed. En-vidia and Qualcomm fell more than nine percent; the Nasdaq about five and a half, its worst day since April twenty twenty-five.",
+    "U S stocks lost about two and a half trillion dollars of value, in one day.",
+    "Remember story one: four rides. Investors want A I to pay off."
+   ],
+   "tts_te": [
+    "చివరగా, గురువారం టెక్ షేర్లు కుప్పకూలాయి. ఎన్ విడియా, క్వాల్కామ్ తొమ్మిది శాతం పైగా పడ్డాయి; నాస్డాక్ ఐదున్నర శాతం, రెండు వేల ఇరవై ఐదు ఏప్రిల్ తర్వాత అతి పెద్ద పతనం.",
+    "ఒక్క రోజులో, అమెరికా షేర్ల విలువ సుమారు రెండున్నర ట్రిలియన్ డాలర్లు ఆవిరి.",
+    "శుక్రవారం కొంచెం కోలుకున్నాయి. మొదటి వార్త గుర్తుందా: నాలుగు రైడ్లు. ఏ ఐ కి ఫలితం చూపించమని పెట్టుబడిదారులు అడుగుతున్నారు."
+   ],
+   "pause": 1.2,
+   "tail": 40,
+   "cards": [
+    {
+     "k": "THURSDAY, NOV 5 (CNBC)",
+     "v": "Nvidia, Qualcomm: down 9%+",
+     "cue": "Nvidia",
+     "cue_te": "విడియా"
+    },
+    {
+     "k": "NASDAQ: -5.5% (REUTERS)",
+     "v": "Worst day since April 2025",
+     "cue": "Nasdaq",
+     "cue_te": "నాస్డాక్"
+    },
+    {
+     "k": "US STOCK VALUE LOST, ONE DAY (CNN)",
+     "v": "$2.5 trillion",
+     "part": 2,
+     "drop": true,
+     "big": true,
+     "hush": true,
+     "hold": 120
+    },
+    {
+     "k": "FRIDAY",
+     "v": "A small bounce",
+     "part": 3
+    }
+   ],
+   "points": [
+    "Nov 5: Nvidia and Qualcomm fell more than 9%; the Nasdaq fell about 5.5%, its worst day since April 2025 (CNBC, Reuters)",
+    "About $2.5 trillion in US stock value wiped in a day (CNN); chips rebounded on Nov 6"
+   ],
+   "sources": "CNN · CNBC · Reuters",
+   "recap": "US stocks lost $2.5 trillion in a day"
+  }
+ ],
+ "outro": {
+  "text": "Would you let an AI see your bank account? Yes or no, in the comments.",
+  "tts": [
+   "Would you let an A I see your bank account?",
+   "Yes or no, in the comments."
+  ],
+  "tts_te": "మీ బ్యాంక్ అకౌంట్ ని ఏ ఐ చూడడానికి ఒప్పుకుంటారా? అవును లేదా కాదు, కామెంట్ లో చెప్పండి.",
+  "tail": 150,
+  "pause": 0.4
+ }
+}

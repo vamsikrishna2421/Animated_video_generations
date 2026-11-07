@@ -15,7 +15,7 @@ type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean; hu
 type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
-  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[]; recap?: string;
+  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[]; recap?: string; clash?: { k: string; v: string; c?: string }[]; clashJoin?: string;
 };
 export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase"; hookMascot?: boolean };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
@@ -488,7 +488,20 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string;
   return (
     <AbsoluteFill>
       <Backdrop accent={B.rose} />
-      <AbsoluteFill style={{ justifyContent: "flex-start", padding: `${(seg.lines ?? []).length > 2 ? 330 : 400}px 70px 0`, opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
+      {seg.clash && (   // AI WEEKLY 04: the reach stack's two clashing numbers, on screen from the first frame
+        <div style={{ position: "absolute", top: 170, left: 40, right: 40, display: "flex", gap: 14, opacity: 1 - tc }}>
+          {seg.clash.map((b, i) => (
+            <React.Fragment key={i}>
+            {i === 1 && seg.clashJoin ? <div style={{ alignSelf: "center", fontFamily: F.inter, fontWeight: 800, fontSize: 40, color: B.white, textAlign: "center", width: 90, lineHeight: 1.05 }}>{seg.clashJoin}</div> : null}
+            <div style={{ flex: 1, background: "#0b1020", border: `6px solid ${b.c ?? B.rose}`, borderRadius: 28, padding: "22px 18px 18px", textAlign: "center" }}>
+              <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 2, color: "#cbd5e1", lineHeight: 1.15 }}>{b.k}</div>
+              <div style={{ marginTop: 8, fontFamily: F.inter, fontWeight: 800, fontSize: b.v.length > 8 ? 78 : 112, letterSpacing: -3, lineHeight: 1, color: b.c ?? B.rose }}>{b.v}</div>
+            </div>
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+      <AbsoluteFill style={{ justifyContent: "flex-start", padding: `${seg.clash ? 560 : (seg.lines ?? []).length > 2 ? 330 : 400}px 70px 0`, opacity: 1 - tc, transform: `translate(${Math.sin(f * 9) * shake}px, 0)` }}>
         {(seg.lines ?? []).map((parts, li) => {
           const at = li === 0 ? 2 : seg.lineAt?.[li] ?? 2 + li * 30; // line 1 on the first frame, the rest as spoken
           const p = prog(f, at - 2, at + 12);

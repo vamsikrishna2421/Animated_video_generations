@@ -203,6 +203,11 @@ The user voices the episode: both characters, English and, if they can, Telugu (
 1. Read `series/creative_log.md`; no format, character set or topic repeats within 7 days. The shop cast (Ravi anna
    and the shop AI) belongs to the episodes now: use other casts and settings so the two daily posts look different.
    If the user has shared views, likes or comments for earlier reels, log them there and lean toward what worked.
+   **Point families (Vamsi via Bujji, Nov 6):** every reel's underlying point belongs to a family (list and log in
+   `series/creative_log.md`, "Point families"); no two consecutive posts, creative or episode, in the same family, and
+   "the same question gets different / biased answers" rests for 5 creative slots after Nov 6 (Skits 17-19 were one point
+   in three costumes: hold stayed, comments and sends were zero). Lean on family-occasion stakes (Skit 16's cake broke
+   out: 1,886 reach, 64.5% hold) and endings built to be forwarded.
 2. Concept: one real AI idea a normal viewer can use or repeat to a friend, in a format that travels: two-character
    skit, POV, "guess which one is AI", myth vs fact, a one-question challenge, a relatable home/office/shop moment
    with an AI twist. Write 3 hook options (first frame + first line) and keep the strongest.
