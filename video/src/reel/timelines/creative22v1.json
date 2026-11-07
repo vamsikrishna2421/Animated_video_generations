@@ -1,0 +1,992 @@
+{
+ "id": "creative22v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.34,
+  0.6
+ ],
+ "title": "The Meter Photo",
+ "handle": "@ai_maastaaru",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   909,
+   933
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   818,
+   0.85
+  ],
+  [
+   818,
+   1350,
+   1.15
+  ],
+  [
+   1350,
+   1643,
+   1.5
+  ],
+  [
+   1350,
+   1643,
+   1.5,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1643,
+ "music": "reel/creative22v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_meter",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "kamala",
+      "shot": "wide",
+      "prop": "shock",
+      "n": 2
+     },
+     {
+      "who": "storyteller",
+      "shot": "phone",
+      "prop": "app",
+      "n": 3
+     },
+     {
+      "who": "storyteller",
+      "shot": "phone",
+      "prop": "read",
+      "n": 4
+     },
+     {
+      "who": "storyteller",
+      "shot": "meter",
+      "prop": "meter",
+      "n": 5
+     },
+     {
+      "who": "storyteller",
+      "shot": "segs",
+      "prop": "segs",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "₹960 → ₹1,60,936",
+     "title": "₹960 → ₹1,60,936",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 818,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_01.wav",
+     "from": 10,
+     "frames": 219,
+     "words": [
+      {
+       "w": "Kamala",
+       "from": 12,
+       "to": 29
+      },
+      {
+       "w": "amma's",
+       "from": 29,
+       "to": 53
+      },
+      {
+       "w": "power",
+       "from": 53,
+       "to": 67
+      },
+      {
+       "w": "bill",
+       "from": 67,
+       "to": 80
+      },
+      {
+       "w": "is",
+       "from": 80,
+       "to": 87
+      },
+      {
+       "w": "usually",
+       "from": 87,
+       "to": 107
+      },
+      {
+       "w": "₹960.",
+       "from": 107,
+       "to": 145
+      },
+      {
+       "w": "This",
+       "from": 145,
+       "to": 170
+      },
+      {
+       "w": "month:",
+       "from": 170,
+       "to": 199
+      },
+      {
+       "w": "₹1,60,936.",
+       "from": 199,
+       "to": 226
+      }
+     ],
+     "cues": {
+      "1": 143
+     }
+    },
+    {
+     "who": "kamala",
+     "name": "Kamala amma",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative22v1/line_02.wav",
+     "from": 240,
+     "frames": 93,
+     "words": [
+      {
+       "w": "One",
+       "from": 244,
+       "to": 250
+      },
+      {
+       "w": "lakh?",
+       "from": 250,
+       "to": 260
+      },
+      {
+       "w": "For",
+       "from": 260,
+       "to": 287
+      },
+      {
+       "w": "one",
+       "from": 287,
+       "to": 294
+      },
+      {
+       "w": "fan",
+       "from": 294,
+       "to": 301
+      },
+      {
+       "w": "and",
+       "from": 301,
+       "to": 307
+      },
+      {
+       "w": "one",
+       "from": 307,
+       "to": 314
+      },
+      {
+       "w": "fridge?",
+       "from": 314,
+       "to": 327
+      }
+     ],
+     "cues": {
+      "1": 260
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_03.wav",
+     "from": 342,
+     "frames": 119,
+     "words": [
+      {
+       "w": "Every",
+       "from": 343,
+       "to": 352
+      },
+      {
+       "w": "month,",
+       "from": 352,
+       "to": 368
+      },
+      {
+       "w": "she",
+       "from": 368,
+       "to": 373
+      },
+      {
+       "w": "photographs",
+       "from": 373,
+       "to": 390
+      },
+      {
+       "w": "her",
+       "from": 390,
+       "to": 395
+      },
+      {
+       "w": "meter,",
+       "from": 395,
+       "to": 404
+      },
+      {
+       "w": "and",
+       "from": 404,
+       "to": 419
+      },
+      {
+       "w": "an",
+       "from": 419,
+       "to": 423
+      },
+      {
+       "w": "app",
+       "from": 423,
+       "to": 432
+      },
+      {
+       "w": "reads",
+       "from": 432,
+       "to": 441
+      },
+      {
+       "w": "it",
+       "from": 441,
+       "to": 449
+      },
+      {
+       "w": "for",
+       "from": 449,
+       "to": 455
+      },
+      {
+       "w": "her.",
+       "from": 455,
+       "to": 462
+      }
+     ],
+     "cues": {
+      "1": 404
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_04.wav",
+     "from": 471,
+     "frames": 87,
+     "words": [
+      {
+       "w": "This",
+       "from": 471,
+       "to": 480
+      },
+      {
+       "w": "time,",
+       "from": 480,
+       "to": 500
+      },
+      {
+       "w": "the",
+       "from": 500,
+       "to": 507
+      },
+      {
+       "w": "app",
+       "from": 507,
+       "to": 515
+      },
+      {
+       "w": "read",
+       "from": 515,
+       "to": 525
+      },
+      {
+       "w": "her",
+       "from": 525,
+       "to": 532
+      },
+      {
+       "w": "6",
+       "from": 532,
+       "to": 536
+      },
+      {
+       "w": "as",
+       "from": 536,
+       "to": 542
+      },
+      {
+       "w": "an",
+       "from": 542,
+       "to": 548
+      },
+      {
+       "w": "8.",
+       "from": 548,
+       "to": 553
+      }
+     ],
+     "cues": {
+      "1": 532
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_05.wav",
+     "from": 568,
+     "frames": 101,
+     "words": [
+      {
+       "w": "Two",
+       "from": 568,
+       "to": 576
+      },
+      {
+       "w": "digits",
+       "from": 576,
+       "to": 590
+      },
+      {
+       "w": "wrong:",
+       "from": 590,
+       "to": 616
+      },
+      {
+       "w": "20,000",
+       "from": 616,
+       "to": 629
+      },
+      {
+       "w": "extra",
+       "from": 629,
+       "to": 641
+      },
+      {
+       "w": "units.",
+       "from": 641,
+       "to": 664
+      }
+     ],
+     "cues": {
+      "1": 597
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_06.wav",
+     "from": 681,
+     "frames": 116,
+     "words": [
+      {
+       "w": "On",
+       "from": 681,
+       "to": 686
+      },
+      {
+       "w": "a",
+       "from": 686,
+       "to": 689
+      },
+      {
+       "w": "meter,",
+       "from": 689,
+       "to": 710
+      },
+      {
+       "w": "a",
+       "from": 710,
+       "to": 713
+      },
+      {
+       "w": "six",
+       "from": 713,
+       "to": 720
+      },
+      {
+       "w": "is",
+       "from": 720,
+       "to": 734
+      },
+      {
+       "w": "an",
+       "from": 734,
+       "to": 739
+      },
+      {
+       "w": "eight",
+       "from": 739,
+       "to": 758
+      },
+      {
+       "w": "with",
+       "from": 758,
+       "to": 767
+      },
+      {
+       "w": "one",
+       "from": 767,
+       "to": 773
+      },
+      {
+       "w": "line",
+       "from": 773,
+       "to": 782
+      },
+      {
+       "w": "missing.",
+       "from": 782,
+       "to": 797
+      }
+     ],
+     "cues": {
+      "1": 758
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_meter",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "storyteller",
+      "shot": "test",
+      "prop": "printed",
+      "n": 8
+     },
+     {
+      "who": "storyteller",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 818,
+   "frames": 532,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_07.wav",
+     "from": 0,
+     "frames": 168,
+     "words": [
+      {
+       "w": "We",
+       "from": 0,
+       "to": 7
+      },
+      {
+       "w": "tried",
+       "from": 7,
+       "to": 19
+      },
+      {
+       "w": "a",
+       "from": 19,
+       "to": 23
+      },
+      {
+       "w": "small",
+       "from": 23,
+       "to": 41
+      },
+      {
+       "w": "free",
+       "from": 41,
+       "to": 51
+      },
+      {
+       "w": "AI",
+       "from": 51,
+       "to": 57
+      },
+      {
+       "w": "on",
+       "from": 57,
+       "to": 63
+      },
+      {
+       "w": "24",
+       "from": 63,
+       "to": 70
+      },
+      {
+       "w": "meter",
+       "from": 70,
+       "to": 82
+      },
+      {
+       "w": "photos",
+       "from": 82,
+       "to": 97
+      },
+      {
+       "w": "we",
+       "from": 97,
+       "to": 103
+      },
+      {
+       "w": "drew.",
+       "from": 103,
+       "to": 115
+      },
+      {
+       "w": "It",
+       "from": 115,
+       "to": 132
+      },
+      {
+       "w": "got",
+       "from": 132,
+       "to": 140
+      },
+      {
+       "w": "0",
+       "from": 140,
+       "to": 144
+      },
+      {
+       "w": "right.",
+       "from": 144,
+       "to": 159
+      }
+     ],
+     "cues": {
+      "1": 115
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_08.wav",
+     "from": 180,
+     "frames": 128,
+     "words": [
+      {
+       "w": "The",
+       "from": 180,
+       "to": 190
+      },
+      {
+       "w": "same",
+       "from": 190,
+       "to": 199
+      },
+      {
+       "w": "12",
+       "from": 199,
+       "to": 204
+      },
+      {
+       "w": "numbers,",
+       "from": 204,
+       "to": 220
+      },
+      {
+       "w": "printed",
+       "from": 220,
+       "to": 250
+      },
+      {
+       "w": "plainly?",
+       "from": 250,
+       "to": 277
+      },
+      {
+       "w": "12",
+       "from": 277,
+       "to": 282
+      },
+      {
+       "w": "out",
+       "from": 282,
+       "to": 289
+      },
+      {
+       "w": "of",
+       "from": 289,
+       "to": 294
+      },
+      {
+       "w": "12.",
+       "from": 294,
+       "to": 301
+      }
+     ],
+     "cues": {
+      "1": 270
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_09.wav",
+     "from": 319,
+     "frames": 177,
+     "words": [
+      {
+       "w": "So",
+       "from": 321,
+       "to": 325
+      },
+      {
+       "w": "when",
+       "from": 325,
+       "to": 333
+      },
+      {
+       "w": "the",
+       "from": 333,
+       "to": 339
+      },
+      {
+       "w": "app",
+       "from": 339,
+       "to": 345
+      },
+      {
+       "w": "shows",
+       "from": 345,
+       "to": 354
+      },
+      {
+       "w": "a",
+       "from": 354,
+       "to": 357
+      },
+      {
+       "w": "reading,",
+       "from": 357,
+       "to": 381
+      },
+      {
+       "w": "check",
+       "from": 381,
+       "to": 390
+      },
+      {
+       "w": "it",
+       "from": 390,
+       "to": 394
+      },
+      {
+       "w": "against",
+       "from": 394,
+       "to": 407
+      },
+      {
+       "w": "your",
+       "from": 407,
+       "to": 421
+      },
+      {
+       "w": "meter,",
+       "from": 421,
+       "to": 432
+      },
+      {
+       "w": "digit",
+       "from": 432,
+       "to": 441
+      },
+      {
+       "w": "by",
+       "from": 441,
+       "to": 445
+      },
+      {
+       "w": "digit,",
+       "from": 445,
+       "to": 464
+      },
+      {
+       "w": "before",
+       "from": 464,
+       "to": 474
+      },
+      {
+       "w": "you",
+       "from": 474,
+       "to": 480
+      },
+      {
+       "w": "tap",
+       "from": 480,
+       "to": 490
+      },
+      {
+       "w": "OK.",
+       "from": 490,
+       "to": 496
+      }
+     ],
+     "cues": {
+      "1": 381,
+      "2": 432
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_meter",
+   "data": {
+    "beats": [
+     {
+      "who": "kamala",
+      "shot": "wide",
+      "prop": "teacher",
+      "n": 10
+     },
+     {
+      "who": "storyteller",
+      "shot": "wide",
+      "prop": "pen",
+      "n": 11
+     },
+     {
+      "who": "kamala",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Digit by digit",
+     "title": "Digit by digit",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1350,
+   "frames": 293,
+   "lines": [
+    {
+     "who": "kamala",
+     "name": "Kamala amma",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative22v1/line_10.wav",
+     "from": 9,
+     "frames": 91,
+     "words": [
+      {
+       "w": "35",
+       "from": 13,
+       "to": 18
+      },
+      {
+       "w": "years,",
+       "from": 18,
+       "to": 32
+      },
+      {
+       "w": "I",
+       "from": 32,
+       "to": 35
+      },
+      {
+       "w": "corrected",
+       "from": 35,
+       "to": 65
+      },
+      {
+       "w": "answer",
+       "from": 65,
+       "to": 79
+      },
+      {
+       "w": "sheets.",
+       "from": 79,
+       "to": 94
+      }
+     ],
+     "cues": {
+      "1": 42
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative22v1/line_11.wav",
+     "from": 112,
+     "frames": 106,
+     "words": [
+      {
+       "w": "So",
+       "from": 113,
+       "to": 118
+      },
+      {
+       "w": "she",
+       "from": 118,
+       "to": 124
+      },
+      {
+       "w": "did",
+       "from": 124,
+       "to": 130
+      },
+      {
+       "w": "what",
+       "from": 130,
+       "to": 138
+      },
+      {
+       "w": "she",
+       "from": 138,
+       "to": 144
+      },
+      {
+       "w": "always",
+       "from": 144,
+       "to": 155
+      },
+      {
+       "w": "did.",
+       "from": 155,
+       "to": 174
+      },
+      {
+       "w": "She",
+       "from": 174,
+       "to": 180
+      },
+      {
+       "w": "took",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "out",
+       "from": 188,
+       "to": 194
+      },
+      {
+       "w": "her",
+       "from": 194,
+       "to": 200
+      },
+      {
+       "w": "red",
+       "from": 200,
+       "to": 210
+      },
+      {
+       "w": "pen.",
+       "from": 210,
+       "to": 218
+      }
+     ],
+     "cues": {
+      "1": 174
+     }
+    },
+    {
+     "who": "kamala",
+     "name": "Kamala amma",
+     "color": "#FDA4AF",
+     "sub": null,
+     "audio": "reel/creative22v1/line_12.wav",
+     "from": 224,
+     "frames": 54,
+     "words": [
+      {
+       "w": "Wrong",
+       "from": 225,
+       "to": 236
+      },
+      {
+       "w": "answer.",
+       "from": 236,
+       "to": 257
+      },
+      {
+       "w": "See",
+       "from": 257,
+       "to": 264
+      },
+      {
+       "w": "me.",
+       "from": 264,
+       "to": 271
+      }
+     ],
+     "cues": {
+      "1": 257
+     }
+    }
+   ]
+  }
+ ]
+}

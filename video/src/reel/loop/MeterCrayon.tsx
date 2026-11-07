@@ -25,8 +25,7 @@ const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const HANDF = (s: number) => `700 ${s}px Caveat`;
 export const PRINTED = { right: 12, of: 12 };   // the printed-digit follow-up (series/scripts/creative22_demo/printed.json)
 const KAMALA: Record<number, [BillMood, BillArms]> = {
-  1: ["shock", "up"], 2: ["shock", "up"], 3: ["calm", "phone"], 4: ["worried", "phone"], 5: ["worried", "rest"],
-  9: ["calm", "fold"], 10: ["smug", "rest"], 12: ["smug", "rest"],
+  1: ["shock", "up"], 2: ["shock", "up"], 10: ["calm", "fold"], 11: ["smug", "rest"], 12: ["smug", "rest"],
 };
 const SEGS: Record<string, string> = { "0": "abcfed", "1": "bc", "2": "abged", "3": "abgcd", "4": "fgbc", "5": "afgcd", "6": "afgedc", "7": "abc", "8": "abcdefg", "9": "abcdfg" };
 
@@ -177,14 +176,17 @@ const StMeter: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "meter") {
           c.fillStyle = "#f5e6c8"; c.fillRect(0, 0, W, H);
           c.font = SANS(40, 900); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("HER METER", W / 2, 300);
-          lcd(c, 240, 380, 1.0, "66114", f >= cu(1, 0.4) ? [0, 4] : [], 1);
-          const k2 = seg(f, cu(1, 0.4), cu(1, 0.4) + 8);
+          lcd(c, 240, 380, 1.0, "66114", [0, 4], 1);
+          const k2 = seg(f, ln.from + 4, ln.from + 12);
           if (k2 > 0) {
             c.save(); c.globalAlpha = clamp(k2 * 3);
             c.font = SANS(40, 900); c.fillStyle = "#475569"; c.fillText("THE APP READ", W / 2, 830);
             c.font = SANS(150, 900); [..."86111"].forEach((d, q) => { c.fillStyle = q === 0 || q === 4 ? RED : INK; c.fillText(d, 250 + q * 145, 1000); });
             c.restore();
           }
+          tag(c, "+20,000 units", W / 2, 1160, 76, "#fee2e2", "#991b1b", -0.03, seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
+          c.save(); c.globalAlpha = seg(f, cu(1, 0.4) + 10, cu(1, 0.4) + 18); c.font = SANS(34, 700); c.fillStyle = "#475569"; c.textAlign = "center";
+          c.fillText("1st digit: 6 → 8 (+20,000) · 5th: 4 → 1", W / 2, 1260); c.restore();
         } else if (b.shot === "segs") {
           c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
           c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("A SIX AND AN EIGHT", W / 2, 320);
@@ -197,13 +199,13 @@ const StMeter: React.FC<SP> = ({ s }) => {
           c.save(); c.globalAlpha = seg(f, c1 + 16, c1 + 24); c.font = SANS(38, 700); c.fillStyle = "#e2e8f0"; c.fillText("a little glare on that line, and a 6 reads as an 8", W / 2, 1220); c.restore();
         } else if (b.shot === "test") {
           const printed = b.prop === "printed";
-          dark(c, W, H, printed ? "THE SAME NUMBERS, PRINTED PLAINLY" : "OUR TEST: 24 METER PHOTOS",
-            printed ? ["the same small AI"] : ["a small free AI that reads photos, offline", "we drew the meters, so we knew every reading"]);
+          dark(c, W, H, printed ? "THE SAME 12 READINGS, PRINTED PLAINLY" : "OUR TEST: 24 METER PHOTOS WE DREW",
+            printed ? ["the same small free AI"] : ["12 readings × 2 styles (clean, phone-like)", "a small free AI that reads photos, offline"]);
           if (!printed) {
             const c1 = cu(1, 0.4);
             TEST.forEach((t, q) => miniMeter(c, 110 + (q % 3) * 300, 520 + Math.floor(q / 3) * 110, t, false, seg(f, ln.from + q * 2, ln.from + q * 2 + 6)));
             c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.font = SANS(120, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText("0 / 24", W / 2, 1110); c.restore();
-            c.save(); c.globalAlpha = seg(f, c1 + 14, c1 + 22); c.font = SANS(36, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("read right: 0 of 12 clean · 0 of 12 phone-like", W / 2, 1200); c.restore();
+            c.save(); c.globalAlpha = seg(f, c1 + 14, c1 + 22); c.font = SANS(36, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("clean: 0 of 12 · phone-like: 0 of 12", W / 2, 1200); c.restore();
           } else {
             const c1 = cu(1, 0.4);
             TEST.forEach((t, q) => miniMeter(c, 110 + (q % 3) * 300, 520 + Math.floor(q / 3) * 110, t, q < PRINTED.right, seg(f, ln.from + q * 2, ln.from + q * 2 + 6), true));
@@ -213,7 +215,7 @@ const StMeter: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "rule") {
           room(c, W, H);
           c.fillStyle = "rgba(15,23,42,0.9)"; c.fillRect(0, 0, W, H);
-          const rows: [string, string, number][] = [["BEFORE YOU PAY", "a bill an app read for you", ln.from + 2], ["Bill's reading", "= your meter, digit by digit", cu(1, 0.3)], ["Wrong?", "complain with a dated meter photo", cu(1, 0.6)]];
+          const rows: [string, string, number][] = [["THE APP SHOWS A READING", "before you tap OK:", ln.from + 2], ["Check it against", "your meter, digit by digit", cu(1, 0.4)], ["Already billed?", "complain with a dated meter photo", cu(2, 0.7)]];
           rows.forEach(([a, bb, t0], q) => {
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 330 + q * 280;
@@ -232,6 +234,10 @@ const StMeter: React.FC<SP> = ({ s }) => {
           const [m, a] = loopOn ? (["smug", "rest"] as [BillMood, BillArms]) : KAMALA[n] ?? ["calm", "rest"];
           person(c, "kamala" as BillWho, [360, 1330], 0.72, m, a, b.who === "kamala" && talking, r);
           c.restore();
+          if (n === 2) {   // script review: say the story is made up
+            c.save(); c.font = SANS(32, 800); const tt = "a made-up story · \"86111\" is a real answer from our test"; const tw = c.measureText(tt).width + 40;
+            c.fillStyle = "rgba(15,23,42,0.85)"; rrect(c, 540 - tw / 2, 220, tw, 56, 14); c.fill(); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(tt, 540, 259); c.restore();
+          }
           if (hookOn) {
             const blk = (x: number, k: string, v: string, col: string) => {
               c.fillStyle = "rgba(0,0,0,0.25)"; rrect(c, x + 6, 218, 460, 200, 22); c.fill();
@@ -244,7 +250,8 @@ const StMeter: React.FC<SP> = ({ s }) => {
           const billK = hookOn || ["shock", "teacher", "pen", "loop"].includes(b.prop) ? 1 : 0;
           const red = b.prop === "pen" ? seg(f, ln.from + 8, ln.from + 40) : b.prop === "loop" || loopOn ? 1 : 0;
           const see = loopOn ? 0 : b.prop === "loop" ? seg(f, cu(1, 0.3), cu(1, 0.3) + 10) : 0;
-          if (billK) bill(c, 760, hookOn ? 900 : 860, hookOn ? 0.62 : 0.7, 1, hookOn ? 0 : red, see);
+          const big = !hookOn && ["pen", "loop"].includes(b.prop);   // stills: the red pen was too small to read
+          if (billK) bill(c, big ? 690 : 760, big ? 800 : hookOn ? 900 : 860, big ? 0.98 : hookOn ? 0.62 : 0.7, 1, hookOn ? 0 : red, see);
         }
       }} />
     </>

@@ -124,8 +124,8 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "This time, the app read: [1] eight, six, one, one, one.",
-     "show": "This time, the app read: 8-6-1-1-1.",
+     "text": "This time, the app read her six [1] as an eight.",
+     "show": "This time, the app read her 6 as an 8.",
      "maxgap": 0.32,
      "gap": 0.35,
      "tempo": 1.0
@@ -133,8 +133,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Her meter said [1] six, six, one, one, four.",
-     "show": "Her meter said 6-6-1-1-4.",
+     "text": "Two digits wrong: [1] twenty thousand extra units.",
+     "show": "Two digits wrong: 20,000 extra units.",
      "maxgap": 0.32,
      "gap": 0.4,
      "tempo": 1.0
@@ -154,7 +154,7 @@
    "id": "s_b",
    "type": "sk_meter",
    "tail": 0.0,
-   "boost": 1.1,
+   "boost": 1.15,
    "lift": 0.5,
    "drop_at": [
     [
@@ -177,9 +177,9 @@
       "n": 8
      },
      {
-      "who": "kamala",
-      "shot": "wide",
-      "prop": "teacher",
+      "who": "storyteller",
+      "shot": "rule",
+      "prop": "rule",
       "n": 9
      }
     ],
@@ -195,8 +195,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "We gave a small free AI that reads photos twenty-four meter photos. [1] It read zero right.",
-     "show": "We gave a small free AI that reads photos 24 meter photos. It read 0 right.",
+     "text": "We tried a small free AI on twenty-four meter photos we drew. [1] It got zero right.",
+     "show": "We tried a small free AI on 24 meter photos we drew. It got 0 right.",
      "maxgap": 0.32,
      "gap": 0.4,
      "tempo": 1.0
@@ -204,19 +204,19 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "The same numbers, printed plainly? [1] Twelve out of twelve.",
-     "show": "The same numbers, printed plainly? 12 out of 12.",
+     "text": "The same twelve numbers, printed plainly? [1] Twelve out of twelve.",
+     "show": "The same 12 numbers, printed plainly? 12 out of 12.",
      "maxgap": 0.32,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.0
     },
     {
-     "who": "kamala",
-     "file": "09_kamala.wav",
-     "text": "Thirty-five years, [1] I corrected answer sheets.",
-     "show": "35 years, I corrected answer sheets.",
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "So when the app shows a reading, [1] check it against your meter, [2] digit by digit, before you tap OK.",
+     "show": "So when the app shows a reading, check it against your meter, digit by digit, before you tap OK.",
      "maxgap": 0.32,
-     "gap": 0.4,
+     "gap": 1.0,
      "tempo": 1.0
     }
    ]
@@ -233,15 +233,15 @@
    "data": {
     "beats": [
      {
-      "who": "storyteller",
+      "who": "kamala",
       "shot": "wide",
-      "prop": "pen",
+      "prop": "teacher",
       "n": 10
      },
      {
       "who": "storyteller",
-      "shot": "rule",
-      "prop": "rule",
+      "shot": "wide",
+      "prop": "pen",
       "n": 11
      },
      {
@@ -261,21 +261,21 @@
    },
    "lines": [
     {
-     "who": "storyteller",
-     "file": "10_storyteller.wav",
-     "text": "So she did what she always did. [1] She took out her red pen.",
-     "show": "So she did what she always did. She took out her red pen.",
+     "who": "kamala",
+     "file": "10_kamala.wav",
+     "text": "Thirty-five years, [1] I corrected answer sheets.",
+     "show": "35 years, I corrected answer sheets.",
      "maxgap": 0.32,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.0
     },
     {
      "who": "storyteller",
      "file": "11_storyteller.wav",
-     "text": "Before you pay a bill an app read for you, [1] match the reading to your meter, [2] digit by digit.",
-     "show": "Before you pay a bill an app read for you, match the reading to your meter, digit by digit.",
+     "text": "So she did what she always did. [1] She took out her red pen.",
+     "show": "So she did what she always did. She took out her red pen.",
      "maxgap": 0.32,
-     "gap": 1.0,
+     "gap": 0.2,
      "tempo": 1.0
     },
     {

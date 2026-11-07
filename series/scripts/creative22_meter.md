@@ -1,4 +1,4 @@
-# Creative 22 "The Meter Photo" · script v1, Nov 7 (the Nov 7 creative slot)
+# Creative 22 "The Meter Photo" · script v2, Nov 7 (the Nov 7 creative slot)
 
 **Format: story mode** (Vamsi's taste note via Bujji, Nov 6: one character, one warm narration thread, deliberately
 simple pictures, the lesson inside the story, a reveal at the end). One room (Kamala amma's wall with the meter, a small
@@ -42,37 +42,57 @@ blur, a glare patch). A small free AI that reads photos (Qwen2.5-VL-3B, llama.cp
 2. Her meter "66114" next to the app's "READ ✓ 86111" (the mechanism first: weaker stake).
 3. The red pen and "See me." on the bill (spends the reveal).
 
-## Script (English, v1) · ~50 s
-| # | Who | Line | On screen |
-|---|---|---|---|
-| 1 | storyteller | Kamala amma's power bill is usually nine hundred and sixty rupees. [1] This month: one lakh, sixty thousand. | frame 1 as hook 1 |
-| 2 | kamala | One lakh? [1] For one fan and one fridge? | the bill: units 20,117 |
-| 3 | storyteller | Every month, she photographs her meter, [1] and an app reads it for her. | the phone framing the meter |
-| 4 | storyteller | This time, the app read: [1] eight, six, one, one, one. | READ ✓ 86111 |
-| 5 | storyteller | Her meter said [1] six, six, one, one, four. | her meter 66114, the 1st and 5th digits circled; the app's 86111 |
-| 6 | storyteller | On a meter, a six is an eight [1] with one line missing. | a 6 and an 8; the missing line lights up |
-| 7 | storyteller | We gave a small free AI that reads photos twenty-four meter photos. [1] It read zero right. | OUR TEST: 24 meter photos · 0 / 24 |
-| 8 | storyteller | The same numbers, printed plainly? [1] Twelve out of twelve. | 12 / 12 · it reads print; meter digits fool it |
-| 9 | kamala | Thirty-five years, [1] I corrected answer sheets. | |
-| 10 | storyteller | So she did what she always did. [1] She took out her red pen. | the red pen: 86111 struck, 66114, 120 units |
-| 11 | storyteller | Before you pay a bill an app read for you, [1] match the reading to your meter, [2] digit by digit. | the rule card |
-| 12 | kamala | Wrong answer. [1] See me. | "See me." in red → frame 1 (loops) |
+## Script review (human-viewer, v1) and what changed
+Both stop on frame 1 (hook 8 and 7: "lakh-rupee bill stories are always on Telugu news"; Sandeep would forward it to the
+family group). Both: the rule and the ask didn't work in real life (the meter is always ahead of the last bill, so
+"MATCH" can't happen; the moment to check is when the app shows its reading); the rule card cut in before the punchline
+(move it before her story ends: 8 → rule → 9 → 10 → 12); be honest on screen: we drew the meters, a small free AI, and
+0 of 24 vs 12 of 12 looked like a mismatch (12 readings × 2 styles); say the story is made up. Sandeep: ten digits by
+ear lost him (say them once, let the screen do it); line 7 didn't parse ("reads photos twenty-four meter photos").
+Priya: why did 4 become 1? (we circled two digits but explained one); the 0 on clean photos makes her doubt the test
+(our drawing was checked by eye: every digit reads). Telugu: "ఆమె" bookish, "ఉన్నది" → "ఉంది", "ఒక గీత తక్కువ ఎనిమిది"
+clunky, "యాప్ చదివిన బిల్లు" reads as the app read the bill, "సరిపోల్చండి" textbook, "తప్పు." alone curt. Changed (v2): the
+digits said once ("the app read her six as an eight"), "Two digits wrong: twenty thousand extra units" with "1st digit:
+6 → 8 (+20,000) · 5th: 4 → 1" on screen; line 7 "We tried a small free AI on twenty-four meter photos we drew. It got
+zero right."; "The same twelve numbers, printed plainly? Twelve out of twelve."; the test card "24 METER PHOTOS WE DREW ·
+12 readings × 2 styles"; the rule at the app moment, said right after the test: "So when the app shows a reading, check
+it against your meter, digit by digit, before you tap OK." (card: "Already billed? complain with a dated meter photo"),
+then her story ends unbroken; a tag "a made-up story · "86111" is a real answer from our test"; Telugu "కమలమ్మ", "ఎనిమిదిలో
+ఒక గీత తీసేస్తే, అదే ఆరు", "అందుకే యాప్ రీడింగ్ చూపించగానే, ఓకే నొక్కే ముందు, మీటర్ తో ఒక్కో అంకె చెక్ చేయండి", "తప్పు జవాబు";
+the caption ask "PHOTO or PERSON" (who reads your meter).
 
-## Script (Telugu, v1; on-screen text stays English)
+## Script (English, v2) · ~55 s
+| # | Who | Line |
+|---|---|---|
+| 1 | storyteller | Kamala amma's power bill is usually nine hundred and sixty rupees. [1] This month: one lakh, sixty thousand. |
+| 2 | kamala | One lakh? [1] For one fan and one fridge? |
+| 3 | storyteller | Every month, she photographs her meter, [1] and an app reads it for her. |
+| 4 | storyteller | This time, the app read her six [1] as an eight. |
+| 5 | storyteller | Two digits wrong: [1] twenty thousand extra units. |
+| 6 | storyteller | On a meter, a six is an eight [1] with one line missing. |
+| 7 | storyteller | We tried a small free AI on twenty-four meter photos we drew. [1] It got zero right. |
+| 8 | storyteller | The same twelve numbers, printed plainly? [1] Twelve out of twelve. |
+| 9 | storyteller | So when the app shows a reading, [1] check it against your meter, [2] digit by digit, before you tap OK. |
+| 10 | kamala | Thirty-five years, [1] I corrected answer sheets. |
+| 11 | storyteller | So she did what she always did. [1] She took out her red pen. |
+| 12 | kamala | Wrong answer. [1] See me. |
+
+## Script (Telugu, v2; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | storyteller | ఎప్పుడూ తొమ్మిది వందల అరవై రూపాయలు. [1] ఈ నెల, లక్షా అరవై వేలు! కమలమ్మ కరెంట్ బిల్లు. |
 | 2 | kamala | లక్ష రూపాయలా? [1] ఒక ఫ్యాన్, ఒక ఫ్రిజ్ కి? |
-| 3 | storyteller | ప్రతి నెలా ఆమె మీటర్ ఫోటో తీస్తుంది, [1] ఒక యాప్ దాన్ని చదువుతుంది. |
-| 4 | storyteller | ఈసారి యాప్ చదివింది: [1] ఎనిమిది, ఆరు, ఒకటి, ఒకటి, ఒకటి. |
-| 5 | storyteller | మీటర్ లో ఉన్నది: [1] ఆరు, ఆరు, ఒకటి, ఒకటి, నాలుగు. |
-| 6 | storyteller | మీటర్ మీద, ఆరు అంటే, [1] ఒక గీత తక్కువ ఎనిమిది. |
-| 7 | storyteller | ఫోటోలు చదివే ఒక చిన్న ఫ్రీ ఏ ఐ కి, ఇరవై నాలుగు మీటర్ ఫోటోలు ఇచ్చాం. [1] ఒక్కటి కూడా సరిగ్గా చదవలేదు. |
-| 8 | storyteller | అవే నంబర్లు, మామూలుగా ప్రింట్ చేస్తే? [1] పన్నెండుకి పన్నెండు. |
-| 9 | kamala | ముప్పై ఐదేళ్ళు, [1] పేపర్లు దిద్దాను. |
-| 10 | storyteller | అందుకే, ఎప్పుడూ చేసేదే చేసింది. [1] ఎర్ర పెన్ను తీసింది. |
-| 11 | storyteller | యాప్ చదివిన బిల్లు కట్టే ముందు, [1] బిల్లులో రీడింగ్, మీటర్ రీడింగ్, [2] ఒక్కో అంకె సరిపోల్చండి. |
-| 12 | kamala | తప్పు. [1] నన్ను వచ్చి కలువు. |
+| 3 | storyteller | ప్రతి నెలా కమలమ్మ మీటర్ ఫోటో తీస్తుంది, [1] ఒక యాప్ దాన్ని చదువుతుంది. |
+| 4 | storyteller | ఈసారి యాప్, ఆరుని [1] ఎనిమిదిగా చదివింది. |
+| 5 | storyteller | రెండు అంకెలు తప్పు: [1] ఇరవై వేల యూనిట్లు ఎక్స్ ట్రా. |
+| 6 | storyteller | ఎనిమిదిలో ఒక గీత తీసేస్తే, [1] అదే ఆరు. |
+| 7 | storyteller | మేము గీసిన ఇరవై నాలుగు మీటర్ ఫోటోలు, ఒక చిన్న ఫ్రీ ఏ ఐ కి ఇచ్చాం. [1] ఒక్కటి కూడా సరిగ్గా చదవలేదు. |
+| 8 | storyteller | అవే పన్నెండు నంబర్లు, మామూలుగా ప్రింట్ చేస్తే? [1] పన్నెండుకి పన్నెండు. |
+| 9 | storyteller | అందుకే యాప్ రీడింగ్ చూపించగానే, [1] ఓకే నొక్కే ముందు, [2] మీటర్ తో ఒక్కో అంకె చెక్ చేయండి. |
+| 10 | kamala | ముప్పై ఐదేళ్ళు, [1] పేపర్లు దిద్దాను. |
+| 11 | storyteller | అందుకే, ఎప్పుడూ చేసేదే చేసింది. [1] ఎర్ర పెన్ను తీసింది. |
+| 12 | kamala | తప్పు జవాబు. [1] నన్ను వచ్చి కలువు. |
 
-## Caption ask (a try-it ask: a test the viewer can run tonight)
-Go to your meter tonight. Does the reading on your last bill match it? Comment MATCH or NO MATCH.
+## Caption ask
+Who reads your power meter: a photo (an app or the reader's phone) or a person writing it down? Comment PHOTO or PERSON.
+(script review: "MATCH" can't happen, the meter is always ahead of the last bill)

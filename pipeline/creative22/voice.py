@@ -36,15 +36,18 @@ VOICE_TE = {
     "kamala": "Lalitha speaks in a warm, firm voice, like a retired school teacher, at a moderate pace. "
               "The recording is very clear, close-up, studio quality, with no background noise.",
 }
+NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
+APP = set()
 MUST = {"en": {1: [("usually",), ("nine", "960"), ("sixty", "960"), ("lakh",)], 2: [("lakh",), ("fan",), ("fridge",)],
-               3: [("photographs", "photograph"), ("meter",), ("app",)], 4: [("app",), ("eight", "8", "86111"), ("six", "6", "86111")],
-               5: [("meter",), ("six", "6", "66114"), ("four", "4", "66114")], 6: [("six", "6"), ("eight", "8"), ("line",), ("missing",)],
-               7: [("small",), ("free",), ("photos",), ("twenty", "24"), ("zero", "0")], 8: [("printed",), ("twelve", "12")],
-               9: [("thirty", "35"), ("corrected",), ("answer",), ("sheets",)], 10: [("always",), ("red",), ("pen",)],
-               11: [("pay",), ("bill",), ("app",), ("reading",), ("meter",), ("digit",)], 12: [("wrong",), ("answer",), ("see",)]},
-        "te": {}}
-JUDGE_TEXT = {1: "Kamala amma's power bill is usually 960 rupees. This month: 1 lakh, 60,000.", 7: "We gave a small free AI that reads photos 24 meter photos. It read 0 right.",
-              8: "The same numbers, printed plainly? 12 out of 12.", 9: "35 years, I corrected answer sheets."}
+               3: [("photographs", "photograph"), ("meter",), ("app",)], 4: [("app",), ("six", "6"), ("eight", "8")],
+               5: [("two", "2"), ("digits", "digit"), ("twenty", "20,000", "20000"), ("units",)], 6: [("six", "6"), ("eight", "8"), ("line",), ("missing",)],
+               7: [("small",), ("free",), ("twenty", "24"), ("meter",), ("drew",), ("zero", "0")], 8: [("twelve", "12"), ("printed",)],
+               9: [("app",), ("reading",), ("meter",), ("digit",), ("tap",)], 10: [("thirty", "35"), ("corrected",), ("answer",), ("sheets",)],
+               11: [("always",), ("red",), ("pen",)], 12: [("wrong",), ("answer",), ("see",)]},
+        "te": {10: [("मुप्प", "मुप्", "मोप्प", "35", "मूप्प"), ("पेपर", "पेप")]}}   # 10: a take kept only its second half
+JUDGE_TEXT = {1: "Kamala amma's power bill is usually 960 rupees. This month: 1 lakh, 60,000.", 5: "Two digits wrong: 20,000 extra units.",
+              7: "We tried a small free AI on 24 meter photos we drew. It got 0 right.", 8: "The same 12 numbers, printed plainly? 12 out of 12.",
+              10: "35 years, I corrected answer sheets."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

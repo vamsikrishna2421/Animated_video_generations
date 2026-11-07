@@ -16,32 +16,32 @@ LINES = {
         "ఎప్పుడూ తొమ్మిది వందల అరవై రూపాయలు. [1] ఈ నెల, లక్షా అరవై వేలు! కమలమ్మ కరెంట్ బిల్లు."),
     2: ("kamala", "wide", "shock", "One lakh? [1] For one fan and one fridge?", "లక్ష రూపాయలా? [1] ఒక ఫ్యాన్, ఒక ఫ్రిజ్ కి?"),
     3: ("storyteller", "phone", "app", "Every month, she photographs her meter, [1] and an app reads it for her.",
-        "ప్రతి నెలా ఆమె మీటర్ ఫోటో తీస్తుంది, [1] ఒక యాప్ దాన్ని చదువుతుంది."),
-    4: ("storyteller", "phone", "read", "This time, the app read: [1] eight, six, one, one, one.", "ఈసారి యాప్ చదివింది: [1] ఎనిమిది, ఆరు, ఒకటి, ఒకటి, ఒకటి."),
-    5: ("storyteller", "meter", "meter", "Her meter said [1] six, six, one, one, four.", "మీటర్ లో ఉన్నది: [1] ఆరు, ఆరు, ఒకటి, ఒకటి, నాలుగు."),
-    6: ("storyteller", "segs", "segs", "On a meter, a six is an eight [1] with one line missing.", "మీటర్ మీద, ఆరు అంటే, [1] ఒక గీత తక్కువ ఎనిమిది."),
-    7: ("storyteller", "test", "test", "We gave a small free AI that reads photos twenty-four meter photos. [1] It read zero right.",
-        "ఫోటోలు చదివే ఒక చిన్న ఫ్రీ ఏ ఐ కి, ఇరవై నాలుగు మీటర్ ఫోటోలు ఇచ్చాం. [1] ఒక్కటి కూడా సరిగ్గా చదవలేదు."),
-    8: ("storyteller", "test", "printed", "The same numbers, printed plainly? [1] Twelve out of twelve.", "అవే నంబర్లు, మామూలుగా ప్రింట్ చేస్తే? [1] పన్నెండుకి పన్నెండు."),
-    9: ("kamala", "wide", "teacher", "Thirty-five years, [1] I corrected answer sheets.", "ముప్పై ఐదేళ్ళు, [1] పేపర్లు దిద్దాను."),
-    10: ("storyteller", "wide", "pen", "So she did what she always did. [1] She took out her red pen.", "అందుకే, ఎప్పుడూ చేసేదే చేసింది. [1] ఎర్ర పెన్ను తీసింది."),
-    11: ("storyteller", "rule", "rule", "Before you pay a bill an app read for you, [1] match the reading to your meter, [2] digit by digit.",
-         "యాప్ చదివిన బిల్లు కట్టే ముందు, [1] బిల్లులో రీడింగ్, మీటర్ రీడింగ్, [2] ఒక్కో అంకె సరిపోల్చండి."),
-    12: ("kamala", "wide", "loop", "Wrong answer. [1] See me.", "తప్పు. [1] నన్ను వచ్చి కలువు."),
+        "ప్రతి నెలా కమలమ్మ మీటర్ ఫోటో తీస్తుంది, [1] ఒక యాప్ దాన్ని చదువుతుంది."),   # script review: "ఆమె" bookish
+    4: ("storyteller", "phone", "read", "This time, the app read her six [1] as an eight.", "ఈసారి యాప్, ఆరుని [1] ఎనిమిదిగా చదివింది."),   # script review: ten digits by ear lost them
+    5: ("storyteller", "meter", "meter", "Two digits wrong: [1] twenty thousand extra units.", "రెండు అంకెలు తప్పు: [1] ఇరవై వేల యూనిట్లు ఎక్స్ ట్రా."),
+    6: ("storyteller", "segs", "segs", "On a meter, a six is an eight [1] with one line missing.", "ఎనిమిదిలో ఒక గీత తీసేస్తే, [1] అదే ఆరు."),
+    7: ("storyteller", "test", "test", "We tried a small free AI on twenty-four meter photos we drew. [1] It got zero right.",
+        "మేము గీసిన ఇరవై నాలుగు మీటర్ ఫోటోలు, ఒక చిన్న ఫ్రీ ఏ ఐ కి ఇచ్చాం. [1] ఒక్కటి కూడా సరిగ్గా చదవలేదు."),
+    8: ("storyteller", "test", "printed", "The same twelve numbers, printed plainly? [1] Twelve out of twelve.", "అవే పన్నెండు నంబర్లు, మామూలుగా ప్రింట్ చేస్తే? [1] పన్నెండుకి పన్నెండు."),
+    9: ("storyteller", "rule", "rule", "So when the app shows a reading, [1] check it against your meter, [2] digit by digit, before you tap OK.",   # script review: at the app moment
+        "అందుకే యాప్ రీడింగ్ చూపించగానే, [1] ఓకే నొక్కే ముందు, [2] మీటర్ తో ఒక్కో అంకె చెక్ చేయండి."),
+    10: ("kamala", "wide", "teacher", "Thirty-five years, [1] I corrected answer sheets.", "ముప్పై ఐదేళ్ళు, [1] పేపర్లు దిద్దాను."),
+    11: ("storyteller", "wide", "pen", "So she did what she always did. [1] She took out her red pen.", "అందుకే, ఎప్పుడూ చేసేదే చేసింది. [1] ఎర్ర పెన్ను తీసింది."),
+    12: ("kamala", "wide", "loop", "Wrong answer. [1] See me.", "తప్పు జవాబు. [1] నన్ను వచ్చి కలువు."),
 }
 TTS_EN = {}
-SHOW = {1: "Kamala amma's power bill is usually ₹960. This month: ₹1,60,936.", 4: "This time, the app read: 8-6-1-1-1.",
-        5: "Her meter said 6-6-1-1-4.", 7: "We gave a small free AI that reads photos 24 meter photos. It read 0 right.",
-        8: "The same numbers, printed plainly? 12 out of 12.", 9: "35 years, I corrected answer sheets."}
+SHOW = {1: "Kamala amma's power bill is usually ₹960. This month: ₹1,60,936.", 4: "This time, the app read her 6 as an 8.",
+        5: "Two digits wrong: 20,000 extra units.", 7: "We tried a small free AI on 24 meter photos we drew. It got 0 right.",
+        8: "The same 12 numbers, printed plainly? 12 out of 12.", 10: "35 years, I corrected answer sheets."}
 SHOW_TE = {
     1: "Always ₹960. This month: ₹1,60,000! Kamala amma's power bill.", 2: "One lakh rupees? For one fan and one fridge?",
-    3: "Every month she photographs the meter; an app reads it.", 4: "This time the app read: 8, 6, 1, 1, 1.",
-    5: "What the meter shows: 6, 6, 1, 1, 4.", 6: "On a meter, a 6 is an 8 with one line less.",
-    7: "We gave a small free AI that reads photos 24 meter photos. It didn't read even one right.",
-    8: "The same numbers, printed normally? 12 out of 12.", 9: "35 years, I corrected papers.",
-    10: "So she did what she always did. She took out the red pen.",
-    11: "Before you pay a bill an app read: the bill's reading, the meter's reading, compare each digit.",
-    12: "Wrong. Come and see me.",
+    3: "Every month Kamala amma photographs the meter; an app reads it.", 4: "This time the app read her 6 as an 8.",
+    5: "Two digits wrong: 20,000 extra units.", 6: "Take one line out of an 8, and it's a 6.",
+    7: "We gave 24 meter photos we drew to a small free AI. It didn't read even one right.",
+    8: "The same 12 numbers, printed normally? 12 out of 12.",
+    9: "So when the app shows the reading, before you press OK, check it against the meter, digit by digit.",
+    10: "35 years, I corrected papers.", 11: "So she did what she always did. She took out the red pen.",
+    12: "Wrong answer. Come and see me.",
 }
 TEMPO_EN = {"storyteller": 1.0, "kamala": 1.0}   # story mode: calm, no speed-up
 TEMPO_TE = {"storyteller": 1.0, "kamala": 0.98}
@@ -50,9 +50,9 @@ TEMPO_TE = {"storyteller": 1.0, "kamala": 0.98}
 # a ding on "twelve out of twelve"; a riser into the red pen, the pen's ticks; a clap into the rule; a hit on "See me"
 # and the slam back to frame 1.
 SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 0.85, "tail": 0.0}),
-          ("s_b", (7, 8, 9), {"boost": 1.1, "lift": 0.5, "drop_at": [[0, 1]], "tail": 0.0}),
+          ("s_b", (7, 8, 9), {"boost": 1.15, "lift": 0.5, "drop_at": [[0, 1]], "tail": 0.0}),
           ("s_c", (10, 11, 12), {"outro": True, "pre": 0.3, "boost": 1.5, "lift": 0.6, "rise": 1.5, "tail": 0.0})]
-GAP = {1: 0.35, 2: 0.3, 3: 0.3, 4: 0.35, 5: 0.4, 6: 0.45, 7: 0.4, 8: 0.5, 9: 0.4, 10: 0.5, 11: 1.0, 12: 0.0}
+GAP = {1: 0.35, 2: 0.3, 3: 0.3, 4: 0.35, 5: 0.4, 6: 0.45, 7: 0.4, 8: 0.4, 9: 1.0, 10: 0.4, 11: 0.2, 12: 0.0}   # script review: 11 -> 12 unbroken
 GAP_TE = {}
 FLAGS_TE = {"s_c": {"boost": 1.35, "rise": 1.3}}
 YT = {"s_a": "₹960 → ₹1,60,936", "s_b": "Our test", "s_c": "Digit by digit"}
