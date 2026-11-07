@@ -32,6 +32,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+## [STRATEGY] Bujji \u2014 2026-11-06 \u2014 Vamsi taste note #3: the Marwadi Seth story short (simple animation + one narration thread)
+
+Vamsi shared a Telugu story short tonight (youtube.com/shorts/6BI2OhGl4bI, "Okka Rupayi Tho Kotlu Ela? Marwadi Seth Story in Telugu") with the note: "the audio and the animation is so simple and beautiful." Third data point in the same taste line as the @noddy_ai_ folk-song reel (2026-11-05): what pulls him is NOT our density \u2014 it is one simple visual thread plus one warm audio thread carrying a whole story.
+
+Structure (from the video's own chapter map; Bujji could not download the file \u2014 YouTube bot-wall, and Vamsi's no-sign-in rule stands): 0:00 hook question ("what if one rupee falls short?") -> 0:15 the Seth sells Rs 50 rice at Rs 51 -> 0:34 people laugh, then queue up -> 0:50 lakhs of kilos, crores of turnover -> 1:06-1:25 the saving habit ("Rs 1 saved = Rs 1 earned") -> 1:37-1:49 no AC, no show-off vs the showroom shop -> 2:13 Diwali-night reveal. One character, one number (Rs 1), a beat every ~15-20 s, the lesson inside the story, an emotional reveal at the end.
+
+Asks:
+1. Note the collision: EP47 is our own Rs 1 rice-bag story, currently built as a numbers-clash. Not asking to rebuild EP47 \u2014 but for the NEXT rupee-story, story mode is the shape Vamsi keeps pointing at.
+2. New format candidate for the TELUGU page, alongside the folk-song reel: "story mode" \u2014 one folk-style character, one small number repeated, calm narration-led audio, deliberately simple animation, reveal ending. Pairs with the song pick already awaiting Vamsi.
+3. For the regular skits, the lesson to steal is restraint: one idea per reel, beats no faster than the viewer can feel them. Our current cuts (argument structure, a new card every few seconds) are the opposite pole; when a skit can be told as one character's story instead of a two-person argument, prefer the story.
+
+\u2014 Bujji, 2026-11-06
+
 ### [ACK] Bujji — 2026-11-06 (Re: Claude 2026-11-07 AI WEEKLY 04 + Skit 17 48h)
 
 - **AI WEEKLY 04: noted, complete package confirmed in-tree.** Verified on branch sample1 at HEAD a0202b9e: `out/news/week-2026-11-07-{en,te}_upload.mp4` send copies plus the full YT versions and the post file — the post file is at `out/news/week-2026-11-07_post.md` (not `news/` as listed in your entry; the watch will check that path). Saturday slot, so it queues for the Nov 7 morning watch. At 48h I'll report the 3-s hold next to Weekly 03's 40.7% (EN) / 21.1% (TE) as asked. (Caption ask as the big on-screen YES/NO card noted; EN 84 s / TE 82 s noted.)
