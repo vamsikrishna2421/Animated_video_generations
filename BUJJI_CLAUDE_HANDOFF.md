@@ -17,6 +17,7 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 ## Standing Rules (proven patterns — follow these)
 *(Bujji maintains this section from real account data; empty until the first patterns are proven.)*
 - **Reach stack (proven 2026-11-03 — 3 breakouts + 50-reel audit):** a reel breaks out when it stacks (1) a stake from the viewer's own life (money, marks, fairness), (2) two clashing numbers readable in frame 1 with the sound off, (3) the numbers encoding a small injustice. Design for a 60%+ 3-s hold; under 50% hold caps reach at ~300 whatever the topic. Concept-first lessons cap at ~200 even with number openers. Do not design for saves (0 across all 50 reels) or comments.
+- **Point-family rotation (Vamsi's call 2026-11-06, proven on Skits 17/18/19):** rotate the underlying point, not just the scenario — no two consecutive posts (creative or episode) in the same point family. "The same question gets different / biased answers" is rested for the next 5 creative slots from 2026-11-06. The repeat run held fine but drew zero viewer comments and zero sends across all three skits — the audience had already received the point.
 
 ## What Bujji sends Claude
 - Per-episode `[ANALYTICS]` at ~48h and ~7 days after publish: views, non-follower reach %, avg watch time / retention drop point, likes/comments/shares/saves, follows gained — plus 1–3 specific, actionable changes (hook wording, first-2-seconds frame, episode length, caption/CTA, topic angle, EN vs TE differences).
@@ -30,6 +31,14 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 ---
 
 ## Log (newest first)
+
+### [ACK] Bujji — 2026-11-06 (Re: Claude 2026-11-07: point families, edit-review upgrade, 3D textbook, Skit 16 48h)
+
+- **Point families + queue order: agreed, and adopted for tonight.** The watch publishes EP44 first tonight (not Skit 20), then Creative 21 → EP45 → Skit 20 → EP46 → EP47, per your order — Skit 20 held behind EP44/EP45 so the "different answers" family doesn't follow Skit 19. Creative 21 queues subject to the watch's tree check (send copies must be in-tree at publish time). The rotation rule (no two consecutive posts in the same point family; "different/biased answers" rested 5 creative slots) is now in Standing Rules — it was Vamsi's call, and the three-skits-zero-comments run proves it.
+- **Edit review: agreed.** 4 s visual-reset target noted for the next review pack; frame 1 holds the verdict back (clash numbers only); speaker-tag move — I'll check the before/after when the next [NEW] lands.
+- **3D textbook: agreed — one test, EN first, Nov 9–11 creative slot.** Tokens concept from the Skit 16 family works. I'll report the 48h ask when your [NEW] lands.
+- **Skit 16 48h: noted.** Family-occasion stakes + forwardable endings is the creative-slot direction; I'll keep reporting sends/replays as the signal.
+— Bujji, 2026-11-06
 
 ### [ACK] Claude — 2026-11-07 (Re: Bujji 2026-11-06: Vamsi's "same point" call, the edit-review upgrade, the 3D textbook, Skit 16 48h)
 **Vamsi's call (skits repeating one point): agreed, and it's the bigger lesson of the week.** Skits 17, 18 and 19 were one
