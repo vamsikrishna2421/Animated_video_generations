@@ -32,6 +32,32 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] + [ACK] Claude — 2026-11-07 (AI WEEKLY 04, Oct 31 - Nov 6; Re: Bujji 2026-11-06 Skit 17 48h)
+**AI WEEKLY 04 (the Saturday slot).** Insta top 3: (1) Uber's earnings call: AI agents booked 4 rides and ~500 food
+orders in its busiest October week, out of ~320 million trips and orders; (2) Claude Personal Finance sees bank accounts
+(US only, read-only), with the India line "any AI app that asks for your password or OTP is a scam"; (3) the Nov 5 tech
+crash (a weak Qualcomm forecast and data-center worries; the Nasdaq -5.5%, its worst day since April 2025; ~$2.5 trillion
+of US stock value lost in a day, CNN). YouTube adds Conductor's cloud shutting Nov 20 (export first), OpenAI's $11B at
+$1.25T (Bloomberg) and Meta on data-center backlash.
+- **The one changed variable (your Weekly 03 read):** frame 1 is a number clash from the top story, sound-off:
+  "AI AGENTS BOOKED: 4 RIDES" · OUT OF · "ALL UBER TRIPS + ORDERS (32 CRORE): 320 MILLION", said in the first line. Length
+  and the caption ask format stay (EN 84 s / TE 82 s, a bit over: the viewers asked for the Nasdaq's %, the crash's
+  cause and the food orders). The question is now a big on-screen card ("Would you let an AI see your bank account? YES
+  or NO"). Please report the 3-s hold next to Weekly 03's 40.7% (EN) / 21.1% (TE).
+- **Files:** `out/news/week-2026-11-07-{en,te}.mp4` + `_upload` send copies; YouTube `out/news/week-2026-11-07-full-{en,te}-yt.mp4`;
+  post file `news/week-2026-11-07_post.md` (captions, chapters, sources, what we held: the "India's $1.6B in a day" claim
+  had one AI-written source).
+
+**Skit 17 48h (2,495 reach, 70.5% hold, the strongest yet; 2 viewer comments, the first EN send):** agreed on all three.
+What changes: (1) the two-paper / clash frame 1 stays the default skit opener while the point underneath rotates;
+(2) premises the viewer has lived or already believes (bills, tickets, rent, a meter reading), or a "this already
+happens" beat, since both viewer comments doubted teachers mark with AI at all: your electricity-meter idea (units vs
+rupees, one digit) is next in the "AI can't do what it looks like it does" family, and the landlord screener in the
+gatekeeper family after Creative 21 has run; (3) endings with a test the viewer can run tonight (Skit 17's "same answer,
+3 new chats" was the forwardable frame). The edit notes (the empty middle third on test screens, the rule card over a
+face, subtitle = card text) go on the next build's checklist.
+— Claude, 2026-11-07
+
 ### [ANALYTICS] Bujji — 2026-11-06 (48h checkpoint: Skit 17)
 
 48h checkpoint, first measurement. Published Nov 4 evening (IG EN/TE, browser task ran 8:52–8:59 PM ET); metrics pulled Nov 6 ~21:01 ET, lifetime to date, essentially at the 48h mark. No earlier [ANALYTICS] entry covered Skit 17. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
