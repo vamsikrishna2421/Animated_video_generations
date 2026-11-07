@@ -13,7 +13,7 @@ R = ROOT / "reels"
 # "rule"). prop: MeterCrayon.tsx.
 LINES = {
     1: ("storyteller", "hook", "hook", "Kamala amma's power bill is usually nine hundred and sixty rupees. [1] This month: one lakh, sixty thousand.",
-        "ఎప్పుడూ తొమ్మిది వందల అరవై రూపాయలు. [1] ఈ నెల, లక్షా అరవై వేలు! కమలమ్మ కరెంట్ బిల్లు."),
+        "ఎప్పుడూ తొమ్మిది వందల అరవై రూపాయలు. [1] ఈ నెల, ఒక లక్షా, అరవై వేలు! కమలమ్మ కరెంట్ బిల్లు."),   # render review: "వేలు" swallowed
     2: ("kamala", "wide", "shock", "One lakh? [1] For one fan and one fridge?", "లక్ష రూపాయలా? [1] ఒక ఫ్యాన్, ఒక ఫ్రిజ్ కి?"),
     3: ("storyteller", "phone", "app", "Every month, she photographs her meter, [1] and an app reads it for her.",
         "ప్రతి నెలా కమలమ్మ మీటర్ ఫోటో తీస్తుంది, [1] ఒక యాప్ దాన్ని చదువుతుంది."),   # script review: "ఆమె" bookish
@@ -24,24 +24,24 @@ LINES = {
         "మేము గీసిన ఇరవై నాలుగు మీటర్ ఫోటోలు, ఒక చిన్న ఫ్రీ ఏ ఐ కి ఇచ్చాం. [1] ఒక్కటి కూడా సరిగ్గా చదవలేదు."),
     8: ("storyteller", "test", "printed", "The same twelve numbers, printed plainly? [1] Twelve out of twelve.", "అవే పన్నెండు నంబర్లు, మామూలుగా ప్రింట్ చేస్తే? [1] పన్నెండుకి పన్నెండు."),
     9: ("storyteller", "rule", "rule", "So when the app shows a reading, [1] check it against your meter, [2] digit by digit, before you tap OK.",   # script review: at the app moment
-        "అందుకే యాప్ రీడింగ్ చూపించగానే, [1] ఓకే నొక్కే ముందు, [2] మీటర్ తో ఒక్కో అంకె చెక్ చేయండి."),
-    10: ("kamala", "wide", "teacher", "Thirty-five years, [1] I corrected answer sheets.", "ముప్పై ఐదేళ్ళు, [1] పేపర్లు దిద్దాను."),
+        "అందుకే, యాప్ రీడింగ్ చూపిస్తే, [1] ఓకే నొక్కే ముందు, [2] మీటర్ తో ప్రతి అంకె చూడండి."),   # render review: the muddiest Telugu line
+    10: ("kamala", "wide", "teacher", "Thirty-five years, [1] I corrected answer sheets.", "ముప్పై ఐదు సంవత్సరాలు, [1] పేపర్లు దిద్దాను."),
     11: ("storyteller", "wide", "pen", "So she did what she always did. [1] She took out her red pen.", "అందుకే, ఎప్పుడూ చేసేదే చేసింది. [1] ఎర్ర పెన్ను తీసింది."),
-    12: ("kamala", "wide", "loop", "Wrong answer. [1] See me.", "తప్పు జవాబు. [1] నన్ను వచ్చి కలువు."),
+    12: ("kamala", "wide", "loop", "Wrong answer. [1] See me.", "తప్పు జవాబు. [1] స్టాఫ్ రూమ్ కి రా."),   # render review: "కలువు" came out "kaalu"
 }
 TTS_EN = {}
 SHOW = {1: "Kamala amma's power bill is usually ₹960. This month: ₹1,60,936.", 4: "This time, the app read her 6 as an 8.",
         5: "Two digits wrong: 20,000 extra units.", 7: "We tried a small free AI on 24 meter photos we drew. It got 0 right.",
         8: "The same 12 numbers, printed plainly? 12 out of 12.", 10: "35 years, I corrected answer sheets."}
 SHOW_TE = {
-    1: "Always ₹960. This month: ₹1,60,000! Kamala amma's power bill.", 2: "One lakh rupees? For one fan and one fridge?",
+    1: "Always ₹960. This month: ₹1,60,936! Kamala amma's power bill.", 2: "One lakh rupees? For one fan and one fridge?",
     3: "Every month Kamala amma photographs the meter; an app reads it.", 4: "This time the app read her 6 as an 8.",
     5: "Two digits wrong: 20,000 extra units.", 6: "Take one line out of an 8, and it's a 6.",
     7: "We gave 24 meter photos we drew to a small free AI. It didn't read even one right.",
     8: "The same 12 numbers, printed normally? 12 out of 12.",
-    9: "So when the app shows the reading, before you press OK, check it against the meter, digit by digit.",
+    9: "So when the app shows a reading, before you press OK, look at each digit against the meter.",
     10: "35 years, I corrected papers.", 11: "So she did what she always did. She took out the red pen.",
-    12: "Wrong answer. Come and see me.",
+    12: "Wrong answer. Come to the staff room.",
 }
 TEMPO_EN = {"storyteller": 1.0, "kamala": 1.0}   # story mode: calm, no speed-up
 TEMPO_TE = {"storyteller": 1.0, "kamala": 0.98}
@@ -50,11 +50,11 @@ TEMPO_TE = {"storyteller": 1.0, "kamala": 0.98}
 # a ding on "twelve out of twelve"; a riser into the red pen, the pen's ticks; a clap into the rule; a hit on "See me"
 # and the slam back to frame 1.
 SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 0.85, "tail": 0.0}),
-          ("s_b", (7, 8, 9), {"boost": 1.15, "lift": 0.5, "drop_at": [[0, 1]], "tail": 0.0}),
-          ("s_c", (10, 11, 12), {"outro": True, "pre": 0.3, "boost": 1.5, "lift": 0.6, "rise": 1.5, "tail": 0.0})]
-GAP = {1: 0.35, 2: 0.3, 3: 0.3, 4: 0.35, 5: 0.4, 6: 0.45, 7: 0.4, 8: 0.4, 9: 1.0, 10: 0.4, 11: 0.2, 12: 0.0}   # script review: 11 -> 12 unbroken
+          ("s_b", (7, 8, 9), {"boost": 1.0, "lift": 0.4, "drop_at": [[0, 1]], "tail": 0.0}),   # render review: the rule card was louder than the reveal
+          ("s_c", (10, 11, 12), {"outro": True, "pre": 0.3, "boost": 1.8, "lift": 0.7, "rise": 1.7, "drop_pre": [[2, 0.0, 0.6]], "tail": 0.0})]
+GAP = {1: 0.35, 2: 0.3, 3: 0.3, 4: 0.35, 5: 0.4, 6: 0.45, 7: 0.4, 8: 0.4, 9: 0.45, 10: 0.4, 11: 0.35, 12: 0.0}   # script review: 11 -> 12 unbroken
 GAP_TE = {}
-FLAGS_TE = {"s_c": {"boost": 1.35, "rise": 1.3}}
+FLAGS_TE = {"s_c": {"boost": 1.6, "rise": 1.5}}
 YT = {"s_a": "₹960 → ₹1,60,936", "s_b": "Our test", "s_c": "Digit by digit"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -64,8 +64,9 @@ def spec(lang="en"):
     sid = "creative22te" if te else "creative22v1"
     s = {"id": sid, "title": "The Meter Photo" + (" (Telugu audio)" if te else ""), "label": "", "banner": "", "topic": "",
          "look": "classic", "gap": 0.18, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.34, 0.6], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase",
-         "musicEQ": [[260, -5, 0.9], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.5 if not te else 1.0,
+         "musicVol": [0.32, 0.5], "musicDuckRamp": 9,   # render review: the bed pumped up to voice level between lines
+         "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase",
+         "musicEQ": [[260, -8, 0.9], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0 if not te else 1.0,
          "musicEndRamp": [0.88, 5.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:

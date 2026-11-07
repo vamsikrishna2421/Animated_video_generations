@@ -85,10 +85,12 @@ const bill = (c: Ctx, x: number, y: number, s: number, k: number, red: number, s
     c.font = HANDF(54); c.fillStyle = PEN; c.globalAlpha = clamp(k * 3) * clamp(red * 3 - 1);
     c.fillText("66114", 80, -120); c.fillText("120", 160, -6);
     c.beginPath(); c.moveTo(150, -20); c.lineTo(260, -20); c.stroke();
+    c.lineWidth = 8; c.beginPath(); c.moveTo(-10, 150); c.lineTo(-10 + 270 * clamp(red * 3 - 1.2), 140); c.stroke();   // render review: strike the amount
+    c.font = HANDF(80); c.fillText("₹960", 20, 250);
     c.globalAlpha = clamp(k * 3);
   }
   if (see > 0) {
-    c.save(); c.translate(-30, 290); c.rotate(-0.08); c.globalAlpha = clamp(see * 3);
+    c.save(); c.translate(-120, 330); c.rotate(-0.08); c.globalAlpha = clamp(see * 3);
     c.font = HANDF(96); c.fillStyle = PEN; c.textAlign = "center"; c.fillText("See me.", 0, 0);
     c.strokeStyle = PEN; c.lineWidth = 6; c.beginPath(); c.moveTo(-170, 26); c.quadraticCurveTo(0, 46, 170, 22); c.stroke();
     c.restore();
@@ -110,6 +112,7 @@ const phoneShot = (c: Ctx, W: number, f: number, t0: number, readK: number) => {
   c.fillStyle = "#0b1020"; rrect(c, 150, 230, 780, 1240, 60); c.fill();
   c.fillStyle = "#111827"; rrect(c, 180, 300, 720, 1100, 30); c.fill();
   c.font = SANS(34, 800); c.fillStyle = "#e5e7eb"; c.textAlign = "center"; c.fillText("Bill app · photo reading", W / 2, 360);
+  c.font = SANS(34, 700); c.fillStyle = "#fde68a"; c.fillText("many power companies' apps take a meter photo", W / 2, 1450);   // render review: is this real?
   lcd(c, 260, 520, 0.95, "66114", [], 1);   // the camera's view of her meter
   c.strokeStyle = "#fde68a"; c.lineWidth = 6; c.setLineDash([24, 14]); c.strokeRect(230, 470, 620, 380); c.setLineDash([]);
   if (readK > 0) {
@@ -156,9 +159,9 @@ const StMeter: React.FC<SP> = ({ s }) => {
     if (b.prop === "segs") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - 3} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.8} />, <Sfx key={k("g")} at={c1 + 2} src="reel/sfx_buzz.wav" vol={0.25} />); }
     if (b.prop === "printed") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.3} />);
-    if (b.prop === "pen") sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 20)} src="reel/sfx_riser.wav" vol={0.3} />, ...[0, 8, 16, 24].map((q) => <Sfx key={k("t" + q)} at={at + 12 + q} src="audio/sfx_tick.wav" vol={0.2} />));
+    if (b.prop === "pen") sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 20)} src="reel/sfx_riser.wav" vol={0.3} />, ...[0, 8, 16, 24].map((q) => <Sfx key={k("t" + q)} at={at + 12 + q} src="audio/sfx_tick.wav" vol={0.3} />), <Sfx key={k("s")} at={at + 30} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.7} />);   // render review: the strike needs a hit
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 12)} src={CLAP} vol={0.35} />, <Sfx key={k("h")} at={Math.max(0, at - 14)} src="reel/sfx_boom.wav" vol={te ? 0.35 : 0.5} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4)} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4)} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c2")} at={cue(i, 1, 0.4)} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
   return (
     <>
@@ -185,8 +188,8 @@ const StMeter: React.FC<SP> = ({ s }) => {
             c.restore();
           }
           tag(c, "+20,000 units", W / 2, 1160, 76, "#fee2e2", "#991b1b", -0.03, seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
-          c.save(); c.globalAlpha = seg(f, cu(1, 0.4) + 10, cu(1, 0.4) + 18); c.font = SANS(34, 700); c.fillStyle = "#475569"; c.textAlign = "center";
-          c.fillText("1st digit: 6 → 8 (+20,000) · 5th: 4 → 1", W / 2, 1260); c.restore();
+          c.save(); c.globalAlpha = seg(f, cu(1, 0.4) + 10, cu(1, 0.4) + 18); c.font = SANS(46, 800); c.fillStyle = INK; c.textAlign = "center";
+          c.fillText("1st digit: 6 → 8 (+20,000 units)", W / 2, 1270); c.fillText("5th digit: 4 → 1", W / 2, 1335); c.restore();   // render review: too small
         } else if (b.shot === "segs") {
           c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
           c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("A SIX AND AN EIGHT", W / 2, 320);
@@ -200,17 +203,18 @@ const StMeter: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "test") {
           const printed = b.prop === "printed";
           dark(c, W, H, printed ? "THE SAME 12 READINGS, PRINTED PLAINLY" : "OUR TEST: 24 METER PHOTOS WE DREW",
-            printed ? ["the same small free AI"] : ["12 readings × 2 styles (clean, phone-like)", "a small free AI that reads photos, offline"]);
+            printed ? ["the same small free AI"] : ["12 readings × 2 styles (clean, phone-like)", "a small free AI, offline: not the AI your power app uses"]);
           if (!printed) {
             const c1 = cu(1, 0.4);
             TEST.forEach((t, q) => miniMeter(c, 110 + (q % 3) * 300, 520 + Math.floor(q / 3) * 110, t, false, seg(f, ln.from + q * 2, ln.from + q * 2 + 6)));
             c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.font = SANS(120, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText("0 / 24", W / 2, 1110); c.restore();
-            c.save(); c.globalAlpha = seg(f, c1 + 14, c1 + 22); c.font = SANS(36, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("clean: 0 of 12 · phone-like: 0 of 12", W / 2, 1200); c.restore();
+            c.save(); c.globalAlpha = seg(f, c1 + 14, c1 + 22); c.font = SANS(50, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("clean: 0/12 · phone-like: 0/12", W / 2, 1220); c.restore();   // render review: the split was tiny
           } else {
             const c1 = cu(1, 0.4);
             TEST.forEach((t, q) => miniMeter(c, 110 + (q % 3) * 300, 520 + Math.floor(q / 3) * 110, t, q < PRINTED.right, seg(f, ln.from + q * 2, ln.from + q * 2 + 6), true));
             c.save(); c.globalAlpha = seg(f, c1, c1 + 8); c.font = SANS(120, 900); c.fillStyle = "#4ade80"; c.textAlign = "center"; c.fillText(`${PRINTED.right} / ${PRINTED.of}`, W / 2, 1110); c.restore();
-            tag(c, "it reads print; meter digits fool it", W / 2, 1230, 50, "#fde68a", INK, -0.02, seg(f, c1 + 12, c1 + 20));
+            c.save(); c.globalAlpha = seg(f, c1 + 6, c1 + 14); c.font = SANS(50, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("meter digits, clean: 0/12", W / 2, 1210); c.restore();
+            tag(c, "it reads print; meter digits fool it", W / 2, 1320, 50, "#fde68a", INK, -0.02, seg(f, c1 + 12, c1 + 20));
           }
         } else if (b.shot === "rule") {
           room(c, W, H);
@@ -234,9 +238,9 @@ const StMeter: React.FC<SP> = ({ s }) => {
           const [m, a] = loopOn ? (["smug", "rest"] as [BillMood, BillArms]) : KAMALA[n] ?? ["calm", "rest"];
           person(c, "kamala" as BillWho, [360, 1330], 0.72, m, a, b.who === "kamala" && talking, r);
           c.restore();
-          if (n === 2) {   // script review: say the story is made up
-            c.save(); c.font = SANS(32, 800); const tt = "a made-up story · \"86111\" is a real answer from our test"; const tw = c.measureText(tt).width + 40;
-            c.fillStyle = "rgba(15,23,42,0.85)"; rrect(c, 540 - tw / 2, 220, tw, 56, 14); c.fill(); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(tt, 540, 259); c.restore();
+          if (n === 2 || n === 3) {   // script review: say the story is made up
+            c.save(); c.font = SANS(40, 800); c.fillStyle = "rgba(15,23,42,0.88)"; rrect(c, 70, 205, W - 140, 130, 18); c.fill(); c.fillStyle = "#f8fafc"; c.textAlign = "center";
+            c.fillText("A MADE-UP STORY", 540, 255); c.font = SANS(36, 700); c.fillText("\"86111\" is a real answer from our test", 540, 308); c.restore();   // render review: too small
           }
           if (hookOn) {
             const blk = (x: number, k: string, v: string, col: string) => {

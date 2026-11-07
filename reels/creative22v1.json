@@ -9,8 +9,8 @@
  "lead": 0.35,
  "music": "lofi",
  "musicVol": [
-  0.34,
-  0.6
+  0.32,
+  0.5
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -19,7 +19,7 @@
  "musicEQ": [
   [
    260,
-   -5,
+   -8,
    0.9
   ],
   [
@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 0.5,
+ "musicGapGain": 0.0,
  "musicEndRamp": [
   0.88,
   5.0
@@ -154,8 +154,8 @@
    "id": "s_b",
    "type": "sk_meter",
    "tail": 0.0,
-   "boost": 1.15,
-   "lift": 0.5,
+   "boost": 1.0,
+   "lift": 0.4,
    "drop_at": [
     [
      0,
@@ -216,7 +216,7 @@
      "text": "So when the app shows a reading, [1] check it against your meter, [2] digit by digit, before you tap OK.",
      "show": "So when the app shows a reading, check it against your meter, digit by digit, before you tap OK.",
      "maxgap": 0.32,
-     "gap": 1.0,
+     "gap": 0.45,
      "tempo": 1.0
     }
    ]
@@ -227,9 +227,16 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.5,
-   "lift": 0.6,
-   "rise": 1.5,
+   "boost": 1.8,
+   "lift": 0.7,
+   "rise": 1.7,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     0.6
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -275,7 +282,7 @@
      "text": "So she did what she always did. [1] She took out her red pen.",
      "show": "So she did what she always did. She took out her red pen.",
      "maxgap": 0.32,
-     "gap": 0.2,
+     "gap": 0.35,
      "tempo": 1.0
     },
     {

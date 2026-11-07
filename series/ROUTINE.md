@@ -658,3 +658,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   - Telugu Parler says "బాట్" as "bod": use "రోబో"; "చుక్క" for a dot reads as a drink in a party scene: say "డాట్".
   - Gap music: `musicGapGain` 2.5 dB on top of scene boosts 1.5-2.0 put the music-only stretches 6 dB OVER the voice;
     with boosts that high keep the gap gain near 0.5 and let the scene boosts make the arc.
+- Nov 7 lessons (Creative 22, story mode):
+  - Story mode (one character, one calm storyteller) reviewed well: hooks 8 and 7, "I'd forward it to my parents". It
+    still needs a hit on the reveal: the first cut had none, and the rule card in the middle was the loudest quarter.
+  - A reveal that corrects something must show the corrected NUMBER the viewer cares about (the bill's ₹1,60,936 struck,
+    ₹960 written), not only the reading behind it, or the loop feels like nothing changed.
+  - Parler drops Telugu number words inside a long line ("లక్షా అరవై వేల రూపాయలు" came out "లక్షా రూపాయలు"): give every
+    Telugu line with a number a MUST group for the number word, and split long numbers with commas.
+  - A small vision AI (Qwen2.5-VL-3B) read printed digits 12/12 and seven-segment meter digits 0/12 on the same meters:
+    a vision demo needs a printed control, or viewers blame the drawing.

@@ -1,4 +1,4 @@
-# Creative 22 "The Meter Photo" · script v2, Nov 7 (the Nov 7 creative slot)
+# Creative 22 "The Meter Photo" · script v3 (as rendered), Nov 7 (the Nov 7 creative slot)
 
 **Format: story mode** (Vamsi's taste note via Bujji, Nov 6: one character, one warm narration thread, deliberately
 simple pictures, the lesson inside the story, a reveal at the end). One room (Kamala amma's wall with the meter, a small
@@ -61,7 +61,24 @@ then her story ends unbroken; a tag "a made-up story · "86111" is a real answer
 ఒక గీత తీసేస్తే, అదే ఆరు", "అందుకే యాప్ రీడింగ్ చూపించగానే, ఓకే నొక్కే ముందు, మీటర్ తో ఒక్కో అంకె చెక్ చేయండి", "తప్పు జవాబు";
 the caption ask "PHOTO or PERSON" (who reads your meter).
 
-## Script (English, v2) · ~55 s
+## Render review (human-viewer, EN + TE) and what changed
+Both stop on frame 1 (hook 8 and 7; "a lakh-rupee bill is a family-WhatsApp story") and would forward it (Sandeep to the
+family group, Priya to her parents); "read her six as an eight", "WE DREW" and the before-you-tap-OK rule landed; the
+6-and-8 card is the screenshot. Both: the red pen fixed the reading but left ₹1,60,936 standing, so the loop felt like
+nothing changed; the reveal had no hit and the rule card was louder; tiny text (the made-up tag, "1st digit: 6 → 8 ·
+5th: 4 → 1", the 0/12 split); the rule card sat 7 s on a dark screen; Telugu rule line muddy ("ఓకే నొక్కే ముందు" heard as
+"age na age"). Sandeep: are these apps real? (his bill comes from a reader with a machine); PHOTO or PERSON unclear for
+that. Priya: the fair comparison is clean 0/12 vs printed 12/12; say it's not the AI a power app uses; the English bed
+pumped up to voice level between lines. Telugu: "వేలు" swallowed, the subtitle said ₹1,60,000, "కలువు" came out "kaalu",
+"ముప్పై ఐదేళ్ళు" can sound like thirty. Changed: the red pen strikes ₹1,60,936 and writes ₹960, with a hit on the strike
+and on "See me." (the bed out just before it, the last scene louder, the rule's scene quieter); the made-up tag big on
+lines 2-3; the digit line in two big lines; "clean: 0/12 · phone-like: 0/12" and "meter digits, clean: 0/12" next to
+"12/12" printed; "not the AI your power app uses" on the test card; "many power companies' apps take a meter photo" on the
+phone; the rule card shorter; the English bed lower in the gaps with a deeper cut at 260 Hz; Telugu "ఒక లక్షా అరవై వేల
+రూపాయలు", "అందుకే, యాప్ రీడింగ్ చూపిస్తే, ఓకే నొక్కే ముందు, మీటర్ తో ప్రతి అంకె చూడండి", "ముప్పై ఐదు సంవత్సరాలు", "తప్పు జవాబు.
+స్టాఫ్ రూమ్ కి రా." (Sandeep: funnier, what a Telugu teacher says); the caption ask "APP or READER".
+
+## Script (English, v3) · 55 s
 | # | Who | Line |
 |---|---|---|
 | 1 | storyteller | Kamala amma's power bill is usually nine hundred and sixty rupees. [1] This month: one lakh, sixty thousand. |
@@ -77,10 +94,10 @@ the caption ask "PHOTO or PERSON" (who reads your meter).
 | 11 | storyteller | So she did what she always did. [1] She took out her red pen. |
 | 12 | kamala | Wrong answer. [1] See me. |
 
-## Script (Telugu, v2; on-screen text stays English)
+## Script (Telugu, v3; on-screen text stays English) · 55 s
 | # | Who | Telugu |
 |---|---|---|
-| 1 | storyteller | ఎప్పుడూ తొమ్మిది వందల అరవై రూపాయలు. [1] ఈ నెల, లక్షా అరవై వేలు! కమలమ్మ కరెంట్ బిల్లు. |
+| 1 | storyteller | ఎప్పుడూ తొమ్మిది వందల అరవై రూపాయలు. [1] ఈ నెల, ఒక లక్షా అరవై వేల రూపాయలు! కమలమ్మ కరెంట్ బిల్లు. |
 | 2 | kamala | లక్ష రూపాయలా? [1] ఒక ఫ్యాన్, ఒక ఫ్రిజ్ కి? |
 | 3 | storyteller | ప్రతి నెలా కమలమ్మ మీటర్ ఫోటో తీస్తుంది, [1] ఒక యాప్ దాన్ని చదువుతుంది. |
 | 4 | storyteller | ఈసారి యాప్, ఆరుని [1] ఎనిమిదిగా చదివింది. |
@@ -88,11 +105,12 @@ the caption ask "PHOTO or PERSON" (who reads your meter).
 | 6 | storyteller | ఎనిమిదిలో ఒక గీత తీసేస్తే, [1] అదే ఆరు. |
 | 7 | storyteller | మేము గీసిన ఇరవై నాలుగు మీటర్ ఫోటోలు, ఒక చిన్న ఫ్రీ ఏ ఐ కి ఇచ్చాం. [1] ఒక్కటి కూడా సరిగ్గా చదవలేదు. |
 | 8 | storyteller | అవే పన్నెండు నంబర్లు, మామూలుగా ప్రింట్ చేస్తే? [1] పన్నెండుకి పన్నెండు. |
-| 9 | storyteller | అందుకే యాప్ రీడింగ్ చూపించగానే, [1] ఓకే నొక్కే ముందు, [2] మీటర్ తో ఒక్కో అంకె చెక్ చేయండి. |
-| 10 | kamala | ముప్పై ఐదేళ్ళు, [1] పేపర్లు దిద్దాను. |
+| 9 | storyteller | అందుకే, యాప్ రీడింగ్ చూపిస్తే, [1] ఓకే నొక్కే ముందు, [2] మీటర్ తో ప్రతి అంకె చూడండి. |
+| 10 | kamala | ముప్పై ఐదు సంవత్సరాలు, [1] పేపర్లు దిద్దాను. |
 | 11 | storyteller | అందుకే, ఎప్పుడూ చేసేదే చేసింది. [1] ఎర్ర పెన్ను తీసింది. |
-| 12 | kamala | తప్పు జవాబు. [1] నన్ను వచ్చి కలువు. |
+| 12 | kamala | తప్పు జవాబు. [1] స్టాఫ్ రూమ్ కి రా. |
 
 ## Caption ask
-Who reads your power meter: a photo (an app or the reader's phone) or a person writing it down? Comment PHOTO or PERSON.
+Who reads your power meter: you, with a photo in an app, or a reader with a machine? Comment APP or READER.
+(render review: "PHOTO or PERSON" was unclear for spot billing)
 (script review: "MATCH" can't happen, the meter is always ahead of the last bill)

@@ -4,8 +4,8 @@
  "topic": "",
  "banner": "",
  "musicVol": [
-  0.34,
-  0.6
+  0.32,
+  0.5
  ],
  "title": "The Meter Photo",
  "handle": "@ai_maastaaru",
@@ -15,6 +15,10 @@
   [
    909,
    933
+  ],
+  [
+   1540,
+   1558
   ]
  ],
  "musicBoosts": [
@@ -25,25 +29,25 @@
   ],
   [
    818,
-   1350,
-   1.15
+   1329,
+   1.0
   ],
   [
-   1350,
-   1643,
-   1.5
+   1330,
+   1627,
+   1.8
   ],
   [
-   1350,
-   1643,
-   1.5,
+   1330,
+   1627,
+   1.7,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1643,
+ "totalFrames": 1627,
  "music": "reel/creative22v1/score.wav",
  "scenes": [
   {
@@ -519,7 +523,7 @@
     "hardCuts": true
    },
    "from": 818,
-   "frames": 532,
+   "frames": 511,
    "lines": [
     {
      "who": "storyteller",
@@ -826,8 +830,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1350,
-   "frames": 293,
+   "from": 1330,
+   "frames": 297,
    "lines": [
     {
      "who": "kamala",
@@ -958,32 +962,32 @@
      "color": "#FDA4AF",
      "sub": null,
      "audio": "reel/creative22v1/line_12.wav",
-     "from": 224,
+     "from": 228,
      "frames": 54,
      "words": [
       {
        "w": "Wrong",
-       "from": 225,
-       "to": 236
+       "from": 230,
+       "to": 240
       },
       {
        "w": "answer.",
-       "from": 236,
-       "to": 257
+       "from": 240,
+       "to": 262
       },
       {
        "w": "See",
-       "from": 257,
-       "to": 264
+       "from": 262,
+       "to": 269
       },
       {
        "w": "me.",
-       "from": 264,
-       "to": 271
+       "from": 269,
+       "to": 276
       }
      ],
      "cues": {
-      "1": 257
+      "1": 262
      }
     }
    ]
