@@ -1,0 +1,293 @@
+{
+ "id": "creative22v1",
+ "title": "The Meter Photo",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.18,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.34,
+  0.6
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -5,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.5,
+ "musicEndRamp": [
+  0.88,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_meter",
+   "tail": 0.0,
+   "boost": 0.85,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "kamala",
+      "shot": "wide",
+      "prop": "shock",
+      "n": 2
+     },
+     {
+      "who": "storyteller",
+      "shot": "phone",
+      "prop": "app",
+      "n": 3
+     },
+     {
+      "who": "storyteller",
+      "shot": "phone",
+      "prop": "read",
+      "n": 4
+     },
+     {
+      "who": "storyteller",
+      "shot": "meter",
+      "prop": "meter",
+      "n": 5
+     },
+     {
+      "who": "storyteller",
+      "shot": "segs",
+      "prop": "segs",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "₹960 → ₹1,60,936",
+     "title": "₹960 → ₹1,60,936",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Kamala amma's power bill is usually nine hundred and sixty rupees. [1] This month: one lakh, sixty thousand.",
+     "show": "Kamala amma's power bill is usually ₹960. This month: ₹1,60,936.",
+     "maxgap": 0.32,
+     "gap": 0.35,
+     "tempo": 1.0
+    },
+    {
+     "who": "kamala",
+     "file": "02_kamala.wav",
+     "text": "One lakh? [1] For one fan and one fridge?",
+     "show": "One lakh? For one fan and one fridge?",
+     "maxgap": 0.32,
+     "gap": 0.3,
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Every month, she photographs her meter, [1] and an app reads it for her.",
+     "show": "Every month, she photographs her meter, and an app reads it for her.",
+     "maxgap": 0.32,
+     "gap": 0.3,
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "This time, the app read: [1] eight, six, one, one, one.",
+     "show": "This time, the app read: 8-6-1-1-1.",
+     "maxgap": 0.32,
+     "gap": 0.35,
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Her meter said [1] six, six, one, one, four.",
+     "show": "Her meter said 6-6-1-1-4.",
+     "maxgap": 0.32,
+     "gap": 0.4,
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "On a meter, a six is an eight [1] with one line missing.",
+     "show": "On a meter, a six is an eight with one line missing.",
+     "maxgap": 0.32,
+     "gap": 0.45,
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_meter",
+   "tail": 0.0,
+   "boost": 1.1,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     0,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "storyteller",
+      "shot": "test",
+      "prop": "printed",
+      "n": 8
+     },
+     {
+      "who": "kamala",
+      "shot": "wide",
+      "prop": "teacher",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "We gave a small free AI that reads photos twenty-four meter photos. [1] It read zero right.",
+     "show": "We gave a small free AI that reads photos 24 meter photos. It read 0 right.",
+     "maxgap": 0.32,
+     "gap": 0.4,
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "The same numbers, printed plainly? [1] Twelve out of twelve.",
+     "show": "The same numbers, printed plainly? 12 out of 12.",
+     "maxgap": 0.32,
+     "gap": 0.5,
+     "tempo": 1.0
+    },
+    {
+     "who": "kamala",
+     "file": "09_kamala.wav",
+     "text": "Thirty-five years, [1] I corrected answer sheets.",
+     "show": "35 years, I corrected answer sheets.",
+     "maxgap": 0.32,
+     "gap": 0.4,
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_meter",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.5,
+   "lift": 0.6,
+   "rise": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "shot": "wide",
+      "prop": "pen",
+      "n": 10
+     },
+     {
+      "who": "storyteller",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "kamala",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Digit by digit",
+     "title": "Digit by digit",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "10_storyteller.wav",
+     "text": "So she did what she always did. [1] She took out her red pen.",
+     "show": "So she did what she always did. She took out her red pen.",
+     "maxgap": 0.32,
+     "gap": 0.5,
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "11_storyteller.wav",
+     "text": "Before you pay a bill an app read for you, [1] match the reading to your meter, [2] digit by digit.",
+     "show": "Before you pay a bill an app read for you, match the reading to your meter, digit by digit.",
+     "maxgap": 0.32,
+     "gap": 1.0,
+     "tempo": 1.0
+    },
+    {
+     "who": "kamala",
+     "file": "12_kamala.wav",
+     "text": "Wrong answer. [1] See me.",
+     "show": "Wrong answer. See me.",
+     "maxgap": 0.32,
+     "gap": 0.0,
+     "tempo": 1.0
+    }
+   ]
+  }
+ ]
+}

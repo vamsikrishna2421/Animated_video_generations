@@ -1,0 +1,215 @@
+{
+ "model": "ggml-org/Qwen2.5-VL-3B-Instruct-GGUF (Q4_K_M, mmproj f16)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0, max 16 tokens, one read per photo",
+ "ask": "Read the kWh reading on this electricity meter's display. Answer with only the digits.",
+ "rows": [
+  {
+   "id": "clean_01",
+   "truth": "66114",
+   "real": false,
+   "reply": ".86111",
+   "seconds": 28.2,
+   "hand": "86111"
+  },
+  {
+   "id": "clean_02",
+   "truth": "02733",
+   "real": false,
+   "reply": ".811.1",
+   "seconds": 24.7,
+   "hand": "8111"
+  },
+  {
+   "id": "clean_03",
+   "truth": "86450",
+   "real": false,
+   "reply": ".8611.11",
+   "seconds": 29.3,
+   "hand": "861111"
+  },
+  {
+   "id": "clean_04",
+   "truth": "48160",
+   "real": false,
+   "reply": ".181818",
+   "seconds": 23.9,
+   "hand": "181818"
+  },
+  {
+   "id": "clean_05",
+   "truth": "26357",
+   "real": false,
+   "reply": ".36361",
+   "seconds": 24.0,
+   "hand": "36361"
+  },
+  {
+   "id": "clean_06",
+   "truth": "86988",
+   "real": false,
+   "reply": ".8888",
+   "seconds": 24.2,
+   "hand": "8888"
+  },
+  {
+   "id": "clean_07",
+   "truth": "91471",
+   "real": false,
+   "reply": ".1171",
+   "seconds": 23.7,
+   "hand": "1171"
+  },
+  {
+   "id": "clean_08",
+   "truth": "61373",
+   "real": false,
+   "reply": ".8137.1",
+   "seconds": 24.0,
+   "hand": "81371"
+  },
+  {
+   "id": "clean_09",
+   "truth": "45358",
+   "real": false,
+   "reply": ".163.88",
+   "seconds": 24.0,
+   "hand": "16388"
+  },
+  {
+   "id": "clean_10",
+   "truth": "42629",
+   "real": false,
+   "reply": ".1108.01",
+   "seconds": 24.6,
+   "hand": "110801"
+  },
+  {
+   "id": "clean_11",
+   "truth": "20699",
+   "real": false,
+   "reply": ".200.18",
+   "seconds": 24.0,
+   "hand": "20018"
+  },
+  {
+   "id": "clean_12",
+   "truth": "65091",
+   "real": false,
+   "reply": ".8881",
+   "seconds": 23.7,
+   "hand": "8881"
+  },
+  {
+   "id": "real_01",
+   "truth": "19037",
+   "real": true,
+   "reply": ".19441",
+   "seconds": 23.9,
+   "hand": "19441"
+  },
+  {
+   "id": "real_02",
+   "truth": "62458",
+   "real": true,
+   "reply": ".",
+   "seconds": 23.6,
+   "hand": ""
+  },
+  {
+   "id": "real_03",
+   "truth": "58638",
+   "real": true,
+   "reply": ".9999",
+   "seconds": 24.9,
+   "hand": "9999"
+  },
+  {
+   "id": "real_04",
+   "truth": "76821",
+   "real": true,
+   "reply": ".",
+   "seconds": 23.7,
+   "hand": ""
+  },
+  {
+   "id": "real_05",
+   "truth": "14951",
+   "real": true,
+   "reply": ". 81961",
+   "seconds": 24.4,
+   "hand": "81961"
+  },
+  {
+   "id": "real_06",
+   "truth": "20962",
+   "real": true,
+   "reply": ".",
+   "seconds": 23.8,
+   "hand": ""
+  },
+  {
+   "id": "real_07",
+   "truth": "59318",
+   "real": true,
+   "reply": ".",
+   "seconds": 23.4,
+   "hand": ""
+  },
+  {
+   "id": "real_08",
+   "truth": "14281",
+   "real": true,
+   "reply": ".14381",
+   "seconds": 24.0,
+   "hand": "14381"
+  },
+  {
+   "id": "real_09",
+   "truth": "97497",
+   "real": true,
+   "reply": ".97491",
+   "seconds": 24.0,
+   "hand": "97491"
+  },
+  {
+   "id": "real_10",
+   "truth": "56344",
+   "real": true,
+   "reply": ".344",
+   "seconds": 23.7,
+   "hand": "344"
+  },
+  {
+   "id": "real_11",
+   "truth": "33994",
+   "real": true,
+   "reply": ".13994",
+   "seconds": 23.8,
+   "hand": "13994"
+  },
+  {
+   "id": "real_12",
+   "truth": "65136",
+   "real": true,
+   "reply": ".",
+   "seconds": 23.5,
+   "hand": ""
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}

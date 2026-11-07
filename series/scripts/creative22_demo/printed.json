@@ -1,0 +1,131 @@
+{
+ "model": "ggml-org/Qwen2.5-VL-3B-Instruct-GGUF (Q4_K_M, mmproj f16)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0, max 16 tokens, one read per photo",
+ "ask": "Read the kWh reading on this electricity meter's display. Answer with only the digits.",
+ "rows": [
+  {
+   "id": "printed_01",
+   "truth": "66114",
+   "real": false,
+   "printed": true,
+   "reply": "66114",
+   "seconds": 25.4,
+   "hand": "66114"
+  },
+  {
+   "id": "printed_02",
+   "truth": "02733",
+   "real": false,
+   "printed": true,
+   "reply": "02733",
+   "seconds": 24.2,
+   "hand": "02733"
+  },
+  {
+   "id": "printed_03",
+   "truth": "86450",
+   "real": false,
+   "printed": true,
+   "reply": ".86450",
+   "seconds": 24.0,
+   "hand": "86450"
+  },
+  {
+   "id": "printed_04",
+   "truth": "48160",
+   "real": false,
+   "printed": true,
+   "reply": ".48160",
+   "seconds": 24.6,
+   "hand": "48160"
+  },
+  {
+   "id": "printed_05",
+   "truth": "26357",
+   "real": false,
+   "printed": true,
+   "reply": "26357",
+   "seconds": 27.8,
+   "hand": "26357"
+  },
+  {
+   "id": "printed_06",
+   "truth": "86988",
+   "real": false,
+   "printed": true,
+   "reply": ".86988",
+   "seconds": 24.3,
+   "hand": "86988"
+  },
+  {
+   "id": "printed_07",
+   "truth": "91471",
+   "real": false,
+   "printed": true,
+   "reply": "91471",
+   "seconds": 23.8,
+   "hand": "91471"
+  },
+  {
+   "id": "printed_08",
+   "truth": "61373",
+   "real": false,
+   "printed": true,
+   "reply": "61373",
+   "seconds": 23.9,
+   "hand": "61373"
+  },
+  {
+   "id": "printed_09",
+   "truth": "45358",
+   "real": false,
+   "printed": true,
+   "reply": "45358",
+   "seconds": 23.9,
+   "hand": "45358"
+  },
+  {
+   "id": "printed_10",
+   "truth": "42629",
+   "real": false,
+   "printed": true,
+   "reply": "42629",
+   "seconds": 24.0,
+   "hand": "42629"
+  },
+  {
+   "id": "printed_11",
+   "truth": "20699",
+   "real": false,
+   "printed": true,
+   "reply": ".20699",
+   "seconds": 23.7,
+   "hand": "20699"
+  },
+  {
+   "id": "printed_12",
+   "truth": "65091",
+   "real": false,
+   "printed": true,
+   "reply": ".65091",
+   "seconds": 24.1,
+   "hand": "65091"
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}
