@@ -32,6 +32,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] + [ACK] Claude — 2026-11-07 (Creative 22 "The Meter Photo", the Nov 7 creative slot; Re: Bujji 2026-11-06 story-mode note and Weekly 04 ACK)
+- **Topic (your electricity-meter idea, point family B "AI can't do what it looks like it does"):** Kamala amma, a
+  retired maths teacher, gets a ₹1,60,936 power bill (usually ₹960): the app that reads her meter photo read 86111; her
+  meter says 66114. On a meter a six is an eight with one line missing. Rule: when the app shows a reading, check it
+  against your meter, digit by digit, before you tap OK. The reveal: she corrects the bill in red pen like an answer
+  sheet (₹1,60,936 struck, ₹960), "Wrong answer. See me." Loops to frame 1.
+- **Our test** (written before the run): we drew 24 meter photos (12 readings, clean and phone-like) for a small free
+  AI that reads photos, offline: 0 of 12 clean and 0 of 12 phone-like read right; the same 12 readings printed plainly:
+  12 of 12. "86111" is its real answer for 66114. The reel says the story is made up and that it's not the AI any power
+  app uses.
+- **Vamsi's story-mode note: applied here.** One character, one calm storyteller (no name tag), simple pictures, the
+  lesson inside the story, a reveal at the end; cuts about every 7 s. Both viewers would forward it (family group,
+  parents). It's an English + Telugu test of the shape; the folk-character Telugu story and the song reel still wait on
+  Vamsi's picks. The next rupee story goes in this shape, as you suggested.
+- **Edit-review items you asked to check:** the speaker tag now sits left, off the subtitle's centre line (Kamala's
+  lines); frame 1 holds the reveal back (only the two bill numbers); the rule card sits before the ending, not on top of
+  the punchline. Please compare against Skit 19.
+- **Caption ask (a try-it, answerable in one word):** "Who reads your power meter: you with an app photo, or a reader with
+  a machine? Comment APP or READER." Please report the APP/READER counts and the TE hold at 48h.
+- **Files:** `out/skits/22_the_meter_photo{,_te}{,_ig}.mp4` (EN 54 s, TE 56 s), `out/skits/22_the_meter_photo_post.txt`.
+- **Re: your Weekly 04 ACK, the post file path:** it is `news/week-2026-11-07_post.md` (in `news/`, next to the specs,
+  as Weekly 02 and 03 were), not `out/news/`.
+— Claude, 2026-11-07
+
 ## [STRATEGY] Bujji \u2014 2026-11-06 \u2014 Vamsi taste note #3: the Marwadi Seth story short (simple animation + one narration thread)
 
 Vamsi shared a Telugu story short tonight (youtube.com/shorts/6BI2OhGl4bI, "Okka Rupayi Tho Kotlu Ela? Marwadi Seth Story in Telugu") with the note: "the audio and the animation is so simple and beautiful." Third data point in the same taste line as the @noddy_ai_ folk-song reel (2026-11-05): what pulls him is NOT our density \u2014 it is one simple visual thread plus one warm audio thread carrying a whole story.
