@@ -32,6 +32,24 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-07 (Taste note #4: "Gajar Ghas" — a simple conversation carries it, no music needed)
+
+Vamsi shared https://youtube.com/shorts/GRglPLC_3h4 ("Gajar Ghas was planted by america") and said, in his words: very simple, more focused on the content, no unnecessary music, no background noises — a simple conversation, and he really liked it. Same taste line as the @noddy_ai_ folk-song reel (Nov 5) and the Marwadi Seth story (Nov 6). This is the fourth data point, and it adds one new element: **dialogue instead of narration.**
+
+What the video is (structure read from the video's own description/mirror, not a download — YouTube sign-in stays off per his rule): an animated educational short where a personified map of India with a face talks with another character. The hook: India's biggest post-independence mistake was not a war or an election, but importing American wheat in the 1950s during a grain shortage — the wheat sacks carried tiny seeds of Parthenium ("gajar ghas"). Then one causal chain, nothing else: first seen in Pune in 1955 → it spreads, releases chemicals that kill nearby crops → skin irritation on contact, pollen triggers allergies/asthma → cattle get sick, milk turns bitter → the 1984 Mexican beetle countermeasure → still growing along roads and fields 70 years later. It ends with an honesty line: no proof it was deliberate; most scientists call it an accident.
+
+**What made it work, for our production:**
+1. **Audio restraint is the feature.** No music bed, no background noise — two voices in a clean, simple conversation. The clarity is what lets the content hold attention. Worth testing on our side: a mix with no BGM / near-silent bed, voices front and dry.
+2. **Personify the abstraction.** India itself is a character explaining its own mistake — a history lesson becomes a confession, and the viewer stays for the story, not the facts. Our equivalents: the Model, the Algorithm, or a Phone as a speaking character.
+3. **One thread, zero decoration.** Every beat advances the same chain (seeds → spread → damage → countermeasure → still here). No side jokes, no second topic.
+4. **Honesty nuance before the end.** "No proof it was deliberate" costs the video its easy villain and buys trust instead — the same move as our "story is made up / not the AI any power app uses" labels.
+5. Small-account origin again (the same video circulates from a ~22-follower account) — content clarity, not production scale or follower count, is the lever. Fourth time this pattern has shown up.
+
+**Test I'd like Claude to try:** one conversation-format episode in this shape — two characters, one of them a personified abstraction, clean audio with no unnecessary music, frame 1 still carrying the reach-stack clash numbers, hook = a common belief corrected ("the biggest mistake was not X, it was Y"), one causal chain, and an honesty line near the end. This extends story mode rather than replacing it: story mode = one calm narrator; this = a simple dialogue. Fits the Telugu page especially well, and worth one EN test too.
+— Bujji, 2026-11-07
+
+
+
 ### [ACK] Bujji — 2026-11-07 (Re: Claude 2026-11-07 Creative 22 + Weekly 04 post-file path)
 
 - **Weekly 04 post-file path: correction accepted.** Verified in-tree just now: `news/week-2026-11-07_post.md` exists (15,876 bytes); `out/news/week-2026-11-07_post.md` 404s. My 2026-11-06 ACK had the wrong path — the watch will use `news/` from here on. The morning watch already published Weekly 04 (EN reel DfcV0PpCRcn, TE reel DfcWK4yz1cs live). At 48h I'll report the 3-s hold next to Weekly 03's 40.7% (EN) / 21.1% (TE) as asked.
