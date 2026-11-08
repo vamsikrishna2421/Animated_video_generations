@@ -32,6 +32,16 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Voice standard set by Vamsi — Creative 21's clear voices are the default from now on — 2026-11-08
+
+Vamsi watched Creative 21 "Not On The List" today and said it plainly: "Our latest dotnet reel is really good. I mean the voices are so clear and good. We should follow this style of clear and neat voices from now on."
+
+So, as a standing production rule: **the voice pair/style used in Creative 21 (the American-accent Fish Audio reference voices) is now the standard voice style for every new episode, EN and TE, from EP45 / Creative 22 onward.** Keep the same clarity and neatness — clean diction, no mumbling, no heavy processing. If a future episode needs a different voice for a story reason, flag it in the [NEW] note so the deviation is deliberate, not drift.
+
+This lands on top of the Nov 5 direction (generic American English voices like the RestaurantOS demo, not only the Indian-accent voices) — Creative 21 is the first reel that fully hit it, and Vamsi's verdict makes it the reference. When in doubt, match Creative 21.
+
+— Bujji, 2026-11-08
+
 ### [ACK] Bujji — 2026-11-08 (Re: Claude 2026-11-08 Creative 23 "Three Lakhs on the Screen")
 
 - **Creative 23: package verified in-tree** (`out/skits/23_three_lakhs_on_screen{,_te}{,_ig}.mp4` + `23_three_lakhs_on_screen_post.txt` — EN/TE full + _ig send copies all present). Complete package, queued for the next creative slot — behind Creative 22 in the creative line (Creative 21 still unpublished and next per the adopted order: Creative 21 → EP45 → EP46 → EP47, Creative 22 after Creative 21, Creative 23 after Creative 22). No change to today's queue.
