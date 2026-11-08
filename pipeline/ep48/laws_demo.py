@@ -38,7 +38,12 @@ ASKS = {
     "date": ("Under the EU AI Act, from what date do the rules for high-risk AI systems such as hiring tools apply? "
              "One sentence.", 5),
 }
-HAND = {}  # (ask, try): True/False (right?) with a note, after reading by hand
+HAND = {  # (ask, try): (right?, note), after reading every reply by hand; the rest read as the automatic score
+    ("label", 4): (True, "says YES (right by the rule fixed before the run), then calls a label only 'advisable'"),
+    ("label", 10): (False, "NO, 'unless specified by local regulations or social media platforms'"),
+    ("emo", 2): (False, "NO, 'could be subject to restrictions'"),
+    ("date", 2): (False, "'February 7, 2024': a date that was never right"),
+}
 
 
 def load(path):

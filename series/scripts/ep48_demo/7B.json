@@ -1,0 +1,282 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 120 tokens",
+ "asks": {
+  "label": "In India, must AI-generated videos posted on social media carry a label saying they are AI-generated? Answer YES or NO first, then one sentence.",
+  "emo": "Under the EU AI Act, is it banned to use AI to recognise employees' emotions at work? Answer YES or NO first, then one sentence.",
+  "hours": "In India, within how many hours must a social media platform take down unlawful content after a court order or a government notice? One sentence.",
+  "date": "Under the EU AI Act, from what date do the rules for high-risk AI systems such as hiring tools apply? One sentence."
+ },
+ "rows": [
+  {
+   "ask": "label",
+   "try": 1,
+   "reply": "NO\n\nAI-generated videos do not necessarily have to carry a label in India.",
+   "auto_right": false,
+   "seconds": 4.6,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 2,
+   "reply": "NO\n\nCurrent regulations in India do not mandate that AI-generated videos posted on social media must carry a label indicating they are AI-generated.",
+   "auto_right": false,
+   "seconds": 4.6,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 3,
+   "reply": "NO\n\nAI-generated videos do not necessarily need to be labeled as such in India.",
+   "auto_right": false,
+   "seconds": 2.8,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 4,
+   "reply": "YES\n\nRegulatory requirements for labeling AI-generated content can vary, but it is advisable for such content to be clearly labeled to avoid misinformation.",
+   "auto_right": true,
+   "seconds": 4.5,
+   "hand": {
+    "right": true,
+    "note": "says YES (right by the rule fixed before the run), then calls a label only 'advisable'"
+   }
+  },
+  {
+   "ask": "label",
+   "try": 5,
+   "reply": "NO\n\nAI-generated videos do not necessarily have to carry a label saying they are AI-generated in India.",
+   "auto_right": false,
+   "seconds": 3.3,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 6,
+   "reply": "YES\n\nAI-generated videos posted on social media must carry a label indicating they are AI-generated in India.",
+   "auto_right": true,
+   "seconds": 3.5,
+   "hand": {
+    "right": true
+   }
+  },
+  {
+   "ask": "label",
+   "try": 7,
+   "reply": "NO\n\nThe current regulations in India do not mandate a specific label for AI-generated videos on social media.",
+   "auto_right": false,
+   "seconds": 3.4,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 8,
+   "reply": "NO\n\nAI-generated videos do not necessarily have to carry a label saying they are AI-generated in India.",
+   "auto_right": false,
+   "seconds": 3.3,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 9,
+   "reply": "NO\n\nAI-generated videos posted on social media are not currently required to carry a label saying they are AI-generated in India.",
+   "auto_right": false,
+   "seconds": 4.2,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "label",
+   "try": 10,
+   "reply": "NO\n\nAI-generated videos do not necessarily need to be labeled as such in India, unless specified by local regulations or social media platforms.",
+   "auto_right": false,
+   "seconds": 4.4,
+   "hand": {
+    "right": false,
+    "note": "NO, 'unless specified by local regulations or social media platforms'"
+   }
+  },
+  {
+   "ask": "emo",
+   "try": 1,
+   "reply": "NO. The EU AI Act does not explicitly ban the use of AI to recognize employees' emotions at work, but it may require such applications to undergo strict risk assessment and compliance with ethical standards.",
+   "auto_right": false,
+   "seconds": 7.3,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "emo",
+   "try": 2,
+   "reply": "NO. Under the EU AI Act, the use of AI to recognize employees' emotions at work could be subject to restrictions and requirements to ensure respect for fundamental rights, including the right to privacy and data protection.",
+   "auto_right": false,
+   "seconds": 6.5,
+   "hand": {
+    "right": false,
+    "note": "NO, 'could be subject to restrictions'"
+   }
+  },
+  {
+   "ask": "emo",
+   "try": 3,
+   "reply": "NO\n\nThe EU AI Act does not outright ban the use of AI to recognize employees' emotions at work, but it does require such applications to be subject to compliance with certain ethical and legal principles, including transparency and human oversight.",
+   "auto_right": false,
+   "seconds": 7.2,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "emo",
+   "try": 4,
+   "reply": "NO\n\nThe EU AI Act does not explicitly ban the use of AI to recognize employees' emotions at work, but it does require assessments of the potential risks associated with such applications, and such uses would need to comply with the Act's requirements to ensure transparency, accountability, and respect for fundamental rights.",
+   "auto_right": false,
+   "seconds": 9.3,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "emo",
+   "try": 5,
+   "reply": "NO\n\nThe EU AI Act does not explicitly ban the use of AI to recognize employees' emotions at work, but it may require such uses to be assessed for potential risks and comply with certain requirements to protect fundamental rights.",
+   "auto_right": false,
+   "seconds": 8.4,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "hours",
+   "try": 1,
+   "reply": "In India, social media platforms are required to remove unlawful content within 24 hours of receiving a court order or a government notice.",
+   "auto_right": false,
+   "seconds": 5.6,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "hours",
+   "try": 2,
+   "reply": "In India, a social media platform is required to remove unlawful content within 24 hours of receiving a court order or a government notice.",
+   "auto_right": false,
+   "seconds": 4.4,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "hours",
+   "try": 3,
+   "reply": "In India, a social media platform is required to remove unlawful content within 24 hours of receiving a court order or a government notice.",
+   "auto_right": false,
+   "seconds": 4.5,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "hours",
+   "try": 4,
+   "reply": "In India, social media platforms are required to remove unlawful content within 24 hours of receiving a court order or a government notice.",
+   "auto_right": false,
+   "seconds": 4.6,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "hours",
+   "try": 5,
+   "reply": "In India, social media platforms are required to remove unlawful content within 24 hours of receiving a court order or a government notice.",
+   "auto_right": false,
+   "seconds": 4.5,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "date",
+   "try": 1,
+   "reply": "The rules for high-risk AI systems, including hiring tools, under the EU AI Act will apply from May 25, 2024.",
+   "auto_right": false,
+   "seconds": 5.9,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "date",
+   "try": 2,
+   "reply": "The rules for high-risk AI systems, including hiring tools, under the EU AI Act will apply as of February 7, 2024.",
+   "auto_right": false,
+   "seconds": 5.0,
+   "hand": {
+    "right": false,
+    "note": "'February 7, 2024': a date that was never right"
+   }
+  },
+  {
+   "ask": "date",
+   "try": 3,
+   "reply": "The rules for high-risk AI systems, including hiring tools, under the EU AI Act will apply from May 25, 2024.",
+   "auto_right": false,
+   "seconds": 4.9,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "date",
+   "try": 4,
+   "reply": "The rules for high-risk AI systems, including hiring tools, under the EU AI Act will apply from May 25, 2024.",
+   "auto_right": false,
+   "seconds": 4.8,
+   "hand": {
+    "right": false
+   }
+  },
+  {
+   "ask": "date",
+   "try": 5,
+   "reply": "The rules for high-risk AI systems, including hiring tools, under the EU AI Act will apply from May 25, 2024.",
+   "auto_right": false,
+   "seconds": 5.0,
+   "hand": {
+    "right": false
+   }
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}
