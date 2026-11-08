@@ -667,3 +667,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     Telugu line with a number a MUST group for the number word, and split long numbers with commas.
   - A small vision AI (Qwen2.5-VL-3B) read printed digits 12/12 and seven-segment meter digits 0/12 on the same meters:
     a vision demo needs a printed control, or viewers blame the drawing.
+- Nov 8 lessons (EP48, the first no-music conversation; Bujji taste note #4):
+  - A law question is a good demo: the right answer has a date. The small offline AI got 2 of 25 asks on AI rules right,
+    and the misses were of two kinds (old: the rule came after it; wrong: the EU ban was in the law before it was made).
+    Say both: "I was just old" alone contradicts our own table (script review).
+  - India's 2026 label rule is an amendment to the IT Rules, not an "AI law": say "rule". MeitY's site refuses fetches
+    (403): three law-firm summaries agreed; the EU fine amounts stayed out (Article 99 not read on a primary page).
+  - Fish dropped a short opening sentence ("That's the rule.") 4 of 4 times before a long one: give it its own take.
+  - No bed: `musicVol: [0, 0]` keeps the build and timing tools unchanged; the scene's few hits carry the arc (frame-1
+    hit, the stop before the number, the label stamp loudest).

@@ -42,4 +42,5 @@ from EP33). The shop cast (Ravi anna and the shop AI) now belongs to the episode
 | F. Your data / privacy | EP44 |
 | G. Scams dressed as AI | EP45 (deepfakes) |
 | H. Cost / speed asymmetry, who owns it | EP46 (40 hours vs 40 seconds) |
+| I. Out of date: an AI's answer has a date (and can be wrong and sure) | EP48 (AI laws: "no label needed", 2 of 25 right) |
 

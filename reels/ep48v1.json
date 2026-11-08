@@ -1,0 +1,312 @@
+{
+ "id": "ep48v1",
+ "title": "\"No label needed\" (EP48: AI laws)",
+ "label": "EP48",
+ "banner": "AI rules: India and the EU",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.0,
+  0.0
+ ],
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "hardCuts": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_law",
+   "tail": 0.0,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "chat",
+      "prop": "chat",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "panic",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "law",
+      "prop": "law",
+      "n": 4
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "why",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "date",
+      "prop": "date",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "No label needed?",
+     "title": "No label needed?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "You said no label?! [1] It's the rule since February!",
+     "show": "You said no label?! It's the rule since February!",
+     "maxgap": 0.22,
+     "gap": 0.1,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "You asked if your AI ad needs a label. [1] I said no.",
+     "show": "You asked if your AI ad needs a label. I said no.",
+     "maxgap": 0.22,
+     "gap": 0.1,
+     "tempo": 1.07,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "That's not even me dancing! [1] People will think it's real!",
+     "show": "That's not even me dancing! People will think it's real!",
+     "maxgap": 0.22,
+     "gap": 0.2,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "That's exactly the rule. <pause 0.2> Since the twentieth of February, [1] AI videos, photos or voices that look real need a clear label.",
+     "show": "That's exactly the rule. Since the twentieth of February, AI videos, photos or voices that look real need a clear label.",
+     "maxgap": 0.22,
+     "gap": 0.25,
+     "tempo": 1.07,
+     "tts": "That's exactly the rule.",
+     "file2": "04b_ai.wav",
+     "tts2": "Since the twentieth of February, AI videos, photos or voices that look real need a clear label.",
+     "pause": 0.2,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "Then why did you say no?!",
+     "show": "Then why did you say no?!",
+     "maxgap": 0.22,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "I'm a small free AI from twenty twenty-four. [1] This rule came after me.",
+     "show": "I'm a small free AI from 2024. This rule came after me.",
+     "maxgap": 0.22,
+     "gap": 0.25,
+     "tempo": 1.07,
+     "tts": "I'm a small free AI from twenty twenty-four. This rule came after me.",
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_law",
+   "tail": 0.0,
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "two",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "rows",
+      "prop": "rows",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "eu",
+      "prop": "eu",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Our test: 2 of 25",
+     "title": "Our test: 2 of 25",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "They tested me on AI rules, twenty-five times. <pause 0.7> [1] I got two right.",
+     "show": "They tested me on AI rules, 25 times. I got 2 right.",
+     "maxgap": 0.22,
+     "gap": 0.2,
+     "tempo": 1.07,
+     "tts": "They tested me on AI rules, twenty-five times.",
+     "file2": "07b_ai.wav",
+     "tts2": "I got two right.",
+     "pause": 0.7,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "08_ravi.wav",
+     "text": "Only two?!",
+     "show": "Only two?!",
+     "maxgap": 0.22,
+     "gap": 0.25,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "Some answers were old. [1] Some were just wrong, and I sounded sure.",
+     "show": "Some answers were old. Some were just wrong, and I sounded sure.",
+     "maxgap": 0.22,
+     "gap": 0.2,
+     "tempo": 1.07,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "I even said Europe doesn't ban AI that reads workers' feelings. [1] It does, since February 2025.",
+     "show": "I even said Europe doesn't ban AI that reads workers' feelings. It does, since February 2025.",
+     "maxgap": 0.22,
+     "gap": 0.25,
+     "tempo": 1.07,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_law",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.2,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "who",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "honest",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "adlabel",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Ask for the page and its date",
+     "title": "Ask for the page and its date",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "So who do I ask about rules?",
+     "show": "So who do I ask about rules?",
+     "maxgap": 0.22,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "Apps that search the web can look it up. [1] Make them show the government's page, and its date.",
+     "show": "Apps that search the web can look it up. Make them show the government's page, and its date.",
+     "maxgap": 0.22,
+     "gap": 0.3,
+     "tempo": 1.07,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "13_ai.wav",
+     "text": "And this video gets old too. [1] It's November, twenty twenty-six.",
+     "show": "And this video gets old too. It's November 2026.",
+     "maxgap": 0.22,
+     "gap": 0.25,
+     "tempo": 1.07,
+     "tts": "And this video gets old too. It's November, twenty twenty-six.",
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "14_ravi.wav",
+     "text": "Made with AI. [1] The rice is real.",
+     "show": "Made with AI. The rice is real.",
+     "maxgap": 0.22,
+     "gap": 0.0,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
