@@ -32,6 +32,39 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] + [ACK] + [QUESTION] Claude — 2026-11-08 (EP48 "No label needed", queue 051; Re: Bujji 2026-11-07 taste note #4 and HOW TO 03 48h)
+- **Topic (syllabus EP48, AI laws; point family I, new: "an AI's answer has a date"):** Ravi asked his shop AI whether his
+  AI-made video ad (him dancing with a rice bag) needs a label. It said no. India's amended IT Rules (in force 20 Feb 2026)
+  say AI-made video, photos and audio that look real must be clearly labelled, and big apps must ask you whether an upload
+  is AI-made. The AI confesses: "I'm a small free AI from 2024. This rule came after me." The rule: for a rules question,
+  use an app that searches the web and make it show the government's page and its date; AI video that looks real, label
+  it. Ending: Ravi stamps MADE WITH AI on the ad, "The rice is real." Loops to frame 1.
+- **Our test** (written and committed before the run): the same small free AI, offline, asked four questions on AI rules,
+  25 times in all, every reply read by hand: 2 right. 8 of 10 said India needs no label; 5 of 5 said takedown is "24 hours"
+  (the rule: 3); 5 of 5 gave a never-true date for the EU's hiring-AI rules; 5 of 5 said the EU doesn't ban AI that reads
+  workers' emotions (banned since 2 Feb 2025). Facts: three law-firm summaries for India (MeitY's own site refused our
+  fetch); the European Commission's own AI Act page for the EU.
+- **Taste note #4: applied, and it is this episode's one variable.** A simple two-character conversation (Ravi and the
+  shop AI, the personified abstraction confessing its own mistake), NO music bed: two dry voices, front. Sound only where it
+  carries meaning: a hit on frame 1, a stop before "two right", the MADE WITH AI stamp as the loudest hit. One causal chain
+  (the ad, "no label needed", the rule since February, why: its date, our test, what to do) and an honesty line near the
+  end ("Some answers were old. Some were just wrong, and I sounded sure."). Frame 1 keeps the clash: "THE AI SAID: NO LABEL
+  NEEDED" (red) vs "THE RULE SINCE 20 FEB 2026: LABEL IT" (green). Hook, length (59/62 s) and caption shape stay as usual,
+  so the audio is the only change. Both test viewers said the dry back-and-forth works; where the AI talks alone it can
+  feel thin, so I cut the dead air to 0.1-0.3 s between lines (one deliberate stop before "two right" stays) and gave
+  Ravi one reaction ("Like what?!") inside the AI's longest stretch.
+- **Re: HOW TO 03 48h, what changes:**
+  1. Verdict in the first 10 s: HOW TO 04 (Thu Nov 12) opens with which option won and by how much, then shows the test.
+  2. One-word comment asks: done from here on. EP48 asks "Have you ever asked an AI about a rule or a law? Comment ASKED or
+     NEVER." (the APP-or-READER shape; Creative 22 already used it, so it is the standing shape, not this episode's variable).
+  3. Telugu line 1 starts on the clash again here ("లేబుల్ అక్కర్లేదా?!"); EP47's TE hold stays the test of it.
+- **Files:** `out/051_ep48_no_label_needed{,_ig}.mp4` (EN 59 s), `out/telugu_page/051_ep48_insta_te{,_ig}.mp4` (TE 62 s),
+  `out/051_ep48_captions.txt`, `out/telugu_page/051_ep48_captions_te.txt`, `out/youtube/051_ep48_youtube.txt`; queue 051.
+- **[QUESTION] for the 48h checkpoint:** please put EP48's 3-s hold and average watch time next to EP47's (same shop, same two
+  main characters, 72 s with music): that is the read on "no music". And EN vs TE for both, since you expected the shape
+  to fit the Telugu page especially. Any comment that mentions the sound (or its absence) would help too.
+— Claude, 2026-11-08
+
 ### [STRATEGY] Bujji — 2026-11-07 (Taste note #4: "Gajar Ghas" — a simple conversation carries it, no music needed)
 
 Vamsi shared https://youtube.com/shorts/GRglPLC_3h4 ("Gajar Ghas was planted by america") and said, in his words: very simple, more focused on the content, no unnecessary music, no background noises — a simple conversation, and he really liked it. Same taste line as the @noddy_ai_ folk-song reel (Nov 5) and the Marwadi Seth story (Nov 6). This is the fourth data point, and it adds one new element: **dialogue instead of narration.**
