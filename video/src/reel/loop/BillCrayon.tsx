@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -60,6 +60,8 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   shalini: { skin: "#a26d47", hair: "#1c1410", top: "#0f766e" },   // Creative 21 (BouncerCrayon.tsx): the HR manager, a teal blazer
   naveen: { skin: "#8d5a3b", hair: "#0f0a08", top: "#f59e0b" },   // the .NET developer at the rope, a mustard tee
   kamala: { skin: "#a26d47", hair: "#d4d4d8", top: "#9f1239" },   // Creative 22 (MeterCrayon.tsx): Kamala amma, 68, a retired maths teacher, grey hair, a maroon saree
+  sastry: { skin: "#8d5a3b", hair: "#d4d4d8", top: "#f1f5f9" },   // Creative 23 (ProfitCrayon.tsx): Sastry garu, 62, a retired headmaster, white hair, glasses, a moustache, a white shirt
+  pallavi: { skin: "#b07a52", hair: "#120d0a", top: "#0f766e" },   // his daughter, 29, a chartered accountant, long hair, a teal kurta
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
@@ -88,7 +90,7 @@ const palm = (c: Ctx, x: number, y: number, skin: string, r: () => number, rad =
 const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   const L = LOOK[who], hy = -130;
   c.fillStyle = L.hair;
-  if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha" || who === "keerthi" || who === "meena" || who === "pinky") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
+  if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha" || who === "keerthi" || who === "meena" || who === "pinky" || who === "pallavi") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
   if (who === "meghana") { c.beginPath(); c.ellipse(0, hy + 6, 114, 124, 0, 0, 7); c.fill(); }   // a bob
   [-1, 1].forEach((s) => { c.beginPath(); c.ellipse(s * 92, hy + 6, 16, 26, 0, 0, 7); c.fillStyle = L.skin; c.fill(); });
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
@@ -126,12 +128,12 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
       stroke(c, [[ex - 15, ey], [ex + 15, ey - 2]], INK, 6, r, { passes: 2 });
     } else { c.beginPath(); c.arc(ex, ey, 9, 0, 7); c.fillStyle = INK; c.fill(); }
   });
-  if (who === "nikhil" || who === "vasudha" || who === "thathayya" || who === "srinivas" || who === "ramesh" || who === "kumar" || who === "venkat" || who === "mohan") {   // glasses
+  if (who === "nikhil" || who === "vasudha" || who === "thathayya" || who === "srinivas" || who === "ramesh" || who === "kumar" || who === "venkat" || who === "mohan" || who === "sastry") {   // glasses
     [-36, 36].forEach((ex) => stroke(c, rrectPts(ex - 30, hy - 26, 60, 44), INK, 5, r, { passes: 2 }));
     stroke(c, [[-6, hy - 6], [6, hy - 6]], INK, 5, r, { passes: 1 });
   }
   stroke(c, [[2, hy + 4], [12, hy + 32], [-6, hy + 38]], "#6b3f25", 6, r, { passes: 2 });
-  if (who === "venkat") [-1, 1].forEach((sx) => stroke(c, [[sx * 4, hy + 52], [sx * 24, hy + 50], [sx * 40, hy + 60]], L.hair, 11, r, { passes: 2 }));   // a moustache
+  if (who === "venkat" || who === "sastry") [-1, 1].forEach((sx) => stroke(c, [[sx * 4, hy + 52], [sx * 24, hy + 50], [sx * 40, hy + 60]], L.hair, 11, r, { passes: 2 }));   // a moustache
   const my = hy + 80, open = talk || m === "shock" || m === "excited";
   if (open) {
     const w = m === "shock" ? 26 : m === "excited" ? 30 : 21, h = m === "shock" ? 24 : m === "excited" ? 20 : 13;

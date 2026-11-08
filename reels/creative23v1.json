@@ -1,0 +1,293 @@
+{
+ "id": "creative23v1",
+ "title": "Three Lakhs on the Screen",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.32,
+  0.55
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -6,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.5,
+ "musicEndRamp": [
+  0.85,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_profit",
+   "tail": 0.0,
+   "boost": 0.9,
+   "data": {
+    "beats": [
+     {
+      "who": "sastry",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "pallavi",
+      "shot": "wide",
+      "prop": "verdict",
+      "n": 2
+     },
+     {
+      "who": "sastry",
+      "shot": "app",
+      "prop": "app",
+      "n": 3
+     },
+     {
+      "who": "pallavi",
+      "shot": "app",
+      "prop": "trick",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "₹3 lakh on screen, ₹0 in hand",
+     "title": "₹3 lakh on screen, ₹0 in hand",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "sastry",
+     "file": "01_sastry.wav",
+     "text": "Three lakhs on the screen, [1] and I can't take out one rupee!",
+     "show": "₹3 lakh on the screen, and I can't take out one rupee!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08
+    },
+    {
+     "who": "pallavi",
+     "file": "02_pallavi.wav",
+     "text": "Nanna, it's a scam. [1] No real trading makes a profit every single day. AI or not.",
+     "show": "Nanna, it's a scam. No real trading makes a profit every single day. AI or not.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.08
+    },
+    {
+     "who": "sastry",
+     "file": "03_sastry.wav",
+     "text": "Two lakhs, fifteen days ago. [1] Three percent profit, every single day!",
+     "show": "₹2 lakh, 15 days ago. 3% profit, every single day!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08
+    },
+    {
+     "who": "pallavi",
+     "file": "04_pallavi.wav",
+     "text": "Fifteen days, and not one bad day? [1] Real markets fall some days. That's the trick.",
+     "show": "Fifteen days, and not one bad day? Real markets fall some days. That's the trick.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_profit",
+   "tail": 0.0,
+   "boost": 1.2,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     3,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "pallavi",
+      "shot": "calc",
+      "prop": "calc",
+      "n": 5
+     },
+     {
+      "who": "sastry",
+      "shot": "wide",
+      "prop": "same",
+      "n": 6
+     },
+     {
+      "who": "pallavi",
+      "shot": "peel",
+      "prop": "peel",
+      "n": 7
+     },
+     {
+      "who": "pallavi",
+      "shot": "crore",
+      "prop": "crore",
+      "n": 8
+     },
+     {
+      "who": "sastry",
+      "shot": "popup",
+      "prop": "fee",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "The calculator trick",
+     "title": "The calculator trick",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "pallavi",
+     "file": "05_pallavi.wav",
+     "text": "Two lakhs, plus three percent, fifteen times: [1] exactly your screen.",
+     "show": "₹2 lakh, plus 3%, 15 times: exactly your screen.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.08
+    },
+    {
+     "who": "sastry",
+     "file": "06_sastry.wav",
+     "text": "To the rupee?!",
+     "show": "To the rupee?!",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.08
+    },
+    {
+     "who": "pallavi",
+     "file": "07_pallavi.wav",
+     "text": "It's not trading, Nanna. [1] It's a calculator, painted green.",
+     "show": "It's not trading, Nanna. It's a calculator, painted green.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.08
+    },
+    {
+     "who": "pallavi",
+     "file": "08_pallavi.wav",
+     "text": "If three percent a day were real, [1] your two lakhs would be nine hundred and seventy crore in a year.",
+     "show": "If 3% a day were real, your ₹2 lakh would be ₹970 crore in a year.",
+     "maxgap": 0.25,
+     "gap": 0.45,
+     "tempo": 1.08
+    },
+    {
+     "who": "sastry",
+     "file": "09_sastry.wav",
+     "text": "Then why does it want fifty-six thousand from me?!",
+     "show": "Then why does it want ₹56,000 from me?!",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_profit",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.7,
+   "lift": 0.6,
+   "rise": 1.5,
+   "data": {
+    "beats": [
+     {
+      "who": "pallavi",
+      "shot": "cases",
+      "prop": "cases",
+      "n": 10
+     },
+     {
+      "who": "pallavi",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "sastry",
+      "shot": "chat",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Don't pay: call 1930",
+     "title": "Don't pay: call 1930",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "pallavi",
+     "file": "10_pallavi.wav",
+     "text": "Real tax goes to the government, not to the app. [1] No real broker holds your money until you pay.",
+     "show": "Real tax goes to the government, not to the app. No real broker holds your money until you pay.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.08
+    },
+    {
+     "who": "pallavi",
+     "file": "11_pallavi.wav",
+     "text": "Don't pay more. Call one nine three zero now. [1] And before you invest, check SEBI's site.",
+     "show": "Don't pay more. Call 1930 now. And before you invest, check SEBI's site.",
+     "maxgap": 0.25,
+     "gap": 1.8,
+     "tempo": 1.08
+    },
+    {
+     "who": "sastry",
+     "file": "12_sastry.wav",
+     "text": "AI app, just cut the tax from my three lakhs! [1] \"Must be paid separately\"?!",
+     "show": "AI app, just cut the tax from my ₹3 lakh! \"Must be paid separately\"?!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.08
+    }
+   ]
+  }
+ ]
+}

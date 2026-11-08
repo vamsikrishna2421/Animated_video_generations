@@ -1,0 +1,298 @@
+{
+ "id": "creative23te",
+ "title": "Three Lakhs on the Screen (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.32,
+  0.55
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   260,
+   -6,
+   0.9
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.0,
+ "musicEndRamp": [
+  0.85,
+  5.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_profit",
+   "tail": 0.0,
+   "boost": 0.9,
+   "data": {
+    "beats": [
+     {
+      "who": "sastry",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "pallavi",
+      "shot": "wide",
+      "prop": "verdict",
+      "n": 2
+     },
+     {
+      "who": "sastry",
+      "shot": "app",
+      "prop": "app",
+      "n": 3
+     },
+     {
+      "who": "pallavi",
+      "shot": "app",
+      "prop": "trick",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "₹3 lakh on screen, ₹0 in hand",
+     "title": "₹3 lakh on screen, ₹0 in hand",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "sastry",
+     "file": "01_sastry.wav",
+     "text": "స్క్రీన్ మీద మూడు లక్షలు, [1] చేతికి ఒక్క రూపాయి కూడా రాదు!",
+     "show": "₹3 lakh on the screen, not one rupee in my hand!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.04
+    },
+    {
+     "who": "pallavi",
+     "file": "02_pallavi.wav",
+     "text": "నాన్నా, ఇది మోసం. [1] ఏ ట్రేడింగ్ కూడా రోజూ లాభం ఇవ్వదు. ఏ ఐ అయినా సరే.",
+     "show": "Nanna, this is a scam. No trading gives profit every day. AI or not.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.04
+    },
+    {
+     "who": "sastry",
+     "file": "03_sastry.wav",
+     "text": "పదిహేను రోజుల క్రితం రెండు లక్షలు పెట్టా. [1] రోజూ మూడు శాతం లాభం!",
+     "show": "I put in ₹2 lakh 15 days ago. 3% profit every day!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.04
+    },
+    {
+     "who": "pallavi",
+     "file": "04_pallavi.wav",
+     "text": "పదిహేను రోజుల్లో, ఒక్క రోజు కూడా నష్టం లేదా? [1] నిజమైన మార్కెట్ కొన్ని రోజులు పడుతుంది. అదే ట్రిక్.",
+     "show": "In 15 days, not one day of loss? Real markets fall some days. That's the trick.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_profit",
+   "tail": 0.0,
+   "boost": 1.2,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     3,
+     1
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "pallavi",
+      "shot": "calc",
+      "prop": "calc",
+      "n": 5
+     },
+     {
+      "who": "sastry",
+      "shot": "wide",
+      "prop": "same",
+      "n": 6
+     },
+     {
+      "who": "pallavi",
+      "shot": "peel",
+      "prop": "peel",
+      "n": 7
+     },
+     {
+      "who": "pallavi",
+      "shot": "crore",
+      "prop": "crore",
+      "n": 8
+     },
+     {
+      "who": "sastry",
+      "shot": "popup",
+      "prop": "fee",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "The calculator trick",
+     "title": "The calculator trick",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "pallavi",
+     "file": "05_pallavi.wav",
+     "text": "రెండు లక్షలకి, రోజూ మూడు శాతం, పదిహేను సార్లు కలిపితే: [1] స్క్రీన్ మీద ఉన్న నంబరే వస్తుంది.",
+     "show": "₹2 lakh, add 3% a day, 15 times: you get the number on your screen.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.04
+    },
+    {
+     "who": "sastry",
+     "file": "06_sastry.wav",
+     "text": "రూపాయితో సహా?!",
+     "show": "Down to the rupee?!",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.04
+    },
+    {
+     "who": "pallavi",
+     "file": "07_pallavi.wav",
+     "text": "ఇది ట్రేడింగ్ కాదు నాన్నా. [1] కాలిక్యులేటర్ కి గ్రీన్ కలర్ వేశారు, అంతే.",
+     "show": "This isn't trading, Nanna. They painted a calculator green, that's all.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.04
+    },
+    {
+     "who": "pallavi",
+     "file": "08_pallavi.wav",
+     "text": "రోజూ మూడు శాతం నిజమైతే, [1] మీ రెండు లక్షలు, ఏడాదిలో దాదాపు వెయ్యి కోట్లు అయ్యేవి.",
+     "show": "If 3% a day were real, your ₹2 lakh would be almost ₹1,000 crore in a year.",
+     "maxgap": 0.25,
+     "gap": 0.45,
+     "tempo": 1.04
+    },
+    {
+     "who": "sastry",
+     "file": "09_sastry.wav",
+     "text": "మరి నా దగ్గర యాభై ఆరు వేలు ఎందుకు అడుగుతోంది?!",
+     "show": "Then why is it asking me for ₹56,000?!",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_profit",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.5,
+   "lift": 0.6,
+   "rise": 1.3,
+   "data": {
+    "beats": [
+     {
+      "who": "pallavi",
+      "shot": "cases",
+      "prop": "cases",
+      "n": 10
+     },
+     {
+      "who": "pallavi",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "sastry",
+      "shot": "chat",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Don't pay: call 1930",
+     "title": "Don't pay: call 1930",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "pallavi",
+     "file": "10_pallavi.wav",
+     "text": "నిజమైన టాక్స్ గవర్నమెంట్ కి కడతాం, యాప్ కి కాదు. [1] ఏ నిజమైన బ్రోకర్ కూడా, డబ్బు ఆపి టాక్స్ అడగడు.",
+     "show": "Real tax is paid to the government, not to an app. No real broker holds your money and asks for tax.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.04
+    },
+    {
+     "who": "pallavi",
+     "file": "11_pallavi.wav",
+     "text": "ఇంకేమీ కట్టకండి. ఇప్పుడే వన్ నైన్ త్రీ జీరో కి కాల్ చేయండి. [1] పెట్టుబడి పెట్టే ముందు, సెబీ సైట్ లో చెక్ చేయండి.",
+     "show": "Don't pay anything more. Call 1930 now. Before you invest, check on SEBI's site.",
+     "maxgap": 0.25,
+     "gap": 1.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "sastry",
+     "file": "12_sastry.wav",
+     "text": "ఏ ఐ యాప్, టాక్స్ నా మూడు లక్షల్లోంచే తీసుకో! [1] విడిగా కట్టాలా?!",
+     "show": "AI app, take the tax from my ₹3 lakh! Pay it separately?!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}
