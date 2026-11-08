@@ -26,7 +26,7 @@ const CLAP = "reel/creative09v1/clap.wav";
 const GREEN = "#16a34a", RED = "#dc2626";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const RAVI: Record<number, [Mood, Arms]> = {
-  2: ["sus", "fold"], 3: ["panic", "up"], 5: ["angry", "point"], 6: ["sus", "rest"], 8: ["shock", "up"], 11: ["hope", "rest"], 12: ["hope", "rest"], 13: ["happy", "rest"],
+  2: ["sus", "fold"], 3: ["panic", "up"], 5: ["angry", "point"], 15: ["sus", "point"], 6: ["sus", "rest"], 8: ["shock", "up"], 11: ["hope", "rest"], 12: ["hope", "rest"], 13: ["happy", "rest"],
 };
 const DAY = "20 FEB 2026";
 
@@ -138,7 +138,7 @@ const lawCard = (c: Ctx, W: number, f: number, t0: number, c1: number) => {
     c.font = SANS(80, 900); c.fillStyle = INK; c.fillText("A CLEAR LABEL", W / 2, 1065);
     c.restore();
   }
-  chip(c, "big apps must ask you: \"Is it made with AI?\"", W / 2, 1250, "#e0e7ff", INK, seg(f, c1 + 14, c1 + 22), 38);
+  chip(c, "big apps must ask you: \"Is it made with AI?\"", W / 2, 1250, "#fde68a", INK, seg(f, c1 + 6, c1 + 12), 42);
   chip(c, "AI-written text: not covered", W / 2, 1345, "#334155", "#f8fafc", seg(f, c1 + 24, c1 + 32), 34);
 };
 const timeline = (c: Ctx, W: number, f: number, t0: number, c1: number) => {
@@ -206,8 +206,9 @@ const euCard = (c: Ctx, W: number, f: number, t0: number, c1: number) => {
   }
   stamp(c, "I SAID: NOT BANNED", W / 2, 860, RED, seg(f, t0 + 20, t0 + 28), 58, -0.05);
   chip(c, "5 times out of 5", W / 2, 990, "#fecaca", "#7f1d1d", seg(f, t0 + 28, t0 + 36), 40);
-  chip(c, "(except for medical or safety reasons)", W / 2, 760, "#334155", "#cbd5e1", seg(f, t0 + 10, t0 + 18), 32);
-  chip(c, "the law: 2024 · the ban: since 2 Feb 2025", W / 2, 1150, "#334155", "#f8fafc", seg(f, c1, c1 + 8), 36);
+  chip(c, "(except for medical or safety reasons)", W / 2, 765, "#334155", "#e2e8f0", seg(f, t0 + 10, t0 + 18), 38);
+  chip(c, "the ban was already in the 2024 law", W / 2, 1140, "#fde68a", INK, seg(f, c1, c1 + 8), 46);   // render review: "since 2025" after "from 2024" read as old, not wrong
+  chip(c, "(it applies since 2 Feb 2025)", W / 2, 1240, "#334155", "#e2e8f0", seg(f, c1 + 8, c1 + 16), 36);
 };
 
 // ---------- the scene ----------
@@ -235,7 +236,7 @@ const StLaw: React.FC<SP> = ({ s }) => {
       const slam = end + HOLD, st = cue(i, 1, 0.4) - 14;
       sfx.push(<Sfx key={k("r")} at={Math.max(0, st - 40)} src="reel/sfx_riser.wav" vol={0.8} />,   // render review: a rise into the stamp, the loudest hit
         <Sfx key={k("h")} at={st} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("i")} at={st + 1} src="reel/sfx_boom.wav" vol={1.0} />,
-        <Sfx key={k("c")} at={st} src={CLAP} vol={1.0} />, <Sfx key={k("p")} at={st + 2} src="audio/sfx_pop.wav" vol={0.8} />,
+        <Sfx key={k("c")} at={st} src={CLAP} vol={1.0} />, <Sfx key={k("d")} at={st + 1} src={CLAP} vol={0.8} />, <Sfx key={k("p")} at={st + 2} src="audio/sfx_pop.wav" vol={0.8} />,
         <Sfx key={k("z")} at={slam} src="reel/sfx_boom.wav" vol={0.7} />);
     }
   });
@@ -296,7 +297,7 @@ const StLaw: React.FC<SP> = ({ s }) => {
           if (b.prop === "rule" || b.prop === "honest") {   // render review: hold the card through the next line, and name the page
             const all = b.prop === "honest";
             c.save(); c.globalAlpha = all ? 1 : clamp(seg(p, 0.0, 0.08) * 3);
-            c.fillStyle = "rgba(15,23,42,0.94)"; rrect(c, 60, 240, W - 120, 960, 30); c.fill();
+            c.fillStyle = "rgba(15,23,42,0.94)"; rrect(c, 60, 240, W - 120, 990, 30); c.fill();
             c.font = SANS(52, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("A RULES QUESTION?", W / 2, 330);
             c.font = SANS(38, 800); c.fillStyle = "#e2e8f0"; c.fillText("an AI can be old, or wrong and sure", W / 2, 390);
             c.restore();
@@ -308,9 +309,9 @@ const StLaw: React.FC<SP> = ({ s }) => {
               c.restore();
             });
             const kp = all ? 1 : seg(f, cu(1, 0.45) + 8, cu(1, 0.45) + 16);
-            if (kp > 0) { c.save(); c.globalAlpha = clamp(kp * 3); c.font = SANS(32, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("India: meity.gov.in · EU: the European Commission's AI Act page", W / 2, 1150); c.restore(); }
+            if (kp > 0) { c.save(); c.globalAlpha = clamp(kp * 3); c.font = SANS(40, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("India: meity.gov.in", W / 2, 1128); c.fillText("EU: the European Commission's AI Act page", W / 2, 1180); c.restore(); }   // render review: unreadable at 32
           }
-          if (b.prop === "honest") stamp(c, "THIS VIDEO: NOV 2026", W / 2, 1300, "#475569", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 64, -0.05);
+          if (b.prop === "honest") stamp(c, "THIS VIDEO: NOV 2026", W / 2, 1330, "#475569", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 64, -0.05);
         }
       }} />
     </>

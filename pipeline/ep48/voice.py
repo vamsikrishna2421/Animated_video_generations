@@ -36,7 +36,7 @@ MUST = {"en": {1: [("said",), ("no",), ("label",), ("rule",), ("february",)],
                7: [("tested", "test"), ("ai",), ("rules", "rule"), ("twenty", "25"), ("times", "time")], "7b": [("two", "2"), ("right",)],
                8: [("only",), ("two", "2", "too", "to")],
                9: [("answers", "answer"), ("old",), ("wrong",), ("sure",)],
-               10: [("europe",), ("ban", "banned", "doesn't"), ("workers", "worker"), ("feelings", "feeling"), ("february",), ("2025", "twenty")],
+               10: [("europe",), ("ban", "banned", "doesn't"), ("workers", "worker"), ("feelings", "feeling"), ("already",), ("2024", "twenty"), ("law",)], 15: [("like",), ("what",)],
                11: [("who",), ("ask",), ("rules", "rule")],
                12: [("apps", "app"), ("search",), ("web",), ("government", "government's"), ("page",), ("date",)],
                13: [("video",), ("old",), ("november",), ("2026", "twenty", "2020")],
@@ -98,10 +98,26 @@ def level(path, under=4.0, cap=12.0):
     sf.write(path, y.astype(np.float32), sr)
 
 
+def tail(path, keep=0.12, floor=-40.0):
+    """Cut a take's silent tail (render review: Fish and the phone sound left 0.6-0.8 s of near-silence inside the line,
+    which played as dead air): keep `keep` s after the last 20 ms window above `floor` dB."""
+    x, sr = sf.read(path)
+    mono = x.mean(1) if x.ndim > 1 else x
+    hop = int(sr * 0.02)
+    db = [20 * np.log10(np.sqrt(np.mean(mono[i:i + hop] ** 2)) + 1e-9) for i in range(0, len(mono) - hop, hop)]
+    last = max((i for i, d in enumerate(db) if d > floor), default=len(db) - 1)
+    end = min(len(mono), (last + 1) * hop + int(keep * sr))
+    if end < len(mono) - int(0.05 * sr):
+        y = x[:end].copy()
+        f = min(len(y), int(0.03 * sr))
+        y[-f:] *= np.linspace(1, 0, f)[:, None] if y.ndim > 1 else np.linspace(1, 0, f)
+        sf.write(path, y.astype(np.float32), sr)
+
+
 # English lines whose judge text needs digits (Whisper writes numbers as digits)
 JUDGE_TEXT = {"4b": "Since the 20th of February, AI videos, photos or voices that look real need a clear label.",
               6: "I'm a small free AI from 2024. This rule came after me.", 7: "They tested me on AI rules, 25 times.",
-              "7b": "I got 2 right.", 8: "Only 2?!", 10: "I even said Europe doesn't ban AI that reads workers' feelings. It does, since February 2025.", 13: "And this video gets old too. It's November 2026."}
+              "7b": "I got 2 right.", 8: "Only 2?!", 10: "I said Europe doesn't ban AI that reads workers' feelings. That ban was already in its 2024 law.", 13: "And this video gets old too. It's November 2026."}
 
 
 def judge(path, text, lang, n):
@@ -173,6 +189,7 @@ def main(lang, only, keep=False):
                             f.unlink()
                 shutil.copy(heard(best[1], who, n, lang), src / fname)
                 level(src / fname)
+                tail(src / fname)
     print("VOICE_DONE", flush=True)
 
 

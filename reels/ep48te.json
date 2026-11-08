@@ -83,7 +83,7 @@
      "maxgap": 0.22,
      "gap": 0.1,
      "tempo": 1.0,
-     "gain_db": 0.5
+     "gain_db": 2.0
     },
     {
      "who": "ai",
@@ -108,7 +108,7 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "అదే రూల్. ఫిబ్రవరి ఇరవై నుంచి, [1] నిజంలా కనిపించే ఏఐ వీడియో, ఫోటో, వాయిస్ కి, క్లియర్ లేబుల్ ఉండాలి.",
+     "text": "అదే రూల్. ఫిబ్రవరి ఇరవై నుంచి, [1] నిజంలా కనిపించే ఏఐ వీడియో, ఫోటో, వాయిస్ కి, క్లియర్ లేబుల్ పెట్టాలి.",
      "show": "That's the rule. From 20 February, AI video, photo or voice that looks real needs a clear label.",
      "maxgap": 0.22,
      "gap": 0.25,
@@ -119,7 +119,7 @@
      "who": "ravi",
      "file": "05_ravi.wav",
      "text": "మరి ఎందుకు అక్కర్లేదు అన్నావు?!",
-     "show": "Then why did you say no need?!",
+     "show": "Then why did you say no?!",
      "maxgap": 0.22,
      "gap": 0.15,
      "tempo": 1.0,
@@ -162,6 +162,12 @@
       "n": 9
      },
      {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "like",
+      "n": 15
+     },
+     {
       "who": "ai",
       "shot": "eu",
       "prop": "eu",
@@ -180,15 +186,15 @@
     {
      "who": "ai",
      "file": "07_ai.wav",
-     "text": "నన్ను ఏఐ రూల్స్ మీద ఇరవై ఐదు సార్లు టెస్ట్ చేశారు. <pause 0.7> [1] రెండే కరెక్ట్.",
+     "text": "నన్ను ఏఐ రూల్స్ మీద ఇరవై ఐదు సార్లు టెస్ట్ చేశారు. <pause 0.4> [1] రెండే కరెక్ట్.",
      "show": "They tested me 25 times on AI rules. Only 2 correct.",
      "maxgap": 0.22,
-     "gap": 0.2,
+     "gap": 0.4,
      "tempo": 1.0,
      "tts": "నన్ను ఏఐ రూల్స్ మీద ఇరవై ఐదు సార్లు టెస్ట్ చేశారు.",
      "file2": "07b_ai.wav",
      "tts2": "రెండే కరెక్ట్.",
-     "pause": 0.7,
+     "pause": 0.4,
      "gain_db": -1.0
     },
     {
@@ -204,18 +210,28 @@
     {
      "who": "ai",
      "file": "09_ai.wav",
-     "text": "కొన్ని జవాబులు పాతవి. [1] కొన్ని తప్పులు, అయినా గట్టిగా చెప్పాను.",
-     "show": "Some answers were old. Some were wrong, and I still said them firmly.",
+     "text": "కొన్ని జవాబులు పాతవి. [1] కొన్ని తప్పు. నాకు మాత్రం అన్నీ కరెక్ట్ అనిపించాయి.",
+     "show": "Some answers were old. Some were wrong. To me, they all felt right.",
      "maxgap": 0.22,
      "gap": 0.2,
      "tempo": 1.0,
      "gain_db": -1.0
     },
     {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "ఏం చెప్పావు?!",
+     "show": "What did you say?!",
+     "maxgap": 0.22,
+     "gap": 0.15,
+     "tempo": 1.0,
+     "gain_db": 0.5
+    },
+    {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "ఉద్యోగుల ఫీలింగ్స్ చదివే ఏఐ ని, యూరప్ బ్యాన్ చేయలేదు అని కూడా చెప్పాను. [1] పోయిన సంవత్సరమే బ్యాన్ చేసింది.",
-     "show": "I also said Europe hasn't banned AI that reads employees' feelings. It banned it last year itself.",
+     "text": "యూరప్, ఉద్యోగుల ఫీలింగ్స్ చదివే ఏఐ ని బ్యాన్ చేయలేదు అని చెప్పా. [1] ఆ బ్యాన్ అప్పటికే చట్టంలో ఉంది.",
+     "show": "I said Europe doesn't ban AI that reads employees' feelings. That ban was already in the law.",
      "maxgap": 0.22,
      "gap": 0.25,
      "tempo": 1.0,
@@ -245,7 +261,7 @@
      },
      {
       "who": "ai",
-      "shot": "ai",
+      "shot": "wide",
       "prop": "honest",
       "n": 13
      },
@@ -278,8 +294,8 @@
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "వెబ్ లో వెతికే యాప్స్ చూసి చెప్తాయి. [1] కానీ ప్రభుత్వ పేజీ, దాని డేట్ చూపించమనండి.",
-     "show": "Apps that search the web can look and tell. But ask them to show the government page and its date.",
+     "text": "వెబ్ లో వెతికే యాప్స్ చూసి చెప్తాయి. [1] కానీ గవర్నమెంట్ సైట్, దాని డేట్ చూపించమనండి.",
+     "show": "Apps that search the web can look it up. But make them show the government site and its date.",
      "maxgap": 0.22,
      "gap": 0.3,
      "tempo": 1.0,
@@ -288,8 +304,8 @@
     {
      "who": "ai",
      "file": "13_ai.wav",
-     "text": "ఈ వీడియో కూడా పాతబడుతుంది. [1] ఇది ఈ నవంబర్ నాటిది.",
-     "show": "This video will get old too. It's from this November (2026).",
+     "text": "ఈ వీడియో కూడా పాతబడుతుంది. [1] ఇది ఈ నవంబర్ లో చేసిన వీడియో.",
+     "show": "This video will get old too. It was made this November (2026).",
      "maxgap": 0.22,
      "gap": 0.25,
      "tempo": 1.0,

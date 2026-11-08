@@ -40,6 +40,7 @@ def main(lang, only):
                 if best:
                     shutil.copy(V.heard(best[2], who, n, lang), src / fname)
                     V.level(src / fname)
+                    V.tail(src / fname)
                     print(f"{tagn}: kept {best[2].name}", flush=True)
 
 

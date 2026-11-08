@@ -17,7 +17,7 @@ LINES = {
     2: ("ai", "chat", "chat", "You asked if your AI ad needs a label. [1] I said no.", "మీ ఏఐ యాడ్ కి లేబుల్ కావాలా అని అడిగారు. [1] నేను అక్కర్లేదు అన్నాను."),
     3: ("ravi", "wide", "panic", "That's not even me dancing! [1] People will think it's real!", "ఆ డాన్స్ నాది కాదు! [1] చూసేవాళ్ళు నిజమే అనుకుంటారు!"),   # "చేసేది" stuttered 4 of 4
     4: ("ai", "law", "law", "That's exactly the rule. | Since the twentieth of February, [1] AI videos, photos or voices that look real need a clear label.",
-        "అదే రూల్. ఫిబ్రవరి ఇరవై నుంచి, [1] నిజంలా కనిపించే ఏఐ వీడియో, ఫోటో, వాయిస్ కి, క్లియర్ లేబుల్ ఉండాలి."),
+        "అదే రూల్. ఫిబ్రవరి ఇరవై నుంచి, [1] నిజంలా కనిపించే ఏఐ వీడియో, ఫోటో, వాయిస్ కి, క్లియర్ లేబుల్ పెట్టాలి."),   # render review: "ఉండాలి" heard "unadi"
     5: ("ravi", "ravi", "why", "Then why did you say no?!", "మరి ఎందుకు అక్కర్లేదు అన్నావు?!"),
     6: ("ai", "date", "date", "I'm a small free AI from 2024. [1] This rule came after me.",
         "నేను ఒక చిన్న ఫ్రీ ఏఐ ని, పాతదాన్ని. [1] ఈ రూల్ నా తర్వాత వచ్చింది."),   # Parler dropped the year (2024 is on the timeline)
@@ -25,13 +25,14 @@ LINES = {
         "నన్ను ఏఐ రూల్స్ మీద ఇరవై ఐదు సార్లు టెస్ట్ చేశారు. | [1] రెండే కరెక్ట్."),
     8: ("ravi", "ravi", "two", "Only two?!", "రెండా?!"),   # render review: "Two." came out flat
     9: ("ai", "rows", "rows", "Some answers were old. [1] Some were just wrong, and I sounded sure.",
-        "కొన్ని జవాబులు పాతవి. [1] కొన్ని తప్పులు, అయినా గట్టిగా చెప్పాను."),
-    10: ("ai", "eu", "eu", "I even said Europe doesn't ban AI that reads workers' feelings. [1] It does, since February 2025.",   # render review: it said
-         "ఉద్యోగుల ఫీలింగ్స్ చదివే ఏఐ ని, యూరప్ బ్యాన్ చేయలేదు అని కూడా చెప్పాను. [1] పోయిన సంవత్సరమే బ్యాన్ చేసింది."),   # "does not explicitly ban", not "allows"; release date isn't training cutoff
+        "కొన్ని జవాబులు పాతవి. [1] కొన్ని తప్పు. నాకు మాత్రం అన్నీ కరెక్ట్ అనిపించాయి."),   # render review: "చెప్పాను" garbled; "గట్టిగా" = loudly; "పక్కాగా" doubled; "చెప్పా" at the end garbled 3 of 3
+    15: ("ravi", "ravi", "like", "Like what?!", "ఏం చెప్పావు?!"),   # render review (TE): break the AI's solo with a reaction
+    10: ("ai", "eu", "eu", "I said Europe doesn't ban AI that reads workers' feelings. [1] That ban was already in its 2024 law.",   # render review: "since
+         "యూరప్, ఉద్యోగుల ఫీలింగ్స్ చదివే ఏఐ ని బ్యాన్ చేయలేదు అని చెప్పా. [1] ఆ బ్యాన్ అప్పటికే చట్టంలో ఉంది."),   # 2025" after "from 2024" sounded old, not wrong   # "does not explicitly ban", not "allows"; release date isn't training cutoff
     11: ("ravi", "wide", "who", "So who do I ask about rules?", "మరి రూల్స్ గురించి ఎవర్ని అడగాలి?"),
     12: ("ai", "wide", "rule", "Apps that search the web can look it up. [1] Make them show the government's page, and its date.",
-         "వెబ్ లో వెతికే యాప్స్ చూసి చెప్తాయి. [1] కానీ ప్రభుత్వ పేజీ, దాని డేట్ చూపించమనండి."),
-    13: ("ai", "wide", "honest", "And this video gets old too. [1] It's November 2026.", "ఈ వీడియో కూడా పాతబడుతుంది. [1] ఇది ఈ నవంబర్ నాటిది."),   # the year came out garbled (the stamp shows NOV 2026)
+         "వెబ్ లో వెతికే యాప్స్ చూసి చెప్తాయి. [1] కానీ గవర్నమెంట్ సైట్, దాని డేట్ చూపించమనండి."),   # render review: "ప్రభుత్వ పేజీ" bookish
+    13: ("ai", "wide", "honest", "And this video gets old too. [1] It's November 2026.", "ఈ వీడియో కూడా పాతబడుతుంది. [1] ఇది ఈ నవంబర్ లో చేసిన వీడియో."),   # the year came out garbled (the stamp shows NOV 2026)
     14: ("ravi", "adlabel", "loop", "Made with AI. [1] The rice is real.", "లేబుల్: ఏఐ తో చేసింది. [1] బియ్యం మాత్రం నిజం."),   # "మేడ్ విత్" came out "mert pit"
 }
 TTS_EN = {6: "I'm a small free AI from twenty twenty-four. [1] This rule came after me.",
@@ -41,21 +42,21 @@ SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     1: "No label needed?! It's the rule since February!", 2: "You asked if your AI ad needs a label. I said no need.",
     3: "That dance isn't mine! People will think it's real!",
     4: "That's the rule. From 20 February, AI video, photo or voice that looks real needs a clear label.",
-    5: "Then why did you say no need?!", 6: "I'm a small free AI, an old one. This rule came after me.",
+    5: "Then why did you say no?!", 6: "I'm a small free AI, an old one. This rule came after me.",
     7: "They tested me 25 times on AI rules. Only 2 correct.", 8: "Two?!",
-    9: "Some answers were old. Some were wrong, and I still said them firmly.",
-    10: "I also said Europe hasn't banned AI that reads employees' feelings. It banned it last year itself.",
-    11: "So who should I ask about rules?", 12: "Apps that search the web can look and tell. But ask them to show the government page and its date.",
-    13: "This video will get old too. It's from this November (2026).", 14: "Label: made with AI. The rice, though, is real.",
+    9: "Some answers were old. Some were wrong. To me, they all felt right.",
+    10: "I said Europe doesn't ban AI that reads employees' feelings. That ban was already in the law.", 15: "What did you say?!",
+    11: "So who should I ask about rules?", 12: "Apps that search the web can look it up. But make them show the government site and its date.",
+    13: "This video will get old too. It was made this November (2026).", 14: "Label: made with AI. The rice, though, is real.",
 }
 TEMPO_EN = {"ravi": 1.1, "ai": 1.07}   # a conversation, not a rush (taste note #4); first build ran 63 s
 TEMPO_TE = {"ravi": 1.0, "ai": 1.0}   # EP42 / Creative 14: Telugu speed-ups swallow words
 # No music bed (the one variable: taste note #4). The bed is generated as usual but played at zero, so the timing tools
 # stay the same; the scene's own few sounds (LawCrayon.tsx) and the voices are all you hear.
 SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"tail": 0.0}),
-          ("s_b", (7, 8, 9, 10), {"tail": 0.0}),
+          ("s_b", (7, 8, 9, 15, 10), {"tail": 0.0}),
           ("s_c", (11, 12, 13, 14), {"outro": True, "pre": 0.2, "tail": 0.0})]
-GAP = {1: 0.1, 2: 0.1, 3: 0.2, 4: 0.25, 5: 0.15, 6: 0.25, 7: 0.2, 8: 0.25, 9: 0.2, 10: 0.25, 11: 0.15, 12: 0.3, 13: 0.25, 14: 0.0}   # render review: 0.7-1.0 s of dead air felt like a freeze
+GAP = {15: 0.15, 1: 0.1, 2: 0.1, 3: 0.2, 4: 0.25, 5: 0.15, 6: 0.25, 7: 0.4, 8: 0.25, 9: 0.2, 10: 0.25, 11: 0.15, 12: 0.3, 13: 0.25, 14: 0.0}   # render review: 0.7-1.0 s of dead air felt like a freeze
 GAP_TE = {}
 YT = {"s_a": "No label needed?", "s_b": "Our test: 2 of 25", "s_c": "Ask for the page and its date"}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -81,12 +82,12 @@ def spec(lang="en"):
                   "gap": (GAP_TE if te else {}).get(n, GAP.get(n, 0.2)), "tempo": TEMPO_TE[who] if te else TEMPO_EN[who]}
             if " | " in ln["text"]:   # two takes; the stop before the number is the drop (no bed to cut)
                 p1, p2 = ln["text"].split(" | ")
-                pz = {7: 0.7}.get(n, 0.2)
+                pz = {7: 0.4 if te else 0.7}.get(n, 0.2)   # render review: the Telugu stop measured 1.4 s
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             elif not te and n in TTS_EN:
                 ln["tts"] = MARK.sub("", TTS_EN[n]).strip()
-            g = -1.0 if who == "ai" else 0.5
+            g = (-1.0 if who == "ai" else 0.5) + (1.5 if n == 1 else 0.0)   # render review: the first 3 s sat under the voice
             ln["gain_db"] = g
             lines.append(ln)
             beats.append({"who": who, "shot": shot, "prop": prop, "n": n})

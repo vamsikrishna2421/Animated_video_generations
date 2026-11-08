@@ -1,4 +1,4 @@
-# EP48 "AI laws: EU AI Act, India and the rest" (Season 5: Responsible AI) · queue 051 · script v3 (as rendered), Nov 8
+# EP48 "AI laws: EU AI Act, India and the rest" (Season 5: Responsible AI) · queue 051 · script v4 (as rendered), Nov 8
 
 ## The lesson
 A chat AI learns the world up to a date. Laws keep moving after it: India's AI-label rules came into force on
@@ -105,7 +105,23 @@ clap on it (the loudest hit). Telugu: line 3 "ఆ డాన్స్ నాద�
 dropped it; the timeline shows 2024), line 13 "ఇది ఈ నవంబర్ నాటిది." (the year came out garbled), line 14 "లేబుల్: ఏఐ తో
 చేసింది." ("మేడ్ విత్" came out "mert pit"), line 10 as English. Not changed: no bed (the test), no shop noise.
 
-## Script (English, v3) · 60 s
+## Render review 2 (human-viewer: Telugu render + English v3 re-check) and what changed
+English v3 fixes landed (the green LABEL IT block, "You said no label?!", "Only two?!", the rows add up, "offline", the rule
+card holding with its sources, the stamp clearly the loudest sound). Both (and both languages): "It does, since February
+2025" right after "I'm from 2024" made the Europe answer sound OLD, not wrong; the AI talks alone from ~33 to ~58 s;
+0.8 s of dead air still at 7.7 s and 37.2 s (EN) and 1.4 s at 30 s (TE); the sources line, the exceptions chip and the
+"big apps must ask you" chip too small. Telugu: "చెప్పాను" garbled twice (lines 9 and 10); "గట్టిగా చెప్పాను" reads "I said
+it loudly"; "ఉండాలి" heard "unadi" (must → is); "ప్రభుత్వ పేజీ" and "నాటిది" bookish; the English captions on the Telugu reel
+read machine-translated; Telugu hits sit at voice level. Frame 1 and "బియ్యం మాత్రం నిజం" land; Sandeep would forward it.
+Changed (v4): line 10 "I said Europe doesn't ban AI that reads workers' feelings. That ban was already in its 2024 law."
+(card: "the ban was already in the 2024 law", "(it applies since 2 Feb 2025)"); a new Ravi reaction before it, "Like what?!"
+/ "ఏం చెప్పావు?!" (breaks the solo); every take's silent tail cut to 0.12 s (Fish and the phone sound left 0.6-0.8 s
+inside the lines: the dead air); the Telugu stop before "two" 0.4 s; the sources line in two 40 px lines, the chips
+bigger, "big apps must ask you" yellow and earlier; a second clap on the stamp; line 1 +1.5 dB. Telugu: line 9 "కొన్ని తప్పు. నాకు మాత్రం అన్నీ కరెక్ట్ అనిపించాయి." ("చెప్పా" at the line end garbled every try),
+"చెప్పా", "క్లియర్ లేబుల్ పెట్టాలి", "గవర్నమెంట్ సైట్", "ఇది ఈ నవంబర్ లో చేసిన వీడియో"; plainer English captions on the Telugu
+reel. Not changed: "ఫిబ్రవరి ఇరవై" (the card shows the date).
+
+## Script (English, v4) · 60 s
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | ravi | You said no label?! [1] It's the rule since February! | frame 1: "THE AI SAID / NO LABEL NEEDED" vs "THE RULE SINCE 20 FEB 2026 / LABEL IT" over the ad |
@@ -117,28 +133,30 @@ dropped it; the timeline shows 2024), line 13 "ఇది ఈ నవంబర్ 
 | 7 | ai | They tested me on AI rules, twenty-five times. [1] I got two right. | OUR TEST: me (Qwen2.5 7B, Sep 2024), offline · 25 asks, 4 questions · 25 tiles, 2 green · "2 / 25" |
 | 8 | ravi | Only two?! | |
 | 9 | ai | Some answers were old. [1] Some were just wrong, and I sounded sure. | OLD: "no label needed" (8 of 10): the rule came after me · WRONG: "takedown in 24 hours" (5 of 5): the rule says 3 · WRONG: "hiring-AI rules from May 2024" (5 of 5): never true |
-| 10 | ai | I even said Europe doesn't ban AI that reads workers' feelings. [1] It does, since February 2025. | EUROPE · EU AI ACT (2024) · BANNED (since 2 Feb 2025): AI that reads emotions at work or school · I said "not banned", 5 of 5 |
+| 9b | ravi | Like what?! | |
+| 10 | ai | I said Europe doesn't ban AI that reads workers' feelings. [1] That ban was already in its 2024 law. | EUROPE · EU AI ACT (2024) · BANNED (since 2 Feb 2025): AI that reads emotions at work or school · I said "not banned", 5 of 5 |
 | 11 | ravi | So who do I ask about rules? | |
 | 12 | ai | Apps that search the web can look it up. [1] Make them show the government's page, and its date. | the chip: A RULES QUESTION? · an AI can be old, or wrong and sure · make it show the government's page + its date · AI video that looks real? label it |
 | 13 | ai | And this video gets old too. [1] It's November 2026. | a date stamp "THIS VIDEO: NOV 2026" |
 | 14 | ravi | Made with AI. [1] The rice is real. | his ad, a big "MADE WITH AI" stamp (the loudest hit) → frame 1 (loops) |
 
-## Script (Telugu, v3; on-screen text stays English)
+## Script (Telugu, v4; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | ravi | లేబుల్ అక్కర్లేదా?! [1] ఫిబ్రవరి నుంచే రూల్ ఉంది! |
 | 2 | ai | మీ ఏఐ యాడ్ కి లేబుల్ కావాలా అని అడిగారు. [1] నేను అక్కర్లేదు అన్నాను. |
 | 3 | ravi | ఆ డాన్స్ నాది కాదు! [1] చూసేవాళ్ళు నిజమే అనుకుంటారు! |
-| 4 | ai | అదే రూల్. ఫిబ్రవరి ఇరవై నుంచి, [1] నిజంలా కనిపించే ఏఐ వీడియో, ఫోటో, వాయిస్ కి, క్లియర్ లేబుల్ ఉండాలి. |
+| 4 | ai | అదే రూల్. ఫిబ్రవరి ఇరవై నుంచి, [1] నిజంలా కనిపించే ఏఐ వీడియో, ఫోటో, వాయిస్ కి, క్లియర్ లేబుల్ పెట్టాలి. |
 | 5 | ravi | మరి ఎందుకు అక్కర్లేదు అన్నావు?! |
 | 6 | ai | నేను ఒక చిన్న ఫ్రీ ఏఐ ని, పాతదాన్ని. [1] ఈ రూల్ నా తర్వాత వచ్చింది. |
 | 7 | ai | నన్ను ఏఐ రూల్స్ మీద ఇరవై ఐదు సార్లు టెస్ట్ చేశారు. [1] రెండే కరెక్ట్. |
 | 8 | ravi | రెండా?! |
-| 9 | ai | కొన్ని జవాబులు పాతవి. [1] కొన్ని తప్పులు, అయినా గట్టిగా చెప్పాను. |
-| 10 | ai | ఉద్యోగుల ఫీలింగ్స్ చదివే ఏఐ ని, యూరప్ బ్యాన్ చేయలేదు అని కూడా చెప్పాను. [1] పోయిన సంవత్సరమే బ్యాన్ చేసింది. |
+| 9 | ai | కొన్ని జవాబులు పాతవి. [1] కొన్ని తప్పు. నాకు మాత్రం అన్నీ కరెక్ట్ అనిపించాయి. |
+| 9b | ravi | ఏం చెప్పావు?! |
+| 10 | ai | యూరప్, ఉద్యోగుల ఫీలింగ్స్ చదివే ఏఐ ని బ్యాన్ చేయలేదు అని చెప్పా. [1] ఆ బ్యాన్ అప్పటికే చట్టంలో ఉంది. |
 | 11 | ravi | మరి రూల్స్ గురించి ఎవర్ని అడగాలి? |
-| 12 | ai | వెబ్ లో వెతికే యాప్స్ చూసి చెప్తాయి. [1] కానీ ప్రభుత్వ పేజీ, దాని డేట్ చూపించమనండి. |
-| 13 | ai | ఈ వీడియో కూడా పాతబడుతుంది. [1] ఇది ఈ నవంబర్ నాటిది. |
+| 12 | ai | వెబ్ లో వెతికే యాప్స్ చూసి చెప్తాయి. [1] కానీ గవర్నమెంట్ సైట్, దాని డేట్ చూపించమనండి. |
+| 13 | ai | ఈ వీడియో కూడా పాతబడుతుంది. [1] ఇది ఈ నవంబర్ లో చేసిన వీడియో. |
 | 14 | ravi | లేబుల్: ఏఐ తో చేసింది. [1] బియ్యం మాత్రం నిజం. |
 
 ## Caption ask (one-word choice; Bujji HOW TO 03 48h)

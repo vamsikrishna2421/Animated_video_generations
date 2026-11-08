@@ -80,7 +80,7 @@
      "maxgap": 0.22,
      "gap": 0.1,
      "tempo": 1.1,
-     "gain_db": 0.5
+     "gain_db": 2.0
     },
     {
      "who": "ai",
@@ -164,6 +164,12 @@
       "n": 9
      },
      {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "like",
+      "n": 15
+     },
+     {
       "who": "ai",
       "shot": "eu",
       "prop": "eu",
@@ -184,7 +190,7 @@
      "text": "They tested me on AI rules, twenty-five times. <pause 0.7> [1] I got two right.",
      "show": "They tested me on AI rules, 25 times. I got 2 right.",
      "maxgap": 0.22,
-     "gap": 0.2,
+     "gap": 0.4,
      "tempo": 1.07,
      "tts": "They tested me on AI rules, twenty-five times.",
      "file2": "07b_ai.wav",
@@ -213,10 +219,20 @@
      "gain_db": -1.0
     },
     {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "Like what?!",
+     "show": "Like what?!",
+     "maxgap": 0.22,
+     "gap": 0.15,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "I even said Europe doesn't ban AI that reads workers' feelings. [1] It does, since February 2025.",
-     "show": "I even said Europe doesn't ban AI that reads workers' feelings. It does, since February 2025.",
+     "text": "I said Europe doesn't ban AI that reads workers' feelings. [1] That ban was already in its 2024 law.",
+     "show": "I said Europe doesn't ban AI that reads workers' feelings. That ban was already in its 2024 law.",
      "maxgap": 0.22,
      "gap": 0.25,
      "tempo": 1.07,
@@ -246,7 +262,7 @@
      },
      {
       "who": "ai",
-      "shot": "ai",
+      "shot": "wide",
       "prop": "honest",
       "n": 13
      },
