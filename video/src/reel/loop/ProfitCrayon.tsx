@@ -59,12 +59,11 @@ const dark = (c: Ctx, W: number, H: number, title: string, sub: string[], col = 
   const fs = fit(c, title, W - 80, 58); c.font = SANS(fs, 900); c.fillStyle = col; c.textAlign = "center"; c.fillText(title, W / 2, 320);
   c.font = SANS(38, 700); c.fillStyle = "#e2e8f0"; sub.forEach((t, i) => c.fillText(t, W / 2, 388 + i * 52));
 };
-const room = (c: Ctx, W: number, H: number) => {
+const room = (c: Ctx, W: number, H: number, hook = false) => {
   c.fillStyle = "#e8eef5"; c.fillRect(0, 0, W, H);
   c.fillStyle = "#d6c3a3"; c.fillRect(0, 1240, W, H - 1240); c.fillStyle = "#b9a27c"; c.fillRect(0, 1232, W, 12);   // the floor
   c.fillStyle = "#fff7ed"; rrect(c, 800, 330, 180, 210, 10); c.fill(); c.fillStyle = RED; c.fillRect(800, 330, 180, 40);   // a calendar
-  c.fillStyle = "#7c5a34"; rrect(c, 90, 330, 230, 170, 8); c.fill(); c.fillStyle = "#cbd5e1"; rrect(c, 104, 344, 202, 142, 6); c.fill();   // a framed photo
-  c.font = SANS(22, 800); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("RETIREMENT, 2025", 205, 425);
+  if (!hook) { c.fillStyle = "#7c5a34"; rrect(c, 90, 330, 230, 170, 8); c.fill(); } if (!hook) { c.fillStyle = "#cbd5e1"; rrect(c, 104, 344, 202, 142, 6); c.fill(); c.font = SANS(22, 800); c.fillStyle = "#475569"; c.textAlign = "center"; c.fillText("RETIREMENT, 2025", 205, 425); }   // a framed photo (render review: it peeked under frame 1's blocks)
 };
 // the app (screen space): "AI Profit Bot", made up; dayK animates the balance climbing day by day
 const appScreen = (c: Ctx, x: number, y: number, w: number, h: number, day: number, wiggle: number, popup: number, f: number) => {
@@ -88,10 +87,10 @@ const appScreen = (c: Ctx, x: number, y: number, w: number, h: number, day: numb
   c.strokeStyle = "#4ade80"; c.lineWidth = 8; c.beginPath();
   for (let t = 0; t <= d; t += 0.25) { const px = gx + (gw * t) / 15, py = yOf(200000 * Math.pow(1.03, t)); t ? c.lineTo(px, py) : c.moveTo(px, py); } c.stroke();
   if (wiggle > 0) {
-    c.save(); c.globalAlpha = clamp(wiggle * 3); c.strokeStyle = "#fbbf24"; c.lineWidth = 6; c.beginPath();
+    c.save(); c.globalAlpha = clamp(wiggle * 3); c.strokeStyle = "#fbbf24"; c.lineWidth = 9; c.beginPath();
     const R = rng(77);
-    let v = 200000; for (let t = 0; t <= 15; t++) { v *= 1 + (R() - 0.48) * 0.035; const px = gx + (gw * t) / 15, py = Math.min(gy + gh, Math.max(gy, yOf(v))); t ? c.lineTo(px, py) : c.moveTo(px, py); } c.stroke();
-    c.font = SANS(28, 800); c.fillStyle = "#fbbf24"; c.fillText("a real market: up AND down", gx, gy + gh + 44); c.restore();
+    let v = 230000; for (let t = 0; t <= 15; t++) { v *= 1 + (R() - 0.45) * 0.14; const px = gx + (gw * t) / 15, py = Math.min(gy + gh, Math.max(gy, yOf(v))); t ? c.lineTo(px, py) : c.moveTo(px, py); } c.stroke();
+    c.font = SANS(40, 900); c.fillStyle = "#fbbf24"; c.fillText("a real market: up AND down", gx, gy + gh + 54); c.restore();
   }
   c.fillStyle = "#4ade80"; rrect(c, x + 36, y + h - 140, w - 72, 96, 20); c.fill();
   c.font = SANS(42, 900); c.fillStyle = "#052e16"; c.textAlign = "center"; c.fillText("WITHDRAW", x + w / 2, y + h - 78);
@@ -101,7 +100,7 @@ const appScreen = (c: Ctx, x: number, y: number, w: number, h: number, day: numb
     c.fillStyle = "#fff"; rrect(c, x + 28, py, w - 56, ph, 26); c.fill();
     c.fillStyle = RED; rrect(c, x + 28, py, w - 56, 96, 26); c.fill(); c.fillRect(x + 28, py + 60, w - 56, 36);
     c.font = SANS(38, 900); c.fillStyle = "#fff"; c.fillText("WITHDRAWAL ON HOLD", x + w / 2, py + 62);
-    c.font = SANS(34, 700); c.fillStyle = INK; c.fillText("Pay 18% tax first to withdraw", x + w / 2, py + 170);
+    c.font = SANS(44, 800); c.fillStyle = INK; c.fillText("Pay 18% tax first", x + w / 2, py + 165);
     c.font = SANS(96, 900); c.fillStyle = RED; c.fillText(inr(TAX), x + w / 2, py + 300);
     c.fillStyle = RED; rrect(c, x + 80, py + 380, w - 160, 100, 20); c.fill();
     c.font = SANS(44, 900); c.fillStyle = "#fff"; c.fillText("PAY NOW", x + w / 2, py + 446);
@@ -159,15 +158,15 @@ const StProfit: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#1f2937"; c.fillRect(0, 0, W, H);
           const day = b.prop === "app" ? 15 * easeOut(seg(f, ln.from, ln.from + 30)) : 15;
           appScreen(c, 200, 240, 680, 1180, day, b.prop === "trick" ? seg(f, cu(1, 0.4), cu(1, 0.4) + 10) : 0, 0, f);
-          if (b.prop === "trick") stamp(c, "EVERY DAY: EXACTLY +3.00%", W / 2, 1100, "#f59e0b", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), 50, -0.05);
-          chip(c, "AI Profit Bot: a made-up app", W / 2, 1480, "#334155", "#f8fafc", 1, 30);
+          if (b.prop === "trick") stamp(c, "EVERY DAY: EXACTLY +3.00%", W / 2, 1130, "#f59e0b", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), 50, -0.05);
+          chip(c, "AI Profit Bot: a made-up app", W / 2, 1470, "#334155", "#f8fafc", 1, 36);
         } else if (b.shot === "calc") {   // Pallavi's calculator against the app
           dark(c, W, H, "PALLAVI'S CALCULATOR", ["₹2,00,000 · +3% a day · 15 days"], "#fde68a");
-          const steps = Math.floor(15 * seg(f, ln.from + 4, cu(1, 0.45)));
-          c.font = MONO(40, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "left";
-          c.fillText("2,00,000", 120, 520);
-          for (let q = 0; q < steps; q++) { c.fillText("× 1.03", 120 + (q % 5) * 170, 590 + Math.floor(q / 5) * 60); }
-          const kr = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
+          const steps = Math.floor(15 * seg(f, ln.from + 2, ln.from + 32));
+          c.font = MONO(50, 700); c.fillStyle = "#e2e8f0"; c.textAlign = "left";
+          c.fillText("2,00,000", 110, 520);
+          for (let q = 0; q < steps; q++) { c.fillText("×1.03", 110 + (q % 5) * 176, 600 + Math.floor(q / 5) * 68); }
+          const kr = seg(f, Math.min(cu(1, 0.5), ln.from + 36), Math.min(cu(1, 0.5), ln.from + 36) + 8);   // render review: the answer was up under 4 s
           if (kr > 0) {
             c.save(); c.globalAlpha = clamp(kr * 3);
             c.fillStyle = "#fde68a"; rrect(c, 100, 820, W - 200, 170, 24); c.fill();
@@ -175,7 +174,7 @@ const StProfit: React.FC<SP> = ({ s }) => {
             c.font = SANS(110, 900); c.fillText(inr(BAL), W / 2 + 40, 945);
             c.restore();
           }
-          const ks = seg(f, cu(1, 0.5) + 12, cu(1, 0.5) + 20);
+          const ks = seg(f, Math.min(cu(1, 0.5), ln.from + 36) + 10, Math.min(cu(1, 0.5), ln.from + 36) + 18);
           if (ks > 0) {
             c.save(); c.globalAlpha = clamp(ks * 3);
             c.fillStyle = "#052e16"; rrect(c, 100, 1060, W - 200, 170, 24); c.fill();
@@ -218,24 +217,24 @@ const StProfit: React.FC<SP> = ({ s }) => {
             c.font = SANS(34, 900); c.fillStyle = "#fca5a5"; c.textAlign = "left"; c.fillText(a, 110, y + 56); c.font = SANS(42, 800); c.fillStyle = "#f8fafc"; c.fillText(bb, 110, y + 120);
             c.restore();
           });
-          chip(c, "real tax goes to the government, not to the app", W / 2, 1100, "#fde68a", INK, seg(f, ln.from + 30, ln.from + 38), 38);
-          chip(c, "no real broker holds your money until you pay", W / 2, 1200, "#fde68a", INK, seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 38);
-          c.save(); c.globalAlpha = seg(f, ln.from + 20, ln.from + 28); c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("as reported by the Free Press Journal and Etemaad Daily", W / 2, 1310); c.restore();
+          chip(c, "no real platform makes you pay tax to withdraw", W / 2, 1100, "#fde68a", INK, seg(f, ln.from + 8, ln.from + 16), 40);   // render review: some platforms deduct TDS; none asks you to pay first
+          stamp(c, "THAT \"TAX\" IS THE SCAM", W / 2, 1230, RED, seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 56, -0.04);
+          c.save(); c.globalAlpha = seg(f, ln.from + 20, ln.from + 28); c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("as reported by the Free Press Journal and Etemaad Daily", W / 2, 1370); c.restore();
         } else if (b.shot === "rule") {
           dark(c, W, H, "TWO SIGNS OF A SCAM", ["AI or not"], "#fde68a");
           const c1 = cu(1, 0.4);
-          ([["PROFIT EVERY DAY, NO BAD DAYS", "#fecaca", ln.from - 30], ["A \"TAX\" OR FEE TO WITHDRAW", "#fecaca", ln.from - 22]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
+          ([["THE SAME EXACT % EVERY DAY", "#fecaca", ln.from - 30], ["A \"TAX\" OR FEE TO WITHDRAW", "#fecaca", ln.from - 22]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 450 + q * 170;
             c.fillStyle = bg; rrect(c, 80, y, W - 160, 140, 22); c.fill();
             const fs = fit(c, a, W - 220, 54); c.font = SANS(fs, 900); c.fillStyle = "#7f1d1d"; c.textAlign = "center"; c.fillText(a, W / 2, y + 90);
             c.restore();
           });
-          ([["Don't pay more", ""], ["Call 1930 now", "or cybercrime.gov.in: the sooner, the better"], ["Before you invest: sebi.gov.in", "(its list of registered intermediaries)"]] as [string, string][]).forEach(([a, bb], q) => {   // script review: 1930 first for a dad who already paid
+          ([["Don't pay more", ""], ["Call 1930 now", "report fast: money may still be held"], ["Before you invest: sebi.gov.in", "SEBI, the market regulator"]] as [string, string][]).forEach(([a, bb], q) => {   // script review: 1930 first for a dad who already paid
             const k = seg(f, q < 2 ? ln.from + 4 + q * 16 : c1, (q < 2 ? ln.from + 12 + q * 16 : c1 + 8)); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 820 + q * 150;
             c.fillStyle = "#dcfce7"; rrect(c, 80, y, W - 160, 128, 22); c.fill();
-            c.font = SANS(48, 900); c.fillStyle = "#14532d"; c.textAlign = "center"; c.fillText(a, W / 2, y + (bb ? 62 : 82)); if (bb) { c.font = SANS(30, 700); c.fillText(bb, W / 2, y + 108); }
+            c.font = SANS(48, 900); c.fillStyle = "#14532d"; c.textAlign = "center"; c.fillText(a, W / 2, y + (bb ? 58 : 82)); if (bb) { c.font = SANS(36, 800); c.fillText(bb, W / 2, y + 108); }
             c.restore();
           });
         } else if (b.shot === "chat" && !loopOn) {   // he asks the app to take the tax from his balance
@@ -255,21 +254,21 @@ const StProfit: React.FC<SP> = ({ s }) => {
           const z = 1 + 0.025 * p;
           const shake = (b.prop === "hook" && p < 0.1) || (loopOn && f < slam + 10) ? 8 : 0;
           c.save(); c.translate(W / 2 + (shake ? (r() - 0.5) * shake : 0), H / 2); c.scale(z, z); c.translate(-W / 2, -H / 2);
-          room(c, W, H);
+          room(c, W, H, hookOn);
           const [sm, sa] = hookOn ? (["shock", "phone"] as [BillMood, BillArms]) : SASTRY[n] ?? ["worried", "phone"];
           const [pm, pa] = hookOn ? (["worried", "fold"] as [BillMood, BillArms]) : PALLAVI[n] ?? ["calm", "fold"];
           const sc = hookOn ? 0.6 : 0.72, yy = hookOn ? 1250 : 1330;
-          person(c, "sastry" as BillWho, [300, yy], sc, sm, sa, b.who === "sastry" && talking, r);
-          person(c, "pallavi" as BillWho, [790, yy], sc, pm, pa, b.who === "pallavi" && talking, r);
+          person(c, "sastry" as BillWho, [hookOn ? 200 : 300, yy], sc, sm, sa, b.who === "sastry" && talking, r);   // frame 1: either side of the phone
+          person(c, "pallavi" as BillWho, [hookOn ? 885 : 790, yy], sc, pm, pa, b.who === "pallavi" && talking, r);
           c.restore();
           if (hookOn) {
             block(c, 50, "THE AI APP SAYS HE HAS", inr(BAL), "#4ade80");   // script review: frame 1 never said "AI"
             block(c, 560, "HE CAN TAKE OUT", "₹0", "#f87171");
-            c.save(); c.translate(540, 470); c.scale(0.62, 0.62); appScreen(c, -340, 0, 680, 1180, 15, 0, 1, f); c.restore();
+            c.save(); c.translate(540, 450); c.scale(0.64, 0.64); appScreen(c, -340, 0, 680, 1180, 15, 0, 1, f); c.restore();   // stills: at 0.7 it covered both faces
           }
           if (b.prop === "verdict") stamp(c, "SCAM", 540, 560, RED, seg(f, cu(1, 0.4) - 6, cu(1, 0.4) + 2), 120, -0.1);
           if (b.prop === "verdict") chip(c, "profit every single day = a scam, AI or not", 540, 760, "#fde68a", INK, seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14), 38);
-          if (n === 1 || n === 2) chip(c, "a made-up family · the pattern is from real 2026 police cases", 540, 1190, "rgba(15,23,42,0.85)", "#f8fafc", hookOn && n === 1 ? 0 : 1, 28);
+          if (n === 2) { chip(c, "a made-up family", 540, 880, "rgba(15,23,42,0.88)", "#f8fafc", 1, 38); chip(c, "the pattern: real 2026 police cases", 540, 960, "rgba(15,23,42,0.88)", "#f8fafc", 1, 38); }   // stills: they sat on Sastry's head
         }
       }} />
     </>

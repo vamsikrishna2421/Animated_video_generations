@@ -14,7 +14,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 1.5,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -92,16 +92,16 @@
      "show": "₹3 lakh on the screen, not one rupee in my hand!",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.04
+     "tempo": 1.05
     },
     {
      "who": "pallavi",
      "file": "02_pallavi.wav",
-     "text": "నాన్నా, ఇది మోసం. [1] ఏ ట్రేడింగ్ కూడా రోజూ లాభం ఇవ్వదు. ఏ ఐ అయినా సరే.",
-     "show": "Nanna, this is a scam. No trading gives profit every day. AI or not.",
+     "text": "నాన్నా, ఇది మోసం. [1] ఏ ట్రేడింగ్ కూడా రోజూ లాభం ఇవ్వదు. రోబో అయినా, మనిషి అయినా.",
+     "show": "Nanna, this is a scam. No trading gives profit every day. Robot or human.",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.04
+     "tempo": 1.05
     },
     {
      "who": "sastry",
@@ -109,17 +109,17 @@
      "text": "పదిహేను రోజుల క్రితం రెండు లక్షలు పెట్టా. [1] రోజూ మూడు శాతం లాభం!",
      "show": "I put in ₹2 lakh 15 days ago. 3% profit every day!",
      "maxgap": 0.25,
-     "gap": 0.2,
-     "tempo": 1.04
+     "gap": 0.3,
+     "tempo": 1.05
     },
     {
      "who": "pallavi",
      "file": "04_pallavi.wav",
-     "text": "పదిహేను రోజుల్లో, ఒక్క రోజు కూడా నష్టం లేదా? [1] నిజమైన మార్కెట్ కొన్ని రోజులు పడుతుంది. అదే ట్రిక్.",
-     "show": "In 15 days, not one day of loss? Real markets fall some days. That's the trick.",
+     "text": "పదిహేను రోజుల్లో, ఒక్క రోజు కూడా నష్టం లేదా? [1] అదే ట్రిక్.",
+     "show": "In 15 days, not one day of loss? That's the trick.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.04
+     "tempo": 1.05
     }
    ]
   },
@@ -184,8 +184,8 @@
      "text": "రెండు లక్షలకి, రోజూ మూడు శాతం, పదిహేను సార్లు కలిపితే: [1] స్క్రీన్ మీద ఉన్న నంబరే వస్తుంది.",
      "show": "₹2 lakh, add 3% a day, 15 times: you get the number on your screen.",
      "maxgap": 0.25,
-     "gap": 0.25,
-     "tempo": 1.04
+     "gap": 0.3,
+     "tempo": 1.05
     },
     {
      "who": "sastry",
@@ -194,7 +194,7 @@
      "show": "Down to the rupee?!",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.04
+     "tempo": 1.05
     },
     {
      "who": "pallavi",
@@ -202,26 +202,30 @@
      "text": "ఇది ట్రేడింగ్ కాదు నాన్నా. [1] కాలిక్యులేటర్ కి గ్రీన్ కలర్ వేశారు, అంతే.",
      "show": "This isn't trading, Nanna. They painted a calculator green, that's all.",
      "maxgap": 0.25,
-     "gap": 0.3,
-     "tempo": 1.04
+     "gap": 0.35,
+     "tempo": 1.05
     },
     {
      "who": "pallavi",
      "file": "08_pallavi.wav",
-     "text": "రోజూ మూడు శాతం నిజమైతే, [1] మీ రెండు లక్షలు, ఏడాదిలో దాదాపు వెయ్యి కోట్లు అయ్యేవి.",
-     "show": "If 3% a day were real, your ₹2 lakh would be almost ₹1,000 crore in a year.",
+     "text": "రోజూ మూడు శాతం నిజమైతే, మీ రెండు లక్షలు, ఏడాదిలో... <pause 0.6> [1] దాదాపు వెయ్యి కోట్లు అయ్యేవి.",
+     "show": "If 3% a day were real, your ₹2 lakh, in a year... about ₹970 crore.",
      "maxgap": 0.25,
      "gap": 0.45,
-     "tempo": 1.04
+     "tempo": 1.05,
+     "tts": "రోజూ మూడు శాతం నిజమైతే, మీ రెండు లక్షలు, ఏడాదిలో...",
+     "file2": "08b_pallavi.wav",
+     "tts2": "దాదాపు వెయ్యి కోట్లు అయ్యేవి.",
+     "pause": 0.6
     },
     {
      "who": "sastry",
      "file": "09_sastry.wav",
-     "text": "మరి నా దగ్గర యాభై ఆరు వేలు ఎందుకు అడుగుతోంది?!",
+     "text": "మరి నా దగ్గర, యాభై ఆరు వేల రూపాయలు, ఎందుకు అడుగుతోంది?!",
      "show": "Then why is it asking me for ₹56,000?!",
      "maxgap": 0.25,
-     "gap": 0.25,
-     "tempo": 1.04
+     "gap": 0.3,
+     "tempo": 1.05
     }
    ]
   },
@@ -231,9 +235,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.5,
+   "boost": 1.6,
    "lift": 0.6,
-   "rise": 1.3,
+   "rise": 1.45,
    "data": {
     "beats": [
      {
@@ -268,20 +272,20 @@
     {
      "who": "pallavi",
      "file": "10_pallavi.wav",
-     "text": "నిజమైన టాక్స్ గవర్నమెంట్ కి కడతాం, యాప్ కి కాదు. [1] ఏ నిజమైన బ్రోకర్ కూడా, డబ్బు ఆపి టాక్స్ అడగడు.",
-     "show": "Real tax is paid to the government, not to an app. No real broker holds your money and asks for tax.",
+     "text": "ఏ నిజమైన ప్లాట్ ఫామ్ కూడా, విత్ డ్రా ముందు టాక్స్ కట్టమనదు. [1] ఆ టాక్సే అసలు మోసం.",
+     "show": "No real platform makes you pay tax before you withdraw. That tax is the real scam.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.04
+     "tempo": 1.05
     },
     {
      "who": "pallavi",
      "file": "11_pallavi.wav",
-     "text": "ఇంకేమీ కట్టకండి. ఇప్పుడే వన్ నైన్ త్రీ జీరో కి కాల్ చేయండి. [1] పెట్టుబడి పెట్టే ముందు, సెబీ సైట్ లో చెక్ చేయండి.",
-     "show": "Don't pay anything more. Call 1930 now. Before you invest, check on SEBI's site.",
+     "text": "ఇంకేమీ కట్టకండి. వెంటనే, వన్, నైన్, త్రీ, జీరో కి కాల్ చేయండి: త్వరగా చెప్తే, డబ్బు ఆపే ఛాన్స్ ఉంది. [1] పెట్టుబడి ముందు, సెబీ సైట్ లో చెక్ చేయండి.",
+     "show": "Don't pay anything more. Call 1930 right away: report fast and there's a chance the money is held. Before investing, check SEBI's site.",
      "maxgap": 0.25,
-     "gap": 1.4,
-     "tempo": 1.04
+     "gap": 0.6,
+     "tempo": 1.05
     },
     {
      "who": "sastry",
@@ -290,7 +294,7 @@
      "show": "AI app, take the tax from my ₹3 lakh! Pay it separately?!",
      "maxgap": 0.25,
      "gap": 0.0,
-     "tempo": 1.04
+     "tempo": 1.05
     }
    ]
   }

@@ -1,4 +1,4 @@
-# Creative 23 "Three Lakhs on the Screen" (the Nov 8 creative slot) · script v2, Nov 8
+# Creative 23 "Three Lakhs on the Screen" (the Nov 8 creative slot) · script v3 (as rendered), Nov 8
 
 ## The idea (point family G, scams dressed as AI; last G post: EP45, Nov 3)
 "AI trading bot" is a costume. No AI, and no real investment, pays a fixed profit every day. The app's balance that
@@ -61,36 +61,56 @@ three zero now. And before you invest, check SEBI's site." and the card holds ~3
 "970 crore". Telugu as listed. Not changed: the FD comparison stays out of the lines (rates move; "a few percent" adds a
 claim); the 18% on his own money is on the pop-up for viewers to spot.
 
-## Script (English, v2) · ~50 s
+## Render review (human-viewer, EN + TE v2 renders) and what changed
+Both watched to the end and would forward it to family (Sandeep the Telugu one, Priya the English one to her parents; hook 8
+and 8). "To the rupee?!", "a calculator painted green", the ₹970 crore card and "must be paid separately" land. Both: no
+real drop before "970 crore" (the only dip came after it), and the Telugu had no lift into the end; the loop back to frame 1
+never showed (the video ended 0.5 s after the last line, before the snap); tiny text (the pop-up line, the disclaimers, the
+real-market line and label, the calculator rows, the card sublines); five Telugu words (పడుతుంది = "takes", యాభై ఆరు వేలు
+came out mush, "1930" lost its nine, "ఏ ఐ" heard as "ఏయ్", a stretched glitch on "యాప్ కి కాదు"); say what 1930 does for
+money already paid. Sandeep: "check CB's site": what's SEBI? Priya: "real tax goes to the government, not to the app" isn't
+quite true (some platforms deduct TDS), but none asks you to pay first; the stronger tell is "the same exact % every day";
+the RETIREMENT frame peeked under frame 1's blocks.
+Changed (v3): line 8 in two takes with a 0.6 s stop and the bed out before "nine hundred and seventy crore" (both
+languages; measured: -49 dB before the number, -12 dB on it); 1.5 s after the last line so frame 1 shows ~1 s; line 10
+"No real platform asks you to pay tax before you withdraw. That 'tax' is the scam."; line 11 "Don't pay more. Call one nine
+three zero now: report fast, and the money may still be held. Before you invest, check SEBI, the market regulator."; the
+rule card's first tell "THE SAME EXACT % EVERY DAY"; larger pop-up, disclaimers, real-market line and label, calculator
+rows (and its answer up earlier and longer), card sublines; frame 1 without the photo frame, the people either side of the
+phone; line 4 shortened (the chart shows the real market) so English runs 59 s; a louder Telugu lift into the end. Telugu:
+"రోబో అయినా, మనిషి అయినా" (no "ఏ ఐ" from Pallavi), line 4 without "పడుతుంది", "యాభై ఆరు వేల రూపాయలు" with commas, "వన్, నైన్,
+త్రీ, జీరో", line 10 reworded (the glitch line gone), more breath between lines.
+
+## Script (English, v3) · 59 s
 | # | Who | Line | On screen |
 |---|---|---|---|
 | 1 | sastry | Three lakhs on the screen, [1] and I can't take out one rupee! | frame 1: "THE AI APP SAYS HE HAS ₹3,11,593" vs "HE CAN TAKE OUT ₹0" over the pop-up |
 | 2 | pallavi | Nanna, it's a scam. [1] No real trading makes a profit every single day. AI or not. | SCAM stamp; chip "profit every single day = a scam, AI or not" |
 | 3 | sastry | Two lakhs, fifteen days ago. [1] Three percent profit, every single day! | the app: the balance climbing day 0 → 15 |
-| 4 | pallavi | Fifteen days, and not one bad day? [1] Real markets fall some days. That's the trick. | a real market's line (up and down) next to the app's perfect curve; "EVERY DAY: EXACTLY +3.00%" |
+| 4 | pallavi | Fifteen days, and not one bad day? [1] That's the trick. | a real market's line (up and down) next to the app's perfect curve; "EVERY DAY: EXACTLY +3.00%" |
 | 5 | pallavi | Two lakhs, plus three percent, fifteen times: [1] exactly your screen. | the calculator: 2,00,000 × 1.03 (15) = ₹3,11,593; the app ₹3,11,593 ✓ "to the rupee" |
 | 6 | sastry | To the rupee?! | |
 | 7 | pallavi | It's not trading, Nanna. [1] It's a calculator, painted green. | the app slides off: a calculator underneath |
-| 8 | pallavi | If three percent a day were real, [1] your two lakhs would be nine hundred and seventy crore in a year. | ₹2,00,000 → ₹970 CRORE (a drop before it) |
+| 8 | pallavi | If three percent a day were real, your two lakhs, in a year, would be... / [1] nine hundred and seventy crore. | ₹2,00,000 → ₹970 CRORE (a drop before it) |
 | 9 | sastry | Then why does it want fifty-six thousand from me?! | the pop-up: pay 18% tax ₹56,087 |
-| 10 | pallavi | Real tax goes to the government, not to the app. [1] No real broker holds your money until you pay. | the 2026 police cases card |
-| 11 | pallavi | Don't pay more. Call one nine three zero now. [1] And before you invest, check SEBI's site. | rule card, held ~3 s |
-| 12 | sastry | AI bot, just cut the tax from my three lakhs! [1] "Must be paid separately"?! | his chat; the reply → frame 1 |
+| 10 | pallavi | No real platform asks you to pay tax before you withdraw. [1] That "tax" is the scam. | the 2026 police cases card |
+| 11 | pallavi | Don't pay more. Call one nine three zero now: report fast, and the money may still be held. [1] Before you invest, check SEBI, the market regulator. | rule card, held ~3 s |
+| 12 | sastry | AI app, just cut the tax from my three lakhs! [1] "Must be paid separately"?! | his chat; the reply → frame 1 |
 
-## Script (Telugu, v2; on-screen text stays English)
+## Script (Telugu, v3; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | sastry | స్క్రీన్ మీద మూడు లక్షలు, [1] చేతికి ఒక్క రూపాయి కూడా రాదు! |
-| 2 | pallavi | నాన్నా, ఇది మోసం. [1] ఏ ట్రేడింగ్ కూడా రోజూ లాభం ఇవ్వదు. ఏ ఐ అయినా సరే. |
+| 2 | pallavi | నాన్నా, ఇది మోసం. [1] ఏ ట్రేడింగ్ కూడా రోజూ లాభం ఇవ్వదు. రోబో అయినా, మనిషి అయినా. |
 | 3 | sastry | పదిహేను రోజుల క్రితం రెండు లక్షలు పెట్టా. [1] రోజూ మూడు శాతం లాభం! |
-| 4 | pallavi | పదిహేను రోజుల్లో, ఒక్క రోజు కూడా నష్టం లేదా? [1] నిజమైన మార్కెట్ కొన్ని రోజులు పడుతుంది. అదే ట్రిక్. |
+| 4 | pallavi | పదిహేను రోజుల్లో, ఒక్క రోజు కూడా నష్టం లేదా? [1] అదే ట్రిక్. |
 | 5 | pallavi | రెండు లక్షలకి, రోజూ మూడు శాతం, పదిహేను సార్లు కలిపితే: [1] స్క్రీన్ మీద ఉన్న నంబరే వస్తుంది. |
 | 6 | sastry | రూపాయితో సహా?! |
 | 7 | pallavi | ఇది ట్రేడింగ్ కాదు నాన్నా. [1] కాలిక్యులేటర్ కి గ్రీన్ కలర్ వేశారు, అంతే. |
-| 8 | pallavi | రోజూ మూడు శాతం నిజమైతే, [1] మీ రెండు లక్షలు, ఏడాదిలో దాదాపు వెయ్యి కోట్లు అయ్యేవి. |
-| 9 | sastry | మరి నా దగ్గర యాభై ఆరు వేలు ఎందుకు అడుగుతోంది?! |
-| 10 | pallavi | నిజమైన టాక్స్ గవర్నమెంట్ కి కడతాం, యాప్ కి కాదు. [1] ఏ నిజమైన బ్రోకర్ కూడా, డబ్బు ఆపి టాక్స్ అడగడు. |
-| 11 | pallavi | ఇంకేమీ కట్టకండి. ఇప్పుడే వన్ నైన్ త్రీ జీరో కి కాల్ చేయండి. [1] పెట్టుబడి పెట్టే ముందు, సెబీ సైట్ లో చెక్ చేయండి. |
+| 8 | pallavi | రోజూ మూడు శాతం నిజమైతే, మీ రెండు లక్షలు, ఏడాదిలో... / [1] దాదాపు వెయ్యి కోట్లు అయ్యేవి. |
+| 9 | sastry | మరి నా దగ్గర, యాభై ఆరు వేల రూపాయలు, ఎందుకు అడుగుతోంది?! |
+| 10 | pallavi | ఏ నిజమైన ప్లాట్ ఫామ్ కూడా, విత్ డ్రా ముందు టాక్స్ కట్టమనదు. [1] ఆ టాక్సే అసలు మోసం. |
+| 11 | pallavi | ఇంకేమీ కట్టకండి. వెంటనే, వన్, నైన్, త్రీ, జీరో కి కాల్ చేయండి: త్వరగా చెప్తే, డబ్బు ఆపే ఛాన్స్ ఉంది. [1] పెట్టుబడి ముందు, సెబీ సైట్ లో చెక్ చేయండి. |
 | 12 | sastry | ఏ ఐ యాప్, టాక్స్ నా మూడు లక్షల్లోంచే తీసుకో! [1] విడిగా కట్టాలా?! |
 
 ## Caption ask (one word)

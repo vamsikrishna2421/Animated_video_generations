@@ -43,19 +43,19 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("three", "3"), ("lakhs", "lakh"), ("screen",), ("rupee",)], 2: [("scam",), ("trading",), ("profit",), ("every",), ("day",), ("ai",)],
                3: [("two", "2"), ("lakhs", "lakh"), ("fifteen", "15"), ("three", "3"), ("profit",), ("every",)],
-               4: [("fifteen", "15"), ("bad",), ("markets", "market"), ("fall",), ("trick",)],
+               4: [("fifteen", "15"), ("bad",), ("trick",)],
                5: [("two", "2"), ("lakhs", "lakh"), ("three", "3"), ("fifteen", "15"), ("times",), ("screen",)], 6: [("rupee",)],
                7: [("trading",), ("calculator",), ("painted",), ("green",)],
-               8: [("three", "3"), ("real",), ("two", "2"), ("lakhs", "lakh"), ("nine", "970", "970"), ("seventy", "970"), ("crore", "crores"), ("year",)],
+               8: [("three", "3"), ("real",), ("two", "2"), ("lakhs", "lakh"), ("year",)], "8b": [("nine", "970"), ("seventy", "970"), ("crore", "crores")],
                9: [("fifty", "56"), ("thousand", "000")],
-               10: [("tax",), ("government",), ("app",), ("broker",), ("money",), ("pay",)],
-               11: [("pay",), ("one", "1930", "1"), ("nine", "1930", "9"), ("zero", "1930", "0"), ("invest",), ("sebi", "seby", "sebi's", "sebbi")],
+               10: [("platform",), ("pay",), ("tax",), ("withdraw",), ("scam",)],
+               11: [("pay",), ("one", "1930", "1"), ("nine", "1930", "9"), ("zero", "1930", "0"), ("invest",), ("held", "hold"), ("regulator",)],
                12: [("ai",), ("tax",), ("three", "3"), ("lakhs", "lakh"), ("paid",), ("separately",)]},
         "te": {}}
 JUDGE_TEXT = {1: "3 lakhs on the screen, and I can't take out 1 rupee!", 3: "2 lakhs, 15 days ago. 3% profit, every single day!",
-              4: "15 days, and not one bad day? Real markets fall some days. That's the trick.",
-              5: "2 lakhs, plus 3%, 15 times: exactly your screen.", 8: "If 3% a day were real, your 2 lakhs would be 970 crore in a year.",
-              9: "Then why does it want 56,000 from me?!", 11: "Don't pay more. Call 1930 now. And before you invest, check SEBI's site.",
+              4: "15 days, and not one bad day? That's the trick.",
+              5: "2 lakhs, plus 3%, 15 times: exactly your screen.", 8: "If 3% a day were real, your 2 lakhs, in a year, would be...", "8b": "970 crore.",
+              9: "Then why does it want 56,000 from me?!", 11: "Don't pay more. Call 1930 now: report fast, and the money may still be held. Before you invest, check SEBI, the market regulator.",
               12: "AI app, just cut the tax from my 3 lakhs! Must be paid separately?!"}
 
 TELUGU = re.compile(r"[ఀ-౿]")

@@ -676,3 +676,10 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   - Fish dropped a short opening sentence ("That's the rule.") 4 of 4 times before a long one: give it its own take.
   - No bed: `musicVol: [0, 0]` keeps the build and timing tools unchanged; the scene's few hits carry the arc (frame-1
     hit, the stop before the number, the label stamp loudest).
+- Nov 8 lessons (Creative 23, verdict first):
+  - `endPad` must be longer than the loop's HOLD (16 frames): at 0.5 s the snap back to frame 1 never showed (EP48 and
+    Creative 23 v2). Use 1.5 s on loop reels.
+  - A drop "before the number" with `drop_at` falls before the line's [1] cue: split the line into two takes and put [1]
+    on the number's take, or the dip lands before the wrong words (measured: -49 dB before "970 crore" once split).
+  - Fish: "bot" is heard "bought" (EP47, Creative 23), "SEBI" is heard "CB": write "AI app", and "Sebbee" in the take's text.
+  - Parler Telugu: "ఏ ఐ" can land as "ఏయ్" (rude from a daughter to her father): reword around it in sensitive lines.

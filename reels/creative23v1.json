@@ -14,7 +14,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 1.5,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -89,7 +89,7 @@
      "show": "₹3 lakh on the screen, and I can't take out one rupee!",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "pallavi",
@@ -98,7 +98,7 @@
      "show": "Nanna, it's a scam. No real trading makes a profit every single day. AI or not.",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "sastry",
@@ -107,16 +107,16 @@
      "show": "₹2 lakh, 15 days ago. 3% profit, every single day!",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "pallavi",
      "file": "04_pallavi.wav",
-     "text": "Fifteen days, and not one bad day? [1] Real markets fall some days. That's the trick.",
-     "show": "Fifteen days, and not one bad day? Real markets fall some days. That's the trick.",
+     "text": "Fifteen days, and not one bad day? [1] That's the trick.",
+     "show": "Fifteen days, and not one bad day? That's the trick.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.08
+     "tempo": 1.1
     }
    ]
   },
@@ -181,7 +181,7 @@
      "show": "₹2 lakh, plus 3%, 15 times: exactly your screen.",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "sastry",
@@ -190,7 +190,7 @@
      "show": "To the rupee?!",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "pallavi",
@@ -199,16 +199,20 @@
      "show": "It's not trading, Nanna. It's a calculator, painted green.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "pallavi",
      "file": "08_pallavi.wav",
-     "text": "If three percent a day were real, [1] your two lakhs would be nine hundred and seventy crore in a year.",
-     "show": "If 3% a day were real, your ₹2 lakh would be ₹970 crore in a year.",
+     "text": "If three percent a day were real, your two lakhs, in a year, would be... <pause 0.6> [1] nine hundred and seventy crore.",
+     "show": "If 3% a day were real, your ₹2 lakh, in a year, would be... ₹970 crore.",
      "maxgap": 0.25,
      "gap": 0.45,
-     "tempo": 1.08
+     "tempo": 1.1,
+     "tts": "If three percent a day were real, your two lakhs, in a year, would be...",
+     "file2": "08b_pallavi.wav",
+     "tts2": "nine hundred and seventy crore.",
+     "pause": 0.6
     },
     {
      "who": "sastry",
@@ -217,7 +221,7 @@
      "show": "Then why does it want ₹56,000 from me?!",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.08
+     "tempo": 1.1
     }
    ]
   },
@@ -263,20 +267,21 @@
     {
      "who": "pallavi",
      "file": "10_pallavi.wav",
-     "text": "Real tax goes to the government, not to the app. [1] No real broker holds your money until you pay.",
-     "show": "Real tax goes to the government, not to the app. No real broker holds your money until you pay.",
+     "text": "No real platform asks you to pay tax before you withdraw. [1] That \"tax\" is the scam.",
+     "show": "No real platform asks you to pay tax before you withdraw. That \"tax\" is the scam.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.08
+     "tempo": 1.1
     },
     {
      "who": "pallavi",
      "file": "11_pallavi.wav",
-     "text": "Don't pay more. Call one nine three zero now. [1] And before you invest, check SEBI's site.",
-     "show": "Don't pay more. Call 1930 now. And before you invest, check SEBI's site.",
+     "text": "Don't pay more. Call one nine three zero now: report fast, and the money may still be held. [1] Before you invest, check SEBI, the market regulator.",
+     "show": "Don't pay more. Call 1930 now: report fast, and the money may still be held. Before you invest, check SEBI, the market regulator.",
      "maxgap": 0.25,
-     "gap": 1.8,
-     "tempo": 1.08
+     "gap": 0.7,
+     "tempo": 1.1,
+     "tts": "Don't pay more. Call one nine three zero now: report fast, and the money may still be held. Before you invest, check Sebbee, the market regulator."
     },
     {
      "who": "sastry",
@@ -285,7 +290,7 @@
      "show": "AI app, just cut the tax from my ₹3 lakh! \"Must be paid separately\"?!",
      "maxgap": 0.25,
      "gap": 0.0,
-     "tempo": 1.08
+     "tempo": 1.1
     }
    ]
   }
