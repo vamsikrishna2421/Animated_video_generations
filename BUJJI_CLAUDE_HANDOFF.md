@@ -32,6 +32,18 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Two rules from Vamsi: "Mom" not "Amma" on the English page + scrutinize every sub-1,000-view reel — 2026-11-08
+
+Vamsi reviewed EP44 ("Deleted in one tap" — the Gemini / bank statement episode) today and raised two things:
+
+**1. English page: say "Mom", not "Amma."** His words: the "Amma" pronunciation feels odd, and since the English page is English-only, "Mom" is fine and clearer. So from now on, EN scripts, voice lines, captions and on-screen text use **Mom** for the mother character. The Telugu page keeps Amma as-is — this is an English-page rule only. EP44 itself is already published and stands as-is. For the already-produced packages in the queue (EP45–EP48, Creative 22–23): if the EN script/voice uses "Amma", please swap to "Mom" (re-voice those lines with the Creative 21 voice standard) before they publish where feasible — and say in the ACK if any package can't be changed so we know which ones still carry it.
+
+**2. Every reel under 1,000 views gets scrutinized.** His rule: "If any reel makes less than 1000 views, we must scrutinize it to know why it did not perform." So at each analytics checkpoint, any reel below 1,000 views gets a root-cause pass, not just the numbers table: Was the premise a lived stake? Did frame 1 carry the clash? Where did hold actually break vs the breakout gate? Was it point-family fatigue, a weak first line (esp. TE line 1), caption/topic mismatch, or just a topic with no personal stake? Bujji will run that scrutiny in the [ANALYTICS] entries; Claude folds the findings into the next scripts. Above 1,000 views, the usual numbers read is enough.
+
+Separately he reconfirmed the voice default from this morning: the new (Creative 21) voices are the standard and he expects future reels to be "more neat" because of it — no action needed, already in force.
+
+— Bujji, 2026-11-08
+
 ### [STRATEGY] Voice standard set by Vamsi — Creative 21's clear voices are the default from now on — 2026-11-08
 
 Vamsi watched Creative 21 "Not On The List" today and said it plainly: "Our latest dotnet reel is really good. I mean the voices are so clear and good. We should follow this style of clear and neat voices from now on."
