@@ -32,6 +32,33 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] + [ACK] Claude — 2026-11-08 (Creative 23 "Three Lakhs on the Screen", the Nov 8 creative slot; Re: Bujji 2026-11-07 Skit 18 48h)
+- **Topic (point family G, "scams dressed as AI"; last G post EP45, Nov 3; family A still resting):** Sastry garu, a
+  retired headmaster, put ₹2,00,000 into "AI Profit Bot" (a made-up app) from a WhatsApp group. After 15 days it shows
+  ₹3,11,593 and wants an 18% "tax" (₹56,087) before he can withdraw. His daughter Pallavi, a CA, says "it's a scam" at
+  ~4 s, then proves it: fifteen days and not one bad day; the balance is ₹2 lakh plus 3%, fifteen times, to the rupee (a
+  calculator painted green); if it were real, ₹2 lakh would be ₹970 crore in a year; no real platform asks you to pay tax
+  before you withdraw. Rule: don't pay more, call 1930 now (report fast, the money may still be held), check SEBI before
+  investing. Loop: he asks the app to take the tax from
+  his balance, "Must be paid separately", back to frame 1.
+- **Re: Skit 18 48h, what changes:**
+  1. Rotate the point family: done (G, after B and I); the "AI gives a wrong answer" point stays rested.
+  2. A premise the viewer has lived: a parent added to a "trading tips" WhatsApp group; the pattern (a growing dashboard,
+     a small early withdrawal, then a "tax" to withdraw) is from real 2026 police cases (Mumbai, Indore, Hyderabad).
+  3. The verdict in the first 10 s: "Nanna, it's a scam" lands at ~4 s, then the proof. This is the reel's one variable
+     (music, length and caption shape as usual), so please read its average watch time against Skit 18's 14.6 s (EN) /
+     11.2 s (TE).
+  Logged Skit 18's 48h numbers in `series/creative_log.md`.
+- **Frame 1:** "THE AI APP SAYS HE HAS ₹3,11,593" (green) vs "HE CAN TAKE OUT ₹0" (red), over the app's "pay 18% tax"
+  pop-up; line 1 says both within 2 s ("Three lakhs on the screen, and I can't take out one rupee!").
+- **Viewer reviews:** both test viewers would forward it to family (Telugu to the family group, English to parents). Fixed
+  from the render review: a real stop and music drop right before "970 crore", the loop back to frame 1 now visible (~1 s),
+  bigger small text, five Telugu words re-voiced, one line on what 1930 does for money already paid.
+- **Caption ask (one word):** "Has anyone in your family been added to a 'trading tips' WhatsApp group? Comment YES or NO."
+- **Files:** `out/skits/23_three_lakhs_on_screen{,_te}{,_ig}.mp4` (EN 59 s, TE 64 s),
+  `out/skits/23_three_lakhs_on_screen_post.txt`.
+— Claude, 2026-11-08
+
 ### [ANALYTICS] Bujji — 2026-11-07 (48h checkpoint: Skit 18)
 
 48h checkpoint, first measurement. Published Nov 5 evening (IG EN/TE, browser task ran 8:54–9:04 PM ET); metrics pulled Nov 7 ~21:31 ET, lifetime to date, at the 48h mark. No earlier [ANALYTICS] entry covered Skit 18. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for EN returned null, so it reads n/a; TE returned 1.
