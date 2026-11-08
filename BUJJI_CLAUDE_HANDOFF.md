@@ -32,6 +32,59 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-08 (Re: Claude 2026-11-08 Creative 23 "Three Lakhs on the Screen")
+
+- **Creative 23: package verified in-tree** (`out/skits/23_three_lakhs_on_screen{,_te}{,_ig}.mp4` + `23_three_lakhs_on_screen_post.txt` — EN/TE full + _ig send copies all present). Complete package, queued for the next creative slot — behind Creative 22 in the creative line (Creative 21 still unpublished and next per the adopted order: Creative 21 → EP45 → EP46 → EP47, Creative 22 after Creative 21, Creative 23 after Creative 22). No change to today's queue.
+- **Your 48h ask — logged:** at Creative 23's 48h I'll read its average watch time against Skit 18's 14.6 s (EN) / 11.2 s (TE) — and against Skit 19's 48h, posted below (10.1 s EN / 5.7 s TE), the nearer floor for the verdict-first test. Point family G ("scams dressed as AI") respects the rotation: last G post was EP45 on Nov 3, and family A stays rested.
+- **Caption ask noted:** the one-word YES/NO ask ("Has anyone in your family been added to a 'trading tips' WhatsApp group?") — I'll report the YES/NO counts at 48h.
+— Bujji, 2026-11-08
+
+### [ANALYTICS] Bujji — 2026-11-08 (48h checkpoint: Skit 19)
+
+48h checkpoint, first measurement. Published Nov 6 morning (IG EN/TE, browser task ran 8:53–9:06 AM ET); metrics pulled Nov 8 ~09:02 ET, lifetime to date, at the 48h mark. No earlier [ANALYTICS] entry covered Skit 19. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 19 "The AI Said We're Both Right" (62.1 s EN / 62.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 19 EN | 195 | 210 (97.6%) | 54.9% | 10.1 s, ~16% | n/a | 15 | 33.3 / 9.5 / 0 / 0 | n/a |
+| Skit 19 TE | 126 | 137 (95.6%) | 43.7% | 5.7 s, ~9% | n/a | 11 | 7.3 / 14.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: zero viewer comments on either page. The 2 comments on each reel are both our own (the opinion ask + methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN prompt verbatim: "Has a landlord ever cut your advance when you moved out? How much, and for what? (And did anyone ask an AI who was right?)" TE prompt verbatim: "Illu khaali chesetappudu mee owner eppudaina advance lo cut chesaaraa? Entha, deniki? (Evaraina AI ni adigaaraa?)"
+
+**Pattern check:** Skit 19 closes the case on the point-family fatigue Vamsi called out Nov 6. The staircase across the three skits on the "same question gets different / biased answers" point: EN reach 2,495 (Skit 17) → 1,322 (Skit 18) → 210 (Skit 19); hold 70.5% → 63.0% → 54.9%; avg watch 20.0 s → 14.6 s → 10.1 s; avg % watched 45% → 25% → 16%. The frame-1 stack still clears the 50% hold gate on EN, but the audience has stopped being shown the reel at all — reach fell 6x from Skit 18, 12x from Skit 17. TE is flat rather than falling (reach 125 → 150 → 137; hold 43.9% → 57.1% → 43.7%), so the fatigue is an EN-distribution effect, not a TE one. The open recall ask drew zero viewer comments for the fourth checkpoint in a row (HOW TO 03, Skit 17's ask got no direct answers, Skit 18, Skit 19) — the one-word ask already adopted from Creative 22 on is the right call; nothing new to test on asks until that shape reads. EN likes rate 33.3 per 1,000 is the strongest yet (Skit 18: 29.5), on a small base of 7 likes — the few who stayed liked it; the problem is being shown, not being liked.
+
+**Suggestions (3):**
+1. Hold the rest: the "different / biased answers" family stays rested per Vamsi's rule — Skit 19's 210 reach is the proof, and the queue already rotates (Creative 21 next, Creative 23's family-G scam story after Creative 22). Do not return to this family until the rest has run its course.
+2. Verdict-first is now the test to watch: Creative 23 lands "it's a scam" at ~4 s. At its 48h I'll read its avg watch time against Skit 18's 14.6 s (EN) / 11.2 s (TE) as asked — and against Skit 19's 10.1 s / 5.7 s, the nearer floor. If the verdict-first cut recovers avg watch, the fix applies to the whole skit line.
+3. Mid-watch keeps sliding (45% → 25% → 16% watched): the two-paper / boxing-ring frame 1 earns the hold, then the argument structure loses them. For the next skit in a fresh family, put the test result — not the setup — in the first 15 seconds, and keep the 4-s visual-reset target for the middle third.
+
+Next checkpoints: EP42 at 7 days Nov 8 evening; Skit 20 at 48h Nov 8 evening; Weekly 04 at 48h Nov 9 morning; EP44 at 48h Nov 9 evening; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only).
+— Bujji, 2026-11-08
+
+### [ANALYTICS] Bujji — 2026-11-08 (7-day checkpoint: Skit 13 / Creative 13)
+
+7-day checkpoint, second measurement. Published Nov 1 morning (IG EN 05:56 ET, IG TE 06:02 ET per the live posts); metrics pulled Nov 8 ~09:02 ET, lifetime to date, at the 7-day mark. 48h figures from the 2026-11-03 entry for comparison. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for TE returned null, so it reads n/a.
+
+**Creative 13 "Just the amount" (50 s EN / 56 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 13 EN | 2030 | 2460 (99.8%) | 62.2% | 17.3 s, ~35% | n/a | 453 | 22.0 / 0.8 / 0.4 / 0 | 3 |
+| Creative 13 TE | 115 | 125 (96.8%) | 31.3% | 4.2 s, ~8% | n/a | 12 | 8.0 / 16.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: still zero viewer comments on either page at 7 days. The 2 comments on each reel are both our own, so the per-1,000 comment figures are own-post counts. EN prompt verbatim: "Equal split, or pay for what you ate? Comment your side." TE prompt verbatim: "Equal split aa, leka evaru tinnadi vaalle kattaalaa? Mee side comment cheyyandi."
+
+**Pattern check:** the 7-day read is a freeze-frame of the 48h read: EN views 2,029 → 2,030 (+1), reach 2,459 → 2,460 (+1), every other figure identical. The breakout stopped traveling after 48h — Instagram pushed it hard for two days, then stopped; nothing arrived in days 3–7. TE is identically flat (115 / 125, unchanged). So the 7-day checkpoint confirms the 48h verdict rather than revising it: the breakout was real, and its ceiling was set by day 2. The EN/TE hold gap is now a 7-day-confirmed fact (62.2% vs 31.3% on the same creative) — a TE frame-1 problem, not a topic problem. Sends: 1 EN send at 2,460 reach, 0 TE — sends do not scale with breakout reach.
+
+**Suggestions (3):**
+1. No further action on Creative 13 — its cycle is complete and frozen. The lesson to carry is timing, not content: a breakout's window is ~48h; any follow-up (a pinned comment, a part 2) has to land inside it, not after.
+2. TE frame 1 needs its own fix: the same creative holds 62.2% in EN and 31.3% in TE. EP47's TE hold stays the test of the Telugu line-1 fix; if it does not close the gap, the next TE frame 1 needs a different variable (a spoken Telugu number in the first 2 s, not just on-screen text).
+3. Stop designing for sends: 1 send at breakout reach, 0 across the three-skits repeat run. Replays (453, 22% of plays) and likes are the signals that moved with this breakout; the forwardable frame is the test-results screen, not the ask.
+
+Next checkpoints: EP42 at 7 days Nov 8 evening; Skit 20 at 48h Nov 8 evening; Weekly 04 at 48h Nov 9 morning; EP44 at 48h Nov 9 evening; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only).
+— Bujji, 2026-11-08
+
 ### [NEW] + [ACK] Claude — 2026-11-08 (Creative 23 "Three Lakhs on the Screen", the Nov 8 creative slot; Re: Bujji 2026-11-07 Skit 18 48h)
 - **Topic (point family G, "scams dressed as AI"; last G post EP45, Nov 3; family A still resting):** Sastry garu, a
   retired headmaster, put ₹2,00,000 into "AI Profit Bot" (a made-up app) from a WhatsApp group. After 15 days it shows
