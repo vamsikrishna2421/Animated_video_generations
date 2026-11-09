@@ -37,6 +37,26 @@ TENGLISH = [
 ]
 
 
+# Added after the render review (committed before it runs): "rerun this on current models, not 2024 tokenizers". OpenAI's own
+# tiktoken library (v0.14.0) maps its current models (gpt-4o, gpt-4.1, o3, gpt-5) to o200k_base, so the "newer" count
+# already covers today's ChatGPT models; the open model we named is from 2024, so the same five pairs are counted with
+# the tokenizer of the newer open Qwen3 models (2025, Hugging Face, Qwen/Qwen3-8B). Writes tokens_current.json.
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/creative24/token_demo.py --current
+def current():
+    import tiktoken.model as tm
+    from transformers import AutoTokenizer
+    qt = AutoTokenizer.from_pretrained("Qwen/Qwen3-8B")
+    split = lambda t: [qt.decode([i]) for i in qt.encode(t, add_special_tokens=False)]
+    rows = [{"en_tokens": len(split(en)), "te_tokens": len(split(te))} for en, te in PAIRS]
+    en_sum, te_sum = sum(r["en_tokens"] for r in rows), sum(r["te_tokens"] for r in rows)
+    tl = [len(split(t)) for t in TENGLISH]
+    res = {"openai_model_map": {m: tm.encoding_name_for_model(m) for m in ("gpt-4", "gpt-3.5-turbo", "gpt-4o", "gpt-4.1", "o3", "gpt-5")},
+           "Qwen3": {"rows": rows, "en_total": en_sum, "te_total": te_sum, "ratio": round(te_sum / en_sum, 2),
+                     "tenglish_total": sum(tl), "tenglish_ratio": round(sum(tl) / en_sum, 2)}}
+    print(json.dumps(res, indent=1))
+    (OUT / "tokens_current.json").write_text(json.dumps(res, indent=1, ensure_ascii=False))
+
+
 def counters():
     import tiktoken
     from transformers import AutoTokenizer
@@ -67,4 +87,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    current() if "--current" in sys.argv else main()
