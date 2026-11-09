@@ -24,10 +24,10 @@ LINES = {
         "మొదట, డబ్బు. తొందరగా, గ్యారంటీగా పెద్ద లాభం అంటే మోసమే. | [1] తర్వాత, ఎవరు పెట్టారో చూడు: బ్లూ టిక్ ఉన్న అసలు పేజీ, లేదా పీ ఐ బీ ఫ్యాక్ట్ చెక్."),
     8: ("chinnu", "wide", "pib", "PIB Fact Check says fake! [1] So my twenty-two thousand?!", "గవర్నమెంట్ ఫ్యాక్ట్ చెక్: ఫేక్! [1] మరి నా డబ్బులు?!"),   # "పీ ఐ బీ" and "ఇరవై రెండు వేలు" came out garbled 4 of 4 (PIB stays on the card)
     9: ("amma", "wide", "call", "Call 1930. [1] Right now.", "వన్ నైన్ త్రీ జీరో కి కాల్ చెయ్. [1] ఇప్పుడే."),
-    10: ("chinnu", "wide", "loop", "Amma, now the RBI Governor says double your money! [1] ...Money test: fake!",
+    10: ("chinnu", "wide", "loop", "Mom, now the RBI Governor says double your money! [1] ...Money test: fake!",
          "అమ్మా, ఇప్పుడు ఆర్ బీ ఐ గవర్నర్ గారు డబ్బు డబుల్ చేస్తారంట! [1] ...మనీ టెస్ట్: ఫేక్!"),
 }
-TTS_EN = {10: "Amma! Now the R. B. I. Governor says double your money! [1] ...Money test: fake!", 9: "Call one nine three zero. [1] Right now.", 5: "New fakes get the lips right too. | [1] An A.I. copied her face and voice from her real speeches, and made her say this."}   # the helpline as people say it   # spoken forms
+TTS_EN = {10: "Mom! Now the R. B. I. Governor says double your money! [1] ...Money test: fake!", 9: "Call one nine three zero. [1] Right now.", 5: "New fakes get the lips right too. | [1] An A.I. copied her face and voice from her real speeches, and made her say this."}   # the helpline as people say it   # spoken forms   # line 10: "Mom", not "Amma", on the English page (Vamsi via Bujji, Nov 8)
 SHOW = {1: "₹22,000... for ₹5.5 lakh in a WEEK?!", 8: "PIB Fact Check says fake! So my ₹22,000?!", 9: "Call 1930. Right now."}
 SHOW_TE = {   # English captions on the Telugu reel, close to the Telugu
     1: "You paid ₹22,000... for ₹5.5 lakh in a week?!", 2: "The Finance Minister herself said it! There's a video!",
@@ -70,6 +70,8 @@ def spec(lang="en"):
          "tempo": 1.0, "captionTop": 1500}
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.5})   # Creative 13: the opening hit swallowed the first Telugu word
+    else:
+        s["names"] = {"amma": "Mom"}   # Vamsi via Bujji, Nov 8: "Mom", not "Amma", on the English page
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []

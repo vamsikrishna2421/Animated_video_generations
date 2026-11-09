@@ -616,7 +616,8 @@ def main(spec_path: Path) -> None:
             sf.write(out / f"line_{n:02d}.wav", a.astype(np.float32), sr)
             dur = len(a) / sr
             lines.append({
-                "who": line["who"], "name": sp["name"], "color": sp["color"], "sub": line.get("sub"),
+                "who": line["who"], "name": spec.get("names", {}).get(line["who"], sp["name"]),   # "names": a per-reel tag (Vamsi, Nov 8: "Mom" on the English page)
+                "color": sp["color"], "sub": line.get("sub"),
                 "audio": f"reel/{rid}/line_{n:02d}.wav", "from": round((t - s_from) * FPS), "frames": round(dur * FPS),
                 "words": [{"w": w, "from": round((t - s_from + s) * FPS), "to": round((t - s_from + e) * FPS)} for w, s, e in words],
                 "cues": {str(k): round((t - s_from + v) * FPS) for k, v in cues.items()},
