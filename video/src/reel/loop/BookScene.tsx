@@ -100,12 +100,12 @@ const counterPage = () => canvasTex(CW, CH, (g) => {
     g.fillStyle = INK; g.font = te ? "700 50px BookTe" : "800 50px BookSans"; g.fillText(txt, 100, y + 92);
     g.fillStyle = col; g.font = "800 64px BookSans"; g.textAlign = "right"; g.fillText(n, 900, y + 98); g.textAlign = "left";
   };
-  g.fillStyle = "#6b7280"; g.font = "600 44px BookSans"; g.fillText("1. paste your English sentence", 90, 520);
+  g.fillStyle = "#6b7280"; g.font = "600 44px BookSans"; g.fillText("1. paste a sentence of yours", 90, 520);
   box(550, "Can you explain why my…", false, "13", BLUE);
   g.fillStyle = "#6b7280"; g.font = "600 44px BookSans"; g.fillText("2. paste it in Telugu", 90, 790);
   box(820, "ఈ నెల నా కరెంట్ బిల్లు…", true, "23", ORANGE);
-  g.fillStyle = "#14532d"; g.font = "800 50px BookSans"; g.fillText("3. comment both numbers", 90, 1080);
-  g.fillStyle = "#6b7280"; g.font = "600 38px BookSans"; g.fillText("(today's ChatGPT tokenizer: 13 and 23)", 90, 1150);
+  g.fillStyle = "#14532d"; g.font = "800 50px BookSans"; g.fillText("3. comment your two numbers", 90, 1080);
+  g.fillStyle = "#6b7280"; g.font = "600 38px BookSans"; g.fillText("(our example: 13 and 23)", 90, 1150);
 });
 const label = (text: string, col: string, size = 120, te = false) => canvasTex(1024, 256, (g) => {
   g.font = te ? `700 ${size}px BookTe` : `800 ${size}px BookSans`; g.textAlign = "center"; g.textBaseline = "middle";
@@ -161,9 +161,9 @@ const StBook: React.FC<SP> = ({ s }) => {
         leftPage("1 · The same question", [["In English", "label"], [EN_Q, "en"], ["In Telugu", "label"], [TE_Q, "te"]]),
         leftPage("2 · Our test", [["5 everyday questions", "en"], ["English and Telugu, the same meaning", "label"], ["3 real token counters", "en"], ["Nov 2026, every token counted", "label"]]),
         leftPage("3 · Why it matters", [["An AI holds only so many tokens of a chat.", "en"], ["More tokens a message:", "label"], ["a long Telugu chat loses its start sooner.", "en"]]),
-        leftPage("4 · What you can do", [["Long Telugu chat forgetting?", "label"], ["Ask for a short summary, paste it into a new chat.", "en"], ["Building with AI?", "label"], ["Count Telugu tokens, compare models.", "en"]]),
+        leftPage("4 · What you can do", [["Long Telugu chat forgetting?", "label"], ["Ask for a short summary, paste it into a new chat.", "en"], ["Building with AI?", "label"], ["Count Telugu tokens on the model you'll use.", "en"]]),
       ],
-      R: [rightPage("the same question, in tokens"), rightPage("Telugu tokens ÷ English tokens"), rightPage("the same long chat: room used"), counterPage()],
+      R: [rightPage("the same question, in tokens"), rightPage("Telugu tokens per English token"), rightPage("the same long chat: limit used"), rightPage(""), counterPage()],
       en13: label("13", BLUE, 150), te101: label("101", ORANGE, 150), enL: label("English", BLUE, 90), teL: label("Telugu", ORANGE, 90),
       pieces: EN_PIECES.map((p) => label(p.trim(), "#1e3a8a", p.trim().length > 6 ? 120 : 150)), cur: label("current", BLUE, 100), curTe: label("కరెంట్", ORANGE, 110, true),
       one: label("1 token", BLUE, 90), twelve: label("12 tokens", ORANGE, 90),
@@ -186,7 +186,8 @@ const StBook: React.FC<SP> = ({ s }) => {
   const back = b.prop === "loop" ? ease(seg(f, endL + 4, endL + 18)) : 0;   // the loop: the book flips back to spread 1
   if (back > 0) { from = 3; to = 0; }
   const leftShown = back > 0 ? (back > 0.5 ? 0 : 3) : turn >= 1 || !(FIRST.includes(n) && n !== 1) ? to : from;
-  const rightShown = back > 0 ? 0 : to;
+  const counterOn = b.prop === "loop" && back <= 0 && f >= cueAt(ln, 2, /^$/, ln.from + Math.round(ln.frames * 0.55)) - 6;
+  const rightShown = back > 0 ? 0 : to === 3 && counterOn ? 4 : to;
   // 3D content: each spread's diagram rises after its turn and sinks before the next
   const rise = (a: number, d = 14) => ease(seg(f, a, a + d));
   const sinkBefore = (FIRST.includes(n) && n !== 1 && turn < 1) || (back > 0 && back < 1) ? 0 : 1;   // v3: the loop's landing keeps its towers
@@ -209,14 +210,15 @@ const StBook: React.FC<SP> = ({ s }) => {
   const near = ["chunks", "telugu", "why", "newer", "fair", "memory"].includes(b.prop);
   const turning = FIRST.includes(n) && n !== 1 ? 1 - ease(seg(f, ln.from + 8, ln.from + 24)) : 0;
   const endOut = 1 - ease(seg(f, endL - 6, endL + 6));   // out again before the next line's page turn
-  const nextTurns = ["why", "fair", "memory"].includes(b.prop);
+  const nextTurns = ["why", "memory"].includes(b.prop);   // "fair" stays leaned in (pulling out showed the left page cut off)
   // the tips: lean in on the left page's tips, then across to the counter on the right page at [2], out before the flip back
   const c2 = b.prop === "loop" ? cu(2, 0.55) : 0;
   const outEnd = 1 - ease(seg(f, endL - 2, endL + 6));
   const tipR = b.prop === "loop" ? ease(seg(f, c2 - 4, c2 + 12)) * outEnd : 0;
   const leanR = near ? lean(1, ["telugu", "chunks"].includes(b.prop) ? ln.from + 2 : ln.from) * (1 - turning) * (nextTurns ? endOut : 1) : tipR;
   const leanL = b.prop === "loop" ? ease(seg(f, ln.from + 16, ln.from + 32)) * (1 - ease(seg(f, c2 - 4, c2 + 12))) * outEnd : 0;
-  const camX = 1.25 * leanR - 1.25 * leanL, camK = 1 - 0.36 * Math.max(leanR, leanL);
+  const push = b.prop === "hook" ? 0.07 * seg(f, ln.from, ln.from + ln.frames + 10) : 0;   // review 2: frame 1 sat still to 0:07
+  const camX = 1.25 * leanR - 1.25 * leanL + 1.5 * push, camK = 1 - 0.36 * Math.max(leanR, leanL) - push;
   // sounds: a page turn on every turn, a pop as things land, a boom on the clash numbers
   const sfx: React.ReactNode[] = [];
   beats.forEach((bb, i) => {
@@ -226,7 +228,7 @@ const StBook: React.FC<SP> = ({ s }) => {
     if (bb.prop === "telugu") sfx.push(<Sfx key={k("g")} at={cueAt(l, 1, /^$/, l.from + Math.round(l.frames * 0.45))} src="reel/sfx_glitch.wav" vol={0.3} />);
     if (bb.prop === "why") sfx.push(<Sfx key={k("s")} at={cueAt(l, 1, /^$/, l.from + Math.round(l.frames * 0.3))} src="audio/sfx_pop.wav" vol={0.3} />);
     if (bb.prop === "memory") sfx.push(<Sfx key={k("z")} at={cueAt(l, 1, /^$/, l.from + Math.round(l.frames * 0.2)) + 38} src="reel/sfx_buzz.wav" vol={0.3} />);
-    if (bb.prop === "newer") sfx.push(<Sfx key={k("d")} at={l.from + 48} src="audio/gag_ding.wav" vol={0.45} />, <Sfx key={k("n")} at={cueAt(l, 1, /^$/, l.from + Math.round(l.frames * 0.35)) - 2} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.7} />);
+    if (bb.prop === "newer") sfx.push(<Sfx key={k("b")} at={l.from + 50} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("d")} at={l.from + 48} src="audio/gag_ding.wav" vol={0.45} />, <Sfx key={k("n")} at={cueAt(l, 1, /^$/, l.from + Math.round(l.frames * 0.35)) - 2} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.7} />);
     if (bb.prop === "fair") sfx.push(<Sfx key={k("d")} at={cueAt(l, 2, /^$/, l.from + Math.round(l.frames * 0.8))} src="reel/sfx_boom.wav" vol={0.75} />);
     if (bb.prop === "loop") sfx.push(<Sfx key={k("p")} at={cueAt(l, 2, /^$/, l.from + Math.round(l.frames * 0.55)) - 4} src="audio/sfx_pop.wav" vol={0.35} />);
     if (bb.prop === "loop") { const e = l.from + l.frames; sfx.push(<Sfx key={k("w")} at={e + 4} src="audio/sfx_whoosh.wav" vol={0.75} />, <Sfx key={k("h")} at={e + 18} src="reel/sfx_boom.wav" vol={1.0} />); }
@@ -368,8 +370,8 @@ const StBook: React.FC<SP> = ({ s }) => {
       {/* the saveable frame (Priya): all three ratios, the model names, the date */}
       {((b.prop === "newer" && f >= cu(1, 0.35)) || b.prop === "fair") && (
         <div style={{ position: "absolute", top: 262, left: 50, right: 50, background: "rgba(17,24,39,0.92)", borderRadius: 24, padding: "18px 28px", fontFamily: "BookSans, Arial", color: "#f3f4f6", opacity: seg(f, b.prop === "newer" ? cu(1, 0.35) : 0, (b.prop === "newer" ? cu(1, 0.35) : 0) + 8) }}>
-          <div style={{ fontWeight: 800, fontSize: 36, color: "#fde68a" }}>TELUGU ÷ ENGLISH TOKENS</div>
-          <div style={{ fontWeight: 600, fontSize: 26, color: "#9ca3af", marginBottom: 8 }}>our test: 5 everyday questions · Nov 2026 · models per OpenAI's tiktoken</div>
+          <div style={{ fontWeight: 800, fontSize: 36, color: "#fde68a" }}>TELUGU TOKENS PER ENGLISH TOKEN</div>
+          <div style={{ fontWeight: 600, fontSize: 30, color: "#cbd5e1", marginBottom: 8 }}>our test: 5 everyday questions · Nov 2026 · models per OpenAI's tiktoken</div>
           {[["older ChatGPT (GPT-4, GPT-3.5)", "7.4×", "#fb923c", 0], ["today's ChatGPT (GPT-4o to GPT-5)", "1.7×", "#4ade80", 0], ["Qwen2.5 / Qwen3 (free, open)", "6.4×", "#fb923c", 1]].map(([nm, v, col, late]) => (
             <div key={String(nm)} style={{ display: "flex", justifyContent: "space-between", fontWeight: 800, fontSize: 38, lineHeight: 1.35, opacity: late && b.prop !== "fair" ? 0.25 : 1 }}>
               <span>{nm}</span><span style={{ color: String(col) }}>{v}</span>
@@ -377,15 +379,15 @@ const StBook: React.FC<SP> = ({ s }) => {
           ))}
         </div>
       )}
-      {b.prop === "fair" && (
-        <div style={{ position: "absolute", top: 552, left: 0, right: 0, textAlign: "center", opacity: seg(f, cu(2, 0.8) - 1, cu(2, 0.8) + 4) }}>
+      {(b.prop === "fair" || (b.prop === "memory" && f < ln.from + 12)) && (
+        <div style={{ position: "absolute", top: 552, left: 0, right: 0, textAlign: "center", opacity: b.prop === "fair" ? seg(f, cu(2, 0.8) - 1, cu(2, 0.8) + 4) : 1 - seg(f, ln.from - 2, ln.from + 12) }}>
           <span style={{ border: "9px solid #dc2626", color: "#dc2626", background: "rgba(255,255,255,0.94)", fontFamily: "BookSans, Arial", fontWeight: 800, fontSize: 76, padding: "4px 26px", borderRadius: 14, display: "inline-block", transform: "rotate(-6deg)" }}>NOT FAIR YET</span>
         </div>
       )}
       {(b.prop === "memory" || (b.prop === "loop" && back <= 0)) && (
         <div style={{ position: "absolute", top: 280, left: 0, right: 0, textAlign: "center", fontFamily: "BookSans, Arial", fontWeight: 800, fontSize: 60, color: "#fde68a", letterSpacing: 2 }}>
           {b.prop === "memory" ? "WHY IT MATTERS" : "WHAT YOU CAN DO"}
-          <div style={{ fontWeight: 600, fontSize: 32, color: "#e7d8c3", letterSpacing: 0, marginTop: 10 }}>{b.prop === "memory" ? "the same long chat: how much room it takes" : "OpenAI's free counter: platform.openai.com/tokenizer"}</div>
+          <div style={{ fontWeight: 600, fontSize: 32, color: "#e7d8c3", letterSpacing: 0, marginTop: 10 }}>{b.prop === "memory" ? "the same long chat: how much of the limit it uses" : "OpenAI's free counter: platform.openai.com/tokenizer"}</div>
         </div>
       )}
     </AbsoluteFill>

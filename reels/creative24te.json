@@ -91,24 +91,24 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "ఇంగ్లీష్ లో పదమూడు టోకెన్లు. తెలుగులో, అదే ప్రశ్నకి, <pause 0.45> [1] నూట ఒకటి.",
-     "show": "13 tokens in English. In Telugu, for the same question, <pause 0.45> 101.",
+     "text": "ఇంగ్లీష్ లో పదమూడు టోకెన్లు. తెలుగులో, అదే ప్రశ్నకి, <pause 0.45> [1] నూట ఒకటి టోకెన్లు.",
+     "show": "13 tokens in English. In Telugu, for the same question, <pause 0.45> 101 tokens.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "tempo": 1.03,
+     "tempo": 1.05,
      "tts": "ఇంగ్లీష్ లో పదమూడు టోకెన్లు. తెలుగులో, అదే ప్రశ్నకి,",
      "file2": "01b_storyteller.wav",
-     "tts2": "నూట ఒకటి.",
+     "tts2": "నూట ఒకటి టోకెన్లు.",
      "pause": 0.45
     },
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "చాట్ బాట్ పదాలు చదవదు: [1] టోకెన్లు చదువుతుంది, అంటే టెక్స్ట్ ముక్కలు. అది కొన్ని టోకెన్లే పట్టగలదు.",
-     "show": "A chatbot doesn't read words: it reads tokens, chunks of text. It can only hold so many.",
+     "text": "చాట్ బాట్ పదాలు చదవదు: [1] టోకెన్లు చదువుతుంది, అంటే టెక్స్ట్ ముక్కలు. అది కొన్ని టోకెన్లు మాత్రమే గుర్తుంచుకోగలదు.",
+     "show": "A chatbot doesn't read words: it reads tokens, chunks of text. It can only remember so many.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "tempo": 1.03
+     "tempo": 1.05
     },
     {
      "who": "storyteller",
@@ -117,7 +117,7 @@
      "show": "The word \"current\": 1 chunk in English. Written in Telugu letters, 12 pieces.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "tempo": 1.03
+     "tempo": 1.05
     },
     {
      "who": "storyteller",
@@ -126,7 +126,7 @@
      "show": "Why? Its list of chunks was made mostly from English text.",
      "maxgap": 0.3,
      "gap": 0.6,
-     "tempo": 1.03
+     "tempo": 1.05
     }
    ]
   },
@@ -134,8 +134,8 @@
    "id": "s_b",
    "type": "sk_book",
    "tail": 0.0,
-   "lift": 0.9,
-   "boost": 1.4,
+   "lift": 1.0,
+   "boost": 1.8,
    "data": {
     "beats": [
      {
@@ -155,11 +155,11 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "గుడ్ న్యూస్ ఏంటంటే: ఇప్పటి చాట్ జీపీటీ లో, అదే ప్రశ్నకి ఇరవై మూడు టోకెన్లే. [1] ఐదు ప్రశ్నల్లో: ఏడు రెట్ల నుంచి, రెండు రెట్ల లోపే.",
-     "show": "Good news: on today's ChatGPT, the same question is just 23 tokens. Over 5 questions: from 7 times to under 2.",
+     "text": "గుడ్ న్యూస్: ఇప్పటి చాట్ జీపీటీ లో, అదే ప్రశ్నకి ఇరవై మూడు టోకెన్లే. [1] ఐదు ప్రశ్నల్లో: ఏడు రెట్లు ఉండేది, ఇప్పుడు రెండు కంటే తక్కువ.",
+     "show": "Good news: on today's ChatGPT, the same question is just 23 tokens. Over 5 questions: it was 7 times, now under 2.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "tempo": 1.03
+     "tempo": 1.05
     }
    ]
   },
@@ -193,12 +193,12 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా ఆరు రెట్లు. [1] మెరుగవుతోంది. <pause 0.5> [2] ఇంకా సమానం కాదు.",
+     "text": "కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా, ఆరు రెట్లు. [1] మెరుగవుతోంది. <pause 0.5> [2] ఇంకా సమానం కాదు.",
      "show": "But in an open model you can get for free, still 6 times. Getting better. <pause 0.5> Not equal yet.",
      "maxgap": 0.3,
-     "gap": 0.25,
-     "tempo": 1.03,
-     "tts": "కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా ఆరు రెట్లు. మెరుగవుతోంది.",
+     "gap": 0.6,
+     "tempo": 1.05,
+     "tts": "కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా, ఆరు రెట్లు. మెరుగవుతోంది.",
      "file2": "06b_storyteller.wav",
      "tts2": "ఇంకా సమానం కాదు.",
      "pause": 0.5
@@ -229,11 +229,11 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు ఎక్కువైతే, ఆ చోటు త్వరగా నిండుతుంది. [1] అందుకే పెద్ద తెలుగు చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది.",
-     "show": "Why it matters: more tokens fill that room faster. So in a long Telugu chat, it forgets what you said first, sooner.",
+     "text": "ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు ఎక్కువైతే, ఆ లిమిట్ త్వరగా అయిపోతుంది. [1] అందుకే పెద్ద చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది.",
+     "show": "Why it matters: more tokens use up that limit faster. So in a long Telugu chat, it forgets what you said first, sooner.",
      "maxgap": 0.3,
      "gap": 0.5,
-     "tempo": 1.08
+     "tempo": 1.07
     }
    ]
   },
@@ -265,11 +265,11 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "పెద్ద తెలుగు చాట్ లో ముందు చెప్పింది మర్చిపోతుంటే? [1] చిన్న సమ్మరీ అడిగి, ఇంకో చాట్ లో పేస్ట్ చేయండి. [2] యాప్ తయారు చేస్తుంటే, తెలుగు టోకెన్లు లెక్కపెట్టి, మోడల్స్ ని పోల్చి చూడండి.",
-     "show": "Long Telugu chat forgetting what you said earlier? Ask for a short summary, paste it into another chat. Building an app? Count Telugu tokens and compare models.",
+     "text": "పెద్ద చాట్ లో ముందు చెప్పింది మర్చిపోతుంటే? [1] చిన్న సమ్మరీ అడిగి, ఇంకో చాట్ లో పేస్ట్ చేయండి. [2] యాప్ తయారు చేస్తుంటే, మీరు వాడే మోడల్ లోనే తెలుగు టోకెన్లు లెక్కపెట్టండి.",
+     "show": "Long Telugu chat forgetting what you said earlier? Ask for a short summary, paste it into another chat. Building an app? Count Telugu tokens on the model you'll use.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "tempo": 1.08
+     "tempo": 1.07
     }
    ]
   }

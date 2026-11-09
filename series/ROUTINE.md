@@ -695,3 +695,8 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   - A full bed-out before a line that sounds final ("Not fair yet") plays like the ending: dip it (`duck`), carry on.
   - Whisper hears Parler's "తెలుగు" as "थेलुकु" when it's wrong: a MUST group of "तेल" picks the takes that say it.
     Whisper writes "forgetting" as "for getting".
+  - "÷" reads as "+" on a phone in a small header: write "per" ("Telugu tokens per English token").
+  - A try-it card that prints the example's numbers leaves nothing to comment: ask for the viewer's own sentence and
+    mark ours as "our example".
+  - A Parler take passing its own check can still be heard wrong in the full mix: give each Telugu key word a MUST group
+    (numbers included: "రెండు", "ఆరు" were swallowed) and six tries; a number alone ("నూట ఒకటి.") voices badly, add a word.

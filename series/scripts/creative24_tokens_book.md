@@ -1,4 +1,4 @@
-# Creative 24 "The Same Question, 101 Tokens" (the Nov 9 creative slot) · script v3.1, Nov 9
+# Creative 24 "The Same Question, 101 Tokens" (the Nov 9 creative slot) · script v3.2, Nov 9
 
 ## The format test (Vamsi via Bujji, Nov 6; agreed for a Nov 9-11 creative slot)
 The "3D textbook": an open book on a desk. The left page holds the words (still); the diagram on the right page lifts off
@@ -70,7 +70,22 @@ the ending (a dip, not a stop; straight into why-it-matters); a stake in the fir
 Changed: all of the above. Every Telugu take with "తెలుగు" must be heard with it (MUST check); the table names the models
 "per OpenAI's tiktoken"; the counter page says it counts OpenAI's models.
 
-## Script (English, v3.1; narrator only) · ~50 s
+## Render review 2 (human-viewer, the v3.1 render) and what changed (v3.2)
+Both: the contradiction, the app and the chunks are fixed; the table is the save frame. Still to change: Telugu re-takes
+("పట్టగలదు" looped, "గుడ్ న్యూస్ ఏంటంటే" stuttered, "తెలుగు" in lines 7-8, "నూట ఒకటి" heard "nota agati", "రెండు" and "ఆరు"
+swallowed); NOT FAIR YET was up under 2 s; "÷" in the table header reads as "+" on a phone; the try-it card printed 13 and 23,
+so "comment both numbers" gave nothing to do, and its words showed as stubs while the camera was on the tips; "compare
+models" with a counter that only counts OpenAI's; "fill that room" (what room?); no lift on 101 -> 23; frame 1 sat still
+to 0:07.
+Changed: Telugu lines 1 (the number's take now "నూట ఒకటి టోకెన్లు"), 2 ("గుర్తుంచుకోగలదు"), 5 ("గుడ్ న్యూస్:", "ఏడు రెట్లు
+ఉండేది, ఇప్పుడు రెండు కంటే తక్కువ"), 6 ("ఇంకా, ఆరు రెట్లు"), 7 ("ఆ లిమిట్"), 8 re-voiced, each take checked for its key word
+(six tries); Parler said "పెద్ద తెలుగు చాట్" as "థెలుక్" on every take, so lines 7-8 say "పెద్ద చాట్" (the Telugu page's chat
+is Telugu already); English 7 "Telugu uses up that limit faster", 8 "count your Telugu tokens on the model you'll use"; the
+stamp held into the page turn; "TELUGU TOKENS PER ENGLISH TOKEN"; the card asks for a sentence of yours and marks 13/23
+as our example, and appears as the camera crosses to it; the bed boosted under the good news with a hit as 101 lands on
+23; a slow push-in on frame 1.
+
+## Script (English, v3.1; narrator only; lines 7-8 as v3.2 below) · ~50 s
 | # | Line | The book |
 |---|---|---|
 | 1 | Thirteen tokens in English. [1] A hundred and one in Telugu. | spread 1: the towers (13 vs 101), frame-1 blocks, "older ChatGPT model" |
@@ -79,20 +94,20 @@ Changed: all of the above. Every Telugu take with "తెలుగు" must be h
 | 4 | Why? [1] Its chunk list was built mostly from English text. | the stamp, with the research credit |
 | 5 | The good news: today's ChatGPT counts that question in twenty-three. [1] Over five questions: from seven times down to under two. | page turn; spread 2: 101 shrinks to 23; bars older 7.4x, today 1.7x; a lift |
 | 6 | But a popular free open model: still six times. [1] Getting fairer. / [2] Not fair yet. | the Qwen bar 6.4x; the saveable table; a dip, NOT FAIR YET on its words |
-| 7 | Why it matters: more tokens fill that room faster. [1] So in a long Telugu chat, the AI forgets the start sooner. | page turn; spread 3: the same chat's room used (1, 1.7, 6.4) |
-| 8 | Long Telugu chat forgetting what you said? [1] Ask for a short summary, and paste it into a new chat. [2] Building with AI? Count your Telugu tokens, and compare models before you pick. | page turn; spread 4: the tips; the counter page; the flip back |
+| 7 | Why it matters: Telugu uses up that limit faster. [1] So in a long Telugu chat, the AI forgets the start sooner. | page turn; spread 3: the same chat's room used (1, 1.7, 6.4) |
+| 8 | Long Telugu chat forgetting what you said? [1] Ask for a short summary, and paste it into a new chat. [2] Building with AI? Count your Telugu tokens on the model you'll use. | page turn; spread 4: the tips; the counter page; the flip back |
 
-## Script (Telugu, v3.1)
+## Script (Telugu, v3.2: as voiced)
 | # | Telugu |
 |---|---|
-| 1 | ఇంగ్లీష్ లో పదమూడు టోకెన్లు. తెలుగులో, అదే ప్రశ్నకి, / [1] నూట ఒకటి. |
-| 2 | చాట్ బాట్ పదాలు చదవదు: [1] టోకెన్లు చదువుతుంది, అంటే టెక్స్ట్ ముక్కలు. అది కొన్ని టోకెన్లే పట్టగలదు. |
+| 1 | ఇంగ్లీష్ లో పదమూడు టోకెన్లు. తెలుగులో, అదే ప్రశ్నకి, / [1] నూట ఒకటి టోకెన్లు. |
+| 2 | చాట్ బాట్ పదాలు చదవదు: [1] టోకెన్లు చదువుతుంది, అంటే టెక్స్ట్ ముక్కలు. అది కొన్ని టోకెన్లు మాత్రమే గుర్తుంచుకోగలదు. |
 | 3 | కరెంట్ అనే పదం, ఇంగ్లీష్ లో ఒక్క ముక్క. [1] తెలుగు అక్షరాల్లో రాస్తే, పన్నెండు ముక్కలు. |
 | 4 | ఎందుకు? [1] దాని ముక్కల లిస్ట్, ఎక్కువగా ఇంగ్లీష్ టెక్స్ట్ తోనే తయారైంది. |
-| 5 | గుడ్ న్యూస్ ఏంటంటే: ఇప్పటి చాట్ జీపీటీ లో, అదే ప్రశ్నకి ఇరవై మూడు టోకెన్లే. [1] ఐదు ప్రశ్నల్లో: ఏడు రెట్ల నుంచి, రెండు రెట్ల లోపే. |
-| 6 | కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా ఆరు రెట్లు. [1] మెరుగవుతోంది. / [2] ఇంకా సమానం కాదు. |
-| 7 | ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు ఎక్కువైతే, ఆ చోటు త్వరగా నిండుతుంది. [1] అందుకే పెద్ద తెలుగు చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది. |
-| 8 | పెద్ద తెలుగు చాట్ లో ముందు చెప్పింది మర్చిపోతుంటే? [1] చిన్న సమ్మరీ అడిగి, ఇంకో చాట్ లో పేస్ట్ చేయండి. [2] యాప్ తయారు చేస్తుంటే, తెలుగు టోకెన్లు లెక్కపెట్టి, మోడల్స్ ని పోల్చి చూడండి. |
+| 5 | గుడ్ న్యూస్: ఇప్పటి చాట్ జీపీటీ లో, అదే ప్రశ్నకి ఇరవై మూడు టోకెన్లే. [1] ఐదు ప్రశ్నల్లో: ఏడు రెట్లు ఉండేది, ఇప్పుడు రెండు కంటే తక్కువ. |
+| 6 | కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా, ఆరు రెట్లు. [1] మెరుగవుతోంది. / [2] ఇంకా సమానం కాదు. |
+| 7 | ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు ఎక్కువైతే, ఆ లిమిట్ త్వరగా అయిపోతుంది. [1] అందుకే పెద్ద చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది. |
+| 8 | పెద్ద చాట్ లో ముందు చెప్పింది మర్చిపోతుంటే? [1] చిన్న సమ్మరీ అడిగి, ఇంకో చాట్ లో పేస్ట్ చేయండి. [2] యాప్ తయారు చేస్తుంటే, మీరు వాడే మోడల్ లోనే తెలుగు టోకెన్లు లెక్కపెట్టండి. |
 
 ## Script review (human-viewer, v1) and what changed
 Both stop on frame 1 (hook 7 and 8: a tall orange "TELUGU 101" reads as unfair to us). Both: the 101 is the older

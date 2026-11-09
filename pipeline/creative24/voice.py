@@ -35,11 +35,13 @@ MUST = {"en": {1: [("thirteen", "13"), ("tokens", "token"), ("english",), ("hund
                4: [("why",), ("chunk",), ("list",), ("built",), ("english",), ("text",)],
                5: [("good",), ("today",), ("chatgpt", "gpt"), ("twenty", "23"), ("five", "5"), ("seven", "7"), ("two", "2")],
                6: [("popular",), ("free",), ("open",), ("six", "6"), ("fairer",)], "6b": [("not",), ("fair",), ("yet",)],
-               7: [("matters",), ("tokens", "token"), ("room",), ("telugu",), ("forgets", "forget"), ("sooner",)],
-               8: [("telugu",), ("forgetting", "getting"), ("summary",), ("paste",), ("building",), ("count",), ("compare",), ("models", "model"), ("pick",)]},
+               7: [("matters",), ("telugu",), ("limit",), ("forgets", "forget"), ("sooner",)],
+               8: [("telugu",), ("forgetting", "getting"), ("summary",), ("paste",), ("building",), ("count",), ("model", "models"), ("use",)]},
         # Telugu (Whisper writes it in Devanagari): render review 1 heard "తెలుగు" as "थेलुकु"/"ఖిల్బూలో"; a take must have it
-        "te": {1: [("पद", "13"), ("तेल", "తెలు")], "1b": [("नूट", "101", "नू")], 2: [("चाट", "chat")], 3: [("तेल", "తెలు")],
-               7: [("तेल", "తెలు")], 8: [("तेल", "తెలు")]}}
+        # render review 2: "నూట ఒకటి" heard "nota agati", "పట్టగలదు" looped, "గుడ్ న్యూస్ ఏంటంటే" stuttered, "రెండు" and "ఆరు" swallowed
+        "te": {1: [("पद", "13"), ("तेल", "తెలు")], "1b": [("नूट", "नुट", "101"), ("ओक", "वोक", "ఒక")], 2: [("चाट", "chat"), ("गुर्त", "गुरत", "గుర్తు")],
+               3: [("तेल", "తెలు")], 5: [("गुड", "good", "गूड"), ("रेंड", "रेंद", "रेन्ड", "2")], 6: [("आरु", "आरू", "6")],
+               7: [("लिमि", "limit"), ("चाट", "chat")], 8: [("तेल", "తెలు"), ("समरी", "సమ్మరీ", "summary")]}}
 JUDGE_TEXT = {1: "13 tokens in English. 101 in Telugu.", 3: "The word current: 1 chunk in English. In Telugu letters: 12 tiny pieces.",
               5: "The good news: today's ChatGPT counts that question in 23. Over 5 questions: from 7 times down to under 2.",
               6: "But a popular free open model: still 6 times. Getting fairer."}
@@ -159,7 +161,7 @@ def voice_one(lang, n, who, text, fname, src, takes, only):
     best = (None, cached[0]) if cached and (KEEP or not only) else None   # --keep: an unchanged line keeps its take
     if best:
         print(f"{tagn} {who}: cached {cached[0].name} | {judge(heard(cached[0], who, lang), text, lang, n)[2]}", flush=True)
-    for k in range(0 if best else 4):
+    for k in range(0 if best else (4 if fish else 6)):
         tmp = takes / f"{key}_{k}.wav"
         try:
             if fish:
