@@ -40,7 +40,18 @@ ASKS = {
     "reply": "A customer messaged that 3 of the 12 eggs we delivered were broken. Write a polite 2-line reply offering "
              "to replace them today.",
 }
-HAND = {}  # (ask, try): (right?, note), after reading every reply by hand
+HAND = {  # (ask, try): (right?, note), after reading every reply by hand
+    **{("total", k): (False, "worked it out step by step; cut off by our 160-token cap before the final sum (partial sums right)") for k in (1, 2, 3, 4)},
+    ("reorder", 1): (True, "cut off at 'Sugar, Toor' by our cap; its list says sugar and toor dal"),
+    ("reorder", 3): (False, "cut off by our cap before its final list (its reasoning had sugar and toor dal)"),
+    **{("reorder", k): (True, "final list: sugar, toor dal (oil and salt named only as 'no need')") for k in (2, 4, 5)},
+    ("offer", 1): (False, "a good draft; '[Your Shop Name]' left to fill in"),
+    ("offer", 2): (False, "a good draft; '[Your Shop Name]' to fill in and a stray 'ice' at the end"),
+    ("offer", 3): (False, "a good draft; a stray 'ice' at the end"),
+    ("offer", 4): (False, "a good draft; '[Your Shop Name]' to fill in and a stray 'ice'"),
+    ("offer", 5): (False, "a good draft; a stray 'ice-bin:10%off' and '[insert date]'"),
+    ("reply", 1): (False, "polite, offers today's replacement; '[Customer's Name]' left to fill in"),
+}
 # Added after the first run (committed before it runs): 4 of the 5 "total" replies worked it out step by step and were cut
 # off by OUR 160-token cap before the final sum (every partial sum right). The same ask again, 5 tries, max 400 tokens,
 # scored by the same rule: ask "total_long".

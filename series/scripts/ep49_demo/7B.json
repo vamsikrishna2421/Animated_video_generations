@@ -22,175 +22,320 @@
    "try": 1,
    "reply": "Sure, let's calculate the total cost:\n\n1. **Sugar**: 2 kg at ₹48 per kg\n   \\[ 2 \\times 48 = ₹96 \\]\n\n2. **Oil**: 1 litre at ₹150\n   \\[ 1 \\times 150 = ₹150 \\]\n\n3. **Biscuits**: 3 packets at ₹20 each\n   \\[ 3 \\times 20 = ₹60 \\]\n\n4. **Rice**: 5 kg at ₹60 per kg\n   \\[ 5 \\times 60 = ₹300 \\]\n\nNow, let's add these amounts together:\n\n\\[ 96 + 150 + 60 +",
    "auto_right": false,
-   "seconds": 59.4
+   "seconds": 59.4,
+   "hand": {
+    "right": false,
+    "note": "worked it out step by step; cut off by our 160-token cap before the final sum (partial sums right)"
+   }
   },
   {
    "ask": "total",
    "try": 2,
    "reply": "Let's calculate the total cost step by step:\n\n1. **Sugar**: 2 kg at ₹48 per kg\n   \\[\n   2 \\times 48 = ₹96\n   \\]\n\n2. **Oil**: 1 litre at ₹150\n   \\[\n   1 \\times 150 = ₹150\n   \\]\n\n3. **Biscuits**: 3 packets at ₹20 each\n   \\[\n   3 \\times 20 = ₹60\n   \\]\n\n4. **Rice**: 5 kg at ₹60 per kg\n   \\[\n   5 \\times 60 = ₹300\n   \\]\n\nNow, let's add up all these amounts to",
    "auto_right": false,
-   "seconds": 102.4
+   "seconds": 102.4,
+   "hand": {
+    "right": false,
+    "note": "worked it out step by step; cut off by our 160-token cap before the final sum (partial sums right)"
+   }
   },
   {
    "ask": "total",
    "try": 3,
    "reply": "Let's calculate the total cost step by step:\n\n1. **Sugar**: 2 kg at ₹48 per kg\n   \\[2 \\times 48 = ₹96\\]\n\n2. **Oil**: 1 litre at ₹150\n   \\[1 \\times 150 = ₹150\\]\n\n3. **Biscuits**: 3 packets at ₹20 each\n   \\[3 \\times 20 = ₹60\\]\n\n4. **Rice**: 5 kg at ₹60 per kg\n   \\[5 \\times 60 = ₹300\\]\n\nNow, let's add these amounts together:\n\n\\[96 + 150 + 60 + 300",
    "auto_right": false,
-   "seconds": 27.3
+   "seconds": 27.3,
+   "hand": {
+    "right": false,
+    "note": "worked it out step by step; cut off by our 160-token cap before the final sum (partial sums right)"
+   }
   },
   {
    "ask": "total",
    "try": 4,
    "reply": "Sure, let's calculate the total cost for each item and then add them up:\n\n1. **2 kg sugar at ₹48 per kg:**\n   \\[\n   2 \\, \\text{kg} \\times ₹48 \\, \\text{per kg} = ₹96\n   \\]\n\n2. **1 litre oil at ₹150:**\n   \\[\n   1 \\, \\text{litre} \\times ₹150 = ₹150\n   \\]\n\n3. **3 packets of biscuits at ₹20 each:**\n   \\[\n   3 \\, \\text{packets} \\times ₹20 \\, \\text{per packet} = ₹60\n   \\]\n\n4. **5",
    "auto_right": false,
-   "seconds": 25.9
+   "seconds": 25.9,
+   "hand": {
+    "right": false,
+    "note": "worked it out step by step; cut off by our 160-token cap before the final sum (partial sums right)"
+   }
   },
   {
    "ask": "total",
    "try": 5,
    "reply": "Let's calculate the total cost step by step:\n\n1. **2 kg sugar at ₹48 per kg:**\n   \\[ 2 \\times 48 = ₹96 \\]\n\n2. **1 litre oil at ₹150:**\n   \\[ 150 \\]\n\n3. **3 packets of biscuits at ₹20 each:**\n   \\[ 3 \\times 20 = ₹60 \\]\n\n4. **5 kg rice at ₹60 per kg:**\n   \\[ 5 \\times 60 = ₹300 \\]\n\nNow, let's add all these amounts together:\n\n\\[ 96 + 150 + 60 + 300 = ₹606 \\]\n\nSo,",
    "auto_right": true,
-   "seconds": 26.0
+   "seconds": 26.0,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "gst",
    "try": 1,
    "reply": "₹1,000",
    "auto_right": true,
-   "seconds": 2.2
+   "seconds": 2.2,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "gst",
    "try": 2,
    "reply": "The price before GST can be calculated using the formula:\n\n\\[ \\text{Price before GST} = \\frac{\\text{Total Price}}{1 + \\text{GST Rate}} \\]\n\nGiven that the total price is ₹1,180 and the GST rate is 18%, we can substitute these values into the formula:\n\n\\[ \\text{Price before GST} = \\frac{1180}{1 + 0.18} = \\frac{1180}{1.18} = 1000 \\]\n\nSo, the price before GST was ₹1,000.",
    "auto_right": true,
-   "seconds": 21.2
+   "seconds": 21.2,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "gst",
    "try": 3,
    "reply": "The price before GST can be calculated using the formula:\n\n\\[ \\text{Price before GST} = \\frac{\\text{Total Price}}{1 + \\text{GST Rate}} \\]\n\nGiven that the total price is ₹1,180 and the GST rate is 18%, we can substitute these values into the formula:\n\n\\[ \\text{Price before GST} = \\frac{1180}{1 + 0.18} = \\frac{1180}{1.18} = 1000 \\]\n\nSo, the price before GST was ₹1,000.",
    "auto_right": true,
-   "seconds": 21.1
+   "seconds": 21.1,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "gst",
    "try": 4,
    "reply": "The price before GST can be calculated using the formula:\n\n\\[ \\text{Price before GST} = \\frac{\\text{Total Price}}{1 + \\text{GST Rate}} \\]\n\nGiven that the total price is ₹1,180 and the GST rate is 18%, we can substitute these values into the formula:\n\n\\[ \\text{Price before GST} = \\frac{1180}{1 + 0.18} = \\frac{1180}{1.18} = 1000 \\]\n\nSo, the price before GST is ₹1,000.",
    "auto_right": true,
-   "seconds": 21.1
+   "seconds": 21.1,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "gst",
    "try": 5,
    "reply": "The price before GST can be calculated using the formula:\n\n\\[ \\text{Price before GST} = \\frac{\\text{Total Bill}}{1 + \\text{GST Rate}} \\]\n\nGiven that the total bill is ₹1,180 and the GST rate is 18%, we can substitute these values into the formula:\n\n\\[ \\text{Price before GST} = \\frac{1180}{1 + 0.18} = \\frac{1180}{1.18} = 1000 \\]\n\nSo, the price before GST is ₹1,000.",
    "auto_right": true,
-   "seconds": 21.1
+   "seconds": 21.1,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "reorder",
    "try": 1,
    "reply": "Based on the shop stock levels and the reorder points provided:\n\n- **Sugar**: Currently at 3 kg, reorder when below 10 kg. Since it is below the reorder point, **reorder sugar**.\n- **Oil**: Currently at 12 litres, reorder when below 5 litres. Since it is above the reorder point, **no action needed for oil**.\n- **Toor Dal**: Currently at 2 kg, reorder when below 8 kg. Since it is below the reorder point, **reorder toor dal**.\n- **Salt**: Currently at 20 packets, reorder when below 10 packets. Since it is above the reorder point, **no action needed for salt**.\n\nItems that need reordering:\n- Sugar\n- Toor",
    "auto_right": false,
-   "seconds": 28.2
+   "seconds": 28.2,
+   "hand": {
+    "right": true,
+    "note": "cut off at 'Sugar, Toor' by our cap; its list says sugar and toor dal"
+   }
   },
   {
    "ask": "reorder",
    "try": 2,
    "reply": "Based on the current stock levels and the reorder points provided:\n\n- **Sugar**: 3 kg (reorder when below 10 kg) - **Need to reorder**\n- **Oil**: 12 litres (reorder below 5 litres) - **No need to reorder**\n- **Toor Dal**: 2 kg (reorder below 8 kg) - **Need to reorder**\n- **Salt**: 20 packets (reorder below 10 packets) - **No need to reorder**\n\nSo, the items that need reordering are:\n\n- Sugar\n- Toor Dal",
    "auto_right": false,
-   "seconds": 19.8
+   "seconds": 19.8,
+   "hand": {
+    "right": true,
+    "note": "final list: sugar, toor dal (oil and salt named only as 'no need')"
+   }
   },
   {
    "ask": "reorder",
    "try": 3,
    "reply": "Based on the current stock levels and the reorder points provided:\n\n- **Sugar**: Current stock is 3 kg, and reorder is needed when it drops below 10 kg. Since 3 kg is below 10 kg, **sugar needs reordering**.\n- **Oil**: Current stock is 12 litres, and reorder is needed when it drops below 5 litres. Since 12 litres is above 5 litres, **oil does not need reordering**.\n- **Toor Dal**: Current stock is 2 kg, and reorder is needed when it drops below 8 kg. Since 2 kg is below 8 kg, **toor dal needs reordering**.\n- **Salt**: Current stock is 20 packets, and reorder is needed when",
    "auto_right": false,
-   "seconds": 25.8
+   "seconds": 25.8,
+   "hand": {
+    "right": false,
+    "note": "cut off by our cap before its final list (its reasoning had sugar and toor dal)"
+   }
   },
   {
    "ask": "reorder",
    "try": 4,
    "reply": "Based on the current stock levels and the reorder points provided:\n\n- **Sugar**: 3 kg (reorder when below 10 kg) - **Needs reordering**.\n- **Oil**: 12 litres (reorder below 5 litres) - **Does not need reordering**.\n- **Toor Dal**: 2 kg (reorder below 8 kg) - **Needs reordering**.\n- **Salt**: 20 packets (reorder below 10 packets) - **Does not need reordering**.\n\nSo, the items that need reordering are:\n\n- Sugar\n- Toor Dal",
    "auto_right": false,
-   "seconds": 21.0
+   "seconds": 21.0,
+   "hand": {
+    "right": true,
+    "note": "final list: sugar, toor dal (oil and salt named only as 'no need')"
+   }
   },
   {
    "ask": "reorder",
    "try": 5,
    "reply": "Based on the given stock levels and reorder criteria:\n\n- **Sugar**: 3 kg (needs to be reordered when below 10 kg) — **Needs reordering**\n- **Oil**: 12 litres (needs to be reordered when below 5 litres) — **Does not need reordering**\n- **Toor Dal**: 2 kg (needs to be reordered when below 8 kg) — **Needs reordering**\n- **Salt**: 20 packets (needs to be reordered when below 10 packets) — **Does not need reordering**\n\nSo, the items that need reordering are:\n\n- Sugar\n- Toor Dal",
    "auto_right": false,
-   "seconds": 21.7
+   "seconds": 21.7,
+   "hand": {
+    "right": true,
+    "note": "final list: sugar, toor dal (oil and salt named only as 'no need')"
+   }
   },
   {
    "ask": "offer",
    "try": 1,
    "reply": "🌿 Welcome to [Your Shop Name]! 🌿 10% off on rice this Sunday only! Don't miss out! 🍚📅",
    "auto_right": true,
-   "seconds": 6.5
+   "seconds": 6.5,
+   "hand": {
+    "right": false,
+    "note": "a good draft; '[Your Shop Name]' left to fill in"
+   }
   },
   {
    "ask": "offer",
    "try": 2,
    "reply": "🎉Reminder! 10% off on all rice this Sunday only at [Your Shop Name]! Stock up while you can! ice😊",
    "auto_right": true,
-   "seconds": 5.0
+   "seconds": 5.0,
+   "hand": {
+    "right": false,
+    "note": "a good draft; '[Your Shop Name]' to fill in and a stray 'ice' at the end"
+   }
   },
   {
    "ask": "offer",
    "try": 3,
    "reply": "🎉 Rice lovers! Get 10% off on all our rice varieties this Sunday only! Shop now and stock up! ice⚡",
    "auto_right": true,
-   "seconds": 4.7
+   "seconds": 4.7,
+   "hand": {
+    "right": false,
+    "note": "a good draft; a stray 'ice' at the end"
+   }
   },
   {
    "ask": "offer",
    "try": 4,
    "reply": "Hey neighbors! 🌟 Get 10% off on all our rice this Sunday only at [Your Shop Name]! Stock up while you save. ice😊 #ShopLocal",
    "auto_right": true,
-   "seconds": 6.4
+   "seconds": 6.4,
+   "hand": {
+    "right": false,
+    "note": "a good draft; '[Your Shop Name]' to fill in and a stray 'ice'"
+   }
   },
   {
    "ask": "offer",
    "try": 5,
    "reply": "🎉 Rice lovers, 10% off on all our rice varieties this Sunday only! Don't miss out. ice-bin:10%off 📅 Sun, [insert date] 🛒",
    "auto_right": true,
-   "seconds": 7.1
+   "seconds": 7.1,
+   "hand": {
+    "right": false,
+    "note": "a good draft; a stray 'ice-bin:10%off' and '[insert date]'"
+   }
   },
   {
    "ask": "reply",
    "try": 1,
    "reply": "Dear [Customer's Name], I hope this message finds you well. We're sorry to hear that some of your eggs were broken upon delivery. Please let us know if you'd like us to replace them today.",
    "auto_right": true,
-   "seconds": 8.3
+   "seconds": 8.3,
+   "hand": {
+    "right": false,
+    "note": "polite, offers today's replacement; '[Customer's Name]' left to fill in"
+   }
   },
   {
    "ask": "reply",
    "try": 2,
    "reply": "I'm sorry to hear that some of the eggs were broken during delivery. We can replace the 3 broken eggs with fresh ones today to ensure you're satisfied.",
    "auto_right": true,
-   "seconds": 5.5
+   "seconds": 5.5,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "reply",
    "try": 3,
    "reply": "I apologize for the broken eggs in your delivery. We can replace them with fresh ones today if you'd like.",
    "auto_right": true,
-   "seconds": 3.9
+   "seconds": 3.9,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "reply",
    "try": 4,
    "reply": "I apologize for the broken eggs in your delivery. We can replace them with fresh ones today if that works for you.",
    "auto_right": true,
-   "seconds": 4.1
+   "seconds": 4.1,
+   "hand": {
+    "right": true
+   }
   },
   {
    "ask": "reply",
    "try": 5,
    "reply": "I apologize for the broken eggs in your order. We can replace them with fresh ones today if you'd like.",
    "auto_right": true,
-   "seconds": 3.9
+   "seconds": 3.9,
+   "hand": {
+    "right": true
+   }
+  },
+  {
+   "ask": "total_long",
+   "try": 1,
+   "reply": "Sure, let's calculate the total cost:\n\n1. **Sugar**: 2 kg at ₹48 per kg\n   \\[ 2 \\times 48 = ₹96 \\]\n\n2. **Oil**: 1 litre at ₹150\n   \\[ 1 \\times 150 = ₹150 \\]\n\n3. **Biscuits**: 3 packets at ₹20 each\n   \\[ 3 \\times 20 = ₹60 \\]\n\n4. **Rice**: 5 kg at ₹60 per kg\n   \\[ 5 \\times 60 = ₹300 \\]\n\nNow, let's add these amounts together:\n\n\\[ 96 + 150 + 60 + 300 = ₹606 \\]\n\nSo, the total is **₹606**.",
+   "auto_right": true,
+   "max_tokens": 400,
+   "seconds": 32.4,
+   "hand": {
+    "right": true
+   }
+  },
+  {
+   "ask": "total_long",
+   "try": 2,
+   "reply": "Let's calculate the total cost step by step:\n\n1. **Sugar**: 2 kg at ₹48 per kg\n   \\[\n   2 \\times 48 = ₹96\n   \\]\n\n2. **Oil**: 1 litre at ₹150\n   \\[\n   1 \\times 150 = ₹150\n   \\]\n\n3. **Biscuits**: 3 packets at ₹20 each\n   \\[\n   3 \\times 20 = ₹60\n   \\]\n\n4. **Rice**: 5 kg at ₹60 per kg\n   \\[\n   5 \\times 60 = ₹300\n   \\]\n\nNow, let's add up all these amounts to get the total:\n\\[\n96 + 150 + 60 + 300 = ₹606\n\\]\n\nSo, the total cost is **₹606**.",
+   "auto_right": true,
+   "max_tokens": 400,
+   "seconds": 33.0,
+   "hand": {
+    "right": true
+   }
+  },
+  {
+   "ask": "total_long",
+   "try": 3,
+   "reply": "Let's calculate the total cost step by step:\n\n1. **Sugar**: 2 kg at ₹48 per kg\n   \\[2 \\times 48 = ₹96\\]\n\n2. **Oil**: 1 litre at ₹150\n   \\[1 \\times 150 = ₹150\\]\n\n3. **Biscuits**: 3 packets at ₹20 each\n   \\[3 \\times 20 = ₹60\\]\n\n4. **Rice**: 5 kg at ₹60 per kg\n   \\[5 \\times 60 = ₹300\\]\n\nNow, let's add these amounts together:\n\n\\[96 + 150 + 60 + 300 = ₹606\\]\n\nSo, the total cost is **₹606**.",
+   "auto_right": true,
+   "max_tokens": 400,
+   "seconds": 30.0,
+   "hand": {
+    "right": true
+   }
+  },
+  {
+   "ask": "total_long",
+   "try": 4,
+   "reply": "Sure, let's calculate the total cost for each item and then add them up:\n\n1. **2 kg sugar at ₹48 per kg:**\n   \\[\n   2 \\, \\text{kg} \\times ₹48 \\, \\text{per kg} = ₹96\n   \\]\n\n2. **1 litre oil at ₹150:**\n   \\[\n   1 \\, \\text{litre} \\times ₹150 = ₹150\n   \\]\n\n3. **3 packets of biscuits at ₹20 each:**\n   \\[\n   3 \\, \\text{packets} \\times ₹20 \\, \\text{per packet} = ₹60\n   \\]\n\n4. **5 kg rice at ₹60 per kg:**\n   \\[\n   5 \\, \\text{kg} \\times ₹60 \\, \\text{per kg} = ₹300\n   \\]\n\nNow, let's add up all the costs:\n\\[\n₹96 + ₹150 + ₹60 + ₹300 = ₹606\n\\]\n\nSo, the total cost is **₹606**.",
+   "auto_right": true,
+   "max_tokens": 400,
+   "seconds": 42.4,
+   "hand": {
+    "right": true
+   }
+  },
+  {
+   "ask": "total_long",
+   "try": 5,
+   "reply": "Let's calculate the total cost step by step:\n\n1. **2 kg sugar at ₹48 per kg:**\n   \\[ 2 \\times 48 = ₹96 \\]\n\n2. **1 litre oil at ₹150:**\n   \\[ 150 \\]\n\n3. **3 packets of biscuits at ₹20 each:**\n   \\[ 3 \\times 20 = ₹60 \\]\n\n4. **5 kg rice at ₹60 per kg:**\n   \\[ 5 \\times 60 = ₹300 \\]\n\nNow, let's add all these amounts together:\n\n\\[ 96 + 150 + 60 + 300 = ₹606 \\]\n\nSo, the total cost is **₹606**.",
+   "auto_right": true,
+   "max_tokens": 400,
+   "seconds": 27.5,
+   "hand": {
+    "right": true
+   }
   }
  ],
  "network_after": {
