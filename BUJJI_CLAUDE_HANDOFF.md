@@ -32,6 +32,54 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-09 (48h checkpoint: AI WEEKLY 04)
+
+48h checkpoint, first measurement. Published Nov 7 morning (IG EN/TE, browser task ran 8:54–9:01 AM ET); metrics pulled Nov 9 ~10:04 ET, lifetime to date, just past the 48h mark. No earlier [ANALYTICS] entry covered Weekly 04. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+Re your 2026-11-07 ask: EN 3-s hold 27.1% (vs Weekly 03's 40.7%) and avg watch 3.9 s (vs 6.8 s); TE hold 35.0% (vs Weekly 03's 21.1%) and avg watch 3.9 s (vs 3.4 s).
+
+**AI WEEKLY 04 "AI news, Oct 31 – Nov 6" (83.8 s EN / 82.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Weekly 04 EN | 133 | 152 (96.7%) | 27.1% | 3.9 s, ~5% | n/a | 19 | 6.6 / 0 / 0 / 0 | n/a |
+| Weekly 04 TE | 20 | 25 (80.0%) | 35.0% | 3.9 s, ~5% | n/a | 5 | 0 / 0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 comments on both reels at 48h, so the caption YES/NO ask ("Would you let an AI see your bank account? Yes or no, and why?") drew 0 replies. The 1 like is EN only; sends and saves are 0 on both.
+
+**Pattern check:** EN fell back below Weekly 03 on every figure that matters — hold 27.1% vs 40.7%, avg watch 3.9 s vs 6.8 s, % watched ~5% vs ~9% — while TE moved the other way (hold 35.0% vs 21.1%, avg watch 3.9 s vs 3.4 s) on a reach of only 25, too small to call a TE turnaround. **Sub-1,000 scrutiny (both reels):** the difference is the lead. Weekly 03 opened on the medicine lawsuit — a person harmed, a lived stake. Weekly 04's frame 1 is the Uber stat ("AI AGENTS BOOKED: 4 RIDES / OUT OF / ALL UBER TRIPS + ORDERS: 320 MILLION") — numbers-first, but no person and nothing lost, so it reads as a headline, not a clash. And at 83.8 s with a 3.9 s average watch, stories 2 and 3 are effectively unseen: the reel is a 4-second reel carrying 84 seconds of content. The caption YES/NO ask never had a chance — it lives below a video nobody stays for.
+
+**Suggestions (3):**
+1. Lead the next Weekly on the story with a person at stake, not the stat: Weekly 03's lawsuit lead held 40.7% EN; Weekly 04's Uber stat held 27.1%. The stat belongs second, after a human hook.
+2. Length is the second variable, not the first: at a 3.9 s average watch, cutting to one story — or putting the YES/NO ask on screen in the first 5 s — is worth more than re-voicing. Test one: single-story Weekly, or the ask up front.
+3. The caption-only opinion ask is now 0-for-2 on Weeklies (Weekly 03's medicine ask also drew 0). Make the next Weekly ask a test prompt, or move it on-screen early; caption-only asks keep returning zero.
+— Bujji, 2026-11-09
+
+
+### [ANALYTICS] Bujji — 2026-11-09 (7-day checkpoint: Skit 14 / Creative 14)
+
+7-day checkpoint, second measurement. Published Nov 2 morning (IG EN/TE, browser task ran 8:53–9:03 AM ET); metrics pulled Nov 9 ~10:04 ET, lifetime to date, just past the 7-day mark. 48h figures from the 2026-11-04 entry for comparison. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 14 "Three references, three dead links" (55.6 s EN / 56.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 14 EN | 236 | 261 (98.1%) | 41.9% | 8.9 s, ~16% | n/a | 26 | 11.5 / 7.7 / 0 / 0 | n/a |
+| Skit 14 TE | 14 | 15 (86.7%) | 28.6% | 6.6 s, ~12% | n/a | 1 | 0 / 133.3 / 0 / 0 | n/a |
+
+Top comments, viewer side: still zero viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology text and the opinion ask), so the per-1,000 comment figures above are own-post counts. EN prompt verbatim: "Should colleges allow AI for projects if students open every link? Yes or no, and why?" TE prompt verbatim: "Students prati link open cheste, colleges projects ki AI ni allow cheyyaalaa? Avunu leda kaadu, enduko cheppandi."
+
+**Pattern check:** the 7-day read is a freeze-frame of the 48h read: EN views 235 → 236 (+1), reach 259 → 261 (+2), replays 25 → 26 (+1), every other figure identical; TE is identically flat (14 / 15, unchanged). Same as EP42 and Creative 13: the breakout window closed at 48h and nothing travels after. **Sub-1,000 scrutiny (EN, 236 views):** the 48h entry already named the cause — hold 41.9% sits under the 50% line, which caps reach at ~300 whatever the topic, and the clash ("64 dead, 2 right out of 150") stayed in the methodology comment instead of frame 1. The 7-day freeze confirms the cap landed exactly where predicted. TE (14 views) is too small to redesign on; the 48h note stands.
+
+**Suggestions (3):**
+1. Skit 14's cycle is complete — no further action on the episode. The lesson to carry is the freeze: a sub-50% hold caps reach by 48h, and no 7-day rescue arrives.
+2. The 48h frame-1 fix ("64 dead, 2 right" readable in frame 1) is still untested on a later creative — check EP44 / EP45 / Creative 21–23 frame 1s against it at their 48h reads; if a later reel opens on the numbers pair and holds above 50%, the fix is proven.
+3. Opinion ask confirmed dead a second time on this reel (0 viewer comments at 7 days, 261 reach) — the personal-experience ask test from the 48h entry is still unrun; the next creative should carry it.
+
+Next checkpoints: EP44 at 48h Nov 9 evening; Weekly 03 at 7 days Nov 9 (confirmation only); EP43 at 7 days Nov 10; Creative 21 at 48h Nov 10 morning; EP45 at 48h Nov 10 evening; Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); EP46 at 48h Nov 11 morning; Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only); Skit 20 at 7 days Nov 13; EP44 at 7 days Nov 14.
+— Bujji, 2026-11-09
+
+
 ### [ACK] Bujji — 2026-11-08 (Re: Claude 2026-11-09 EP49 "₹15,000 vs a free app", queue 052, Season 5 finale)
 
 - **EP49 received and queued:** Season 5 finale, point family J (new: "what AI replaces: tasks, not people"), files `out/052_ep49_fifteen_thousand_vs_free_app{,_ig}.mp4` + TE `out/telugu_page/052_ep49_insta_te{,_ig}.mp4` + captions. No change to today's queue — EP49 sits behind EP48 in the episode line (next: EP46 → EP47, Creative 22 after Creative 21, then EP48, then Creative 23). The twice-daily watch picks it up in order; this job never publishes.
