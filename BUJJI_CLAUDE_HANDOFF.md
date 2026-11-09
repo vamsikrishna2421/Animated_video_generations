@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-08 (48h checkpoint: Skit 20)
+
+48h checkpoint, first measurement. Published Nov 6 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 8 ~20:32 ET, lifetime to date, just short of the 48h mark. No earlier [ANALYTICS] entry covered Skit 20. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 20 "200 Cards Say Sunday" (47.9 s EN / 47.6 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 20 EN | 1406 | 1759 (99.6%) | 63.5% | 17.4 s, ~36% | n/a | 365 | 40.4 / 1.7 / 0 / 0 | n/a |
+| Skit 20 TE | 104 | 117 (96.6%) | 34.6% | 6.6 s, ~14% | n/a | 14 | 0 / 17.1 / 0 / 0 | n/a |
+
+Top comments, viewer side: one viewer comment on EN — "It said wendsday all 3 times" (🪲Kaitlyn pike 🪲), answering the prompt's ask to try the AI 3 times and comment the answers. The other 2 EN comments and both TE comments are our own (the test prompt + methodology note), so the per-1,000 comment figures above are mostly own-post counts. EN prompt verbatim: "Ask your AI app 3 times, in a new chat each time: \"What day of the week is 16 December 2026?\" Comment all 3 answers. (It's a Wednesday.)" TE prompt verbatim: "Mee AI app ni 3 saarlu adagandi (prati saari kotta chat): \"16 December 2026 ye vaaram?\" Moodu javaabulu comment lo raayandi. (Correct: budhavaaram.)"
+
+**Pattern check:** Skit 20 breaks the fatigue staircase the Skit 19 entry closed the case on. Same point family ("different / biased answers"), posted directly after Skit 19 — out of order, against the rotation rule — yet EN reach 1,759 vs Skit 19's 210, hold 63.5% clearing the 60% bar, avg watch 17.4 s / ~36% watched, replays 365 (26% of plays), likes 40.4 per 1,000 — the strongest likes rate yet. The difference is the stake: ₹25,000 non-refundable hall + 200 printed cards, vs Skit 19's landlord argument where no money was actually lost. So the staircase was Skit 19's angle, not the family — a concrete money stake revives it. **Sub-1,000 scrutiny (TE, 104 views):** the premise and frame are proven by EN, so this is a TE-side failure, not a topic one. TE line 1 does lead with the clash ("Chatbot aadivaaram andi. Calendar lo budhavaaram.") plus 200 — the numbers-first wording fix from the Nov 3 ACK was in place — and the hold gap still sits at ~29 points (34.6% vs 63.5%), the same shape as EP42 and Creative 13. So wording alone didn't close it; the remaining TE variable is frame-1 execution (spoken timing / voice in the first 2 s), which EP44's TE hold reads next.
+
+**Suggestions (3):**
+1. Revise the family-fatigue read: don't rest the "different answers" family on Skit 19 alone — a concrete money stake revived it to 1,759 reach. Judge fatigue by stake strength, not by sequence. The rotation rule still stands (no two consecutive same-family posts), but the family isn't exhausted.
+2. TE: the numbers-first wording was in place and the gap stayed ~29 points, so the next TE variable is execution, not wording — a spoken Telugu number in the first 2 s, or frame-1 timing. EP44's TE hold (Nov 9 evening) is the read; if it doesn't close, change the TE frame-1 variable.
+3. Keep test-result prompts: the only viewer reply in the recent run came from "ask your AI 3 times, comment the answers" — a concrete task, not an opinion ask. Opinion asks have drawn zero viewer replies for four checkpoints running; test prompts are the ask shape with evidence.
+
+Next checkpoints: Weekly 04 at 48h Nov 9 morning; EP44 at 48h Nov 9 evening; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); EP43 at 7 days Nov 10; Creative 21 at 48h Nov 10 morning; Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only); Skit 20 at 7 days Nov 13; EP44 at 7 days Nov 14.
+— Bujji, 2026-11-08
+
+### [ANALYTICS] Bujji — 2026-11-08 (7-day checkpoint: EP42)
+
+7-day checkpoint, second measurement. Published Nov 1 evening (IG EN/TE, browser task ran 8:54–9:14 PM ET); metrics pulled Nov 8 ~20:32 ET, lifetime to date, just short of the 7-day mark. 48h figures from the 2026-11-03 entry for comparison. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP42 "Same customer, different name" (45 s EN / 49 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP42 EN | 2015 | 2309 (99.7%) | 66.0% | 16.4 s, ~36% | n/a | 302 | 19.1 / 0.9 / 0 / 0 | n/a |
+| EP42 TE | 101 | 107 (98.1%) | 40.6% | 6.1 s, ~12% | n/a | 7 | 9.3 / 18.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: still zero viewer comments on either page at 7 days. The 2 comments on each reel are both our own, so the per-1,000 comment figures are own-post counts. EN prompt verbatim: "Should a shop let an AI decide who gets credit? Yes or no, and why?" TE prompt verbatim: "Shop lo evariki credit ivvaalo AI decide cheyyocchaa? Avunu leda kaadu, enduko cheppandi."
+
+**Pattern check:** the 7-day read is a freeze-frame of the 48h read: EN views 2,013 → 2,015 (+2), reach 2,306 → 2,309 (+3), replays 301 → 302 (+1), every other figure identical — including the 1 repost, already there at 48h. TE is identically flat (101 / 107, unchanged). Same as Creative 13's 7-day freeze this morning: the breakout stopped traveling after 48h, and its ceiling was set by day 2. The EN/TE hold gap is now 7-day-confirmed on a second breakout (66.0% vs 40.6%) — a TE frame-1 problem, not a topic problem.
+
+**Suggestions (3):**
+1. EP42's cycle is complete — no further action on the episode. The lesson to carry is timing, not content: a breakout's window is ~48h; any follow-up (a pinned comment, a part 2) has to land inside it, not after.
+2. The 66.0% / 40.6% hold gap is now 7-day-confirmed on a second breakout. EP44's TE hold (Nov 9 evening) is the test of the numbers-first Telugu line-1 fix; if it doesn't close the gap, the next TE frame 1 needs a different variable.
+3. Zero viewer comments at 2,309 reach even at 7 days — the opinion ask never converted. Skit 20's one viewer reply (a test-result prompt) is the only ask shape with evidence so far; carry test prompts forward, not opinion asks.
+
+Next checkpoints: Weekly 04 at 48h Nov 9 morning; EP44 at 48h Nov 9 evening; Skit 14 at 7 days Nov 9; Weekly 03 at 7 days Nov 9 (confirmation only); EP43 at 7 days Nov 10; Creative 21 at 48h Nov 10 morning; Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only); Skit 20 at 7 days Nov 13; EP44 at 7 days Nov 14.
+— Bujji, 2026-11-08
+
 ### [STRATEGY] Two rules from Vamsi: "Mom" not "Amma" on the English page + scrutinize every sub-1,000-view reel — 2026-11-08
 
 Vamsi reviewed EP44 ("Deleted in one tap" — the Gemini / bank statement episode) today and raised two things:
