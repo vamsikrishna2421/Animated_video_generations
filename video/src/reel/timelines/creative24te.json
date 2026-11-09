@@ -1,0 +1,919 @@
+{
+ "id": "creative24te",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.3,
+  0.55
+ ],
+ "title": "The Same Question, 101 Tokens (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   62,
+   92
+  ],
+  [
+   1375,
+   1408
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   634,
+   0.9
+  ],
+  [
+   634,
+   1493,
+   1.2
+  ],
+  [
+   1493,
+   1756,
+   1.5
+  ],
+  [
+   1493,
+   1756,
+   1.4,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1756,
+ "music": "reel/creative24te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_book",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "chunks",
+      "n": 2
+     },
+     {
+      "prop": "telugu",
+      "n": 3
+     },
+     {
+      "prop": "why",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "13 vs 101 tokens",
+     "title": "13 vs 101 tokens",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 634,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_01.wav",
+     "from": 15,
+     "frames": 136,
+     "words": [
+      {
+       "w": "13",
+       "from": 17,
+       "to": 22
+      },
+      {
+       "w": "tokens",
+       "from": 22,
+       "to": 46
+      },
+      {
+       "w": "in",
+       "from": 46,
+       "to": 50
+      },
+      {
+       "w": "English.",
+       "from": 50,
+       "to": 65
+      },
+      {
+       "w": "In",
+       "from": 65,
+       "to": 70
+      },
+      {
+       "w": "Telugu,",
+       "from": 70,
+       "to": 93
+      },
+      {
+       "w": "for",
+       "from": 93,
+       "to": 108
+      },
+      {
+       "w": "the",
+       "from": 108,
+       "to": 114
+      },
+      {
+       "w": "same",
+       "from": 114,
+       "to": 122
+      },
+      {
+       "w": "question,",
+       "from": 122,
+       "to": 138
+      },
+      {
+       "w": "101.",
+       "from": 138,
+       "to": 146
+      }
+     ],
+     "cues": {
+      "1": 86
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_02.wav",
+     "from": 161,
+     "frames": 154,
+     "words": [
+      {
+       "w": "The",
+       "from": 163,
+       "to": 173
+      },
+      {
+       "w": "same",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "question.",
+       "from": 181,
+       "to": 208
+      },
+      {
+       "w": "An",
+       "from": 208,
+       "to": 212
+      },
+      {
+       "w": "AI",
+       "from": 212,
+       "to": 217
+      },
+      {
+       "w": "doesn't",
+       "from": 217,
+       "to": 230
+      },
+      {
+       "w": "read",
+       "from": 230,
+       "to": 246
+      },
+      {
+       "w": "words:",
+       "from": 246,
+       "to": 257
+      },
+      {
+       "w": "it",
+       "from": 257,
+       "to": 262
+      },
+      {
+       "w": "reads",
+       "from": 262,
+       "to": 272
+      },
+      {
+       "w": "tokens,",
+       "from": 272,
+       "to": 290
+      },
+      {
+       "w": "chunks",
+       "from": 290,
+       "to": 301
+      },
+      {
+       "w": "of",
+       "from": 301,
+       "to": 306
+      },
+      {
+       "w": "text.",
+       "from": 306,
+       "to": 315
+      }
+     ],
+     "cues": {
+      "1": 198
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_03.wav",
+     "from": 324,
+     "frames": 163,
+     "words": [
+      {
+       "w": "The",
+       "from": 325,
+       "to": 332
+      },
+      {
+       "w": "word",
+       "from": 332,
+       "to": 341
+      },
+      {
+       "w": "\"current\":",
+       "from": 341,
+       "to": 367
+      },
+      {
+       "w": "1",
+       "from": 367,
+       "to": 371
+      },
+      {
+       "w": "chunk",
+       "from": 371,
+       "to": 381
+      },
+      {
+       "w": "in",
+       "from": 381,
+       "to": 386
+      },
+      {
+       "w": "English.",
+       "from": 386,
+       "to": 401
+      },
+      {
+       "w": "Written",
+       "from": 401,
+       "to": 424
+      },
+      {
+       "w": "in",
+       "from": 424,
+       "to": 434
+      },
+      {
+       "w": "Telugu",
+       "from": 434,
+       "to": 446
+      },
+      {
+       "w": "letters,",
+       "from": 446,
+       "to": 468
+      },
+      {
+       "w": "12",
+       "from": 468,
+       "to": 473
+      },
+      {
+       "w": "pieces.",
+       "from": 473,
+       "to": 487
+      }
+     ],
+     "cues": {
+      "1": 396
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_04.wav",
+     "from": 498,
+     "frames": 117,
+     "words": [
+      {
+       "w": "Why?",
+       "from": 499,
+       "to": 509
+      },
+      {
+       "w": "These",
+       "from": 509,
+       "to": 530
+      },
+      {
+       "w": "were",
+       "from": 530,
+       "to": 540
+      },
+      {
+       "w": "made",
+       "from": 540,
+       "to": 550
+      },
+      {
+       "w": "mostly",
+       "from": 550,
+       "to": 575
+      },
+      {
+       "w": "from",
+       "from": 575,
+       "to": 585
+      },
+      {
+       "w": "English",
+       "from": 585,
+       "to": 600
+      },
+      {
+       "w": "text.",
+       "from": 600,
+       "to": 611
+      }
+     ],
+     "cues": {
+      "1": 512
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_book",
+   "data": {
+    "beats": [
+     {
+      "prop": "memory",
+      "n": 5
+     },
+     {
+      "prop": "cost",
+      "n": 6
+     },
+     {
+      "prop": "newer",
+      "n": 7
+     },
+     {
+      "prop": "fair",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Memory, cost, our test",
+     "title": "Memory, cost, our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 634,
+   "frames": 859,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_05.wav",
+     "from": 0,
+     "frames": 163,
+     "words": [
+      {
+       "w": "In",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "your",
+       "from": 5,
+       "to": 13
+      },
+      {
+       "w": "app,",
+       "from": 13,
+       "to": 28
+      },
+      {
+       "w": "tokens",
+       "from": 28,
+       "to": 39
+      },
+      {
+       "w": "are",
+       "from": 39,
+       "to": 53
+      },
+      {
+       "w": "the",
+       "from": 53,
+       "to": 59
+      },
+      {
+       "w": "AI's",
+       "from": 59,
+       "to": 67
+      },
+      {
+       "w": "memory.",
+       "from": 67,
+       "to": 89
+      },
+      {
+       "w": "A",
+       "from": 89,
+       "to": 92
+      },
+      {
+       "w": "long",
+       "from": 92,
+       "to": 100
+      },
+      {
+       "w": "Telugu",
+       "from": 100,
+       "to": 114
+      },
+      {
+       "w": "chat",
+       "from": 114,
+       "to": 122
+      },
+      {
+       "w": "runs",
+       "from": 122,
+       "to": 129
+      },
+      {
+       "w": "out",
+       "from": 129,
+       "to": 135
+      },
+      {
+       "w": "of",
+       "from": 135,
+       "to": 140
+      },
+      {
+       "w": "room",
+       "from": 140,
+       "to": 147
+      },
+      {
+       "w": "sooner.",
+       "from": 147,
+       "to": 159
+      }
+     ],
+     "cues": {
+      "1": 69
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_06.wav",
+     "from": 174,
+     "frames": 155,
+     "words": [
+      {
+       "w": "Developers",
+       "from": 177,
+       "to": 204
+      },
+      {
+       "w": "pay",
+       "from": 204,
+       "to": 211
+      },
+      {
+       "w": "for",
+       "from": 211,
+       "to": 218
+      },
+      {
+       "w": "every",
+       "from": 218,
+       "to": 228
+      },
+      {
+       "w": "token.",
+       "from": 228,
+       "to": 241
+      },
+      {
+       "w": "The",
+       "from": 241,
+       "to": 248
+      },
+      {
+       "w": "same",
+       "from": 248,
+       "to": 266
+      },
+      {
+       "w": "Telugu",
+       "from": 266,
+       "to": 278
+      },
+      {
+       "w": "question",
+       "from": 278,
+       "to": 294
+      },
+      {
+       "w": "costs",
+       "from": 294,
+       "to": 314
+      },
+      {
+       "w": "more.",
+       "from": 314,
+       "to": 329
+      }
+     ],
+     "cues": {
+      "1": 249
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_07.wav",
+     "from": 347,
+     "frames": 276,
+     "words": [
+      {
+       "w": "Good",
+       "from": 348,
+       "to": 358
+      },
+      {
+       "w": "news:",
+       "from": 358,
+       "to": 387
+      },
+      {
+       "w": "the",
+       "from": 387,
+       "to": 395
+      },
+      {
+       "w": "newer",
+       "from": 395,
+       "to": 411
+      },
+      {
+       "w": "ChatGPT",
+       "from": 411,
+       "to": 435
+      },
+      {
+       "w": "counts",
+       "from": 435,
+       "to": 462
+      },
+      {
+       "w": "that",
+       "from": 462,
+       "to": 471
+      },
+      {
+       "w": "question",
+       "from": 471,
+       "to": 489
+      },
+      {
+       "w": "as",
+       "from": 489,
+       "to": 495
+      },
+      {
+       "w": "23.",
+       "from": 495,
+       "to": 502
+      },
+      {
+       "w": "Over",
+       "from": 502,
+       "to": 522
+      },
+      {
+       "w": "5",
+       "from": 522,
+       "to": 526
+      },
+      {
+       "w": "questions:",
+       "from": 526,
+       "to": 555
+      },
+      {
+       "w": "from",
+       "from": 555,
+       "to": 565
+      },
+      {
+       "w": "7",
+       "from": 565,
+       "to": 569
+      },
+      {
+       "w": "times",
+       "from": 569,
+       "to": 580
+      },
+      {
+       "w": "down",
+       "from": 580,
+       "to": 596
+      },
+      {
+       "w": "to",
+       "from": 596,
+       "to": 602
+      },
+      {
+       "w": "under",
+       "from": 602,
+       "to": 614
+      },
+      {
+       "w": "2.",
+       "from": 614,
+       "to": 619
+      }
+     ],
+     "cues": {
+      "1": 519
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_08.wav",
+     "from": 634,
+     "frames": 203,
+     "words": [
+      {
+       "w": "But",
+       "from": 635,
+       "to": 642
+      },
+      {
+       "w": "in",
+       "from": 642,
+       "to": 658
+      },
+      {
+       "w": "a",
+       "from": 658,
+       "to": 662
+      },
+      {
+       "w": "popular",
+       "from": 662,
+       "to": 677
+      },
+      {
+       "w": "free",
+       "from": 677,
+       "to": 692
+      },
+      {
+       "w": "open",
+       "from": 692,
+       "to": 702
+      },
+      {
+       "w": "model,",
+       "from": 702,
+       "to": 725
+      },
+      {
+       "w": "still",
+       "from": 725,
+       "to": 737
+      },
+      {
+       "w": "6",
+       "from": 737,
+       "to": 741
+      },
+      {
+       "w": "times.",
+       "from": 741,
+       "to": 765
+      },
+      {
+       "w": "A",
+       "from": 765,
+       "to": 769
+      },
+      {
+       "w": "little",
+       "from": 769,
+       "to": 783
+      },
+      {
+       "w": "better.",
+       "from": 783,
+       "to": 808
+      },
+      {
+       "w": "Not",
+       "from": 808,
+       "to": 815
+      },
+      {
+       "w": "equal",
+       "from": 815,
+       "to": 827
+      },
+      {
+       "w": "yet.",
+       "from": 827,
+       "to": 837
+      }
+     ],
+     "cues": {
+      "1": 765
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_book",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "What you can do",
+     "title": "What you can do",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1493,
+   "frames": 263,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative24te/line_09.wav",
+     "from": 15,
+     "frames": 200,
+     "words": [
+      {
+       "w": "For",
+       "from": 16,
+       "to": 22
+      },
+      {
+       "w": "long",
+       "from": 22,
+       "to": 30
+      },
+      {
+       "w": "Telugu",
+       "from": 30,
+       "to": 41
+      },
+      {
+       "w": "work,",
+       "from": 41,
+       "to": 65
+      },
+      {
+       "w": "use",
+       "from": 65,
+       "to": 76
+      },
+      {
+       "w": "a",
+       "from": 76,
+       "to": 79
+      },
+      {
+       "w": "newer",
+       "from": 79,
+       "to": 99
+      },
+      {
+       "w": "app.",
+       "from": 99,
+       "to": 107
+      },
+      {
+       "w": "If",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "you",
+       "from": 112,
+       "to": 118
+      },
+      {
+       "w": "pay",
+       "from": 118,
+       "to": 125
+      },
+      {
+       "w": "per",
+       "from": 125,
+       "to": 131
+      },
+      {
+       "w": "token,",
+       "from": 131,
+       "to": 152
+      },
+      {
+       "w": "count",
+       "from": 152,
+       "to": 169
+      },
+      {
+       "w": "your",
+       "from": 169,
+       "to": 177
+      },
+      {
+       "w": "Telugu",
+       "from": 177,
+       "to": 189
+      },
+      {
+       "w": "tokens",
+       "from": 189,
+       "to": 203
+      },
+      {
+       "w": "first.",
+       "from": 203,
+       "to": 214
+      }
+     ],
+     "cues": {
+      "1": 103
+     }
+    }
+   ]
+  }
+ ]
+}

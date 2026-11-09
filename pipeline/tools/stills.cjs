@@ -9,9 +9,10 @@ const { renderStill, selectComposition } = require(V + "/node_modules/@remotion/
   fs.mkdirSync(outDir, { recursive: true });
   const serveUrl = await bundle({ entryPoint: V + "/src/index.ts", enableCaching: false, symlinkPublicDir: true, publicDir: V + "/public" });
   const browserExecutable = process.env.CHROME || "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell";
-  const composition = await selectComposition({ serveUrl, id: compId, browserExecutable });
+  const chromiumOptions = process.env.GL ? { gl: process.env.GL } : {};   // GL=swangle for Three.js scenes (no GPU)
+  const composition = await selectComposition({ serveUrl, id: compId, browserExecutable, chromiumOptions });
   for (const f of frames) {
-    await renderStill({ composition, serveUrl, output: path.join(outDir, `${compId}_${String(f).padStart(5, "0")}.jpg`), frame: Number(f), imageFormat: "jpeg", jpegQuality: 70, browserExecutable });
+    await renderStill({ composition, serveUrl, output: path.join(outDir, `${compId}_${String(f).padStart(5, "0")}.jpg`), frame: Number(f), imageFormat: "jpeg", jpegQuality: 70, browserExecutable, chromiumOptions });
     console.log("still", f);
   }
   fs.rmSync(serveUrl, { recursive: true, force: true });
