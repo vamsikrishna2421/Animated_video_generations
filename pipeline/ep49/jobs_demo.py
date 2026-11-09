@@ -56,6 +56,9 @@ HAND = {  # (ask, try): (right?, note), after reading every reply by hand
 # off by OUR 160-token cap before the final sum (every partial sum right). The same ask again, 5 tries, max 400 tokens,
 # scored by the same rule: ask "total_long".
 LONG = {"total_long": (ASKS["total"], 400)}
+# Added after the render review (committed before it runs): one rule for every task our cap cut off: "reorder" lost one
+# answer to the same cap, so it gets the same 5 tries with room too, scored by the same rule: ask "reorder_long".
+LONG["reorder_long"] = (ASKS["reorder"], 400)
 
 
 def load(path):
@@ -117,10 +120,11 @@ def offline_run(folder):
             t0 = time.time()
             out = llm.create_chat_completion([{"role": "user", "content": text}], temperature=0.7, top_p=0.9, max_tokens=cap, seed=k)
             reply = out["choices"][0]["message"]["content"].strip()
-            res["rows"].append({"ask": ask, "try": k, "reply": reply, "auto_right": auto("total", reply), "max_tokens": cap,
+            base = ask.replace("_long", "")
+            res["rows"].append({"ask": ask, "try": k, "reply": reply, "auto_right": auto(base, reply), "max_tokens": cap,
                                 "seconds": round(time.time() - t0, 1)})
             dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
-            print(ask, k, auto("total", reply), reply[-120:].replace("\n", " "), flush=True)
+            print(ask, k, auto(base, reply), reply[-160:].replace("\n", " "), flush=True)
     res["network_after"] = ep38.network_check()
     dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
 
