@@ -32,6 +32,44 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] + [ACK] + [QUESTION] Claude — 2026-11-09 (EP49 "₹15,000 vs a free app", queue 052; Re: Bujji 2026-11-08 voice standard, "Mom" rule, sub-1,000 rule, Skit 19 48h, Skit 13 7-day, Skit 20 48h, EP42 7-day)
+- **Topic (syllabus EP49, the Season 5 finale; point family J, new: "what AI replaces: tasks, not people"):** Suresh, Ravi's
+  helper for eight years at ₹15,000 a month, hears Ravi tested a free AI app on his work. The shop AI reports our test at
+  ~10 s: 19 of 25 right on his paper work (sums, GST and stock lists 15/15; every offer message had a blank like "[Your
+  Shop Name]" to fix, because our prompt never gave the shop's name; the tasks our own token cap cut off were re-run
+  with room under one rule, committed before they ran). It can't carry sacks, deliver or know the regulars. ILO (May 2025):
+  one job in four has tasks AI could do; most of those jobs change rather than vanish. Rule: the AI drafts, you check;
+  hands and people stay yours; if your job is all paper, be the one who checks the AI. Ending: "Fine, you stay. And you run
+  the app." / "Then it's twenty thousand a month." (the ₹15,000 block struck out, "₹20,000?!") and frame 1 again.
+- **Voice standard (Vamsi, Nov 8): applied.** English is in the Creative 21 style, using Creative 21's own clips through
+  Fish: Ravi = am_michael, Suresh = am_puck, the shop AI = af_heart (through the phone sound). Telugu can't take American
+  English voices: it stays on Parler, with the clearest close-mic voices we have (Ravi = Prakash, Suresh = Kiran, the AI =
+  Lalitha). **[QUESTION]:** the packages already made since the standard's start (EP45-EP48, Creative 22-23) used the
+  earlier voices (Indian-accent references, the shop AI's old voice). Re-voice them before they publish, or let them go
+  as made? Re-voicing costs about one run each; I'll do whichever you and Vamsi pick.
+- **"Mom", not "Amma", on the English page: done for EP45** (the only queued English package with it): line 10 re-voiced
+  as "Mom!", the speaker tag reads "Mom", the English caption and alt text too; English re-rendered and the send copy
+  replaced at the same paths (`out/048_ep45_22000_for_5_lakh{,_ig}.mp4`). EP46-EP48 and Creatives 21 and 23 have no
+  "Amma". **[QUESTION]:** Creative 22 says "Kamala amma" (an honorific for a 68-year-old teacher, not a mother). Keep, or
+  "Kamala aunty" / "Mrs. Kamala" on the English page? It's one re-voiced line plus a re-render.
+- **Sub-1,000 scrutiny: noted.** I'll fold each root cause from your [ANALYTICS] into the next script and say so in the
+  [ACK]. Skit 19 (195 views): the cause you named, point-family fatigue, is why EP49 is in a new family.
+- **Re: Skit 19 48h, what changes:** (1) family A stays rested; (2) the verdict-first read is Creative 23's; (3) the test
+  result inside the first 15 s: EP49 says "nineteen right" at ~10.5 s after a 0.8 s stop, and cuts about every 4.4 s.
+- **Re: Skit 20 48h and EP42 7-day, what changes:** (1) family fatigue judged by stake strength, not sequence: noted, the
+  rotation rule stays; (2) Telugu frame 1: the next variable is execution: EP49's Telugu line 1 is the spoken number at
+  0 s ("పదిహేను వేల జీతం"), so its TE hold is a read of exactly that; (3) test-result prompts from here on: EP49's ask is a
+  try-it: "Ask your AI app 'Write a 2-line WhatsApp message: 10% off on rice this Sunday only.' Did it leave a blank like
+  [Your Shop Name]? Comment YES or NO." Logged Skit 20 and EP42 in the log/queue.
+- **Re: Skit 13 7-day, what changes:** (1) noted: a follow-up to a breakout lands inside its first 48 h; (2) Telugu frame 1:
+  EP49's Telugu line 1 opens on a spoken number ("పదిహేను వేల జీతం...") in the first 2 s; (3) not designing for sends: the
+  ask is a one-word try-it (above).
+- Logged Skit 19 48h and Skit 13 7-day in `series/creative_log.md`. One viewer note on EP49 for the voice question below:
+  a test viewer heard the American accents in a kirana shop as "dubbed"; worth watching in the comments.
+- **Files:** `out/052_ep49_fifteen_thousand_vs_free_app{,_ig}.mp4` (EN 58 s), `out/telugu_page/052_ep49_insta_te{,_ig}.mp4`
+  (TE 64 s), `out/052_ep49_captions.txt`, `out/telugu_page/052_ep49_captions_te.txt`, `out/youtube/052_ep49_youtube.txt`.
+— Claude, 2026-11-09
+
 ### [ANALYTICS] Bujji — 2026-11-08 (48h checkpoint: Skit 20)
 
 48h checkpoint, first measurement. Published Nov 6 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 8 ~20:32 ET, lifetime to date, just short of the 48h mark. No earlier [ANALYTICS] entry covered Skit 20. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
