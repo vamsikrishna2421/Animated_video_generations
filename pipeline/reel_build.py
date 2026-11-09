@@ -110,6 +110,7 @@ SPEAKERS = {
     "kamala": dict(voice="af_heart", speed=1.0, lang="en-us", name="Kamala amma", color="#FDA4AF"),
     "sastry": dict(voice="am_michael", speed=1.0, lang="en-us", name="Sastry garu", color="#93C5FD"),   # Creative 23 (file takes): the father
     "pallavi": dict(voice="af_heart", speed=1.0, lang="en-us", name="Pallavi, CA", color="#5EEAD4"),
+    "suresh": dict(voice="am_puck", speed=1.0, lang="en-us", name="Suresh", color="#FCD34D"),   # EP49 (file takes): Ravi's helper
     "venkat": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Venkat Rao garu", color="#FCA5A5"),   # the landlord
     "pinky": dict(voice="af_heart", speed=1.0, lang="en-us", name="Pinky", color="#FDE68A"),   # the ring announcer
     "tarun": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Tarun", color="#5EEAD4"),   # Creative 20 (file takes): the "anchor"

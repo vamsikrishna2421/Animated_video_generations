@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -62,6 +62,7 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   kamala: { skin: "#a26d47", hair: "#d4d4d8", top: "#9f1239" },   // Creative 22 (MeterCrayon.tsx): Kamala amma, 68, a retired maths teacher, grey hair, a maroon saree
   sastry: { skin: "#8d5a3b", hair: "#d4d4d8", top: "#f1f5f9" },   // Creative 23 (ProfitCrayon.tsx): Sastry garu, 62, a retired headmaster, white hair, glasses, a moustache, a white shirt
   pallavi: { skin: "#b07a52", hair: "#120d0a", top: "#0f766e" },   // his daughter, 29, a chartered accountant, long hair, a teal kurta
+  suresh: { skin: "#8d5a3b", hair: "#1c1410", top: "#b45309" },   // EP49 (JobsCrayon.tsx): Suresh, 30s, Ravi's helper for eight years, a brown work shirt
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
