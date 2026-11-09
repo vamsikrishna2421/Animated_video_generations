@@ -1,4 +1,4 @@
-SKIT 24: "The Same Question, 101 Tokens" (a format test, the "3D textbook" (Vamsi via Bujji): an open book on a desk, the words on the left page, the right page's diagram lifting off the paper in 3D, page turns between ideas; one narrator. The idea: an AI reads tokens (chunks of text), not words, and the same question in Telugu can take far more tokens than in English. Our test: the electricity-bill question is 13 tokens in English and 101 in Telugu on an older ChatGPT model's tokenizer, 23 on the newer one; over five everyday questions Telugu took 7.35x the tokens (older), 1.68x (newer), 6.38x (a popular free open model). In an app, tokens are the AI's memory: a long Telugu chat runs out of room sooner; developers pay per token. The book flips back to page one. English / Telugu, 9:16; also works as a YouTube Short)
+SKIT 24: "The Same Question, 101 Tokens" (a format test, the "3D textbook" (Vamsi via Bujji): an open book on a desk, the words on the left page, the right page's diagram lifting off the paper in 3D, page turns between ideas; one narrator. The idea: an AI reads tokens (chunks of text), not words, and the same question in Telugu can take far more tokens than in English. Our test: the electricity-bill question is 13 tokens in English and 101 in Telugu on an older ChatGPT model's tokenizer, 23 on today's ChatGPT models' tokenizer; over five everyday questions Telugu took 7.35x the tokens (older), 1.68x (today's), 6.38x (the free, open Qwen models). An AI holds only so many tokens of a chat, so a long Telugu chat loses its start sooner. Two tips: ask for a short summary and paste it into a new chat; building with AI, count Telugu tokens and compare models. The book flips back to page one. English / Telugu, 9:16; also works as a YouTube Short)
 Files: out/skits/24_same_question_101_tokens.mp4 (English page, 54 s) · out/skits/24_same_question_101_tokens_te.mp4 (Telugu page, 59 s)
 Send copies: out/skits/24_same_question_101_tokens_ig.mp4 · out/skits/24_same_question_101_tokens_te_ig.mp4
 Post it as a standalone reel. No follow card inside the video; the one ask lives in the caption (a try-it test).
@@ -6,19 +6,19 @@ Point family B ("AI can't do what it looks like it does": it reads tokens, not w
 
 ########## ENGLISH (@ai_maastaaru) ##########
 === CAPTION ===
-The same question: 13 tokens in English, 101 in Telugu (an older ChatGPT model's tokenizer). The newer one: 23.
+The same question: 13 tokens in English, 101 in Telugu (an older ChatGPT model's tokenizer). Today's ChatGPT: 23.
 
-An AI doesn't read words; it reads tokens, chunks of text. Many tokenizers were built mostly from English text, so they cut Telugu letters into tiny pieces: the word "current" is 1 token in English and 12 written in Telugu (older tokenizer).
-Why it matters to you: in your app, the AI's memory is counted in tokens, so a long Telugu chat runs out of room sooner. Developers pay per token (OpenAI's API, for one, prices per million tokens), so the same Telugu question costs them more.
+An AI doesn't read words; it reads tokens, chunks of text. Many tokenizers were built mostly from English text, so they cut Telugu letters into tiny pieces: the word "current" is 1 token in English and 12 written in Telugu (older tokenizer; 3 on today's).
+Why it matters to you: an AI holds only so many tokens of a chat at once, so a long Telugu chat loses its start sooner. And apps that pay per token (OpenAI's API, for one, prices per million tokens) pay more for the same Telugu question.
 
 Our test, five everyday questions (the bill, a birthday wish, a bank account, a school letter, a train refund), the same meaning in English and Telugu:
-- older ChatGPT tokenizer: Telugu took 7.35x the tokens
-- newer ChatGPT tokenizer (2024): 1.68x
-- a popular free open model (Qwen2.5): 6.38x
-- bonus: Telugu typed in English letters ("Ee nela naa current bill..."): about 1.5-1.8x on all three
+- older ChatGPT models (GPT-4, GPT-3.5): Telugu took 7.35x the tokens
+- today's ChatGPT models (GPT-4o to GPT-5 share one tokenizer, per OpenAI's tiktoken library): 1.68x
+- the free, open Qwen models (Qwen2.5 and Qwen3 count the same): 6.38x
+- bonus: Telugu typed in English letters ("Ee nela naa current bill..."): about 1.5-1.8x on all of them
 Getting fairer. Not fair yet.
 
-What you can do: for long Telugu work, use a newer app. Paying per token? Count your Telugu tokens first.
+What you can do: a long Telugu chat forgetting what you said? Ask it for a short summary and paste that into a new chat. Building with AI? Count your Telugu tokens and compare models before you pick.
 
 === COMMENT PROMPT ===
 Try it: paste one Telugu sentence and its English version into a free token counter (OpenAI's Tokenizer page) and comment both numbers.
@@ -27,25 +27,27 @@ Try it: paste one Telugu sentence and its English version into a free token coun
 #AI #Telugu #LearnAI #Tokens #ChatGPT
 
 === PINNED_COMMENT ===
-How we counted (Nov 9, 2026): five questions written in English and in Telugu with the same meaning, counted with three real, open tokenizers: OpenAI's cl100k_base (used by its GPT-4 and GPT-3.5 models) and o200k_base (used by its GPT-4o-era models), via the tiktoken library, and the Qwen2.5 tokenizer (Hugging Face). Totals: English 66 tokens; Telugu 485 / 111 / 421; Telugu in English letters 117 / 101 / 117. Plain counting, no AI answers. Research: Petrov et al., "Language Model Tokenizers Introduce Unfairness Between Languages" (NeurIPS 2023): the same text can differ up to 15x in tokenized length across languages. Every count is in our repo.
+How we counted (Nov 9, 2026): five questions written in English and in Telugu with the same meaning, counted with real, open tokenizers: OpenAI's cl100k_base (GPT-4, GPT-3.5) and o200k_base (GPT-4o, GPT-4.1, o3, GPT-5; the model list is OpenAI's own tiktoken library, v0.14.0), and the Qwen2.5 and Qwen3 tokenizers (Hugging Face; identical counts). Totals: English 66 tokens; Telugu 485 / 111 / 421; Telugu in English letters 117 / 101 / 117. Plain counting, no AI answers. OpenAI's Tokenizer page counts OpenAI's models only. Research: Petrov et al., "Language Model Tokenizers Introduce Unfairness Between Languages" (NeurIPS 2023): the same text can differ up to 15x in tokenized length across languages. Every count is in our repo.
 
 === YOUTUBE SHORTS ===
 Title: The same question: 13 tokens in English, 101 in Telugu #shorts
-Description: An AI reads tokens, not words, and many tokenizers cut Telugu into tiny pieces. Our count over five everyday questions: Telugu took 7.35x the tokens on an older ChatGPT tokenizer, 1.68x on the newer one, 6.38x on a popular free open model. A long Telugu chat runs out of the AI's memory sooner; developers pay per token. Getting fairer, not fair yet.
+Description: An AI reads tokens, not words, and many tokenizers cut Telugu into tiny pieces. Our count over five everyday questions: Telugu took 7.35x the tokens on an older ChatGPT tokenizer, 1.68x on today's ChatGPT models, 6.38x on the free, open Qwen models. An AI holds only so many tokens of a chat, so a long Telugu chat loses its start sooner. Getting fairer, not fair yet.
 
 ########## TELUGU (@ai_maastaaru_telugu) ##########
 === CAPTION ===
-Oke prashna: English lo 13 tokens, Telugu lo 101 (paata ChatGPT model tokenizer). Kotta daantlo: 23.
+Oke prashna: English lo 13 tokens, Telugu lo 101 (paata ChatGPT model tokenizer). Ippati ChatGPT lo: 23.
 
-AI padaalu chadavadu; tokens chaduvutundi, ante text mukkalu. Chaala tokenizers ekkuvagaa English text tho tayaarayyaayi, anduke Telugu aksharaalni chinna chinna mukkalugaa kat chestaayi: "current" English lo 1 token, Telugu aksharaallo raaste 12.
-Meeku enduku mukhyam: mee app lo AI memory tokens lo lekkistaaru, anduke pedda Telugu chat ki chotu twaragaa aipotundi. Developers prati token ki dabbu kadataaru.
+Chatbot padaalu chadavadu; tokens chaduvutundi, ante text mukkalu. Chaala tokenizers ekkuvagaa English text tho tayaarayyaayi, anduke Telugu aksharaalni chinna chinna mukkalugaa kat chestaayi: "current" English lo 1 token, Telugu aksharaallo raaste 12 (paata tokenizer; ippati daantlo 3).
+Meeku enduku mukhyam: chatbot oka chat lo konni tokens maatrame pattagaladu, anduke pedda Telugu chat lo modata cheppindi twaragaa marchipotundi.
 
 Maa test, 5 roju adige prashnalu, English, Telugu lo oke artham:
-- paata ChatGPT tokenizer: Telugu ki 7.35 retlu tokens
-- kotta ChatGPT tokenizer (2024): 1.68 retlu
-- popular free open model (Qwen2.5): 6.38 retlu
+- paata ChatGPT models (GPT-4, GPT-3.5): Telugu ki 7.35 retlu tokens
+- ippati ChatGPT models (GPT-4o nunchi GPT-5 varaku): 1.68 retlu
+- uchitamgaa dorike open Qwen models (Qwen2.5, Qwen3): 6.38 retlu
 - bonus: Telugu ni English aksharaallo type chesthe: 1.5-1.8 retlu maatrame
-Konchem merugaindi. Inkaa samaanam kaadu.
+Meruguvutondi. Inkaa samaanam kaadu.
+
+Meeru emi cheyyochu: pedda Telugu chat munde cheppindi marchipotunte? Chinna summary adigi, inko chat lo paste cheyyandi. App tayaaru chestunte? Telugu tokens lekkapetti, models ni polchi chudandi.
 
 === COMMENT PROMPT ===
 Try cheyyandi: oka Telugu vaakyam, daani English version ni free token counter (OpenAI Tokenizer page) lo paste chesi, rendu numbers comment cheyyandi.
@@ -54,8 +56,8 @@ Try cheyyandi: oka Telugu vaakyam, daani English version ni free token counter (
 #AIinTelugu #TeluguAI #Telugu #LearnAI
 
 === PINNED_COMMENT ===
-Memu ela lekkapettaam: 5 prashnalu English, Telugu lo oke arthamtho; moodu open tokenizers (OpenAI cl100k_base, o200k_base, tiktoken library; Qwen2.5). English 66; Telugu 485 / 111 / 421; English aksharaallo Telugu 117 / 101 / 117. Research: Petrov et al., NeurIPS 2023.
+Memu ela lekkapettaam: 5 prashnalu English, Telugu lo oke arthamtho; open tokenizers (OpenAI cl100k_base: GPT-4, GPT-3.5; o200k_base: GPT-4o nunchi GPT-5 varaku, OpenAI tiktoken library prakaaram; Qwen2.5, Qwen3 okate counts). English 66; Telugu 485 / 111 / 421; English aksharaallo Telugu 117 / 101 / 117. Research: Petrov et al., NeurIPS 2023.
 
 === YOUTUBE SHORTS ===
 Title: Oke prashna: English lo 13 tokens, Telugu lo 101 #shorts
-Description: AI padaalu kaadu, tokens chaduvutundi. Paata ChatGPT tokenizer lo Telugu ki 7 retlu tokens, kotta daantlo 1.7 retlu. Pedda Telugu chat ki AI memory twaragaa nindutundi.
+Description: Chatbot padaalu kaadu, tokens chaduvutundi. Paata ChatGPT tokenizer lo Telugu ki 7 retlu tokens, ippati daantlo 1.7 retlu, open Qwen lo 6 retlu. Pedda Telugu chat lo modata cheppindi twaragaa marchipotundi.
