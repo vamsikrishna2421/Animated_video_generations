@@ -41,6 +41,10 @@ ASKS = {
              "to replace them today.",
 }
 HAND = {}  # (ask, try): (right?, note), after reading every reply by hand
+# Added after the first run (committed before it runs): 4 of the 5 "total" replies worked it out step by step and were cut
+# off by OUR 160-token cap before the final sum (every partial sum right). The same ask again, 5 tries, max 400 tokens,
+# scored by the same rule: ask "total_long".
+LONG = {"total_long": (ASKS["total"], 400)}
 
 
 def load(path):
@@ -95,6 +99,17 @@ def offline_run(folder):
             res["rows"].append({"ask": ask, "try": k, "reply": reply, "auto_right": auto(ask, reply), "seconds": round(time.time() - t0, 1)})
             dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
             print(ask, k, auto(ask, reply), reply[:140].replace("\n", " "), flush=True)
+    for ask, (text, cap) in LONG.items():
+        for k in range(1, TRIES + 1):
+            if (ask, k) in done:
+                continue
+            t0 = time.time()
+            out = llm.create_chat_completion([{"role": "user", "content": text}], temperature=0.7, top_p=0.9, max_tokens=cap, seed=k)
+            reply = out["choices"][0]["message"]["content"].strip()
+            res["rows"].append({"ask": ask, "try": k, "reply": reply, "auto_right": auto("total", reply), "max_tokens": cap,
+                                "seconds": round(time.time() - t0, 1)})
+            dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
+            print(ask, k, auto("total", reply), reply[-120:].replace("\n", " "), flush=True)
     res["network_after"] = ep38.network_check()
     dest.write_text(json.dumps(res, indent=1, ensure_ascii=False))
 
@@ -105,7 +120,7 @@ def summary():
         h = HAND.get((r["ask"], r["try"]))
         r["hand"] = {"right": h[0], "note": h[1]} if h else {"right": r["auto_right"]}
     (OUT / "7B.json").write_text(json.dumps(res, indent=1, ensure_ascii=False))
-    for ask in ASKS:
+    for ask in list(ASKS) + list(LONG):
         rows = [r for r in res["rows"] if r["ask"] == ask]
         print(ask, f"{sum(1 for r in rows if r['hand']['right'])}/{len(rows)} right")
 
