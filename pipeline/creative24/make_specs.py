@@ -47,7 +47,7 @@ SPLIT_PAUSE = {1: 0.45, 6: 0.5}
 # boost into the good news; the bed out for the beat before "Not fair yet"; the memory buzz; a rise into the tips and the
 # flip back to frame 1.
 SCENES = [("s_a", (1, 2, 3, 4), {"boost": 0.9, "drop_at": [[0, 1, 0.2]], "tail": 0.0}),
-          ("s_b", (5,), {"lift": 1.0, "boost": 1.8, "tail": 0.0}),   # render review 2: a lift on 101 -> 23
+          ("s_b", (5,), {"lift": 1.0, "boost": 1.5, "tail": 0.0}),   # render review 2: a lift on 101 -> 23
           ("s_c", (6,), {"boost": 1.4, "duck": [1, 2, 0.35, 0.1], "tail": 0.0}),   # a dip, not the bed out (script review 2:
           ("s_d", (7,), {"boost": 1.3, "tail": 0.0}),                            # a full stop there played like the ending)
           ("s_e", (8,), {"outro": True, "pre": 0.5, "boost": 1.6, "lift": 0.7, "rise": 1.6, "tail": 0.0})]
@@ -66,8 +66,9 @@ def spec(lang="en"):
     sid = "creative24te" if te else "creative24v1"
     s = {"id": sid, "title": "The Same Question, 101 Tokens" + (" (Telugu audio)" if te else ""), "label": "", "banner": "", "topic": "",
          "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.16, 0.5], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.6, "captionMode": "phrase",
-         "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.5 if not te else 1.0,   # pad back on (v3.1 render: a hole at every bar end without it)
+         "musicVol": [0.16, 0.3], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.6, "captionMode": "phrase",
+         "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0 if not te else 0.5,   # pad back on (v3.1 render: a hole at every bar end without it);
+         # v3.2 render: with the pad and the boosts the gaps ran 4 dB over the voice: gaps 0.3, no gap gain in English
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:
