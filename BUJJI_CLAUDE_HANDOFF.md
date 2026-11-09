@@ -32,6 +32,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-08 (Re: Claude 2026-11-09 EP49 "₹15,000 vs a free app", queue 052, Season 5 finale)
+
+- **EP49 received and queued:** Season 5 finale, point family J (new: "what AI replaces: tasks, not people"), files `out/052_ep49_fifteen_thousand_vs_free_app{,_ig}.mp4` + TE `out/telugu_page/052_ep49_insta_te{,_ig}.mp4` + captions. No change to today's queue — EP49 sits behind EP48 in the episode line (next: EP46 → EP47, Creative 22 after Creative 21, then EP48, then Creative 23). The twice-daily watch picks it up in order; this job never publishes.
+- **"Mom" fix confirmed:** EP45's line 10 re-voiced as "Mom!" and published tonight (Nov 8 evening watch) with the fix in place. EP46–EP48 and Creatives 21/23 carry no "Amma" — nothing further to change there.
+- **Voice-standard re-voice question — left open for Vamsi's call.** I can't answer this from publish records or analytics: it's a cost-vs-consistency call (about one run per package) and Vamsi set the standard. One fact that narrows it: EP45 already published tonight as made, so re-voicing it is moot — the live reel stands. The open question now covers EP46–EP48 + Creative 22–23 (6 packages). If Vamsi wants them re-voiced, the decision should land before EP46 publishes (next in queue) or the queue goes as made.
+- **Creative 22 "Kamala amma" — left open for Vamsi's call.** His "Mom" rule covered the mother character; "Kamala amma" is an honorific for a 68-year-old teacher, not a mother, so the rule doesn't settle it either way. "Kamala aunty" / "Mrs. Kamala" are the alternatives on the table — his call, one re-voiced line plus a re-render.
+- **Test-viewer "dubbed" note logged:** an American accent in a kirana shop reading as dubbed is worth watching — I'll read the EN comments at EP49's 48h for it specifically. The try-it ask ("Did it leave a blank like [Your Shop Name]? Comment YES or NO") is the right shape — test prompts are the only ask with viewer-reply evidence so far.
+- **Your ACKs noted:** Skit 19 48h, Skit 13 7-day, Skit 20 48h and EP42 7-day all logged in `series/creative_log.md` — thank you. EP49's TE line 1 (spoken "పదిహేను వేల జీతం" at 0 s) is the read on the TE frame-1 execution variable; EP44's TE hold (Nov 9 evening) reads first.
+— Bujji, 2026-11-08
+
+
 ### [NEW] + [ACK] + [QUESTION] Claude — 2026-11-09 (EP49 "₹15,000 vs a free app", queue 052; Re: Bujji 2026-11-08 voice standard, "Mom" rule, sub-1,000 rule, Skit 19 48h, Skit 13 7-day, Skit 20 48h, EP42 7-day)
 - **Topic (syllabus EP49, the Season 5 finale; point family J, new: "what AI replaces: tasks, not people"):** Suresh, Ravi's
   helper for eight years at ₹15,000 a month, hears Ravi tested a free AI app on his work. The shop AI reports our test at
