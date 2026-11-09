@@ -1,4 +1,4 @@
-# EP49 "AI and jobs: what really changes" (Season 5 finale) · queue 052 · script v1, Nov 9
+# EP49 "AI and jobs: what really changes" (Season 5 finale) · queue 052 · script v2, Nov 9
 
 ## The lesson
 AI takes tasks, not whole jobs. Most jobs are a bundle of tasks; AI can do some of them (drafting, sums, lists), often
@@ -51,41 +51,61 @@ from a shop helper's day, five tries each, right answers fixed before the run.
 2. "18/25" (our test) as frame 1: a number, no person.
 3. Ravi typing "Do Suresh's work" into the AI: action, no numbers.
 
-## Script (English, v1) · ~55 s
-| # | Who | Line | On screen |
-|---|---|---|---|
-| 1 | suresh | Fifteen thousand a month, eight years... [1] and a free app takes my job?! | frame 1 |
-| 2 | ravi | Relax! I only tested it on your paper work. | the shop |
-| 3 | ai | Twenty-five tries at Suresh's paper work. [1] Eighteen right. | OUR TEST: a small free AI, offline · 25 tiles, 18 green |
-| 4 | suresh | Eighteen?! | |
-| 5 | ai | Sums and GST: ten out of ten. [1] But every offer message needed a fix before sending. | rows: sums 10/10 ✓ · reorder 4/5 · replies 4/5 · offers 0/5 ready to send; the offer draft with "[Your Shop Name]" and a stray "ice" circled |
-| 6 | suresh | And who fixes them? Me! | |
-| 7 | ravi | So does the AI take his job, or not? | |
-| 8 | ai | I can do the paper part. [1] Not the sacks, the deliveries, or knowing who pays late. | SURESH'S DAY: paper (the AI can draft and add) vs hands and people (sacks, deliveries, who pays late, the supplier) |
-| 9 | ai | Worldwide, one job in four has some AI exposure. [1] Most will change, not vanish. | ILO, May 2025: 1 in 4 jobs: some exposure · 3.3%: the highest · "transformation is more likely than replacement" |
-| 10 | suresh | And a job that's all paper work? | |
-| 11 | ai | That job changes the most. [1] Clerks first. | ILO: clerical jobs: the highest exposure |
-| 12 | ravi | So the AI drafts and adds, Suresh checks and sends, [1] and the work with hands and people stays his. | the chip: AI TAKES TASKS, NOT JOBS · AI: drafts, sums · you: check, send · the hands-and-people work: yours · learn the tool |
-| 13 | ravi | Okay, you stay. [1] Teach me this app. | |
-| 14 | suresh | Fifteen thousand a month. | → frame 1 (loops) |
+## Script review (human-viewer, v1) and what changed
+Both stop on frame 1 (₹15,000 vs ₹0 next to a man with a sack: hook 8 and 5); Sandeep would share it to his office group.
+Both: "I can do the paper part" claims too much after 18/25; "Clerks first" scares office workers and gives them nothing to
+do; "Teach me this app" is backwards (Ravi ran the test); the ILO line and the summary sound like a lecture; the ending
+only echoes the hook. Sandeep: "Eighteen right": good or bad?; "exposure" sounds like radiation; "who pays late" is what
+a ledger app already does; the ILO card is three facts in 4 s. Priya: a 4-bit 7B offline is weaker than the free apps
+people use; the offers failed because our prompt never gave the shop name (a prompt failure, not an AI limit); say the
+token-cap re-run, or it looks cooked; the ILO "quote" was a paraphrase. Telugu: "ఉద్యోగం తీసుకుంటుందా" word for word ("నా
+పని పోతుందా"), "కాగితం పని" bookish ("పేపర్ పని"), "ఆగరా" = wait ("కంగారు పడకురా"), "జీ ఎస్ టీ" spaced, "ఏఐ" one word,
+"ప్రభావం ఉంది" claims "already hit", "ముందు క్లర్క్ పనులు" sounds like an order, "నువ్వు ఉండు" = "you wait" ("నువ్వే ఉంటావ్").
+Changed (v2): "Eighteen?! That's almost all of it!"; line 5 "every offer message had a blank or a slip to fix" and
+Suresh "Nobody told it the shop's name! And who checks it? Me!" (the fix: give it the context, still check); line 8 "I can
+draft most of the paper part. Not the sacks, the deliveries, or knowing the regulars."; line 9 "one job in four has
+tasks an AI could do. Most of those jobs change, not vanish." (no quote marks, no 3.3%); line 11 "That one changes the
+most. Be the one who checks the AI, and learn the tool."; line 12 "So: the AI drafts, you check. Hands and people:
+yours."; the ending "Fine, you stay. And you run the app." / "Then it's twenty thousand a month." (back to frame 1's
+₹15,000); the test card says the model is weaker than big apps; the caption names the model, offline, the shop-name
+prompt and the token-cap re-run; a hit on "Eighteen", the bed out before the offer result, a lift into "you stay".
+Telugu as listed.
 
-## Script (Telugu, v1; on-screen text stays English)
+## Script (English, v2) · ~55 s
+| # | Who | Line |
+|---|---|---|
+| 1 | suresh | Fifteen thousand a month, eight years... [1] and a free app takes my job?! |
+| 2 | ravi | Relax! I only tested it on your paper work. |
+| 3 | ai | Twenty-five tries at Suresh's paper work. [1] Eighteen right. |
+| 4 | suresh | Eighteen?! That's almost all of it! |
+| 5 | ai | Sums and GST: ten out of ten. [1] But every offer message had a blank or a slip to fix. |
+| 6 | suresh | Nobody told it the shop's name! [1] And who checks it? Me! |
+| 7 | ravi | So does it take his job, or not? |
+| 8 | ai | I can draft most of the paper part. [1] Not the sacks, the deliveries, or knowing the regulars. |
+| 9 | ai | Worldwide, one job in four has tasks an AI could do. [1] Most of those jobs change, not vanish. |
+| 10 | suresh | And a job that's all paper work? |
+| 11 | ai | That one changes the most. [1] Be the one who checks the AI, and learn the tool. |
+| 12 | ravi | So: the AI drafts, you check. [1] Hands and people: yours. |
+| 13 | ravi | Fine, you stay. [1] And you run the app. |
+| 14 | suresh | Then it's twenty thousand a month. |
+
+## Script (Telugu, v2; on-screen text stays English)
 | # | Who | Telugu |
 |---|---|---|
-| 1 | suresh | పదిహేను వేల జీతం, ఎనిమిదేళ్లు... [1] ఫ్రీ యాప్ నా ఉద్యోగం తీసుకుంటుందా?! |
-| 2 | ravi | ఆగరా! నీ కాగితం పని మీద మాత్రమే టెస్ట్ చేశా. |
-| 3 | ai | సురేష్ కాగితం పని, ఇరవై ఐదు సార్లు. [1] పద్దెనిమిది కరెక్ట్. |
-| 4 | suresh | పద్దెనిమిదా?! |
-| 5 | ai | లెక్కలు, జీఎస్టీ: పదికి పది. [1] కానీ ప్రతి ఆఫర్ మెసేజ్, పంపే ముందు సరి చేయాల్సి వచ్చింది. |
-| 6 | suresh | సరి చేసేది ఎవరు? నేనే! |
-| 7 | ravi | మరి ఏ ఐ, సురేష్ ఉద్యోగం తీసుకుంటుందా, లేదా? |
-| 8 | ai | కాగితం పని నేను చేయగలను. [1] బస్తాలు మోయడం, డెలివరీ, ఎవరు అప్పు తీరుస్తారో తెలియడం, నా వల్ల కాదు. |
-| 9 | ai | ప్రపంచంలో, నాలుగు ఉద్యోగాల్లో ఒకదానికి ఏ ఐ ప్రభావం ఉంది. [1] చాలా ఉద్యోగాలు మారతాయి, మాయం కావు. |
-| 10 | suresh | మరి ఉద్యోగం మొత్తం కాగితం పనే అయితే? |
-| 11 | ai | ఆ ఉద్యోగమే ఎక్కువ మారుతుంది. [1] ముందు క్లర్క్ పనులు. |
-| 12 | ravi | అంటే, ఏ ఐ డ్రాఫ్ట్ రాస్తుంది, లెక్క వేస్తుంది. సురేష్ చెక్ చేసి పంపుతాడు. [1] చేతులతో, మనుషులతో చేసే పని సురేష్ దే. |
-| 13 | ravi | సరే, నువ్వు ఉండు. [1] ఈ యాప్ నాకు నేర్పించు. |
-| 14 | suresh | నెలకి పదిహేను వేలు. |
+| 1 | suresh | పదిహేను వేల జీతం, ఎనిమిదేళ్లు... [1] ఫ్రీ యాప్ వల్ల నా పని పోతుందా?! |
+| 2 | ravi | కంగారు పడకురా! నీ పేపర్ పని మీద మాత్రమే టెస్ట్ చేశా. |
+| 3 | ai | సురేష్ పేపర్ పని, ఇరవై ఐదు సార్లు. [1] పద్దెనిమిది కరెక్ట్. |
+| 4 | suresh | పద్దెనిమిదా?! దాదాపు అంతా! |
+| 5 | ai | లెక్కలు, జీ ఎస్ టీ: పదికి పది. [1] కానీ ప్రతి ఆఫర్ మెసేజ్ లో, ఒక ఖాళీ, లేదా ఒక తప్పు ఉంది. |
+| 6 | suresh | షాప్ పేరు దానికి ఎవరూ చెప్పలేదు! [1] చెక్ చేసేది ఎవరు? నేనే! |
+| 7 | ravi | మరి ఏఐ, సురేష్ పని తీసుకుంటుందా, లేదా? |
+| 8 | ai | పేపర్ పనిలో చాలా వరకు, నేను డ్రాఫ్ట్ చేయగలను. [1] బస్తాలు, డెలివరీ, రెగ్యులర్ కస్టమర్లని గుర్తుపట్టడం, నా వల్ల కాదు. |
+| 9 | ai | ప్రపంచంలో, నాలుగు ఉద్యోగాల్లో ఒకదాంట్లో, ఏఐ చేయగలిగే పనులు ఉన్నాయి. [1] చాలా ఉద్యోగాలు మారతాయి, పోవు. |
+| 10 | suresh | మరి మొత్తం పేపర్ పనే ఉన్న ఉద్యోగం? |
+| 11 | ai | అదే ఎక్కువ మారుతుంది. [1] ఏఐ పనిని చెక్ చేసేవాళ్ళు అవ్వండి, టూల్ నేర్చుకోండి. |
+| 12 | ravi | అంటే: ఏఐ డ్రాఫ్ట్ చేస్తుంది, నువ్వు చెక్ చేస్తావ్. [1] బస్తాలు, కస్టమర్లు: నీవే. |
+| 13 | ravi | సరే, నువ్వే ఉంటావ్. [1] యాప్ కూడా నువ్వే నడుపు. |
+| 14 | suresh | అయితే, నెలకి ఇరవై వేలు. |
 
 ## Caption ask (one word)
 Does AI do any part of your job today? Comment YES or NO.

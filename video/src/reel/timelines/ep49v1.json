@@ -1,0 +1,1160 @@
+{
+ "id": "ep49v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "AI and jobs: what really changes",
+ "musicVol": [
+  0.34,
+  0.6
+ ],
+ "title": "₹15,000 vs a free app (EP49: AI and jobs)",
+ "handle": "@ai_maastaaru",
+ "label": "EP49",
+ "fps": 30,
+ "musicDrops": [
+  [
+   278,
+   302
+  ],
+  [
+   438,
+   462
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   757,
+   1.0
+  ],
+  [
+   757,
+   1330,
+   1.3
+  ],
+  [
+   1330,
+   1656,
+   1.8
+  ],
+  [
+   1330,
+   1656,
+   1.6,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1656,
+ "music": "reel/ep49v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_jobs",
+   "data": {
+    "beats": [
+     {
+      "who": "suresh",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "relax",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 3
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "eighteen",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "rows",
+      "prop": "rows",
+      "n": 5
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "me",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "ask",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "₹15,000 vs a free app",
+     "title": "₹15,000 vs a free app",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 757,
+   "lines": [
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep49v1/line_01.wav",
+     "from": 10,
+     "frames": 128,
+     "words": [
+      {
+       "w": "₹15,000",
+       "from": 15,
+       "to": 30
+      },
+      {
+       "w": "a",
+       "from": 30,
+       "to": 33
+      },
+      {
+       "w": "month,",
+       "from": 33,
+       "to": 44
+      },
+      {
+       "w": "8",
+       "from": 44,
+       "to": 47
+      },
+      {
+       "w": "years...",
+       "from": 47,
+       "to": 68
+      },
+      {
+       "w": "and",
+       "from": 68,
+       "to": 74
+      },
+      {
+       "w": "a",
+       "from": 74,
+       "to": 89
+      },
+      {
+       "w": "free",
+       "from": 89,
+       "to": 100
+      },
+      {
+       "w": "app",
+       "from": 100,
+       "to": 110
+      },
+      {
+       "w": "takes",
+       "from": 110,
+       "to": 119
+      },
+      {
+       "w": "my",
+       "from": 119,
+       "to": 124
+      },
+      {
+       "w": "job?!",
+       "from": 124,
+       "to": 133
+      }
+     ],
+     "cues": {
+      "1": 88
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep49v1/line_02.wav",
+     "from": 144,
+     "frames": 80,
+     "words": [
+      {
+       "w": "Relax!",
+       "from": 145,
+       "to": 155
+      },
+      {
+       "w": "I",
+       "from": 155,
+       "to": 170
+      },
+      {
+       "w": "only",
+       "from": 170,
+       "to": 177
+      },
+      {
+       "w": "tested",
+       "from": 177,
+       "to": 187
+      },
+      {
+       "w": "it",
+       "from": 187,
+       "to": 191
+      },
+      {
+       "w": "on",
+       "from": 191,
+       "to": 195
+      },
+      {
+       "w": "your",
+       "from": 195,
+       "to": 202
+      },
+      {
+       "w": "paper",
+       "from": 202,
+       "to": 210
+      },
+      {
+       "w": "work.",
+       "from": 210,
+       "to": 218
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep49v1/line_03.wav",
+     "from": 230,
+     "frames": 97,
+     "words": [
+      {
+       "w": "25",
+       "from": 230,
+       "to": 236
+      },
+      {
+       "w": "tries",
+       "from": 236,
+       "to": 249
+      },
+      {
+       "w": "at",
+       "from": 249,
+       "to": 255
+      },
+      {
+       "w": "Suresh's",
+       "from": 255,
+       "to": 273
+      },
+      {
+       "w": "paper",
+       "from": 273,
+       "to": 286
+      },
+      {
+       "w": "work.",
+       "from": 286,
+       "to": 306
+      },
+      {
+       "w": "18",
+       "from": 306,
+       "to": 312
+      },
+      {
+       "w": "right.",
+       "from": 312,
+       "to": 327
+      }
+     ],
+     "cues": {
+      "1": 302
+     }
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep49v1/line_04.wav",
+     "from": 336,
+     "frames": 62,
+     "words": [
+      {
+       "w": "18?!",
+       "from": 336,
+       "to": 345
+      },
+      {
+       "w": "That's",
+       "from": 345,
+       "to": 366
+      },
+      {
+       "w": "almost",
+       "from": 366,
+       "to": 378
+      },
+      {
+       "w": "all",
+       "from": 378,
+       "to": 385
+      },
+      {
+       "w": "of",
+       "from": 385,
+       "to": 391
+      },
+      {
+       "w": "it!",
+       "from": 391,
+       "to": 398
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep49v1/line_05.wav",
+     "from": 404,
+     "frames": 163,
+     "words": [
+      {
+       "w": "Sums",
+       "from": 407,
+       "to": 415
+      },
+      {
+       "w": "and",
+       "from": 415,
+       "to": 422
+      },
+      {
+       "w": "GST:",
+       "from": 422,
+       "to": 430
+      },
+      {
+       "w": "10",
+       "from": 430,
+       "to": 435
+      },
+      {
+       "w": "out",
+       "from": 435,
+       "to": 448
+      },
+      {
+       "w": "of",
+       "from": 448,
+       "to": 453
+      },
+      {
+       "w": "10.",
+       "from": 453,
+       "to": 460
+      },
+      {
+       "w": "But",
+       "from": 460,
+       "to": 466
+      },
+      {
+       "w": "every",
+       "from": 466,
+       "to": 483
+      },
+      {
+       "w": "offer",
+       "from": 483,
+       "to": 493
+      },
+      {
+       "w": "message",
+       "from": 493,
+       "to": 506
+      },
+      {
+       "w": "had",
+       "from": 506,
+       "to": 513
+      },
+      {
+       "w": "a",
+       "from": 513,
+       "to": 516
+      },
+      {
+       "w": "blank",
+       "from": 516,
+       "to": 526
+      },
+      {
+       "w": "or",
+       "from": 526,
+       "to": 531
+      },
+      {
+       "w": "a",
+       "from": 531,
+       "to": 534
+      },
+      {
+       "w": "slip",
+       "from": 534,
+       "to": 546
+      },
+      {
+       "w": "to",
+       "from": 546,
+       "to": 551
+      },
+      {
+       "w": "fix.",
+       "from": 551,
+       "to": 559
+      }
+     ],
+     "cues": {
+      "1": 462
+     }
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep49v1/line_06.wav",
+     "from": 575,
+     "frames": 101,
+     "words": [
+      {
+       "w": "Nobody",
+       "from": 576,
+       "to": 586
+      },
+      {
+       "w": "told",
+       "from": 586,
+       "to": 593
+      },
+      {
+       "w": "it",
+       "from": 593,
+       "to": 597
+      },
+      {
+       "w": "the",
+       "from": 597,
+       "to": 603
+      },
+      {
+       "w": "shop's",
+       "from": 603,
+       "to": 612
+      },
+      {
+       "w": "name!",
+       "from": 612,
+       "to": 621
+      },
+      {
+       "w": "And",
+       "from": 621,
+       "to": 637
+      },
+      {
+       "w": "who",
+       "from": 637,
+       "to": 642
+      },
+      {
+       "w": "checks",
+       "from": 642,
+       "to": 652
+      },
+      {
+       "w": "it?",
+       "from": 652,
+       "to": 667
+      },
+      {
+       "w": "Me!",
+       "from": 667,
+       "to": 672
+      }
+     ],
+     "cues": {
+      "1": 621
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep49v1/line_07.wav",
+     "from": 684,
+     "frames": 67,
+     "words": [
+      {
+       "w": "So",
+       "from": 685,
+       "to": 690
+      },
+      {
+       "w": "does",
+       "from": 690,
+       "to": 697
+      },
+      {
+       "w": "it",
+       "from": 697,
+       "to": 702
+      },
+      {
+       "w": "take",
+       "from": 702,
+       "to": 710
+      },
+      {
+       "w": "his",
+       "from": 710,
+       "to": 716
+      },
+      {
+       "w": "job,",
+       "from": 716,
+       "to": 724
+      },
+      {
+       "w": "or",
+       "from": 724,
+       "to": 735
+      },
+      {
+       "w": "not?",
+       "from": 735,
+       "to": 743
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_jobs",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "day",
+      "prop": "day",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "ilo",
+      "prop": "ilo",
+      "n": 9
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "allpaper",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "clerks",
+      "prop": "clerks",
+      "n": 11
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "Tasks, not jobs",
+     "title": "Tasks, not jobs",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 757,
+   "frames": 573,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep49v1/line_08.wav",
+     "from": 0,
+     "frames": 149,
+     "words": [
+      {
+       "w": "I",
+       "from": 0,
+       "to": 3
+      },
+      {
+       "w": "can",
+       "from": 3,
+       "to": 8
+      },
+      {
+       "w": "draft",
+       "from": 8,
+       "to": 15
+      },
+      {
+       "w": "most",
+       "from": 15,
+       "to": 22
+      },
+      {
+       "w": "of",
+       "from": 22,
+       "to": 26
+      },
+      {
+       "w": "the",
+       "from": 26,
+       "to": 31
+      },
+      {
+       "w": "paper",
+       "from": 31,
+       "to": 38
+      },
+      {
+       "w": "part.",
+       "from": 38,
+       "to": 46
+      },
+      {
+       "w": "Not",
+       "from": 46,
+       "to": 60
+      },
+      {
+       "w": "the",
+       "from": 60,
+       "to": 65
+      },
+      {
+       "w": "sacks,",
+       "from": 65,
+       "to": 74
+      },
+      {
+       "w": "the",
+       "from": 74,
+       "to": 88
+      },
+      {
+       "w": "deliveries,",
+       "from": 88,
+       "to": 103
+      },
+      {
+       "w": "or",
+       "from": 103,
+       "to": 117
+      },
+      {
+       "w": "knowing",
+       "from": 117,
+       "to": 127
+      },
+      {
+       "w": "the",
+       "from": 127,
+       "to": 132
+      },
+      {
+       "w": "regulars.",
+       "from": 132,
+       "to": 144
+      }
+     ],
+     "cues": {
+      "1": 46
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep49v1/line_09.wav",
+     "from": 158,
+     "frames": 193,
+     "words": [
+      {
+       "w": "Worldwide,",
+       "from": 158,
+       "to": 185
+      },
+      {
+       "w": "1",
+       "from": 185,
+       "to": 189
+      },
+      {
+       "w": "job",
+       "from": 189,
+       "to": 197
+      },
+      {
+       "w": "in",
+       "from": 197,
+       "to": 202
+      },
+      {
+       "w": "4",
+       "from": 202,
+       "to": 206
+      },
+      {
+       "w": "has",
+       "from": 206,
+       "to": 217
+      },
+      {
+       "w": "tasks",
+       "from": 217,
+       "to": 234
+      },
+      {
+       "w": "an",
+       "from": 234,
+       "to": 240
+      },
+      {
+       "w": "AI",
+       "from": 240,
+       "to": 246
+      },
+      {
+       "w": "could",
+       "from": 246,
+       "to": 257
+      },
+      {
+       "w": "do.",
+       "from": 257,
+       "to": 265
+      },
+      {
+       "w": "Most",
+       "from": 265,
+       "to": 281
+      },
+      {
+       "w": "of",
+       "from": 281,
+       "to": 287
+      },
+      {
+       "w": "those",
+       "from": 287,
+       "to": 298
+      },
+      {
+       "w": "jobs",
+       "from": 298,
+       "to": 308
+      },
+      {
+       "w": "change,",
+       "from": 308,
+       "to": 329
+      },
+      {
+       "w": "not",
+       "from": 329,
+       "to": 336
+      },
+      {
+       "w": "vanish.",
+       "from": 336,
+       "to": 351
+      }
+     ],
+     "cues": {
+      "1": 269
+     }
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep49v1/line_10.wav",
+     "from": 361,
+     "frames": 53,
+     "words": [
+      {
+       "w": "And",
+       "from": 361,
+       "to": 366
+      },
+      {
+       "w": "a",
+       "from": 366,
+       "to": 369
+      },
+      {
+       "w": "job",
+       "from": 369,
+       "to": 375
+      },
+      {
+       "w": "that's",
+       "from": 375,
+       "to": 385
+      },
+      {
+       "w": "all",
+       "from": 385,
+       "to": 390
+      },
+      {
+       "w": "paper",
+       "from": 390,
+       "to": 398
+      },
+      {
+       "w": "work?",
+       "from": 398,
+       "to": 407
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep49v1/line_11.wav",
+     "from": 419,
+     "frames": 131,
+     "words": [
+      {
+       "w": "That",
+       "from": 420,
+       "to": 426
+      },
+      {
+       "w": "one",
+       "from": 426,
+       "to": 432
+      },
+      {
+       "w": "changes",
+       "from": 432,
+       "to": 442
+      },
+      {
+       "w": "the",
+       "from": 442,
+       "to": 448
+      },
+      {
+       "w": "most.",
+       "from": 448,
+       "to": 469
+      },
+      {
+       "w": "Be",
+       "from": 469,
+       "to": 473
+      },
+      {
+       "w": "the",
+       "from": 473,
+       "to": 478
+      },
+      {
+       "w": "one",
+       "from": 478,
+       "to": 483
+      },
+      {
+       "w": "who",
+       "from": 483,
+       "to": 489
+      },
+      {
+       "w": "checks",
+       "from": 489,
+       "to": 498
+      },
+      {
+       "w": "the",
+       "from": 498,
+       "to": 503
+      },
+      {
+       "w": "AI,",
+       "from": 503,
+       "to": 509
+      },
+      {
+       "w": "and",
+       "from": 509,
+       "to": 524
+      },
+      {
+       "w": "learn",
+       "from": 524,
+       "to": 532
+      },
+      {
+       "w": "the",
+       "from": 532,
+       "to": 537
+      },
+      {
+       "w": "tool.",
+       "from": 537,
+       "to": 545
+      }
+     ],
+     "cues": {
+      "1": 469
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_jobs",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "stay",
+      "n": 13
+     },
+     {
+      "who": "suresh",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "tagLeft": true,
+    "yt": {
+     "chapter": "AI drafts, you check",
+     "title": "AI drafts, you check",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1330,
+   "frames": 326,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep49v1/line_12.wav",
+     "from": 9,
+     "frames": 128,
+     "words": [
+      {
+       "w": "So:",
+       "from": 10,
+       "to": 15
+      },
+      {
+       "w": "the",
+       "from": 15,
+       "to": 30
+      },
+      {
+       "w": "AI",
+       "from": 30,
+       "to": 34
+      },
+      {
+       "w": "drafts,",
+       "from": 34,
+       "to": 45
+      },
+      {
+       "w": "you",
+       "from": 45,
+       "to": 51
+      },
+      {
+       "w": "check.",
+       "from": 51,
+       "to": 71
+      },
+      {
+       "w": "Hands",
+       "from": 71,
+       "to": 92
+      },
+      {
+       "w": "and",
+       "from": 92,
+       "to": 97
+      },
+      {
+       "w": "people:",
+       "from": 97,
+       "to": 109
+      },
+      {
+       "w": "yours.",
+       "from": 109,
+       "to": 133
+      }
+     ],
+     "cues": {
+      "1": 71
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep49v1/line_13.wav",
+     "from": 152,
+     "frames": 76,
+     "words": [
+      {
+       "w": "Fine,",
+       "from": 155,
+       "to": 163
+      },
+      {
+       "w": "you",
+       "from": 163,
+       "to": 176
+      },
+      {
+       "w": "stay.",
+       "from": 176,
+       "to": 183
+      },
+      {
+       "w": "And",
+       "from": 183,
+       "to": 199
+      },
+      {
+       "w": "you",
+       "from": 199,
+       "to": 204
+      },
+      {
+       "w": "run",
+       "from": 204,
+       "to": 210
+      },
+      {
+       "w": "the",
+       "from": 210,
+       "to": 215
+      },
+      {
+       "w": "app.",
+       "from": 215,
+       "to": 221
+      }
+     ],
+     "cues": {
+      "1": 183
+     }
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep49v1/line_14.wav",
+     "from": 233,
+     "frames": 48,
+     "words": [
+      {
+       "w": "Then",
+       "from": 235,
+       "to": 242
+      },
+      {
+       "w": "it's",
+       "from": 242,
+       "to": 250
+      },
+      {
+       "w": "₹20,000",
+       "from": 250,
+       "to": 262
+      },
+      {
+       "w": "a",
+       "from": 262,
+       "to": 265
+      },
+      {
+       "w": "month.",
+       "from": 265,
+       "to": 275
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}

@@ -55,8 +55,8 @@ Already posted: `out/posted/`.
 | 048 | ep45 | ₹22,000 for ₹5.5 Lakh in a Week? How to Spot a Deepfake (EP45: Deepfakes; skit, AI voices) | ready |
 | 049 | ep46 | 40 Hours vs 40 Seconds: Who Owns an AI Poster? (EP46: Copyright & AI; skit, AI voices) | ready |
 | 050 | ep47 | ₹1 for a ₹1,600 Rice Bag (EP47: Guardrails in real products; skit, AI voices) | ready |
-| 051 | ep48 | AI Laws Around the World | ready |
-| 052 | ep49 | AI and Jobs | ready |
+| 051 | ep48 | "No Label Needed," Said the AI (EP48: AI laws; skit, AI voices, no music) | ready |
+| 052 | ep49 | ₹15,000 Helper vs a Free AI App (EP49: AI and jobs; skit, AI voices) | ready |
 | 053 | q05 | Quiz #5: Episodes 41–49 | ready |
 | 054 | ep50 | Your First AI API Call | ready |
 | 055 | ep51 | Build a Chatbot with a System Prompt | ready |

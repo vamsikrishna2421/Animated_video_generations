@@ -1,29 +1,35 @@
 UPLOAD: 052
-VIDEO: 052_ep49_ai_and_jobs.mp4
+VIDEO: 052_ep49_fifteen_thousand_vs_free_app.mp4  (teaching skit, 55 s, AI voices in the Creative 21 standard; replaces the older lesson-format file in slot 052; send copy: 052_ep49_fifteen_thousand_vs_free_app_ig.mp4). It loops: "Then it's twenty thousand a month." and it is frame 1 again: ₹15,000 vs ₹0.
 
 === CAPTION ===
-Will AI take your job? The honest answer: it changes tasks first, jobs second.
+Suresh: 8 years at the shop, ₹15,000 a month. Ravi tested a free AI app on his work.
 
-AI From Scratch, Episode 49: AI and jobs
-- A job is a bundle of tasks
-- Automation vs augmentation
-- Which work is most and least exposed
-- New jobs too: WEF Future of Jobs 2025 expects ~170M created and ~92M displaced by 2030
-- How to stay ahead
+Episode 49 of AI From Scratch: AI and jobs, what really changes (the Season 5 finale)
+- Our test: we gave a small free AI (Qwen2.5 7B, 4-bit, offline: weaker than the big free apps) the five paper tasks from a shop helper's day, five tries each, and read every reply. 18 of 25 right. Sums and GST: 10 of 10. Reorder list 4 of 5, replies to a customer 4 of 5. Offer messages ready to send: 0 of 5. All five were good drafts, but each had a blank like "[Your Shop Name]" or a stray word to fix. Our prompt never gave it the shop's name.
+- Honest notes: in the first run our own 160-token limit cut off 4 of the 5 totals mid-working; we re-ran that one task with room (committed before it ran): 5 of 5. The reorder miss was the same cut-off.
+- It can't carry sacks, deliver, or know the regulars. Most jobs are a bundle of tasks like this.
+- Worldwide, one job in four has tasks generative AI could do (ILO, May 2025). The ILO expects most of those jobs to change rather than vanish, and clerical jobs to change the most. These figures are what could change, not job losses.
 
-Quiz at the end. Got it right? Comment below.
+What changes for you:
+1. List your tasks. Let AI draft and add the paper ones
+2. Give it the context (the shop's name, the date), then check before you send
+3. Keep the work that needs hands and people. If your job is all paper, be the one who checks the AI, and learn the tool
 
-Next: a new hands-on season, building with AI!
-Follow @ai_maastaaru to learn AI from scratch.
+Next: Quiz #5 (Episodes 41-49), then Season 6: build it yourself.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Does AI do any part of your job today? Comment YES or NO.
 
 === HASHTAGS ===
-#AIMaastaaru #FutureOfWork #AIJobs #LearnAI #CareerGrowth
+#AIFromScratch #AIandJobs #FutureOfWork #SmallBusiness #LearnAI
 
 === PINNED_COMMENT ===
-Quiz answer: Augmentation means AI helps a person do more. How are you using AI in your job? Comment below!
+How we tested (Nov 9, 2026): Qwen2.5-7B-Instruct (Qwen's own 4-bit file), llama.cpp on a 4-core computer, no internet (checked before and after), temperature 0.7, a fresh chat per ask, every reply read by hand. Five tasks with their right answers fixed before the run: add up an order (₹606), the price before 18% GST on ₹1,180 (₹1,000), a reorder list from stock levels (sugar, toor dal), a WhatsApp offer (10% off rice, Sunday) usable as sent, a polite reply to 3 broken eggs (replace today) usable as sent. Bigger free apps are stronger; the habit (give it the context, check before you send) holds for them too.
+Sources: ILO Working Paper 140, "Generative AI and Jobs: A Refined Global Index of Occupational Exposure" (ILO and NASK, May 2025, ilo.org). Also: WEF Future of Jobs Report 2025: by 2030, 170 million new jobs and 92 million displaced from all causes, not AI alone (weforum.org, Jan 2025). Ravi anna, Suresh and the shop are made up.
 
 === COVER ===
-'AI & Jobs' title card
+Frame 1: two blocks, "SURESH: 8 YEARS ₹15,000/month" (green) and "THE AI APP ₹0" (red); Ravi anna holding the phone; Suresh with a rice sack on his shoulder, shocked.
 
 === ALT_TEXT ===
-Animated explainer of how AI affects jobs: automation, augmentation, new roles and staying ahead.
+Crayon-animated skit in Ravi anna's kirana shop. Two blocks: Suresh, 8 years, ₹15,000 a month; the AI app, ₹0. Suresh, with a rice sack on his shoulder: fifteen thousand a month, eight years, and a free app takes my job? Ravi: relax, I only tested it on your paper work. A test card: a small free AI, Qwen2.5 7B, offline, weaker than big apps; five tasks, five tries; 25 tiles, 18 green: 18 of 25. The shop AI: twenty-five tries at Suresh's paper work, eighteen right. Suresh: eighteen? That's almost all of it. A card: sums and GST 10 of 10; reorder list 4 of 5; replies to a customer 4 of 5; offer messages ready to send 0 of 5; a real draft from our test, "Reminder! 10% off on all rice this Sunday only at [Your Shop Name]! ... ice", with the blank and the stray word circled; our prompt had no shop name. Suresh: nobody told it the shop's name, and who checks it? Me. Ravi: so does it take his job, or not? Suresh's day: paper (sums, GST, reorder list, offer messages, replies: the AI drafts most) and hands and people (the sacks, deliveries, the regulars, the supplier: his). The AI: I can draft most of the paper part, not the sacks, the deliveries, or knowing the regulars. Worldwide (ILO, May 2025): one job in four has tasks an AI could do; most change, not vanish. Suresh: and a job that's all paper work? A card: it changes the most; be the one who checks the AI; learn the tool. Ravi: so the AI drafts, you check; hands and people, yours. Ravi: fine, you stay, and you run the app. Suresh: then it's twenty thousand a month. Frame 1 comes back: ₹15,000.

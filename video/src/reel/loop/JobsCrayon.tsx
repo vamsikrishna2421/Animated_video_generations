@@ -12,7 +12,7 @@ import { person, BillMood, BillArms, BillWho } from "./BillCrayon";
 // every offer message a good draft that needed a fix before sending. The AI does the paper part, not the sacks, the
 // deliveries or knowing who pays late. ILO (May 2025): one job in four has some GenAI exposure; most change rather than
 // vanish; clerical jobs the most. The rule: AI takes tasks, not jobs: it drafts and adds, you check and send. The twist:
-// "Teach me this app." "Fifteen thousand a month." Loops to frame 1.
+// "Fine, you stay. And you run the app." "Then it's twenty thousand a month." Loops to frame 1's ₹15,000.
 type Word = { w: string; from: number; to: number };
 type Line = { from: number; frames: number; words?: Word[]; cues?: Record<string, number> };
 type Beat = { who: "ravi" | "ai" | "suresh"; shot: string; prop: string; n: number };
@@ -20,14 +20,14 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 
 const SHOTS: Record<string, { z: number; x: number; y: number }> = {
-  wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.4, x: 480, y: 740 }, suresh: { z: 1.35, x: 300, y: 860 }, ai: { z: 1.8, x: 760, y: 860 }, hook: { z: 0.92, x: 540, y: 640 },
+  wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.4, x: 480, y: 740 }, suresh: { z: 1.35, x: 300, y: 860 }, ai: { z: 1.8, x: 760, y: 860 }, hook: { z: 0.9, x: 540, y: 860 },   // stills: Suresh was cut off at the bottom of frame 1
 };
 const HOLD = 16;
 const CLAP = "reel/creative09v1/clap.wav";
 const GREEN = "#16a34a", RED = "#dc2626";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const RAVI: Record<number, [Mood, Arms]> = {
-  1: ["worried", "rest"], 2: ["sus", "up"], 4: ["shock", "rest"], 7: ["sus", "fold"], 12: ["happy", "thumb"], 13: ["hope", "rest"], 14: ["shock", "rest"],
+  1: ["worried", "rest"], 2: ["sus", "up"], 4: ["shock", "rest"], 7: ["sus", "fold"], 12: ["happy", "thumb"], 13: ["happy", "thumb"], 14: ["shock", "up"],
 };
 const SURESH: Record<number, [BillMood, BillArms]> = {
   1: ["shock", "up"], 2: ["angry", "rest"], 4: ["shock", "up"], 6: ["angry", "five"], 10: ["worried", "rest"], 12: ["happy", "rest"], 13: ["smug", "fold"], 14: ["smug", "fold"],
@@ -77,7 +77,7 @@ const hookCard = (c: Ctx) => {
   block(c, 560, "THE AI APP", "₹0", "#f87171");
 };
 const ROWS: [string, string, string][] = [
-  ["Sums and GST", "10/10", GREEN], ["Reorder list", "4/5", GREEN], ["Replies to a customer", "4/5", GREEN], ["Offer messages, ready to send", "0/5", RED],
+  ["Sums and GST", "10/10", GREEN], ["Reorder list", "4/5", GREEN], ["Replies to a customer", "4/5", GREEN], ["Offer messages ready to send", "0/5", RED],
 ];
 
 // ---------- the scene ----------
@@ -117,7 +117,7 @@ const StJobs: React.FC<SP> = ({ s }) => {
         const endL = ln.from + ln.frames;
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
         if (b.shot === "test") {
-          dark(c, W, H, "OUR TEST: SURESH'S PAPER WORK", ["a small free AI (Qwen2.5 7B), offline", "5 tasks × 5 tries · every reply read by hand"]);
+          dark(c, W, H, "OUR TEST: SURESH'S PAPER WORK", ["a small free AI (Qwen2.5 7B), offline: weaker than big apps", "5 tasks × 5 tries · every reply read by hand"]);
           const c1 = cu(1, 0.5);
           const q0 = 1 - seg(f, c1 - 4, c1);
           if (q0 > 0) { c.save(); c.globalAlpha = q0; c.font = SANS(66, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("How many right?", W / 2, 840); c.restore(); }
@@ -149,7 +149,7 @@ const StJobs: React.FC<SP> = ({ s }) => {
             c.beginPath(); c.ellipse(560, y + 144, 225, 34, 0, 0, 7); c.stroke();
             c.beginPath(); c.ellipse(870, y + 144, 62, 32, 0, 0, 7); c.stroke();
             c.restore();
-            chip(c, "a good draft, not ready to send", W / 2, 1330, "#fde68a", INK, seg(f, cu(1, 0.4) + 16, cu(1, 0.4) + 24), 40);
+            chip(c, "a good draft · our prompt had no shop name", W / 2, 1330, "#fde68a", INK, seg(f, cu(1, 0.4) + 16, cu(1, 0.4) + 24), 38);
           }
         } else if (b.shot === "day") {
           dark(c, W, H, "SURESH'S DAY", [], "#fde68a");
@@ -158,32 +158,35 @@ const StJobs: React.FC<SP> = ({ s }) => {
             if (k <= 0) return; c.save(); c.globalAlpha = clamp(k * 3);
             c.fillStyle = bg; rrect(c, x, 400, 440, 860, 26); c.fill();
             c.font = SANS(44, 900); c.fillStyle = fg; c.textAlign = "center"; c.fillText(title, x + 220, 470);
-            c.font = SANS(38, 700); items.forEach((t, q) => c.fillText(t, x + 220, 560 + q * 80));
-            c.font = SANS(34, 900); c.fillText(tagT, x + 220, 1210); c.restore();
+            c.font = SANS(48, 800); items.forEach((t, q) => c.fillText(t, x + 220, 580 + q * 120));
+            c.font = SANS(42, 900); c.fillText(tagT, x + 220, 1200); c.restore();
           };
-          col(70, "PAPER", ["sums, GST", "reorder list", "offer messages", "replies"], "#dcfce7", "#14532d", k1, "AI drafts · he checks");
-          col(570, "HANDS & PEOPLE", ["the sacks", "deliveries", "who pays late", "the supplier"], "#fee2e2", "#7f1d1d", k2, "his");
+          col(70, "PAPER", ["sums, GST", "reorder list", "offer messages", "replies"], "#dcfce7", "#14532d", k1, "AI drafts most");
+          col(570, "HANDS & PEOPLE", ["the sacks", "deliveries", "the regulars", "the supplier"], "#fee2e2", "#7f1d1d", k2, "his");
         } else if (b.shot === "ilo") {
           dark(c, W, H, "WORLDWIDE (ILO, MAY 2025)", ["generative AI and jobs"], "#c7d2fe");
           const k1 = seg(f, ln.from + 4, ln.from + 12), k2 = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3);
             for (let q = 0; q < 4; q++) { const x = 170 + q * 200; c.fillStyle = q === 0 ? "#f59e0b" : "#475569"; c.beginPath(); c.arc(x + 50, 560, 46, 0, 7); c.fill(); rrect(c, x, 620, 100, 160, 30); c.fill(); }
-            c.font = SANS(54, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("1 job in 4: some AI exposure", W / 2, 880);
-            c.font = SANS(40, 700); c.fillStyle = "#e2e8f0"; c.fillText("3.3%: the highest exposure", W / 2, 950);
+            c.font = SANS(54, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("1 job in 4 has tasks", W / 2, 880);
+            c.fillText("an AI could do", W / 2, 950);   // script review: "exposure" read as jargon; 3.3% meant nothing
             c.restore();
           }
-          stamp(c, "MOST WILL CHANGE, NOT VANISH", W / 2, 1110, GREEN, k2, 46, -0.03);
-          c.save(); c.globalAlpha = k1; c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("potential exposure, not job losses · ILO Working Paper 140", W / 2, 1250); c.restore();
+          stamp(c, "MOST CHANGE, NOT VANISH", W / 2, 1110, GREEN, k2, 52, -0.03);
+          c.save(); c.globalAlpha = k1; c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("what could change, not job losses · ILO Working Paper 140", W / 2, 1250); c.restore();
         } else if (b.shot === "clerks") {
-          dark(c, W, H, "THE MOST EXPOSED: CLERICAL JOBS", ["(ILO, May 2025)"], "#fca5a5");
+          dark(c, W, H, "A JOB THAT'S ALL PAPER?", ["it changes the most (ILO: clerical jobs, the most exposed)"], "#fca5a5");
           const k1 = seg(f, ln.from + 2, ln.from + 10);
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3);
-            ["data entry", "typing and filing", "billing desks"].forEach((t, q) => { c.fillStyle = "#1e293b"; rrect(c, 160, 470 + q * 130, W - 320, 106, 20); c.fill(); c.font = SANS(46, 800); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(t, W / 2, 540 + q * 130); });
+            ["data entry", "typing and filing", "billing desks"].forEach((t, q) => { c.fillStyle = "#1e293b"; rrect(c, 160, 470 + q * 110, W - 320, 90, 20); c.fill(); c.font = SANS(42, 800); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(t, W / 2, 530 + q * 110); });
             c.restore();
           }
-          tag(c, "a job that's ALL paper changes the most", W / 2, 950, 46, "#fde68a", INK, -0.02, seg(f, cu(1, 0.5), cu(1, 0.5) + 8));
+          ([["Be the one who checks the AI", "#dcfce7", cu(1, 0.5)], ["Learn the tool", "#e0e7ff", cu(1, 0.5) + 14]] as [string, string, number][]).forEach(([a, bg, t0], q) => {   // script review: advice, not a warning
+            const k = seg(f, t0, t0 + 8); if (k <= 0) return; c.save(); c.globalAlpha = clamp(k * 3); const y = 880 + q * 170;
+            c.fillStyle = bg; rrect(c, 110, y, W - 220, 140, 22); c.fill(); c.font = SANS(54, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(a, W / 2, y + 90); c.restore();
+          });
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
@@ -203,7 +206,7 @@ const StJobs: React.FC<SP> = ({ s }) => {
           if (hookOn || n <= 2) sack(c, 300, 1000, 0.62);
           c.restore();
           if (hookOn) hookCard(c);
-          if (n === 1 && !loopOn) chip(c, "Suresh and the shop are made up · the test is real", W / 2, 470, "rgba(15,23,42,0.85)", "#f8fafc", 1, 30);
+          if (n === 2) chip(c, "Suresh and the shop are made up · the test is real", W / 2, 470, "rgba(15,23,42,0.85)", "#f8fafc", 1, 32);
           if (b.prop === "rule") {
             const k0 = seg(p, 0.0, 0.08);
             if (k0 > 0) {
@@ -212,7 +215,7 @@ const StJobs: React.FC<SP> = ({ s }) => {
               c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("AI TAKES TASKS, NOT JOBS", W / 2, 330);
               c.restore();
             }
-            ([["AI: drafts and sums", "#dcfce7", ln.from + 4], ["You: check, then send", "#e0e7ff", ln.from + 16], ["Hands and people: yours", "#fde68a", cu(1, 0.45)], ["Learn the tool", "#f8fafc", cu(1, 0.45) + 16]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
+            ([["AI: drafts", "#dcfce7", ln.from + 4], ["You: check", "#e0e7ff", ln.from + 16], ["Hands and people: yours", "#fde68a", cu(1, 0.45)]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
               const k = seg(f, t0, t0 + 8); if (k <= 0) return;
               c.save(); c.globalAlpha = clamp(k * 3); const y = 400 + q * 180;
               c.fillStyle = bg; rrect(c, 110, y, W - 220, 150, 22); c.fill();
@@ -220,7 +223,7 @@ const StJobs: React.FC<SP> = ({ s }) => {
               c.restore();
             });
           }
-          if (b.prop === "loop" && !loopOn) chip(c, "₹15,000 a month", 300, 560, "#4ade80", "#052e16", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 52);
+          if (b.prop === "loop" && !loopOn) chip(c, "₹20,000 a month?!", 330, 860, "#4ade80", "#052e16", seg(f, ln.from + 10, ln.from + 18), 56);   // stills: it covered Ravi's face
         }
       }} />
     </>
