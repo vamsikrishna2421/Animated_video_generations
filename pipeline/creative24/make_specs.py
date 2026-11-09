@@ -49,7 +49,7 @@ SPLIT_PAUSE = {1: 0.45, 6: 0.5}
 SCENES = [("s_a", (1, 2, 3, 4), {"boost": 0.9, "drop_at": [[0, 1, 0.2]], "tail": 0.0}),
           ("s_b", (5,), {"lift": 0.9, "boost": 1.4, "tail": 0.0}),
           ("s_c", (6,), {"boost": 1.4, "duck": [1, 2, 0.35, 0.1], "tail": 0.0}),   # a dip, not the bed out (script review 2:
-          ("s_d", (7,), {"boost": 1.15, "tail": 0.0}),                            # a full stop there played like the ending)
+          ("s_d", (7,), {"boost": 1.3, "tail": 0.0}),                            # a full stop there played like the ending)
           ("s_e", (8,), {"outro": True, "pre": 0.5, "boost": 1.6, "lift": 0.7, "rise": 1.6, "tail": 0.0})]
 GAP = {1: 0.35, 2: 0.3, 3: 0.35, 4: 0.6, 5: 0.35, 6: 0.25, 7: 0.5, 8: 0.0}
 GAP_TE = {}
@@ -65,7 +65,7 @@ def spec(lang="en"):
     s = {"id": sid, "title": "The Same Question, 101 Tokens" + (" (Telugu audio)" if te else ""), "label": "", "banner": "", "topic": "",
          "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
          "musicVol": [0.16, 0.5], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.6, "captionMode": "phrase",
-         "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": False, "musicGapGain": 0.5 if not te else 1.0,
+         "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.5 if not te else 1.0,   # pad back on (v3.1 render: a hole at every bar end without it)
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}
     if te:
