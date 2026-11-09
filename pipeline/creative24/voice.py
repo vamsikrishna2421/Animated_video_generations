@@ -30,17 +30,19 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("thirteen", "13"), ("tokens", "token"), ("english",), ("hundred", "101"), ("telugu",)],
-               2: [("same",), ("question",), ("tokens", "token"), ("chunks", "chunk"), ("words", "word")],
+               2: [("same",), ("question",), ("tokens", "token"), ("chunks", "chunk"), ("hold",)],
                3: [("current",), ("one", "1"), ("chunk",), ("telugu",), ("twelve", "12"), ("pieces",)],
-               4: [("why",), ("built",), ("english",), ("text",)], 5: [("app",), ("tokens", "token"), ("memory",), ("telugu",), ("room",)],
-               6: [("developers", "developer"), ("pay",), ("token",), ("telugu",), ("costs", "cost")],
-               7: [("good",), ("newer",), ("chatgpt", "gpt"), ("twenty", "23"), ("five", "5"), ("seven", "7"), ("two", "2")],
-               8: [("popular",), ("free",), ("open",), ("six", "6"), ("fairer",), ("fair",)],
-               9: [("telugu",), ("newer",), ("app",), ("paying",), ("token", "tokens"), ("count",)]},
-        "te": {1: [("पद", "13"), ("नूट", "101", "नू")]}}
+               4: [("why",), ("chunk",), ("list",), ("built",), ("english",), ("text",)],
+               5: [("good",), ("today",), ("chatgpt", "gpt"), ("twenty", "23"), ("five", "5"), ("seven", "7"), ("two", "2")],
+               6: [("popular",), ("free",), ("open",), ("six", "6"), ("fairer",)], "6b": [("not",), ("fair",), ("yet",)],
+               7: [("matters",), ("tokens", "token"), ("room",), ("telugu",), ("forgets", "forget"), ("sooner",)],
+               8: [("telugu",), ("forgetting", "getting"), ("summary",), ("paste",), ("building",), ("count",), ("compare",), ("models", "model"), ("pick",)]},
+        # Telugu (Whisper writes it in Devanagari): render review 1 heard "తెలుగు" as "थेलुकु"/"ఖిల్బూలో"; a take must have it
+        "te": {1: [("पद", "13"), ("तेल", "తెలు")], "1b": [("नूट", "101", "नू")], 2: [("चाट", "chat")], 3: [("तेल", "తెలు")],
+               7: [("तेल", "తెలు")], 8: [("तेल", "తెలు")]}}
 JUDGE_TEXT = {1: "13 tokens in English. 101 in Telugu.", 3: "The word current: 1 chunk in English. In Telugu letters: 12 tiny pieces.",
-              7: "The good news: the newer ChatGPT counts that question in 23. Over 5 questions: from 7 times down to under 2.",
-              8: "But a popular free open model: still 6 times. Getting fairer. Not fair yet."}
+              5: "The good news: today's ChatGPT counts that question in 23. Over 5 questions: from 7 times down to under 2.",
+              6: "But a popular free open model: still 6 times. Getting fairer."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

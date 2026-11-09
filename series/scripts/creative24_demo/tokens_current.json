@@ -1,0 +1,39 @@
+{
+ "openai_model_map": {
+  "gpt-4": "cl100k_base",
+  "gpt-3.5-turbo": "cl100k_base",
+  "gpt-4o": "o200k_base",
+  "gpt-4.1": "o200k_base",
+  "o3": "o200k_base",
+  "gpt-5": "o200k_base"
+ },
+ "Qwen3": {
+  "rows": [
+   {
+    "en_tokens": 13,
+    "te_tokens": 86
+   },
+   {
+    "en_tokens": 13,
+    "te_tokens": 109
+   },
+   {
+    "en_tokens": 11,
+    "te_tokens": 69
+   },
+   {
+    "en_tokens": 15,
+    "te_tokens": 86
+   },
+   {
+    "en_tokens": 14,
+    "te_tokens": 71
+   }
+  ],
+  "en_total": 66,
+  "te_total": 421,
+  "ratio": 6.38,
+  "tenglish_total": 117,
+  "tenglish_ratio": 1.77
+ }
+}

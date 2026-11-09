@@ -1,4 +1,4 @@
-# Creative 24 "The Same Question, 101 Tokens" (the Nov 9 creative slot) · script v2, Nov 9
+# Creative 24 "The Same Question, 101 Tokens" (the Nov 9 creative slot) · script v3.1, Nov 9
 
 ## The format test (Vamsi via Bujji, Nov 6; agreed for a Nov 9-11 creative slot)
 The "3D textbook": an open book on a desk. The left page holds the words (still); the diagram on the right page lifts off
@@ -29,10 +29,70 @@ not fair yet. What to do: for long Telugu work, send it in parts; test which app
   " current": 1 token; " కరెంట్": 12 (older), 3 (newer).
   Follow-up (added after the script review, committed before it ran): the same questions typed in English letters
   ("Ee nela naa current bill..."): 117 / 101 / 117 tokens = 1.77x, 1.53x, 1.77x of English.
+  Follow-up 2 (added after the render review, committed before it ran; creative24_demo/tokens_current.json): OpenAI's
+  tiktoken library (v0.14.0) maps gpt-4 and gpt-3.5-turbo to cl100k_base and gpt-4o, gpt-4.1, o3 and gpt-5 to
+  o200k_base; the Qwen3 tokenizer (2025) gives the same counts as Qwen2.5: Telugu 421 vs 66, 6.38x.
 - Tokens are how AI services are counted and charged: OpenAI's API pricing is per million input and output tokens
   (openai.com/api/pricing); context windows (a chat's memory) are given in tokens.
 - Research: "Language Model Tokenizers Introduce Unfairness Between Languages" (Petrov, La Malfa, Torr, Bibi; NeurIPS
   2023): the same text in different languages can differ up to 15x in tokenized length, across 17 tokenizers.
+
+## Render review (human-viewer, v2 render) and what changed (v3)
+Both: the 0:25 memory bars showed about 8x for "your app", then 0:30 said the newer ChatGPT is under 2x (a contradiction);
+"use a newer app" names nothing (which app? is my ChatGPT the newer one?) and "count your tokens" names no counter; the
+0:30 good news gets no lift and NOT FAIR YET lands while "getting fairer" is still being said; the 6.4x label spills off
+the page, the 0:36 footnote is tiny and calls the newer tokenizer "a 2024 one" (it's Nov 2026); the left page is cropped
+to fragments while the camera leans in. Sandeep: "these counters" (nobody mentioned counters); the developer bit is not
+for him; the bars feel like maths class. Priya: "tokens are the AI's memory" (memory is *counted* in tokens); rerun on
+current models; one frame worth saving (all three ratios, model names, date); music as loud as the voice (-17.6 vs -18.4
+dB), a pad hum in the voice's range, no arc (quarters within 1.5 dB), the frame-1 hit no bigger than the kick. Book: the
+chunk blocks cover the question; the turning page shows the tip text mirrored; the last right page is blank; the top
+third is empty after 0:07. Telugu: "తెలుగు" heard as "థెలుకు"; "ఏ ఐ" heard as "ఏ ఏ"; "కొత్త" heard as "kutta"; the silence
+falls before "తెలుగులో", not before "నూట ఒకటి"; "ఇవి" needs a noun; "మంచి వార్త" newsreader; "లోపుకి" → "లోపే".
+Changed (v3): a follow-up count (committed before it ran): OpenAI's tiktoken library maps gpt-4o, gpt-4.1, o3 and gpt-5
+to the newer tokenizer (so "the newer one" = today's ChatGPT models), and the 2025 Qwen3 tokenizer counts exactly as
+Qwen2.5 (421, 6.38x), so the open-model point holds today. Order: hook, chunks, "current", why, then the good news
+(today's ChatGPT: 23; from seven times to under two), the open model (six times), "Getting fairer." and, after a beat on
+silence, "Not fair yet." (its own take, the stamp on it), then why it matters (memory of the chat is counted in tokens;
+bars at the real ratios: English 1, today's ChatGPT 1.7, an open model 6.4), then the tips (a forgetful long Telugu chat:
+start another chat with a short summary; paying per token: count Telugu tokens first, the free counter on the page). The
+developer cost line is gone (Sandeep). The top third carries a chapter header and, on the bars, a saveable table (all
+three ratios, model names, the date). Telugu: "చాట్ బాట్" for "ఏ ఐ"; "ఇప్పటి" for "కొత్త"; the wording fixes; the split take
+before "నూట ఒకటి".
+
+## Script review 2 (human-viewer, the v3 script) and what changed (v3.1)
+Both: the contradiction is fixed and the ratios agree (7.4 / 1.7 / 6.4). Still to change: Telugu line 2 repeated "the same
+question"; "కొంచెం మెరుగైంది" (a little) contradicts seven times down to under two; line 4 should say whose chunks; "తెలుగు"
+needs a check on every take; tip 1: ask for the summary, paste it into a new chat; tip 2 had no setup (cost was cut):
+"building with AI? count your Telugu tokens and compare models before you pick"; "Not fair yet" with the bed out played like
+the ending (a dip, not a stop; straight into why-it-matters); a stake in the first 10 s ("and it can only hold so many");
+"memory" clashes with ChatGPT's Memory feature (say "room" / "holds"); name the open model (Qwen) on screen.
+Changed: all of the above. Every Telugu take with "తెలుగు" must be heard with it (MUST check); the table names the models
+"per OpenAI's tiktoken"; the counter page says it counts OpenAI's models.
+
+## Script (English, v3.1; narrator only) · ~50 s
+| # | Line | The book |
+|---|---|---|
+| 1 | Thirteen tokens in English. [1] A hundred and one in Telugu. | spread 1: the towers (13 vs 101), frame-1 blocks, "older ChatGPT model" |
+| 2 | The same question. [1] An AI reads tokens, chunks of text, and it can only hold so many. | the English question as 13 blocks on the right page |
+| 3 | The word "current": one chunk in English. [1] In Telugu letters: twelve tiny pieces. | "current" one block; "కరెంట్" bursts into 12 |
+| 4 | Why? [1] Its chunk list was built mostly from English text. | the stamp, with the research credit |
+| 5 | The good news: today's ChatGPT counts that question in twenty-three. [1] Over five questions: from seven times down to under two. | page turn; spread 2: 101 shrinks to 23; bars older 7.4x, today 1.7x; a lift |
+| 6 | But a popular free open model: still six times. [1] Getting fairer. / [2] Not fair yet. | the Qwen bar 6.4x; the saveable table; a dip, NOT FAIR YET on its words |
+| 7 | Why it matters: more tokens fill that room faster. [1] So in a long Telugu chat, the AI forgets the start sooner. | page turn; spread 3: the same chat's room used (1, 1.7, 6.4) |
+| 8 | Long Telugu chat forgetting what you said? [1] Ask for a short summary, and paste it into a new chat. [2] Building with AI? Count your Telugu tokens, and compare models before you pick. | page turn; spread 4: the tips; the counter page; the flip back |
+
+## Script (Telugu, v3.1)
+| # | Telugu |
+|---|---|
+| 1 | ఇంగ్లీష్ లో పదమూడు టోకెన్లు. తెలుగులో, అదే ప్రశ్నకి, / [1] నూట ఒకటి. |
+| 2 | చాట్ బాట్ పదాలు చదవదు: [1] టోకెన్లు చదువుతుంది, అంటే టెక్స్ట్ ముక్కలు. అది కొన్ని టోకెన్లే పట్టగలదు. |
+| 3 | కరెంట్ అనే పదం, ఇంగ్లీష్ లో ఒక్క ముక్క. [1] తెలుగు అక్షరాల్లో రాస్తే, పన్నెండు ముక్కలు. |
+| 4 | ఎందుకు? [1] దాని ముక్కల లిస్ట్, ఎక్కువగా ఇంగ్లీష్ టెక్స్ట్ తోనే తయారైంది. |
+| 5 | గుడ్ న్యూస్ ఏంటంటే: ఇప్పటి చాట్ జీపీటీ లో, అదే ప్రశ్నకి ఇరవై మూడు టోకెన్లే. [1] ఐదు ప్రశ్నల్లో: ఏడు రెట్ల నుంచి, రెండు రెట్ల లోపే. |
+| 6 | కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా ఆరు రెట్లు. [1] మెరుగవుతోంది. / [2] ఇంకా సమానం కాదు. |
+| 7 | ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు ఎక్కువైతే, ఆ చోటు త్వరగా నిండుతుంది. [1] అందుకే పెద్ద తెలుగు చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది. |
+| 8 | పెద్ద తెలుగు చాట్ లో ముందు చెప్పింది మర్చిపోతుంటే? [1] చిన్న సమ్మరీ అడిగి, ఇంకో చాట్ లో పేస్ట్ చేయండి. [2] యాప్ తయారు చేస్తుంటే, తెలుగు టోకెన్లు లెక్కపెట్టి, మోడల్స్ ని పోల్చి చూడండి. |
 
 ## Script review (human-viewer, v1) and what changed
 Both stop on frame 1 (hook 7 and 8: a tall orange "TELUGU 101" reads as unfair to us). Both: the 101 is the older
@@ -51,7 +111,7 @@ tips: use a newer app for long Telugu work, and count Telugu tokens first if you
 the caption); the caption ask uses a token counter, not the chatbot; a sound plan (a page flip and a hit on every turn,
 drops before "a hundred and one" and "not fair yet"). Telugu as listed.
 
-## Script (English, v2; narrator only) · ~52 s
+## Script (English, v2; superseded) · ~52 s
 | # | Line | The book |
 |---|---|---|
 | 1 | Thirteen tokens in English. [1] A hundred and one in Telugu. | spread 1: the two towers (13 vs 101), the frame-1 blocks, "TELUGU (older ChatGPT model)" |
@@ -64,7 +124,7 @@ drops before "a hundred and one" and "not fair yet"). Telugu as listed.
 | 8 | But a popular free open model: still six times. [1] Getting fairer. Not fair yet. | the third bar 6.4×; NOT FAIR YET |
 | 9 | Long Telugu work? Use a newer app. [1] Paying per token? Count your Telugu tokens first. | page turn; spread 4: two tips; the book flips back to spread 1 |
 
-## Script (Telugu, v2)
+## Script (Telugu, v2; superseded)
 | # | Telugu |
 |---|---|
 | 1 | ఇంగ్లీష్ లో పదమూడు టోకెన్లు. [1] తెలుగులో, అదే ప్రశ్నకి నూట ఒకటి. |

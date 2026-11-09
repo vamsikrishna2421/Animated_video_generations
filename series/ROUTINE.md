@@ -683,3 +683,15 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     on the number's take, or the dip lands before the wrong words (measured: -49 dB before "970 crore" once split).
   - Fish: "bot" is heard "bought" (EP47, Creative 23), "SEBI" is heard "CB": write "AI app", and "Sebbee" in the take's text.
   - Parler Telugu: "ఏ ఐ" can land as "ఏయ్" (rude from a daughter to her father): reword around it in sensitive lines.
+- Nov 9 lessons (Creative 24, the 3D textbook, @remotion/three):
+  - Render 3D with `GL=swangle` (no GPU): render.sh and stills.cjs pass it through. Load fonts with FontFace before
+    drawing canvas textures (no Telugu system font). A plane with `side: BackSide` shows its texture mirrored: give a
+    turning page's back its own mesh, turned over about the page's axis, with FrontSide.
+  - A camera lean-in on one page shows the other page's lines cut to fragments ("hy", "s so"): keep the gutter-side
+    quarter of a text page empty.
+  - Never show a stake at a ratio the reel later calls solved (memory bars at 8x, then "the newer one is under 2x"): put
+    the good news first and the stake at the real ratios, and say which app the good news is (tiktoken's model map is
+    OpenAI's own source for which model uses which tokenizer).
+  - A full bed-out before a line that sounds final ("Not fair yet") plays like the ending: dip it (`duck`), carry on.
+  - Whisper hears Parler's "తెలుగు" as "थेलुकु" when it's wrong: a MUST group of "तेल" picks the takes that say it.
+    Whisper writes "forgetting" as "for getting".

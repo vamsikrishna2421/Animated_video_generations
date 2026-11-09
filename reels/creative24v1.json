@@ -9,8 +9,8 @@
  "lead": 0.35,
  "music": "lofi",
  "musicVol": [
-  0.3,
-  0.55
+  0.16,
+  0.5
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -18,9 +18,14 @@
  "captionMode": "phrase",
  "musicEQ": [
   [
-   260,
-   -6,
-   0.9
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
   ],
   [
    2400,
@@ -28,7 +33,7 @@
    1.0
   ]
  ],
- "musicPad": true,
+ "musicPad": false,
  "musicGapGain": 0.5,
  "musicEndRamp": [
   0.9,
@@ -92,8 +97,8 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "The same question. [1] An AI reads tokens: chunks of text, not words.",
-     "show": "The same question. An AI reads tokens: chunks of text, not words.",
+     "text": "The same question. [1] An AI reads tokens, chunks of text, and it can only hold so many.",
+     "show": "The same question. An AI reads tokens, chunks of text, and it can only hold so many.",
      "maxgap": 0.3,
      "gap": 0.3,
      "tempo": 1.04
@@ -110,8 +115,8 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "Why? [1] These counters were built mostly from English text.",
-     "show": "Why? These counters were built mostly from English text.",
+     "text": "Why? [1] Its chunk list was built mostly from English text.",
+     "show": "Why? Its chunk list was built mostly from English text.",
      "maxgap": 0.3,
      "gap": 0.6,
      "tempo": 1.04
@@ -122,38 +127,19 @@
    "id": "s_b",
    "type": "sk_book",
    "tail": 0.0,
-   "boost": 1.2,
-   "lift": 0.5,
-   "drop_at": [
-    [
-     3,
-     1,
-     0.3
-    ]
-   ],
+   "lift": 0.9,
+   "boost": 1.4,
    "data": {
     "beats": [
      {
-      "prop": "memory",
-      "n": 5
-     },
-     {
-      "prop": "cost",
-      "n": 6
-     },
-     {
       "prop": "newer",
-      "n": 7
-     },
-     {
-      "prop": "fair",
-      "n": 8
+      "n": 5
      }
     ],
     "captionTop": 1500,
     "yt": {
-     "chapter": "Memory, cost, our test",
-     "title": "Memory, cost, our test",
+     "chapter": "Today's ChatGPT: 23",
+     "title": "Today's ChatGPT: 23",
      "notes": []
     }
    },
@@ -161,37 +147,10 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "In your app, tokens are the AI's memory. [1] A long Telugu chat runs out of room sooner.",
-     "show": "In your app, tokens are the AI's memory. A long Telugu chat runs out of room sooner.",
+     "text": "The good news: today's ChatGPT counts that question in twenty-three. [1] Over five questions: from seven times down to under two.",
+     "show": "The good news: today's ChatGPT counts that question in 23. Over 5 questions: from 7 times down to under 2.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "tempo": 1.04
-    },
-    {
-     "who": "storyteller",
-     "file": "06_storyteller.wav",
-     "text": "And developers pay per token: [1] the same Telugu question costs more.",
-     "show": "And developers pay per token: the same Telugu question costs more.",
-     "maxgap": 0.3,
-     "gap": 0.6,
-     "tempo": 1.04
-    },
-    {
-     "who": "storyteller",
-     "file": "07_storyteller.wav",
-     "text": "The good news: the newer ChatGPT counts that question in twenty-three. [1] Over five questions: from seven times down to under two.",
-     "show": "The good news: the newer ChatGPT counts that question in 23. Over 5 questions: from 7 times down to under 2.",
-     "maxgap": 0.3,
-     "gap": 0.35,
-     "tempo": 1.04
-    },
-    {
-     "who": "storyteller",
-     "file": "08_storyteller.wav",
-     "text": "But a popular free open model: still six times. [1] Getting fairer. Not fair yet.",
-     "show": "But a popular free open model: still 6 times. Getting fairer. Not fair yet.",
-     "maxgap": 0.3,
-     "gap": 0.6,
      "tempo": 1.04
     }
    ]
@@ -200,16 +159,88 @@
    "id": "s_c",
    "type": "sk_book",
    "tail": 0.0,
+   "boost": 1.4,
+   "duck": [
+    1,
+    2,
+    0.35,
+    0.1
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "fair",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Not fair yet",
+     "title": "Not fair yet",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "But a popular free open model: still six times. [1] Getting fairer. <pause 0.5> [2] Not fair yet.",
+     "show": "But a popular free open model: still 6 times. Getting fairer. <pause 0.5> Not fair yet.",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "tempo": 1.04,
+     "tts": "But a popular free open model: still six times. Getting fairer.",
+     "file2": "06b_storyteller.wav",
+     "tts2": "Not fair yet.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_book",
+   "tail": 0.0,
+   "boost": 1.15,
+   "data": {
+    "beats": [
+     {
+      "prop": "memory",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "yt": {
+     "chapter": "Why it matters",
+     "title": "Why it matters",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "Why it matters: more tokens fill that room faster. [1] So in a long Telugu chat, the AI forgets the start sooner.",
+     "show": "Why it matters: more tokens fill that room faster. So in a long Telugu chat, the AI forgets the start sooner.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_book",
+   "tail": 0.0,
    "outro": true,
    "pre": 0.5,
    "boost": 1.6,
    "lift": 0.7,
-   "rise": 1.5,
+   "rise": 1.6,
    "data": {
     "beats": [
      {
       "prop": "loop",
-      "n": 9
+      "n": 8
      }
     ],
     "captionTop": 1500,
@@ -222,9 +253,9 @@
    "lines": [
     {
      "who": "storyteller",
-     "file": "09_storyteller.wav",
-     "text": "Long Telugu work? Use a newer app. [1] Paying per token? Count your Telugu tokens first.",
-     "show": "Long Telugu work? Use a newer app. Paying per token? Count your Telugu tokens first.",
+     "file": "08_storyteller.wav",
+     "text": "Long Telugu chat forgetting what you said? [1] Ask for a short summary, and paste it into a new chat. [2] Building with AI? Count your Telugu tokens, and compare models before you pick.",
+     "show": "Long Telugu chat forgetting what you said? Ask for a short summary, and paste it into a new chat. Building with AI? Count your Telugu tokens, and compare models before you pick.",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.04
