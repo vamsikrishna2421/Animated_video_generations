@@ -13,33 +13,33 @@
  "fps": 30,
  "musicDrops": [
   [
-   271,
-   295
+   289,
+   322
   ],
   [
-   467,
-   491
+   521,
+   554
   ]
  ],
  "musicBoosts": [
   [
    0,
-   839,
+   859,
    1.0
   ],
   [
-   839,
-   1453,
+   859,
+   1720,
    1.3
   ],
   [
-   1453,
-   1809,
+   1721,
+   1932,
    1.6
   ],
   [
-   1453,
-   1809,
+   1721,
+   1932,
    1.45,
    1
   ]
@@ -47,7 +47,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1809,
+ "totalFrames": 1932,
  "music": "reel/ep49te/score.wav",
  "scenes": [
   {
@@ -75,7 +75,7 @@
      },
      {
       "who": "suresh",
-      "shot": "suresh",
+      "shot": "test",
       "prop": "eighteen",
       "n": 4
      },
@@ -99,7 +99,11 @@
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "₹15,000 vs a free app",
      "title": "₹15,000 vs a free app",
@@ -110,7 +114,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 839,
+   "frames": 859,
    "lines": [
     {
      "who": "suresh",
@@ -119,81 +123,81 @@
      "sub": null,
      "audio": "reel/ep49te/line_01.wav",
      "from": 15,
-     "frames": 106,
+     "frames": 103,
      "words": [
       {
        "w": "₹15,000",
        "from": 16,
-       "to": 26
+       "to": 25
       },
       {
        "w": "salary,",
-       "from": 26,
-       "to": 36
+       "from": 25,
+       "to": 35
       },
       {
        "w": "8",
-       "from": 36,
-       "to": 39
+       "from": 35,
+       "to": 38
       },
       {
        "w": "years...",
-       "from": 39,
-       "to": 50
+       "from": 38,
+       "to": 49
       },
       {
        "w": "and",
-       "from": 50,
-       "to": 55
+       "from": 49,
+       "to": 54
       },
       {
        "w": "I",
-       "from": 55,
-       "to": 58
+       "from": 54,
+       "to": 56
       },
       {
        "w": "lose",
-       "from": 58,
-       "to": 73
+       "from": 56,
+       "to": 71
       },
       {
        "w": "my",
-       "from": 73,
-       "to": 76
+       "from": 71,
+       "to": 75
       },
       {
        "w": "work",
-       "from": 76,
-       "to": 87
+       "from": 75,
+       "to": 85
       },
       {
        "w": "because",
-       "from": 87,
-       "to": 97
+       "from": 85,
+       "to": 95
       },
       {
        "w": "of",
-       "from": 97,
-       "to": 101
+       "from": 95,
+       "to": 98
       },
       {
        "w": "a",
-       "from": 101,
-       "to": 103
+       "from": 98,
+       "to": 101
       },
       {
        "w": "free",
-       "from": 103,
-       "to": 110
+       "from": 101,
+       "to": 107
       },
       {
        "w": "app?!",
-       "from": 110,
-       "to": 117
+       "from": 107,
+       "to": 114
       }
      ],
      "cues": {
-      "1": 70
+      "1": 68
      }
     },
     {
@@ -202,58 +206,58 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep49te/line_02.wav",
-     "from": 127,
-     "frames": 97,
+     "from": 124,
+     "frames": 86,
      "words": [
       {
        "w": "Don't",
-       "from": 128,
-       "to": 138
+       "from": 125,
+       "to": 134
       },
       {
-       "w": "panic!",
-       "from": 138,
-       "to": 150
+       "w": "stress!",
+       "from": 134,
+       "to": 145
       },
       {
        "w": "I",
-       "from": 150,
-       "to": 153
-      },
-      {
-       "w": "only",
-       "from": 153,
-       "to": 170
+       "from": 145,
+       "to": 148
       },
       {
        "w": "tested",
-       "from": 170,
-       "to": 182
+       "from": 148,
+       "to": 166
       },
       {
        "w": "it",
-       "from": 182,
-       "to": 187
+       "from": 166,
+       "to": 170
+      },
+      {
+       "w": "only",
+       "from": 170,
+       "to": 178
       },
       {
        "w": "on",
-       "from": 187,
-       "to": 192
+       "from": 178,
+       "to": 182
       },
       {
        "w": "your",
-       "from": 192,
-       "to": 200
+       "from": 182,
+       "to": 189
       },
       {
        "w": "paper",
-       "from": 200,
-       "to": 210
+       "from": 189,
+       "to": 198
       },
       {
        "w": "work.",
-       "from": 210,
-       "to": 220
+       "from": 198,
+       "to": 206
       }
      ],
      "cues": {}
@@ -264,47 +268,47 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep49te/line_03.wav",
-     "from": 230,
-     "frames": 109,
+     "from": 216,
+     "frames": 127,
      "words": [
       {
        "w": "Suresh's",
-       "from": 234,
-       "to": 254
+       "from": 220,
+       "to": 244
       },
       {
        "w": "paper",
-       "from": 254,
-       "to": 273
+       "from": 244,
+       "to": 265
       },
       {
        "w": "work,",
-       "from": 273,
-       "to": 284
+       "from": 265,
+       "to": 278
       },
       {
        "w": "25",
-       "from": 284,
-       "to": 290
+       "from": 278,
+       "to": 285
       },
       {
        "w": "times.",
-       "from": 290,
-       "to": 310
+       "from": 313,
+       "to": 323
       },
       {
-       "w": "18",
-       "from": 310,
-       "to": 316
+       "w": "19",
+       "from": 323,
+       "to": 327
       },
       {
        "w": "correct.",
-       "from": 316,
-       "to": 332
+       "from": 327,
+       "to": 343
       }
      ],
      "cues": {
-      "1": 295
+      "1": 313
      }
     },
     {
@@ -313,33 +317,28 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/ep49te/line_04.wav",
-     "from": 348,
-     "frames": 54,
+     "from": 352,
+     "frames": 41,
      "words": [
       {
-       "w": "18?!",
-       "from": 349,
-       "to": 357
+       "w": "19?!",
+       "from": 353,
+       "to": 363
       },
       {
-       "w": "Almost",
-       "from": 357,
+       "w": "Most",
+       "from": 363,
        "to": 380
       },
       {
-       "w": "all",
-       "from": 380,
-       "to": 386
-      },
-      {
        "w": "of",
-       "from": 386,
-       "to": 391
+       "from": 380,
+       "to": 385
       },
       {
        "w": "it!",
-       "from": 391,
-       "to": 398
+       "from": 385,
+       "to": 393
       }
      ],
      "cues": {}
@@ -350,92 +349,102 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep49te/line_05.wav",
-     "from": 408,
-     "frames": 214,
+     "from": 402,
+     "frames": 257,
      "words": [
       {
        "w": "Sums,",
-       "from": 408,
+       "from": 402,
+       "to": 414
+      },
+      {
+       "w": "GST,",
+       "from": 414,
        "to": 432
       },
       {
-       "w": "GST:",
+       "w": "stock",
        "from": 432,
-       "to": 442
-      },
-      {
-       "w": "10",
-       "from": 442,
-       "to": 449
-      },
-      {
-       "w": "out",
-       "from": 449,
        "to": 465
       },
       {
-       "w": "of",
+       "w": "lists:",
        "from": 465,
-       "to": 471
+       "to": 491
       },
       {
-       "w": "10.",
-       "from": 471,
-       "to": 488
+       "w": "15",
+       "from": 491,
+       "to": 497
+      },
+      {
+       "w": "out",
+       "from": 497,
+       "to": 505
+      },
+      {
+       "w": "of",
+       "from": 505,
+       "to": 510
+      },
+      {
+       "w": "15.",
+       "from": 510,
+       "to": 527
       },
       {
        "w": "But",
-       "from": 488,
-       "to": 496
+       "from": 527,
+       "to": 535
       },
       {
        "w": "every",
-       "from": 496,
-       "to": 517
+       "from": 535,
+       "to": 555
       },
       {
        "w": "offer",
-       "from": 517,
-       "to": 529
-      },
-      {
-       "w": "message",
-       "from": 529,
-       "to": 546
-      },
-      {
-       "w": "had",
-       "from": 546,
-       "to": 562
-      },
-      {
-       "w": "a",
-       "from": 562,
+       "from": 555,
        "to": 566
       },
       {
-       "w": "blank",
+       "w": "message",
        "from": 566,
-       "to": 585
+       "to": 590
       },
       {
-       "w": "or",
-       "from": 585,
-       "to": 591
+       "w": "had",
+       "from": 590,
+       "to": 597
       },
       {
        "w": "a",
-       "from": 591,
-       "to": 595
+       "from": 597,
+       "to": 601
+      },
+      {
+       "w": "blank",
+       "from": 601,
+       "to": 621
+      },
+      {
+       "w": "or",
+       "from": 621,
+       "to": 632
+      },
+      {
+       "w": "a",
+       "from": 632,
+       "to": 636
       },
       {
        "w": "mistake.",
-       "from": 595,
-       "to": 618
+       "from": 636,
+       "to": 658
       }
      ],
      "cues": {
-      "1": 491
+      "1": 545
      }
     },
     {
@@ -444,62 +453,62 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/ep49te/line_06.wav",
-     "from": 630,
-     "frames": 115,
+     "from": 667,
+     "frames": 112,
      "words": [
       {
        "w": "Nobody",
-       "from": 633,
-       "to": 647
+       "from": 670,
+       "to": 681
       },
       {
        "w": "told",
-       "from": 647,
-       "to": 654
+       "from": 681,
+       "to": 688
       },
       {
        "w": "it",
-       "from": 654,
-       "to": 659
+       "from": 688,
+       "to": 693
       },
       {
        "w": "the",
-       "from": 659,
-       "to": 665
+       "from": 693,
+       "to": 699
       },
       {
        "w": "shop's",
-       "from": 665,
-       "to": 675
+       "from": 699,
+       "to": 709
       },
       {
        "w": "name!",
-       "from": 675,
-       "to": 705
+       "from": 709,
+       "to": 739
       },
       {
        "w": "Who",
-       "from": 705,
-       "to": 711
+       "from": 739,
+       "to": 745
       },
       {
        "w": "checks",
-       "from": 711,
-       "to": 722
+       "from": 745,
+       "to": 756
       },
       {
        "w": "it?",
-       "from": 722,
-       "to": 736
+       "from": 756,
+       "to": 770
       },
       {
        "w": "Me!",
-       "from": 736,
-       "to": 742
+       "from": 770,
+       "to": 776
       }
      ],
      "cues": {
-      "1": 702
+      "1": 731
      }
     },
     {
@@ -508,53 +517,48 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/ep49te/line_07.wav",
-     "from": 753,
-     "frames": 78,
+     "from": 787,
+     "frames": 54,
      "words": [
       {
        "w": "So",
-       "from": 754,
-       "to": 759
+       "from": 788,
+       "to": 791
       },
       {
        "w": "does",
-       "from": 759,
-       "to": 766
+       "from": 791,
+       "to": 798
       },
       {
-       "w": "the",
-       "from": 766,
-       "to": 772
+       "w": "Suresh",
+       "from": 798,
+       "to": 807
       },
       {
-       "w": "AI",
-       "from": 772,
-       "to": 784
+       "w": "lose",
+       "from": 807,
+       "to": 813
       },
       {
-       "w": "take",
-       "from": 784,
-       "to": 792
-      },
-      {
-       "w": "Suresh's",
-       "from": 792,
-       "to": 805
+       "w": "his",
+       "from": 813,
+       "to": 818
       },
       {
        "w": "work,",
-       "from": 805,
-       "to": 814
+       "from": 818,
+       "to": 826
       },
       {
        "w": "or",
-       "from": 814,
-       "to": 819
+       "from": 826,
+       "to": 830
       },
       {
        "w": "not?",
-       "from": 819,
-       "to": 827
+       "from": 830,
+       "to": 836
       }
      ],
      "cues": {}
@@ -589,10 +593,20 @@
       "shot": "clerks",
       "prop": "clerks",
       "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "Tasks, not jobs",
      "title": "Tasks, not jobs",
@@ -602,8 +616,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 839,
-   "frames": 614,
+   "from": 859,
+   "frames": 861,
    "lines": [
     {
      "who": "ai",
@@ -612,16 +626,16 @@
      "sub": null,
      "audio": "reel/ep49te/line_08.wav",
      "from": 0,
-     "frames": 246,
+     "frames": 239,
      "words": [
       {
        "w": "Most",
        "from": 1,
-       "to": 10
+       "to": 9
       },
       {
        "w": "of",
-       "from": 10,
+       "from": 9,
        "to": 15
       },
       {
@@ -632,71 +646,71 @@
       {
        "w": "paper",
        "from": 22,
-       "to": 42
+       "to": 41
       },
       {
        "w": "work,",
-       "from": 42,
-       "to": 53
+       "from": 41,
+       "to": 52
       },
       {
        "w": "I",
-       "from": 53,
-       "to": 64
+       "from": 52,
+       "to": 63
       },
       {
        "w": "can",
-       "from": 64,
-       "to": 71
+       "from": 63,
+       "to": 70
       },
       {
        "w": "draft.",
-       "from": 71,
-       "to": 90
+       "from": 70,
+       "to": 87
       },
       {
        "w": "Sacks,",
-       "from": 90,
-       "to": 111
+       "from": 87,
+       "to": 107
       },
       {
        "w": "deliveries,",
-       "from": 111,
-       "to": 155
+       "from": 107,
+       "to": 150
       },
       {
        "w": "knowing",
-       "from": 155,
-       "to": 182
+       "from": 150,
+       "to": 176
       },
       {
        "w": "the",
-       "from": 182,
-       "to": 189
+       "from": 176,
+       "to": 183
       },
       {
        "w": "regular",
-       "from": 189,
-       "to": 203
+       "from": 183,
+       "to": 197
       },
       {
        "w": "customers:",
-       "from": 203,
-       "to": 230
+       "from": 197,
+       "to": 223
       },
       {
        "w": "I",
-       "from": 230,
-       "to": 234
+       "from": 223,
+       "to": 227
       },
       {
        "w": "can't.",
-       "from": 234,
-       "to": 246
+       "from": 227,
+       "to": 239
       }
      ],
      "cues": {
-      "1": 94
+      "1": 91
      }
     },
     {
@@ -705,97 +719,107 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep49te/line_09.wav",
-     "from": 255,
-     "frames": 136,
+     "from": 248,
+     "frames": 223,
      "words": [
       {
        "w": "Worldwide,",
-       "from": 256,
-       "to": 273
+       "from": 249,
+       "to": 279
       },
       {
        "w": "1",
-       "from": 273,
-       "to": 284
+       "from": 279,
+       "to": 283
       },
       {
        "w": "job",
-       "from": 284,
-       "to": 290
+       "from": 283,
+       "to": 291
       },
       {
        "w": "in",
-       "from": 290,
-       "to": 294
-      },
-      {
-       "w": "4",
-       "from": 294,
+       "from": 291,
        "to": 297
       },
       {
-       "w": "has",
+       "w": "4",
        "from": 297,
-       "to": 303
+       "to": 301
+      },
+      {
+       "w": "has",
+       "from": 301,
+       "to": 314
       },
       {
        "w": "work",
-       "from": 303,
-       "to": 311
+       "from": 314,
+       "to": 324
       },
       {
        "w": "an",
-       "from": 311,
-       "to": 315
+       "from": 324,
+       "to": 330
       },
       {
-       "w": "AI",
-       "from": 315,
-       "to": 320
+       "w": "app",
+       "from": 330,
+       "to": 345
+      },
+      {
+       "w": "like",
+       "from": 345,
+       "to": 359
+      },
+      {
+       "w": "this",
+       "from": 359,
+       "to": 369
       },
       {
        "w": "can",
-       "from": 320,
-       "to": 326
+       "from": 369,
+       "to": 377
       },
       {
        "w": "do.",
-       "from": 326,
-       "to": 332
+       "from": 377,
+       "to": 386
       },
       {
        "w": "Most",
-       "from": 332,
-       "to": 346
+       "from": 386,
+       "to": 396
       },
       {
        "w": "jobs",
-       "from": 346,
-       "to": 354
-      },
-      {
-       "w": "change,",
-       "from": 354,
-       "to": 366
-      },
-      {
-       "w": "they",
-       "from": 366,
-       "to": 373
+       "from": 396,
+       "to": 414
       },
       {
        "w": "don't",
-       "from": 373,
-       "to": 382
+       "from": 414,
+       "to": 426
       },
       {
-       "w": "go.",
-       "from": 382,
-       "to": 388
+       "w": "go,",
+       "from": 426,
+       "to": 435
+      },
+      {
+       "w": "they",
+       "from": 435,
+       "to": 445
+      },
+      {
+       "w": "change.",
+       "from": 445,
+       "to": 467
       }
      ],
      "cues": {
-      "1": 352
+      "1": 402
      }
     },
     {
@@ -804,43 +828,43 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/ep49te/line_10.wav",
-     "from": 401,
-     "frames": 56,
+     "from": 480,
+     "frames": 55,
      "words": [
       {
        "w": "And",
-       "from": 402,
-       "to": 409
+       "from": 481,
+       "to": 488
       },
       {
        "w": "a",
-       "from": 409,
-       "to": 412
+       "from": 488,
+       "to": 491
       },
       {
        "w": "job",
-       "from": 412,
-       "to": 419
+       "from": 491,
+       "to": 497
       },
       {
        "w": "that's",
-       "from": 419,
-       "to": 430
+       "from": 497,
+       "to": 509
       },
       {
        "w": "all",
-       "from": 430,
-       "to": 437
+       "from": 509,
+       "to": 515
       },
       {
        "w": "paper",
-       "from": 437,
-       "to": 447
+       "from": 515,
+       "to": 525
       },
       {
        "w": "work?",
-       "from": 447,
-       "to": 457
+       "from": 525,
+       "to": 535
       }
      ],
      "cues": {}
@@ -851,87 +875,166 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/ep49te/line_11.wav",
-     "from": 463,
-     "frames": 139,
+     "from": 541,
+     "frames": 159,
      "words": [
       {
        "w": "That",
-       "from": 464,
-       "to": 471
+       "from": 541,
+       "to": 548
       },
       {
        "w": "one",
-       "from": 471,
-       "to": 481
+       "from": 548,
+       "to": 553
       },
       {
        "w": "changes",
-       "from": 481,
-       "to": 494
+       "from": 553,
+       "to": 564
       },
       {
        "w": "the",
-       "from": 494,
-       "to": 508
+       "from": 564,
+       "to": 569
       },
       {
        "w": "most.",
-       "from": 508,
-       "to": 518
+       "from": 569,
+       "to": 584
       },
       {
-       "w": "Be",
-       "from": 518,
-       "to": 522
+       "w": "You",
+       "from": 584,
+       "to": 589
+      },
+      {
+       "w": "must",
+       "from": 589,
+       "to": 601
+      },
+      {
+       "w": "be",
+       "from": 601,
+       "to": 605
       },
       {
        "w": "the",
-       "from": 522,
-       "to": 529
+       "from": 605,
+       "to": 610
       },
       {
        "w": "one",
-       "from": 529,
-       "to": 535
+       "from": 610,
+       "to": 619
       },
       {
        "w": "who",
-       "from": 535,
-       "to": 546
+       "from": 619,
+       "to": 624
       },
       {
        "w": "checks",
-       "from": 546,
-       "to": 557
+       "from": 624,
+       "to": 641
       },
       {
        "w": "the",
-       "from": 557,
-       "to": 563
+       "from": 641,
+       "to": 646
       },
       {
-       "w": "AI,",
-       "from": 563,
-       "to": 577
+       "w": "app's",
+       "from": 646,
+       "to": 654
+      },
+      {
+       "w": "work,",
+       "from": 654,
+       "to": 662
+      },
+      {
+       "w": "and",
+       "from": 662,
+       "to": 674
       },
       {
        "w": "learn",
-       "from": 577,
-       "to": 586
+       "from": 674,
+       "to": 682
       },
       {
        "w": "the",
-       "from": 586,
-       "to": 592
+       "from": 682,
+       "to": 692
       },
       {
        "w": "tool.",
-       "from": 592,
-       "to": 602
+       "from": 692,
+       "to": 700
       }
      ],
      "cues": {
-      "1": 509
+      "1": 573
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep49te/line_12.wav",
+     "from": 709,
+     "frames": 143,
+     "words": [
+      {
+       "w": "So:",
+       "from": 710,
+       "to": 717
+      },
+      {
+       "w": "the",
+       "from": 717,
+       "to": 729
+      },
+      {
+       "w": "app",
+       "from": 729,
+       "to": 737
+      },
+      {
+       "w": "writes,",
+       "from": 737,
+       "to": 758
+      },
+      {
+       "w": "you",
+       "from": 758,
+       "to": 765
+      },
+      {
+       "w": "check.",
+       "from": 765,
+       "to": 778
+      },
+      {
+       "w": "Sacks,",
+       "from": 778,
+       "to": 807
+      },
+      {
+       "w": "customers:",
+       "from": 807,
+       "to": 834
+      },
+      {
+       "w": "yours.",
+       "from": 834,
+       "to": 852
+      }
+     ],
+     "cues": {
+      "1": 801
      }
     }
    ]
@@ -941,12 +1044,6 @@
    "type": "sk_jobs",
    "data": {
     "beats": [
-     {
-      "who": "ravi",
-      "shot": "wide",
-      "prop": "rule",
-      "n": 12
-     },
      {
       "who": "ravi",
       "shot": "wide",
@@ -961,7 +1058,11 @@
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "AI drafts, you check",
      "title": "AI drafts, you check",
@@ -971,125 +1072,66 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1453,
-   "frames": 356,
+   "from": 1721,
+   "frames": 211,
    "lines": [
     {
      "who": "ravi",
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/ep49te/line_12.wav",
-     "from": 9,
-     "frames": 147,
-     "words": [
-      {
-       "w": "So:",
-       "from": 10,
-       "to": 16
-      },
-      {
-       "w": "the",
-       "from": 16,
-       "to": 31
-      },
-      {
-       "w": "AI",
-       "from": 31,
-       "to": 36
-      },
-      {
-       "w": "drafts,",
-       "from": 36,
-       "to": 60
-      },
-      {
-       "w": "you",
-       "from": 60,
-       "to": 73
-      },
-      {
-       "w": "check.",
-       "from": 73,
-       "to": 108
-      },
-      {
-       "w": "Sacks,",
-       "from": 108,
-       "to": 124
-      },
-      {
-       "w": "customers:",
-       "from": 124,
-       "to": 141
-      },
-      {
-       "w": "yours.",
-       "from": 141,
-       "to": 152
-      }
-     ],
-     "cues": {
-      "1": 123
-     }
-    },
-    {
-     "who": "ravi",
-     "name": "Ravi anna",
-     "color": "#FBBF24",
-     "sub": null,
      "audio": "reel/ep49te/line_13.wav",
-     "from": 171,
-     "frames": 93,
+     "from": 18,
+     "frames": 90,
      "words": [
       {
        "w": "Fine,",
-       "from": 175,
-       "to": 191
+       "from": 22,
+       "to": 37
       },
       {
        "w": "you",
-       "from": 191,
-       "to": 197
+       "from": 37,
+       "to": 43
       },
       {
        "w": "stay.",
-       "from": 197,
-       "to": 207
+       "from": 43,
+       "to": 53
       },
       {
        "w": "And",
-       "from": 207,
-       "to": 226
+       "from": 53,
+       "to": 72
       },
       {
        "w": "you",
-       "from": 226,
-       "to": 237
+       "from": 72,
+       "to": 82
       },
       {
        "w": "run",
-       "from": 237,
-       "to": 243
+       "from": 82,
+       "to": 88
       },
       {
        "w": "the",
-       "from": 243,
-       "to": 249
+       "from": 88,
+       "to": 94
       },
       {
        "w": "app",
-       "from": 249,
-       "to": 256
+       "from": 94,
+       "to": 101
       },
       {
        "w": "too.",
-       "from": 256,
-       "to": 264
+       "from": 101,
+       "to": 108
       }
      ],
      "cues": {
-      "1": 224
+      "1": 70
      }
     },
     {
@@ -1098,31 +1140,38 @@
      "color": "#FCD34D",
      "sub": null,
      "audio": "reel/ep49te/line_14.wav",
-     "from": 270,
-     "frames": 42,
+     "from": 114,
+     "frames": 52,
      "words": [
       {
        "w": "Then,",
-       "from": 271,
-       "to": 281
+       "from": 116,
+       "to": 125
+      },
+      {
+       "w": "anna,",
+       "from": 125,
+       "to": 141
       },
       {
        "w": "₹20,000",
-       "from": 281,
-       "to": 294
+       "from": 141,
+       "to": 153
       },
       {
        "w": "a",
-       "from": 294,
-       "to": 297
+       "from": 153,
+       "to": 156
       },
       {
-       "w": "month.",
-       "from": 297,
-       "to": 308
+       "w": "month!",
+       "from": 156,
+       "to": 166
       }
      ],
-     "cues": {}
+     "cues": {
+      "1": 142
+     }
     }
    ]
   }

@@ -77,7 +77,7 @@ const hookCard = (c: Ctx) => {
   block(c, 560, "THE AI APP", "₹0", "#f87171");
 };
 const ROWS: [string, string, string][] = [
-  ["Sums and GST", "10/10", GREEN], ["Reorder list", "4/5", GREEN], ["Replies to a customer", "4/5", GREEN], ["Offer messages ready to send", "0/5", RED],
+  ["Sums, GST, stock lists", "15/15", GREEN], ["Replies to a customer", "4/5", GREEN], ["Offer messages ready to send", "0/5", RED],
 ];
 
 // ---------- the scene ----------
@@ -96,14 +96,15 @@ const StJobs: React.FC<SP> = ({ s }) => {
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={te ? 0.9 : 0.8} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.35} />, <Sfx key={k("z")} at={2} src="reel/sfx_buzz.wav" vol={0.2} />, <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "test") { const c1 = cue(i, 1, 0.5); sfx.push(<Sfx key={k("n")} at={c1 - 3} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.75} />, <Sfx key={k("p")} at={c1 + 10} src="audio/sfx_pop.wav" vol={0.25} />); }
-    if (b.prop === "eighteen") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.22} />);
+    if (b.prop === "eighteen") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.25} />);
     if (b.prop === "rows") { [0, 8, 16].forEach((q) => sfx.push(<Sfx key={k("r" + q)} at={at + 4 + q} src="audio/sfx_pop.wav" vol={0.22} />)); sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.25} />); }
     if (b.prop === "me") sfx.push(<Sfx key={k("c")} at={at + 4} src={CLAP} vol={0.3} />);
     if (b.prop === "day") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "ilo") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />);
     if (b.prop === "clerks") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.22} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 12)} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - 14)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.55} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("d")} at={end - 2} src="audio/gag_ding.wav" vol={0.3} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
+    if (b.prop === "stay") sfx.push(<Sfx key={k("c")} at={at} src={CLAP} vol={0.45} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.6} />);
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.4) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("g")} at={cue(i, 1, 0.4) - 2} src={CLAP} vol={0.5} />, <Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("d")} at={end - 2} src="audio/gag_ding.wav" vol={0.3} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
   return (
     <>
@@ -117,21 +118,22 @@ const StJobs: React.FC<SP> = ({ s }) => {
         const endL = ln.from + ln.frames;
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
         if (b.shot === "test") {
-          dark(c, W, H, "OUR TEST: SURESH'S PAPER WORK", ["a small free AI (Qwen2.5 7B), offline: weaker than big apps", "5 tasks × 5 tries · every reply read by hand"]);
-          const c1 = cu(1, 0.5);
+          dark(c, W, H, "OUR TEST: SURESH'S PAPER WORK", ["5 tasks × 5 tries · every reply read by hand"]);
+          chip(c, "a small free AI (Qwen2.5 7B), offline: weaker than big apps", W / 2, 455, "#fde68a", INK, 1, 32);   // render review: unreadable grey
+          const c1 = b.prop === "test" ? cu(1, 0.5) : ln.from - 200;   // the card holds through his "Nineteen?!"
           const q0 = 1 - seg(f, c1 - 4, c1);
           if (q0 > 0) { c.save(); c.globalAlpha = q0; c.font = SANS(66, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("How many right?", W / 2, 840); c.restore(); }
           const kt = seg(f, c1 - 2, c1 + 10);
           if (kt > 0) for (let j = 0; j < 25; j++) {
-            const x = 155 + (j % 5) * 160, y = 520 + Math.floor(j / 5) * 128, ok = j < 18;
+            const x = 155 + (j % 5) * 160, y = 540 + Math.floor(j / 5) * 128, ok = j < 19;
             c.save(); c.globalAlpha = clamp(kt * 3); c.fillStyle = kt > 0.5 ? (ok ? GREEN : RED) : "#334155"; rrect(c, x, y, 130, 104, 16); c.fill();
             c.font = SANS(60, 900); c.fillStyle = "#fff"; c.textAlign = "center"; if (kt > 0.5) c.fillText(ok ? "✓" : "✗", x + 65, y + 74); c.restore();
           }
-          if (kt > 0.5) { c.save(); c.font = SANS(130, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.globalAlpha = seg(f, c1 + 6, c1 + 14); c.fillText("18 / 25", W / 2, 1330); c.restore(); }
+          if (kt > 0.5) { c.save(); c.font = SANS(130, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.globalAlpha = seg(f, c1 + 6, c1 + 14); c.fillText("19 / 25", W / 2, 1350); c.restore(); }
         } else if (b.shot === "rows") {
           dark(c, W, H, "WHAT IT GOT RIGHT", ["5 paper tasks, 5 tries each"], "#86efac");
           ROWS.forEach(([a, v, col], q) => {
-            const t0 = q < 3 ? ln.from + 2 + q * 8 : cu(1, 0.4); const k = seg(f, t0, t0 + 8); if (k <= 0) return;
+            const t0 = q < 2 ? ln.from + 2 + q * 10 : cu(1, 0.4); const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 440 + q * 140;
             c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 118, 20); c.fill();
             c.font = SANS(44, 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 96, y + 74);
@@ -140,16 +142,17 @@ const StJobs: React.FC<SP> = ({ s }) => {
           });
           const kd = seg(f, cu(1, 0.4) + 8, cu(1, 0.4) + 16);
           if (kd > 0) {   // a real draft from our test, with what needed fixing circled
-            c.save(); c.globalAlpha = clamp(kd * 3); const y = 1020;
-            c.fillStyle = "#dcf8c6"; rrect(c, 80, y, W - 160, 230, 22); c.fill();
+            c.save(); c.globalAlpha = clamp(kd * 3); const y = 900;
+            c.fillStyle = "#dcf8c6"; rrect(c, 60, y, W - 120, 300, 22); c.fill();
             c.font = SANS(30, 800); c.fillStyle = "#15803d"; c.textAlign = "left"; c.fillText("a real draft from our test", 110, y + 46);
-            c.font = SANS(38, 700); c.fillStyle = INK;
-            c.fillText("Reminder! 10% off on all rice this", 110, y + 104); c.fillText("Sunday only at [Your Shop Name]! ... ice", 110, y + 156);
-            c.strokeStyle = RED; c.lineWidth = 6;
-            c.beginPath(); c.ellipse(560, y + 144, 225, 34, 0, 0, 7); c.stroke();
-            c.beginPath(); c.ellipse(870, y + 144, 62, 32, 0, 0, 7); c.stroke();
+            c.font = SANS(48, 800); c.fillStyle = INK;   // render review: too small to read
+            c.fillText("10% off on all rice this Sunday", 100, y + 120); c.fillText("at [Your Shop Name]! ... ice", 100, y + 190);
+            c.strokeStyle = RED; c.lineWidth = 7;
+            c.beginPath(); c.ellipse(395, y + 175, 270, 44, 0, 0, 7); c.stroke();
+            c.beginPath(); c.ellipse(820, y + 175, 70, 40, 0, 0, 7); c.stroke();
+            c.font = SANS(34, 800); c.fillStyle = RED; c.fillText("blank", 300, y + 262); c.fillText("stray word", 740, y + 262);
             c.restore();
-            chip(c, "a good draft · our prompt had no shop name", W / 2, 1330, "#fde68a", INK, seg(f, cu(1, 0.4) + 16, cu(1, 0.4) + 24), 38);
+            chip(c, "a good draft · our prompt had no shop name", W / 2, 1300, "#fde68a", INK, seg(f, cu(1, 0.4) + 16, cu(1, 0.4) + 24), 38);
           }
         } else if (b.shot === "day") {
           dark(c, W, H, "SURESH'S DAY", [], "#fde68a");
@@ -162,7 +165,7 @@ const StJobs: React.FC<SP> = ({ s }) => {
             c.font = SANS(42, 900); c.fillText(tagT, x + 220, 1200); c.restore();
           };
           col(70, "PAPER", ["sums, GST", "reorder list", "offer messages", "replies"], "#dcfce7", "#14532d", k1, "AI drafts most");
-          col(570, "HANDS & PEOPLE", ["the sacks", "deliveries", "the regulars", "the supplier"], "#fee2e2", "#7f1d1d", k2, "his");
+          col(570, "HANDS & PEOPLE", ["the sacks", "deliveries", "the regulars", "the supplier"], "#fee2e2", "#7f1d1d", k2, "Suresh's");   // render review: the lone "his"
         } else if (b.shot === "ilo") {
           dark(c, W, H, "WORLDWIDE (ILO, MAY 2025)", ["generative AI and jobs"], "#c7d2fe");
           const k1 = seg(f, ln.from + 4, ln.from + 12), k2 = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
@@ -174,18 +177,27 @@ const StJobs: React.FC<SP> = ({ s }) => {
             c.restore();
           }
           stamp(c, "MOST CHANGE, NOT VANISH", W / 2, 1110, GREEN, k2, 52, -0.03);
-          c.save(); c.globalAlpha = k1; c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("what could change, not job losses · ILO Working Paper 140", W / 2, 1250); c.restore();
+          c.save(); c.globalAlpha = k1; c.font = SANS(38, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("what could change, not job losses", W / 2, 1250); c.fillText("ILO Working Paper 140", W / 2, 1300); c.restore();
         } else if (b.shot === "clerks") {
-          dark(c, W, H, "A JOB THAT'S ALL PAPER?", ["it changes the most (ILO: clerical jobs, the most exposed)"], "#fca5a5");
+          dark(c, W, H, "A JOB THAT'S ALL PAPER?", ["it changes the most (ILO, May 2025)"], "#fca5a5");
           const k1 = seg(f, ln.from + 2, ln.from + 10);
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3);
             ["data entry", "typing and filing", "billing desks"].forEach((t, q) => { c.fillStyle = "#1e293b"; rrect(c, 160, 470 + q * 110, W - 320, 90, 20); c.fill(); c.font = SANS(42, 800); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(t, W / 2, 530 + q * 110); });
             c.restore();
           }
-          ([["Be the one who checks the AI", "#dcfce7", cu(1, 0.5)], ["Learn the tool", "#e0e7ff", cu(1, 0.5) + 14]] as [string, string, number][]).forEach(([a, bg, t0], q) => {   // script review: advice, not a warning
+          ([["Be the one who checks the AI", "#dcfce7", cu(1, 0.5)], ["Learn the AI tools of your work", "#e0e7ff", cu(1, 0.5) + 14]] as [string, string, number][]).forEach(([a, bg, t0], q) => {   // script review: advice, not a warning
             const k = seg(f, t0, t0 + 8); if (k <= 0) return; c.save(); c.globalAlpha = clamp(k * 3); const y = 880 + q * 170;
             c.fillStyle = bg; rrect(c, 110, y, W - 220, 140, 22); c.fill(); c.font = SANS(54, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(a, W / 2, y + 90); c.restore();
+          });
+        } else if (b.prop === "rule") {   // render review: the card covered the men's heads: a card of its own
+          dark(c, W, H, "AI TAKES TASKS, NOT JOBS", [], "#fde68a");
+          ([["AI: drafts", "#dcfce7", ln.from + 2], ["You: check", "#e0e7ff", ln.from + 12], ["Hands and people: yours", "#fde68a", cu(1, 0.45)]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
+            const k = seg(f, t0, t0 + 8); if (k <= 0) return;
+            c.save(); c.globalAlpha = clamp(k * 3); const y = 460 + q * 230;
+            c.fillStyle = bg; rrect(c, 100, y, W - 200, 190, 24); c.fill();
+            c.font = SANS(64, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(a, W / 2, y + 120);
+            c.restore();
           });
         } else {
           // ---------- the shop ----------
@@ -203,27 +215,22 @@ const StJobs: React.FC<SP> = ({ s }) => {
           phone(c, b.who === "ai" && talking, f, r, {});
           const [sm, sa] = loopOn ? (["shock", "up"] as [BillMood, BillArms]) : SURESH[n] ?? ["worried", "rest"];
           person(c, "suresh" as BillWho, [190, 1150], 0.85, sm, sa, b.who === "suresh" && talking, r);
-          if (hookOn || n <= 2) sack(c, 300, 1000, 0.62);
+          if (hookOn || n <= 2) sack(c, 320, 990, 0.85);   // render review: the sack read as a sticker
           c.restore();
-          if (hookOn) hookCard(c);
-          if (n === 2) chip(c, "Suresh and the shop are made up · the test is real", W / 2, 470, "rgba(15,23,42,0.85)", "#f8fafc", 1, 32);
-          if (b.prop === "rule") {
-            const k0 = seg(p, 0.0, 0.08);
-            if (k0 > 0) {
-              c.save(); c.globalAlpha = clamp(k0 * 3);
-              c.fillStyle = "rgba(15,23,42,0.94)"; rrect(c, 60, 240, W - 120, 900, 30); c.fill();
-              c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("AI TAKES TASKS, NOT JOBS", W / 2, 330);
-              c.restore();
-            }
-            ([["AI: drafts", "#dcfce7", ln.from + 4], ["You: check", "#e0e7ff", ln.from + 16], ["Hands and people: yours", "#fde68a", cu(1, 0.45)]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
-              const k = seg(f, t0, t0 + 8); if (k <= 0) return;
-              c.save(); c.globalAlpha = clamp(k * 3); const y = 400 + q * 180;
-              c.fillStyle = bg; rrect(c, 110, y, W - 220, 150, 22); c.fill();
-              c.font = SANS(54, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(a, W / 2, y + 95);
-              c.restore();
-            });
+          if (hookOn) {
+            hookCard(c);
+            chip(c, "SURESH", 230, 790, "#b45309", "#fff", 1, 34);   // render review: sound-off, who is who?
+            chip(c, "RAVI ANNA", 760, 560, "#2f6fb0", "#fff", 1, 34);
           }
-          if (b.prop === "loop" && !loopOn) chip(c, "₹20,000 a month?!", 330, 860, "#4ade80", "#052e16", seg(f, ln.from + 10, ln.from + 18), 56);   // stills: it covered Ravi's face
+          if (n === 2) chip(c, "Suresh and the shop are made up · the test is real", W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", 1, 34);
+          if (b.prop === "loop" && !loopOn) {   // render review: flip ₹15,000 to ₹20,000 on the number, with a hit
+            const kf = seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6);
+            block(c, 50, "SURESH: 8 YEARS", "₹15,000/month", "#4ade80");
+            if (kf > 0) {
+              c.save(); c.globalAlpha = clamp(kf * 3); c.strokeStyle = RED; c.lineWidth = 12; c.beginPath(); c.moveTo(80, 360); c.lineTo(500, 330); c.stroke(); c.restore();
+              stamp(c, "₹20,000?!", 760, 320, GREEN, kf, 96, -0.08);
+            }
+          }
         }
       }} />
     </>

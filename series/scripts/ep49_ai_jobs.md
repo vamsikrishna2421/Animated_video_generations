@@ -1,4 +1,4 @@
-# EP49 "AI and jobs: what really changes" (Season 5 finale) · queue 052 · script v2, Nov 9
+# EP49 "AI and jobs: what really changes" (Season 5 finale) · queue 052 · script v3 (as rendered), Nov 9
 
 ## The lesson
 AI takes tasks, not whole jobs. Most jobs are a bundle of tasks; AI can do some of them (drafting, sums, lists), often
@@ -39,10 +39,10 @@ from a shop helper's day, five tries each, right answers fixed before the run.
 |---|---|
 | add up an order (₹606) | 5/5 (first run: 1/5, four cut off by our own 160-token cap mid-working; re-run with room, committed before it ran: 5/5) |
 | price before 18% GST on ₹1,180 (₹1,000) | 5/5 |
-| reorder list (sugar, toor dal) | 4/5 (one cut off by our cap) |
+| reorder list (sugar, toor dal) | 5/5 (first run: 4/5, one cut off by our cap; under one rule for every cap cut-off, re-run with room, committed before it ran: 5/5) |
 | WhatsApp offer (10% off rice, Sunday), usable as sent | 0/5: all five good drafts, but each had "[Your Shop Name]", "[insert date]" or a stray "ice" to fix |
 | polite reply to 3 broken eggs, replace today, usable as sent | 4/5 (one left "[Customer's Name]") |
-| **all** | **18/25** |
+| **all** | **19/25** (first-run rule: 14/25; one rule for cap cut-offs: 19/25) |
 
 ## Hook options
 1. **(v1)** Frame 1: the shop; two blocks "SURESH: ₹15,000 A MONTH" (green) / "THE AI APP: ₹0" (red); Ravi holding the
@@ -71,7 +71,27 @@ yours."; the ending "Fine, you stay. And you run the app." / "Then it's twenty t
 prompt and the token-cap re-run; a hit on "Eighteen", the bed out before the offer result, a lift into "you stay".
 Telugu as listed.
 
-## Script (English, v2) · ~55 s
+## Render review (human-viewer, EN + TE v2) and what changed
+Both stop on frame 1 (₹15,000 vs ₹0: hook 8 and 6); both say every English word was heard right. Both: flip ₹15,000 to
+₹20,000 with a hit on the last line (the loop went back to ₹15,000 and the joke died); a real pause (0.7 s+) with a hit
+before "eighteen right" and on "Fine, you stay"; the rule card covered the men's heads; a lone "his"; the "Ravi anna" tag
+sat next to Suresh (sound-off viewers couldn't tell who is who); unreadable text at the test card's model line, the
+circled draft, the ILO footnote, the clerks card. Priya: two rules for the same token-cap problem (the totals re-run, the
+cut-off reorder answer counted as a miss); 0 of 13 cuts on the beat; a steady pad at 200-300 Hz on the male voices; the
+tail 5 dB over the voice. Sandeep: the American accents in a kirana shop sound dubbed (the channel's new standard; noted
+for Bujji); "almost all" for 18/25; "learn the tool": which tool? Telugu: "పని తీసుకుంటుందా" word for word, "ఏఐ" came out
+"ye", "కంగారు" heard "kandaaru", "చెక్ చెక్", "అవ్వండి" lectures, "అయితే అన్నా, ...!" is cheekier.
+Changed (v3): one rule for every answer our cap cut off: the reorder task re-run with room as the totals were (committed
+before it ran): 5/5, so 19/25; "Twenty-five tries... [0.8 s stop, bed out] Nineteen right."; the 19/25 card holds through
+"Nineteen?! That's most of it!"; "Sums, GST and stock lists: fifteen out of fifteen."; a clap and boom on "Fine, you stay",
+the lift moved onto it; the ₹15,000 block struck out and stamped "₹20,000?!" with a hit on the number; the rule card a card
+of its own; "Suresh's" column; name chips SURESH / RAVI ANNA on frame 1, each speaker's tag on the side they stand; bigger
+model line, draft, footnote; "Learn the AI tools of your work"; the music's low pad cut further, the tail ramp halved; a
+bigger rice sack; a timer that had come back (a comment swallowed the spec flags) hidden again. Telugu: "టెన్షన్ పడకురా",
+"మరి సురేష్ పని పోతుందా, లేదా?", "యాప్" instead of "ఏఐ", "సరి చూస్తావ్", "నువ్వే అవ్వాలి", "అయితే అన్నా, నెలకి ఇరవై వేలు!".
+Caption ask now a try-it test (Bujji, Skit 20 48h): ask your AI app for the offer message; did it leave a blank?
+
+## Script (English, v3) · 58 s
 | # | Who | Line |
 |---|---|---|
 | 1 | suresh | Fifteen thousand a month, eight years... [1] and a free app takes my job?! |

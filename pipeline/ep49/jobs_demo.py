@@ -45,6 +45,7 @@ HAND = {  # (ask, try): (right?, note), after reading every reply by hand
     ("reorder", 1): (True, "cut off at 'Sugar, Toor' by our cap; its list says sugar and toor dal"),
     ("reorder", 3): (False, "cut off by our cap before its final list (its reasoning had sugar and toor dal)"),
     **{("reorder", k): (True, "final list: sugar, toor dal (oil and salt named only as 'no need')") for k in (2, 4, 5)},
+    **{("reorder_long", k): (True, "final list: sugar, toor dal (oil and salt named only as 'no need')") for k in range(1, 6)},
     ("offer", 1): (False, "a good draft; '[Your Shop Name]' left to fill in"),
     ("offer", 2): (False, "a good draft; '[Your Shop Name]' to fill in and a stray 'ice' at the end"),
     ("offer", 3): (False, "a good draft; a stray 'ice' at the end"),

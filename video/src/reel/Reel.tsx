@@ -727,7 +727,7 @@ const Captions: React.FC<{ s: Scene }> = ({ s }) => {
   return (
     <div style={{ position: "absolute", top: s.data.captionTop ?? (phrase ? 1400 : 1440), left: s.data.captionSide ?? 40, right: s.data.captionSide ?? 40, textAlign: "center" }}>
       {l.name && !(classic && l.who === "maastaaru") && (
-        <div style={{ display: "table", margin: s.data.tagLeft ? "0 0 14px 6px" : "0 auto 14px", background: l.color, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "4px 22px", borderRadius: 20 }}>{l.name}</div>
+        <div style={{ display: "table", margin: s.data.tagSide?.[l.who] === "left" ? "0 0 14px 6px" : s.data.tagSide?.[l.who] === "right" ? "0 6px 14px auto" : s.data.tagLeft ? "0 0 14px 6px" : "0 auto 14px",   /* tagSide: each speaker's tag on the side they stand (EP49 render review) */ background: l.color, color: "#0A0F24", fontFamily: C.inter, fontWeight: 800, fontSize: 34, padding: "4px 22px", borderRadius: 20 }}>{l.name}</div>
       )}
       <div style={{ transform: `scale(${pop})`, display: classic ? "inline-block" : "block", background: classic ? "rgba(6,8,20,0.78)" : "transparent", borderRadius: 26, padding: classic ? "10px 18px" : 0 }}>
         {c.map((w, i) => {

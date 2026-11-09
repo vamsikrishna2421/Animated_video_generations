@@ -18,9 +18,9 @@
  "captionMode": "phrase",
  "musicEQ": [
   [
-   260,
-   -5,
-   0.9
+   250,
+   -8,
+   0.8
   ],
   [
    2400,
@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 1.0,
  "musicEndRamp": [
-  0.86,
-  5.0
+  0.9,
+  3.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -51,11 +51,13 @@
    "drop_at": [
     [
      2,
-     1
+     1,
+     0.3
     ],
     [
      4,
-     1
+     1,
+     0.3
     ]
    ],
    "data": {
@@ -80,7 +82,7 @@
      },
      {
       "who": "suresh",
-      "shot": "suresh",
+      "shot": "test",
       "prop": "eighteen",
       "n": 4
      },
@@ -104,7 +106,11 @@
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "₹15,000 vs a free app",
      "title": "₹15,000 vs a free app",
@@ -120,47 +126,51 @@
      "show": "₹15,000 salary, 8 years... and I lose my work because of a free app?!",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     },
     {
      "who": "ravi",
      "file": "02_ravi.wav",
-     "text": "కంగారు పడకురా! నీ పేపర్ పని మీద మాత్రమే టెస్ట్ చేశా.",
-     "show": "Don't panic! I only tested it on your paper work.",
+     "text": "టెన్షన్ పడకురా! నీ పేపర్ పని మీదే టెస్ట్ చేశా.",
+     "show": "Don't stress! I tested it only on your paper work.",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "సురేష్ పేపర్ పని, ఇరవై ఐదు సార్లు. [1] పద్దెనిమిది కరెక్ట్.",
-     "show": "Suresh's paper work, 25 times. 18 correct.",
+     "text": "సురేష్ పేపర్ పని, ఇరవై ఐదు సార్లు. <pause 0.8> [1] పందొమ్మిది కరెక్ట్.",
+     "show": "Suresh's paper work, 25 times. 19 correct.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.03,
-     "gain_db": -1.0
+     "tempo": 1.06,
+     "gain_db": -1.0,
+     "tts": "సురేష్ పేపర్ పని, ఇరవై ఐదు సార్లు.",
+     "file2": "03b_ai.wav",
+     "tts2": "పందొమ్మిది కరెక్ట్.",
+     "pause": 0.8
     },
     {
      "who": "suresh",
      "file": "04_suresh.wav",
-     "text": "పద్దెనిమిదా?! దాదాపు అంతా!",
-     "show": "18?! Almost all of it!",
+     "text": "పందొమ్మిదా?! చాలా వరకు!",
+     "show": "19?! Most of it!",
      "maxgap": 0.25,
-     "gap": 0.2,
-     "tempo": 1.03,
+     "gap": 0.3,
+     "tempo": 1.06,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "లెక్కలు, జీ ఎస్ టీ: పదికి పది. [1] కానీ ప్రతి ఆఫర్ మెసేజ్ లో, ఒక ఖాళీ, లేదా ఒక తప్పు ఉంది.",
-     "show": "Sums, GST: 10 out of 10. But every offer message had a blank or a mistake.",
+     "text": "లెక్కలు, జీ ఎస్ టీ, స్టాక్ లిస్ట్: పదిహేనుకి పదిహేను. [1] కానీ ప్రతి ఆఫర్ మెసేజ్ లో, ఒక ఖాళీ, లేదా ఒక తప్పు ఉంది.",
+     "show": "Sums, GST, stock lists: 15 out of 15. But every offer message had a blank or a mistake.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": -1.0
     },
     {
@@ -170,17 +180,17 @@
      "show": "Nobody told it the shop's name! Who checks it? Me!",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     },
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "మరి ఏఐ, సురేష్ పని తీసుకుంటుందా, లేదా?",
-     "show": "So does the AI take Suresh's work, or not?",
+     "text": "మరి సురేష్ పని పోతుందా, లేదా?",
+     "show": "So does Suresh lose his work, or not?",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     }
    ]
@@ -216,10 +226,20 @@
       "shot": "clerks",
       "prop": "clerks",
       "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "Tasks, not jobs",
      "title": "Tasks, not jobs",
@@ -235,17 +255,17 @@
      "show": "Most of the paper work, I can draft. Sacks, deliveries, knowing the regular customers: I can't.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": -1.0
     },
     {
      "who": "ai",
      "file": "09_ai.wav",
-     "text": "ప్రపంచంలో, నాలుగు ఉద్యోగాల్లో ఒకదాంట్లో, ఏఐ చేయగలిగే పనులు ఉన్నాయి. [1] చాలా ఉద్యోగాలు మారతాయి, పోవు.",
-     "show": "Worldwide, 1 job in 4 has work an AI can do. Most jobs change, they don't go.",
+     "text": "ప్రపంచంలో, నాలుగు ఉద్యోగాల్లో ఒకదాంట్లో, ఇలాంటి యాప్ చేయగలిగే పనులు ఉన్నాయి. [1] చాలా ఉద్యోగాలు పోవు, మారతాయి.",
+     "show": "Worldwide, 1 job in 4 has work an app like this can do. Most jobs don't go, they change.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": -1.0
     },
     {
@@ -255,18 +275,28 @@
      "show": "And a job that's all paper work?",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "11_ai.wav",
-     "text": "అదే ఎక్కువ మారుతుంది. [1] ఏఐ పనిని చెక్ చేసేవాళ్ళు అవ్వండి, టూల్ నేర్చుకోండి.",
-     "show": "That one changes the most. Be the one who checks the AI, learn the tool.",
+     "text": "అదే ఎక్కువ మారుతుంది. [1] యాప్ చేసిన పని చెక్ చేసేది నువ్వే అవ్వాలి, టూల్ నేర్చుకోవాలి.",
+     "show": "That one changes the most. You must be the one who checks the app's work, and learn the tool.",
      "maxgap": 0.25,
-     "gap": 0.4,
-     "tempo": 1.03,
+     "gap": 0.3,
+     "tempo": 1.06,
      "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "అంటే: యాప్ రాస్తుంది, నువ్వు సరి చూస్తావ్. [1] బస్తాలు, కస్టమర్లు: నీవే.",
+     "show": "So: the app writes, you check. Sacks, customers: yours.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": 0.5
     }
    ]
   },
@@ -275,18 +305,12 @@
    "type": "sk_jobs",
    "tail": 0.0,
    "outro": true,
-   "pre": 0.3,
+   "pre": 0.6,
    "boost": 1.6,
-   "lift": 0.7,
+   "lift": 0.8,
    "rise": 1.45,
    "data": {
     "beats": [
-     {
-      "who": "ravi",
-      "shot": "wide",
-      "prop": "rule",
-      "n": 12
-     },
      {
       "who": "ravi",
       "shot": "wide",
@@ -301,7 +325,11 @@
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "AI drafts, you check",
      "title": "AI drafts, you check",
@@ -312,32 +340,22 @@
    "lines": [
     {
      "who": "ravi",
-     "file": "12_ravi.wav",
-     "text": "అంటే: ఏఐ డ్రాఫ్ట్ చేస్తుంది, నువ్వు చెక్ చేస్తావ్. [1] బస్తాలు, కస్టమర్లు: నీవే.",
-     "show": "So: the AI drafts, you check. Sacks, customers: yours.",
-     "maxgap": 0.25,
-     "gap": 0.5,
-     "tempo": 1.03,
-     "gain_db": 0.5
-    },
-    {
-     "who": "ravi",
      "file": "13_ravi.wav",
      "text": "సరే, నువ్వే ఉంటావ్. [1] యాప్ కూడా నువ్వే నడుపు.",
      "show": "Fine, you stay. And you run the app too.",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     },
     {
      "who": "suresh",
      "file": "14_suresh.wav",
-     "text": "అయితే, నెలకి ఇరవై వేలు.",
-     "show": "Then, ₹20,000 a month.",
+     "text": "అయితే అన్నా, [1] నెలకి ఇరవై వేలు!",
+     "show": "Then, anna, ₹20,000 a month!",
      "maxgap": 0.25,
      "gap": 0.0,
-     "tempo": 1.03,
+     "tempo": 1.06,
      "gain_db": 0.5
     }
    ]

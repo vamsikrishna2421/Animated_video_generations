@@ -42,17 +42,17 @@ VOICE_TE = {
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"ai"}   # the shop AI through the phone sound
 MUST = {"en": {1: [("fifteen", "15"), ("thousand", "000"), ("eight", "8"), ("years",), ("free",), ("app",), ("job",)],
-               2: [("relax",), ("tested", "test"), ("paper", "paperwork")], 3: [("twenty", "25"), ("tries",), ("paper", "paperwork"), ("eighteen", "18"), ("right",)],
-               4: [("eighteen", "18"), ("almost",)], 5: [("sums", "sum"), ("gst",), ("ten", "10"), ("offer",), ("message",), ("blank",), ("fix",)],
+               2: [("relax",), ("tested", "test"), ("paper", "paperwork")], 3: [("twenty", "25"), ("tries",), ("paper", "paperwork")], "3b": [("nineteen", "19"), ("right",)],
+               4: [("nineteen", "19"), ("most",)], 5: [("sums", "sum"), ("gst",), ("stock",), ("fifteen", "15"), ("offer",), ("message",), ("blank",), ("fix",)],
                6: [("told",), ("shop",), ("name",), ("checks", "check"), ("me",)], 7: [("take",), ("job",)],
                8: [("draft",), ("paper", "paperwork"), ("sacks", "sack"), ("deliveries", "delivery"), ("regulars", "regular")],
                9: [("worldwide",), ("one", "1"), ("four", "4"), ("tasks",), ("change",), ("vanish",)],
                10: [("job",), ("paper", "paperwork")], 11: [("changes", "change"), ("most",), ("checks", "check"), ("learn",), ("tool",)],
                12: [("drafts", "draft"), ("check",), ("hands",), ("people",), ("yours",)],
                13: [("stay",), ("run",), ("app",)], 14: [("twenty", "20"), ("thousand", "000"), ("month",)]},
-        "te": {1: [("पद", "15")], 3: [("इरव", "25"), ("पद्द", "18", "पदे", "पद्दे")], 5: [("पदि", "10", "पदी")], 14: [("इर", "20")]}}
-JUDGE_TEXT = {1: "15,000 a month, 8 years... and a free app takes my job?!", 3: "25 tries at Suresh's paper work. 18 right.", 4: "18?! That's almost all of it!",
-              5: "Sums and GST: 10 out of 10. But every offer message had a blank or a slip to fix.",
+        "te": {1: [("पद", "15")], 3: [("इरव", "25")], "3b": [("पंद", "पन्द", "पंदो", "19", "पोंद")], 4: [("पंद", "पन्द", "पंदो", "19", "पोंद")], 5: [("पदि", "15", "पदी")], 14: [("इर", "20")]}}
+JUDGE_TEXT = {1: "15,000 a month, 8 years... and a free app takes my job?!", 3: "25 tries at Suresh's paper work.", "3b": "19 right.", 4: "19?! That's most of it!",
+              5: "Sums, GST and stock lists: 15 out of 15. But every offer message had a blank or a slip to fix.",
               9: "Worldwide, 1 job in 4 has tasks an AI could do. Most of those jobs change, not vanish.", 14: "Then it's 20,000 a month."}
 
 TELUGU = re.compile(r"[ఀ-౿]")

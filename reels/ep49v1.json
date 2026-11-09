@@ -18,9 +18,9 @@
  "captionMode": "phrase",
  "musicEQ": [
   [
-   260,
-   -5,
-   0.9
+   250,
+   -8,
+   0.8
   ],
   [
    2400,
@@ -31,8 +31,8 @@
  "musicPad": true,
  "musicGapGain": 0.5,
  "musicEndRamp": [
-  0.86,
-  5.0
+  0.9,
+  3.0
  ],
  "hardCuts": true,
  "beatSnap": true,
@@ -49,11 +49,13 @@
    "drop_at": [
     [
      2,
-     1
+     1,
+     0.3
     ],
     [
      4,
-     1
+     1,
+     0.3
     ]
    ],
    "data": {
@@ -78,7 +80,7 @@
      },
      {
       "who": "suresh",
-      "shot": "suresh",
+      "shot": "test",
       "prop": "eighteen",
       "n": 4
      },
@@ -102,7 +104,11 @@
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "₹15,000 vs a free app",
      "title": "₹15,000 vs a free app",
@@ -133,28 +139,32 @@
     {
      "who": "ai",
      "file": "03_ai.wav",
-     "text": "Twenty-five tries at Suresh's paper work. [1] Eighteen right.",
-     "show": "25 tries at Suresh's paper work. 18 right.",
+     "text": "Twenty-five tries at Suresh's paper work. <pause 0.8> [1] Nineteen right.",
+     "show": "25 tries at Suresh's paper work. 19 right.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.06,
-     "gain_db": -1.0
+     "gain_db": -1.0,
+     "tts": "Twenty-five tries at Suresh's paper work.",
+     "file2": "03b_ai.wav",
+     "tts2": "Nineteen right.",
+     "pause": 0.8
     },
     {
      "who": "suresh",
      "file": "04_suresh.wav",
-     "text": "Eighteen?! That's almost all of it!",
-     "show": "18?! That's almost all of it!",
+     "text": "Nineteen?! That's most of it!",
+     "show": "19?! That's most of it!",
      "maxgap": 0.25,
-     "gap": 0.2,
+     "gap": 0.3,
      "tempo": 1.08,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "Sums and GST: ten out of ten. [1] But every offer message had a blank or a slip to fix.",
-     "show": "Sums and GST: 10 out of 10. But every offer message had a blank or a slip to fix.",
+     "text": "Sums, GST and stock lists: fifteen out of fifteen. [1] But every offer message had a blank or a slip to fix.",
+     "show": "Sums, GST and stock lists: 15 out of 15. But every offer message had a blank or a slip to fix.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.06,
@@ -213,10 +223,20 @@
       "shot": "clerks",
       "prop": "clerks",
       "n": 11
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "rule",
+      "n": 12
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "Tasks, not jobs",
      "title": "Tasks, not jobs",
@@ -263,6 +283,16 @@
      "gap": 0.4,
      "tempo": 1.06,
      "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "12_ravi.wav",
+     "text": "So: the AI drafts, you check. [1] Hands and people: yours.",
+     "show": "So: the AI drafts, you check. Hands and people: yours.",
+     "maxgap": 0.25,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "gain_db": 0.5
     }
    ]
   },
@@ -271,18 +301,12 @@
    "type": "sk_jobs",
    "tail": 0.0,
    "outro": true,
-   "pre": 0.3,
+   "pre": 0.6,
    "boost": 1.8,
-   "lift": 0.7,
+   "lift": 0.8,
    "rise": 1.6,
    "data": {
     "beats": [
-     {
-      "who": "ravi",
-      "shot": "wide",
-      "prop": "rule",
-      "n": 12
-     },
      {
       "who": "ravi",
       "shot": "wide",
@@ -297,7 +321,11 @@
      }
     ],
     "captionTop": 1500,
-    "tagLeft": true,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
     "yt": {
      "chapter": "AI drafts, you check",
      "title": "AI drafts, you check",
@@ -307,28 +335,18 @@
    "lines": [
     {
      "who": "ravi",
-     "file": "12_ravi.wav",
-     "text": "So: the AI drafts, you check. [1] Hands and people: yours.",
-     "show": "So: the AI drafts, you check. Hands and people: yours.",
-     "maxgap": 0.25,
-     "gap": 0.5,
-     "tempo": 1.08,
-     "gain_db": 0.5
-    },
-    {
-     "who": "ravi",
      "file": "13_ravi.wav",
      "text": "Fine, you stay. [1] And you run the app.",
      "show": "Fine, you stay. And you run the app.",
      "maxgap": 0.25,
-     "gap": 0.2,
+     "gap": 0.3,
      "tempo": 1.08,
      "gain_db": 0.5
     },
     {
      "who": "suresh",
      "file": "14_suresh.wav",
-     "text": "Then it's twenty thousand a month.",
+     "text": "Then it's [1] twenty thousand a month.",
      "show": "Then it's ₹20,000 a month.",
      "maxgap": 0.25,
      "gap": 0.0,
