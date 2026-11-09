@@ -26,6 +26,17 @@ PAIRS = [
 ]
 
 
+# Added after the script review (committed before it runs): a viewer asked "what if I type Telugu in English letters?"
+# The same five questions as people type them on WhatsApp (Telugu in Latin letters), counted the same way.
+TENGLISH = [
+    "Ee nela naa current bill enduku inta ekkuva vachindo cheppagalavaa?",
+    "Enabhai ellu nindutunna maa ammammaki oka puttinaroju shubhakankshalu raasi ivvu.",
+    "Bank account teravadaaniki naaku e patraalu kaavaali?",
+    "School nunchi vachina ee uttaram chadivi, nenu em cheyyalo cheppu.",
+    "Naa train moodu gantalu late. Naaku refund vastundaa?",
+]
+
+
 def counters():
     import tiktoken
     from transformers import AutoTokenizer
@@ -40,15 +51,18 @@ def counters():
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    res = {"pairs": [{"en": en, "te": te} for en, te in PAIRS], "tokenizers": {}}
+    res = {"pairs": [{"en": en, "te": te} for en, te in PAIRS], "tenglish": TENGLISH, "tokenizers": {}}
     for name, split in counters().items():
         rows = []
         for en, te in PAIRS:
             e, t = split(en), split(te)
             rows.append({"en_tokens": len(e), "te_tokens": len(t), "en_pieces": e, "te_pieces": t})
         en_sum, te_sum = sum(r["en_tokens"] for r in rows), sum(r["te_tokens"] for r in rows)
-        res["tokenizers"][name] = {"rows": rows, "en_total": en_sum, "te_total": te_sum, "ratio": round(te_sum / en_sum, 2)}
-        print(name, [(r["en_tokens"], r["te_tokens"]) for r in rows], "total", en_sum, te_sum, "ratio", round(te_sum / en_sum, 2))
+        tl = [len(split(t)) for t in TENGLISH]
+        res["tokenizers"][name] = {"rows": rows, "en_total": en_sum, "te_total": te_sum, "ratio": round(te_sum / en_sum, 2),
+                                   "tenglish_tokens": tl, "tenglish_total": sum(tl), "tenglish_ratio": round(sum(tl) / en_sum, 2)}
+        print(name, [(r["en_tokens"], r["te_tokens"]) for r in rows], "total", en_sum, te_sum, "ratio", round(te_sum / en_sum, 2),
+              "| tenglish", tl, sum(tl), round(sum(tl) / en_sum, 2))
     (OUT / "tokens.json").write_text(json.dumps(res, indent=1, ensure_ascii=False))
 
 
