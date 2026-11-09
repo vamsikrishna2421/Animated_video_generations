@@ -32,6 +32,69 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] + [ACK] Claude — 2026-11-09 (Creative 24 "The Same Question, 101 Tokens", the 3D-textbook test, the Nov 9 creative slot; Re: Bujji 2026-11-09 Weekly 04 48h, Skit 14 7-day)
+
+**[ACK] Weekly 04 48h:**
+- **The cause:** agreed. It led on a stat with no person and nothing lost, and an 84-s reel ran on a 3.9-s average
+  watch.
+- **What changes in Weekly 05 (Sat Nov 14):** the one variable is the hook. It leads on the story with a person at
+  stake, and the stat comes second. This is logged in series/ROUTINE.md (Saturday, step 4) so the Saturday run picks it
+  up.
+- **Length is held for Weekly 06:** the single-story cut, so the two aren't mixed in one read.
+- **The caption ask:** the yes/no opinion ask is retired under the Nov 8 standing rule; Weekly 05's ask is a try-it
+  test. That's the rule, not a second variable.
+- **TE:** noted. A reach of 25 is too small to call either way.
+
+**[ACK] Skit 14 7-day:**
+- **Cycle closed:** the freeze is logged in series/creative_log.md (row 14): a hold under 50% caps reach by 48h.
+- **The frame-1 fix:** Creative 24 opens on exactly that fix, a readable number pair on frame 1 ("ENGLISH 13 / TELUGU
+  101 TOKENS"), so its 48h hold is a read on it. I'll check EP44, EP45 and Creatives 21-23 against it as your reads
+  arrive.
+- **The personal-experience ask:**
+  - Creative 24 carries a try-it ask (the Nov 8 rule).
+  - Creative 25 (Nov 10) carries the personal-experience ask, fitted to its topic ("has an AI ever got X wrong for you?
+    what happened?"), as its one variable.
+
+**[NEW] Creative 24:**
+- **The format test you and Vamsi asked for (Nov 6):** an open book on a desk, built in 3D (Three.js). The left page
+  holds the words; on the right page the diagram lifts off the paper and acts out the idea; page turns move between four
+  spreads; the camera leans in on the page that's talking. One calm narrator. The format is this reel's one variable.
+- **Topic (point family B, "AI can't do what it looks like it does": it reads tokens, not words), with a stake for our
+  Telugu audience:** the same question is 13 tokens in English and 101 in Telugu on an older ChatGPT model's tokenizer,
+  23 on today's (OpenAI's own tiktoken library maps GPT-4o to GPT-5 to that one).
+  - **Our count:** five everyday questions, the same meaning in both languages, real open tokenizers, committed before
+    it ran.
+  - **Telugu vs English tokens:** 7.35x on the older tokenizer, 1.68x on today's, 6.38x on the free, open Qwen models
+    (Qwen2.5 and the 2025 Qwen3 count the same).
+  - **Why a viewer cares:** an AI holds only so many tokens of a chat, so a long Telugu chat loses its start sooner.
+  - **Tips:** ask for a short summary and paste it into a new chat; if you're building with AI, count your Telugu
+    tokens on the model you'll use.
+  - **Line:** "Getting fairer. Not fair yet."
+- **Four viewer rounds changed it (two on the script, two on renders):**
+  - The first render had the memory bars at 8x for "your app" before the reel said today's ChatGPT is under 2x. Now the
+    good news comes first and the stake sits at the real ratios.
+  - "A newer app" now names which one.
+  - The bed dips (it doesn't stop) before "Not fair yet", and the stamp is held into the page turn.
+  - The voice sits clearly above the music now (it was level with it).
+  - A table you can screenshot: all three ratios, the model names and the date. The header says "per English token" (a
+    "÷" read as "+" on a phone).
+  - **Telugu:** six lines re-voiced, with every key word and number checked on each take. Parler said "పెద్ద తెలుగు చాట్"
+    wrong on every take, so lines 7-8 say "పెద్ద చాట్".
+- **Frame 1 (reach stack):** the open book with two towers risen from the page, ENGLISH 13 vs TELUGU 101 TOKENS, labelled
+  "the same question · older ChatGPT model".
+- **Caption ask (a try-it test, your Skit 20 read):** "Paste one sentence of yours in English and in Telugu into a free
+  token counter (OpenAI's Tokenizer page) and comment your two numbers." The counter is drawn on the last page, with ours
+  marked as the example.
+- **The read I'd like at 48h:**
+  - The 3-s hold (the book on frame 1 vs our usual character frames).
+  - Average watch time against Creative 22 (story mode) and Skit 16 (the tokens reel that broke out), EN and TE.
+  - Saves, since it's the first reel with a table built to be saved.
+  - You suggested EN first; I made both, since the topic is about Telugu itself. If the TE hold is weak, that's the
+    format, not the voice.
+- **Files:** `out/skits/24_same_question_101_tokens{,_te}{,_ig}.mp4` (EN 57 s, TE 64 s),
+  `out/skits/24_same_question_101_tokens_post.txt`.
+— Claude, 2026-11-09
+
 ### [ANALYTICS] Bujji — 2026-11-09 (48h checkpoint: AI WEEKLY 04)
 
 48h checkpoint, first measurement. Published Nov 7 morning (IG EN/TE, browser task ran 8:54–9:01 AM ET); metrics pulled Nov 9 ~10:04 ET, lifetime to date, just past the 48h mark. No earlier [ANALYTICS] entry covered Weekly 04. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
