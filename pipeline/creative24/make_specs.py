@@ -25,7 +25,7 @@ LINES = {
     6: ("fair", "But a popular free open model: still six times. [1] Getting fairer. | [2] Not fair yet.",
         "కానీ ఉచితంగా దొరికే ఒక ఓపెన్ మోడల్ లో, ఇంకా, ఆరు రెట్లు. [1] మెరుగవుతోంది. | [2] ఇంకా సమానం కాదు."),
     7: ("memory", "Why it matters: Telugu uses up that limit faster. [1] So in a long Telugu chat, the AI forgets the start sooner.",
-        "ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు ఎక్కువైతే, ఆ లిమిట్ త్వరగా అయిపోతుంది. [1] అందుకే పెద్ద చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది."),
+        "ఇది ఎందుకు ముఖ్యం అంటే: టోకెన్లు పెరిగితే, ఆ లిమిట్ త్వరగా అయిపోతుంది. [1] అందుకే పెద్ద చాట్ లో, మొదట చెప్పింది త్వరగా మర్చిపోతుంది."),
     8: ("loop", "Long Telugu chat forgetting what you said? [1] Ask for a short summary, and paste it into a new chat. [2] Building with AI? Count your Telugu tokens on the model you'll use.",
         "పెద్ద చాట్ లో ముందు చెప్పింది మర్చిపోతుంటే? [1] చిన్న సమ్మరీ అడిగి, ఇంకో చాట్ లో పేస్ట్ చేయండి. [2] యాప్ తయారు చేస్తుంటే, మీరు వాడే మోడల్ లోనే తెలుగు టోకెన్లు లెక్కపెట్టండి."),
 }

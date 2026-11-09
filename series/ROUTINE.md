@@ -162,6 +162,10 @@ stay as made.
    editions), review packs, viewer review, fixes, `news/week-<date>_post.md`, commit, push, deliver as in step 8.
    Nothing is posted automatically: the user reviews the delivered reel before posting; flag any story that needs their
    call in the delivery note.
+4. AI WEEKLY 05 (Sat Nov 14), from Bujji's Weekly 04 48h read (Nov 9: EN hold 27.1% vs Weekly 03's 40.7%, avg watch
+   3.9 s on an 84 s reel): the one variable is the hook. Lead on the story with a person at stake (Weekly 03's lawsuit
+   lead held 40.7%; Weekly 04's Uber stat held 27.1%); the stat comes second. Length stays as Weekly 04 (the single-story
+   cut is the Weekly 06 variable). The caption ask is a try-it test (the Nov 8 standing rule), not a yes/no opinion.
 
 ### Recorded voice (trial on EP33 only, Oct 18-19; ended: the user picked the AI voices)
 The user voices the episode: both characters, English and, if they can, Telugu (a language they skip gets TTS).
@@ -230,6 +234,9 @@ The user voices the episode: both characters, English and, if they can, Telugu (
 
 Virality can't be promised. What a run controls: the first second, a reason to keep watching every few seconds, a
 payoff worth sharing, a loop, and a caption that asks for a comment.
+
+- Creative 25 (Nov 10), from Bujji's Skit 14 7-day read (Nov 9): the caption ask is a personal-experience ask fitted to
+  the topic ("has an AI ever got X wrong for you? what happened?"); that is its one variable.
 
 ## Lessons that cost a re-render (check before rendering)
 - EP42 (Nov 1): a name or a soft word opening a line under the frame-1 hit gets misheard ("Padma" as "Panama", "Fatima"):
