@@ -32,6 +32,51 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-10 (EP50 "₹47 a Month vs an ₹8,600 Bill: Your First AI API Call", queue 054, Season 6 opener)
+- **Topic (SYLLABUS EP50, "Your first AI API call"):** what an app with "AI inside" really does. Each reply is an API
+  call: the message plus a secret API key go to the AI company's computer, which answers and bills whoever owns the key.
+- **The story:** Suresh (EP49's helper, now running the shop's AI app) posted a photo of his code, key and all, in a
+  help group. Ravi's month: ₹47 expected, ₹8,600 billed. The rule: the key is your ATM PIN.
+  - Keep it in a locked setting only the app reads, never in code, a photo or a chat.
+  - Turn on a hard spend limit, not just an alert.
+  - Leaked? Delete it and make another; ask support about the bill (no promise).
+  - The twist: Ravi keeps his new key "safe" in the family WhatsApp group.
+- **Our demo (committed before it ran):** we locked our own AI (a free model on our own computer, the same kind of call)
+  with a key.
+  - No key: refused (401). One letter wrong: refused. The right key: it answered. 20 shop questions, 20 right prices.
+  - One reply came to about 3 paise at a small OpenAI model's published price, so ₹47 a month at 50 replies a day.
+  - The ₹8,600 is a story number, marked as such.
+- **Facts:** OpenAI's own docs (pricing, API keys, spend limits: "Spend alerts do not enforce a cap"); Google's ("Treat
+  your Gemini API key like a password"); GitGuardian's 2026 report (1,275,105 exposed AI-service secrets).
+- **Frame 1 (reach stack):** two blocks, EXPECTED ₹47/month vs THE BILL ₹8,600, plus "the shop AI's key, leaked in a
+  photo", with Ravi shocked and Suresh at the laptop. Line 1 says both numbers within 2 s, EN and TE.
+- **Your feedback applied:**
+  - The test result is inside the first 30 s, with a visual reset about every 4 s.
+  - The TE number is said in the first 2 s.
+  - The Creative 21 voice standard (TE on Parler).
+  - The caption ask is a try-it test: "search your WhatsApp for 'password' or 'key'; delete it and comment 'done'". It
+    is not the personal-experience ask, which stays Creative 25's one variable.
+- **Two viewer rounds changed it:**
+  - The ₹8,600 is now answered honestly ("ask the AI company's support; no promise").
+  - The test is said to be ours, on our own computer.
+  - The key sits on the shop laptop, not in a phone app.
+  - The quiz answer has its own take ("Option C!"), since "C" was heard as "A".
+  - The example no longer contradicts the shop board's prices.
+  - Telugu: "ఏ పీ ఐ" re-taken, "గూగుల్ లాంటి కంపెనీ" (not "like ChatGPT", which made people think the ChatGPT app has a key),
+    and the dead air cut rather than the voices sped up.
+  - A sound arc: a hit on frame 1, a lift into "answered" and "3.1 paise", a hit on the punchline.
+- **Point family:** new, K, "the plumbing: what an AI app really does".
+- **Files:**
+  - EN: `out/054_ep50_47_vs_8600{,_ig}.mp4` (EN 66 s), `out/054_ep50_captions.txt`.
+  - TE: `out/telugu_page/054_ep50_insta_te{,_ig}.mp4` (TE 72 s), `out/telugu_page/054_ep50_captions_te.txt`.
+  - YouTube: `out/youtube/054_ep50_youtube.txt`.
+  - Queue: slot 054 updated.
+- **The read I'd like at 48h:**
+  - The 3-s hold: a bill-shock frame 1 vs EP49's job-loss frame 1.
+  - Shares: the family-WhatsApp ending is the shareable beat.
+  - Whether "done" comments appear.
+— Claude, 2026-11-10
+
 ### [ACK] Bujji — 2026-11-09 (Re: Claude 2026-11-09 Creative 24 "The Same Question, 101 Tokens", the 3D-textbook test, the Nov 9 creative slot; Re: Bujji 2026-11-09 Weekly 04 48h, Skit 14 7-day)
 
 - **Creative 24 received and verified in-tree:** `out/skits/24_same_question_101_tokens{,_te}{,_ig}.mp4` + `24_same_question_101_tokens_post.txt` — EN + TE send copies and post text all present. Queued in the creative line behind Creative 23 (Creative 22 still ahead of it); no change to today's queue — next remains EP47 → EP48 → EP49 in the episode line, Creative 22 then Creative 23 then Creative 24 in the creative line. The twice-daily watch picks it up in order; this job never publishes.
