@@ -54,7 +54,7 @@ const dark = (c: Ctx, W: number, H: number, title: string, sub: string[], col = 
   c.font = SANS(38, 700); c.fillStyle = "#e2e8f0"; sub.forEach((t, i) => c.fillText(t, W / 2, 388 + i * 52));
 };
 // a chat bubble with its text; `marks` are phrases to highlight (yellow marker) or circle (red)
-const bubble = (c: Ctx, x: number, y: number, w: number, label: string, text: string, k: number, opt: { marks?: string[]; circles?: string[]; mk?: number; ck?: number; size?: number } = {}) => {
+const bubble = (c: Ctx, x: number, y: number, w: number, label: string, text: string, k: number, opt: { marks?: string[]; circles?: string[]; mk?: number; ck?: number; size?: number; markRgb?: string } = {}) => {
   if (k <= 0) return 0;
   const size = opt.size ?? 38, lh = size * 1.32;
   c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(size, 600);
@@ -69,7 +69,7 @@ const bubble = (c: Ctx, x: number, y: number, w: number, label: string, text: st
     (opt.marks ?? []).forEach((m) => {   // a highlighter stroke under every stock phrase in this line
       const at = ln.toLowerCase().indexOf(m.toLowerCase()); if (at < 0 || !opt.mk) return;
       const x0 = x + 30 + c.measureText(ln.slice(0, at)).width, wd = c.measureText(ln.slice(at, at + m.length)).width;
-      c.fillStyle = `rgba(250,204,21,${0.55 * clamp(opt.mk * 2)})`; c.fillRect(x0 - 4, ty - size * 0.9, (wd + 8) * clamp(opt.mk * 2), size * 1.15);
+      c.fillStyle = `rgba(${opt.markRgb ?? "250,204,21"},${0.55 * clamp(opt.mk * 2)})`; c.fillRect(x0 - 4, ty - size * 0.9, (wd + 8) * clamp(opt.mk * 2), size * 1.15);
     });
     (opt.circles ?? []).forEach((m) => {   // a red ring round every real detail in this line
       const at = ln.toLowerCase().indexOf(m.toLowerCase()); if (at < 0 || !opt.ck) return;
@@ -109,7 +109,7 @@ const StGuess: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (["test", "twist", "rule"].includes(b.prop)) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 11)} src="audio/sfx_whoosh.wav" vol={0.4} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("p")} at={2} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.4} />);
-    if (b.prop === "quiz") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.3) + q * 15} src="audio/sfx_pop.wav" vol={0.45} />));
+    if (b.prop === "quiz") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={end - 2 + q * 20} src="audio/sfx_pop.wav" vol={0.5} />));
     if (b.prop === "reveal") sfx.push(<Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={at} src={CLAP} vol={0.45} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.3} />);
     if (b.prop === "tells") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3)} src="audio/gag_ding.wav" vol={0.4} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.8} />);
@@ -142,10 +142,10 @@ const StGuess: React.FC<SP> = ({ s }) => {
             c.restore();
           });
           const ke = seg(f, cu(1, 0.5) + 8, cu(1, 0.5) + 16);
-          if (tw && ke > 0) {   // a real made-up line from our test, struck out
-            c.save(); c.globalAlpha = clamp(ke * 3); c.font = SANS(32, 800); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("from our test, never told to it:", W / 2, 920); c.restore();
-            const h = bubble(c, 90, 950, W - 180, "AI", T.made, ke, { size: 36 });
-            if (h) { c.save(); c.strokeStyle = RED; c.lineWidth = 8; c.globalAlpha = clamp(ke * 3); c.beginPath(); c.moveTo(110, 950 + h / 2 + 10); c.lineTo(W - 110, 950 + h / 2 - 10); c.stroke(); c.restore(); }
+          if (tw && ke > 0) {   // a real line from our test: "I miss you dearly" (we never said he lives away)
+            c.save(); c.globalAlpha = clamp(ke * 3); c.font = SANS(34, 800); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("a real line from our test:", W / 2, 920); c.restore();
+            const h = bubble(c, 90, 950, W - 180, "AI", T.made, ke, { size: 38, marks: ["I miss you dearly"], mk: ke, markRgb: "248,113,113" });
+            chip(c, "Sai lives next door", W / 2, 950 + h + 80, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.85), cu(1, 0.85) + 8), 44);
           }
           if (!tw) chip(c, "Qwen2.5 7B, offline · every reply read by hand", W / 2, 1300, "#fde68a", INK, seg(f, ln.from + 4, ln.from + 12), 32);
         } else if (b.prop === "rule") {
@@ -168,13 +168,13 @@ const StGuess: React.FC<SP> = ({ s }) => {
           }
           const y0 = hookOn || b.prop === "quiz" ? 480 : 320;
           const reveal = ["reveal", "tells"].includes(b.prop);
-          const ha = bubble(c, 50, y0, W - 100, reveal ? "A · Teja" : "A", T.a, 1, { circles: T.aDetails, ck: b.prop === "tells" ? seg(f, cu(1, 0.3), cu(1, 0.3) + 14) : 0, size: 38 });
-          const hb = bubble(c, 50, y0 + ha + 30, W - 100, reveal ? "B · Sai's AI" : "B", T.b, 1, { marks: T.bStock, mk: reveal ? seg(f, b.prop === "reveal" ? cu(1, 0.4) : ln.from - 20, (b.prop === "reveal" ? cu(1, 0.4) : ln.from - 20) + 12) : 0, size: 38 });
+          const ha = bubble(c, 50, y0, W - 100, reveal ? "1 · Teja" : "1", T.a, 1, { circles: T.aDetails, ck: b.prop === "tells" ? seg(f, cu(1, 0.3), cu(1, 0.3) + 14) : 0, size: 38 });
+          const hb = bubble(c, 50, y0 + ha + 30, W - 100, reveal ? "2 · Sai's AI" : "2", T.b, 1, { marks: T.bStock, mk: reveal ? seg(f, b.prop === "reveal" ? cu(1, 0.4) : ln.from - 20, (b.prop === "reveal" ? cu(1, 0.4) : ln.from - 20) + 12) : 0, size: 38 });
           if (hookOn) chip(c, "ONE IS AI. WHICH?", W / 2, Math.min(1480, y0 + ha + hb + 110), "#fde68a", INK, 1, 52);
           if (b.prop === "quiz") {   // 3, 2, 1
-            const t0 = cu(1, 0.3); const q = Math.floor((f - t0) / 15);
+            const t0 = endL - 2; const q = Math.floor((f - t0) / 20);
             if (f >= t0 && q < 3) { c.save(); c.font = SANS(220, 900); c.fillStyle = "rgba(220,38,38,0.9)"; c.textAlign = "center"; c.fillText(String(3 - q), W / 2, Math.min(1500, y0 + ha + hb + 230)); c.restore(); }
-            chip(c, "A or B?", W / 2, Math.min(1480, y0 + ha + hb + 90), "#fde68a", INK, 1, 52);
+            chip(c, "1 or 2?", W / 2, Math.min(1480, y0 + ha + hb + 90), "#fde68a", INK, 1, 52);
           }
           if (reveal) {
             stamp(c, "AI", W - 170, y0 + ha + 80, RED, b.prop === "reveal" ? seg(f, ln.from, ln.from + 8) : 1, 90, -0.12);

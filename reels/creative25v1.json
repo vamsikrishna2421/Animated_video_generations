@@ -1,0 +1,286 @@
+{
+ "id": "creative25v1",
+ "title": "Which Wish Did the AI Write?",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_guess",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_pre": [
+    [
+     2,
+     0.0,
+     2.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "quiz",
+      "n": 2
+     },
+     {
+      "prop": "reveal",
+      "n": 3
+     },
+     {
+      "prop": "tells",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "texts": {
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
+     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
+     "d": "",
+     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "aDetails": [
+      "running behind my cycle",
+      "pulihora"
+     ],
+     "bStock": [
+      "May this special day",
+      "filled with",
+      "wonderful chapter"
+     ],
+     "dStock": []
+    },
+    "nums": {
+     "stock": "10/10",
+     "specific": "0/10",
+     "both": "10/10",
+     "made": "6/10"
+    },
+    "yt": {
+     "chapter": "Which wish is the AI's?",
+     "title": "Which wish is the AI's?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Ammamma turns eighty. [1] Teja typed his wish for ten minutes. Sai tapped an AI once.",
+     "show": "Ammamma turns 80. Teja typed his wish for 10 minutes. Sai tapped an AI once.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Which one did the AI write? [1] One, or two?",
+     "show": "Which one did the AI write? One, or two?",
+     "maxgap": 0.3,
+     "gap": 2.6,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Two. [1] It could go to any grandmother on earth.",
+     "show": "Two. It could go to any grandmother on earth.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "One has her running behind his cycle, and her pulihora. [1] Only her family knows those.",
+     "show": "One has her running behind his cycle, and her pulihora. Only her family knows those.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_guess",
+   "tail": 0.0,
+   "boost": 1.3,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "prop": "twist",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "texts": {
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
+     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
+     "d": "",
+     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "aDetails": [
+      "running behind my cycle",
+      "pulihora"
+     ],
+     "bStock": [
+      "May this special day",
+      "filled with",
+      "wonderful chapter"
+     ],
+     "dStock": []
+    },
+    "nums": {
+     "stock": "10/10",
+     "specific": "0/10",
+     "both": "10/10",
+     "made": "6/10"
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "We asked a small free AI the same thing, ten times. [1] Ten out of ten: \"May this special day\". Not one thing only she'd know.",
+     "show": "We asked a small free AI the same thing, 10 times. 10 out of 10: \"May this special day\". Not one thing only she'd know.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "Then we gave it the two real details. [1] It used both, every time. But six times it added \"I miss you\"... and Sai lives next door.",
+     "show": "Then we gave it the 2 real details. It used both, every time. But 6 times it added \"I miss you\"... and Sai lives next door.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_guess",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.5,
+   "boost": 1.6,
+   "lift": 0.7,
+   "rise": 1.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 7
+     },
+     {
+      "prop": "loop",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "texts": {
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
+     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
+     "d": "",
+     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "aDetails": [
+      "running behind my cycle",
+      "pulihora"
+     ],
+     "bStock": [
+      "May this special day",
+      "filled with",
+      "wonderful chapter"
+     ],
+     "dStock": []
+    },
+    "nums": {
+     "stock": "10/10",
+     "specific": "0/10",
+     "both": "10/10",
+     "made": "6/10"
+    },
+    "yt": {
+     "chapter": "Let it write, the right way",
+     "title": "Let it write, the right way",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "So let it write, the right way: two real details, [1] cut what isn't true, and sign it yourself.",
+     "show": "So let it write, the right way: 2 real details, cut what isn't true, and sign it yourself.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "Ammamma replied to only one of them. [1] Guess which.",
+     "show": "Ammamma replied to only one of them. Guess which.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}
