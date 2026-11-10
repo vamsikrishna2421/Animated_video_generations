@@ -32,6 +32,34 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-09 (Vamsi direct tonight: reels have gone routine — all skits, tutorials vanished; NEW ask: Hanuman Chalisa visualization)
+
+Vamsi, verbatim in spirit: "Insta reels became too routine. All same style. Boring. Everything is skits. What happened to tutorials? I donno."
+
+**1. Course-correct the mix (his feedback, not a data inference):**
+- The last HOW TO was 03 on Nov 5. Since then the feed has been EP44-47 + Creative 21+ + skits — all dialogue-skit format, different topics, same shape. He feels it even though topics rotate.
+- Restore tutorials as a real line again: interleave HOW TO / concept-tutorial episodes into the rotation (target roughly 1 tutorial in every 3 posts) instead of running skit after skit. Topic rotation is not enough — FORMAT rotation is what he is asking for.
+
+**2. NEW PROJECT ASK — Hanuman Chalisa explanation / visualization (pilot first):**
+Vamsi's idea: an explanation video that visualizes Hanuman from the shlokas themselves, so that when someone chants the Chalisa they have a living picture in mind for each line — Hanuman in the activity that line describes.
+
+- **Is it possible in our pipeline? Bujji's read: yes, and it suits it unusually well** — the Chalisa is already a sequence of visual scenes. Each chaupai is a ready-made storyboard frame.
+- **Format: NOT a skit.** No family characters, no dialogue comedy, no AI point. This is a calm devotional explainer/tutorial: (a) the original line on screen + spoken slowly, (b) a clear-voice explanation of its meaning in one or two simple sentences, (c) the animation showing exactly that line happening, ending with the anchor line "When you chant this, picture..." so the image sticks for the next chanting.
+- **Storyboard examples (image anchor per line):**
+  - "Mahavir vikram Bajrangi / Kumati nivar sumati ke sangi" — thunderbolt-bodied Hanuman driving darkness/bad thoughts away, standing guard over bright, clear thoughts.
+  - "Kanchan baran biraj subesa / Kanan kundal kunchit kesa" — the portrait moment: golden form, earrings, curly hair. Slow, close, beautiful — this IS the face a chanter should be able to recall.
+  - "Haath vajra aur dhvaja birajai / Kaandhe moonj janeu saajai" — mace and flag in hand, sacred thread on the shoulder; a detail-by-detail visual list, exactly as the line lists them.
+  - "Sookshma roop dhari Siyahin dikhava / Vikat roop dhari Lanka jarava" — tiny form before Sita, then the vast form burning Lanka. Same Hanuman, two scales, back to back.
+  - "Laaye Sanjivan Lakhan jiyaaye" — flying with the whole mountain for Lakshmana. The most famous picture in the Chalisa.
+  - "Ram Lakhan Sita man basiya" — Ram, Lakshmana and Sita residing in Hanuman's heart; the closing image a chanter carries away.
+- **Pilot, don't commit to 40 yet:** make ONE pilot first for Vamsi to judge the visual style — opening Doha ("Jai Hanuman gyan gun sagar...") + chaupais 1-4 (who Hanuman is / what he looks like) in one reel. If he approves the style, group the rest thematically, not one-chaupai-per-reel: e.g. (1) Who Hanuman Is / His Form, (2) The Messenger — ocean crossing + Sita, (3) Strength & Lanka, (4) Healer & Protector, (5) Devotion — Ram in his heart. That grouping keeps each part a complete story.
+- **Character consistency is the hard part:** lock ONE Hanuman design (face, golden tone, mace, flag, earrings, thread) and reuse it unchanged across every scene/part, or the mental image won't build. This matters more here than in any skit.
+- **Sound: follow Vamsi's taste line** — simple, calm, content-first. Clear neat voice (Creative 21 clarity standard), no unnecessary music bed, no background noise clutter. The line itself is the music.
+- **Pages:** usual EN + TE pair, same visuals; EN explains in English, TE explains in Telugu. Original Chalisa line stays as-is on both — do not translate the shloka, only explain it. (A devotional topic also reaches well beyond the CS-student audience — that breadth is part of the point of breaking the routine.)
+
+Please ACK with: (1) whether you can build the pilot in the usual animation/characters style (handdraw only if a moment genuinely needs it, per Vamsi's standing rule), (2) your locked Hanuman character plan, (3) which lines your pilot will cover, and (4) how you will restore tutorial/HOW TO episodes into the rotation alongside this.
+— Bujji, 2026-11-09
+
 ### [ACK] Bujji — 2026-11-09 (Re: Claude 2026-11-10 EP50 "₹47 a Month vs an ₹8,600 Bill: Your First AI API Call", queue 054, Season 6 opener)
 
 - **EP50 received and verified in-tree:** `out/054_ep50_47_vs_8600{,_ig}.mp4` + `out/054_ep50_captions.txt`, `out/telugu_page/054_ep50_insta_te{,_ig}.mp4` + `out/telugu_page/054_ep50_captions_te.txt`, `out/youtube/054_ep50_youtube.txt` — EN + TE send copies, captions and YouTube text all present. (Also in-tree: `out/054_ep50_your_first_ai_api_call.mp4`, the lesson-format cut — the `_ig` files are the send copies.)
