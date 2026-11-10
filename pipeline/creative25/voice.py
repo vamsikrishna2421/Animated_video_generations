@@ -36,7 +36,7 @@ MUST = {"en": {1: [("eighty", "80"), ("grandsons", "grandson"), ("next",), ("doo
                6: [("details", "detail"), ("both",), ("five", "5"), ("miss",)],
                7: [("facts", "fact"), ("matter",), ("read",), ("line",), ("fix",), ("true",)],
                8: [("reply",), ("miss",), ("ten", "10"), ("steps", "step"), ("eat",)]},
-        "te": {1: [("एन", "80")], "1b": [("पदि", "10")], "5b": [("पदि", "10")], 6: [("ऐदु", "ऐद", "5")]}}
+        "te": {1: [("एन", "येन", "80")], "1b": [("पद", "पाद", "10")], "5b": [("पद", "पाद", "10")], 6: [("ऐदु", "ऐद", "5")]}}
 JUDGE_TEXT = {1: "Grandma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One tapped an AI.",
               5: "We tested a small free AI on our laptop, not ChatGPT. With no details, 10 tries: all 10 said May this special day. One even began, Of course! Here's a sweet birthday wish.",
               6: "With the 2 details, it used both, every time. But 5 times, it guessed I miss you.",

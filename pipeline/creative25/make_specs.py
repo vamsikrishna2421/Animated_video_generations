@@ -45,7 +45,7 @@ TEXTS = {   # on screen, English on both pages (2 and the test lines are from se
     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
     "made": "", "aDetails": ["running behind my cycle", "pulihora"], "bDetails": ["ride a bicycle", "pulihora"],
-    "bGuess": ["I miss you dearly", "filled with love and joy"], "bStock": [], "dStock": [],
+    "bGuess": ["miss you dearly", "filled with love", "and joy"], "bStock": [], "dStock": [],
 }
 NUMS = {"stock": "10/10", "both": "10/10", "miss": "5/10"}
 SPLIT_PAUSE = {1: 0.3, 5: 0.3}   # Telugu lines 1 and 5 in two takes: Parler babbled the long lines

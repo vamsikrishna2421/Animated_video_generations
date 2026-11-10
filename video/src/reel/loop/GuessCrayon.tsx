@@ -82,11 +82,11 @@ const bubble = (c: Ctx, x: number, y: number, w: number, label: string, text: st
   return h;
 };
 const phoneTop = (c: Ctx, W: number) => {   // the family group's header
-  c.fillStyle = "#075e54"; c.fillRect(0, 150, W, 130);
-  c.fillStyle = "#fde68a"; c.beginPath(); c.arc(100, 215, 42, 0, 7); c.fill();
-  c.font = SANS(44, 900); c.fillStyle = "#7c2d12"; c.textAlign = "center"; c.fillText("80", 100, 231);
-  c.font = SANS(42, 800); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Grandma turns 80 · family", 165, 210);
-  c.font = SANS(30, 600); c.fillText("Teja, Sai, Grandma + 23 others", 165, 252);
+  c.fillStyle = "#075e54"; c.fillRect(0, 232, W, 120);   // stills: below the channel label and the progress bar
+  c.fillStyle = "#fde68a"; c.beginPath(); c.arc(100, 292, 42, 0, 7); c.fill();
+  c.font = SANS(44, 900); c.fillStyle = "#7c2d12"; c.textAlign = "center"; c.fillText("80", 100, 308);
+  c.font = SANS(42, 800); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Grandma turns 80 · family", 165, 286);
+  c.font = SANS(30, 600); c.fillText("Teja, Sai, Grandma + 23 others", 165, 328);
 };
 const block = (c: Ctx, x: number, y: number, small: string, big: string, col: string) => {
   c.fillStyle = "#111827"; rrect(c, x, y, 470, 150, 22); c.fill();
@@ -162,16 +162,16 @@ const StGuess: React.FC<SP> = ({ s }) => {
           phoneTop(c, W);
           const hookOn = b.prop === "hook" || loopOn;
           if (hookOn || b.prop === "quiz") {   // frame 1: who wrote what, sound-off readable
-            block(c, 50, 300, "ONE GRANDSON TYPED", "10 minutes", "#4ade80");
-            block(c, 560, 300, "ONE ASKED AN AI", "1 tap", "#f87171");
+            block(c, 50, 372, "ONE GRANDSON TYPED", "10 minutes", "#4ade80");
+            block(c, 560, 372, "ONE ASKED AN AI", "1 tap", "#f87171");
           }
-          const y0 = hookOn || b.prop === "quiz" ? 480 : 320;
+          const y0 = hookOn || b.prop === "quiz" ? 545 : 380;
           const reveal = ["reveal", "tells"].includes(b.prop);
           const ha = bubble(c, 50, y0, W - 100, reveal ? "1 · Teja" : "1", T.a, 1, { size: 38 });
           const kGuess = b.prop === "reveal" ? seg(f, cu(1, 0.2), cu(1, 0.2) + 10) : b.prop === "tells" ? seg(f, cu(1, 0.3), cu(1, 0.3) + 12) : 0;
           const hb = bubble(c, 50, y0 + ha + 30, W - 100, reveal ? "2 · Sai's AI" : "2", T.b, 1, {
             circles: b.prop === "tells" ? T.bDetails : [], ck: b.prop === "tells" ? seg(f, ln.from + 2, ln.from + 16) : 0,
-            marks: b.prop === "reveal" ? ["I miss you dearly"] : b.prop === "tells" ? T.bGuess : [], mk: kGuess, markRgb: "248,113,113", size: 38 });
+            marks: b.prop === "reveal" ? ["miss you dearly"] : b.prop === "tells" ? T.bGuess : [], mk: kGuess, markRgb: "248,113,113", size: 38 });
           if (hookOn) chip(c, "both grandsons live next door · ONE IS AI. WHICH?", W / 2, Math.min(1480, y0 + ha + hb + 110), "#fde68a", INK, 1, 40);
           if (b.prop === "quiz") {   // 3, 2, 1 in the hold
             const t0 = endL - 2; const q = Math.floor((f - t0) / 20);
