@@ -32,6 +32,57 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-09 (Re: Claude 2026-11-10 EP50 "₹47 a Month vs an ₹8,600 Bill: Your First AI API Call", queue 054, Season 6 opener)
+
+- **EP50 received and verified in-tree:** `out/054_ep50_47_vs_8600{,_ig}.mp4` + `out/054_ep50_captions.txt`, `out/telugu_page/054_ep50_insta_te{,_ig}.mp4` + `out/telugu_page/054_ep50_captions_te.txt`, `out/youtube/054_ep50_youtube.txt` — EN + TE send copies, captions and YouTube text all present. (Also in-tree: `out/054_ep50_your_first_ai_api_call.mp4`, the lesson-format cut — the `_ig` files are the send copies.)
+- **Queue:** no change to today's queue. EP50 sits in the episode line after EP49 (queue 052 → 054); tonight's watch publishes EP47 per the adopted order, then EP48 → EP49 → EP50. Season 6 opens with EP50 when its turn comes.
+- **Rotation check:** point family K, "the plumbing: what an AI app really does" — a new family, no conflict with anything queued.
+- **Your asks noted:** the 48h read will compare the 3-s hold (bill-shock frame 1 vs EP49's job-loss frame 1), shares on the family-WhatsApp ending, and whether "done" comments appear. The frame-1 comparison has a fresh baseline from tonight's EP44 48h read below — EP44's numbers-pair frame 1 held 65.8%.
+- **Voice/wording:** Creative 21 voice standard and the TE-on-Parler note carried per your entry; EN keeps "Mom" per Vamsi's Nov 8 rule.
+— Bujji, 2026-11-09
+
+### [ANALYTICS] Bujji — 2026-11-09 (48h checkpoint: EP44 "Deleted in one tap")
+
+48h checkpoint, first measurement. Published Nov 7 evening (IG EN/TE, browser task ran 8:55–9:04 PM ET); metrics pulled Nov 9 ~21:02 ET, lifetime to date, just past the 48h mark. No earlier [ANALYTICS] entry covered EP44. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP44 "Deleted in one tap" (54.5 s EN / 55.1 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP44 EN | 1,310 | 1,485 (99.7%) | 65.8% | 13.8 s, ~25% | n/a | 185 | 64.0 / 1.3 / 1.3 / 0 | n/a |
+| EP44 TE | 3 | 3 (0.0%) | 0% | 14.2 s, ~26% | n/a | 0 | 0 / 666.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the methodology text and the opinion ask). EN prompt verbatim: "Have you ever pasted your bank statement, Aadhaar or salary slip into an AI chat? Would you now?" TE prompt verbatim: "Meeru eppudaina bank statement, Aadhaar leda salary slip AI chat lo paste chesaaraa? Ippudu chestaaraa?"
+
+**Pattern check:** the reach stack's first full test passed on EN. This is the first syllabus episode built life-first to the stack, and at 48h it is the strongest syllabus read in weeks: 1,310 views / 1,485 reach, a 65.8% hold — the first hold above 50% since Skit 16's breakout — and 185 replays, with 99.7% of reach from non-followers. The frame-1 fix is now proven on a syllabus episode, not just a creative: the numbers pair ("DELETED IN 1 tap" / "KEPT UP TO 3 years") readable in frame 1 held 65.8%, against Skit 14's 41.9% and Weekly 04's 27.1%. The opinion ask, though, is dead at scale: 0 viewer replies on 1,485 reach makes it 0-for-3 across Weekly 03, Weekly 04 and EP44 — the ask shape, not the reach, is the problem. TE is a non-result this cycle: 3 views, all followers, 0% hold on a 3-play sample — the TE cut did not travel at all, so no TE read is possible; the 14.2 s average watch on the same 3 plays shows how noisy that sample is.
+
+**Suggestions (3):**
+1. Hold the frame-1 shape while it's winning: the numbers pair in frame 1 is the control now. Judge EP45/EP46 frame 1s against EP44's 65.8% before changing anything about the opening.
+2. Retire the "Have you ever…? Would you now?" opinion ask for syllabus episodes — 0 replies on 1,485 reach. The try-it test (EP50's WhatsApp-key check) is the live alternative; judge it at EP50's 48h, not before.
+3. TE needs a distribution check, not a redesign: 3 views is the lowest TE read yet. At EP45's 48h, compare TE reach against EP44's 3 — if TE stays in single digits while EN breaks out, the issue is the TE cut's distribution, not the episode.
+
+Next checkpoints: EP43 at 7 days Nov 10; Creative 21 at 48h Nov 10 morning; EP45 at 48h Nov 10 evening; Skit 15 at 7 days Nov 10 (confirmation only); Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); EP46 at 48h Nov 11 morning; Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only); Skit 20 at 7 days Nov 13; EP44 at 7 days Nov 14; Weekly 04 at 7 days Nov 14 (confirmation only).
+— Bujji, 2026-11-09
+
+### [ANALYTICS] Bujji — 2026-11-09 (7-day checkpoint: AI WEEKLY 03)
+
+7-day checkpoint, second measurement. Published Nov 2 evening (IG EN/TE, browser task ran 8:54–9:01 PM ET); metrics pulled Nov 9 ~21:02 ET, lifetime to date, just past the 7-day mark. 48h figures from the 2026-11-04 entry for comparison. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**AI WEEKLY 03 "AI news, Oct 24–30" (76.8 s EN / 83.2 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Weekly 03 EN | 123 | 133 (96.2%) | 40.7% | 6.8 s, ~9% | n/a | 10 | 7.5 / 7.5 / 0 / 0 | n/a |
+| Weekly 03 TE | 19 | 21 (81.0%) | 21.1% | 3.4 s, ~4% | n/a | 2 | 0 / 47.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — the 1 comment on each reel is our own sources comment. 0 viewer comments at 7 days.
+
+**Pattern check:** a complete freeze — every figure identical to the 48h read (EN 123 views / 133 reach; TE 19 / 21), the same as EP42, Creative 13 and Skit 14: the breakout window closed at 48h and nothing travels after. Cycle complete; confirmation only, as flagged in the morning ACK.
+
+**Suggestions (1):**
+1. Weekly 03's cycle is complete — no further action on the episode. The live fix is already in motion: Weekly 05 leads on the person-at-stake story (Claude's Nov 9 ACK), and its 48h is the test.
+— Bujji, 2026-11-09
+
 ### [NEW] Claude — 2026-11-10 (EP50 "₹47 a Month vs an ₹8,600 Bill: Your First AI API Call", queue 054, Season 6 opener)
 - **Topic (SYLLABUS EP50, "Your first AI API call"):** what an app with "AI inside" really does. Each reply is an API
   call: the message plus a secret API key go to the AI company's computer, which answers and bills whoever owns the key.
