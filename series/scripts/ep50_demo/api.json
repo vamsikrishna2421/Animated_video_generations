@@ -1,0 +1,310 @@
+{
+ "key": {
+  "length": 43,
+  "last4": "2622"
+ },
+ "doors": {
+  "no key": {
+   "status": 401,
+   "seconds": 0.08,
+   "reply": "{\"detail\":\"Invalid API key\"}"
+  },
+  "wrong key": {
+   "status": 401,
+   "seconds": 0.0,
+   "reply": "{\"detail\":\"Invalid API key\"}"
+  },
+  "right key": {
+   "status": 200,
+   "seconds": 15.87,
+   "reply": "₹165 (in stock)"
+  }
+ },
+ "rows": [
+  {
+   "q": "Anna toor dal 1 kg entha?",
+   "item": "Toor dal 1 kg",
+   "status": 200,
+   "seconds": 1.38,
+   "reply": "₹165 (in stock)",
+   "server_prompt_tokens": 459,
+   "server_reply_tokens": 8,
+   "o200k_in": 399,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Is sunflower oil available? How much for 1 litre?",
+   "item": "Sunflower oil 1 litre",
+   "status": 200,
+   "seconds": 3.11,
+   "reply": "Sunflower oil 1 litre: ₹150 (in stock)",
+   "server_prompt_tokens": 462,
+   "server_reply_tokens": 15,
+   "o200k_in": 401,
+   "o200k_out": 13,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "5 kg sona masoori rice price please",
+   "item": "Sona masoori rice 5 kg",
+   "status": 200,
+   "seconds": 2.04,
+   "reply": "₹340 (in stock)",
+   "server_prompt_tokens": 459,
+   "server_reply_tokens": 8,
+   "o200k_in": 398,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Do you have curd today?",
+   "item": "Curd 500 g",
+   "status": 200,
+   "seconds": 2.09,
+   "reply": "₹40 (out of stock)",
+   "server_prompt_tokens": 456,
+   "server_reply_tokens": 8,
+   "o200k_in": 396,
+   "o200k_out": 7,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "How much is a dozen eggs?",
+   "item": "Eggs (12)",
+   "status": 200,
+   "seconds": 1.77,
+   "reply": "₹84 (in stock)",
+   "server_prompt_tokens": 456,
+   "server_reply_tokens": 7,
+   "o200k_in": 396,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Groundnut oil undha?",
+   "item": "Groundnut oil 1 litre",
+   "status": 200,
+   "seconds": 2.29,
+   "reply": "₹190 (out of stock)",
+   "server_prompt_tokens": 455,
+   "server_reply_tokens": 9,
+   "o200k_in": 395,
+   "o200k_out": 7,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Sugar 1 kg rate?",
+   "item": "Sugar 1 kg",
+   "status": 200,
+   "seconds": 1.74,
+   "reply": "₹48 (in stock)",
+   "server_prompt_tokens": 455,
+   "server_reply_tokens": 7,
+   "o200k_in": 395,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Need wheat atta 5 kg, price?",
+   "item": "Wheat atta 5 kg",
+   "status": 200,
+   "seconds": 2.22,
+   "reply": "₹285 (in stock)",
+   "server_prompt_tokens": 459,
+   "server_reply_tokens": 8,
+   "o200k_in": 398,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Tea powder 250 g available?",
+   "item": "Tea powder 250 g",
+   "status": 200,
+   "seconds": 2.24,
+   "reply": "₹135 (in stock)",
+   "server_prompt_tokens": 459,
+   "server_reply_tokens": 8,
+   "o200k_in": 396,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Is there chana dal?",
+   "item": "Chana dal 1 kg",
+   "status": 200,
+   "seconds": 2.12,
+   "reply": "₹110 (out of stock)",
+   "server_prompt_tokens": 455,
+   "server_reply_tokens": 9,
+   "o200k_in": 395,
+   "o200k_out": 7,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Toothpaste price?",
+   "item": "Toothpaste 150 g",
+   "status": 200,
+   "seconds": 1.81,
+   "reply": "₹95 (out of stock)",
+   "server_prompt_tokens": 454,
+   "server_reply_tokens": 8,
+   "o200k_in": 394,
+   "o200k_out": 7,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Milk packet 500 ml how much",
+   "item": "Milk 500 ml",
+   "status": 200,
+   "seconds": 1.84,
+   "reply": "₹30 (in stock)",
+   "server_prompt_tokens": 459,
+   "server_reply_tokens": 7,
+   "o200k_in": 396,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Do you sell basmati rice? price for 1 kg",
+   "item": "Basmati rice 1 kg",
+   "status": 200,
+   "seconds": 2.06,
+   "reply": "₹120 (in stock)",
+   "server_prompt_tokens": 462,
+   "server_reply_tokens": 8,
+   "o200k_in": 401,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Washing powder 1 kg entha",
+   "item": "Washing powder 1 kg",
+   "status": 200,
+   "seconds": 1.99,
+   "reply": "₹110 (in stock)",
+   "server_prompt_tokens": 457,
+   "server_reply_tokens": 8,
+   "o200k_in": 397,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Jaggery undha? 1 kg",
+   "item": "Jaggery 1 kg",
+   "status": 200,
+   "seconds": 1.91,
+   "reply": "₹75 (in stock)",
+   "server_prompt_tokens": 458,
+   "server_reply_tokens": 7,
+   "o200k_in": 398,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "How much is turmeric powder?",
+   "item": "Turmeric powder 100 g",
+   "status": 200,
+   "seconds": 1.78,
+   "reply": "₹35 (in stock)",
+   "server_prompt_tokens": 456,
+   "server_reply_tokens": 7,
+   "o200k_in": 395,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Do you have paneer?",
+   "item": null,
+   "status": 200,
+   "seconds": 1.64,
+   "reply": "We don't sell it.",
+   "server_prompt_tokens": 455,
+   "server_reply_tokens": 6,
+   "o200k_in": 395,
+   "o200k_out": 5,
+   "right": true,
+   "hand_note": "paneer: 'We don't sell it.'"
+  },
+  {
+   "q": "Bread available now?",
+   "item": "Bread",
+   "status": 200,
+   "seconds": 1.67,
+   "reply": "₹45 (in stock)",
+   "server_prompt_tokens": 454,
+   "server_reply_tokens": 7,
+   "o200k_in": 393,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Red chilli powder 200 g price",
+   "item": "Red chilli powder 200 g",
+   "status": 200,
+   "seconds": 1.87,
+   "reply": "₹70 (in stock)",
+   "server_prompt_tokens": 459,
+   "server_reply_tokens": 7,
+   "o200k_in": 396,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "right price and stock answer"
+  },
+  {
+   "q": "Do you have ice cream?",
+   "item": null,
+   "status": 200,
+   "seconds": 1.87,
+   "reply": "We don't sell ice cream.",
+   "server_prompt_tokens": 455,
+   "server_reply_tokens": 7,
+   "o200k_in": 395,
+   "o200k_out": 6,
+   "right": true,
+   "hand_note": "ice cream: 'We don't sell ice cream.'"
+  }
+ ],
+ "summary": {
+  "doors": {
+   "no key": 401,
+   "wrong key": 401,
+   "right key": 200
+  },
+  "calls": 20,
+  "avg_o200k_in": 396.4,
+  "avg_o200k_out": 6.5,
+  "avg_server_in": 457.2,
+  "avg_server_out": 8.0,
+  "avg_seconds": 1.97,
+  "usd_per_reply": 0.0003265875,
+  "paise_per_reply": 3.111,
+  "rupees_per_month": 46.66,
+  "per_day": 50,
+  "days": 30,
+  "price": {
+   "in": 0.75,
+   "out": 4.5,
+   "model": "gpt-5.4-mini",
+   "rupees_per_dollar": 95.25
+  },
+  "right_by_hand": "20/20"
+ }
+}

@@ -68,7 +68,11 @@ QUESTIONS = [  # (customer's message, item it asks about or None for an item we 
 SYSTEM = ("You answer WhatsApp messages for Ravi's kirana shop. Reply in one short line: the price and whether it is in "
           "stock. Use only this price list; if the item is not on it, say we don't sell it.\n" +
           "\n".join(f"- {n}: ₹{p} ({'in stock' if s else 'out of stock'})" for n, p, s in PRICES))
-HAND = {}  # question index: (right?, note), after reading every reply by hand
+HAND = {  # question index: (right?, note), after reading every reply by hand (all 20 match the price list)
+    **{i: (True, "right price and stock answer") for i in range(16)}, 16: (True, "paneer: 'We don't sell it.'"),
+    17: (True, "right price and stock answer"), 18: (True, "right price and stock answer"),
+    19: (True, "ice cream: 'We don't sell ice cream.'"),
+}
 
 
 def model_file():
