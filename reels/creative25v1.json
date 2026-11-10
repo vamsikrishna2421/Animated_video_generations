@@ -79,7 +79,7 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",
      "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
      "of": "Of course! Here's a sweet birthday wish for your grandmother:",
      "made": "",
@@ -92,9 +92,7 @@
       "pulihora"
      ],
      "bGuess": [
-      "miss you dearly",
-      "filled with love",
-      "and joy"
+      "miss you dearly"
      ],
      "bStock": [],
      "dStock": []
@@ -114,8 +112,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Grandma turns eighty. Both grandsons live next door. [1] One typed his wish for ten minutes. One tapped an AI.",
-     "show": "Grandma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One tapped an AI.",
+     "text": "Grandma turns eighty. Both grandsons live next door. [1] One typed his wish for ten minutes. One gave an AI two details, and tapped once.",
+     "show": "Grandma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One gave an AI 2 details, and tapped once.",
      "maxgap": 0.3,
      "gap": 0.3,
      "tempo": 1.04
@@ -168,7 +166,7 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",
      "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
      "of": "Of course! Here's a sweet birthday wish for your grandmother:",
      "made": "",
@@ -181,9 +179,7 @@
       "pulihora"
      ],
      "bGuess": [
-      "miss you dearly",
-      "filled with love",
-      "and joy"
+      "miss you dearly"
      ],
      "bStock": [],
      "dStock": []
@@ -203,7 +199,7 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "We tested a small free AI on our laptop, not ChatGPT. With no details, ten tries: [1] all ten said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
+     "text": "We tested a small free AI on our laptop. Not ChatGPT. With no details, ten tries: [1] all ten said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
      "show": "We tested a small free AI on our laptop, not ChatGPT. With no details, 10 tries: all 10 said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
      "maxgap": 0.3,
      "gap": 0.4,
@@ -242,7 +238,7 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",
      "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
      "of": "Of course! Here's a sweet birthday wish for your grandmother:",
      "made": "",
@@ -255,9 +251,7 @@
       "pulihora"
      ],
      "bGuess": [
-      "miss you dearly",
-      "filled with love",
-      "and joy"
+      "miss you dearly"
      ],
      "bStock": [],
      "dStock": []
@@ -286,11 +280,15 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "Grandma's reply: [1] \"Miss me? You're ten steps away. Come and eat!\"",
-     "show": "Grandma's reply: \"Miss me? You're 10 steps away. Come and eat!\"",
+     "text": "Grandma's reply: <pause 0.7> [1] \"Miss me? You're ten steps away. Come and eat!\"",
+     "show": "Grandma's reply: <pause 0.7> \"Miss me? You're 10 steps away. Come and eat!\"",
      "maxgap": 0.3,
      "gap": 0.0,
-     "tempo": 1.04
+     "tempo": 1.04,
+     "tts": "Grandma's reply:",
+     "file2": "08b_storyteller.wav",
+     "tts2": "\"Miss me? You're ten steps away. Come and eat!\"",
+     "pause": 0.7
     }
    ]
   }

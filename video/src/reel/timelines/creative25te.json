@@ -13,29 +13,29 @@
  "fps": 30,
  "musicDrops": [
   [
-   397,
-   469
+   443,
+   515
   ]
  ],
  "musicBoosts": [
   [
    0,
-   779,
+   839,
    1.0
   ],
   [
-   779,
-   1391,
+   839,
+   1453,
    1.3
   ],
   [
-   1391,
-   1754,
+   1452,
+   1816,
    1.5
   ],
   [
-   1391,
-   1754,
+   1452,
+   1816,
    1.5,
    1
   ]
@@ -43,7 +43,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1754,
+ "totalFrames": 1816,
  "music": "reel/creative25te/score.wav",
  "scenes": [
   {
@@ -70,7 +70,7 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",
      "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
      "of": "Of course! Here's a sweet birthday wish for your grandmother:",
      "made": "",
@@ -83,9 +83,7 @@
       "pulihora"
      ],
      "bGuess": [
-      "miss you dearly",
-      "filled with love",
-      "and joy"
+      "miss you dearly"
      ],
      "bStock": [],
      "dStock": []
@@ -105,7 +103,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 779,
+   "frames": 839,
    "lines": [
     {
      "who": "storyteller",
@@ -114,116 +112,126 @@
      "sub": null,
      "audio": "reel/creative25te/line_01.wav",
      "from": 15,
-     "frames": 280,
+     "frames": 326,
      "words": [
       {
        "w": "Ammamma",
        "from": 16,
-       "to": 30
+       "to": 31
       },
       {
        "w": "turns",
-       "from": 30,
-       "to": 40
+       "from": 31,
+       "to": 43
       },
       {
        "w": "80.",
-       "from": 40,
-       "to": 48
+       "from": 43,
+       "to": 50
       },
       {
        "w": "Both",
-       "from": 48,
-       "to": 65
+       "from": 50,
+       "to": 69
       },
       {
        "w": "grandsons",
-       "from": 65,
-       "to": 89
+       "from": 69,
+       "to": 93
       },
       {
        "w": "live",
-       "from": 89,
-       "to": 98
+       "from": 93,
+       "to": 107
       },
       {
        "w": "next",
-       "from": 98,
-       "to": 110
+       "from": 107,
+       "to": 116
       },
       {
        "w": "door.",
-       "from": 110,
-       "to": 121
-      },
-      {
-       "w": "One",
-       "from": 121,
+       "from": 116,
        "to": 128
       },
       {
+       "w": "One",
+       "from": 140,
+       "to": 148
+      },
+      {
        "w": "typed",
-       "from": 139,
-       "to": 151
+       "from": 148,
+       "to": 168
       },
       {
        "w": "for",
-       "from": 151,
-       "to": 158
+       "from": 168,
+       "to": 176
       },
       {
        "w": "10",
-       "from": 158,
-       "to": 164
+       "from": 176,
+       "to": 182
       },
       {
        "w": "minutes.",
-       "from": 164,
-       "to": 181
+       "from": 182,
+       "to": 211
       },
       {
        "w": "The",
-       "from": 181,
-       "to": 189
+       "from": 211,
+       "to": 218
       },
       {
        "w": "other",
-       "from": 189,
-       "to": 210
+       "from": 218,
+       "to": 239
       },
       {
-       "w": "asked",
-       "from": 210,
-       "to": 232
+       "w": "told",
+       "from": 239,
+       "to": 253
       },
       {
        "w": "a",
-       "from": 232,
-       "to": 240
+       "from": 253,
+       "to": 257
       },
       {
        "w": "chatbot",
-       "from": 240,
-       "to": 267
+       "from": 257,
+       "to": 272
       },
       {
-       "w": "with",
-       "from": 267,
-       "to": 281
+       "w": "2",
+       "from": 272,
+       "to": 276
       },
       {
-       "w": "1",
-       "from": 281,
-       "to": 285
+       "w": "things",
+       "from": 276,
+       "to": 303
       },
       {
-       "w": "tap.",
-       "from": 285,
-       "to": 294
+       "w": "and",
+       "from": 303,
+       "to": 311
+      },
+      {
+       "w": "tapped",
+       "from": 311,
+       "to": 329
+      },
+      {
+       "w": "once.",
+       "from": 329,
+       "to": 341
       }
      ],
      "cues": {
-      "1": 139
+      "1": 140
      }
     },
     {
@@ -232,57 +240,57 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative25te/line_02.wav",
-     "from": 304,
+     "from": 350,
      "frames": 87,
      "words": [
       {
        "w": "Which",
-       "from": 304,
-       "to": 314
+       "from": 351,
+       "to": 360
       },
       {
        "w": "one",
-       "from": 314,
-       "to": 320
+       "from": 360,
+       "to": 366
       },
       {
        "w": "did",
-       "from": 320,
-       "to": 326
+       "from": 366,
+       "to": 372
       },
       {
        "w": "the",
-       "from": 326,
-       "to": 332
-      },
-      {
-       "w": "chatbot",
-       "from": 332,
-       "to": 344
-      },
-      {
-       "w": "write?",
-       "from": 344,
-       "to": 364
-      },
-      {
-       "w": "1,",
-       "from": 364,
+       "from": 372,
        "to": 378
       },
       {
-       "w": "or",
+       "w": "chatbot",
        "from": 378,
-       "to": 382
+       "to": 390
+      },
+      {
+       "w": "write?",
+       "from": 390,
+       "to": 411
+      },
+      {
+       "w": "1,",
+       "from": 411,
+       "to": 424
+      },
+      {
+       "w": "or",
+       "from": 424,
+       "to": 428
       },
       {
        "w": "2?",
-       "from": 382,
-       "to": 387
+       "from": 428,
+       "to": 433
       }
      ],
      "cues": {
-      "1": 345
+      "1": 391
      }
     },
     {
@@ -291,62 +299,62 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative25te/line_03.wav",
-     "from": 469,
+     "from": 515,
      "frames": 159,
      "words": [
       {
        "w": "2.",
-       "from": 471,
-       "to": 478
+       "from": 517,
+       "to": 524
       },
       {
        "w": "He",
-       "from": 478,
-       "to": 495
+       "from": 524,
+       "to": 541
       },
       {
        "w": "lives",
-       "from": 495,
-       "to": 510
+       "from": 541,
+       "to": 556
       },
       {
        "w": "next",
-       "from": 510,
-       "to": 522
+       "from": 556,
+       "to": 568
       },
       {
        "w": "door,",
-       "from": 522,
-       "to": 560
+       "from": 568,
+       "to": 606
       },
       {
        "w": "and",
-       "from": 560,
-       "to": 569
+       "from": 606,
+       "to": 616
       },
       {
        "w": "says",
-       "from": 569,
-       "to": 590
+       "from": 616,
+       "to": 636
       },
       {
        "w": "\"I",
-       "from": 590,
-       "to": 597
+       "from": 636,
+       "to": 643
       },
       {
        "w": "miss",
-       "from": 597,
-       "to": 609
+       "from": 643,
+       "to": 655
       },
       {
        "w": "you\"?",
-       "from": 609,
-       "to": 624
+       "from": 655,
+       "to": 670
       }
      ],
      "cues": {
-      "1": 495
+      "1": 541
      }
     },
     {
@@ -355,72 +363,72 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative25te/line_04.wav",
-     "from": 640,
+     "from": 686,
      "frames": 128,
      "words": [
       {
        "w": "The",
-       "from": 642,
-       "to": 648
+       "from": 688,
+       "to": 694
       },
       {
        "w": "chatbot",
-       "from": 648,
-       "to": 672
+       "from": 694,
+       "to": 718
       },
       {
        "w": "used",
-       "from": 672,
-       "to": 680
-      },
-      {
-       "w": "the",
-       "from": 680,
-       "to": 687
-      },
-      {
-       "w": "2",
-       "from": 687,
-       "to": 693
-      },
-      {
-       "w": "real",
-       "from": 693,
-       "to": 702
-      },
-      {
-       "w": "details.",
-       "from": 702,
+       "from": 718,
        "to": 726
       },
       {
-       "w": "It",
+       "w": "the",
        "from": 726,
-       "to": 731
+       "to": 733
+      },
+      {
+       "w": "2",
+       "from": 733,
+       "to": 740
+      },
+      {
+       "w": "real",
+       "from": 740,
+       "to": 748
+      },
+      {
+       "w": "details.",
+       "from": 748,
+       "to": 772
+      },
+      {
+       "w": "It",
+       "from": 772,
+       "to": 777
       },
       {
        "w": "guessed",
-       "from": 731,
-       "to": 744
+       "from": 777,
+       "to": 790
       },
       {
        "w": "all",
-       "from": 744,
-       "to": 751
+       "from": 790,
+       "to": 797
       },
       {
        "w": "the",
-       "from": 751,
-       "to": 757
+       "from": 797,
+       "to": 803
       },
       {
        "w": "rest.",
-       "from": 757,
-       "to": 767
+       "from": 803,
+       "to": 813
       }
      ],
      "cues": {
-      "1": 733
+      "1": 779
      }
     }
    ]
@@ -441,7 +449,7 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",
      "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
      "of": "Of course! Here's a sweet birthday wish for your grandmother:",
      "made": "",
@@ -454,9 +462,7 @@
       "pulihora"
      ],
      "bGuess": [
-      "miss you dearly",
-      "filled with love",
-      "and joy"
+      "miss you dearly"
      ],
      "bStock": [],
      "dStock": []
@@ -475,8 +481,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 779,
-   "frames": 612,
+   "from": 839,
+   "frames": 614,
    "lines": [
     {
      "who": "storyteller",
@@ -764,7 +770,7 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",
      "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
      "of": "Of course! Here's a sweet birthday wish for your grandmother:",
      "made": "",
@@ -777,9 +783,7 @@
       "pulihora"
      ],
      "bGuess": [
-      "miss you dearly",
-      "filled with love",
-      "and joy"
+      "miss you dearly"
      ],
      "bStock": [],
      "dStock": []
@@ -798,8 +802,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1391,
-   "frames": 363,
+   "from": 1452,
+   "frames": 364,
    "lines": [
     {
      "who": "storyteller",
@@ -808,81 +812,76 @@
      "sub": null,
      "audio": "reel/creative25te/line_07.wav",
      "from": 15,
-     "frames": 155,
+     "frames": 134,
      "words": [
       {
        "w": "So:",
-       "from": 16,
-       "to": 24
+       "from": 15,
+       "to": 21
       },
       {
        "w": "tell",
-       "from": 24,
-       "to": 40
+       "from": 21,
+       "to": 38
       },
       {
        "w": "it",
-       "from": 40,
-       "to": 45
+       "from": 38,
+       "to": 43
       },
       {
        "w": "the",
-       "from": 45,
-       "to": 52
+       "from": 43,
+       "to": 49
       },
       {
-       "w": "facts",
-       "from": 52,
-       "to": 63
+       "w": "real",
+       "from": 49,
+       "to": 56
       },
       {
-       "w": "that",
-       "from": 63,
-       "to": 72
-      },
-      {
-       "w": "matter,",
-       "from": 72,
-       "to": 95
+       "w": "things,",
+       "from": 56,
+       "to": 68
       },
       {
        "w": "read",
-       "from": 95,
-       "to": 104
+       "from": 68,
+       "to": 85
       },
       {
        "w": "every",
-       "from": 104,
-       "to": 114
+       "from": 85,
+       "to": 94
       },
       {
        "w": "line,",
-       "from": 114,
-       "to": 132
+       "from": 94,
+       "to": 103
       },
       {
-       "w": "fix",
-       "from": 132,
-       "to": 139
+       "w": "remove",
+       "from": 103,
+       "to": 122
       },
       {
        "w": "what",
-       "from": 139,
-       "to": 148
+       "from": 122,
+       "to": 130
       },
       {
        "w": "isn't",
-       "from": 148,
-       "to": 159
+       "from": 130,
+       "to": 139
       },
       {
-       "w": "true.",
-       "from": 159,
-       "to": 170
+       "w": "there.",
+       "from": 139,
+       "to": 149
       }
      ],
      "cues": {
-      "1": 91
+      "1": 83
      }
     },
     {
@@ -891,52 +890,52 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative25te/line_08.wav",
-     "from": 182,
-     "frames": 133,
+     "from": 161,
+     "frames": 155,
      "words": [
       {
        "w": "Ammamma's",
-       "from": 182,
-       "to": 199
+       "from": 162,
+       "to": 178
       },
       {
        "w": "reply:",
-       "from": 199,
-       "to": 220
+       "from": 178,
+       "to": 189
       },
       {
        "w": "\"Missing",
-       "from": 220,
-       "to": 236
+       "from": 210,
+       "to": 226
       },
       {
        "w": "me?",
-       "from": 236,
-       "to": 252
+       "from": 226,
+       "to": 233
       },
       {
        "w": "You're",
-       "from": 252,
-       "to": 264
+       "from": 233,
+       "to": 256
       },
       {
        "w": "10",
-       "from": 264,
-       "to": 269
+       "from": 256,
+       "to": 261
       },
       {
        "w": "steps",
-       "from": 269,
-       "to": 279
+       "from": 261,
+       "to": 272
       },
       {
        "w": "away,",
-       "from": 279,
-       "to": 289
+       "from": 272,
+       "to": 282
       },
       {
        "w": "come",
-       "from": 289,
+       "from": 282,
        "to": 298
       },
       {
@@ -947,11 +946,11 @@
       {
        "w": "eat!\"",
        "from": 305,
-       "to": 315
+       "to": 316
       }
      ],
      "cues": {
-      "1": 216
+      "1": 210
      }
     }
    ]

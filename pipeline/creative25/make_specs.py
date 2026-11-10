@@ -12,43 +12,43 @@ R = ROOT / "reels"
 
 # n: (prop, English, Telugu). prop: GuessCrayon.tsx. " | " = two takes (a beat of silence before the second).
 LINES = {   # "Grandma" on the English page (Vamsi's rule: "Mom", not "Amma"); v2 (script review): the AI wish used the real details, so you have to look; "next door" planted in line 1
-    1: ("hook", "Grandma turns eighty. Both grandsons live next door. [1] One typed his wish for ten minutes. One tapped an AI.",
-        "అమ్మమ్మకి ఎనభై ఏళ్లు. మనవళ్ళు ఇద్దరూ పక్కింట్లోనే ఉంటారు. | [1] ఒకడు పది నిమిషాలు టైప్ చేశాడు. ఇంకొకడు చాట్‌బాట్‌ని ఒక్క ట్యాప్ తో అడిగాడు."),
+    1: ("hook", "Grandma turns eighty. Both grandsons live next door. [1] One typed his wish for ten minutes. One gave an AI two details, and tapped once.",   # render review: "1 tap" vs "used both details"
+        "అమ్మమ్మకి ఎనభై ఏళ్లు. మనవళ్ళు ఇద్దరూ పక్కింట్లోనే ఉంటారు. | [1] ఒకడు, పది నిమిషాలు టైప్ చేశాడు. ఇంకొకడు, చాట్‌బాట్‌కి రెండు విషయాలు చెప్పి, ఒక్కసారి ట్యాప్ చేశాడు."),
     2: ("quiz", "Which one did the AI write? [1] One, or two?", "ఏది చాట్‌బాట్ రాసింది? [1] ఒకటా, రెండా?"),
     3: ("reveal", "Two. [1] \"I miss you dearly\"... from next door?", "రెండు. [1] పక్కింట్లో ఉండి, నిన్ను మిస్ అవుతున్నా అంటాడా?"),
     4: ("tells", "The AI used both real details. [1] Then it guessed the rest.", "చాట్‌బాట్, రెండు నిజమైన విషయాలు వాడింది. [1] మిగతాదంతా ఊహించింది."),
-    5: ("test", "We tested a small free AI on our laptop, not ChatGPT. With no details, ten tries: [1] all ten said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
+    5: ("test", "We tested a small free AI on our laptop. Not ChatGPT. With no details, ten tries: [1] all ten said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
         "మేం మా ల్యాప్‌టాప్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్‌ని టెస్ట్ చేశాం, చాట్ జీపీటీ కాదు. వివరాలు లేకుండా, పది సార్లు: | [1] పదికి పది, ఒకే మాట: మే దిస్ స్పెషల్ డే. ఒకసారైతే, ఆఫ్ కోర్స్ అని మొదలుపెట్టింది."),
     6: ("twist", "With the two details, it used both, every time. [1] But five times, it guessed \"I miss you\".",
         "రెండు వివరాలు ఇస్తే, ప్రతిసారీ రెండూ వాడింది. [1] కానీ ఐదు సార్లు, నిన్ను మిస్ అవుతున్నా అని ఊహించింది."),
     7: ("rule", "So tell it the facts that matter, [1] read every line, and fix what isn't true.",
-        "అందుకే, ముఖ్యమైన నిజాలు చెప్పండి, [1] ప్రతి లైన్ చదవండి, నిజం కానిది సరిచేయండి."),
-    8: ("loop", "Grandma's reply: [1] \"Miss me? You're ten steps away. Come and eat!\"",
-        "అమ్మమ్మ రిప్లై: [1] మిస్ అవుతున్నావా? పది అడుగుల దూరంలో ఉన్నావ్, వచ్చి తిను!"),
+        "అందుకే, అసలు విషయాలు చెప్పండి, [1] ప్రతి లైన్ చదవండి, లేనిది తీసేయండి."),
+    8: ("loop", "Grandma's reply: | [1] \"Miss me? You're ten steps away. Come and eat!\"",   # render review: a beat before "Miss me?"
+        "అమ్మమ్మ రిప్లై: | [1] మిస్ అవుతున్నావా? పది అడుగుల దూరంలో ఉన్నావ్, వచ్చి తిను!"),
 }
 TTS_EN = {}   # filled below if a word needs a spelling for the voice
-SHOW = {1: "Grandma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One tapped an AI.",
+SHOW = {1: "Grandma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One gave an AI 2 details, and tapped once.",
         5: "We tested a small free AI on our laptop, not ChatGPT. With no details, 10 tries: all 10 said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
         6: "With the 2 details, it used both, every time. But 5 times, it guessed \"I miss you\".",
-        8: "Grandma's reply: \"Miss me? You're 10 steps away. Come and eat!\""}
+        8: "Grandma's reply: <pause 0.7> \"Miss me? You're 10 steps away. Come and eat!\""}
 SHOW_TE = {
-    1: "Ammamma turns 80. Both grandsons live next door. One typed for 10 minutes. The other asked a chatbot with 1 tap.",
+    1: "Ammamma turns 80. Both grandsons live next door. <pause 0.3> One typed for 10 minutes. The other told a chatbot 2 things and tapped once.",
     2: "Which one did the chatbot write? 1, or 2?", 3: "2. He lives next door, and says \"I miss you\"?",
     4: "The chatbot used the 2 real details. It guessed all the rest.",
     5: "We tested a small free chatbot on our laptop, not ChatGPT. No details, 10 times: 10 out of 10, the same words: \"May this special day\". Once it even began \"Of course\".",
     6: "Given 2 details, it used both every time. But 5 times it guessed \"I miss you\".",
-    7: "So: tell it the facts that matter, read every line, fix what isn't true.",
-    8: "Ammamma's reply: \"Missing me? You're 10 steps away, come and eat!\"",
+    7: "So: tell it the real things, read every line, remove what isn't there.",
+    8: "Ammamma's reply: <pause 0.7> \"Missing me? You're 10 steps away, come and eat!\"",
 }
 TEXTS = {   # on screen, English on both pages (2 and the test lines are from series/scripts/creative25_demo/7B.json)
-    "a": "Happy 80th, Grandma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+    "a": "Happy 80th, Grandma! 🎂 Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! 😋",   # render review: only 2 had emoji
     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
     "made": "", "aDetails": ["running behind my cycle", "pulihora"], "bDetails": ["ride a bicycle", "pulihora"],
-    "bGuess": ["miss you dearly", "filled with love", "and joy"], "bStock": [], "dStock": [],
+    "bGuess": ["miss you dearly"], "bStock": [], "dStock": [],
 }
 NUMS = {"stock": "10/10", "both": "10/10", "miss": "5/10"}
-SPLIT_PAUSE = {1: 0.3, 5: 0.3}   # Telugu lines 1 and 5 in two takes: Parler babbled the long lines
+SPLIT_PAUSE = {1: 0.3, 5: 0.3, 8: 0.7}   # Telugu lines 1 and 5 in two takes: Parler babbled the long lines
 # Sound (CLAUDE.md arc): a boom and pops on frame 1; three pops on the countdown in the hold; a boom and clap on "Two", a
 # buzz on the stock phrases; a ding on the real details; a boom on "ten out of ten"; a ding into the twist, a buzz on
 # "I miss you"; a clap and boom into the rule; a riser and the slam back to frame 1.

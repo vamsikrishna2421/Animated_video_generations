@@ -109,13 +109,13 @@ const StGuess: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (["test", "twist", "rule"].includes(b.prop)) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 11)} src="audio/sfx_whoosh.wav" vol={0.4} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("p")} at={2} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.4} />);
-    if (b.prop === "quiz") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={end - 2 + q * 20} src="audio/sfx_pop.wav" vol={0.5} />));
+    if (b.prop === "quiz") [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("t" + q)} at={end - 2 + q * 20} src="audio/sfx_pop.wav" vol={1.0} />, <Sfx key={k("u" + q)} at={end - 2 + q * 20} src={CLAP} vol={0.35} />));   // render review: the ticks were ~-45 dB
     if (b.prop === "reveal") sfx.push(<Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={at} src={CLAP} vol={0.45} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.3} />);
     if (b.prop === "tells") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3)} src="audio/gag_ding.wav" vol={0.4} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.8} />);
     if (b.prop === "twist") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.35} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("c")} at={at} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={0.6} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("e")} at={end - 26} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("f")} at={end - 26} src={CLAP} vol={0.5} />, <Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
   void te;
   return (
@@ -129,10 +129,10 @@ const StGuess: React.FC<SP> = ({ s }) => {
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
         if (b.prop === "test" || b.prop === "twist") {
           const tw = b.prop === "twist";
-          dark(c, W, H, tw ? "WITH THE 2 REAL DETAILS" : "OUR TEST: A SMALL FREE AI", [tw ? "the same AI, 10 more tries" : "on our laptop, not ChatGPT · 10 tries, no details"], tw ? "#86efac" : "#fde68a");
+          dark(c, W, H, tw ? "WITH THE 2 REAL DETAILS" : "OUR TEST: A SMALL FREE AI", [tw ? "the same AI, 10 more tries" : "on our laptop · NOT ChatGPT", tw ? "" : "10 tries, NO details"], tw ? "#86efac" : "#fde68a");
           const rows: [string, string, string, number][] = tw
             ? [["used both details", N.both, GREEN, ln.from + 4], ["guessed \"I miss you\"", N.miss, RED, cu(1, 0.5)]]
-            : [["said \"May this special day\"", N.stock, "#fbbf24", cu(1, 0.3)]];
+            : [["said \"May this special day\"", N.stock, "#fbbf24", ln.from + 6]];
           rows.forEach(([a, v, col, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 470 + q * 190;
@@ -143,9 +143,9 @@ const StGuess: React.FC<SP> = ({ s }) => {
           });
           if (!tw) {   // a real reply from our test (try 6), its first line
             const ko = seg(f, cu(1, 0.65), cu(1, 0.65) + 8);
-            if (ko > 0) { c.save(); c.globalAlpha = clamp(ko * 3); c.font = SANS(34, 800); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("one reply began:", W / 2, 740); c.restore(); }
-            bubble(c, 90, 770, W - 180, "AI", T.of, ko, { size: 40, marks: ["Of course!"], mk: ko, markRgb: "248,113,113" });
-            chip(c, "Qwen2.5 7B, offline · every reply read by hand", W / 2, 1300, "#fde68a", INK, seg(f, ln.from + 4, ln.from + 12), 32);
+            if (ko > 0) { c.save(); c.globalAlpha = clamp(ko * 3); c.font = SANS(40, 800); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("one reply even began:", W / 2, 750); c.restore(); }
+            bubble(c, 90, 780, W - 180, "AI", T.of, ko, { size: 42, marks: ["Of course!"], mk: ko, markRgb: "248,113,113" });
+            chip(c, "Qwen2.5 7B · offline · read by hand", W / 2, 1180, "#fde68a", INK, seg(f, ln.from + 4, ln.from + 12), 40);
           }
         } else if (b.prop === "rule") {
           dark(c, W, H, "BEFORE YOU SEND AN AI WISH", [], "#fde68a");
@@ -163,7 +163,7 @@ const StGuess: React.FC<SP> = ({ s }) => {
           const hookOn = b.prop === "hook" || loopOn;
           if (hookOn || b.prop === "quiz") {   // frame 1: who wrote what, sound-off readable
             block(c, 50, 372, "ONE GRANDSON TYPED", "10 minutes", "#4ade80");
-            block(c, 560, 372, "ONE ASKED AN AI", "1 tap", "#f87171");
+            block(c, 560, 372, "ONE GAVE AN AI 2 DETAILS", "1 tap", "#f87171");
           }
           const y0 = hookOn || b.prop === "quiz" ? 545 : 380;
           const reveal = ["reveal", "tells"].includes(b.prop);
@@ -181,6 +181,7 @@ const StGuess: React.FC<SP> = ({ s }) => {
           if (reveal) {
             stamp(c, "AI", W - 170, y0 + ha + 80, RED, b.prop === "reveal" ? seg(f, ln.from, ln.from + 8) : 1, 90, -0.12);
             if (b.prop === "reveal") chip(c, "he lives next door", W / 2, Math.min(1480, y0 + ha + hb + 100), "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 44);
+            chip(c, "Grandma's reply: at the end", W / 2, Math.min(1560, y0 + ha + hb + 190), "#e0e7ff", "#1e3a8a", b.prop === "reveal" ? seg(f, cu(1, 0.8), cu(1, 0.8) + 8) : 1, 36);
             if (b.prop === "tells") { chip(c, "real details", 300, Math.min(1480, y0 + ha + hb + 100), "#dcfce7", "#14532d", seg(f, ln.from + 6, ln.from + 14), 40); chip(c, "guesses", 780, Math.min(1480, y0 + ha + hb + 100), "#fee2e2", "#7f1d1d", kGuess, 40); }
           }
           if (b.prop === "fixed") {   // the AI's wish with the two details, from our test
@@ -188,7 +189,7 @@ const StGuess: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "loop" && !loopOn) {   // Ammamma replies to one of them
             const kk = seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6);
-            if (kk > 0) bubble(c, 120, 1180, W - 170, "Grandma → Sai", "Miss me? You're 10 steps away. Come and eat! 😄", kk, { size: 42 });
+            if (kk > 0) bubble(c, 100, 1130, W - 150, "Grandma → Sai", "Miss me? You're 10 steps away. Come and eat! 😄", kk, { size: 48 });
           }
         }
       }} />

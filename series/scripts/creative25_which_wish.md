@@ -1,4 +1,4 @@
-# Creative 25 "Which Wish Did the AI Write?" (the Nov 10 creative slot) · script v2, Nov 10
+# Creative 25 "Which Wish Did the AI Write?" (the Nov 10 creative slot) · script v3, Nov 10
 
 ## The format (format rotation, Vamsi via Bujji, Nov 9: "too routine, all skits")
 A one-question challenge, not a dialogue skit: the family WhatsApp group on screen, two birthday wishes (1 and 2), one
@@ -46,7 +46,20 @@ times" it guessed "I miss you"; the rule: tell it the facts that matter, read ev
 is Ammamma's reply to Sai, "Miss me? You're 10 steps away. Come and eat!"; Telugu fixed as listed ("pulihora" is no longer
 spoken in English).
 
-## Script (English, v2; narrator) · ~45 s
+## Render review (human-viewer, the v2 render) and what changed (v3)
+Both stop on frame 1 (hook 8 and 7) and guess "2" within 3 s, for the wrong reason: only wish 2 had emoji and the AI
+sign-off. Both: "One tapped an AI" contradicts "the AI used both real details" (someone typed them); the reply at 0:50 is
+the best line but nothing says it's coming; the test card sat empty for ~5 s and its labels (the model chip, "not ChatGPT",
+"one reply began") were too small; the countdown ticks were ~-45 dB (silent on a metro); no beat before "Miss me?" and no hit
+on "Come and eat!"; "not ChatGPT" said in one breath. Priya: only "miss you" is a guess ("filled with love and joy" is
+filler). Telugu: "పది" came out "పతి" at 0:04 and in the reply; line 7 sounded like a police inquiry / a textbook.
+Changed (v3): wish 1 (ours) has emoji too (no AI text changed); line 1 "One gave an AI two details, and tapped once" (the
+block too); a chip at the reveal, "Grandma's reply: at the end"; the test card's row up at once, the labels 40 px; the
+ticks louder with a clap; the reply line in two takes (a 0.7 s beat before "Miss me?") and a boom and clap on "Come and
+eat!"; "on our laptop. Not ChatGPT." as its own sentence; only "miss you dearly" marked as a guess; Telugu line 1b and 8
+re-voiced for "పది", line 7 "అసలు విషయాలు చెప్పండి, ప్రతి లైన్ చదవండి, లేనిది తీసేయండి".
+
+## Script (English, v2; lines 1, 5 and 8 as in v3 above) · ~45 s
 | # | Line |
 |---|---|
 | 1 | Ammamma turns eighty. Both grandsons live next door. [1] One typed his wish for ten minutes. One tapped an AI. |
