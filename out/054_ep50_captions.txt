@@ -1,30 +1,36 @@
 UPLOAD: 054
-VIDEO: 054_ep50_your_first_ai_api_call.mp4
+VIDEO: 054_ep50_47_vs_8600.mp4  (teaching skit, 64 s, AI voices in the Creative 21 standard; replaces the older lesson-format file in slot 054; send copy: 054_ep50_47_vs_8600_ig.mp4). It loops: "...in the family WhatsApp group!" and it is frame 1 again: ₹47 vs ₹8,600.
 
 === CAPTION ===
-The hands-on season starts now! Your first AI API call in about 10 lines of Python.
+"₹47 a month," Suresh said. The bill: ₹8,600. He had posted a photo of his code, API key and all, in a help group.
 
-AI From Scratch, Episode 50: your first AI API call
-- What happens in an API call
-- Setup: Python, an API key, pip install anthropic
-- The code, line by line
-- Jargon: API key, SDK, role, max tokens
-- Never commit your API key to GitHub
+Episode 50 of AI From Scratch: your first AI API call (Season 6: build it yourself)
+- An app with "AI inside" makes API calls: it sends the customer's message and a secret API key to the AI company's computer, which answers and bills whoever owns the key.
+- Our test: we locked our own AI (a free model on our own computer, the same kind of call) with a key. No key: refused (401). One letter wrong: refused (401). The right key: it answered. 20 shop questions, 20 right prices.
+- One shop reply was about 400 tokens in and 7 out: about 3 paise at a small OpenAI model's published price (gpt-5.4-mini). 50 replies a day: about ₹47 a month. Cheaper models cost less; some have free tiers.
+- The ₹8,600 is a story number. The risk is real: GitGuardian counted 1,275,105 exposed secrets for AI services in its 2026 report (28.6 million new secrets in public GitHub commits in 2025).
 
-Quiz at the end. Got it right? Comment below.
+What to do:
+1. The API key is your ATM PIN: keep it in a locked setting only the app reads (an environment variable), never in code, a photo, a chat or a screenshot
+2. Turn on a hard spend limit, not just an alert (OpenAI: the Limits page, "Enforce a hard limit"; alerts only warn)
+3. Leaked? Delete the key and make another now; ask the company's support about the bill (no promise)
+Only use the ChatGPT app? You don't have an API key; this is for anyone building with an AI API.
 
-Model names change often, so check your provider's docs for the latest.
-Next: build a chatbot with a system prompt.
-Follow @ai_maastaaru to learn AI from scratch.
+Next: EP51, build a chatbot with a system prompt.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Try it: search your WhatsApp chats for the word "password" or "key". Found one in a group? Delete it and comment "done".
 
 === HASHTAGS ===
-#AIMaastaaru #Python #LearnAI #AIAPI #CodingForBeginners
+#AIFromScratch #APIKey #LearnAI #BuildWithAI #CyberSafety
 
 === PINNED_COMMENT ===
-Quiz answer: In an environment variable, never in your code! Did you run it? Comment what the AI said to you!
+How we tested (Nov 10, 2026): llama.cpp's OpenAI-compatible server running Qwen2.5-7B-Instruct (4-bit) on a 4-core computer, locked with a fresh API key, called over HTTP. The same request with no key and with the key's last letter changed: HTTP 401 both times; with the right key: HTTP 200. 20 customer WhatsApp questions with the shop's 25-line price list: 20 right price-and-stock answers, read by hand. Tokens counted with OpenAI's tokenizer for its current models (o200k_base): about 396 in, 6.5 out a reply; at gpt-5.4-mini's standard price ($0.75 per 1M input tokens, $4.50 per 1M output) and ₹95.25 a dollar (the RBI reference rate, Nov 6): 3.1 paise a reply, ₹46.66 for 1,500 replies. gpt-5-nano costs less; Gemini 3.1 Flash-Lite has a free tier.
+Sources: OpenAI API docs: pricing; API keys ("Keep secret keys out of browser code, mobile apps, source control, logs..."); spend limits ("Spend alerts do not enforce a cap"; a hard limit stops requests, not instantly). Google AI Studio docs: "Treat your Gemini API key like a password." GitGuardian, The State of Secrets Sprawl 2026: 28.6 million new secrets in public GitHub commits in 2025, 1,275,105 for AI services. Ravi anna, Suresh, the shop and the ₹8,600 are made up.
 
 === COVER ===
-'First API Call' title card
+Frame 1: two blocks, "EXPECTED ₹47/month" (green) and "THE BILL ₹8,600" (red); a yellow chip "the shop AI's key, leaked in a photo"; name chips SURESH and RAVI ANNA; Ravi shocked with his arms up, Suresh at a laptop on the counter.
 
 === ALT_TEXT ===
-Animated coding tutorial: making a first AI API call in Python, line by line.
+Crayon-animated skit in Ravi anna's kirana shop. Two blocks: expected ₹47 a month; the bill ₹8,600. Ravi: forty-seven rupees? The bill is eight thousand six hundred! Suresh: I only posted a photo of my code in a help group. A WhatsApp group of 1,204 members: Suresh's photo of his code with the line KEY = "sk-proj-..." circled in red; a counter climbs from ₹47 to ₹8,600, "someone else, using the key, billed to Ravi's card (the story is made up, the risk is real)". The shop AI: with our API key in it; whoever copies it can run AI on your money. Ravi: API key? What is all this? A card, one API call: the customer's message reaches the shop laptop, where the key lives; the laptop sends the message plus the key to the AI company's computer; the reply comes back; billed to whoever owns the key. Ravi: and it just trusts the key? Our test, our own AI locked with a key on our own computer: no key, 401 refused; one letter wrong, 401 refused; the right key, 200 answered, "₹165 (in stock)"; 20 shop questions, 20 right answers. Suresh: and each answer costs? A card: 3 paise; times 50 replies a day times 30 days: ₹47 a month; a small OpenAI model's published price. Ravi: so this key is my ATM PIN! A stamp: API key = ATM PIN. A quiz: where should the key live? A, in the code; B, in a group chat; C, a locked setting. The AI: C, a locked setting only the app reads; never in code, a photo or a chat. Ravi: and my eight thousand six hundred? The AI: ask their support, no promise; then delete that key, make another, and set a hard spend limit. A card: the API key = your ATM PIN; the bill: ask support, no promise; delete the key, make another; a hard spend limit, not just an alert. Ravi: key changed! I'll keep it safe, in the family WhatsApp group; his message "NEW KEY: sk-proj-a91c..." appears in a family group of 38 members. Frame 1 comes back: ₹47 vs ₹8,600.

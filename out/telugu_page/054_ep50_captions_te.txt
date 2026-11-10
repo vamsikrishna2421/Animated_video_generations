@@ -1,0 +1,30 @@
+UPLOAD: 054 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/054_ep50_insta_te.mp4  (teaching skit, 71 s, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/054_ep50_insta_te_ig.mp4). It loops: "ఫ్యామిలీ వాట్సాప్ గ్రూప్ లో!" taruvaata frame 1: ₹47 vs ₹8,600.
+
+=== CAPTION ===
+"Nelaki ₹47 maatrame," annaadu Suresh. Bill: ₹8,600. Help group lo tana code photo pettaadu, andulo API key tho saha.
+
+AI From Scratch Episode 50: mee modati AI API call (Season 6: meere build cheyyandi)
+- "AI unna" app prati javaabuki oka API call chestundi: customer message, inkaa oka secret API key ni AI company computer ki pamputundi. Adi javaabu istundi, bill key evaridi ayithe vaallaki.
+- Maa test: maa computer lo maa sonta AI ki key tho taalam vesaam (ade rakam call). Key lekapothe: refused (401). Okka aksharam tappu: refused (401). Sariaina key: javaabu vachindi. 20 shop prashnalu, 20 sariaina dharalu.
+- Oka shop javaabu: dhaadaapu 400 tokens lopaliki, 7 bayatiki: oka chinna OpenAI model dhara (gpt-5.4-mini) prakaaram dhaadaapu 3 paisalu. Rojuki 50 javaabulu: nelaki dhaadaapu ₹47. Inkaa chavaka models unnaayi; konni ki free tier undi.
+- ₹8,600 kadha lo number. Risk nijam: GitGuardian 2026 report lo AI services ki chendina 12,75,105 secrets bayata paddaayi.
+
+Emi cheyyaali:
+1. API key = mee ATM PIN: app maatrame chuse lock setting lo (environment variable) unchandi; code, photo, chat, screenshot lo eppudu vaddu
+2. Kharchu ki gatti limit (hard spend limit) pettandi; alerts kevalam hechcharika maatrame
+3. Bayataki pothe: aa key delete chesi, vere key teesukondi; bill gurinchi company support ni adagandi (guarantee ledu)
+ChatGPT app maatrame vaadutunnaaraa? Meeku API key undadu; idi AI API tho build chese vaallakosam.
+
+Next: EP51, system prompt tho chatbot build cheyyadam.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+Try cheyyandi: mee WhatsApp chats lo "password" leda "key" ani search cheyyandi. Group lo okati kanipiste, delete chesi "done" ani comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #APIKey #LearnAI #CyberSafety
+
+=== PINNED_COMMENT ===
+Memu ela test chesaam (Nov 10, 2026): llama.cpp OpenAI-compatible server, Qwen2.5-7B-Instruct (4-bit), 4-core computer, fresh API key tho lock, HTTP call. Key lekapothe, key lo chivari aksharam maarchithe: HTTP 401. Sariaina key: HTTP 200. 20 customer WhatsApp prashnalu, 25 lines price list: 20 sariaina javaabulu (chethitho chadivaam). OpenAI tokenizer (o200k_base) tho lekka: javaabuki dhaadaapu 396 in, 6.5 out; gpt-5.4-mini dhara ($0.75 / 1M input, $4.50 / 1M output), ₹95.25 dollar ki (RBI reference rate, Nov 6): javaabuki 3.1 paisalu, 1,500 javaabulaki ₹46.66.
+Sources: OpenAI API docs (pricing, API keys, spend limits); Google AI Studio docs ("Treat your Gemini API key like a password."); GitGuardian, The State of Secrets Sprawl 2026. Ravi anna, Suresh, shop, ₹8,600 anni kalpitam.
