@@ -707,3 +707,17 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     mark ours as "our example".
   - A Parler take passing its own check can still be heard wrong in the full mix: give each Telugu key word a MUST group
     (numbers included: "రెండు", "ఆరు" were swallowed) and six tries; a number alone ("నూట ఒకటి.") voices badly, add a word.
+- Nov 10 lessons (EP50, the first hands-on episode):
+  - A story bill must survive caching: "the bot sends the whole stock book every time" looked costly, but providers
+    cache a repeated prefix automatically, so the honest failure was the leaked key, not the long prompt.
+  - Background art can contradict an insert: the shop board's "Dal ₹120" against the insert's toor dal ₹165. Pick
+    examples the scene's art doesn't show.
+  - A spoken quiz letter needs its own take ("Option C!" | the answer): "C: a locked setting" was heard "A".
+  - Fish with the American refs says "paise" as "pays": put "pie-say" in the take's text, keep "paise" on screen.
+  - Telugu: "ఏ పీ ఐ" collapses to "ఆపీ"; "ఏ, పీ, ఐ, కీ యా?" came out as "ఏపీ ఐ కీయా". A Telugu speed-up past ~1.08 crams the
+    numbers: cut the gaps and the bed drops instead. The judge's BABBLE flag fires on a line's own repeats ("కోడ్ లో, ఫోటో
+    లో, చాట్ లో"): read the transcript before throwing a take away.
+  - An inline comment added after a replaced string swallowed the tuple's closing `),` (third time): comments go after
+    the whole statement.
+  - A container restart wipes `/dev/shm` mid-run (twice on Nov 10): the tries already made sit in `takes/_tries`, so pick
+    one by hand (`heard()`, `level()`, `tail()`) instead of waiting for the models to come back.
