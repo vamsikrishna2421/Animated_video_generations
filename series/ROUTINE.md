@@ -237,6 +237,12 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
 
 - Creative 25 (Nov 10), from Bujji's Skit 14 7-day read (Nov 9): the caption ask is a personal-experience ask fitted to
   the topic ("has an AI ever got X wrong for you? what happened?"); that is its one variable.
+- Format rotation (Vamsi via Bujji, Nov 9: "too routine, all skits, what happened to tutorials?"): never two dialogue
+  skits in a row in the creative slot (rotate: one-question challenge, story mode, the 3D book, myth vs fact, POV, a
+  tutorial); at least 1 post in 3 a tutorial. Season 6 (EP51-EP57) is made as real screen tutorials, not shop skits.
+- Nov 11 creative slot: the Hanuman Chalisa pilot (Bujji's [STRATEGY] Nov 9; the plan is in Claude's ACK of Nov 10):
+  chaupais 1-4, one locked Hanuman design (a design sheet first), the line chanted in Hindi, the meaning in EN / TE, no
+  music bed. Parts 2-5 only after Vamsi approves the style.
 
 ## Lessons that cost a re-render (check before rendering)
 - EP42 (Nov 1): a name or a soft word opening a line under the frame-1 hit gets misheard ("Padma" as "Panama", "Fatima"):
