@@ -17,9 +17,9 @@ LINES = {   # v2 (script review): line 1 shorter; the test said to be ours; the 
     2: ("suresh", "suresh", "oops", "I only posted a photo of my code... in a help group.", "హెల్ప్ గ్రూప్ లో, నా కోడ్ ఫోటో పెట్టా, అంతే..."),
     3: ("ai", "leak", "leak", "With our API key in it. [1] Whoever copies it can run AI on your money.",
         "అందులో మన కీ ఉంది. [1] అది కాపీ చేసిన ఎవరైనా, మీ డబ్బుతో వాడేయొచ్చు."),
-    4: ("ravi", "ravi", "what", "API key? What is all this?", "ఏ పీ ఐ కీయా? ఇదంతా ఏంటి?"),
+    4: ("ravi", "ravi", "what", "API key? What is all this?", "ఏ, పీ, ఐ, కీ యా? ఇదంతా ఏంటి?"),   # render review: "ఏ పీ ఐ" collapsed to "ఆపీ"
     5: ("ai", "call", "call", "Each reply I give is one API call: [1] the laptop sends the message, with the key, to the AI company.",
-        "నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, చాట్ జీపీటీ లాంటి కంపెనీకి పంపుతుంది."),
+        "నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, గూగుల్ లాంటి కంపెనీకి పంపుతుంది."),   # render review: "like ChatGPT" read as "my ChatGPT app has a key"
     6: ("ravi", "ravi", "trust", "And it just trusts the key?", "అది కీ ని అలా నమ్మేస్తుందా?"),
     7: ("ai", "doors", "doors", "We locked our own AI, on our own computer. No key: refused. One letter wrong: refused. [1] The right key: it answered.",
         "మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో. | [1] సరైన కీ తో: జవాబు వచ్చింది."),   # Parler babbled the whole line: two takes
@@ -28,30 +28,30 @@ LINES = {   # v2 (script review): line 1 shorter; the test said to be ours; the 
         "ఒక చిన్న మోడల్ ధరకి, దాదాపు మూడు పైసలు. [1] రోజుకి యాభై జవాబులు అంటే, నెలకి నలభై ఏడు రూపాయలు."),
     10: ("ravi", "ravi", "pin", "So this key is my ATM PIN!", "అంటే ఈ కీ, నా ఏటీఎం పిన్ లాంటిది!"),
     11: ("suresh", "quiz", "quiz", "Then where do I keep it? [1] In the code? In our group?", "మరి కీ ఎక్కడ దాచాలి? [1] కోడ్ లోనా? గ్రూప్ లోనా?"),
-    12: ("ai", "quiz", "answer", "C: a locked setting only the app reads. [1] Never in code, a photo or a chat.",
-         "సి: యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు."),
+    12: ("ai", "quiz", "answer", "Option C! | A locked setting only the app reads. [1] Never in code, a photo or a chat.",   # render review: "C" was heard "A"
+         "ఆప్షన్ సి! | యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు."),
     13: ("ravi", "ravi", "money", "And my eight thousand six hundred?", "మరి నా ఎనిమిది వేల ఆరు వందలు?"),
-    14: ("ai", "rule", "rule", "Ask their support; no promise. [1] Then delete that key, make another, and set a hard spend limit.",
+    14: ("ai", "rule", "rule", "Ask the AI company's support; no promise. [1] Then delete that key, make another, and set a hard spend limit.",
          "వాళ్ళ సపోర్ట్ ని అడగండి, గ్యారంటీ లేదు. [1] ఆ కీ డిలీట్ చేసి, వేరే కీ తీసుకోండి. ఖర్చుకి గట్టి లిమిట్ పెట్టండి."),
     15: ("ravi", "wide", "loop", "Key changed! I'll keep it safe... [1] in the family WhatsApp group!", "కీ మార్చేశా! జాగ్రత్తగా దాస్తా... [1] ఫ్యామిలీ వాట్సాప్ గ్రూప్ లో!"),
 }
-SHOW = {1: "₹47?! The bill is ₹8,600!", 7: "We locked our own AI, on our own computer. No key: refused. 1 letter wrong: refused. The right key: it answered.",
+SHOW = {1: "₹47?! The bill is ₹8,600!", 12: "Option C! <pause 0.8> A locked setting only the app reads. Never in code, a photo or a chat.", 7: "We locked our own AI, on our own computer. No key: refused. 1 letter wrong: refused. The right key: it answered.",
         9: "About 3 paise, at a small model's price. 50 replies a day: ₹47 a month.", 13: "And my ₹8,600?"}
 SHOW_TE = {
     1: "You said ₹47?! The bill is ₹8,600!", 2: "I just posted a photo of my code in a help group...",
     3: "Our key is in it. Anyone who copies it can use your money.", 4: "An API key? What is all this?",
-    5: "Every reply I give is an API call. The laptop sends the message, with the key, to a company like ChatGPT's.",
+    5: "Every reply I give is an API call. The laptop sends the message, with the key, to a company like Google.",
     6: "It just trusts the key like that?",
     7: "On our computer, we locked our own chatbot. No key: no. Even 1 letter wrong: no. The right key: it answered.",
     8: "How much does each answer cost?", 9: "At a small model's price, about 3 paise. 50 replies a day: ₹47 a month.",
     10: "So this key is like my ATM PIN!", 11: "So where should I keep the key? In the code? In the group?",
-    12: "C: in a locked setting only the app sees. In code, a photo, a chat: never.",
+    12: "Option C! In a locked setting only the app sees. <pause 0.8> In code, a photo, a chat: never.",
     13: "And my ₹8,600?", 14: "Ask their support, no guarantee. Delete that key, get another one. Put a firm limit on spending.",
     15: "Key changed! I'll keep it safe... in the family WhatsApp group!",
 }
 TTS_EN = {9: "About three pie-say, at a small model's price. [1] Fifty replies a day: forty-seven rupees a month."}   # Fish said "paise" as "pays"
 TEMPO_EN = {"ravi": 1.08, "ai": 1.06, "suresh": 1.08}
-TEMPO_TE = {"ravi": 1.08, "ai": 1.12, "suresh": 1.08}   # v2 voices ran 74.5 s in Telugu
+TEMPO_TE = {"ravi": 1.07, "ai": 1.08, "suresh": 1.07}   # render review: the 1.12 speed-up crammed the numbers; cut the dead air instead
 # Sound (CLAUDE.md arc): a boom, clap and buzz on frame 1 and a boom on the bill; the leak's buzz and the meter's cash; pops
 # as the call travels; two buzzes on the refusals and a ding and boom on the right key; a boom on "three paise", a cash
 # sound on ₹47; a clap on "ATM PIN"; the bed out before the quiz answer, a ding on C; a clap and boom into the rule; a
@@ -59,9 +59,9 @@ TEMPO_TE = {"ravi": 1.08, "ai": 1.12, "suresh": 1.08}   # v2 voices ran 74.5 s i
 SCENES = [("s_a", (1, 2, 3, 4, 5, 6), {"boost": 1.0, "drop_at": [[0, 1, 0.2]], "tail": 0.0}),
           ("s_b", (7, 8, 9, 10, 11, 12), {"boost": 1.3, "lift": 0.6, "drop_at": [[0, 1, 0.2]], "drop_pre": [[5, 0.0, 0.8]], "tail": 0.0}),
           ("s_c", (13, 14, 15), {"outro": True, "pre": 0.5, "boost": 1.7, "lift": 0.8, "rise": 1.6, "tail": 0.0})]
-GAP = {1: 0.2, 2: 0.2, 3: 0.3, 4: 0.2, 5: 0.3, 6: 0.2, 7: 0.3, 8: 0.2, 9: 0.3, 10: 0.25, 11: 2.4, 12: 0.3, 13: 0.2, 14: 0.4, 15: 0.0}   # script review: the quiz card held ~3 s
-GAP_TE = {}
-FLAGS_TE = {"s_c": {"boost": 1.6, "rise": 1.45}}
+GAP = {1: 0.2, 2: 0.2, 3: 0.3, 4: 0.2, 5: 0.3, 6: 0.2, 7: 1.3, 8: 0.2, 9: 0.3, 10: 0.25, 11: 1.4, 12: 0.3, 13: 0.2, 14: 0.4, 15: 0.0}   # render review: "answered" held ~1.5 s; the quiz ran 11 s
+GAP_TE = {7: 0.7, 11: 0.5, 3: 0.2, 5: 0.2, 9: 0.2, 14: 0.3}   # the Telugu quiz line itself runs ~5 s with the options up
+FLAGS_TE = {"s_a": {"drop_at": []}, "s_b": {"drop_pre": []}, "s_c": {"boost": 1.6, "rise": 1.45}}   # render review: holes at 1.8 s and 47.8 s
 YT = {"s_a": "₹47 vs ₹8,600", "s_b": "One API call", "s_c": "The key is your PIN"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -72,7 +72,7 @@ def spec(lang="en"):
     s = {"id": sid, "title": "₹47 vs ₹8,600 (EP50: your first AI API call)" + (" (Telugu audio)" if te else ""), "label": "EP50",
          "banner": "Your first AI API call", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
          "musicVol": [0.2, 0.42], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.5, "captionMode": "phrase",
-         "musicEQ": [[250, -8, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.5 if not te else 1.0,   # render review: a steady pad at 200-300 Hz on the male voices
+         "musicEQ": [[250, -12, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0 if not te else 1.0,   # render review: a steady pad at 200-300 Hz on the male voices
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,   # render review: the tail 5 dB over the voice
          "tempo": 1.0, "captionTop": 1500}
     if te:
@@ -91,8 +91,9 @@ def spec(lang="en"):
                 ln["tts"] = MARK.sub("", TTS_EN[n]).strip()
             if " | " in ln["text"]:   # two takes; the stop before the number (render review: 0.7 s or more)
                 p1, p2 = ln["text"].split(" | ")
-                ln.update({"text": f"{p1} <pause 0.8> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
-                           "tts2": MARK.sub("", p2).strip(), "pause": 0.8})
+                pz = 0.55 if te else 0.8   # Telugu ran 72 s
+                ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
+                           "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)
             beats.append({"who": who, "shot": shot, "prop": prop, "n": n})
         data = {"beats": beats, "captionTop": 1500, "tagSide": {"suresh": "left", "ravi": "right", "ai": "right"},   # render review: "Ravi anna" sat beside Suresh

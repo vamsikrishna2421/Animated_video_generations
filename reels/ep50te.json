@@ -19,7 +19,7 @@
  "musicEQ": [
   [
    250,
-   -8,
+   -12,
    0.8
   ],
   [
@@ -48,13 +48,7 @@
    "type": "sk_api",
    "tail": 0.0,
    "boost": 1.0,
-   "drop_at": [
-    [
-     0,
-     1,
-     0.2
-    ]
-   ],
+   "drop_at": [],
    "data": {
     "beats": [
      {
@@ -115,7 +109,7 @@
      "show": "You said ₹47?! The bill is ₹8,600!",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
@@ -125,7 +119,7 @@
      "show": "I just posted a photo of my code in a help group...",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
@@ -134,28 +128,28 @@
      "text": "అందులో మన కీ ఉంది. [1] అది కాపీ చేసిన ఎవరైనా, మీ డబ్బుతో వాడేయొచ్చు.",
      "show": "Our key is in it. Anyone who copies it can use your money.",
      "maxgap": 0.25,
-     "gap": 0.3,
-     "tempo": 1.12,
+     "gap": 0.2,
+     "tempo": 1.08,
      "gain_db": -1.0
     },
     {
      "who": "ravi",
      "file": "04_ravi.wav",
-     "text": "ఏ పీ ఐ కీయా? ఇదంతా ఏంటి?",
+     "text": "ఏ, పీ, ఐ, కీ యా? ఇదంతా ఏంటి?",
      "show": "An API key? What is all this?",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "05_ai.wav",
-     "text": "నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, చాట్ జీపీటీ లాంటి కంపెనీకి పంపుతుంది.",
-     "show": "Every reply I give is an API call. The laptop sends the message, with the key, to a company like ChatGPT's.",
+     "text": "నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, గూగుల్ లాంటి కంపెనీకి పంపుతుంది.",
+     "show": "Every reply I give is an API call. The laptop sends the message, with the key, to a company like Google.",
      "maxgap": 0.25,
-     "gap": 0.3,
-     "tempo": 1.12,
+     "gap": 0.2,
+     "tempo": 1.08,
      "gain_db": -1.0
     },
     {
@@ -165,7 +159,7 @@
      "show": "It just trusts the key like that?",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     }
    ]
@@ -183,13 +177,7 @@
      0.2
     ]
    ],
-   "drop_pre": [
-    [
-     5,
-     0.0,
-     0.8
-    ]
-   ],
+   "drop_pre": [],
    "data": {
     "beats": [
      {
@@ -246,16 +234,16 @@
     {
      "who": "ai",
      "file": "07_ai.wav",
-     "text": "మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో. <pause 0.8> [1] సరైన కీ తో: జవాబు వచ్చింది.",
+     "text": "మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో. <pause 0.55> [1] సరైన కీ తో: జవాబు వచ్చింది.",
      "show": "On our computer, we locked our own chatbot. No key: no. Even 1 letter wrong: no. The right key: it answered.",
      "maxgap": 0.25,
-     "gap": 0.3,
-     "tempo": 1.12,
+     "gap": 0.7,
+     "tempo": 1.08,
      "gain_db": -1.0,
      "tts": "మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో.",
      "file2": "07b_ai.wav",
      "tts2": "సరైన కీ తో: జవాబు వచ్చింది.",
-     "pause": 0.8
+     "pause": 0.55
     },
     {
      "who": "suresh",
@@ -264,7 +252,7 @@
      "show": "How much does each answer cost?",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
@@ -273,8 +261,8 @@
      "text": "ఒక చిన్న మోడల్ ధరకి, దాదాపు మూడు పైసలు. [1] రోజుకి యాభై జవాబులు అంటే, నెలకి నలభై ఏడు రూపాయలు.",
      "show": "At a small model's price, about 3 paise. 50 replies a day: ₹47 a month.",
      "maxgap": 0.25,
-     "gap": 0.3,
-     "tempo": 1.12,
+     "gap": 0.2,
+     "tempo": 1.08,
      "gain_db": -1.0
     },
     {
@@ -284,7 +272,7 @@
      "show": "So this key is like my ATM PIN!",
      "maxgap": 0.25,
      "gap": 0.25,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
@@ -293,19 +281,23 @@
      "text": "మరి కీ ఎక్కడ దాచాలి? [1] కోడ్ లోనా? గ్రూప్ లోనా?",
      "show": "So where should I keep the key? In the code? In the group?",
      "maxgap": 0.25,
-     "gap": 2.4,
-     "tempo": 1.08,
+     "gap": 0.5,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "సి: యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు.",
-     "show": "C: in a locked setting only the app sees. In code, a photo, a chat: never.",
+     "text": "ఆప్షన్ సి! <pause 0.55> యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు.",
+     "show": "Option C! In a locked setting only the app sees. <pause 0.8> In code, a photo, a chat: never.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "tempo": 1.12,
-     "gain_db": -1.0
+     "tempo": 1.08,
+     "gain_db": -1.0,
+     "tts": "ఆప్షన్ సి!",
+     "file2": "12b_ai.wav",
+     "tts2": "యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు.",
+     "pause": 0.55
     }
    ]
   },
@@ -360,7 +352,7 @@
      "show": "And my ₹8,600?",
      "maxgap": 0.25,
      "gap": 0.2,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     },
     {
@@ -369,8 +361,8 @@
      "text": "వాళ్ళ సపోర్ట్ ని అడగండి, గ్యారంటీ లేదు. [1] ఆ కీ డిలీట్ చేసి, వేరే కీ తీసుకోండి. ఖర్చుకి గట్టి లిమిట్ పెట్టండి.",
      "show": "Ask their support, no guarantee. Delete that key, get another one. Put a firm limit on spending.",
      "maxgap": 0.25,
-     "gap": 0.4,
-     "tempo": 1.12,
+     "gap": 0.3,
+     "tempo": 1.08,
      "gain_db": -1.0
     },
     {
@@ -380,7 +372,7 @@
      "show": "Key changed! I'll keep it safe... in the family WhatsApp group!",
      "maxgap": 0.25,
      "gap": 0.0,
-     "tempo": 1.08,
+     "tempo": 1.07,
      "gain_db": 0.5
     }
    ]

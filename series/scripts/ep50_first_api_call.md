@@ -1,4 +1,4 @@
-# EP50 "Your first AI API call" (Season 6 opener: hands-on) · queue 054 · script v2, Nov 10
+# EP50 "Your first AI API call" (Season 6 opener: hands-on) · queue 054 · script v3, Nov 10
 
 ## The lesson
 An app that "has AI inside" makes API calls: it sends your message and a secret API key over the internet to the AI
@@ -84,7 +84,26 @@ line 14 "Ask their support; no promise. Then delete that key, make another, and 
 యాభై జవాబులు", "దాదాపు"; line 7's "AI" as "చాట్ బాట్"). Caption: "Only use the ChatGPT app? You don't have an API key";
 where the hard limit is; a try-it ask.
 
-## Script (English, v2) · ~60 s
+## Render review (human-viewer, the v2 render) and what changed (v3)
+Both stop on frame 1 (hook 8 and 7); Sandeep would forward the family-WhatsApp ending. Both: at 17 s the reply said toor dal
+₹165 while the shop board shows "Dal ₹120"; "C: a locked setting" was heard "A, locked setting" (A on screen is "in the
+code"); Telugu holes at 1.8-2.1 s and 47.8-49.8 s, and the 1.12 speed-up crammed the numbers; no sound arc (nothing at
+0 s, no lift into the test or "3 paise", nothing on the punchline); "the right key: it answered" got about 1 s before the
+cut; Telugu "ఏ పీ ఐ" collapsed to "ఆపీ"; the frame-1 tag, the laptop label, the cost footnote and the env-var note too small;
+"nobody sees it" too strong (committed .env files are how keys leak). Priya: 3 × 50 × 30 = ₹45 (show 3.1 paise, "about
+₹47"); a hard limit isn't instant; the quiz ran 11 s; the Telugu "a company like ChatGPT's" made Sandeep think his ChatGPT
+app has a key; the card named a model nobody explains.
+Changed (v3): the call picture asks "sugar 1 kg rate?" -> "₹48, in stock" (our demo's row 6; the board has no sugar); the
+test card names the item ("toor dal 1 kg"); line 12 is two takes, "Option C!" then the answer; Telugu: no speed-up beyond
+1.08, no drops in the Telugu bed (the holes), the quiz gap cut; line 4 "ఏ, పీ, ఐ, కీ యా?"; line 5 "గూగుల్ లాంటి కంపెనీకి";
+English line 14 "Ask the AI company's support"; the hold after "it answered" 1.3 s; the quiz gap 1.4 s; the tag "its API
+KEY leaked in a photo" at 42 px, the labels and footnotes at 32-40 px; "3.1 paise", "≈ ₹47"; the cost card says "a small
+OpenAI model's published price" (the name stays in the caption); the env-var chip "never commit it"; the rule card "alerts
+only warn · a limit can run a little over"; sound: a boom, clap and cash sound on frame 1, a buzz and pop on each refusal,
+a riser into "answered" with a ding and boom, a boom and clap on "3.1 paise", a boom and clap on the punchline, the pad cut
+deeper at 250 Hz, no extra bed in English gaps.
+
+## Script (English, v2; lines 12 and 14 as in v3 above) · ~60 s
 | # | Who | Line |
 |---|---|---|
 | 1 | Ravi | Forty-seven rupees?! [1] The bill is eight thousand six hundred! |
@@ -98,9 +117,9 @@ where the hard limit is; a try-it ask.
 | 9 | AI | About three paise, at a small model's price. [1] Fifty replies a day: forty-seven rupees a month. |
 | 10 | Ravi | So this key is my ATM PIN! |
 | 11 | Suresh | Then where do I keep it? [1] In the code? In our group? |
-| 12 | AI | C: a locked setting only the app reads. [1] Never in code, a photo or a chat. |
+| 12 | AI | Option C! / A locked setting only the app reads. [1] Never in code, a photo or a chat. |
 | 13 | Ravi | And my eight thousand six hundred? |
-| 14 | AI | Ask their support; no promise. [1] Then delete that key, make another, and set a hard spend limit. |
+| 14 | AI | Ask the AI company's support; no promise. [1] Then delete that key, make another, and set a hard spend limit. |
 | 15 | Ravi | Key changed! I'll keep it safe... [1] in the family WhatsApp group! |
 
 ## Script (Telugu, v2)
@@ -109,15 +128,15 @@ where the hard limit is; a try-it ask.
 | 1 | నలభై ఏడు రూపాయలన్నావ్?! [1] బిల్లు ఎనిమిది వేల ఆరు వందలు! |
 | 2 | హెల్ప్ గ్రూప్ లో, నా కోడ్ ఫోటో పెట్టా, అంతే... |
 | 3 | అందులో మన కీ ఉంది. [1] అది కాపీ చేసిన ఎవరైనా, మీ డబ్బుతో వాడేయొచ్చు. |
-| 4 | ఏ పీ ఐ కీయా? ఇదంతా ఏంటి? |
-| 5 | నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, చాట్ జీపీటీ లాంటి కంపెనీకి పంపుతుంది. |
+| 4 | ఏ, పీ, ఐ, కీ యా? ఇదంతా ఏంటి? |
+| 5 | నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, గూగుల్ లాంటి కంపెనీకి పంపుతుంది. |
 | 6 | అది కీ ని అలా నమ్మేస్తుందా? |
 | 7 | మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో. [1] సరైన కీ తో: జవాబు వచ్చింది. |
 | 8 | ఒక్కో జవాబుకి ఖర్చు ఎంత? |
 | 9 | ఒక చిన్న మోడల్ ధరకి, దాదాపు మూడు పైసలు. [1] రోజుకి యాభై జవాబులు అంటే, నెలకి నలభై ఏడు రూపాయలు. |
 | 10 | అంటే ఈ కీ, నా ఏటీఎం పిన్ లాంటిది! |
 | 11 | మరి కీ ఎక్కడ దాచాలి? [1] కోడ్ లోనా? గ్రూప్ లోనా? |
-| 12 | సి: యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు. |
+| 12 | ఆప్షన్ సి! / యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు. |
 | 13 | మరి నా ఎనిమిది వేల ఆరు వందలు? |
 | 14 | వాళ్ళ సపోర్ట్ ని అడగండి, గ్యారంటీ లేదు. [1] ఆ కీ డిలీట్ చేసి, వేరే కీ తీసుకోండి. ఖర్చుకి గట్టి లిమిట్ పెట్టండి. |
 | 15 | కీ మార్చేశా! జాగ్రత్తగా దాస్తా... [1] ఫ్యామిలీ వాట్సాప్ గ్రూప్ లో! |

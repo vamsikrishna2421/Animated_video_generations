@@ -50,7 +50,7 @@ MUST = {"en": {1: [("forty", "47"), ("bill",), ("eight", "8"), ("hundred", "600"
                8: [("answer",), ("costs", "cost")],
                9: [("three", "3"), ("paise", "paisa", "pice", "pies", "pise", "pie", "paisay", "pisa", "pysa"), ("small",), ("fifty", "50"), ("forty", "47"), ("month",)],
                10: [("key",), ("atm",), ("pin",)], 11: [("keep",), ("code",), ("group",)],
-               12: [("locked", "lock"), ("setting",), ("app",), ("never",), ("code",), ("photo",), ("chat",)],
+               12: [("option",)], "12b": [("locked", "lock"), ("setting",), ("app",), ("never",), ("code",), ("photo",), ("chat",)],
                13: [("eight", "8"), ("hundred", "600")],
                14: [("support",), ("promise",), ("delete",), ("key",), ("another",), ("hard",), ("limit",)],
                15: [("key",), ("changed", "change"), ("safe",), ("family",), ("whatsapp", "whats")]},

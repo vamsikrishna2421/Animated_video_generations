@@ -19,7 +19,7 @@
  "musicEQ": [
   [
    250,
-   -8,
+   -12,
    0.8
   ],
   [
@@ -29,7 +29,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 0.5,
+ "musicGapGain": 0.0,
  "musicEndRamp": [
   0.9,
   3.0
@@ -245,7 +245,7 @@
      "text": "We locked our own AI, on our own computer. No key: refused. One letter wrong: refused. [1] The right key: it answered.",
      "show": "We locked our own AI, on our own computer. No key: refused. 1 letter wrong: refused. The right key: it answered.",
      "maxgap": 0.25,
-     "gap": 0.3,
+     "gap": 1.3,
      "tempo": 1.06,
      "gain_db": -1.0
     },
@@ -286,19 +286,23 @@
      "text": "Then where do I keep it? [1] In the code? In our group?",
      "show": "Then where do I keep it? In the code? In our group?",
      "maxgap": 0.25,
-     "gap": 2.4,
+     "gap": 1.4,
      "tempo": 1.08,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "12_ai.wav",
-     "text": "C: a locked setting only the app reads. [1] Never in code, a photo or a chat.",
-     "show": "C: a locked setting only the app reads. Never in code, a photo or a chat.",
+     "text": "Option C! <pause 0.8> A locked setting only the app reads. [1] Never in code, a photo or a chat.",
+     "show": "Option C! <pause 0.8> A locked setting only the app reads. Never in code, a photo or a chat.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.06,
-     "gain_db": -1.0
+     "gain_db": -1.0,
+     "tts": "Option C!",
+     "file2": "12b_ai.wav",
+     "tts2": "A locked setting only the app reads. Never in code, a photo or a chat.",
+     "pause": 0.8
     }
    ]
   },
@@ -358,8 +362,8 @@
     {
      "who": "ai",
      "file": "14_ai.wav",
-     "text": "Ask their support; no promise. [1] Then delete that key, make another, and set a hard spend limit.",
-     "show": "Ask their support; no promise. Then delete that key, make another, and set a hard spend limit.",
+     "text": "Ask the AI company's support; no promise. [1] Then delete that key, make another, and set a hard spend limit.",
+     "show": "Ask the AI company's support; no promise. Then delete that key, make another, and set a hard spend limit.",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.06,

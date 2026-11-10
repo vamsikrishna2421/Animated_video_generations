@@ -106,16 +106,16 @@ const StApi: React.FC<SP> = ({ s }) => {
     const prevShot = i > 0 ? beats[i - 1].shot : "";
     const insert = !["wide", "ravi", "suresh", "ai", "hook"].includes(b.shot);
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.3} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={te ? 0.9 : 0.85} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.35} />, <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.22} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.5} />, <Sfx key={k("m")} at={2} src="audio/sfx_chaching.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.35} />);
     if (b.prop === "leak") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("z")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={0.28} />, <Sfx key={k("m")} at={cue(i, 1, 0.4) + 8} src="audio/sfx_chaching.wav" vol={0.3} />);
     if (b.prop === "call") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("t")} at={cue(i, 1, 0.4) + 18} src="audio/sfx_pop.wav" vol={0.25} />);
-    if (b.prop === "doors") { [0.22, 0.48].forEach((q, j) => sfx.push(<Sfx key={k("x" + j)} at={l.from + Math.round(l.frames * q)} src="reel/sfx_buzz.wav" vol={0.25} />)); sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.7)} src="audio/gag_ding.wav" vol={0.35} />, <Sfx key={k("n")} at={cue(i, 1, 0.7) - 2} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.6} />); }
-    if (b.prop === "cost") sfx.push(<Sfx key={k("n")} at={at + 2} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.65} />, <Sfx key={k("m")} at={cue(i, 1, 0.5)} src="audio/sfx_chaching.wav" vol={0.3} />);
+    if (b.prop === "doors") { [0.2, 0.46].forEach((q, j) => sfx.push(<Sfx key={k("x" + j)} at={l.from + Math.round(l.frames * q)} src="reel/sfx_buzz.wav" vol={0.42} />, <Sfx key={k("y" + j)} at={l.from + Math.round(l.frames * q)} src="audio/sfx_pop.wav" vol={0.3} />)); sfx.push(<Sfx key={k("r")} at={Math.max(0, cue(i, 1, 0.7) - 30)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("d")} at={cue(i, 1, 0.7)} src="audio/gag_ding.wav" vol={0.5} />, <Sfx key={k("n")} at={cue(i, 1, 0.7) - 2} src="reel/sfx_boom.wav" vol={0.85} />); }
+    if (b.prop === "cost") sfx.push(<Sfx key={k("n")} at={at + 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("c")} at={at + 2} src={CLAP} vol={0.35} />, <Sfx key={k("m")} at={cue(i, 1, 0.5)} src="audio/sfx_chaching.wav" vol={0.45} />);
     if (b.prop === "pin") sfx.push(<Sfx key={k("c")} at={at + 4} src={CLAP} vol={0.35} />);
     if (b.prop === "quiz") sfx.push(<Sfx key={k("q")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "answer") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={Math.max(0, at - 12)} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={Math.max(0, at - 14)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("p")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.35} />, <Sfx key={k("d")} at={end - 2} src="audio/gag_ding.wav" vol={0.3} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("p")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("s")} at={cue(i, 1, 0.5) + 2} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) + 2} src={CLAP} vol={0.45} />, <Sfx key={k("d")} at={end - 2} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
   return (
     <>
@@ -155,9 +155,9 @@ const StApi: React.FC<SP> = ({ s }) => {
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.4), cu(1, 0.4) + 10), k3 = seg(f, cu(1, 0.4) + 16, cu(1, 0.4) + 26);
           if (k1 > 0) {   // the customer's WhatsApp message reaches the shop laptop, where the key lives
             c.save(); c.globalAlpha = clamp(k1 * 3);
-            c.fillStyle = "#dcf8c6"; rrect(c, 60, 470, 300, 120, 18); c.fill(); c.font = SANS(30, 800); c.fillStyle = INK; c.textAlign = "center"; c.fillText("customer:", 210, 515); c.fillText("\"toor dal entha?\"", 210, 560);
+            c.fillStyle = "#dcf8c6"; rrect(c, 50, 450, 340, 150, 18); c.fill(); c.font = SANS(34, 800); c.fillStyle = INK; c.textAlign = "center"; c.fillText("customer:", 220, 505); c.fillText("\"sugar 1 kg rate?\"", 220, 565);
             c.fillStyle = "#334155"; rrect(c, 80, 660, 260, 170, 14); c.fill(); c.fillStyle = "#0b1220"; rrect(c, 96, 674, 228, 130, 8); c.fill();
-            c.font = SANS(26, 900); c.fillStyle = "#86efac"; c.fillText("SHOP LAPTOP", 210, 720); c.fillStyle = "#fde68a"; c.fillText("KEY lives here", 210, 770);
+            c.font = SANS(32, 900); c.fillStyle = "#86efac"; c.fillText("SHOP LAPTOP", 210, 722); c.fillStyle = "#fde68a"; c.fillText("KEY HERE", 210, 776);
             c.fillStyle = "#475569"; rrect(c, 60, 830, 300, 22, 8); c.fill();
             c.restore();
           }
@@ -172,7 +172,7 @@ const StApi: React.FC<SP> = ({ s }) => {
           }
           if (k3 > 0) {   // the reply comes back; the bill goes to the key's owner
             c.save(); c.globalAlpha = clamp(k3 * 3);
-            c.fillStyle = "#dcfce7"; rrect(c, 300, 880, 480, 110, 14); c.fill(); c.font = SANS(34, 800); c.fillStyle = "#14532d"; c.textAlign = "center"; c.fillText("reply: ₹165, in stock", 540, 948);
+            c.fillStyle = "#dcfce7"; rrect(c, 300, 880, 480, 110, 14); c.fill(); c.font = SANS(34, 800); c.fillStyle = "#14532d"; c.textAlign = "center"; c.fillText("reply: ₹48, in stock", 540, 948);
             c.fillStyle = "#fee2e2"; rrect(c, 170, 1110, W - 340, 150, 20); c.fill(); c.font = SANS(44, 900); c.fillStyle = "#7f1d1d"; c.fillText("BILLED TO: whoever owns the key", W / 2, 1205);
             c.restore();
           }
@@ -192,17 +192,17 @@ const StApi: React.FC<SP> = ({ s }) => {
             c.restore();
           });
           const kr = seg(f, cu(1, 0.7) + 6, cu(1, 0.7) + 14);
-          if (kr > 0) { c.save(); c.globalAlpha = clamp(kr * 3); c.fillStyle = "#dcf8c6"; rrect(c, 120, 1060, W - 240, 120, 18); c.fill(); c.font = SANS(46, 800); c.fillStyle = INK; c.textAlign = "center"; c.fillText("\"₹165 (in stock)\"", W / 2, 1136); c.restore(); }
+          if (kr > 0) { c.save(); c.globalAlpha = clamp(kr * 3); c.fillStyle = "#dcf8c6"; rrect(c, 120, 1060, W - 240, 120, 18); c.fill(); c.font = SANS(46, 800); c.fillStyle = INK; c.textAlign = "center"; c.fillText("toor dal 1 kg: \"₹165 (in stock)\"", W / 2, 1136); c.restore(); }
           chip(c, "20 shop questions: 20 right answers", W / 2, 1290, "#fde68a", INK, kr, 36);
         } else if (b.shot === "cost") {
           dark(c, W, H, "WHAT ONE REPLY COSTS", ["about 400 tokens in, 7 out"], "#86efac");
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.5), cu(1, 0.5) + 10);
-          if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.font = SANS(180, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 paise", W / 2, 700); c.restore(); }
+          if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.font = SANS(180, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3.1 paise", W / 2, 700); c.restore(); }
           if (k2 > 0) {
             c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(52, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("× 50 replies a day × 30 days", W / 2, 860);
-            c.font = SANS(150, 900); c.fillStyle = "#4ade80"; c.fillText("₹47", W / 2, 1050); c.font = SANS(52, 800); c.fillText("a month", W / 2, 1130); c.restore();
+            c.font = SANS(150, 900); c.fillStyle = "#4ade80"; c.fillText("≈ ₹47", W / 2, 1050); c.font = SANS(52, 800); c.fillText("a month", W / 2, 1130); c.restore();
           }
-          c.save(); c.globalAlpha = k1; c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("a small OpenAI model's published price (gpt-5.4-mini)", W / 2, 1270); c.fillText("₹95 a dollar · Nov 2026 · cheaper models cost less", W / 2, 1320); c.restore();
+          c.save(); c.globalAlpha = k1; c.font = SANS(38, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("a small OpenAI model's published price", W / 2, 1260); c.fillText("₹95 a dollar · cheaper models cost less", W / 2, 1320); c.restore();
         } else if (b.shot === "quiz") {
           dark(c, W, H, "WHERE SHOULD THE KEY LIVE?", [b.prop === "quiz" ? "you decide" : ""], "#fde68a");
           const opts: [string, string][] = [["A", "in the code"], ["B", "in a group chat"], ["C", "a locked setting"]];   // script review: short, held ~3 s
@@ -217,7 +217,7 @@ const StApi: React.FC<SP> = ({ s }) => {
             if (kAns > 0 && !right) { c.strokeStyle = RED; c.lineWidth = 8; c.beginPath(); c.moveTo(190, y + 82); c.lineTo(W - 110, y + 82); c.stroke(); }
             c.restore();
           });
-          if (kAns > 0) chip(c, "an \"environment variable\": the app reads it, nobody sees it", W / 2, 1210, "#dcfce7", "#14532d", kAns, 34);
+          if (kAns > 0) chip(c, "an \"environment variable\" · never commit it", W / 2, 1210, "#dcfce7", "#14532d", kAns, 40);
           if (b.prop === "answer") { const kn = seg(f, cu(1, 0.4), cu(1, 0.4) + 8); chip(c, "never in code, a photo or a chat", W / 2, 1330, "#fee2e2", "#7f1d1d", kn, 40); }
         } else if (b.prop === "rule") {
           dark(c, W, H, "THE API KEY = YOUR ATM PIN", [], "#fde68a");
@@ -229,7 +229,7 @@ const StApi: React.FC<SP> = ({ s }) => {
             c.restore();
           });
           const kl = seg(f, cu(1, 0.7) + 10, cu(1, 0.7) + 18);
-          c.save(); c.globalAlpha = kl; c.font = SANS(32, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("keep it in a locked setting · alerts only warn", W / 2, 1250); c.restore();
+          c.save(); c.globalAlpha = kl; c.font = SANS(38, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("alerts only warn · a limit can run a little over", W / 2, 1250); c.restore();
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
@@ -252,7 +252,7 @@ const StApi: React.FC<SP> = ({ s }) => {
             hookCard(c);
             chip(c, "SURESH", 230, 790, "#b45309", "#fff", 1, 34);
             chip(c, "RAVI ANNA", 760, 560, "#2f6fb0", "#fff", 1, 34);
-            chip(c, "the shop AI's key, leaked in a photo", W / 2, 470, "#fde68a", INK, 1, 32);
+            chip(c, "its API KEY leaked in a photo", W / 2, 474, "#fde68a", INK, 1, 42);
           }
           if (n === 2) chip(c, "Ravi, Suresh and the shop are made up · our test is real", W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", 1, 32);
           if (b.prop === "pin") stamp(c, "API KEY = ATM PIN", W / 2, 360, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 76, -0.06);
