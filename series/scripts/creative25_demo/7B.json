@@ -1,0 +1,392 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-GGUF (q4_k_m)",
+ "network": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ },
+ "settings": "temperature 0.7, top_p 0.9, seed = try number, max 160 tokens",
+ "asks": {
+  "bare": "Write a short WhatsApp birthday wish (3 lines) for my grandmother, who turns 80 today.",
+  "details": "Write a short WhatsApp birthday wish (3 lines) for my grandmother, who turns 80 today. Use these two real details: she taught me to ride a bicycle when I was 8, and her pulihora is the best in the family. Don't add any other memories."
+ },
+ "stock_phrases": [
+  "filled with",
+  "cherish",
+  "blessed",
+  "blessing",
+  "joy",
+  "warmth",
+  "may your",
+  "wonderful",
+  "special day",
+  "heartfelt",
+  "laughter",
+  "love and",
+  "memories"
+ ],
+ "rows": [
+  {
+   "ask": "bare",
+   "try": 1,
+   "reply": "🎉 Happy 80th birthday, dear Grandma! May this special day be filled with joy, love, and all your favorite things. 🌟 Here's to another wonderful chapter in your amazing life! 💖",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "wonderful",
+     "special day"
+    ]
+   },
+   "seconds": 9.8,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 2,
+   "reply": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "wonderful",
+     "special day"
+    ]
+   },
+   "seconds": 8.1,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 3,
+   "reply": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. You are the light of our family, and we are so grateful to have you.",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "special day"
+    ]
+   },
+   "seconds": 8.0,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 4,
+   "reply": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all your favorite things. You light up our lives, and we're so grateful to have you.",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "special day"
+    ]
+   },
+   "seconds": 7.6,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 5,
+   "reply": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another amazing year of wonderful memories and health!",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "wonderful",
+     "special day",
+     "memories"
+    ]
+   },
+   "seconds": 7.0,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 6,
+   "reply": "Of course! Here’s a sweet birthday wish for your grandmother:\n\nHappy 80th birthday, Grandma! May this special day be filled with love, joy, and all the blessings in the world. You mean the world to us, and we’re so grateful to have you in our lives.",
+   "auto": {
+    "stock": [
+     "filled with",
+     "blessing",
+     "joy",
+     "special day"
+    ]
+   },
+   "seconds": 10.5,
+   "hand": {
+    "specific": false,
+    "note": "starts \"Of course! Here's a sweet birthday wish for your grandmother:\" then the wish; nothing specific"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 7,
+   "reply": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another amazing year of wonderful memories! 🎉🎂💖",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "wonderful",
+     "special day",
+     "memories"
+    ]
+   },
+   "seconds": 7.4,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 8,
+   "reply": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "wonderful",
+     "special day"
+    ]
+   },
+   "seconds": 7.3,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 9,
+   "reply": "Happy 80th birthday, Grandma! May this special day fill your life with love, laughter, and all the joy you've brought us. Here's to another wonderful chapter in your amazing life! 🎂💕",
+   "auto": {
+    "stock": [
+     "joy",
+     "wonderful",
+     "special day",
+     "laughter"
+    ]
+   },
+   "seconds": 7.7,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "bare",
+   "try": 10,
+   "reply": "Happy 80th birthday, Grandma! May this special day bring you joy, health, and all the love in the world. Here's to another wonderful chapter filled with happiness and cherished moments. 🎉🎁💖",
+   "auto": {
+    "stock": [
+     "filled with",
+     "cherish",
+     "joy",
+     "wonderful",
+     "special day"
+    ]
+   },
+   "seconds": 7.7,
+   "hand": {
+    "specific": false,
+    "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"
+   }
+  },
+  {
+   "ask": "details",
+   "try": 1,
+   "reply": "🎉 Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle when I was 8; it was a special moment. Your pulihora is always the best in the family, and I miss it so much. Love and blessings! 🌟💖",
+   "auto": {
+    "stock": [
+     "blessing",
+     "love and"
+    ],
+    "both": true
+   },
+   "seconds": 12.9,
+   "hand": {
+    "made_up": false,
+    "note": "both details; adds \"I miss it so much\" (we never said we live away)",
+    "miss_you": true
+   }
+  },
+  {
+   "ask": "details",
+   "try": 2,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride my bicycle all those years ago. Your pulihora is still the best in the family, and always will be. Wishing you a day full of joy and good health! 🎉🎂",
+   "auto": {
+    "stock": [
+     "joy"
+    ],
+    "both": true
+   },
+   "seconds": 15.0,
+   "hand": {
+    "made_up": false,
+    "note": "both details; nothing added"
+   }
+  },
+  {
+   "ask": "details",
+   "try": 3,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy",
+     "love and"
+    ],
+    "both": true
+   },
+   "seconds": 9.8,
+   "hand": {
+    "made_up": false,
+    "note": "both details; adds \"I miss you dearly\"",
+    "miss_you": true
+   }
+  },
+  {
+   "ask": "details",
+   "try": 4,
+   "reply": "HAPPY 80TH BIRTHDAY, NANA! You taught me to ride a bicycle when I was just 8, and your pulihora is still the best in the family. Wishing you a day full of joy and many more wonderful years ahead! 🎉🎉🎉",
+   "auto": {
+    "stock": [
+     "joy",
+     "wonderful"
+    ],
+    "both": true
+   },
+   "seconds": 10.0,
+   "hand": {
+    "made_up": false,
+    "note": "both details; calls her \"NANA\" (a word we never gave)",
+    "name": true
+   }
+  },
+  {
+   "ask": "details",
+   "try": 5,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride my first bicycle when I was just 8 — those wheels still spin in my heart. Your pulihora is always the best, and I miss you dearly. Wishing you a day full of joy and a year filled with many more amazing moments!",
+   "auto": {
+    "stock": [
+     "filled with",
+     "joy"
+    ],
+    "both": true
+   },
+   "seconds": 11.2,
+   "hand": {
+    "made_up": false,
+    "note": "both details; adds \"I miss you dearly\"",
+    "miss_you": true
+   }
+  },
+  {
+   "ask": "details",
+   "try": 6,
+   "reply": "🎉 Happy 80th birthday, Nanny! Thank you for teaching me to ride that bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. 🌟",
+   "auto": {
+    "stock": [],
+    "both": true
+   },
+   "seconds": 7.8,
+   "hand": {
+    "made_up": false,
+    "note": "both details; calls her \"Nanny\"; adds \"I miss you dearly\"",
+    "miss_you": true,
+    "name": true
+   }
+  },
+  {
+   "ask": "details",
+   "try": 7,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride my bike all those years ago. Your pulihora is still the best in the family, and it brings back so many wonderful memories. Wishing you a day full of joy and love!",
+   "auto": {
+    "stock": [
+     "joy",
+     "wonderful",
+     "memories"
+    ],
+    "both": true
+   },
+   "seconds": 9.2,
+   "hand": {
+    "made_up": false,
+    "note": "both details; nothing added"
+   }
+  },
+  {
+   "ask": "details",
+   "try": 8,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride my first bicycle when I was just 8. Your pulihora is still the best in the family, and I miss you already. Love you lots!",
+   "auto": {
+    "stock": [],
+    "both": true
+   },
+   "seconds": 8.2,
+   "hand": {
+    "made_up": false,
+    "note": "both details; adds \"I miss you already\"",
+    "miss_you": true
+   }
+  },
+  {
+   "ask": "details",
+   "try": 9,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride my bike all those years ago at 8—what a memorable day! Your pulihora is still the best in the family, and it warms my heart even more today. Love you lots!",
+   "auto": {
+    "stock": [],
+    "both": true
+   },
+   "seconds": 9.4,
+   "hand": {
+    "made_up": false,
+    "note": "both details; nothing added"
+   }
+  },
+  {
+   "ask": "details",
+   "try": 10,
+   "reply": "Happy 80th birthday, Grandma! Thank you for teaching me to ride that bicycle all those years ago. Your pulihora is still the best in the family, and I hope it brings you joy today too. Love and miss you!",
+   "auto": {
+    "stock": [
+     "joy",
+     "love and"
+    ],
+    "both": true
+   },
+   "seconds": 8.3,
+   "hand": {
+    "made_up": false,
+    "note": "both details; adds \"Love and miss you!\"",
+    "miss_you": true
+   }
+  }
+ ],
+ "network_after": {
+  "dns_huggingface.co": "failed: [Errno -3] Temporary failure in name resolution",
+  "connect_1.1.1.1:443": "failed: [Errno 101] Network is unreachable",
+  "interfaces": [
+   "lo"
+  ],
+  "offline": true
+ }
+}

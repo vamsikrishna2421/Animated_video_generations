@@ -33,7 +33,21 @@ ASKS = {
 }
 STOCK = ["filled with", "cherish", "blessed", "blessing", "joy", "warmth", "may your", "wonderful", "special day",
          "heartfelt", "laughter", "love and", "memories"]
-HAND = {}  # (ask, try): {"made_up": bool, "specific": bool, "note": str}, after reading every reply by hand
+HAND = {  # (ask, try): {"made_up": bool, "specific": bool, "note": str}, after reading every reply by hand
+    **{("bare", k): {"specific": False, "note": "\"Happy 80th birthday, Grandma! May this special day...\": nothing only her family would know"} for k in range(1, 11)},
+    ("bare", 6): {"specific": False, "note": "starts \"Of course! Here's a sweet birthday wish for your grandmother:\" then the wish; nothing specific"},
+    # details: no memory or fact about her that we never gave (the rule fixed before the run), but other additions:
+    ("details", 1): {"made_up": False, "note": "both details; adds \"I miss it so much\" (we never said we live away)", "miss_you": True},
+    ("details", 2): {"made_up": False, "note": "both details; nothing added"},
+    ("details", 3): {"made_up": False, "note": "both details; adds \"I miss you dearly\"", "miss_you": True},
+    ("details", 4): {"made_up": False, "note": "both details; calls her \"NANA\" (a word we never gave)", "name": True},
+    ("details", 5): {"made_up": False, "note": "both details; adds \"I miss you dearly\"", "miss_you": True},
+    ("details", 6): {"made_up": False, "note": "both details; calls her \"Nanny\"; adds \"I miss you dearly\"", "miss_you": True, "name": True},
+    ("details", 7): {"made_up": False, "note": "both details; nothing added"},
+    ("details", 8): {"made_up": False, "note": "both details; adds \"I miss you already\"", "miss_you": True},
+    ("details", 9): {"made_up": False, "note": "both details; nothing added"},
+    ("details", 10): {"made_up": False, "note": "both details; adds \"Love and miss you!\"", "miss_you": True},
+}
 
 
 def load(path):
@@ -90,9 +104,12 @@ def summary():
         any_stock = sum(1 for r in rows if r["auto"]["stock"])
         avg = sum(len(r["auto"]["stock"]) for r in rows) / max(1, n)
         line = f"{ask}: {n} replies; with a stock phrase {any_stock}/{n}; stock phrases a reply {avg:.1f}"
+        line += f"; 'may this special day' {sum(1 for r in rows if 'may this special day' in r['reply'].lower())}/{n}"
         if ask == "details":
             line += f"; both details {sum(1 for r in rows if r['auto'].get('both'))}/{n}"
             line += f"; made-up memory (hand) {sum(1 for r in rows if r['hand'].get('made_up'))}/{n}"
+            line += f"; says it misses her (hand) {sum(1 for r in rows if r['hand'].get('miss_you'))}/{n}"
+            line += f"; a name we never gave (hand) {sum(1 for r in rows if r['hand'].get('name'))}/{n}"
         else:
             line += f"; anything specific (hand) {sum(1 for r in rows if r['hand'].get('specific'))}/{n}"
         print(line)
