@@ -81,26 +81,30 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
-     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
-     "d": "",
-     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
+     "made": "",
      "aDetails": [
       "running behind my cycle",
       "pulihora"
      ],
-     "bStock": [
-      "May this special day",
-      "filled with",
-      "wonderful chapter"
+     "bDetails": [
+      "ride a bicycle",
+      "pulihora"
      ],
+     "bGuess": [
+      "Grandma",
+      "I miss you dearly",
+      "filled with love and joy"
+     ],
+     "bStock": [],
      "dStock": []
     },
     "nums": {
      "stock": "10/10",
-     "specific": "0/10",
      "both": "10/10",
-     "made": "6/10"
+     "miss": "5/10"
     },
     "yt": {
      "chapter": "Which wish is the AI's?",
@@ -113,8 +117,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "అమ్మమ్మకి ఎనభై ఏళ్లు. [1] తేజ పది నిమిషాలు టైప్ చేశాడు. సాయి, చాట్ బాట్ ని ఒక్కసారి అడిగాడు.",
-     "show": "Ammamma turns 80. Teja typed for 10 minutes. Sai asked a chatbot once.",
+     "text": "అమ్మమ్మకి ఎనభై ఏళ్లు. మనవళ్ళు ఇద్దరూ పక్కింట్లోనే ఉంటారు. [1] ఒకడు పది నిమిషాలు టైప్ చేశాడు. ఇంకొకడు చాట్‌బాట్‌ని ఒక్క ట్యాప్ తో అడిగాడు.",
+     "show": "Ammamma turns 80. Both grandsons live next door. One typed for 10 minutes. The other asked a chatbot with 1 tap.",
      "maxgap": 0.3,
      "gap": 0.3,
      "tempo": 1.05
@@ -122,7 +126,7 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "ఏది చాట్ బాట్ రాసింది? [1] ఒకటా, రెండా?",
+     "text": "ఏది చాట్‌బాట్ రాసింది? [1] ఒకటా, రెండా?",
      "show": "Which one did the chatbot write? 1, or 2?",
      "maxgap": 0.3,
      "gap": 2.6,
@@ -131,19 +135,19 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "రెండు. [1] ఇది ప్రపంచంలో, ఏ అమ్మమ్మకైనా పంపొచ్చు.",
-     "show": "2. This could be sent to any grandmother in the world.",
+     "text": "రెండు. [1] పక్కింట్లో ఉండి, నిన్ను మిస్ అవుతున్నా అంటాడా?",
+     "show": "2. He lives next door, and says \"I miss you\"?",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.4,
      "tempo": 1.05
     },
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "ఒకటిలో, సైకిల్ వెనకాల పరిగెత్తిన అమ్మమ్మ, ఆమె పులిహోర ఉన్నాయి. [1] అవి వాళ్ళ ఫ్యామిలీకి మాత్రమే తెలుసు.",
-     "show": "1 has Ammamma running behind the cycle, and her pulihora. Only their family knows those.",
+     "text": "చాట్‌బాట్, రెండు నిజమైన విషయాలు వాడింది. [1] మిగతాదంతా ఊహించింది.",
+     "show": "The chatbot used the 2 real details. It guessed all the rest.",
      "maxgap": 0.3,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.05
     }
    ]
@@ -167,26 +171,30 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
-     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
-     "d": "",
-     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
+     "made": "",
      "aDetails": [
       "running behind my cycle",
       "pulihora"
      ],
-     "bStock": [
-      "May this special day",
-      "filled with",
-      "wonderful chapter"
+     "bDetails": [
+      "ride a bicycle",
+      "pulihora"
      ],
+     "bGuess": [
+      "Grandma",
+      "I miss you dearly",
+      "filled with love and joy"
+     ],
+     "bStock": [],
      "dStock": []
     },
     "nums": {
      "stock": "10/10",
-     "specific": "0/10",
      "both": "10/10",
-     "made": "6/10"
+     "miss": "5/10"
     },
     "yt": {
      "chapter": "Our test",
@@ -199,8 +207,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "మేము ఒక చిన్న ఫ్రీ చాట్ బాట్ ని, ఇదే పది సార్లు అడిగాం. [1] పదికి పది, ఒకే మాటతో మొదలయ్యాయి. ఆమెకి మాత్రమే తెలిసిన ఒక్క విషయం కూడా లేదు.",
-     "show": "We asked a small free chatbot the same thing, 10 times. 10 out of 10 began with the same words. Not one thing only she'd know.",
+     "text": "మేం మా ల్యాప్‌టాప్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్‌ని టెస్ట్ చేశాం, చాట్ జీపీటీ కాదు. వివరాలు లేకుండా, పది సార్లు: [1] పదికి పది, ఒకే మాట: మే దిస్ స్పెషల్ డే. ఒకసారైతే, ఆఫ్ కోర్స్ అని మొదలుపెట్టింది.",
+     "show": "We tested a small free chatbot on our laptop, not ChatGPT. No details, 10 times: 10 out of 10, the same words: \"May this special day\". Once it even began \"Of course\".",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05
@@ -208,8 +216,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "తర్వాత, ఆ రెండు నిజమైన విషయాలు ఇచ్చాం. [1] ప్రతిసారీ రెండూ వాడింది. కానీ ఆరు సార్లు, మిస్ అవుతున్నా అని రాసింది. సాయి పక్కింట్లోనే ఉంటాడు.",
-     "show": "Then we gave it the 2 real details. It used both, every time. But 6 times it wrote \"I miss you\". Sai lives next door.",
+     "text": "రెండు వివరాలు ఇస్తే, ప్రతిసారీ రెండూ వాడింది. [1] కానీ ఐదు సార్లు, నిన్ను మిస్ అవుతున్నా అని ఊహించింది.",
+     "show": "Given 2 details, it used both every time. But 5 times it guessed \"I miss you\".",
      "maxgap": 0.3,
      "gap": 0.6,
      "tempo": 1.05
@@ -238,26 +246,30 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
-     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
-     "d": "",
-     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
+     "made": "",
      "aDetails": [
       "running behind my cycle",
       "pulihora"
      ],
-     "bStock": [
-      "May this special day",
-      "filled with",
-      "wonderful chapter"
+     "bDetails": [
+      "ride a bicycle",
+      "pulihora"
      ],
+     "bGuess": [
+      "Grandma",
+      "I miss you dearly",
+      "filled with love and joy"
+     ],
+     "bStock": [],
      "dStock": []
     },
     "nums": {
      "stock": "10/10",
-     "specific": "0/10",
      "both": "10/10",
-     "made": "6/10"
+     "miss": "5/10"
     },
     "yt": {
      "chapter": "Let it write, the right way",
@@ -270,8 +282,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "అందుకే: రెండు నిజమైన విషయాలు ఇవ్వండి, [1] నిజం కానిది తీసేయండి, మీ పేరుతో మీరే పంపండి.",
-     "show": "So: give it 2 real details, cut what isn't true, send it in your own name.",
+     "text": "అందుకే, ముఖ్యమైన నిజాలు చెప్పండి, [1] ప్రతి లైన్ చదవండి, నిజం కానిది సరిచేయండి.",
+     "show": "So: tell it the facts that matter, read every line, fix what isn't true.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05
@@ -279,8 +291,8 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "అమ్మమ్మ, ఒక్కరికే రిప్లై ఇచ్చింది. [1] ఎవరికో గెస్ చేయండి.",
-     "show": "Ammamma replied to only one. Guess who.",
+     "text": "అమ్మమ్మ రిప్లై: [1] మిస్ అవుతున్నావా? పది అడుగుల దూరంలో ఉన్నావ్, వచ్చి తిను!",
+     "show": "Ammamma's reply: \"Missing me? You're 10 steps away, come and eat!\"",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.05

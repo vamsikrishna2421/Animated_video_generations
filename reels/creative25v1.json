@@ -79,26 +79,30 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
-     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
-     "d": "",
-     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
+     "made": "",
      "aDetails": [
       "running behind my cycle",
       "pulihora"
      ],
-     "bStock": [
-      "May this special day",
-      "filled with",
-      "wonderful chapter"
+     "bDetails": [
+      "ride a bicycle",
+      "pulihora"
      ],
+     "bGuess": [
+      "Grandma",
+      "I miss you dearly",
+      "filled with love and joy"
+     ],
+     "bStock": [],
      "dStock": []
     },
     "nums": {
      "stock": "10/10",
-     "specific": "0/10",
      "both": "10/10",
-     "made": "6/10"
+     "miss": "5/10"
     },
     "yt": {
      "chapter": "Which wish is the AI's?",
@@ -110,8 +114,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Ammamma turns eighty. [1] Teja typed his wish for ten minutes. Sai tapped an AI once.",
-     "show": "Ammamma turns 80. Teja typed his wish for 10 minutes. Sai tapped an AI once.",
+     "text": "Ammamma turns eighty. Both grandsons live next door. [1] One typed his wish for ten minutes. One tapped an AI.",
+     "show": "Ammamma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One tapped an AI.",
      "maxgap": 0.3,
      "gap": 0.3,
      "tempo": 1.04
@@ -128,19 +132,19 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "Two. [1] It could go to any grandmother on earth.",
-     "show": "Two. It could go to any grandmother on earth.",
+     "text": "Two. [1] \"I miss you dearly\"... from next door?",
+     "show": "Two. \"I miss you dearly\"... from next door?",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.4,
      "tempo": 1.04
     },
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "One has her running behind his cycle, and her pulihora. [1] Only her family knows those.",
-     "show": "One has her running behind his cycle, and her pulihora. Only her family knows those.",
+     "text": "The AI used both real details. [1] Then it guessed the rest.",
+     "show": "The AI used both real details. Then it guessed the rest.",
      "maxgap": 0.3,
-     "gap": 0.5,
+     "gap": 0.4,
      "tempo": 1.04
     }
    ]
@@ -164,26 +168,30 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
-     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
-     "d": "",
-     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
+     "made": "",
      "aDetails": [
       "running behind my cycle",
       "pulihora"
      ],
-     "bStock": [
-      "May this special day",
-      "filled with",
-      "wonderful chapter"
+     "bDetails": [
+      "ride a bicycle",
+      "pulihora"
      ],
+     "bGuess": [
+      "Grandma",
+      "I miss you dearly",
+      "filled with love and joy"
+     ],
+     "bStock": [],
      "dStock": []
     },
     "nums": {
      "stock": "10/10",
-     "specific": "0/10",
      "both": "10/10",
-     "made": "6/10"
+     "miss": "5/10"
     },
     "yt": {
      "chapter": "Our test",
@@ -195,8 +203,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "We asked a small free AI the same thing, ten times. [1] Ten out of ten: \"May this special day\". Not one thing only she'd know.",
-     "show": "We asked a small free AI the same thing, 10 times. 10 out of 10: \"May this special day\". Not one thing only she'd know.",
+     "text": "We tested a small free AI on our laptop, not ChatGPT. With no details, ten tries: [1] all ten said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
+     "show": "We tested a small free AI on our laptop, not ChatGPT. With no details, 10 tries: all 10 said \"May this special day\". One even began, \"Of course! Here's a sweet birthday wish\".",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.04
@@ -204,8 +212,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "Then we gave it the two real details. [1] It used both, every time. But six times it added \"I miss you\"... and Sai lives next door.",
-     "show": "Then we gave it the 2 real details. It used both, every time. But 6 times it added \"I miss you\"... and Sai lives next door.",
+     "text": "With the two details, it used both, every time. [1] But five times, it guessed \"I miss you\".",
+     "show": "With the 2 details, it used both, every time. But 5 times, it guessed \"I miss you\".",
      "maxgap": 0.3,
      "gap": 0.6,
      "tempo": 1.04
@@ -234,26 +242,30 @@
     ],
     "captionTop": 1500,
     "texts": {
-     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7! - Teja",
-     "b": "Happy 80th birthday, Grandma! May this special day be filled with love, joy, and all the happiness you deserve. Here's to another wonderful chapter in your life! 🎉🎂💖",
-     "d": "",
-     "made": "Your pulihora is still the best in the family, and I miss you dearly.",
+     "a": "Happy 80th, Ammamma! Still remember you running behind my cycle, holding the seat. Keep the pulihora ready, coming at 7!",
+     "b": "Happy 80th birthday, Grandma! Thank you for teaching me to ride a bicycle all those years ago. Your pulihora is still the best in the family, and I miss you dearly. Wishing you a day filled with love and joy! 🎉🎂",
+     "of": "Of course! Here's a sweet birthday wish for your grandmother:",
+     "made": "",
      "aDetails": [
       "running behind my cycle",
       "pulihora"
      ],
-     "bStock": [
-      "May this special day",
-      "filled with",
-      "wonderful chapter"
+     "bDetails": [
+      "ride a bicycle",
+      "pulihora"
      ],
+     "bGuess": [
+      "Grandma",
+      "I miss you dearly",
+      "filled with love and joy"
+     ],
+     "bStock": [],
      "dStock": []
     },
     "nums": {
      "stock": "10/10",
-     "specific": "0/10",
      "both": "10/10",
-     "made": "6/10"
+     "miss": "5/10"
     },
     "yt": {
      "chapter": "Let it write, the right way",
@@ -265,8 +277,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "So let it write, the right way: two real details, [1] cut what isn't true, and sign it yourself.",
-     "show": "So let it write, the right way: 2 real details, cut what isn't true, and sign it yourself.",
+     "text": "So tell it the facts that matter, [1] read every line, and fix what isn't true.",
+     "show": "So tell it the facts that matter, read every line, and fix what isn't true.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.04
@@ -274,8 +286,8 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "Ammamma replied to only one of them. [1] Guess which.",
-     "show": "Ammamma replied to only one of them. Guess which.",
+     "text": "Ammamma's reply: [1] \"Miss me? You're ten steps away. Come and eat!\"",
+     "show": "Ammamma's reply: \"Miss me? You're 10 steps away. Come and eat!\"",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.04

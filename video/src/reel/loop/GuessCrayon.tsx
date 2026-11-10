@@ -97,7 +97,7 @@ const block = (c: Ctx, x: number, y: number, small: string, big: string, col: st
 // ---------- the scene ----------
 const StGuess: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
-  const T = s.data.texts as { a: string; b: string; d: string; made: string; aDetails: string[]; bStock: string[]; dStock: string[] };
+  const T = s.data.texts as { a: string; b: string; of: string; aDetails: string[]; bDetails: string[]; bGuess: string[] };
   const N = s.data.nums as Record<string, string>;
   const ls = s.lines;
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
@@ -129,28 +129,27 @@ const StGuess: React.FC<SP> = ({ s }) => {
         const slam = endL + HOLD, loopOn = b.prop === "loop" && f >= slam;
         if (b.prop === "test" || b.prop === "twist") {
           const tw = b.prop === "twist";
-          dark(c, W, H, tw ? "THE SAME AI, WITH 2 REAL DETAILS" : "OUR TEST: A SMALL FREE AI", [tw ? "\"she taught me to ride a bicycle · her pulihora\"" : "\"a birthday wish for my grandmother, 80\" · 10 tries"], tw ? "#86efac" : "#fde68a");
+          dark(c, W, H, tw ? "WITH THE 2 REAL DETAILS" : "OUR TEST: A SMALL FREE AI", [tw ? "the same AI, 10 more tries" : "on our laptop, not ChatGPT · 10 tries, no details"], tw ? "#86efac" : "#fde68a");
           const rows: [string, string, string, number][] = tw
-            ? [["used both details", N.both, GREEN, ln.from + 4], ["made up a memory", N.made, RED, cu(1, 0.5)]]
-            : [["used a stock phrase", N.stock, "#fbbf24", ln.from + 4], ["anything only she'd know", N.specific, RED, cu(1, 0.5)]];
+            ? [["used both details", N.both, GREEN, ln.from + 4], ["guessed \"I miss you\"", N.miss, RED, cu(1, 0.5)]]
+            : [["said \"May this special day\"", N.stock, "#fbbf24", cu(1, 0.3)]];
           rows.forEach(([a, v, col, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 470 + q * 190;
             c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 160, 22); c.fill();
-            c.font = SANS(46, 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 100, y + 98);
+            const fs = fit(c, a, W - 420, 46, 800); c.font = SANS(fs, 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 100, y + 98);
             c.font = SANS(70, 900); c.fillStyle = col; c.textAlign = "right"; c.fillText(v, W - 100, y + 106);
             c.restore();
           });
-          const ke = seg(f, cu(1, 0.5) + 8, cu(1, 0.5) + 16);
-          if (tw && ke > 0) {   // a real line from our test: "I miss you dearly" (we never said he lives away)
-            c.save(); c.globalAlpha = clamp(ke * 3); c.font = SANS(34, 800); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("a real line from our test:", W / 2, 920); c.restore();
-            const h = bubble(c, 90, 950, W - 180, "AI", T.made, ke, { size: 38, marks: ["I miss you dearly"], mk: ke, markRgb: "248,113,113" });
-            chip(c, "Sai lives next door", W / 2, 950 + h + 80, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.85), cu(1, 0.85) + 8), 44);
+          if (!tw) {   // a real reply from our test (try 6), its first line
+            const ko = seg(f, cu(1, 0.65), cu(1, 0.65) + 8);
+            if (ko > 0) { c.save(); c.globalAlpha = clamp(ko * 3); c.font = SANS(34, 800); c.fillStyle = "#fca5a5"; c.textAlign = "center"; c.fillText("one reply began:", W / 2, 740); c.restore(); }
+            bubble(c, 90, 770, W - 180, "AI", T.of, ko, { size: 40, marks: ["Of course!"], mk: ko, markRgb: "248,113,113" });
+            chip(c, "Qwen2.5 7B, offline · every reply read by hand", W / 2, 1300, "#fde68a", INK, seg(f, ln.from + 4, ln.from + 12), 32);
           }
-          if (!tw) chip(c, "Qwen2.5 7B, offline · every reply read by hand", W / 2, 1300, "#fde68a", INK, seg(f, ln.from + 4, ln.from + 12), 32);
         } else if (b.prop === "rule") {
-          dark(c, W, H, "LET AI WRITE IT, THE RIGHT WAY", [], "#fde68a");
-          ([["Give it 2 real details", "#dcfce7", ln.from + 2], ["Cut anything that isn't true", "#fee2e2", cu(1, 0.3)], ["Sign it yourself", "#e0e7ff", cu(1, 0.7)]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
+          dark(c, W, H, "BEFORE YOU SEND AN AI WISH", [], "#fde68a");
+          ([["Tell it the facts that matter", "#dcfce7", ln.from + 2], ["Read every line", "#e0e7ff", cu(1, 0.3)], ["Fix what isn't true", "#fee2e2", cu(1, 0.7)]] as [string, string, number][]).forEach(([a, bg, t0], q) => {
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 450 + q * 230;
             c.fillStyle = bg; rrect(c, 80, y, W - 160, 190, 24); c.fill();
@@ -163,30 +162,33 @@ const StGuess: React.FC<SP> = ({ s }) => {
           phoneTop(c, W);
           const hookOn = b.prop === "hook" || loopOn;
           if (hookOn || b.prop === "quiz") {   // frame 1: who wrote what, sound-off readable
-            block(c, 50, 300, "TEJA: TYPED IT", "10 minutes", "#4ade80");
-            block(c, 560, 300, "SAI: ASKED AN AI", "1 tap", "#f87171");
+            block(c, 50, 300, "ONE GRANDSON TYPED", "10 minutes", "#4ade80");
+            block(c, 560, 300, "ONE ASKED AN AI", "1 tap", "#f87171");
           }
           const y0 = hookOn || b.prop === "quiz" ? 480 : 320;
           const reveal = ["reveal", "tells"].includes(b.prop);
-          const ha = bubble(c, 50, y0, W - 100, reveal ? "1 · Teja" : "1", T.a, 1, { circles: T.aDetails, ck: b.prop === "tells" ? seg(f, cu(1, 0.3), cu(1, 0.3) + 14) : 0, size: 38 });
-          const hb = bubble(c, 50, y0 + ha + 30, W - 100, reveal ? "2 · Sai's AI" : "2", T.b, 1, { marks: T.bStock, mk: reveal ? seg(f, b.prop === "reveal" ? cu(1, 0.4) : ln.from - 20, (b.prop === "reveal" ? cu(1, 0.4) : ln.from - 20) + 12) : 0, size: 38 });
-          if (hookOn) chip(c, "ONE IS AI. WHICH?", W / 2, Math.min(1480, y0 + ha + hb + 110), "#fde68a", INK, 1, 52);
-          if (b.prop === "quiz") {   // 3, 2, 1
+          const ha = bubble(c, 50, y0, W - 100, reveal ? "1 · Teja" : "1", T.a, 1, { size: 38 });
+          const kGuess = b.prop === "reveal" ? seg(f, cu(1, 0.2), cu(1, 0.2) + 10) : b.prop === "tells" ? seg(f, cu(1, 0.3), cu(1, 0.3) + 12) : 0;
+          const hb = bubble(c, 50, y0 + ha + 30, W - 100, reveal ? "2 · Sai's AI" : "2", T.b, 1, {
+            circles: b.prop === "tells" ? T.bDetails : [], ck: b.prop === "tells" ? seg(f, ln.from + 2, ln.from + 16) : 0,
+            marks: b.prop === "reveal" ? ["I miss you dearly"] : b.prop === "tells" ? T.bGuess : [], mk: kGuess, markRgb: "248,113,113", size: 38 });
+          if (hookOn) chip(c, "both grandsons live next door · ONE IS AI. WHICH?", W / 2, Math.min(1480, y0 + ha + hb + 110), "#fde68a", INK, 1, 40);
+          if (b.prop === "quiz") {   // 3, 2, 1 in the hold
             const t0 = endL - 2; const q = Math.floor((f - t0) / 20);
-            if (f >= t0 && q < 3) { c.save(); c.font = SANS(220, 900); c.fillStyle = "rgba(220,38,38,0.9)"; c.textAlign = "center"; c.fillText(String(3 - q), W / 2, Math.min(1500, y0 + ha + hb + 230)); c.restore(); }
+            if (f >= t0 && q < 3) { c.save(); c.font = SANS(200, 900); c.fillStyle = "rgba(220,38,38,0.9)"; c.textAlign = "center"; c.fillText(String(3 - q), W / 2, Math.min(1560, y0 + ha + hb + 250)); c.restore(); }
             chip(c, "1 or 2?", W / 2, Math.min(1480, y0 + ha + hb + 90), "#fde68a", INK, 1, 52);
           }
           if (reveal) {
             stamp(c, "AI", W - 170, y0 + ha + 80, RED, b.prop === "reveal" ? seg(f, ln.from, ln.from + 8) : 1, 90, -0.12);
-            if (b.prop === "reveal") chip(c, "it fits any grandmother on earth", W / 2, Math.min(1480, y0 + ha + hb + 100), "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14), 42);
-            if (b.prop === "tells") chip(c, "only her family knows these", W / 2, Math.min(1480, y0 + ha + hb + 100), "#dcfce7", "#14532d", seg(f, cu(1, 0.3) + 6, cu(1, 0.3) + 14), 42);
+            if (b.prop === "reveal") chip(c, "he lives next door", W / 2, Math.min(1480, y0 + ha + hb + 100), "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 44);
+            if (b.prop === "tells") { chip(c, "real details", 300, Math.min(1480, y0 + ha + hb + 100), "#dcfce7", "#14532d", seg(f, ln.from + 6, ln.from + 14), 40); chip(c, "guesses", 780, Math.min(1480, y0 + ha + hb + 100), "#fee2e2", "#7f1d1d", kGuess, 40); }
           }
           if (b.prop === "fixed") {   // the AI's wish with the two details, from our test
             chip(c, "the same AI, given 2 real details:", W / 2, y0 + ha + hb + 80, "#dcfce7", "#14532d", 1, 34);
           }
           if (b.prop === "loop" && !loopOn) {   // Ammamma replies to one of them
             const kk = seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6);
-            if (kk > 0) { c.save(); c.globalAlpha = clamp(kk * 3); c.fillStyle = "#dcf8c6"; rrect(c, 300, 1380, W - 350, 110, 22); c.fill(); c.font = SANS(40, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText("Ammamma: ❤️ ...", 330, 1450); c.restore(); }
+            if (kk > 0) bubble(c, 120, 1180, W - 170, "Ammamma → Sai", "Miss me? You're 10 steps away. Come and eat! 😄", kk, { size: 42 });
           }
         }
       }} />

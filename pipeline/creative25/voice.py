@@ -29,17 +29,18 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("eighty", "80"), ("ten", "10"), ("minutes",), ("tapped", "tap"), ("once",)],
-               2: [("which",), ("write", "wrote"), ("one", "1"), ("two", "2")], 3: [("two", "2"), ("grandmother",), ("earth",)],
-               4: [("running",), ("cycle",), ("pulihora", "puliora", "puli", "pulihura"), ("family",)],
-               5: [("small",), ("free",), ("ten", "10"), ("special",), ("day",), ("know",)],
-               6: [("details", "detail"), ("both",), ("six", "6"), ("miss",), ("next",), ("door",)],
-               7: [("details", "detail"), ("cut",), ("true",), ("sign",)], 8: [("replied", "reply"), ("one",), ("guess",)]},
-        "te": {1: [("एन", "80"), ("पदि", "10")], 5: [("पदि", "10")], 6: [("आरु", "6")]}}
-JUDGE_TEXT = {1: "Ammamma turns 80. Teja typed his wish for 10 minutes. Sai tapped an AI once.",
-              5: "We asked a small free AI the same thing, 10 times. 10 out of 10: May this special day. Not one thing only she'd know.",
-              6: "Then we gave it the 2 real details. It used both, every time. But 6 times it added I miss you... and Sai lives next door.",
-              7: "So let it write, the right way: 2 real details, cut what isn't true, and sign it yourself."}
+MUST = {"en": {1: [("eighty", "80"), ("grandsons", "grandson"), ("next",), ("door",), ("ten", "10"), ("minutes",), ("tapped", "tap")],
+               2: [("which",), ("write", "wrote"), ("one", "1"), ("two", "2")], 3: [("two", "2"), ("miss",), ("next",), ("door",)],
+               4: [("used", "use"), ("both",), ("details", "detail"), ("guessed", "guess")],
+               5: [("small",), ("free",), ("laptop",), ("chatgpt", "gpt"), ("ten", "10"), ("special",), ("course",), ("sweet",)],
+               6: [("details", "detail"), ("both",), ("five", "5"), ("miss",)],
+               7: [("facts", "fact"), ("matter",), ("read",), ("line",), ("fix",), ("true",)],
+               8: [("reply",), ("miss",), ("ten", "10"), ("steps", "step"), ("eat",)]},
+        "te": {1: [("एन", "80"), ("पदि", "10")], 5: [("पदि", "10")], 6: [("ऐदु", "ऐद", "5")]}}
+JUDGE_TEXT = {1: "Ammamma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One tapped an AI.",
+              5: "We tested a small free AI on our laptop, not ChatGPT. With no details, 10 tries: all 10 said May this special day. One even began, Of course! Here's a sweet birthday wish.",
+              6: "With the 2 details, it used both, every time. But 5 times, it guessed I miss you.",
+              8: "Ammamma's reply: Miss me? You're 10 steps away. Come and eat!"}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
