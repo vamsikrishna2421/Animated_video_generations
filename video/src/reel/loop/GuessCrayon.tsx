@@ -85,8 +85,8 @@ const phoneTop = (c: Ctx, W: number) => {   // the family group's header
   c.fillStyle = "#075e54"; c.fillRect(0, 150, W, 130);
   c.fillStyle = "#fde68a"; c.beginPath(); c.arc(100, 215, 42, 0, 7); c.fill();
   c.font = SANS(44, 900); c.fillStyle = "#7c2d12"; c.textAlign = "center"; c.fillText("80", 100, 231);
-  c.font = SANS(42, 800); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Ammamma turns 80 · family", 165, 210);
-  c.font = SANS(30, 600); c.fillText("Teja, Sai, Ammamma + 23 others", 165, 252);
+  c.font = SANS(42, 800); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("Grandma turns 80 · family", 165, 210);
+  c.font = SANS(30, 600); c.fillText("Teja, Sai, Grandma + 23 others", 165, 252);
 };
 const block = (c: Ctx, x: number, y: number, small: string, big: string, col: string) => {
   c.fillStyle = "#111827"; rrect(c, x, y, 470, 150, 22); c.fill();
@@ -188,7 +188,7 @@ const StGuess: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "loop" && !loopOn) {   // Ammamma replies to one of them
             const kk = seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6);
-            if (kk > 0) bubble(c, 120, 1180, W - 170, "Ammamma → Sai", "Miss me? You're 10 steps away. Come and eat! 😄", kk, { size: 42 });
+            if (kk > 0) bubble(c, 120, 1180, W - 170, "Grandma → Sai", "Miss me? You're 10 steps away. Come and eat! 😄", kk, { size: 42 });
           }
         }
       }} />
