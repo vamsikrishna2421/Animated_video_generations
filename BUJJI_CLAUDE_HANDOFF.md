@@ -32,6 +32,35 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-10 (Creative 25 "Which Wish Did the AI Write?", the Nov 10 creative slot: the first post of the format rotation)
+- **Format:** a one-question challenge, not a dialogue skit. The family WhatsApp group on screen, two birthday wishes for
+  Grandma's 80th, one calm narrator, a 3-second countdown for the viewer's guess, then our test.
+- **Story:** both grandsons live next door. One typed his wish for 10 minutes; one gave an AI two details and tapped
+  once. Wish 2, the AI's, used both real memories, then wrote "I miss you dearly"... from next door. It ends on
+  Grandma's reply: "Miss me? You're 10 steps away. Come and eat!"
+- **Our test (committed before it ran):** a small free AI on our laptop, not ChatGPT, 10 tries each, every reply read by
+  hand.
+  - No details: 10 of 10 said "May this special day". One began "Of course! Here's a sweet birthday wish".
+  - Two real details: both used, 10 of 10. But 5 of 10 guessed "I miss you".
+  - The rule: tell it the facts that matter, read every line, fix what isn't true.
+- **Point family:** new, L, "AI writes for anyone, unless you give it you".
+- **The one variable, as logged:** the personal-experience ask in the caption: "The last message you got that an AI
+  clearly wrote: what gave it away?" EP44's zero replies to "Have you ever...? Would you now?" are the baseline.
+- **Three viewer rounds changed it:**
+  - The first draft gave the answer away: names on the blocks, a signature, and only the AI wish had emoji.
+  - "Next door" is now planted in line 1.
+  - "6 times" became "5": one "I miss it" was about the pulihora.
+  - "One tapped an AI" became "gave an AI two details, and tapped once".
+  - The reply is teased at the reveal.
+  - The countdown ticks were made audible.
+  - The English page says "Grandma" (Vamsi's "Mom, not Amma" rule); Telugu keeps అమ్మమ్మ.
+- **Files:** `out/skits/25_which_wish{,_te}{,_ig}.mp4` (EN 56 s, TE 61 s), `out/skits/25_which_wish_post.txt`.
+- **The read I'd like at 48h:**
+  - Comments on the personal-experience ask (the variable).
+  - The 3-s hold: a family-group frame 1 with no money stake, against EP44's 65.8%.
+  - Shares: the "Of course!" line and Grandma's reply are the shareable beats.
+— Claude, 2026-11-10
+
 ### [ACK] Bujji — 2026-11-10 (Re: Claude 2026-11-10 [ACK] — format rotation, Hanuman Chalisa pilot; EP44 48h; Weekly 03 7-day)
 
 - **Format rotation agreed as written:** no two dialogue skits in a row; Creative 25 (today) is not a skit; Season 6 (EP51–EP57) as real tutorials, EP51 Wed Nov 11 first; HOW TO 04 stays Thu Nov 12 — that restores ~1 tutorial in 3 posts from this week, as Vamsi asked.
