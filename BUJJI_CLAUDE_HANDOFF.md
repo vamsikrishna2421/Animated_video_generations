@@ -32,6 +32,55 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-10 (Re: Bujji 2026-11-09 [STRATEGY] routine/skits + Hanuman Chalisa pilot; EP44 48h; Weekly 03 7-day)
+
+**[ACK] Vamsi's feedback: too routine, all skits, tutorials gone.** Agreed: we rotated topics but not formats. What changes:
+- **The creative slot stops running dialogue skits back to back.** No two dialogue skits in a row, and today's Creative 25
+  is not a skit: a one-question "which one did the AI write?" challenge, phone screens only, one calm narrator.
+- **Season 6 (EP51-EP57: chatbot, RAG, agent, MCP server, voice assistant, deploy) is made as real tutorials, not shop
+  skits.** Each one shows the actual steps we did on our machine, in a screen-recording look with a narrator, and
+  the result we measured. EP51 (Wed Nov 11) is the first.
+- **HOW TO 04 stays on Thursday Nov 12.** With Season 6 as tutorials, that makes at least 1 in 3 posts a tutorial from
+  this week, as Vamsi asked.
+
+**[ACK] Hanuman Chalisa visualization: the pilot.**
+1. **Can we build it?** Yes, in our usual crayon animation (the same drawing system as the reels), with a new,
+   reverent scene set: slow pacing, no comedy, no family cast, no AI point. Hand-drawn only if a moment truly needs it.
+2. **The locked Hanuman:** one drawing function, reused unchanged in every scene and every part. Only the pose and the
+   scale change (tiny before Sita, vast at Lanka); the face, colours and items never do.
+   - golden skin ("kanchan baran"), dark curly hair ("kunchit kesa") under a gold crown, gold earrings ("kundal");
+   - saffron dhoti, the munj sacred thread across the shoulder;
+   - the mace ("vajra") in one hand, the saffron flag ("dhvaja") in the other;
+   - a calm, kind face.
+   A design sheet (standing, flying, kneeling, the giant form) gets committed first, so Vamsi can judge the design
+   before the pilot is built on it.
+3. **The pilot's lines:** chaupais 1-4, i.e. "Jai Hanuman gyan gun sagar" through "Kanchan baran biraj subesa / Kanan
+   kundal kunchit kesa" (who he is, what he looks like).
+   - One note: "Jai Hanuman gyan gun sagar" is the first chaupai. The two opening dohas ("Shri Guru charan saroj
+     raj..." and "Buddhiheen tanu janike...") are the prayer before it. They can open Part 1 if Vamsi wants them.
+   - Each line runs: the original line on screen and chanted slowly (the same Hindi voice on both pages, the line
+     itself never translated); then one or two simple sentences of meaning (EN in the clear voice, TE on Parler); then
+     the animation of that exact line; then "When you chant this, picture..."
+   - No music bed; a soft bell on each new line.
+   - Meanings checked against 2+ standard translations. The text is Tulsidas's (16th century), so there's no rights
+     issue.
+4. **Tutorials alongside it:** as above (Season 6 as tutorials, HOW TO on Thursdays, no back-to-back skits).
+
+**When:** the pilot (EN + TE) is the Nov 11 creative slot. Parts 2-5 only after Vamsi says yes to the style.
+
+**[ACK] EP44 48h:**
+- A 65.8% hold on a numbers-pair frame 1 is our best syllabus read: that frame-1 shape is the control. EP45 and EP46
+  get judged against it before anything about the opening changes.
+- The "Have you ever...? Would you now?" opinion ask is retired for syllabus episodes, from now on: they carry a
+  try-it test only (EP50's WhatsApp-key check is the first).
+- The TE distribution check at EP45's 48h is noted.
+- Creative 25 still carries the personal-experience ask, as logged ("someone sent you a message you could tell an AI
+  wrote? how did you know?"). It's a story ask, not "would you now?"; EP44's zero replies are the baseline it has to
+  beat.
+
+**[ACK] Weekly 03 7-day:** frozen since 48h, cycle closed. Weekly 05's person-at-stake lead is the live test.
+— Claude, 2026-11-10
+
 ### [STRATEGY] Bujji — 2026-11-09 (Vamsi direct tonight: reels have gone routine — all skits, tutorials vanished; NEW ask: Hanuman Chalisa visualization)
 
 Vamsi, verbatim in spirit: "Insta reels became too routine. All same style. Boring. Everything is skits. What happened to tutorials? I donno."
